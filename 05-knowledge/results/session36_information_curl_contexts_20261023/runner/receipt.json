@@ -1,0 +1,623 @@
+{
+  "always_active_checks": 92927,
+  "ap_boundary_controls": [
+    {
+      "safe_points": [
+        "1/2"
+      ],
+      "speeds": 1,
+      "wall_count": 2
+    },
+    {
+      "safe_points": [
+        "1/3",
+        "2/3"
+      ],
+      "speeds": 2,
+      "wall_count": 5
+    },
+    {
+      "safe_points": [
+        "1/4",
+        "3/4"
+      ],
+      "speeds": 3,
+      "wall_count": 11
+    },
+    {
+      "safe_points": [
+        "1/5",
+        "2/5",
+        "3/5",
+        "4/5"
+      ],
+      "speeds": 4,
+      "wall_count": 17
+    },
+    {
+      "safe_points": [
+        "1/6",
+        "5/6"
+      ],
+      "speeds": 5,
+      "wall_count": 29
+    },
+    {
+      "safe_points": [
+        "1/7",
+        "2/7",
+        "3/7",
+        "4/7",
+        "5/7",
+        "6/7"
+      ],
+      "speeds": 6,
+      "wall_count": 37
+    },
+    {
+      "safe_points": [
+        "1/8",
+        "3/8",
+        "5/8",
+        "7/8"
+      ],
+      "speeds": 7,
+      "wall_count": 53
+    },
+    {
+      "safe_points": [
+        "1/9",
+        "2/9",
+        "4/9",
+        "5/9",
+        "7/9",
+        "8/9"
+      ],
+      "speeds": 8,
+      "wall_count": 67
+    },
+    {
+      "safe_points": [
+        "1/10",
+        "3/10",
+        "7/10",
+        "9/10"
+      ],
+      "speeds": 9,
+      "wall_count": 87
+    },
+    {
+      "safe_points": [
+        "1/11",
+        "2/11",
+        "3/11",
+        "4/11",
+        "5/11",
+        "6/11",
+        "7/11",
+        "8/11",
+        "9/11",
+        "10/11"
+      ],
+      "speeds": 10,
+      "wall_count": 101
+    },
+    {
+      "safe_points": [
+        "1/12",
+        "5/12",
+        "7/12",
+        "11/12"
+      ],
+      "speeds": 11,
+      "wall_count": 129
+    },
+    {
+      "safe_points": [
+        "1/13",
+        "2/13",
+        "3/13",
+        "4/13",
+        "5/13",
+        "6/13",
+        "7/13",
+        "8/13",
+        "9/13",
+        "10/13",
+        "11/13",
+        "12/13"
+      ],
+      "speeds": 12,
+      "wall_count": 145
+    },
+    {
+      "safe_points": [
+        "1/14",
+        "3/14",
+        "5/14",
+        "9/14",
+        "11/14",
+        "13/14"
+      ],
+      "speeds": 13,
+      "wall_count": 177
+    },
+    {
+      "safe_points": [
+        "1/15",
+        "2/15",
+        "4/15",
+        "7/15",
+        "8/15",
+        "11/15",
+        "13/15",
+        "14/15"
+      ],
+      "speeds": 14,
+      "wall_count": 203
+    },
+    {
+      "safe_points": [
+        "1/16",
+        "3/16",
+        "5/16",
+        "7/16",
+        "9/16",
+        "11/16",
+        "13/16",
+        "15/16"
+      ],
+      "speeds": 15,
+      "wall_count": 233
+    },
+    {
+      "safe_points": [
+        "1/17",
+        "2/17",
+        "3/17",
+        "4/17",
+        "5/17",
+        "6/17",
+        "7/17",
+        "8/17",
+        "9/17",
+        "10/17",
+        "11/17",
+        "12/17",
+        "13/17",
+        "14/17",
+        "15/17",
+        "16/17"
+      ],
+      "speeds": 16,
+      "wall_count": 257
+    },
+    {
+      "safe_points": [
+        "1/18",
+        "5/18",
+        "7/18",
+        "11/18",
+        "13/18",
+        "17/18"
+      ],
+      "speeds": 17,
+      "wall_count": 301
+    },
+    {
+      "safe_points": [
+        "1/19",
+        "2/19",
+        "3/19",
+        "4/19",
+        "5/19",
+        "6/19",
+        "7/19",
+        "8/19",
+        "9/19",
+        "10/19",
+        "11/19",
+        "12/19",
+        "13/19",
+        "14/19",
+        "15/19",
+        "16/19",
+        "17/19",
+        "18/19"
+      ],
+      "speeds": 18,
+      "wall_count": 325
+    },
+    {
+      "safe_points": [
+        "1/20",
+        "3/20",
+        "7/20",
+        "9/20",
+        "11/20",
+        "13/20",
+        "17/20",
+        "19/20"
+      ],
+      "speeds": 19,
+      "wall_count": 373
+    },
+    {
+      "safe_points": [
+        "1/21",
+        "2/21",
+        "4/21",
+        "5/21",
+        "8/21",
+        "10/21",
+        "11/21",
+        "13/21",
+        "16/21",
+        "17/21",
+        "19/21",
+        "20/21"
+      ],
+      "speeds": 20,
+      "wall_count": 409
+    }
+  ],
+  "binary_exhaustions": [
+    {
+      "base": 2,
+      "binary_carriers": 256,
+      "cells": 8,
+      "depth": 1,
+      "min_collision_components": 2,
+      "nonrepresentative_collisions": 67,
+      "response_classes": 189
+    },
+    {
+      "base": 3,
+      "binary_carriers": 4096,
+      "cells": 12,
+      "depth": 1,
+      "min_collision_components": 3,
+      "nonrepresentative_collisions": 323,
+      "response_classes": 3773
+    },
+    {
+      "base": 4,
+      "binary_carriers": 256,
+      "cells": 8,
+      "depth": 1,
+      "min_collision_components": 4,
+      "nonrepresentative_collisions": 1,
+      "response_classes": 255
+    },
+    {
+      "base": 7,
+      "binary_carriers": 16384,
+      "cells": 14,
+      "depth": 1,
+      "min_collision_components": 7,
+      "nonrepresentative_collisions": 1,
+      "response_classes": 16383
+    },
+    {
+      "base": 2,
+      "binary_carriers": 65536,
+      "cells": 16,
+      "depth": 2,
+      "min_collision_components": 4,
+      "nonrepresentative_collisions": 1411,
+      "response_classes": 64125
+    },
+    {
+      "base": 2,
+      "binary_carriers": 65536,
+      "cells": 16,
+      "depth": 3,
+      "min_collision_components": 8,
+      "nonrepresentative_collisions": 1,
+      "response_classes": 65535
+    }
+  ],
+  "finite_phase_hostile": {
+    "K": [
+      [
+        "1821/23324",
+        "1923/23324"
+      ]
+    ],
+    "L": [
+      [
+        "2025/23324",
+        "2127/23324"
+      ]
+    ],
+    "bank": [
+      [
+        1,
+        "0"
+      ],
+      [
+        7,
+        "1/31"
+      ],
+      [
+        49,
+        "3/17"
+      ],
+      [
+        3,
+        "1/5"
+      ],
+      [
+        2,
+        "2/11"
+      ]
+    ],
+    "cell": [
+      "885/11662",
+      "1089/11662"
+    ],
+    "common_measure": "3/686",
+    "responses": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "low_moment_controls": [
+    {
+      "carriers": 4096,
+      "cells": 12,
+      "classes": 1763,
+      "first_complex_moments": 1,
+      "low_component_carriers": 134
+    },
+    {
+      "carriers": 4096,
+      "cells": 12,
+      "classes": 3727,
+      "first_complex_moments": 2,
+      "low_component_carriers": 1124
+    },
+    {
+      "carriers": 4096,
+      "cells": 12,
+      "classes": 4049,
+      "first_complex_moments": 3,
+      "low_component_carriers": 2972
+    }
+  ],
+  "matrix_controls": [
+    {
+      "base": 2,
+      "cells": 16,
+      "depth": 1,
+      "kernel_dimension": 7,
+      "rank_mod_prime": 9,
+      "rational_rank": 9,
+      "rows": 16
+    },
+    {
+      "base": 2,
+      "cells": 16,
+      "depth": 2,
+      "kernel_dimension": 3,
+      "rank_mod_prime": 13,
+      "rational_rank": 13,
+      "rows": 32
+    },
+    {
+      "base": 2,
+      "cells": 16,
+      "depth": 3,
+      "kernel_dimension": 1,
+      "rank_mod_prime": 15,
+      "rational_rank": 15,
+      "rows": 48
+    },
+    {
+      "base": 3,
+      "cells": 12,
+      "depth": 1,
+      "kernel_dimension": 3,
+      "rank_mod_prime": 9,
+      "rational_rank": 9,
+      "rows": 12
+    },
+    {
+      "base": 3,
+      "cells": 18,
+      "depth": 2,
+      "kernel_dimension": 1,
+      "rank_mod_prime": 17,
+      "rational_rank": 17,
+      "rows": 36
+    },
+    {
+      "base": 4,
+      "cells": 16,
+      "depth": 1,
+      "kernel_dimension": 3,
+      "rank_mod_prime": 13,
+      "rational_rank": 13,
+      "rows": 16
+    },
+    {
+      "base": 4,
+      "cells": 32,
+      "depth": 2,
+      "kernel_dimension": 1,
+      "rank_mod_prime": 31,
+      "rational_rank": 31,
+      "rows": 64
+    },
+    {
+      "base": 7,
+      "cells": 28,
+      "depth": 1,
+      "kernel_dimension": 3,
+      "rank_mod_prime": 25,
+      "rational_rank": 25,
+      "rows": 28
+    },
+    {
+      "base": 7,
+      "cells": 98,
+      "depth": 2,
+      "kernel_dimension": 1,
+      "rank_mod_prime": 97,
+      "rational_rank": 97,
+      "rows": 196
+    },
+    {
+      "base": 7,
+      "cells": 196,
+      "depth": 2,
+      "kernel_dimension": 3,
+      "rank_mod_prime": 193,
+      "rational_rank": 193,
+      "rows": 392
+    }
+  ],
+  "scope": "Exact finite-grid and rational-interval controls for an abstract observer theorem, not a native LRC census.",
+  "sharp_periodic_hostiles": [
+    {
+      "all_old_phase_values": "1/8",
+      "base": 2,
+      "components": 2,
+      "depth": 1,
+      "next_probe_values": [
+        "1/4",
+        "0"
+      ],
+      "phase_knots": 8
+    },
+    {
+      "all_old_phase_values": "1/8",
+      "base": 2,
+      "components": 8,
+      "depth": 3,
+      "next_probe_values": [
+        "1/4",
+        "0"
+      ],
+      "phase_knots": 32
+    },
+    {
+      "all_old_phase_values": "1/12",
+      "base": 3,
+      "components": 9,
+      "depth": 2,
+      "next_probe_values": [
+        "1/6",
+        "0"
+      ],
+      "phase_knots": 36
+    },
+    {
+      "all_old_phase_values": "1/16",
+      "base": 4,
+      "components": 16,
+      "depth": 2,
+      "next_probe_values": [
+        "1/8",
+        "0"
+      ],
+      "phase_knots": 64
+    },
+    {
+      "all_old_phase_values": "1/28",
+      "base": 7,
+      "components": 7,
+      "depth": 1,
+      "next_probe_values": [
+        "1/14",
+        "0"
+      ],
+      "phase_knots": 28
+    },
+    {
+      "all_old_phase_values": "1/28",
+      "base": 7,
+      "components": 49,
+      "depth": 2,
+      "next_probe_values": [
+        "1/14",
+        "0"
+      ],
+      "phase_knots": 196
+    },
+    {
+      "all_old_phase_values": "1/28",
+      "base": 7,
+      "components": 343,
+      "depth": 3,
+      "next_probe_values": [
+        "1/14",
+        "0"
+      ],
+      "phase_knots": 1372
+    }
+  ],
+  "stability_controls": {
+    "base": 2,
+    "cells": 8,
+    "depth": 2,
+    "exact_pairs_by_components": {
+      "0": 256,
+      "1": 14592,
+      "2": 35840,
+      "3": 14336
+    },
+    "rational_multiplier": "11*b*c/7",
+    "scope": "Uniform phase errors are exact: every response is affine between the aligned grid knots."
+  },
+  "valuation_bank_controls": [
+    {
+      "admitted_speeds": [
+        1,
+        2,
+        3,
+        13
+      ],
+      "depth": 1,
+      "nonzero_mode_tests": 1600,
+      "period_denominator": 7
+    },
+    {
+      "admitted_speeds": [
+        1,
+        2,
+        3,
+        7,
+        14,
+        21,
+        13,
+        91
+      ],
+      "depth": 2,
+      "nonzero_mode_tests": 3200,
+      "period_denominator": 49
+    },
+    {
+      "admitted_speeds": [
+        1,
+        2,
+        3,
+        7,
+        14,
+        21,
+        49,
+        98,
+        147,
+        13,
+        91,
+        637
+      ],
+      "depth": 3,
+      "nonzero_mode_tests": 4800,
+      "period_denominator": 343
+    }
+  ]
+}

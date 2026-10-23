@@ -1,0 +1,57 @@
+{
+  "always_active_checks": 92927,
+  "files": [
+    {
+      "bytes": 2301,
+      "name": "README.md",
+      "sha256": "a4f074bcaff3f8511465ae335eff5c314bc154caa9c84d8d0574b04e8df17cc6"
+    },
+    {
+      "bytes": 16924,
+      "name": "PROOF.md",
+      "sha256": "7e96b61e03dfe3a1ec9f1bd8c3c803d7dcae81bcb00a568792645fe63a0fb7ec"
+    },
+    {
+      "bytes": 3603,
+      "name": "NOISE.md",
+      "sha256": "3f1c61ec6638a2329206dcc025ca46cc37aaa41262d2789ef403345ae5714164"
+    },
+    {
+      "bytes": 9738,
+      "name": "check.py",
+      "sha256": "c98c2c956ce06adf52fc255ef23e7f3fd2009a040bd9b49985addfff9d9a072a"
+    },
+    {
+      "bytes": 10691,
+      "name": "receipt.json",
+      "sha256": "e7dfcb8cca9f7bfef66a41988d61c19a461d764d1cd6a9cc0bb9910da74000a2"
+    },
+    {
+      "bytes": 10691,
+      "name": "check-normal.out",
+      "sha256": "e7dfcb8cca9f7bfef66a41988d61c19a461d764d1cd6a9cc0bb9910da74000a2"
+    },
+    {
+      "bytes": 10691,
+      "name": "check-optimized.out",
+      "sha256": "e7dfcb8cca9f7bfef66a41988d61c19a461d764d1cd6a9cc0bb9910da74000a2"
+    },
+    {
+      "bytes": 2638,
+      "name": "VALIDATION.md",
+      "sha256": "97723dd25382f3b8742682e53a3b95fe1af3b54f9cba542dbc129ca06862391b"
+    },
+    {
+      "bytes": 3076,
+      "name": "SOURCES.json",
+      "sha256": "0a0796589e2495f19e6096bc6fb3a9466029e9463c0d9f671c9cbe073f690ce7"
+    }
+  ],
+  "independent_audit": {
+    "audit_message": "Independent auditor confirmed main theorem, sharp controls, N1-N4, prime-only valuation language; corrected only ambiguous word ENTIRE before freeze.",
+    "checker": "session36-network-audit/check_runner_independent.py",
+    "receipt": "session36-network-audit/runner_independent_receipt.json"
+  },
+  "normal_optimized_identical": true,
+  "status": "Frozen: proof-complete scoped theorem, finite-exact replay, independently audited; no LRC closure or owner-arrival transport."
+}

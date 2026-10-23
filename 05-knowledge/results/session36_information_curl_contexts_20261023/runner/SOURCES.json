@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "bytes": 34269,
+      "path": "math/00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "7d97b0e0d167882b90ff735dc573437420d368bee4a2f103762e091a236c73de"
+    },
+    {
+      "bytes": 23187,
+      "path": "math/01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "bytes": 12061,
+      "path": "math/01-canon/theorems/THM-2072-fixed-owner-clock-bank-no-go-and-half-shift-certificate.md",
+      "sha256": "441233635f21fea39d021926efb87810bbbc1dc33f93d0282b31f4233c254709"
+    },
+    {
+      "bytes": 10220,
+      "path": "math/01-canon/theorems/THM-2161-fixed-modulus-banks-miss-primitive-defect-seven-lrc-rows.md",
+      "sha256": "b6d5ce689aaa6418df36517a35901fcc3b687afb5336bbe81659d0db634efc52"
+    },
+    {
+      "bytes": 16456,
+      "path": "math/01-canon/theorems/THM-4349-lrc14-adaptive-owner-clock-completeness-and-twelve-height-tail-cutoff.md",
+      "sha256": "273e433245916c1f0605441b8a4053f54e0269a366a38dcb14d9985121e386ff"
+    },
+    {
+      "bytes": 12780,
+      "path": "math/01-canon/theorems/THM-4371-lrc14-minimal-wall-lcm-adaptive-owner-clock.md",
+      "sha256": "9fa5b338a6723b075cff378a9990e26d408cc14fc5afde0d020dcb90560f7ef8"
+    },
+    {
+      "bytes": 9227,
+      "path": "math/01-canon/theorems/THM-4451-lrc14-dyadic-three-tail-strict-component-width-caps.md",
+      "sha256": "4ef635018edf3d927b1e82057ef0ca06c60ba7b1d78689bfcd4e1a06b9573969"
+    },
+    {
+      "bytes": 18587,
+      "path": "math/01-canon/theorems/THM-2408-endpoint-prony-resultant-clock-separation-and-shared-node-boundary.md",
+      "sha256": "8860eb319dbecd0974c4cc30977cdd968b859d8594922dd189c45dcad160fc90"
+    },
+    {
+      "bytes": 17267,
+      "path": "math/01-canon/theorems/THM-2410-full-coordinate-projector-local-gram-and-integrated-phase-boundary.md",
+      "sha256": "c61b87484543fa3cbcb6610e7bbd77bba32c23a4cb6f87f9c721022b3d7957ea"
+    },
+    {
+      "bytes": 16931,
+      "path": "math/01-canon/theorems/THM-2545-word-stratified-hall-arrival-criterion-and-owner-word-transportation-hostile.md",
+      "sha256": "b45641ebce5ea2f2a03c1ce8109c44735af926ccb0117a797734a4cd9b6bfbc2"
+    },
+    {
+      "bytes": 11048,
+      "path": "math/01-canon/theorems/THM-3718-lrc-complete-atom-orbit-defect-saturation-and-semantic-boundary.md",
+      "sha256": "4226bff2d6d4db88cd499497050963174a3317e2f59927af25e4b57a1e253b4f"
+    },
+    {
+      "bytes": 8133,
+      "path": "math/01-canon/theorems/THM-3731-lrc14-valuation-owner-equivariance-and-semantic-packet-boundary.md",
+      "sha256": "60205c94421b644ce9534ea27a75a9c5f990557f5b647938796d3a26c5afc232"
+    },
+    {
+      "bytes": 27382,
+      "path": "math/05-knowledge/results/tournament_future_boundary_20261020/README.md",
+      "sha256": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685"
+    }
+  ],
+  "scope": "Read-only exact source manifest for Session36 runner observer recovery. Repository claims are inherited with their stated scope, not independently established external facts."
+}

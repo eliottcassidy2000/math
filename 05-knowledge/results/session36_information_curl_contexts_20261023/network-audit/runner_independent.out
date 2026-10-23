@@ -1,0 +1,167 @@
+{
+  "regular_hostiles": [
+    {
+      "b": 2,
+      "J": 1,
+      "q": 2,
+      "exact_phase_tests": 16,
+      "next_response_K": "1/4",
+      "next_response_L": "0"
+    },
+    {
+      "b": 2,
+      "J": 2,
+      "q": 4,
+      "exact_phase_tests": 64,
+      "next_response_K": "1/4",
+      "next_response_L": "0"
+    },
+    {
+      "b": 3,
+      "J": 2,
+      "q": 9,
+      "exact_phase_tests": 144,
+      "next_response_K": "1/6",
+      "next_response_L": "0"
+    },
+    {
+      "b": 4,
+      "J": 2,
+      "q": 16,
+      "exact_phase_tests": 256,
+      "next_response_K": "1/8",
+      "next_response_L": "0"
+    },
+    {
+      "b": 6,
+      "J": 1,
+      "q": 6,
+      "exact_phase_tests": 48,
+      "next_response_K": "1/12",
+      "next_response_L": "0"
+    },
+    {
+      "b": 7,
+      "J": 1,
+      "q": 7,
+      "exact_phase_tests": 56,
+      "next_response_K": "1/14",
+      "next_response_L": "0"
+    },
+    {
+      "b": 7,
+      "J": 2,
+      "q": 49,
+      "exact_phase_tests": 784,
+      "next_response_K": "1/14",
+      "next_response_L": "0"
+    }
+  ],
+  "finite_grid_restrictions": [
+    {
+      "b": 2,
+      "J": 1,
+      "cells": 4,
+      "rank": 3,
+      "kernel_dimension": 1,
+      "predicted": 1
+    },
+    {
+      "b": 2,
+      "J": 2,
+      "cells": 8,
+      "rank": 7,
+      "kernel_dimension": 1,
+      "predicted": 1
+    },
+    {
+      "b": 3,
+      "J": 1,
+      "cells": 6,
+      "rank": 5,
+      "kernel_dimension": 1,
+      "predicted": 1
+    },
+    {
+      "b": 3,
+      "J": 2,
+      "cells": 18,
+      "rank": 17,
+      "kernel_dimension": 1,
+      "predicted": 1
+    },
+    {
+      "b": 4,
+      "J": 1,
+      "cells": 8,
+      "rank": 7,
+      "kernel_dimension": 1,
+      "predicted": 1
+    },
+    {
+      "b": 7,
+      "J": 1,
+      "cells": 14,
+      "rank": 13,
+      "kernel_dimension": 1,
+      "predicted": 1
+    }
+  ],
+  "finite_phase_hostile": {
+    "probes": [
+      [
+        1,
+        "0"
+      ],
+      [
+        2,
+        "1/11"
+      ],
+      [
+        7,
+        "2/13"
+      ],
+      [
+        13,
+        "3/17"
+      ],
+      [
+        23,
+        "5/19"
+      ]
+    ],
+    "K": [
+      [
+        "4379/12236",
+        "1109/3059"
+      ]
+    ],
+    "L": [
+      [
+        "325/874",
+        "4607/12236"
+      ]
+    ],
+    "equal_overlap_values": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "AP_skeleton": {
+    "safe_arcs": 0,
+    "safe_isolated_points": [
+      "1/14",
+      "3/14",
+      "5/14",
+      "9/14",
+      "11/14",
+      "13/14"
+    ],
+    "wall_count": 177
+  },
+  "status": "PASS"
+}
+ALL INDEPENDENT RUNNER CHECKS PASSED
