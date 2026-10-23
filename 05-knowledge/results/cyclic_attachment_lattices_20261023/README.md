@@ -57,6 +57,22 @@ cyclic kernels and mixed moduli by integer lattices, and adds the exact
 integer-observation character test. Its recursive nine-cell and our
 consecutive nine-cell are different internal tournaments; see section4.
 
+The final sync brought Session42 atcf7c4fc327/cce2774f3c. Its independently
+developed [cyclic attachment lattices](../session42_shared_lattices_square_colors_20261023/lattices/README.md)
+converge to the SAME two-congruence and composite alignment formulas.
+Credit these as concurrent derivations, not exclusive new claims here.
+Session42 also supplies a useful noncyclic-label hostile and visible-kernel
+owner lower bound. Our additional deliverables are the exact integer-charge
+test, the recovered Mal'tsev route/prefix bank, and full-branch kernel-carry
+accounting. Its charts may be nontransitive cyclic actions; our rotation
+implementation uses actual cyclic coordinates, with the same abstract proof.
+
+The incoming [square-word reconstruction](../session42_shared_lattices_square_colors_20261023/SQUARE_WORD_RECONSTRUCTION.md)
+and [Gaussian common-frame obstruction](../session42_shared_lattices_square_colors_20261023/gaussian/RESULTS.md)
+provide independent object-level instances of the remaining boundary:
+an indexed path start or a relative angular frame cannot be recovered
+from independently compressed observations. See the final note in CARRIES.md.
+
 - Closest proved mechanism: [partial-chart gluing](../odd_cell_gluing_20261023/README.md)
   and [Session41's full finite-domain compiler](../session41_owned_attachments_fibonacci_20261023/residual-cycles/README.md).
 - Canonical hostile: the order31 systems with no parallel owner section but

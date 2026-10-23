@@ -135,3 +135,28 @@ prefix bank, with the kernel carries and actual path indices attached.
 An abstract compatibility bank and a conserved scalar are not yet that
 observable. This is the common remaining boundary for the attachment,
 Fibonacci and source-specific Collatz lanes.
+
+### Final incoming cross-check: a shared frame before addition
+
+Session42's Gaussian result makes the same obstruction visible without a
+graph: separately quotienting z and w by signed coordinate permutations
+does not retain N(z+w), because Re(z conjugate(w)) needs their relative
+frame. The pair must use one simultaneous group action. Our attachment
+variables and restricted-character sums implement precisely that shared
+action discipline; individual means or norms cannot replace it.
+
+Its square-sum path result goes further than a generic warning: the exact
+ordered adjacent-sum word has at most one Hamiltonian realization at odd
+order and two at even order. A vertex at a declared position fixes the
+remaining start. The retained object is an actual ordered path, not its
+edge inventory. These are inherited results, not rerun here.
+
+Its founder-colouring construction also marks the scope boundary for the
+Mal'tsev route. A parent-selector forest gives a valid all-size representation,
+but its visible allegiance constraints include existential choices among
+several parents. They are not automatically one group coset. Feasible frame
+compression, path-observable compression and arbitrary colour feasibility
+must each retain their own relation rather than sharing a theorem merely
+because they all have ports. This suggests testing whether a native path
+observation is a controlled UNION of cosets, with the union index charged
+explicitly, as the next bounded-state hypothesis. No such bound is proved.

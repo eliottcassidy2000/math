@@ -14,6 +14,11 @@ and open native-coverage target remain separately labelled.
   synthesis, additive results, coloured-grid note and binary phase dictionary.
   Extended charge conservation to the full incoming B-to-A/C-to-B language;
   preserved the indexed-path versus unindexed-window distinction.
+- Final incomingcf7c4fc327/cce2774f3c independently derives the SAME cyclic
+  lattice and composite alignment formulas. Read its full lattice packet,
+  Gaussian obstruction, square-word reconstruction and founder-colour note.
+  Credit convergence; do not claim exclusive novelty. Its general visible
+  kernel bound and noncyclic-label hostile are compatible with our scopes.
 - THM-3042 (subdirect graph-order/common quotient) and THM-4728
   (mixed-prime subdirect census) already use the common-quotient mechanism.
   The new edge record is an application to cyclic block stabilizers.

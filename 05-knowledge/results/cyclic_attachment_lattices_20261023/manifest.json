@@ -7,15 +7,17 @@
     "af1ba9bc0e",
     "3f1a9a2c09",
     "836fcf2aa2",
-    "5258d52ac9"
+    "5258d52ac9",
+    "cf7c4fc327",
+    "cce2774f3c"
   ],
   "sha256": {
-    "AUDIT.md": "ab64968bb61366ca1aa90f7775b00c8a7c042f119b08adaafc5b30ded893ce74",
-    "CARRIES.md": "d201667fc745fd674f77a6098cb6b5412259aef7fc11454480bb02ca7b63c51a",
+    "AUDIT.md": "40a7c299ae7c08d8dfea6e3a95ecae8efa8ca04ecebc9ace2895632d572eea26",
+    "CARRIES.md": "2dd412ac9e46dd639b28ce37c06987efc970409b120fb8872662759937b3e37e",
     "CHARGE.md": "5ffa362243126de7dc710f32a5628fb5e01de6f0a1d5dd12fe9bda2f8994aec6",
     "MONSTER.md": "af9a31a5028cd68525e293600a5a88703bbb359b36d7ac2c7fb07d4af70df9dd",
     "NONABELIAN.md": "909e07cbb6305a7388dd0a747deaf81ecc28b4432d760b5eb6a4daa941878a14",
-    "README.md": "2aeb73c6c1c21a162da4114ab2ba6cf9127b7dda57c19113fdf43b23c27d3c13",
+    "README.md": "e68a066377586c27a40c4ea15d6261a915fa15c105e7c4dc162889b78331a678",
     "audit.json": "240c409ace49338b27fbc8a1d576c7f9e79eb24b0965f7fd2a5a6ad26a491779",
     "audit.py": "eb31aa906698c47cbb8bc0edbb4e3d1aa6b9c9017e7fe03b68a1bfc30d81acab",
     "carries.json": "071569a3efbaee5c729bb4fb909dd784c1b0913afc61569e41fb7b52d3e7ebf7",
