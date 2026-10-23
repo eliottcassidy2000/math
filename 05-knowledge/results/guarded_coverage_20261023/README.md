@@ -38,6 +38,9 @@ and SYNTHESIS.md. Their changing shared-owner equalities are a real limitation
 of our sequential workspace theorem. Their16-source circuit needs higher
 dyadic guards than mod8 alone. We retain the distinction between aggregate
 current compensation and per-slot target-class preservation.
+Later e8a2c47377 supplies the complete paired-charge row/carry criterion;
+SYNTHESIS.md explains why its target-changing circuits and our zero-incidence
+internal routes are complementary operations, not interchangeable ones.
 
 Earlier dependencies are pinned in `manifest.json`: Session44's actual
 endpoint-fixed seed, Session25's boundary-junction law, the graceful matching

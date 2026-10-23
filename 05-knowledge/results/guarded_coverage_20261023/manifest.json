@@ -39,6 +39,11 @@
       "commit": "bd3fe0098b5bb09277e326f585235f36b3336cc6",
       "path": "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md",
       "sha256": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+    },
+    {
+      "commit": "e8a2c47377a9ce35048338873c73d394b88968b4",
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
     }
   ],
   "packet_files": {
@@ -47,8 +52,8 @@
     "CUBES.md": "b0b06cad1dc373f91671ee2b323b22907d5f19e07ec50d2639fffc6787ca2e82",
     "LIFTING.md": "13aff8d1f83cd1bfad8e09f661f30e67f107c1ba19fb611f647d28978698960f",
     "PORTS.md": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47",
-    "README.md": "b57ff063ae979e05cd96a5d788226b5b96fc65399f8c2da1578c3fc442bc90ec",
-    "SYNTHESIS.md": "451792530b6a3ea54d06c9432f1321e1d91ed8706db8ca6589d73496526da563",
+    "README.md": "3510998224522963df8b31d2430e2a2f5b85d8a7b16041870136c6498730235f",
+    "SYNTHESIS.md": "db6bb202a1a3d63b5d4c13413e611c997a9c9b5313410e684a329e19903c2595",
     "atlas_receipt.json": "5722b33528bedc355e7aafcdd44ac89767cd0d6d77018a86674ebbd039e45d5c",
     "audit.py": "7332df165f78e0ac6566211fba2ebabb799779a6dca4467398a022add0851e52",
     "audit_receipt.json": "f0cbe2e829175a4f687821de4e55a005b8e957fc3ea2bb0b6a57a2839595f823",

@@ -41,6 +41,17 @@ our cube preserves each individual target class. These are distinct useful
 forms of compensation and must not be identified. No claim that modulo8
 alone authenticates their whole16-source circuit is imported.
 
+Incoming e8a2c47377 subsequently supplies the
+[complete paired-charge row criterion](../session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md):
+source/target roles at the same physical vertex must be aggregated before
+testing the finite-group charge, with every higher carry retained. Our cube
+routes change actual presentations while fixing source and target classes,
+so their class-incidence change is zero. They therefore do not provide the
+missing target-changing circuit by themselves. The useful next combination
+is internal native routing around an authenticated charge-changing block,
+with its exact shared-owner interface kept throughout; row cancellation at
+different physical owners cannot be traded for spare workspace.
+
 ## The broad guess: mathematical equivalence should remember continuations
 
 My strongest guess is that many recurring obstructions here come from using
