@@ -1,0 +1,159 @@
+{'n': 1, 'hypergraphs': 1, 'counts': {'realizable': 1}, 'literal_checks': 0, 'phase_histogram_consistent': {0: 1}, 'phase_histogram_realizable': {0: 1}, 'indecomposable_phase_histogram': {0: 1}}
+{'n': 2, 'hypergraphs': 1, 'counts': {'realizable': 1}, 'literal_checks': 0, 'phase_histogram_consistent': {1: 1}, 'phase_histogram_realizable': {1: 1}, 'indecomposable_phase_histogram': {1: 1}}
+{'n': 3, 'hypergraphs': 2, 'counts': {'realizable': 2}, 'literal_checks': 8, 'phase_histogram_consistent': {3: 1, 1: 1}, 'phase_histogram_realizable': {3: 1, 1: 1}, 'indecomposable_phase_histogram': {1: 1}}
+{'n': 4, 'hypergraphs': 16, 'counts': {'realizable': 11, 'XOR_inconsistent': 5}, 'literal_checks': 256, 'phase_histogram_consistent': {6: 1, 4: 4, 2: 6}, 'phase_histogram_realizable': {6: 1, 4: 4, 2: 6}, 'indecomposable_phase_histogram': {}}
+{'n': 5, 'hypergraphs': 1024, 'counts': {'realizable': 208, 'XOR_inconsistent': 771, 'residual_NAE_unsatisfiable': 45}, 'literal_checks': 10240, 'phase_histogram_consistent': {10: 1, 8: 10, 6: 45, 4: 100, 3: 15, 2: 70, 1: 12}, 'phase_histogram_realizable': {10: 1, 8: 10, 6: 30, 4: 70, 3: 15, 2: 70, 1: 12}, 'indecomposable_phase_histogram': {4: 60, 2: 60, 1: 12}}
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 1,
+      "hypergraphs": 1,
+      "counts": {
+        "realizable": 1
+      },
+      "literal_checks": 0,
+      "phase_histogram_consistent": {
+        "0": 1
+      },
+      "phase_histogram_realizable": {
+        "0": 1
+      },
+      "indecomposable_phase_histogram": {
+        "0": 1
+      }
+    },
+    {
+      "n": 2,
+      "hypergraphs": 1,
+      "counts": {
+        "realizable": 1
+      },
+      "literal_checks": 0,
+      "phase_histogram_consistent": {
+        "1": 1
+      },
+      "phase_histogram_realizable": {
+        "1": 1
+      },
+      "indecomposable_phase_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 3,
+      "hypergraphs": 2,
+      "counts": {
+        "realizable": 2
+      },
+      "literal_checks": 8,
+      "phase_histogram_consistent": {
+        "3": 1,
+        "1": 1
+      },
+      "phase_histogram_realizable": {
+        "3": 1,
+        "1": 1
+      },
+      "indecomposable_phase_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 4,
+      "hypergraphs": 16,
+      "counts": {
+        "realizable": 11,
+        "XOR_inconsistent": 5
+      },
+      "literal_checks": 256,
+      "phase_histogram_consistent": {
+        "6": 1,
+        "4": 4,
+        "2": 6
+      },
+      "phase_histogram_realizable": {
+        "6": 1,
+        "4": 4,
+        "2": 6
+      },
+      "indecomposable_phase_histogram": {}
+    },
+    {
+      "n": 5,
+      "hypergraphs": 1024,
+      "counts": {
+        "realizable": 208,
+        "XOR_inconsistent": 771,
+        "residual_NAE_unsatisfiable": 45
+      },
+      "literal_checks": 10240,
+      "phase_histogram_consistent": {
+        "10": 1,
+        "8": 10,
+        "6": 45,
+        "4": 100,
+        "3": 15,
+        "2": 70,
+        "1": 12
+      },
+      "phase_histogram_realizable": {
+        "10": 1,
+        "8": 10,
+        "6": 30,
+        "4": 70,
+        "3": 15,
+        "2": 70,
+        "1": 12
+      },
+      "indecomposable_phase_histogram": {
+        "4": 60,
+        "2": 60,
+        "1": 12
+      }
+    }
+  ],
+  "witnesses": {
+    "12": {
+      "positive_triples": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "free_phases": 6,
+      "solutions": []
+    },
+    "13": {
+      "positive_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "free_phases": 4,
+      "solutions": [
+        117,
+        906
+      ]
+    }
+  },
+  "method": "Literal tournament bitsets independently cross-checked by GF2 Gaussian elimination; no DSU or producer imports."
+}

@@ -1,0 +1,455 @@
+{
+  "1": {
+    "hypergraphs": 1,
+    "counts": {
+      "realizable": 1
+    },
+    "phase_histogram_consistent": {
+      "0": 1
+    },
+    "phase_histogram_realizable": {
+      "0": 1
+    },
+    "saved_edge_bits_realizable": {
+      "0": 1
+    },
+    "indecomposable_phase_histogram": {
+      "0": 1
+    }
+  },
+  "2": {
+    "hypergraphs": 1,
+    "counts": {
+      "realizable": 1
+    },
+    "phase_histogram_consistent": {
+      "1": 1
+    },
+    "phase_histogram_realizable": {
+      "1": 1
+    },
+    "saved_edge_bits_realizable": {
+      "0": 1
+    },
+    "indecomposable_phase_histogram": {
+      "1": 1
+    }
+  },
+  "3": {
+    "hypergraphs": 2,
+    "counts": {
+      "realizable": 2
+    },
+    "phase_histogram_consistent": {
+      "1": 1,
+      "3": 1
+    },
+    "phase_histogram_realizable": {
+      "1": 1,
+      "3": 1
+    },
+    "saved_edge_bits_realizable": {
+      "0": 1,
+      "2": 1
+    },
+    "indecomposable_phase_histogram": {
+      "1": 1
+    }
+  },
+  "4": {
+    "hypergraphs": 16,
+    "counts": {
+      "realizable": 11,
+      "xor_inconsistent": 5
+    },
+    "phase_histogram_consistent": {
+      "2": 6,
+      "4": 4,
+      "6": 1
+    },
+    "phase_histogram_realizable": {
+      "2": 6,
+      "4": 4,
+      "6": 1
+    },
+    "saved_edge_bits_realizable": {
+      "0": 1,
+      "2": 4,
+      "4": 6
+    },
+    "indecomposable_phase_histogram": {}
+  },
+  "5": {
+    "hypergraphs": 1024,
+    "counts": {
+      "realizable": 208,
+      "xor_inconsistent": 771,
+      "xor_consistent_nae_unsat": 45
+    },
+    "phase_histogram_consistent": {
+      "1": 12,
+      "2": 70,
+      "3": 15,
+      "4": 100,
+      "6": 45,
+      "8": 10,
+      "10": 1
+    },
+    "phase_histogram_realizable": {
+      "1": 12,
+      "2": 70,
+      "3": 15,
+      "4": 70,
+      "6": 30,
+      "8": 10,
+      "10": 1
+    },
+    "saved_edge_bits_realizable": {
+      "0": 1,
+      "2": 10,
+      "4": 30,
+      "6": 70,
+      "7": 15,
+      "8": 70,
+      "9": 12
+    },
+    "indecomposable_phase_histogram": {
+      "1": 12,
+      "2": 60,
+      "4": 60
+    }
+  },
+  "first_consistent_unsat": {
+    "n": 5,
+    "hypergraph_mask": 12,
+    "positive_triples": [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "phases": 6,
+    "solutions": [],
+    "literal_map": [
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "clauses": [
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          3,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    ],
+    "clause_types": {
+      "ternary_NAE": 8
+    }
+  },
+  "first_indecomposable_multiphase": {
+    "n": 5,
+    "hypergraph_mask": 13,
+    "phases": 4,
+    "solutions": [
+      117,
+      906
+    ],
+    "literal_map": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "clauses": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    ],
+    "clause_types": {
+      "tautology": 4,
+      "binary_xor": 1,
+      "ternary_NAE": 2
+    }
+  }
+}

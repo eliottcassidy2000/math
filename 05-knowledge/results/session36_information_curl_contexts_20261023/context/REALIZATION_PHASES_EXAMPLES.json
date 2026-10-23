@@ -1,0 +1,37 @@
+{
+  "C5": {
+    "order": 5,
+    "edge_variables": 10,
+    "positive_triangles": 5,
+    "positive_phase_components": 1,
+    "realizations": 2,
+    "indecomposable": true,
+    "clause_types": {
+      "tautology": 5
+    }
+  },
+  "Paley7": {
+    "order": 7,
+    "edge_variables": 21,
+    "positive_triangles": 14,
+    "positive_phase_components": 1,
+    "realizations": 2,
+    "indecomposable": true,
+    "clause_types": {
+      "tautology": 21
+    }
+  },
+  "W5": {
+    "order": 5,
+    "edge_variables": 10,
+    "positive_triangles": 3,
+    "positive_phase_components": 4,
+    "realizations": 2,
+    "indecomposable": true,
+    "clause_types": {
+      "ternary_NAE": 2,
+      "tautology": 4,
+      "binary_xor": 1
+    }
+  }
+}
