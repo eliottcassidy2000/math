@@ -1,0 +1,102 @@
+{
+  "status": "PASS independent exact valuation comparison",
+  "rows": [
+    {
+      "p": 2,
+      "a": 46,
+      "b": 42,
+      "deficit": 4
+    },
+    {
+      "p": 3,
+      "a": 20,
+      "b": 13,
+      "deficit": 7
+    },
+    {
+      "p": 5,
+      "a": 9,
+      "b": 6,
+      "deficit": 3
+    },
+    {
+      "p": 7,
+      "a": 6,
+      "b": 2,
+      "deficit": 4
+    },
+    {
+      "p": 11,
+      "a": 2,
+      "b": 1,
+      "deficit": 1
+    },
+    {
+      "p": 13,
+      "a": 3,
+      "b": 1,
+      "deficit": 2
+    },
+    {
+      "p": 17,
+      "a": 1,
+      "b": 1,
+      "deficit": 0
+    },
+    {
+      "p": 19,
+      "a": 1,
+      "b": 1,
+      "deficit": 0
+    },
+    {
+      "p": 23,
+      "a": 1,
+      "b": 1,
+      "deficit": 0
+    },
+    {
+      "p": 29,
+      "a": 1,
+      "b": 0,
+      "deficit": 1
+    },
+    {
+      "p": 31,
+      "a": 1,
+      "b": 1,
+      "deficit": 0
+    },
+    {
+      "p": 41,
+      "a": 1,
+      "b": 0,
+      "deficit": 1
+    },
+    {
+      "p": 47,
+      "a": 1,
+      "b": 1,
+      "deficit": 0
+    },
+    {
+      "p": 59,
+      "a": 1,
+      "b": 0,
+      "deficit": 1
+    },
+    {
+      "p": 71,
+      "a": 1,
+      "b": 0,
+      "deficit": 1
+    }
+  ],
+  "source_sha256": {
+    "session32-root/SYLOW_FIXED_POINT_PARTITION.md": "3dc2a7db7869b4cd71d876554f6eb1592e2f26404762f675d1928aba2d274788",
+    "session32-root/sylow_partition.json": "4072fdfebeda1a0e726cefea6c1d086c721ca32d3305fba267dc0fb45df9f346"
+  },
+  "proof_check": "For a transitive finite G-set with stabilizer H, K fixes a point iff K is contained in a conjugate of H. Cauchy and Sylow conjugacy yield exactly the stated regimes.",
+  "source_edits": false,
+  "git_mutations": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "audited_source_sha256": {
+    "session32-monster/MONSTER_BABY_PRIME_PARTITION.md": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a",
+    "session32-monster/audit_level_two.py": "7fe33e973878c52c6300ad554c2b45048ea85f5d6233d650c3a7380f9af79075",
+    "session32-monster/independent_field_audit.py": "33b594a71506d9995e165a337f080b28c67685ef44558c8d0f743d677a53e7fb",
+    "session32-monster/level_two_exact.json": "47576a455b6908f7b651bc0040b0add04f1726108d0bcdd3871e8c9179b73b09",
+    "session32-monster/independent_field_exact.json": "297bcf1fac06e20ae91bd177b26d497e68c0f11db1e8fb7ea2ea993bddbe704d",
+    "session32-root/VALUATION_CYCLE_AND_QUOTIENT.md": "27af626ac2abcc372ec664ce82c73c660ee63555a95246ddd629339175d3b3a3",
+    "session32-root/check_valuation_cycle.py": "6675400442716713983ce69007d8f68b74ccfaa9ed0d5bc3bec868aa18284c7e"
+  },
+  "independent_script_sha256": "8c624210d359635dcf0d232eb07368ca8a2a680d69b2df3bed432f04487f737c",
+  "independent_result_sha256": "4b03a017e6ca3430aa6ad308dd0fa5a594dfaeb5762b820155c6c14fb514f8a6",
+  "source_edits_by_auditor": false,
+  "git_mutations_by_auditor": false,
+  "author_replays": "Outputs byte-identical to saved JSON, including endpoint refinement",
+  "warning": "SymPyDeprecationWarning on modular-integer ordering; no mathematical or assertion failure",
+  "sylow_addendum": {
+    "status": "PASS",
+    "source_sha256": {
+      "session32-root/SYLOW_FIXED_POINT_PARTITION.md": "3dc2a7db7869b4cd71d876554f6eb1592e2f26404762f675d1928aba2d274788",
+      "session32-root/sylow_partition.json": "4072fdfebeda1a0e726cefea6c1d086c721ca32d3305fba267dc0fb45df9f346"
+    },
+    "certificate": "sylow_addendum_exact.json"
+  }
+}

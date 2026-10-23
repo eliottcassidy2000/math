@@ -1,0 +1,21 @@
+{
+  "checked_utc_date": "2026-10-23",
+  "sources": [
+    {
+      "url": "https://oeis.org/A090461",
+      "access": "Direct page read succeeded",
+      "supported_scope": "Robert Gerbicz's January 21, 2018 comment states paths for every n>=25 and cycles for every n>=32."
+    },
+    {
+      "url": "https://www.mersenneforum.org/node/17331/page2",
+      "access": "Direct opening failed; indexed primary-author posts retrieved by targeted search",
+      "supported_scope": "Consecutive-length pairs preserve shared-value position parity; shifted square-scaled blocks use that invariant. The author distinguishes modulus 25 for paths and 49 for cycles."
+    }
+  ],
+  "not_checked": [
+    "The complete Gerbicz base-pair tables",
+    "The complete Gerbicz gluing tables",
+    "FGST or logarithmic VOA representation claims"
+  ],
+  "status": "CITED theorem scope corroborated; not a fresh proof audit of the all-order construction"
+}

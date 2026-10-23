@@ -1,0 +1,721 @@
+{
+  "method": "Independent exhaustive Fp2 Hasse roots, exact j/u/s maps, and set quotient; no imported author code",
+  "orders": {
+    "Monster": 808017424794512875886459904961710757005754368000000000,
+    "Baby": 4154781481226426191177580544000000,
+    "M_over_B": 194478922284018372000,
+    "M_over_2B": 97239461142009186000,
+    "core": 39046339332000,
+    "exceptional_product": 4980721
+  },
+  "valuation_strata": {
+    "equal_positive": [
+      17,
+      19,
+      23,
+      31,
+      47
+    ],
+    "Monster_only": [
+      29,
+      41,
+      59,
+      71
+    ],
+    "increased_common": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ]
+  },
+  "valuation_cycles": [
+    [
+      13,
+      2,
+      5,
+      3,
+      7
+    ],
+    [
+      13,
+      2
+    ]
+  ],
+  "modular_descent_witnesses": {
+    "3": [
+      [
+        2,
+        5,
+        5,
+        3
+      ],
+      [
+        2,
+        11,
+        5,
+        1
+      ],
+      [
+        5,
+        11,
+        3,
+        1
+      ],
+      [
+        7,
+        13,
+        4,
+        2
+      ]
+    ],
+    "9": [
+      [
+        2,
+        11,
+        5,
+        1
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "p": 3,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 1,
+      "j_count": 1,
+      "nonrational_j_count": 0,
+      "u_count": 1,
+      "s_count": 1,
+      "fricke_fixed_u": [
+        [
+          2,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        1
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 5,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 2,
+      "j_count": 1,
+      "nonrational_j_count": 0,
+      "u_count": 1,
+      "s_count": 1,
+      "fricke_fixed_u": [
+        [
+          4,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        3
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 7,
+      "quadratic_field_nonsquare": 3,
+      "hasse_root_count": 3,
+      "j_count": 1,
+      "nonrational_j_count": 0,
+      "u_count": 2,
+      "s_count": 2,
+      "fricke_fixed_u": [
+        [
+          1,
+          0
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        2,
+        5
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 11,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 5,
+      "j_count": 2,
+      "nonrational_j_count": 0,
+      "u_count": 3,
+      "s_count": 2,
+      "fricke_fixed_u": [
+        [
+          2,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        3,
+        4
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 13,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 6,
+      "j_count": 1,
+      "nonrational_j_count": 0,
+      "u_count": 3,
+      "s_count": 2,
+      "fricke_fixed_u": [
+        [
+          12,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        5,
+        11
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 17,
+      "quadratic_field_nonsquare": 3,
+      "hasse_root_count": 8,
+      "j_count": 2,
+      "nonrational_j_count": 0,
+      "u_count": 4,
+      "s_count": 2,
+      "fricke_fixed_u": [],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        0,
+        4
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 19,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 9,
+      "j_count": 2,
+      "nonrational_j_count": 0,
+      "u_count": 5,
+      "s_count": 3,
+      "fricke_fixed_u": [
+        [
+          12,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        5,
+        7,
+        10
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 23,
+      "quadratic_field_nonsquare": 5,
+      "hasse_root_count": 11,
+      "j_count": 3,
+      "nonrational_j_count": 0,
+      "u_count": 6,
+      "s_count": 4,
+      "fricke_fixed_u": [
+        [
+          5,
+          0
+        ],
+        [
+          18,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        4,
+        10,
+        13,
+        14
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 29,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 14,
+      "j_count": 3,
+      "nonrational_j_count": 0,
+      "u_count": 7,
+      "s_count": 4,
+      "fricke_fixed_u": [
+        [
+          6,
+          0
+        ]
+      ],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          20,
+          16
+        ]
+      ],
+      "rational_s": [
+        12,
+        18
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            19,
+            10
+          ],
+          "j_endpoints": [
+            [
+              2,
+              0
+            ],
+            [
+              25,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            19,
+            19
+          ],
+          "j_endpoints": [
+            [
+              2,
+              0
+            ],
+            [
+              25,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "p": 31,
+      "quadratic_field_nonsquare": 3,
+      "hasse_root_count": 15,
+      "j_count": 3,
+      "nonrational_j_count": 0,
+      "u_count": 8,
+      "s_count": 5,
+      "fricke_fixed_u": [
+        [
+          2,
+          0
+        ],
+        [
+          29,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        4,
+        15,
+        24,
+        26,
+        27
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 37,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 18,
+      "j_count": 3,
+      "nonrational_j_count": 2,
+      "u_count": 9,
+      "s_count": 5,
+      "fricke_fixed_u": [
+        [
+          27,
+          0
+        ]
+      ],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          11,
+          6
+        ]
+      ],
+      "rational_s": [
+        17,
+        30,
+        32
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            13,
+            10
+          ],
+          "j_endpoints": [
+            [
+              3,
+              10
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            13,
+            27
+          ],
+          "j_endpoints": [
+            [
+              3,
+              27
+            ],
+            [
+              8,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "p": 41,
+      "quadratic_field_nonsquare": 3,
+      "hasse_root_count": 20,
+      "j_count": 4,
+      "nonrational_j_count": 0,
+      "u_count": 10,
+      "s_count": 5,
+      "fricke_fixed_u": [],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          8,
+          33
+        ]
+      ],
+      "rational_s": [
+        3,
+        15,
+        35
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            37,
+            7
+          ],
+          "j_endpoints": [
+            [
+              3,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            37,
+            34
+          ],
+          "j_endpoints": [
+            [
+              3,
+              0
+            ],
+            [
+              32,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "p": 43,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 21,
+      "j_count": 4,
+      "nonrational_j_count": 2,
+      "u_count": 11,
+      "s_count": 6,
+      "fricke_fixed_u": [
+        [
+          22,
+          0
+        ]
+      ],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          5,
+          18
+        ]
+      ],
+      "rational_s": [
+        1,
+        4,
+        11,
+        26
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            19,
+            8
+          ],
+          "j_endpoints": [
+            [
+              12,
+              8
+            ],
+            [
+              41,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            19,
+            35
+          ],
+          "j_endpoints": [
+            [
+              12,
+              35
+            ],
+            [
+              41,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "p": 47,
+      "quadratic_field_nonsquare": 5,
+      "hasse_root_count": 23,
+      "j_count": 5,
+      "nonrational_j_count": 0,
+      "u_count": 12,
+      "s_count": 7,
+      "fricke_fixed_u": [
+        [
+          17,
+          0
+        ],
+        [
+          30,
+          0
+        ]
+      ],
+      "nonrational_s_count": 0,
+      "irreducible_quadratics_high_to_low": [],
+      "rational_s": [
+        0,
+        3,
+        10,
+        13,
+        14,
+        34,
+        39
+      ],
+      "nonrational_s_endpoints": [],
+      "PASS": true
+    },
+    {
+      "p": 59,
+      "quadratic_field_nonsquare": 2,
+      "hasse_root_count": 29,
+      "j_count": 6,
+      "nonrational_j_count": 0,
+      "u_count": 15,
+      "s_count": 8,
+      "fricke_fixed_u": [
+        [
+          54,
+          0
+        ]
+      ],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          49,
+          53
+        ]
+      ],
+      "rational_s": [
+        12,
+        23,
+        28,
+        33,
+        48,
+        49
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            5,
+            24
+          ],
+          "j_endpoints": [
+            [
+              28,
+              0
+            ],
+            [
+              48,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            5,
+            35
+          ],
+          "j_endpoints": [
+            [
+              28,
+              0
+            ],
+            [
+              48,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    },
+    {
+      "p": 71,
+      "quadratic_field_nonsquare": 7,
+      "hasse_root_count": 35,
+      "j_count": 7,
+      "nonrational_j_count": 0,
+      "u_count": 18,
+      "s_count": 10,
+      "fricke_fixed_u": [
+        [
+          7,
+          0
+        ],
+        [
+          64,
+          0
+        ]
+      ],
+      "nonrational_s_count": 2,
+      "irreducible_quadratics_high_to_low": [
+        [
+          1,
+          49,
+          53
+        ]
+      ],
+      "rational_s": [
+        9,
+        12,
+        14,
+        18,
+        23,
+        46,
+        55,
+        57
+      ],
+      "nonrational_s_endpoints": [
+        {
+          "s": [
+            11,
+            32
+          ],
+          "j_endpoints": [
+            [
+              41,
+              0
+            ],
+            [
+              66,
+              0
+            ]
+          ]
+        },
+        {
+          "s": [
+            11,
+            39
+          ],
+          "j_endpoints": [
+            [
+              41,
+              0
+            ],
+            [
+              66,
+              0
+            ]
+          ]
+        }
+      ],
+      "PASS": true
+    }
+  ],
+  "PASS": true
+}

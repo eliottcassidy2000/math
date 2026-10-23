@@ -1,0 +1,1414 @@
+{
+  "method": "Legendre Hasse resultant; X0(2) j-map; Fricke invariant s=u+4096/u; squarefree mod p",
+  "source_urls": [
+    "https://arxiv.org/html/1809.07421",
+    "https://brauer.maths.qmul.ac.uk/Atlas/spor/M/",
+    "https://brauer.maths.qmul.ac.uk/Atlas/spor/B/"
+  ],
+  "orders": {
+    "Monster": 808017424794512875886459904961710757005754368000000000,
+    "Baby": 4154781481226426191177580544000000,
+    "M_over_B": 194478922284018372000,
+    "M_over_2B": 97239461142009186000
+  },
+  "valuation_strata": {
+    "equal_positive": [
+      17,
+      19,
+      23,
+      31,
+      47
+    ],
+    "Monster_only": [
+      29,
+      41,
+      59,
+      71
+    ],
+    "increased_common": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ]
+  },
+  "rows": [
+    {
+      "p": 5,
+      "ss_j_count": 1,
+      "j_degrees": [
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 1,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 1,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        2
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 2",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 7,
+      "ss_j_count": 1,
+      "j_degrees": [
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 2,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 2,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        0,
+        3
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 2",
+          1
+        ],
+        [
+          "s - 2",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 11,
+      "ss_j_count": 2,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 3,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 2,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        4,
+        1
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s - 4",
+          1
+        ],
+        [
+          "s - 3",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 13,
+      "ss_j_count": 1,
+      "j_degrees": [
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 3,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 2,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        10,
+        3
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 2",
+          1
+        ],
+        [
+          "s - 5",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 17,
+      "ss_j_count": 2,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 4,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 2,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        13,
+        0
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s",
+          1
+        ],
+        [
+          "s - 4",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 19,
+      "ss_j_count": 2,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 5,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 3,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        16,
+        3,
+        11
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 9",
+          1
+        ],
+        [
+          "s - 7",
+          1
+        ],
+        [
+          "s - 5",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 23,
+      "ss_j_count": 3,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 6,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 4,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        5,
+        2,
+        6,
+        12
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 9",
+          1
+        ],
+        [
+          "s + 10",
+          1
+        ],
+        [
+          "s - 10",
+          1
+        ],
+        [
+          "s - 4",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 29,
+      "ss_j_count": 3,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 7,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 4,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        19,
+        9,
+        12,
+        5
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 11",
+          1
+        ],
+        [
+          "s - 12",
+          1
+        ],
+        [
+          "s**2 - 9*s - 13",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 31,
+      "ss_j_count": 3,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 8,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 5,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        28,
+        25,
+        19,
+        26,
+        30
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 4",
+          1
+        ],
+        [
+          "s + 5",
+          1
+        ],
+        [
+          "s + 7",
+          1
+        ],
+        [
+          "s - 15",
+          1
+        ],
+        [
+          "s - 4",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 37,
+      "ss_j_count": 3,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 9,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 5,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        6,
+        4,
+        32,
+        26,
+        19
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 5",
+          1
+        ],
+        [
+          "s + 7",
+          1
+        ],
+        [
+          "s - 17",
+          1
+        ],
+        [
+          "s**2 + 11*s + 6",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 41,
+      "ss_j_count": 4,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 10,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 5,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        37,
+        38,
+        26,
+        40,
+        13
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 6",
+          1
+        ],
+        [
+          "s - 15",
+          1
+        ],
+        [
+          "s - 3",
+          1
+        ],
+        [
+          "s**2 + 8*s - 8",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 43,
+      "ss_j_count": 4,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 11,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 6,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        6,
+        25,
+        41,
+        41,
+        20,
+        38
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 17",
+          1
+        ],
+        [
+          "s - 11",
+          1
+        ],
+        [
+          "s - 4",
+          1
+        ],
+        [
+          "s - 1",
+          1
+        ],
+        [
+          "s**2 + 5*s + 18",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 47,
+      "ss_j_count": 5,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 12,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 7,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 0,
+      "genus_X0star_2p_by_Aricheta": 0,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        28,
+        15,
+        22,
+        42,
+        39,
+        33,
+        0
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s",
+          1
+        ],
+        [
+          "s + 8",
+          1
+        ],
+        [
+          "s + 13",
+          1
+        ],
+        [
+          "s - 14",
+          1
+        ],
+        [
+          "s - 13",
+          1
+        ],
+        [
+          "s - 10",
+          1
+        ],
+        [
+          "s - 3",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 59,
+      "ss_j_count": 6,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 15,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 8,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        33,
+        49,
+        58,
+        0,
+        40,
+        7,
+        8,
+        9
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 10",
+          1
+        ],
+        [
+          "s + 11",
+          1
+        ],
+        [
+          "s + 26",
+          1
+        ],
+        [
+          "s - 28",
+          1
+        ],
+        [
+          "s - 23",
+          1
+        ],
+        [
+          "s - 12",
+          1
+        ],
+        [
+          "s**2 - 10*s - 6",
+          1
+        ]
+      ]
+    },
+    {
+      "p": 71,
+      "ss_j_count": 7,
+      "j_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "ss_X0_2_count": 18,
+      "X0_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "ss_X0plus_2_count": 10,
+      "X0plus_2_degrees": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "nonrational_X0plus_2_points": 2,
+      "genus_X0star_2p_by_Aricheta": 1,
+      "X0plus_2_polynomial_coefficients_high_to_low": [
+        1,
+        28,
+        57,
+        52,
+        24,
+        20,
+        34,
+        30,
+        49,
+        12,
+        70
+      ],
+      "X0plus_2_factorization": [
+        [
+          "s + 14",
+          1
+        ],
+        [
+          "s + 16",
+          1
+        ],
+        [
+          "s + 25",
+          1
+        ],
+        [
+          "s - 23",
+          1
+        ],
+        [
+          "s - 18",
+          1
+        ],
+        [
+          "s - 14",
+          1
+        ],
+        [
+          "s - 12",
+          1
+        ],
+        [
+          "s - 9",
+          1
+        ],
+        [
+          "s**2 - 22*s - 18",
+          1
+        ]
+      ]
+    }
+  ]
+}

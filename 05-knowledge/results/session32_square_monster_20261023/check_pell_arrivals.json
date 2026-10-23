@@ -1,0 +1,65 @@
+{
+  "status": "PASS exact integer checks",
+  "n_max": 1000000,
+  "silent_square_births": [
+    9,
+    25,
+    289,
+    841,
+    9801,
+    28561,
+    332929,
+    970225
+  ],
+  "Pell_witnesses": [
+    {
+      "n": 9,
+      "m": 4,
+      "k": 3,
+      "norm": -2
+    },
+    {
+      "n": 25,
+      "m": 7,
+      "k": 5,
+      "norm": -1
+    },
+    {
+      "n": 289,
+      "m": 24,
+      "k": 17,
+      "norm": -2
+    },
+    {
+      "n": 841,
+      "m": 41,
+      "k": 29,
+      "norm": -1
+    },
+    {
+      "n": 9801,
+      "m": 140,
+      "k": 99,
+      "norm": -2
+    },
+    {
+      "n": 28561,
+      "m": 239,
+      "k": 169,
+      "norm": -1
+    },
+    {
+      "n": 332929,
+      "m": 816,
+      "k": 577,
+      "norm": -2
+    },
+    {
+      "n": 970225,
+      "m": 1393,
+      "k": 985,
+      "norm": -1
+    }
+  ],
+  "scope": "Finite controls supplement the all-order Pell proof; no Hamiltonian criterion."
+}

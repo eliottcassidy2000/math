@@ -1,0 +1,331 @@
+[
+  {
+    "p": 5,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 24,
+    "supersingular_j_from_pointcounts": [
+      0
+    ],
+    "u_point_count": 1,
+    "s_point_count": 1,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 7,
+    "extension_relation": "z^2=3",
+    "enumerated_nonzero_u": 48,
+    "supersingular_j_from_pointcounts": [
+      6
+    ],
+    "u_point_count": 2,
+    "s_point_count": 2,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 11,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 120,
+    "supersingular_j_from_pointcounts": [
+      0,
+      1
+    ],
+    "u_point_count": 3,
+    "s_point_count": 2,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 13,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 168,
+    "supersingular_j_from_pointcounts": [
+      5
+    ],
+    "u_point_count": 3,
+    "s_point_count": 2,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 17,
+    "extension_relation": "z^2=3",
+    "enumerated_nonzero_u": 288,
+    "supersingular_j_from_pointcounts": [
+      0,
+      8
+    ],
+    "u_point_count": 4,
+    "s_point_count": 2,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 19,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 360,
+    "supersingular_j_from_pointcounts": [
+      7,
+      18
+    ],
+    "u_point_count": 5,
+    "s_point_count": 3,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 23,
+    "extension_relation": "z^2=5",
+    "enumerated_nonzero_u": 528,
+    "supersingular_j_from_pointcounts": [
+      0,
+      3,
+      19
+    ],
+    "u_point_count": 6,
+    "s_point_count": 4,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 29,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 840,
+    "supersingular_j_from_pointcounts": [
+      0,
+      2,
+      25
+    ],
+    "u_point_count": 7,
+    "s_point_count": 4,
+    "s_nonrational_count": 2,
+    "nonrational_s_coordinates": [
+      [
+        19,
+        10
+      ],
+      [
+        19,
+        19
+      ]
+    ],
+    "nonrational_unordered_isogenies": [
+      {
+        "s_coordinates": [
+          19,
+          10
+        ],
+        "unordered_j_endpoints": [
+          2,
+          25
+        ]
+      },
+      {
+        "s_coordinates": [
+          19,
+          19
+        ],
+        "unordered_j_endpoints": [
+          2,
+          25
+        ]
+      }
+    ],
+    "PASS": true
+  },
+  {
+    "p": 31,
+    "extension_relation": "z^2=3",
+    "enumerated_nonzero_u": 960,
+    "supersingular_j_from_pointcounts": [
+      2,
+      4,
+      23
+    ],
+    "u_point_count": 8,
+    "s_point_count": 5,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 41,
+    "extension_relation": "z^2=3",
+    "enumerated_nonzero_u": 1680,
+    "supersingular_j_from_pointcounts": [
+      0,
+      3,
+      28,
+      32
+    ],
+    "u_point_count": 10,
+    "s_point_count": 5,
+    "s_nonrational_count": 2,
+    "nonrational_s_coordinates": [
+      [
+        37,
+        7
+      ],
+      [
+        37,
+        34
+      ]
+    ],
+    "nonrational_unordered_isogenies": [
+      {
+        "s_coordinates": [
+          37,
+          7
+        ],
+        "unordered_j_endpoints": [
+          3,
+          32
+        ]
+      },
+      {
+        "s_coordinates": [
+          37,
+          34
+        ],
+        "unordered_j_endpoints": [
+          3,
+          32
+        ]
+      }
+    ],
+    "PASS": true
+  },
+  {
+    "p": 47,
+    "extension_relation": "z^2=5",
+    "enumerated_nonzero_u": 2208,
+    "supersingular_j_from_pointcounts": [
+      0,
+      9,
+      10,
+      36,
+      44
+    ],
+    "u_point_count": 12,
+    "s_point_count": 7,
+    "s_nonrational_count": 0,
+    "nonrational_s_coordinates": [],
+    "nonrational_unordered_isogenies": [],
+    "PASS": true
+  },
+  {
+    "p": 59,
+    "extension_relation": "z^2=2",
+    "enumerated_nonzero_u": 3480,
+    "supersingular_j_from_pointcounts": [
+      0,
+      15,
+      17,
+      28,
+      47,
+      48
+    ],
+    "u_point_count": 15,
+    "s_point_count": 8,
+    "s_nonrational_count": 2,
+    "nonrational_s_coordinates": [
+      [
+        5,
+        24
+      ],
+      [
+        5,
+        35
+      ]
+    ],
+    "nonrational_unordered_isogenies": [
+      {
+        "s_coordinates": [
+          5,
+          24
+        ],
+        "unordered_j_endpoints": [
+          28,
+          48
+        ]
+      },
+      {
+        "s_coordinates": [
+          5,
+          35
+        ],
+        "unordered_j_endpoints": [
+          28,
+          48
+        ]
+      }
+    ],
+    "PASS": true
+  },
+  {
+    "p": 71,
+    "extension_relation": "z^2=7",
+    "enumerated_nonzero_u": 5040,
+    "supersingular_j_from_pointcounts": [
+      0,
+      17,
+      24,
+      40,
+      41,
+      48,
+      66
+    ],
+    "u_point_count": 18,
+    "s_point_count": 10,
+    "s_nonrational_count": 2,
+    "nonrational_s_coordinates": [
+      [
+        11,
+        32
+      ],
+      [
+        11,
+        39
+      ]
+    ],
+    "nonrational_unordered_isogenies": [
+      {
+        "s_coordinates": [
+          11,
+          32
+        ],
+        "unordered_j_endpoints": [
+          41,
+          66
+        ]
+      },
+      {
+        "s_coordinates": [
+          11,
+          39
+        ],
+        "unordered_j_endpoints": [
+          41,
+          66
+        ]
+      }
+    ],
+    "PASS": true
+  }
+]

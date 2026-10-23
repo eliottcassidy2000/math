@@ -1,0 +1,1072 @@
+{
+  "status": "PASS independent bounded structural audit",
+  "explicit_checks": 23253,
+  "source_sha256": {
+    "session32-square-sum/README.md": "14ebad4c4a43c7daabc08e0277861b9b4852c3ab8e6b7f0b2052bc22dafb47cc",
+    "session32-square-sum/verify_square_sum.py": "5b328b4adace5bf6791f565059f8d9460205888d54e3371d620ca42413979288",
+    "session32-square-sum/certificates.json": "967e12fa85495adf189bc2e186642c82723eb6d48b1283314f1f48574bac98ff",
+    "session32-ports/verify_ports.py": "90163d18f54c7b68378ee5e1c024a22f61f26068d95bed5d45445b6b92e8a080",
+    "session32-ports/certificate.json": "40012b4791d039cda6c16894aec79ab00cfa5530a65faada2b87bd2823f43e37",
+    "session32-ports/PORT_TRANSFER.md": "33cc3eb288608b3be982a77f78fadf3bd0e6eae7ed2516f27329a84f6cc56255",
+    "session32-root/CAT_MAP_PATH_FORESTS.md": "9f449e2bced76d98bb7b1b6b7c49b930e2858da7ca54aaa7e6ad1aa8fa5f682b",
+    "session32-root/check_catmap_forests.py": "c4bfeb0e5d9f54cc33fb609c613aa4468b12f0b2527f9bcbb9646feba39486e5"
+  },
+  "scope": {
+    "arrival_control": "n=1..64; all-order degree-two bound proved separately",
+    "independent_exact_path_sets": [
+      14,
+      15,
+      16,
+      17,
+      23,
+      24,
+      25
+    ],
+    "all_listed_paths_validated": "n=1..25",
+    "forest_subset_check": "path orders1..12 and the three G25 blocks",
+    "not_audited": "Gerbicz large finite base/glue tables; FGST representation claims"
+  },
+  "degree_two_bands": [
+    [
+      13,
+      15
+    ],
+    [
+      19,
+      24
+    ],
+    [
+      25,
+      32
+    ],
+    [
+      36,
+      40
+    ],
+    [
+      49,
+      50
+    ]
+  ],
+  "arrival_12_to_15": [
+    {
+      "n": 12,
+      "neighbors": [
+        4
+      ],
+      "degree": 1,
+      "touched_components": 1,
+      "components": 3,
+      "cycle_rank": 0
+    },
+    {
+      "n": 13,
+      "neighbors": [
+        3,
+        12
+      ],
+      "degree": 2,
+      "touched_components": 2,
+      "components": 2,
+      "cycle_rank": 0
+    },
+    {
+      "n": 14,
+      "neighbors": [
+        2,
+        11
+      ],
+      "degree": 2,
+      "touched_components": 2,
+      "components": 1,
+      "cycle_rank": 0
+    },
+    {
+      "n": 15,
+      "neighbors": [
+        1,
+        10
+      ],
+      "degree": 2,
+      "touched_components": 1,
+      "components": 1,
+      "cycle_rank": 1
+    }
+  ],
+  "degree_solver_nodes": 78,
+  "independent_census": [
+    {
+      "n": 14,
+      "count": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 15,
+      "count": 1,
+      "endpoint_counts": {
+        "(8, 9)": 1
+      }
+    },
+    {
+      "n": 16,
+      "count": 1,
+      "endpoint_counts": {
+        "(8, 16)": 1
+      }
+    },
+    {
+      "n": 17,
+      "count": 1,
+      "endpoint_counts": {
+        "(16, 17)": 1
+      }
+    },
+    {
+      "n": 23,
+      "count": 3,
+      "endpoint_counts": {
+        "(2, 18)": 1,
+        "(9, 18)": 1,
+        "(18, 22)": 1
+      }
+    },
+    {
+      "n": 24,
+      "count": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 25,
+      "count": 10,
+      "endpoint_counts": {
+        "(2, 18)": 1,
+        "(3, 18)": 1,
+        "(4, 18)": 1,
+        "(8, 18)": 1,
+        "(9, 18)": 1,
+        "(10, 18)": 1,
+        "(11, 18)": 1,
+        "(13, 18)": 1,
+        "(18, 22)": 1,
+        "(18, 23)": 1
+      }
+    }
+  ],
+  "degree_two_endpoint22_witness": [
+    18,
+    7,
+    9,
+    16,
+    20,
+    5,
+    11,
+    14,
+    2,
+    23,
+    13,
+    12,
+    4,
+    21,
+    15,
+    10,
+    6,
+    19,
+    17,
+    8,
+    1,
+    3,
+    22
+  ],
+  "local_signatures": {
+    "A": {
+      "count": 5,
+      "internal_edges": [
+        [
+          2,
+          7
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          9,
+          16
+        ]
+      ],
+      "boundary_edges": [
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          23
+        ],
+        [
+          16,
+          20
+        ]
+      ],
+      "anonymous_count": 3,
+      "anonymous_multiplicity_histogram": {
+        "1": 1,
+        "2": 2
+      }
+    },
+    "B": {
+      "count": 101,
+      "internal_edges": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "boundary_edges": [
+        [
+          4,
+          21
+        ],
+        [
+          5,
+          20
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          11,
+          25
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          24
+        ]
+      ],
+      "anonymous_count": 89,
+      "anonymous_multiplicity_histogram": {
+        "1": 81,
+        "2": 4,
+        "3": 4
+      }
+    },
+    "C": {
+      "count": 149,
+      "internal_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          17
+        ]
+      ],
+      "boundary_edges": [
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "anonymous_count": 131,
+      "anonymous_multiplicity_histogram": {
+        "1": 118,
+        "2": 10,
+        "3": 2,
+        "5": 1
+      }
+    }
+  },
+  "gluing": {
+    "endpoint_budget_triples": 1543,
+    "degree_feasible": 19,
+    "disconnected": 9,
+    "hamiltonian_paths_mod_reversal": 10,
+    "canonical_paths": [
+      [
+        2,
+        23,
+        13,
+        12,
+        24,
+        25,
+        11,
+        14,
+        22,
+        3,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        3,
+        22,
+        14,
+        2,
+        23,
+        13,
+        12,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        22,
+        14,
+        2,
+        23,
+        13,
+        12,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        12,
+        13,
+        23,
+        2,
+        14,
+        22,
+        3,
+        1,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        9,
+        16,
+        20,
+        5,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        22,
+        14,
+        11,
+        25,
+        24,
+        12,
+        13,
+        23,
+        2,
+        7,
+        18
+      ],
+      [
+        10,
+        15,
+        21,
+        4,
+        12,
+        13,
+        23,
+        2,
+        14,
+        22,
+        3,
+        6,
+        19,
+        17,
+        8,
+        1,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        11,
+        25,
+        24,
+        12,
+        13,
+        23,
+        2,
+        14,
+        22,
+        3,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        13,
+        23,
+        2,
+        14,
+        22,
+        3,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        12,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        11,
+        25,
+        24,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        12,
+        13,
+        3,
+        22,
+        14,
+        2,
+        23
+      ],
+      [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        11,
+        25,
+        24,
+        12,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        13,
+        23,
+        2,
+        14,
+        22
+      ]
+    ],
+    "disconnected_expanded_examples": [
+      {
+        "components": [
+          [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            24,
+            25
+          ],
+          [
+            2,
+            3,
+            13,
+            14,
+            22,
+            23
+          ]
+        ],
+        "cycle_rank": 1
+      },
+      {
+        "components": [
+          [
+            1,
+            5,
+            7,
+            8,
+            9,
+            11,
+            16,
+            17,
+            18,
+            19,
+            20,
+            24,
+            25
+          ],
+          [
+            2,
+            3,
+            4,
+            6,
+            10,
+            12,
+            13,
+            14,
+            15,
+            21,
+            22,
+            23
+          ]
+        ],
+        "cycle_rank": 1
+      },
+      {
+        "components": [
+          [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            17,
+            19,
+            21,
+            22,
+            23
+          ],
+          [
+            5,
+            7,
+            9,
+            11,
+            16,
+            18,
+            20,
+            24,
+            25
+          ]
+        ],
+        "cycle_rank": 1
+      }
+    ]
+  },
+  "contraction": {
+    "vertices": 13,
+    "multigraph_edges": 20,
+    "multigraph_cycle_rank": 8,
+    "simple_edges": 18,
+    "simple_cycle_rank": 6,
+    "core_components": [
+      [
+        13,
+        23
+      ],
+      [
+        14,
+        22
+      ],
+      [
+        15,
+        21
+      ],
+      [
+        19
+      ],
+      [
+        20
+      ],
+      [
+        24,
+        25
+      ]
+    ]
+  },
+  "cat_map": {
+    "A": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "B": [
+      [
+        3,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "U": [
+      [
+        1,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "AU": [
+      [
+        2,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "UB": [
+      [
+        2,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ]
+  },
+  "forest_rows": [
+    {
+      "m": 1,
+      "coefficients": [
+        1
+      ],
+      "rooted_forest_count": 1,
+      "cat_map_trace": 3
+    },
+    {
+      "m": 2,
+      "coefficients": [
+        1,
+        2
+      ],
+      "rooted_forest_count": 3,
+      "cat_map_trace": 7
+    },
+    {
+      "m": 3,
+      "coefficients": [
+        1,
+        4,
+        3
+      ],
+      "rooted_forest_count": 8,
+      "cat_map_trace": 18
+    },
+    {
+      "m": 4,
+      "coefficients": [
+        1,
+        6,
+        10,
+        4
+      ],
+      "rooted_forest_count": 21,
+      "cat_map_trace": 47
+    },
+    {
+      "m": 5,
+      "coefficients": [
+        1,
+        8,
+        21,
+        20,
+        5
+      ],
+      "rooted_forest_count": 55,
+      "cat_map_trace": 123
+    },
+    {
+      "m": 6,
+      "coefficients": [
+        1,
+        10,
+        36,
+        56,
+        35,
+        6
+      ],
+      "rooted_forest_count": 144,
+      "cat_map_trace": 322
+    },
+    {
+      "m": 7,
+      "coefficients": [
+        1,
+        12,
+        55,
+        120,
+        126,
+        56,
+        7
+      ],
+      "rooted_forest_count": 377,
+      "cat_map_trace": 843
+    },
+    {
+      "m": 8,
+      "coefficients": [
+        1,
+        14,
+        78,
+        220,
+        330,
+        252,
+        84,
+        8
+      ],
+      "rooted_forest_count": 987,
+      "cat_map_trace": 2207
+    },
+    {
+      "m": 9,
+      "coefficients": [
+        1,
+        16,
+        105,
+        364,
+        715,
+        792,
+        462,
+        120,
+        9
+      ],
+      "rooted_forest_count": 2584,
+      "cat_map_trace": 5778
+    },
+    {
+      "m": 10,
+      "coefficients": [
+        1,
+        18,
+        136,
+        560,
+        1365,
+        2002,
+        1716,
+        792,
+        165,
+        10
+      ],
+      "rooted_forest_count": 6765,
+      "cat_map_trace": 15127
+    },
+    {
+      "m": 11,
+      "coefficients": [
+        1,
+        20,
+        171,
+        816,
+        2380,
+        4368,
+        5005,
+        3432,
+        1287,
+        220,
+        11
+      ],
+      "rooted_forest_count": 17711,
+      "cat_map_trace": 39603
+    },
+    {
+      "m": 12,
+      "coefficients": [
+        1,
+        22,
+        210,
+        1140,
+        3876,
+        8568,
+        12376,
+        11440,
+        6435,
+        2002,
+        286,
+        12
+      ],
+      "rooted_forest_count": 46368,
+      "cat_map_trace": 103682
+    },
+    {
+      "m": 13,
+      "coefficients": [
+        1,
+        24,
+        253,
+        1540,
+        5985,
+        15504,
+        27132,
+        31824,
+        24310,
+        11440,
+        3003,
+        364,
+        13
+      ],
+      "rooted_forest_count": 121393,
+      "cat_map_trace": 271443
+    },
+    {
+      "m": 14,
+      "coefficients": [
+        1,
+        26,
+        300,
+        2024,
+        8855,
+        26334,
+        54264,
+        77520,
+        75582,
+        48620,
+        19448,
+        4368,
+        455,
+        14
+      ],
+      "rooted_forest_count": 317811,
+      "cat_map_trace": 710647
+    },
+    {
+      "m": 15,
+      "coefficients": [
+        1,
+        28,
+        351,
+        2600,
+        12650,
+        42504,
+        100947,
+        170544,
+        203490,
+        167960,
+        92378,
+        31824,
+        6188,
+        560,
+        15
+      ],
+      "rooted_forest_count": 832040,
+      "cat_map_trace": 1860498
+    },
+    {
+      "m": 16,
+      "coefficients": [
+        1,
+        30,
+        406,
+        3276,
+        17550,
+        65780,
+        177100,
+        346104,
+        490314,
+        497420,
+        352716,
+        167960,
+        50388,
+        8568,
+        680,
+        16
+      ],
+      "rooted_forest_count": 2178309,
+      "cat_map_trace": 4870847
+    }
+  ],
+  "block_forest_polynomials": {
+    "A": [
+      1,
+      8,
+      20,
+      18,
+      5
+    ],
+    "B": [
+      1,
+      6,
+      10,
+      4
+    ],
+    "C": [
+      1,
+      10,
+      36,
+      56,
+      35,
+      6
+    ]
+  },
+  "G12_rooted_forest_count": 9240
+}

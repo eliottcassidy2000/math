@@ -1,0 +1,683 @@
+{
+  "status": "PASS independent exact Pell and arrival-polynomial controls",
+  "explicit_checks": 354459,
+  "integer_square_roots_through_k": 10000,
+  "all_n_difference_control_through": 100000,
+  "negative_Pell_pairs_m_k": [
+    [
+      1,
+      1
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      41,
+      29
+    ],
+    [
+      239,
+      169
+    ],
+    [
+      1393,
+      985
+    ],
+    [
+      8119,
+      5741
+    ]
+  ],
+  "positive_Pell_pairs_k_j": [
+    [
+      1,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      17,
+      12
+    ],
+    [
+      99,
+      70
+    ],
+    [
+      577,
+      408
+    ],
+    [
+      3363,
+      2378
+    ]
+  ],
+  "silent_square_resets": [
+    {
+      "n": 9,
+      "k": 3,
+      "incoming_square_root": 4,
+      "pell_rhs": -2,
+      "arrival_degree": 1,
+      "outgoing_square": 9,
+      "incoming_square": 16
+    },
+    {
+      "n": 25,
+      "k": 5,
+      "incoming_square_root": 7,
+      "pell_rhs": -1,
+      "arrival_degree": 2,
+      "outgoing_square": 25,
+      "incoming_square": 49
+    },
+    {
+      "n": 289,
+      "k": 17,
+      "incoming_square_root": 24,
+      "pell_rhs": -2,
+      "arrival_degree": 7,
+      "outgoing_square": 289,
+      "incoming_square": 576
+    },
+    {
+      "n": 841,
+      "k": 29,
+      "incoming_square_root": 41,
+      "pell_rhs": -1,
+      "arrival_degree": 12,
+      "outgoing_square": 841,
+      "incoming_square": 1681
+    },
+    {
+      "n": 9801,
+      "k": 99,
+      "incoming_square_root": 140,
+      "pell_rhs": -2,
+      "arrival_degree": 41,
+      "outgoing_square": 9801,
+      "incoming_square": 19600
+    },
+    {
+      "n": 28561,
+      "k": 169,
+      "incoming_square_root": 239,
+      "pell_rhs": -1,
+      "arrival_degree": 70,
+      "outgoing_square": 28561,
+      "incoming_square": 57121
+    },
+    {
+      "n": 332929,
+      "k": 577,
+      "incoming_square_root": 816,
+      "pell_rhs": -2,
+      "arrival_degree": 239,
+      "outgoing_square": 332929,
+      "incoming_square": 665856
+    },
+    {
+      "n": 970225,
+      "k": 985,
+      "incoming_square_root": 1393,
+      "pell_rhs": -1,
+      "arrival_degree": 408,
+      "outgoing_square": 970225,
+      "incoming_square": 1940449
+    },
+    {
+      "n": 11309769,
+      "k": 3363,
+      "incoming_square_root": 4756,
+      "pell_rhs": -2,
+      "arrival_degree": 1393,
+      "outgoing_square": 11309769,
+      "incoming_square": 22619536
+    },
+    {
+      "n": 32959081,
+      "k": 5741,
+      "incoming_square_root": 8119,
+      "pell_rhs": -1,
+      "arrival_degree": 2378,
+      "outgoing_square": 32959081,
+      "incoming_square": 65918161
+    }
+  ],
+  "scope": "All-order endpoint and jump proof in PELL_RESET_ADDENDUM.md; bounded controls do not replace it",
+  "n25_channels": {
+    "old_squares": [
+      25,
+      36
+    ],
+    "new_squares": [
+      36,
+      49
+    ],
+    "old_neighbours": [
+      1,
+      12
+    ],
+    "new_neighbours": [
+      11,
+      24
+    ]
+  },
+  "root_source_sha256": {
+    "session32-root/PELL_ARRIVAL_CLOCKS.md": "1fe6a59bc33e1f674e6c36622bb77178a4566f680e4d2321b26185202750a8f8",
+    "session32-root/check_pell_arrivals.py": "d485ecee9f60467b4ddd35115fae6ddfbf36fedfef05f1d5e1bfc9b173f6499f",
+    "session32-root/check_pell_arrivals.json": "b9fbaf5b95cefaad9b69dc789eaaea832eb3ad7a8b5270400d61a0aace37eeb7",
+    "session32-root/check_arrival_polynomials.py": "3c3ca0b7d55eb0d9bbee09243bfa143a538eb9ed5439b43ce4bc29e14e206a2d",
+    "session32-root/check_arrival_polynomials.json": "85673c39b4f06b2487fc2f98adb50ce5a4461f8d370a0b417b7643f3888b5875"
+  },
+  "arrival_polynomial_endpoint_checks": [
+    {
+      "degree": 0,
+      "count": 3,
+      "interval_count": 2
+    },
+    {
+      "degree": 1,
+      "count": 12,
+      "interval_count": 4
+    },
+    {
+      "degree": 2,
+      "count": 24,
+      "interval_count": 5
+    },
+    {
+      "degree": 3,
+      "count": 34,
+      "interval_count": 5
+    },
+    {
+      "degree": 4,
+      "count": 47,
+      "interval_count": 6
+    },
+    {
+      "degree": 5,
+      "count": 59,
+      "interval_count": 6
+    },
+    {
+      "degree": 6,
+      "count": 68,
+      "interval_count": 5
+    },
+    {
+      "degree": 7,
+      "count": 84,
+      "interval_count": 6
+    },
+    {
+      "degree": 8,
+      "count": 92,
+      "interval_count": 5
+    },
+    {
+      "degree": 9,
+      "count": 105,
+      "interval_count": 6
+    },
+    {
+      "degree": 10,
+      "count": 117,
+      "interval_count": 6
+    },
+    {
+      "degree": 11,
+      "count": 126,
+      "interval_count": 5
+    },
+    {
+      "degree": 12,
+      "count": 144,
+      "interval_count": 6
+    },
+    {
+      "degree": 13,
+      "count": 148,
+      "interval_count": 5
+    },
+    {
+      "degree": 14,
+      "count": 165,
+      "interval_count": 6
+    },
+    {
+      "degree": 15,
+      "count": 175,
+      "interval_count": 6
+    },
+    {
+      "degree": 16,
+      "count": 184,
+      "interval_count": 6
+    },
+    {
+      "degree": 17,
+      "count": 202,
+      "interval_count": 6
+    },
+    {
+      "degree": 18,
+      "count": 206,
+      "interval_count": 5
+    },
+    {
+      "degree": 19,
+      "count": 225,
+      "interval_count": 6
+    },
+    {
+      "degree": 20,
+      "count": 231,
+      "interval_count": 6
+    },
+    {
+      "degree": 21,
+      "count": 244,
+      "interval_count": 6
+    },
+    {
+      "degree": 22,
+      "count": 260,
+      "interval_count": 6
+    },
+    {
+      "degree": 23,
+      "count": 262,
+      "interval_count": 5
+    },
+    {
+      "degree": 24,
+      "count": 287,
+      "interval_count": 6
+    },
+    {
+      "degree": 25,
+      "count": 287,
+      "interval_count": 6
+    },
+    {
+      "degree": 26,
+      "count": 304,
+      "interval_count": 6
+    },
+    {
+      "degree": 27,
+      "count": 316,
+      "interval_count": 6
+    },
+    {
+      "degree": 28,
+      "count": 321,
+      "interval_count": 6
+    },
+    {
+      "degree": 29,
+      "count": 347,
+      "interval_count": 6
+    },
+    {
+      "degree": 30,
+      "count": 342,
+      "interval_count": 5
+    },
+    {
+      "degree": 31,
+      "count": 366,
+      "interval_count": 6
+    },
+    {
+      "degree": 32,
+      "count": 372,
+      "interval_count": 6
+    },
+    {
+      "degree": 33,
+      "count": 381,
+      "interval_count": 6
+    },
+    {
+      "degree": 34,
+      "count": 403,
+      "interval_count": 6
+    },
+    {
+      "degree": 35,
+      "count": 400,
+      "interval_count": 5
+    },
+    {
+      "degree": 36,
+      "count": 428,
+      "interval_count": 6
+    },
+    {
+      "degree": 37,
+      "count": 426,
+      "interval_count": 6
+    },
+    {
+      "degree": 38,
+      "count": 443,
+      "interval_count": 6
+    },
+    {
+      "degree": 39,
+      "count": 459,
+      "interval_count": 6
+    },
+    {
+      "degree": 40,
+      "count": 456,
+      "interval_count": 5
+    },
+    {
+      "degree": 41,
+      "count": 492,
+      "interval_count": 6
+    },
+    {
+      "degree": 42,
+      "count": 480,
+      "interval_count": 5
+    },
+    {
+      "degree": 43,
+      "count": 505,
+      "interval_count": 6
+    },
+    {
+      "degree": 44,
+      "count": 513,
+      "interval_count": 6
+    },
+    {
+      "degree": 45,
+      "count": 518,
+      "interval_count": 6
+    },
+    {
+      "degree": 46,
+      "count": 548,
+      "interval_count": 6
+    },
+    {
+      "degree": 47,
+      "count": 536,
+      "interval_count": 5
+    },
+    {
+      "degree": 48,
+      "count": 569,
+      "interval_count": 6
+    },
+    {
+      "degree": 49,
+      "count": 567,
+      "interval_count": 6
+    },
+    {
+      "degree": 50,
+      "count": 580,
+      "interval_count": 6
+    },
+    {
+      "degree": 51,
+      "count": 602,
+      "interval_count": 6
+    },
+    {
+      "degree": 52,
+      "count": 594,
+      "interval_count": 5
+    },
+    {
+      "degree": 53,
+      "count": 633,
+      "interval_count": 6
+    },
+    {
+      "degree": 54,
+      "count": 619,
+      "interval_count": 6
+    },
+    {
+      "degree": 55,
+      "count": 644,
+      "interval_count": 6
+    },
+    {
+      "degree": 56,
+      "count": 656,
+      "interval_count": 6
+    },
+    {
+      "degree": 57,
+      "count": 653,
+      "interval_count": 6
+    },
+    {
+      "degree": 58,
+      "count": 693,
+      "interval_count": 6
+    },
+    {
+      "degree": 59,
+      "count": 674,
+      "interval_count": 5
+    },
+    {
+      "degree": 60,
+      "count": 708,
+      "interval_count": 6
+    },
+    {
+      "degree": 61,
+      "count": 708,
+      "interval_count": 6
+    },
+    {
+      "degree": 62,
+      "count": 717,
+      "interval_count": 6
+    },
+    {
+      "degree": 63,
+      "count": 747,
+      "interval_count": 6
+    },
+    {
+      "degree": 64,
+      "count": 730,
+      "interval_count": 5
+    },
+    {
+      "degree": 65,
+      "count": 774,
+      "interval_count": 6
+    },
+    {
+      "degree": 66,
+      "count": 760,
+      "interval_count": 6
+    },
+    {
+      "degree": 67,
+      "count": 781,
+      "interval_count": 6
+    },
+    {
+      "degree": 68,
+      "count": 799,
+      "interval_count": 6
+    },
+    {
+      "degree": 69,
+      "count": 788,
+      "interval_count": 5
+    },
+    {
+      "degree": 70,
+      "count": 840,
+      "interval_count": 6
+    },
+    {
+      "degree": 71,
+      "count": 810,
+      "interval_count": 5
+    },
+    {
+      "degree": 72,
+      "count": 847,
+      "interval_count": 6
+    },
+    {
+      "degree": 73,
+      "count": 851,
+      "interval_count": 6
+    },
+    {
+      "degree": 74,
+      "count": 852,
+      "interval_count": 6
+    },
+    {
+      "degree": 75,
+      "count": 892,
+      "interval_count": 6
+    },
+    {
+      "degree": 76,
+      "count": 868,
+      "interval_count": 5
+    },
+    {
+      "degree": 77,
+      "count": 913,
+      "interval_count": 6
+    },
+    {
+      "degree": 78,
+      "count": 901,
+      "interval_count": 6
+    },
+    {
+      "degree": 79,
+      "count": 918,
+      "interval_count": 6
+    },
+    {
+      "degree": 80,
+      "count": 944,
+      "interval_count": 6
+    },
+    {
+      "degree": 81,
+      "count": 924,
+      "interval_count": 5
+    },
+    {
+      "degree": 82,
+      "count": 981,
+      "interval_count": 6
+    },
+    {
+      "degree": 83,
+      "count": 951,
+      "interval_count": 6
+    },
+    {
+      "degree": 84,
+      "count": 984,
+      "interval_count": 6
+    },
+    {
+      "degree": 85,
+      "count": 994,
+      "interval_count": 6
+    },
+    {
+      "degree": 86,
+      "count": 987,
+      "interval_count": 6
+    },
+    {
+      "degree": 87,
+      "count": 1039,
+      "interval_count": 6
+    },
+    {
+      "degree": 88,
+      "count": 1004,
+      "interval_count": 5
+    },
+    {
+      "degree": 89,
+      "count": 1052,
+      "interval_count": 6
+    },
+    {
+      "degree": 90,
+      "count": 1044,
+      "interval_count": 6
+    },
+    {
+      "degree": 91,
+      "count": 1053,
+      "interval_count": 6
+    },
+    {
+      "degree": 92,
+      "count": 1089,
+      "interval_count": 6
+    },
+    {
+      "degree": 93,
+      "count": 1062,
+      "interval_count": 5
+    },
+    {
+      "degree": 94,
+      "count": 1120,
+      "interval_count": 6
+    },
+    {
+      "degree": 95,
+      "count": 1092,
+      "interval_count": 6
+    },
+    {
+      "degree": 96,
+      "count": 1121,
+      "interval_count": 6
+    },
+    {
+      "degree": 97,
+      "count": 1139,
+      "interval_count": 6
+    },
+    {
+      "degree": 98,
+      "count": 1120,
+      "interval_count": 6
+    },
+    {
+      "degree": 99,
+      "count": 1186,
+      "interval_count": 6
+    },
+    {
+      "degree": 100,
+      "count": 1142,
+      "interval_count": 5
+    }
+  ]
+}
