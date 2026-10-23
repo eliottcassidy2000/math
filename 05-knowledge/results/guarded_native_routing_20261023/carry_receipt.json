@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "M": 3,
+      "canonical_congestion_bound": "8/3",
+      "diameter_bound": 1,
+      "endpoint_pairs_checked": 9,
+      "exact_routed_congestion": "8/3",
+      "full_pair_universe": true,
+      "gap_lower_bound": "2/9",
+      "kernel_components_without_h": 1,
+      "maximum_events": 1,
+      "maximum_owner_work": 6,
+      "partner_transports_checked": 3,
+      "states": 3,
+      "vertices": 8
+    },
+    {
+      "M": 9,
+      "canonical_congestion_bound": "400/9",
+      "diameter_bound": 5,
+      "endpoint_pairs_checked": 729,
+      "exact_routed_congestion": "880/27",
+      "full_pair_universe": true,
+      "gap_lower_bound": "2/81",
+      "kernel_components_without_h": 3,
+      "maximum_events": 5,
+      "maximum_owner_work": 81,
+      "partner_transports_checked": 27,
+      "states": 27,
+      "vertices": 20
+    },
+    {
+      "M": 15,
+      "canonical_congestion_bound": "672/5",
+      "diameter_bound": 9,
+      "endpoint_pairs_checked": 5625,
+      "exact_routed_congestion": "6944/75",
+      "full_pair_universe": true,
+      "gap_lower_bound": "2/225",
+      "kernel_components_without_h": 5,
+      "maximum_events": 9,
+      "maximum_owner_work": 240,
+      "partner_transports_checked": 75,
+      "states": 75,
+      "vertices": 32
+    },
+    {
+      "M": 27,
+      "canonical_congestion_bound": "12376/27",
+      "diameter_bound": 17,
+      "endpoint_pairs_checked": 59049,
+      "exact_routed_congestion": "73528/243",
+      "full_pair_universe": true,
+      "gap_lower_bound": "2/729",
+      "kernel_components_without_h": 9,
+      "maximum_events": 17,
+      "maximum_owner_work": 810,
+      "partner_transports_checked": 243,
+      "states": 243,
+      "vertices": 56
+    },
+    {
+      "M": 81,
+      "canonical_congestion_bound": "347680/81",
+      "diameter_bound": 53,
+      "endpoint_pairs_checked": 3,
+      "full_pair_universe": false,
+      "gap_lower_bound": "2/6561",
+      "kernel_components_without_h": 27,
+      "maximum_events": 53,
+      "maximum_owner_work": 7533,
+      "partner_transports_checked": 4,
+      "states": 2187,
+      "vertices": 164
+    }
+  ],
+  "checks": 635471,
+  "status": "FINITE-EXACT PASS; guard-preserving native orbit only"
+}

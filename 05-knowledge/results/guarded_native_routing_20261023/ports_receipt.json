@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "certified_slot_bound": 124,
+      "maximum_return_schedule_slots": 8,
+      "maximum_slots": 10,
+      "permutations_checked": 120,
+      "r": 4,
+      "return_decomposition_terms": 9,
+      "states": 5
+    },
+    {
+      "certified_slot_bound": 987,
+      "maximum_return_schedule_slots": 96,
+      "maximum_slots": 79,
+      "permutations_checked": 3,
+      "r": 6,
+      "return_decomposition_terms": 49,
+      "states": 22
+    }
+  ],
+  "checks": 10239,
+  "status": "FINITE-EXACT PASS; unit-capacity complete-fibre permutations only"
+}

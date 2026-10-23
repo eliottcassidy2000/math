@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "demand_triples": 125,
+      "exact_weighted_congestion": "9991/11",
+      "gap_denominator": 276480,
+      "maximum_compiled_events": 18,
+      "modulus": 3,
+      "r": 4,
+      "states": 5,
+      "weight_ratio": "3"
+    },
+    {
+      "demand_triples": 10648,
+      "exact_weighted_congestion": "3239982/539",
+      "gap_denominator": 746496,
+      "maximum_compiled_events": 26,
+      "modulus": 3,
+      "r": 6,
+      "states": 22,
+      "weight_ratio": "3"
+    },
+    {
+      "demand_triples": 343,
+      "exact_weighted_congestion": "86665/16",
+      "gap_denominator": 516096000,
+      "maximum_compiled_events": 28,
+      "modulus": 5,
+      "r": 6,
+      "states": 7,
+      "weight_ratio": "3"
+    },
+    {
+      "gap_denominator": 30965760000,
+      "modulus": 6,
+      "r": 8,
+      "states": 29,
+      "weight_ratio": "3"
+    }
+  ],
+  "checks": 13976,
+  "producer_certificate_checks": 64076,
+  "status": "FINITE-EXACT PASS; same-agent independent matrix/flow construction"
+}

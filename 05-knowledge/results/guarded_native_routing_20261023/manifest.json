@@ -1,0 +1,147 @@
+{
+  "files": {
+    "AUDIT.md": "d4651ab506a3013b851cf27ee3bf5ede21be35d4bffd24697947a625521558f1",
+    "CARRY_GAP.md": "87756a3a8e5e1bd67d081737c6a4eb691afe60c9b1b1c1f1bdb9fa7df4cbce49",
+    "ELECTRICAL.md": "daf44fa20fc5729080d1a9768a73a789c247e2eb3dd066f5747a57ab817571d9",
+    "PORT_PERMUTATIONS.md": "5c28d20770c00022e990c6aebf91c0926cc70c0fa3b1a17cd4ee170d0a02c8b0",
+    "PROOF.md": "f7f6a1bbcf37a665b1a0ae63afafd1231581aebd3aa42f0c924c205275bd626f",
+    "README.md": "17a0f549dee42a65595f4b9e1421b742a591cfad6724d3e223c2879d6ce7b25a",
+    "audit.py": "2d9155ad49cc4685c6a8ceb062f5412a0acdb92dbf117e595f890fbc8df424ad",
+    "audit_receipt.json": "a05d82e81747d88ca89c29879b02414dbafd62770e1a9eec32aacb0f0420e7d3",
+    "carry.py": "32d48bc68126377eee65d2070f4aee31f36785b589155d7bd8c02bf3196cf500",
+    "carry_receipt.json": "f449615422cbd97819e0c257f57b952aae67cb677869ae3916b55072a4b1a97d",
+    "electrical.py": "0fd36df66111369d41cdd3049e8d008724d814f5dd46f713682b65688a21a39e",
+    "electrical_receipt.json": "e97fea6e4c8af575394116b2aacddb3fcdfba2cacfaad6a50e3d8ec74fde2ced",
+    "ports.py": "0253da648e8e31fe61699dc2c959b22cb74b03f762d251bc02d9fb32aa169125",
+    "ports_receipt.json": "d60bdcb252610da4b72a79de649f54eb045af93d2fcb37792e46ad38394ba108",
+    "reproduce.py": "c2f4288a50899d220ecf714bec79a61f82df53d5e2c27b1d88867ae9e8e42a13",
+    "routing.py": "c2b87386ca03c5d4e369491190620f90deb6bf0ec443f135ebe7120339d7093e",
+    "routing_receipt.json": "f35de65f504ccfc73abc3b177eaf9776720ae7f710bb0709ba1aca79d4f2871e"
+  },
+  "sources": [
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/moves/COUPLED_PHASE_MOVES.md",
+      "sha256": "da0beba4ac011e2e63f02d53092d9b87d565da917211a43c421293bd136a7873"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/guards/README.md",
+      "sha256": "4fa1510d5587d743f5f1de45d800387bc795f19058152cad1b329982afa6983d"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/trace/TRACE_WITH_CLOCKS.md",
+      "sha256": "4da563a28888c36b71a38db309200168b84b13006705f34cfa22e039689709dc"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/RETURN_COST.md",
+      "sha256": "21a01ede51af495c0d675f6e8fdce1cdfaa451aee73b2417d627e8b856617a9b"
+    },
+    {
+      "commit": "a201515762059411a745360467afff224f7db4c1",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/native_moves/NATIVE_GUARDED_MOVES.md",
+      "sha256": "8ad46a1f4b427dd6012fab58a376aa5df046d089a3709d822c4bd1606102a854"
+    },
+    {
+      "commit": "a201515762059411a745360467afff224f7db4c1",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/farey/AUDIT_NATIVE_MOVES.md",
+      "sha256": "d94fffe7ba06c0ebfacaf34bbaee780becb3d456c83205f2b79b0147c0aaf8ed"
+    },
+    {
+      "commit": "96981b156130c8bf546ed1bcba2ea3b16c020316",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/ternary-newton/THEOREM.md",
+      "sha256": "a85633d6a3c2db83b7bab736d400772c6f899ffe731862a1c3e919ad2fbcd891"
+    },
+    {
+      "commit": "96981b156130c8bf546ed1bcba2ea3b16c020316",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/audit-newton/AUDIT.md",
+      "sha256": "99cdf3436f7e6bff46959894e7bb9bdada4bdd1b851e3bad7f3cae07b6db1894"
+    },
+    {
+      "commit": "96981b156130c8bf546ed1bcba2ea3b16c020316",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/INCOMING_RECEIPT_REPAIR.md",
+      "sha256": "1d1d374d28a1f149657c71a1964b526123e25e212fb3d68068e880c6b303523c"
+    },
+    {
+      "commit": "96981b156130c8bf546ed1bcba2ea3b16c020316",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/guards/receipt.json",
+      "sha256": "3599e48cef43b0cfb3cdad04c8593c148c77991175ea274343180e67090b0fdf"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/coupled-moves/THEOREM.md",
+      "sha256": "de1d740e1b64f591c97416dd1623bfa017c508b88f947ac78943451471df654d"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "202174b4444ba9eaa923501dfb7bc98627a038daddf33ebee6522d7ffb5324e8"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/lift-holonomy/README.md",
+      "sha256": "d664710c472570b59fc8b35db9d2e1316d7a651b18c9989af684d438074b6c03"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/audit-holonomy/SECOND_REVIEW.md",
+      "sha256": "c50363e63bce993fa2ee046cef9abe35a303818c679de8a6c2468c93c18862d6"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/fractions-ternary/README.md",
+      "sha256": "b592f9eedd1ef87903492c642c02975880a41b0c5dff1004679de47f77d0fdb6"
+    },
+    {
+      "commit": "45c5d817564d3c62e3150d394810675df44a2354",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/actual-guards/ENDPOINT_OBSERVERS.md",
+      "sha256": "0fb4544999078073bf27f544643a242e5118f87c96d7c986295d78d910abd634"
+    },
+    {
+      "commit": "4c4f68ba697f9ac74d434ca64b33e69b2ea4da08",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/stable-padding/THEOREM.md",
+      "sha256": "82e427b16d1c250aa2f6d4642c3d9125b7f85b3f0f712ed7be0388ede098406b"
+    },
+    {
+      "commit": "4c4f68ba697f9ac74d434ca64b33e69b2ea4da08",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/rectangle-bank/THEOREM.md",
+      "sha256": "1a2308adc4e2c3b85535859487d0f5af651383b07a729e0214632c29f27415d1"
+    }
+  ],
+  "starting_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "status": "PROVED scoped / FINITE-EXACT; see proof and audit boundaries",
+  "working_inputs": [
+    {
+      "normalize_text": true,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "normalize_text": false,
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "normalize_text": true,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    }
+  ]
+}

@@ -1,0 +1,1012 @@
+{
+  "checks": 5411,
+  "reports": [
+    {
+      "keep_target": false,
+      "maximum_shortest_route": 4,
+      "minimum_block_histogram": {
+        "0": 123,
+        "3": 7,
+        "4": 18,
+        "5": 29,
+        "6": 44
+      },
+      "nonempty_fibres": 221,
+      "nontrivial_fibres": 98,
+      "source": 1238,
+      "worst_canonical_congestion": "78/5"
+    },
+    {
+      "keep_target": true,
+      "maximum_shortest_route": 2,
+      "minimum_block_histogram": {
+        "0": 311,
+        "3": 5,
+        "4": 7,
+        "5": 15,
+        "6": 19
+      },
+      "nonempty_fibres": 357,
+      "nontrivial_fibres": 46,
+      "source": 1238,
+      "worst_canonical_congestion": "6"
+    },
+    {
+      "keep_target": false,
+      "maximum_shortest_route": 5,
+      "minimum_block_histogram": {
+        "0": 120,
+        "3": 6,
+        "4": 11,
+        "5": 41,
+        "6": 41
+      },
+      "nonempty_fibres": 219,
+      "nontrivial_fibres": 99,
+      "source": 2242,
+      "worst_canonical_congestion": "162/7"
+    },
+    {
+      "keep_target": true,
+      "maximum_shortest_route": 2,
+      "minimum_block_histogram": {
+        "0": 312,
+        "3": 2,
+        "4": 1,
+        "5": 22,
+        "6": 17
+      },
+      "nonempty_fibres": 354,
+      "nontrivial_fibres": 42,
+      "source": 2242,
+      "worst_canonical_congestion": "4"
+    },
+    {
+      "keep_target": false,
+      "maximum_shortest_route": 4,
+      "minimum_block_histogram": {
+        "0": 141,
+        "3": 12,
+        "4": 22,
+        "5": 41,
+        "6": 67
+      },
+      "nonempty_fibres": 283,
+      "nontrivial_fibres": 142,
+      "source": 2246,
+      "worst_canonical_congestion": "18"
+    },
+    {
+      "keep_target": true,
+      "maximum_shortest_route": 2,
+      "minimum_block_histogram": {
+        "0": 462,
+        "3": 6,
+        "4": 2,
+        "5": 12,
+        "6": 9
+      },
+      "nonempty_fibres": 491,
+      "nontrivial_fibres": 29,
+      "source": 2246,
+      "worst_canonical_congestion": "4"
+    },
+    {
+      "keep_target": false,
+      "maximum_shortest_route": 6,
+      "minimum_block_histogram": {
+        "0": 145,
+        "3": 9,
+        "4": 25,
+        "5": 48,
+        "6": 64
+      },
+      "nonempty_fibres": 291,
+      "nontrivial_fibres": 146,
+      "source": 2315,
+      "worst_canonical_congestion": "28"
+    },
+    {
+      "keep_target": true,
+      "maximum_shortest_route": 2,
+      "minimum_block_histogram": {
+        "0": 447,
+        "3": 6,
+        "4": 5,
+        "5": 16,
+        "6": 11
+      },
+      "nonempty_fibres": 485,
+      "nontrivial_fibres": 38,
+      "source": 2315,
+      "worst_canonical_congestion": "4"
+    }
+  ],
+  "source_pins": {
+    "legacy_CRLF_sha256": "d8ef442adbe0261bf8ae9892db925e220bd35bd67546d2933d1ab7b2f1c8f0d4",
+    "owner_bytes_sha256": "5d195cc793e3d05af189407333960e0ceffa00fb0bc40d77d419cf8342f80110",
+    "potential_LF_sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "status": "FINITE-EXACT PASS; declared observer-block moves only",
+  "witnesses": [
+    {
+      "actual_paths": [
+        [
+          0,
+          5,
+          2,
+          6,
+          7,
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          5,
+          4,
+          3,
+          2,
+          6,
+          7,
+          1
+        ]
+      ],
+      "cross_target": true,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 1
+      },
+      "minimum_fibre_block": 5,
+      "original_phase": 7,
+      "source": 1238,
+      "target_owners": [
+        2639,
+        1874
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          7,
+          0,
+          4,
+          2,
+          1,
+          6,
+          5,
+          3
+        ],
+        [
+          7,
+          0,
+          5,
+          4,
+          2,
+          1,
+          6,
+          3
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        7,
+        3,
+        2
+      ],
+      "keep_target": false,
+      "minimum_block": 6,
+      "original_phases": [
+        2,
+        2
+      ],
+      "source": 1238,
+      "states": 7,
+      "target_owners": [
+        2322,
+        2356
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2,
+          6,
+          7
+        ],
+        [
+          0,
+          4,
+          3,
+          1,
+          5,
+          2,
+          6,
+          7
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 7
+      },
+      "keep_target": false,
+      "nonautomorphism_move": true,
+      "original_phase": 4,
+      "source": 1238,
+      "target_owners": [
+        3442,
+        3442
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          7,
+          0,
+          5,
+          4,
+          3,
+          2,
+          1,
+          6
+        ],
+        [
+          7,
+          1,
+          0,
+          5,
+          4,
+          3,
+          2,
+          6
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        7,
+        6,
+        3,
+        1811
+      ],
+      "keep_target": true,
+      "minimum_block": 6,
+      "original_phases": [
+        3,
+        3
+      ],
+      "source": 1238,
+      "states": 4,
+      "target_owners": [
+        1811,
+        1811
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          4,
+          1,
+          5,
+          3,
+          2,
+          6,
+          7
+        ],
+        [
+          0,
+          4,
+          3,
+          1,
+          5,
+          2,
+          6,
+          7
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 7
+      },
+      "keep_target": true,
+      "nonautomorphism_move": true,
+      "original_phase": 4,
+      "source": 1238,
+      "target_owners": [
+        3442,
+        3442
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          4,
+          6,
+          7,
+          5,
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          7,
+          5,
+          3,
+          2,
+          4,
+          1
+        ]
+      ],
+      "cross_target": true,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 1
+      },
+      "minimum_fibre_block": 6,
+      "original_phase": 0,
+      "source": 2242,
+      "target_owners": [
+        2105,
+        2004
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          7,
+          0,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6
+        ],
+        [
+          7,
+          0,
+          5,
+          3,
+          2,
+          4,
+          1,
+          6
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          3
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        7,
+        6,
+        6
+      ],
+      "keep_target": false,
+      "minimum_block": 6,
+      "original_phases": [
+        6,
+        6
+      ],
+      "source": 2242,
+      "states": 8,
+      "target_owners": [
+        810,
+        810
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          5,
+          3,
+          2,
+          4,
+          1,
+          6,
+          7
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 7
+      },
+      "keep_target": false,
+      "nonautomorphism_move": true,
+      "original_phase": 4,
+      "source": 2242,
+      "target_owners": [
+        3162,
+        3162
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          7,
+          0,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6
+        ],
+        [
+          7,
+          0,
+          5,
+          3,
+          2,
+          4,
+          1,
+          6
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        7,
+        6,
+        6,
+        810
+      ],
+      "keep_target": true,
+      "minimum_block": 6,
+      "original_phases": [
+        6,
+        6
+      ],
+      "source": 2242,
+      "states": 5,
+      "target_owners": [
+        810,
+        810
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          5,
+          3,
+          2,
+          4,
+          1,
+          6,
+          7
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 7
+      },
+      "keep_target": true,
+      "nonautomorphism_move": true,
+      "original_phase": 4,
+      "source": 2242,
+      "target_owners": [
+        3162,
+        3162
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          4,
+          7,
+          6,
+          5,
+          3,
+          2,
+          1
+        ],
+        [
+          0,
+          5,
+          2,
+          4,
+          7,
+          6,
+          3,
+          1
+        ]
+      ],
+      "cross_target": true,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 1
+      },
+      "minimum_fibre_block": 6,
+      "original_phase": 2,
+      "source": 2246,
+      "target_owners": [
+        2528,
+        1916
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          6,
+          0,
+          4,
+          7,
+          2,
+          1,
+          5,
+          3
+        ],
+        [
+          6,
+          0,
+          7,
+          1,
+          5,
+          2,
+          4,
+          3
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        6,
+        3,
+        0
+      ],
+      "keep_target": false,
+      "minimum_block": 6,
+      "original_phases": [
+        0,
+        0
+      ],
+      "source": 2246,
+      "states": 7,
+      "target_owners": [
+        2084,
+        2617
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          7,
+          6,
+          5,
+          2,
+          4,
+          3,
+          1
+        ],
+        [
+          0,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 1
+      },
+      "keep_target": false,
+      "nonautomorphism_move": true,
+      "original_phase": 6,
+      "source": 2246,
+      "target_owners": [
+        2654,
+        1296
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          6,
+          2,
+          0,
+          4,
+          7,
+          5,
+          3,
+          1
+        ],
+        [
+          6,
+          2,
+          0,
+          5,
+          4,
+          7,
+          3,
+          1
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        6,
+        1,
+        0,
+        2910
+      ],
+      "keep_target": true,
+      "minimum_block": 6,
+      "original_phases": [
+        0,
+        0
+      ],
+      "source": 2246,
+      "states": 3,
+      "target_owners": [
+        2910,
+        2910
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          7,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6
+        ],
+        [
+          0,
+          7,
+          5,
+          4,
+          3,
+          2,
+          1,
+          6
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 6
+      },
+      "keep_target": true,
+      "nonautomorphism_move": true,
+      "original_phase": 5,
+      "source": 2246,
+      "target_owners": [
+        905,
+        905
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          5,
+          3,
+          2,
+          4,
+          6,
+          7,
+          1
+        ],
+        [
+          0,
+          7,
+          5,
+          2,
+          4,
+          6,
+          3,
+          1
+        ]
+      ],
+      "cross_target": true,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 1
+      },
+      "minimum_fibre_block": 6,
+      "original_phase": 0,
+      "source": 2315,
+      "target_owners": [
+        2127,
+        669
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          5,
+          2,
+          0,
+          7,
+          4,
+          6,
+          3,
+          1
+        ],
+        [
+          5,
+          3,
+          0,
+          4,
+          6,
+          7,
+          2,
+          1
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        5,
+        1,
+        1
+      ],
+      "keep_target": false,
+      "minimum_block": 6,
+      "original_phases": [
+        1,
+        1
+      ],
+      "source": 2315,
+      "states": 5,
+      "target_owners": [
+        1296,
+        1852
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          7,
+          2,
+          1,
+          5,
+          4,
+          6,
+          3
+        ],
+        [
+          0,
+          7,
+          2,
+          1,
+          6,
+          5,
+          4,
+          3
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 3
+      },
+      "keep_target": false,
+      "nonautomorphism_move": true,
+      "original_phase": 4,
+      "source": 2315,
+      "target_owners": [
+        2443,
+        926
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          2,
+          1,
+          6,
+          7,
+          5,
+          4,
+          3,
+          0
+        ],
+        [
+          2,
+          4,
+          6,
+          7,
+          5,
+          3,
+          1,
+          0
+        ]
+      ],
+      "below_budget_components": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "congestion": "1",
+      "diameter": 1,
+      "endpoint_guard": [
+        2,
+        0,
+        0,
+        2545
+      ],
+      "keep_target": true,
+      "minimum_block": 6,
+      "original_phases": [
+        0,
+        0
+      ],
+      "source": 2315,
+      "states": 2,
+      "target_owners": [
+        2545,
+        2545
+      ]
+    },
+    {
+      "actual_paths": [
+        [
+          0,
+          5,
+          2,
+          4,
+          3,
+          1,
+          6,
+          7
+        ],
+        [
+          0,
+          5,
+          3,
+          2,
+          4,
+          1,
+          6,
+          7
+        ]
+      ],
+      "block_width": 3,
+      "fixed_owner_clocks": {
+        "0": 0,
+        "7": 7
+      },
+      "keep_target": true,
+      "nonautomorphism_move": true,
+      "original_phase": 5,
+      "source": 2315,
+      "target_owners": [
+        3099,
+        3099
+      ]
+    }
+  ]
+}
