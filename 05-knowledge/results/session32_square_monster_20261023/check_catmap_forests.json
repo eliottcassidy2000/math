@@ -1,0 +1,78 @@
+{
+  "status": "PASS exact symbolic controls",
+  "scope": "Path orders1..12, integral conjugacy, distinct trace and boundary observables",
+  "rows": [
+    {
+      "n": 1,
+      "polynomial": "1",
+      "forest_count": 1,
+      "trace": 3
+    },
+    {
+      "n": 2,
+      "polynomial": "2*t + 1",
+      "forest_count": 3,
+      "trace": 7
+    },
+    {
+      "n": 3,
+      "polynomial": "3*t**2 + 4*t + 1",
+      "forest_count": 8,
+      "trace": 18
+    },
+    {
+      "n": 4,
+      "polynomial": "4*t**3 + 10*t**2 + 6*t + 1",
+      "forest_count": 21,
+      "trace": 47
+    },
+    {
+      "n": 5,
+      "polynomial": "5*t**4 + 20*t**3 + 21*t**2 + 8*t + 1",
+      "forest_count": 55,
+      "trace": 123
+    },
+    {
+      "n": 6,
+      "polynomial": "6*t**5 + 35*t**4 + 56*t**3 + 36*t**2 + 10*t + 1",
+      "forest_count": 144,
+      "trace": 322
+    },
+    {
+      "n": 7,
+      "polynomial": "7*t**6 + 56*t**5 + 126*t**4 + 120*t**3 + 55*t**2 + 12*t + 1",
+      "forest_count": 377,
+      "trace": 843
+    },
+    {
+      "n": 8,
+      "polynomial": "8*t**7 + 84*t**6 + 252*t**5 + 330*t**4 + 220*t**3 + 78*t**2 + 14*t + 1",
+      "forest_count": 987,
+      "trace": 2207
+    },
+    {
+      "n": 9,
+      "polynomial": "9*t**8 + 120*t**7 + 462*t**6 + 792*t**5 + 715*t**4 + 364*t**3 + 105*t**2 + 16*t + 1",
+      "forest_count": 2584,
+      "trace": 5778
+    },
+    {
+      "n": 10,
+      "polynomial": "10*t**9 + 165*t**8 + 792*t**7 + 1716*t**6 + 2002*t**5 + 1365*t**4 + 560*t**3 + 136*t**2 + 18*t + 1",
+      "forest_count": 6765,
+      "trace": 15127
+    },
+    {
+      "n": 11,
+      "polynomial": "11*t**10 + 220*t**9 + 1287*t**8 + 3432*t**7 + 5005*t**6 + 4368*t**5 + 2380*t**4 + 816*t**3 + 171*t**2 + 20*t + 1",
+      "forest_count": 17711,
+      "trace": 39603
+    },
+    {
+      "n": 12,
+      "polynomial": "12*t**11 + 286*t**10 + 2002*t**9 + 6435*t**8 + 11440*t**7 + 12376*t**6 + 8568*t**5 + 3876*t**4 + 1140*t**3 + 210*t**2 + 22*t + 1",
+      "forest_count": 46368,
+      "trace": 103682
+    }
+  ]
+}

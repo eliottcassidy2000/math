@@ -1,0 +1,62 @@
+{
+  "status": "PASS exact integer checks",
+  "N": 39046339332000,
+  "valuations": {
+    "2": 5,
+    "3": 7,
+    "5": 3,
+    "7": 4,
+    "11": 1,
+    "13": 2
+  },
+  "modular_descent_witnesses": {
+    "3": [
+      [
+        2,
+        5,
+        5,
+        3
+      ],
+      [
+        2,
+        11,
+        5,
+        1
+      ],
+      [
+        5,
+        11,
+        3,
+        1
+      ],
+      [
+        7,
+        13,
+        4,
+        2
+      ]
+    ],
+    "9": [
+      [
+        2,
+        11,
+        5,
+        1
+      ]
+    ]
+  },
+  "set_quotient_cycles": {
+    "N": [
+      13,
+      2,
+      5,
+      3,
+      7
+    ],
+    "N_over_2": [
+      13,
+      2
+    ]
+  },
+  "scope": "The identification4=13 is a set quotient, not integer equality or a ring-compatible dynamical law."
+}
