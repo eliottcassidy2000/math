@@ -1,0 +1,392 @@
+{
+  "status": "PASS",
+  "checks": 8833,
+  "phase_assignments": 4096,
+  "mod8_max_depth": 4096,
+  "graph_rows": [
+    {
+      "mask": 0,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 1,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 2,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 3,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 4,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 5,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 6,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 7,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 8,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 9,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 10,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 11,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 12,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 13,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 14,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 15,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 16,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 17,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 18,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 19,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 20,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 21,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 22,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 23,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 24,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 25,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 26,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 27,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 28,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 29,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 30,
+      "beta": 1,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 1
+    },
+    {
+      "mask": 31,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 32,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 33,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 34,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 35,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 36,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 37,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 38,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 39,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 40,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 41,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 42,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 43,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 44,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 45,
+      "beta": 1,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 1
+    },
+    {
+      "mask": 46,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 47,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 48,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 49,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 50,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 51,
+      "beta": 1,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 1
+    },
+    {
+      "mask": 52,
+      "beta": 0,
+      "triangle_rank": 0,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 53,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 54,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 55,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 56,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 57,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 58,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 59,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 60,
+      "beta": 1,
+      "triangle_rank": 1,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 61,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 62,
+      "beta": 2,
+      "triangle_rank": 2,
+      "hidden_phase_dimension": 0
+    },
+    {
+      "mask": 63,
+      "beta": 3,
+      "triangle_rank": 3,
+      "hidden_phase_dimension": 0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN_FIRST_CHECKPOINT",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "39c85aed36163ab5709253cb1ebf4a051f53045864a1d116d8d5669520f379f3",
+      "bytes": 1003
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "sha256": "523d980e1f1f9696aca486f0028ec6d8028ad2d7c750aeefd207ea7200ad6f28",
+      "bytes": 3932
+    }
+  ]
+}

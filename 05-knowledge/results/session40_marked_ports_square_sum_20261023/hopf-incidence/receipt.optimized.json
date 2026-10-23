@@ -1,0 +1,30 @@
+{
+  "counts": {
+    "backtracking_not_cycle": 1,
+    "balanced_word_not_realizable": 1,
+    "bargmann_pauli_identity": 216,
+    "chordal_flat_count": 1,
+    "chordal_triangle_gluing": 7776,
+    "chordless_cycle_holonomy": 1296,
+    "closed_walk_square_relation": 115,
+    "coprime_phase_firewall": 12,
+    "each_sample_indispensable": 35,
+    "endpoint_only_hostile": 7,
+    "equal_pair_magnitudes": 5,
+    "four_vertex_local_transitivity_count": 1,
+    "hopf_cyclic_realizations": 26,
+    "mod8_five_tap_coefficients": 2053,
+    "oriented_phase_negative": 1,
+    "oriented_phase_positive": 1,
+    "paley7_local_cycle_obstruction": 7,
+    "prime_power_support": 54,
+    "reversal_blindness": 515,
+    "square_shell_affine_formula": 55980,
+    "vacuous_triangle_hostile_count": 1
+  },
+  "scope": "Exact algebraic controls; not a native tournament wiring census, Hopf realization, or square-sum Hamiltonian enumeration.",
+  "script_sha256": "f6027ff984d7afec8d35bffd44c813eab53798dea4c53ba439cb26d3204eb26d",
+  "status": "PASS",
+  "total_checks": 68104,
+  "valid_square_walk_instances": 1804
+}

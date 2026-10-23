@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_AFTER_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "HOPF_SIERPINSKI_SHARED_INCIDENCE.md",
+      "sha256": "503684db4fb36ef00571ab022bae1b05beee7233fa4789ab2a69edd393a682c1",
+      "bytes": 17402
+    },
+    {
+      "path": "check_connections.py",
+      "sha256": "f6027ff984d7afec8d35bffd44c813eab53798dea4c53ba439cb26d3204eb26d",
+      "bytes": 5954
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "51d334774398de06ae9d0b422cd34020114ba4caf591851c56a6a4ba4d984c26",
+      "bytes": 1092
+    },
+    {
+      "path": "receipt.optimized.json",
+      "sha256": "51d334774398de06ae9d0b422cd34020114ba4caf591851c56a6a4ba4d984c26",
+      "bytes": 1092
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "universes": 74,
+  "checks": 3057,
+  "scope": "all simple graphs n=2,3,4; all endpoint pairs; all first and mixed second edge derivatives",
+  "status": "PASS"
+}

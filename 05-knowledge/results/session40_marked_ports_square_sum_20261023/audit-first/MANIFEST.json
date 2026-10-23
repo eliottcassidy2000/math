@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "FIRST_AUDIT.md",
+      "sha256": "dba62cc9c131a6d7af0ee2cddf321125bf68fe92396135074d8acaf374c947ed",
+      "bytes": 3258
+    },
+    {
+      "path": "MATRIX_TREE_PATH_PROJECTION.md",
+      "sha256": "f55c8bd9a291bed9f85d60e4053b43ba217a3f66efefa6a0a9b54b3ff9071cb1",
+      "bytes": 3442
+    },
+    {
+      "path": "check_hopf_guards.py",
+      "sha256": "11d38e92a3606dcfa71205eada38a8f03ef8ba3e037d8e6d563ccdc25078c8ca",
+      "bytes": 2453
+    },
+    {
+      "path": "check_matrix_tree_projection.py",
+      "sha256": "f93d60343300f9f075f56b5d2b337f3f7a53f1b50a560294d6077bcc8fe9f7e5",
+      "bytes": 1654
+    },
+    {
+      "path": "hopf-guards-audit-receipt.json",
+      "sha256": "689218cca8484f572003d41c3ba526fdbf376f64c319e60456bab9c3d4a3ccde",
+      "bytes": 7020
+    },
+    {
+      "path": "matrix-tree-projection-receipt.json",
+      "sha256": "61bacd28c21b8e3480137391660e3a750989c1837181bb86f1a5c8600e670634",
+      "bytes": 165
+    }
+  ],
+  "commands": [
+    "python3 check_hopf_guards.py",
+    "python3 -O check_hopf_guards.py",
+    "python3 check_matrix_tree_projection.py",
+    "python3 -O check_matrix_tree_projection.py"
+  ]
+}
