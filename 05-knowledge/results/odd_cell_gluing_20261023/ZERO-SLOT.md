@@ -1,7 +1,7 @@
 # The zero slot changes the grammar, and Fibonacci blocks retain ordered transport
 
 23 October 2026. **PROVED, scoped:** the zero-slot fibre formula,
-compatible-row family, and finite-group clock identities. **FINITE-EXACT:**
+compatible-row family, and prime-power affine clock identities. **FINITE-EXACT:**
 the declared controls. The preferred word below matches the user's current
 prefix; it is not asserted to be the only infinite continuation.
 
@@ -303,6 +303,81 @@ translation, or equate the group-pair recurrence with Collatz. Source,
 ports, domains, word order, and the unbounded integer length remain fields
 of the certificate.
 
+## 6. A prime-power lift: the eight-step return retains arbitrarily deep digits
+
+The56-step example extends to a proved family. Let p be a prime other
+than3, k>=1, R=Z/(p^k), and choose omega in R satisfying
+omega^2+omega+1=0 with omega!=1 modulo p. Let H_R consist of the affine
+maps x->a*x+b with a in{1,omega,omega^2}, b in R. Such a root modulo p
+lifts uniquely at every depth because2omega+1 is a unit; the digit lift
+solves the quadratic equation one power of p at a time.
+
+Apply the same group-pair update (x,y)->(y,xy). For every nonidentity
+slope pair, the slopes return after exactly eight updates. If v=(b,d)
+is the translation pair, that return acts as
+
+    v -> (I+3Q)v,       Q^2=0.                           (8a)
+
+There are only four formulas, with r either omega or omega^2:
+
+| Initial slopes | Q |
+|---|---|
+|(1,r)|[[0,0],[r,0]]|
+|(r,1)|[[0,r],[0,0]]|
+|(r,r)|r*[[-1,1],[-1,1]]|
+|(r,r^2)|[[-1,-r],[r^2,1]]|
+
+Eight substitutions of the affine law(8) prove this table already over
+Z[omega]/(omega^2+omega+1), before any modular reduction. Every Q has
+square zero, determinant zero and a unit entry. Since3 is a unit, N=3Q
+has one unit Smith factor and one zero factor over R. In particular its
+image and kernel each have p^k elements.
+
+Write t=min(k,v_p((Nv)_1),v_p((Nv)_2)), with v_p(0) capped at k.
+Then the exact return period of the FULL affine pair is
+
+    8 p^(k-t).                                          (8b)
+
+Indeed(I+N)^j v=v+jNv. The least positive j killing Nv is p^(k-t),
+and the slope pair forbids a return before a multiple of eight. Thus
+retaining slopes alone loses every deeper translation-valuation layer.
+For all eight nonzero slope pairs together, the exact period counts are
+
+    period8:       8p^k pairs;
+    period8p^r:    8p^k(p^r-p^(r-1)) pairs, 1<=r<=k.     (8c)
+
+Each image element has p^k preimages; the cyclic image has exactly
+p^r-p^(r-1) elements of additive order p^r. This proves the count and
+exhausts8p^(2k) pairs. The all-identity slope pair is a different branch:
+its translations follow the ordinary Fibonacci matrix over R.
+
+For p=7 the order of that matrix is16*7^(k-1). At depth one its eighth
+power is -I. Over the integers its sixteenth power is
+
+    [[610,987],[987,1597]]
+      = I + 7*[[87,141],[141,228]].
+
+The correction is nonzero modulo7. The binomial identity lifts its
+valuation by exactly one on each seventh power, giving the stated
+matrix order at every depth. Hence the exact order of the pair update
+on the ENTIRE group H_(Z/7^k)^2 is
+
+    lcm(16*7^(k-1),8*7^k)=16*7^k.                       (8d)
+
+It is112,784,5488,... at successive depths. This is a genuine unbounded
+memory tower within the explicitly defined affine recurrence. It is not
+a period of the Fibonacci word, a tournament Hamiltonian path, or a
+Collatz orbit. The prime3 is excluded for a reason: the factor3 in(8a)
+would no longer be a unit. The literal P7 automorphism interpretation is
+used at p=7,k=1 only; other rings here are algebraic controls unless a
+separate graph realization is supplied.
+
+The checker derives all eight matrices over the integer quadratic ring,
+then tests every nontrivial-slope pair modulo7,13,19 and49 by direct
+iteration until its first return. It also tests512 stated samples
+modulo343 and the Fibonacci matrix order modulo7^k for1<=k<=12.
+These corroborate the general proof, not substitute for it.
+
 ## Reproduction and scope
 
 `check_fibonacci.py` verifies all zero-slot representation fibres through
@@ -311,6 +386,11 @@ preferred prefixes, three full recolouring patterns through2000 (including
 S={35}), and all256 recolour subsets on the first21 positions. It also
 checks every group pair and the direct/recursive ordered-product identity
 for all216 S3 letter assignments.
+
+`check_clock_lifts.py` independently computes the eight-step matrices in
+the integer Eisenstein ring and replays the prime-power controls above.
+Both checkers compare frozen JSON receipts in normal and optimized Python;
+their failure checks do not depend on Python assertions.
 
 All statements concern the explicit grammar above. Other conventions for
 selecting the zero atom, globally sharing the expansion of equal-valued

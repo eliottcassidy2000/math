@@ -1,8 +1,8 @@
 # Compatible odd-cell attachments, zero-slot Fibonacci rows, and joint charts
 
 23 October 2026. **PROVED:** the scoped partial-bijection gluing and
-chart-conditioned transport rules, zero-slot row family, and finite-group
-clock identities. **FINITE-EXACT:** the complete ordered two-mark tests on
+chart-conditioned transport rules, zero-slot row family, and prime-power
+affine clock identities. **FINITE-EXACT:** the complete ordered two-mark tests on
 P31 and D(D(P7)), including cross-target chart changes. **OPEN:** uniformly
 small all-order tournament observers, unrestricted metagraph reconstruction,
 black-core connectivity, and universal Collatz entry.
@@ -31,6 +31,14 @@ these counts as convergent results, not two separate discoveries. The
 additional contributions here are the partial-bijection state-graph rule,
 chart-conditioned residual-potential test, alternative bit observer,
 zero-slot compatible-row family, and ordered Fibonacci clocks.
+
+Final incoming commit295d14b301 sharpens the next target further: the
+[prime-cell displacement necklace](../session40_marked_ports_square_sum_20261023/PRIME_CELL_BURNSIDE_FORMULAS.md)
+is already a complete all-size carrier for its matching-coupled cyclic
+cells. Its scalar contractions fail from prime7 onward. Thus the next
+step is to glue its retained rotation choices across several attachments,
+or handle more general regular blocks, rather than seek another scalar
+replacement for that complete word.
 
 ## Inheritance, current truth, and concept board
 
@@ -373,6 +381,27 @@ rather than independently fixing a vertex in every odd cell. The six
 order31 order21 cases are the required positive-symmetry control, not
 examples to be falsely declared rigid.
 
+The new prime-cell necklace provides a concrete positive control: its
+ordered differences reconstruct a matching up to the two cell rotations,
+and the same rotation must be used on every block incident to that cell.
+Do not replace these permutations by affine maps for primes at least5;
+the incoming exact orbit count grows as p!/p^2. By contrast, our affine
+Fibonacci clock is an explicitly restricted group model. Its eight-step
+translation return lifts to exact periods8p^r, and at modulus7^k the
+whole pair map has order16*7^k. These statements compress ordered group
+products; they do not classify the larger matching carrier.
+
+Two incoming hostiles retain the missing ownership coordinate. At order5,
+the SAME complete source and actual endpoints allow complement targets
+with Hamiltonian counts15 and11, depending on the internal path order
+([source-only obstruction](../session40_marked_ports_square_sum_20261023/ENDPOINTS_DO_NOT_DETERMINE_WIRING.md)).
+For the separately defined square-sum birth colouring, actual endpoints
+and the complete ordered colour word first fail to determine a path at36
+([finite census](../session40_marked_ports_square_sum_20261023/square-sum/COLOR_FIRST_FAILURE.md)).
+The zero-slot word therefore certifies its specified recursive row family,
+not arbitrary path ownership. The shared lesson is exact: retain the
+position-to-owner map required by the target predicate.
+
 ## Reproduction and audit
 
     python3 -B 05-knowledge/results/odd_cell_gluing_20261023/check_cells.py
@@ -383,6 +412,8 @@ examples to be falsely declared rigid.
     python3 -O -B 05-knowledge/results/odd_cell_gluing_20261023/check_fibonacci.py
     python3 -B 05-knowledge/results/odd_cell_gluing_20261023/cross_check.py
     python3 -O -B 05-knowledge/results/odd_cell_gluing_20261023/cross_check.py
+    python3 -B 05-knowledge/results/odd_cell_gluing_20261023/check_clock_lifts.py
+    python3 -O -B 05-knowledge/results/odd_cell_gluing_20261023/check_clock_lifts.py
 
 Explicit failure checks survive -O. `--write` intentionally regenerates
 receipts. [AUDIT.md](AUDIT.md) records proof boundaries, rejected trial

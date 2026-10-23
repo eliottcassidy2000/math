@@ -1,13 +1,15 @@
 {
   "status": "exact packet and imported source bytes",
   "files": {
-    "AUDIT.md": "7c43977e1a5e00e41e59100d7ff42a892123fe0fe5c960faaa460b149a2c0d45",
-    "README.md": "1db5950fa0f0c7a93f970b13618500551bb0111a1f2af88597572a80b118bc77",
-    "ZERO-SLOT.md": "e597e56c953dd40ce9b501ffb687668141923a4bac0bf70a55312af2b3e6d4d2",
+    "AUDIT.md": "8dc33590e7671af1de52b3f466670c46a312c4338ee620d5888078d7f43dee0e",
+    "README.md": "0ff5e67ba3638a926812e0585411999ee385ad812413e1d16cfd1896f24b3135",
+    "ZERO-SLOT.md": "d9fc4382ac23d0bd13f4489c923cce66e9da671fd9844ac470738e256b0ac4ac",
     "cells.json": "7ced8ef82033502655bf0f2fb426c00924740e897031cf9f7133e13a21d8cdd9",
     "check_cells.py": "edd745d28670a75b0183c236fbd7cc61155082b33e178ff7dbae70cdeaa8a1c3",
+    "check_clock_lifts.py": "627913c0cc2abbb5c4eb501368c33feac5ac191c1ab8cc1f13b839fb3ff34841",
     "check_fibonacci.py": "8e17b9dfdc174cd1677b0ba494d574dfd12fc2c9d8aa0f365fc998a8f708770e",
     "check_gluing.py": "6fc3b83e0c7b6b9a4e355a049448860be2f159e75293317f1019a8429d3827bb",
+    "clock_lifts.json": "0a7696a88afac59138bde522d2719c627a6bd89e57a52d7f49fdee6862c91322",
     "cross_check.json": "cc622b7dc6abc21c4210b89a85e28d984f9f10224567724ec3eef9fb1b38a2c4",
     "cross_check.py": "e0927bcf849accf514881b4d521be06c9fd0de06ef5d07f332edfa417715fe48",
     "fibonacci.json": "114a3c18b16bbac17628a60560717eee35391da2dd50ac6d076790c9469a684e",

@@ -1,0 +1,444 @@
+{
+  "status": "FINITE-EXACT controls; formal ring proof and scope in ZERO-SLOT.md",
+  "formal_matrices": [
+    {
+      "slopes": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          1,
+          0
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "slopes": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "Q_with_M8_equal_I_plus_3Q": [
+        [
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            -1
+          ]
+        ]
+      ]
+    }
+  ],
+  "seventh_power_clock_controls": [
+    {
+      "depth": 1,
+      "Fibonacci_matrix_order": 16,
+      "whole_affine_pair_order": 112
+    },
+    {
+      "depth": 2,
+      "Fibonacci_matrix_order": 112,
+      "whole_affine_pair_order": 784
+    },
+    {
+      "depth": 3,
+      "Fibonacci_matrix_order": 784,
+      "whole_affine_pair_order": 5488
+    },
+    {
+      "depth": 4,
+      "Fibonacci_matrix_order": 5488,
+      "whole_affine_pair_order": 38416
+    },
+    {
+      "depth": 5,
+      "Fibonacci_matrix_order": 38416,
+      "whole_affine_pair_order": 268912
+    },
+    {
+      "depth": 6,
+      "Fibonacci_matrix_order": 268912,
+      "whole_affine_pair_order": 1882384
+    },
+    {
+      "depth": 7,
+      "Fibonacci_matrix_order": 1882384,
+      "whole_affine_pair_order": 13176688
+    },
+    {
+      "depth": 8,
+      "Fibonacci_matrix_order": 13176688,
+      "whole_affine_pair_order": 92236816
+    },
+    {
+      "depth": 9,
+      "Fibonacci_matrix_order": 92236816,
+      "whole_affine_pair_order": 645657712
+    },
+    {
+      "depth": 10,
+      "Fibonacci_matrix_order": 645657712,
+      "whole_affine_pair_order": 4519603984
+    },
+    {
+      "depth": 11,
+      "Fibonacci_matrix_order": 4519603984,
+      "whole_affine_pair_order": 31637227888
+    },
+    {
+      "depth": 12,
+      "Fibonacci_matrix_order": 31637227888,
+      "whole_affine_pair_order": 221460595216
+    }
+  ],
+  "prime_power_controls": [
+    {
+      "p": 7,
+      "k": 1,
+      "modulus": 7,
+      "primitive_cube_root": 2,
+      "exhaustive_translations": true,
+      "pairs_checked": 392,
+      "period_histogram": [
+        [
+          8,
+          56
+        ],
+        [
+          56,
+          336
+        ]
+      ]
+    },
+    {
+      "p": 13,
+      "k": 1,
+      "modulus": 13,
+      "primitive_cube_root": 3,
+      "exhaustive_translations": true,
+      "pairs_checked": 1352,
+      "period_histogram": [
+        [
+          8,
+          104
+        ],
+        [
+          104,
+          1248
+        ]
+      ]
+    },
+    {
+      "p": 19,
+      "k": 1,
+      "modulus": 19,
+      "primitive_cube_root": 7,
+      "exhaustive_translations": true,
+      "pairs_checked": 2888,
+      "period_histogram": [
+        [
+          8,
+          152
+        ],
+        [
+          152,
+          2736
+        ]
+      ]
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "modulus": 49,
+      "primitive_cube_root": 30,
+      "exhaustive_translations": true,
+      "pairs_checked": 19208,
+      "period_histogram": [
+        [
+          8,
+          392
+        ],
+        [
+          56,
+          2352
+        ],
+        [
+          392,
+          16464
+        ]
+      ]
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "modulus": 343,
+      "primitive_cube_root": 324,
+      "exhaustive_translations": false,
+      "pairs_checked": 512,
+      "period_histogram": [
+        [
+          8,
+          3
+        ],
+        [
+          56,
+          7
+        ],
+        [
+          392,
+          64
+        ],
+        [
+          2744,
+          438
+        ]
+      ]
+    }
+  ],
+  "checks": 48796
+}

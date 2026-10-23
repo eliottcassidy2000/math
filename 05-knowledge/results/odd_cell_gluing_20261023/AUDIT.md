@@ -39,6 +39,14 @@ are confined to the hypotheses in README.md and ZERO-SLOT.md.
 10. Fibonacci macro products are noncommutative and keep their integer
    length. The finite group-pair periods cannot be read as time cycles of
    a Collatz orbit or as periodicity of the coloured word.
+11. The eight-step return is derived over the integer Eisenstein ring,
+   before reduction: I+3Q with Q^2=0, determinant zero and a unit entry.
+   The prime3 is excluded, so its Smith factors over Z/(p^k) are a unit
+   and zero. Translation valuation gives the exact8p^r periods and their
+   counts. The separate identity-slope branch uses the Fibonacci matrix;
+   its first seventh-power lift has nonzero correction, preventing an
+   unproved Pisano-period assumption. An affine group model is not the
+   full permutation carrier of matching-coupled prime cells.
 
 ## Failed trial claims and repaired scope
 
@@ -95,6 +103,11 @@ strongest survivors are preserved here.
   group. The latter periods are checked again by nine eight-step2x2
   translation matrices. Every216 assignment of colours to S3 is checked
   by both literal words and recursive products.
+- Prime-power clocks: formal square-zero and determinant/unit checks for
+  all eight return matrices; first-return iteration for every392,1352,
+  2888 and19208 nontrivial-slope pair states modulo7,13,19 and49,
+  respectively;512 explicit sampled states modulo343. Matrix powers
+  verify the claimed Fibonacci matrix order modulo7^k for1<=k<=12.
 
 Normal and optimized Python replay compare the frozen receipts with
 explicit exceptions. The manifest records all packet source/artifact
@@ -122,3 +135,10 @@ handling; it is not a stronger substitute for that theorem. The new
 zero-slot extension changes the historical grammar in a precise way.
 No proof of universal Collatz, a uniformly small tournament signature, or
 an unrestricted A000568 speedup is asserted.
+
+Final incoming295d14b301 was read before publication. Its displacement
+necklace already classifies its entire matching-coupled prime-cell family;
+its order5 source/endpoints hostile forbids source-only wiring even with
+full source data; its square-sum colour-word collision first occurs at36.
+These results are credited in the README and restrict the proposed next
+target. They are not additional computations performed by this packet.
