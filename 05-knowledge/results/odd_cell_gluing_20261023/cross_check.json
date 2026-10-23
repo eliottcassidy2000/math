@@ -1,0 +1,8 @@
+{
+  "status": "FINITE-EXACT independent incoming reconciliation",
+  "incoming_commit": "d45865c332",
+  "incoming_receipt_sha256": "2ac21f3fe2bbc16b59bf8d9a6c4c62d92460dbfe2aae3271a85afed62e2fdd6b",
+  "ordered_mark_cases_agree": 930,
+  "small_flag_vs_subset_equality_literal_partitions_agree": 132,
+  "checks": 9620
+}

@@ -1,0 +1,50 @@
+{
+  "status": "FINITE-EXACT",
+  "triangle_partial_bijection_systems": 39304,
+  "counts_by_number_of_sections": [
+    [
+      0,
+      30871
+    ],
+    [
+      1,
+      7641
+    ],
+    [
+      2,
+      756
+    ],
+    [
+      3,
+      36
+    ]
+  ],
+  "private_path_compositions": 1156,
+  "conditioned_transport_hostile": [
+    {
+      "first_bit": 0,
+      "second_bit": 0,
+      "projected_cost": 0,
+      "shared_chart": true
+    },
+    {
+      "first_bit": 0,
+      "second_bit": 1,
+      "projected_cost": -2,
+      "shared_chart": false
+    },
+    {
+      "first_bit": 1,
+      "second_bit": 0,
+      "projected_cost": 2,
+      "shared_chart": false
+    },
+    {
+      "first_bit": 1,
+      "second_bit": 1,
+      "projected_cost": 0,
+      "shared_chart": true
+    }
+  ],
+  "checks": 40464
+}

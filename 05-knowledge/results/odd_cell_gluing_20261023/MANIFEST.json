@@ -1,0 +1,20 @@
+{
+  "status": "exact packet and imported source bytes",
+  "files": {
+    "AUDIT.md": "7c43977e1a5e00e41e59100d7ff42a892123fe0fe5c960faaa460b149a2c0d45",
+    "README.md": "1db5950fa0f0c7a93f970b13618500551bb0111a1f2af88597572a80b118bc77",
+    "ZERO-SLOT.md": "e597e56c953dd40ce9b501ffb687668141923a4bac0bf70a55312af2b3e6d4d2",
+    "cells.json": "7ced8ef82033502655bf0f2fb426c00924740e897031cf9f7133e13a21d8cdd9",
+    "check_cells.py": "edd745d28670a75b0183c236fbd7cc61155082b33e178ff7dbae70cdeaa8a1c3",
+    "check_fibonacci.py": "8e17b9dfdc174cd1677b0ba494d574dfd12fc2c9d8aa0f365fc998a8f708770e",
+    "check_gluing.py": "6fc3b83e0c7b6b9a4e355a049448860be2f159e75293317f1019a8429d3827bb",
+    "cross_check.json": "cc622b7dc6abc21c4210b89a85e28d984f9f10224567724ec3eef9fb1b38a2c4",
+    "cross_check.py": "e0927bcf849accf514881b4d521be06c9fd0de06ef5d07f332edfa417715fe48",
+    "fibonacci.json": "114a3c18b16bbac17628a60560717eee35391da2dd50ac6d076790c9469a684e",
+    "gluing.json": "29711d88f2a17a5ac4a1b7b3b50f9473ee2bf648c81bf11f6a2dd2c7df41b052"
+  },
+  "imports": {
+    "05-knowledge/results/incidence_wiring_20261023/marked_cells.py": "e6d4c9d55d0568e66f4bd8272dba9fcff242bfbb19c00b1dd43853c9eb128fb9",
+    "05-knowledge/results/incidence_wiring_20261023/check.py": "92b0d574e6cb07717ac63c992ade81f73c4acf4152aad8f9129691d3092fa713"
+  }
+}

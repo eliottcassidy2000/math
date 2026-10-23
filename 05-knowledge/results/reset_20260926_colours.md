@@ -6,6 +6,13 @@ claim. The user's35 supplied colours remain authoritative data throughout.
 This note specifies one natural interpretation of the extra-unit proposal;
 it does not assume that the prose uniquely fixes the indexing convention.
 
+**2026-10-23 extension with a different alphabet:** the user's new
+`1_A,0,1_B,1_C,2,...` convention makes A and B nonconsecutive. The
+[zero-slot theorem](odd_cell_gluing_20261023/ZERO-SLOT.md) gives three-or-four
+fibres and a compatible continuation of the historical B at35, via the
+newly legal expansion2=B+A. The two-or-three fibre theorem and row36
+obstruction below remain scoped to the original unspaced alphabet.
+
 ## 1. Inheritance and the construction
 
 The anchor is an exact nonconsecutive representation with three differently
