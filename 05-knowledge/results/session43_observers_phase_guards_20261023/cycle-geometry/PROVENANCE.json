@@ -1,0 +1,30 @@
+{
+  "repository_head": "8b71b746f7a9d90378c702e01608207227b1f83e",
+  "sources": [
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "git_blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "path": "05-knowledge/results/session32_square_monster_20261023/VALUATION_CYCLE_AND_QUOTIENT.md",
+      "git_blob": "21a39db64dbe8a96fbe5efe79eac93e4ccbdcc0c",
+      "sha256": "27af626ac2abcc372ec664ce82c73c660ee63555a95246ddd629339175d3b3a3"
+    },
+    {
+      "path": "01-canon/theorems/THM-2996-prime-modular-affine-defect-trichotomy-and-spherical-quartic-uniqueness.md",
+      "git_blob": "12dd7c50c2b917de618733828e76d6c8f21c15f5",
+      "sha256": "32bc153ca45b0874f314c06aa20c0fbe24b2e64fbbb0a767450edee039daea42"
+    },
+    {
+      "path": "01-canon/theorems/THM-4076-stern-inverse-orbit-mod8-and-apex-degree-congruence.md",
+      "git_blob": "ac276f5bf34c090d05a77490c5d1d76beb41796a",
+      "sha256": "0a32c36e4ec7ed0654fc86f3ac27b6d9a2eba46c0df13d8adb9e0bd3941cc4f2"
+    }
+  ],
+  "external_sources": [
+    "https://arxiv.org/abs/2609.19053",
+    "https://dlmf.nist.gov/4.2"
+  ],
+  "scope": "No Git writes. Read-only source recovery; all added interpretation layers are explicitly typed."
+}

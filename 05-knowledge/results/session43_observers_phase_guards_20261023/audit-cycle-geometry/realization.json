@@ -1,0 +1,43 @@
+{
+  "constraint_triples": 2240,
+  "independent_box_exponent_bounds": {
+    "2": [
+      0,
+      11
+    ],
+    "3": [
+      0,
+      8
+    ]
+  },
+  "infeasible": 1686,
+  "least_cycle_N": 21003948000,
+  "least_cycle_exponents": {
+    "2": 5,
+    "3": 7,
+    "5": 3,
+    "7": 4
+  },
+  "realizable": 554,
+  "repair": [
+    [
+      2,
+      3
+    ],
+    [
+      6,
+      2
+    ]
+  ],
+  "shared_prime_hostile": [
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      2
+    ]
+  ],
+  "status": "PASS"
+}

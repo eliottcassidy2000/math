@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": 204421,
+  "scope": "exact cyclic equivariance plus bounded total degree; no arbitrary Keller claim"
+}

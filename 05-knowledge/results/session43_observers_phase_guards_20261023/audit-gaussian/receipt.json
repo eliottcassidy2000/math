@@ -1,0 +1,7 @@
+{
+  "alias_72_radial_mean": "371993326789901217467999448150835200000000",
+  "checks": 529,
+  "producer_manifest_sha256": "c417b8986ce5eadecb731fb6ce8a54a2e318cf99ffbd304f4867a09bfc867c93",
+  "scope": "Independent finite checks; general arguments separately reviewed; no Lean rebuild",
+  "status": "PASS"
+}

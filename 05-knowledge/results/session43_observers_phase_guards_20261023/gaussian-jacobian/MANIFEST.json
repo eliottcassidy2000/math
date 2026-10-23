@@ -1,0 +1,18 @@
+{
+  "files": {
+    "PROVENANCE.md": "97fdd685e47430b08808cb69a898107ade81d261250b10c8db775016f76953ea",
+    "THEOREMS.md": "2deeb6c00ee912d889d64d54b4ed0744dc6f180a7554fb686fc9596a015b1b93",
+    "check.py": "6d377192ef27c2f2f6230ca7e49533925f26ba226264d773dde7c8760d7b2444",
+    "prior-1795.md": "1996d15af766058cd27e418b4a94c4b958cd21dbb0b48f6ad8cf3cb6dcfb8bbe",
+    "prior-1810.md": "285f05ebb64f153d7e9618da72d27fe29b2a5466e9bf23462f941e76266602d7",
+    "prior-2019.md": "2735f23142c7322e994823282b1a175ecf0b76da3229003670a0a77ce4e96034",
+    "prior-2022.md": "bbd3a2a41dd7c9022a79277af7cfe9230242ecd7d35dc3e9b924a5179137f766",
+    "prior-3290.md": "51804ecdf10c468a79572271539700b660e44786cd1909d8ba79922abb14ce25",
+    "prior-4727.md": "c22f01d11ba6a4de60a22fa62c50140e282740920e4223fddbad1131274e201c",
+    "prior-paths.txt": "fb05a857a7c06fec217d8b72f586c7b4695a916021cf4b65169ad18a13823a8d",
+    "receipt.json": "13e731846a59291d3dfa9b4e4618d6c577c00b6c97305c5fd5906e1d093daaff",
+    "receipt.optimized.json": "13e731846a59291d3dfa9b4e4618d6c577c00b6c97305c5fd5906e1d093daaff"
+  },
+  "tests": "python check.py and python -O check.py; byte-identical PASS, 330 checks",
+  "git_writes": false
+}

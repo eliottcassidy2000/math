@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_AFTER_INDEPENDENT_DEGREE_GUARD_AUDIT",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1142,
+      "sha256": "fd341627ee24527ad684d4c071704d507ab35db020bb2e48f4a29ff58ae4cbf6"
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "bytes": 1492,
+      "sha256": "92c66a722e5c1ec8800a1e8295f39c545c1cde1a234f2655fa2f77222dd74bc0"
+    },
+    {
+      "path": "FINITE_GUARDS_AND_DEGREE.md",
+      "bytes": 2287,
+      "sha256": "3a6603cc95de0d1c5c0cb10af4f162b4f83d19e078d6831ff0f0b244ca63c1e6"
+    },
+    {
+      "path": "check_degree_guards.py",
+      "bytes": 806,
+      "sha256": "c107b70a62876b63f2ac268af0380f6a97f3ebc66f10297e6b298b0d6187ef8c"
+    },
+    {
+      "path": "degree_guard_receipt.json",
+      "bytes": 136,
+      "sha256": "22f767f82a7c5ffa1e492b5eb6c1046af57dd51c6c101561d680a57065a7431d"
+    },
+    {
+      "path": "degree_guard_receipt.optimized.json",
+      "bytes": 136,
+      "sha256": "22f767f82a7c5ffa1e492b5eb6c1046af57dd51c6c101561d680a57065a7431d"
+    }
+  ],
+  "commands": [
+    "python3 check_degree_guards.py",
+    "python3 -O check_degree_guards.py"
+  ]
+}

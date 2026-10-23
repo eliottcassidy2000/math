@@ -1,0 +1,19 @@
+{
+  "files": {
+    "REVIEW.md": "278ad32180a46f3d9ae706855d8195853dd73069f3ca6aa4e020ab2e6733ceb9",
+    "check.py": "ea1f02397d85e095c0ce6c95f1b924234f7ed3d1a360c50b6e5098ada1694993",
+    "check_degree_extension.py": "5992b2ec5005e228542bfed29f5904b167d6ef806f7272aa482f022620e94271",
+    "degree.receipt.json": "6850d3f6d8eec2bb8de89f31e360f7d8f59b6cbad4434393ef4450312a654f3b",
+    "degree.receipt.optimized.json": "6850d3f6d8eec2bb8de89f31e360f7d8f59b6cbad4434393ef4450312a654f3b",
+    "receipt.json": "f93d70d7f7b4cc9a83ac05fc893fe91dc46cb0e33c2fb95194f82c82fb1b1712",
+    "receipt.optimized.json": "f93d70d7f7b4cc9a83ac05fc893fe91dc46cb0e33c2fb95194f82c82fb1b1712"
+  },
+  "source_manifest_sha256": "c417b8986ce5eadecb731fb6ce8a54a2e318cf99ffbd304f4867a09bfc867c93",
+  "status": "PASS",
+  "checks": 529,
+  "degree_extension_checks": 6009,
+  "source_mutations": false,
+  "git_mutations": false,
+  "lean_rebuilt": false,
+  "publication_layout": "mock tested normal and optimized, output byte-identical to workspace"
+}
