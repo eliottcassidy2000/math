@@ -1,0 +1,32 @@
+{
+  "status": "PASS_BOUNDED_INTEGRATION",
+  "no_full_incoming_census_replay": true,
+  "normal_optimized_identical": true,
+  "files": [
+    {
+      "path": "INTEGRATION.md",
+      "bytes": 6187,
+      "sha256": "92824d1e5cc3947770330ff6cb544156c97c4928641d617a8ebc2d563e347353"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 2125,
+      "sha256": "ff9f6f4851e261844b2506aaa9d3166f6aeb1bbde13b9e3f6e0caf646e3cb6ff"
+    },
+    {
+      "path": "check.py",
+      "bytes": 2453,
+      "sha256": "8f837027b4cccafd0aa35ac4f3bfcbbb01565c62739b60ed208bc37c9c72057c"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 4140,
+      "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 4140,
+      "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+    }
+  ]
+}

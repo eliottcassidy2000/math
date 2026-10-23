@@ -1,0 +1,51 @@
+{
+  "incoming_commits": [
+    "e858f56b3321e840f7c79178b8041c57a789b6e8",
+    "8a73412b9830666fdde7fd7122bad4c23b006b95"
+  ],
+  "sources": [
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/README.md",
+      "bytes": 11661,
+      "sha256": "3c8ac6ef5bb8ff532d8cd92e37acad0c0de6ad75c2192d81a9492e54d28e32e3"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/INCOMING.md",
+      "bytes": 8306,
+      "sha256": "9c16bcebc0df1d1340744a7cd2123aeb64bd8054372e4a01a320c46ed1970dac"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/coupling/NATIVE_CONNECTEDNESS.md",
+      "bytes": 8786,
+      "sha256": "fb84548153d1a2157435a7d63f40b228c41277cb531575f68b871bd18fa8ec55"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/trace/TRACE_WITH_CLOCKS.md",
+      "bytes": 10235,
+      "sha256": "4da563a28888c36b71a38db309200168b84b13006705f34cfa22e039689709dc"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/README.md",
+      "bytes": 17459,
+      "sha256": "80916b65ea984a480dd0edbfb503b15ed7c624608a1cd5b49ece451ba07f4c3d"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/AUDIT_NATIVE_DESCENT.md",
+      "bytes": 7561,
+      "sha256": "7ea16e7fa25355720da8a23002e9566bb8b465f1c414d233f23c069a1627866c"
+    },
+    {
+      "commit": "8a73412b9830666fdde7fd7122bad4c23b006b95",
+      "path": "01-canon/MISTAKES.md",
+      "bytes": 1797176,
+      "sha256": "f546745db29f8df520bba808de0c2f82b68cfdbdc9684647e3d763204a60e136",
+      "review_scope": "new observer descent and selector correction entry"
+    }
+  ]
+}

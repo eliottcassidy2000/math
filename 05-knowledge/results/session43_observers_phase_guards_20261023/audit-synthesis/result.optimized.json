@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "independent_checks": 2083,
+  "binary_odd_orders": [
+    3,
+    2001
+  ],
+  "scope": "Small arithmetic and normalization tests only; packet proofs and audits reviewed separately."
+}

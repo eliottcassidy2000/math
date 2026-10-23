@@ -8,3 +8,11 @@
 6. Mod8 and mod9 must name their observables. Hamiltonian-count guards, forward-step evaluations, finite phase actions and Stern inverse-orbit residues are not interchangeable.
 
 Positive repairs are preferred to mere rejection: a compatible observer bundle, a weighted-gap bound, a bounded-degree anti-aliasing theorem, a literal divisor-height extension, or a covering with explicitly added branches. None of these licenses transferring a conjecture without a structure-preserving map.
+
+## Outcomes of the successive proof/test rounds
+
+A Hamiltonian path supplies observer order but changes both fibre weights and conditioned mixing. Coarsening preserves a spectral bound; conditioning can destroy it; bounded positive weights retain a quantitative replacement. Native path assembly can require exponentially many cosets while remaining easy on a small transfer graph, but general equitable C3-template assembly is NP-complete, including a pinned regular-host variant. This locates the tractable frontier in actual factorization and incidence width, not simply in the size of each local chart group.
+
+Finite phase guards become exact under a bandwidth bound, yielding a sharp bounded-degree planar symmetry theorem. The prime valuation cycle becomes literal after extending to composite-base heights, with an exact compatibility cone and least realization. A recovered odd-cycle polynomial identity leads to a sharp all-order binary valuation law and an O(n)-family compiler for every universal linear congruence; the positive H7 polynomial hostile proves why incidence still matters.
+
+No session result needs a claim that equal numerals identify the underlying arithmetic, geometry or dynamics. The positive maps are explicit, and the omitted data are named.

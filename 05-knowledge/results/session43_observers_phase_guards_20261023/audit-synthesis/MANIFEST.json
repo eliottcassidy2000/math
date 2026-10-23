@@ -1,0 +1,46 @@
+{
+  "status": "PASS_FINAL_SYNTHESIS_AUDIT",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 5920,
+      "sha256": "492184d930b2fb4cea3271822ff49bfb52e2d6e819e373453539d22286f5036b"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1892,
+      "sha256": "0b95056749ae6b7bfa646cfb5d3c769b333fa52186828706ba28bc7434f5ac5d"
+    },
+    {
+      "path": "check.py",
+      "bytes": 2636,
+      "sha256": "13d7338f9241786f0ea00d32f963f9c4f6e5b9698ec6e68e68b76c10df1bf55f"
+    },
+    {
+      "path": "incoming.replayed.json",
+      "bytes": 4140,
+      "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+    },
+    {
+      "path": "incoming.replayed.optimized.json",
+      "bytes": 4140,
+      "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+    },
+    {
+      "path": "result.json",
+      "bytes": 206,
+      "sha256": "76bfb135d0a7d954acc96b18199f0f3f7a94fa6587f7d6cdd1383d52b7ffa4f9"
+    },
+    {
+      "path": "result.optimized.json",
+      "bytes": 206,
+      "sha256": "76bfb135d0a7d954acc96b18199f0f3f7a94fa6587f7d6cdd1383d52b7ffa4f9"
+    }
+  ],
+  "commands": [
+    "python check.py",
+    "python -O check.py"
+  ],
+  "root_manifest_sha256": "184ba1fd91dbf7a710f2cc60779920af6ddd546a2ec1e09dcf24acd95049d618",
+  "incoming_manifest_sha256": "9dc7339e5f4a8ca1aaf1d43e9bb385be065948ad76344edac316412435d603df"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "root_and_incoming": [
+    {
+      "packet": "session43-root",
+      "manifest": "FINAL_MANIFEST.json",
+      "sha256": "184ba1fd91dbf7a710f2cc60779920af6ddd546a2ec1e09dcf24acd95049d618",
+      "verified_files": [
+        {
+          "path": "README.md",
+          "bytes": 1830,
+          "sha256": "a1fa2800a5fabad8adaeed5c06a336e73e3a1b8c126f949ca35b7d65ace379f0"
+        },
+        {
+          "path": "RESEARCH_MAP.md",
+          "bytes": 2766,
+          "sha256": "9894d1a3aaaa33f9c93f17449c4525927e40c89ee8ebd345fed29ef2f26e6f68"
+        },
+        {
+          "path": "SYNTHESIS.md",
+          "bytes": 17439,
+          "sha256": "ed5d576273210add3c6bac9bb9e9c0650ca57da8b7cdfdbc3adeabebd5724b61"
+        }
+      ]
+    },
+    {
+      "packet": "session43-late-incoming",
+      "manifest": "MANIFEST.json",
+      "sha256": "9dc7339e5f4a8ca1aaf1d43e9bb385be065948ad76344edac316412435d603df",
+      "verified_files": [
+        {
+          "path": "INTEGRATION.md",
+          "bytes": 6187,
+          "sha256": "92824d1e5cc3947770330ff6cb544156c97c4928641d617a8ebc2d563e347353"
+        },
+        {
+          "path": "SOURCE_PINS.json",
+          "bytes": 2125,
+          "sha256": "ff9f6f4851e261844b2506aaa9d3166f6aeb1bbde13b9e3f6e0caf646e3cb6ff"
+        },
+        {
+          "path": "check.py",
+          "bytes": 2453,
+          "sha256": "8f837027b4cccafd0aa35ac4f3bfcbbb01565c62739b60ed208bc37c9c72057c"
+        },
+        {
+          "path": "receipt.json",
+          "bytes": 4140,
+          "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+        },
+        {
+          "path": "receipt.optimized.json",
+          "bytes": 4140,
+          "sha256": "fb2080f034011daaf021b5180129901491b5d6fbcdf226ddfa4561ff95aee432"
+        }
+      ]
+    }
+  ],
+  "incoming_replay": "normal and optimized byte-identical to frozen receipt"
+}
