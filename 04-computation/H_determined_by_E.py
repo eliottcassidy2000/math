@@ -256,7 +256,8 @@ def main():
 
             # Fourier spectrum (k > 0)
             spectrum = []
-            for k in range(1, (p+1)//2 + 1):
+            # One representative of each conjugate frequency pair {k,p-k}.
+            for k in range(1, (p+1)//2):
                 val = sum(omega ** (k * s) for s in S)
                 spectrum.append(round(abs(val)**2, 6))
             spec_key = tuple(sorted(spectrum))

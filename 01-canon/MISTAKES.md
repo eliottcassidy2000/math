@@ -8,6 +8,7 @@ a historical synthesis or promoting computational evidence.
 
 - **Affected source:** `04-computation/H_determined_by_E.py`, Part 3, and its historical `.out`. For a skew subset S of an odd cyclic group, the script defined r(t)=#{(a,b) in S²:a+b=t} but added |S|² as though r(0)=|S|.
 - **Minimal witness / first failed implication:** S={1} in Z/3 has sum-convolution r(0)=0 and energy1; the old display gave2. It is the DIFFERENCE convolution that has zero fibre |S|. Equal second moments do not identify their pointwise coordinates or higher moments.
+- **Related indexing repair:** Part5 used frequencies1 through(p+1)/2, duplicating one conjugate mode; it now uses exactly1 through(p-1)/2. The historical spectral display was regenerated with the corrected index range. No universal spectral completeness claim is inferred.
 - **Repair / strongest survivor:** subtract the spurious |S|² in the display and retain the already-correct direct energy and H computations. At the recovered order13 pair the correct common energy is118; sum-cubic energies are420/408, while difference-cubic energies are450/462. The old H collision survives.
 - **Evidence / new use:** [controls and source-preserving refinement](../05-knowledge/results/incidence_wiring_20261023/README.md) verify all126 skew sets in odd orders3 through13 and recount the two H values by independent recurrences. The pair obstructs unrooted incidence refinement at every depth; marking the actual source repairs these two examples. No all-order one-source theorem is inferred.
 

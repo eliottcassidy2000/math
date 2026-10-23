@@ -326,6 +326,58 @@
     ],
     "eighth_energy_rank": 0,
     "smith_factors_divisible_by_16": 1,
+    "higher_dyadic_layers": [
+      {
+        "valuation": 4,
+        "form": [
+          [
+            0
+          ]
+        ],
+        "rank": 0,
+        "dimension": 1
+      },
+      {
+        "valuation": 5,
+        "form": [
+          [
+            0
+          ]
+        ],
+        "rank": 0,
+        "dimension": 1
+      },
+      {
+        "valuation": 6,
+        "form": [
+          [
+            0
+          ]
+        ],
+        "rank": 0,
+        "dimension": 1
+      },
+      {
+        "valuation": 7,
+        "form": [
+          [
+            0
+          ]
+        ],
+        "rank": 0,
+        "dimension": 1
+      },
+      {
+        "valuation": 8,
+        "form": [
+          [
+            1
+          ]
+        ],
+        "rank": 1,
+        "dimension": 1
+      }
+    ],
     "blue_half_rank": 4,
     "nonzero_half_diagonal_entries": 3357,
     "counterfeit_half_difference_rank": 2,
@@ -335,7 +387,23 @@
     "literal_blue_lines": 2048,
     "literal_black_lines": 1046528,
     "blue_loops": 4,
-    "literal_black_loops": 618
+    "literal_black_loops": 618,
+    "filtration_terminated": true,
+    "exact_2_primary_exponents_counts": [
+      [
+        1,
+        3358
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        8,
+        1
+      ]
+    ],
+    "tree_count_2_adic_valuation": 3374
   },
-  "checks": 970653
+  "checks": 970809
 }

@@ -397,6 +397,43 @@ def main():
         eighth_lifts.append(v); eighth_images.append(Av)
     eighth = [[(sum(a*b for a, b in zip(v, Aw))//8)&1 for Aw in eighth_images] for v in eighth_lifts]
     eighth_rank = binary_rank([sum(b << j for j, b in enumerate(row)) for row in eighth])
+    stages = {2: (lifts, quarter_rows), 3: (eighth_lifts, [sum(b << j for j, b in enumerate(row)) for row in eighth])}
+    higher = []
+    for k in range(3, 13):
+        current_lifts, current_form = stages[k]
+        surviving, _ = binary_kernel(current_form, len(current_lifts))
+        if not surviving: break
+        next_lifts = []; next_images = []
+        for r in surviving:
+            v = [sum(current_lifts[j][i] for j in bits(r)) for i in range(len(nodes))]
+            Av = laplacian(v)
+            # Cancel obstructions against the nested surviving spaces from
+            # deepest to shallowest, keeping A*v divisible by 2^k throughout.
+            for j in range(k-1, 1, -1):
+                old_lifts, old_form = stages[j]
+                obstruction = [(sum(a*b for a, b in zip(w, Av))//(1 << k)) & 1 for w in old_lifts]
+                coeff = binary_solve(old_form, obstruction, len(old_lifts))
+                for i in range(len(nodes)):
+                    v[i] += (1 << (k-j))*sum(old_lifts[t][i] for t in bits(coeff))
+                Av = laplacian(v)
+                need(all(a % (1 << k) == 0 for a in Av), 'nested lift divisibility')
+            obstruction = 0
+            for u in nodes:
+                if (Av[ni[u]]//(1 << k)) & 1: obstruction ^= coords[u]
+            coeff = binary_solve(Q, [(obstruction >> i)&1 for i in range(dim)], dim)
+            w = [(coords[u] & coeff).bit_count() & 1 for u in nodes]
+            v = [a+(1 << (k-1))*b for a, b in zip(v, w)]; Av = laplacian(v)
+            need(all(a % (1 << k) == 0 for a in Av), 'nested half-form correction')
+            need(all((Av[ni[u]]//(1 << k))%2 == 0 for u in isolated), 'nested isolate lift')
+            y = binary_solve(reduced, [(Av[ni[u]]//(1 << k))&1 for u in blue_nodes[1:]], 175) << 1
+            for u in blue_nodes: v[ni[u]] += (1 << k)*((y >> bi[u])&1)
+            Av = laplacian(v)
+            need(all(a % (1 << (k+1)) == 0 for a in Av), 'nested full lift equation')
+            next_lifts.append(v); next_images.append(Av)
+        M = [[(sum(a*b for a, b in zip(v, Aw))//(1 << (k+1)))&1 for Aw in next_images] for v in next_lifts]
+        mrows = [sum(b << j for j, b in enumerate(row)) for row in M]
+        stages[k+1] = next_lifts, mrows
+        higher.append({'valuation': k+1, 'form': M, 'rank': binary_rank(mrows), 'dimension': len(M)})
     # Direct integer energy on a deterministic collection of basis and mixed vectors.
     sample = [(0, 0), (0, 1), (97, 97), (97, 194)]
     sample += [(len(isolated)+i, len(isolated)+j) for i, j in ((0, 0), (0, 1), (3, 7), (10, 10))]
@@ -423,6 +460,7 @@ def main():
                          'smith_factors_divisible_by_8': dim-rankQ-quarter_rank,
                          'eighth_energy_matrix': eighth, 'eighth_energy_rank': eighth_rank,
                          'smith_factors_divisible_by_16': dim-rankQ-quarter_rank-eighth_rank,
+                         'higher_dyadic_layers': higher,
                          'blue_half_rank': binary_rank([sum(v<<j for j, v in enumerate(row)) for row in blue_half]),
                          'nonzero_half_diagonal_entries': sum((r>>i)&1 for i, r in enumerate(Q)),
                          'counterfeit_half_difference_rank': binary_rank(deltaQ),
@@ -432,6 +470,13 @@ def main():
                          'literal_black_lines': sum(2*w for u, v, w in black_edges),
                          'blue_loops': sum(w for u, v, w in blue_edges if u == v),
                          'literal_black_loops': sum(2*w for u, v, w in black_edges if u == v)}
+    exact_orders = {1: rankQ, 2: quarter_rank, 3: eighth_rank}
+    exact_orders.update({r['valuation']: r['rank'] for r in higher})
+    last_dimension = higher[-1]['dimension'] if higher else len(eighth)
+    last_rank = higher[-1]['rank'] if higher else eighth_rank
+    out['electrical']['filtration_terminated'] = last_rank == last_dimension
+    out['electrical']['exact_2_primary_exponents_counts'] = [[j, r] for j, r in sorted(exact_orders.items()) if r]
+    out['electrical']['tree_count_2_adic_valuation'] = sum(j*r for j, r in exact_orders.items()) if last_rank == last_dimension else None
     need(binary_rank(deltaQ) == 2, 'new counterfeit must be detected by half energy')
     out['checks'] = CHECKS
     print('electrical:', json.dumps(out['electrical']), flush=True)

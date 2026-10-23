@@ -1,0 +1,16 @@
+{
+  "status": "FINITE-EXACT entrywise agreement",
+  "incoming_commit": "64912fc832",
+  "literal_owners_each": 2097152,
+  "port_entries_each": 956339,
+  "merged_colored_entries": 438374,
+  "first_owner_sha256": "5d195cc793e3d05af189407333960e0ceffa00fb0bc40d77d419cf8342f80110",
+  "second_owner_sha256": "636f0ae8f69455d4d39143a7c612260cfbb2a9736c91ca67fe2ac3ea65449be1",
+  "second_gauge": "descending_mask = all_ones XOR reflection(ascending_mask); canonical rank -> input_class_id",
+  "native_counterfeit_scales_connected_and_nonnegative": [
+    1,
+    2
+  ],
+  "checks": 7,
+  "incoming_electrical_receipt_sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+}

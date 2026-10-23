@@ -212,8 +212,11 @@ The [order-eight extension](incidence_wiring_20261023/README.md) proves the
 all-size rank-two switch criterion and supplies a stronger hostile: doubling
 its native feasible capacity switch preserves the entire half-energy form,
 but changes the quarter-energy form. Its full wiring has3,358 critical-group
-factors of exact2-adic valuation1, four of exact valuation2, and one divisible
-by16. The same packet recovers a historical order13 H collision that remains
+factors of exact2-adic valuation1, four of exact valuation2, and one of exact
+valuation8, agreeing with the [independent incoming calculation](metagraph_order8_electrical_20261023/README.md).
+The incoming [minimal menu](metagraph_minimal_signatures_20261023/README.md)
+also removes the score and triangle seeds: v4 alone plus one round and its
+guarded bit suffices at8. The extension recovers a historical order13 H collision that remains
 invisible to every unrooted incidence-refinement round; marking the actual
 source makes both examples discrete in three rounds. Stable cells must be
 odd, but need not be singletons.

@@ -7,6 +7,16 @@ refinement rule, and electrical switching criterion below. **OPEN:** a
 uniform short signature or efficient unrestricted enumeration algorithm.
 These are repository-relative advances; no literature-priority claim is made.
 
+**Incoming reconciliation:** commits f2cac6db1b and64912fc832 independently
+published the same order-eight wiring, guarded overlap repair, and full
+dyadic answer during this session. Their smaller v4-only seed supersedes
+our full(s,c,v4) seed as the preferred finite route. Entrywise comparison
+agrees on every mask owner and every port in both incoming banks, including
+Session38's independently classified descending-path universe. Retain this
+packet as an independent replay plus its doubleton/triangle decoders,
+rank-two switch criterion, doubled-counterfeit boundary, and marked-source
+tests; do not count the overlapping discoveries twice. See AUDIT.md.
+
 ## Inheritance and live board
 
 The closest mechanism is [THM-4739, Kirchhoff/Hodge port
@@ -288,7 +298,7 @@ with exact valuations1 and2, respectively. This also proves that the
 quarter-energy radical counts factors divisible by8; no diagonal-only
 shortcut is used.
 
-The exact five-by-five q4 matrix is
+The exact five-by-five q4 matrix in this packet's basis is
 
     0 0 0 1 0
     0 0 1 1 0
@@ -296,17 +306,32 @@ The exact five-by-five q4 matrix is
     1 1 1 1 1
     0 0 0 1 0
 
-It has rank4. The native graph consequently has3,358 factors of exact
-valuation1, four of exact valuation2, and ONE factor of valuation at
-least3. Lifting that remaining direction to divisibility by8 gives the
-one-by-one eighth-energy form[0], so its valuation is actually at least4.
-For this lift, first cancel the obstruction against V using q2 and an
-adjustment2w, then solve the remaining blue Laplacian equation and add4y.
-The same unimodular-block argument identifies its zero form with the next
-Smith layer. Independent all-minor controls verify this lifting procedure
-on120 nonsingular symmetric integer matrices of orders1 through5.
-This packet does not determine the last valuation or the odd
-primary part of the critical group.
+It has rank4. The remaining one-dimensional direction survives the forms
+with divisors8,16,32,64,128; the divisor256 form is[1]. The full2-primary
+critical group is therefore exactly
+
+    (Z/2)^3358 + (Z/4)^4 + Z/256,
+
+with spanning-tree2-adic valuation3374. The odd primary part is not computed.
+This agrees with the independently incoming electrical calculation.
+
+The general rule is to retain the parity space V_j of integer potentials
+with A v divisible by2^j. On this space q_j=v^T A w/2^j modulo2 is
+well-defined and rad(q_j)=V_(j+1). The incoming
+[filtration proof](../metagraph_order8_electrical_20261023/README.md) gives
+a particularly direct proof using the perfect dot-product pairing modulo
+2^j: image(A) is the annihilator of kernel(A). We checked that proof
+against the unimodular-block derivation above.
+
+Our implementation lifts a surviving vector by cancelling obstructions
+against previously retained spaces from deepest to shallowest. At level k,
+the correction from an old level j is2^(k-j) times an old lifted vector;
+it leaves A v divisible by2^k. After these corrections, a final ordinary
+modulo-two solve adds2^k y and gives divisibility by2^(k+1). Each equation
+is checked with the literal integer Laplacian. Independent all-minor Smith
+controls verify the complete nested procedure on120 nonsingular symmetric
+integer matrices of orders1 through5. The safety cap is level13; termination
+is an explicit output, and the native computation terminates at level8.
 
 The doubled counterfeit has delta q4 rank2 on this SAME radical. Its
 weights differ by a multiple of4, so the saved native lifts also remain
@@ -329,6 +354,19 @@ pairing, and exterior component signs. The shared useful move is retaining
 the SAME source/component through a joint measurement; their objects are
 not identified by their numerical parity alone.
 
+The subsequent [order-eight frontier](../metagraph_order8_frontier_20261023.md)
+adds a stronger hostile: P31 and the double of the double of P7 have the
+same vertex and edge-incidence moments, but different transitive-five
+counts. Testing this new object changes our source-marking proposal:
+one marked source still leaves cells[1,15,15] in EVERY case. Two ordered
+marks make P31 discrete for all930 choices, but the doubled example is
+discrete for only504;294 choices retain eight triple cells, and132 retain
+four seven-vertex cells. These are all ordered vertex pairs, without an
+unproved Hamilton-endpoint realizability filter. The new
+[marked-cell extension](MARKED-CELLS.md) gives exact counts, a proof of the
+one-mark obstruction, and a cyclic-three-cell attachment decoder. It does
+not extrapolate one-source success at13 to a universal claim at31.
+
 | Connection | Map and preserved predicate | Lost information / needed sidecar | Decisive test |
 |---|---|---|---|
 | Incidence -> binary potential | Mixed two-row columns -> equations(3); preserves exact row correlations | Global row swap; score/profile guards still required | Cycle XOR and full decoded adjacency |
@@ -342,9 +380,9 @@ two-vertex fibres, and branches explicitly on odd regular cells that
 survive. Its fallback is the already-proved signed-curl decoder. Measure
 the number and cost of the retained incidences against actual target
 canonicalization. The order13 hostile says to test source-marking before
-adding another unrooted moment. A further electrical target is the one
-remaining native factor divisible by16, not a claim that its valuation
-will by itself establish all-size black-core connectivity.
+adding another unrooted moment. A further electrical target is the
+effect of feasible port switches on the higher forms, not a claim that the
+now-complete native2-primary group establishes all-size black-core connectivity.
 
 ## Reproduction
 
@@ -356,6 +394,10 @@ From the repository root:
     python3 -O -B 05-knowledge/results/incidence_wiring_20261023/controls.py
     python3 -B 05-knowledge/results/incidence_wiring_20261023/dyadic_controls.py
     python3 -O -B 05-knowledge/results/incidence_wiring_20261023/dyadic_controls.py
+    python3 -B 05-knowledge/results/incidence_wiring_20261023/marked_cells.py
+    python3 -O -B 05-knowledge/results/incidence_wiring_20261023/marked_cells.py
+    python3 -B 05-knowledge/results/incidence_wiring_20261023/cross_check.py
+    python3 -O -B 05-knowledge/results/incidence_wiring_20261023/cross_check.py
 
 The first command compiles wiring.cpp with clang++ and regenerates all raw
 ledgers in a temporary directory. Explicit exceptions survive -O. Normal

@@ -82,7 +82,28 @@ def dyadic_ranks(A):
         need(all(a % 8 == 0 for a in act(v)), 'lift8 equation')
         lift8.append(v)
     Q8 = form(lift8, 8); rank8 = core.binary_rank(Q8)
-    return [len(V), rank2, len(R), rank4, len(S), rank8, len(S)-rank8]
+    stages = {1: (vectors, Q2), 2: (lift4, Q4), 3: (lift8, Q8)}
+    histogram = {1: rank2, 2: rank4, 3: rank8}
+    for k in range(3, 13):
+        old, q = stages[k]; surviving, _ = core.binary_kernel(q, len(old))
+        if not surviving: break
+        following = []
+        for r in surviving:
+            v = [sum(old[t][i] for t in core.bits(r)) for i in range(n)]; Av = act(v)
+            for j in range(k-1, 0, -1):
+                basis, Q = stages[j]
+                rhs = [(sum(a*b for a, b in zip(w, Av))//(1 << k))&1 for w in basis]
+                coeff = core.binary_solve(Q, rhs, len(basis))
+                w = [sum(basis[t][i] for t in core.bits(coeff)) for i in range(n)]
+                v = [a+(1 << (k-j))*b for a, b in zip(v, w)]; Av = act(v)
+                need(all(a % (1 << k) == 0 for a in Av), 'general nested divisibility')
+            y = core.binary_solve(rows, [(a//(1 << k))&1 for a in Av], n)
+            v = [a+(1 << k)*((y >> i)&1) for i, a in enumerate(v)]
+            need(all(a % (1 << (k+1)) == 0 for a in act(v)), 'general full lift')
+            following.append(v)
+        qnext = form(following, 1 << (k+1))
+        stages[k+1] = following, qnext; histogram[k+1] = core.binary_rank(qnext)
+    return [len(V), rank2, len(R), rank4, len(S), rank8, len(S)-rank8], {k: v for k, v in histogram.items() if v}
 
 def main():
     p = argparse.ArgumentParser(); p.add_argument('--write', action='store_true'); args = p.parse_args()
@@ -108,13 +129,14 @@ def main():
         vals = smith_valuations(A)
         expected = [sum(v >= 1 for v in vals), sum(v == 1 for v in vals), sum(v >= 2 for v in vals),
                     sum(v == 2 for v in vals), sum(v >= 3 for v in vals), sum(v == 3 for v in vals), sum(v >= 4 for v in vals)]
-        actual = dyadic_ranks(A)
+        actual, histogram = dyadic_ranks(A)
         need(actual == expected, 'dyadic ranks disagree with independent minors')
-        records.append({'matrix': A, 'smith_valuations': vals, 'dyadic_counts': actual})
+        need(histogram == {k: vals.count(k) for k in set(vals) if k > 0}, 'complete nested lift disagrees with Smith factors')
+        records.append({'matrix': A, 'smith_valuations': vals, 'dyadic_counts': actual, 'positive_valuation_histogram': histogram})
     out = {'scope': '120 nonsingular symmetric integer matrices, orders1..5, congruent diagonal and general signed controls',
-           'method': 'all-minor determinantal divisors versus binary kernel lifts through divisor8',
+           'method': 'all-minor determinantal divisors versus nested binary kernel lifts until no radical remains',
            'checks': core.CHECKS, 'cases': records}
-    dest = HERE/'dyadic_controls.json'
+    out = json.loads(json.dumps(out)); dest = HERE/'dyadic_controls.json'
     if args.write: dest.write_text(json.dumps(out, indent=2)+'\n')
     else: need(json.loads(dest.read_text()) == out, 'dyadic control receipt differs')
     print('exact dyadic controls:', len(records), 'checks:', out['checks'])

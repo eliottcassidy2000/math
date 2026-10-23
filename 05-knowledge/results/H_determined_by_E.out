@@ -1,5 +1,6 @@
 CORRECTION 2026-10-23: Part 3 energy displays repaired: sum-convolution r(0)=0,
-not |S|. H values and Parts 1/4 are unchanged. This is historical exploratory
+not |S|. Part 5 also removes its duplicated conjugate Fourier mode.
+H values and Parts 1/4 are unchanged. This is historical exploratory
 output; its other heuristic/interpolation/spectral claims are not current canon.
 Repair controls: incidence_wiring_20261023/controls.py (126 skew sets).
 
@@ -120,65 +121,25 @@ The sorted Fourier spectrum {|S_hat(k)|^2}_{k>0} should determine H
 (up to automorphisms of Z_p)
 
   p=7:
-    Distinct sorted Fourier spectra: 4
-    spectrum=('0.31', '0.31', '0.64', '5.05')..., count=2, H=[175]
-    spectrum=('0.31', '0.64', '0.64', '5.05')..., count=2, H=[175]
-    spectrum=('0.31', '0.64', '5.05', '5.05')..., count=2, H=[175]
-    spectrum=('2.00', '2.00', '2.00', '2.00')..., count=2, H=[189]
+    Distinct sorted Fourier spectra: 2
+    spectrum=('0.31', '0.64', '5.05')..., count=6, H=[175]
+    spectrum=('2.00', '2.00', '2.00')..., count=2, H=[189]
 
   p=11:
-    Distinct sorted Fourier spectra: 16
-    spectrum=('0.25', '0.25', '1.03', '3.61')..., count=2, H=[92411]
-    spectrum=('0.25', '1.03', '1.03', '3.61')..., count=2, H=[92411]
-    spectrum=('0.25', '1.03', '3.61', '3.61')..., count=2, H=[92411]
-    spectrum=('0.25', '1.03', '3.61', '4.12')..., count=2, H=[92411]
-    spectrum=('0.25', '1.03', '3.61', '4.12')..., count=2, H=[92411]
-    spectrum=('0.27', '0.27', '0.35', '0.58')..., count=2, H=[93027]
-    spectrum=('0.27', '0.35', '0.35', '0.58')..., count=2, H=[93027]
-    spectrum=('0.27', '0.35', '0.58', '0.58')..., count=2, H=[93027]
-    spectrum=('0.27', '0.35', '0.58', '1.45')..., count=2, H=[93027]
-    spectrum=('0.27', '0.35', '0.58', '1.45')..., count=2, H=[93027]
-    spectrum=('0.42', '0.42', '1.12', '2.22')..., count=2, H=[93467]
-    spectrum=('0.42', '1.12', '1.12', '2.22')..., count=2, H=[93467]
-    spectrum=('0.42', '1.12', '2.22', '2.22')..., count=2, H=[93467]
-    spectrum=('0.42', '1.12', '2.22', '2.49')..., count=2, H=[93467]
-    spectrum=('0.42', '1.12', '2.22', '2.49')..., count=2, H=[93467]
+    Distinct sorted Fourier spectra: 4
+    spectrum=('0.25', '1.03', '3.61', '4.12')..., count=10, H=[92411]
+    spectrum=('0.27', '0.35', '0.58', '1.45')..., count=10, H=[93027]
+    spectrum=('0.42', '1.12', '2.22', '2.49')..., count=10, H=[93467]
     spectrum=('3.00', '3.00', '3.00', '3.00')..., count=2, H=[95095]
 
   p=13:
-    Distinct sorted Fourier spectra: 32
-    spectrum=('0.25', '0.25', '0.90', '1.56')..., count=2, H=[3707483]
-    spectrum=('0.25', '0.90', '0.90', '1.56')..., count=2, H=[3707483]
-    spectrum=('0.25', '0.90', '1.56', '1.56')..., count=2, H=[3707483]
-    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
-    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
-    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=2, H=[3707483]
-    spectrum=('0.27', '0.27', '0.32', '0.45')..., count=2, H=[3711175]
-    spectrum=('0.27', '0.32', '0.32', '0.45')..., count=2, H=[3711175]
-    spectrum=('0.27', '0.32', '0.45', '0.45')..., count=2, H=[3711175]
-    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
-    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
-    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=2, H=[3711175]
-    spectrum=('0.30', '0.30', '0.36', '2.99')..., count=2, H=[3704857]
-    spectrum=('0.30', '0.36', '0.36', '2.99')..., count=2, H=[3704857]
-    spectrum=('0.30', '0.36', '2.99', '2.99')..., count=2, H=[3704857]
-    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
-    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
-    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=2, H=[3704857]
-    spectrum=('0.49', '0.49', '0.96', '1.38')..., count=2, H=[3683797]
-    spectrum=('0.49', '0.96', '0.96', '1.38')..., count=2, H=[3683797]
-    spectrum=('0.49', '0.96', '1.38', '1.38')..., count=2, H=[3683797]
-    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
-    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
-    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=2, H=[3683797]
-    spectrum=('0.61', '0.61', '0.69', '1.10')..., count=2, H=[3669497]
-    spectrum=('0.61', '0.69', '0.69', '1.10')..., count=2, H=[3669497]
-    spectrum=('0.61', '0.69', '1.10', '1.10')..., count=2, H=[3669497]
-    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
-    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
-    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=2, H=[3669497]
-    spectrum=('1.70', '1.70', '1.70', '1.70')..., count=2, H=[3703011]
-    spectrum=('1.70', '1.70', '1.70', '5.30')..., count=2, H=[3703011]
+    Distinct sorted Fourier spectra: 6
+    spectrum=('0.25', '0.90', '1.56', '2.16')..., count=12, H=[3707483]
+    spectrum=('0.27', '0.32', '0.45', '0.77')..., count=12, H=[3711175]
+    spectrum=('0.30', '0.36', '2.99', '3.72')..., count=12, H=[3704857]
+    spectrum=('0.49', '0.96', '1.38', '4.22')..., count=12, H=[3683797]
+    spectrum=('0.61', '0.69', '1.10', '3.38')..., count=12, H=[3669497]
+    spectrum=('1.70', '1.70', '1.70', '5.30')..., count=4, H=[3703011]
 
 --- PART 6: H vs E INTERPOLATION ---
 
