@@ -1,0 +1,5 @@
+inversion 2 {'bound': 3, 'quotients': 2, 'cells': 18}
+inversion 3 {'bound': 3, 'quotients': 8, 'cells': 216}
+inversion 4 {'bound': 2, 'quotients': 64, 'cells': 1024}
+twins [{'mask': 408, 'profile': (0, 45, 171, 186, 81, 15, 1), 'Q': [0, 0, 28, 0, 16, 0, 1], 'uniform_lift_H': 421425}, {'mask': 1332, 'profile': (0, 45, 171, 186, 81, 15, 1), 'Q': [0, 0, 28, 0, 16, 0, 1], 'uniform_lift_H': 411513}]
+ALL QUOTIENT CHECKS PASSED

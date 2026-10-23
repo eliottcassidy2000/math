@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "normal_optimized_json_and_stdout_identical": true,
+  "verify_metric_curl": {
+    "tournaments": 33867,
+    "independent_H_and_general_pair_controls": 1099,
+    "conference_switches": 128,
+    "pencil_integer_evaluations": 132
+  },
+  "finite_genus_controls": {
+    "near_transitive_blocks": 12,
+    "prime_gcd_pairs": 45,
+    "multiplicity_products": 1024,
+    "interval_compositions": 232,
+    "explicit_strong_genus2_pair_order": 9
+  },
+  "source_and_artifact_sha256": {
+    "README.md": "ca8927be137e59ce30f084b734a67b23973afefecf5fbfed00860843d406acfd",
+    "METRIC_CURL_RECOVERY.md": "fab727785c18911d2cc3f14570acd16f92c9824990e6b964f9a336f00eff6aff",
+    "FINITE_GENUS_OBSTRUCTION.md": "a6c8d3fb1fc1b4a671374d1167797c59aae15c81a3ceb4082f91ae467906c7c2",
+    "RECOVERY_AND_ROUNDS.md": "a1e664c586847c910679e48e4e8c1e592d020d57f0645878b1d15a4ceb4551e8",
+    "explore.py": "a06f350a7e24c4797123b9829ae66fe3fa2723f47274093fd425fc777d38ba58",
+    "verify_metric_curl.py": "79e58473db8e0fe5c36104367938f83b60dfc244c9c0a964cd04d57551677198",
+    "verify_metric_curl.json": "e6c5d5ae557cc71f969e9bb09f7cd41a1158145faf00581cfa4a693553840a89",
+    "verify_metric_curl.out": "711ee019eb0dd7e3be29172568f15302156c21c26dab2aab16ced6bcf868d5c4",
+    "finite_genus_controls.py": "4f73be44be83700545fd3929b4892369239f5f954b90f6c97842eab3e9ffe522",
+    "finite_genus_controls.json": "0031b06be0a7c0f084e38f91d02d487c66fe039f68f2e9cf7af5beccee370b23",
+    "finite_genus_controls.out": "0031b06be0a7c0f084e38f91d02d487c66fe039f68f2e9cf7af5beccee370b23"
+  },
+  "scope": "Root-shell finite genus, not full unbounded-norm theta. General proofs separate from finite checks. No Git mutations."
+}

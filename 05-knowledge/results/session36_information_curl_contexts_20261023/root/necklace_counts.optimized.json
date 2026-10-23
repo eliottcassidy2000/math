@@ -1,0 +1,92 @@
+{
+  "A000568": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168
+  ],
+  "connected_even": [
+    1,
+    0,
+    1,
+    2,
+    8,
+    43,
+    398,
+    6413,
+    184596,
+    9540998,
+    894012628,
+    153204356304
+  ],
+  "curl_types": [
+    1,
+    1,
+    2,
+    3,
+    9,
+    45,
+    399,
+    6416,
+    184598,
+    9541007,
+    894012629,
+    153204356351
+  ],
+  "direct_checks": [
+    {
+      "curl_types": 1,
+      "n": 1,
+      "stabilizers_checked": 1,
+      "tournament_types": 1
+    },
+    {
+      "curl_types": 1,
+      "n": 2,
+      "stabilizers_checked": 1,
+      "tournament_types": 1
+    },
+    {
+      "curl_types": 2,
+      "n": 3,
+      "stabilizers_checked": 2,
+      "tournament_types": 2
+    },
+    {
+      "curl_types": 3,
+      "n": 4,
+      "stabilizers_checked": 4,
+      "tournament_types": 4
+    },
+    {
+      "curl_types": 9,
+      "n": 5,
+      "stabilizers_checked": 12,
+      "tournament_types": 12
+    }
+  ],
+  "primitive_curl_types": [
+    1,
+    0,
+    1,
+    2,
+    8,
+    43,
+    398,
+    6413,
+    184596,
+    9540998,
+    894012628,
+    153204356304
+  ],
+  "status": "PASS"
+}

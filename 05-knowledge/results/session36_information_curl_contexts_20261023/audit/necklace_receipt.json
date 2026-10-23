@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 1,
+      "tournament_isotypes": 1,
+      "strong_isotypes": 1,
+      "curl_metric_isotypes": 1,
+      "sum_H_over_curl_isotypes": 1
+    },
+    {
+      "n": 2,
+      "tournament_isotypes": 1,
+      "strong_isotypes": 0,
+      "curl_metric_isotypes": 1,
+      "sum_H_over_curl_isotypes": 1
+    },
+    {
+      "n": 3,
+      "tournament_isotypes": 2,
+      "strong_isotypes": 1,
+      "curl_metric_isotypes": 2,
+      "sum_H_over_curl_isotypes": 4
+    },
+    {
+      "n": 4,
+      "tournament_isotypes": 4,
+      "strong_isotypes": 1,
+      "curl_metric_isotypes": 3,
+      "sum_H_over_curl_isotypes": 9
+    },
+    {
+      "n": 5,
+      "tournament_isotypes": 12,
+      "strong_isotypes": 6,
+      "curl_metric_isotypes": 9,
+      "sum_H_over_curl_isotypes": 81
+    },
+    {
+      "n": 6,
+      "tournament_isotypes": 56,
+      "strong_isotypes": 35,
+      "curl_metric_isotypes": 45,
+      "sum_H_over_curl_isotypes": 1133
+    }
+  ],
+  "unweighted_necklace_coefficients": [
+    1,
+    1,
+    2,
+    3,
+    9,
+    45
+  ],
+  "stabilizers_checked": 76,
+  "Adams_checks": [
+    {
+      "n": 1,
+      "power": 0,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "power": 0,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "power": 0,
+      "value": 2
+    },
+    {
+      "n": 4,
+      "power": 0,
+      "value": 3
+    },
+    {
+      "n": 5,
+      "power": 0,
+      "value": 9
+    },
+    {
+      "n": 6,
+      "power": 0,
+      "value": 45
+    },
+    {
+      "n": 1,
+      "power": 1,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "power": 1,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "power": 1,
+      "value": 4
+    },
+    {
+      "n": 4,
+      "power": 1,
+      "value": 9
+    },
+    {
+      "n": 5,
+      "power": 1,
+      "value": 81
+    },
+    {
+      "n": 6,
+      "power": 1,
+      "value": 1133
+    },
+    {
+      "n": 1,
+      "power": 2,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "power": 2,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "power": 2,
+      "value": 10
+    },
+    {
+      "n": 4,
+      "power": 2,
+      "value": 35
+    },
+    {
+      "n": 5,
+      "power": 2,
+      "value": 937
+    },
+    {
+      "n": 6,
+      "power": 2,
+      "value": 34597
+    }
+  ],
+  "naive_failures": [
+    {
+      "n": 6,
+      "power": 1,
+      "actual": 1133,
+      "naive": "1130"
+    },
+    {
+      "n": 6,
+      "power": 2,
+      "actual": 34597,
+      "naive": "34561"
+    }
+  ],
+  "formula": "sum_{d>=1} phi(d)/d log A(z^d), A ordinary unlabelled tournament series"
+}

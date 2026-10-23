@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "scope": "Synthetic colored multigraph controls, not alternative tournament realizations",
+  "actual": {
+    "tree_count": 41096,
+    "positive_two_valuations": [
+      1,
+      1,
+      1
+    ],
+    "two_rank": 3,
+    "half_form_rank": 3,
+    "half_form_matrix": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  "blue_switch": {
+    "tree_count": 37184,
+    "positive_two_valuations": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "two_rank": 4,
+    "half_form_rank": 3,
+    "half_form_matrix": [
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "black_switch": {
+    "tree_count": 37952,
+    "positive_two_valuations": [
+      1,
+      1,
+      4
+    ],
+    "two_rank": 3,
+    "half_form_rank": 2,
+    "half_form_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ]
+  }
+}

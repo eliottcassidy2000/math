@@ -1,0 +1,110 @@
+{
+  "omitted_Adams_hostiles": [
+    {
+      "actual": 1133,
+      "n": 6,
+      "naive": "1130",
+      "s": 1
+    },
+    {
+      "actual": 34597,
+      "n": 6,
+      "naive": "34561",
+      "s": 2
+    }
+  ],
+  "rows": [
+    {
+      "n": 1,
+      "s": 0,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "s": 0,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "s": 0,
+      "value": 2
+    },
+    {
+      "n": 4,
+      "s": 0,
+      "value": 3
+    },
+    {
+      "n": 5,
+      "s": 0,
+      "value": 9
+    },
+    {
+      "n": 6,
+      "s": 0,
+      "value": 45
+    },
+    {
+      "n": 1,
+      "s": 1,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "s": 1,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "s": 1,
+      "value": 4
+    },
+    {
+      "n": 4,
+      "s": 1,
+      "value": 9
+    },
+    {
+      "n": 5,
+      "s": 1,
+      "value": 81
+    },
+    {
+      "n": 6,
+      "s": 1,
+      "value": 1133
+    },
+    {
+      "n": 1,
+      "s": 2,
+      "value": 1
+    },
+    {
+      "n": 2,
+      "s": 2,
+      "value": 1
+    },
+    {
+      "n": 3,
+      "s": 2,
+      "value": 10
+    },
+    {
+      "n": 4,
+      "s": 2,
+      "value": 35
+    },
+    {
+      "n": 5,
+      "s": 2,
+      "value": 937
+    },
+    {
+      "n": 6,
+      "s": 2,
+      "value": 34597
+    }
+  ],
+  "status": "PASS",
+  "universe": "all unlabelled tournament/curl types through n6, powers s0,1,2"
+}

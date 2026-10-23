@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "nonsingular_matrices_checked": 964,
+  "sizes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "nonzero_half_form_radicals": 275,
+  "direct_mod4_lift_tests": 804
+}

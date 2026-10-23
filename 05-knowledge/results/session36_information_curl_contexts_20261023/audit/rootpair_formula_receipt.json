@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 1,
+      "tournaments": 1,
+      "exhaustive": true
+    },
+    {
+      "n": 2,
+      "tournaments": 2,
+      "exhaustive": true
+    },
+    {
+      "n": 3,
+      "tournaments": 8,
+      "exhaustive": true
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "exhaustive": true
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "exhaustive": true
+    },
+    {
+      "n": 6,
+      "tournaments": 32,
+      "exhaustive": false
+    },
+    {
+      "n": 7,
+      "tournaments": 32,
+      "exhaustive": false
+    },
+    {
+      "n": 8,
+      "tournaments": 32,
+      "exhaustive": false
+    },
+    {
+      "n": 9,
+      "tournaments": 32,
+      "exhaustive": false
+    },
+    {
+      "n": 10,
+      "tournaments": 32,
+      "exhaustive": false
+    }
+  ]
+}

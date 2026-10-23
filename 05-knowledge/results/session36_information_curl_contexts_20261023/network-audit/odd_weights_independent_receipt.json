@@ -1,0 +1,215 @@
+{
+  "status": "PASS",
+  "scope": "Actual full networks n=3..7; odd positive global blue/literal-black conductances only",
+  "rows": [
+    {
+      "n": 3,
+      "residue_tests": [
+        {
+          "ratio_mod8": 1,
+          "histogram": {
+            "0": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 3,
+          "histogram": {
+            "0": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 5,
+          "histogram": {
+            "0": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 7,
+          "histogram": {
+            "0": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "residue_tests": [
+        {
+          "ratio_mod8": 1,
+          "histogram": {
+            "0": 1,
+            "1": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 3,
+          "histogram": {
+            "0": 1,
+            "1": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 5,
+          "histogram": {
+            "0": 1,
+            "1": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 7,
+          "histogram": {
+            "0": 1,
+            "1": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "residue_tests": [
+        {
+          "ratio_mod8": 1,
+          "histogram": {
+            "0": 6,
+            "1": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 3,
+          "histogram": {
+            "0": 6,
+            "1": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 5,
+          "histogram": {
+            "0": 6,
+            "1": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 7,
+          "histogram": {
+            "0": 6,
+            "1": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "residue_tests": [
+        {
+          "ratio_mod8": 1,
+          "histogram": {
+            "0": 8,
+            "1": 24,
+            "2": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 3,
+          "histogram": {
+            "0": 8,
+            "1": 24,
+            "2": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 5,
+          "histogram": {
+            "0": 8,
+            "1": 24,
+            "2": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 7,
+          "histogram": {
+            "0": 8,
+            "1": 24,
+            "2": 1
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "residue_tests": [
+        {
+          "ratio_mod8": 1,
+          "histogram": {
+            "0": 76,
+            "1": 192,
+            "2": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 3,
+          "histogram": {
+            "0": 76,
+            "1": 192,
+            "2": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 5,
+          "histogram": {
+            "0": 76,
+            "1": 192,
+            "2": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        },
+        {
+          "ratio_mod8": 7,
+          "histogram": {
+            "0": 76,
+            "1": 192,
+            "2": 3
+          },
+          "precision_bits": 3,
+          "precision_exhausted": false
+        }
+      ]
+    }
+  ]
+}

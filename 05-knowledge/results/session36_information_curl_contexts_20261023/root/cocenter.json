@@ -1,0 +1,59 @@
+{
+  "context_tests": 77,
+  "first_join_failure": {
+    "left": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "order": 8,
+    "right": [
+      [
+        3,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "tail": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ]
+  },
+  "nested_bracket_tests": 1089,
+  "scope": "formal ordered-SCC type algebra; exact type counts through order8",
+  "status": "PASS",
+  "strong_alphabet_counts": [
+    1,
+    0,
+    1,
+    1,
+    6,
+    35,
+    353,
+    6008
+  ],
+  "word_counts": [
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ]
+}

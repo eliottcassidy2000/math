@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 1,
+      "graph_isotypes": 1,
+      "even_graph_isotypes": 1,
+      "connected_even_graph_isotypes": 1
+    },
+    {
+      "n": 2,
+      "graph_isotypes": 2,
+      "even_graph_isotypes": 1,
+      "connected_even_graph_isotypes": 0
+    },
+    {
+      "n": 3,
+      "graph_isotypes": 4,
+      "even_graph_isotypes": 2,
+      "connected_even_graph_isotypes": 1
+    },
+    {
+      "n": 4,
+      "graph_isotypes": 11,
+      "even_graph_isotypes": 4,
+      "connected_even_graph_isotypes": 2
+    },
+    {
+      "n": 5,
+      "graph_isotypes": 34,
+      "even_graph_isotypes": 12,
+      "connected_even_graph_isotypes": 8
+    },
+    {
+      "n": 6,
+      "graph_isotypes": 156,
+      "even_graph_isotypes": 56,
+      "connected_even_graph_isotypes": 43
+    }
+  ],
+  "definition": "Every automorphism reverses an even number of edges, not all vertex degrees even."
+}

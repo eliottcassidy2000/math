@@ -1,0 +1,812 @@
+{
+  "status": "PASS",
+  "root_basis_counts": [
+    {
+      "n": 2,
+      "bases": 2
+    },
+    {
+      "n": 3,
+      "bases": 12
+    },
+    {
+      "n": 4,
+      "bases": 48
+    },
+    {
+      "n": 5,
+      "bases": 240
+    },
+    {
+      "n": 6,
+      "bases": 1440
+    }
+  ],
+  "conference_switches": 128,
+  "genus_two_support_size": 15,
+  "gram_filtered_root_triples": 13440,
+  "classes": [
+    {
+      "coefficient": 36,
+      "H": 333,
+      "universal": false,
+      "switches": 112
+    },
+    {
+      "coefficient": 84,
+      "H": 189,
+      "universal": true,
+      "switches": 16
+    }
+  ],
+  "records": [
+    {
+      "mask": 0,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 1,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 2,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 3,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 4,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 5,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 6,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 7,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 8,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 9,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 10,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 11,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 12,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 13,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 14,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 15,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 16,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 17,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 18,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 19,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 20,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 21,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 22,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 23,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 24,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 25,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 26,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 27,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 28,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 29,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 30,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 31,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 32,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 33,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 34,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 35,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 36,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 37,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 38,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 39,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 40,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 41,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 42,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 43,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 44,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 45,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 46,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 47,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 48,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 49,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 50,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 51,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 52,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 53,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 54,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 55,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 56,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 57,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 58,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 59,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 60,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 61,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 62,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 63,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 64,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 65,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 66,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 67,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 68,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 69,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 70,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 71,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 72,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 73,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 74,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 75,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 76,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 77,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 78,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 79,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 80,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 81,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 82,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 83,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 84,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 85,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 86,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 87,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 88,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 89,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 90,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 91,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 92,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 93,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 94,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 95,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 96,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 97,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 98,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 99,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 100,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 101,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 102,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 103,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 104,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 105,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 106,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 107,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 108,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 109,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 110,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 111,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 112,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 113,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 114,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    },
+    {
+      "mask": 115,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 116,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 117,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 118,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 119,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 120,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 121,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 122,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 123,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 124,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 125,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 126,
+      "coefficient": 36,
+      "H": 333,
+      "universal": false
+    },
+    {
+      "mask": 127,
+      "coefficient": 84,
+      "H": 189,
+      "universal": true
+    }
+  ]
+}

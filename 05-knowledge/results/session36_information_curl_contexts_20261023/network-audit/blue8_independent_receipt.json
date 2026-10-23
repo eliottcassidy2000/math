@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "n": 8,
+  "blue_presentations": 4096,
+  "selfconverse_nodes": 176,
+  "components": 1,
+  "bicycle_dimension": 11,
+  "two_primary_exponents": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4
+  ],
+  "half_form_rank": 4,
+  "alternating": false,
+  "minimum_nonalternating_cut": 914,
+  "binary_kernel_states": 2048,
+  "tree_count": "231409839467492998607230497210751862913879328454328913494438905351234859758498679573347964805350987370686258325819888329762515286803681247570675593339772055288406427268158309530025345140287533019520105216950566918451225427968",
+  "elapsed_seconds": 5.166
+}

@@ -1,0 +1,8 @@
+C3 and W checks 1 {'tournaments': 1, 'C3_classes': 1, 'walk_degree': 7}
+C3 and W checks 2 {'tournaments': 2, 'C3_classes': 1, 'walk_degree': 7}
+C3 and W checks 3 {'tournaments': 8, 'C3_classes': 2, 'walk_degree': 7}
+C3 and W checks 4 {'tournaments': 64, 'C3_classes': 11, 'walk_degree': 7}
+C3 and W checks 5 {'tournaments': 1024, 'C3_classes': 208, 'walk_degree': 7}
+detector checks 10504
+strong nonisomorphic nonconverse rows [62, 52, 56, 50, 96, 64, 15] [48, 57, 51, 53, 96, 64, 15]
+ALL CLAN CHECKS PASSED

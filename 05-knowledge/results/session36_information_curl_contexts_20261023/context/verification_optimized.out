@@ -1,0 +1,22 @@
+exhaustive 1 {'tournaments': 1, 'direct_contexts': 0}
+exhaustive 2 {'tournaments': 2, 'direct_contexts': 0}
+exhaustive 3 {'tournaments': 8, 'direct_contexts': 8}
+exhaustive 4 {'tournaments': 64, 'direct_contexts': 64}
+exhaustive 5 {'tournaments': 1024, 'direct_contexts': 2048}
+larger controls 6 128
+larger controls 7 64
+larger controls 8 32
+larger controls 9 16
+rank witness 1 1 1
+rank witness 2 1 1
+rank witness 3 2 -12
+rank witness 4 2 -24
+rank witness 5 3 -11520
+rank witness 6 3 -69120
+rank witness 7 4 4180377600
+rank witness 8 4 100329062400
+rank witness 9 5 1747555687858176000
+rank witness 10 5 209706682542981120000
+rank witness 11 6 -2008996729375600504995840000000
+rank witness 12 6 -1446477645150432363597004800000000
+ALL CHECKS PASSED

@@ -1,0 +1,9 @@
+census 1 {'tournaments': 1, 'forms': 1, 'fibre_sizes': {1: 1}}
+census 2 {'tournaments': 2, 'forms': 1, 'fibre_sizes': {2: 1}}
+census 3 {'tournaments': 8, 'forms': 4, 'fibre_sizes': {1: 2, 3: 2}}
+census 4 {'tournaments': 64, 'forms': 38, 'fibre_sizes': {1: 24, 2: 8, 4: 6}}
+census 5 {'tournaments': 1024, 'forms': 728, 'fibre_sizes': {1: 544, 2: 120, 3: 40, 5: 24}}
+census 6 {'tournaments': 32768, 'forms': 26704, 'fibre_sizes': {1: 22320, 2: 3304, 3: 720, 4: 240, 6: 120}}
+all128 switches: genus2 identical; genus3 counts {84: 16, 36: 112}
+general conference controls 16
+PASS 33867 tournaments; 132 pencil evaluations; all128 two-path genus3 checks

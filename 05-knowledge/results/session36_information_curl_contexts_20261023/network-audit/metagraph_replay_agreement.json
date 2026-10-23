@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": {
+    "actual_metagraph": "PASS (elapsed seconds excluded)",
+    "blue_tree_polynomials": "PASS (elapsed seconds excluded)",
+    "blue8": "PASS (elapsed seconds excluded)",
+    "runner_independent": "PASS (byte-identical stdout)",
+    "algebra_controls": "PASS (byte-identical stdout)",
+    "switch_controls": "PASS (byte-identical stdout)",
+    "odd_weights_independent": "PASS (byte-identical stdout)"
+  },
+  "source_sha256": {
+    "session36-metagraph/DYADIC-ELECTRICAL-METAGRAPH.md": "9c6eb5f51aec3569cf90dd67879d18ded02b0d8308d23da5f0e54a6a28f82d85",
+    "session36-metagraph/check_dyadic_network.py": "a9aed54bab3f584926203498a13a33ea0e2a550736dcc583f5a4ddfe09db5be8",
+    "session36-metagraph/check_dyadic_lift.py": "c6d7f18910a0a84600faf878c6fafcd2f9b69cf2a05a4ce25d51b49034e7ae9b",
+    "session36-metagraph/check_bockstein.py": "decac51fdfda1edcf257408402fbe062df682e010c296dfdc4028c88d276276e",
+    "session36-metagraph/check_tree_scales.py": "df53402ec053ed674c3f64f58cd9ed28590868d4eb20b0099b934b8a770d328a",
+    "session36-metagraph/probe_blue_bicycle.py": "fe331b16175e13404493f585f3962e976e850722ed7743f7c94bdc0e0c119447",
+    "session36-metagraph/check_odd_color_weights.py": "30879f1f0599c4ac957b2b458cb051e4f097ada5152e89b802c7984862b01a98",
+    "session36-metagraph/dyadic_network_receipt.json": "b1674d502a67a95003a43ccf16567691f27e63a7567c3d7d553c9a23127b2fc8",
+    "session36-metagraph/dyadic_lift_receipt.json": "3af873c475a345e0965c1777fa4008a8be6d1033f9ec4d5f6919a1d84005552d",
+    "session36-metagraph/bockstein_receipt.json": "2ac99458258eb5ff6d86a39a1e1e47a3e2051836cb537bdecdf34616b6007e66",
+    "session36-metagraph/tree_scales_receipt.json": "07c7ccd9c90f2f4874b2f05ca77d7541c3ffbc1c783f2746395a2282c41775c3",
+    "session36-metagraph/blue_only_n8.json": "14a3e4a5af1258a23efd4f7738e87cc1687a3d132d4e6fd0f8967ffe2c49e4bd"
+  }
+}
