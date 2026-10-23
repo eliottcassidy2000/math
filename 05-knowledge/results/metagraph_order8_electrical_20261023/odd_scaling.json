@@ -1,0 +1,213 @@
+{
+  "status": "FINITE-EXACT odd scaling b=1,3,5,7 at n=8; no all-odd scaling assertion",
+  "definition": "G_b = blue Laplacian + 2*b*paired-black Laplacian",
+  "input_sha256_lf": {
+    "nodes": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "edges": "6687671346fbf83ac73bb2f952ffee7705602036f1d083b59b524ea35f4543b5",
+    "engine": "587f40058a9a9296b93fa0159f610491edf97852492dacfc5e65b02f01eebf08",
+    "base_receipt": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "cases": [
+    {
+      "black_scale": 1,
+      "complete": true,
+      "layers": [
+        {
+          "level": 1,
+          "dimension": 3363,
+          "rank": 3358,
+          "next_dimension": 5
+        },
+        {
+          "level": 2,
+          "dimension": 5,
+          "rank": 4,
+          "next_dimension": 1
+        },
+        {
+          "level": 3,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 4,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 5,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 6,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 7,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 8,
+          "dimension": 1,
+          "rank": 1,
+          "next_dimension": 0
+        }
+      ],
+      "two_primary_elementary_divisors": [
+        [
+          2,
+          3358
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          256,
+          1
+        ]
+      ],
+      "determinant_v2": 3374,
+      "computed_checks": 3,
+      "full_calculation_sha256": "5b0b8a2181720645782bcb80941f77cfaaf881bc14df82bb5658a4ddb2bca518"
+    },
+    {
+      "black_scale": 3,
+      "complete": true,
+      "layers": [
+        {
+          "level": 1,
+          "dimension": 3363,
+          "rank": 3358,
+          "next_dimension": 5
+        },
+        {
+          "level": 2,
+          "dimension": 5,
+          "rank": 4,
+          "next_dimension": 1
+        },
+        {
+          "level": 3,
+          "dimension": 1,
+          "rank": 1,
+          "next_dimension": 0
+        }
+      ],
+      "two_primary_elementary_divisors": [
+        [
+          2,
+          3358
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "determinant_v2": 3369,
+      "computed_checks": 604,
+      "full_calculation_sha256": "5d750293e0c1224ae171f618e9a870d3f89bdc013273af967dc7398c266b3d43"
+    },
+    {
+      "black_scale": 5,
+      "complete": true,
+      "layers": [
+        {
+          "level": 1,
+          "dimension": 3363,
+          "rank": 3358,
+          "next_dimension": 5
+        },
+        {
+          "level": 2,
+          "dimension": 5,
+          "rank": 4,
+          "next_dimension": 1
+        },
+        {
+          "level": 3,
+          "dimension": 1,
+          "rank": 0,
+          "next_dimension": 1
+        },
+        {
+          "level": 4,
+          "dimension": 1,
+          "rank": 1,
+          "next_dimension": 0
+        }
+      ],
+      "two_primary_elementary_divisors": [
+        [
+          2,
+          3358
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "determinant_v2": 3370,
+      "computed_checks": 617,
+      "full_calculation_sha256": "ecf5846652f838fe429e7ff3edfb52e763fdf58dda5d278167e497f5404987c2"
+    },
+    {
+      "black_scale": 7,
+      "complete": true,
+      "layers": [
+        {
+          "level": 1,
+          "dimension": 3363,
+          "rank": 3358,
+          "next_dimension": 5
+        },
+        {
+          "level": 2,
+          "dimension": 5,
+          "rank": 4,
+          "next_dimension": 1
+        },
+        {
+          "level": 3,
+          "dimension": 1,
+          "rank": 1,
+          "next_dimension": 0
+        }
+      ],
+      "two_primary_elementary_divisors": [
+        [
+          2,
+          3358
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          1
+        ]
+      ],
+      "determinant_v2": 3369,
+      "computed_checks": 604,
+      "full_calculation_sha256": "5d750293e0c1224ae171f618e9a870d3f89bdc013273af967dc7398c266b3d43"
+    }
+  ],
+  "checks": 440044
+}

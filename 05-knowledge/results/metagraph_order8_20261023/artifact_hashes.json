@@ -1,0 +1,26 @@
+{
+  "owner_map.u16": {
+    "bytes": 4194304,
+    "sha256": "5d195cc793e3d05af189407333960e0ceffa00fb0bc40d77d419cf8342f80110",
+    "gzip_bytes": 3357288,
+    "gzip_sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+  },
+  "ports.bin": {
+    "bytes": 11476068,
+    "sha256": "f7c33127acc03ddea89942a966cfcb61b7125cb58a1f8e39974d4803080eadb4",
+    "gzip_bytes": 2769266,
+    "gzip_sha256": "772f0763879073717d913c6587345327b3e7fc24c80e66e95615862d8dc08577"
+  },
+  "ordinary_edges.tsv": {
+    "bytes": 12521678,
+    "sha256": "a7294cb0c92ae89f50cbe3702ba7ed54c4d7fbd9251f372449744997101c74e0",
+    "gzip_bytes": 2547304,
+    "gzip_sha256": "f7db8222e31432723a8dfd41050d7a7b77be790d3484392989f24dcd15ab7b70"
+  },
+  "merged_edges.tsv": {
+    "bytes": 5893360,
+    "sha256": "6687671346fbf83ac73bb2f952ffee7705602036f1d083b59b524ea35f4543b5",
+    "gzip_bytes": 1201654,
+    "gzip_sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+  }
+}

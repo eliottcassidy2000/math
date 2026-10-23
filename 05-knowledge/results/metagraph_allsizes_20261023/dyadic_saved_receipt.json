@@ -1,0 +1,97 @@
+{
+  "checks": 445216,
+  "consumer_code_sha256_lf": "4668a9e27a965fbc2901848da28f793b558138bf86cc7cd5309bd504599fcf03",
+  "independent_half_form_sha256": "d1bac9de07a0b445ff14472be8d28d826a24bb0edbc1b789016571971c2fc051",
+  "input_sha256_lf": {
+    "edges": "6687671346fbf83ac73bb2f952ffee7705602036f1d083b59b524ea35f4543b5",
+    "nodes": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+  },
+  "layers": [
+    {
+      "dimension": 3363,
+      "level": 1,
+      "next_dimension": 5,
+      "rank": 3358
+    },
+    {
+      "dimension": 5,
+      "form_rows": [
+        8,
+        12,
+        14,
+        31,
+        8
+      ],
+      "level": 2,
+      "next_dimension": 1,
+      "rank": 4
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        0
+      ],
+      "level": 3,
+      "next_dimension": 1,
+      "rank": 0
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        0
+      ],
+      "level": 4,
+      "next_dimension": 1,
+      "rank": 0
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        0
+      ],
+      "level": 5,
+      "next_dimension": 1,
+      "rank": 0
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        0
+      ],
+      "level": 6,
+      "next_dimension": 1,
+      "rank": 0
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        0
+      ],
+      "level": 7,
+      "next_dimension": 1,
+      "rank": 0
+    },
+    {
+      "dimension": 1,
+      "form_rows": [
+        1
+      ],
+      "level": 8,
+      "next_dimension": 0,
+      "rank": 1
+    }
+  ],
+  "producer_code_sha256_lf": "587f40058a9a9296b93fa0159f610491edf97852492dacfc5e65b02f01eebf08",
+  "producer_receipt_sha256_lf": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+  "reduced_mod_two_rank": 164,
+  "root": 3527,
+  "scope": "Consumes the authenticated finite graph export; does not re-enumerate tournaments.",
+  "status": "FINITE-EXACT independent saved-lift consumer",
+  "tree_count_two_valuation": 3374,
+  "two_primary_cyclic_multiplicities": {
+    "2": 3358,
+    "256": 1,
+    "4": 4
+  },
+  "vertices": 3528
+}
