@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "checks": 440,
+  "source": 1238,
+  "full_source_paths": 409,
+  "slots": [
+    [
+      {
+        "path": [
+          3,
+          0,
+          6,
+          7,
+          1,
+          5,
+          4,
+          2
+        ],
+        "target": 2397,
+        "phase": 5,
+        "word": 1291044,
+        "target_isomorphism": [
+          3,
+          6,
+          1,
+          7,
+          4,
+          5,
+          2,
+          0
+        ]
+      },
+      {
+        "path": [
+          3,
+          1,
+          6,
+          7,
+          0,
+          5,
+          4,
+          2
+        ],
+        "target": 2397,
+        "phase": 5,
+        "word": 1552804,
+        "target_isomorphism": [
+          6,
+          4,
+          1,
+          7,
+          3,
+          5,
+          2,
+          0
+        ]
+      }
+    ],
+    [
+      {
+        "path": [
+          2,
+          0,
+          6,
+          7,
+          1,
+          5,
+          4,
+          3
+        ],
+        "target": 2790,
+        "phase": 4,
+        "word": 1307397,
+        "target_isomorphism": [
+          3,
+          6,
+          7,
+          2,
+          4,
+          5,
+          1,
+          0
+        ]
+      },
+      {
+        "path": [
+          2,
+          1,
+          6,
+          7,
+          0,
+          5,
+          4,
+          3
+        ],
+        "target": 2790,
+        "phase": 4,
+        "word": 1569157,
+        "target_isomorphism": [
+          6,
+          4,
+          7,
+          2,
+          3,
+          5,
+          1,
+          0
+        ]
+      }
+    ]
+  ],
+  "compatible_states": [
+    [
+      [
+        3,
+        0,
+        6,
+        7,
+        1,
+        5,
+        4,
+        2
+      ],
+      [
+        2,
+        0,
+        6,
+        7,
+        1,
+        5,
+        4,
+        3
+      ]
+    ],
+    [
+      [
+        3,
+        1,
+        6,
+        7,
+        0,
+        5,
+        4,
+        2
+      ],
+      [
+        2,
+        1,
+        6,
+        7,
+        0,
+        5,
+        4,
+        3
+      ]
+    ]
+  ],
+  "changed_slot_clocks": [
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "minimum_slot_budget": 2,
+  "input_sha256": {
+    "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "scope": "Selected observer packet, not a rewiring of the complete atlas; extension requires unused actual path resources or an explicit global permutation."
+}

@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "ENDPOINT_OBSERVERS.md",
+      "sha256": "0fb4544999078073bf27f544643a242e5118f87c96d7c986295d78d910abd634",
+      "bytes": 2617
+    },
+    {
+      "path": "endpoint_observers.py",
+      "sha256": "ed6a21556234eb9edef1b7727b44b16a296f141064c8e99f216b5df50ff9056e",
+      "bytes": 2707
+    },
+    {
+      "path": "endpoint.normal.json",
+      "sha256": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+      "bytes": 96189
+    },
+    {
+      "path": "endpoint.optimized.json",
+      "sha256": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+      "bytes": 96189
+    }
+  ]
+}

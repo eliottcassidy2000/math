@@ -1,0 +1,1468 @@
+{
+  "checks": 24759,
+  "source_sha256": {
+    "ADAPTIVE_OBSERVERS.md": "ca590339505a53ce150788652cc203d757a7d6a467ca2fe184ac18c42eb3e6c2",
+    "MANIFEST.json": "e0a2e4b8dc1fce5f543d9dcc6ad1e99e5cad57b73b55a7de562f8f2e9bd1714c",
+    "SOURCE_PINS.json": "68c5c1389ed9b6398e5c6ff9d7d26aa58ba93191adccc2ff1548eb59821b5942",
+    "check.py": "13717aba20ad5e9b7307570e7135fb3a19c90e4f2d19e8bfee60e0a0abb48dbc",
+    "independent.py": "ca8ca1ff1e9990835c198d6da7e65920673a3a1a933eeff0f7fbe5a2e100e771",
+    "path_records.json": "73c4ba6853b91aee42a08df9be4dde6f8ae2fc8c421ec657260c947a0114ebfc",
+    "receipt.json": "0a4b929be4d1b0a357b16d30a1a731ed85bb7cb7bbd1a3a766d6b1f8a3b611aa"
+  },
+  "sources": [
+    {
+      "H": 409,
+      "automorphism_order": 1,
+      "objectives": {
+        "path": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1536/409",
+          "capped_states": 14988,
+          "feasibility_states": 2932,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 6188,
+          "optimal_mean": "1536/409",
+          "paths": 409,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 5
+        },
+        "phase": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1478/409",
+          "capped_states": 14988,
+          "feasibility_states": 3207,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 6188,
+          "optimal_mean": "1478/409",
+          "paths": 409,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 5
+        },
+        "target": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1528/409",
+          "capped_states": 14988,
+          "feasibility_states": 2939,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 6188,
+          "optimal_mean": "1528/409",
+          "paths": 409,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 5
+        }
+      },
+      "ordinary_source": 1763,
+      "source": 1238,
+      "uniform_measure": "each actual labelled Hamiltonian path has mass1/H"
+    },
+    {
+      "H": 407,
+      "automorphism_order": 1,
+      "objectives": {
+        "path": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1467/407",
+          "capped_states": 16942,
+          "feasibility_states": 2501,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 5724,
+          "optimal_mean": "1465/407",
+          "paths": 407,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        },
+        "phase": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1424/407",
+          "capped_states": 16942,
+          "feasibility_states": 1872,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 5724,
+          "optimal_mean": "1423/407",
+          "paths": 407,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        },
+        "target": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1453/407",
+          "capped_states": 16942,
+          "feasibility_states": 2481,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 5724,
+          "optimal_mean": "132/37",
+          "paths": 407,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        }
+      },
+      "ordinary_source": 3481,
+      "source": 2242,
+      "uniform_measure": "each actual labelled Hamiltonian path has mass1/H"
+    },
+    {
+      "H": 523,
+      "automorphism_order": 1,
+      "objectives": {
+        "path": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1952/523",
+          "capped_states": 24364,
+          "feasibility_states": 4113,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8411,
+          "optimal_mean": "1946/523",
+          "paths": 523,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        },
+        "phase": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1905/523",
+          "capped_states": 24364,
+          "feasibility_states": 2876,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8411,
+          "optimal_mean": "1891/523",
+          "paths": 523,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        },
+        "target": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1940/523",
+          "capped_states": 24364,
+          "feasibility_states": 4071,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8411,
+          "optimal_mean": "1932/523",
+          "paths": 523,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        }
+      },
+      "ordinary_source": 3490,
+      "source": 2246,
+      "uniform_measure": "each actual labelled Hamiltonian path has mass1/H"
+    },
+    {
+      "H": 527,
+      "automorphism_order": 1,
+      "objectives": {
+        "path": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1959/527",
+          "capped_states": 20680,
+          "feasibility_states": 3513,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8471,
+          "optimal_mean": "1959/527",
+          "paths": 527,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 5
+        },
+        "phase": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1914/527",
+          "capped_states": 24585,
+          "feasibility_states": 3418,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8471,
+          "optimal_mean": "1900/527",
+          "paths": 527,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 4
+        },
+        "target": {
+          "all_minimum_static_clock_sets": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              4,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              2,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              3,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              2,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              0,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "best_mean_at_optimal_worst_depth": "1951/527",
+          "capped_states": 20680,
+          "feasibility_states": 3522,
+          "least_worst_depth_among_mean_optimal": 5,
+          "mean_states": 8471,
+          "optimal_mean": "1951/527",
+          "paths": 527,
+          "smaller_budget_impossible": true,
+          "static_optimum": 6,
+          "worst_depth": 5
+        }
+      },
+      "ordinary_source": 3676,
+      "source": 2315,
+      "uniform_measure": "each actual labelled Hamiltonian path has mass1/H"
+    }
+  ],
+  "status": "PASS independent adaptive lower and upper certificates",
+  "universal_bank_corollary": "Depends on independently audited original-network theorem identifying fixed-source output partition exactly with target partition; no extra optimisation needed."
+}

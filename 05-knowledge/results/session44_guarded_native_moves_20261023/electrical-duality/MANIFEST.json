@@ -1,0 +1,47 @@
+{
+  "do_not_publish": [
+    "inputs/",
+    "generation.out"
+  ],
+  "inherited_inputs": "SOURCE_PINS.json names original repository files under05-knowledge/results; check.py --repo PATH reads them when inputs/ is omitted",
+  "publish_files": [
+    {
+      "bytes": 15514,
+      "path": "UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "202174b4444ba9eaa923501dfb7bc98627a038daddf33ebee6522d7ffb5324e8"
+    },
+    {
+      "bytes": 15074,
+      "path": "check.py",
+      "sha256": "c99b6a67f8eb209f7d9b9920c38f21dae38edc80d27bb1a4e01147129b202897"
+    },
+    {
+      "bytes": 58606,
+      "path": "receipt.json",
+      "sha256": "5f7dea23f728f685211dd5eac1dff0a389a12461d84946ec9f13b2d7f86faba2"
+    },
+    {
+      "bytes": 477,
+      "path": "SOURCE_PINS.json",
+      "sha256": "69db5db20b972747aa157fda3e1e9c1cca37bcaf4154aa1023b51b38f03d7365"
+    },
+    {
+      "bytes": 340,
+      "path": "normal.out",
+      "sha256": "4fa70f30a71fb56225a49e9750238e54fc82a6e5b5ca78ae161eb412ed0b6651"
+    },
+    {
+      "bytes": 340,
+      "path": "optimized.out",
+      "sha256": "4fa70f30a71fb56225a49e9750238e54fc82a6e5b5ca78ae161eb412ed0b6651"
+    },
+    {
+      "bytes": 491,
+      "path": "SHA256SUMS",
+      "sha256": "701782d214a0721609ccd13492c20756b1956360f9e0fe9e4634235bb6275b62"
+    }
+  ],
+  "replay": "Normal and optimized outputs are byte-identical; explicit exceptions remain active under -O.",
+  "source_git_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "status": "frozen after independent audit corrected enclosing hostile source from2246 to1238; path records were always1238"
+}

@@ -1,0 +1,8 @@
+{
+  "ENDPOINT_MANIFEST.json": "a9a3b3ac135e08ab1ec477639f4099bf6b649902e17e69a0445965f76cf5db71",
+  "ENDPOINT_OBSERVERS.md": "0fb4544999078073bf27f544643a242e5118f87c96d7c986295d78d910abd634",
+  "endpoint.normal.json": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+  "endpoint.optimized.json": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+  "endpoint_observers.py": "ed6a21556234eb9edef1b7727b44b16a296f141064c8e99f216b5df50ff9056e",
+  "path_records.json": "73c4ba6853b91aee42a08df9be4dde6f8ae2fc8c421ec657260c947a0114ebfc"
+}

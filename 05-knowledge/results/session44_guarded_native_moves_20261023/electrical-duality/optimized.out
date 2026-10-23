@@ -1,0 +1,1 @@
+{"checks": 887257, "collisions": [[0, 3527], [53, 3492], [109, 3523]], "original_character_ambiguous_sources": 3518, "original_character_false_equalities": 777396, "receipt_sha256": "5f7dea23f728f685211dd5eac1dff0a389a12461d84946ec9f13b2d7f86faba2", "source_conditioned_target_injective": true, "status": "PASS", "universal_classes": 3525}

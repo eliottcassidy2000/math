@@ -1,0 +1,146 @@
+{
+  "checks": 44,
+  "sources": [
+    {
+      "budgets": {
+        "0": 123,
+        "2": 7,
+        "3": 9,
+        "4": 29,
+        "5": 33,
+        "6": 20
+      },
+      "maximum_fibre_size": 7,
+      "objectives": {
+        "path": {
+          "adaptive": 5,
+          "depth_capped_mean": "1536/409",
+          "mean": "1536/409",
+          "nonadaptive": 6,
+          "states": 6188
+        },
+        "phase": {
+          "adaptive": 5,
+          "depth_capped_mean": "1478/409",
+          "mean": "1478/409",
+          "nonadaptive": 6,
+          "states": 6188
+        },
+        "target": {
+          "adaptive": 5,
+          "depth_capped_mean": "1528/409",
+          "mean": "1528/409",
+          "nonadaptive": 6,
+          "states": 6188
+        }
+      },
+      "source": 1238
+    },
+    {
+      "budgets": {
+        "0": 120,
+        "2": 1,
+        "3": 15,
+        "4": 21,
+        "5": 43,
+        "6": 19
+      },
+      "maximum_fibre_size": 8,
+      "objectives": {
+        "path": {
+          "adaptive": 4,
+          "depth_capped_mean": "1467/407",
+          "mean": "1465/407",
+          "nonadaptive": 6,
+          "states": 5724
+        },
+        "phase": {
+          "adaptive": 4,
+          "depth_capped_mean": "1424/407",
+          "mean": "1423/407",
+          "nonadaptive": 6,
+          "states": 5724
+        },
+        "target": {
+          "adaptive": 4,
+          "depth_capped_mean": "1453/407",
+          "mean": "132/37",
+          "nonadaptive": 6,
+          "states": 5724
+        }
+      },
+      "source": 2242
+    },
+    {
+      "budgets": {
+        "0": 141,
+        "2": 1,
+        "3": 23,
+        "4": 37,
+        "5": 46,
+        "6": 35
+      },
+      "maximum_fibre_size": 7,
+      "objectives": {
+        "path": {
+          "adaptive": 4,
+          "depth_capped_mean": "1952/523",
+          "mean": "1946/523",
+          "nonadaptive": 6,
+          "states": 8411
+        },
+        "phase": {
+          "adaptive": 4,
+          "depth_capped_mean": "1905/523",
+          "mean": "1891/523",
+          "nonadaptive": 6,
+          "states": 8411
+        },
+        "target": {
+          "adaptive": 4,
+          "depth_capped_mean": "1940/523",
+          "mean": "1932/523",
+          "nonadaptive": 6,
+          "states": 8411
+        }
+      },
+      "source": 2246
+    },
+    {
+      "budgets": {
+        "0": 145,
+        "2": 3,
+        "3": 21,
+        "4": 41,
+        "5": 50,
+        "6": 31
+      },
+      "maximum_fibre_size": 8,
+      "objectives": {
+        "path": {
+          "adaptive": 5,
+          "depth_capped_mean": "1959/527",
+          "mean": "1959/527",
+          "nonadaptive": 6,
+          "states": 8471
+        },
+        "phase": {
+          "adaptive": 4,
+          "depth_capped_mean": "1914/527",
+          "mean": "1900/527",
+          "nonadaptive": 6,
+          "states": 8471
+        },
+        "target": {
+          "adaptive": 5,
+          "depth_capped_mean": "1951/527",
+          "mean": "1951/527",
+          "nonadaptive": 6,
+          "states": 8471
+        }
+      },
+      "source": 2315
+    }
+  ],
+  "status": "PASS"
+}

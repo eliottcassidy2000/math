@@ -1,0 +1,1116 @@
+{
+  "checks": 859,
+  "source_sha256": {
+    "ENDPOINT_MANIFEST.json": "a9a3b3ac135e08ab1ec477639f4099bf6b649902e17e69a0445965f76cf5db71",
+    "ENDPOINT_OBSERVERS.md": "0fb4544999078073bf27f544643a242e5118f87c96d7c986295d78d910abd634",
+    "endpoint.normal.json": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+    "endpoint.optimized.json": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe",
+    "endpoint_observers.py": "ed6a21556234eb9edef1b7727b44b16a296f141064c8e99f216b5df50ff9056e",
+    "path_records.json": "73c4ba6853b91aee42a08df9be4dde6f8ae2fc8c421ec657260c947a0114ebfc"
+  },
+  "sources": [
+    {
+      "adaptive_histograms": {
+        "path": {
+          "1": 12,
+          "2": 30,
+          "3": 7
+        },
+        "phase": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        },
+        "target": {
+          "1": 12,
+          "2": 31,
+          "3": 6
+        }
+      },
+      "adaptive_improvements": {
+        "path": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              3
+            ],
+            "paths": 9
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              5
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              5,
+              0
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              0
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              3
+            ],
+            "paths": 23
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 22
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              5
+            ],
+            "paths": 22
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              6
+            ],
+            "paths": 25
+          }
+        ],
+        "phase": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              5
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              1
+            ],
+            "paths": 18
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              3
+            ],
+            "paths": 23
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 22
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              6
+            ],
+            "paths": 25
+          }
+        ],
+        "target": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              3
+            ],
+            "paths": 9
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              5
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              5,
+              0
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              1
+            ],
+            "paths": 18
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              3
+            ],
+            "paths": 23
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 22
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              5
+            ],
+            "paths": 22
+          },
+          {
+            "costs": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "endpoints": [
+              7,
+              6
+            ],
+            "paths": 25
+          }
+        ]
+      },
+      "endpoint_fibres": 49,
+      "nonadaptive_histograms": {
+        "path": {
+          "1": 12,
+          "2": 26,
+          "3": 5,
+          "4": 6
+        },
+        "phase": {
+          "0": 1,
+          "1": 13,
+          "2": 27,
+          "3": 5,
+          "4": 3
+        },
+        "target": {
+          "1": 12,
+          "2": 26,
+          "3": 6,
+          "4": 5
+        }
+      },
+      "source": 1238
+    },
+    {
+      "adaptive_histograms": {
+        "path": {
+          "1": 12,
+          "2": 31,
+          "3": 6
+        },
+        "phase": {
+          "0": 1,
+          "1": 15,
+          "2": 27,
+          "3": 6
+        },
+        "target": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        }
+      },
+      "adaptive_improvements": {
+        "path": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              2,
+              3
+            ],
+            "paths": 12
+          }
+        ],
+        "phase": [],
+        "target": []
+      },
+      "endpoint_fibres": 49,
+      "nonadaptive_histograms": {
+        "path": {
+          "1": 12,
+          "2": 30,
+          "3": 7
+        },
+        "phase": {
+          "0": 1,
+          "1": 15,
+          "2": 27,
+          "3": 6
+        },
+        "target": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        }
+      },
+      "source": 2242
+    },
+    {
+      "adaptive_histograms": {
+        "path": {
+          "1": 9,
+          "2": 43,
+          "3": 4
+        },
+        "phase": {
+          "0": 1,
+          "1": 11,
+          "2": 40,
+          "3": 4
+        },
+        "target": {
+          "1": 10,
+          "2": 42,
+          "3": 4
+        }
+      },
+      "adaptive_improvements": {
+        "path": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              2
+            ],
+            "paths": 12
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              3
+            ],
+            "paths": 13
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              0
+            ],
+            "paths": 7
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              3
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              2
+            ],
+            "paths": 12
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              0
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 10
+          }
+        ],
+        "phase": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              2
+            ],
+            "paths": 12
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              0
+            ],
+            "paths": 7
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 10
+          }
+        ],
+        "target": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              2
+            ],
+            "paths": 12
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              3
+            ],
+            "paths": 13
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              0
+            ],
+            "paths": 7
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              1,
+              3
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              2
+            ],
+            "paths": 12
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              0
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 10
+          }
+        ]
+      },
+      "endpoint_fibres": 56,
+      "nonadaptive_histograms": {
+        "path": {
+          "1": 9,
+          "2": 34,
+          "3": 13
+        },
+        "phase": {
+          "0": 1,
+          "1": 11,
+          "2": 35,
+          "3": 9
+        },
+        "target": {
+          "1": 10,
+          "2": 33,
+          "3": 13
+        }
+      },
+      "source": 2246
+    },
+    {
+      "adaptive_histograms": {
+        "path": {
+          "0": 2,
+          "1": 8,
+          "2": 43,
+          "3": 3
+        },
+        "phase": {
+          "0": 3,
+          "1": 10,
+          "2": 42,
+          "3": 1
+        },
+        "target": {
+          "0": 3,
+          "1": 8,
+          "2": 42,
+          "3": 3
+        }
+      },
+      "adaptive_improvements": {
+        "path": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              1
+            ],
+            "paths": 8
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              3
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              2,
+              3
+            ],
+            "paths": 16
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              2
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              2
+            ],
+            "paths": 13
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              3
+            ],
+            "paths": 15
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              4
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              1
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 13
+          }
+        ],
+        "phase": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              2,
+              3
+            ],
+            "paths": 16
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              2
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              2
+            ],
+            "paths": 13
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              1
+            ],
+            "paths": 18
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              3
+            ],
+            "paths": 15
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              4
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              1
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 13
+          }
+        ],
+        "target": [
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              1
+            ],
+            "paths": 8
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              0,
+              3
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              2,
+              3
+            ],
+            "paths": 16
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              2
+            ],
+            "paths": 11
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              3,
+              4
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              4,
+              2
+            ],
+            "paths": 13
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              3
+            ],
+            "paths": 15
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              6,
+              4
+            ],
+            "paths": 20
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              1
+            ],
+            "paths": 10
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              2
+            ],
+            "paths": 14
+          },
+          {
+            "costs": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "endpoints": [
+              7,
+              4
+            ],
+            "paths": 13
+          }
+        ]
+      },
+      "endpoint_fibres": 56,
+      "nonadaptive_histograms": {
+        "path": {
+          "0": 2,
+          "1": 8,
+          "2": 32,
+          "3": 14
+        },
+        "phase": {
+          "0": 3,
+          "1": 10,
+          "2": 31,
+          "3": 12
+        },
+        "target": {
+          "0": 3,
+          "1": 8,
+          "2": 31,
+          "3": 14
+        }
+      },
+      "source": 2315
+    }
+  ],
+  "status": "PASS independent endpoint lower and upper certificates",
+  "total_endpoint_fibres": 210
+}

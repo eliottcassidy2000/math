@@ -1,0 +1,30 @@
+{
+  "producer_packet": "session44-electrical-duality",
+  "files": [
+    {
+      "path": "UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "bytes": 15514,
+      "sha256": "202174b4444ba9eaa923501dfb7bc98627a038daddf33ebee6522d7ffb5324e8"
+    },
+    {
+      "path": "check.py",
+      "bytes": 15074,
+      "sha256": "c99b6a67f8eb209f7d9b9920c38f21dae38edc80d27bb1a4e01147129b202897"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 58606,
+      "sha256": "5f7dea23f728f685211dd5eac1dff0a389a12461d84946ec9f13b2d7f86faba2"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 477,
+      "sha256": "69db5db20b972747aa157fda3e1e9c1cca37bcaf4154aa1023b51b38f03d7365"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 1593,
+      "sha256": "560d5e821af202d198d92b17c2c6ab3b43415cf7d76a36d03c920b1e8329798a"
+    }
+  ]
+}

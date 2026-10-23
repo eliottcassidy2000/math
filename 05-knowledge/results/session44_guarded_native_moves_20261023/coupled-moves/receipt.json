@@ -1,0 +1,613 @@
+{
+  "checks": 10175,
+  "frozen_character_packet": {
+    "fixed_arc_clock": 0,
+    "frozen_values": {
+      "1957": 216,
+      "2242": 18,
+      "2874": 168
+    },
+    "keys": [
+      [
+        6,
+        4,
+        2
+      ],
+      [
+        6,
+        1,
+        2
+      ]
+    ],
+    "separator_phases": [
+      [
+        4,
+        0
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "source": 2242,
+    "states": [
+      [
+        {
+          "mask": 1484750,
+          "ordinary_target": 5116,
+          "path": [
+            6,
+            7,
+            1,
+            5,
+            3,
+            2,
+            0,
+            4
+          ],
+          "phase": 2,
+          "source": 2242,
+          "target": 2874
+        },
+        {
+          "mask": 1226707,
+          "ordinary_target": 4323,
+          "path": [
+            6,
+            7,
+            5,
+            2,
+            0,
+            4,
+            3,
+            1
+          ],
+          "phase": 2,
+          "source": 2242,
+          "target": 1957
+        }
+      ],
+      [
+        {
+          "mask": 1617881,
+          "ordinary_target": 4323,
+          "path": [
+            6,
+            7,
+            3,
+            1,
+            0,
+            5,
+            2,
+            4
+          ],
+          "phase": 2,
+          "source": 2242,
+          "target": 1957
+        },
+        {
+          "mask": 1681358,
+          "ordinary_target": 5116,
+          "path": [
+            6,
+            7,
+            0,
+            5,
+            3,
+            2,
+            4,
+            1
+          ],
+          "phase": 2,
+          "source": 2242,
+          "target": 2874
+        }
+      ]
+    ]
+  },
+  "global_extension": "Requires all selected new literal ports unoccupied outside the packet, or an explicit global injective reassignment. No full-atlas rewiring asserted.",
+  "guard_scope": "original frozen character and exact target-pinned universal preservation separately",
+  "native_lifting": {
+    "controls": [
+      {
+        "defect": 0,
+        "global_lifts": 27,
+        "image": [
+          0,
+          3,
+          6
+        ],
+        "local_sizes": [
+          9,
+          9
+        ],
+        "pins": [
+          null,
+          null
+        ]
+      },
+      {
+        "defect": 0,
+        "global_lifts": 9,
+        "image": [
+          0,
+          3,
+          6
+        ],
+        "local_sizes": [
+          3,
+          9
+        ],
+        "pins": [
+          0,
+          null
+        ]
+      },
+      {
+        "defect": 0,
+        "global_lifts": 9,
+        "image": [
+          0
+        ],
+        "local_sizes": [
+          3,
+          3
+        ],
+        "pins": [
+          0,
+          0
+        ]
+      },
+      {
+        "defect": 3,
+        "global_lifts": 0,
+        "image": [
+          0
+        ],
+        "local_sizes": [
+          3,
+          3
+        ],
+        "pins": [
+          0,
+          3
+        ]
+      }
+    ],
+    "gluing_cases": 144,
+    "local_kernel": 9,
+    "native_lifts": 27,
+    "quotient_return": [
+      3,
+      3
+    ],
+    "quotient_states": 3,
+    "return_endpoint_owners": [
+      3,
+      13
+    ],
+    "shared_owner_clocks": [
+      16,
+      0
+    ],
+    "three_cell_native_lifts": 81
+  },
+  "original_electrical": {
+    "edges": 438216,
+    "modulus": 256,
+    "separator": {
+      "incident_edges": 273,
+      "node": 2874,
+      "value": 4,
+      "weighted_degree": 898
+    }
+  },
+  "source_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "status": "FINITE-EXACT PASS",
+  "target_pinned_packet": {
+    "fixed_arc_clocks": [
+      2,
+      5
+    ],
+    "keys": [
+      [
+        3,
+        2,
+        2397
+      ],
+      [
+        2,
+        3,
+        2790
+      ]
+    ],
+    "onehot_matrix": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        -1,
+        0
+      ]
+    ],
+    "primitive_bank": [
+      [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ]
+    ],
+    "rhs": [
+      1,
+      1,
+      0
+    ],
+    "shared_owner_clocks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "shared_variable_cost": 2,
+    "slot_budget": 2,
+    "slot_clock_costs": [
+      2,
+      2
+    ],
+    "solutions": [
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0
+      ]
+    ],
+    "source": 1238,
+    "source_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "states": [
+      [
+        {
+          "mask": 1291044,
+          "ordinary_target": 3863,
+          "path": [
+            3,
+            0,
+            6,
+            7,
+            1,
+            5,
+            4,
+            2
+          ],
+          "phase": 5,
+          "source": 1238,
+          "target": 2397
+        },
+        {
+          "mask": 1307397,
+          "ordinary_target": 5235,
+          "path": [
+            2,
+            0,
+            6,
+            7,
+            1,
+            5,
+            4,
+            3
+          ],
+          "phase": 4,
+          "source": 1238,
+          "target": 2790
+        }
+      ],
+      [
+        {
+          "mask": 1552804,
+          "ordinary_target": 3863,
+          "path": [
+            3,
+            1,
+            6,
+            7,
+            0,
+            5,
+            4,
+            2
+          ],
+          "phase": 5,
+          "source": 1238,
+          "target": 2397
+        },
+        {
+          "mask": 1569157,
+          "ordinary_target": 5235,
+          "path": [
+            2,
+            1,
+            6,
+            7,
+            0,
+            5,
+            4,
+            3
+          ],
+          "phase": 4,
+          "source": 1238,
+          "target": 2790
+        }
+      ]
+    ],
+    "target_isomorphisms": [
+      {
+        "branch": "direct",
+        "permutation": [
+          4,
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "branch": "direct",
+        "permutation": [
+          4,
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  "ternary_matching": {
+    "clocksets": [
+      [
+        0,
+        3,
+        4,
+        6,
+        7
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
+    ],
+    "complete_target_fibre_size": 3,
+    "eligible": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "fixed_arc_clocks": [
+      3,
+      6
+    ],
+    "matchings": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ]
+    ],
+    "minimum_slot_budget": 3,
+    "paths": [
+      {
+        "mask": 6929,
+        "ordinary_target": 6782,
+        "path": [
+          1,
+          0,
+          5,
+          3,
+          2,
+          4,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      },
+      {
+        "mask": 41176,
+        "ordinary_target": 6782,
+        "path": [
+          1,
+          5,
+          4,
+          3,
+          2,
+          0,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      },
+      {
+        "mask": 35602,
+        "ordinary_target": 6782,
+        "path": [
+          4,
+          1,
+          5,
+          3,
+          2,
+          0,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      }
+    ],
+    "pin_values": [
+      [
+        1,
+        3,
+        2,
+        6,
+        7
+      ],
+      [
+        3,
+        2,
+        0,
+        6,
+        7
+      ],
+      [
+        5,
+        3,
+        2,
+        6,
+        7
+      ]
+    ],
+    "source": 2242,
+    "target": 3442,
+    "unlabelled_port_inventory_unchanged": true
+  }
+}

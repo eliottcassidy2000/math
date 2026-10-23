@@ -1,0 +1,4589 @@
+{
+  "checks": 638,
+  "sources": [
+    {
+      "extra_adaptive_depth_distributions": {
+        "path": {
+          "1": 12,
+          "2": 30,
+          "3": 7
+        },
+        "phase": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        },
+        "target": {
+          "1": 12,
+          "2": 31,
+          "3": 6
+        }
+      },
+      "extra_nonadaptive_depth_distributions": {
+        "path": {
+          "1": 12,
+          "2": 26,
+          "3": 5,
+          "4": 6
+        },
+        "phase": {
+          "0": 1,
+          "1": 13,
+          "2": 27,
+          "3": 5,
+          "4": 3
+        },
+        "target": {
+          "1": 12,
+          "2": 26,
+          "3": 6,
+          "4": 5
+        }
+      },
+      "fibres": [
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            7
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            0
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            1,
+            3
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            4
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            7
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            4
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            5
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            7
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            3,
+            0
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            3,
+            1
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            2
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            5
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            7
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            1
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            2
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            3
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            4,
+            5
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            7
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            5,
+            0
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            1
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            2
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            5,
+            3
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            4
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            7
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            0
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            2
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            3
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            4
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            5
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            0
+          ]
+        },
+        {
+          "actual_paths": 18,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            1
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            }
+          },
+          "endpoints": [
+            7,
+            2
+          ]
+        },
+        {
+          "actual_paths": 23,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            }
+          },
+          "endpoints": [
+            7,
+            3
+          ]
+        },
+        {
+          "actual_paths": 22,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            }
+          },
+          "endpoints": [
+            7,
+            4
+          ]
+        },
+        {
+          "actual_paths": 22,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            }
+          },
+          "endpoints": [
+            7,
+            5
+          ]
+        },
+        {
+          "actual_paths": 25,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 4
+            }
+          },
+          "endpoints": [
+            7,
+            6
+          ]
+        }
+      ],
+      "source": 1238
+    },
+    {
+      "extra_adaptive_depth_distributions": {
+        "path": {
+          "1": 12,
+          "2": 31,
+          "3": 6
+        },
+        "phase": {
+          "0": 1,
+          "1": 15,
+          "2": 27,
+          "3": 6
+        },
+        "target": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        }
+      },
+      "extra_nonadaptive_depth_distributions": {
+        "path": {
+          "1": 12,
+          "2": 30,
+          "3": 7
+        },
+        "phase": {
+          "0": 1,
+          "1": 15,
+          "2": 27,
+          "3": 6
+        },
+        "target": {
+          "0": 1,
+          "1": 13,
+          "2": 29,
+          "3": 6
+        }
+      },
+      "fibres": [
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            }
+          },
+          "endpoints": [
+            0,
+            7
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            0
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            4
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            5
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            7
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            1
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            4
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            5
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            7
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            3,
+            0
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            3,
+            1
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            2
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            5
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            7
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            2
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            7
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            0
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            1
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            5,
+            2
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            5,
+            3
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            4
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            7
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            0
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            1
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            2
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            4
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            5
+          ]
+        },
+        {
+          "actual_paths": 19,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            0
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            1
+          ]
+        },
+        {
+          "actual_paths": 23,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            2
+          ]
+        },
+        {
+          "actual_paths": 21,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            3
+          ]
+        },
+        {
+          "actual_paths": 19,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            4
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            5
+          ]
+        },
+        {
+          "actual_paths": 25,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            6
+          ]
+        }
+      ],
+      "source": 2242
+    },
+    {
+      "extra_adaptive_depth_distributions": {
+        "path": {
+          "1": 9,
+          "2": 43,
+          "3": 4
+        },
+        "phase": {
+          "0": 1,
+          "1": 11,
+          "2": 40,
+          "3": 4
+        },
+        "target": {
+          "1": 10,
+          "2": 42,
+          "3": 4
+        }
+      },
+      "extra_nonadaptive_depth_distributions": {
+        "path": {
+          "1": 9,
+          "2": 34,
+          "3": 13
+        },
+        "phase": {
+          "0": 1,
+          "1": 11,
+          "2": 35,
+          "3": 9
+        },
+        "target": {
+          "1": 10,
+          "2": 33,
+          "3": 13
+        }
+      },
+      "fibres": [
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            5
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            6
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            0,
+            7
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            1,
+            0
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            1,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            4
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            5
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            6
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            7
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            1
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            4
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            5
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            6
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            7
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            3,
+            1
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            2
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            5
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            6
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            7
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            0
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            1
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            4,
+            2
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            3
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            5
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            6
+          ]
+        },
+        {
+          "actual_paths": 2,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            7
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            0
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            2
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            4
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            6
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            7
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            6,
+            0
+          ]
+        },
+        {
+          "actual_paths": 26,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            6,
+            1
+          ]
+        },
+        {
+          "actual_paths": 15,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            2
+          ]
+        },
+        {
+          "actual_paths": 15,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            3
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            4
+          ]
+        },
+        {
+          "actual_paths": 17,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            5
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            7
+          ]
+        },
+        {
+          "actual_paths": 18,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            0
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            1
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            2
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            3
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            4
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            5
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            7,
+            6
+          ]
+        }
+      ],
+      "source": 2246
+    },
+    {
+      "extra_adaptive_depth_distributions": {
+        "path": {
+          "0": 2,
+          "1": 8,
+          "2": 43,
+          "3": 3
+        },
+        "phase": {
+          "0": 3,
+          "1": 10,
+          "2": 42,
+          "3": 1
+        },
+        "target": {
+          "0": 3,
+          "1": 8,
+          "2": 42,
+          "3": 3
+        }
+      },
+      "extra_nonadaptive_depth_distributions": {
+        "path": {
+          "0": 2,
+          "1": 8,
+          "2": 32,
+          "3": 14
+        },
+        "phase": {
+          "0": 3,
+          "1": 10,
+          "2": 31,
+          "3": 12
+        },
+        "target": {
+          "0": 3,
+          "1": 8,
+          "2": 31,
+          "3": 14
+        }
+      },
+      "fibres": [
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            0,
+            1
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            0,
+            2
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            0,
+            3
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            4
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            5
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            0,
+            6
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            }
+          },
+          "endpoints": [
+            0,
+            7
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            0
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            2
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            3
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            4
+          ]
+        },
+        {
+          "actual_paths": 4,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            1,
+            6
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            1,
+            7
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            0
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            1
+          ]
+        },
+        {
+          "actual_paths": 16,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            2,
+            3
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            4
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            5
+          ]
+        },
+        {
+          "actual_paths": 3,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            2,
+            6
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            2,
+            7
+          ]
+        },
+        {
+          "actual_paths": 1,
+          "costs": {
+            "path": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            }
+          },
+          "endpoints": [
+            3,
+            0
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            1
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            3,
+            2
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            3,
+            4
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            5
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            6
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            3,
+            7
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            0
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            1
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            4,
+            2
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            3
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            4,
+            5
+          ]
+        },
+        {
+          "actual_paths": 1,
+          "costs": {
+            "path": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "phase": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            },
+            "target": {
+              "adaptive": 0,
+              "nonadaptive": 0
+            }
+          },
+          "endpoints": [
+            4,
+            6
+          ]
+        },
+        {
+          "actual_paths": 6,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            4,
+            7
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            0
+          ]
+        },
+        {
+          "actual_paths": 12,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            1
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            2
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            3
+          ]
+        },
+        {
+          "actual_paths": 7,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            4
+          ]
+        },
+        {
+          "actual_paths": 8,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            6
+          ]
+        },
+        {
+          "actual_paths": 11,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            5,
+            7
+          ]
+        },
+        {
+          "actual_paths": 9,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            0
+          ]
+        },
+        {
+          "actual_paths": 18,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            6,
+            1
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            2
+          ]
+        },
+        {
+          "actual_paths": 15,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            6,
+            3
+          ]
+        },
+        {
+          "actual_paths": 20,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            6,
+            4
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            6,
+            5
+          ]
+        },
+        {
+          "actual_paths": 5,
+          "costs": {
+            "path": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "phase": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            },
+            "target": {
+              "adaptive": 1,
+              "nonadaptive": 1
+            }
+          },
+          "endpoints": [
+            6,
+            7
+          ]
+        },
+        {
+          "actual_paths": 25,
+          "costs": {
+            "path": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 3,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            0
+          ]
+        },
+        {
+          "actual_paths": 10,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            1
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            2
+          ]
+        },
+        {
+          "actual_paths": 16,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            3
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 3
+            }
+          },
+          "endpoints": [
+            7,
+            4
+          ]
+        },
+        {
+          "actual_paths": 14,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            5
+          ]
+        },
+        {
+          "actual_paths": 13,
+          "costs": {
+            "path": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "phase": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            },
+            "target": {
+              "adaptive": 2,
+              "nonadaptive": 2
+            }
+          },
+          "endpoints": [
+            7,
+            6
+          ]
+        }
+      ],
+      "source": 2315
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS after corrected hostile-source receipt error",
+  "producer_checks": 887257,
+  "independent_checks": 11404,
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 7448,
+      "sha256": "54be7cfb3b358e6f0e0bb2875b3cd20fe8775b8a10bdc4f24de737b57a39d77c"
+    },
+    {
+      "path": "AUDITED_ARTIFACTS.json",
+      "bytes": 829,
+      "sha256": "bf1c3067c2026b3802bc0e7a79ef8c86a1d60c6add1c4772d60bea133de84362"
+    },
+    {
+      "path": "final.normal.json",
+      "bytes": 340,
+      "sha256": "4fa70f30a71fb56225a49e9750238e54fc82a6e5b5ca78ae161eb412ed0b6651"
+    },
+    {
+      "path": "final.optimized.json",
+      "bytes": 340,
+      "sha256": "4fa70f30a71fb56225a49e9750238e54fc82a6e5b5ca78ae161eb412ed0b6651"
+    },
+    {
+      "path": "independent.normal.json",
+      "bytes": 2031,
+      "sha256": "a93d595d862d9aa214f52027e456149735af9b379c067efa37391ee95acee3f7"
+    },
+    {
+      "path": "independent.optimized.json",
+      "bytes": 2031,
+      "sha256": "a93d595d862d9aa214f52027e456149735af9b379c067efa37391ee95acee3f7"
+    },
+    {
+      "path": "independent.py",
+      "bytes": 9179,
+      "sha256": "452b9322b6fccbafa13c094e35435b64d964e1eb943b74fa130469b7cf9fe4c5"
+    },
+    {
+      "path": "initial.normal.json",
+      "bytes": 340,
+      "sha256": "8444dcaa544da0c9e5ab06debf6e2b61589b341c6fcda93233599c23baa63d63"
+    },
+    {
+      "path": "initial.optimized.json",
+      "bytes": 340,
+      "sha256": "8444dcaa544da0c9e5ab06debf6e2b61589b341c6fcda93233599c23baa63d63"
+    },
+    {
+      "path": "portability.independent.json",
+      "bytes": 2031,
+      "sha256": "a93d595d862d9aa214f52027e456149735af9b379c067efa37391ee95acee3f7"
+    },
+    {
+      "path": "portability.producer.json",
+      "bytes": 340,
+      "sha256": "4fa70f30a71fb56225a49e9750238e54fc82a6e5b5ca78ae161eb412ed0b6651"
+    }
+  ]
+}

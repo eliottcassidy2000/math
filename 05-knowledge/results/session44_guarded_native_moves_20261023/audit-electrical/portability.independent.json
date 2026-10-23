@@ -1,0 +1,119 @@
+{
+  "atlas": {
+    "all_source_target_signatures_injective": true,
+    "binary_full_rank": 164,
+    "minimum_module_generators": 3363,
+    "mod8_charge_quotient_bits": 3369,
+    "pair_rows": 438216,
+    "partitions": {
+      "2": {
+        "classes": 3521,
+        "nonsingletons": [
+          [
+            0,
+            3527
+          ],
+          [
+            53,
+            3492
+          ],
+          [
+            109,
+            3523
+          ],
+          [
+            123,
+            3494
+          ],
+          [
+            594,
+            2902
+          ],
+          [
+            1740,
+            3509
+          ],
+          [
+            1936,
+            2907
+          ]
+        ]
+      },
+      "4": {
+        "classes": 3524,
+        "nonsingletons": [
+          [
+            0,
+            3527
+          ],
+          [
+            53,
+            3492
+          ],
+          [
+            109,
+            3523
+          ],
+          [
+            594,
+            2902
+          ]
+        ]
+      },
+      "8": {
+        "classes": 3525,
+        "nonsingletons": [
+          [
+            0,
+            3527
+          ],
+          [
+            53,
+            3492
+          ],
+          [
+            109,
+            3523
+          ]
+        ]
+      }
+    },
+    "presentation_masks": 2097152,
+    "single_character_ambiguous_sources": 3518,
+    "single_character_vertex_false_equalities": 777396,
+    "source_reports": [
+      [
+        1238,
+        225,
+        3285
+      ],
+      [
+        2242,
+        204,
+        2633
+      ],
+      [
+        2246,
+        313,
+        6107
+      ],
+      [
+        2315,
+        323,
+        6517
+      ]
+    ],
+    "sources_tested": 3528,
+    "vertices": 3528
+  },
+  "checks": 11404,
+  "small": {
+    "all_modulus_aliases": 388,
+    "bank_inclusion_not_equality_hostile": true,
+    "connected_weighted_graphs": 646,
+    "rowwise_mod8_cases": 512,
+    "single_modulus_cycle_hostile": true,
+    "vertex_pairs": 3806
+  },
+  "status": "INDEPENDENT PASS"
+}

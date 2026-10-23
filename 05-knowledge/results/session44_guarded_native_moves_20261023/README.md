@@ -11,4 +11,10 @@ The anchor is actual native coordinate dependence and legal coupled moves preser
 - [Incoming receipt repair](INCOMING_RECEIPT_REPAIR.md): stale input hashes only; no mathematical output changed.
 - [Research map](RESEARCH_MAP.md): current inheritance, guard strengths and intended boundaries.
 
-The original-guard adaptive observer, universal harmonic target fingerprint, literal coupled packets, irrational spectra and native holonomy packets are undergoing independent audits. Their later publication will retain separate scopes for selected packets, supplied move chains and the full canonical wiring.
+## Second verified research packet
+
+- [Universal electrical guards](electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md): all-modulus bridge aliases and complete order-eight source-conditioned target recovery. [Independent audit](audit-electrical/AUDIT.md).
+- [Adaptive native observers](actual-guards/ADAPTIVE_OBSERVERS.md): exact optimal clock-query policies, preserving the actual source, original potential and target. [Pinned-endpoint supplement](actual-guards/ENDPOINT_OBSERVERS.md). [Independent audit](audit-adaptive/AUDIT.md).
+- [Legal selected coupled packets](coupled-moves/THEOREM.md): actual fixed shared arcs, per-slot universal guard preservation, and a necessary three-slot assignment cycle. [Independent audit](audit-coupled/AUDIT.md).
+
+The irrational-spectrum and native-holonomy packets and final synthesis are still being integrated. No full canonical wiring classification is claimed.

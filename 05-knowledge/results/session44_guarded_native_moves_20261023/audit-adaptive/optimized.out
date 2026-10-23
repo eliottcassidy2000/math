@@ -1,0 +1,1 @@
+{"checks": 24760, "receipt_sha256": "9d8a9c752569770943b37e2ad9e32b6eacd047e4aea71253503855b5f97654b0", "source_depths": {"1238": {"path": 5, "phase": 5, "target": 5}, "2242": {"path": 4, "phase": 4, "target": 4}, "2246": {"path": 4, "phase": 4, "target": 4}, "2315": {"path": 5, "phase": 4, "target": 5}}, "status": "PASS"}

@@ -1,0 +1,31 @@
+{
+  "status": "normal and optimized identical",
+  "checks": 10175,
+  "files": [
+    {
+      "name": "THEOREM.md",
+      "sha256": "de1d740e1b64f591c97416dd1623bfa017c508b88f947ac78943451471df654d",
+      "bytes": 16151
+    },
+    {
+      "name": "check.py",
+      "sha256": "d895a580ab643c29c352acfa87ad4882a8f733d7a3cc6bfe82960b8b26e0bbf8",
+      "bytes": 16698
+    },
+    {
+      "name": "SOURCE_PINS.json",
+      "sha256": "f927d3d0ba0a103a467e865d44e2db52b35a78666b5aaf2de43df8683b6c57ce",
+      "bytes": 888
+    },
+    {
+      "name": "receipt.json",
+      "sha256": "ae2ba161a591aacbbe444d8cfb42ba7c452066a78d52ebe64ce5960b86baee61",
+      "bytes": 8887
+    },
+    {
+      "name": "receipt.optimized.json",
+      "sha256": "ae2ba161a591aacbbe444d8cfb42ba7c452066a78d52ebe64ce5960b86baee61",
+      "bytes": 8887
+    }
+  ]
+}
