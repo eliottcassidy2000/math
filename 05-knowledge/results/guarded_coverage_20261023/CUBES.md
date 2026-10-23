@@ -78,6 +78,10 @@ to its next block, including its retained junction. Thus source and inverse
 types remain disjoint at all r. Complement commutes with converse, so the
 remaining disjointness follows too. Any unchanged background must avoid
 the actual reservoir consumed by a proposed route.
+In particular these are2^r different normalized K/converse tile resources,
+not merely different raw lifts of fewer tiles: their four-word sets are
+pairwise disjoint. This stronger fact authenticates the unit-resource menus
+used in PORTS.md under either carrier.
 
 ## 3. Exact source-weighted cost and gap
 

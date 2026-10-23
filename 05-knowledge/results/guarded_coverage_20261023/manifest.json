@@ -44,16 +44,21 @@
       "commit": "e8a2c47377a9ce35048338873c73d394b88968b4",
       "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md",
       "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "commit": "842d7e855383f87b5f1acfd72aad5c92a613c90c",
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/injective-completion/THEOREM.md",
+      "sha256": "4268616ccb2432c999c5827e227ab4658ba4ad48d10c0aba11309336d96ca3ea"
     }
   ],
   "packet_files": {
     ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
     "AUDIT.md": "12dc411bab72281f2f0e7f34a182d40e0ade235afa19b17e19afc9ce87451425",
-    "CUBES.md": "b0b06cad1dc373f91671ee2b323b22907d5f19e07ec50d2639fffc6787ca2e82",
-    "LIFTING.md": "13aff8d1f83cd1bfad8e09f661f30e67f107c1ba19fb611f647d28978698960f",
+    "CUBES.md": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "LIFTING.md": "b96ea8183715bfc3d206909f7a4aca699e64aeda22a8d847b45b74488d7b7854",
     "PORTS.md": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47",
     "README.md": "3510998224522963df8b31d2430e2a2f5b85d8a7b16041870136c6498730235f",
-    "SYNTHESIS.md": "db6bb202a1a3d63b5d4c13413e611c997a9c9b5313410e684a329e19903c2595",
+    "SYNTHESIS.md": "543ad38a202b1863fe6b18513b2feec061f7fd88c12fb4c4ae48f56a82d75558",
     "atlas_receipt.json": "5722b33528bedc355e7aafcdd44ac89767cd0d6d77018a86674ebbd039e45d5c",
     "audit.py": "7332df165f78e0ac6566211fba2ebabb799779a6dca4467398a022add0851e52",
     "audit_receipt.json": "f0cbe2e829175a4f687821de4e55a005b8e957fc3ea2bb0b6a57a2839595f823",

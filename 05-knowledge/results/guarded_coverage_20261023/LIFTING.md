@@ -83,6 +83,11 @@ with 2^r M^2/3 actual presentations and all endpoint-fixed transports kept.
 The two rotation coordinates are the original full `(u,v)` lifts, not a
 binary abbreviation. At least2^r source-automorphism orbits remain distinct,
 because the first r rigid strong components cannot move.
+The carry coordinates are actual owner lifts inside a source-automorphism
+orbit; they do **not** provide M^2/3 additional normalized tile resources.
+Its raw-state measure and normalized capacity are separate quantities.
+The workspace theorem instead uses rigid cube blocks, whose tile resources
+are pairwise distinct. No carry multiplicity is used to pay a port demand.
 
 Choose a cube update with probability2r/(2r+M^2) and the inherited carry
 update with probabilityM^2/(2r+M^2). Tensor-product variance and the earlier

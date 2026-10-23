@@ -52,6 +52,18 @@ is internal native routing around an authenticated charge-changing block,
 with its exact shared-owner interface kept throughout; row cancellation at
 different physical owners cannot be traded for spare workspace.
 
+The next incoming842d7e8553
+[completion theorem](../session45_injective_multisource_moves_20261023/injective-completion/THEOREM.md)
+adds the precise distinction between raw K/converse orbits and normalized
+tile capacity. This is decisive for using our constructions: rigid cube
+words occupy distinct normalized tiles, whereas the carry kernel contributes
+different actual lifts, not extra normalized resources. Its join-tree rule
+also suggests a next interface: combine full local workspace packets only
+after reserving disjoint actual resource pools and retaining every shared
+owner value. Without those hypotheses, separate matchings can still fail
+to assemble. This does not turn our sequential theorem into one for changing
+cross-slot equalities.
+
 ## The broad guess: mathematical equivalence should remember continuations
 
 My strongest guess is that many recurring obstructions here come from using
