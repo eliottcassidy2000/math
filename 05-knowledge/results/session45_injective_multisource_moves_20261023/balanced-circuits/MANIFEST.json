@@ -1,0 +1,105 @@
+{
+  "status": "Audited exact native circuit family; selected normalized resources, not full-atlas rewiring",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1970,
+      "sha256": "b9b64ed6d8b9f5214c0b21b4cedf5f98c3f65db1bfd8465159e40904a8bcada0"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 15231,
+      "sha256": "130ad9f105e174b1689a4879177ce479fed924c075837e9cb06b832bed1ab8e2"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1568,
+      "sha256": "109e5347b27177a5fb8d9b2de8de84b18d28d522218794e4d2e7acb711c370b6"
+    },
+    {
+      "path": "pool.json",
+      "bytes": 17067,
+      "sha256": "5e543f76610e89204c56efcf238591699a4b3fd4edff0b73617c806fec71081e"
+    },
+    {
+      "path": "candidates.json",
+      "bytes": 2420,
+      "sha256": "01fcf170e4a0ddc57887f0c9db75e96e1cbecc75b6b91cda2dd56ac6f19f9f97"
+    },
+    {
+      "path": "charges.json",
+      "bytes": 1568,
+      "sha256": "8fc37956630d0c8dcf5bc9b466a04a8e0c45d884f3c0b720f127664129826fc8"
+    },
+    {
+      "path": "check.py",
+      "bytes": 8663,
+      "sha256": "7c3ec231a22da7f9f913bf44621a3cefa117c4031ab051d834802479c50cec54"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 24538,
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 24538,
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "path": "solve_images.py",
+      "bytes": 3798,
+      "sha256": "8fad6372ba8897396d7ecc0408a15ca55eb575626aa293a9d1c0b42028c33b92"
+    },
+    {
+      "path": "image_witnesses.json",
+      "bytes": 1537864,
+      "sha256": "e359ec38125e1031b6d27f46c5d258cd420dccff973b17a6d305c493adf2f679"
+    },
+    {
+      "path": "regeneration.json",
+      "bytes": 162,
+      "sha256": "79e4bb985f4a2b2b1ac85ba3c7177ef3bc59a92493fa945166b0f3abdeb33e6c"
+    },
+    {
+      "path": "search.py",
+      "bytes": 1307,
+      "sha256": "d2e38f87e2bfed5a2d86773a982bed958ee7c09ff7bae75811ada9db69285e56"
+    },
+    {
+      "path": "max_support.py",
+      "bytes": 2309,
+      "sha256": "8dd4447f104c63fbcee30eb6c41d625dbb5b1517607d7d2b6423597f0e1e6482"
+    },
+    {
+      "path": "max-support-certificate.json",
+      "bytes": 687315,
+      "sha256": "134b651093636a10efb818705f4efe284179d3521db4e29c570de006e4aad6e6"
+    },
+    {
+      "path": "max-support-normal.json",
+      "bytes": 318,
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "path": "max-support-optimized.json",
+      "bytes": 318,
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "path": "boolean_boundary.py",
+      "bytes": 2114,
+      "sha256": "af50358eeb49331ead0ffd151472391391b3097b4571256cdb22908dfcd675c4"
+    },
+    {
+      "path": "boolean-normal.json",
+      "bytes": 6495,
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "path": "boolean-optimized.json",
+      "bytes": 6495,
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    }
+  ]
+}

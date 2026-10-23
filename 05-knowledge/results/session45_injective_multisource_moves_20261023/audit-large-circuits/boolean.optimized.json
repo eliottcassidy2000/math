@@ -1,0 +1,154 @@
+{
+  "checks": 893,
+  "proof_scope": "The visible literal-bit relation cannot be an existential projection of any 2-CNF relation when a majority hostile exists. No claim excludes a nonlinear change of visible representation.",
+  "reports": [
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 15,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 6
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 15,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 6
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 28,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 8
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 28,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 8
+    },
+    {
+      "accepted_states": 8,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 5,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 64,
+      "saved_majority_hostile": [
+        0,
+        34,
+        249,
+        32
+      ],
+      "slots": 10
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 45,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 10
+    },
+    {
+      "accepted_states": 16,
+      "balanced_current_majority_hostile": [
+        0,
+        210,
+        387,
+        130
+      ],
+      "equality_projection_pairs": 1,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 2048,
+      "saved_majority_hostile": [
+        0,
+        210,
+        387,
+        130
+      ],
+      "slots": 12
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 66,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 12
+    },
+    {
+      "accepted_states": 68,
+      "balanced_current_majority_hostile": [
+        0,
+        646,
+        4499,
+        130
+      ],
+      "equality_projection_pairs": 0,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 16384,
+      "saved_majority_hostile": [
+        0,
+        646,
+        652,
+        644
+      ],
+      "slots": 14
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 91,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 14
+    },
+    {
+      "accepted_states": 196,
+      "balanced_current_majority_hostile": [
+        0,
+        1806,
+        6500,
+        260
+      ],
+      "equality_projection_pairs": 0,
+      "harmonic_modulus": 8,
+      "pairwise_closure_states": 65536,
+      "saved_majority_hostile": [
+        0,
+        1806,
+        1811,
+        1794
+      ],
+      "slots": 16
+    },
+    {
+      "accepted_states": 2,
+      "balanced_current_majority_hostile": null,
+      "equality_projection_pairs": 120,
+      "harmonic_modulus": 256,
+      "pairwise_closure_states": 2,
+      "saved_majority_hostile": null,
+      "slots": 16
+    }
+  ],
+  "source_hashes": {
+    "candidates": "01fcf170e4a0ddc57887f0c9db75e96e1cbecc75b6b91cda2dd56ac6f19f9f97",
+    "electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "status": "PASS"
+}

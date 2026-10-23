@@ -1,0 +1,343 @@
+{
+  "base_paths_relative_to_manifest": {
+    "audit": ".",
+    "dyadic_audit": "../audit-dyadic",
+    "inherited_supply": "../multisource-trades",
+    "packet": "../balanced-circuits",
+    "repo": "../../../.."
+  },
+  "development_base_paths_relative_to_manifest": {
+    "audit": ".",
+    "dyadic_audit": "../session45-audit-dyadic",
+    "inherited_supply": "../session45-multisource-trades",
+    "packet": "../session45-balanced-circuits",
+    "repo": "../session35-publication/clean-repo"
+  },
+  "file_count": 45,
+  "files": [
+    {
+      "base": "audit",
+      "bytes": 12717,
+      "path": "AUDIT.md",
+      "sha256": "48dc6caf81ba3cb9047c5ba216934c44bcfd71f3bfbc80f5f70ee63120e934f4"
+    },
+    {
+      "base": "audit",
+      "bytes": 14208,
+      "path": "audit.py",
+      "sha256": "60a150ae5081cc204ef76b589d01d47993d8275b30ad337964ba707ab4d12eeb"
+    },
+    {
+      "base": "audit",
+      "bytes": 4976,
+      "path": "audit_maximum.py",
+      "sha256": "479c5a46934e2e09b68b6e44d1d1e4993a81bf879f699b29998896adee7ac12c"
+    },
+    {
+      "base": "audit",
+      "bytes": 4527,
+      "path": "audit_boolean.py",
+      "sha256": "9c6b8645c61d82fd789bfdde6d651b92b369910498688fdf709b848a8dc9b8c1"
+    },
+    {
+      "base": "audit",
+      "bytes": 12562,
+      "path": "normal.json",
+      "sha256": "f4d14bd1f0cb9551d2cda390a8c81e8287e9e72f453ad6e0b5709e6852ff14ba"
+    },
+    {
+      "base": "audit",
+      "bytes": 12562,
+      "path": "optimized.json",
+      "sha256": "f4d14bd1f0cb9551d2cda390a8c81e8287e9e72f453ad6e0b5709e6852ff14ba"
+    },
+    {
+      "base": "audit",
+      "bytes": 1316,
+      "path": "maximum.normal.json",
+      "sha256": "931738b34c556ef6a819d281430f85f6206603bb25fd7d59678987a22e62da33"
+    },
+    {
+      "base": "audit",
+      "bytes": 1316,
+      "path": "maximum.optimized.json",
+      "sha256": "931738b34c556ef6a819d281430f85f6206603bb25fd7d59678987a22e62da33"
+    },
+    {
+      "base": "audit",
+      "bytes": 3866,
+      "path": "boolean.normal.json",
+      "sha256": "905304d053b12ca109f0ed1f9f007ad3d169c32a2b6732d036f62b1872286f2b"
+    },
+    {
+      "base": "audit",
+      "bytes": 3866,
+      "path": "boolean.optimized.json",
+      "sha256": "905304d053b12ca109f0ed1f9f007ad3d169c32a2b6732d036f62b1872286f2b"
+    },
+    {
+      "base": "audit",
+      "bytes": 24538,
+      "path": "producer-main.normal.json",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "base": "audit",
+      "bytes": 24538,
+      "path": "producer-main.optimized.json",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "base": "audit",
+      "bytes": 318,
+      "path": "producer-maximum.normal.json",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "base": "audit",
+      "bytes": 318,
+      "path": "producer-maximum.optimized.json",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "base": "audit",
+      "bytes": 6495,
+      "path": "producer-boolean.normal.json",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "base": "audit",
+      "bytes": 6495,
+      "path": "producer-boolean.optimized.json",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "base": "packet",
+      "bytes": 15231,
+      "path": "THEOREM.md",
+      "sha256": "130ad9f105e174b1689a4879177ce479fed924c075837e9cb06b832bed1ab8e2"
+    },
+    {
+      "base": "packet",
+      "bytes": 17067,
+      "path": "pool.json",
+      "sha256": "5e543f76610e89204c56efcf238591699a4b3fd4edff0b73617c806fec71081e"
+    },
+    {
+      "base": "packet",
+      "bytes": 2420,
+      "path": "candidates.json",
+      "sha256": "01fcf170e4a0ddc57887f0c9db75e96e1cbecc75b6b91cda2dd56ac6f19f9f97"
+    },
+    {
+      "base": "packet",
+      "bytes": 1568,
+      "path": "charges.json",
+      "sha256": "8fc37956630d0c8dcf5bc9b466a04a8e0c45d884f3c0b720f127664129826fc8"
+    },
+    {
+      "base": "packet",
+      "bytes": 1537864,
+      "path": "image_witnesses.json",
+      "sha256": "e359ec38125e1031b6d27f46c5d258cd420dccff973b17a6d305c493adf2f679"
+    },
+    {
+      "base": "packet",
+      "bytes": 8663,
+      "path": "check.py",
+      "sha256": "7c3ec231a22da7f9f913bf44621a3cefa117c4031ab051d834802479c50cec54"
+    },
+    {
+      "base": "packet",
+      "bytes": 3798,
+      "path": "solve_images.py",
+      "sha256": "8fad6372ba8897396d7ecc0408a15ca55eb575626aa293a9d1c0b42028c33b92"
+    },
+    {
+      "base": "packet",
+      "bytes": 2309,
+      "path": "max_support.py",
+      "sha256": "8dd4447f104c63fbcee30eb6c41d625dbb5b1517607d7d2b6423597f0e1e6482"
+    },
+    {
+      "base": "packet",
+      "bytes": 687315,
+      "path": "max-support-certificate.json",
+      "sha256": "134b651093636a10efb818705f4efe284179d3521db4e29c570de006e4aad6e6"
+    },
+    {
+      "base": "packet",
+      "bytes": 2114,
+      "path": "boolean_boundary.py",
+      "sha256": "af50358eeb49331ead0ffd151472391391b3097b4571256cdb22908dfcd675c4"
+    },
+    {
+      "base": "packet",
+      "bytes": 24538,
+      "path": "normal.json",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "base": "packet",
+      "bytes": 24538,
+      "path": "optimized.json",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "base": "packet",
+      "bytes": 318,
+      "path": "max-support-normal.json",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "base": "packet",
+      "bytes": 318,
+      "path": "max-support-optimized.json",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "base": "packet",
+      "bytes": 6495,
+      "path": "boolean-normal.json",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "base": "packet",
+      "bytes": 6495,
+      "path": "boolean-optimized.json",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "base": "packet",
+      "bytes": 1568,
+      "path": "SOURCE_PINS.json",
+      "sha256": "109e5347b27177a5fb8d9b2de8de84b18d28d522218794e4d2e7acb711c370b6"
+    },
+    {
+      "base": "repo",
+      "bytes": 134104,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "base": "repo",
+      "bytes": 3357288,
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "base": "repo",
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "base": "repo",
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "base": "repo",
+      "bytes": 18306,
+      "path": "05-knowledge/results/injective_native_blocks_20261023/assembly/BINARY_ASSEMBLY.md",
+      "sha256": "201ba7a4427ca88cef1ac494081497f81842fdb29618103ed8d781d176038e3e"
+    },
+    {
+      "base": "repo",
+      "bytes": 8248,
+      "path": "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md",
+      "sha256": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+    },
+    {
+      "base": "repo",
+      "bytes": 14575,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "base": "dyadic_audit",
+      "bytes": 11956,
+      "path": "audit.py",
+      "sha256": "2241234835a59041f1a000bb43470e7999d9827f44d495d4560b4060cc89155e"
+    },
+    {
+      "base": "dyadic_audit",
+      "bytes": 6674,
+      "path": "normal.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "base": "dyadic_audit",
+      "bytes": 6674,
+      "path": "optimized.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "base": "inherited_supply",
+      "bytes": 23249,
+      "path": "target_pair_inventory.json",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "base": "inherited_supply",
+      "bytes": 3650,
+      "path": "solve_images.py",
+      "sha256": "ac15378e9926d93c774316ce3119369589a6f8511f5cda15a5f922d53b7e0c17"
+    }
+  ],
+  "path_scope": "Every entry in files resolves through base_paths_relative_to_manifest in the published repository layout. Development paths are historical provenance only and are not publication dependencies. This cross-pin record authenticates external inputs as well as audit-owned deliverables.",
+  "receipt_pairs": [
+    {
+      "checks": 42981,
+      "identical": true,
+      "normal": "normal.json",
+      "optimized": "optimized.json",
+      "sha256": "f4d14bd1f0cb9551d2cda390a8c81e8287e9e72f453ad6e0b5709e6852ff14ba",
+      "status": "PASS"
+    },
+    {
+      "checks": 3437,
+      "identical": true,
+      "normal": "maximum.normal.json",
+      "optimized": "maximum.optimized.json",
+      "sha256": "931738b34c556ef6a819d281430f85f6206603bb25fd7d59678987a22e62da33",
+      "status": "PASS"
+    },
+    {
+      "checks": 893,
+      "identical": true,
+      "normal": "boolean.normal.json",
+      "optimized": "boolean.optimized.json",
+      "sha256": "905304d053b12ca109f0ed1f9f007ad3d169c32a2b6732d036f62b1872286f2b",
+      "status": "PASS"
+    },
+    {
+      "checks": 18321,
+      "identical": true,
+      "normal": "producer-main.normal.json",
+      "optimized": "producer-main.optimized.json",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255",
+      "status": "PASS"
+    },
+    {
+      "checks": null,
+      "identical": true,
+      "normal": "producer-maximum.normal.json",
+      "optimized": "producer-maximum.optimized.json",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901",
+      "status": "PASS"
+    },
+    {
+      "checks": null,
+      "identical": true,
+      "normal": "producer-boolean.normal.json",
+      "optimized": "producer-boolean.optimized.json",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Independent native, image, exhaustive proper-subset, finite maximum-support and Boolean-boundary audit; final proof and both Python modes pinned. Commit provenance was supplied by the parent and was not independently queried using Git.",
+  "status": "PASS",
+  "verified_source_pins": 9
+}

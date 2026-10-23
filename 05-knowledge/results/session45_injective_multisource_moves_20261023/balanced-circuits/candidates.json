@@ -1,0 +1,162 @@
+{
+  "found": {
+    "3": {
+      "plus": [
+        1425,
+        1457,
+        1638
+      ],
+      "minus": [
+        1477,
+        2945,
+        3369
+      ],
+      "sum": [
+        8,
+        73
+      ],
+      "slots": 6,
+      "owner_clock_cost": 12,
+      "partition_trial": 0,
+      "matching_candidates_tested": 1
+    },
+    "4": {
+      "plus": [
+        1457,
+        1638,
+        1691,
+        3000
+      ],
+      "minus": [
+        1921,
+        2071,
+        2185,
+        2905
+      ],
+      "sum": [
+        12,
+        70
+      ],
+      "slots": 8,
+      "owner_clock_cost": 16,
+      "partition_trial": 0,
+      "matching_candidates_tested": 1
+    },
+    "5": {
+      "plus": [
+        176,
+        1549,
+        1638,
+        2071,
+        2905
+      ],
+      "minus": [
+        1394,
+        1425,
+        1457,
+        1974,
+        2581
+      ],
+      "sum": [
+        8,
+        71
+      ],
+      "slots": 10,
+      "owner_clock_cost": 20,
+      "partition_trial": 0,
+      "matching_candidates_tested": 1
+    },
+    "6": {
+      "plus": [
+        1425,
+        1480,
+        1638,
+        2176,
+        2581,
+        3000
+      ],
+      "minus": [
+        176,
+        1394,
+        1457,
+        1477,
+        1974,
+        2071
+      ],
+      "sum": [
+        2,
+        119
+      ],
+      "slots": 12,
+      "owner_clock_cost": 24,
+      "partition_trial": 0,
+      "matching_candidates_tested": 1
+    },
+    "7": {
+      "plus": [
+        176,
+        1394,
+        1457,
+        1549,
+        1638,
+        2945,
+        3000
+      ],
+      "minus": [
+        1425,
+        1477,
+        1480,
+        1691,
+        2185,
+        2581,
+        3369
+      ],
+      "sum": [
+        4,
+        72
+      ],
+      "slots": 14,
+      "owner_clock_cost": 28,
+      "partition_trial": 0,
+      "matching_candidates_tested": 1
+    },
+    "8": {
+      "plus": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837
+      ],
+      "minus": [
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000
+      ],
+      "sum": [
+        6,
+        75
+      ],
+      "slots": 16,
+      "owner_clock_cost": 32,
+      "partition_trial": 52,
+      "matching_candidates_tested": 56
+    }
+  },
+  "matching_candidates_tested": {
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 56
+  }
+}

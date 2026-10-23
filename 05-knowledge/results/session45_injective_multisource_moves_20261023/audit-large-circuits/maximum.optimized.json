@@ -1,0 +1,45 @@
+{
+  "algorithm": "All 167,960 nine-subsets grouped by actual original charge, then all unordered same-charge pairs tested for disjointness, without omitted-pair or five-bit pruning.",
+  "checks": 3437,
+  "eighteen_relations": 1129,
+  "nine_subsets": 167960,
+  "occupied_charge_groups": 2048,
+  "omitted_pair_counts": [
+    {
+      "omitted": [
+        176,
+        2945
+      ],
+      "relations": 379
+    },
+    {
+      "omitted": [
+        1457,
+        3000
+      ],
+      "relations": 378
+    },
+    {
+      "omitted": [
+        1480,
+        2176
+      ],
+      "relations": 372
+    }
+  ],
+  "proper_subrelation_side_size_counts": {
+    "2": 288,
+    "3": 832,
+    "4": 9
+  },
+  "same_charge_pairs_tested": 6853280,
+  "scope": "Exact maximum support 16 among balanced primitive one-option-per-source circuits in this fixed 20-source menu; not a global order-eight or all-order bound. Native authentication is the separate main audit.",
+  "sharp_maximum_support": 16,
+  "source_hashes": {
+    "electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "pool": "5e543f76610e89204c56efcf238591699a4b3fd4edff0b73617c806fec71081e"
+  },
+  "status": "PASS",
+  "twenty_source_fivebit_parity": 6,
+  "witness_digest_sha256": "53d312d93d5d4f3bf2622916a83135f7320265a7b33784505bbffaa9da51003c"
+}

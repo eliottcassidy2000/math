@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "twenty_source_parity": 6,
+  "partitions_tested": 72930,
+  "eighteen_relations": 1129,
+  "primitive_eighteen_count": 0,
+  "proper_subrelation_half_sizes": {
+    "3": 832,
+    "4": 9,
+    "2": 288
+  },
+  "certificate_sha256": "134b651093636a10efb818705f4efe284179d3521db4e29c570de006e4aad6e6"
+}

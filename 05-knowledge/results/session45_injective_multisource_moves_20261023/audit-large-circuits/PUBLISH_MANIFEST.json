@@ -1,0 +1,116 @@
+{
+  "excluded_workspace_only": [
+    "build_manifest.py",
+    "*.stdout",
+    "h8_bottleneck_paths.json"
+  ],
+  "file_count": 17,
+  "files": [
+    {
+      "bytes": 12717,
+      "path": "AUDIT.md",
+      "role": "audit_deliverable",
+      "sha256": "48dc6caf81ba3cb9047c5ba216934c44bcfd71f3bfbc80f5f70ee63120e934f4"
+    },
+    {
+      "bytes": 14208,
+      "path": "audit.py",
+      "role": "audit_deliverable",
+      "sha256": "60a150ae5081cc204ef76b589d01d47993d8275b30ad337964ba707ab4d12eeb"
+    },
+    {
+      "bytes": 4976,
+      "path": "audit_maximum.py",
+      "role": "audit_deliverable",
+      "sha256": "479c5a46934e2e09b68b6e44d1d1e4993a81bf879f699b29998896adee7ac12c"
+    },
+    {
+      "bytes": 4527,
+      "path": "audit_boolean.py",
+      "role": "audit_deliverable",
+      "sha256": "9c6b8645c61d82fd789bfdde6d651b92b369910498688fdf709b848a8dc9b8c1"
+    },
+    {
+      "bytes": 12562,
+      "path": "normal.json",
+      "role": "audit_deliverable",
+      "sha256": "f4d14bd1f0cb9551d2cda390a8c81e8287e9e72f453ad6e0b5709e6852ff14ba"
+    },
+    {
+      "bytes": 12562,
+      "path": "optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "f4d14bd1f0cb9551d2cda390a8c81e8287e9e72f453ad6e0b5709e6852ff14ba"
+    },
+    {
+      "bytes": 1316,
+      "path": "maximum.normal.json",
+      "role": "audit_deliverable",
+      "sha256": "931738b34c556ef6a819d281430f85f6206603bb25fd7d59678987a22e62da33"
+    },
+    {
+      "bytes": 1316,
+      "path": "maximum.optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "931738b34c556ef6a819d281430f85f6206603bb25fd7d59678987a22e62da33"
+    },
+    {
+      "bytes": 3866,
+      "path": "boolean.normal.json",
+      "role": "audit_deliverable",
+      "sha256": "905304d053b12ca109f0ed1f9f007ad3d169c32a2b6732d036f62b1872286f2b"
+    },
+    {
+      "bytes": 3866,
+      "path": "boolean.optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "905304d053b12ca109f0ed1f9f007ad3d169c32a2b6732d036f62b1872286f2b"
+    },
+    {
+      "bytes": 24538,
+      "path": "producer-main.normal.json",
+      "role": "audit_deliverable",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "bytes": 24538,
+      "path": "producer-main.optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255"
+    },
+    {
+      "bytes": 318,
+      "path": "producer-maximum.normal.json",
+      "role": "audit_deliverable",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "bytes": 318,
+      "path": "producer-maximum.optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "189fd0390128386c32bbd30b65e4a9a870fe895be59781ae9f1213a76902d901"
+    },
+    {
+      "bytes": 6495,
+      "path": "producer-boolean.normal.json",
+      "role": "audit_deliverable",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "bytes": 6495,
+      "path": "producer-boolean.optimized.json",
+      "role": "audit_deliverable",
+      "sha256": "558d1974582bc8d22f5dee10d3969093dfbd776fc010593a1707a31f296a1a48"
+    },
+    {
+      "bytes": 11086,
+      "path": "MANIFEST.json",
+      "role": "cross_pin_record",
+      "sha256": "c8b228f3ddb7f80caa4a675b06730448b248309094b71633d86f2d6e92f348c1"
+    }
+  ],
+  "manifest_self": "PUBLISH_MANIFEST.json is itself a deliverable but is excluded from its own checksum list.",
+  "mathematical_inputs_changed": false,
+  "path_scope": "All file paths in this list are relative to the published audit-large-circuits directory and are owned by this audit packet. MANIFEST.json is a cross-pin record whose own explicit base map locates external dependencies; those dependencies are not audit deliverables.",
+  "status": "PASS"
+}

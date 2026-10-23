@@ -1,0 +1,17 @@
+{
+  "source_commit": "e8a2c47377a9ce35048338873c73d394b88968b4",
+  "originals": {
+    "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8",
+    "05-knowledge/results/injective_native_blocks_20261023/assembly/BINARY_ASSEMBLY.md": "201ba7a4427ca88cef1ac494081497f81842fdb29618103ed8d781d176038e3e",
+    "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+  },
+  "inherited_local_artifacts": {
+    "multisource-trades/target_pair_inventory.json": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a",
+    "multisource-trades/solve_images.py": "ac15378e9926d93c774316ce3119369589a6f8511f5cda15a5f922d53b7e0c17"
+  },
+  "scope": "Source pins identify original graphs and concurrent inherited mechanisms. New circuits are authenticated by direct native and integer-image checks."
+}

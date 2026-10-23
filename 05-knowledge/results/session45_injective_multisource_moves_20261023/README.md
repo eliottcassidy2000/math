@@ -13,4 +13,9 @@ Status: ACTIVE RESEARCH. This first checkpoint is not the session close-out.
 - [Injective partial completion](injective-completion/THEOREM.md): matching after actual shared records and unavailable normalized resources are retained, with separate treatment of unresolved joint guards.
 - [Independent native and resource audit](audit-completion/AUDIT.md): original paths, exact current vectors, normalized versus raw resources, shared pin semantics and relocated-layout verification.
 
-Larger primitive circuits and the final synthesis are still being integrated. No selected packet is promoted to a rewiring of the complete canonical atlas merely because it passes electrical tests.
+## Larger primitive circuits
+
+- [Six through sixteen-slot native circuits](balanced-circuits/THEOREM.md): complete six-clock pinned families, direct integer image witnesses, full resource injection and exact high-dyadic atomicity.
+- [Independent large-circuit audit](audit-large-circuits/AUDIT.md): all joint states, the sharp sixteen-support ceiling within the fixed twenty-option supply, lower-modulus routes and the Boolean projection boundary.
+
+The final synthesis and incoming-work comparison are still being integrated. No selected packet is promoted to a rewiring of the complete canonical atlas merely because it passes electrical tests.

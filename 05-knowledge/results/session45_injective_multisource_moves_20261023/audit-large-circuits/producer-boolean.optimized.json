@@ -1,0 +1,404 @@
+{
+  "status": "PASS",
+  "reports": [
+    {
+      "current_only_majority_hostile": null,
+      "slots": 6,
+      "paired_X_modulus": 4,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 6,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 8,
+      "paired_X_modulus": 4,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 8,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 10,
+      "paired_X_modulus": 4,
+      "accepted": 8,
+      "equality_components": [
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          9
+        ]
+      ],
+      "pairwise_closure_size": 64,
+      "exact_pairwise_representation": false,
+      "majority_hostile": [
+        0,
+        34,
+        249,
+        32
+      ]
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 10,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 12,
+      "paired_X_modulus": 4,
+      "accepted": 16,
+      "equality_components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ]
+      ],
+      "pairwise_closure_size": 2048,
+      "exact_pairwise_representation": false,
+      "majority_hostile": [
+        0,
+        210,
+        387,
+        130
+      ]
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 12,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 14,
+      "paired_X_modulus": 4,
+      "accepted": 68,
+      "equality_components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ],
+      "pairwise_closure_size": 16384,
+      "exact_pairwise_representation": false,
+      "majority_hostile": [
+        0,
+        646,
+        652,
+        644
+      ]
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 14,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    },
+    {
+      "current_only_majority_hostile": [
+        0,
+        1806,
+        6500,
+        260
+      ],
+      "slots": 16,
+      "paired_X_modulus": 4,
+      "accepted": 196,
+      "equality_components": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ]
+      ],
+      "pairwise_closure_size": 65536,
+      "exact_pairwise_representation": false,
+      "majority_hostile": [
+        0,
+        1806,
+        1811,
+        1794
+      ]
+    },
+    {
+      "current_only_majority_hostile": null,
+      "slots": 16,
+      "paired_X_modulus": 128,
+      "accepted": 2,
+      "equality_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      ],
+      "pairwise_closure_size": 2,
+      "exact_pairwise_representation": true,
+      "majority_hostile": null
+    }
+  ]
+}
