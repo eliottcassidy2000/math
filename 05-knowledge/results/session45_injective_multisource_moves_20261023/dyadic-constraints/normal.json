@@ -1,0 +1,1137 @@
+{
+  "checks": 60205,
+  "higher_carry_hostile": {
+    "carry": {
+      "first_failed_bit": 1,
+      "layers": [
+        {
+          "bit": 0,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 1,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ],
+          "odd_rows": [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        }
+      ],
+      "passes": false
+    },
+    "direct_reduced_characters_checked": 2048,
+    "four_binary_cut_odd_rows": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "integer_F_rows": [
+      [
+        0,
+        [
+          [
+            398,
+            1
+          ],
+          [
+            528,
+            -1
+          ]
+        ]
+      ],
+      [
+        28,
+        [
+          [
+            398,
+            -1
+          ],
+          [
+            528,
+            1
+          ]
+        ]
+      ],
+      [
+        398,
+        [
+          [
+            0,
+            1
+          ],
+          [
+            28,
+            -1
+          ]
+        ]
+      ],
+      [
+        528,
+        [
+          [
+            0,
+            -1
+          ],
+          [
+            28,
+            1
+          ]
+        ]
+      ]
+    ],
+    "passes_all_original_dyadic_banks": false,
+    "rectangles": [
+      {
+        "sources": [
+          0,
+          28
+        ],
+        "targets": [
+          398,
+          528
+        ]
+      }
+    ],
+    "row_label_defects": {
+      "0": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "28": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "398": [
+        0,
+        0,
+        0,
+        0,
+        58
+      ],
+      "528": [
+        0,
+        0,
+        0,
+        0,
+        70
+      ]
+    }
+  },
+  "node_labels_sha256": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429",
+  "old_rectangle": {
+    "carry": {
+      "first_failed_bit": 3,
+      "layers": [
+        {
+          "bit": 0,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 1,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 2,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 3,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [
+            [
+              1238,
+              1
+            ],
+            [
+              2246,
+              -1
+            ]
+          ],
+          "odd_rows": [
+            [
+              1238,
+              1
+            ],
+            [
+              2246,
+              1
+            ]
+          ]
+        }
+      ],
+      "passes": false
+    },
+    "direct_reduced_characters_checked": 2048,
+    "four_binary_cut_odd_rows": [
+      [
+        881,
+        1238,
+        2246,
+        2762
+      ],
+      [
+        1238,
+        2246
+      ],
+      [
+        1238,
+        2246
+      ],
+      [
+        881,
+        1238,
+        2246,
+        2762
+      ]
+    ],
+    "integer_F_rows": [
+      [
+        881,
+        [
+          [
+            1238,
+            1
+          ],
+          [
+            2246,
+            -1
+          ]
+        ]
+      ],
+      [
+        1238,
+        [
+          [
+            881,
+            1
+          ],
+          [
+            2762,
+            -1
+          ]
+        ]
+      ],
+      [
+        2246,
+        [
+          [
+            881,
+            -1
+          ],
+          [
+            2762,
+            1
+          ]
+        ]
+      ],
+      [
+        2762,
+        [
+          [
+            1238,
+            -1
+          ],
+          [
+            2246,
+            1
+          ]
+        ]
+      ]
+    ],
+    "passes_all_original_dyadic_banks": false,
+    "rectangles": [
+      {
+        "sources": [
+          1238,
+          2246
+        ],
+        "targets": [
+          881,
+          2762
+        ]
+      }
+    ],
+    "row_label_defects": {
+      "881": [
+        1,
+        0,
+        0,
+        1,
+        32
+      ],
+      "1238": [
+        1,
+        1,
+        1,
+        1,
+        72
+      ],
+      "2246": [
+        1,
+        1,
+        1,
+        1,
+        56
+      ],
+      "2762": [
+        1,
+        0,
+        0,
+        1,
+        96
+      ]
+    }
+  },
+  "old_two_rectangle_tariff_cases": 25,
+  "original_edge_rows": 438216,
+  "paired_charge_group": {
+    "binary_Y_rank": 5,
+    "fibre_size_distribution": {
+      "1": 642,
+      "2": 545,
+      "3": 310,
+      "4": 139,
+      "5": 44,
+      "6": 15
+    },
+    "full_H256_log2_order": 3374,
+    "full_H8_reduced_order": 64,
+    "native_label_fibres": 1695,
+    "order": 2048,
+    "reduction_kernel_log2_order": 3363,
+    "type": "(Z/2)^4 + Z/128"
+  },
+  "safe_rectangle_electrical_only": {
+    "carry": {
+      "final_carry_nonzero": [],
+      "layers": [
+        {
+          "bit": 0,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 1,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 2,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 3,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 4,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 5,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        },
+        {
+          "bit": 6,
+          "incoming_carry_nonzero": [],
+          "numerator_nonzero": [],
+          "odd_rows": []
+        }
+      ],
+      "passes": true
+    },
+    "direct_reduced_characters_checked": 2048,
+    "four_binary_cut_odd_rows": [
+      [],
+      [],
+      [],
+      []
+    ],
+    "integer_F_rows": [
+      [
+        398,
+        [
+          [
+            913,
+            1
+          ],
+          [
+            2701,
+            -1
+          ]
+        ]
+      ],
+      [
+        528,
+        [
+          [
+            913,
+            -1
+          ],
+          [
+            2701,
+            1
+          ]
+        ]
+      ],
+      [
+        913,
+        [
+          [
+            398,
+            1
+          ],
+          [
+            528,
+            -1
+          ]
+        ]
+      ],
+      [
+        2701,
+        [
+          [
+            398,
+            -1
+          ],
+          [
+            528,
+            1
+          ]
+        ]
+      ]
+    ],
+    "passes_all_original_dyadic_banks": true,
+    "rectangles": [
+      {
+        "sources": [
+          913,
+          2701
+        ],
+        "targets": [
+          398,
+          528
+        ]
+      }
+    ],
+    "row_label_defects": {
+      "398": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "528": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "913": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "2701": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "scope": "All dyadic original-bank inclusion. No odd-primary claim. Native authentication and injective resource availability are separate certificates.",
+  "shared_target_source_circuit_algebraic_only": {
+    "combined": {
+      "carry": {
+        "final_carry_nonzero": [
+          [
+            398,
+            -1
+          ],
+          [
+            528,
+            1
+          ]
+        ],
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                398,
+                -2
+              ],
+              [
+                528,
+                2
+              ]
+            ],
+            "odd_rows": []
+          }
+        ],
+        "passes": true
+      },
+      "direct_reduced_characters_checked": 2048,
+      "four_binary_cut_odd_rows": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "integer_F_rows": [
+        [
+          0,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          1,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          46,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          55,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          398,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              46,
+              -1
+            ],
+            [
+              55,
+              1
+            ]
+          ]
+        ],
+        [
+          528,
+          [
+            [
+              0,
+              -1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              46,
+              1
+            ],
+            [
+              55,
+              -1
+            ]
+          ]
+        ]
+      ],
+      "passes_all_original_dyadic_banks": true,
+      "rectangles": [
+        {
+          "sources": [
+            0,
+            1
+          ],
+          "targets": [
+            398,
+            528
+          ]
+        },
+        {
+          "sources": [
+            55,
+            46
+          ],
+          "targets": [
+            398,
+            528
+          ]
+        }
+      ],
+      "row_label_defects": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "46": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "55": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "398": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "528": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "individual": [
+      {
+        "carry": {
+          "first_failed_bit": 6,
+          "layers": [
+            {
+              "bit": 0,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 1,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 2,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 3,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 4,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 5,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 6,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [
+                [
+                  398,
+                  -1
+                ],
+                [
+                  528,
+                  1
+                ]
+              ],
+              "odd_rows": [
+                [
+                  398,
+                  1
+                ],
+                [
+                  528,
+                  1
+                ]
+              ]
+            }
+          ],
+          "passes": false
+        },
+        "direct_reduced_characters_checked": 2048,
+        "four_binary_cut_odd_rows": [
+          [
+            398,
+            528
+          ],
+          [],
+          [],
+          []
+        ],
+        "integer_F_rows": [
+          [
+            0,
+            [
+              [
+                398,
+                1
+              ],
+              [
+                528,
+                -1
+              ]
+            ]
+          ],
+          [
+            1,
+            [
+              [
+                398,
+                -1
+              ],
+              [
+                528,
+                1
+              ]
+            ]
+          ],
+          [
+            398,
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                -1
+              ]
+            ]
+          ],
+          [
+            528,
+            [
+              [
+                0,
+                -1
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ]
+        ],
+        "passes_all_original_dyadic_banks": false,
+        "rectangles": [
+          {
+            "sources": [
+              0,
+              1
+            ],
+            "targets": [
+              398,
+              528
+            ]
+          }
+        ],
+        "row_label_defects": {
+          "0": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "1": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "398": [
+            1,
+            0,
+            0,
+            0,
+            64
+          ],
+          "528": [
+            1,
+            0,
+            0,
+            0,
+            64
+          ]
+        }
+      },
+      {
+        "carry": {
+          "first_failed_bit": 6,
+          "layers": [
+            {
+              "bit": 0,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 1,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 2,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 3,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 4,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 5,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [],
+              "odd_rows": []
+            },
+            {
+              "bit": 6,
+              "incoming_carry_nonzero": [],
+              "numerator_nonzero": [
+                [
+                  398,
+                  -1
+                ],
+                [
+                  528,
+                  1
+                ]
+              ],
+              "odd_rows": [
+                [
+                  398,
+                  1
+                ],
+                [
+                  528,
+                  1
+                ]
+              ]
+            }
+          ],
+          "passes": false
+        },
+        "direct_reduced_characters_checked": 2048,
+        "four_binary_cut_odd_rows": [
+          [
+            398,
+            528
+          ],
+          [],
+          [],
+          []
+        ],
+        "integer_F_rows": [
+          [
+            46,
+            [
+              [
+                398,
+                -1
+              ],
+              [
+                528,
+                1
+              ]
+            ]
+          ],
+          [
+            55,
+            [
+              [
+                398,
+                1
+              ],
+              [
+                528,
+                -1
+              ]
+            ]
+          ],
+          [
+            398,
+            [
+              [
+                46,
+                -1
+              ],
+              [
+                55,
+                1
+              ]
+            ]
+          ],
+          [
+            528,
+            [
+              [
+                46,
+                1
+              ],
+              [
+                55,
+                -1
+              ]
+            ]
+          ]
+        ],
+        "passes_all_original_dyadic_banks": false,
+        "rectangles": [
+          {
+            "sources": [
+              55,
+              46
+            ],
+            "targets": [
+              398,
+              528
+            ]
+          }
+        ],
+        "row_label_defects": {
+          "46": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "55": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "398": [
+            1,
+            0,
+            0,
+            0,
+            64
+          ],
+          "528": [
+            1,
+            0,
+            0,
+            0,
+            64
+          ]
+        }
+      }
+    ],
+    "source_partition": [
+      [
+        0,
+        55
+      ],
+      [
+        1,
+        46
+      ]
+    ]
+  },
+  "small_controls": {
+    "finite_ring_cases": 198,
+    "weighted_C4_bank": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        4,
+        2,
+        4
+      ],
+      [
+        0,
+        4,
+        6,
+        4
+      ]
+    ],
+    "weighted_C4_currents": [
+      [
+        4,
+        4,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "source_pins_sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221",
+  "status": "PROVED compressed dyadic module; FINITE-EXACT original atlas controls"
+}

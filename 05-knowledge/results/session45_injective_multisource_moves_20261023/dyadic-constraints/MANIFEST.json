@@ -1,0 +1,79 @@
+{
+  "checks": 60205,
+  "files": [
+    {
+      "bytes": 2780,
+      "path": "README.md",
+      "sha256": "b869c624b9a497d2b280bc79c5127562c51f4dda802172cc9bf0518ee30137eb"
+    },
+    {
+      "bytes": 1419,
+      "path": "SOURCE_PINS.json",
+      "sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221"
+    },
+    {
+      "bytes": 14575,
+      "path": "THEOREM.md",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "bytes": 339,
+      "path": "algebraic_circuit_menu.json",
+      "sha256": "329b08211a501229fe7ce67c0e603566a4e2e9677afb43baff50b211abc23b28"
+    },
+    {
+      "bytes": 12068,
+      "path": "check.py",
+      "sha256": "3c359ad57dbf253be23d71604a4b58cff6748604291866f60516f3396e528faf"
+    },
+    {
+      "bytes": 2551,
+      "path": "compile_menu.py",
+      "sha256": "e770002ed58ae0957c1ad4928c0e1447ef02a62dc56f9dd2740640e162fd41ba"
+    },
+    {
+      "bytes": 2913,
+      "path": "compiler.normal.json",
+      "sha256": "8d7379c483738522ae8b85303f22c2a1397627587f71706ffcccb7837a1eb3fa"
+    },
+    {
+      "bytes": 2913,
+      "path": "compiler.optimized.json",
+      "sha256": "8d7379c483738522ae8b85303f22c2a1397627587f71706ffcccb7837a1eb3fa"
+    },
+    {
+      "bytes": 23831,
+      "path": "inherited-filtration.normal.json",
+      "sha256": "e57cc4990dd9cbab005c672ef9dc463f783c8d78187b7c56e2a551bbda66e514"
+    },
+    {
+      "bytes": 23831,
+      "path": "inherited-filtration.optimized.json",
+      "sha256": "e57cc4990dd9cbab005c672ef9dc463f783c8d78187b7c56e2a551bbda66e514"
+    },
+    {
+      "bytes": 459092,
+      "path": "node_labels.json",
+      "sha256": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429"
+    },
+    {
+      "bytes": 19550,
+      "path": "normal.json",
+      "sha256": "5b7d0787006a2a001b658433effe6fb4d757379bed119fc3d2b560a78c492ec9"
+    },
+    {
+      "bytes": 19550,
+      "path": "optimized.json",
+      "sha256": "5b7d0787006a2a001b658433effe6fb4d757379bed119fc3d2b560a78c492ec9"
+    },
+    {
+      "bytes": 1403,
+      "path": "recheck_filtration.py",
+      "sha256": "3d8fdd998a8e83ac8c56e14a85d4f3411ea7efefd7d4440c50611797fd1a6eec"
+    }
+  ],
+  "inherited_order8_filtration_rerun_checks": 696,
+  "publish_subdirectory": "dyadic-constraints",
+  "scope": "Complete original paired-charge dyadic bank and algebraic shared-row circuit compiler; native resources separate",
+  "status": "VERIFIED normal and optimized outputs identical"
+}

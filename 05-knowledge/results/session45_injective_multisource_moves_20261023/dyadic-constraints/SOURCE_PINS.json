@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "bytes": 8903,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/README.md",
+      "sha256": "8a6862aa6315e38ccab785308e2510ffc713d99998e4f76ec2746babe4ff2adb"
+    },
+    {
+      "bytes": 12277,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/check.py",
+      "sha256": "587f40058a9a9296b93fa0159f610491edf97852492dacfc5e65b02f01eebf08"
+    },
+    {
+      "bytes": 11747,
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/rectangle-bank/THEOREM.md",
+      "sha256": "1a2308adc4e2c3b85535859487d0f5af651383b07a729e0214632c29f27415d1"
+    },
+    {
+      "bytes": 15667,
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "ef0739cfea26526563ea2736e5a7bb3b548a4530c236737915d6c1f5bff46426"
+    }
+  ],
+  "source_snapshot": "Session45 original atlas and already audited electrical filtration; no Git action performed"
+}

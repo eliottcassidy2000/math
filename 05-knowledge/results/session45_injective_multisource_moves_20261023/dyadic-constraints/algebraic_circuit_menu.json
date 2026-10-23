@@ -1,0 +1,25 @@
+{
+  "rectangles": [
+    {
+      "sources": [
+        0,
+        1
+      ],
+      "targets": [
+        398,
+        528
+      ]
+    },
+    {
+      "sources": [
+        55,
+        46
+      ],
+      "targets": [
+        398,
+        528
+      ]
+    }
+  ],
+  "scope": "Algebraic original-atlas circuit; native path resources not asserted."
+}

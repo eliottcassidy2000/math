@@ -1,0 +1,907 @@
+{
+  "cases": {
+    "algebraic_shared_circuit": {
+      "all_dyadic_original_bank_inclusion": true,
+      "higher_carry": {
+        "final_carry_nonzero": [
+          [
+            398,
+            -1
+          ],
+          [
+            528,
+            1
+          ]
+        ],
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                398,
+                -2
+              ],
+              [
+                528,
+                2
+              ]
+            ],
+            "odd_rows": []
+          }
+        ],
+        "passes": true
+      },
+      "owned_row_defects": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "398": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "46": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "528": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "55": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "physical_integer_rows": [
+        [
+          0,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          1,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          46,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          55,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          398,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ],
+            [
+              46,
+              -1
+            ],
+            [
+              55,
+              1
+            ]
+          ]
+        ],
+        [
+          528,
+          [
+            [
+              0,
+              -1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              46,
+              1
+            ],
+            [
+              55,
+              -1
+            ]
+          ]
+        ]
+      ],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "consistent_explicit_ledger": {
+      "all_dyadic_original_bank_inclusion": true,
+      "explicit_resource_key_capacity": {
+        "after_injective": true,
+        "before_injective": true,
+        "old_new_union_injective": true,
+        "unchanged_count": 1
+      },
+      "explicit_shared_record_consistency": {
+        "conflicts": [],
+        "passes": true
+      },
+      "higher_carry": {
+        "final_carry_nonzero": [],
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          }
+        ],
+        "passes": true
+      },
+      "owned_row_defects": {},
+      "physical_integer_rows": [],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "higher_carry_hostile": {
+      "all_dyadic_original_bank_inclusion": false,
+      "higher_carry": {
+        "first_failed_bit": 1,
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                398,
+                -1
+              ],
+              [
+                528,
+                1
+              ]
+            ],
+            "odd_rows": [
+              [
+                398,
+                1
+              ],
+              [
+                528,
+                1
+              ]
+            ]
+          }
+        ],
+        "passes": false
+      },
+      "owned_row_defects": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "28": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "398": [
+          0,
+          0,
+          0,
+          0,
+          58
+        ],
+        "528": [
+          0,
+          0,
+          0,
+          0,
+          70
+        ]
+      },
+      "physical_integer_rows": [
+        [
+          0,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          28,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          398,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              28,
+              -1
+            ]
+          ]
+        ],
+        [
+          528,
+          [
+            [
+              0,
+              -1
+            ],
+            [
+              28,
+              1
+            ]
+          ]
+        ]
+      ],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "overlap_doubled_rows": {
+      "all_dyadic_original_bank_inclusion": true,
+      "higher_carry": {
+        "final_carry_nonzero": [
+          [
+            0,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                0,
+                -2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "odd_rows": []
+          }
+        ],
+        "passes": true
+      },
+      "owned_row_defects": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "physical_integer_rows": [
+        [
+          0,
+          [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              -2
+            ]
+          ]
+        ],
+        [
+          1,
+          [
+            [
+              0,
+              -2
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        ]
+      ],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "resource_and_shared_hostile": {
+      "all_dyadic_original_bank_inclusion": true,
+      "explicit_resource_key_capacity": {
+        "after_injective": true,
+        "before_injective": false,
+        "old_new_union_injective": false,
+        "unchanged_count": 1
+      },
+      "explicit_shared_record_consistency": {
+        "conflicts": [
+          {
+            "key": "p",
+            "state": "before"
+          },
+          {
+            "fixed_key": "p",
+            "state": "before"
+          }
+        ],
+        "passes": false
+      },
+      "higher_carry": {
+        "final_carry_nonzero": [],
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          }
+        ],
+        "passes": true
+      },
+      "owned_row_defects": {},
+      "physical_integer_rows": [],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "unsafe_component_0": {
+      "all_dyadic_original_bank_inclusion": false,
+      "higher_carry": {
+        "first_failed_bit": 6,
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                398,
+                -1
+              ],
+              [
+                528,
+                1
+              ]
+            ],
+            "odd_rows": [
+              [
+                398,
+                1
+              ],
+              [
+                528,
+                1
+              ]
+            ]
+          }
+        ],
+        "passes": false
+      },
+      "owned_row_defects": {
+        "0": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "1": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "398": [
+          1,
+          0,
+          0,
+          0,
+          64
+        ],
+        "528": [
+          1,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "physical_integer_rows": [
+        [
+          0,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          1,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          398,
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              -1
+            ]
+          ]
+        ],
+        [
+          528,
+          [
+            [
+              0,
+              -1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ]
+      ],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    },
+    "unsafe_component_1": {
+      "all_dyadic_original_bank_inclusion": false,
+      "higher_carry": {
+        "first_failed_bit": 6,
+        "layers": [
+          {
+            "bit": 0,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 1,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 2,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 3,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 4,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 5,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [],
+            "odd_rows": []
+          },
+          {
+            "bit": 6,
+            "incoming_carry_nonzero": [],
+            "numerator_nonzero": [
+              [
+                398,
+                -1
+              ],
+              [
+                528,
+                1
+              ]
+            ],
+            "odd_rows": [
+              [
+                398,
+                1
+              ],
+              [
+                528,
+                1
+              ]
+            ]
+          }
+        ],
+        "passes": false
+      },
+      "owned_row_defects": {
+        "398": [
+          1,
+          0,
+          0,
+          0,
+          64
+        ],
+        "46": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "528": [
+          1,
+          0,
+          0,
+          0,
+          64
+        ],
+        "55": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "physical_integer_rows": [
+        [
+          46,
+          [
+            [
+              398,
+              -1
+            ],
+            [
+              528,
+              1
+            ]
+          ]
+        ],
+        [
+          55,
+          [
+            [
+              398,
+              1
+            ],
+            [
+              528,
+              -1
+            ]
+          ]
+        ],
+        [
+          398,
+          [
+            [
+              46,
+              -1
+            ],
+            [
+              55,
+              1
+            ]
+          ]
+        ],
+        [
+          528,
+          [
+            [
+              46,
+              1
+            ],
+            [
+              55,
+              -1
+            ]
+          ]
+        ]
+      ],
+      "resource_authentication": "NOT PERFORMED: verify paths, owners, shared coordinate meaning, converse orbits and unchanged complement separately.",
+      "status": "EXACT algebraic certificate for supplied rectangle amplitudes"
+    }
+  },
+  "checks": 17,
+  "scope": "Only algebraic currents and consistency of supplied keys; native paths, coefficient-to-resource matching, and semantic ownership are not authenticated by compiler.",
+  "status": "PASS"
+}
