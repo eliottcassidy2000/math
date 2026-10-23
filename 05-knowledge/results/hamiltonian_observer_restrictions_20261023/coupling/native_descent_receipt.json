@@ -1,0 +1,50 @@
+{
+  "checks": 30881,
+  "reports": [
+    {
+      "descent_steps_by_case": {},
+      "maximum_matching_preparations": 0,
+      "maximum_steps": 0,
+      "n": 3,
+      "nonempty_labelled_sources": 1
+    },
+    {
+      "descent_steps_by_case": {
+        "complete_pairs": 1,
+        "star_rotate": 3
+      },
+      "maximum_matching_preparations": 0,
+      "maximum_steps": 1,
+      "n": 4,
+      "nonempty_labelled_sources": 7
+    },
+    {
+      "descent_steps_by_case": {
+        "complete_pairs": 1,
+        "guarded_path": 61,
+        "guarded_triangle": 28,
+        "matching_prepare": 7,
+        "star_rotate": 4
+      },
+      "maximum_matching_preparations": 1,
+      "maximum_steps": 3,
+      "n": 5,
+      "nonempty_labelled_sources": 63
+    },
+    {
+      "descent_steps_by_case": {
+        "complete_pairs": 1,
+        "guarded_path": 2400,
+        "guarded_triangle": 837,
+        "matching_prepare": 298,
+        "star_rotate": 5
+      },
+      "maximum_matching_preparations": 1,
+      "maximum_steps": 7,
+      "n": 6,
+      "nonempty_labelled_sources": 1023
+    }
+  ],
+  "scope": "all labelled compressed graphs through native order six; every retained actual Hamiltonian junction and isomorphism independently checked",
+  "status": "FINITE-EXACT"
+}

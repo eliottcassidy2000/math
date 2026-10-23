@@ -1,0 +1,33 @@
+{
+  "chain": [13, 2, 5, 3, 7, 4],
+  "checks": 67980,
+  "core": 39046339332000,
+  "gains": ["2/13", "5/2", "3/5", "7/3", "4/7"],
+  "holonomy": "4/13",
+  "holonomy_registers": {"2^3": [2, 5], "3^2": [0, 1]},
+  "integer_lift_controls": {
+    "consecutive_sources": [1, 512],
+    "coprime_bases": [1, 2, 3, 5, 7, 11, 17, 19],
+    "distinct_sources": 597,
+    "exponents_of_13": [0, 12],
+    "successful_edge_clocks": ["5*v_13(s)", "2*v_13(s)"]
+  },
+  "joint_register_hostile": 73,
+  "quotient_periods": [5, 2],
+  "reset": "13/4",
+  "status": "PASS",
+  "transitive_order_six": {
+    "all_permutation_coefficients_in_one_omega": [0, -189],
+    "hamiltonian_coefficients_in_one_omega": [-1, -1],
+    "hamiltonian_count": 1,
+    "phase_counts_mod_three": [303, 114, 303]
+  },
+  "universe": {
+    "fraction_numerators_denominators": [1, 8],
+    "label_words": 19525,
+    "labels": [1, 2, 3, 4, 5],
+    "ordered_fraction_pairs": 4096,
+    "registers": [[2, 3], [3, 2]],
+    "word_lengths": [2, 3, 4, 5, 6]
+  }
+}

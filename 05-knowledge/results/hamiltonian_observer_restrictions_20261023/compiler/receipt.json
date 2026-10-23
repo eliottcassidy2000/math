@@ -1,0 +1,132 @@
+{
+  "checks": 117690,
+  "mixed_twenty_seven": {
+    "audited_internal_chart_triples": 531441,
+    "coordinate_count": 7,
+    "feasible_pin_cases": 252,
+    "order": 27,
+    "seed": 57031,
+    "seeded_pin_cases": 300,
+    "source_frame_count": 2187
+  },
+  "native_moves": {
+    "actual_mixed27_directed_coordinate_moves": 30618,
+    "conditional_dimension_histogram": {
+      "0": 343,
+      "1": 147,
+      "2": 21,
+      "4": 1
+    },
+    "disconnected_guard_survivors": 3,
+    "exact_heatbath_spectra": {
+      "1": {
+        "0": 2,
+        "1": 1
+      },
+      "2": {
+        "0": 4,
+        "1": 1,
+        "1/2": 4
+      },
+      "3": {
+        "0": 8,
+        "1": 1,
+        "1/3": 12,
+        "2/3": 6
+      },
+      "4": {
+        "0": 16,
+        "1": 1,
+        "1/2": 24,
+        "1/4": 32,
+        "3/4": 8
+      }
+    },
+    "exhaustive_nine_owner_clock_subsets": 512
+  },
+  "observer_footprints": {
+    "actual_carrier_order": 9,
+    "all_observer_subset_guards": 512,
+    "component_histogram": {
+      "0": 1,
+      "1": 397,
+      "2": 108,
+      "3": 6
+    },
+    "conditional_dimension": 4,
+    "examples": {
+      "connected": {
+        "accepted_observer_values": [
+          0,
+          1
+        ],
+        "component_diameters": [
+          3
+        ],
+        "component_sizes": [
+          18
+        ]
+      },
+      "disconnected": {
+        "accepted_observer_values": [
+          0,
+          4,
+          8
+        ],
+        "component_diameters": [
+          2,
+          2,
+          2
+        ],
+        "component_sizes": [
+          9,
+          9,
+          9
+        ]
+      }
+    },
+    "invisible_dimension": 2,
+    "visible_dimension": 2
+  },
+  "regular_nine": {
+    "exhaustive_pin_cases": 2998,
+    "explicitly_non_native_filter_remaining": 6,
+    "feasible_pin_cases": 892,
+    "frames": 81,
+    "one_owner_remaining_frames": 9,
+    "two_future_owner_tuples": 9
+  },
+  "regular_sixty_three": {
+    "bottom_slots": 15,
+    "coordinate_count": 16,
+    "exhaustive_target_slot_sets": 32768,
+    "frame_count": 43046721,
+    "full_path_flags": 9,
+    "incoming_actual_arc_clocks": [
+      59,
+      44,
+      17,
+      38,
+      23,
+      5,
+      53,
+      11,
+      0
+    ],
+    "order": 63,
+    "seeded_conditional_cases": 200,
+    "target_cost_histogram": {
+      "0": 1,
+      "1": 31,
+      "2": 371,
+      "3": 2197,
+      "4": 6852,
+      "5": 10996,
+      "6": 8384,
+      "7": 3168,
+      "8": 704,
+      "9": 64
+    }
+  },
+  "status": "FINITE-EXACT on supplied actual native path orbits"
+}

@@ -1,0 +1,119 @@
+{
+  "status": "FINITE-EXACT",
+  "arithmetic": "SymPy rational matrices; exact PSD elimination",
+  "word_universe": 8,
+  "all_nonempty_word_subsets": 255,
+  "nonuniform_subsets": 7,
+  "owner_subset_checks": 46,
+  "owner_fibres": [
+    {
+      "tournament_code": 0,
+      "Hamiltonian_paths": 1,
+      "full_mean_clock": "192",
+      "indexed_pin_counts": {
+        "0:0": 1,
+        "0:1": 0,
+        "0:2": 0,
+        "0:3": 0,
+        "1:0": 0,
+        "1:1": 1,
+        "1:2": 0,
+        "1:3": 0,
+        "2:0": 0,
+        "2:1": 0,
+        "2:2": 1,
+        "2:3": 0,
+        "3:0": 0,
+        "3:1": 0,
+        "3:2": 0,
+        "3:3": 1
+      }
+    },
+    {
+      "tournament_code": 2,
+      "Hamiltonian_paths": 3,
+      "full_mean_clock": "64",
+      "indexed_pin_counts": {
+        "0:0": 1,
+        "0:1": 1,
+        "0:2": 1,
+        "0:3": 0,
+        "1:0": 1,
+        "1:1": 1,
+        "1:2": 1,
+        "1:3": 0,
+        "2:0": 1,
+        "2:1": 1,
+        "2:2": 1,
+        "2:3": 0,
+        "3:0": 0,
+        "3:1": 0,
+        "3:2": 0,
+        "3:3": 3
+      }
+    },
+    {
+      "tournament_code": 4,
+      "Hamiltonian_paths": 5,
+      "full_mean_clock": "192/5",
+      "indexed_pin_counts": {
+        "0:0": 1,
+        "0:1": 2,
+        "0:2": 1,
+        "0:3": 1,
+        "1:0": 1,
+        "1:1": 1,
+        "1:2": 1,
+        "1:3": 2,
+        "2:0": 2,
+        "2:1": 1,
+        "2:2": 1,
+        "2:3": 1,
+        "3:0": 1,
+        "3:1": 1,
+        "3:2": 2,
+        "3:3": 1
+      }
+    },
+    {
+      "tournament_code": 5,
+      "Hamiltonian_paths": 3,
+      "full_mean_clock": "64",
+      "indexed_pin_counts": {
+        "0:0": 0,
+        "0:1": 3,
+        "0:2": 0,
+        "0:3": 0,
+        "1:0": 1,
+        "1:1": 0,
+        "1:2": 1,
+        "1:3": 1,
+        "2:0": 1,
+        "2:1": 0,
+        "2:2": 1,
+        "2:3": 1,
+        "3:0": 1,
+        "3:1": 0,
+        "3:2": 1,
+        "3:3": 1
+      }
+    }
+  ],
+  "guards": "all nonempty finite subsets, not an invented native mod8 formula",
+  "return_gap_lower_bound": "8/9",
+  "rejection_control_gap": "1/4",
+  "trace_matrix_trace_histogram": {
+    "1": 66,
+    "10/9": 1,
+    "11/10": 15,
+    "12/11": 20,
+    "14/13": 15,
+    "16/15": 2,
+    "17/16": 30,
+    "18/17": 40,
+    "20/19": 36,
+    "26/25": 12,
+    "52/47": 6,
+    "82/77": 12
+  }
+}

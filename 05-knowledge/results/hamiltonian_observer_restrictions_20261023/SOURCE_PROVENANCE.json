@@ -1,0 +1,16 @@
+{
+  "inherited_commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+  "inherited_sha256": {
+    "05-knowledge/results/session42_shared_lattices_square_colors_20261023/coupling/COUPLING_OPERATOR.md": "72c703a6c9ceab75e019ea15864ae1fd5b038cc49c56b9f5fa08114eb4f50baf",
+    "05-knowledge/results/session42_shared_lattices_square_colors_20261023/hierarchical-kernels/MIXED_DEPTH_AND_SHARED_FLAGS.md": "003bebb00a4bb972cb5c0a92fce5a3ab859c33084223a4355c0c5e27a22a926d",
+    "05-knowledge/results/session42_shared_lattices_square_colors_20261023/hierarchical-kernels/HIERARCHICAL_KERNELS.md": "0805a57cf151973af2b9adf6c28a2c47a4e2608fb4a1467096ea0d14cae1300e",
+    "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/check.py": "27ed8b9bcb8a0e9dd0dbb6fb23c3c794a566ac9bdc3aca82a2db55dceed2ce48",
+    "05-knowledge/results/attachment_lattices_square_sum_20261023/KERNELS.md": "5e7f9f13a0cd7e1f3a2f46c75f0541acd546f8bf9a5ae982c7666f7a835f7fa0",
+    "05-knowledge/results/metagraph_network_invariants_20261021/PROOF.md": "0528b1db1005b29f1db631cda03c8b7b63a5a794b08b60e84c32784c402d136d",
+    "05-knowledge/results/geometry_567_flag_carriers_20261004.md": "6eb8ddd7d760980f1409ad98deca682dc9fb025adbd316eb9dfe64f107630029",
+    "05-knowledge/results/session32_square_monster_20261023/VALUATION_CYCLE_AND_QUOTIENT.md": "27af626ac2abcc372ec664ce82c73c660ee63555a95246ddd629339175d3b3a3",
+    "01-canon/theorems/THM-085-f-omega-mod9-universal.md": "b0534275c4f6aff0ce9d785d239594787d2b743cbd4e5272c54dedcb1a11c080"
+  },
+  "primary_reference": "https://www.stat.berkeley.edu/~aldous/RWG/Book_Ralph/Ch2.S7.html",
+  "scope": "Frozen inherited sources; no priority claim for standard trace chains or Poincare comparison."
+}

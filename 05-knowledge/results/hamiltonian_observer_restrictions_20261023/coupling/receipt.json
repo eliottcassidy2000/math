@@ -1,0 +1,379 @@
+{
+  "checks": 2353,
+  "exact_order_four_hostile": {
+    "component_gap": "7/15",
+    "incidence": [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "3",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "nonconstant_eigenvalue": "8/15",
+    "nonconstant_eigenvector": [
+      "4",
+      "-3",
+      "-3"
+    ],
+    "nontrivial_component_kernel": [
+      [
+        "11/15",
+        "1/5",
+        "1/15"
+      ],
+      [
+        "1/5",
+        "3/5",
+        "1/5"
+      ],
+      [
+        "1/5",
+        "3/5",
+        "1/5"
+      ]
+    ],
+    "paired_source_complement_native_converse_gap": "8/15",
+    "source_masks": [
+      1,
+      3,
+      7
+    ],
+    "source_masses": [
+      "3",
+      "3",
+      "1"
+    ],
+    "target_masks": [
+      0,
+      2,
+      4,
+      5
+    ]
+  },
+  "native_and_auxiliary": [
+    {
+      "auxiliary": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          2
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 2,
+        "target_classes": 1
+      },
+      "auxiliary_complement_converse": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          1
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 1,
+        "target_classes": 1
+      },
+      "compressed_vertices": 2,
+      "n": 3,
+      "native": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          true
+        ],
+        "component_source_sizes": [
+          1,
+          1
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 2,
+        "target_classes": 2
+      },
+      "native_converse": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          true
+        ],
+        "component_source_sizes": [
+          1,
+          1
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 2,
+        "target_classes": 2
+      },
+      "path_cube_size": 2,
+      "soft_weight_gap_at_least": "8/27"
+    },
+    {
+      "auxiliary": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          4
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 4,
+        "target_classes": 2
+      },
+      "auxiliary_complement_converse": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          2
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 2,
+        "target_classes": 2
+      },
+      "compressed_vertices": 3,
+      "n": 4,
+      "native": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          3
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 4,
+        "target_classes": 4
+      },
+      "native_converse": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          3
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 4,
+        "target_classes": 3
+      },
+      "path_cube_size": 8,
+      "soft_weight_gap_at_least": "8/27"
+    },
+    {
+      "auxiliary": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          11
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 11,
+        "target_classes": 4
+      },
+      "auxiliary_complement_converse": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          6
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 6,
+        "target_classes": 3
+      },
+      "compressed_vertices": 4,
+      "n": 5,
+      "native": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          10
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 11,
+        "target_classes": 12
+      },
+      "native_converse": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          10
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 11,
+        "target_classes": 10
+      },
+      "path_cube_size": 64,
+      "soft_weight_gap_at_least": "8/27"
+    },
+    {
+      "auxiliary": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          34
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 34,
+        "target_classes": 12
+      },
+      "auxiliary_complement_converse": {
+        "component_gap_at_least_8_over_9": [
+          true
+        ],
+        "component_source_sizes": [
+          18
+        ],
+        "global_gap_at_least_8_over_9": true,
+        "source_classes": 18,
+        "target_classes": 10
+      },
+      "compressed_vertices": 5,
+      "n": 6,
+      "native": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          33
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 34,
+        "target_classes": 56
+      },
+      "native_converse": {
+        "component_gap_at_least_8_over_9": [
+          true,
+          false
+        ],
+        "component_source_sizes": [
+          1,
+          33
+        ],
+        "global_gap_at_least_8_over_9": false,
+        "source_classes": 34,
+        "target_classes": 34
+      },
+      "path_cube_size": 1024,
+      "soft_weight_gap_at_least": "8/27"
+    }
+  ],
+  "root_marking": [
+    {
+      "components": 3,
+      "n": 3,
+      "root_source_sink_strata": [
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            2
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 2,
+          "target_classes": 1
+        },
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            2
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 2,
+          "target_classes": 1
+        }
+      ]
+    },
+    {
+      "components": 4,
+      "n": 4,
+      "root_source_sink_strata": [
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            4
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 4,
+          "target_classes": 2
+        },
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            4
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 4,
+          "target_classes": 2
+        }
+      ]
+    },
+    {
+      "components": 5,
+      "n": 5,
+      "root_source_sink_strata": [
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            11
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 11,
+          "target_classes": 4
+        },
+        {
+          "component_gap_at_least_8_over_9": [
+            true
+          ],
+          "component_source_sizes": [
+            11
+          ],
+          "global_gap_at_least_8_over_9": true,
+          "source_classes": 11,
+          "target_classes": 4
+        }
+      ]
+    }
+  ],
+  "scope": "native electrical mod-8 receipts are not replaced by a toy residue; these are exact supplied-model controls",
+  "status": "FINITE-EXACT",
+  "universe": "every supplied-path free-bit word at native n=3..6; every first-root-marked full word at n=3..5"
+}
