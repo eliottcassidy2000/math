@@ -1,0 +1,12 @@
+0 menus 0 sec 0.0
+500 menus 70 sec 1.63
+1000 menus 180 sec 3.9
+1500 menus 251 sec 5.97
+2000 menus 370 sec 8.87
+2500 menus 490 sec 11.45
+3000 menus 628 sec 14.15
+3500 menus 699 sec 15.58
+ALL 3528 eligible source-targetpairs 700 capacity2 8 seconds 15.59
+three count 1
+(2625, 2628) [1981, 2458, 2659] 15
+two count 0

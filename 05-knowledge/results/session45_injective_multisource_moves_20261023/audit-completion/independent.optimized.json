@@ -1,0 +1,1089 @@
+{
+  "checks": 97841,
+  "finite_matching_tests": {
+    "families_including_empty_neighborhoods": 69904,
+    "laminar_families": 23524
+  },
+  "four_source_image_certificates": [
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1477,
+          -2
+        ],
+        [
+          1921,
+          2
+        ],
+        [
+          2837,
+          -2
+        ]
+      ],
+      "image_modulus": 256,
+      "potential_sha256": "8d3649824403b4572c619ccba140555bafe9e59bfa6459f334d08ad112dabff9"
+    },
+    {
+      "charge": [
+        [
+          1965,
+          2
+        ],
+        [
+          2234,
+          -2
+        ]
+      ],
+      "image_modulus": 256,
+      "potential_sha256": "697acd5f9e3e037a353ec9f75dba19ef4e446e15069d0cd48347c6b1a0e86b61"
+    }
+  ],
+  "global_guard_hostile": {
+    "edge_lift_values": [
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "joint_guard": "lift_0 != lift_1",
+    "neighbors": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  },
+  "harmonic_boundary": {
+    "full_bank_meaning": "nodewise harmonicity, not every ordinary per-port phase",
+    "raw_X_harmonic_mod256": true,
+    "raw_X_harmonic_mod512": false,
+    "scaled_2X_harmonic_mod512": true,
+    "three_source_all_dyadic_scope": "depends on independently audited complete original electrical filtration"
+  },
+  "join_controls": {
+    "full_C9_joint_lifts": 81,
+    "full_C9_local_lifts": 27,
+    "resource_disjointness_required": true,
+    "running_intersection_required": true
+  },
+  "native_hostile": {
+    "complete_target_fibre": [
+      [
+        1,
+        0,
+        5,
+        3,
+        2,
+        4,
+        6,
+        7
+      ],
+      [
+        1,
+        5,
+        4,
+        3,
+        2,
+        0,
+        6,
+        7
+      ],
+      [
+        4,
+        1,
+        5,
+        3,
+        2,
+        0,
+        6,
+        7
+      ]
+    ],
+    "eligible": [
+      [
+        1,
+        0,
+        5,
+        3,
+        2,
+        4,
+        6,
+        7
+      ],
+      [
+        1,
+        5,
+        4,
+        3,
+        2,
+        0,
+        6,
+        7
+      ]
+    ],
+    "full_source_paths": 407,
+    "nonclosed_remainder_available_resources": [
+      1,
+      2
+    ],
+    "normalized_F_R_resources": [
+      [
+        6929,
+        1001983,
+        1095168,
+        2090222
+      ],
+      [
+        41176,
+        347392,
+        1749759,
+        2055975
+      ],
+      [
+        35602,
+        568832,
+        1528319,
+        2061549
+      ]
+    ],
+    "normalized_port_hashes": [
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ],
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ],
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ]
+    ],
+    "pairwise_feasible": true,
+    "source": 2242,
+    "target": 3442,
+    "triple_feasible": false
+  },
+  "packets": [
+    {
+      "Y_nodewise_debts": [
+        {},
+        {},
+        {
+          "1965": 4,
+          "2234": -4
+        },
+        {},
+        {}
+      ],
+      "constituent_rectangles": [
+        {
+          "integer_X_debt": {
+            "1965": 12,
+            "2234": -12
+          },
+          "slots": [
+            0,
+            2
+          ]
+        },
+        {
+          "integer_X_debt": {
+            "1965": -12,
+            "2234": 12
+          },
+          "slots": [
+            1,
+            3
+          ]
+        }
+      ],
+      "frozen_integer_X_debt": {},
+      "input_sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd",
+      "kind": "four",
+      "normalized_union_resources": 8,
+      "ordinary_per_port_phase_changes": [],
+      "raw_ports_per_endpoint": 16,
+      "raw_union_ports": 32,
+      "shared_owner_arc_conflicts": [
+        {
+          "owners": [
+            0,
+            1
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            0,
+            4
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owners": [
+            0,
+            5
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "owners": [
+            0,
+            6
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owners": [
+            0,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owners": [
+            1,
+            3
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            1,
+            4
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owners": [
+            1,
+            6
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            2,
+            3
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            2,
+            4
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "owners": [
+            2,
+            6
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            2,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            3,
+            5
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "owners": [
+            3,
+            7
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            4,
+            5
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owners": [
+            4,
+            6
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            4,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            6,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            1,
+            0
+          ]
+        }
+      ],
+      "slots": [
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "phase_mod8": 4,
+          "source": 1425,
+          "source_automorphisms": 1,
+          "source_paths": 313,
+          "source_target_counts": {
+            "1965": 2,
+            "2234": 1
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "phase_mod8": 7,
+          "source": 1921,
+          "source_automorphisms": 1,
+          "source_paths": 323,
+          "source_target_counts": {
+            "1965": 1,
+            "2234": 1
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "phase_mod8": 6,
+          "source": 1477,
+          "source_automorphisms": 1,
+          "source_paths": 259,
+          "source_target_counts": {
+            "1965": 1,
+            "2234": 1
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              7,
+              7
+            ]
+          ],
+          "phase_mod8": 5,
+          "source": 2837,
+          "source_automorphisms": 1,
+          "source_paths": 559,
+          "source_target_counts": {
+            "1965": 2,
+            "2234": 1
+          }
+        }
+      ],
+      "sparse_4eU_mod8_per_port_phase_changes": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "Y_nodewise_debts": [
+        {
+          "2625": -4,
+          "2628": 4
+        },
+        {},
+        {
+          "2625": 4,
+          "2628": -4
+        },
+        {},
+        {
+          "2625": 4,
+          "2628": -4
+        }
+      ],
+      "constituent_rectangles": [
+        {
+          "integer_X_debt": {
+            "2625": 48,
+            "2628": -48
+          },
+          "slots": [
+            0,
+            2
+          ]
+        },
+        {
+          "integer_X_debt": {
+            "2625": 208,
+            "2628": -208
+          },
+          "slots": [
+            1,
+            3
+          ]
+        }
+      ],
+      "frozen_integer_X_debt": {
+        "2625": 256,
+        "2628": -256
+      },
+      "input_sha256": "7927e7447ba5a33d36807607ba6ea8842ebaf9990876aa39efe10094f7c220ba",
+      "kind": "three",
+      "normalized_union_resources": 8,
+      "ordinary_per_port_phase_changes": [],
+      "raw_ports_per_endpoint": 16,
+      "raw_union_ports": 32,
+      "shared_owner_arc_conflicts": [
+        {
+          "owners": [
+            0,
+            2
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            0,
+            3
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            0,
+            4
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            0,
+            6
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            0,
+            7
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            1,
+            2
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            1,
+            3
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            1,
+            6
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            1,
+            7
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            2,
+            3
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            2,
+            4
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            2,
+            5
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            2,
+            6
+          ],
+          "source_arc_values": [
+            1,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            3,
+            4
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            3,
+            5
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            3,
+            6
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            3,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            4,
+            5
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            4,
+            6
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            4,
+            7
+          ],
+          "source_arc_values": [
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "owners": [
+            5,
+            6
+          ],
+          "source_arc_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owners": [
+            6,
+            7
+          ],
+          "source_arc_values": [
+            1,
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "slots": [
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              7
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "phase_mod8": 2,
+          "source": 1981,
+          "source_automorphisms": 1,
+          "source_paths": 493,
+          "source_target_counts": {
+            "2625": 1,
+            "2628": 1
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "phase_mod8": 2,
+          "source": 2659,
+          "source_automorphisms": 1,
+          "source_paths": 575,
+          "source_target_counts": {
+            "2625": 2,
+            "2628": 4
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "phase_mod8": 2,
+          "source": 2458,
+          "source_automorphisms": 1,
+          "source_paths": 585,
+          "source_target_counts": {
+            "2625": 4,
+            "2628": 4
+          }
+        },
+        {
+          "fixed_physical_pins": [
+            [
+              0,
+              7
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "phase_mod8": 2,
+          "source": 2458,
+          "source_automorphisms": 1,
+          "source_paths": 585,
+          "source_target_counts": {
+            "2625": 4,
+            "2628": 4
+          }
+        }
+      ],
+      "sparse_4eU_mod8_per_port_phase_changes": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ],
+  "resource_carrier_quotient_hostile": {
+    "canon": 17301538,
+    "meaning": "Original metagraph tilings have unit capacity per normalized F/R tile. Raw owner-labelled ports define a different carrier; hidden owner lifts remain sidecars, not additional tiling capacity.",
+    "normalized_F_R_words": [
+      344062,
+      1046512,
+      1050639,
+      1753089
+    ],
+    "normalized_tile_capacity": 1,
+    "normalized_word": 344062,
+    "paths": [
+      [
+        7,
+        6,
+        5,
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      [
+        7,
+        6,
+        5,
+        2,
+        1,
+        3,
+        0,
+        4
+      ]
+    ],
+    "raw_union_ports": 8,
+    "source": 43
+  },
+  "source_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "source_pins": [
+    {
+      "bytes": 134104,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "bytes": 3357288,
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    }
+  ],
+  "status": "PASS AFTER EDGEWISE-HYPOTHESIS REPAIR"
+}

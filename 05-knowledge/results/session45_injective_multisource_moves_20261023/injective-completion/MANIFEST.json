@@ -1,0 +1,83 @@
+{
+  "status": "PROVED scoped finite-input completion theorems; FINITE-EXACT native controls",
+  "files": [
+    {
+      "path": "THEOREM.md",
+      "bytes": 25546,
+      "sha256": "4268616ccb2432c999c5827e227ab4658ba4ad48d10c0aba11309336d96ca3ea"
+    },
+    {
+      "path": "check.py",
+      "bytes": 20455,
+      "sha256": "3d30c288548220bad1b59f911dea5b87b067228dd4bea71049704246758e5aae"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1853,
+      "sha256": "ab5cc3d5d50b88b1bab72decd7f37db401ae92fcbdbe3ac732039f62aa8104ec"
+    },
+    {
+      "path": "candidate-input.json",
+      "bytes": 1631,
+      "sha256": "a11035beabff4eee5b99bf8cc104ea36a39eacc557c4841e84490763ed20673b"
+    },
+    {
+      "path": "packet-four-source.json",
+      "bytes": 16503,
+      "sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd"
+    },
+    {
+      "path": "packet-three-source.json",
+      "bytes": 11997,
+      "sha256": "7927e7447ba5a33d36807607ba6ea8842ebaf9990876aa39efe10094f7c220ba"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 14513,
+      "sha256": "fd6eb778eef9eadfe454edc8f7b0dfe365e5dcd037abe2c956d0c671e258b492"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 14513,
+      "sha256": "fd6eb778eef9eadfe454edc8f7b0dfe365e5dcd037abe2c956d0c671e258b492"
+    },
+    {
+      "path": "check_normalized.py",
+      "bytes": 3544,
+      "sha256": "a5af7456da4c6f4142560bdaddd16c16c960393cac340e5ec24f53c68fd3098b"
+    },
+    {
+      "path": "normalized.json",
+      "bytes": 956,
+      "sha256": "de6fc44a9593f0da044c405d28f01968c748de404466142c7067e2c6173c88f7"
+    },
+    {
+      "path": "normalized.optimized.json",
+      "bytes": 956,
+      "sha256": "de6fc44a9593f0da044c405d28f01968c748de404466142c7067e2c6173c88f7"
+    }
+  ],
+  "manifest_excludes_own_hash": true,
+  "normal_optimized_identical": true,
+  "checks": 71457,
+  "inherited_native_checks": 2087,
+  "reproduction": [
+    "python3 -B check.py --repo /path/to/math --out receipt.json",
+    "python3 -O -B check.py --repo /path/to/math --out receipt.optimized.json",
+    "cmp receipt.json receipt.optimized.json",
+    "python3 -B check_normalized.py --repo /path/to/math --out normalized.json",
+    "python3 -O -B check_normalized.py --repo /path/to/math --out normalized.optimized.json",
+    "cmp normalized.json normalized.optimized.json"
+  ],
+  "repository_changes": "None. All artifacts were written outside the checkout.",
+  "source_pins": "SOURCE_PINS.json",
+  "claim_boundaries": [
+    "Partial selected raw-port completion, not changed complete canonical metagraph incidence.",
+    "Owner maps identify declared observer pins/arc flags, not a common-host tournament amalgam.",
+    "Polynomial algorithms are measured in explicit authenticated relation/table size; relation generation may be exponential.",
+    "Packet audit independently checks original frozen character and literal resources, not producer universal-bank witnesses.",
+    "Matching iff fully guarded completion requires edgewise factorization after fixed shared coordinates; unresolved joint guards require separate compatible decorations or Section4 factor/residual tables.",
+    "Raw owner-labelled K/converse resource capacity and normalized native F/R tile-unit capacity are distinct; native completion uses normalized keys and retains actual lifts only as decorations."
+  ],
+  "normalized_carrier_checks": 203
+}

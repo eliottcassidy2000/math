@@ -1,0 +1,67 @@
+{
+  "checks": 203,
+  "native_hall_hostile_normalized_keys": [
+    6929,
+    41176,
+    35602
+  ],
+  "packet_normalized_keys": {
+    "packet-four-source.json": [
+      284821,
+      317909,
+      660606,
+      923390,
+      423741,
+      645314,
+      284377,
+      21593
+    ],
+    "packet-three-source.json": [
+      550701,
+      437898,
+      549677,
+      641878,
+      356585,
+      29489,
+      887398,
+      464098
+    ]
+  },
+  "quotient_hostile": {
+    "canon": 17301538,
+    "normalized_tile": [
+      344062,
+      1046512,
+      1050639,
+      1753089
+    ],
+    "normalized_unit_capacity": 1,
+    "paths": [
+      [
+        7,
+        6,
+        5,
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      [
+        7,
+        6,
+        5,
+        2,
+        1,
+        3,
+        0,
+        4
+      ]
+    ],
+    "raw_orbits": 2,
+    "raw_port_union": 8,
+    "source": 43,
+    "word": 344062
+  },
+  "status": "FINITE-EXACT PASS"
+}

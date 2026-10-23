@@ -1,0 +1,70 @@
+{
+  "do_not_publish": "All other files are scratch search inputs/output; no files were created in the publisher checkout.",
+  "main_result": "Four-source genuinely coupled injective native incidence circuit, primitive under complete six-pin16-state menu, exact universalmod256 image certificates and mod8-hostile controls.",
+  "publish_only": [
+    {
+      "bytes": 15390,
+      "path": "THEOREM.md",
+      "sha256": "e3de4f8946e99d3f7d45d2b68cf1c931d995d6303cc41f73acc5c4d5b18778e3"
+    },
+    {
+      "bytes": 888,
+      "path": "SOURCE_PINS.json",
+      "sha256": "f927d3d0ba0a103a467e865d44e2db52b35a78666b5aaf2de43df8683b6c57ce"
+    },
+    {
+      "bytes": 16503,
+      "path": "packet.json",
+      "sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd"
+    },
+    {
+      "bytes": 438755,
+      "path": "image_witnesses.json",
+      "sha256": "35dcbd2843c0613a06aeca9da2ed9333c56d671a030d314ea8882b1bf2ea456c"
+    },
+    {
+      "bytes": 12316,
+      "path": "check.py",
+      "sha256": "ce5188bf46a81548bf73963a1ad9de2e7531d90abdb202f2ab8e1122f33deb6f"
+    },
+    {
+      "bytes": 3650,
+      "path": "solve_images.py",
+      "sha256": "ac15378e9926d93c774316ce3119369589a6f8511f5cda15a5f922d53b7e0c17"
+    },
+    {
+      "bytes": 77240,
+      "path": "receipt.json",
+      "sha256": "bf2bde43c3e25aff4445f41bd36868c8ad8792e15d77023fb388d8fb3876dffe"
+    },
+    {
+      "bytes": 77240,
+      "path": "receipt.optimized.json",
+      "sha256": "bf2bde43c3e25aff4445f41bd36868c8ad8792e15d77023fb388d8fb3876dffe"
+    },
+    {
+      "bytes": 4038,
+      "path": "search_native_menu.py",
+      "sha256": "c45f52bce2ef7b760a4096ffeb3ce351f4a85098d0b8982bbd8463338dbd387d"
+    },
+    {
+      "bytes": 23249,
+      "path": "target_pair_inventory.json",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "bytes": 23249,
+      "path": "target_pair_inventory.optimized.json",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "bytes": 968,
+      "path": "VERIFICATION.json",
+      "sha256": "70b849d0b27ca249df2811d1ed15ffc2881b2ead09f489571ae233c69d402222"
+    }
+  ],
+  "scope": "Full original aggregate harmonic banks; original per-slot Xphase. Universal per-slot phases and fullcanonicalatlas rewire are NOT claimed.",
+  "source_directory": "/workspace/scratch/07d5532f2fce/session45-multisource-trades",
+  "status": "READY FOR SOLE PUBLISHER; audit may independently review",
+  "suggested_destination_leaf": "multisource-trades"
+}

@@ -1,0 +1,18 @@
+{
+  "commands": [
+    "python3 -B check.py --repo <math> --out receipt.json",
+    "python3 -O -B check.py --repo <math> --out receipt.optimized.json",
+    "cmp receipt.json receipt.optimized.json",
+    "python3 -B solve_images.py --repo <math> --modulus 256 --out image_witnesses.json",
+    "python3 -B search_native_menu.py --repo <math> --out target_pair_inventory.normal.json",
+    "python3 -O -B search_native_menu.py --repo <math> --out target_pair_inventory.optimized.json",
+    "cmp target_pair_inventory.json target_pair_inventory.normal.json",
+    "cmp target_pair_inventory.json target_pair_inventory.optimized.json"
+  ],
+  "direct_image_checks": "Both full3528vectors satisfy exact integer image equations with saved correction ledgers.",
+  "finite_menu_normal_and_optimized_identical": true,
+  "modulus256_image_generator_completed": true,
+  "native_checker_normal_and_optimized_identical": true,
+  "native_checker_obligations": 1745,
+  "status": "PASS"
+}

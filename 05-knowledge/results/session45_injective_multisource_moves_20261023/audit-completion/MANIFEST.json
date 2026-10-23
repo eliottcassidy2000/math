@@ -1,0 +1,100 @@
+{
+  "excluded_workspace_only_files": [
+    "freeze.py",
+    "*.log"
+  ],
+  "files": [
+    {
+      "bytes": 13553,
+      "path": "AUDIT.md",
+      "sha256": "1f7b7dd31c833cf2fc5bfd0f107481b8ef89f2f680e4da0b5177abe54925b31c"
+    },
+    {
+      "bytes": 4409,
+      "path": "INPUT_HASHES.json",
+      "sha256": "7eeadb011221ad4060056e99ee2a71b6f67bb4fcdf3e0dd122d033f180d233d8"
+    },
+    {
+      "bytes": 18039,
+      "path": "audit.py",
+      "sha256": "cf8a699ee5c2f3c0c77ec2a4159c9cbfbbab28196f1c4233a9f1445f700e59f1"
+    },
+    {
+      "bytes": 14513,
+      "path": "completion.normal.json",
+      "sha256": "fd6eb778eef9eadfe454edc8f7b0dfe365e5dcd037abe2c956d0c671e258b492"
+    },
+    {
+      "bytes": 14513,
+      "path": "completion.optimized.json",
+      "sha256": "fd6eb778eef9eadfe454edc8f7b0dfe365e5dcd037abe2c956d0c671e258b492"
+    },
+    {
+      "bytes": 77240,
+      "path": "four-source.normal.json",
+      "sha256": "bf2bde43c3e25aff4445f41bd36868c8ad8792e15d77023fb388d8fb3876dffe"
+    },
+    {
+      "bytes": 77240,
+      "path": "four-source.optimized.json",
+      "sha256": "bf2bde43c3e25aff4445f41bd36868c8ad8792e15d77023fb388d8fb3876dffe"
+    },
+    {
+      "bytes": 19410,
+      "path": "independent.normal.json",
+      "sha256": "42e79ecdba24443777455e8b1418be00a3d42e5b5da2a3a3f0eca2ed1b6ea0dc"
+    },
+    {
+      "bytes": 19410,
+      "path": "independent.optimized.json",
+      "sha256": "42e79ecdba24443777455e8b1418be00a3d42e5b5da2a3a3f0eca2ed1b6ea0dc"
+    },
+    {
+      "bytes": 956,
+      "path": "normalized.normal.json",
+      "sha256": "de6fc44a9593f0da044c405d28f01968c748de404466142c7067e2c6173c88f7"
+    },
+    {
+      "bytes": 956,
+      "path": "normalized.optimized.json",
+      "sha256": "de6fc44a9593f0da044c405d28f01968c748de404466142c7067e2c6173c88f7"
+    },
+    {
+      "bytes": 19410,
+      "path": "relocated.normal.json",
+      "sha256": "42e79ecdba24443777455e8b1418be00a3d42e5b5da2a3a3f0eca2ed1b6ea0dc"
+    },
+    {
+      "bytes": 19410,
+      "path": "relocated.optimized.json",
+      "sha256": "42e79ecdba24443777455e8b1418be00a3d42e5b5da2a3a3f0eca2ed1b6ea0dc"
+    },
+    {
+      "bytes": 4439,
+      "path": "three-source.normal.json",
+      "sha256": "81d79733ee3e925da99fc287bf0abecbd77b31f66abbeb41f2cb8a4025e27f4d"
+    },
+    {
+      "bytes": 4439,
+      "path": "three-source.optimized.json",
+      "sha256": "81d79733ee3e925da99fc287bf0abecbd77b31f66abbeb41f2cb8a4025e27f4d"
+    }
+  ],
+  "independent_checks": 97841,
+  "normal_optimized_identical": true,
+  "original_source_provenance": "INPUT_HASHES.json",
+  "producer_replay_checks": {
+    "completion": 71457,
+    "four_source": 1745,
+    "normalized": 203,
+    "three_source": 1102470
+  },
+  "publication_layout_test": {
+    "layout": "Nested mock repository with injective-completion, multisource-trades, source-circuits, and audit-completion siblings",
+    "source_and_publication_layouts_normal_optimized_byte_identical": true,
+    "status": "PASS",
+    "unchanged_logical_receipt_sha256": "42e79ecdba24443777455e8b1418be00a3d42e5b5da2a3a3f0eca2ed1b6ea0dc",
+    "working_directory": "/tmp"
+  },
+  "status": "PASS"
+}

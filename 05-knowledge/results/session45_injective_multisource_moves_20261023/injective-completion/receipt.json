@@ -1,0 +1,723 @@
+{
+  "candidate_audit": {
+    "all_retained_records": [
+      {
+        "mask": 317722,
+        "path": [
+          3,
+          1,
+          7,
+          2,
+          4,
+          0,
+          5,
+          6
+        ],
+        "phase": 2,
+        "source": 913,
+        "target": 398
+      },
+      {
+        "mask": 430489,
+        "path": [
+          3,
+          2,
+          1,
+          7,
+          4,
+          0,
+          5,
+          6
+        ],
+        "phase": 2,
+        "source": 913,
+        "target": 528
+      },
+      {
+        "mask": 718719,
+        "path": [
+          7,
+          6,
+          4,
+          2,
+          5,
+          0,
+          3,
+          1
+        ],
+        "phase": 2,
+        "source": 2701,
+        "target": 528
+      },
+      {
+        "mask": 972735,
+        "path": [
+          7,
+          6,
+          2,
+          5,
+          4,
+          0,
+          3,
+          1
+        ],
+        "phase": 2,
+        "source": 2701,
+        "target": 398
+      }
+    ],
+    "input_sha256": "a11035beabff4eee5b99bf8cc104ea36a39eacc557c4841e84490763ed20673b",
+    "integer_current_debt": {
+      "398": 0,
+      "528": 0,
+      "913": 0,
+      "2701": 0
+    },
+    "literal_ports_per_endpoint": 8,
+    "resource_orbits_per_endpoint": 2,
+    "scope": "Partial selected K/converse-closed resources. Extends only if proposed resources avoid unavailable remainder. No full-atlas incidence rewiring.",
+    "source_ids": [
+      913,
+      2701
+    ],
+    "union_literal_ports": 16
+  },
+  "checks": 71457,
+  "finite_matching_universe": {
+    "laminar_tuples": 15600,
+    "max_slots": 4,
+    "nonempty_neighborhood_tuples": 54240,
+    "resources": 4
+  },
+  "full_kernel_join": {
+    "equal_quotient_hostile_counts": [
+      3,
+      3
+    ],
+    "equal_quotient_hostile_joint": 0,
+    "full_joint_lifts": 81,
+    "local_lifts": [
+      27,
+      27
+    ]
+  },
+  "inherited_native_lift_authentication": {
+    "checks": 2087,
+    "gluing_cases": 144,
+    "local_lifts": 27,
+    "source_path": "05-knowledge/results/session44_guarded_native_moves_20261023/coupled-moves/check.py",
+    "whole_source_three_cell_lifts": 81
+  },
+  "native_hostile": {
+    "complete_target_fibre": [
+      {
+        "mask": 6929,
+        "path": [
+          1,
+          0,
+          5,
+          3,
+          2,
+          4,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      },
+      {
+        "mask": 41176,
+        "path": [
+          1,
+          5,
+          4,
+          3,
+          2,
+          0,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      },
+      {
+        "mask": 35602,
+        "path": [
+          4,
+          1,
+          5,
+          3,
+          2,
+          0,
+          6,
+          7
+        ],
+        "phase": 5,
+        "source": 2242,
+        "target": 3442
+      }
+    ],
+    "eligible": [
+      0,
+      1
+    ],
+    "full_source_count": 407,
+    "global_injective": false,
+    "minimal_slot_count": 3,
+    "normalized_owner_maps": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    ],
+    "original_phase_mod8": 5,
+    "pairwise_injective": true,
+    "physical_neighbor_hashes": [
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ],
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ],
+      [
+        "6fbb1fbcbb155204ec153e555b0f58731f3e2f50a9ac2dda0bfd2e9eb031d857",
+        "287b25fc11c602a5bd22b476713d69e3ba7e43f2d66138d3622efcf286e29fc4"
+      ]
+    ],
+    "resource_orbit_sizes": [
+      4,
+      4,
+      4
+    ],
+    "slots": 3,
+    "source": 2242,
+    "target": 3442
+  },
+  "physical_packet_audits": [
+    {
+      "all_retained_records": [
+        [
+          {
+            "mask": 1812330,
+            "path": [
+              0,
+              5,
+              3,
+              4,
+              6,
+              2,
+              1,
+              7
+            ],
+            "phase": 4,
+            "source": 1425,
+            "target": 1965
+          },
+          {
+            "mask": 1779242,
+            "path": [
+              0,
+              2,
+              3,
+              4,
+              6,
+              5,
+              1,
+              7
+            ],
+            "phase": 4,
+            "source": 1425,
+            "target": 2234
+          }
+        ],
+        [
+          {
+            "mask": 660606,
+            "path": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              2,
+              6,
+              7
+            ],
+            "phase": 7,
+            "source": 1921,
+            "target": 1965
+          },
+          {
+            "mask": 923390,
+            "path": [
+              0,
+              6,
+              3,
+              4,
+              5,
+              2,
+              1,
+              7
+            ],
+            "phase": 7,
+            "source": 1921,
+            "target": 2234
+          }
+        ],
+        [
+          {
+            "mask": 1210236,
+            "path": [
+              0,
+              6,
+              5,
+              3,
+              4,
+              2,
+              1,
+              7
+            ],
+            "phase": 6,
+            "source": 1477,
+            "target": 2234
+          },
+          {
+            "mask": 1206133,
+            "path": [
+              0,
+              6,
+              2,
+              3,
+              4,
+              5,
+              1,
+              7
+            ],
+            "phase": 6,
+            "source": 1477,
+            "target": 1965
+          }
+        ],
+        [
+          {
+            "mask": 1398360,
+            "path": [
+              0,
+              2,
+              3,
+              4,
+              6,
+              5,
+              1,
+              7
+            ],
+            "phase": 5,
+            "source": 2837,
+            "target": 2234
+          },
+          {
+            "mask": 1332248,
+            "path": [
+              0,
+              1,
+              3,
+              4,
+              6,
+              5,
+              2,
+              7
+            ],
+            "phase": 5,
+            "source": 2837,
+            "target": 1965
+          }
+        ]
+      ],
+      "common_host_amalgamation_claimed": false,
+      "current_debt": {
+        "1425": 0,
+        "1477": 0,
+        "1921": 0,
+        "1965": 0,
+        "2234": 0,
+        "2837": 0
+      },
+      "current_debt_mod256_zero": true,
+      "input": "packet-four-source.json",
+      "input_sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd",
+      "integer_current_debt_zero": true,
+      "ports_per_endpoint": 16,
+      "resource_keys_per_endpoint": [
+        [
+          "1e6df4732706afe90d8126c5c27edc26f123931f4ed3df3fa76011499050aa34",
+          "004ee320ade6e7c82b59d8cdb3f7155d7a2ee26a506305cb8a9ecaf14fd48667",
+          "11dfe78ea8460b324c46c37b4de43afa932373c75619cd6da2173bf6ce4de043",
+          "05b581fee225b539b5f0183d4e7cb44834edc1d99514d2fd5f76bfd840ac66e7"
+        ],
+        [
+          "7b7de02436be9f66bd324dca208c76c1433f2601d74eb0490d6c9769359a7718",
+          "182ddc2f4ed87f9e53daa5e1d38b237bf27dcd1ec335c6b4a8e474d558cf86d6",
+          "0820ae0012db1cac400858468810f05eefa7530341039418cbae1d9e3bfb524e",
+          "470021b0d73493535a20a697d868d40bc742dc6ee39f4f51f296f168f9a5f952"
+        ]
+      ],
+      "resource_orbits_per_endpoint": 4,
+      "shared_owner_overlap_conflicts": [
+        {
+          "owner_pair": [
+            0,
+            4
+          ],
+          "source_values": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owner_pair": [
+            0,
+            7
+          ],
+          "source_values": [
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "owner_pair": [
+            3,
+            7
+          ],
+          "source_values": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "owner_pair": [
+            4,
+            7
+          ],
+          "source_values": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "slots": 4,
+      "source_owner_maps": {
+        "1425": [
+          7,
+          1,
+          2,
+          3,
+          4,
+          0,
+          5,
+          6
+        ],
+        "1477": [
+          7,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          0
+        ],
+        "1921": [
+          7,
+          4,
+          1,
+          2,
+          3,
+          5,
+          6,
+          0
+        ],
+        "2837": [
+          1,
+          0,
+          4,
+          7,
+          2,
+          5,
+          3,
+          6
+        ]
+      },
+      "unavailable_remainder_scope": "Any unchanged remainder disjoint from the proposed endpoint resources; a sufficient common condition is disjointness from the union of both endpoint resources.",
+      "union_raw_ports": 32
+    },
+    {
+      "all_retained_records": [
+        [
+          {
+            "mask": 550701,
+            "path": [
+              7,
+              4,
+              1,
+              3,
+              5,
+              2,
+              6,
+              0
+            ],
+            "phase": 2,
+            "source": 1981,
+            "target": 2625
+          },
+          {
+            "mask": 1659253,
+            "path": [
+              7,
+              2,
+              1,
+              3,
+              4,
+              6,
+              5,
+              0
+            ],
+            "phase": 2,
+            "source": 1981,
+            "target": 2628
+          }
+        ],
+        [
+          {
+            "mask": 1205034,
+            "path": [
+              3,
+              2,
+              5,
+              1,
+              7,
+              6,
+              4,
+              0
+            ],
+            "phase": 2,
+            "source": 2659,
+            "target": 2625
+          },
+          {
+            "mask": 1455273,
+            "path": [
+              3,
+              1,
+              2,
+              4,
+              7,
+              6,
+              5,
+              0
+            ],
+            "phase": 2,
+            "source": 2659,
+            "target": 2628
+          }
+        ],
+        [
+          {
+            "mask": 699927,
+            "path": [
+              7,
+              3,
+              4,
+              5,
+              1,
+              6,
+              2,
+              0
+            ],
+            "phase": 2,
+            "source": 2458,
+            "target": 2628
+          },
+          {
+            "mask": 1034455,
+            "path": [
+              7,
+              4,
+              2,
+              5,
+              1,
+              6,
+              3,
+              0
+            ],
+            "phase": 2,
+            "source": 2458,
+            "target": 2625
+          }
+        ],
+        [
+          {
+            "mask": 1144093,
+            "path": [
+              7,
+              2,
+              5,
+              6,
+              4,
+              1,
+              3,
+              0
+            ],
+            "phase": 2,
+            "source": 2458,
+            "target": 2628
+          },
+          {
+            "mask": 1633053,
+            "path": [
+              7,
+              4,
+              5,
+              6,
+              3,
+              2,
+              1,
+              0
+            ],
+            "phase": 2,
+            "source": 2458,
+            "target": 2625
+          }
+        ]
+      ],
+      "common_host_amalgamation_claimed": false,
+      "current_debt": {
+        "1981": 0,
+        "2458": 0,
+        "2625": 256,
+        "2628": -256,
+        "2659": 0
+      },
+      "current_debt_mod256_zero": true,
+      "input": "packet-three-source.json",
+      "input_sha256": "7927e7447ba5a33d36807607ba6ea8842ebaf9990876aa39efe10094f7c220ba",
+      "integer_current_debt_zero": false,
+      "ports_per_endpoint": 16,
+      "resource_keys_per_endpoint": [
+        [
+          "5a03749224776a3545fdbe8917d1fcadc80c1431be0d50793198e157bfead138",
+          "05b75192c5fcaa8c11648975df2f6c751cb2804429656e60420e3732288491c4",
+          "2da05217e3ded1749dc8ded362f65694286e87ee14746d63cab40e91cb07fb6b",
+          "1add55ae780f7c80226e079053f65249da73b199f98bd6be0b66e156186725fc"
+        ],
+        [
+          "08ce5f6a0ce560b13b3b5d0951864c0baab0a8ee400c5a08fce1ea34e3b761ac",
+          "460f77231c2a130a8dbab757217934c1514ec4703d49300e7f60be551e37f5f1",
+          "18036e1b73771c60e6347054c2bc7c3b149ae280c99dba4b3f5afaa8be4247a4",
+          "30a84fce679a87c19511812b10db6ce21ea5d6988e1c0eacfcb4318dfad845bb"
+        ]
+      ],
+      "resource_orbits_per_endpoint": 4,
+      "shared_owner_overlap_conflicts": [
+        {
+          "owner_pair": [
+            0,
+            7
+          ],
+          "source_values": [
+            0,
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "slots": 4,
+      "source_owner_maps": {
+        "1981": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "2458": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "2659": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unavailable_remainder_scope": "Any unchanged remainder disjoint from the proposed endpoint resources; a sufficient common condition is disjointness from the union of both endpoint resources.",
+      "union_raw_ports": 32
+    }
+  ],
+  "source_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "status": "FINITE-EXACT PASS",
+  "unavailable_remainder": {
+    "available_resources": [
+      1,
+      2
+    ],
+    "resource": 0,
+    "three_slot_completion": false,
+    "two_slot_witness": [
+      2,
+      1
+    ]
+  }
+}

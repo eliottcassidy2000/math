@@ -1,0 +1,69 @@
+{
+  "normal_and_optimized_runs": 4,
+  "output_directory_argument": true,
+  "repo_argument": true,
+  "reproductions": [
+    {
+      "capacity_two": 7,
+      "files": [
+        {
+          "bytes": 1504636,
+          "path": "all_menus.json",
+          "sha256": "6887a2c7fd67f4831433c1a7118eb5cbd5180d0f17972ae03b6ca1fc5591ffc4"
+        },
+        {
+          "bytes": 3847,
+          "path": "three_candidate.json",
+          "sha256": "014b44433724d6d327f6d60effd13ffbe41661102fe211a87dd935f7f7c1265b"
+        },
+        {
+          "bytes": 4415,
+          "path": "three_candidates.json",
+          "sha256": "9144e24abc95375cec46202bc5f5b7ac3d8e03c2cdcbe0a55a36038d4be2a9d4"
+        },
+        {
+          "bytes": 2,
+          "path": "two_candidates.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "menus": 681,
+      "normal_optimized_and_original_byte_identical": true,
+      "search": "search.py",
+      "three_source_supports": 1,
+      "two_source_supports": 0
+    },
+    {
+      "capacity_two": 8,
+      "files": [
+        {
+          "bytes": 1548772,
+          "path": "all_menus.json",
+          "sha256": "103330c76531c9bcc4c09cb7ed164d142fd9e5a4c92797b7ef47dba5ddc74b0e"
+        },
+        {
+          "bytes": 3847,
+          "path": "three_candidate.json",
+          "sha256": "014b44433724d6d327f6d60effd13ffbe41661102fe211a87dd935f7f7c1265b"
+        },
+        {
+          "bytes": 4415,
+          "path": "three_candidates.json",
+          "sha256": "9144e24abc95375cec46202bc5f5b7ac3d8e03c2cdcbe0a55a36038d4be2a9d4"
+        },
+        {
+          "bytes": 2,
+          "path": "two_candidates.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "menus": 700,
+      "normal_optimized_and_original_byte_identical": true,
+      "search": "search_all_sources.py",
+      "three_source_supports": 1,
+      "two_source_supports": 0
+    }
+  ],
+  "status": "PASS; discovery universe and all JSON bytes unchanged",
+  "working_directory_ancestor_fallback_tested": true
+}

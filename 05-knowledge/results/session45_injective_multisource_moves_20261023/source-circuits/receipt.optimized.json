@@ -1,0 +1,295 @@
+{
+  "checks": 1102470,
+  "individual_rectangles": [
+    {
+      "integer_X_debt": {
+        "2625": 48,
+        "2628": -48
+      },
+      "mod4_Y_debts": [
+        {
+          "2625": -2,
+          "2628": 2
+        },
+        {},
+        {
+          "2625": 2,
+          "2628": -2
+        },
+        {},
+        {
+          "2625": 2,
+          "2628": -2
+        }
+      ],
+      "slots": [
+        0,
+        2
+      ]
+    },
+    {
+      "integer_X_debt": {
+        "2625": 208,
+        "2628": -208
+      },
+      "mod4_Y_debts": [
+        {
+          "2625": -2,
+          "2628": 2
+        },
+        {},
+        {
+          "2625": 2,
+          "2628": -2
+        },
+        {},
+        {
+          "2625": 2,
+          "2628": -2
+        }
+      ],
+      "slots": [
+        1,
+        3
+      ]
+    }
+  ],
+  "joint_integer_X_debt": {
+    "2625": 256,
+    "2628": -256
+  },
+  "literal_resource_counts": {
+    "per_endpoint": 4,
+    "ports_per_endpoint": 16,
+    "union": 8,
+    "union_ports": 32
+  },
+  "mod256_preserved": true,
+  "original_resource_keys": [
+    [
+      550701,
+      549677,
+      356585,
+      887398
+    ],
+    [
+      437898,
+      641878,
+      29489,
+      464098
+    ]
+  ],
+  "packet_sha256": "7927e7447ba5a33d36807607ba6ea8842ebaf9990876aa39efe10094f7c220ba",
+  "raw_X_mod512_harmonic": false,
+  "scaled2X_mod512_harmonic_and_preserved": true,
+  "scope": "Partial selected paired-black resource replacement. Finite minimum source support applies only to four-slot common equal-mixed-label-target-pair moves with endpoints and an indexed internal arc retained. All-dyadic full-bank interpretation uses the independently audited complete electrical filtration and actual harmonic scaling, not exact integer X equality; no global arbitrary remainder insertion and no full per-port bank preservation.",
+  "shared_pins": [
+    {
+      "new_phase": 2,
+      "old_phase": 2,
+      "pins": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1981
+    },
+    {
+      "new_phase": 2,
+      "old_phase": 2,
+      "pins": [
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 2659
+    },
+    {
+      "new_phase": 2,
+      "old_phase": 2,
+      "pins": [
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 2458
+    },
+    {
+      "new_phase": 2,
+      "old_phase": 2,
+      "pins": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 2458
+    }
+  ],
+  "source_X": {
+    "1981": 151,
+    "2458": 127,
+    "2659": 231
+  },
+  "source_labels": {
+    "1981": [
+      0,
+      1,
+      1,
+      0,
+      23
+    ],
+    "2458": [
+      1,
+      1,
+      0,
+      0,
+      127
+    ],
+    "2659": [
+      0,
+      1,
+      1,
+      0,
+      103
+    ]
+  },
+  "source_path_counts": {
+    "1981": 493,
+    "2458": 585,
+    "2659": 575
+  },
+  "status": "FINITE-EXACT PASS",
+  "target_X": [
+    141,
+    141
+  ],
+  "target_labels": {
+    "2625": [
+      0,
+      0,
+      1,
+      1,
+      13
+    ],
+    "2628": [
+      0,
+      0,
+      1,
+      1,
+      13
+    ]
+  },
+  "universe": {
+    "actual_source_paths": 1102392,
+    "black_endpoint_arc_menus": 700,
+    "canonical_sources": 3528,
+    "capacity2_menus": [
+      [
+        901,
+        649,
+        1833
+      ],
+      [
+        1886,
+        2625,
+        2628
+      ],
+      [
+        2203,
+        69,
+        72
+      ],
+      [
+        2210,
+        69,
+        72
+      ],
+      [
+        2333,
+        69,
+        72
+      ],
+      [
+        2458,
+        2625,
+        2628
+      ],
+      [
+        2769,
+        493,
+        727
+      ],
+      [
+        3298,
+        69,
+        72
+      ]
+    ],
+    "genuine_three_source_four_slot_repairs": [
+      [
+        2625,
+        2628,
+        1981,
+        2458,
+        2659
+      ]
+    ],
+    "genuine_two_source_four_slot_repairs": []
+  }
+}
