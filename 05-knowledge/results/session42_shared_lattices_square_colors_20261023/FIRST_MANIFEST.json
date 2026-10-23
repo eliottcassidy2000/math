@@ -1,0 +1,44 @@
+{
+  "status": "FROZEN_AFTER_INDEPENDENT_SQUARE_WORD_AUDIT",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1367,
+      "sha256": "458a2ea2772245caa014496286dc1f52848a840cbb44264e1a585287414bf33e"
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "bytes": 1638,
+      "sha256": "2867221bea87e20955f8c9c52f30726f04fbbf0ee139831dd033ab71723b4be5"
+    },
+    {
+      "path": "SQUARE_WORD_RECONSTRUCTION.md",
+      "bytes": 6595,
+      "sha256": "d5053c6163eeb17f8e3f6f6d276b3c6516b43ad5b68d033c5069d5bec78a09cc"
+    },
+    {
+      "path": "check_square_words.py",
+      "bytes": 2289,
+      "sha256": "831a5b530541329dd9e6aa51d4462957e4f44433a2bc1c7865dc14d804131648"
+    },
+    {
+      "path": "twin_witness.json",
+      "bytes": 629,
+      "sha256": "f9ff8729133d81ec30993c2c2f2ca1da2734520eae2aac60667caddd3badf813"
+    },
+    {
+      "path": "square_words_receipt.json",
+      "bytes": 18333,
+      "sha256": "64771d5c11226d89270d6c869a014e180e2c005d98972eeafcae205eed2e8c6f"
+    },
+    {
+      "path": "square_words_receipt.optimized.json",
+      "bytes": 18333,
+      "sha256": "64771d5c11226d89270d6c869a014e180e2c005d98972eeafcae205eed2e8c6f"
+    }
+  ],
+  "commands": [
+    "python3 check_square_words.py",
+    "python3 -O check_square_words.py"
+  ]
+}

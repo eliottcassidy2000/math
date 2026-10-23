@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "c3970f9ce906b292e4948cc502782b030b670be0b17c4660083cbe23212eb4b9",
+  "manifest_files": 5,
+  "source_pins": 4,
+  "independent_burnside_disks": 251,
+  "quartic_candidates": 84676,
+  "primitive_normalization_pairs": 1101,
+  "pell_bound": 500
+}

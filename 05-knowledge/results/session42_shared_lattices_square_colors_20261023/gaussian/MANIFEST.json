@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN",
+  "files": [
+    {
+      "path": "RESULTS.md",
+      "bytes": 10711,
+      "sha256": "ded2a05be5f152312c36f6b53c15f04dddac023d8d9fc745f78098967ca91d03"
+    },
+    {
+      "path": "check.py",
+      "bytes": 2923,
+      "sha256": "52b11218ab5efbde90ecd78c417da4b1b1505846187dbb53c4edfa8c8b373cda"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 270,
+      "sha256": "99f96aeb19461434d116ea11266461d97092e5dca2a429beef5c18461ef44a87"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 270,
+      "sha256": "99f96aeb19461434d116ea11266461d97092e5dca2a429beef5c18461ef44a87"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 1022,
+      "sha256": "2c391a9741b43935a31a5f935c59b8c979a24c1a0ea751d1d74f468e2a2d70d2"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

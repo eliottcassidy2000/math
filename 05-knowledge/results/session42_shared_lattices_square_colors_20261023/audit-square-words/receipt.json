@@ -1,0 +1,1077 @@
+{
+  "status": "PASS",
+  "checks": 138776,
+  "permutation_census": [
+    {
+      "N": 1,
+      "permutations": 1,
+      "sum_words": 1,
+      "double_words": 0
+    },
+    {
+      "N": 2,
+      "permutations": 2,
+      "sum_words": 1,
+      "double_words": 1
+    },
+    {
+      "N": 3,
+      "permutations": 6,
+      "sum_words": 6,
+      "double_words": 0
+    },
+    {
+      "N": 4,
+      "permutations": 24,
+      "sum_words": 16,
+      "double_words": 8
+    },
+    {
+      "N": 5,
+      "permutations": 120,
+      "sum_words": 120,
+      "double_words": 0
+    },
+    {
+      "N": 6,
+      "permutations": 720,
+      "sum_words": 648,
+      "double_words": 72
+    },
+    {
+      "N": 7,
+      "permutations": 5040,
+      "sum_words": 5040,
+      "double_words": 0
+    },
+    {
+      "N": 8,
+      "permutations": 40320,
+      "sum_words": 38592,
+      "double_words": 1728
+    }
+  ],
+  "minimal_ambiguous_square_sum_order": 36,
+  "finite_obstructions": [
+    {
+      "N": 2,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2
+      ]
+    },
+    {
+      "N": 4,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "N": 4,
+      "d": 2,
+      "obstruction": "isolated vertex",
+      "witness": [
+        2,
+        4
+      ]
+    },
+    {
+      "N": 6,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2
+      ]
+    },
+    {
+      "N": 6,
+      "d": 3,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "N": 8,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "N": 8,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "N": 8,
+      "d": 4,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "N": 10,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        9,
+        10
+      ]
+    },
+    {
+      "N": 10,
+      "d": 5,
+      "obstruction": "isolated vertex",
+      "witness": [
+        4,
+        5,
+        9,
+        10
+      ]
+    },
+    {
+      "N": 12,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "N": 12,
+      "d": 2,
+      "obstruction": "isolated vertex",
+      "witness": [
+        10,
+        12
+      ]
+    },
+    {
+      "N": 12,
+      "d": 3,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "N": 12,
+      "d": 6,
+      "obstruction": "isolated vertex",
+      "witness": [
+        3,
+        9
+      ]
+    },
+    {
+      "N": 14,
+      "d": 1,
+      "obstruction": "isolated vertex",
+      "witness": [
+        9,
+        10
+      ]
+    },
+    {
+      "N": 14,
+      "d": 7,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "N": 16,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "N": 16,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ]
+    },
+    {
+      "N": 16,
+      "d": 4,
+      "obstruction": "more than two leaves",
+      "witness": [
+        4,
+        8,
+        12,
+        16
+      ]
+    },
+    {
+      "N": 16,
+      "d": 8,
+      "obstruction": "isolated vertex",
+      "witness": [
+        8,
+        16
+      ]
+    },
+    {
+      "N": 18,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 18,
+      "d": 3,
+      "obstruction": "isolated vertex",
+      "witness": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "N": 18,
+      "d": 9,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "N": 20,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 20,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        2,
+        4,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ]
+    },
+    {
+      "N": 20,
+      "d": 5,
+      "obstruction": "isolated vertex",
+      "witness": [
+        4,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "N": 20,
+      "d": 10,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "N": 22,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "N": 22,
+      "d": 11,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "N": 24,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "N": 24,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "N": 24,
+      "d": 3,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        18,
+        21,
+        24
+      ]
+    },
+    {
+      "N": 24,
+      "d": 4,
+      "obstruction": "more than two leaves",
+      "witness": [
+        17,
+        18,
+        19,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "N": 24,
+      "d": 6,
+      "obstruction": "more than two leaves",
+      "witness": [
+        3,
+        9,
+        18,
+        24
+      ]
+    },
+    {
+      "N": 24,
+      "d": 12,
+      "obstruction": "more than two leaves",
+      "witness": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "N": 26,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26
+      ]
+    },
+    {
+      "N": 26,
+      "d": 13,
+      "obstruction": "more than two leaves",
+      "witness": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26
+      ]
+    },
+    {
+      "N": 28,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "N": 28,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        26,
+        28
+      ]
+    },
+    {
+      "N": 28,
+      "d": 7,
+      "obstruction": "isolated vertex",
+      "witness": [
+        18,
+        19,
+        20,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "N": 28,
+      "d": 14,
+      "obstruction": "more than two leaves",
+      "witness": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "N": 30,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "N": 30,
+      "d": 3,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        4,
+        5,
+        9,
+        12,
+        15,
+        18,
+        27,
+        30
+      ]
+    },
+    {
+      "N": 30,
+      "d": 5,
+      "obstruction": "isolated vertex",
+      "witness": [
+        4,
+        9,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        24,
+        25,
+        29,
+        30
+      ]
+    },
+    {
+      "N": 30,
+      "d": 15,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "N": 32,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "N": 32,
+      "d": 2,
+      "obstruction": "more than two leaves",
+      "witness": [
+        10,
+        12,
+        14,
+        16,
+        26,
+        28,
+        30,
+        32
+      ]
+    },
+    {
+      "N": 32,
+      "d": 4,
+      "obstruction": "more than two leaves",
+      "witness": [
+        25,
+        26,
+        27,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "N": 32,
+      "d": 8,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11,
+        16,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "N": 32,
+      "d": 16,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "N": 34,
+      "d": 1,
+      "obstruction": "more than two leaves",
+      "witness": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "N": 34,
+      "d": 17,
+      "obstruction": "more than two leaves",
+      "witness": [
+        1,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        18,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    }
+  ],
+  "witness": {
+    "N": 36,
+    "d": 6,
+    "path": [
+      3,
+      33,
+      16,
+      9,
+      27,
+      22,
+      14,
+      11,
+      25,
+      24,
+      1,
+      35,
+      29,
+      20,
+      5,
+      31,
+      18,
+      7,
+      2,
+      23,
+      26,
+      10,
+      6,
+      19,
+      30,
+      34,
+      15,
+      21,
+      4,
+      12,
+      13,
+      36,
+      28,
+      8,
+      17,
+      32
+    ],
+    "twin": [
+      9,
+      27,
+      22,
+      3,
+      33,
+      16,
+      20,
+      5,
+      31,
+      18,
+      7,
+      29,
+      35,
+      14,
+      11,
+      25,
+      24,
+      1,
+      8,
+      17,
+      32,
+      4,
+      12,
+      13,
+      36,
+      28,
+      21,
+      15,
+      10,
+      6,
+      19,
+      30,
+      34,
+      2,
+      23,
+      26
+    ],
+    "ordered_square_roots": [
+      6,
+      7,
+      5,
+      6,
+      7,
+      6,
+      5,
+      6,
+      7,
+      5,
+      6,
+      8,
+      7,
+      5,
+      6,
+      7,
+      5,
+      3,
+      5,
+      7,
+      6,
+      4,
+      5,
+      7,
+      8,
+      7,
+      6,
+      5,
+      4,
+      5,
+      7,
+      8,
+      6,
+      5,
+      7
+    ]
+  },
+  "scope": "ordered adjacent sums of Hamiltonian permutations of [1,N]; finite minimality uses all admissible block shifts below36"
+}

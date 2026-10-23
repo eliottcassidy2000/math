@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "disk_thresholds": 10001,
+  "checks": 42129,
+  "rational_rotation_pairs": 5888,
+  "first_multiple_octant_shell": 25,
+  "scope": "D4 orbit reconstruction, radial decoder, quartic separator, local norm algebras; not a Bott or wiring equivalence"
+}

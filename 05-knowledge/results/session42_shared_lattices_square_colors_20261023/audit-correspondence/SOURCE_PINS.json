@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "CORRESPONDENCE_AND_OBSTRUCTIONS.md",
+      "bytes": 12002,
+      "sha256": "2fec5e4073c00518031ae67871e2a3469cc68c28233add1bdd73a463aef2d8b2"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 481,
+      "sha256": "b838bd50ea32993a22a5353a43be027001b5eb4ab12f828d89e5d63263d66726"
+    },
+    {
+      "path": "check.py",
+      "bytes": 3584,
+      "sha256": "5d51ce621bcb85c60922a0972a587c6a7cf7db8e5b08e1c86d1063796c6eca8b"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 9876,
+      "sha256": "a9d9f2ee5042ae1e8496427761d2ba5041277667fb738696b3c06e59cc309f8d"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 9876,
+      "sha256": "a9d9f2ee5042ae1e8496427761d2ba5041277667fb738696b3c06e59cc309f8d"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

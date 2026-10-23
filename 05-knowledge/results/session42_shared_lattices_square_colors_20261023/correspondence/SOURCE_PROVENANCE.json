@@ -1,0 +1,12 @@
+[
+  {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "path": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+    "sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7"
+  },
+  {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "path": "05-knowledge/results/trijection_reset_20261020/graph_audit.md",
+    "sha256": "e80bf447fe02bdebeb09841c6b59d1f2f108b8dcc07f7a00fd43bad0afb5d26e"
+  }
+]

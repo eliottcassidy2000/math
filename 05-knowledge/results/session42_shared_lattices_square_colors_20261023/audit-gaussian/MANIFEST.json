@@ -1,0 +1,40 @@
+{
+  "status": "PASS_AFTER_SOURCE_BOUNDARY_REPAIRS",
+  "audited_source_manifest_sha256": "c3970f9ce906b292e4948cc502782b030b670be0b17c4660083cbe23212eb4b9",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 4247,
+      "sha256": "fc18c800043f2122d325b5283a7c1166e07f3c2465022e1fcf8b9a0c14f330e4"
+    },
+    {
+      "path": "check_independent.py",
+      "bytes": 3428,
+      "sha256": "82327fbdd846f621872da49009b92e43c0cb421bc5e4b46dfa345d631dde5101"
+    },
+    {
+      "path": "independent.json",
+      "bytes": 285,
+      "sha256": "ad92b640b300e1e2ac58292eb1d27e0a5501a7a02e15704585dc8905238c434b"
+    },
+    {
+      "path": "independent.optimized.json",
+      "bytes": 285,
+      "sha256": "ad92b640b300e1e2ac58292eb1d27e0a5501a7a02e15704585dc8905238c434b"
+    },
+    {
+      "path": "replay.json",
+      "bytes": 270,
+      "sha256": "99f96aeb19461434d116ea11266461d97092e5dca2a429beef5c18461ef44a87"
+    },
+    {
+      "path": "replay.optimized.json",
+      "bytes": 270,
+      "sha256": "99f96aeb19461434d116ea11266461d97092e5dca2a429beef5c18461ef44a87"
+    }
+  ],
+  "commands": [
+    "python3 check_independent.py",
+    "python3 -O check_independent.py"
+  ]
+}

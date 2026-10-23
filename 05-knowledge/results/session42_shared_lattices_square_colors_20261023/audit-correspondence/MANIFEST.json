@@ -1,0 +1,45 @@
+{
+  "status": "PASS_FROZEN",
+  "source_manifest_sha256": "951cc83c5afb662ac8ce6f6e4ee6ffeff790392a5f03501e97e89fcf2d8154c0",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 2991,
+      "sha256": "4ff087d5809ae562923932bcc1ddf9dd35e271424daa6909ecd0859e65f196cc"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 912,
+      "sha256": "951cc83c5afb662ac8ce6f6e4ee6ffeff790392a5f03501e97e89fcf2d8154c0"
+    },
+    {
+      "path": "independent.optimized.json",
+      "bytes": 499,
+      "sha256": "1e7f2db05ae306b6c0bbc6f9d84cf04f1b8743cd432edb33c01c498e8aebd27c"
+    },
+    {
+      "path": "independent.py",
+      "bytes": 2354,
+      "sha256": "cb78485fd072ce5392b24e6ac9f43b634e9afa8df27981732dbbd3a2767b3995"
+    },
+    {
+      "path": "independent.receipt.json",
+      "bytes": 499,
+      "sha256": "1e7f2db05ae306b6c0bbc6f9d84cf04f1b8743cd432edb33c01c498e8aebd27c"
+    },
+    {
+      "path": "replay.normal.json",
+      "bytes": 9876,
+      "sha256": "a9d9f2ee5042ae1e8496427761d2ba5041277667fb738696b3c06e59cc309f8d"
+    },
+    {
+      "path": "replay.optimized.json",
+      "bytes": 9876,
+      "sha256": "a9d9f2ee5042ae1e8496427761d2ba5041277667fb738696b3c06e59cc309f8d"
+    }
+  ],
+  "commands": [
+    "python3 independent.py",
+    "python3 -O independent.py"
+  ]
+}

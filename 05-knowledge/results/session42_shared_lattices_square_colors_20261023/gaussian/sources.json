@@ -1,0 +1,25 @@
+{
+  "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+  "sources": [
+    {
+      "path": "05-knowledge/results/collatz_bott_marked_periodicity_20261007d.md",
+      "sha256": "968efb46c6a87a4bff8f6f74261bf07e4623b7a31913f7ea754308ccf8814c1b"
+    },
+    {
+      "path": "01-canon/theorems/THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md",
+      "sha256": "1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51"
+    },
+    {
+      "path": "01-canon/theorems/THM-3536-berggren-angle-languages-signed-c4-and-harmonic-density.md",
+      "sha256": "b9583abc50a59748ab962b804133180ae0c9f1589414cfa6c249d04026377965"
+    },
+    {
+      "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/additive/RESULTS.md",
+      "sha256": "a2672b3949335ca9f7361371bd0446f602f4cb7a91189438708d43c97214e8d6"
+    }
+  ],
+  "web_primary": [
+    "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bott4.pdf",
+    "https://webhomes.maths.ed.ac.uk/~v1ranick/papers/abs.pdf"
+  ]
+}

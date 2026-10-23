@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "source_files_pinned": 5,
+  "independent_direct_matrix_counts": [
+    [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      4,
+      2,
+      2,
+      2,
+      3
+    ],
+    [
+      4,
+      11,
+      6,
+      4,
+      3,
+      14
+    ],
+    [
+      5,
+      34,
+      18,
+      12,
+      10,
+      120
+    ]
+  ],
+  "four_order_local_signs": [
+    2,
+    -2,
+    -2,
+    2
+  ],
+  "scope": "independent finite controls plus separate proof audit"
+}
