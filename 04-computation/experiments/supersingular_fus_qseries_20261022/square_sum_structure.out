@@ -14,7 +14,9 @@ python 3.10.0
   first gains (square j^2 enters at n = ceil((j^2+1)/2)): [3, 5, 9, 13, 19, 25, 33, 41, 51, 61]
   first losses (square k^2 leaves at n = k^2): [4, 9, 16, 25, 36, 49, 64, 81]
   simultaneous gain and loss (invisible run boundaries) below 6400: [9, 25, 289, 841]
-  all coincidences n <= 10^7: [1, 9, 25, 289, 841, 9801, 28561, 332929, 970225] = k^2 for k in [1, 3, 5, 17, 29, 99, 169, 577, 985]
+  all coincidences n <= 10^7: [1, 9, 25, 289, 841, 9801, 28561, 332929, 970225] = k^2 for k in [1, 3, 5, 17, 29, 99, 169, 577, 985] (OEIS A079496;
+    odd-index Pell numbers 1, 5, 29, 169, 985 and even-index half-companion Pell numbers 3, 17, 99, 577;
+    n = 1 satisfies the Pell condition but is degenerate: its window [2, 1] is empty)
   (at n = 25 the square 25 leaves the window [n+1, 2n-1] exactly as 49 enters: 7^2 - 2*5^2 = -1)
 
 == 3. the onset lemma and the extension mechanism ==
@@ -34,14 +36,24 @@ python 3.10.0
   16, 17, 18 are the 25-partners of 9, 8, 7: the reflection x -> 25 - x on the n = 12 components
 
 == 5. hostile probe: component sizes of other sum graphs a + b in S ==
-  squares       : last n < 120 with >= 3 components: (12, [3, 4, 5]); stages whose sizes contain a Pythagorean triple: [(12, [3, 4, 5])] (1 stages)
-  squares + 1   : last n < 120 with >= 3 components: (8, [1, 3, 4]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
-  squares - 1   : last n < 120 with >= 3 components: (12, [2, 4, 6]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
-  twice squares : last n < 120 with >= 3 components: (27, [3, 10, 14]); stages whose sizes contain a Pythagorean triple: [(24, [2, 3, 4, 5, 10]), (25, [2, 3, 4, 5, 11])] (2 stages)
-  triangular    : last n < 120 with >= 3 components: None; stages whose sizes contain a Pythagorean triple: [] (0 stages)
-  cubes         : last n < 120 with >= 3 components: (119, [2, 4, 4, 4, 105]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
-  pentagonal    : last n < 120 with >= 3 components: (18, [2, 6, 10]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
-  primes        : last n < 120 with >= 3 components: None; stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  squares       : last n < 120 with >= 3 components: (12, [3, 4, 5])
+                  exactly three components of Pythagorean sizes: [(12, [3, 4, 5])]; sizes containing a Pythagorean triple: [(12, [3, 4, 5])] (1 stages)
+  squares + 1   : last n < 120 with >= 3 components: (8, [1, 3, 4])
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  squares - 1   : last n < 120 with >= 3 components: (12, [2, 4, 6])
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  twice squares : last n < 120 with >= 3 components: (27, [3, 10, 14])
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [(24, [2, 3, 4, 5, 10]), (25, [2, 3, 4, 5, 11])] (2 stages)
+  triangular    : last n < 120 with >= 3 components: None
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  cubes         : last n < 120 with >= 3 components: (119, [2, 4, 4, 4, 105])
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  pentagonal    : last n < 120 with >= 3 components: (18, [2, 6, 10])
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  primes        : last n < 120 with >= 3 components: None
+                  exactly three components of Pythagorean sizes: []; sizes containing a Pythagorean triple: [] (0 stages)
+  verdict: exactly three components of Pythagorean sizes only for squares at n = 12; under the weaker
+  'contains' criterion twice-squares also hit at n = 24, 25 ({3,4,5} among five components)
 
 == 6. the Paley tournament QR_7: H(QR_7) = 189 and the free action of F_21 ==
   Hamiltonian paths of QR_7: 189

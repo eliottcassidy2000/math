@@ -1,0 +1,10 @@
+m = 3: strong floor f(m) = 3; max H = 3; H = 7 attained: no; H = 21 attained: no
+   odd values <= 61 attained: 1 3
+m = 4: strong floor f(m) = 5; max H = 5; H = 7 attained: no; H = 21 attained: no
+   odd values <= 61 attained: 1 3 5
+m = 5: strong floor f(m) = 9; max H = 15; H = 7 attained: no; H = 21 attained: no
+   odd values <= 61 attained: 1 3 5 9 11 13 15
+m = 6: strong floor f(m) = 15; max H = 45; H = 7 attained: no; H = 21 attained: no
+   odd values <= 61 attained: 1 3 5 9 11 13 15 17 19 23 25 27 29 31 33 37 41 43 45
+m = 7: strong floor f(m) = 25; max H = 189; H = 7 attained: no; H = 21 attained: no
+   odd values <= 61 attained: 1 3 5 9 11 13 15 17 19 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61

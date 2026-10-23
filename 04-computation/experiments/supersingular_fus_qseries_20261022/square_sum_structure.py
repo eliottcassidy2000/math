@@ -9,8 +9,8 @@ n = 1, 15, 16, 17, 23, 25..40); Gerbicz (CITED there) for all n >= 25.
 Parts
   1. components of Q_n for n <= 40 (counts, the n = 12 components and their sizes, the welding edges)
   2. new edges s(n) = #{a < n : a + n square} = floor(sqrt(2n-1)) - floor(sqrt(n)); run boundaries:
-     gains at n = ceil((j^2+1)/2), losses at n = k^2; simultaneous gain and loss exactly at
-     n = k^2 with k a Pell number (k^2 - 2t^2 = 1 or 2k^2 - m^2 = 1), i.e. n = 1, 9, 25, 289, 841, ...
+     gains at n = ceil((j^2+1)/2), losses at n = k^2; simultaneous gain and loss exactly at n = k^2 with
+     k in OEIS A079496 (k^2 - 2t^2 = 1 or 2k^2 - m^2 = 1): n = 9, 25, 289, 841, ... (n = 1 is degenerate)
   3. the onset lemma: if Q_n has a Hamiltonian path and Q_{n-1} has none, then s(n) >= 2
      (n is interior); the extension mechanism at 16, 17 and the loss at 18
   4. the owner's edge counts at n = 25 on {10,6,3,1,8,17}, {12,4,5,11}, {2,7,18,9,16}
@@ -146,7 +146,10 @@ def part2():
         ks.add(k2)
         m, k2 = 3 * m + 4 * k2, 2 * m + 3 * k2
     require(coinc == sorted(kk * kk for kk in ks), f"Pell characterisation: {coinc} vs {sorted(kk*kk for kk in ks)}")
-    print("  all coincidences n <= 10^7:", coinc, "= k^2 for k in", sorted(ks))
+    require(1 not in both, "n = 1 is not a genuine coincidence (no square ever lies in its window)")
+    print("  all coincidences n <= 10^7:", coinc, "= k^2 for k in", sorted(ks), "(OEIS A079496;")
+    print("    odd-index Pell numbers 1, 5, 29, 169, 985 and even-index half-companion Pell numbers 3, 17, 99, 577;")
+    print("    n = 1 satisfies the Pell condition but is degenerate: its window [2, 1] is empty)")
     print("  (at n = 25 the square 25 leaves the window [n+1, 2n-1] exactly as 49 enters: 7^2 - 2*5^2 = -1)")
 
 
@@ -274,21 +277,29 @@ def part5():
         "pentagonal": lambda x: (lambda r: r * r == 24 * x + 1 and (r + 1) % 6 == 0)(math.isqrt(24 * x + 1)),
         "primes": lambda x: x > 1 and all(x % d for d in range(2, math.isqrt(x) + 1)),
     }
+    exact_hits = {}
     for name, S in families.items():
-        pyth = []
+        pyth, exact = [], []
         last_multi = None
         for n in range(3, 120):
             c = components(n, S)
             if len(c) >= 3:
                 last_multi = (n, sorted(len(x) for x in c))
                 sz = sorted(len(x) for x in c)
+                if len(sz) == 3 and sz[0] ** 2 + sz[1] ** 2 == sz[2] ** 2:
+                    exact.append((n, sz))
                 for a, b, cc in itertools.combinations(sz, 3):
                     if a * a + b * b == cc * cc:
                         pyth.append((n, sz))
                         break
+        exact_hits[name] = exact
         lm = last_multi if last_multi is None or len(last_multi[1]) <= 8 else (last_multi[0], f"{len(last_multi[1])} components")
-        print(f"  {name:14s}: last n < 120 with >= 3 components: {lm}; stages whose sizes contain a Pythagorean triple: "
+        print(f"  {name:14s}: last n < 120 with >= 3 components: {lm}")
+        print(f"  {'':14s}  exactly three components of Pythagorean sizes: {exact}; sizes containing a Pythagorean triple: "
               f"{[(n, sz) for n, sz in pyth][:4]}{' ...' if len(pyth) > 4 else ''} ({len(pyth)} stages)")
+    require(sum(len(v) for v in exact_hits.values()) == 1 and exact_hits["squares"] == [(12, [3, 4, 5])], "exact criterion only at squares, n = 12")
+    print("  verdict: exactly three components of Pythagorean sizes only for squares at n = 12; under the weaker")
+    print("  'contains' criterion twice-squares also hit at n = 24, 25 ({3,4,5} among five components)")
 
 
 def part6():

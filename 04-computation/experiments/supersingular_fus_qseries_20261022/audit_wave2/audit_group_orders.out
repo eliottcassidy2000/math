@@ -1,0 +1,43 @@
+== 1. sporadic orders: auditor's factorisations against the decimals in level_ogg_lists.gp ==
+  M      808017424794512875886459904961710757005754368000000000  = script
+  B      4154781481226426191177580544000000  = script
+  Fi24'  1255205709190661721292800  = script
+  HN     273030912000000  = script
+  Fi22   64561751654400  = script
+  He     4030387200  = script
+  HS     44352000  = script
+  M12    95040  = script
+  L3(3)  5616  = script
+  Th     90745943887872000  = script
+  Co1    4157776806543360000  = script
+
+== 2. |M|/|B|, the owner's number, the 2A class ==
+  |M|/|B| = 2^5 * 3^7 * 5^3 * 7^4 * 11 * 13^2 * 29 * 41 * 59 * 71
+  2^5*3^7*5^3*7^4*11*13^2 = 39046339332000 ; |M|/|B| / (29*41*59*71) = 39046339332000 ; equal: True
+  |2A| = |M|/|2.B| = |M|/(2|B|) = 97239461142009186000 ; so |M|/|B| = 2 |2A| (B is a section of M, not a subgroup: C_M(2A) = 2.B)
+
+== 3. valuation classes ==
+  v_p(M) >= 2             : [2, 3, 5, 7, 11, 13]
+  v_p(M) = v_p(B) = 1     : [17, 19, 23, 31, 47]
+  v_p(M) = 1, v_p(B) = 0  : [29, 41, 59, 71]
+  primes of Co1 inside primes of B: True ; primes of Fi22: [2, 3, 5, 7, 11, 13]
+
+== 4. exponent table at 2, 3, 5, 7, 11, 13 ==
+  |M|/|B|: (5, 7, 3, 4, 1, 2) = note
+  |M|/|Fi24'|: (25, 4, 7, 3, 1, 2) = note
+  |M|/|Fi22|: (29, 11, 7, 5, 1, 2) = note
+  |M|/|Th|: (31, 10, 6, 4, 2, 2) = note
+  |M|/|HN|: (32, 14, 3, 5, 1, 3) = note
+  |M|/|He|: (36, 17, 7, 3, 2, 3) = note
+  |M|/|Co1|: (25, 11, 5, 4, 1, 2) = note
+  |B|/|Fi22|: (24, 4, 4, 1, 0, 0) = note
+  p -> v_p(|M|/|B|): {2: 5, 3: 7, 5: 3, 7: 4, 11: 1, 13: 2} ; values form a permutation of [1, 2, 3, 4, 5, 7]
+
+== 5. level-chain difference sizes (lists from the note's table, with the primes of the level) ==
+  [1, 2, 6]: |L1 minus L2|, |L2 minus L3|, |L3| = 4, 5, 6; nested: True
+  [1, 2, 10]: |L1 minus L2|, |L2 minus L3|, |L3| = 4, 6, 5; nested: True
+  [1, 3, 6]: |L1 minus L2|, |L2 minus L3|, |L3| = 6, 3, 6; nested: True
+  [1, 7, 21]: |L1 minus L2|, |L2 minus L3|, |L3| = 10, 1, 4; nested: True
+
+failures: []
+ALL AUDIT CHECKS PASSED

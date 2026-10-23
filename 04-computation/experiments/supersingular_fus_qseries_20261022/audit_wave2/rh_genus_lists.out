@@ -1,0 +1,45 @@
+  ***   Warning: new stack size = 200000000 (190.735 Mbytes).
+== 1. validation of the fixed-point formulas: nu(w_Q) = 2 - 2 tr(W_Q | S_2), squarefree M <= 150 ==
+  247 pairs (M, Q) checked, mismatches: 0
+
+== 2. squarefree M <= 1000 with genus(X_0(M)^+) = 0 (Riemann-Hurwitz) ==
+  44 levels: [1, 2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19, 21, 22, 23, 26, 29, 30, 31, 33, 34, 35, 38, 39, 41, 42, 46, 47, 51, 55, 59, 62, 66, 69, 70, 71, 78, 87, 94, 95, 105, 110, 119]
+  equals the recalled Conway-Norton squarefree N+ list: 1
+
+== 3. level-N rationality lists via Theorem 1.1: p prime, p not | N, p < 2000, genus(X_0(Np)^+) = genus(X_0(N)^+) ==
+  N = 1 (genus 0): [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 47, 59, 71]   = note's table
+  N = 2 (genus 0): [3, 5, 7, 11, 13, 17, 19, 23, 31, 47]   = note's table
+  N = 3 (genus 0): [2, 5, 7, 11, 13, 17, 23, 29]   = note's table
+  N = 5 (genus 0): [2, 3, 7, 11, 19]   = note's table
+  N = 6 (genus 0): [5, 7, 11, 13]   = note's table
+  N = 7 (genus 0): [2, 3, 5, 17]   = note's table
+  N = 10 (genus 0): [3, 7, 11]   = note's table
+  N = 11 (genus 0): [2, 3, 5]   = note's table
+  N = 13 (genus 0): [2, 3]   = note's table
+  N = 14 (genus 0): [3, 5]   = note's table
+  N = 15 (genus 0): [2, 7]   = note's table
+  N = 21 (genus 0): [2, 5]   = note's table
+  N = 22 (genus 0): [3, 5]   = note's table
+
+== 4. row 2- (X = X_0(2), X^p = X_0(2p)/w_p) ==
+  primes p < 2000 with genus(X_0(2p)/w_p) = 0: [3, 5, 7, 11, 23]  (Aricheta Table 1 / App. A: [3, 5, 7, 11, 23])
+  Aricheta Table 3 row 'gen X_0(2)^p' for p = 3..47: [0, 0, 0, 0, 1, 1, 1, 0, 2, 1, 4, 3, 4, 1]
+  Aricheta Table 3 row 'gen X_0^+(2)^p' for p = 3..47: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0]
+
+== 5. the note's drop-out genera ==
+  genus X_0^+(2p), p = 29, 41, 59, 71: [1, 1, 1, 1]   (note: 1, 1, 1, 1)
+  genus X_0^+(6p), p = 17, 19, 23, 31, 47: [1, 1, 1, 2, 3]   (note: 1, 1, 1, 2, 3)
+  genus X_0^+(2p), p = 17, 19, 23, 31, 47: [0, 0, 0, 0, 0]   (note: 0 for all five)
+
+== 6. nesting is automatic: for squarefree N | N' (p not | N') genus(X_0^+(N'p)) >= genus(X_0^+(Np)) ==
+  4850 pairs (M, Mq) with M squarefree <= 3000, q <= 47, Mq <= 6000: violations 0
+
+== 7. growth of genus(X_0^+(Np)) (row A of section 5: 'grows like Np/24') ==
+  N = 1, p = 101009: genus = 4091;  Np/24 = 4209;  psi(Np)/(12*2^omega(Np)) = 4209
+  N = 2, p = 102001: genus = 6301;  Np/24 = 8500;  psi(Np)/(12*2^omega(Np)) = 6375
+  N = 6, p = 106013: genus = 13116;  Np/24 = 26503;  psi(Np)/(12*2^omega(Np)) = 13252
+  N = 7, p = 107021: genus = 17619;  Np/24 = 31214;  psi(Np)/(12*2^omega(Np)) = 17837
+  N = 21, p = 121001: genus = 39955;  Np/24 = 105876;  psi(Np)/(12*2^omega(Np)) = 40334
+
+failures: 0
+ALL AUDIT CHECKS PASSED

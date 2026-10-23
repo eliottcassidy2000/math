@@ -19882,3 +19882,32 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Strongest survivor.** The z^10 identity Delta c_10 = delta_10 + Delta X_4^(10) + Delta X_5^(10) holds exactly, as rationals (audit), for all 13 classes. Loops <= 5 fix the L <= 10 forest-length slices, 75-83% of every H difference.
 - **Missing coordinate.** When moving to the next coefficient, recount blocks for every excess, L - e for all e, not only the levels already built. And the census level an effect first appears at is not the level of its whole.
 
+
+## MISTAKE-668 (2026-10-22, wave-2 note `05-knowledge/results/monster_levels_square_sum_7_21_20261022.md` (opus-2026-10-22-ssj, pre-audit commit 211ab1a1c1); found by the independent audit `04-computation/experiments/supersingular_fus_qseries_20261022/audit_wave2/REPORT.md`) -- a hostile-probe sentence that contradicted the script's own output, an inherited 3-4-5 theorem left uncredited, "Pell number" for a sequence that is not one, an order quotient written as a subgroup index, a false "no event" test, an automatic nesting presented as structure, and a wrong growth constant
+
+- **Claims.**
+  - "A Pythagorean size triple occurs in no other sum-graph family tested."
+  - "The only structural link to the 3-4-5 triangle is the welding square 25."
+  - The coincidences are "at k a Pell number".
+  - "[M : B]" and "B is the only subgroup this large".
+  - Row E: "(25,45) and (45,75) carry no square-sum event".
+  - Row C presented the nesting L(21) in L(7) as Fricke-centralizer structure.
+  - Row A: "the genus grows like Np/24".
+- **First failed implications.**
+  - **Probe output.** The script's "contains a Pythagorean triple" criterion printed two hits for twice-squares, at n = 24 and 25 (sizes [2,3,4,5,10] and [2,3,4,5,11]). The sentence was written from the stricter "exactly three components" reading.
+  - **Inheritance.** THM-4510 Corollary A3'' already proves that the window {15,16,17} is the tight triple (9,16,25), closing at 18. Corollary A3''' extends this to every primitive Pythagorean triple. The welding at 13 and 14 uses 16 as well as 25.
+  - **Misnomer.** The coincidence set k = 1, 3, 5, 17, 29, 99, 169, 577, 985 is OEIS A079496. The values 3, 17, 99, 577 are half-companion Pell numbers, and 41 is not a Pell number.
+  - **Index.** B is not a subgroup of M; 2.B = C_M(2A) is a non-split double cover. So |M|/|B| = 2[M : 2.B] = 2|2A|.
+  - **Event.** (25, 45) contains the Hamiltonian-cycle onset at n = 32.
+  - **Automatic nesting.** genus(X_0^+(M)) = sum over d | M of the newforms of level d with all signs +1. This is monotone under divisibility, so L(N') is inside L(N) for N | N' with no group theory.
+  - **Growth constant.** The genus grows like psi(N)p/(24*2^omega(N)), which equals Np/24 only at N = 1.
+- **Strongest survivor.**
+  - The level filtration 1 | 2 | 6 (M, B, Fi22) of the owner's three sets survives, confirmed by two further independent routes: Riemann-Hurwitz for p < 2000, and direct supersingular points for p < 200.
+  - So do the genus count, the s(n) law, the onset lemma and all the numbers.
+- **Missing coordinates.**
+  - Before stating a probe's verdict, re-read the probe's printed criterion.
+  - Search the cited inheritance for the same structural statement before calling a link "the only" one.
+  - Check a sequence name against its definition (OEIS) before naming it.
+  - Distinguish a subgroup index from an order quotient when a group is a quotient of a cover.
+  - Test the "no event" sentence against the inherited event table.
+  - Ask whether a nesting already follows from monotonicity before calling it structure.

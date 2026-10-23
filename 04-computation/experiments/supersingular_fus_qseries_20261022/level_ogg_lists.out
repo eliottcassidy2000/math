@@ -1,4 +1,3 @@
-  ***   Warning: new stack size = 256000000 (244.141 Mbytes).
 == cross-check of the newform count against Atkin-Lehner traces (squarefree M <= 150) ==
   91 squarefree levels, mismatches: 0
 
@@ -82,6 +81,9 @@
     [1, 2, 10]: [4, 6, 5]  nested: 1
     [1, 3, 6]: [6, 3, 6]  nested: 1
     [1, 7, 21]: [10, 1, 4]  nested: 1
+
+== monotonicity lemma: L(N') inside L(N) for N | N' (squarefree) ==
+  24 divisibility pairs among the 13 levels; violations: 0
 
 failures: 0
 ALL CHECKS PASSED

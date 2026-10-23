@@ -117,6 +117,18 @@ gplus_trace(M) = {
   my(full = (N) -> vecsort(concat(mapget(lists, N), factor(N)[, 1]~), , 8), chains = [[1, 2, 6], [1, 2, 10], [1, 3, 6], [1, 7, 21]]);
   for (i = 1, #chains, my(c = chains[i], A = if (c[1] == 1, OGG, full(c[1])), Bv = full(c[2]), Cv = full(c[3]));
     print("    ", c, ": ", [#A - #Bv, #Bv - #Cv, #Cv], "  nested: ", #setminus(Set(Bv), Set(A)) == 0 && #setminus(Set(Cv), Set(Bv)) == 0));
+  \\ monotonicity (audit F6): genus(X_0^+(M)) = sum over d | M of newplus(d) is monotone under divisibility,
+  \\ so for squarefree N | N' and p not dividing N', L(N') is inside L(N) minus the primes of N'
+  print("\n== monotonicity lemma: L(N') inside L(N) for N | N' (squarefree) ==");
+  my(mono = 0, pairs = 0);
+  for (a = 1, #levels, for (b = 1, #levels,
+    my(N = levels[a], Np = levels[b]);
+    if (N == Np || Np % N, next);
+    pairs++;
+    my(LN = Set(mapget(lists, N)), LNp = Set(mapget(lists, Np)), ex = select(q -> Np % q != 0, LN));
+    if (#setminus(LNp, Set(ex)) > 0, mono++; print("  violation: L(", Np, ") not inside L(", N, ")"))));
+  print("  ", pairs, " divisibility pairs among the 13 levels; violations: ", mono);
+  bad += mono;
   print("\nfailures: ", bad);
   if (bad == 0, print("ALL CHECKS PASSED"));
 }
