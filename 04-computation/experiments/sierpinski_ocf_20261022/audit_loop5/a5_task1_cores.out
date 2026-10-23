@@ -1,0 +1,21 @@
+networkx sanity: double edge + 2 loops vs quadruple edge isomorphic? False (must be False)
+cores_e1.json: 3 cores, by V {1: 1, 2: 2}; invalid 0; |Aut| mismatches 0; isomorphic duplicates 0; sum 1/|Aut| = 1/3 (0s)
+cores_e2.json: 15 cores, by V {1: 1, 2: 4, 3: 5, 4: 5}; invalid 0; |Aut| mismatches 0; isomorphic duplicates 0; sum 1/|Aut| = 13/12 (0s)
+cores_e3.json: 111 cores, by V {1: 1, 2: 7, 3: 20, 4: 36, 5: 30, 6: 17}; invalid 0; |Aut| mismatches 0; isomorphic duplicates 0; sum 1/|Aut| = 1661/240 (0s)
+cores_e4.json: 1076 cores, by V {1: 1, 2: 10, 3: 48, 4: 153, 5: 277, 6: 323, 7: 193, 8: 71}; invalid 0; |Aut| mismatches 0; isomorphic duplicates 0; sum 1/|Aut| = 47477/720 (4s)
+   networkx on the 71 cores with V = 8: 0 isomorphic pairs among 2485; all cubic: True; |Aut| (networkx vertex automorphisms x edge factor) equal to stored for 71/71
+cores_e5_v5.json: 2046 cores, by V {1: 1, 2: 14, 3: 99, 4: 481, 5: 1451}; invalid 0; |Aut| mismatches 0; isomorphic duplicates 0; sum 1/|Aut| = 77355961/1451520 (0s)
+   mass at (V, E) = (1, 5): cores+products 1/3840 vs configuration model 1/3840: ok
+   mass at (V, E) = (2, 6): cores+products 1969/46080 vs configuration model 1969/46080: ok
+   mass at (V, E) = (3, 7): cores+products 8723/10240 vs configuration model 8723/10240: ok
+   mass at (V, E) = (4, 8): cores+products 1656083/294912 vs configuration model 1656083/294912: ok
+   mass at (V, E) = (5, 9): cores+products 3658655/221184 vs configuration model 3658655/221184: ok
+   mass at (V, E) = (6, 10): cores+products 3556553/147456 vs configuration model 3556553/147456: ok
+   mass at (V, E) = (7, 11): cores+products 11316305/663552 vs configuration model 11316305/663552: ok
+   mass at (V, E) = (8, 12): cores+products 37182145/7962624 vs configuration model 37182145/7962624: ok
+   mass at (V, E) = (1, 6): cores+products 1/46080 vs configuration model 1/46080: ok
+   mass at (V, E) = (2, 7): cores+products 4043/322560 vs configuration model 4043/322560: ok
+   mass at (V, E) = (3, 8): cores+products 140569/245760 vs configuration model 140569/245760: ok
+   mass at (V, E) = (4, 9): cores+products 1606891/207360 vs configuration model 1606891/207360: ok
+   mass at (V, E) = (5, 10): cores+products 327803333/7077888 vs configuration model 327803333/7077888: ok
+mass formula: 25 (V, E) points (excess 1-4 all V, excess 5 with V <= 5), 0 mismatches

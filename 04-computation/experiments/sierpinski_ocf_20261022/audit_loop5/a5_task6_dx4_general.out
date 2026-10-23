@@ -1,0 +1,8 @@
+P_23: X_4(1) matrix mode +2.163749291470872e-02 (179s)
+D23_0: X_4(1) matrix mode +2.164103705481182e-02 (181s)
+D23_1: X_4(1) matrix mode +2.164236741117062e-02 (180s)
+D23_2: X_4(1) matrix mode +2.164237472535382e-02 (180s)
+D23_0: Delta X_4(1) matrix mode +3.544140e-06, DRT mode +3.544140e-06
+D23_1: Delta X_4(1) matrix mode +4.874496e-06, DRT mode +4.874496e-06
+D23_2: Delta X_4(1) matrix mode +4.881811e-06, DRT mode +4.881811e-06
+D23_1 - D23_2: matrix mode -7.3142e-09, DRT mode -7.3142e-09

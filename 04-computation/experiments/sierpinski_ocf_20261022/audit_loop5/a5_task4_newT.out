@@ -1,0 +1,16 @@
+gentourng regular 9-tournaments: 15 classes; class 11: distinct from R_9 True, from class 2 True; score check [np.int64(4)]
+N_9 class 11 (n = 9): exact blow-up scaling 18s, engine (K = 64, r = 0.35) 127s
+   L= 2: engine +9.464296706565910e-20  exact +0.000000000000000e+00 (0)  diff +9.5e-20
+   L= 4: engine +2.487122981317292e-19  exact +0.000000000000000e+00 (0)  diff +2.5e-19
+   L= 6: engine +5.419228098697703e-03  exact +5.419228098697691e-03 (320/59049)  diff +1.1e-17
+   L= 8: engine +1.690464646540673e-01  exact +1.690464646540674e-01 (808544/4782969)  diff -1.1e-16
+   L=10: engine +6.267503936788437e-01  exact +6.267503936788433e-01 (80938648/129140163)  diff +3.3e-16
+   L=12: engine +1.029165355173649e+00  exact +1.029165355173658e+00 (290666694224/282429536481)  diff -8.7e-15
+   max relative error over nonzero orders 8.4e-15; max |engine| at vanishing orders 2.5e-19
+R_9 (n = 9): exact blow-up scaling 3s, engine (K = 64, r = 0.35) 130s
+   L= 2: engine +2.722605901888823e-20  exact +0.000000000000000e+00 (0)  diff +2.7e-20
+   L= 4: engine -9.525151843342822e-20  exact +0.000000000000000e+00 (0)  diff -9.5e-20
+   L= 6: engine +5.419228098697701e-03  exact +5.419228098697691e-03 (320/59049)  diff +9.5e-18
+   L= 8: engine +1.743987887021639e-01  exact +1.743987887021639e-01 (278048/1594323)  diff +5.6e-17
+   L=10: engine +7.388155044117969e-01  exact +7.388155044117969e-01 (286232264/387420489)  diff +0.0e+00
+   max relative error over nonzero orders 1.8e-15; max |engine| at vanishing orders 9.5e-20

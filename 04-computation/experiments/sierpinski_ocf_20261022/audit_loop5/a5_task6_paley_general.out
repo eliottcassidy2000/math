@@ -1,0 +1,2 @@
+P_19: matrix mode q^4 X_4(1) = 6340.7731; DRT mode (paley_x4_scaling.out) 6340.7731; diff +4.3e-05 (99s)
+P_23: matrix mode q^4 X_4(1) = 6055.0577; DRT mode (paley_x4_scaling.out) 6055.0577; diff -4.5e-05 (186s)

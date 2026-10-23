@@ -1,0 +1,17 @@
+excess 4, V = 1: 1 cores, 5 length vectors (0 with K != 0), 0 mismatches
+excess 4, V = 2: 10 cores, 50 length vectors (3 with K != 0), 0 mismatches
+excess 4, V = 3: 48 cores, 238 length vectors (17 with K != 0), 0 mismatches
+excess 4, V = 4: 153 cores, 763 length vectors (46 with K != 0), 0 mismatches
+excess 4, V = 5: 277 cores, 1379 length vectors (122 with K != 0), 0 mismatches
+excess 4, V = 6: 323 cores, 1611 length vectors (118 with K != 0), 0 mismatches
+excess 4, V = 7: 193 cores, 961 length vectors (74 with K != 0), 0 mismatches
+excess 4, V = 8: 71 cores, 354 length vectors (25 with K != 0), 0 mismatches
+   (57s)
+excess 5, V = 1: 1 cores, 1 length vectors (0 with K != 0), 0 mismatches
+excess 5, V = 2: 14 cores, 14 length vectors (0 with K != 0), 0 mismatches
+excess 5, V = 3: 99 cores, 99 length vectors (6 with K != 0), 0 mismatches
+excess 5, V = 4: 481 cores, 481 length vectors (0 with K != 0), 0 mismatches
+excess 5, V = 5: 1451 cores, 1451 length vectors (112 with K != 0), 0 mismatches
+   (468s)
+z^10 kernel table: 2987 cores, 6094 length vectors (5323 with K != 0), 0 mismatches against the engine
+TOTAL: 13501 kernel values compared, 0 mismatches (553s)

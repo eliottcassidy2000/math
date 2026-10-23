@@ -1,0 +1,5 @@
+(a) Ising weights vs loop_engine4.drt_coeffs, n in 7..43, 5 complex z: max |diff| = 1.78e-15
+(b) P_23: basis matrices B_k(z Shat) = alpha_k P + gamma_k Shat, max relative residual 3.34e-15
+(b) D23_0: basis matrices B_k(z Shat) = alpha_k P + gamma_k Shat, max relative residual 3.67e-15
+(c) ops_drt (E, F+, F-) equal to ops_basis5 composed with the 5-basis map: max |diff| = 5.55e-17
+(d) symbolic: m1 (P a, Shat g o_t) and m2 (P ((b-a)+(b+a) o_t o_h)/2, Shat (h/2)(o_t-o_h)) from the resolvents: all equal

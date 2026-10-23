@@ -1,0 +1,9 @@
+excess 4, V = 1: 1 cores, 6 even-length vectors (0 with K != 0, max |K| 0), 0 mismatches
+excess 4, V = 2: 10 cores, 70 even-length vectors (10 with K != 0, max |K| 131328), 0 mismatches
+excess 4, V = 3: 48 cores, 288 even-length vectors (39 with K != 0, max |K| 41472), 0 mismatches
+excess 4, V = 4: 153 cores, 1071 even-length vectors (178 with K != 0, max |K| 48128), 0 mismatches
+excess 4, V = 5: 277 cores, 1662 even-length vectors (309 with K != 0, max |K| 39936), 0 mismatches
+excess 4, V = 6: 323 cores, 2261 even-length vectors (400 with K != 0, max |K| 10240), 0 mismatches
+excess 4, V = 7: 193 cores, 1158 even-length vectors (192 with K != 0, max |K| 4608), 0 mismatches
+excess 4, V = 8: 71 cores, 497 even-length vectors (92 with K != 0, max |K| 3072), 0 mismatches
+TOTAL: 7013 kernel values compared, 0 mismatches (138s)

@@ -1,0 +1,59 @@
+converse_class field: {'D23_6': 10, 'D23_7': 11, 'D23_10': 6, 'D23_11': 7, 'P_23': 12}
+P_23: kappa = H 2^22/23! = 2.556980364; forest identity sum N_L/(n)_L equal: True
+D23_0: kappa = H 2^22/23! = 2.556939182; forest identity sum N_L/(n)_L equal: True
+universal kappa e(1 - 3/(2n) + 25/(8n^2)) = 2.557060482; exact kappa(P_23) = 2.556980364; ratio - 1 = +3.13e-05
+phi_2 = N_2/n^2 = 22/23 (= (n-1)/n: True)
+
+Table of section 8 (exact, s3, s4, loop slices with universal / exact kappa; shares):
+D23_0    TT5 1478 exact -1.61059e-05  s3 -4.024e-06 (0.2499)  s4 -8.4446e-06 (0.5243)  slices(univ) -1.2662e-05 (0.7862)  slices(exact kappa) 0.7862  exact L=8,10 slices -1.2662e-05 (0.7862)
+D23_1    TT5 1466 exact -1.93731e-05  s3 -5.232e-06 (0.2701)  s4 -1.0711e-05 (0.5529)  slices(univ) -1.5517e-05 (0.8009)  slices(exact kappa) 0.8010  exact L=8,10 slices -1.5517e-05 (0.8010)
+D23_2    TT5 1466 exact -1.93455e-05  s3 -5.232e-06 (0.2704)  s4 -1.0704e-05 (0.5533)  slices(univ) -1.5492e-05 (0.8008)  slices(exact kappa) 0.8008  exact L=8,10 slices -1.5493e-05 (0.8008)
+D23_3    TT5 1470 exact -1.81044e-05  s3 -4.829e-06 (0.2668)  s4 -9.9255e-06 (0.5482)  slices(univ) -1.4458e-05 (0.7986)  slices(exact kappa) 0.7986  exact L=8,10 slices -1.4459e-05 (0.7986)
+D23_4    TT5 1492 exact -1.23716e-05  s3 -2.616e-06 (0.2114)  s4 -5.8263e-06 (0.4709)  slices(univ) -9.4191e-06 (0.7613)  slices(exact kappa) 0.7614  exact L=8,10 slices -9.4194e-06 (0.7614)
+D23_5    TT5 1494 exact -1.20767e-05  s3 -2.415e-06 (0.1999)  s4 -5.4912e-06 (0.4547)  slices(univ) -9.0934e-06 (0.7530)  slices(exact kappa) 0.7530  exact L=8,10 slices -9.0937e-06 (0.7530)
+D23_6    TT5 1484 exact -1.45120e-05  s3 -3.421e-06 (0.2357)  s4 -7.3206e-06 (0.5045)  slices(univ) -1.1265e-05 (0.7763)  slices(exact kappa) 0.7763  exact L=8,10 slices -1.1265e-05 (0.7763)
+D23_7    TT5 1482 exact -1.52759e-05  s3 -3.622e-06 (0.2371)  s4 -7.7427e-06 (0.5069)  slices(univ) -1.1899e-05 (0.7790)  slices(exact kappa) 0.7790  exact L=8,10 slices -1.1900e-05 (0.7790)
+D23_8    TT5 1490 exact -1.25599e-05  s3 -2.817e-06 (0.2243)  s4 -6.1371e-06 (0.4886)  slices(univ) -9.6583e-06 (0.7690)  slices(exact kappa) 0.7690  exact L=8,10 slices -9.6586e-06 (0.7690)
+D23_9    TT5 1486 exact -1.39486e-05  s3 -3.220e-06 (0.2308)  s4 -6.9505e-06 (0.4983)  slices(univ) -1.0816e-05 (0.7754)  slices(exact kappa) 0.7754  exact L=8,10 slices -1.0816e-05 (0.7754)
+D23_10   TT5 1484 exact -1.45120e-05  s3 -3.421e-06 (0.2357)  s4 -7.3206e-06 (0.5045)  slices(univ) -1.1265e-05 (0.7763)  slices(exact kappa) 0.7763  exact L=8,10 slices -1.1265e-05 (0.7763)
+D23_11   TT5 1482 exact -1.52759e-05  s3 -3.622e-06 (0.2371)  s4 -7.7427e-06 (0.5069)  slices(univ) -1.1899e-05 (0.7790)  slices(exact kappa) 0.7790  exact L=8,10 slices -1.1900e-05 (0.7790)
+D23_dbl  TT5 1430 exact -2.88147e-05  s3 -8.854e-06 (0.3073)  s4 -1.7438e-05 (0.6052)  slices(univ) -2.3836e-05 (0.8272)  slices(exact kappa) 0.8272  exact L=8,10 slices -2.3836e-05 (0.8272)
+ranges: s3/exact 0.1999..0.3073; s4/exact 0.4547..0.6052; slices/exact 0.7530..0.8272
+loop slices vs exact slices (universal kappa): max relative difference 3.13e-05; with exact kappa 1.59e-12
+
+Laws (slope per TT5, Paley offset, max residual), 13 classes | 11 classes (converse duplicates D23_10, D23_11 removed):
+   exact   : slope +2.64977e-07, offset +5.52603e-06, max res 3.854e-07 | slope +2.65290e-07, offset +5.49588e-06, max res 3.641e-07
+   s3      : slope +1.00612e-07, offset +2.60209e-18, max res 2.927e-18 | slope +1.00612e-07, offset +2.43945e-18, max res 2.765e-18
+   x4      : slope -1.12458e-07, offset +9.62020e-07, max res 6.825e-08 | slope -1.12409e-07, offset +9.57155e-07, max res 6.476e-08
+   dress   : slope +1.99107e-07, offset +2.27682e-18, max res 5.728e-18 | slope +1.99107e-07, offset +1.40946e-18, max res 5.609e-18
+   s4      : slope +1.87262e-07, offset +9.62020e-07, max res 6.825e-08 | slope +1.87311e-07, offset +9.57155e-07, max res 6.476e-08
+   slices_u: slope +2.32406e-07, offset +3.39262e-06, max res 2.417e-07 | slope +2.32581e-07, offset +3.37524e-06, max res 2.292e-07
+   s4 / exact (13 classes): slope 0.7067, offset 0.1741
+   s4 / exact (11 classes): slope 0.7061, offset 0.1742
+   slices_u / exact (13 classes): slope 0.8771, offset 0.6139
+   slices_u / exact (11 classes): slope 0.8767, offset 0.6141
+   non-TT5 residuals (13 classes): corr(exact, s4) = +0.993514; regression s4-res on exact-res 0.1790; rms ratio 0.1802; max-abs ratio 0.1771
+   non-TT5 residuals (11 classes): corr(exact, s4) = +0.993461; regression s4-res on exact-res 0.1775; rms ratio 0.1787; max-abs ratio 0.1779
+   D23_1 - D23_2: exact -2.7673e-08; s4 -7.3142e-09; Delta c_10 split +6.3279e-09
+
+z^10 bullet: ratios per class
+   D23_0   : dX4^(10)/delta_10 = -8.610; dX5^(10)/dX4^(10) = -0.2597
+   D23_1   : dX4^(10)/delta_10 = -9.194; dX5^(10)/dX4^(10) = -0.2432
+   D23_2   : dX4^(10)/delta_10 = -9.209; dX5^(10)/dX4^(10) = -0.2428
+   D23_3   : dX4^(10)/delta_10 = -9.104; dX5^(10)/dX4^(10) = -0.2456
+   D23_4   : dX4^(10)/delta_10 = -7.138; dX5^(10)/dX4^(10) = -0.3133
+   D23_5   : dX4^(10)/delta_10 = -6.602; dX5^(10)/dX4^(10) = -0.3387
+   D23_6   : dX4^(10)/delta_10 = -8.134; dX5^(10)/dX4^(10) = -0.2749
+   D23_7   : dX4^(10)/delta_10 = -8.159; dX5^(10)/dX4^(10) = -0.2740
+   D23_8   : dX4^(10)/delta_10 = -7.696; dX5^(10)/dX4^(10) = -0.2906
+   D23_9   : dX4^(10)/delta_10 = -7.919; dX5^(10)/dX4^(10) = -0.2824
+   D23_10  : dX4^(10)/delta_10 = -8.134; dX5^(10)/dX4^(10) = -0.2749
+   D23_11  : dX4^(10)/delta_10 = -8.159; dX5^(10)/dX4^(10) = -0.2740
+   D23_dbl : dX4^(10)/delta_10 = -10.081; dX5^(10)/dX4^(10) = -0.2218
+
+Paley offset of exact Delta c_L (13-class line): L=8: +2.7105e-20, L=10: +8.6938e-07, L=12: -6.8903e-07, L=14: +3.8047e-07, L=16: -1.8572e-07
+D23_0: Delta c_10 = +1.7109136619e-06; delta_10 + dX4 + dX5 = +1.7109136619e-06
+Delta X_4(1) by V (D23_0): V=1: +0.000e+00, V=2: +0.000e+00, V=3: +0.000e+00, V=4: +0.000e+00, V=5: +3.587e-06, V=6: -1.666e-07, V=7: +1.187e-07, V=8: +5.306e-09
+
+q^4 X_4(P_q) extrapolations: linear last two 4926.4; quadratic all four 5038.3; linear all four 4843.4; quadratic last three 5034.8
+P_23: X_4(1) = +2.1637493e-02, n^4 X_4 = 6055.0577

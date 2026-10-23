@@ -1,0 +1,3 @@
+figure-eight: 64 length vectors (lengths up to 8/6/7), 16 nonzero, mismatches with the THM-4757 table: 0 []
+theta: 216 length vectors (lengths up to 8/6/7), 108 nonzero, mismatches with the THM-4757 table: 0 []
+dumbbell: 294 length vectors (lengths up to 8/6/7), 12 nonzero, mismatches with the THM-4757 table: 0 []

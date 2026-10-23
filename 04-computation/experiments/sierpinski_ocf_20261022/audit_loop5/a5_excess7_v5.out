@@ -1,0 +1,18 @@
+loopless connected multigraphs on 5 vertices, 12 edges, min degree >= 3: 86090 labelled, 858 classes (orbit-stabiliser check 86090 = 86090: True) (5s)
+kernels K(core, 1..1): 768 nonzero of 858 (215s)
+P_23: [z^12] X_7 restricted to the V = 5 cores = -2.441549e-05
+Delta X_7^(12) (exact, V = 5 cores) relative to P_23, and per unit Delta TT5:
+   D23_0    Delta TT5 =  -40: Delta X_7^(12) = -1.541162e-07  (per TT5: +3.852904e-09)
+   D23_1    Delta TT5 =  -52: Delta X_7^(12) = -2.003510e-07  (per TT5: +3.852904e-09)
+   D23_2    Delta TT5 =  -52: Delta X_7^(12) = -2.003510e-07  (per TT5: +3.852904e-09)
+   D23_3    Delta TT5 =  -48: Delta X_7^(12) = -1.849394e-07  (per TT5: +3.852904e-09)
+   D23_4    Delta TT5 =  -26: Delta X_7^(12) = -1.001755e-07  (per TT5: +3.852904e-09)
+   D23_5    Delta TT5 =  -24: Delta X_7^(12) = -9.246970e-08  (per TT5: +3.852904e-09)
+   D23_6    Delta TT5 =  -34: Delta X_7^(12) = -1.309987e-07  (per TT5: +3.852904e-09)
+   D23_7    Delta TT5 =  -36: Delta X_7^(12) = -1.387045e-07  (per TT5: +3.852904e-09)
+   D23_8    Delta TT5 =  -28: Delta X_7^(12) = -1.078813e-07  (per TT5: +3.852904e-09)
+   D23_9    Delta TT5 =  -32: Delta X_7^(12) = -1.232929e-07  (per TT5: +3.852904e-09)
+   D23_10   Delta TT5 =  -34: Delta X_7^(12) = -1.309987e-07  (per TT5: +3.852904e-09)
+   D23_11   Delta TT5 =  -36: Delta X_7^(12) = -1.387045e-07  (per TT5: +3.852904e-09)
+   D23_dbl  Delta TT5 =  -88: Delta X_7^(12) = -3.390556e-07  (per TT5: +3.852904e-09)
+(262s)

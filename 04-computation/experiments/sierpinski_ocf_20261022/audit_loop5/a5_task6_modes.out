@@ -1,0 +1,14 @@
+(a) random regular 11-tournament: scores [np.int64(5)], diag S^4 values [174, 206, 238] (non-constant => not vertex-transitive)
+   X_1: |matrix mode - loop_engine4| = 1.1e-16 (|X| up to 3.51e-01) (0s)
+   X_2: |matrix mode - loop_engine4| = 1.7e-18 (|X| up to 3.37e-01) (0s)
+   X_3: |matrix mode - loop_engine4| = 2.5e-16 (|X| up to 5.20e-01) (7s)
+(b) P_7, X_4 in DRT two-label mode (all 1076 cores, 221s) against exact blow-up scaling:
+   L= 2: drt mode -6.98370021817831e-19  exact +0.00000000000000e+00  diff -7.0e-19
+   L= 4: drt mode -3.56752214873349e-18  exact +0.00000000000000e+00  diff -3.6e-18
+   L= 6: drt mode +1.42797643838877e-02  exact +1.42797643838877e-02  diff +3.1e-17
+   L= 8: drt mode +3.87768458963284e-01  exact +3.87768458963284e-01  diff -5.0e-16
+   L=10: drt mode +1.10362312841081e+00  exact +1.10362312841080e+00  diff +4.0e-15
+   L=12: drt mode +1.19774193738295e+00  exact +1.19774193738298e+00  diff -2.9e-14
+   L=14: drt mode +8.92760582057944e-01  exact +8.92760582058238e-01  diff -2.9e-13
+   X_4(1) of P_7: drt mode +4.502547068432885e+00, matrix mode +4.502547068432888e+00, diff -2.7e-15 (36s)
+   X_4(1) of P_11: drt mode +5.336266359241314e-01, matrix mode +5.336266359241324e-01, diff -1.0e-15 (q^4 X_4 = 7812.8276; 97s + 45s)

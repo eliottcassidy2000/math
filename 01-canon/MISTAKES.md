@@ -19869,3 +19869,16 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - When a formula is stated for prime powers, keep l and l^e separate in every symbol.
   - Compute an invariant (here j, via c_4) before using it in a numerology row.
   - State each verification route's range separately.
+
+## MISTAKE-667 (2026-10-22, mac-mini-2026-10-22-loop4, HYP-9371 section 8 (five loops); found by the session's independent audit `04-computation/experiments/sierpinski_ocf_20261022/audit_loop5/REPORT.md` after checkpoint 856137b8f6 was pushed) -- an excess level forgotten in the block count at the next order, and a part of an effect stated as the whole
+
+- **Omission.** Section 8 said that z^12 needs excess 5 with <= 7 vertices and excess 6 with <= 6 vertices, and that the L >= 12 remainder comes from excess 4-6 clusters on 6-8 vertices.
+  - At length L an excess-e cluster has L - e blocks, so at L = 12 excess 7 has 5 blocks. It sees the 5-vertex census, which varies with TT5.
+  - The 858 loopless excess-7 cores on 5 vertices give exactly Delta X_7^(12) = +3.853e-9 per transitive 5-set; for D23_0 that is -1.54e-7, against an exact Delta c_12 of -6.61e-7.
+  - The same block count was done correctly at L = 10, where excess 6 has 4 blocks.
+- **Overclaim.** "Paley's offset, the scatter and the equal-5-census split are six-vertex census effects."
+  - Only their L = 10 parts are established as exactly six-vertex: 61% of the offset and 89% of the D23_1/D23_2 split.
+  - The L >= 12 parts may also carry 7- and 8-vertex structure: excess-5 clusters on 7-vertex cores with 12 single arcs, and excess-4 clusters on cubic 8-vertex cores.
+- **Strongest survivor.** The z^10 identity Delta c_10 = delta_10 + Delta X_4^(10) + Delta X_5^(10) holds exactly, as rationals (audit), for all 13 classes. Loops <= 5 fix the L <= 10 forest-length slices, 75-83% of every H difference.
+- **Missing coordinate.** When moving to the next coefficient, recount blocks for every excess, L - e for all e, not only the levels already built. And the census level an effect first appears at is not the level of its whole.
+

@@ -1,0 +1,6 @@
+core  489 V=6 E=10 |Aut|=    48: closed runs   12, compatible sets     56, nnz  160827, sum|W|     12192768: EQUAL (decomp 572.4s, engine 3.1s; 27262976 configurations, 22568616 without closed runs, 5-basis tensor 160827/9765625 nonzero)
+core  517 V=6 E=10 |Aut|=     8: closed runs   17, compatible sets     40, nnz  104739, sum|W|      6117120: EQUAL (decomp 648.7s, engine 2.5s; 27262976 configurations, 23530696 without closed runs, 5-basis tensor 104739/9765625 nonzero)
+core  545 V=6 E=10 |Aut|=     8: closed runs   31, compatible sets     56, nnz   88755, sum|W|      5215104: EQUAL (decomp 646.2s, engine 2.5s; 27262976 configurations, 24765096 without closed runs, 5-basis tensor 88755/9765625 nonzero)
+core  573 V=6 E=10 |Aut|=    64: closed runs    8, compatible sets     48, nnz  141423, sum|W|      8667648: EQUAL (decomp 507.0s, engine 2.3s; 27262976 configurations, 22011696 without closed runs, 5-basis tensor 141423/9765625 nonzero)
+core  601 V=6 E=10 |Aut|=    64: closed runs   10, compatible sets     40, nnz  107847, sum|W|      6967296: EQUAL (decomp 427.1s, engine 1.8s; 26214400 configurations, 19548256 without closed runs, 5-basis tensor 107847/9765625 nonzero)
+(stream stopped by the auditor at 18:11 after 5 of its 12 sampled V = 6 cores, ~10 min per core in decomp.c; all 5 EQUAL)

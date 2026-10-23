@@ -1,0 +1,4 @@
+excess 1: 3 cores, closed runs per core 2..4, compatible sets 4..6
+excess 2: 15 cores, closed runs per core 3..17, compatible sets 8..28
+excess 3: 111 cores, closed runs per core 4..96, compatible sets 16..188
+129 cores, 0 mismatches against decomp.c, 5.3s

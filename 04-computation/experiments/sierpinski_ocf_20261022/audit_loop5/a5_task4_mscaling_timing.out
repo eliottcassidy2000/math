@@ -1,0 +1,44 @@
+   W_1: 0 monomials (zero, as it must be for odd l)
+   W_2: 156 monomials
+   W_3: 0 monomials (zero, as it must be for odd l)
+   W_4: 970 monomials
+   W_5: 0 monomials (zero, as it must be for odd l)
+   W_6: 6030 monomials
+   W_7: 0 monomials (zero, as it must be for odd l)
+   W_8: 22280 monomials
+   W_9: 0 monomials (zero, as it must be for odd l)
+   W_10: 70493 monomials
+   W_11: 0 monomials (zero, as it must be for odd l)
+   W_12: 190633 monomials
+   L=1: E_L has 0 monomials; psi_L(m) has powers []
+   L=2: E_L has 156 monomials; psi_L(m) has powers [0]
+   L=3: E_L has 0 monomials; psi_L(m) has powers []
+   L=4: E_L has 3892 monomials; psi_L(m) has powers [-2, -1, 0]
+   L=5: E_L has 0 monomials; psi_L(m) has powers []
+   L=6: E_L has 42248 monomials; psi_L(m) has powers [-4, -3, -2, -1, 0]
+   L=7: E_L has 0 monomials; psi_L(m) has powers []
+   L=8: E_L has 262843 monomials; psi_L(m) has powers [-6, -5, -4, -3, -2, -1, 0]
+   L=9: E_L has 0 monomials; psi_L(m) has powers []
+   L=10: E_L has 1191263 monomials; psi_L(m) has powers [-8, -7, -6, -5, -4, -3, -2, -1, 0]
+   L=11: E_L has 0 monomials; psi_L(m) has powers []
+   L=12: E_L has 4320651 monomials; psi_L(m) has powers [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0]
+time 18.138983249664307
+{10: {0: 0.001597900460493657, 1: -0.013922833882725059, 2: 0.12391174856583856, 3: -0.3814739103509027, 4: 0.6267503936788433, 5: -0.465309715029897, 6: 0.1697120911262216, 7: -0.028233509353708962, 8: 0.0014986507334670159}, 12: {1: -0.007481507445458519, 2: 0.06791425273358535, 3: -0.36604909673445196, 4: 1.0291653551736581, 5: -1.674539317596537, 6: 1.5390831466709665, 7: -0.8172943752982033, 8: 0.24240828674307496, 9: -0.03513426295152225, 10: 0.001696003916475018}}
+       18.65 real        16.08 user         1.06 sys
+          1267613696  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              581589  page reclaims
+                  74  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 396  voluntary context switches
+               15792  involuntary context switches
+        287046058779  instructions retired
+         54314541004  cycles elapsed
+          2167215680  peak memory footprint
