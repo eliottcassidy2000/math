@@ -1,0 +1,37 @@
+{
+  "all_K33_ternary_costs": {
+    "constant": 87,
+    "nonconstant": 19596
+  },
+  "checks": 19720,
+  "distinct_unique_branch_baselines": [
+    0,
+    3
+  ],
+  "scope": "Unit-capacity bipartite tables; not a native tournament-port census.",
+  "shared_phase_branches": 3,
+  "transported": [
+    {
+      "baseline": -1,
+      "shift": 0
+    },
+    {
+      "baseline": -1,
+      "shift": 1
+    },
+    {
+      "baseline": -1,
+      "shift": 2
+    }
+  ],
+  "union_projected_values": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "unrestricted_union_tables": 36
+}

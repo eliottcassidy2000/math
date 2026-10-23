@@ -1,0 +1,108 @@
+{
+  "charts": {
+    "H21_subgroups": 10,
+    "P7_automorphisms": 21,
+    "all_subset_base_tests": 1280,
+    "automorphisms_none_0_1_01": {
+      "flat": [
+        21,
+        3,
+        3,
+        1
+      ],
+      "twisted": [
+        3,
+        3,
+        1,
+        1
+      ]
+    },
+    "base_profile": {
+      "0": {
+        "21": 1
+      },
+      "1": {
+        "3": 7
+      },
+      "2": {
+        "1": 21
+      }
+    },
+    "commutator": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      0
+    ],
+    "literal_order21_chart_hostile": {
+      "0": {
+        "global_chart_count": 0,
+        "pair_counts_01_02_12": [
+          21,
+          21,
+          21
+        ]
+      },
+      "1": {
+        "global_chart_count": 0,
+        "pair_counts_01_02_12": [
+          3,
+          3,
+          3
+        ]
+      },
+      "2": {
+        "global_chart_count": 0,
+        "pair_counts_01_02_12": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    "owner_sections": [
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "checks": 9661,
+  "fibonacci": {
+    "coherent_prefixes_at_21": 256,
+    "collision": {
+      "first_different_owner": 6,
+      "histories": [
+        [
+          4,
+          "CABCABABCABCACABCACAB"
+        ],
+        [
+          8,
+          "CABCACABBABCACABCACAB"
+        ]
+      ],
+      "product": [
+        1,
+        0,
+        2
+      ],
+      "replacement_count": 1
+    },
+    "independent_choices_at_21": 8,
+    "interval_product_relations": 36,
+    "large_block": {
+      "independent_bits": 121393,
+      "index": 29,
+      "length": 317811
+    },
+    "largest_same_charge_product_fibre": 36,
+    "prefix_limit": 2000,
+    "same_charge_product_bucket_count": 21,
+    "user_prefix": "CABCACABCABCACAB"
+  }
+}

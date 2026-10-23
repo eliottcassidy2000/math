@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "05-knowledge/results/endpoint_overlap_ports_20261023/receipt.json.gz",
+      "encoding": "raw",
+      "sha256": "238fa4f327fa6b6342583017b8fc4a19bd590700d8a9073b82637dbd0b26c6a2"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/AUDIT.md",
+      "encoding": "utf8-lf",
+      "sha256": "cc6c1f481f51ffdf53aa6428637a2014d9d4b8f5b984cad68be070ddb61e1c24"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/NETWORKS.md",
+      "encoding": "utf8-lf",
+      "sha256": "c05f15f8df55d16fe1ac84024def1c99be80b319310009838f1ce5f330c32020"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/README.md",
+      "encoding": "utf8-lf",
+      "sha256": "8f3415ae4aba7f4e450e76ea1a47c514e21e2d228cae62c5b4f38aeabf7d465b"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/RESIDUAL.md",
+      "encoding": "utf8-lf",
+      "sha256": "f17b89ee4b02edacca8bd8d13c7a175c456550e0fd4333d8c69951c2d83ee5be"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/check_networks.py",
+      "encoding": "utf8-lf",
+      "sha256": "760cd094a76a957ca7b8563848d0c9f9a0e7108e1b5c7754d07022cd62b12d90"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/check_residual.py",
+      "encoding": "utf8-lf",
+      "sha256": "046e4e13ed1e9c095a75b51bae99914359b17ec24ed73c452f65a64e45b2d8ee"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/fibonacci/AUDIT-odd-cell-owners.md",
+      "encoding": "utf8-lf",
+      "sha256": "29c3f31ac937c0d461c5e1e6bd4199e0b59f0c3feaf68115f2fdf1e0f14e163d"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/fibonacci/AUDIT-residual.md",
+      "encoding": "utf8-lf",
+      "sha256": "f04f667e27a995ee6bdf2957fe06f7faeb86d267d07332da32c67ac162248df4"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/fibonacci/REPORT.md",
+      "encoding": "utf8-lf",
+      "sha256": "d2a5d72b7bc0bd5ae8685e4a0a2032e84ed1f7cfac38f5aa0c489e398eb70e8e"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/fibonacci/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "c968dba498dae00b252c7eb5194412aea29514de94ba941870faaffd724410b9"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/fibonacci/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "9ac148384294b0edd07b9e86613084b7250549784b941bce09d4679e154a3970"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/AUDIT-canonical.md",
+      "encoding": "utf8-lf",
+      "sha256": "0f8550c206401b18f095db4484bbbee86bbfc529a4b20b6d4cbcf48b72e1564b"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/AUDIT-network.md",
+      "encoding": "utf8-lf",
+      "sha256": "91f60b2c6d74659fbc130b565118dc0e3cc7124a9c55a9f7d7597ab686dd53ab"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/PRIME-REFINEMENT.md",
+      "encoding": "utf8-lf",
+      "sha256": "cd1539bdf615eea8b54ff5cc25a3286ff25f376597d60d887cc5edf8c2f9b340"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/README.md",
+      "encoding": "utf8-lf",
+      "sha256": "4e23886e6077f0c730bb84ae59067e2b53b942cfb989ea79e24fd9c604a6479f"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/audit_canonical.json",
+      "encoding": "utf8-lf",
+      "sha256": "328af5e8ada0993bef083b2d188bad449e4712de97d06eeb0531ffaabdbb1ae0"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/audit_canonical.py",
+      "encoding": "utf8-lf",
+      "sha256": "093e10deb75f300c0483b8a3f019ecffec3b586c009517afc583e715915947e7"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/audit_networks.json",
+      "encoding": "utf8-lf",
+      "sha256": "b81bc755331fcb0453a00540e20f51ffbc3de754e3e238ca08a3490a64fc8fdd"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/audit_networks.py",
+      "encoding": "utf8-lf",
+      "sha256": "ecb10a50c5b51ef8ba75970dde6ba0542754c17d717b3f5ed56cb435ef14ad3c"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "f5cbd884188e13d2c19ba53b56bae001c63cf794628423eff5f46e952d2ed399"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/check_prime_refinement.py",
+      "encoding": "utf8-lf",
+      "sha256": "ee564cd6ca974a38d416d662cbf49534a012325edd0765ca1a4e5fce387b5c06"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/prime_refinement.json",
+      "encoding": "utf8-lf",
+      "sha256": "84291140e56da10d1d280646964abc452b3f2a660601d44896b33bde6c448b89"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "cb8dc55563f2d7ce41770df51e081cab29a9ca03e71020cdbc7a53f3fd59e0c5"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/networks.json",
+      "encoding": "utf8-lf",
+      "sha256": "82bdd47990a9ab626f6d4b366852626e3288a558b18da2f19427e42639fafdcd"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/reproduce.py",
+      "encoding": "utf8-lf",
+      "sha256": "74b8cbbb06cd6a2fde7f0a9c34716a4f745a5fefecda5cd4321ab13edd85638f"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/residual.json",
+      "encoding": "utf8-lf",
+      "sha256": "477e308a6ec53955a1b8f4473c93402e5d048127f8ce04dde2d633a25c8c0925"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/AUDIT-network.md",
+      "encoding": "utf8-lf",
+      "sha256": "41ed37f1ad90265a400978becebe76f2cbc388dcba9552f05a986df44f105695"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/AUDIT.md",
+      "encoding": "utf8-lf",
+      "sha256": "39d30f837cdcdf42d92bd2f75ea21e74878059bdddc73490996838425ddd6f7a"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/CANONICAL.md",
+      "encoding": "utf8-lf",
+      "sha256": "e8f312f4d876e0819f29362486bb731edfc7e1e9ce835cc71bed1694e854e55c"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/PROOF.md",
+      "encoding": "utf8-lf",
+      "sha256": "f25d99937c7bb1f7b4d00c5aac429f15607a16f42f143dfdf2d488fce297671f"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/audit_network.py",
+      "encoding": "utf8-lf",
+      "sha256": "215fb7e9c62718b3161afcb74bc82836458fef7dd0c871a7023e8c95669a8dc9"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/canonical.json",
+      "encoding": "utf8-lf",
+      "sha256": "2633a4a67b417b186a4fbb4e21fab90a21fb644957938a1dbc2197597307201b"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/canonical.py",
+      "encoding": "utf8-lf",
+      "sha256": "3b07adede13175998fdfe1f4837fc9c0c4cfdba6c8113c543d2ed8f99bdf5f73"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "b33b75e118637b0bc0152d0180f7bfef75b97b8abd438f8ffa924c9fc5a42dab"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "2ad6bf51afa1604bf87f6bc4aecf2cd8011955b86f54d82a4a13f516f14a5b21"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_gluing_20261023/check_fibonacci.py",
+      "encoding": "utf8-lf",
+      "sha256": "8e17b9dfdc174cd1677b0ba494d574dfd12fc2c9d8aa0f365fc998a8f708770e"
+    }
+  ],
+  "checkers": [
+    "check_networks.py",
+    "check_residual.py",
+    "five/check.py",
+    "five/check_prime_refinement.py",
+    "five/audit_networks.py",
+    "five/audit_canonical.py",
+    "seven/check.py",
+    "seven/canonical.py",
+    "seven/audit_network.py",
+    "fibonacci/check.py"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "FINITE-EXACT independent audit",
+  "all_regular_five_blocks": 4320,
+  "independent_double_orbits_and_canonical_codes": 192,
+  "actual_port_and_relabelling_controls": 192,
+  "two_rigid_edge_tree_signatures": 16,
+  "joint_classes_per_tree_signature": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "joint_tree_classes_total": 80
+}

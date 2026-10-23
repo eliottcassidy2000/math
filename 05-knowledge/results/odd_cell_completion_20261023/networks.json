@@ -1,0 +1,319 @@
+{
+  "checks": 663,
+  "complete_network_censuses": [
+    {
+      "alignment_fibres": [
+        {
+          "balanced": true,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 0,
+          "signatures": 4
+        }
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "labelled": 36,
+      "local_orbit_signatures": 4,
+      "orbit_size_histogram": {
+        "9": 4
+      },
+      "p": 3,
+      "rigid": 0,
+      "symmetric": 4,
+      "total": 4,
+      "vertices": 3
+    },
+    {
+      "alignment_fibres": [
+        {
+          "balanced": false,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 0,
+          "signatures": 4
+        },
+        {
+          "balanced": true,
+          "classes_per_signature": 3,
+          "dimension": 1,
+          "rigid_edges": 0,
+          "signatures": 4
+        }
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "labelled": 216,
+      "local_orbit_signatures": 8,
+      "orbit_size_histogram": {
+        "9": 12,
+        "27": 4
+      },
+      "p": 3,
+      "rigid": 4,
+      "symmetric": 12,
+      "total": 16,
+      "vertices": 3
+    },
+    {
+      "alignment_fibres": [
+        {
+          "balanced": false,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 0,
+          "signatures": 8
+        },
+        {
+          "balanced": true,
+          "classes_per_signature": 3,
+          "dimension": 1,
+          "rigid_edges": 0,
+          "signatures": 8
+        }
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "labelled": 1296,
+      "local_orbit_signatures": 16,
+      "orbit_size_histogram": {
+        "27": 24,
+        "81": 8
+      },
+      "p": 3,
+      "rigid": 8,
+      "symmetric": 24,
+      "total": 32,
+      "vertices": 4
+    },
+    {
+      "alignment_fibres": [
+        {
+          "balanced": true,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 0,
+          "signatures": 16
+        },
+        {
+          "balanced": false,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 1,
+          "signatures": 32
+        },
+        {
+          "balanced": false,
+          "classes_per_signature": 5,
+          "dimension": 1,
+          "rigid_edges": 2,
+          "signatures": 16
+        }
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "labelled": 14400,
+      "local_orbit_signatures": 64,
+      "orbit_size_histogram": {
+        "25": 16,
+        "125": 112
+      },
+      "p": 5,
+      "rigid": 112,
+      "symmetric": 16,
+      "total": 128,
+      "vertices": 3
+    },
+    {
+      "alignment_fibres": [
+        {
+          "balanced": false,
+          "classes_per_signature": 1,
+          "dimension": 0,
+          "rigid_edges": 0,
+          "signatures": 48
+        },
+        {
+          "balanced": true,
+          "classes_per_signature": 5,
+          "dimension": 1,
+          "rigid_edges": 0,
+          "signatures": 16
+        },
+        {
+          "balanced": false,
+          "classes_per_signature": 5,
+          "dimension": 1,
+          "rigid_edges": 1,
+          "signatures": 192
+        },
+        {
+          "balanced": false,
+          "classes_per_signature": 25,
+          "dimension": 2,
+          "rigid_edges": 2,
+          "signatures": 192
+        },
+        {
+          "balanced": false,
+          "classes_per_signature": 125,
+          "dimension": 3,
+          "rigid_edges": 3,
+          "signatures": 64
+        }
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "labelled": 1728000,
+      "local_orbit_signatures": 512,
+      "orbit_size_histogram": {
+        "25": 80,
+        "125": 13808
+      },
+      "p": 5,
+      "rigid": 13808,
+      "symmetric": 80,
+      "total": 13888,
+      "vertices": 3
+    }
+  ],
+  "mixed_degree_triangle_formula": {
+    "labelled": 29376000,
+    "rigid": 234976,
+    "symmetric": 160,
+    "total": 235136
+  },
+  "nine_boundary": {
+    "base": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15
+    ],
+    "exact_minimum_owners": 6,
+    "internal_auts": 81,
+    "pair_auts": 2187,
+    "source_named_partition": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      3,
+      3
+    ],
+    "targets_per_fixed_source_chart": 27
+  },
+  "prime_eleven_boundary": {
+    "block_rows": [
+      "11100000000",
+      "11100000000",
+      "11100000000",
+      "00011100000",
+      "00001110000",
+      "00000111000",
+      "00000011100",
+      "00000001110",
+      "00000000111",
+      "00010000011",
+      "00011000001"
+    ],
+    "internal_rows": [
+      "01000001111",
+      "00100001111",
+      "10000001111",
+      "11101100000",
+      "11100110000",
+      "11100011000",
+      "11110000100",
+      "00011010110",
+      "00011100011",
+      "00011110001",
+      "00011111000"
+    ],
+    "kernel_generator": [
+      1,
+      2,
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "scope": "Prime cell size alone does not imply functional chart attachments."
+  },
+  "regular_five_counts": {
+    "1": 120,
+    "2": 2040,
+    "3": 2040,
+    "4": 120
+  },
+  "scope": "Named cells, actual shared rotations, fixed nonuniform support; no quotient by cell permutations."
+}

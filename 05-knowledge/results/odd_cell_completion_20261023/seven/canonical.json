@@ -1,0 +1,56 @@
+{
+  "actual_endpoint_largest_cell_counts": {
+    "1": 554,
+    "3": 254,
+    "7": 125
+  },
+  "actual_endpoint_port_controls": 933,
+  "arbitrary_two_mark_path_complement_controls": 132,
+  "checks": 2343019,
+  "coprime_internal_group_control": {
+    "canonicalizers": 1,
+    "local_orders": [
+      3,
+      7
+    ]
+  },
+  "independent_random_relabellings": 930,
+  "inherited_distinct_literal_paths": 932,
+  "largest_cell_and_canonicalizer_counts": [
+    [
+      1,
+      1,
+      504
+    ],
+    [
+      3,
+      1,
+      126
+    ],
+    [
+      3,
+      3,
+      168
+    ],
+    [
+      7,
+      1,
+      42
+    ],
+    [
+      7,
+      3,
+      84
+    ],
+    [
+      7,
+      21,
+      6
+    ]
+  ],
+  "ordered_two_mark_sources": 930,
+  "retained_mod8_receipt_sha256_lf": "ad1d2bbbb2856daa3414dad34aca3763608a2d34be3484436c0e17f4d978e84f",
+  "root_charts_tried_in_first_census": 20976,
+  "source_sha256_lf": "3b07adede13175998fdfe1f4837fc9c0c4cfdba6c8113c543d2ed8f99bdf5f73",
+  "status": "FINITE-EXACT source-only canonicalization and actual-port controls"
+}

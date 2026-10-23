@@ -1,0 +1,185 @@
+{
+  "status": "FINITE-EXACT independent audit",
+  "method": "enumerate actual fixed binary matrices for each local translation, then sum over every shared vertex translation",
+  "networks": [
+    {
+      "p": 3,
+      "vertices": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "total": 4,
+      "symmetric": 4,
+      "burnside_sum": 108,
+      "nonidentity_fixed_incidence": 72
+    },
+    {
+      "p": 3,
+      "vertices": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "total": 16,
+      "symmetric": 12,
+      "burnside_sum": 432,
+      "nonidentity_fixed_incidence": 216
+    },
+    {
+      "p": 3,
+      "vertices": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "total": 32,
+      "symmetric": 24,
+      "burnside_sum": 2592,
+      "nonidentity_fixed_incidence": 1296
+    },
+    {
+      "p": 5,
+      "vertices": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "total": 128,
+      "symmetric": 16,
+      "burnside_sum": 16000,
+      "nonidentity_fixed_incidence": 1600
+    },
+    {
+      "p": 5,
+      "vertices": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "total": 13888,
+      "symmetric": 80,
+      "burnside_sum": 1736000,
+      "nonidentity_fixed_incidence": 8000
+    }
+  ],
+  "mixed_degree_triangle": {
+    "total": 235136,
+    "symmetric": 160,
+    "burnside_sum": 29392000,
+    "nonidentity_fixed_incidence": 16000
+  },
+  "local_fixed_counts": {
+    "(3, 1)": {
+      "(0, 0)": 6,
+      "(0, 1)": 0,
+      "(0, 2)": 0,
+      "(1, 0)": 0,
+      "(1, 1)": 3,
+      "(1, 2)": 3,
+      "(2, 0)": 0,
+      "(2, 1)": 3,
+      "(2, 2)": 3
+    },
+    "(5, 1)": {
+      "(0, 0)": 120,
+      "(0, 1)": 0,
+      "(0, 2)": 0,
+      "(0, 3)": 0,
+      "(0, 4)": 0,
+      "(1, 0)": 0,
+      "(1, 1)": 5,
+      "(1, 2)": 5,
+      "(1, 3)": 5,
+      "(1, 4)": 5,
+      "(2, 0)": 0,
+      "(2, 1)": 5,
+      "(2, 2)": 5,
+      "(2, 3)": 5,
+      "(2, 4)": 5,
+      "(3, 0)": 0,
+      "(3, 1)": 5,
+      "(3, 2)": 5,
+      "(3, 3)": 5,
+      "(3, 4)": 5,
+      "(4, 0)": 0,
+      "(4, 1)": 5,
+      "(4, 2)": 5,
+      "(4, 3)": 5,
+      "(4, 4)": 5
+    },
+    "(5, 2)": {
+      "(0, 0)": 2040,
+      "(0, 1)": 0,
+      "(0, 2)": 0,
+      "(0, 3)": 0,
+      "(0, 4)": 0,
+      "(1, 0)": 0,
+      "(1, 1)": 10,
+      "(1, 2)": 10,
+      "(1, 3)": 10,
+      "(1, 4)": 10,
+      "(2, 0)": 0,
+      "(2, 1)": 10,
+      "(2, 2)": 10,
+      "(2, 3)": 10,
+      "(2, 4)": 10,
+      "(3, 0)": 0,
+      "(3, 1)": 10,
+      "(3, 2)": 10,
+      "(3, 3)": 10,
+      "(3, 4)": 10,
+      "(4, 0)": 0,
+      "(4, 1)": 10,
+      "(4, 2)": 10,
+      "(4, 3)": 10,
+      "(4, 4)": 10
+    }
+  }
+}

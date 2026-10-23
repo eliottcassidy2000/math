@@ -377,7 +377,7 @@ lift/phase clocks.
 - **AMM:** [THM-4086](../01-canon/theorems/THM-4086-rule-a-transition-clock-and-phase-cocycle.md) proves a fixed-policy `R=32768` clock/cocycle; no global monotonicity, all-`R`, or `C*` result.
 - **Knots:** THM-2176/2191/2281 and THM-2242/2330--2383: localization, owner/ANOVA/rectangle/reference inversion; realization/stable diagonal open. THM-2646: modular/exponent `B3` conjugacy, not Markov invariance.
 - **Flows:** [THM-2177](../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md): planar `58<60` refutes exact `d_max`; planar `2d_max` survives.
-- **Collatz/tournaments:** [owned ports](../05-knowledge/results/metagraph_owned_boundary_frontier_20261023.md): n31 marks0/1/2 in672/252/6 cases; all-size aligned refinement;64 boundary states. Converse/mod8 retained; universal coverage/wiring OPEN.
+- **Tournaments:** [odd-cell completion](../05-knowledge/results/odd_cell_completion_20261023/README.md): five-cell marks0/1, seven<=2 per component; named-cell canonicalizer and shared alignment quotient. Unrestricted wiring/Collatz OPEN.
 - **Lucas:** [THM-4711](../01-canon/theorems/THM-4711-legendre-wronskian-and-binomial-cube-lucas-carry-divisibility.md): Legendre/Zagier (B), cube/Apéry (C) PROVED, `p>=7`; rest OPEN.
 - **Hensel:** THM-3446/3449/[3452](../01-canon/theorems/THM-3452-unequal-depth-noncommuting-smooth-hensel-heisenberg-orbit-law.md): weighted/equal/unequal banks; dyadic repair.
 - **Rule 30:** [THM-4210](../01-canon/theorems/THM-4210-rule30-lossless-dyadic-block-current-cartier-tree.md) gives the forward current tree; THM-4204/4206 are inverse/Haar carriers. THM-4263 adds a fibre-cap density pullback, not a prize solution. All prizes remain **OPEN**.

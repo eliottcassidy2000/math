@@ -1,0 +1,507 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "all regular 5-by-5 blocks of degrees1..4, named R5 cells",
+  "degree_census": [
+    {
+      "degree": 1,
+      "labelled_blocks": 120,
+      "stabilizer_sizes": {
+        "1": 100,
+        "5": 20
+      },
+      "ordinary_orbits": 8,
+      "orbits_by_stabilizer": {
+        "1": 4,
+        "5": 4
+      },
+      "blocks_with_repeated_rows": 0
+    },
+    {
+      "degree": 2,
+      "labelled_blocks": 2040,
+      "stabilizer_sizes": {
+        "1": 2000,
+        "5": 40
+      },
+      "ordinary_orbits": 88,
+      "orbits_by_stabilizer": {
+        "1": 80,
+        "5": 8
+      },
+      "blocks_with_repeated_rows": 600
+    },
+    {
+      "degree": 3,
+      "labelled_blocks": 2040,
+      "stabilizer_sizes": {
+        "1": 2000,
+        "5": 40
+      },
+      "ordinary_orbits": 88,
+      "orbits_by_stabilizer": {
+        "1": 80,
+        "5": 8
+      },
+      "blocks_with_repeated_rows": 600
+    },
+    {
+      "degree": 4,
+      "labelled_blocks": 120,
+      "stabilizer_sizes": {
+        "1": 100,
+        "5": 20
+      },
+      "ordinary_orbits": 8,
+      "orbits_by_stabilizer": {
+        "1": 4,
+        "5": 4
+      },
+      "blocks_with_repeated_rows": 0
+    }
+  ],
+  "total_labelled_blocks": 4320,
+  "total_ordinary_orbits": 192,
+  "direct_source_target_relation_tests": 20416,
+  "one_owner_ordinary_refinement_tests": 21660,
+  "displacement_flag_block_tests": 240,
+  "symmetric_intrinsic_matching_tests": 120,
+  "two_subset_intrinsic_flag_census": [
+    {
+      "degree": 2,
+      "stabilizer_size": 1,
+      "row_flag_constant": false,
+      "column_flag_constant": false,
+      "blocks": 1600
+    },
+    {
+      "degree": 2,
+      "stabilizer_size": 1,
+      "row_flag_constant": false,
+      "column_flag_constant": true,
+      "blocks": 200
+    },
+    {
+      "degree": 2,
+      "stabilizer_size": 1,
+      "row_flag_constant": true,
+      "column_flag_constant": false,
+      "blocks": 200
+    },
+    {
+      "degree": 2,
+      "stabilizer_size": 5,
+      "row_flag_constant": true,
+      "column_flag_constant": true,
+      "blocks": 40
+    },
+    {
+      "degree": 3,
+      "stabilizer_size": 1,
+      "row_flag_constant": false,
+      "column_flag_constant": false,
+      "blocks": 1600
+    },
+    {
+      "degree": 3,
+      "stabilizer_size": 1,
+      "row_flag_constant": false,
+      "column_flag_constant": true,
+      "blocks": 200
+    },
+    {
+      "degree": 3,
+      "stabilizer_size": 1,
+      "row_flag_constant": true,
+      "column_flag_constant": false,
+      "blocks": 200
+    },
+    {
+      "degree": 3,
+      "stabilizer_size": 5,
+      "row_flag_constant": true,
+      "column_flag_constant": true,
+      "blocks": 40
+    }
+  ],
+  "repeated_row_rigid_witness": [
+    3,
+    3,
+    12,
+    24,
+    20
+  ],
+  "triangle_relation_alphabet": 46,
+  "triangle_systems": 97336,
+  "triangle_counts_by_sections": {
+    "0": 83311,
+    "1": 13625,
+    "5": 400
+  },
+  "actual_affine_matching_triangles": 8000,
+  "actual_owner_holonomy_types": {
+    "balanced_flat_five_owner_sections": 400,
+    "balanced_nonflat_no_owner_section_but_five_charts": 1600,
+    "rigid_unique_intrinsic_owner": 6000
+  },
+  "independent_reverse_selection_hostile": {
+    "block": [
+      3,
+      6,
+      12,
+      24,
+      17
+    ],
+    "forward": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "required_inverse": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fresh_transpose_winner": [
+      4,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "actual_tournament_fixtures": {
+    "balanced": {
+      "blocks": {
+        "(0, 1)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(1, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(0, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "cell_degrees": [
+        4,
+        7,
+        10
+      ],
+      "automorphism_shifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "extra_root_owners": 1,
+      "actual_path": [
+        13,
+        14,
+        10,
+        11,
+        12,
+        8,
+        9,
+        5,
+        6,
+        7,
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "nontrivial_gain": {
+      "blocks": {
+        "(0, 1)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(1, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(0, 2)": [
+          1,
+          4,
+          16,
+          2,
+          8
+        ]
+      },
+      "cell_degrees": [
+        4,
+        7,
+        10
+      ],
+      "automorphism_shifts": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extra_root_owners": 0,
+      "actual_path": [
+        13,
+        14,
+        10,
+        11,
+        12,
+        8,
+        9,
+        5,
+        6,
+        7,
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "shifted_closing_block": {
+      "blocks": {
+        "(0, 1)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(1, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(0, 2)": [
+          2,
+          4,
+          8,
+          16,
+          1
+        ]
+      },
+      "cell_degrees": [
+        4,
+        7,
+        10
+      ],
+      "automorphism_shifts": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "extra_root_owners": 1,
+      "actual_path": [
+        13,
+        14,
+        10,
+        11,
+        12,
+        8,
+        9,
+        5,
+        6,
+        7,
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    },
+    "repeated_row_pin": {
+      "blocks": {
+        "(0, 1)": [
+          3,
+          3,
+          12,
+          24,
+          20
+        ],
+        "(1, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "(0, 2)": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ]
+      },
+      "cell_degrees": [
+        5,
+        6,
+        10
+      ],
+      "automorphism_shifts": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "extra_root_owners": 0,
+      "actual_path": [
+        13,
+        14,
+        10,
+        11,
+        12,
+        8,
+        9,
+        5,
+        6,
+        7,
+        3,
+        4,
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "pairwise_feasible_but_globally_incompatible": {
+    "(0, 1)": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "(1, 2)": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "(0, 2)": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        0
+      ]
+    ]
+  },
+  "checks": 274478
+}

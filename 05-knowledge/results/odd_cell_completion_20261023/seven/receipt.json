@@ -1,0 +1,111 @@
+{
+  "all_invariant_row_regular_matrices_checked": 4184,
+  "census": [
+    {
+      "actual_hamiltonian_path_mark_controls": 175,
+      "automorphism_cycle_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(7,)": 6
+      },
+      "automorphisms": 7,
+      "cyclic_outneighbourhoods": 0,
+      "equitable_partition_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(7,)": 1
+      },
+      "labelled_orbit": 720,
+      "mask": 17976,
+      "one_owner_discrete_choices": 7,
+      "two_owner_discrete_choices": 21
+    },
+    {
+      "actual_hamiltonian_path_mark_controls": 171,
+      "automorphism_cycle_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(1, 3, 3)": 2
+      },
+      "automorphisms": 3,
+      "cyclic_outneighbourhoods": 4,
+      "equitable_partition_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(1, 3, 3)": 1,
+        "(7,)": 1
+      },
+      "labelled_orbit": 1680,
+      "mask": 22066,
+      "one_owner_discrete_choices": 6,
+      "two_owner_discrete_choices": 21
+    },
+    {
+      "actual_hamiltonian_path_mark_controls": 189,
+      "automorphism_cycle_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(1, 3, 3)": 14,
+        "(7,)": 6
+      },
+      "automorphisms": 21,
+      "cyclic_outneighbourhoods": 7,
+      "equitable_partition_shapes": {
+        "(1, 1, 1, 1, 1, 1, 1)": 1,
+        "(1, 3, 3)": 7,
+        "(7,)": 1
+      },
+      "labelled_orbit": 240,
+      "mask": 85298,
+      "one_owner_discrete_choices": 0,
+      "two_owner_discrete_choices": 21
+    }
+  ],
+  "checks": 22223,
+  "distinct_internal_type_pair_controls": 3978,
+  "labelled_regular_sevens": 2640,
+  "maximum_neighbour_refinement_rounds_in_controls": 2,
+  "rectangular_twenty_one_to_seven_controls": 60,
+  "repeated_row_or_column_examples": [
+    {
+      "degree": 2,
+      "distinct_columns": 5,
+      "distinct_rows": 5,
+      "rows": [
+        "0000011",
+        "1000100",
+        "0010010",
+        "1000100",
+        "0101000",
+        "0010001",
+        "0101000"
+      ]
+    },
+    {
+      "degree": 2,
+      "distinct_columns": 6,
+      "distinct_rows": 6,
+      "rows": [
+        "0000110",
+        "0101000",
+        "1010000",
+        "0000011",
+        "0100001",
+        "1010000",
+        "0001100"
+      ]
+    },
+    {
+      "degree": 2,
+      "distinct_columns": 6,
+      "distinct_rows": 6,
+      "rows": [
+        "0000110",
+        "1000010",
+        "0000101",
+        "1100000",
+        "0011000",
+        "0011000",
+        "0100001"
+      ]
+    }
+  ],
+  "sampled_regular_blocks": 442,
+  "source_sha256_lf": "b33b75e118637b0bc0152d0180f7bfef75b97b8abd438f8ffa924c9fc5a42dab",
+  "status": "FINITE-EXACT checks of proved scoped rules"
+}
