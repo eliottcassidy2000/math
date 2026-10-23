@@ -32,6 +32,13 @@ below is either (i) a theorem in the restricted ℂ*-equivariant category, or
 (ii) a reframing that *locates* the difficulty. JC₂ is the graveyard of false
 proofs; the value here is structural, not a resolution.
 
+**Local convention/boundary correction, 2026-10-23.** With the bracket in §1,
+the weight derivation is `{−,xy}`, not `{xy,−}`. Also the top-weight bracket
+must vanish only when the sum of top weights is positive; `(P,Q)=(x,y)`
+is the zero-weight exception. These two repairs are checked in
+[the shared-frame charge audit](../../05-knowledge/results/shared_frame_restrictions_20261023/CONNECTIONS.md).
+They do not re-audit the other historical claims or dependencies in this file.
+
 ## 1. det JF is the Poisson bracket (the right language)
 
 For F = (P, Q): ℂ² → ℂ², det JF = P_x Q_y − P_y Q_x = **{P, Q}**, the Poisson
@@ -47,8 +54,8 @@ question DC₁.
 ## 2. The ℂ*-action is a Hamiltonian symmetry; equivariant = ad_{xy}-graded
 
 The action λ·(x,y) = (λx, λ⁻¹y) is the Hamiltonian flow of **H = xy**:
-X_{xy} = {xy, ·} = x∂_x − y∂_y. A Keller pair is *equivariant* iff
-{xy, P} = P and {xy, Q} = −Q, i.e. P, Q are **eigenvectors of ad_{xy}** of
+X_{xy} = {·, xy} = x∂_x − y∂_y. A Keller pair is *equivariant* iff
+{P, xy} = P and {Q, xy} = −Q, i.e. P, Q are **eigenvectors of the right-bracket weight derivation** of
 eigenvalue ±1 (weights ±1). So "equivariant Keller pair" = "canonical pair
 diagonalizing the Hamiltonian xy." THM (this file): such pairs are LINEAR.
 Equivalently: **the classical shadow of eigen-graded DC₁ holds** — which is
@@ -87,9 +94,11 @@ one.** This is the precise content of the earlier "no room at n=2" intuition.
 
 The bracket is **weight-additive**: {P_a, Q_b} has weight a+b (verified). Give
 ℂ[x,y] the (1,−1) grading; write P = Σ_w P_w, Q = Σ_w Q_w. For a Keller pair,
-the top-weight part of {P,Q} is {P_A, Q_B} (A, B the top weights) and it must
-VANISH: **the leading weight-forms Poisson-commute**, hence are algebraically
-dependent. (Instrument validated in P5: for the genuine automorphism
+the candidate top-weight part of {P,Q} is {P_A, Q_B} (A, B the top weights).
+When A+B>0 it must VANISH: **the leading weight-forms Poisson-commute**,
+hence are algebraically dependent. A+B<0 is incompatible with a nonzero
+constant bracket; when A+B=0 the top bracket can instead be that constant,
+as for (P,Q)=(x,y). (Instrument validated in P5: for the genuine automorphism
 (x + (y+x²)³, y + x²) the top ordinary-degree forms satisfy {P_top,Q_top}=0;
 a random non-Keller pair fails it.) This is the classical Abhyankar–Moh
 leading-form obstruction, recovered from the bracket's grading.

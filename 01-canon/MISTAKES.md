@@ -12,6 +12,13 @@ a historical synthesis or promoting computational evidence.
 - **Selector correction:** a distinguished reference path is already symmetry-breaking input. The no-equivariant-selector argument applies to an unpointed candidate fibre and its observed pins, not to a chart-dependent completion algorithm given that reference. The conditional counts and actual kernel moves survive unchanged. [Corrected scope](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/README.md), [audit](../05-knowledge/results/hamiltonian_observer_restrictions_20261023/history/AUDIT_COMPILER.md).
 - **Reproduction repair:** the late-incoming receipt initially compared Python coordinate tuples with JSON coordinate lists. Canonicalizing the receipt coordinates to lists fixes replay; the mathematical checks and saved numeric values did not change. Normal and optimized replay both pass.
 
+## 2026-10-23 — THM-1345: Hamiltonian sign and a zero-weight exception
+
+- **Affected statement:** the local Poisson notation and top-weight argument in [THM-1345](theorems/THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow.md), sections 2 and 5. This is not an audit of that file's other historical claims.
+- **Minimal witnesses:** under `{f,g}=f_x g_y-f_y g_x`, `{xy,x}=-x`, so the derivation `x∂_x-y∂_y` is `{−,xy}`. The canonical pair `(x,y)` has top weights `1,-1` and bracket 1, refuting unconditional top-weight vanishing.
+- **Repair / strongest survivor:** use the right-bracket convention for the stated weight derivation. For a nonzero constant bracket, the sum of top weights is nonnegative; its top term must vanish when that sum is positive, but may be the nonzero constant when the sum is zero. Exact torus-equivariant rigidity and weight-additivity survive these local repairs.
+- **Missing coordinate / new question:** retain the sign convention and the zero-charge boundary before projecting. [Charge-pair derivation and exact controls](../05-knowledge/results/shared_frame_restrictions_20261023/CONNECTIONS.md) also show that an averaged bracket equal to 1 need not be a Keller bracket.
+
 ## 2026-10-23 — square-sum draft: a Hamiltonian cycle's chord insertion was missed
 
 - **Affected draft:** the unpublished `square_sum_ports_20261023/README.md` and `cuts.py` said a Hamiltonian cycle proves edge omission but not inclusion of every noncycle edge. That boundary was too weak and the asserted nonimplication was false.

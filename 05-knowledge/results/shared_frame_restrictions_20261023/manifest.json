@@ -1,0 +1,114 @@
+{
+  "files": {
+    "AUDIT.md": "d7f67e3e149f7fcbb78b6b33671d7c22ababb92f69f5e80f20c5dee2c5877eb2",
+    "CONNECTIONS.md": "4a83f7e265ba9938c536d2e1551351e15f553dfc7adc1d879cd798d1728e156b",
+    "NATIVE.md": "af91300a2ed41501f4431f3947a388fc3ad75bcb373ec7f15adab42401f673b1",
+    "README.md": "134a51ef0af4d76c41b4d5dab1d173ec7951e25eb1c7e957af60994644822728",
+    "RESTRICTIONS.md": "d821a9da5100f204c5e5c840569040e7950627b0a6ea4188c095243d8cb22f02",
+    "algebra.py": "7adc11e6b74fc07988901c2d23319a1729a93650bef1dc4108d62983264554be",
+    "algebra_receipt.json": "306e01c777092e563701c882abcd3aa6e294c6c68db8a08bb05077969dc2d9c2",
+    "check.py": "ca459a4458b2956da8cbe7c0b143f794a4feff056a5e5a56818cf471e42fbb17",
+    "native.py": "e525b4b81267d0ab7328644c3048b17b017ff4d611cf83067f51aa2d3c77ae87",
+    "native_receipt.json": "55188544f78f00d846b7926521324e77204034abc1a930d35cba6565ba8a9ea5",
+    "receipt.json": "299a9cd8d1b5a4ba7660c0b85d0f75dad9616f70232d82355170316a42e170ef",
+    "reproduce.py": "dcf704563c713404ac64b2a5e14939593ef88bf22a1528cfc7b1744fa3882c90"
+  },
+  "sources": [
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/session42_shared_lattices_square_colors_20261023/coupling/COUPLING_OPERATOR.md",
+      "sha256": "72c703a6c9ceab75e019ea15864ae1fd5b038cc49c56b9f5fa08114eb4f50baf"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/session42_shared_lattices_square_colors_20261023/correspondence/CORRESPONDENCE_AND_OBSTRUCTIONS.md",
+      "sha256": "2fec5e4073c00518031ae67871e2a3469cc68c28233add1bdd73a463aef2d8b2"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/README.md",
+      "sha256": "e68a066377586c27a40c4ea15d6261a915fa15c105e7c4dc162889b78331a678"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/CARRIES.md",
+      "sha256": "2dd412ac9e46dd639b28ce37c06987efc970409b120fb8872662759937b3e37e"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/INCOMING.md",
+      "sha256": "c20299558fb5943b83051254aaa1e0e124e91f36189cc4ba81a0ccdd28d457be"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/metagraph_hall_bott_20261023/receipt.json",
+      "sha256": "ad1d2bbbb2856daa3414dad34aca3763608a2d34be3484436c0e17f4d978e84f"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/session32_square_monster_20261023/VALUATION_CYCLE_AND_QUOTIENT.md",
+      "sha256": "27af626ac2abcc372ec664ce82c73c660ee63555a95246ddd629339175d3b3a3"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/session35_dimensions_dualities_20261023/singer-audit/AUDIT.md",
+      "sha256": "50c8be0f3fc1e0761b94684cc32b484ed166373fde3ac8be934ef6cfbf4e9ba7"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/session26_random_bridges_20261022/session26-tournament/APEX_CLASSIFICATION_AND_SPECTRAL_LAW.md",
+      "sha256": "82d01a9acb14fab5d9f53acffc8202ce81beb2f7b55c4dbc8826a291f3a3e9f7"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "01-canon/theorems/THM-1345-jc2-equivariant-category-poisson-reframing-dc1-shadow.md",
+      "sha256": "004a4b49068f9926e468964030b536e7b5cc3ab145c1004207c7a4b29a566c3b"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "01-canon/theorems/THM-2375-gaussian-angular-complete-line-charge-tomography.md",
+      "sha256": "f09d7b6eb3962f96eb44c30cc1052de4e9c217b382b0c85989aef38bb74f1c7b"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/planar_carrier_factor_rigidity_20261019.md",
+      "sha256": "dd78484770d5642f02c9d4a5e66be3770bd788c14cbb7bb6afad7b29edb58d87"
+    },
+    {
+      "commit": "8b71b746f7a9d90378c702e01608207227b1f83e",
+      "path": "05-knowledge/results/geometry_567_collatz_observers_20261004.md",
+      "sha256": "bb3a5027c7371c12f3d6616aec57293c2e1e4f34176c78acb30aa5e8cc43394f"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cycle-geometry/PROOF.md",
+      "sha256": "bd04cad6a9bacafadb7f58f7f40910e07ef286b52102795bc842b595db9650a0"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/audit-cycle-geometry/AUDIT.md",
+      "sha256": "889fb5ca95779f4ee3f83cd1cb0ebe48c2d543e08f34b57540b2261fe1481f53"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/gaussian-jacobian/THEOREMS.md",
+      "sha256": "2deeb6c00ee912d889d64d54b4ed0744dc6f180a7554fb686fc9596a015b1b93"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/gaussian-jacobian/PROVENANCE.md",
+      "sha256": "97fdd685e47430b08808cb69a898107ade81d261250b10c8db775016f76953ea"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/audit-gaussian/REVIEW.md",
+      "sha256": "278ad32180a46f3d9ae706855d8195853dd73069f3ca6aa4e020ab2e6733ceb9"
+    },
+    {
+      "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/FINITE_GUARDS_AND_DEGREE.md",
+      "sha256": "3a6603cc95de0d1c5c0cb10af4f162b4f83d19e078d6831ff0f0b244ca63c1e6"
+    }
+  ],
+  "status": "PROVED scoped / FINITE-EXACT; same-agent audit"
+}
