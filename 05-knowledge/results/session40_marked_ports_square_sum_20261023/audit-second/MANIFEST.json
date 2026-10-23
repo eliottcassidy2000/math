@@ -1,0 +1,131 @@
+{
+  "files": [
+    {
+      "path": "SECOND_AUDIT.md",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4",
+      "bytes": 7132
+    },
+    {
+      "path": "check_five_cell_orbits.py",
+      "sha256": "29a9a9c25afdd6200070d6432dd0ae6a79423d6cad80c20c2ba54cf8b0c9534f",
+      "bytes": 2074
+    },
+    {
+      "path": "check_marked_endpoint_scan.py",
+      "sha256": "07cff1d9cd0f9f02763ede4a6f07521aaae22f8f70e0a68f38f6f8b971745d26",
+      "bytes": 3815
+    },
+    {
+      "path": "check_minimum_square_banks.py",
+      "sha256": "5362b1be4a803dcf06fc30393fd555d565bdcc49da62afa4f06776058e919a99",
+      "bytes": 1719
+    },
+    {
+      "path": "check_path_scatter.py",
+      "sha256": "5d510f001d53adb39907052e61f6dd758663de730c78eb6d5c9ea3c8c32eab12",
+      "bytes": 1873
+    },
+    {
+      "path": "check_small_core_theorem.py",
+      "sha256": "eb04e65a93ee503690f659d42fb2e0ae9e7e259663dfcf5142eecdb3800410cc",
+      "bytes": 2144
+    },
+    {
+      "path": "check_source_endpoint_hostile.py",
+      "sha256": "b124683dde862e82ee7a9e2c24f715645cf2d0e1b5352a9e69b76d6df1022277",
+      "bytes": 1304
+    },
+    {
+      "path": "check_square_census_agreement.py",
+      "sha256": "21136df53713f56c74359222a9cd5640d89514ec5cf6e4b9b3acd939d2cef65e",
+      "bytes": 1008
+    },
+    {
+      "path": "check_square_edge_subsets.py",
+      "sha256": "49c25fb4d71dd7b38bc9e6ccfaeef6fc2b92fb5919fdfa9e21ed7e4e81d6df49",
+      "bytes": 2035
+    },
+    {
+      "path": "check_unused_edge_certificate.py",
+      "sha256": "d4346ae9e38b0382354a454e0bc6de1f90ba811ef9d4c301938c2506adba3716",
+      "bytes": 1815
+    },
+    {
+      "path": "five-cell-orbits-audit-receipt.json",
+      "sha256": "267bd9a1c20f6e4f9a706660c25b272fe083e3a066fa5872a7da2c2df9465694",
+      "bytes": 2535
+    },
+    {
+      "path": "full-mask-replay.out",
+      "sha256": "a1fdfac63aa51fb10a35d166c7d0c10991e78c1655e74a91604c6082f5cb560d",
+      "bytes": 926
+    },
+    {
+      "path": "marked-endpoint-audit-receipt.json",
+      "sha256": "2029565a72a0839eaee0cc337f6e639ee1c10159c4a70ce72264543616fe6eef",
+      "bytes": 3322
+    },
+    {
+      "path": "minimum-square-banks-receipt.json",
+      "sha256": "27b564b7b4491dc4c7f9d71534c4d3bb6d5f7f08134556751fbb96765fcf4425",
+      "bytes": 1444
+    },
+    {
+      "path": "path-scatter-audit-receipt.json",
+      "sha256": "3996e5cd20f5cb68886219ef3439efacb21a2ebcf52f385f8bf65d350582f870",
+      "bytes": 1270
+    },
+    {
+      "path": "small-core-audit-receipt.json",
+      "sha256": "254cc0d3aa20912280a9dfe378406689bc195b41c3268a44982e2419737bdce8",
+      "bytes": 201
+    },
+    {
+      "path": "source-endpoint-hostile-audit.json",
+      "sha256": "26184ba7021bc95486d62efb867a9112d92ec697073dc637c5fd9e84425928e9",
+      "bytes": 534
+    },
+    {
+      "path": "square-census-agreement-receipt.json",
+      "sha256": "0899be9b2f4fcb69d64ca566659fb00de2296c213356893aa5e4cf88158b17ad",
+      "bytes": 139
+    },
+    {
+      "path": "square-edge-subsets-receipt.json",
+      "sha256": "6e2bcf0e8dcf92e925a7853d418427dd242dae21ebfce7acd6a34d004ec4da21",
+      "bytes": 10587
+    },
+    {
+      "path": "unused-edge-certificate-audit.json",
+      "sha256": "54db5b6a6a5e3c0ac6c99b54d28ce83cd860585134eba46da3492d9b5266742a",
+      "bytes": 161
+    }
+  ],
+  "audited_sources": {
+    "session40-marked-ports/PUBLICATION_MANIFEST.json": "55e22fb80c244df62f895289baf0aa2c8c3e64aaa71a651849fa89288b507fab",
+    "session40-square-sum/PUBLICATION_MANIFEST.json": "8fe54d49b080d46a990678e611b5f3d93d30fd1079e2fe4295b05e993c1612cb",
+    "session40-square-sum/receipt.json": "0f18c13539176297e3e9c30e142ec3afbf7c10d3204570872d1fec06a4e4f8ac",
+    "session40-root/PATH_SCATTER_AND_MARKING.md": "3b94d52a01b6b29d5e327cecc5ecc25abf826ece69442778e241595c74cfaec2",
+    "session40-root/ENDPOINTS_DO_NOT_DETERMINE_WIRING.md": "7a0c1e7d4c239c468267ac5c46fb28d6313bf74fa5995b8531b6f454f8fa50d4"
+  },
+  "commands": [
+    "python3 check_five_cell_orbits.py",
+    "python3 -O check_five_cell_orbits.py",
+    "python3 check_marked_endpoint_scan.py",
+    "python3 -O check_marked_endpoint_scan.py",
+    "python3 check_minimum_square_banks.py",
+    "python3 -O check_minimum_square_banks.py",
+    "python3 check_path_scatter.py",
+    "python3 -O check_path_scatter.py",
+    "python3 check_small_core_theorem.py",
+    "python3 -O check_small_core_theorem.py",
+    "python3 check_source_endpoint_hostile.py",
+    "python3 -O check_source_endpoint_hostile.py",
+    "python3 check_square_census_agreement.py",
+    "python3 -O check_square_census_agreement.py",
+    "python3 check_square_edge_subsets.py",
+    "python3 -O check_square_edge_subsets.py",
+    "python3 check_unused_edge_certificate.py",
+    "python3 -O check_unused_edge_certificate.py"
+  ]
+}

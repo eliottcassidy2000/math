@@ -1,0 +1,38 @@
+{
+  "status": "FROZEN, exact primary tests and independent audit PASS",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 18374,
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb"
+    },
+    {
+      "name": "EDGE_HISTORY.md",
+      "bytes": 1948,
+      "sha256": "7e7a3c42f2d8bfcbc038368153b35fd68b62355eee9ad26e9093f5b91ed784a8"
+    },
+    {
+      "name": "check_square_incidence.py",
+      "bytes": 8613,
+      "sha256": "b870de2f452471633349a078a34498d281586b5c2f0aa0f0d5bcae3b61f16c18"
+    },
+    {
+      "name": "receipt.json",
+      "bytes": 2373255,
+      "sha256": "0f18c13539176297e3e9c30e142ec3afbf7c10d3204570872d1fec06a4e4f8ac"
+    },
+    {
+      "name": "receipt.optimized.json",
+      "bytes": 2373255,
+      "sha256": "0f18c13539176297e3e9c30e142ec3afbf7c10d3204570872d1fec06a4e4f8ac"
+    }
+  ],
+  "reproduce": [
+    "python3 check_square_incidence.py > receipt.json",
+    "python3 -O check_square_incidence.py > receipt.optimized.json"
+  ],
+  "excluded_scratch": [
+    "explore.py",
+    "explore.json"
+  ]
+}

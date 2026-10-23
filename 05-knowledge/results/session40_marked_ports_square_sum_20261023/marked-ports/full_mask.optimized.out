@@ -1,0 +1,21 @@
+{
+  "black_lines": 1046528,
+  "blue_lines": 2048,
+  "class_mismatches": 0,
+  "classes": 6880,
+  "converse_checks": 2097152,
+  "endpoint_pairs": 296534,
+  "input_sha256": {
+    "class_of_mask.u16le.gz": "7d717c5c8889bf8f64abe111a76fa7488c6455a61f6249a25728f09146393bf8",
+    "classes.tsv.gz": "227eede83c884d90b060a5da6b8fc36a65bc788be9043c3f05b46499388855b4",
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "ports.tsv.gz": "ce886c5755cfaeaaddf8f45c5a889d47d6036c9d24bf520d29251289953ac3b9"
+  },
+  "literal_masks": 2097152,
+  "loop_lines": 622,
+  "merged_edge_entries": 460699,
+  "ordinary_port_entries": 956339,
+  "scope": "Every fixed-path n8 target decoded independently from endpoint refinement plus shared chirality; exact full ordinary-port and merged-edge ledgers; literal within-class partner identity not reconstructed.",
+  "signature_lookup": 291828,
+  "status": "PASS"
+}

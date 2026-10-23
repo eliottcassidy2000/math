@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "max_order": 25,
+  "checks": 359,
+  "methods": "vertex-order DFS versus acyclic degree-constrained edge subsets"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 25,
+      "minimum": 0,
+      "distinct_nonzero_edge_tests": 0,
+      "smaller_banks_exhaustively_rejected": 0,
+      "endpoint_pair_ambiguities": 0
+    },
+    {
+      "n": 26,
+      "minimum": 1,
+      "distinct_nonzero_edge_tests": 6,
+      "smaller_banks_exhaustively_rejected": 1,
+      "endpoint_pair_ambiguities": 3
+    },
+    {
+      "n": 27,
+      "minimum": 3,
+      "distinct_nonzero_edge_tests": 12,
+      "smaller_banks_exhaustively_rejected": 66,
+      "endpoint_pair_ambiguities": 27
+    },
+    {
+      "n": 28,
+      "minimum": 4,
+      "distinct_nonzero_edge_tests": 17,
+      "smaller_banks_exhaustively_rejected": 680,
+      "endpoint_pair_ambiguities": 62
+    },
+    {
+      "n": 29,
+      "minimum": 1,
+      "distinct_nonzero_edge_tests": 3,
+      "smaller_banks_exhaustively_rejected": 1,
+      "endpoint_pair_ambiguities": 4
+    },
+    {
+      "n": 30,
+      "minimum": 1,
+      "distinct_nonzero_edge_tests": 6,
+      "smaller_banks_exhaustively_rejected": 1,
+      "endpoint_pair_ambiguities": 5
+    },
+    {
+      "n": 31,
+      "minimum": 5,
+      "distinct_nonzero_edge_tests": 23,
+      "smaller_banks_exhaustively_rejected": 8855,
+      "endpoint_pair_ambiguities": 321
+    },
+    {
+      "n": 32,
+      "minimum": 6,
+      "distinct_nonzero_edge_tests": 31,
+      "smaller_banks_exhaustively_rejected": 169911,
+      "endpoint_pair_ambiguities": 324
+    }
+  ]
+}

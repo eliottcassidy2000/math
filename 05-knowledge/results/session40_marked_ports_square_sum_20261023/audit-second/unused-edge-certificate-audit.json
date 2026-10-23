@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "endpoint_cases": 24,
+  "validated_propagation_steps": 215,
+  "forced_edge": [
+    1,
+    15
+  ],
+  "n": 25,
+  "branching_used": false
+}

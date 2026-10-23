@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checks": 71202,
+  "old_comparisons": 244,
+  "full_census_collision_groups": 18,
+  "order9_hostile": [
+    {
+      "steps": [
+        1,
+        2,
+        3
+      ],
+      "H": 175
+    },
+    {
+      "steps": [
+        1,
+        2,
+        4
+      ],
+      "H": 189
+    }
+  ]
+}

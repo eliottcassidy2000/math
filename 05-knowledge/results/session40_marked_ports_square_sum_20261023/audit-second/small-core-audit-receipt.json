@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "regular_five_presentations": 24,
+  "regular_five_isotypes": 1,
+  "regular_three_by_three_blocks": 14,
+  "seven_cell_H": [
+    175,
+    189
+  ],
+  "mixed_chirality_cases": 12
+}

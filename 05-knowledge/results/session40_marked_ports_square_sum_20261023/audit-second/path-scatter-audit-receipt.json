@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "method": "independent SymPy DomainMatrix exact rational rank; rebuilt edge universe",
+  "rows": [
+    {
+      "n": 23,
+      "total_rank": 2,
+      "within_endpoint_rank": 0,
+      "kernel_extension": null
+    },
+    {
+      "n": 25,
+      "total_rank": 9,
+      "within_endpoint_rank": 0,
+      "kernel_extension": null
+    },
+    {
+      "n": 26,
+      "total_rank": 11,
+      "within_endpoint_rank": 3,
+      "kernel_extension": null
+    },
+    {
+      "n": 27,
+      "total_rank": 20,
+      "within_endpoint_rank": 5,
+      "kernel_extension": null
+    },
+    {
+      "n": 28,
+      "total_rank": 25,
+      "within_endpoint_rank": 7,
+      "kernel_extension": null
+    },
+    {
+      "n": 29,
+      "total_rank": 16,
+      "within_endpoint_rank": 2,
+      "kernel_extension": null
+    },
+    {
+      "n": 30,
+      "total_rank": 17,
+      "within_endpoint_rank": 3,
+      "kernel_extension": null
+    },
+    {
+      "n": 31,
+      "total_rank": 34,
+      "within_endpoint_rank": 9,
+      "kernel_extension": null
+    },
+    {
+      "n": 32,
+      "total_rank": 45,
+      "within_endpoint_rank": 12,
+      "kernel_extension": {
+        "degree_rank": 32,
+        "extended_kernel_rank": 34,
+        "kernel_dimension": 34
+      }
+    }
+  ]
+}
