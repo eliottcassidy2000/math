@@ -21,6 +21,10 @@ Session42 packet. [INCOMING.md](INCOMING.md) records the overlapping lattice,
 observer and founder-tail results and the additional mechanisms used here.
 In particular, the sharp founder threshold 71 was independently obtained in
 both sessions. It is not claimed here as a priority over that incoming proof.
+The final synchronization through 7e36e38161 also supplies explicit-group
+feasibility, carry-sensitive charge tests, Fibonacci addition distributions
+and the exact observer-coupling spectral gap; their scopes are integrated
+in the same note.
 
 - Closest proved mechanism: [small-cell completion](../odd_cell_completion_20261023/README.md),
   and the incoming [coupled integer compiler](../session41_owned_attachments_fibonacci_20261023/residual-cycles/README.md).
@@ -152,6 +156,9 @@ weights into a reversible chain with a literal electrical energy equal to
 conditional variance. At order four, a star's tournament distribution equals
 a mixture of one-quarter empty-graph and three-quarters two-disjoint-edge
 sources. Distinct rows therefore do not provide lossless mixture decoding.
+The later incoming theorem gives this exact chain spectral gap 8/9; our
+centered expected triangle count is its P3 mode with eigenvalue 1/9.
+That spectral statement does not yet describe native port-preserving moves.
 
 ## 5. The square-sum islands produce both a theorem and a real coupled repair
 

@@ -2,8 +2,9 @@
 
 23 October 2026. **PROVED elementary:** the reversible finite Markov chain,
 stationary law, electrical/variance identity and constant-energy kernel.
-**FINITE-EXACT:** the order-four mixture collision. No uniform mixing-rate
-bound, lossless decoder for mixtures, or native metagraph-path lifting claim.
+**FINITE-EXACT:** the order-four mixture collision. The later incoming
+coupling theorem supplies the exact spectral gap 8/9, as cited below.
+There is no lossless decoder for mixtures or native metagraph-path lifting claim.
 
 ## 1. The incoming incidence is exactly the one in this packet
 
@@ -47,8 +48,9 @@ Thus pi is exactly the graph-type law of a uniformly random labelled graph.
 Every diagonal entry is positive, since every row has positive mass. The
 incoming connected incidence graph makes the two-step graph chain irreducible.
 It therefore has a unique stationary law and converges to it from every
-initial distribution. This is a statement for each finite n; no uniform
-spectral gap or useful all-size running time is asserted.
+initial distribution. The elementary incidence argument alone supplies no
+uniform spectral gap. The stronger incoming theorem identified below does;
+an efficient native sampler or enumeration algorithm does not follow from it.
 
 Equivalently, D_r^(1/2) P D_r^(-1/2) is the Gram matrix
 
@@ -132,3 +134,14 @@ python -B -O 05-knowledge/results/attachment_lattices_square_sum_20261023/comple
 The all-size flow follows from the proved incidence balance and incoming
 connectedness. The finite matrix supplies an explicit information-loss witness,
 not a conjectural explanation of a large computation.
+
+## Later incoming spectral completion
+
+Commit `313ad831f1`, [the coupling theorem](../../session42_shared_lattices_square_colors_20261023/coupling/COUPLING_OPERATOR.md),
+diagonalizes this same P by graph-shaped Walsh sums and proves exact gap8/9
+for every n>=3, including the merged carrier. This is an inherited stronger
+theorem, not a new claim established by our order-four matrix tests.
+[INCOMING.md, section 5](../INCOMING.md) proves the explicit bridge to our
+triangle statistic: its centered order-average is the P3 Walsh mode and
+contracts by exactly1/9 under P. Shared-port and fixed-path restrictions
+change the carrier; the incoming gap cannot be imported to them without proof.
