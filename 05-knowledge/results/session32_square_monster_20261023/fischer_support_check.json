@@ -1,0 +1,25 @@
+{
+  "status": "exact multiplication and support check with cited ATLAS input",
+  "order": 64561751654400,
+  "Fi22_support": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "B_minus_Fi22": [
+    17,
+    19,
+    23,
+    31,
+    47
+  ],
+  "M_minus_B": [
+    29,
+    41,
+    59,
+    71
+  ]
+}

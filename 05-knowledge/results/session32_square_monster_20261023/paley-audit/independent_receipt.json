@@ -1,0 +1,76 @@
+{
+  "P7": {
+    "affine_signed_group_order": 42,
+    "anti_automorphisms": 21,
+    "anti_fixed_path_distribution": {
+      "0": 14,
+      "9": 7
+    },
+    "anti_involutions": 7,
+    "automorphisms": 21,
+    "black_presentations": 6,
+    "blue_paths": 63,
+    "blue_presentation_full_edge_bitstrings": [
+      "101001110101100111101",
+      "110010101011110100111",
+      "110100110101101110111"
+    ],
+    "blue_presentations": 3,
+    "directed_odd_cycles": {
+      "3": 14,
+      "5": 42,
+      "7": 24
+    },
+    "disjoint_odd_cycle_pairs": 7,
+    "hamiltonian_paths": 189,
+    "paired_black_degree": 3,
+    "per_endpoint_counts": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ],
+    "presentations": 9,
+    "quadratic_residues": [
+      1,
+      2,
+      4
+    ],
+    "regular_vertex_subsets_by_size": {
+      "ordinary": {
+        "2": 21,
+        "3": 21,
+        "4": 21,
+        "5": 21
+      },
+      "signed": {}
+    },
+    "signed_path_orbit_sizes": [
+      21,
+      21,
+      21,
+      42,
+      42,
+      42
+    ]
+  },
+  "action_distinction": {
+    "conjugation_fixes_identity": true,
+    "conjugation_image_order": 6,
+    "conjugation_kernel_in_affine_quotient_order": 7,
+    "coset_degree": 7,
+    "coset_point_stabilizer_order": 6,
+    "faithful_affine_quotient_order": 42
+  },
+  "imports_producer_code": false,
+  "producer_files_present": {
+    "session32-paley/PALEY_MONSTER_BRIDGE.md": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4",
+    "session32-paley/check.py": "5821f709524b50c3acd416c1993e770dbb98ffd8a6ffc72e16b97cd6f981975b",
+    "session32-paley/exact.json": "57cfc5eacd358dc1a011961440451ad385059c0fc2af0e339a528b44721e5aec",
+    "session32-paley/optimized.json": "57cfc5eacd358dc1a011961440451ad385059c0fc2af0e339a528b44721e5aec"
+  },
+  "status": "PASS"
+}

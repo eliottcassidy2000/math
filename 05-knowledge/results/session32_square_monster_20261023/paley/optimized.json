@@ -1,0 +1,200 @@
+{
+  "Aut": 21,
+  "H": 189,
+  "H_subset_DP": 189,
+  "anti_automorphisms": 21,
+  "b": 3,
+  "black_converse_pairs": 3,
+  "black_pairs": [
+    [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ],
+      [
+        0,
+        1,
+        3,
+        5,
+        2,
+        4,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3,
+        5
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        5,
+        2,
+        3,
+        4,
+        6
+      ],
+      [
+        0,
+        1,
+        5,
+        2,
+        4,
+        6,
+        3
+      ]
+    ]
+  ],
+  "blue_presentations": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      6,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      1,
+      5,
+      2,
+      6,
+      3,
+      4
+    ]
+  ],
+  "checker_sha256": "5821f709524b50c3acd416c1993e770dbb98ffd8a6ffc72e16b97cd6f981975b",
+  "deficit_h_minus_b": 6,
+  "h": 9,
+  "normalized_presentations": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      3
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      6,
+      3,
+      5
+    ],
+    [
+      0,
+      1,
+      2,
+      6,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      1,
+      3,
+      4,
+      5,
+      2,
+      6
+    ],
+    [
+      0,
+      1,
+      3,
+      5,
+      2,
+      4,
+      6
+    ],
+    [
+      0,
+      1,
+      5,
+      2,
+      3,
+      4,
+      6
+    ],
+    [
+      0,
+      1,
+      5,
+      2,
+      4,
+      6,
+      3
+    ],
+    [
+      0,
+      1,
+      5,
+      2,
+      6,
+      3,
+      4
+    ]
+  ],
+  "ordinary_regular_subsets": 84,
+  "orientation": "x -> y iff y-x modulo7 is in {1,2,4}",
+  "raw_blue_words": 63,
+  "signed_group": 42,
+  "signed_regular_subsets": 0,
+  "signed_word_orbit_sizes": [
+    21,
+    21,
+    21,
+    42,
+    42,
+    42
+  ],
+  "status": "PASS: finite-exact Paley7 actions and presentations",
+  "universe": "all 5040 permutations of F7; all 128 vertex subsets"
+}

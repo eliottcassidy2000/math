@@ -1,0 +1,243 @@
+{
+  "status": "PASS bounded prime-support graph audit",
+  "explicit_checks": 11,
+  "scope": "105 unordered pairs on the supplied prime support; no re-verification of group-order prime lists",
+  "pair_count": 105,
+  "vertices": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    41,
+    47,
+    59,
+    71
+  ],
+  "all_edges": [
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      23
+    ],
+    [
+      2,
+      47
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      5,
+      31
+    ],
+    [
+      5,
+      59
+    ],
+    [
+      7,
+      29
+    ],
+    [
+      13,
+      23
+    ],
+    [
+      17,
+      19
+    ],
+    [
+      17,
+      47
+    ],
+    [
+      23,
+      41
+    ],
+    [
+      29,
+      71
+    ],
+    [
+      41,
+      59
+    ]
+  ],
+  "components": [
+    [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      41,
+      47,
+      59,
+      71
+    ]
+  ],
+  "leaves": [
+    3,
+    11,
+    19,
+    31,
+    71
+  ],
+  "parts": [
+    {
+      "vertices": [
+        17,
+        19,
+        23,
+        31,
+        47
+      ],
+      "edges": [
+        [
+          17,
+          19
+        ],
+        [
+          17,
+          47
+        ]
+      ]
+    },
+    {
+      "vertices": [
+        29,
+        41,
+        59,
+        71
+      ],
+      "edges": [
+        [
+          29,
+          71
+        ],
+        [
+          41,
+          59
+        ]
+      ]
+    },
+    {
+      "vertices": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "edges": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          11
+        ]
+      ]
+    }
+  ],
+  "Baby_vertices": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    31,
+    47
+  ],
+  "Baby_edges": [
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      23
+    ],
+    [
+      2,
+      47
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      5,
+      31
+    ],
+    [
+      13,
+      23
+    ],
+    [
+      17,
+      19
+    ],
+    [
+      17,
+      47
+    ]
+  ],
+  "Baby_components": [
+    [
+      2,
+      3,
+      7,
+      13,
+      17,
+      19,
+      23,
+      47
+    ],
+    [
+      5,
+      11,
+      31
+    ]
+  ],
+  "source_sha256": {
+    "session32-root/PRIME_BLOCK_CARDINALITY_HOSTILE.md": "37df4881a65d3f4f7e51d4819731214d6d57a969e66ade50109f2623e8bb0a61",
+    "session32-root/check_prime_block_graphs.py": "862653e7b3f52921b80fe5bb751e1374f1e4d47a05ba441a2fda38224450a1bf",
+    "session32-root/check_prime_block_graphs.json": "aa76b7d5a4d276281343ec2870cc66ae757bde3404784d836de00aa91a8da9f5"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS cited ATLAS order and exact multiplication/support identities only",
+  "atlas_url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/group/Fi22",
+  "atlas_checked_utc_date": "2026-10-23",
+  "order": 64561751654400,
+  "factorization": {
+    "2": 17,
+    "3": 9,
+    "5": 2,
+    "7": 1,
+    "11": 1,
+    "13": 1
+  },
+  "supports": {
+    "Fi22": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "Baby_minus_Fi22": [
+      17,
+      19,
+      23,
+      31,
+      47
+    ],
+    "Monster_minus_Baby": [
+      29,
+      41,
+      59,
+      71
+    ]
+  },
+  "source_sha256": {
+    "session32-root/FISCHER_SUPPORT_SHELLS.md": "dc07a08481befedda81558d5c32896783241b6000aee028c847bd0b82a055d48",
+    "session32-root/fischer_support_check.json": "910e66a6c9008271824b5686ce249e3411e36f3dd2b6b94da2c30f8cabc4c56c"
+  },
+  "exclusions": [
+    "No subgroup embedding inferred",
+    "No level-six modular claim audited or imported",
+    "No pre-audit packet used as theorem evidence"
+  ],
+  "source_edits": false,
+  "git_mutations": false
+}

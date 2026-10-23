@@ -1,0 +1,42 @@
+[
+  {
+    "title": "The odd-local subgroups of the Monster",
+    "authors": "Robert A. Wilson",
+    "year": 1988,
+    "locator": "Theorem 7 and section 10, printed page 13",
+    "url": "https://doi.org/10.1017/S1446788700031323",
+    "checked_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/53F4B3C736DA55C8D5EF99449E343AB6/S1446788700031323a.pdf/oddlocal_subgroups_of_the_monster.pdf",
+    "supports": "The 7A cyclic-subgroup normalizer has structure (7:3 x He):2.",
+    "role": "CITED primary group-theoretic input, not reconstructed by this audit"
+  },
+  {
+    "title": "The Alperin Weight Conjecture and Uno's Conjecture for the Baby Monster B, p Odd",
+    "authors": "Jianbei An and Robert A. Wilson",
+    "year": 2004,
+    "locator": "Section 3, printed page 124, PDF page 5",
+    "url": "https://doi.org/10.1112/S1461157000001078",
+    "checked_url": "https://resolve.cambridge.org/core/services/aop-cambridge-core/content/view/2F69F1F12550B7761F3CD593177F673E/S1461157000001078a.pdf/alperin_weight_conjecture_and_unos_conjecture_for_the_baby_monster_b_p_odd.pdf",
+    "supports": "Explicit parity-matched subdirect-product construction of (7:3 x He):2 using actions of 7:6 and He:2 on 7 and 2058 points.",
+    "role": "CITED primary construction"
+  },
+  {
+    "title": "Some steps in the verification of the ordinary character table of the Monster group",
+    "authors": "Thomas Breuer, Kay Magaard and Robert A. Wilson",
+    "date": "2024-12-12",
+    "locator": "Section 4.13, printed page 20; section 5, printed page 22",
+    "url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/doc/ctblm.pdf",
+    "supports": "Centralizer C7 x He, normalizer (7:3 x He).2, and subdirect product with 7:6 and He.2; explicit GAP construction record.",
+    "role": "CITED primary computational record; the complete GAP character-table verification is not rerun"
+  },
+  {
+    "title": "Conformal Field Theories with Sporadic Group Symmetry",
+    "authors": "Jin-Beom Bae, Jeffrey A. Harvey, Kimyeong Lee, Sungjay Lee and Brandon C. Rayhaun",
+    "version": "arXiv:2002.02970v2",
+    "year": 2020,
+    "locator": "Section 3.3, HTML equations 328-330 and surrounding text",
+    "url": "https://arxiv.org/html/2002.02970v2",
+    "published_doi": "https://doi.org/10.1007/s00220-021-04207-7",
+    "supports": "Existence of a P(7) parafermion subalgebra through a lattice embedding chain; expected Held action on its commutant and evidence for the 7A lift, not assertions that all such structures are proved.",
+    "role": "SOURCE-QUALIFIED CFT context; not needed for the finite-group quotient theorem"
+  }
+]

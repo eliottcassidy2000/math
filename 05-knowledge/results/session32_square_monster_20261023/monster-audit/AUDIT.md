@@ -111,3 +111,17 @@ Audited source SHA-256:
 
 - `session32-root/SYLOW_FIXED_POINT_PARTITION.md`: `3dc2a7db7869b4cd71d876554f6eb1592e2f26404762f675d1928aba2d274788`.
 - `session32-root/sylow_partition.json`: `4072fdfebeda1a0e726cefea6c1d086c721ca32d3305fba267dc0fb45df9f346`.
+
+
+## 8. Source-only addendum: Fischer support shells — PASS
+
+Independently opened the [official ATLAS Fi22 page](https://brauer.maths.qmul.ac.uk/Atlas/v3/group/Fi22) on 2026-10-23. Its order line states |Fi22|=64,561,751,654,400=2^17·3^9·5²·7·11·13. Independent multiplication reproduces the decimal integer. Set subtraction against the previously audited Baby Monster and Monster supports gives exactly {2,3,5,7,11,13}, {17,19,23,31,47}, and {29,41,59,71} as the three consecutive prime-support shells.
+
+`../session32-root/FISCHER_SUPPORT_SHELLS.md` and `../session32-root/fischer_support_check.json` pass this bounded review. Only the cited order and elementary support identities are certified. Neither support nesting nor divisibility alone proves subgroup inclusions, identifies element conjugacy classes, or supplies a modular level-six theorem. The concurrent PRE-AUDIT packet was not used as theorem evidence. No source edits or Git mutations were performed.
+
+Exact check and source-qualified pin: `fischer_addendum_exact.json`.
+
+Audited source SHA-256:
+
+- `session32-root/FISCHER_SUPPORT_SHELLS.md`: `dc07a08481befedda81558d5c32896783241b6000aee028c847bd0b82a055d48`.
+- `session32-root/fischer_support_check.json`: `910e66a6c9008271824b5686ce249e3411e36f3dd2b6b94da2c30f8cabc4c56c`.

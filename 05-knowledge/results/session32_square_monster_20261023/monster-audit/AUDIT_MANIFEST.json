@@ -24,5 +24,14 @@
       "session32-root/sylow_partition.json": "4072fdfebeda1a0e726cefea6c1d086c721ca32d3305fba267dc0fb45df9f346"
     },
     "certificate": "sylow_addendum_exact.json"
+  },
+  "fischer_addendum": {
+    "status": "PASS source-qualified order/support identities only",
+    "source_sha256": {
+      "session32-root/FISCHER_SUPPORT_SHELLS.md": "dc07a08481befedda81558d5c32896783241b6000aee028c847bd0b82a055d48",
+      "session32-root/fischer_support_check.json": "910e66a6c9008271824b5686ce249e3411e36f3dd2b6b94da2c30f8cabc4c56c"
+    },
+    "certificate": "fischer_addendum_exact.json",
+    "atlas_url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/group/Fi22"
   }
 }
