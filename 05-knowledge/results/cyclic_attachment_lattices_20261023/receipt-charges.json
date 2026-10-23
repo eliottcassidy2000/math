@@ -1,0 +1,119 @@
+{
+  "status": "FINITE-EXACT controls; proof scopes in README.md",
+  "charges": {
+    "weighted_tests": 8640,
+    "constant_tests": 1602,
+    "zero_slot_shared": {
+      "feasible": true,
+      "constant": true,
+      "mean": "0",
+      "coordinate_orders": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cyclotomic_order": 2,
+      "candidate_terms": 12,
+      "distinct_characters": 6,
+      "nonzero_characters": 0,
+      "first_nonzero": null
+    },
+    "zero_slot_erased": {
+      "feasible": true,
+      "constant": false,
+      "mean": "0",
+      "coordinate_orders": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "cyclotomic_order": 2,
+      "candidate_terms": 12,
+      "distinct_characters": 12,
+      "nonzero_characters": 12,
+      "first_nonzero": {
+        "character": [
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "coefficient": [
+          "1/2"
+        ]
+      }
+    },
+    "mixed_carry_hostile": {
+      "feasible": true,
+      "constant": false,
+      "mean": "-1",
+      "coordinate_orders": [
+        3,
+        3,
+        3
+      ],
+      "cyclotomic_order": 3,
+      "candidate_terms": 6,
+      "distinct_characters": 6,
+      "nonzero_characters": 6,
+      "first_nonzero": {
+        "character": [
+          "0",
+          "1/3",
+          "1/3"
+        ],
+        "coefficient": [
+          "-1/3",
+          "1/3"
+        ]
+      }
+    },
+    "mixed_carry_point": [
+      0,
+      2,
+      1
+    ],
+    "nonfunctional_positive_control": {
+      "feasible": true,
+      "constant": true,
+      "mean": "0",
+      "coordinate_orders": [
+        9,
+        9,
+        9
+      ],
+      "cyclotomic_order": 9,
+      "candidate_terms": 16,
+      "distinct_characters": 8,
+      "nonzero_characters": 0,
+      "first_nonzero": null
+    }
+  },
+  "checks": 18567
+}

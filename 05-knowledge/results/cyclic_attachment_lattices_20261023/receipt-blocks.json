@@ -1,0 +1,30 @@
+{
+  "status": "FINITE-EXACT controls; proof scopes in README.md",
+  "blocks": {
+    "all_binary_3_by_3": 512,
+    "translated_comparisons": 4608,
+    "stabilizer_histogram": {
+      "9": 2,
+      "1": 486,
+      "3": 24
+    },
+    "regular_5_by_5_degree2": {
+      "1": 2000,
+      "5": 40
+    },
+    "owned_necklace_relation_histograms": {
+      "3": {
+        "3": 6
+      },
+      "5": {
+        "5": 20,
+        "1": 100
+      },
+      "7": {
+        "7": 42,
+        "1": 4998
+      }
+    }
+  },
+  "checks": 30788
+}

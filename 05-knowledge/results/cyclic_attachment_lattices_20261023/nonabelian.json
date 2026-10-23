@@ -1,0 +1,20 @@
+{
+  "status": "FINITE-EXACT native control; cited Mal'tsev algorithm not implemented",
+  "cell": "C3[C3,C3,C3]",
+  "full_internal_group_order": 81,
+  "candidate_tuples": 531441,
+  "flat_solutions": 59049,
+  "twisted_solutions": 0,
+  "local_relation_sizes": [
+    2187,
+    2187
+  ],
+  "prefix_image_sizes": [
+    81,
+    27,
+    27
+  ],
+  "stored_nonidentity_tuples": 132,
+  "unique_factorizations": 59049,
+  "checks": 472404
+}

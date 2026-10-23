@@ -1,0 +1,157 @@
+{
+  "status": "FINITE-EXACT independent direct paths; same-agent audit",
+  "actual_graphs": {
+    "internal_full_permutation_tests": {
+      "3": 3,
+      "5": 5,
+      "7": 7,
+      "9": 9
+    },
+    "native_comparisons": [
+      {
+        "cell_size": 3,
+        "tournament_order": 9,
+        "degree_classes": [
+          3,
+          4,
+          5
+        ],
+        "maps": {
+          "flat": 3,
+          "twisted": 0
+        },
+        "source_sha256": "0f2c22fb253557377af20f03493c4499ad6b62b01ef1b30e101a8a19b24d1057",
+        "target_sha256": "43ba291e6789d9345faddf3d6d76397aaf0b588b0363659e207373d1a4f45047"
+      },
+      {
+        "cell_size": 9,
+        "tournament_order": 27,
+        "degree_classes": [
+          10,
+          13,
+          16
+        ],
+        "maps": {
+          "flat": 81,
+          "twisted": 0
+        },
+        "source_sha256": "936da1917ce3e6972ea53110ee01a1a339051448a82180f822916cb4aa26dd72",
+        "target_sha256": "814cebdcd093540f9216971e98086af76255393cf633fbfad47baf87f5aeefdc"
+      },
+      {
+        "cell_size": 15,
+        "tournament_order": 45,
+        "degree_classes": [
+          17,
+          22,
+          27
+        ],
+        "maps": {
+          "flat": 375,
+          "twisted": 0
+        },
+        "source_sha256": "74cb73b64160ad113117e1c722cbbd0db8e32964e78e078ed5883f97fe288566",
+        "target_sha256": "6f11615d054c421f9ecce57f7f52f7d929795ac17e21b48bf50dbd962ae5f0e7"
+      }
+    ]
+  },
+  "groups": {
+    "UT3_order": 27,
+    "UT3_central_commutator": [
+      0,
+      0,
+      1
+    ],
+    "quaternion_commutator": [
+      -1,
+      0
+    ],
+    "common_sign_toy": {
+      "product_size": 420,
+      "compatible_size": 210
+    },
+    "cited_dimension_arithmetic": {
+      "plus": 100627,
+      "minus": 96256,
+      "total": 196883,
+      "trace": 4371
+    }
+  },
+  "phase_orbits": [
+    {
+      "quotient_modulus": 3,
+      "cells": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "labelled_phase_systems": 729,
+      "orbit_size_counts": {
+        "27": 27
+      }
+    },
+    {
+      "quotient_modulus": 9,
+      "cells": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "labelled_phase_systems": 729,
+      "orbit_size_counts": {
+        "81": 9
+      }
+    },
+    {
+      "quotient_modulus": 5,
+      "cells": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "labelled_phase_systems": 25,
+      "orbit_size_counts": {
+        "25": 1
+      }
+    }
+  ],
+  "checks": 67
+}

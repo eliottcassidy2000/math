@@ -1,0 +1,62 @@
+{
+  "status": "FINITE-EXACT controls; proof scopes in README.md",
+  "global": {
+    "affine_F3_relations": 23,
+    "triangle_systems": 12167,
+    "arbitrary_binary_relations_validated": 512,
+    "triangle_solution_histogram": {
+      "0": 8143,
+      "1": 3267,
+      "3": 711,
+      "9": 45,
+      "27": 1
+    },
+    "composite_flat": {
+      "moduli": [
+        9,
+        9,
+        9
+      ],
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "basis": [
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "count": 81,
+      "index": 9
+    },
+    "composite_twist_feasible": false,
+    "translated_9_by_9_nonfunctional_relations": 81,
+    "mixed_modulus_systems": 96,
+    "mixed_solution_histogram": {
+      "0": 68,
+      "1": 2,
+      "135": 4,
+      "45": 3,
+      "405": 2,
+      "225": 4,
+      "675": 4,
+      "5": 2,
+      "75": 3,
+      "3": 4
+    }
+  },
+  "checks": 25020
+}
