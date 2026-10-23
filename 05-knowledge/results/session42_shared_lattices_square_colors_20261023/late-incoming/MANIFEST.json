@@ -1,0 +1,34 @@
+{
+  "status": "BOUNDED_SCOPE_REVIEW_PASS",
+  "files": [
+    {
+      "path": "INTEGRATION.md",
+      "bytes": 6850,
+      "sha256": "d99750b46349a595eeb6c3b9fd5199348d162cbde0aa2e8a852cba694947f7f6"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1169,
+      "sha256": "bd1cca321e53b8ccbfc8c8731d41c68dac723e47d5e9fc5dc2dc3127a243eafb"
+    },
+    {
+      "path": "check.py",
+      "bytes": 1600,
+      "sha256": "b6ef9b9f39d9a33a9756eec44111c42d504580787df885310c3141e882517184"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 220,
+      "sha256": "c34d53083441166a8b4ba0846ba997e1e144fc2ea9a7a901f5b2318a3ec31299"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 220,
+      "sha256": "c34d53083441166a8b4ba0846ba997e1e144fc2ea9a7a901f5b2318a3ec31299"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

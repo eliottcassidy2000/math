@@ -1,13 +1,32 @@
-# Session42: shared alignments, Gaussian compression and square-sum colorings
+# Session42: shared alignments, additive colors and exact reconstruction
 
-This research session tests proposed correspondences in both directions and retains the data required by each reconstruction map. Proofs, exhaustive finite checks and inherited repo results have separate scopes.
+Start with the [synthesis](SYNTHESIS.md) for proved results, inherited sources, counterexamples and open obligations. The session investigates both sides of discrepancies and retains the common coordinates required to combine local information.
 
-## First checkpoint
+## Graphs, tournaments and symmetry
 
-- [Graph/complement and tournament correspondence](correspondence/CORRESPONDENCE_AND_OBSTRUCTIONS.md): a correct ordered bijection, an all-size obstruction to forgetting the observer, and a connected many-to-many incidence universe.
-- [Gaussian symmetry and arithmetic compression](gaussian/RESULTS.md): exact orbit counts, quartic angular coordinate, stronger arithmetic decoders and the obstruction to adding independently compressed inputs.
-- [Square-word reconstruction](SQUARE_WORD_RECONSTRUCTION.md): unique odd-order reconstruction, at most two even-order paths, exact divisor-block twins, and the first square-sum ambiguity at order36.
-- [Independent square-word enumeration](audit-square-words/REVIEW.md): divisor counts, generating function, asymptotics and reversal classes.
+- [Ordered correspondence and quotient obstructions](correspondence/CORRESPONDENCE_AND_OBSTRUCTIONS.md).
+- [Exact graph/tournament coupling spectrum and sharp gap8/9](coupling/COUPLING_OPERATOR.md).
+- [Signed permutation moments and the P3/C4 equality classification](sign-moments/THEOREM.md).
+- [Gaussian compression, quartic angular coordinate and joint-frame obstruction](gaussian/RESULTS.md).
+
+## Larger-cell attachments and native observations
+
+- [Cyclic transporter lattices, full-group kernels and coupled moves](lattices/README.md).
+- [Hierarchical larger cells and actual path-owner costs](hierarchical-kernels/HIERARCHICAL_KERNELS.md), plus [mixed depths and the order63 shared-port obstruction](hierarchical-kernels/MIXED_DEPTH_AND_SHARED_FLAGS.md).
+- [Late incoming character, prefix-bank and carry integration](late-incoming/INTEGRATION.md).
+
+## Square-sum paths and coloring
+
+- [Ordered-sum reconstruction and first twin at36](SQUARE_WORD_RECONSTRUCTION.md).
+- [Palindromic square clocks and sharp threshold48](PALINDROMIC_SQUARE_CLOCKS.md).
+- [Divisor enumeration, Lambert series and reversal counts](audit-square-words/REVIEW.md).
+- [Founder ancestry, selector forests and procedural color study](square-colors/RESULTS.md).
+- [Complete independent color holdouts through36](color-holdouts/RESULTS.md).
+
+## Fibonacci additive structure
+
+- [Exact phase convolution, square targets, branch basis and generating polynomial](fibonacci-addition/RESULTS.md).
+- [Full normalized square-count distribution](fibonacci-addition/SQUARE_COUNT_DISTRIBUTION.md).
 - [Research map](RESEARCH_MAP.md).
 
-Further packets address compatible cyclic attachment lattices, full larger-cell kernels, founder-allegiance colorings and common-frame coupling. No claim of unrestricted native metagraph classification, Goldbach or Collatz is made.
+Independent audit packets accompany each group of claims. Complete finite carrier counts are not promoted to unrestricted metagraph classification. The graph/tournament coupling is not the native metagraph walk, and ordinary additive abundance does not prove Goldbach or Collatz.

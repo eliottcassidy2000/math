@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "checks": 366,
+  "scope": "declared tree-rotation subgroups; full unrestricted automorphism group not enumerated",
+  "kernel_controls": [
+    {
+      "k": 1,
+      "l": 0,
+      "vertices": 3,
+      "declared_kernel_order": "3",
+      "kernel_base": 1,
+      "informative": false
+    },
+    {
+      "k": 1,
+      "l": 1,
+      "vertices": 3,
+      "declared_kernel_order": "1",
+      "kernel_base": 0,
+      "informative": true
+    },
+    {
+      "k": 2,
+      "l": 0,
+      "vertices": 9,
+      "declared_kernel_order": "81",
+      "kernel_base": 3,
+      "informative": false
+    },
+    {
+      "k": 2,
+      "l": 1,
+      "vertices": 9,
+      "declared_kernel_order": "27",
+      "kernel_base": 3,
+      "informative": true
+    },
+    {
+      "k": 2,
+      "l": 2,
+      "vertices": 9,
+      "declared_kernel_order": "1",
+      "kernel_base": 0,
+      "informative": true
+    },
+    {
+      "k": 3,
+      "l": 0,
+      "vertices": 27,
+      "declared_kernel_order": "1594323",
+      "kernel_base": 9,
+      "informative": false
+    },
+    {
+      "k": 3,
+      "l": 1,
+      "vertices": 27,
+      "declared_kernel_order": "531441",
+      "kernel_base": 9,
+      "informative": true
+    },
+    {
+      "k": 3,
+      "l": 2,
+      "vertices": 27,
+      "declared_kernel_order": "19683",
+      "kernel_base": 9,
+      "informative": true
+    },
+    {
+      "k": 3,
+      "l": 3,
+      "vertices": 27,
+      "declared_kernel_order": "1",
+      "kernel_base": 0,
+      "informative": true
+    },
+    {
+      "k": 4,
+      "l": 0,
+      "vertices": 81,
+      "declared_kernel_order": "12157665459056928801",
+      "kernel_base": 27,
+      "informative": false
+    },
+    {
+      "k": 4,
+      "l": 1,
+      "vertices": 81,
+      "declared_kernel_order": "4052555153018976267",
+      "kernel_base": 27,
+      "informative": true
+    },
+    {
+      "k": 4,
+      "l": 2,
+      "vertices": 81,
+      "declared_kernel_order": "150094635296999121",
+      "kernel_base": 27,
+      "informative": true
+    },
+    {
+      "k": 4,
+      "l": 3,
+      "vertices": 81,
+      "declared_kernel_order": "7625597484987",
+      "kernel_base": 27,
+      "informative": true
+    },
+    {
+      "k": 4,
+      "l": 4,
+      "vertices": 81,
+      "declared_kernel_order": "1",
+      "kernel_base": 0,
+      "informative": true
+    }
+  ],
+  "exact_W2_automorphisms_in_declared_family": 81
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": 150,
+  "cyclic_color_groups": [
+    4,
+    6
+  ],
+  "all_simple_graph_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "kernel_formula": "q^b * gcd(q,2)^(k-b)"
+}

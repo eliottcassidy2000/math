@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_FOR_FINAL_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2237,
+      "sha256": "0150f82c5d0047c63e20afb38a348d8ad6c62091516edc281b96fae930f4707e"
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "bytes": 2721,
+      "sha256": "d2660b39133d523adf2dc54f1b461296ae1abdcc55fb1f3aab674a9c52c5b761"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 20120,
+      "sha256": "56fa722d43e18584b61a1b44ff2dc32de07b8338220c87937b5916c2a93d6f57"
+    }
+  ],
+  "commands": []
+}

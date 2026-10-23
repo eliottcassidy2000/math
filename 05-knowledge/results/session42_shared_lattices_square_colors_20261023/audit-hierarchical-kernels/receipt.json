@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "source_manifest_sha256": "fff386697014fef61e7bc42586fcdc8e334686442804954a3029cc97e540ee7a",
+  "source_files_verified": [
+    {
+      "path": "HIERARCHICAL_KERNELS.md",
+      "bytes": 10863,
+      "sha256": "0805a57cf151973af2b9adf6c28a2c47a4e2608fb4a1467096ea0d14cae1300e"
+    },
+    {
+      "path": "MIXED_DEPTH_AND_SHARED_FLAGS.md",
+      "bytes": 8598,
+      "sha256": "003bebb00a4bb972cb5c0a92fce5a3ab859c33084223a4355c0c5e27a22a926d"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 902,
+      "sha256": "48275aad630af587167d728904c97aa79e652a74f33504ccc3acba87de024cee"
+    },
+    {
+      "path": "check.py",
+      "bytes": 7285,
+      "sha256": "edcbefe5ec2361e716e5f4bf7682ff004683315da64ad8301057b931e886e2f0"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 20482,
+      "sha256": "097643408c3733233711200837536b50247cf689f265a89cd9345dfe9a5896e7"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 20482,
+      "sha256": "097643408c3733233711200837536b50247cf689f265a89cd9345dfe9a5896e7"
+    }
+  ],
+  "provenance_verified": {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "sources": [
+      {
+        "path": "05-knowledge/results/odd_cell_completion_20261023/NETWORKS.md",
+        "sha256": "c05f15f8df55d16fe1ac84024def1c99be80b319310009838f1ce5f330c32020"
+      },
+      {
+        "path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md",
+        "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+      },
+      {
+        "path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+        "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+      },
+      {
+        "path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+        "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+      }
+    ]
+  },
+  "producer_replays": "normal and optimized receipts match final source receipts exactly",
+  "independent_receipts": [
+    "independent.json",
+    "mixed.json",
+    "circulant.json",
+    "slot_hostile.json"
+  ],
+  "scope": "Named-cell groups, actual regular hosts and indexed path orbit observations; no full uncolored upper-bound or complete metagraph enumeration claim."
+}

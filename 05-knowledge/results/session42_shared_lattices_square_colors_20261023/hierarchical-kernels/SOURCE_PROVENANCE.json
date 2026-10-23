@@ -1,0 +1,21 @@
+{
+  "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+  "sources": [
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/NETWORKS.md",
+      "sha256": "c05f15f8df55d16fe1ac84024def1c99be80b319310009838f1ce5f330c32020"
+    },
+    {
+      "path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+    },
+    {
+      "path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+    }
+  ]
+}

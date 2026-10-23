@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "checks": 88002,
+  "independently_enumerated_carrier_counts": [
+    {
+      "N": 33,
+      "oriented": 1338,
+      "unoriented": 669,
+      "visits": 13834243
+    },
+    {
+      "N": 34,
+      "oriented": 8082,
+      "unoriented": 4041,
+      "visits": 47358366
+    },
+    {
+      "N": 35,
+      "oriented": 34350,
+      "unoriented": 17175,
+      "visits": 145789407
+    },
+    {
+      "N": 36,
+      "oriented": 25920,
+      "unoriented": 12960,
+      "visits": 272661152
+    }
+  ],
+  "fixed_grammar_scores": {
+    "vertex2": {
+      "distinct_candidates": 63,
+      "training_survivors": 56,
+      "all_holdout_survivors": 4,
+      "first_failures": {
+        "0": 4,
+        "33": 1,
+        "34": 33,
+        "35": 17,
+        "36": 1
+      }
+    },
+    "vertex3": {
+      "distinct_candidates": 364,
+      "training_survivors": 359,
+      "all_holdout_survivors": 281,
+      "first_failures": {
+        "0": 281,
+        "33": 1,
+        "34": 30,
+        "35": 37,
+        "36": 10
+      }
+    },
+    "edge2": {
+      "distinct_candidates": 64,
+      "training_survivors": 60,
+      "all_holdout_survivors": 15,
+      "first_failures": {
+        "0": 15,
+        "33": 1,
+        "34": 31,
+        "35": 11,
+        "36": 2
+      }
+    },
+    "edge3": {
+      "distinct_candidates": 1093,
+      "training_survivors": 1074,
+      "all_holdout_survivors": 963,
+      "first_failures": {
+        "0": 963,
+        "33": 1,
+        "34": 36,
+        "35": 46,
+        "36": 28
+      }
+    }
+  },
+  "ledger_entries": 1549,
+  "collision_witnesses": 286,
+  "incidence_graphs": 1099,
+  "incidence_kernel_controls": 2198,
+  "source_pins": {
+    "enumerate.cpp": "dd2736370aa1d9e858d55c9944f2d509d5e703fe4411c28a9193d1219f14adc5",
+    "test.cpp": "d9f5bf54aa84c3312cff6ef4cfa1ec804fbc249551a38008d9ed0dba9c041b38",
+    "verify.py": "dc1fe5f78ec39c654dd32c1951087b83c1befc2e567bb3d78bfa2a7ea22a62b5",
+    "ledger.json": "d6760303384b37ec0c73ceebe720a1e994d73c328d6377270c5ab31dc19ee87c",
+    "carrier_hashes.json": "34938dcc90f55ab4b13c70178806fe38ef8977c0ec964bfdd8605bb0c1cd2cdb",
+    "train32.json": "aff4910283eee8664fe4933f0592fac2e025d3d42c1a5364ae77bc2a6840a159",
+    "receipt.json": "998da66b8809feeb3708a565ed10f533860e60e53307e8ae9f37cd71080da7ba",
+    "paths33.json": "d5b5e14bda4075551153e860c74b3755e143fb9284844c9f6354e19c9ebc24b5",
+    "paths34.json": "db77bc1ff3993934c6002dc4249785827c9d3f315ec5ab40e9d5aa7b5d544de1",
+    "paths35.json": "91f134aeea09a3eba1cef7559f103ac37a69133dcc40f69b3ffaa8aae6407b86",
+    "paths36.json": "296ff2a602c2e47b2393091b1f3f164c08ec2aa68d45a629886f0275bc1454d3"
+  },
+  "scope": "full Q33..36 census independently counted; Q32 completeness inherited; all finite scores verified, no all-size decoder claim"
+}

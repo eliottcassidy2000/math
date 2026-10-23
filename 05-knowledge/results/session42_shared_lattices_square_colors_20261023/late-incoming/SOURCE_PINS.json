@@ -1,0 +1,31 @@
+{
+  "commit": "f7abf1477eafefcecf43566c2b4b2cf325978b54",
+  "files": [
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/README.md",
+      "bytes": 22672,
+      "sha256": "e68a066377586c27a40c4ea15d6261a915fa15c105e7c4dc162889b78331a678"
+    },
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/CHARGE.md",
+      "bytes": 10656,
+      "sha256": "5ffa362243126de7dc710f32a5628fb5e01de6f0a1d5dd12fe9bda2f8994aec6"
+    },
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/NONABELIAN.md",
+      "bytes": 8584,
+      "sha256": "909e07cbb6305a7388dd0a747deaf81ecc28b4432d760b5eb6a4daa941878a14"
+    },
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/CARRIES.md",
+      "bytes": 8357,
+      "sha256": "2dd412ac9e46dd639b28ce37c06987efc970409b120fb8872662759937b3e37e"
+    },
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/manifest.json",
+      "bytes": 1877,
+      "sha256": "5f332e9fddf0a81137c4411fd103abcd8ce69cb9faabf54525262607201157ba"
+    }
+  ],
+  "primary_source": "https://eccc.weizmann.ac.il/report/2004/097/download/"
+}

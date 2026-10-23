@@ -1,0 +1,360 @@
+{
+  "status": "PASS",
+  "checks": 54,
+  "enumerated_chart_triples": 531441,
+  "all_mixed_depth_patterns": 27,
+  "scope": "declared W2^3 chart carrier; base independently checked via exact parameter-fixing set cover",
+  "rows": [
+    {
+      "edge_depths": [
+        0,
+        0,
+        0
+      ],
+      "group_order": 531441,
+      "owner_base": 9,
+      "component_counts": [
+        3,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        0,
+        1
+      ],
+      "group_order": 177147,
+      "owner_base": 9,
+      "component_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        0,
+        2
+      ],
+      "group_order": 6561,
+      "owner_base": 6,
+      "component_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        1,
+        0
+      ],
+      "group_order": 177147,
+      "owner_base": 9,
+      "component_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        1,
+        1
+      ],
+      "group_order": 59049,
+      "owner_base": 9,
+      "component_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        1,
+        2
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        2,
+        0
+      ],
+      "group_order": 6561,
+      "owner_base": 6,
+      "component_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        2,
+        1
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        0,
+        2,
+        2
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        0,
+        0
+      ],
+      "group_order": 177147,
+      "owner_base": 9,
+      "component_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        0,
+        1
+      ],
+      "group_order": 59049,
+      "owner_base": 9,
+      "component_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        0,
+        2
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        1,
+        0
+      ],
+      "group_order": 59049,
+      "owner_base": 9,
+      "component_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        1,
+        1
+      ],
+      "group_order": 59049,
+      "owner_base": 9,
+      "component_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        1,
+        2
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        2,
+        0
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        2,
+        1
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        1,
+        2,
+        2
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        0,
+        0
+      ],
+      "group_order": 6561,
+      "owner_base": 6,
+      "component_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        0,
+        1
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        0,
+        2
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        1,
+        0
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        1,
+        1
+      ],
+      "group_order": 2187,
+      "owner_base": 6,
+      "component_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        1,
+        2
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        2,
+        0
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        2,
+        1
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "edge_depths": [
+        2,
+        2,
+        2
+      ],
+      "group_order": 81,
+      "owner_base": 3,
+      "component_counts": [
+        1,
+        1
+      ]
+    }
+  ]
+}

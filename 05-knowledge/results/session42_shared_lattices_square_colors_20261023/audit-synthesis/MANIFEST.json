@@ -1,0 +1,35 @@
+{
+  "status": "PASS_FROZEN",
+  "scope": "Independent mathematical and provenance review of frozen Session42 root synthesis, README and research map; exact quadratic and quartic checks through order five.",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 4883,
+      "sha256": "7ec5ef50d158c264477bc74b509bb4f6720affc63f26f1c9bbece86fa237cfe2"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 691,
+      "sha256": "080f6be9bacda9f604697073cbbc2478470650ccb77e0c775b8cc38001c51d10"
+    },
+    {
+      "path": "check_quartic.py",
+      "bytes": 1093,
+      "sha256": "b4269281b5f61a91c099983378a5e281dec458c306295cae024ad08cdf0186f8"
+    },
+    {
+      "path": "quartic.json",
+      "bytes": 189,
+      "sha256": "901860dcaa649550b275ebe7d114ffbbe03c38ac691e61fcbc3c0ea51085697d"
+    },
+    {
+      "path": "quartic.optimized.json",
+      "bytes": 189,
+      "sha256": "901860dcaa649550b275ebe7d114ffbbe03c38ac691e61fcbc3c0ea51085697d"
+    }
+  ],
+  "commands": [
+    "python check_quartic.py",
+    "python -O check_quartic.py"
+  ]
+}

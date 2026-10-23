@@ -1,0 +1,96 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "RESULTS.md",
+      "bytes": 7929,
+      "sha256": "b373fbdd3eb65c29fe7c2be24e128de7e207935760a9ee3b2f9bb0ed5a2a817c"
+    },
+    {
+      "path": "enumerate.cpp",
+      "bytes": 881,
+      "sha256": "dd2736370aa1d9e858d55c9944f2d509d5e703fe4411c28a9193d1219f14adc5"
+    },
+    {
+      "path": "test.cpp",
+      "bytes": 2569,
+      "sha256": "d9f5bf54aa84c3312cff6ef4cfa1ec804fbc249551a38008d9ed0dba9c041b38"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 4281,
+      "sha256": "dc1fe5f78ec39c654dd32c1951087b83c1befc2e567bb3d78bfa2a7ea22a62b5"
+    },
+    {
+      "path": "check_additive_colors.py",
+      "bytes": 1562,
+      "sha256": "8b02a213358142aeb5a9f9e12725e3c1f9b6c0c6cb3b84128c2398bf2229511d"
+    },
+    {
+      "path": "train32.json",
+      "bytes": 34890,
+      "sha256": "aff4910283eee8664fe4933f0592fac2e025d3d42c1a5364ae77bc2a6840a159"
+    },
+    {
+      "path": "carrier_hashes.json",
+      "bytes": 464,
+      "sha256": "34938dcc90f55ab4b13c70178806fe38ef8977c0ec964bfdd8605bb0c1cd2cdb"
+    },
+    {
+      "path": "ledger.json",
+      "bytes": 217963,
+      "sha256": "d6760303384b37ec0c73ceebe720a1e994d73c328d6377270c5ab31dc19ee87c"
+    },
+    {
+      "path": "witnesses.json",
+      "bytes": 16251,
+      "sha256": "95a4a99b00e5068571753733b1223439c59ed939e0ad230f59419133aec551c4"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 1260,
+      "sha256": "998da66b8809feeb3708a565ed10f533860e60e53307e8ae9f37cd71080da7ba"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 1260,
+      "sha256": "998da66b8809feeb3708a565ed10f533860e60e53307e8ae9f37cd71080da7ba"
+    },
+    {
+      "path": "additive_receipt.json",
+      "bytes": 9769,
+      "sha256": "8adc5f64ab417ea1fed65a504656173af342fa570b73bd290db36e78f68d1128"
+    },
+    {
+      "path": "additive_receipt.optimized.json",
+      "bytes": 9769,
+      "sha256": "8adc5f64ab417ea1fed65a504656173af342fa570b73bd290db36e78f68d1128"
+    },
+    {
+      "path": "enumerate33.log",
+      "bytes": 20,
+      "sha256": "50f7c5079d3c8dd3ae1bee617386266f2f16ae0790a32e80904a96b5696ff8d6"
+    },
+    {
+      "path": "enumerate34.log",
+      "bytes": 20,
+      "sha256": "ca640f0ac7accb1155931d632d9e2595b192de6ccf426097afb230c1e2f8220f"
+    },
+    {
+      "path": "enumerate35.log",
+      "bytes": 21,
+      "sha256": "1d5fc5bb5455fd5b730c1ed143bf6ddece649fd27e05bf7a5280028fe4fd3f8a"
+    },
+    {
+      "path": "enumerate36.log",
+      "bytes": 21,
+      "sha256": "7ba0df0a8b2659909ff09b2bdba242a53b715841095d2e6facbb8438f78e3b4f"
+    }
+  ],
+  "commands": [
+    "python3 verify.py --fresh",
+    "python3 -O verify.py --fresh",
+    "python3 check_additive_colors.py",
+    "python3 -O check_additive_colors.py"
+  ]
+}

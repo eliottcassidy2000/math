@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "checks": 24,
+  "vertices": 63,
+  "outdegree": 31,
+  "full_resolution_component": [
+    1,
+    3,
+    5
+  ],
+  "declared_chart_order": 43046721,
+  "owner_base": 15,
+  "slot_bipartition_sizes": [
+    6,
+    9
+  ],
+  "maximum_matching": [
+    [
+      [
+        "0",
+        1
+      ],
+      [
+        "0",
+        2
+      ]
+    ],
+    [
+      [
+        "2",
+        1
+      ],
+      [
+        "2",
+        2
+      ]
+    ],
+    [
+      [
+        "4",
+        1
+      ],
+      [
+        "4",
+        2
+      ]
+    ],
+    [
+      [
+        "6",
+        0
+      ],
+      [
+        "6",
+        1
+      ]
+    ],
+    [
+      [
+        "6",
+        2
+      ],
+      [
+        "C135",
+        0
+      ]
+    ],
+    [
+      [
+        "C135",
+        1
+      ],
+      [
+        "C135",
+        2
+      ]
+    ]
+  ],
+  "minimum_indexed_arc_flags": 9,
+  "actual_flag_positions_zero_based": [
+    59,
+    41,
+    23,
+    2,
+    8,
+    14,
+    54,
+    36,
+    18
+  ],
+  "scope": "specified named-cell group orbit of actual path; not all paths or full uncolored group"
+}

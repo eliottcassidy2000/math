@@ -1,0 +1,39 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "HIERARCHICAL_KERNELS.md",
+      "bytes": 10863,
+      "sha256": "0805a57cf151973af2b9adf6c28a2c47a4e2608fb4a1467096ea0d14cae1300e"
+    },
+    {
+      "path": "MIXED_DEPTH_AND_SHARED_FLAGS.md",
+      "bytes": 8598,
+      "sha256": "003bebb00a4bb972cb5c0a92fce5a3ab859c33084223a4355c0c5e27a22a926d"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 902,
+      "sha256": "48275aad630af587167d728904c97aa79e652a74f33504ccc3acba87de024cee"
+    },
+    {
+      "path": "check.py",
+      "bytes": 7285,
+      "sha256": "edcbefe5ec2361e716e5f4bf7682ff004683315da64ad8301057b931e886e2f0"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 20482,
+      "sha256": "097643408c3733233711200837536b50247cf689f265a89cd9345dfe9a5896e7"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 20482,
+      "sha256": "097643408c3733233711200837536b50247cf689f265a89cd9345dfe9a5896e7"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

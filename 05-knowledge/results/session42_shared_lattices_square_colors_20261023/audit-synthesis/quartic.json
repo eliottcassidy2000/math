@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "exact_quadratic_quartic_checks": 2196,
+  "orders": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "matrix_scope": "zero diagonal, every offdiagonal entry plus or minus one"
+}

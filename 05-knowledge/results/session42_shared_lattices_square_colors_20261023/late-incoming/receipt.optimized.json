@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "generator_hostile_group_size": 9,
+  "nonabelian_prefix_solutions": 18,
+  "nonabelian_heap_triples": 5832,
+  "scope": "small independent algebra controls only; no incoming native census replay"
+}

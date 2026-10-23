@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": 1214,
+  "depth_patterns": 120,
+  "example": {
+    "vertices": 81,
+    "degree": 40,
+    "step_depths": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 1
+    },
+    "threshold_components": [
+      1,
+      3
+    ],
+    "declared_chart_order": 59049,
+    "owner_base": 9
+  },
+  "scope": "exact graph components and regularity; group and base formulas proved structurally"
+}

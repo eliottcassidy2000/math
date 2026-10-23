@@ -10,3 +10,9 @@ The central question is not whether two objects have the same small numbers, but
 6. Fibonacci addresses and Berggren ancestry are actual ordered data. A finite color or a depth is not a substitute for the address; prior THM-3339 and THM-3382 already demonstrate positive bridges and information loss.
 
 An all-size supplied-model rule is distinct from a compact, complete description of every native tournament port. Preserve actual endpoint ownership, path positions, converse branches, electrical guards and clocks at that boundary.
+
+## Outcome of repeated hypothesis/test loops
+
+The first proposed object-level identification failed, but its signed linear and probabilistic replacements led to an exact all-size8/9 spectral gap. The proposed island labels became a complete ancestry relation, then an ensemble of coherent parent choices. A large finite coloring success rate prompted a genuinely independent complete holdout, exposing286 failures. A path-clock projection yielded a sharp two-point fibre and then a distinct palindromic threshold. Fibonacci optional colors yielded both an exact square-target density and a legal additive basis. Larger-cell symmetry led from local kernel sizes to full joint frames and actual indexed-port incidence costs.
+
+The common repair is not 'all structures are the same.' It is: state the source and target, identify what the map forgets, and retain or measure the shared coordinate before applying the target theorem. Where a prior theorem already supplies the positive bridge, credit it and sharpen the remaining boundary rather than rediscovering it under a new analogy.

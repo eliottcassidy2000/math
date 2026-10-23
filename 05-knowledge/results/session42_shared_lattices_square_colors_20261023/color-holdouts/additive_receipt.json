@@ -1,0 +1,566 @@
+{
+  "status": "PASS",
+  "scope": "unsigned incidence rank on Q1..Q80 and exact edge transport controls",
+  "rows": [
+    {
+      "n": 1,
+      "components": 1,
+      "bipartite_components": 1,
+      "rank2": 0,
+      "rank3": 0
+    },
+    {
+      "n": 2,
+      "components": 2,
+      "bipartite_components": 2,
+      "rank2": 0,
+      "rank3": 0
+    },
+    {
+      "n": 3,
+      "components": 2,
+      "bipartite_components": 2,
+      "rank2": 1,
+      "rank3": 1
+    },
+    {
+      "n": 4,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 1,
+      "rank3": 1
+    },
+    {
+      "n": 5,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 2,
+      "rank3": 2
+    },
+    {
+      "n": 6,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 3,
+      "rank3": 3
+    },
+    {
+      "n": 7,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 4,
+      "rank3": 4
+    },
+    {
+      "n": 8,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 5,
+      "rank3": 5
+    },
+    {
+      "n": 9,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 6,
+      "rank3": 6
+    },
+    {
+      "n": 10,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 7,
+      "rank3": 7
+    },
+    {
+      "n": 11,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 8,
+      "rank3": 8
+    },
+    {
+      "n": 12,
+      "components": 3,
+      "bipartite_components": 3,
+      "rank2": 9,
+      "rank3": 9
+    },
+    {
+      "n": 13,
+      "components": 2,
+      "bipartite_components": 2,
+      "rank2": 11,
+      "rank3": 11
+    },
+    {
+      "n": 14,
+      "components": 1,
+      "bipartite_components": 1,
+      "rank2": 13,
+      "rank3": 13
+    },
+    {
+      "n": 15,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 14,
+      "rank3": 15
+    },
+    {
+      "n": 16,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 15,
+      "rank3": 16
+    },
+    {
+      "n": 17,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 16,
+      "rank3": 17
+    },
+    {
+      "n": 18,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 17,
+      "rank3": 18
+    },
+    {
+      "n": 19,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 18,
+      "rank3": 19
+    },
+    {
+      "n": 20,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 19,
+      "rank3": 20
+    },
+    {
+      "n": 21,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 20,
+      "rank3": 21
+    },
+    {
+      "n": 22,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 21,
+      "rank3": 22
+    },
+    {
+      "n": 23,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 22,
+      "rank3": 23
+    },
+    {
+      "n": 24,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 23,
+      "rank3": 24
+    },
+    {
+      "n": 25,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 24,
+      "rank3": 25
+    },
+    {
+      "n": 26,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 25,
+      "rank3": 26
+    },
+    {
+      "n": 27,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 26,
+      "rank3": 27
+    },
+    {
+      "n": 28,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 27,
+      "rank3": 28
+    },
+    {
+      "n": 29,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 28,
+      "rank3": 29
+    },
+    {
+      "n": 30,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 29,
+      "rank3": 30
+    },
+    {
+      "n": 31,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 30,
+      "rank3": 31
+    },
+    {
+      "n": 32,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 31,
+      "rank3": 32
+    },
+    {
+      "n": 33,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 32,
+      "rank3": 33
+    },
+    {
+      "n": 34,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 33,
+      "rank3": 34
+    },
+    {
+      "n": 35,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 34,
+      "rank3": 35
+    },
+    {
+      "n": 36,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 35,
+      "rank3": 36
+    },
+    {
+      "n": 37,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 36,
+      "rank3": 37
+    },
+    {
+      "n": 38,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 37,
+      "rank3": 38
+    },
+    {
+      "n": 39,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 38,
+      "rank3": 39
+    },
+    {
+      "n": 40,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 39,
+      "rank3": 40
+    },
+    {
+      "n": 41,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 40,
+      "rank3": 41
+    },
+    {
+      "n": 42,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 41,
+      "rank3": 42
+    },
+    {
+      "n": 43,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 42,
+      "rank3": 43
+    },
+    {
+      "n": 44,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 43,
+      "rank3": 44
+    },
+    {
+      "n": 45,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 44,
+      "rank3": 45
+    },
+    {
+      "n": 46,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 45,
+      "rank3": 46
+    },
+    {
+      "n": 47,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 46,
+      "rank3": 47
+    },
+    {
+      "n": 48,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 47,
+      "rank3": 48
+    },
+    {
+      "n": 49,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 48,
+      "rank3": 49
+    },
+    {
+      "n": 50,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 49,
+      "rank3": 50
+    },
+    {
+      "n": 51,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 50,
+      "rank3": 51
+    },
+    {
+      "n": 52,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 51,
+      "rank3": 52
+    },
+    {
+      "n": 53,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 52,
+      "rank3": 53
+    },
+    {
+      "n": 54,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 53,
+      "rank3": 54
+    },
+    {
+      "n": 55,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 54,
+      "rank3": 55
+    },
+    {
+      "n": 56,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 55,
+      "rank3": 56
+    },
+    {
+      "n": 57,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 56,
+      "rank3": 57
+    },
+    {
+      "n": 58,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 57,
+      "rank3": 58
+    },
+    {
+      "n": 59,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 58,
+      "rank3": 59
+    },
+    {
+      "n": 60,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 59,
+      "rank3": 60
+    },
+    {
+      "n": 61,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 60,
+      "rank3": 61
+    },
+    {
+      "n": 62,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 61,
+      "rank3": 62
+    },
+    {
+      "n": 63,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 62,
+      "rank3": 63
+    },
+    {
+      "n": 64,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 63,
+      "rank3": 64
+    },
+    {
+      "n": 65,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 64,
+      "rank3": 65
+    },
+    {
+      "n": 66,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 65,
+      "rank3": 66
+    },
+    {
+      "n": 67,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 66,
+      "rank3": 67
+    },
+    {
+      "n": 68,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 67,
+      "rank3": 68
+    },
+    {
+      "n": 69,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 68,
+      "rank3": 69
+    },
+    {
+      "n": 70,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 69,
+      "rank3": 70
+    },
+    {
+      "n": 71,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 70,
+      "rank3": 71
+    },
+    {
+      "n": 72,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 71,
+      "rank3": 72
+    },
+    {
+      "n": 73,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 72,
+      "rank3": 73
+    },
+    {
+      "n": 74,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 73,
+      "rank3": 74
+    },
+    {
+      "n": 75,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 74,
+      "rank3": 75
+    },
+    {
+      "n": 76,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 75,
+      "rank3": 76
+    },
+    {
+      "n": 77,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 76,
+      "rank3": 77
+    },
+    {
+      "n": 78,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 77,
+      "rank3": 78
+    },
+    {
+      "n": 79,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 78,
+      "rank3": 79
+    },
+    {
+      "n": 80,
+      "components": 1,
+      "bipartite_components": 0,
+      "rank2": 79,
+      "rank3": 80
+    }
+  ]
+}
