@@ -1,0 +1,177 @@
+{
+  "checks_before_replay": 7073,
+  "circuits": [
+    {
+      "accepted_full_dyadic_subsets": [
+        0,
+        4095
+      ],
+      "all_binary_subsets_tested": 4096,
+      "charge": [
+        [
+          1480,
+          1
+        ],
+        [
+          1638,
+          -1
+        ],
+        [
+          1691,
+          1
+        ],
+        [
+          1923,
+          -1
+        ],
+        [
+          2071,
+          1
+        ],
+        [
+          2176,
+          -1
+        ],
+        [
+          2185,
+          1
+        ],
+        [
+          2553,
+          -1
+        ],
+        [
+          2581,
+          1
+        ],
+        [
+          2835,
+          -1
+        ],
+        [
+          2945,
+          -1
+        ],
+        [
+          3000,
+          1
+        ]
+      ],
+      "degree_and_dyadic_accepted_counts": {
+        "2": 924,
+        "4": 26,
+        "8": 12,
+        "16": 6,
+        "32": 4,
+        "64": 2,
+        "128": 2,
+        "256": 2
+      },
+      "primitive_negative_sum": 786,
+      "primitive_positive_sum": 786,
+      "scope": "Selected signed source circuit; native path/capacity authentication is in search/",
+      "support": 12
+    },
+    {
+      "accepted_full_dyadic_subsets": [
+        0,
+        65535
+      ],
+      "all_binary_subsets_tested": 65536,
+      "charge": [
+        [
+          176,
+          1
+        ],
+        [
+          1394,
+          -1
+        ],
+        [
+          1425,
+          -1
+        ],
+        [
+          1457,
+          -1
+        ],
+        [
+          1477,
+          1
+        ],
+        [
+          1638,
+          -1
+        ],
+        [
+          1691,
+          1
+        ],
+        [
+          1841,
+          -1
+        ],
+        [
+          1921,
+          -1
+        ],
+        [
+          1974,
+          1
+        ],
+        [
+          2071,
+          1
+        ],
+        [
+          2087,
+          1
+        ],
+        [
+          2185,
+          1
+        ],
+        [
+          2553,
+          -1
+        ],
+        [
+          2581,
+          -1
+        ],
+        [
+          2905,
+          1
+        ]
+      ],
+      "degree_and_dyadic_accepted_counts": {
+        "2": 12870,
+        "4": 378,
+        "8": 194,
+        "16": 86,
+        "32": 38,
+        "64": 18,
+        "128": 4,
+        "256": 2
+      },
+      "primitive_negative_sum": 1016,
+      "primitive_positive_sum": 1016,
+      "scope": "Selected signed source circuit; native path/capacity authentication is in search/",
+      "support": 16
+    }
+  ],
+  "larger_image_sha256_lf": "f10438357b79e3d30fc80b027ebec3919f5a6faf4ce95bc207cb63f9d6aaac14",
+  "original_source_pins": {
+    "edges": {
+      "hash_mode": "raw",
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    "electrical_receipt": {
+      "hash_mode": "LF-normalized",
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    }
+  },
+  "status": "FINITE-EXACT direct original image and source-circuit controls"
+}

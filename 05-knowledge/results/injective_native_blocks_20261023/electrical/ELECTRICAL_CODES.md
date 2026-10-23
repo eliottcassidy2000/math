@@ -106,6 +106,14 @@ It does not infer generation of all harmonic characters merely from
 separating vertex pairs. Odd-primary characters and preservation at all
 integer moduli are NOT settled by (6).
 
+At every intermediate level `2<=h<=8`, the exact paired code is
+`(d.X mod2^(h-1), d.Y1,...,d.Y4 mod2)`. Its carrier has order `2^(h+3)`.
+This follows either by reducing the surjective full code, or by the same
+cardinality argument using (2). At modulus two every paired charge passes;
+at and above modulus 256 the code saturates at `Sigma`, because (2) has
+exponent 256. Using the old printed values of `X` modulo a larger power
+without constructing higher lifts is not the saturation argument.
+
 ## 3. Executable gate and its precise interface
 
 For distinct source owners `S` and target owners `T`, with `S` disjoint
@@ -227,6 +235,38 @@ generator, a claimed Smith basis or our code-completeness theorem. The
 known exponent in (2) upgrades them to every dyadic modulus; it does not
 turn these congruence solutions into integral solutions of `Lz=2w`.
 
+### Bounded extensions: twelve and sixteen sources
+
+The final search extension supplied two further balanced source charges.
+Their positive and negative supports are:
+
+| Support | Positive owners | Negative owners | Each integer X sum |
+|---:|---|---|---:|
+|12|1480,1691,2071,2185,2581,3000|1638,1923,2176,2553,2835,2945|786|
+|16|176,1477,1691,1974,2071,2087,2185,2905|1394,1425,1457,1638,1841,1921,2553,2581|1016|
+
+`larger_image.json` contains separate full grounded witnesses for twice
+each charge modulo 256, together with all integral corrections. The
+independent `check_larger_image.py` multiplies both against every original
+edge and checks each of the 3,528 residual coordinates. It also enumerates
+all `2^12` and `2^16` endpoint subsets, retaining exact degree balance and
+the appropriate intermediate code. The accepted-state counts are:
+
+| Source support | mod2 | mod4 | mod8 | mod16 | mod32 | mod64 | mod128 | mod256 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+|12|924|26|12|6|4|2|2|2|
+|16|12870|378|194|86|38|18|4|2|
+
+At the final bank only the unchanged and fully changed subsets survive.
+This authenticates sharp support twelve and sixteen **inside their
+declared binary native menus**. The distinction between guard levels is
+essential: these two menus have smaller accepted submoves modulo eight.
+The twelve-source menu first has only two states modulo 64; the sixteen-
+source menu first does so modulo 256. Their actual path and resource
+certificates are in the sibling search lane; these image checks do not
+replace them. No extrapolation beyond the bounded sixteen-source search
+is made here.
+
 ## 6. Universal per-slot guards still forbid these retargetings
 
 There is no contradiction with Session44's target-injectivity result.
@@ -251,12 +291,15 @@ per-slot. Literal target ownership has not been identified or discarded.
 ```text
 python -B 05-knowledge/results/injective_native_blocks_20261023/electrical/check.py
 python -O -B 05-knowledge/results/injective_native_blocks_20261023/electrical/check.py
+python -B 05-knowledge/results/injective_native_blocks_20261023/electrical/check_larger_image.py
+python -O -B 05-knowledge/results/injective_native_blocks_20261023/electrical/check_larger_image.py
 ```
 
 Optional image regeneration:
 
 ```text
 python -B 05-knowledge/results/injective_native_blocks_20261023/electrical/solve_images.py
+python -B 05-knowledge/results/injective_native_blocks_20261023/electrical/solve_images.py --larger
 ```
 
 The generator adapts Session44's exact bit-plane elimination. The checker

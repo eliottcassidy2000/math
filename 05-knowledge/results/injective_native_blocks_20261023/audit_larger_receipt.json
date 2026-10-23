@@ -1,0 +1,22 @@
+{
+  "status": "FINITE-EXACT independent sixteen-source audit",
+  "checks": 264,
+  "subset_states": 65536,
+  "accepted_by_original_dyadic_modulus": {
+    "4": 378,
+    "8": 194,
+    "16": 86,
+    "32": 38,
+    "64": 18,
+    "128": 4,
+    "256": 2
+  },
+  "full_bank_accepted_masks": [
+    0,
+    65535
+  ],
+  "per_state_endpoint_ports": 64,
+  "fixed_background_reservoir": 128,
+  "exact_X_sum_each_side": 1016,
+  "scope": "Sharp sixteen-slot budget in supplied binary menu; aggregate guards; no global wiring claim."
+}

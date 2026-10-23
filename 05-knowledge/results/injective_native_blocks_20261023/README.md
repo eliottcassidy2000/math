@@ -1,7 +1,7 @@
 # Injective multisource moves with retained shared coordinates
 
-23 October 2026. **FINITE-EXACT:** actual order-eight four-source and
-six-source current circuits. **PROVED:** binary-record assembly with a
+23 October 2026. **FINITE-EXACT:** actual order-eight current circuits on
+4, 6, 8, 10, 12 and16 sources. **PROVED:** binary-record assembly with a
 sharp coupled-move budget; native families requiring arbitrarily many
 simultaneous source slots; the stated unrestricted dyadic transport lemma.
 General all-size metagraph wiring remains **OPEN**.
@@ -10,6 +10,34 @@ The positive change is a larger relation among distinct source owners.
 It pays the electrical debt without multiplying a scarce path. Actual
 Hamiltonian paths, every unchanged owner clock, shared pins, converse
 partners and inverse target ports are kept in the certificate.
+
+## Strongest finite result: sixteen sources pay together
+
+The [larger native circuit](search/LARGER_CIRCUITS.md) uses sixteen
+different source classes at **tournament order eight**. Eight move from
+target1965 to2234 and eight move back. Their signed source potential sums
+are exactly `1016-1016=0`; both target potentials are146. No original
+integer X-current changes. Full image certificates prove preservation of
+**every original dyadic aggregate harmonic guard**.
+
+The16 actual binary path menus have65,536 choices. Exact target margins
+and the full dyadic bank admit only all-before and all-after. Thus the
+sharp simultaneous support is16 **within these supplied menus**, with36
+changed slot-clock occurrences. Each state has32 ordinary/converse source
+ports and32 inverse target ports, all distinct; the full before/after
+reservoir contains128 endpoint ports. Every declared pin survives.
+
+The higher guards matter decisively:
+
+| Original universal modulus |4|8|16|32|64|128|256|
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Accepted binary states |378|194|86|38|18|4|2|
+
+Modulo8 alone therefore does **not** force the sixteen-slot move. The last
+retained dyadic layer removes the surviving partial repairs. The separate
+[root audit](audit_larger.py) reproduces this entire table by incremental
+integer subset sums and independently checks both ends of every port.
+Smaller8-,10-,12-source circuits provide additional positive controls.
 
 ## Inheritance and the concept board
 
@@ -28,6 +56,19 @@ component**. Anchor: native current circuits. Niche: exact binary assembly
 and its support cost. Wildcard: two-sided dyadic lifting. The all-size
 padding result changes the question from finding one constant move size
 to recognizing which shared-coordinate component must move together.
+
+During the session, incoming `3689db3896` supplied
+[distinct-observer permutation schedules](../guarded_native_routing_20261023/PORT_PERMUTATIONS.md)
+and a [paid cyclic kernel direction](../guarded_native_routing_20261023/CARRY_GAP.md).
+These separate two operations that could otherwise be conflated here:
+permuting a fully occupied common fibre keeps its incidence multiset fixed,
+whereas our multisource circuits change selected incidence. The former
+explains the independent two-slot exchange below; it cannot supply the
+six- or sixteen-source current change. Its exact carry coordinates also
+show why a larger local kernel must remain in a full record rather than
+being compressed to a binary quotient. Binary assembly applies only after
+the complete eligible states or complete authenticated two-state packets
+are actually supplied.
 
 ## 1. A six-source circuit pays the full dyadic bank
 
@@ -97,6 +138,12 @@ circuit, with connected budget six. The eight-slot assembly is not
 irreducible. This is a concrete circuit-elimination mechanism that preserves
 the coordinate which made the original rectangles incompatible.
 
+The entire accepted table factors exactly as `b0=b4` and
+`b1=b2=b3=b5=b6=b7`. After this full-table authentication, the binary
+assembly theorem below recovers its two implication blocks, of slot costs
+2 and6 and owner-clock costs4 and13. We did not assume in advance that an
+arbitrary electrical predicate has a pairwise Boolean description.
+
 At each endpoint state, all16 ordinary/converse source ports and all16
 inverse target ports are distinct. The union across endpoints contains56
 ports. An unchanged selected background must avoid that whole reservoir.
@@ -163,13 +210,18 @@ source and inverse-target injection, uses a separate row-sum Laplacian
 implementation, and verifies `DeltaL=B L mod256` row by row from the stored
 image witnesses. It repeats the whole eight-slot accepted-state count.
 
-The sibling checkers replay 2739 selected-source Hamiltonian paths, the
-original dyadic filtration, all image corrections, 4784 Boolean formulas,
+The sibling checkers replay 2739 base selected-source Hamiltonian paths,
+6734 paths of the sixteen-source extension, the original dyadic filtration,
+all image corrections, 4784 Boolean formulas,
 400 full-record assembly instances, and36 actual padded hosts. The separate
 transport controls exhaust7056 binary image cases and1747 dyadic lifts.
 Normal and optimized Python runs use explicit exception gates and frozen
 receipts. Discovery considered3352 non-self-converse sources and1040912
 Hamiltonian paths; its large regenerable caches are not committed.
+The larger source-circuit search uses the28 authenticated sources for the
+chosen target pair, a fixed seed and an explicit sample bound; it stopped
+at16 without making a maximality claim. The independent16-source audit
+exhausts all65,536 binary choices.
 
 ```text
 python -B 05-knowledge/results/injective_native_blocks_20261023/reproduce.py
