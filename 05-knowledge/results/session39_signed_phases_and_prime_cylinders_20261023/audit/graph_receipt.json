@@ -1,0 +1,23 @@
+{
+  "vertexwise_E_equal": true,
+  "H": [
+    45132777,
+    45150825,
+    45102765
+  ],
+  "cell_scores": [
+    9,
+    10,
+    7,
+    4,
+    5
+  ],
+  "cell_c": [
+    21,
+    17,
+    25,
+    17,
+    21
+  ],
+  "self_converse_cases": 9
+}

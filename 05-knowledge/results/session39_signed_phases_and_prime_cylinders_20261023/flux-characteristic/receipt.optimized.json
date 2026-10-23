@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "native_order": 8,
+  "nodes": 3528,
+  "edges": 460699,
+  "self_converse_nodes": 176,
+  "root": 0,
+  "retained_characteristic_ones": 175,
+  "degree_and_diagonal_checks": 3528,
+  "native_integer_potential_checks": 128,
+  "small_refinement_descent_checks": 1225,
+  "input_sha256": {
+    "nodes.tsv.gz": "845920e31b2367f2aed1728435b713d3da070888b79179fe69c9d471db234307",
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c"
+  }
+}

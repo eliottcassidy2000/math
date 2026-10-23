@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN producer checkpoint; independent audit separate",
+  "source_head": "bc3c88ec033",
+  "files": {
+    "README.md": "9d6ff562f1f383a06fb5222b746fad89382692dbd590109b26fafc2036d52797",
+    "check.py": "07b341c6fd4469207fff25c6a2695b1d42a43709ac35cbba25378db6e8b1d05d",
+    "receipt.json": "0e0772b22330b23dafd3701cf36092faf193c43d132868309896720645728bf1",
+    "n8_terminal_lift.json": "b0821fd4b2cd9c20b36d51a0d028d706108c2c109057c19fefa122eeecab3618",
+    "check.normal.out": "7372d60a98a4e992750d1a95c0076cf37a7681c46fe8ce58a1d39713fb247d91",
+    "check.optimized.out": "7372d60a98a4e992750d1a95c0076cf37a7681c46fe8ce58a1d39713fb247d91"
+  },
+  "commands": [
+    "python3 check.py --wiring PATH_TO_SESSION38_WIRING",
+    "python3 -O check.py --wiring PATH_TO_SESSION38_WIRING"
+  ],
+  "external_input": "Session38 edges.tsv.gz, SHA256 aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c"
+}

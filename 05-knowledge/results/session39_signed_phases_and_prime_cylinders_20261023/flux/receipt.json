@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "scope": "exact finite algebra only",
+  "n4_tournament_count": 64,
+  "skew_det_histogram": {
+    "1": 48,
+    "9": 16
+  },
+  "witnesses": {
+    "1": {
+      "mask": 0,
+      "S": [
+        [
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "S_snf": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "BF_snf": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "9": {
+      "mask": 2,
+      "S": [
+        [
+          0,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "S_snf": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "BF_snf": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "two_over_seven": {
+    "K": [
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "inverse": [
+      [
+        "-3/7",
+        "4/7"
+      ],
+      [
+        "4/7",
+        "-3/7"
+      ]
+    ],
+    "nu": "2/7",
+    "SNF": [
+      1,
+      7
+    ],
+    "charge_e1": "1/7",
+    "representative_spin_e1": "exp(-3 pi i /7)"
+  },
+  "gradient_checks": 1080,
+  "z256_opposite_refinements_nonisometric": true,
+  "odd_K_naive_spin_ambiguity_confirmed": true
+}

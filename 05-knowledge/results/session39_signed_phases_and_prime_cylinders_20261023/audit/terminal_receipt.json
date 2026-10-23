@@ -1,0 +1,10 @@
+{
+  "edge_count": 460699,
+  "vertices": 3528,
+  "energy": 14960072960,
+  "unit": 153,
+  "normalized_unit": 1,
+  "scaled_normalized_unit": 3,
+  "edge_sha256": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+  "witness_sha256": "b0821fd4b2cd9c20b36d51a0d028d706108c2c109057c19fefa122eeecab3618"
+}

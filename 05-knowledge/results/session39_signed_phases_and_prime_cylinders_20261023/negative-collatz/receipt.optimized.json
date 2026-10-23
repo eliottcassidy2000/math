@@ -1,0 +1,120 @@
+{
+  "counts": {
+    "cylinder_endpoint_checks": 10912,
+    "last_bit_controls": 2728,
+    "integral_cycle_checks": 14,
+    "exhaustive_residue_words": 78
+  },
+  "cycles": [
+    {
+      "word": [
+        1
+      ],
+      "A": 1,
+      "B": 1,
+      "D": -1,
+      "start": 1
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "A": 3,
+      "B": 5,
+      "D": -1,
+      "start": 5
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "A": 11,
+      "B": 2363,
+      "D": -139,
+      "start": 17
+    }
+  ],
+  "prime_composite_examples": [
+    {
+      "word": [
+        1
+      ],
+      "sign": -1,
+      "residue": 1,
+      "modulus": 4,
+      "prime": 5,
+      "composite": 25
+    },
+    {
+      "word": [
+        1
+      ],
+      "sign": 1,
+      "residue": 3,
+      "modulus": 4,
+      "prime": 3,
+      "composite": 15
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "residue": 5,
+      "modulus": 16,
+      "prime": 5,
+      "composite": 85
+    },
+    {
+      "word": [
+        1,
+        2
+      ],
+      "sign": 1,
+      "residue": 11,
+      "modulus": 16,
+      "prime": 11,
+      "composite": 187
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "sign": -1,
+      "residue": 17,
+      "modulus": 4096,
+      "prime": 17,
+      "composite": 69649
+    },
+    {
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "sign": 1,
+      "residue": 4079,
+      "modulus": 4096,
+      "prime": 4079,
+      "composite": 16711663
+    }
+  ]
+}

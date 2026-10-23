@@ -1,0 +1,26 @@
+{
+  "negative-collatz": {
+    "SIGNED_CYLINDERS_AND_PRIMES.md": "5914737c9c218e801ceab0657a9125b2a65f2f387538b24c2c8c9718bd82910b",
+    "verify_signed_cylinders.py": "6e0b0c1ae48372cc97f51f5764eef5454d785f1678090f3d383884bca292e024",
+    "receipt.json": "4d04db94627f6b644eabc1c9f1c89c9e76ff3ba9a6015ec979d47edf47b2220d",
+    "receipt.optimized.json": "4d04db94627f6b644eabc1c9f1c89c9e76ff3ba9a6015ec979d47edf47b2220d"
+  },
+  "flux": {
+    "FLUX_TWISTS_AND_TOURNAMENTS.md": "7de47a1903624929a54435be8b82e0926c162b333011f016062514be3eecad76",
+    "check_flux_twists.py": "239753153043f1972d1e9ab79db04dcd6a85a3b5c0e8f5f98c64ef9df54d0298",
+    "receipt.json": "b608a4002acc8cd8858ddfe6864bbb418ec39f6568e418c7a9df1d9ba1c49a83",
+    "receipt.optimized.json": "b608a4002acc8cd8858ddfe6864bbb418ec39f6568e418c7a9df1d9ba1c49a83"
+  },
+  "linking": {
+    "README.md": "9d6ff562f1f383a06fb5222b746fad89382692dbd590109b26fafc2036d52797",
+    "check.py": "07b341c6fd4469207fff25c6a2695b1d42a43709ac35cbba25378db6e8b1d05d",
+    "n8_terminal_lift.json": "b0821fd4b2cd9c20b36d51a0d028d706108c2c109057c19fefa122eeecab3618",
+    "receipt.json": "0e0772b22330b23dafd3701cf36092faf193c43d132868309896720645728bf1"
+  },
+  "flux-characteristic": {
+    "NATIVE_CHARACTERISTIC_ADDENDUM.md": "c9c723edd7eaf3eaa6b7e6b9650ec98bc4569e65295cf9c2fd5dd2d503b94ef7",
+    "check_characteristic.py": "a9b982bf0bad801a8033592c8e18ae2c3b2c44548df69768269dc3844c048ca1",
+    "receipt.json": "d7f9d0ace37e1d36ccefc30c819adc21a7d6a8352740521ebfc9122d062e407c",
+    "receipt.optimized.json": "d7f9d0ace37e1d36ccefc30c819adc21a7d6a8352740521ebfc9122d062e407c"
+  }
+}

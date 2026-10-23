@@ -1,0 +1,1877 @@
+{
+  "status": "PASS",
+  "n5": {
+    "nodes": [
+      [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        0
+      ],
+      [
+        [
+          0,
+          1,
+          3,
+          3,
+          3
+        ],
+        256
+      ],
+      [
+        [
+          0,
+          2,
+          2,
+          2,
+          4
+        ],
+        32
+      ],
+      [
+        [
+          0,
+          2,
+          2,
+          3,
+          3
+        ],
+        64
+      ],
+      [
+        [
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        8
+      ],
+      [
+        [
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        258
+      ],
+      [
+        [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        40
+      ],
+      [
+        [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        68
+      ],
+      [
+        [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        97
+      ],
+      [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        76
+      ]
+    ],
+    "blue_edges": [
+      [
+        0,
+        5,
+        1
+      ],
+      [
+        2,
+        7,
+        1
+      ],
+      [
+        4,
+        8,
+        1
+      ],
+      [
+        5,
+        7,
+        1
+      ],
+      [
+        5,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        1
+      ],
+      [
+        7,
+        9,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ]
+    ],
+    "paired_black_edges": [
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        3,
+        5,
+        1
+      ],
+      [
+        3,
+        6,
+        1
+      ],
+      [
+        3,
+        7,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        7,
+        1
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        7,
+        7,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        8,
+        8,
+        1
+      ]
+    ],
+    "root": 9,
+    "harmonic_vectors": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "half_form_on_all_vectors": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "native_quadratic_values": [
+      "0",
+      "3/4",
+      "1/4",
+      "1/2",
+      "3/4",
+      "1/2",
+      "1/2",
+      "3/4"
+    ],
+    "native_quadratic_value_counts": {
+      "0": 1,
+      "1/4": 1,
+      "1/2": 3,
+      "3/4": 3
+    },
+    "native_tree_count": 41096,
+    "complete_two_primary": "(Z/2)^3",
+    "switch_count": 42,
+    "tower_invisible": 17,
+    "quadratic_visible_among_invisible": 4,
+    "quadratic_invisible_among_invisible": 13,
+    "original_hostile": {
+      "remove": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "add": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "tree_count": 36680,
+      "same_entire_dyadic_tower": true,
+      "same_quadratic_refinement": true,
+      "quadratic_value_counts": {
+        "0": 1,
+        "1/4": 1,
+        "1/2": 3,
+        "3/4": 3
+      }
+    },
+    "quadratic_positive_controls": [
+      {
+        "remove": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 34360,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 38744,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "tree_count": 37160,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 37928,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      }
+    ],
+    "all_switches": [
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "add": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "tree_count": 39016,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "add": [
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "tree_count": 37448,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "add": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "tree_count": 41656,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "add": [
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "tree_count": 28104,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "add": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "tree_count": 37952,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "add": [
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "tree_count": 36680,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            8
+          ]
+        ],
+        "add": [
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "tree_count": 39232,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            8
+          ]
+        ],
+        "add": [
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "tree_count": 34760,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "tree_count": 40304,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "tree_count": 28320,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            1,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "tree_count": 38392,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            1,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            1,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "tree_count": 35192,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "tree_count": 38816,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "tree_count": 30896,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "tree_count": 36632,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "tree_count": 33752,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 37040,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "tree_count": 34128,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "tree_count": 37152,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            8
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 36928,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "tree_count": 28816,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "tree_count": 38296,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 35872,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "tree_count": 36480,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "tree_count": 36464,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            3,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 36912,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 36456,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "tree_count": 32208,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 37536,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 33456,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "tree_count": 35496,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "tree_count": 33744,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/2": 2,
+          "3/4": 4
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "tree_count": 32024,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "add": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "tree_count": 36104,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "tree_count": 36768,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            3,
+            8
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            3,
+            6
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "tree_count": 33296,
+        "same_entire_dyadic_tower": false,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 2,
+          "1/4": 2,
+          "1/2": 2,
+          "3/4": 2
+        }
+      },
+      {
+        "remove": [
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "tree_count": 34200,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 37080,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": true,
+        "quadratic_value_counts": {
+          "0": 1,
+          "1/4": 1,
+          "1/2": 3,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 34360,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "add": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "tree_count": 38744,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "tree_count": 37160,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      },
+      {
+        "remove": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "add": [
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "tree_count": 37928,
+        "same_entire_dyadic_tower": true,
+        "same_quadratic_refinement": false,
+        "quadratic_value_counts": {
+          "0": 3,
+          "1/4": 1,
+          "1/2": 1,
+          "3/4": 3
+        }
+      }
+    ]
+  },
+  "n8": {
+    "edge_sha256": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "terminal_lift_sha256": "b0821fd4b2cd9c20b36d51a0d028d706108c2c109057c19fefa122eeecab3618",
+    "energy": 14960072960,
+    "energy_divided_by_256": 58437785,
+    "generator_self_linking": "153/256",
+    "normalizing_multiplier": 13,
+    "normalized_cyclic_pairing": "1/256",
+    "odd_scale": 3,
+    "scaled_normalized_cyclic_pairing": "3/256",
+    "native_highest_unit_mod8": 1,
+    "scaled_highest_unit_mod8": 3,
+    "inherited_complete_two_primary": {
+      "1": 3358,
+      "2": 4,
+      "8": 1
+    },
+    "inherited_scope": "The full group decomposition is the frozen Session38 theorem; this checker independently replays its terminal integer witness, not the entire 3528-node tower.",
+    "counterfeit_scope": "Odd-scaled colored network, not a same-fibre tournament-port counterfeit."
+  },
+  "checker_sha256": "07b341c6fd4469207fff25c6a2695b1d42a43709ac35cbba25378db6e8b1d05d",
+  "checks": 478063
+}
