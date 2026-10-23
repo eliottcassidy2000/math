@@ -1,0 +1,14 @@
+{
+  "linking": {
+    "CONVERSE_IS_NOT_TIME_REVERSAL.md": "1e519146c23d5adda1797453fdf0e479b3ab35a918b6a264a0fc5e0d19155ef7",
+    "check_converse_obstruction.py": "4248d54a2fa466d360cb321136376757cdb3499ecbcd5e6c0630518371184201",
+    "converse_obstruction_receipt.json": "993e25da423784680b792396d4b3428a0a6cf4a6334f8a67799f62bf567412c0",
+    "converse.normal.out": "da4e447c28ddcdc2e4d6fab2d72951098efa17bf9c5ce4a9d9cfbc91db1505b9",
+    "converse.optimized.out": "da4e447c28ddcdc2e4d6fab2d72951098efa17bf9c5ce4a9d9cfbc91db1505b9"
+  },
+  "marked-cells": {
+    "ROOTED_CUTOFF_BOUNDARY.md": "0aac05f5024bb44bed8a18ac3f9aba828347e53dd759e8bb34b5a821ee05e6ea",
+    "check_rooted_cutoff.py": "e1ad212b763508749e5fd0875e192a2977ea2e3f126a9528c282b85abe08ff3e",
+    "rooted_cutoff_receipt.json": "ee55fc8f321d330fe70e29f845a899615da76297f6b327da4a895aafae01e32b"
+  }
+}

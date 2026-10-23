@@ -1,0 +1,42 @@
+{
+  "counts": {
+    "closure_replays": 3630,
+    "unique_phase_checks": 1210,
+    "target_obstruction_checks": 2000
+  },
+  "three_basin_examples": [
+    {
+      "prefix": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "target": 1,
+      "start": 38837,
+      "last_valuation": 17,
+      "exponent_period": 18
+    },
+    {
+      "prefix": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "target": 5,
+      "start": 6069,
+      "last_valuation": 12,
+      "exponent_period": 18
+    },
+    {
+      "prefix": [
+        1,
+        2
+      ],
+      "sign": -1,
+      "target": 17,
+      "start": 21,
+      "last_valuation": 2,
+      "exponent_period": 18
+    }
+  ]
+}

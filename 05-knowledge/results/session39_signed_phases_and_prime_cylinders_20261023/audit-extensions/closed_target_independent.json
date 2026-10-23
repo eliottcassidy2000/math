@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "independent_backward_cases": 510,
+  "max_prefix_length": 3,
+  "alphabet": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "signs": [
+    -1,
+    1
+  ],
+  "targets": [
+    1,
+    5,
+    17
+  ]
+}

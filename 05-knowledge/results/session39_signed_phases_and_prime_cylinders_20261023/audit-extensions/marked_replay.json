@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "checks_before_receipt_comparison": 42170,
+  "producer_receipt_sha256": "333f2fb3cf3ba06ef1eec2adf4bf3fa595d18e445b816896c73473c2c52e7263",
+  "mode": "normal; entire printed receipt byte-matches frozen producer receipt"
+}

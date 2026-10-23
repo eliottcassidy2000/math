@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "scope": "No antiisometry for the inherited native n8 linking form; converse fixes critical divisors but can swap literal black twins.",
+  "native_dependency": "Nondegenerate cyclic summand <1/256> with orthogonal complement exponent at most4, certified in the frozen linking packet.",
+  "order256_possible_self_numerators": [
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    121,
+    129,
+    137,
+    145,
+    153,
+    161,
+    169,
+    177,
+    185,
+    193,
+    201,
+    209,
+    217,
+    225,
+    233,
+    241,
+    249
+  ],
+  "negative_target_numerator": 255,
+  "mod8_native": 1,
+  "mod8_reversed": 7,
+  "normalizing_multipliers": {
+    "153": 13,
+    "105": 27
+  },
+  "reflection_controls": [
+    {
+      "n": 3,
+      "free_cells": 1,
+      "tested_presentations": 2,
+      "coverage": "all presentations",
+      "blue_presentations_in_control": 2,
+      "black_presentations_in_control": 0
+    },
+    {
+      "n": 4,
+      "free_cells": 3,
+      "tested_presentations": 8,
+      "coverage": "all presentations",
+      "blue_presentations_in_control": 4,
+      "black_presentations_in_control": 4
+    },
+    {
+      "n": 5,
+      "free_cells": 6,
+      "tested_presentations": 64,
+      "coverage": "all presentations",
+      "blue_presentations_in_control": 16,
+      "black_presentations_in_control": 48
+    },
+    {
+      "n": 6,
+      "free_cells": 10,
+      "tested_presentations": 1024,
+      "coverage": "all presentations",
+      "blue_presentations_in_control": 64,
+      "black_presentations_in_control": 960
+    },
+    {
+      "n": 7,
+      "free_cells": 15,
+      "tested_presentations": 32768,
+      "coverage": "all presentations",
+      "blue_presentations_in_control": 512,
+      "black_presentations_in_control": 32256
+    },
+    {
+      "n": 8,
+      "free_cells": 21,
+      "tested_presentations": 44,
+      "coverage": "zero/full and every singleton/co-singleton; full permutation identities proved above",
+      "blue_presentations_in_control": 8,
+      "black_presentations_in_control": 36
+    }
+  ],
+  "checks": 136816,
+  "checker_sha256": "4248d54a2fa466d360cb321136376757cdb3499ecbcd5e6c0630518371184201"
+}

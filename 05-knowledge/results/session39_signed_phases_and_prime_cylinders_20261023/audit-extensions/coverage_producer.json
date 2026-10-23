@@ -1,0 +1,62 @@
+{
+  "counts": {
+    "coverage_cases": 180,
+    "step_bounds": 40920
+  },
+  "largest_controls": [
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": -1,
+      "target": 1,
+      "actual_starts": 35,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    },
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": -1,
+      "target": 5,
+      "actual_starts": 30,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    },
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": -1,
+      "target": 17,
+      "actual_starts": 28,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    },
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": 1,
+      "target": 1,
+      "actual_starts": 39,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    },
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": 1,
+      "target": 5,
+      "actual_starts": 36,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    },
+    {
+      "X": 1024,
+      "depth": 4,
+      "sign": 1,
+      "target": 17,
+      "actual_starts": 35,
+      "product_bound": 25884,
+      "coarse_bound": 88741
+    }
+  ]
+}

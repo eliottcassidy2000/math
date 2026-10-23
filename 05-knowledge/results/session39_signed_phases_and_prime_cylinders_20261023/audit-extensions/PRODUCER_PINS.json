@@ -1,0 +1,19 @@
+{
+  "negative-collatz": {
+    "CLOSED_TARGET_CYLINDERS.md": "72c8c513f3eb8a89458499cd9d09ca55438a95466c70bc31ce72b74049d6ae8f",
+    "verify_closed_targets.py": "bcfed0416eac2533b6d5434b79c9f0b2bd7c0d701d04dc3ca4a27121de4018b1",
+    "closed-targets-receipt.json": "d850d1fc503a94b27b5081dc161fe3334fba143949826eb43238d8369d34fe15",
+    "closed-targets-receipt.optimized.json": "d850d1fc503a94b27b5081dc161fe3334fba143949826eb43238d8369d34fe15",
+    "COVERAGE_CLOCK_BOUNDARY.md": "e77fe63d74cea0d39bd3bf51ec54f96fb3eb9569bfc3a639278b0e2db520c5c7",
+    "verify_coverage_clock.py": "41ed5bd93fec2e42eb4372e884908d98ab83604f0a62e75c3ef4742e91fd2d86",
+    "coverage-clock-receipt.json": "48465d0cd446158041b0f13f94a0d9ec26bf81be571fec1647339f63c4d3259a",
+    "coverage-clock-receipt.optimized.json": "48465d0cd446158041b0f13f94a0d9ec26bf81be571fec1647339f63c4d3259a"
+  },
+  "marked-cells": {
+    "README.md": "f805460529fa3617190669dd85f6a2f1fbab428d0e83b3750c667462b420a8d9",
+    "AFFINE_CONNECTIONS.md": "5b9a1691cb3350b7aa5ea6ba884ae41b15ed5844118433a15bd7749120c153b5",
+    "GIRTH_PHASE_HOSTILES.md": "c4b518f9a3a54e9e38e009be3fa04b51794ed203ca7f40877241f83c75df3a79",
+    "check_marked_connections.py": "fd5825d5ac1f1cf62a7a632a53c168d7a7b224dd34a3d60aaf9716a4f9ec733f",
+    "marked_connections_receipt.json": "333f2fb3cf3ba06ef1eec2adf4bf3fa595d18e445b816896c73473c2c52e7263"
+  }
+}

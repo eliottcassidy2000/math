@@ -1,11 +1,10 @@
 # Session 39: signed phases and prime cylinders
 
-2026-10-23. **ONGOING research session; first audited checkpoint.**
+2026-10-23. **Completed research packet, independently audited.**
 
-This checkpoint preserves completed proofs, independently checked finite controls,
-and exact reproduction artifacts. It is not the final session synthesis.
-Marked-cell gauge/holonomy results and the closed-target Collatz extension are
-not part of this checkpoint and will be published separately after final audit.
+Start with [the final synthesis](SYNTHESIS.md) and [research map](RESEARCH_MAP.md).
+The two publication checkpoints preserve completed proofs, independently checked
+finite controls, and exact reproduction artifacts. Each claim retains its scope.
 
 ## Scope and routes
 
@@ -21,7 +20,14 @@ normalize to 1/256. This is not a new invariant or a contradiction; see the
 No physical phase realization, unrestricted invariant completeness, LRC result,
 or global Collatz classification is claimed.
 
-- [Independent audit and producer pins](audit/AUDIT.md). Standalone marked-cell audit controls precede the separately forthcoming producer packet.
+- [Independent audit and producer pins](audit/AUDIT.md). Standalone marked-cell audit controls accompany the later producer packet.
+
+- [Marked cyclic cells and affine transport](marked-cells/README.md): holonomy, phase-blindness, and the scoped static-rooted-observer boundary.
+- [Closed-target cylinders](negative-collatz/CLOSED_TARGET_CYLINDERS.md) and [coverage-clock boundary](negative-collatz/COVERAGE_CLOCK_BOUNDARY.md).
+- [Converse is not time reversal](linking/CONVERSE_IS_NOT_TIME_REVERSAL.md).
+- [Extension audit](audit-extensions/AUDIT_EXTENSIONS.md) and [converse/rooted audit](audit-final/AUDIT.md).
+
+- [All-order rooted boundary](marked-cells/ALL_ORDER_ROOTED_BOUNDARY.md), [independent lift audit](audit-lift/AUDIT.md), and [reconstruction precedents](RECONSTRUCTION_PRECEDENTS.md).
 
 ## Portable reproduction
 
@@ -36,10 +42,18 @@ python3 -B flux-characteristic/check_characteristic.py ../session38_incidence_po
 python3 -B linking/check.py --wiring ../session38_incidence_ports_electrical_20261023/wiring
 python3 -B audit/audit_exact.py
 python3 -B audit/audit_graph.py
+python3 -B marked-cells/check_marked_connections.py
+python3 -B marked-cells/check_rooted_cutoff.py
+python3 -B marked-cells/check_lifted_cutoff.py
+python3 -B audit-lift/check_lift.py
+python3 -B negative-collatz/verify_closed_targets.py
+python3 -B negative-collatz/verify_coverage_clock.py
+python3 -B linking/check_converse_obstruction.py
+python3 -B audit-extensions/check_closed_targets.py
 python3 -B audit/audit_terminal.py --edges ../session38_incidence_ports_electrical_20261023/wiring/edges.tsv.gz --witness linking/n8_terminal_lift.json
 ```
 
-The publisher replayed these seven scripts normally and optimized (14 executions). Standard
+The publisher replayed the listed fifteen scripts normally and optimized (30 executions). Standard
 output agrees byte-for-byte with the corresponding frozen receipt or log;
 the linking checker also compares its computed JSON with its saved receipt.
 Normal-mode assertions, where present, supply validation; optimized execution

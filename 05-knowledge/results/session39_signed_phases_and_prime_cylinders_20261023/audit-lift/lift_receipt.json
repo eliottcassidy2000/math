@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "rooted_records": [
+    {
+      "g": 3,
+      "lifts": 0,
+      "vertices": 9,
+      "cutoff": 3,
+      "actual_roots_checked": 9,
+      "status": "PASS"
+    },
+    {
+      "g": 3,
+      "lifts": 1,
+      "vertices": 11,
+      "cutoff": 3,
+      "actual_roots_checked": 11,
+      "status": "PASS"
+    },
+    {
+      "g": 3,
+      "lifts": 2,
+      "vertices": 13,
+      "cutoff": 3,
+      "actual_roots_checked": 13,
+      "status": "PASS"
+    },
+    {
+      "g": 4,
+      "lifts": 0,
+      "vertices": 12,
+      "cutoff": 4,
+      "actual_roots_checked": 12,
+      "status": "PASS"
+    },
+    {
+      "g": 4,
+      "lifts": 1,
+      "vertices": 14,
+      "cutoff": 4,
+      "actual_roots_checked": 14,
+      "status": "PASS"
+    },
+    {
+      "g": 4,
+      "lifts": 2,
+      "vertices": 16,
+      "cutoff": 4,
+      "actual_roots_checked": 16,
+      "status": "PASS"
+    }
+  ],
+  "exact_E_controls": [
+    {
+      "vertices": 15,
+      "lifts": 0,
+      "all_three_exact_E_equal_both_orientations": true
+    },
+    {
+      "vertices": 17,
+      "lifts": 1,
+      "all_three_exact_E_equal_both_orientations": true
+    },
+    {
+      "vertices": 19,
+      "lifts": 2,
+      "all_three_exact_E_equal_both_orientations": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN producer addendum; independent audit separate",
+  "files": {
+    "CONVERSE_IS_NOT_TIME_REVERSAL.md": "1e519146c23d5adda1797453fdf0e479b3ab35a918b6a264a0fc5e0d19155ef7",
+    "check_converse_obstruction.py": "4248d54a2fa466d360cb321136376757cdb3499ecbcd5e6c0630518371184201",
+    "converse_obstruction_receipt.json": "993e25da423784680b792396d4b3428a0a6cf4a6334f8a67799f62bf567412c0",
+    "converse.normal.out": "da4e447c28ddcdc2e4d6fab2d72951098efa17bf9c5ce4a9d9cfbc91db1505b9",
+    "converse.optimized.out": "da4e447c28ddcdc2e4d6fab2d72951098efa17bf9c5ce4a9d9cfbc91db1505b9"
+  },
+  "dependencies": {
+    "receipt.json": "0e0772b22330b23dafd3701cf36092faf193c43d132868309896720645728bf1",
+    "README.md": "9d6ff562f1f383a06fb5222b746fad89382692dbd590109b26fafc2036d52797"
+  },
+  "commands": [
+    "python3 check_converse_obstruction.py",
+    "python3 -O check_converse_obstruction.py"
+  ],
+  "original_manifest_files_unchanged": true
+}

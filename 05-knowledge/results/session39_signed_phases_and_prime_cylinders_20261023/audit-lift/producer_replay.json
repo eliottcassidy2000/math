@@ -1,0 +1,882 @@
+{
+  "scope": "Actual two-vertex cyclic lifts preserve strongness, self-converse maps, intrinsic recovery, and every static singly-rooted profile through the base cutoff in the stated finite controls.",
+  "dependency_sha256": "e1ad212b763508749e5fd0875e192a2977ea2e3f126a9528c282b85abe08ff3e",
+  "controls": [
+    {
+      "base_cells": 3,
+      "lift_iterations": 0,
+      "order": 9,
+      "cutoff": 3,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        6
+      ],
+      "stable_profile_cell_sizes": [
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "5ff96687f81a05f2358b886b497f5a9e7930bd8ea8ffc1933d393b573d113671",
+        "5ff96687f81a05f2358b886b497f5a9e7930bd8ea8ffc1933d393b573d113671",
+        "5ff96687f81a05f2358b886b497f5a9e7930bd8ea8ffc1933d393b573d113671",
+        "50a427c7899f431db03b603063ba7e50e8a07b9b8b96d29795e8e7a4eb76e3d3",
+        "50a427c7899f431db03b603063ba7e50e8a07b9b8b96d29795e8e7a4eb76e3d3",
+        "50a427c7899f431db03b603063ba7e50e8a07b9b8b96d29795e8e7a4eb76e3d3",
+        "da75b4be3a8b6e188c0dacb466066bc468e73b3aecccba24a031c2d0ba4493aa",
+        "da75b4be3a8b6e188c0dacb466066bc468e73b3aecccba24a031c2d0ba4493aa",
+        "da75b4be3a8b6e188c0dacb466066bc468e73b3aecccba24a031c2d0ba4493aa"
+      ]
+    },
+    {
+      "base_cells": 3,
+      "lift_iterations": 1,
+      "order": 11,
+      "cutoff": 3,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        6
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "f9dc5df4006859e7b2490dc5d8eac319d117f2626c1f83f6afefef2e931afabd",
+        "f9dc5df4006859e7b2490dc5d8eac319d117f2626c1f83f6afefef2e931afabd",
+        "f9dc5df4006859e7b2490dc5d8eac319d117f2626c1f83f6afefef2e931afabd",
+        "46d12b6440fea60b16eeeab4295e3fe1dca7101712c1028a6948834dfd076aa2",
+        "46d12b6440fea60b16eeeab4295e3fe1dca7101712c1028a6948834dfd076aa2",
+        "46d12b6440fea60b16eeeab4295e3fe1dca7101712c1028a6948834dfd076aa2",
+        "633d9de737844c3611e6ee8f60b399c2a7fe767e32444a4cf6c92ced1e86d3ea",
+        "633d9de737844c3611e6ee8f60b399c2a7fe767e32444a4cf6c92ced1e86d3ea",
+        "633d9de737844c3611e6ee8f60b399c2a7fe767e32444a4cf6c92ced1e86d3ea",
+        "ffe09a29a11b4412bca4453dd7b7db0abef21f7a4fd3a0779d23b566f7ba5a96",
+        "bef356cc5d14c9b75746ee1491d53ef59353e25f933f9d8b2ce5b27ff4aee764"
+      ]
+    },
+    {
+      "base_cells": 3,
+      "lift_iterations": 2,
+      "order": 13,
+      "cutoff": 3,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        6
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "edf5084cd2f93c5b2a8bd725a2ed2c0bdfb75f92c6ace85c6eea14535fb87f51",
+        "edf5084cd2f93c5b2a8bd725a2ed2c0bdfb75f92c6ace85c6eea14535fb87f51",
+        "edf5084cd2f93c5b2a8bd725a2ed2c0bdfb75f92c6ace85c6eea14535fb87f51",
+        "e86402f71765919e670f03c41761673f4964f46d33d17033b9d447a08761bf38",
+        "e86402f71765919e670f03c41761673f4964f46d33d17033b9d447a08761bf38",
+        "e86402f71765919e670f03c41761673f4964f46d33d17033b9d447a08761bf38",
+        "5c6dbbf8f4ef6985c632db793be9ac634e9f40cdecca683084708d8c3c4e9aed",
+        "5c6dbbf8f4ef6985c632db793be9ac634e9f40cdecca683084708d8c3c4e9aed",
+        "5c6dbbf8f4ef6985c632db793be9ac634e9f40cdecca683084708d8c3c4e9aed",
+        "5ae3d9ca9ce2320af04ab1cca2a23724818bc0ea392cfa338c355acc2469d91d",
+        "ab16745db01e4db571b5350151771e77571358452dda0886e74ae510014fb80e",
+        "ec75bf7fbfdf9f84bb0509eff664c6976dbce11b955a124ddd65931d641ad06a",
+        "2f2120c109897c66e72a900c57f9cfd82748e683719e2101f1546831577d4d24"
+      ]
+    },
+    {
+      "base_cells": 4,
+      "lift_iterations": 0,
+      "order": 12,
+      "cutoff": 4,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        9
+      ],
+      "stable_profile_cell_sizes": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "07c90824d86c1fd34db3b2b16f25cac4c8db48ec92ead48f345f6d4cace9e8f7",
+        "07c90824d86c1fd34db3b2b16f25cac4c8db48ec92ead48f345f6d4cace9e8f7",
+        "07c90824d86c1fd34db3b2b16f25cac4c8db48ec92ead48f345f6d4cace9e8f7",
+        "bc3a88634d2fcb9fd7c23e9c4614b5378de3751c06b5938374a3548e48a97a41",
+        "bc3a88634d2fcb9fd7c23e9c4614b5378de3751c06b5938374a3548e48a97a41",
+        "bc3a88634d2fcb9fd7c23e9c4614b5378de3751c06b5938374a3548e48a97a41",
+        "47e480e3827e4cf989ea5f5e66d6f053f173634819a35b849904ea66a20af2d4",
+        "47e480e3827e4cf989ea5f5e66d6f053f173634819a35b849904ea66a20af2d4",
+        "47e480e3827e4cf989ea5f5e66d6f053f173634819a35b849904ea66a20af2d4",
+        "14f3ce2935c91fb0ec94642afd4dc4bfa36d5e6004136a08cc4d3257d08162d8",
+        "14f3ce2935c91fb0ec94642afd4dc4bfa36d5e6004136a08cc4d3257d08162d8",
+        "14f3ce2935c91fb0ec94642afd4dc4bfa36d5e6004136a08cc4d3257d08162d8"
+      ]
+    },
+    {
+      "base_cells": 4,
+      "lift_iterations": 1,
+      "order": 14,
+      "cutoff": 4,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        9
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "8371877dd11bea593b6a7efa718681abdbd65b77c328a736670886218f5f36eb",
+        "8371877dd11bea593b6a7efa718681abdbd65b77c328a736670886218f5f36eb",
+        "8371877dd11bea593b6a7efa718681abdbd65b77c328a736670886218f5f36eb",
+        "300bfcde3bd3f380d8c71773d4e6131fc30603eaf74c031a1bb278bc45268b5b",
+        "300bfcde3bd3f380d8c71773d4e6131fc30603eaf74c031a1bb278bc45268b5b",
+        "300bfcde3bd3f380d8c71773d4e6131fc30603eaf74c031a1bb278bc45268b5b",
+        "0c8fe9efd9c031fd81ba6581bc808326fb2fc86737eeef566f7b9da0151ac9d2",
+        "0c8fe9efd9c031fd81ba6581bc808326fb2fc86737eeef566f7b9da0151ac9d2",
+        "0c8fe9efd9c031fd81ba6581bc808326fb2fc86737eeef566f7b9da0151ac9d2",
+        "455d669f06e4826fb49d6af1721824ff1da5f701589b2000126e13d9b5314215",
+        "455d669f06e4826fb49d6af1721824ff1da5f701589b2000126e13d9b5314215",
+        "455d669f06e4826fb49d6af1721824ff1da5f701589b2000126e13d9b5314215",
+        "d6bb7c148fa086ae84bdc674aca4f8162205fa7aa7e385da15d6ec0142463ca0",
+        "f6ad130f712d27f8b43c9b29f7a75277e16ae363a22ae06dc9bf80ef471ccf79"
+      ]
+    },
+    {
+      "base_cells": 4,
+      "lift_iterations": 2,
+      "order": 16,
+      "cutoff": 4,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        9
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "c1de04a7f4c11cca137864266df6b62688da56af87c023fb7245433cc1ff1f4d",
+        "c1de04a7f4c11cca137864266df6b62688da56af87c023fb7245433cc1ff1f4d",
+        "c1de04a7f4c11cca137864266df6b62688da56af87c023fb7245433cc1ff1f4d",
+        "bba78eae57c5d20104dd840004da5983a54a9de722a3baecba323b7e07f1a009",
+        "bba78eae57c5d20104dd840004da5983a54a9de722a3baecba323b7e07f1a009",
+        "bba78eae57c5d20104dd840004da5983a54a9de722a3baecba323b7e07f1a009",
+        "afc5606615a66ef4aff49b66ee4e584138415fdb9ee008146065f6a1370b330d",
+        "afc5606615a66ef4aff49b66ee4e584138415fdb9ee008146065f6a1370b330d",
+        "afc5606615a66ef4aff49b66ee4e584138415fdb9ee008146065f6a1370b330d",
+        "39bd2c86947c233d0ddad51a1245f8be7a1ee93a1d16b461dd6a1fd8cc5228ca",
+        "39bd2c86947c233d0ddad51a1245f8be7a1ee93a1d16b461dd6a1fd8cc5228ca",
+        "39bd2c86947c233d0ddad51a1245f8be7a1ee93a1d16b461dd6a1fd8cc5228ca",
+        "80407ddd015f91c9cf283480a5f113a15fde0643ff5ae89748c8530e3ecb6112",
+        "2c078c611cf412d05191f759dd514309c4a54cc4fd7ec5600258b5adffe3f205",
+        "7c76e23d760a2625bd3ea1531f7073434414358a0373f519d235a483603c286a",
+        "65fa2d73d07eaff8e5f5a8fb98e38b68603138b51cb256883c896f44238868e0"
+      ]
+    },
+    {
+      "base_cells": 5,
+      "lift_iterations": 0,
+      "order": 15,
+      "cutoff": 5,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        12
+      ],
+      "stable_profile_cell_sizes": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "38cca881406223c0c1aae79ab381e7aef1881d11e1f052c085f49b3941c5b043",
+        "38cca881406223c0c1aae79ab381e7aef1881d11e1f052c085f49b3941c5b043",
+        "38cca881406223c0c1aae79ab381e7aef1881d11e1f052c085f49b3941c5b043",
+        "9c1dbc54c060a027c2e00eb63657ff45e40b644887d429089e24f4aa85b17d6e",
+        "9c1dbc54c060a027c2e00eb63657ff45e40b644887d429089e24f4aa85b17d6e",
+        "9c1dbc54c060a027c2e00eb63657ff45e40b644887d429089e24f4aa85b17d6e",
+        "8e573380f2efbdfebe200319d1553ffc52c7c170e1a654bbc96c136aa681af03",
+        "8e573380f2efbdfebe200319d1553ffc52c7c170e1a654bbc96c136aa681af03",
+        "8e573380f2efbdfebe200319d1553ffc52c7c170e1a654bbc96c136aa681af03",
+        "1f515b74cae7d0934c4665a4b72f15504023fdfff4044736f3c12b098f2cb5e4",
+        "1f515b74cae7d0934c4665a4b72f15504023fdfff4044736f3c12b098f2cb5e4",
+        "1f515b74cae7d0934c4665a4b72f15504023fdfff4044736f3c12b098f2cb5e4",
+        "1162240c67ac8745fd028ee580bb96fd2778d9d08b268636b7239a4aff217ba4",
+        "1162240c67ac8745fd028ee580bb96fd2778d9d08b268636b7239a4aff217ba4",
+        "1162240c67ac8745fd028ee580bb96fd2778d9d08b268636b7239a4aff217ba4"
+      ]
+    },
+    {
+      "base_cells": 5,
+      "lift_iterations": 1,
+      "order": 17,
+      "cutoff": 5,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        12
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "d5e9ebdac057dd0be28d47e81354f6892d78f3cac368c83c5735de6a77ea1b83",
+        "d5e9ebdac057dd0be28d47e81354f6892d78f3cac368c83c5735de6a77ea1b83",
+        "d5e9ebdac057dd0be28d47e81354f6892d78f3cac368c83c5735de6a77ea1b83",
+        "d4aa2068a8d61a5effef84fe17e81d0ffd3639de2cc20a358153f0f97f12adb2",
+        "d4aa2068a8d61a5effef84fe17e81d0ffd3639de2cc20a358153f0f97f12adb2",
+        "d4aa2068a8d61a5effef84fe17e81d0ffd3639de2cc20a358153f0f97f12adb2",
+        "e8223aa5e29735e9fef6e576028ff32b4ea9f73bc4e8f8698fd1d23b2ace96ae",
+        "e8223aa5e29735e9fef6e576028ff32b4ea9f73bc4e8f8698fd1d23b2ace96ae",
+        "e8223aa5e29735e9fef6e576028ff32b4ea9f73bc4e8f8698fd1d23b2ace96ae",
+        "c72278c92f1ad64e31de676e4d2b0ab67ca4fe0e7ab88e879c47fc2c154ad73e",
+        "c72278c92f1ad64e31de676e4d2b0ab67ca4fe0e7ab88e879c47fc2c154ad73e",
+        "c72278c92f1ad64e31de676e4d2b0ab67ca4fe0e7ab88e879c47fc2c154ad73e",
+        "1cf3a899bd50208346659eb8037eaebb8bd1c3d790517bc6642ff61069bfc37f",
+        "1cf3a899bd50208346659eb8037eaebb8bd1c3d790517bc6642ff61069bfc37f",
+        "1cf3a899bd50208346659eb8037eaebb8bd1c3d790517bc6642ff61069bfc37f",
+        "420bce8dd16f369e12ba43e49dc535bb2e927ca35883549e76ddb466f807d3c9",
+        "4465877b7e43deaa2de81474ce1cd0127094f9cbc1808a89c5983e616b4e848d"
+      ]
+    },
+    {
+      "base_cells": 5,
+      "lift_iterations": 2,
+      "order": 19,
+      "cutoff": 5,
+      "all_actual_root_profiles_equal": true,
+      "indexed_three_subset_differs": [
+        0,
+        1,
+        12
+      ],
+      "stable_profile_cell_sizes": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "self_converse_and_strong": true,
+      "profile_sha256_by_vertex": [
+        "ebc91ff1b664e44b4487123fd501668913c03303977debbf5387219b68a77245",
+        "ebc91ff1b664e44b4487123fd501668913c03303977debbf5387219b68a77245",
+        "ebc91ff1b664e44b4487123fd501668913c03303977debbf5387219b68a77245",
+        "c7a1369332eee604a04eac016dd9074f7422ad4846ba425c2efcb633069fdb76",
+        "c7a1369332eee604a04eac016dd9074f7422ad4846ba425c2efcb633069fdb76",
+        "c7a1369332eee604a04eac016dd9074f7422ad4846ba425c2efcb633069fdb76",
+        "c1fd6b9886b9646b6bbf16e536ab358869174d6c7d315aceb553b3af65b3e6f6",
+        "c1fd6b9886b9646b6bbf16e536ab358869174d6c7d315aceb553b3af65b3e6f6",
+        "c1fd6b9886b9646b6bbf16e536ab358869174d6c7d315aceb553b3af65b3e6f6",
+        "34fc5a982234c18b4f8e4b7c7c42498a27d92080d1f541247289423588b35b96",
+        "34fc5a982234c18b4f8e4b7c7c42498a27d92080d1f541247289423588b35b96",
+        "34fc5a982234c18b4f8e4b7c7c42498a27d92080d1f541247289423588b35b96",
+        "082be238ad67152e909242e569417a301768cddd0d7e3ddd6e9c85093ef6226d",
+        "082be238ad67152e909242e569417a301768cddd0d7e3ddd6e9c85093ef6226d",
+        "082be238ad67152e909242e569417a301768cddd0d7e3ddd6e9c85093ef6226d",
+        "f508aefaebc54d726a9b1c973477f410f33645fc914b08cab2e7dceb986e2dd4",
+        "335c18a73fef76c87112c4253e1ee9f4261d21a270a3e55872c4aec9d5ffee81",
+        "2c7e496557902b68e690c4e05d85dc6b390e8ae66c60326c3290082aa6bdfad1",
+        "7e3df5fe2cef8b5d4033ed030892994291d7c927627acacd5643cf2231996753"
+      ]
+    }
+  ],
+  "arithmetic_controls_n_g_r_required_cutoff": [
+    [
+      11,
+      3,
+      1,
+      4
+    ],
+    [
+      12,
+      4,
+      0,
+      5
+    ],
+    [
+      13,
+      3,
+      2,
+      4
+    ],
+    [
+      14,
+      4,
+      1,
+      5
+    ],
+    [
+      15,
+      5,
+      0,
+      6
+    ],
+    [
+      16,
+      4,
+      2,
+      5
+    ],
+    [
+      17,
+      5,
+      1,
+      6
+    ],
+    [
+      18,
+      6,
+      0,
+      7
+    ],
+    [
+      19,
+      5,
+      2,
+      6
+    ],
+    [
+      20,
+      6,
+      1,
+      7
+    ],
+    [
+      21,
+      7,
+      0,
+      8
+    ],
+    [
+      22,
+      6,
+      2,
+      7
+    ],
+    [
+      23,
+      7,
+      1,
+      8
+    ],
+    [
+      24,
+      8,
+      0,
+      9
+    ],
+    [
+      25,
+      7,
+      2,
+      8
+    ],
+    [
+      26,
+      8,
+      1,
+      9
+    ],
+    [
+      27,
+      9,
+      0,
+      10
+    ],
+    [
+      28,
+      8,
+      2,
+      9
+    ],
+    [
+      29,
+      9,
+      1,
+      10
+    ],
+    [
+      30,
+      10,
+      0,
+      11
+    ],
+    [
+      31,
+      9,
+      2,
+      10
+    ],
+    [
+      32,
+      10,
+      1,
+      11
+    ],
+    [
+      33,
+      11,
+      0,
+      12
+    ],
+    [
+      34,
+      10,
+      2,
+      11
+    ],
+    [
+      35,
+      11,
+      1,
+      12
+    ],
+    [
+      36,
+      12,
+      0,
+      13
+    ],
+    [
+      37,
+      11,
+      2,
+      12
+    ],
+    [
+      38,
+      12,
+      1,
+      13
+    ],
+    [
+      39,
+      13,
+      0,
+      14
+    ],
+    [
+      40,
+      12,
+      2,
+      13
+    ],
+    [
+      41,
+      13,
+      1,
+      14
+    ],
+    [
+      42,
+      14,
+      0,
+      15
+    ],
+    [
+      43,
+      13,
+      2,
+      14
+    ],
+    [
+      44,
+      14,
+      1,
+      15
+    ],
+    [
+      45,
+      15,
+      0,
+      16
+    ],
+    [
+      46,
+      14,
+      2,
+      15
+    ],
+    [
+      47,
+      15,
+      1,
+      16
+    ],
+    [
+      48,
+      16,
+      0,
+      17
+    ],
+    [
+      49,
+      15,
+      2,
+      16
+    ],
+    [
+      50,
+      16,
+      1,
+      17
+    ],
+    [
+      51,
+      17,
+      0,
+      18
+    ],
+    [
+      52,
+      16,
+      2,
+      17
+    ],
+    [
+      53,
+      17,
+      1,
+      18
+    ],
+    [
+      54,
+      18,
+      0,
+      19
+    ],
+    [
+      55,
+      17,
+      2,
+      18
+    ],
+    [
+      56,
+      18,
+      1,
+      19
+    ],
+    [
+      57,
+      19,
+      0,
+      20
+    ],
+    [
+      58,
+      18,
+      2,
+      19
+    ],
+    [
+      59,
+      19,
+      1,
+      20
+    ],
+    [
+      60,
+      20,
+      0,
+      21
+    ],
+    [
+      61,
+      19,
+      2,
+      20
+    ],
+    [
+      62,
+      20,
+      1,
+      21
+    ],
+    [
+      63,
+      21,
+      0,
+      22
+    ],
+    [
+      64,
+      20,
+      2,
+      21
+    ],
+    [
+      65,
+      21,
+      1,
+      22
+    ],
+    [
+      66,
+      22,
+      0,
+      23
+    ],
+    [
+      67,
+      21,
+      2,
+      22
+    ],
+    [
+      68,
+      22,
+      1,
+      23
+    ],
+    [
+      69,
+      23,
+      0,
+      24
+    ],
+    [
+      70,
+      22,
+      2,
+      23
+    ],
+    [
+      71,
+      23,
+      1,
+      24
+    ],
+    [
+      72,
+      24,
+      0,
+      25
+    ],
+    [
+      73,
+      23,
+      2,
+      24
+    ],
+    [
+      74,
+      24,
+      1,
+      25
+    ],
+    [
+      75,
+      25,
+      0,
+      26
+    ],
+    [
+      76,
+      24,
+      2,
+      25
+    ],
+    [
+      77,
+      25,
+      1,
+      26
+    ],
+    [
+      78,
+      26,
+      0,
+      27
+    ],
+    [
+      79,
+      25,
+      2,
+      26
+    ],
+    [
+      80,
+      26,
+      1,
+      27
+    ],
+    [
+      81,
+      27,
+      0,
+      28
+    ],
+    [
+      82,
+      26,
+      2,
+      27
+    ],
+    [
+      83,
+      27,
+      1,
+      28
+    ],
+    [
+      84,
+      28,
+      0,
+      29
+    ],
+    [
+      85,
+      27,
+      2,
+      28
+    ],
+    [
+      86,
+      28,
+      1,
+      29
+    ],
+    [
+      87,
+      29,
+      0,
+      30
+    ],
+    [
+      88,
+      28,
+      2,
+      29
+    ],
+    [
+      89,
+      29,
+      1,
+      30
+    ],
+    [
+      90,
+      30,
+      0,
+      31
+    ],
+    [
+      91,
+      29,
+      2,
+      30
+    ],
+    [
+      92,
+      30,
+      1,
+      31
+    ],
+    [
+      93,
+      31,
+      0,
+      32
+    ],
+    [
+      94,
+      30,
+      2,
+      31
+    ],
+    [
+      95,
+      31,
+      1,
+      32
+    ],
+    [
+      96,
+      32,
+      0,
+      33
+    ],
+    [
+      97,
+      31,
+      2,
+      32
+    ],
+    [
+      98,
+      32,
+      1,
+      33
+    ],
+    [
+      99,
+      33,
+      0,
+      34
+    ],
+    [
+      100,
+      32,
+      2,
+      33
+    ]
+  ],
+  "checks_before_receipt_comparison": 1587
+}
