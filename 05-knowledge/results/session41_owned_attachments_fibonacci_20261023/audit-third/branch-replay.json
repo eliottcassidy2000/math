@@ -1,0 +1,368 @@
+{
+  "status": "PASS",
+  "recursive_language_Fn_through_index": 7,
+  "fixed_branch_j_range": [
+    6,
+    20
+  ],
+  "patched35_recursive_R_prefixes_through": 300,
+  "old_supplied36": "not found; prior source supplies35 symbols only",
+  "rows34to40": {
+    "34": {
+      "D": [
+        {
+          "support": [
+            9
+          ],
+          "ascending_word": "ACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            4,
+            6,
+            8
+          ],
+          "ascending_word": "ACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            9
+          ],
+          "ascending_word": "ACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            4,
+            6,
+            8
+          ],
+          "ascending_word": "ACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            1,
+            4,
+            6,
+            8
+          ],
+          "ascending_word": "ABBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "35": {
+      "D": [
+        {
+          "support": [
+            2,
+            9
+          ],
+          "ascending_word": "CACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            9
+          ],
+          "ascending_word": "AACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            9
+          ],
+          "ascending_word": "BACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            2,
+            9
+          ],
+          "ascending_word": "CACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            9
+          ],
+          "ascending_word": "AACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            9
+          ],
+          "ascending_word": "BACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "36": {
+      "D": [
+        {
+          "support": [
+            3,
+            9
+          ],
+          "ascending_word": "ACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            9
+          ],
+          "ascending_word": "ACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            3,
+            9
+          ],
+          "ascending_word": "ACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            9
+          ],
+          "ascending_word": "ACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            1,
+            9
+          ],
+          "ascending_word": "ABACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "37": {
+      "D": [
+        {
+          "support": [
+            4,
+            9
+          ],
+          "ascending_word": "BACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            3,
+            9
+          ],
+          "ascending_word": "AACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            3,
+            9
+          ],
+          "ascending_word": "BACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            4,
+            9
+          ],
+          "ascending_word": "BACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            3,
+            9
+          ],
+          "ascending_word": "AACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            3,
+            9
+          ],
+          "ascending_word": "BACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "38": {
+      "D": [
+        {
+          "support": [
+            2,
+            4,
+            9
+          ],
+          "ascending_word": "CBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            4,
+            9
+          ],
+          "ascending_word": "ABACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            4,
+            9
+          ],
+          "ascending_word": "BBACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            2,
+            4,
+            9
+          ],
+          "ascending_word": "CBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            4,
+            9
+          ],
+          "ascending_word": "ABACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            4,
+            9
+          ],
+          "ascending_word": "BBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            1,
+            3,
+            9
+          ],
+          "ascending_word": "ABACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "39": {
+      "D": [
+        {
+          "support": [
+            5,
+            9
+          ],
+          "ascending_word": "ACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            4,
+            9
+          ],
+          "ascending_word": "ACBACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            5,
+            9
+          ],
+          "ascending_word": "ACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            2,
+            4,
+            9
+          ],
+          "ascending_word": "ACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            1,
+            4,
+            9
+          ],
+          "ascending_word": "ABBACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    },
+    "40": {
+      "D": [
+        {
+          "support": [
+            2,
+            5,
+            9
+          ],
+          "ascending_word": "CACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            5,
+            9
+          ],
+          "ascending_word": "AACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            5,
+            9
+          ],
+          "ascending_word": "BACBACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ],
+      "R": [
+        {
+          "support": [
+            2,
+            5,
+            9
+          ],
+          "ascending_word": "CACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            -1,
+            5,
+            9
+          ],
+          "ascending_word": "AACBACACBACBACACBACBACACBACACBACBACACBAC"
+        },
+        {
+          "support": [
+            1,
+            5,
+            9
+          ],
+          "ascending_word": "BACBACACBACBACACBACBACACBACACBACBACACBAC"
+        }
+      ]
+    }
+  }
+}
