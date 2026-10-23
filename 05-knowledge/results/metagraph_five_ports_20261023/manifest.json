@@ -1,0 +1,33 @@
+{
+  "status": "FINITE-EXACT rooted-five incidence menu and complete focused n9 port fibres",
+  "inherited_sha256": {
+    "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+    "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+    "05-knowledge/results/blue_quotient_20261020b/census.cpp": "ff4cb8fddad0118ad3aaaf9ec5052291a958f49a8021ff4523b4ecc2bd774234",
+    "04-computation/experiments/sierpinski_ocf_20261022/drt23_classes.json": "0e4b84bdd78bbd2424a29ad8ad348a4c6b74b9343fdfbd7f18fcb6070ab6fa53"
+  },
+  "owned_sha256": {
+    "check.py": "19f602624f0cd415f1e4df53611e9aa33a52fdf74b251ce153562ad81a3422f9",
+    "focused_ports.bin.gz": "49ac186ce9dec861ed78e61fef9be49a15941ff61bb7b3cc74fb16cfeec282a5",
+    "focused_targets.tsv": "218fb85ebdbc2bc634ae1c16c6c4b90c906fe1e9936b36fc587775347e36a2d8",
+    "menu.cpp": "729ae6c846f27cf748722c808abb9596e320b731940a6bf5dd0bad7e8f8599d3",
+    "menu_n8.json": "931ea00fb2ca341b97dcd410f463f0fd707561e0648e48a780accc4504f6552f",
+    "menu_n9.json": "e8cc51864018121881c93796056513255bd8d33a5c8b2555edbdbacfe8da62a4",
+    "port_producer.json": "47a8a02270802213855bf024abef54c82a06746f53b9654f0b42cc69ca22e2ec",
+    "ports.cpp": "019b7e23cdfe6cb40f945c664347fc5e30118c27046b295602397857e2308a4c",
+    "probe.json": "3d9f00b22f2b16ddf6f507b68c1a2ddea18147f988bed7072ffa5f8702baeef1",
+    "probe.py": "a0411abf5643995aa93846c572ad7a50b43e59577c33a11a660ccc7fa6d782b4",
+    "verification.json": "3c026d605b334fc860f85769ecfea2c9842ef8f768852294e7a5bd74b961503d",
+    "verify.py": "e36c027f89fae2aec213a87692c1d93b7b98f0dcb16658d2a8b534d6166e8932"
+  },
+  "hash_convention": "gzip files hashed as committed bytes; text canonical LF UTF-8 without BOM",
+  "producer": {
+    "target_classes": 201,
+    "source_classes": 72727,
+    "paths": 378409,
+    "open_paths": 170194,
+    "closed_source_presentations": 165570,
+    "blue_presentations": 354,
+    "checks": 1376898
+  }
+}

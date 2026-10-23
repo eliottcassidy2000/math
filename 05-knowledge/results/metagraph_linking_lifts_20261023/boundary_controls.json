@@ -1,0 +1,168 @@
+{
+  "branch_leaf_distances": [
+    [
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      2,
+      2
+    ]
+  ],
+  "checks": 15,
+  "fixed_blue_path_same_degrees": [
+    {
+      "degrees": [
+        3,
+        4,
+        4,
+        3
+      ],
+      "reduced_laplacian": [
+        [
+          3,
+          -3,
+          0
+        ],
+        [
+          -3,
+          4,
+          -1
+        ],
+        [
+          0,
+          -1,
+          4
+        ]
+      ],
+      "tree_count": 9
+    },
+    {
+      "degrees": [
+        3,
+        4,
+        4,
+        3
+      ],
+      "reduced_laplacian": [
+        [
+          3,
+          -1,
+          0
+        ],
+        [
+          -1,
+          4,
+          -3
+        ],
+        [
+          0,
+          -3,
+          4
+        ]
+      ],
+      "tree_count": 17
+    }
+  ],
+  "same_marked_trivial_linking_pairing": [
+    {
+      "degrees": [
+        3,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "reduced_laplacian": [
+        [
+          3,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        [
+          -1,
+          2,
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          2,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "tree_count": 1
+    },
+    {
+      "degrees": [
+        3,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "reduced_laplacian": [
+        [
+          3,
+          -1,
+          -1,
+          0,
+          0
+        ],
+        [
+          -1,
+          2,
+          0,
+          -1,
+          0
+        ],
+        [
+          -1,
+          0,
+          2,
+          0,
+          -1
+        ],
+        [
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "tree_count": 1
+    }
+  ],
+  "status": "FINITE-EXACT hostile controls in weighted graphs, not claims of tournament realizability"
+}

@@ -1,0 +1,291 @@
+{
+  "cases": [
+    {
+      "critical_two_primary": {
+        "2": 3360,
+        "32": 1,
+        "4": 2
+      },
+      "highest_charge": {
+        "energy": 55870944,
+        "linking_numerator": 15,
+        "order": 32
+      },
+      "layers": [
+        {
+          "dimension": 3363,
+          "level": 1,
+          "next_dimension": 3,
+          "rank": 3360
+        },
+        {
+          "dimension": 3,
+          "form_rows": [
+            2,
+            7,
+            2
+          ],
+          "level": 2,
+          "next_dimension": 1,
+          "rank": 2
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 3,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 4,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            1
+          ],
+          "level": 5,
+          "next_dimension": 0,
+          "rank": 1
+        }
+      ],
+      "marked_half_form_changed": true,
+      "marked_half_form_difference_rank": 2,
+      "switch_multiple": -1,
+      "tree_valuation": 3369
+    },
+    {
+      "critical_two_primary": {
+        "2": 3358,
+        "256": 1,
+        "4": 4
+      },
+      "highest_charge": {
+        "energy": 6819178752,
+        "linking_numerator": 105,
+        "order": 256
+      },
+      "layers": [
+        {
+          "dimension": 3363,
+          "level": 1,
+          "next_dimension": 5,
+          "rank": 3358
+        },
+        {
+          "dimension": 5,
+          "form_rows": [
+            8,
+            12,
+            14,
+            31,
+            8
+          ],
+          "level": 2,
+          "next_dimension": 1,
+          "rank": 4
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 3,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 4,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 5,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 6,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 7,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            1
+          ],
+          "level": 8,
+          "next_dimension": 0,
+          "rank": 1
+        }
+      ],
+      "switch_multiple": 0,
+      "tree_valuation": 3374
+    },
+    {
+      "critical_two_primary": {
+        "2": 3360,
+        "4": 2,
+        "64": 1
+      },
+      "highest_charge": {
+        "energy": 247462976,
+        "linking_numerator": 49,
+        "order": 64
+      },
+      "layers": [
+        {
+          "dimension": 3363,
+          "level": 1,
+          "next_dimension": 3,
+          "rank": 3360
+        },
+        {
+          "dimension": 3,
+          "form_rows": [
+            2,
+            7,
+            2
+          ],
+          "level": 2,
+          "next_dimension": 1,
+          "rank": 2
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 3,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 4,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            0
+          ],
+          "level": 5,
+          "next_dimension": 1,
+          "rank": 0
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            1
+          ],
+          "level": 6,
+          "next_dimension": 0,
+          "rank": 1
+        }
+      ],
+      "marked_half_form_changed": true,
+      "marked_half_form_difference_rank": 2,
+      "switch_multiple": 1,
+      "tree_valuation": 3370
+    },
+    {
+      "critical_two_primary": {
+        "2": 3358,
+        "4": 4,
+        "8": 1
+      },
+      "highest_charge": {
+        "energy": 3795528,
+        "linking_numerator": 1,
+        "order": 8
+      },
+      "layers": [
+        {
+          "dimension": 3363,
+          "level": 1,
+          "next_dimension": 5,
+          "rank": 3358
+        },
+        {
+          "dimension": 5,
+          "form_rows": [
+            12,
+            12,
+            7,
+            27,
+            8
+          ],
+          "level": 2,
+          "next_dimension": 1,
+          "rank": 4
+        },
+        {
+          "dimension": 1,
+          "form_rows": [
+            1
+          ],
+          "level": 3,
+          "next_dimension": 0,
+          "rank": 1
+        }
+      ],
+      "marked_half_form_changed": false,
+      "marked_half_form_difference_rank": 0,
+      "switch_multiple": 2,
+      "tree_valuation": 3369
+    }
+  ],
+  "certificate_sha256_lf": "be1639d01240dd3a5bcfe84cef0f05db2d262e9c11507339680ea19eec59d4ae",
+  "checks": 465558,
+  "consumer_api_sha256_lf": "4668a9e27a965fbc2901848da28f793b558138bf86cc7cd5309bd504599fcf03",
+  "doubled_switch_quarter_difference_rows": [
+    4,
+    0,
+    9,
+    4,
+    0
+  ],
+  "feasible_integer_interval": [
+    -1,
+    2
+  ],
+  "input_sha256_lf": {
+    "edges": "6687671346fbf83ac73bb2f952ffee7705602036f1d083b59b524ea35f4543b5",
+    "nodes": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+  },
+  "status": "FINITE-EXACT independent actual-port switch certificate consumer"
+}

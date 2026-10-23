@@ -1,0 +1,7288 @@
+{
+  "status": "FINITE-EXACT all open presentations of 201 n9 target classes in the 99 complete v4-one-round ambiguity buckets; not full n9 wiring",
+  "input_universe_sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+  "port_bytes_sha256": "5259676280efa46cb7543c208517a61d8833a6433d1a19c089599dd1662820d7",
+  "port_record_width": 36,
+  "target_classes": 201,
+  "source_classes": 72727,
+  "literal_ports": 165570,
+  "blue_ports": 354,
+  "hamiltonian_paths": 378409,
+  "open_hamiltonian_paths": 170194,
+  "baseline_capacity": {
+    "source_buckets": 144425,
+    "actual_port_groups": 154070,
+    "allowed_entries": 295392,
+    "forced_entries": 37,
+    "forced_mass": 38,
+    "residual_mass": 165532,
+    "residual_source_buckets": 144394,
+    "residual_target_buckets": 2397
+  },
+  "baseline_residuals": [
+    {
+      "targets": [
+        100939191,
+        100940151
+      ],
+      "mass": 1050,
+      "source_buckets": 492,
+      "target_buckets": 4
+    },
+    {
+      "targets": [
+        171264801,
+        171518753
+      ],
+      "mass": 1050,
+      "source_buckets": 492,
+      "target_buckets": 4
+    },
+    {
+      "targets": [
+        579873315,
+        637684483
+      ],
+      "mass": 1364,
+      "source_buckets": 1298,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        1145588485,
+        1145590405
+      ],
+      "mass": 1217,
+      "source_buckets": 1150,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        2223065363,
+        2223065383
+      ],
+      "mass": 1318,
+      "source_buckets": 1212,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        3292578952,
+        3292578961
+      ],
+      "mass": 1872,
+      "source_buckets": 1705,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        4311878317,
+        4311878429
+      ],
+      "mass": 1159,
+      "source_buckets": 1081,
+      "target_buckets": 38
+    },
+    {
+      "targets": [
+        6451891541,
+        6451891597
+      ],
+      "mass": 1613,
+      "source_buckets": 1330,
+      "target_buckets": 20
+    },
+    {
+      "targets": [
+        6455066962,
+        6455066965
+      ],
+      "mass": 1750,
+      "source_buckets": 1369,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        7054861472,
+        39129996066
+      ],
+      "mass": 2051,
+      "source_buckets": 1956,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        7588570535,
+        11883016423
+      ],
+      "mass": 2110,
+      "source_buckets": 1963,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        8623772338,
+        8623776178
+      ],
+      "mass": 942,
+      "source_buckets": 892,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        8640400725,
+        8640400781
+      ],
+      "mass": 1548,
+      "source_buckets": 1285,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        8640803212,
+        8640811916
+      ],
+      "mass": 1137,
+      "source_buckets": 1019,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        8641341796,
+        8674373860
+      ],
+      "mass": 1186,
+      "source_buckets": 1100,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        8909235620,
+        8909244324
+      ],
+      "mass": 1796,
+      "source_buckets": 1645,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        8993253504,
+        8993253924
+      ],
+      "mass": 1364,
+      "source_buckets": 1298,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        9178208864,
+        9211242848
+      ],
+      "mass": 1539,
+      "source_buckets": 1448,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        9701705361,
+        9701712098
+      ],
+      "mass": 1812,
+      "source_buckets": 1776,
+      "target_buckets": 40
+    },
+    {
+      "targets": [
+        9702500677,
+        9702502597
+      ],
+      "mass": 1747,
+      "source_buckets": 1705,
+      "target_buckets": 40
+    },
+    {
+      "targets": [
+        10779444627,
+        10779445581
+      ],
+      "mass": 1922,
+      "source_buckets": 1858,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        10872309138,
+        10872310092
+      ],
+      "mass": 1559,
+      "source_buckets": 1520,
+      "target_buckets": 42
+    },
+    {
+      "targets": [
+        12901689639,
+        12901698343
+      ],
+      "mass": 1018,
+      "source_buckets": 773,
+      "target_buckets": 20
+    },
+    {
+      "targets": [
+        12901819537,
+        12901828241
+      ],
+      "mass": 1410,
+      "source_buckets": 1297,
+      "target_buckets": 36
+    },
+    {
+      "targets": [
+        12906936584,
+        12956494632
+      ],
+      "mass": 1504,
+      "source_buckets": 1448,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        12911130892,
+        12911143724
+      ],
+      "mass": 1461,
+      "source_buckets": 1412,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        13979665164,
+        22054740748
+      ],
+      "mass": 1922,
+      "source_buckets": 1858,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        14009010850,
+        39914080930
+      ],
+      "mass": 1896,
+      "source_buckets": 1835,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        14030005922,
+        14030005925
+      ],
+      "mass": 2186,
+      "source_buckets": 1983,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        17214869165,
+        17214869171
+      ],
+      "mass": 1425,
+      "source_buckets": 1118,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        17248182834,
+        17248309810
+      ],
+      "mass": 703,
+      "source_buckets": 691,
+      "target_buckets": 46
+    },
+    {
+      "targets": [
+        17248249394,
+        17248376370
+      ],
+      "mass": 1210,
+      "source_buckets": 1134,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        17248376069,
+        17248598277
+      ],
+      "mass": 1103,
+      "source_buckets": 1034,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        17250536708,
+        17250727172
+      ],
+      "mass": 1539,
+      "source_buckets": 1448,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        17256764549,
+        17256828037
+      ],
+      "mass": 1475,
+      "source_buckets": 1417,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        17256827972,
+        17257018436
+      ],
+      "mass": 1504,
+      "source_buckets": 1448,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        17281931024,
+        17282184976
+      ],
+      "mass": 1268,
+      "source_buckets": 1177,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        17281931937,
+        17281935777
+      ],
+      "mass": 1259,
+      "source_buckets": 1077,
+      "target_buckets": 22
+    },
+    {
+      "targets": [
+        17281994508,
+        17282248460
+      ],
+      "mass": 1461,
+      "source_buckets": 1412,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        18325784162,
+        18326549077
+      ],
+      "mass": 2060,
+      "source_buckets": 1941,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        18326547025,
+        18326769250
+      ],
+      "mass": 2051,
+      "source_buckets": 1956,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        19965744547,
+        19966155363
+      ],
+      "mass": 2246,
+      "source_buckets": 2018,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        20439926020,
+        22037955844
+      ],
+      "mass": 1872,
+      "source_buckets": 1705,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        20439931143,
+        37754018055
+      ],
+      "mass": 2186,
+      "source_buckets": 1983,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        21543279200,
+        25804695904
+      ],
+      "mass": 1103,
+      "source_buckets": 1034,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        21765432480,
+        36981851808
+      ],
+      "mass": 2060,
+      "source_buckets": 1941,
+      "target_buckets": 26
+    },
+    {
+      "targets": [
+        22081771281,
+        22082184977
+      ],
+      "mass": 2244,
+      "source_buckets": 1938,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        22082271505,
+        26076846857
+      ],
+      "mass": 2033,
+      "source_buckets": 1777,
+      "target_buckets": 20
+    },
+    {
+      "targets": [
+        25804089953,
+        25804216929
+      ],
+      "mass": 1512,
+      "source_buckets": 1307,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        25804090017,
+        25804216993
+      ],
+      "mass": 1386,
+      "source_buckets": 1147,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        25804184225,
+        25804724897
+      ],
+      "mass": 1496,
+      "source_buckets": 1279,
+      "target_buckets": 20
+    },
+    {
+      "targets": [
+        25804223284,
+        25804286772
+      ],
+      "mass": 1050,
+      "source_buckets": 492,
+      "target_buckets": 4
+    },
+    {
+      "targets": [
+        26074554932,
+        26075095604
+      ],
+      "mass": 1750,
+      "source_buckets": 1369,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        26076719713,
+        26076846689
+      ],
+      "mass": 2248,
+      "source_buckets": 1944,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26343058017,
+        26343184993
+      ],
+      "mass": 2260,
+      "source_buckets": 1971,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26345121376,
+        26345248352
+      ],
+      "mass": 2149,
+      "source_buckets": 1814,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26357483849,
+        26357737801
+      ],
+      "mass": 2252,
+      "source_buckets": 1961,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26357704072,
+        26357705032
+      ],
+      "mass": 2234,
+      "source_buckets": 2017,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26357745545,
+        26358376817
+      ],
+      "mass": 2264,
+      "source_buckets": 2033,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26358241893,
+        26358245733
+      ],
+      "mass": 2246,
+      "source_buckets": 2018,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26476210056,
+        26476211016
+      ],
+      "mass": 2064,
+      "source_buckets": 1840,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        26882631050,
+        26915664074
+      ],
+      "mass": 2132,
+      "source_buckets": 1936,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        27955402849,
+        27955414433
+      ],
+      "mass": 2064,
+      "source_buckets": 1840,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        27955500130,
+        27955743586
+      ],
+      "mass": 2252,
+      "source_buckets": 1986,
+      "target_buckets": 24
+    },
+    {
+      "targets": [
+        30072429217,
+        30072433057
+      ],
+      "mass": 2149,
+      "source_buckets": 1814,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        30086186673,
+        30086969481
+      ],
+      "mass": 2234,
+      "source_buckets": 2017,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        30217293193,
+        30217293481
+      ],
+      "mass": 2252,
+      "source_buckets": 1930,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        34569767474,
+        34578025010
+      ],
+      "mass": 1448,
+      "source_buckets": 1396,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        34570023044,
+        34570029828
+      ],
+      "mass": 1217,
+      "source_buckets": 1150,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        34578514568,
+        34595029640
+      ],
+      "mass": 942,
+      "source_buckets": 892,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        34595986080,
+        34595989920
+      ],
+      "mass": 1259,
+      "source_buckets": 1077,
+      "target_buckets": 22
+    },
+    {
+      "targets": [
+        34595986081,
+        34595989921
+      ],
+      "mass": 1386,
+      "source_buckets": 1147,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        34612632208,
+        34612636068
+      ],
+      "mass": 1416,
+      "source_buckets": 516,
+      "target_buckets": 8
+    },
+    {
+      "targets": [
+        35639410821,
+        35643539589
+      ],
+      "mass": 1448,
+      "source_buckets": 1396,
+      "target_buckets": 32
+    },
+    {
+      "targets": [
+        36141409413,
+        36174440517
+      ],
+      "mass": 2020,
+      "source_buckets": 1855,
+      "target_buckets": 24
+    },
+    {
+      "targets": [
+        36684502092,
+        36684502098
+      ],
+      "mass": 1896,
+      "source_buckets": 1835,
+      "target_buckets": 28
+    },
+    {
+      "targets": [
+        38747054243,
+        38860890899
+      ],
+      "mass": 1559,
+      "source_buckets": 1520,
+      "target_buckets": 42
+    },
+    {
+      "targets": [
+        38873473704,
+        38889988776
+      ],
+      "mass": 1210,
+      "source_buckets": 1134,
+      "target_buckets": 30
+    },
+    {
+      "targets": [
+        43008444068,
+        43120751244
+      ],
+      "mass": 1812,
+      "source_buckets": 1776,
+      "target_buckets": 40
+    },
+    {
+      "targets": [
+        43008927142,
+        43008935846
+      ],
+      "mass": 1768,
+      "source_buckets": 1733,
+      "target_buckets": 40
+    },
+    {
+      "targets": [
+        43126943940,
+        43159974084
+      ],
+      "mass": 1747,
+      "source_buckets": 1705,
+      "target_buckets": 40
+    },
+    {
+      "targets": [
+        43135359584,
+        43168389728
+      ],
+      "mass": 1475,
+      "source_buckets": 1417,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        43391214113,
+        43424244257
+      ],
+      "mass": 1613,
+      "source_buckets": 1330,
+      "target_buckets": 20
+    },
+    {
+      "targets": [
+        43663909380,
+        43696939524
+      ],
+      "mass": 1050,
+      "source_buckets": 492,
+      "target_buckets": 4
+    },
+    {
+      "targets": [
+        43663909388,
+        43696939532
+      ],
+      "mass": 1548,
+      "source_buckets": 1285,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        43663909405,
+        43696939549
+      ],
+      "mass": 1806,
+      "source_buckets": 1419,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        43672287313,
+        43705317457
+      ],
+      "mass": 1974,
+      "source_buckets": 1877,
+      "target_buckets": 24
+    },
+    {
+      "targets": [
+        44195685538,
+        44195685653,
+        44195686498,
+        44195694354,
+        44195694357
+      ],
+      "mass": 2493,
+      "source_buckets": 2216,
+      "target_buckets": 53
+    },
+    {
+      "targets": [
+        51632473348,
+        51644859652
+      ],
+      "mass": 1318,
+      "source_buckets": 1212,
+      "target_buckets": 34
+    },
+    {
+      "targets": [
+        51645252864,
+        51746981120
+      ],
+      "mass": 1159,
+      "source_buckets": 1081,
+      "target_buckets": 38
+    },
+    {
+      "targets": [
+        51649517141,
+        51649517194
+      ],
+      "mass": 1974,
+      "source_buckets": 1877,
+      "target_buckets": 24
+    },
+    {
+      "targets": [
+        51658231125,
+        51658231181
+      ],
+      "mass": 1806,
+      "source_buckets": 1419,
+      "target_buckets": 14
+    },
+    {
+      "targets": [
+        51662710132,
+        51666835060
+      ],
+      "mass": 1990,
+      "source_buckets": 1351,
+      "target_buckets": 12
+    },
+    {
+      "targets": [
+        51667086672,
+        51667086692
+      ],
+      "mass": 1988,
+      "source_buckets": 1351,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        51931145588,
+        51935270516
+      ],
+      "mass": 2348,
+      "source_buckets": 1405,
+      "target_buckets": 12
+    },
+    {
+      "targets": [
+        51935522128,
+        51935522148
+      ],
+      "mass": 2268,
+      "source_buckets": 1413,
+      "target_buckets": 16
+    },
+    {
+      "targets": [
+        52186321416,
+        52288049672
+      ],
+      "mass": 1425,
+      "source_buckets": 1118,
+      "target_buckets": 18
+    },
+    {
+      "targets": [
+        60191099724,
+        60191283404
+      ],
+      "mass": 2364,
+      "source_buckets": 1698,
+      "target_buckets": 12
+    },
+    {
+      "targets": [
+        64515174746,
+        64519363165
+      ],
+      "mass": 506,
+      "source_buckets": 137,
+      "target_buckets": 4
+    }
+  ],
+  "baseline_counterfeit": {
+    "target_pair": [
+      100939191,
+      100940151
+    ],
+    "edits": [
+      {
+        "source": 11886747669,
+        "scores": [
+          4,
+          7
+        ],
+        "blue": 0,
+        "target": 100939191,
+        "delta": 1,
+        "native_mass": 0
+      },
+      {
+        "source": 11886747669,
+        "scores": [
+          4,
+          7
+        ],
+        "blue": 0,
+        "target": 100940151,
+        "delta": -1,
+        "native_mass": 1
+      },
+      {
+        "source": 34578516826,
+        "scores": [
+          1,
+          4
+        ],
+        "blue": 0,
+        "target": 43663909380,
+        "delta": 1,
+        "native_mass": 0
+      },
+      {
+        "source": 34578516826,
+        "scores": [
+          1,
+          4
+        ],
+        "blue": 0,
+        "target": 43696939524,
+        "delta": -1,
+        "native_mass": 1
+      },
+      {
+        "source": 34595016309,
+        "scores": [
+          1,
+          4
+        ],
+        "blue": 0,
+        "target": 43663909380,
+        "delta": -1,
+        "native_mass": 3
+      },
+      {
+        "source": 34595016309,
+        "scores": [
+          1,
+          4
+        ],
+        "blue": 0,
+        "target": 43696939524,
+        "delta": 1,
+        "native_mass": 2
+      },
+      {
+        "source": 39402496533,
+        "scores": [
+          4,
+          7
+        ],
+        "blue": 0,
+        "target": 100939191,
+        "delta": -1,
+        "native_mass": 3
+      },
+      {
+        "source": 39402496533,
+        "scores": [
+          4,
+          7
+        ],
+        "blue": 0,
+        "target": 100940151,
+        "delta": 1,
+        "native_mass": 2
+      }
+    ],
+    "merged_black_delta": [
+      [
+        [
+          100939191,
+          11886747669
+        ],
+        2
+      ],
+      [
+        [
+          100939191,
+          34595016309
+        ],
+        -2
+      ],
+      [
+        [
+          100940151,
+          11886747669
+        ],
+        -2
+      ],
+      [
+        [
+          100940151,
+          34595016309
+        ],
+        2
+      ]
+    ],
+    "preserved": "one-round v4 source buckets, target endpoint/color capacities, explicit converse-reflection pairs, even merged black multiplicities"
+  },
+  "two_rooted_motifs": {
+    "words": [
+      66,
+      204
+    ],
+    "forced_port_groups": 154070,
+    "forced_mass": 165570,
+    "residual_mass": 0
+  },
+  "literal_examples": {
+    "100939191": {
+      "source": 39402496533,
+      "mask": 51497,
+      "source_isomorphism": [
+        1,
+        2,
+        5,
+        3,
+        4,
+        0,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        5,
+        6,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        7
+      ],
+      "blue": 0
+    },
+    "100940151": {
+      "source": 11886747669,
+      "mask": 51749,
+      "source_isomorphism": [
+        5,
+        2,
+        1,
+        3,
+        4,
+        0,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        5,
+        6,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        7
+      ],
+      "blue": 0
+    },
+    "171264801": {
+      "source": 25775403104,
+      "mask": 93365,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        7,
+        6,
+        2,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        1,
+        2,
+        7,
+        8,
+        4,
+        5,
+        6,
+        0
+      ],
+      "source_scores": [
+        5,
+        7
+      ],
+      "blue": 0
+    },
+    "171518753": {
+      "source": 17785253984,
+      "mask": 93491,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        7,
+        6,
+        2,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        4,
+        5,
+        6,
+        0
+      ],
+      "source_scores": [
+        5,
+        7
+      ],
+      "blue": 0
+    },
+    "579873315": {
+      "source": 2483577266,
+      "mask": 634926,
+      "source_isomorphism": [
+        1,
+        4,
+        3,
+        5,
+        6,
+        2,
+        7,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        1,
+        6,
+        8,
+        4,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "637684483": {
+      "source": 8892193330,
+      "mask": 602158,
+      "source_isomorphism": [
+        1,
+        4,
+        3,
+        2,
+        5,
+        6,
+        7,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        4,
+        6,
+        8,
+        5,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "1145588485": {
+      "source": 8609352498,
+      "mask": 618806,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        6,
+        2,
+        7,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        6,
+        1,
+        7,
+        8,
+        5,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "1145590405": {
+      "source": 8625869196,
+      "mask": 1093934,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        2,
+        7,
+        6,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        6,
+        4,
+        7,
+        8,
+        5,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "2223065363": {
+      "source": 12903919765,
+      "mask": 602410,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        0,
+        2,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        3,
+        7,
+        8,
+        4,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "2223065383": {
+      "source": 12895662229,
+      "mask": 635178,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        0,
+        6,
+        2,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        1,
+        6,
+        8,
+        3,
+        4,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "3292578952": {
+      "source": 14028138832,
+      "mask": 3830825,
+      "source_isomorphism": [
+        1,
+        5,
+        4,
+        6,
+        2,
+        0,
+        8,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        7,
+        3,
+        0,
+        6,
+        5,
+        4,
+        2,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "3292578961": {
+      "source": 11344042369,
+      "mask": 3896361,
+      "source_isomorphism": [
+        1,
+        5,
+        4,
+        6,
+        0,
+        8,
+        7,
+        2,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        8,
+        1,
+        0,
+        6,
+        5,
+        3,
+        4,
+        2
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "4311878317": {
+      "source": 35521609989,
+      "mask": 340505,
+      "source_isomorphism": [
+        5,
+        2,
+        1,
+        4,
+        0,
+        3,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        4,
+        5,
+        3,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "4311878429": {
+      "source": 51649785922,
+      "mask": 672291,
+      "source_isomorphism": [
+        1,
+        5,
+        2,
+        3,
+        0,
+        4,
+        6,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        8,
+        4,
+        6,
+        3,
+        7,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "6451891541": {
+      "source": 13996532365,
+      "mask": 668201,
+      "source_isomorphism": [
+        2,
+        5,
+        1,
+        4,
+        3,
+        0,
+        8,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        4,
+        3,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "6451891597": {
+      "source": 22054838925,
+      "mask": 676137,
+      "source_isomorphism": [
+        5,
+        2,
+        1,
+        4,
+        3,
+        0,
+        8,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        4,
+        3,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "6455066962": {
+      "source": 11832279133,
+      "mask": 1716777,
+      "source_isomorphism": [
+        2,
+        5,
+        1,
+        4,
+        0,
+        3,
+        8,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        4,
+        1,
+        7,
+        6,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "6455066965": {
+      "source": 19890585693,
+      "mask": 1724713,
+      "source_isomorphism": [
+        5,
+        2,
+        1,
+        4,
+        0,
+        3,
+        8,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        4,
+        1,
+        6,
+        7,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "7054861472": {
+      "source": 13292911137,
+      "mask": 7501345,
+      "source_isomorphism": [
+        0,
+        5,
+        6,
+        2,
+        1,
+        8,
+        4,
+        3,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        6,
+        3,
+        0,
+        4,
+        7,
+        5,
+        2,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "7588570535": {
+      "source": 9563255313,
+      "mask": 6494502,
+      "source_isomorphism": [
+        4,
+        3,
+        8,
+        2,
+        1,
+        7,
+        0,
+        5,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        4,
+        6,
+        7,
+        2,
+        1,
+        3,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "8623772338": {
+      "source": 1175482965,
+      "mask": 357017,
+      "source_isomorphism": [
+        5,
+        4,
+        3,
+        0,
+        1,
+        2,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        4,
+        7,
+        6,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8623776178": {
+      "source": 1145579025,
+      "mask": 635285,
+      "source_isomorphism": [
+        4,
+        6,
+        3,
+        1,
+        0,
+        2,
+        5,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        4,
+        6,
+        8,
+        2,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8640400725": {
+      "source": 39914119394,
+      "mask": 635576,
+      "source_isomorphism": [
+        6,
+        4,
+        5,
+        3,
+        1,
+        0,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        3,
+        1,
+        5,
+        7,
+        4,
+        8,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8640400781": {
+      "source": 7021396582,
+      "mask": 690482,
+      "source_isomorphism": [
+        4,
+        1,
+        6,
+        3,
+        2,
+        0,
+        7,
+        5,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        4,
+        3,
+        7,
+        8,
+        2,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8640803212": {
+      "source": 34578252981,
+      "mask": 94899,
+      "source_isomorphism": [
+        3,
+        4,
+        5,
+        1,
+        2,
+        0,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        5,
+        8,
+        6,
+        7,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "8640811916": {
+      "source": 12911136356,
+      "mask": 621088,
+      "source_isomorphism": [
+        0,
+        5,
+        4,
+        1,
+        7,
+        3,
+        6,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        4,
+        6,
+        7,
+        1,
+        5,
+        0
+      ],
+      "source_scores": [
+        2,
+        6
+      ],
+      "blue": 0
+    },
+    "8641341796": {
+      "source": 34594855426,
+      "mask": 882966,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        6,
+        0,
+        3,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        3,
+        1,
+        4,
+        8,
+        7,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8674373860": {
+      "source": 34570627333,
+      "mask": 866574,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        2,
+        3,
+        0,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        5,
+        4,
+        8,
+        6,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "8909235620": {
+      "source": 10750150199,
+      "mask": 1446707,
+      "source_isomorphism": [
+        2,
+        5,
+        4,
+        3,
+        1,
+        8,
+        0,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        8,
+        5,
+        6,
+        7,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "8909244324": {
+      "source": 10813003319,
+      "mask": 1708843,
+      "source_isomorphism": [
+        2,
+        5,
+        4,
+        3,
+        1,
+        8,
+        6,
+        0,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        8,
+        4,
+        6,
+        7,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "8993253504": {
+      "source": 34570395878,
+      "mask": 3091252,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        0,
+        7,
+        1,
+        2,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        2,
+        0,
+        8,
+        6,
+        4,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "8993253924": {
+      "source": 34570391750,
+      "mask": 3091756,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        1,
+        7,
+        0,
+        2,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        2,
+        0,
+        8,
+        6,
+        4,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "9178208864": {
+      "source": 17264494391,
+      "mask": 1455399,
+      "source_isomorphism": [
+        4,
+        2,
+        5,
+        3,
+        1,
+        8,
+        6,
+        0,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        7,
+        4,
+        8,
+        6,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "9211242848": {
+      "source": 17256205074,
+      "mask": 1455415,
+      "source_isomorphism": [
+        4,
+        2,
+        5,
+        3,
+        1,
+        6,
+        8,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        1,
+        3,
+        7,
+        4,
+        8,
+        5,
+        6,
+        2,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "9701705361": {
+      "source": 36717532301,
+      "mask": 2763815,
+      "source_isomorphism": [
+        4,
+        1,
+        2,
+        6,
+        3,
+        5,
+        7,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        4,
+        7,
+        6,
+        3,
+        8,
+        2,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "9701712098": {
+      "source": 51595325530,
+      "mask": 1496121,
+      "source_isomorphism": [
+        5,
+        6,
+        1,
+        2,
+        4,
+        3,
+        8,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        5,
+        6,
+        3,
+        1,
+        4,
+        8,
+        7,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "9702500677": {
+      "source": 10779444562,
+      "mask": 1225003,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        2,
+        0,
+        8,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        4,
+        6,
+        3,
+        7,
+        8,
+        5,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "9702502597": {
+      "source": 25812608682,
+      "mask": 1455395,
+      "source_isomorphism": [
+        4,
+        2,
+        0,
+        5,
+        3,
+        1,
+        8,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        6,
+        4,
+        8,
+        5,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "10779444627": {
+      "source": 14030105162,
+      "mask": 5648934,
+      "source_isomorphism": [
+        5,
+        1,
+        4,
+        2,
+        0,
+        3,
+        6,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        3,
+        4,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "10779445581": {
+      "source": 3827831941,
+      "mask": 1496113,
+      "source_isomorphism": [
+        6,
+        1,
+        5,
+        2,
+        0,
+        4,
+        3,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        3,
+        1,
+        4,
+        8,
+        6,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "10872309138": {
+      "source": 3527934338,
+      "mask": 1496081,
+      "source_isomorphism": [
+        6,
+        1,
+        0,
+        5,
+        2,
+        4,
+        3,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        3,
+        2,
+        4,
+        7,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        3,
+        5
+      ],
+      "blue": 0
+    },
+    "10872310092": {
+      "source": 51643576978,
+      "mask": 1454630,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        2,
+        0,
+        3,
+        8,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        3,
+        4,
+        8,
+        7,
+        1,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "11883016423": {
+      "source": 26357712720,
+      "mask": 6437170,
+      "source_isomorphism": [
+        4,
+        3,
+        6,
+        0,
+        1,
+        8,
+        2,
+        5,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        5,
+        6,
+        8,
+        2,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "12901689639": {
+      "source": 25804942721,
+      "mask": 488980,
+      "source_isomorphism": [
+        5,
+        4,
+        0,
+        6,
+        1,
+        3,
+        8,
+        2,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        0,
+        4,
+        6,
+        8,
+        3,
+        2,
+        1
+      ],
+      "source_scores": [
+        3,
+        5
+      ],
+      "blue": 0
+    },
+    "12901698343": {
+      "source": 35048673549,
+      "mask": 160429,
+      "source_isomorphism": [
+        5,
+        3,
+        4,
+        1,
+        2,
+        0,
+        8,
+        6,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        4,
+        6,
+        7,
+        8,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "12901819537": {
+      "source": 25779365124,
+      "mask": 767540,
+      "source_isomorphism": [
+        4,
+        6,
+        1,
+        5,
+        0,
+        3,
+        7,
+        8,
+        2
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        0,
+        4,
+        7,
+        3,
+        8,
+        2,
+        1
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "12901828241": {
+      "source": 9680504968,
+      "mask": 177333,
+      "source_isomorphism": [
+        4,
+        3,
+        6,
+        1,
+        2,
+        0,
+        5,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        4,
+        7,
+        8,
+        2,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "12906936584": {
+      "source": 34603477066,
+      "mask": 1487269,
+      "source_isomorphism": [
+        4,
+        5,
+        2,
+        1,
+        0,
+        3,
+        6,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        4,
+        3,
+        5,
+        8,
+        6,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "12911130892": {
+      "source": 25938576834,
+      "mask": 1512976,
+      "source_isomorphism": [
+        0,
+        5,
+        6,
+        1,
+        2,
+        4,
+        7,
+        3,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        4,
+        3,
+        1,
+        6,
+        7,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        2,
+        5
+      ],
+      "blue": 0
+    },
+    "12911143724": {
+      "source": 34520516714,
+      "mask": 1471783,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        2,
+        3,
+        6,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        6,
+        3,
+        4,
+        5,
+        8,
+        7,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "12956494632": {
+      "source": 34564035346,
+      "mask": 1471799,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        1,
+        2,
+        3,
+        8,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        7,
+        6,
+        2,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "13979665164": {
+      "source": 36175375143,
+      "mask": 7500321,
+      "source_isomorphism": [
+        5,
+        0,
+        1,
+        2,
+        8,
+        4,
+        6,
+        3,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        7,
+        5,
+        0,
+        4,
+        6,
+        3,
+        2,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "14009010850": {
+      "source": 10213664266,
+      "mask": 6724272,
+      "source_isomorphism": [
+        6,
+        0,
+        5,
+        3,
+        2,
+        8,
+        7,
+        1,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        0,
+        4,
+        5,
+        3,
+        7,
+        6,
+        2,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "14030005922": {
+      "source": 30267095667,
+      "mask": 6755370,
+      "source_isomorphism": [
+        1,
+        5,
+        2,
+        6,
+        8,
+        0,
+        3,
+        7,
+        4
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        3,
+        4,
+        2,
+        8,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "14030005925": {
+      "source": 30204680776,
+      "mask": 10695189,
+      "source_isomorphism": [
+        1,
+        4,
+        5,
+        2,
+        8,
+        0,
+        3,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        6,
+        3,
+        4,
+        7,
+        5,
+        2,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "17214869165": {
+      "source": 7566590371,
+      "mask": 308401,
+      "source_isomorphism": [
+        4,
+        3,
+        6,
+        2,
+        0,
+        5,
+        1,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        6,
+        7,
+        5,
+        3,
+        8,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17214869171": {
+      "source": 11861574051,
+      "mask": 300212,
+      "source_isomorphism": [
+        4,
+        3,
+        6,
+        2,
+        0,
+        5,
+        1,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        5,
+        7,
+        6,
+        3,
+        8,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17248182834": {
+      "source": 34498937160,
+      "mask": 420142,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        3,
+        2,
+        7,
+        0,
+        6,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        5,
+        2,
+        6,
+        8,
+        7,
+        1,
+        3,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17248249394": {
+      "source": 51658635061,
+      "mask": 357523,
+      "source_isomorphism": [
+        3,
+        5,
+        4,
+        1,
+        0,
+        6,
+        2,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        2,
+        3,
+        8,
+        7,
+        6,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17248309810": {
+      "source": 4316201261,
+      "mask": 635796,
+      "source_isomorphism": [
+        4,
+        6,
+        0,
+        3,
+        5,
+        1,
+        2,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        2,
+        3,
+        6,
+        8,
+        4,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        3,
+        6
+      ],
+      "blue": 0
+    },
+    "17248376069": {
+      "source": 9798705549,
+      "mask": 173355,
+      "source_isomorphism": [
+        4,
+        3,
+        1,
+        5,
+        6,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        6,
+        2,
+        7,
+        8,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17248376370": {
+      "source": 51696517713,
+      "mask": 619675,
+      "source_isomorphism": [
+        3,
+        6,
+        4,
+        5,
+        1,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        3,
+        8,
+        5,
+        7,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17248598277": {
+      "source": 25804731189,
+      "mask": 111253,
+      "source_isomorphism": [
+        4,
+        3,
+        1,
+        5,
+        0,
+        2,
+        6,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        3,
+        7,
+        8,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17250536708": {
+      "source": 9685190018,
+      "mask": 698411,
+      "source_isomorphism": [
+        1,
+        4,
+        3,
+        2,
+        6,
+        5,
+        7,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        8,
+        2,
+        6,
+        7,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17250727172": {
+      "source": 13497554577,
+      "mask": 635553,
+      "source_isomorphism": [
+        0,
+        4,
+        3,
+        1,
+        2,
+        6,
+        5,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        3,
+        6,
+        7,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        3,
+        6
+      ],
+      "blue": 0
+    },
+    "17256764549": {
+      "source": 9685197197,
+      "mask": 698667,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        6,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        6,
+        2,
+        7,
+        8,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17256827972": {
+      "source": 12906010690,
+      "mask": 1221675,
+      "source_isomorphism": [
+        1,
+        4,
+        3,
+        6,
+        2,
+        5,
+        7,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        8,
+        2,
+        6,
+        7,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17256828037": {
+      "source": 51645918760,
+      "mask": 899370,
+      "source_isomorphism": [
+        4,
+        5,
+        0,
+        1,
+        6,
+        7,
+        3,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        2,
+        1,
+        3,
+        8,
+        6,
+        5,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17257018436": {
+      "source": 51658700197,
+      "mask": 635555,
+      "source_isomorphism": [
+        3,
+        4,
+        6,
+        1,
+        0,
+        5,
+        2,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        3,
+        8,
+        7,
+        5,
+        4,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "17281931024": {
+      "source": 34571086436,
+      "mask": 866606,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        2,
+        7,
+        3,
+        6,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        5,
+        3,
+        8,
+        7,
+        1,
+        4,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17281931937": {
+      "source": 17257096853,
+      "mask": 95541,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        3,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17281935777": {
+      "source": 17257227669,
+      "mask": 111917,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        3,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17281994508": {
+      "source": 43127167573,
+      "mask": 635563,
+      "source_isomorphism": [
+        3,
+        4,
+        5,
+        6,
+        1,
+        2,
+        0,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        3,
+        8,
+        6,
+        7,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17282184976": {
+      "source": 34570095168,
+      "mask": 882998,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        6,
+        7,
+        3,
+        0,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        2,
+        1,
+        3,
+        8,
+        7,
+        4,
+        6,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "17282248460": {
+      "source": 15116816240,
+      "mask": 637992,
+      "source_isomorphism": [
+        0,
+        4,
+        6,
+        1,
+        7,
+        5,
+        3,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        4,
+        6,
+        3,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        3,
+        6
+      ],
+      "blue": 0
+    },
+    "18325784162": {
+      "source": 26508977544,
+      "mask": 2462762,
+      "source_isomorphism": [
+        1,
+        5,
+        6,
+        2,
+        3,
+        0,
+        4,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        3,
+        2,
+        4,
+        8,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "18326547025": {
+      "source": 30205097576,
+      "mask": 1479218,
+      "source_isomorphism": [
+        5,
+        1,
+        2,
+        6,
+        0,
+        3,
+        4,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        2,
+        3,
+        4,
+        8,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "18326549077": {
+      "source": 30086174818,
+      "mask": 2446514,
+      "source_isomorphism": [
+        5,
+        3,
+        6,
+        1,
+        0,
+        4,
+        2,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        2,
+        3,
+        6,
+        4,
+        8,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "18326769250": {
+      "source": 26475948360,
+      "mask": 1725482,
+      "source_isomorphism": [
+        1,
+        5,
+        6,
+        2,
+        3,
+        0,
+        4,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        2,
+        3,
+        4,
+        8,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "19965744547": {
+      "source": 60249534708,
+      "mask": 10640433,
+      "source_isomorphism": [
+        2,
+        8,
+        3,
+        5,
+        6,
+        0,
+        1,
+        7,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        7,
+        5,
+        1,
+        4,
+        3,
+        6,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "19966155363": {
+      "source": 51995674020,
+      "mask": 6756530,
+      "source_isomorphism": [
+        3,
+        8,
+        5,
+        7,
+        6,
+        0,
+        1,
+        2,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        2,
+        7,
+        1,
+        3,
+        6,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "20439926020": {
+      "source": 36190053734,
+      "mask": 3297584,
+      "source_isomorphism": [
+        0,
+        1,
+        4,
+        2,
+        5,
+        8,
+        6,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        7,
+        4,
+        0,
+        6,
+        5,
+        2,
+        3,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "20439931143": {
+      "source": 30090380981,
+      "mask": 7788579,
+      "source_isomorphism": [
+        1,
+        5,
+        8,
+        7,
+        2,
+        6,
+        0,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        6,
+        7,
+        4,
+        0,
+        2,
+        8,
+        5,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "21543279200": {
+      "source": 34561501228,
+      "mask": 981294,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        6,
+        3,
+        7,
+        8,
+        0,
+        2
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        0,
+        4,
+        8,
+        7,
+        6,
+        2,
+        1
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "21765432480": {
+      "source": 30086982313,
+      "mask": 7803938,
+      "source_isomorphism": [
+        1,
+        0,
+        8,
+        6,
+        2,
+        7,
+        5,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        7,
+        5,
+        0,
+        2,
+        6,
+        4,
+        3,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "22037955844": {
+      "source": 15046039142,
+      "mask": 3289648,
+      "source_isomorphism": [
+        1,
+        0,
+        4,
+        5,
+        2,
+        8,
+        6,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        6,
+        5,
+        0,
+        7,
+        4,
+        2,
+        3,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "22054740748": {
+      "source": 36648923165,
+      "mask": 6740659,
+      "source_isomorphism": [
+        5,
+        6,
+        3,
+        8,
+        2,
+        0,
+        4,
+        1,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        0,
+        4,
+        6,
+        2,
+        8,
+        7,
+        3,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "22081771281": {
+      "source": 51928851876,
+      "mask": 7739698,
+      "source_isomorphism": [
+        2,
+        0,
+        8,
+        6,
+        7,
+        1,
+        4,
+        5,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        8,
+        0,
+        4,
+        6,
+        2,
+        5,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "22082184977": {
+      "source": 26446976673,
+      "mask": 10951733,
+      "source_isomorphism": [
+        7,
+        2,
+        8,
+        5,
+        6,
+        4,
+        1,
+        3,
+        0
+      ],
+      "target_hamiltonian_word": [
+        6,
+        3,
+        8,
+        0,
+        4,
+        5,
+        2,
+        7,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "22082271505": {
+      "source": 27955283552,
+      "mask": 10925095,
+      "source_isomorphism": [
+        1,
+        4,
+        6,
+        8,
+        5,
+        2,
+        3,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        4,
+        2,
+        8,
+        6,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "25804089953": {
+      "source": 18322451026,
+      "mask": 161075,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        2,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "25804090017": {
+      "source": 17257097810,
+      "mask": 161077,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        2,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "25804184225": {
+      "source": 9798537858,
+      "mask": 1047079,
+      "source_isomorphism": [
+        5,
+        4,
+        1,
+        6,
+        7,
+        3,
+        0,
+        8,
+        2
+      ],
+      "target_hamiltonian_word": [
+        2,
+        4,
+        0,
+        3,
+        7,
+        8,
+        5,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "25804216929": {
+      "source": 18321647698,
+      "mask": 176947,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        2,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "25804216993": {
+      "source": 17256294482,
+      "mask": 176949,
+      "source_isomorphism": [
+        4,
+        3,
+        5,
+        1,
+        6,
+        2,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        2,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "25804223284": {
+      "source": 34599642528,
+      "mask": 1725568,
+      "source_isomorphism": [
+        0,
+        1,
+        6,
+        3,
+        2,
+        4,
+        5,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        1,
+        0
+      ],
+      "source_scores": [
+        1,
+        5
+      ],
+      "blue": 0
+    },
+    "25804286772": {
+      "source": 34549699712,
+      "mask": 1741440,
+      "source_isomorphism": [
+        0,
+        1,
+        3,
+        6,
+        2,
+        5,
+        4,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        4,
+        5,
+        6,
+        7,
+        1,
+        0
+      ],
+      "source_scores": [
+        1,
+        5
+      ],
+      "blue": 0
+    },
+    "25804695904": {
+      "source": 17257097804,
+      "mask": 1488261,
+      "source_isomorphism": [
+        4,
+        0,
+        5,
+        2,
+        6,
+        3,
+        1,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        2,
+        3,
+        4,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        3,
+        5
+      ],
+      "blue": 0
+    },
+    "25804724897": {
+      "source": 25779065426,
+      "mask": 160949,
+      "source_isomorphism": [
+        4,
+        3,
+        1,
+        5,
+        6,
+        2,
+        0,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        3,
+        7,
+        8,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "26074554932": {
+      "source": 43109867967,
+      "mask": 6453926,
+      "source_isomorphism": [
+        3,
+        4,
+        5,
+        8,
+        0,
+        6,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        6,
+        4,
+        0,
+        8,
+        5,
+        7,
+        3,
+        2,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26075095604": {
+      "source": 7529038399,
+      "mask": 2585633,
+      "source_isomorphism": [
+        1,
+        0,
+        5,
+        4,
+        8,
+        6,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        0,
+        2,
+        6,
+        7,
+        3,
+        1,
+        4
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "26076719713": {
+      "source": 30217510545,
+      "mask": 3642407,
+      "source_isomorphism": [
+        1,
+        4,
+        2,
+        6,
+        8,
+        5,
+        7,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        4,
+        0,
+        8,
+        5,
+        2,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26076846689": {
+      "source": 30217070929,
+      "mask": 3609654,
+      "source_isomorphism": [
+        1,
+        4,
+        2,
+        8,
+        6,
+        5,
+        7,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        2,
+        7,
+        4,
+        0,
+        8,
+        5,
+        3,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26076846857": {
+      "source": 60191232748,
+      "mask": 10925091,
+      "source_isomorphism": [
+        1,
+        6,
+        8,
+        2,
+        4,
+        0,
+        3,
+        5,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        8,
+        3,
+        2,
+        4,
+        6,
+        5,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26343058017": {
+      "source": 60318178028,
+      "mask": 10631730,
+      "source_isomorphism": [
+        3,
+        8,
+        4,
+        1,
+        5,
+        0,
+        7,
+        2,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        7,
+        5,
+        6,
+        1,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26343184993": {
+      "source": 26342762657,
+      "mask": 7747891,
+      "source_isomorphism": [
+        4,
+        2,
+        6,
+        5,
+        8,
+        1,
+        7,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        2,
+        4,
+        8,
+        0,
+        7,
+        5,
+        3,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26345121376": {
+      "source": 19965580965,
+      "mask": 10999959,
+      "source_isomorphism": [
+        5,
+        3,
+        1,
+        4,
+        8,
+        6,
+        7,
+        0,
+        2
+      ],
+      "target_hamiltonian_word": [
+        2,
+        4,
+        0,
+        7,
+        3,
+        8,
+        5,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26345248352": {
+      "source": 26357438545,
+      "mask": 6805671,
+      "source_isomorphism": [
+        5,
+        3,
+        1,
+        6,
+        4,
+        8,
+        7,
+        0,
+        2
+      ],
+      "target_hamiltonian_word": [
+        2,
+        4,
+        0,
+        7,
+        3,
+        8,
+        5,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26357483849": {
+      "source": 27955415393,
+      "mask": 10647091,
+      "source_isomorphism": [
+        3,
+        5,
+        4,
+        8,
+        6,
+        1,
+        2,
+        0,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        2,
+        7,
+        4,
+        8,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26357704072": {
+      "source": 26076426805,
+      "mask": 7765043,
+      "source_isomorphism": [
+        6,
+        5,
+        2,
+        7,
+        1,
+        8,
+        4,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        5,
+        4,
+        0,
+        2,
+        8,
+        7,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26357705032": {
+      "source": 9563451957,
+      "mask": 7781419,
+      "source_isomorphism": [
+        6,
+        5,
+        2,
+        7,
+        1,
+        8,
+        4,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        5,
+        4,
+        0,
+        2,
+        8,
+        7,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26357737801": {
+      "source": 30203946769,
+      "mask": 7780651,
+      "source_isomorphism": [
+        5,
+        4,
+        6,
+        2,
+        1,
+        8,
+        7,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        5,
+        4,
+        0,
+        7,
+        8,
+        2,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "26357745545": {
+      "source": 60191198068,
+      "mask": 7747747,
+      "source_isomorphism": [
+        2,
+        4,
+        8,
+        3,
+        5,
+        0,
+        1,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        7,
+        3,
+        4,
+        6,
+        1,
+        5,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26358241893": {
+      "source": 60191729904,
+      "mask": 3562546,
+      "source_isomorphism": [
+        5,
+        6,
+        0,
+        1,
+        2,
+        7,
+        4,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        4,
+        5,
+        0,
+        2,
+        8,
+        3,
+        6,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26358245733": {
+      "source": 60249795044,
+      "mask": 3086898,
+      "source_isomorphism": [
+        5,
+        0,
+        2,
+        6,
+        7,
+        1,
+        8,
+        4,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        4,
+        0,
+        2,
+        8,
+        6,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26358376817": {
+      "source": 60280369484,
+      "mask": 10959893,
+      "source_isomorphism": [
+        4,
+        7,
+        5,
+        1,
+        2,
+        6,
+        8,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        4,
+        0,
+        7,
+        6,
+        2,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26476210056": {
+      "source": 51929311156,
+      "mask": 2833073,
+      "source_isomorphism": [
+        4,
+        0,
+        5,
+        6,
+        2,
+        7,
+        3,
+        8,
+        1
+      ],
+      "target_hamiltonian_word": [
+        8,
+        0,
+        2,
+        4,
+        7,
+        6,
+        3,
+        5,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26476211016": {
+      "source": 51996468644,
+      "mask": 7313827,
+      "source_isomorphism": [
+        6,
+        0,
+        7,
+        5,
+        3,
+        2,
+        8,
+        4,
+        1
+      ],
+      "target_hamiltonian_word": [
+        8,
+        0,
+        2,
+        4,
+        6,
+        3,
+        7,
+        5,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26882631050": {
+      "source": 26076472109,
+      "mask": 2316344,
+      "source_isomorphism": [
+        1,
+        5,
+        8,
+        7,
+        3,
+        4,
+        0,
+        6,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        2,
+        3,
+        5,
+        8,
+        1,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "26915664074": {
+      "source": 26313790720,
+      "mask": 2332724,
+      "source_isomorphism": [
+        1,
+        4,
+        8,
+        7,
+        6,
+        0,
+        3,
+        2,
+        5
+      ],
+      "target_hamiltonian_word": [
+        8,
+        7,
+        0,
+        3,
+        6,
+        2,
+        5,
+        4,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "27955402849": {
+      "source": 60320281070,
+      "mask": 6789289,
+      "source_isomorphism": [
+        5,
+        6,
+        1,
+        2,
+        3,
+        7,
+        8,
+        0,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        5,
+        1,
+        7,
+        6,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "27955414433": {
+      "source": 51996464804,
+      "mask": 10949937,
+      "source_isomorphism": [
+        2,
+        7,
+        8,
+        6,
+        5,
+        1,
+        4,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        4,
+        7,
+        0,
+        5,
+        6,
+        3,
+        2,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "27955500130": {
+      "source": 51869713828,
+      "mask": 7549353,
+      "source_isomorphism": [
+        4,
+        5,
+        0,
+        8,
+        2,
+        1,
+        3,
+        7,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        3,
+        2,
+        7,
+        6,
+        1,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "27955743586": {
+      "source": 51928848036,
+      "mask": 10671409,
+      "source_isomorphism": [
+        6,
+        4,
+        3,
+        0,
+        2,
+        5,
+        1,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        3,
+        2,
+        4,
+        6,
+        8,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "30072429217": {
+      "source": 51906369140,
+      "mask": 10925221,
+      "source_isomorphism": [
+        4,
+        1,
+        5,
+        6,
+        0,
+        2,
+        3,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        8,
+        4,
+        2,
+        3,
+        7,
+        5,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "30072433057": {
+      "source": 26357256999,
+      "mask": 10982585,
+      "source_isomorphism": [
+        6,
+        5,
+        3,
+        7,
+        1,
+        2,
+        8,
+        4,
+        0
+      ],
+      "target_hamiltonian_word": [
+        6,
+        3,
+        4,
+        2,
+        1,
+        7,
+        8,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "30086186673": {
+      "source": 26077358497,
+      "mask": 7281191,
+      "source_isomorphism": [
+        2,
+        5,
+        7,
+        8,
+        6,
+        4,
+        1,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        2,
+        5,
+        7,
+        0,
+        3,
+        8,
+        6,
+        4,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "30086969481": {
+      "source": 30266611345,
+      "mask": 3642411,
+      "source_isomorphism": [
+        1,
+        5,
+        6,
+        2,
+        8,
+        4,
+        7,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        4,
+        7,
+        5,
+        0,
+        2,
+        8,
+        3,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "30217293193": {
+      "source": 26358277477,
+      "mask": 2839221,
+      "source_isomorphism": [
+        5,
+        4,
+        3,
+        6,
+        2,
+        1,
+        8,
+        0,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        4,
+        2,
+        3,
+        7,
+        8,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "30217293481": {
+      "source": 26476425005,
+      "mask": 3593383,
+      "source_isomorphism": [
+        5,
+        4,
+        1,
+        6,
+        2,
+        3,
+        8,
+        0,
+        7
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        4,
+        2,
+        7,
+        8,
+        6,
+        1,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "34569767474": {
+      "source": 5943460615,
+      "mask": 437288,
+      "source_isomorphism": [
+        1,
+        5,
+        0,
+        4,
+        6,
+        3,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        1,
+        3,
+        7,
+        6,
+        4,
+        2,
+        0
+      ],
+      "source_scores": [
+        3,
+        6
+      ],
+      "blue": 0
+    },
+    "34570023044": {
+      "source": 9764879015,
+      "mask": 437408,
+      "source_isomorphism": [
+        0,
+        4,
+        3,
+        1,
+        5,
+        6,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        4,
+        1,
+        6,
+        7,
+        3,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        2,
+        6
+      ],
+      "blue": 0
+    },
+    "34570029828": {
+      "source": 8640797298,
+      "mask": 867637,
+      "source_isomorphism": [
+        4,
+        2,
+        6,
+        5,
+        7,
+        3,
+        1,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        1,
+        6,
+        2,
+        8,
+        3,
+        7,
+        4,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34578025010": {
+      "source": 1712353959,
+      "mask": 706602,
+      "source_isomorphism": [
+        1,
+        3,
+        5,
+        6,
+        4,
+        0,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        8,
+        1,
+        5,
+        3,
+        7,
+        4,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "34578514568": {
+      "source": 34511196215,
+      "mask": 421164,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        0,
+        3,
+        6,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        4,
+        1,
+        5,
+        8,
+        7,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        6
+      ],
+      "blue": 0
+    },
+    "34595029640": {
+      "source": 10746877468,
+      "mask": 638240,
+      "source_isomorphism": [
+        0,
+        4,
+        6,
+        7,
+        3,
+        1,
+        5,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        1,
+        3,
+        4,
+        7,
+        2,
+        6,
+        5,
+        0
+      ],
+      "source_scores": [
+        2,
+        6
+      ],
+      "blue": 0
+    },
+    "34595986080": {
+      "source": 17256096901,
+      "mask": 1027367,
+      "source_isomorphism": [
+        4,
+        6,
+        5,
+        7,
+        1,
+        3,
+        0,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        6,
+        1,
+        2,
+        8,
+        4,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34595986081": {
+      "source": 21542413874,
+      "mask": 646453,
+      "source_isomorphism": [
+        4,
+        6,
+        5,
+        7,
+        2,
+        3,
+        1,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        1,
+        3,
+        4,
+        7,
+        2,
+        8,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34595989920": {
+      "source": 17281001010,
+      "mask": 621877,
+      "source_isomorphism": [
+        4,
+        6,
+        5,
+        7,
+        2,
+        3,
+        1,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        1,
+        4,
+        2,
+        8,
+        3,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34595989921": {
+      "source": 25905805378,
+      "mask": 645803,
+      "source_isomorphism": [
+        3,
+        5,
+        6,
+        4,
+        7,
+        2,
+        1,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        6,
+        1,
+        4,
+        7,
+        2,
+        8,
+        3,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34612632208": {
+      "source": 34553366160,
+      "mask": 1160493,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        7,
+        6,
+        3,
+        2,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        1,
+        5,
+        2,
+        8,
+        3,
+        6,
+        4,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "34612636068": {
+      "source": 34549699712,
+      "mask": 994599,
+      "source_isomorphism": [
+        4,
+        5,
+        2,
+        7,
+        6,
+        1,
+        3,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        1,
+        2,
+        8,
+        5,
+        4,
+        6,
+        0
+      ],
+      "source_scores": [
+        5,
+        6
+      ],
+      "blue": 0
+    },
+    "35639410821": {
+      "source": 8615628312,
+      "mask": 1274167,
+      "source_isomorphism": [
+        4,
+        1,
+        3,
+        5,
+        7,
+        8,
+        2,
+        6,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        6,
+        1,
+        7,
+        8,
+        5,
+        3,
+        4,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "35643539589": {
+      "source": 8640416231,
+      "mask": 1464121,
+      "source_isomorphism": [
+        5,
+        2,
+        4,
+        6,
+        3,
+        8,
+        0,
+        7,
+        1
+      ],
+      "target_hamiltonian_word": [
+        4,
+        1,
+        6,
+        2,
+        7,
+        8,
+        5,
+        3,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "36141409413": {
+      "source": 27955730085,
+      "mask": 6805667,
+      "source_isomorphism": [
+        5,
+        3,
+        1,
+        0,
+        8,
+        6,
+        7,
+        4,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        0,
+        6,
+        1,
+        8,
+        5,
+        4,
+        2
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "36174440517": {
+      "source": 30085990181,
+      "mask": 10925093,
+      "source_isomorphism": [
+        1,
+        4,
+        6,
+        2,
+        8,
+        5,
+        0,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        8,
+        3,
+        2,
+        6,
+        5,
+        4,
+        0,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "36684502092": {
+      "source": 36190053770,
+      "mask": 6625970,
+      "source_isomorphism": [
+        3,
+        5,
+        2,
+        0,
+        7,
+        6,
+        4,
+        8,
+        1
+      ],
+      "target_hamiltonian_word": [
+        8,
+        1,
+        6,
+        5,
+        2,
+        7,
+        4,
+        3,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "36684502098": {
+      "source": 36174566530,
+      "mask": 5722290,
+      "source_isomorphism": [
+        1,
+        3,
+        5,
+        7,
+        6,
+        0,
+        8,
+        2,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        5,
+        1,
+        6,
+        2,
+        7,
+        4,
+        3,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "36981851808": {
+      "source": 19965319331,
+      "mask": 7804450,
+      "source_isomorphism": [
+        0,
+        5,
+        7,
+        2,
+        6,
+        1,
+        8,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        8,
+        6,
+        4,
+        0,
+        1,
+        7,
+        5,
+        3,
+        2
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "37754018055": {
+      "source": 30217296267,
+      "mask": 7836195,
+      "source_isomorphism": [
+        5,
+        1,
+        2,
+        6,
+        0,
+        8,
+        7,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        6,
+        8,
+        3,
+        0,
+        1,
+        7,
+        5,
+        4,
+        2
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "38747054243": {
+      "source": 17466286261,
+      "mask": 2995643,
+      "source_isomorphism": [
+        4,
+        6,
+        5,
+        2,
+        3,
+        7,
+        1,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        1,
+        5,
+        4,
+        7,
+        6,
+        8,
+        3,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "38860890899": {
+      "source": 25787158930,
+      "mask": 1274555,
+      "source_isomorphism": [
+        3,
+        5,
+        4,
+        7,
+        1,
+        6,
+        8,
+        2,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        4,
+        1,
+        7,
+        6,
+        8,
+        3,
+        5,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "38873473704": {
+      "source": 34527986525,
+      "mask": 948526,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        3,
+        6,
+        2,
+        7,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        6,
+        4,
+        1,
+        5,
+        8,
+        7,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "38889988776": {
+      "source": 34528971481,
+      "mask": 1979310,
+      "source_isomorphism": [
+        4,
+        5,
+        2,
+        3,
+        6,
+        0,
+        8,
+        7,
+        1
+      ],
+      "target_hamiltonian_word": [
+        6,
+        1,
+        4,
+        5,
+        8,
+        7,
+        3,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "39129996066": {
+      "source": 879309345,
+      "mask": 6788401,
+      "source_isomorphism": [
+        6,
+        2,
+        0,
+        8,
+        1,
+        4,
+        5,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        3,
+        0,
+        4,
+        6,
+        8,
+        1,
+        2
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "39914080930": {
+      "source": 18326579811,
+      "mask": 2799921,
+      "source_isomorphism": [
+        4,
+        6,
+        0,
+        1,
+        2,
+        8,
+        5,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        6,
+        4,
+        5,
+        2,
+        8,
+        3,
+        7,
+        0,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "43008444068": {
+      "source": 6007306855,
+      "mask": 2923170,
+      "source_isomorphism": [
+        0,
+        2,
+        5,
+        6,
+        3,
+        4,
+        1,
+        7,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        1,
+        6,
+        3,
+        4,
+        7,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        3,
+        5
+      ],
+      "blue": 0
+    },
+    "43008927142": {
+      "source": 43135015278,
+      "mask": 750261,
+      "source_isomorphism": [
+        4,
+        5,
+        3,
+        1,
+        6,
+        0,
+        2,
+        8,
+        7
+      ],
+      "target_hamiltonian_word": [
+        4,
+        3,
+        1,
+        6,
+        8,
+        7,
+        5,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "43008935846": {
+      "source": 43134424602,
+      "mask": 1561883,
+      "source_isomorphism": [
+        5,
+        6,
+        4,
+        1,
+        3,
+        7,
+        2,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        1,
+        4,
+        6,
+        8,
+        7,
+        2,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "43120751244": {
+      "source": 43003179410,
+      "mask": 1291451,
+      "source_isomorphism": [
+        3,
+        4,
+        6,
+        7,
+        1,
+        5,
+        8,
+        2,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        3,
+        1,
+        8,
+        6,
+        4,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "43126943940": {
+      "source": 34838681733,
+      "mask": 1553723,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        1,
+        7,
+        3,
+        2,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        3,
+        1,
+        4,
+        8,
+        6,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "43135359584": {
+      "source": 34564434178,
+      "mask": 1537335,
+      "source_isomorphism": [
+        4,
+        5,
+        1,
+        6,
+        7,
+        3,
+        8,
+        2,
+        0
+      ],
+      "target_hamiltonian_word": [
+        2,
+        3,
+        1,
+        4,
+        8,
+        7,
+        5,
+        6,
+        0
+      ],
+      "source_scores": [
+        6,
+        5
+      ],
+      "blue": 0
+    },
+    "43159974084": {
+      "source": 36717726893,
+      "mask": 2014507,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        2,
+        7,
+        0,
+        1,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        4,
+        1,
+        3,
+        2,
+        8,
+        6,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "43168389728": {
+      "source": 34599285007,
+      "mask": 1734053,
+      "source_isomorphism": [
+        4,
+        5,
+        0,
+        6,
+        3,
+        2,
+        7,
+        1,
+        8
+      ],
+      "target_hamiltonian_word": [
+        7,
+        1,
+        3,
+        4,
+        8,
+        5,
+        6,
+        2,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "43391214113": {
+      "source": 51620639295,
+      "mask": 2585889,
+      "source_isomorphism": [
+        4,
+        0,
+        5,
+        1,
+        8,
+        6,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        7,
+        5,
+        2,
+        0,
+        8,
+        6,
+        3,
+        1,
+        4
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "43424244257": {
+      "source": 12897759807,
+      "mask": 6453922,
+      "source_isomorphism": [
+        3,
+        0,
+        5,
+        4,
+        8,
+        6,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        7,
+        5,
+        6,
+        4,
+        0,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "43663909380": {
+      "source": 4320666103,
+      "mask": 3095168,
+      "source_isomorphism": [
+        0,
+        5,
+        4,
+        8,
+        1,
+        6,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        0,
+        1,
+        6,
+        7,
+        3,
+        4,
+        5
+      ],
+      "source_scores": [
+        1,
+        4
+      ],
+      "blue": 0
+    },
+    "43663909388": {
+      "source": 2160271407,
+      "mask": 2800052,
+      "source_isomorphism": [
+        4,
+        6,
+        0,
+        8,
+        3,
+        5,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        1,
+        4,
+        5,
+        8,
+        2,
+        6,
+        0,
+        3
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "43663909405": {
+      "source": 36566997567,
+      "mask": 2585641,
+      "source_isomorphism": [
+        5,
+        1,
+        4,
+        0,
+        8,
+        6,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        6,
+        5,
+        2,
+        0,
+        7,
+        8,
+        3,
+        1,
+        4
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "43672287313": {
+      "source": 18058211912,
+      "mask": 6756776,
+      "source_isomorphism": [
+        5,
+        0,
+        2,
+        7,
+        8,
+        4,
+        3,
+        1,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        0,
+        3,
+        6,
+        5,
+        7,
+        1,
+        4,
+        2
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "43696939524": {
+      "source": 4345438711,
+      "mask": 3103104,
+      "source_isomorphism": [
+        0,
+        5,
+        4,
+        8,
+        1,
+        6,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        0,
+        1,
+        2,
+        6,
+        7,
+        3,
+        4,
+        5
+      ],
+      "source_scores": [
+        1,
+        4
+      ],
+      "blue": 0
+    },
+    "43696939532": {
+      "source": 34388059188,
+      "mask": 3635639,
+      "source_isomorphism": [
+        4,
+        5,
+        7,
+        8,
+        3,
+        6,
+        1,
+        2,
+        0
+      ],
+      "target_hamiltonian_word": [
+        1,
+        2,
+        4,
+        5,
+        8,
+        6,
+        0,
+        7,
+        3
+      ],
+      "source_scores": [
+        6,
+        4
+      ],
+      "blue": 0
+    },
+    "43696939549": {
+      "source": 10763115071,
+      "mask": 6716070,
+      "source_isomorphism": [
+        5,
+        4,
+        3,
+        0,
+        8,
+        6,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        3,
+        2,
+        6,
+        5,
+        8,
+        4,
+        0,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "43705317457": {
+      "source": 30085977152,
+      "mask": 6756770,
+      "source_isomorphism": [
+        3,
+        0,
+        5,
+        4,
+        8,
+        7,
+        2,
+        1,
+        6
+      ],
+      "target_hamiltonian_word": [
+        8,
+        1,
+        3,
+        7,
+        6,
+        5,
+        2,
+        4,
+        0
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "44195685538": {
+      "source": 30267094645,
+      "mask": 11473962,
+      "source_isomorphism": [
+        1,
+        5,
+        2,
+        6,
+        8,
+        0,
+        7,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        7,
+        6,
+        3,
+        1,
+        2,
+        8,
+        5,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "44195685653": {
+      "source": 39948136247,
+      "mask": 12203062,
+      "source_isomorphism": [
+        4,
+        1,
+        6,
+        2,
+        7,
+        8,
+        5,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        8,
+        5,
+        0,
+        6,
+        1,
+        7,
+        4,
+        2
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "44195686498": {
+      "source": 41021873546,
+      "mask": 11751733,
+      "source_isomorphism": [
+        1,
+        4,
+        7,
+        5,
+        8,
+        2,
+        6,
+        0,
+        3
+      ],
+      "target_hamiltonian_word": [
+        3,
+        7,
+        4,
+        2,
+        8,
+        5,
+        0,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "44195694354": {
+      "source": 30267095667,
+      "mask": 7803946,
+      "source_isomorphism": [
+        1,
+        5,
+        2,
+        6,
+        8,
+        0,
+        7,
+        3,
+        4
+      ],
+      "target_hamiltonian_word": [
+        6,
+        8,
+        5,
+        0,
+        1,
+        7,
+        3,
+        4,
+        2
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "44195694357": {
+      "source": 30217069989,
+      "mask": 11743765,
+      "source_isomorphism": [
+        1,
+        4,
+        5,
+        2,
+        8,
+        7,
+        0,
+        6,
+        3
+      ],
+      "target_hamiltonian_word": [
+        6,
+        7,
+        4,
+        2,
+        8,
+        5,
+        0,
+        3,
+        1
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "51632473348": {
+      "source": 3272618175,
+      "mask": 703136,
+      "source_isomorphism": [
+        0,
+        4,
+        3,
+        6,
+        5,
+        1,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        6,
+        7,
+        5,
+        4,
+        3,
+        0
+      ],
+      "source_scores": [
+        2,
+        5
+      ],
+      "blue": 0
+    },
+    "51644859652": {
+      "source": 3292803135,
+      "mask": 965280,
+      "source_isomorphism": [
+        0,
+        5,
+        4,
+        6,
+        3,
+        1,
+        7,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        4,
+        6,
+        7,
+        5,
+        3,
+        0
+      ],
+      "source_scores": [
+        2,
+        5
+      ],
+      "blue": 0
+    },
+    "51645252864": {
+      "source": 34528964829,
+      "mask": 2012076,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        0,
+        2,
+        1,
+        7,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        1,
+        3,
+        8,
+        7,
+        5,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "51649517141": {
+      "source": 26915661138,
+      "mask": 3774891,
+      "source_isomorphism": [
+        4,
+        7,
+        2,
+        5,
+        6,
+        3,
+        0,
+        8,
+        1
+      ],
+      "target_hamiltonian_word": [
+        5,
+        1,
+        6,
+        2,
+        7,
+        4,
+        3,
+        8,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "51649517194": {
+      "source": 20502924961,
+      "mask": 1497266,
+      "source_isomorphism": [
+        5,
+        3,
+        1,
+        7,
+        4,
+        0,
+        6,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        6,
+        4,
+        7,
+        5,
+        3,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "51658231125": {
+      "source": 7021298487,
+      "mask": 1522354,
+      "source_isomorphism": [
+        5,
+        4,
+        7,
+        3,
+        0,
+        6,
+        1,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        4,
+        6,
+        5,
+        3,
+        7,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "51658231181": {
+      "source": 7553975069,
+      "mask": 1530290,
+      "source_isomorphism": [
+        5,
+        4,
+        7,
+        3,
+        0,
+        1,
+        6,
+        2,
+        8
+      ],
+      "target_hamiltonian_word": [
+        8,
+        2,
+        1,
+        5,
+        4,
+        6,
+        3,
+        7,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "51662710132": {
+      "source": 35140576904,
+      "mask": 1751339,
+      "source_isomorphism": [
+        4,
+        5,
+        2,
+        1,
+        6,
+        7,
+        3,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        1,
+        3,
+        8,
+        5,
+        6,
+        7,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "51666835060": {
+      "source": 35119604832,
+      "mask": 1520947,
+      "source_isomorphism": [
+        4,
+        5,
+        2,
+        1,
+        7,
+        6,
+        3,
+        0,
+        8
+      ],
+      "target_hamiltonian_word": [
+        4,
+        2,
+        1,
+        3,
+        8,
+        5,
+        6,
+        7,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "51667086672": {
+      "source": 51660862869,
+      "mask": 1791531,
+      "source_isomorphism": [
+        5,
+        6,
+        3,
+        4,
+        7,
+        2,
+        1,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        1,
+        4,
+        3,
+        8,
+        5,
+        7,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "51667086692": {
+      "source": 51661002677,
+      "mask": 1759787,
+      "source_isomorphism": [
+        5,
+        6,
+        3,
+        4,
+        1,
+        7,
+        2,
+        8,
+        0
+      ],
+      "target_hamiltonian_word": [
+        6,
+        2,
+        1,
+        4,
+        3,
+        8,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        5
+      ],
+      "blue": 0
+    },
+    "51746981120": {
+      "source": 34528977855,
+      "mask": 949548,
+      "source_isomorphism": [
+        4,
+        5,
+        6,
+        0,
+        1,
+        7,
+        2,
+        8,
+        3
+      ],
+      "target_hamiltonian_word": [
+        6,
+        1,
+        2,
+        3,
+        8,
+        7,
+        5,
+        4,
+        0
+      ],
+      "source_scores": [
+        4,
+        5
+      ],
+      "blue": 0
+    },
+    "51931145588": {
+      "source": 60186612340,
+      "mask": 10917942,
+      "source_isomorphism": [
+        1,
+        8,
+        2,
+        7,
+        5,
+        6,
+        3,
+        4,
+        0
+      ],
+      "target_hamiltonian_word": [
+        4,
+        8,
+        2,
+        1,
+        5,
+        6,
+        7,
+        3,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "51935270516": {
+      "source": 60178621300,
+      "mask": 11229207,
+      "source_isomorphism": [
+        1,
+        8,
+        7,
+        2,
+        5,
+        3,
+        6,
+        4,
+        0
+      ],
+      "target_hamiltonian_word": [
+        3,
+        8,
+        2,
+        1,
+        5,
+        6,
+        7,
+        4,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "51935522128": {
+      "source": 60317981516,
+      "mask": 10957875,
+      "source_isomorphism": [
+        1,
+        8,
+        6,
+        2,
+        4,
+        5,
+        7,
+        3,
+        0
+      ],
+      "target_hamiltonian_word": [
+        3,
+        8,
+        2,
+        1,
+        5,
+        7,
+        4,
+        6,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "51935522148": {
+      "source": 60224755920,
+      "mask": 11219507,
+      "source_isomorphism": [
+        1,
+        5,
+        8,
+        2,
+        4,
+        6,
+        3,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        4,
+        8,
+        2,
+        1,
+        6,
+        3,
+        7,
+        5,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "52186321416": {
+      "source": 2160271407,
+      "mask": 2800036,
+      "source_isomorphism": [
+        4,
+        0,
+        6,
+        8,
+        3,
+        5,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        1,
+        4,
+        5,
+        8,
+        3,
+        6,
+        0,
+        2
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "52288049672": {
+      "source": 2160468031,
+      "mask": 6716072,
+      "source_isomorphism": [
+        5,
+        0,
+        4,
+        8,
+        3,
+        6,
+        1,
+        7,
+        2
+      ],
+      "target_hamiltonian_word": [
+        7,
+        2,
+        3,
+        6,
+        5,
+        8,
+        4,
+        0,
+        1
+      ],
+      "source_scores": [
+        3,
+        4
+      ],
+      "blue": 0
+    },
+    "60191099724": {
+      "source": 64456339767,
+      "mask": 6756658,
+      "source_isomorphism": [
+        8,
+        6,
+        0,
+        5,
+        4,
+        1,
+        2,
+        7,
+        3
+      ],
+      "target_hamiltonian_word": [
+        8,
+        3,
+        2,
+        1,
+        6,
+        7,
+        4,
+        5,
+        0
+      ],
+      "source_scores": [
+        4,
+        4
+      ],
+      "blue": 0
+    },
+    "60191283404": {
+      "source": 51869713828,
+      "mask": 7550251,
+      "source_isomorphism": [
+        4,
+        6,
+        5,
+        8,
+        3,
+        2,
+        7,
+        1,
+        0
+      ],
+      "target_hamiltonian_word": [
+        5,
+        3,
+        2,
+        1,
+        8,
+        6,
+        4,
+        7,
+        0
+      ],
+      "source_scores": [
+        5,
+        4
+      ],
+      "blue": 0
+    },
+    "64515174746": {
+      "source": 51928816272,
+      "mask": 24613287,
+      "source_isomorphism": [
+        8,
+        6,
+        5,
+        1,
+        3,
+        7,
+        2,
+        4,
+        0
+      ],
+      "target_hamiltonian_word": [
+        0,
+        3,
+        5,
+        8,
+        7,
+        4,
+        2,
+        6,
+        1
+      ],
+      "source_scores": [
+        5,
+        3
+      ],
+      "blue": 0
+    },
+    "64519363165": {
+      "source": 51996464516,
+      "mask": 19618099,
+      "source_isomorphism": [
+        8,
+        5,
+        6,
+        4,
+        1,
+        3,
+        2,
+        7,
+        0
+      ],
+      "target_hamiltonian_word": [
+        0,
+        2,
+        6,
+        7,
+        4,
+        1,
+        5,
+        8,
+        3
+      ],
+      "source_scores": [
+        5,
+        3
+      ],
+      "blue": 0
+    }
+  },
+  "checks": 1644848
+}
