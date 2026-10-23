@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "checks": 7548,
+  "one_axis_mod9_tables": 729,
+  "two_axis_boolean_tables": 512,
+  "sharp_single_axis_nilpotency_indices": {
+    "3": 3,
+    "9": 5,
+    "27": 7,
+    "81": 9,
+    "243": 11,
+    "729": 13
+  },
+  "newton_support_hostile": {
+    "kernel": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "coefficients": {
+      "(0, 0)": 0,
+      "(0, 1)": 1,
+      "(0, 2)": 0,
+      "(1, 0)": 1,
+      "(1, 1)": 0,
+      "(1, 2)": 6,
+      "(2, 0)": 0,
+      "(2, 1)": 6,
+      "(2, 2)": 0
+    }
+  }
+}

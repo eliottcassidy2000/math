@@ -175,7 +175,7 @@
     ]
   },
   "native": {
-    "guard_receipt_sha256": "559889afcfd1b9f76fb693c3a0c2e7267992eb3606c9602fb8310b27be9df173",
+    "guard_receipt_sha256": "3599e48cef43b0cfb3cdad04c8593c148c77991175ea274343180e67090b0fdf",
     "fresh_character_n6": {
       "actual_guard": {
         "coordinates": 2,

@@ -1,0 +1,94 @@
+{
+  "checks": 78810,
+  "hostile": {
+    "coefficients": {
+      "(0, 0)": 0,
+      "(0, 1)": 1,
+      "(0, 2)": 0,
+      "(1, 0)": 1,
+      "(1, 1)": 0,
+      "(1, 2)": 6,
+      "(2, 0)": 0,
+      "(2, 1)": 6,
+      "(2, 2)": 0
+    },
+    "kernel": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "minimum_rank_histogram": {
+    "0": 3,
+    "1": 96,
+    "2": 19584
+  },
+  "sharp_filtration": [
+    {
+      "index": 3,
+      "modulus": 3
+    },
+    {
+      "index": 5,
+      "modulus": 9
+    },
+    {
+      "index": 7,
+      "modulus": 27
+    },
+    {
+      "index": 9,
+      "modulus": 81
+    },
+    {
+      "index": 11,
+      "modulus": 243
+    },
+    {
+      "index": 13,
+      "modulus": 729
+    },
+    {
+      "index": 15,
+      "modulus": 2187
+    },
+    {
+      "index": 17,
+      "modulus": 6561
+    },
+    {
+      "index": 19,
+      "modulus": 19683
+    },
+    {
+      "index": 21,
+      "modulus": 59049
+    },
+    {
+      "index": 23,
+      "modulus": 177147
+    },
+    {
+      "index": 25,
+      "modulus": 531441
+    }
+  ],
+  "status": "PASS",
+  "tensor_dimensions": [
+    1,
+    3,
+    9,
+    27,
+    81
+  ],
+  "ternary_valued_2d_tables": 19683
+}
