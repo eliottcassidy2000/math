@@ -1,0 +1,50 @@
+python 3.10.0
+== 1. components of Q_n ==
+  #components for n = 1..40: [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Q_12 components: [[2, 7, 9], [4, 5, 11, 12], [1, 3, 6, 8, 10]]  sizes [3, 4, 5]
+  squares used inside Q_12: [4, 9, 16] (the square 25 = 3^2 + 4^2 is not yet available)
+  welding edges of vertex 13: [(3, 13, 16), (12, 13, 25)]
+  welding edges of vertex 14: [(2, 14, 16), (11, 14, 25)]
+  each Q_12 component is a path:  [[1, 1, 2], [1, 1, 2, 2], [1, 1, 2, 2, 2]]
+
+== 2. new edges s(n) and their runs ==
+  s(n) = floor(sqrt(2n-1)) - floor(sqrt(n)): equals the brute-force count for n <= 5000 and the square count for 2 <= n <= 10^6
+  runs (first, last, s) for n <= 60: [(1, 2, 0), (3, 3, 1), (4, 4, 0), (5, 12, 1), (13, 15, 2), (16, 18, 1), (19, 32, 2), (33, 35, 3), (36, 40, 2), (41, 48, 3), (49, 50, 2), (51, 60, 3)]
+  s(n) - s(n-1) = [n = ceil((j^2+1)/2)] - [n = k^2] verified for n < 3000
+  first gains (square j^2 enters at n = ceil((j^2+1)/2)): [3, 5, 9, 13, 19, 25, 33, 41, 51, 61]
+  first losses (square k^2 leaves at n = k^2): [4, 9, 16, 25, 36, 49, 64, 81]
+  simultaneous gain and loss (invisible run boundaries) below 6400: [9, 25, 289, 841]
+  all coincidences n <= 10^7: [1, 9, 25, 289, 841, 9801, 28561, 332929, 970225] = k^2 for k in [1, 3, 5, 17, 29, 99, 169, 577, 985]
+  (at n = 25 the square 25 leaves the window [n+1, 2n-1] exactly as 49 enters: 7^2 - 2*5^2 = -1)
+
+== 3. the onset lemma and the extension mechanism ==
+  onsets (path at n, none at n-1): [15, 23, 25]   s: [2, 2, 2]
+  losses (path at n-1, none at n): [2, 18, 24]   s: [0, 1, 2]
+  vertices n <= 25 with s(n) = 2: [13, 14, 15, 19, 20, 21, 22, 23, 24, 25] ; of these, onsets: [15, 23, 25] ; non-onsets: [13, 14, 19, 20, 21, 22, 24]
+  unique 15-chain: [8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9]  endpoints (8, 9)
+  16 + 9 = 25 extends at the end 9; 17 + 8 = 25 extends at the end 8: [17, 8, 1, 15, 10, 6, 3, 13, 12, 4, 5, 11, 14, 2, 7, 9, 16]
+  18's only neighbour below 31: [7] - an interior vertex of the unique 17-chain, so 18 cannot be appended: the loss at 18
+  independent DFS witnesses found for n = 15, 16, 17, 23, 25
+  independent DFS confirms no Hamiltonian path at n = 18, 19, 24
+
+== 4. the owner's edge counts at n = 25 ==
+  [1, 3, 6, 8, 10, 17]: 6 vertices, 5 induced edges [(1, 3), (1, 8), (3, 6), (6, 10), (8, 17)]  (path)
+  [4, 5, 11, 12]: 4 vertices, 3 induced edges [(4, 5), (4, 12), (5, 11)]  (path)
+  [2, 7, 9, 16, 18]: 5 vertices, 4 induced edges [(2, 7), (7, 9), (7, 18), (9, 16)]  (tree with a vertex of degree 3)
+  16, 17, 18 are the 25-partners of 9, 8, 7: the reflection x -> 25 - x on the n = 12 components
+
+== 5. hostile probe: component sizes of other sum graphs a + b in S ==
+  squares       : last n < 120 with >= 3 components: (12, [3, 4, 5]); stages whose sizes contain a Pythagorean triple: [(12, [3, 4, 5])] (1 stages)
+  squares + 1   : last n < 120 with >= 3 components: (8, [1, 3, 4]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  squares - 1   : last n < 120 with >= 3 components: (12, [2, 4, 6]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  twice squares : last n < 120 with >= 3 components: (27, [3, 10, 14]); stages whose sizes contain a Pythagorean triple: [(24, [2, 3, 4, 5, 10]), (25, [2, 3, 4, 5, 11])] (2 stages)
+  triangular    : last n < 120 with >= 3 components: None; stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  cubes         : last n < 120 with >= 3 components: (119, [2, 4, 4, 4, 105]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  pentagonal    : last n < 120 with >= 3 components: (18, [2, 6, 10]); stages whose sizes contain a Pythagorean triple: [] (0 stages)
+  primes        : last n < 120 with >= 3 components: None; stages whose sizes contain a Pythagorean triple: [] (0 stages)
+
+== 6. the Paley tournament QR_7: H(QR_7) = 189 and the free action of F_21 ==
+  Hamiltonian paths of QR_7: 189
+  Aut(QR_7) = x -> ax + b (a a square mod 7) has order 21; it acts freely on the 189 paths: True; orbits: 9
+
+ALL CHECKS PASSED
