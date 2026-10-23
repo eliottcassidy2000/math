@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "audited_manifest_sha256": "c6e65034bee2e669f69308e99f427ef117b02983e0d70c840ac3a918d351def0",
+  "subject_source_unchanged": true,
+  "independent_tests_normal_optimized_identical": true,
+  "commands": [
+    "python3 session43-native-ports/check.py",
+    "python3 -O session43-native-ports/check.py",
+    "python3 session43-audit-native-ports/independent.py",
+    "python3 -O session43-audit-native-ports/independent.py"
+  ],
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 4528,
+      "sha256": "79dc0e6a7212fbd9a9b3a2b4575c57473ab10c5bd941b27440128563871738d6"
+    },
+    {
+      "path": "independent.optimized.json",
+      "bytes": 2189,
+      "sha256": "357f1feee15fbd19acda90aa6fb3126d57edcdd629841df8d54ad01d20dbbdbf"
+    },
+    {
+      "path": "independent.py",
+      "bytes": 5804,
+      "sha256": "b320b08049a919199c51ab0682dc5f1c8618f17159d2cc18540fe313b2b67920"
+    },
+    {
+      "path": "independent.receipt.json",
+      "bytes": 2189,
+      "sha256": "357f1feee15fbd19acda90aa6fb3126d57edcdd629841df8d54ad01d20dbbdbf"
+    },
+    {
+      "path": "replayed.json",
+      "bytes": 4925,
+      "sha256": "5168f0c5c4e07bbd13ecc2c287e2b7390b510df381dd93f0c3a7dbb42365aff1"
+    },
+    {
+      "path": "replayed.optimized.json",
+      "bytes": 4925,
+      "sha256": "5168f0c5c4e07bbd13ecc2c287e2b7390b510df381dd93f0c3a7dbb42365aff1"
+    }
+  ],
+  "publication_layout_normal_optimized_identical": true
+}

@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "path": "session42-coupling/COUPLING_OPERATOR.md",
+      "sha256": "72c703a6c9ceab75e019ea15864ae1fd5b038cc49c56b9f5fa08114eb4f50baf",
+      "role": "Inherited uniform-cube spectral theorem and extremizer classification; not a restriction result."
+    },
+    {
+      "path": "session42-sign-moments/THEOREM.md",
+      "sha256": "db76986632287dbbcd5e68e6596d25b8e793c7d056d0bb1e5d3aec14f1d772eb",
+      "role": "Inherited uniform-cube spectral theorem and extremizer classification; not a restriction result."
+    }
+  ],
+  "parent_publication": "8b71b746f7a9d90378c702e01608207227b1f83e"
+}

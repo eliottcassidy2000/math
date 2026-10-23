@@ -1,0 +1,306 @@
+{
+  "native_cycle_tests": {
+    "accepted_chart_tuples": 162,
+    "cases": 72,
+    "inconsistent_difference_branches": 2974,
+    "nonempty_cases": 34,
+    "seed": 430031
+  },
+  "native_union_hostile": {
+    "actual_paths": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ],
+      [
+        1,
+        2,
+        0,
+        4,
+        5,
+        3
+      ],
+      [
+        1,
+        2,
+        0,
+        5,
+        3,
+        4
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4
+      ]
+    ],
+    "all_Hamilton_paths": 45,
+    "guarded_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "heap_input": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "heap_output": [
+      0,
+      2
+    ],
+    "scores": [
+      3,
+      3,
+      3,
+      2,
+      2,
+      2
+    ],
+    "valid_chart_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "whole_block_stabilizer": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "observer_censuses": [
+    {
+      "black_edges": 0,
+      "blue_edges": 1,
+      "classes": [
+        {
+          "Aut": 1,
+          "H": 1,
+          "canonical_mask": 0,
+          "observers": 1,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 2,
+          "observers": 1,
+          "reflection_fixed": 1
+        }
+      ],
+      "free_bits": 1,
+      "n": 3,
+      "observers": 2
+    },
+    {
+      "black_edges": 2,
+      "blue_edges": 2,
+      "classes": [
+        {
+          "Aut": 1,
+          "H": 1,
+          "canonical_mask": 0,
+          "observers": 1,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 2,
+          "observers": 1,
+          "reflection_fixed": 0
+        },
+        {
+          "Aut": 1,
+          "H": 5,
+          "canonical_mask": 4,
+          "observers": 5,
+          "reflection_fixed": 3
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 5,
+          "observers": 1,
+          "reflection_fixed": 0
+        }
+      ],
+      "free_bits": 3,
+      "n": 4,
+      "observers": 8
+    },
+    {
+      "black_edges": 24,
+      "blue_edges": 8,
+      "classes": [
+        {
+          "Aut": 1,
+          "H": 1,
+          "canonical_mask": 0,
+          "observers": 1,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 2,
+          "observers": 1,
+          "reflection_fixed": 0
+        },
+        {
+          "Aut": 1,
+          "H": 5,
+          "canonical_mask": 4,
+          "observers": 5,
+          "reflection_fixed": 0
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 5,
+          "observers": 1,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 1,
+          "H": 9,
+          "canonical_mask": 8,
+          "observers": 9,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 1,
+          "H": 5,
+          "canonical_mask": 9,
+          "observers": 5,
+          "reflection_fixed": 0
+        },
+        {
+          "Aut": 1,
+          "H": 9,
+          "canonical_mask": 10,
+          "observers": 9,
+          "reflection_fixed": 3
+        },
+        {
+          "Aut": 3,
+          "H": 3,
+          "canonical_mask": 11,
+          "observers": 1,
+          "reflection_fixed": 0
+        },
+        {
+          "Aut": 1,
+          "H": 11,
+          "canonical_mask": 12,
+          "observers": 11,
+          "reflection_fixed": 3
+        },
+        {
+          "Aut": 3,
+          "H": 15,
+          "canonical_mask": 40,
+          "observers": 5,
+          "reflection_fixed": 1
+        },
+        {
+          "Aut": 1,
+          "H": 13,
+          "canonical_mask": 41,
+          "observers": 13,
+          "reflection_fixed": 3
+        },
+        {
+          "Aut": 5,
+          "H": 15,
+          "canonical_mask": 76,
+          "observers": 3,
+          "reflection_fixed": 3
+        }
+      ],
+      "free_bits": 6,
+      "n": 5,
+      "observers": 64
+    }
+  ],
+  "scope": "all Hamilton observer masks at n=3,4,5; one actual six-vertex two-cell tournament; no all-size native completeness claim"
+}

@@ -1,0 +1,213 @@
+{
+  "independent_method": "adjacency-array permutation canonicalization, subset DP Hamilton counts, smaller Gram-side exact characteristic polynomial",
+  "reports": [
+    {
+      "exact_charpoly": "lambda - 1",
+      "model": "Hamiltonian observer",
+      "n": 2,
+      "paired": false,
+      "residue": null,
+      "word_count": 1
+    },
+    {
+      "exact_charpoly": "lambda - 1",
+      "model": "Hamiltonian observer",
+      "n": 2,
+      "paired": true,
+      "residue": null,
+      "word_count": 1
+    },
+    {
+      "exact_charpoly": "lambda*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 2,
+      "paired": false,
+      "residue": 1,
+      "word_count": 2
+    },
+    {
+      "exact_charpoly": "lambda*(lambda - 1)",
+      "model": "modulo-8 observed coarsening",
+      "n": 2,
+      "paired": false,
+      "residue": null,
+      "word_count": 2
+    },
+    {
+      "exact_charpoly": "(lambda - 1)**2",
+      "model": "Hamiltonian observer",
+      "n": 3,
+      "paired": false,
+      "residue": null,
+      "word_count": 2
+    },
+    {
+      "exact_charpoly": "(lambda - 1)**2",
+      "model": "Hamiltonian observer",
+      "n": 3,
+      "paired": true,
+      "residue": null,
+      "word_count": 2
+    },
+    {
+      "exact_charpoly": "lambda**3*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 3,
+      "paired": false,
+      "residue": 1,
+      "word_count": 6
+    },
+    {
+      "exact_charpoly": "lambda*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 3,
+      "paired": false,
+      "residue": 3,
+      "word_count": 2
+    },
+    {
+      "exact_charpoly": "lambda**2*(lambda - 1)*(9*lambda - 1)/9",
+      "model": "modulo-8 observed coarsening",
+      "n": 3,
+      "paired": false,
+      "residue": null,
+      "word_count": 8
+    },
+    {
+      "exact_charpoly": "lambda**2*(lambda - 1)**2*(15*lambda - 8)/15",
+      "model": "Hamiltonian observer",
+      "n": 4,
+      "paired": false,
+      "residue": null,
+      "word_count": 8
+    },
+    {
+      "exact_charpoly": "lambda**2*(lambda - 1)**2*(15*lambda - 8)/15",
+      "model": "Hamiltonian observer",
+      "n": 4,
+      "paired": true,
+      "residue": null,
+      "word_count": 8
+    },
+    {
+      "exact_charpoly": "lambda**10*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 4,
+      "paired": false,
+      "residue": 1,
+      "word_count": 24
+    },
+    {
+      "exact_charpoly": "lambda**4*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 4,
+      "paired": false,
+      "residue": 3,
+      "word_count": 16
+    },
+    {
+      "exact_charpoly": "lambda**8*(lambda - 1)",
+      "model": "modulo-8 conditioning",
+      "n": 4,
+      "paired": false,
+      "residue": 5,
+      "word_count": 24
+    },
+    {
+      "exact_charpoly": "lambda**8*(lambda - 1)*(9*lambda - 1)**2/81",
+      "model": "modulo-8 observed coarsening",
+      "n": 4,
+      "paired": false,
+      "residue": null,
+      "word_count": 64
+    },
+    {
+      "exact_charpoly": "lambda**8*(lambda - 1)*(10687950*lambda**2 - 2721743*lambda + 172793)/10687950",
+      "model": "soft observer",
+      "n": 4,
+      "paired": false,
+      "residue": null,
+      "word_count": 72
+    },
+    {
+      "exact_charpoly": "lambda**9*(lambda - 1)**2*(34479695250*lambda**7 - 101537044560*lambda**6 + 124233482025*lambda**5 - 81343863297*lambda**4 + 30498542418*lambda**3 - 6453737759*lambda**2 + 695751836*lambda - 27925620)/34479695250",
+      "model": "Hamiltonian observer",
+      "n": 5,
+      "paired": false,
+      "residue": null,
+      "word_count": 64
+    },
+    {
+      "exact_charpoly": "lambda**7*(lambda - 1)**2*(13135122000*lambda**7 - 34478531280*lambda**6 + 37354198446*lambda**5 - 21438598416*lambda**4 + 6931047072*lambda**3 - 1228956713*lambda**2 + 104882597*lambda - 2879385)/13135122000",
+      "model": "Hamiltonian observer",
+      "n": 5,
+      "paired": true,
+      "residue": null,
+      "word_count": 64
+    },
+    {
+      "exact_charpoly": "lambda**30*(lambda - 1)*(332972640000*lambda**2 - 84571641000*lambda + 4040737193)/332972640000",
+      "model": "modulo-8 conditioning",
+      "n": 5,
+      "paired": false,
+      "residue": 1,
+      "word_count": 360
+    },
+    {
+      "exact_charpoly": "lambda**29*(lambda - 1)*(357739200*lambda**2 - 140894390*lambda + 10896651)/357739200",
+      "model": "modulo-8 conditioning",
+      "n": 5,
+      "paired": false,
+      "residue": 3,
+      "word_count": 240
+    },
+    {
+      "exact_charpoly": "lambda**26*(lambda - 1)*(1801800*lambda - 143903)/1801800",
+      "model": "modulo-8 conditioning",
+      "n": 5,
+      "paired": false,
+      "residue": 5,
+      "word_count": 360
+    },
+    {
+      "exact_charpoly": "lambda**20*(lambda - 1)*(315*lambda - 89)/315",
+      "model": "modulo-8 conditioning",
+      "n": 5,
+      "paired": false,
+      "residue": 7,
+      "word_count": 64
+    },
+    {
+      "exact_charpoly": "lambda**30*(lambda - 1)*(2187000000*lambda**3 - 207916875*lambda**2 + 4929750*lambda - 26891)/2187000000",
+      "model": "modulo-8 observed coarsening",
+      "n": 5,
+      "paired": false,
+      "residue": null,
+      "word_count": 1024
+    },
+    {
+      "exact_charpoly": "lambda**24*(lambda - 1)*(26000684792822838067200000000000*lambda**9 - 9447557482246999965696000000000*lambda**8 + 1304839704640588649533440000000*lambda**7 - 87373846218918853715558400000*lambda**6 + 3069157780002611884202856000*lambda**5 - 57437480725323292452438000*lambda**4 + 568911307096151427587195*lambda**3 - 3009981055464071574927*lambda**2 + 8062126385861377802*lambda - 8602285048444640)/26000684792822838067200000000000",
+      "model": "soft mod8 residue7",
+      "n": 5,
+      "paired": false,
+      "residue": null,
+      "word_count": 1088
+    },
+    {
+      "exact_charpoly": "lambda**20*(lambda - 1)**20",
+      "fixed_vertices": 2,
+      "model": "individually fixed vertices",
+      "n": 4,
+      "paired": false
+    },
+    {
+      "exact_charpoly": "(lambda - 1)**32",
+      "fixed_vertices": 3,
+      "model": "individually fixed vertices",
+      "n": 4,
+      "paired": true
+    }
+  ],
+  "reports_checked": 26,
+  "status": "PASS"
+}

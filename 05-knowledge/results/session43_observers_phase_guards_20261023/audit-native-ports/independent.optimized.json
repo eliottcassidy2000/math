@@ -1,0 +1,162 @@
+{
+  "censuses": [
+    {
+      "classes": 2,
+      "fibre_triples": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ]
+      ],
+      "n": 3
+    },
+    {
+      "classes": 4,
+      "fibre_triples": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          5,
+          1,
+          5
+        ]
+      ],
+      "n": 4
+    }
+  ],
+  "composite_and_partial_forest_controls": [
+    {
+      "components": 3,
+      "lifts": 27,
+      "p": 3
+    },
+    {
+      "components": 2,
+      "lifts": 9,
+      "p": 3
+    },
+    {
+      "components": 1,
+      "lifts": 3,
+      "p": 3
+    },
+    {
+      "components": 3,
+      "lifts": 125,
+      "p": 5
+    },
+    {
+      "components": 2,
+      "lifts": 25,
+      "p": 5
+    },
+    {
+      "components": 1,
+      "lifts": 5,
+      "p": 5
+    },
+    {
+      "components": 3,
+      "lifts": 729,
+      "p": 9
+    },
+    {
+      "components": 2,
+      "lifts": 81,
+      "p": 9
+    },
+    {
+      "components": 1,
+      "lifts": 9,
+      "p": 9
+    }
+  ],
+  "independently_rejected_cycle_branches": 14580,
+  "involution_budgets": [
+    {
+      "FR_orbits": 1,
+      "black": 0,
+      "blue": 1,
+      "fixed_R": 2,
+      "n": 3
+    },
+    {
+      "FR_orbits": 3,
+      "black": 2,
+      "blue": 2,
+      "fixed_R": 4,
+      "n": 4
+    },
+    {
+      "FR_orbits": 20,
+      "black": 24,
+      "blue": 8,
+      "fixed_R": 16,
+      "n": 5
+    },
+    {
+      "FR_orbits": 272,
+      "black": 480,
+      "blue": 32,
+      "fixed_R": 64,
+      "n": 6
+    },
+    {
+      "FR_orbits": 8320,
+      "black": 16128,
+      "blue": 256,
+      "fixed_R": 512,
+      "n": 7
+    }
+  ],
+  "manifest_hashes_verified": 5,
+  "nine_vertex_accepted_charts": 2187,
+  "nine_vertex_palette_template_cases": 648,
+  "six_vertex_total_H": 45,
+  "six_vertex_valid_charts": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "status": "PASS"
+}

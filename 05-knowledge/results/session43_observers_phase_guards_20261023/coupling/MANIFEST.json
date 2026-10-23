@@ -1,0 +1,46 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py",
+    "cmp receipt.json receipt.optimized.json"
+  ],
+  "normal_optimized_byte_identical": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1054,
+      "sha256": "940975355822309259ba86c6d407511ed767c631eff2007559e8fd1917d585a5"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 618,
+      "sha256": "93d0695f29977325d7c3033c4a67a09b3188061f1623e8a94a03775115bb3a6f"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 10468,
+      "sha256": "82bcc37ce0365e8c172766e52ab0304555ccd3f468926faca8611a3fd5816413"
+    },
+    {
+      "path": "check.py",
+      "bytes": 5689,
+      "sha256": "7c4b4dccd15ade755a98352fe79065d1d3f93677a86f3bf8ec0215609f5a868a"
+    },
+    {
+      "path": "explore.py",
+      "bytes": 1435,
+      "sha256": "3d113f7958d8495634d5cf1b3bc4d8e2aaefa19b260aa11f19d546885c3b751d"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 72548,
+      "sha256": "1b1715ea235c5b001a3a519d920ca945df7472737cfadb010864218a5037a77a"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 72548,
+      "sha256": "1b1715ea235c5b001a3a519d920ca945df7472737cfadb010864218a5037a77a"
+    }
+  ]
+}
