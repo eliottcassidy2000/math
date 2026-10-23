@@ -1,0 +1,58 @@
+{
+  "root_grades": {
+    "-2": 1,
+    "-1": 56,
+    "0": 126,
+    "1": 56,
+    "2": 1
+  },
+  "symplectic_pairs": 28,
+  "dimensions": {
+    "e7": 133,
+    "heisenberg": 57,
+    "intermediate": 190,
+    "parabolic": 191,
+    "e8": 248
+  },
+  "arithmetic_57": {
+    "Blum_primes": [
+      3,
+      19
+    ],
+    "Leyland_pair": [
+      2,
+      5
+    ]
+  },
+  "formal_level_one_c": "38/5",
+  "minimal_models_with_C2_dimension_57": [
+    {
+      "p": 2,
+      "q": 115,
+      "c": "-38192/115",
+      "N": 57,
+      "first_transfer_coefficient": "0"
+    },
+    {
+      "p": 3,
+      "q": 58,
+      "c": "-2996/29",
+      "N": 57,
+      "first_transfer_coefficient": "10873149/58"
+    },
+    {
+      "p": 4,
+      "q": 39,
+      "c": "-1199/26",
+      "N": 57,
+      "first_transfer_coefficient": "48741099/208"
+    },
+    {
+      "p": 7,
+      "q": 20,
+      "c": "-437/70",
+      "N": 57,
+      "first_transfer_coefficient": "29904309/112"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "checks": 460,
+  "finite_psd_grid": "n=1..12; t=j/4 from0 to n+2",
+  "signed_permutation_checks": "n=1..7",
+  "examples": [
+    {
+      "t": "1/2",
+      "first_negative": 2,
+      "negative_trace": "-1/8"
+    },
+    {
+      "t": "3/2",
+      "first_negative": 3,
+      "negative_trace": "-1/16"
+    },
+    {
+      "t": "7/2",
+      "first_negative": 5,
+      "negative_trace": "-7/256"
+    },
+    {
+      "t": "57/2",
+      "first_negative": 30,
+      "negative_trace": "-125280277081421/72057594037927936"
+    },
+    {
+      "t": "113/2",
+      "first_negative": 58,
+      "negative_trace": "-3337619107096856488030652614083/5192296858534827628530496329220096"
+    },
+    {
+      "t": "115/2",
+      "first_negative": 59,
+      "negative_trace": "-6505528768070144002093644925755/10384593717069655257060992658440192"
+    },
+    {
+      "t": "57",
+      "first_negative": null,
+      "first_zero_exterior": 58
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "direct_gram_psd_checks": 64,
+  "order5_sign_eigenvalue": "-105/32",
+  "weighted_skew_recursion_checks": 288,
+  "dimensions": "1..6",
+  "test_points": "(z,r)=(1,1),(7,5),(41,29); 2r^2=z^2+1"
+}
+Five symbolic pole/cancellation controls pass.

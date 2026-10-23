@@ -1,0 +1,8 @@
+Exact checks: all 75 labeled tournaments n=1..4, Q doubling and E determinant pass.
+D(E(seed)) scores [1, 2, 2, 2, 3, 5] charpoly (z**2 + 1)*(z**2 + 7)**2
+E(E(D(seed))) scores [0, 1, 2, 3, 4, 5] charpoly (z**2 + 1)*(z**4 + 14*z**2 + 1)
+n=4 spectra extension fibers: {'z**4 + 6*z**2 + 1': ['z**6 + 15*z**4 + 15*z**2 + 1', 'z**6 + 15*z**4 + 47*z**2 + 1'], 'z**4 + 6*z**2 + 9': ['z**6 + 15*z**4 + 39*z**2 + 9']}
+sidecar representative (-1, -1, -1, -1, -1, -1) base z**4 + 6*z**2 + 1 extended z**6 + 15*z**4 + 15*z**2 + 1 numerator 4*z*(z**2 + 1)
+sidecar representative (-1, -1, -1, -1, 1, -1) base z**4 + 6*z**2 + 9 extended z**6 + 15*z**4 + 39*z**2 + 9 numerator 4*z*(z**2 + 3)
+sidecar representative (-1, -1, 1, -1, -1, -1) base z**4 + 6*z**2 + 1 extended z**6 + 15*z**4 + 47*z**2 + 1 numerator 4*z*(z**2 + 5)
+Eight n=3 tournaments: closed marked resolvent E and D recursions verified exactly.

@@ -1,0 +1,10 @@
+EXACT Paley adjacency/skew polynomial identities: p=3,7,11,19,23,31,43 PASS
+EXACT non-scalar 3-to-6 theta doubling through exponent16: [(0, 1), (6, 16), (8, 12), (12, 64), (14, 96), (16, 60)]
+NUMERICAL non-scalar tower identity, log-periodicity, first/second remainder bounds PASS
+NUMERICAL non-diagonal Poisson theta inversion PASS
+NUMERICAL Epstein reflection/negative-even completed positivity/determinant normalization dimension 1 PASS
+NUMERICAL Epstein reflection/negative-even completed positivity/determinant normalization dimension 2 PASS
+NUMERICAL Epstein reflection/negative-even completed positivity/determinant normalization dimension 3 PASS
+NUMERICAL Epstein reflection/negative-even completed positivity/determinant normalization dimension 4 PASS
+NUMERICAL Epstein reflection/negative-even completed positivity/determinant normalization dimension 5 PASS
+ALL INDEPENDENT CHECKS PASS; numerical cases are not a substitute for analytic proofs.

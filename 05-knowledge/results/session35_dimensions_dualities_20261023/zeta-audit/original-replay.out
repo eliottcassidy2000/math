@@ -1,0 +1,10 @@
+FINITE-EXACT labeled tournament universe n=1..5: 1099
+Paley adjacency 3 : (x - 1)*(x**2 + x + 1)
+Paley adjacency 7 : (x - 3)*(x**2 + x + 2)**3
+Paley adjacency 11 : (x - 5)*(x**2 + x + 3)**5
+Paley adjacency 19 : (x - 9)*(x**2 + x + 5)**9
+Reflection+real-axis positivity hostile: s**4 - 2*s**3 + 27*s**2/8 - 19*s/8 + 425/256 zeros 1/4+-i, 3/4+-i
+NUMERICAL heat identity t= 0.1 error= 1.9268e-45
+NUMERICAL heat identity t= 0.01 error= 3.1529e-45
+NUMERICAL heat identity t= 0.001 error= 2.1729e-43
+FINITE-EXACT theta doubling coefficients through exponent20: [1, 0, 4, 0, 4, 0, 0, 0, 4, 0, 8, 0, 0, 0, 0, 0, 4, 0, 4, 0, 8]

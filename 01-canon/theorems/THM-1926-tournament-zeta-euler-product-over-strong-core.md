@@ -5,7 +5,7 @@ status: >
   VERIFIED (boxeph-2026-07-21-S195), exact integer arithmetic over all 74 iso classes n≤6:
   det(I−uA)=∏_SCC det(I−uA(SCC)) (0 mismatches); acyclic ⇒ det(I−uA)=1 ⇒ ζ=1; prime-cycle counts
   π_ℓ non-negative integers (Möbius inversion of N_k); complement-invariance ζ_T=ζ_{T^op}; N_3=3c3;
-  N_1=N_2=0. Circulant atoms: N_k=tr(A^k)=Σ_j λ_j^k (Paley n=7,11,19, |λ_nonPerron|=√n Gauss sum).
+  N_1=N_2=0. Circulant atoms: N_k=tr(A^k)=Σ_j λ_j^k (Paley n=7,11,19, |λ_nonPerron|=√(n+1)/2 for adjacency A).
   Standard facts used: det(I−uA)=Σ char_A-coeffs·u^j; the Bowen–Lanford Euler product for a subshift
   of finite type; block-triangular determinant. char_A(T)=∏char_A(SCC) is the spectral side of
   THM-1925/THM-1830; new here is the closed-orbit/Euler-product reading, the ζ=1-on-wandering-set
@@ -62,9 +62,11 @@ but `c6` is nonspectral for every ambient order `n>=6`. The zeta identity here s
 functional-equation-like symmetry tying ζ to the SC/complement (blue) lore. The **poles are at
 `u = 1/λ`** for eigenvalues `λ`; the trace formula `N_k = Σ_j λ_j^k` is the periodic-orbit ↔
 spectrum duality (the tournament "explicit formula"). For the circulant atoms the `λ_j` are
-character sums: **Gauss sums** for Paley (`|λ| = √n`, Re = −½; verified n=7,11,19), **Dirichlet =
+character sums: **Gauss sums** for Paley (`λ_nonPerron = (−1 ± i√n)/2`, so `|λ_nonPerron| = √(n+1)/2`, Re = −½; verified n=7,11,19), **Dirichlet =
 Chebyshev-U** for interval circulants (THM-1925). So the zeta's poles are reciprocals of
 trigonometric numbers.
+
+**Normalization correction, 2026-10-23:** the preceding modulus belongs to adjacency `A`. The skew matrix `S=A−Aᵀ` instead has nonzero eigenvalues `±i√n`, of modulus `√n`; the THM-1880 skew reference above is unchanged. The Euler product, SCC factorization and trace identities are unaffected.
 
 ## The one line
 

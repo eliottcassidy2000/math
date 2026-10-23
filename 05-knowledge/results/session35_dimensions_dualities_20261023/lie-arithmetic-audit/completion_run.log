@@ -1,0 +1,35 @@
+{
+  "original": {
+    "0": 133,
+    "1": 56,
+    "2": 1
+  },
+  "paired_but_impossible_under_theorem": {
+    "-2": 1,
+    "-1": 56,
+    "0": 133,
+    "1": 56,
+    "2": 1
+  },
+  "minimum_realized_E8": {
+    "-2": 1,
+    "-1": 56,
+    "0": 134,
+    "1": 56,
+    "2": 1
+  },
+  "nonunimodular_parabolic": {
+    "0": 134,
+    "1": 56,
+    "2": 1
+  },
+  "cotangent_positive_control": {
+    "-2": 1,
+    "-1": 56,
+    "0": 266,
+    "1": 56,
+    "2": 1
+  },
+  "parabolic_grading_trace": 58,
+  "logical_scope": "Numerical checks only; no structure constants or Jacobi verification. The proof excludes247 despite zero trace."
+}

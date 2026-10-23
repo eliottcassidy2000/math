@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "scope": "Initial Lie note, homogeneous metric completion addendum, and arithmetic note only; excludes any later Singer/projective-plane addendum.",
+  "checks": [
+    "independent rational E8 roots",
+    "all N57 minimal-model factors and two A identities",
+    "all111 Leyland pairs and12 Blum rows via independent trial division",
+    "3364 literal path deletion/CRT fibre comparisons",
+    "primary-source hypotheses spot checks",
+    "proof audit of homogeneous248 minimum and generalized bound"
+  ],
+  "files": {
+    "lie/RESEARCH_NOTE.md": "a4d3e1a25122f2fa18b06c8b1272b5edbd5e522b16c80760356117e3c54a391b",
+    "lie/exact_checks.py": "141d90cbf0f26c3196565975a640b76eb664c311cecfaaea322a5e0f5545e30b",
+    "lie/exact_checks.json": "1aa6689f5193d8dccf02889cd2966622011c9346cd5a92472296953d315e53ff",
+    "lie/COMPLETION_ADDENDUM.md": "1b9272a4cf5ca557cb7b0d1075e00714aa4e3ce81e03b493249b1bdf3f1db0cd",
+    "lie/completion_checks.py": "5218c7e883922b420c2f92f8d446dfecccfad683b7126551117bedf29823c09f",
+    "lie/completion_checks.json": "4e7854597fb797ba3329d6b4d92ed930a1282fe7346dbd3faf45ba83fec7cec9",
+    "arithmetic/ARITHMETIC.md": "af14b987dcb9230eb2313a46f23db239f0dd1f080ae21f03b209842c245e2aaa",
+    "arithmetic/check.py": "d7a16dc47aa72e52ae2d391ddae25975a285262be7c48cef42fb9524afb6d23e",
+    "arithmetic/receipt.json": "5cb28c22f61a0a856c015ac932a4c675ddbae6b8e1edeee27ee99ab8593d8f5d"
+  }
+}
