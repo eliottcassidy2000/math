@@ -1,0 +1,17 @@
+{
+  "dyadic_producer": {
+    "hash_mode": "LF-normalized",
+    "path": "05-knowledge/results/metagraph_order8_electrical_20261023/check.py",
+    "sha256": "587f40058a9a9296b93fa0159f610491edf97852492dacfc5e65b02f01eebf08"
+  },
+  "edges": {
+    "hash_mode": "raw",
+    "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+    "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+  },
+  "electrical_receipt": {
+    "hash_mode": "LF-normalized",
+    "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+    "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  }
+}

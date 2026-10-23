@@ -1,0 +1,30 @@
+{
+  "status": "FINITE-EXACT independent audit",
+  "checks": 125,
+  "literal_source_ports_per_state": 16,
+  "literal_target_ports_per_state": 16,
+  "image_certificates": 3,
+  "nonzero_Laplacian_rows": 8,
+  "accepted_eight_slot_states": [
+    "00000000",
+    "01110111",
+    "10001000",
+    "11111111"
+  ],
+  "exact_implication_blocks": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7
+    ]
+  ],
+  "all_dyadic_extension_dependency": "original certified 2-primary exponent256",
+  "claim": "Actual selected port block; universal original dyadic aggregate guards; not all-modulus or full native rewiring."
+}

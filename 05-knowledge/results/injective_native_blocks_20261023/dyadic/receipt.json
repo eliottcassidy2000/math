@@ -1,0 +1,27 @@
+{
+  "status": "FINITE-EXACT controls; general proof in TRANSPORT_LIFTS.md",
+  "binary_image_cases": 7056,
+  "dyadic_lift_cases": 1747,
+  "checks": 10554,
+  "resource_hostile": {
+    "base": [
+      1,
+      1
+    ],
+    "unrestricted_lifts_mod4": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "box": [
+      0,
+      1
+    ]
+  },
+  "scope": "No path existence, no native electrical input, no all-size wiring claim."
+}

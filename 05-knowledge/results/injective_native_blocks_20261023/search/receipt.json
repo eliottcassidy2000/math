@@ -1,0 +1,731 @@
+{
+  "status": "FINITE-EXACT selected native circuits; direct full image certificates prove universal mod256 current preservation; all-dyadic extension uses electrical exponent theorem",
+  "source_file_hashes": {
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "hash_policy": "raw gzip bytes; text bytes normalized CRLF to LF",
+  "sources": [
+    {
+      "source": 1394,
+      "canon": 19275826,
+      "H": 467,
+      "aut": 1,
+      "x": 113,
+      "sigma": [
+        3,
+        0,
+        1,
+        1,
+        1
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              2,
+              4,
+              6,
+              1,
+              5,
+              7,
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 4,
+          "paths": [
+            [
+              2,
+              4,
+              3,
+              1,
+              5,
+              7,
+              6,
+              0
+            ],
+            [
+              3,
+              2,
+              1,
+              5,
+              7,
+              4,
+              6,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 1425,
+      "canon": 33735436,
+      "H": 313,
+      "aut": 1,
+      "x": 158,
+      "sigma": [
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 4,
+          "paths": [
+            [
+              4,
+              1,
+              7,
+              3,
+              5,
+              6,
+              2,
+              0
+            ],
+            [
+              5,
+              6,
+              3,
+              4,
+              7,
+              2,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              5,
+              2,
+              3,
+              4,
+              7,
+              6,
+              1,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 1477,
+      "canon": 17080370,
+      "H": 259,
+      "aut": 1,
+      "x": 152,
+      "sigma": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              6,
+              3,
+              1,
+              4,
+              5,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              6,
+              5,
+              1,
+              4,
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 1841,
+      "canon": 25727500,
+      "H": 467,
+      "aut": 1,
+      "x": 99,
+      "sigma": [
+        3,
+        0,
+        0,
+        0,
+        1
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              6,
+              1,
+              7,
+              3,
+              4,
+              2,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              6,
+              1,
+              3,
+              4,
+              7,
+              2,
+              0,
+              5
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 1921,
+      "canon": 50471048,
+      "H": 323,
+      "aut": 1,
+      "x": 217,
+      "sigma": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              2,
+              4,
+              1,
+              5,
+              3,
+              6,
+              0
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              6,
+              4,
+              1,
+              5,
+              3,
+              2,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 2185,
+      "canon": 25337892,
+      "H": 351,
+      "aut": 1,
+      "x": 138,
+      "sigma": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              2,
+              1,
+              0,
+              5,
+              6,
+              4,
+              3
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              7,
+              6,
+              1,
+              0,
+              5,
+              2,
+              4,
+              3
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "source": 2837,
+      "canon": 38143056,
+      "H": 559,
+      "aut": 1,
+      "x": 223,
+      "sigma": [
+        3,
+        1,
+        0,
+        1,
+        0
+      ],
+      "capacities": [
+        {
+          "target": 1965,
+          "blue": 0,
+          "black": 4,
+          "paths": [
+            [
+              1,
+              0,
+              6,
+              2,
+              7,
+              5,
+              4,
+              3
+            ],
+            [
+              1,
+              4,
+              0,
+              6,
+              2,
+              7,
+              5,
+              3
+            ]
+          ]
+        },
+        {
+          "target": 2234,
+          "blue": 0,
+          "black": 2,
+          "paths": [
+            [
+              1,
+              4,
+              6,
+              2,
+              7,
+              5,
+              0,
+              3
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "targets": [
+    1965,
+    2234
+  ],
+  "target_X": [
+    146,
+    146
+  ],
+  "target_sigma": [
+    [
+      2,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      0,
+      1,
+      1
+    ]
+  ],
+  "circuits": [
+    {
+      "name": "first",
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "charge": {
+        "1425": -1,
+        "1477": 1,
+        "1921": -1,
+        "2837": 1
+      },
+      "integer_X_debt": {
+        "1425": 0,
+        "1477": 0,
+        "1921": 0,
+        "2837": 0,
+        "1965": 0,
+        "2234": 0
+      },
+      "accepted_binary_states": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "sharp_slot_budget": 4,
+      "owner_clock_occurrences": 8
+    },
+    {
+      "name": "second_reversed",
+      "slots": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "charge": {
+        "1394": 1,
+        "1477": -1,
+        "1841": -1,
+        "2185": 1
+      },
+      "integer_X_debt": {
+        "1394": 0,
+        "1477": 0,
+        "1841": 0,
+        "2185": 0,
+        "1965": 0,
+        "2234": 0
+      },
+      "accepted_binary_states": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "sharp_slot_budget": 4,
+      "owner_clock_occurrences": 9
+    },
+    {
+      "name": "six",
+      "slots": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "charge": {
+        "1394": 1,
+        "1425": -1,
+        "1841": -1,
+        "1921": -1,
+        "2185": 1,
+        "2837": 1
+      },
+      "integer_X_debt": {
+        "1394": 0,
+        "1425": 0,
+        "1841": 0,
+        "1921": 0,
+        "2185": 0,
+        "2837": 0,
+        "1965": 0,
+        "2234": 0
+      },
+      "accepted_binary_states": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "sharp_slot_budget": 6,
+      "owner_clock_occurrences": 13
+    }
+  ],
+  "eight_slot_accepted_states": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "eight_slot_sharp_connected_move_budget": 6,
+  "normalized_endpoint_inventories": [
+    {
+      "source_words": [
+        1206133,
+        1451837,
+        1332248,
+        21593,
+        1779242,
+        541623,
+        923390,
+        1005174,
+        1210236,
+        423741,
+        1880731,
+        1662787,
+        944802,
+        623470,
+        1641086,
+        968355
+      ],
+      "inverse_target_words": [
+        891018,
+        645314,
+        764903,
+        2075558,
+        317909,
+        1555528,
+        1173761,
+        1091977,
+        886915,
+        1673410,
+        216420,
+        434364,
+        1152349,
+        1473681,
+        456065,
+        1128796
+      ]
+    },
+    {
+      "source_words": [
+        1210236,
+        423741,
+        1398360,
+        284377,
+        1812330,
+        814007,
+        660606,
+        939062,
+        1206133,
+        1451837,
+        1176158,
+        941961,
+        672418,
+        590382,
+        593790,
+        976562
+      ],
+      "inverse_target_words": [
+        886915,
+        1673410,
+        698791,
+        1812774,
+        284821,
+        1283144,
+        1436545,
+        1158089,
+        891018,
+        645314,
+        920993,
+        1155190,
+        1424733,
+        1506769,
+        1503361,
+        1120589
+      ]
+    }
+  ],
+  "fixed_background_omit_endpoint_words": [
+    21593,
+    216420,
+    284377,
+    284821,
+    317909,
+    423741,
+    434364,
+    456065,
+    541623,
+    590382,
+    593790,
+    623470,
+    645314,
+    660606,
+    672418,
+    698791,
+    764903,
+    814007,
+    886915,
+    891018,
+    920993,
+    923390,
+    939062,
+    941961,
+    944802,
+    968355,
+    976562,
+    1005174,
+    1091977,
+    1120589,
+    1128796,
+    1152349,
+    1155190,
+    1158089,
+    1173761,
+    1176158,
+    1206133,
+    1210236,
+    1283144,
+    1332248,
+    1398360,
+    1424733,
+    1436545,
+    1451837,
+    1473681,
+    1503361,
+    1506769,
+    1555528,
+    1641086,
+    1662787,
+    1673410,
+    1779242,
+    1812330,
+    1812774,
+    1880731,
+    2075558
+  ],
+  "per_slot_universal_phase_hostile": {
+    "character": "4e_1965",
+    "difference": 4,
+    "harmonic_mod8": true
+  },
+  "checks": 284,
+  "scope": "selected injective converse-closed inventory with an explicitly unoccupied reservoir; unchanged full native atlas; aggregate all-bank current preservation differs from per-slot universal phase preservation"
+}

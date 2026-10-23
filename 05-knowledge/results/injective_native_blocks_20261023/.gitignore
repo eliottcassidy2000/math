@@ -1,0 +1,4 @@
+search/cache_*.json
+search/candidate_blocks.json
+**/__pycache__/
+*.log

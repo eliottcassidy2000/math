@@ -1,0 +1,114 @@
+{
+  "status": "PROVED and FINITE-EXACT on declared carriers",
+  "source_sha256": {
+    "session44_guarded_native_moves_20261023/coupled-moves/THEOREM.md": "de1d740e1b64f591c97416dd1623bfa017c508b88f947ac78943451471df654d",
+    "session44_guarded_native_moves_20261023/stable-padding/THEOREM.md": "82e427b16d1c250aa2f6d4642c3d9125b7f85b3f0f712ed7be0388ede098406b"
+  },
+  "abstract": {
+    "formulas": 4784,
+    "satisfiable_formulas": 3633,
+    "random_full_record_packets": 400,
+    "hostile": "A requires shared owner1 while B requires shared owner0"
+  },
+  "native": {
+    "core_code": 29558785,
+    "core_paths": 409,
+    "core_automorphisms": 1,
+    "strong_cycle": [
+      0,
+      4,
+      1,
+      5,
+      2,
+      6,
+      7,
+      3
+    ],
+    "strong_target_cycle": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      7,
+      1,
+      5
+    ],
+    "hosts": 36,
+    "families": [
+      {
+        "sources": 1,
+        "order": 9,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 1,
+        "actual_clock_occurrences": 2,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 8
+      },
+      {
+        "sources": 2,
+        "order": 11,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 2,
+        "actual_clock_occurrences": 4,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 16
+      },
+      {
+        "sources": 3,
+        "order": 13,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 3,
+        "actual_clock_occurrences": 6,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 24
+      },
+      {
+        "sources": 4,
+        "order": 15,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 4,
+        "actual_clock_occurrences": 8,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 32
+      },
+      {
+        "sources": 5,
+        "order": 17,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 5,
+        "actual_clock_occurrences": 10,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 40
+      },
+      {
+        "sources": 6,
+        "order": 19,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 6,
+        "actual_clock_occurrences": 12,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 48
+      },
+      {
+        "sources": 7,
+        "order": 21,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 7,
+        "actual_clock_occurrences": 14,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 56
+      },
+      {
+        "sources": 8,
+        "order": 23,
+        "legal_packets": 2,
+        "sharp_source_slot_budget": 8,
+        "actual_clock_occurrences": 16,
+        "distinct_changed_shared_variables": 2,
+        "reserved_endpoint_ports": 64
+      }
+    ]
+  },
+  "checks": 180006
+}
