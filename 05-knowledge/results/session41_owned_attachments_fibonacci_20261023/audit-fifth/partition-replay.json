@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 374,
+  "largest_tested_cover_clock": [
+    11001,
+    144
+  ],
+  "scope": "occurrence-dependent compatible prefixes; no shared dictionary claimed",
+  "old35_canonical": "C",
+  "old35_retained_pin": "B"
+}

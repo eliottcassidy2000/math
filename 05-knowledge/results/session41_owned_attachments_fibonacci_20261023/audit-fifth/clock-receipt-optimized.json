@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "method": "substitution only, no radical floors",
+  "first_5000_residue_count": 95,
+  "modulus": 144,
+  "first_full_coverage_occurrence": 11001
+}

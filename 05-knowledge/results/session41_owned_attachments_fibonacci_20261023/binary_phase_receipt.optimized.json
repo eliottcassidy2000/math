@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "checks": 1548,
+  "subgroups": [
+    {
+      "order": 1,
+      "owner_sections": 3,
+      "commutant_dimension": 4,
+      "invertible_commutants": 6,
+      "allowed_rotation_commutants": 3
+    },
+    {
+      "order": 2,
+      "owner_sections": 1,
+      "commutant_dimension": 2,
+      "invertible_commutants": 2,
+      "allowed_rotation_commutants": 1
+    },
+    {
+      "order": 2,
+      "owner_sections": 1,
+      "commutant_dimension": 2,
+      "invertible_commutants": 2,
+      "allowed_rotation_commutants": 1
+    },
+    {
+      "order": 3,
+      "owner_sections": 0,
+      "commutant_dimension": 2,
+      "invertible_commutants": 3,
+      "allowed_rotation_commutants": 3
+    },
+    {
+      "order": 2,
+      "owner_sections": 1,
+      "commutant_dimension": 2,
+      "invertible_commutants": 2,
+      "allowed_rotation_commutants": 1
+    },
+    {
+      "order": 6,
+      "owner_sections": 0,
+      "commutant_dimension": 1,
+      "invertible_commutants": 1,
+      "allowed_rotation_commutants": 1
+    }
+  ],
+  "dyadic_clocks": [
+    {
+      "s": 1,
+      "order": 3
+    },
+    {
+      "s": 2,
+      "order": 6
+    },
+    {
+      "s": 3,
+      "order": 12
+    },
+    {
+      "s": 4,
+      "order": 24
+    },
+    {
+      "s": 5,
+      "order": 48
+    },
+    {
+      "s": 6,
+      "order": 96
+    },
+    {
+      "s": 7,
+      "order": 192
+    },
+    {
+      "s": 8,
+      "order": 384
+    },
+    {
+      "s": 9,
+      "order": 768
+    },
+    {
+      "s": 10,
+      "order": 1536
+    },
+    {
+      "s": 11,
+      "order": 3072
+    },
+    {
+      "s": 12,
+      "order": 6144
+    }
+  ],
+  "scope": "exact 3-owner permutation carrier; zero vector excluded and internal chart restrictions retained"
+}

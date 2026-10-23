@@ -1,0 +1,167 @@
+{
+  "arithmetic_hostiles_same_color_and_mod4": {
+    "prime_A": [
+      2,
+      10,
+      true,
+      false
+    ],
+    "prime_B": [
+      3,
+      55,
+      true,
+      false
+    ],
+    "prime_C": [
+      9,
+      17,
+      false,
+      true
+    ],
+    "two_squares_A": [
+      2,
+      54,
+      true,
+      false
+    ],
+    "two_squares_B": [
+      8,
+      24,
+      true,
+      false
+    ],
+    "two_squares_C": [
+      4,
+      12,
+      true,
+      false
+    ]
+  },
+  "carry_examples": {
+    "-1": [
+      1,
+      1
+    ],
+    "0": [
+      0,
+      0
+    ],
+    "1": [
+      2,
+      2
+    ]
+  },
+  "disjoint_transfer_monomials": 3363,
+  "full_transfer_monomials": 7921,
+  "gaussian_nonzero_square_zero": [
+    [
+      1,
+      1
+    ]
+  ],
+  "goldbach_even_bound": 2000,
+  "goldbach_no_missing_finite_only": true,
+  "golden_nonzero_square_zero": [],
+  "historical_branch_pair": {
+    "canonical": "CC",
+    "historical": "CB",
+    "pair": [
+      1,
+      35
+    ],
+    "sum": 36
+  },
+  "mod3_algebra_pairs": 81,
+  "overlap_zero_carry": [
+    3,
+    3
+  ],
+  "pair_bound": 300,
+  "pair_tests": 90601,
+  "product_hostile": [
+    2,
+    2,
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "selected_goldbach_partitions": {
+    "10": {
+      "bins": {
+        "AA:0": 1,
+        "AB:0": 1,
+        "BA:0": 1
+      },
+      "total": 3
+    },
+    "100": {
+      "bins": {
+        "AB:0": 1,
+        "AC:0": 3,
+        "BA:0": 1,
+        "BB:0": 4,
+        "CA:0": 3
+      },
+      "total": 12
+    },
+    "1000": {
+      "bins": {
+        "AA:0": 2,
+        "AB:0": 15,
+        "AC:0": 7,
+        "BA:0": 15,
+        "CA:0": 7,
+        "CC:-1": 10
+      },
+      "total": 56
+    },
+    "2000": {
+      "bins": {
+        "AA:0": 6,
+        "AB:0": 15,
+        "AC:0": 5,
+        "BA:0": 15,
+        "CA:0": 5,
+        "CC:-1": 28
+      },
+      "total": 74
+    },
+    "34": {
+      "bins": {
+        "AB:0": 3,
+        "BA:0": 3,
+        "CC:-1": 1
+      },
+      "total": 7
+    },
+    "36": {
+      "bins": {
+        "AA:0": 4,
+        "AB:0": 1,
+        "BA:0": 1,
+        "CC:-1": 2
+      },
+      "total": 8
+    },
+    "70": {
+      "bins": {
+        "AA:0": 2,
+        "AB:0": 1,
+        "BA:0": 1,
+        "BC:-1": 2,
+        "CB:-1": 2,
+        "CC:-1": 2
+      },
+      "total": 10
+    }
+  },
+  "status": "PASS",
+  "transfer_positions": 9,
+  "triple_bound": 30,
+  "universal_quadratic_norm_tests": 15625
+}

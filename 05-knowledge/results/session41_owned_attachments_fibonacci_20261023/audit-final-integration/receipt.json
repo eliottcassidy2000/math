@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "be149270b06d4b48d0f4d6e142f2ed5ceee6c3deec76b2a8357f85d05a474d1a",
+  "reviewed_delta": [
+    "SYNTHESIS.md section8",
+    "README.md",
+    "RESEARCH_MAP.md"
+  ],
+  "verified_root_files": [
+    "README.md",
+    "SYNTHESIS.md",
+    "RESEARCH_MAP.md",
+    "COLORED_GRID_AND_PHASE_QUOTIENT.md",
+    "BINARY_PHASE_DICTIONARY.md",
+    "BRANCH_PARTITION_FUNCTIONS.md",
+    "check_colored_grid.py",
+    "check_binary_phase_dictionary.py",
+    "check_branch_partition_functions.py",
+    "colored_grid_receipt.json",
+    "colored_grid_receipt.optimized.json",
+    "binary_phase_receipt.json",
+    "binary_phase_receipt.optimized.json",
+    "branch_partition_receipt.json",
+    "branch_partition_receipt.optimized.json"
+  ],
+  "source_hashes": {
+    "SYNTHESIS.md": "d0e329e5abe37f68c1ee43950c08ec4e5dadb8a2d884d1e7b3e6adf4c0501892",
+    "README.md": "b55cdf7fa1490b2873d3f8c3472aa268d534e79bcae0f6cc0e9b07a5b9ec5dc1",
+    "RESEARCH_MAP.md": "cfa3507d4c0409454a8387e46240120407944c86e23ceb74ed594f2c10895971"
+  },
+  "remaining_issues": [],
+  "frozen_files_modified": false
+}

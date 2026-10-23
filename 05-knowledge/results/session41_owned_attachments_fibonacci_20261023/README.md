@@ -1,10 +1,13 @@
-# Session41 — owned attachment compatibility and three-unit Fibonacci rows
+# Session41 — compatible attachments and both Fibonacci branches
 
-Session in progress. Coherent proof checkpoints are published while the actual order31 attachment and phase audits continue.
+Start with [SYNTHESIS.md](SYNTHESIS.md) for the results, exact scopes and remaining obligations.
 
-- [Research map](RESEARCH_MAP.md): inherited mechanisms and current scope.
-- [Fibonacci grammar and canonical rows](fibonacci/RESULTS.md): zero deletion, representation fibres and the current-prefix model.
-- [Residual integer trades](residual-cycles/README.md): basepoint certificates retaining shared variables.
-- Independent audit packets accompany each frozen result.
+- [Actual shared-root charts](attachments/SHARED_GAUGE_CRITERION.md) and [order31 indexed flags](attachments/ONE_OWNED_ARC_AT_ORDER31.md).
+- [Infinite native arc-observation family](native-arc-family/INFINITE_ARC_FLAG_GAP.md) and [sharp window threshold](window-extension/WINDOW_THEOREM.md).
+- [Coupled integer moves](residual-cycles/README.md) and [owner-indexed enumerators](residual-cycles/OWNER_INDEXED_ENUMERATORS.md).
+- [Fibonacci grammar](fibonacci/RESULTS.md), [complete branch language](fibonacci/BRANCH_ADDENDUM.md), [exact diagonal grid](COLORED_GRID_AND_PHASE_QUOTIENT.md), and [branch partition functions](BRANCH_PARTITION_FUNCTIONS.md).
+- [Binary phase dictionary](BINARY_PHASE_DICTIONARY.md) and [additive supports / quadratic norms](additive/RESULTS.md).
+- [Late incoming small-cell canonicalization](audit-late-incoming/INTEGRATION.md), with its supplied-partition scope.
+- [Research map](RESEARCH_MAP.md) and independently pinned audit packets.
 
-The older stripe's color at35 remains a separate unresolved convention question. No complete all-size compressed tournament-wiring, Collatz or Hamiltonian-gap theorem is claimed.
+The canonical stripe and old35B are both retained in precisely stated universes. A shared global expansion dictionary, compact all-size native wiring, Goldbach and Collatz are not declared solved.

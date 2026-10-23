@@ -15,3 +15,5 @@ Concept board:
 The recurring obstruction is taking separate marginals before joining at a shared owner. The desired repair must name the carrier, retain the common variables, and prove that its feasible global states are exactly the objects claimed. A potential certificate on the wrong relaxation cannot establish native wiring uniqueness.
 
 Every successful connection is scoped: the same relational operation can occur in different subjects without identifying their objects or transferring an open conjecture. The session keeps converse, actual path positions, electrical mod8 guards and integer clocks as separate coordinates unless an explicit map preserves them.
+
+Late integration: incoming 3f1a9a2c supplies source-only canonicalization on named equitable 1/3/5/7-cell carriers, and exact fixed-type joint alignment quotients. This closes that supplied-source obligation, not unrestricted native-port reconstruction. See audit-late-incoming/INTEGRATION.md.

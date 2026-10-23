@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "family": [
+    {
+      "minimum_unindexed_window_arcs": 1,
+      "q": 3,
+      "order": 15,
+      "orbit_size": 3,
+      "minimum_arc_survivors": 1,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    },
+    {
+      "minimum_unindexed_window_arcs": 5,
+      "q": 7,
+      "order": 31,
+      "orbit_size": 21,
+      "minimum_arc_survivors": 3,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    },
+    {
+      "minimum_unindexed_window_arcs": 5,
+      "q": 11,
+      "order": 47,
+      "orbit_size": 55,
+      "minimum_arc_survivors": 5,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    },
+    {
+      "minimum_unindexed_window_arcs": 5,
+      "q": 19,
+      "order": 79,
+      "orbit_size": 171,
+      "minimum_arc_survivors": 9,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    },
+    {
+      "minimum_unindexed_window_arcs": 5,
+      "q": 23,
+      "order": 95,
+      "orbit_size": 253,
+      "minimum_arc_survivors": 11,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    },
+    {
+      "minimum_unindexed_window_arcs": 5,
+      "q": 31,
+      "order": 127,
+      "orbit_size": 465,
+      "minimum_arc_survivors": 15,
+      "two_arc_survivors": 1,
+      "indexed_flag_survivors": 1
+    }
+  ]
+}

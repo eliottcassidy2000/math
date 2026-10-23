@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SCOPED_INTEGRATION_REVIEW",
+  "commit": "3f1a9a2c09d230bd77b141aabefd9458b031f707",
+  "source_hashes": {
+    "05-knowledge/results/odd_cell_completion_20261023/README.md": "8f3415ae4aba7f4e450e76ea1a47c514e21e2d228cae62c5b4f38aeabf7d465b",
+    "05-knowledge/results/odd_cell_completion_20261023/NETWORKS.md": "c05f15f8df55d16fe1ac84024def1c99be80b319310009838f1ce5f330c32020",
+    "05-knowledge/results/odd_cell_completion_20261023/seven/CANONICAL.md": "e8f312f4d876e0819f29362486bb731edfc7e1e9ce835cc71bed1694e854e55c"
+  },
+  "finite_censuses_replayed": false,
+  "scope": "Bounded README/NETWORKS and canonicalizer proof review; no unrestricted wiring or enumeration claim",
+  "git_writes": false
+}

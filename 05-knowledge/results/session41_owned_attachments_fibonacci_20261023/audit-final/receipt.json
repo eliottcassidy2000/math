@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Final synthesis and index mathematical scope; complete root manifest byte/hash verification",
+  "root_manifest_sha256": "de1bf6e58f9eeb49d650b8d36eb9098b6f3eaa6b55061dd788779babcee23231",
+  "synthesis_sha256": "58ee0c47b95ef6ff62ac8cf2793930fb5581a3628526bcc9bc8952b9895cb581",
+  "index_sha256": "c13153f69df0ead191334d56831f0a64b24d716c15663faf44ff72a8dbd298eb",
+  "verified_root_files": [
+    "README.md",
+    "SYNTHESIS.md",
+    "RESEARCH_MAP.md",
+    "COLORED_GRID_AND_PHASE_QUOTIENT.md",
+    "BINARY_PHASE_DICTIONARY.md",
+    "BRANCH_PARTITION_FUNCTIONS.md",
+    "check_colored_grid.py",
+    "check_binary_phase_dictionary.py",
+    "check_branch_partition_functions.py",
+    "colored_grid_receipt.json",
+    "colored_grid_receipt.optimized.json",
+    "binary_phase_receipt.json",
+    "binary_phase_receipt.optimized.json",
+    "branch_partition_receipt.json",
+    "branch_partition_receipt.optimized.json"
+  ],
+  "remaining_proof_blockers": [],
+  "publication_status": "Not assessed here; parent and sole publisher own Git verification"
+}
