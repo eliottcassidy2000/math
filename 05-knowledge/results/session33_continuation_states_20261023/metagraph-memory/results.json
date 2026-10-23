@@ -1,0 +1,454 @@
+[
+  {
+    "n": 3,
+    "tilings": 2,
+    "nodes": 2,
+    "pair_states": 2,
+    "colored_pair_states": 2,
+    "mixed": [],
+    "positive_realization_checks": 14,
+    "components": 1,
+    "bipartite_components": 1,
+    "defect_rank": 0,
+    "linear_dimension": 2,
+    "A": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "fibres": [
+      1,
+      1
+    ],
+    "node": [
+      1,
+      0
+    ],
+    "colors": [
+      "blue",
+      "blue"
+    ],
+    "memory_checks": 5,
+    "projected_time_checks": 7,
+    "markov_failure": false
+  },
+  {
+    "n": 4,
+    "tilings": 8,
+    "nodes": 3,
+    "pair_states": 5,
+    "colored_pair_states": 5,
+    "mixed": [],
+    "positive_realization_checks": 56,
+    "components": 1,
+    "bipartite_components": 0,
+    "defect_rank": 2,
+    "linear_dimension": 5,
+    "A": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        2
+      ]
+    ],
+    "fibres": [
+      1,
+      2,
+      5
+    ],
+    "node": [
+      2,
+      2,
+      2,
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "colors": [
+      "blue",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "blue"
+    ],
+    "memory_checks": 5,
+    "projected_time_checks": 7,
+    "markov_failure": true
+  },
+  {
+    "n": 5,
+    "tilings": 64,
+    "nodes": 10,
+    "pair_states": 38,
+    "colored_pair_states": 38,
+    "mixed": [],
+    "positive_realization_checks": 448,
+    "components": 1,
+    "bipartite_components": 0,
+    "defect_rank": 9,
+    "linear_dimension": 19,
+    "A": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        2,
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        0,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        0,
+        2,
+        4,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "fibres": [
+      1,
+      2,
+      1,
+      10,
+      9,
+      9,
+      5,
+      13,
+      11,
+      3
+    ],
+    "node": [
+      5,
+      4,
+      7,
+      5,
+      8,
+      4,
+      8,
+      3,
+      7,
+      8,
+      6,
+      4,
+      9,
+      8,
+      7,
+      3,
+      7,
+      6,
+      9,
+      7,
+      8,
+      4,
+      8,
+      3,
+      6,
+      7,
+      7,
+      5,
+      7,
+      5,
+      5,
+      1,
+      4,
+      8,
+      6,
+      7,
+      4,
+      5,
+      4,
+      3,
+      8,
+      9,
+      7,
+      8,
+      8,
+      7,
+      5,
+      3,
+      5,
+      7,
+      7,
+      6,
+      3,
+      3,
+      3,
+      2,
+      4,
+      8,
+      5,
+      4,
+      3,
+      3,
+      1,
+      0
+    ],
+    "colors": [
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue",
+      "black",
+      "black",
+      "black",
+      "blue"
+    ],
+    "memory_checks": 5,
+    "projected_time_checks": 7,
+    "markov_failure": true
+  },
+  {
+    "n": 6,
+    "tilings": 1024,
+    "nodes": 34,
+    "pair_states": 356,
+    "colored_pair_states": 364,
+    "mixed": [
+      {
+        "pair": [
+          12,
+          14
+        ],
+        "blue": 521,
+        "black": 27
+      },
+      {
+        "pair": [
+          18,
+          14
+        ],
+        "blue": 545,
+        "black": 82
+      },
+      {
+        "pair": [
+          18,
+          25
+        ],
+        "blue": 581,
+        "black": 90
+      },
+      {
+        "pair": [
+          14,
+          12
+        ],
+        "blue": 502,
+        "black": 119
+      },
+      {
+        "pair": [
+          19,
+          24
+        ],
+        "blue": 266,
+        "black": 189
+      },
+      {
+        "pair": [
+          24,
+          19
+        ],
+        "blue": 757,
+        "black": 263
+      },
+      {
+        "pair": [
+          25,
+          18
+        ],
+        "blue": 442,
+        "black": 627
+      },
+      {
+        "pair": [
+          14,
+          18
+        ],
+        "blue": 478,
+        "black": 635
+      }
+    ],
+    "positive_realization_checks": 7168
+  }
+]

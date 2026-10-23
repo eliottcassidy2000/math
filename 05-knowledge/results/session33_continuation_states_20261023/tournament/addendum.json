@@ -1,0 +1,84 @@
+{
+  "bad_Hall_neighborhood_columns": [
+    0
+  ],
+  "bad_Hall_set_rows": [
+    0,
+    1
+  ],
+  "labelled_scores": [
+    3,
+    3,
+    2,
+    2,
+    4,
+    4,
+    3
+  ],
+  "matrices": [
+    [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  ],
+  "script_sha256": "d022c4f991fed679c4a29636e69f6e335ed55f9d1ebbb2355d9bb09e0b329e1b",
+  "small_margin_tables": 18,
+  "status": "PASS",
+  "top_a4": [
+    0,
+    6
+  ],
+  "triangle_checks": 1096,
+  "word_coefficient_vectors": [
+    [
+      0,
+      145,
+      150,
+      50,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      141,
+      152,
+      60,
+      6,
+      0,
+      0,
+      0
+    ]
+  ]
+}

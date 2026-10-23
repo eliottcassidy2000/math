@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "checks": 111,
+  "results": [
+    {
+      "n": 3,
+      "tilings": 2,
+      "nodes": 2,
+      "pair_states": 2,
+      "colored_states": 2,
+      "defect_rank": 0,
+      "linear_dimension": 2,
+      "components": 1,
+      "bipartite_components": 1,
+      "markov_failure": false
+    },
+    {
+      "n": 4,
+      "tilings": 8,
+      "nodes": 3,
+      "pair_states": 5,
+      "colored_states": 5,
+      "defect_rank": 2,
+      "linear_dimension": 5,
+      "components": 1,
+      "bipartite_components": 0,
+      "markov_failure": true
+    },
+    {
+      "n": 5,
+      "tilings": 64,
+      "nodes": 10,
+      "pair_states": 38,
+      "colored_states": 38,
+      "defect_rank": 9,
+      "linear_dimension": 19,
+      "components": 1,
+      "bipartite_components": 0,
+      "markov_failure": true
+    },
+    {
+      "n": 6,
+      "tilings": 1024,
+      "nodes": 34,
+      "pair_states": 356,
+      "colored_states": 364,
+      "mixed_witnesses": [
+        [
+          521,
+          27,
+          11,
+          16
+        ],
+        [
+          545,
+          82,
+          21,
+          16
+        ],
+        [
+          581,
+          90,
+          21,
+          27
+        ],
+        [
+          502,
+          119,
+          16,
+          11
+        ],
+        [
+          266,
+          189,
+          22,
+          28
+        ],
+        [
+          757,
+          263,
+          28,
+          22
+        ],
+        [
+          442,
+          627,
+          27,
+          21
+        ],
+        [
+          478,
+          635,
+          16,
+          21
+        ]
+      ]
+    }
+  ],
+  "independence": "Full relabeling without degree sorting; no producer imports; exact rational Gram and memory reconstruction."
+}

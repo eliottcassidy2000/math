@@ -1,0 +1,71 @@
+{
+  "K8_Gram_determinant": "1/16",
+  "checks": {
+    "K8_Gram_determinant": 1,
+    "Ryser_Hall_hostile": 1,
+    "automaton_Hall_hostile": 1,
+    "centered_coefficient_A2": 1096,
+    "full_word_vectors_match": 1,
+    "gram_pivot": 7,
+    "hypothetical_A3_A4_shift": 1,
+    "hypothetical_A5_probe": 1,
+    "same_labelled_scores": 1,
+    "signed_sum_induced_distance": 2187,
+    "signed_sum_injectivity": 2187,
+    "small_margin_minimality": 18,
+    "triangle_cover_A1": 1096,
+    "unit_difference_types": 1
+  },
+  "geometry_scale": 408850,
+  "geometry_signed_sum_vectors": 2187,
+  "hypothetical_unit_triangle_difference_F_prefix": [
+    "0",
+    "0",
+    "240",
+    "480",
+    "240"
+  ],
+  "scores": [
+    [
+      3,
+      3,
+      2,
+      2,
+      4,
+      4,
+      3
+    ],
+    [
+      3,
+      3,
+      2,
+      2,
+      4,
+      4,
+      3
+    ]
+  ],
+  "status": "PASS",
+  "word_coefficients": [
+    [
+      0,
+      145,
+      150,
+      50,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      141,
+      152,
+      60,
+      6,
+      0,
+      0,
+      0
+    ]
+  ]
+}

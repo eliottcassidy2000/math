@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checks": 2134,
+  "rows": [
+    {
+      "n": 3,
+      "tilings": 2,
+      "full_refinement": [
+        2,
+        2
+      ],
+      "tau_refinement": [
+        2,
+        2
+      ],
+      "pair_checks": 1,
+      "translated_indicator_rank": 2
+    },
+    {
+      "n": 4,
+      "tilings": 8,
+      "full_refinement": [
+        3,
+        7,
+        8,
+        8
+      ],
+      "tau_refinement": [
+        3,
+        5,
+        5
+      ],
+      "pair_checks": 28,
+      "translated_indicator_rank": 8
+    },
+    {
+      "n": 5,
+      "tilings": 64,
+      "full_refinement": [
+        10,
+        64,
+        64
+      ],
+      "tau_refinement": [
+        10,
+        38,
+        38
+      ],
+      "pair_checks": 2016,
+      "translated_indicator_rank": 64
+    }
+  ],
+  "source_pins": {
+    "ADDENDUM_FULL_FLIPS.md": "cb2042cb2f99d862bf74e62488b0f033bd16db397ef7b10dda3e98bd757db508",
+    "check_full_flips.py": "51d908b72a07beccb3c2a6307571f8cdceced4f79473dc85a2f18e0fe6952ab7",
+    "full_flips_receipt.json": "f36a2ce1a69112cf1dba22c6c0ca8b976595ca749fedeeceec2a8d74eee0c7c8"
+  }
+}
