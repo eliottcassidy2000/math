@@ -1,0 +1,167 @@
+{
+  "status": "PASS",
+  "birth_witnesses": 56,
+  "through32": [
+    {
+      "n": 25,
+      "paths": 10,
+      "words": 10,
+      "histograms": 10
+    },
+    {
+      "n": 26,
+      "paths": 12,
+      "words": 12,
+      "histograms": 11
+    },
+    {
+      "n": 27,
+      "paths": 35,
+      "words": 35,
+      "histograms": 25
+    },
+    {
+      "n": 28,
+      "paths": 52,
+      "words": 52,
+      "histograms": 38
+    },
+    {
+      "n": 29,
+      "paths": 19,
+      "words": 19,
+      "histograms": 19
+    },
+    {
+      "n": 30,
+      "paths": 20,
+      "words": 20,
+      "histograms": 20
+    },
+    {
+      "n": 31,
+      "paths": 349,
+      "words": 349,
+      "histograms": 292
+    },
+    {
+      "n": 32,
+      "paths": 392,
+      "words": 392,
+      "histograms": 339
+    }
+  ],
+  "independent_cpp_33_36": [
+    {
+      "n": 33,
+      "paths": 669,
+      "words": 669,
+      "histograms": 537,
+      "largest_word_fibre": 1,
+      "partial_paths_explored": 13834243
+    },
+    {
+      "n": 34,
+      "paths": 4041,
+      "words": 4041,
+      "histograms": 2158,
+      "largest_word_fibre": 1,
+      "partial_paths_explored": 47358366
+    },
+    {
+      "n": 35,
+      "paths": 17175,
+      "words": 17175,
+      "histograms": 5827,
+      "largest_word_fibre": 1,
+      "partial_paths_explored": 145789407
+    },
+    {
+      "n": 36,
+      "paths": 12960,
+      "words": 12957,
+      "histograms": 4947,
+      "largest_word_fibre": 2,
+      "partial_paths_explored": 272661152
+    }
+  ],
+  "order36_pair": [
+    [
+      6,
+      10,
+      26,
+      23,
+      2,
+      34,
+      30,
+      19,
+      17,
+      8,
+      1,
+      15,
+      21,
+      28,
+      36,
+      13,
+      3,
+      33,
+      31,
+      18,
+      7,
+      29,
+      35,
+      14,
+      22,
+      27,
+      9,
+      16,
+      20,
+      5,
+      11,
+      25,
+      24,
+      12,
+      4,
+      32
+    ],
+    [
+      6,
+      10,
+      26,
+      23,
+      13,
+      36,
+      28,
+      21,
+      15,
+      1,
+      8,
+      17,
+      19,
+      30,
+      34,
+      2,
+      14,
+      35,
+      29,
+      7,
+      18,
+      31,
+      33,
+      3,
+      22,
+      27,
+      9,
+      16,
+      20,
+      5,
+      11,
+      25,
+      24,
+      12,
+      4,
+      32
+    ]
+  ],
+  "order80_monochromatic_paths": 2
+}

@@ -1,0 +1,48 @@
+{
+  "status": "FROZEN",
+  "publication_directory": "audit-fourth/",
+  "files": [
+    {
+      "path": "FOURTH_AUDIT.md",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015",
+      "bytes": 3778
+    },
+    {
+      "path": "cycle-witness-replay.json",
+      "sha256": "5b33128e9c21f4d7c5018cd3637e7664a71e0990791afdc4a97e892eddc37cbf",
+      "bytes": 565
+    },
+    {
+      "path": "cycle-witness-replay.optimized.json",
+      "sha256": "5b33128e9c21f4d7c5018cd3637e7664a71e0990791afdc4a97e892eddc37cbf",
+      "bytes": 565
+    }
+  ],
+  "audited_sources": [
+    {
+      "path": "session40-root/LATE_INHERITANCE.md",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6",
+      "bytes": 5762
+    },
+    {
+      "path": "session40-root/SYNTHESIS.md",
+      "sha256": "d3b7e4d924c9c6079d66260c81a48098ed708612b4c99d2374be88dc0ace7804",
+      "bytes": 13134
+    },
+    {
+      "path": "session40-root/README.md",
+      "sha256": "cd3f3e82463452163c5097892ce7d591a48a2293008e81f71e4b899790dab758",
+      "bytes": 1613
+    },
+    {
+      "path": "session40-root/check_cycle_edge_optionality.py",
+      "sha256": "f29fcd3fe59c3a7d017c8bcc4bb0ab57a11cec22ecedde1bf5f5e106143a13f8",
+      "bytes": 1274
+    }
+  ],
+  "incoming_commit": "d45865c3323af6d1b3ce44525d6d4789b22778d7",
+  "reproduction_commands": [
+    "python ../check_cycle_edge_optionality.py",
+    "python -O ../check_cycle_edge_optionality.py"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "status": "FROZEN",
+  "publication_directory": "audit-third/",
+  "files": [
+    {
+      "path": "THIRD_AUDIT.md",
+      "sha256": "c888e9ec5747f4d10c7f561c76f2e137d46af6054b0628c0f1865cad35033909",
+      "bytes": 5355
+    },
+    {
+      "path": "check_color_extension.py",
+      "sha256": "7db002a931e73862f1f12d09d2a0ba2cd8133e72bfd74626105cc79d022e9042",
+      "bytes": 3118
+    },
+    {
+      "path": "check_color_words_cpp.cpp",
+      "sha256": "d4e29ae55c68b3fdd2e68178c53d73bc2fc194591856bde167b92f2ea92fea17",
+      "bytes": 1496
+    },
+    {
+      "path": "check_displacement_necklaces.py",
+      "sha256": "5ec86d6db6524ac71a15bb7cfe4f23deca5b759470421c17a92deebbb83812ce",
+      "bytes": 1855
+    },
+    {
+      "path": "check_five_cell_orbits.py",
+      "sha256": "184ecf59f04ed4af6cfbad207f380b4d475fe47aca6aac6c0e32a0850b58e59a",
+      "bytes": 2509
+    },
+    {
+      "path": "check_prime_matching_counts.py",
+      "sha256": "31a32f478cb7cbbf71d0fc4a2afaadf42ef974ae9e811a5d2d39d81e7308dcdb",
+      "bytes": 1338
+    },
+    {
+      "path": "color-extension-audit-receipt.json",
+      "sha256": "28c53280a937428ab63e5ea2c6d55ddd650c4d5db0c067634ebd6f04ff9f6f59",
+      "bytes": 2281
+    },
+    {
+      "path": "color-words-independent-cpp.txt",
+      "sha256": "0eef27be421ad3cae07bfd449a8ee439f225fe5efe443484d8fba5c5defffa62",
+      "bytes": 319
+    },
+    {
+      "path": "displacement-necklaces-audit.json",
+      "sha256": "ff3fc13f9cff190a7eb8f3d925238aa6533c69ff3c35c5c37171e66f6901a24f",
+      "bytes": 779
+    },
+    {
+      "path": "five-cell-orbits-audit-receipt.json",
+      "sha256": "dc65eaebcf39d02aeff754700134af6555397f9c47b3e707606e21f3c4d70bef",
+      "bytes": 2651
+    },
+    {
+      "path": "prime-matching-counts-audit.json",
+      "sha256": "cb8c9a8c70f03ee39b7fae472b6cce90ec52559b1525825af5809e540b55cf7b",
+      "bytes": 547
+    }
+  ],
+  "audited_sources": [
+    {
+      "path": "session40-root/PRIME_CELL_BURNSIDE_FORMULAS.md",
+      "sha256": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+      "bytes": 8785
+    },
+    {
+      "path": "session40-root/FIVE_CELL_MOD8_REPAIR.md",
+      "sha256": "d5130b43f684d85030b72513764bdf463a03edb62ec3bc592bfafa401f150348",
+      "bytes": 5826
+    },
+    {
+      "path": "session40-root/ENDPOINTS_DO_NOT_DETERMINE_WIRING.md",
+      "sha256": "7a0c1e7d4c239c468267ac5c46fb28d6313bf74fa5995b8531b6f454f8fa50d4",
+      "bytes": 3212
+    },
+    {
+      "path": "session40-root/PATH_SCATTER_AND_MARKING.md",
+      "sha256": "3b94d52a01b6b29d5e327cecc5ecc25abf826ece69442778e241595c74cfaec2",
+      "bytes": 4697
+    },
+    {
+      "path": "session40-root/SYNTHESIS.md",
+      "sha256": "632c270b99c3dd9aaebce86d6196de69c1ae0cb2114883c7a940cb33cf9240bf",
+      "bytes": 12407
+    },
+    {
+      "path": "session40-root/README.md",
+      "sha256": "601ed24137d34c71ad9d7a01c4d77d181164ec8f64e7cbf3712177daaf2c9442",
+      "bytes": 1486
+    },
+    {
+      "path": "session40-root/check_regular_block_coefficients.py",
+      "sha256": "93842b884be69a87a185e3ab951ad92208e1d3e45868b942a9447901b8f42ef5",
+      "bytes": 1814
+    },
+    {
+      "path": "session40-root/regular_block_coefficients_receipt.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "session40-root/regular_block_coefficients_receipt.optimized.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "session40-square-sum/PUBLICATION_MANIFEST.json",
+      "sha256": "8fe54d49b080d46a990678e611b5f3d93d30fd1079e2fe4295b05e993c1612cb",
+      "bytes": 1067
+    },
+    {
+      "path": "session40-square-sum/COLOR_PUBLICATION_MANIFEST.json",
+      "sha256": "a9d33e599dc731c00688aa5c3b62e4e8f41c70cf4d662139791b7b9dc9e7c05f",
+      "bytes": 1065
+    },
+    {
+      "path": "session40-square-sum/FIRST_FAILURE_PUBLICATION_MANIFEST.json",
+      "sha256": "6e14fde40a524632e9cbc6353e987bd8149f5b664d9a131c4e4b852dba67710a",
+      "bytes": 1113
+    }
+  ],
+  "reproduction_commands": [
+    "python check_five_cell_orbits.py",
+    "python -O check_five_cell_orbits.py",
+    "python check_prime_matching_counts.py",
+    "python -O check_prime_matching_counts.py",
+    "python check_displacement_necklaces.py",
+    "python -O check_displacement_necklaces.py",
+    "python check_color_extension.py",
+    "python -O check_color_extension.py"
+  ]
+}

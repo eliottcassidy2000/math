@@ -1,0 +1,126 @@
+{
+  "source_sha256": "0f18c13539176297e3e9c30e142ec3afbf7c10d3204570872d1fec06a4e4f8ac",
+  "ranks": [
+    {
+      "n": 15,
+      "paths": 1,
+      "edges": 15,
+      "endpoint_pairs": 1,
+      "max_endpoint_multiplicity": 1,
+      "total_scatter_rank": 0,
+      "within_endpoint_scatter_rank": 0,
+      "signless_incidence_rank": 15
+    },
+    {
+      "n": 16,
+      "paths": 1,
+      "edges": 16,
+      "endpoint_pairs": 1,
+      "max_endpoint_multiplicity": 1,
+      "total_scatter_rank": 0,
+      "within_endpoint_scatter_rank": 0,
+      "signless_incidence_rank": 16
+    },
+    {
+      "n": 17,
+      "paths": 1,
+      "edges": 17,
+      "endpoint_pairs": 1,
+      "max_endpoint_multiplicity": 1,
+      "total_scatter_rank": 0,
+      "within_endpoint_scatter_rank": 0,
+      "signless_incidence_rank": 17
+    },
+    {
+      "n": 23,
+      "paths": 3,
+      "edges": 28,
+      "endpoint_pairs": 3,
+      "max_endpoint_multiplicity": 1,
+      "total_scatter_rank": 2,
+      "within_endpoint_scatter_rank": 0,
+      "signless_incidence_rank": 23
+    },
+    {
+      "n": 25,
+      "paths": 10,
+      "edges": 32,
+      "endpoint_pairs": 10,
+      "max_endpoint_multiplicity": 1,
+      "total_scatter_rank": 9,
+      "within_endpoint_scatter_rank": 0,
+      "signless_incidence_rank": 25
+    },
+    {
+      "n": 26,
+      "paths": 12,
+      "edges": 34,
+      "endpoint_pairs": 9,
+      "max_endpoint_multiplicity": 2,
+      "total_scatter_rank": 11,
+      "within_endpoint_scatter_rank": 3,
+      "signless_incidence_rank": 26
+    },
+    {
+      "n": 27,
+      "paths": 35,
+      "edges": 36,
+      "endpoint_pairs": 16,
+      "max_endpoint_multiplicity": 4,
+      "total_scatter_rank": 20,
+      "within_endpoint_scatter_rank": 5,
+      "signless_incidence_rank": 27
+    },
+    {
+      "n": 28,
+      "paths": 52,
+      "edges": 38,
+      "endpoint_pairs": 19,
+      "max_endpoint_multiplicity": 5,
+      "total_scatter_rank": 25,
+      "within_endpoint_scatter_rank": 7,
+      "signless_incidence_rank": 28
+    },
+    {
+      "n": 29,
+      "paths": 19,
+      "edges": 40,
+      "endpoint_pairs": 15,
+      "max_endpoint_multiplicity": 2,
+      "total_scatter_rank": 16,
+      "within_endpoint_scatter_rank": 2,
+      "signless_incidence_rank": 29
+    },
+    {
+      "n": 30,
+      "paths": 20,
+      "edges": 42,
+      "endpoint_pairs": 15,
+      "max_endpoint_multiplicity": 2,
+      "total_scatter_rank": 17,
+      "within_endpoint_scatter_rank": 3,
+      "signless_incidence_rank": 30
+    },
+    {
+      "n": 31,
+      "paths": 349,
+      "edges": 44,
+      "endpoint_pairs": 172,
+      "max_endpoint_multiplicity": 8,
+      "total_scatter_rank": 34,
+      "within_endpoint_scatter_rank": 9,
+      "signless_incidence_rank": 31
+    },
+    {
+      "n": 32,
+      "paths": 392,
+      "edges": 46,
+      "endpoint_pairs": 220,
+      "max_endpoint_multiplicity": 9,
+      "total_scatter_rank": 45,
+      "within_endpoint_scatter_rank": 12,
+      "signless_incidence_rank": 32
+    }
+  ],
+  "checks": "path validation, all degree trades, exact ranks, Q32 kernel basis extension"
+}

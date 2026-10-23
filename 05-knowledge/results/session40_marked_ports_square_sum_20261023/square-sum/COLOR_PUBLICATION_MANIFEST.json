@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN supplemental packet; needs mainreceipt.json in same directory",
+  "files": [
+    {
+      "name": "COLOR_WORD_BOUNDARY.md",
+      "bytes": 4245,
+      "sha256": "05d94f5a75e75da23522c8e732a70a3be5f43579cb52ce82d4c0f19e8ffcf1f7"
+    },
+    {
+      "name": "COLOR_WORD_HOSTILE_80.json",
+      "bytes": 1636,
+      "sha256": "1efe9d30db59fb6dc5351a36014b027cbd6f7f0d7322f702e2f45d7eb3acd02e"
+    },
+    {
+      "name": "birth_witnesses_25_80.json",
+      "bytes": 23802,
+      "sha256": "5bcb5792e8b1ae4741f33aecaf9d0acf2e7ab93cc97a83c323f8b5b46ac3eb5f"
+    },
+    {
+      "name": "check_color_words.py",
+      "bytes": 2230,
+      "sha256": "1606c2060185a1cc1a0b58e8c7dd089f41cd28a59f0c07739cd83ee5350b5d80"
+    },
+    {
+      "name": "color-word-receipt.json",
+      "bytes": 4952,
+      "sha256": "698b379b649dec37772e21d7e74b3872863d12542b4edae3ba8210746ad3a6e5"
+    },
+    {
+      "name": "color-word-receipt.optimized.json",
+      "bytes": 4952,
+      "sha256": "698b379b649dec37772e21d7e74b3872863d12542b4edae3ba8210746ad3a6e5"
+    }
+  ]
+}

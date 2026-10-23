@@ -1,0 +1,92 @@
+{
+  "status": "FROZEN",
+  "publication_directory": "regular-blocks/",
+  "files": [
+    {
+      "path": "REGULAR_BLOCK_COUNTS.md",
+      "sha256": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097",
+      "bytes": 7066
+    },
+    {
+      "path": "check_regular_blocks.py",
+      "sha256": "1b5b80014bb17b9d9052abf63424ee8a22691be0a14f66de6372b03d35cddd04",
+      "bytes": 3860
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "fdddcebcad71744fca0846800baae96d2c5dc4364fc468e7e62b71f881d40983",
+      "bytes": 2093
+    },
+    {
+      "path": "receipt.optimized.json",
+      "sha256": "fdddcebcad71744fca0846800baae96d2c5dc4364fc468e7e62b71f881d40983",
+      "bytes": 2093
+    }
+  ],
+  "audited_sources": [
+    {
+      "path": "session40-root/PRIME_CELL_BURNSIDE_FORMULAS.md",
+      "sha256": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+      "bytes": 8785
+    },
+    {
+      "path": "session40-root/FIVE_CELL_MOD8_REPAIR.md",
+      "sha256": "d5130b43f684d85030b72513764bdf463a03edb62ec3bc592bfafa401f150348",
+      "bytes": 5826
+    },
+    {
+      "path": "session40-root/ENDPOINTS_DO_NOT_DETERMINE_WIRING.md",
+      "sha256": "7a0c1e7d4c239c468267ac5c46fb28d6313bf74fa5995b8531b6f454f8fa50d4",
+      "bytes": 3212
+    },
+    {
+      "path": "session40-root/PATH_SCATTER_AND_MARKING.md",
+      "sha256": "3b94d52a01b6b29d5e327cecc5ecc25abf826ece69442778e241595c74cfaec2",
+      "bytes": 4697
+    },
+    {
+      "path": "session40-root/SYNTHESIS.md",
+      "sha256": "632c270b99c3dd9aaebce86d6196de69c1ae0cb2114883c7a940cb33cf9240bf",
+      "bytes": 12407
+    },
+    {
+      "path": "session40-root/README.md",
+      "sha256": "601ed24137d34c71ad9d7a01c4d77d181164ec8f64e7cbf3712177daaf2c9442",
+      "bytes": 1486
+    },
+    {
+      "path": "session40-root/check_regular_block_coefficients.py",
+      "sha256": "93842b884be69a87a185e3ab951ad92208e1d3e45868b942a9447901b8f42ef5",
+      "bytes": 1814
+    },
+    {
+      "path": "session40-root/regular_block_coefficients_receipt.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "session40-root/regular_block_coefficients_receipt.optimized.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "session40-square-sum/PUBLICATION_MANIFEST.json",
+      "sha256": "8fe54d49b080d46a990678e611b5f3d93d30fd1079e2fe4295b05e993c1612cb",
+      "bytes": 1067
+    },
+    {
+      "path": "session40-square-sum/COLOR_PUBLICATION_MANIFEST.json",
+      "sha256": "a9d33e599dc731c00688aa5c3b62e4e8f41c70cf4d662139791b7b9dc9e7c05f",
+      "bytes": 1065
+    },
+    {
+      "path": "session40-square-sum/FIRST_FAILURE_PUBLICATION_MANIFEST.json",
+      "sha256": "6e14fde40a524632e9cbc6353e987bd8149f5b664d9a131c4e4b852dba67710a",
+      "bytes": 1113
+    }
+  ],
+  "reproduction_commands": [
+    "python check_regular_blocks.py",
+    "python -O check_regular_blocks.py"
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "status": "FROZEN_FINAL_AFTER_LATE_INCOMING_AUDIT",
+  "incoming_parent": "d45865c3323af6d1b3ce44525d6d4789b22778d7",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "cd3f3e82463452163c5097892ce7d591a48a2293008e81f71e4b899790dab758",
+      "bytes": 1613
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "d3b7e4d924c9c6079d66260c81a48098ed708612b4c99d2374be88dc0ace7804",
+      "bytes": 13134
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "sha256": "523d980e1f1f9696aca486f0028ec6d8028ad2d7c750aeefd207ea7200ad6f28",
+      "bytes": 3932
+    },
+    {
+      "path": "ENDPOINTS_DO_NOT_DETERMINE_WIRING.md",
+      "sha256": "7a0c1e7d4c239c468267ac5c46fb28d6313bf74fa5995b8531b6f454f8fa50d4",
+      "bytes": 3212
+    },
+    {
+      "path": "FIVE_CELL_MOD8_REPAIR.md",
+      "sha256": "d5130b43f684d85030b72513764bdf463a03edb62ec3bc592bfafa401f150348",
+      "bytes": 5826
+    },
+    {
+      "path": "PRIME_CELL_BURNSIDE_FORMULAS.md",
+      "sha256": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+      "bytes": 8785
+    },
+    {
+      "path": "PATH_SCATTER_AND_MARKING.md",
+      "sha256": "3b94d52a01b6b29d5e327cecc5ecc25abf826ece69442778e241595c74cfaec2",
+      "bytes": 4697
+    },
+    {
+      "path": "check_endpoint_wiring_hostile.py",
+      "sha256": "736ee91fef5f9bb1440a12f88b95c1e9b4bc3cb75eaf3656365a28a5bdef85dd",
+      "bytes": 1393
+    },
+    {
+      "path": "endpoint_wiring_hostile_receipt.json",
+      "sha256": "30533d396ed23c8d9330837e53e8ed35e1c752f5e455a82d6cbf27e909d9f7d3",
+      "bytes": 566
+    },
+    {
+      "path": "endpoint_wiring_hostile_receipt.optimized.json",
+      "sha256": "30533d396ed23c8d9330837e53e8ed35e1c752f5e455a82d6cbf27e909d9f7d3",
+      "bytes": 566
+    },
+    {
+      "path": "check_five_cell_barrier.py",
+      "sha256": "7dd649cd4b8c4d94a023d689e1c742a9b745488f69d9ec911af80e7f286eee70",
+      "bytes": 2830
+    },
+    {
+      "path": "five_cell_barrier_receipt.json",
+      "sha256": "461011c4775a3e3c751d1c5f1cae7741415e8c16f41025679aeaa3a46ef35ffa",
+      "bytes": 2767
+    },
+    {
+      "path": "five_cell_barrier_receipt.optimized.json",
+      "sha256": "461011c4775a3e3c751d1c5f1cae7741415e8c16f41025679aeaa3a46ef35ffa",
+      "bytes": 2767
+    },
+    {
+      "path": "check_prime_cell_growth.py",
+      "sha256": "1f02df2fd27b3beaee693af6ee16e5cf7740a7de844878fcd9313e740850fa96",
+      "bytes": 2879
+    },
+    {
+      "path": "prime_cell_growth_receipt.json",
+      "sha256": "106424a1f9dbe4a3267783ddaf8e67310de8e071a96e7cdfd2da7288da5f06c9",
+      "bytes": 44244
+    },
+    {
+      "path": "prime_cell_growth_receipt.optimized.json",
+      "sha256": "106424a1f9dbe4a3267783ddaf8e67310de8e071a96e7cdfd2da7288da5f06c9",
+      "bytes": 44244
+    },
+    {
+      "path": "check_regular_block_coefficients.py",
+      "sha256": "93842b884be69a87a185e3ab951ad92208e1d3e45868b942a9447901b8f42ef5",
+      "bytes": 1814
+    },
+    {
+      "path": "regular_block_coefficients_receipt.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "regular_block_coefficients_receipt.optimized.json",
+      "sha256": "477982a44c99e440b897425bcad6d5ea11915c6de2a72af00dd16038da52fb27",
+      "bytes": 1677
+    },
+    {
+      "path": "check_biregular_five.py",
+      "sha256": "0d98eea09778de56954028b1f5a5105365f6a2d2b6072be5556cab117492e7da",
+      "bytes": 844
+    },
+    {
+      "path": "biregular_five_receipt.json",
+      "sha256": "d3679e242db27074011b640111ea5f20aed4863216d0e879d2c72f297f434dbc",
+      "bytes": 110
+    },
+    {
+      "path": "biregular_five_receipt.optimized.json",
+      "sha256": "d3679e242db27074011b640111ea5f20aed4863216d0e879d2c72f297f434dbc",
+      "bytes": 110
+    },
+    {
+      "path": "path_scatter.py",
+      "sha256": "d54244f089ac00e4345509d77e319384a96006d5d8f3c182a0a8dd24ef3af578",
+      "bytes": 2291
+    },
+    {
+      "path": "path_scatter_receipt.json",
+      "sha256": "9acf521ed3bbf9623d768498203c539232265176652e1e48a1262fa7a17b4227",
+      "bytes": 3081
+    },
+    {
+      "path": "path_scatter_receipt.optimized.json",
+      "sha256": "9acf521ed3bbf9623d768498203c539232265176652e1e48a1262fa7a17b4227",
+      "bytes": 3081
+    },
+    {
+      "path": "LATE_INHERITANCE.md",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6",
+      "bytes": 5762
+    },
+    {
+      "path": "check_cycle_edge_optionality.py",
+      "sha256": "f29fcd3fe59c3a7d017c8bcc4bb0ab57a11cec22ecedde1bf5f5e106143a13f8",
+      "bytes": 1274
+    },
+    {
+      "path": "cycle_edge_optionality_receipt.json",
+      "sha256": "5b33128e9c21f4d7c5018cd3637e7664a71e0990791afdc4a97e892eddc37cbf",
+      "bytes": 565
+    },
+    {
+      "path": "cycle_edge_optionality_receipt.optimized.json",
+      "sha256": "5b33128e9c21f4d7c5018cd3637e7664a71e0990791afdc4a97e892eddc37cbf",
+      "bytes": 565
+    }
+  ],
+  "reproduce": [
+    "python3 check_endpoint_wiring_hostile.py",
+    "python3 check_five_cell_barrier.py",
+    "python3 check_prime_cell_growth.py",
+    "python3 check_regular_block_coefficients.py",
+    "python3 check_biregular_five.py",
+    "python3 path_scatter.py",
+    "python3 check_cycle_edge_optionality.py",
+    "python3 -O check_endpoint_wiring_hostile.py",
+    "python3 -O check_five_cell_barrier.py",
+    "python3 -O check_prime_cell_growth.py",
+    "python3 -O check_regular_block_coefficients.py",
+    "python3 -O check_biregular_five.py",
+    "python3 -O path_scatter.py",
+    "python3 -O check_cycle_edge_optionality.py"
+  ]
+}

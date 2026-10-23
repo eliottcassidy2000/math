@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "method": "literal truncated polynomial multiplication; independent matching-pair universe; component EGFs",
+  "rows": [
+    {
+      "p": 3,
+      "layers": [
+        {
+          "k": 1,
+          "A": 6,
+          "S": 4,
+          "ordinary": 2,
+          "self_converse": 2,
+          "merged": 2
+        }
+      ],
+      "all_layers_ordinary": 3,
+      "all_layers_self": 3,
+      "all_layers_merged": 3
+    },
+    {
+      "p": 5,
+      "layers": [
+        {
+          "k": 1,
+          "A": 120,
+          "S": 26,
+          "ordinary": 8,
+          "self_converse": 6,
+          "merged": 7
+        },
+        {
+          "k": 2,
+          "A": 2040,
+          "S": 112,
+          "ordinary": 88,
+          "self_converse": 24,
+          "merged": 56
+        }
+      ],
+      "all_layers_ordinary": 97,
+      "all_layers_self": 31,
+      "all_layers_merged": 64
+    },
+    {
+      "p": 7,
+      "layers": [
+        {
+          "k": 1,
+          "A": 5040,
+          "S": 232,
+          "ordinary": 108,
+          "self_converse": 34,
+          "merged": 71
+        },
+        {
+          "k": 2,
+          "A": 3110940,
+          "S": 6912,
+          "ordinary": 63504,
+          "self_converse": 990,
+          "merged": 32247
+        },
+        {
+          "k": 3,
+          "A": 68938800,
+          "S": 35150,
+          "ordinary": 1406940,
+          "self_converse": 5024,
+          "merged": 705982
+        }
+      ],
+      "all_layers_ordinary": 1470553,
+      "all_layers_self": 6049,
+      "all_layers_merged": 738301
+    }
+  ],
+  "p5_degree2": {
+    "matrices": 2040,
+    "cycle10": 1440,
+    "cycle4plus6": 600,
+    "ordinary": 88,
+    "self_converse": 24,
+    "merged": 56,
+    "orbit_size_distribution": {
+      "5": 8,
+      "25": 80
+    }
+  },
+  "degree_two_egf": [
+    {
+      "n": 3,
+      "A_n2": 6,
+      "S_n2": 4
+    },
+    {
+      "n": 5,
+      "A_n2": 2040,
+      "S_n2": 112
+    },
+    {
+      "n": 7,
+      "A_n2": 3110940,
+      "S_n2": 6912
+    },
+    {
+      "n": 11,
+      "A_n2": 158815387962000,
+      "S_n2": 108306280
+    }
+  ]
+}

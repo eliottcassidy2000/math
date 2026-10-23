@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "exhaustive": [
+    {
+      "p": 3,
+      "ordinary": 2,
+      "self_converse": 2,
+      "merged": 2,
+      "distinct_J": 2,
+      "I_p": 4
+    },
+    {
+      "p": 5,
+      "ordinary": 8,
+      "self_converse": 6,
+      "merged": 7,
+      "distinct_J": 7,
+      "I_p": 26
+    },
+    {
+      "p": 7,
+      "ordinary": 108,
+      "self_converse": 34,
+      "merged": 71,
+      "distinct_J": 16,
+      "I_p": 232
+    }
+  ],
+  "formula_only_p11": {
+    "ordinary": 329900,
+    "self_converse": 3246,
+    "merged": 166573
+  }
+}

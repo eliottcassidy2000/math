@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN third packet; depends on main and color witness packets in same directory",
+  "files": [
+    {
+      "name": "COLOR_FIRST_FAILURE.md",
+      "bytes": 2719,
+      "sha256": "d4a55aa14ad15ba749f530680e1039914a57cd7700f0c2381c04346f72b36945"
+    },
+    {
+      "name": "COLOR_FIRST_FAILURE_CENSUS.json",
+      "bytes": 3327,
+      "sha256": "de6afdb7b06b604b8d202d350197b38aacc40d4d92eb6665c0b5e3ddd6263a0b"
+    },
+    {
+      "name": "enumerate_color_first_failure.py",
+      "bytes": 1353,
+      "sha256": "2f150bbb188bb1e27f14314a7f3725743ee8eaa4c53588736f73fdcbdac2b403"
+    },
+    {
+      "name": "check_color_first_failure.py",
+      "bytes": 1769,
+      "sha256": "527a2edd2bfa422214a0db6fbe48ac0b150094d94d9f6b889b873366497830e1"
+    },
+    {
+      "name": "color-first-failure-receipt.json",
+      "bytes": 3854,
+      "sha256": "75d81b8334bb08a58c822905f6864102086f8c6adfebb27019e6850b6f5a05f9"
+    },
+    {
+      "name": "color-first-failure-receipt.optimized.json",
+      "bytes": 3854,
+      "sha256": "75d81b8334bb08a58c822905f6864102086f8c6adfebb27019e6850b6f5a05f9"
+    }
+  ]
+}

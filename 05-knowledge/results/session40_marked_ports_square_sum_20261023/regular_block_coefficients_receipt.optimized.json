@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "method": "independent remaining-column-capacity DP and symmetric-row DP, exact integers",
+  "rows": [
+    {
+      "p": 3,
+      "layers": [
+        {
+          "k": 1,
+          "matrices": 6,
+          "symmetric_matrices": 4,
+          "ordinary": 2,
+          "self_converse": 2,
+          "merged": 2
+        }
+      ],
+      "total_ordinary": 3,
+      "total_self_converse": 3,
+      "total_merged": 3
+    },
+    {
+      "p": 5,
+      "layers": [
+        {
+          "k": 1,
+          "matrices": 120,
+          "symmetric_matrices": 26,
+          "ordinary": 8,
+          "self_converse": 6,
+          "merged": 7
+        },
+        {
+          "k": 2,
+          "matrices": 2040,
+          "symmetric_matrices": 112,
+          "ordinary": 88,
+          "self_converse": 24,
+          "merged": 56
+        }
+      ],
+      "total_ordinary": 97,
+      "total_self_converse": 31,
+      "total_merged": 64
+    },
+    {
+      "p": 7,
+      "layers": [
+        {
+          "k": 1,
+          "matrices": 5040,
+          "symmetric_matrices": 232,
+          "ordinary": 108,
+          "self_converse": 34,
+          "merged": 71
+        },
+        {
+          "k": 2,
+          "matrices": 3110940,
+          "symmetric_matrices": 6912,
+          "ordinary": 63504,
+          "self_converse": 990,
+          "merged": 32247
+        },
+        {
+          "k": 3,
+          "matrices": 68938800,
+          "symmetric_matrices": 35150,
+          "ordinary": 1406940,
+          "self_converse": 5024,
+          "merged": 705982
+        }
+      ],
+      "total_ordinary": 1470553,
+      "total_self_converse": 6049,
+      "total_merged": 738301
+    }
+  ]
+}

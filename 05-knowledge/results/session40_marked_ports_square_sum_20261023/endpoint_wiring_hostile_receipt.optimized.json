@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "checks": 85,
+  "source": 4,
+  "source_H": 5,
+  "targets": [
+    {
+      "path": [
+        4,
+        0,
+        3,
+        2,
+        1
+      ],
+      "target": 871,
+      "H": 15,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "path": [
+        4,
+        2,
+        0,
+        3,
+        1
+      ],
+      "target": 733,
+      "H": 11,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ]
+    }
+  ],
+  "small_order_universe": "all labelled tournaments n1..4"
+}

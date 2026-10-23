@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "p": 3,
+      "all_nonzero_words_tested": 8,
+      "realizable_words_q0_zero": 2,
+      "necklace_classes": 2,
+      "constant_necklaces": 2
+    },
+    {
+      "p": 5,
+      "all_nonzero_words_tested": 1024,
+      "realizable_words_q0_zero": 24,
+      "necklace_classes": 8,
+      "constant_necklaces": 4
+    },
+    {
+      "p": 7,
+      "all_nonzero_words_tested": 279936,
+      "realizable_words_q0_zero": 720,
+      "necklace_classes": 108,
+      "constant_necklaces": 6
+    }
+  ],
+  "converse_not_word_reversal_witness": {
+    "q": [
+      0,
+      2,
+      4,
+      1,
+      3
+    ],
+    "word": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "converse_word": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  }
+}
