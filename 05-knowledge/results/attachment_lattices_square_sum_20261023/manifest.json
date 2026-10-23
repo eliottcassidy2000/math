@@ -1,0 +1,204 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/AUDIT.md",
+      "encoding": "utf8-lf",
+      "sha256": "f9f35e657318cba5a3b31920c25bdb09a736cc6e40f94c998809bcc86c8bcadf"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/INCOMING.md",
+      "encoding": "utf8-lf",
+      "sha256": "e60752a8fb2fe349d09c44b268a2e5461cac61fef6c13eae9d2034200c602a7b"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/KERNELS.md",
+      "encoding": "utf8-lf",
+      "sha256": "5e7f9f13a0cd7e1f3a2f46c75f0541acd546f8bf9a5ae982c7666f7a835f7fa0"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/MOVES.md",
+      "encoding": "utf8-lf",
+      "sha256": "7b6ad7ae387e029aa4e9ae63e73dcf4fd0b2bbb03bb1d8017a7c57de9adaa23c"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/README.md",
+      "encoding": "utf8-lf",
+      "sha256": "b385314e2f2119908b284c219036dcf975d1a136c4e3c0c57a15a6f6e85d160a"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/check_joint_alignment.py",
+      "encoding": "utf8-lf",
+      "sha256": "1a1f5389746c77174f4e5904af0c91042c218527bfcad5d371abcef48989302b"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/check_kernels_moves.py",
+      "encoding": "utf8-lf",
+      "sha256": "de369d45a28197e424ed84035363128fd7b372baf816254bd28dced04c698a5f"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/AUDIT-lattice.md",
+      "encoding": "utf8-lf",
+      "sha256": "690b4a3aabd6d3fc41fd54bfa21093530df4e4512b0936dbc2182b2d209951f1"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/INCIDENCE_FLOW.md",
+      "encoding": "utf8-lf",
+      "sha256": "24ce3e291fc41eccd1ffc8fab59e0ba1d5aaae5e91bd93f99c0c9f5f82429369"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/README.md",
+      "encoding": "utf8-lf",
+      "sha256": "0b356107f7ccaba0d0e750c20565ba75d3ebd8ea7c794958f1028771e3e779b4"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/audit_lattice.py",
+      "encoding": "utf8-lf",
+      "sha256": "3ef4ecf07623855a27d419891c833cc3123f27dd9aa8dd8cbeaac794f4021828"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "27ed8b9bcb8a0e9dd0dbb6fb23c3c794a566ac9bdc3aca82a2db55dceed2ce48"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/check_flow.py",
+      "encoding": "utf8-lf",
+      "sha256": "d487bbda3074aadbab71d5e9bbf8838ef1a8469d4acf0e00f5af2e2b09b15d55"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/cut_response.py",
+      "encoding": "utf8-lf",
+      "sha256": "4fd897dc2763a6a78a160b2d1cdf576b73ce92e4fe7fb22b19df7604c4d2bf40"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/flow_receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "c9f7c155224fc0c9c002c06773344a4a8dee2d12540f94a550c174dbb343e5bf"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/complement/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "a906f748b8c03bf2be02b10108d2a9c6217ae249cf90eacbfe1a3c059c863e01"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/joint_alignment_receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "809574637fad593b43f8b2c6875a17ac9afa9cdc848dbd913366ea7003fbe6aa"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/kernels_moves.json",
+      "encoding": "utf8-lf",
+      "sha256": "e82c294ce711c7a4134e75ae0cc2c6c8b38c439ac68fdccefe06bcfb0c82dfae"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/AUDIT-kernels-moves.md",
+      "encoding": "utf8-lf",
+      "sha256": "773b124389c27b111e30cbc7ea2e4dc5438c07ba3763be7e0e7bf1427f06dc36"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/NON_NORMAL_KERNEL.md",
+      "encoding": "utf8-lf",
+      "sha256": "59707efbe4243aa27f7198e115f897954357f7059e0ef6293026b9097d05fd45"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/README.md",
+      "encoding": "utf8-lf",
+      "sha256": "3800ac98c678e41dfabf235e1219693eb20cd38cd417a72b33f8a9f0932a65ce"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/audit_non_normal_kernel.py",
+      "encoding": "utf8-lf",
+      "sha256": "68de61fd3f925f9d65107a2e00b9230653d8a169af19200bec93c6ff28a4e639"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "0bb78ae3bb0a662d88cb7747a9965df54d3032177c7277b8a5bc11a669d31a11"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/non_normal_kernel_receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "ebc2a96afe36df78e06d85dc14534a1600d7201878021e4143c89b7391cbaee1"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/lattice/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "56e26c56e827d5cf43acc4a7b805b82c6748c904105dfb2ebfd23c4305c5b185"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/reproduce.py",
+      "encoding": "utf8-lf",
+      "sha256": "40e0f3e4752f9582ca5cd5c6802dff22f94816b153c2f530ce4003bdba4e7335"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/AUDIT-complement.md",
+      "encoding": "utf8-lf",
+      "sha256": "24e8df6b779331bc4d2b4f21c6c5676bb01e649f9785ece5f6a4531177edf575"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/AUDIT-shared-clocks.md",
+      "encoding": "utf8-lf",
+      "sha256": "3d57b6e109dc3814e2f79bbef70aba817c84a8f3c07c5c02f59e1f162d984e83"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/REPORT.md",
+      "encoding": "utf8-lf",
+      "sha256": "ce4b1297b85557e971df72b8a963ab298b6e5354077e1ecda873cd0b511b0ab6"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/SHARED_CLOCKS.md",
+      "encoding": "utf8-lf",
+      "sha256": "14ca21b4287fbae93e19d37d004755b7a2e45bc272517e4ca281929fec38057f"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/audit_complement.py",
+      "encoding": "utf8-lf",
+      "sha256": "d90984da8c4ee61a346e653497a78622af37387cd26e1e11cf40688116fdd3e1"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/audit_shared_clocks_independent.py",
+      "encoding": "utf8-lf",
+      "sha256": "490ced469effda3dda7ac9955a3dbf3cff63cbf1ed3183ae1ae3fb1983fd63c5"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/check.py",
+      "encoding": "utf8-lf",
+      "sha256": "f09ecad0c5c255becdbcc5dc7f197733a1fd328b5eca3e11ea2beeb4d1b84314"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/check_shared_clocks.py",
+      "encoding": "utf8-lf",
+      "sha256": "d2ca38f49d7ae436baf2efb73cfa6b6e5ee24039b21bcfc4648a3147b028796f"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "ecd884fa1b1f5111a05072271f4a7abc4748302e7753f88f7dab9318c701dc41"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/shared_clocks_independent.json",
+      "encoding": "utf8-lf",
+      "sha256": "13438636085b7e05776a89e2241320e141786c6139513cb2c5e438979a6a1cd2"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/shared_clocks_receipt.json",
+      "encoding": "utf8-lf",
+      "sha256": "34af436eb865e01c04fc559369002348aaa54a090019fb50d9df5b0d8be24966"
+    }
+  ],
+  "checkers": [
+    "check_kernels_moves.py",
+    "check_joint_alignment.py",
+    "lattice/check.py",
+    "lattice/audit_non_normal_kernel.py",
+    "complement/check.py",
+    "complement/cut_response.py",
+    "complement/check_flow.py",
+    "complement/audit_lattice.py",
+    "square_sum/check.py",
+    "square_sum/audit_complement.py",
+    "square_sum/check_shared_clocks.py",
+    "square_sum/audit_shared_clocks_independent.py"
+  ]
+}

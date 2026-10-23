@@ -1,0 +1,325 @@
+{
+  "status": "FINITE-EXACT; general scoped proofs in README.md",
+  "normal_forms": {
+    "orders_through": 9,
+    "subgroups": 683,
+    "cosets": 5883
+  },
+  "composition": {
+    "orders_through": 3,
+    "trials": 2184,
+    "empty": 512,
+    "with_multiple_middle_witnesses": 128
+  },
+  "cyclic_fill_in": {
+    "helly_triples": 37975,
+    "seed": 231023,
+    "network_trials": 600,
+    "positive": 170,
+    "multiple": 111,
+    "max_count": 27,
+    "trials_with_added_fill_in": 1,
+    "four_port_star": {
+      "orders": [
+        9,
+        3,
+        9,
+        15,
+        3
+      ],
+      "count": 135,
+      "factors": [
+        3,
+        1,
+        3,
+        5,
+        3
+      ],
+      "peak_edges": 6
+    },
+    "noncyclic_hostile": "C3^2 cosets x=0,y=0,x+y=1"
+  },
+  "actual_tournaments": {
+    "cyclic_subcarrier": [
+      {
+        "m": 3,
+        "n": 3,
+        "compatible": 3,
+        "target_above_source": 1
+      },
+      {
+        "m": 3,
+        "n": 9,
+        "compatible": 9,
+        "target_above_source": 3
+      },
+      {
+        "m": 3,
+        "n": 15,
+        "compatible": 15,
+        "target_above_source": 5
+      },
+      {
+        "m": 9,
+        "n": 3,
+        "compatible": 9,
+        "target_above_source": 1
+      },
+      {
+        "m": 9,
+        "n": 9,
+        "compatible": 27,
+        "target_above_source": 3
+      },
+      {
+        "m": 9,
+        "n": 15,
+        "compatible": 45,
+        "target_above_source": 5
+      },
+      {
+        "m": 15,
+        "n": 3,
+        "compatible": 15,
+        "target_above_source": 1
+      },
+      {
+        "m": 15,
+        "n": 9,
+        "compatible": 45,
+        "target_above_source": 3
+      },
+      {
+        "m": 15,
+        "n": 15,
+        "compatible": 75,
+        "target_above_source": 5
+      }
+    ],
+    "full_R9_group": 81,
+    "full_R9_pairs": 2187,
+    "full_R9_right_kernel": 27
+  },
+  "nonabelian": {
+    "group_order": 21,
+    "natural_label": "7*k+b for x -> 2^k*x+b",
+    "relation_offset": [
+      0,
+      14
+    ],
+    "subgroup_closure_failure": [
+      [
+        20,
+        17
+      ],
+      [
+        20,
+        17
+      ],
+      [
+        19,
+        13
+      ]
+    ]
+  },
+  "networks": [
+    {
+      "orders": [
+        3,
+        9,
+        15
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "forms": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ]
+      ],
+      "configurations": 27,
+      "image": 9,
+      "witness_kernel": 45,
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "orbit_sizes": {
+        "9": 3
+      }
+    },
+    {
+      "orders": [
+        9,
+        9,
+        9
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "forms": [
+        [
+          9,
+          1,
+          1
+        ],
+        [
+          9,
+          1,
+          1
+        ],
+        [
+          9,
+          1,
+          1
+        ]
+      ],
+      "configurations": 729,
+      "image": 81,
+      "witness_kernel": 9,
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        9
+      ],
+      "orbit_sizes": {
+        "81": 9
+      }
+    },
+    {
+      "orders": [
+        3,
+        9,
+        15
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "forms": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ]
+      ],
+      "configurations": 9,
+      "image": 9,
+      "witness_kernel": 45,
+      "smith": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "orbit_sizes": {
+        "9": 1
+      }
+    },
+    {
+      "orders": [
+        9,
+        9,
+        9
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "forms": [
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          9,
+          1,
+          1
+        ],
+        [
+          9,
+          1,
+          1
+        ]
+      ],
+      "configurations": 243,
+      "image": 81,
+      "witness_kernel": 9,
+      "smith": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "orbit_sizes": {
+        "81": 3
+      }
+    }
+  ],
+  "checks": 57908
+}

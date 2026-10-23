@@ -1,0 +1,1032 @@
+{
+  "checks": 30742,
+  "exhaustive_network_cases": 15276,
+  "hostiles": {
+    "cross_component_distinctness": {
+      "compiled": {
+        "components": [
+          {
+            "L": 1,
+            "U": 3,
+            "count": 3,
+            "empty": false,
+            "holes": [],
+            "paths": [
+              0
+            ],
+            "pin": null
+          },
+          {
+            "L": 1,
+            "U": 3,
+            "count": 3,
+            "empty": false,
+            "holes": [],
+            "paths": [
+              1
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [
+          {
+            "left_component": 0,
+            "left_sign": 1,
+            "rhs": 0,
+            "right_component": 1,
+            "right_sign": 1
+          }
+        ],
+        "local": [
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0
+            ],
+            "empty": false,
+            "holes": []
+          }
+        ],
+        "node_component": [
+          0,
+          1
+        ],
+        "node_offset": [
+          0,
+          0
+        ],
+        "node_sign": [
+          1,
+          1
+        ]
+      },
+      "solutions": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    "free_root_positive": {
+      "compiled": {
+        "components": [
+          {
+            "L": 1,
+            "U": 5,
+            "count": 4,
+            "empty": false,
+            "holes": [
+              1
+            ],
+            "paths": [
+              0,
+              1
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 8,
+            "c": [
+              0,
+              9
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 4,
+            "U": 12,
+            "c": [
+              0,
+              16
+            ],
+            "empty": false,
+            "holes": [
+              8
+            ]
+          }
+        ],
+        "node_component": [
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          9
+        ],
+        "node_sign": [
+          1,
+          -1
+        ]
+      },
+      "solutions": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "incoming_full_clock_twin": {
+      "compiled": {
+        "components": [
+          {
+            "L": 3,
+            "U": 9,
+            "count": 2,
+            "empty": false,
+            "holes": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "paths": [
+              0
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 3,
+            "U": 9,
+            "c": [
+              0,
+              36,
+              13,
+              12,
+              24,
+              25,
+              11,
+              14,
+              22,
+              27,
+              -2,
+              38,
+              26,
+              23,
+              2,
+              34,
+              15,
+              10,
+              -1,
+              26,
+              23,
+              13,
+              3,
+              22,
+              27,
+              37,
+              12,
+              24,
+              1,
+              15,
+              10,
+              39,
+              25,
+              11,
+              14,
+              35
+            ],
+            "empty": false,
+            "holes": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        ],
+        "node_component": [
+          0
+        ],
+        "node_offset": [
+          0
+        ],
+        "node_sign": [
+          1
+        ]
+      },
+      "roots": [
+        6,
+        7,
+        5,
+        6,
+        7,
+        6,
+        5,
+        6,
+        7,
+        5,
+        6,
+        8,
+        7,
+        5,
+        6,
+        7,
+        5,
+        3,
+        5,
+        7,
+        6,
+        4,
+        5,
+        7,
+        8,
+        7,
+        6,
+        5,
+        4,
+        5,
+        7,
+        8,
+        6,
+        5,
+        7
+      ],
+      "solutions": [
+        [
+          3
+        ],
+        [
+          9
+        ]
+      ]
+    },
+    "integer_pin_hits_collision_hole": {
+      "compiled": {
+        "components": [
+          {
+            "L": 1,
+            "U": 3,
+            "count": 0,
+            "empty": true,
+            "holes": [
+              2
+            ],
+            "paths": [
+              0,
+              1,
+              2
+            ],
+            "pin": 2
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0,
+              4
+            ],
+            "empty": false,
+            "holes": [
+              2
+            ]
+          },
+          {
+            "L": 1,
+            "U": 8,
+            "c": [
+              0,
+              9
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 1,
+            "U": 8,
+            "c": [
+              0,
+              9
+            ],
+            "empty": false,
+            "holes": []
+          }
+        ],
+        "node_component": [
+          0,
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          4,
+          9
+        ],
+        "node_sign": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      "paths": [
+        {
+          "N": 8,
+          "sums": [
+            4
+          ]
+        },
+        {
+          "N": 8,
+          "sums": [
+            9
+          ]
+        },
+        {
+          "N": 8,
+          "sums": [
+            9
+          ]
+        }
+      ],
+      "ports": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "solutions": []
+    },
+    "marginal_ports": {
+      "compiled": {
+        "components": [
+          {
+            "L": 1,
+            "U": 3,
+            "count": 0,
+            "empty": true,
+            "holes": [
+              2
+            ],
+            "paths": [
+              0,
+              1
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0,
+              4
+            ],
+            "empty": false,
+            "holes": [
+              2
+            ]
+          },
+          {
+            "L": 1,
+            "U": 15,
+            "c": [
+              0,
+              16
+            ],
+            "empty": false,
+            "holes": [
+              8
+            ]
+          }
+        ],
+        "node_component": [
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          0
+        ],
+        "node_sign": [
+          1,
+          1
+        ]
+      },
+      "paths": [
+        {
+          "N": 15,
+          "sums": [
+            4
+          ]
+        },
+        {
+          "N": 15,
+          "sums": [
+            16
+          ]
+        }
+      ],
+      "ports": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "solutions": []
+    },
+    "odd_pin_nonintegral": {
+      "compiled": {
+        "components": [
+          {
+            "L": 1,
+            "U": 3,
+            "count": 0,
+            "empty": true,
+            "holes": [
+              2
+            ],
+            "paths": [
+              0,
+              1,
+              2
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0,
+              4
+            ],
+            "empty": false,
+            "holes": [
+              2
+            ]
+          },
+          {
+            "L": 1,
+            "U": 8,
+            "c": [
+              0,
+              9
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 1,
+            "U": 15,
+            "c": [
+              0,
+              16
+            ],
+            "empty": false,
+            "holes": [
+              8
+            ]
+          }
+        ],
+        "node_component": [
+          0,
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          4,
+          16
+        ],
+        "node_sign": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      "paths": [
+        {
+          "N": 15,
+          "sums": [
+            4
+          ]
+        },
+        {
+          "N": 15,
+          "sums": [
+            9
+          ]
+        },
+        {
+          "N": 15,
+          "sums": [
+            16
+          ]
+        }
+      ],
+      "ports": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "solutions": []
+    },
+    "pairwise_not_joint_filtered_domains": {
+      "compiled": {
+        "components": [
+          {
+            "L": 2,
+            "U": 2,
+            "count": 0,
+            "empty": true,
+            "holes": [
+              2
+            ],
+            "paths": [
+              0,
+              1,
+              2
+            ],
+            "pin": null
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 2,
+            "c": [
+              0
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 1,
+            "U": 3,
+            "c": [
+              0,
+              4
+            ],
+            "empty": false,
+            "holes": [
+              2
+            ]
+          },
+          {
+            "L": 2,
+            "U": 7,
+            "c": [
+              0,
+              9
+            ],
+            "empty": false,
+            "holes": []
+          }
+        ],
+        "node_component": [
+          0,
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          0,
+          0
+        ],
+        "node_sign": [
+          1,
+          1,
+          1
+        ]
+      },
+      "pairs": [
+        {
+          "paths": [
+            0,
+            1
+          ],
+          "solutions": [
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "paths": [
+            0,
+            2
+          ],
+          "solutions": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "paths": [
+            1,
+            2
+          ],
+          "solutions": [
+            [
+              3,
+              3
+            ]
+          ]
+        }
+      ],
+      "paths": [
+        {
+          "N": 2,
+          "sums": []
+        },
+        {
+          "N": 3,
+          "sums": [
+            4
+          ]
+        },
+        {
+          "N": 7,
+          "sums": [
+            9
+          ]
+        }
+      ],
+      "solutions": []
+    },
+    "triangle_outside_host": {
+      "compiled": {
+        "components": [
+          {
+            "L": 7,
+            "U": 5,
+            "count": 0,
+            "empty": true,
+            "holes": [],
+            "paths": [
+              0,
+              1,
+              2
+            ],
+            "pin": 6
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 24,
+            "c": [
+              0,
+              25
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 20,
+            "U": 29,
+            "c": [
+              0,
+              49
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 7,
+            "U": 29,
+            "c": [
+              0,
+              36
+            ],
+            "empty": false,
+            "holes": [
+              18
+            ]
+          }
+        ],
+        "node_component": [
+          0,
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          25,
+          36
+        ],
+        "node_sign": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      "paths": [
+        {
+          "N": 29,
+          "sums": [
+            25
+          ]
+        },
+        {
+          "N": 29,
+          "sums": [
+            49
+          ]
+        },
+        {
+          "N": 29,
+          "sums": [
+            36
+          ]
+        }
+      ],
+      "ports": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "solutions": []
+    },
+    "triangle_positive": {
+      "compiled": {
+        "components": [
+          {
+            "L": 6,
+            "U": 6,
+            "count": 1,
+            "empty": false,
+            "holes": [],
+            "paths": [
+              0,
+              1,
+              2
+            ],
+            "pin": 6
+          }
+        ],
+        "cross_forbidden": [],
+        "local": [
+          {
+            "L": 1,
+            "U": 24,
+            "c": [
+              0,
+              25
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 19,
+            "U": 30,
+            "c": [
+              0,
+              49
+            ],
+            "empty": false,
+            "holes": []
+          },
+          {
+            "L": 6,
+            "U": 30,
+            "c": [
+              0,
+              36
+            ],
+            "empty": false,
+            "holes": [
+              18
+            ]
+          }
+        ],
+        "node_component": [
+          0,
+          0,
+          0
+        ],
+        "node_offset": [
+          0,
+          25,
+          36
+        ],
+        "node_sign": [
+          1,
+          -1,
+          -1
+        ]
+      },
+      "paths": [
+        {
+          "N": 30,
+          "sums": [
+            25
+          ]
+        },
+        {
+          "N": 30,
+          "sums": [
+            49
+          ]
+        },
+        {
+          "N": 30,
+          "sums": [
+            36
+          ]
+        }
+      ],
+      "ports": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "solutions": [
+        [
+          6,
+          19,
+          30
+        ]
+      ]
+    }
+  },
+  "inherited_clock_source": "cf7c4fc327:05-knowledge/results/session42_shared_lattices_square_colors_20261023/twin_witness.json",
+  "status": "PASS",
+  "universe": "local words roots2..5 length0..3 hosts1..12; every two-one-edge port subset at sums/hosts4,9,16; triangle clocks sums4,9,16 and hosts1..8"
+}

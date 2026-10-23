@@ -1,0 +1,12 @@
+{
+  "checks": 4619,
+  "networks": 1000,
+  "positive": 297,
+  "scope": "1..4 actual square-clock paths, length0..2, hosts4..8; literal tuple enumeration",
+  "seed": 42319,
+  "status": "PASS",
+  "with_absolute_marks": 605,
+  "with_cross_component_factors": 227,
+  "with_distinctness": 691,
+  "with_loop_equalities": 548
+}

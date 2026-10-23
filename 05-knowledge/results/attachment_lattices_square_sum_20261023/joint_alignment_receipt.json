@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "grid": [
+    -4,
+    4
+  ],
+  "ordered_pairs": 6561,
+  "simultaneous_orbits": 861,
+  "five_invariant_collisions": 16,
+  "relative_frame_counts": {
+    "generic/generic": 8,
+    "axis/axis": 3,
+    "axis/diagonal": 2,
+    "diagonal/diagonal": 3,
+    "origin/generic": 1
+  },
+  "hostile": {
+    "z": [
+      2,
+      1
+    ],
+    "w": [
+      -2,
+      4
+    ],
+    "alternative": [
+      2,
+      -4
+    ],
+    "sums": [
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        -3
+      ]
+    ]
+  }
+}
