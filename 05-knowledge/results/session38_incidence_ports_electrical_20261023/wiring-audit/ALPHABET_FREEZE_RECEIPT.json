@@ -1,0 +1,48 @@
+{
+  "binary_witness_sha256": "9ac70b69fba35e90b36eae1e417e31fdcd989088dddd6a4ea80fbff93f0c87df",
+  "commands": [
+    "python -B wiring-audit/audit_ternary_quotients.py",
+    "python -O -B wiring-audit/audit_ternary_quotients.py",
+    "python -B wiring-audit/audit_alphabet_counting.py",
+    "python -O -B wiring-audit/audit_alphabet_counting.py",
+    "python -B wiring-audit/audit_binary_literal_switches.py",
+    "python -O -B wiring-audit/audit_binary_literal_switches.py"
+  ],
+  "dependencies": [
+    "Python 3 standard library",
+    "Existing wiring-audit/classes_input_n8.tsv",
+    "FIRST_README.md C++17-generated independent mask map and class/port/directed ledgers for the literal-switch checker only",
+    "Sibling binary-counterfeits/receipt.json, overridable with --witness"
+  ],
+  "new_publication_whitelist": [
+    "ALPHABET_ADDENDUM.md",
+    "audit_ternary_quotients.py",
+    "independent_ternary_quotient_receipt.json",
+    "audit_alphabet_counting.py",
+    "independent_alphabet_counting_receipt.json",
+    "audit_binary_literal_switches.py",
+    "independent_binary_literal_receipt.json",
+    "ALPHABET_FREEZE_RECEIPT.json",
+    "ALPHABET_SHA256SUMS"
+  ],
+  "normal_optimized_exact_output_equality": [
+    "ternary",
+    "alphabet_counting",
+    "binary_literal"
+  ],
+  "previous_first_manifest_sha256": "08c1fc3938184ffda4e1c30dcae10021d504d728d9fd0589494f067c60396d25",
+  "previous_revised_final_manifest_sha256": "c6f60d3be7e29a9862e3fdbb80a93c0919e4803fd888f2eb0cd386f0e6ecfb42",
+  "prior_frozen_files_unchanged": true,
+  "publication_subdirectory": "wiring-audit",
+  "published_sha256": {
+    "ALPHABET_ADDENDUM.md": "43a80561cfe7645e4ef6a6db03ab5de54a22d8c4cb85cb6ccd2f442d275c4a15",
+    "audit_alphabet_counting.py": "e3bc802db02bd4d55ae03044f55b824e33fe937963d334600bdb41c464e0e195",
+    "audit_binary_literal_switches.py": "b5e64440b00bc773774587e8307be84547dff974f357536816e3c595f8597da8",
+    "audit_ternary_quotients.py": "5a60b1646d7a6865f8a5527b9600d56098afdf7c93a6e3cc027d2cf2a90f97bf",
+    "independent_alphabet_counting_receipt.json": "b23fd28f5133966fb2de75c879f5a08011d452c1048a518041940f34c7d48d5a",
+    "independent_binary_literal_receipt.json": "d837c2534bd9e22e97adbceb76f6ad00d6c39aba81b354f058bbf22afa232274",
+    "independent_ternary_quotient_receipt.json": "9a2f2361770627be878a93c5821b8fae85390f3f1ca52706a75b186d5ba45481"
+  },
+  "scope": "Independent ternary-sum forest and all255 binary quotient graphs; literal reflected port-bijection counterfeits for all255 binary quotients proving exact three-color minimum in the stated E33 quotient wiring model; aligned all-size local decoder proof; growing-alphabet class-information obstruction. No unrestricted palette minimum or alternate canonical-complement tournament realizability claim.",
+  "status": "FROZEN independent alphabet addendum"
+}

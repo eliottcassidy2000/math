@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "ground_node": 0,
+  "blue_reduced_rank": 164,
+  "V1_dimension": 3363,
+  "q1_rank": 3358,
+  "V2_dimension": 5,
+  "blue_half_form_rank": 4,
+  "mod4_lifts_audited": 5,
+  "q2_matrix": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "q2_rank": 4,
+  "V3_dimension": 1,
+  "complete_two_primary": false,
+  "producer_lift_receipt_sha256": "e77a2409218ae7aafa5a4e303aa8bc56a47e51ebeb2fe0e48f6d6dab6f7295e8",
+  "independent_edge_sha256": "d5b26aebdbb40953504dbb2375cf03a5590eeb2afd8d63d33b12ff0f5185ee61",
+  "explicit_checks": 439846
+}

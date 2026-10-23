@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "method": "Every binary harmonic vector (512 candidates) and all64 pairings; independent fraction-free Bareiss determinants",
+  "harmonic_dimension": 3,
+  "entire_half_form_equal": true,
+  "half_form_nondegenerate": true,
+  "spanning_tree_counts": [
+    41096,
+    36680
+  ],
+  "complete_two_primary_both": "(Z/2)^3",
+  "strongest_scope": "A synthetic same-margin colored graph, not a second tournament realization."
+}

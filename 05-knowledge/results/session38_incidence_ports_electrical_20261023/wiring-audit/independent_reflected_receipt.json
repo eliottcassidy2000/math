@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "witnesses": [
+    {
+      "menu": "E_edge2",
+      "mode": "ordinary",
+      "changed_cells": 4,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "E_edge2",
+      "mode": "symmetric",
+      "changed_cells": 8,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "E_neighbor2",
+      "mode": "ordinary",
+      "changed_cells": 4,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "E_neighbor2",
+      "mode": "symmetric",
+      "changed_cells": 8,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "E_neighbor3",
+      "mode": "ordinary",
+      "changed_cells": 4,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "J4",
+      "mode": "ordinary",
+      "changed_cells": 4,
+      "projection_entries": 4,
+      "status": "PASS"
+    },
+    {
+      "menu": "J4",
+      "mode": "symmetric",
+      "changed_cells": 8,
+      "projection_entries": 4,
+      "status": "PASS"
+    }
+  ],
+  "E33_direct_class_signatures": 6876,
+  "E33_reflection_compatible_table_unique": true,
+  "minimal_positive_modular_wiring_alphabet": 9,
+  "minimum_scope": "The complete n8 endpoint/color/transported-signature model with full converse-reflection equalities and literal black parity. Not arbitrary encodings and not ordinary class injectivity.",
+  "lower_bound": "Reflected head-parity/exact-edge witness survives every q and p=1,2; reflected exact-head/edge-parity witness survives every p and q=1,2. Every p*q<9 has p<=2 or q<=2.",
+  "witness_input_sha256": "604444f9a8e88c20d963678c1c400db4cf894be6b9f6bdb4583fa439dcd57571",
+  "explicit_checks": 267
+}

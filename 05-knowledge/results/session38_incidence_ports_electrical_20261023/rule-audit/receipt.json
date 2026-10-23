@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "scope": "Independent finite controls, not all-size proofs or graph-realizability claims",
+  "transport": {
+    "capacity_choices": 243,
+    "feasible_base_tables": 7776,
+    "table_projection_tests": 46656,
+    "nonunique_table_unique_projection_tests": 13962,
+    "six_cycle_unique_table": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1
+    ],
+    "six_cycle_margin": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      2
+    ],
+    "parallel_loop_tables": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "parallel_loop_literal_projection": [
+      2
+    ]
+  },
+  "lift": {
+    "all_labeled_base_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "base_tournaments": 75,
+    "strong_lift_controls": 225,
+    "r_values": [
+      1,
+      2,
+      3
+    ],
+    "padding_controls": 150,
+    "circulant_delta_second_minus_first": {
+      "H": 12330,
+      "ordered_two_path_cover": -100740,
+      "strong_lift_H": "113070 - 88410 * 2^r, strictly negative for every r >= 1"
+    }
+  },
+  "electrical": {
+    "nonsingular_symmetric_2x2_matrices": 108,
+    "dyadic_stages": 324,
+    "k_values": [
+      1,
+      2,
+      3
+    ],
+    "binary_symmetric_4x4_matrices": 1024,
+    "labelled_switch_tests": 24576,
+    "rank_two_cases": 1848
+  },
+  "checks": {
+    "transport_cycle_equivalence": 46656,
+    "potential_scc_coverage": 106774,
+    "transport_potential_equivalence": 46656,
+    "cycle_witness_bounds": 11298,
+    "cycle_witness_margins": 11298,
+    "cycle_witness_projection": 11298,
+    "six_cycle_unique": 1,
+    "six_cycle_no_leaf": 1,
+    "six_cycle_residual_pass": 1,
+    "parallel_black_loop_projection_unique": 2,
+    "E_recovers_vertex_triangles": 75,
+    "E_strong_lift_formula": 225,
+    "lift_is_strong": 225,
+    "H_strong_lift_formula": 225,
+    "E_padding_formula": 150,
+    "H_padding_invariant": 150,
+    "tower_lift_independence": 4040,
+    "tower_radical_next_layer": 324,
+    "tower_smith_dimension": 324,
+    "switch_rank_two_iff_independent": 24576
+  }
+}

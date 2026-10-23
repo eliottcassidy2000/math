@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "pairs": [
+    {
+      "canons": [
+        6427778,
+        6427781
+      ],
+      "Q": [
+        2881,
+        2887
+      ],
+      "J4_and_edge_histogram_equal": true
+    },
+    {
+      "canons": [
+        27467784,
+        27467793
+      ],
+      "Q": [
+        3008,
+        3000
+      ],
+      "J4_and_edge_histogram_equal": true
+    }
+  ],
+  "conclusion": "Together with the independent complete J4 census, the scalar Q separates every remaining order-eight J4 collision."
+}

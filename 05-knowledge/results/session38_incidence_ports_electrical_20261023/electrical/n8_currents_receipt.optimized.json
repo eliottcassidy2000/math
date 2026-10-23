@@ -1,0 +1,14 @@
+{
+  "n": 8,
+  "nodes": 3528,
+  "native_c3_currents_verified": 3528,
+  "net_current": 0,
+  "fibre_and_blue_degrees_verified": 3528,
+  "self_converse_parity_verified": 3528,
+  "SC_c3_even_count": 176,
+  "source_sha256": {
+    "nodes.tsv.gz": "845920e31b2367f2aed1728435b713d3da070888b79179fe69c9d471db234307",
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "check_authenticated_currents.py": "afaf77947d5f163f868f404ee02cec3c36268244462d9c1e06977292f7f324bc"
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "nonleaf_congruence_controls": [
+    {
+      "bridge_weight": 1,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    },
+    {
+      "bridge_weight": 2,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    },
+    {
+      "bridge_weight": 3,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    },
+    {
+      "bridge_weight": 4,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    },
+    {
+      "bridge_weight": 5,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    },
+    {
+      "bridge_weight": 16,
+      "both_sides_vertices": 3,
+      "congruence_verified": true
+    }
+  ],
+  "n": 8,
+  "full_vertices": 3528,
+  "support_bridge_bundles": [
+    {
+      "leaf": 0,
+      "owner": 3376,
+      "weight": 1,
+      "blue": 1,
+      "black": 0
+    },
+    {
+      "leaf": 1,
+      "owner": 2388,
+      "weight": 2,
+      "blue": 0,
+      "black": 2
+    },
+    {
+      "leaf": 3,
+      "owner": 2540,
+      "weight": 2,
+      "blue": 0,
+      "black": 2
+    },
+    {
+      "leaf": 10,
+      "owner": 1856,
+      "weight": 2,
+      "blue": 0,
+      "black": 2
+    },
+    {
+      "leaf": 40,
+      "owner": 1140,
+      "weight": 2,
+      "blue": 0,
+      "black": 2
+    },
+    {
+      "leaf": 329,
+      "owner": 2383,
+      "weight": 2,
+      "blue": 0,
+      "black": 2
+    },
+    {
+      "leaf": 331,
+      "owner": 2432,
+      "weight": 1,
+      "blue": 1,
+      "black": 0
+    },
+    {
+      "leaf": 3357,
+      "owner": 2387,
+      "weight": 1,
+      "blue": 1,
+      "black": 0
+    }
+  ],
+  "removed_leaf_nodes": [
+    0,
+    1,
+    3,
+    10,
+    40,
+    329,
+    331,
+    3357
+  ],
+  "core_vertices": 3520,
+  "core_minimum_support_degree": 3,
+  "core_support_bridges": [],
+  "extra_leaf_cascade": false,
+  "core_projection": {
+    "vertices": 3520,
+    "full_components": 1,
+    "blue_components": 3348,
+    "blue_bicycle_dimension": 11,
+    "critical_two_rank": 3358,
+    "half_form_rank": 3353,
+    "factors_divisible_by_four": 5,
+    "blue_half_form_rank": 4,
+    "blue_half_form_alternating": false,
+    "full_half_form_alternating": false
+  },
+  "core_q2": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "transported_V2_rank": 5,
+  "transport_checks": [
+    {
+      "k": 2,
+      "basis_index": 0,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 2,
+      "basis_index": 1,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 2,
+      "basis_index": 2,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 2,
+      "basis_index": 3,
+      "self_pairing": 1,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 2,
+      "basis_index": 4,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 3,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 4,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 5,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 6,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 7,
+      "self_pairing": 0,
+      "bridge_energy_divided_by_modulus": 0
+    },
+    {
+      "k": 8,
+      "self_pairing": 1,
+      "bridge_energy_divided_by_modulus": 0
+    }
+  ],
+  "full_two_primary_exponent_counts": {
+    "1": 3358,
+    "2": 4,
+    "8": 1
+  },
+  "bridge_two_primary_exponent_counts": {
+    "1": 5
+  },
+  "core_two_primary_exponent_counts": {
+    "1": 3353,
+    "2": 4,
+    "8": 1
+  },
+  "core_spanning_tree_valuation_two": 3369,
+  "source_sha256": {
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "nodes.tsv.gz": "845920e31b2367f2aed1728435b713d3da070888b79179fe69c9d471db234307",
+    "n8_lift_receipt.json": "e77a2409218ae7aafa5a4e303aa8bc56a47e51ebeb2fe0e48f6d6dab6f7295e8",
+    "n8_final_radical_receipt.json": "423429679a587b007e97b5e03274114201b6d3a70084315ee6f7efb114d51804",
+    "n8_complete_tower_receipt.json": "b8a3853fe86940cf809b74e69a46c575813e644f25f9ac971bfdf934d91c2bf7",
+    "check_bridge_localization.py": "6dc77765ef356a8884df930de8d3f82544bf3639ae5ee9894dcedd745b427928"
+  }
+}

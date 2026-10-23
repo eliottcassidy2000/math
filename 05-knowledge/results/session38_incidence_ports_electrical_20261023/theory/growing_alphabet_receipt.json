@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "scope": "Class separation by one outgoing-row multiset signature; not authenticated global wiring reconstruction.",
+  "explicit_obstruction": {
+    "all_order_theorem": "Every integer n>=64 and 1<=L<=n/16 fails",
+    "exact_finite_controls": [
+      64,
+      512
+    ],
+    "maximal_integer_L_tested": "floor(n/16)",
+    "orders_tested": 449
+  },
+  "necessary_asymptotic_constants": {
+    "row_bound": {
+      "equation": "f(a)=1/2",
+      "approximate": "0.104828416667664349078749",
+      "exact_rational_bracket": [
+        "0.1048",
+        "0.1049"
+      ]
+    },
+    "fixed_mass_bound": {
+      "equation": "f(2a)=1",
+      "approximate": "0.146907686670207746658301",
+      "exact_rational_bracket": [
+        "0.1469",
+        "0.1470"
+      ]
+    }
+  },
+  "integer_certificate": {
+    "17^17": "827240261886336764177",
+    "2^70": "1180591620717411303424",
+    "65^128_lt_2^15_times_64^128": true
+  },
+  "checks": {
+    "row_entropy_exact_power_bound": 1,
+    "strong_lower_bound_induction_step": 1,
+    "strong_lower_bound_base_case": 1,
+    "row_stars_and_bars": 24,
+    "fixed_mass_stars_and_bars": 35,
+    "explicit_row_upper_bound": 449,
+    "explicit_strong_lower_bound": 449,
+    "exact_pigeonhole_failure": 449,
+    "exact_fixed_mass_failure": 449,
+    "row_root_lower_rational_bracket": 1,
+    "row_root_upper_rational_bracket": 1,
+    "mass_root_lower_rational_bracket": 1,
+    "mass_root_upper_rational_bracket": 1
+  }
+}

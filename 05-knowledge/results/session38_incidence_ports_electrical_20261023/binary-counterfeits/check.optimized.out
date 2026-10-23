@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "partitions": 255,
+  "literal_counterfeits": 255,
+  "unresolved": [],
+  "checks": 483651,
+  "distinct_target_pairs": 61,
+  "distinct_donor_cells": 100
+}

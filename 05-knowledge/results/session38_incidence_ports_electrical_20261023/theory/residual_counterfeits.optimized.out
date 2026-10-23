@@ -1,0 +1,5 @@
+J4 nonunique in both models; 8 symmetric changed cells; merged delta [[2345, 1005, 0, -2], [2345, 1006, 0, 2], [2348, 1005, 0, 2], [2348, 1006, 0, -2]]
+E_edge2 nonunique in both models; 8 symmetric changed cells; merged delta [[1058, 1751, 0, -2], [1058, 2752, 0, 2], [1721, 1751, 0, 2], [1721, 2752, 0, -2]]
+E_neighbor2 nonunique in both models; 8 symmetric changed cells; merged delta [[2345, 1005, 0, -2], [2345, 1006, 0, 2], [2348, 1005, 0, 2], [2348, 1006, 0, -2]]
+E_neighbor3 ordinary nonunique, but full symmetric table UNIQUE by singleton-or-converse certificate: 6872 + 8 classes
+PASS 84436 checks; receipt matched

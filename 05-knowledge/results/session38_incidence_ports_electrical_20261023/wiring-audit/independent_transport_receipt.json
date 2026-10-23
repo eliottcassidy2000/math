@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "All fixed-path masks n3..7; independent edge-intersection incidence counts",
+  "universes": [
+    {
+      "n": 3,
+      "all_fixed_path_masks": 2
+    },
+    {
+      "n": 4,
+      "all_fixed_path_masks": 8
+    },
+    {
+      "n": 5,
+      "all_fixed_path_masks": 64
+    },
+    {
+      "n": 6,
+      "all_fixed_path_masks": 1024
+    },
+    {
+      "n": 7,
+      "all_fixed_path_masks": 32768
+    }
+  ],
+  "total_masks": 33866,
+  "explicit_checks": 101599,
+  "path_dependence_hostile_n4_source_rows": [
+    [
+      2,
+      4,
+      9,
+      3
+    ],
+    [
+      6,
+      4,
+      8,
+      3
+    ]
+  ]
+}

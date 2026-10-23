@@ -1,0 +1,498 @@
+{
+  "status": "FINITE-EXACT independent controls",
+  "census": [
+    {
+      "n": 3,
+      "vertices": 2,
+      "full_components": 1,
+      "blue_components": 1,
+      "blue_bicycle_dimension": 0,
+      "critical_two_rank": 0,
+      "half_form_rank": 0,
+      "factors_divisible_by_four": 0,
+      "blue_half_form_rank": 0,
+      "blue_half_form_alternating": true,
+      "full_half_form_alternating": true
+    },
+    {
+      "n": 4,
+      "vertices": 3,
+      "full_components": 1,
+      "blue_components": 2,
+      "blue_bicycle_dimension": 0,
+      "critical_two_rank": 1,
+      "half_form_rank": 1,
+      "factors_divisible_by_four": 0,
+      "blue_half_form_rank": 0,
+      "blue_half_form_alternating": true,
+      "full_half_form_alternating": false
+    },
+    {
+      "n": 5,
+      "vertices": 10,
+      "full_components": 1,
+      "blue_components": 3,
+      "blue_bicycle_dimension": 1,
+      "critical_two_rank": 3,
+      "half_form_rank": 3,
+      "factors_divisible_by_four": 0,
+      "blue_half_form_rank": 0,
+      "blue_half_form_alternating": true,
+      "full_half_form_alternating": false
+    },
+    {
+      "n": 6,
+      "vertices": 34,
+      "full_components": 1,
+      "blue_components": 23,
+      "blue_bicycle_dimension": 3,
+      "critical_two_rank": 25,
+      "half_form_rank": 24,
+      "factors_divisible_by_four": 1,
+      "blue_half_form_rank": 0,
+      "blue_half_form_alternating": true,
+      "full_half_form_alternating": false
+    }
+  ],
+  "switches": [
+    {
+      "n": 5,
+      "connected_unit_switches_checked": 42,
+      "half_form_detected": 25,
+      "half_form_invisible": 17,
+      "invisible_control": {
+        "remove": [
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            7,
+            3,
+            1
+          ]
+        ],
+        "add": [
+          [
+            1,
+            7,
+            1
+          ],
+          [
+            4,
+            3,
+            1
+          ]
+        ],
+        "same_full_half_form": true,
+        "same_blue_graph": true,
+        "same_color_degrees": true,
+        "original_tree": 41096,
+        "changed_tree": 36680,
+        "blue_edges": [
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            2,
+            7,
+            1
+          ],
+          [
+            4,
+            8,
+            1
+          ],
+          [
+            5,
+            7,
+            1
+          ],
+          [
+            5,
+            8,
+            1
+          ],
+          [
+            6,
+            9,
+            1
+          ],
+          [
+            7,
+            9,
+            1
+          ],
+          [
+            8,
+            9,
+            1
+          ]
+        ],
+        "original_paired_black_edges": [
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            3,
+            6,
+            1
+          ],
+          [
+            3,
+            7,
+            1
+          ],
+          [
+            3,
+            8,
+            1
+          ],
+          [
+            4,
+            5,
+            1
+          ],
+          [
+            4,
+            7,
+            1
+          ],
+          [
+            5,
+            6,
+            1
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            1
+          ]
+        ],
+        "changed_paired_black_edges": [
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            3,
+            6,
+            1
+          ],
+          [
+            3,
+            8,
+            1
+          ],
+          [
+            4,
+            5,
+            1
+          ],
+          [
+            4,
+            7,
+            1
+          ],
+          [
+            5,
+            6,
+            1
+          ],
+          [
+            7,
+            7,
+            1
+          ],
+          [
+            7,
+            8,
+            1
+          ],
+          [
+            8,
+            8,
+            1
+          ],
+          [
+            1,
+            7,
+            1
+          ],
+          [
+            4,
+            3,
+            1
+          ]
+        ]
+      }
+    }
+  ],
+  "tower_controls": [
+    {
+      "matrix": [
+        [
+          2
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 2,
+          "radical_size": 1
+        },
+        {
+          "k": 2,
+          "V_size": 1,
+          "radical_size": 1
+        },
+        {
+          "k": 3,
+          "V_size": 1,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          4
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 2,
+          "V_size": 2,
+          "radical_size": 1
+        },
+        {
+          "k": 3,
+          "V_size": 1,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          8
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 2,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 3,
+          "V_size": 2,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 4,
+          "radical_size": 1
+        },
+        {
+          "k": 2,
+          "V_size": 1,
+          "radical_size": 1
+        },
+        {
+          "k": 3,
+          "V_size": 1,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 4,
+          "radical_size": 2
+        },
+        {
+          "k": 2,
+          "V_size": 2,
+          "radical_size": 1
+        },
+        {
+          "k": 3,
+          "V_size": 1,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          3,
+          -1
+        ],
+        [
+          -1,
+          3
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 2,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 3,
+          "V_size": 2,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 8,
+          "radical_size": 4
+        },
+        {
+          "k": 2,
+          "V_size": 4,
+          "radical_size": 2
+        },
+        {
+          "k": 3,
+          "V_size": 2,
+          "radical_size": 1
+        }
+      ]
+    },
+    {
+      "matrix": [
+        [
+          6,
+          -2,
+          -2
+        ],
+        [
+          -2,
+          4,
+          0
+        ],
+        [
+          -2,
+          0,
+          4
+        ]
+      ],
+      "layers": [
+        {
+          "k": 1,
+          "V_size": 8,
+          "radical_size": 2
+        },
+        {
+          "k": 2,
+          "V_size": 2,
+          "radical_size": 2
+        },
+        {
+          "k": 3,
+          "V_size": 2,
+          "radical_size": 2
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "check_electrical.py": "89692c445d8c8bba1c365968c3fc0a20aa697dd73e6fca763ced5d777baffa83"
+  }
+}

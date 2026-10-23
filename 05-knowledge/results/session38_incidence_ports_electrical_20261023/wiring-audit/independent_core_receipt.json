@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "core_vertices": 3520,
+  "core_root": 2,
+  "core_components": 1,
+  "core_support_bridges": [],
+  "core_minimum_support_degree": 3,
+  "removed_leaves": [
+    0,
+    1,
+    3,
+    10,
+    40,
+    329,
+    331,
+    3357
+  ],
+  "bridge_weight_multiset": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "core_q2_unchanged": true,
+  "core_V2_binary_rank": 5,
+  "core_tail_forms": [
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      7,
+      0
+    ],
+    [
+      8,
+      1
+    ]
+  ],
+  "core_two_primary_exponent_counts": {
+    "1": 3353,
+    "2": 4,
+    "8": 1
+  },
+  "core_tree_two_valuation": 3369,
+  "method": "Independent core support/bridge computation and direct restriction of all eleven higher lift certificates. Core group follows also from unimodular bridge splitting of independently audited full group."
+}

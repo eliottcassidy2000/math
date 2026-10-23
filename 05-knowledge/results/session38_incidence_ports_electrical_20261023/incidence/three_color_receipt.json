@@ -1,0 +1,60 @@
+{
+  "scope": "PROVED all-size identities; exhaustive all labeled tournaments n2..6 and all6880 order8 class reps",
+  "classes_sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+  "levels": [
+    {
+      "n": 2,
+      "all_labeled_tournaments": 2
+    },
+    {
+      "n": 3,
+      "all_labeled_tournaments": 8
+    },
+    {
+      "n": 4,
+      "all_labeled_tournaments": 64
+    },
+    {
+      "n": 5,
+      "all_labeled_tournaments": 1024
+    },
+    {
+      "n": 6,
+      "all_labeled_tournaments": 32768
+    }
+  ],
+  "order8_classes": 6880,
+  "cyclic_triangle_hostile": {
+    "outgoing_rows": [
+      2,
+      4,
+      1
+    ],
+    "vertex_triangle_counts": [
+      1,
+      1,
+      1
+    ],
+    "plus_weighted_row_sums_mod3": [
+      2,
+      2,
+      2
+    ],
+    "plus_converse_weighted_row_sums_mod3": [
+      2,
+      2,
+      2
+    ],
+    "minus_weighted_row_sums_mod3": [
+      0,
+      0,
+      0
+    ],
+    "minus_converse_weighted_row_sums_mod3": [
+      0,
+      0,
+      0
+    ]
+  },
+  "checks": 2458595
+}

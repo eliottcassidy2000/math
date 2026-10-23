@@ -1,0 +1,1556 @@
+{
+  "E33_certificate": {
+    "distinct_class_signatures": 6876,
+    "minimality_scope": "within rectangular (c_target mod p, cyclic_edge_count mod q) alphabets with full converse constraints, p>=3 and q>=3 are necessary by the E_neighbor2 and E_edge2 symmetric counterfeits, and p=q=3 attains9 symbols; this is not a claim that all larger p,q succeed",
+    "ordinary_counterfeit": "E_neighbor3 ordinary edits apply unchanged",
+    "partition_sha256": "52828e06e7df69b297c346a750485f3ba7688e94cfbdf9971a2c143fbfdaf891",
+    "same_partition_as": "E_neighbor3",
+    "singleton_or_converse_verified_on_all_classes": 6880,
+    "status": "ordinary table nonunique; converse-symmetric table unique",
+    "symbol_alphabet_size": 9
+  },
+  "checks": {
+    "E33 and E_neighbor3 class partitions identical": 1,
+    "E33 ordinary counterfeit valid": 1,
+    "E33 singleton-or-converse theorem covers every class": 1,
+    "E_edge2 ordinary counterfeit found": 1,
+    "E_neighbor2 ordinary counterfeit found": 1,
+    "E_neighbor3 ordinary counterfeit found": 1,
+    "J4 ordinary counterfeit found": 1,
+    "accepted target signatures truly equal": 34,
+    "all changed black counts even": 3,
+    "all changed cell bounds": 7,
+    "base cycle has two unit donors": 7,
+    "blue table unchanged": 40,
+    "changed reflection-fixed black cells even": 3,
+    "changed table full converse reflection": 3,
+    "complete native open capacity ledger": 1,
+    "constructed counterfeit feasibility": 7,
+    "counterfeit differs from actual complement": 20,
+    "distinct literal removed-port witnesses": 20,
+    "every changed cell obeys triangle law": 7,
+    "every colliding class has singleton converse signature": 1,
+    "every residual cell target signature accepted": 15861,
+    "every residual cell triangle law": 15861,
+    "four distinct reflected source ports": 6,
+    "four-cycle endpoint and color agreement": 20575,
+    "literal closed to open matching": 20,
+    "literal map coverage": 1,
+    "literal matching black color": 20,
+    "literal matching commutes with reflection": 3,
+    "literal source target signature unchanged": 20,
+    "literal source target-signature bucket exists": 40,
+    "literal switch gives exact recorded table delta": 7,
+    "literal target endpoint column exists": 40,
+    "literal target endpoint compatibility": 20,
+    "literal target ports permuted bijectively": 7,
+    "literal witness reflection classes": 35,
+    "literal witnesses for all nonzero native changed cells": 1,
+    "merged triangle current unchanged": 7,
+    "naive reflected counterfeit violates retained source signature buckets": 1,
+    "native full converse reflection": 1,
+    "native full transport mass": 1,
+    "native literal black twins": 1,
+    "native reflection-fixed black cells even": 1,
+    "nonzero directed and undirected projection": 7,
+    "only intended symmetric uniqueness case": 1,
+    "residual cell actual value": 15861,
+    "residual column capacities": 4,
+    "residual endpoint compatibility": 15861,
+    "residual row capacities": 4,
+    "singleton-or-converse theorem covers every target class": 1,
+    "total line mass preserved": 7
+  },
+  "input_sha256": {
+    "incidence/check.py": "ac0bf4eb1018c67a546469fb28bebd64b3945488d7ab4758e907b57525e63d8a",
+    "incidence/residual_E_edge2.json": "e56dd59915accfc53a949fb2245e04956bbfc3dc174a01a64c2ce79eea835ef2",
+    "incidence/residual_E_neighbor2.json": "51561dbd4818b2b6bef3028017baebe0a468ab39083ffcf9731ae91064e54344",
+    "incidence/residual_E_neighbor3.json": "76820c643a2c825beb9af86d3eaa7861ca334322dbef382f240139d2a90205af",
+    "incidence/residual_J4.json": "586c1c3bba8d5c6b49b31f3e8903e0f7f3c6d7bf433173b540edf84db69db86d",
+    "wiring/class_of_mask.u16le.gz": "7d717c5c8889bf8f64abe111a76fa7488c6455a61f6249a25728f09146393bf8",
+    "wiring/classes.tsv.gz": "227eede83c884d90b060a5da6b8fc36a65bc788be9043c3f05b46499388855b4",
+    "wiring/endpoint_capacities.tsv.gz": "d588862df4a293e02627ba0bdeb0677d18d97cf95245bb26f2bcfe2025902f5b",
+    "wiring/ports.tsv.gz": "ce886c5755cfaeaaddf8f45c5a889d47d6036c9d24bf520d29251289953ac3b9"
+  },
+  "results": {
+    "E_edge2": {
+      "candidate_four_cycles_tested": 1,
+      "ordinary": {
+        "all_literal_black_multiplicities_even": false,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": false,
+        "cycle": [
+          [
+            "row",
+            15
+          ],
+          [
+            "column",
+            49
+          ],
+          [
+            "row",
+            32
+          ],
+          [
+            "column",
+            1
+          ],
+          [
+            "row",
+            15
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            1058,
+            1751,
+            0,
+            -1
+          ],
+          [
+            1058,
+            2752,
+            0,
+            1
+          ],
+          [
+            1721,
+            1751,
+            0,
+            1
+          ],
+          [
+            1721,
+            2752,
+            0,
+            -1
+          ]
+        ],
+        "edits": [
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              15417
+            ],
+            "source_canon": 6490113,
+            "source_class": 1157,
+            "start_score": 5,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 1,
+            "before": 0,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [],
+            "source_canon": 6490113,
+            "source_class": 1157,
+            "start_score": 5,
+            "target_canon": 35856546,
+            "target_class": 3858
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              337148
+            ],
+            "source_canon": 12918829,
+            "source_class": 1968,
+            "start_score": 5,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              1321340
+            ],
+            "source_canon": 12918829,
+            "source_class": 1968,
+            "start_score": 5,
+            "target_canon": 35856546,
+            "target_class": 3858
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 3858,
+            "counterfeit_target_open_mask": 775811,
+            "native_target_class": 2010,
+            "native_target_open_mask": 2081734,
+            "source_class": 1157,
+            "source_closed_mask": 15417
+          },
+          {
+            "counterfeit_target_class": 2010,
+            "counterfeit_target_open_mask": 2081734,
+            "native_target_class": 3858,
+            "native_target_open_mask": 775811,
+            "source_class": 1968,
+            "source_closed_mask": 1321340
+          }
+        ],
+        "model": "ordinary endpoint/color/signature transport",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            1058,
+            1751,
+            0,
+            -1
+          ],
+          [
+            1058,
+            2752,
+            0,
+            1
+          ],
+          [
+            1721,
+            1751,
+            0,
+            1
+          ],
+          [
+            1721,
+            2752,
+            0,
+            -1
+          ]
+        ]
+      },
+      "symmetric": {
+        "all_literal_black_multiplicities_even": true,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": true,
+        "cycle": [
+          [
+            "row",
+            15
+          ],
+          [
+            "column",
+            49
+          ],
+          [
+            "row",
+            32
+          ],
+          [
+            "column",
+            1
+          ],
+          [
+            "row",
+            15
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            1058,
+            1751,
+            0,
+            -2
+          ],
+          [
+            1058,
+            2752,
+            0,
+            2
+          ],
+          [
+            1721,
+            1751,
+            0,
+            2
+          ],
+          [
+            1721,
+            2752,
+            0,
+            -2
+          ]
+        ],
+        "edits": [
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              15417
+            ],
+            "source_canon": 6490113,
+            "source_class": 1157,
+            "start_score": 5,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 1,
+            "before": 0,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [],
+            "source_canon": 6490113,
+            "source_class": 1157,
+            "start_score": 5,
+            "target_canon": 35856546,
+            "target_class": 3858
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              337148
+            ],
+            "source_canon": 12918829,
+            "source_class": 1968,
+            "start_score": 5,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              1321340
+            ],
+            "source_canon": 12918829,
+            "source_class": 1968,
+            "start_score": 5,
+            "target_canon": 35856546,
+            "target_class": 3858
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 2,
+            "native_masks": [
+              1103152
+            ],
+            "source_canon": 36258240,
+            "source_class": 3941,
+            "start_score": 3,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 1,
+            "before": 0,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 2,
+            "native_masks": [],
+            "source_canon": 36258240,
+            "source_class": 3941,
+            "start_score": 3,
+            "target_canon": 35856546,
+            "target_class": 3858
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 2,
+            "native_masks": [
+              476656
+            ],
+            "source_canon": 101223808,
+            "source_class": 6401,
+            "start_score": 3,
+            "target_canon": 13141520,
+            "target_class": 2010
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 2,
+            "native_masks": [
+              451937
+            ],
+            "source_canon": 101223808,
+            "source_class": 6401,
+            "start_score": 3,
+            "target_canon": 35856546,
+            "target_class": 3858
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 3858,
+            "counterfeit_target_open_mask": 775811,
+            "native_target_class": 2010,
+            "native_target_open_mask": 2081734,
+            "source_class": 1157,
+            "source_closed_mask": 15417
+          },
+          {
+            "counterfeit_target_class": 2010,
+            "counterfeit_target_open_mask": 993999,
+            "native_target_class": 3858,
+            "native_target_open_mask": 1645214,
+            "source_class": 6401,
+            "source_closed_mask": 451937
+          },
+          {
+            "counterfeit_target_class": 3858,
+            "counterfeit_target_open_mask": 1645214,
+            "native_target_class": 2010,
+            "native_target_open_mask": 993999,
+            "source_class": 3941,
+            "source_closed_mask": 1103152
+          },
+          {
+            "counterfeit_target_class": 2010,
+            "counterfeit_target_open_mask": 2081734,
+            "native_target_class": 3858,
+            "native_target_open_mask": 775811,
+            "source_class": 1968,
+            "source_closed_mask": 1321340
+          }
+        ],
+        "model": "converse-symmetric and black-even",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            1058,
+            1751,
+            0,
+            -2
+          ],
+          [
+            1058,
+            2752,
+            0,
+            2
+          ],
+          [
+            1721,
+            1751,
+            0,
+            2
+          ],
+          [
+            1721,
+            2752,
+            0,
+            -2
+          ]
+        ]
+      }
+    },
+    "E_neighbor2": {
+      "candidate_four_cycles_tested": 3455,
+      "ordinary": {
+        "all_literal_black_multiplicities_even": false,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": false,
+        "cycle": [
+          [
+            "row",
+            1
+          ],
+          [
+            "column",
+            3
+          ],
+          [
+            "row",
+            3
+          ],
+          [
+            "column",
+            0
+          ],
+          [
+            "row",
+            1
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            486,
+            236,
+            0,
+            -1
+          ],
+          [
+            486,
+            237,
+            0,
+            1
+          ],
+          [
+            493,
+            236,
+            0,
+            1
+          ],
+          [
+            493,
+            237,
+            0,
+            -1
+          ]
+        ],
+        "edits": [
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 6,
+            "native_masks": [
+              632895
+            ],
+            "source_canon": 2301952,
+            "source_class": 590,
+            "start_score": 5,
+            "target_canon": 204936,
+            "target_class": 241
+          },
+          {
+            "after": 1,
+            "before": 0,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 6,
+            "native_masks": [],
+            "source_canon": 2301952,
+            "source_class": 590,
+            "start_score": 5,
+            "target_canon": 204945,
+            "target_class": 242
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 6,
+            "native_masks": [
+              86079
+            ],
+            "source_canon": 2428928,
+            "source_class": 632,
+            "start_score": 5,
+            "target_canon": 204936,
+            "target_class": 241
+          },
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 6,
+            "native_masks": [
+              346175
+            ],
+            "source_canon": 2428928,
+            "source_class": 632,
+            "start_score": 5,
+            "target_canon": 204945,
+            "target_class": 242
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 241,
+            "counterfeit_target_open_mask": 1464256,
+            "native_target_class": 242,
+            "native_target_open_mask": 1750976,
+            "source_class": 632,
+            "source_closed_mask": 346175
+          },
+          {
+            "counterfeit_target_class": 242,
+            "counterfeit_target_open_mask": 1750976,
+            "native_target_class": 241,
+            "native_target_open_mask": 1464256,
+            "source_class": 590,
+            "source_closed_mask": 632895
+          }
+        ],
+        "model": "ordinary endpoint/color/signature transport",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            236,
+            486,
+            0,
+            -1
+          ],
+          [
+            236,
+            493,
+            0,
+            1
+          ],
+          [
+            237,
+            486,
+            0,
+            1
+          ],
+          [
+            237,
+            493,
+            0,
+            -1
+          ]
+        ]
+      },
+      "symmetric": {
+        "all_literal_black_multiplicities_even": true,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": true,
+        "cycle": [
+          [
+            "row",
+            258
+          ],
+          [
+            "column",
+            10
+          ],
+          [
+            "row",
+            261
+          ],
+          [
+            "column",
+            6
+          ],
+          [
+            "row",
+            258
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            2345,
+            1005,
+            0,
+            -2
+          ],
+          [
+            2345,
+            1006,
+            0,
+            2
+          ],
+          [
+            2348,
+            1005,
+            0,
+            2
+          ],
+          [
+            2348,
+            1006,
+            0,
+            -2
+          ]
+        ],
+        "edits": [
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              110835
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              297658
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          },
+          {
+            "after": 4,
+            "before": 3,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              41658
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              108915
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "native_masks": [
+              642656
+            ],
+            "source_canon": 134450240,
+            "source_class": 6572,
+            "start_score": 3,
+            "target_canon": 27467784,
+            "target_class": 3139
+          },
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "native_masks": [
+              990432
+            ],
+            "source_canon": 134450240,
+            "source_class": 6572,
+            "start_score": 3,
+            "target_canon": 27467793,
+            "target_class": 3141
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "native_masks": [
+              1879456
+            ],
+            "source_canon": 134450434,
+            "source_class": 6573,
+            "start_score": 3,
+            "target_canon": 27467784,
+            "target_class": 3139
+          },
+          {
+            "after": 4,
+            "before": 3,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "native_masks": [
+              415392
+            ],
+            "source_canon": 134450434,
+            "source_class": 6573,
+            "start_score": 3,
+            "target_canon": 27467793,
+            "target_class": 3141
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 1099,
+            "counterfeit_target_open_mask": 1986316,
+            "native_target_class": 1100,
+            "native_target_open_mask": 1988236,
+            "source_class": 3160,
+            "source_closed_mask": 108915
+          },
+          {
+            "counterfeit_target_class": 1100,
+            "counterfeit_target_open_mask": 1988236,
+            "native_target_class": 1099,
+            "native_target_open_mask": 1986316,
+            "source_class": 3156,
+            "source_closed_mask": 110835
+          },
+          {
+            "counterfeit_target_class": 3141,
+            "counterfeit_target_open_mask": 189023,
+            "native_target_class": 3139,
+            "native_target_open_mask": 217695,
+            "source_class": 6573,
+            "source_closed_mask": 1879456
+          },
+          {
+            "counterfeit_target_class": 3139,
+            "counterfeit_target_open_mask": 217695,
+            "native_target_class": 3141,
+            "native_target_open_mask": 189023,
+            "source_class": 6572,
+            "source_closed_mask": 1908128
+          }
+        ],
+        "model": "converse-symmetric and black-even",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            1005,
+            2345,
+            0,
+            -2
+          ],
+          [
+            1005,
+            2348,
+            0,
+            2
+          ],
+          [
+            1006,
+            2345,
+            0,
+            2
+          ],
+          [
+            1006,
+            2348,
+            0,
+            -2
+          ]
+        ]
+      }
+    },
+    "E_neighbor3": {
+      "candidate_four_cycles_tested": 17118,
+      "ordinary": {
+        "all_literal_black_multiplicities_even": false,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": false,
+        "cycle": [
+          [
+            "row",
+            44
+          ],
+          [
+            "column",
+            9
+          ],
+          [
+            "row",
+            58
+          ],
+          [
+            "column",
+            0
+          ],
+          [
+            "row",
+            44
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            2230,
+            746,
+            0,
+            -1
+          ],
+          [
+            2230,
+            755,
+            0,
+            1
+          ],
+          [
+            2255,
+            746,
+            0,
+            1
+          ],
+          [
+            2255,
+            755,
+            0,
+            -1
+          ]
+        ],
+        "edits": [
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 5,
+            "native_masks": [
+              332222
+            ],
+            "source_canon": 25364481,
+            "source_class": 2917,
+            "start_score": 6,
+            "target_canon": 4328706,
+            "target_class": 804
+          },
+          {
+            "after": 1,
+            "before": 0,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 5,
+            "native_masks": [],
+            "source_canon": 25364481,
+            "source_class": 2917,
+            "start_score": 6,
+            "target_canon": 4330626,
+            "target_class": 814
+          },
+          {
+            "after": 2,
+            "before": 1,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 5,
+            "native_masks": [
+              105083
+            ],
+            "source_canon": 25563157,
+            "source_class": 2971,
+            "start_score": 6,
+            "target_canon": 4328706,
+            "target_class": 804
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 5,
+            "native_masks": [
+              110843
+            ],
+            "source_canon": 25563157,
+            "source_class": 2971,
+            "start_score": 6,
+            "target_canon": 4330626,
+            "target_class": 814
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 804,
+            "counterfeit_target_open_mask": 1764929,
+            "native_target_class": 814,
+            "native_target_open_mask": 1986308,
+            "source_class": 2971,
+            "source_closed_mask": 110843
+          },
+          {
+            "counterfeit_target_class": 814,
+            "counterfeit_target_open_mask": 1986308,
+            "native_target_class": 804,
+            "native_target_open_mask": 1764929,
+            "source_class": 2917,
+            "source_closed_mask": 332222
+          }
+        ],
+        "model": "ordinary endpoint/color/signature transport",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            746,
+            2230,
+            0,
+            -1
+          ],
+          [
+            746,
+            2255,
+            0,
+            1
+          ],
+          [
+            755,
+            2230,
+            0,
+            1
+          ],
+          [
+            755,
+            2255,
+            0,
+            -1
+          ]
+        ]
+      },
+      "symmetric_uniqueness": {
+        "additional_classes_forced_by_converse": 8,
+        "colliding_classes": [
+          {
+            "canon": 4328706,
+            "class_id": 804,
+            "converse_canon": 25337872,
+            "converse_class": 2910,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 4330626,
+            "class_id": 814,
+            "converse_canon": 25727236,
+            "converse_class": 3095,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 25694272,
+            "class_id": 3022,
+            "converse_canon": 8397924,
+            "converse_class": 1307,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 25694466,
+            "class_id": 3031,
+            "converse_canon": 8393858,
+            "converse_class": 1283,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 27467792,
+            "class_id": 3140,
+            "converse_canon": 2297090,
+            "converse_class": 584,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 27467812,
+            "class_id": 3143,
+            "converse_canon": 2303121,
+            "converse_class": 605,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 50676048,
+            "class_id": 5092,
+            "converse_canon": 4589843,
+            "converse_class": 953,
+            "converse_signature_class_count": 1
+          },
+          {
+            "canon": 50676504,
+            "class_id": 5101,
+            "converse_canon": 4399241,
+            "converse_class": 907,
+            "converse_signature_class_count": 1
+          }
+        ],
+        "criterion": "every class has a globally singleton S signature or a converse with globally singleton S signature",
+        "direct_singletons": 6872,
+        "ordinary_classes": 6880,
+        "rejected_mirrored_switch_row_deltas": [
+          {
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "source_class": 6545,
+            "start_score": 2,
+            "target_classes_in_signature": [
+              2910
+            ]
+          },
+          {
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "source_class": 6545,
+            "start_score": 2,
+            "target_classes_in_signature": [
+              3095
+            ]
+          },
+          {
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "source_class": 6552,
+            "start_score": 2,
+            "target_classes_in_signature": [
+              3095
+            ]
+          },
+          {
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "source_class": 6552,
+            "start_score": 2,
+            "target_classes_in_signature": [
+              2910
+            ]
+          }
+        ],
+        "status": "entire ordinary target-class transport table uniquely forced, hence merged wiring unique"
+      }
+    },
+    "J4": {
+      "candidate_four_cycles_tested": 1,
+      "ordinary": {
+        "all_literal_black_multiplicities_even": false,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": false,
+        "cycle": [
+          [
+            "row",
+            101
+          ],
+          [
+            "column",
+            4
+          ],
+          [
+            "row",
+            104
+          ],
+          [
+            "column",
+            0
+          ],
+          [
+            "row",
+            101
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            2345,
+            1005,
+            0,
+            -1
+          ],
+          [
+            2345,
+            1006,
+            0,
+            1
+          ],
+          [
+            2348,
+            1005,
+            0,
+            1
+          ],
+          [
+            2348,
+            1006,
+            0,
+            -1
+          ]
+        ],
+        "edits": [
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              110835
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              297658
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          },
+          {
+            "after": 4,
+            "before": 3,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              41658
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              108915
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 1099,
+            "counterfeit_target_open_mask": 1986316,
+            "native_target_class": 1100,
+            "native_target_open_mask": 1988236,
+            "source_class": 3160,
+            "source_closed_mask": 108915
+          },
+          {
+            "counterfeit_target_class": 1100,
+            "counterfeit_target_open_mask": 1988236,
+            "native_target_class": 1099,
+            "native_target_open_mask": 1986316,
+            "source_class": 3156,
+            "source_closed_mask": 110835
+          }
+        ],
+        "model": "ordinary endpoint/color/signature transport",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            1005,
+            2345,
+            0,
+            -1
+          ],
+          [
+            1005,
+            2348,
+            0,
+            1
+          ],
+          [
+            1006,
+            2345,
+            0,
+            1
+          ],
+          [
+            1006,
+            2348,
+            0,
+            -1
+          ]
+        ]
+      },
+      "symmetric": {
+        "all_literal_black_multiplicities_even": true,
+        "all_source_signature_buckets_preserved": true,
+        "all_target_endpoint_capacities_preserved": true,
+        "blue_unchanged": true,
+        "converse_reflection_preserved": true,
+        "cycle": [
+          [
+            "row",
+            101
+          ],
+          [
+            "column",
+            4
+          ],
+          [
+            "row",
+            104
+          ],
+          [
+            "column",
+            0
+          ],
+          [
+            "row",
+            101
+          ]
+        ],
+        "directed_merged_delta": [
+          [
+            2345,
+            1005,
+            0,
+            -2
+          ],
+          [
+            2345,
+            1006,
+            0,
+            2
+          ],
+          [
+            2348,
+            1005,
+            0,
+            2
+          ],
+          [
+            2348,
+            1006,
+            0,
+            -2
+          ]
+        ],
+        "edits": [
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              110835
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              297658
+            ],
+            "source_canon": 29558785,
+            "source_class": 3156,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          },
+          {
+            "after": 4,
+            "before": 3,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 4,
+            "native_masks": [
+              41658
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427778,
+            "target_class": 1099
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 4,
+            "native_masks": [
+              108915
+            ],
+            "source_canon": 29564945,
+            "source_class": 3160,
+            "start_score": 6,
+            "target_canon": 6427781,
+            "target_class": 1100
+          },
+          {
+            "after": 3,
+            "before": 2,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "native_masks": [
+              642656
+            ],
+            "source_canon": 134450240,
+            "source_class": 6572,
+            "start_score": 3,
+            "target_canon": 27467784,
+            "target_class": 3139
+          },
+          {
+            "after": 1,
+            "before": 2,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "native_masks": [
+              990432
+            ],
+            "source_canon": 134450240,
+            "source_class": 6572,
+            "start_score": 3,
+            "target_canon": 27467793,
+            "target_class": 3141
+          },
+          {
+            "after": 0,
+            "before": 1,
+            "blue": 0,
+            "delta": -1,
+            "end_score": 1,
+            "native_masks": [
+              1879456
+            ],
+            "source_canon": 134450434,
+            "source_class": 6573,
+            "start_score": 3,
+            "target_canon": 27467784,
+            "target_class": 3139
+          },
+          {
+            "after": 4,
+            "before": 3,
+            "blue": 0,
+            "delta": 1,
+            "end_score": 1,
+            "native_masks": [
+              415392
+            ],
+            "source_canon": 134450434,
+            "source_class": 6573,
+            "start_score": 3,
+            "target_canon": 27467793,
+            "target_class": 3141
+          }
+        ],
+        "literal_port_matching": [
+          {
+            "counterfeit_target_class": 1099,
+            "counterfeit_target_open_mask": 1986316,
+            "native_target_class": 1100,
+            "native_target_open_mask": 1988236,
+            "source_class": 3160,
+            "source_closed_mask": 108915
+          },
+          {
+            "counterfeit_target_class": 1100,
+            "counterfeit_target_open_mask": 1988236,
+            "native_target_class": 1099,
+            "native_target_open_mask": 1986316,
+            "source_class": 3156,
+            "source_closed_mask": 110835
+          },
+          {
+            "counterfeit_target_class": 3141,
+            "counterfeit_target_open_mask": 189023,
+            "native_target_class": 3139,
+            "native_target_open_mask": 217695,
+            "source_class": 6573,
+            "source_closed_mask": 1879456
+          },
+          {
+            "counterfeit_target_class": 3139,
+            "counterfeit_target_open_mask": 217695,
+            "native_target_class": 3141,
+            "native_target_open_mask": 189023,
+            "source_class": 6572,
+            "source_closed_mask": 1908128
+          }
+        ],
+        "model": "converse-symmetric and black-even",
+        "triangle_current_preserved": true,
+        "undirected_merged_delta": [
+          [
+            1005,
+            2345,
+            0,
+            -2
+          ],
+          [
+            1005,
+            2348,
+            0,
+            2
+          ],
+          [
+            1006,
+            2345,
+            0,
+            2
+          ],
+          [
+            1006,
+            2348,
+            0,
+            -2
+          ]
+        ]
+      }
+    }
+  },
+  "scope": "FINITE-EXACT n8: all four menus admit explicit alternate ordinary endpoint/color/signature transport. J4, E_edge2 and E_neighbor2 remain nonunique with full converse reflection, unchanged blue wiring and even black multiplicities. E_neighbor3 becomes unique under converse reflection by the singleton-or-converse certificate. No alternative tournament realizability is claimed."
+}

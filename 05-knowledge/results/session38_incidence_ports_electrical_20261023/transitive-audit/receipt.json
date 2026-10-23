@@ -1,0 +1,315 @@
+{
+  "checks": {
+    "Hamilton information differs": 1,
+    "all seed root out profiles": 2,
+    "complete labelled motif universe": 2,
+    "complete transitive profile seed collision": 1,
+    "cyclic global F identity": 8,
+    "cyclic root-containing identity": 8,
+    "cyclic root-out identity": 8,
+    "direct regular five neighborhood count": 30,
+    "distinct motif orbits": 1536,
+    "global five motif census": 2,
+    "independent forward global Hamilton DP": 2,
+    "independent ordered two path covers": 2,
+    "literal global source plus regular five": 2,
+    "literal lifted profiles collide": 4,
+    "literal neighborhood Hamilton path permutations": 30,
+    "literal seed rows": 2,
+    "local B scalar": 2,
+    "local common-out histogram": 30,
+    "local five motif census": 30,
+    "local four motif census": 30,
+    "motif representative score check": 16,
+    "seed all-subset transitive polynomial": 2,
+    "vertex transitive rooted containment profile": 2
+  },
+  "literal_lift_audit": [
+    {
+      "F": [
+        1,
+        17,
+        136,
+        525,
+        1005,
+        900,
+        315,
+        30
+      ],
+      "all_subsets_checked": 131072,
+      "order": 17,
+      "r": 1,
+      "root_profile_hash": "b2adc9172b02d159adcb2a9af9c2dfd2c5f2f802af9fcb7c688489a11eeed505",
+      "seed": 0
+    },
+    {
+      "F": [
+        1,
+        18,
+        153,
+        646,
+        1425,
+        1590,
+        840,
+        195,
+        15
+      ],
+      "all_subsets_checked": 262144,
+      "order": 18,
+      "r": 2,
+      "root_profile_hash": "4b9f095fff0bc3048fdf2d0df5fec6a9dd3162192b7e8c3a2ca7d1166f16ae88",
+      "seed": 0
+    },
+    {
+      "F": [
+        1,
+        19,
+        171,
+        784,
+        1966,
+        2700,
+        2055,
+        885,
+        195,
+        15
+      ],
+      "all_subsets_checked": 524288,
+      "order": 19,
+      "r": 3,
+      "root_profile_hash": "acd4503f04e8e8858f4400263fc8f1c3a01a289c62c0ae9d2542eab77de9716e",
+      "seed": 0
+    },
+    {
+      "F": [
+        1,
+        20,
+        190,
+        940,
+        2645,
+        4351,
+        4380,
+        2790,
+        1065,
+        210,
+        15
+      ],
+      "all_subsets_checked": 1048576,
+      "order": 20,
+      "r": 4,
+      "root_profile_hash": "b63cb94c738609b809964ff36ccba10669a9c358692d27dfaf1d0d0d448bea3f",
+      "seed": 0
+    },
+    {
+      "F": [
+        1,
+        17,
+        136,
+        525,
+        1005,
+        900,
+        315,
+        30
+      ],
+      "all_subsets_checked": 131072,
+      "order": 17,
+      "r": 1,
+      "root_profile_hash": "b2adc9172b02d159adcb2a9af9c2dfd2c5f2f802af9fcb7c688489a11eeed505",
+      "seed": 1
+    },
+    {
+      "F": [
+        1,
+        18,
+        153,
+        646,
+        1425,
+        1590,
+        840,
+        195,
+        15
+      ],
+      "all_subsets_checked": 262144,
+      "order": 18,
+      "r": 2,
+      "root_profile_hash": "4b9f095fff0bc3048fdf2d0df5fec6a9dd3162192b7e8c3a2ca7d1166f16ae88",
+      "seed": 1
+    },
+    {
+      "F": [
+        1,
+        19,
+        171,
+        784,
+        1966,
+        2700,
+        2055,
+        885,
+        195,
+        15
+      ],
+      "all_subsets_checked": 524288,
+      "order": 19,
+      "r": 3,
+      "root_profile_hash": "acd4503f04e8e8858f4400263fc8f1c3a01a289c62c0ae9d2542eab77de9716e",
+      "seed": 1
+    },
+    {
+      "F": [
+        1,
+        20,
+        190,
+        940,
+        2645,
+        4351,
+        4380,
+        2790,
+        1065,
+        210,
+        15
+      ],
+      "all_subsets_checked": 1048576,
+      "order": 20,
+      "r": 4,
+      "root_profile_hash": "b63cb94c738609b809964ff36ccba10669a9c358692d27dfaf1d0d0d448bea3f",
+      "seed": 1
+    }
+  ],
+  "producer_sha256": {
+    "TRANSITIVE_PROFILE_OBSTRUCTION.md": "801415805d49ae62f88870a0bda3d9f806a82a0c569e6b7cabca292457cfa5ba",
+    "check_transitive_profile.py": "f73ac3a8b88e82d1597e788a849fe9b53d6d9572b2a1e5a2fff1a19459962cec",
+    "transitive_profile_receipt.json": "b7427a3cd2f1b5020d3669f4538e1af7f072ebeea072b856ac9dab3b8d32abed"
+  },
+  "scope": "Independent exact finite audit plus mathematical review of all-size polynomial identities; no producer imports.",
+  "seed_audit": [
+    {
+      "F": [
+        1,
+        15,
+        105,
+        315,
+        375,
+        150,
+        15
+      ],
+      "F2": 4857720210,
+      "H": 196264905,
+      "H_out": [
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101,
+        101
+      ],
+      "regular5_out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "root_F": [
+        1,
+        7,
+        21,
+        25,
+        10,
+        1
+      ],
+      "root_containing_F": [
+        0,
+        1,
+        14,
+        63,
+        100,
+        50,
+        6
+      ],
+      "source_plus_regular5_count": 0
+    },
+    {
+      "F": [
+        1,
+        15,
+        105,
+        315,
+        375,
+        150,
+        15
+      ],
+      "F2": 4857619470,
+      "H": 196277235,
+      "H_out": [
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89,
+        89
+      ],
+      "regular5_out": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "root_F": [
+        1,
+        7,
+        21,
+        25,
+        10,
+        1
+      ],
+      "root_containing_F": [
+        0,
+        1,
+        14,
+        63,
+        100,
+        50,
+        6
+      ],
+      "source_plus_regular5_count": 15
+    }
+  ]
+}

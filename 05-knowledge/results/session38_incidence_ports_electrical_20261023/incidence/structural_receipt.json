@@ -1,0 +1,182 @@
+{
+  "scope": "PROVED formulas with exhaustive finite checks n3..6, exact n15 hostiles",
+  "transport": [
+    {
+      "n": 3,
+      "fixed_path_masks": 2,
+      "affected_triangles_per_mask": 1
+    },
+    {
+      "n": 4,
+      "fixed_path_masks": 8,
+      "affected_triangles_per_mask": 4
+    },
+    {
+      "n": 5,
+      "fixed_path_masks": 64,
+      "affected_triangles_per_mask": 9
+    },
+    {
+      "n": 6,
+      "fixed_path_masks": 1024,
+      "affected_triangles_per_mask": 16
+    }
+  ],
+  "source_signature_does_not_supply_path": {
+    "n": 4,
+    "fixed_path": "0->1->...->n-1",
+    "free_order": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "masks": [
+      0,
+      1
+    ],
+    "source_rows": [
+      [
+        2,
+        4,
+        9,
+        3
+      ],
+      [
+        6,
+        4,
+        8,
+        3
+      ]
+    ],
+    "partner_signatures": [
+      [
+        [],
+        [
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      [
+        [],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ]
+    ]
+  },
+  "circulant_n15": [
+    {
+      "connection_set": [
+        14,
+        13,
+        12,
+        11,
+        5,
+        6,
+        8
+      ],
+      "H": 196264905,
+      "F2": 4857720210,
+      "score": 7,
+      "vertex_triangles": 28,
+      "rooted_strong4": 184,
+      "outgoing_edge_triangle_counts": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "connection_set": [
+        14,
+        13,
+        12,
+        4,
+        10,
+        9,
+        8
+      ],
+      "H": 196277235,
+      "F2": 4857619470,
+      "score": 7,
+      "vertex_triangles": 28,
+      "rooted_strong4": 184,
+      "outgoing_edge_triangle_counts": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "checks": 9806
+}

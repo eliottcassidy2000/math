@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "method": "fixed-start recursive completions times cyclic transitivity, independent of full-start forward producer DP",
+  "circulants": [
+    {
+      "differences": [
+        14,
+        13,
+        12,
+        11,
+        5,
+        6,
+        8
+      ],
+      "fixed_start_paths": 13084327,
+      "total_paths": 196264905,
+      "ordered_two_block_path_covers": 4857720210,
+      "memo_states": 245760,
+      "vertex_tags": [
+        [
+          7,
+          28,
+          184
+        ]
+      ],
+      "edge_incidence_multiset": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "differences": [
+        14,
+        13,
+        12,
+        4,
+        10,
+        9,
+        8
+      ],
+      "fixed_start_paths": 13085149,
+      "total_paths": 196277235,
+      "ordered_two_block_path_covers": 4857619470,
+      "memo_states": 245760,
+      "vertex_tags": [
+        [
+          7,
+          28,
+          184
+        ]
+      ],
+      "edge_incidence_multiset": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "E_equal": true,
+  "nonisomorphic_by_unequal_H": true,
+  "all_order_refinement_obstruction": "Identical uniform rooted tags and outgoing edge-weight multiplicities remain identical at every one-dimensional refinement round. Adjoin an ordered chain of universal sinks to preserve E equality and H inequality at all n>=15.",
+  "explicit_padding_tests": [
+    16,
+    17,
+    18
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "scope": "FINITE-EXACT minimum forest-certified alphabet within all set partitions of the fixed nine E33 symbols; not absolute wiring impossibility",
+  "classes_sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+  "prepared_input_sha256": "9306847221a1c8742e4dfe519faefb6c7d4ffe43611ea5d6c55e502505b69ec0",
+  "helper_sha256": "a80c22939ef13aead8c6ee17f075ecd521e00bd2cdc0ec449783c22d8d133631",
+  "search_sha256": "974b320c11fb874de2e52720ede06d1fd85db18596625763c61e12651942a8c7",
+  "universe_partitions": 21147,
+  "levels": [
+    {
+      "symbols": 8,
+      "total_partitions": 36,
+      "tested": 36,
+      "pruned_by_failed_ancestor": 0,
+      "forest_successes": 35
+    },
+    {
+      "symbols": 7,
+      "total_partitions": 462,
+      "tested": 462,
+      "pruned_by_failed_ancestor": 0,
+      "forest_successes": 414
+    },
+    {
+      "symbols": 6,
+      "total_partitions": 2646,
+      "tested": 2636,
+      "pruned_by_failed_ancestor": 10,
+      "forest_successes": 1981
+    },
+    {
+      "symbols": 5,
+      "total_partitions": 6951,
+      "tested": 6800,
+      "pruned_by_failed_ancestor": 151,
+      "forest_successes": 3599
+    },
+    {
+      "symbols": 4,
+      "total_partitions": 7770,
+      "tested": 7163,
+      "pruned_by_failed_ancestor": 607,
+      "forest_successes": 1886
+    },
+    {
+      "symbols": 3,
+      "total_partitions": 3025,
+      "tested": 2376,
+      "pruned_by_failed_ancestor": 649,
+      "forest_successes": 117
+    },
+    {
+      "symbols": 2,
+      "total_partitions": 255,
+      "tested": 129,
+      "pruned_by_failed_ancestor": 126,
+      "forest_successes": 0
+    }
+  ],
+  "minimum_forest_certified_symbols": 3,
+  "selected_partition": "012120201",
+  "selected_symbol_blocks": [
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  ],
+  "selected_python_verification": {
+    "ordinary_signatures": 6864,
+    "paired_signatures": 6880,
+    "unordered_paired_signatures": 3528,
+    "singleton_or_converse_singleton": false,
+    "bad_classes": 4,
+    "forest": true,
+    "cycle_rank": 0,
+    "vertices": 13728,
+    "components": 6848,
+    "component_edge_count_histogram": [
+      [
+        1,
+        6820
+      ],
+      [
+        2,
+        24
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "first_cycle_closing_class": null,
+    "first_paired_collision": null
+  },
+  "independent_eight_symbol_replays": 36,
+  "all_lower_levels_excluded_by_cycle_monotonicity": true
+}

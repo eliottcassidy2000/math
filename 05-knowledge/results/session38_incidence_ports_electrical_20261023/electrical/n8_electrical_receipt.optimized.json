@@ -1,0 +1,19 @@
+{
+  "status": "FINITE-EXACT independent projection from full n8 ledger",
+  "n": 8,
+  "source_sha256": {
+    "nodes.tsv.gz": "845920e31b2367f2aed1728435b713d3da070888b79179fe69c9d471db234307",
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "check_electrical.py": "89692c445d8c8bba1c365968c3fc0a20aa697dd73e6fca763ced5d777baffa83"
+  },
+  "vertices": 3528,
+  "full_components": 1,
+  "blue_components": 3353,
+  "blue_bicycle_dimension": 11,
+  "critical_two_rank": 3363,
+  "half_form_rank": 3358,
+  "factors_divisible_by_four": 5,
+  "blue_half_form_rank": 4,
+  "blue_half_form_alternating": false,
+  "full_half_form_alternating": false
+}

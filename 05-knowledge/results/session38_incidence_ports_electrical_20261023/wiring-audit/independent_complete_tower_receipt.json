@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "method": "Direct integer Laplacian application to all six frozen lift vectors, independent undirected ledger; no producer elimination imported. Prior independent q1 and q2 rank establish one-dimensional remaining space.",
+  "layers": [
+    {
+      "k": 3,
+      "q": 0,
+      "modulus": 8
+    },
+    {
+      "k": 4,
+      "q": 0,
+      "modulus": 16
+    },
+    {
+      "k": 5,
+      "q": 0,
+      "modulus": 32
+    },
+    {
+      "k": 6,
+      "q": 0,
+      "modulus": 64
+    },
+    {
+      "k": 7,
+      "q": 0,
+      "modulus": 128
+    },
+    {
+      "k": 8,
+      "q": 1,
+      "modulus": 256
+    }
+  ],
+  "complete_two_primary": true,
+  "two_primary_exponent_counts": {
+    "1": 3358,
+    "2": 4,
+    "8": 1
+  },
+  "spanning_tree_valuation_two": 3374,
+  "witness_coordinates_verified": 21168,
+  "source_sha256": {
+    "n8_final_radical_receipt.json": "423429679a587b007e97b5e03274114201b6d3a70084315ee6f7efb114d51804",
+    "n8_complete_tower_receipt.json": "b8a3853fe86940cf809b74e69a46c575813e644f25f9ac971bfdf934d91c2bf7"
+  }
+}

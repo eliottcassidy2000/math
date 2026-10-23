@@ -1,0 +1,2379 @@
+{
+  "scope": "FINITE-EXACT all6880classes; paired class IDs versus separately retained converse marginals explicitly distinguished",
+  "classes_sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+  "classes": 6880,
+  "merged_nodes": 3528,
+  "menu": {
+    "1_1": {
+      "ordinary_signatures": 167,
+      "paired_signatures": 167,
+      "unordered_paired_signatures": 93,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 6849,
+      "forest": false,
+      "cycle_rank": 6713,
+      "vertices": 334,
+      "components": 167,
+      "component_edge_count_histogram": [
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          16,
+          1
+        ],
+        [
+          20,
+          2
+        ],
+        [
+          22,
+          2
+        ],
+        [
+          24,
+          4
+        ],
+        [
+          29,
+          2
+        ],
+        [
+          37,
+          6
+        ],
+        [
+          41,
+          4
+        ],
+        [
+          47,
+          6
+        ],
+        [
+          50,
+          2
+        ],
+        [
+          63,
+          2
+        ],
+        [
+          80,
+          2
+        ],
+        [
+          84,
+          2
+        ],
+        [
+          85,
+          1
+        ],
+        [
+          100,
+          3
+        ],
+        [
+          112,
+          1
+        ],
+        [
+          131,
+          2
+        ],
+        [
+          140,
+          1
+        ],
+        [
+          182,
+          2
+        ],
+        [
+          199,
+          2
+        ],
+        [
+          236,
+          2
+        ],
+        [
+          291,
+          2
+        ],
+        [
+          308,
+          2
+        ],
+        [
+          360,
+          1
+        ],
+        [
+          565,
+          1
+        ],
+        [
+          577,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 136,
+      "first_paired_collision": [
+        64,
+        258
+      ]
+    },
+    "1_2": {
+      "ordinary_signatures": 5040,
+      "paired_signatures": 6344,
+      "unordered_paired_signatures": 3263,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 1656,
+      "forest": false,
+      "cycle_rank": 608,
+      "vertices": 10080,
+      "components": 3808,
+      "component_edge_count_histogram": [
+        [
+          1,
+          2684
+        ],
+        [
+          2,
+          558
+        ],
+        [
+          3,
+          230
+        ],
+        [
+          4,
+          88
+        ],
+        [
+          5,
+          71
+        ],
+        [
+          6,
+          42
+        ],
+        [
+          7,
+          27
+        ],
+        [
+          8,
+          28
+        ],
+        [
+          9,
+          25
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          17,
+          4
+        ],
+        [
+          18,
+          2
+        ],
+        [
+          20,
+          2
+        ],
+        [
+          21,
+          1
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          25,
+          2
+        ],
+        [
+          26,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 70916,
+      "first_paired_collision": [
+        68864,
+        70916,
+        71809
+      ]
+    },
+    "1_3": {
+      "ordinary_signatures": 6693,
+      "paired_signatures": 6846,
+      "unordered_paired_signatures": 3512,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 85,
+      "forest": false,
+      "cycle_rank": 34,
+      "vertices": 13386,
+      "components": 6540,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6261
+        ],
+        [
+          2,
+          231
+        ],
+        [
+          3,
+          41
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "first_cycle_closing_class": 409938,
+      "first_paired_collision": [
+        409932,
+        409938
+      ]
+    },
+    "1_4": {
+      "ordinary_signatures": 6749,
+      "paired_signatures": 6856,
+      "unordered_paired_signatures": 3516,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 62,
+      "forest": false,
+      "cycle_rank": 24,
+      "vertices": 13498,
+      "components": 6642,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6452
+        ],
+        [
+          2,
+          153
+        ],
+        [
+          3,
+          30
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 409938,
+      "first_paired_collision": [
+        409932,
+        409938
+      ]
+    },
+    "1_5": {
+      "ordinary_signatures": 6749,
+      "paired_signatures": 6856,
+      "unordered_paired_signatures": 3516,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 62,
+      "forest": false,
+      "cycle_rank": 24,
+      "vertices": 13498,
+      "components": 6642,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6452
+        ],
+        [
+          2,
+          153
+        ],
+        [
+          3,
+          30
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 409938,
+      "first_paired_collision": [
+        409932,
+        409938
+      ]
+    },
+    "1_6": {
+      "ordinary_signatures": 6749,
+      "paired_signatures": 6856,
+      "unordered_paired_signatures": 3516,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 62,
+      "forest": false,
+      "cycle_rank": 24,
+      "vertices": 13498,
+      "components": 6642,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6452
+        ],
+        [
+          2,
+          153
+        ],
+        [
+          3,
+          30
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 409938,
+      "first_paired_collision": [
+        409932,
+        409938
+      ]
+    },
+    "1_7": {
+      "ordinary_signatures": 6749,
+      "paired_signatures": 6856,
+      "unordered_paired_signatures": 3516,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 62,
+      "forest": false,
+      "cycle_rank": 24,
+      "vertices": 13498,
+      "components": 6642,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6452
+        ],
+        [
+          2,
+          153
+        ],
+        [
+          3,
+          30
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 409938,
+      "first_paired_collision": [
+        409932,
+        409938
+      ]
+    },
+    "2_1": {
+      "ordinary_signatures": 3250,
+      "paired_signatures": 3489,
+      "unordered_paired_signatures": 1801,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4863,
+      "forest": false,
+      "cycle_rank": 3408,
+      "vertices": 6500,
+      "components": 3028,
+      "component_edge_count_histogram": [
+        [
+          1,
+          1665
+        ],
+        [
+          2,
+          635
+        ],
+        [
+          3,
+          219
+        ],
+        [
+          4,
+          223
+        ],
+        [
+          5,
+          57
+        ],
+        [
+          6,
+          71
+        ],
+        [
+          7,
+          43
+        ],
+        [
+          8,
+          33
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          16,
+          6
+        ],
+        [
+          17,
+          2
+        ],
+        [
+          21,
+          2
+        ],
+        [
+          22,
+          2
+        ],
+        [
+          24,
+          3
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          34,
+          1
+        ],
+        [
+          56,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1152,
+        8354
+      ]
+    },
+    "2_2": {
+      "ordinary_signatures": 6668,
+      "paired_signatures": 6800,
+      "unordered_paired_signatures": 3492,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 185,
+      "forest": false,
+      "cycle_rank": 81,
+      "vertices": 13336,
+      "components": 6537,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6245
+        ],
+        [
+          2,
+          256
+        ],
+        [
+          3,
+          29
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          10,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 135430,
+      "first_paired_collision": [
+        102464,
+        409800
+      ],
+      "paired_collision_groups": [
+        [
+          102464,
+          409800
+        ],
+        [
+          135236,
+          135430,
+          139800
+        ],
+        [
+          136322,
+          136325
+        ],
+        [
+          164992,
+          397388
+        ],
+        [
+          168198,
+          172300
+        ],
+        [
+          204817,
+          594181
+        ],
+        [
+          204945,
+          204965
+        ],
+        [
+          526865,
+          541346
+        ],
+        [
+          1057872,
+          1058354
+        ],
+        [
+          2297090,
+          2297093
+        ],
+        [
+          4264194,
+          4264197
+        ],
+        [
+          4359296,
+          4591692
+        ],
+        [
+          4591698,
+          4591718
+        ],
+        [
+          6427778,
+          6427781
+        ],
+        [
+          6832904,
+          25706696
+        ],
+        [
+          6853136,
+          37920930
+        ],
+        [
+          6883585,
+          38413102
+        ],
+        [
+          6885896,
+          38412973
+        ],
+        [
+          6951445,
+          37920868
+        ],
+        [
+          9462098,
+          9462101
+        ],
+        [
+          10620934,
+          36192704
+        ],
+        [
+          10752012,
+          36705408
+        ],
+        [
+          10756140,
+          36717952
+        ],
+        [
+          11011600,
+          43001100
+        ],
+        [
+          11018802,
+          43000932
+        ],
+        [
+          12650755,
+          12853418
+        ],
+        [
+          12689442,
+          100870225
+        ],
+        [
+          12781571,
+          102243520
+        ],
+        [
+          12847104,
+          51386496
+        ],
+        [
+          12847185,
+          12847205
+        ],
+        [
+          12879872,
+          50529408
+        ],
+        [
+          12879906,
+          100870245
+        ],
+        [
+          12911633,
+          100863522
+        ],
+        [
+          12914707,
+          101256512
+        ],
+        [
+          12918835,
+          100863040
+        ],
+        [
+          13141520,
+          35856546
+        ],
+        [
+          13148322,
+          35856464
+        ],
+        [
+          13175331,
+          101271376
+        ],
+        [
+          14977032,
+          40010880
+        ],
+        [
+          14983192,
+          40014086
+        ],
+        [
+          16883744,
+          17441304
+        ],
+        [
+          17041440,
+          17047600,
+          17318272
+        ],
+        [
+          17109008,
+          17109028
+        ],
+        [
+          21041152,
+          50596000
+        ],
+        [
+          21241904,
+          21504160
+        ],
+        [
+          21498113,
+          50405537
+        ],
+        [
+          25298949,
+          50598165
+        ],
+        [
+          25690372,
+          75767844
+        ],
+        [
+          25690444,
+          75636818
+        ],
+        [
+          25691216,
+          36712716
+        ],
+        [
+          25694284,
+          36712528
+        ],
+        [
+          25694468,
+          25694756
+        ],
+        [
+          27467784,
+          27467793
+        ],
+        [
+          27467792,
+          27857156
+        ],
+        [
+          35688708,
+          42075204
+        ],
+        [
+          35754512,
+          101259046
+        ],
+        [
+          36258640,
+          101227173
+        ],
+        [
+          37851200,
+          38413085
+        ],
+        [
+          37851665,
+          38412888
+        ],
+        [
+          37914688,
+          38413111
+        ],
+        [
+          37914882,
+          37929746
+        ],
+        [
+          37917205,
+          38146150
+        ],
+        [
+          37929608,
+          38405506
+        ],
+        [
+          37947457,
+          38421333
+        ],
+        [
+          37953608,
+          38310677
+        ],
+        [
+          37953637,
+          38412917
+        ],
+        [
+          37953805,
+          38310212
+        ],
+        [
+          38310545,
+          38412488
+        ],
+        [
+          38340929,
+          38355793
+        ],
+        [
+          50629160,
+          50629169
+        ],
+        [
+          50629168,
+          50660912
+        ],
+        [
+          51119496,
+          51126904
+        ],
+        [
+          51389520,
+          51390002
+        ],
+        [
+          51392612,
+          51392780
+        ],
+        [
+          67256580,
+          68178448
+        ],
+        [
+          134389840,
+          134390037
+        ],
+        [
+          134809856,
+          134824720
+        ],
+        [
+          135400512,
+          135422310
+        ]
+      ]
+    },
+    "2_3": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ],
+      "paired_collision_groups": [
+        [
+          6427778,
+          6427781
+        ],
+        [
+          27467784,
+          27467793
+        ]
+      ]
+    },
+    "2_4": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ]
+    },
+    "2_5": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ]
+    },
+    "2_6": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ]
+    },
+    "2_7": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ]
+    },
+    "3_1": {
+      "ordinary_signatures": 5703,
+      "paired_signatures": 5839,
+      "unordered_paired_signatures": 3002,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 1833,
+      "forest": false,
+      "cycle_rank": 1044,
+      "vertices": 11406,
+      "components": 5570,
+      "component_edge_count_histogram": [
+        [
+          1,
+          4683
+        ],
+        [
+          2,
+          648
+        ],
+        [
+          3,
+          132
+        ],
+        [
+          4,
+          76
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "3_2": {
+      "ordinary_signatures": 6865,
+      "paired_signatures": 6874,
+      "unordered_paired_signatures": 3524,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 12,
+      "forest": false,
+      "cycle_rank": 6,
+      "vertices": 13730,
+      "components": 6856,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6832
+        ],
+        [
+          2,
+          24
+        ]
+      ],
+      "first_cycle_closing_class": 4589843,
+      "first_paired_collision": [
+        4399241,
+        4589843
+      ],
+      "paired_collision_groups": [
+        [
+          4399241,
+          4589843
+        ],
+        [
+          13141520,
+          35856546
+        ],
+        [
+          25691216,
+          36712716
+        ],
+        [
+          37917205,
+          38146150
+        ],
+        [
+          37953608,
+          38310677
+        ],
+        [
+          50676048,
+          50676504
+        ]
+      ]
+    },
+    "3_3": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null,
+      "paired_collision_groups": []
+    },
+    "3_4": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "3_5": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "3_6": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "3_7": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "4_1": {
+      "ordinary_signatures": 6331,
+      "paired_signatures": 6425,
+      "unordered_paired_signatures": 3288,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 864,
+      "forest": false,
+      "cycle_rank": 456,
+      "vertices": 12662,
+      "components": 6238,
+      "component_edge_count_histogram": [
+        [
+          1,
+          5742
+        ],
+        [
+          2,
+          408
+        ],
+        [
+          3,
+          61
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "4_2": {
+      "ordinary_signatures": 6871,
+      "paired_signatures": 6875,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 10,
+      "forest": false,
+      "cycle_rank": 5,
+      "vertices": 13742,
+      "components": 6867,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6854
+        ],
+        [
+          2,
+          13
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ]
+    },
+    "4_3": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "4_4": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "4_5": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "4_6": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "4_7": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "5_1": {
+      "ordinary_signatures": 6489,
+      "paired_signatures": 6565,
+      "unordered_paired_signatures": 3360,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 599,
+      "forest": false,
+      "cycle_rank": 316,
+      "vertices": 12978,
+      "components": 6414,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6047
+        ],
+        [
+          2,
+          310
+        ],
+        [
+          3,
+          40
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "5_2": {
+      "ordinary_signatures": 6874,
+      "paired_signatures": 6876,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 8,
+      "forest": false,
+      "cycle_rank": 4,
+      "vertices": 13748,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ]
+    },
+    "5_3": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "5_4": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "5_5": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "5_6": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "5_7": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "6_1": {
+      "ordinary_signatures": 6523,
+      "paired_signatures": 6590,
+      "unordered_paired_signatures": 3373,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 549,
+      "forest": false,
+      "cycle_rank": 291,
+      "vertices": 13046,
+      "components": 6457,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6137
+        ],
+        [
+          2,
+          261
+        ],
+        [
+          3,
+          40
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "6_2": {
+      "ordinary_signatures": 6874,
+      "paired_signatures": 6876,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 8,
+      "forest": false,
+      "cycle_rank": 4,
+      "vertices": 13748,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ]
+    },
+    "6_3": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "6_4": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "6_5": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "6_6": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "6_7": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "7_1": {
+      "ordinary_signatures": 6535,
+      "paired_signatures": 6592,
+      "unordered_paired_signatures": 3374,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 545,
+      "forest": false,
+      "cycle_rank": 289,
+      "vertices": 13070,
+      "components": 6479,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6177
+        ],
+        [
+          2,
+          245
+        ],
+        [
+          3,
+          40
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "7_2": {
+      "ordinary_signatures": 6874,
+      "paired_signatures": 6876,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 8,
+      "forest": false,
+      "cycle_rank": 4,
+      "vertices": 13748,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ]
+    },
+    "7_3": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "7_4": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "7_5": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "7_6": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "7_7": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "8_1": {
+      "ordinary_signatures": 6535,
+      "paired_signatures": 6592,
+      "unordered_paired_signatures": 3374,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 545,
+      "forest": false,
+      "cycle_rank": 289,
+      "vertices": 13070,
+      "components": 6479,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6177
+        ],
+        [
+          2,
+          245
+        ],
+        [
+          3,
+          40
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "first_cycle_closing_class": 1169,
+      "first_paired_collision": [
+        1160,
+        1169
+      ]
+    },
+    "8_2": {
+      "ordinary_signatures": 6874,
+      "paired_signatures": 6876,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 8,
+      "forest": false,
+      "cycle_rank": 4,
+      "vertices": 13748,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ]
+    },
+    "8_3": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "8_4": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "8_5": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "8_6": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "8_7": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    },
+    "exact_2": {
+      "ordinary_signatures": 6874,
+      "paired_signatures": 6876,
+      "unordered_paired_signatures": 3525,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 8,
+      "forest": false,
+      "cycle_rank": 4,
+      "vertices": 13748,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": 35856546,
+      "first_paired_collision": [
+        13141520,
+        35856546
+      ],
+      "paired_collision_groups": [
+        [
+          13141520,
+          35856546
+        ],
+        [
+          25691216,
+          36712716
+        ],
+        [
+          37917205,
+          38146150
+        ],
+        [
+          37953608,
+          38310677
+        ]
+      ]
+    },
+    "2_exact": {
+      "ordinary_signatures": 6863,
+      "paired_signatures": 6878,
+      "unordered_paired_signatures": 3527,
+      "singleton_or_converse_singleton": false,
+      "bad_classes": 4,
+      "forest": false,
+      "cycle_rank": 2,
+      "vertices": 13726,
+      "components": 6848,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6818
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "first_cycle_closing_class": 6427781,
+      "first_paired_collision": [
+        6427778,
+        6427781
+      ],
+      "paired_collision_groups": [
+        [
+          6427778,
+          6427781
+        ],
+        [
+          27467784,
+          27467793
+        ]
+      ]
+    },
+    "3_exact": {
+      "ordinary_signatures": 6876,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13752,
+      "components": 6872,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6864
+        ],
+        [
+          2,
+          8
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null,
+      "paired_collision_groups": []
+    },
+    "exact_exact": {
+      "ordinary_signatures": 6880,
+      "paired_signatures": 6880,
+      "unordered_paired_signatures": 3528,
+      "singleton_or_converse_singleton": true,
+      "bad_classes": 0,
+      "forest": true,
+      "cycle_rank": 0,
+      "vertices": 13760,
+      "components": 6880,
+      "component_edge_count_histogram": [
+        [
+          1,
+          6880
+        ]
+      ],
+      "first_cycle_closing_class": null,
+      "first_paired_collision": null
+    }
+  },
+  "E33_E3exact_same_partition": true,
+  "E33_collision_converses": [
+    {
+      "classes": [
+        4328706,
+        4330626
+      ],
+      "converses": [
+        25337872,
+        25727236
+      ],
+      "converse_fiber_sizes": [
+        1,
+        1
+      ]
+    },
+    {
+      "classes": [
+        25694272,
+        25694466
+      ],
+      "converses": [
+        8397924,
+        8393858
+      ],
+      "converse_fiber_sizes": [
+        1,
+        1
+      ]
+    },
+    {
+      "classes": [
+        27467792,
+        27467812
+      ],
+      "converses": [
+        2297090,
+        2303121
+      ],
+      "converse_fiber_sizes": [
+        1,
+        1
+      ]
+    },
+    {
+      "classes": [
+        50676048,
+        50676504
+      ],
+      "converses": [
+        4589843,
+        4399241
+      ],
+      "converse_fiber_sizes": [
+        1,
+        1
+      ]
+    }
+  ],
+  "checks": 426564
+}

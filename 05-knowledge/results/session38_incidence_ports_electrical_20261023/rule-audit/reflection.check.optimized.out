@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "scope": "Independent finite E33 forest/singleton certificate and literal counterfeit verification. No tournament realizability claim.",
+  "E33": {
+    "classes": 6880,
+    "distinct_signatures": 6876,
+    "used_symbols": 9,
+    "direct_singleton_classes": 6872,
+    "converse_repaired_classes": 8,
+    "collision_pairs": [
+      [
+        4328706,
+        4330626
+      ],
+      [
+        25694272,
+        25694466
+      ],
+      [
+        27467792,
+        27467812
+      ],
+      [
+        50676048,
+        50676504
+      ]
+    ],
+    "converse_certificates": [
+      {
+        "class_id": 804,
+        "canon": 4328706,
+        "converse_class": 2910,
+        "converse_canon": 25337872,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 814,
+        "canon": 4330626,
+        "converse_class": 3095,
+        "converse_canon": 25727236,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 3022,
+        "canon": 25694272,
+        "converse_class": 1307,
+        "converse_canon": 8397924,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 3031,
+        "canon": 25694466,
+        "converse_class": 1283,
+        "converse_canon": 8393858,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 3140,
+        "canon": 27467792,
+        "converse_class": 584,
+        "converse_canon": 2297090,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 3143,
+        "canon": 27467812,
+        "converse_class": 605,
+        "converse_canon": 2303121,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 5092,
+        "canon": 50676048,
+        "converse_class": 953,
+        "converse_canon": 4589843,
+        "converse_fiber_size": 1
+      },
+      {
+        "class_id": 5101,
+        "canon": 50676504,
+        "converse_class": 907,
+        "converse_canon": 4399241,
+        "converse_fiber_size": 1
+      }
+    ],
+    "signature_multigraph_vertices": 13752,
+    "signature_multigraph_edges": 6880,
+    "signature_multigraph_components": 6872,
+    "maximum_degree": 2
+  },
+  "counterfeits": {
+    "E_edge2/ordinary": {
+      "changed_native_cells": 4,
+      "native_reflection_preserved": false,
+      "undirected_merged_delta": [
+        [
+          1058,
+          1751,
+          0,
+          -1
+        ],
+        [
+          1058,
+          2752,
+          0,
+          1
+        ],
+        [
+          1721,
+          1751,
+          0,
+          1
+        ],
+        [
+          1721,
+          2752,
+          0,
+          -1
+        ]
+      ]
+    },
+    "E_edge2/symmetric": {
+      "changed_native_cells": 8,
+      "native_reflection_preserved": true,
+      "undirected_merged_delta": [
+        [
+          1058,
+          1751,
+          0,
+          -2
+        ],
+        [
+          1058,
+          2752,
+          0,
+          2
+        ],
+        [
+          1721,
+          1751,
+          0,
+          2
+        ],
+        [
+          1721,
+          2752,
+          0,
+          -2
+        ]
+      ]
+    },
+    "E_neighbor2/ordinary": {
+      "changed_native_cells": 4,
+      "native_reflection_preserved": false,
+      "undirected_merged_delta": [
+        [
+          236,
+          486,
+          0,
+          -1
+        ],
+        [
+          236,
+          493,
+          0,
+          1
+        ],
+        [
+          237,
+          486,
+          0,
+          1
+        ],
+        [
+          237,
+          493,
+          0,
+          -1
+        ]
+      ]
+    },
+    "E_neighbor2/symmetric": {
+      "changed_native_cells": 8,
+      "native_reflection_preserved": true,
+      "undirected_merged_delta": [
+        [
+          1005,
+          2345,
+          0,
+          -2
+        ],
+        [
+          1005,
+          2348,
+          0,
+          2
+        ],
+        [
+          1006,
+          2345,
+          0,
+          2
+        ],
+        [
+          1006,
+          2348,
+          0,
+          -2
+        ]
+      ]
+    },
+    "E_neighbor3/ordinary": {
+      "changed_native_cells": 4,
+      "native_reflection_preserved": false,
+      "undirected_merged_delta": [
+        [
+          746,
+          2230,
+          0,
+          -1
+        ],
+        [
+          746,
+          2255,
+          0,
+          1
+        ],
+        [
+          755,
+          2230,
+          0,
+          1
+        ],
+        [
+          755,
+          2255,
+          0,
+          -1
+        ]
+      ]
+    },
+    "J4/ordinary": {
+      "changed_native_cells": 4,
+      "native_reflection_preserved": false,
+      "undirected_merged_delta": [
+        [
+          1005,
+          2345,
+          0,
+          -1
+        ],
+        [
+          1005,
+          2348,
+          0,
+          1
+        ],
+        [
+          1006,
+          2345,
+          0,
+          1
+        ],
+        [
+          1006,
+          2348,
+          0,
+          -1
+        ]
+      ]
+    },
+    "J4/symmetric": {
+      "changed_native_cells": 8,
+      "native_reflection_preserved": true,
+      "undirected_merged_delta": [
+        [
+          1005,
+          2345,
+          0,
+          -2
+        ],
+        [
+          1005,
+          2348,
+          0,
+          2
+        ],
+        [
+          1006,
+          2345,
+          0,
+          2
+        ],
+        [
+          1006,
+          2348,
+          0,
+          -2
+        ]
+      ]
+    }
+  },
+  "conclusion": "Minimum alphabet size9 for reflection-constrained native transport in this modular family; minimum12 for ordinary class separation and unreflected transport. Both are order-eight finite statements.",
+  "input_sha256": {
+    "classes.tsv.gz": "227eede83c884d90b060a5da6b8fc36a65bc788be9043c3f05b46499388855b4",
+    "ports.tsv.gz": "ce886c5755cfaeaaddf8f45c5a889d47d6036c9d24bf520d29251289953ac3b9",
+    "endpoint_capacities.tsv.gz": "d588862df4a293e02627ba0bdeb0677d18d97cf95245bb26f2bcfe2025902f5b",
+    "class_of_mask.u16le.gz": "7d717c5c8889bf8f64abe111a76fa7488c6455a61f6249a25728f09146393bf8",
+    "residual_counterfeits.json": "604444f9a8e88c20d963678c1c400db4cf894be6b9f6bdb4583fa439dcd57571"
+  },
+  "checks": {
+    "class_count": 1,
+    "class_id_order": 1,
+    "converse_involution": 1,
+    "independent_triangle_counts": 6880,
+    "E43_all_ordinary_classes_separate": 1,
+    "E33_partition_count": 1,
+    "E33_and_exact_edge_same_partition": 1,
+    "E33_collision_class_count": 1,
+    "all_ambiguous_targets_singleton_converse": 1,
+    "all_nine_E33_symbols_used": 1,
+    "E33_signature_multigraph_acyclic": 6880,
+    "every_E33_edge_has_leaf_endpoint": 1,
+    "witness_no_duplicate_edit": 40,
+    "native_port_mass": 1,
+    "native_target_capacities_match": 1,
+    "mask_map_size": 1,
+    "edit_matches_native_before_after": 40,
+    "changed_native_entries_nonnegative": 40,
+    "blue_entries_unchanged": 40,
+    "witness_class_canons": 40,
+    "source_signature_row_exists": 40,
+    "target_endpoint_column_exists": 40,
+    "changed_cell_triangle_law": 40,
+    "literal_masks_distinct": 40,
+    "enough_removed_literal_masks": 20,
+    "literal_mask_closed": 35,
+    "literal_mask_exact_native_cell": 35,
+    "literal_mask_reflection_classes": 35,
+    "source_signature_margins_preserved": 7,
+    "target_endpoint_margins_preserved": 7,
+    "merged_literal_degrees_preserved": 7,
+    "merged_triangle_current_preserved": 7,
+    "merged_projection_genuinely_changes": 7,
+    "reported_directed_delta_exact": 7,
+    "reported_undirected_delta_exact": 7,
+    "counterfeit_full_native_reflection": 3,
+    "counterfeit_directed_black_twins_even": 3,
+    "counterfeit_fixed_black_cells_even": 3,
+    "literal_swap_four_distinct_sources": 3,
+    "literal_swap_distinct_open_targets": 3,
+    "literal_swap_preserves_open_port_inventory": 3,
+    "literal_swap_native_complement": 12,
+    "literal_swap_closed_to_open": 12,
+    "literal_swap_black_to_black": 12,
+    "literal_swap_endpoint_compatibility": 12,
+    "literal_swap_all_class_ids": 12,
+    "literal_swap_retained_target_signature": 12,
+    "literal_swap_commutes_with_reflection": 12,
+    "literal_swap_induces_exact_table_counterfeit": 3,
+    "required_symmetric_counterfeit_present": 3,
+    "neighbor3_ordinary_counterfeit_present": 1,
+    "no_false_neighbor3_symmetric_counterfeit": 1,
+    "naive_mirror_addition_rejected_by_signature_margins": 1,
+    "paired_label_injectivity_not_enough": 2
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "scope": "Necessary class-separation information bound for a single unaugmented outgoing-row multiset signature, even restricted to strong tournaments. Not a bound on full authenticated inventory reconstruction.",
+  "fixed_mass_upper_bound": "binom(n(n-1)/2+nL-1,nL-1)",
+  "strong_class_lower_bound": "2^(n(n-3)/2)/n!",
+  "necessary_liminf_L_over_n": {
+    "equation": "f(2 alpha)=1",
+    "decimal": "0.146907686670207746658300826652",
+    "rigorous_rational_bracket": [
+      "0.1469",
+      "0.1470"
+    ]
+  },
+  "stars_and_bars_DP_checks": 744,
+  "exact_finite_pigeonhole_checks": {
+    "n_min": 64,
+    "n_max": 512,
+    "orders": 449,
+    "L": "floor(n/16)",
+    "both_row_and_mass_upper_bounds": true
+  },
+  "all_order_threshold": "For every n>=64 and integer 1<=L<=n/16, the signature cannot separate all strong classes.",
+  "all_order_threshold_proof_checked": "17^17<2^70, exact n=64 equality, and 65^128<2^15*64^128 induction step; not inferred merely from finite sweep."
+}

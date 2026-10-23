@@ -1,0 +1,1842 @@
+{
+  "status": "PASS",
+  "scope": "Exact order-eight minimum of three colors among all set-partition quotients of the nine E33 symbols for the specified reflected endpoint/color/signature port-matching model. All 255 binary quotients have actual literal port-bijection counterfeits with altered merged wiring. No claim that these alternate matchings are canonical-complement tournament realizations.",
+  "binary_partitions": 255,
+  "verified_literal_matchings": 255,
+  "distinct_literal_switches": 61,
+  "matched_source_ports_counted_with_repetitions": 1020,
+  "minimum_colors_in_stated_model": 3,
+  "all_blue_entries_and_all_loops_unchanged": true,
+  "unary_lower_bound": "Any binary witness remains valid after the final two colors are merged.",
+  "independent_baseline_sha256": {
+    "independent_class_of_mask.u16le": "636f0ae8f69455d4d39143a7c612260cfbb2a9736c91ca67fe2ac3ea65449be1",
+    "independent_classes.tsv": "d68b1f65bee685befb80c7c113827f55a4c449ee0731e1a3acc87a3c648d9ac4",
+    "independent_ports.tsv": "875c7ececef20af9d7703d8ea1860bb3f0ac3ecb859a799910923b13cae58aa6",
+    "independent_directed_edges.tsv": "1ddb146683328cb371d9d365643393e9bfb8a75c6b112ad5f3e987193b0331f5",
+    "independent_ternary_quotient_receipt.json": "9a2f2361770627be878a93c5821b8fae85390f3f1ca52706a75b186d5ba45481"
+  },
+  "producer_witness_sha256": "9ac70b69fba35e90b36eae1e417e31fdcd989088dddd6a4ea80fbff93f0c87df",
+  "checks": {
+    "actual black colors unchanged": 1020,
+    "actual target quotient signature preserved": 1020,
+    "all 255 partitions exactly once": 1,
+    "all changed black twins even and nonnegative": 255,
+    "all loop counts untouched": 255,
+    "all merged cyclic-triangle currents unchanged": 255,
+    "all merged multigraph degrees unchanged": 255,
+    "all native merged black multiplicities even": 458976,
+    "all source endpoint color signature margins unchanged": 255,
+    "all target endpoint color capacities unchanged": 255,
+    "closed to open ports": 1020,
+    "directed and undirected projections both change": 255,
+    "distinct literal switch count": 1,
+    "every changed cell triangle law": 2040,
+    "exact directed projection": 255,
+    "exact open inventory preserved bijectively": 255,
+    "exact undirected projection": 255,
+    "four distinct actual closed ports": 255,
+    "four distinct actual open ports": 255,
+    "full cell reflection equality": 2040,
+    "independent class ordering": 1,
+    "independent full mask map": 1,
+    "independent ternary upper certificate": 1,
+    "literal bijection commutes with reflection": 1020,
+    "literal mask range": 5100,
+    "literal matching genuinely changes": 1020,
+    "literal matching induces complete reported cell delta": 255,
+    "literal reflection class labels": 1020,
+    "literal target endpoint compatibility": 1020,
+    "native complement partner": 1020,
+    "native independent before counts and nonnegative after counts": 2040,
+    "new pointwise triangle law": 1020,
+    "reflection-fixed ordinary black cells even": 2040,
+    "target signature also preserved at mirror": 1020
+  },
+  "results": [
+    {
+      "partition": "000000001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000000111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000001111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000010111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000011111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000100111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000101111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000110111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "000111111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001000111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001001111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001010111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001011111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001100111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001101111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001110111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "001111111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010000111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010001111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010010111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010011111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010100111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010101111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010110111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "010111111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011000111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011001111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011010111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011011111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011100111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011101111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011110111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111000",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111001",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111010",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111011",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111100",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111101",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111110",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    },
+    {
+      "partition": "011111111",
+      "changed_ordinary_cells": 8,
+      "changed_directed_pairs": 4,
+      "changed_undirected_pairs": 4,
+      "status": "PASS"
+    }
+  ]
+}
