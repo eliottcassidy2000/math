@@ -1,0 +1,16 @@
+{
+  "dependencies": "Python standard library; conceptual dependency README.md from separately frozen core",
+  "destination": "05-knowledge/results/session41_shared_ports_fibonacci_20261023/residual-cycles/",
+  "files": {
+    "OWNER_INDEXED_ENUMERATORS.md": "e9b18228201daae1c6df9cae188a6a69395ed6f7694013e69aee3ec546d87440",
+    "check_enumerators.py": "18f9e2b3cd1718367325a6b2d8331b1d7c024074a288c6e4ac490ffba4aed594",
+    "enumerator_receipt.json": "cf2e556082731f8a43a0b36bd34a0f5a97acaf28d0ccb279037bec7cbab8f46d",
+    "enumerator_receipt.optimized.json": "cf2e556082731f8a43a0b36bd34a0f5a97acaf28d0ccb279037bec7cbab8f46d"
+  },
+  "normalization": "None; normal and optimized receipt byte-identical",
+  "replays": [
+    "python3 check_enumerators.py",
+    "python3 -O check_enumerators.py"
+  ],
+  "status": "FROZEN enumerator extension"
+}

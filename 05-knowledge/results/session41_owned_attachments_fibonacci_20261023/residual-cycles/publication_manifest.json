@@ -1,0 +1,22 @@
+{
+  "dependencies": "Python standard library only; compile_attachments.py beside check_compiler.py",
+  "destination": "05-knowledge/results/session41_shared_ports_fibonacci_20261023/residual-cycles/",
+  "files": {
+    "README.md": "9378646aff268037bfc7760b179a676f6ecb9d3479cf42726350c27a83d9372e",
+    "check.py": "24ddc301e7395835969d03b95e56838646fd060410f155963e131ac49be703a9",
+    "check_compiler.py": "aaaf0333d99c6fc60bd86dd141958bb525a08d6c72779f71a6e4addeb3fb27e2",
+    "compile_attachments.py": "4b40c72806edf0cc91f4e124bbaf6e12df4528834b9b5d835068ea7f2c236a59",
+    "compiler_receipt.json": "d53a7bec491e214c5ff1d3834a23a7568f4fdca198c2877648198cdfbc7b3eda",
+    "compiler_receipt.optimized.json": "d53a7bec491e214c5ff1d3834a23a7568f4fdca198c2877648198cdfbc7b3eda",
+    "receipt.json": "590fd4c3f3df036f9c84aea611ac76cf4ce2c302d9527e8a3e99afa3198818d0",
+    "receipt.optimized.json": "590fd4c3f3df036f9c84aea611ac76cf4ce2c302d9527e8a3e99afa3198818d0"
+  },
+  "normalization": "None; normal and optimized receipts byte-identical",
+  "replays": [
+    "python3 check.py",
+    "python3 -O check.py",
+    "python3 check_compiler.py",
+    "python3 -O check_compiler.py"
+  ],
+  "status": "FROZEN core; enumerator extension excluded"
+}

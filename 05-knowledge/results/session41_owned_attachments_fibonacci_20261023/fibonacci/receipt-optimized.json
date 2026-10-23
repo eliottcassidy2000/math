@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "fibre_exhaustive_N": 609,
+  "prefix_and_counts_N": 6764,
+  "prefix": "CABCACABCABCACABCACABCABCACABCABCACABCACABCABCACABCACABCABCACABCABCACABCACABCABC",
+  "row35_color": "C",
+  "row36_suffix": "canonical reverse row has same position35 C",
+  "zero_deletion_first_difference": {
+    "n": 2,
+    "extra_support": [
+      "A",
+      "B"
+    ]
+  },
+  "proper_expansion_nonuniqueness": {
+    "F4": [
+      [
+        "A",
+        "F3"
+      ],
+      [
+        "B",
+        "F3"
+      ]
+    ]
+  }
+}

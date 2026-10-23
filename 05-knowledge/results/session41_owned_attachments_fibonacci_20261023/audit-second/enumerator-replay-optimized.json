@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "all_star_coefficients_match": 4096,
+    "coupling_rescues_sum_projection_uniqueness": 1,
+    "forced_zero_elimination_allows_all_pairs": 1,
+    "free_zero_elimination_retains_multiplicity": 1,
+    "minmax_certificate_exact": 2727,
+    "minmax_uniqueness_iff": 2727,
+    "same_coupled_fiber_can_change_other_projection": 1,
+    "shared_owner_contraction_not_multiplication": 1,
+    "zero_vertex_deletion_not_edge_contraction": 1
+  },
+  "source_sha256": "18f9e2b3cd1718367325a6b2d8331b1d7c024074a288c6e4ac490ffba4aed594",
+  "status": "PASS"
+}

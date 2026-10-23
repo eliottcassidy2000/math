@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "independent_subset_bound": 100,
+  "first_adjacency_difference": {
+    "N": 2,
+    "compressed_count": 2,
+    "zero_spacer_count": 3
+  },
+  "reflection_fixed_sets": [
+    [
+      0
+    ],
+    [
+      2
+    ]
+  ],
+  "triangle_shift": [
+    0,
+    0,
+    1
+  ],
+  "common_fixed_pair_census": {
+    "0": 26,
+    "1": 9,
+    "3": 1
+  },
+  "slot_counts_1_to_20": {
+    "compressed": [
+      3,
+      2,
+      3,
+      3,
+      2,
+      3,
+      2,
+      3,
+      3,
+      2,
+      3,
+      3,
+      2,
+      3,
+      2,
+      3,
+      3,
+      2,
+      3,
+      2
+    ],
+    "zero_spacer": [
+      3,
+      3,
+      3,
+      4,
+      3,
+      3,
+      3,
+      3,
+      4,
+      3,
+      3,
+      4,
+      3,
+      3,
+      3,
+      3,
+      4,
+      3,
+      3,
+      3
+    ]
+  },
+  "coupled_tables": "PASS",
+  "kernel_atoms": [
+    [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ]
+  ],
+  "rotational_centralizers": [
+    3,
+    1
+  ],
+  "both_section_counts": 0
+}

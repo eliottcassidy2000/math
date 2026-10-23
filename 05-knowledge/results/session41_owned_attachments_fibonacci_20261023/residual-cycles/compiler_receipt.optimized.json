@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "actual_six_vertex_block_compiler": 324,
+    "compiler_encode_decode_inverse": 4096,
+    "compiler_integer_rows_match_assignments": 32768,
+    "duplicate_whole_frame_rejected": 1
+  },
+  "hashes": {
+    "check_compiler.py": "aaaf0333d99c6fc60bd86dd141958bb525a08d6c72779f71a6e4addeb3fb27e2",
+    "compile_attachments.py": "4b40c72806edf0cc91f4e124bbaf6e12df4528834b9b5d835068ea7f2c236a59"
+  },
+  "status": "PASS"
+}

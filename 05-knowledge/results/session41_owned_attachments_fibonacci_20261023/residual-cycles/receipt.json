@@ -1,0 +1,61 @@
+{
+  "controls": {
+    "bounded_mod8_atom_count": 16,
+    "bounded_mod8_fiber_count": 8,
+    "matrix_families": 250,
+    "triangle_relation_instances": 4096,
+    "two_switch_feasible_points": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "counts": {
+    "abelian_sign_guard_misses_commutator": 1,
+    "actual_changed_projection_witness": 16706,
+    "atom_full_box_coverage": 2520,
+    "atom_full_box_minimality": 870,
+    "basepoint_atomic_iff": 33750,
+    "both_holonomy_carriers_have_no_section": 1,
+    "centralizer_distinguishes_order31_mechanism": 1,
+    "commutator_translation_hostile": 1,
+    "exact_two_switch_atomic_bank": 1,
+    "exact_two_switch_fiber": 1,
+    "fractional_half_point_after_doubling": 1,
+    "individual_cycle_breaks_shared_owner": 2,
+    "integer_width_uniqueness": 1,
+    "joint_cycle_preserves_shared_owner": 1,
+    "joint_implies_separate_conjugacy": 90,
+    "mod8_auxiliary_exactness": 1,
+    "mod8_clock_retained": 1,
+    "mod8_every_atomic_move_keeps_guard": 8,
+    "nontrivial_coupled_positive_certificate": 1,
+    "odd_cycle_fractional_marginal_witness": 1,
+    "odd_cycle_integer_infeasible": 1,
+    "positive_certificate_direct_check": 1,
+    "relaxed_cycle_not_coupled_counterexample": 1,
+    "separate_conjugacy_false_positives": 54,
+    "shared_root_conjugator_is_essential": 1,
+    "triangle_relation_compiler_all_4096": 4096
+  },
+  "scope": "bounded attachment and frame-comparison carriers, not native wiring exhaustion",
+  "source_sha256": "24ddc301e7395835969d03b95e56838646fd060410f155963e131ac49be703a9",
+  "status": "PASS"
+}
