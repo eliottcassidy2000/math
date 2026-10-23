@@ -10,6 +10,10 @@ and open native-coverage target remain separately labelled.
 - Started at508cd019aa; integratedaf1ba9bc0e and read incoming3f1a9a2c09.
   The generic finite-domain compiler, Graver moves, prime-field alignment
   quotient, recursive-nine-cell group, and zero-slot charge are credited.
+- Rebased over836fcf2aa2 and5258d52ac9. Read the shared-gauge theorem,
+  synthesis, additive results, coloured-grid note and binary phase dictionary.
+  Extended charge conservation to the full incoming B-to-A/C-to-B language;
+  preserved the indexed-path versus unindexed-window distinction.
 - THM-3042 (subdirect graph-order/common quotient) and THM-4728
   (mixed-prime subdirect census) already use the common-quotient mechanism.
   The new edge record is an application to cyclic block stabilizers.
@@ -77,6 +81,7 @@ exceptions, and receipts replay in normal and optimized Python.
 |receipt-large.json|64 modulus27 cells; closed-form9*3^32 frame count vs integer lattice, actual-owner reductions, and exact character cancellation|
 |audit.json|all internal permutations at3,5,7,9; native flat/twisted orders9,27,45; direct phase orbits; central commutator and common-sign toy groups|
 |nonabelian.json|all9! internal permutations and81³ three-cell tuples;59049 exact unique factorizations; locally feasible but globally impossible twist|
+|carries.json|representative cocycles at3,5,9,15; native(d,d²) blocks atd3,5,9;27 twisted nonabelian checks with8 untwisted failures; both proper-split switches through index60|
 
 The large family is checked by its exact all-size construction and compact
 equations, not by enumerating its roughly1.67e16 compatible frames. The

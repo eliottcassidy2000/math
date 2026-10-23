@@ -5,17 +5,22 @@
   "inherited_commits": [
     "508cd019aa",
     "af1ba9bc0e",
-    "3f1a9a2c09"
+    "3f1a9a2c09",
+    "836fcf2aa2",
+    "5258d52ac9"
   ],
   "sha256": {
-    "AUDIT.md": "e603b0c8951db239e859e8763508ab9387351d6e0716aced775be892e905e4ec",
-    "CHARGE.md": "19e6eb4955e9e139a4ac887e84fbf07995211cdc77d3c69368e02ded4cb17114",
+    "AUDIT.md": "ab64968bb61366ca1aa90f7775b00c8a7c042f119b08adaafc5b30ded893ce74",
+    "CARRIES.md": "d201667fc745fd674f77a6098cb6b5412259aef7fc11454480bb02ca7b63c51a",
+    "CHARGE.md": "5ffa362243126de7dc710f32a5628fb5e01de6f0a1d5dd12fe9bda2f8994aec6",
     "MONSTER.md": "af9a31a5028cd68525e293600a5a88703bbb359b36d7ac2c7fb07d4af70df9dd",
     "NONABELIAN.md": "909e07cbb6305a7388dd0a747deaf81ecc28b4432d760b5eb6a4daa941878a14",
-    "README.md": "1ba3c7eb4bd9a80144033f5782366a51115f4491a55908a34d2bbbefb2f372d9",
+    "README.md": "2aeb73c6c1c21a162da4114ab2ba6cf9127b7dda57c19113fdf43b23c27d3c13",
     "audit.json": "240c409ace49338b27fbc8a1d576c7f9e79eb24b0965f7fd2a5a6ad26a491779",
     "audit.py": "eb31aa906698c47cbb8bc0edbb4e3d1aa6b9c9017e7fe03b68a1bfc30d81acab",
-    "check.py": "8755938d60c995af8f9f55d93134c44ae7e40dfc73993239c3c70a790243e775",
+    "carries.json": "071569a3efbaee5c729bb4fb909dd784c1b0913afc61569e41fb7b52d3e7ebf7",
+    "carries.py": "27662c09de7f08e1daec5b46e25c9f576db813ecda306a26add7bc8ec56fe8b4",
+    "check.py": "fb7a249a8cb44b20e65b6eab0e01aa512c0c5838262602045ae68f50298fc49a",
     "lattice.py": "93de6b17c4d16e68a484ca23dbf477bbac9af307bbf1ee2b3a76aa498c8e2adf",
     "nonabelian.json": "56f9e2eadb5fd929ba520e7a4f4dfd819248d7ecf88ea0a60a16eaec4081b21b",
     "nonabelian.py": "c33192a4d705e6b8d2b8088d1b1f353e24ac33f9f00a56819c34a5cdc38a3ee0",

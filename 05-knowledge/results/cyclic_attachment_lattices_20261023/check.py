@@ -269,12 +269,13 @@ def large_family():
 
 if __name__ == '__main__':
     pa = argparse.ArgumentParser()
-    pa.add_argument('--part', choices=('blocks', 'global', 'charges', 'large', 'all'), default='all')
+    pa.add_argument('--part', choices=('blocks', 'global', 'charges', 'large'), required=True,
+                    help='select one independently frozen receipt')
     pa.add_argument('--write', action='store_true')
     args = pa.parse_args()
     output = {'status': 'FINITE-EXACT controls; proof scopes in README.md'}
     for name, fn in (('blocks', exhaustive_blocks), ('global', exhaustive_global), ('charges', charges), ('large', large_family)):
-        if args.part in ('all', name):
+        if args.part == name:
             output[name] = fn()
     output['checks'] = CHECKS
     output = json.loads(json.dumps(output))

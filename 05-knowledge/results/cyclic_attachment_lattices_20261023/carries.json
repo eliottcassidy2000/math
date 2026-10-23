@@ -1,0 +1,55 @@
+{
+  "status": "FINITE-EXACT; proof in CARRIES.md",
+  "cyclic_moduli": [
+    3,
+    5,
+    9,
+    15
+  ],
+  "native_rectangles": [
+    {
+      "cell_sizes": [
+        3,
+        9
+      ],
+      "compatible_frames": 9,
+      "quotient_return_lift": [
+        0,
+        3
+      ]
+    },
+    {
+      "cell_sizes": [
+        5,
+        25
+      ],
+      "compatible_frames": 25,
+      "quotient_return_lift": [
+        0,
+        5
+      ]
+    },
+    {
+      "cell_sizes": [
+        9,
+        81
+      ],
+      "compatible_frames": 81,
+      "quotient_return_lift": [
+        0,
+        9
+      ]
+    }
+  ],
+  "nonabelian_section_triples": 27,
+  "untwisted_identity_failures": 8,
+  "proper_split_indices": [
+    4,
+    60
+  ],
+  "switched_node_types": {
+    "B-to-A": 28,
+    "C-to-B": 29
+  },
+  "checks": 4658
+}

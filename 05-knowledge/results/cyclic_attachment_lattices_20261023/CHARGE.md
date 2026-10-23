@@ -157,6 +157,11 @@ at every finite prefix and every refinement depth. The original integer n,
 the row's split tree, and its occurrence addresses remain fixed. A new
 split adds exactly its declared debt; it does not reset the source register.
 
+Late incoming work classifies the complete occurrence-dependent branch
+language, also allowing original B-to-A choices. [CARRIES.md](CARRIES.md)
+extends this exact accounting to both freedoms on the same preferred tree.
+The C-to-B subfamily here is a positive control, not the full language.
+
 If leaf and debt use independent copies t_j and u_j, their nontrivial
 characters differ and do not cancel. The finite control with six actual
 owners has64 legal joint choices and constant total charge. Erasing their
@@ -175,7 +180,8 @@ Collatz drift. Those are different inequalities still to be proved.
 ## 6. A central-kernel version of the same discipline
 
 Let1->K->E->Q->1 be a central extension. Suppose actual edge transports
-g_ij in E have a flat quotient connection: their images equal q_j q_i^-1.
+g_ij in E, with g_ji=g_ij^-1, have a flat quotient connection: their images
+equal q_j q_i^-1.
 Choose one lift u_i of each q_i and retain
 
     k_ij=u_j^-1 g_ij u_i in K.

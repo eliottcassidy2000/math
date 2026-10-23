@@ -32,6 +32,14 @@ covered by existing theory. We do not claim the cyclic compiler is the
 first general compact compatibility rule. Its advantages are its concrete
 arithmetic record and the attached exact integer-observation test.
 
+The final incoming synthesis at5258d52ac9 strengthens the Fibonacci
+language to both B-to-A and C-to-B freedoms. [CARRIES.md](CARRIES.md)
+extends the zero-slot charge to that whole occurrence-dependent language
+and connects additive carries to the kernel-valued corrections in the
+prefix bank. Its native(d,d²)-cell family shows why a quotient return
+must retain an extra port rotation. The incoming indexed-path versus
+unindexed-edge distinction remains an explicit limit on reconstruction.
+
 ## Inheritance and concept board
 
 Started from clean508cd019aa and fast-forwarded toaf1ba9bc0e. Read the
@@ -360,6 +368,7 @@ Reproduce each part in normal and optimized Python:
     python3 -B 05-knowledge/results/cyclic_attachment_lattices_20261023/check.py --part large
     python3 -B 05-knowledge/results/cyclic_attachment_lattices_20261023/audit.py
     python3 -B 05-knowledge/results/cyclic_attachment_lattices_20261023/nonabelian.py
+    python3 -B 05-knowledge/results/cyclic_attachment_lattices_20261023/carries.py
 
 Use `python3 -O -B` for the optimized replay. SymPy supplies exact integer
 Hermite normalization and cyclotomic polynomials. No floating-point roots
