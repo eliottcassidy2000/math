@@ -1,0 +1,127 @@
+{
+  "symbolic_discriminant_identities": 12,
+  "symbolic_compositions": 25,
+  "direct_path_laplacian_determinants": [
+    {
+      "vertices": 1,
+      "direct_forest_determinant": 1,
+      "trace": 3,
+      "c": -5
+    },
+    {
+      "vertices": 2,
+      "direct_forest_determinant": 3,
+      "trace": 7,
+      "c": -29
+    },
+    {
+      "vertices": 3,
+      "direct_forest_determinant": 8,
+      "trace": 18,
+      "c": -95
+    },
+    {
+      "vertices": 4,
+      "direct_forest_determinant": 21,
+      "trace": 47,
+      "c": -269
+    },
+    {
+      "vertices": 5,
+      "direct_forest_determinant": 55,
+      "trace": 123,
+      "c": -725
+    },
+    {
+      "vertices": 6,
+      "direct_forest_determinant": 144,
+      "trace": 322,
+      "c": -1919
+    },
+    {
+      "vertices": 7,
+      "direct_forest_determinant": 377,
+      "trace": 843,
+      "c": -5045
+    },
+    {
+      "vertices": 8,
+      "direct_forest_determinant": 987,
+      "trace": 2207,
+      "c": -13229
+    },
+    {
+      "vertices": 9,
+      "direct_forest_determinant": 2584,
+      "trace": 5778,
+      "c": -34655
+    },
+    {
+      "vertices": 10,
+      "direct_forest_determinant": 6765,
+      "trace": 15127,
+      "c": -90749
+    },
+    {
+      "vertices": 11,
+      "direct_forest_determinant": 17711,
+      "trace": 39603,
+      "c": -237605
+    },
+    {
+      "vertices": 12,
+      "direct_forest_determinant": 46368,
+      "trace": 103682,
+      "c": -622079
+    },
+    {
+      "vertices": 13,
+      "direct_forest_determinant": 121393,
+      "trace": 271443,
+      "c": -1628645
+    },
+    {
+      "vertices": 14,
+      "direct_forest_determinant": 317811,
+      "trace": 710647,
+      "c": -4263869
+    },
+    {
+      "vertices": 15,
+      "direct_forest_determinant": 832040,
+      "trace": 1860498,
+      "c": -11162975
+    },
+    {
+      "vertices": 16,
+      "direct_forest_determinant": 2178309,
+      "trace": 4870847,
+      "c": -29225069
+    },
+    {
+      "vertices": 17,
+      "direct_forest_determinant": 5702887,
+      "trace": 12752043,
+      "c": -76512245
+    },
+    {
+      "vertices": 18,
+      "direct_forest_determinant": 14930352,
+      "trace": 33385282,
+      "c": -200311679
+    },
+    {
+      "vertices": 19,
+      "direct_forest_determinant": 39088169,
+      "trace": 87403803,
+      "c": -524422805
+    },
+    {
+      "vertices": 20,
+      "direct_forest_determinant": 102334155,
+      "trace": 228826127,
+      "c": -1372956749
+    }
+  ],
+  "scope": "Symbolic finite polynomial checks and direct determinants independent of producer rational-grid/Fibonacci controls; all-m proof separately audited."
+}

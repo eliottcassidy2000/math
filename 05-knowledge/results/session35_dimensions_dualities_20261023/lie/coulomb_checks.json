@@ -1,0 +1,27 @@
+{
+  "rational_parameter_samples": 1110,
+  "integer_c_with_rational_parameter": [
+    -24,
+    -7,
+    -2,
+    0,
+    1,
+    25,
+    26,
+    28,
+    33,
+    50
+  ],
+  "c_minus5_parameter": "(3 +/- sqrt(5))/2",
+  "rational_mirror_at_Ising_c": [
+    "64/27",
+    "256/81"
+  ],
+  "rational_VOA_same_c_minus5": {
+    "Lee_Yang_factors": 5,
+    "Ising_factors": 34
+  },
+  "rational_VOA_c57_Ising_factors": 114,
+  "Ising_sigma_quantum_dimension": "sqrt(2)",
+  "scope": "Exact algebraic controls; does not computationally prove Gelfond-Schneider or Virasoro rationality classification."
+}

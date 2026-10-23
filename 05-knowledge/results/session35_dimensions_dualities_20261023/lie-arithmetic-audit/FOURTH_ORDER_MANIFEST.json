@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "source": "session35-root/FOURTH_ORDER_E7_BOUNDARY.md",
+  "sha256": "12b2bb97b7979304e8f7ccfba1f4dcf4bf0bcffc67faec12d164374b4f07f61a",
+  "report": "FOURTH_ORDER_AUDIT.md",
+  "primary_source": "https://arxiv.org/pdf/1005.1275",
+  "source_pin": "Theorem42 and Corollary43, printed pp19\u201320",
+  "note": "Final appended Helenius source, odd-order GL-orbit strengthening, and explicit ordinary invariant quartic independently re-read and passed."
+}

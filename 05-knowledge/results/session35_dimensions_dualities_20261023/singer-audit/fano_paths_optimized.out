@@ -1,0 +1,362 @@
+{
+  "hostile_regular_H171": [
+    {
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "blue": true,
+      "admissible_triangle_count": 5
+    },
+    {
+      "path": [
+        0,
+        1,
+        4,
+        2,
+        5,
+        6,
+        3
+      ],
+      "blue": false,
+      "admissible_triangle_count": 5
+    }
+  ],
+  "status": "PASS",
+  "profiles": [
+    {
+      "u+": 1,
+      "u-": 1,
+      "blue": true,
+      "count": 21
+    },
+    {
+      "u+": 2,
+      "u-": 2,
+      "blue": true,
+      "count": 42
+    },
+    {
+      "u+": 2,
+      "u-": 3,
+      "blue": false,
+      "count": 63
+    },
+    {
+      "u+": 3,
+      "u-": 2,
+      "blue": false,
+      "count": 63
+    }
+  ],
+  "admissible_moves": [
+    {
+      "blue": false,
+      "moves": 5,
+      "paths": 126
+    },
+    {
+      "blue": true,
+      "moves": 2,
+      "paths": 21
+    },
+    {
+      "blue": true,
+      "moves": 4,
+      "paths": 42
+    }
+  ],
+  "full_plane_cubes": [
+    {
+      "H_distribution": {
+        "189": 16,
+        "171": 112
+      },
+      "H189_masks": [
+        0,
+        7,
+        25,
+        30,
+        42,
+        45,
+        51,
+        52,
+        75,
+        76,
+        82,
+        85,
+        97,
+        102,
+        120,
+        127
+      ]
+    },
+    {
+      "H_distribution": {
+        "189": 16,
+        "171": 112
+      },
+      "H189_masks": [
+        0,
+        7,
+        25,
+        30,
+        42,
+        45,
+        51,
+        52,
+        75,
+        76,
+        82,
+        85,
+        97,
+        102,
+        120,
+        127
+      ]
+    }
+  ],
+  "path_cube_states_tested": 1932,
+  "nonzero_path_cube_states_tested": 1554,
+  "nine_orbit_certificate": [
+    {
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "increments": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "ratios_2_4": [
+        0,
+        0
+      ],
+      "u+": 1,
+      "u-": 1,
+      "blue": true
+    },
+    {
+      "path": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3
+      ],
+      "increments": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "ratios_2_4": [
+        1,
+        2
+      ],
+      "u+": 2,
+      "u-": 3,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        3,
+        5
+      ],
+      "increments": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        2
+      ],
+      "ratios_2_4": [
+        2,
+        1
+      ],
+      "u+": 3,
+      "u-": 2,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        2,
+        6,
+        3,
+        4,
+        5
+      ],
+      "increments": [
+        1,
+        1,
+        4,
+        4,
+        1,
+        1
+      ],
+      "ratios_2_4": [
+        1,
+        1
+      ],
+      "u+": 2,
+      "u-": 2,
+      "blue": true
+    },
+    {
+      "path": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6
+      ],
+      "increments": [
+        1,
+        2,
+        1,
+        1,
+        4,
+        4
+      ],
+      "ratios_2_4": [
+        1,
+        2
+      ],
+      "u+": 2,
+      "u-": 3,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        4,
+        6
+      ],
+      "increments": [
+        1,
+        2,
+        2,
+        4,
+        2,
+        2
+      ],
+      "ratios_2_4": [
+        2,
+        1
+      ],
+      "u+": 3,
+      "u-": 2,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        5,
+        2,
+        3,
+        4,
+        6
+      ],
+      "increments": [
+        1,
+        4,
+        4,
+        1,
+        1,
+        2
+      ],
+      "ratios_2_4": [
+        2,
+        1
+      ],
+      "u+": 3,
+      "u-": 2,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        5,
+        2,
+        4,
+        6,
+        3
+      ],
+      "increments": [
+        1,
+        4,
+        4,
+        2,
+        2,
+        4
+      ],
+      "ratios_2_4": [
+        1,
+        2
+      ],
+      "u+": 2,
+      "u-": 3,
+      "blue": false
+    },
+    {
+      "path": [
+        0,
+        1,
+        5,
+        2,
+        6,
+        3,
+        4
+      ],
+      "increments": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        1
+      ],
+      "ratios_2_4": [
+        1,
+        1
+      ],
+      "u+": 2,
+      "u-": 2,
+      "blue": true
+    }
+  ]
+}

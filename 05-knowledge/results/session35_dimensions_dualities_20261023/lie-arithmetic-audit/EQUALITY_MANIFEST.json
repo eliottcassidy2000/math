@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "scope": "Equality rigidity only; depends on earlier frozen completion audit.",
+  "hashes": {
+    "session35-lie/EQUALITY_RIGIDITY.md": "6e9cb5e4e5278371760c6ad7c53f4bd7d19646421bc46681e579e9df8fce8039",
+    "session35-lie/equality_checks.py": "c084ebef99ed3b6a65d71773d4f97126a6c42629aa9fa9c27e75c8fe0c6b7989",
+    "session35-lie/equality_checks.json": "2aae2a42a3da7fb7cdee705d2e23c5f4e39efbd1b99b517cbebba2a7820bfe66"
+  },
+  "report": "EQUALITY_AUDIT.md",
+  "independent_checks": "equality_independent_checks.py",
+  "note": "Updated source-note hash after URL-only replacement with verified arXiv Garibaldi link; proof unchanged."
+}

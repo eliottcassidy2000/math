@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "scope": "Coulomb mirror note only; excludes powering addenda.",
+  "hashes": {
+    "session35-lie/COULOMB_MIRROR_DUALITY.md": "163195e8e91e8640a5a61a97506ee36ceb48826d66f89867c99adbcb03d8e1d2",
+    "session35-lie/coulomb_checks.py": "b18003950ecce27498db2b813d96403a8adc14fb47459d4f16bec6c398088d4f",
+    "session35-lie/coulomb_checks.json": "399233cb71d8fff7ad43f33a39955ba5765809ba66aca45c4a9191355ba01a78"
+  },
+  "report": "COULOMB_AUDIT.md",
+  "independent_checks": "coulomb_independent_checks.py"
+}

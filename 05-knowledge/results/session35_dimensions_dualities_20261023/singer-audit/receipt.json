@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "q": 2,
+      "vertices": 7,
+      "enumerated_masks": 128,
+      "regular_count": 128,
+      "binary_rank": 4,
+      "walsh_support_count": 1,
+      "continuation_classes": 1,
+      "triangle_range": [
+        14,
+        14
+      ],
+      "mean_times_four": 56,
+      "noncollinear_triples": 28
+    },
+    {
+      "q": 3,
+      "vertices": 13,
+      "enumerated_masks": 8192,
+      "regular_count": 2,
+      "binary_rank": 12,
+      "walsh_support_count": 79,
+      "continuation_classes": 4096,
+      "triangle_range": [
+        55,
+        91
+      ],
+      "mean_times_four": 306,
+      "noncollinear_triples": 234
+    }
+  ],
+  "singer57": {
+    "difference_set": [
+      8,
+      15,
+      19,
+      38,
+      48,
+      50,
+      51,
+      56
+    ],
+    "all_nonzero_differences_once": true,
+    "binary_rank": 56,
+    "crt_inverse": "19a+39b mod57",
+    "line_flip_states": "144115188075855872",
+    "minimal_c3_states": "72057594037927936",
+    "c3_translate_linear_dimension": 1597,
+    "enumerated_57_masks": 0
+  }
+}

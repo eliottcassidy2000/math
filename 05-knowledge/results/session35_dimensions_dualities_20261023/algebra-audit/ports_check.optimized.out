@@ -1,0 +1,23 @@
+[
+  {
+    "odd_cycle_polynomial": true,
+    "old_n": 2,
+    "double_n": 4,
+    "all_four_schur_blocks": true,
+    "every_port_coefficient": true
+  },
+  {
+    "odd_cycle_polynomial": true,
+    "old_n": 3,
+    "double_n": 6,
+    "all_four_schur_blocks": true,
+    "every_port_coefficient": true
+  },
+  {
+    "odd_cycle_polynomial": true,
+    "old_n": 3,
+    "double_n": 6,
+    "all_four_schur_blocks": true,
+    "every_port_coefficient": true
+  }
+]

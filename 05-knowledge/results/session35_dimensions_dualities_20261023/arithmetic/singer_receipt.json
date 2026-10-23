@@ -1,0 +1,138 @@
+{
+  "status": "FINITE-EXACT",
+  "planes": [
+    {
+      "q": 2,
+      "v": 7,
+      "polynomial_constant_first": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "primitive_alpha": [
+        0,
+        0,
+        1
+      ],
+      "difference_set": [
+        3,
+        5,
+        6
+      ],
+      "binary_incidence_rank": 4,
+      "edge_blocks": 7,
+      "edges_per_block": 3,
+      "masks_tested": 128,
+      "regular_masks_tested": 128,
+      "triangle_range_tested": [
+        14,
+        14
+      ],
+      "triangle_mean_times8": 112,
+      "nonzero_quadratic_coefficients": 0
+    },
+    {
+      "q": 3,
+      "v": 13,
+      "polynomial_constant_first": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "primitive_alpha": [
+        0,
+        0,
+        2
+      ],
+      "difference_set": [
+        0,
+        2,
+        5,
+        6
+      ],
+      "binary_incidence_rank": 12,
+      "edge_blocks": 13,
+      "edges_per_block": 6,
+      "masks_tested": 8192,
+      "regular_masks_tested": 2,
+      "triangle_range_tested": [
+        16,
+        91
+      ],
+      "triangle_mean_times8": 468,
+      "nonzero_quadratic_coefficients": 78
+    },
+    {
+      "q": 7,
+      "v": 57,
+      "polynomial_constant_first": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "primitive_alpha": [
+        0,
+        1,
+        5
+      ],
+      "difference_set": [
+        8,
+        15,
+        19,
+        38,
+        48,
+        50,
+        51,
+        56
+      ],
+      "binary_incidence_rank": 56,
+      "edge_blocks": 57,
+      "edges_per_block": 28,
+      "masks_tested": 60,
+      "regular_masks_tested": 2,
+      "triangle_range_tested": [
+        7046,
+        7714
+      ],
+      "triangle_mean_times8": 56696,
+      "nonzero_quadratic_coefficients": 1596,
+      "difference_set_CRT": [
+        [
+          2,
+          8
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          2,
+          18
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "census": [
+    {
+      "n": 1,
+      "range": "all labelled tournaments",
+      "count": 1,
+      "classes": 1,
+      "H_ambiguous_classes": 0
+    },
+    {
+      "n": 2,
+      "range": "all labelled tournaments",
+      "count": 2,
+      "classes": 1,
+      "H_ambiguous_classes": 0
+    },
+    {
+      "n": 3,
+      "range": "all labelled tournaments",
+      "count": 8,
+      "classes": 2,
+      "H_ambiguous_classes": 0
+    },
+    {
+      "n": 4,
+      "range": "all labelled tournaments",
+      "count": 64,
+      "classes": 3,
+      "H_ambiguous_classes": 0
+    },
+    {
+      "n": 5,
+      "range": "all labelled tournaments",
+      "count": 1024,
+      "classes": 9,
+      "H_ambiguous_classes": 0
+    },
+    {
+      "n": 6,
+      "range": "Hamiltonian-order presentations",
+      "count": 1024,
+      "classes": 28,
+      "H_ambiguous_classes": 3
+    }
+  ],
+  "witness": [
+    {
+      "H": 29,
+      "c3": 6,
+      "c5": 6,
+      "disjoint_triangle_pairs": 1
+    },
+    {
+      "H": 25,
+      "c3": 6,
+      "c5": 6,
+      "disjoint_triangle_pairs": 0
+    }
+  ],
+  "subset_coefficient_differences": {
+    "1": 0,
+    "2": 0,
+    "3": 8,
+    "4": 9,
+    "5": 3,
+    "6": 1
+  },
+  "p": "z**6 + 15*z**4 + 47*z**2 + 1",
+  "q": "2*z*(3*z**4 + 34*z**2 + 59)"
+}

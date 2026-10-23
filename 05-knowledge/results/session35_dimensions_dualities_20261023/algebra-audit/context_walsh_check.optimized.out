@@ -1,0 +1,8 @@
+{
+  "all_supports_F2_3": 256,
+  "annihilator_pair_checks": 16384,
+  "exact_linear_rank_checks": 256,
+  "even_weight_rank_checks": "v=3..9",
+  "q7_context_states": 72057594037927936,
+  "q7_linear_span": 1597
+}

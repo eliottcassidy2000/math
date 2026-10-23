@@ -16,7 +16,7 @@ Define:
 
 Then the contribution from tilings with d ≥ 2 good cuts is:
 
-  **F(x,y) = x·B(xy) / (1 − x − x·B(xy))**
+  **F(x,y) = x·B(xy) / ((1−x)(1 − x − x·B(xy)))**
 
 where [xⁿ yᵈ] F(x,y) = #{tilings of n-vertex staircase with exactly d good cuts}, for d ≥ 2.
 
@@ -38,15 +38,15 @@ Summing over d≥2 and weighting by yᵈ, using Q(d,k) = [xᵈ]B(x)ᵏ:
 
   F(x,y) = Σ_{k≥1} (1/(1−x))^{k+1} xᵏ B(xy)ᵏ
           = (1/(1−x)) · xB(xy)/(1−x) / (1 − xB(xy)/(1−x))
-          = x·B(xy) / (1 − x − x·B(xy))
+          = x·B(xy) / ((1−x)(1 − x − x·B(xy)))
 
 ## Verification
 
-Verified by brute force for n = 3..7, all d = 2..n−1. All values match.
+**Correction, 2026-10-23:** the previous claim that the printed rational expression matched all n=3..7 values was false. Its smallest witness is n=4,d=2: the old expression gives 1, whereas the correct count is 2. The summation line in the proof already retained the necessary factor 1/(1−x), which was dropped in the last simplification. Independent interval-union enumeration through n=7 and exact coefficient checks verify the repaired expression. The old expression counts precisely those positive-good tilings whose first SCC is nontrivial, rather than all positive-good tilings. See [recovery and independent controls](../../05-knowledge/results/session35_dimensions_dualities_20261023/arithmetic/GOOD_CUT_RECOVERY.md).
 
 ## Corollaries
 
-**C1 (y=1):** Σ_n (2^m − 1) xⁿ = x·B(x) / (1 − x − x·B(x))
+**C1 (y=1):** Σ_n (2^m − 1) xⁿ = x·B(x) / ((1−x)(1 − x − x·B(x)))
 This encodes: total non-transitive tilings = SC + non-SC − 1 = 2^m − 1.
 
 **C2 (SC column):** [xⁿ y^{n-1}] F(x,y) = SC(n) = last column of good-cuts triangle.

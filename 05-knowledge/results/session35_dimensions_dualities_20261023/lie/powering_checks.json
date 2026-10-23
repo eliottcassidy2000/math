@@ -1,0 +1,222 @@
+{
+  "rational_grid_polynomial_checks": 5124,
+  "golden_orbit_through_m30": [
+    {
+      "m": 1,
+      "trace": 3,
+      "path_forests": 1,
+      "c": -5,
+      "discriminant": 180
+    },
+    {
+      "m": 2,
+      "trace": 7,
+      "path_forests": 3,
+      "c": -29,
+      "discriminant": 1620
+    },
+    {
+      "m": 3,
+      "trace": 18,
+      "path_forests": 8,
+      "c": -95,
+      "discriminant": 11520
+    },
+    {
+      "m": 4,
+      "trace": 47,
+      "path_forests": 21,
+      "c": -269,
+      "discriminant": 79380
+    },
+    {
+      "m": 5,
+      "trace": 123,
+      "path_forests": 55,
+      "c": -725,
+      "discriminant": 544500
+    },
+    {
+      "m": 6,
+      "trace": 322,
+      "path_forests": 144,
+      "c": -1919,
+      "discriminant": 3732480
+    },
+    {
+      "m": 7,
+      "trace": 843,
+      "path_forests": 377,
+      "c": -5045,
+      "discriminant": 25583220
+    },
+    {
+      "m": 8,
+      "trace": 2207,
+      "path_forests": 987,
+      "c": -13229,
+      "discriminant": 175350420
+    },
+    {
+      "m": 9,
+      "trace": 5778,
+      "path_forests": 2584,
+      "c": -34655,
+      "discriminant": 1201870080
+    },
+    {
+      "m": 10,
+      "trace": 15127,
+      "path_forests": 6765,
+      "c": -90749,
+      "discriminant": 8237740500
+    },
+    {
+      "m": 11,
+      "trace": 39603,
+      "path_forests": 17711,
+      "c": -237605,
+      "discriminant": 56462313780
+    },
+    {
+      "m": 12,
+      "trace": 103682,
+      "path_forests": 46368,
+      "c": -622079,
+      "discriminant": 386998456320
+    },
+    {
+      "m": 13,
+      "trace": 271443,
+      "path_forests": 121393,
+      "c": -1628645,
+      "discriminant": 2652526880820
+    },
+    {
+      "m": 14,
+      "trace": 710647,
+      "path_forests": 317811,
+      "c": -4263869,
+      "discriminant": 18180689709780
+    },
+    {
+      "m": 15,
+      "trace": 1860498,
+      "path_forests": 832040,
+      "c": -11162975,
+      "discriminant": 124612301088000
+    },
+    {
+      "m": 16,
+      "trace": 4870847,
+      "path_forests": 2178309,
+      "c": -29225069,
+      "discriminant": 854105417906580
+    },
+    {
+      "m": 17,
+      "trace": 12752043,
+      "path_forests": 5702887,
+      "c": -76512245,
+      "discriminant": 5854125624258420
+    },
+    {
+      "m": 18,
+      "trace": 33385282,
+      "path_forests": 14930352,
+      "c": -200311679,
+      "discriminant": 40124773951902720
+    },
+    {
+      "m": 19,
+      "trace": 87403803,
+      "path_forests": 39088169,
+      "c": -524422805,
+      "discriminant": 275019292039060980
+    },
+    {
+      "m": 20,
+      "trace": 228826127,
+      "path_forests": 102334155,
+      "c": -1372956749,
+      "discriminant": 1885010270321524500
+    },
+    {
+      "m": 21,
+      "trace": 599074578,
+      "path_forests": 267914296,
+      "c": -3594447455,
+      "discriminant": 12920052600211610880
+    },
+    {
+      "m": 22,
+      "trace": 1568397607,
+      "path_forests": 701408733,
+      "c": -9410385629,
+      "discriminant": 88555357931159752020
+    },
+    {
+      "m": 23,
+      "trace": 4106118243,
+      "path_forests": 1836311903,
+      "c": -24636709445,
+      "discriminant": 606967452917906653620
+    },
+    {
+      "m": 24,
+      "trace": 10749957122,
+      "path_forests": 4807526976,
+      "c": -64499742719,
+      "discriminant": 4160216812494186823680
+    },
+    {
+      "m": 25,
+      "trace": 28143753123,
+      "path_forests": 12586269025,
+      "c": -168862518725,
+      "discriminant": 28514550234541401112500
+    },
+    {
+      "m": 26,
+      "trace": 73681302247,
+      "path_forests": 32951280099,
+      "c": -442087813469,
+      "discriminant": 195441634829295620964180
+    },
+    {
+      "m": 27,
+      "trace": 192900153618,
+      "path_forests": 86267571272,
+      "c": -1157400921695,
+      "discriminant": 1339576893570527945637120
+    },
+    {
+      "m": 28,
+      "trace": 505019158607,
+      "path_forests": 225851433717,
+      "c": -3030114951629,
+      "discriminant": 9181596620164399998496020
+    },
+    {
+      "m": 29,
+      "trace": 1322157322203,
+      "path_forests": 591286729879,
+      "c": -7932943933205,
+      "discriminant": 62931599447580272043835380
+    },
+    {
+      "m": 30,
+      "trace": 3461452808002,
+      "path_forests": 1548008755920,
+      "c": -20768716847999,
+      "discriminant": 431339599512897504308352000
+    }
+  ],
+  "hostile": {
+    "c": 13,
+    "D": -144,
+    "P2c": 25,
+    "D_after": 0
+  },
+  "scope": "Exact finite controls; all-m proof in addendum."
+}

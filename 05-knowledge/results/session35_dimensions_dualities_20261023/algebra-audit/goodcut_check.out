@@ -1,0 +1,153 @@
+{
+  "connected_cover_counts": {
+    "2": 1,
+    "3": 5,
+    "4": 50,
+    "5": 903,
+    "6": 30773
+  },
+  "canon_hostile": {
+    "n": 4,
+    "good_cuts": 2,
+    "printed": 1,
+    "corrected_and_actual": 2
+  },
+  "direct_census": [
+    {
+      "n": 1,
+      "direct_buckets": {
+        "0": 1
+      }
+    },
+    {
+      "n": 2,
+      "direct_buckets": {
+        "0": 1
+      }
+    },
+    {
+      "n": 3,
+      "direct_buckets": {
+        "0": 1,
+        "2": 1
+      }
+    },
+    {
+      "n": 4,
+      "direct_buckets": {
+        "0": 1,
+        "2": 2,
+        "3": 5
+      }
+    },
+    {
+      "n": 5,
+      "direct_buckets": {
+        "0": 1,
+        "2": 3,
+        "3": 10,
+        "4": 50
+      }
+    },
+    {
+      "n": 6,
+      "direct_buckets": {
+        "0": 1,
+        "2": 4,
+        "3": 15,
+        "4": 101,
+        "5": 903
+      }
+    },
+    {
+      "n": 7,
+      "direct_buckets": {
+        "0": 1,
+        "2": 5,
+        "3": 20,
+        "4": 153,
+        "5": 1816,
+        "6": 30773
+      }
+    }
+  ],
+  "fixed_k_leading": [
+    {
+      "k": 2,
+      "degree": 1,
+      "leading_numerator": 1,
+      "leading_denominator": 1,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 3,
+      "degree": 1,
+      "leading_numerator": 5,
+      "leading_denominator": 1,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 4,
+      "degree": 2,
+      "leading_numerator": 1,
+      "leading_denominator": 2,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 5,
+      "degree": 2,
+      "leading_numerator": 10,
+      "leading_denominator": 2,
+      "maximal_profiles": 2
+    },
+    {
+      "k": 6,
+      "degree": 3,
+      "leading_numerator": 1,
+      "leading_denominator": 6,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 7,
+      "degree": 3,
+      "leading_numerator": 15,
+      "leading_denominator": 6,
+      "maximal_profiles": 3
+    },
+    {
+      "k": 8,
+      "degree": 4,
+      "leading_numerator": 1,
+      "leading_denominator": 24,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 9,
+      "degree": 4,
+      "leading_numerator": 20,
+      "leading_denominator": 24,
+      "maximal_profiles": 4
+    },
+    {
+      "k": 10,
+      "degree": 5,
+      "leading_numerator": 1,
+      "leading_denominator": 120,
+      "maximal_profiles": 1
+    },
+    {
+      "k": 11,
+      "degree": 5,
+      "leading_numerator": 25,
+      "leading_denominator": 120,
+      "maximal_profiles": 5
+    },
+    {
+      "k": 12,
+      "degree": 6,
+      "leading_numerator": 1,
+      "leading_denominator": 720,
+      "maximal_profiles": 1
+    }
+  ]
+}

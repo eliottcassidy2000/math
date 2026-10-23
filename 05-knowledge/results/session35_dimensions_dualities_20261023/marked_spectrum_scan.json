@@ -1,0 +1,115 @@
+[
+  {
+    "n": 3,
+    "presentations": 2,
+    "marked_spectral_classes": 2,
+    "H_ambiguous_classes": 0,
+    "witness": null
+  },
+  {
+    "n": 4,
+    "presentations": 8,
+    "marked_spectral_classes": 3,
+    "H_ambiguous_classes": 0,
+    "witness": null
+  },
+  {
+    "n": 5,
+    "presentations": 64,
+    "marked_spectral_classes": 9,
+    "H_ambiguous_classes": 0,
+    "witness": null
+  },
+  {
+    "n": 6,
+    "presentations": 1024,
+    "marked_spectral_classes": 28,
+    "H_ambiguous_classes": 3,
+    "witness": {
+      "first_mask": 14,
+      "second_mask": 21,
+      "H": [
+        29,
+        25
+      ],
+      "signature": [
+        0,
+        0,
+        -30,
+        -22,
+        0,
+        0,
+        262,
+        166,
+        0,
+        0,
+        -2526,
+        -1462
+      ],
+      "out_second": [
+        22,
+        12,
+        8,
+        17,
+        38,
+        15
+      ],
+      "out_first": [
+        58,
+        4,
+        9,
+        18,
+        38,
+        14
+      ]
+    }
+  },
+  {
+    "n": 7,
+    "presentations": 32768,
+    "marked_spectral_classes": 168,
+    "H_ambiguous_classes": 47,
+    "witness": {
+      "first_mask": 5,
+      "second_mask": 19,
+      "H": [
+        41,
+        35
+      ],
+      "signature": [
+        0,
+        0,
+        -42,
+        -64,
+        0,
+        0,
+        422,
+        704,
+        0,
+        0,
+        -4746,
+        -8256,
+        0,
+        0
+      ],
+      "out_second": [
+        78,
+        4,
+        8,
+        18,
+        39,
+        79,
+        30
+      ],
+      "out_first": [
+        22,
+        4,
+        8,
+        19,
+        38,
+        79,
+        31
+      ]
+    }
+  }
+]

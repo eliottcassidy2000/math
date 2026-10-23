@@ -1,0 +1,67 @@
+{
+  "diagonal_exponent_range": [
+    -6,
+    6
+  ],
+  "fixed_metric_and_positive_bracket_solutions": [
+    {
+      "-2": -6,
+      "-1": -3,
+      "0": 0,
+      "1": 3,
+      "2": 6
+    },
+    {
+      "-2": -4,
+      "-1": -2,
+      "0": 0,
+      "1": 2,
+      "2": 4
+    },
+    {
+      "-2": -2,
+      "-1": -1,
+      "0": 0,
+      "1": 1,
+      "2": 2
+    },
+    {
+      "-2": 0,
+      "-1": 0,
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    {
+      "-2": 2,
+      "-1": 1,
+      "0": 0,
+      "1": -1,
+      "2": -2
+    },
+    {
+      "-2": 4,
+      "-1": 2,
+      "0": 0,
+      "1": -2,
+      "2": -4
+    },
+    {
+      "-2": 6,
+      "-1": 3,
+      "0": 0,
+      "1": -3,
+      "2": -6
+    }
+  ],
+  "all_solutions_are_grading_automorphisms": true,
+  "classical_simple_rank_solutions_dim248": [],
+  "exceptional_dimensions": {
+    "G2": 14,
+    "F4": 52,
+    "E6": 78,
+    "E7": 133,
+    "E8": 248
+  },
+  "scope": "Finite diagonal probe and dimension arithmetic only; equality rigidity proved separately."
+}

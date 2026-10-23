@@ -1,0 +1,24 @@
+{
+  "rational_charge_inversions_checked": 88,
+  "all_integer_c_rational_parameters": [
+    -24,
+    -7,
+    -2,
+    0,
+    1,
+    25,
+    26,
+    28,
+    33,
+    50
+  ],
+  "small_c_minus5_tensor_charges": [
+    "-22/5",
+    "-3/5"
+  ],
+  "mirror_Ising_exact": [
+    "64/27",
+    "256/81"
+  ],
+  "scope": "Exact finite algebra controls; algebraicity and Gelfond-Schneider conclusions audited as proofs, not inferred numerically."
+}

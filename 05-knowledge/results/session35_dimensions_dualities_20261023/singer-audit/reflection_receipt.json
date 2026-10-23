@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "reflection_controls": [
+    {
+      "p": 3,
+      "reflection_center": 0,
+      "reflection_symmetric_HP_count": 1,
+      "admissible_degree_histogram": {
+        "0": 1
+      },
+      "fixed_admissible_counts": {
+        "0": 1
+      }
+    },
+    {
+      "p": 7,
+      "reflection_center": 0,
+      "reflection_symmetric_HP_count": 9,
+      "admissible_degree_histogram": {
+        "4": 6,
+        "2": 3
+      },
+      "fixed_admissible_counts": {
+        "0": 9
+      }
+    },
+    {
+      "p": 11,
+      "reflection_center": 0,
+      "reflection_symmetric_HP_count": 185,
+      "admissible_degree_histogram": {
+        "28": 25,
+        "26": 15,
+        "32": 55,
+        "30": 65,
+        "34": 25
+      },
+      "fixed_admissible_counts": {
+        "4": 185
+      }
+    }
+  ],
+  "black_even_witness": {
+    "p": 11,
+    "path": [
+      6,
+      4,
+      5,
+      3,
+      7,
+      0,
+      1,
+      10,
+      8,
+      9,
+      2
+    ],
+    "blue": false,
+    "admissible_degree": 32
+  }
+}

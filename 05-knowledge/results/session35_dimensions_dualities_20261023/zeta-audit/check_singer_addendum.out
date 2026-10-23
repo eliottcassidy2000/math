@@ -1,0 +1,5 @@
+EXACT Frobenius invariant alternating polynomial gcd: x - 1
+EXACT W dimension56, restricted form nondegenerate, C57 and Frobenius invariance, order3 fixed18 trace-1 PASS
+EXACT SL8 order3 fixed dimensions: [2, 14, 20, 32, 56]
+EXACT E7 minuscule order3 possible traces including identity: [-25, -7, 2, 20, 56]
+ALL SINGER ADDENDUM TESTS PASS

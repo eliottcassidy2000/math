@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "major_errors": 0,
+  "scope": "Coulomb powering addendum only",
+  "hashes": {
+    "session35-lie/COULOMB_POWERING_ADDENDUM.md": "0d95ecfbebb76661dc7d92a75ae8bd358995160fa34a98bf9f096868b30f28e3",
+    "session35-lie/powering_checks.py": "03653360aed06e4514a4c3601131396496ed421842c98f3ca6aeb119ae1b5ba0",
+    "session35-lie/powering_checks.json": "b2964af32cfcef5f3f551270cd663012ab2cf0623f442ab12b6ad10dba5fab3f"
+  },
+  "report": "POWERING_AUDIT.md",
+  "independent_checks": "powering_independent_checks.py"
+}
