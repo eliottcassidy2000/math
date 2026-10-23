@@ -1,14 +1,14 @@
 {
   "status": "exact source and artifact bytes",
   "files": {
-    "AUDIT.md": "09cf99719ae1537334cd13c7623c465b9b7f64127ab2703ad86eb99750411cd2",
+    "AUDIT.md": "8ed45c6d2e6a6a49ea3ed08647224beccef9cd1a8ecf645da944d051a6b422fc",
     "MARKED-CELLS.md": "7eafd50d28a50a883255838cb7862ac48c6ba02eabcfc46b18f123860a61c305",
-    "README.md": "f481c2c30c91c71069bd229c1b0155cb5abe2cc27491e66ae138313ea06d9237",
+    "README.md": "d01a354d23518ccfae32ee8078e2ee7c391bab4df8889bd50573d566e17b594b",
     "check.py": "92b0d574e6cb07717ac63c992ade81f73c4acf4152aad8f9129691d3092fa713",
     "controls.json": "07f2599ae808eb8a0f20a53136a4716c7b732ddf7b97677239b945e45654bdd2",
     "controls.py": "a294b2a8aa5fff60013fb3a34d2be584ebeb11a8ab8b8564cdcc85af87deda5c",
-    "cross_check.json": "038e11def0b7ca18dbe2d70eb5445e564de10b83853d4d89851bd48268c81d38",
-    "cross_check.py": "767ed8edaae2312d992603f9836510f403ec679faa3c8b2d691dba46b1b5b2dd",
+    "cross_check.json": "ff3370fda19e680a795d1468979e0aae00e79da4c38fddf1d3c001c78da3336a",
+    "cross_check.py": "9257b244eaa4d0125417a0b56b40851fb8fbd93eca15247569e0bb16c136c2e4",
     "dyadic_controls.json": "92600117fb8939ed05d5df4d368b2f902fb564ed257f84bd905a0eee4959a6dd",
     "dyadic_controls.py": "5f74da84b3af527809951dbad6cc5d803326493d35904917acc56be2324d25cd",
     "marked_cells.json": "eba02f2a3f2accc30ff5c9a90d15e54895ac97b42d2b49d7c63f94eace7eeeb4",

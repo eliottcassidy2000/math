@@ -11,6 +11,8 @@
     1,
     2
   ],
-  "checks": 7,
+  "incoming_ternary_commit": "e5d18e55f4",
+  "ternary_palette_rejects_saved_counterfeit_source_rows": true,
+  "checks": 8,
   "incoming_electrical_receipt_sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
 }

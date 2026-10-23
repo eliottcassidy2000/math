@@ -17,6 +17,16 @@ packet as an independent replay plus its doubleton/triangle decoders,
 rank-two switch criterion, doubled-counterfeit boundary, and marked-source
 tests; do not count the overlapping discoveries twice. See AUDIT.md.
 
+**Final incoming e5d18e55f4:** the [Session38 synthesis](../session38_incidence_ports_electrical_20261023/SYNTHESIS.md)
+now proves a three-colour rule suffices for this complete wiring model:
+colour an arc u->v by(c_v+c_uv) mod3 and retain outgoing colour counts,
+with authenticated converse-related margins. Its signature-converse graph
+is a forest even though the signature alone does not separate every class.
+Three is minimal within its declared E33 quotient menu. This is a different
+information format from our guarded one-bit addition, so their numerical
+alphabet sizes are not directly comparable. Our cross-check directly
+confirms that this ternary observer rejects our saved native counterfeit.
+
 ## Inheritance and live board
 
 The closest mechanism is [THM-4739, Kirchhoff/Hodge port

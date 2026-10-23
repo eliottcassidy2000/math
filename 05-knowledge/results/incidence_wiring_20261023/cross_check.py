@@ -1,6 +1,7 @@
 """Entrywise reconciliation with two independently published order-eight banks."""
 from pathlib import Path
 from collections import Counter
+from itertools import combinations
 import argparse, csv, gzip, hashlib, io, json, struct, subprocess, tempfile
 import check as core
 
@@ -33,6 +34,21 @@ def main():
     for row in table(gzip.decompress((HERE/'n8_merged_wiring.tsv.gz').read_bytes())):
         edges[int(row['source_class_min']), int(row['target_class_min']), int(row['blue'])] += int(row['literal_lines'])
     native = json.loads((HERE/'receipt.json').read_text())
+    # Final incoming e5d18e55f4 supplies a different ternary observer. Test
+    # its actual source rows, not just its count of colours.
+    classrows = {int(r['class']): int(r['canon']) for r in csv.DictReader(core.CENSUS.open(), delimiter='\t')}
+    palette = {}
+    for c in {e[1] for e in native['ports']['reflected_counterfeit']['port_edits']}:
+        A = core.adjacency(classrows[c]); cv = [0]*8; ce = Counter()
+        for i, j, k in combinations(range(8), 3):
+            if A[i][j] == A[j][k] == A[k][i]:
+                for v in (i, j, k): cv[v] += 1
+                for e in combinations((i, j, k), 2): ce[e] += 1
+        palette[c] = tuple(sorted(tuple(sum(bool(A[u][v]) and (cv[v]+ce[tuple(sorted((u, v)))])%3 == color for v in range(8)) for color in range(3)) for u in range(8)))
+    delta_rows = Counter()
+    for c, t, a, b, blue, d in native['ports']['reflected_counterfeit']['port_edits']:
+        delta_rows[c, a, b, blue, palette[t]] += d
+    core.need(any(delta_rows.values()), 'ternary observer should reject this saved counterfeit')
     vertices = {u for u, v, b in edges} | {v for u, v, b in edges}
     for scale in (1, 2):
         fake = edges.copy()
@@ -72,6 +88,7 @@ def main():
            'first_owner_sha256': hashlib.sha256(own).hexdigest(), 'second_owner_sha256': hashlib.sha256(raw).hexdigest(),
            'second_gauge': 'descending_mask = all_ones XOR reflection(ascending_mask); canonical rank -> input_class_id',
            'native_counterfeit_scales_connected_and_nonnegative': [1, 2],
+           'incoming_ternary_commit': 'e5d18e55f4', 'ternary_palette_rejects_saved_counterfeit_source_rows': True,
            'checks': core.CHECKS}
     # The separate electrical certificate is preserved as a pinned source; its
     # report is compared mathematically in AUDIT.md, not guessed JSON keys.

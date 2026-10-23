@@ -86,14 +86,32 @@ The complete native2-primary group independently agrees with the incoming
 that a small-order rescaling pattern fails, so it is not re-proposed here.
 Its formal image/kernel proof and our nested corrections give the same
 successive spaces. These are converging derivations, not separate novel
-theorems. The packet's additional electrical information is the explicit
-rank-two criterion and the feasible doubled counterfeit.
+theorems. Relative to that initial incoming packet, the additional
+electrical information here was the explicit rank-two criterion and the
+feasible doubled counterfeit. The final incoming work below independently
+derives the same rank criterion; it is not a separate novelty claim.
 
 Cross-bank reproduction: `cross_check.py` pins the incoming commit and
 regenerates the native outputs, or reuses outputs supplied with `--prefix`. Its
 receipt records both owner hashes and the exact conversion. Normal and
 optimized runs agree. The receipt does not claim to rerun the incoming
 agent's entire audit; it compares our full outputs with that audited bank.
+
+Final incoming e5d18e55f4 strengthens the current frontier again. Its
+three-colour rule with authenticated converse margins forces the full
+order-eight wiring; its minimality is within the E33 quotient menu, not
+among all possible encodings. Our literal cyclic-triangle calculation
+confirms that this observer rejects the saved native counterfeit.
+Its [residual-cycle potential theorem](../session38_incidence_ports_electrical_20261023/theory/PROJECTED_TRANSPORT_UNIQUENESS.md)
+is the all-size exact criterion for projected uniqueness in a specified
+bounded integer transportation model. Reflection must be folded
+authentically before applying it; extra global constraints cannot be
+silently discarded. This provides a sharper next test than leaf peeling.
+Its bridge decomposition also locates the Z/256 factor in the bridge-free
+core, and its synthetic five-node counterexample preserves the entire
+2-primary tower while changing the tree count. Our native-capacity
+doubled counterfeit tests a different, narrower boundary: it preserves
+the first half-form but changes the next form.
 
 ## Corrections and repository hygiene
 
