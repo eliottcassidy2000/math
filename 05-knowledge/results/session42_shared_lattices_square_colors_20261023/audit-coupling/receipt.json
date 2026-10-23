@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "sources": [
+    {
+      "source": "session42-sign-moments",
+      "manifest_sha256": "7483593982c7074dbb1ce550da8289a3f6a375e92cbe2cc8da38296516ee5431",
+      "pins": [
+        {
+          "path": "THEOREM.md",
+          "sha256": "db76986632287dbbcd5e68e6596d25b8e793c7d056d0bb1e5d3aec14f1d772eb",
+          "bytes": 5704
+        },
+        {
+          "path": "check.py",
+          "sha256": "93b974cdfe2a3c239f11ccf8ee09742d0c2b5a6bbf698a97c8a7cb943e00b0c9",
+          "bytes": 2574
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "c54e54eea36ac54125b67a4a62f64bca668546d683571c4974a47757747a9066",
+          "bytes": 1276
+        },
+        {
+          "path": "receipt.optimized.json",
+          "sha256": "c54e54eea36ac54125b67a4a62f64bca668546d683571c4974a47757747a9066",
+          "bytes": 1276
+        }
+      ]
+    },
+    {
+      "source": "session42-coupling",
+      "manifest_sha256": "6e6939f803f29af35fad2e8690cc138de177cc9ab929e9a9cb8583b079018b9f",
+      "pins": [
+        {
+          "path": "COUPLING_OPERATOR.md",
+          "sha256": "72c703a6c9ceab75e019ea15864ae1fd5b038cc49c56b9f5fa08114eb4f50baf",
+          "bytes": 12239
+        },
+        {
+          "path": "SOURCE_PROVENANCE.json",
+          "sha256": "fd8bc489f898eeb7900e616a86f9652c4c5ce6ba3b001ef2bf120e7546e2eb27",
+          "bytes": 556
+        },
+        {
+          "path": "check.py",
+          "sha256": "cac576cc5ff38b5c4b3a4377ec72c74a8f40f139cdb49877d7094da5a173790a",
+          "bytes": 5213
+        },
+        {
+          "path": "receipt.json",
+          "sha256": "f1f702123aa67c6ce5bfc2cbc6314c127a9b5b701710c8c36bbccc1b8af859b1",
+          "bytes": 5571
+        },
+        {
+          "path": "receipt.optimized.json",
+          "sha256": "f1f702123aa67c6ce5bfc2cbc6314c127a9b5b701710c8c36bbccc1b8af859b1",
+          "bytes": 5571
+        }
+      ]
+    }
+  ],
+  "independent": {
+    "status": "PASS",
+    "checks": 5098,
+    "reports": [
+      {
+        "n": 2,
+        "paired": false,
+        "graph_states": 2,
+        "tournament_states": 1,
+        "second_eigenvalue": "0",
+        "gap": "1",
+        "eigenvectors_verified": 2,
+        "positive_rank": 1,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 1,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 2,
+        "paired": true,
+        "graph_states": 1,
+        "tournament_states": 1,
+        "second_eigenvalue": "0",
+        "gap": "1",
+        "eigenvectors_verified": 1,
+        "positive_rank": 1,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 0,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 3,
+        "paired": false,
+        "graph_states": 4,
+        "tournament_states": 2,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 4,
+        "positive_rank": 2,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 2,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 3,
+        "paired": true,
+        "graph_states": 2,
+        "tournament_states": 2,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 2,
+        "positive_rank": 2,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 0,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 4,
+        "paired": false,
+        "graph_states": 11,
+        "tournament_states": 4,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 11,
+        "positive_rank": 3,
+        "invisible_tournament_dimensions": 1,
+        "invisible_graph_dimensions": 8,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 4,
+        "paired": true,
+        "graph_states": 6,
+        "tournament_states": 3,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 6,
+        "positive_rank": 3,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 3,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 5,
+        "paired": false,
+        "graph_states": 34,
+        "tournament_states": 12,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 34,
+        "positive_rank": 10,
+        "invisible_tournament_dimensions": 2,
+        "invisible_graph_dimensions": 24,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      },
+      {
+        "n": 5,
+        "paired": true,
+        "graph_states": 18,
+        "tournament_states": 10,
+        "second_eigenvalue": "1/9",
+        "gap": "8/9",
+        "eigenvectors_verified": 18,
+        "positive_rank": 10,
+        "invisible_tournament_dimensions": 0,
+        "invisible_graph_dimensions": 8,
+        "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+      }
+    ],
+    "scope": "exact operator eigenvectors on quotient carriers n2..5 plus labelled moment recurrence; all-size theorem audited separately"
+  },
+  "scope": "All-size proof audit; exact independent quotient eigenvectors n2..5 and direct moment controls; producer n7 FWHT replay",
+  "attribution_delta": {
+    "status": "PASS",
+    "signed_basis": "THM-4721 section5 TheoremW and THM-4531 TheoremG read at pinned commit; exact hashes verified",
+    "code_and_executable_receipts_unchanged": true
+  }
+}

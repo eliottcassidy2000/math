@@ -1,0 +1,186 @@
+{
+  "controls": [
+    {
+      "complement_converse_paired": false,
+      "exact_eigenvector_equations": 4,
+      "exact_gap_lower_bound": "1",
+      "exact_max_nonconstant_signed_average": "0",
+      "exact_positive_kernel_rank": 1,
+      "exact_positive_spectrum": {
+        "1": 1
+      },
+      "factorial_gap_lower_bound": "1",
+      "gap_certificate_positive_pivots": 0,
+      "gap_certificate_zero_pivots": 2,
+      "graph_states": 2,
+      "incidence_edges": 2,
+      "invisible_graph_dimensions": 1,
+      "invisible_tournament_dimensions": 0,
+      "n": 2,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 1
+    },
+    {
+      "complement_converse_paired": true,
+      "exact_eigenvector_equations": 1,
+      "exact_gap_lower_bound": "1",
+      "exact_max_nonconstant_signed_average": "0",
+      "exact_positive_kernel_rank": 1,
+      "exact_positive_spectrum": {
+        "1": 1
+      },
+      "factorial_gap_lower_bound": "1",
+      "gap_certificate_positive_pivots": 0,
+      "gap_certificate_zero_pivots": 1,
+      "graph_states": 1,
+      "incidence_edges": 1,
+      "invisible_graph_dimensions": 0,
+      "invisible_tournament_dimensions": 0,
+      "n": 2,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 1
+    },
+    {
+      "complement_converse_paired": false,
+      "exact_eigenvector_equations": 16,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 2,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/9": 1
+      },
+      "factorial_gap_lower_bound": "2/9",
+      "gap_certificate_positive_pivots": 2,
+      "gap_certificate_zero_pivots": 2,
+      "graph_states": 4,
+      "incidence_edges": 6,
+      "invisible_graph_dimensions": 2,
+      "invisible_tournament_dimensions": 0,
+      "n": 3,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 2
+    },
+    {
+      "complement_converse_paired": true,
+      "exact_eigenvector_equations": 4,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 2,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/9": 1
+      },
+      "factorial_gap_lower_bound": "2/9",
+      "gap_certificate_positive_pivots": 0,
+      "gap_certificate_zero_pivots": 2,
+      "graph_states": 2,
+      "incidence_edges": 3,
+      "invisible_graph_dimensions": 0,
+      "invisible_tournament_dimensions": 0,
+      "n": 3,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 2
+    },
+    {
+      "complement_converse_paired": false,
+      "exact_eigenvector_equations": 121,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 3,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/9": 2
+      },
+      "factorial_gap_lower_bound": "1/24",
+      "gap_certificate_positive_pivots": 8,
+      "gap_certificate_zero_pivots": 3,
+      "graph_states": 11,
+      "incidence_edges": 30,
+      "invisible_graph_dimensions": 8,
+      "invisible_tournament_dimensions": 1,
+      "n": 4,
+      "order_four_cubic_star_values": [
+        -4,
+        0,
+        4
+      ],
+      "tournament_states": 4
+    },
+    {
+      "complement_converse_paired": true,
+      "exact_eigenvector_equations": 36,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 3,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/9": 2
+      },
+      "factorial_gap_lower_bound": "1/24",
+      "gap_certificate_positive_pivots": 3,
+      "gap_certificate_zero_pivots": 3,
+      "graph_states": 6,
+      "incidence_edges": 14,
+      "invisible_graph_dimensions": 3,
+      "invisible_tournament_dimensions": 0,
+      "n": 4,
+      "order_four_cubic_star_values": [
+        -4,
+        0,
+        4
+      ],
+      "tournament_states": 3
+    },
+    {
+      "complement_converse_paired": false,
+      "exact_eigenvector_equations": 1156,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 10,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/225": 4,
+        "1/25": 2,
+        "1/9": 2,
+        "4/225": 1
+      },
+      "factorial_gap_lower_bound": "1/150",
+      "gap_certificate_positive_pivots": 31,
+      "gap_certificate_zero_pivots": 3,
+      "graph_states": 34,
+      "incidence_edges": 279,
+      "invisible_graph_dimensions": 24,
+      "invisible_tournament_dimensions": 2,
+      "n": 5,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 12
+    },
+    {
+      "complement_converse_paired": true,
+      "exact_eigenvector_equations": 324,
+      "exact_gap_lower_bound": "8/9",
+      "exact_max_nonconstant_signed_average": "1/3",
+      "exact_positive_kernel_rank": 10,
+      "exact_positive_spectrum": {
+        "1": 1,
+        "1/225": 4,
+        "1/25": 2,
+        "1/9": 2,
+        "4/225": 1
+      },
+      "factorial_gap_lower_bound": "1/150",
+      "gap_certificate_positive_pivots": 15,
+      "gap_certificate_zero_pivots": 3,
+      "graph_states": 18,
+      "incidence_edges": 120,
+      "invisible_graph_dimensions": 8,
+      "invisible_tournament_dimensions": 0,
+      "n": 5,
+      "order_four_cubic_star_values": null,
+      "tournament_states": 10
+    }
+  ],
+  "scope": "exact finite stochastic, reversibility, connectivity, positive-semidefinite and gap checks; all-size bound proved separately",
+  "status": "PASS"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_AFTER_INDEPENDENT_PALINDROME_AUDIT",
+  "files": [
+    {
+      "path": "PALINDROMIC_SQUARE_CLOCKS.md",
+      "bytes": 4095,
+      "sha256": "215b05673896e0c76401175f7eee0f342a78d0489e4ec2bbb800265c23cb1554"
+    },
+    {
+      "path": "check_palindromic_square_clocks.py",
+      "bytes": 1998,
+      "sha256": "4b4f470c1b67885beed0a67875e30dda06baf9cc27cfdd595c785ae0ba87d032"
+    },
+    {
+      "path": "palindrome_witness_48_8.json",
+      "bytes": 785,
+      "sha256": "0cb0c0468db3eb05c5b6b1b39a4a210e911df0f4994fd9c9bc188990a222870d"
+    },
+    {
+      "path": "palindrome_receipt.json",
+      "bytes": 17576,
+      "sha256": "e1037b0158aa622308166eecf08e4a55aff83c17969f90e125b6c2bff0d59746"
+    },
+    {
+      "path": "palindrome_receipt.optimized.json",
+      "bytes": 17576,
+      "sha256": "e1037b0158aa622308166eecf08e4a55aff83c17969f90e125b6c2bff0d59746"
+    }
+  ],
+  "commands": [
+    "python3 check_palindromic_square_clocks.py",
+    "python3 -O check_palindromic_square_clocks.py"
+  ]
+}

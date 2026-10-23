@@ -1,0 +1,13 @@
+{
+  "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+    },
+    {
+      "path": "01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "sha256": "aec06c7678167ca0b0d684cca83e90ce0064dcf18be4a4434489fd91f87fd12b"
+    }
+  ]
+}

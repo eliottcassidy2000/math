@@ -1,0 +1,32 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "THEOREM.md",
+      "bytes": 5704,
+      "sha256": "db76986632287dbbcd5e68e6596d25b8e793c7d056d0bb1e5d3aec14f1d772eb"
+    },
+    {
+      "path": "check.py",
+      "bytes": 2574,
+      "sha256": "93b974cdfe2a3c239f11ccf8ee09742d0c2b5a6bbf698a97c8a7cb943e00b0c9"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 1276,
+      "sha256": "c54e54eea36ac54125b67a4a62f64bca668546d683571c4974a47757747a9066"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 1276,
+      "sha256": "c54e54eea36ac54125b67a4a62f64bca668546d683571c4974a47757747a9066"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ],
+  "dependencies": [
+    "numpy"
+  ]
+}

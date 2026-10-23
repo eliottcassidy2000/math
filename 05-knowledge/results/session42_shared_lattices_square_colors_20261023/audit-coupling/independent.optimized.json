@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "checks": 5098,
+  "reports": [
+    {
+      "n": 2,
+      "paired": false,
+      "graph_states": 2,
+      "tournament_states": 1,
+      "second_eigenvalue": "0",
+      "gap": "1",
+      "eigenvectors_verified": 2,
+      "positive_rank": 1,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 1,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 2,
+      "paired": true,
+      "graph_states": 1,
+      "tournament_states": 1,
+      "second_eigenvalue": "0",
+      "gap": "1",
+      "eigenvectors_verified": 1,
+      "positive_rank": 1,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 0,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 3,
+      "paired": false,
+      "graph_states": 4,
+      "tournament_states": 2,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 4,
+      "positive_rank": 2,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 2,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 3,
+      "paired": true,
+      "graph_states": 2,
+      "tournament_states": 2,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 2,
+      "positive_rank": 2,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 0,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 4,
+      "paired": false,
+      "graph_states": 11,
+      "tournament_states": 4,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 11,
+      "positive_rank": 3,
+      "invisible_tournament_dimensions": 1,
+      "invisible_graph_dimensions": 8,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 4,
+      "paired": true,
+      "graph_states": 6,
+      "tournament_states": 3,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 6,
+      "positive_rank": 3,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 3,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 5,
+      "paired": false,
+      "graph_states": 34,
+      "tournament_states": 12,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 34,
+      "positive_rank": 10,
+      "invisible_tournament_dimensions": 2,
+      "invisible_graph_dimensions": 24,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    },
+    {
+      "n": 5,
+      "paired": true,
+      "graph_states": 18,
+      "tournament_states": 10,
+      "second_eigenvalue": "1/9",
+      "gap": "8/9",
+      "eigenvectors_verified": 18,
+      "positive_rank": 10,
+      "invisible_tournament_dimensions": 0,
+      "invisible_graph_dimensions": 8,
+      "stationary_measure": "labelled orbit volume / 2^binom(n,2)"
+    }
+  ],
+  "scope": "exact operator eigenvectors on quotient carriers n2..5 plus labelled moment recurrence; all-size theorem audited separately"
+}

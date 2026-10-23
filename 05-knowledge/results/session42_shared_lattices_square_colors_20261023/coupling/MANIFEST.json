@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "COUPLING_OPERATOR.md",
+      "bytes": 12239,
+      "sha256": "72c703a6c9ceab75e019ea15864ae1fd5b038cc49c56b9f5fa08114eb4f50baf"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 556,
+      "sha256": "fd8bc489f898eeb7900e616a86f9652c4c5ce6ba3b001ef2bf120e7546e2eb27"
+    },
+    {
+      "path": "check.py",
+      "bytes": 5213,
+      "sha256": "cac576cc5ff38b5c4b3a4377ec72c74a8f40f139cdb49877d7094da5a173790a"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 5571,
+      "sha256": "f1f702123aa67c6ce5bfc2cbc6314c127a9b5b701710c8c36bbccc1b8af859b1"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 5571,
+      "sha256": "f1f702123aa67c6ce5bfc2cbc6314c127a9b5b701710c8c36bbccc1b8af859b1"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

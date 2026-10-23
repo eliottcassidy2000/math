@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scope": "all graph sign moments through n7 via exact int64 FWHT; theorem proved separately",
+  "orders": [
+    {
+      "n": 2,
+      "graphs": 2,
+      "permutations": 2,
+      "max_abs_numerator": 0,
+      "denominator": 2,
+      "equality_count": 0,
+      "recurrence_checks": 0
+    },
+    {
+      "n": 3,
+      "graphs": 8,
+      "permutations": 6,
+      "max_abs_numerator": 2,
+      "denominator": 6,
+      "equality_count": 3,
+      "recurrence_checks": 8
+    },
+    {
+      "n": 4,
+      "graphs": 64,
+      "permutations": 24,
+      "max_abs_numerator": 8,
+      "denominator": 24,
+      "equality_count": 15,
+      "recurrence_checks": 64
+    },
+    {
+      "n": 5,
+      "graphs": 1024,
+      "permutations": 120,
+      "max_abs_numerator": 40,
+      "denominator": 120,
+      "equality_count": 45,
+      "recurrence_checks": 1024
+    },
+    {
+      "n": 6,
+      "graphs": 32768,
+      "permutations": 720,
+      "max_abs_numerator": 240,
+      "denominator": 720,
+      "equality_count": 105,
+      "recurrence_checks": 32768
+    },
+    {
+      "n": 7,
+      "graphs": 2097152,
+      "permutations": 5040,
+      "max_abs_numerator": 1680,
+      "denominator": 5040,
+      "equality_count": 210,
+      "recurrence_checks": 1001
+    }
+  ]
+}
