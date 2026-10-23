@@ -1,0 +1,253 @@
+{
+  "all_compositions": 262144,
+  "checks": 536809,
+  "composition_cardinalities": {
+    "0": 186571,
+    "1": 67797,
+    "3": 7776
+  },
+  "composition_table_sha256": "9e3db55b8142aa6cc2406a005b3afaeb23875262ff42a429e230c21b8867f018",
+  "four_label_two_boundary_enumerated_states": 113,
+  "general_boundary_counts": {
+    "1": 5,
+    "2": 16,
+    "3": 64,
+    "4": 298,
+    "5": 1540
+  },
+  "independent_boundary_gauge_orbit_sizes": [
+    1,
+    9,
+    9,
+    9,
+    9,
+    27
+  ],
+  "literal_support_cells_per_composition": 12,
+  "scalar_hostile": {
+    "one": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "three": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2
+      ]
+    ],
+    "zero": []
+  },
+  "scope": "connected affine-F3 matching supports; actual boundary coordinates",
+  "seven_label_boundary_counts_by_proved_formula": {
+    "1": 121,
+    "2": 95642,
+    "3": 185036888
+  },
+  "state_cardinalities": {
+    "0": 1,
+    "1": 27,
+    "3": 36
+  },
+  "state_count": 64,
+  "state_masks": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072,
+    262144,
+    524288,
+    1048576,
+    2097152,
+    4194304,
+    8388608,
+    16777216,
+    33554432,
+    67108864,
+    67117057,
+    16793602,
+    33558532,
+    33570817,
+    67112962,
+    16785412,
+    1114120,
+    393232,
+    557088,
+    655368,
+    1081360,
+    327712,
+    8389696,
+    2099328,
+    4195072,
+    4196416,
+    8389248,
+    2098432,
+    8454145,
+    2228226,
+    4227076,
+    4325377,
+    8421378,
+    2162692,
+    67109896,
+    16779280,
+    33554976,
+    33556488,
+    67109392,
+    16778272,
+    1056832,
+    278656,
+    528640,
+    540736,
+    1052800,
+    270592
+  ],
+  "triangle_circle_subgroups": [
+    {
+      "circle_fixed": "whole circle",
+      "elements": [
+        [
+          1,
+          0
+        ]
+      ],
+      "triangle_fixed": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "circle_fixed": [],
+      "elements": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "triangle_fixed": []
+    },
+    {
+      "circle_fixed": [
+        "0",
+        "1/2"
+      ],
+      "elements": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "triangle_fixed": [
+        0
+      ]
+    },
+    {
+      "circle_fixed": [
+        "1/6",
+        "2/3"
+      ],
+      "elements": [
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "triangle_fixed": [
+        2
+      ]
+    },
+    {
+      "circle_fixed": [
+        "1/3",
+        "5/6"
+      ],
+      "elements": [
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "triangle_fixed": [
+        1
+      ]
+    },
+    {
+      "circle_fixed": [],
+      "elements": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "triangle_fixed": []
+    }
+  ]
+}

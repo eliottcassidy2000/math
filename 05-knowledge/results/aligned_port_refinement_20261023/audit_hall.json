@@ -1,0 +1,2153 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "signed-path observer alone; orders2..256",
+  "not_claimed": "sharpness of actual two-tournament refinement at every order",
+  "rows": [
+    {
+      "n": 2,
+      "signed_rounds": 1,
+      "pascal_period": 2
+    },
+    {
+      "n": 3,
+      "signed_rounds": 1,
+      "pascal_period": 4
+    },
+    {
+      "n": 4,
+      "signed_rounds": 2,
+      "pascal_period": 4
+    },
+    {
+      "n": 5,
+      "signed_rounds": 2,
+      "pascal_period": 8
+    },
+    {
+      "n": 6,
+      "signed_rounds": 3,
+      "pascal_period": 8
+    },
+    {
+      "n": 7,
+      "signed_rounds": 3,
+      "pascal_period": 8
+    },
+    {
+      "n": 8,
+      "signed_rounds": 4,
+      "pascal_period": 8
+    },
+    {
+      "n": 9,
+      "signed_rounds": 4,
+      "pascal_period": 16
+    },
+    {
+      "n": 10,
+      "signed_rounds": 5,
+      "pascal_period": 16
+    },
+    {
+      "n": 11,
+      "signed_rounds": 5,
+      "pascal_period": 16
+    },
+    {
+      "n": 12,
+      "signed_rounds": 6,
+      "pascal_period": 16
+    },
+    {
+      "n": 13,
+      "signed_rounds": 6,
+      "pascal_period": 16
+    },
+    {
+      "n": 14,
+      "signed_rounds": 7,
+      "pascal_period": 16
+    },
+    {
+      "n": 15,
+      "signed_rounds": 7,
+      "pascal_period": 16
+    },
+    {
+      "n": 16,
+      "signed_rounds": 8,
+      "pascal_period": 16
+    },
+    {
+      "n": 17,
+      "signed_rounds": 8,
+      "pascal_period": 32
+    },
+    {
+      "n": 18,
+      "signed_rounds": 9,
+      "pascal_period": 32
+    },
+    {
+      "n": 19,
+      "signed_rounds": 9,
+      "pascal_period": 32
+    },
+    {
+      "n": 20,
+      "signed_rounds": 10,
+      "pascal_period": 32
+    },
+    {
+      "n": 21,
+      "signed_rounds": 10,
+      "pascal_period": 32
+    },
+    {
+      "n": 22,
+      "signed_rounds": 11,
+      "pascal_period": 32
+    },
+    {
+      "n": 23,
+      "signed_rounds": 11,
+      "pascal_period": 32
+    },
+    {
+      "n": 24,
+      "signed_rounds": 12,
+      "pascal_period": 32
+    },
+    {
+      "n": 25,
+      "signed_rounds": 12,
+      "pascal_period": 32
+    },
+    {
+      "n": 26,
+      "signed_rounds": 13,
+      "pascal_period": 32
+    },
+    {
+      "n": 27,
+      "signed_rounds": 13,
+      "pascal_period": 32
+    },
+    {
+      "n": 28,
+      "signed_rounds": 14,
+      "pascal_period": 32
+    },
+    {
+      "n": 29,
+      "signed_rounds": 14,
+      "pascal_period": 32
+    },
+    {
+      "n": 30,
+      "signed_rounds": 15,
+      "pascal_period": 32
+    },
+    {
+      "n": 31,
+      "signed_rounds": 15,
+      "pascal_period": 32
+    },
+    {
+      "n": 32,
+      "signed_rounds": 16,
+      "pascal_period": 32
+    },
+    {
+      "n": 33,
+      "signed_rounds": 16,
+      "pascal_period": 64
+    },
+    {
+      "n": 34,
+      "signed_rounds": 17,
+      "pascal_period": 64
+    },
+    {
+      "n": 35,
+      "signed_rounds": 17,
+      "pascal_period": 64
+    },
+    {
+      "n": 36,
+      "signed_rounds": 18,
+      "pascal_period": 64
+    },
+    {
+      "n": 37,
+      "signed_rounds": 18,
+      "pascal_period": 64
+    },
+    {
+      "n": 38,
+      "signed_rounds": 19,
+      "pascal_period": 64
+    },
+    {
+      "n": 39,
+      "signed_rounds": 19,
+      "pascal_period": 64
+    },
+    {
+      "n": 40,
+      "signed_rounds": 20,
+      "pascal_period": 64
+    },
+    {
+      "n": 41,
+      "signed_rounds": 20,
+      "pascal_period": 64
+    },
+    {
+      "n": 42,
+      "signed_rounds": 21,
+      "pascal_period": 64
+    },
+    {
+      "n": 43,
+      "signed_rounds": 21,
+      "pascal_period": 64
+    },
+    {
+      "n": 44,
+      "signed_rounds": 22,
+      "pascal_period": 64
+    },
+    {
+      "n": 45,
+      "signed_rounds": 22,
+      "pascal_period": 64
+    },
+    {
+      "n": 46,
+      "signed_rounds": 23,
+      "pascal_period": 64
+    },
+    {
+      "n": 47,
+      "signed_rounds": 23,
+      "pascal_period": 64
+    },
+    {
+      "n": 48,
+      "signed_rounds": 24,
+      "pascal_period": 64
+    },
+    {
+      "n": 49,
+      "signed_rounds": 24,
+      "pascal_period": 64
+    },
+    {
+      "n": 50,
+      "signed_rounds": 25,
+      "pascal_period": 64
+    },
+    {
+      "n": 51,
+      "signed_rounds": 25,
+      "pascal_period": 64
+    },
+    {
+      "n": 52,
+      "signed_rounds": 26,
+      "pascal_period": 64
+    },
+    {
+      "n": 53,
+      "signed_rounds": 26,
+      "pascal_period": 64
+    },
+    {
+      "n": 54,
+      "signed_rounds": 27,
+      "pascal_period": 64
+    },
+    {
+      "n": 55,
+      "signed_rounds": 27,
+      "pascal_period": 64
+    },
+    {
+      "n": 56,
+      "signed_rounds": 28,
+      "pascal_period": 64
+    },
+    {
+      "n": 57,
+      "signed_rounds": 28,
+      "pascal_period": 64
+    },
+    {
+      "n": 58,
+      "signed_rounds": 29,
+      "pascal_period": 64
+    },
+    {
+      "n": 59,
+      "signed_rounds": 29,
+      "pascal_period": 64
+    },
+    {
+      "n": 60,
+      "signed_rounds": 30,
+      "pascal_period": 64
+    },
+    {
+      "n": 61,
+      "signed_rounds": 30,
+      "pascal_period": 64
+    },
+    {
+      "n": 62,
+      "signed_rounds": 31,
+      "pascal_period": 64
+    },
+    {
+      "n": 63,
+      "signed_rounds": 31,
+      "pascal_period": 64
+    },
+    {
+      "n": 64,
+      "signed_rounds": 32,
+      "pascal_period": 64
+    },
+    {
+      "n": 65,
+      "signed_rounds": 32,
+      "pascal_period": 128
+    },
+    {
+      "n": 66,
+      "signed_rounds": 33,
+      "pascal_period": 128
+    },
+    {
+      "n": 67,
+      "signed_rounds": 33,
+      "pascal_period": 128
+    },
+    {
+      "n": 68,
+      "signed_rounds": 34,
+      "pascal_period": 128
+    },
+    {
+      "n": 69,
+      "signed_rounds": 34,
+      "pascal_period": 128
+    },
+    {
+      "n": 70,
+      "signed_rounds": 35,
+      "pascal_period": 128
+    },
+    {
+      "n": 71,
+      "signed_rounds": 35,
+      "pascal_period": 128
+    },
+    {
+      "n": 72,
+      "signed_rounds": 36,
+      "pascal_period": 128
+    },
+    {
+      "n": 73,
+      "signed_rounds": 36,
+      "pascal_period": 128
+    },
+    {
+      "n": 74,
+      "signed_rounds": 37,
+      "pascal_period": 128
+    },
+    {
+      "n": 75,
+      "signed_rounds": 37,
+      "pascal_period": 128
+    },
+    {
+      "n": 76,
+      "signed_rounds": 38,
+      "pascal_period": 128
+    },
+    {
+      "n": 77,
+      "signed_rounds": 38,
+      "pascal_period": 128
+    },
+    {
+      "n": 78,
+      "signed_rounds": 39,
+      "pascal_period": 128
+    },
+    {
+      "n": 79,
+      "signed_rounds": 39,
+      "pascal_period": 128
+    },
+    {
+      "n": 80,
+      "signed_rounds": 40,
+      "pascal_period": 128
+    },
+    {
+      "n": 81,
+      "signed_rounds": 40,
+      "pascal_period": 128
+    },
+    {
+      "n": 82,
+      "signed_rounds": 41,
+      "pascal_period": 128
+    },
+    {
+      "n": 83,
+      "signed_rounds": 41,
+      "pascal_period": 128
+    },
+    {
+      "n": 84,
+      "signed_rounds": 42,
+      "pascal_period": 128
+    },
+    {
+      "n": 85,
+      "signed_rounds": 42,
+      "pascal_period": 128
+    },
+    {
+      "n": 86,
+      "signed_rounds": 43,
+      "pascal_period": 128
+    },
+    {
+      "n": 87,
+      "signed_rounds": 43,
+      "pascal_period": 128
+    },
+    {
+      "n": 88,
+      "signed_rounds": 44,
+      "pascal_period": 128
+    },
+    {
+      "n": 89,
+      "signed_rounds": 44,
+      "pascal_period": 128
+    },
+    {
+      "n": 90,
+      "signed_rounds": 45,
+      "pascal_period": 128
+    },
+    {
+      "n": 91,
+      "signed_rounds": 45,
+      "pascal_period": 128
+    },
+    {
+      "n": 92,
+      "signed_rounds": 46,
+      "pascal_period": 128
+    },
+    {
+      "n": 93,
+      "signed_rounds": 46,
+      "pascal_period": 128
+    },
+    {
+      "n": 94,
+      "signed_rounds": 47,
+      "pascal_period": 128
+    },
+    {
+      "n": 95,
+      "signed_rounds": 47,
+      "pascal_period": 128
+    },
+    {
+      "n": 96,
+      "signed_rounds": 48,
+      "pascal_period": 128
+    },
+    {
+      "n": 97,
+      "signed_rounds": 48,
+      "pascal_period": 128
+    },
+    {
+      "n": 98,
+      "signed_rounds": 49,
+      "pascal_period": 128
+    },
+    {
+      "n": 99,
+      "signed_rounds": 49,
+      "pascal_period": 128
+    },
+    {
+      "n": 100,
+      "signed_rounds": 50,
+      "pascal_period": 128
+    },
+    {
+      "n": 101,
+      "signed_rounds": 50,
+      "pascal_period": 128
+    },
+    {
+      "n": 102,
+      "signed_rounds": 51,
+      "pascal_period": 128
+    },
+    {
+      "n": 103,
+      "signed_rounds": 51,
+      "pascal_period": 128
+    },
+    {
+      "n": 104,
+      "signed_rounds": 52,
+      "pascal_period": 128
+    },
+    {
+      "n": 105,
+      "signed_rounds": 52,
+      "pascal_period": 128
+    },
+    {
+      "n": 106,
+      "signed_rounds": 53,
+      "pascal_period": 128
+    },
+    {
+      "n": 107,
+      "signed_rounds": 53,
+      "pascal_period": 128
+    },
+    {
+      "n": 108,
+      "signed_rounds": 54,
+      "pascal_period": 128
+    },
+    {
+      "n": 109,
+      "signed_rounds": 54,
+      "pascal_period": 128
+    },
+    {
+      "n": 110,
+      "signed_rounds": 55,
+      "pascal_period": 128
+    },
+    {
+      "n": 111,
+      "signed_rounds": 55,
+      "pascal_period": 128
+    },
+    {
+      "n": 112,
+      "signed_rounds": 56,
+      "pascal_period": 128
+    },
+    {
+      "n": 113,
+      "signed_rounds": 56,
+      "pascal_period": 128
+    },
+    {
+      "n": 114,
+      "signed_rounds": 57,
+      "pascal_period": 128
+    },
+    {
+      "n": 115,
+      "signed_rounds": 57,
+      "pascal_period": 128
+    },
+    {
+      "n": 116,
+      "signed_rounds": 58,
+      "pascal_period": 128
+    },
+    {
+      "n": 117,
+      "signed_rounds": 58,
+      "pascal_period": 128
+    },
+    {
+      "n": 118,
+      "signed_rounds": 59,
+      "pascal_period": 128
+    },
+    {
+      "n": 119,
+      "signed_rounds": 59,
+      "pascal_period": 128
+    },
+    {
+      "n": 120,
+      "signed_rounds": 60,
+      "pascal_period": 128
+    },
+    {
+      "n": 121,
+      "signed_rounds": 60,
+      "pascal_period": 128
+    },
+    {
+      "n": 122,
+      "signed_rounds": 61,
+      "pascal_period": 128
+    },
+    {
+      "n": 123,
+      "signed_rounds": 61,
+      "pascal_period": 128
+    },
+    {
+      "n": 124,
+      "signed_rounds": 62,
+      "pascal_period": 128
+    },
+    {
+      "n": 125,
+      "signed_rounds": 62,
+      "pascal_period": 128
+    },
+    {
+      "n": 126,
+      "signed_rounds": 63,
+      "pascal_period": 128
+    },
+    {
+      "n": 127,
+      "signed_rounds": 63,
+      "pascal_period": 128
+    },
+    {
+      "n": 128,
+      "signed_rounds": 64,
+      "pascal_period": 128
+    },
+    {
+      "n": 129,
+      "signed_rounds": 64,
+      "pascal_period": 256
+    },
+    {
+      "n": 130,
+      "signed_rounds": 65,
+      "pascal_period": 256
+    },
+    {
+      "n": 131,
+      "signed_rounds": 65,
+      "pascal_period": 256
+    },
+    {
+      "n": 132,
+      "signed_rounds": 66,
+      "pascal_period": 256
+    },
+    {
+      "n": 133,
+      "signed_rounds": 66,
+      "pascal_period": 256
+    },
+    {
+      "n": 134,
+      "signed_rounds": 67,
+      "pascal_period": 256
+    },
+    {
+      "n": 135,
+      "signed_rounds": 67,
+      "pascal_period": 256
+    },
+    {
+      "n": 136,
+      "signed_rounds": 68,
+      "pascal_period": 256
+    },
+    {
+      "n": 137,
+      "signed_rounds": 68,
+      "pascal_period": 256
+    },
+    {
+      "n": 138,
+      "signed_rounds": 69,
+      "pascal_period": 256
+    },
+    {
+      "n": 139,
+      "signed_rounds": 69,
+      "pascal_period": 256
+    },
+    {
+      "n": 140,
+      "signed_rounds": 70,
+      "pascal_period": 256
+    },
+    {
+      "n": 141,
+      "signed_rounds": 70,
+      "pascal_period": 256
+    },
+    {
+      "n": 142,
+      "signed_rounds": 71,
+      "pascal_period": 256
+    },
+    {
+      "n": 143,
+      "signed_rounds": 71,
+      "pascal_period": 256
+    },
+    {
+      "n": 144,
+      "signed_rounds": 72,
+      "pascal_period": 256
+    },
+    {
+      "n": 145,
+      "signed_rounds": 72,
+      "pascal_period": 256
+    },
+    {
+      "n": 146,
+      "signed_rounds": 73,
+      "pascal_period": 256
+    },
+    {
+      "n": 147,
+      "signed_rounds": 73,
+      "pascal_period": 256
+    },
+    {
+      "n": 148,
+      "signed_rounds": 74,
+      "pascal_period": 256
+    },
+    {
+      "n": 149,
+      "signed_rounds": 74,
+      "pascal_period": 256
+    },
+    {
+      "n": 150,
+      "signed_rounds": 75,
+      "pascal_period": 256
+    },
+    {
+      "n": 151,
+      "signed_rounds": 75,
+      "pascal_period": 256
+    },
+    {
+      "n": 152,
+      "signed_rounds": 76,
+      "pascal_period": 256
+    },
+    {
+      "n": 153,
+      "signed_rounds": 76,
+      "pascal_period": 256
+    },
+    {
+      "n": 154,
+      "signed_rounds": 77,
+      "pascal_period": 256
+    },
+    {
+      "n": 155,
+      "signed_rounds": 77,
+      "pascal_period": 256
+    },
+    {
+      "n": 156,
+      "signed_rounds": 78,
+      "pascal_period": 256
+    },
+    {
+      "n": 157,
+      "signed_rounds": 78,
+      "pascal_period": 256
+    },
+    {
+      "n": 158,
+      "signed_rounds": 79,
+      "pascal_period": 256
+    },
+    {
+      "n": 159,
+      "signed_rounds": 79,
+      "pascal_period": 256
+    },
+    {
+      "n": 160,
+      "signed_rounds": 80,
+      "pascal_period": 256
+    },
+    {
+      "n": 161,
+      "signed_rounds": 80,
+      "pascal_period": 256
+    },
+    {
+      "n": 162,
+      "signed_rounds": 81,
+      "pascal_period": 256
+    },
+    {
+      "n": 163,
+      "signed_rounds": 81,
+      "pascal_period": 256
+    },
+    {
+      "n": 164,
+      "signed_rounds": 82,
+      "pascal_period": 256
+    },
+    {
+      "n": 165,
+      "signed_rounds": 82,
+      "pascal_period": 256
+    },
+    {
+      "n": 166,
+      "signed_rounds": 83,
+      "pascal_period": 256
+    },
+    {
+      "n": 167,
+      "signed_rounds": 83,
+      "pascal_period": 256
+    },
+    {
+      "n": 168,
+      "signed_rounds": 84,
+      "pascal_period": 256
+    },
+    {
+      "n": 169,
+      "signed_rounds": 84,
+      "pascal_period": 256
+    },
+    {
+      "n": 170,
+      "signed_rounds": 85,
+      "pascal_period": 256
+    },
+    {
+      "n": 171,
+      "signed_rounds": 85,
+      "pascal_period": 256
+    },
+    {
+      "n": 172,
+      "signed_rounds": 86,
+      "pascal_period": 256
+    },
+    {
+      "n": 173,
+      "signed_rounds": 86,
+      "pascal_period": 256
+    },
+    {
+      "n": 174,
+      "signed_rounds": 87,
+      "pascal_period": 256
+    },
+    {
+      "n": 175,
+      "signed_rounds": 87,
+      "pascal_period": 256
+    },
+    {
+      "n": 176,
+      "signed_rounds": 88,
+      "pascal_period": 256
+    },
+    {
+      "n": 177,
+      "signed_rounds": 88,
+      "pascal_period": 256
+    },
+    {
+      "n": 178,
+      "signed_rounds": 89,
+      "pascal_period": 256
+    },
+    {
+      "n": 179,
+      "signed_rounds": 89,
+      "pascal_period": 256
+    },
+    {
+      "n": 180,
+      "signed_rounds": 90,
+      "pascal_period": 256
+    },
+    {
+      "n": 181,
+      "signed_rounds": 90,
+      "pascal_period": 256
+    },
+    {
+      "n": 182,
+      "signed_rounds": 91,
+      "pascal_period": 256
+    },
+    {
+      "n": 183,
+      "signed_rounds": 91,
+      "pascal_period": 256
+    },
+    {
+      "n": 184,
+      "signed_rounds": 92,
+      "pascal_period": 256
+    },
+    {
+      "n": 185,
+      "signed_rounds": 92,
+      "pascal_period": 256
+    },
+    {
+      "n": 186,
+      "signed_rounds": 93,
+      "pascal_period": 256
+    },
+    {
+      "n": 187,
+      "signed_rounds": 93,
+      "pascal_period": 256
+    },
+    {
+      "n": 188,
+      "signed_rounds": 94,
+      "pascal_period": 256
+    },
+    {
+      "n": 189,
+      "signed_rounds": 94,
+      "pascal_period": 256
+    },
+    {
+      "n": 190,
+      "signed_rounds": 95,
+      "pascal_period": 256
+    },
+    {
+      "n": 191,
+      "signed_rounds": 95,
+      "pascal_period": 256
+    },
+    {
+      "n": 192,
+      "signed_rounds": 96,
+      "pascal_period": 256
+    },
+    {
+      "n": 193,
+      "signed_rounds": 96,
+      "pascal_period": 256
+    },
+    {
+      "n": 194,
+      "signed_rounds": 97,
+      "pascal_period": 256
+    },
+    {
+      "n": 195,
+      "signed_rounds": 97,
+      "pascal_period": 256
+    },
+    {
+      "n": 196,
+      "signed_rounds": 98,
+      "pascal_period": 256
+    },
+    {
+      "n": 197,
+      "signed_rounds": 98,
+      "pascal_period": 256
+    },
+    {
+      "n": 198,
+      "signed_rounds": 99,
+      "pascal_period": 256
+    },
+    {
+      "n": 199,
+      "signed_rounds": 99,
+      "pascal_period": 256
+    },
+    {
+      "n": 200,
+      "signed_rounds": 100,
+      "pascal_period": 256
+    },
+    {
+      "n": 201,
+      "signed_rounds": 100,
+      "pascal_period": 256
+    },
+    {
+      "n": 202,
+      "signed_rounds": 101,
+      "pascal_period": 256
+    },
+    {
+      "n": 203,
+      "signed_rounds": 101,
+      "pascal_period": 256
+    },
+    {
+      "n": 204,
+      "signed_rounds": 102,
+      "pascal_period": 256
+    },
+    {
+      "n": 205,
+      "signed_rounds": 102,
+      "pascal_period": 256
+    },
+    {
+      "n": 206,
+      "signed_rounds": 103,
+      "pascal_period": 256
+    },
+    {
+      "n": 207,
+      "signed_rounds": 103,
+      "pascal_period": 256
+    },
+    {
+      "n": 208,
+      "signed_rounds": 104,
+      "pascal_period": 256
+    },
+    {
+      "n": 209,
+      "signed_rounds": 104,
+      "pascal_period": 256
+    },
+    {
+      "n": 210,
+      "signed_rounds": 105,
+      "pascal_period": 256
+    },
+    {
+      "n": 211,
+      "signed_rounds": 105,
+      "pascal_period": 256
+    },
+    {
+      "n": 212,
+      "signed_rounds": 106,
+      "pascal_period": 256
+    },
+    {
+      "n": 213,
+      "signed_rounds": 106,
+      "pascal_period": 256
+    },
+    {
+      "n": 214,
+      "signed_rounds": 107,
+      "pascal_period": 256
+    },
+    {
+      "n": 215,
+      "signed_rounds": 107,
+      "pascal_period": 256
+    },
+    {
+      "n": 216,
+      "signed_rounds": 108,
+      "pascal_period": 256
+    },
+    {
+      "n": 217,
+      "signed_rounds": 108,
+      "pascal_period": 256
+    },
+    {
+      "n": 218,
+      "signed_rounds": 109,
+      "pascal_period": 256
+    },
+    {
+      "n": 219,
+      "signed_rounds": 109,
+      "pascal_period": 256
+    },
+    {
+      "n": 220,
+      "signed_rounds": 110,
+      "pascal_period": 256
+    },
+    {
+      "n": 221,
+      "signed_rounds": 110,
+      "pascal_period": 256
+    },
+    {
+      "n": 222,
+      "signed_rounds": 111,
+      "pascal_period": 256
+    },
+    {
+      "n": 223,
+      "signed_rounds": 111,
+      "pascal_period": 256
+    },
+    {
+      "n": 224,
+      "signed_rounds": 112,
+      "pascal_period": 256
+    },
+    {
+      "n": 225,
+      "signed_rounds": 112,
+      "pascal_period": 256
+    },
+    {
+      "n": 226,
+      "signed_rounds": 113,
+      "pascal_period": 256
+    },
+    {
+      "n": 227,
+      "signed_rounds": 113,
+      "pascal_period": 256
+    },
+    {
+      "n": 228,
+      "signed_rounds": 114,
+      "pascal_period": 256
+    },
+    {
+      "n": 229,
+      "signed_rounds": 114,
+      "pascal_period": 256
+    },
+    {
+      "n": 230,
+      "signed_rounds": 115,
+      "pascal_period": 256
+    },
+    {
+      "n": 231,
+      "signed_rounds": 115,
+      "pascal_period": 256
+    },
+    {
+      "n": 232,
+      "signed_rounds": 116,
+      "pascal_period": 256
+    },
+    {
+      "n": 233,
+      "signed_rounds": 116,
+      "pascal_period": 256
+    },
+    {
+      "n": 234,
+      "signed_rounds": 117,
+      "pascal_period": 256
+    },
+    {
+      "n": 235,
+      "signed_rounds": 117,
+      "pascal_period": 256
+    },
+    {
+      "n": 236,
+      "signed_rounds": 118,
+      "pascal_period": 256
+    },
+    {
+      "n": 237,
+      "signed_rounds": 118,
+      "pascal_period": 256
+    },
+    {
+      "n": 238,
+      "signed_rounds": 119,
+      "pascal_period": 256
+    },
+    {
+      "n": 239,
+      "signed_rounds": 119,
+      "pascal_period": 256
+    },
+    {
+      "n": 240,
+      "signed_rounds": 120,
+      "pascal_period": 256
+    },
+    {
+      "n": 241,
+      "signed_rounds": 120,
+      "pascal_period": 256
+    },
+    {
+      "n": 242,
+      "signed_rounds": 121,
+      "pascal_period": 256
+    },
+    {
+      "n": 243,
+      "signed_rounds": 121,
+      "pascal_period": 256
+    },
+    {
+      "n": 244,
+      "signed_rounds": 122,
+      "pascal_period": 256
+    },
+    {
+      "n": 245,
+      "signed_rounds": 122,
+      "pascal_period": 256
+    },
+    {
+      "n": 246,
+      "signed_rounds": 123,
+      "pascal_period": 256
+    },
+    {
+      "n": 247,
+      "signed_rounds": 123,
+      "pascal_period": 256
+    },
+    {
+      "n": 248,
+      "signed_rounds": 124,
+      "pascal_period": 256
+    },
+    {
+      "n": 249,
+      "signed_rounds": 124,
+      "pascal_period": 256
+    },
+    {
+      "n": 250,
+      "signed_rounds": 125,
+      "pascal_period": 256
+    },
+    {
+      "n": 251,
+      "signed_rounds": 125,
+      "pascal_period": 256
+    },
+    {
+      "n": 252,
+      "signed_rounds": 126,
+      "pascal_period": 256
+    },
+    {
+      "n": 253,
+      "signed_rounds": 126,
+      "pascal_period": 256
+    },
+    {
+      "n": 254,
+      "signed_rounds": 127,
+      "pascal_period": 256
+    },
+    {
+      "n": 255,
+      "signed_rounds": 127,
+      "pascal_period": 256
+    },
+    {
+      "n": 256,
+      "signed_rounds": 128,
+      "pascal_period": 256
+    }
+  ],
+  "higher_modulus_scope": "n2..32,s1..4; chronological integer residues",
+  "higher_modulus_rows": [
+    {
+      "n": 2,
+      "s": 1,
+      "modulus": 2,
+      "period": 2,
+      "first_return": 2
+    },
+    {
+      "n": 2,
+      "s": 2,
+      "modulus": 4,
+      "period": 4,
+      "first_return": 4
+    },
+    {
+      "n": 2,
+      "s": 3,
+      "modulus": 8,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 2,
+      "s": 4,
+      "modulus": 16,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 3,
+      "s": 1,
+      "modulus": 2,
+      "period": 4,
+      "first_return": 4
+    },
+    {
+      "n": 3,
+      "s": 2,
+      "modulus": 4,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 3,
+      "s": 3,
+      "modulus": 8,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 3,
+      "s": 4,
+      "modulus": 16,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 4,
+      "s": 1,
+      "modulus": 2,
+      "period": 4,
+      "first_return": 4
+    },
+    {
+      "n": 4,
+      "s": 2,
+      "modulus": 4,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 4,
+      "s": 3,
+      "modulus": 8,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 4,
+      "s": 4,
+      "modulus": 16,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 5,
+      "s": 1,
+      "modulus": 2,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 5,
+      "s": 2,
+      "modulus": 4,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 5,
+      "s": 3,
+      "modulus": 8,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 5,
+      "s": 4,
+      "modulus": 16,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 6,
+      "s": 1,
+      "modulus": 2,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 6,
+      "s": 2,
+      "modulus": 4,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 6,
+      "s": 3,
+      "modulus": 8,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 6,
+      "s": 4,
+      "modulus": 16,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 7,
+      "s": 1,
+      "modulus": 2,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 7,
+      "s": 2,
+      "modulus": 4,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 7,
+      "s": 3,
+      "modulus": 8,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 7,
+      "s": 4,
+      "modulus": 16,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 8,
+      "s": 1,
+      "modulus": 2,
+      "period": 8,
+      "first_return": 8
+    },
+    {
+      "n": 8,
+      "s": 2,
+      "modulus": 4,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 8,
+      "s": 3,
+      "modulus": 8,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 8,
+      "s": 4,
+      "modulus": 16,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 9,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 9,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 9,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 9,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 10,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 10,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 10,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 10,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 11,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 11,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 11,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 11,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 12,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 12,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 12,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 12,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 13,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 13,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 13,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 13,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 14,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 14,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 14,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 14,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 15,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 15,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 15,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 15,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 16,
+      "s": 1,
+      "modulus": 2,
+      "period": 16,
+      "first_return": 16
+    },
+    {
+      "n": 16,
+      "s": 2,
+      "modulus": 4,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 16,
+      "s": 3,
+      "modulus": 8,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 16,
+      "s": 4,
+      "modulus": 16,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 17,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 17,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 17,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 17,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 18,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 18,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 18,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 18,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 19,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 19,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 19,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 19,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 20,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 20,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 20,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 20,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 21,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 21,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 21,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 21,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 22,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 22,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 22,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 22,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 23,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 23,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 23,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 23,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 24,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 24,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 24,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 24,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 25,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 25,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 25,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 25,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 26,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 26,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 26,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 26,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 27,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 27,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 27,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 27,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 28,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 28,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 28,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 28,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 29,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 29,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 29,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 29,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 30,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 30,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 30,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 30,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 31,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 31,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 31,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 31,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    },
+    {
+      "n": 32,
+      "s": 1,
+      "modulus": 2,
+      "period": 32,
+      "first_return": 32
+    },
+    {
+      "n": 32,
+      "s": 2,
+      "modulus": 4,
+      "period": 64,
+      "first_return": 64
+    },
+    {
+      "n": 32,
+      "s": 3,
+      "modulus": 8,
+      "period": 128,
+      "first_return": 128
+    },
+    {
+      "n": 32,
+      "s": 4,
+      "modulus": 16,
+      "period": 256,
+      "first_return": 256
+    }
+  ]
+}

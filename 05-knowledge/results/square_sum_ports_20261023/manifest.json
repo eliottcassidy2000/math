@@ -1,0 +1,27 @@
+{
+  "scope": "Core sources, literal complete path universe, complete per-edge inventory, cut universes, positive proof certificates and independent audits; no inherited file is modified.",
+  "base_commit": "a538127eef",
+  "byte_protocol": "UTF-8 text bytes with CRLF replaced by LF before comparison or SHA-256; no other normalization.",
+  "sha256": {
+    "AUDIT-hamilton-edge.md": "1744bb1e95bbb263c1344ae1e3486b7dc9e3f5c60c8856f351637c310db50d6f",
+    "AUDIT-root.md": "641bc0d23f0bcad7d5ba3c4e5af742f568eb5551213bf11ce6a974dc98d6190d",
+    "G25_edge_roles.svg": "c41d33d0ebec9f486daf558782c969c126ef492f9ca5986cce46b14afd8e8af4",
+    "README.md": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68",
+    "cuts.json": "8d2452322dd330b08655bea89f1d867b9e128d23a12d45cd493feb62057f86ac",
+    "cuts.py": "e81d346f08bb73a8613385f4a12f2d9e222901182466065f266ebe88fbff2ff4",
+    "draw.py": "2f144c89ec7ddf9e97df1f05e38c4ea4a70621ec37f2f23599b8cbdc09234f63",
+    "guarded_forbidden.json": "8dcb9e1978683da1ff62c18c1e9526ae38543b808a839de0e0d07265aeea3420",
+    "guarded_forbidden.py": "9b5818666508f50451450c0f67f892d2bc398c5aa477707be0f10f7f3b6bbd9f",
+    "marked_cut_search.cpp": "8494c76a754ebe152569658b07a8e88db5f8be488d918cd7eb56cc46276b2df7",
+    "marked_cut_search.json": "d5c4f895193a23f9bfd82ab57c16b419aa52a9326f24e472b98b383b2af99699",
+    "paths.cpp": "4490a498d2cd63590237ab27ac6091743bd9be66534e3657aab63b06ae95f620",
+    "paths.json": "2a38339719abb09b915747d3ab083644486b382e8c54bd344267d9ae26b42aa2",
+    "recurrence.json": "d0cb05100f3e2c7094feee3458bef0c1e41d9137edbd8e2e245a5820ac1364e9",
+    "recurrence.py": "abf1c1d2beec054e96e3d48b30ae04b6df77f09250b61b8a86be3d03cc35c39d",
+    "reproduce.py": "a018a96b119e8b965b2e66f4e3a0bda47d05a296690af39b373e4666e0bbefd7",
+    "tight_cut_search.cpp": "61f9568307a213aefd9945c58bdb975e19c04fdb02006794d319a536e743d745",
+    "tight_cut_search.json": "e669ee00b94abc4d29bd5df463301b40d64496fdc519e335d20f61d171c8d47b",
+    "verification.json": "6147d34b3e03a647f077a0b5dc583e1def807b038eb4e0101bbabc597457af2f",
+    "verify.py": "e604dfe8c2aaee2ebf194cc869bb3fc270d39eaca256e36086e7a9f7a8e2a204"
+  }
+}

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-23 — square-sum draft: a Hamiltonian cycle's chord insertion was missed
+
+- **Affected draft:** the unpublished `square_sum_ports_20261023/README.md` and `cuts.py` said a Hamiltonian cycle proves edge omission but not inclusion of every noncycle edge. That boundary was too weak and the asserted nonimplication was false.
+- **First failed implication / missing operation:** the discussion considered only cutting one cycle edge. For a chord uv, cut u--succ(u) and v--succ(v) in an oriented Hamiltonian cycle and insert uv. The two remaining paths join into a spanning path containing the chord. On C4 with chord1--3, the path2--3--1--4 is the smallest illustrative example.
+- **Repair / quantifiers:** in every finite simple undirected Hamiltonian graph of order at least3, every edge is included by some Hamiltonian path and omitted by another. Cycle edges are included by cutting a different edge; chord insertion handles the rest. This does not preserve prescribed endpoints, multiple required edges, or directed orientations.
+- **Consequence / boundary:** combined with the already cited Gerbicz all-n>=32 cycle theorem, every square-sum edge is optional for all n>=32. Together with the finite census, the coarse single-edge status is classified at every size. Exact frequencies, fixed endpoints, and joint edge feasibility remain separate targets. [Repaired proof and literal inclusion/omission witnesses](../05-knowledge/results/square_sum_ports_20261023/README.md); [independent publication review](../05-knowledge/results/square_sum_ports_20261023/AUDIT-root.md).
+
 ## 2026-10-23 — historical additive energy: sum and difference zero fibres were conflated
 
 - **Affected source:** `04-computation/H_determined_by_E.py`, Part 3, and its historical `.out`. For a skew subset S of an odd cyclic group, the script defined r(t)=#{(a,b) in S²:a+b=t} but added |S|² as though r(0)=|S|.
