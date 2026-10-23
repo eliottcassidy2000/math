@@ -1,0 +1,174 @@
+{
+  "checks": 81135,
+  "native": {
+    "complement_paired_incidence": [
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        4
+      ]
+    ],
+    "deleted_bridge_word": 2,
+    "gaps": [
+      "7/15",
+      "8/15"
+    ],
+    "incidence": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "nontransitive_lumped_incidence": [
+      [
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "shared_raw_conductance": "4/5",
+    "word_records": [
+      {
+        "Hamiltonian_orders": 1,
+        "target": 0,
+        "word": 0
+      },
+      {
+        "Hamiltonian_orders": 3,
+        "target": 1,
+        "word": 1
+      },
+      {
+        "Hamiltonian_orders": 5,
+        "target": 3,
+        "word": 2
+      },
+      {
+        "Hamiltonian_orders": 5,
+        "target": 3,
+        "word": 3
+      },
+      {
+        "Hamiltonian_orders": 3,
+        "target": 2,
+        "word": 4
+      },
+      {
+        "Hamiltonian_orders": 5,
+        "target": 3,
+        "word": 5
+      },
+      {
+        "Hamiltonian_orders": 5,
+        "target": 3,
+        "word": 6
+      },
+      {
+        "Hamiltonian_orders": 5,
+        "target": 3,
+        "word": 7
+      }
+    ]
+  },
+  "networks": {
+    "address_table": {
+      "4/5": {
+        "CW_word": "RRRL",
+        "SB_word": "LRRR",
+        "heap_index": 30,
+        "unit_edges_in_realization": 5
+      },
+      "7/15": {
+        "CW_word": "RRRRRRLL",
+        "SB_word": "LLRRRRRR",
+        "heap_index": 508,
+        "unit_edges_in_realization": 9
+      },
+      "8/15": {
+        "CW_word": "LLLLLLRL",
+        "SB_word": "LRLLLLLL",
+        "heap_index": 258,
+        "unit_edges_in_realization": 9
+      },
+      "8/7": {
+        "CW_word": "LLLLLLR",
+        "SB_word": "RLLLLLL",
+        "heap_index": 129,
+        "unit_edges_in_realization": 8
+      }
+    },
+    "bounded_fraction_pairs": 1600,
+    "conditional_residue_one_mean": "19/15",
+    "four_bit_first_zero_counts": [
+      8,
+      4,
+      2,
+      1
+    ],
+    "same_gap_hitting_times": [
+      "15/4",
+      "30/7",
+      "1500/7"
+    ]
+  },
+  "status": "PASS",
+  "tree": {
+    "euclid_pair": [
+      8,
+      7
+    ],
+    "gap_7_over_15_address": "AAAAAA",
+    "maximum_decoded_depth_in_box": 74,
+    "odd_denominator_bound": 151,
+    "primitive_triple": [
+      15,
+      112,
+      113
+    ],
+    "reduced_coordinates": 2350,
+    "tree_level_counts": [
+      1,
+      3,
+      9,
+      27,
+      81,
+      243,
+      729,
+      2187
+    ]
+  }
+}

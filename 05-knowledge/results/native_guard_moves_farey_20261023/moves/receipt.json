@@ -1,0 +1,734 @@
+{
+  "checks": 35949,
+  "correlated_pin_guard_hostile": {
+    "accepted_difference_words": [
+      0,
+      231
+    ],
+    "accepted_weight_vectors": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        3
+      ]
+    ],
+    "guard": "the integer weights in the first and last pinned intervals agree; not an electrical guard",
+    "pinned_cell_indices": [
+      0,
+      3,
+      5,
+      8
+    ],
+    "regular_host_order": 27,
+    "sharp_coupled_phase_budget": 4
+  },
+  "families": [
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 2,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            2
+          ]
+        }
+      ],
+      "q": 3,
+      "r": 2,
+      "regular_host_order": 9,
+      "weight_filters_checked": 3,
+      "words": 4
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 5,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            0,
+            3
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 5,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 6,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        }
+      ],
+      "q": 3,
+      "r": 4,
+      "regular_host_order": 15,
+      "weight_filters_checked": 7,
+      "words": 16
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 22,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 21,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            1,
+            4
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 21,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            2,
+            5
+          ]
+        }
+      ],
+      "q": 3,
+      "r": 6,
+      "regular_host_order": 21,
+      "weight_filters_checked": 13,
+      "words": 64
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 85,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            0,
+            3,
+            6
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 86,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            1,
+            4,
+            7
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 85,
+          "unfiltered_minimum_budget": 2,
+          "weights": [
+            2,
+            5,
+            8
+          ]
+        }
+      ],
+      "q": 3,
+      "r": 8,
+      "regular_host_order": 27,
+      "weight_filters_checked": 21,
+      "words": 256
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 2,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            2
+          ]
+        }
+      ],
+      "q": 5,
+      "r": 2,
+      "regular_host_order": 15,
+      "weight_filters_checked": 3,
+      "words": 4
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 4,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 6,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 4,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            3
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            4
+          ]
+        }
+      ],
+      "q": 5,
+      "r": 4,
+      "regular_host_order": 25,
+      "weight_filters_checked": 5,
+      "words": 16
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 7,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            0,
+            5
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 7,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            1,
+            6
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 15,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 20,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            3
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 15,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            4
+          ]
+        }
+      ],
+      "q": 5,
+      "r": 6,
+      "regular_host_order": 35,
+      "weight_filters_checked": 9,
+      "words": 64
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 57,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            0,
+            5
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 36,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            1,
+            6
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 36,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            2,
+            7
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 57,
+          "unfiltered_minimum_budget": 4,
+          "weights": [
+            3,
+            8
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 70,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            4
+          ]
+        }
+      ],
+      "q": 5,
+      "r": 8,
+      "regular_host_order": 45,
+      "weight_filters_checked": 13,
+      "words": 256
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 2,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            2
+          ]
+        }
+      ],
+      "q": 7,
+      "r": 2,
+      "regular_host_order": 21,
+      "weight_filters_checked": 3,
+      "words": 4
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 4,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 6,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 4,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            3
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            4
+          ]
+        }
+      ],
+      "q": 7,
+      "r": 4,
+      "regular_host_order": 35,
+      "weight_filters_checked": 5,
+      "words": 16
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            0
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 6,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            1
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 15,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 20,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            3
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 15,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            4
+          ]
+        },
+        {
+          "delta": 5,
+          "states": 6,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            5
+          ]
+        },
+        {
+          "delta": 6,
+          "states": 1,
+          "unfiltered_minimum_budget": 0,
+          "weights": [
+            6
+          ]
+        }
+      ],
+      "q": 7,
+      "r": 6,
+      "regular_host_order": 49,
+      "weight_filters_checked": 7,
+      "words": 64
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 9,
+          "unfiltered_minimum_budget": 6,
+          "weights": [
+            0,
+            7
+          ]
+        },
+        {
+          "delta": 1,
+          "states": 9,
+          "unfiltered_minimum_budget": 6,
+          "weights": [
+            1,
+            8
+          ]
+        },
+        {
+          "delta": 2,
+          "states": 28,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            2
+          ]
+        },
+        {
+          "delta": 3,
+          "states": 56,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            3
+          ]
+        },
+        {
+          "delta": 4,
+          "states": 70,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            4
+          ]
+        },
+        {
+          "delta": 5,
+          "states": 56,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            5
+          ]
+        },
+        {
+          "delta": 6,
+          "states": 28,
+          "unfiltered_minimum_budget": 1,
+          "weights": [
+            6
+          ]
+        }
+      ],
+      "q": 7,
+      "r": 8,
+      "regular_host_order": 63,
+      "weight_filters_checked": 11,
+      "words": 256
+    },
+    {
+      "endpoint_fibres": [
+        {
+          "delta": 0,
+          "states": 11,
+          "unfiltered_minimum_budget": 8,
+          "weights": [
+            0,
+            9
+          ]
+        }
+      ],
+      "q": 9,
+      "r": 10,
+      "regular_host_order": 99,
+      "weight_filters_checked": 3,
+      "words": 11
+    }
+  ],
+  "original_electrical_pinned_two_cells": {
+    "actual_pins": [
+      [
+        0,
+        0
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "n": 8,
+    "original_potential_sha256": "d8ef442adbe0261bf8ae9892db925e220bd35bd67546d2933d1ab7b2f1c8f0d4",
+    "owner_bytes_sha256": "5d195cc793e3d05af189407333960e0ceffa00fb0bc40d77d419cf8342f80110",
+    "phase_values": [
+      1,
+      5
+    ],
+    "regular_source": false,
+    "rows": [
+      {
+        "a": 0,
+        "b": 0,
+        "normalized_forward_mask": 1765183,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "phase_mod8": 1,
+        "source_merged": 3517,
+        "target_merged": 532
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "normalized_forward_mask": 1799615,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          4,
+          7
+        ],
+        "phase_mod8": 5,
+        "source_merged": 3517,
+        "target_merged": 1290
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "normalized_forward_mask": 1765183,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          2,
+          3,
+          1,
+          5,
+          6,
+          4,
+          7
+        ],
+        "phase_mod8": 1,
+        "source_merged": 3517,
+        "target_merged": 532
+      },
+      {
+        "a": 1,
+        "b": 2,
+        "normalized_forward_mask": 1799615,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          2,
+          3,
+          1,
+          6,
+          4,
+          5,
+          7
+        ],
+        "phase_mod8": 5,
+        "source_merged": 3517,
+        "target_merged": 1290
+      },
+      {
+        "a": 2,
+        "b": 0,
+        "normalized_forward_mask": 1799615,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          3,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "phase_mod8": 5,
+        "source_merged": 3517,
+        "target_merged": 1290
+      },
+      {
+        "a": 2,
+        "b": 2,
+        "normalized_forward_mask": 1765183,
+        "ordinary_source": 6798,
+        "path": [
+          0,
+          3,
+          1,
+          2,
+          6,
+          4,
+          5,
+          7
+        ],
+        "phase_mod8": 1,
+        "source_merged": 3517,
+        "target_merged": 532
+      }
+    ],
+    "scope": "original frozen native electrical character; every common-phase kernel lift retained",
+    "sharp_guarded_phase_budget": 2
+  },
+  "scope": "actual regular cyclic-cell families and explicitly chosen weight filters; separate actual pinned order-eight original electrical character control",
+  "status": "FINITE-EXACT"
+}

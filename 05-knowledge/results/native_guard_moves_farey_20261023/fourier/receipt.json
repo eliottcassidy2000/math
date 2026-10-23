@@ -1,0 +1,393 @@
+{
+  "scope": "exact finite guard tables, not a native realizability oracle",
+  "controls": {
+    "exhaustive_guard_tables": 1024,
+    "examples": {
+      "sum_residue": {
+        "coordinates": 3,
+        "components": 1,
+        "footprint": [
+          0,
+          1,
+          2
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "kernel_basis": [
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ]
+        ],
+        "kernel_lifts": 9,
+        "kernel_move_budget": 2,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          2,
+          2
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "two_differences": {
+        "coordinates": 3,
+        "components": 2,
+        "footprint": [
+          0,
+          1,
+          2
+        ],
+        "support_rank": 2,
+        "observer_rows": [
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "kernel_basis": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "kernel_lifts": 3,
+        "kernel_move_budget": 3,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          9,
+          9
+        ]
+      },
+      "zero_only": {
+        "coordinates": 2,
+        "components": 1,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 2,
+        "observer_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "kernel_basis": [],
+        "kernel_lifts": 1,
+        "kernel_move_budget": 0,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          0
+        ],
+        "residual_tables_by_depth": [
+          1,
+          2,
+          2
+        ]
+      },
+      "pinned_binary_bridge": {
+        "coordinates": 2,
+        "components": 1,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 2,
+        "observer_rows": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "kernel_basis": [],
+        "kernel_lifts": 1,
+        "kernel_move_budget": 0,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          0
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          2
+        ]
+      }
+    },
+    "mod9_nonzero_kernel_function": [
+      3,
+      3,
+      3
+    ],
+    "mod9_transform": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "native": {
+    "guard_receipt_sha256": "559889afcfd1b9f76fb693c3a0c2e7267992eb3606c9602fb8310b27be9df173",
+    "fresh_character_n6": {
+      "actual_guard": {
+        "coordinates": 2,
+        "components": 2,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1,
+            2
+          ]
+        ],
+        "kernel_basis": [
+          [
+            1,
+            1
+          ]
+        ],
+        "kernel_lifts": 3,
+        "kernel_move_budget": 2,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          1
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          3
+        ]
+      },
+      "guard_plus_exact_target_id": {
+        "coordinates": 2,
+        "components": 6,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1,
+            2
+          ]
+        ],
+        "kernel_basis": [
+          [
+            1,
+            1
+          ]
+        ],
+        "kernel_lifts": 3,
+        "kernel_move_budget": 2,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          1
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          3
+        ]
+      },
+      "relative_phase_records": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "first_cell_pinned": {
+        "coordinates": 1,
+        "components": 2,
+        "footprint": [
+          0
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1
+          ]
+        ],
+        "kernel_basis": [],
+        "kernel_lifts": 1,
+        "kernel_move_budget": 0,
+        "low_budget_span_ranks": [
+          0,
+          0
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3
+        ]
+      }
+    },
+    "original_character_pinned_n8": {
+      "actual_guard": {
+        "coordinates": 2,
+        "components": 2,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1,
+            2
+          ]
+        ],
+        "kernel_basis": [
+          [
+            1,
+            1
+          ]
+        ],
+        "kernel_lifts": 3,
+        "kernel_move_budget": 2,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          1
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          3
+        ]
+      },
+      "guard_plus_exact_target_id": {
+        "coordinates": 2,
+        "components": 6,
+        "footprint": [
+          0,
+          1
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1,
+            2
+          ]
+        ],
+        "kernel_basis": [
+          [
+            1,
+            1
+          ]
+        ],
+        "kernel_lifts": 3,
+        "kernel_move_budget": 2,
+        "low_budget_span_ranks": [
+          0,
+          0,
+          1
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3,
+          3
+        ]
+      },
+      "relative_phase_records": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "first_cell_pinned": {
+        "coordinates": 1,
+        "components": 2,
+        "footprint": [
+          0
+        ],
+        "support_rank": 1,
+        "observer_rows": [
+          [
+            1
+          ]
+        ],
+        "kernel_basis": [],
+        "kernel_lifts": 1,
+        "kernel_move_budget": 0,
+        "low_budget_span_ranks": [
+          0,
+          0
+        ],
+        "residual_tables_by_depth": [
+          1,
+          3
+        ]
+      }
+    }
+  },
+  "checks": 17224
+}
