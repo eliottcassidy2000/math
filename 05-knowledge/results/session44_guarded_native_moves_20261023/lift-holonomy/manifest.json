@@ -1,0 +1,29 @@
+{
+  "scope": "Scoped finite affine-cover theorem plus independently authenticated native order20 supplied-move family",
+  "verification": {
+    "commands": [
+      "python3 -B check.py --repo <repository>",
+      "python3 -O -B check.py --repo <repository>"
+    ],
+    "normal_optimized_stdout_byte_match": true,
+    "exact_check_count": 41229
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "d664710c472570b59fc8b35db9d2e1316d7a651b18c9989af684d438074b6c03"
+    },
+    {
+      "path": "check.py",
+      "sha256": "1dd8ada55c3859943f5d48a75f882ad9b697a536a03606ad1a8ccabf3701cce0"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "9585908464baa1413e9603c738257f25a427211bbb9489ebb8e21433b1d000bb"
+    },
+    {
+      "path": "source_pins.json",
+      "sha256": "0480da94234c9c9f54b473d9e69587b57b40f988016c3d2d74d6ac1d68dea26d"
+    }
+  ]
+}

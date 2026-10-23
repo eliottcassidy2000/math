@@ -1,0 +1,65 @@
+{
+  "source_commit": "0a36c32af8c89f6c4249a0ef929390432e556925",
+  "sources": [
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/farey/FAREY_MASSES_AND_NATIVE_CONDUCTANCE.md",
+      "git_blob": "101b78575d85f5ba1cd2b56bb8c9c3d64b67ddec",
+      "sha256": "cd247c8148286c43ac87731a76e27989ca47560daa4c6a333794cf89d2c79007",
+      "bytes": 16798
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/fourier/THEOREM.md",
+      "git_blob": "5876b079980dad0a3afacbca27235935a94da92a",
+      "sha256": "0a15fbd96c8da24d7403af019b8c5c3d447acf44f0cdbe56c85be662b9a54395",
+      "bytes": 8576
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/moves/COUPLED_PHASE_MOVES.md",
+      "git_blob": "cfcab44c73b7c2e7534c36e5abefffb9a22d671f",
+      "sha256": "da0beba4ac011e2e63f02d53092d9b87d565da917211a43c421293bd136a7873",
+      "bytes": 16025
+    },
+    {
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/RESTRICTIONS.md",
+      "git_blob": "dd91b1ab45c79ac82bb2d35500b2a8453aea6198",
+      "sha256": "d821a9da5100f204c5e5c840569040e7950627b0a6ea4188c095243d8cb22f02",
+      "bytes": 12756
+    },
+    {
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/LATE_INCOMING.md",
+      "git_blob": "f94a4c9924720e966df0947f3bcd6a541d4cb383",
+      "sha256": "9707c16516a08e41304530eba8ed24dce4f6600a0a5854d35e3ae90a38e84cb4",
+      "bytes": 8558
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/THEOREM.md",
+      "git_blob": "72e32aef089e1fb26bac0664223171acefcb2448",
+      "sha256": "71a2296fa95a9b456da3e9b8e99df9a75d1a9525899bca57c23c9bdfbcac61aa",
+      "bytes": 6970
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/coupling/THEOREM.md",
+      "git_blob": "6722887edc7035e993bc1a691c91e3f726e9f20c",
+      "sha256": "82bcc37ce0365e8c172766e52ab0304555ccd3f468926faca8611a3fd5816413",
+      "bytes": 10468
+    },
+    {
+      "path": "01-canon/theorems/THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md",
+      "git_blob": "1f339da28f6a4f95212269e0b2a57ecda643568d",
+      "sha256": "bae74f2b5503a36c59996db3ad310c819c8597e0550c6cd9ef53719dcaa5926f",
+      "bytes": 11099
+    },
+    {
+      "path": "01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md",
+      "git_blob": "cd944320318d534a835384b9f575e582d3cdcb2f",
+      "sha256": "6312e7ba3eeae8ae702743139ea9eb5ff689ae6cb806f01a366fb27e1e05f92b",
+      "bytes": 19964
+    },
+    {
+      "path": "01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md",
+      "git_blob": "b4184b7d0ced9681d1291dd1c441e83163e5ab9a",
+      "sha256": "5ddfc01ae446f3d20e5d8a9ce362c76c072da07745c1c405fe882173efcda4f5",
+      "bytes": 35290
+    }
+  ]
+}

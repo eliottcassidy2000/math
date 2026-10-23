@@ -1,0 +1,93 @@
+{
+  "compression": {
+    "entry_alphabet": [
+      0,
+      1,
+      2
+    ],
+    "nonnegative_3_by_2_tables": 496,
+    "positive_defect_tables": 400,
+    "source_partition": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ]
+    ],
+    "zero_defect_tables": 96
+  },
+  "converse": {
+    "full_word_reflection_cases": 1099,
+    "native_orders": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "weights_filter_boundary": "Invariance under the actual reflected-converse bijection is required"
+  },
+  "exact_check_count": 7992,
+  "native": {
+    "actual_full_phase_scans": [
+      {
+        "accepted": 12,
+        "cells": 3,
+        "phase_tuples": 27
+      },
+      {
+        "accepted": 48,
+        "cells": 5,
+        "phase_tuples": 243
+      },
+      {
+        "accepted": 192,
+        "cells": 7,
+        "phase_tuples": 2187
+      }
+    ],
+    "arbitrary_clock_interpretation": "Remaining continuation suffix inside an odd-cell regular host",
+    "clock_range": [
+      3,
+      120
+    ],
+    "conditional_cases": 354,
+    "generalized_transfer_determinant": -2
+  },
+  "spectra": {
+    "independent_spectral_method": "SymPy Berkowitz characteristic polynomial, exact factorization and root count",
+    "independently_rebuilt_incidence_matrices": 8,
+    "largest_residual_roots": {
+      "compressed": {
+        "degree": 7,
+        "interval": [
+          "64247/100000",
+          "642471/1000000"
+        ],
+        "modulus": 23
+      },
+      "full": {
+        "degree": 7,
+        "interval": [
+          "635789/1000000",
+          "63579/100000"
+        ],
+        "modulus": 31
+      },
+      "paired": {
+        "degree": 5,
+        "interval": [
+          "573377/1000000",
+          "286689/500000"
+        ],
+        "modulus": 19
+      }
+    },
+    "order4_words": 8,
+    "order5_words": 64
+  },
+  "status": "PASS: independent audit of scoped fractions claims",
+  "sympy_version": "1.14.0"
+}

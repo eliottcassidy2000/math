@@ -1,0 +1,14 @@
+{
+  "checks": 818,
+  "coefficient_ring": "Q[w]/(w^2+w+1)",
+  "completed_components": 3,
+  "frequency_orbit_sizes": [
+    1,
+    1,
+    1,
+    6
+  ],
+  "partial_components": 5,
+  "producer_imports": false,
+  "status": "PASS"
+}

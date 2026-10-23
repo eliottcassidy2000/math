@@ -1,0 +1,24 @@
+{
+  "status": "Independent audit PASS; two producer prose clarifications accepted; no mathematical correction needed",
+  "normal_optimized_stdout_byte_match": true,
+  "exact_check_count": 7992,
+  "dependency": "SymPy 1.14.0; exact arithmetic; Berkowitz independent of producer Newton traces",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "d9b6d48bee07b95b94fc1f08680369dc900572a62680a3bff4519bfdff4a3b9a"
+    },
+    {
+      "path": "check.py",
+      "sha256": "875d596d03884d1334f935e953cfb041f3b8c3d67849fae27f0b01743ba7dfea"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "bf7d0dc9169f3147a242388237931a3fe355c106a2995435ae534745b255f09c"
+    },
+    {
+      "path": "source_pins.json",
+      "sha256": "c3883f19a873ec849a5615f01391b390aa3eebc0f0d2d6899e27982815257058"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "commit": "a201515762059411a745360467afff224f7db4c1",
+  "hash_basis": "exact immutable Git blob bytes",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-2089-persistent-cut-affine-holonomy-normal-form.md",
+      "sha256": "bca8b5c043b7e6fe022e0ff9ef0ee25675b9299e125e658e8f116f69e85764e2"
+    },
+    {
+      "path": "01-canon/theorems/THM-2622-affine-torsor-holonomy-fixed-section-spectrum-and-v4-c13-dictionary.md",
+      "sha256": "ffcbd93f19d0b669c53501216c0c790ff60faf041907e75d1ab0512a4e492844"
+    },
+    {
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/NATIVE.md",
+      "sha256": "af91300a2ed41501f4431f3947a388fc3ad75bcb373ec7f15adab42401f673b1"
+    },
+    {
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/native.py",
+      "sha256": "e525b4b81267d0ab7328644c3048b17b017ff4d611cf83067f51aa2d3c77ae87"
+    },
+    {
+      "path": "05-knowledge/results/shared_frame_restrictions_20261023/RESTRICTIONS.md",
+      "sha256": "d821a9da5100f204c5e5c840569040e7950627b0a6ea4188c095243d8cb22f02"
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/fourier/THEOREM.md",
+      "sha256": "0a15fbd96c8da24d7403af019b8c5c3d447acf44f0cdbe56c85be662b9a54395"
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/guards/README.md",
+      "sha256": "4fa1510d5587d743f5f1de45d800387bc795f19058152cad1b329982afa6983d"
+    },
+    {
+      "path": "05-knowledge/results/endpoint_overlap_ports_20261023/README.md",
+      "sha256": "3dec38e64eee48ee8c9cb9697e822f5c2339e513caca82a97f4c438bb70a5b3d"
+    }
+  ]
+}

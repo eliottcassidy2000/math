@@ -17,4 +17,10 @@ The anchor is actual native coordinate dependence and legal coupled moves preser
 - [Adaptive native observers](actual-guards/ADAPTIVE_OBSERVERS.md): exact optimal clock-query policies, preserving the actual source, original potential and target. [Pinned-endpoint supplement](actual-guards/ENDPOINT_OBSERVERS.md). [Independent audit](audit-adaptive/AUDIT.md).
 - [Legal selected coupled packets](coupled-moves/THEOREM.md): actual fixed shared arcs, per-slot universal guard preservation, and a necessary three-slot assignment cycle. [Independent audit](audit-coupled/AUDIT.md).
 
-The irrational-spectrum and native-holonomy packets and final synthesis are still being integrated. No full canonical wiring classification is claimed.
+## Third verified research packet
+
+- [Exact spectra and native ternary fractions](fractions-ternary/README.md), with [independent audit](audit-fractions/README.md).
+- [Guarded lift holonomy](lift-holonomy/README.md), with [independent native and affine audit](audit-holonomy/AUDIT.md).
+- [Sharp multivariable ternary filtration](ternary-newton/MULTIVARIABLE_FILTRATION.md), with [independent review](audit-newton/MULTIVARIABLE_REVIEW.md).
+
+A further original-character rectangle obstruction and final synthesis are still being checked. No full canonical wiring classification is claimed.

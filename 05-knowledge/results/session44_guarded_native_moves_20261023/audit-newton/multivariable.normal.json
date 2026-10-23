@@ -1,0 +1,817 @@
+{
+  "checks": 20864,
+  "reports": [
+    {
+      "boundaries": [
+        {
+          "degree": 2,
+          "monomials": 1,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 3,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 4,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 1,
+      "modulus": 3,
+      "nilpotency_index": 3,
+      "r": 1,
+      "regular_dimension": 3
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 4,
+          "monomials": 1,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              4
+            ]
+          ]
+        },
+        {
+          "degree": 5,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 6,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 2,
+      "modulus": 9,
+      "nilpotency_index": 5,
+      "r": 1,
+      "regular_dimension": 3
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 6,
+          "monomials": 1,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              6
+            ]
+          ]
+        },
+        {
+          "degree": 7,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 8,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 3,
+      "modulus": 27,
+      "nilpotency_index": 7,
+      "r": 1,
+      "regular_dimension": 3
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 8,
+          "monomials": 1,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              8
+            ]
+          ]
+        },
+        {
+          "degree": 9,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 10,
+          "monomials": 1,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 4,
+      "modulus": 81,
+      "nilpotency_index": 9,
+      "r": 1,
+      "regular_dimension": 3
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 4,
+          "monomials": 5,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 5,
+          "monomials": 6,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 6,
+          "monomials": 7,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 1,
+      "modulus": 3,
+      "nilpotency_index": 5,
+      "r": 2,
+      "regular_dimension": 9
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 6,
+          "monomials": 7,
+          "surviving": 2,
+          "surviving_exponents": [
+            [
+              2,
+              4
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 7,
+          "monomials": 8,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 8,
+          "monomials": 9,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 2,
+      "modulus": 9,
+      "nilpotency_index": 7,
+      "r": 2,
+      "regular_dimension": 9
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 8,
+          "monomials": 9,
+          "surviving": 3,
+          "surviving_exponents": [
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              6,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 9,
+          "monomials": 10,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 10,
+          "monomials": 11,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 3,
+      "modulus": 27,
+      "nilpotency_index": 9,
+      "r": 2,
+      "regular_dimension": 9
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 10,
+          "monomials": 11,
+          "surviving": 4,
+          "surviving_exponents": [
+            [
+              2,
+              8
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              8,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 11,
+          "monomials": 12,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 12,
+          "monomials": 13,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 4,
+      "modulus": 81,
+      "nilpotency_index": 11,
+      "r": 2,
+      "regular_dimension": 9
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 6,
+          "monomials": 28,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 7,
+          "monomials": 36,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 8,
+          "monomials": 45,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 1,
+      "modulus": 3,
+      "nilpotency_index": 7,
+      "r": 3,
+      "regular_dimension": 27
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 8,
+          "monomials": 45,
+          "surviving": 3,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              4
+            ],
+            [
+              2,
+              4,
+              2
+            ],
+            [
+              4,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 9,
+          "monomials": 55,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 10,
+          "monomials": 66,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 2,
+      "modulus": 9,
+      "nilpotency_index": 9,
+      "r": 3,
+      "regular_dimension": 27
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 10,
+          "monomials": 66,
+          "surviving": 6,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              6
+            ],
+            [
+              2,
+              4,
+              4
+            ],
+            [
+              2,
+              6,
+              2
+            ],
+            [
+              4,
+              2,
+              4
+            ],
+            [
+              4,
+              4,
+              2
+            ],
+            [
+              6,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 11,
+          "monomials": 78,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 12,
+          "monomials": 91,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 3,
+      "modulus": 27,
+      "nilpotency_index": 11,
+      "r": 3,
+      "regular_dimension": 27
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 12,
+          "monomials": 91,
+          "surviving": 10,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              8
+            ],
+            [
+              2,
+              4,
+              6
+            ],
+            [
+              2,
+              6,
+              4
+            ],
+            [
+              2,
+              8,
+              2
+            ],
+            [
+              4,
+              2,
+              6
+            ],
+            [
+              4,
+              4,
+              4
+            ],
+            [
+              4,
+              6,
+              2
+            ],
+            [
+              6,
+              2,
+              4
+            ],
+            [
+              6,
+              4,
+              2
+            ],
+            [
+              8,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 13,
+          "monomials": 105,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 14,
+          "monomials": 120,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 4,
+      "modulus": 81,
+      "nilpotency_index": 13,
+      "r": 3,
+      "regular_dimension": 27
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 8,
+          "monomials": 165,
+          "surviving": 1,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 9,
+          "monomials": 220,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 10,
+          "monomials": 286,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 1,
+      "modulus": 3,
+      "nilpotency_index": 9,
+      "r": 4,
+      "regular_dimension": 81
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 10,
+          "monomials": 286,
+          "surviving": 4,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              2,
+              4
+            ],
+            [
+              2,
+              2,
+              4,
+              2
+            ],
+            [
+              2,
+              4,
+              2,
+              2
+            ],
+            [
+              4,
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 11,
+          "monomials": 364,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 12,
+          "monomials": 455,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 2,
+      "modulus": 9,
+      "nilpotency_index": 11,
+      "r": 4,
+      "regular_dimension": 81
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 12,
+          "monomials": 455,
+          "surviving": 10,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              2,
+              6
+            ],
+            [
+              2,
+              2,
+              4,
+              4
+            ],
+            [
+              2,
+              2,
+              6,
+              2
+            ],
+            [
+              2,
+              4,
+              2,
+              4
+            ],
+            [
+              2,
+              4,
+              4,
+              2
+            ],
+            [
+              2,
+              6,
+              2,
+              2
+            ],
+            [
+              4,
+              2,
+              2,
+              4
+            ],
+            [
+              4,
+              2,
+              4,
+              2
+            ],
+            [
+              4,
+              4,
+              2,
+              2
+            ],
+            [
+              6,
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 13,
+          "monomials": 560,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 14,
+          "monomials": 680,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 3,
+      "modulus": 27,
+      "nilpotency_index": 13,
+      "r": 4,
+      "regular_dimension": 81
+    },
+    {
+      "boundaries": [
+        {
+          "degree": 14,
+          "monomials": 680,
+          "surviving": 20,
+          "surviving_exponents": [
+            [
+              2,
+              2,
+              2,
+              8
+            ],
+            [
+              2,
+              2,
+              4,
+              6
+            ],
+            [
+              2,
+              2,
+              6,
+              4
+            ],
+            [
+              2,
+              2,
+              8,
+              2
+            ],
+            [
+              2,
+              4,
+              2,
+              6
+            ],
+            [
+              2,
+              4,
+              4,
+              4
+            ],
+            [
+              2,
+              4,
+              6,
+              2
+            ],
+            [
+              2,
+              6,
+              2,
+              4
+            ],
+            [
+              2,
+              6,
+              4,
+              2
+            ],
+            [
+              2,
+              8,
+              2,
+              2
+            ],
+            [
+              4,
+              2,
+              2,
+              6
+            ],
+            [
+              4,
+              2,
+              4,
+              4
+            ],
+            [
+              4,
+              2,
+              6,
+              2
+            ],
+            [
+              4,
+              4,
+              2,
+              4
+            ],
+            [
+              4,
+              4,
+              4,
+              2
+            ],
+            [
+              4,
+              6,
+              2,
+              2
+            ],
+            [
+              6,
+              2,
+              2,
+              4
+            ],
+            [
+              6,
+              2,
+              4,
+              2
+            ],
+            [
+              6,
+              4,
+              2,
+              2
+            ],
+            [
+              8,
+              2,
+              2,
+              2
+            ]
+          ]
+        },
+        {
+          "degree": 15,
+          "monomials": 816,
+          "surviving": 0,
+          "surviving_exponents": []
+        },
+        {
+          "degree": 16,
+          "monomials": 969,
+          "surviving": 0,
+          "surviving_exponents": []
+        }
+      ],
+      "k": 4,
+      "modulus": 81,
+      "nilpotency_index": 15,
+      "r": 4,
+      "regular_dimension": 81
+    }
+  ],
+  "scope": "regular representation only; arbitrary modules may have smaller index",
+  "status": "PASS"
+}

@@ -1,0 +1,130 @@
+{
+  "algebra": {
+    "affine_cover_cases": 1080,
+    "affine_orbit_size_hostile": [
+      1,
+      2
+    ],
+    "incorrectly_completed_matching_components": 3,
+    "partial_edge_actual_components": 5,
+    "translation_cover_cases": 819
+  },
+  "characters": {
+    "affine_character_identities": 34992,
+    "coefficient_ring": "Q[w]/(w^2+w+1)",
+    "floating_arithmetic": false,
+    "translation_block_basis_entries": 729
+  },
+  "exact_check_count": 41229,
+  "native": {
+    "additional_kernel_translation": [
+      1,
+      0
+    ],
+    "arcs": 190,
+    "base_gap": "8/9",
+    "base_vertices": 3,
+    "compatible_native_lifts": 27,
+    "component_gap": "16/27 * (1-cos(2*pi/9))",
+    "component_label": "(b-a)/3 mod3",
+    "electrical_scope": "All class potentials preserved by explicit source/partner isomorphisms; no numeric order20 potential asserted",
+    "fibre_dimension": 2,
+    "fibre_size": 9,
+    "fixed_actual_endpoint_ports": [
+      0,
+      19
+    ],
+    "holonomy_rank": 1,
+    "holonomy_translation": [
+      1,
+      1
+    ],
+    "native_component_sizes": [
+      9,
+      9,
+      9
+    ],
+    "native_edge_scope": "Specified actual automorphism moves, not all native metagraph edges",
+    "order": 20,
+    "repaired_components": 1,
+    "repaired_holonomy_rank": 2,
+    "scaled_component_charpoly": [
+      1,
+      -99,
+      3780,
+      -67452,
+      491742,
+      457974,
+      -20399436,
+      34077780,
+      178430121,
+      -406259307
+    ],
+    "scaled_component_factorization": "(z-27)(z-3)^2(z^3-33z^2+171z+1293)^2",
+    "source_arc_sha256": "7a2b674fa66636ff97abe4f0f7da0bb5bc518ce7d0866811260a10612e4e6abc",
+    "supplied_chart_candidates": 81
+  },
+  "source_commit": "a201515762059411a745360467afff224f7db4c1",
+  "spectral": {
+    "base_eigenvalues": [
+      "1",
+      "1/9"
+    ],
+    "fixed_base_gap": "8/9",
+    "lifts": [
+      {
+        "components": 3,
+        "eigenvalues": [
+          "1",
+          "1/9",
+          "1",
+          "1",
+          "1/9",
+          "1/9"
+        ],
+        "epsilon": "0",
+        "gap": "0"
+      },
+      {
+        "components": 1,
+        "eigenvalues": [
+          "1",
+          "1/9",
+          "17/18",
+          "17/18",
+          "1/18",
+          "1/18"
+        ],
+        "epsilon": "1/27",
+        "gap": "1/18"
+      },
+      {
+        "components": 1,
+        "eigenvalues": [
+          "1",
+          "1/9",
+          "53/54",
+          "53/54",
+          "5/54",
+          "5/54"
+        ],
+        "epsilon": "1/81",
+        "gap": "1/54"
+      },
+      {
+        "components": 1,
+        "eigenvalues": [
+          "1",
+          "1/9",
+          "161/162",
+          "161/162",
+          "17/162",
+          "17/162"
+        ],
+        "epsilon": "1/243",
+        "gap": "1/162"
+      }
+    ]
+  },
+  "status": "PROVED scoped statements; FINITE-EXACT controls"
+}

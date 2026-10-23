@@ -1,0 +1,14 @@
+{
+  "files": {
+    "AUDIT.md": "3e08a56550a71f600229420585c10be04ead8bff660be6605fac219591bbcf72",
+    "SECOND_REVIEW.md": "c50363e63bce993fa2ee046cef9abe35a303818c679de8a6c2468c93c18862d6",
+    "check.py": "eed6510070e6700718c580aa332885146e78223590b9f7d7cfb9638a466a38e1",
+    "independent-normal.json": "bdee8cc4413c87b15ed180b4245df5abb20510cf40f775d11ccbf58206b26f87",
+    "independent-optimized.json": "bdee8cc4413c87b15ed180b4245df5abb20510cf40f775d11ccbf58206b26f87",
+    "independent_affine_blocks.py": "c9998bff76e294af109a6576a4bd0615bcd64df9303470dc2c4bbe9d8c2876d2",
+    "normal.json": "f56bb4cfbfc75999f106577f884cb7c285e16a5d210e26b2891379e79c1b485c",
+    "optimized.json": "f56bb4cfbfc75999f106577f884cb7c285e16a5d210e26b2891379e79c1b485c",
+    "producer-normal.json": "9585908464baa1413e9603c738257f25a427211bbb9489ebb8e21433b1d000bb",
+    "producer-optimized.json": "9585908464baa1413e9603c738257f25a427211bbb9489ebb8e21433b1d000bb"
+  }
+}

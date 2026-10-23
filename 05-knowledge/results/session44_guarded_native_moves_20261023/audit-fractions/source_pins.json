@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b592f9eedd1ef87903492c642c02975880a41b0c5dff1004679de47f77d0fdb6"
+    },
+    {
+      "path": "check.py",
+      "sha256": "048658b344ac555877a3e3acc83f1e3f19ae406cba18c80340cd29aab835ce2a"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "66df7b10b03291217af223f4dc988f0421bb2d36158847316b095978ce3b8d35"
+    }
+  ]
+}

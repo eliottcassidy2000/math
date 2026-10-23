@@ -1,0 +1,36 @@
+{
+  "status": "EXACT NORMAL/OPTIMIZED PASS; independent audit requested",
+  "checks_per_replay": 2816,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b592f9eedd1ef87903492c642c02975880a41b0c5dff1004679de47f77d0fdb6",
+      "bytes": 17669
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "97915ac13cc98d87166f35a0607c4c503a84ad87cd25796c15798a0f4b923b73",
+      "bytes": 2923
+    },
+    {
+      "path": "check.py",
+      "sha256": "048658b344ac555877a3e3acc83f1e3f19ae406cba18c80340cd29aab835ce2a",
+      "bytes": 19335
+    },
+    {
+      "path": "normal.json",
+      "sha256": "1eae5e2f9fe6e3a84dd94e0d316b6cc9407f9b2f540276744b460ea3e18c5ce1",
+      "bytes": 147
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "1eae5e2f9fe6e3a84dd94e0d316b6cc9407f9b2f540276744b460ea3e18c5ce1",
+      "bytes": 147
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "66df7b10b03291217af223f4dc988f0421bb2d36158847316b095978ce3b8d35",
+      "bytes": 41715
+    }
+  ]
+}

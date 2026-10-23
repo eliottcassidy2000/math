@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": 408,
+  "native_paths": 27,
+  "unrepaired_components": [
+    9,
+    9,
+    9
+  ],
+  "native_scaled_characteristic_polynomial": [
+    "1",
+    "-99",
+    "3780",
+    "-67452",
+    "491742",
+    "457974",
+    "-20399436",
+    "34077780",
+    "178430121",
+    "-406259307"
+  ],
+  "scope": "Independent native and spectral hostile audit; general holonomy proof reviewed separately."
+}
