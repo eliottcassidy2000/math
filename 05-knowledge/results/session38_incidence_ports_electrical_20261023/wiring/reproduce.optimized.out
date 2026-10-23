@@ -1,0 +1,4 @@
+Canonical certificates: 6880 classes; 403193 score-block permutations; 268435456 labelled tournaments
+Path enumeration: 2143304 Hamilton paths; 2097152 distinct masks; 13.31 seconds
+Full graph: 3528 merged nodes; 460699 directed endpoint pairs; 956339 ordinary port entries; 438216 undirected support pairs incl loops; 1 components
+DONE 50.03 seconds; receipt matched

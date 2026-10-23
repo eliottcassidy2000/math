@@ -1,0 +1,40 @@
+{
+  "class_fields_compared": 61920,
+  "colored_directed_entries_compared": 460816,
+  "components": {
+    "all": {
+      "count": 1,
+      "largest": 3528,
+      "size_histogram": {
+        "3528": 1
+      }
+    },
+    "black": {
+      "count": 4,
+      "largest": 3525,
+      "size_histogram": {
+        "1": 3,
+        "3525": 1
+      }
+    },
+    "blue": {
+      "count": 3353,
+      "largest": 176,
+      "size_histogram": {
+        "1": 3352,
+        "176": 1
+      }
+    }
+  },
+  "directed_endpoint_pairs_compared": 460699,
+  "explicit_checks": 3391642,
+  "mask_assignment_compared": 2097152,
+  "mask_assignment_sha256": "636f0ae8f69455d4d39143a7c612260cfbb2a9736c91ca67fe2ac3ea65449be1",
+  "port_entries_compared": 956339,
+  "producer_files": {
+    "classes.tsv.gz": "227eede83c884d90b060a5da6b8fc36a65bc788be9043c3f05b46499388855b4",
+    "edges.tsv.gz": "aecbcc993eac35fe4c6dca6741b62594131edaa34e157ea78c37859f451a3b4c",
+    "ports.tsv.gz": "ce886c5755cfaeaaddf8f45c5a889d47d6036c9d24bf520d29251289953ac3b9"
+  },
+  "status": "PASS"
+}

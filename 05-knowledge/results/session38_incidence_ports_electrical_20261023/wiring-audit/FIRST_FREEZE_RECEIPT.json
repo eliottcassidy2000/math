@@ -1,0 +1,43 @@
+{
+  "base_commit": "2130e7633805521d4e24355c37596bd2cd79f044",
+  "dependencies": [
+    "C++17 compiler",
+    "Python3 standard library"
+  ],
+  "generated_intermediate_sha256": {
+    "independent_class_of_mask.u16le": "636f0ae8f69455d4d39143a7c612260cfbb2a9736c91ca67fe2ac3ea65449be1",
+    "independent_classes.tsv": "d68b1f65bee685befb80c7c113827f55a4c449ee0731e1a3acc87a3c648d9ac4",
+    "independent_directed_edges.tsv": "1ddb146683328cb371d9d365643393e9bfb8a75c6b112ad5f3e987193b0331f5",
+    "independent_ports.tsv": "875c7ececef20af9d7703d8ea1860bb3f0ac3ecb859a799910923b13cae58aa6",
+    "independent_undirected_edges.tsv": "d5b26aebdbb40953504dbb2375cf03a5590eeb2afd8d63d33b12ff0f5185ee61"
+  },
+  "normal_optimized_comparison_equal": true,
+  "normal_optimized_graph_equal": true,
+  "producer_data_directory": "../wiring",
+  "publication_whitelist": [
+    "FIRST_WIRING_AUDIT.md",
+    "FIRST_README.md",
+    "independent_wiring.cpp",
+    "classes_input_n8.tsv",
+    "compare_ledgers.py",
+    "audit_graph_inventory.py",
+    "independent_receipt.json",
+    "comparison_receipt.json",
+    "independent_graph_receipt.json",
+    "FIRST_FREEZE_RECEIPT.json",
+    "FIRST_SHA256SUMS"
+  ],
+  "published_sha256": {
+    "FIRST_README.md": "d4a79bc230b9fc0f03df719d0c76c7fd1552d4c8994040aa3b0eb2153e305087",
+    "FIRST_WIRING_AUDIT.md": "3143e2c3f2ccb16fc247d3fb762f99a49b774f55e1689032d2d4d8149aca419b",
+    "audit_graph_inventory.py": "5c343fe79b6bc35f0f9f02c42edcbff96a8e28d3f0a00ce1e8633e1d02daeaa8",
+    "classes_input_n8.tsv": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+    "compare_ledgers.py": "c76a3ab26f14c1e7af25fede5eb850000a61f571c5f66a796c814f1862fd398a",
+    "comparison_receipt.json": "17a1695f28b5a2aee7691a48e81b6ee372985b83a06ca42cdba9f5df16066cf4",
+    "independent_graph_receipt.json": "6bebb1c17f2dbd2ab8d6710251f430e91ce061976239329c81d46be0c092e82e",
+    "independent_receipt.json": "4048e5eab49c1d3e25aa189ee5f8a2e3d549c34030bc084ab61ea14f15c63f78",
+    "independent_wiring.cpp": "8f7a464b3be7f503ece7afc25f1f06dcd951d3f76631705ec34a80da5e2e0fbb"
+  },
+  "source_input_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv",
+  "status": "FROZEN: independent exhaustive n8 wiring"
+}
