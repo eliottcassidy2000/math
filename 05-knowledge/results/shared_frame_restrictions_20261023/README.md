@@ -51,14 +51,22 @@ shadow**, `00-navigation/META-PATTERNS.md`. No new generic method is promoted.
   exact charge-pair contraction, projective 13/4 incidence, and the arithmetic
   cycle's full census; incoming stronger results are credited rather than
   republished as new discoveries.
+- [RETURN_COST.md](RETURN_COST.md): a source-indexed guarded-excursion tail,
+  with logarithmic source-weight dependence in the mean bound; acceptance
+  density and the actual elapsed clock remain explicit.
+- [LATE_INCOMING.md](LATE_INCOMING.md): concurrent overlap, the compressed
+  versus full graph carrier, exponential coset width versus shared-state
+  transfer, and the incoming cyclotomic incidence boundary.
 - [AUDIT.md](AUDIT.md): independent computational paths within this session,
   scope boundaries, incoming provenance and remaining questions.
 
-Run `python3 check.py` and `python3 native.py` from this folder, and repeat
-with `python3 -O`. All arithmetic checks use exact integers/rationals.
+Run `python3 reproduce.py` to replay all four checkers, in normal and
+optimized modes. All arithmetic checks use exact integers/rationals.
 Receipts and a SHA256 manifest record the final inputs and outputs.
 
 No standalone global conjecture is resolved by these scoped results.
 The next native target is an exact comparison between authenticated
 port-preserving moves and a useful block resampling chain, including its
-component labels and nonconstant guard tables.
+component labels, acceptance mass, nonconstant guard tables, and integer
+excursion length. Incoming complexity results make bounded shared-state
+width a more promising target than a universal small explicit coset bank.

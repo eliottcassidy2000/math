@@ -1,0 +1,23 @@
+{
+  "cube": {
+    "source_expectation_checks": 1024,
+    "source_time_checks": 12288,
+    "subsets": 255,
+    "total_checks": 26883
+  },
+  "maximum_time": 12,
+  "nonuniform": {
+    "source_expectation_checks": 12,
+    "source_time_checks": 144,
+    "subsets": 7,
+    "total_checks": 323
+  },
+  "refresh": {
+    "source_expectation_checks": 12,
+    "source_time_checks": 144,
+    "subsets": 7,
+    "total_checks": 323
+  },
+  "sharp_subsets": 6,
+  "status": "FINITE-EXACT PASS"
+}

@@ -190,8 +190,8 @@ the nontrivial cycle. For N/2, the exact height polynomial is
     4656 z + 120 z^2 + 16 z^3 + 6 z^4 + z^7.             (9)
 
 The nontrivial cycle becomes 2<->4, but its divisor basin still has size
-143. The terminal-1 basin falls to 4,656. Changing from the Baby Monster
-order to the actual involution-centralizer order 2.B is therefore visible
+143. The terminal-1 basin falls to 4,656. Replacing |B| by |2.B| in the
+denominator of the originating group-order ratio is therefore visible
 in the dynamics. The group-order origin and centralizer correction remain
 inherited from the prior Monster packet; no group-theoretic new theorem
 is inferred from this arithmetic census.

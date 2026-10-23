@@ -3,7 +3,7 @@
 23 October 2026. **Same-agent proof audit and independent computational
 paths**, not an independent-subagent review. No subagent was requested or
 spawned for this session. Scoped proofs are in RESTRICTIONS.md, NATIVE.md
-and CONNECTIONS.md; finite receipts do not establish their infinite
+CONNECTIONS.md and RETURN_COST.md; finite receipts do not establish their infinite
 quantifiers by extrapolation.
 
 ## What was checked by a second route
@@ -44,6 +44,14 @@ quantifiers by extrapolation.
    contraction, the invariant-carrier brackets, the punctured cotangent
    Jacobian, and the averaged-bracket hostile. These expose and repair
    two local statements in THM-1345; MISTAKES.md retains the lineage.
+8. Guarded excursions: exact PSD certificates check the killed-kernel
+   contraction on all 255 nonempty subsets of the eight-word order-three
+   coupling, plus every nonempty subset of two nonuniform three-state
+   controls. There are 12,576 source/time tests through time 12 and 1,048
+   exact source expectation tests. The latter solve a linear system,
+   independently of the tail iteration. Rational squaring determines the
+   capped-tail cutoff without numerical logarithms. Complete refresh
+   attains the killed contraction and exposes the necessary alpha cost.
 
 All checks remain active under `python -O`. Receipts must be byte-identical
 in normal and optimized modes. Python integer arithmetic is exact; SymPy
@@ -72,6 +80,11 @@ test, or Lean certification is used.
 - General Collatz entry, planar JC and six-colour forcing are unchanged
   open targets. No map from our auxiliary gap to their missing universal
   estimate has been supplied.
+- Trace sampling preserves a return-event gap but can leave the accepted
+  carrier during an excursion. RETURN_COST retains the actual source
+  weight and acceptance mass, but does not establish a native lift or an
+  independent lower bound for that mass. Its logarithmic source factor is
+  obtained by summing the capped tail, not by changing the clock.
 
 ## Incoming work and attribution
 
@@ -81,8 +94,20 @@ criterion, Gaussian phase theorem, finite-degree extension and both audit
 reports. Its literal cycle and divisor counts overlap our concurrent
 calculation; its least-realization theorem is stronger and is credited.
 Its sharp C72 degree boundary replaces a merely heuristic mod-8/mod-9
-analogy. The current session's subgroup restrictions, native lift consumer
-and explicit fixed-path return probabilities are the separate extensions.
+analogy. Later commits 9928396ee6, e858f56b33, 8a73412b98 and 2489ccd2d9
+were read before the last extension. The fixed-path singleton and the
+order-four 7/15 component gap overlap Session43's concurrent coupling
+proof. The subgroup restriction formulas and general one-edge-row return
+formula remain separate extensions. The C9 native consumer is a literal
+whole-source-transport fixture; incoming assembly, conditional-prefix and
+complexity results have broader, different scopes.
+
+LATE_INCOMING.md records the compressed/full carrier distinction, the
+branch-width and template-complexity boundaries, and cyclotomic affine
+coordinates. Incoming audit reports were read; this session did not
+re-run those entire computations or independently re-prove their hardness
+reductions. The new guarded-excursion tail extends the incoming trace
+theorem and has its own exact checker.
 
 Earlier recovered sources are linked in the proof notes with file slugs.
 The source manifest records immutable Git revisions and hashes. The
@@ -92,7 +117,7 @@ weakened to our simpler examples. No priority claim is made.
 ## Reproduction
 
 Run `python3 reproduce.py` in this folder (or use its absolute path).
-It checks packet hashes and reproduces all three receipts in both modes.
+It checks packet hashes and reproduces all four receipts in both modes.
 The repository's `agents/check_docs.py` and `git diff --check` are also
 required before final publication. No broad corpus or historic log rewrite
 is part of this session.

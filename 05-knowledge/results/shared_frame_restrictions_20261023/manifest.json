@@ -1,17 +1,21 @@
 {
   "files": {
-    "AUDIT.md": "d7f67e3e149f7fcbb78b6b33671d7c22ababb92f69f5e80f20c5dee2c5877eb2",
-    "CONNECTIONS.md": "4a83f7e265ba9938c536d2e1551351e15f553dfc7adc1d879cd798d1728e156b",
+    "AUDIT.md": "c6a0d0c2ab8f37872aae345daa9ea834b5f34d1a521493864038b1cb0cc83433",
+    "CONNECTIONS.md": "6d82579473bd511e386b216af6917061bb8f82a8a9e526d6d2db8abce7355068",
+    "LATE_INCOMING.md": "9707c16516a08e41304530eba8ed24dce4f6600a0a5854d35e3ae90a38e84cb4",
     "NATIVE.md": "af91300a2ed41501f4431f3947a388fc3ad75bcb373ec7f15adab42401f673b1",
-    "README.md": "134a51ef0af4d76c41b4d5dab1d173ec7951e25eb1c7e957af60994644822728",
+    "README.md": "3951c4bf2a8716b0dfc4b820a9064108c2a4db90bb305ebd5fb42ce64c78b386",
     "RESTRICTIONS.md": "d821a9da5100f204c5e5c840569040e7950627b0a6ea4188c095243d8cb22f02",
+    "RETURN_COST.md": "21a01ede51af495c0d675f6e8fdce1cdfaa451aee73b2417d627e8b856617a9b",
     "algebra.py": "7adc11e6b74fc07988901c2d23319a1729a93650bef1dc4108d62983264554be",
     "algebra_receipt.json": "306e01c777092e563701c882abcd3aa6e294c6c68db8a08bb05077969dc2d9c2",
     "check.py": "ca459a4458b2956da8cbe7c0b143f794a4feff056a5e5a56818cf471e42fbb17",
     "native.py": "e525b4b81267d0ab7328644c3048b17b017ff4d611cf83067f51aa2d3c77ae87",
     "native_receipt.json": "55188544f78f00d846b7926521324e77204034abc1a930d35cba6565ba8a9ea5",
     "receipt.json": "299a9cd8d1b5a4ba7660c0b85d0f75dad9616f70232d82355170316a42e170ef",
-    "reproduce.py": "dcf704563c713404ac64b2a5e14939593ef88bf22a1528cfc7b1744fa3882c90"
+    "reproduce.py": "40f911d1e498d5c0fbf060840605e584de43f05bcb9ba9b49f6058f483556e30",
+    "return_cost.py": "e49612441341cd9b3c22193042c257e4bc4948aa2a77850904305f24ad540006",
+    "return_cost_receipt.json": "01d60e0d40b772faaf8ec2ea7be43530e368abb9e30f7035550d0a00fab5d0fd"
   },
   "sources": [
     {
@@ -108,6 +112,66 @@
       "commit": "1eb9c41c519297779180f709d814ff64b2ef8511",
       "path": "05-knowledge/results/session43_observers_phase_guards_20261023/FINITE_GUARDS_AND_DEGREE.md",
       "sha256": "3a6603cc95de0d1c5c0cb10af4f162b4f83d19e078d6831ff0f0b244ca63c1e6"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/coupling/THEOREM.md",
+      "sha256": "82bcc37ce0365e8c172766e52ab0304555ccd3f468926faca8611a3fd5816413"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/native-ports/OBSERVER_BUNDLES_AND_NATIVE_PORTS.md",
+      "sha256": "6137afa1564ff6e2ff9d43e861db6f17a4eb065f15dba1e5bd8183f7a2e82eac"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/THEOREM.md",
+      "sha256": "71a2296fa95a9b456da3e9b8e99df9a75d1a9525899bca57c23c9bdfbcac61aa"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/native-complexity/THEOREM.md",
+      "sha256": "fba1e9a1a1fbd46004168c5f427f8f202ce429253ba5385fe6bb9ac6a2ba1d6f"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/audit-native-complexity/AUDIT.md",
+      "sha256": "e54b6a7ca7375940a0ba16c7c5604afd932aa9ca2e5d493d6a11e247cb95f057"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cyclotomic/NOTE.md",
+      "sha256": "7aaebb8dfa0326eef993c7cfd32f73f814a1b63aa0a1271309afe9d7c2239da4"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cyclotomic-lattice/NOTE.md",
+      "sha256": "611160ea28fd087a94a8f156021383234038d47f89cd5ffa488d03f3c93e2fd0"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/audit-cyclotomic-lattice/REPORT.md",
+      "sha256": "b35b1f173cccee2769fcb19b96fe0483e3866de5d0867113f9cbcc3983c34bfa"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/coupling/NATIVE_CONNECTEDNESS.md",
+      "sha256": "fb84548153d1a2157435a7d63f40b228c41277cb531575f68b871bd18fa8ec55"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/compiler/README.md",
+      "sha256": "80916b65ea984a480dd0edbfb503b15ed7c624608a1cd5b49ece451ba07f4c3d"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/trace/TRACE_WITH_CLOCKS.md",
+      "sha256": "4da563a28888c36b71a38db309200168b84b13006705f34cfa22e039689709dc"
+    },
+    {
+      "commit": "2489ccd2d9c0ea31028e92a455717bb2991e8790",
+      "path": "05-knowledge/results/hamiltonian_observer_restrictions_20261023/INCOMING.md",
+      "sha256": "9c16bcebc0df1d1340744a7cd2123aeb64bd8054372e4a01a320c46ed1970dac"
     }
   ],
   "status": "PROVED scoped / FINITE-EXACT; same-agent audit"
