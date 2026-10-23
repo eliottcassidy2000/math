@@ -1,0 +1,9 @@
+{
+  "inherited_commit": "45c5d817564d3c62e3150d394810675df44a2354",
+  "core_merged_owner": 1238,
+  "core_canonical_code": 29558785,
+  "files": {
+    "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "05-knowledge/results/session44_guarded_native_moves_20261023/coupled-moves/THEOREM.md": "de1d740e1b64f591c97416dd1623bfa017c508b88f947ac78943451471df654d"
+  }
+}

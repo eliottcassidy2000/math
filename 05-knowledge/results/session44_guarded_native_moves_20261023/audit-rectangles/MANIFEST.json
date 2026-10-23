@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 16513,
+      "name": "audit.py",
+      "sha256": "5526d0377296368350c1653281768571aa7b4afe2181a5189cd490a3d50a70ab"
+    },
+    {
+      "bytes": 9959,
+      "name": "AUDIT_RECTANGLE_BANK.md",
+      "sha256": "33dd2a35a636806f543322929a21f893417eb35b68b4e422772968ef4344410b"
+    },
+    {
+      "bytes": 477,
+      "name": "SOURCE_PINS.json",
+      "sha256": "69db5db20b972747aa157fda3e1e9c1cca37bcaf4154aa1023b51b38f03d7365"
+    },
+    {
+      "bytes": 1314,
+      "name": "PRODUCER_PINS.json",
+      "sha256": "02bd40cdfdc07422e208d5ab93286e37e1755a411f7df09f9e6bfe8e93dbfbe2"
+    },
+    {
+      "bytes": 6486,
+      "name": "receipt.json",
+      "sha256": "6c2ea7b97b9d3e0c4068ae5fa0430a5696dc48f1e1118a27e9d620334a9019c7"
+    },
+    {
+      "bytes": 6486,
+      "name": "normal.out",
+      "sha256": "6c2ea7b97b9d3e0c4068ae5fa0430a5696dc48f1e1118a27e9d620334a9019c7"
+    },
+    {
+      "bytes": 6486,
+      "name": "optimized.out",
+      "sha256": "6c2ea7b97b9d3e0c4068ae5fa0430a5696dc48f1e1118a27e9d620334a9019c7"
+    },
+    {
+      "bytes": 4265,
+      "name": "producer-normal.json",
+      "sha256": "a896b148a0c722ef087598890047cb7a97536cccbd0ed8d3f97c4f514c6f1015"
+    },
+    {
+      "bytes": 4265,
+      "name": "producer-optimized.json",
+      "sha256": "a896b148a0c722ef087598890047cb7a97536cccbd0ed8d3f97c4f514c6f1015"
+    }
+  ],
+  "independent_checks_per_mode": 898404,
+  "no_producer_code_imports": true,
+  "normal_and_optimized_identical": true,
+  "producer_checks_per_mode": 8820,
+  "producer_receipt_reproduced_exactly": true,
+  "status": "PASS"
+}

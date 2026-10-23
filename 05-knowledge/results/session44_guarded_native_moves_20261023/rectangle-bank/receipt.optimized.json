@@ -1,0 +1,232 @@
+{
+  "charge_orders": [
+    {
+      "charge": [
+        1238,
+        2246
+      ],
+      "exact_order": 4,
+      "image_potential_sha256": "883189cf01dd51bc0cda85489b73bd8f73aa4b0385bb595c0a2585eb2bbb8945",
+      "lower_separator_mod4_lift_index": 0,
+      "separator_difference": 2,
+      "twice_charge_pairing": 4,
+      "upper_coefficient": 4
+    },
+    {
+      "charge": [
+        881,
+        2762
+      ],
+      "exact_order": 4,
+      "image_potential_sha256": "2926de5b2d61663f25b5c33de9e84fbc31751050f4b31e7a4d1151e49db828aa",
+      "lower_separator_mod4_lift_index": 0,
+      "separator_difference": 2,
+      "twice_charge_pairing": 4,
+      "upper_coefficient": 4
+    },
+    {
+      "charge": [
+        2650,
+        2843
+      ],
+      "exact_order": 4,
+      "image_potential_sha256": "f8b04996df338f4319112c2d72fa43c43cab308c36678b7c90fc16ba412d8210",
+      "lower_separator_mod4_lift_index": 1,
+      "separator_difference": 2,
+      "twice_charge_pairing": 4,
+      "upper_coefficient": 4
+    }
+  ],
+  "checks": 8820,
+  "conclusion": "Each incoming nonzero injective rectangle fails the universal mod8 bank. The same source pair has no nonzero incidence perturbation with all net target amplitudes in[-1,1]. Vanishing guards do not certify native wiring or global injectivity.",
+  "even_net_insufficiency": {
+    "harmonic_source": "original eighth_radical_lifts_mod8[0]",
+    "net_target_vector": [
+      [
+        0,
+        2
+      ],
+      [
+        5,
+        -2
+      ]
+    ],
+    "scope": "signed algebraic hostile, not an authenticated native port replacement",
+    "source_defect_mod8": [
+      4,
+      4
+    ]
+  },
+  "net_unit_capacity_cases": 19,
+  "original_pair_rows": 438216,
+  "rectangles": [
+    {
+      "black_pair_coefficient": 2,
+      "exact_allowed_amplitudes": "2 divides a",
+      "minimum_positive_electrical_amplitude": 2,
+      "original_frozen_defect": [
+        -112,
+        112,
+        64,
+        -64
+      ],
+      "other_harmonic_defect": [
+        4,
+        -4,
+        4,
+        -4
+      ],
+      "other_harmonic_defect_mod8": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "pure_black_conductances": [
+        4,
+        2,
+        4,
+        4
+      ],
+      "sources": [
+        1238,
+        2246
+      ],
+      "targets": [
+        881,
+        2762
+      ]
+    },
+    {
+      "black_pair_coefficient": 2,
+      "exact_allowed_amplitudes": "2 divides a",
+      "minimum_positive_electrical_amplitude": 2,
+      "original_frozen_defect": [
+        128,
+        -128,
+        64,
+        -64
+      ],
+      "other_harmonic_defect": [
+        0,
+        0,
+        4,
+        -4
+      ],
+      "other_harmonic_defect_mod8": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "pure_black_conductances": [
+        4,
+        2,
+        4,
+        6
+      ],
+      "sources": [
+        1238,
+        2246
+      ],
+      "targets": [
+        2650,
+        2843
+      ]
+    }
+  ],
+  "scarce_native_paths": {
+    "2650": [
+      [
+        7,
+        0,
+        6,
+        4,
+        3,
+        1,
+        5,
+        2
+      ],
+      [
+        7,
+        3,
+        1,
+        0,
+        5,
+        2,
+        6,
+        4
+      ]
+    ],
+    "2762": [
+      [
+        7,
+        1,
+        0,
+        5,
+        2,
+        6,
+        4,
+        3
+      ]
+    ],
+    "2843": [
+      [
+        7,
+        0,
+        6,
+        4,
+        1,
+        5,
+        3,
+        2
+      ]
+    ],
+    "881": [
+      [
+        7,
+        1,
+        0,
+        4,
+        2,
+        6,
+        5,
+        3
+      ],
+      [
+        7,
+        2,
+        0,
+        6,
+        4,
+        3,
+        1,
+        5
+      ]
+    ]
+  },
+  "small_controls": {
+    "rectangle_ring_cases": 192,
+    "valuation_cases": 8151
+  },
+  "source_commit": "a201515762059411a745360467afff224f7db4c1",
+  "source_difference_character": {
+    "not_sparse": true,
+    "original_mod4_lift_index": 0,
+    "potential_sha256": "5740bc2409e02655bc9bb6053e48b341c334fb6c805955b65aa075eea357d74c",
+    "source_values": [
+      2,
+      0
+    ],
+    "support_size": 1757
+  },
+  "sparse_order_two_separator_nodes": [
+    1238,
+    2246,
+    881,
+    2762,
+    2650,
+    2843
+  ],
+  "status": "EXACT universal-bank rectangle obstruction"
+}

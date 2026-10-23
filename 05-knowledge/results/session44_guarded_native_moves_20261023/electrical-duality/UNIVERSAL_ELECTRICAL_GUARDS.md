@@ -46,8 +46,7 @@ There is no additional grounded boundary in that original definition.
 The input electrical receipt's actual frozen SHA256 is
 `417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27`.
 The older consumer's copied provenance hash is not substituted for these
-actual bytes. All current bytes and hashes are retained in `inputs/` and
-`receipt.json`; no Git changes or native classifications were made here.
+actual bytes. The local research packet retains snapshot inputs; the published packet retains their hashes in `SOURCE_PINS.json` and `receipt.json` and reads the original repository paths through `--repo`. Duplicate inputs are not required or published. No native classifications were changed here.
 
 ## 2. The exact all-modulus quotient and its converse
 

@@ -1,0 +1,352 @@
+{
+  "algebra_controls": {
+    "disjoint_support_necessary_hostile": true,
+    "exact_scalar_divisibility_cases": 18582,
+    "general_net_target_gcd_cases": 200,
+    "signed_rectangle_cases": 168
+  },
+  "amplitude_pairs_checked": 121,
+  "checks": 898404,
+  "direct_D_minus_A_checks": true,
+  "general_even_coefficient_hostile": {
+    "character": "original eighth_radical_lifts_mod8[0]",
+    "nonzero_current_mod8": [
+      [
+        1238,
+        4
+      ],
+      [
+        2246,
+        4
+      ]
+    ],
+    "source_pair": [
+      1238,
+      2246
+    ],
+    "target_vector": [
+      [
+        0,
+        2
+      ],
+      [
+        5,
+        -2
+      ]
+    ]
+  },
+  "input_sha256": {
+    "metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "original_pair_rows": 438216,
+  "original_scaled_mod4_gaps": [
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      6,
+      2
+    ],
+    [
+      0,
+      6,
+      6
+    ],
+    [
+      6,
+      2,
+      6
+    ],
+    [
+      6,
+      2,
+      0
+    ]
+  ],
+  "producer_image_witness_sha256": "5bd986838a40035fa617f567ff9e09845c407f9aa94fc0d0ae7fb7fee3505c54",
+  "rectangles": [
+    {
+      "all_source1238_paths_to_scarce_target": [
+        [
+          7,
+          1,
+          0,
+          5,
+          2,
+          6,
+          4,
+          3
+        ]
+      ],
+      "bank_preserving_distinct_observer_amplitudes": [
+        0
+      ],
+      "full_original_mod8_bank_amplitudes": "even integers",
+      "maximum_distinct_observer_amplitude": 1,
+      "original_blue_black_weights": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "scarce_target": 2762,
+      "selected": [
+        {
+          "clock_cost": 2,
+          "fixed_arc": [
+            4,
+            2,
+            6
+          ],
+          "new_path": [
+            7,
+            1,
+            0,
+            5,
+            2,
+            6,
+            4,
+            3
+          ],
+          "old_path": [
+            7,
+            1,
+            0,
+            4,
+            2,
+            6,
+            5,
+            3
+          ],
+          "source": 1238,
+          "targets": [
+            881,
+            2762
+          ]
+        },
+        {
+          "clock_cost": 3,
+          "fixed_arc": [
+            5,
+            0,
+            7
+          ],
+          "new_path": [
+            6,
+            5,
+            2,
+            4,
+            3,
+            0,
+            7,
+            1
+          ],
+          "old_path": [
+            6,
+            5,
+            4,
+            3,
+            2,
+            0,
+            7,
+            1
+          ],
+          "source": 2246,
+          "targets": [
+            2762,
+            881
+          ]
+        }
+      ],
+      "targets": [
+        881,
+        2762
+      ]
+    },
+    {
+      "all_source1238_paths_to_scarce_target": [
+        [
+          7,
+          0,
+          6,
+          4,
+          1,
+          5,
+          3,
+          2
+        ]
+      ],
+      "bank_preserving_distinct_observer_amplitudes": [
+        0
+      ],
+      "full_original_mod8_bank_amplitudes": "even integers",
+      "maximum_distinct_observer_amplitude": 1,
+      "original_blue_black_weights": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "scarce_target": 2843,
+      "selected": [
+        {
+          "clock_cost": 3,
+          "fixed_arc": [
+            1,
+            0,
+            6
+          ],
+          "new_path": [
+            7,
+            0,
+            6,
+            4,
+            1,
+            5,
+            3,
+            2
+          ],
+          "old_path": [
+            7,
+            0,
+            6,
+            4,
+            3,
+            1,
+            5,
+            2
+          ],
+          "source": 1238,
+          "targets": [
+            2650,
+            2843
+          ]
+        },
+        {
+          "clock_cost": 3,
+          "fixed_arc": [
+            1,
+            0,
+            7
+          ],
+          "new_path": [
+            6,
+            0,
+            7,
+            3,
+            1,
+            5,
+            2,
+            4
+          ],
+          "old_path": [
+            6,
+            0,
+            7,
+            3,
+            2,
+            1,
+            5,
+            4
+          ],
+          "source": 2246,
+          "targets": [
+            2843,
+            2650
+          ]
+        }
+      ],
+      "targets": [
+        2650,
+        2843
+      ]
+    }
+  ],
+  "root": 3527,
+  "source_automorphism_group_orders": {
+    "1238": 1,
+    "2246": 1
+  },
+  "source_charge_orders": [
+    {
+      "annihilating_multiple": 4,
+      "charge": [
+        1238,
+        2246
+      ],
+      "gap_mod8": 2,
+      "order_in_C8": 4,
+      "separating_scaled_mod4_character": 0,
+      "twice_charge_evaluation_mod8": 4,
+      "witness_sha256": "0e9d7792da0ffdac69541c0441b1dc5b48a83550400f14746e9ab51f2d3c2a9c"
+    },
+    {
+      "annihilating_multiple": 4,
+      "charge": [
+        881,
+        2762
+      ],
+      "gap_mod8": 2,
+      "order_in_C8": 4,
+      "separating_scaled_mod4_character": 0,
+      "twice_charge_evaluation_mod8": 4,
+      "witness_sha256": "b93210e5ea46892f22749123ac0706e380acae4a8c230cfa36da4bf6afa14ab3"
+    },
+    {
+      "annihilating_multiple": 4,
+      "charge": [
+        2650,
+        2843
+      ],
+      "gap_mod8": 2,
+      "order_in_C8": 4,
+      "separating_scaled_mod4_character": 1,
+      "twice_charge_evaluation_mod8": 4,
+      "witness_sha256": "27b832e79936a0dfaa712f23348a0398355f7fe2bb0d1b2bc7f431b34caee258"
+    }
+  ],
+  "source_path_counts": {
+    "1238": 409,
+    "2246": 523
+  },
+  "sparse_order_two_control_nodes": [
+    1238,
+    2246,
+    881,
+    2762,
+    2650,
+    2843
+  ],
+  "status": "PASS: independent exact rectangle-bank audit",
+  "vertices": 3528
+}

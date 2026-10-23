@@ -1,0 +1,35 @@
+{
+  "commit": "a201515762059411a745360467afff224f7db4c1",
+  "files": [
+    {
+      "key": "edges",
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+      "bytes": 1201654
+    },
+    {
+      "key": "nodes",
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+      "bytes": 134104
+    },
+    {
+      "key": "owner",
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+      "bytes": 3357288
+    },
+    {
+      "key": "electrical",
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+      "bytes": 530173
+    },
+    {
+      "key": "incoming_receipt",
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/native_moves/receipt.json",
+      "sha256": "36dea661ecf5ddd74b128b7ee25585f562222e1c9fd1b8ab0f6c89fbb4150bfa",
+      "bytes": 1630927
+    }
+  ]
+}

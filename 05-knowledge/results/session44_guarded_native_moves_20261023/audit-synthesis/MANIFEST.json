@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": 5367,
+  "normal_optimized_byte_identical": true,
+  "relocated_layout_byte_identical": true,
+  "synthesis_sha256": "8a4f2a12291cbbb80269c999573b2794f58140238efcbeb53e0c584973c9ab7b",
+  "frozen_source_files": 61,
+  "proof_scope": "Independent synthesis review, elementary all-size stable-padding proof, and stated exact finite cross-checks. Not a complete wiring theorem or a new isomorphism census.",
+  "artifacts": {
+    "README.md": "11d71bfe7d5c07a009559f3fa2fac8f483d6f9b7d40807cdc3b0d0c56b12ee34",
+    "AUDIT.md": "d1e2a7deb9d6c5989b2108f55a1ae9c403035bcab9fe5545abdbb3e834f9533a",
+    "check.py": "509d3151809ea64b4a01af461a5d8bd4a3a5df7af0a9866e3f087bcafa97810b",
+    "verify_pins.py": "f0c554c9f395119fd5f501137711b9fb139e93b526a5c300a05cb3aca8ee8e7d",
+    "SOURCE_PINS.json": "538581e1df646a17743fb6e45e7e6f9c33d52a5c4abf23c6bb9297345641c71d",
+    "normal.json": "113aa97c37c672950e8153d27158cbd12e8540eb677020f343ac7c30454edd30",
+    "optimized.json": "113aa97c37c672950e8153d27158cbd12e8540eb677020f343ac7c30454edd30",
+    "portability.json": "113aa97c37c672950e8153d27158cbd12e8540eb677020f343ac7c30454edd30",
+    "source-verification.json": "8ea95da449a6580ca25d0b126c7eb987b7d1650819d770c10eec14a157bf7693",
+    "portability-source-verification.json": "8ea95da449a6580ca25d0b126c7eb987b7d1650819d770c10eec14a157bf7693"
+  }
+}

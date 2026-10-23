@@ -1,0 +1,310 @@
+{
+  "scope": "Exact synthesis and source/artifact snapshot reviewed; canonical atlas inputs also independently authenticated by check.py.",
+  "files": [
+    {
+      "logical_path": "SYNTHESIS.md",
+      "research_path": "session44-root/SYNTHESIS.md",
+      "sha256": "8a4f2a12291cbbb80269c999573b2794f58140238efcbeb53e0c584973c9ab7b"
+    },
+    {
+      "logical_path": "electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "research_path": "session44-electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "ef0739cfea26526563ea2736e5a7bb3b548a4530c236737915d6c1f5bff46426"
+    },
+    {
+      "logical_path": "electrical-duality/check.py",
+      "research_path": "session44-electrical-duality/check.py",
+      "sha256": "c99b6a67f8eb209f7d9b9920c38f21dae38edc80d27bb1a4e01147129b202897"
+    },
+    {
+      "logical_path": "electrical-duality/receipt.json",
+      "research_path": "session44-electrical-duality/receipt.json",
+      "sha256": "5f7dea23f728f685211dd5eac1dff0a389a12461d84946ec9f13b2d7f86faba2"
+    },
+    {
+      "logical_path": "electrical-duality/SOURCE_PINS.json",
+      "research_path": "session44-electrical-duality/SOURCE_PINS.json",
+      "sha256": "69db5db20b972747aa157fda3e1e9c1cca37bcaf4154aa1023b51b38f03d7365"
+    },
+    {
+      "logical_path": "actual-guards/ADAPTIVE_OBSERVERS.md",
+      "research_path": "session44-actual-guards/ADAPTIVE_OBSERVERS.md",
+      "sha256": "ca590339505a53ce150788652cc203d757a7d6a467ca2fe184ac18c42eb3e6c2"
+    },
+    {
+      "logical_path": "actual-guards/ENDPOINT_OBSERVERS.md",
+      "research_path": "session44-actual-guards/ENDPOINT_OBSERVERS.md",
+      "sha256": "0fb4544999078073bf27f544643a242e5118f87c96d7c986295d78d910abd634"
+    },
+    {
+      "logical_path": "actual-guards/receipt.json",
+      "research_path": "session44-actual-guards/receipt.json",
+      "sha256": "0a4b929be4d1b0a357b16d30a1a731ed85bb7cb7bbd1a3a766d6b1f8a3b611aa"
+    },
+    {
+      "logical_path": "actual-guards/path_records.json",
+      "research_path": "session44-actual-guards/path_records.json",
+      "sha256": "73c4ba6853b91aee42a08df9be4dde6f8ae2fc8c421ec657260c947a0114ebfc"
+    },
+    {
+      "logical_path": "actual-guards/endpoint.normal.json",
+      "research_path": "session44-actual-guards/endpoint.normal.json",
+      "sha256": "ad523963459dc628904bee6d119635c6fa73018de93fe07864aa45d677a529fe"
+    },
+    {
+      "logical_path": "actual-guards/SOURCE_PINS.json",
+      "research_path": "session44-actual-guards/SOURCE_PINS.json",
+      "sha256": "68c5c1389ed9b6398e5c6ff9d7d26aa58ba93191adccc2ff1548eb59821b5942"
+    },
+    {
+      "logical_path": "coupled-moves/THEOREM.md",
+      "research_path": "session44-coupled-moves/THEOREM.md",
+      "sha256": "de1d740e1b64f591c97416dd1623bfa017c508b88f947ac78943451471df654d"
+    },
+    {
+      "logical_path": "coupled-moves/check.py",
+      "research_path": "session44-coupled-moves/check.py",
+      "sha256": "d895a580ab643c29c352acfa87ad4882a8f733d7a3cc6bfe82960b8b26e0bbf8"
+    },
+    {
+      "logical_path": "coupled-moves/receipt.json",
+      "research_path": "session44-coupled-moves/receipt.json",
+      "sha256": "ae2ba161a591aacbbe444d8cfb42ba7c452066a78d52ebe64ce5960b86baee61"
+    },
+    {
+      "logical_path": "coupled-moves/SOURCE_PINS.json",
+      "research_path": "session44-coupled-moves/SOURCE_PINS.json",
+      "sha256": "f927d3d0ba0a103a467e865d44e2db52b35a78666b5aaf2de43df8683b6c57ce"
+    },
+    {
+      "logical_path": "lift-holonomy/README.md",
+      "research_path": "session44-lift-holonomy/README.md",
+      "sha256": "d664710c472570b59fc8b35db9d2e1316d7a651b18c9989af684d438074b6c03"
+    },
+    {
+      "logical_path": "lift-holonomy/check.py",
+      "research_path": "session44-lift-holonomy/check.py",
+      "sha256": "1dd8ada55c3859943f5d48a75f882ad9b697a536a03606ad1a8ccabf3701cce0"
+    },
+    {
+      "logical_path": "lift-holonomy/receipt.json",
+      "research_path": "session44-lift-holonomy/receipt.json",
+      "sha256": "9585908464baa1413e9603c738257f25a427211bbb9489ebb8e21433b1d000bb"
+    },
+    {
+      "logical_path": "lift-holonomy/source_pins.json",
+      "research_path": "session44-lift-holonomy/source_pins.json",
+      "sha256": "0480da94234c9c9f54b473d9e69587b57b40f988016c3d2d74d6ac1d68dea26d"
+    },
+    {
+      "logical_path": "fractions-ternary/README.md",
+      "research_path": "session44-fractions-ternary/README.md",
+      "sha256": "b592f9eedd1ef87903492c642c02975880a41b0c5dff1004679de47f77d0fdb6"
+    },
+    {
+      "logical_path": "fractions-ternary/check.py",
+      "research_path": "session44-fractions-ternary/check.py",
+      "sha256": "048658b344ac555877a3e3acc83f1e3f19ae406cba18c80340cd29aab835ce2a"
+    },
+    {
+      "logical_path": "fractions-ternary/receipt.json",
+      "research_path": "session44-fractions-ternary/receipt.json",
+      "sha256": "66df7b10b03291217af223f4dc988f0421bb2d36158847316b095978ce3b8d35"
+    },
+    {
+      "logical_path": "fractions-ternary/SOURCE_PINS.json",
+      "research_path": "session44-fractions-ternary/SOURCE_PINS.json",
+      "sha256": "97915ac13cc98d87166f35a0607c4c503a84ad87cd25796c15798a0f4b923b73"
+    },
+    {
+      "logical_path": "stable-padding/THEOREM.md",
+      "research_path": "session44-stable-padding/THEOREM.md",
+      "sha256": "82e427b16d1c250aa2f6d4642c3d9125b7f85b3f0f712ed7be0388ede098406b"
+    },
+    {
+      "logical_path": "stable-padding/check.py",
+      "research_path": "session44-stable-padding/check.py",
+      "sha256": "dbba875848546e682e6be1af396e3824636866e697ce3859a1e4bce893f73329"
+    },
+    {
+      "logical_path": "stable-padding/normal.json",
+      "research_path": "session44-stable-padding/normal.json",
+      "sha256": "cb5cf2c5ddc3461768fb018af92c2f169e44f91abc44abacfcb24da137eece9d"
+    },
+    {
+      "logical_path": "stable-padding/optimized.json",
+      "research_path": "session44-stable-padding/optimized.json",
+      "sha256": "cb5cf2c5ddc3461768fb018af92c2f169e44f91abc44abacfcb24da137eece9d"
+    },
+    {
+      "logical_path": "stable-padding/SOURCE_PINS.json",
+      "research_path": "session44-stable-padding/SOURCE_PINS.json",
+      "sha256": "8eeb76e68585f1435035b5f3ffac527c1e5d56552c959cb3f1c5cc115625712b"
+    },
+    {
+      "logical_path": "rectangle-bank/THEOREM.md",
+      "research_path": "session44-rectangle-bank/THEOREM.md",
+      "sha256": "1a2308adc4e2c3b85535859487d0f5af651383b07a729e0214632c29f27415d1"
+    },
+    {
+      "logical_path": "rectangle-bank/check.py",
+      "research_path": "session44-rectangle-bank/check.py",
+      "sha256": "5a37f4ddb1063a0e5ead1611a915575ae700d6a06df09bbd86aa745aafd25db9"
+    },
+    {
+      "logical_path": "rectangle-bank/receipt.json",
+      "research_path": "session44-rectangle-bank/receipt.json",
+      "sha256": "a896b148a0c722ef087598890047cb7a97536cccbd0ed8d3f97c4f514c6f1015"
+    },
+    {
+      "logical_path": "rectangle-bank/image_witnesses.json",
+      "research_path": "session44-rectangle-bank/image_witnesses.json",
+      "sha256": "5bd986838a40035fa617f567ff9e09845c407f9aa94fc0d0ae7fb7fee3505c54"
+    },
+    {
+      "logical_path": "rectangle-bank/SOURCE_PINS.json",
+      "research_path": "session44-rectangle-bank/SOURCE_PINS.json",
+      "sha256": "57164b96806f4fb7ef1a2dbb61569cb852672e8340829aca62d3b3a266d23db2"
+    },
+    {
+      "logical_path": "ternary-newton/THEOREM.md",
+      "research_path": "session44-ternary-newton/THEOREM.md",
+      "sha256": "a85633d6a3c2db83b7bab736d400772c6f899ffe731862a1c3e919ad2fbcd891"
+    },
+    {
+      "logical_path": "ternary-newton/MULTIVARIABLE_FILTRATION.md",
+      "research_path": "session44-ternary-newton/MULTIVARIABLE_FILTRATION.md",
+      "sha256": "25d661f4c42eb7eb71f52de1c12360f493145927ddc1fe7310bf0e4f84baacfe"
+    },
+    {
+      "logical_path": "ternary-newton/check.py",
+      "research_path": "session44-ternary-newton/check.py",
+      "sha256": "23697e70313b4db11f190adcb7caa5d85f9dbc6017720c5e56bbb9ff6289bf7f"
+    },
+    {
+      "logical_path": "ternary-newton/SOURCE_PINS.json",
+      "research_path": "session44-ternary-newton/SOURCE_PINS.json",
+      "sha256": "6a61c23f3b1e854b8e8e728e6880df97e72c30e8d0e891aefb7adbd4ad1b8a92"
+    },
+    {
+      "logical_path": "audit-electrical/AUDIT.md",
+      "research_path": "session44-audit-electrical/AUDIT.md",
+      "sha256": "54be7cfb3b358e6f0e0bb2875b3cd20fe8775b8a10bdc4f24de737b57a39d77c"
+    },
+    {
+      "logical_path": "audit-electrical/AUDITED_ARTIFACTS.json",
+      "research_path": "session44-audit-electrical/AUDITED_ARTIFACTS.json",
+      "sha256": "6261b5fb12e63421416d3f1a1b45f7750959033410f33cc2b899953eb71c5fd3"
+    },
+    {
+      "logical_path": "audit-electrical/independent.normal.json",
+      "research_path": "session44-audit-electrical/independent.normal.json",
+      "sha256": "a93d595d862d9aa214f52027e456149735af9b379c067efa37391ee95acee3f7"
+    },
+    {
+      "logical_path": "audit-electrical/independent.optimized.json",
+      "research_path": "session44-audit-electrical/independent.optimized.json",
+      "sha256": "a93d595d862d9aa214f52027e456149735af9b379c067efa37391ee95acee3f7"
+    },
+    {
+      "logical_path": "audit-adaptive/AUDIT.md",
+      "research_path": "session44-audit-adaptive/AUDIT.md",
+      "sha256": "817e6382e75cfb638eae084fbac95540cb46a3620873771dcdc0e8d66cd78f62"
+    },
+    {
+      "logical_path": "audit-adaptive/receipt.json",
+      "research_path": "session44-audit-adaptive/receipt.json",
+      "sha256": "9d8a9c752569770943b37e2ad9e32b6eacd047e4aea71253503855b5f97654b0"
+    },
+    {
+      "logical_path": "audit-adaptive/endpoint_receipt.json",
+      "research_path": "session44-audit-adaptive/endpoint_receipt.json",
+      "sha256": "3269489834e721a569a69f1eab0bc4b500d4b62af2a406639b43227a4ad2608b"
+    },
+    {
+      "logical_path": "audit-coupled/AUDIT.md",
+      "research_path": "session44-audit-coupled/AUDIT.md",
+      "sha256": "a3068668a4449ff39410ff11e248966cffc3a67edc497eae53da82616ca823b2"
+    },
+    {
+      "logical_path": "audit-coupled/native-packet-normal.json",
+      "research_path": "session44-audit-coupled/native-packet-normal.json",
+      "sha256": "76f2a8273684a19ff4284c01fb1b77a82ced54be19df25f3b2d87a0c6f68b823"
+    },
+    {
+      "logical_path": "audit-coupled/native-matching-normal.json",
+      "research_path": "session44-audit-coupled/native-matching-normal.json",
+      "sha256": "de53bd3b6c7b60983eebfd37960f8da910afbc9a733e9bef32cbf7a0324df206"
+    },
+    {
+      "logical_path": "audit-holonomy/AUDIT.md",
+      "research_path": "session44-audit-holonomy/AUDIT.md",
+      "sha256": "3e08a56550a71f600229420585c10be04ead8bff660be6605fac219591bbcf72"
+    },
+    {
+      "logical_path": "audit-holonomy/SECOND_REVIEW.md",
+      "research_path": "session44-audit-holonomy/SECOND_REVIEW.md",
+      "sha256": "c50363e63bce993fa2ee046cef9abe35a303818c679de8a6c2468c93c18862d6"
+    },
+    {
+      "logical_path": "audit-holonomy/independent-normal.json",
+      "research_path": "session44-audit-holonomy/independent-normal.json",
+      "sha256": "bdee8cc4413c87b15ed180b4245df5abb20510cf40f775d11ccbf58206b26f87"
+    },
+    {
+      "logical_path": "audit-holonomy/independent-optimized.json",
+      "research_path": "session44-audit-holonomy/independent-optimized.json",
+      "sha256": "bdee8cc4413c87b15ed180b4245df5abb20510cf40f775d11ccbf58206b26f87"
+    },
+    {
+      "logical_path": "audit-fractions/README.md",
+      "research_path": "session44-audit-fractions/README.md",
+      "sha256": "d9b6d48bee07b95b94fc1f08680369dc900572a62680a3bff4519bfdff4a3b9a"
+    },
+    {
+      "logical_path": "audit-fractions/receipt.json",
+      "research_path": "session44-audit-fractions/receipt.json",
+      "sha256": "bf7d0dc9169f3147a242388237931a3fe355c106a2995435ae534745b255f09c"
+    },
+    {
+      "logical_path": "audit-fractions/source_pins.json",
+      "research_path": "session44-audit-fractions/source_pins.json",
+      "sha256": "c3883f19a873ec849a5615f01391b390aa3eebc0f0d2d6899e27982815257058"
+    },
+    {
+      "logical_path": "audit-newton/AUDIT.md",
+      "research_path": "session44-audit-newton/AUDIT.md",
+      "sha256": "99cdf3436f7e6bff46959894e7bb9bdada4bdd1b851e3bad7f3cae07b6db1894"
+    },
+    {
+      "logical_path": "audit-newton/MULTIVARIABLE_REVIEW.md",
+      "research_path": "session44-audit-newton/MULTIVARIABLE_REVIEW.md",
+      "sha256": "3479fa57bacc1a846846e40b61c8aea8f2c98eaab5ae45979abee22dd6ab7494"
+    },
+    {
+      "logical_path": "audit-newton/multivariable.normal.json",
+      "research_path": "session44-audit-newton/multivariable.normal.json",
+      "sha256": "e9be8bd946f8fcc72742eefd73f33686863393d1d9e308d72bbdb658a40c6235"
+    },
+    {
+      "logical_path": "audit-newton/multivariable.optimized.json",
+      "research_path": "session44-audit-newton/multivariable.optimized.json",
+      "sha256": "e9be8bd946f8fcc72742eefd73f33686863393d1d9e308d72bbdb658a40c6235"
+    },
+    {
+      "logical_path": "audit-rectangles/AUDIT_RECTANGLE_BANK.md",
+      "research_path": "session44-audit-rectangles/AUDIT_RECTANGLE_BANK.md",
+      "sha256": "33dd2a35a636806f543322929a21f893417eb35b68b4e422772968ef4344410b"
+    },
+    {
+      "logical_path": "audit-rectangles/receipt.json",
+      "research_path": "session44-audit-rectangles/receipt.json",
+      "sha256": "6c2ea7b97b9d3e0c4068ae5fa0430a5696dc48f1e1118a27e9d620334a9019c7"
+    },
+    {
+      "logical_path": "audit-rectangles/PRODUCER_PINS.json",
+      "research_path": "session44-audit-rectangles/PRODUCER_PINS.json",
+      "sha256": "02bd40cdfdc07422e208d5ab93286e37e1755a411f7df09f9e6bfe8e93dbfbe2"
+    }
+  ]
+}

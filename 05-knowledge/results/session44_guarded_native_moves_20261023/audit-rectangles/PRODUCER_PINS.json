@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "bytes": 11747,
+      "name": "THEOREM.md",
+      "sha256": "1a2308adc4e2c3b85535859487d0f5af651383b07a729e0214632c29f27415d1"
+    },
+    {
+      "bytes": 9347,
+      "name": "check.py",
+      "sha256": "5a37f4ddb1063a0e5ead1611a915575ae700d6a06df09bbd86aa745aafd25db9"
+    },
+    {
+      "bytes": 3490,
+      "name": "solve_images.py",
+      "sha256": "b4ca0f817ef01dcdae51c171bd688960143d9957968a64827b9c66064941bf49"
+    },
+    {
+      "bytes": 648684,
+      "name": "image_witnesses.json",
+      "sha256": "5bd986838a40035fa617f567ff9e09845c407f9aa94fc0d0ae7fb7fee3505c54"
+    },
+    {
+      "bytes": 1232,
+      "name": "SOURCE_PINS.json",
+      "sha256": "57164b96806f4fb7ef1a2dbb61569cb852672e8340829aca62d3b3a266d23db2"
+    },
+    {
+      "bytes": 4265,
+      "name": "receipt.json",
+      "sha256": "a896b148a0c722ef087598890047cb7a97536cccbd0ed8d3f97c4f514c6f1015"
+    },
+    {
+      "bytes": 4265,
+      "name": "receipt.optimized.json",
+      "sha256": "a896b148a0c722ef087598890047cb7a97536cccbd0ed8d3f97c4f514c6f1015"
+    },
+    {
+      "bytes": 1193,
+      "name": "MANIFEST.json",
+      "sha256": "9f0dffd545a40fada28e1843c7b03d5e8dab2829c69657003365d1ea0dfd708d"
+    }
+  ],
+  "status": "Final producer files independently reviewed; metadata precision change included"
+}

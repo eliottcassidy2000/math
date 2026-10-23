@@ -1,6 +1,6 @@
 # Session44: actual guards before coupled moves
 
-Status: WORK IN PROGRESS. No result in this roadmap is promoted by its inclusion.
+Status: completed research map. Current theorem statements and scopes are in SYNTHESIS.md and its audited packets; inclusion in this roadmap alone promotes no claim.
 
 ## Inheritance and portfolio
 
@@ -31,8 +31,12 @@ Least-used sidecars: target-owner labels, full harmonic bank, source masses, act
 - New return-cost incoming: `53689348b0d`.
 - New native guard/Farey incoming: `0a36c32af8c89f6c4249a0ef929390432e556925`.
 
-The initial inheritance replay recovered a stale dependency hash in the incoming Fourier receipt. All mathematical output fields reproduced identically; the dependent guard receipt had changed. A narrowly scoped receipt repair with normal and optimized replays is required before citing a fresh PASS. This is a provenance repair, not a change to the Fourier theorem.
+The initial inheritance replay recovered a stale dependency hash in the incoming Fourier receipt. All mathematical output fields reproduced identically; the dependent guard receipt had changed. The narrowly scoped receipt repair and normal/optimized replays were completed in checkpoint96981b156130c8bf546ed1bcba2ea3b16c020316. This is a provenance repair, not a change to the Fourier theorem.
 
 ## Scope boundaries retained
 
 No claimed solution of general native wiring, Collatz, the planar Jacobian conjecture, the Gaussian moment conjecture, or LRC follows from this session. Existing unaudited global claims elsewhere in the repository are not inherited as premises. Complete finite enumerations are reported with their exact source/carrier, and abstract covering/duality results require authenticated native inputs before application.
+
+## Closing frontier
+
+The actual source-conditioned order-eight harmonic signature is target-faithful, but target ownership still does not recover the literal path or shared-incidence wiring. All-size endpoint-stable padding now supplies positive two-slot native families. The unresolved global task is to combine authenticated moves across additional source pairs with exact shared alignment and injective remaining-port allocation, without replacing these obligations by aggregate counts, one character, or an auxiliary spectral gap.
