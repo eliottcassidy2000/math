@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_SELF_CHECKED_PENDING_INDEPENDENT_AUDIT",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 12213,
+      "sha256": "4ac250f2f19f71ef5388b3525be5ab651ff730cb8899b8124b7b4d1f1e2837aa"
+    },
+    {
+      "path": "check.py",
+      "bytes": 6034,
+      "sha256": "da9d4058f7a6fdbbb7063b28b5e5e6274ec6084918d444e4cc2a0288e10d31d6"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 348,
+      "sha256": "3188f7f0514ebf2524da7f390ebefe3d62bc8539987606b845dded94d308d560"
+    },
+    {
+      "path": "receipt-optimized.json",
+      "bytes": 348,
+      "sha256": "3188f7f0514ebf2524da7f390ebefe3d62bc8539987606b845dded94d308d560"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 713,
+      "sha256": "b8e6ea6d7815a25644f580f2d680bea0ce6c1f6dd8a40ddfb52d7d2e465a7a7f"
+    }
+  ],
+  "commands": [
+    "python3 check.py",
+    "python3 -O check.py"
+  ]
+}

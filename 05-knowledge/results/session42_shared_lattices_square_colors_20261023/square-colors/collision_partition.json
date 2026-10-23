@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "carrier": "all six Hamiltonian paths from0 to4 in K5",
+  "results": {
+    "vertex": {
+      "objects": 5,
+      "paths": 6,
+      "collision_events": 15,
+      "coloring_count_polynomial": {
+        "3": 2,
+        "4": -3,
+        "5": 1
+      },
+      "counts": {
+        "2": 0,
+        "3": 54
+      }
+    },
+    "edge": {
+      "objects": 10,
+      "paths": 6,
+      "collision_events": 15,
+      "coloring_count_polynomial": {
+        "4": 4,
+        "5": -12,
+        "6": 10,
+        "7": 3,
+        "8": -6,
+        "10": 1
+      },
+      "counts": {
+        "2": 192,
+        "3": 30942
+      }
+    }
+  }
+}

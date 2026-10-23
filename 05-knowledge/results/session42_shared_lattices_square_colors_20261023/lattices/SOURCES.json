@@ -1,0 +1,17 @@
+[
+  {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "path": "05-knowledge/results/odd_cell_completion_20261023/NETWORKS.md",
+    "sha256": "c05f15f8df55d16fe1ac84024def1c99be80b319310009838f1ce5f330c32020"
+  },
+  {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "path": "05-knowledge/results/odd_cell_completion_20261023/seven/PROOF.md",
+    "sha256": "f25d99937c7bb1f7b4d00c5aac429f15607a16f42f143dfdf2d488fce297671f"
+  },
+  {
+    "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+    "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/residual-cycles/README.md",
+    "sha256": "9378646aff268037bfc7760b179a676f6ecb9d3479cf42726350c27a83d9372e"
+  }
+]

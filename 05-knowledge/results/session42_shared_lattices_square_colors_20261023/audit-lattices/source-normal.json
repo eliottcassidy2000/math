@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "supplied cyclic/full-group chart carriers, not unrestricted native wiring",
+  "tests": {
+    "binary_blocks": 9872,
+    "R9_full_chart_pairs": 2187,
+    "networks": 500,
+    "inconsistent_networks": 203,
+    "visible_kernel_base_sizes": {
+      "full_R9": 3,
+      "cyclic_R9": 1
+    },
+    "checks": 160423
+  }
+}

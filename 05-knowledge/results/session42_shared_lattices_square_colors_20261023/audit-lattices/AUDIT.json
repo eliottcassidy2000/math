@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source_manifest_sha256": "731636f7675a95316861a994130ec2545147c09594f8a16b4dfb4a181da2b084",
+  "source_files_verified": 5,
+  "inherited_source_pins_verified": 3,
+  "source_normal_optimized_checks": 160423,
+  "independent_normal_optimized_checks": 5981,
+  "issues": [],
+  "scope": "proof audit and exact finite controls, not native model completeness"
+}

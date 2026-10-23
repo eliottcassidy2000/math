@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": 980,
+  "distinct_colorings25": 192,
+  "selector_forests25": 1024,
+  "tail_start": 71,
+  "independent_rank_controls": "all supplied paths25..32",
+  "scope": "source completeness inherited; no Q36/Q80 complete census rerun"
+}

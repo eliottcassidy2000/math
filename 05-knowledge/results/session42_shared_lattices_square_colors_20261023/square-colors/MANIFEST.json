@@ -1,0 +1,61 @@
+{
+  "status": "FROZEN_AFTER_PROOF_AUDIT",
+  "files": [
+    {
+      "path": "RESULTS.md",
+      "bytes": 13794,
+      "sha256": "b0622a55899a1142c128e3fe1a30de6dd8e2b6c340e0db3f56f0821dc8a55266"
+    },
+    {
+      "path": "explore.py",
+      "bytes": 7200,
+      "sha256": "6fd7067aefcf267f067a23548c03eaaceb0688f34c6e1d7987bdf72eec3c753a"
+    },
+    {
+      "path": "check_collision_partition.py",
+      "bytes": 1470,
+      "sha256": "9f4097f30ffec23d2823422e87a0cd30ed42b9bfb1a1c7798d8d795c44a90f2f"
+    },
+    {
+      "path": "inherited_paths.json",
+      "bytes": 76617,
+      "sha256": "2ef1408dea68babcf7f74599844834bf2495d20901cd9150335a90955f786031"
+    },
+    {
+      "path": "hostile80.json",
+      "bytes": 1636,
+      "sha256": "1efe9d30db59fb6dc5351a36014b027cbd6f7f0d7322f702e2f45d7eb3acd02e"
+    },
+    {
+      "path": "old_color_census.json",
+      "bytes": 3327,
+      "sha256": "de6afdb7b06b604b8d202d350197b38aacc40d4d92eb6665c0b5e3ddd6263a0b"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 11273,
+      "sha256": "61af8957cad377f58bc628c7d5a0241a485d2eec1caef08d07180c4b675dee67"
+    },
+    {
+      "path": "receipt.optimized.json",
+      "bytes": 11273,
+      "sha256": "61af8957cad377f58bc628c7d5a0241a485d2eec1caef08d07180c4b675dee67"
+    },
+    {
+      "path": "collision_partition.json",
+      "bytes": 642,
+      "sha256": "446d392b1e3dcb0b505e03d079f733c6333b8c09473049ae9b9f547233e2b8ed"
+    },
+    {
+      "path": "collision_partition.optimized.json",
+      "bytes": 642,
+      "sha256": "446d392b1e3dcb0b505e03d079f733c6333b8c09473049ae9b9f547233e2b8ed"
+    }
+  ],
+  "commands": [
+    "python3 explore.py",
+    "python3 -O explore.py",
+    "python3 check_collision_partition.py",
+    "python3 -O check_collision_partition.py"
+  ]
+}
