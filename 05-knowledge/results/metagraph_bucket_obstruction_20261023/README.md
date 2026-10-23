@@ -210,6 +210,16 @@ statement does not claim the expensive port computations were performed.
 
 ## 6. Reproduction and audit boundaries
 
+**Final incoming bridge:** Session36's dyadic electrical law in
+`session36_information_curl_contexts_20261023/metagraph/DYADIC-ELECTRICAL-METAGRAPH.md`
+sees black wiring at the half-Laplacian layer. The separate
+`dyadic_bridge.py` consumer checks our pinned switch: the Laplacian is
+unchanged modulo2, yet its half pairing at unit potentials e16,e12 changes
+from0 to1. Both vertices are blue-isolated. This is a second exact way to
+detect this switch with retained class labels, not an all-order sufficient
+wiring invariant. Its output is `dyadic_receipt.json`; normal and optimized
+runs agree. The primary incidence checker and its receipt remain frozen.
+
 Run from repository root:
 
     python -B 05-knowledge/results/metagraph_bucket_obstruction_20261023/check.py

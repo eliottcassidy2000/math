@@ -1,0 +1,13 @@
+{
+  "counterfeit_half_energy_mod2": 1,
+  "laplacian_entry_difference": -2,
+  "original_half_energy_mod2": 0,
+  "potentials": [
+    16,
+    12
+  ],
+  "same_laplacian_mod2": true,
+  "source_sha256_lf": "b816511f075814822d409fcb3d05041bb485ad4b0bcdcc15fa92f34eb2560243",
+  "status": "FINITE-EXACT pinned class-labelled witness",
+  "switch_receipt_sha256_lf": "79a92daacff7ef1fe1b0c98110bf36474470b7c03bbfdc7ad9f95a3ab9bae092"
+}

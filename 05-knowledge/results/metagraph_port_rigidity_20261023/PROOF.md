@@ -306,6 +306,17 @@ decoder and compare the transported target signature, not aggregate counts.
 
 ## 7. Exact reproduction and remaining targets
 
+**Final incoming inheritance:** the last origin/main pull supplied
+[Session36's curl realization decoder](../session36_information_curl_contexts_20261023/root/CURL_REALIZABILITY.md),
+[metric curl fibres](../session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md),
+and [connected graph counts](../session36_information_curl_contexts_20261023/root/CURL_CONNECTED_GRAPH_ENUMERATION.md).
+These overlap the core SCC-cut and signed-realization arguments above.
+Retain them as converging derivations, not separate novelty claims. The
+present packet applies the complete signature to marked port acceptance
+and records the one-score and necklace-parity consequences. Signed curl
+must still be distinguished from the incoming unsigned C3-hypergraph
+classification and its separate positive-parity/negative-NAE recognition.
+
 Run from the repository root:
 
     python -B 05-knowledge/results/metagraph_port_rigidity_20261023/check.py --out 05-knowledge/results/metagraph_port_rigidity_20261023/receipt.json

@@ -83,7 +83,7 @@ user's proposed bucket obstruction.
 
 Complement reflects the interior curls by d -> 2-d and the path-adjacent
 curls by d -> 4-d. The difference is an exact boundary term. Reflection
-of path positions commutes with complement. With m=(n-1)(n-2)/2,
+of path positions commutes with complement. For n>=3, with m=(n-1)(n-2)/2,
 f=floor((n-1)/2), and k=(m+f)/2, this yields 2^k blue tilings,
 2^(k-1) fundamental blue lines, and (2^m-2^k)/4 fundamental black lines.
 Parallel lines and loops retain their multiplicity. These totals alone
@@ -152,9 +152,10 @@ signatures is finite and is recorded separately in the incidence packet;
 it must not be extrapolated to every tournament order.
 
 The finite progression is useful: joint score/triangle neighbor data plus
-endpoint/color capacities forces all order6 lines; adding each vertex's
+endpoint/color capacities forces all aggregated ordinary-class line
+multiplicities at order6; adding each vertex's
 strong-four incidence identifies all456 classes at order7 and forces its
-lines. At order8, that first-round signature has two collision pairs.
+aggregated line multiplicities. At order8, that first-round signature has two collision pairs.
 One more round recording which vertex profiles are outneighbors separates
 all6880 classes, without a Hamiltonian-count sidecar. The order8 claim is
 complete class separation, not a replay of all2^21 fixed-path ports.
@@ -175,6 +176,33 @@ description of what goes wrong under forgetting. They do not promise a
 smaller exact all-operations state space. The incoming spectral recurrence
 work gives the complementary warning: a very small invariant can survive
 infinitely many recursive contexts and still miss Hamiltonian counts.
+
+### Final incoming work: compatibility and the next parity layer
+
+The final pull brought [Session36's curl decoder](session36_information_curl_contexts_20261023/root/CURL_REALIZABILITY.md)
+and [connected-graph derivation](session36_information_curl_contexts_20261023/root/CURL_CONNECTED_GRAPH_ENUMERATION.md).
+They overlap the signed-curl/SCC mechanism developed here. These are
+converging descriptions of one mechanism, not separate novelty claims.
+
+Its [unsigned realization phases](session36_information_curl_contexts_20261023/context/REALIZATION_PHASES.md)
+also sharpen the bucket question. Requiring positive cyclic triples gives
+parity equations, but all other triples must simultaneously remain transitive.
+The five-vertex demand of exactly cycles014 and023 passes positive parity
+and fails the remaining constraints. Two cycles sharing an edge form S4;
+two sharing just one vertex cannot be the only cyclic triples on their
+five-vertex union. Positive incidence alone can miss the obstruction.
+
+The incoming [dyadic electrical law](session36_information_curl_contexts_20261023/metagraph/DYADIC-ELECTRICAL-METAGRAPH.md)
+writes the literal graph as G=Blue+2PairedBlack. Modulo2 its Laplacian sees
+only blue, while the next layer retains the bilinear half-energy
+q_G(u,v)=u^T Lap(G)v/2 modulo2 on blue-harmonic potentials.
+Our [explicit bridge replay](metagraph_bucket_obstruction_20261023/dyadic_bridge.py)
+tests the saved six-vertex counterfeit: its full Laplacian agrees modulo2
+and its degrees agree, but q_G(e16,e12) changes from0 to1. Both named
+vertices are blue-isolated, so these are admissible potentials. This
+connects the incidence obstruction to a concrete electrical obstruction
+one dyadic layer deeper. It detects this pinned switch; it is not a claim
+that the half-energy form alone characterizes tournament wiring.
 
 Next targets: choose only the triangle or incidence coordinates needed to
 separate the surviving targets at each ambiguous port; certify their joint

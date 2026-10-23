@@ -107,7 +107,7 @@ source addresses within their separate N-specific carriers. The full
 ownership table, source guards and integer clocks remain attached.
 
 At depths121,126,146 the recomputed whole weighted bounds are441842,
-837316,3173911. All17 additional synchronized cuts are independently
+837316,3173911. All17 snapshots from D through D+16 are independently
 checked against owner-by-owner transport; the unchanged earlier receipt and
 the final gate cover the preceding and all subsequent finite horizons.
 This extends an ordinary state, not the optional-pulse relaxation. No

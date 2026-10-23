@@ -42,3 +42,16 @@ a same-fibre obstruction. Converse exchanges the two collision pairs,
 rather than exchanging members with different H. The final documentation
 retains both scope corrections. No all-order bounded local signature or
 general enumeration speedup follows from these finite successes.
+
+## Final incoming dyadic bridge
+
+After integration with Session36, the root added the separate
+`dyadic_bridge.py`/`dyadic_receipt.json` without changing the frozen primary
+consumer. The tail-closeout agent independently inspected and ran the
+optimized bridge. It confirmed equal Laplacians modulo2, equal diagonals,
+and blue-isolated vertices16 and12. Their off-diagonal Laplacian entry
+changes by-2, so its integral half-pairing changes from0 to1 modulo2.
+The result is a class-labelled witness for this switch, not a sufficient
+general metagraph criterion. The synthesis's all-order versus finite and
+aggregate-line versus individual-port boundaries were also independently
+reviewed, and the requested wording corrections were applied.
