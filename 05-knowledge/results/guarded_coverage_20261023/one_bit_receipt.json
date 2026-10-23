@@ -1,0 +1,30 @@
+{
+  "cases": [
+    {
+      "boundary_assignments": 9,
+      "feasible_menu_multisets": 7,
+      "lifted_states_visited": 36,
+      "max_distance_from_selected_start": 4,
+      "max_slots": 2,
+      "r": 1
+    },
+    {
+      "boundary_assignments": 929,
+      "feasible_menu_multisets": 356,
+      "lifted_states_visited": 33512,
+      "max_distance_from_selected_start": 10,
+      "max_slots": 4,
+      "r": 2
+    },
+    {
+      "boundary_assignments": 34412,
+      "feasible_menu_multisets": 3787,
+      "lifted_states_visited": 335520,
+      "max_distance_from_selected_start": 9,
+      "max_slots": 3,
+      "r": 3
+    }
+  ],
+  "quotient": "slot permutations only; actual labels recover by permutation",
+  "status": "FINITE-EXACT positive probe; general one-bit conjecture OPEN"
+}

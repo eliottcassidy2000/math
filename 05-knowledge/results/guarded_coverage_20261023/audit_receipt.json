@@ -1,0 +1,72 @@
+{
+  "checks": 1902,
+  "mixed_kernel_cases": [
+    {
+      "M": 3,
+      "gap_bound": "2/11",
+      "owners": 16,
+      "r": 1,
+      "states": 6
+    },
+    {
+      "M": 9,
+      "gap_bound": "2/83",
+      "owners": 28,
+      "r": 1,
+      "states": 54
+    },
+    {
+      "M": 15,
+      "gap_bound": "2/227",
+      "owners": 40,
+      "r": 1,
+      "states": 150
+    },
+    {
+      "M": 3,
+      "gap_bound": "2/13",
+      "owners": 24,
+      "r": 2,
+      "states": 12
+    },
+    {
+      "M": 9,
+      "gap_bound": "2/85",
+      "owners": 36,
+      "r": 2,
+      "states": 108
+    },
+    {
+      "M": 15,
+      "gap_bound": "2/229",
+      "owners": 48,
+      "r": 2,
+      "states": 300
+    }
+  ],
+  "pointed_charts": 362,
+  "status": "PASS: same-agent independent integer/isomorphism/rational-matrix paths",
+  "weight_hostile_rayleigh": "1/2000",
+  "weighted": [
+    {
+      "kappa": "2",
+      "lower_gap": "1/2",
+      "r": 1
+    },
+    {
+      "kappa": "4",
+      "lower_gap": "1/8",
+      "r": 2
+    },
+    {
+      "kappa": "5",
+      "lower_gap": "1/15",
+      "r": 3
+    },
+    {
+      "kappa": "5",
+      "lower_gap": "1/20",
+      "r": 4
+    }
+  ]
+}

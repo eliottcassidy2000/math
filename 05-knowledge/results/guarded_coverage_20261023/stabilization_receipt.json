@@ -1,0 +1,65 @@
+{
+  "all_ordered_endpoint_pairs": 7912,
+  "checked_events": 116276,
+  "checks": 389898,
+  "exhaustive_slots": [
+    1,
+    2,
+    3
+  ],
+  "exhaustive_source_r": 2,
+  "feasible_menu_tuples": 663,
+  "full_occupancy": [
+    {
+      "events": 10,
+      "r": 1,
+      "slots": 2,
+      "source_owners": 24
+    },
+    {
+      "events": 24,
+      "r": 2,
+      "slots": 4,
+      "source_owners": 32
+    },
+    {
+      "events": 56,
+      "r": 3,
+      "slots": 8,
+      "source_owners": 40
+    },
+    {
+      "events": 128,
+      "r": 4,
+      "slots": 16,
+      "source_owners": 48
+    },
+    {
+      "events": 288,
+      "r": 5,
+      "slots": 32,
+      "source_owners": 56
+    },
+    {
+      "events": 640,
+      "r": 6,
+      "slots": 64,
+      "source_owners": 64
+    },
+    {
+      "events": 1408,
+      "r": 7,
+      "slots": 128,
+      "source_owners": 72
+    },
+    {
+      "events": 3072,
+      "r": 8,
+      "slots": 256,
+      "source_owners": 80
+    }
+  ],
+  "largest_nonfull_return": 105,
+  "seeded_cases": 144,
+  "status": "FINITE-EXACT PASS; four-layer theorem proved for any connected local menus"
+}

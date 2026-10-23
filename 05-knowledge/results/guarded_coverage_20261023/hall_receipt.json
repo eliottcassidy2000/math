@@ -1,0 +1,81 @@
+{
+  "cases": [
+    {
+      "actual_assignments": 4,
+      "component_histogram": {
+        "1": 3
+      },
+      "feasible_graphs": 3,
+      "graphs": 4,
+      "maxdiam": 1,
+      "ports": 2,
+      "reachable_ordered_pairs": 6,
+      "slots": 1,
+      "strict_Hall_graphs": 1
+    },
+    {
+      "actual_assignments": 8,
+      "component_histogram": {
+        "1": 6,
+        "2": 1
+      },
+      "feasible_graphs": 7,
+      "graphs": 16,
+      "maxdiam": 0,
+      "ports": 2,
+      "reachable_ordered_pairs": 8,
+      "slots": 2,
+      "strict_Hall_graphs": 0
+    },
+    {
+      "actual_assignments": 96,
+      "component_histogram": {
+        "1": 43,
+        "2": 3
+      },
+      "feasible_graphs": 46,
+      "graphs": 64,
+      "maxdiam": 3,
+      "ports": 3,
+      "reachable_ordered_pairs": 258,
+      "slots": 2,
+      "strict_Hall_graphs": 13
+    },
+    {
+      "actual_assignments": 384,
+      "component_histogram": {
+        "1": 150,
+        "2": 69,
+        "3": 18,
+        "4": 9,
+        "6": 1
+      },
+      "feasible_graphs": 247,
+      "graphs": 512,
+      "maxdiam": 0,
+      "ports": 3,
+      "reachable_ordered_pairs": 384,
+      "slots": 3,
+      "strict_Hall_graphs": 0
+    },
+    {
+      "actual_assignments": 12288,
+      "component_histogram": {
+        "1": 2665,
+        "2": 348,
+        "3": 72,
+        "4": 36,
+        "6": 4
+      },
+      "feasible_graphs": 3125,
+      "graphs": 4096,
+      "maxdiam": 5,
+      "ports": 4,
+      "reachable_ordered_pairs": 73152,
+      "slots": 3,
+      "strict_Hall_graphs": 1009
+    }
+  ],
+  "checks": 41769,
+  "status": "FINITE-EXACT PASS; classical matching mechanism reproved in port language"
+}

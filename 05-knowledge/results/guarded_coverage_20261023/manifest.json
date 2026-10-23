@@ -1,0 +1,66 @@
+{
+  "external_sources": [
+    {
+      "commit": "3689db3896fc92d58f7fe1fc1df131d02f45716a",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/stable-padding/THEOREM.md",
+      "sha256": "82e427b16d1c250aa2f6d4642c3d9125b7f85b3f0f712ed7be0388ede098406b"
+    },
+    {
+      "commit": "3689db3896fc92d58f7fe1fc1df131d02f45716a",
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/stable-padding/check.py",
+      "sha256": "dbba875848546e682e6be1af396e3824636866e697ce3859a1e4bce893f73329"
+    },
+    {
+      "commit": "3689db3896fc92d58f7fe1fc1df131d02f45716a",
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-wiring/RESULT.md",
+      "sha256": "15a2d1b6320acd163ac34081e5c3cf92a9a22b6aaef7ce06e2f3a17b753898a4"
+    },
+    {
+      "commit": "3689db3896fc92d58f7fe1fc1df131d02f45716a",
+      "path": "05-knowledge/results/dynamics_labeling_entry_20261019/GRACEFUL_RELEASE_AND_MATCHING_SUPPORT.md",
+      "sha256": "a5ec3950f23741500d9433cc2acd7a89bc897d9e71644b3539583ba681ad4e3d"
+    },
+    {
+      "commit": "3689db3896fc92d58f7fe1fc1df131d02f45716a",
+      "path": "05-knowledge/results/guarded_native_routing_20261023/CARRY_GAP.md",
+      "sha256": "87756a3a8e5e1bd67d081737c6a4eb691afe60c9b1b1c1f1bdb9fa7df4cbce49"
+    },
+    {
+      "commit": "bd3fe0098b5bb09277e326f585235f36b3336cc6",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/assembly/BINARY_ASSEMBLY.md",
+      "sha256": "201ba7a4427ca88cef1ac494081497f81842fdb29618103ed8d781d176038e3e"
+    },
+    {
+      "commit": "bd3fe0098b5bb09277e326f585235f36b3336cc6",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/dyadic/TRANSPORT_LIFTS.md",
+      "sha256": "31011ed6cfcbd14ec6e2320bd839875998aca7e8ea313ac375ccf4eef0b996a5"
+    },
+    {
+      "commit": "bd3fe0098b5bb09277e326f585235f36b3336cc6",
+      "path": "05-knowledge/results/injective_native_blocks_20261023/search/LARGER_CIRCUITS.md",
+      "sha256": "36e0b433ae2adf0ecc8034b35af3bfafd6b8753c7a79bea830d0aae7acc1fe03"
+    }
+  ],
+  "packet_files": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "AUDIT.md": "12dc411bab72281f2f0e7f34a182d40e0ade235afa19b17e19afc9ce87451425",
+    "CUBES.md": "b0b06cad1dc373f91671ee2b323b22907d5f19e07ec50d2639fffc6787ca2e82",
+    "LIFTING.md": "13aff8d1f83cd1bfad8e09f661f30e67f107c1ba19fb611f647d28978698960f",
+    "PORTS.md": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47",
+    "README.md": "b57ff063ae979e05cd96a5d788226b5b96fc65399f8c2da1578c3fc442bc90ec",
+    "SYNTHESIS.md": "451792530b6a3ea54d06c9432f1321e1d91ed8706db8ca6589d73496526da563",
+    "atlas_receipt.json": "5722b33528bedc355e7aafcdd44ac89767cd0d6d77018a86674ebbd039e45d5c",
+    "audit.py": "7332df165f78e0ac6566211fba2ebabb799779a6dca4467398a022add0851e52",
+    "audit_receipt.json": "f0cbe2e829175a4f687821de4e55a005b8e957fc3ea2bb0b6a57a2839595f823",
+    "cube_receipt.json": "7fdb323cc1c3dd5dd8cb93ed8cad0ba9edf77a47c8cf3db51036a58b434520a4",
+    "hall_components.py": "9d36e0b7e26d69185934aeab441168b56bb8738e8d7e1f539989b1eac2e1a281",
+    "hall_receipt.json": "aff18accdbb13e18998c34f689e019d70c7dee32edba932b2cbb1186ab6bc7b2",
+    "native_cube.py": "76f65bbc24489361f2265bea0d73f4e1d127bb9d4fe062f7d467b4a96afebd25",
+    "one_bit_probe.py": "b4e5e4c970f89fe4053ee4ccec48b587ea62fde8a4d06712a5a2052705d0df76",
+    "one_bit_receipt.json": "ffd763798102540367566d504d2d04f12055a6f41102b867fc07f339cdfaa56e",
+    "pointed_atlas.py": "6232b9856a6eb11c65fafcbe45a0a42e3b5f6fdba94c0f22628ac8894b9276fa",
+    "reproduce.py": "7c7da8cc9326594a54e17538d86742664721020a674413e52f4e88738aafb241",
+    "stabilization.py": "1565ccdc88689a58486a15e19e94bc13364f32483e8f9e0bf4b1e724c9efdba7",
+    "stabilization_receipt.json": "1cec540e96de2a1b2b574611aa33886cdd383409bc627116344076955719e1bd"
+  }
+}
