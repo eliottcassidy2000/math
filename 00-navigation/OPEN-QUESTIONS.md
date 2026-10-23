@@ -6281,8 +6281,11 @@ disjoint-cycle-packing polynomial `ÃŽÂ¦(T;{y_k}) = ÃŽÂ£_{packings}Ã¢Ë
    `(Ã¢Ë†â€™1)^#cycÃ¢â€ â€™+1` (the det/per dichotomy; det spectral & poly-time, per non-spectral &
    #P-hard). Non-spectral first at n=6 (same wall), splits the same 47 cospectral classes as
    H at n=7 but strictly **finer** (recovers (c6,c7,Ã¢â‚¬Â¦) vs H's one functional); **(char,perm)
-   determines H iff nÃ¢â€°Â¤7**, breaking at n=8 via the D44Ã¢â€ â€D35 trade (within-class rank
-   3Ã¢â€ â€™4). **EVEN FACE RESOLVED (monad-S7, HYP-2517):** the even face's SIGNED form IS a
+   determines H iff n<=8**, with the first genuine equal-polynomial/unequal-H
+   collision at n=9. The n=8 rank gap 3->4 obstructs affine recovery only;
+   two independent exhaustive fixed-Hamiltonian-path censuses prove functional
+   recovery there. See [the corrected THM-506](../01-canon/theorems/THM-506-permanental-companion.md)
+   and [exact proof receipts](../05-knowledge/results/session37_inheritance_audit_20261023/REPORT.md). **EVEN FACE RESOLVED (monad-S7, HYP-2517):** the even face's SIGNED form IS a
    clean matrix function Ã¢â‚¬â€ the skew char poly `det(xIÃ¢Ë†â€™S)`, `S=AÃ¢Ë†â€™AÃ¡Âµâ‚¬`, `=Ã¢Ë†Â(xÃ‚Â²+ÃŽÂ¼_jÃ‚Â²)` with
    coeffs `ÃŽÂ£_W Pf(S[W])Ã‚Â²` (Coates: odd cycles cancel under reversal) Ã¢â‚¬â€ but it is
    **SPECTRAL** (a function of charA; VERIFIED nÃ¢â€°Â¤6 exh, incl. the cospectral-different-H

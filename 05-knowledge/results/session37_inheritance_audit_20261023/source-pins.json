@@ -1,0 +1,26 @@
+{
+  "read_snapshot_commit": "989b11f2ad12def609f2680967fdf90d1b1bc299",
+  "audit_date": "2026-10-23",
+  "proposed_packet_destination": "05-knowledge/results/session37_inheritance_audit_20261023",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-506-permanental-companion.md",
+      "sha256": "e3d47bede15082f7d220e2b1414c89a9aeb43b4c9c5359393b4e57b1b640e9b2",
+      "proposed_sha256": "e29f0e203f534cc6efdb4f45cc11af1c4588642656b1fbe1e5f13dc3ccb93fc7"
+    },
+    {
+      "path": "01-canon/theorems/THM-1810-the-bosonic-permanent-side-is-why-gmc2-is-hard.md",
+      "sha256": "543efb367b616dcebdfc07cce23bac1d9d9ceed19ff3c0f87c4c8a15b43c71da",
+      "proposed_sha256": "5f95fcbffc2a85caabd7db0c6d599ce88b32db7210f933e44c4893701a901872"
+    },
+    {
+      "path": "00-navigation/OPEN-QUESTIONS.md",
+      "sha256": "98e23262e1f31fe594ac47063334feeaf4063b6c34fbcf2dcd223c2d466a0de8",
+      "proposed_sha256": "4314aebb5ec2ddab528c20cf7661156fd9c8be0b6ac8f67b099c83a87eee39ec"
+    }
+  ],
+  "ledger_base": {
+    "path": "01-canon/MISTAKES.md",
+    "sha256": "5a6c8145f2884c46c4b6555468dd697deafb0282afd1b77d64d23bc9cee9128d"
+  }
+}

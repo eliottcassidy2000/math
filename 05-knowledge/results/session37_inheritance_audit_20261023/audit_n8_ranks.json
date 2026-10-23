@@ -1,0 +1,74 @@
+{
+  "n8_joint_polynomial_fibers": 3217,
+  "characteristic_polynomial_fibers": 1523,
+  "pooled_rank_e_unsigned": 3,
+  "pooled_rank_e_unsigned_H": 4,
+  "classes_with_individual_affine_failure": 59,
+  "class_rank_histogram": {
+    "(0, 0)": 802,
+    "(1, 1)": 350,
+    "(1, 2)": 1,
+    "(2, 2)": 167,
+    "(2, 3)": 7,
+    "(3, 3)": 145,
+    "(3, 4)": 51
+  },
+  "smallest_individual_affine_obstruction": {
+    "char_nontrivial_signed_coefficients": [
+      -12,
+      -22,
+      -28,
+      -20,
+      -9,
+      -2
+    ],
+    "rows": [
+      {
+        "mask": 172254133,
+        "H": 177,
+        "c3": 12,
+        "c4": 22,
+        "c5": 28,
+        "c6": 30,
+        "c7": 20,
+        "c8": 7,
+        "D33": 10,
+        "D34": 11,
+        "E8": 5,
+        "D35": 4
+      },
+      {
+        "mask": 172256153,
+        "H": 197,
+        "c3": 12,
+        "c4": 22,
+        "c5": 28,
+        "c6": 32,
+        "c7": 24,
+        "c8": 9,
+        "D33": 12,
+        "D34": 15,
+        "E8": 7,
+        "D35": 5
+      },
+      {
+        "mask": 172238829,
+        "H": 209,
+        "c3": 12,
+        "c4": 22,
+        "c5": 28,
+        "c6": 33,
+        "c7": 26,
+        "c8": 10,
+        "D33": 13,
+        "D34": 17,
+        "E8": 8,
+        "D35": 6
+      }
+    ],
+    "ranks": [
+      1,
+      2
+    ]
+  }
+}

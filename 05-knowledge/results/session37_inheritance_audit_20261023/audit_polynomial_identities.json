@@ -1,0 +1,84 @@
+{
+  "vandermonde": [
+    {
+      "n": 1,
+      "unsigned_tournament_value_at_ones": 1,
+      "vandermonde_permanent_value_at_ones": 1,
+      "intransitive_residual_value_at_ones": 0,
+      "signed_nonzero_monomials": 1,
+      "permanent_equals_transitive_sum": true,
+      "all_tournament_sum_equals_permanent": true
+    },
+    {
+      "n": 2,
+      "unsigned_tournament_value_at_ones": 2,
+      "vandermonde_permanent_value_at_ones": 2,
+      "intransitive_residual_value_at_ones": 0,
+      "signed_nonzero_monomials": 2,
+      "permanent_equals_transitive_sum": true,
+      "all_tournament_sum_equals_permanent": true
+    },
+    {
+      "n": 3,
+      "unsigned_tournament_value_at_ones": 8,
+      "vandermonde_permanent_value_at_ones": 6,
+      "intransitive_residual_value_at_ones": 2,
+      "signed_nonzero_monomials": 6,
+      "permanent_equals_transitive_sum": true,
+      "all_tournament_sum_equals_permanent": false
+    },
+    {
+      "n": 4,
+      "unsigned_tournament_value_at_ones": 64,
+      "vandermonde_permanent_value_at_ones": 24,
+      "intransitive_residual_value_at_ones": 40,
+      "signed_nonzero_monomials": 24,
+      "permanent_equals_transitive_sum": true,
+      "all_tournament_sum_equals_permanent": false
+    },
+    {
+      "n": 5,
+      "unsigned_tournament_value_at_ones": 1024,
+      "vandermonde_permanent_value_at_ones": 120,
+      "intransitive_residual_value_at_ones": 904,
+      "signed_nonzero_monomials": 120,
+      "permanent_equals_transitive_sum": true,
+      "all_tournament_sum_equals_permanent": false
+    }
+  ],
+  "n3_polynomial_correction": "prod_(i<j)(x_i+x_j) = per[x_i^(n-1-j)] + 2*x_0*x_1*x_2",
+  "rank_countermodel": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "rank_delta_x": 1,
+    "rank_delta_x_y": 2,
+    "functional_recovery": "y=x^2",
+    "affine_recovery": false
+  },
+  "factorial_moment_cancellation": {
+    "B": "s-1",
+    "L(B)": 0,
+    "L(B^2)": 1,
+    "H": "s*(s-2)",
+    "L(H)": 0,
+    "L(H^2)": 8,
+    "P": "W+Z*(ZW-2)",
+    "E(P^1)": 0,
+    "E(P^2)": 0,
+    "E(P^3)": 0,
+    "E(P^4)": 48
+  },
+  "checks": "all assertions passed"
+}

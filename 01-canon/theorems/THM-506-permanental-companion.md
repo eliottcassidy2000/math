@@ -1,7 +1,16 @@
 ---
 id: THM-506
-title: The permanental companion of the OCF — per(xI+A) is the unsigned twin of the char poly (the all-length vertex-graded face of Phi); (char,perm) determines H iff n<=7, breaking at n=8 via the D44<->D35 trade
-status: PROVED (permanental coefficient theorem, det/per O/E split — proofs by permutation cycle decomposition / Ryser). VERIFIED computationally: coeff theorem + O/E split all samples n<=7; non-spectral first at n=6 (same wall as H), splits same 47 cospectral classes as H at n=7; (char,perm) DETERMINES H for n<=7 and does NOT for n=8,9 (within-class exact-Q-rank: rank[De_unsigned|DH] exceeds rank[De_unsigned] by 1 at n=8,9; break = D44<->D35). Engineering: (char,perm) strictly dominates H as a fingerprint (28->32 distinct vs 56 iso classes at n=6; H adds nothing beyond perm).
+title: The permanental companion of the OCF; characteristic and permanental polynomials determine H exactly through order eight, with first failure at nine
+status: >
+  PROVED for the cycle-packing coefficient theorem and signed/unsigned split.
+  COMPUTER-ASSISTED / FINITE-EXACT for recovery of H at n=8: two independent
+  exhaustive computations of all 2^21 fixed-Hamiltonian-path presentations,
+  with 3217 joint-polynomial fibers and no unequal-H fiber. The direct formula
+  proves recovery for n<=7. An explicit independently checked n=9 collision,
+  followed by source extension, proves nonrecovery for every n>=9.
+  CORRECTED 2026-10-23: the earlier n=8 failure claim confused non-affine
+  recovery with arbitrary functional nonrecovery. The n=8 rank gap survives
+  only as an affine obstruction.
 source: monad-explorer-2026-06-15-S6
 depends_on:
   - THM-505   # OCF non-spectral defect: H = spectral skeleton + carriers; Sachs-basis form
@@ -16,6 +25,11 @@ related:
 ---
 
 # THM-506 — the permanental companion of the OCF
+
+> **Correction, 2026-10-23.** The old first-failure threshold n=8 was false.
+> The sharp threshold is recovery through n=8 and failure from n=9.
+> Parts 1–2 survive unchanged. Part 4 below replaces the invalid rank inference.
+> [Independent proofs and exact receipts](../../05-knowledge/results/session37_inheritance_audit_20261023/REPORT.md).
 
 The master cycle-packing polynomial (HYP-2514, reflection `the-master-cycle-packing-polynomial`)
 is `Phi(T;{y_k}) = sum_{L linear subdigraph} prod_{C in L} y_{|C|}`, with the spectrum the
@@ -85,43 +99,112 @@ resolves the full carrier vector via `O_m, E_m` (e.g. `O_6 = c_6`, `E_6 = D_33`,
 Exhaustive `n = 6` (all 32768 labeled tournaments; `permanental_companion_monad.py` [4]):
 iso classes (A000568) = 56; distinct char poly = 28; distinct `(char, perm)` = **32**;
 distinct `(char, perm, H)` = 32. The permanent recovers 4 distinctions the spectrum loses;
-`H` adds nothing beyond the permanent. **The permanental polynomial dominates `H` as a
-tournament fingerprint.**
+`H` adds nothing beyond the permanent. **The pair of characteristic and permanental polynomials dominates `H` as a
+tournament fingerprint for n<=8; this implication fails from n=9.**
 
-## Part 4 — (char, perm) determines H iff n <= 7 (VERIFIED; break = D44 <-> D35)
+## Part 4 — recovery through eight; first functional failure at nine
 
-> **The pair (characteristic polynomial, permanental polynomial) determines `H` for `n <= 7`
-> and does NOT for `n >= 8`.**
+**Corrected statement.** The pair `(det(xI-A), per(xI+A))` determines the
+Hamiltonian-path count H on all n-vertex tournaments if and only if n<=8.
+The n=8 implication is COMPUTER-ASSISTED / FINITE-EXACT, not a claimed closed
+formula; the n>=9 failure has an explicit finite witness and an all-order proof.
 
-Method: within a cospectral class the spectrum is fixed, so `H` and the perm coordinates
-`e_m^{unsigned}` are both linear in the non-spectral carriers; `(char,perm) -> H` iff `H` is
-affine in `e^{unsigned}`, i.e. `rank[ De^{unsigned} | DH ] = rank[ De^{unsigned} ]` over
-within-class deltas (exact `Q`-rank, `perm_rank_test_monad.py`):
+### Why the old rank inference failed
 
-| n | rank[De_unsigned] | rank[De_unsigned | DH] | (char,perm)->H |
-|---|---|---|---|
-| 6 | 1 | 1 | determines |
-| 7 | 2 | 2 | determines |
-| 8 | 3 | 4 | does NOT |
-| 9 | 4 | 5 | does NOT |
+The former text claimed that functional recovery holds if and only if H is
+affine in the permanent coordinates within a characteristic-polynomial class.
+This is false on the finite set of realized tournaments. A rank increase
+rules out an affine function, not an arbitrary function on the realized image.
+Even if both observables are linear on a larger carrier space, the realized
+set need not contain the differences or kernel vectors of that space.
 
-(thousands of within-class deltas per n; 47 classes split H at n=7, 657 at n=8, 1113 at n=9.)
-The rank diagnosis at n=8: adjoining **either `D_44` or `D_35`** to the perm coordinates
-restores the affine relation (interchangeable since `D_44+D_35 = E_8` is fixed). This is the
-first **packing collision**: the disjoint odd pair `D_35` (which `H` needs — part of the
-odd-pair level `alpha_2`) and the disjoint even-cycle pair `D_44` (which `H` does not) share
-the vertex count 8 and the cardinality-parity (both 2 cycles), so the permanent's **vertex
-grading** merges them while `H`'s **odd-length** grading must separate them. (At `n=9` the
-analogous odd-cardinality collision `c_9 <-> T_333` adds a second deficit dimension.)
+The old n=8 pooled exact rank 3->4 is independently confirmed. Nevertheless
+all 3217 actual joint-polynomial fibers have a single H. In fact, 59 of the
+1523 characteristic-polynomial classes fail affine recovery individually.
+A smallest three-point affine obstruction is given by upper-pair-lex edge
+masks `172254133,172256153,172238829`, with bit 1 meaning i->j for i<j.
+All have characteristic coefficients, in ascending powers of x,
 
-By-product: `rank[De^{unsigned}] = n - 5` for n=6..9 — the permanental polynomial's
-within-cospectral-class non-spectral dimension is `n-5`, carried by the `n-5` coordinates
-`e_6^{unsigned},...,e_n^{unsigned}`. This is the natural home of THM-505's *original*
-"non-spectral dimension n-5" observation (the carrier-coordinate count `c_6,...,c_n`), as
-opposed to `H`'s own functional dimension `floor(n/3)` (smaller; `H` reads level-sum
-marginals).
+```
+[-2,-9,-20,-28,-22,-12,0,0,1].
+```
+
+The three permanent low coefficient triples are `(12,31,40)`, `(16,39,44)`,
+`(18,43,46)`; the remaining coefficients are `[28,22,12,0,0,1]` in each case.
+Their H values are `177,197,209`. Permanent differences `(4,8,4),(6,12,6)`
+are proportional, whereas H differences `20,32` are not. All three rows
+were checked independently by direct enumeration of all 8! permutations.
+This is non-affine but still functional recovery, not a same-coordinate collision.
+
+### The finite-exact n=8 proof and the low-order formula
+
+Write D_ab for disjoint directed-cycle pairs of lengths a,b. The established
+odd-cycle packing identity gives, with missing O/E indices read as zero,
+
+```
+n<=7: H = 1 + 2(O3+O5+O7) + 4E6.
+n=8:  H = 1 + 2(O3+O5+O7) + 4(E6+D35),   E8=D35+D44.
+```
+
+The formal coordinate map merges D35 and D44 at n=8, but no two realized
+n=8 tournaments keep all retained coordinates equal while changing D35.
+Every tournament has a Hamiltonian path, so relabeling one as `0->1->...->7`
+reduces the exhaustive universe to all 2^21 choices of the other arcs.
+Two independent exact algorithms cover this entire universe:
+
+1. Row-assignment determinant/permanent DP and endpoint Hamiltonian-path DP.
+2. Minimal-vertex-rooted cycle counts, all 651 disjoint cycle-pair placements,
+   and the odd-cycle packing formula.
+
+Both return 3217 joint-polynomial fibers and zero unequal-H fibers. The
+second method also confirms that every fiber fixes D35 and D44 individually.
+These are polynomial fibers, not isomorphism classes. Audit checksum: the
+presentation-H sum is 815136768, with minimum 1 and maximum 661.
+
+### An actual collision at n=9
+
+Upper-pair-lex masks `29759988540` and `18875161993` have H counts 2843 and
+2841, respectively, but share the following coefficient arrays (ascending):
+
+```
+per(xI+A): [384,692,629,380,154,68,28,0,0,1]
+det(xI-A): [-20,-82,-167,-192,-154,-68,-28,0,0,1].
+```
+
+Independent direct enumeration of all 9! permutations confirms each array
+and both H counts. Their sidecars, first/second, are
+`D35=209/210`, `D44=96/95`, `T333=11/10`, `c9=191/192`.
+Thus `E8=305` and `O9=c9+T333=202` agree. The exact formula
+
+```
+H = 1 + 2(O3+O5+O7+O9) + 4(E6+D35) + 6T333
+```
+
+gives the difference `4*(-1)+6*(1)=2`. This is a genuine realized collision.
+
+Adjoining a source multiplies both polynomials by x and leaves H unchanged,
+since the source must begin every Hamiltonian path and lie in no directed
+cycle. Repetition propagates the collision to every n>=9. It also shows
+that any lower-order collision would propagate to n=8, contradicting the
+complete census. This proves minimality of nine.
+
+### Correction lineage and remaining question
+
+The original monad-S6 cycle-packing theorem and O/E split remain valid.
+The original rank table described affine span, not arbitrary recoverability;
+its n=8 failure label and its formal D44/D35 "collision" interpretation are
+superseded by the realized-fiber census above. Historical scripts cited below
+were unavailable in the audited snapshot; the replacement scripts and receipts
+are self-contained. A structural explanation or compact nonlinear formula for
+the exceptional n=8 recovery is a useful open question, not needed for the
+finite-exact result.
+
+See [proofs and independent receipts](../../05-knowledge/results/session37_inheritance_audit_20261023/REPORT.md), including the complete n=8 fiber
+TSV, exact rank audit, explicit n=9 matrices and direct permutation verifier.
 
 ## Files
+- [Session 37 replacement proof and receipts](../../05-knowledge/results/session37_inheritance_audit_20261023/REPORT.md) — corrected Part 4;
+  historical script listings below preserve attribution rather than assert availability.
 - `04-computation/permanental_companion_monad.py` (+ `05-knowledge/results/permanental_companion_monad.out`)
   — Parts 1,2,3 + fingerprint completeness.
 - `04-computation/perm_rank_test_monad.py` (+ `.out`, `perm_rank_test_n9.out`) — Part 4.
