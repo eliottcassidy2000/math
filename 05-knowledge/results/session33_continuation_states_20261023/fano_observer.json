@@ -1,0 +1,74 @@
+{
+  "H_histogram": {
+    "171": 112,
+    "189": 16
+  },
+  "checks": 848,
+  "code_weight_enumerator": {
+    "0": 1,
+    "3": 7,
+    "4": 7,
+    "7": 1
+  },
+  "conditional_assignments_checked": 379,
+  "finite_scope": "all 128 Fano line orientations; 5040 independent path words; all 56 K8 triangles",
+  "general_hamming_instances": [
+    {
+      "cube_dimension": 3,
+      "fiber_size": 2,
+      "nonconstant_degree": 2,
+      "quotient_vertices": 4,
+      "r": 2
+    },
+    {
+      "cube_dimension": 7,
+      "fiber_size": 16,
+      "nonconstant_degree": 4,
+      "quotient_vertices": 8,
+      "r": 3
+    },
+    {
+      "cube_dimension": 15,
+      "fiber_size": 2048,
+      "nonconstant_degree": 8,
+      "quotient_vertices": 16,
+      "r": 4
+    },
+    {
+      "cube_dimension": 31,
+      "fiber_size": 67108864,
+      "nonconstant_degree": 16,
+      "quotient_vertices": 32,
+      "r": 5
+    }
+  ],
+  "normals": [
+    4,
+    1,
+    3,
+    7,
+    6,
+    5,
+    2
+  ],
+  "status": "PASS",
+  "triangle_holonomy_histogram": {
+    "13": 8,
+    "26": 8,
+    "35": 8,
+    "52": 8,
+    "70": 8,
+    "81": 8,
+    "104": 8
+  },
+  "walsh_nonzero": {
+    "0": "693/4",
+    "101": "9/4",
+    "114": "9/4",
+    "23": "9/4",
+    "46": "9/4",
+    "57": "9/4",
+    "75": "9/4",
+    "92": "9/4"
+  }
+}

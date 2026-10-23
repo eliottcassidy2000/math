@@ -1,0 +1,54 @@
+{
+  "Hamiltonian_counts": [
+    189,
+    171,
+    175
+  ],
+  "charpoly": "(x-14)(x^2-2x-14)",
+  "chart_exit_masks": [
+    848974,
+    849223
+  ],
+  "checks": 5294,
+  "mean_Paley_hitting": [
+    "0",
+    "10",
+    "12"
+  ],
+  "mean_Paley_return": 11,
+  "orbit_sizes": [
+    240,
+    1680,
+    720
+  ],
+  "quotient_neighbor_counts": [
+    [
+      0,
+      14,
+      0
+    ],
+    [
+      2,
+      9,
+      3
+    ],
+    [
+      0,
+      7,
+      7
+    ]
+  ],
+  "representatives": [
+    1956555,
+    1956430,
+    2079175
+  ],
+  "stationary": [
+    "1/11",
+    "7/11",
+    "3/11"
+  ],
+  "stationary_H": "1911/11",
+  "status": "PASS",
+  "universe": "all2640 labelled regular tournaments on7 vertices; every cyclic-triangle reversal"
+}

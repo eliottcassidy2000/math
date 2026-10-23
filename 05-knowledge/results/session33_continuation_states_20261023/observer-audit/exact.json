@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "context_budget": 1099,
+    "converse_profile": 1,
+    "dual_weight_all_r_instances": 6,
+    "exact_same_H_witness_profiles": 3,
+    "fano_base": 128,
+    "fano_regular": 128,
+    "fixed_order_sufficiency_census": 1099,
+    "literal_substitution": 319,
+    "nonuniform_average_hostile": 1,
+    "partition_profile_base": 1099,
+    "pointwise_not_blind": 1,
+    "port_hostile": 1,
+    "r3_permanent_ryser": 512,
+    "triangular_diagonal": 4,
+    "triangular_rows": 4,
+    "triple_span_all_r_instances": 6,
+    "walsh_amplitudes": 1,
+    "walsh_degree": 1
+  },
+  "fano_histogram": {
+    "171": 112,
+    "189": 16
+  },
+  "methods": "No producer code imports. Path-extension DFS; subset Hamiltonian permutations and least-vertex partitions; quotient finite automaton; Ryser permanent.",
+  "nonuniform_counts": [
+    3,
+    15
+  ],
+  "status": "PASS",
+  "triangle_rows": [
+    [
+      3,
+      1
+    ],
+    [
+      11,
+      17,
+      4
+    ],
+    [
+      51,
+      229,
+      216,
+      36
+    ],
+    [
+      227,
+      2921,
+      7396,
+      4752,
+      576
+    ]
+  ]
+}

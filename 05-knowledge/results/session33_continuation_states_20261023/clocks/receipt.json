@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": 17285,
+  "mask_profiles": 128,
+  "demand_cases": 8192,
+  "universe": "3 obligation labels; nonempty mask capacities in {0,1}; each demand in {0,1,2,3}",
+  "hostile": {
+    "bank_A": {
+      "12": 1,
+      "3": 1
+    },
+    "bank_B": {
+      "13": 1,
+      "2": 1
+    },
+    "demand": [
+      1,
+      1,
+      0
+    ],
+    "served": [
+      1,
+      2
+    ]
+  },
+  "claims_not_tested": [
+    "physical LRC realizability",
+    "native annulus extraction",
+    "uniform 153N",
+    "universal Collatz entry"
+  ]
+}

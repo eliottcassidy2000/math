@@ -1,0 +1,40 @@
+{
+  "all_vertices_lumpability_checked": 2640,
+  "full_masks_scanned": 2097152,
+  "orbits": [
+    {
+      "H": 175,
+      "rep": 17976,
+      "size": 720
+    },
+    {
+      "H": 171,
+      "rep": 22066,
+      "size": 1680
+    },
+    {
+      "H": 189,
+      "rep": 85298,
+      "size": 240
+    }
+  ],
+  "regular_count": 2640,
+  "rows_H_order_189_171_175": {
+    "171": [
+      2,
+      9,
+      3
+    ],
+    "175": [
+      0,
+      7,
+      7
+    ],
+    "189": [
+      0,
+      14,
+      0
+    ]
+  },
+  "status": "PASS"
+}
