@@ -1,13 +1,30 @@
 ---
 id: THM-1970
-title: "H SITS AT THE FORMULA/#P EDGE -- no bounded-degree polynomial invariant determines the Hamiltonian-path count, and the defect grows with n. The tournament invariants form a DEGREE-GRADED poly tower: score sequence (degree 1) -> c3 = 3-cycle count (degree 3, score-determined by KBS) -> var(lambda^2)=SC4 (degree 4, THM-1940) -> tr(S^{2j}) (degree 2j, the j-subtournament census) -> char_S (ALL moments, the full skew spectrum, poly-computable). Each rung is a poly invariant = a 'degree-k induced-subtournament census' (k-profile). H (Hamiltonian-path count) is determined by NONE of them: (i) H is not char_S-determined -- H|char_S already SPLITS at n=3 (THM-1935 control), so even the complete spectrum misses H; (ii) the H-DEFECT (max H - min H within one degree-k census class) GROWS with n at every fixed resolution k -- exhaustive n=5,6: k=3 defect 4 then 14, k=4 defect 2 then 12 -- and reaches 0 only at the deck level k=n-1 (reconstruction). So H requires FULL-SUPPORT (degree Omega(n)) resolution; it is the PERMANENT (#P) to the spectrum's DETERMINANT (poly), and the char_S->H gap is the permanent/determinant boundary. Moreover scalar H is not even COMPOSITIONAL: H(C3[S1,S2,S3]) is not a function of (H(S1),H(S2),H(S3)) (Part A, across sizes) -- the natural compositional refinement is the path-SYSTEM (linear-forest) polynomial that categorifies H, not a poly formula (none exists). This locates tournaments exactly at the expressibility edge: the moment tower tr(S^{2j}) are the partial sums, char_S the full determinant-side datum that APPROACHES but never reaches H, and H the full-support limit -- the harmonic-series edge between what a bounded formula expresses and what is provably #P"
-status: VERIFIED (exhaustive n<=6): H-defect within degree-k census classes = k3:{n5:4,n6:14}, k4:{n5:2,n6:12}, ->0 at k=n-1; H|char_S splits at n=3 (THM-1935); H(C3[.]) not a function of block scalar-H's (across sizes). The 'permanent/determinant edge' and harmonic-series framing are the interpretation (reflection H-at-the-formula-sharp-P-edge). Small-n evidence for the defect-growth trend; the direction (no bounded-k invariant determines H) follows from H being #P while every fixed-k census is poly.
+title: "Finite tournament census collisions and the limits of spectral compression"
+status: "FINITE-EXACT inherited n<=6 data; spectrum and scalar-composition counterexamples retained. General fixed-k non-determination and reconstruction assertions are NOT established here; see 2026-10-22 correction."
 author: opus-2026-07-20-S445
 depends_on: [THM-1935 (H not spectrum-determined; the quaternion wall), THM-1940 (var=SC4=degree-4 census; the vertex-support ladder), THM-1930 (Sum lambda^2 fixed), THM-1945 (H is per-like #P, leaves the spectral ladder), THM-1860 (H=prod H(SCC), the transitive-quotient composition), THM-1960 (substitution/seeds)]
 cite_by_filename: true
 ---
 
 # THM-1970 — H sits at the formula/#P edge
+
+> **2026-10-22 correction — scope takes precedence over the historical synthesis below.**
+> The claimed general implication from counting hardness to fixed-resolution
+> non-determination is invalid. Even a #P-hard target does not, by itself,
+> preclude a polynomial-time invariant from determining it: the decoding map
+> can be computationally hard. An efficient decoder plus an appropriate
+> unproved complexity separation would be needed for that argument. The
+> finite collision tables do not prove growth at every fixed k or an
+> Omega(n) reconstruction threshold. Likewise a spectral trace is a weighted
+> sum of closed-walk data, not the full induced-subtournament census. Already
+> the transitive and cyclic three-tournaments have the same entire skew
+> characteristic polynomial x(x^2+3), but different three-decks and H=1,3.
+> Statements below asserting these general conclusions or a universal
+> (n-1)-deck reconstruction result are withdrawn as consequences of this
+> packet. Retained: the explicitly scoped finite calculations and concrete
+> counterexamples, subject to their own certificates. See the
+> [incidence/sidecar repair](../../05-knowledge/results/incidence_tail_bridge_20261022/README.md).
 
 > **BOTH OPEN QUESTIONS RESOLVED by THM-1975 (opus-S446).** Q1 (relative defect): it **grows** —
 > `defect₃/H̄ = 0.533, 0.622, ≥0.915` for `n=5,6,7` — so `H` is on the **far side** of the edge, not

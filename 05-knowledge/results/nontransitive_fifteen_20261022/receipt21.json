@@ -1,0 +1,14 @@
+{
+  "checks": 53409,
+  "frames_per_group": 1024,
+  "full_target_stream_sha256": "855fcf010be5a86b203815101f2e7726b177520d660494e98a2fa8bab3ff1fb8",
+  "groups": [
+    "C21",
+    "C7:3"
+  ],
+  "same_mask_distinct_group_sources": 1024,
+  "schema": "VT21-complete-two-groups-v1",
+  "scope": "Every VT21 tournament has a regular C21 or C7:3 subgroup under cited odd-order solvability; all2048 necessary frames excluded.",
+  "word_positions": 14336,
+  "word_sha256": "81f974599a39121841bede0488d6e0948ee6a848debe8cd956d166e0d3bd7033"
+}

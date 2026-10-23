@@ -1,0 +1,274 @@
+{
+  "checks": 19331,
+  "controls": [
+    {
+      "black_family_counts": {
+        "blocks": 2,
+        "cuts": 2,
+        "prefix_and_mates": 6
+      },
+      "degrees": [
+        3,
+        7,
+        11
+      ],
+      "m": 5,
+      "n": 15,
+      "q": 3,
+      "source_sha256": "04484c511cf1a287d9b5f8d4bd3c428794d4aed30dbac55846aa5c503cd9f69e",
+      "union_black_orbits": 10
+    },
+    {
+      "black_family_counts": {
+        "blocks": 2,
+        "cuts": 2,
+        "prefix_and_mates": 6
+      },
+      "degrees": [
+        4,
+        10,
+        16
+      ],
+      "m": 7,
+      "n": 21,
+      "q": 3,
+      "source_sha256": "b335fe5ef5971a0729e59f66bbaed069ece6dfb764af6485201e0e3475f00af7",
+      "union_black_orbits": 10
+    },
+    {
+      "black_family_counts": {
+        "blocks": 2,
+        "cuts": 2,
+        "prefix_and_mates": 6
+      },
+      "degrees": [
+        3,
+        7,
+        12,
+        16
+      ],
+      "m": 5,
+      "n": 20,
+      "q": 4,
+      "source_sha256": "7ebd8cdd5bb76d1e731911ddbcda9943674da1ccc632b36f4465e5c4658106e9",
+      "union_black_orbits": 10
+    },
+    {
+      "black_family_counts": {
+        "blocks": 2,
+        "cuts": 2,
+        "prefix_and_mates": 6
+      },
+      "degrees": [
+        4,
+        10,
+        17,
+        23
+      ],
+      "m": 7,
+      "n": 28,
+      "q": 4,
+      "source_sha256": "a61640c88998a1a503c577fbd117f99e4f135a9632c3f343598ff27c1693d1bd",
+      "union_black_orbits": 10
+    },
+    {
+      "black_family_counts": {
+        "blocks": 4,
+        "cuts": 4
+      },
+      "degrees": [
+        2,
+        4,
+        7,
+        10,
+        13,
+        15
+      ],
+      "m": 3,
+      "n": 18,
+      "q": 6,
+      "source_sha256": "52521f230b87f6a04ae29c289308a4dcd104f5c56c25fc0dad3c213c1af36e6e",
+      "union_black_orbits": 8
+    },
+    {
+      "black_family_counts": {
+        "blocks": 6,
+        "cuts": 6
+      },
+      "degrees": [
+        2,
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        21
+      ],
+      "m": 3,
+      "n": 24,
+      "q": 8,
+      "source_sha256": "8efd132c98dbeea7772dafdc8a20e1606adc7ebf653aa79d2ffe7a7544242368",
+      "union_black_orbits": 12
+    },
+    {
+      "black_family_counts": {
+        "blocks": 0,
+        "cuts": 0,
+        "prefix_and_mates": 10
+      },
+      "degrees": [
+        5,
+        12
+      ],
+      "m": 9,
+      "n": 18,
+      "q": 2,
+      "source_sha256": "ef29fe9d020e478a5f49a44ed54af5d174e6f09c3aa804f7672f3e3d4a5d2a14",
+      "union_black_orbits": 10
+    }
+  ],
+  "excluded_orders": [
+    18,
+    20,
+    24,
+    28
+  ],
+  "input_sha256": "8aa3f42ece3f2ab17fcb9e78b726748c209098284db77fef9a576a64a2fc57af",
+  "necklaces": {
+    "paired_odd_orbit_partitions": {
+      "2": [
+        [
+          1,
+          1
+        ]
+      ],
+      "3": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "4": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "5": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "6": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "7": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          5
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          7
+        ]
+      ],
+      "8": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          3,
+          3
+        ]
+      ]
+    },
+    "singleton_necklaces": {
+      "2": 1,
+      "3": 1,
+      "4": 5,
+      "5": 11,
+      "6": 27,
+      "7": 127,
+      "8": 401
+    }
+  },
+  "nonVT_q3_m_ge5_excluded": true,
+  "order21_necessary": "vertex-transitive",
+  "pins": {
+    "05-knowledge/results/center_transitivity_20261021c/README.md": "c2f0ec2bbf81188ebf62d27e2a4fcbf132de0c9a342229876500a703b87ddd63",
+    "05-knowledge/results/center_transitivity_20261021c/VT15.md": "3dd976bd9d09e1a8586f14ae3204bd25a45a51b77ca88ad5ad1df7d98c792e11",
+    "05-knowledge/results/center_transitivity_20261021c/receipt15.json": "4697b30544a6e55a8bc4d81e2d4b1bffd61fe00cf6eb5e37be80c33dae720280",
+    "05-knowledge/results/center_transitivity_20261021c/receipt35.json": "360ac9b31f78935cda6699c5dc08693f75d0a02079e777d1d31be720f5e47be1",
+    "05-knowledge/results/deficit_fourteen_20261021c/receipt.json": "2b150fd9d93ea708cd201aef0eaa41fa5d5205daed5b1dba41757cf0da3c329d",
+    "05-knowledge/results/deficit_six_centers_20261021b/COMBINED_CUTOFF.md": "fa7800fdd0a9c5c942799b818bb3ec5bf19605766023593d9429f3c27a35f7c1",
+    "05-knowledge/results/deficit_twelve_20261021c/receipt.json": "fe54716a7b6e6fac30a41e118e9a59e2e80cdea0da6e7602932cfa0697779da2",
+    "05-knowledge/results/odd_shore_deficit_centers_20261021/session22-centers/PROOF.md": "6f2108a23a1268afa3fa55dfbcacd8b1d406cd1fa8156255779fee0f39729d13"
+  },
+  "remaining_before_peer_order15_composition": [
+    15,
+    21
+  ],
+  "schema": "center-incidence-20261022",
+  "scope": "No complete classification at order21; orbit-label equality is not an orbit-equality certificate.",
+  "status": "PROVED analytic exclusions with FINITE-EXACT literal controls, not a census"
+}
