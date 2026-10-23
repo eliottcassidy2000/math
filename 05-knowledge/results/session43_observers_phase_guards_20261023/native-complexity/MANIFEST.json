@@ -1,0 +1,42 @@
+{
+  "carrier": "actual tournaments, supplied equitable C3 cells, fixed spanning templates; regular variant additionally has pinned B cells and one singleton",
+  "credit": "Session43 root synthesis proposed the reduction and regularization; this packet completes proofs and checks.",
+  "files": [
+    {
+      "bytes": 1017,
+      "path": "README.md",
+      "sha256": "d0a8308084b74dcfcdfb95db6e338576e0ffae8c7b083011fdf6d73a9626722d"
+    },
+    {
+      "bytes": 10825,
+      "path": "THEOREM.md",
+      "sha256": "fba1e9a1a1fbd46004168c5f427f8f202ce429253ba5385fe6bb9ac6a2ba1d6f"
+    },
+    {
+      "bytes": 7706,
+      "path": "check.py",
+      "sha256": "f85cf15510952485bf91ccbefa778b3a7754c5ccf4a6d340be9f80d17f11942f"
+    },
+    {
+      "bytes": 60833,
+      "path": "receipt.json",
+      "sha256": "47593b79db977201222ace4c88b10d49b66ca7bfea84339484c317216057fbf4"
+    },
+    {
+      "bytes": 60833,
+      "path": "receipt.optimized.json",
+      "sha256": "47593b79db977201222ace4c88b10d49b66ca7bfea84339484c317216057fbf4"
+    }
+  ],
+  "git_writes": false,
+  "normal_optimized_identical": true,
+  "primary_complexity_source": {
+    "accessed": "2026-10-23",
+    "authors": "Garey, Johnson, Stockmeyer",
+    "doi": "10.1016/0304-3975(76)90059-1",
+    "title": "Some simplified NP-complete graph problems",
+    "url": "https://www.acs.uwinnipeg.ca/ychen2/journalpapers/Garey-Johnson-2maxsat.pdf",
+    "year": 1976
+  },
+  "status": "PROVED_SCOPED_AND_FINITE_CHECKED"
+}

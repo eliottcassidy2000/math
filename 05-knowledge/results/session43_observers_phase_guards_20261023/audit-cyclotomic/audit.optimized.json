@@ -1,0 +1,1035 @@
+{
+  "cycle_expansion_checks": 1103,
+  "direct_permutation_tournaments": 1108,
+  "exhaustive_orders": [
+    {
+      "minimum_binary_valuation": 0,
+      "n": 1,
+      "tournaments": 1
+    },
+    {
+      "minimum_binary_valuation": null,
+      "n": 2,
+      "tournaments": 2
+    },
+    {
+      "minimum_binary_valuation": 1,
+      "n": 3,
+      "tournaments": 8
+    },
+    {
+      "minimum_binary_valuation": null,
+      "n": 4,
+      "tournaments": 64
+    },
+    {
+      "minimum_binary_valuation": 4,
+      "n": 5,
+      "tournaments": 1024
+    }
+  ],
+  "independent_norm_checks": 4441,
+  "status": "PASS",
+  "tangent_ODE_sharp_checks": [
+    {
+      "n": 3,
+      "q": 0,
+      "valuation": 1
+    },
+    {
+      "n": 5,
+      "q": 0,
+      "valuation": 4
+    },
+    {
+      "n": 7,
+      "q": 0,
+      "valuation": 4
+    },
+    {
+      "n": 9,
+      "q": 3,
+      "valuation": 7
+    },
+    {
+      "n": 11,
+      "q": 0,
+      "valuation": 9
+    },
+    {
+      "n": 13,
+      "q": 7,
+      "valuation": 11
+    },
+    {
+      "n": 15,
+      "q": 0,
+      "valuation": 11
+    },
+    {
+      "n": 17,
+      "q": 3,
+      "valuation": 14
+    },
+    {
+      "n": 19,
+      "q": 5,
+      "valuation": 16
+    },
+    {
+      "n": 21,
+      "q": 7,
+      "valuation": 18
+    },
+    {
+      "n": 23,
+      "q": 0,
+      "valuation": 20
+    },
+    {
+      "n": 25,
+      "q": 11,
+      "valuation": 22
+    },
+    {
+      "n": 27,
+      "q": 13,
+      "valuation": 24
+    },
+    {
+      "n": 29,
+      "q": 15,
+      "valuation": 26
+    },
+    {
+      "n": 31,
+      "q": 0,
+      "valuation": 26
+    },
+    {
+      "n": 33,
+      "q": 3,
+      "valuation": 29
+    },
+    {
+      "n": 35,
+      "q": 5,
+      "valuation": 31
+    },
+    {
+      "n": 37,
+      "q": 7,
+      "valuation": 33
+    },
+    {
+      "n": 39,
+      "q": 9,
+      "valuation": 35
+    },
+    {
+      "n": 41,
+      "q": 11,
+      "valuation": 37
+    },
+    {
+      "n": 43,
+      "q": 13,
+      "valuation": 39
+    },
+    {
+      "n": 45,
+      "q": 15,
+      "valuation": 41
+    },
+    {
+      "n": 47,
+      "q": 0,
+      "valuation": 43
+    },
+    {
+      "n": 49,
+      "q": 19,
+      "valuation": 45
+    },
+    {
+      "n": 51,
+      "q": 21,
+      "valuation": 47
+    },
+    {
+      "n": 53,
+      "q": 23,
+      "valuation": 49
+    },
+    {
+      "n": 55,
+      "q": 25,
+      "valuation": 51
+    },
+    {
+      "n": 57,
+      "q": 27,
+      "valuation": 53
+    },
+    {
+      "n": 59,
+      "q": 29,
+      "valuation": 55
+    },
+    {
+      "n": 61,
+      "q": 31,
+      "valuation": 57
+    },
+    {
+      "n": 63,
+      "q": 0,
+      "valuation": 57
+    },
+    {
+      "n": 65,
+      "q": 3,
+      "valuation": 60
+    },
+    {
+      "n": 67,
+      "q": 5,
+      "valuation": 62
+    },
+    {
+      "n": 69,
+      "q": 7,
+      "valuation": 64
+    },
+    {
+      "n": 71,
+      "q": 9,
+      "valuation": 66
+    },
+    {
+      "n": 73,
+      "q": 11,
+      "valuation": 68
+    },
+    {
+      "n": 75,
+      "q": 13,
+      "valuation": 70
+    },
+    {
+      "n": 77,
+      "q": 15,
+      "valuation": 72
+    },
+    {
+      "n": 79,
+      "q": 17,
+      "valuation": 74
+    },
+    {
+      "n": 81,
+      "q": 19,
+      "valuation": 76
+    },
+    {
+      "n": 83,
+      "q": 21,
+      "valuation": 78
+    },
+    {
+      "n": 85,
+      "q": 23,
+      "valuation": 80
+    },
+    {
+      "n": 87,
+      "q": 25,
+      "valuation": 82
+    },
+    {
+      "n": 89,
+      "q": 27,
+      "valuation": 84
+    },
+    {
+      "n": 91,
+      "q": 29,
+      "valuation": 86
+    },
+    {
+      "n": 93,
+      "q": 31,
+      "valuation": 88
+    },
+    {
+      "n": 95,
+      "q": 0,
+      "valuation": 90
+    },
+    {
+      "n": 97,
+      "q": 35,
+      "valuation": 92
+    },
+    {
+      "n": 99,
+      "q": 37,
+      "valuation": 94
+    },
+    {
+      "n": 101,
+      "q": 39,
+      "valuation": 96
+    },
+    {
+      "n": 103,
+      "q": 41,
+      "valuation": 98
+    },
+    {
+      "n": 105,
+      "q": 43,
+      "valuation": 100
+    },
+    {
+      "n": 107,
+      "q": 45,
+      "valuation": 102
+    },
+    {
+      "n": 109,
+      "q": 47,
+      "valuation": 104
+    },
+    {
+      "n": 111,
+      "q": 49,
+      "valuation": 106
+    },
+    {
+      "n": 113,
+      "q": 51,
+      "valuation": 108
+    },
+    {
+      "n": 115,
+      "q": 53,
+      "valuation": 110
+    },
+    {
+      "n": 117,
+      "q": 55,
+      "valuation": 112
+    },
+    {
+      "n": 119,
+      "q": 57,
+      "valuation": 114
+    },
+    {
+      "n": 121,
+      "q": 59,
+      "valuation": 116
+    },
+    {
+      "n": 123,
+      "q": 61,
+      "valuation": 118
+    },
+    {
+      "n": 125,
+      "q": 63,
+      "valuation": 120
+    },
+    {
+      "n": 127,
+      "q": 0,
+      "valuation": 120
+    },
+    {
+      "n": 129,
+      "q": 3,
+      "valuation": 123
+    },
+    {
+      "n": 131,
+      "q": 5,
+      "valuation": 125
+    },
+    {
+      "n": 133,
+      "q": 7,
+      "valuation": 127
+    },
+    {
+      "n": 135,
+      "q": 9,
+      "valuation": 129
+    },
+    {
+      "n": 137,
+      "q": 11,
+      "valuation": 131
+    },
+    {
+      "n": 139,
+      "q": 13,
+      "valuation": 133
+    },
+    {
+      "n": 141,
+      "q": 15,
+      "valuation": 135
+    },
+    {
+      "n": 143,
+      "q": 17,
+      "valuation": 137
+    },
+    {
+      "n": 145,
+      "q": 19,
+      "valuation": 139
+    },
+    {
+      "n": 147,
+      "q": 21,
+      "valuation": 141
+    },
+    {
+      "n": 149,
+      "q": 23,
+      "valuation": 143
+    },
+    {
+      "n": 151,
+      "q": 25,
+      "valuation": 145
+    },
+    {
+      "n": 153,
+      "q": 27,
+      "valuation": 147
+    },
+    {
+      "n": 155,
+      "q": 29,
+      "valuation": 149
+    },
+    {
+      "n": 157,
+      "q": 31,
+      "valuation": 151
+    },
+    {
+      "n": 159,
+      "q": 33,
+      "valuation": 153
+    },
+    {
+      "n": 161,
+      "q": 35,
+      "valuation": 155
+    },
+    {
+      "n": 163,
+      "q": 37,
+      "valuation": 157
+    },
+    {
+      "n": 165,
+      "q": 39,
+      "valuation": 159
+    },
+    {
+      "n": 167,
+      "q": 41,
+      "valuation": 161
+    },
+    {
+      "n": 169,
+      "q": 43,
+      "valuation": 163
+    },
+    {
+      "n": 171,
+      "q": 45,
+      "valuation": 165
+    },
+    {
+      "n": 173,
+      "q": 47,
+      "valuation": 167
+    },
+    {
+      "n": 175,
+      "q": 49,
+      "valuation": 169
+    },
+    {
+      "n": 177,
+      "q": 51,
+      "valuation": 171
+    },
+    {
+      "n": 179,
+      "q": 53,
+      "valuation": 173
+    },
+    {
+      "n": 181,
+      "q": 55,
+      "valuation": 175
+    },
+    {
+      "n": 183,
+      "q": 57,
+      "valuation": 177
+    },
+    {
+      "n": 185,
+      "q": 59,
+      "valuation": 179
+    },
+    {
+      "n": 187,
+      "q": 61,
+      "valuation": 181
+    },
+    {
+      "n": 189,
+      "q": 63,
+      "valuation": 183
+    },
+    {
+      "n": 191,
+      "q": 0,
+      "valuation": 185
+    },
+    {
+      "n": 193,
+      "q": 67,
+      "valuation": 187
+    },
+    {
+      "n": 195,
+      "q": 69,
+      "valuation": 189
+    },
+    {
+      "n": 197,
+      "q": 71,
+      "valuation": 191
+    },
+    {
+      "n": 199,
+      "q": 73,
+      "valuation": 193
+    },
+    {
+      "n": 201,
+      "q": 75,
+      "valuation": 195
+    },
+    {
+      "n": 203,
+      "q": 77,
+      "valuation": 197
+    },
+    {
+      "n": 205,
+      "q": 79,
+      "valuation": 199
+    },
+    {
+      "n": 207,
+      "q": 81,
+      "valuation": 201
+    },
+    {
+      "n": 209,
+      "q": 83,
+      "valuation": 203
+    },
+    {
+      "n": 211,
+      "q": 85,
+      "valuation": 205
+    },
+    {
+      "n": 213,
+      "q": 87,
+      "valuation": 207
+    },
+    {
+      "n": 215,
+      "q": 89,
+      "valuation": 209
+    },
+    {
+      "n": 217,
+      "q": 91,
+      "valuation": 211
+    },
+    {
+      "n": 219,
+      "q": 93,
+      "valuation": 213
+    },
+    {
+      "n": 221,
+      "q": 95,
+      "valuation": 215
+    },
+    {
+      "n": 223,
+      "q": 97,
+      "valuation": 217
+    },
+    {
+      "n": 225,
+      "q": 99,
+      "valuation": 219
+    },
+    {
+      "n": 227,
+      "q": 101,
+      "valuation": 221
+    },
+    {
+      "n": 229,
+      "q": 103,
+      "valuation": 223
+    },
+    {
+      "n": 231,
+      "q": 105,
+      "valuation": 225
+    },
+    {
+      "n": 233,
+      "q": 107,
+      "valuation": 227
+    },
+    {
+      "n": 235,
+      "q": 109,
+      "valuation": 229
+    },
+    {
+      "n": 237,
+      "q": 111,
+      "valuation": 231
+    },
+    {
+      "n": 239,
+      "q": 113,
+      "valuation": 233
+    },
+    {
+      "n": 241,
+      "q": 115,
+      "valuation": 235
+    },
+    {
+      "n": 243,
+      "q": 117,
+      "valuation": 237
+    },
+    {
+      "n": 245,
+      "q": 119,
+      "valuation": 239
+    },
+    {
+      "n": 247,
+      "q": 121,
+      "valuation": 241
+    },
+    {
+      "n": 249,
+      "q": 123,
+      "valuation": 243
+    },
+    {
+      "n": 251,
+      "q": 125,
+      "valuation": 245
+    },
+    {
+      "n": 253,
+      "q": 127,
+      "valuation": 247
+    },
+    {
+      "n": 255,
+      "q": 0,
+      "valuation": 247
+    },
+    {
+      "n": 257,
+      "q": 3,
+      "valuation": 250
+    },
+    {
+      "n": 259,
+      "q": 5,
+      "valuation": 252
+    },
+    {
+      "n": 261,
+      "q": 7,
+      "valuation": 254
+    },
+    {
+      "n": 263,
+      "q": 9,
+      "valuation": 256
+    },
+    {
+      "n": 265,
+      "q": 11,
+      "valuation": 258
+    },
+    {
+      "n": 267,
+      "q": 13,
+      "valuation": 260
+    },
+    {
+      "n": 269,
+      "q": 15,
+      "valuation": 262
+    },
+    {
+      "n": 271,
+      "q": 17,
+      "valuation": 264
+    },
+    {
+      "n": 273,
+      "q": 19,
+      "valuation": 266
+    },
+    {
+      "n": 275,
+      "q": 21,
+      "valuation": 268
+    },
+    {
+      "n": 277,
+      "q": 23,
+      "valuation": 270
+    },
+    {
+      "n": 279,
+      "q": 25,
+      "valuation": 272
+    },
+    {
+      "n": 281,
+      "q": 27,
+      "valuation": 274
+    },
+    {
+      "n": 283,
+      "q": 29,
+      "valuation": 276
+    },
+    {
+      "n": 285,
+      "q": 31,
+      "valuation": 278
+    },
+    {
+      "n": 287,
+      "q": 33,
+      "valuation": 280
+    },
+    {
+      "n": 289,
+      "q": 35,
+      "valuation": 282
+    },
+    {
+      "n": 291,
+      "q": 37,
+      "valuation": 284
+    },
+    {
+      "n": 293,
+      "q": 39,
+      "valuation": 286
+    },
+    {
+      "n": 295,
+      "q": 41,
+      "valuation": 288
+    },
+    {
+      "n": 297,
+      "q": 43,
+      "valuation": 290
+    },
+    {
+      "n": 299,
+      "q": 45,
+      "valuation": 292
+    },
+    {
+      "n": 301,
+      "q": 47,
+      "valuation": 294
+    },
+    {
+      "n": 303,
+      "q": 49,
+      "valuation": 296
+    },
+    {
+      "n": 305,
+      "q": 51,
+      "valuation": 298
+    },
+    {
+      "n": 307,
+      "q": 53,
+      "valuation": 300
+    },
+    {
+      "n": 309,
+      "q": 55,
+      "valuation": 302
+    },
+    {
+      "n": 311,
+      "q": 57,
+      "valuation": 304
+    },
+    {
+      "n": 313,
+      "q": 59,
+      "valuation": 306
+    },
+    {
+      "n": 315,
+      "q": 61,
+      "valuation": 308
+    },
+    {
+      "n": 317,
+      "q": 63,
+      "valuation": 310
+    },
+    {
+      "n": 319,
+      "q": 65,
+      "valuation": 312
+    },
+    {
+      "n": 321,
+      "q": 67,
+      "valuation": 314
+    },
+    {
+      "n": 323,
+      "q": 69,
+      "valuation": 316
+    },
+    {
+      "n": 325,
+      "q": 71,
+      "valuation": 318
+    },
+    {
+      "n": 327,
+      "q": 73,
+      "valuation": 320
+    },
+    {
+      "n": 329,
+      "q": 75,
+      "valuation": 322
+    },
+    {
+      "n": 331,
+      "q": 77,
+      "valuation": 324
+    },
+    {
+      "n": 333,
+      "q": 79,
+      "valuation": 326
+    },
+    {
+      "n": 335,
+      "q": 81,
+      "valuation": 328
+    },
+    {
+      "n": 337,
+      "q": 83,
+      "valuation": 330
+    },
+    {
+      "n": 339,
+      "q": 85,
+      "valuation": 332
+    },
+    {
+      "n": 341,
+      "q": 87,
+      "valuation": 334
+    },
+    {
+      "n": 343,
+      "q": 89,
+      "valuation": 336
+    },
+    {
+      "n": 345,
+      "q": 91,
+      "valuation": 338
+    },
+    {
+      "n": 347,
+      "q": 93,
+      "valuation": 340
+    },
+    {
+      "n": 349,
+      "q": 95,
+      "valuation": 342
+    },
+    {
+      "n": 351,
+      "q": 97,
+      "valuation": 344
+    },
+    {
+      "n": 353,
+      "q": 99,
+      "valuation": 346
+    },
+    {
+      "n": 355,
+      "q": 101,
+      "valuation": 348
+    },
+    {
+      "n": 357,
+      "q": 103,
+      "valuation": 350
+    },
+    {
+      "n": 359,
+      "q": 105,
+      "valuation": 352
+    },
+    {
+      "n": 361,
+      "q": 107,
+      "valuation": 354
+    },
+    {
+      "n": 363,
+      "q": 109,
+      "valuation": 356
+    },
+    {
+      "n": 365,
+      "q": 111,
+      "valuation": 358
+    },
+    {
+      "n": 367,
+      "q": 113,
+      "valuation": 360
+    },
+    {
+      "n": 369,
+      "q": 115,
+      "valuation": 362
+    },
+    {
+      "n": 371,
+      "q": 117,
+      "valuation": 364
+    },
+    {
+      "n": 373,
+      "q": 119,
+      "valuation": 366
+    },
+    {
+      "n": 375,
+      "q": 121,
+      "valuation": 368
+    },
+    {
+      "n": 377,
+      "q": 123,
+      "valuation": 370
+    },
+    {
+      "n": 379,
+      "q": 125,
+      "valuation": 372
+    },
+    {
+      "n": 381,
+      "q": 127,
+      "valuation": 374
+    },
+    {
+      "n": 383,
+      "q": 0,
+      "valuation": 376
+    },
+    {
+      "n": 385,
+      "q": 131,
+      "valuation": 378
+    },
+    {
+      "n": 387,
+      "q": 133,
+      "valuation": 380
+    },
+    {
+      "n": 389,
+      "q": 135,
+      "valuation": 382
+    },
+    {
+      "n": 391,
+      "q": 137,
+      "valuation": 384
+    },
+    {
+      "n": 393,
+      "q": 139,
+      "valuation": 386
+    },
+    {
+      "n": 395,
+      "q": 141,
+      "valuation": 388
+    },
+    {
+      "n": 397,
+      "q": 143,
+      "valuation": 390
+    },
+    {
+      "n": 399,
+      "q": 145,
+      "valuation": 392
+    },
+    {
+      "n": 401,
+      "q": 147,
+      "valuation": 394
+    }
+  ]
+}

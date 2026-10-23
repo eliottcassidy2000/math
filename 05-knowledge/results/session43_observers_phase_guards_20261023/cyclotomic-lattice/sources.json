@@ -1,0 +1,8 @@
+{
+  "local_dependencies": {
+    "session43-cyclotomic/check.py": "1586175abe0b0442c330cf51662dd2267efd0e31f9acbb805a709b5c5b2365be",
+    "session43-cyclotomic/NOTE.md": "7aaebb8dfa0326eef993c7cfd32f73f814a1b63aa0a1271309afe9d7c2239da4",
+    "session43-cyclotomic/manifest.json": "8cc181b333bf0ebad59efd20c65493932c5446ff54fd35a9dec5fe2619fdb43c"
+  },
+  "primary_reference": "https://doi.org/10.4153/CMB-1966-038-7"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "producer_manifest_sha256": "8cc181b333bf0ebad59efd20c65493932c5446ff54fd35a9dec5fe2619fdb43c",
+  "files_verified": 8,
+  "source_pins_verified": 11,
+  "source_revision": "8b71b746f7a9d90378c702e01608207227b1f83e"
+}

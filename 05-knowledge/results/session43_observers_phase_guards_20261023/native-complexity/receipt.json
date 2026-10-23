@@ -1,0 +1,3723 @@
+{
+  "cases": 56,
+  "reports": [
+    {
+      "cells": 5,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 15,
+      "ordinary_path_sha256": "6e2b4e4509f1c65b7c19df81fa6c1b3dd417462d3870fc9675eeaad1cad417d4",
+      "original_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "original_vertices": 2,
+      "pinned_B_cells": 5,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": 162,
+      "regular_equitable_cells": 11,
+      "regular_host_vertices": 31,
+      "regular_score": 15,
+      "root_pinned_paths": 54,
+      "witness": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        4,
+        5,
+        3,
+        6,
+        7,
+        8,
+        2,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "cells": 7,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 21,
+      "ordinary_path_sha256": "622583297025ca48507b936a8e2d1f43f4e71de196e08d2b93562c9bbb2e0dbd",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "original_vertices": 3,
+      "pinned_B_cells": 7,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": 324,
+      "regular_equitable_cells": 15,
+      "regular_host_vertices": 43,
+      "regular_score": 21,
+      "root_pinned_paths": 108,
+      "witness": [
+        15,
+        16,
+        17,
+        0,
+        1,
+        4,
+        5,
+        3,
+        12,
+        13,
+        14,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "cells": 7,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 21,
+      "ordinary_path_sha256": "bcec10ee75376b0a563223252434d4b2352439632c34c4f28786724d4ba8a4f6",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 3,
+      "pinned_B_cells": 7,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": 324,
+      "regular_equitable_cells": 15,
+      "regular_host_vertices": 43,
+      "regular_score": 21,
+      "root_pinned_paths": 108,
+      "witness": [
+        15,
+        16,
+        17,
+        0,
+        1,
+        4,
+        5,
+        3,
+        7,
+        8,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        2,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "cells": 7,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 21,
+      "ordinary_path_sha256": "b22516a56cabb339385622a12677b18f95ee767a322bbc03c892111f4bce38f3",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 3,
+      "pinned_B_cells": 7,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": 324,
+      "regular_equitable_cells": 15,
+      "regular_host_vertices": 43,
+      "regular_score": 21,
+      "root_pinned_paths": 108,
+      "witness": [
+        15,
+        16,
+        17,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        2,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "cells": 8,
+      "family_paths": 54,
+      "fresh_parity_vertices": 0,
+      "host_vertices": 24,
+      "ordinary_path_sha256": "f685552a11e38e5384c4fa0219d60bcc6d11fc63e82bd3179a00f48dbbe24b01",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 3,
+      "pinned_B_cells": 8,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": 54,
+      "regular_equitable_cells": 17,
+      "regular_host_vertices": 49,
+      "regular_score": 24,
+      "root_pinned_paths": 18,
+      "witness": [
+        18,
+        19,
+        20,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        17,
+        15,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 1944,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "d97e72d7a7197fee8fa956f9230f3164e4a0257aa03e89ae2b1a4d49287dc118",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 648,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        18,
+        19,
+        20,
+        6,
+        7,
+        10,
+        11,
+        9,
+        21,
+        22,
+        23,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        8,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "b4e1c1f6362306ae37058afba5cb4d079771e374c183a0de47c51eab1e3890f8",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "ad5df45a07627d67605399a0446366bd998fade584c680594164cc43b26a7447",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "e9b2ef1d7f7bcd6ad557c8f86d8fdc78ab81057058debb1ccf6165015df1fa20",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        24,
+        25,
+        26,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "b4e1c1f6362306ae37058afba5cb4d079771e374c183a0de47c51eab1e3890f8",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "d5689827f07cb5e54f469711cc5f5fa2bda651c9733c189b790fa1c114e81e8b",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        18,
+        19,
+        20,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "2bf818d9ede63ae24fc3ad793a5e615bf30b24b31d6019fbe2a1d222a84bc682",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        17,
+        15,
+        16,
+        12,
+        13,
+        14,
+        6,
+        7,
+        10,
+        11,
+        9,
+        24,
+        25,
+        26,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 1944,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "5836ddd923b64a9e8f06c972a25aea3d30c8a5cf724f85acc869d082e9172c6a",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 648,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        21,
+        22,
+        23,
+        15,
+        16,
+        17,
+        13,
+        14,
+        12,
+        6,
+        18,
+        19,
+        20,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "3932a35abcd4786b918d078ad634b47aa34b1f03d1d7d5003bc1b73e5868628e",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "70ea15c6c9c6f23b29113a19e35a40774ec48dbfbe5305fb94c0583244bde600",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        19,
+        20,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        12,
+        17,
+        15,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "62f493fab5c0075265acb230117b4a762ba2686a8bb1ff332f75621f9abd24e9",
+      "original_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        6,
+        7,
+        8,
+        10,
+        11,
+        9,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "c3cf56af9e8186de4415e1866abb77320bb2b3483d7b5953978f4c500f62953d",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        12,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 162,
+      "fresh_parity_vertices": 0,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "de8e519200e0155a959469f2bec8f18bd14417b678db8c5782c1fdd5def28416",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 18,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 54,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        22,
+        23,
+        21,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "84721558393e2d22153575599951aae659b5e1591f60830743adf05f684fa9cf",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        23,
+        21,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        12,
+        13,
+        14,
+        17,
+        15,
+        16,
+        29,
+        27,
+        28,
+        25,
+        26,
+        24,
+        18,
+        30,
+        31,
+        32,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "94dcd07fec6b2e42bd042f8df4c9b588790aca5305c5cbed151664d5a54f37ac",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        18,
+        19,
+        20,
+        15,
+        16,
+        17,
+        13,
+        14,
+        12,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "d5689827f07cb5e54f469711cc5f5fa2bda651c9733c189b790fa1c114e81e8b",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        18,
+        19,
+        20,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "864e04356fb987c3aeb156b3b24b9ed59e13a9815bee8ebf867e69c07b1cf7a1",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        24,
+        25,
+        26,
+        6,
+        7,
+        10,
+        11,
+        9,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        17,
+        15,
+        16,
+        12,
+        13,
+        14,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "af7c4f91ea61212960dca8373d6d2ca8f0c8678334c3fa72f76c046abf38bd58",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        7,
+        8,
+        6,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 1944,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "cde66e08fc6c18d31412d7d6f3efb4bf18e5e963afe42665d48a85fce2f7f00d",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 648,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        21,
+        22,
+        23,
+        9,
+        6,
+        7,
+        8,
+        18,
+        19,
+        20,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "bd0e32a80a3a5e40ac312e12f27b8ef7b3643d13f888634cafd6f558f0317031",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        17,
+        15,
+        20,
+        18,
+        19,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "bc8533a52e9c25b42cd6683336f8657389c82e306642de9b9baa7a51e55e6a3c",
+      "original_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        5,
+        3,
+        4,
+        17,
+        15,
+        16,
+        13,
+        14,
+        12,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 162,
+      "fresh_parity_vertices": 0,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "2af719014c711c0e47d28be3041d59bafc2ba04338327a91f95e3fb21981313e",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 18,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 54,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        21,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "8a3adc77af9fd029bc6431a5388d85a267273f2575a07325e8c6078aa210ff13",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        12,
+        13,
+        14,
+        24,
+        25,
+        26,
+        15,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "69c99248fac40bf62c9d1558b10d45082dc1f072b4c9eb847fed15f835e583fb",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        23,
+        21,
+        11,
+        9,
+        10,
+        6,
+        7,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        28,
+        29,
+        27,
+        26,
+        24,
+        25,
+        22,
+        30,
+        31,
+        32,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "382e60cf653ad1339b722447b8abcdafcf2714a5bb3e85046aeaef2a49257091",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        7,
+        8,
+        6,
+        11,
+        9,
+        10,
+        17,
+        15,
+        16,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 9,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 27,
+      "ordinary_path_sha256": "bab2884816f97e6d22a1e709b99db046b3daabb90bd0f335286122606ac2dba0",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 9,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 19,
+      "regular_host_vertices": 55,
+      "regular_score": 27,
+      "root_pinned_paths": 216,
+      "witness": [
+        21,
+        22,
+        23,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        17,
+        15,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        18,
+        19,
+        20,
+        2,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 162,
+      "fresh_parity_vertices": 0,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "f8455244692daae13610d3df5875e17ede8892172af29bb60457cabee62032ae",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 18,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 54,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        21,
+        22,
+        23,
+        19,
+        20,
+        18,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 10,
+      "family_paths": 1944,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 30,
+      "ordinary_path_sha256": "f934e999941ca7fde580ef28c1ed7a882e24c5611bed3c4b2f50b1e59b0554f2",
+      "original_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 10,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 21,
+      "regular_host_vertices": 61,
+      "regular_score": 30,
+      "root_pinned_paths": 648,
+      "witness": [
+        24,
+        25,
+        26,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        21,
+        22,
+        23,
+        9,
+        6,
+        7,
+        8,
+        18,
+        19,
+        20,
+        2,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "ee9f33314abecd44715e2c2e67f28ef79c7d656251b1f06b4670b66c041d1c01",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        12,
+        17,
+        15,
+        23,
+        21,
+        22,
+        18,
+        19,
+        20,
+        24,
+        25,
+        26,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "70a68c87c4ded960dabb89017bfb3076833770b8853aced5850b2df8039b8d6a",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        17,
+        15,
+        12,
+        13,
+        14,
+        24,
+        25,
+        26,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "e608f218dfbeb6b7675b4b18550d4dbd71c9963a47be74e0a1510235a08ac422",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        23,
+        21,
+        17,
+        15,
+        16,
+        12,
+        13,
+        14,
+        6,
+        7,
+        10,
+        11,
+        9,
+        25,
+        26,
+        24,
+        29,
+        27,
+        28,
+        22,
+        30,
+        31,
+        32,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "e5f104236e9cfad452dd5dea3133df87eb26201912c211226b95b63760d8a18e",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        18,
+        19,
+        20,
+        23,
+        21,
+        22,
+        17,
+        15,
+        16,
+        13,
+        14,
+        12,
+        6,
+        24,
+        25,
+        26,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "c584825688a50ec76b4453f791d5508c6bd092e751f2287adff84713f0cbc62f",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        17,
+        15,
+        16,
+        23,
+        21,
+        22,
+        19,
+        20,
+        18,
+        9,
+        24,
+        25,
+        26,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "b865673bbe4642208d02d6689a0cea957b6844c6fbbb6fed721ca04fa73e0ab4",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        17,
+        15,
+        26,
+        24,
+        25,
+        27,
+        28,
+        29,
+        21,
+        22,
+        23,
+        19,
+        20,
+        18,
+        12,
+        30,
+        31,
+        32,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 324,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "23546c284fb210392cf4ecb4720fb54d38e01ea1e15b93f59b4e97b303c73f48",
+      "original_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 11,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 108,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        5,
+        3,
+        4,
+        17,
+        15,
+        12,
+        13,
+        14,
+        6,
+        7,
+        8,
+        10,
+        11,
+        9,
+        19,
+        20,
+        18,
+        23,
+        21,
+        22,
+        16,
+        24,
+        25,
+        26,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "c635a947feccc729138ae402baf12f72e39a2c724c43d385bf25867a6c079105",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        29,
+        27,
+        28,
+        23,
+        21,
+        19,
+        20,
+        18,
+        12,
+        30,
+        31,
+        32,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 162,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "03f6af9ba4d18747483ddf63133c23af6a66b9410ada725ce7e7fc2be1aefbd9",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 13,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 54,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        23,
+        21,
+        29,
+        27,
+        28,
+        25,
+        26,
+        24,
+        15,
+        30,
+        31,
+        32,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 16,
+      "family_paths": 0,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 48,
+      "ordinary_path_sha256": "d90ba19139199bf53f5104eb2c7b07c9c150b12aef8a307e76fb8722ffcc70aa",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 4,
+      "pinned_B_cells": 16,
+      "proper_colorings": 0,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 33,
+      "regular_host_vertices": 97,
+      "regular_score": 48,
+      "root_pinned_paths": 0,
+      "witness": null
+    },
+    {
+      "cells": 18,
+      "family_paths": 486,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 54,
+      "ordinary_path_sha256": "0404c5e73e13efcdd835dee951b54269a6ad3a7c2dd336f7866e44a11831a3b8",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 18,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 37,
+      "regular_host_vertices": 109,
+      "regular_score": 54,
+      "root_pinned_paths": 162,
+      "witness": [
+        48,
+        49,
+        50,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        12,
+        13,
+        14,
+        18,
+        19,
+        20,
+        23,
+        21,
+        35,
+        33,
+        31,
+        32,
+        30,
+        25,
+        26,
+        27,
+        28,
+        29,
+        36,
+        37,
+        38,
+        41,
+        39,
+        40,
+        34,
+        45,
+        46,
+        47,
+        24,
+        15,
+        42,
+        43,
+        44,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 1296,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "ed0ea48c282b9dbc603868c48b37a87ea6493aa2f7f743297902508550fc1c4c",
+      "original_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 11,
+      "proper_colorings": 48,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 432,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        6,
+        7,
+        8,
+        10,
+        11,
+        9,
+        19,
+        20,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 11,
+      "family_paths": 1296,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 33,
+      "ordinary_path_sha256": "7aea8c6ab697cc87681427ad2444cedf9f3857a0776ede0374f0fd92e55afc1c",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 11,
+      "proper_colorings": 48,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 23,
+      "regular_host_vertices": 67,
+      "regular_score": 33,
+      "root_pinned_paths": 432,
+      "witness": [
+        27,
+        28,
+        29,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        15,
+        12,
+        13,
+        14,
+        24,
+        25,
+        26,
+        18,
+        19,
+        20,
+        22,
+        23,
+        21,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "cells": 16,
+      "family_paths": 972,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 48,
+      "ordinary_path_sha256": "d44dca01f769fde5ea3e86a4653aa1dd9959b6a33dd14f09e9fe792b328bc261",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 16,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 33,
+      "regular_host_vertices": 97,
+      "regular_score": 48,
+      "root_pinned_paths": 324,
+      "witness": [
+        42,
+        43,
+        44,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        23,
+        21,
+        32,
+        30,
+        31,
+        33,
+        34,
+        35,
+        27,
+        28,
+        15,
+        16,
+        17,
+        13,
+        14,
+        12,
+        36,
+        37,
+        38,
+        18,
+        25,
+        26,
+        24,
+        29,
+        39,
+        40,
+        41,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 972,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "ae0176f257b1b4283968eff5a4ba1018bc6e4b6d4af73f02aaac9a02a3a4790f",
+      "original_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 13,
+      "proper_colorings": 36,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 324,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        16,
+        17,
+        12,
+        13,
+        14,
+        6,
+        7,
+        8,
+        10,
+        11,
+        9,
+        19,
+        20,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        27,
+        15,
+        30,
+        31,
+        32,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 18,
+      "family_paths": 486,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 54,
+      "ordinary_path_sha256": "7cdfa2614ef0f0ada739770fe81dec2b9cf16fe0f1c0549ce6b979c742a77824",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 18,
+      "proper_colorings": 6,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 37,
+      "regular_host_vertices": 109,
+      "regular_score": 54,
+      "root_pinned_paths": 162,
+      "witness": [
+        48,
+        49,
+        50,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        17,
+        15,
+        26,
+        24,
+        27,
+        28,
+        36,
+        37,
+        38,
+        40,
+        41,
+        39,
+        34,
+        35,
+        33,
+        32,
+        30,
+        31,
+        25,
+        45,
+        46,
+        47,
+        29,
+        21,
+        22,
+        23,
+        19,
+        20,
+        18,
+        12,
+        42,
+        43,
+        44,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "cells": 24,
+      "family_paths": 0,
+      "fresh_parity_vertices": 4,
+      "host_vertices": 72,
+      "ordinary_path_sha256": "4e9d987647466831beff06338b5684a61a03ff54159b70940cc978d9fbf194f7",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 24,
+      "proper_colorings": 0,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 49,
+      "regular_host_vertices": 145,
+      "regular_score": 72,
+      "root_pinned_paths": 0,
+      "witness": null
+    },
+    {
+      "cells": 13,
+      "family_paths": 972,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "729bf631a80528152204864d3904a6c0a0a701c9a83bf46cc18d38aade560e44",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 13,
+      "proper_colorings": 36,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 324,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        18,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28,
+        29,
+        27,
+        16,
+        17,
+        12,
+        13,
+        14,
+        30,
+        31,
+        32,
+        15,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 13,
+      "family_paths": 648,
+      "fresh_parity_vertices": 1,
+      "host_vertices": 39,
+      "ordinary_path_sha256": "281431920042df101e64b624245ca9f36f6d66addbdd59e7dc459ab971fed435",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 13,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 27,
+      "regular_host_vertices": 79,
+      "regular_score": 39,
+      "root_pinned_paths": 216,
+      "witness": [
+        33,
+        34,
+        35,
+        0,
+        1,
+        4,
+        5,
+        3,
+        13,
+        14,
+        15,
+        16,
+        17,
+        24,
+        25,
+        26,
+        29,
+        27,
+        28,
+        23,
+        21,
+        22,
+        19,
+        20,
+        18,
+        12,
+        30,
+        31,
+        32,
+        10,
+        11,
+        9,
+        6,
+        7,
+        8,
+        2,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "cells": 12,
+      "family_paths": 3888,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 36,
+      "ordinary_path_sha256": "ba47b9f543aa03ff4751f794b6a89633db8c88c4c7850ee5ae3fd5fea2e178f6",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 12,
+      "proper_colorings": 48,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 25,
+      "regular_host_vertices": 73,
+      "regular_score": 36,
+      "root_pinned_paths": 1296,
+      "witness": [
+        30,
+        31,
+        32,
+        0,
+        1,
+        4,
+        5,
+        3,
+        10,
+        11,
+        13,
+        14,
+        12,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        21,
+        27,
+        28,
+        29,
+        9,
+        6,
+        7,
+        8,
+        24,
+        25,
+        26,
+        2,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "cells": 16,
+      "family_paths": 972,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 48,
+      "ordinary_path_sha256": "cb2eb781b42011be37530dd2780d921d216382063120278ec347de82cc70a9c1",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 16,
+      "proper_colorings": 12,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 33,
+      "regular_host_vertices": 97,
+      "regular_score": 48,
+      "root_pinned_paths": 324,
+      "witness": [
+        42,
+        43,
+        44,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        23,
+        21,
+        32,
+        30,
+        31,
+        33,
+        34,
+        35,
+        27,
+        28,
+        29,
+        25,
+        26,
+        24,
+        18,
+        39,
+        40,
+        41,
+        22,
+        11,
+        9,
+        10,
+        6,
+        7,
+        12,
+        13,
+        14,
+        16,
+        17,
+        15,
+        36,
+        37,
+        38,
+        8,
+        2,
+        45,
+        46,
+        47
+      ]
+    },
+    {
+      "cells": 14,
+      "family_paths": 1944,
+      "fresh_parity_vertices": 2,
+      "host_vertices": 42,
+      "ordinary_path_sha256": "15d7ba77b39fce4270c80776a64810b4db1cc29f873673f2c6a902fb8a4e1d18",
+      "original_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 14,
+      "proper_colorings": 24,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 29,
+      "regular_host_vertices": 85,
+      "regular_score": 42,
+      "root_pinned_paths": 648,
+      "witness": [
+        36,
+        37,
+        38,
+        0,
+        1,
+        4,
+        5,
+        3,
+        19,
+        20,
+        25,
+        26,
+        24,
+        27,
+        28,
+        29,
+        33,
+        34,
+        35,
+        18,
+        23,
+        21,
+        22,
+        17,
+        15,
+        12,
+        13,
+        14,
+        30,
+        31,
+        32,
+        16,
+        11,
+        9,
+        10,
+        6,
+        7,
+        8,
+        2,
+        39,
+        40,
+        41
+      ]
+    },
+    {
+      "cells": 27,
+      "family_paths": 0,
+      "fresh_parity_vertices": 5,
+      "host_vertices": 81,
+      "ordinary_path_sha256": "ecc2cda59101bee643fe16cd1a1392ea6a732189406b61633cee5801c9329647",
+      "original_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "original_vertices": 5,
+      "pinned_B_cells": 27,
+      "proper_colorings": 0,
+      "raw_exhaustive_count": null,
+      "regular_equitable_cells": 55,
+      "regular_host_vertices": 163,
+      "regular_score": 81,
+      "root_pinned_paths": 0,
+      "witness": null
+    }
+  ],
+  "scope": "actual constructed tournaments and prescribed shifted templates; ordinary Hamilton paths retained even for empty families",
+  "status": "PASS"
+}

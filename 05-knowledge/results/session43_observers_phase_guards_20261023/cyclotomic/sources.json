@@ -1,0 +1,20 @@
+{
+  "repository_revision": "8b71b746f7a9d90378c702e01608207227b1f83e",
+  "sha256": {
+    "01-canon/theorems/THM-085-f-omega-mod9-universal.md": "b0534275c4f6aff0ce9d785d239594787d2b743cbd4e5272c54dedcb1a11c080",
+    "01-canon/theorems/THM-086-universal-taylor-zeros-mod3.md": "63cedce9ac1f10b39d4161c959c657186bbac7ac8ca09b5b591b22b24d8f76a7",
+    "01-canon/theorems/THM-4756-forward-step-polynomial-mod-3-is-h-times-eulerian.md": "82104c7def2af262858601840ae988fe4062821285b74ff0f6d2c4ef04d1e1b4",
+    "01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md": "c19a71c4abb918c8c9faec66ba77eeeb2624e1dd038bdf68252ad51cc1ada4ee",
+    "01-canon/theorems/THM-4001-cyclotomic-factorial-all-arity-decoder.md": "c6af9850d80e5365860ac2efba8dacfcbdebc0e38c1189bb2f5bc20964d9838c",
+    "04-computation/cyclotomic_tournament_deep.py": "f33ca8bfcd92a18bf25f9689a60bfff2112a94d2030f63ef9ea868b3e269cf91",
+    "01-canon/theorems/THM-059-universal-master-polynomial.md": "ab02bc947f7aa960d59e3b4f80718f10ef7c1d036e7a1bab502ff823aef9d0c8",
+    "01-canon/theorems/THM-061-anti-evaluation.md": "385fdbb51b99c4f01f5f7becf5c3a13c1aeeac20a896d1c1223fd235f520a204",
+    "01-canon/theorems/THM-062-forward-edge-distribution.md": "0627573950a6958856d72064c9acae0a69a8360e7bbeb0a502629bf0224fa492",
+    "01-canon/theorems/THM-114-trivariate-gf.md": "2f2d6d2ea07e27fa690e92db5930ac6f75fe5d9b9039a84c859f8c8f61275ab8",
+    "04-computation/euler_zigzag_deformation.py": "972cf5bf45f7992d34b77e544fae0a861179ad6d918cc1122d66323d30b5cdaf"
+  },
+  "external": [
+    "https://dlmf.nist.gov/24.15",
+    "https://dlmf.nist.gov/24.10"
+  ]
+}

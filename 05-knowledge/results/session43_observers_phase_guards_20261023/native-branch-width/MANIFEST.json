@@ -1,0 +1,39 @@
+{
+  "carrier": "specified contiguous cyclic-cut path families in actual regular circulant-cell tournaments",
+  "credit": "Session43 root synthesis supplied the regular-host affine-cover sharpening; this packet proves and verifies it.",
+  "files": [
+    {
+      "bytes": 1204,
+      "path": "README.md",
+      "sha256": "4cbd3f9f8002eca9be50331b053c03756762420468ab6a88aedec52e75c62b46"
+    },
+    {
+      "bytes": 6970,
+      "path": "THEOREM.md",
+      "sha256": "71a2296fa95a9b456da3e9b8e99df9a75d1a9525899bca57c23c9bdfbcac61aa"
+    },
+    {
+      "bytes": 3810,
+      "path": "check.py",
+      "sha256": "ae856eb5fe1e6740ab2b8182bbe386e0c293eee442051e94cd49c54940f69037"
+    },
+    {
+      "bytes": 10261,
+      "path": "receipt.json",
+      "sha256": "f03f0e2b5cda997dea18a44578f60728e108169a7bc0123baee682c2d8d311f4"
+    },
+    {
+      "bytes": 10261,
+      "path": "receipt.optimized.json",
+      "sha256": "f03f0e2b5cda997dea18a44578f60728e108169a7bc0123baee682c2d8d311f4"
+    }
+  ],
+  "git_writes": false,
+  "normal_optimized_identical": true,
+  "source_extension": {
+    "path": "session43-native-ports/OBSERVER_BUNDLES_AND_NATIVE_PORTS.md",
+    "section": 5,
+    "sha256": "6137afa1564ff6e2ff9d43e861db6f17a4eb065f15dba1e5bd8183f7a2e82eac"
+  },
+  "status": "PROVED_SCOPED_AND_FINITE_CHECKED"
+}

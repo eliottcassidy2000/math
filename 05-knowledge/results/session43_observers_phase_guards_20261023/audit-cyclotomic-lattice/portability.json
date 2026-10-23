@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "published_normal_optimized_and_workspace_runs": [
+    {
+      "packet": "cyclotomic",
+      "optimized": false,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "8b1bdb94b671f876d940ef00e01f188b5c24d585a21be20653a0a013306ff3cb"
+    },
+    {
+      "packet": "cyclotomic",
+      "optimized": true,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "8b1bdb94b671f876d940ef00e01f188b5c24d585a21be20653a0a013306ff3cb"
+    },
+    {
+      "packet": "cyclotomic-lattice",
+      "optimized": false,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "56109c92329706d260b481c1327cce0835760d8c601d80b19f88cb8c7b5cfebe"
+    },
+    {
+      "packet": "cyclotomic-lattice",
+      "optimized": true,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "56109c92329706d260b481c1327cce0835760d8c601d80b19f88cb8c7b5cfebe"
+    },
+    {
+      "packet": "audit-cyclotomic",
+      "optimized": false,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "adc7ca525ee9879b1443f0a9e125d16303d23c1da695509141ced30854480584"
+    },
+    {
+      "packet": "audit-cyclotomic",
+      "optimized": true,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "adc7ca525ee9879b1443f0a9e125d16303d23c1da695509141ced30854480584"
+    },
+    {
+      "packet": "audit-cyclotomic-lattice",
+      "optimized": false,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "9949ea9506f12f40b3f42984d224eaecbb0518979484e9a6abc3032eb9bfd638"
+    },
+    {
+      "packet": "audit-cyclotomic-lattice",
+      "optimized": true,
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "9949ea9506f12f40b3f42984d224eaecbb0518979484e9a6abc3032eb9bfd638"
+    },
+    {
+      "packet": "audit-cyclotomic",
+      "layout": "workspace",
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "adc7ca525ee9879b1443f0a9e125d16303d23c1da695509141ced30854480584"
+    },
+    {
+      "packet": "audit-cyclotomic-lattice",
+      "layout": "workspace",
+      "cwd": "/tmp",
+      "exit_code": 0,
+      "stdout_sha256": "9949ea9506f12f40b3f42984d224eaecbb0518979484e9a6abc3032eb9bfd638"
+    }
+  ],
+  "no_mathematical_changes": true
+}

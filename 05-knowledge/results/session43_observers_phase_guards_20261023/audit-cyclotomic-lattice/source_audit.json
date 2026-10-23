@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "producer_manifest_sha256": "ba5f5a9871a2cb1e759ef6b0f8158686619f9275d4e6050e24c96fe2c2547227",
+  "producer_files_verified": 9,
+  "local_dependencies_verified": 3,
+  "auditor_dependency_sha256": "38f326e12623fa8fddb049ebfbd5f67c5f1f6884da60afc471aed28c811f2b5c",
+  "portability_only_repin": true
+}

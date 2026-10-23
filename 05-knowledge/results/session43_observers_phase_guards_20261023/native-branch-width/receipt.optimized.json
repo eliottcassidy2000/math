@@ -1,0 +1,701 @@
+{
+  "coset_audits": [
+    {
+      "E": [
+        0,
+        1
+      ],
+      "all_distinct_affine_cosets": 184,
+      "all_subspaces": 28,
+      "contained_cosets": 16,
+      "dimension": 3,
+      "maximum_contained_size": 3,
+      "minimum_cover": 4,
+      "p": 3
+    },
+    {
+      "E": [
+        0,
+        1,
+        3
+      ],
+      "all_distinct_affine_cosets": 1056,
+      "all_subspaces": 64,
+      "contained_cosets": 54,
+      "dimension": 3,
+      "maximum_contained_size": 5,
+      "minimum_cover": 9,
+      "p": 5
+    }
+  ],
+  "hosts": [
+    {
+      "E": [
+        0,
+        1
+      ],
+      "cells": 3,
+      "family_paths": 12,
+      "fixed_start_endpoint_counts": [
+        1,
+        2,
+        1
+      ],
+      "free_start_difference_counts": [
+        3,
+        6,
+        3
+      ],
+      "last_witness": [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4,
+        8,
+        6,
+        7
+      ],
+      "literal_path_sha256": "f63f7be06d3f9ca51f20dae6eebdf96363f17cd25e5ee270f69c87858fbbf129",
+      "minimum_affine_cosets": 4,
+      "outdegree": 4,
+      "p": 3,
+      "vertices": 9
+    },
+    {
+      "E": [
+        0,
+        1
+      ],
+      "cells": 5,
+      "family_paths": 48,
+      "fixed_start_endpoint_counts": [
+        5,
+        5,
+        6
+      ],
+      "free_start_difference_counts": [
+        15,
+        15,
+        18
+      ],
+      "last_witness": [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4,
+        8,
+        6,
+        7,
+        11,
+        9,
+        10,
+        14,
+        12,
+        13
+      ],
+      "literal_path_sha256": "91cb3ca6e45fdcd0b3b0edd4d4840daf06f7661cacac5868c0418763fa8a6beb",
+      "minimum_affine_cosets": 16,
+      "outdegree": 7,
+      "p": 3,
+      "vertices": 15
+    },
+    {
+      "E": [
+        0,
+        1
+      ],
+      "cells": 7,
+      "family_paths": 192,
+      "fixed_start_endpoint_counts": [
+        22,
+        21,
+        21
+      ],
+      "free_start_difference_counts": [
+        66,
+        63,
+        63
+      ],
+      "last_witness": [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4,
+        8,
+        6,
+        7,
+        11,
+        9,
+        10,
+        14,
+        12,
+        13,
+        17,
+        15,
+        16,
+        20,
+        18,
+        19
+      ],
+      "literal_path_sha256": "38b91f30a3d5985c581cd4b4b7eebe7cacd8bf8c845768292773e68305ed160e",
+      "minimum_affine_cosets": 64,
+      "outdegree": 10,
+      "p": 3,
+      "vertices": 21
+    },
+    {
+      "E": [
+        0,
+        1
+      ],
+      "cells": 9,
+      "family_paths": 768,
+      "fixed_start_endpoint_counts": [
+        85,
+        86,
+        85
+      ],
+      "free_start_difference_counts": [
+        255,
+        258,
+        255
+      ],
+      "last_witness": [
+        2,
+        0,
+        1,
+        5,
+        3,
+        4,
+        8,
+        6,
+        7,
+        11,
+        9,
+        10,
+        14,
+        12,
+        13,
+        17,
+        15,
+        16,
+        20,
+        18,
+        19,
+        23,
+        21,
+        22,
+        26,
+        24,
+        25
+      ],
+      "literal_path_sha256": "e2034ff467d8ddf78321e0fde0a0663c04d8440f5f770b16ef29741eea3a42f5",
+      "minimum_affine_cosets": 256,
+      "outdegree": 13,
+      "p": 3,
+      "vertices": 27
+    },
+    {
+      "E": [
+        0,
+        1
+      ],
+      "cells": 3,
+      "family_paths": 20,
+      "fixed_start_endpoint_counts": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "free_start_difference_counts": [
+        5,
+        10,
+        5,
+        0,
+        0
+      ],
+      "last_witness": [
+        4,
+        0,
+        1,
+        2,
+        3,
+        9,
+        5,
+        6,
+        7,
+        8,
+        14,
+        10,
+        11,
+        12,
+        13
+      ],
+      "literal_path_sha256": "733e2d142de18beb2f6bbff62d63d193d2525637202af5bc8dc7d52a770196f5",
+      "minimum_affine_cosets": 4,
+      "outdegree": 7,
+      "p": 5,
+      "vertices": 15
+    },
+    {
+      "E": [
+        0,
+        1,
+        3
+      ],
+      "cells": 3,
+      "family_paths": 45,
+      "fixed_start_endpoint_counts": [
+        1,
+        3,
+        1,
+        2,
+        2
+      ],
+      "free_start_difference_counts": [
+        5,
+        15,
+        5,
+        10,
+        10
+      ],
+      "last_witness": [
+        4,
+        0,
+        1,
+        2,
+        3,
+        9,
+        5,
+        6,
+        7,
+        8,
+        14,
+        10,
+        11,
+        12,
+        13
+      ],
+      "literal_path_sha256": "b0cf4bec1588b35158c4dbe5c9d3f37afecebb862e2a502d87b0f64f35598be9",
+      "minimum_affine_cosets": 9,
+      "outdegree": 7,
+      "p": 5,
+      "vertices": 15
+    }
+  ],
+  "period_six_clock": [
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        1,
+        0,
+        0
+      ],
+      "r": 0
+    },
+    {
+      "correction": [
+        1,
+        1,
+        -2
+      ],
+      "fixed_start_counts": [
+        1,
+        1,
+        0
+      ],
+      "r": 1
+    },
+    {
+      "correction": [
+        -1,
+        2,
+        -1
+      ],
+      "fixed_start_counts": [
+        1,
+        2,
+        1
+      ],
+      "r": 2
+    },
+    {
+      "correction": [
+        -2,
+        1,
+        1
+      ],
+      "fixed_start_counts": [
+        2,
+        3,
+        3
+      ],
+      "r": 3
+    },
+    {
+      "correction": [
+        -1,
+        -1,
+        2
+      ],
+      "fixed_start_counts": [
+        5,
+        5,
+        6
+      ],
+      "r": 4
+    },
+    {
+      "correction": [
+        1,
+        -2,
+        1
+      ],
+      "fixed_start_counts": [
+        11,
+        10,
+        11
+      ],
+      "r": 5
+    },
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        22,
+        21,
+        21
+      ],
+      "r": 6
+    },
+    {
+      "correction": [
+        1,
+        1,
+        -2
+      ],
+      "fixed_start_counts": [
+        43,
+        43,
+        42
+      ],
+      "r": 7
+    },
+    {
+      "correction": [
+        -1,
+        2,
+        -1
+      ],
+      "fixed_start_counts": [
+        85,
+        86,
+        85
+      ],
+      "r": 8
+    },
+    {
+      "correction": [
+        -2,
+        1,
+        1
+      ],
+      "fixed_start_counts": [
+        170,
+        171,
+        171
+      ],
+      "r": 9
+    },
+    {
+      "correction": [
+        -1,
+        -1,
+        2
+      ],
+      "fixed_start_counts": [
+        341,
+        341,
+        342
+      ],
+      "r": 10
+    },
+    {
+      "correction": [
+        1,
+        -2,
+        1
+      ],
+      "fixed_start_counts": [
+        683,
+        682,
+        683
+      ],
+      "r": 11
+    },
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        1366,
+        1365,
+        1365
+      ],
+      "r": 12
+    },
+    {
+      "correction": [
+        1,
+        1,
+        -2
+      ],
+      "fixed_start_counts": [
+        2731,
+        2731,
+        2730
+      ],
+      "r": 13
+    },
+    {
+      "correction": [
+        -1,
+        2,
+        -1
+      ],
+      "fixed_start_counts": [
+        5461,
+        5462,
+        5461
+      ],
+      "r": 14
+    },
+    {
+      "correction": [
+        -2,
+        1,
+        1
+      ],
+      "fixed_start_counts": [
+        10922,
+        10923,
+        10923
+      ],
+      "r": 15
+    },
+    {
+      "correction": [
+        -1,
+        -1,
+        2
+      ],
+      "fixed_start_counts": [
+        21845,
+        21845,
+        21846
+      ],
+      "r": 16
+    },
+    {
+      "correction": [
+        1,
+        -2,
+        1
+      ],
+      "fixed_start_counts": [
+        43691,
+        43690,
+        43691
+      ],
+      "r": 17
+    },
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        87382,
+        87381,
+        87381
+      ],
+      "r": 18
+    },
+    {
+      "correction": [
+        1,
+        1,
+        -2
+      ],
+      "fixed_start_counts": [
+        174763,
+        174763,
+        174762
+      ],
+      "r": 19
+    },
+    {
+      "correction": [
+        -1,
+        2,
+        -1
+      ],
+      "fixed_start_counts": [
+        349525,
+        349526,
+        349525
+      ],
+      "r": 20
+    },
+    {
+      "correction": [
+        -2,
+        1,
+        1
+      ],
+      "fixed_start_counts": [
+        699050,
+        699051,
+        699051
+      ],
+      "r": 21
+    },
+    {
+      "correction": [
+        -1,
+        -1,
+        2
+      ],
+      "fixed_start_counts": [
+        1398101,
+        1398101,
+        1398102
+      ],
+      "r": 22
+    },
+    {
+      "correction": [
+        1,
+        -2,
+        1
+      ],
+      "fixed_start_counts": [
+        2796203,
+        2796202,
+        2796203
+      ],
+      "r": 23
+    },
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        5592406,
+        5592405,
+        5592405
+      ],
+      "r": 24
+    },
+    {
+      "correction": [
+        1,
+        1,
+        -2
+      ],
+      "fixed_start_counts": [
+        11184811,
+        11184811,
+        11184810
+      ],
+      "r": 25
+    },
+    {
+      "correction": [
+        -1,
+        2,
+        -1
+      ],
+      "fixed_start_counts": [
+        22369621,
+        22369622,
+        22369621
+      ],
+      "r": 26
+    },
+    {
+      "correction": [
+        -2,
+        1,
+        1
+      ],
+      "fixed_start_counts": [
+        44739242,
+        44739243,
+        44739243
+      ],
+      "r": 27
+    },
+    {
+      "correction": [
+        -1,
+        -1,
+        2
+      ],
+      "fixed_start_counts": [
+        89478485,
+        89478485,
+        89478486
+      ],
+      "r": 28
+    },
+    {
+      "correction": [
+        1,
+        -2,
+        1
+      ],
+      "fixed_start_counts": [
+        178956971,
+        178956970,
+        178956971
+      ],
+      "r": 29
+    },
+    {
+      "correction": [
+        2,
+        -1,
+        -1
+      ],
+      "fixed_start_counts": [
+        357913942,
+        357913941,
+        357913941
+      ],
+      "r": 30
+    }
+  ],
+  "scope": "specified contiguous cyclic-cut path families in actual regular tournaments; not all Hamilton paths",
+  "status": "PASS"
+}

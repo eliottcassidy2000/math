@@ -1,0 +1,383 @@
+{
+  "cases": 47,
+  "independent_construction": true,
+  "reports": [
+    {
+      "cells": 5,
+      "colorings": 6,
+      "edges": 1,
+      "n": 2,
+      "raw": 162,
+      "regular_order": 31
+    },
+    {
+      "cells": 7,
+      "colorings": 12,
+      "edges": 2,
+      "n": 3,
+      "raw": 324,
+      "regular_order": 43
+    },
+    {
+      "cells": 7,
+      "colorings": 12,
+      "edges": 2,
+      "n": 3,
+      "raw": 324,
+      "regular_order": 43
+    },
+    {
+      "cells": 7,
+      "colorings": 12,
+      "edges": 2,
+      "n": 3,
+      "raw": 324,
+      "regular_order": 43
+    },
+    {
+      "cells": 8,
+      "colorings": 6,
+      "edges": 3,
+      "n": 3,
+      "raw": null,
+      "regular_order": 49
+    },
+    {
+      "cells": 10,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 10,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 10,
+      "colorings": 18,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 10,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 10,
+      "colorings": 18,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 9,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 55
+    },
+    {
+      "cells": 10,
+      "colorings": 18,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 10,
+      "colorings": 24,
+      "edges": 3,
+      "n": 4,
+      "raw": null,
+      "regular_order": 61
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 11,
+      "colorings": 12,
+      "edges": 4,
+      "n": 4,
+      "raw": null,
+      "regular_order": 67
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 13,
+      "colorings": 6,
+      "edges": 5,
+      "n": 4,
+      "raw": null,
+      "regular_order": 79
+    },
+    {
+      "cells": 16,
+      "colorings": 0,
+      "edges": 6,
+      "n": 4,
+      "raw": null,
+      "regular_order": 97
+    },
+    {
+      "cells": 27,
+      "colorings": 0,
+      "edges": 10,
+      "n": 5,
+      "raw": null,
+      "regular_order": 163
+    },
+    {
+      "cells": 12,
+      "colorings": 30,
+      "edges": 5,
+      "n": 5,
+      "raw": null,
+      "regular_order": 73
+    },
+    {
+      "cells": 41,
+      "colorings": 0,
+      "edges": 15,
+      "n": 6,
+      "raw": null,
+      "regular_order": 247
+    },
+    {
+      "cells": 14,
+      "colorings": 66,
+      "edges": 6,
+      "n": 6,
+      "raw": null,
+      "regular_order": 85
+    }
+  ],
+  "status": "PASS"
+}

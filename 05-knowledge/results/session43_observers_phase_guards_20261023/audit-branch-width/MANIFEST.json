@@ -1,0 +1,14 @@
+{
+  "files": {
+    "REVIEW.md": "a4d342d449bff813dd98d137a8b95ec311fe5cf156ed9df677d9227b9c08b05e",
+    "check.py": "b7fa0ea868a9e334b09797ffb464c854de6d3d0cf9a195d745e418ff56e24ced",
+    "receipt.json": "2424e2eb33ac5439705e8144b0126b4fdb4dab54ed9d31a7ad3d9a764fd3438c",
+    "receipt.optimized.json": "2424e2eb33ac5439705e8144b0126b4fdb4dab54ed9d31a7ad3d9a764fd3438c"
+  },
+  "status": "PASS",
+  "checks": 50919,
+  "source_manifest_sha256": "8676a9f9e6823aa756a9c3be845f2e916991d85fd99a516357b0ca71508a9c7a",
+  "source_mutations": false,
+  "git_mutations": false,
+  "publication_layout_tested": true
+}

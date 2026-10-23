@@ -1,0 +1,1499 @@
+{
+  "description": "All labelled tournaments n<=5; deterministic samples n=6..10. Not an isomorphism census.",
+  "orders": [
+    {
+      "n": 1,
+      "tested": 1,
+      "exhaustive": true,
+      "binary_cycle_bound": 0,
+      "primes": {
+        "2": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1
+            ]
+          },
+          "valuation_histogram": {
+            "0": 1
+          }
+        },
+        "3": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 1
+          }
+        },
+        "5": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 1
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 1
+          }
+        }
+      }
+    },
+    {
+      "n": 2,
+      "tested": 2,
+      "exhaustive": true,
+      "binary_cycle_bound": null,
+      "primes": {
+        "2": {
+          "bound": 1,
+          "min_valuation": null,
+          "zero_count": 2,
+          "min_witness": null,
+          "valuation_histogram": {}
+        },
+        "3": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              1
+            ]
+          },
+          "valuation_histogram": {
+            "0": 2
+          }
+        },
+        "5": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              1,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 2
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 2
+          }
+        }
+      }
+    },
+    {
+      "n": 3,
+      "tested": 8,
+      "exhaustive": true,
+      "binary_cycle_bound": 1,
+      "primes": {
+        "2": {
+          "bound": 1,
+          "min_valuation": 1,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              4,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              -2
+            ]
+          },
+          "valuation_histogram": {
+            "1": 8
+          }
+        },
+        "3": {
+          "bound": 1,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              4,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              3
+            ]
+          },
+          "valuation_histogram": {
+            "2": 8
+          }
+        },
+        "5": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              4,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              4,
+              1,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 8
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              4,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              4,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 8
+          }
+        }
+      }
+    },
+    {
+      "n": 4,
+      "tested": 64,
+      "exhaustive": true,
+      "binary_cycle_bound": null,
+      "primes": {
+        "2": {
+          "bound": 2,
+          "min_valuation": null,
+          "zero_count": 64,
+          "min_witness": null,
+          "valuation_histogram": {}
+        },
+        "3": {
+          "bound": 2,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 2,
+            "polynomial": [
+              3,
+              9,
+              9,
+              3
+            ],
+            "cyclotomic_coefficients": [
+              -3,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "2": 40,
+            "4": 24
+          }
+        },
+        "5": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              11,
+              11,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              11,
+              11,
+              1
+            ]
+          },
+          "valuation_histogram": {
+            "0": 64
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              11,
+              11,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              11,
+              11,
+              1,
+              0,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 64
+          }
+        }
+      }
+    },
+    {
+      "n": 5,
+      "tested": 1024,
+      "exhaustive": true,
+      "binary_cycle_bound": 4,
+      "primes": {
+        "2": {
+          "bound": 3,
+          "min_valuation": 4,
+          "zero_count": 384,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              26,
+              66,
+              26,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              16
+            ]
+          },
+          "valuation_histogram": {
+            "4": 640
+          }
+        },
+        "3": {
+          "bound": 2,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              26,
+              66,
+              26,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              -39,
+              -39
+            ]
+          },
+          "valuation_histogram": {
+            "2": 1024
+          }
+        },
+        "5": {
+          "bound": 1,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 2,
+            "polynomial": [
+              3,
+              30,
+              54,
+              30,
+              3
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              27,
+              51,
+              27
+            ]
+          },
+          "valuation_histogram": {
+            "2": 880,
+            "4": 144
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              26,
+              66,
+              26,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              26,
+              66,
+              26,
+              1,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "0": 1024
+          }
+        }
+      }
+    },
+    {
+      "n": 6,
+      "tested": 102,
+      "exhaustive": false,
+      "binary_cycle_bound": null,
+      "primes": {
+        "2": {
+          "bound": 4,
+          "min_valuation": null,
+          "zero_count": 102,
+          "min_witness": null,
+          "valuation_histogram": {}
+        },
+        "3": {
+          "bound": 3,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 787,
+            "polynomial": [
+              29,
+              117,
+              214,
+              214,
+              117,
+              29
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              -9
+            ]
+          },
+          "valuation_histogram": {
+            "4": 63,
+            "6": 32,
+            "8": 7
+          }
+        },
+        "5": {
+          "bound": 2,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 787,
+            "polynomial": [
+              29,
+              117,
+              214,
+              214,
+              117,
+              29
+            ],
+            "cyclotomic_coefficients": [
+              -59,
+              0,
+              97,
+              97
+            ]
+          },
+          "valuation_histogram": {
+            "2": 85,
+            "4": 16,
+            "6": 1
+          }
+        },
+        "7": {
+          "bound": 0,
+          "min_valuation": 0,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              57,
+              302,
+              302,
+              57,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              1,
+              57,
+              302,
+              302,
+              57,
+              1
+            ]
+          },
+          "valuation_histogram": {
+            "0": 102
+          }
+        }
+      }
+    },
+    {
+      "n": 7,
+      "tested": 102,
+      "exhaustive": false,
+      "binary_cycle_bound": 4,
+      "primes": {
+        "2": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              120,
+              1191,
+              2416,
+              1191,
+              120,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              -272
+            ]
+          },
+          "valuation_histogram": {
+            "4": 102
+          }
+        },
+        "3": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 57683,
+            "polynomial": [
+              101,
+              504,
+              1155,
+              1520,
+              1155,
+              504,
+              101
+            ],
+            "cyclotomic_coefficients": [
+              63,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "4": 74,
+            "6": 19,
+            "8": 6,
+            "10": 3
+          }
+        },
+        "5": {
+          "bound": 3,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              120,
+              1191,
+              2416,
+              1191,
+              120,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              -1070,
+              -1070,
+              0,
+              1225
+            ]
+          },
+          "valuation_histogram": {
+            "4": 80,
+            "6": 20,
+            "10": 1,
+            "12": 1
+          }
+        },
+        "7": {
+          "bound": 1,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 57683,
+            "polynomial": [
+              101,
+              504,
+              1155,
+              1520,
+              1155,
+              504,
+              101
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              403,
+              1054,
+              1419,
+              1054,
+              403
+            ]
+          },
+          "valuation_histogram": {
+            "2": 89,
+            "4": 8,
+            "6": 5
+          }
+        }
+      }
+    },
+    {
+      "n": 8,
+      "tested": 102,
+      "exhaustive": false,
+      "binary_cycle_bound": null,
+      "primes": {
+        "2": {
+          "bound": 5,
+          "min_valuation": null,
+          "zero_count": 102,
+          "min_witness": null,
+          "valuation_histogram": {}
+        },
+        "3": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              247,
+              4293,
+              15619,
+              15619,
+              4293,
+              247,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              7281,
+              7281
+            ]
+          },
+          "valuation_histogram": {
+            "4": 102
+          }
+        },
+        "5": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 1247705,
+            "polynomial": [
+              555,
+              2901,
+              6687,
+              10017,
+              10017,
+              6687,
+              2901,
+              555
+            ],
+            "cyclotomic_coefficients": [
+              -2775,
+              -4215,
+              -2775,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "4": 80,
+            "6": 13,
+            "8": 8,
+            "10": 1
+          }
+        },
+        "7": {
+          "bound": 2,
+          "min_valuation": 2,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 1247705,
+            "polynomial": [
+              555,
+              2901,
+              6687,
+              10017,
+              10017,
+              6687,
+              2901,
+              555
+            ],
+            "cyclotomic_coefficients": [
+              -1791,
+              0,
+              3786,
+              7116,
+              7116,
+              3786
+            ]
+          },
+          "valuation_histogram": {
+            "2": 88,
+            "4": 9,
+            "6": 5
+          }
+        }
+      }
+    },
+    {
+      "n": 9,
+      "tested": 102,
+      "exhaustive": false,
+      "binary_cycle_bound": 7,
+      "primes": {
+        "2": {
+          "bound": 6,
+          "min_valuation": 7,
+          "zero_count": 5,
+          "min_witness": {
+            "code": 2171135020,
+            "polynomial": [
+              1081,
+              10198,
+              38272,
+              80554,
+              102670,
+              80554,
+              38272,
+              10198,
+              1081
+            ],
+            "cyclotomic_coefficients": [
+              -128
+            ]
+          },
+          "valuation_histogram": {
+            "7": 44,
+            "8": 30,
+            "9": 13,
+            "10": 8,
+            "11": 2
+          }
+        },
+        "3": {
+          "bound": 5,
+          "min_valuation": 6,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 385129454,
+            "polynomial": [
+              1741,
+              11902,
+              39808,
+              78754,
+              98470,
+              78754,
+              39808,
+              11902,
+              1741
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              1971
+            ]
+          },
+          "valuation_histogram": {
+            "6": 61,
+            "8": 23,
+            "10": 14,
+            "12": 3,
+            "14": 1
+          }
+        },
+        "5": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 0,
+            "polynomial": [
+              1,
+              502,
+              14608,
+              88234,
+              156190,
+              88234,
+              14608,
+              502,
+              1
+            ],
+            "cyclotomic_coefficients": [
+              -67955,
+              -141080,
+              -141080,
+              -67955
+            ]
+          },
+          "valuation_histogram": {
+            "4": 102
+          }
+        },
+        "7": {
+          "bound": 3,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 385129454,
+            "polynomial": [
+              1741,
+              11902,
+              39808,
+              78754,
+              98470,
+              78754,
+              39808,
+              11902,
+              1741
+            ],
+            "cyclotomic_coefficients": [
+              -26165,
+              -26165,
+              0,
+              38946,
+              58662,
+              38946
+            ]
+          },
+          "valuation_histogram": {
+            "4": 83,
+            "6": 17,
+            "8": 2
+          }
+        }
+      }
+    },
+    {
+      "n": 10,
+      "tested": 102,
+      "exhaustive": false,
+      "binary_cycle_bound": null,
+      "primes": {
+        "2": {
+          "bound": 7,
+          "min_valuation": null,
+          "zero_count": 102,
+          "min_witness": null,
+          "valuation_histogram": {}
+        },
+        "3": {
+          "bound": 6,
+          "min_valuation": 6,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 447378428653,
+            "polynomial": [
+              4559,
+              56947,
+              249160,
+              599008,
+              904726,
+              904726,
+              599008,
+              249160,
+              56947,
+              4559
+            ],
+            "cyclotomic_coefficients": [
+              -3699,
+              0
+            ]
+          },
+          "valuation_histogram": {
+            "6": 65,
+            "8": 20,
+            "10": 12,
+            "12": 4,
+            "14": 1
+          }
+        },
+        "5": {
+          "bound": 5,
+          "min_valuation": 6,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 447378428653,
+            "polynomial": [
+              4559,
+              56947,
+              249160,
+              599008,
+              904726,
+              904726,
+              599008,
+              249160,
+              56947,
+              4559
+            ],
+            "cyclotomic_coefficients": [
+              0,
+              -253330,
+              -410965,
+              -253330
+            ]
+          },
+          "valuation_histogram": {
+            "6": 80,
+            "8": 19,
+            "10": 3
+          }
+        },
+        "7": {
+          "bound": 4,
+          "min_valuation": 4,
+          "zero_count": 0,
+          "min_witness": {
+            "code": 1618469938400,
+            "polynomial": [
+              1619,
+              33775,
+              210400,
+              601480,
+              967126,
+              967126,
+              601480,
+              210400,
+              33775,
+              1619
+            ],
+            "cyclotomic_coefficients": [
+              -389461,
+              -533930,
+              -389461,
+              0,
+              365646,
+              365646
+            ]
+          },
+          "valuation_histogram": {
+            "4": 86,
+            "6": 13,
+            "8": 3
+          }
+        }
+      }
+    }
+  ],
+  "explicit_binary_extremizers_through_order_201": [
+    {
+      "n": 3,
+      "q": 0,
+      "binary_valuation": 1
+    },
+    {
+      "n": 5,
+      "q": 0,
+      "binary_valuation": 4
+    },
+    {
+      "n": 7,
+      "q": 0,
+      "binary_valuation": 4
+    },
+    {
+      "n": 9,
+      "q": 3,
+      "binary_valuation": 7
+    },
+    {
+      "n": 11,
+      "q": 0,
+      "binary_valuation": 9
+    },
+    {
+      "n": 13,
+      "q": 7,
+      "binary_valuation": 11
+    },
+    {
+      "n": 15,
+      "q": 0,
+      "binary_valuation": 11
+    },
+    {
+      "n": 17,
+      "q": 3,
+      "binary_valuation": 14
+    },
+    {
+      "n": 19,
+      "q": 5,
+      "binary_valuation": 16
+    },
+    {
+      "n": 21,
+      "q": 7,
+      "binary_valuation": 18
+    },
+    {
+      "n": 23,
+      "q": 0,
+      "binary_valuation": 20
+    },
+    {
+      "n": 25,
+      "q": 11,
+      "binary_valuation": 22
+    },
+    {
+      "n": 27,
+      "q": 13,
+      "binary_valuation": 24
+    },
+    {
+      "n": 29,
+      "q": 15,
+      "binary_valuation": 26
+    },
+    {
+      "n": 31,
+      "q": 0,
+      "binary_valuation": 26
+    },
+    {
+      "n": 33,
+      "q": 3,
+      "binary_valuation": 29
+    },
+    {
+      "n": 35,
+      "q": 5,
+      "binary_valuation": 31
+    },
+    {
+      "n": 37,
+      "q": 7,
+      "binary_valuation": 33
+    },
+    {
+      "n": 39,
+      "q": 9,
+      "binary_valuation": 35
+    },
+    {
+      "n": 41,
+      "q": 11,
+      "binary_valuation": 37
+    },
+    {
+      "n": 43,
+      "q": 13,
+      "binary_valuation": 39
+    },
+    {
+      "n": 45,
+      "q": 15,
+      "binary_valuation": 41
+    },
+    {
+      "n": 47,
+      "q": 0,
+      "binary_valuation": 43
+    },
+    {
+      "n": 49,
+      "q": 19,
+      "binary_valuation": 45
+    },
+    {
+      "n": 51,
+      "q": 21,
+      "binary_valuation": 47
+    },
+    {
+      "n": 53,
+      "q": 23,
+      "binary_valuation": 49
+    },
+    {
+      "n": 55,
+      "q": 25,
+      "binary_valuation": 51
+    },
+    {
+      "n": 57,
+      "q": 27,
+      "binary_valuation": 53
+    },
+    {
+      "n": 59,
+      "q": 29,
+      "binary_valuation": 55
+    },
+    {
+      "n": 61,
+      "q": 31,
+      "binary_valuation": 57
+    },
+    {
+      "n": 63,
+      "q": 0,
+      "binary_valuation": 57
+    },
+    {
+      "n": 65,
+      "q": 3,
+      "binary_valuation": 60
+    },
+    {
+      "n": 67,
+      "q": 5,
+      "binary_valuation": 62
+    },
+    {
+      "n": 69,
+      "q": 7,
+      "binary_valuation": 64
+    },
+    {
+      "n": 71,
+      "q": 9,
+      "binary_valuation": 66
+    },
+    {
+      "n": 73,
+      "q": 11,
+      "binary_valuation": 68
+    },
+    {
+      "n": 75,
+      "q": 13,
+      "binary_valuation": 70
+    },
+    {
+      "n": 77,
+      "q": 15,
+      "binary_valuation": 72
+    },
+    {
+      "n": 79,
+      "q": 17,
+      "binary_valuation": 74
+    },
+    {
+      "n": 81,
+      "q": 19,
+      "binary_valuation": 76
+    },
+    {
+      "n": 83,
+      "q": 21,
+      "binary_valuation": 78
+    },
+    {
+      "n": 85,
+      "q": 23,
+      "binary_valuation": 80
+    },
+    {
+      "n": 87,
+      "q": 25,
+      "binary_valuation": 82
+    },
+    {
+      "n": 89,
+      "q": 27,
+      "binary_valuation": 84
+    },
+    {
+      "n": 91,
+      "q": 29,
+      "binary_valuation": 86
+    },
+    {
+      "n": 93,
+      "q": 31,
+      "binary_valuation": 88
+    },
+    {
+      "n": 95,
+      "q": 0,
+      "binary_valuation": 90
+    },
+    {
+      "n": 97,
+      "q": 35,
+      "binary_valuation": 92
+    },
+    {
+      "n": 99,
+      "q": 37,
+      "binary_valuation": 94
+    },
+    {
+      "n": 101,
+      "q": 39,
+      "binary_valuation": 96
+    },
+    {
+      "n": 103,
+      "q": 41,
+      "binary_valuation": 98
+    },
+    {
+      "n": 105,
+      "q": 43,
+      "binary_valuation": 100
+    },
+    {
+      "n": 107,
+      "q": 45,
+      "binary_valuation": 102
+    },
+    {
+      "n": 109,
+      "q": 47,
+      "binary_valuation": 104
+    },
+    {
+      "n": 111,
+      "q": 49,
+      "binary_valuation": 106
+    },
+    {
+      "n": 113,
+      "q": 51,
+      "binary_valuation": 108
+    },
+    {
+      "n": 115,
+      "q": 53,
+      "binary_valuation": 110
+    },
+    {
+      "n": 117,
+      "q": 55,
+      "binary_valuation": 112
+    },
+    {
+      "n": 119,
+      "q": 57,
+      "binary_valuation": 114
+    },
+    {
+      "n": 121,
+      "q": 59,
+      "binary_valuation": 116
+    },
+    {
+      "n": 123,
+      "q": 61,
+      "binary_valuation": 118
+    },
+    {
+      "n": 125,
+      "q": 63,
+      "binary_valuation": 120
+    },
+    {
+      "n": 127,
+      "q": 0,
+      "binary_valuation": 120
+    },
+    {
+      "n": 129,
+      "q": 3,
+      "binary_valuation": 123
+    },
+    {
+      "n": 131,
+      "q": 5,
+      "binary_valuation": 125
+    },
+    {
+      "n": 133,
+      "q": 7,
+      "binary_valuation": 127
+    },
+    {
+      "n": 135,
+      "q": 9,
+      "binary_valuation": 129
+    },
+    {
+      "n": 137,
+      "q": 11,
+      "binary_valuation": 131
+    },
+    {
+      "n": 139,
+      "q": 13,
+      "binary_valuation": 133
+    },
+    {
+      "n": 141,
+      "q": 15,
+      "binary_valuation": 135
+    },
+    {
+      "n": 143,
+      "q": 17,
+      "binary_valuation": 137
+    },
+    {
+      "n": 145,
+      "q": 19,
+      "binary_valuation": 139
+    },
+    {
+      "n": 147,
+      "q": 21,
+      "binary_valuation": 141
+    },
+    {
+      "n": 149,
+      "q": 23,
+      "binary_valuation": 143
+    },
+    {
+      "n": 151,
+      "q": 25,
+      "binary_valuation": 145
+    },
+    {
+      "n": 153,
+      "q": 27,
+      "binary_valuation": 147
+    },
+    {
+      "n": 155,
+      "q": 29,
+      "binary_valuation": 149
+    },
+    {
+      "n": 157,
+      "q": 31,
+      "binary_valuation": 151
+    },
+    {
+      "n": 159,
+      "q": 33,
+      "binary_valuation": 153
+    },
+    {
+      "n": 161,
+      "q": 35,
+      "binary_valuation": 155
+    },
+    {
+      "n": 163,
+      "q": 37,
+      "binary_valuation": 157
+    },
+    {
+      "n": 165,
+      "q": 39,
+      "binary_valuation": 159
+    },
+    {
+      "n": 167,
+      "q": 41,
+      "binary_valuation": 161
+    },
+    {
+      "n": 169,
+      "q": 43,
+      "binary_valuation": 163
+    },
+    {
+      "n": 171,
+      "q": 45,
+      "binary_valuation": 165
+    },
+    {
+      "n": 173,
+      "q": 47,
+      "binary_valuation": 167
+    },
+    {
+      "n": 175,
+      "q": 49,
+      "binary_valuation": 169
+    },
+    {
+      "n": 177,
+      "q": 51,
+      "binary_valuation": 171
+    },
+    {
+      "n": 179,
+      "q": 53,
+      "binary_valuation": 173
+    },
+    {
+      "n": 181,
+      "q": 55,
+      "binary_valuation": 175
+    },
+    {
+      "n": 183,
+      "q": 57,
+      "binary_valuation": 177
+    },
+    {
+      "n": 185,
+      "q": 59,
+      "binary_valuation": 179
+    },
+    {
+      "n": 187,
+      "q": 61,
+      "binary_valuation": 181
+    },
+    {
+      "n": 189,
+      "q": 63,
+      "binary_valuation": 183
+    },
+    {
+      "n": 191,
+      "q": 0,
+      "binary_valuation": 185
+    },
+    {
+      "n": 193,
+      "q": 67,
+      "binary_valuation": 187
+    },
+    {
+      "n": 195,
+      "q": 69,
+      "binary_valuation": 189
+    },
+    {
+      "n": 197,
+      "q": 71,
+      "binary_valuation": 191
+    },
+    {
+      "n": 199,
+      "q": 73,
+      "binary_valuation": 193
+    },
+    {
+      "n": 201,
+      "q": 75,
+      "binary_valuation": 195
+    }
+  ]
+}

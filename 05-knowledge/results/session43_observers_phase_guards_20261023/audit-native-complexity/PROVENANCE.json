@@ -1,0 +1,12 @@
+{
+  "independent_imports": false,
+  "normal_optimized_equal": true,
+  "producer": "session43-native-complexity",
+  "source_hashes": {
+    "README.md": "d0a8308084b74dcfcdfb95db6e338576e0ffae8c7b083011fdf6d73a9626722d",
+    "THEOREM.md": "fba1e9a1a1fbd46004168c5f427f8f202ce429253ba5385fe6bb9ac6a2ba1d6f",
+    "check.py": "f85cf15510952485bf91ccbefa778b3a7754c5ccf4a6d340be9f80d17f11942f",
+    "receipt.json": "47593b79db977201222ace4c88b10d49b66ca7bfea84339484c317216057fbf4",
+    "receipt.optimized.json": "47593b79db977201222ace4c88b10d49b66ca7bfea84339484c317216057fbf4"
+  }
+}
