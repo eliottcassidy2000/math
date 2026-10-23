@@ -1,0 +1,132 @@
+{
+  "faithful_embeddings": [
+    {
+      "n": 1,
+      "even": true,
+      "odd_generators": 2,
+      "basis_size": 2
+    },
+    {
+      "n": 1,
+      "even": false,
+      "odd_generators": 1,
+      "basis_size": 2
+    },
+    {
+      "n": 2,
+      "even": true,
+      "odd_generators": 4,
+      "basis_size": 4
+    },
+    {
+      "n": 2,
+      "even": false,
+      "odd_generators": 3,
+      "basis_size": 4
+    },
+    {
+      "n": 3,
+      "even": true,
+      "odd_generators": 6,
+      "basis_size": 8
+    },
+    {
+      "n": 3,
+      "even": false,
+      "odd_generators": 5,
+      "basis_size": 8
+    },
+    {
+      "n": 4,
+      "even": true,
+      "odd_generators": 8,
+      "basis_size": 16
+    },
+    {
+      "n": 4,
+      "even": false,
+      "odd_generators": 7,
+      "basis_size": 16
+    },
+    {
+      "n": 5,
+      "even": true,
+      "odd_generators": 10,
+      "basis_size": 32
+    },
+    {
+      "n": 5,
+      "even": false,
+      "odd_generators": 9,
+      "basis_size": 32
+    },
+    {
+      "n": 6,
+      "even": true,
+      "odd_generators": 12,
+      "basis_size": 64
+    },
+    {
+      "n": 6,
+      "even": false,
+      "odd_generators": 11,
+      "basis_size": 64
+    },
+    {
+      "n": 7,
+      "even": true,
+      "odd_generators": 14,
+      "basis_size": 128
+    },
+    {
+      "n": 7,
+      "even": false,
+      "odd_generators": 13,
+      "basis_size": 128
+    }
+  ],
+  "minimal_absolute_signed_count_hostile": {
+    "n": 4,
+    "mask": 4,
+    "H": 5,
+    "H_alt": -1
+  },
+  "realized_kernel_terms": [
+    {
+      "occupied": 8,
+      "odd_cycles": 0,
+      "even_cycles": 2,
+      "coefficient": 1
+    },
+    {
+      "occupied": 8,
+      "odd_cycles": 2,
+      "even_cycles": 0,
+      "coefficient": -1
+    },
+    {
+      "occupied": 9,
+      "odd_cycles": 1,
+      "even_cycles": 0,
+      "coefficient": -1
+    },
+    {
+      "occupied": 9,
+      "odd_cycles": 3,
+      "even_cycles": 0,
+      "coefficient": 1
+    }
+  ],
+  "even_response_coefficients": [
+    [
+      2843,
+      1567,
+      96
+    ],
+    [
+      2841,
+      1567,
+      95
+    ]
+  ]
+}

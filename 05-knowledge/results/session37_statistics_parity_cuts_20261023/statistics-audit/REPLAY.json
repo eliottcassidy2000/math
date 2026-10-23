@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "python_checkers": {
+    "check_characters_and_cycles": {
+      "normal_optimized_output_equal": true,
+      "stdout_sha256": "7a87a760c8cb3f196e719afa02a815f444a041bccbd160d970249a4f4e169120"
+    },
+    "check_components": {
+      "normal_optimized_output_equal": true,
+      "stdout_sha256": "d8a012ac12e8356b80b6ed0ad970ac189e22639a8fb2a546e18ea9f8d94dfa79"
+    },
+    "check_squarezero": {
+      "normal_optimized_output_equal": true,
+      "stdout_sha256": "854a9452d535d244bdc92239f421883b0ae83032b0a1128f6306d765350849b0"
+    },
+    "check_triangle_family": {
+      "normal_optimized_output_equal": true,
+      "stdout_sha256": "9ccbadcbb25d90bfaaf5e2566108052249d07c408c8deea70e492d18552ad6d2"
+    },
+    "check_signed_necklaces": {
+      "normal_optimized_output_equal": true,
+      "stdout_sha256": "b09d0459489813974cfd8dee36eae694dd56c65b65b45f7ebeec931c09954bfd"
+    }
+  },
+  "C++_standard": "c++17",
+  "source_imports": "No imports of Session37 worker programs",
+  "max_direct_cycle_packing_order": 15
+}

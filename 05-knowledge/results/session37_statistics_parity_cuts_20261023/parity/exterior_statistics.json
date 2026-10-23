@@ -1,0 +1,244 @@
+{
+  "bigraded_component_product": "verified through vertex degree 6",
+  "bosonic": [
+    1,
+    0,
+    0,
+    1,
+    4,
+    22
+  ],
+  "character_rows": [
+    {
+      "invariant_exterior_polynomial": [
+        1
+      ],
+      "n": 0,
+      "superdimension": 1,
+      "tournament_types": 1
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1
+      ],
+      "n": 1,
+      "superdimension": 1,
+      "tournament_types": 1
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0
+      ],
+      "n": 2,
+      "superdimension": 1,
+      "tournament_types": 1
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "n": 3,
+      "superdimension": 0,
+      "tournament_types": 2
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "n": 4,
+      "superdimension": 0,
+      "tournament_types": 4
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "n": 5,
+      "superdimension": 0,
+      "tournament_types": 12
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        3,
+        7,
+        14,
+        11,
+        4,
+        6,
+        5,
+        1,
+        0,
+        0,
+        0
+      ],
+      "n": 6,
+      "superdimension": 0,
+      "tournament_types": 56
+    },
+    {
+      "invariant_exterior_polynomial": [
+        1,
+        0,
+        0,
+        2,
+        2,
+        3,
+        10,
+        29,
+        48,
+        61,
+        72,
+        72,
+        61,
+        48,
+        29,
+        10,
+        3,
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "n": 7,
+      "superdimension": 0,
+      "tournament_types": 456
+    }
+  ],
+  "connected_royle_even": [
+    1,
+    0,
+    1,
+    2,
+    8,
+    43,
+    398
+  ],
+  "fermionic": [
+    0,
+    0,
+    1,
+    1,
+    4,
+    22
+  ],
+  "graph_rows": [
+    {
+      "both": 1,
+      "connected_bosonic": 0,
+      "connected_fermionic": 0,
+      "exterior_admissible": 1,
+      "graph_types": 1,
+      "n": 0,
+      "royle_even": 1
+    },
+    {
+      "both": 1,
+      "connected_bosonic": 1,
+      "connected_fermionic": 0,
+      "exterior_admissible": 1,
+      "graph_types": 1,
+      "n": 1,
+      "royle_even": 1
+    },
+    {
+      "both": 1,
+      "connected_bosonic": 0,
+      "connected_fermionic": 0,
+      "exterior_admissible": 1,
+      "graph_types": 2,
+      "n": 2,
+      "royle_even": 1
+    },
+    {
+      "both": 1,
+      "connected_bosonic": 0,
+      "connected_fermionic": 1,
+      "exterior_admissible": 2,
+      "graph_types": 4,
+      "n": 3,
+      "royle_even": 2
+    },
+    {
+      "both": 1,
+      "connected_bosonic": 1,
+      "connected_fermionic": 1,
+      "exterior_admissible": 4,
+      "graph_types": 11,
+      "n": 4,
+      "royle_even": 4
+    },
+    {
+      "both": 5,
+      "connected_bosonic": 4,
+      "connected_fermionic": 4,
+      "exterior_admissible": 12,
+      "graph_types": 34,
+      "n": 5,
+      "royle_even": 12
+    },
+    {
+      "both": 28,
+      "connected_bosonic": 22,
+      "connected_fermionic": 22,
+      "exterior_admissible": 56,
+      "graph_types": 156,
+      "n": 6,
+      "royle_even": 56
+    }
+  ],
+  "hostiles": {
+    "C3": {
+      "aut": 6,
+      "connected": true,
+      "edges": 3,
+      "exterior": true,
+      "mask": 7,
+      "royle": false
+    },
+    "P3": {
+      "aut": 2,
+      "connected": true,
+      "edges": 2,
+      "exterior": false,
+      "mask": 3,
+      "royle": true
+    },
+    "two_triangles": {
+      "aut": 72,
+      "connected": false,
+      "edges": 6,
+      "exterior": false,
+      "mask": 5905,
+      "royle": false
+    }
+  },
+  "permutation_checks": 5914,
+  "status": "PASS",
+  "universe": "all permutations n<=7; all graph isomorphism types n<=6 via complete labelled masks and permutation orbits"
+}

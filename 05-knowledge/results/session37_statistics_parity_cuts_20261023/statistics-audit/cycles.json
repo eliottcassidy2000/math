@@ -1,0 +1,157 @@
+{
+  "real_root_counterexample": {
+    "hamiltonian_paths": 135,
+    "det_xI_A_low_to_high": [
+      3,
+      -7,
+      15,
+      -17,
+      20,
+      -12,
+      8,
+      0,
+      0,
+      1
+    ],
+    "per_xI_A_low_to_high": [
+      5,
+      11,
+      21,
+      27,
+      20,
+      12,
+      8,
+      0,
+      0,
+      1
+    ],
+    "odd_cycle_packing": [
+      1,
+      49,
+      7,
+      1
+    ],
+    "single_odd_cycles_by_length": {
+      "3": 8,
+      "9": 3,
+      "7": 18,
+      "5": 20
+    },
+    "valid_cycle_covers": 105,
+    "outmasks": [
+      250,
+      508,
+      505,
+      464,
+      480,
+      456,
+      128,
+      256,
+      65
+    ],
+    "cubic_discriminant": -348172
+  },
+  "det_per_collision_a": {
+    "hamiltonian_paths": 2843,
+    "det_xI_A_low_to_high": [
+      20,
+      -82,
+      167,
+      -192,
+      154,
+      -68,
+      28,
+      0,
+      0,
+      1
+    ],
+    "per_xI_A_low_to_high": [
+      384,
+      692,
+      629,
+      380,
+      154,
+      68,
+      28,
+      0,
+      0,
+      1
+    ],
+    "odd_cycle_packing": [
+      1,
+      771,
+      303,
+      11
+    ],
+    "single_odd_cycles_by_length": {
+      "3": 28,
+      "5": 154,
+      "7": 398,
+      "9": 191
+    },
+    "valid_cycle_covers": 2336,
+    "outmasks": [
+      120,
+      397,
+      337,
+      228,
+      362,
+      198,
+      386,
+      21,
+      169
+    ]
+  },
+  "det_per_collision_b": {
+    "hamiltonian_paths": 2841,
+    "det_xI_A_low_to_high": [
+      20,
+      -82,
+      167,
+      -192,
+      154,
+      -68,
+      28,
+      0,
+      0,
+      1
+    ],
+    "per_xI_A_low_to_high": [
+      384,
+      692,
+      629,
+      380,
+      154,
+      68,
+      28,
+      0,
+      0,
+      1
+    ],
+    "odd_cycle_packing": [
+      1,
+      772,
+      304,
+      10
+    ],
+    "single_odd_cycles_by_length": {
+      "3": 28,
+      "5": 154,
+      "7": 398,
+      "9": 192
+    },
+    "valid_cycle_covers": 2336,
+    "outmasks": [
+      274,
+      116,
+      193,
+      135,
+      300,
+      77,
+      281,
+      115,
+      174
+    ]
+  },
+  "status": "PASS"
+}

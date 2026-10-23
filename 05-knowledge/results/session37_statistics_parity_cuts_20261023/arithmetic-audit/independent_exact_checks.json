@@ -1,0 +1,720 @@
+{
+  "T4": {
+    "B": "104976/47089",
+    "F": "187489/104976",
+    "mu_polynomial": "x^2-6x+1",
+    "phase_order": 8
+  },
+  "all_eight_extension_controls": [
+    {
+      "H_base": 1,
+      "extensions": [
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": true,
+          "gamma": -1,
+          "score_multiset": [
+            1,
+            1,
+            1
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": true,
+          "gamma": 1,
+          "score_multiset": [
+            1,
+            1,
+            1
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 1,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            2
+          ],
+          "strong": false
+        }
+      ],
+      "regular_base_n": 1,
+      "unordered_two_path_covers": 0
+    },
+    {
+      "H_base": 3,
+      "extensions": [
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            1,
+            1,
+            1,
+            3,
+            4
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            1,
+            1,
+            1,
+            3,
+            4
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": true,
+          "gamma": -1,
+          "score_multiset": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            2,
+            2,
+            2,
+            4
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            2,
+            2,
+            2,
+            4
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": true,
+          "gamma": 1,
+          "score_multiset": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            3,
+            3,
+            3
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 3,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            3,
+            3,
+            3
+          ],
+          "strong": false
+        }
+      ],
+      "regular_base_n": 3,
+      "unordered_two_path_covers": 3
+    },
+    {
+      "H_base": 15,
+      "extensions": [
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            5,
+            6
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            5,
+            6
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 135,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": true,
+          "gamma": -1,
+          "score_multiset": [
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            6
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            6
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 135,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": true,
+          "gamma": 1,
+          "score_multiset": [
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 15,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "strong": false
+        }
+      ],
+      "regular_base_n": 5,
+      "unordered_two_path_covers": 45
+    },
+    {
+      "H_base": 175,
+      "extensions": [
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            8
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": -1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7,
+            8
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 2163,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": true,
+          "gamma": -1,
+          "score_multiset": [
+            1,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            7
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": -1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            8
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            8
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 2163,
+          "alpha": 1,
+          "beta": -1,
+          "cyclic": true,
+          "gamma": 1,
+          "score_multiset": [
+            1,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            7
+          ],
+          "strong": true
+        },
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": -1,
+          "score_multiset": [
+            0,
+            1,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "strong": false
+        },
+        {
+          "Hamiltonian_paths": 175,
+          "alpha": 1,
+          "beta": 1,
+          "cyclic": false,
+          "gamma": 1,
+          "score_multiset": [
+            0,
+            1,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "strong": false
+        }
+      ],
+      "regular_base_n": 7,
+      "unordered_two_path_covers": 819
+    }
+  ],
+  "assertion_style": "explicit exceptions; active under python -O",
+  "census": {
+    "1": {
+      "distinct_log_arguments": 0,
+      "distinct_spectra": 1,
+      "labelled_tournaments": 1
+    },
+    "2": {
+      "distinct_log_arguments": 4,
+      "distinct_spectra": 1,
+      "labelled_tournaments": 2
+    },
+    "3": {
+      "distinct_log_arguments": 4,
+      "distinct_spectra": 1,
+      "labelled_tournaments": 8
+    },
+    "4": {
+      "distinct_log_arguments": 8,
+      "distinct_spectra": 2,
+      "labelled_tournaments": 64
+    },
+    "5": {
+      "distinct_log_arguments": 8,
+      "distinct_spectra": 2,
+      "labelled_tournaments": 1024
+    }
+  },
+  "checks": 13865,
+  "collision": {
+    "n": 3,
+    "paths": [
+      1,
+      3
+    ]
+  },
+  "paley": {
+    "11": {
+      "charge": "23",
+      "phase_trace": "-5/3"
+    },
+    "19": {
+      "charge": "119/5",
+      "phase_trace": "-9/5"
+    },
+    "3": {
+      "charge": "19",
+      "phase_trace": "-1"
+    },
+    "7": {
+      "charge": "22",
+      "phase_trace": "-3/2"
+    }
+  },
+  "rational_torsion_energies": [
+    "1/3",
+    "1",
+    "3"
+  ],
+  "regular_two_sink_controls": [
+    {
+      "added_charge": "19",
+      "added_energy": 3,
+      "regular_base_n": 1
+    },
+    {
+      "added_charge": "22",
+      "added_energy": 7,
+      "regular_base_n": 3
+    },
+    {
+      "added_charge": "23",
+      "added_energy": 11,
+      "regular_base_n": 5
+    },
+    {
+      "added_charge": "47/2",
+      "added_energy": 15,
+      "regular_base_n": 7
+    },
+    {
+      "added_charge": "119/5",
+      "added_energy": 19,
+      "regular_base_n": 9
+    },
+    {
+      "added_charge": "24",
+      "added_energy": 23,
+      "regular_base_n": 11
+    }
+  ],
+  "root_isolation": {
+    "x - 1": "[((1, 1), 1)]",
+    "x - 3": "[((3, 3), 1)]",
+    "x - 7": "[((7, 7), 1)]",
+    "x**2 - 10*x + 5": "[((341/646, 1184/2243), 1), ((21246/2243, 6119/646), 1)]",
+    "x**2 - 6*x + 1": "[((204/1189, 169/985), 1), ((5741/985, 6930/1189), 1)]"
+  },
+  "scope": "Exact finite controls only; no numerical test of transcendence; all-order proofs in REPORT.md.",
+  "signatures": {
+    "1": {
+      "1,0": 1
+    },
+    "2": {
+      "1,-2,1": 2
+    },
+    "3": {
+      "1,-6,9,0": 8
+    },
+    "4": {
+      "1,-12,38,-12,1": 48,
+      "1,-12,54,-108,81": 16
+    },
+    "5": {
+      "1,-20,110,-100,25,0": 384,
+      "1,-20,142,-420,441,0": 640
+    }
+  },
+  "status": "PASS",
+  "tournaments": 1099,
+  "transitive_signed_cycle": [
+    {
+      "U_to_n": 1,
+      "n": 1
+    },
+    {
+      "U_to_n": -1,
+      "n": 2
+    },
+    {
+      "U_to_n": 1,
+      "n": 3
+    },
+    {
+      "U_to_n": -1,
+      "n": 4
+    },
+    {
+      "U_to_n": 1,
+      "n": 5
+    },
+    {
+      "U_to_n": -1,
+      "n": 6
+    },
+    {
+      "U_to_n": 1,
+      "n": 7
+    },
+    {
+      "U_to_n": -1,
+      "n": 8
+    },
+    {
+      "U_to_n": 1,
+      "n": 9
+    },
+    {
+      "U_to_n": -1,
+      "n": 10
+    },
+    {
+      "U_to_n": 1,
+      "n": 11
+    },
+    {
+      "U_to_n": -1,
+      "n": 12
+    }
+  ]
+}

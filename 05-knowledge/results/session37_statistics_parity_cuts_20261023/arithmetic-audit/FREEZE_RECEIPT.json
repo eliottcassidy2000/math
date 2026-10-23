@@ -1,0 +1,28 @@
+{
+  "status": "ACCEPT_FROZEN",
+  "audit_checks": 13865,
+  "audit_tournaments": 1099,
+  "normal_optimized_outputs_identical": true,
+  "claims": "core arithmetic; exact cut bounds; sharp n5 normalized-angle threshold; regular two-sink/all-eight lift; unbounded spectral ambiguity with strongness and score-class fences; P163 specialization",
+  "sha256": {
+    "../arithmetic/ARITHMETIC_CUT_COMPLETION.md": "5318cc2a27c43587287b783982e1d81858c28ebdc3225eb5cca3762c522ec196",
+    "../arithmetic/checks.py": "50baee0961a93e7d248f50e67ae72d15c75b002277fc58d6dd741b35f9534ac3",
+    "../arithmetic/checks.json": "ec68f84eb57bbb0409833c3d049f5d44f79b2fc7fb21f5d9fec377bcb2f67546",
+    "REPORT.md": "e6e66554f2a42d4520269d30e00fdfdb272500b861ae1f36731f58bf1d7988c6",
+    "independent_exact_checks.py": "9916e1a629ab2adedd1f521fa0e09bb3577c8e119ad4289c0d6f2c4ab5a90859",
+    "independent_exact_checks.json": "d0271e8eabc919c7ecd717396ca99c4732435c2fd201dbdca4d41a77b3a1132d",
+    "independent_exact_checks.optimized.json": "d0271e8eabc919c7ecd717396ca99c4732435c2fd201dbdca4d41a77b3a1132d",
+    "paley163_final_check.json": "e732bb2a77011404ed1437c611c86e81edc0b87401ca7aac13274b922f7970f4",
+    "../arithmetic/README.md": "2d3f951fe1e6b399544a36b23fd59625cfe64f61b31e41d49821793f8a3ffa51"
+  },
+  "final_scope_fences": [
+    "nonzero modes and n1/log-zero exceptions",
+    "rational-energy torsion classification only",
+    "raw angle versus normalized angle",
+    "formal weights versus thermal statistics",
+    "full Cayley matrix remains faithful",
+    "skew/energy spectra are not adjacency spectra",
+    "cyclic extension strong versus transitive reducible; not fixed score/strong class",
+    "even logarithm argument inverted for >1 statement"
+  ]
+}

@@ -1,0 +1,10 @@
+[
+ {"n":0,"graphs":1,"exterior_types":1,"royle_types":1,"bosonic_connected":0,"fermionic_connected":0,"royle_connected":0,"exterior_degrees":[1],"royle_degrees":[1],"connected_exterior_degrees":[0]},
+ {"n":1,"graphs":1,"exterior_types":1,"royle_types":1,"bosonic_connected":1,"fermionic_connected":0,"royle_connected":1,"exterior_degrees":[1],"royle_degrees":[1],"connected_exterior_degrees":[1]},
+ {"n":2,"graphs":2,"exterior_types":1,"royle_types":1,"bosonic_connected":0,"fermionic_connected":0,"royle_connected":0,"exterior_degrees":[1,0],"royle_degrees":[1,0],"connected_exterior_degrees":[0,0]},
+ {"n":3,"graphs":4,"exterior_types":2,"royle_types":2,"bosonic_connected":0,"fermionic_connected":1,"royle_connected":1,"exterior_degrees":[1,0,0,1],"royle_degrees":[1,0,1,0],"connected_exterior_degrees":[0,0,0,1]},
+ {"n":4,"graphs":11,"exterior_types":4,"royle_types":4,"bosonic_connected":1,"fermionic_connected":1,"royle_connected":2,"exterior_degrees":[1,0,0,2,1,0,0],"royle_degrees":[1,0,1,1,1,0,0],"connected_exterior_degrees":[0,0,0,1,1,0,0]},
+ {"n":5,"graphs":34,"exterior_types":12,"royle_types":12,"bosonic_connected":4,"fermionic_connected":4,"royle_connected":8,"exterior_degrees":[1,0,0,2,2,2,2,2,0,0,1],"royle_degrees":[1,0,1,1,4,1,3,0,1,0,0],"connected_exterior_degrees":[0,0,0,0,1,2,2,2,0,0,1]},
+ {"n":6,"graphs":156,"exterior_types":56,"royle_types":56,"bosonic_connected":22,"fermionic_connected":22,"royle_connected":43,"exterior_degrees":[1,0,0,2,2,3,7,14,11,4,6,5,1,0,0,0],"royle_degrees":[1,0,1,1,5,5,10,8,12,6,4,2,1,0,0,0],"connected_exterior_degrees":[0,0,0,0,0,1,5,12,11,4,5,5,1,0,0,0]},
+ {"n":7,"graphs":1044,"exterior_types":456,"royle_types":456,"bosonic_connected":199,"fermionic_connected":199,"royle_connected":398,"exterior_degrees":[1,0,0,2,2,3,10,29,48,61,72,72,61,48,29,10,3,2,2,0,0,1],"royle_degrees":[1,0,1,1,5,6,22,23,55,56,85,61,69,31,28,6,5,0,1,0,0,0],"connected_exterior_degrees":[0,0,0,0,0,0,2,14,37,57,66,67,60,48,29,10,3,2,2,0,0,1]}
+]

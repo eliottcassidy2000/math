@@ -1,0 +1,142 @@
+{
+  "bracket_checks": 141,
+  "direct_curl_rows": [
+    {
+      "alternating_orbits": 1,
+      "n": 2,
+      "sign_surviving_orbits": 0,
+      "symmetric_orbits": 1
+    },
+    {
+      "alternating_orbits": 4,
+      "n": 3,
+      "sign_surviving_orbits": 2,
+      "symmetric_orbits": 2
+    },
+    {
+      "alternating_orbits": 5,
+      "n": 4,
+      "sign_surviving_orbits": 2,
+      "symmetric_orbits": 3
+    },
+    {
+      "alternating_orbits": 18,
+      "n": 5,
+      "sign_surviving_orbits": 9,
+      "symmetric_orbits": 9
+    }
+  ],
+  "scope": "all SCC words of vertex weight<=8; complete Lie-super spans through7; all labelled tournaments through5 for direct curl signs",
+  "status": "PASS",
+  "super_lie_rows": [
+    {
+      "dimension": 1,
+      "n": 1,
+      "parity": 1
+    },
+    {
+      "dimension": 1,
+      "n": 2,
+      "parity": 0
+    },
+    {
+      "dimension": 1,
+      "n": 3,
+      "parity": 1
+    },
+    {
+      "dimension": 2,
+      "n": 4,
+      "parity": 0
+    },
+    {
+      "dimension": 8,
+      "n": 5,
+      "parity": 1
+    },
+    {
+      "dimension": 44,
+      "n": 6,
+      "parity": 0
+    },
+    {
+      "dimension": 398,
+      "n": 7,
+      "parity": 1
+    }
+  ],
+  "word_rows": [
+    {
+      "curl_necklaces": 1,
+      "killed": 0,
+      "n": 1,
+      "primitive_necklaces": 1,
+      "signed_curl_dimension": 1,
+      "strong_generators": 1,
+      "word_count": 1
+    },
+    {
+      "curl_necklaces": 1,
+      "killed": 1,
+      "n": 2,
+      "primitive_necklaces": 0,
+      "signed_curl_dimension": 0,
+      "strong_generators": 0,
+      "word_count": 1
+    },
+    {
+      "curl_necklaces": 2,
+      "killed": 0,
+      "n": 3,
+      "primitive_necklaces": 1,
+      "signed_curl_dimension": 2,
+      "strong_generators": 1,
+      "word_count": 2
+    },
+    {
+      "curl_necklaces": 3,
+      "killed": 1,
+      "n": 4,
+      "primitive_necklaces": 2,
+      "signed_curl_dimension": 2,
+      "strong_generators": 1,
+      "word_count": 4
+    },
+    {
+      "curl_necklaces": 9,
+      "killed": 0,
+      "n": 5,
+      "primitive_necklaces": 8,
+      "signed_curl_dimension": 9,
+      "strong_generators": 6,
+      "word_count": 12
+    },
+    {
+      "curl_necklaces": 45,
+      "killed": 2,
+      "n": 6,
+      "primitive_necklaces": 43,
+      "signed_curl_dimension": 43,
+      "strong_generators": 35,
+      "word_count": 56
+    },
+    {
+      "curl_necklaces": 399,
+      "killed": 0,
+      "n": 7,
+      "primitive_necklaces": 398,
+      "signed_curl_dimension": 399,
+      "strong_generators": 353,
+      "word_count": 456
+    },
+    {
+      "curl_necklaces": 6416,
+      "killed": 1,
+      "n": 8,
+      "primitive_necklaces": 6413,
+      "signed_curl_dimension": 6415,
+      "strong_generators": 6008,
+      "word_count": 6880
+    }
+  ]
+}

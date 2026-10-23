@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 1,
+      "strong_types": 1,
+      "ordinary_primitive_necklaces": 1,
+      "ordinary_necklaces": 1,
+      "signed_necklaces": 1,
+      "even_Lie_dimension": 0,
+      "odd_Lie_dimension": 1
+    },
+    {
+      "n": 2,
+      "strong_types": 0,
+      "ordinary_primitive_necklaces": 0,
+      "ordinary_necklaces": 1,
+      "signed_necklaces": 0,
+      "even_Lie_dimension": 1,
+      "odd_Lie_dimension": 0
+    },
+    {
+      "n": 3,
+      "strong_types": 1,
+      "ordinary_primitive_necklaces": 1,
+      "ordinary_necklaces": 2,
+      "signed_necklaces": 2,
+      "even_Lie_dimension": 0,
+      "odd_Lie_dimension": 1
+    },
+    {
+      "n": 4,
+      "strong_types": 1,
+      "ordinary_primitive_necklaces": 2,
+      "ordinary_necklaces": 3,
+      "signed_necklaces": 2,
+      "even_Lie_dimension": 2,
+      "odd_Lie_dimension": 0
+    },
+    {
+      "n": 5,
+      "strong_types": 6,
+      "ordinary_primitive_necklaces": 8,
+      "ordinary_necklaces": 9,
+      "signed_necklaces": 9,
+      "even_Lie_dimension": 0,
+      "odd_Lie_dimension": 8
+    },
+    {
+      "n": 6,
+      "strong_types": 35,
+      "ordinary_primitive_necklaces": 43,
+      "ordinary_necklaces": 45,
+      "signed_necklaces": 43,
+      "even_Lie_dimension": 44,
+      "odd_Lie_dimension": 0
+    },
+    {
+      "n": 7,
+      "strong_types": 353,
+      "ordinary_primitive_necklaces": 398,
+      "ordinary_necklaces": 399,
+      "signed_necklaces": 399,
+      "even_Lie_dimension": 0,
+      "odd_Lie_dimension": 398
+    },
+    {
+      "n": 8,
+      "strong_types": 6008,
+      "ordinary_primitive_necklaces": 6413,
+      "ordinary_necklaces": 6416,
+      "signed_necklaces": 6415,
+      "even_Lie_dimension": 6413,
+      "odd_Lie_dimension": 0
+    }
+  ],
+  "signed_rotation_Burnside": true,
+  "signed_log_formula": true,
+  "root_parity_predicate": true,
+  "PBW_Hilbert_product": true,
+  "word_count": 7412
+}

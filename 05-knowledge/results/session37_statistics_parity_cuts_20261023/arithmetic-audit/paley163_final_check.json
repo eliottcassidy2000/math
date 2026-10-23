@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prime": 163,
+  "primality": "trial division through floor(sqrt(163))=12",
+  "correlation_shifts": 162,
+  "correlation_value": -1,
+  "Cayley_real_part": "-81/82",
+  "Cayley_imaginary_sqrt163_coefficient": "1/82",
+  "charge": "1019/41"
+}

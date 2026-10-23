@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "graph_isomorphism_types_checked": 1253,
+  "max_n": 7,
+  "bigraded_product": true,
+  "connected_balance_and_dyadic_recursion": true,
+  "signed_stabilizer_matches_character": true,
+  "n3_converse_intertwiner_obstruction": {
+    "exterior_parity_trace": 0,
+    "tournament_converse_trace": 2
+  }
+}

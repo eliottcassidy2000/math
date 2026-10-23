@@ -1,0 +1,58 @@
+{
+  "direct_rows": [
+    {
+      "H": 17,
+      "direct_cycle_check": true,
+      "m": 2,
+      "n": 6,
+      "polynomial": [
+        1,
+        6,
+        1
+      ]
+    },
+    {
+      "H": 135,
+      "direct_cycle_check": true,
+      "m": 3,
+      "n": 9,
+      "polynomial": [
+        1,
+        49,
+        7,
+        1
+      ]
+    },
+    {
+      "H": 1377,
+      "direct_cycle_check": true,
+      "m": 4,
+      "n": 12,
+      "polynomial": [
+        1,
+        452,
+        98,
+        8,
+        1
+      ]
+    },
+    {
+      "H": 15795,
+      "direct_cycle_check": false,
+      "m": 5,
+      "n": 15,
+      "polynomial": [
+        1,
+        4509,
+        1354,
+        148,
+        9,
+        1
+      ]
+    }
+  ],
+  "newton_controls": 28,
+  "recurrence_controls": 286,
+  "scope": "Direct H n6,9,12,15; direct odd cycle packings n6,9,12; exact recurrence controls only thereafter",
+  "status": "PASS"
+}

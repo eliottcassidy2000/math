@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "all_labelled_tournaments_through_n4": 76,
+  "mixed_parameter_checks": 532,
+  "paired_exterior_product_checks_through_n5": 1365,
+  "arbitrary_signed_weighted_diagonal_MacMahon": true,
+  "raw_odd_hostile": {
+    "outmasks": [
+      8,
+      1,
+      3,
+      6
+    ],
+    "H": 5,
+    "H_alt": -1,
+    "paths": [
+      [
+        0,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        0,
+        3,
+        1
+      ],
+      [
+        2,
+        1,
+        0,
+        3
+      ],
+      [
+        3,
+        2,
+        1,
+        0
+      ]
+    ]
+  }
+}

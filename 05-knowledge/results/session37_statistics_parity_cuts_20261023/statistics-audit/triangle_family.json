@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "direct_DPs": [
+    {
+      "m": 2,
+      "n": 6,
+      "coefficients": [
+        1,
+        6,
+        1
+      ],
+      "H": 17,
+      "odd_cycles": 6,
+      "newton_obstruction_numerator": 32
+    },
+    {
+      "m": 3,
+      "n": 9,
+      "coefficients": [
+        1,
+        49,
+        7,
+        1
+      ],
+      "H": 135,
+      "odd_cycles": 49,
+      "newton_obstruction_numerator": -196
+    },
+    {
+      "m": 4,
+      "n": 12,
+      "coefficients": [
+        1,
+        452,
+        98,
+        8,
+        1
+      ],
+      "H": 1377,
+      "odd_cycles": 452,
+      "newton_obstruction_numerator": -592
+    },
+    {
+      "m": 5,
+      "n": 15,
+      "coefficients": [
+        1,
+        4509,
+        1354,
+        148,
+        9,
+        1
+      ],
+      "H": 15795,
+      "odd_cycles": 4509,
+      "newton_obstruction_numerator": -1156
+    }
+  ],
+  "exact_Newton_checks_m3_through100": 98
+}

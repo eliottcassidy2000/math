@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "minimal_publication_files": [
+    "AUDIT.md",
+    "SYNTHESIS_SCOPE.md",
+    "check_graph_signs.cpp",
+    "check_characters_and_cycles.py",
+    "check_components.py",
+    "check_squarezero.py",
+    "check_triangle_family.py",
+    "check_signed_necklaces.py",
+    "characters.json",
+    "cycles.json",
+    "graph_signs.json",
+    "components.json",
+    "squarezero.json",
+    "triangle_family.json",
+    "signed_necklaces.json",
+    "REPLAY.json",
+    "INPUT_SHA256SUMS",
+    "MANIFEST.json",
+    "SHA256SUMS"
+  ],
+  "audited_source_notes": [
+    "../exclusion/RESULT.md",
+    "../parity/EXTERIOR_TOURNAMENT_FOCK.md",
+    "../parity/SUPER_PBW_AND_SIGNED_CURL.md",
+    "../root/CYCLE_GAS_REAL_ROOT_BOUNDARY.md",
+    "../root/ONE_BACK_ARC_CYCLE_GAS.md",
+    "../SYNTHESIS.md"
+  ],
+  "scope_limits": [
+    "n8 full census inspected and corroborated with independent inheritance-audit receipt, not rerun here",
+    "super-Lyndon and PBW theorem cited and source-checked, not reproved",
+    "curl classification inherited, its signed consequence audited"
+  ],
+  "synthesis_review": {
+    "status": "APPROVED",
+    "sha256": "170061540ab3e2ba4a0719624df19fde47a9c4ef8b673f9be960c98d450e0c96",
+    "scope": "Sections1\u20136 and model/operation caveats in10; sections7\u20139 not recertified",
+    "corrected_super_PBW_sha256": "380f5f62eddcbe3479f3240b6afed1b3bcf51c8edc79c5ac5c574ee9e18ab5a0"
+  }
+}
