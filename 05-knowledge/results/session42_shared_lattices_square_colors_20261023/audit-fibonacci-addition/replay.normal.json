@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "checks": 84812,
+  "exact_rotation_prefix": 62500,
+  "all_target_pair_tests_through": 1500,
+  "square_targets_tested": 249,
+  "square_statistics": [
+    {
+      "k": 10,
+      "positive_distinct_A_targets": 6,
+      "phase_support_targets": 7,
+      "denominator": 9
+    },
+    {
+      "k": 25,
+      "positive_distinct_A_targets": 17,
+      "phase_support_targets": 18,
+      "denominator": 24
+    },
+    {
+      "k": 50,
+      "positive_distinct_A_targets": 33,
+      "phase_support_targets": 34,
+      "denominator": 49
+    },
+    {
+      "k": 100,
+      "positive_distinct_A_targets": 70,
+      "phase_support_targets": 71,
+      "denominator": 99
+    },
+    {
+      "k": 250,
+      "positive_distinct_A_targets": 183,
+      "phase_support_targets": 184,
+      "denominator": 249
+    }
+  ],
+  "finite_mean_R_cd_over_square": {
+    "AA": 0.14322421408832645,
+    "AB": 0.09462537101663528,
+    "AC": 0.14286640424412342,
+    "BA": 0.09462537101663528,
+    "BB": 0.05254757081320633,
+    "BC": 0.08842698266568823,
+    "CA": 0.14286640424412342,
+    "CB": 0.08842698266568823,
+    "CC": 0.14981663476291612
+  },
+  "limiting_AA_mean": 0.1458980337503154,
+  "limiting_distinct_A_square_target_fraction": 0.7639320225002102,
+  "first_forced_A_edge": [
+    2,
+    7
+  ],
+  "scope": "finite checks supplement the analytic all-size proofs; no prime weights"
+}

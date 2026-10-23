@@ -1,0 +1,11 @@
+{
+  "status": "PROOF_COROLLARY_PENDING_AUDIT",
+  "files": [
+    {
+      "path": "SQUARE_COUNT_DISTRIBUTION.md",
+      "bytes": 1788,
+      "sha256": "56ba43d31b3ac10d74ff28f13f48f6765b546acbd96f9fba2e70da7b4e96aaf7"
+    }
+  ],
+  "commands": []
+}

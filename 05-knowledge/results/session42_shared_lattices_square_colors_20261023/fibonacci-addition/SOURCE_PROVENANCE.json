@@ -1,0 +1,16 @@
+{
+  "inherited_sources": [
+    {
+      "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+      "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/COLORED_GRID_AND_PHASE_QUOTIENT.md",
+      "sha256": "93fbb9155de40dd37273601e045901cc0c0c93f26d6d05ae04b7f796fc950229"
+    },
+    {
+      "commit": "5258d52ac95924d524ee816a7dffa7329ddcf095",
+      "path": "05-knowledge/results/session41_owned_attachments_fibonacci_20261023/fibonacci/BRANCH_ADDENDUM.md",
+      "sha256": "4e9d188cb4505ba90f2f103e73d3bd9a0816c3a471720c4a7f5e14dad1ed905d"
+    }
+  ],
+  "primary_equdistribution_reference": "https://terrytao.wordpress.com/2010/03/28/254b-notes-1-equidistribution-of-polynomial-sequences-in-torii/",
+  "proof_scope": "ordinary integer sums, canonical word and occurrence-dependent branches; no prime-weighted assertion"
+}

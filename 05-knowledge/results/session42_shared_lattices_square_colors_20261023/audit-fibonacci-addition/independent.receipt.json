@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "independent_Beatty_prefix": 10000,
+  "AA_pair_targets": 1999,
+  "Amax_failures_through2000": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "square_support_but_no_distinct_A_pair_k_through100": [
+    2
+  ],
+  "fixed_target_AA_polynomial_bruteforce_targets": 12
+}
