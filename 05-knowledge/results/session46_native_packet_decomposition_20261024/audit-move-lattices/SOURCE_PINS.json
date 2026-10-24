@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "bytes": 6036,
+      "path": "move-lattices/check.py",
+      "sha256": "3b6033e924de7be22990e09047b19166adfeb2d37fd695d682aa6fe960af553a"
+    },
+    {
+      "bytes": 8271,
+      "path": "move-lattices/THEOREM.md",
+      "sha256": "41c9b8904509f0458b12536b3bd0209d22466f260f47ab90faef0a29fc004e7c"
+    },
+    {
+      "bytes": 21513,
+      "path": "move-lattices/integer_basis_witness.json",
+      "sha256": "586702460eac9c5fce2ec9ce5b8a247fc0d177281b975f24a74d8cb0c598890b"
+    },
+    {
+      "bytes": 4985,
+      "path": "audit-compensation/AUDIT.md",
+      "sha256": "f25cbb15b5ed69286626e6cb7fb91f0e9851eb8bc1bdc0b80938e5eaff9e9950"
+    },
+    {
+      "bytes": 9361,
+      "path": "audit-compensation/audit.py",
+      "sha256": "3a199fa4655f7a99f41bca9974f0104e9b70edf60d3192a87066e267932be822"
+    },
+    {
+      "bytes": 83828,
+      "path": "audit-compensation/normal.json",
+      "sha256": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703"
+    },
+    {
+      "bytes": 83828,
+      "path": "audit-compensation/optimized.json",
+      "sha256": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703"
+    },
+    {
+      "bytes": 530173,
+      "path": "repo/05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "bytes": 23249,
+      "path": "repo/05-knowledge/results/session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    }
+  ],
+  "scope": "Reviewed theory, direct arithmetic inputs and separately independently checked native foundation"
+}

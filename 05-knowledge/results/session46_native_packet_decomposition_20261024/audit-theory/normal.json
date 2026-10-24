@@ -1,0 +1,864 @@
+{
+  "checks": 965633,
+  "davenport": {
+    "abstract_balanced_trade_support": 264,
+    "abstract_minimal_zero_sum_length": 132,
+    "abstract_trade_construction": "Positive minimal zero-sum sequence versus 132 distinct negative slots of label zero",
+    "all_order_constant_claimed": false,
+    "conditional_native_support_bound": 264,
+    "group_order": 2048,
+    "moduli": [
+      2,
+      2,
+      2,
+      2,
+      128
+    ],
+    "native_sharpness_claimed": false,
+    "nilpotence_degree": 132
+  },
+  "exhaustive_small": [
+    {
+      "atom_orders_checked": 177,
+      "distinct_accepted_endpoint_pairs": 144,
+      "extracted_atoms": 177,
+      "largest_extracted_support": 2,
+      "max_slots": 5,
+      "moduli": [],
+      "ordered_label_arrays": 6
+    },
+    {
+      "atom_orders_checked": 2380,
+      "distinct_accepted_endpoint_pairs": 2002,
+      "extracted_atoms": 2380,
+      "largest_extracted_support": 4,
+      "max_slots": 5,
+      "moduli": [
+        2
+      ],
+      "ordered_label_arrays": 63
+    },
+    {
+      "atom_orders_checked": 11091,
+      "distinct_accepted_endpoint_pairs": 9696,
+      "extracted_atoms": 11091,
+      "largest_extracted_support": 4,
+      "max_slots": 5,
+      "moduli": [
+        3
+      ],
+      "ordered_label_arrays": 364
+    },
+    {
+      "atom_orders_checked": 33432,
+      "distinct_accepted_endpoint_pairs": 29988,
+      "extracted_atoms": 33432,
+      "largest_extracted_support": 4,
+      "max_slots": 5,
+      "moduli": [
+        4
+      ],
+      "ordered_label_arrays": 1365
+    },
+    {
+      "atom_orders_checked": 33432,
+      "distinct_accepted_endpoint_pairs": 29988,
+      "extracted_atoms": 33432,
+      "largest_extracted_support": 4,
+      "max_slots": 5,
+      "moduli": [
+        2,
+        2
+      ],
+      "ordered_label_arrays": 1365
+    }
+  ],
+  "hostiles": {
+    "cardinality_cannot_be_dropped": true,
+    "lattice_generation_not_markov_connectivity": {
+      "binary_endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "feasible_edges": [],
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -3,
+          3
+        ]
+      ]
+    },
+    "missing_resource_row": {
+      "endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "illegal_mixture": [
+        1,
+        1
+      ]
+    },
+    "multi_target_cycle": [
+      {
+        "accepted": [
+          0,
+          7
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 3,
+        "slots": 3
+      },
+      {
+        "accepted": [
+          0,
+          15
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 4,
+        "slots": 4
+      },
+      {
+        "accepted": [
+          0,
+          31
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 5,
+        "slots": 5
+      },
+      {
+        "accepted": [
+          0,
+          63
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 6,
+        "slots": 6
+      },
+      {
+        "accepted": [
+          0,
+          127
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 7,
+        "slots": 7
+      },
+      {
+        "accepted": [
+          0,
+          255
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 8,
+        "slots": 8
+      },
+      {
+        "accepted": [
+          0,
+          511
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 9,
+        "slots": 9
+      },
+      {
+        "accepted": [
+          0,
+          1023
+        ],
+        "charge_group_order": 1,
+        "minimal_support": 10,
+        "slots": 10
+      }
+    ],
+    "neutral_projection_barrier": {
+      "allowed_projected_budget": 3,
+      "projected_support": 4,
+      "reachable_states": 4
+    },
+    "overlapping_roles_need_actual_owner_map": {
+      "merged_debt": 0,
+      "separate_contributions_mod2": [
+        1,
+        1
+      ]
+    },
+    "pairing_minimality_loss": {
+      "actual_atoms": [
+        [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            3
+          ]
+        ]
+      ],
+      "paired_differences": [
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    "resource_quotient_loss": true,
+    "row_debt_not_scalar_total": {
+      "labels_mod4": [
+        0,
+        1
+      ],
+      "matrix": [
+        [
+          1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "row_debts": [
+        3,
+        1
+      ]
+    },
+    "scalar_phase_loses_dyadic_debt": true,
+    "shared_owner_quotient_loss": {
+      "actual_values": [
+        0,
+        3
+      ],
+      "quotient_modulus": 3
+    }
+  },
+  "native": {
+    "distinct_normalized_resources": 40,
+    "inherited_authenticator_checks": 18321,
+    "inherited_authenticator_stdout_sha256": "f15b150fac13959467872d3fdb4880ac759f6e00bdff9b57c44292d2f8337255",
+    "native_decomposable_twelve_change_routes": [
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1477,
+          1549,
+          1638,
+          1691,
+          2176,
+          2837
+        ],
+        [
+          1477,
+          1638,
+          2176,
+          2185,
+          2837,
+          3000
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ],
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1477,
+          1549,
+          1638,
+          1691,
+          2176,
+          2837
+        ],
+        [
+          1477,
+          1549,
+          1691,
+          1974,
+          2837,
+          2945
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ],
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1425,
+          1638,
+          1921,
+          2176,
+          2185,
+          3000
+        ],
+        [
+          1477,
+          1638,
+          2176,
+          2185,
+          2837,
+          3000
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ],
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1425,
+          1638,
+          1921,
+          2176,
+          2185,
+          3000
+        ],
+        [
+          1425,
+          1921,
+          1974,
+          2185,
+          2945,
+          3000
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ],
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1425,
+          1549,
+          1691,
+          1921,
+          1974,
+          2945
+        ],
+        [
+          1477,
+          1549,
+          1691,
+          1974,
+          2837,
+          2945
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ],
+      [
+        [
+          1425,
+          1549,
+          1638,
+          1691,
+          1921,
+          2176
+        ],
+        [
+          1425,
+          1549,
+          1691,
+          1921,
+          1974,
+          2945
+        ],
+        [
+          1425,
+          1921,
+          1974,
+          2185,
+          2945,
+          3000
+        ],
+        [
+          1477,
+          1974,
+          2185,
+          2837,
+          2945,
+          3000
+        ]
+      ]
+    ],
+    "native_four_slot_atoms": [
+      {
+        "minus": [
+          1425,
+          1921
+        ],
+        "plus": [
+          1477,
+          2837
+        ]
+      },
+      {
+        "minus": [
+          1638,
+          2176
+        ],
+        "plus": [
+          1974,
+          2945
+        ]
+      },
+      {
+        "minus": [
+          1549,
+          1691
+        ],
+        "plus": [
+          2185,
+          3000
+        ]
+      }
+    ],
+    "native_primitive_circuits": [
+      {
+        "atoms": 1,
+        "minus": [
+          1477,
+          2945,
+          3369
+        ],
+        "plus": [
+          1425,
+          1457,
+          1638
+        ],
+        "slots": 6
+      },
+      {
+        "atoms": 1,
+        "minus": [
+          1921,
+          2071,
+          2185,
+          2905
+        ],
+        "plus": [
+          1457,
+          1638,
+          1691,
+          3000
+        ],
+        "slots": 8
+      },
+      {
+        "atoms": 1,
+        "minus": [
+          1394,
+          1425,
+          1457,
+          1974,
+          2581
+        ],
+        "plus": [
+          176,
+          1549,
+          1638,
+          2071,
+          2905
+        ],
+        "slots": 10
+      },
+      {
+        "atoms": 1,
+        "minus": [
+          176,
+          1394,
+          1457,
+          1477,
+          1974,
+          2071
+        ],
+        "plus": [
+          1425,
+          1480,
+          1638,
+          2176,
+          2581,
+          3000
+        ],
+        "slots": 12
+      },
+      {
+        "atoms": 1,
+        "minus": [
+          1425,
+          1477,
+          1480,
+          1691,
+          2185,
+          2581,
+          3369
+        ],
+        "plus": [
+          176,
+          1394,
+          1457,
+          1549,
+          1638,
+          2945,
+          3000
+        ],
+        "slots": 14
+      },
+      {
+        "atoms": 1,
+        "minus": [
+          176,
+          1549,
+          2071,
+          2176,
+          2185,
+          2581,
+          2945,
+          3000
+        ],
+        "plus": [
+          1425,
+          1457,
+          1477,
+          1480,
+          1638,
+          1691,
+          1974,
+          2837
+        ],
+        "slots": 16
+      }
+    ],
+    "sixteen_label_abstract_buffer_control": {
+      "buffer_slots": 8,
+      "event_sizes": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "labels": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          39
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          27
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          14
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          54
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          98
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          10
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          54
+        ]
+      ],
+      "original_slots": 16,
+      "projected_debts": [
+        [
+          1,
+          1,
+          0,
+          1,
+          89
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          101
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          114
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          74
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          30
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          118
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          74
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "scope": "Abstract supply-conditional buffer control; not native buffer existence",
+      "states": [
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        [
+          0,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17
+        ],
+        [
+          0,
+          1,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          18
+        ],
+        [
+          0,
+          1,
+          2,
+          11,
+          12,
+          13,
+          14,
+          15,
+          19
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          12,
+          13,
+          14,
+          15,
+          20
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          13,
+          14,
+          15,
+          21
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          14,
+          15,
+          22
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          15,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          16
+        ]
+      ]
+    },
+    "source_options": 20,
+    "source_pins_verified": 15
+  },
+  "scope": "Conditional all-size proofs; exhaustive finite controls; read-only inherited native replay",
+  "status": "PASS"
+}

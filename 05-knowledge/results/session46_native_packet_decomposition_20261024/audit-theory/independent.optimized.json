@@ -1,0 +1,68 @@
+{
+  "Q_minimal_zero_lengths": [
+    0,
+    132
+  ],
+  "checks": 40,
+  "group_algebra_controls": [
+    {
+      "ideal_dimensions": [
+        2,
+        1,
+        0
+      ],
+      "moduli": [
+        2
+      ],
+      "nilpotency_index": 2
+    },
+    {
+      "ideal_dimensions": [
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "moduli": [
+        4
+      ],
+      "nilpotency_index": 4
+    },
+    {
+      "ideal_dimensions": [
+        8,
+        7,
+        5,
+        3,
+        1,
+        0
+      ],
+      "moduli": [
+        2,
+        4
+      ],
+      "nilpotency_index": 5
+    },
+    {
+      "ideal_dimensions": [
+        16,
+        15,
+        12,
+        8,
+        4,
+        1,
+        0
+      ],
+      "moduli": [
+        2,
+        2,
+        4
+      ],
+      "nilpotency_index": 6
+    }
+  ],
+  "manifest_sha256": "07a2c24496fb4aad3b18103e79e5e6ce0d38003099505132c384f6401550f67b",
+  "scope": "Independent finite proof controls plus source-hash verification. General theorems are reviewed by proofs; producer and inherited native replays are separately retained.",
+  "status": "PASS"
+}

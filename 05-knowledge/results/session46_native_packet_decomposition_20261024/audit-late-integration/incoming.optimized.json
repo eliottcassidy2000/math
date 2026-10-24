@@ -1,0 +1,145 @@
+{
+  "basis_determinant": 2048,
+  "charge_image_order": 2048,
+  "checks": 156,
+  "current_pin_paths_to570": 0,
+  "direct_basis_columns": 27,
+  "four_and_six_move_counts": {
+    "4": 27,
+    "6": 1917
+  },
+  "four_move_rank": 23,
+  "identical_receipt_pairs": [
+    "four_move",
+    "multi_target",
+    "native18",
+    "route18",
+    "route18_audit",
+    "six_trade"
+  ],
+  "incoming_endpoint_clock_cost": 45,
+  "incoming_route_clock_costs": [
+    14,
+    15,
+    15,
+    13
+  ],
+  "incoming_route_supports": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "incoming_route_total_work": 57,
+  "inherited_complete_menu_scan": {
+    "canonical_source_representatives": 3528,
+    "full_census_rerun": false,
+    "inherited_actual_paths": 1102392,
+    "menus": 700,
+    "same_pair_sources": [
+      176,
+      1394,
+      1425,
+      1457,
+      1477,
+      1480,
+      1532,
+      1549,
+      1638,
+      1691,
+      1841,
+      1921,
+      1923,
+      1974,
+      2071,
+      2087,
+      2176,
+      2185,
+      2553,
+      2581,
+      2835,
+      2837,
+      2905,
+      2945,
+      3000,
+      3015,
+      3360,
+      3369
+    ],
+    "target570_menus": 0
+  },
+  "input_sha256": {
+    "05-knowledge/results/balanced_native_20261023/CHARGED_RETURN.md": "001567b3034b2bf5c22b020d138a0c0651e20636576d12106173d25e16b569c6",
+    "05-knowledge/results/balanced_native_20261023/MULTITARGET.md": "3d56d2a757d98c93b48cfcb3ac9c8abdd3a3b8416d724c45cfb1079822787993",
+    "05-knowledge/results/balanced_native_20261023/NATIVE18.md": "97762603fbd62ecfce674d77f52ddd736a340fe6213f3d4ec76f87a716ebc50e",
+    "05-knowledge/results/balanced_native_20261023/SIX_TRADE_LATTICE.md": "26adb7a2421df4ce54b1da45dc236435ca91bd78000ac1dd28a09f28765692d5",
+    "05-knowledge/results/balanced_native_20261023/four_move.normal.json": "3dcaa75cd65d6b455a16ac7461925fbdef39310918a7a91e70ba7b5362bdbc27",
+    "05-knowledge/results/balanced_native_20261023/four_move.optimized.json": "3dcaa75cd65d6b455a16ac7461925fbdef39310918a7a91e70ba7b5362bdbc27",
+    "05-knowledge/results/balanced_native_20261023/multi_target.normal.json": "5c26295ff88ffe415cca89fe4a1ebab7620349746d6fe530ee727a039aab8a16",
+    "05-knowledge/results/balanced_native_20261023/multi_target.optimized.json": "5c26295ff88ffe415cca89fe4a1ebab7620349746d6fe530ee727a039aab8a16",
+    "05-knowledge/results/balanced_native_20261023/native18.normal.json": "fbfdf204b1284a3e75bb7bbb506f6700879556d38c8500a650b18a85b59d4b54",
+    "05-knowledge/results/balanced_native_20261023/native18.optimized.json": "fbfdf204b1284a3e75bb7bbb506f6700879556d38c8500a650b18a85b59d4b54",
+    "05-knowledge/results/balanced_native_20261023/route18.normal.json": "5b97aee0fdae0b29352dcd34530b14d23fed29c81116c52822c64a3c3d724dae",
+    "05-knowledge/results/balanced_native_20261023/route18.optimized.json": "5b97aee0fdae0b29352dcd34530b14d23fed29c81116c52822c64a3c3d724dae",
+    "05-knowledge/results/balanced_native_20261023/route18_audit.normal.json": "75a267581138ecfb9fe2378d607c324b9f6d520a0d54976b774bd495d8ab2acb",
+    "05-knowledge/results/balanced_native_20261023/route18_audit.optimized.json": "75a267581138ecfb9fe2378d607c324b9f6d520a0d54976b774bd495d8ab2acb",
+    "05-knowledge/results/balanced_native_20261023/six_trade.normal.json": "9147eae2005bb01af5042d78cd4bfe5042fb224f875e19667c448ab4b77bd519",
+    "05-knowledge/results/balanced_native_20261023/six_trade.optimized.json": "9147eae2005bb01af5042d78cd4bfe5042fb224f875e19667c448ab4b77bd519",
+    "05-knowledge/results/balanced_native_20261023/six_trade.py": "06d66991d0ffdb88b0a240af648ddead714dcf857445edf45ef90a461174d3e5",
+    "05-knowledge/results/balanced_native_20261023/six_trade_basis.json": "6c14448b01b09099cb0ff5e7bec43db6ad6172e39080a7a4b37946963b6f6440",
+    "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/node_labels.json": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/source-circuits/check.py": "48a88d2fb283c42e93ae1754e3b8c389910a6a2bf6f1e8a487d9ddd15fafd7bc",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/source-circuits/full-search/all_menus.json": "103330c76531c9bcc4c09cb7ed164d142fd9e5a4c92797b7ef47dba5ddc74b0e",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/source-circuits/receipt.normal.json": "81d79733ee3e925da99fc287bf0abecbd77b31f66abbeb41f2cb8a4025e27f4d",
+    "05-knowledge/results/session45_injective_multisource_moves_20261023/source-circuits/search_all_sources.py": "f501499ae45c7c7d2ef0ccd6be696948b0c452d0faaab0a8da9b3964f249ee00",
+    "05-knowledge/results/session46_native_packet_decomposition_20261024/pinned-domains/normal.json": "5eb2ec80d9e24cef1233f243a9dde398666d66286a4743a2e6d6cbf301f3f045"
+  },
+  "new_invariant_values": [
+    -3,
+    -1
+  ],
+  "our_earlier_invariant_values": [
+    0,
+    0
+  ],
+  "pin_compatible_target_graph": {
+    "edge_source_menus": 28,
+    "edges": [
+      [
+        1965,
+        2234
+      ]
+    ],
+    "isolated_targets": [
+      570
+    ],
+    "vertices": [
+      570,
+      1965,
+      2234
+    ]
+  },
+  "revision": "06306318651dfcddbdff9e9790794f11b0e39f94",
+  "scope": "Independent bounded label/lattice/route arithmetic and receipt checks; no native Hamiltonian or edge-image replay",
+  "status": "PASS",
+  "target570_original_metagraph": {
+    "black_weight": 590,
+    "blue": 0,
+    "class_pair": [
+      732,
+      736
+    ],
+    "distinct_neighbors": 213,
+    "fibre": 590,
+    "incident_entries": 213,
+    "loops": 0
+  },
+  "target_label_fiber": [
+    570,
+    1965,
+    2234
+  ]
+}

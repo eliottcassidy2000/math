@@ -1,0 +1,103 @@
+{
+  "basis_diagonal": [
+    128,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "checks": 894666,
+  "exact_lattice_equality_justification": "basis lattice contained in move lattice contained in charge kernel; outer indices both 2048",
+  "four_move_rank": 23,
+  "hostile_selected_sources": [
+    [
+      176,
+      1425,
+      1549,
+      2087
+    ],
+    [
+      1394,
+      1923,
+      2837,
+      3369
+    ]
+  ],
+  "independent_local_replacement_fibers": [
+    {
+      "component_distribution": {
+        "1": 351
+      },
+      "fibers": 351,
+      "legal_local_replacements_checked": 1188,
+      "selected": 2,
+      "states": 378
+    },
+    {
+      "component_distribution": {
+        "1": 1646
+      },
+      "fibers": 1646,
+      "legal_local_replacements_checked": 29358,
+      "selected": 3,
+      "states": 3276
+    },
+    {
+      "component_distribution": {
+        "1": 1851,
+        "2": 175,
+        "3": 21,
+        "4": 1
+      },
+      "fibers": 2048,
+      "legal_local_replacements_checked": 415710,
+      "selected": 4,
+      "states": 20475
+    }
+  ],
+  "independent_support_census": {
+    "2": {
+      "balanced_oriented_moves": 27,
+      "parity_surviving_supports": 1262,
+      "supports_tested": 20475
+    },
+    "3": {
+      "balanced_oriented_moves": 1917,
+      "parity_surviving_supports": 23636,
+      "supports_tested": 376740
+    }
+  },
+  "integer_basis_index": 2048,
+  "pins": {
+    "integer_witness": "586702460eac9c5fce2ec9ce5b8a247fc0d177281b975f24a74d8cb0c598890b",
+    "original_electrical_receipt": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "producer_checker": "3b6033e924de7be22990e09047b19166adfeb2d37fd695d682aa6fe960af553a",
+    "supply": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+  },
+  "producer_checks": 10184,
+  "scope": "Independent arithmetic and full binary-fiber audit; native pin-domain/resource authentication is a separate retained prerequisite",
+  "status": "PASS",
+  "zero_margin_charge_image": 2048
+}

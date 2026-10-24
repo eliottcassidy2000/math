@@ -1,0 +1,46 @@
+{
+  "files": [
+    {
+      "bytes": 8862,
+      "path": "AUDIT.md",
+      "sha256": "fed83ce6b0aba7de4943d7209b4e334c2b9d672f91677d05414ed43745a0a540"
+    },
+    {
+      "bytes": 11324,
+      "path": "check.py",
+      "sha256": "7e09354dead97e7a23d5039d5fc7fb3582429126a97501c9b7e07f2ce6357ae4"
+    },
+    {
+      "bytes": 6663,
+      "path": "verify_inputs.py",
+      "sha256": "2a04800dc32fe5acf6abdad9628ae0377de25bfb55c0dcb1e3c6318c45dbbaa6"
+    },
+    {
+      "bytes": 6507,
+      "path": "SOURCE_PINS.json",
+      "sha256": "f3aefea4932aa193d7c540166c214086c6b838ab25b6c46268154f51cfef633e"
+    },
+    {
+      "bytes": 1639,
+      "path": "normal.json",
+      "sha256": "96b196cce5d83cd8d0df04bb14027edd055253e80e6c2e4924ac3ced628a86c9"
+    },
+    {
+      "bytes": 1639,
+      "path": "optimized.json",
+      "sha256": "96b196cce5d83cd8d0df04bb14027edd055253e80e6c2e4924ac3ced628a86c9"
+    },
+    {
+      "bytes": 1447,
+      "path": "inputs.normal.json",
+      "sha256": "4e42e54de0203feae837079b60664608133ab5ce5143936686a1ab5ac6669718"
+    },
+    {
+      "bytes": 1447,
+      "path": "inputs.optimized.json",
+      "sha256": "4e42e54de0203feae837079b60664608133ab5ce5143936686a1ab5ac6669718"
+    }
+  ],
+  "scope": "Independent synthesis proof review, bounded abstract controls, and provenance verification; no new native replay or Git operation",
+  "status": "PASS after pre-publication multiplicity normalization clarification"
+}

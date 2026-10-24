@@ -1,0 +1,67 @@
+{
+  "checks": 250248,
+  "exhaustive_models": [
+    {
+      "accepted_ordered_endpoint_pairs": 824,
+      "cyclic_group_order": 2,
+      "largest_event_observed": 4,
+      "maximum_slots": 4,
+      "nontrivial_pairs": 484,
+      "proved_bound": 4,
+      "targets": 2
+    },
+    {
+      "accepted_ordered_endpoint_pairs": 5406,
+      "cyclic_group_order": 2,
+      "largest_event_observed": 4,
+      "maximum_slots": 4,
+      "nontrivial_pairs": 3852,
+      "proved_bound": 9,
+      "targets": 3
+    },
+    {
+      "accepted_ordered_endpoint_pairs": 3126,
+      "cyclic_group_order": 3,
+      "largest_event_observed": 4,
+      "maximum_slots": 4,
+      "nontrivial_pairs": 1572,
+      "proved_bound": 6,
+      "targets": 2
+    },
+    {
+      "accepted_ordered_endpoint_pairs": 19098,
+      "cyclic_group_order": 3,
+      "largest_event_observed": 4,
+      "maximum_slots": 4,
+      "nontrivial_pairs": 11718,
+      "proved_bound": 15,
+      "targets": 3
+    }
+  ],
+  "longer_cycle_control": {
+    "algorithm_cycles": 3,
+    "algorithm_maximum_event": 9,
+    "native_sharpness_claimed": false,
+    "prescribed_cycle_debts": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "proper_nonempty_zero_sum_cycle_subsets": 0,
+    "slots": 9
+  },
+  "scope": "Independent abstract multi-target algorithm controls; no incoming native replay",
+  "status": "PASS"
+}

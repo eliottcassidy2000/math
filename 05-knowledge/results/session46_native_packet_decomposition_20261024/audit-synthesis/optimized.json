@@ -1,0 +1,70 @@
+{
+  "checks": 31667,
+  "graver": {
+    "complete_one_hot_controls": [
+      {
+        "atoms_used": 2,
+        "name": "one_hot_capacity_cycle",
+        "ordered_endpoint_pairs": 4,
+        "states": 2
+      },
+      {
+        "atoms_used": 12,
+        "name": "one_hot_full_parity_factor",
+        "ordered_endpoint_pairs": 16,
+        "states": 4
+      }
+    ],
+    "factor_assignment_pairs_checked": 32,
+    "fibers": 1712,
+    "fractional_odd_cycle_feasible_integral_empty": true,
+    "ordered_endpoint_pairs": 6722
+  },
+  "gray_resource_skeleton": [
+    {
+      "accepted_states": 2,
+      "complete_binary_assignments": 16,
+      "enlarged_events": 6,
+      "r": 2,
+      "slots": 4
+    },
+    {
+      "accepted_states": 2,
+      "complete_binary_assignments": 256,
+      "enlarged_events": 10,
+      "r": 3,
+      "slots": 8
+    },
+    {
+      "accepted_states": 2,
+      "complete_binary_assignments": 65536,
+      "enlarged_events": 18,
+      "r": 4,
+      "slots": 16
+    }
+  ],
+  "matroid": {
+    "distinct_label_nontrivial_cyclic_fibers": 98,
+    "failed_basis_exchange_instances": 3956,
+    "scope": "Fixed-cardinality fixed-charge families on these same labelled slots only"
+  },
+  "multiplicity": {
+    "hostile": {
+      "L_edge_weight": 4,
+      "actual_Delta_edge_weight": 2,
+      "actual_Delta_h_mod4": [
+        2,
+        2
+      ],
+      "b": 1,
+      "h_mod4": [
+        0,
+        1
+      ]
+    },
+    "weighted_two_vertex_cases": 225,
+    "wrong_double_scaling_false_positives": 36
+  },
+  "scope": "Independent bounded abstract proof controls; no native packet checker imported or executed",
+  "status": "PASS"
+}

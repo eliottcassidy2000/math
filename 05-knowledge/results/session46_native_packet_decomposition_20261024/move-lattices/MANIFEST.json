@@ -1,0 +1,9 @@
+{
+  "files": {
+    "THEOREM.md": "41c9b8904509f0458b12536b3bd0209d22466f260f47ab90faef0a29fc004e7c",
+    "check.py": "3b6033e924de7be22990e09047b19166adfeb2d37fd695d682aa6fe960af553a",
+    "integer_basis_witness.json": "586702460eac9c5fce2ec9ce5b8a247fc0d177281b975f24a74d8cb0c598890b",
+    "normal.json": "2d7232d76044c2c3e3f6b8648d67eb3d91d0b1714a3d9a29b1b2131c43a8a285",
+    "optimized.json": "2d7232d76044c2c3e3f6b8648d67eb3d91d0b1714a3d9a29b1b2131c43a8a285"
+  }
+}

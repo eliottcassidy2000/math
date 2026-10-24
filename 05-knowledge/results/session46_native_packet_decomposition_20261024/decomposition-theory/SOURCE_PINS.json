@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "bytes": 15300,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/SYNTHESIS.md",
+      "sha256": "80b1bd02ec47494832c81da8fcde92e718dedac41d29c0b9464adff9492f74cc"
+    },
+    {
+      "bytes": 15231,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/THEOREM.md",
+      "sha256": "130ad9f105e174b1689a4879177ce479fed924c075837e9cb06b832bed1ab8e2"
+    },
+    {
+      "bytes": 8663,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/check.py",
+      "sha256": "7c3ec231a22da7f9f913bf44621a3cefa117c4031ab051d834802479c50cec54"
+    },
+    {
+      "bytes": 17067,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/pool.json",
+      "sha256": "5e543f76610e89204c56efcf238591699a4b3fd4edff0b73617c806fec71081e"
+    },
+    {
+      "bytes": 2420,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/candidates.json",
+      "sha256": "01fcf170e4a0ddc57887f0c9db75e96e1cbecc75b6b91cda2dd56ac6f19f9f97"
+    },
+    {
+      "bytes": 1537864,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/image_witnesses.json",
+      "sha256": "e359ec38125e1031b6d27f46c5d258cd420dccff973b17a6d305c493adf2f679"
+    },
+    {
+      "bytes": 1568,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/balanced-circuits/SOURCE_PINS.json",
+      "sha256": "109e5347b27177a5fb8d9b2de8de84b18d28d522218794e4d2e7acb711c370b6"
+    },
+    {
+      "bytes": 25546,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/injective-completion/THEOREM.md",
+      "sha256": "4268616ccb2432c999c5827e227ab4658ba4ad48d10c0aba11309336d96ca3ea"
+    },
+    {
+      "bytes": 5658,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/incoming-integration/WORKSPACE_BOUNDARY.md",
+      "sha256": "dc19e7b6057117b6d8b09139b131dd82bce6a83c0682916b1a716d2f2505b2ca"
+    },
+    {
+      "bytes": 14575,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "bytes": 1419,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/SOURCE_PINS.json",
+      "sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221"
+    },
+    {
+      "bytes": 134104,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "bytes": 3357288,
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    }
+  ],
+  "scope": "Exact read-only Session45 inherited source snapshot; hashes of all direct native replay inputs and inspected theory"
+}

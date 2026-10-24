@@ -1,0 +1,104 @@
+{
+  "binary_hostile": {
+    "charge": [
+      7,
+      15
+    ],
+    "masks": [
+      32901,
+      136318978
+    ],
+    "selected_sources": [
+      [
+        176,
+        1425,
+        1549,
+        2087
+      ],
+      [
+        1394,
+        1923,
+        2837,
+        3369
+      ]
+    ],
+    "sharp_move_support": 8
+  },
+  "checks": 10184,
+  "four_move_integer_invariant_sources": [
+    1638,
+    1974
+  ],
+  "four_move_rank": 23,
+  "four_slot_moves": 27,
+  "integer_move_lattice_equals_full_charge_kernel": true,
+  "integer_move_lattice_index": 2048,
+  "low_cardinality_fibers": [
+    {
+      "component_distribution": {
+        "1": 351
+      },
+      "fibers": 351,
+      "selected": 2,
+      "states": 378
+    },
+    {
+      "component_distribution": {
+        "1": 1646
+      },
+      "fibers": 1646,
+      "selected": 3,
+      "states": 3276
+    },
+    {
+      "component_distribution": {
+        "1": 1851,
+        "2": 175,
+        "3": 21,
+        "4": 1
+      },
+      "fibers": 2048,
+      "selected": 4,
+      "states": 20475
+    }
+  ],
+  "pins": {
+    "inherited_supply": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a",
+    "integer_basis_witness": "586702460eac9c5fce2ec9ce5b8a247fc0d177281b975f24a74d8cb0c598890b",
+    "original_electrical_receipt": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+  },
+  "scope": "Complete28-source target-margin binary menu, with native realization supplied by separately audited pin-domain certificate. Integer lattice equality does not imply binary-box connectivity; no all-fiber6 connectivity claim.",
+  "six_slot_moves": 1917,
+  "source_order": [
+    176,
+    1394,
+    1425,
+    1457,
+    1477,
+    1480,
+    1532,
+    1549,
+    1638,
+    1691,
+    1841,
+    1921,
+    1923,
+    1974,
+    2071,
+    2087,
+    2176,
+    2185,
+    2553,
+    2581,
+    2835,
+    2837,
+    2905,
+    2945,
+    3000,
+    3015,
+    3360,
+    3369
+  ],
+  "status": "PASS",
+  "zero_margin_group_image": 2048
+}

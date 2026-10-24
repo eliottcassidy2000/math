@@ -1,0 +1,55 @@
+{
+  "checks": 643,
+  "manifest_artifacts": 192,
+  "normal_optimized_pairs": 32,
+  "packet_manifests": [
+    {
+      "artifacts_verified": 4,
+      "manifest": "pinned-domains/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 16,
+      "manifest": "larger-circuits/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 23,
+      "manifest": "larger-circuits/cost-optimal18/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 11,
+      "manifest": "audit-larger/PUBLISH_MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 20,
+      "manifest": "audit-larger/cost-optimal18/PUBLISH_MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 49,
+      "manifest": "compensated-decomposition/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 44,
+      "manifest": "audit-compensation/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 5,
+      "manifest": "move-lattices/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 7,
+      "manifest": "audit-move-lattices/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 7,
+      "manifest": "decomposition-theory/MANIFEST.json"
+    },
+    {
+      "artifacts_verified": 6,
+      "manifest": "audit-theory/MANIFEST.json"
+    }
+  ],
+  "reviewed_sources": 33,
+  "scope": "Input hashes, byte equality and synthesis receipt cross-checks only; not producer replays",
+  "source_pins_sha256": "f3aefea4932aa193d7c540166c214086c6b838ab25b6c46268154f51cfef633e",
+  "status": "PASS"
+}

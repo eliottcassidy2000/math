@@ -1,0 +1,9 @@
+{
+  "files": {
+    "INTEGRATION.md": "d0388dd3a67c3aae2753a65c83206ad2fb515e1d49516da5d8474b8c7991985e",
+    "SOURCE_PINS.json": "772dd9517d474fba7727efbbda01170f61f8d4371f16bf0b15fb20e832a2f797",
+    "check.py": "4a1cc29f054eabb2b18b0994090ea395905c0f1e874ac98d47b9c97355fbee68",
+    "normal.json": "5aed6f318d7d33ca4c13d06783399cfa1b02ee9b6a3840341e5ff91fcf67a3f6",
+    "optimized.json": "5aed6f318d7d33ca4c13d06783399cfa1b02ee9b6a3840341e5ff91fcf67a3f6"
+  }
+}

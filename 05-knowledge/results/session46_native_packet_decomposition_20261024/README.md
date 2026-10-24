@@ -1,47 +1,41 @@
 # Session46: native packet decomposition and its obstructions
 
-Status: ACTIVE RESEARCH. This first checkpoint is not the session close-out.
+Audited research packet. Start with the [synthesis](SYNTHESIS.md) and the
+[guard and reuse contract](GUARD_AND_REUSE_CONTRACT.md). A complete all-size
+wiring classification remains open.
 
-The aim is to separate three questions: when a selected native packet is
-primitive inside its own pinned menu; when actual extra charged resources
-permit a legal decomposition and return; and when an algebraic decomposition
-still fails because unit resource capacity or shared coordinates are lost.
+New work arrived during publication. Read the [late concurrent-work comparison](late-integration/INTEGRATION.md) and [its independent audit](audit-late-integration/AUDIT.md) for the multi-target extension, exact missing target 570, and the distinction between the concurrent 18-source/45-clock circuit and our 18-source/43-clock and sharp 18-source/37-clock examples. No frozen native certificate was altered.
 
-- [Expanded complete pin domains](pinned-domains/THEOREM.md): all 28 inherited
-  source options authenticated with every common owner clock and normalized
-  resource retained.
-- [Independent foundation audit](audit-compensation/AUDIT.md): exhaustive owner
-  permutations, actual K/converse records, and the full four-slot move invariant.
+## Native supply and larger circuits
 
-The next checkpoints will add independently audited larger circuits and charged
-compensator routes. Nothing here changes the canonical complement rule of a
-fully occupied tournament atlas. All-size wiring classification remains open.
+- [Complete pin domains](pinned-domains/THEOREM.md) and
+  [independent foundation audit](audit-compensation/AUDIT.md).
+- [First eighteen-source circuit](larger-circuits/THEOREM.md) and
+  [independent audit](audit-larger/AUDIT.md).
+- [Sharp 37-clock extension](larger-circuits/cost-optimal18/THEOREM.md) and
+  [minimum, uniqueness and generating-function audit](audit-larger/cost-optimal18/AUDIT.md).
 
-## Larger native circuit
+## Charged decomposition and actual clocks
 
-- [Eighteen-source primitive packet](larger-circuits/THEOREM.md): a complete
-  pinned family whose full dyadic guards leave exactly two states, with direct
-  full-Laplacian image witnesses, 43 changed owner clocks and distinct resources.
-- [Independent larger-circuit audit](audit-larger/AUDIT.md): exact precision
-  filtration, complete native domains, physical currents and converse.
-
-The eighteen-slot family can admit additional lower-precision states; preserving
-only mod 8 does not authenticate its full dyadic atomicity. Charged-buffer
-decompositions and tighter clock-cost certificates are being audited separately.
-
-## Sharp clock minimum and charged decomposition
-
-- [Sharp37-clock18-source circuit](larger-circuits/cost-optimal18/THEOREM.md)
-  and [independent minimum/uniqueness audit](audit-larger/cost-optimal18/AUDIT.md).
-- [Native compensated routes](compensated-decomposition/THEOREM.md),
-  [cost37 extension](compensated-decomposition/cost37/THEOREM.md), and
-  [exact event/work trade-offs](compensated-decomposition/variants/THEOREM.md).
+- [Native compensated routes](compensated-decomposition/THEOREM.md).
+- [Cost-37 compensated extension](compensated-decomposition/cost37/THEOREM.md).
+- [Exact event, work and peak-clock trade-offs](compensated-decomposition/variants/THEOREM.md).
 - [Independent route audit](audit-compensation/ROUTE_AUDIT.md) and
-  [work/clock variant audit](audit-compensation/VARIANT_AUDIT.md).
-- [Guard and reuse contract](GUARD_AND_REUSE_CONTRACT.md): full nodewise
-  currents versus all ordinary port phases; capacity-one borrowing versus
-  strict temporal nonreturn. Positive constructions and stronger obstructions
-  are kept separate.
+  [variant audit](audit-compensation/VARIANT_AUDIT.md).
 
-The general decomposition and move-lattice synthesis are still undergoing final
-scope review. The session is not yet closed.
+## General rules and precise limits
+
+- [Integer move lattice versus binary capacity](move-lattices/THEOREM.md) and
+  [independent arithmetic/context audit](audit-move-lattices/AUDIT.md).
+- [Conditional all-size decomposition theory](decomposition-theory/THEOREM.md)
+  and [proof review with independent controls](audit-theory/AUDIT.md).
+- [Final synthesis audit](audit-synthesis/AUDIT.md).
+
+The positive routes preserve the full original nodewise dyadic current bank,
+actual shared pins, literal owner/lift records, converse and capacity-one
+normalized resources. Every ordinary individual-port phase is a stronger
+predicate and is not claimed. Restored buffers require reversible borrowing;
+strict temporal nonreturn instead preserves the primitive-atom obstruction.
+
+No selected packet is promoted to a rewiring of the fully occupied canonical
+atlas merely because it passes electrical or integer-lattice tests.

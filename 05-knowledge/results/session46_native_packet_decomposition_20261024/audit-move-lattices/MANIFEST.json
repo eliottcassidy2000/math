@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "bytes": 7044,
+      "path": "AUDIT.md",
+      "sha256": "75ee3b6365b4966ef4d065abb1aba9dce12f2fe970321cf6bce38d2cf53244b6"
+    },
+    {
+      "bytes": 1748,
+      "path": "SOURCE_PINS.json",
+      "sha256": "c50929c5d7f696ee1369e51b5b2e3f5943823eda5dbd323a7d7a83d1e7ed065c"
+    },
+    {
+      "bytes": 11744,
+      "path": "audit.py",
+      "sha256": "508f084b60988d27ec2397c0a911284602757c8ac2aa4631b37ed3d6c544335e"
+    },
+    {
+      "bytes": 2153,
+      "path": "normal.json",
+      "sha256": "f2160261e4e1d84052848bd3f64cc501d8986ac3bade2cfc1c349d3ccb6dd375"
+    },
+    {
+      "bytes": 2153,
+      "path": "optimized.json",
+      "sha256": "f2160261e4e1d84052848bd3f64cc501d8986ac3bade2cfc1c349d3ccb6dd375"
+    },
+    {
+      "bytes": 1982,
+      "path": "producer.normal.json",
+      "sha256": "2d7232d76044c2c3e3f6b8648d67eb3d91d0b1714a3d9a29b1b2131c43a8a285"
+    },
+    {
+      "bytes": 1982,
+      "path": "producer.optimized.json",
+      "sha256": "2d7232d76044c2c3e3f6b8648d67eb3d91d0b1714a3d9a29b1b2131c43a8a285"
+    }
+  ],
+  "independent_checks": 894666,
+  "normal_optimized_identical": true,
+  "producer_checks": 10184,
+  "producer_replays_identical": true,
+  "status": "PASS"
+}

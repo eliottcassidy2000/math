@@ -1,0 +1,44 @@
+{
+  "checks": 965633,
+  "files": [
+    {
+      "bytes": 2782,
+      "path": "README.md",
+      "sha256": "911b0fa46bf6bddcd15425b4f13f26765413ed9bdd43d6ad74c9f489a5c7007a"
+    },
+    {
+      "bytes": 2929,
+      "path": "REFERENCES.md",
+      "sha256": "67bded7d3b688248ab32f8e2cbdc78f323e4003af9f5571dc33690c7635951fc"
+    },
+    {
+      "bytes": 3538,
+      "path": "SOURCE_PINS.json",
+      "sha256": "9cfa849a981b3f3650f46dd12b08665211737dd1606e23dc84deff3f7573484e"
+    },
+    {
+      "bytes": 23320,
+      "path": "THEOREM.md",
+      "sha256": "d9047e1de5d2f7e5c09931ec187b087ce5d25c06957866982ac9231dd60c3e55"
+    },
+    {
+      "bytes": 18305,
+      "path": "check.py",
+      "sha256": "f1202e91ad273fd94b4083ed65c5a76f055e1f264d7520fcbfe84086616fe442"
+    },
+    {
+      "bytes": 13575,
+      "path": "normal.json",
+      "sha256": "770b5090aa56a9057b1ad639ec2888cb7ee2aaea9f3b8ef626ae1fcdec5566e0"
+    },
+    {
+      "bytes": 13575,
+      "path": "optimized.json",
+      "sha256": "770b5090aa56a9057b1ad639ec2888cb7ee2aaea9f3b8ef626ae1fcdec5566e0"
+    }
+  ],
+  "inherited_native_checks": 18321,
+  "normal_optimized_identical": true,
+  "scope": "Conditional proofs and finite controls; no native 264-support sharpness or all-order constant; no checkout writes or Git action",
+  "status": "PASS"
+}

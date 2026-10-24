@@ -1,0 +1,123 @@
+{
+  "checks": 76,
+  "complete_equal_charge_target_fiber": [
+    570,
+    1965,
+    2234
+  ],
+  "gamma_controls": [
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      4,
+      8
+    ],
+    [
+      2,
+      5,
+      16
+    ],
+    [
+      3,
+      2,
+      3
+    ],
+    [
+      3,
+      3,
+      9
+    ],
+    [
+      3,
+      4,
+      27
+    ],
+    [
+      3,
+      5,
+      81
+    ],
+    [
+      4,
+      2,
+      4
+    ],
+    [
+      4,
+      3,
+      16
+    ],
+    [
+      4,
+      4,
+      64
+    ],
+    [
+      4,
+      5,
+      256
+    ]
+  ],
+  "incoming18": {
+    "H256": 2,
+    "H8": 696,
+    "balanced": 48620,
+    "cost": 45,
+    "integer_X_debt": -256,
+    "minus": [
+      1425,
+      1549,
+      1841,
+      1921,
+      2185,
+      2553,
+      2835,
+      2905,
+      3000
+    ],
+    "new_invariant_endpoint_values": [
+      -3,
+      -1
+    ],
+    "plus": [
+      176,
+      1394,
+      1457,
+      1477,
+      1532,
+      1923,
+      2087,
+      2176,
+      3369
+    ],
+    "small_invariant_endpoint_values": [
+      0,
+      0
+    ]
+  },
+  "incoming_commit": "06306318651dfcddbdff9e9790794f11b0e39f94",
+  "inherited_transition_census": {
+    "actual_paths": 1102392,
+    "canonical_merged_sources": 3528,
+    "menus": 700,
+    "menus_involving570": 0,
+    "scope": "Inherited audited black nonloop equal-charge endpoint-and-indexed-internal-arc grammar only; no full census rerun."
+  },
+  "missing_native_target": 570,
+  "pins": {
+    "complete_domains": "5eb2ec80d9e24cef1233f243a9dde398666d66286a4743a2e6d6cbf301f3f045",
+    "original_receipt": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "supply": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+  },
+  "scope": "Bounded incoming comparison and original-label guard reconstruction. Not a fresh literal native-path/image audit of the incoming45-clock circuit or a replay of all incoming routes, transport or spectral results.",
+  "status": "PASS"
+}

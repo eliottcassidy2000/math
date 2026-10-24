@@ -1,0 +1,183 @@
+{
+  "packet_manifests": [
+    "pinned-domains/MANIFEST.json",
+    "larger-circuits/MANIFEST.json",
+    "larger-circuits/cost-optimal18/MANIFEST.json",
+    "audit-larger/PUBLISH_MANIFEST.json",
+    "audit-larger/cost-optimal18/PUBLISH_MANIFEST.json",
+    "compensated-decomposition/MANIFEST.json",
+    "audit-compensation/MANIFEST.json",
+    "move-lattices/MANIFEST.json",
+    "audit-move-lattices/MANIFEST.json",
+    "decomposition-theory/MANIFEST.json",
+    "audit-theory/MANIFEST.json"
+  ],
+  "reviewed_sources": [
+    {
+      "path": "SYNTHESIS.md",
+      "scope": "result",
+      "sha256": "608b750564366993e7e304c3aea362758ffecf48f1d81241dbd26c7f61af4c8a"
+    },
+    {
+      "path": "GUARD_AND_REUSE_CONTRACT.md",
+      "scope": "result",
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756"
+    },
+    {
+      "path": "pinned-domains/THEOREM.md",
+      "scope": "result",
+      "sha256": "4548eb852c15bec5128b3a5bae893a5cc9063d9bbcd429ce684448f1c55b5bd8"
+    },
+    {
+      "path": "decomposition-theory/THEOREM.md",
+      "scope": "result",
+      "sha256": "d9047e1de5d2f7e5c09931ec187b087ce5d25c06957866982ac9231dd60c3e55"
+    },
+    {
+      "path": "decomposition-theory/REFERENCES.md",
+      "scope": "result",
+      "sha256": "67bded7d3b688248ab32f8e2cbdc78f323e4003af9f5571dc33690c7635951fc"
+    },
+    {
+      "path": "audit-theory/AUDIT.md",
+      "scope": "result",
+      "sha256": "e27b22be539570613e0609163304fa7607732ebee2870009a2755d59bad2ce07"
+    },
+    {
+      "path": "move-lattices/THEOREM.md",
+      "scope": "result",
+      "sha256": "41c9b8904509f0458b12536b3bd0209d22466f260f47ab90faef0a29fc004e7c"
+    },
+    {
+      "path": "audit-move-lattices/AUDIT.md",
+      "scope": "result",
+      "sha256": "75ee3b6365b4966ef4d065abb1aba9dce12f2fe970321cf6bce38d2cf53244b6"
+    },
+    {
+      "path": "larger-circuits/THEOREM.md",
+      "scope": "result",
+      "sha256": "06a724bd8fd0f56afd4d686da245ed19b3c4aa9da07ccb97c519ac51dbc9daaa"
+    },
+    {
+      "path": "audit-larger/AUDIT.md",
+      "scope": "result",
+      "sha256": "58c0675dde6cd31ee677e496c8855fcbfca4104123f0ea535bf7b15c399d6ef1"
+    },
+    {
+      "path": "larger-circuits/cost-optimal18/THEOREM.md",
+      "scope": "result",
+      "sha256": "4c8e709a053cb210ee259b0557301833cfdb1635ffd9f598d9d3532f7c746ba9"
+    },
+    {
+      "path": "audit-larger/cost-optimal18/AUDIT.md",
+      "scope": "result",
+      "sha256": "a7bd966a4157d330c2d4f5566799f3584f5c2575720b92d198a65aa07ae912fc"
+    },
+    {
+      "path": "compensated-decomposition/THEOREM.md",
+      "scope": "result",
+      "sha256": "8271da00e9d9e9bb2cc0a3e002cd81957cc50da2f18a640cccbd2371fa911974"
+    },
+    {
+      "path": "compensated-decomposition/cost37/THEOREM.md",
+      "scope": "result",
+      "sha256": "7ef49985ebc3e367d913919db47d3609cb0e1cb2faac7659c9462b7b512f9865"
+    },
+    {
+      "path": "compensated-decomposition/variants/THEOREM.md",
+      "scope": "result",
+      "sha256": "4729f73455039c43fd2125fbafcba55f76e49b8bbd2eba30da99bbeaff5aed35"
+    },
+    {
+      "path": "audit-compensation/AUDIT.md",
+      "scope": "result",
+      "sha256": "f25cbb15b5ed69286626e6cb7fb91f0e9851eb8bc1bdc0b80938e5eaff9e9950"
+    },
+    {
+      "path": "audit-compensation/ROUTE_AUDIT.md",
+      "scope": "result",
+      "sha256": "26c52e35136378b030d75ded3b74bc9c2547419009cb8a0f91f87e71e13ce059"
+    },
+    {
+      "path": "audit-compensation/VARIANT_AUDIT.md",
+      "scope": "result",
+      "sha256": "e2026255048ddc06fdbf8031325fd7bb29e339ac9302f79b74f82f245838cb34"
+    },
+    {
+      "path": "pinned-domains/MANIFEST.json",
+      "scope": "result",
+      "sha256": "b84aa86fb778ba52e6ca161d82692274b29aa118c343e20da0c57a58efa24f57"
+    },
+    {
+      "path": "larger-circuits/MANIFEST.json",
+      "scope": "result",
+      "sha256": "56f884849ff57ce6b31b1fa28d28dae74e3680ebb41b8d5c1d385757a2c8b7c7"
+    },
+    {
+      "path": "larger-circuits/cost-optimal18/MANIFEST.json",
+      "scope": "result",
+      "sha256": "87e6d9dd4132a2b91d1b75258d0e68203e8529a84c06ea54ff11d85eb5f69bc8"
+    },
+    {
+      "path": "audit-larger/PUBLISH_MANIFEST.json",
+      "scope": "result",
+      "sha256": "781d97a4d957483cafa0111905c969aa1bcc4aef2b7067f250c656fda0756686"
+    },
+    {
+      "path": "audit-larger/cost-optimal18/PUBLISH_MANIFEST.json",
+      "scope": "result",
+      "sha256": "2d5fe96711011ba649f5be66f05624d8618f9bcba14dfc15b07d87c622593ea6"
+    },
+    {
+      "path": "compensated-decomposition/MANIFEST.json",
+      "scope": "result",
+      "sha256": "82118fcf475e51703ae3f779a41964a52ba4b97a8d46366702fc71fd93e3c7fe"
+    },
+    {
+      "path": "audit-compensation/MANIFEST.json",
+      "scope": "result",
+      "sha256": "333598e387ee22e631f4f30370d4ea76d44a6602d0dd7454d2f40216735f67d5"
+    },
+    {
+      "path": "move-lattices/MANIFEST.json",
+      "scope": "result",
+      "sha256": "baf4db58ef7812ae798e174fd176262041c98889bc688745eae1cf37768271c2"
+    },
+    {
+      "path": "audit-move-lattices/MANIFEST.json",
+      "scope": "result",
+      "sha256": "584119c1f4cfe95928f47f0990acec3f2d100e155914b26e44777fe50cc809c4"
+    },
+    {
+      "path": "decomposition-theory/MANIFEST.json",
+      "scope": "result",
+      "sha256": "07a2c24496fb4aad3b18103e79e5e6ce0d38003099505132c384f6401550f67b"
+    },
+    {
+      "path": "audit-theory/MANIFEST.json",
+      "scope": "result",
+      "sha256": "12e68cc60ff523c229e6605dfbfc46d9a782d61dd6b3a4a45a3af9858005a2a3"
+    },
+    {
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/THEOREM.md",
+      "scope": "repository",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/incoming-integration/WORKSPACE_BOUNDARY.md",
+      "scope": "repository",
+      "sha256": "dc19e7b6057117b6d8b09139b131dd82bce6a83c0682916b1a716d2f2505b2ca"
+    },
+    {
+      "path": "05-knowledge/results/guarded_coverage_20261023/CUBES.md",
+      "scope": "repository",
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    {
+      "path": "05-knowledge/results/guarded_coverage_20261023/PORTS.md",
+      "scope": "repository",
+      "sha256": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47"
+    }
+  ],
+  "scope": "Reviewed frozen source text and receipts. Inherited Gray-cycle work is proof-reviewed, not newly merged or natively replayed here."
+}
