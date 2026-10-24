@@ -1,0 +1,85 @@
+{
+  "Eulerian_controls": [
+    {
+      "Eulerian_ascents": [
+        1
+      ],
+      "marked_tournament_polynomial": [
+        1
+      ],
+      "n": 1
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        1
+      ],
+      "marked_tournament_polynomial": [
+        1,
+        1
+      ],
+      "n": 2
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        4,
+        1
+      ],
+      "marked_tournament_polynomial": [
+        1,
+        5,
+        5,
+        1
+      ],
+      "n": 3
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        11,
+        11,
+        1
+      ],
+      "marked_tournament_polynomial": [
+        1,
+        14,
+        47,
+        68,
+        47,
+        14,
+        1
+      ],
+      "n": 4
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        26,
+        66,
+        26,
+        1
+      ],
+      "marked_tournament_polynomial": [
+        1,
+        32,
+        237,
+        832,
+        1682,
+        2112,
+        1682,
+        832,
+        237,
+        32,
+        1
+      ],
+      "n": 5
+    }
+  ],
+  "checks": 5672,
+  "feasible_local_instances": 440,
+  "local_instances": 1068,
+  "marked_completions_counted": 3165,
+  "scope": "All coherent one/two-cell families of sizes2/3 on at most4 labelled owners, star controls, selected clock pins, converse, and empty-cell full labelled tournament census n<=5. Counts marked source/observer pairs, not isomorphism classes.",
+  "status": "PASS"
+}

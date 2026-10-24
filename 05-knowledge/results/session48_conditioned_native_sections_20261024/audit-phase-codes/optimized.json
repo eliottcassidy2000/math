@@ -1,0 +1,399 @@
+{
+  "affine": {
+    "affine_budget_graphs": 13071,
+    "catalogues": [
+      {
+        "affine_fibres": 1,
+        "kernel_budget_graphs": 1,
+        "slots": 0,
+        "subspaces": 1
+      },
+      {
+        "affine_fibres": 4,
+        "kernel_budget_graphs": 4,
+        "slots": 1,
+        "subspaces": 2
+      },
+      {
+        "affine_fibres": 22,
+        "kernel_budget_graphs": 18,
+        "slots": 2,
+        "subspaces": 6
+      },
+      {
+        "affine_fibres": 184,
+        "kernel_budget_graphs": 112,
+        "slots": 3,
+        "subspaces": 28
+      },
+      {
+        "affine_fibres": 2452,
+        "kernel_budget_graphs": 1060,
+        "slots": 4,
+        "subspaces": 212
+      }
+    ],
+    "fourier_graphs": 1195,
+    "no_return_endpoint_budget_tests": 13071,
+    "rref_cost_hostile": {
+      "original": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "reduced": [
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      ]
+    }
+  },
+  "coordinates": {
+    "all_pair_monomial_cases": 1296,
+    "general_linear_support_preservation": "refuted by (x,y)->(x,x+y)"
+  },
+  "explicit_checks": 347188,
+  "modes": {
+    "L2_pairwise_projection_closure_states": 243,
+    "families": [
+      {
+        "L": 1,
+        "full_budget_degree": 6,
+        "gap": 6,
+        "resources": 3,
+        "selected_degree": 6,
+        "spectrum": {
+          "0": 1,
+          "6": 6,
+          "9": 2
+        },
+        "states": 9,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 6,
+          "3": 2
+        }
+      },
+      {
+        "L": 2,
+        "full_budget_degree": 12,
+        "gap": 9,
+        "resources": 5,
+        "selected_degree": 12,
+        "spectrum": {
+          "0": 1,
+          "9": 8,
+          "12": 6,
+          "15": 12
+        },
+        "states": 27,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 4,
+          "3": 8,
+          "4": 12,
+          "5": 2
+        }
+      },
+      {
+        "L": 3,
+        "full_budget_degree": 34,
+        "gap": 15,
+        "resources": 7,
+        "selected_degree": 22,
+        "spectrum": {
+          "0": 1,
+          "15": 12,
+          "18": 12,
+          "24": 42,
+          "27": 14
+        },
+        "states": 81,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 6,
+          "4": 28,
+          "5": 24,
+          "6": 20,
+          "7": 2
+        }
+      },
+      {
+        "L": 4,
+        "full_budget_degree": 64,
+        "gap": 27,
+        "resources": 9,
+        "selected_degree": 40,
+        "spectrum": {
+          "0": 1,
+          "27": 16,
+          "30": 24,
+          "39": 64,
+          "42": 64,
+          "45": 64,
+          "48": 2,
+          "51": 8
+        },
+        "states": 243,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 8,
+          "4": 24,
+          "5": 32,
+          "6": 96,
+          "7": 48,
+          "8": 32,
+          "9": 2
+        }
+      },
+      {
+        "L": 5,
+        "full_budget_degree": 194,
+        "gap": 51,
+        "resources": 11,
+        "selected_degree": 74,
+        "spectrum": {
+          "0": 1,
+          "51": 20,
+          "54": 40,
+          "69": 160,
+          "72": 80,
+          "78": 304,
+          "81": 112,
+          "96": 2,
+          "99": 10
+        },
+        "states": 729,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 10,
+          "4": 40,
+          "6": 144,
+          "7": 160,
+          "8": 240,
+          "9": 80,
+          "10": 52,
+          "11": 2
+        }
+      },
+      {
+        "L": 6,
+        "full_budget_degree": 360,
+        "gap": 99,
+        "resources": 13,
+        "selected_degree": 140,
+        "spectrum": {
+          "0": 1,
+          "99": 24,
+          "102": 60,
+          "129": 320,
+          "132": 240,
+          "141": 384,
+          "144": 544,
+          "147": 320,
+          "150": 120,
+          "153": 160,
+          "192": 2,
+          "195": 12
+        },
+        "states": 2187,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 12,
+          "4": 60,
+          "6": 160,
+          "7": 128,
+          "8": 624,
+          "9": 480,
+          "10": 512,
+          "11": 120,
+          "12": 88,
+          "13": 2
+        }
+      }
+    ],
+    "normalized_bound": [
+      27,
+      40
+    ],
+    "normalized_equality_L": 4
+  },
+  "native": {
+    "carriers": [
+      {
+        "full_words": 8,
+        "order": 11,
+        "r": 1,
+        "records": 6,
+        "resources": 2
+      },
+      {
+        "full_words": 16,
+        "order": 19,
+        "r": 2,
+        "records": 12,
+        "resources": 4
+      },
+      {
+        "full_words": 32,
+        "order": 27,
+        "r": 3,
+        "records": 24,
+        "resources": 8
+      },
+      {
+        "full_words": 64,
+        "order": 35,
+        "r": 4,
+        "records": 48,
+        "resources": 16
+      },
+      {
+        "full_words": 128,
+        "order": 43,
+        "r": 5,
+        "records": 96,
+        "resources": 32
+      }
+    ],
+    "seed_automorphisms": 1
+  },
+  "no_return": {
+    "basis": [
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "endpoint": [
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "matrix": [
+      [
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    ],
+    "no_return_budget": 4,
+    "no_return_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "ordinary_budget": 3,
+    "ordinary_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ]
+  },
+  "raw_owner_coordinates": {
+    "converse_head_phase_formula": "A ell = beta + 2 A1 modulo 3",
+    "distinct_shifts_at_r2": {
+      "converse_head_phase": 2,
+      "raw_owner": 1
+    },
+    "hostile": {
+      "canonical_rhs": 0,
+      "correct_first_phase": 0,
+      "q": 8,
+      "r": 1,
+      "raw_owner_rhs": 2,
+      "row": [
+        1,
+        0
+      ],
+      "unshifted_raw_first_phase": 1
+    },
+    "nonzero_raw_translation_systems": 72,
+    "raw_owner_formula": "A o = beta + (8 r) A1 modulo 3",
+    "systems": 135
+  },
+  "rectangular": {
+    "inconsistent_systems": 904,
+    "rectangular_systems": 7504
+  },
+  "schema": "independent-native-affine-phase-audit-v1"
+}

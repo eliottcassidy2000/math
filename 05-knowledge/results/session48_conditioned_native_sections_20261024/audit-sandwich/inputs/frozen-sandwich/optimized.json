@@ -1,0 +1,221 @@
+{
+  "Paley11": {
+    "Aut": 55,
+    "H": 95095,
+    "S_black_weighted": 2987712,
+    "S_blue": 1729,
+    "S_order": 25,
+    "S_resources": 1495585,
+    "S_words": 2989441,
+    "a": 1729
+  },
+  "arbitrary_R_capacity_hostile": {
+    "L_order": 10,
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      5,
+      4
+    ],
+    "Q": [
+      0,
+      1,
+      2,
+      5,
+      4,
+      3,
+      6
+    ],
+    "R_Aut": 3,
+    "R_H": 15,
+    "R_a": 5,
+    "R_order": 7,
+    "U_matrix": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "distinct_R_orbits": true,
+    "same_local_resource": true
+  },
+  "checks": 38014,
+  "famous": [
+    {
+      "H_R": 3,
+      "H_S": 27,
+      "a": 1,
+      "aut_R": 3,
+      "aut_S": 27,
+      "black_resources": 0,
+      "black_weighted_incidence": 0,
+      "blue_incidence": 1,
+      "direct_full_S_enumeration": false,
+      "loops": 0,
+      "name": "C3",
+      "order_R": 3,
+      "order_S": 9,
+      "source_words": 1,
+      "total_resources": 1
+    },
+    {
+      "H_R": 15,
+      "H_S": 675,
+      "a": 3,
+      "aut_R": 5,
+      "aut_S": 75,
+      "black_resources": 3,
+      "black_weighted_incidence": 6,
+      "blue_incidence": 3,
+      "direct_full_S_enumeration": false,
+      "loops": 0,
+      "name": "cyclic-C5",
+      "order_R": 5,
+      "order_S": 13,
+      "source_words": 9,
+      "total_resources": 6
+    },
+    {
+      "H_R": 189,
+      "H_S": 107163,
+      "a": 9,
+      "aut_R": 21,
+      "aut_S": 1323,
+      "black_resources": 36,
+      "black_weighted_incidence": 72,
+      "blue_incidence": 9,
+      "direct_full_S_enumeration": false,
+      "loops": 0,
+      "name": "Paley7",
+      "order_R": 7,
+      "order_S": 17,
+      "source_words": 81,
+      "total_resources": 45
+    }
+  ],
+  "native": {
+    "rows": [
+      {
+        "capacity_valid_global_black_resources": 1,
+        "capacity_valid_records": 6,
+        "complete_unpinned_R_orbits": 409,
+        "complete_unpinned_S_words": 167281,
+        "global_order": 19,
+        "global_phase_work": 3,
+        "global_records": 12,
+        "local_order": 11,
+        "local_phase_work": 6,
+        "r": 1,
+        "selected_blue_resources": 2,
+        "selected_global_resources": 3,
+        "selected_global_words": 4,
+        "selected_keys": 2,
+        "selected_target_classes": 1
+      },
+      {
+        "capacity_valid_global_black_resources": 6,
+        "capacity_valid_records": 36,
+        "complete_unpinned_R_orbits": 167281,
+        "complete_unpinned_S_words": 27982932961,
+        "global_order": 35,
+        "global_phase_work": 3,
+        "global_records": 48,
+        "local_order": 19,
+        "local_phase_work": 6,
+        "r": 2,
+        "selected_blue_resources": 4,
+        "selected_global_resources": 10,
+        "selected_global_words": 16,
+        "selected_keys": 4,
+        "selected_target_classes": 1
+      },
+      {
+        "capacity_valid_global_black_resources": 28,
+        "capacity_valid_records": 168,
+        "complete_unpinned_R_orbits": 68417929,
+        "complete_unpinned_S_words": 4681013008649041,
+        "global_order": 51,
+        "global_phase_work": 3,
+        "global_records": 192,
+        "local_order": 27,
+        "local_phase_work": 6,
+        "r": 3,
+        "selected_blue_resources": 8,
+        "selected_global_resources": 36,
+        "selected_global_words": 64,
+        "selected_keys": 8,
+        "selected_target_classes": 1
+      },
+      {
+        "capacity_valid_global_black_resources": 120,
+        "capacity_valid_records": 720,
+        "complete_unpinned_R_orbits": 27982932961,
+        "complete_unpinned_S_words": 783044537099820227521,
+        "global_order": 67,
+        "global_phase_work": 3,
+        "global_records": 768,
+        "local_order": 35,
+        "local_phase_work": 6,
+        "r": 4,
+        "selected_blue_resources": 16,
+        "selected_global_resources": 136,
+        "selected_global_words": 256,
+        "selected_keys": 16,
+        "selected_target_classes": 1
+      }
+    ],
+    "seed_Aut": 1,
+    "seed_H": 409
+  },
+  "small_summary": {
+    "all_loops_zero": true,
+    "max_a": 5,
+    "profiles": 75,
+    "total_source_words": 651
+  },
+  "status": "PASS",
+  "universe": {
+    "Paley11_scope": "complete R paths, automorphisms and normalized words; S profile derived, not exhaustively enumerated",
+    "all_labelled_R_count": 75,
+    "all_labelled_R_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "famous_full_pair_profiles": [
+      "C3",
+      "cyclic-C5",
+      "Paley7"
+    ],
+    "native_r": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}

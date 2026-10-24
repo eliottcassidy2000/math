@@ -1,0 +1,31 @@
+{
+  "copied_listed_files": 36,
+  "final_manifest": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS closed byte-exact audit manifest: 36 files\n"
+  },
+  "initial_manifest": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS closed byte-exact audit manifest: 36 files\n"
+  },
+  "normal": {
+    "exit_code": 0,
+    "receipt_sha256": "c842ad9f8a041bcbe569593a19d792b56f0ffb976299ff99ff9f8e1adee206bc",
+    "stderr": "",
+    "stdout": "PASS independent native phase-code audit: 347188 checks; SHA256 c842ad9f8a041bcbe569593a19d792b56f0ffb976299ff99ff9f8e1adee206bc\n"
+  },
+  "optimized": {
+    "exit_code": 0,
+    "receipt_sha256": "c842ad9f8a041bcbe569593a19d792b56f0ffb976299ff99ff9f8e1adee206bc",
+    "stderr": "",
+    "stdout": "PASS independent native phase-code audit: 347188 checks; SHA256 c842ad9f8a041bcbe569593a19d792b56f0ffb976299ff99ff9f8e1adee206bc\n"
+  },
+  "producer_replay": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS frozen producer replay: normal, optimized, and closed manifest\n"
+  },
+  "schema": "manifest-only-portable-phase-audit-v1"
+}

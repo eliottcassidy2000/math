@@ -1,0 +1,43 @@
+{
+  "commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+  "snapshot_files": 17,
+  "source_archives_verified_by_read_only_git_show": [
+    {
+      "bytes": 15817,
+      "original": "05-knowledge/results/native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md",
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    {
+      "bytes": 9596,
+      "original": "05-knowledge/results/guarded_coverage_20261023/CUBES.md",
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    {
+      "bytes": 10708,
+      "original": "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "sha256": "1afae3b3afadee521c3f4f0c7f619ff5f9619e1719ed6cb414b9e3d457a011f7"
+    },
+    {
+      "bytes": 7649,
+      "original": "05-knowledge/results/deficiency_three_20261020/centers.md",
+      "sha256": "be5717f730c9325b6d68113eb6826b0b614c4e98af0e285eddd56fdaabd8ef3e"
+    },
+    {
+      "bytes": 21476,
+      "original": "05-knowledge/results/split_word_metagraph_spectra_20261021/session23-slack-spectrum/README.md",
+      "sha256": "a5f34a8d0aaa4be75649cca728dc2a46bc25a119b9e941c9151fde3a0dd05931"
+    },
+    {
+      "bytes": 18776,
+      "original": "01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md",
+      "sha256": "016fcbf20415d3f0c069a2feea7e9f5e40e3d24d46735034dbd70cf7793acd49"
+    },
+    {
+      "bytes": 5795,
+      "original": "05-knowledge/results/session47_resilient_native_wiring_20261024/global-observer/THEOREM.md",
+      "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22"
+    }
+  ],
+  "source_manifest_sha256": "4ea97676ad56b5e0204b0f7584e0bcd89a005c160a8bf78f909ce90dca7d4a44",
+  "status": "PASS"
+}

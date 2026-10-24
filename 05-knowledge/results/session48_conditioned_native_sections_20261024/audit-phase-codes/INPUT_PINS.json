@@ -1,0 +1,93 @@
+{
+  "files": {
+    "inputs/base-audit/AUDIT.md": {
+      "bytes": 15685,
+      "sha256": "eaafeeefc09cc1103631b8b38ac5d8b2b73e08e6a3cdd971f5c25951323f73f2"
+    },
+    "inputs/base-audit/MANIFEST.json": {
+      "bytes": 4345,
+      "sha256": "e49e9f9321eb5b5c088ce95d9ec785b3ee88f4d080e7b7580661d08e44eb6e76"
+    },
+    "inputs/base-audit/SUMMARY.json": {
+      "bytes": 1010,
+      "sha256": "715ae2cb353dfdc3aec8396830243bb13d462c9c5edc59f87ed59ed8b7c96e80"
+    },
+    "inputs/base/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    "inputs/base/NEUTRAL_FIBRE_LIFTING.md": {
+      "bytes": 14785,
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+    },
+    "inputs/base/ONE_BIT_WORKSPACE.md": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    "inputs/base/RELATIONAL_KERNEL_HOLONOMY.md": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/producer/AFFINE_PHASE_CODES.md": {
+      "bytes": 22467,
+      "sha256": "ee0073c2dc16e7196560f5b96ed7b1b8ca490993bdfcd90dfe71b35da8562158"
+    },
+    "inputs/producer/AUDIT.md": {
+      "bytes": 4972,
+      "sha256": "3cbcd49d2e1cd4e488edf4d4ba642f30f61ffec996d18c635d18dd72236c8b99"
+    },
+    "inputs/producer/MANIFEST.json": {
+      "bytes": 1576,
+      "sha256": "1b591ca3d2efec5d07e16088d76c74797b928b3598574dac99ca2ecf174f37f8"
+    },
+    "inputs/producer/README.md": {
+      "bytes": 2033,
+      "sha256": "ef6200258d6a71dc614f20dd09f1115fc51cc21150825950ac33f3ead633e544"
+    },
+    "inputs/producer/Sourcearchives.txt": {
+      "bytes": 1769,
+      "sha256": "1e8d1756d8ddee313562533c4e0bd521ecbbda8fe206a43c29b6cb73287e46cf"
+    },
+    "inputs/producer/check.py": {
+      "bytes": 24869,
+      "sha256": "40393c266907bc657ea07bab6f0039b08acf1fd958b653a1428dd4d0f8d73ac3"
+    },
+    "inputs/producer/inputs/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    "inputs/producer/inputs/ONE_BIT_WORKSPACE.md": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    "inputs/producer/inputs/RELATIONAL_KERNEL_HOLONOMY.md": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/producer/normal-check.txt": {
+      "bytes": 258,
+      "sha256": "f50bc544d48ac267f10e5e85538b22ebe1dda7d8e77bed6b836aba7b5ab7afce"
+    },
+    "inputs/producer/optimized-check.txt": {
+      "bytes": 258,
+      "sha256": "f50bc544d48ac267f10e5e85538b22ebe1dda7d8e77bed6b836aba7b5ab7afce"
+    },
+    "inputs/producer/portability-check.txt": {
+      "bytes": 471,
+      "sha256": "048a4f07ccc9fed4fafbcdb2881de66d806a21953e2a5317a38e36d830349610"
+    },
+    "inputs/producer/portable_check.py": {
+      "bytes": 1469,
+      "sha256": "d7a4a8c48a91eb163f9cd30927b6cba2e5f366c3374f762e5175e4c7ab0819a0"
+    },
+    "inputs/producer/receipt.json": {
+      "bytes": 8388,
+      "sha256": "6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e"
+    },
+    "inputs/producer/verify_manifest.py": {
+      "bytes": 1181,
+      "sha256": "812b26eccf0867223bd8237550bef08858fb0c362ab6390b116c187aea9ef3fa"
+    }
+  },
+  "schema": "phase-code-input-pins-v1"
+}

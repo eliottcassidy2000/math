@@ -1,0 +1,23 @@
+{
+  "completion_normal": {
+    "reported_checks": 5672,
+    "status": "PASS",
+    "stdout_sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1"
+  },
+  "completion_optimized": {
+    "reported_checks": 5672,
+    "status": "PASS",
+    "stdout_sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1"
+  },
+  "kernel_manifest": "PASS portable closed manifest: 12 files; UTF-8/LF-normalized SHA256",
+  "kernel_normal": {
+    "reported_checks": 221410,
+    "status": "PASS",
+    "stdout_sha256": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc"
+  },
+  "kernel_optimized": {
+    "reported_checks": 221410,
+    "status": "PASS",
+    "stdout_sha256": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc"
+  }
+}

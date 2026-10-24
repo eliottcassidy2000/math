@@ -1,0 +1,6 @@
+PASS fresh /tmp closure: copied only manifest-listed files and MANIFEST.json
+PASS normal and optimized isolated runs: identical exact output
+PASS native affine phase codes; 107677 explicit checks; all outputs exact integers
+27-state spectrum: 0^1, 9^8, 12^6, 15^12; no-return control: budget3 connected, budget4 sharp
+Receipt SHA256: 6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e
+PASS closed manifest: 14 files; LF-normalized SHA256; no external paths

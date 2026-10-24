@@ -1,0 +1,379 @@
+{
+  "Eulerian": [
+    {
+      "Eulerian_ascents": [
+        1
+      ],
+      "labelled_sources": 1,
+      "marked_total": 1,
+      "n": 1,
+      "polynomial": [
+        1
+      ]
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        1
+      ],
+      "labelled_sources": 2,
+      "marked_total": 2,
+      "n": 2,
+      "polynomial": [
+        1,
+        1
+      ]
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        4,
+        1
+      ],
+      "labelled_sources": 8,
+      "marked_total": 12,
+      "n": 3,
+      "polynomial": [
+        1,
+        5,
+        5,
+        1
+      ]
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        11,
+        11,
+        1
+      ],
+      "labelled_sources": 64,
+      "marked_total": 192,
+      "n": 4,
+      "polynomial": [
+        1,
+        14,
+        47,
+        68,
+        47,
+        14,
+        1
+      ]
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        26,
+        66,
+        26,
+        1
+      ],
+      "labelled_sources": 1024,
+      "marked_total": 7680,
+      "n": 5,
+      "polynomial": [
+        1,
+        32,
+        237,
+        832,
+        1682,
+        2112,
+        1682,
+        832,
+        237,
+        32,
+        1
+      ]
+    },
+    {
+      "Eulerian_ascents": [
+        1,
+        57,
+        302,
+        302,
+        57,
+        1
+      ],
+      "labelled_sources": 32768,
+      "marked_total": 737280,
+      "n": 6,
+      "polynomial": [
+        1,
+        67,
+        917,
+        6007,
+        23717,
+        62623,
+        116809,
+        158499,
+        158499,
+        116809,
+        62623,
+        23717,
+        6007,
+        917,
+        67,
+        1
+      ]
+    }
+  ],
+  "boundaries": {
+    "helper": {
+      "accepted_states": 18,
+      "clock_threshold": 9,
+      "continuously_occupied_units": 5,
+      "pairwise_relaxation_states": 72,
+      "slot_budget_components": {
+        "2": [
+          9,
+          9
+        ],
+        "3": [
+          18
+        ]
+      }
+    },
+    "overlay": [
+      {
+        "fibres": 4,
+        "ordered_pairs": 16,
+        "positive_boundaries": 6,
+        "slots": 1
+      },
+      {
+        "fibres": 19,
+        "ordered_pairs": 361,
+        "positive_boundaries": 198,
+        "slots": 2
+      },
+      {
+        "fibres": 28,
+        "ordered_pairs": 784,
+        "positive_boundaries": 334,
+        "slots": 3
+      },
+      {
+        "fibres": 109,
+        "ordered_pairs": 11881,
+        "positive_boundaries": 7830,
+        "slots": 4
+      }
+    ]
+  },
+  "checks": 383849,
+  "checks_by_kind": {
+    "Eulerian identity versus all-source subset dynamic programming": 6,
+    "absolute global clock simultaneous pins": 30832,
+    "absolute global clock single pins": 30836,
+    "all converse clocks reflect": 186,
+    "arbitrary indexed equality including self occurrence": 9630,
+    "capacity-one duplicate key hostile": 5,
+    "common-source fork orientations": 1,
+    "completion input digest": 4,
+    "completion manifest closure": 1,
+    "conditional charged quotient fibres connected": 2532,
+    "continuous normalized occupancy no reacquisition": 1,
+    "converse conditioned polynomial reciprocity": 25574,
+    "direct route accepted indivisible step": 54654,
+    "direct route exact endpoint": 27993,
+    "direct route no full-record return": 71466,
+    "directed linear forest exact existence": 25574,
+    "distinct keys are distinct normalized units": 5,
+    "each helper mode budget two connected": 2,
+    "eighteen actual helper assemblies": 1,
+    "empty-family total marked observers": 6,
+    "endpoint-marked target transport": 774,
+    "entire prefix-pinned menu": 90,
+    "exact heavy-component budget graph": 1046,
+    "exact old boundary plus helper cost": 1,
+    "fixed-host transition graph separate obligation": 1,
+    "four genuinely distinct F/R orientations": 186,
+    "full source and actual K restriction completion polynomial": 25574,
+    "helper exact sharp budget three": 1,
+    "helper exact sharp nine owner clocks": 1,
+    "helper five capacity-one units": 18,
+    "helper modes all unary phases survive": 8,
+    "higher-arity condition not binary pairwise closure": 1,
+    "joint slots and triple-clock enumerator": 241,
+    "kernel input digest": 12,
+    "kernel manifest closure": 1,
+    "labelled marked completion count": 5014,
+    "literal F/R partner square": 186,
+    "literal acceptance versus modular row rank": 8260,
+    "literal kernel transport and work": 372,
+    "loop parallel and duplicate pin controls": 5,
+    "marked versus unmarked hostile": 1,
+    "matrix kernel automorphism": 372,
+    "matrix kernel target transport": 372,
+    "native Hamiltonian record": 186,
+    "normalized reservoirs disjoint": 5,
+    "one C3 torsor per unpinned component": 2482,
+    "phase lifts are one normalized resource": 186,
+    "positive weights detect intersection": 13042,
+    "same target class not same named partner": 1,
+    "seed matrix has trivial automorphism group": 1,
+    "seed source and seed partner strong connectivity": 16,
+    "subsequence alone loses actual K restriction": 1,
+    "two full observers require conflicting successors": 1,
+    "uncovered-pair lower bound": 32016,
+    "varying-chart full charged connectivity versus retained quotient": 1024,
+    "weighted native boundary equals feasible edge deletion": 13042
+  },
+  "completion": {
+    "exhaustive_actual_K_controls": [
+      {
+        "cell_families": 4,
+        "clock_pin_cases": 4,
+        "feasible_instances": 4,
+        "local_instances": 4,
+        "marked_completions": 4,
+        "n": 1
+      },
+      {
+        "cell_families": 16,
+        "clock_pin_cases": 192,
+        "feasible_instances": 24,
+        "local_instances": 24,
+        "marked_completions": 32,
+        "n": 2
+      },
+      {
+        "cell_families": 256,
+        "clock_pin_cases": 35424,
+        "feasible_instances": 976,
+        "local_instances": 1968,
+        "marked_completions": 1536,
+        "n": 3
+      },
+      {
+        "cell_families": 233,
+        "clock_pin_cases": 26048,
+        "feasible_instances": 4010,
+        "local_instances": 23578,
+        "marked_completions": 8256,
+        "n": 4
+      }
+    ],
+    "fixed_host_counterexample": {
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "fixed_host_observers": 0,
+      "free_marked_completions": 16
+    },
+    "marked_unmarked_control": {
+      "distinct_sources": 12,
+      "marked_pairs": 16
+    }
+  },
+  "conditional_charge_quotients": {
+    "cases": 1024,
+    "charge_group": "Z/4",
+    "helper_modes": 2,
+    "nonempty_cases": 876,
+    "old_slots": 3,
+    "scope": "Abstract exact additive sidecars, not an asserted electrical realization.",
+    "weights": [
+      1,
+      2,
+      1
+    ]
+  },
+  "native": {
+    "matrices": [
+      {
+        "F_R_words": 8,
+        "order": 11,
+        "r": 1,
+        "records": 6,
+        "unit_tiles": 2
+      },
+      {
+        "F_R_words": 16,
+        "order": 19,
+        "r": 2,
+        "records": 12,
+        "unit_tiles": 4
+      },
+      {
+        "F_R_words": 32,
+        "order": 27,
+        "r": 3,
+        "records": 24,
+        "unit_tiles": 8
+      },
+      {
+        "F_R_words": 64,
+        "order": 35,
+        "r": 4,
+        "records": 48,
+        "unit_tiles": 16
+      },
+      {
+        "F_R_words": 128,
+        "order": 43,
+        "r": 5,
+        "records": 96,
+        "unit_tiles": 32
+      }
+    ],
+    "no_common_global_K_control": {
+      "conflicting_required_successors": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "keys": [
+        0,
+        1
+      ],
+      "private_extensions_cannot_repair": true,
+      "same_named_partner": false,
+      "source_order": 11
+    }
+  },
+  "producer_manifest_sha256": {
+    "completion": "937190f57710214f95d7fe8655fb315b1ea85eba57522fc8a6e79158970b1f61",
+    "kernel": "b27bf42c1e4a2072273013731f0e3da663f0eec3f788aaac478e68bdea6c86ed"
+  },
+  "scope": "Independent native matrices and full K restrictions; no producer imports, no Git, no external runtime dependencies. All-size claims proved in AUDIT.md; finite controls are not extrapolated.",
+  "status": "PASS",
+  "voltage": [
+    {
+      "graph_pin_instances": 4,
+      "nonempty_distinct_fibres": 4,
+      "simple_graphs": 1,
+      "slots": 1
+    },
+    {
+      "graph_pin_instances": 64,
+      "nonempty_distinct_fibres": 19,
+      "simple_graphs": 4,
+      "slots": 2
+    },
+    {
+      "graph_pin_instances": 4096,
+      "nonempty_distinct_fibres": 109,
+      "simple_graphs": 64,
+      "slots": 3
+    },
+    {
+      "graph_pin_instances": 4096,
+      "nonempty_distinct_fibres": 109,
+      "simple_graphs": 4096,
+      "slots": 4
+    }
+  ]
+}

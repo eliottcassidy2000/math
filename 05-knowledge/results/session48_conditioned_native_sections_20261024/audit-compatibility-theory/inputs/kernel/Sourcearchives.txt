@@ -1,0 +1,17 @@
+Pinned repository: eliottcassidy2000/math
+Commit: c09b642a629b7d12b529b88c2697abaee78e73e7
+Extraction: git show COMMIT:ORIGINAL_PATH, never mutable worktree reads.
+Hash convention: UTF-8 source text with CRLF normalized to LF.
+Each required textual source is vendored below. No external runtime imports or network dependencies.
+
+Local: inputs/NEUTRAL_FIBRE_LIFTING.md
+Original: 05-knowledge/results/compatible_charged_helpers_20261023/compatibility/NEUTRAL_FIBRE_LIFTING.md
+SHA256-LF: c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1
+
+Local: inputs/ONE_BIT_WORKSPACE.md
+Original: 05-knowledge/results/native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md
+SHA256-LF: 1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162
+
+Local: inputs/CUBES.txt
+Original: 05-knowledge/results/guarded_coverage_20261023/CUBES.md
+SHA256-LF: 752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034

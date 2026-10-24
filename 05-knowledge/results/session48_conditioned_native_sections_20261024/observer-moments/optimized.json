@@ -1,0 +1,420 @@
+{
+  "Eulerian_recurrence_controls": [
+    {
+      "coefficients": [
+        1
+      ],
+      "n": 1
+    },
+    {
+      "coefficients": [
+        1,
+        1
+      ],
+      "n": 2
+    },
+    {
+      "coefficients": [
+        1,
+        4,
+        1
+      ],
+      "n": 3
+    },
+    {
+      "coefficients": [
+        1,
+        11,
+        11,
+        1
+      ],
+      "n": 4
+    },
+    {
+      "coefficients": [
+        1,
+        26,
+        66,
+        26,
+        1
+      ],
+      "n": 5
+    },
+    {
+      "coefficients": [
+        1,
+        57,
+        302,
+        302,
+        57,
+        1
+      ],
+      "n": 6
+    },
+    {
+      "coefficients": [
+        1,
+        120,
+        1191,
+        2416,
+        1191,
+        120,
+        1
+      ],
+      "n": 7
+    },
+    {
+      "coefficients": [
+        1,
+        247,
+        4293,
+        15619,
+        15619,
+        4293,
+        247,
+        1
+      ],
+      "n": 8
+    }
+  ],
+  "checks": 422231,
+  "full_local_frame_controls": {
+    "forest_failures": 2178,
+    "full_local_record_instances": 4854,
+    "marked_completions_without_pins": 11032,
+    "pin_conditioned_cases": 95981,
+    "zero_completion_cases": 80394
+  },
+  "nonreal_root_controls": {
+    "E_cyclic_triangles_both_inputs": "31/2",
+    "E_score_square_both_inputs": 44,
+    "all_forward_coefficients_converse": [
+      0,
+      0,
+      10,
+      220,
+      2314,
+      15484,
+      73990,
+      268660,
+      770070,
+      1786836,
+      3414756,
+      5439320,
+      7280420,
+      8230040,
+      7877324,
+      6385064,
+      4373420,
+      2519400,
+      1211250,
+      480396,
+      154546,
+      39340,
+      7630,
+      1060,
+      94,
+      4,
+      0,
+      0,
+      0
+    ],
+    "all_forward_coefficients_disjoint_union": [
+      0,
+      0,
+      10,
+      224,
+      2408,
+      16544,
+      81620,
+      308000,
+      924616,
+      2267232,
+      4626006,
+      7958720,
+      11653840,
+      14615104,
+      15754648,
+      14615104,
+      11653840,
+      7958720,
+      4626006,
+      2267232,
+      924616,
+      308000,
+      81620,
+      16544,
+      2408,
+      224,
+      10,
+      0,
+      0
+    ],
+    "all_forward_coefficients_original": [
+      0,
+      0,
+      0,
+      4,
+      94,
+      1060,
+      7630,
+      39340,
+      154546,
+      480396,
+      1211250,
+      2519400,
+      4373420,
+      6385064,
+      7877324,
+      8230040,
+      7280420,
+      5439320,
+      3414756,
+      1786836,
+      770070,
+      268660,
+      73990,
+      15484,
+      2314,
+      220,
+      10,
+      0,
+      0
+    ],
+    "block_ascent_coefficients": [
+      4,
+      10,
+      10,
+      0
+    ],
+    "blocks": [
+      [
+        0,
+        3
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "converse_block_ascent_coefficients": [
+      0,
+      10,
+      10,
+      4
+    ],
+    "covered_forward_arcs_converse": 1,
+    "covered_forward_arcs_original": 3,
+    "e": 24,
+    "factor_original": "(1+z)^21 (4+10z+10z^2)",
+    "factor_union_all_forward": "2 z^2 (1+z)^22 (5+2z+5z^2)",
+    "free_arcs_per_order": 21,
+    "marked_completions_original": 50331648,
+    "marked_completions_union": 100663296,
+    "n": 8,
+    "p": 4,
+    "quadratic_discriminants": [
+      -60,
+      -96
+    ],
+    "reciprocity_exponent_all_forward": 28,
+    "uncovered_coefficients_converse": [
+      0,
+      10,
+      220,
+      2314,
+      15484,
+      73990,
+      268660,
+      770070,
+      1786836,
+      3414756,
+      5439320,
+      7280420,
+      8230040,
+      7877324,
+      6385064,
+      4373420,
+      2519400,
+      1211250,
+      480396,
+      154546,
+      39340,
+      7630,
+      1060,
+      94,
+      4
+    ],
+    "uncovered_coefficients_original": [
+      4,
+      94,
+      1060,
+      7630,
+      39340,
+      154546,
+      480396,
+      1211250,
+      2519400,
+      4373420,
+      6385064,
+      7877324,
+      8230040,
+      7280420,
+      5439320,
+      3414756,
+      1786836,
+      770070,
+      268660,
+      73990,
+      15484,
+      2314,
+      220,
+      10,
+      0
+    ]
+  },
+  "original_order8_metagraph_atlas": {
+    "Aut_method": "degree-filtered exact adjacency-preserving bijection search",
+    "H_method": "exact Hamiltonian-subset dynamic program",
+    "every_fibre_verified_by_H_over_Aut": true,
+    "explicit_matrix_encoding_controls": [
+      1425,
+      1921,
+      1477,
+      2837
+    ],
+    "largest_automorphism_order_observed": 21,
+    "no_laplacian_degree_or_stationary_walk_identification": true,
+    "rows_checked": 3528,
+    "sum_fibre": 2097152,
+    "sum_fibre_cyclic_triangles": 32505856,
+    "sum_fibre_score_square": 92274688
+  },
+  "scope": "All labelled tournaments and marked Hamiltonian observers through n=5; all coherent zero/one/two-distinct-cell families of arbitrary nonempty cell sizes on n<=4, all local Hamiltonian records, all single global pins, impossible double/out-of-range pins, branch/cycle controls; exact 24-order hostile polynomials with all free-arc multiplicities. No large-host brute census, unmarked isomorphism enumeration formula, or spectral assertion.",
+  "status": "PASS",
+  "weighted_host_census": [
+    {
+      "E_H_cyclic_triangles": "0",
+      "E_H_score_square": "0",
+      "automorphism_weighted_sums_H_Hscore_Hcycles": [
+        "1",
+        "0",
+        "0"
+      ],
+      "converse_merged_sums_mass_massscore_masscycles": [
+        1,
+        0,
+        0
+      ],
+      "fixed_observer_class_counts_verified": true,
+      "labelled_hosts": 1,
+      "marked_records": 1,
+      "n": 1,
+      "sum_H_cyclic_triangles": 0,
+      "sum_H_score_square": 0,
+      "uniform_Cov_H_cyclic_triangles": "0",
+      "uniform_E_H": "1",
+      "uniform_E_cyclic_triangles": "0"
+    },
+    {
+      "E_H_cyclic_triangles": "0",
+      "E_H_score_square": "2",
+      "automorphism_weighted_sums_H_Hscore_Hcycles": [
+        "1",
+        "2",
+        "0"
+      ],
+      "converse_merged_sums_mass_massscore_masscycles": [
+        1,
+        2,
+        0
+      ],
+      "fixed_observer_class_counts_verified": true,
+      "labelled_hosts": 2,
+      "marked_records": 2,
+      "n": 2,
+      "sum_H_cyclic_triangles": 0,
+      "sum_H_score_square": 4,
+      "uniform_Cov_H_cyclic_triangles": "0",
+      "uniform_E_H": "1",
+      "uniform_E_cyclic_triangles": "0"
+    },
+    {
+      "E_H_cyclic_triangles": "1/2",
+      "E_H_score_square": "4",
+      "automorphism_weighted_sums_H_Hscore_Hcycles": [
+        "2",
+        "8",
+        "1"
+      ],
+      "converse_merged_sums_mass_massscore_masscycles": [
+        2,
+        8,
+        1
+      ],
+      "fixed_observer_class_counts_verified": true,
+      "labelled_hosts": 8,
+      "marked_records": 12,
+      "n": 3,
+      "sum_H_cyclic_triangles": 6,
+      "sum_H_score_square": 48,
+      "uniform_Cov_H_cyclic_triangles": "3/8",
+      "uniform_E_H": "3/2",
+      "uniform_E_cyclic_triangles": "1/4"
+    },
+    {
+      "E_H_cyclic_triangles": "3/2",
+      "E_H_score_square": "8",
+      "automorphism_weighted_sums_H_Hscore_Hcycles": [
+        "8",
+        "64",
+        "12"
+      ],
+      "converse_merged_sums_mass_massscore_masscycles": [
+        8,
+        64,
+        12
+      ],
+      "fixed_observer_class_counts_verified": true,
+      "labelled_hosts": 64,
+      "marked_records": 192,
+      "n": 4,
+      "sum_H_cyclic_triangles": 288,
+      "sum_H_score_square": 1536,
+      "uniform_Cov_H_cyclic_triangles": "3/2",
+      "uniform_E_H": "3",
+      "uniform_E_cyclic_triangles": "1"
+    },
+    {
+      "E_H_cyclic_triangles": "13/4",
+      "E_H_score_square": "14",
+      "automorphism_weighted_sums_H_Hscore_Hcycles": [
+        "64",
+        "896",
+        "208"
+      ],
+      "converse_merged_sums_mass_massscore_masscycles": [
+        64,
+        896,
+        208
+      ],
+      "fixed_observer_class_counts_verified": true,
+      "labelled_hosts": 1024,
+      "marked_records": 7680,
+      "n": 5,
+      "sum_H_cyclic_triangles": 24960,
+      "sum_H_score_square": 107520,
+      "uniform_Cov_H_cyclic_triangles": "45/8",
+      "uniform_E_H": "15/2",
+      "uniform_E_cyclic_triangles": "5/2"
+    }
+  ]
+}

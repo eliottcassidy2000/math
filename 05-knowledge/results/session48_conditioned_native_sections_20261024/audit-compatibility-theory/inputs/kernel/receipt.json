@@ -1,0 +1,404 @@
+{
+  "boundary": {
+    "pinned": [
+      {
+        "distinct_fibres": 12,
+        "pairs": 144,
+        "slots": 2
+      },
+      {
+        "distinct_fibres": 57,
+        "pairs": 3249,
+        "slots": 3
+      }
+    ],
+    "unpinned": [
+      {
+        "fibre_pairs": 1,
+        "max_weighted_distance": 0,
+        "positive_distance_pairs": 0,
+        "slots": 1,
+        "weights": [
+          1
+        ]
+      },
+      {
+        "fibre_pairs": 16,
+        "max_weighted_distance": 1,
+        "positive_distance_pairs": 6,
+        "slots": 2,
+        "weights": [
+          1,
+          2
+        ]
+      },
+      {
+        "fibre_pairs": 361,
+        "max_weighted_distance": 2,
+        "positive_distance_pairs": 198,
+        "slots": 3,
+        "weights": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "fibre_pairs": 11881,
+        "max_weighted_distance": 4,
+        "positive_distance_pairs": 7830,
+        "slots": 4,
+        "weights": [
+          1,
+          2,
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "charge_quotient": {
+    "budgets": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "cases": 1344,
+    "charge_group": "Z/4",
+    "components": "1..3 independent C3 factors, complete charge maps from the stated four-function family"
+  },
+  "checks_before_receipt": 221409,
+  "classification": [
+    {
+      "distinct_nonempty_unpinned_fibres": 1,
+      "frustrated_graphs": 0,
+      "pinned_cases": 4,
+      "slots": 1,
+      "voltage_graphs": 1
+    },
+    {
+      "distinct_nonempty_unpinned_fibres": 4,
+      "frustrated_graphs": 0,
+      "pinned_cases": 64,
+      "slots": 2,
+      "voltage_graphs": 4
+    },
+    {
+      "distinct_nonempty_unpinned_fibres": 19,
+      "frustrated_graphs": 18,
+      "pinned_cases": 4096,
+      "slots": 3,
+      "voltage_graphs": 64
+    },
+    {
+      "distinct_nonempty_unpinned_fibres": 109,
+      "frustrated_graphs": 2880,
+      "pinned_cases": 0,
+      "slots": 4,
+      "voltage_graphs": 4096
+    }
+  ],
+  "compact_native_bridge": {
+    "component_sizes_by_slot_budget": {
+      "2": [
+        9,
+        9
+      ],
+      "3": [
+        18
+      ]
+    },
+    "distinct_resources": 5,
+    "fibre_sizes": [
+      9,
+      9
+    ],
+    "sharp_clock_budget": 9,
+    "sharp_slot_budget": 3,
+    "source_order": 27,
+    "total_states": 18,
+    "witness_left": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "witness_right": [
+      2,
+      0,
+      2,
+      0
+    ]
+  },
+  "distance_enumerators": {
+    "budget_graphs": 635,
+    "direct_no_record_return_routes": 26685,
+    "fibres": 133,
+    "resource_semantics": "one fixed prefix key continuously occupied per slot; no release or reacquisition"
+  },
+  "native": {
+    "indexed_clock_pair_tests": 2166,
+    "indexed_owner_pin_tests": 1444,
+    "records": [
+      {
+        "full_records": 6,
+        "normalized_tiles": 2,
+        "prefix_blocks": 1,
+        "reservoir_words": 8,
+        "source_order": 11
+      },
+      {
+        "full_records": 12,
+        "normalized_tiles": 4,
+        "prefix_blocks": 2,
+        "reservoir_words": 16,
+        "source_order": 19
+      },
+      {
+        "full_records": 24,
+        "normalized_tiles": 8,
+        "prefix_blocks": 3,
+        "reservoir_words": 32,
+        "source_order": 27
+      },
+      {
+        "full_records": 48,
+        "normalized_tiles": 16,
+        "prefix_blocks": 4,
+        "reservoir_words": 64,
+        "source_order": 35
+      }
+    ],
+    "seed_automorphisms": 1
+  },
+  "native_controls": {
+    "conditional_helper": {
+      "boundary_old_changed_slots": 2,
+      "component_sizes_by_slot_budget": {
+        "1": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "2": [
+          81,
+          81
+        ],
+        "3": [
+          162
+        ]
+      },
+      "distinct_resources": 9,
+      "guard_scope": "explicit helper-conditioned higher-arity equality predicate; not inferred from pairwise owner equalities",
+      "helper_record_phases": [
+        0,
+        1
+      ],
+      "neutral_component_size": 2,
+      "old_fibre_sizes": [
+        81,
+        81
+      ],
+      "sharp_total_changed_slot_budget": 3,
+      "sharp_total_clock_budget": 9,
+      "source_order": 35,
+      "witness_old_left": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "witness_old_right": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    "frustrated_triangle": {
+      "accepted_states": 0,
+      "distinct_resources": 3,
+      "each_edge_two_slot_matches": 3,
+      "single_edge_accepted_states": [
+        9,
+        9,
+        9
+      ],
+      "source_order": 19
+    }
+  },
+  "source_sha256_lf": {
+    "CUBES.txt": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "NEUTRAL_FIBRE_LIFTING.md": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+    "ONE_BIT_WORKSPACE.md": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+  },
+  "status": "FINITE-EXACT PASS; all-size claims proved in RELATIONAL_KERNEL_HOLONOMY.md"
+}

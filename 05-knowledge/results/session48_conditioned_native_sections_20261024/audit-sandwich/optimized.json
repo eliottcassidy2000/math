@@ -1,0 +1,142 @@
+{
+  "checks": 43089,
+  "famous": [
+    {
+      "Aut": 3,
+      "H": 3,
+      "R_order": 3,
+      "S_order": 9,
+      "S_words": 1,
+      "a": 1,
+      "black_weighted": 0,
+      "blue": 1,
+      "resources": 1
+    },
+    {
+      "Aut": 5,
+      "H": 15,
+      "R_order": 5,
+      "S_order": 13,
+      "S_words": 9,
+      "a": 3,
+      "black_weighted": 6,
+      "blue": 3,
+      "resources": 6
+    },
+    {
+      "Aut": 21,
+      "H": 189,
+      "R_order": 7,
+      "S_order": 17,
+      "S_words": 81,
+      "a": 9,
+      "black_weighted": 72,
+      "blue": 9,
+      "resources": 45
+    },
+    {
+      "Aut": 55,
+      "H": 95095,
+      "R_order": 11,
+      "S_order": 25,
+      "S_words": 2989441,
+      "a": 1729,
+      "black_weighted": 2987712,
+      "blue": 1729,
+      "resources": 1495585
+    }
+  ],
+  "generic_injection_hostile": {
+    "L_order": 10,
+    "R_description": "C3 -> U_strong4",
+    "R_paths": [
+      [
+        0,
+        1,
+        2,
+        3,
+        6,
+        5,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        5,
+        4,
+        3,
+        6
+      ]
+    ],
+    "U_code_lsb": 4,
+    "local_resources_equal": true,
+    "prefix_words_distinct": true
+  },
+  "native": {
+    "rows": [
+      {
+        "black_resources": 1,
+        "blue_resources": 2,
+        "capacity_valid_records": 6,
+        "common_pin_records": 12,
+        "global_work": 3,
+        "keys": 2,
+        "local_work": 6,
+        "r": 1,
+        "source_words": 4,
+        "target_classes": 1
+      },
+      {
+        "black_resources": 6,
+        "blue_resources": 4,
+        "capacity_valid_records": 36,
+        "common_pin_records": 48,
+        "global_work": 3,
+        "keys": 4,
+        "local_work": 6,
+        "r": 2,
+        "source_words": 16,
+        "target_classes": 1
+      },
+      {
+        "black_resources": 28,
+        "blue_resources": 8,
+        "capacity_valid_records": 168,
+        "common_pin_records": 192,
+        "global_work": 3,
+        "keys": 8,
+        "local_work": 6,
+        "r": 3,
+        "source_words": 64,
+        "target_classes": 1
+      },
+      {
+        "black_resources": 120,
+        "blue_resources": 16,
+        "capacity_valid_records": 720,
+        "common_pin_records": 768,
+        "global_work": 3,
+        "keys": 16,
+        "local_work": 6,
+        "r": 4,
+        "source_words": 256,
+        "target_classes": 1
+      }
+    ],
+    "seed_Aut": 1,
+    "seed_H": 409
+  },
+  "small": {
+    "all_labelled_R_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "count": 75,
+    "max_a": 5,
+    "total_source_words": 651
+  },
+  "status": "PASS"
+}

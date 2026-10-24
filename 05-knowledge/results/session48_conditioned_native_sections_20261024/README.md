@@ -1,64 +1,27 @@
-# Session48: compatible charge sections and exact routing boundaries
+# Session48: compatible native sections, phase geometry, and marked observers
 
-24 October 2026. Second research checkpoint; final integration remains active.
+24 October 2026. Final integration of the existing frozen research packets. Read [SYNTHESIS.md](SYNTHESIS.md) for the combined results, inheritance, correction ledger, and remaining scope. This index adds no new theorem and does not identify finite native certificates with all-order results.
 
-## A sharp blocked-phase route
+## Choose the question
 
-The [new route theorem](boundary-bridges/THEOREM.md) and its
-[independent audit](audit-sharp-routing/AUDIT.md) improve the incoming
-20-slot/42-clock bound to **at most eight slots and 33 clocks** for every
-nonempty fibre of the declared 82-slot owner4-pinned family. Core and helper
-populations remain separately fixed. Clock budget 33 is sharp; eight-slot
-optimality is NOT claimed.
+- **How do frozen records change available repairs?** [Receiver repairs](receiver-repairs/THEOREM.md), with [fourth-pin audit](audit-four-pin/AUDIT.md). Every four-cheap-freeze choice has at least two successful existing repairs; the protected pairs are {1923,2087} and {1923,2835}. Availability remains adaptive. Ten protected freezes give 18 slots/60 clocks; eleven adaptively chosen freezes give 18/58 or 18/59.
+- **What is the sharp clock budget in the original unfrozen core inventory?** [Boundary bridges](boundary-bridges/THEOREM.md), with [sharp-routing audit](audit-sharp-routing/AUDIT.md). Every nonempty declared fibre has an 8-slot/33-clock route, with 33 clocks sharp. This does not apply unchanged after extra core freezes or new relations; eight-slot optimality is not claimed.
+- **When do sections survive an actual relation?** [Relational sections](relational-sections/THEOREM.md), with [independent review](audit-relational-sections/AUDIT.md). The conditional all-size descent theorem retains full boundary tuples and grades. Its finite native three-record application gives 20/52 or 20/53 in the specified interior and 22/76 globally. A relation reaching inside the receiver can still create the certified holes 477 and 1098.
+- **What do literal C3 equalities force?** [Kernel relations](kernel-relations/RELATIONAL_KERNEL_HOLONOMY.md), with [compatibility audit](audit-compatibility-theory/AUDIT.md). Voltage holonomy, indivisible component packets, exact weighted-frustration boundaries, and paid conditional fibre lifting retain actual records and resources.
+- **What changes under an explicitly declared affine phase guard?** [Affine phase codes](linear-phase-codes/AFFINE_PHASE_CODES.md), with [phase-code audit](audit-phase-codes/AUDIT.md). Budget components are low-weight-span cosets. Original low-weight generators give constructive routes; a separate DAG handles strict per-slot no-return. The 27-state full budget-three graph has spectrum 0^1,9^8,12^6,15^12. The all-size selected graph is different from the full budget graph for L ≥ 3.
+- **When can coherent local records share a global observer?** [Free-host completion](observer-completions/THEOREM.md), with [independent compatibility/completion audit](audit-compatibility-theory/AUDIT.md). With uncovered arcs free, the directed-linear-forest gate gives an exact marked count. A fixed host still needs its endpoint-transition test; a local observer subsequence is not sufficient.
+- **What does retaining an observer do to counts and moments?** [Observer moments](observer-moments/THEOREM.md). Exact all-size H-weighted moments, H/Aut fixed-observer fibres, original order-eight atlas checksums, and full-record nonreal-root controls distinguish marked counting from unmarked host measures, capacities, and spectra.
+- **Is there a positive capacity-valid global-observer construction?** [Shared-C3 sandwiches](sandwich-profiles/THEOREM.md), with [independent sandwich audit](audit-sandwich/PROOF_AUDIT.md). Distinct authenticated native keys share one actual observer, retain their resources through all three phases, and have local work 6 versus global work 3. The square/diagonal center profile and values 1,3,9,1729 are inherited and explicitly credited. Every selected presentation reaches one common target class, not a different neighbor per resource.
 
-Complete nine-state and thirteen-state fibres give the two signed lower
-witnesses. Every possible move in those small fibres changes at most six
-slots, so their 33-clock obstruction is not manufactured by imposing an
-eight-slot support cap. In the interior core grades 5 through 23, two-point
-charge sections give the stronger 8-slot/27-clock construction.
+## Corrections and distinctions that must remain visible
 
-The proof does not concatenate unrelated minima. It retains actual cross-
-charge endpoints and uses the independently established original-core
-8-slot/22-clock connectivity to reach each endpoint within its own sheet.
+For q = 8r, the canonical phase is k = owner(q) − q modulo 3. Raw owners o satisfy A o = β + q A1, not generally A o = β. This arithmetic uses the declared suffix numbering; another owner embedding requires an explicitly transported phase chart. The converse-head phase ℓ = k+2 has the separate shift 2A1. Existing computations already used the canonical extractor correctly.
 
-## More frozen records, with the correct availability quantifier
+The corrected frozen manifests below include the final byte-preserving historical CUBES.txt archive packaging repair. Original source paths and digests are retained; mathematics and the raw-owner correction are unchanged:
 
-[Receiver repair](receiver-repairs/THEOREM.md) and
-[its independent audit](audit-four-pin/AUDIT.md) retain the first checkpoint.
-Every four-cheap-freeze set has at least two successful existing repairs.
-The minimum universal protected choice banks are {1923,2087} and {1923,2835}.
-Ten frozen records with a protected pair admit global 18-slot/60-clock routing;
-a chosen successful repair can then support eleven adaptively frozen records
-at 18/58 or 18/59. These are not guarantees for an arbitrary final surviving
-source. The more general global bound is 18/68.
+- [linear-phase-codes/MANIFEST.json](linear-phase-codes/MANIFEST.json): `1b591ca3d2efec5d07e16088d76c74797b928b3598574dac99ca2ecf174f37f8`.
+- [audit-phase-codes/MANIFEST.json](audit-phase-codes/MANIFEST.json): `fd958f70dfd764c7ffa945a08dd3902b21a49f2b8d4b3f34b847a8d02df50fbc`.
 
-## Genuine relations on retained boundary records
+Capacity one at each arrival, continuous resource occupancy, per-slot full-record non-return, and absence of repeated assemblies are different predicates. Charged borrowing routes do not claim strict temporal non-return. Likewise local source/partner hosts, fixed-host global observers, free-host completions, and the specified shared-C3 construction are different realization problems.
 
-[Relational sections](relational-sections/THEOREM.md) and
-[independent review](audit-relational-sections/AUDIT.md) treat every nonempty
-allowed table on three specified cheap U/V records. Five existing repair
-sources supply the wider receiver band 7 through 11 for every such triple.
-With a cost-three protected repair, the common interior has 20-slot/52-clock
-routes; every nonempty remaining fibre has a 22-slot/76-clock direct bound.
-The grade interval and any frozen outside records are explicit in the theorem.
-
-The relation “these three records have equal target class” is a concrete
-native example; it changes no owner identification. In contrast, the relation
-that source1841 and source1457 choose the same target reaches inside the
-receiver and creates the certified holes 477 and 1098. A boundary-local
-relational theorem is not arbitrary receiver-wide pin coverage.
-
-## Preserved scope
-
-All actual full records, kernel lifts, converse/inverse resources, fixed
-owner4, original nodewise dyadic current equations, and integer event costs
-are retained. Every slot stays occupied, and normalized capacity is one at
-each arrival. These charged receiver routes allow reversible return to a
-released alternative; they do not claim strict temporal nonreturn or a legal
-single-metagraph-edge decomposition of every atomic packet.
-
-The incoming common host consists of local observers. A single global
-Hamiltonian observer and harmonic transport to that larger host are separate
-obligations. All-size native charged supply and arbitrary relational pins
-remain open. Other Session48 kernel and observer-counting results are being
-integrated separately.
+Each packet retains its own exact finite universe, source pins, checker, manifest, and available independent audit/relocation evidence. Use its reproduction instructions without regenerating a frozen receipt. Publish only its manifest-listed files plus its root manifest; scratch directories such as portable-test are not part of a packet. No numerical harmonic transport, arbitrary receiver-wide relational-pin coverage, unrestricted global gluing, or microscopic metagraph routing is claimed.

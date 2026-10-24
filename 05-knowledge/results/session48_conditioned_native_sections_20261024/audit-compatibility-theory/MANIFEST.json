@@ -1,0 +1,121 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 15685,
+      "sha256": "eaafeeefc09cc1103631b8b38ac5d8b2b73e08e6a3cdd971f5c25951323f73f2"
+    },
+    "INPUT_PINS.json": {
+      "bytes": 3789,
+      "sha256": "ff05c3a22c037579b8f8c594fb147c7d4d44a360ab2c74cbed7e89876a511ea8"
+    },
+    "PORTABILITY.json": {
+      "bytes": 2028,
+      "sha256": "6d41c0885c43119f4e3ef07c275e14bcf83e0beb05e05739e07907d8be2304b9"
+    },
+    "PRODUCER_REPLAY.json": {
+      "bytes": 773,
+      "sha256": "49da1f0f3987303a3937f832321e474e55d1712872ae1957a7080e6d5aefa99d"
+    },
+    "README.md": {
+      "bytes": 1036,
+      "sha256": "57e4fe37d1ea2696e955b81e7c0701a4253928ccd7ae1c096274050236ae9c2a"
+    },
+    "SUMMARY.json": {
+      "bytes": 1010,
+      "sha256": "715ae2cb353dfdc3aec8396830243bb13d462c9c5edc59f87ed59ed8b7c96e80"
+    },
+    "independent_check.py": {
+      "bytes": 27515,
+      "sha256": "9b35726c40dc5f711d1d986ffc51d36c1dd91ee42646ecb09d1384b68ed5dd00"
+    },
+    "inputs/completion/MANIFEST.json": {
+      "bytes": 671,
+      "sha256": "937190f57710214f95d7fe8655fb315b1ea85eba57522fc8a6e79158970b1f61"
+    },
+    "inputs/completion/THEOREM.md": {
+      "bytes": 8894,
+      "sha256": "98b3c5f21d2bdcd71cf5def91934bfd5aadebb0f8d8456f4b8b02c1820b4563d"
+    },
+    "inputs/completion/check.py": {
+      "bytes": 5255,
+      "sha256": "78c09d1539bbd86bec5e7f53a32a1d40c4466319a7366b809b261afbdd818616"
+    },
+    "inputs/completion/normal.json": {
+      "bytes": 1440,
+      "sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1"
+    },
+    "inputs/completion/optimized.json": {
+      "bytes": 1440,
+      "sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1"
+    },
+    "inputs/kernel/AUDIT.md": {
+      "bytes": 2906,
+      "sha256": "5d554c49e1c1a43d3382d6c530ea819d355bb8ec5b92b646fc7d8cca1947ec1f"
+    },
+    "inputs/kernel/MANIFEST.json": {
+      "bytes": 1328,
+      "sha256": "b27bf42c1e4a2072273013731f0e3da663f0eec3f788aaac478e68bdea6c86ed"
+    },
+    "inputs/kernel/README.md": {
+      "bytes": 2323,
+      "sha256": "02f0edecba7a1ef71ae6ac8d9654a0060e7d8ad61101c3ba9f8a8630451d10ca"
+    },
+    "inputs/kernel/RELATIONAL_KERNEL_HOLONOMY.md": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/kernel/Sourcearchives.txt": {
+      "bytes": 928,
+      "sha256": "c4d0180981dcb46515575003c0b1a422a783540e8d42469a96a4299e14aadb31"
+    },
+    "inputs/kernel/check.py": {
+      "bytes": 21010,
+      "sha256": "1e527774040761cd06ca401cb7ae15a8510b46700f6842507c599f24b22cd598"
+    },
+    "inputs/kernel/inputs/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    "inputs/kernel/inputs/NEUTRAL_FIBRE_LIFTING.md": {
+      "bytes": 14785,
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+    },
+    "inputs/kernel/inputs/ONE_BIT_WORKSPACE.md": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    "inputs/kernel/normal-check.txt": {
+      "bytes": 42,
+      "sha256": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc"
+    },
+    "inputs/kernel/optimized-check.txt": {
+      "bytes": 42,
+      "sha256": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc"
+    },
+    "inputs/kernel/receipt.json": {
+      "bytes": 7177,
+      "sha256": "3e6f2295b89c865646e7be5a4459df6715ddbb3aa190c847445ada2e9f29b415"
+    },
+    "inputs/kernel/verify_manifest.py": {
+      "bytes": 1126,
+      "sha256": "fbde748f47ab3a08c5c71555669bea2e1eb7432efa5ae8993406cf755b455e08"
+    },
+    "normal.json": {
+      "bytes": 8785,
+      "sha256": "4a5fc04599765066ce7df1014144c780b2c6c7989124868f3f46ae54ce517e7e"
+    },
+    "optimized.json": {
+      "bytes": 8785,
+      "sha256": "4a5fc04599765066ce7df1014144c780b2c6c7989124868f3f46ae54ce517e7e"
+    },
+    "replay_producers.py": {
+      "bytes": 1204,
+      "sha256": "bef40236edaa1386dac1148d06682a1c93e00d5c9e5b5159d626d6897a39cb02"
+    },
+    "verify_manifest.py": {
+      "bytes": 960,
+      "sha256": "d8a750a703b683c23ca24fc5aaa05f2624a7952b05a60dc723332b794797dcc0"
+    }
+  },
+  "hash_convention": "SHA256 of exact bytes; root manifest excluded; nested source manifests included"
+}

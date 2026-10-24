@@ -1,0 +1,32 @@
+{
+  "Eulerian_full_source_census_through": 6,
+  "completion_instances": 25574,
+  "conditional_additive_quotient_cases": 1024,
+  "global_clock_pin_cases": 61668,
+  "independent_checks_normal": 383849,
+  "independent_checks_optimized": 383849,
+  "largest_native_order": 43,
+  "native_prefix_blocks": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "order6_labelled_sources": 32768,
+  "order6_marked_observers": 737280,
+  "producer_amendments_required": false,
+  "producer_checks_each_mode": {
+    "completion": 5672,
+    "kernel": 221410
+  },
+  "receipts_byte_identical": true,
+  "required_scope_controls": [
+    "Same-source prefix-key observers can have incompatible named K restrictions and forced outgoing fork.",
+    "Full pairwise closure of compact helper has 72 states versus 18 intended states.",
+    "Two disjoint two-owner cells have 16 marked completions but 12 hosts.",
+    "Forest gate can pass while a fixed host admits zero block orders."
+  ],
+  "status": "PASS",
+  "weighted_boundary_pairs": 13042
+}

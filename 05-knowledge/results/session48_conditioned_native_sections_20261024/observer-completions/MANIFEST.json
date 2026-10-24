@@ -1,0 +1,25 @@
+{
+  "status": "PROVED conditional all-size formula; finite controls",
+  "files": [
+    {
+      "path": "THEOREM.md",
+      "sha256": "98b3c5f21d2bdcd71cf5def91934bfd5aadebb0f8d8456f4b8b02c1820b4563d",
+      "bytes": 8894
+    },
+    {
+      "path": "check.py",
+      "sha256": "78c09d1539bbd86bec5e7f53a32a1d40c4466319a7366b809b261afbdd818616",
+      "bytes": 5255
+    },
+    {
+      "path": "normal.json",
+      "sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1",
+      "bytes": 1440
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "fea5d35ab3f58fc7f2d26a1e2794032141ed9cb24017817d8c8c88658b3ce9a1",
+      "bytes": 1440
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "L2_binary_projection_closure": 243,
+  "L2_full_budget_spectrum": {
+    "0": 1,
+    "12": 6,
+    "15": 12,
+    "9": 8
+  },
+  "affine_budget_graphs": 13071,
+  "all_size_scope": "native fixed-resource affine ternary predicates and their exact atomic packet graphs",
+  "correction": "At budget L+1, selected graph omits only same-mode multi-pair moves, not higher-cost mode bridges. Producer corrected the sentence before freeze.",
+  "designed_spectrum_L_range": [
+    1,
+    6
+  ],
+  "full_budget_fourier_graphs": 1195,
+  "inconsistent_systems": 904,
+  "independent_checks": 347188,
+  "native_r_range": [
+    1,
+    5
+  ],
+  "no_git_operations": true,
+  "no_return_endpoint_budget_tests": 13071,
+  "packaging_repair": {
+    "archive_bytes": 9596,
+    "archive_sha256_raw": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "change": "Byte-preserving CUBES.md to CUBES.txt historical archive renames, plus dependent local paths and manifests",
+    "local_paths": [
+      "inputs/base/CUBES.txt",
+      "inputs/producer/inputs/CUBES.txt"
+    ],
+    "mathematical_receipt_unchanged": true,
+    "original_provenance_paths_preserved": true
+  },
+  "producer_manifest_sha256": "1b591ca3d2efec5d07e16088d76c74797b928b3598574dac99ca2ecf174f37f8",
+  "raw_owner_coordinate_precision": {
+    "all_preexisting_producer_receipt_fields_unchanged": true,
+    "converse_is_separate": "A ell = beta + 2 A1 modulo3",
+    "different_owner_embedding": "Transport the phase chart explicitly; arbitrary labels are not F3 coordinates.",
+    "formula": "A o = beta + (8r) A1 modulo3 in the declared suffix numbering",
+    "hostile_canonical_rhs": 0,
+    "hostile_r1_row": [
+      1,
+      0
+    ],
+    "hostile_raw_rhs": 2,
+    "independent_systems": 135,
+    "nonzero_translation_systems": 72,
+    "prior_computations_already_subtracted_q": true,
+    "prior_producer_receipt_sha256": "9ee8cb257d93b261262ac983b017168b7cfef2cc6203168b61507c893008c5dc",
+    "unchanged_raw_rhs_selects_first_phase": 1
+  },
+  "receipt_sha256": "c842ad9f8a041bcbe569593a19d792b56f0ffb976299ff99ff9f8e1adee206bc",
+  "rectangular_systems": 7504,
+  "status": "PASS after local prose and coordinate-precision corrections"
+}

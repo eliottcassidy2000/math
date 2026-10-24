@@ -1,0 +1,497 @@
+{
+  "affine": {
+    "catalogues": [
+      {
+        "affine_fibres": 1,
+        "budget_graphs": 1,
+        "linear_codes": 1,
+        "slots": 0
+      },
+      {
+        "affine_fibres": 4,
+        "budget_graphs": 4,
+        "linear_codes": 2,
+        "slots": 1
+      },
+      {
+        "affine_fibres": 22,
+        "budget_graphs": 18,
+        "linear_codes": 6,
+        "slots": 2
+      },
+      {
+        "affine_fibres": 184,
+        "budget_graphs": 112,
+        "linear_codes": 28,
+        "slots": 3
+      },
+      {
+        "affine_fibres": 2452,
+        "budget_graphs": 1060,
+        "linear_codes": 212,
+        "slots": 4
+      }
+    ],
+    "no_return_budget_endpoint_tests": 811
+  },
+  "checks_before_receipt_comparison": 107676,
+  "coordinates": {
+    "affine_monomial_coordinate_cases": 1296,
+    "native_claim": "Only actual matrix/path transports, not arbitrary coordinate naming, certify native symmetries."
+  },
+  "modes": {
+    "L2_direct_matrix_trace_powers_0_to_3": [
+      27,
+      324,
+      4212,
+      56700
+    ],
+    "families": [
+      {
+        "L": 1,
+        "full_budget_Lplus1_degree": 6,
+        "resources": 3,
+        "selected_degree": 6,
+        "spectral_gap": 6,
+        "spectrum": {
+          "0": 1,
+          "6": 6,
+          "9": 2
+        },
+        "states": 9,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 6,
+          "3": 2
+        }
+      },
+      {
+        "L": 2,
+        "full_budget_Lplus1_degree": 12,
+        "resources": 5,
+        "selected_degree": 12,
+        "spectral_gap": 9,
+        "spectrum": {
+          "0": 1,
+          "9": 8,
+          "12": 6,
+          "15": 12
+        },
+        "states": 27,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 4,
+          "3": 8,
+          "4": 12,
+          "5": 2
+        }
+      },
+      {
+        "L": 3,
+        "full_budget_Lplus1_degree": 34,
+        "resources": 7,
+        "selected_degree": 22,
+        "spectral_gap": 15,
+        "spectrum": {
+          "0": 1,
+          "15": 12,
+          "18": 12,
+          "24": 42,
+          "27": 14
+        },
+        "states": 81,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 6,
+          "4": 28,
+          "5": 24,
+          "6": 20,
+          "7": 2
+        }
+      },
+      {
+        "L": 4,
+        "full_budget_Lplus1_degree": 64,
+        "resources": 9,
+        "selected_degree": 40,
+        "spectral_gap": 27,
+        "spectrum": {
+          "0": 1,
+          "27": 16,
+          "30": 24,
+          "39": 64,
+          "42": 64,
+          "45": 64,
+          "48": 2,
+          "51": 8
+        },
+        "states": 243,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 8,
+          "4": 24,
+          "5": 32,
+          "6": 96,
+          "7": 48,
+          "8": 32,
+          "9": 2
+        }
+      },
+      {
+        "L": 5,
+        "full_budget_Lplus1_degree": 194,
+        "resources": 11,
+        "selected_degree": 74,
+        "spectral_gap": 51,
+        "spectrum": {
+          "0": 1,
+          "51": 20,
+          "54": 40,
+          "69": 160,
+          "72": 80,
+          "78": 304,
+          "81": 112,
+          "96": 2,
+          "99": 10
+        },
+        "states": 729,
+        "weight_enumerator": {
+          "0": 1,
+          "2": 10,
+          "4": 40,
+          "6": 144,
+          "7": 160,
+          "8": 240,
+          "9": 80,
+          "10": 52,
+          "11": 2
+        }
+      }
+    ],
+    "normalized_gaps": [
+      {
+        "L": 1,
+        "denominator": 1,
+        "numerator": 1
+      },
+      {
+        "L": 2,
+        "denominator": 4,
+        "numerator": 3
+      },
+      {
+        "L": 3,
+        "denominator": 22,
+        "numerator": 15
+      },
+      {
+        "L": 4,
+        "denominator": 40,
+        "numerator": 27
+      },
+      {
+        "L": 5,
+        "denominator": 74,
+        "numerator": 51
+      },
+      {
+        "L": 6,
+        "denominator": 140,
+        "numerator": 99
+      },
+      {
+        "L": 7,
+        "denominator": 18,
+        "numerator": 13
+      },
+      {
+        "L": 8,
+        "denominator": 176,
+        "numerator": 129
+      }
+    ]
+  },
+  "native": {
+    "native": [
+      {
+        "full_records": 6,
+        "prefix_blocks": 1,
+        "reservoir_words": 8,
+        "resources": 2,
+        "source_order": 11
+      },
+      {
+        "full_records": 12,
+        "prefix_blocks": 2,
+        "reservoir_words": 16,
+        "resources": 4,
+        "source_order": 19
+      },
+      {
+        "full_records": 24,
+        "prefix_blocks": 3,
+        "reservoir_words": 32,
+        "resources": 8,
+        "source_order": 27
+      },
+      {
+        "full_records": 48,
+        "prefix_blocks": 4,
+        "reservoir_words": 64,
+        "resources": 16,
+        "source_order": 35
+      }
+    ],
+    "seed_automorphisms": 1
+  },
+  "no_return": {
+    "basis": [
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    ],
+    "endpoint": [
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "matrix": [
+      [
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    ],
+    "no_return_minimum_budget": 4,
+    "no_return_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "ordinary_minimum_budget": 3,
+    "ordinary_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "resources": 5,
+    "source_order": 27,
+    "states": 9
+  },
+  "raw_owner_coordinates": {
+    "cases": [
+      {
+        "canonical_rhs": 0,
+        "canonical_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "converse_head_phase_rhs": 2,
+        "r": 1,
+        "raw_rhs": 2,
+        "row": [
+          1,
+          0
+        ],
+        "unshifted_raw_states": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "canonical_rhs": 0,
+        "canonical_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "converse_head_phase_rhs": 2,
+        "r": 2,
+        "raw_rhs": 1,
+        "row": [
+          1,
+          0
+        ],
+        "unshifted_raw_states": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      {
+        "canonical_rhs": 1,
+        "canonical_states": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "converse_head_phase_rhs": 2,
+        "r": 1,
+        "raw_rhs": 2,
+        "row": [
+          1,
+          1
+        ],
+        "unshifted_raw_states": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "canonical_rhs": 0,
+        "canonical_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "converse_head_phase_rhs": 2,
+        "r": 3,
+        "raw_rhs": 0,
+        "row": [
+          1,
+          0
+        ],
+        "unshifted_raw_states": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    ],
+    "formula": "A o=b+(8r)A1 modulo3 in the declared suffix numbering"
+  },
+  "schema": "native-affine-phase-codes-v1"
+}

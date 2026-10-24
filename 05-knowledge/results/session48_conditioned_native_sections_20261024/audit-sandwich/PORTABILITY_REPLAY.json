@@ -1,0 +1,34 @@
+{
+  "final_closed_copy_verification": "PASS",
+  "independent_checks": 43089,
+  "method": "Only the closed manifest files and the manifest itself were copied to a fresh /tmp directory. Both independent and producer checkers ran in normal and -O modes from /tmp, with an empty PYTHONPATH. Outputs are byte-identical to saved outputs. A second manifest-only copy then verifies the final package including this receipt; all previously replayed payload hashes must be unchanged.",
+  "producer_checks": 38014,
+  "replayed_payload_unchanged_in_final_package": true,
+  "replays": [
+    {
+      "optimized": false,
+      "output_sha256": "7d4f162d8c88402beb02b405467f9eaeaa5ed874acdcda9ed2c3a818e2b66bec",
+      "script": "check_independent.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "output_sha256": "7d4f162d8c88402beb02b405467f9eaeaa5ed874acdcda9ed2c3a818e2b66bec",
+      "script": "check_independent.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "output_sha256": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+      "script": "inputs/frozen-sandwich/check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "output_sha256": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+      "script": "inputs/frozen-sandwich/check.py",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

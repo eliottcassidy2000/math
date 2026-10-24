@@ -1,0 +1,19 @@
+{
+  "manifest": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS closed manifest: 14 files; LF-normalized SHA256; no external paths\n"
+  },
+  "normal": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS native affine phase codes; 107677 explicit checks; all outputs exact integers\n27-state spectrum: 0^1, 9^8, 12^6, 15^12; no-return control: budget3 connected, budget4 sharp\nReceipt SHA256: 6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e\n"
+  },
+  "optimized": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS native affine phase codes; 107677 explicit checks; all outputs exact integers\n27-state spectrum: 0^1, 9^8, 12^6, 15^12; no-return control: budget3 connected, budget4 sharp\nReceipt SHA256: 6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e\n"
+  },
+  "producer_manifest_sha256": "1b591ca3d2efec5d07e16088d76c74797b928b3598574dac99ca2ecf174f37f8",
+  "producer_receipt_sha256": "6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e"
+}

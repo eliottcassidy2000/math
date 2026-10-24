@@ -1,0 +1,21 @@
+{
+  "ancestral_source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+  "files": {
+    "AFFINE_PHASE_CODES.md": "ee0073c2dc16e7196560f5b96ed7b1b8ca490993bdfcd90dfe71b35da8562158",
+    "AUDIT.md": "3cbcd49d2e1cd4e488edf4d4ba642f30f61ffec996d18c635d18dd72236c8b99",
+    "README.md": "ef6200258d6a71dc614f20dd09f1115fc51cc21150825950ac33f3ead633e544",
+    "Sourcearchives.txt": "1e8d1756d8ddee313562533c4e0bd521ecbbda8fe206a43c29b6cb73287e46cf",
+    "check.py": "40393c266907bc657ea07bab6f0039b08acf1fd958b653a1428dd4d0f8d73ac3",
+    "inputs/CUBES.txt": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "inputs/ONE_BIT_WORKSPACE.md": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+    "inputs/RELATIONAL_KERNEL_HOLONOMY.md": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927",
+    "normal-check.txt": "f50bc544d48ac267f10e5e85538b22ebe1dda7d8e77bed6b836aba7b5ab7afce",
+    "optimized-check.txt": "f50bc544d48ac267f10e5e85538b22ebe1dda7d8e77bed6b836aba7b5ab7afce",
+    "portability-check.txt": "048a4f07ccc9fed4fafbcdb2881de66d806a21953e2a5317a38e36d830349610",
+    "portable_check.py": "d7a4a8c48a91eb163f9cd30927b6cba2e5f366c3374f762e5175e4c7ab0819a0",
+    "receipt.json": "6f1fb86859d08c75502a14ce3779a21cb3ef6d778d6a6e0e2543968f9554022e",
+    "verify_manifest.py": "812b26eccf0867223bd8237550bef08858fb0c362ab6390b116c187aea9ef3fa"
+  },
+  "hash_convention": "SHA256 after CRLF-to-LF normalization; manifest excludes itself; all other package files included",
+  "schema": "native-affine-phase-code-closure-v1"
+}

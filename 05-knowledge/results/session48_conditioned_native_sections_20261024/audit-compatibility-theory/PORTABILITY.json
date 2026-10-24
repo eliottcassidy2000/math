@@ -1,0 +1,51 @@
+{
+  "isolation": "Fresh manifest-only /tmp copy, cwd /, no repository files, no producer imports, standard library only, no network or Git. This receipt is added after the recorded pre-receipt closure check; final manifest then regenerated and separately verified.",
+  "manifest_only_copy": {
+    "copied_files_including_manifest": 29,
+    "pre_receipt_manifest_sha256": "d92723fedd13838c62eff2eefb3c615dc89eb83353cdcf3d71962b18eaa63398"
+  },
+  "packaging_repair": {
+    "archive_preservation": {
+      "CUBES.txt": {
+        "byte_identical": true,
+        "bytes": 9596,
+        "original_archive_name": "CUBES.md",
+        "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+      },
+      "NEUTRAL_FIBRE_LIFTING.md": {
+        "byte_identical": true,
+        "bytes": 14785,
+        "original_archive_name": "NEUTRAL_FIBRE_LIFTING.md",
+        "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+      },
+      "ONE_BIT_WORKSPACE.md": {
+        "byte_identical": true,
+        "bytes": 15817,
+        "original_archive_name": "ONE_BIT_WORKSPACE.md",
+        "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+      }
+    },
+    "independent_mathematical_receipt_fields_unchanged": true,
+    "kernel_manifest_sha256": "b27bf42c1e4a2072273013731f0e3da663f0eec3f788aaac478e68bdea6c86ed",
+    "kernel_mathematical_receipt_fields_unchanged": true
+  },
+  "results": {
+    "independent_normal": {
+      "checks": 383849,
+      "output_sha256": "4a5fc04599765066ce7df1014144c780b2c6c7989124868f3f46ae54ce517e7e",
+      "status": "PASS"
+    },
+    "independent_optimized": {
+      "checks": 383849,
+      "output_sha256": "4a5fc04599765066ce7df1014144c780b2c6c7989124868f3f46ae54ce517e7e",
+      "status": "PASS"
+    },
+    "pre_receipt_closed_manifest": "PASS closed byte-exact audit manifest: 28 files",
+    "producer_replays": {
+      "completion_each_mode": 5672,
+      "kernel_each_mode": 221410,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

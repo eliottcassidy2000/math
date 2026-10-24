@@ -1,0 +1,27 @@
+Pinned ancestral repository: eliottcassidy2000/math
+Ancestral commit: c09b642a629b7d12b529b88c2697abaee78e73e7
+Hash convention: SHA256 of bytes with CRLF normalized to LF.
+All runtime code is standalone. Vendored texts are source evidence, not dynamic imports.
+
+Frozen immediate parent package: session48-kernel-relations/
+Immediate parent MANIFEST.json SHA256-LF: b27bf42c1e4a2072273013731f0e3da663f0eec3f788aaac478e68bdea6c86ed
+Immediate parent relationship: local frozen Session48 extension, not represented as an already published Git commit.
+
+Local: inputs/CUBES.txt
+Original: 05-knowledge/results/guarded_coverage_20261023/CUBES.md
+SHA256-LF: 752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034
+
+Local: inputs/ONE_BIT_WORKSPACE.md
+Original: 05-knowledge/results/native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md
+SHA256-LF: 1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162
+
+Local: inputs/RELATIONAL_KERNEL_HOLONOMY.md
+Original: session48-kernel-relations/RELATIONAL_KERNEL_HOLONOMY.md (frozen immediate parent)
+SHA256-LF: 798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927
+
+Native source/path/partner reconstruction in check.py is adapted transparently from the frozen parent checker,
+then supplemented by independent affine-code catalogues, canonical-phase linear predicates extracted from literal owners, no-return search,
+bounded-support generator routing, exact character counts, and direct integer Laplacian tests.
+Parent check.py SHA256-LF: 1e527774040761cd06ca401cb7ae15a8510b46700f6842507c599f24b22cd598
+
+Packaging-only archive rename: CUBES.txt preserves the exact source bytes and original CUBES.md provenance above. Historical relative Markdown links remain inactive inside the text archive.

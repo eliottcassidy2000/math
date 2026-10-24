@@ -1,0 +1,33 @@
+{
+  "closed": true,
+  "files": {
+    "PORTABILITY_REPLAY.json": "5bf082e04e91b1d820004d840d71967358d0af709efdc8c10288d8b8838d5ecb",
+    "PROOF_AUDIT.md": "818a5e8375fbf3ede029b75e56f7091846f1dcf4144acee471318644e5ce587d",
+    "README.md": "a8463528192fd7cfb13137a54ff30728baa2a956870583f3529a6927cb17c251",
+    "SOURCE_AUTHENTICATION.json": "8e729d6e9c1f7a7f1c1336a3dcb8732f66776b502c19ad4dad60e82e144d2832",
+    "check_independent.py": "6e04518f70e643081129c13b41adba32991754585c3924f1ced3beb17ac8c0c8",
+    "inputs/frozen-sandwich/MANIFEST.json": "4ea97676ad56b5e0204b0f7584e0bcd89a005c160a8bf78f909ce90dca7d4a44",
+    "inputs/frozen-sandwich/NORMAL_O_EQUIVALENCE.json": "d271eafbb242d3f7904f749e4fecc458165f37353d7862fbde234ed0737b2715",
+    "inputs/frozen-sandwich/PORTABILITY_REPLAY.json": "e512b932b90de59bb2f9a05c6060c4b31a3faa39a38a957ec819368e15189f6b",
+    "inputs/frozen-sandwich/README.md": "496aabcbd15558c05c5f8ba9b26f66735f701c36feacfad09aeff303bc04b7f0",
+    "inputs/frozen-sandwich/SOURCE_PINS.json": "fe1ecfdde668e56ae2944902635645d10afaa316d63ae0e5e6d83e21aaf1c581",
+    "inputs/frozen-sandwich/THEOREM.md": "2600cc064204df7242940ed96a71aec7bf1394eb511b448a434a9c0e790fc7ce",
+    "inputs/frozen-sandwich/check.py": "7cbd2d98718b07dcf4894fec4c03406d920810f5b7f39b24483d7980a81dfc18",
+    "inputs/frozen-sandwich/inputs/CUBES.txt": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "inputs/frozen-sandwich/inputs/ONE_BIT_WORKSPACE.txt": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+    "inputs/frozen-sandwich/inputs/PRIOR_CENTERS.txt": "be5717f730c9325b6d68113eb6826b0b614c4e98af0e285eddd56fdaabd8ef3e",
+    "inputs/frozen-sandwich/inputs/PRIOR_CENTER_LAW.txt": "1afae3b3afadee521c3f4f0c7f619ff5f9619e1719ed6cb414b9e3d457a011f7",
+    "inputs/frozen-sandwich/inputs/PRIOR_GLOBAL_OBSERVER.txt": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+    "inputs/frozen-sandwich/inputs/PRIOR_NONSTRONG.txt": "016fcbf20415d3f0c069a2feea7e9f5e40e3d24d46735034dbd70cf7793acd49",
+    "inputs/frozen-sandwich/inputs/PRIOR_SQUARE_DIAGONAL.txt": "a5f34a8d0aaa4be75649cca728dc2a46bc25a119b9e941c9151fde3a0dd05931",
+    "inputs/frozen-sandwich/normal.json": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+    "inputs/frozen-sandwich/optimized.json": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+    "inputs/frozen-sandwich/verify_manifest.py": "fbde748f47ab3a08c5c71555669bea2e1eb7432efa5ae8993406cf755b455e08",
+    "normal.json": "7d4f162d8c88402beb02b405467f9eaeaa5ed874acdcda9ed2c3a818e2b66bec",
+    "optimized.json": "7d4f162d8c88402beb02b405467f9eaeaa5ed874acdcda9ed2c3a818e2b66bec",
+    "theorem-normal-replay.json": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+    "theorem-optimized-replay.json": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+    "verify_manifest.py": "3a1bdc9b5ea345bf0db7d54b1eb8cf2df09e868f65a849e7a856a43933a67cfb"
+  },
+  "hash_convention": "SHA256 of LF-normalized bytes"
+}

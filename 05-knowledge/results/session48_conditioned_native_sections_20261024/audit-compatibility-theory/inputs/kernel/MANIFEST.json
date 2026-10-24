@@ -1,0 +1,18 @@
+{
+  "files": {
+    "AUDIT.md": "5d554c49e1c1a43d3382d6c530ea819d355bb8ec5b92b646fc7d8cca1947ec1f",
+    "README.md": "02f0edecba7a1ef71ae6ac8d9654a0060e7d8ad61101c3ba9f8a8630451d10ca",
+    "RELATIONAL_KERNEL_HOLONOMY.md": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927",
+    "Sourcearchives.txt": "c4d0180981dcb46515575003c0b1a422a783540e8d42469a96a4299e14aadb31",
+    "check.py": "1e527774040761cd06ca401cb7ae15a8510b46700f6842507c599f24b22cd598",
+    "inputs/CUBES.txt": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "inputs/NEUTRAL_FIBRE_LIFTING.md": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+    "inputs/ONE_BIT_WORKSPACE.md": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+    "normal-check.txt": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc",
+    "optimized-check.txt": "ef4153c71647e606eaea3f7671289d20c61c45ad88572c43204d2a120cf613dc",
+    "receipt.json": "3e6f2295b89c865646e7be5a4459df6715ddbb3aa190c847445ada2e9f29b415",
+    "verify_manifest.py": "fbde748f47ab3a08c5c71555669bea2e1eb7432efa5ae8993406cf755b455e08"
+  },
+  "hash_convention": "SHA256 of bytes after CRLF-to-LF normalization; portable closed package; manifest excludes itself",
+  "source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7"
+}

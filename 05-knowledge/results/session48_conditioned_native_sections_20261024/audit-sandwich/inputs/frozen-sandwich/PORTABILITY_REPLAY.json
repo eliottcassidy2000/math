@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "method": "copy only the closed manifest inventory plus MANIFEST.json into a temporary directory; run from /tmp",
+  "manifest_input_files": 15,
+  "normal_optimized_byte_equal": true,
+  "agrees_with_packaged_normal": true,
+  "receipt_sha256": "a497b1d9317129d913ea18ea6bc6e9deaae3fbc7dff1f368e53c3b1015ade8d5",
+  "manifest_verifier": "PASS portable closed manifest: 15 files; UTF-8/LF-normalized SHA256",
+  "runtime_dependencies": "Python standard library and vendored source archives only"
+}
