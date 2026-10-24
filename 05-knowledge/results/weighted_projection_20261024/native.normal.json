@@ -1,0 +1,208 @@
+{
+  "checks": 779553,
+  "coefficients": {
+    "base": {
+      "kappa": "4032/67",
+      "max": "16",
+      "min": "67/252"
+    },
+    "enumerated_subsets": 1048576,
+    "explicit_weight_fixture": {
+      "all_U_weights": 1,
+      "auxiliary_odds_2_kappa": "13048/115",
+      "kappa": "27440",
+      "max": "493920",
+      "min": "18",
+      "reservoir_V_odds": {
+        "1394": 3,
+        "1425": 1,
+        "1457": 3,
+        "1477": 2,
+        "1480": 2,
+        "1549": 2,
+        "1638": 1,
+        "1691": 3,
+        "176": 3,
+        "1921": 2,
+        "1974": 1,
+        "2071": 2,
+        "2176": 2,
+        "2185": 2,
+        "2581": 2,
+        "2837": 3,
+        "2905": 2,
+        "2945": 3,
+        "3000": 1,
+        "3369": 1
+      }
+    },
+    "moving_pin": {
+      "kappa": "820/29",
+      "max": "41",
+      "min": "29/20"
+    },
+    "native_uniform_bounds": [
+      {
+        "H_uniform": 6025208,
+        "full_gap": "67/938706197667840",
+        "interior_gap": "67/19474560",
+        "outside_sources": 60
+      },
+      {
+        "H_uniform": 6550852,
+        "full_gap": "67/1050182282096640",
+        "interior_gap": "67/20039040",
+        "outside_sources": 61
+      }
+    ]
+  },
+  "dependency_sha256": {
+    "05-knowledge/results/three_target570_20261024/bank.json": "1e996f843fc895eaf9c6c5b78624bcdbcdae393ee70dbafc06972e4bcffd42e6",
+    "05-knowledge/results/three_target570_20261024/bank.py": "88ae1f769cf5dc77d0430b6253a847e8090589a6f2a13fc4c84d66a87116cdfe",
+    "05-knowledge/results/three_target570_20261024/common.py": "9e3e7fc27858cac4de651005f5d4ed0cca9c7f292756f6664f5066029590c794",
+    "05-knowledge/results/three_target570_20261024/menus.json": "445021cc24c9ed4029e184fc5e3af998e98bec5db471a1394860cb99b651c7fd",
+    "05-knowledge/results/three_target570_20261024/route.py": "2de3d893c850e1a23e5b68c5de7a02a71fe946b2a00d369ecb2ed6431adba40e",
+    "05-knowledge/results/three_target570_20261024/twelve.py": "c2f94e2d245402ecce29bcfc912ae68ea7311a1b22fc4caa4df8482cee76c6bf"
+  },
+  "frozen_revision": "34b0a4cbce72b6986fabd6d71041448a17a77004",
+  "native_events": [
+    {
+      "binary_sources": 81,
+      "edge_probes": {
+        "outside_add": {
+          "events": 480,
+          "max_clocks": 29,
+          "max_support": 12
+        },
+        "outside_remove": {
+          "events": 480,
+          "max_clocks": 33,
+          "max_support": 14
+        },
+        "outside_swap": {
+          "events": 528,
+          "max_clocks": 38,
+          "max_support": 14
+        }
+      },
+      "mode": "base"
+    },
+    {
+      "binary_sources": 81,
+      "edge_probes": {
+        "outside_add": {
+          "events": 288,
+          "max_clocks": 33,
+          "max_support": 14
+        },
+        "outside_remove": {
+          "events": 288,
+          "max_clocks": 33,
+          "max_support": 14
+        },
+        "outside_swap": {
+          "events": 336,
+          "max_clocks": 37,
+          "max_support": 16
+        }
+      },
+      "mode": "one_pin"
+    },
+    {
+      "binary_sources": 81,
+      "edge_probes": {
+        "outside_add": {
+          "events": 288,
+          "max_clocks": 37,
+          "max_support": 14
+        },
+        "outside_remove": {
+          "events": 288,
+          "max_clocks": 37,
+          "max_support": 14
+        },
+        "outside_swap": {
+          "events": 336,
+          "max_clocks": 40,
+          "max_support": 14
+        },
+        "root176_refresh": {
+          "events": 336,
+          "max_clocks": 89,
+          "max_support": 24
+        }
+      },
+      "mode": "twelve_pins"
+    },
+    {
+      "binary_sources": 80,
+      "edge_probes": {
+        "outside_add": {
+          "events": 480,
+          "max_clocks": 31,
+          "max_support": 14
+        },
+        "outside_remove": {
+          "events": 480,
+          "max_clocks": 29,
+          "max_support": 12
+        },
+        "outside_swap": {
+          "events": 528,
+          "max_clocks": 37,
+          "max_support": 14
+        }
+      },
+      "mode": "base"
+    },
+    {
+      "binary_sources": 80,
+      "edge_probes": {
+        "outside_add": {
+          "events": 288,
+          "max_clocks": 29,
+          "max_support": 12
+        },
+        "outside_remove": {
+          "events": 288,
+          "max_clocks": 29,
+          "max_support": 12
+        },
+        "outside_swap": {
+          "events": 336,
+          "max_clocks": 38,
+          "max_support": 14
+        }
+      },
+      "mode": "one_pin"
+    },
+    {
+      "binary_sources": 80,
+      "edge_probes": {
+        "outside_add": {
+          "events": 288,
+          "max_clocks": 29,
+          "max_support": 12
+        },
+        "outside_remove": {
+          "events": 288,
+          "max_clocks": 30,
+          "max_support": 14
+        },
+        "outside_swap": {
+          "events": 336,
+          "max_clocks": 40,
+          "max_support": 14
+        },
+        "root176_refresh": {
+          "events": 336,
+          "max_clocks": 89,
+          "max_support": 24
+        }
+      },
+      "mode": "twelve_pins"
+    }
+  ],
+  "scope": "entire 2^20 coefficient census; edge probes sample all update types and band grades; proof pays all representatives",
+  "status": "PASS exact native coefficient census and sampled full weighted-edge replay"
+}

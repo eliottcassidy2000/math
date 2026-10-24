@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-24 — identical packed groups can use different parity bases
+
+- **Affected probe:** unpublished weighted-projection replay of Session47's fractional helper certificate. It initially compared the certificate's charge-array index directly with the earlier three-target integer code.
+- **Minimal witness / first failed implication:** incoming charge1 is charge2 in the earlier basis, witnessed by helper quadruple `{368,776,2983,3187}`. Both displays use `16*x+y` and the same abstract group; their four parity generators differ.
+- **Repair / detection:** the exact replay rejected the first mismatched family. The incoming basis is `(Y1,Y2,Y3,Y4)`, the earlier basis `(Y0,Y1,Y2,Y3)`, and all3528 original nodes satisfy `Y0 mod2=(X mod2) XOR (Y4 mod2)`. Transport by the resulting group automorphism before testing each certificate. No false theorem or accepted receipt was published.
+- **Strongest survivor / next question:** complete coverage and weight inequalities are invariant under the authenticated basis conversion; raw displayed charge names are not. Retain generator provenance through every packet merge. See [weighted replay](../05-knowledge/results/weighted_projection_20261024/robust.py) and [proof](../05-knowledge/results/weighted_projection_20261024/ROBUST.md).
+
 ## 2026-10-24 — unchanged target bits do not bound unmarked lift work
 
 - **Affected draft:** the unpublished abstract shielded-reservoir theorem in `guarded_component_completion_20261024/sections/SHIELDED_RESERVOIR.md`; its actual40-source instance was already fully marked.

@@ -1,0 +1,1053 @@
+{
+  "checks": 35123,
+  "coupling": [
+    {
+      "adjacent_ordered_pairs": 480,
+      "weights": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "adjacent_ordered_pairs": 480,
+      "weights": [
+        "1/1000",
+        "1000",
+        "2",
+        "1/7",
+        "13",
+        "5"
+      ]
+    }
+  ],
+  "hostile": {
+    "T": [
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "gap_upper_bounds": [
+      "760536/110125",
+      "22615193601/24443875000",
+      "1800452294261001/16500687625000000",
+      "175503827254425110001/15712506875125000000000"
+    ],
+    "label_carrier_only": true,
+    "mass_coefficients_by_reservoir_grade": [
+      2,
+      56,
+      44,
+      8,
+      0
+    ]
+  },
+  "scope": "finite algebraic controls; universal bounds follow PROOF.md; no toy law is claimed to be a ROOT law",
+  "status": "PASS exact rational coupling, detailed balance, PSD gap certificates and weight hostile",
+  "toy_cases": [
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "3/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "3/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "9/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "9/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "3/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "3/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 16
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/4",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 16
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/4",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "1",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "1",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/4",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "7/4",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5/2",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 0
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/3600",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "9/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "4",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/3840",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "9/5",
+      "odds": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "61/40",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "61/40",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "77/15",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 1,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "77/15",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 2,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "5",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 16
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "17/2",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 16
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "17/2",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "1",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 14
+      },
+      "k": 4,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "1",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "17/2",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 7
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "17/2",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "71/8",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 9
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 5
+      },
+      "k": 6,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "71/8",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "71/8",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "71/8",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 0
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "1",
+      "full": {
+        "certified_gap_lower_bound": "1/10080",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "2/225",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "15/4",
+      "m": 4,
+      "max_actual_cluster_ratio": "56/25",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    },
+    {
+      "H": "56/5",
+      "auxiliary_odds": "2",
+      "full": {
+        "certified_gap_lower_bound": "1/10752",
+        "exact_LDL": "PASS",
+        "states": 3
+      },
+      "interior": {
+        "certified_gap_lower_bound": "1/120",
+        "exact_LDL": "PASS",
+        "states": 1
+      },
+      "k": 7,
+      "kappa": "4",
+      "m": 4,
+      "max_actual_cluster_ratio": "56/25",
+      "odds": [
+        "1/10",
+        "10",
+        "2",
+        "1/3"
+      ],
+      "q": 1
+    }
+  ]
+}
