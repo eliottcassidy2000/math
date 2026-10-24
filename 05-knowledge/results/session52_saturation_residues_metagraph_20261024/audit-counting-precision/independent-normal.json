@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "checks": 33895,
+  "producer_patch_sha256": "8880e6a357ecd0aa426378e6a9e2325d20c235124925eb9d05e9cddf66b587c0",
+  "source_pins": [
+    {
+      "path": "01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "source_sha256": "2ebefe2e77b93db500ab1e585df4162815e8d677fbba9e2b915fbb185535f5b8",
+      "result_sha256": "028653354ae590b99ba468f517f022ff13ef9a1854609bfdc2bd8c9287c8206f",
+      "replacements": 7
+    },
+    {
+      "path": "01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "source_sha256": "49b8e19e6a3dc988e700537fc5b0868760222a9b4a26968735f269dddf851293",
+      "result_sha256": "eed2972de9f122b8d9eae1e182eaf47d11ca3e9442b343f73be1d3e9c2116338",
+      "replacements": 7
+    }
+  ],
+  "direct_triangle_controls": [
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "cyclicity_sum": 2,
+      "eigenvalue": -1
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "cyclicity_sum": 64,
+      "eigenvalue": 2
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "cyclicity_sum": 2560,
+      "eigenvalue": 6
+    },
+    {
+      "n": 6,
+      "labelled_tournaments": 32768,
+      "cyclicity_sum": 163840,
+      "eigenvalue": 11
+    }
+  ],
+  "scope": "Exact narrow diff pins, unchanged attribution/dependencies/result paths/numeric tables, direct-triangle cyclicity eigenfunction identity for every labelled tournament n=3..6. No shared-source edits."
+}

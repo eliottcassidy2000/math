@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "ffa459d8c47ff9862179a4a4e2b39fa087c470d15257bdd6a0883909b0b93684"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c7142923efbc1f7cad7b578554e29100a5b5038e06eedc6206979961c98a201d"
+    },
+    {
+      "path": "audit.py",
+      "sha256": "fdb4389689b5563552cc9c631a19c3b8ab16708a321185f715cc5d5d6a1921f0"
+    },
+    {
+      "path": "compare.py",
+      "sha256": "5d933e1cf71ab4efc271baa90073e81d625e1b3c69eddbea49bae1150df6cc58"
+    },
+    {
+      "path": "comparison-normal.json",
+      "sha256": "a4343249b4ad3565cac605da7097e50af26e95d9025700c75628585d372d7e85"
+    },
+    {
+      "path": "comparison-optimized.json",
+      "sha256": "a4343249b4ad3565cac605da7097e50af26e95d9025700c75628585d372d7e85"
+    },
+    {
+      "path": "complete.py",
+      "sha256": "c4188ca75bf98e8da970649753030731f63ee30cdc9402c7d7ed4b8348d7e9f4"
+    },
+    {
+      "path": "extra-rotation-controls-optimized.json",
+      "sha256": "6ce9b2d4c0744755ef9ed64d71bf85400f460ed87a9fe9ab16d3fa25d49583a4"
+    },
+    {
+      "path": "extra-rotation-controls-replay.json",
+      "sha256": "6ce9b2d4c0744755ef9ed64d71bf85400f460ed87a9fe9ab16d3fa25d49583a4"
+    },
+    {
+      "path": "extra-rotation-controls.json",
+      "sha256": "6ce9b2d4c0744755ef9ed64d71bf85400f460ed87a9fe9ab16d3fa25d49583a4"
+    },
+    {
+      "path": "hostile-normal.json",
+      "sha256": "3362e676a351b4f2d30b1aba93f95c677f0195a839d8500eb2c7733f42012e09"
+    },
+    {
+      "path": "hostile-optimized.json",
+      "sha256": "3362e676a351b4f2d30b1aba93f95c677f0195a839d8500eb2c7733f42012e09"
+    },
+    {
+      "path": "hostile-packet-normal.json",
+      "sha256": "f628854027099e1a510af7c3e0c0a9d92f58e32f533c8146c4524bd43deae2da"
+    },
+    {
+      "path": "hostile-packet-optimized.json",
+      "sha256": "f628854027099e1a510af7c3e0c0a9d92f58e32f533c8146c4524bd43deae2da"
+    },
+    {
+      "path": "hostile.py",
+      "sha256": "ad39e7dcfa7748270439ab3ee971fbe684f05d518780096ec59c5b3a21ec628a"
+    },
+    {
+      "path": "hostile_packet.py",
+      "sha256": "d23473aa1002d6b44a0f15d09cd68b960ec36c5c1e5e9d9cb735c71be38500d7"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "84d7faad7a4c09c3c7e974b0a0a5307346e881a90b221fcbcaf5cbe4ba1f57ae"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "84d7faad7a4c09c3c7e974b0a0a5307346e881a90b221fcbcaf5cbe4ba1f57ae"
+    },
+    {
+      "path": "parent-cards-optimized.json",
+      "sha256": "8868337b79827f42c8532c8c005fd47b326f1244c8bf230880f9226d0679dae3"
+    },
+    {
+      "path": "parent-cards.json",
+      "sha256": "8868337b79827f42c8532c8c005fd47b326f1244c8bf230880f9226d0679dae3"
+    },
+    {
+      "path": "parent_cards.py",
+      "sha256": "50324e52730fae45ed3c562f88e1a838c09d6729bf1dc7ad12a54e4bfb00662b"
+    },
+    {
+      "path": "producer-replay-normal.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49"
+    },
+    {
+      "path": "producer-replay-optimized.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49"
+    },
+    {
+      "path": "producer/MANIFEST.json",
+      "sha256": "7431d29c032d92aa6da1807c436bb839ed9c84909872de31d7f64b09d4963d43"
+    },
+    {
+      "path": "producer/README.md",
+      "sha256": "9164904fd41fa3eecd025b3d97180b2b49c672f636882c380ab5b52c173721a7"
+    },
+    {
+      "path": "producer/SOURCE_PINS.json",
+      "sha256": "fff2a09d864bbca4314f0529ae59cd2d1254b087156a9f2af27806ddd04a3c03"
+    },
+    {
+      "path": "producer/THEOREM.md",
+      "sha256": "3762a637230f2ec1ab5a109e9f754bbb760b5574f52f83fea55fa912f2486006"
+    },
+    {
+      "path": "producer/check.py",
+      "sha256": "3936f8aac865e0cde8fc75ff3978f0e3fb9f0dabb76730eb2fc5d6f187756554"
+    },
+    {
+      "path": "producer/engine.py",
+      "sha256": "b69b96c789e31be9a16b192e58e75beb90f683288c4c4db2a3f99ba8a681fc38"
+    },
+    {
+      "path": "producer/normal.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49"
+    },
+    {
+      "path": "producer/normal.out",
+      "sha256": "eb3b6c76ce53166818f00f30d789ebe445f22fe2d32fda0d3225a1e812616327"
+    },
+    {
+      "path": "producer/optimized.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49"
+    },
+    {
+      "path": "producer/optimized.out",
+      "sha256": "eb3b6c76ce53166818f00f30d789ebe445f22fe2d32fda0d3225a1e812616327"
+    },
+    {
+      "path": "producer/sources/THM-554-score-partition.md",
+      "sha256": "cd63b04ea0395bf1d5cb50fdc23b34d12d39fceab74f627ead2f7f6dc19f7db3"
+    },
+    {
+      "path": "producer/sources/THM-555-score-multiplicities.md",
+      "sha256": "3abc52c76626344ff8a4a79ddc5f754e54b9c3948ffd4304031336cc881b23c8"
+    },
+    {
+      "path": "producer/sources/fixed-path-fibre.txt",
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+    },
+    {
+      "path": "producer/sources/path-transport.md",
+      "sha256": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6"
+    },
+    {
+      "path": "producer/sources/regular-eleven-counts.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd"
+    },
+    {
+      "path": "producer/sources/regular-eleven-theorem.md",
+      "sha256": "d7ec1b4ad135c025cf2a09e63040cb8b22f99db612842bbf6880cdcd679060b6"
+    },
+    {
+      "path": "producer/sources/score-layer-separation.md",
+      "sha256": "0c6b1ef1464bffe4f63ecec364396184d8e8698e2c4a75de0a945351d715155e"
+    },
+    {
+      "path": "producer/sources/tiling-dictionary.txt",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    },
+    {
+      "path": "producer/verify_manifest.py",
+      "sha256": "464815b005ce96e15a5c2e21c13782a5c800badbb9488046dce321a1f7677d93"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "515b1f7671f5c9bce8456af63daa4ed84acc0532b189fb00a88b1e573d6e9753"
+    },
+    {
+      "path": "relocated-audit/audit.py",
+      "sha256": "fdb4389689b5563552cc9c631a19c3b8ab16708a321185f715cc5d5d6a1921f0"
+    },
+    {
+      "path": "relocated-audit/hostile.py",
+      "sha256": "ad39e7dcfa7748270439ab3ee971fbe684f05d518780096ec59c5b3a21ec628a"
+    },
+    {
+      "path": "relocated-audit/normal.json",
+      "sha256": "84d7faad7a4c09c3c7e974b0a0a5307346e881a90b221fcbcaf5cbe4ba1f57ae"
+    },
+    {
+      "path": "relocated-audit/optimized.json",
+      "sha256": "84d7faad7a4c09c3c7e974b0a0a5307346e881a90b221fcbcaf5cbe4ba1f57ae"
+    },
+    {
+      "path": "relocated-audit/parent-cards.json",
+      "sha256": "8868337b79827f42c8532c8c005fd47b326f1244c8bf230880f9226d0679dae3"
+    },
+    {
+      "path": "relocated-audit/parent_cards.py",
+      "sha256": "50324e52730fae45ed3c562f88e1a838c09d6729bf1dc7ad12a54e4bfb00662b"
+    },
+    {
+      "path": "rotation_controls.py",
+      "sha256": "0b19a6f5bfc7268ec5c46033383709a29e526d15f2447d97fe06ea8e807e4bd7"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "5f1a1fc1b28f5521a04575a7c78d0c9e85049897a66cd147bad555c9fe1e8dc8"
+    }
+  ],
+  "status": "PASS"
+}

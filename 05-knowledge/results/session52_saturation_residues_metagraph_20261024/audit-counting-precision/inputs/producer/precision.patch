@@ -1,0 +1,120 @@
+--- a/01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md
++++ b/01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md
+@@ -1,7 +1,7 @@
+ ---
+ id: THM-587
+-title: The per-level metagraph multiplicities are the PER-LEVEL SIGNED CYCLE INDEX P_n(x) = (1/n!) sum_sigma prod_cycles (1 + s_c x^{ell_c}) of the vertex-induced signed S_n action on the C(n,2) arcs; its two antipodal evaluations are P_n(1)=A000568(n) (the all-odd-cycle tournament Burnside) and P_n(-1)=SC(n) (self-converse count = the ANTIPODAL EULER/LEFSCHETZ number); it computes the full metagraph spectrum from n! permutations, past the 2^{C(n,2)} enumeration wall
+-status: PROVED (Molien/Burnside for the level-graded character + Lefschetz fixed-point count of the complement involution); VERIFIED exactly -- reproduces the n<=6 block spectra (cross-check MATCH), P_n(1)=A000568 and P_n(-1)=SC=2,2,8,12,88,176 for n=3..8 (SC cross-checked vs CLAUDE.md NS-merged 0,1,2,22,184)
++title: The per-level metagraph multiplicities are the PER-LEVEL SIGNED CYCLE INDEX P_n(x) = (1/n!) sum_sigma prod_cycles (1 + s_c x^{ell_c}) of the vertex-induced signed S_n action on the C(n,2) arcs; its two antipodal evaluations are P_n(1)=A000568(n) (the all-odd-cycle tournament Burnside) and P_n(-1)=SC(n) (self-converse count = the GRADED ANTIPODAL TRACE); it computes the full metagraph spectrum from n! permutations, past the 2^{C(n,2)} enumeration wall
++status: PROVED (Molien/Burnside for the level-graded character + trace fixed-class count of the complement involution); VERIFIED exactly -- reproduces the n<=6 block spectra (cross-check MATCH), P_n(1)=A000568 and P_n(-1)=SC=2,2,8,12,88,176 for n=3..8 (SC cross-checked vs CLAUDE.md NS-merged 0,1,2,22,184)
+ source: klein-2026-06-29-S2
+ depends_on:
+   - THM-584   # complement = antipodal map; metagraph = S_n-quotient of Q_d; mult(k)=dim invariants at level k
+@@ -10,7 +10,7 @@
+   - HYP-3543  # mac-mini: metagraph spectrum = LRC cap spectrum (one R); identified the signed-Burnside nature
+   - HYP-3538  # the R +-1 organizing principle
+   - HYP-2080  # self-complementary / Burnside counts
+-  - HYP-3544  # the Kaczynski/computational-homology refinement of P_n(-1) into Betti numbers
++  - HYP-3544  # proposed Kaczynski/computational-homology refinement; requires a specified complex and differential
+ results:
+   - 04-computation/signed-cycle-index-metagraph-spectrum.py
+   - 05-knowledge/results/signed-cycle-index-metagraph-spectrum.out
+@@ -39,10 +39,11 @@
+    contributing `2^{#cycles}` — exactly the classical all-odd-cycle tournament Burnside (CLAUDE.md:
+    "Fix=0 for even cycles, 2^{orbit-pairs} for all-odd").
+ 2. **`P_n(-1) = SC(n)`** — the number of **self-converse** (self-complementary) tournament classes.
+-   This is the **Lefschetz fixed-point count** of the complement involution `R` on the iso-class space:
++   This is the **trace fixed-class count** of the complement involution `R` on the iso-class space:
+    `P_n(-1) = sum_k (-1)^k mult(k) = dim V_+ - dim V_- = trace(R) = #{classes fixed by R} = SC(n)`.
+-   It is the **equivariant Euler characteristic** of the level-graded invariant complex (the antipodal
+-   Euler number), since `R` acts as `(-1)^k` on level `k` (THM-584).
++   This is the **graded antipodal trace**, since `R` acts as `(-1)^k` on level `k` (THM-584).
++   No complex or differential is specified here, so no topological Euler characteristic or Betti-number
++   interpretation is asserted.
+ 
+ Consequently `dim V_+ = (P_n(1)+P_n(-1))/2 = (A000568+SC)/2 = V_merged` (the merged metagraph
+ `G_n/Z_2`) and `dim V_- = (P_n(1)-P_n(-1))/2 = (A000568-SC)/2 = #NS pairs`.
+@@ -58,7 +59,9 @@
+ excluded, factor `1`, or included, factor `s_c x^{ell_c}`). Averaging over `S_n` gives `P_n(x)`.
+ (NB: this is the SYMMETRIC-subset trace; it differs from the exterior `det(I + x M_sigma)` by reordering
+ signs — only this version matches the verified spectrum.)
+-`P_n(1)`: Molien at `x=1` is `(1/n!) sum_sigma dim(W^sigma) = #orbits on Q_d = A000568(n)`.
++`P_n(1)`: for `W = direct_sum_k W_k`, Molien at `x=1` is
++`(1/n!) sum_sigma trace(sigma on W) = #orbits on Q_d = A000568(n)`.
++Each trace counts labelled tournaments fixed by `sigma`; it is not `dim(W^sigma)`.
+ `P_n(-1) = sum_k (-1)^k mult(k)`; since `R = antipodal` acts as `(-1)^k` on level `k`, this is
+ `trace(R)` on the class space, whose value for an involution is the number of fixed points `= SC(n)`. ∎
+ 
+@@ -86,11 +89,11 @@
+   it delivers the FULL metagraph spectrum (eigenvalues `d-2k` with multiplicities) at `n=7` (`2^21`),
+   `n=8` (`2^28`), and beyond — where direct metagraph construction is infeasible. Engineering: a
+   closed-form spectral generator for the tournament dominance-reversal metagraph.
+-- **`P_n(-1) = SC(n)` is the antipodal Euler number.** Complement `R` is free on the `2^d` labeled
+-  tournaments (`x != x XOR 1`), so `(Q_d, R)` is a free `Z_2`-space (the Borsuk-Ulam setting); the
+-  self-converse census is its equivariant Euler characteristic. This is the entry point for the
+-  Ky-Fan / computational-homology refinement (HYP-3544): refine `chi = SC(n)` into the `Z_2`-equivariant
+-  Betti numbers of the level-graded complex; the R-odd Betti numbers are the Borsuk-Ulam obstruction.
++- **`P_n(-1) = SC(n)` is the graded antipodal trace.** For `n>=2`, complement `R` is free on
++  labelled tournaments but can fix isomorphism classes. The self-converse census is the trace of
++  this class involution. The proposed Ky-Fan / computational-homology refinement (HYP-3544) requires
++  an independently defined equivariant complex and differential; no Betti numbers or Borsuk-Ulam
++  obstruction follow from this character formula alone.
+ - **The two evaluations unify two Burnsides.** `P_n(1)` is the tournament Burnside (all-odd-cycle), and
+   `P_n(-1)` is the self-converse Burnside, as the `x = +1 / -1` antipodal specializations of one signed
+   cycle index. The whole metagraph spectrum interpolates between them, level by level.
+--- a/01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md
++++ b/01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md
+@@ -1,7 +1,7 @@
+ ---
+ id: THM-588
+-title: The dominance-reversal tournament metagraph Laplacian has spectrum {2k : mult(k)>0} (mult = THM-587 signed cycle index); since mult(1)=0 (proved) and the cyclicity 3-cycle count is a nonzero level-2 invariant (mult(2)>=1), its ALGEBRAIC CONNECTIVITY is exactly 4 for every n>=3, the arc-flip random walk P=A/d has spectral gap exactly 4/C(n,2), and the Fiedler (slowest) mode is the 3-cycle count
+-status: PROVED (mult(1)=0 by the transposition argument; mult(2)>=1 since cyclicity is a degree-2 relabeling invariant with nonzero level-2 part; alg.conn = 2*min{k>=1:mult(k)>0} = 4); VERIFIED n=3..9 (mult(1)=0, mult(2)=1, alg.conn=4, gap=4/d) and the Fiedler mode = cyclicity (|corr|=1.000 n=4,5; 0.998 n=6)
++title: The dominance-reversal tournament metagraph Laplacian has spectrum {2k : mult(k)>0} (mult = THM-587 signed cycle index); since mult(1)=0 (proved) and the centered cyclicity is a nonzero level-2 invariant (mult(2)>=1), its ALGEBRAIC CONNECTIVITY is exactly 4 for every n>=3, the arc-flip random walk P=A/d has spectral gap exactly 4/C(n,2), and the Fiedler (slowest) mode is the centered 3-cycle count
++status: PROVED (mult(1)=0 by the transposition argument; mult(2)>=1 since cyclicity is a degree-2 relabeling invariant with nonzero level-2 part; alg.conn = 2*min{k>=1:mult(k)>0} = 4); VERIFIED n=3..9 (mult(1)=0, mult(2)=1, alg.conn=4, gap=4/d) and the Fiedler mode = centered cyclicity (|corr|=1.000 n=4,5; 0.998 n=6)
+ source: klein-2026-06-29-S3
+ depends_on:
+   - THM-587   # mult(k) = coeff of the signed cycle index; eigenvalues of A are d-2k
+@@ -35,9 +35,12 @@
+    `2 * min{k>=1 : mult(k)>0} = 2*2 = 4`.
+ 5. **Arc-flip walk gap.** The simple random walk `P = A/d` has spectral gap `1 - lambda_2 = 4/d
+    = 4/C(n,2)` exactly (relaxation `~ C(n,2)/4`, mixing `O(n^2 log n)`).
+-6. **Fiedler mode = cyclicity.** The eigenvector at `A`-eigenvalue `d-4` (level 2) is the 3-cycle count
+-   `c(T) = C(n,3) - sum_i C(s_i,2)` (verified `|corr| = 1.000` n=4,5; `0.998` n=6). It is the
+-   slowest-equilibrating observable of the dominance-reversal walk.
++6. **Fiedler mode = centered cyclicity.** A nonzero eigenfunction at `A`-eigenvalue `d-4`
++   (level 2) is `c_0(T) = c(T) - C(n,3)/4`, where
++   `c(T) = C(n,3) - sum_i C(s_i,2)` is the 3-cycle count (historically verified
++   `|corr| = 1.000` n=4,5; `0.998` n=6). The centering mean is for uniform labelled tournaments,
++   equivalently labelled-orbit-size weights on classes, not uniform weights on classes.
++   It is a Fiedler observable of the dominance-reversal walk.
+ 
+ ## Proof
+ 
+@@ -55,8 +58,11 @@
+ 
+ (4) The metagraph is connected (arc flips connect all tournaments), so `0` is a simple Laplacian
+ eigenvalue (`mult(0)=1`, the constant). The next eigenvalue is `2 * min{k>=1 : mult(k)>0}`; by (2),(3)
+-that minimum is `2`, giving algebraic connectivity `4`. (5) is `(min nonzero L-eigenvalue)/d`. (6) the
+-`d-4` eigenspace is the level-2 invariant space, spanned (for n=3..9) by the cyclicity. ∎
++that minimum is `2`, giving algebraic connectivity `4`. (5) is `(min nonzero L-eigenvalue)/d`.
++(6) A labelled triple is cyclic with probability `1/4`, so the constant Fourier part of `c` is
++`C(n,3)/4`. Its invariant level-1 part vanishes by (2); therefore `c_0` is its nonzero level-2 part.
++Hence `A c_0 = (d-4)c_0` and `L c_0 = 4c_0`. The `d-4` eigenspace is the level-2 invariant space,
++spanned (for n=3..9) by `c_0`. ∎
+ 
+ ## Significance and relation to prior work
+ 
+@@ -64,11 +70,11 @@
+   (opus-S268), whose Markov gap was only conjectured `~ c/n` and whose spectrum is semicircular/messy, the
+   canonical **arc-flip weighted** metagraph has the EXACT gap `4/d` and integer Laplacian spectrum `{2k}`.
+   These are two different normalizations of "the metagraph": S268's slow mode is the H-gradient (`H ≈ 2nd
+-  eigenvector`, a degree-`(n-1)` observable); the arc-flip metagraph's slow mode is the degree-2 cyclicity.
++  eigenvector`, a degree-`(n-1)` observable); the arc-flip metagraph's Fiedler mode is centered cyclicity.
+   Both are real; THM-588 fixes the canonical one and removes the conjecture.
+ - **No-linear / single-quadratic structure.** `mult(1)=0` (no first-order invariant) and `mult(2)=1` (one
+   quadratic invariant) say the lowest nontrivial content of the metagraph is a SINGLE pairwise/quadratic
+-  mode — the cyclicity. This is the structural template behind the LRC transfer HYP-3552: the binding
++  mode — centered cyclicity. This is the structural template behind the LRC transfer HYP-3552: the binding
+   obstruction is purely the second moment, with the first moment forced to vanish.
+ - **Engineering.** All of `mult(k)` (hence the full Laplacian spectrum, complexity `kappa(n)`, neutral-flip
+   trace `tr(A) = sum mult(k)(d-2k) = 2,6,16,60,328,3160,54928` for n=3..9, heat trace, spectral zeta) come

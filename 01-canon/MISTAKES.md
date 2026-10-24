@@ -4,6 +4,19 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-24 — a graded trace is not an unspecified topological invariant
+
+- **Affected sources:** [THM-587](theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md) and [THM-588](theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md).
+- **Failed implications:** a character trace was written as a fixed-subspace dimension; a graded alternating trace was promoted to Euler/Betti information without a complex and differential; the uncentered cyclicity count was called the nonconstant eigenfunction.
+- **Repair:** average representation traces, retain only the graded antipodal trace and fixed-class count, and use c(T)-C(n,3)/4 with uniform labelled-tournament weights (equivalently orbit-size weights on classes). The nonzero constant component is the eigenfunction counterexample. Numerical spectra and counts are unchanged; unrelated historical performance and mixing claims are not revalidated.
+- **Evidence:** the [precision packet](../05-knowledge/results/session52_saturation_residues_metagraph_20261024/counting-precision/PRECISION_NOTES.md) and [independent audit](../05-knowledge/results/session52_saturation_residues_metagraph_20261024/audit-counting-precision/AUDIT.md) pin exact preimages and postimages and reject corrupted inputs in normal and optimized modes.
+
+## 2026-10-24 — a superseded self-converse filter remained unguarded
+
+- **Affected source:** [historical partition note](../05-knowledge/results/sc_partition_formula.md) labelled “every cycle is a fixed point or even” as a corrected iff criterion. The identity type (1,1) cannot reverse the arc between its fixed vertices; a 4-cycle has an even-length antipodal pair orbit that swaps endpoints and is likewise impossible.
+- **Repair:** the already authoritative [THM-283](theorems/THM-283-sc-burnside-formula.md) requires at most one fixed point and every other vertex-cycle length congruent to 2 modulo 4. Its endpoint-monodromy proof was independently repaired on 2026-10-21. A byte-zero historical warning redirects the old note while preserving its body; the valid formula and published numeric prefix are unchanged.
+- **Missing coordinates and controls:** fixed-point multiplicity and the 2-adic valuation of every nonsingleton cycle length. Independent signed-pair and literal-mask controls are in the [counting-lenses packet](../05-knowledge/results/session52_saturation_residues_metagraph_20261024/counting-lenses/README.md) and [audit](../05-knowledge/results/session52_saturation_residues_metagraph_20261024/audit-counting-lenses/AUDIT.md). No new enumeration theorem is claimed.
+
 ## 2026-10-24 — conditional refresh preserves the spectrum, not pointwise laziness
 
 - **Affected wording:** the unpublished weighted-projection theorem called the full conditional-refresh chain lazy because its visible kernel was lazy.

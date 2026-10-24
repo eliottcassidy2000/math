@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "scope": "unweighted simple support of blue-only induced multigraph",
+  "diameter": 3,
+  "unordered_pair_distance_histogram": [
+    [
+      1,
+      9219
+    ],
+    [
+      2,
+      16886
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "unique_distance_three_pair": [
+    63,
+    86
+  ],
+  "exception_node_records": [
+    {
+      "anti_involutions": [
+        [
+          8,
+          7,
+          6,
+          5,
+          9,
+          3,
+          2,
+          1,
+          0,
+          4
+        ]
+      ],
+      "atlas_index": 63,
+      "automorphism_order": 5,
+      "blue_hamiltonian_paths": 185,
+      "blue_presentation_words": 37,
+      "boundary_edges": 20,
+      "canonical_rows": [
+        102,
+        556,
+        792,
+        401,
+        195,
+        220,
+        398,
+        775,
+        563,
+        121
+      ],
+      "internal_degree": 17,
+      "refinement_error": 0,
+      "regular_eleven_component": 60,
+      "stable_cells": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "vertex_orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "anti_involutions": [
+        [
+          6,
+          5,
+          9,
+          8,
+          7,
+          1,
+          0,
+          4,
+          3,
+          2
+        ]
+      ],
+      "atlas_index": 86,
+      "automorphism_order": 5,
+      "blue_hamiltonian_paths": 175,
+      "blue_presentation_words": 35,
+      "boundary_edges": 18,
+      "canonical_rows": [
+        166,
+        588,
+        312,
+        657,
+        323,
+        218,
+        397,
+        790,
+        555,
+        117
+      ],
+      "internal_degree": 17,
+      "refinement_error": 0,
+      "regular_eleven_component": 79,
+      "stable_cells": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "vertex_orbits": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ]
+    }
+  ],
+  "exception_neighbor_lists": [
+    [
+      63,
+      [
+        0,
+        25,
+        44,
+        1296,
+        1718,
+        1972,
+        2304,
+        2916,
+        2934,
+        3863,
+        6431,
+        6893,
+        7036,
+        8149,
+        8520,
+        9427,
+        12943
+      ]
+    ],
+    [
+      86,
+      [
+        42,
+        85,
+        924,
+        1074,
+        1237,
+        2198,
+        3360,
+        3894,
+        4308,
+        6483,
+        9275,
+        10257,
+        10288,
+        10372,
+        11905,
+        12869,
+        13290
+      ]
+    ]
+  ],
+  "exception_simple_degrees": [
+    17,
+    17
+  ],
+  "exception_common_neighbors": [],
+  "pair_total": 26106
+}

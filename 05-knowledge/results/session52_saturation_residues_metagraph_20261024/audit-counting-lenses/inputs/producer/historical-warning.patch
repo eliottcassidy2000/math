@@ -1,0 +1,8 @@
+--- a/05-knowledge/results/sc_partition_formula.md
++++ b/05-knowledge/results/sc_partition_formula.md
+@@ -1,3 +1,5 @@
++> **HISTORICAL / SUPERSEDED — correction boundary, 2026-10-24.** The “CORRECTED RULE” in the original note below is false: arbitrary even cycles are not allowed, and there may not be more than one fixed point. The authoritative criterion is **at most one fixed point, with every other vertex-cycle length congruent to 2 modulo 4**. The identity type `(1,1)` and the 4-cycle type `(4)` are minimal counterexamples to the respective omitted restrictions. Use [THM-283, corrected self-converse Burnside formula](../../01-canon/theorems/THM-283-sc-burnside-formula.md) and its [independently audited endpoint-monodromy repair](converse_tournament_count_channels_20261021/README.md). The original body is retained below solely as historical provenance; its criterion, unfinished exponent, and unmeasured timing prediction are not current results.
++
+ # THEOREM: Partition Formula for SC(n) — Only All-Even Cycle Types Contribute
+ ## opus-2026-04-03-S27
+ 

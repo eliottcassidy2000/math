@@ -1,0 +1,75 @@
+{
+  "actual_copy_not_symlinks": true,
+  "candidate_checker_sha256": "b2aa92ae33c2351b2fae36e24f291edfdbb7f5e0a8a4d672d8e6eac25a85b248",
+  "candidate_gates": 28604,
+  "candidate_manifest_sha256": "af8794a44f63d6251679a0b89d3228cb4c7d7407d9597421cd367a5fa24573c7",
+  "candidate_readme_sha256": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07",
+  "declared_files_copied": 13,
+  "hostile_cases": [
+    {
+      "case": "tampered_input",
+      "outcomes": [
+        {
+          "exit_code": 1,
+          "matched_reason": "input digest mismatch",
+          "optimized": false
+        },
+        {
+          "exit_code": 1,
+          "matched_reason": "input digest mismatch",
+          "optimized": true
+        }
+      ]
+    },
+    {
+      "case": "missing_input",
+      "outcomes": [
+        {
+          "exit_code": 1,
+          "matched_reason": "input missing",
+          "optimized": false
+        },
+        {
+          "exit_code": 1,
+          "matched_reason": "input missing",
+          "optimized": true
+        }
+      ]
+    },
+    {
+      "case": "resealed_wrong_orbits",
+      "outcomes": [
+        {
+          "exit_code": 1,
+          "matched_reason": "published Bolza kernel orbit partition",
+          "optimized": false
+        },
+        {
+          "exit_code": 1,
+          "matched_reason": "published Bolza kernel orbit partition",
+          "optimized": true
+        }
+      ]
+    },
+    {
+      "case": "resealed_overlapping_cycles",
+      "outcomes": [
+        {
+          "exit_code": 1,
+          "matched_reason": "disjoint cycle transcription",
+          "optimized": false
+        },
+        {
+          "exit_code": 1,
+          "matched_reason": "disjoint cycle transcription",
+          "optimized": true
+        }
+      ]
+    }
+  ],
+  "isolated_normal_and_optimized_identical": true,
+  "manifest_only_copy": true,
+  "receipt_sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73",
+  "source_and_frozen_bytes_unchanged": true,
+  "status": "PASS"
+}

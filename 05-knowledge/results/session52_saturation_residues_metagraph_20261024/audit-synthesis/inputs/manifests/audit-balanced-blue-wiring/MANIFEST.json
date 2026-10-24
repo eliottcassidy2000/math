@@ -1,0 +1,246 @@
+{
+  "schema": "sha256-file-manifest-v1",
+  "scope": "independent balanced-blue wiring audit; standalone closure",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "94aacc523961e30a468770288473b26be3af865408b2ad46ffc9dcf7c0bd82cd"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f7070ddb832361be9130de900df6d519f8a57d3f014d360a361d5c084f75fb82"
+    },
+    {
+      "path": "audit.py",
+      "sha256": "0912740d5055876ab66f1c2da22fbb579a521988a70310b4626c368678ab7933"
+    },
+    {
+      "path": "distances-normal.json",
+      "sha256": "a3e05fa40baeda57a702ef0f6ae3da7ca7bef6910df5bafa224b2d4f1210254f"
+    },
+    {
+      "path": "distances-optimized.json",
+      "sha256": "a3e05fa40baeda57a702ef0f6ae3da7ca7bef6910df5bafa224b2d4f1210254f"
+    },
+    {
+      "path": "distances.py",
+      "sha256": "370ce7edf423c68d98d2c18711a0d9a70231969dcc98e9dc0c88f8bde6773866"
+    },
+    {
+      "path": "hostile-normal.json",
+      "sha256": "45ed2681a99e7fc111d4efb5ce71d3b1842fb36937b17c23935943925b498c28"
+    },
+    {
+      "path": "hostile-optimized.json",
+      "sha256": "0b2d1d8255a73c5358c06d271dc91d0a31fac5794f30b3e13544461abe2cfb97"
+    },
+    {
+      "path": "hostile-topology-normal.json",
+      "sha256": "0cc9f31063317e2837431aa9b99e547e5da9902e43e1eaf8a618c01447e66e94"
+    },
+    {
+      "path": "hostile-topology-optimized.json",
+      "sha256": "c847058d46844d5e9e7e354a365fc1eb6be35a0acb15d5fab016ca75eb5d2a2f"
+    },
+    {
+      "path": "hostile.py",
+      "sha256": "4c292414bf0e0cc125392840d0b10f5736cd63af90c46e16dbf87ce382ae5716"
+    },
+    {
+      "path": "hostile_topology.py",
+      "sha256": "9af8f2f691a6fa97d699f954d173e1c38059af858b2dff8ce1867b0217e4fd88"
+    },
+    {
+      "path": "independent-normal.json",
+      "sha256": "b9eebbd3398d311b1d456b2888a4ad256041b0817d7bda07f93ad28e04c89753"
+    },
+    {
+      "path": "independent-optimized.json",
+      "sha256": "b9eebbd3398d311b1d456b2888a4ad256041b0817d7bda07f93ad28e04c89753"
+    },
+    {
+      "path": "producer/MANIFEST.json",
+      "sha256": "803ca39d90178d4e6dd0813a52bed6ceda2b996acd39505b926a1076dd982335"
+    },
+    {
+      "path": "producer/README.md",
+      "sha256": "7c0d6591ef63ca5b3c35ecff8d209bc76dc582c3718c52458ae1d4237c328cd3"
+    },
+    {
+      "path": "producer/SOURCE_PINS.json",
+      "sha256": "5caf69d44f50f56893c8d20d3ea1a51a558d30dbc684f11b4f82300e9231a897"
+    },
+    {
+      "path": "producer/THEOREM.md",
+      "sha256": "c6b74412d0cd2014c133bf422d4036f20c25156743cc45e79ed19c1a051f941e"
+    },
+    {
+      "path": "producer/certificate-check.json",
+      "sha256": "1091ee54b8397c124c01fdcda7c60e6673909a0080ac8ece94d8c46b077abbb4"
+    },
+    {
+      "path": "producer/certificate-check.out",
+      "sha256": "17f1eb712fd39f4e539006659750bd91f93296451b9801d57f9bc16fba40dc39"
+    },
+    {
+      "path": "producer/check.py",
+      "sha256": "f55d223d745fd4d13cd1af10ebcacd7f582e9498816c454d223d8400d6e25da3"
+    },
+    {
+      "path": "producer/cost.json",
+      "sha256": "5c3d37b873ab332464736cab23cf6b07511c9493f37f2504b94899078c5ecd8d"
+    },
+    {
+      "path": "producer/normal.json",
+      "sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200"
+    },
+    {
+      "path": "producer/normal.out",
+      "sha256": "854ebf1459e6f6853024b42aa2ea92b3ff665be5cb31108edf6c07813d1ba849"
+    },
+    {
+      "path": "producer/optimized.out",
+      "sha256": "854ebf1459e6f6853024b42aa2ea92b3ff665be5cb31108edf6c07813d1ba849"
+    },
+    {
+      "path": "producer/replay.json",
+      "sha256": "31b8245d751b53d3f462283c11eda338929cb73ad76428f0cec9adcc3623c1c7"
+    },
+    {
+      "path": "producer/sources/balanced-metagraph-MANIFEST.json",
+      "sha256": "7431d29c032d92aa6da1807c436bb839ed9c84909872de31d7f64b09d4963d43"
+    },
+    {
+      "path": "producer/sources/balanced-metagraph-THEOREM.md",
+      "sha256": "3762a637230f2ec1ab5a109e9f754bbb760b5574f52f83fea55fa912f2486006"
+    },
+    {
+      "path": "producer/sources/balanced-metagraph-engine.py",
+      "sha256": "b69b96c789e31be9a16b192e58e75beb90f683288c4c4db2a3f99ba8a681fc38"
+    },
+    {
+      "path": "producer/sources/balanced-metagraph-normal.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49"
+    },
+    {
+      "path": "producer/sources/converse-errors-MANIFEST.json",
+      "sha256": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a"
+    },
+    {
+      "path": "producer/sources/converse-errors-THEOREM.md",
+      "sha256": "e461b661ec0a4f0edc840a9139db48511cda347006af0d7e717b1f0b71f4b5a6"
+    },
+    {
+      "path": "producer/sources/converse-errors-normal.json",
+      "sha256": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce"
+    },
+    {
+      "path": "producer/sources/defect-neighborhood-MANIFEST.json",
+      "sha256": "141cbcb8e2696238c2db7db40e4bcd9570438d791a4c405e662427671db8f6da"
+    },
+    {
+      "path": "producer/sources/defect-neighborhood-THEOREM.md",
+      "sha256": "03de3068664539e3edc8022bbad0cc05c755b5087d0ca313173eebc70a4819fe"
+    },
+    {
+      "path": "producer/sources/defect-neighborhood-check.py",
+      "sha256": "641fe89e4c8a0d76519af6a1af434675d6b5e4f0fe9e42f540b226ccf5054ec1"
+    },
+    {
+      "path": "producer/sources/defect-wiring-MANIFEST.json",
+      "sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d"
+    },
+    {
+      "path": "producer/sources/defect-wiring-THEOREM.md",
+      "sha256": "0764f2a2d3c45751e2da0ee6c8db54a8974e2ee6fe7b0606753ed511867b8c93"
+    },
+    {
+      "path": "producer/sources/defect-wiring-normal.json",
+      "sha256": "a222ede1374d68471e2d7da0fb909292dee1ab9426f48e8478acf1215f065a77"
+    },
+    {
+      "path": "producer/sources/regular-eleven-MANIFEST.json",
+      "sha256": "0462baf160610115c8b2436c2c57cce1964d0439ce49e86b9b43ce00f2bda3f2"
+    },
+    {
+      "path": "producer/sources/regular-eleven-THEOREM.md",
+      "sha256": "d7ec1b4ad135c025cf2a09e63040cb8b22f99db612842bbf6880cdcd679060b6"
+    },
+    {
+      "path": "producer/sources/regular-eleven-eleven-O2-components.tsv",
+      "sha256": "5f5050d7f47808b7ceb73f9bb3707b4611f45663c96768704ba5d7c800ad37d5"
+    },
+    {
+      "path": "producer/sources/regular-eleven-eleven-O2-parents.txt",
+      "sha256": "ef22a13423ecf41c90e0d01e3f04bd1a42e173bb519abcad7698fb4aa3979937"
+    },
+    {
+      "path": "producer/sources/regular-eleven-eleven-O2-states.tsv",
+      "sha256": "d4457eba3860a16f6d2649b5b0c6a80aaea5069b130d68838e8d79cab5be285b"
+    },
+    {
+      "path": "producer/sources/regular-eleven-eleven-O2.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd"
+    },
+    {
+      "path": "producer/topology.json",
+      "sha256": "eb7606f3dc9ea6301fcd42a19f408d77dcb8d3abe7cb43e78cd4c165c91c63e7"
+    },
+    {
+      "path": "producer/topology.out",
+      "sha256": "49924eea29d3295b4e48a72f08eb6753d117650a3319cc5c64494ca9d185704c"
+    },
+    {
+      "path": "producer/topology.py",
+      "sha256": "b3af932f3548bb2a6e54b4a7a59764c278e67bc2b172d1f41020a0d497211e8d"
+    },
+    {
+      "path": "producer/verify_certificate.py",
+      "sha256": "500372753ec60a781950e40c06c37922881dd415df493eede0c9bd1c6ec06e04"
+    },
+    {
+      "path": "producer/verify_manifest.py",
+      "sha256": "e535ec9c1612b205a3312c825a78b6e4d764085d670f96abaa2076fd53410a71"
+    },
+    {
+      "path": "producer-replay-normal.out",
+      "sha256": "854ebf1459e6f6853024b42aa2ea92b3ff665be5cb31108edf6c07813d1ba849"
+    },
+    {
+      "path": "producer-replay-optimized.out",
+      "sha256": "854ebf1459e6f6853024b42aa2ea92b3ff665be5cb31108edf6c07813d1ba849"
+    },
+    {
+      "path": "producer-replay.json",
+      "sha256": "71d6abdb75e67b31d92842cc23e458b54b2a57548064dfdd33fd3587b2cc01cb"
+    },
+    {
+      "path": "relocate.py",
+      "sha256": "77c9df3dfd307edbb2b12d8a571a813be8f5b41a4df0f984691b951dbbd5e4d5"
+    },
+    {
+      "path": "relocation.json",
+      "sha256": "b45ca63a7f141f7b73c277f24131650a3200a2a254b11e8ea360f78034b35652"
+    },
+    {
+      "path": "topology-certificate.json",
+      "sha256": "c05366ca9eee330a34c0ccf4602c10042d06e8361f7af20ba41179bc391d70d1"
+    },
+    {
+      "path": "topology-normal.json",
+      "sha256": "e67ae385ecd017a85389710d39ef3cab59593ef5ff1b112fc6c9b28235749070"
+    },
+    {
+      "path": "topology-optimized.json",
+      "sha256": "e67ae385ecd017a85389710d39ef3cab59593ef5ff1b112fc6c9b28235749070"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "41121ff377f24b4a126ff605cdeba543d8230c3672ffa7760b9e4e24f2381277"
+    },
+    {
+      "path": "verify_topology.py",
+      "sha256": "bb008fccb3f2b39e148247ea7cf07edfac5d9ea07aa47d047401e8341132f864"
+    }
+  ]
+}

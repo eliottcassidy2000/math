@@ -1,0 +1,13 @@
+# Proposed narrow historical repair
+
+No shared canonical source has been edited by this lane. The proposed patch only prepends the following warning to `05-knowledge/results/sc_partition_formula.md`, preserving its entire original body byte-for-byte. THM-283 is already correct and should not be re-promoted or re-authored.
+
+> **HISTORICAL / SUPERSEDED — correction boundary, 2026-10-24.** The “CORRECTED RULE” in the original note below is false: arbitrary even cycles are not allowed, and there may not be more than one fixed point. The authoritative criterion is **at most one fixed point, with every other vertex-cycle length congruent to 2 modulo 4**. The identity type `(1,1)` and the 4-cycle type `(4)` are minimal counterexamples to the respective omitted restrictions. Use [THM-283, corrected self-converse Burnside formula](../../01-canon/theorems/THM-283-sc-burnside-formula.md) and its [independently audited endpoint-monodromy repair](converse_tournament_count_channels_20261021/README.md). The original body is retained below solely as historical provenance; its criterion, unfinished exponent, and unmeasured timing prediction are not current results.
+
+The patch is supplied as `historical-warning.patch`. The source SHA256 in `provenance.json` is a precondition: if the target has changed, reconcile rather than applying blindly.
+
+A separate dated MISTAKES bullet is warranted because the existing 2026-10-21 entry repairs THM-283's explanation, not this historical file's false filter. Proposed exact text:
+
+- **2026-10-24, historical self-converse partition note — a superseded filter remained unguarded.** `05-knowledge/results/sc_partition_formula.md` labelled “every cycle is a fixed point or even” as a corrected iff criterion. The identity type `(1,1)` cannot reverse the arc between its fixed vertices; a 4-cycle has an even-length antipodal pair orbit that swaps endpoints and is likewise impossible. The existing authoritative THM-283 already requires at most one fixed point and all other lengths congruent to 2 modulo 4; its endpoint-monodromy proof was independently repaired on 2026-10-21. A historical warning now redirects the old note without altering its body. The valid partition formula and published numeric prefix are unchanged. Missing coordinates: fixed-point multiplicity and the 2-adic valuation of every non-singleton cycle length. Independent signed-pair and literal-mask controls are in the Session 52 counting-lenses packet; no new enumeration theorem is claimed.
+
+Publisher: replace the final descriptive packet reference by the actual repository-relative link chosen on publication; do not invent a link before that path is known. Preserve any maintained MISTAKES banner at byte zero.

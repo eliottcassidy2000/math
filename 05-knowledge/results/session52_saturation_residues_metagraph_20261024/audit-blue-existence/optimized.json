@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "anti_invariant_matrices": 2,
+      "balanced_matrices": 2,
+      "every_paired_arc_realized": true,
+      "full_matrices": 2,
+      "minimum_symmetric_downhill_paths": 1,
+      "n": 2,
+      "total_cycles": 2,
+      "total_paths": 2,
+      "universe_paths_sha256": "a85d323b134b273d4c3e6526ca8678a27a0ba5213ca2482f7aa1aa6c8e14e39f"
+    },
+    {
+      "anti_invariant_matrices": 16,
+      "balanced_matrices": 8,
+      "every_paired_arc_realized": true,
+      "full_matrices": 64,
+      "minimum_symmetric_downhill_paths": 2,
+      "n": 4,
+      "total_cycles": 16,
+      "total_paths": 16,
+      "universe_paths_sha256": "89369a8dbcb4da2420a926ea7e86e54591ca3e94ac437e94cf2bbed803b46913"
+    },
+    {
+      "anti_invariant_matrices": 512,
+      "balanced_matrices": 112,
+      "every_paired_arc_realized": true,
+      "full_matrices": 32768,
+      "minimum_symmetric_downhill_paths": 5,
+      "n": 6,
+      "total_cycles": 576,
+      "total_paths": 576,
+      "universe_paths_sha256": "5d53615b7730b8df2ca4111a75d1eee73cfd3590785f720635674aff5510436e"
+    }
+  ],
+  "scope": "FINITE-EXACT; no all-order proof",
+  "status": "PASS"
+}

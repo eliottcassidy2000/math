@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "manifest_only_files": 60,
+  "outside_dependencies": [
+    "Python3",
+    "NumPy"
+  ],
+  "runs": [
+    {
+      "distance_status": "PASS",
+      "optimized": false,
+      "audit_status": "PASS",
+      "topology_status": "PASS"
+    },
+    {
+      "distance_status": "PASS",
+      "optimized": true,
+      "audit_status": "PASS",
+      "topology_status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "status": "CITED published permutations; finite group closure and orbits are independently recomputed",
+  "source": "https://arxiv.org/html/2101.00917v2#S4.SS14",
+  "location": "Florit-Smith, An atlas of the Richelot isogeny graph, section 4.14, displayed actions and Table 12",
+  "indexing": "Kernel indices are 1 through 15 in the source; omitted cycle entries are fixed",
+  "generators_cycles": {
+    "sigma": [
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "rho": [
+      [
+        1,
+        9,
+        8
+      ],
+      [
+        2,
+        15,
+        14
+      ],
+      [
+        4,
+        12,
+        13
+      ],
+      [
+        6,
+        10,
+        11
+      ]
+    ],
+    "omega": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        14,
+        7,
+        15
+      ],
+      [
+        3,
+        10,
+        6,
+        11
+      ],
+      [
+        8,
+        9,
+        13,
+        12
+      ]
+    ]
+  },
+  "expected_orbits": [
+    [
+      1,
+      4,
+      8,
+      9,
+      12,
+      13
+    ],
+    [
+      3,
+      6,
+      10,
+      11
+    ],
+    [
+      2,
+      7,
+      14,
+      15
+    ],
+    [
+      5
+    ]
+  ],
+  "general_codomain_types": [
+    "Sigma: E squared with j(E)=8000",
+    "IV",
+    "IV",
+    "VI: loop"
+  ],
+  "scope": "Atlas excludes characteristics 2, 3 and 5. Generic codomain descriptions require the exceptional-characteristic qualifications in Table 12. This finite replay does not independently compute curves or quotients.",
+  "exceptional_codomain_types": {
+    "p=7": [
+      "Sigma_1728",
+      "loop",
+      "loop",
+      "loop"
+    ],
+    "p=13 or 29": "One of the two weight-four IV codomains is Type V, depending on the source choice of the twelfth root of unity."
+  }
+}

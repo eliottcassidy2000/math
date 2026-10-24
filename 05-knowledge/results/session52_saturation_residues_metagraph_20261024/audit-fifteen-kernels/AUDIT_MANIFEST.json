@@ -1,0 +1,125 @@
+{
+  "status": "PASS; complete independent audit; no publication performed",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 9187,
+      "sha256": "523fad70a62c4a93516117b18b6f285cea0e1ffdfdd2910205b2ba905d4a0881"
+    },
+    {
+      "path": "frozen_candidate/README.md",
+      "bytes": 13791,
+      "sha256": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07"
+    },
+    {
+      "path": "frozen_candidate/audit-receipt.json",
+      "bytes": 566,
+      "sha256": "4de13809f37e520ffe8fd95b7777173d8e7f28a2f7b553249abcd0b7979d9304"
+    },
+    {
+      "path": "frozen_candidate/audit.py",
+      "bytes": 2669,
+      "sha256": "39c004c26d4c415a2233dc08d4e990c3b1683c8e32ea88900db788ee2fd9518f"
+    },
+    {
+      "path": "frozen_candidate/check.py",
+      "bytes": 13805,
+      "sha256": "b2aa92ae33c2351b2fae36e24f291edfdbb7f5e0a8a4d672d8e6eac25a85b248"
+    },
+    {
+      "path": "frozen_candidate/delivery-manifest.json",
+      "bytes": 2166,
+      "sha256": "af8794a44f63d6251679a0b89d3228cb4c7d7407d9597421cd367a5fa24573c7"
+    },
+    {
+      "path": "frozen_candidate/inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "bytes": 31998,
+      "sha256": "769305f5ddccb41366088d3ffa6440b7f536491849e1cf25e399a627dc8c41da"
+    },
+    {
+      "path": "frozen_candidate/inputs/bolza-kernel-action.json",
+      "bytes": 1856,
+      "sha256": "4af1c077814e087a91a3122f22f1c8e36059a361076d0b0ec8175800e00379f1"
+    },
+    {
+      "path": "frozen_candidate/inputs/cardinality_bridges_20261018m.md",
+      "bytes": 37719,
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    {
+      "path": "frozen_candidate/inputs/information_observers_collatz_20261014a.md",
+      "bytes": 14010,
+      "sha256": "0de0e6393062e93ad543ade045ef3a2eda1bd5f7b854828a3724b5894137d955"
+    },
+    {
+      "path": "frozen_candidate/normal.stdout.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "frozen_candidate/optimized.stdout.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "frozen_candidate/receipt-optimized.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "frozen_candidate/receipt.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "frozen_candidate/source-manifest.json",
+      "bytes": 1874,
+      "sha256": "4ed8cf388759e92ccd8de3fc2b6345931bb376b4c685a16a2c08a8bd94e23263"
+    },
+    {
+      "path": "independent_check.py",
+      "bytes": 8077,
+      "sha256": "d414888ea6f0d867c41135ab8fbdfee38e9dcf2efa25866926b47525de31cbad"
+    },
+    {
+      "path": "independent_normal.json",
+      "bytes": 4054,
+      "sha256": "2f9334b8b6ecbad0abd12664e74079d5a724e764e833940bf5c3f85dc62d40c3"
+    },
+    {
+      "path": "independent_optimized.json",
+      "bytes": 4054,
+      "sha256": "2f9334b8b6ecbad0abd12664e74079d5a724e764e833940bf5c3f85dc62d40c3"
+    },
+    {
+      "path": "replay_audit.json",
+      "bytes": 2018,
+      "sha256": "171e090ff8029b041d0c3db1884a9e740c84d7bd5566bef1931223292a581ff9"
+    },
+    {
+      "path": "replay_normal.out",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "replay_optimized.out",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "replay_receipt.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "replay_receipt_optimized.json",
+      "bytes": 16368,
+      "sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73"
+    },
+    {
+      "path": "verify_replay.py",
+      "bytes": 5856,
+      "sha256": "609d09a5d11b129651907ad895ec3f94850196c16a90105fe07a1992802615d0"
+    }
+  ]
+}

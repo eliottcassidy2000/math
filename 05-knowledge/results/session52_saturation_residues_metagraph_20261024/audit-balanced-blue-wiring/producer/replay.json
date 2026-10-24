@@ -1,0 +1,24 @@
+{
+  "comparisons": [
+    {
+      "byte_identical": true,
+      "check": "full_regeneration",
+      "normal_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200",
+      "optimized_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200"
+    },
+    {
+      "byte_identical": true,
+      "check": "literal_certificate_replay",
+      "normal_sha256": "1091ee54b8397c124c01fdcda7c60e6673909a0080ac8ece94d8c46b077abbb4",
+      "optimized_sha256": "1091ee54b8397c124c01fdcda7c60e6673909a0080ac8ece94d8c46b077abbb4"
+    },
+    {
+      "byte_identical": true,
+      "check": "topology_log",
+      "normal_sha256": "49924eea29d3295b4e48a72f08eb6753d117650a3319cc5c64494ca9d185704c",
+      "optimized_sha256": "49924eea29d3295b4e48a72f08eb6753d117650a3319cc5c64494ca9d185704c"
+    }
+  ],
+  "python_assertions_required": false,
+  "status": "PASS"
+}

@@ -1,0 +1,530 @@
+{
+  "status": "PASS",
+  "checks": 5598,
+  "method": "Independent literal GF(2) equation ranks through n=20; direct labelled-orbit class census and exact quotient characteristic polynomials through n=5; separately retrieved OEIS prefixes.",
+  "external_source_urls": {
+    "A000568": "https://oeis.org/A000568/b000568.txt",
+    "A002785": "https://oeis.org/A002785"
+  },
+  "table": [
+    {
+      "n": 0,
+      "partitions": 1,
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1,
+      "literal_orbit_sizes": [
+        1
+      ],
+      "arc_quotient": [
+        [
+          0
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        0
+      ]
+    },
+    {
+      "n": 1,
+      "partitions": 1,
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1,
+      "literal_orbit_sizes": [
+        1
+      ],
+      "arc_quotient": [
+        [
+          0
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "partitions": 2,
+      "ordinary": 1,
+      "self_converse": 1,
+      "merged": 1,
+      "literal_orbit_sizes": [
+        2
+      ],
+      "arc_quotient": [
+        [
+          1
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        -1
+      ]
+    },
+    {
+      "n": 3,
+      "partitions": 3,
+      "ordinary": 2,
+      "self_converse": 2,
+      "merged": 2,
+      "literal_orbit_sizes": [
+        6,
+        2
+      ],
+      "arc_quotient": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        -2,
+        -3
+      ]
+    },
+    {
+      "n": 4,
+      "partitions": 5,
+      "ordinary": 4,
+      "self_converse": 2,
+      "merged": 3,
+      "literal_orbit_sizes": [
+        24,
+        8,
+        24,
+        8
+      ],
+      "arc_quotient": [
+        [
+          3,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          1,
+          3,
+          1
+        ],
+        [
+          3,
+          0,
+          3,
+          0
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        -6,
+        -4,
+        24,
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "partitions": 7,
+      "ordinary": 12,
+      "self_converse": 8,
+      "merged": 10,
+      "literal_orbit_sizes": [
+        120,
+        40,
+        120,
+        40,
+        120,
+        120,
+        120,
+        40,
+        120,
+        40,
+        120,
+        24
+      ],
+      "arc_quotient": [
+        [
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          3,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          3,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          3,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          2,
+          1,
+          2,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          2,
+          1,
+          0,
+          1,
+          1,
+          0,
+          3,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          3,
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          2,
+          1,
+          1,
+          0,
+          2,
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          3,
+          0,
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          0,
+          5,
+          0
+        ]
+      ],
+      "characteristic_polynomial": [
+        1,
+        -16,
+        20,
+        688,
+        -2784,
+        -3840,
+        30848,
+        -9728,
+        -119552,
+        106496,
+        156672,
+        -184320,
+        0
+      ]
+    },
+    {
+      "n": 6,
+      "partitions": 11,
+      "ordinary": 56,
+      "self_converse": 12,
+      "merged": 34
+    },
+    {
+      "n": 7,
+      "partitions": 15,
+      "ordinary": 456,
+      "self_converse": 88,
+      "merged": 272
+    },
+    {
+      "n": 8,
+      "partitions": 22,
+      "ordinary": 6880,
+      "self_converse": 176,
+      "merged": 3528
+    },
+    {
+      "n": 9,
+      "partitions": 30,
+      "ordinary": 191536,
+      "self_converse": 2752,
+      "merged": 97144
+    },
+    {
+      "n": 10,
+      "partitions": 42,
+      "ordinary": 9733056,
+      "self_converse": 8784,
+      "merged": 4870920
+    },
+    {
+      "n": 11,
+      "partitions": 56,
+      "ordinary": 903753248,
+      "self_converse": 279968,
+      "merged": 452016608
+    },
+    {
+      "n": 12,
+      "partitions": 77,
+      "ordinary": 154108311168,
+      "self_converse": 1492288,
+      "merged": 77054901728
+    },
+    {
+      "n": 13,
+      "partitions": 101,
+      "ordinary": 48542114686912,
+      "self_converse": 95458560,
+      "merged": 24271105072736
+    },
+    {
+      "n": 14,
+      "partitions": 135,
+      "ordinary": 28401423719122304,
+      "self_converse": 872687552,
+      "merged": 14200712295904928
+    },
+    {
+      "n": 15,
+      "partitions": 176,
+      "ordinary": 31021002160355166848,
+      "self_converse": 111698291584,
+      "merged": 15510501136026729216
+    },
+    {
+      "n": 16,
+      "partitions": 231,
+      "ordinary": 63530415842308265100288,
+      "self_converse": 1787154671104,
+      "merged": 31765207922047709885696
+    },
+    {
+      "n": 17,
+      "partitions": 297,
+      "ordinary": 244912778438520759443245824,
+      "self_converse": 457509297625088,
+      "merged": 122456389219489134370435456
+    },
+    {
+      "n": 18,
+      "partitions": 385,
+      "ordinary": 1783398846284777975419600287232,
+      "self_converse": 13013584213369088,
+      "merged": 891699423142395494501906828160
+    },
+    {
+      "n": 19,
+      "partitions": 490,
+      "ordinary": 24605641171260376770598003978281472,
+      "self_converse": 6662951988432581120,
+      "merged": 12302820585630191716774996205431296
+    },
+    {
+      "n": 20,
+      "partitions": 627,
+      "ordinary": 645022068557873570931850526424042500096,
+      "self_converse": 341143107490935724032,
+      "merged": 322511034278936785636496816957489112064
+    }
+  ],
+  "hostiles": [
+    {
+      "cycle_type": [
+        1,
+        1
+      ],
+      "anti_fixed": 0
+    },
+    {
+      "cycle_type": [
+        4
+      ],
+      "anti_fixed": 0
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2
+      ],
+      "anti_fixed": 0
+    },
+    {
+      "cycle_type": [
+        3
+      ],
+      "anti_fixed": 0
+    },
+    {
+      "cycle_type": [
+        2
+      ],
+      "anti_fixed": 2
+    },
+    {
+      "cycle_type": [
+        2,
+        2
+      ],
+      "anti_fixed": 16
+    },
+    {
+      "cycle_type": [
+        6
+      ],
+      "anti_fixed": 8
+    },
+    {
+      "cycle_type": [
+        1,
+        6
+      ],
+      "anti_fixed": 16
+    }
+  ],
+  "native_controls": {
+    "n3_matrix": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "first_non_descent_order": 4,
+    "n4_source_tilings": [
+      0,
+      1
+    ],
+    "n4_target_tilings": [
+      7,
+      6
+    ]
+  },
+  "scope_warning": "No native fixed-HP wiring spectrum, novel counting algorithm, or independent native U_11 prediction is certified.",
+  "centered_cyclicity_precision": "The eigenfunction is c(T)-binom(n,3)/4; uncentered c(T) is not a nonconstant adjacency eigenfunction.",
+  "producer_receipt_sha256": "b4efee4387bde697fb3e432220a4fdfd88bb93e87c0fa5dfc0197a2d067bb523"
+}

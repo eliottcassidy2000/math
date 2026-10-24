@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "original_path": "session52-balanced-metagraph/THEOREM.md",
+      "path": "sources/balanced-metagraph-theorem.md",
+      "sha256": "3762a637230f2ec1ab5a109e9f754bbb760b5574f52f83fea55fa912f2486006"
+    },
+    {
+      "original_path": "math/01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "path": "sources/anti-involution-context.md",
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+    }
+  ],
+  "status": "CONTEXT ONLY; required arguments re-proved locally"
+}

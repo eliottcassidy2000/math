@@ -1,0 +1,165 @@
+{
+  "status": "FROZEN candidate for independent review",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "be7cb7ac59e7de44fdb793a02714277bccfb7d17493ec3229535faf05d2e1292"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "50e6cd1a01c68811d5cae129a6f5f7476f8eeab2ba6f2b47f643437715114462"
+    },
+    {
+      "path": "THEOREM.md",
+      "sha256": "e461b661ec0a4f0edc840a9139db48511cda347006af0d7e717b1f0b71f4b5a6"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "7309a517ca88700e072916e563cfe64ccb59458b6dfc04a7fe6fc50f29947cfe"
+    },
+    {
+      "path": "check.py",
+      "sha256": "7f97fde6bb64abbea7ebd1ade172a05ccd6ea3e912873e8861fe0f8db51d65be"
+    },
+    {
+      "path": "matrix-normal.json",
+      "sha256": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd"
+    },
+    {
+      "path": "matrix-normal.out",
+      "sha256": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd"
+    },
+    {
+      "path": "matrix-optimized.json",
+      "sha256": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd"
+    },
+    {
+      "path": "matrix-optimized.out",
+      "sha256": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd"
+    },
+    {
+      "path": "matrix_check.py",
+      "sha256": "405a73c746d36bce2817df052ad182a1ecb7856383847a2e8aa8b0cbedc886d9"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce"
+    },
+    {
+      "path": "normal.out",
+      "sha256": "d00328d368d257ab86d881abda99a13a17219e1e4f34136d10547f8022e13537"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce"
+    },
+    {
+      "path": "optimized.out",
+      "sha256": "d00328d368d257ab86d881abda99a13a17219e1e4f34136d10547f8022e13537"
+    },
+    {
+      "path": "port-normal.json",
+      "sha256": "e5277f7e5461aa68cd0313614f3fd74f7f610f1e18fcb62c9e1df0a9bf4ee019"
+    },
+    {
+      "path": "port-normal.out",
+      "sha256": "8bb924bd69bfcabce9aa6612c32689c41f8965d6422ebcc83c2d14232e30215b"
+    },
+    {
+      "path": "port-optimized.json",
+      "sha256": "e5277f7e5461aa68cd0313614f3fd74f7f610f1e18fcb62c9e1df0a9bf4ee019"
+    },
+    {
+      "path": "port-optimized.out",
+      "sha256": "8bb924bd69bfcabce9aa6612c32689c41f8965d6422ebcc83c2d14232e30215b"
+    },
+    {
+      "path": "port_check.py",
+      "sha256": "572470e304903ebe920b13b6a8cdb42908d21427185d26f256a11c96b4c756d0"
+    },
+    {
+      "path": "prime-normal.json",
+      "sha256": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27"
+    },
+    {
+      "path": "prime-normal.out",
+      "sha256": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27"
+    },
+    {
+      "path": "prime-optimized.json",
+      "sha256": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27"
+    },
+    {
+      "path": "prime-optimized.out",
+      "sha256": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27"
+    },
+    {
+      "path": "prime_check.py",
+      "sha256": "4064ec235112a8e679bb8f010805911593144c05668e4a465474bbeb6bb0d38f"
+    },
+    {
+      "path": "relocation.out",
+      "sha256": "377e60c506f0a960d8ad977fbf7ccb893d8a7e8cb0340fdafb5b703d0d172946"
+    },
+    {
+      "path": "series-normal.json",
+      "sha256": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2"
+    },
+    {
+      "path": "series-normal.out",
+      "sha256": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2"
+    },
+    {
+      "path": "series-optimized.json",
+      "sha256": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2"
+    },
+    {
+      "path": "series-optimized.out",
+      "sha256": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2"
+    },
+    {
+      "path": "series_check.py",
+      "sha256": "b61836b97602343edb57e8b447da7633c706b972ed24f3624aa066f64be54bd6"
+    },
+    {
+      "path": "sources/THM-644-gridsym-fiber-law-and-anti-redei.md",
+      "sha256": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e"
+    },
+    {
+      "path": "sources/THM-647-anti-redei-theorem.md",
+      "sha256": "30bd387fdda844a7fe3f9f346960e78fe748f03bd712326e7bfddd8c3e9757e6"
+    },
+    {
+      "path": "sources/order-nine-theorem.md",
+      "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+    },
+    {
+      "path": "sources/order-ten-audit-receipt.json",
+      "sha256": "fa5909e52fb09eb952cc402692c39f7d7eb9e6ac8f535da5c9946ce92a7f4189"
+    },
+    {
+      "path": "sources/order-ten-error-spectrum.json",
+      "sha256": "1417ab8b979f38bad55d97d389e55bdbc482a7dce65685572095b0994182319e"
+    },
+    {
+      "path": "sources/order-ten-theorem.md",
+      "sha256": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002"
+    },
+    {
+      "path": "sources/pins.json",
+      "sha256": "8a70702b7b1d3a260d1907dee7d51fe3aac45b3561425f541321f8b5ae7bd836"
+    },
+    {
+      "path": "sources/regular-block-counts.md",
+      "sha256": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097"
+    },
+    {
+      "path": "sources/regular-nine-receipt.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "44713a9117b491793e6e4c02c2ca7a73fedd6708d57adc483efba1407f819d92"
+    }
+  ]
+}

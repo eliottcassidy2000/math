@@ -1,0 +1,12 @@
+{
+  "active_gates": 28604,
+  "audit_sha256": "39c004c26d4c415a2233dc08d4e990c3b1683c8e32ea88900db788ee2fd9518f",
+  "checker_sha256": "b2aa92ae33c2351b2fae36e24f291edfdbb7f5e0a8a4d672d8e6eac25a85b248",
+  "no_symlinks_in_real_copy": true,
+  "normal_optimized_byte_identical": true,
+  "real_copy_contained_only_declared_checker_manifest_and_inputs": true,
+  "real_copy_normal_optimized_byte_identical": true,
+  "receipt_sha256": "079757c20937b18f90d36f9917f88f310e3dce93307f4e195270787c5480dc73",
+  "status": "PASS",
+  "tampered_input_rejected_under_optimized": true
+}

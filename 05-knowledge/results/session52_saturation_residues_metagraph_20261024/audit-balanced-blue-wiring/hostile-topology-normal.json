@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "optimized": false,
+  "mutations": [
+    {
+      "mutation": "duplicate_ear",
+      "rejected": true,
+      "failure": "RuntimeError: ear joins two distinct old nodes through one new node"
+    },
+    {
+      "mutation": "omit_ear",
+      "rejected": true,
+      "failure": "RuntimeError: spanning all229"
+    },
+    {
+      "mutation": "degenerate_triangle",
+      "rejected": true,
+      "failure": "RuntimeError: triangle distinct"
+    },
+    {
+      "mutation": "invalid_ear_endpoint",
+      "rejected": true,
+      "failure": "RuntimeError: ear joins two distinct old nodes through one new node"
+    }
+  ]
+}

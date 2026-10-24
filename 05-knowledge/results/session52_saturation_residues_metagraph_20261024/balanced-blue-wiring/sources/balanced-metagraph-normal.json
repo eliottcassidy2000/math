@@ -1,0 +1,420 @@
+{
+  "counts": [
+    {
+      "anticycle_dp_states": 3,
+      "balanced_blue_ports": 1,
+      "balanced_ports": 1,
+      "blue_polynomial_peak_states": 1,
+      "boundary_black_ports": 0,
+      "boundary_blue_ports": 0,
+      "boundary_ports": 0,
+      "cyclic_orbits_internal_words": 1,
+      "endpoint_ports": {
+        "HH": 0,
+        "HL": 1,
+        "LH": 0,
+        "LL": 0
+      },
+      "full_cube_words": 1,
+      "internal_black_ports": 0,
+      "internal_blue_ports": 1,
+      "internal_ports": 1,
+      "n": 2,
+      "ordinary_polynomial_peak_states": 1,
+      "proper_rotation_fixed_counts": {
+        "1": 1
+      },
+      "row_dp_states": 1
+    },
+    {
+      "anticycle_dp_states": 8,
+      "balanced_blue_ports": 3,
+      "balanced_ports": 5,
+      "blue_polynomial_peak_states": 3,
+      "boundary_black_ports": 2,
+      "boundary_blue_ports": 1,
+      "boundary_ports": 3,
+      "cyclic_orbits_internal_words": 2,
+      "endpoint_ports": {
+        "HH": 1,
+        "HL": 2,
+        "LH": 1,
+        "LL": 1
+      },
+      "full_cube_words": 8,
+      "incident_lines": 4,
+      "internal_black_lines": 0,
+      "internal_black_ports": 0,
+      "internal_blue_lines": 1,
+      "internal_blue_ports": 2,
+      "internal_lines": 1,
+      "internal_ports": 2,
+      "n": 4,
+      "ordinary_polynomial_peak_states": 6,
+      "proper_rotation_fixed_counts": {
+        "1": 2
+      },
+      "row_dp_states": 10
+    },
+    {
+      "anticycle_dp_states": 54,
+      "balanced_blue_ports": 21,
+      "balanced_ports": 157,
+      "blue_polynomial_peak_states": 21,
+      "boundary_black_ports": 88,
+      "boundary_blue_ports": 9,
+      "boundary_ports": 97,
+      "cyclic_orbits_internal_words": 12,
+      "endpoint_ports": {
+        "HH": 31,
+        "HL": 60,
+        "LH": 35,
+        "LL": 31
+      },
+      "full_cube_words": 1024,
+      "incident_lines": 127,
+      "internal_black_lines": 24,
+      "internal_black_ports": 48,
+      "internal_blue_lines": 6,
+      "internal_blue_ports": 12,
+      "internal_lines": 30,
+      "internal_ports": 60,
+      "n": 6,
+      "ordinary_polynomial_peak_states": 86,
+      "proper_rotation_fixed_counts": {
+        "1": 4
+      },
+      "row_dp_states": 90
+    },
+    {
+      "anticycle_dp_states": 727,
+      "balanced_blue_ports": 499,
+      "balanced_ports": 51949,
+      "blue_polynomial_peak_states": 197,
+      "boundary_black_ports": 33578,
+      "boundary_blue_ports": 219,
+      "boundary_ports": 33797,
+      "cyclic_orbits_internal_words": 2040,
+      "endpoint_ports": {
+        "HH": 11005,
+        "HL": 18152,
+        "LH": 11787,
+        "LL": 11005
+      },
+      "full_cube_words": 2097152,
+      "incident_lines": 42873,
+      "internal_black_lines": 8936,
+      "internal_black_ports": 17872,
+      "internal_blue_lines": 140,
+      "internal_blue_ports": 280,
+      "internal_lines": 9076,
+      "internal_ports": 18152,
+      "n": 8,
+      "ordinary_polynomial_peak_states": 3298,
+      "proper_rotation_fixed_counts": {
+        "1": 8,
+        "3": 80
+      },
+      "row_dp_states": 1127
+    },
+    {
+      "anticycle_dp_states": 13627,
+      "balanced_blue_ports": 41699,
+      "balanced_ports": 204019829,
+      "blue_polynomial_peak_states": 2309,
+      "boundary_black_ports": 136877786,
+      "boundary_blue_ports": 18795,
+      "boundary_ports": 136896581,
+      "cyclic_orbits_internal_words": 6102128,
+      "endpoint_ports": {
+        "HH": 44967565,
+        "HL": 67123248,
+        "LH": 46961451,
+        "LL": 44967565
+      },
+      "full_cube_words": 68719476736,
+      "incident_lines": 170458205,
+      "internal_black_lines": 33550172,
+      "internal_black_ports": 67100344,
+      "internal_blue_lines": 11452,
+      "internal_blue_ports": 22904,
+      "internal_lines": 33561624,
+      "internal_ports": 67123248,
+      "n": 10,
+      "proper_rotation_fixed_counts": {
+        "1": 16
+      },
+      "row_dp_states": 19291
+    },
+    {
+      "anticycle_dp_states": 323219,
+      "balanced_blue_ports": 12569477,
+      "balanced_ports": 10188802555033,
+      "blue_polynomial_peak_states": 32877,
+      "boundary_black_ports": 6974970814644,
+      "boundary_blue_ports": 5765829,
+      "boundary_ports": 6974976580473,
+      "cyclic_orbits_internal_words": 247217382688,
+      "endpoint_ports": {
+        "HH": 2301770367447,
+        "HL": 3213825974560,
+        "LH": 2371435845579,
+        "LL": 2301770367447
+      },
+      "full_cube_words": 36028797018963968,
+      "incident_lines": 8581889567753,
+      "internal_black_lines": 1606909585456,
+      "internal_black_ports": 3213819170912,
+      "internal_blue_lines": 3401824,
+      "internal_blue_ports": 6803648,
+      "internal_lines": 1606912987280,
+      "internal_ports": 3213825974560,
+      "n": 12,
+      "proper_rotation_fixed_counts": {
+        "1": 32
+      },
+      "row_dp_states": 426340
+    }
+  ],
+  "inherited_n10_class_counts": {
+    "merged_balanced_nodes": 6781,
+    "non_self_converse_merged_pairs": 6552,
+    "ordinary_balanced_classes": 13333,
+    "self_converse_balanced_classes": 229,
+    "source": "sources/regular-eleven-counts.json",
+    "status": "INHERITED finite-exact, not inferred from port polynomials"
+  },
+  "literal_controls": [
+    {
+      "balanced_blue_ports": 1,
+      "balanced_ports": 1,
+      "balanced_word_digest": "4b5173664eb9924151a606953ffcfd2d8cf9283bef670d0a2dd841b6ea613e91",
+      "blue_endpoint_ports": {
+        "HL": 1
+      },
+      "class_control": {
+        "classes": [
+          {
+            "H": 1,
+            "aut": 1,
+            "downhill_H": 1,
+            "internal_blue_degree": 1,
+            "internal_word_degree": 1,
+            "regular_parent_Hamilton_cycles": 1,
+            "rows": [
+              0,
+              1
+            ],
+            "word_mass": 1
+          }
+        ],
+        "merged_classes": 1,
+        "merged_internal_loop_lines": 0,
+        "ordinary_classes": 1,
+        "ordinary_internal_loop_lines": 0
+      },
+      "cube_words": 1,
+      "endpoint_ports": {
+        "HH": 0,
+        "HL": 1,
+        "LH": 0,
+        "LL": 0
+      },
+      "internal_blue_ports": 1,
+      "internal_ports": 1,
+      "n": 2,
+      "proper_rotation_fixed_counts": {
+        "1": 1
+      }
+    },
+    {
+      "balanced_blue_ports": 3,
+      "balanced_ports": 5,
+      "balanced_word_digest": "5a894d0feb2be640198ee4875940d115cd3bf4129bbbce5117253d2b4631b06e",
+      "blue_endpoint_ports": {
+        "HL": 2,
+        "LH": 1
+      },
+      "boundary_ports": 3,
+      "class_control": {
+        "classes": [
+          {
+            "H": 5,
+            "aut": 1,
+            "downhill_H": 2,
+            "internal_blue_degree": 2,
+            "internal_word_degree": 2,
+            "regular_parent_Hamilton_cycles": 2,
+            "rows": [
+              2,
+              4,
+              9,
+              3
+            ],
+            "word_mass": 5
+          }
+        ],
+        "merged_classes": 1,
+        "merged_internal_loop_lines": 1,
+        "ordinary_classes": 1,
+        "ordinary_internal_loop_lines": 1
+      },
+      "cube_words": 8,
+      "endpoint_ports": {
+        "HH": 1,
+        "HL": 2,
+        "LH": 1,
+        "LL": 1
+      },
+      "internal_blue_ports": 2,
+      "internal_ports": 2,
+      "n": 4,
+      "proper_rotation_fixed_counts": {
+        "1": 2
+      }
+    },
+    {
+      "balanced_blue_ports": 21,
+      "balanced_ports": 157,
+      "balanced_word_digest": "9b4994d01d30c839ab8440ec7317f966c21ef5bd8dd6dd529ae8823716b1fa69",
+      "blue_endpoint_ports": {
+        "HL": 12,
+        "LH": 9
+      },
+      "boundary_ports": 97,
+      "class_control": {
+        "classes": [
+          {
+            "H": 41,
+            "aut": 1,
+            "downhill_H": 17,
+            "internal_blue_degree": 5,
+            "internal_word_degree": 17,
+            "regular_parent_Hamilton_cycles": 17,
+            "rows": [
+              6,
+              12,
+              24,
+              49,
+              35,
+              7
+            ],
+            "word_mass": 41
+          },
+          {
+            "H": 43,
+            "aut": 1,
+            "downhill_H": 15,
+            "internal_blue_degree": 0,
+            "internal_word_degree": 15,
+            "regular_parent_Hamilton_cycles": 15,
+            "rows": [
+              6,
+              12,
+              48,
+              21,
+              35,
+              11
+            ],
+            "word_mass": 43
+          },
+          {
+            "H": 43,
+            "aut": 1,
+            "downhill_H": 15,
+            "internal_blue_degree": 0,
+            "internal_word_degree": 15,
+            "regular_parent_Hamilton_cycles": 15,
+            "rows": [
+              6,
+              12,
+              56,
+              17,
+              35,
+              11
+            ],
+            "word_mass": 43
+          },
+          {
+            "H": 45,
+            "aut": 3,
+            "downhill_H": 15,
+            "internal_blue_degree": 5,
+            "internal_word_degree": 5,
+            "regular_parent_Hamilton_cycles": 15,
+            "rows": [
+              6,
+              24,
+              26,
+              33,
+              41,
+              7
+            ],
+            "word_mass": 15
+          },
+          {
+            "H": 45,
+            "aut": 3,
+            "downhill_H": 24,
+            "internal_blue_degree": 2,
+            "internal_word_degree": 8,
+            "regular_parent_Hamilton_cycles": 24,
+            "rows": [
+              6,
+              24,
+              42,
+              33,
+              13,
+              19
+            ],
+            "word_mass": 15
+          }
+        ],
+        "merged_classes": 4,
+        "merged_internal_loop_lines": 8,
+        "ordinary_classes": 5,
+        "ordinary_internal_loop_lines": 4
+      },
+      "cube_words": 1024,
+      "endpoint_ports": {
+        "HH": 31,
+        "HL": 60,
+        "LH": 35,
+        "LL": 31
+      },
+      "internal_blue_ports": 12,
+      "internal_ports": 60,
+      "n": 6,
+      "proper_rotation_fixed_counts": {
+        "1": 4
+      }
+    },
+    {
+      "balanced_blue_ports": 499,
+      "balanced_ports": 51949,
+      "balanced_word_digest": "ca24c450ce5bcb24643c622fb604a0892884a64c6a534fe8992d6dedd31edc41",
+      "blue_endpoint_ports": {
+        "HL": 280,
+        "LH": 219
+      },
+      "boundary_ports": 33797,
+      "cube_words": 2097152,
+      "endpoint_ports": {
+        "HH": 11005,
+        "HL": 18152,
+        "LH": 11787,
+        "LL": 11005
+      },
+      "internal_blue_ports": 280,
+      "internal_ports": 18152,
+      "n": 8,
+      "proper_rotation_fixed_counts": {
+        "1": 8,
+        "3": 80
+      }
+    }
+  ],
+  "max_order": 12,
+  "scope": "n-only DP even orders through max_order; independent anticycle DP; literal full fixed-path cubes and direct score polynomial through n8; H/Aut and regular-parent cycle controls through n6",
+  "status": "PASS"
+}

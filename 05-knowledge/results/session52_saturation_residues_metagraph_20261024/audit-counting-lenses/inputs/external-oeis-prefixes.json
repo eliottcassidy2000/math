@@ -1,0 +1,10 @@
+{
+  "retrieved_utc_date": "2026-10-24",
+  "source_urls": {
+    "A000568": "https://oeis.org/A000568/b000568.txt",
+    "A002785": "https://oeis.org/A002785"
+  },
+  "provenance": "Independently read the OEIS A000568 b-file and A002785 entry with the web tool; transcribed n=0..20 ordinary and n=1..20 self-converse prefixes. A002785 has offset 1; n=0 is the separately justified empty-tournament convention, not an OEIS data row. The A002785 b-file fetch failed and was not used. This is a comparison against a separate source, not a claim of mathematical independence from classical Burnside enumeration.",
+  "A000568": [1,1,1,2,4,12,56,456,6880,191536,9733056,903753248,154108311168,48542114686912,28401423719122304,31021002160355166848,63530415842308265100288,244912778438520759443245824,1783398846284777975419600287232,24605641171260376770598003978281472,645022068557873570931850526424042500096],
+  "A002785_with_empty_n0": [1,1,1,2,2,8,12,88,176,2752,8784,279968,1492288,95458560,872687552,111698291584,1787154671104,457509297625088,13013584213369088,6662951988432581120,341143107490935724032]
+}

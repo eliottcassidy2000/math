@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-24",
+  "dependencies": "Python3 standard library and local input only",
+  "files": [
+    {
+      "bytes": 1126,
+      "path": "README.md",
+      "sha256": "e375b31c1eb76a7669c5e3614709b15919a6d626fdddaa7504b63c26d51ce646"
+    },
+    {
+      "bytes": 20017,
+      "path": "THEOREM.md",
+      "sha256": "bc5fc6cf7e642b863728b218b63a10f5bf463039fdabf91afcb2579f3abbbbc3"
+    },
+    {
+      "bytes": 4694,
+      "path": "SOURCES.json",
+      "sha256": "5d415efa128065bacc4e7fbf52971c67c4d34068fa7da19b839fe28556564d5a"
+    },
+    {
+      "bytes": 17211,
+      "path": "check.py",
+      "sha256": "dc09e1a822022f913519393977396617145a71ee1726e4e5b3aba5b61320e77a"
+    },
+    {
+      "bytes": 1908,
+      "path": "test_rejections.py",
+      "sha256": "c518e16b0f22ebfbdb2b351544706dd34877a0980a665278454cb145fabaf266"
+    },
+    {
+      "bytes": 427404,
+      "path": "results.json",
+      "sha256": "7f3ab3cde28031a051d647814c44d0db2979a58cdd54ace0635af98d4cf14c32"
+    },
+    {
+      "bytes": 135501,
+      "path": "inputs/prime_offsets_certificates.json",
+      "sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf"
+    },
+    {
+      "bytes": 1168,
+      "path": "check.out",
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "bytes": 1168,
+      "path": "check_optimized.out",
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "bytes": 533,
+      "path": "rejections.out",
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "bytes": 533,
+      "path": "rejections_optimized.out",
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "bytes": 1168,
+      "path": "generation.out",
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    }
+  ],
+  "reproduce": [
+    "python3 check.py",
+    "python3 -O check.py",
+    "python3 test_rejections.py",
+    "python3 -O test_rejections.py"
+  ],
+  "scope": "Fortunate indices1..19; square-sum graphs1..28; comparison n1..17 with G10..26, immediate failure18/27; named alternative interpretations retained. No universal bridge.",
+  "status": "Producer PASS; independent audit pending"
+}

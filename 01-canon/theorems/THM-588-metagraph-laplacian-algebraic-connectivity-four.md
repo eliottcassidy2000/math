@@ -1,7 +1,7 @@
 ---
 id: THM-588
-title: The dominance-reversal tournament metagraph Laplacian has spectrum {2k : mult(k)>0} (mult = THM-587 signed cycle index); since mult(1)=0 (proved) and the cyclicity 3-cycle count is a nonzero level-2 invariant (mult(2)>=1), its ALGEBRAIC CONNECTIVITY is exactly 4 for every n>=3, the arc-flip random walk P=A/d has spectral gap exactly 4/C(n,2), and the Fiedler (slowest) mode is the 3-cycle count
-status: PROVED (mult(1)=0 by the transposition argument; mult(2)>=1 since cyclicity is a degree-2 relabeling invariant with nonzero level-2 part; alg.conn = 2*min{k>=1:mult(k)>0} = 4); VERIFIED n=3..9 (mult(1)=0, mult(2)=1, alg.conn=4, gap=4/d) and the Fiedler mode = cyclicity (|corr|=1.000 n=4,5; 0.998 n=6)
+title: The dominance-reversal tournament metagraph Laplacian has spectrum {2k : mult(k)>0} (mult = THM-587 signed cycle index); since mult(1)=0 (proved) and the centered cyclicity is a nonzero level-2 invariant (mult(2)>=1), its ALGEBRAIC CONNECTIVITY is exactly 4 for every n>=3, the arc-flip random walk P=A/d has spectral gap exactly 4/C(n,2), and the Fiedler (slowest) mode is the centered 3-cycle count
+status: PROVED (mult(1)=0 by the transposition argument; mult(2)>=1 since cyclicity is a degree-2 relabeling invariant with nonzero level-2 part; alg.conn = 2*min{k>=1:mult(k)>0} = 4); VERIFIED n=3..9 (mult(1)=0, mult(2)=1, alg.conn=4, gap=4/d) and the Fiedler mode = centered cyclicity (|corr|=1.000 n=4,5; 0.998 n=6)
 source: klein-2026-06-29-S3
 depends_on:
   - THM-587   # mult(k) = coeff of the signed cycle index; eigenvalues of A are d-2k
@@ -35,9 +35,12 @@ adjacency eigenvalues are `d-2k` with multiplicity `mult(k) = [x^k] P_n(x)` (the
    `2 * min{k>=1 : mult(k)>0} = 2*2 = 4`.
 5. **Arc-flip walk gap.** The simple random walk `P = A/d` has spectral gap `1 - lambda_2 = 4/d
    = 4/C(n,2)` exactly (relaxation `~ C(n,2)/4`, mixing `O(n^2 log n)`).
-6. **Fiedler mode = cyclicity.** The eigenvector at `A`-eigenvalue `d-4` (level 2) is the 3-cycle count
-   `c(T) = C(n,3) - sum_i C(s_i,2)` (verified `|corr| = 1.000` n=4,5; `0.998` n=6). It is the
-   slowest-equilibrating observable of the dominance-reversal walk.
+6. **Fiedler mode = centered cyclicity.** A nonzero eigenfunction at `A`-eigenvalue `d-4`
+   (level 2) is `c_0(T) = c(T) - C(n,3)/4`, where
+   `c(T) = C(n,3) - sum_i C(s_i,2)` is the 3-cycle count (historically verified
+   `|corr| = 1.000` n=4,5; `0.998` n=6). The centering mean is for uniform labelled tournaments,
+   equivalently labelled-orbit-size weights on classes, not uniform weights on classes.
+   It is a Fiedler observable of the dominance-reversal walk.
 
 ## Proof
 
@@ -55,8 +58,11 @@ Being `S_n`-invariant, its level-2 projection is a nonzero `S_n`-invariant at le
 
 (4) The metagraph is connected (arc flips connect all tournaments), so `0` is a simple Laplacian
 eigenvalue (`mult(0)=1`, the constant). The next eigenvalue is `2 * min{k>=1 : mult(k)>0}`; by (2),(3)
-that minimum is `2`, giving algebraic connectivity `4`. (5) is `(min nonzero L-eigenvalue)/d`. (6) the
-`d-4` eigenspace is the level-2 invariant space, spanned (for n=3..9) by the cyclicity. ∎
+that minimum is `2`, giving algebraic connectivity `4`. (5) is `(min nonzero L-eigenvalue)/d`.
+(6) A labelled triple is cyclic with probability `1/4`, so the constant Fourier part of `c` is
+`C(n,3)/4`. Its invariant level-1 part vanishes by (2); therefore `c_0` is its nonzero level-2 part.
+Hence `A c_0 = (d-4)c_0` and `L c_0 = 4c_0`. The `d-4` eigenspace is the level-2 invariant space,
+spanned (for n=3..9) by `c_0`. ∎
 
 ## Significance and relation to prior work
 
@@ -64,11 +70,11 @@ that minimum is `2`, giving algebraic connectivity `4`. (5) is `(min nonzero L-e
   (opus-S268), whose Markov gap was only conjectured `~ c/n` and whose spectrum is semicircular/messy, the
   canonical **arc-flip weighted** metagraph has the EXACT gap `4/d` and integer Laplacian spectrum `{2k}`.
   These are two different normalizations of "the metagraph": S268's slow mode is the H-gradient (`H ≈ 2nd
-  eigenvector`, a degree-`(n-1)` observable); the arc-flip metagraph's slow mode is the degree-2 cyclicity.
+  eigenvector`, a degree-`(n-1)` observable); the arc-flip metagraph's Fiedler mode is centered cyclicity.
   Both are real; THM-588 fixes the canonical one and removes the conjecture.
 - **No-linear / single-quadratic structure.** `mult(1)=0` (no first-order invariant) and `mult(2)=1` (one
   quadratic invariant) say the lowest nontrivial content of the metagraph is a SINGLE pairwise/quadratic
-  mode — the cyclicity. This is the structural template behind the LRC transfer HYP-3552: the binding
+  mode — centered cyclicity. This is the structural template behind the LRC transfer HYP-3552: the binding
   obstruction is purely the second moment, with the first moment forced to vanish.
 - **Engineering.** All of `mult(k)` (hence the full Laplacian spectrum, complexity `kappa(n)`, neutral-flip
   trace `tr(A) = sum mult(k)(d-2k) = 2,6,16,60,328,3160,54928` for n=3..9, heat trace, spectral zeta) come

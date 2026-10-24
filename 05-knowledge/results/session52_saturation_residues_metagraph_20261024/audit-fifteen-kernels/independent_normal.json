@@ -1,0 +1,260 @@
+{
+  "bolza": {
+    "edge_classes": 4,
+    "full_geometric_group": "CITED only in Atlas characteristic scope",
+    "orbits": [
+      [
+        1,
+        4,
+        8,
+        9,
+        12,
+        13
+      ],
+      [
+        2,
+        7,
+        14,
+        15
+      ],
+      [
+        3,
+        6,
+        10,
+        11
+      ],
+      [
+        5
+      ]
+    ],
+    "order": 24,
+    "stabilizers": [
+      4,
+      6,
+      6,
+      24
+    ],
+    "weighted_degree": 15
+  },
+  "fixed_point_characters": [
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "duads": 15,
+      "pentad_cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "synthemes": 15
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "duads": 7,
+      "pentad_cycle_type": [
+        2,
+        2,
+        2
+      ],
+      "synthemes": 3
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "duads": 3,
+      "pentad_cycle_type": [
+        3,
+        3
+      ],
+      "synthemes": 0
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "duads": 3,
+      "pentad_cycle_type": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "synthemes": 3
+    },
+    {
+      "cycle_type": [
+        1,
+        1,
+        4
+      ],
+      "duads": 1,
+      "pentad_cycle_type": [
+        1,
+        1,
+        4
+      ],
+      "synthemes": 1
+    },
+    {
+      "cycle_type": [
+        1,
+        2,
+        3
+      ],
+      "duads": 1,
+      "pentad_cycle_type": [
+        6
+      ],
+      "synthemes": 0
+    },
+    {
+      "cycle_type": [
+        1,
+        5
+      ],
+      "duads": 0,
+      "pentad_cycle_type": [
+        1,
+        5
+      ],
+      "synthemes": 0
+    },
+    {
+      "cycle_type": [
+        2,
+        2,
+        2
+      ],
+      "duads": 3,
+      "pentad_cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "synthemes": 7
+    },
+    {
+      "cycle_type": [
+        2,
+        4
+      ],
+      "duads": 1,
+      "pentad_cycle_type": [
+        2,
+        4
+      ],
+      "synthemes": 1
+    },
+    {
+      "cycle_type": [
+        3,
+        3
+      ],
+      "duads": 0,
+      "pentad_cycle_type": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "synthemes": 3
+    },
+    {
+      "cycle_type": [
+        6
+      ],
+      "duads": 0,
+      "pentad_cycle_type": [
+        1,
+        2,
+        3
+      ],
+      "synthemes": 1
+    }
+  ],
+  "gates": 545153,
+  "graph": {
+    "KG6_2_isomorphism": "syntheme -> pair of containing pentads",
+    "SRG": [
+      15,
+      6,
+      1,
+      3
+    ]
+  },
+  "hostile_claims_rejected": [
+    "natural S6-equivariant duad-syntheme bijection",
+    "same stabilizer order means conjugacy",
+    "syntheme graph is the Richelot graph",
+    "four edge classes always mean four destination vertices",
+    "a count of 15 identifies the Ogg prime set or selects modulus 15",
+    "finite permutation closure proves all characteristic specializations",
+    "Bolza CM bridge supplies an MRB value or defect formula"
+  ],
+  "scope": {
+    "Atlas_excluded_characteristics": [
+      2,
+      3,
+      5
+    ],
+    "j0_prime_divisors": [
+      2,
+      5
+    ],
+    "j1728_prime_divisors": [
+      2,
+      7
+    ],
+    "p13_p29": "one four-kernel orbit target specializes from IV to V",
+    "p7": "three distinct loop classes of weights 4,4,1 plus product class of weight 6; two destination vertices, not four"
+  },
+  "stabilizers": {
+    "duad": {
+      "natural_orbits": [
+        2,
+        4
+      ],
+      "order": 48
+    },
+    "syntheme": {
+      "natural_orbits": [
+        6
+      ],
+      "order": 48
+    }
+  },
+  "status": "PASS; finite actions checked independently, geometric quotients remain cited",
+  "universe": {
+    "S6": 720,
+    "duads": 15,
+    "flags": 45,
+    "lagrangians": 15,
+    "nonzero_vectors": 15,
+    "pentads": 6,
+    "synthemes": 15
+  }
+}

@@ -1,0 +1,1094 @@
+{
+  "bolza": {
+    "codomain_identification_status": "CITED only; see source manifest and source input",
+    "edge_class_count": 4,
+    "orbits": [
+      {
+        "kernel_indices": [
+          1,
+          4,
+          8,
+          9,
+          12,
+          13
+        ],
+        "stabilizer_order": 4,
+        "weight": 6
+      },
+      {
+        "kernel_indices": [
+          3,
+          6,
+          10,
+          11
+        ],
+        "stabilizer_order": 6,
+        "weight": 4
+      },
+      {
+        "kernel_indices": [
+          2,
+          7,
+          14,
+          15
+        ],
+        "stabilizer_order": 6,
+        "weight": 4
+      },
+      {
+        "kernel_indices": [
+          5
+        ],
+        "stabilizer_order": 24,
+        "weight": 1
+      }
+    ],
+    "reduced_group_order": 24,
+    "status": "FINITE-EXACT group replay of CITED geometric input; not a field or curve computation",
+    "weighted_out_degree": 15
+  },
+  "boundaries": [
+    "No bijection to the Ogg prime set is defined.",
+    "No preferred modulus 15 is obtained.",
+    "No formula for or correction to the MRB constant is obtained.",
+    "The syntheme graph is not the Richelot isogeny graph.",
+    "No rationality, superspeciality, or field specialization is proved by this finite checker.",
+    "Geometric codomain types are cited, not recomputed."
+  ],
+  "checker_sha256": "b2aa92ae33c2351b2fae36e24f291edfdbb7f5e0a8a4d672d8e6eac25a85b248",
+  "checks": 28604,
+  "geometry": {
+    "action_character_table": [
+      {
+        "fixed_duads": 15,
+        "fixed_synthemes": 15,
+        "pentad_action_cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "source_cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "fixed_duads": 7,
+        "fixed_synthemes": 3,
+        "pentad_action_cycle_type": [
+          2,
+          2,
+          2
+        ],
+        "source_cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "fixed_duads": 3,
+        "fixed_synthemes": 0,
+        "pentad_action_cycle_type": [
+          3,
+          3
+        ],
+        "source_cycle_type": [
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "fixed_duads": 3,
+        "fixed_synthemes": 3,
+        "pentad_action_cycle_type": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "source_cycle_type": [
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "fixed_duads": 1,
+        "fixed_synthemes": 1,
+        "pentad_action_cycle_type": [
+          1,
+          1,
+          4
+        ],
+        "source_cycle_type": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "fixed_duads": 1,
+        "fixed_synthemes": 0,
+        "pentad_action_cycle_type": [
+          6
+        ],
+        "source_cycle_type": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "fixed_duads": 0,
+        "fixed_synthemes": 0,
+        "pentad_action_cycle_type": [
+          1,
+          5
+        ],
+        "source_cycle_type": [
+          1,
+          5
+        ]
+      },
+      {
+        "fixed_duads": 3,
+        "fixed_synthemes": 7,
+        "pentad_action_cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "source_cycle_type": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "fixed_duads": 1,
+        "fixed_synthemes": 1,
+        "pentad_action_cycle_type": [
+          2,
+          4
+        ],
+        "source_cycle_type": [
+          2,
+          4
+        ]
+      },
+      {
+        "fixed_duads": 0,
+        "fixed_synthemes": 3,
+        "pentad_action_cycle_type": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "source_cycle_type": [
+          3,
+          3
+        ]
+      },
+      {
+        "fixed_duads": 0,
+        "fixed_synthemes": 1,
+        "pentad_action_cycle_type": [
+          1,
+          2,
+          3
+        ],
+        "source_cycle_type": [
+          6
+        ]
+      }
+    ],
+    "counts": {
+      "S6_permutations": 720,
+      "flags": 45,
+      "lagrangians": 15,
+      "nonzero_vectors": 15,
+      "pentads": 6,
+      "synthemes": 15
+    },
+    "duad_to_F2_4": [
+      {
+        "duad": [
+          1,
+          2
+        ],
+        "vector": 1
+      },
+      {
+        "duad": [
+          1,
+          3
+        ],
+        "vector": 2
+      },
+      {
+        "duad": [
+          1,
+          4
+        ],
+        "vector": 7
+      },
+      {
+        "duad": [
+          1,
+          5
+        ],
+        "vector": 11
+      },
+      {
+        "duad": [
+          1,
+          6
+        ],
+        "vector": 15
+      },
+      {
+        "duad": [
+          2,
+          3
+        ],
+        "vector": 3
+      },
+      {
+        "duad": [
+          2,
+          4
+        ],
+        "vector": 6
+      },
+      {
+        "duad": [
+          2,
+          5
+        ],
+        "vector": 10
+      },
+      {
+        "duad": [
+          2,
+          6
+        ],
+        "vector": 14
+      },
+      {
+        "duad": [
+          3,
+          4
+        ],
+        "vector": 5
+      },
+      {
+        "duad": [
+          3,
+          5
+        ],
+        "vector": 9
+      },
+      {
+        "duad": [
+          3,
+          6
+        ],
+        "vector": 13
+      },
+      {
+        "duad": [
+          4,
+          5
+        ],
+        "vector": 12
+      },
+      {
+        "duad": [
+          4,
+          6
+        ],
+        "vector": 8
+      },
+      {
+        "duad": [
+          5,
+          6
+        ],
+        "vector": 4
+      }
+    ],
+    "matching_to_lagrangian_and_pentad_duad": [
+      {
+        "matching": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "matching_index": 0,
+        "nonzero_vectors": [
+          1,
+          4,
+          5
+        ],
+        "pentad_duad": [
+          0,
+          1
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "matching_index": 1,
+        "nonzero_vectors": [
+          1,
+          8,
+          9
+        ],
+        "pentad_duad": [
+          2,
+          3
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "matching_index": 2,
+        "nonzero_vectors": [
+          1,
+          12,
+          13
+        ],
+        "pentad_duad": [
+          4,
+          5
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "matching_index": 3,
+        "nonzero_vectors": [
+          2,
+          4,
+          6
+        ],
+        "pentad_duad": [
+          2,
+          4
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "matching_index": 4,
+        "nonzero_vectors": [
+          2,
+          8,
+          10
+        ],
+        "pentad_duad": [
+          0,
+          5
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "matching_index": 5,
+        "nonzero_vectors": [
+          2,
+          12,
+          14
+        ],
+        "pentad_duad": [
+          1,
+          3
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "matching_index": 6,
+        "nonzero_vectors": [
+          3,
+          4,
+          7
+        ],
+        "pentad_duad": [
+          3,
+          5
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "matching_index": 7,
+        "nonzero_vectors": [
+          7,
+          10,
+          13
+        ],
+        "pentad_duad": [
+          1,
+          2
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "matching_index": 8,
+        "nonzero_vectors": [
+          7,
+          9,
+          14
+        ],
+        "pentad_duad": [
+          0,
+          4
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "matching_index": 9,
+        "nonzero_vectors": [
+          3,
+          8,
+          11
+        ],
+        "pentad_duad": [
+          1,
+          4
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ],
+        "matching_index": 10,
+        "nonzero_vectors": [
+          6,
+          11,
+          13
+        ],
+        "pentad_duad": [
+          0,
+          3
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "matching_index": 11,
+        "nonzero_vectors": [
+          5,
+          11,
+          14
+        ],
+        "pentad_duad": [
+          2,
+          5
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "matching_index": 12,
+        "nonzero_vectors": [
+          3,
+          12,
+          15
+        ],
+        "pentad_duad": [
+          0,
+          2
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "matching_index": 13,
+        "nonzero_vectors": [
+          6,
+          9,
+          15
+        ],
+        "pentad_duad": [
+          1,
+          5
+        ]
+      },
+      {
+        "matching": [
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "matching_index": 14,
+        "nonzero_vectors": [
+          5,
+          10,
+          15
+        ],
+        "pentad_duad": [
+          3,
+          4
+        ]
+      }
+    ],
+    "outer_transposition_image_zero_based": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4
+    ],
+    "pentads_as_matching_indices": [
+      [
+        0,
+        4,
+        8,
+        10,
+        12
+      ],
+      [
+        0,
+        5,
+        7,
+        9,
+        13
+      ],
+      [
+        1,
+        3,
+        7,
+        11,
+        12
+      ],
+      [
+        1,
+        5,
+        6,
+        10,
+        14
+      ],
+      [
+        2,
+        3,
+        8,
+        9,
+        14
+      ],
+      [
+        2,
+        4,
+        6,
+        11,
+        13
+      ]
+    ],
+    "stabilizer_hostile": {
+      "duad_stabilizer_order": 48,
+      "matching": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "matching_stabilizer_order": 48,
+      "natural_point_orbits_duad": [
+        2,
+        4
+      ],
+      "natural_point_orbits_matching": [
+        6
+      ]
+    },
+    "symplectic_basis_even_subset_masks": [
+      3,
+      5,
+      15,
+      23
+    ],
+    "syntheme_graph": {
+      "adjacency": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "edges": 45,
+      "spectrum_eigenvalue_multiplicity": [
+        [
+          6,
+          1
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          -3,
+          5
+        ]
+      ],
+      "srg_parameters": [
+        15,
+        6,
+        1,
+        3
+      ]
+    }
+  },
+  "source_manifest_sha256": "4ed8cf388759e92ccd8de3fc2b6345931bb376b4c685a16a2c08a8bd94e23263",
+  "status": "PROVED elementary geometry; FINITE-EXACT full universes; CITED Richelot/Bolza interpretation"
+}

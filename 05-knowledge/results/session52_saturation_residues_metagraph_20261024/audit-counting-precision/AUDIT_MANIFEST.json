@@ -1,0 +1,105 @@
+{
+  "status": "PASS; independent narrow precision audit; no publication performed",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 5642,
+      "sha256": "8b463d257ce31ffca1d58acbc9d59ed48e4976fda81750a44a7b82b4cb75295b"
+    },
+    {
+      "path": "audit_precision.py",
+      "bytes": 3940,
+      "sha256": "4d44ec7dabf50ab70bbd95fe94fd8e117ac1a3764256312fe8a355358a2b67ca"
+    },
+    {
+      "path": "independent-normal.json",
+      "bytes": 1490,
+      "sha256": "f4655f429684a9655ea98492381f462ea567b0e5ad1bbc61bc704ba44a550706"
+    },
+    {
+      "path": "independent-optimized.json",
+      "bytes": 1490,
+      "sha256": "f4655f429684a9655ea98492381f462ea567b0e5ad1bbc61bc704ba44a550706"
+    },
+    {
+      "path": "inputs/producer/PRECISION_NOTES.md",
+      "bytes": 3076,
+      "sha256": "cef18393438abbf3365cafc01e4d13118d62b43a58ef9290ff8e7d1f56b590e6"
+    },
+    {
+      "path": "inputs/producer/manifest.json",
+      "bytes": 659,
+      "sha256": "61b4e4a339474d5e85152cece7a079f50fbcabe51531091e60e74453a3333407"
+    },
+    {
+      "path": "inputs/producer/precision-receipt-optimized.json",
+      "bytes": 1517,
+      "sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "path": "inputs/producer/precision-receipt.json",
+      "bytes": 1517,
+      "sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "path": "inputs/producer/precision.patch",
+      "bytes": 11052,
+      "sha256": "8880e6a357ecd0aa426378e6a9e2325d20c235124925eb9d05e9cddf66b587c0"
+    },
+    {
+      "path": "inputs/producer/prepare_patch.py",
+      "bytes": 5756,
+      "sha256": "41b77b2abe2cde08d7852a9701906682164d6279ea9632b12d09b5f49bb294a0"
+    },
+    {
+      "path": "inputs/producer/source-pins.json",
+      "bytes": 676,
+      "sha256": "10dc0b2f539ab55d55da4af07635aab97147dd7bc944365c2a8d346059c3520f"
+    },
+    {
+      "path": "inputs/producer/verify_precision.py",
+      "bytes": 3369,
+      "sha256": "9b64f73b21a8ee99c14921d48baed1b46ab2d564e63c174816b7a88c274cfa7c"
+    },
+    {
+      "path": "inputs/sources/01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "bytes": 7091,
+      "sha256": "2ebefe2e77b93db500ab1e585df4162815e8d677fbba9e2b915fbb185535f5b8"
+    },
+    {
+      "path": "inputs/sources/01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "bytes": 5720,
+      "sha256": "49b8e19e6a3dc988e700537fc5b0868760222a9b4a26968735f269dddf851293"
+    },
+    {
+      "path": "producer-normal.json",
+      "bytes": 1517,
+      "sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "path": "producer-optimized.json",
+      "bytes": 1517,
+      "sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "path": "relocation-manifest.json",
+      "bytes": 1987,
+      "sha256": "79a233c935fe0fdc9a7d4f5578e3ca7d858bfb6df49261ca681adfabe5f5c6b1"
+    },
+    {
+      "path": "relocation-receipt-optimized.json",
+      "bytes": 1238,
+      "sha256": "a373046a95bf7420a173b8c71ac16918925321d171471cf29c3b127fba625723"
+    },
+    {
+      "path": "relocation-receipt.json",
+      "bytes": 1238,
+      "sha256": "a373046a95bf7420a173b8c71ac16918925321d171471cf29c3b127fba625723"
+    },
+    {
+      "path": "verify_relocation.py",
+      "bytes": 2997,
+      "sha256": "959070556d9a6b6734d9010bc12239c26e086e8836be6366cf21cc5ccaf42f92"
+    }
+  ]
+}

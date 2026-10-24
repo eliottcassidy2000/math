@@ -1,0 +1,82 @@
+{
+  "schema": "sha256-file-manifest-v1",
+  "scope": "closed independent blue existence audit",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "3b2e54df07994acd6663f14e33724704a86bbf205cd95d4691b4a308f2b7a957"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ca02b982143e5008f862cba1ebe43861713a3df51bd142d471b78b36d0945e88"
+    },
+    {
+      "path": "audit.py",
+      "sha256": "d08d6051118ffc2bf6f405e30184919c321375eaa2532792a2b4234ee140a09d"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "6dd387c7de5f754dff0fad8ebe3536df4473955fa295d7d3cfc9d090a12a6a66"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "6dd387c7de5f754dff0fad8ebe3536df4473955fa295d7d3cfc9d090a12a6a66"
+    },
+    {
+      "path": "producer-normal.json",
+      "sha256": "9b69abb358a0359efdeb317d669a5af8a8895925dbf7f5e9b5996e8e1e9c020c"
+    },
+    {
+      "path": "producer-optimized.json",
+      "sha256": "9b69abb358a0359efdeb317d669a5af8a8895925dbf7f5e9b5996e8e1e9c020c"
+    },
+    {
+      "path": "producer/MANIFEST.json",
+      "sha256": "aba81e8faeff42da1dcf9e35784e1ece07c2049187cfaa040ab592c4fce6a7fe"
+    },
+    {
+      "path": "producer/PROBE.md",
+      "sha256": "f8840e928269e3831e9a4654eb773a6debbfedd4301b3ea9c1bfe1346e2607a6"
+    },
+    {
+      "path": "producer/README.md",
+      "sha256": "cf1033d9a8e147a9319c87c3da27009809c627f4b3b95b7748c9beccf44beb4c"
+    },
+    {
+      "path": "producer/SHA256SUMS.txt",
+      "sha256": "9d9c2ecd550c931bd79126d2936a7b8068338cb61cafa5a0af22e0c5cdbbac1a"
+    },
+    {
+      "path": "producer/SOURCE_PINS.json",
+      "sha256": "d171118a103ddfd551b9b6627ca49ceebcf818ee029cbac892985c518fd78dd5"
+    },
+    {
+      "path": "producer/check.py",
+      "sha256": "3fbe067ea8730f73d9591869487c010b1ea4d3fd2f3a1e0ba8a5035fb52cdca9"
+    },
+    {
+      "path": "producer/normal.json",
+      "sha256": "9b69abb358a0359efdeb317d669a5af8a8895925dbf7f5e9b5996e8e1e9c020c"
+    },
+    {
+      "path": "producer/optimized.json",
+      "sha256": "9b69abb358a0359efdeb317d669a5af8a8895925dbf7f5e9b5996e8e1e9c020c"
+    },
+    {
+      "path": "producer/sources/anti-involution-context.md",
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+    },
+    {
+      "path": "producer/sources/balanced-metagraph-theorem.md",
+      "sha256": "3762a637230f2ec1ab5a109e9f754bbb760b5574f52f83fea55fa912f2486006"
+    },
+    {
+      "path": "producer/verify_manifest.py",
+      "sha256": "464815b005ce96e15a5c2e21c13782a5c800badbb9488046dce321a1f7677d93"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "e56b86139e15982ad691beef07db3f5b9c4d730a16e4c4912972f9fabffb506f"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "path": "sources/regular-eleven-MANIFEST.json",
+      "sha256": "0462baf160610115c8b2436c2c57cce1964d0439ce49e86b9b43ce00f2bda3f2",
+      "source_artifact": "MANIFEST.json",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/regular-eleven-eleven-O2-parents.txt",
+      "sha256": "ef22a13423ecf41c90e0d01e3f04bd1a42e173bb519abcad7698fb4aa3979937",
+      "source_artifact": "eleven-O2-parents.txt",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/regular-eleven-eleven-O2-states.tsv",
+      "sha256": "d4457eba3860a16f6d2649b5b0c6a80aaea5069b130d68838e8d79cab5be285b",
+      "source_artifact": "eleven-O2-states.tsv",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/regular-eleven-eleven-O2-components.tsv",
+      "sha256": "5f5050d7f47808b7ceb73f9bb3707b4611f45663c96768704ba5d7c800ad37d5",
+      "source_artifact": "eleven-O2-components.tsv",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/regular-eleven-eleven-O2.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd",
+      "source_artifact": "eleven-O2.json",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/regular-eleven-THEOREM.md",
+      "sha256": "d7ec1b4ad135c025cf2a09e63040cb8b22f99db612842bbf6880cdcd679060b6",
+      "source_artifact": "THEOREM.md",
+      "source_packet": "session51-regular-eleven"
+    },
+    {
+      "path": "sources/balanced-metagraph-MANIFEST.json",
+      "sha256": "7431d29c032d92aa6da1807c436bb839ed9c84909872de31d7f64b09d4963d43",
+      "source_artifact": "MANIFEST.json",
+      "source_packet": "session52-balanced-metagraph"
+    },
+    {
+      "path": "sources/balanced-metagraph-normal.json",
+      "sha256": "08eba3770c67fd68c2a204f95a4f84dd06d1fc6d62521fc1e641ed2b06c34b49",
+      "source_artifact": "normal.json",
+      "source_packet": "session52-balanced-metagraph"
+    },
+    {
+      "path": "sources/balanced-metagraph-engine.py",
+      "sha256": "b69b96c789e31be9a16b192e58e75beb90f683288c4c4db2a3f99ba8a681fc38",
+      "source_artifact": "engine.py",
+      "source_packet": "session52-balanced-metagraph"
+    },
+    {
+      "path": "sources/balanced-metagraph-THEOREM.md",
+      "sha256": "3762a637230f2ec1ab5a109e9f754bbb760b5574f52f83fea55fa912f2486006",
+      "source_artifact": "THEOREM.md",
+      "source_packet": "session52-balanced-metagraph"
+    },
+    {
+      "path": "sources/defect-wiring-MANIFEST.json",
+      "sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d",
+      "source_artifact": "MANIFEST.json",
+      "source_packet": "session51-blue-defect-wiring"
+    },
+    {
+      "path": "sources/defect-wiring-normal.json",
+      "sha256": "a222ede1374d68471e2d7da0fb909292dee1ab9426f48e8478acf1215f065a77",
+      "source_artifact": "normal.json",
+      "source_packet": "session51-blue-defect-wiring"
+    },
+    {
+      "path": "sources/defect-wiring-THEOREM.md",
+      "sha256": "0764f2a2d3c45751e2da0ee6c8db54a8974e2ee6fe7b0606753ed511867b8c93",
+      "source_artifact": "THEOREM.md",
+      "source_packet": "session51-blue-defect-wiring"
+    },
+    {
+      "path": "sources/converse-errors-MANIFEST.json",
+      "sha256": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+      "source_artifact": "MANIFEST.json",
+      "source_packet": "session51-converse-errors"
+    },
+    {
+      "path": "sources/converse-errors-normal.json",
+      "sha256": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce",
+      "source_artifact": "normal.json",
+      "source_packet": "session51-converse-errors"
+    },
+    {
+      "path": "sources/converse-errors-THEOREM.md",
+      "sha256": "e461b661ec0a4f0edc840a9139db48511cda347006af0d7e717b1f0b71f4b5a6",
+      "source_artifact": "THEOREM.md",
+      "source_packet": "session51-converse-errors"
+    },
+    {
+      "path": "sources/defect-neighborhood-MANIFEST.json",
+      "sha256": "141cbcb8e2696238c2db7db40e4bcd9570438d791a4c405e662427671db8f6da",
+      "source_artifact": "MANIFEST.json",
+      "source_packet": "session51-blue-defect-neighborhood"
+    },
+    {
+      "path": "sources/defect-neighborhood-check.py",
+      "sha256": "641fe89e4c8a0d76519af6a1af434675d6b5e4f0fe9e42f540b226ccf5054ec1",
+      "source_artifact": "check.py",
+      "source_packet": "session51-blue-defect-neighborhood"
+    },
+    {
+      "path": "sources/defect-neighborhood-THEOREM.md",
+      "sha256": "03de3068664539e3edc8022bbad0cc05c755b5087d0ca313173eebc70a4819fe",
+      "source_artifact": "THEOREM.md",
+      "source_packet": "session51-blue-defect-neighborhood"
+    }
+  ]
+}

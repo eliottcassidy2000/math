@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "anti_invariant_matrices": 2,
+      "balanced_matrices": 2,
+      "every_paired_arc_realized": true,
+      "minimum_symmetric_downhill_paths": 1,
+      "n": 2
+    },
+    {
+      "anti_invariant_matrices": 16,
+      "balanced_matrices": 8,
+      "every_paired_arc_realized": true,
+      "minimum_symmetric_downhill_paths": 2,
+      "n": 4
+    },
+    {
+      "anti_invariant_matrices": 512,
+      "balanced_matrices": 112,
+      "every_paired_arc_realized": true,
+      "minimum_symmetric_downhill_paths": 5,
+      "n": 6
+    }
+  ],
+  "status": "FINITE-EXACT"
+}

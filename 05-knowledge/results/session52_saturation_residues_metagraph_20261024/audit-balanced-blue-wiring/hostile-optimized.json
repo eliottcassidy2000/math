@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "optimized": true,
+  "mutations": [
+    {
+      "mutation": "missing_port",
+      "rejected": true,
+      "failure": "RuntimeError: independent binary reflection cube exact"
+    },
+    {
+      "mutation": "source_path",
+      "rejected": true,
+      "failure": "RuntimeError: literal source path"
+    },
+    {
+      "mutation": "complement",
+      "rejected": true,
+      "failure": "RuntimeError: literal C complement"
+    },
+    {
+      "mutation": "target_order",
+      "rejected": true,
+      "failure": "RuntimeError: boundary literal canonical order"
+    },
+    {
+      "mutation": "edge_multiplicity",
+      "rejected": true,
+      "failure": "RuntimeError: all adjacency multiplicities"
+    },
+    {
+      "mutation": "omitted_SC_node",
+      "rejected": true,
+      "failure": "RuntimeError: all self converse atlas classes represented"
+    },
+    {
+      "mutation": "false_topology",
+      "rejected": true,
+      "failure": "RuntimeError: reported topology"
+    },
+    {
+      "mutation": "target_error",
+      "rejected": true,
+      "failure": "RuntimeError: boundary zero refinement error"
+    }
+  ]
+}

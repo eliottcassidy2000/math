@@ -1,0 +1,20 @@
+{
+  "boundary_edges_replayed": 18795,
+  "certificate_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200",
+  "internal_edges_replayed": 11452,
+  "ports_replayed": 41699,
+  "rejected_mutations": [
+    "wrong_native_C",
+    "nonpermutation_source_path",
+    "duplicated_port",
+    "wrong_target_witness"
+  ],
+  "status": "PASS",
+  "topology_fixtures": [
+    "single_bridge",
+    "parallel_not_bridge",
+    "loop_and_isolate",
+    "path_cut",
+    "triangle"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-24",
+  "source_scope": "Read-only recovery; no Git mutation or shared-source editing. Current sparse math checkout lacks metagraph_growth_20261020; its published clean-repo copy was read instead.",
+  "sources": [
+    {
+      "repository_path": "AGENTS.md",
+      "read_location": "math/AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-283-sc-burnside-formula.md",
+      "read_location": "math/01-canon/theorems/THM-283-sc-burnside-formula.md",
+      "sha256": "2282e0b1ff43b6516c1262172713ce7642f727bc73bbf28173c8b2f6bffcb178"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "read_location": "math/01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "sha256": "2ebefe2e77b93db500ab1e585df4162815e8d677fbba9e2b915fbb185535f5b8"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "read_location": "math/01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "sha256": "49b8e19e6a3dc988e700537fc5b0868760222a9b4a26968735f269dddf851293"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+      "read_location": "math/01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    },
+    {
+      "repository_path": "05-knowledge/results/sc_partition_formula.md",
+      "read_location": "math/05-knowledge/results/sc_partition_formula.md",
+      "sha256": "91434768a7755185a0649bb9f6065f7ec02a40c2ec6e183d55fb45993c21a634"
+    },
+    {
+      "repository_path": "05-knowledge/results/tournament_enumeration_20261021a/README.md",
+      "read_location": "math/05-knowledge/results/tournament_enumeration_20261021a/README.md",
+      "sha256": "d584e2095ff00efa7cb3c7a17111e8d5d9ba891dc4673e9d3a0d764897b9c03d"
+    },
+    {
+      "repository_path": "05-knowledge/results/converse_tournament_count_channels_20261021/README.md",
+      "read_location": "math/05-knowledge/results/converse_tournament_count_channels_20261021/README.md",
+      "sha256": "0e16355adad0e46ec91adb0aa6929bb39556a654b62adbb8530a8c24f23e7542"
+    },
+    {
+      "repository_path": "05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/README.md",
+      "read_location": "math/05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/README.md",
+      "sha256": "e48442ade5aa0083e893e77e41c9e7c281c8edccf221ebc932bf82a5715cdb55"
+    },
+    {
+      "repository_path": "05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/receipt.json",
+      "read_location": "math/05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/receipt.json",
+      "sha256": "c91c9eb25c296b27f83707ec0b634a4f31bd4bfae346d7c15df302e0e4d1a101"
+    },
+    {
+      "repository_path": "05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-review/REVIEW.md",
+      "read_location": "math/05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-review/REVIEW.md",
+      "sha256": "96073afa4bbc962fdfbed6d4749cd6c846a884b47c50aa55c672b848979740ec"
+    },
+    {
+      "repository_path": "05-knowledge/results/metagraph_growth_20261020/enumeration.md",
+      "read_location": "session50-publication/clean-repo/05-knowledge/results/metagraph_growth_20261020/enumeration.md",
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "sha256": "769305f5ddccb41366088d3ffa6440b7f536491849e1cf25e399a627dc8c41da",
+      "origin": "01-canon/theorems/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md"
+    },
+    {
+      "path": "inputs/bolza-kernel-action.json",
+      "sha256": "4af1c077814e087a91a3122f22f1c8e36059a361076d0b0ec8175800e00379f1",
+      "origin": "Source data transcribed from the cited primary paper; not a downloaded paper snapshot"
+    },
+    {
+      "path": "inputs/cardinality_bridges_20261018m.md",
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+      "origin": "05-knowledge/results/cardinality_bridges_20261018m.md"
+    },
+    {
+      "path": "inputs/information_observers_collatz_20261014a.md",
+      "sha256": "0de0e6393062e93ad543ade045ef3a2eda1bd5f7b854828a3724b5894137d955",
+      "origin": "05-knowledge/results/information_observers_collatz_20261014a.md"
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "FS-Atlas",
+      "url": "https://arxiv.org/html/2101.00917v2",
+      "locations": [
+        "section 1",
+        "section 2.1",
+        "section 3.1",
+        "section 4.14 and Table 12"
+      ]
+    },
+    {
+      "id": "FS-Automorphisms",
+      "url": "https://eprint.iacr.org/2021/012.pdf",
+      "locations": [
+        "Definitions 2.1-2.4",
+        "Lemma 3.2"
+      ]
+    },
+    {
+      "id": "HMSV",
+      "url": "https://arxiv.org/html/0710.5916v1",
+      "locations": [
+        "section 1.4"
+      ]
+    }
+  ],
+  "retrieved_utc_date": "2026-10-24",
+  "boundary": "Frozen repository proofs are inheritance, not newly discovered results. Missing historical computation files in the sparse checkout are not claimed to have been rerun. This standalone checker generates its finite universes afresh."
+}

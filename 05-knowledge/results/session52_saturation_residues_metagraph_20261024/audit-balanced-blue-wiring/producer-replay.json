@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "producer_manifest_sha256": "803ca39d90178d4e6dd0813a52bed6ceda2b996acd39505b926a1076dd982335",
+  "normal_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200",
+  "optimized_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200",
+  "frozen_sha256": "82b89916ca8f7b6424ebb4778c3f06358666fe27bb7b5c574d508da6891d6200",
+  "manifest_payload_files": 35,
+  "all_source_dependencies_copied": true
+}

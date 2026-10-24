@@ -1,0 +1,9 @@
+{
+  "PRECISION_NOTES.md": "cef18393438abbf3365cafc01e4d13118d62b43a58ef9290ff8e7d1f56b590e6",
+  "precision-receipt-optimized.json": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc",
+  "precision-receipt.json": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc",
+  "precision.patch": "8880e6a357ecd0aa426378e6a9e2325d20c235124925eb9d05e9cddf66b587c0",
+  "prepare_patch.py": "41b77b2abe2cde08d7852a9701906682164d6279ea9632b12d09b5f49bb294a0",
+  "source-pins.json": "10dc0b2f539ab55d55da4af07635aab97147dd7bc944365c2a8d346059c3520f",
+  "verify_precision.py": "9b64f73b21a8ee99c14921d48baed1b46ab2d564e63c174816b7a88c274cfa7c"
+}

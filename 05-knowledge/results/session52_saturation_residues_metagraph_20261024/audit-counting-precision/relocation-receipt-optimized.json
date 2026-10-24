@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "actual_manifest_only_copy": true,
+  "files_copied": 11,
+  "cwd": "/tmp",
+  "isolated_python": true,
+  "runtime_dependencies": "Python standard library and system patch executable; only two pinned theorem inputs; no repo/network imports",
+  "runs": [
+    {
+      "checker": "producer",
+      "optimized": false,
+      "checks": 33881,
+      "receipt_sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "checker": "independent",
+      "optimized": false,
+      "checks": 33895,
+      "receipt_sha256": "f4655f429684a9655ea98492381f462ea567b0e5ad1bbc61bc704ba44a550706"
+    },
+    {
+      "checker": "producer",
+      "optimized": true,
+      "checks": 33881,
+      "receipt_sha256": "6eada2ebabf8239e9a7fe41ac70fb410ce8cbe32fb976f30c5676ff0dd10a1fc"
+    },
+    {
+      "checker": "independent",
+      "optimized": true,
+      "checks": 33895,
+      "receipt_sha256": "f4655f429684a9655ea98492381f462ea567b0e5ad1bbc61bc704ba44a550706"
+    }
+  ],
+  "changed_source_hostiles": [
+    {
+      "optimized": false,
+      "rejected": true,
+      "no_success_receipt": true
+    },
+    {
+      "optimized": true,
+      "rejected": true,
+      "no_success_receipt": true
+    }
+  ]
+}
