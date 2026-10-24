@@ -1,0 +1,35 @@
+{
+  "scope": "Foundation checkpoint; route audit and active dyadic rerun outputs not yet included.",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 4943,
+      "sha256": "b0ba7d3280ecc7b9cd34bb3dc57e9fef6dc82cadfc5a13f878e15d3a55e02281"
+    },
+    {
+      "path": "audit.py",
+      "bytes": 9361,
+      "sha256": "3a199fa4655f7a99f41bca9974f0104e9b70edf60d3192a87066e267932be822"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 83828,
+      "sha256": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703"
+    },
+    {
+      "path": "normal.stdout",
+      "bytes": 273,
+      "sha256": "debbc96a32bc59d71350939ec1ac4f5b3616aa2aaeca88322a6fe14dd9654234"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 83828,
+      "sha256": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703"
+    },
+    {
+      "path": "optimized.stdout",
+      "bytes": 276,
+      "sha256": "5bd7043d7b0e286247142fe9d0e8acb42c0707d4e0129da429804a9111f13679"
+    }
+  ]
+}

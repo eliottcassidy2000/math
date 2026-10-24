@@ -1,0 +1,1 @@
+{"checks": 841, "counts": {"UV_pinned_paths": 56, "closed_ports": 228, "normalized_resources": 57, "owner_permutations_tested": 1128960, "raw_pinned_paths": 57, "sources": 28}, "four_slot_trades": 27, "output": "session46-audit-compensation/normal.json", "status": "PASS"}
