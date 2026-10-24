@@ -1,0 +1,46 @@
+{
+  "checks": 4075,
+  "independent_BFS": {
+    "boundary_states": 1744,
+    "menus": 663,
+    "reachable_states": 21272
+  },
+  "literal_native_routes": [
+    {
+      "base_dimension": 1,
+      "closed_reservoir_ports": 16,
+      "enlarged_owners": 16,
+      "integer_events": 4,
+      "slots": 2
+    },
+    {
+      "base_dimension": 2,
+      "closed_reservoir_ports": 32,
+      "enlarged_owners": 24,
+      "integer_events": 14,
+      "slots": 4
+    },
+    {
+      "base_dimension": 3,
+      "closed_reservoir_ports": 64,
+      "enlarged_owners": 32,
+      "integer_events": 44,
+      "slots": 8
+    },
+    {
+      "base_dimension": 4,
+      "closed_reservoir_ports": 128,
+      "enlarged_owners": 40,
+      "integer_events": 120,
+      "slots": 16
+    },
+    {
+      "base_dimension": 5,
+      "closed_reservoir_ports": 256,
+      "enlarged_owners": 48,
+      "integer_events": 304,
+      "slots": 32
+    }
+  ],
+  "status": "PASS; same-agent independent computational paths"
+}

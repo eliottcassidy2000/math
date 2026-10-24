@@ -1,0 +1,70 @@
+{
+  "checks": 3453315,
+  "connected_local_graphs": 64,
+  "face_endpoint_pairs": 7912,
+  "face_events": 21652,
+  "face_menu_tuples": 663,
+  "full_occupancy": [
+    {
+      "bound": 6,
+      "events": 4,
+      "horizontal": 2,
+      "r": 1,
+      "slots": 2
+    },
+    {
+      "bound": 20,
+      "events": 14,
+      "horizontal": 8,
+      "r": 2,
+      "slots": 4
+    },
+    {
+      "bound": 56,
+      "events": 44,
+      "horizontal": 24,
+      "r": 3,
+      "slots": 8
+    },
+    {
+      "bound": 144,
+      "events": 120,
+      "horizontal": 64,
+      "r": 4,
+      "slots": 16
+    },
+    {
+      "bound": 352,
+      "events": 304,
+      "horizontal": 160,
+      "r": 5,
+      "slots": 32
+    },
+    {
+      "bound": 832,
+      "events": 736,
+      "horizontal": 384,
+      "r": 6,
+      "slots": 64
+    },
+    {
+      "bound": 1920,
+      "events": 1728,
+      "horizontal": 896,
+      "r": 7,
+      "slots": 128
+    },
+    {
+      "bound": 4352,
+      "events": 3968,
+      "horizontal": 2048,
+      "r": 8,
+      "slots": 256
+    }
+  ],
+  "general_endpoint_pairs": 174222,
+  "general_two_slot_menus": 2076,
+  "largest_face_return": 12,
+  "seeded_cases": 128,
+  "status": "FINITE-EXACT PASS; general one-bit theorem proved separately"
+}

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-23 — reversible native edges need direction-specific transporters
+
+- **Affected draft:** the unpublished literal one-bit route audit in `balanced_native_20261023/audit.py`; no false theorem was published.
+- **First failed implication:** a reversible partner-isomorphism relation does not make its chosen transporter self-inverse. The forward map g=(4,0,2,3,1,5,6,7) has order three. Reusing g on a reverse bit event fails the actual target-matrix comparison.
+- **Repair / strongest survivor:** use g on0-to1 events and g^-1 on1-to0 events. Actual owner clocks, pins, full path resources and converse squares pass independently in both directions. The inherited cube proof enumerated forward edges only and was unaffected.
+- **Missing coordinate / next question:** retain transporter direction as part of every event witness; compositions around closed paths may retain nontrivial holonomy even when the underlying relation is undirected. [Proof and audit](../05-knowledge/results/balanced_native_20261023/AUDIT.md).
+
 ## 2026-10-23 — balanced electrical blocks: aggregate capacity does not supply distinct ports
 
 - **Affected proposal:** an unpublished doubling test for the two new native order-eight selected-port rectangles. No false realization theorem was published.

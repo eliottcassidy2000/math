@@ -1,0 +1,137 @@
+{
+  "Davenport": 132,
+  "abstract_sharp_atomic_slots": 264,
+  "actual_ten_option_endpoint_pairs": 20,
+  "checks": 1818,
+  "extremal_zero_subsets": 2,
+  "group": [
+    2,
+    2,
+    2,
+    2,
+    128
+  ],
+  "seeded_decompositions": [
+    {
+      "blocks": 1,
+      "max_slots": 2,
+      "pairs": 1
+    },
+    {
+      "blocks": 1,
+      "max_slots": 2,
+      "pairs": 1
+    },
+    {
+      "blocks": 1,
+      "max_slots": 2,
+      "pairs": 1
+    },
+    {
+      "blocks": 1,
+      "max_slots": 4,
+      "pairs": 2
+    },
+    {
+      "blocks": 1,
+      "max_slots": 4,
+      "pairs": 2
+    },
+    {
+      "blocks": 1,
+      "max_slots": 4,
+      "pairs": 2
+    },
+    {
+      "blocks": 1,
+      "max_slots": 16,
+      "pairs": 8
+    },
+    {
+      "blocks": 2,
+      "max_slots": 10,
+      "pairs": 8
+    },
+    {
+      "blocks": 1,
+      "max_slots": 16,
+      "pairs": 8
+    },
+    {
+      "blocks": 6,
+      "max_slots": 14,
+      "pairs": 32
+    },
+    {
+      "blocks": 7,
+      "max_slots": 12,
+      "pairs": 32
+    },
+    {
+      "blocks": 6,
+      "max_slots": 16,
+      "pairs": 32
+    },
+    {
+      "blocks": 20,
+      "max_slots": 22,
+      "pairs": 132
+    },
+    {
+      "blocks": 24,
+      "max_slots": 20,
+      "pairs": 132
+    },
+    {
+      "blocks": 22,
+      "max_slots": 18,
+      "pairs": 132
+    },
+    {
+      "blocks": 22,
+      "max_slots": 24,
+      "pairs": 133
+    },
+    {
+      "blocks": 24,
+      "max_slots": 20,
+      "pairs": 133
+    },
+    {
+      "blocks": 21,
+      "max_slots": 26,
+      "pairs": 133
+    },
+    {
+      "blocks": 53,
+      "max_slots": 20,
+      "pairs": 300
+    },
+    {
+      "blocks": 52,
+      "max_slots": 18,
+      "pairs": 300
+    },
+    {
+      "blocks": 52,
+      "max_slots": 18,
+      "pairs": 300
+    },
+    {
+      "blocks": 178,
+      "max_slots": 22,
+      "pairs": 1000
+    },
+    {
+      "blocks": 176,
+      "max_slots": 22,
+      "pairs": 1000
+    },
+    {
+      "blocks": 168,
+      "max_slots": 20,
+      "pairs": 1000
+    }
+  ],
+  "status": "FINITE-EXACT PASS; uniform theorem proved separately"
+}
