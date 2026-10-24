@@ -1,0 +1,32 @@
+{
+  "checks": 359,
+  "incoming_bank_source_overlap": [],
+  "incoming_revision": "1d94c1d1d9",
+  "incoming_supply_sha256": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+  "integer_source_X_sums": [
+    382,
+    254
+  ],
+  "old28_plus_new4_resources": 64,
+  "original_inputs": {
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+  },
+  "status": "PASS same-agent independent enumeration, current identity and incoming-bank disjointness",
+  "two_state_V_sets": [
+    [
+      1130,
+      1673
+    ],
+    [
+      1754,
+      2678
+    ]
+  ],
+  "with_incoming40_arrival_resources": 72,
+  "with_incoming40_reserved_resources": 144,
+  "with_incoming53_arrival_resources": 85,
+  "with_incoming53_reserved_resources": 170
+}

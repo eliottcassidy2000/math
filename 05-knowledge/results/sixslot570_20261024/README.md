@@ -1,4 +1,4 @@
-# Complete native binary fibres and the endpoint barrier at 570
+# Complete native binary fibres and a guarded return through570
 
 **FINITE-EXACT:** all 2^28 assignments of the inherited complete 28-source
 U/V inventory; original paired nodewise dyadic guards, target counts, source
@@ -15,8 +15,17 @@ types. The uniform event limits **eight changed slots and 22 changed owner
 clocks** are both sharp. These are finite inventory statements, not all-order
 tournament claims.
 
+After integrating the incoming helper interface, four NEW source slots give
+an actual order-eight570/2234 return of work23, with every old pin unchanged.
+Their own common clocks and a new shared anchor remain fixed. This avoids the
+unproved order-ten guard transfer; requiring fixed endpoints in every new slot
+would still forbid the return.
+
 - [FIBRES.md](FIBRES.md): complete census, optimal sparse completion, sharp
   two-state hostile, and limits of integer-lattice generation.
+- [NATIVE570.md](NATIVE570.md): four fresh sources, complete pinned domains,
+  full original dyadic guards, and resource disjointness from the old28
+  sources AND the incoming40-helper bank.
 - [PORTS.md](PORTS.md): the inherited score law explains why target570 is
   impossible with fixed endpoints; a new ten-vertex carrier records moving
   inner endpoints at fixed outer ports, with a complete three-path domain.

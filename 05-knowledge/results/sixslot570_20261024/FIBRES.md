@@ -43,6 +43,13 @@ implementation reverses the owner order, enumerates lexicographic subsets
 instead of Gosper masks, and tests intersection cardinality rather than XOR
 distance. Every per-fibre count and component count agrees.
 
+Incoming `1d94c1d1d9`, `compatible_charged_helpers_20261023/fibres/README.md`,
+independently obtains the identical complete margins4..8 boundary census and
+occupied-context repairs. Those overlapping counts are not claimed as a
+distinct priority result. The present additions are the remaining complete
+grading, sharp22-clock bound, minimum220-type completion, and source-weighted
+tree interface.
+
 | V margin k | states | nonempty charge fibres | six-slot disconnected fibres |
 |---:|---:|---:|---:|
 |0|1|1|0|
@@ -137,3 +144,7 @@ Resource return is allowed, simultaneous double occupancy is not. An untouched
 remainder must avoid the full alternative reservoir and preserve declared
 owner compatibility. This does not rewire the already fully occupied atlas.
 
+
+Clock work counts primary indexed source-slot occurrences, as in the inherited
+native certificates. If reflected or inverse copies are charged separately,
+their corresponding extra clock ledger must also be included.

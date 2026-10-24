@@ -37,6 +37,24 @@ temporal nonreturn. Its source2835 ambient three-cycle is not a legal S3 action.
 The fresh2393 three-path domain gives a second precise instance of that warning.
 No generic group action is inferred from a relative permutation.
 
+Later incoming `1d94c1d1d9` independently closes margins4..8, supplies an
+occupied-context repair bank, and authenticates40 fresh helpers whose triples
+cover all2048 charges. Its exact neutral-interval boundary-cost theorem is
+the stronger general compatibility interface; we do not rederive it. The
+current census extends to every remaining grade and gives the smallest
+eight-slot alphabet and sharp uniform clock cost. Its non-monotone padding
+hostile cautions against extrapolating our connected middle grades to other
+inventories.
+
+The new common-clock helper grammar changes the570 lane: fresh sources need
+not inherit the old endpoint PATTERN, while actual old pins remain fixed.
+Using that distinction produces the four-source23-clock570/V return in
+NATIVE570.md. It retains one genuinely shared fresh anchor and all common
+clocks. The fresh resources are disjoint even from the incoming40-bank.
+This is a successful original-carrier reroute, with positive570 margin already
+present. It does not prove unrestricted three-target fibre connectivity or
+zero-margin entry, and the independent suspension question stays open.
+
 New questions with cheap tests:
 
 1. Can a smaller authenticated enlargement compensate the11 margin5 cuts
@@ -54,3 +72,11 @@ New questions with cheap tests:
 No META-PATTERNS card is added: the mechanisms are already covered by the
 existing controlled-forgetting and fibre-revalidation cards. This session adds
 concrete counterindications and exact consequence objects, not a renamed rule.
+
+Late incoming27a7118d83 independently proves a46-helper bank robust to one
+forced-U restriction, and53-helper occupancy4 coverage after any8 forced-U
+restrictions. Mixed forced-V/U restrictions can still fail. This sharpens the
+next compatibility target: deletion resilience is not arbitrary pin resilience.
+Our fresh570 resources are now checked disjoint from ALL53 helpers, hence also
+the46-bank; this permits the return alongside a fixed resilient controller
+state without asserting unrestricted combined-fibre coverage.

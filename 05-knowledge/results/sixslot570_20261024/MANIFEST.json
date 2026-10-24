@@ -1,11 +1,15 @@
 {
   "files": {
-    "AUDIT.md": "865856bd48218a4192e44f541fd18f767d59e61eb35ece03fbb4a159c92860f1",
-    "BOARD.md": "beaf19c2a3ace215eb8ce9043360d50a889df4cec3e11a24cae019fead1bafe2",
-    "FIBRES.md": "01a687ffb6f3140d9fb11f18ae9fe1ddff47eb517d0ca81858f887162126166c",
-    "PORTS.md": "42fa543c484420a452b6b5d13fe835afef63b3edfff283b38ec45f42fd7c3ab5",
-    "README.md": "f7251ba2441c3d451806083ff922ff96c5c2945f714bbda2a705ceb08e1e21bf",
+    "AUDIT.md": "f95a27ccc8530bbb1e3411d08caa5b3f8d566b2bd15bdfb310a91b485438f397",
+    "BOARD.md": "75eaac5fa2d8173fe89287f83fbacc165545ee101be09c5d2a7512255fad2b0d",
+    "FIBRES.md": "5ad6655d5e06c343d41f140ae5a16d202e2f082d8cf9bf339fbc4cb0a25a49c4",
+    "NATIVE570.md": "e336d9057cf8d334caf641961d8e5d717dd965e3dc6e8202a08074ca245e8a5b",
+    "PORTS.md": "8a1bb04aaf95ca386ebe120fff698b8c2bdf906185e3233d3f2688d989ce353e",
+    "README.md": "7454a1dd96e96ca8f1a140e6a0d6d9437f87fb3a0b1bfc81f0e218f4354b78b8",
     "WEIGHTS.md": "187b31e175a59e0cee08f2df22ec6eecea82280fbf348682f37720f09d108d02",
+    "audit570.normal.json": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+    "audit570.optimized.json": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+    "audit570.py": "3817aca270d64940866fdb0c72c44835850860fe49004acd782bfe3f90f95af8",
     "audit_fibres.cpp": "cc737709d853a9cc45d7c7016e6a91fc95792e5619ef5e37eb69da284168f526",
     "audit_fibres6.jsonl": "e9766119f9e198331c69005dd6a3a87e2248de0bfc759946393a6924718e64ee",
     "audit_fibres8.jsonl": "325aeda1252cf42f11121ae8fe452de45b8be7ed0ff07eb8dfe11f48a2cc9255",
@@ -19,7 +23,10 @@
     "fibres6.jsonl": "553e5b74c52b0917068f69dc4b05bcddde2e30abad9f9fe56cd4b44a60ca4da5",
     "fibres8.jsonl": "5486554f3919b5a37d9a5210eb596aaca28853b6797dcb3aba9d784547655cb7",
     "labels.txt": "77679f3da07d909b243b4925b1cc19a67ec9d60318caafbd8e4fa62e0f937b8d",
-    "reproduce.py": "7cb9a36a0676d59b683cc346072252ed5f638fe47c6ba7eaad67504e2a21372f",
+    "native570.normal.json": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+    "native570.optimized.json": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+    "native570.py": "1064bb654fd57bb009fbe53337fe8288239fde0db372a32eea30ea7bcecfab75",
+    "reproduce.py": "e9b8b984b125e2504a8912281d243c6c0091967e5fa468d5e541590dc671a170",
     "route.py": "8c2e9736b00349899906a8534c428f1ad0a6fdb1e5b38ef94ba15a3bb13393bc",
     "route18_full28.json": "c74d42366d7ee581fc27fb406f023dd361b28625cc44352ca75d5c2f03db98f0",
     "route22.json": "8a55d4d91ee09e0bacf0db00bbe766fda54cf0f18bc101d7ff6004857d25a983",
@@ -28,10 +35,11 @@
     "shelter.normal.json": "752b98295be0843a719bfd7d68ffc9902af7fc482b58e39451c5bf8c9ccbf5cd",
     "shelter.optimized.json": "752b98295be0843a719bfd7d68ffc9902af7fc482b58e39451c5bf8c9ccbf5cd",
     "shelter.py": "fa1b5041ab708820552def78a7975b493eb48535ebf379b71616fdf6de7bc518",
-    "verify.normal.json": "4b96c642acdbf4467edc84ec982deef2b2f338c9b8aae9544805bef7d25ecd1f",
-    "verify.optimized.json": "4b96c642acdbf4467edc84ec982deef2b2f338c9b8aae9544805bef7d25ecd1f",
-    "verify.py": "2cd2ab75fe22365360e77756f0534f6fc7919c1c274ab2efd094641760a7bbd6"
+    "verify.normal.json": "6d0fde570d6aa093c6751b26acb7f27ccbae25b399353a4ddf3e3c80bf2f33b9",
+    "verify.optimized.json": "6d0fde570d6aa093c6751b26acb7f27ccbae25b399353a4ddf3e3c80bf2f33b9",
+    "verify.py": "274eae88b10ef48c1c1dabc2dccc9569a3fc3bd532d5491471c018a9ed7229ad"
   },
   "frozen_input_revision": "cf87f98a581089b3f84d3fee16324195ab976e1e",
-  "scope": "all original28-source binary fibres; finite exact, plus scoped proved mechanisms"
+  "incoming_supply_revision": "1d94c1d1d9",
+  "scope": "all original28-source binary fibres; fresh native four-source570 return; scoped proved mechanisms"
 }

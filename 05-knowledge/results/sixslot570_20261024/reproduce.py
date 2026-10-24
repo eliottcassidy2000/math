@@ -10,7 +10,7 @@ def main():
         M=json.loads((HERE/'MANIFEST.json').read_text())
         for p,h in M['files'].items():need(hashlib.sha256((HERE/p).read_bytes()).hexdigest()==h,'file changed '+p)
     # Python normal/-O outputs must agree byte-for-byte.
-    for script in ('verify','shelter'):
+    for script in ('verify','shelter','native570','audit570'):
         a=subprocess.check_output([sys.executable,str(HERE/f'{script}.py')],cwd=HERE)
         b=subprocess.check_output([sys.executable,'-O',str(HERE/f'{script}.py')],cwd=HERE)
         need(a==b==(HERE/f'{script}.normal.json').read_bytes()==(HERE/f'{script}.optimized.json').read_bytes(),script+' replay mismatch')

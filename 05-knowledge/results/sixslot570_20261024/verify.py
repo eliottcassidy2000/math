@@ -9,6 +9,9 @@ def check(v,m):
     CHECKS+=1;need(v,m)
 def main():
     inv=inventory();ids=[r['source'] for r in inv];nodes,owner,merged,X,Y=data();labelmap={s:label(X,Y,s) for s in ids}
+    expected=[labelmap[s] for s in ids]
+    check([tuple(map(int,s.split())) for s in (HERE/'labels.txt').read_text().splitlines()]==expected,'C++ producer input equals original physical-source labels')
+    check([tuple(map(int,s.split())) for s in (HERE/'audit_labels.txt').read_text().splitlines()]==expected[::-1],'second C++ input equals reversed original physical-source labels')
     costs=[];reservoir=set();raw_count=0
     for r in inv:
         s=r['source'];B=matrix(nodes[s]['canon_a']);p=r['before']['path'];q=r['after']['path'];fixed=[i for i in range(8) if p[i]==q[i]]

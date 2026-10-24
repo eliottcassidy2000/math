@@ -28,6 +28,13 @@ subagent review. No subagent was requested or spawned for this session.
    at every event. The sharp two-state example and inherited primitive18 pair
    replay identically under normal and optimized Python; these are usability
    controls, not replacements for the complete census.
+8. `native570.py` / `audit570.py`: fresh four-source return, full raw domains
+   and explicit target filtering, all original physical-row guards, genuine
+   common clocks and shared anchor, source rigidity, selected X phase and
+   actual F/R squares. Independent permutation/DFS enumerations agree. The
+   second audit authenticates disjointness from the incoming40-helper bank;
+   this does not assert complete connectivity of the combined three-target
+   family. Normal and optimized receipts agree.
 
 Positive controls include the original native U/V options, genuine harmonic
 coordinate agreement, all small-margin same-charge transitions, and known

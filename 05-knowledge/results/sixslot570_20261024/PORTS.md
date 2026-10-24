@@ -4,6 +4,12 @@
 **FINITE-EXACT:** original all-source comparison and the source2393 witness.
 **OPEN:** native harmonic-bank transfer to the enlarged carrier.
 
+Late reroute: [NATIVE570.md](NATIVE570.md) supplies a guarded return in the
+original order-eight graph using four fresh common-clock helpers, whose
+endpoints were never pinned. Existing pins stay fixed. Thus the suspension
+below is a separate mechanism; its unresolved guard transfer is not required
+for that positive return.
+
 ## Recover the stronger old law before searching another menu
 
 The mechanism is already present in
@@ -34,6 +40,13 @@ context at order8. This proves the impossibility beyond the original28-source
 inventory and without a rigidity or source-disjointness hypothesis. Extra
 internal pins cannot help. Multiple slots cannot cancel a separately required
 endpoint identity in one slot.
+
+More generally, every fixed-endpoint source menu lies in one target score
+sector. Adding arbitrarily many such menus cannot connect distinct sectors
+by target reassignment. The common charge fibre {570,1965,2234} therefore has
+a1+2 split under that interface. Equal arithmetic charge is a coarser quotient
+than target accessibility. This is a necessity theorem, not a sufficiency
+claim for all targets with equal scores.
 
 The exhaustive canonical-source search agrees. Among all3525 source classes
 outside the three targets, including self-converse and nontrivial-automorphism
