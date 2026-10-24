@@ -1,0 +1,18 @@
+{
+  "files": {
+    "producer/MANIFEST.json": "161449ddf5c2a07b7afefd213438b85c74897850b89050dde66428819b0838d6",
+    "producer/build_nine.cpp": "75a404053245dc81a9cbcd79d7e785fd82cb952572370651e5f510cbe36c3cc7",
+    "producer/trace_ten.cpp": "5ccb965a1cf0e02fceb31d1900c3f7f5456bea407130d78eb42cabb4eb8716fc",
+    "producer/parents-eight.txt": "0761a55908be3e2dde45723da3dc62740bd5a83f4e86210337af62a93c3f2fb9",
+    "producer/parents-nine.txt": "49ef7552eac8e08918b61a4aa7de56a4c096c03285af921dcf8b57506de7a0f7",
+    "producer/trace-normal-per-parent.tsv": "8f86f00fcedc3987befafa4fd92480d39c44c746c0f396f1cb89be535d856510",
+    "structural-audit/manifest.json": "81381e8c41aac5bdb57d0b8c8a7744c45e0684e090ec03e854249ca91efd0068",
+    "structural-audit/producer/MANIFEST.json": "905dd04456f9b4cf302e8b71c7bdd915db209ba081b4735b0f7a733378866f43",
+    "source/session50-growth-THEOREM.md": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+    "source/session50-order-nine-THEOREM.md": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+  },
+  "input_atlas_boundary": "Order-eight certified JSON/text provenance is verified by producer/verify_packet.py. Order-nine is independently reconstructed and fully canonicalized only in audit.",
+  "production_canonicalization_maximum_order": 8,
+  "audit_canonicalization_maximum_order": 9,
+  "target_ten_canonicalization": false
+}

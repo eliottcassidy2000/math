@@ -1,0 +1,15 @@
+{
+  "changed_working_directory": true,
+  "manifest_checked_before_replay": true,
+  "manifest_mutations_rejected": [
+    "source-change",
+    "input-change",
+    "missing-theorem",
+    "extra-file",
+    "extra-nested-manifest"
+  ],
+  "normal_optimized_receipt_byte_equal": true,
+  "real_temporary_copy": true,
+  "receipt_sha256": "58e115a3e412ed9fb363ef471638a5e71fe363b88c53702b0e4eac97ed64b9c6",
+  "schema": "session51-implication-portability-v1"
+}

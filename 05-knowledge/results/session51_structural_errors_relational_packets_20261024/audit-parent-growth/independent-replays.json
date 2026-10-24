@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "mode": "O2",
+      "operation": "independent_atlas",
+      "elapsed_seconds": 15.904546646999734
+    },
+    {
+      "mode": "O2",
+      "operation": "incoming_trace",
+      "elapsed_seconds": 44.16532486899996
+    },
+    {
+      "mode": "O3",
+      "operation": "independent_atlas",
+      "elapsed_seconds": 15.249310626999431
+    },
+    {
+      "mode": "O3",
+      "operation": "incoming_trace",
+      "elapsed_seconds": 82.3812797669998
+    }
+  ]
+}

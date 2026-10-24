@@ -1,0 +1,430 @@
+{
+  "checks": {
+    "1734 endpoint classifications": 1,
+    "L1 is undefined": 1,
+    "accessibility iff every original block neutral": 42681,
+    "all 200 Lucas certificates proved": 1,
+    "all acyclic packetizations give exact joint Pareto frontier": 42681,
+    "all binary-table endpoint intervals equal semantic implication ideals": 2352,
+    "all compiled packetizations give exact joint Pareto frontier": 42681,
+    "all rational j represented by brute curve census": 18,
+    "all sharp wheel hostiles": 1,
+    "all-model census matches producer single-model j census": 18,
+    "common minimum at primorial 30030": 1,
+    "conditional L times Davenport times original cost bound": 30570,
+    "cutoff and isolated L2 exception": 37,
+    "cycle-compiled packets retain exact defect neutrality": 87902,
+    "cycle-compiled route verified by literal accepted prefixes": 87902,
+    "every labelled digraph equals lifted SCC-poset ideals": 4165,
+    "exact finite cutoff indices": 1,
+    "explicit incomparable joint bottlenecks": 1,
+    "hostile chain all logical increments nonzero": 15,
+    "hostile paired lift all physical increments nonzero": 15,
+    "independent Lucas Fermat": 199,
+    "independent Lucas certified factor ancestry": 199,
+    "independent Lucas complete factorization": 199,
+    "independent Lucas distinct factors": 199,
+    "independent Lucas full order": 648,
+    "independent MR admissible input": 94,
+    "independent MR exact failure": 94,
+    "independent broad-bound primitive reduced forms": 18,
+    "independent class number and all-model curve agreement": 18,
+    "independent complete minimality range": 37,
+    "independent cover-only route Pareto equality": 42681,
+    "independent first prime endpoint": 37,
+    "independent primorial indexing": 19,
+    "independent proper divisor": 1603,
+    "neutral partition legal ordering iff dependency contraction acyclic": 87902,
+    "paired lift every prefix retains all exact populations": 150,
+    "paired lift exact two-endpoint accepted fibre": 15,
+    "paired physical charge agrees with logical prefix": 150,
+    "prime endpoint belongs to certified set": 37,
+    "published piecewise rational count agrees": 18,
+    "relative neutral ideal interval independently exact": 115971,
+    "separate coordinate minima are not jointly attainable": 1,
+    "sequence outputs agree": 1,
+    "strict square window independent trial division": 40,
+    "supersingularity invariant across every twist": 18,
+    "wheel necessity independent trial division": 41
+  },
+  "interval": {
+    "all_binary_table_families_n3": 166,
+    "all_graph_rows": [
+      {
+        "all_directed_graphs": 1,
+        "distinct_labelled_posets": 1,
+        "n": 1
+      },
+      {
+        "all_directed_graphs": 4,
+        "distinct_labelled_posets": 3,
+        "n": 2
+      },
+      {
+        "all_directed_graphs": 64,
+        "distinct_labelled_posets": 19,
+        "n": 3
+      },
+      {
+        "all_directed_graphs": 4096,
+        "distinct_labelled_posets": 219,
+        "n": 4
+      }
+    ],
+    "explicit_joint_Pareto_frontier": [
+      [
+        4,
+        14
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "explicit_joint_Pareto_hostile_edges": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "explicit_joint_Pareto_physical_weights": [
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "largest_joint_Pareto_frontier_in_uniform_sweep": 1,
+    "neutral_partitions": 87902,
+    "ordered_endpoint_pairs_n3": 2352,
+    "packet_and_exact_margin_instances": 42681,
+    "paired_hostile_rows": [
+      {
+        "accepted_states": 2,
+        "logical_blocks": 2,
+        "original_SCC_size": 2,
+        "physical_slots": 4
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 3,
+        "original_SCC_size": 2,
+        "physical_slots": 6
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 4,
+        "original_SCC_size": 2,
+        "physical_slots": 8
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 5,
+        "original_SCC_size": 2,
+        "physical_slots": 10
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 6,
+        "original_SCC_size": 2,
+        "physical_slots": 12
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 7,
+        "original_SCC_size": 2,
+        "physical_slots": 14
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 8,
+        "original_SCC_size": 2,
+        "physical_slots": 16
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 9,
+        "original_SCC_size": 2,
+        "physical_slots": 18
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 10,
+        "original_SCC_size": 2,
+        "physical_slots": 20
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 11,
+        "original_SCC_size": 2,
+        "physical_slots": 22
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 12,
+        "original_SCC_size": 2,
+        "physical_slots": 24
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 13,
+        "original_SCC_size": 2,
+        "physical_slots": 26
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 14,
+        "original_SCC_size": 2,
+        "physical_slots": 28
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 15,
+        "original_SCC_size": 2,
+        "physical_slots": 30
+      },
+      {
+        "accepted_states": 2,
+        "logical_blocks": 16,
+        "original_SCC_size": 2,
+        "physical_slots": 32
+      }
+    ]
+  },
+  "prime": {
+    "all_curve_models_tested": 29360,
+    "certificate_count": 200,
+    "curve_rows": [
+      {
+        "h_minus_4p": 2,
+        "h_minus_p": 0,
+        "models": 20,
+        "p": 5,
+        "ss_j": [
+          0
+        ]
+      },
+      {
+        "h_minus_4p": 1,
+        "h_minus_p": 1,
+        "models": 42,
+        "p": 7,
+        "ss_j": [
+          6
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 1,
+        "models": 110,
+        "p": 11,
+        "ss_j": [
+          0,
+          1
+        ]
+      },
+      {
+        "h_minus_4p": 2,
+        "h_minus_p": 0,
+        "models": 156,
+        "p": 13,
+        "ss_j": [
+          5
+        ]
+      },
+      {
+        "h_minus_4p": 4,
+        "h_minus_p": 0,
+        "models": 272,
+        "p": 17,
+        "ss_j": [
+          0,
+          8
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 1,
+        "models": 342,
+        "p": 19,
+        "ss_j": [
+          7,
+          18
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 3,
+        "models": 506,
+        "p": 23,
+        "ss_j": [
+          0,
+          3,
+          19
+        ]
+      },
+      {
+        "h_minus_4p": 6,
+        "h_minus_p": 0,
+        "models": 812,
+        "p": 29,
+        "ss_j": [
+          0,
+          2,
+          25
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 3,
+        "models": 930,
+        "p": 31,
+        "ss_j": [
+          2,
+          4,
+          23
+        ]
+      },
+      {
+        "h_minus_4p": 2,
+        "h_minus_p": 0,
+        "models": 1332,
+        "p": 37,
+        "ss_j": [
+          8
+        ]
+      },
+      {
+        "h_minus_4p": 8,
+        "h_minus_p": 0,
+        "models": 1640,
+        "p": 41,
+        "ss_j": [
+          0,
+          3,
+          28,
+          32
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 1,
+        "models": 1806,
+        "p": 43,
+        "ss_j": [
+          8,
+          41
+        ]
+      },
+      {
+        "h_minus_4p": 5,
+        "h_minus_p": 5,
+        "models": 2162,
+        "p": 47,
+        "ss_j": [
+          0,
+          9,
+          10,
+          36,
+          44
+        ]
+      },
+      {
+        "h_minus_4p": 6,
+        "h_minus_p": 0,
+        "models": 2756,
+        "p": 53,
+        "ss_j": [
+          0,
+          46,
+          50
+        ]
+      },
+      {
+        "h_minus_4p": 9,
+        "h_minus_p": 3,
+        "models": 3422,
+        "p": 59,
+        "ss_j": [
+          0,
+          15,
+          17,
+          28,
+          47,
+          48
+        ]
+      },
+      {
+        "h_minus_4p": 6,
+        "h_minus_p": 0,
+        "models": 3660,
+        "p": 61,
+        "ss_j": [
+          9,
+          41,
+          50
+        ]
+      },
+      {
+        "h_minus_4p": 3,
+        "h_minus_p": 1,
+        "models": 4422,
+        "p": 67,
+        "ss_j": [
+          53,
+          66
+        ]
+      },
+      {
+        "h_minus_4p": 7,
+        "h_minus_p": 7,
+        "models": 4970,
+        "p": 71,
+        "ss_j": [
+          0,
+          17,
+          24,
+          40,
+          41,
+          48,
+          66
+        ]
+      }
+    ],
+    "minimality_endpoint_classifications": 1734,
+    "wheel_hostiles": {
+      "17": [
+        true,
+        true
+      ],
+      "19": [
+        true,
+        false
+      ],
+      "23": [
+        false,
+        false
+      ],
+      "289": [
+        true,
+        true
+      ]
+    }
+  },
+  "status": "PASS"
+}

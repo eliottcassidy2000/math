@@ -1,0 +1,10 @@
+states=97213472 upper=97336068 predicted=9733056
+completed_parents=20000 states=10059648
+completed_parents=40000 states=20218944
+completed_parents=60000 states=30429888
+completed_parents=80000 states=40542976
+completed_parents=100000 states=50715248
+completed_parents=120000 states=60945696
+completed_parents=140000 states=71122592
+completed_parents=160000 states=81243852
+completed_parents=180000 states=91381128

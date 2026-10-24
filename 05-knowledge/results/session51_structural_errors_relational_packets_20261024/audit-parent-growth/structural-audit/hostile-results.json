@@ -1,0 +1,95 @@
+{
+  "hostiles": [
+    {
+      "name": "omit_degree_two",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "five sector error"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "five sector error"
+        }
+      ]
+    },
+    {
+      "name": "omit_cell_permutations",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "triangle rigid class split"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "triangle rigid class split"
+        }
+      ]
+    },
+    {
+      "name": "omit_cyclic_majority",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "constant attachment hostile actual partition"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "constant attachment hostile actual partition"
+        }
+      ]
+    },
+    {
+      "name": "zero_actual_error",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "five actual orbit error"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "five actual orbit error"
+        }
+      ]
+    },
+    {
+      "name": "omit_scc_side",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "SCC transfer order ten with inherited Es9"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "SCC transfer order ten with inherited Es9"
+        }
+      ]
+    },
+    {
+      "name": "wrong_distribution_padding",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "total ten exact defect distribution"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "total ten exact defect distribution"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

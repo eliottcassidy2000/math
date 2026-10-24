@@ -1,0 +1,3 @@
+ERROR: .machine-id not found.
+Run: echo 'your-machine-name' > .machine-id
+Then: python3 agents/processor.py --register

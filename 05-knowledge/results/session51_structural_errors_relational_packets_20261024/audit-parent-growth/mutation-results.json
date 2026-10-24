@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "semantic_failures": 10,
+  "results": [
+    {
+      "mutation": "label_dependent_singleton",
+      "mode": "O2",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "0436a1c711aa8140d12923291c87669e5dcd80c9546fdb87513f340029a44eb8"
+    },
+    {
+      "mutation": "label_dependent_singleton",
+      "mode": "O3-ndebug",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "0436a1c711aa8140d12923291c87669e5dcd80c9546fdb87513f340029a44eb8"
+    },
+    {
+      "mutation": "omit_residual_classes",
+      "mode": "O2",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "dd015a04ce0b97ccc07047748a67849b889192e5ccf456f2c6a043f8c3b7a7ef"
+    },
+    {
+      "mutation": "omit_residual_classes",
+      "mode": "O3-ndebug",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "dd015a04ce0b97ccc07047748a67849b889192e5ccf456f2c6a043f8c3b7a7ef"
+    },
+    {
+      "mutation": "drop_root_moving_cosets",
+      "mode": "O2",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "e15fd8f86a2be2f9e4de06b29b4859a70df64e461a9bd33566a2d02b24a4bcbb"
+    },
+    {
+      "mutation": "drop_root_moving_cosets",
+      "mode": "O3-ndebug",
+      "exit_code": 1,
+      "failure": "complete order-nine labelled orbit mass",
+      "changed_source_sha256": "e15fd8f86a2be2f9e4de06b29b4859a70df64e461a9bd33566a2d02b24a4bcbb"
+    },
+    {
+      "mutation": "omit_attachment",
+      "mode": "O2",
+      "exit_code": 1,
+      "failure": "all parent attachments covered",
+      "changed_source_sha256": "6466119d67e89e1b329656caed21013a0bedcd167144e78fedb221d836d2014b"
+    },
+    {
+      "mutation": "omit_attachment",
+      "mode": "O3-ndebug",
+      "exit_code": 1,
+      "failure": "all parent attachments covered",
+      "changed_source_sha256": "6466119d67e89e1b329656caed21013a0bedcd167144e78fedb221d836d2014b"
+    },
+    {
+      "mutation": "corrupt_root_size",
+      "mode": "O2",
+      "exit_code": 1,
+      "failure": "per-parent incoming histogram matches",
+      "changed_source_sha256": "277108eec3da488486c2b21d387ef18c1731506d80c53ad6342b8917f4f836b3"
+    },
+    {
+      "mutation": "corrupt_root_size",
+      "mode": "O3-ndebug",
+      "exit_code": 1,
+      "failure": "per-parent incoming histogram matches",
+      "changed_source_sha256": "277108eec3da488486c2b21d387ef18c1731506d80c53ad6342b8917f4f836b3"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: main
+HEAD:   d0187b4caa6d
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: clean
+
+== Recent commits (8) ==
+d0187b4caa6d (HEAD -> main, origin/main) Session50: certify order-nine structural count and final metagraph synthesis
+c64539b8e471 Session50: signed cell holonomy and certified corrected refinement prediction
+0a061dcb561f Session50: marked growth transfer, native holonomy and counting obstructions
+189285e7a935 Session50: certify odd-fibre moment reconstruction and independent atlas audit
+f26bc37f4e77 Session49: exact native receiver thresholds and complete audited synthesis
+ee6b52d81f13 Session49: audited hole compiler, allocation and strict nonreturn theory
+6f6d39465342 Session49: independently audited native relational hole repairs
+eb085bb42851 Session48: audited conditional phase wiring, observers and sandwich synthesis
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: Boolean implication intervals primorial Fortunate supersingular filters
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-666 (2026-10-22, supersingular / divisor-shape / q-series note `05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md` (opus-2026-10-22-ssj, pre-audit commit 33f9f99615); found by the independent audit `04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md`) -- a "for every p" that contradicted the note's own output rows, a newest-papers list taken from a narrow search, l and l^e conflated in a Legendre symbol, a misremembered CM discriminant, and overstated route ranges
+- MISTAKE-668 (2026-10-22, wave-2 note `05-knowledge/results/monster_levels_square_sum_7_21_20261022.md` (opus-2026-10-22-ssj, pre-audit commit 211ab1a1c1); found by the independent audit `04-computation/experiments/supersingular_fus_qseries_20261022/audit_wave2/REPORT.md`) -- a hostile-probe sentence that contradicted the script's own output, an inherited 3-4-5 theorem left uncredited, "Pell number" for a sequence that is not one, an order quotient written as a subgroup index, a false "no event" test, an automatic nesting presented as structure, and a wrong growth constant
+- MISTAKE-285 (2026-07-27, THM-2560 phase-cone verifier) -- a cyclotomic sign error bound used coefficients from a different representative
+- MISTAKE-621 (2026-10-15, opus-2026-10-15-S37; second independent S37 referee) -- a nested-interval check that cannot fail was called a passed test, a finite-depth theorem was read as a statement about all modes, and several numbers and zero sets were misquoted
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: Boolean implication intervals primorial Fortunate supersingular filters ==
+rank terms: Boolean implication intervals primorial Fortunate supersingular filters, Boolean, implication, intervals, primorial, Fortunate, supersingular, filters
+Current-route matches (ranked):
+  (none; try exact constants, theorem IDs, quantifiers, or synonyms)
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [PROVED] 01-canon/theorems/THM-2398-prime-cyclic-rational-restoration-dichotomy.md
+    [PROVED] 01-canon/theorems/THM-2941-critical-seven-slot-scalar-wall-and-balanced-boundary.md
+    [PROVED] 01-canon/theorems/THM-2197-scalar-chord-coverage-has-a-boolean-deficiency-quotient.md
+    ... 204 more; refine the query
+  Unproved candidates (not results):
+    (none)
+  Hypotheses:
+    [OPEN] 05-knowledge/hypotheses/HYP-9080-tournament-deletion-slack-local-unavoidability.md
+    [OPEN] 05-knowledge/hypotheses/HYP-1900-lrc-tournament-incidence-core.md
+    [UNLABELLED] 05-knowledge/hypotheses/HYP-2978-lrc14-ramanujan-divisor-quotient-guardrails.md
+    ... 23 more; refine the query
+  Historical reflections:
+    [HISTORY] 07-reflections/sun-2468-counterexample-local-global-carry-frontiers-20260824.md
+    [HISTORY] 07-reflections/working-jc2-the-obstruction-is-a-descent-termination-and-coprime-intervals-are-its-tool-boxeph-S225.md
+    [HISTORY] 07-reflections/carriers-strict-transforms-and-operation-response-compilers-2026-08-03.md
+    ... 100 more; refine the query
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  00-navigation/TANGENTS.md
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/constants_atlas_20260926_mine.json
+  05-knowledge/results/overnight_20260906_synthesis.md
+  05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md
+  05-knowledge/results/lrc14_inert_sum_five_ray_disjointness_thm4453.md
+  ... 222 more; refine the query
+
+== Coordination ==
+No .machine-id: use a temporary session name; do not invent registration.
+Legacy IDs collide: cite every theorem as ID + slug/path.

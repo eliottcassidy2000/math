@@ -1,0 +1,20 @@
+{
+  "commit": "d0187b4caa6d66076264251077214de74e828059",
+  "files": [
+    {
+      "byte_identical_to_git_blob": true,
+      "git_blob_sha1": "f6503b8d3a070f9cc859460b02ee03ae93221b07",
+      "local_path": "inputs/SESSION49_NONRETURN.md",
+      "repository_path": "05-knowledge/results/session49_relational_hole_repairs_20261024/nonreturn-repairs/THEOREM.md",
+      "sha256": "b0137066d8b399a848ceb8bb4b330dc3ab4d26acc47fc2b911aac5604902a57b"
+    },
+    {
+      "byte_identical_to_git_blob": true,
+      "git_blob_sha1": "999f1906c3c5a82a59eee13475d8aa295c89b171",
+      "local_path": "inputs/SESSION49_HOLES.md",
+      "repository_path": "05-knowledge/results/session49_relational_hole_repairs_20261024/hole-theory/THEOREM.md",
+      "sha256": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c"
+    }
+  ],
+  "repository": "eliottcassidy2000/math"
+}

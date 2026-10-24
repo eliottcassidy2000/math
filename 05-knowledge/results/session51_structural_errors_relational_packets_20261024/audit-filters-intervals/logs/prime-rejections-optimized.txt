@@ -1,0 +1,8 @@
+PASS rejected: missing cutoff row
+PASS rejected: wrong primorial index
+PASS rejected: omitted smaller offset
+PASS rejected: composite endpoint called prime
+PASS rejected: invalid Lucas base
+PASS rejected: false n minus one factorization
+PASS rejected: divisor equals composite target
+PASS: all 7 hostile certificate mutations rejected

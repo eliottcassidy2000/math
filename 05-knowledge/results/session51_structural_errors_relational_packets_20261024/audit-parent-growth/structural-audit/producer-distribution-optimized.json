@@ -1,0 +1,138 @@
+{
+  "checks": {
+    "all reroot destinations in inherited parent domain": 765,
+    "almost regular degree profile": 85,
+    "almost regular parents pairwise nonisomorphic": 1,
+    "canonical input has exactly eight vertices": 850,
+    "distribution first moment": 1,
+    "eight vertex labellings": 2460,
+    "inherited regular-sector receipt pin": 1,
+    "regular component partition": 15,
+    "regular error from orbit count": 15,
+    "regular nine independently rebuilt histogram": 1,
+    "regular orbit sizes sum nine": 15,
+    "regular reroot rows identical on component": 15,
+    "strong ten actual class distribution": 1,
+    "total ten errorful class count": 1,
+    "total ten exact defect distribution": 1,
+    "unique extension regular": 85
+  },
+  "input_contract": "complete almost-regular-eight parent slice certified in Session50",
+  "order_nine_or_ten_canonicalizations": 0,
+  "regular_nine_error_histogram": [
+    [
+      0,
+      3
+    ],
+    [
+      18,
+      3
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      72,
+      7
+    ]
+  ],
+  "regular_nine_vertex_orbit_multisets": [
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      7
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      2
+    ],
+    [
+      [
+        3,
+        3,
+        3
+      ],
+      3
+    ],
+    [
+      [
+        9
+      ],
+      3
+    ]
+  ],
+  "status": "PASS",
+  "strong_nine_positive_error_histogram": [
+    [
+      14,
+      1
+    ],
+    [
+      18,
+      7
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      72,
+      7
+    ]
+  ],
+  "strong_ten_positive_error_histogram": [
+    [
+      14,
+      4
+    ],
+    [
+      18,
+      32
+    ],
+    [
+      40,
+      84
+    ]
+  ],
+  "total_ten_error": 5508,
+  "total_ten_errorful_classes": 160,
+  "total_ten_positive_error_histogram": [
+    [
+      14,
+      12
+    ],
+    [
+      18,
+      46
+    ],
+    [
+      36,
+      4
+    ],
+    [
+      40,
+      84
+    ],
+    [
+      72,
+      14
+    ]
+  ],
+  "total_ten_raw_second_moment": 229416
+}

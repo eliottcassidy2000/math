@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "semantic_failures": 12,
+  "results": [
+    {
+      "mode": "O2",
+      "mutation": "duplicate_same_mass",
+      "failure": "nonisomorphic nine parents",
+      "exit_code": 1,
+      "labelled_mass_unchanged": true
+    },
+    {
+      "mode": "O2",
+      "mutation": "omit_nontrivial_actions",
+      "failure": "full independent order-nine action equality",
+      "exit_code": 1,
+      "labelled_mass_unchanged": false
+    },
+    {
+      "mode": "O2",
+      "mutation": "empty",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O2",
+      "mutation": "malformed_count",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O2",
+      "mutation": "negative_count",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O2",
+      "mutation": "truncated_record",
+      "exit_code": 1,
+      "failure": "automorphism count"
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "duplicate_same_mass",
+      "failure": "nonisomorphic nine parents",
+      "exit_code": 1,
+      "labelled_mass_unchanged": true
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "omit_nontrivial_actions",
+      "failure": "full independent order-nine action equality",
+      "exit_code": 1,
+      "labelled_mass_unchanged": false
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "empty",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "malformed_count",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "negative_count",
+      "exit_code": 1,
+      "failure": "input count"
+    },
+    {
+      "mode": "O3-ndebug",
+      "mutation": "truncated_record",
+      "exit_code": 1,
+      "failure": "automorphism count"
+    }
+  ]
+}

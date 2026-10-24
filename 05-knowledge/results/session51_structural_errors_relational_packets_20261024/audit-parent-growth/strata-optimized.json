@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "strong_ten_error_by_stable_cell_size": [
+    [
+      3,
+      576
+    ],
+    [
+      5,
+      3360
+    ],
+    [
+      7,
+      56
+    ]
+  ],
+  "independent_strong_nine_error_by_stable_cell_size": [
+    [
+      3,
+      72
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      9,
+      630
+    ]
+  ],
+  "total_ten_error_by_stable_cell_size": [
+    [
+      3,
+      720
+    ],
+    [
+      5,
+      3360
+    ],
+    [
+      7,
+      168
+    ],
+    [
+      9,
+      1260
+    ]
+  ],
+  "root_orbit_mass_by_stable_cell_size": [
+    [
+      1,
+      97153964
+    ],
+    [
+      3,
+      173634
+    ],
+    [
+      5,
+      2440
+    ],
+    [
+      7,
+      252
+    ],
+    [
+      9,
+      270
+    ]
+  ],
+  "total_error": 5508,
+  "corrected_trace": 97330560,
+  "prediction": 9733056,
+  "dependency": "Strong-seven error 14 from the frozen independently replayed structural packet; SCC multipliers 2 and 6 from A(z)^2."
+}

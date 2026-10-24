@@ -1,0 +1,50 @@
+{
+  "almost_regular_parent_classes": 85,
+  "atlas_sha256": "1cd97666c0ee6294bf379b6d77f95bea5e24f8f5b27749ef804c46a45892ac7b",
+  "automorphism_order_histogram": [
+    [
+      1,
+      6556
+    ],
+    [
+      3,
+      292
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      9,
+      16
+    ],
+    [
+      15,
+      2
+    ],
+    [
+      21,
+      2
+    ]
+  ],
+  "checks": {
+    "all ordinary parent classes nonisomorphic": 6880,
+    "canonical order at most eight": 6880,
+    "consecutive merged ids": 3528,
+    "consecutive ordinary class ids": 1,
+    "consistent repeated ordinary class ids": 7056,
+    "full canonical actions preserve arcs": 6880,
+    "full labelled order-eight orbit mass": 1,
+    "integral labelled class orbit": 6880
+  },
+  "complete_labelled_universe": 268435456,
+  "labelled_mass": 268435456,
+  "merged_classes": 3528,
+  "ordinary_classes": 6880,
+  "raw_source_sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+  "status": "PASS"
+}

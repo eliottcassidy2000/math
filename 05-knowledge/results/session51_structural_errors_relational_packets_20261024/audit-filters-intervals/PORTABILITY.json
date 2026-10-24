@@ -1,0 +1,9 @@
+{
+  "hostile_literal_certificate_rejections_replayed": 26,
+  "independent_result_sha256": "6cde61ea1ba9e12e5c9d06f3577390a27f237cfee2178e7fdbca626e6d8fde7b",
+  "manifest_checked_in_both_modes": true,
+  "normal_optimized_reference_byte_equal": true,
+  "real_temporary_copy": true,
+  "status": "PASS",
+  "unrelated_cwd": true
+}

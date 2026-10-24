@@ -1,0 +1,37 @@
+{
+  "input_contract": "The Session50 order-eight atlas is complete, ordinary (not converse-merged), and has complete vertex permutation actions; its earlier validation is inherited.",
+  "correction_packet_manifest_sha256": "905dd04456f9b4cf302e8b71c7bdd915db209ba081b4735b0f7a733378866f43",
+  "sources": [
+    {
+      "source_path": "session50-publication/clean-repo/05-knowledge/results/session50_metagraph_count_prediction_20261024/order-nine/parents-eight.txt",
+      "archived_path": "parents-eight.txt",
+      "sha256": "0761a55908be3e2dde45723da3dc62740bd5a83f4e86210337af62a93c3f2fb9",
+      "bytes": 309154
+    },
+    {
+      "source_path": "session51-order-ten/THEOREM.md",
+      "archived_path": "sources/structural-correction-theorem.md",
+      "sha256": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002",
+      "bytes": 19808
+    },
+    {
+      "source_path": "session51-order-ten/normal.json",
+      "archived_path": "sources/structural-correction-receipt.json",
+      "sha256": "4c359160678678252f08a1a8131062bc46ef174162ab7dd8802c13c9d1d5fb63",
+      "bytes": 13993
+    },
+    {
+      "source_path": "session50-publication/clean-repo/05-knowledge/results/session50_metagraph_count_prediction_20261024/order-nine/parents-eight.json",
+      "archived_path": "sources/certified-parents-eight.json",
+      "bytes": 469134,
+      "sha256": "1cd97666c0ee6294bf379b6d77f95bea5e24f8f5b27749ef804c46a45892ac7b"
+    },
+    {
+      "source_path": "session50-publication/clean-repo/05-knowledge/results/session50_metagraph_count_prediction_20261024/order-nine/input-receipt.json",
+      "archived_path": "sources/certified-parents-eight-receipt.json",
+      "bytes": 1010,
+      "sha256": "b12623e36f26c483da477c0574c26b821f044c8ff17108f320aa3590e7fc94fe"
+    }
+  ],
+  "parent_atlas_source_commit": "d0187b4caa6d66076264251077214de74e828059"
+}

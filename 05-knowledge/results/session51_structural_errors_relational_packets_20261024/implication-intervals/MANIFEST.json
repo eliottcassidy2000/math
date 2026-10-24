@@ -1,0 +1,21 @@
+{
+  "algorithm": "SHA-256",
+  "files": {
+    "PORTABILITY.json": "0287a1b3f38eecfeffa7c38a3fba6ba60668aa0aed264ca35f80156e9f01b6d6",
+    "README.md": "5dd3ec8ccacca2bc7067c60a2c34e494ce797110d0d3f1f12bd1cd87b0f14b73",
+    "RESEARCH-NOTES.md": "4345178cacc18bc4b6249e4997e7a1cb327bf714676ca188dfa86b43727e3ae8",
+    "SOURCEPINS.json": "4017a57b7d1552f72a06fbc90837adec3678dd2ebfa760e70252b655442a6f6a",
+    "THEOREM.md": "957767df1e3b6463da50815535614642be1c306317262e1b0f091445a71599ba",
+    "VALIDATION.md": "31c47f16d7af57b1822e1f27bb840c23a744b2dfc52907b254222e549cc1550b",
+    "check.py": "5b371b0c884b950792a8a4746df8aa7fe630f0043a9b26f55fa20201fd2c6703",
+    "inputs/SESSION49_HOLES.md": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c",
+    "inputs/SESSION49_NONRETURN.md": "b0137066d8b399a848ceb8bb4b330dc3ab4d26acc47fc2b911aac5604902a57b",
+    "normal-check.txt": "58e115a3e412ed9fb363ef471638a5e71fe363b88c53702b0e4eac97ed64b9c6",
+    "optimized-check.txt": "58e115a3e412ed9fb363ef471638a5e71fe363b88c53702b0e4eac97ed64b9c6",
+    "portable_check.py": "412848355879f6699a7ec5804c389eaa1d2334c4e61b54c6f35d60e92a49382f",
+    "receipt.json": "58e115a3e412ed9fb363ef471638a5e71fe363b88c53702b0e4eac97ed64b9c6",
+    "startup.txt": "bee53f2596373e93ffa0044e0befcf0eca9cc7166fc26602791a9188d620f7cb",
+    "verify_manifest.py": "f947f7fb1f9cb3d780e144b59d36e1645bdd4b752b94586123ae079519546c7f"
+  },
+  "schema": "session51-implication-manifest-v1"
+}

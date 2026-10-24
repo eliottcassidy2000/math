@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "physical_copy": true,
+  "source_hashes": {
+    "build_nine.cpp": "75a404053245dc81a9cbcd79d7e785fd82cb952572370651e5f510cbe36c3cc7",
+    "trace_ten.cpp": "5ccb965a1cf0e02fceb31d1900c3f7f5456bea407130d78eb42cabb4eb8716fc"
+  },
+  "runs": [
+    {
+      "mode": "O2",
+      "operation": "build",
+      "elapsed_seconds": 4.886435943999459,
+      "atlas_sha256": "49ef7552eac8e08918b61a4aa7de56a4c096c03285af921dcf8b57506de7a0f7"
+    },
+    {
+      "mode": "O2",
+      "operation": "trace",
+      "elapsed_seconds": 76.69829665399993,
+      "per_parent_sha256": "8f86f00fcedc3987befafa4fd92480d39c44c746c0f396f1cb89be535d856510"
+    },
+    {
+      "mode": "O3-ndebug-full",
+      "operation": "build",
+      "elapsed_seconds": 1.8822282170003746,
+      "atlas_sha256": "49ef7552eac8e08918b61a4aa7de56a4c096c03285af921dcf8b57506de7a0f7"
+    },
+    {
+      "mode": "O3-ndebug-full",
+      "operation": "trace",
+      "elapsed_seconds": 109.06782042099985,
+      "per_parent_sha256": "8f86f00fcedc3987befafa4fd92480d39c44c746c0f396f1cb89be535d856510"
+    }
+  ]
+}

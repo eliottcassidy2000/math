@@ -1,0 +1,149 @@
+{
+  "F_1_through_19": [
+    3,
+    5,
+    7,
+    13,
+    23,
+    17,
+    19,
+    23,
+    37,
+    61,
+    67,
+    61,
+    71,
+    47,
+    107,
+    59,
+    61,
+    109,
+    89
+  ],
+  "L_1_through_19": [
+    null,
+    3,
+    7,
+    11,
+    13,
+    17,
+    29,
+    23,
+    43,
+    41,
+    73,
+    59,
+    47,
+    89,
+    67,
+    73,
+    107,
+    89,
+    101
+  ],
+  "certificate_sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf",
+  "complete_for_all_indices_below_cutoff": true,
+  "cutoff": 71,
+  "euclid_mullin_first_7": [
+    2,
+    3,
+    7,
+    43,
+    13,
+    53,
+    5
+  ],
+  "fortunate_le_71_minus_ogg": [
+    37,
+    61,
+    67
+  ],
+  "fortunate_values_le_71": [
+    3,
+    5,
+    7,
+    13,
+    17,
+    19,
+    23,
+    37,
+    47,
+    59,
+    61,
+    67,
+    71
+  ],
+  "lesser_le_71_minus_ogg": [
+    43,
+    67
+  ],
+  "lesser_values_le_71": [
+    3,
+    7,
+    11,
+    13,
+    17,
+    23,
+    29,
+    41,
+    43,
+    47,
+    59,
+    67
+  ],
+  "max_certified_prime": "7858321551080267055879179",
+  "ogg_intersection_fortunate": [
+    3,
+    5,
+    7,
+    13,
+    17,
+    19,
+    23,
+    47,
+    59,
+    71
+  ],
+  "ogg_intersection_lesser": [
+    3,
+    7,
+    11,
+    13,
+    17,
+    23,
+    29,
+    41,
+    47,
+    59
+  ],
+  "ogg_minus_fortunate": [
+    2,
+    11,
+    29,
+    31,
+    41
+  ],
+  "ogg_minus_lesser": [
+    2,
+    5,
+    19,
+    31,
+    71
+  ],
+  "ogg_minus_union_of_offsets": [
+    2,
+    31
+  ],
+  "prime_certificates": 200,
+  "status": "PASS",
+  "unfortunate_primes_le_71": [
+    2,
+    11,
+    29,
+    31,
+    41,
+    43,
+    53
+  ],
+  "wheel_units_mod_30030": 5760
+}

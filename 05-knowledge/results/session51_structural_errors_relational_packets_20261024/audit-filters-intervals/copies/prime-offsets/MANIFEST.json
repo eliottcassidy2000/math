@@ -1,0 +1,65 @@
+{
+  "certified_prime_count": 200,
+  "files": [
+    {
+      "bytes": 924,
+      "path": "README.md",
+      "sha256": "0b1fec51b09290ef65b9e214605b25015fffa4209bbe532873cc4b5e90ad8b2a"
+    },
+    {
+      "bytes": 3629,
+      "path": "SOURCES.json",
+      "sha256": "3a91fccb09dda3c958f0829b8339d1cc2291417726ecb99fb1cc5094f8b28d00"
+    },
+    {
+      "bytes": 16430,
+      "path": "THEOREM.md",
+      "sha256": "4db86ba83df28cf2c4ce437076194cb1d872d0a5273b0525348c7dd265f79ca8"
+    },
+    {
+      "bytes": 135501,
+      "path": "certificates.json",
+      "sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf"
+    },
+    {
+      "bytes": 1617,
+      "path": "check.out",
+      "sha256": "fb6dff7096771226892d312b362e0025adc952caa94ba2d012298d88d5cba7f8"
+    },
+    {
+      "bytes": 10704,
+      "path": "check.py",
+      "sha256": "21e103019ab8d4a37349bcb2eef537b1c8635d4dc9c4cfe51907edbbdc2f89ac"
+    },
+    {
+      "bytes": 1617,
+      "path": "check_optimized.out",
+      "sha256": "fb6dff7096771226892d312b362e0025adc952caa94ba2d012298d88d5cba7f8"
+    },
+    {
+      "bytes": 335,
+      "path": "rejections.out",
+      "sha256": "a3e8c76698017718eadcbba21fe6a4958d878e48ea792bbc653f657af9799ac9"
+    },
+    {
+      "bytes": 13121,
+      "path": "results.json",
+      "sha256": "943e7ec7ae2b52854e1cbfbccc02af1bf92af94fe5ab312008235ca487142b41"
+    },
+    {
+      "bytes": 1545,
+      "path": "test_rejections.py",
+      "sha256": "57c25887ed8dd14f66f8d57fb77ef0e44bb03f051c5ac6481a5b7de3a25238c4"
+    }
+  ],
+  "generation": "Optional python3 check.py --generate uses SymPy only to propose certificates; standard-library verification is authoritative",
+  "minimality_endpoint_classifications": 1734,
+  "repository_commit_used": "d0187b4caa6d66076264251077214de74e828059",
+  "reproduce": [
+    "python3 check.py",
+    "python3 -O check.py",
+    "python3 test_rejections.py"
+  ],
+  "scope": "All possible Fortunate and lesser-Fortunate value occurrences at most 71, local offsets 2..289 around 30030, Ogg predicates through 71; no general conjecture closure",
+  "status": "PASS; producer verified, independent audit not yet supplied"
+}

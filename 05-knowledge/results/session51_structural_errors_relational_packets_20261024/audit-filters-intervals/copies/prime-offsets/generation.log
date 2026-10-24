@@ -1,0 +1,357 @@
+certifying 5
+ROW 1 2 3 None
+certifying 11
+certifying 3
+ROW 2 3 5 3
+certifying 37
+certifying 23
+ROW 3 5 7 7
+certifying 223
+certifying 199
+ROW 4 7 13 11
+certifying 2333
+certifying 53
+certifying 13
+certifying 2297
+certifying 7
+certifying 41
+ROW 5 11 23 13
+certifying 30047
+certifying 83
+certifying 181
+certifying 30013
+certifying 61
+ROW 6 13 17 17
+certifying 510529
+certifying 2659
+certifying 443
+certifying 17
+certifying 510481
+certifying 709
+certifying 59
+certifying 29
+ROW 7 17 19 29
+certifying 9699713
+certifying 9699667
+certifying 1616611
+certifying 53887
+certifying 1283
+certifying 641
+ROW 8 19 23 23
+certifying 223092907
+certifying 263
+certifying 131
+certifying 3821
+certifying 191
+certifying 19
+certifying 223092827
+certifying 10140583
+certifying 1690097
+certifying 73
+certifying 1447
+certifying 241
+ROW 9 23 37 43
+certifying 6469693291
+certifying 2677
+certifying 8951
+certifying 179
+certifying 89
+certifying 6469693189
+certifying 77020157
+certifying 1021
+certifying 18859
+certifying 449
+ROW 10 29 61 41
+certifying 200560490197
+certifying 311
+certifying 31
+certifying 4885523
+certifying 106207
+certifying 571
+certifying 200560490057
+certifying 293
+certifying 383
+certifying 223403
+certifying 5879
+certifying 2939
+certifying 113
+ROW 11 31 67 73
+certifying 7420738134871
+certifying 82452645943
+certifying 43
+certifying 319583899
+certifying 463
+certifying 1237
+certifying 103
+certifying 7420738134751
+certifying 9894317513
+certifying 1236789689
+certifying 154598711
+certifying 76157
+certifying 79
+ROW 12 37 61 59
+certifying 304250263527281
+certifying 543304042013
+certifying 135826010503
+certifying 727
+certifying 48883
+certifying 8147
+certifying 4073
+certifying 509
+certifying 127
+certifying 304250263527163
+certifying 283
+certifying 47
+certifying 179181545069
+certifying 12551243
+certifying 570511
+certifying 2113
+ROW 13 41 71 47
+certifying 13082761331670077
+certifying 34487
+certifying 401
+certifying 78049
+certifying 271
+certifying 13082761331669941
+certifying 78569
+certifying 2775216971
+certifying 277521697
+certifying 15797
+certifying 359
+ROW 14 43 47 89
+certifying 614889782588491517
+certifying 1727218490417111
+certifying 997
+certifying 1009
+certifying 171696307
+certifying 28616051
+certifying 572321
+certifying 614889782588491343
+certifying 743
+certifying 182309
+certifying 133512349
+certifying 11126029
+certifying 19727
+certifying 1409
+ROW 15 47 107 67
+certifying 32589158477190044789
+certifying 67
+certifying 10789
+certifying 6371318651
+certifying 84221
+certifying 4211
+certifying 421
+certifying 32589158477190044657
+certifying 2383
+certifying 397
+certifying 4956193961
+certifying 173
+certifying 24697
+ROW 16 53 59 73
+certifying 1922760350154212639131
+certifying 1265200439
+certifying 342131
+certifying 34213
+certifying 2851
+certifying 16885865063
+certifying 811
+certifying 946411
+certifying 31547
+certifying 15773
+certifying 3943
+certifying 1922760350154212638963
+certifying 8429
+certifying 72547
+certifying 107
+certifying 487831
+certifying 101
+certifying 1074259
+certifying 1613
+ROW 17 59 61 107
+certifying 117288381359406970983379
+certifying 192583
+certifying 823
+certifying 137
+certifying 101504616502501061
+certifying 2644726849987
+certifying 33906754487
+certifying 167
+certifying 156421
+certifying 117288381359406970983181
+certifying 369983
+certifying 6379
+certifying 1063
+certifying 2549381
+certifying 3109
+certifying 2072465111
+certifying 207246511
+certifying 233
+certifying 9883
+ROW 18 61 109 89
+certifying 7858321551080267055879179
+certifying 644101
+certifying 339176441
+certifying 180413
+certifying 1635036539
+certifying 15424873
+certifying 683
+certifying 941
+certifying 7858321551080267055878989
+certifying 1163
+certifying 538367569
+certifying 109
+certifying 2393
+certifying 20507832817
+certifying 8231
+certifying 51907
+certifying 211
+ROW 19 67 89 101
+certifying 30029
+certifying 7507
+certifying 139
+certifying 29741
+certifying 1487
+certifying 30319
+certifying 163
+certifying 30011
+certifying 3001
+certifying 71
+{
+  "F_1_through_19": [
+    3,
+    5,
+    7,
+    13,
+    23,
+    17,
+    19,
+    23,
+    37,
+    61,
+    67,
+    61,
+    71,
+    47,
+    107,
+    59,
+    61,
+    109,
+    89
+  ],
+  "L_1_through_19": [
+    null,
+    3,
+    7,
+    11,
+    13,
+    17,
+    29,
+    23,
+    43,
+    41,
+    73,
+    59,
+    47,
+    89,
+    67,
+    73,
+    107,
+    89,
+    101
+  ],
+  "certificate_sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf",
+  "complete_for_all_indices_below_cutoff": true,
+  "cutoff": 71,
+  "fortunate_le_71_minus_ogg": [
+    37,
+    61,
+    67
+  ],
+  "fortunate_values_le_71": [
+    3,
+    5,
+    7,
+    13,
+    17,
+    19,
+    23,
+    37,
+    47,
+    59,
+    61,
+    67,
+    71
+  ],
+  "lesser_le_71_minus_ogg": [
+    43,
+    67
+  ],
+  "lesser_values_le_71": [
+    3,
+    7,
+    11,
+    13,
+    17,
+    23,
+    29,
+    41,
+    43,
+    47,
+    59,
+    67
+  ],
+  "max_certified_prime": "7858321551080267055879179",
+  "ogg_intersection_fortunate": [
+    3,
+    5,
+    7,
+    13,
+    17,
+    19,
+    23,
+    47,
+    59,
+    71
+  ],
+  "ogg_intersection_lesser": [
+    3,
+    7,
+    11,
+    13,
+    17,
+    23,
+    29,
+    41,
+    47,
+    59
+  ],
+  "ogg_minus_fortunate": [
+    2,
+    11,
+    29,
+    31,
+    41
+  ],
+  "ogg_minus_lesser": [
+    2,
+    5,
+    19,
+    31,
+    71
+  ],
+  "ogg_minus_union_of_offsets": [
+    2,
+    31
+  ],
+  "prime_certificates": 200,
+  "status": "PASS",
+  "unfortunate_primes_le_71": [
+    2,
+    11,
+    29,
+    31,
+    41,
+    43,
+    53
+  ]
+}

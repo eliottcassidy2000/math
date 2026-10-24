@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "binary_mode": "build_nine",
+      "case": "empty",
+      "returncode": 1,
+      "stderr": "valid nonempty input header"
+    },
+    {
+      "binary_mode": "build_nine",
+      "case": "negative_header",
+      "returncode": 1,
+      "stderr": "valid nonempty input header"
+    },
+    {
+      "binary_mode": "build_nine",
+      "case": "truncated_parent",
+      "returncode": 1,
+      "stderr": "valid positive parent action count"
+    },
+    {
+      "binary_mode": "build_nine",
+      "case": "oversized_action_count",
+      "returncode": 1,
+      "stderr": "valid positive parent action count"
+    },
+    {
+      "binary_mode": "build_nine_ndebug",
+      "case": "empty",
+      "returncode": 1,
+      "stderr": "valid nonempty input header"
+    },
+    {
+      "binary_mode": "build_nine_ndebug",
+      "case": "negative_header",
+      "returncode": 1,
+      "stderr": "valid nonempty input header"
+    },
+    {
+      "binary_mode": "build_nine_ndebug",
+      "case": "truncated_parent",
+      "returncode": 1,
+      "stderr": "valid positive parent action count"
+    },
+    {
+      "binary_mode": "build_nine_ndebug",
+      "case": "oversized_action_count",
+      "returncode": 1,
+      "stderr": "valid positive parent action count"
+    },
+    {
+      "binary_mode": "trace_ten",
+      "case": "empty",
+      "returncode": 1,
+      "stderr": "valid nonempty atlas header"
+    },
+    {
+      "binary_mode": "trace_ten",
+      "case": "negative_header",
+      "returncode": 1,
+      "stderr": "valid nonempty atlas header"
+    },
+    {
+      "binary_mode": "trace_ten",
+      "case": "truncated_parent",
+      "returncode": 1,
+      "stderr": "valid nonempty parent action list"
+    },
+    {
+      "binary_mode": "trace_ten",
+      "case": "oversized_action_count",
+      "returncode": 1,
+      "stderr": "valid nonempty parent action list"
+    },
+    {
+      "binary_mode": "trace_ten_full",
+      "case": "empty",
+      "returncode": 1,
+      "stderr": "valid nonempty atlas header"
+    },
+    {
+      "binary_mode": "trace_ten_full",
+      "case": "negative_header",
+      "returncode": 1,
+      "stderr": "valid nonempty atlas header"
+    },
+    {
+      "binary_mode": "trace_ten_full",
+      "case": "truncated_parent",
+      "returncode": 1,
+      "stderr": "valid nonempty parent action list"
+    },
+    {
+      "binary_mode": "trace_ten_full",
+      "case": "oversized_action_count",
+      "returncode": 1,
+      "stderr": "valid nonempty parent action list"
+    }
+  ]
+}

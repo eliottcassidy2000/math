@@ -1,0 +1,162 @@
+{
+  "distinct_mutations": 13,
+  "literal_file_subprocess_rejections": [
+    {
+      "exit_code": 1,
+      "mutation": "missing final cutoff index",
+      "optimized": false,
+      "reason": "ValueError: complete finite cutoff rows"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "missing final cutoff index",
+      "optimized": true,
+      "reason": "ValueError: complete finite cutoff rows"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "incorrect primorial product",
+      "optimized": false,
+      "reason": "ValueError: primorial indexing"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "incorrect primorial product",
+      "optimized": true,
+      "reason": "ValueError: primorial indexing"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "omitted interior minimality witness",
+      "optimized": false,
+      "reason": "ValueError: every tested offset present"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "omitted interior minimality witness",
+      "optimized": true,
+      "reason": "ValueError: every tested offset present"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "proper divisor is one",
+      "optimized": false,
+      "reason": "ValueError: proper divisor witness"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "proper divisor is one",
+      "optimized": true,
+      "reason": "ValueError: proper divisor witness"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "prime falsely declared composite by MR",
+      "optimized": false,
+      "reason": "ValueError: MR compositeness witness"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "prime falsely declared composite by MR",
+      "optimized": true,
+      "reason": "ValueError: MR compositeness witness"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "composite falsely declared prime",
+      "optimized": false,
+      "reason": "ValueError: prime certificate missing 30032"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "composite falsely declared prime",
+      "optimized": true,
+      "reason": "ValueError: prime certificate missing 30032"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "missing recursive prime factor certificate",
+      "optimized": false,
+      "reason": "ValueError: prime certificate missing 2"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "missing recursive prime factor certificate",
+      "optimized": true,
+      "reason": "ValueError: prime certificate missing 2"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Lucas base equals modulus",
+      "optimized": false,
+      "reason": "ValueError: Lucas base range"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Lucas base equals modulus",
+      "optimized": true,
+      "reason": "ValueError: Lucas base range"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "wrong complete factorization",
+      "optimized": false,
+      "reason": "ValueError: incomplete n-1 factorization"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "wrong complete factorization",
+      "optimized": true,
+      "reason": "ValueError: incomplete n-1 factorization"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Fermat pseudoprime defeats Fermat-only check",
+      "optimized": false,
+      "reason": "ValueError: Lucas order test"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Fermat pseudoprime defeats Fermat-only check",
+      "optimized": true,
+      "reason": "ValueError: Lucas order test"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Carmichael composite defeats Fermat-only check",
+      "optimized": false,
+      "reason": "ValueError: Lucas order test"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "Carmichael composite defeats Fermat-only check",
+      "optimized": true,
+      "reason": "ValueError: Lucas order test"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "undefined L1 fabricated",
+      "optimized": false,
+      "reason": "ValueError: undefined lower offset at P1=2"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "undefined L1 fabricated",
+      "optimized": true,
+      "reason": "ValueError: undefined lower offset at P1=2"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "passing MR base forged as compositeness witness",
+      "optimized": false,
+      "reason": "ValueError: MR compositeness witness"
+    },
+    {
+      "exit_code": 1,
+      "mutation": "passing MR base forged as compositeness witness",
+      "optimized": true,
+      "reason": "ValueError: MR compositeness witness"
+    }
+  ],
+  "status": "PASS"
+}

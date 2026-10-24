@@ -1,0 +1,90 @@
+{
+  "inherited_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "sha256": "0064ff33a827ea3cc5657f093c38c685d8bd06561822b23df51cd03aee48a5f3"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "9435f84257f76abcdcde313ecec940bb6b8b71ae5a064ba3dc41f44819c60f95"
+    },
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "path": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079"
+    },
+    {
+      "path": "05-knowledge/results/abc_difference_families_20261011c.md",
+      "sha256": "377a5ffc5881324fade14759859182beb3f525b7a364c4a8c8d576d0126f27d2"
+    },
+    {
+      "path": "05-knowledge/results/session49_relational_hole_repairs_20261024/hole-theory/THEOREM.md",
+      "sha256": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c"
+    }
+  ],
+  "public_sources": [
+    {
+      "title": "OEIS A005235",
+      "url": "https://oeis.org/A005235",
+      "use": "Fortunate definition, primorial-indexed sequence, conjectural universal primality"
+    },
+    {
+      "title": "OEIS A055211",
+      "url": "https://oeis.org/A055211",
+      "use": "Lesser Fortunate definition and offset 2; n=1 undefined"
+    },
+    {
+      "title": "OEIS A046066",
+      "url": "https://oeis.org/A046066",
+      "use": "Sorted distinct Fortunate primes"
+    },
+    {
+      "title": "OEIS A045493",
+      "url": "https://oeis.org/A045493",
+      "use": "Prime complement of the Fortunate value set"
+    },
+    {
+      "title": "Cejchan, Krizek, Somer, On Remarkable Properties of Primes Near Factorials and Primorials, JIS 25 (2022), 22.1.4",
+      "url": "https://cs.uwaterloo.ca/journals/JIS/VOL25/Krizek/krizek3.pdf",
+      "use": "Section 3, Conjectures 13\u201314, Lemmas 15\u201316, Theorems 17\u201318, Example 19, Remark 20; known local threshold mechanism, not a proof of either conjecture"
+    },
+    {
+      "title": "Aricheta, Supersingular Elliptic Curves and Moonshine, SIGMA 15 (2019), 007",
+      "url": "https://arxiv.org/html/1809.07421v2",
+      "use": "Theorem 1.1 and Appendix A; Ogg rationality/genus characterization and higher-level context"
+    },
+    {
+      "title": "Delfs and Galbraith, Computing isogenies between supersingular elliptic curves over F_p",
+      "url": "https://arxiv.org/pdf/1310.7789",
+      "use": "Section 1 total and rational supersingular counts; Section 2 trace-zero condition"
+    },
+    {
+      "title": "Booker and Irvine, The Euclid\u2013Mullin graph, JNT 165 (2016), 30\u201357",
+      "url": "https://arxiv.org/html/1508.03039v2",
+      "use": "Introduction: least-factor recurrence and distinction from second sequence"
+    },
+    {
+      "title": "OEIS A000945",
+      "url": "https://oeis.org/A000945",
+      "use": "Current sequence identity; only first seven terms independently reproduced"
+    }
+  ],
+  "repository": "https://github.com/eliottcassidy2000/math",
+  "repository_commit": "d0187b4caa6d66076264251077214de74e828059",
+  "retrieved_date_utc": "2026-10-24"
+}
