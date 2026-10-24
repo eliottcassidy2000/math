@@ -1,0 +1,963 @@
+{
+  "aut_histogram": [
+    [
+      3,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      9,
+      1
+    ],
+    [
+      11,
+      3
+    ],
+    [
+      55,
+      1
+    ]
+  ],
+  "classes": 18,
+  "error_histogram": [
+    [
+      0,
+      4
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      88,
+      2
+    ]
+  ],
+  "labelled_strong_four": 24,
+  "matrix_universe": {
+    "labelled_degree_three_matrices": 2040,
+    "translation_orbit_stabilizer_histogram": [
+      [
+        1,
+        80
+      ],
+      [
+        5,
+        8
+      ]
+    ]
+  },
+  "nonrigid_pointed_types": 78,
+  "pointing_deficit": 120,
+  "raw_family_counts": {
+    "circulants": 32,
+    "five-five-one": 8,
+    "one-triple": 2,
+    "two-triples": 5
+  },
+  "raw_presentations": [
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 0
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 1
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 2
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 3
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 4
+    },
+    {
+      "aut_order": 55,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 5
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 6
+    },
+    {
+      "aut_order": 5,
+      "family": "five-five-one",
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "representative": 7
+    },
+    {
+      "aut_order": 9,
+      "family": "two-triples",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "representative": 8
+    },
+    {
+      "aut_order": 3,
+      "family": "two-triples",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "representative": 9
+    },
+    {
+      "aut_order": 3,
+      "family": "two-triples",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "representative": 10
+    },
+    {
+      "aut_order": 3,
+      "family": "two-triples",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "representative": 11
+    },
+    {
+      "aut_order": 3,
+      "family": "two-triples",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "representative": 12
+    },
+    {
+      "aut_order": 3,
+      "family": "one-triple",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "representative": 13
+    },
+    {
+      "aut_order": 3,
+      "family": "one-triple",
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "representative": 14
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 55,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 5
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 17
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    },
+    {
+      "aut_order": 55,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 5
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 16
+    },
+    {
+      "aut_order": 11,
+      "family": "circulants",
+      "orbit_sizes": [
+        11
+      ],
+      "representative": 15
+    }
+  ],
+  "representatives": [
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        230,
+        460,
+        920,
+        817,
+        611,
+        1222,
+        1420,
+        1816,
+        1585,
+        1123,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        230,
+        620,
+        824,
+        913,
+        451,
+        1240,
+        1420,
+        1798,
+        1571,
+        1137,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        230,
+        812,
+        472,
+        625,
+        899,
+        1236,
+        1426,
+        1802,
+        1577,
+        1125,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        230,
+        908,
+        632,
+        465,
+        803,
+        1226,
+        1426,
+        1812,
+        1573,
+        1129,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        358,
+        428,
+        696,
+        721,
+        835,
+        1240,
+        1414,
+        1809,
+        1580,
+        1123,
+        31
+      ]
+    },
+    {
+      "aut_order": 55,
+      "deficit": 10,
+      "error": 0,
+      "orbit_sizes": [
+        11
+      ],
+      "pointed_types": 1,
+      "rows": [
+        358,
+        684,
+        856,
+        433,
+        707,
+        1236,
+        1418,
+        1797,
+        1586,
+        1129,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        358,
+        716,
+        440,
+        849,
+        675,
+        1226,
+        1428,
+        1801,
+        1586,
+        1125,
+        31
+      ]
+    },
+    {
+      "aut_order": 5,
+      "deficit": 8,
+      "error": 22,
+      "orbit_sizes": [
+        1,
+        5,
+        5
+      ],
+      "pointed_types": 3,
+      "rows": [
+        358,
+        844,
+        728,
+        689,
+        419,
+        1222,
+        1432,
+        1795,
+        1580,
+        1137,
+        31
+      ]
+    },
+    {
+      "aut_order": 9,
+      "deficit": 4,
+      "error": 66,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "pointed_types": 7,
+      "rows": [
+        962,
+        964,
+        961,
+        1047,
+        1063,
+        1039,
+        440,
+        824,
+        1592,
+        1144,
+        199
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 4,
+      "error": 66,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "pointed_types": 7,
+      "rows": [
+        458,
+        468,
+        481,
+        1558,
+        1573,
+        1547,
+        440,
+        824,
+        1592,
+        1095,
+        199
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 4,
+      "error": 66,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "pointed_types": 7,
+      "rows": [
+        458,
+        484,
+        465,
+        1558,
+        1571,
+        1549,
+        440,
+        824,
+        1592,
+        1095,
+        199
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 4,
+      "error": 66,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "pointed_types": 7,
+      "rows": [
+        714,
+        724,
+        737,
+        1302,
+        1317,
+        1291,
+        440,
+        824,
+        1543,
+        1144,
+        199
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 4,
+      "error": 66,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      "pointed_types": 7,
+      "rows": [
+        714,
+        740,
+        721,
+        1302,
+        1315,
+        1293,
+        440,
+        824,
+        1543,
+        1144,
+        199
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 2,
+      "error": 88,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "pointed_types": 9,
+      "rows": [
+        1922,
+        1924,
+        1921,
+        583,
+        1039,
+        31,
+        55,
+        1144,
+        248,
+        496,
+        872
+      ]
+    },
+    {
+      "aut_order": 3,
+      "deficit": 2,
+      "error": 88,
+      "orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "pointed_types": 9,
+      "rows": [
+        1922,
+        1924,
+        1921,
+        1095,
+        527,
+        31,
+        55,
+        1144,
+        248,
+        488,
+        880
+      ]
+    },
+    {
+      "aut_order": 11,
+      "deficit": 10,
+      "error": 0,
+      "orbit_sizes": [
+        11
+      ],
+      "pointed_types": 1,
+      "rows": [
+        1984,
+        1921,
+        1795,
+        1543,
+        1039,
+        31,
+        62,
+        124,
+        248,
+        496,
+        992
+      ]
+    },
+    {
+      "aut_order": 11,
+      "deficit": 10,
+      "error": 0,
+      "orbit_sizes": [
+        11
+      ],
+      "pointed_types": 1,
+      "rows": [
+        962,
+        1924,
+        1801,
+        1555,
+        1063,
+        79,
+        158,
+        316,
+        632,
+        1264,
+        481
+      ]
+    },
+    {
+      "aut_order": 11,
+      "deficit": 10,
+      "error": 0,
+      "orbit_sizes": [
+        11
+      ],
+      "pointed_types": 1,
+      "rows": [
+        1736,
+        1425,
+        803,
+        1606,
+        1165,
+        283,
+        566,
+        1132,
+        217,
+        434,
+        868
+      ]
+    }
+  ],
+  "status": "PASS",
+  "universe": "only nonrigid regular-eleven structural candidates; no full regular atlas"
+}

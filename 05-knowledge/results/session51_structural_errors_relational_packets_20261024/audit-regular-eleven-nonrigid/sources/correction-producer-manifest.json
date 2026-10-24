@@ -1,0 +1,260 @@
+{
+  "files": [
+    {
+      "bytes": 1921,
+      "path": "README.md",
+      "sha256": "4fd3595ba8055f32c3760efb36ae6ce169a989154d6ce0eb439adceccc618d1a"
+    },
+    {
+      "bytes": 2588,
+      "path": "SOURCE_PINS.json",
+      "sha256": "1481fffaa980f9b730963ac2ab501997936d5f4de121d46368c5fff8c9135f71"
+    },
+    {
+      "bytes": 16223,
+      "path": "THEOREM.md",
+      "sha256": "d7ec1b4ad135c025cf2a09e63040cb8b22f99db612842bbf6880cdcd679060b6"
+    },
+    {
+      "bytes": 2838,
+      "path": "VALIDATION.md",
+      "sha256": "04a79c5dfb41f2c5d8709973ffc19513de27da6137fb4e99e0c569ace682b2b7"
+    },
+    {
+      "bytes": 954,
+      "path": "combined-correction.json",
+      "sha256": "239f04f066a0a4492aac43c8b3b69e4b670bbc11e39d376d8e6975cda413223c"
+    },
+    {
+      "bytes": 1259,
+      "path": "degree-mass-optimized.json",
+      "sha256": "844a8e534a44e7876c292fb51d3cc13ba82e70ec502a9f2b165c1d3c51c22c02"
+    },
+    {
+      "bytes": 1259,
+      "path": "degree-mass.json",
+      "sha256": "844a8e534a44e7876c292fb51d3cc13ba82e70ec502a9f2b165c1d3c51c22c02"
+    },
+    {
+      "bytes": 1830,
+      "path": "degree_mass.py",
+      "sha256": "699c291cd423629d3787c30177f94bcdc3e4eab226138824302bf062c999667d"
+    },
+    {
+      "bytes": 112957,
+      "path": "eleven-O2-components.tsv",
+      "sha256": "5f5050d7f47808b7ceb73f9bb3707b4611f45663c96768704ba5d7c800ad37d5"
+    },
+    {
+      "bytes": 814100,
+      "path": "eleven-O2-parents.txt",
+      "sha256": "ef22a13423ecf41c90e0d01e3f04bd1a42e173bb519abcad7698fb4aa3979937"
+    },
+    {
+      "bytes": 1307539,
+      "path": "eleven-O2-states.tsv",
+      "sha256": "d4457eba3860a16f6d2649b5b0c6a80aaea5069b130d68838e8d79cab5be285b"
+    },
+    {
+      "bytes": 1189,
+      "path": "eleven-O2.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd"
+    },
+    {
+      "bytes": 112957,
+      "path": "eleven-O3-components.tsv",
+      "sha256": "5f5050d7f47808b7ceb73f9bb3707b4611f45663c96768704ba5d7c800ad37d5"
+    },
+    {
+      "bytes": 814100,
+      "path": "eleven-O3-parents.txt",
+      "sha256": "ef22a13423ecf41c90e0d01e3f04bd1a42e173bb519abcad7698fb4aa3979937"
+    },
+    {
+      "bytes": 1307539,
+      "path": "eleven-O3-states.tsv",
+      "sha256": "d4457eba3860a16f6d2649b5b0c6a80aaea5069b130d68838e8d79cab5be285b"
+    },
+    {
+      "bytes": 1189,
+      "path": "eleven-O3.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd"
+    },
+    {
+      "bytes": 789,
+      "path": "hostile-normal.json",
+      "sha256": "7a4f5319856579ee78b594d47d73ac8805727f5fbfc745a04145fd160029434c"
+    },
+    {
+      "bytes": 789,
+      "path": "hostile-optimized.json",
+      "sha256": "7a4f5319856579ee78b594d47d73ac8805727f5fbfc745a04145fd160029434c"
+    },
+    {
+      "bytes": 1687,
+      "path": "hostile_controls.py",
+      "sha256": "8591ca288dc0e44e096fbcb1a233e9c54531864d8c46ee305b4c9bc88370d41f"
+    },
+    {
+      "bytes": 627,
+      "path": "nine-O2-components.tsv",
+      "sha256": "593c2f8e2c4417d79296639448f6a444d91a6b97984d21d052ef546755014e9c"
+    },
+    {
+      "bytes": 4159,
+      "path": "nine-O2-parents.txt",
+      "sha256": "8e142b8a562f5748ccffe003c9c34d7befc9370c2eea0689ef9924f79ec0cf82"
+    },
+    {
+      "bytes": 4266,
+      "path": "nine-O2-states.tsv",
+      "sha256": "f9eb93865c33e64f3f8d756df4332f6627ba68f45c34ea5ff9df6e83b6cd9450"
+    },
+    {
+      "bytes": 1017,
+      "path": "nine-O2.json",
+      "sha256": "0c1926bf8784b2a5c871b9f69db5731b9c649d3359721584e82bbdb52f9bfb53"
+    },
+    {
+      "bytes": 627,
+      "path": "nine-O3-components.tsv",
+      "sha256": "593c2f8e2c4417d79296639448f6a444d91a6b97984d21d052ef546755014e9c"
+    },
+    {
+      "bytes": 4159,
+      "path": "nine-O3-parents.txt",
+      "sha256": "8e142b8a562f5748ccffe003c9c34d7befc9370c2eea0689ef9924f79ec0cf82"
+    },
+    {
+      "bytes": 4266,
+      "path": "nine-O3-states.tsv",
+      "sha256": "f9eb93865c33e64f3f8d756df4332f6627ba68f45c34ea5ff9df6e83b6cd9450"
+    },
+    {
+      "bytes": 1017,
+      "path": "nine-O3.json",
+      "sha256": "0c1926bf8784b2a5c871b9f69db5731b9c649d3359721584e82bbdb52f9bfb53"
+    },
+    {
+      "bytes": 14893,
+      "path": "regular_trace.cpp",
+      "sha256": "56a0a7d367283d613f8197ab10600431e72d83260c2336c260b16fc68dc65ad6"
+    },
+    {
+      "bytes": 1822,
+      "path": "reproduce.py",
+      "sha256": "05bf7bc8415d862adf97649277802f05eba6485230592ae8729244b8557b5b4c"
+    },
+    {
+      "bytes": 115,
+      "path": "seven-O2-components.tsv",
+      "sha256": "cb74dd66f37da5d19d05c8e4d9897cc69babcd5e59b00688ccc4614d96bf0d88"
+    },
+    {
+      "bytes": 204,
+      "path": "seven-O2-parents.txt",
+      "sha256": "5377a3c0529a9c0f15e3873aa4b6ca0aaccaf8508e08c64bc1b9d956e28f7fcb"
+    },
+    {
+      "bytes": 184,
+      "path": "seven-O2-states.tsv",
+      "sha256": "0add3c83ddd0f9143ad966f98390d9269fae72d89f485835e4369005c583f0e2"
+    },
+    {
+      "bytes": 908,
+      "path": "seven-O2.json",
+      "sha256": "5caba4c14c7a5efe97efd405d10045bb4263b6e3a831cfab4dc475f2a9d8a526"
+    },
+    {
+      "bytes": 115,
+      "path": "seven-O3-components.tsv",
+      "sha256": "cb74dd66f37da5d19d05c8e4d9897cc69babcd5e59b00688ccc4614d96bf0d88"
+    },
+    {
+      "bytes": 204,
+      "path": "seven-O3-parents.txt",
+      "sha256": "5377a3c0529a9c0f15e3873aa4b6ca0aaccaf8508e08c64bc1b9d956e28f7fcb"
+    },
+    {
+      "bytes": 184,
+      "path": "seven-O3-states.tsv",
+      "sha256": "0add3c83ddd0f9143ad966f98390d9269fae72d89f485835e4369005c583f0e2"
+    },
+    {
+      "bytes": 908,
+      "path": "seven-O3.json",
+      "sha256": "5caba4c14c7a5efe97efd405d10045bb4263b6e3a831cfab4dc475f2a9d8a526"
+    },
+    {
+      "bytes": 1924,
+      "path": "sources/nonregular-eleven-manifest.json",
+      "sha256": "9c89b66a103ddd34a2126e390418e7088728b09b9f57d7a01ee37afabea109b2"
+    },
+    {
+      "bytes": 762645,
+      "path": "sources/nonregular-eleven-receipt.json",
+      "sha256": "c9f9e5fef2f82c237698d6a0eddc8ec2a28af540b877f1f5d803b48b89b56865"
+    },
+    {
+      "bytes": 22095,
+      "path": "sources/nonregular-eleven-theorem.md",
+      "sha256": "877ac61d619c06d4ebb6605f61db09d39321a5b5db10c1592ef6ad9d431d0ccf"
+    },
+    {
+      "bytes": 11421,
+      "path": "sources/parent-nine-audit-manifest.json",
+      "sha256": "2878857405e9d1e6f6d999db9e35deabc420afbe48861f5b5f277a92f30245b0"
+    },
+    {
+      "bytes": 8093,
+      "path": "sources/parent-nine-audit.md",
+      "sha256": "352a5ff5fe1ad41d7cc2222774a9083f0760eca28aaed1bdf31d9bf1b34787ab"
+    },
+    {
+      "bytes": 4535,
+      "path": "sources/parent-nine-manifest.json",
+      "sha256": "161449ddf5c2a07b7afefd213438b85c74897850b89050dde66428819b0838d6"
+    },
+    {
+      "bytes": 840,
+      "path": "sources/parent-nine-receipt.json",
+      "sha256": "b3045eb3d5d841e79b4743f1d6a737c5f9a7fb00f6d6fc4850d24fd69ae6eb14"
+    },
+    {
+      "bytes": 10514,
+      "path": "sources/parent-nine-theorem.md",
+      "sha256": "2204485ed26aca417c283e8cb4be5a07c0d3f5dc0b187d60a8cc8c79044074e5"
+    },
+    {
+      "bytes": 416,
+      "path": "sources/parents-5.txt",
+      "sha256": "64c71421210dd12f4d5c0e690af3fc33814ae80c433311db1f52bcce008cf9d4"
+    },
+    {
+      "bytes": 18795,
+      "path": "sources/parents-7.txt",
+      "sha256": "3fd3a5103dba258ea4032ff56d5008ae64ce90532904846f84efce6ec6cfe7a1"
+    },
+    {
+      "bytes": 10452253,
+      "path": "sources/parents-nine.txt",
+      "sha256": "49ef7552eac8e08918b61a4aa7de56a4c096c03285af921dcf8b57506de7a0f7"
+    },
+    {
+      "bytes": 34600,
+      "path": "sources/parents-through-seven.json",
+      "sha256": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad"
+    },
+    {
+      "bytes": 49386,
+      "path": "sources/regular-nine-reference.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "bytes": 8702,
+      "path": "verify_packet.py",
+      "sha256": "53e1e7925ccd0d50e498efecd3ef2f75d08a35ba7dad2162c619b53a9e620c84"
+    }
+  ],
+  "format": 1
+}

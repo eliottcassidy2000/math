@@ -1,0 +1,95 @@
+{
+  "hostiles": [
+    {
+      "name": "omit_distinct_degree_four",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five true strong class histogram"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five true strong class histogram"
+        }
+      ]
+    },
+    {
+      "name": "include_regular_eleven_presentations",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five literal defect"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five literal defect"
+        }
+      ]
+    },
+    {
+      "name": "include_coalesced_nine_cell",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "true triangle skeleton has no residual permutation"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "true triangle skeleton has no residual permutation"
+        }
+      ]
+    },
+    {
+      "name": "forget_cyclic_skeleton_quotient",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "seventeen cyclic strong skeletons minus one"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "seventeen cyclic strong skeletons minus one"
+        }
+      ]
+    },
+    {
+      "name": "use_wrong_SCC_index",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "SCC padding coefficient10314"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "SCC padding coefficient10314"
+        }
+      ]
+    },
+    {
+      "name": "erase_full_orbit_error",
+      "runs": [
+        {
+          "optimized": false,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five literal defect"
+        },
+        {
+          "optimized": true,
+          "pinned_script_hash_changed": true,
+          "semantic_rejection": "five literal defect"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

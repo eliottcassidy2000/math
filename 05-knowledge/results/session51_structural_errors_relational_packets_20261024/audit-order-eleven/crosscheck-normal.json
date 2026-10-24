@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "frozen producer manifest pin": 1,
+    "full automorphism orbits partition": 1232,
+    "known total error residue modulo twenty two": 1,
+    "loopless bounded rows": 1232,
+    "no regular eleven entered frozen producer residual": 1232,
+    "producer and independent sector distributions match": 1,
+    "producer certificate has1232 actual representatives": 1,
+    "producer full Aut and error independently recomputed": 1232,
+    "producer independent positive distribution exact match": 1,
+    "producer independent residual9166": 1,
+    "producer representative independently strong": 1232,
+    "producer unknown support agrees with independent parity deduction": 1,
+    "regular eleven odd-orbit support": 1,
+    "tournament pairs": 1232
+  },
+  "independently_checked_producer_representatives": 1232,
+  "nonregular_positive_distribution": [
+    [
+      14,
+      24
+    ],
+    [
+      18,
+      263
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      40,
+      88
+    ],
+    [
+      72,
+      7
+    ]
+  ],
+  "producer_manifest_sha256": "9c89b66a103ddd34a2126e390418e7088728b09b9f57d7a01ee37afabea109b2",
+  "regular_eleven_allowed_positive_support": [
+    22,
+    44,
+    66,
+    88,
+    110
+  ],
+  "status": "PASS",
+  "total_eleven_error": "UNKNOWN regular-eleven contribution +19480",
+  "total_error_modulo_twenty_two": 10
+}

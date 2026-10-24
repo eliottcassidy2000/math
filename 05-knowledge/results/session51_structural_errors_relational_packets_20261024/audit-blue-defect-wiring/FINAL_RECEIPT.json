@@ -1,0 +1,28 @@
+{
+  "all_HP_count": 341504,
+  "articulations": 0,
+  "blue_ports": 4200,
+  "boundary_edges": 4020,
+  "bridges": 0,
+  "candidate_manifest_sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d",
+  "component_sizes": [
+    1,
+    1,
+    1,
+    1,
+    20
+  ],
+  "cycle_rank": 71,
+  "endpoint_eligible_ports": 2037,
+  "independent_normal_sha256": "9e0d35dae77ceff349a468c9c06885529581f05cb0f2f21cffa1f13bc501c61a",
+  "independent_optimized_sha256": "9e0d35dae77ceff349a468c9c06885529581f05cb0f2f21cffa1f13bc501c61a",
+  "internal_edges": 90,
+  "internal_ports": 180,
+  "loops": 4,
+  "maximum_parallel_multiplicity": 3,
+  "nonloop_edges": 86,
+  "scope": "induced actual blue multigraph on the 24 positive-error self-converse order-ten nodes only; no boundary class identification or black wiring",
+  "source_integrity": "all candidate files unchanged; copied sources pinned; no publishing",
+  "status": "PASS",
+  "validation_sha256": "37abef12025f15d1978739295fe2930e61aee03ebbc9f623f124f0396767ce33"
+}

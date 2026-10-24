@@ -1,0 +1,86 @@
+{
+  "regular_error": 133210,
+  "status": "FINITE-EXACT and inherited structural proof",
+  "strong_error": 142376,
+  "strong_positive_error_classes": 1603,
+  "strong_positive_error_histogram": [
+    [
+      14,
+      24
+    ],
+    [
+      18,
+      263
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      40,
+      88
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      72,
+      7
+    ],
+    [
+      88,
+      2
+    ],
+    [
+      110,
+      1205
+    ]
+  ],
+  "target_a11_computed": false,
+  "total_error": 152690,
+  "total_positive_error_classes": 1907,
+  "total_positive_error_histogram": [
+    [
+      14,
+      48
+    ],
+    [
+      18,
+      348
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      36,
+      8
+    ],
+    [
+      40,
+      256
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      72,
+      28
+    ],
+    [
+      88,
+      2
+    ],
+    [
+      110,
+      1205
+    ]
+  ],
+  "upper_trace_eleven_computed": false
+}

@@ -1,0 +1,24 @@
+{
+  "active_packets_verified": 29,
+  "atlas_free_degree_replay": "Producer and independent recursions separately rerun normal/-O; all four match pinned receipts.",
+  "headline_integer_crosschecks": "PASS",
+  "limits": "Existing proof and audit integration only; no full census rerun, no external or remote actions.",
+  "manifest_payloads_verified": 870,
+  "publication_map": {
+    "entries": 907,
+    "exists": true,
+    "extra_targets": [],
+    "missing_or_wrong_targets": [
+      "validation/score-mass-audit-physical-copy.json"
+    ],
+    "remote_publication_not_checked": true,
+    "sha256": "393c84eedee6c099ff353000891c6c5105c330a653535efa1945d2b47da4c91e",
+    "stale_sources": [
+      "/workspace/scratch/07d5532f2fce/session51-root/final/SYNTHESIS.md"
+    ]
+  },
+  "relative_links_verified": 74,
+  "score_layer_audit_final": "PASS",
+  "score_mass_audit_final_files_present": true,
+  "status": "PASS for checked mathematical integration"
+}

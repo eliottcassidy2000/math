@@ -1,0 +1,24 @@
+{
+  "files": {
+    "FINAL_RECEIPT.json": "90e3cc232ac9660e6cb3a3fb518ecfc5f5965e2e8e5994493176f0a41efc624d",
+    "README.md": "6290ba65046341a539cc14d6df8a09ca0b36f4d982d91885a9b0886913a6f6a4",
+    "REPORT.md": "ab13934bb458b41facb773cb37b0ff6b43ccdd67d265e9408dc27888026b40a8",
+    "SOURCE_PINS.json": "e0fc49325af8d48a7504c6911a3dad2b4cd7cc2e7844d09fda77a34f4935c71c",
+    "independent.py": "85f5671d07d1772a37fd773984992a636bdd5a4ef52faa79533a04c938dbd839",
+    "normal.json": "9e0d35dae77ceff349a468c9c06885529581f05cb0f2f21cffa1f13bc501c61a",
+    "optimized.json": "9e0d35dae77ceff349a468c9c06885529581f05cb0f2f21cffa1f13bc501c61a",
+    "sources/PATH_TRANSPORT_AND_FOREST_RULE.md": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6",
+    "sources/blue-port-receipt.json": "e5277f7e5461aa68cd0313614f3fd74f7f610f1e18fcb62c9e1df0a9bf4ee019",
+    "sources/candidate-MANIFEST.json": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d",
+    "sources/converse-MANIFEST.json": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+    "sources/converse-THEOREM.md": "e461b661ec0a4f0edc840a9139db48511cda347006af0d7e717b1f0b71f4b5a6",
+    "sources/converse-receipt.json": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce",
+    "sources/inherited-audit-MANIFEST.json": "7ca02dc5c0272039b552e7cd5538bbab04923a894e04c050e08fb69de721fc7f",
+    "sources/inherited-audit-REPORT.md": "a3b30eda1fc71883aa4202e8bc79be4c7b4b30202426c99d1b6515de7ecbc342",
+    "sources/inherited-audit-ports.json": "f2fc69e79af1582967aeb537235fba6d310e76eb3676f41f155f6199daafefe1",
+    "validate.py": "c56ef92297944e7045d70128affecfbfca3e2088ba964b5c232c71c12ca15871",
+    "validation.json": "37abef12025f15d1978739295fe2930e61aee03ebbc9f623f124f0396767ce33",
+    "verify_manifest.py": "a6cd89052128bf2ecefd7b1c5462d378785c9156e600cccb53d22a0252beb516"
+  },
+  "status": "FROZEN independent audit PASS"
+}

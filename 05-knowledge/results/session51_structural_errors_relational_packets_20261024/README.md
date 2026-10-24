@@ -1,139 +1,77 @@
-# Session51: structural errors and relational repair packets
+# Session51: structural counting, actual blue wiring, and relational repair
 
-24 October 2026. Third mathematical checkpoint. The following packets have independent
-audits; the next-order residual and converse refinements are being integrated
-separately.
+24 October 2026. Scoped proofs and independently audited finite certificates.
+Read the [synthesis](SYNTHESIS.md) for the mechanism, provenance, and boundaries,
+and [validation ledger](VALIDATION.md) for the reproducibility contract.
 
-The [order-ten theorem](order-ten/THEOREM.md) and its
-[independent audit](audit-order-ten/AUDIT.md) determine the entire positive
-refinement-error distribution at order ten, without enumerating every
-tournament of that order.
+## Headline results
 
-Writing e(T) for the sum of stable-cell size minus actual vertex-orbit size
-across vertex orbits, the exact positive-error polynomial is
+- [A000568(10)](parent-nine/THEOREM.md): (97336068-5508)/10=9733056,
+  with a generated order-nine atlas and no production canonicalization above
+  order eight. [Independent audit](audit-parent-growth/AUDIT.md).
+- [Complete order-eleven correction](regular-eleven/THEOREM.md): E11=152690;
+  [nonregular classification](order-eleven/THEOREM.md) and
+  [eighteen nonrigid regular types](regular-eleven-nonrigid/THEOREM.md)
+  isolate and compute it. U11 and A000568(11) are NOT computed.
+- [Actual blue neighborhood](blue-defect-neighborhood/THEOREM.md): all4200
+  blue ports of24 mixed defect nodes,90 internal edges and4020 boundary
+  edges to1031 distinct zero-error nodes. The selected incident-edge graph
+  has1055 vertices and4110 edges, not every edge of a full metagraph.
+- [All-size score-layer separation](score-layer-separation/THEOREM.md):
+  equal-multiplicity two-score layers have disjoint neighbor bands; only the
+  balanced layer can have internal edges. Distinct layers have distance at
+  least three, not a proved global disconnection.
+- [Binary relational intervals](implication-intervals/THEOREM.md): strict
+  routes are neutral packetizations with acyclic dependency contraction.
+  [Native new pin](relational-trades/THEOREM.md) creates34 new indivisible
+  trades; exact slots/clocks and every shared resource remain retained.
+- [Fortunate and supersingular comparison](prime-offsets/THEOREM.md): exact
+  finite membership through71, corrected indexing, sharp30030 offset window,
+  and explicit failure of a set identification. No Fortune conjecture solved.
 
-    12 t^14 + 46 t^18 + 4 t^36 + 84 t^40 + 14 t^72.
+## Proof and audit map
 
-Precisely160 ordinary tournament classes have positive error. Its first
-moment is5508 and its second moment is229416.
+- Order-ten error spectrum: [proof](order-ten/THEOREM.md),
+  [audit](audit-order-ten/AUDIT.md).
+- Prime cyclic-cell symmetry decoder: [proof](cyclic-cell-decoder/THEOREM.md),
+  [audit](audit-cyclic-decoder/AUDIT.md).
+- Same decoder, different Hamiltonian masses: [witness](decoder-loss-witness/README.md),
+  [audit](audit-loss-witness/AUDIT.md).
+- Native relational trade and exact costs: [proof](relational-trades/THEOREM.md),
+  [audit](audit-relational-trades/AUDIT.md).
+- Primorial and binary-interval theory: [arithmetic](prime-offsets/THEOREM.md),
+  [intervals](implication-intervals/THEOREM.md),
+  [joint independent audit](audit-filters-intervals/REPORT.md).
+- Order-nine parent construction and order-ten trace:
+  [proof](parent-nine/THEOREM.md), [audit](audit-parent-growth/AUDIT.md).
+- Nonregular order-eleven classification: [proof](order-eleven/THEOREM.md),
+  [audit](audit-order-eleven/AUDIT.md).
+- Regular-eleven targeted computation: [proof](regular-eleven/THEOREM.md),
+  [audit](audit-regular-eleven/AUDIT.md).
+- Small nonrigid regular-eleven classification:
+  [proof](regular-eleven-nonrigid/THEOREM.md),
+  [audit](audit-regular-eleven-nonrigid/AUDIT.md).
+- Atlas-free regular-eleven coefficient route:
+  [proof](regular-eleven-score-mass/THEOREM.md),
+  [audit](audit-regular-eleven-score-mass/AUDIT.md).
+- Converse-refined defect series and actual port colors:
+  [proof](converse-errors/THEOREM.md), [audit](audit-converse-errors/REPORT.md).
+- Literal induced blue graph: [proof](blue-defect-wiring/THEOREM.md),
+  [audit](audit-blue-defect-wiring/REPORT.md).
+- Complete selected blue neighborhood:
+  [proof](blue-defect-neighborhood/THEOREM.md),
+  [audit](audit-blue-defect-neighborhood/REPORT.md).
+- All-size endpoint-score layer constraint:
+  [proof](score-layer-separation/THEOREM.md),
+  [audit](audit-score-layers/REPORT.md).
 
-The strong order-ten error is3992:3360 from two cyclic five-cells,56 from
-bad seven-cells with three singletons, and576 from three triangle cells and
-a singleton. The last term includes both transitive and cyclic majority
-quotients. The inherited strong-component transfer E(z)=A(z)^2 E_s(z)
-gives total5508.
+## What is not claimed
 
-This is the exact structural correction required for a parent-only
-order-ten refinement upper trace. It is NOT by itself the tournament count:
-the trace still has to be computed from a complete authenticated parent atlas.
-The full bivariate component law and raw-second-moment identity retain more
-information than the single correction scalar.
-
-Both independent small-family censuses, the exhaustive omitted-crossing
-control, and the parent-eight reconstruction of the order-nine distribution
-are reproducible from the delivered packets. No all-size scalar recurrence,
-complete tournament wiring rule, or new literature priority is asserted.
-
-
-## All-size scoped symmetry decoder
-
-The [prime cyclic-cell theorem](cyclic-cell-decoder/THEOREM.md) extends the
-inherited triangle kernel to arbitrarily many actual stable cells inducing
-consecutive cyclic prime tournaments. Same-prime nonuniform crossings have
-translation stabilizer either a nonzero-slope line or zero. Gain edges encode
-the former, rigid-edge pins the latter; mixed prime sizes decouple. This
-recovers the full ordinary automorphism action and exact refinement error,
-not just an abstract group order. [Independent audit](audit-cyclic-decoder/AUDIT.md).
-
-A rigid crossing can freeze cells on a tree, so cycle balance alone fails
-outside the triangle domain. The [loss witness](decoder-loss-witness/README.md)
-and its [audit](audit-loss-witness/AUDIT.md) go further: two ten-vertex
-tournaments have identical complete decoder output but Hamiltonian path
-counts15465 and15549. It does not determine path-fibre masses or a full
-metagraph carrying them; different bare unweighted adjacency is not inferred.
-
-## Native cross-cell relational pin
-
-The [native repair packet](relational-trades/THEOREM.md) adds an authenticated
-owner-value relation between the existing1457 and1394 ports, retaining the
-triple receiver, every exterior record, full kernels, dyadic guards, converse,
-and exact changed clocks. A shared record is read twice, not allocated twice.
-The [independent audit](audit-relational-trades/AUDIT.md) reconstructs all
-65536 accepted states,21696 fibres and105112 endpoint pairs.
-
-The new relation makes34 trades newly indivisible, within a catalogue of762.
-The100 maximal trades give100 z^8(1+z)^3 and800 strict-critical pairs. Central
-ordinary thresholds rise from14/30 to16/34; strict thresholds stay16/34.
-The particular grade8/charge165 hostile changes from strict8/18 to16/34,
-whereas its new ordinary optimum is10/22, not16/34. Its shorter ordinary
-route reacquires resources, so it is not a strict no-reuse route.
-
-This is a finite native result, not an all-size supply or arbitrary-pin
-coverage theorem. The signed-equality packet bound132 is conditional on
-margin-neutral blocks and relational closure, not merely on small components.
-
-
-## Exact order-ten prediction and a generated parent atlas
-
-The [parent-only construction and predictor](parent-nine/THEOREM.md), with
-[independent audit](audit-parent-growth/AUDIT.md), gives
-
-    (97,336,068 - 5,508)/10 = 9,733,056.
-
-Its order-nine parent atlas is itself generated from authenticated order-eight
-parents:191480 classes selected by an invariant singleton and56 exceptional
-classes selected by marked-root transport. Only232 singleton-free pointed
-states require residual handling, with2088 order-eight canonicalizations.
-The construction retains full automorphism actions and verifies labelled
-orbit mass2^36. The order-ten pass processes97213472 pointed states without
-child isomorphism tests or target-count inputs.
-
-Production canonicalization stops at order eight. The independent audit
-explicitly uses its own order-nine canonicalization to verify all191536
-representatives and exact actions, then a differently structured incoming-edge
-refinement scan verifies every per-parent contribution. This is a parent-data
-construction, not a closed formula from n or bare blue/black totals, and no
-asymptotic speed advantage over established enumeration is claimed.
-
-## Binary relations: why neutral packets can fail to execute
-
-The [implication-interval theorem](implication-intervals/THEOREM.md) and
-[joint independent audit](audit-filters-intervals/REPORT.md) classify every
-Boolean unary/binary relation inside a fixed endpoint interval. Its
-relation-valid states are ideals of the implication-SCC poset; actual
-accepted states are the ideals with zero complete additive defect.
-
-A strict route is exactly a partition into neutral packets whose contracted
-dependency graph is acyclic. Small zero-sum packets can create a cycle when
-contracted, even if the original implication graph is a path. Merging those
-packet-SCCs repairs execution but must charge the entire merged event.
-Fixed C2-squared charges, nonzero increments, bounded SCCs, treewidth one,
-and exact populations still permit unbounded required events.
-
-This is an abstract all-size theorem. The signed-equality native packet above
-is its order-free special case, not an authentication of arbitrary implication
-relations at all tournament orders. Literal records, exact integer margins,
-retired resources, and simultaneous slot/clock budgets remain necessary.
-The audit exhibits a joint-budget frontier {(6,12),(4,14)} whose separate
-minima(4,12) are unattainable.
-
-## Primorial offsets and supersingular primes
-
-The [arithmetic note](prime-offsets/THEOREM.md), covered by the same
-[independent audit](audit-filters-intervals/REPORT.md), identifies the supplied
-Fortunate, lesser-Fortunate, increasing-support and complement sequences.
-The elementary bound F_n>p_n makes value membership through71 an exact
-finite test, not a sampled-prefix conjecture. Two hundred recursive Lucas
-certificates and independent supersingular checks support the comparisons.
-
-At30030 the first offset on both sides is17, yielding primes30013 and30047.
-Every surviving offset below17 squared must be prime, but30030 plus/minus289
-are both prime with composite offset289: the window is sharp. The positive
-and negative Fortunate sets together still miss Ogg primes2 and31; they also
-contain primes outside Ogg's set. Neither Fortune conjecture is proved.
-
-The useful analogy has a boundary: a wheel is only a necessary screen,
-whereas the exact hole formula requires actual branch-conditioned supports.
-Sieve conjunctions and repair alternatives have different AND/OR quantifiers.
-No map from supersingular points or prime certificates to native routes is
-claimed.
+No closed scalar recurrence from order n alone or bare blue/black totals;
+no full unrestricted order-eleven count; no complete black wiring or global
+component classification; no unqualified bounded-cost theorem for arbitrary
+native pins; no prime/tournament or supersingular/Fortunate bijection.
+Every all-size theorem is restricted to its stated domain, including the
+binary/disjoint-reservation contract when invoking resource nonreuse. Coefficient
+calculations, finite class censuses, actual port partners, and route existence
+remain separate objects unless a proved map explicitly connects them.

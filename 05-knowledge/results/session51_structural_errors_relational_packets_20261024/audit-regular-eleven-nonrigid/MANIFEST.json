@@ -1,0 +1,195 @@
+{
+  "files": [
+    {
+      "bytes": 8050,
+      "path": "AUDIT.md",
+      "sha256": "20373ec1f821a090765caf108d0bb317ad2139be779192600f5130faf9a203eb"
+    },
+    {
+      "bytes": 714,
+      "path": "README.md",
+      "sha256": "a47717f2a5435334935c3bec39a8d4d49e72ff9568a91ead679d8d4b49ab5806"
+    },
+    {
+      "bytes": 627,
+      "path": "SOURCE_PINS.json",
+      "sha256": "3b826956a962039b1fbf7b2827432e422989d0b6772c75a07f7357c7235cccce"
+    },
+    {
+      "bytes": 228,
+      "path": "atlas-control-O2.json",
+      "sha256": "91e5a96b649999bbf6b767708ff9af0d10516dbf29a697b91fe7969df5576263"
+    },
+    {
+      "bytes": 228,
+      "path": "atlas-control-O3.json",
+      "sha256": "91e5a96b649999bbf6b767708ff9af0d10516dbf29a697b91fe7969df5576263"
+    },
+    {
+      "bytes": 2797,
+      "path": "atlas_control.cpp",
+      "sha256": "345a41ed42c51d399e310329479819b4d9b70dc540e61f37a0f0af7f0e7ec5d3"
+    },
+    {
+      "bytes": 271,
+      "path": "crosscheck-normal.json",
+      "sha256": "7290d892fb61580f8871e4067a10826ef6720d5dfa8750c08b9d60c20120b15b"
+    },
+    {
+      "bytes": 271,
+      "path": "crosscheck-optimized.json",
+      "sha256": "7290d892fb61580f8871e4067a10826ef6720d5dfa8750c08b9d60c20120b15b"
+    },
+    {
+      "bytes": 1741,
+      "path": "crosscheck.py",
+      "sha256": "ef0f5015b7822a33c5732aecb942a7f148509d5e23d9d3d7978dd6d37a5ea398"
+    },
+    {
+      "bytes": 1207,
+      "path": "hostile-normal.json",
+      "sha256": "0953855915452bb6b605b2a7ef7c41f743e39a50e9cf3af68a57f65c88e2b626"
+    },
+    {
+      "bytes": 1207,
+      "path": "hostile-optimized.json",
+      "sha256": "0953855915452bb6b605b2a7ef7c41f743e39a50e9cf3af68a57f65c88e2b626"
+    },
+    {
+      "bytes": 2370,
+      "path": "hostiles.py",
+      "sha256": "2ecf070c482ba4bdcca17f5610e7e0baec83a6f689a3e39129dd0b59111c58a9"
+    },
+    {
+      "bytes": 7353,
+      "path": "independent.py",
+      "sha256": "3f4a7d9ef2c8f553d9230289ece7f55ae0da169077066530e88c5b87d1825289"
+    },
+    {
+      "bytes": 14251,
+      "path": "normal.json",
+      "sha256": "1d5a5b84c395c1e2ad8572d90e112fc0eae4e80ae078071d7047c06d39e3401f"
+    },
+    {
+      "bytes": 14251,
+      "path": "optimized.json",
+      "sha256": "1d5a5b84c395c1e2ad8572d90e112fc0eae4e80ae078071d7047c06d39e3401f"
+    },
+    {
+      "bytes": 1972,
+      "path": "producer/MANIFEST.json",
+      "sha256": "3fd0d159b9e356fb5d86906e657e9ef992061408f2391419ceaf5d248813acaa"
+    },
+    {
+      "bytes": 1171,
+      "path": "producer/README.md",
+      "sha256": "0901278c1f5afee707137afacc2645e642bf72811bc8aedecfc1d8a6ca591da3"
+    },
+    {
+      "bytes": 431,
+      "path": "producer/SOURCE_PINS.json",
+      "sha256": "fc71aa21d22b0aecea8106fd2a830a44391586582eefdce33954aa6daadd3f56"
+    },
+    {
+      "bytes": 14746,
+      "path": "producer/THEOREM.md",
+      "sha256": "84d3eb17c542173b6c887ca90f2b138e92827ec20b9cadddd4175da1dce8aca7"
+    },
+    {
+      "bytes": 2735,
+      "path": "producer/VALIDATION.md",
+      "sha256": "01f7e35979972f73ba0da7389c6cd0488e0465a304e22e2684f4c399883a6259"
+    },
+    {
+      "bytes": 10131,
+      "path": "producer/check.py",
+      "sha256": "cc77c9cb69b4870b11fa7bd1243b37dc11f74301a09043bb9dd8090c166e8201"
+    },
+    {
+      "bytes": 2431,
+      "path": "producer/hostile-results.json",
+      "sha256": "b0c48c9293161ebb090e5ea4139c7c3f0f07e7488060a894fbb3245623d9cdd6"
+    },
+    {
+      "bytes": 2668,
+      "path": "producer/hostiles.py",
+      "sha256": "6fe04ff4bc0b57ef0f5b66064a042a4e1235b6f433c41d56f986195c37ce9bec"
+    },
+    {
+      "bytes": 13750,
+      "path": "producer/inherited/nonregular-audit.md",
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    },
+    {
+      "bytes": 12782,
+      "path": "producer/normal.json",
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "bytes": 12782,
+      "path": "producer/optimized.json",
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "bytes": 1686,
+      "path": "producer/replay.py",
+      "sha256": "ed798a8994095f5cc3a1b4cbb28f6dc153c6132de2d92dacb1f0ee91fba87c9a"
+    },
+    {
+      "bytes": 17141,
+      "path": "producer/support.py",
+      "sha256": "a1d1cced1fc77a15ca1f899a1ac1212da740e1556195f921277cd5bafee90b8a"
+    },
+    {
+      "bytes": 723,
+      "path": "producer/verify_manifest.py",
+      "sha256": "0df1c88100718f3666f32ff57166ea6aa84a5177bc5496ce81442c6ce59fa47c"
+    },
+    {
+      "bytes": 3588,
+      "path": "replay.py",
+      "sha256": "543e08d2913d76a5c87d1369341acc8258601bb47d74a10eac164afc37537693"
+    },
+    {
+      "bytes": 870,
+      "path": "representatives-optimized.txt",
+      "sha256": "5894f121b79995ffd7e609895892cd6b0df0813c505c5dde7e7c4ba3310c0358"
+    },
+    {
+      "bytes": 870,
+      "path": "representatives.txt",
+      "sha256": "5894f121b79995ffd7e609895892cd6b0df0813c505c5dde7e7c4ba3310c0358"
+    },
+    {
+      "bytes": 11878,
+      "path": "sources/correction-audit-manifest.json",
+      "sha256": "7c25ba56bb4a07b61f23670bc1e362aa7a578e9c78c13c4221c2313da1543d03"
+    },
+    {
+      "bytes": 9668,
+      "path": "sources/correction-independent.cpp",
+      "sha256": "a3c8cd0ab2ea048a1da87b4249063b9d7d4014291c54f6da8936347227063c5d"
+    },
+    {
+      "bytes": 8026,
+      "path": "sources/correction-producer-manifest.json",
+      "sha256": "0462baf160610115c8b2436c2c57cce1964d0439ce49e86b9b43ce00f2bda3f2"
+    },
+    {
+      "bytes": 814100,
+      "path": "sources/parents-ten.txt",
+      "sha256": "ef22a13423ecf41c90e0d01e3f04bd1a42e173bb519abcad7698fb4aa3979937"
+    },
+    {
+      "bytes": 1307539,
+      "path": "sources/states.tsv",
+      "sha256": "d4457eba3860a16f6d2649b5b0c6a80aaea5069b130d68838e8d79cab5be285b"
+    },
+    {
+      "bytes": 2880,
+      "path": "verify_audit.py",
+      "sha256": "d4c3ec8cfd33f9acc70d7a3d1a0b2a0fdc3dea03c00211cac6dcee06ba9dbddb"
+    }
+  ],
+  "format": 1
+}

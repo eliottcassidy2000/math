@@ -1,0 +1,95 @@
+{
+  "hostiles": [
+    {
+      "name": "omit_degree_two",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "all positive five decorated classes"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "all positive five decorated classes"
+        }
+      ]
+    },
+    {
+      "name": "include_regular_collapse",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "five decorated orbit error"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "five decorated orbit error"
+        }
+      ]
+    },
+    {
+      "name": "retain_coalesced_triangle_skeletons",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "triangle actual and collapsed strong skeleton counts"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "triangle actual and collapsed strong skeleton counts"
+        }
+      ]
+    },
+    {
+      "name": "omit_triangle_block_permutations",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "triangle skeleton free block orbit partition"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "triangle skeleton free block orbit partition"
+        }
+      ]
+    },
+    {
+      "name": "wrong_lower_SCC_coefficient",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "known total eleven positive distribution"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "known total eleven positive distribution"
+        }
+      ]
+    },
+    {
+      "name": "erase_actual_orbit_error",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "five decorated orbit error"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "five decorated orbit error"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

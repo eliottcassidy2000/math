@@ -1,0 +1,153 @@
+{
+  "five_cell_complete_checks": {
+    "1": [
+      [
+        [
+          0,
+          false
+        ],
+        2
+      ],
+      [
+        [
+          0,
+          true
+        ],
+        2
+      ],
+      [
+        [
+          40,
+          true
+        ],
+        4
+      ]
+    ],
+    "2": [
+      [
+        [
+          0,
+          false
+        ],
+        4
+      ],
+      [
+        [
+          0,
+          true
+        ],
+        4
+      ],
+      [
+        [
+          40,
+          false
+        ],
+        60
+      ],
+      [
+        [
+          40,
+          true
+        ],
+        20
+      ]
+    ]
+  },
+  "merged_error_sum": 3234,
+  "merged_positive_histogram": [
+    [
+      14,
+      6
+    ],
+    [
+      18,
+      23
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      40,
+      54
+    ],
+    [
+      72,
+      7
+    ]
+  ],
+  "merged_positive_nodes": 92,
+  "merged_raw_second_moment": 133908,
+  "ordinary_error_sum": 5508,
+  "ordinary_positive_classes": 160,
+  "ordinary_positive_histogram": [
+    [
+      14,
+      12
+    ],
+    [
+      18,
+      46
+    ],
+    [
+      36,
+      4
+    ],
+    [
+      40,
+      84
+    ],
+    [
+      72,
+      14
+    ]
+  ],
+  "scope": "complete positive-error order-ten slice, not all order-ten tournaments or metagraph edges",
+  "self_converse_by_sector": [
+    [
+      [
+        "strong_five",
+        1
+      ],
+      4
+    ],
+    [
+      [
+        "strong_five",
+        2
+      ],
+      20
+    ]
+  ],
+  "self_converse_error_sum": 960,
+  "self_converse_positive_classes": 24,
+  "self_converse_positive_histogram": [
+    [
+      40,
+      24
+    ]
+  ],
+  "small_labelled_anti_maps_checked": {
+    "1": 1,
+    "2": 2,
+    "3": 12,
+    "4": 48,
+    "5": 960
+  },
+  "status": "PASS",
+  "strong_positive_histogram": [
+    [
+      14,
+      4
+    ],
+    [
+      18,
+      32
+    ],
+    [
+      40,
+      84
+    ]
+  ]
+}

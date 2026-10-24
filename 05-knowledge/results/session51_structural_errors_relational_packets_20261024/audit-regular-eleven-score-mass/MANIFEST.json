@@ -1,0 +1,215 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 9388,
+      "sha256": "e524d8bcd3dc72fe2457cee8bb9505e8dcb8173c8c0312731de99d29d3c57e36"
+    },
+    {
+      "path": "README.md",
+      "bytes": 921,
+      "sha256": "625a235bf32eb4f0b96bf9931044aef6798c190a10b62805baa8af76b55d925e"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 372,
+      "sha256": "634ecb663662149702c2af79ec2b2d67d00842167069dd5195bd099037479b2d"
+    },
+    {
+      "path": "crosscheck-normal.json",
+      "bytes": 569,
+      "sha256": "aca36457d743d857b612a9ddff1ea8e5198105fc3eec3aae3d1118e63e21a599"
+    },
+    {
+      "path": "crosscheck-optimized.json",
+      "bytes": 569,
+      "sha256": "aca36457d743d857b612a9ddff1ea8e5198105fc3eec3aae3d1118e63e21a599"
+    },
+    {
+      "path": "crosscheck.py",
+      "bytes": 3514,
+      "sha256": "61c7475b114972b05a2823d998b5d2f58571142ae9a3fdb0eea9cc3db8d704ed"
+    },
+    {
+      "path": "hostile-normal.json",
+      "bytes": 2084,
+      "sha256": "9573ace2aa263b7e2b9475860ac1bc0a639a6f29896014159ad63ef9215569a5"
+    },
+    {
+      "path": "hostile-optimized.json",
+      "bytes": 2084,
+      "sha256": "9573ace2aa263b7e2b9475860ac1bc0a639a6f29896014159ad63ef9215569a5"
+    },
+    {
+      "path": "hostiles.py",
+      "bytes": 5154,
+      "sha256": "05696feae7d35d80c49b5c7cde93619378a47fdaa64c16e253c8834b040a1b44"
+    },
+    {
+      "path": "independent.py",
+      "bytes": 11684,
+      "sha256": "7343afd738f5cf8f94b97db7c0245ffd479feeebc237cc024f6a1b2e351637df"
+    },
+    {
+      "path": "nonrigid/MANIFEST.json",
+      "bytes": 1972,
+      "sha256": "3fd0d159b9e356fb5d86906e657e9ef992061408f2391419ceaf5d248813acaa"
+    },
+    {
+      "path": "nonrigid/README.md",
+      "bytes": 1171,
+      "sha256": "0901278c1f5afee707137afacc2645e642bf72811bc8aedecfc1d8a6ca591da3"
+    },
+    {
+      "path": "nonrigid/SOURCE_PINS.json",
+      "bytes": 431,
+      "sha256": "fc71aa21d22b0aecea8106fd2a830a44391586582eefdce33954aa6daadd3f56"
+    },
+    {
+      "path": "nonrigid/THEOREM.md",
+      "bytes": 14746,
+      "sha256": "84d3eb17c542173b6c887ca90f2b138e92827ec20b9cadddd4175da1dce8aca7"
+    },
+    {
+      "path": "nonrigid/VALIDATION.md",
+      "bytes": 2735,
+      "sha256": "01f7e35979972f73ba0da7389c6cd0488e0465a304e22e2684f4c399883a6259"
+    },
+    {
+      "path": "nonrigid/check.py",
+      "bytes": 10131,
+      "sha256": "cc77c9cb69b4870b11fa7bd1243b37dc11f74301a09043bb9dd8090c166e8201"
+    },
+    {
+      "path": "nonrigid/hostile-results.json",
+      "bytes": 2431,
+      "sha256": "b0c48c9293161ebb090e5ea4139c7c3f0f07e7488060a894fbb3245623d9cdd6"
+    },
+    {
+      "path": "nonrigid/hostiles.py",
+      "bytes": 2668,
+      "sha256": "6fe04ff4bc0b57ef0f5b66064a042a4e1235b6f433c41d56f986195c37ce9bec"
+    },
+    {
+      "path": "nonrigid/inherited/nonregular-audit.md",
+      "bytes": 13750,
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    },
+    {
+      "path": "nonrigid/normal.json",
+      "bytes": 12782,
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "path": "nonrigid/optimized.json",
+      "bytes": 12782,
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "path": "nonrigid/replay.py",
+      "bytes": 1686,
+      "sha256": "ed798a8994095f5cc3a1b4cbb28f6dc153c6132de2d92dacb1f0ee91fba87c9a"
+    },
+    {
+      "path": "nonrigid/support.py",
+      "bytes": 17141,
+      "sha256": "a1d1cced1fc77a15ca1f899a1ac1212da740e1556195f921277cd5bafee90b8a"
+    },
+    {
+      "path": "nonrigid/verify_manifest.py",
+      "bytes": 723,
+      "sha256": "0df1c88100718f3666f32ff57166ea6aa84a5177bc5496ce81442c6ce59fa47c"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 3062,
+      "sha256": "85afc17f007f45d35ca2b7c255f434665a48aae99abd900199a3b56bb5ec678b"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 3062,
+      "sha256": "85afc17f007f45d35ca2b7c255f434665a48aae99abd900199a3b56bb5ec678b"
+    },
+    {
+      "path": "producer/MANIFEST.json",
+      "bytes": 1999,
+      "sha256": "42f8d34f2791b513c4ef906f836c6b9bd8a411c7db91c2d3c4e385715f49e6d9"
+    },
+    {
+      "path": "producer/README.md",
+      "bytes": 906,
+      "sha256": "6ff8de8ebb0102eee55e3692ae3b0b97953731ab6476054f6828f9239608944e"
+    },
+    {
+      "path": "producer/SOURCE_PINS.json",
+      "bytes": 779,
+      "sha256": "dd3247b225dc9bc7c6ad965e7abe03ed2e4c35f2ec16da4cc9d0d8465ec68a80"
+    },
+    {
+      "path": "producer/THEOREM.md",
+      "bytes": 8060,
+      "sha256": "295ac45c9fb9c3690991902546b1f3493d184c6dca7a7cc0265c9aec34bd3490"
+    },
+    {
+      "path": "producer/check.py",
+      "bytes": 4965,
+      "sha256": "6f2f52cf6c92b30a13935cedae0403aefbbc3ff8bf3a952dc1d3067ab6a561e2"
+    },
+    {
+      "path": "producer/hostile-results.json",
+      "bytes": 2673,
+      "sha256": "3684c3aff19873ed4b67e5cdd3e36e1bd867f3ceb2edbb4e4624014b875bff35"
+    },
+    {
+      "path": "producer/hostiles.py",
+      "bytes": 2663,
+      "sha256": "1e19543fe277a48bfe5e397e8ae551323913d232cd360b14b7cfa6f17999fe1e"
+    },
+    {
+      "path": "producer/normal.json",
+      "bytes": 1860,
+      "sha256": "2b5d1ac0e8c261dd51fa019f726368e4830b2bfe9f582eb920d11ba67a84e750"
+    },
+    {
+      "path": "producer/optimized.json",
+      "bytes": 1860,
+      "sha256": "2b5d1ac0e8c261dd51fa019f726368e4830b2bfe9f582eb920d11ba67a84e750"
+    },
+    {
+      "path": "producer/replay.py",
+      "bytes": 1692,
+      "sha256": "3357b250c7c9a70953d2c0fd02a99b27bda5d469322495d42ec19c9eb9fbd52f"
+    },
+    {
+      "path": "producer/sources/nonregular-audit.md",
+      "bytes": 13750,
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    },
+    {
+      "path": "producer/sources/nonrigid-receipt.json",
+      "bytes": 12782,
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "path": "producer/sources/nonrigid-theorem.md",
+      "bytes": 14746,
+      "sha256": "84d3eb17c542173b6c887ca90f2b138e92827ec20b9cadddd4175da1dce8aca7"
+    },
+    {
+      "path": "producer/verify_manifest.py",
+      "bytes": 723,
+      "sha256": "0df1c88100718f3666f32ff57166ea6aa84a5177bc5496ce81442c6ce59fa47c"
+    },
+    {
+      "path": "replay.py",
+      "bytes": 3920,
+      "sha256": "e45824394860fe7ae18f4f4e31d2130bee37dcc964426be59df9fa37f0698ce3"
+    },
+    {
+      "path": "verify_audit.py",
+      "bytes": 1317,
+      "sha256": "371fda533371a85b5788683a3a111e7d9d5db7cf891baee1367f4ee6cb7c19a3"
+    }
+  ]
+}

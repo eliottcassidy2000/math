@@ -1,0 +1,53 @@
+{
+  "replays": [
+    {
+      "byte_identical": true,
+      "mode": "O2",
+      "order": 7,
+      "seconds": 0.003,
+      "stderr": "order=7 eligible parents=6 raw masks=42 pointed=22 normalized parents=5\n",
+      "stdout": "regular order=7 M=5 trace=21 classes=3 error=14 mass=2640\n"
+    },
+    {
+      "byte_identical": true,
+      "mode": "O2",
+      "order": 9,
+      "seconds": 0.0084,
+      "stderr": "order=9 eligible parents=87 raw masks=836 pointed=652 normalized parents=85\n",
+      "stdout": "regular order=9 M=85 trace=135 classes=15 error=630 mass=3230080\n"
+    },
+    {
+      "byte_identical": true,
+      "mode": "O2",
+      "order": 11,
+      "seconds": 1.4312,
+      "stderr": "order=11 eligible parents=10252 raw masks=135418 pointed=133130 normalized parents=13333\n",
+      "stdout": "regular order=11 M=13333 trace=13453 classes=1223 error=133210 mass=48251508480\n"
+    },
+    {
+      "byte_identical": true,
+      "mode": "O3",
+      "order": 7,
+      "seconds": 0.0032,
+      "stderr": "order=7 eligible parents=6 raw masks=42 pointed=22 normalized parents=5\n",
+      "stdout": "regular order=7 M=5 trace=21 classes=3 error=14 mass=2640\n"
+    },
+    {
+      "byte_identical": true,
+      "mode": "O3",
+      "order": 9,
+      "seconds": 0.0066,
+      "stderr": "order=9 eligible parents=87 raw masks=836 pointed=652 normalized parents=85\n",
+      "stdout": "regular order=9 M=85 trace=135 classes=15 error=630 mass=3230080\n"
+    },
+    {
+      "byte_identical": true,
+      "mode": "O3",
+      "order": 11,
+      "seconds": 2.0973,
+      "stderr": "order=11 eligible parents=10252 raw masks=135418 pointed=133130 normalized parents=13333\n",
+      "stdout": "regular order=11 M=13333 trace=13453 classes=1223 error=133210 mass=48251508480\n"
+    }
+  ],
+  "status": "PASS"
+}

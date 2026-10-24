@@ -1,0 +1,64 @@
+{
+  "all_profiles_factor": 252,
+  "almost_regular10_classes": 13333,
+  "checks": {
+    "almost regular fixed profile independent count": 1,
+    "eighteen inherited nonrigid representatives without duplicate control": 1,
+    "fixed root deletion labelled score profile identity": 1,
+    "full regular defect histogram arithmetic": 1,
+    "group orders divide eleven factorial": 1,
+    "grouped score count matches literal subset recurrence": 6,
+    "inherited SCC padding": 1,
+    "inherited source hash": 3,
+    "nonrigid group and orbit typing": 1,
+    "nonrigid pointed and defect inputs": 1,
+    "pointed and error divisibility guards": 1,
+    "regular error from pointed class difference": 1,
+    "remaining regular labelled mass is rigid classes": 1,
+    "small independently certified regular controls": 1,
+    "structural regular correction agrees with mass route": 1
+  },
+  "fixed_profile_almost_regular10_labelled_count": 191474240,
+  "grouped_memo_states": 84,
+  "labelled_regular11": 48251508480,
+  "labelled_regular_counts": {
+    "1": 1,
+    "3": 2,
+    "5": 24,
+    "7": 2640,
+    "9": 3230080,
+    "11": 48251508480
+  },
+  "literal_subset_memo_states": 95,
+  "nonrigid_regular11_labelled_mass": 151764480,
+  "regular11_classes": 1223,
+  "regular11_error": 133210,
+  "regular11_error_histogram": [
+    [
+      0,
+      4
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      88,
+      2
+    ],
+    [
+      110,
+      1205
+    ]
+  ],
+  "rigid_regular11_classes": 1205,
+  "scope": "Atlas-free regular-eleven count from a complete inherited nonrigid classification and labelled score counting. No almost-regular10 or regular11 atlas is read. U11 and unrestricted a11 are not computed.",
+  "status": "PASS",
+  "strong11_error": 142376,
+  "total11_error": 152690,
+  "unrestricted_order11_count_formula": "(U11-152690)/11"
+}

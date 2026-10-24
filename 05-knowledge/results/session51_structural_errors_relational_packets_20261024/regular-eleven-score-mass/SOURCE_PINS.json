@@ -1,0 +1,20 @@
+{
+  "classification_manifest_sha256": "3fd0d159b9e356fb5d86906e657e9ef992061408f2391419ceaf5d248813acaa",
+  "sources": [
+    {
+      "source_path": "session51-regular-eleven-nonrigid/normal.json",
+      "archived_path": "sources/nonrigid-receipt.json",
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "source_path": "session51-regular-eleven-nonrigid/THEOREM.md",
+      "archived_path": "sources/nonrigid-theorem.md",
+      "sha256": "84d3eb17c542173b6c887ca90f2b138e92827ec20b9cadddd4175da1dce8aca7"
+    },
+    {
+      "source_path": "session51-audit-order-eleven/AUDIT.md",
+      "archived_path": "sources/nonregular-audit.md",
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "controls": [
+    {
+      "diagnostic": "PASS parent=5 regular=3 trace=21 error=14 mass=2640",
+      "expected_acceptance": true,
+      "name": "pristine-seven",
+      "returncode": 0
+    },
+    {
+      "diagnostic": "PASS parent=5 regular=3 trace=21 error=14 mass=2640",
+      "expected_acceptance": true,
+      "name": "independently-relabelled-seven",
+      "returncode": 0
+    },
+    {
+      "diagnostic": "complete parent permutation action equality",
+      "expected_acceptance": false,
+      "name": "closed-proper-subgroup-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "pairwise nonisomorphic parents",
+      "expected_acceptance": false,
+      "name": "nonliteral-isomorphic-duplicate-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "action preserves arcs",
+      "expected_acceptance": false,
+      "name": "one-sided-arc-toggle-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "every eligible source extension found independently",
+      "expected_acceptance": false,
+      "name": "parent-deletion-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "every reroot destination and multiplicity matches",
+      "expected_acceptance": false,
+      "name": "reroot-multiplicity-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "every converse matches",
+      "expected_acceptance": false,
+      "name": "converse-destination-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "component numbering agrees",
+      "expected_acceptance": false,
+      "name": "component-id-rejected",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "state table complete",
+      "expected_acceptance": false,
+      "name": "state-row-deletion-rejected",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}

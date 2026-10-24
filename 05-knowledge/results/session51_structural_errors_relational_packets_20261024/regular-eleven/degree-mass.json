@@ -1,0 +1,42 @@
+{
+  "cache": "CacheInfo(hits=164, misses=92, maxsize=None, currsize=92)",
+  "method": "independent residual-degree dynamic programming; equal-degree subset multiplicities",
+  "results": [
+    {
+      "almost_regular_order": 2,
+      "fixed_assignment_almost_regular_count": 1,
+      "labelled_almost_regular_count": 2,
+      "labelled_regular_count": 2,
+      "regular_order": 3
+    },
+    {
+      "almost_regular_order": 4,
+      "fixed_assignment_almost_regular_count": 4,
+      "labelled_almost_regular_count": 24,
+      "labelled_regular_count": 24,
+      "regular_order": 5
+    },
+    {
+      "almost_regular_order": 6,
+      "fixed_assignment_almost_regular_count": 132,
+      "labelled_almost_regular_count": 2640,
+      "labelled_regular_count": 2640,
+      "regular_order": 7
+    },
+    {
+      "almost_regular_order": 8,
+      "fixed_assignment_almost_regular_count": 46144,
+      "labelled_almost_regular_count": 3230080,
+      "labelled_regular_count": 3230080,
+      "regular_order": 9
+    },
+    {
+      "almost_regular_order": 10,
+      "fixed_assignment_almost_regular_count": 191474240,
+      "labelled_almost_regular_count": 48251508480,
+      "labelled_regular_count": 48251508480,
+      "regular_order": 11
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+{
+  "archived_source_pins": "sources/pins.json",
+  "sources": [
+    {"archived_path": "sources/order-ten-audit-receipt.json", "original_workspace_path": "session51-audit-order-ten/receipt.json", "role": "complete strong-ten representatives, with errors"},
+    {"archived_path": "sources/order-ten-error-spectrum.json", "original_workspace_path": "session51-audit-order-ten/distribution-normal.json", "role": "independent ordinary full-ten error histogram"},
+    {"archived_path": "sources/order-ten-theorem.md", "original_workspace_path": "session51-order-ten/THEOREM.md", "role": "exhaustive strong-ten structural classification"},
+    {"archived_path": "sources/order-nine-theorem.md", "original_workspace_path": "session51-order-ten/sources/session50-order-nine-theorem.md", "role": "strong-nine exceptional sectors and inherited completeness"},
+    {"archived_path": "sources/regular-nine-receipt.json", "original_workspace_path": "session51-order-ten/sources/session50-regular-nine-receipt.json", "role": "complete almost-regular-eight parents and regular-nine reroot components"},
+    {"archived_path": "sources/regular-block-counts.md", "original_workspace_path": "session51-cyclic-cell-decoder/sources/2-REGULAR_BLOCK_COUNTS.md", "role": "Session40 all-prime regular-block converse formulas"},
+    {"archived_path": "sources/THM-647-anti-redei-theorem.md", "original_workspace_path": "math/01-canon/theorems/THM-647-anti-redei-theorem.md", "role": "proved anti-involution mechanism and anti-palindromic existence"},
+    {"archived_path": "sources/THM-644-gridsym-fiber-law-and-anti-redei.md", "original_workspace_path": "math/01-canon/theorems/THM-644-gridsym-fiber-law-and-anti-redei.md", "role": "proved part(a) only: positional anti-map equals grid symmetry"}
+  ]
+}

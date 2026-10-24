@@ -1,0 +1,26 @@
+{
+  "class_bijection": [
+    15,
+    17,
+    16,
+    5,
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    14,
+    13
+  ],
+  "classes": 18,
+  "independent_target_count_input": false,
+  "pointing_deficit": 120,
+  "status": "PASS"
+}

@@ -1,0 +1,32 @@
+{
+  "independently_matching_closure_fields": 6,
+  "inherited_strong_error": 142376,
+  "inherited_total_error": 152690,
+  "labelled_orders_checked": 6,
+  "no_full_parent_or_target_atlas_used": true,
+  "producer_manifest_sha256": "42f8d34f2791b513c4ef906f836c6b9bd8a411c7db91c2d3c4e385715f49e6d9",
+  "regular_error_histogram": [
+    [
+      0,
+      4
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      88,
+      2
+    ],
+    [
+      110,
+      1205
+    ]
+  ],
+  "status": "PASS",
+  "unrestricted_order11_count_formula": "(U11-152690)/11"
+}

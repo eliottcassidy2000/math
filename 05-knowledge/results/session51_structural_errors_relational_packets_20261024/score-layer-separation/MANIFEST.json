@@ -1,0 +1,53 @@
+{
+  "status": "FROZEN candidate for independent review",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b2f81c18e4e8ea3c150118b4718f75f3ac5ebaf45e8f32b8979ef13c5d20ba93"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "101a2e878b86bcd03bca4a115c2023ef8d499795e52d889e4a37c7e1d47625ca"
+    },
+    {
+      "path": "THEOREM.md",
+      "sha256": "0c6b1ef1464bffe4f63ecec364396184d8e8698e2c4a75de0a945351d715155e"
+    },
+    {
+      "path": "check.py",
+      "sha256": "0058a91266e7455a6e0cf4806a751e5d695c63af342dd80f6d29ba8fc8ed0598"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2"
+    },
+    {
+      "path": "normal.out",
+      "sha256": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2"
+    },
+    {
+      "path": "optimized.out",
+      "sha256": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2"
+    },
+    {
+      "path": "relocation.out",
+      "sha256": "2c4cee76544c58be624597b9fe240d13d61e91478af3fa873808e818603c88f5"
+    },
+    {
+      "path": "sources/PATH_TRANSPORT_AND_FOREST_RULE.md",
+      "sha256": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6"
+    },
+    {
+      "path": "sources/THM-4731-self-line-leg-law.md",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "44713a9117b491793e6e4c02c2ca7a73fedd6708d57adc483efba1407f819d92"
+    }
+  ]
+}

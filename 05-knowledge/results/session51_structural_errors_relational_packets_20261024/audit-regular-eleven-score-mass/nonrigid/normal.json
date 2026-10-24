@@ -1,0 +1,793 @@
+{
+  "checks": {
+    "all eighteen nonrigid ordinary classes distinct": 153,
+    "all odd full orbit count possibilities": 1,
+    "all twelve odd orbit partitions by multiplicity": 1,
+    "canonicalization input at most eight": 64,
+    "circulant multiplier orbit partition": 4,
+    "complete nonrigid regular eleven defect spectrum": 1,
+    "degree three line matrix orbit size five": 8,
+    "degree three matrix regular margins": 8,
+    "degree three presentation stabilizer five": 8,
+    "eight q3 candidate ordinary classes distinct": 28,
+    "eighteen nonrigid regular eleven classes": 1,
+    "five genuine q7 classes": 1,
+    "five orbit six fixed extremal degree possibilities": 1,
+    "five q7 candidate ordinary classes distinct": 10,
+    "five three and three fixed degree parity obstruction": 1,
+    "five three three coprime crossing obstruction": 1,
+    "fixed C5 attachment rotation orbit": 3,
+    "forty line invariant degree three matrices": 1,
+    "four multiplier orbits remain distinct under full isomorphism": 6,
+    "four ordinary order four tournament types": 1,
+    "four vertex transitive regular eleven classes": 1,
+    "full automorphism orbits partition": 19,
+    "hidden q3 control equals unique transitive Aut55 class": 1,
+    "high block only source cycle or strong four": 1,
+    "loopless bounded rows": 19,
+    "low block only cycle sink or strong four": 1,
+    "nine orbit and two fixed degree obstruction": 1,
+    "no six vertex tournament has only source or sink vertices": 1,
+    "nonrigid pointed mass78 and error660": 1,
+    "nonrigid unpointing deficit120": 1,
+    "odd full automorphism orbit sizes": 19,
+    "q7 attachment subset orbit count": 2,
+    "regular eleven actual defect": 19,
+    "regular eleven literal degree check": 19,
+    "regular eleven strong check": 19,
+    "seven genuine q3 and one transitive hidden symmetry": 1,
+    "seven orbit plus four fixed cannot be regular": 1,
+    "seven three fixed degree obstruction": 1,
+    "source pin": 2,
+    "strong four rigid": 1,
+    "thirty two cyclic degree five connection sets": 1,
+    "three triples and two fixed residue obstruction": 1,
+    "tournament pairs": 19,
+    "transfer constants from pinned nonregular audit": 1,
+    "two genuine q9 classes": 1,
+    "two q9 candidate ordinary classes distinct": 1,
+    "two q9 crossing matchings": 1,
+    "unique strong four internal type": 1
+  },
+  "formulas": {
+    "P10_definition": "ordinary almost-regular ten-vertex classes with degrees4^5,5^5",
+    "regular11_class_count": "(P10+120)/11",
+    "regular11_error": "10*P10-120",
+    "rigid_regular11_class_count": "(P10-78)/11",
+    "strong11_error": "10*P10+9046",
+    "total11_class_count": "(U11-10*P10-19360)/11",
+    "total11_error": "10*P10+19360"
+  },
+  "nonrigid_classes": 18,
+  "nonrigid_error": 660,
+  "nonrigid_error_histogram": [
+    [
+      0,
+      4
+    ],
+    [
+      22,
+      7
+    ],
+    [
+      66,
+      5
+    ],
+    [
+      88,
+      2
+    ]
+  ],
+  "nonrigid_pointed_states": 78,
+  "nonrigid_unpointing_deficit": 120,
+  "orbit_partition_restrictions": {
+    "odd_orbit_partitions": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        7
+      ],
+      [
+        1,
+        1,
+        1,
+        3,
+        5
+      ],
+      [
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      [
+        1,
+        1,
+        9
+      ],
+      [
+        1,
+        3,
+        7
+      ],
+      [
+        1,
+        5,
+        5
+      ],
+      [
+        3,
+        3,
+        5
+      ],
+      [
+        11
+      ]
+    ],
+    "q3_survivor": [
+      1,
+      5,
+      5
+    ],
+    "q5_survivors": [],
+    "q7_survivor": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      3,
+      3
+    ],
+    "q9_survivor": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3
+    ]
+  },
+  "q1_classes": [
+    {
+      "connection_set": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "error": 0,
+      "full_automorphism_order": 11,
+      "multiplier_orbit_size": 10,
+      "rows": [
+        62,
+        124,
+        248,
+        496,
+        992,
+        1984,
+        1921,
+        1795,
+        1543,
+        1039,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        11
+      ]
+    },
+    {
+      "connection_set": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "error": 0,
+      "full_automorphism_order": 11,
+      "multiplier_orbit_size": 10,
+      "rows": [
+        94,
+        188,
+        376,
+        752,
+        1504,
+        961,
+        1922,
+        1797,
+        1547,
+        1047,
+        47
+      ],
+      "vertex_orbit_sizes": [
+        11
+      ]
+    },
+    {
+      "connection_set": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "error": 0,
+      "full_automorphism_order": 11,
+      "multiplier_orbit_size": 10,
+      "rows": [
+        174,
+        348,
+        696,
+        1392,
+        737,
+        1474,
+        901,
+        1802,
+        1557,
+        1067,
+        87
+      ],
+      "vertex_orbit_sizes": [
+        11
+      ]
+    },
+    {
+      "connection_set": [
+        1,
+        3,
+        4,
+        5,
+        9
+      ],
+      "error": 0,
+      "full_automorphism_order": 55,
+      "multiplier_orbit_size": 2,
+      "rows": [
+        570,
+        1140,
+        233,
+        466,
+        932,
+        1864,
+        1681,
+        1315,
+        583,
+        1166,
+        285
+      ],
+      "vertex_orbit_sizes": [
+        11
+      ]
+    }
+  ],
+  "q3_candidates": [
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        7,
+        14,
+        28,
+        25,
+        19
+      ],
+      "rows": [
+        230,
+        460,
+        920,
+        817,
+        611,
+        1222,
+        1420,
+        1816,
+        1585,
+        1123,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        7,
+        19,
+        25,
+        28,
+        14
+      ],
+      "rows": [
+        230,
+        620,
+        824,
+        913,
+        451,
+        1240,
+        1420,
+        1798,
+        1571,
+        1137,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        7,
+        25,
+        14,
+        19,
+        28
+      ],
+      "rows": [
+        230,
+        812,
+        472,
+        625,
+        899,
+        1236,
+        1426,
+        1802,
+        1577,
+        1125,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        7,
+        28,
+        19,
+        14,
+        25
+      ],
+      "rows": [
+        230,
+        908,
+        632,
+        465,
+        803,
+        1226,
+        1426,
+        1812,
+        1573,
+        1129,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        11,
+        13,
+        21,
+        22,
+        26
+      ],
+      "rows": [
+        358,
+        428,
+        696,
+        721,
+        835,
+        1240,
+        1414,
+        1809,
+        1580,
+        1123,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 0,
+      "full_automorphism_order": 55,
+      "matrix": [
+        11,
+        21,
+        26,
+        13,
+        22
+      ],
+      "rows": [
+        358,
+        684,
+        856,
+        433,
+        707,
+        1236,
+        1418,
+        1797,
+        1586,
+        1129,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        11
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        11,
+        22,
+        13,
+        26,
+        21
+      ],
+      "rows": [
+        358,
+        716,
+        440,
+        849,
+        675,
+        1226,
+        1428,
+        1801,
+        1586,
+        1125,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    },
+    {
+      "error": 22,
+      "full_automorphism_order": 5,
+      "matrix": [
+        11,
+        26,
+        22,
+        21,
+        13
+      ],
+      "rows": [
+        358,
+        844,
+        728,
+        689,
+        419,
+        1222,
+        1432,
+        1795,
+        1580,
+        1137,
+        31
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        5,
+        5
+      ]
+    }
+  ],
+  "q7_classes": [
+    {
+      "attachment_subset": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "crossing_degree": 0,
+      "error": 66,
+      "full_automorphism_order": 9,
+      "matching_sign": null,
+      "rows": [
+        962,
+        964,
+        961,
+        1047,
+        1063,
+        1039,
+        440,
+        824,
+        1592,
+        1144,
+        199
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "attachment_subset": [
+        0,
+        1,
+        2
+      ],
+      "crossing_degree": 1,
+      "error": 66,
+      "full_automorphism_order": 3,
+      "matching_sign": 1,
+      "rows": [
+        458,
+        468,
+        481,
+        1558,
+        1573,
+        1547,
+        440,
+        824,
+        1592,
+        1095,
+        199
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "attachment_subset": [
+        0,
+        1,
+        2
+      ],
+      "crossing_degree": 1,
+      "error": 66,
+      "full_automorphism_order": 3,
+      "matching_sign": -1,
+      "rows": [
+        458,
+        484,
+        465,
+        1558,
+        1571,
+        1549,
+        440,
+        824,
+        1592,
+        1095,
+        199
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "attachment_subset": [
+        0,
+        1,
+        3
+      ],
+      "crossing_degree": 1,
+      "error": 66,
+      "full_automorphism_order": 3,
+      "matching_sign": 1,
+      "rows": [
+        714,
+        724,
+        737,
+        1302,
+        1317,
+        1291,
+        440,
+        824,
+        1543,
+        1144,
+        199
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "attachment_subset": [
+        0,
+        1,
+        3
+      ],
+      "crossing_degree": 1,
+      "error": 66,
+      "full_automorphism_order": 3,
+      "matching_sign": -1,
+      "rows": [
+        714,
+        740,
+        721,
+        1302,
+        1315,
+        1293,
+        440,
+        824,
+        1543,
+        1144,
+        199
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ]
+    }
+  ],
+  "q9_classes": [
+    {
+      "crossing_matching": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "error": 88,
+      "full_automorphism_order": 3,
+      "rows": [
+        1922,
+        1924,
+        1921,
+        551,
+        1039,
+        87,
+        31,
+        632,
+        248,
+        1392,
+        488
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "crossing_matching": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "error": 88,
+      "full_automorphism_order": 3,
+      "rows": [
+        1922,
+        1924,
+        1921,
+        1063,
+        527,
+        87,
+        31,
+        632,
+        248,
+        1384,
+        496
+      ],
+      "vertex_orbit_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ]
+    }
+  ],
+  "scope": "Exhaustive nonrigid regular eleven classification from full automorphism orbit partitions. No full regular11 census; rigid class count and almost-regular10 parent count remain uncomputed here.",
+  "status": "PASS"
+}

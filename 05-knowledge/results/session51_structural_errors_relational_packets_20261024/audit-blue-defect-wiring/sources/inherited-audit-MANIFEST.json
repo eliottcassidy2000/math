@@ -1,0 +1,30 @@
+{
+  "files": {
+    "FINAL_RECEIPT.json": "f729f7a87fabcfd75febd2deebafb04e81f9ea91bcb4fb99e7273095a92bd5cf",
+    "README.md": "34144c9fa4bbdb1c888dfa46572f09e57899a9ba3f77482f91d17e527b47a5d6",
+    "REPORT.md": "a3b30eda1fc71883aa4202e8bc79be4c7b4b30202426c99d1b6515de7ecbc342",
+    "SOURCE_PINS.json": "d754d748a23581da9d745d7cfc2b25e2a88f6324f24e266d7e78f79762c61ec9",
+    "candidate-validation.json": "e63d35c9c119c0374e7941c2db9e6875154fc80b4c7ecfc866c29fd6cee2ebfb",
+    "independent.py": "e35576bed8576677e9ce512bcf5524f7abc385bf6e36d0f3c46379a432e1811a",
+    "normal.json": "ce0fd4e5db08623e222fbaa20c6d2e4c547fdb84180341d05d92c4ab6d65692e",
+    "optimized.json": "ce0fd4e5db08623e222fbaa20c6d2e4c547fdb84180341d05d92c4ab6d65692e",
+    "ports-normal.json": "f2fc69e79af1582967aeb537235fba6d310e76eb3676f41f155f6199daafefe1",
+    "ports-optimized.json": "f2fc69e79af1582967aeb537235fba6d310e76eb3676f41f155f6199daafefe1",
+    "ports_independent.py": "23557c18fb1d9fc608881beb0b4a4591f64d8a23b8bc69fde33cfd76067251f0",
+    "prime-normal.json": "ab1ddab5d6a9732cc12f68de8b252021b37d98ab69dacbf9816299ebfabcf11d",
+    "prime-optimized.json": "ab1ddab5d6a9732cc12f68de8b252021b37d98ab69dacbf9816299ebfabcf11d",
+    "prime_necklaces.py": "e7d3b8de09f768380e6adeec88ce74145ffd5ef6bac3f802568898e6dfd7c617",
+    "sources/THM-644-gridsym-fiber-law-and-anti-redei.md": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e",
+    "sources/THM-647-anti-redei-theorem.md": "30bd387fdda844a7fe3f9f346960e78fe748f03bd712326e7bfddd8c3e9757e6",
+    "sources/order-ten-audit-receipt.json": "fa5909e52fb09eb952cc402692c39f7d7eb9e6ac8f535da5c9946ce92a7f4189",
+    "sources/order-ten-error-spectrum.json": "1417ab8b979f38bad55d97d389e55bdbc482a7dce65685572095b0994182319e",
+    "sources/order-ten-theorem.md": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002",
+    "sources/regular-block-counts.md": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097",
+    "sources/regular-nine-receipt.json": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9",
+    "validate.py": "5a484669605459c37b97b537989a8c8ac2a877c869be85fedc897eb98d50b0e2",
+    "validate_candidate.py": "92c932eb73ca29feaeedad79646cc0a23e96b7d1ddec5550991e99bf1e627795",
+    "validation.json": "25a326c9f38f624672e8dbef597c1d9dfda8c424d1c07d7db9827871371d6d47",
+    "verify_manifest.py": "0401fdf9f4c76ac2fd667bf5ad9e01ac96203330d27430338999928685dd1121"
+  },
+  "status": "FROZEN"
+}

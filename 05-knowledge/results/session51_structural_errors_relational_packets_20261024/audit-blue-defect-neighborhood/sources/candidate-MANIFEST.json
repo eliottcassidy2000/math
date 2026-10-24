@@ -1,0 +1,57 @@
+{
+  "status": "FROZEN candidate for independent review",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "9aad70967ffa64a3cae057e52db125570a87f5ddb431adad861c383397c40a41"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "99399505f9dafe2240c0e35b3d655000fd4d6d7fc07a5ea24ff29c0863143a72"
+    },
+    {
+      "path": "THEOREM.md",
+      "sha256": "03de3068664539e3edc8022bbad0cc05c755b5087d0ca313173eebc70a4819fe"
+    },
+    {
+      "path": "check.py",
+      "sha256": "641fe89e4c8a0d76519af6a1af434675d6b5e4f0fe9e42f540b226ccf5054ec1"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "5a4b66e86bd3a4a641be8ad25e0b2a5fdabc1ed74d187a1764ce29964015d536"
+    },
+    {
+      "path": "normal.out",
+      "sha256": "2e2398037620b247e1795415277a989475b549429ec99bb9bb2d991f3dd9d23c"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "5a4b66e86bd3a4a641be8ad25e0b2a5fdabc1ed74d187a1764ce29964015d536"
+    },
+    {
+      "path": "optimized.out",
+      "sha256": "2e2398037620b247e1795415277a989475b549429ec99bb9bb2d991f3dd9d23c"
+    },
+    {
+      "path": "relocation.out",
+      "sha256": "2c4cee76544c58be624597b9fe240d13d61e91478af3fa873808e818603c88f5"
+    },
+    {
+      "path": "sources/wiring-MANIFEST.json",
+      "sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d"
+    },
+    {
+      "path": "sources/wiring-THEOREM.md",
+      "sha256": "0764f2a2d3c45751e2da0ee6c8db54a8974e2ee6fe7b0606753ed511867b8c93"
+    },
+    {
+      "path": "sources/wiring-receipt.json",
+      "sha256": "a222ede1374d68471e2d7da0fb909292dee1ab9426f48e8478acf1215f065a77"
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "44713a9117b491793e6e4c02c2ca7a73fedd6708d57adc483efba1407f819d92"
+    }
+  ]
+}

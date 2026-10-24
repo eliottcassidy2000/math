@@ -1,0 +1,54 @@
+{
+  "brute_controls": [
+    {
+      "distinct_labelled_degree_vectors": 7,
+      "labelled_tournaments": 8,
+      "order": 3
+    },
+    {
+      "distinct_labelled_degree_vectors": 291,
+      "labelled_tournaments": 1024,
+      "order": 5
+    }
+  ],
+  "cache": {
+    "currsize": 96,
+    "hits": 1518,
+    "maxsize": null,
+    "misses": 96
+  },
+  "method": "maximum-degree deletion; literal indexed incoming-neighbor subsets",
+  "rows": [
+    {
+      "all_labelled_almost": 2,
+      "all_labelled_regular": 2,
+      "fixed_assignment_almost": 1,
+      "regular_order": 3
+    },
+    {
+      "all_labelled_almost": 24,
+      "all_labelled_regular": 24,
+      "fixed_assignment_almost": 4,
+      "regular_order": 5
+    },
+    {
+      "all_labelled_almost": 2640,
+      "all_labelled_regular": 2640,
+      "fixed_assignment_almost": 132,
+      "regular_order": 7
+    },
+    {
+      "all_labelled_almost": 3230080,
+      "all_labelled_regular": 3230080,
+      "fixed_assignment_almost": 46144,
+      "regular_order": 9
+    },
+    {
+      "all_labelled_almost": 48251508480,
+      "all_labelled_regular": 48251508480,
+      "fixed_assignment_almost": 191474240,
+      "regular_order": 11
+    }
+  ],
+  "status": "PASS"
+}

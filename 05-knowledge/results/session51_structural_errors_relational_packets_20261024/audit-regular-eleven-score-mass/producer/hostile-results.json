@@ -1,0 +1,95 @@
+{
+  "hostiles": [
+    {
+      "name": "erase_binomial_multiplicity",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "grouped score count matches literal subset recurrence"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "grouped score count matches literal subset recurrence"
+        }
+      ]
+    },
+    {
+      "name": "reverse_residual_degree_ownership",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "grouped score count matches literal subset recurrence"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "grouped score count matches literal subset recurrence"
+        }
+      ]
+    },
+    {
+      "name": "omit_labelled_profile_factor",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "fixed root deletion labelled score profile identity"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "fixed root deletion labelled score profile identity"
+        }
+      ]
+    },
+    {
+      "name": "duplicate_hidden_transitive_control",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "eighteen inherited nonrigid representatives without duplicate control"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "eighteen inherited nonrigid representatives without duplicate control"
+        }
+      ]
+    },
+    {
+      "name": "confuse_group_order_with_orbits",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "remaining regular labelled mass is rigid classes"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "remaining regular labelled mass is rigid classes"
+        }
+      ]
+    },
+    {
+      "name": "use_one_pointed_type_per_rigid_class",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "regular error from pointed class difference"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "regular error from pointed class difference"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

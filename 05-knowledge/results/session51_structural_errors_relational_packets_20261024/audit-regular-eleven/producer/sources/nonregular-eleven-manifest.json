@@ -1,0 +1,65 @@
+{
+  "files": [
+    {
+      "bytes": 1578,
+      "path": "README.md",
+      "sha256": "9483e84286aacb3ae6d15882b4f51c60f60781c28349370add36b8c6cd46b90e"
+    },
+    {
+      "bytes": 1559,
+      "path": "SOURCE_PINS.json",
+      "sha256": "d59bf671b31c7f7b5bb290c47c89df334726e4a06c39b9be58175f376407a93a"
+    },
+    {
+      "bytes": 22095,
+      "path": "THEOREM.md",
+      "sha256": "877ac61d619c06d4ebb6605f61db09d39321a5b5db10c1592ef6ad9d431d0ccf"
+    },
+    {
+      "bytes": 3886,
+      "path": "VALIDATION.md",
+      "sha256": "abbb5c87a281a4ae36c00cb4b5643d4b5f29630982982ad831b170752bc3ec3d"
+    },
+    {
+      "bytes": 25335,
+      "path": "check.py",
+      "sha256": "c985f9df3626a903c6610aa84b336434971bdcbc1407a1179d6ffb7bcfa75a17"
+    },
+    {
+      "bytes": 762645,
+      "path": "normal.json",
+      "sha256": "c9f9e5fef2f82c237698d6a0eddc8ec2a28af540b877f1f5d803b48b89b56865"
+    },
+    {
+      "bytes": 762645,
+      "path": "optimized.json",
+      "sha256": "c9f9e5fef2f82c237698d6a0eddc8ec2a28af540b877f1f5d803b48b89b56865"
+    },
+    {
+      "bytes": 13077,
+      "path": "sources/session50-order-nine-theorem.md",
+      "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+    },
+    {
+      "bytes": 49386,
+      "path": "sources/session50-regular-nine-receipt.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "bytes": 13993,
+      "path": "sources/session51-order-ten-receipt.json",
+      "sha256": "4c359160678678252f08a1a8131062bc46ef174162ab7dd8802c13c9d1d5fb63"
+    },
+    {
+      "bytes": 19808,
+      "path": "sources/session51-order-ten-theorem.md",
+      "sha256": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002"
+    },
+    {
+      "bytes": 2235,
+      "path": "verify_manifest.py",
+      "sha256": "f5a7867a9b7f323f61cda8e2bd96045bcc196963205936164cc66972f15bf43c"
+    }
+  ],
+  "format": 1
+}

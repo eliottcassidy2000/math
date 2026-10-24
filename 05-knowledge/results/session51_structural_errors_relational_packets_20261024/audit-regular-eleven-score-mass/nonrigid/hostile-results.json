@@ -1,0 +1,95 @@
+{
+  "hostiles": [
+    {
+      "case": "omit_one_stabilizer_slope",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "forty line invariant degree three matrices"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "forty line invariant degree three matrices"
+        }
+      ]
+    },
+    {
+      "case": "erase_negative_matching_sign",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "five genuine q7 classes"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "five genuine q7 classes"
+        }
+      ]
+    },
+    {
+      "case": "omit_second_q9_matching",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "two q9 crossing matchings"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "two q9 crossing matchings"
+        }
+      ]
+    },
+    {
+      "case": "truncate_cyclic_universe",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "thirty two cyclic degree five connection sets"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "thirty two cyclic degree five connection sets"
+        }
+      ]
+    },
+    {
+      "case": "count_hidden_Aut55_twice",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "eighteen nonrigid regular eleven classes"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "eighteen nonrigid regular eleven classes"
+        }
+      ]
+    },
+    {
+      "case": "confuse_pointed_orbits_with_vertices",
+      "runs": [
+        {
+          "manifest_rejection": true,
+          "optimized": false,
+          "semantic_rejection": "nonrigid pointed mass78 and error660"
+        },
+        {
+          "manifest_rejection": true,
+          "optimized": true,
+          "semantic_rejection": "nonrigid pointed mass78 and error660"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

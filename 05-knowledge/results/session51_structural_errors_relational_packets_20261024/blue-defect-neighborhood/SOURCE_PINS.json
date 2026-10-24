@@ -1,0 +1,17 @@
+{
+  "base_wiring_manifest_sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d",
+  "files": [
+    {
+      "path": "sources/wiring-MANIFEST.json",
+      "sha256": "cd89cad144786c67f076c235409c90e3b4de21e0a5f81926139184068f1d676d"
+    },
+    {
+      "path": "sources/wiring-THEOREM.md",
+      "sha256": "0764f2a2d3c45751e2da0ee6c8db54a8974e2ee6fe7b0606753ed511867b8c93"
+    },
+    {
+      "path": "sources/wiring-receipt.json",
+      "sha256": "a222ede1374d68471e2d7da0fb909292dee1ab9426f48e8478acf1215f065a77"
+    }
+  ]
+}

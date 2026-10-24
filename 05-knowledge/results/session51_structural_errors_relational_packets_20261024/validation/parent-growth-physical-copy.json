@@ -1,0 +1,2 @@
+{"parent_classes": 191536, "payloads": 108, "per_parent_comparisons": 191536, "pointed_states": 97213472, "prediction": 9733056, "producer_manifest_sha256": "161449ddf5c2a07b7afefd213438b85c74897850b89050dde66428819b0838d6", "producer_payloads": 29, "semantic_rejections": 22, "status": "PASS", "structural_audit_payloads": 36, "structural_correction": 5508, "upper_trace": 97336068}
+{"independent_atlas_and_trace": true, "manifest_payloads": 108, "mutations": 22, "physical_copy": true, "prediction": 9733056, "production_atlas_and_trace": true, "status": "PASS"}

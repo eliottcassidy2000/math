@@ -1,0 +1,52 @@
+{
+  "all_blue_positive_nodes": 0,
+  "black_only_positive_nodes": 68,
+  "blue_incident_positive_nodes": 24,
+  "blue_port_histogram": [
+    [
+      119,
+      2
+    ],
+    [
+      123,
+      1
+    ],
+    [
+      131,
+      1
+    ],
+    [
+      179,
+      1
+    ],
+    [
+      181,
+      2
+    ],
+    [
+      183,
+      4
+    ],
+    [
+      185,
+      4
+    ],
+    [
+      187,
+      5
+    ],
+    [
+      189,
+      2
+    ],
+    [
+      191,
+      2
+    ]
+  ],
+  "mixed_positive_nodes": 24,
+  "scope": "presentation port counts only, no line pairing or endpoint adjacency",
+  "self_converse_black_port_sum": 337304,
+  "self_converse_blue_port_sum": 4200,
+  "status": "PASS"
+}

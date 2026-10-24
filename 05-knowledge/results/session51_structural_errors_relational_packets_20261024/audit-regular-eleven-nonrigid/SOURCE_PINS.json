@@ -1,0 +1,6 @@
+{
+  "correction_audit_manifest_sha256": "7c25ba56bb4a07b61f23670bc1e362aa7a578e9c78c13c4221c2313da1543d03",
+  "correction_producer_manifest_sha256": "0462baf160610115c8b2436c2c57cce1964d0439ce49e86b9b43ce00f2bda3f2",
+  "producer_manifest_sha256": "3fd0d159b9e356fb5d86906e657e9ef992061408f2391419ceaf5d248813acaa",
+  "source_contract": "Nonrigid structural computation does not read the complete parent atlas. Complete parent atlas and state table are used only by atlas_control.cpp as a later holdout. The previous audit source is byte-identical and only its parent canonicalization and automorphism utilities are invoked."
+}

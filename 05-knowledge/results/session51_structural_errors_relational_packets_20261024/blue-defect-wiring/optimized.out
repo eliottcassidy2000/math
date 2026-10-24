@@ -1,0 +1,827 @@
+{
+  "adjacency_multiplicities": [
+    [
+      4,
+      24,
+      1
+    ],
+    [
+      4,
+      74,
+      1
+    ],
+    [
+      5,
+      6,
+      2
+    ],
+    [
+      5,
+      9,
+      2
+    ],
+    [
+      5,
+      28,
+      1
+    ],
+    [
+      5,
+      45,
+      1
+    ],
+    [
+      5,
+      47,
+      1
+    ],
+    [
+      5,
+      68,
+      1
+    ],
+    [
+      5,
+      75,
+      1
+    ],
+    [
+      6,
+      20,
+      2
+    ],
+    [
+      6,
+      48,
+      1
+    ],
+    [
+      6,
+      60,
+      1
+    ],
+    [
+      6,
+      68,
+      1
+    ],
+    [
+      6,
+      72,
+      1
+    ],
+    [
+      6,
+      74,
+      1
+    ],
+    [
+      9,
+      9,
+      1
+    ],
+    [
+      9,
+      20,
+      2
+    ],
+    [
+      9,
+      45,
+      2
+    ],
+    [
+      9,
+      68,
+      1
+    ],
+    [
+      9,
+      74,
+      2
+    ],
+    [
+      9,
+      75,
+      1
+    ],
+    [
+      10,
+      20,
+      1
+    ],
+    [
+      10,
+      31,
+      1
+    ],
+    [
+      10,
+      45,
+      2
+    ],
+    [
+      10,
+      60,
+      1
+    ],
+    [
+      10,
+      68,
+      1
+    ],
+    [
+      10,
+      75,
+      1
+    ],
+    [
+      12,
+      20,
+      1
+    ],
+    [
+      12,
+      30,
+      2
+    ],
+    [
+      12,
+      31,
+      1
+    ],
+    [
+      12,
+      60,
+      2
+    ],
+    [
+      20,
+      31,
+      1
+    ],
+    [
+      20,
+      47,
+      1
+    ],
+    [
+      20,
+      48,
+      1
+    ],
+    [
+      20,
+      68,
+      1
+    ],
+    [
+      20,
+      75,
+      1
+    ],
+    [
+      24,
+      28,
+      1
+    ],
+    [
+      24,
+      30,
+      1
+    ],
+    [
+      24,
+      65,
+      1
+    ],
+    [
+      28,
+      30,
+      1
+    ],
+    [
+      28,
+      45,
+      2
+    ],
+    [
+      28,
+      47,
+      2
+    ],
+    [
+      28,
+      65,
+      1
+    ],
+    [
+      28,
+      74,
+      3
+    ],
+    [
+      30,
+      60,
+      2
+    ],
+    [
+      30,
+      65,
+      1
+    ],
+    [
+      30,
+      72,
+      2
+    ],
+    [
+      30,
+      75,
+      1
+    ],
+    [
+      31,
+      45,
+      1
+    ],
+    [
+      31,
+      48,
+      1
+    ],
+    [
+      31,
+      60,
+      1
+    ],
+    [
+      31,
+      65,
+      3
+    ],
+    [
+      31,
+      68,
+      1
+    ],
+    [
+      31,
+      72,
+      1
+    ],
+    [
+      31,
+      74,
+      1
+    ],
+    [
+      45,
+      68,
+      1
+    ],
+    [
+      45,
+      75,
+      2
+    ],
+    [
+      47,
+      47,
+      1
+    ],
+    [
+      47,
+      65,
+      1
+    ],
+    [
+      47,
+      74,
+      2
+    ],
+    [
+      47,
+      75,
+      2
+    ],
+    [
+      48,
+      60,
+      1
+    ],
+    [
+      48,
+      65,
+      1
+    ],
+    [
+      48,
+      68,
+      1
+    ],
+    [
+      48,
+      72,
+      1
+    ],
+    [
+      48,
+      75,
+      1
+    ],
+    [
+      60,
+      68,
+      1
+    ],
+    [
+      65,
+      72,
+      1
+    ],
+    [
+      74,
+      74,
+      1
+    ],
+    [
+      75,
+      75,
+      1
+    ]
+  ],
+  "adjacency_multiplicity_histogram": [
+    [
+      1,
+      52
+    ],
+    [
+      2,
+      16
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "articulation_node_indices": [],
+  "base_converse_manifest_sha256": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+  "blue_ports": 4200,
+  "boundary_blue_edges": 4020,
+  "bridge_edge_indices": [],
+  "components": [
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      9,
+      10,
+      12,
+      20,
+      24,
+      28,
+      30,
+      31,
+      45,
+      47,
+      48,
+      60,
+      65,
+      68,
+      72,
+      74,
+      75
+    ]
+  ],
+  "endpoint_transport_histogram": [
+    [
+      [
+        1,
+        3,
+        6,
+        -4,
+        false
+      ],
+      162
+    ],
+    [
+      [
+        1,
+        6,
+        3,
+        2,
+        false
+      ],
+      330
+    ],
+    [
+      [
+        2,
+        4,
+        5,
+        -2,
+        false
+      ],
+      1671
+    ],
+    [
+      [
+        2,
+        5,
+        4,
+        0,
+        false
+      ],
+      1857
+    ],
+    [
+      [
+        2,
+        5,
+        4,
+        0,
+        true
+      ],
+      180
+    ]
+  ],
+  "induced_blue_edges": 90,
+  "induced_blue_loop_edges": 4,
+  "induced_cycle_rank": 71,
+  "induced_degree_histogram": [
+    [
+      0,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      8,
+      1
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      10,
+      1
+    ],
+    [
+      11,
+      4
+    ],
+    [
+      12,
+      4
+    ]
+  ],
+  "induced_nonloop_blue_edges": 86,
+  "internal_blue_ports": 180,
+  "nodes": [
+    {
+      "blue_ports": 123,
+      "boundary_edges": 123,
+      "cross_degree": 1,
+      "internal_ports": 0,
+      "source_representative_index": 0
+    },
+    {
+      "blue_ports": 119,
+      "boundary_edges": 119,
+      "cross_degree": 1,
+      "internal_ports": 0,
+      "source_representative_index": 1
+    },
+    {
+      "blue_ports": 119,
+      "boundary_edges": 119,
+      "cross_degree": 1,
+      "internal_ports": 0,
+      "source_representative_index": 2
+    },
+    {
+      "blue_ports": 131,
+      "boundary_edges": 131,
+      "cross_degree": 1,
+      "internal_ports": 0,
+      "source_representative_index": 3
+    },
+    {
+      "blue_ports": 181,
+      "boundary_edges": 179,
+      "cross_degree": 2,
+      "internal_ports": 2,
+      "source_representative_index": 4
+    },
+    {
+      "blue_ports": 189,
+      "boundary_edges": 180,
+      "cross_degree": 2,
+      "internal_ports": 9,
+      "source_representative_index": 5
+    },
+    {
+      "blue_ports": 185,
+      "boundary_edges": 176,
+      "cross_degree": 2,
+      "internal_ports": 9,
+      "source_representative_index": 6
+    },
+    {
+      "blue_ports": 183,
+      "boundary_edges": 171,
+      "cross_degree": 2,
+      "internal_ports": 12,
+      "source_representative_index": 9
+    },
+    {
+      "blue_ports": 183,
+      "boundary_edges": 176,
+      "cross_degree": 2,
+      "internal_ports": 7,
+      "source_representative_index": 10
+    },
+    {
+      "blue_ports": 187,
+      "boundary_edges": 181,
+      "cross_degree": 2,
+      "internal_ports": 6,
+      "source_representative_index": 12
+    },
+    {
+      "blue_ports": 187,
+      "boundary_edges": 176,
+      "cross_degree": 2,
+      "internal_ports": 11,
+      "source_representative_index": 20
+    },
+    {
+      "blue_ports": 185,
+      "boundary_edges": 181,
+      "cross_degree": 2,
+      "internal_ports": 4,
+      "source_representative_index": 24
+    },
+    {
+      "blue_ports": 183,
+      "boundary_edges": 172,
+      "cross_degree": 2,
+      "internal_ports": 11,
+      "source_representative_index": 28
+    },
+    {
+      "blue_ports": 183,
+      "boundary_edges": 173,
+      "cross_degree": 2,
+      "internal_ports": 10,
+      "source_representative_index": 30
+    },
+    {
+      "blue_ports": 191,
+      "boundary_edges": 179,
+      "cross_degree": 2,
+      "internal_ports": 12,
+      "source_representative_index": 31
+    },
+    {
+      "blue_ports": 191,
+      "boundary_edges": 180,
+      "cross_degree": 2,
+      "internal_ports": 11,
+      "source_representative_index": 45
+    },
+    {
+      "blue_ports": 185,
+      "boundary_edges": 174,
+      "cross_degree": 2,
+      "internal_ports": 11,
+      "source_representative_index": 47
+    },
+    {
+      "blue_ports": 187,
+      "boundary_edges": 179,
+      "cross_degree": 2,
+      "internal_ports": 8,
+      "source_representative_index": 48
+    },
+    {
+      "blue_ports": 185,
+      "boundary_edges": 176,
+      "cross_degree": 2,
+      "internal_ports": 9,
+      "source_representative_index": 60
+    },
+    {
+      "blue_ports": 181,
+      "boundary_edges": 172,
+      "cross_degree": 2,
+      "internal_ports": 9,
+      "source_representative_index": 65
+    },
+    {
+      "blue_ports": 179,
+      "boundary_edges": 170,
+      "cross_degree": 2,
+      "internal_ports": 9,
+      "source_representative_index": 68
+    },
+    {
+      "blue_ports": 189,
+      "boundary_edges": 183,
+      "cross_degree": 2,
+      "internal_ports": 6,
+      "source_representative_index": 72
+    },
+    {
+      "blue_ports": 187,
+      "boundary_edges": 175,
+      "cross_degree": 2,
+      "internal_ports": 12,
+      "source_representative_index": 74
+    },
+    {
+      "blue_ports": 187,
+      "boundary_edges": 175,
+      "cross_degree": 2,
+      "internal_ports": 12,
+      "source_representative_index": 75
+    }
+  ],
+  "normalized_nonpath_pair_order": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      9
+    ]
+  ],
+  "positive_nodes": 24,
+  "scope": "actual induced blue multigraph on the 24 positive-error self-converse order-ten nodes; boundary target classes are not identified",
+  "status": "PASS"
+}

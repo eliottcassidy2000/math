@@ -1,0 +1,20 @@
+{
+  "files": {
+    "FINAL_RECEIPT.json": "98bf7680f1c9216b691eaa458906049c2721f0e0872fd2a201d6fed9f1652211",
+    "README.md": "e53f41213dc85c2c163d8cc46ab79cbe2de7de095479245369607676e2814db8",
+    "REPORT.md": "2b5cdeb7160b4fdebf730375829e3d58033869f900a05d9cb78bc4fae3248e65",
+    "SOURCE_PINS.json": "853bcf4bd1d97c768704ed943ccd9f525b8e5fcba6a9aed423f6a7a4a0b6ba66",
+    "independent.py": "0698ba09c6c4568b36cf9ce2f1182e51bbbb8cb11a087c5fb3a7278a010e21bd",
+    "normal.json": "cfd9e2b42e5a33c4bfda21535842a197bda2ce66b14d6423758a9c2787351894",
+    "optimized.json": "cfd9e2b42e5a33c4bfda21535842a197bda2ce66b14d6423758a9c2787351894",
+    "sources/PATH_TRANSPORT_AND_FOREST_RULE.md": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6",
+    "sources/THM-4731-self-line-leg-law.md": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+    "sources/candidate-MANIFEST.json": "e1a91122cbc42f9de3edfc8e650959a1d79f55158e796c007b8dc34fd31432d9",
+    "sources/candidate-THEOREM.md": "0c6b1ef1464bffe4f63ecec364396184d8e8698e2c4a75de0a945351d715155e",
+    "sources/candidate-receipt.json": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+    "validate.py": "a8363a69c81f9a9e62ea8bcd0b3788612b1d24e2bf259b1ef7f1db8b93445844",
+    "validation.json": "1f1413bad7661310f01cc19fefc0c9185c8d9bdb58f27b3ac1cad3a4a3af77ce",
+    "verify_manifest.py": "a6cd89052128bf2ecefd7b1c5462d378785c9156e600cccb53d22a0252beb516"
+  },
+  "status": "FROZEN independent audit PASS"
+}

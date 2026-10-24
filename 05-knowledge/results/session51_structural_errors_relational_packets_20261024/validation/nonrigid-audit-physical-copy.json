@@ -1,0 +1,108 @@
+{
+  "manifest_sha256": "67898b688f1bfc0b86c0b292fc1d1696577a7948eca6bcd3c022bf3652ae41ff",
+  "physical_manifest_only_copy": true,
+  "status": "PASS",
+  "steps": [
+    {
+      "returncode": 0,
+      "seconds": 3.2092,
+      "step": "compile holdout O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.3862,
+      "step": "complete atlas holdout O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 3.2642,
+      "step": "compile holdout O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.3458,
+      "step": "complete atlas holdout O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.2967,
+      "step": "independent structural generation normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.115,
+      "step": "full producer class bijection normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 2.1868,
+      "step": "independent semantic controls normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0377,
+      "step": "audit manifest normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.7635,
+      "step": "producer check normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0328,
+      "step": "producer manifest normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.4011,
+      "step": "independent structural generation optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.2238,
+      "step": "full producer class bijection optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 2.3519,
+      "step": "independent semantic controls optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.1414,
+      "step": "audit manifest optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.8577,
+      "step": "producer check optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.1227,
+      "step": "producer manifest optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 3.989,
+      "step": "producer own physical-copy and hostile replay"
+    },
+    {
+      "returncode": 1,
+      "step": "reject manifest mutation normal.json []"
+    },
+    {
+      "returncode": 1,
+      "step": "reject manifest mutation normal.json ['-O']"
+    },
+    {
+      "returncode": 1,
+      "step": "reject manifest mutation producer/check.py []"
+    },
+    {
+      "returncode": 1,
+      "step": "reject manifest mutation producer/check.py ['-O']"
+    }
+  ]
+}

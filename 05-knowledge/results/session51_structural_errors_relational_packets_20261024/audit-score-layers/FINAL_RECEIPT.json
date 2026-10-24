@@ -1,0 +1,27 @@
+{
+  "actual_ports_checked": 113882,
+  "actual_universes": {
+    "n2_actual_ports": 2,
+    "n2_blue_ports": 2,
+    "n2_labelled_sources": 2,
+    "n4_actual_ports": 120,
+    "n4_blue_ports": 72,
+    "n4_labelled_sources": 24,
+    "n6_actual_ports": 113760,
+    "n6_blue_ports": 15840,
+    "n6_labelled_sources": 2720
+  },
+  "adjacent_interval_pairs_checked": 62250,
+  "all_layer_pairs_through_p100_checked": 41650,
+  "arithmetic_layers_checked": 62750,
+  "candidate_manifest_sha256": "e1a91122cbc42f9de3edfc8e650959a1d79f55158e796c007b8dc34fd31432d9",
+  "independent_method": "closed quadratic in odd score gap; normalized base-path presentation cube with exact factorial label weighting; full-arc isomorphism for self/converse partners",
+  "independent_normal_sha256": "cfd9e2b42e5a33c4bfda21535842a197bda2ce66b14d6423758a9c2787351894",
+  "independent_optimized_sha256": "cfd9e2b42e5a33c4bfda21535842a197bda2ce66b14d6423758a9c2787351894",
+  "mathematical_corrections": [],
+  "publication": "none; prior two audits and candidate source packets unchanged",
+  "replays_and_mutations": "PASS under normal and optimized Python using actual copies",
+  "scope": "all-size necessary score-layer wiring separation, full-metagraph finite-distance lower bound, and inherited merged-loop leg-law application; no attainment, sufficiency, or global disconnection claim",
+  "status": "PASS",
+  "validation_sha256": "1f1413bad7661310f01cc19fefc0c9185c8d9bdb58f27b3ac1cad3a4a3af77ce"
+}

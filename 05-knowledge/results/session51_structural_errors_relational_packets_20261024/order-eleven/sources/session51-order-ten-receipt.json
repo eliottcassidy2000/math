@@ -1,0 +1,805 @@
+{
+  "A_squared_coefficient_three": 6,
+  "boundary": {
+    "external_runtime_inputs": false,
+    "full_order_ten_tournament_enumeration": false,
+    "full_target_automorphism_tests": "only representatives of proved exceptional families",
+    "target_tournament_count_input": false
+  },
+  "check_counts": {
+    "C5 full automorphism order": 1,
+    "SCC transfer order ten with inherited Es9": 1,
+    "all order ten odd partitions": 1,
+    "bipartite cycle analytic matrix count": 1,
+    "complete strong error order ten": 1,
+    "constant attachment hostile actual partition": 3456,
+    "five Burnside cross check": 2,
+    "five actual orbit error": 96,
+    "five actual stable cells": 96,
+    "five crossing labelled count": 2,
+    "five crossing rotation orbit disjoint": 96,
+    "five crossing strong": 96,
+    "five full action matches independent stabilizer": 96,
+    "five independent fixed matrix counts": 50,
+    "five orbit stabilizer": 96,
+    "five rigid formula": 2,
+    "five sector error": 1,
+    "identity automorphism exists": 240,
+    "matrix column terminal": 2160,
+    "no loops": 108,
+    "odd partition explicit classification": 1,
+    "regular degree terminal": 2640,
+    "regular seven actions": 1,
+    "regular seven full permutation orbit disjoint": 3,
+    "regular seven labelled count": 1,
+    "regular seven orbit stabilizer": 3,
+    "regular seven strong": 3,
+    "regular seven total error": 1,
+    "rooted quotient disjoint orbit": 4,
+    "row bounds": 108,
+    "seven sector error": 1,
+    "seven substitution actual cells": 12,
+    "seven substitution full action": 12,
+    "seven substitution inherited error": 12,
+    "seven substitution strong": 12,
+    "strong rooted four quotient counts": 1,
+    "tournament": 108,
+    "triangle actual error": 128,
+    "triangle all block orbits disjoint complete": 128,
+    "triangle independent full automorphism": 128,
+    "triangle orbit preserves sector and parity": 128,
+    "triangle orbit stabilizer": 128,
+    "triangle presentation injective": 10368,
+    "triangle rigid class split": 1,
+    "triangle singleton actual stable partition": 10368,
+    "triangle singleton strong iff nonconstant": 13824,
+    "triangle total sector error": 1,
+    "triangle total strong class count": 1
+  },
+  "five_cells": {
+    "sectors": [
+      {
+        "crossing_degree": 1,
+        "error_histogram": [
+          [
+            0,
+            4
+          ],
+          [
+            40,
+            4
+          ]
+        ],
+        "fixed_count_histogram": [
+          [
+            0,
+            8
+          ],
+          [
+            5,
+            16
+          ],
+          [
+            120,
+            1
+          ]
+        ],
+        "labelled_matrices": 120,
+        "orbit_histogram": [
+          [
+            5,
+            4
+          ],
+          [
+            25,
+            4
+          ]
+        ],
+        "sha256": "757b7521d50d99b1259045406209e2cbd30d0f07312a58192cc0478e3a8889a4",
+        "witnesses": {
+          "0": {
+            "automorphisms": 5,
+            "matrix": [
+              1,
+              2,
+              4,
+              8,
+              16
+            ],
+            "rows": [
+              38,
+              76,
+              152,
+              273,
+              515,
+              222,
+              413,
+              795,
+              567,
+              111
+            ]
+          },
+          "40": {
+            "automorphisms": 1,
+            "matrix": [
+              1,
+              2,
+              4,
+              16,
+              8
+            ],
+            "rows": [
+              38,
+              76,
+              152,
+              529,
+              259,
+              222,
+              413,
+              795,
+              559,
+              119
+            ]
+          }
+        }
+      },
+      {
+        "crossing_degree": 2,
+        "error_histogram": [
+          [
+            0,
+            8
+          ],
+          [
+            40,
+            80
+          ]
+        ],
+        "fixed_count_histogram": [
+          [
+            0,
+            8
+          ],
+          [
+            10,
+            16
+          ],
+          [
+            2040,
+            1
+          ]
+        ],
+        "labelled_matrices": 2040,
+        "orbit_histogram": [
+          [
+            5,
+            8
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        "sha256": "3c41b8c51cd669c8f2bb059f48edc5407c50e3de9e37704af3404e1d9c71e4b8",
+        "witnesses": {
+          "0": {
+            "automorphisms": 5,
+            "matrix": [
+              3,
+              6,
+              12,
+              24,
+              17
+            ],
+            "rows": [
+              102,
+              204,
+              408,
+              785,
+              547,
+              206,
+              412,
+              793,
+              563,
+              103
+            ]
+          },
+          "40": {
+            "automorphisms": 1,
+            "matrix": [
+              3,
+              3,
+              12,
+              20,
+              24
+            ],
+            "rows": [
+              102,
+              108,
+              408,
+              657,
+              771,
+              220,
+              412,
+              787,
+              555,
+              103
+            ]
+          }
+        }
+      }
+    ],
+    "total_error": 3360
+  },
+  "inherited_strong_error_order_nine": 716,
+  "odd_partitions": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      3
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      5
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      3,
+      3
+    ],
+    [
+      1,
+      1,
+      1,
+      7
+    ],
+    [
+      1,
+      1,
+      3,
+      5
+    ],
+    [
+      1,
+      3,
+      3,
+      3
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "regular_seven": {
+    "classes": [
+      {
+        "automorphisms": 7,
+        "error": 0,
+        "labelled_orbit": 720,
+        "rows": [
+          14,
+          28,
+          56,
+          112,
+          97,
+          67,
+          7
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "error": 14,
+        "labelled_orbit": 1680,
+        "rows": [
+          14,
+          28,
+          104,
+          112,
+          37,
+          67,
+          19
+        ]
+      },
+      {
+        "automorphisms": 21,
+        "error": 0,
+        "labelled_orbit": 240,
+        "rows": [
+          14,
+          52,
+          88,
+          98,
+          41,
+          69,
+          19
+        ]
+      }
+    ],
+    "labelled": 2640,
+    "sha256": "44a127b6d6d13a5b4467702f4e7e4f0415e08cb95dc3cbc27ebee265b0634b96"
+  },
+  "scope": "complete strong order-ten error from exhaustive positive sectors; total uses inherited Es9",
+  "seven_cell_substitutions": {
+    "expansions": [
+      {
+        "automorphisms": 7,
+        "error": 0,
+        "quotient": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "rows": [
+          142,
+          156,
+          184,
+          240,
+          225,
+          195,
+          135,
+          256,
+          639,
+          255
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "error": 14,
+        "quotient": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "rows": [
+          142,
+          156,
+          232,
+          240,
+          165,
+          195,
+          147,
+          256,
+          639,
+          255
+        ]
+      },
+      {
+        "automorphisms": 21,
+        "error": 0,
+        "quotient": [
+          2,
+          4,
+          9,
+          3
+        ],
+        "rows": [
+          142,
+          180,
+          216,
+          226,
+          169,
+          197,
+          147,
+          256,
+          639,
+          255
+        ]
+      },
+      {
+        "automorphisms": 7,
+        "error": 0,
+        "quotient": [
+          2,
+          12,
+          1,
+          5
+        ],
+        "rows": [
+          142,
+          156,
+          184,
+          240,
+          225,
+          195,
+          135,
+          768,
+          127,
+          383
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "error": 14,
+        "quotient": [
+          2,
+          12,
+          1,
+          5
+        ],
+        "rows": [
+          142,
+          156,
+          232,
+          240,
+          165,
+          195,
+          147,
+          768,
+          127,
+          383
+        ]
+      },
+      {
+        "automorphisms": 21,
+        "error": 0,
+        "quotient": [
+          2,
+          12,
+          1,
+          5
+        ],
+        "rows": [
+          142,
+          180,
+          216,
+          226,
+          169,
+          197,
+          147,
+          768,
+          127,
+          383
+        ]
+      },
+      {
+        "automorphisms": 7,
+        "error": 0,
+        "quotient": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "rows": [
+          398,
+          412,
+          440,
+          496,
+          481,
+          451,
+          391,
+          256,
+          512,
+          255
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "error": 14,
+        "quotient": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "rows": [
+          398,
+          412,
+          488,
+          496,
+          421,
+          451,
+          403,
+          256,
+          512,
+          255
+        ]
+      },
+      {
+        "automorphisms": 21,
+        "error": 0,
+        "quotient": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "rows": [
+          398,
+          436,
+          472,
+          482,
+          425,
+          453,
+          403,
+          256,
+          512,
+          255
+        ]
+      },
+      {
+        "automorphisms": 7,
+        "error": 0,
+        "quotient": [
+          6,
+          8,
+          10,
+          1
+        ],
+        "rows": [
+          398,
+          412,
+          440,
+          496,
+          481,
+          451,
+          391,
+          512,
+          640,
+          127
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "error": 14,
+        "quotient": [
+          6,
+          8,
+          10,
+          1
+        ],
+        "rows": [
+          398,
+          412,
+          488,
+          496,
+          421,
+          451,
+          403,
+          512,
+          640,
+          127
+        ]
+      },
+      {
+        "automorphisms": 21,
+        "error": 0,
+        "quotient": [
+          6,
+          8,
+          10,
+          1
+        ],
+        "rows": [
+          398,
+          436,
+          472,
+          482,
+          425,
+          453,
+          403,
+          512,
+          640,
+          127
+        ]
+      }
+    ],
+    "labelled_quotients": 24,
+    "rooted_classes": [
+      [
+        2,
+        4,
+        9,
+        3
+      ],
+      [
+        2,
+        12,
+        1,
+        5
+      ],
+      [
+        6,
+        4,
+        8,
+        3
+      ],
+      [
+        6,
+        8,
+        10,
+        1
+      ]
+    ],
+    "total_error": 56
+  },
+  "status": "PASS",
+  "strong_error_order_ten": 3992,
+  "three_triangle_cells": {
+    "class_histogram": [
+      {
+        "automorphisms": 1,
+        "classes": 24,
+        "cyclic_majority": false,
+        "error": 18
+      },
+      {
+        "automorphisms": 3,
+        "classes": 72,
+        "cyclic_majority": false,
+        "error": 0
+      },
+      {
+        "automorphisms": 1,
+        "classes": 8,
+        "cyclic_majority": true,
+        "error": 18
+      },
+      {
+        "automorphisms": 3,
+        "classes": 24,
+        "cyclic_majority": true,
+        "error": 0
+      }
+    ],
+    "hostile_rows": {
+      "collapsed": [
+        394,
+        340,
+        225,
+        86,
+        165,
+        267,
+        177,
+        298,
+        92,
+        511
+      ],
+      "nonstrong": [
+        74,
+        148,
+        289,
+        86,
+        165,
+        267,
+        182,
+        301,
+        91,
+        511
+      ]
+    },
+    "rejected_constant_presentations": [
+      {
+        "cyclic_majority": false,
+        "presentations": 2592,
+        "stable_sizes": [
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "cyclic_majority": true,
+        "presentations": 864,
+        "stable_sizes": [
+          1,
+          9
+        ]
+      }
+    ],
+    "sha256": "5e368ddfc38621e13a2a84159883e46fa8b7499b66f13e08fd30134b88746cd0",
+    "strong_classes": 128,
+    "strong_labelled_presentations": 10368,
+    "total_error": 576,
+    "witnesses": [
+      {
+        "automorphisms": 3,
+        "cyclic_majority": false,
+        "error": 0,
+        "orbit_size": 54,
+        "rows": [
+          74,
+          148,
+          289,
+          86,
+          165,
+          267,
+          694,
+          813,
+          603,
+          63
+        ]
+      },
+      {
+        "automorphisms": 1,
+        "cyclic_majority": false,
+        "error": 18,
+        "orbit_size": 162,
+        "rows": [
+          74,
+          148,
+          289,
+          86,
+          293,
+          139,
+          694,
+          797,
+          619,
+          63
+        ]
+      },
+      {
+        "automorphisms": 3,
+        "cyclic_majority": true,
+        "error": 0,
+        "orbit_size": 54,
+        "rows": [
+          90,
+          172,
+          305,
+          212,
+          354,
+          393,
+          678,
+          789,
+          587,
+          63
+        ]
+      },
+      {
+        "automorphisms": 1,
+        "cyclic_majority": true,
+        "error": 18,
+        "orbit_size": 162,
+        "rows": [
+          90,
+          172,
+          305,
+          212,
+          418,
+          329,
+          662,
+          805,
+          587,
+          63
+        ]
+      }
+    ]
+  },
+  "total_error_order_ten": 5508
+}

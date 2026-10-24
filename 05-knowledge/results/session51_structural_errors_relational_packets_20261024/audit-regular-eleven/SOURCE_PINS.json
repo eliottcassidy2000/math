@@ -1,0 +1,8 @@
+{
+  "independent_boundary": "No target count or expected almost-regular count is an input. Full parent matrices and group actions retained. No order-eleven canonicalization and no unrestricted ten/eleven census.",
+  "inherited_contract": "Complete ordinary order-nine atlas and full actions are certified by archived producer and independent audit manifests. Nonregular correction is inherited from independently audited order-eleven packet; source theorem and numeric receipt match its archived manifest.",
+  "producer_manifest_sha256": "0462baf160610115c8b2436c2c57cce1964d0439ce49e86b9b43ce00f2bda3f2",
+  "producer_payload_files": 51,
+  "source_nonregular_manifest_sha256": "9c89b66a103ddd34a2126e390418e7088728b09b9f57d7a01ee37afabea109b2",
+  "source_parent_nine_sha256": "49ef7552eac8e08918b61a4aa7de56a4c096c03285af921dcf8b57506de7a0f7"
+}

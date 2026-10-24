@@ -1,0 +1,103 @@
+{
+  "literal_real_copy_replays": [
+    {
+      "optimized": false,
+      "script": "check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "matrix_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "matrix_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "series_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "series_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "prime_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "prime_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": false,
+      "script": "port_check.py",
+      "status": "PASS"
+    },
+    {
+      "optimized": true,
+      "script": "port_check.py",
+      "status": "PASS"
+    }
+  ],
+  "port_alignment": 24,
+  "producer_manifest_sha256": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+  "producer_pins": {
+    "MANIFEST.json": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+    "README.md": "be7cb7ac59e7de44fdb793a02714277bccfb7d17493ec3229535faf05d2e1292",
+    "SOURCE_PINS.json": "50e6cd1a01c68811d5cae129a6f5f7476f8eeab2ba6f2b47f643437715114462",
+    "THEOREM.md": "e461b661ec0a4f0edc840a9139db48511cda347006af0d7e717b1f0b71f4b5a6",
+    "VALIDATION.md": "7309a517ca88700e072916e563cfe64ccb59458b6dfc04a7fe6fc50f29947cfe",
+    "check.py": "7f97fde6bb64abbea7ebd1ade172a05ccd6ea3e912873e8861fe0f8db51d65be",
+    "matrix-normal.json": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd",
+    "matrix-normal.out": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd",
+    "matrix-optimized.json": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd",
+    "matrix-optimized.out": "b93af9e935623f26e0317160be64115225fe2f4d3f117cdbc25a9046617a0edd",
+    "matrix_check.py": "405a73c746d36bce2817df052ad182a1ecb7856383847a2e8aa8b0cbedc886d9",
+    "normal.json": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce",
+    "normal.out": "d00328d368d257ab86d881abda99a13a17219e1e4f34136d10547f8022e13537",
+    "optimized.json": "561a009a9e87e52a0a45e983fd17ce0dae2a6c119ea2ca0c8571420568e80cce",
+    "optimized.out": "d00328d368d257ab86d881abda99a13a17219e1e4f34136d10547f8022e13537",
+    "port-normal.json": "e5277f7e5461aa68cd0313614f3fd74f7f610f1e18fcb62c9e1df0a9bf4ee019",
+    "port-normal.out": "8bb924bd69bfcabce9aa6612c32689c41f8965d6422ebcc83c2d14232e30215b",
+    "port-optimized.json": "e5277f7e5461aa68cd0313614f3fd74f7f610f1e18fcb62c9e1df0a9bf4ee019",
+    "port-optimized.out": "8bb924bd69bfcabce9aa6612c32689c41f8965d6422ebcc83c2d14232e30215b",
+    "port_check.py": "572470e304903ebe920b13b6a8cdb42908d21427185d26f256a11c96b4c756d0",
+    "prime-normal.json": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27",
+    "prime-normal.out": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27",
+    "prime-optimized.json": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27",
+    "prime-optimized.out": "ab21253d84e696908d7b5eee297ee671fb2e19e47263ef283b8551a0b732bd27",
+    "prime_check.py": "4064ec235112a8e679bb8f010805911593144c05668e4a465474bbeb6bb0d38f",
+    "relocation.out": "377e60c506f0a960d8ad977fbf7ccb893d8a7e8cb0340fdafb5b703d0d172946",
+    "series-normal.json": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2",
+    "series-normal.out": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2",
+    "series-optimized.json": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2",
+    "series-optimized.out": "6dc63e3019b8bf7a6f2ca8ff8ae3797ea3827fa077a467271f9375bb463008d2",
+    "series_check.py": "b61836b97602343edb57e8b447da7633c706b972ed24f3624aa066f64be54bd6",
+    "sources/THM-644-gridsym-fiber-law-and-anti-redei.md": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e",
+    "sources/THM-647-anti-redei-theorem.md": "30bd387fdda844a7fe3f9f346960e78fe748f03bd712326e7bfddd8c3e9757e6",
+    "sources/order-nine-theorem.md": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294",
+    "sources/order-ten-audit-receipt.json": "fa5909e52fb09eb952cc402692c39f7d7eb9e6ac8f535da5c9946ce92a7f4189",
+    "sources/order-ten-error-spectrum.json": "1417ab8b979f38bad55d97d389e55bdbc482a7dce65685572095b0994182319e",
+    "sources/order-ten-theorem.md": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002",
+    "sources/pins.json": "8a70702b7b1d3a260d1907dee7d51fe3aac45b3561425f541321f8b5ae7bd836",
+    "sources/regular-block-counts.md": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097",
+    "sources/regular-nine-receipt.json": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9",
+    "verify_manifest.py": "44713a9117b491793e6e4c02c2ca7a73fedd6708d57adc483efba1407f819d92"
+  },
+  "producer_theorem_mutation_rejected": true,
+  "representative_alignment": 160,
+  "source_unchanged": true,
+  "status": "PASS"
+}

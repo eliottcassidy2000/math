@@ -1,0 +1,35 @@
+{
+  "controls": [
+    {
+      "mutation": "truncated final action",
+      "rejected": true,
+      "stderr": "complete input record"
+    },
+    {
+      "mutation": "extra trailing token",
+      "rejected": true,
+      "stderr": "no trailing input"
+    },
+    {
+      "mutation": "self loop",
+      "rejected": true,
+      "stderr": "row width and loop"
+    },
+    {
+      "mutation": "nonpermutation action",
+      "rejected": true,
+      "stderr": "distinct group with identity"
+    },
+    {
+      "mutation": "orientation reversing transposition",
+      "rejected": true,
+      "stderr": "distinct group with identity"
+    },
+    {
+      "mutation": "duplicated source representative",
+      "rejected": true,
+      "stderr": "literal distinct input rows"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,129 @@
+{
+  "boundary": "Score-count and full automorphism-mass sidecar. No bare-metagraph sufficiency and no unrestricted order-eleven class count claim.",
+  "closure": {
+    "almost_regular10_classes": 13333,
+    "eleven_factorial": 39916800,
+    "labelled_regular11": 48251508480,
+    "nonrigid_labelled_mass": 151764480,
+    "regular11_classes": 1223,
+    "regular11_error": 133210,
+    "rigid_labelled_mass": 48099744000,
+    "rigid_regular11_classes": 1205
+  },
+  "exhaustive_fixed_score_checks": [
+    {
+      "nondecreasing_vectors_tested": 1,
+      "order": 1,
+      "orientations": 1,
+      "realized_fixed_assignments_tested": 1
+    },
+    {
+      "nondecreasing_vectors_tested": 3,
+      "order": 2,
+      "orientations": 2,
+      "realized_fixed_assignments_tested": 2
+    },
+    {
+      "nondecreasing_vectors_tested": 10,
+      "order": 3,
+      "orientations": 8,
+      "realized_fixed_assignments_tested": 7
+    },
+    {
+      "nondecreasing_vectors_tested": 35,
+      "order": 4,
+      "orientations": 64,
+      "realized_fixed_assignments_tested": 38
+    },
+    {
+      "nondecreasing_vectors_tested": 126,
+      "order": 5,
+      "orientations": 1024,
+      "realized_fixed_assignments_tested": 291
+    },
+    {
+      "nondecreasing_vectors_tested": 462,
+      "order": 6,
+      "orientations": 32768,
+      "realized_fixed_assignments_tested": 2932
+    }
+  ],
+  "fixed_assigned_parent_count": 191474240,
+  "method": "independent literal labelled-neighbour subsets plus grouped/binomial crosscheck",
+  "nonrigid": {
+    "classes": 18,
+    "distinct_pairs": 153,
+    "error": 660,
+    "full_groups_recomputed": 18,
+    "group_and_orbit_spectrum": [
+      {
+        "aut_order": 3,
+        "classes": 4,
+        "labelled_mass": 53222400,
+        "vertex_orbits": 7
+      },
+      {
+        "aut_order": 3,
+        "classes": 2,
+        "labelled_mass": 26611200,
+        "vertex_orbits": 9
+      },
+      {
+        "aut_order": 5,
+        "classes": 7,
+        "labelled_mass": 55883520,
+        "vertex_orbits": 3
+      },
+      {
+        "aut_order": 9,
+        "classes": 1,
+        "labelled_mass": 4435200,
+        "vertex_orbits": 7
+      },
+      {
+        "aut_order": 11,
+        "classes": 3,
+        "labelled_mass": 10886400,
+        "vertex_orbits": 1
+      },
+      {
+        "aut_order": 55,
+        "classes": 1,
+        "labelled_mass": 725760,
+        "vertex_orbits": 1
+      }
+    ],
+    "labelled_mass": 151764480,
+    "pointed_classes": 78,
+    "unpointing_deficit": 120
+  },
+  "regular_labelled_counts": [
+    {
+      "labelled_count": 1,
+      "order": 1
+    },
+    {
+      "labelled_count": 2,
+      "order": 3
+    },
+    {
+      "labelled_count": 24,
+      "order": 5
+    },
+    {
+      "labelled_count": 2640,
+      "order": 7
+    },
+    {
+      "labelled_count": 3230080,
+      "order": 9
+    },
+    {
+      "labelled_count": 48251508480,
+      "order": 11
+    }
+  ],
+  "score_assignment_multiplier": 252,
+  "source_manifest_sha256": "3fd0d159b9e356fb5d86906e657e9ef992061408f2391419ceaf5d248813acaa",
+  "status": "PASS"
+}

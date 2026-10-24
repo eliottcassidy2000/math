@@ -1,0 +1,112 @@
+{
+  "alphabet": [
+    {
+      "dual": 0,
+      "error": 0,
+      "name": "one",
+      "order": 1
+    },
+    {
+      "dual": 1,
+      "error": 0,
+      "name": "three",
+      "order": 3
+    },
+    {
+      "dual": 2,
+      "error": 14,
+      "name": "bad_seven",
+      "order": 7
+    },
+    {
+      "dual": 4,
+      "error": 40,
+      "name": "ten",
+      "order": 10
+    },
+    {
+      "dual": 3,
+      "error": 40,
+      "name": "ten_dual",
+      "order": 10
+    }
+  ],
+  "first_failure_if_t_squared_omitted": 14,
+  "first_nonstrong_positive_selfconverse_order_in_alphabet": 9,
+  "scope": "actual finite core alphabet, all SCC words of total order at most sixteen",
+  "self_converse_word_count": 97,
+  "selfconverse_positive_error_coefficients": [
+    [
+      7,
+      14,
+      1
+    ],
+    [
+      9,
+      14,
+      1
+    ],
+    [
+      11,
+      14,
+      1
+    ],
+    [
+      13,
+      14,
+      2
+    ],
+    [
+      14,
+      28,
+      1
+    ],
+    [
+      15,
+      14,
+      3
+    ],
+    [
+      15,
+      28,
+      1
+    ],
+    [
+      16,
+      28,
+      2
+    ]
+  ],
+  "selfconverse_weighted_error_coefficients": [
+    [
+      7,
+      14
+    ],
+    [
+      9,
+      14
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      13,
+      28
+    ],
+    [
+      14,
+      28
+    ],
+    [
+      15,
+      70
+    ],
+    [
+      16,
+      56
+    ]
+  ],
+  "status": "PASS",
+  "word_count": 1355
+}

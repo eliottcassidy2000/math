@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 906,
+      "sha256": "6ff8de8ebb0102eee55e3692ae3b0b97953731ab6476054f6828f9239608944e"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 779,
+      "sha256": "dd3247b225dc9bc7c6ad965e7abe03ed2e4c35f2ec16da4cc9d0d8465ec68a80"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 8060,
+      "sha256": "295ac45c9fb9c3690991902546b1f3493d184c6dca7a7cc0265c9aec34bd3490"
+    },
+    {
+      "path": "check.py",
+      "bytes": 4965,
+      "sha256": "6f2f52cf6c92b30a13935cedae0403aefbbc3ff8bf3a952dc1d3067ab6a561e2"
+    },
+    {
+      "path": "hostile-results.json",
+      "bytes": 2673,
+      "sha256": "3684c3aff19873ed4b67e5cdd3e36e1bd867f3ceb2edbb4e4624014b875bff35"
+    },
+    {
+      "path": "hostiles.py",
+      "bytes": 2663,
+      "sha256": "1e19543fe277a48bfe5e397e8ae551323913d232cd360b14b7cfa6f17999fe1e"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 1860,
+      "sha256": "2b5d1ac0e8c261dd51fa019f726368e4830b2bfe9f582eb920d11ba67a84e750"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 1860,
+      "sha256": "2b5d1ac0e8c261dd51fa019f726368e4830b2bfe9f582eb920d11ba67a84e750"
+    },
+    {
+      "path": "replay.py",
+      "bytes": 1692,
+      "sha256": "3357b250c7c9a70953d2c0fd02a99b27bda5d469322495d42ec19c9eb9fbd52f"
+    },
+    {
+      "path": "sources/nonregular-audit.md",
+      "bytes": 13750,
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    },
+    {
+      "path": "sources/nonrigid-receipt.json",
+      "bytes": 12782,
+      "sha256": "ea61f35f3964a5559322d44e635f4990655a0dfcc69f403f2433808a9294f24e"
+    },
+    {
+      "path": "sources/nonrigid-theorem.md",
+      "bytes": 14746,
+      "sha256": "84d3eb17c542173b6c887ca90f2b138e92827ec20b9cadddd4175da1dce8aca7"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 723,
+      "sha256": "0df1c88100718f3666f32ff57166ea6aa84a5177bc5496ce81442c6ce59fa47c"
+    }
+  ]
+}

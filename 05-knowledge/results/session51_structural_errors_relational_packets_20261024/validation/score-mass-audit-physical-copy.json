@@ -1,0 +1,157 @@
+{
+  "independent_semantic_rejections_per_mode": 14,
+  "integrity_rejections": [
+    {
+      "name": "changed byte count normal.json",
+      "optimized": false,
+      "result": "REJECTED"
+    },
+    {
+      "name": "changed byte count normal.json",
+      "optimized": true,
+      "result": "REJECTED"
+    },
+    {
+      "name": "changed byte count producer/check.py",
+      "optimized": false,
+      "result": "REJECTED"
+    },
+    {
+      "name": "changed byte count producer/check.py",
+      "optimized": true,
+      "result": "REJECTED"
+    },
+    {
+      "name": "changed byte count nonrigid/normal.json",
+      "optimized": false,
+      "result": "REJECTED"
+    },
+    {
+      "name": "changed byte count nonrigid/normal.json",
+      "optimized": true,
+      "result": "REJECTED"
+    },
+    {
+      "name": "duplicate manifest path",
+      "optimized": false,
+      "result": "REJECTED"
+    },
+    {
+      "name": "duplicate manifest path",
+      "optimized": true,
+      "result": "REJECTED"
+    },
+    {
+      "name": "traversing manifest path",
+      "optimized": false,
+      "result": "REJECTED"
+    },
+    {
+      "name": "traversing manifest path",
+      "optimized": true,
+      "result": "REJECTED"
+    }
+  ],
+  "manifest_only_physical_copy": true,
+  "manifest_sha256": "c8d5e180144deaf6c4cd02882e19244570cda8a8c7b0dd2af4ca11f55381a09d",
+  "producer_and_nonrigid_own_replays_passed": true,
+  "replayed_steps": [
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "independent.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "hostiles.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "crosscheck.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "verify_audit.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "producer/check.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "producer/verify_manifest.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "nonrigid/check.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "nonrigid/verify_manifest.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "independent.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "hostiles.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "crosscheck.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "verify_audit.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "producer/check.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "producer/verify_manifest.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "nonrigid/check.py"
+    },
+    {
+      "optimized": true,
+      "result": "PASS",
+      "script": "nonrigid/verify_manifest.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "producer/replay.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "nonrigid/replay.py"
+    },
+    {
+      "optimized": false,
+      "result": "PASS",
+      "script": "verify_audit.py"
+    }
+  ],
+  "status": "PASS",
+  "unrelated_working_directory": true
+}

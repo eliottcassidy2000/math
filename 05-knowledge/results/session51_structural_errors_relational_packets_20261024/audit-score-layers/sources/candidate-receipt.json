@@ -1,0 +1,129 @@
+{
+  "actual_shift_histogram": [
+    [
+      [
+        2,
+        0,
+        0,
+        true
+      ],
+      2
+    ],
+    [
+      [
+        4,
+        1,
+        -2,
+        true
+      ],
+      24
+    ],
+    [
+      [
+        4,
+        1,
+        -1,
+        false
+      ],
+      48
+    ],
+    [
+      [
+        4,
+        1,
+        0,
+        true
+      ],
+      48
+    ],
+    [
+      [
+        6,
+        1,
+        2,
+        true
+      ],
+      720
+    ],
+    [
+      [
+        6,
+        2,
+        -2,
+        false
+      ],
+      18720
+    ],
+    [
+      [
+        6,
+        2,
+        -2,
+        true
+      ],
+      6480
+    ],
+    [
+      [
+        6,
+        2,
+        -1,
+        false
+      ],
+      44640
+    ],
+    [
+      [
+        6,
+        2,
+        0,
+        false
+      ],
+      34560
+    ],
+    [
+      [
+        6,
+        2,
+        0,
+        true
+      ],
+      8640
+    ]
+  ],
+  "actual_universes": {
+    "n2_actual_ports": 2,
+    "n2_blue_ports": 2,
+    "n2_labelled_sources": 2,
+    "n4_actual_ports": 120,
+    "n4_blue_ports": 72,
+    "n4_labelled_sources": 24,
+    "n6_actual_ports": 113760,
+    "n6_blue_ports": 15840,
+    "n6_labelled_sources": 2720
+  },
+  "arithmetic_layers_checked": 62750,
+  "negative_formal_value_hostile": "n6 scores1^3,4^3 have c3=2; formal allowed value -2 is impossible and never claimed attained",
+  "order_ten_layers": [
+    {
+      "a": 3,
+      "b": 6,
+      "possible_blue_target_c3": [
+        26,
+        32
+      ],
+      "source_c3": 30
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "possible_blue_target_c3": [
+        38,
+        40
+      ],
+      "source_c3": 40
+    }
+  ],
+  "scope": "arithmetic p<=500 and every actual retained-path port on labelled two-score equal-multiplicity tournaments at n2,4,6; all-size statement is proved separately",
+  "status": "PASS"
+}

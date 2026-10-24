@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "source_path": "session50-cell-holonomy/THEOREM.md",
+      "archived_path": "inherited/cell-theorem.md",
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b"
+    },
+    {
+      "source_path": "session50-order-nine/THEOREM.md",
+      "archived_path": "inherited/order-nine-theorem.md",
+      "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+    },
+    {
+      "source_path": "session50-order-nine/regular-normal.json",
+      "archived_path": "inherited/regular-nine.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "source_path": "session51-order-ten/THEOREM.md",
+      "archived_path": "inherited/order-ten-theorem.md",
+      "sha256": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002"
+    }
+  ]
+}

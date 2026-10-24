@@ -1,0 +1,10 @@
+{
+  "source_directory": "/workspace/scratch/07d5532f2fce/session51-order-eleven",
+  "manifest_sha256": "9c89b66a103ddd34a2126e390418e7088728b09b9f57d7a01ee37afabea109b2",
+  "check_sha256": "c985f9df3626a903c6610aa84b336434971bdcbc1407a1179d6ffb7bcfa75a17",
+  "theorem_sha256": "877ac61d619c06d4ebb6605f61db09d39321a5b5db10c1592ef6ad9d431d0ccf",
+  "covered_files": 12,
+  "superseded_initial_manifest": "b6cb7df04efe89f65804181e9ad61729901ec033eeedad29f4a97358a87d4c03",
+  "change": "Checker docstring corrected to disclose hardcoded inherited lower-order distributions. Mathematical code and receipt bytes unchanged. Final scope edit makes all uncomputed regular11 claims local to the packet. Numerical data unchanged.",
+  "superseded_scope_manifest": "63f00f1065503be01ad35c1fe1de2a1659ef3e8761631f1bc9e57aaabcc6bd03"
+}

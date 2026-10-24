@@ -1,0 +1,10 @@
+{
+  "original": "session40_marked_ports_square_sum_20261023/marked-ports/PATH_TRANSPORT_AND_FOREST_RULE.md",
+  "sha256": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6",
+  "additional_sources": [
+    {
+      "path": "sources/THM-4731-self-line-leg-law.md",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+    }
+  ]
+}

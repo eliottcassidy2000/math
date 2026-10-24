@@ -1,0 +1,10 @@
+{
+  "labeled_regular_11": 48251508480,
+  "nonrigid_labeled_mass": 151764480,
+  "rigid_regular_classes": 1205,
+  "regular_classes": 1223,
+  "regular_error": 133210,
+  "strong_error": 142376,
+  "total_error": 152690,
+  "method": "coefficient count + independently classified nonrigid action orders; no parent atlas needed for arithmetic"
+}

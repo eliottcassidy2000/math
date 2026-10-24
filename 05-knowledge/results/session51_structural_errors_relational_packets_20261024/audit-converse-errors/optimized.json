@@ -1,0 +1,3139 @@
+{
+  "checks": {
+    "actual fourteen vertex paired defect SC": 1,
+    "actual stable cells odd": 332,
+    "affine anti fixed set formula": 50,
+    "all constructed ten representatives positive error": 160,
+    "all five sector self converse split": 2,
+    "anti automorphism order twice odd except trivial orders": 126,
+    "anti involution maps actual stable cells": 126,
+    "converse invariant defect": 160,
+    "even ten single defective SCC hostile": 1,
+    "exact tournament orientation": 237,
+    "extracted map remains anti": 126,
+    "extracted unique defective regular seven": 1,
+    "fixed actual cell parity and at most one": 126,
+    "fixed vertex parity and at most one": 126,
+    "full automorphism regular nine defect agrees inherited receipt": 12,
+    "full ten positive representative construction": 1,
+    "full ten positive representatives ordinary pairwise nonisomorphic": 160,
+    "full ten positive universe uniquely converse closed": 160,
+    "independently generated five rigid classes match inherited atlas": 1,
+    "inherited source pin sources/THM-644-gridsym-fiber-law-and-anti-redei.md": 1,
+    "inherited source pin sources/THM-647-anti-redei-theorem.md": 1,
+    "inherited source pin sources/order-ten-audit-receipt.json": 1,
+    "inherited source pin sources/order-ten-error-spectrum.json": 1,
+    "inherited source pin sources/order-ten-theorem.md": 1,
+    "inherited source pin sources/regular-block-counts.md": 1,
+    "inherited source pin sources/regular-nine-receipt.json": 1,
+    "inherited strong ten positive representative support": 1,
+    "legal tournament rows": 237,
+    "matrix converse agrees full isomorphism": 96,
+    "matrix full vertex automorphism orbit stabilizer": 96,
+    "matrix translation orbits partition": 96,
+    "merged full ten spectrum": 1,
+    "merged positive first moment": 1,
+    "merged positive support": 1,
+    "missing t square mutation rejected": 1,
+    "odd power anti involution": 126,
+    "ordinary full ten spectrum": 1,
+    "ordinary positive first moment": 1,
+    "paired defective SCC positive control": 1,
+    "positive strong nine representatives": 1,
+    "rigid self converse split": 2,
+    "rigid three triangle strong nine classes": 1,
+    "selected strong SCC alphabet converse closed": 1,
+    "self converse full ten spectrum": 1,
+    "small SCC self converse series": 7,
+    "small ordinary class count": 7,
+    "small self converse count": 7,
+    "symmetric regular matrix coefficient": 2,
+    "weighted SCC palindrome recurrence with squared t": 51
+  },
+  "five_matrix_sectors": [
+    {
+      "anti_fixed_histogram": [
+        [
+          1,
+          20
+        ],
+        [
+          26,
+          5
+        ]
+      ],
+      "classes": [
+        {
+          "count": 2,
+          "defect": 0,
+          "self_converse": false
+        },
+        {
+          "count": 2,
+          "defect": 0,
+          "self_converse": true
+        },
+        {
+          "count": 4,
+          "defect": 40,
+          "self_converse": true
+        }
+      ],
+      "degree": 1,
+      "labelled": 120,
+      "symmetric": 26
+    },
+    {
+      "anti_fixed_histogram": [
+        [
+          2,
+          20
+        ],
+        [
+          112,
+          5
+        ]
+      ],
+      "classes": [
+        {
+          "count": 4,
+          "defect": 0,
+          "self_converse": false
+        },
+        {
+          "count": 4,
+          "defect": 0,
+          "self_converse": true
+        },
+        {
+          "count": 60,
+          "defect": 40,
+          "self_converse": false
+        },
+        {
+          "count": 20,
+          "defect": 40,
+          "self_converse": true
+        }
+      ],
+      "degree": 2,
+      "labelled": 2040,
+      "symmetric": 112
+    }
+  ],
+  "order_ten": {
+    "merged_spectrum": [
+      [
+        14,
+        6
+      ],
+      [
+        18,
+        23
+      ],
+      [
+        36,
+        2
+      ],
+      [
+        40,
+        54
+      ],
+      [
+        72,
+        7
+      ]
+    ],
+    "ordinary_spectrum": [
+      [
+        14,
+        12
+      ],
+      [
+        18,
+        46
+      ],
+      [
+        36,
+        4
+      ],
+      [
+        40,
+        84
+      ],
+      [
+        72,
+        14
+      ]
+    ],
+    "representatives": [
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 0,
+        "defect": 40,
+        "rows": [
+          38,
+          76,
+          152,
+          529,
+          259,
+          222,
+          413,
+          795,
+          559,
+          119
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 1,
+        "defect": 40,
+        "rows": [
+          38,
+          76,
+          280,
+          529,
+          131,
+          222,
+          413,
+          783,
+          571,
+          119
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 2,
+        "defect": 40,
+        "rows": [
+          38,
+          76,
+          536,
+          273,
+          131,
+          222,
+          413,
+          783,
+          567,
+          123
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 3,
+        "defect": 40,
+        "rows": [
+          38,
+          140,
+          88,
+          529,
+          259,
+          222,
+          411,
+          797,
+          559,
+          119
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 4,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          408,
+          657,
+          771,
+          220,
+          412,
+          787,
+          555,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 5,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          408,
+          785,
+          643,
+          220,
+          412,
+          779,
+          563,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 6,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          664,
+          401,
+          771,
+          220,
+          412,
+          787,
+          551,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 8,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          664,
+          785,
+          387,
+          220,
+          412,
+          779,
+          551,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 7,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          792,
+          401,
+          643,
+          220,
+          412,
+          775,
+          563,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 9,
+        "defect": 40,
+        "rows": [
+          102,
+          108,
+          792,
+          657,
+          387,
+          220,
+          412,
+          775,
+          555,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 10,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          344,
+          657,
+          771,
+          220,
+          410,
+          789,
+          555,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 23,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          344,
+          785,
+          643,
+          220,
+          410,
+          781,
+          563,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 12,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          408,
+          593,
+          771,
+          220,
+          406,
+          793,
+          555,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 25,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          408,
+          785,
+          579,
+          220,
+          398,
+          793,
+          563,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 51,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          600,
+          401,
+          771,
+          220,
+          410,
+          789,
+          551,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 41,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          600,
+          785,
+          387,
+          220,
+          410,
+          781,
+          551,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 61,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          664,
+          337,
+          771,
+          220,
+          406,
+          793,
+          551,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 56,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          664,
+          785,
+          323,
+          220,
+          398,
+          793,
+          551,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 78,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          792,
+          209,
+          771,
+          220,
+          406,
+          789,
+          555,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 69,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          792,
+          337,
+          643,
+          220,
+          406,
+          781,
+          563,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 20,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          792,
+          401,
+          579,
+          220,
+          398,
+          789,
+          563,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 66,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          792,
+          593,
+          387,
+          220,
+          406,
+          781,
+          555,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 63,
+        "defect": 40,
+        "rows": [
+          102,
+          172,
+          792,
+          657,
+          323,
+          220,
+          398,
+          789,
+          555,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 11,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          312,
+          657,
+          771,
+          218,
+          412,
+          789,
+          555,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 24,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          312,
+          785,
+          643,
+          218,
+          412,
+          781,
+          563,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 13,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          408,
+          561,
+          771,
+          214,
+          412,
+          793,
+          555,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 53,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          568,
+          401,
+          771,
+          218,
+          412,
+          789,
+          551,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 43,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          568,
+          785,
+          387,
+          218,
+          412,
+          781,
+          551,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 28,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          664,
+          305,
+          771,
+          214,
+          412,
+          793,
+          551,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 50,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          792,
+          177,
+          771,
+          214,
+          412,
+          789,
+          555,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 30,
+        "defect": 40,
+        "rows": [
+          102,
+          204,
+          792,
+          657,
+          291,
+          206,
+          412,
+          789,
+          555,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 31,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          216,
+          657,
+          771,
+          220,
+          410,
+          787,
+          557,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 44,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          216,
+          785,
+          643,
+          220,
+          410,
+          779,
+          565,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 54,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          344,
+          657,
+          643,
+          220,
+          410,
+          775,
+          569,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 36,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          408,
+          593,
+          643,
+          220,
+          406,
+          779,
+          569,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 76,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          600,
+          657,
+          387,
+          220,
+          410,
+          775,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 34,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          209,
+          771,
+          220,
+          406,
+          787,
+          557,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 71,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          337,
+          643,
+          220,
+          406,
+          779,
+          565,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 62,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          401,
+          579,
+          220,
+          398,
+          787,
+          565,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 77,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          593,
+          387,
+          220,
+          406,
+          779,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 64,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          657,
+          323,
+          220,
+          398,
+          787,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 15,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          664,
+          785,
+          195,
+          220,
+          398,
+          779,
+          565,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 67,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          792,
+          209,
+          643,
+          220,
+          406,
+          775,
+          569,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 27,
+        "defect": 40,
+        "rows": [
+          102,
+          300,
+          792,
+          657,
+          195,
+          220,
+          398,
+          775,
+          569,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 32,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          184,
+          657,
+          771,
+          218,
+          412,
+          787,
+          557,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 45,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          184,
+          785,
+          643,
+          218,
+          412,
+          779,
+          565,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 55,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          312,
+          657,
+          643,
+          218,
+          412,
+          775,
+          569,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 47,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          664,
+          177,
+          771,
+          214,
+          412,
+          787,
+          557,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 48,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          664,
+          305,
+          643,
+          214,
+          412,
+          779,
+          565,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 52,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          664,
+          561,
+          387,
+          214,
+          412,
+          779,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 29,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          664,
+          657,
+          291,
+          206,
+          412,
+          787,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 14,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          664,
+          785,
+          163,
+          206,
+          412,
+          779,
+          565,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 49,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          792,
+          177,
+          643,
+          214,
+          412,
+          775,
+          569,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 26,
+        "defect": 40,
+        "rows": [
+          102,
+          332,
+          792,
+          657,
+          163,
+          206,
+          412,
+          775,
+          569,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 33,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          120,
+          657,
+          771,
+          218,
+          410,
+          789,
+          557,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 46,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          120,
+          785,
+          643,
+          218,
+          410,
+          781,
+          565,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 17,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          216,
+          561,
+          771,
+          214,
+          410,
+          793,
+          557,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 80,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          568,
+          337,
+          643,
+          218,
+          406,
+          781,
+          565,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 83,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          600,
+          305,
+          643,
+          214,
+          410,
+          781,
+          565,
+          107
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 79,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          600,
+          561,
+          387,
+          214,
+          410,
+          781,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 60,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          600,
+          657,
+          291,
+          206,
+          410,
+          789,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 16,
+        "defect": 40,
+        "rows": [
+          102,
+          396,
+          600,
+          785,
+          163,
+          206,
+          410,
+          781,
+          565,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 38,
+        "defect": 40,
+        "rows": [
+          102,
+          556,
+          344,
+          657,
+          387,
+          220,
+          410,
+          775,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 22,
+        "defect": 40,
+        "rows": [
+          102,
+          556,
+          408,
+          337,
+          643,
+          220,
+          406,
+          779,
+          563,
+          109
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 40,
+        "defect": 40,
+        "rows": [
+          102,
+          556,
+          408,
+          593,
+          387,
+          220,
+          406,
+          779,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 65,
+        "defect": 40,
+        "rows": [
+          102,
+          588,
+          312,
+          657,
+          387,
+          218,
+          412,
+          775,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 21,
+        "defect": 40,
+        "rows": [
+          102,
+          588,
+          664,
+          305,
+          387,
+          214,
+          412,
+          779,
+          551,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 42,
+        "defect": 40,
+        "rows": [
+          102,
+          588,
+          792,
+          177,
+          387,
+          214,
+          412,
+          775,
+          555,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 68,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          312,
+          337,
+          643,
+          218,
+          406,
+          781,
+          563,
+          109
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 19,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          312,
+          401,
+          579,
+          218,
+          398,
+          789,
+          563,
+          109
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 81,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          312,
+          593,
+          387,
+          218,
+          406,
+          781,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 37,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          312,
+          657,
+          323,
+          218,
+          398,
+          789,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 72,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          344,
+          305,
+          643,
+          214,
+          410,
+          781,
+          563,
+          109
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 82,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          344,
+          561,
+          387,
+          214,
+          410,
+          781,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 74,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          344,
+          657,
+          291,
+          206,
+          410,
+          789,
+          555,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 1,
+        "automorphism_order": 1,
+        "converse_partner": 75,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          344,
+          785,
+          163,
+          206,
+          410,
+          781,
+          563,
+          117
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 35,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          568,
+          337,
+          387,
+          218,
+          406,
+          781,
+          551,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 39,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          600,
+          305,
+          387,
+          214,
+          410,
+          781,
+          551,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 18,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          664,
+          305,
+          323,
+          214,
+          398,
+          793,
+          551,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 59,
+        "defect": 40,
+        "rows": [
+          102,
+          652,
+          664,
+          337,
+          291,
+          206,
+          406,
+          793,
+          551,
+          121
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 57,
+        "defect": 40,
+        "rows": [
+          166,
+          300,
+          344,
+          657,
+          579,
+          220,
+          395,
+          790,
+          569,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 70,
+        "defect": 40,
+        "rows": [
+          166,
+          300,
+          600,
+          657,
+          323,
+          220,
+          395,
+          790,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 73,
+        "defect": 40,
+        "rows": [
+          166,
+          300,
+          664,
+          593,
+          323,
+          220,
+          391,
+          794,
+          557,
+          115
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 58,
+        "defect": 40,
+        "rows": [
+          166,
+          332,
+          312,
+          657,
+          579,
+          218,
+          397,
+          790,
+          569,
+          103
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 86,
+        "defect": 14,
+        "rows": [
+          202,
+          212,
+          225,
+          150,
+          165,
+          139,
+          184,
+          256,
+          639,
+          255
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 87,
+        "defect": 14,
+        "rows": [
+          202,
+          212,
+          225,
+          150,
+          165,
+          139,
+          184,
+          768,
+          127,
+          383
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 84,
+        "defect": 14,
+        "rows": [
+          458,
+          468,
+          481,
+          406,
+          421,
+          395,
+          440,
+          256,
+          512,
+          255
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 85,
+        "defect": 14,
+        "rows": [
+          458,
+          468,
+          481,
+          406,
+          421,
+          395,
+          440,
+          512,
+          640,
+          127
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 94,
+        "defect": 18,
+        "rows": [
+          74,
+          148,
+          289,
+          86,
+          293,
+          139,
+          694,
+          797,
+          619,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 102,
+        "defect": 18,
+        "rows": [
+          74,
+          148,
+          289,
+          214,
+          357,
+          395,
+          678,
+          789,
+          587,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 91,
+        "defect": 18,
+        "rows": [
+          74,
+          148,
+          289,
+          598,
+          805,
+          651,
+          694,
+          797,
+          619,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 90,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          86,
+          163,
+          269,
+          694,
+          813,
+          603,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 106,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          214,
+          419,
+          333,
+          662,
+          805,
+          587,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 114,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          598,
+          675,
+          781,
+          182,
+          301,
+          91,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 88,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          598,
+          675,
+          781,
+          694,
+          813,
+          603,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 96,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          726,
+          931,
+          845,
+          150,
+          293,
+          75,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 95,
+        "defect": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          726,
+          931,
+          845,
+          662,
+          805,
+          587,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 99,
+        "defect": 18,
+        "rows": [
+          74,
+          292,
+          145,
+          86,
+          291,
+          141,
+          694,
+          795,
+          621,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 111,
+        "defect": 18,
+        "rows": [
+          74,
+          292,
+          145,
+          214,
+          355,
+          397,
+          678,
+          787,
+          589,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 97,
+        "defect": 18,
+        "rows": [
+          74,
+          292,
+          145,
+          598,
+          803,
+          653,
+          694,
+          795,
+          621,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 108,
+        "defect": 18,
+        "rows": [
+          90,
+          172,
+          305,
+          212,
+          418,
+          329,
+          662,
+          805,
+          587,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 117,
+        "defect": 18,
+        "rows": [
+          90,
+          172,
+          305,
+          596,
+          674,
+          777,
+          182,
+          301,
+          91,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 89,
+        "defect": 18,
+        "rows": [
+          90,
+          172,
+          305,
+          596,
+          674,
+          777,
+          694,
+          813,
+          603,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 104,
+        "defect": 18,
+        "rows": [
+          90,
+          172,
+          305,
+          724,
+          930,
+          841,
+          150,
+          293,
+          75,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 103,
+        "defect": 18,
+        "rows": [
+          90,
+          172,
+          305,
+          724,
+          930,
+          841,
+          662,
+          805,
+          587,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 118,
+        "defect": 18,
+        "rows": [
+          90,
+          180,
+          297,
+          594,
+          804,
+          649,
+          182,
+          285,
+          107,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 92,
+        "defect": 18,
+        "rows": [
+          90,
+          180,
+          297,
+          594,
+          804,
+          649,
+          694,
+          797,
+          619,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 115,
+        "defect": 18,
+        "rows": [
+          90,
+          180,
+          297,
+          722,
+          868,
+          905,
+          166,
+          277,
+          75,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 100,
+        "defect": 18,
+        "rows": [
+          90,
+          180,
+          297,
+          722,
+          868,
+          905,
+          678,
+          789,
+          587,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 112,
+        "defect": 18,
+        "rows": [
+          90,
+          300,
+          177,
+          212,
+          354,
+          393,
+          678,
+          787,
+          589,
+          63
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 116,
+        "defect": 18,
+        "rows": [
+          90,
+          300,
+          177,
+          596,
+          802,
+          649,
+          182,
+          283,
+          109,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 98,
+        "defect": 18,
+        "rows": [
+          90,
+          300,
+          177,
+          596,
+          802,
+          649,
+          694,
+          795,
+          621,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 109,
+        "defect": 18,
+        "rows": [
+          90,
+          300,
+          177,
+          724,
+          866,
+          905,
+          678,
+          787,
+          589,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 119,
+        "defect": 18,
+        "rows": [
+          90,
+          308,
+          169,
+          594,
+          676,
+          777,
+          182,
+          299,
+          93,
+          455
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 93,
+        "defect": 18,
+        "rows": [
+          90,
+          308,
+          169,
+          594,
+          676,
+          777,
+          694,
+          811,
+          605,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 107,
+        "defect": 18,
+        "rows": [
+          90,
+          308,
+          169,
+          722,
+          932,
+          841,
+          662,
+          803,
+          589,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 110,
+        "defect": 18,
+        "rows": [
+          218,
+          364,
+          433,
+          596,
+          802,
+          649,
+          692,
+          794,
+          617,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 101,
+        "defect": 18,
+        "rows": [
+          218,
+          372,
+          425,
+          594,
+          676,
+          777,
+          692,
+          810,
+          601,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 105,
+        "defect": 18,
+        "rows": [
+          218,
+          372,
+          425,
+          722,
+          932,
+          841,
+          660,
+          802,
+          585,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 113,
+        "defect": 18,
+        "rows": [
+          218,
+          436,
+          361,
+          594,
+          804,
+          649,
+          690,
+          796,
+          617,
+          7
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 123,
+        "defect": 18,
+        "rows": [
+          1022,
+          148,
+          296,
+          578,
+          172,
+          586,
+          278,
+          364,
+          570,
+          214
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 122,
+        "defect": 18,
+        "rows": [
+          586,
+          660,
+          801,
+          598,
+          805,
+          651,
+          694,
+          797,
+          619,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 121,
+        "defect": 18,
+        "rows": [
+          1022,
+          148,
+          328,
+          546,
+          172,
+          326,
+          538,
+          364,
+          602,
+          182
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 120,
+        "defect": 18,
+        "rows": [
+          586,
+          676,
+          785,
+          598,
+          675,
+          781,
+          694,
+          813,
+          603,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 125,
+        "defect": 18,
+        "rows": [
+          1022,
+          148,
+          328,
+          546,
+          428,
+          838,
+          666,
+          300,
+          586,
+          150
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 124,
+        "defect": 18,
+        "rows": [
+          586,
+          676,
+          785,
+          726,
+          931,
+          845,
+          662,
+          805,
+          587,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 127,
+        "defect": 18,
+        "rows": [
+          1022,
+          148,
+          584,
+          290,
+          172,
+          582,
+          282,
+          364,
+          566,
+          218
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 126,
+        "defect": 18,
+        "rows": [
+          586,
+          804,
+          657,
+          598,
+          803,
+          653,
+          694,
+          795,
+          621,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 129,
+        "defect": 36,
+        "rows": [
+          1022,
+          612,
+          680,
+          706,
+          526,
+          344,
+          404,
+          306,
+          30,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 128,
+        "defect": 36,
+        "rows": [
+          818,
+          852,
+          865,
+          775,
+          684,
+          714,
+          665,
+          527,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 131,
+        "defect": 36,
+        "rows": [
+          1022,
+          612,
+          680,
+          706,
+          526,
+          408,
+          308,
+          338,
+          30,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 130,
+        "defect": 36,
+        "rows": [
+          818,
+          852,
+          865,
+          775,
+          716,
+          666,
+          681,
+          527,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 133,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          610,
+          564,
+          646,
+          464,
+          408,
+          270,
+          30,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 132,
+        "defect": 72,
+        "rows": [
+          820,
+          817,
+          794,
+          835,
+          744,
+          716,
+          647,
+          527,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 135,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          610,
+          660,
+          550,
+          456,
+          408,
+          278,
+          30,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 134,
+        "defect": 72,
+        "rows": [
+          820,
+          817,
+          842,
+          787,
+          740,
+          716,
+          651,
+          527,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 137,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          610,
+          660,
+          646,
+          408,
+          312,
+          326,
+          30,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 136,
+        "defect": 72,
+        "rows": [
+          820,
+          817,
+          842,
+          835,
+          716,
+          668,
+          675,
+          527,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 139,
+        "defect": 18,
+        "rows": [
+          1022,
+          616,
+          610,
+          660,
+          774,
+          408,
+          184,
+          278,
+          78,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 138,
+        "defect": 18,
+        "rows": [
+          820,
+          817,
+          842,
+          899,
+          716,
+          604,
+          651,
+          551,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 141,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          610,
+          788,
+          646,
+          408,
+          184,
+          270,
+          86,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 140,
+        "defect": 72,
+        "rows": [
+          820,
+          817,
+          906,
+          835,
+          716,
+          604,
+          647,
+          555,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 143,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          674,
+          564,
+          774,
+          464,
+          156,
+          282,
+          78,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 142,
+        "defect": 72,
+        "rows": [
+          820,
+          849,
+          794,
+          899,
+          744,
+          590,
+          653,
+          551,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 145,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          674,
+          564,
+          774,
+          464,
+          284,
+          90,
+          142,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 144,
+        "defect": 72,
+        "rows": [
+          820,
+          849,
+          794,
+          899,
+          744,
+          654,
+          557,
+          583,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 147,
+        "defect": 72,
+        "rows": [
+          1022,
+          616,
+          674,
+          596,
+          774,
+          216,
+          404,
+          282,
+          46,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 1,
+        "converse_partner": 146,
+        "defect": 72,
+        "rows": [
+          820,
+          849,
+          810,
+          899,
+          620,
+          714,
+          653,
+          535,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 149,
+        "defect": 18,
+        "rows": [
+          1022,
+          616,
+          674,
+          596,
+          774,
+          408,
+          308,
+          90,
+          142,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 148,
+        "defect": 18,
+        "rows": [
+          820,
+          849,
+          810,
+          899,
+          716,
+          666,
+          557,
+          583,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 151,
+        "defect": 18,
+        "rows": [
+          1022,
+          616,
+          898,
+          564,
+          550,
+          452,
+          156,
+          282,
+          90,
+          480
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 150,
+        "defect": 18,
+        "rows": [
+          820,
+          961,
+          794,
+          787,
+          738,
+          590,
+          653,
+          557,
+          752,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 153,
+        "defect": 14,
+        "rows": [
+          1022,
+          404,
+          424,
+          450,
+          300,
+          330,
+          278,
+          368,
+          512,
+          254
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 152,
+        "defect": 14,
+        "rows": [
+          714,
+          724,
+          737,
+          662,
+          677,
+          651,
+          696,
+          768,
+          639,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 158,
+        "defect": 14,
+        "rows": [
+          970,
+          980,
+          993,
+          918,
+          933,
+          907,
+          952,
+          0,
+          128,
+          384
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 9,
+        "converse_partner": 159,
+        "defect": 14,
+        "rows": [
+          970,
+          980,
+          993,
+          918,
+          933,
+          907,
+          952,
+          512,
+          128,
+          256
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 157,
+        "defect": 14,
+        "rows": [
+          1022,
+          916,
+          936,
+          962,
+          812,
+          842,
+          790,
+          880,
+          0,
+          256
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 156,
+        "defect": 14,
+        "rows": [
+          1020,
+          1021,
+          808,
+          848,
+          900,
+          600,
+          660,
+          556,
+          736,
+          0
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 3,
+        "converse_partner": 154,
+        "defect": 14,
+        "rows": [
+          1016,
+          1017,
+          1019,
+          592,
+          672,
+          776,
+          176,
+          296,
+          88,
+          448
+        ]
+      },
+      {
+        "anti_automorphism_order": 0,
+        "automorphism_order": 9,
+        "converse_partner": 155,
+        "defect": 14,
+        "rows": [
+          1020,
+          1017,
+          1018,
+          592,
+          672,
+          776,
+          176,
+          296,
+          88,
+          448
+        ]
+      }
+    ],
+    "self_converse_spectrum": [
+      [
+        40,
+        24
+      ]
+    ]
+  },
+  "scope": "Independent full isomorphism tests of all 160 classified positive-error order-ten classes; no unrestricted order-ten enumeration",
+  "small_orders": [
+    {
+      "n": 0,
+      "ordinary": 1,
+      "self_converse": 1,
+      "strong": 0,
+      "strong_self_converse": 0
+    },
+    {
+      "n": 1,
+      "ordinary": 1,
+      "self_converse": 1,
+      "strong": 1,
+      "strong_self_converse": 1
+    },
+    {
+      "n": 2,
+      "ordinary": 1,
+      "self_converse": 1,
+      "strong": 0,
+      "strong_self_converse": 0
+    },
+    {
+      "n": 3,
+      "ordinary": 2,
+      "self_converse": 2,
+      "strong": 1,
+      "strong_self_converse": 1
+    },
+    {
+      "n": 4,
+      "ordinary": 4,
+      "self_converse": 2,
+      "strong": 1,
+      "strong_self_converse": 1
+    },
+    {
+      "n": 5,
+      "ordinary": 12,
+      "self_converse": 8,
+      "strong": 6,
+      "strong_self_converse": 6
+    },
+    {
+      "n": 6,
+      "ordinary": 56,
+      "self_converse": 12,
+      "strong": 35,
+      "strong_self_converse": 9
+    }
+  ],
+  "status": "PASS",
+  "weighted_SCC_controls": {
+    "direct_words": 2585,
+    "maximum_order": 16,
+    "selected_strong_weights": [
+      [
+        1,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        7,
+        14
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "self_converse_words": 117,
+    "two_defective_component_coefficient": 1
+  }
+}

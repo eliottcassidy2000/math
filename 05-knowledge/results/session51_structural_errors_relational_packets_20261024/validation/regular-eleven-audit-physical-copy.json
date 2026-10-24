@@ -1,0 +1,128 @@
+{
+  "manifest_sha256": "7c25ba56bb4a07b61f23670bc1e362aa7a578e9c78c13c4221c2313da1543d03",
+  "physical_copy_only": true,
+  "status": "PASS",
+  "steps": [
+    {
+      "returncode": 0,
+      "seconds": 1.213,
+      "step": "compile normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0215,
+      "step": "independent seven normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.1197,
+      "step": "independent nine normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 50.8825,
+      "step": "independent eleven normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 2.1725,
+      "step": "compile O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0034,
+      "step": "independent seven O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0202,
+      "step": "independent nine O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 8.534,
+      "step": "independent eleven O2"
+    },
+    {
+      "returncode": 0,
+      "seconds": 6.6654,
+      "step": "compile O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0048,
+      "step": "independent seven O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0208,
+      "step": "independent nine O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 13.0819,
+      "step": "independent eleven O3"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0323,
+      "step": "literal degree DP normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.079,
+      "step": "semantic hostiles normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.0872,
+      "step": "audit frozen validation normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.4947,
+      "step": "producer frozen validation normal"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.1146,
+      "step": "literal degree DP optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.2134,
+      "step": "semantic hostiles optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.1849,
+      "step": "audit frozen validation optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 0.5815,
+      "step": "producer frozen validation optimized"
+    },
+    {
+      "returncode": 0,
+      "seconds": 17.7269,
+      "step": "all producer two-mode replay"
+    },
+    {
+      "returncode": 1,
+      "step": "reject byte mutation producer/eleven-O2-states.tsv []"
+    },
+    {
+      "returncode": 1,
+      "step": "reject byte mutation producer/eleven-O2-states.tsv ['-O']"
+    },
+    {
+      "returncode": 1,
+      "step": "reject byte mutation independent-eleven-normal.json []"
+    },
+    {
+      "returncode": 1,
+      "step": "reject byte mutation independent-eleven-normal.json ['-O']"
+    }
+  ]
+}

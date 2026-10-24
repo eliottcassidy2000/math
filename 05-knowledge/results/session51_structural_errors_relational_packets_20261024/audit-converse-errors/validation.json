@@ -1,0 +1,10 @@
+{
+  "missing_t_square_rejected": "PASS",
+  "naive_halving_rejected": "PASS",
+  "normal_sha256": "ce0fd4e5db08623e222fbaa20c6d2e4c547fdb84180341d05d92c4ab6d65692e",
+  "real_copy_normal_and_optimized": "PASS",
+  "stable_cell_pairing_not_sufficient": "PASS",
+  "status": "PASS",
+  "tampered_source_rejected": "PASS",
+  "wrong_converse_action_rejected_under_O": "PASS"
+}

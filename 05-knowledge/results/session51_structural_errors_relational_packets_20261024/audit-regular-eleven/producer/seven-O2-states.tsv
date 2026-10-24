@@ -1,0 +1,6 @@
+state	component	parent_aut_order	pointed_source_states	converse_state	reroot_destinations
+0	0	3	2	0	0:1,2:3,4:3
+1	1	3	2	1	1:7
+2	0	1	6	4	0:1,2:3,4:3
+3	2	1	6	3	3:7
+4	0	1	6	2	0:1,2:3,4:3

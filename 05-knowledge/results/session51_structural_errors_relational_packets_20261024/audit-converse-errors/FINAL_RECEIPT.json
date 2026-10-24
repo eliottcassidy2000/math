@@ -1,0 +1,25 @@
+{
+  "all_blue_positive_nodes": 0,
+  "black_ports_on_self_converse_slice": 337304,
+  "blue_mixed_positive_nodes": 24,
+  "blue_ports_on_self_converse_slice": 4200,
+  "frozen_producer_manifest_sha256": "30b62a8fdf93065b19f071050d9fcfe5ad08c5f79cfcfbf30afcdae53babde5a",
+  "full_ten_classes": 160,
+  "hostile_controls": {
+    "missing_t_square_rejected": "PASS",
+    "naive_halving_rejected": "PASS",
+    "stable_cell_pairing_not_sufficient": "PASS",
+    "tampered_source_rejected": "PASS",
+    "wrong_converse_action_rejected_under_O": "PASS"
+  },
+  "independent_normal_optimized_equal": true,
+  "independent_port_normal_optimized_equal": true,
+  "independent_prime_normal_optimized_equal": true,
+  "merged_error": 3234,
+  "merged_positive_nodes": 92,
+  "producer_checkers_replayed": 5,
+  "producer_real_copy_runs": 10,
+  "publication_performed": false,
+  "self_converse_positive_classes": 24,
+  "status": "PASS"
+}

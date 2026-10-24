@@ -1,0 +1,78 @@
+{
+  "boundary_class_automorphism_orders": [
+    [
+      1,
+      1016
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      9,
+      1
+    ]
+  ],
+  "boundary_class_stable_patterns": [
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      1016
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      11
+    ],
+    [
+      [
+        5,
+        5
+      ],
+      4
+    ]
+  ],
+  "boundary_presentations": 4020,
+  "candidate_manifest_sha256": "141cbcb8e2696238c2db7db40e4bcd9570438d791a4c405e662427671db8f6da",
+  "distinct_zero_error_target_classes": 1031,
+  "incident_component_positive_zero_sizes": [
+    [
+      4,
+      238
+    ],
+    [
+      20,
+      793
+    ]
+  ],
+  "independent_normal_sha256": "252043566518a0dc466392a0c124751cb7efe38a48c612ba8af21991024951c8",
+  "independent_optimized_sha256": "252043566518a0dc466392a0c124751cb7efe38a48c612ba8af21991024951c8",
+  "independent_wiring_manifest_sha256": "53b674adb896c5f689e38b82fcbefd3a21ea0dfe9c19e5d96dba8bb43f806c9c",
+  "method": "all within-actual-stable-cell permutations, full matrices, exhaustive automorphisms, all 4020 target coordinate witnesses verified",
+  "publication": "none; all producer packets unchanged",
+  "scope": "complete blue edge neighborhood of the 24 positive-error self-converse order-ten nodes; excludes zero-zero and black edges",
+  "status": "PASS",
+  "total_edges_incident_to_positive_slice": 4110,
+  "total_incident_graph_vertices": 1055,
+  "validation_sha256": "4ccbac714165b1258f283a8414540c1d4a31f1319aa3efdf1ee0ec502702eb52"
+}

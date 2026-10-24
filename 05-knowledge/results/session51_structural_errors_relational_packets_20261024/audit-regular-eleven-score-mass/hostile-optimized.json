@@ -1,0 +1,78 @@
+{
+  "controls": [
+    {
+      "name": "missing nonrigid class",
+      "reason": "source class count",
+      "result": "REJECTED"
+    },
+    {
+      "name": "nonliteral isomorphic duplicate",
+      "reason": "distinct nonrigid ordinary classes",
+      "result": "REJECTED"
+    },
+    {
+      "name": "stabilizer order mistaken for full group",
+      "reason": "full ordinary automorphism order",
+      "result": "REJECTED"
+    },
+    {
+      "name": "wrong full vertex orbits",
+      "reason": "full vertex orbit sizes",
+      "result": "REJECTED"
+    },
+    {
+      "name": "wrong nonrigid error",
+      "reason": "nonrigid error from full orbits",
+      "result": "REJECTED"
+    },
+    {
+      "name": "one-sided invalid edge",
+      "reason": "one directed edge per pair",
+      "result": "REJECTED"
+    },
+    {
+      "name": "valid tournament made nonregular",
+      "reason": "regular degrees",
+      "result": "REJECTED"
+    },
+    {
+      "name": "nonintegral rigid mass",
+      "reason": "rigid mass divisible by 11 factorial",
+      "result": "REJECTED"
+    },
+    {
+      "name": "negative rigid mass",
+      "reason": "nonnegative rigid mass",
+      "result": "REJECTED"
+    },
+    {
+      "name": "pointed mass inconsistent with deficit",
+      "reason": "pointing deficit identity",
+      "result": "REJECTED"
+    },
+    {
+      "name": "omit binomial labelled-choice multiplicity",
+      "reason": "independent recurrences at regular order 3",
+      "result": "REJECTED"
+    },
+    {
+      "name": "reverse residual-score update",
+      "reason": "independent recurrences at regular order 3",
+      "result": "REJECTED"
+    },
+    {
+      "name": "quotient by repeated-score factorial",
+      "reason": "independent recurrences at regular order 5",
+      "result": "REJECTED"
+    },
+    {
+      "name": "multiply by repeated-score factorial",
+      "reason": "independent recurrences at regular order 5",
+      "result": "REJECTED"
+    }
+  ],
+  "nonself_converse_representatives": 4,
+  "positive_relabel_control": true,
+  "semantic_rejections": 14,
+  "status": "PASS"
+}

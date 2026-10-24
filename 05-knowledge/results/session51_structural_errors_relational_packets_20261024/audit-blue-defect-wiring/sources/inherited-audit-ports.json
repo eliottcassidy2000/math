@@ -1,0 +1,458 @@
+{
+  "black_port_sum": 337304,
+  "blue_histogram": [
+    [
+      119,
+      2
+    ],
+    [
+      123,
+      1
+    ],
+    [
+      131,
+      1
+    ],
+    [
+      179,
+      1
+    ],
+    [
+      181,
+      2
+    ],
+    [
+      183,
+      4
+    ],
+    [
+      185,
+      4
+    ],
+    [
+      187,
+      5
+    ],
+    [
+      189,
+      2
+    ],
+    [
+      191,
+      2
+    ]
+  ],
+  "blue_port_sum": 4200,
+  "records": [
+    {
+      "black_ports": 8122,
+      "blue_ports": 123,
+      "hamiltonian_paths": 8245,
+      "rows": [
+        38,
+        76,
+        152,
+        529,
+        259,
+        222,
+        413,
+        795,
+        559,
+        119
+      ]
+    },
+    {
+      "black_ports": 8102,
+      "blue_ports": 119,
+      "hamiltonian_paths": 8221,
+      "rows": [
+        38,
+        76,
+        280,
+        529,
+        131,
+        222,
+        413,
+        783,
+        571,
+        119
+      ]
+    },
+    {
+      "black_ports": 8082,
+      "blue_ports": 119,
+      "hamiltonian_paths": 8201,
+      "rows": [
+        38,
+        76,
+        536,
+        273,
+        131,
+        222,
+        413,
+        783,
+        567,
+        123
+      ]
+    },
+    {
+      "black_ports": 8062,
+      "blue_ports": 131,
+      "hamiltonian_paths": 8193,
+      "rows": [
+        38,
+        140,
+        88,
+        529,
+        259,
+        222,
+        411,
+        797,
+        559,
+        119
+      ]
+    },
+    {
+      "black_ports": 15284,
+      "blue_ports": 181,
+      "hamiltonian_paths": 15465,
+      "rows": [
+        102,
+        108,
+        408,
+        657,
+        771,
+        220,
+        412,
+        787,
+        555,
+        103
+      ]
+    },
+    {
+      "black_ports": 15276,
+      "blue_ports": 189,
+      "hamiltonian_paths": 15465,
+      "rows": [
+        102,
+        108,
+        408,
+        785,
+        643,
+        220,
+        412,
+        779,
+        563,
+        103
+      ]
+    },
+    {
+      "black_ports": 15364,
+      "blue_ports": 185,
+      "hamiltonian_paths": 15549,
+      "rows": [
+        102,
+        108,
+        664,
+        401,
+        771,
+        220,
+        412,
+        787,
+        551,
+        107
+      ]
+    },
+    {
+      "black_ports": 15314,
+      "blue_ports": 183,
+      "hamiltonian_paths": 15497,
+      "rows": [
+        102,
+        108,
+        792,
+        657,
+        387,
+        220,
+        412,
+        775,
+        555,
+        115
+      ]
+    },
+    {
+      "black_ports": 15210,
+      "blue_ports": 183,
+      "hamiltonian_paths": 15393,
+      "rows": [
+        102,
+        172,
+        344,
+        657,
+        771,
+        220,
+        410,
+        789,
+        555,
+        103
+      ]
+    },
+    {
+      "black_ports": 15230,
+      "blue_ports": 187,
+      "hamiltonian_paths": 15417,
+      "rows": [
+        102,
+        172,
+        408,
+        593,
+        771,
+        220,
+        406,
+        793,
+        555,
+        103
+      ]
+    },
+    {
+      "black_ports": 15318,
+      "blue_ports": 187,
+      "hamiltonian_paths": 15505,
+      "rows": [
+        102,
+        172,
+        792,
+        401,
+        579,
+        220,
+        398,
+        789,
+        563,
+        107
+      ]
+    },
+    {
+      "black_ports": 15188,
+      "blue_ports": 185,
+      "hamiltonian_paths": 15373,
+      "rows": [
+        102,
+        204,
+        312,
+        785,
+        643,
+        218,
+        412,
+        781,
+        563,
+        103
+      ]
+    },
+    {
+      "black_ports": 15318,
+      "blue_ports": 183,
+      "hamiltonian_paths": 15501,
+      "rows": [
+        102,
+        204,
+        664,
+        305,
+        771,
+        214,
+        412,
+        793,
+        551,
+        107
+      ]
+    },
+    {
+      "black_ports": 15178,
+      "blue_ports": 183,
+      "hamiltonian_paths": 15361,
+      "rows": [
+        102,
+        204,
+        792,
+        657,
+        291,
+        206,
+        412,
+        789,
+        555,
+        115
+      ]
+    },
+    {
+      "black_ports": 15122,
+      "blue_ports": 191,
+      "hamiltonian_paths": 15313,
+      "rows": [
+        102,
+        300,
+        216,
+        657,
+        771,
+        220,
+        410,
+        787,
+        557,
+        103
+      ]
+    },
+    {
+      "black_ports": 15130,
+      "blue_ports": 191,
+      "hamiltonian_paths": 15321,
+      "rows": [
+        102,
+        332,
+        184,
+        785,
+        643,
+        218,
+        412,
+        779,
+        565,
+        103
+      ]
+    },
+    {
+      "black_ports": 15264,
+      "blue_ports": 185,
+      "hamiltonian_paths": 15449,
+      "rows": [
+        102,
+        332,
+        664,
+        177,
+        771,
+        214,
+        412,
+        787,
+        557,
+        107
+      ]
+    },
+    {
+      "black_ports": 15258,
+      "blue_ports": 187,
+      "hamiltonian_paths": 15445,
+      "rows": [
+        102,
+        332,
+        664,
+        305,
+        643,
+        214,
+        412,
+        779,
+        565,
+        107
+      ]
+    },
+    {
+      "black_ports": 15172,
+      "blue_ports": 185,
+      "hamiltonian_paths": 15357,
+      "rows": [
+        102,
+        396,
+        600,
+        657,
+        291,
+        206,
+        410,
+        789,
+        557,
+        115
+      ]
+    },
+    {
+      "black_ports": 15276,
+      "blue_ports": 181,
+      "hamiltonian_paths": 15457,
+      "rows": [
+        102,
+        588,
+        312,
+        657,
+        387,
+        218,
+        412,
+        775,
+        555,
+        117
+      ]
+    },
+    {
+      "black_ports": 15290,
+      "blue_ports": 179,
+      "hamiltonian_paths": 15469,
+      "rows": [
+        102,
+        652,
+        312,
+        337,
+        643,
+        218,
+        406,
+        781,
+        563,
+        109
+      ]
+    },
+    {
+      "black_ports": 15260,
+      "blue_ports": 189,
+      "hamiltonian_paths": 15449,
+      "rows": [
+        102,
+        652,
+        344,
+        305,
+        643,
+        214,
+        410,
+        781,
+        563,
+        109
+      ]
+    },
+    {
+      "black_ports": 15266,
+      "blue_ports": 187,
+      "hamiltonian_paths": 15453,
+      "rows": [
+        102,
+        652,
+        344,
+        657,
+        291,
+        206,
+        410,
+        789,
+        555,
+        117
+      ]
+    },
+    {
+      "black_ports": 15218,
+      "blue_ports": 187,
+      "hamiltonian_paths": 15405,
+      "rows": [
+        102,
+        652,
+        344,
+        785,
+        163,
+        206,
+        410,
+        781,
+        563,
+        117
+      ]
+    }
+  ],
+  "scope": "24 rigid self-converse class path fibres, not line pairing or metagraph adjacency",
+  "status": "PASS"
+}

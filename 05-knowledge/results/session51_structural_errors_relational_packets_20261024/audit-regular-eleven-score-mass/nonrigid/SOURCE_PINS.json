@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "source_path": "session51-audit-order-eleven/audit.py",
+      "archived_path": "support.py",
+      "sha256": "a1d1cced1fc77a15ca1f899a1ac1212da740e1556195f921277cd5bafee90b8a"
+    },
+    {
+      "source_path": "session51-audit-order-eleven/AUDIT.md",
+      "archived_path": "inherited/nonregular-audit.md",
+      "sha256": "6aa76c0f972f0c7dbe8dc0b30aa9ab964b8a8eb9c8e41de3601caf26518f1739"
+    }
+  ]
+}

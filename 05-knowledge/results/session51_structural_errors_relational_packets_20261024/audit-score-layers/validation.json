@@ -1,0 +1,32 @@
+{
+  "candidate_inventory": {
+    "MANIFEST.json": "e1a91122cbc42f9de3edfc8e650959a1d79f55158e796c007b8dc34fd31432d9",
+    "README.md": "b2f81c18e4e8ea3c150118b4718f75f3ac5ebaf45e8f32b8979ef13c5d20ba93",
+    "SOURCE_PINS.json": "101a2e878b86bcd03bca4a115c2023ef8d499795e52d889e4a37c7e1d47625ca",
+    "THEOREM.md": "0c6b1ef1464bffe4f63ecec364396184d8e8698e2c4a75de0a945351d715155e",
+    "check.py": "0058a91266e7455a6e0cf4806a751e5d695c63af342dd80f6d29ba8fc8ed0598",
+    "normal.json": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+    "normal.out": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+    "optimized.json": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+    "optimized.out": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+    "relocation.out": "2c4cee76544c58be624597b9fe240d13d61e91478af3fa873808e818603c88f5",
+    "sources/PATH_TRANSPORT_AND_FOREST_RULE.md": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6",
+    "sources/THM-4731-self-line-leg-law.md": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+    "verify_manifest.py": "44713a9117b491793e6e4c02c2ca7a73fedd6708d57adc483efba1407f819d92"
+  },
+  "candidate_manifest_sha256": "e1a91122cbc42f9de3edfc8e650959a1d79f55158e796c007b8dc34fd31432d9",
+  "candidate_receipt_sha256": "d8218fbf4bf60bbd13294ff2bcc317ee9f22d188d762788e35936ad280f3aec2",
+  "checks": [
+    "independent actual-copy normal/-O replay from /tmp byte-identical",
+    "candidate strict manifest and actual-copy normal/-O replay verified",
+    "changed inherited transport source rejected normally and under -O",
+    "semantic hostile rejected normally and under -O: omit black same-score endpoint value",
+    "semantic hostile rejected normally and under -O: incorrect interval gap coefficient",
+    "semantic hostile rejected normally and under -O: promote formal value to nonnegative attainment",
+    "semantic hostile rejected normally and under -O: replace C by identity",
+    "candidate theorem corruption rejected normally and under -O",
+    "all original candidate files unchanged; no publication"
+  ],
+  "independent_receipt_sha256": "cfd9e2b42e5a33c4bfda21535842a197bda2ce66b14d6423758a9c2787351894",
+  "status": "PASS"
+}

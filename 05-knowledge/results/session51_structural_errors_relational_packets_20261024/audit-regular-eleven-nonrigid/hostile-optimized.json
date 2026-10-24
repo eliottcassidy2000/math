@@ -1,0 +1,45 @@
+{
+  "controls": [
+    {
+      "accepted": true,
+      "name": "ordinary-isomorphism-does-not-fold-converse"
+    },
+    {
+      "diagnostic": "PASS exact nonrigid full-atlas holdout",
+      "expected_acceptance": true,
+      "name": "pristine-independent-nonrigid-list",
+      "returncode": 0
+    },
+    {
+      "diagnostic": "PASS exact nonrigid full-atlas holdout",
+      "expected_acceptance": true,
+      "name": "arbitrarily-relabelled-class",
+      "returncode": 0
+    },
+    {
+      "diagnostic": "exactly every nonrigid full-atlas component reached",
+      "expected_acceptance": false,
+      "name": "missing-nonrigid-class",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "independent candidates occupy distinct full-atlas components",
+      "expected_acceptance": false,
+      "name": "nonliteral-isomorphic-duplicate",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "valid tournament",
+      "expected_acceptance": false,
+      "name": "one-sided-arc-toggle",
+      "returncode": 1
+    },
+    {
+      "diagnostic": "candidate regular",
+      "expected_acceptance": false,
+      "name": "valid-tournament-nonregular-arc-flip",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}
