@@ -1,0 +1,3056 @@
+{
+  "banks": [
+    {
+      "V_occupancy": 8,
+      "bounded_hitting_histogram": {
+        "1": 33,
+        "2": 1634,
+        "3": 381
+      },
+      "every_single_U_survives": false,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 3,
+        "exact_minimum": 1,
+        "excluded_sources": [
+          2616
+        ],
+        "exclusion_mask": 8192,
+        "lower_bound": 1,
+        "upper_bound": 1
+      },
+      "helper_count": 17,
+      "maximum_witness_count": 22,
+      "minimum_witness_count": 4,
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 1011,
+          "forced_V_covered": 2042,
+          "forced_V_first_missing": 242,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 769,
+          "forced_V_covered": 2041,
+          "forced_V_first_missing": 407,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2047,
+          "forced_V_first_missing": 622,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2045,
+          "forced_V_first_missing": 71,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2043,
+          "forced_V_first_missing": 747,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 461,
+          "forced_V_covered": 2046,
+          "forced_V_first_missing": 1648,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2046,
+          "forced_V_first_missing": 1012,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 5,
+          "forced_V_covered": 2047,
+          "forced_V_first_missing": 347,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2047,
+          "forced_V_first_missing": 1798,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2046,
+          "forced_V_first_missing": 73,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2045,
+          "forced_V_first_missing": 538,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2036,
+          "forced_U_first_missing": 139,
+          "forced_V_covered": 2028,
+          "forced_V_first_missing": 118,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 3,
+          "forced_V_covered": 2041,
+          "forced_V_first_missing": 533,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 883,
+          "forced_V_covered": 2042,
+          "forced_V_first_missing": 135,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 1189,
+          "forced_V_covered": 2045,
+          "forced_V_first_missing": 490,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2041,
+          "forced_V_first_missing": 381,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        776,
+        827,
+        1248,
+        1391,
+        1395,
+        1493,
+        1702,
+        1770,
+        1882,
+        1952,
+        2218,
+        2439,
+        2616,
+        3105,
+        3111,
+        3187
+      ],
+      "subset_count": 24310,
+      "universal_forced_U_tolerance_at_least": 0,
+      "universal_forced_U_tolerance_exact": 0
+    },
+    {
+      "V_occupancy": 6,
+      "bounded_hitting_histogram": {
+        "1": 61,
+        "2": 1014,
+        "3": 961,
+        "at_least_4": 12
+      },
+      "every_single_U_survives": false,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 27,
+        "exact_minimum": 1,
+        "excluded_sources": [
+          2616
+        ],
+        "exclusion_mask": 16384,
+        "lower_bound": 1,
+        "upper_bound": 1
+      },
+      "helper_count": 18,
+      "maximum_witness_count": 19,
+      "minimum_witness_count": 1,
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 847,
+          "forced_V_covered": 1951,
+          "forced_V_first_missing": 27,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 112,
+          "forced_V_covered": 1974,
+          "forced_V_first_missing": 5,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 295,
+          "forced_V_covered": 1946,
+          "forced_V_first_missing": 2,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 373,
+          "forced_V_covered": 1965,
+          "forced_V_first_missing": 104,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 502,
+          "forced_V_covered": 1949,
+          "forced_V_first_missing": 1,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 294,
+          "forced_V_covered": 1954,
+          "forced_V_first_missing": 34,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2047,
+          "forced_U_first_missing": 373,
+          "forced_V_covered": 1967,
+          "forced_V_first_missing": 9,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 825,
+          "forced_V_covered": 1977,
+          "forced_V_first_missing": 27,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 85,
+          "forced_V_covered": 1963,
+          "forced_V_first_missing": 35,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2045,
+          "forced_U_first_missing": 765,
+          "forced_V_covered": 1965,
+          "forced_V_first_missing": 20,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1989,
+          "forced_V_first_missing": 27,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 144,
+          "forced_V_covered": 1947,
+          "forced_V_first_missing": 1,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 186,
+          "forced_V_covered": 1978,
+          "forced_V_first_missing": 31,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2033,
+          "forced_U_first_missing": 112,
+          "forced_V_covered": 1902,
+          "forced_V_first_missing": 0,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2038,
+          "forced_U_first_missing": 27,
+          "forced_V_covered": 1930,
+          "forced_V_first_missing": 26,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 112,
+          "forced_V_covered": 1949,
+          "forced_V_first_missing": 3,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 319,
+          "forced_V_covered": 1972,
+          "forced_V_first_missing": 27,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 27,
+          "forced_V_covered": 1951,
+          "forced_V_first_missing": 26,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        776,
+        827,
+        1248,
+        1391,
+        1395,
+        1493,
+        1702,
+        1770,
+        1882,
+        1952,
+        2218,
+        2439,
+        2616,
+        3105,
+        3111,
+        3187
+      ],
+      "subset_count": 18564,
+      "universal_forced_U_tolerance_at_least": 0,
+      "universal_forced_U_tolerance_exact": 0
+    },
+    {
+      "V_occupancy": 5,
+      "bounded_hitting_histogram": {
+        "1": 3,
+        "2": 135,
+        "3": 820,
+        "at_least_4": 1090
+      },
+      "every_single_U_survives": false,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 715,
+        "exact_minimum": 1,
+        "excluded_sources": [
+          1770
+        ],
+        "exclusion_mask": 8192,
+        "lower_bound": 1,
+        "upper_bound": 1
+      },
+      "helper_count": 22,
+      "maximum_witness_count": 26,
+      "minimum_witness_count": 3,
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1938,
+          "forced_V_first_missing": 0,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2047,
+          "forced_U_first_missing": 1069,
+          "forced_V_covered": 1917,
+          "forced_V_first_missing": 0,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1935,
+          "forced_V_first_missing": 9,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1921,
+          "forced_V_first_missing": 18,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1937,
+          "forced_V_first_missing": 20,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1936,
+          "forced_V_first_missing": 12,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1945,
+          "forced_V_first_missing": 16,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1936,
+          "forced_V_first_missing": 51,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1914,
+          "forced_V_first_missing": 20,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1921,
+          "forced_V_first_missing": 11,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1955,
+          "forced_V_first_missing": 3,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1941,
+          "forced_V_first_missing": 27,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1936,
+          "forced_V_first_missing": 11,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2047,
+          "forced_U_first_missing": 715,
+          "forced_V_covered": 1898,
+          "forced_V_first_missing": 12,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1935,
+          "forced_V_first_missing": 12,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1925,
+          "forced_V_first_missing": 12,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1932,
+          "forced_V_first_missing": 0,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1931,
+          "forced_V_first_missing": 9,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1886,
+          "forced_V_first_missing": 6,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2047,
+          "forced_U_first_missing": 1367,
+          "forced_V_covered": 1923,
+          "forced_V_first_missing": 4,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1941,
+          "forced_V_first_missing": 4,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1897,
+          "forced_V_first_missing": 1,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        650,
+        676,
+        776,
+        827,
+        862,
+        921,
+        1248,
+        1391,
+        1395,
+        1493,
+        1702,
+        1770,
+        1882,
+        1952,
+        2218,
+        2439,
+        2616,
+        3105,
+        3111,
+        3187
+      ],
+      "subset_count": 26334,
+      "universal_forced_U_tolerance_at_least": 0,
+      "universal_forced_U_tolerance_exact": 0
+    },
+    {
+      "V_occupancy": 4,
+      "bounded_hitting_histogram": {
+        "2": 1,
+        "3": 4,
+        "at_least_4": 2043
+      },
+      "every_single_U_survives": true,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 247,
+        "exact_minimum": 2,
+        "excluded_sources": [
+          862,
+          2616
+        ],
+        "exclusion_mask": 67108928,
+        "lower_bound": 2,
+        "upper_bound": 2
+      },
+      "helper_count": 32,
+      "maximum_witness_count": 32,
+      "minimum_witness_count": 5,
+      "single_U_robust_subbank": {
+        "all_gates_covered": true,
+        "all_single_U_gate_replays": [
+          {
+            "covered_charges": 2048,
+            "forced_U_source": null,
+            "section_sha256": "708d8b323ee2cfb687c7689aa784c132fb99d40190e17acd29788be916068c0c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 368,
+            "section_sha256": "b52f534cbaecf9f76ec74353051484091a97d39af96f9052bdb31b3d019def45"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 556,
+            "section_sha256": "49cffb471a2d56817ddbacc840092d7576193f82210bf90cdd3ed7ff61cc882d"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 650,
+            "section_sha256": "e36e0d6e841517c986686e2efe1a2d88221c14eeaaa6bb82d5ce8d43f951cc06"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 676,
+            "section_sha256": "0bb0707f91dd7c128c01f2849aa9774fa4c080f5b8b4186498ddd9be7cf79f93"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 776,
+            "section_sha256": "68e417938112ca130e1e504bc726c66cbd453666ea7fe70f7c3e665d7d367785"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 827,
+            "section_sha256": "fa96219305c8cf29e8ae771264fea9d0a0564057c78a15b65aab57493aa8de64"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 862,
+            "section_sha256": "d3bce483872903645bea7b87133407f97c925333aced56a084888a5329f24788"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 921,
+            "section_sha256": "e49bd2248b0cdc638c0f68297c03511f67d36e4ff49b9379675749007c48d410"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1248,
+            "section_sha256": "d15125b7014ac1a82b91a605b71e0df2900fdd41c382a525dc863deffade246d"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1254,
+            "section_sha256": "21c7bce969ebff7783f9fc7cdc6a41f6952f458c83db2bf6eb52122c374a5dc6"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1369,
+            "section_sha256": "e1ebb7b88f8445cca99c94e845a38c99a72b15b4ba514d409a65b13d7f3512ca"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1391,
+            "section_sha256": "9dca297946a991b3697bbf6d43dbc31ccf19cedaf435932dc8e5deb407c56097"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1395,
+            "section_sha256": "1081f4f55546f067bd7f00b83b49fc6c03269b4a19c071bd4f277b2abbfe5324"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1493,
+            "section_sha256": "1439823e09d3f214ab271456b815c967bcec81ba55204b47e828a19b39c9db26"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1596,
+            "section_sha256": "a715c50a8f011349d1929a253e4977497797341de2a478e84f2c27a4f4248817"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1615,
+            "section_sha256": "03ea55eacef659a2e9c27412dd5e5c4df9ccb85d8895aa538cd6344211152b49"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1702,
+            "section_sha256": "366dd17f13add21999771f487a6a24cac42d8f9b87f42176deeeb523307e54b7"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1770,
+            "section_sha256": "29cce24d5f6a3d8473eec2ffb977e77c0a1d0b00009d72b4ac60188fad2440e9"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1882,
+            "section_sha256": "a4012a67b70c7294c64548dc8f5a15c90b8895cf860e2b830b6d34a2a720a068"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1952,
+            "section_sha256": "8ae1be6c11d070e5f0a0def4f72ba6f3c2f0c5bc322c2f942b4449b082b48df0"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2135,
+            "section_sha256": "ed17e7111668b75bb57dc6f02ec3ea3054db90d2ac1b9ad5176ddd3eccb641a3"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2218,
+            "section_sha256": "dc53e4d8f6f246448ee62fe8a34bbd93402bdbbfdc1d72767836c2686c2d4f62"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2283,
+            "section_sha256": "7a6d3ec85045a5a05132113e4c5d020269b5405833b669cfd1853f68db6ffe4e"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2319,
+            "section_sha256": "3b9d1a1b25e31d6d401e613dbc53da4a0c2c2b9bb895a1545e95fad83d29cc31"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2397,
+            "section_sha256": "6d4a1f51cc86b8890e97ba3d21baf3766427541f359cd6d0801576fe12bb814a"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2616,
+            "section_sha256": "e139dca535654d004520c2b5eef451587a38effaaf286c30b819003844dd0b5b"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2677,
+            "section_sha256": "10de711116ceed6e85f0793482d093966fdde8577a7f6484955360280c122f7c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2728,
+            "section_sha256": "f542fac6fcaa199ce9a8766c70f8f81111a8d4e828fe7cda4ab967c41e1c0183"
+          }
+        ],
+        "controller_changed_slot_bound": 10,
+        "controller_owner_clock_bound": 56,
+        "helper_count": 28,
+        "inherited_two_erasure_adversary": {
+          "charge": 247,
+          "exact_minimum": 2,
+          "excluded_sources": [
+            862,
+            2616
+          ],
+          "exclusion_mask": 67108928,
+          "lower_bound": 2,
+          "upper_bound": 2
+        },
+        "max_changed_helper_clock_cost": 48,
+        "old_28_pair_clock_cost_bound": 8,
+        "original_index_mask": 503316479,
+        "removed_sources": [
+          3187,
+          3111,
+          3105,
+          2439
+        ],
+        "source_ids": [
+          368,
+          556,
+          650,
+          676,
+          776,
+          827,
+          862,
+          921,
+          1248,
+          1254,
+          1369,
+          1391,
+          1395,
+          1493,
+          1596,
+          1615,
+          1702,
+          1770,
+          1882,
+          1952,
+          2135,
+          2218,
+          2283,
+          2319,
+          2397,
+          2616,
+          2677,
+          2728
+        ],
+        "status": "inclusion-minimal under deletion, not a global cardinality minimum"
+      },
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1854,
+          "forced_V_first_missing": 0,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1831,
+          "forced_V_first_missing": 2,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1860,
+          "forced_V_first_missing": 1,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1848,
+          "forced_V_first_missing": 3,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1851,
+          "forced_V_first_missing": 14,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1843,
+          "forced_V_first_missing": 7,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1839,
+          "forced_V_first_missing": 17,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1850,
+          "forced_V_first_missing": 3,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1844,
+          "forced_V_first_missing": 7,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1855,
+          "forced_V_first_missing": 0,
+          "source": 1254
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1849,
+          "forced_V_first_missing": 1,
+          "source": 1369
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1847,
+          "forced_V_first_missing": 16,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1849,
+          "forced_V_first_missing": 14,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1838,
+          "forced_V_first_missing": 7,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1849,
+          "forced_V_first_missing": 3,
+          "source": 1596
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1852,
+          "forced_V_first_missing": 0,
+          "source": 1615
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1850,
+          "forced_V_first_missing": 12,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1842,
+          "forced_V_first_missing": 1,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1850,
+          "forced_V_first_missing": 0,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1840,
+          "forced_V_first_missing": 1,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1839,
+          "forced_V_first_missing": 0,
+          "source": 2135
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1834,
+          "forced_V_first_missing": 1,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1851,
+          "forced_V_first_missing": 2,
+          "source": 2283
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1850,
+          "forced_V_first_missing": 3,
+          "source": 2319
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1843,
+          "forced_V_first_missing": 10,
+          "source": 2397
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1838,
+          "forced_V_first_missing": 12,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1842,
+          "forced_V_first_missing": 15,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1849,
+          "forced_V_first_missing": 4,
+          "source": 2677
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1851,
+          "forced_V_first_missing": 23,
+          "source": 2728
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1846,
+          "forced_V_first_missing": 17,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1837,
+          "forced_V_first_missing": 4,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1851,
+          "forced_V_first_missing": 3,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        650,
+        676,
+        776,
+        827,
+        862,
+        921,
+        1248,
+        1254,
+        1369,
+        1391,
+        1395,
+        1493,
+        1596,
+        1615,
+        1702,
+        1770,
+        1882,
+        1952,
+        2135,
+        2218,
+        2283,
+        2319,
+        2397,
+        2439,
+        2616,
+        2677,
+        2728,
+        3105,
+        3111,
+        3187
+      ],
+      "subset_count": 35960,
+      "universal_forced_U_tolerance_at_least": 1,
+      "universal_forced_U_tolerance_exact": 1
+    },
+    {
+      "V_occupancy": 3,
+      "bounded_hitting_histogram": {
+        "2": 4,
+        "3": 23,
+        "at_least_4": 2021
+      },
+      "every_single_U_survives": true,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 305,
+        "exact_minimum": 2,
+        "excluded_sources": [
+          776,
+          3139
+        ],
+        "exclusion_mask": 2251799813685312,
+        "lower_bound": 2,
+        "upper_bound": 2
+      },
+      "helper_count": 53,
+      "maximum_witness_count": 23,
+      "minimum_witness_count": 2,
+      "single_U_robust_subbank": {
+        "all_gates_covered": true,
+        "all_single_U_gate_replays": [
+          {
+            "covered_charges": 2048,
+            "forced_U_source": null,
+            "section_sha256": "16bcd40e60e9118d9545c4b9e48e1368742c103844cae91c55e2183f93229442"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 368,
+            "section_sha256": "06dbb5997ca96e78901a7f53bb438c1ec79353878fc6eb96a7e3891860df4189"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 556,
+            "section_sha256": "d6ad1482d6f113a3d3bee7497cb84155b3479496bb7beceb302e2048fa972e29"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 650,
+            "section_sha256": "70fcca2a5aa963a218080f4d7930c8ae250e1dffd7b733f32d0ece182516da7c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 676,
+            "section_sha256": "c334a707180bd91c8a6a6cb01e875811d66e4b4de34bf24119916b7d76a68848"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 753,
+            "section_sha256": "6bfe80aa32bdc767466714892b0cc3e1d6d7defdfef8ee6490a6066f8392f908"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 760,
+            "section_sha256": "fe7f96d0f7f888fb4d1b1554de7eaa82f87a6924ede52c03dab9121eec5d4e2b"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 776,
+            "section_sha256": "8ddff5d34078c385dd3682530e1ea551dce5097d9c46e62090c2438ce53f3466"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 789,
+            "section_sha256": "96757d27d4315a026fff3394404a17c690f946a82358dd1be9a850dc7fc623c7"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 811,
+            "section_sha256": "2d8bde2374ae4146e0d87b06b418787896d148809d93ef77f2ce7883bc7336ef"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 827,
+            "section_sha256": "ec3a24f792c559adca52040b32468774d39309912128c002f793c991307fb65e"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 862,
+            "section_sha256": "1d0a2ae418ce43256fe0740fcc6e6c4be26fbbd1db52438460c3004afc30c0d1"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 921,
+            "section_sha256": "9711a9786c96cd6843693e4ef4c311cede164ba4d3f9c49f8517e51c6f049e45"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1182,
+            "section_sha256": "a5fd1f37d3f7bd39fe17015b392348fb031716c9849d7b5cca7134cc32262f6c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1248,
+            "section_sha256": "03f8f13b71efcd93889d8ce9316d69b89b2bf76bf8f4ad84a24beae898f724d1"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1254,
+            "section_sha256": "93f2f341de44728d758123e7d42400ef7290e49d8251b6b67a3fbcd4bac8483a"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1369,
+            "section_sha256": "43433da07b9db7578bc448b363494975b19e4c56839b7a435f80c88fefeb1748"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1391,
+            "section_sha256": "666c14cdc4f07fa17f29a0fe42d876bad2545bde9f6c8fadddb0230cd1c919b1"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1395,
+            "section_sha256": "bff1467eec7ba4e60b1452d2e9fcc6a9e0f4f401504a2f69d8f13f5adef86778"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1400,
+            "section_sha256": "4fbbe59ac087c8aa3ac25ac883cb01832ded7f75f136d40e7aebf4c2efb58ffb"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1493,
+            "section_sha256": "b0d4cfb2577711e8e5e47679a9d6c5e99c8822c8cd01eaa938eecb2a22c341c4"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1574,
+            "section_sha256": "06d4f945ff82f313c5045ad461d7b54125e9d6fce9c1ecb45f262fe244ad2919"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1596,
+            "section_sha256": "9a92c9b6c859f8a5be47f88bbdf6e91bf93d5dff84775cdeda64b9f3fe32fba8"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1615,
+            "section_sha256": "fc542ef95080ac5096e8b9da05e3a5519c9a2de3e82f3203e36a159f3d817919"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1624,
+            "section_sha256": "df94078d71ef66b604ddc043ee7ddf93649706515c12dae3e589ff80433b9715"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1650,
+            "section_sha256": "391e622af20390456eee388657219da79df19f5583d290e6da5ddf3f713d16d8"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1702,
+            "section_sha256": "96de841a91a1f6d59013eb212ea48d76bfeca46562015a9c51a25724d16a9e8c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1770,
+            "section_sha256": "a8fe29b301dc4f07b8b7af5ba2a5d5b5d32e26408f5d7668acbef44ee98d2036"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1882,
+            "section_sha256": "4a63d7594505819e0cd3ebe2e9a931f11561a4f4069abce8e5e9ef7272198b6a"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1948,
+            "section_sha256": "2cb83dd62adf23849f71d07b74cea5a75576065e080eb40a3cf86d3854ce35c3"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 1952,
+            "section_sha256": "8beeb2987752367fca6bc4c0bcf8735064fc42016afdb46946c4724934353503"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2066,
+            "section_sha256": "0807e9f284d753483a78487f2454c817f91d6664aca5ee6559daacca057d838c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2135,
+            "section_sha256": "f056bd0c97fed7af4249627a1a1c1363c6f0efa1fa35aea16ab5adbd2c79649b"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2218,
+            "section_sha256": "1558992d2cc1e7e620eede4d0105ee2f6a8718a7f90257d20644c6cc0f48942c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2283,
+            "section_sha256": "cfb91780c5c9e0a73889d02f9e8907faa9c40be1dabc16c18285f9ee55944adb"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2319,
+            "section_sha256": "6a35d9d60d239e12619d1a7c79e2b00911a30e0dd07522e68659d6144cc6f6af"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2384,
+            "section_sha256": "cb8251844d2d11b681a7fafbd7d2003c1faf1005c17c3bb7f9ec56e4e97b15ee"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2393,
+            "section_sha256": "4fd1375173d5cfbab21da007a43416f4a199fde8a234a20663cd9ee224e1def1"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2439,
+            "section_sha256": "555e27654a13c603782406ade40091b3ae23836cd6b60907560917ef4992c960"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2483,
+            "section_sha256": "4661147a45aec9d4daccc6749d4044b68192557fd51b9508ef30540707627e9c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2616,
+            "section_sha256": "71e05972c9214f47a6f914170ea8b5ec4085cb7bcd03b70bcf4c59111e43cede"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2638,
+            "section_sha256": "5df2539e919a1bd5f242d5c3beca22eb3a31b85a23d93dec32bfb74dc5b319ef"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2677,
+            "section_sha256": "f5b6515896a6deb41d1500501d06f7bdb2e1aca1dfbb873da9f7471da3a85819"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2728,
+            "section_sha256": "876264575650050d3a456f2d62d8d5636b813d7405d87022b1427de61bbbd0c1"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2752,
+            "section_sha256": "b7790b4f265ccc44b67734a2d0ad6435ca1eb64765bb44d69b80fb2fc297171c"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2948,
+            "section_sha256": "5f9c51bff57c9b7b2f5e8f591494a4e6d9d6739aef8317cfb45d85ce7499db35"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 2983,
+            "section_sha256": "d976e11a60ef557f59cb3fbc33bc79a0ffb217920bdcb57380f63dea8cd9995b"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 3139,
+            "section_sha256": "438cd2464ced4fe1ec22f6275910b8f29f8c91e40b7c23420b39a605cacdf152"
+          },
+          {
+            "covered_charges": 2048,
+            "forced_U_source": 3187,
+            "section_sha256": "eae6ac19e45325555c593d8d638800094c551ee8718ca69cdbbf9ba83e179091"
+          }
+        ],
+        "controller_changed_slot_bound": 8,
+        "controller_owner_clock_bound": 50,
+        "helper_count": 48,
+        "inherited_two_erasure_adversary": {
+          "charge": 305,
+          "exact_minimum": 2,
+          "excluded_sources": [
+            776,
+            3139
+          ],
+          "exclusion_mask": 2251799813685312,
+          "lower_bound": 2,
+          "upper_bound": 2
+        },
+        "max_changed_helper_clock_cost": 42,
+        "old_28_pair_clock_cost_bound": 8,
+        "original_index_mask": 7001552606724095,
+        "removed_sources": [
+          3137,
+          3111,
+          3105,
+          2798,
+          2397
+        ],
+        "source_ids": [
+          368,
+          556,
+          650,
+          676,
+          753,
+          760,
+          776,
+          789,
+          811,
+          827,
+          862,
+          921,
+          1182,
+          1248,
+          1254,
+          1369,
+          1391,
+          1395,
+          1400,
+          1493,
+          1574,
+          1596,
+          1615,
+          1624,
+          1650,
+          1702,
+          1770,
+          1882,
+          1948,
+          1952,
+          2066,
+          2135,
+          2218,
+          2283,
+          2319,
+          2384,
+          2393,
+          2439,
+          2483,
+          2616,
+          2638,
+          2677,
+          2728,
+          2752,
+          2948,
+          2983,
+          3139,
+          3187
+        ],
+        "status": "inclusion-minimal under deletion, not a global cardinality minimum"
+      },
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 996,
+          "forced_V_first_missing": 5,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1006,
+          "forced_V_first_missing": 2,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1003,
+          "forced_V_first_missing": 1,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1005,
+          "forced_V_first_missing": 0,
+          "source": 753
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 998,
+          "forced_V_first_missing": 0,
+          "source": 760
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 3,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 0,
+          "source": 789
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 998,
+          "forced_V_first_missing": 2,
+          "source": 811
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1000,
+          "forced_V_first_missing": 0,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1004,
+          "forced_V_first_missing": 0,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1004,
+          "forced_V_first_missing": 2,
+          "source": 1182
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 998,
+          "forced_V_first_missing": 0,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1003,
+          "forced_V_first_missing": 2,
+          "source": 1254
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1004,
+          "forced_V_first_missing": 2,
+          "source": 1369
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1003,
+          "forced_V_first_missing": 0,
+          "source": 1400
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 995,
+          "forced_V_first_missing": 1,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 0,
+          "source": 1574
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 0,
+          "source": 1596
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 1,
+          "source": 1615
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 0,
+          "source": 1624
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1002,
+          "forced_V_first_missing": 1,
+          "source": 1650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 1,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 1,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 5,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1003,
+          "forced_V_first_missing": 1,
+          "source": 1948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 993,
+          "forced_V_first_missing": 2,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 0,
+          "source": 2066
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 0,
+          "source": 2135
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 996,
+          "forced_V_first_missing": 0,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1005,
+          "forced_V_first_missing": 1,
+          "source": 2283
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1002,
+          "forced_V_first_missing": 1,
+          "source": 2319
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 6,
+          "source": 2384
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1009,
+          "forced_V_first_missing": 0,
+          "source": 2393
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 2,
+          "source": 2397
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 0,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1000,
+          "forced_V_first_missing": 0,
+          "source": 2483
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1002,
+          "forced_V_first_missing": 1,
+          "source": 2638
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1002,
+          "forced_V_first_missing": 7,
+          "source": 2677
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1002,
+          "forced_V_first_missing": 2,
+          "source": 2728
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 998,
+          "forced_V_first_missing": 1,
+          "source": 2752
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1008,
+          "forced_V_first_missing": 3,
+          "source": 2798
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 3,
+          "source": 2948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 998,
+          "forced_V_first_missing": 0,
+          "source": 2983
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 997,
+          "forced_V_first_missing": 5,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 5,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1001,
+          "forced_V_first_missing": 0,
+          "source": 3137
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 1003,
+          "forced_V_first_missing": 1,
+          "source": 3139
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 999,
+          "forced_V_first_missing": 0,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        650,
+        676,
+        753,
+        760,
+        776,
+        789,
+        811,
+        827,
+        862,
+        921,
+        1182,
+        1248,
+        1254,
+        1369,
+        1391,
+        1395,
+        1400,
+        1493,
+        1574,
+        1596,
+        1615,
+        1624,
+        1650,
+        1702,
+        1770,
+        1882,
+        1948,
+        1952,
+        2066,
+        2135,
+        2218,
+        2283,
+        2319,
+        2384,
+        2393,
+        2397,
+        2439,
+        2483,
+        2616,
+        2638,
+        2677,
+        2728,
+        2752,
+        2798,
+        2948,
+        2983,
+        3105,
+        3111,
+        3137,
+        3139,
+        3187
+      ],
+      "subset_count": 23426,
+      "universal_forced_U_tolerance_at_least": 1,
+      "universal_forced_U_tolerance_exact": 1
+    },
+    {
+      "V_occupancy": 3,
+      "bounded_hitting_histogram": {
+        "1": 130,
+        "2": 373,
+        "3": 574,
+        "at_least_4": 971
+      },
+      "every_single_U_survives": false,
+      "every_single_V_survives": false,
+      "global_minimum_adversary": {
+        "charge": 10,
+        "exact_minimum": 1,
+        "excluded_sources": [
+          1182
+        ],
+        "exclusion_mask": 512,
+        "lower_bound": 1,
+        "upper_bound": 1
+      },
+      "helper_count": 40,
+      "maximum_witness_count": 12,
+      "minimum_witness_count": 1,
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2034,
+          "forced_U_first_missing": 543,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 0,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 119,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 1,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 228,
+          "forced_V_covered": 630,
+          "forced_V_first_missing": 0,
+          "source": 760
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 457,
+          "forced_V_covered": 632,
+          "forced_V_first_missing": 3,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2045,
+          "forced_U_first_missing": 1250,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 0,
+          "source": 789
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 273,
+          "forced_V_covered": 631,
+          "forced_V_first_missing": 1,
+          "source": 811
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 119,
+          "forced_V_covered": 635,
+          "forced_V_first_missing": 0,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 175,
+          "forced_V_covered": 636,
+          "forced_V_first_missing": 0,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 446,
+          "forced_V_covered": 635,
+          "forced_V_first_missing": 0,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 10,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 2,
+          "source": 1182
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 116,
+          "forced_V_covered": 631,
+          "forced_V_first_missing": 0,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2039,
+          "forced_U_first_missing": 68,
+          "forced_V_covered": 638,
+          "forced_V_first_missing": 0,
+          "source": 1254
+        },
+        {
+          "forced_U_covered": 2043,
+          "forced_U_first_missing": 604,
+          "forced_V_covered": 632,
+          "forced_V_first_missing": 0,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 68,
+          "forced_V_covered": 630,
+          "forced_V_first_missing": 0,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 667,
+          "forced_V_covered": 635,
+          "forced_V_first_missing": 0,
+          "source": 1400
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 390,
+          "forced_V_covered": 631,
+          "forced_V_first_missing": 1,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 76,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 0,
+          "source": 1574
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 168,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 0,
+          "source": 1596
+        },
+        {
+          "forced_U_covered": 2039,
+          "forced_U_first_missing": 308,
+          "forced_V_covered": 631,
+          "forced_V_first_missing": 1,
+          "source": 1615
+        },
+        {
+          "forced_U_covered": 2038,
+          "forced_U_first_missing": 168,
+          "forced_V_covered": 632,
+          "forced_V_first_missing": 0,
+          "source": 1624
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 187,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 1,
+          "source": 1650
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 225,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 1,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 210,
+          "forced_V_covered": 635,
+          "forced_V_first_missing": 0,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 340,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 3,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2038,
+          "forced_U_first_missing": 49,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 1,
+          "source": 1948
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 413,
+          "forced_V_covered": 632,
+          "forced_V_first_missing": 0,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2046,
+          "forced_U_first_missing": 206,
+          "forced_V_covered": 640,
+          "forced_V_first_missing": 1,
+          "source": 2283
+        },
+        {
+          "forced_U_covered": 2041,
+          "forced_U_first_missing": 568,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 0,
+          "source": 2319
+        },
+        {
+          "forced_U_covered": 2034,
+          "forced_U_first_missing": 256,
+          "forced_V_covered": 629,
+          "forced_V_first_missing": 2,
+          "source": 2384
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 340,
+          "forced_V_covered": 634,
+          "forced_V_first_missing": 0,
+          "source": 2393
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 714,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 0,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 431,
+          "forced_V_covered": 637,
+          "forced_V_first_missing": 2,
+          "source": 2677
+        },
+        {
+          "forced_U_covered": 2038,
+          "forced_U_first_missing": 368,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 2,
+          "source": 2728
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 68,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 1,
+          "source": 2752
+        },
+        {
+          "forced_U_covered": 2044,
+          "forced_U_first_missing": 1254,
+          "forced_V_covered": 638,
+          "forced_V_first_missing": 3,
+          "source": 2798
+        },
+        {
+          "forced_U_covered": 2038,
+          "forced_U_first_missing": 119,
+          "forced_V_covered": 631,
+          "forced_V_first_missing": 0,
+          "source": 2983
+        },
+        {
+          "forced_U_covered": 2037,
+          "forced_U_first_missing": 116,
+          "forced_V_covered": 630,
+          "forced_V_first_missing": 0,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2040,
+          "forced_U_first_missing": 656,
+          "forced_V_covered": 633,
+          "forced_V_first_missing": 4,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2045,
+          "forced_U_first_missing": 441,
+          "forced_V_covered": 638,
+          "forced_V_first_missing": 0,
+          "source": 3137
+        },
+        {
+          "forced_U_covered": 2042,
+          "forced_U_first_missing": 49,
+          "forced_V_covered": 635,
+          "forced_V_first_missing": 0,
+          "source": 3139
+        }
+      ],
+      "source_ids": [
+        650,
+        676,
+        760,
+        776,
+        789,
+        811,
+        827,
+        862,
+        921,
+        1182,
+        1248,
+        1254,
+        1391,
+        1395,
+        1400,
+        1493,
+        1574,
+        1596,
+        1615,
+        1624,
+        1650,
+        1702,
+        1770,
+        1882,
+        1948,
+        2218,
+        2283,
+        2319,
+        2384,
+        2393,
+        2616,
+        2677,
+        2728,
+        2752,
+        2798,
+        2983,
+        3105,
+        3111,
+        3137,
+        3139
+      ],
+      "subset_count": 9880,
+      "universal_forced_U_tolerance_at_least": 0,
+      "universal_forced_U_tolerance_exact": 0
+    }
+  ],
+  "bounded_hitting_exhaustive_controls": 2223,
+  "bounds_scope": "All single forcedU/forcedV tests exact; per-charge minimum hitting size exact only up to3.",
+  "charge_encoding": "q=16*(sum X mod128) + four-bit xor; source order is bank source_ids",
+  "checks_before_replay": 527394,
+  "complete_native_sidecar": "../supply/selected_supply.json",
+  "four_occupancy_extensions": [
+    {
+      "V_occupancy": 4,
+      "bounded_forced_U_hitting_histogram": {
+        "at_least_4": 2048
+      },
+      "controller_changed_slot_bound": 10,
+      "controller_owner_clock_bound": 64,
+      "every_single_U_survives": true,
+      "every_single_V_survives": true,
+      "helper_count": 53,
+      "minimum_witness_count": 110,
+      "mixed_UV_adversary": {
+        "forced_U_source": 776,
+        "forced_V_source": 3139,
+        "inherited_triple_charge": 305,
+        "missing_charge": 530
+      },
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 753
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 760
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 789
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 811
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1182
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1254
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1369
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1400
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1574
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1596
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1615
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1624
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2066
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2135
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2283
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2319
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2384
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2393
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2397
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2483
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2638
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2677
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2728
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2752
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2798
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2983
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3105
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3111
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3137
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3139
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        650,
+        676,
+        753,
+        760,
+        776,
+        789,
+        811,
+        827,
+        862,
+        921,
+        1182,
+        1248,
+        1254,
+        1369,
+        1391,
+        1395,
+        1400,
+        1493,
+        1574,
+        1596,
+        1615,
+        1624,
+        1650,
+        1702,
+        1770,
+        1882,
+        1948,
+        1952,
+        2066,
+        2135,
+        2218,
+        2283,
+        2319,
+        2384,
+        2393,
+        2397,
+        2439,
+        2483,
+        2616,
+        2638,
+        2677,
+        2728,
+        2752,
+        2798,
+        2948,
+        2983,
+        3105,
+        3111,
+        3137,
+        3139,
+        3187
+      ],
+      "subset_count": 292825,
+      "two_V_adversary": {
+        "covered_charges": 969,
+        "first_missing_charge": 0,
+        "forced_V_sources": [
+          368,
+          556
+        ]
+      }
+    },
+    {
+      "V_occupancy": 4,
+      "bounded_forced_U_hitting_histogram": {
+        "at_least_4": 2048
+      },
+      "controller_changed_slot_bound": 10,
+      "controller_owner_clock_bound": 64,
+      "every_single_U_survives": true,
+      "every_single_V_survives": true,
+      "helper_count": 48,
+      "minimum_witness_count": 66,
+      "mixed_UV_adversary": {
+        "forced_U_source": 776,
+        "forced_V_source": 3139,
+        "inherited_triple_charge": 305,
+        "missing_charge": 530
+      },
+      "single_pin_rows": [
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 368
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 556
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 676
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 753
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 760
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 776
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 789
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 811
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 827
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 862
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 921
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1182
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1248
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1254
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1369
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1391
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1395
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1400
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1493
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1574
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1596
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1615
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1624
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1650
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1702
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1770
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1882
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 1952
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2066
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2135
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2218
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2283
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2319
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2384
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2393
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2439
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2483
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2616
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2638
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2677
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2728
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2752
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2948
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 2983
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3139
+        },
+        {
+          "forced_U_covered": 2048,
+          "forced_U_first_missing": null,
+          "forced_V_covered": 2048,
+          "forced_V_first_missing": null,
+          "source": 3187
+        }
+      ],
+      "source_ids": [
+        368,
+        556,
+        650,
+        676,
+        753,
+        760,
+        776,
+        789,
+        811,
+        827,
+        862,
+        921,
+        1182,
+        1248,
+        1254,
+        1369,
+        1391,
+        1395,
+        1400,
+        1493,
+        1574,
+        1596,
+        1615,
+        1624,
+        1650,
+        1702,
+        1770,
+        1882,
+        1948,
+        1952,
+        2066,
+        2135,
+        2218,
+        2283,
+        2319,
+        2384,
+        2393,
+        2439,
+        2483,
+        2616,
+        2638,
+        2677,
+        2728,
+        2752,
+        2948,
+        2983,
+        3139,
+        3187
+      ],
+      "subset_count": 194580,
+      "two_V_adversary": {
+        "covered_charges": 830,
+        "first_missing_charge": 0,
+        "forced_V_sources": [
+          368,
+          556
+        ]
+      }
+    }
+  ],
+  "full_certificate_file": "resilience.full.json.gz",
+  "full_certificate_sha256": "e7ce161ed9607e14852924fcf93159d0a058bdb9d5991c7f744cfa7ca01c9681",
+  "input_sha256_lf_normalized": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+  "old_core_sha256_lf_normalized": "93e82952e06933273f9d4c47d421a4d4ababe91662c50b62f19fdb7dddd430ca",
+  "status": "FINITE-EXACT compatibility resilience conditional on actual forced-choice realization"
+}

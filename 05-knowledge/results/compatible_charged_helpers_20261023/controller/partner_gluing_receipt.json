@@ -1,0 +1,89 @@
+{
+  "status": "FINITE-EXACT controls for elementary PROVED partner-gluing lemma",
+  "source_tournaments": 64,
+  "distinct_threecell_pairs": 6,
+  "legal_observer_cases": 864,
+  "compatible_cases": 480,
+  "incompatible_cases": 384,
+  "first_incompatible": {
+    "source_word": 0,
+    "cells": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "paths": [
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        3,
+        2,
+        0
+      ]
+    ],
+    "shared_pairs": [
+      [
+        0,
+        2
+      ]
+    ]
+  },
+  "equal_size_hostile": {
+    "source_order": [
+      "a",
+      "d",
+      "b",
+      "c"
+    ],
+    "paths": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "compatible_no_global_observer": {
+    "source_word": 63,
+    "paths": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "partner_hosts": [
+      7,
+      15,
+      23,
+      31,
+      39,
+      47,
+      55,
+      63
+    ]
+  },
+  "checks": 3460
+}

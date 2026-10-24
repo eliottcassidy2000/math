@@ -157,6 +157,14 @@ six-source connectivity fails. It is not a claim that eight or forty is
 globally optimal. The bank is inclusion-minimal under single deletion; its
 global minimum cardinality remains open.
 
+Late incoming `sixslot570_20261024/FIBRES.md` proves the original28-source
+fixed-current fibres connected at sharp support8 and22 clocks WITHOUT these
+helpers. That is the stronger bound for that smaller state space. The present
+bank instead allows the core charge to vary through every k-subset while
+retaining the full combined charge; its coupled shared-owner extension also
+retains an additional changing compatibility factor. Do not advertise the
+helper bank as a cost improvement over the incoming fixed-inventory rule.
+
 All 72 available new-source labels together fail to cover Q by pair sums.
 Thus a two-active-helper complete-section template is impossible in this
 alphabet. This is not a lower bound against every adaptive six-source

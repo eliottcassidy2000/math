@@ -16,6 +16,20 @@ No all-order native-supply or complete-atlas classification is claimed.
   replay passes **171,213** explicit checks in both modes. The complete
   five-arrival hostile route retains all68 literal records per arrival.
   Separate proof/code review: [supply/AUDIT_CONTROLLER.md](supply/AUDIT_CONTROLLER.md).
+- Moving restrictions: **527,396** checks in both modes. All fixed-cardinality
+  witnesses, every single forced-U/V helper, compact deletion-robust sections,
+  and the complete hitting search through size3 are replayed. The full
+  certificate is retained in deterministic gzip, with a readable summary.
+  Independent review: [compatibility/AUDIT_RESILIENCE.md](compatibility/AUDIT_RESILIENCE.md).
+- Native moving owner: **8,699** checks in both modes, including coherent
+  source and local partner host matrices, complete two-cell lift fibres,
+  all194580 helper quadruples under both signed owner choices, actual
+  current rows and the returning-helper route. Independent review:
+  [compatibility/AUDIT_SHARED_OWNER.md](compatibility/AUDIT_SHARED_OWNER.md).
+- Partner gluing: **3,461** checks in both modes, exhausting864 legal local
+  observer pairs in coherent four-owner source hosts. Shared consecutiveness
+  flags agree in480 cases and fail in384; direct host enumeration verifies
+  the exact existence criterion and extension counts.
 - Padding probe: **1,065** checks on146 small multiset candidates and529
   forced-padding controls. The smallest coverage-monotonicity hostile is the
   four-element binary group: the three perfect matchings of K4 carry all
@@ -25,9 +39,7 @@ No all-order native-supply or complete-atlas classification is claimed.
   including integer-valued charge coordinates and actual shared-owner
   C3-kernel controls at source orders11,19,27. **661,673** explicit checks
   in both modes. Independent proof review:
-  [fibres/AUDIT_COMPATIBILITY.md](fibres/AUDIT_COMPATIBILITY.md). That review's
-  earlier661659-check snapshot preceded14 additional local-domain checks;
-  the theorem was unchanged.
+  [fibres/AUDIT_COMPATIBILITY.md](fibres/AUDIT_COMPATIBILITY.md).
 - Small-fibre boundary: all subsets at margins4 through8, every2048-charge
   fibre at each margin, independent DFS/BFS on margins4/5, all1300 separated
   margin4 endpoint pairs, all3276 candidate three-type choice banks, and the
@@ -70,3 +82,17 @@ explicit hostile. The complete canonical atlas is already occupied, so all
 native packets require a separately compatible unoccupied option reservoir.
 
 No cited incoming theorem or frozen incoming certificate was altered.
+
+Late incoming ae8d0f1565 supplies complete fixed28-source closure at sharp
+support8 /22 clocks and extends the boundary census to all margins. We read
+its finite census, sparse220-bridge completion and scope; the root note and
+controller now distinguish this stronger small-inventory bound from our
+larger moving-charge/shared-owner state space. We do not present its exhaustive
+2^28 census as a computation performed by this session.
+
+Incoming27a7118d83 adds an independent65,720-check audit of the native helper
+supply and restriction certificates, including a46/k3 one-U-resilient bank
+and nine disjoint quadruples per charge in the full53/k4 bank. Its latter
+packing gives eight-forced-U resilience by a direct pigeonhole proof. These
+stronger finite restrictions are linked in our root and resilience notes;
+they do not silently change our frozen48-helper shared-owner certificate.

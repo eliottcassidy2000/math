@@ -41,3 +41,10 @@ Reproduce from the repository root:
 
 The finite tables test the all-size proof. They are not an enumeration of all
 native sources or a proof of unrestricted tournament-metagraph connectivity.
+
+The separate [native bank resilience result](RESILIENCE.md) certifies a frozen
+48-helper triple bank surviving any one forced-U helper, and the SAME48-helper
+pool at occupancy4 surviving any one arbitrary forced bit. These give scoped
+state-dependent compatibility guards for the charged controller. Complete data
+are retained in `resilience.full.json.gz`, with a readable `resilience.json`
+summary and independent normal/optimized replay through `resilience.py`.

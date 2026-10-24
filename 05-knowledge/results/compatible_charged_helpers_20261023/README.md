@@ -6,6 +6,30 @@ bounded packet connectivity. **FINITE-EXACT:** forty new native sources give
 uniform support eight across every guarded fibre of the protected 28-source
 core. Native wiring at arbitrary tournament order remains **OPEN**.
 
+**Late integration:** incoming ae8d0f1565 closes EVERY fibre of the original
+28-source inventory at sharp support8 /22 clocks, without adding helpers.
+That is now the stronger independent-core finite bound. Our helper results
+remain a different extension: they pay changing core charges and preserve
+moving cross-cell owner constraints in larger authenticated packet families.
+Read [the incoming finite closure](../sixslot570_20261024/FIBRES.md) alongside
+the coupled construction below; the40-bank is not needed merely to connect
+the old fixed-current fibres.
+
+Incoming27a7118d83 independently strengthens the restriction side: a46-helper
+triple bank survives any single forced-U restriction, and the full53-helper
+quadruple bank has nine disjoint witnesses for every charge, hence survives
+any EIGHT forced-U restrictions. These are different inventories from our48
+helpers used for the actual moving shared-owner construction. Mixed U/V
+restrictions still need their own test; extra one-sided resilience does not
+imply two arbitrary forced-bit resilience. See the
+[independent restriction audit](../session47_resilient_native_wiring_20261024/audit-helper-resilience/AUDIT.md).
+
+Incoming617210b43a also authenticates a four-source570/2234 return, disjoint
+from every old28 and new53 helper option. It can coexist with an accepted
+fixed helper state. It preserves a positive570 target margin; it is neither
+entry from zero570 population nor closure of unrestricted three-target
+fibres. [Native return and scope](../sixslot570_20261024/NATIVE570.md).
+
 ## 1. A universal repair inside the declared native family
 
 The old28 sources, with every original endpoint/arc/common-clock pin retained,
@@ -46,6 +70,28 @@ Read [the lifting theorem](controller/COMPLETE_CHARGE_BANK.md),
 [actual native supply](supply/README.md), and the complete
 [native arrival certificate](controller/receipt.json).
 
+The next compatibility step is also certified. A **48-helper bank** with
+three V-helpers keeps all2048 charges when any one helper is forced U, even
+if the restricted helper changes at every arrival. It retains support8 and
+the50-clock bound. With FOUR V-helpers, the same48 slots tolerate any one
+forced U-OR-V choice, or up to three simultaneous forced-U choices. That
+controller uses support10 and at most64 clocks. These are conditional on the
+actual shared constraints compiling to those exact restrictions; all48 slots
+remain occupied. Two arbitrary forced bits cannot be guaranteed at occupancy4:
+forcing two at V leaves only1035 choices for2048 charges.
+See [moving-restriction certificates](compatibility/RESILIENCE.md).
+
+This is now realized with a changing ACTUAL shared owner. Source176 and
+helper368 are embedded in coherent overlapping tournament cells, and their
+indexed-owner equality forces opposite U/V bits. Every core margin and charge
+of the resulting76-slot family has a compatible section and the support10 /
+64-clock controller. A literal route has shared owners **2,6,6,2**, supports
+10,8,10 and clock costs53,39,53; every helper returns to its exact initial
+record. Source and local partner matrices glue, as well as the charge labels.
+This remains a family of local order-eight observers with the original
+order-eight electrical bank, not a Hamiltonian observer on the whole host.
+[Native construction and returning route](supply/shared_owner.md).
+
 ## 2. The shared-pin obligation has an exact cost
 
 For arbitrary supplied full-record components, helper charge coverage does
@@ -72,6 +118,14 @@ shared-owner packets despite zero electrical difference and disjoint ports.
 Thus an all-size theorem for arbitrary guards must retain a variable boundary
 cost or restrict the compatibility structure. A universal constant support
 bound independent of arbitrary shared pins is false in this interface.
+
+There is also an exact all-size native gluing test: once induced SOURCE
+cells agree on overlapping arcs, their local K-partners agree precisely when
+each shared owner pair has the same consecutive-in-the-local-path flag in
+every cell containing it. This compiles directly into a full-record pairwise
+constraint. Any uncovered host edge remains free. The test does not assert
+a global Hamiltonian observer, and a forced three-edge star proves that
+stronger conclusion can fail. [Criterion and controls](controller/PARTNER_GLUING.md).
 
 ## 3. Incoming lattice generation and its binary feasibility boundary
 
@@ -139,10 +193,22 @@ loses neutral owners; the interval lift restores them with their exact cost.
 Both maps preserve the stated predicates because their lost information is
 kept, not because the projected objects merely have matching counts.
 
+A small K4 probe prevented a false shortcut: the four distinct charges in
+(Z/2)^2 cover the group with one or three selected slots, but distinct pairs
+miss zero. Their pair charges form the three perfect matchings of K4; zero
+would require the absent diagonal, reusing a slot. Thus complete coverage
+need not survive increasing occupancy. The correct padding operation fixes
+actual slots and solves the residual charge after deleting those slots from
+the remaining supply. This exact deletion/forced-inclusion identity explains
+why the robust triple bank yields its forced-V quadruple sections.
+[Proof and smallest hostile](controller/PADDING_PROBE.md).
+
 **Next precise obligation:** for a given native shared-pin component, supply
 enough helper triples INSIDE its actual compatibility intervals, and prove
 their charged visible quotient connected at its necessary boundary budget.
-The40-bank solves independent core exchanges. The interval theorem solves
+The40-bank solves independent core exchanges; the48-bank handles the stated
+moving one-bit and three-exclusion gates, with one changing shared-owner
+relation now natively realized. The interval theorem solves
 exact accounting for arbitrary pairwise shared constraints. Native supply
 and coverage of the resulting restricted quotient at every tournament order
 are still missing. No claim about Collatz or another major open conjecture

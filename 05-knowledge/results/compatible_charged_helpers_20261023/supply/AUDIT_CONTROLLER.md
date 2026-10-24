@@ -51,3 +51,30 @@ uniform50 bound, with exact changed clock indices recorded per event.
 Resource reservation is40 helper slots and80 alternative normalized units,
 not merely40 possible path resources; a minor wording repair to this effect
 was requested. No remaining mathematical inference error was found.
+
+## State-dependent compatibility extension
+
+The final Section5 extension also passes independent proof review. At each
+core state I the supplied full-record helper family A(I) may differ, provided
+its charge image remains all of G. Choosing a separate section in each A(I)
+gives compatible arrivals. An event does not need the same helper choice to
+be legal at both of its distinct core endpoints; it needs the full assignment
+at each endpoint to be legal. The fixed-cardinality symmetric-difference
+bound remains2min(r,h-r), so a core support bound c becomes c+2min(r,h-r).
+Arbitrary feasible prescribed helper endpoints remain valid, including the
+core-equal case. Fixed full records at unchanged bits prevent silent kernel
+motion from escaping the cost ledger.
+
+The author incorporated two requested precision repairs. The projection
+completeness iff is explicitly relative to the SUPPLIED family A(I), unless
+that family is additionally assumed complete among all feasible helpers.
+The cost c counts core SLOTS, rather than physical global owner labels.
+These distinctions matter when local cells share owners or when a supplied
+compatibility family is only a sufficient subset of the possible records.
+
+The extension has a concrete positive test in `shared_owner.md`: an actual
+indexed-owner equality forces opposite U/V bits between old source176 and
+helper368. The48/k4 native bank covers every residual charge under either
+forced bit, so the conditional theorem applies to that explicitly realized
+moving-owner family. This application does not make all arbitrary shared
+owner constraints surjective, nor change the original electrical graph.

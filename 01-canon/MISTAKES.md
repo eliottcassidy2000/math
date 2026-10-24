@@ -18,6 +18,12 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** retain all three paths, their distinct resources and actual targets. The two-step path through410 costs2+2 clocks but has a different paired charge; it is not a free guarded substitute for the direct three-clock switch. The endpoint-recording suspension and score obstruction survive.
 - **Missing coordinate / next question:** authenticate the complete feasible relation before assigning it a binary or group-action model. See [PORTS.md](../05-knowledge/results/sixslot570_20261024/PORTS.md) and its exact normal/optimized audit.
 
+## 2026-10-23 — distinct-slot charge coverage need not survive padding
+
+- **Rejected probe / minimal witness:** four distinct labels in (Z/2)^2 cover every charge at occupancy1 and3, but distinct pairs miss zero. Thus full k-subset coverage need not imply full(k+1)-subset coverage even when k<h/2.
+- **First failed implication:** solving a residual charge can select the slot already used for padding. K4's three perfect matchings realize the three nonzero pair sums; the missing zero is the forbidden diagonal.
+- **Repair / missing coordinate:** fix the padded slots, delete them from the residual bank, then test coverage. Forced-padding coverage is exactly a translate of that deletion-bank coverage. Distinct actual resources remain the sidecar. [Proof, sharp small boundary and controls](../05-knowledge/results/compatible_charged_helpers_20261023/controller/PADDING_PROBE.md).
+
 ## 2026-10-23 — reversible native edges need direction-specific transporters
 
 - **Affected draft:** the unpublished literal one-bit route audit in `balanced_native_20261023/audit.py`; no false theorem was published.
