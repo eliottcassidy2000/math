@@ -1,0 +1,190 @@
+{
+  "census": [
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 1,
+      "k": 0,
+      "max_root_depth": 0,
+      "states": 1
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 28,
+      "k": 1,
+      "max_root_depth": 0,
+      "states": 28
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 351,
+      "k": 2,
+      "max_root_depth": 1,
+      "states": 378
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 1646,
+      "k": 3,
+      "max_root_depth": 1,
+      "states": 3276
+    },
+    {
+      "budget": 6,
+      "disconnected": 197,
+      "fibres": 2048,
+      "k": 4,
+      "max_root_depth": 5,
+      "states": 20475
+    },
+    {
+      "budget": 6,
+      "disconnected": 11,
+      "fibres": 2048,
+      "k": 5,
+      "max_root_depth": 5,
+      "states": 98280
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 6,
+      "max_root_depth": 4,
+      "states": 376740
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 7,
+      "max_root_depth": 4,
+      "states": 1184040
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 8,
+      "max_root_depth": 4,
+      "states": 3108105
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 9,
+      "max_root_depth": 5,
+      "states": 6906900
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 10,
+      "max_root_depth": 5,
+      "states": 13123110
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 11,
+      "max_root_depth": 5,
+      "states": 21474180
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 12,
+      "max_root_depth": 5,
+      "states": 30421755
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 13,
+      "max_root_depth": 5,
+      "states": 37442160
+    },
+    {
+      "budget": 6,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 14,
+      "max_root_depth": 5,
+      "states": 40116600
+    },
+    {
+      "budget": 8,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 4,
+      "max_root_depth": 1,
+      "states": 20475
+    },
+    {
+      "budget": 8,
+      "disconnected": 0,
+      "fibres": 2048,
+      "k": 5,
+      "max_root_depth": 2,
+      "states": 98280
+    }
+  ],
+  "checks": 17356,
+  "complete_binary_assignments": 268435456,
+  "input_revision": "cf87f98a581089b3f84d3fee16324195ab976e1e",
+  "inputs": {
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+  },
+  "max_owner_clocks_eight_slot_move": 26,
+  "max_owner_clocks_six_slot_move": 20,
+  "max_owner_clocks_sparse_alphabet": 22,
+  "max_sparse_boundary_root_depth": 5,
+  "raw_closed_ports": 228,
+  "raw_paths": 57,
+  "small_moves": 1944,
+  "sparse_eight_slot_moves": 220,
+  "status": "PASS, same-agent independent implementation and original-native audit",
+  "target_scores": {
+    "570": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      5,
+      5
+    ],
+    "1965": [
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5
+    ],
+    "2234": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      5
+    ]
+  }
+}

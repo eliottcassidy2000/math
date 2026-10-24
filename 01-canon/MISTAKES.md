@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** retain the exact saturation theorem. Testing the same printed integer X at a higher modulus without its required harmonic lift is a different operation; exact integer current and odd-primary coverage remain unproved here.
 - **Missing coordinate:** distinguish the finite character-group representation from the modulus and integer representatives used to display it. [Corrected proof and audit](../05-knowledge/results/compatible_charged_helpers_20261023/AUDIT.md).
 
+## 2026-10-23 — a native witness pair need not be a complete pinned domain
+
+- **Affected draft:** unpublished `sixslot570_20261024/shelter.py`; no false theorem was published. A first assertion guessed that fixing the common clocks of two paths made the fresh source2393 domain binary.
+- **Witness / first failed implication:** in addition to the selected paths to570 and2234, `(4,1,0,7,3,5,6,2)` respects all five common clocks and reaches410. Two supplied witnesses do not exhaust their pin-defined domain.
+- **Repair / strongest survivor:** retain all three paths, their distinct resources and actual targets. The two-step path through410 costs2+2 clocks but has a different paired charge; it is not a free guarded substitute for the direct three-clock switch. The endpoint-recording suspension and score obstruction survive.
+- **Missing coordinate / next question:** authenticate the complete feasible relation before assigning it a binary or group-action model. See [PORTS.md](../05-knowledge/results/sixslot570_20261024/PORTS.md) and its exact normal/optimized audit.
+
 ## 2026-10-23 — reversible native edges need direction-specific transporters
 
 - **Affected draft:** the unpublished literal one-bit route audit in `balanced_native_20261023/audit.py`; no false theorem was published.
