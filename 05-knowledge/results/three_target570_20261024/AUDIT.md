@@ -81,6 +81,13 @@ literal global-owner equality checks, identical under optimization. Its
 incoming JSON is pinned by commit, path and SHA256. The two versions of the
 368 pin belong to distinct families and are never silently combined.
 
+Final32140a31c6 adds source2125 and an8-slot/51-clock fixed-phase controller
+for a distinct82-source XOR-tree family with core and helper occupancies
+separately fixed. Its exact admission cost49 is stronger than a generic reset
+there. It does not supersede the unrestricted-occupancy three-target scope
+here. The new marking correction is satisfied: each of our binary choices is
+one complete literal record, and no hidden kernel change is billed as free.
+
 ## Reproduce
 
 From the repository root:
