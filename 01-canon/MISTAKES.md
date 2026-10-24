@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-24 — unchanged target bits do not bound unmarked lift work
+
+- **Affected draft:** the unpublished abstract shielded-reservoir theorem in `guarded_component_completion_20261024/sections/SHIELDED_RESERVOIR.md`; its actual40-source instance was already fully marked.
+- **First failed implication / minimal witness:** two different kernel records can have the same U/V target bit, so bit symmetric difference zero need not mean zero changed full records or clock cost. Pairwise compatibility with isolated reservoir records also does not rule out a higher-arity cross-boundary factor.
+- **Repair / strongest survivor:** fix one complete U and V record per reservoir slot for the stated reset bound, including its lift marking; quantify shielding on the WHOLE reservoir/control configuration. Require legal fixed-occupancy endpoints with the same requested charge for an exact return. No finite native result changed.
+- **Missing coordinate / next question:** retain the full marked record and the complete factor scope before projecting to occupancy and charge. [Repaired theorem](../05-knowledge/results/guarded_component_completion_20261024/sections/SHIELDED_RESERVOIR.md), [independent audit](../05-knowledge/results/guarded_component_completion_20261024/sections/AUDIT_SHIELDED.md).
+
 ## 2026-10-23 — a finite paired code can preserve the whole dyadic tower
 
 - **Affected draft:** unpublished `compatible_charged_helpers_20261023/controller/COMPLETE_CHARGE_BANK.md`; no false theorem was published.

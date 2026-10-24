@@ -1,0 +1,17 @@
+{
+  "status": "FINITE-EXACT independent count-partition audit",
+  "checks": 5645674,
+  "pairs": 1378,
+  "quadruples": 292825,
+  "xor_tree_missing": [
+    1509
+  ],
+  "new_charge_count": 2048,
+  "clock_cases": {
+    "cross_phase": 53,
+    "center_V": 43,
+    "center_U": 29
+  },
+  "helper_support_bound": 8,
+  "helper_clock_bound": 53
+}

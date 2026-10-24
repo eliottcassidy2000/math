@@ -1,0 +1,137 @@
+{
+  "checks": 307766,
+  "coset_controls": {
+    "conditional_positive_phases": 3,
+    "minimal_hostile": {
+      "factor": "x=y",
+      "group": "C2",
+      "only_total": 0,
+      "slots": 2
+    },
+    "subgroup_count": 4
+  },
+  "finite_universes": {
+    "all_path_three_count_instances": 2048,
+    "branched_Z_times_C3_pair_instances": 4096,
+    "path_three_two_arrival_instances": 512
+  },
+  "native_boundary_family": [
+    {
+      "exact_clock_cost": 3,
+      "r": 1,
+      "resource_count": 1,
+      "separator_width": 1,
+      "slots": 1,
+      "source_order": 11
+    },
+    {
+      "exact_clock_cost": 6,
+      "r": 1,
+      "resource_count": 2,
+      "separator_width": 1,
+      "slots": 2,
+      "source_order": 11
+    },
+    {
+      "exact_clock_cost": 3,
+      "r": 2,
+      "resource_count": 1,
+      "separator_width": 1,
+      "slots": 1,
+      "source_order": 19
+    },
+    {
+      "exact_clock_cost": 6,
+      "r": 2,
+      "resource_count": 2,
+      "separator_width": 1,
+      "slots": 2,
+      "source_order": 19
+    },
+    {
+      "exact_clock_cost": 9,
+      "r": 2,
+      "resource_count": 3,
+      "separator_width": 1,
+      "slots": 3,
+      "source_order": 19
+    },
+    {
+      "exact_clock_cost": 12,
+      "r": 2,
+      "resource_count": 4,
+      "separator_width": 1,
+      "slots": 4,
+      "source_order": 19
+    },
+    {
+      "exact_clock_cost": 3,
+      "r": 3,
+      "resource_count": 1,
+      "separator_width": 1,
+      "slots": 1,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 6,
+      "r": 3,
+      "resource_count": 2,
+      "separator_width": 1,
+      "slots": 2,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 9,
+      "r": 3,
+      "resource_count": 3,
+      "separator_width": 1,
+      "slots": 3,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 12,
+      "r": 3,
+      "resource_count": 4,
+      "separator_width": 1,
+      "slots": 4,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 15,
+      "r": 3,
+      "resource_count": 5,
+      "separator_width": 1,
+      "slots": 5,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 18,
+      "r": 3,
+      "resource_count": 6,
+      "separator_width": 1,
+      "slots": 6,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 21,
+      "r": 3,
+      "resource_count": 7,
+      "separator_width": 1,
+      "slots": 7,
+      "source_order": 27
+    },
+    {
+      "exact_clock_cost": 24,
+      "r": 3,
+      "resource_count": 8,
+      "separator_width": 1,
+      "slots": 8,
+      "source_order": 27
+    }
+  ],
+  "source_hashes": {
+    "check.py": "98162869422a01b0e1b78691f178a0725b2a5b7fb361f6b9fc95e4471cba8ec8",
+    "compiler.py": "ae1a36530ea8e4a273c894c52c11c381f17740881f606fbd34ef570125c3336b"
+  },
+  "status": "FINITE-EXACT"
+}

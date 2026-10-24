@@ -1,0 +1,168 @@
+{
+  "bounds": {
+    "admission_clock": 49,
+    "changed_slots": 8,
+    "clock_occurrences": 51,
+    "core_swap_clock": 51
+  },
+  "checks": 468,
+  "events": [
+    {
+      "X_physical_row_delta": {
+        "1965": -256,
+        "2234": 256
+      },
+      "changed": [
+        368,
+        676,
+        776,
+        1596,
+        1770,
+        3139
+      ],
+      "clock_cost": 34,
+      "support": 6
+    },
+    {
+      "X_physical_row_delta": {},
+      "changed": [
+        176,
+        556,
+        676,
+        1182,
+        1425,
+        1770,
+        2125,
+        2393
+      ],
+      "clock_cost": 43,
+      "support": 8
+    },
+    {
+      "X_physical_row_delta": {},
+      "changed": [
+        556,
+        1182,
+        1394,
+        1477,
+        1882,
+        2393,
+        2439,
+        2798
+      ],
+      "clock_cost": 39,
+      "support": 8
+    },
+    {
+      "X_physical_row_delta": {
+        "1965": 256,
+        "2234": -256
+      },
+      "changed": [
+        368,
+        776,
+        1254,
+        1882,
+        2319,
+        2439,
+        2798,
+        3139
+      ],
+      "clock_cost": 44,
+      "support": 8
+    }
+  ],
+  "inputs": {
+    "compatible_charged_helpers_20261023\\supply\\selected_supply.json": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+    "guarded_component_completion_20261024\\native\\xor_tree_receipt.json": "bce2ab342ae8358c2a65bffe52f3b01b559f47112dad2920a7626ac70ed8c0e5",
+    "guarded_component_completion_20261024\\sections\\admission_receipt.json": "f7e32cfb78b81ed3fa6119eed8ec616567310cf474fde77f404cfe7ca1f57ccf",
+    "guarded_component_completion_20261024\\sections\\native_2125_receipt.json": "442da9badde3a32750cda430cd9c4342660dca0714c62320bf69a9d9e88dea38",
+    "guarded_component_completion_20261024\\sections\\phase_sections_receipt.json": "879a1386c3c550d662e3876837320d918571e6e5d3626d9b74088360544fcd13",
+    "metagraph_order8_electrical_20261023\\receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "native_packet_decomposition_20261023\\native\\domains.json": "93e82952e06933273f9d4c47d421a4d4ababe91662c50b62f19fdb7dddd430ca"
+  },
+  "source_count": 82,
+  "states": [
+    {
+      "closed_word_count": 328,
+      "core_V": [
+        176,
+        1394
+      ],
+      "helper_V": [
+        776,
+        1596,
+        2125,
+        3139
+      ],
+      "helper_charge": 1509,
+      "shared_owner": 4,
+      "total_charge": 320
+    },
+    {
+      "closed_word_count": 328,
+      "core_V": [
+        176,
+        1394
+      ],
+      "helper_V": [
+        368,
+        676,
+        1770,
+        2125
+      ],
+      "helper_charge": 1509,
+      "shared_owner": 3,
+      "total_charge": 320
+    },
+    {
+      "closed_word_count": 328,
+      "core_V": [
+        1394,
+        1425
+      ],
+      "helper_V": [
+        368,
+        556,
+        1182,
+        2393
+      ],
+      "helper_charge": 80,
+      "shared_owner": 3,
+      "total_charge": 320
+    },
+    {
+      "closed_word_count": 328,
+      "core_V": [
+        1425,
+        1477
+      ],
+      "helper_V": [
+        368,
+        1882,
+        2439,
+        2798
+      ],
+      "helper_charge": 1506,
+      "shared_owner": 3,
+      "total_charge": 320
+    },
+    {
+      "closed_word_count": 328,
+      "core_V": [
+        1425,
+        1477
+      ],
+      "helper_V": [
+        776,
+        1254,
+        2319,
+        3139
+      ],
+      "helper_charge": 1506,
+      "shared_owner": 4,
+      "total_charge": 320
+    }
+  ],
+  "status": "FINITE-EXACT literal global hub-route control"
+}
