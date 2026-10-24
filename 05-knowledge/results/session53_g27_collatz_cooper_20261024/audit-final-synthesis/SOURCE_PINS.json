@@ -1,0 +1,50 @@
+{
+  "cooper-mod9-extension": {
+    "manifest": "MANIFEST.json",
+    "sha256": "8fe437c05a20e02700e4a1a38ed494a406ba9d9345f4b147ef9aad89ba972607"
+  },
+  "inert-two-step": {
+    "manifest": "manifest.json",
+    "sha256": "fc3f83939a13ae6e82b6b0d2e807617eed3e9edf11de3380279e1186ec846143"
+  },
+  "audit-frobenius-extension": {
+    "manifest": "MANIFEST.json",
+    "sha256": "7a9f841360630b7097494a8837b65986899a54b437dcdeb2d272121733997afb"
+  },
+  "audit-modular-inputs": {
+    "manifest": "MANIFEST.json",
+    "sha256": "1a50e4c1019e6dc0bb7df12fd86e7395a7cb7c21867aa2fcfdedb44cfeec3e48"
+  },
+  "cartier-rank": {
+    "manifest": "MANIFEST.json",
+    "sha256": "98e2d3b1e39ca9a3f84f7f50dcdc914e1fde63ce9daa56a684db9b72656748ef"
+  },
+  "collatz27-repeated-block": {
+    "manifest": "manifest.json",
+    "sha256": "38f7ed917fcc8cbb86531fbd7eece761a13e5de7532b997d058910e87557ffd7"
+  },
+  "audit-repeated-block": {
+    "manifest": "MANIFEST.json",
+    "sha256": "e4d5b98f42c223d430e3929a9e5dcbe90b6b9a4e0a2a35f76d82b3bacbe930c9"
+  },
+  "two-step-tower": {
+    "manifest": "manifest.json",
+    "sha256": "90e9a6a21b90730d4cd8d6ad35a83764a626cf16e71ecb936d3e3813282d714f"
+  },
+  "two-step-next-digit": {
+    "manifest": "manifest.json",
+    "sha256": "44bf84733e7bef8b40acf2f0912d27ef19842a24d827309d4b3eb3f6fbd9338c"
+  },
+  "frobenius-mod27": {
+    "manifest": "manifest.json",
+    "sha256": "73e83450a128e083bcaa790bec57fa9827c1711d919d4a9ba3f42e4d97b24537"
+  },
+  "audit-cubic-lift": {
+    "manifest": "MANIFEST.json",
+    "sha256": "1ed5d83396be7aa395b87921d8772256edd370acbe46738a94ae66d11735ac5f"
+  },
+  "dyadic-mod4": {
+    "manifest": "MANIFEST.json",
+    "sha256": "efc8bccf713e98b3c7c77311729f160cf0c6808208bdc1f204fb735b328a8e2d"
+  }
+}

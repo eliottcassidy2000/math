@@ -1,0 +1,11 @@
+{
+  "status": "fixed test design before extended holdout execution",
+  "coefficient_bound": 40000,
+  "odd_prime_bound": 139,
+  "calibration_index": 1,
+  "calibration": "a_p = ((c(p^2)-2)/p^2) * inverse(2 modulo p) modulo p; exact divisibility is checked",
+  "fixed_prediction": "c(p^2*n) = (1+p^2*a_p*n^2)*c(n) modulo p^3",
+  "holdouts": "every n >= 2 with p^2*n <= coefficient_bound; none excluded when p divides n or c(n)",
+  "negative_control": "replace n^2 by n, retaining the same calibration coefficient",
+  "scope": "odd primes only; no coefficient adjustment after holdouts"
+}

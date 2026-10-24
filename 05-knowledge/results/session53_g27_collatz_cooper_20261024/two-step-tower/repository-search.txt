@@ -1,0 +1,8 @@
+session50-publication/clean-repo/05-knowledge/results/beukers_remark114_power_structure_and_inert_cm_20261018.md:222:1. **Higher powers.** The Dwork-type congruences `F_(p^s)(t)/F_(p^(s-1))(t^σ) ≡ F(t)/F(t^σ) (mod p^(2s))` and, for
+session50-publication/clean-repo/05-knowledge/results/beukers_remark114_power_structure_and_inert_cm_20261018.md:223:   s7, `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))` hold numerically (s7 note, section 8) but are not proved. Lemma 1 only
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:20:- VERIFIED (numerics only): A, D and E fail modulo `p^3`; `c(np^2) ≡ c(np) (mod p^4)` in a small range.
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:21:- OPEN: `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))` for `r >= 2`; Chan-Cooper-Sica Conjecture 5.5 (level 11).
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:271:1. **Higher powers.** `c(np^2) ≡ c(np) (mod p^4)` holds for `p ∈ {2, 7, 11, 23, 29, 37, 43, 53}` whenever
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:272:   `np^2 <= 6000`, and at `p = 2, 7` even modulo `p^5` (VERIFIED). The natural conjecture is
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:273:   `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))`, the weight-one analogue of Straub's Theorem 1.1 and of Beukers-Vlasenko's
+session50-publication/clean-repo/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md:275:   `p^(2r)`.

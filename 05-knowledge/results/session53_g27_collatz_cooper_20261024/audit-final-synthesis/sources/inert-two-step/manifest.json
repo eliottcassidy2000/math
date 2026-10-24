@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "files": {
+    "hostile.py": "387ac89f2839ed5f5abfc74dd2edf7a2a72045c9352cc91ca9703e58c4b4f8cd",
+    "normal.json": "38cbaa4c26fe4d1de156a2e2b9dadd2cb1ade38a14f997159c60885d2e8b5717",
+    "optimized.json": "38cbaa4c26fe4d1de156a2e2b9dadd2cb1ade38a14f997159c60885d2e8b5717",
+    "proof.md": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd",
+    "replay.py": "a440ae18bc5c78c3b1a09e71b5e952386e54d85c32c7ddbe820631175cd0e48c",
+    "sources/cooper_s7_weight1_frobenius_check_20261018.gp": "9034554ca861d527726ae4436a35be42b977cfae1f77f7d8eb0a527c401aca64",
+    "sources/cooper_s7_weight_one_root_frobenius_20261018.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "verify.py": "3b0527eeab94c91ae394fc576aed226d5ee7072c849098042670bd34cf2b7a39"
+  }
+}

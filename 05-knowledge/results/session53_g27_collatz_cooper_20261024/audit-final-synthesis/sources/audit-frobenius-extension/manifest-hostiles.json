@@ -1,0 +1,44 @@
+[
+  {
+    "packet": "mod9",
+    "hostile": "hash",
+    "rejected": true,
+    "reason": "RuntimeError: hash mismatch check.py"
+  },
+  {
+    "packet": "mod9",
+    "hostile": "extra",
+    "rejected": true,
+    "reason": "RuntimeError: closed file set mismatch"
+  },
+  {
+    "packet": "mod9",
+    "hostile": "missing",
+    "rejected": true,
+    "reason": "RuntimeError: closed file set mismatch"
+  },
+  {
+    "packet": "independent-audit",
+    "hostile": "hash",
+    "rejected": true,
+    "reason": "RuntimeError: hash mismatch: independent.py"
+  },
+  {
+    "packet": "independent-audit",
+    "hostile": "extra",
+    "rejected": true,
+    "reason": "RuntimeError: closed recursive membership mismatch"
+  },
+  {
+    "packet": "independent-audit",
+    "hostile": "missing",
+    "rejected": true,
+    "reason": "RuntimeError: closed recursive membership mismatch"
+  },
+  {
+    "packet": "independent-audit",
+    "hostile": "nested-extra",
+    "rejected": true,
+    "reason": "RuntimeError: closed recursive membership mismatch"
+  }
+]

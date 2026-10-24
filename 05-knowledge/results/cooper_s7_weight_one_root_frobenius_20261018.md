@@ -273,7 +273,7 @@ The values `-1/8, -1/64, 1/125, -1/10648` (`D = -35, -91, -112, -427`, class num
    `c(np^r) ≡ c(np^(r-1)) (mod p^(2r))`, the weight-one analogue of Straub's Theorem 1.1 and of Beukers-Vlasenko's
    Conjecture 7.5 (Dwork crystals III). Iterating section 5 would need Theorem B for `G_(p^r)/G_(p^(r-1))(t^σ)` modulo
    `p^(2r)`.
-2. Theorem A modulo 27 at `p = 3`.
+2. **Resolved in Session53 (2026-10-24).** Theorem A modulo 27 at `p = 3`, for the excellent Frobenius lift: [proof](session53_g27_collatz_cooper_20261024/frobenius-mod27/proof.md) and [independent cubic audit](session53_g27_collatz_cooper_20261024/audit-cubic-lift/REPORT.md).
 3. *Resolved.* Cooper's s10 and s18 and the Hadamard products of Beukers' Remark 1.14(2) are proved in
    `beukers_remark114_power_structure_and_inert_cm_20261018.md`, which also proves `F_p(t0) ≡ 0 (mod p^2)` at inert
    primes.

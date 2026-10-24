@@ -1,0 +1,109 @@
+{
+  "scope": "Closed file set excluding this manifest; no repository writes",
+  "source_checkout_head": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+  "lineage": [
+    {
+      "source": "05-knowledge/results/procgen_family27_20260926_long_orbit_families.md",
+      "snapshot": "inputs/procgen_family27_20260926_long_orbit_families.md",
+      "sha256": "a9ec54ec00e46952386307d77e3e37c4491044b1fa89f7de1410862ac1dab19b"
+    },
+    {
+      "source": "05-knowledge/results/entry_20260927_families.md",
+      "snapshot": "inputs/entry_20260927_families.md",
+      "sha256": "62f04ec0f9579774c26ce211cb628728b2d2081631d20c757741caa754715e77"
+    },
+    {
+      "source": "05-knowledge/results/entry_20260927_recursive.md",
+      "snapshot": "inputs/entry_20260927_recursive.md",
+      "sha256": "06648204db7214dcd2dfeee61e0d930af2372be807109d69481e709b9cd2d25d"
+    },
+    {
+      "source": "05-knowledge/results/collatz_artin_corrections_20260927_audit.md",
+      "snapshot": "inputs/collatz_artin_corrections_20260927_audit.md",
+      "sha256": "de51f2392b12a8f9e9c5037720fc445cf5f513f06f701c849fb724f4b2e4ac84"
+    },
+    {
+      "source": "05-knowledge/results/collatz_affine_guarded_lifts_20261004.md",
+      "snapshot": "inputs/collatz_affine_guarded_lifts_20261004.md",
+      "sha256": "f2931a675746b7069802ab888b4ddd1981b7e6f619d9229a271380c8fc3432fb"
+    },
+    {
+      "source": "05-knowledge/hypotheses/HYP-9282-collatz-parity-square-root-residue-biases.md",
+      "snapshot": "inputs/HYP-9282-collatz-parity-square-root-residue-biases.md",
+      "sha256": "d3d53b7d5f94740376311812f91c514936c9d0ababa4b10eea5a5d125e96871c"
+    },
+    {
+      "source": "01-canon/theorems/THM-4512-coefficient-descent-classes-one-member.md",
+      "snapshot": "inputs/THM-4512-coefficient-descent-classes-one-member.md",
+      "sha256": "1418a73b801f7fd26f76cd4c52e0bc7c63ad24ccbd1b9fc4c19b7b553918ac55"
+    },
+    {
+      "source": "01-canon/theorems/THM-4532-tournament-clocks-two-sheet-clocks-all-odd-tournaments-and-the-syracuse-clock.md",
+      "snapshot": "inputs/THM-4532-tournament-clocks-two-sheet-clocks-all-odd-tournaments-and-the-syracuse-clock.md",
+      "sha256": "977e67060bb1813e6c6db2f8b1d7c66be5768392eb7cf0293d5b23fe64c0afd9"
+    }
+  ],
+  "files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a",
+      "bytes": 10061
+    },
+    {
+      "path": "check.py",
+      "sha256": "54d31aad4b75dc5a1b12bd7c5d214828c8db07e404e21eda87b30fdb35ec6ce9",
+      "bytes": 4454
+    },
+    {
+      "path": "inputs/HYP-9282-collatz-parity-square-root-residue-biases.md",
+      "sha256": "d3d53b7d5f94740376311812f91c514936c9d0ababa4b10eea5a5d125e96871c",
+      "bytes": 8504
+    },
+    {
+      "path": "inputs/THM-4512-coefficient-descent-classes-one-member.md",
+      "sha256": "1418a73b801f7fd26f76cd4c52e0bc7c63ad24ccbd1b9fc4c19b7b553918ac55",
+      "bytes": 9900
+    },
+    {
+      "path": "inputs/THM-4532-tournament-clocks-two-sheet-clocks-all-odd-tournaments-and-the-syracuse-clock.md",
+      "sha256": "977e67060bb1813e6c6db2f8b1d7c66be5768392eb7cf0293d5b23fe64c0afd9",
+      "bytes": 7723
+    },
+    {
+      "path": "inputs/collatz_affine_guarded_lifts_20261004.md",
+      "sha256": "f2931a675746b7069802ab888b4ddd1981b7e6f619d9229a271380c8fc3432fb",
+      "bytes": 16524
+    },
+    {
+      "path": "inputs/collatz_artin_corrections_20260927_audit.md",
+      "sha256": "de51f2392b12a8f9e9c5037720fc445cf5f513f06f701c849fb724f4b2e4ac84",
+      "bytes": 36919
+    },
+    {
+      "path": "inputs/entry_20260927_families.md",
+      "sha256": "62f04ec0f9579774c26ce211cb628728b2d2081631d20c757741caa754715e77",
+      "bytes": 15361
+    },
+    {
+      "path": "inputs/entry_20260927_recursive.md",
+      "sha256": "06648204db7214dcd2dfeee61e0d930af2372be807109d69481e709b9cd2d25d",
+      "bytes": 15013
+    },
+    {
+      "path": "inputs/procgen_family27_20260926_long_orbit_families.md",
+      "sha256": "a9ec54ec00e46952386307d77e3e37c4491044b1fa89f7de1410862ac1dab19b",
+      "bytes": 48201
+    },
+    {
+      "path": "normal.json",
+      "sha256": "86fe6cb76e0dfaf41af1e9d4baf37256fa6c29a6e16a3d19109e0131403f1c00",
+      "bytes": 1957
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "86fe6cb76e0dfaf41af1e9d4baf37256fa6c29a6e16a3d19109e0131403f1c00",
+      "bytes": 1957
+    }
+  ],
+  "normal_optimized_equal": true
+}

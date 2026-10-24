@@ -1,0 +1,9 @@
+{
+  "sharpness_t3_coefficient": 756,
+  "status": "PASS",
+  "q_bound": 80,
+  "exact_T3_coefficient_checks": 5,
+  "symbolic_residual": "9*((1+t)*b-t-t^3) modulo27",
+  "F_over_Fsigma_mod27": "1+4*t+21*t^2",
+  "proof_dependency": "inherited modularity and Fricke degree bounds, plus eta/theta parameter identities"
+}

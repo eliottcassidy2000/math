@@ -1,0 +1,109 @@
+{
+  "scope": "Closed file set excluding this manifest; previous packet unchanged",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "8d02613eeeb37ef032ea86b6023b9329ba17e514756563772f6e29a34bb43e18",
+      "bytes": 10464
+    },
+    {
+      "path": "check.py",
+      "sha256": "ba3cb455b50beeadba1d7c0a5d3028f303e1d5cd20791c0bc18172bde94254ff",
+      "bytes": 4210
+    },
+    {
+      "path": "inputs/01-collatz_mediant_tree_K_20260930.md",
+      "sha256": "905e3ed4159c52214e34bc041d58828997f80ea7701f4833e7c73a0ae82bab03",
+      "bytes": 18323
+    },
+    {
+      "path": "inputs/02-collatz_coherence_20260930_trichotomy_hexagon_motifs.md",
+      "sha256": "e9e2b9864d455ecff27cadae0834b74b041df197c4a4847b6e19f2944cec467a",
+      "bytes": 9611
+    },
+    {
+      "path": "inputs/03-collatz_guarded_pumping_memory_20261004.md",
+      "sha256": "440cba209e8227945a489cc683fd72d2a7cfa335950a64f13edcd96d0a304fd1",
+      "bytes": 12043
+    },
+    {
+      "path": "inputs/04-collatz_boundary_fibres_20261011.md",
+      "sha256": "27c4d6c134f93f1eb125f9dd6d302cb5f277dcba3a96d437a41822673216fe5c",
+      "bytes": 10276
+    },
+    {
+      "path": "inputs/05-REPORT.md",
+      "sha256": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a",
+      "bytes": 10061
+    },
+    {
+      "path": "inputs/06-check.py",
+      "sha256": "54d31aad4b75dc5a1b12bd7c5d214828c8db07e404e21eda87b30fdb35ec6ce9",
+      "bytes": 4454
+    },
+    {
+      "path": "inputs/07-normal.json",
+      "sha256": "86fe6cb76e0dfaf41af1e9d4baf37256fa6c29a6e16a3d19109e0131403f1c00",
+      "bytes": 1957
+    },
+    {
+      "path": "inputs/08-manifest.json",
+      "sha256": "2640877e5482ff3a93821b237451d146f8aa1b96b74d9be4eed9c99fbb795ab6",
+      "bytes": 4396
+    },
+    {
+      "path": "normal.json",
+      "sha256": "7f76e90eaadf41cff1107b4d1bdc1a5c35b5fdfb852f8eafd5b45d7545f40caa",
+      "bytes": 1560
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "7f76e90eaadf41cff1107b4d1bdc1a5c35b5fdfb852f8eafd5b45d7545f40caa",
+      "bytes": 1560
+    }
+  ],
+  "lineage": [
+    {
+      "source": "session50-publication/clean-repo/05-knowledge/results/collatz_mediant_tree_K_20260930.md",
+      "snapshot": "inputs/01-collatz_mediant_tree_K_20260930.md",
+      "sha256": "905e3ed4159c52214e34bc041d58828997f80ea7701f4833e7c73a0ae82bab03"
+    },
+    {
+      "source": "session50-publication/clean-repo/05-knowledge/results/collatz_coherence_20260930_trichotomy_hexagon_motifs.md",
+      "snapshot": "inputs/02-collatz_coherence_20260930_trichotomy_hexagon_motifs.md",
+      "sha256": "e9e2b9864d455ecff27cadae0834b74b041df197c4a4847b6e19f2944cec467a"
+    },
+    {
+      "source": "session50-publication/clean-repo/05-knowledge/results/collatz_guarded_pumping_memory_20261004.md",
+      "snapshot": "inputs/03-collatz_guarded_pumping_memory_20261004.md",
+      "sha256": "440cba209e8227945a489cc683fd72d2a7cfa335950a64f13edcd96d0a304fd1"
+    },
+    {
+      "source": "session50-publication/clean-repo/05-knowledge/results/collatz_boundary_fibres_20261011.md",
+      "snapshot": "inputs/04-collatz_boundary_fibres_20261011.md",
+      "sha256": "27c4d6c134f93f1eb125f9dd6d302cb5f277dcba3a96d437a41822673216fe5c"
+    },
+    {
+      "source": "session53-collatz27-return/REPORT.md",
+      "snapshot": "inputs/05-REPORT.md",
+      "sha256": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a"
+    },
+    {
+      "source": "session53-collatz27-return/check.py",
+      "snapshot": "inputs/06-check.py",
+      "sha256": "54d31aad4b75dc5a1b12bd7c5d214828c8db07e404e21eda87b30fdb35ec6ce9"
+    },
+    {
+      "source": "session53-collatz27-return/normal.json",
+      "snapshot": "inputs/07-normal.json",
+      "sha256": "86fe6cb76e0dfaf41af1e9d4baf37256fa6c29a6e16a3d19109e0131403f1c00"
+    },
+    {
+      "source": "session53-collatz27-return/manifest.json",
+      "snapshot": "inputs/08-manifest.json",
+      "sha256": "2640877e5482ff3a93821b237451d146f8aa1b96b74d9be4eed9c99fbb795ab6"
+    }
+  ],
+  "normal_optimized_equal": true,
+  "frozen": true
+}

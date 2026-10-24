@@ -1,0 +1,15 @@
+{
+  "status": "independent-audit-conditional-PASS-with-residue-distribution",
+  "files": {
+    "REPORT.md": "fcd7b95cabbb48d22950f739dc8b6c1a43b5f3d89a61f72fd57d0d8c4fe7fd7a",
+    "audited-mod9-proof.md": "cc4abc46cd8acd9c2a5902c266e2846c13dcd285076d44f8ed6b462403da8c98",
+    "audited-two-step-proof.md": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd",
+    "independent.py": "5d3dff915695e7227dedb798ff4b4b412450025d016d6ce7a051704ad944c634",
+    "inherited-proof.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "manifest-hostiles.json": "341b2958188011bc540e63709a68e4e566f6fef9ac7f95ea0e74c87816149776",
+    "normal.json": "60929b9cd486b7ae296e0152e0756fe41c33c4a244ce1f9c39c6b68725cd842c",
+    "optimized.json": "60929b9cd486b7ae296e0152e0756fe41c33c4a244ce1f9c39c6b68725cd842c",
+    "producer-replay-receipts.json": "2a1a347234206caf9309f57605e2e824efebea17e56b2b19a4cd8054837d08e8",
+    "replay.py": "0ddb3f81ba81cf00d1bfbf211650a1ff6f3e7cedb7883c4934881cb05de26208"
+  }
+}

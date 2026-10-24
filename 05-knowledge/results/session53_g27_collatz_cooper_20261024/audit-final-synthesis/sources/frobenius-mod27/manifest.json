@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "files": {
+    "hostile.py": "387ac89f2839ed5f5abfc74dd2edf7a2a72045c9352cc91ca9703e58c4b4f8cd",
+    "normal.json": "031424985704da8abf4e485b5d94aa3e9e88848d9019c79fd9aeb4de9873bf31",
+    "optimized.json": "031424985704da8abf4e485b5d94aa3e9e88848d9019c79fd9aeb4de9873bf31",
+    "proof.md": "db099eff21ae472d7ecb71d7b934450468dde1f687b97a3f55534fec17c13169",
+    "replay.py": "a440ae18bc5c78c3b1a09e71b5e952386e54d85c32c7ddbe820631175cd0e48c",
+    "sources/inherited-root-note.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "verify.py": "a073408442cd0bd589943d4e5ab49b1c57385ea88b7dd24ae7f423f00568c577"
+  }
+}

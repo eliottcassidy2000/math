@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "files": {
+    "hostile.py": "387ac89f2839ed5f5abfc74dd2edf7a2a72045c9352cc91ca9703e58c4b4f8cd",
+    "normal.json": "7fa3558ef295c8ce2b4f00c21245776b593505cfd1549bc794baf4f147d5cb5f",
+    "optimized.json": "7fa3558ef295c8ce2b4f00c21245776b593505cfd1549bc794baf4f147d5cb5f",
+    "proof.md": "cd6c92e19a83436f44ce703c9f3c78265615f7b46082d61cf0d47fcbd968fb4d",
+    "replay.py": "a440ae18bc5c78c3b1a09e71b5e952386e54d85c32c7ddbe820631175cd0e48c",
+    "repository-search.txt": "3678b287f18e2f819950bef35804a813a0a1511f1d9bc028f843288bd65a3b76",
+    "sources/base-two-step-proof.md": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd",
+    "sources/inherited-root-note.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "verify.py": "6bd5114cb6f2903c4816d28ce20a2261aa7c1b37f73c45d6e1f6c80bb1260e5e"
+  }
+}

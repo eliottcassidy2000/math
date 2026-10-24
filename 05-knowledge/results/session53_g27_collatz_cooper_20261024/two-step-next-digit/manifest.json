@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "files": {
+    "design.json": "e7146ad6d9266a04cf0f388e29f896fcbc804f6bd8b7a80761496b259b79f620",
+    "hostile.py": "387ac89f2839ed5f5abfc74dd2edf7a2a72045c9352cc91ca9703e58c4b4f8cd",
+    "normal.json": "7657d0529b895a7fc6ffd2b804fad723c96b91fd38017a3f03bf470cc02b5ab4",
+    "optimized.json": "7657d0529b895a7fc6ffd2b804fad723c96b91fd38017a3f03bf470cc02b5ab4",
+    "proof.md": "a4c955a3912bb62bc2ff33ae9a30cee85b6e55bf410abc61e4bbd58bfb56ec80",
+    "replay.py": "a440ae18bc5c78c3b1a09e71b5e952386e54d85c32c7ddbe820631175cd0e48c",
+    "sources/base-two-step-proof.md": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd",
+    "verify.py": "421f2de5f622981681b4c41523a97a95de6a842217f0822eebf77859bf98f063"
+  }
+}

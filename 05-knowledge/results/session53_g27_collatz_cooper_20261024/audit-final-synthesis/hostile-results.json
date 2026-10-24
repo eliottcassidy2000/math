@@ -1,0 +1,18 @@
+{
+  "source-corruption": [
+    "RuntimeError: source hash REPORT.md",
+    "RuntimeError: source hash REPORT.md"
+  ],
+  "missing-source": [
+    "RuntimeError: source closure dyadic-mod4",
+    "RuntimeError: source closure dyadic-mod4"
+  ],
+  "invalid-link": [
+    "RuntimeError: link missing/REPORT.md",
+    "RuntimeError: link missing/REPORT.md"
+  ],
+  "arithmetic-weight": [
+    "RuntimeError: base9",
+    "RuntimeError: base9"
+  ]
+}

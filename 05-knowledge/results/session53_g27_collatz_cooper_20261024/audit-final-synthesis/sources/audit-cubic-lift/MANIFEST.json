@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "files": {
+    "REPORT.md": "8c87b8851424051000dc8314408188ecbe4ef1400052e67e6d1893f3bedbdab0",
+    "check.py": "dc4d0a85e99e217288dc476828b94aed6d18a12da9c54e682e1e0173d14ed82d",
+    "hostile.py": "2abf3e56221af0a86afd00c302181b04f787f2e194bd5901f335b7d0a1c590d5",
+    "normal.json": "8e78618ccaa1bcca10a68a922fce262b4e8a30f411292bfd6ae683e71ad22960",
+    "optimized.json": "8e78618ccaa1bcca10a68a922fce262b4e8a30f411292bfd6ae683e71ad22960",
+    "sources/cubic-proof.md": "db099eff21ae472d7ecb71d7b934450468dde1f687b97a3f55534fec17c13169",
+    "sources/modular-input-audit.md": "e64d003ec6eea6e48ef37f88bdba9f8f3511b280cbacaa0eb8d9c00e07cbccaf",
+    "sources/next-digit-fixture.json": "7657d0529b895a7fc6ffd2b804fad723c96b91fd38017a3f03bf470cc02b5ab4",
+    "sources/next-digit-proof.md": "a4c955a3912bb62bc2ff33ae9a30cee85b6e55bf410abc61e4bbd58bfb56ec80",
+    "verify.py": "4c12269daedc6b73a38bef9b4aa0a836d2f20c18d667cfa1374727359d895d6e"
+  }
+}

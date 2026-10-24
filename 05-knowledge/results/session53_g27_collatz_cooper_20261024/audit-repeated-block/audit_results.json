@@ -1,0 +1,170 @@
+{
+  "session53-collatz27-repeated-block": {
+    "manifest_sha256": "38f7ed917fcc8cbb86531fbd7eece761a13e5de7532b997d058910e87557ffd7",
+    "payload_files": 12,
+    "normal_optimized_saved_equal": true
+  },
+  "session53-two-step-tower": {
+    "manifest_sha256": "90e9a6a21b90730d4cd8d6ad35a83764a626cf16e71ecb936d3e3813282d714f",
+    "payload_files": 9,
+    "replay": "PASS: closed membership, hashes, normal and optimized replay",
+    "hostiles_normal": {
+      "corrupt": "REJECTED",
+      "extra": "REJECTED",
+      "missing": "REJECTED"
+    },
+    "hostiles_optimized": {
+      "corrupt": "REJECTED",
+      "extra": "REJECTED",
+      "missing": "REJECTED"
+    },
+    "comparisons": 15407,
+    "status": "FINITE-EXACT PASS; infinite-depth hypothesis remains OPEN"
+  },
+  "independent_large_interval_CRT_checks": 2982,
+  "exact_valuation_boundary_controls": [
+    {
+      "valuation": 1,
+      "correct_K": 0,
+      "wrong_divisor58_K": 0
+    },
+    {
+      "valuation": 58,
+      "correct_K": 0,
+      "wrong_divisor58_K": 1
+    },
+    {
+      "valuation": 59,
+      "correct_K": 1,
+      "wrong_divisor58_K": 1
+    },
+    {
+      "valuation": 60,
+      "correct_K": 1,
+      "wrong_divisor58_K": 1
+    },
+    {
+      "valuation": 116,
+      "correct_K": 1,
+      "wrong_divisor58_K": 2
+    },
+    {
+      "valuation": 117,
+      "correct_K": 1,
+      "wrong_divisor58_K": 2
+    },
+    {
+      "valuation": 118,
+      "correct_K": 2,
+      "wrong_divisor58_K": 2
+    },
+    {
+      "valuation": 119,
+      "correct_K": 2,
+      "wrong_divisor58_K": 2
+    },
+    {
+      "valuation": 3421,
+      "correct_K": 57,
+      "wrong_divisor58_K": 58
+    },
+    {
+      "valuation": 3422,
+      "correct_K": 58,
+      "wrong_divisor58_K": 59
+    },
+    {
+      "valuation": 3480,
+      "correct_K": 58,
+      "wrong_divisor58_K": 60
+    },
+    {
+      "valuation": 3481,
+      "correct_K": 59,
+      "wrong_divisor58_K": 60
+    }
+  ],
+  "rejected_mutations": [
+    {
+      "mutation": "wrong_period",
+      "mode": "normal",
+      "rejection": "RuntimeError: geometric sum"
+    },
+    {
+      "mutation": "wrong_period",
+      "mode": "optimized",
+      "rejection": "RuntimeError: geometric sum"
+    },
+    {
+      "mutation": "lost_carry",
+      "mode": "normal",
+      "rejection": "RuntimeError: source class"
+    },
+    {
+      "mutation": "lost_carry",
+      "mode": "optimized",
+      "rejection": "RuntimeError: source class"
+    },
+    {
+      "mutation": "wrong_fuel58",
+      "mode": "normal",
+      "rejection": "SURVIVES producer fixture; REJECTED by independent exact-valuation boundary controls"
+    },
+    {
+      "mutation": "wrong_fuel58",
+      "mode": "optimized",
+      "rejection": "SURVIVES producer fixture; REJECTED by independent exact-valuation boundary controls"
+    },
+    {
+      "mutation": "wrong_fuel60",
+      "mode": "normal",
+      "rejection": "RuntimeError: fuel lower bound"
+    },
+    {
+      "mutation": "wrong_fuel60",
+      "mode": "optimized",
+      "rejection": "RuntimeError: fuel lower bound"
+    },
+    {
+      "mutation": "native_involution",
+      "mode": "normal",
+      "rejection": "RuntimeError: quotient not native involution"
+    },
+    {
+      "mutation": "native_involution",
+      "mode": "optimized",
+      "rejection": "RuntimeError: quotient not native involution"
+    },
+    {
+      "mutation": "wrong_clock",
+      "mode": "normal",
+      "rejection": "RuntimeError: fresh block descent"
+    },
+    {
+      "mutation": "wrong_clock",
+      "mode": "optimized",
+      "rejection": "RuntimeError: fresh block descent"
+    },
+    {
+      "mutation": "wrong_fixedpoint",
+      "mode": "normal",
+      "rejection": "RuntimeError: noninteger fixedpoint"
+    },
+    {
+      "mutation": "wrong_fixedpoint",
+      "mode": "optimized",
+      "rejection": "RuntimeError: noninteger fixedpoint"
+    },
+    {
+      "mutation": "drop_residue_parity",
+      "mode": "normal",
+      "rejection": "RuntimeError: quotient slope"
+    },
+    {
+      "mutation": "drop_residue_parity",
+      "mode": "optimized",
+      "rejection": "RuntimeError: quotient slope"
+    }
+  ],
+  "ap_count_offset_mutation": "A common additive count offset cancels in differences; not a valid semantic hostile. Independent AP formula reviewed separately."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "conditional proved mod4 corollary",
+  "files": {
+    "REPORT.md": "db04a57725b52e595b9347400d3fcf44b4dc65fb380a783b5edb988e0bbda46c",
+    "check.py": "617a38aa10c797eac54d006f2af3843618b0ac874027a407ab07995a16678b65",
+    "hostile.py": "d1ea246814a33211df35aee24bd0c2ef71539fd1d956a1a281c57bfe9e61b5f2",
+    "inherited-proof.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "normal.json": "0001b08dd06952aec87824da3c651be78833c12d7bfaf43fa7151f5e13f5b69b",
+    "optimized.json": "0001b08dd06952aec87824da3c651be78833c12d7bfaf43fa7151f5e13f5b69b",
+    "replay.py": "023ff60d2d711c45c50b92ff1e116b45fe0a6a3ea5bebc8c49d1ffdb23a2bc90"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "reviewed_hashes": {
+    "README.md": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439",
+    "SYNTHESIS.md": "11c041b1f7953a1ffda9211dfcd7f895304a510e4dcbd3c4fdcfac7d1e810996"
+  },
+  "source_packets": 12,
+  "relative_link_uses": 22,
+  "independent_binomial_root_through": 100,
+  "next_digit_comparisons_outside_calibration": 7995,
+  "next_digit_odd_primes": 33,
+  "tower_comparisons_counted": 15407,
+  "exact_fuel_valuation_boundaries": [
+    0,
+    1,
+    57,
+    58,
+    59,
+    60,
+    116,
+    117,
+    118,
+    119,
+    176,
+    177,
+    235,
+    236
+  ],
+  "sharpness": {
+    "excellent_mod81": 756,
+    "naive_mod27": 273312
+  }
+}
