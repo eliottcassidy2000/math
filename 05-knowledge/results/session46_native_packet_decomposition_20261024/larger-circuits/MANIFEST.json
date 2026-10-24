@@ -1,0 +1,85 @@
+{
+  "status": "Exact native18-source primitive circuit; optional unfinished discovery is not a maximum proof",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1600,
+      "sha256": "1fc6b896b5ab50495b20f63b8ed3aeef7905e9174c7c7d5275b966afb97be07a"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 8808,
+      "sha256": "06a724bd8fd0f56afd4d686da245ed19b3c4aa9da07ccb97c519ac51dbc9daaa"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1066,
+      "sha256": "cbe7296cdb40f9bf807c54edf70eea275f3d3e7769e0caf696a0802c86e7c0c0"
+    },
+    {
+      "path": "source_inventory.json",
+      "bytes": 23249,
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "path": "pool.json",
+      "bytes": 23922,
+      "sha256": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf"
+    },
+    {
+      "path": "candidates.json",
+      "bytes": 435,
+      "sha256": "cbdcf87ba6c1fe8103a3f77b6aff858133a4b366050b2e41f4bfb79c966be8f6"
+    },
+    {
+      "path": "charges.json",
+      "bytes": 487,
+      "sha256": "58ea918d1a2662280222f8fc39fc5f9615a103441bf9835e42b55ccc8390613a"
+    },
+    {
+      "path": "check.py",
+      "bytes": 11258,
+      "sha256": "27f1c464be228ad6ceaf9064b38aedd87368943566926c7ad42dcd4d0c487636"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 396676,
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 396676,
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "path": "solve_images.py",
+      "bytes": 3798,
+      "sha256": "8fad6372ba8897396d7ecc0408a15ca55eb575626aa293a9d1c0b42028c33b92"
+    },
+    {
+      "path": "image_witnesses.json",
+      "bytes": 439527,
+      "sha256": "fd0d714c9dc49f03cb2560d39e1722817f3f376fbb3a891253f067ecd45eef20"
+    },
+    {
+      "path": "regeneration.json",
+      "bytes": 169,
+      "sha256": "9bf9f78a2b0bd0d46de6a913158dc50d35ca93e918aace83c4269b46daafd66f"
+    },
+    {
+      "path": "search.cpp",
+      "bytes": 1731,
+      "sha256": "7c7fc190444310a534e00244a0fe44f3e8ae68938021417da04dac57355442a9"
+    },
+    {
+      "path": "labels.txt",
+      "bytes": 295,
+      "sha256": "0323b1c92281a62a3f6e0d1165aecbf3548d627bc9d5dc5aa94715292dc3df16"
+    },
+    {
+      "path": "search18.json",
+      "bytes": 154,
+      "sha256": "b4c1746a0cae1ca7b8d7b9f22c5afd8bde94974d871a878947348b9939e12ff4"
+    }
+  ]
+}

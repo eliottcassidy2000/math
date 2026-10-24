@@ -1,0 +1,199 @@
+{
+  "audit": [
+    {
+      "bytes": 9318,
+      "path": "AUDIT.md",
+      "sha256": "58c0675dde6cd31ee677e496c8855fcbfca4104123f0ea535bf7b15c399d6ef1"
+    },
+    {
+      "bytes": 15458,
+      "path": "audit.py",
+      "sha256": "16d38b6ae2fa2f7ba1f72974651c7e7908965f35c70f3fcec7dcb62cf7c90054"
+    },
+    {
+      "bytes": 2277,
+      "path": "verify_manifest.py",
+      "sha256": "252046c3621bf2e637ed2ba3da1df9c500014361e14cc4c18bc29ea0065ed3b5"
+    },
+    {
+      "bytes": 86189,
+      "path": "normal.json",
+      "sha256": "0079b2cae995423472603360fb94410eca39f5056cbfaffb2e031ee65b2c7bdf"
+    },
+    {
+      "bytes": 86189,
+      "path": "optimized.json",
+      "sha256": "0079b2cae995423472603360fb94410eca39f5056cbfaffb2e031ee65b2c7bdf"
+    },
+    {
+      "bytes": 952244,
+      "path": "proper_balanced_separators.json",
+      "sha256": "c54ca514143bd1e9d714953fc6c148aeacbed0015348c0577b31b080debeb262"
+    },
+    {
+      "bytes": 396676,
+      "path": "producer.normal.json",
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "bytes": 396676,
+      "path": "producer.optimized.json",
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "bytes": 6674,
+      "path": "dyadic-replay.normal.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "bytes": 6674,
+      "path": "dyadic-replay.optimized.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    }
+  ],
+  "producer": [
+    {
+      "bytes": 1600,
+      "path": "README.md",
+      "sha256": "1fc6b896b5ab50495b20f63b8ed3aeef7905e9174c7c7d5275b966afb97be07a"
+    },
+    {
+      "bytes": 8808,
+      "path": "THEOREM.md",
+      "sha256": "06a724bd8fd0f56afd4d686da245ed19b3c4aa9da07ccb97c519ac51dbc9daaa"
+    },
+    {
+      "bytes": 1066,
+      "path": "SOURCE_PINS.json",
+      "sha256": "cbe7296cdb40f9bf807c54edf70eea275f3d3e7769e0caf696a0802c86e7c0c0"
+    },
+    {
+      "bytes": 23249,
+      "path": "source_inventory.json",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "bytes": 23922,
+      "path": "pool.json",
+      "sha256": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf"
+    },
+    {
+      "bytes": 435,
+      "path": "candidates.json",
+      "sha256": "cbdcf87ba6c1fe8103a3f77b6aff858133a4b366050b2e41f4bfb79c966be8f6"
+    },
+    {
+      "bytes": 487,
+      "path": "charges.json",
+      "sha256": "58ea918d1a2662280222f8fc39fc5f9615a103441bf9835e42b55ccc8390613a"
+    },
+    {
+      "bytes": 11258,
+      "path": "check.py",
+      "sha256": "27f1c464be228ad6ceaf9064b38aedd87368943566926c7ad42dcd4d0c487636"
+    },
+    {
+      "bytes": 396676,
+      "path": "normal.json",
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "bytes": 396676,
+      "path": "optimized.json",
+      "sha256": "c6a82ab2067b473a495c897092875a733f09a6bdbd590ffd5b2694d27257cb94"
+    },
+    {
+      "bytes": 3798,
+      "path": "solve_images.py",
+      "sha256": "8fad6372ba8897396d7ecc0408a15ca55eb575626aa293a9d1c0b42028c33b92"
+    },
+    {
+      "bytes": 439527,
+      "path": "image_witnesses.json",
+      "sha256": "fd0d714c9dc49f03cb2560d39e1722817f3f376fbb3a891253f067ecd45eef20"
+    },
+    {
+      "bytes": 169,
+      "path": "regeneration.json",
+      "sha256": "9bf9f78a2b0bd0d46de6a913158dc50d35ca93e918aace83c4269b46daafd66f"
+    },
+    {
+      "bytes": 1731,
+      "path": "search.cpp",
+      "sha256": "7c7fc190444310a534e00244a0fe44f3e8ae68938021417da04dac57355442a9"
+    },
+    {
+      "bytes": 295,
+      "path": "labels.txt",
+      "sha256": "0323b1c92281a62a3f6e0d1165aecbf3548d627bc9d5dc5aa94715292dc3df16"
+    },
+    {
+      "bytes": 154,
+      "path": "search18.json",
+      "sha256": "b4c1746a0cae1ca7b8d7b9f22c5afd8bde94974d871a878947348b9939e12ff4"
+    },
+    {
+      "bytes": 2503,
+      "path": "MANIFEST.json",
+      "sha256": "56f884849ff57ce6b31b1fa28d28dae74e3680ebb41b8d5c1d385757a2c8b7c7"
+    }
+  ],
+  "relative_layout": {
+    "producer": "../larger-circuits",
+    "repository": "../../../.."
+  },
+  "repository": [
+    {
+      "bytes": 134104,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "bytes": 3357288,
+      "path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "bytes": 11956,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/audit.py",
+      "sha256": "2241234835a59041f1a000bb43470e7999d9827f44d495d4560b4060cc89155e"
+    },
+    {
+      "bytes": 6674,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/normal.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "bytes": 6674,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/optimized.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "bytes": 9622,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/AUDIT.md",
+      "sha256": "a280f561fcea18934e214f487d4cc6755b5616f25425017e292baa8b5cbcec29"
+    },
+    {
+      "bytes": 1419,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/SOURCE_PINS.json",
+      "sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221"
+    },
+    {
+      "bytes": 459092,
+      "path": "05-knowledge/results/session45_injective_multisource_moves_20261023/dyadic-constraints/node_labels.json",
+      "sha256": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429"
+    }
+  ],
+  "scope": "No complete-atlas rewiring, all-order native supply or full-menu maximum claimed.",
+  "status": "PASS; independent native audit and original dyadic-filtration replay"
+}

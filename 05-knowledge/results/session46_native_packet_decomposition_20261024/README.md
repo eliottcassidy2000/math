@@ -16,3 +16,15 @@ still fails because unit resource capacity or shared coordinates are lost.
 The next checkpoints will add independently audited larger circuits and charged
 compensator routes. Nothing here changes the canonical complement rule of a
 fully occupied tournament atlas. All-size wiring classification remains open.
+
+## Larger native circuit
+
+- [Eighteen-source primitive packet](larger-circuits/THEOREM.md): a complete
+  pinned family whose full dyadic guards leave exactly two states, with direct
+  full-Laplacian image witnesses, 43 changed owner clocks and distinct resources.
+- [Independent larger-circuit audit](audit-larger/AUDIT.md): exact precision
+  filtration, complete native domains, physical currents and converse.
+
+The eighteen-slot family can admit additional lower-precision states; preserving
+only mod 8 does not authenticate its full dyadic atomicity. Charged-buffer
+decompositions and tighter clock-cost certificates are being audited separately.
