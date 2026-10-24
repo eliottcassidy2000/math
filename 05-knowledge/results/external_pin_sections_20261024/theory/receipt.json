@@ -1,0 +1,234 @@
+{
+  "scope": "abstract finite full-record conditional models, not a native n8 census",
+  "deficiency": {
+    "cyclic_subset_pairs": 5456,
+    "graded_C5_splits": {
+      "2": [
+        [
+          1,
+          1
+        ]
+      ],
+      "3": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "4": [
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "density_equality_hostile": {
+      "group": 4,
+      "A": [
+        0,
+        2
+      ],
+      "B": [
+        0,
+        2
+      ]
+    },
+    "cross_defect_hostile": {
+      "group": 5,
+      "missing": 0,
+      "bad_pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ]
+    }
+  },
+  "costs": {
+    "sharp_grade_cases": 284,
+    "conditional_18_bank_cost_bounds": {
+      "entry": 47,
+      "adjacent": 39,
+      "helper": 52,
+      "outside": 45
+    }
+  },
+  "receiver_models": [
+    {
+      "model": "C3_indexed_owner_pin",
+      "Q": 3,
+      "R_labels": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "E_labels": [
+        1,
+        2
+      ],
+      "grade_band": [
+        2,
+        4
+      ],
+      "conditional_owner_pin": true,
+      "feasible_fibres": 15,
+      "ordered_endpoint_pairs": 9563,
+      "route_events": 28311,
+      "max_observed_cost": 30,
+      "max_observed_length": 7,
+      "event_types": {
+        "adjacent": 5963,
+        "entry-high": 532,
+        "entry-low": 515,
+        "helper": 8484,
+        "outside": 1028,
+        "refresh": 4779,
+        "reverse-adjacent": 5963,
+        "reverse-entry-high": 532,
+        "reverse-entry-low": 515
+      }
+    },
+    {
+      "model": "C3_negated_core_same_helper",
+      "Q": 3,
+      "R_labels": [
+        0,
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "E_labels": [
+        2,
+        1
+      ],
+      "grade_band": [
+        2,
+        4
+      ],
+      "conditional_owner_pin": true,
+      "feasible_fibres": 15,
+      "ordered_endpoint_pairs": 9563,
+      "route_events": 28311,
+      "max_observed_cost": 30,
+      "max_observed_length": 7,
+      "event_types": {
+        "adjacent": 5963,
+        "entry-high": 532,
+        "entry-low": 515,
+        "helper": 8484,
+        "outside": 1028,
+        "refresh": 4779,
+        "reverse-adjacent": 5963,
+        "reverse-entry-high": 532,
+        "reverse-entry-low": 515
+      }
+    },
+    {
+      "model": "C5_complementary_incomplete_blocks",
+      "Q": 5,
+      "R_labels": [
+        0,
+        1,
+        2,
+        0,
+        2,
+        4
+      ],
+      "E_labels": [
+        1,
+        3
+      ],
+      "grade_band": [
+        2,
+        4
+      ],
+      "conditional_owner_pin": false,
+      "feasible_fibres": 25,
+      "ordered_endpoint_pairs": 22940,
+      "route_events": 71321,
+      "max_observed_cost": 30,
+      "max_observed_length": 7,
+      "event_types": {
+        "adjacent": 14466,
+        "entry-high": 1259,
+        "entry-low": 1259,
+        "helper": 20380,
+        "outside": 2612,
+        "refresh": 14361,
+        "reverse-adjacent": 14466,
+        "reverse-entry-high": 1259,
+        "reverse-entry-low": 1259
+      }
+    },
+    {
+      "model": "C2_zero_outside_width",
+      "Q": 2,
+      "R_labels": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "E_labels": [],
+      "grade_band": [
+        1,
+        3
+      ],
+      "conditional_owner_pin": false,
+      "feasible_fibres": 6,
+      "ordered_endpoint_pairs": 308,
+      "route_events": 446,
+      "max_observed_cost": 18,
+      "max_observed_length": 3,
+      "event_types": {
+        "helper": 264,
+        "refresh": 182
+      }
+    },
+    {
+      "model": "trivial_group_zero_grade",
+      "Q": 1,
+      "R_labels": [
+        0,
+        0
+      ],
+      "E_labels": [
+        0
+      ],
+      "grade_band": [
+        0,
+        2
+      ],
+      "conditional_owner_pin": false,
+      "feasible_fibres": 4,
+      "ordered_endpoint_pairs": 180,
+      "route_events": 358,
+      "max_observed_cost": 18,
+      "max_observed_length": 4,
+      "event_types": {
+        "adjacent": 81,
+        "helper": 160,
+        "refresh": 36,
+        "reverse-adjacent": 81
+      }
+    }
+  ],
+  "checks_before_receipt": 1040571,
+  "sources": {
+    "check.py": "e71d5ca4b12c90b76a957997fc207f98f5f2f886d459f211a7613d8899a97a5c",
+    "RECEIVER_BANKS.md": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+  }
+}
