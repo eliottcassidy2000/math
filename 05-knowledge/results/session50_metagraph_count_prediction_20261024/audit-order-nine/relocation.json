@@ -1,0 +1,26 @@
+{
+  "closed_inventory_files_including_this_receipt": 33,
+  "command": "bash reproduce.sh",
+  "compiled_modes": [
+    "-O2",
+    "-O3 -DNDEBUG"
+  ],
+  "copied_directory": "/tmp/session50-order-nine-audit-copy.yJ6BGM",
+  "identical_math_output_files": [
+    "compiled-normal.json",
+    "compiled-normal-parents.tsv",
+    "compiled-normal-regular.tsv",
+    "compiled-optimized.json",
+    "compiled-optimized-parents.tsv",
+    "compiled-optimized-regular.tsv",
+    "normal.json",
+    "optimized.json",
+    "normal.out",
+    "optimized.out"
+  ],
+  "python_modes": [
+    "normal",
+    "-O"
+  ],
+  "status": "PASS"
+}

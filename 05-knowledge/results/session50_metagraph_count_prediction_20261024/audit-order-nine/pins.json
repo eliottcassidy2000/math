@@ -1,0 +1,74 @@
+[
+  {
+    "archive": "archive/producer/parents-eight.json",
+    "bytes": 469134,
+    "sha256": "1cd97666c0ee6294bf379b6d77f95bea5e24f8f5b27749ef804c46a45892ac7b",
+    "source": "session50-order-nine/parents-eight.json"
+  },
+  {
+    "archive": "archive/producer/normal.json",
+    "bytes": 559299,
+    "sha256": "b337c3c6bdcacc0774d9073fc7dba80a08b041e6f80fdb3b964face950e3f548",
+    "source": "session50-order-nine/normal.json"
+  },
+  {
+    "archive": "archive/producer/optimized.json",
+    "bytes": 559299,
+    "sha256": "b337c3c6bdcacc0774d9073fc7dba80a08b041e6f80fdb3b964face950e3f548",
+    "source": "session50-order-nine/optimized.json"
+  },
+  {
+    "archive": "archive/producer/input-receipt.json",
+    "bytes": 1010,
+    "sha256": "b12623e36f26c483da477c0574c26b821f044c8ff17108f320aa3590e7fc94fe",
+    "source": "session50-order-nine/input-receipt.json"
+  },
+  {
+    "archive": "archive/producer/regular-normal.json",
+    "bytes": 49386,
+    "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9",
+    "source": "session50-order-nine/regular-normal.json"
+  },
+  {
+    "archive": "archive/producer/upper-compiled.json",
+    "bytes": 158462,
+    "sha256": "0a2678e7f7c8ceb52ea66775b75a32e2fc07e3623cffda92794c3332eee348e9",
+    "source": "session50-order-nine/upper-compiled.json"
+  },
+  {
+    "archive": "archive/producer/THEOREM.md.txt",
+    "bytes": 13077,
+    "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294",
+    "source": "session50-order-nine/THEOREM.md"
+  },
+  {
+    "archive": "archive/producer/prepare_inputs.py.txt",
+    "bytes": 4435,
+    "sha256": "5be8e311ebbb54172249ec22cf318402a29797e4eb90e4e298e47ed5cabd7bc7",
+    "source": "session50-order-nine/prepare_inputs.py"
+  },
+  {
+    "archive": "archive/producer/predictor.py.txt",
+    "bytes": 8802,
+    "sha256": "66657bf1872e5b61159eeac906cd4a60ad8748c9b4c7a43773031c9e13d83873",
+    "source": "session50-order-nine/predictor.py"
+  },
+  {
+    "archive": "archive/producer/regular_trace.py.txt",
+    "bytes": 4742,
+    "sha256": "9ce2e7a576bd68d7b0b24c5264d5e4b1f1ce435b466d2825f54ac4728022e593",
+    "source": "session50-order-nine/regular_trace.py"
+  },
+  {
+    "archive": "archive/producer/upper_trace.cpp.txt",
+    "bytes": 4400,
+    "sha256": "e82a4e820e9c5d0ac345e115e64b040f65c4ca8b4a1c9a34247f4b07862bd1c7",
+    "source": "session50-order-nine/upper_trace.cpp"
+  },
+  {
+    "archive": "archive/producer/SOURCE_PINS.json",
+    "bytes": 2453,
+    "sha256": "7f9abfec3a2c7ae63b5bd44bee25ac2f2eae6a5cc7beb5b11d49b4a56e7566af",
+    "source": "session50-order-nine/SOURCE_PINS.json"
+  }
+]

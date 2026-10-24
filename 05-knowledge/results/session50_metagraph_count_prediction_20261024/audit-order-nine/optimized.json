@@ -1,0 +1,167 @@
+{
+  "checks": {
+    "all equitable triangle crossings exhausted": 1,
+    "all nonregular triple exceptional classes": 1,
+    "all parent automorphism orders agree": 6880,
+    "all per-parent states upper and root cells agree": 6880,
+    "all raw codes have twenty-eight bits": 1,
+    "all regular reroot matrix entries agree": 1,
+    "all supplied actions distinct": 6880,
+    "all supplied actions preserve arcs": 6880,
+    "aut orbits disjoint": 10823,
+    "independent error agreement": 1,
+    "independent full upper agreement": 1,
+    "independent pointed states agreement": 1,
+    "independent predicted count agreement": 1,
+    "independent regular matrix trace": 1,
+    "positive error transitive majority": 648,
+    "regular7 class orbits disjoint": 3,
+    "regular7 complete mass": 1,
+    "regular7 error fourteen": 1,
+    "regular7 independent finite universe": 1,
+    "regular7 orbit mass": 3,
+    "regular7 permutation closure": 3,
+    "regular7 terminal degrees": 2640,
+    "triangle positive error rigid eighteen": 648,
+    "triangle stable cells only three triples or one nine": 2310
+  },
+  "comparison": {
+    "compared_parent_classes": 6880,
+    "producer_prediction": 191536,
+    "producer_upper_trace": 1724582
+  },
+  "regular_seven_classes": [
+    {
+      "aut_order": 7,
+      "error": 0,
+      "labelled_orbit": 720,
+      "rows": [
+        14,
+        28,
+        56,
+        112,
+        97,
+        67,
+        7
+      ],
+      "vertex_orbits": [
+        7
+      ]
+    },
+    {
+      "aut_order": 3,
+      "error": 14,
+      "labelled_orbit": 1680,
+      "rows": [
+        14,
+        28,
+        104,
+        112,
+        37,
+        67,
+        19
+      ],
+      "vertex_orbits": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "aut_order": 21,
+      "error": 0,
+      "labelled_orbit": 240,
+      "rows": [
+        14,
+        52,
+        88,
+        98,
+        41,
+        69,
+        19
+      ],
+      "vertex_orbits": [
+        7
+      ]
+    }
+  ],
+  "status": "PASS",
+  "triangle_controls": {
+    "exceptional_classes": [
+      {
+        "error": 18,
+        "rows": [
+          74,
+          148,
+          289,
+          86,
+          293,
+          139,
+          182,
+          285,
+          107
+        ]
+      },
+      {
+        "error": 18,
+        "rows": [
+          74,
+          164,
+          273,
+          86,
+          163,
+          269,
+          182,
+          301,
+          91
+        ]
+      },
+      {
+        "error": 18,
+        "rows": [
+          74,
+          276,
+          161,
+          86,
+          165,
+          267,
+          182,
+          299,
+          93
+        ]
+      },
+      {
+        "error": 18,
+        "rows": [
+          74,
+          292,
+          145,
+          86,
+          291,
+          141,
+          182,
+          283,
+          109
+        ]
+      }
+    ],
+    "labelled_wirings": 2744,
+    "partition_histogram": [
+      [
+        [
+          3,
+          3,
+          3
+        ],
+        2310
+      ],
+      [
+        [
+          9
+        ],
+        434
+      ]
+    ],
+    "regular_presentations_excluded": 434
+  }
+}

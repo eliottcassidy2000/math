@@ -1,0 +1,18 @@
+{
+  "checks": 42,
+  "full_relocation": {
+    "copied_only_manifest_members": true,
+    "status": "PASS",
+    "stdout": [
+      "{\"almost_regular_parent_classes\": 85, \"atlas_sha256\": \"1cd97666c0ee6294bf379b6d77f95bea5e24f8f5b27749ef804c46a45892ac7b\", \"automorphism_order_histogram\": [[1, 6556], [3, 292], [5, 10], [7, 2], [9, 16], [15, 2], [21, 2]], \"checks\": {\"all ordinary parent classes nonisomorphic\": 6880, \"canonical order at most eight\": 6880, \"consecutive merged ids\": 3528, \"consecutive ordinary class ids\": 1, \"consistent repeated ordinary class ids\": 7056, \"full canonical actions preserve arcs\": 6880, \"full labelled order-eight orbit mass\": 1, \"integral labelled class orbit\": 6880}, \"complete_labelled_universe\": 268435456, \"labelled_mass\": 268435456, \"merged_classes\": 3528, \"ordinary_classes\": 6880, \"raw_source_sha256\": \"61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835\", \"status\": \"PASS\"}",
+      "{\"pointed_extension_states\": 1716608, \"predicted_class_count\": 191536, \"regular_sector\": {\"classes\": 15, \"error\": 630, \"pointed_states\": 85, \"trace\": 135}, \"status\": \"PASS\", \"total_error_correction\": 758, \"upper_refinement_trace\": 1724582}",
+      "{\"pointed_extension_states\": 1716608, \"predicted_class_count\": 191536, \"regular_sector\": {\"classes\": 15, \"error\": 630, \"pointed_states\": 85, \"trace\": 135}, \"status\": \"PASS\", \"total_error_correction\": 758, \"upper_refinement_trace\": 1724582}",
+      "{\"operations\": {\"parent_canonical_label_candidates\": 2130, \"parent_canonicalizations\": 765, \"regular_child_deletions\": 765, \"regular_child_extensions\": 85}, \"pointed_regular_states\": 85, \"regular_classes\": 15, \"regular_error\": 630, \"regular_trace\": 135, \"status\": \"PASS\"}",
+      "",
+      "states=1716608 upper=1724582 rounds=4131890"
+    ]
+  },
+  "manifest_members": 26,
+  "manifest_sha256": "aa3b9f61f0ab862a6072ad7b5b5710e83697be5c3ae0b118017dc988b373fc19",
+  "status": "PASS"
+}

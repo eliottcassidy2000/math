@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "archive": "archive/merged_nodes.tsv.txt",
+      "bytes": 134104,
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+      "source": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv at c09b642a629b7d12b529b88c2697abaee78e73e7"
+    },
+    {
+      "archive": "archive/parents-through-seven.json.txt",
+      "bytes": 34600,
+      "sha256": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad",
+      "source": "session50-refinement-predictor/parents-through-seven.json, complete ordinary parent rows/actions through seven"
+    },
+    {
+      "archive": "archive/cell-holonomy-theorem.txt",
+      "bytes": 20385,
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b",
+      "source": "session50-cell-holonomy/THEOREM.md"
+    },
+    {
+      "archive": "archive/cell-holonomy-check.py.txt",
+      "bytes": 17850,
+      "sha256": "a823d3eeb444d22eb2321a88cd05c30d72c4fad087478024c29c5686c21056ab",
+      "source": "session50-cell-holonomy/check.py"
+    },
+    {
+      "archive": "archive/cell-holonomy-receipt.json.txt",
+      "bytes": 6452,
+      "sha256": "e597d88b7d325394c66a20e9e7c1d5bb31c50505da83302383c8ce55dc442af1",
+      "source": "session50-cell-holonomy/receipt.json"
+    },
+    {
+      "archive": "archive/cell-holonomy-source-pins.txt",
+      "bytes": 2508,
+      "sha256": "8d33eeac33b07593e2812f0229c487fd89d18bf80263c10b141ffd079c3d29ab",
+      "source": "session50-cell-holonomy/pinned.txt"
+    },
+    {
+      "archive": "archive/prior-source-pins.json.txt",
+      "bytes": 1555,
+      "sha256": "00650fbad1435762fc412dc26f69fa327b23edf37b2e7d2827ef2cb525745b21",
+      "source": "Session48 observer-moments/sources/SOURCE_PINS.json"
+    },
+    {
+      "archive": "archive/session39-affine-connections.txt",
+      "bytes": 8422,
+      "sha256": "5b9a1691cb3350b7aa5ea6ba884ae41b15ed5844118433a15bd7749120c153b5",
+      "source": "session50-cell-holonomy/archive/session39-affine-connections.txt"
+    },
+    {
+      "archive": "archive/growth-unpointing-theorem.txt",
+      "bytes": 18837,
+      "sha256": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+      "source": "session50-cell-holonomy/archive/session50-growth-theorem.txt"
+    }
+  ],
+  "source_boundary": "No target-order atlas or count is a computational input. Existing source maps are archived as data, never imported during prediction."
+}

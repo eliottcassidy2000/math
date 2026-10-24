@@ -1,0 +1,35 @@
+{
+  "atlas": {
+    "bytes": 134104,
+    "local_path": "inputs/metagraph_order8_20261023/merged_nodes.tsv",
+    "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+    "source_path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv"
+  },
+  "canonical_decoder": {
+    "bytes": 18039,
+    "convention": "MSB-first 28-bit binary string over lexicographic owner pairs, bit 1 means smaller owner points to larger owner.",
+    "function": "matrix(code,n=8)",
+    "sha256": "cf8a699ee5c2f3c0c77ec2a4159c9cbfbbab28196f1c4233a9f1445f700e59f1",
+    "snapshot": "prior_canonical_decoder_audit.py.txt",
+    "workspace_source": "session45-audit-completion/audit.py"
+  },
+  "explicit_matrix_control": {
+    "bytes": 16503,
+    "sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd",
+    "snapshot": "prior_four_source_packet.json.txt",
+    "workspace_source": "session45-injective-completion/packet-four-source.json"
+  },
+  "fixed_host_predecessor": {
+    "bytes": 5795,
+    "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+    "snapshot": "fixed_host_global_observer_theorem.txt",
+    "workspace_source": "session47-global-observer/THEOREM.md"
+  },
+  "observer_completion_theorem": {
+    "bytes": 8894,
+    "sha256": "98b3c5f21d2bdcd71cf5def91934bfd5aadebb0f8d8456f4b8b02c1820b4563d",
+    "snapshot": "observer_completions_theorem.txt",
+    "workspace_source": "session48-observer-completions/THEOREM.md"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "files": [
+    {
+      "bytes": 2003,
+      "path": "README.md",
+      "sha256": "9f5484269f7131d84afe68f2f3d5a04ec283432baa1959a697acb82c319e9962"
+    },
+    {
+      "bytes": 2453,
+      "path": "SOURCE_PINS.json",
+      "sha256": "aa7fe32f72f12675b2a073f0e669eb992c07868af4943c5970e4516719fc799e"
+    },
+    {
+      "bytes": 13077,
+      "path": "THEOREM.md",
+      "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+    },
+    {
+      "bytes": 3584,
+      "path": "VALIDATION.md",
+      "sha256": "6b3419f17fc0a73e23f9056ec3d0811525f5a2daf87bbca9b2864dc792d44048"
+    },
+    {
+      "bytes": 17850,
+      "path": "archive/cell-holonomy-check.py.txt",
+      "sha256": "a823d3eeb444d22eb2321a88cd05c30d72c4fad087478024c29c5686c21056ab"
+    },
+    {
+      "bytes": 6452,
+      "path": "archive/cell-holonomy-receipt.json.txt",
+      "sha256": "e597d88b7d325394c66a20e9e7c1d5bb31c50505da83302383c8ce55dc442af1"
+    },
+    {
+      "bytes": 2508,
+      "path": "archive/cell-holonomy-source-pins.txt",
+      "sha256": "8d33eeac33b07593e2812f0229c487fd89d18bf80263c10b141ffd079c3d29ab"
+    },
+    {
+      "bytes": 20385,
+      "path": "archive/cell-holonomy-theorem.txt",
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b"
+    },
+    {
+      "bytes": 18837,
+      "path": "archive/growth-unpointing-theorem.txt",
+      "sha256": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4"
+    },
+    {
+      "bytes": 134104,
+      "path": "archive/merged_nodes.tsv.txt",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "bytes": 34600,
+      "path": "archive/parents-through-seven.json.txt",
+      "sha256": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad"
+    },
+    {
+      "bytes": 1555,
+      "path": "archive/prior-source-pins.json.txt",
+      "sha256": "00650fbad1435762fc412dc26f69fa327b23edf37b2e7d2827ef2cb525745b21"
+    },
+    {
+      "bytes": 8422,
+      "path": "archive/session39-affine-connections.txt",
+      "sha256": "5b9a1691cb3350b7aa5ea6ba884ae41b15ed5844118433a15bd7749120c153b5"
+    },
+    {
+      "bytes": 1010,
+      "path": "input-receipt.json",
+      "sha256": "b12623e36f26c483da477c0574c26b821f044c8ff17108f320aa3590e7fc94fe"
+    },
+    {
+      "bytes": 559299,
+      "path": "normal.json",
+      "sha256": "b337c3c6bdcacc0774d9073fc7dba80a08b041e6f80fdb3b964face950e3f548"
+    },
+    {
+      "bytes": 559299,
+      "path": "optimized.json",
+      "sha256": "b337c3c6bdcacc0774d9073fc7dba80a08b041e6f80fdb3b964face950e3f548"
+    },
+    {
+      "bytes": 469134,
+      "path": "parents-eight.json",
+      "sha256": "1cd97666c0ee6294bf379b6d77f95bea5e24f8f5b27749ef804c46a45892ac7b"
+    },
+    {
+      "bytes": 309154,
+      "path": "parents-eight.txt",
+      "sha256": "0761a55908be3e2dde45723da3dc62740bd5a83f4e86210337af62a93c3f2fb9"
+    },
+    {
+      "bytes": 8802,
+      "path": "predictor.py",
+      "sha256": "66657bf1872e5b61159eeac906cd4a60ad8748c9b4c7a43773031c9e13d83873"
+    },
+    {
+      "bytes": 4435,
+      "path": "prepare_inputs.py",
+      "sha256": "5be8e311ebbb54172249ec22cf318402a29797e4eb90e4e298e47ed5cabd7bc7"
+    },
+    {
+      "bytes": 49386,
+      "path": "regular-normal.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "bytes": 49386,
+      "path": "regular-optimized.json",
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "bytes": 4742,
+      "path": "regular_trace.py",
+      "sha256": "9ce2e7a576bd68d7b0b24c5264d5e4b1f1ce435b466d2825f54ac4728022e593"
+    },
+    {
+      "bytes": 158462,
+      "path": "upper-compiled.json",
+      "sha256": "0a2678e7f7c8ceb52ea66775b75a32e2fc07e3623cffda92794c3332eee348e9"
+    },
+    {
+      "bytes": 4400,
+      "path": "upper_trace.cpp",
+      "sha256": "e82a4e820e9c5d0ac345e115e64b040f65c4ca8b4a1c9a34247f4b07862bd1c7"
+    },
+    {
+      "bytes": 4999,
+      "path": "verify_packet.py",
+      "sha256": "bd2395c4b704afac53d56fb8490722c7a4660d2dcac1eefcce127e4dcf8a7a20"
+    }
+  ],
+  "schema": "standalone-research-packet-v1"
+}
