@@ -1,0 +1,36 @@
+{
+  "all_equal_rank_ordered_pairs": 15477,
+  "checks": {
+    "boundary_attainment_cost": 61225,
+    "boundary_attainment_membership": 61225,
+    "boundary_exact_enumeration": 61225,
+    "endpoints": 15477,
+    "exact_core_difference": 15477,
+    "guarded_bridge_17": 1,
+    "ignored_neutral_bill_is_false": 1,
+    "literal_upset": 11522,
+    "monotone_distance": 11522,
+    "no_core_coordinate_repeated": 11522,
+    "optimal_exchange_count": 15477,
+    "orientation_hostile": 1,
+    "rank": 11522,
+    "relabelled_endpoint": 5123,
+    "relabelled_route": 5123,
+    "two_components": 11522,
+    "unequal_margin_hostile_support": 1,
+    "unequal_margin_hostile_universe": 1
+  },
+  "guarded_bridge_cost": 17,
+  "largest_exchange_count": 2,
+  "max_order": 5,
+  "natural_poset_counts": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 7,
+    "4": 40,
+    "5": 357
+  },
+  "status": "FINITE-EXACT",
+  "total_checks": 297967
+}
