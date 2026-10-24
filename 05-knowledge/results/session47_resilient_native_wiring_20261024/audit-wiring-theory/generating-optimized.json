@@ -1,0 +1,147 @@
+{
+  "checker_sha256": "e526d6bc8fdbcc382a76723bb0cd0b04b57e66cacb4b1ca2f62c8938bd2d1ad8",
+  "elapsed_seconds": 0.994,
+  "exhaustive_direct_four_cycle_cases": 1099,
+  "exhaustive_leibniz_series_cases": 75,
+  "explicit_checks": 6740,
+  "extra_order6_formal_cases": [
+    {
+      "bits": 0,
+      "boundary_four_cycle_count": 21,
+      "boundary_triangle_count": 10,
+      "detH": [
+        1,
+        0,
+        0,
+        -10,
+        -21,
+        -28,
+        -22,
+        -10,
+        -2
+      ],
+      "detK": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 6,
+      "series_through_degree": 14
+    },
+    {
+      "bits": 277,
+      "boundary_four_cycle_count": 17,
+      "boundary_triangle_count": 7,
+      "detH": [
+        1,
+        0,
+        0,
+        -14,
+        -25,
+        -42,
+        -36,
+        -20,
+        -4
+      ],
+      "detK": [
+        1,
+        0,
+        0,
+        -7,
+        -8,
+        -9,
+        -3
+      ],
+      "n": 6,
+      "series_through_degree": 14
+    },
+    {
+      "bits": 1023,
+      "boundary_four_cycle_count": 2,
+      "boundary_triangle_count": 2,
+      "detH": [
+        1,
+        0,
+        0,
+        -6,
+        -5,
+        -4,
+        3,
+        4,
+        2
+      ],
+      "detK": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2,
+        0
+      ],
+      "n": 6,
+      "series_through_degree": 14
+    }
+  ],
+  "input_pins_sha256": "2b0954a428fa707de170877092399f0b8760cb749daf18463c4ec5d8d84e6f4e",
+  "python_optimization": 1,
+  "scope": "Directed simple four-cycles with chords allowed; rooted walks at larger lengths are not simple cycles.",
+  "series_depth": "n+8, two coefficients beyond producer controls",
+  "status": "PASS",
+  "witnesses": [
+    {
+      "bits": 2,
+      "boundary_four_cycle_count": 12,
+      "boundary_triangle_count": 7,
+      "detH": [
+        1,
+        0,
+        0,
+        -9,
+        -13,
+        -17,
+        -10,
+        -2
+      ],
+      "detK": [
+        1,
+        0,
+        0,
+        -2,
+        -1,
+        0
+      ],
+      "n": 5,
+      "series_through_degree": 13
+    },
+    {
+      "bits": 3,
+      "boundary_four_cycle_count": 10,
+      "boundary_triangle_count": 6,
+      "detH": [
+        1,
+        0,
+        0,
+        -8,
+        -11,
+        -15,
+        -9,
+        -2
+      ],
+      "detK": [
+        1,
+        0,
+        0,
+        -2,
+        -1,
+        0
+      ],
+      "n": 5,
+      "series_through_degree": 13
+    }
+  ]
+}

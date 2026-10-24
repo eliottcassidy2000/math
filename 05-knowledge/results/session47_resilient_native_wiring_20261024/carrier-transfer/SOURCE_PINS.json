@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "ef0739cfea26526563ea2736e5a7bb3b548a4530c236737915d6c1f5bff46426"
+    },
+    {
+      "path": "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/README.md",
+      "sha256": "8a6862aa6315e38ccab785308e2510ffc713d99998e4f76ec2746babe4ff2adb"
+    },
+    {
+      "path": "05-knowledge/results/metagraph_order8_20261023/README.md",
+      "sha256": "980b97ee94d1d855aff3e3c5ded312e4596ab39acc22185e5f59d37d124ced13"
+    },
+    {
+      "path": "05-knowledge/results/sixslot570_20261024/PORTS.md",
+      "sha256": "42fa543c484420a452b6b5d13fe835afef63b3edfff283b38ec45f42fd7c3ab5"
+    },
+    {
+      "path": "05-knowledge/results/sixslot570_20261024/shelter.py",
+      "sha256": "fa1b5041ab708820552def78a7975b493eb48535ebf379b71616fdf6de7bc518"
+    }
+  ],
+  "source_revision": "ae8d0f15654"
+}

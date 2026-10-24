@@ -1,0 +1,44 @@
+{
+  "artifacts": [
+    {
+      "path": "THEOREM.md",
+      "sha256": "8dc2e609e83767a2d24d499510ae5e23600cb56f3ef264df98097d70d141676c",
+      "bytes": 5616
+    },
+    {
+      "path": "BOUNDARY_GENERATING_FUNCTION.md",
+      "sha256": "ad8438213cb952f536b0ee3773a5051ce84bb7c13ddea2c3c6907c7da40cc6a6",
+      "bytes": 4205
+    },
+    {
+      "path": "check.py",
+      "sha256": "a7c44521c9141012453037b96880c8c445604de22ca58efdbb08adf916a03a87",
+      "bytes": 3319
+    },
+    {
+      "path": "check_generating.py",
+      "sha256": "34752c337a18273f74eb5ec3c026108662acf54ca5351537e9faab2155abca6f",
+      "bytes": 2842
+    },
+    {
+      "path": "normal.json",
+      "sha256": "b8c8a2a3251aa6473b7470cee144daf4a303f23fd0a3d7b46a5ea2ee8acdcd25",
+      "bytes": 4203
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "b8c8a2a3251aa6473b7470cee144daf4a303f23fd0a3d7b46a5ea2ee8acdcd25",
+      "bytes": 4203
+    },
+    {
+      "path": "generating-normal.json",
+      "sha256": "5512c45759541fb9824f5cb0bc770042d79e5f50f04c5efde5268f11efef7cf4",
+      "bytes": 257
+    },
+    {
+      "path": "generating-optimized.json",
+      "sha256": "5512c45759541fb9824f5cb0bc770042d79e5f50f04c5efde5268f11efef7cf4",
+      "bytes": 257
+    }
+  ]
+}

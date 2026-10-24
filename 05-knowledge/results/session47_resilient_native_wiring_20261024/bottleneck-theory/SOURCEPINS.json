@@ -1,0 +1,47 @@
+{
+  "local_inputs": [
+    {
+      "snapshot": "inputs/NEUTRAL_FIBRE_LIFTING.txt",
+      "logical_source": "05-knowledge/results/compatible_charged_helpers_20261023/compatibility/NEUTRAL_FIBRE_LIFTING.md",
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+      "bytes": 14785,
+      "original_ref": "1d94c1d1d9e03b829bd9a979f829c720e064c960",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/1d94c1d1d9e03b829bd9a979f829c720e064c960/05-knowledge/results/compatible_charged_helpers_20261023/compatibility/NEUTRAL_FIBRE_LIFTING.md",
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not live relocated document links."
+    },
+    {
+      "snapshot": "inputs/SESSION46_SYNTHESIS.txt",
+      "logical_source": "05-knowledge/results/session46_native_packet_decomposition_20261024/SYNTHESIS.md",
+      "sha256": "608b750564366993e7e304c3aea362758ffecf48f1d81241dbd26c7f61af4c8a",
+      "bytes": 15611,
+      "original_ref": "446ad2a14e9e74afc42f9d65f2b8b85d6499c53a",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/446ad2a14e9e74afc42f9d65f2b8b85d6499c53a/05-knowledge/results/session46_native_packet_decomposition_20261024/SYNTHESIS.md",
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not live relocated document links."
+    },
+    {
+      "snapshot": "inputs/GUARD_AND_REUSE_CONTRACT.txt",
+      "logical_source": "05-knowledge/results/session46_native_packet_decomposition_20261024/GUARD_AND_REUSE_CONTRACT.md",
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756",
+      "bytes": 4020,
+      "original_ref": "446ad2a14e9e74afc42f9d65f2b8b85d6499c53a",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/446ad2a14e9e74afc42f9d65f2b8b85d6499c53a/05-knowledge/results/session46_native_packet_decomposition_20261024/GUARD_AND_REUSE_CONTRACT.md",
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not live relocated document links."
+    }
+  ],
+  "external_references": [
+    {
+      "authors": "J. C. Gower and G. J. S. Ross",
+      "title": "Minimum Spanning Trees and Single Linkage Cluster Analysis",
+      "journal": "Applied Statistics",
+      "volume": 18,
+      "issue": 1,
+      "pages": "54-64",
+      "year": 1969,
+      "doi": "10.2307/2346439",
+      "article_url": "https://academic.oup.com/jrsssc/article/18/1/54/6882518",
+      "verified_publisher_issue_url": "https://academic.oup.com/jrsssc/issue/18/1",
+      "verification_date_utc": "2026-10-24",
+      "verification_scope": "Publisher issue page verifies author/title/year/volume/issue/pages/DOI. Direct article fetch redirected to an inaccessible CDN; full paper was not read. All mathematical claims used here are proved self-contained."
+    }
+  ]
+}

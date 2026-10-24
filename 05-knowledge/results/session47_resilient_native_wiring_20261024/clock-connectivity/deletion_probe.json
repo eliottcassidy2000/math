@@ -1,0 +1,438 @@
+{
+  "status": "FINITE-EXACT single-deletion sheet gate",
+  "margin": 4,
+  "states_per_deleted_bank": 17550,
+  "reports": [
+    {
+      "deleted_source": 176,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1394,
+      "nonempty_fibres": 2047,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2047
+      }
+    },
+    {
+      "deleted_source": 1425,
+      "nonempty_fibres": 2047,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2047
+      }
+    },
+    {
+      "deleted_source": 1457,
+      "nonempty_fibres": 2047,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2047
+      }
+    },
+    {
+      "deleted_source": 1477,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2047,
+        "2": 1
+      }
+    },
+    {
+      "deleted_source": 1480,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1532,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1549,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1638,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1691,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1841,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1921,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1923,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 1974,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2071,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 2,
+      "component_counts": {
+        "1": 2046,
+        "2": 2
+      }
+    },
+    {
+      "deleted_source": 2087,
+      "nonempty_fibres": 2047,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2046,
+        "2": 1
+      }
+    },
+    {
+      "deleted_source": 2176,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2185,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2553,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2581,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2835,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2837,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2047,
+        "2": 1
+      }
+    },
+    {
+      "deleted_source": 2905,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 2945,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2047,
+        "2": 1
+      }
+    },
+    {
+      "deleted_source": 3000,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2047,
+        "2": 1
+      }
+    },
+    {
+      "deleted_source": 3015,
+      "nonempty_fibres": 2046,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2046
+      }
+    },
+    {
+      "deleted_source": 3360,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 0,
+      "component_counts": {
+        "1": 2048
+      }
+    },
+    {
+      "deleted_source": 3369,
+      "nonempty_fibres": 2048,
+      "disconnected_at22": 1,
+      "component_counts": {
+        "1": 2047,
+        "2": 1
+      }
+    }
+  ],
+  "hostiles": [
+    {
+      "deleted_source": 1477,
+      "charge": [
+        97,
+        3
+      ],
+      "states": [
+        142639105,
+        33685538,
+        34611204,
+        4235272,
+        266432,
+        543744,
+        201345024
+      ],
+      "components": [
+        [
+          266432
+        ],
+        [
+          543744,
+          4235272,
+          33685538,
+          34611204,
+          142639105,
+          201345024
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 2071,
+      "charge": [
+        97,
+        3
+      ],
+      "states": [
+        142639105,
+        33685538,
+        34611204,
+        4235272,
+        33555504,
+        266432
+      ],
+      "components": [
+        [
+          266432
+        ],
+        [
+          4235272,
+          33555504,
+          33685538,
+          34611204,
+          142639105
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 2071,
+      "charge": [
+        45,
+        11
+      ],
+      "states": [
+        4200450,
+        68158528,
+        2109952
+      ],
+      "components": [
+        [
+          2109952,
+          4200450
+        ],
+        [
+          68158528
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 2087,
+      "charge": [
+        41,
+        13
+      ],
+      "states": [
+        266243,
+        16843840,
+        84935680
+      ],
+      "components": [
+        [
+          266243
+        ],
+        [
+          16843840,
+          84935680
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 2837,
+      "charge": [
+        98,
+        7
+      ],
+      "states": [
+        1085456,
+        132192,
+        8655360
+      ],
+      "components": [
+        [
+          132192
+        ],
+        [
+          1085456,
+          8655360
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 2945,
+      "charge": [
+        97,
+        3
+      ],
+      "states": [
+        33685538,
+        34611204,
+        4235272,
+        33555504,
+        266432,
+        543744,
+        201345024
+      ],
+      "components": [
+        [
+          266432
+        ],
+        [
+          543744,
+          4235272,
+          33555504,
+          33685538,
+          34611204,
+          201345024
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 3000,
+      "charge": [
+        61,
+        8
+      ],
+      "states": [
+        280578,
+        561216,
+        40108032
+      ],
+      "components": [
+        [
+          280578,
+          40108032
+        ],
+        [
+          561216
+        ]
+      ],
+      "least_cross_component_clock": 23
+    },
+    {
+      "deleted_source": 3369,
+      "charge": [
+        112,
+        13
+      ],
+      "states": [
+        270849,
+        36936,
+        68224000
+      ],
+      "components": [
+        [
+          36936
+        ],
+        [
+          270849,
+          68224000
+        ]
+      ],
+      "least_cross_component_clock": 23
+    }
+  ]
+}

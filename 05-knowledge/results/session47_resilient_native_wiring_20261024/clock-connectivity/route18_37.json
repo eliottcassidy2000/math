@@ -1,0 +1,386 @@
+{
+  "targets": [
+    1965,
+    2234
+  ],
+  "endpoint_margin": 9,
+  "endpoint_X_sum": 1161,
+  "charge": [
+    9,
+    7
+  ],
+  "full28_states": 3337,
+  "outside_sources": [
+    176,
+    1532,
+    1638,
+    1841,
+    1923,
+    2071,
+    2087,
+    2553,
+    3015,
+    3360
+  ],
+  "dyadic": {
+    "domain_states": 3337,
+    "tested_clock_thresholds": [
+      [
+        10,
+        false
+      ],
+      [
+        11,
+        false
+      ],
+      [
+        12,
+        true
+      ]
+    ],
+    "route": {
+      "states": [
+        {
+          "mask": 157297296,
+          "V_sources": [
+            1477,
+            1549,
+            1691,
+            1921,
+            1974,
+            2837,
+            2905,
+            3000,
+            3369
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": []
+        },
+        {
+          "mask": 140599856,
+          "V_sources": [
+            1477,
+            1480,
+            1691,
+            1974,
+            2071,
+            2176,
+            2837,
+            2905,
+            3369
+          ],
+          "integer_X_sum": 1033,
+          "U_integer_current_change": -256,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 147014162,
+          "V_sources": [
+            1394,
+            1477,
+            1691,
+            2071,
+            2176,
+            2185,
+            2905,
+            2945,
+            3369
+          ],
+          "integer_X_sum": 1033,
+          "U_integer_current_change": -256,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 29573162,
+          "V_sources": [
+            1394,
+            1457,
+            1480,
+            2071,
+            2176,
+            2185,
+            2905,
+            2945,
+            3000
+          ],
+          "integer_X_sum": 1033,
+          "U_integer_current_change": -256,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 22757416,
+          "V_sources": [
+            1457,
+            1480,
+            2071,
+            2176,
+            2185,
+            2581,
+            2835,
+            2905,
+            3000
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 10158126,
+          "V_sources": [
+            1394,
+            1425,
+            1457,
+            1480,
+            2176,
+            2185,
+            2581,
+            2835,
+            2945
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": []
+        }
+      ],
+      "events": [
+        {
+          "changed_sources": [
+            1480,
+            1549,
+            1921,
+            2071,
+            2176,
+            3000
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        },
+        {
+          "changed_sources": [
+            1394,
+            1480,
+            1974,
+            2185,
+            2837,
+            2945
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        },
+        {
+          "changed_sources": [
+            1457,
+            1477,
+            1480,
+            1691,
+            3000,
+            3369
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        },
+        {
+          "changed_sources": [
+            1394,
+            2581,
+            2835,
+            2945
+          ],
+          "changed_slots": 4,
+          "ordinary_owner_clock_work": 9
+        },
+        {
+          "changed_sources": [
+            1394,
+            1425,
+            2071,
+            2905,
+            2945,
+            3000
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        }
+      ],
+      "peak_clock": 12,
+      "total_clock_work": 57
+    }
+  },
+  "exact_X": {
+    "domain_states": 1355,
+    "tested_clock_thresholds": [
+      [
+        10,
+        false
+      ],
+      [
+        11,
+        false
+      ],
+      [
+        12,
+        false
+      ],
+      [
+        13,
+        true
+      ]
+    ],
+    "route": {
+      "states": [
+        {
+          "mask": 157297296,
+          "V_sources": [
+            1477,
+            1549,
+            1691,
+            1921,
+            1974,
+            2837,
+            2905,
+            3000,
+            3369
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": []
+        },
+        {
+          "mask": 156304017,
+          "V_sources": [
+            176,
+            1477,
+            1549,
+            1691,
+            2176,
+            2835,
+            2905,
+            3000,
+            3369
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": [
+            176
+          ]
+        },
+        {
+          "mask": 140198416,
+          "V_sources": [
+            1477,
+            1691,
+            2071,
+            2176,
+            2185,
+            2581,
+            2835,
+            2905,
+            3369
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 22757416,
+          "V_sources": [
+            1457,
+            1480,
+            2071,
+            2176,
+            2185,
+            2581,
+            2835,
+            2905,
+            3000
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": [
+            2071
+          ]
+        },
+        {
+          "mask": 10158126,
+          "V_sources": [
+            1394,
+            1425,
+            1457,
+            1480,
+            2176,
+            2185,
+            2581,
+            2835,
+            2945
+          ],
+          "integer_X_sum": 1161,
+          "U_integer_current_change": 0,
+          "active_outside_sources": []
+        }
+      ],
+      "events": [
+        {
+          "changed_sources": [
+            176,
+            1921,
+            1974,
+            2176,
+            2835,
+            2837
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 13
+        },
+        {
+          "changed_sources": [
+            176,
+            1549,
+            2071,
+            2185,
+            2581,
+            3000
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        },
+        {
+          "changed_sources": [
+            1457,
+            1477,
+            1480,
+            1691,
+            3000,
+            3369
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        },
+        {
+          "changed_sources": [
+            1394,
+            1425,
+            2071,
+            2905,
+            2945,
+            3000
+          ],
+          "changed_slots": 6,
+          "ordinary_owner_clock_work": 12
+        }
+      ],
+      "peak_clock": 13,
+      "total_clock_work": 49
+    }
+  }
+}

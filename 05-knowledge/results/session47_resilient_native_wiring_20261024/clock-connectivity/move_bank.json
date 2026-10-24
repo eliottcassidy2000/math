@@ -1,0 +1,115 @@
+[
+  {
+    "changed_slots": 4,
+    "all_moves": 27,
+    "all_weight_histogram": {
+      "8": 3,
+      "9": 8,
+      "10": 6,
+      "11": 6,
+      "12": 2,
+      "13": 2
+    },
+    "primitive_moves": 27,
+    "primitive_weight_histogram": {
+      "8": 3,
+      "9": 8,
+      "10": 6,
+      "11": 6,
+      "12": 2,
+      "13": 2
+    },
+    "allowed_moves": 27,
+    "allowed_primitive_moves": 27,
+    "allowed_primitive_weight_histogram": {
+      "8": 3,
+      "9": 8,
+      "10": 6,
+      "11": 6,
+      "12": 2,
+      "13": 2
+    }
+  },
+  {
+    "changed_slots": 6,
+    "all_moves": 1917,
+    "all_weight_histogram": {
+      "12": 208,
+      "13": 409,
+      "14": 476,
+      "15": 429,
+      "16": 248,
+      "17": 105,
+      "18": 34,
+      "19": 7,
+      "20": 1
+    },
+    "primitive_moves": 1917,
+    "primitive_weight_histogram": {
+      "12": 208,
+      "13": 409,
+      "14": 476,
+      "15": 429,
+      "16": 248,
+      "17": 105,
+      "18": 34,
+      "19": 7,
+      "20": 1
+    },
+    "allowed_moves": 1917,
+    "allowed_primitive_moves": 1917,
+    "allowed_primitive_weight_histogram": {
+      "12": 208,
+      "13": 409,
+      "14": 476,
+      "15": 429,
+      "16": 248,
+      "17": 105,
+      "18": 34,
+      "19": 7,
+      "20": 1
+    }
+  },
+  {
+    "changed_slots": 8,
+    "all_moves": 53220,
+    "all_weight_histogram": {
+      "16": 2099,
+      "17": 6614,
+      "18": 10742,
+      "19": 12509,
+      "20": 10437,
+      "21": 6507,
+      "22": 3017,
+      "23": 1010,
+      "24": 253,
+      "25": 31,
+      "26": 1
+    },
+    "primitive_moves": 52858,
+    "primitive_weight_histogram": {
+      "16": 2093,
+      "17": 6588,
+      "18": 10690,
+      "19": 12439,
+      "20": 10357,
+      "21": 6455,
+      "22": 2971,
+      "23": 990,
+      "24": 247,
+      "25": 27,
+      "26": 1
+    },
+    "allowed_moves": 51925,
+    "allowed_primitive_moves": 51593,
+    "allowed_primitive_weight_histogram": {
+      "16": 2093,
+      "17": 6588,
+      "18": 10690,
+      "19": 12439,
+      "20": 10357,
+      "21": 6455,
+      "22": 2971
+    }
+  }
+]

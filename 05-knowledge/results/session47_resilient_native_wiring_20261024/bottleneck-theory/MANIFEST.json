@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE",
+  "scope": "Conditional all-size proofs and exact finite abstract controls; no new native census or Git operation",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4785,
+      "sha256": "9a38343a6e957bb2a671d0d5e4a183dfcb530157c7534500d73638157edd6f31"
+    },
+    {
+      "path": "SOURCEPINS.json",
+      "bytes": 3018,
+      "sha256": "4ac8b32f777ab050ea5406d598f7217fffc9b7c5be412c3421a38f10ab12e2fc"
+    },
+    {
+      "path": "SUPPLY_TO_ROUTE.md",
+      "bytes": 4945,
+      "sha256": "196072c89bff65839b44419996b5f597f06714cbbdf79ab5d6643cbd05a11091"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 20509,
+      "sha256": "3104afcd5d6be54ce52d89b5e5c5ce11ecf9e1d6bc377db2903b58c4d259c58a"
+    },
+    {
+      "path": "check.py",
+      "bytes": 22227,
+      "sha256": "4a6229e4c485fbe149fb840f6b0c3725ca7b33890bab00dd12957278ec1d1fc6"
+    },
+    {
+      "path": "inputs/GUARD_AND_REUSE_CONTRACT.txt",
+      "bytes": 4020,
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756"
+    },
+    {
+      "path": "inputs/NEUTRAL_FIBRE_LIFTING.txt",
+      "bytes": 14785,
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+    },
+    {
+      "path": "inputs/SESSION46_SYNTHESIS.txt",
+      "bytes": 15611,
+      "sha256": "608b750564366993e7e304c3aea362758ffecf48f1d81241dbd26c7f61af4c8a"
+    },
+    {
+      "path": "receipt-normal.json",
+      "bytes": 4466,
+      "sha256": "32001f1e03997291ecd635aa07490e76172c8a4d03dd0fef089065f22ac0f7ef"
+    },
+    {
+      "path": "receipt-optimized.json",
+      "bytes": 4467,
+      "sha256": "241eb19cf07e3aa50b866603086b9fab2c7beadb997536253fa0322b369cedf0"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 1869,
+      "sha256": "ddbdd646cd8bfa4ed18129ac8ec0bf1c2dc9c31a1d5a2841cbec02e04c97a69a"
+    }
+  ],
+  "archival_portability": "Three inherited Markdown snapshots renamed .txt byte-for-byte; source hashes and both mathematical proof documents unchanged. Original pinned repository URLs are in SOURCEPINS.json and README.md."
+}

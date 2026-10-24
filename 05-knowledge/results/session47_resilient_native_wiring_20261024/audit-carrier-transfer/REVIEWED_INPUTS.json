@@ -1,0 +1,75 @@
+{
+  "files": [
+    {
+      "bytes": 18394,
+      "path": "session47-carrier-transfer/TRANSFER.md",
+      "sha256": "8dd37964e88e3f586d32b4092bbcc5328e4b441e5343decb4e8c020d992f1930"
+    },
+    {
+      "bytes": 5967,
+      "path": "session47-carrier-transfer/SUSPENSION.md",
+      "sha256": "72ed7fde07f26c945dba2db4076954e1277f361f714e3385521858fef0842d4a"
+    },
+    {
+      "bytes": 10448,
+      "path": "session47-carrier-transfer/check.py",
+      "sha256": "7b01e68ce313f983deb641f52e99db761c0f085e281a08b4c3091ea2e1656879"
+    },
+    {
+      "bytes": 6121,
+      "path": "session47-carrier-transfer/normal.json",
+      "sha256": "5b1bd35943485be3cf198875b5a1d659f8494544c912ac7f6f90a111366d27dc"
+    },
+    {
+      "bytes": 6121,
+      "path": "session47-carrier-transfer/optimized.json",
+      "sha256": "5b1bd35943485be3cf198875b5a1d659f8494544c912ac7f6f90a111366d27dc"
+    },
+    {
+      "bytes": 6030,
+      "path": "session47-carrier-transfer/native_suspension_probe.py",
+      "sha256": "c59ff3b9d01f658286cf4555272456c0e638544b3520709cbcb2775f91e8fec2"
+    },
+    {
+      "bytes": 42025,
+      "path": "session47-carrier-transfer/native-normal.json",
+      "sha256": "aff1d5a5e72c477792b7b1ca0446194cc672fecfc72c040f8483ebf85d7ee222"
+    },
+    {
+      "bytes": 42025,
+      "path": "session47-carrier-transfer/native-optimized.json",
+      "sha256": "aff1d5a5e72c477792b7b1ca0446194cc672fecfc72c040f8483ebf85d7ee222"
+    },
+    {
+      "bytes": 1157,
+      "path": "session47-carrier-transfer/SOURCE_PINS.json",
+      "sha256": "8fe6431e86087673e84b3c5d9e78cd6867867d13faad0967b8baa9cc9bedaee0"
+    },
+    {
+      "bytes": 976,
+      "path": "session47-carrier-transfer/MANIFEST.json",
+      "sha256": "aec94eb65cc512d361bb070b016405651e3537197ba3921e88d7bf90048b2e68"
+    },
+    {
+      "bytes": 15164,
+      "path": "session35-publication/clean-repo/05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+    },
+    {
+      "bytes": 9622,
+      "path": "session45-audit-dyadic/AUDIT.md",
+      "sha256": "a280f561fcea18934e214f487d4cc6755b5616f25425017e292baa8b5cbcec29"
+    },
+    {
+      "bytes": 11175,
+      "path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_20261023/README.md",
+      "sha256": "980b97ee94d1d855aff3e3c5ded312e4596ab39acc22185e5f59d37d124ced13"
+    },
+    {
+      "bytes": 8903,
+      "path": "session44-electrical-duality/inputs/05-knowledge__results__metagraph_order8_electrical_20261023__README.md",
+      "sha256": "8a6862aa6315e38ccab785308e2510ffc713d99998e4f76ec2746babe4ff2adb"
+    }
+  ],
+  "status": "PASS for frozen core and complete native order4-to6 only"
+}

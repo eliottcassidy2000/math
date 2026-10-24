@@ -1,0 +1,43 @@
+{
+  "boundary_census": [
+    {
+      "component_counts": {
+        "1": 1851,
+        "2": 175,
+        "3": 21,
+        "4": 1
+      },
+      "component_excess": 220,
+      "margin": 4,
+      "states": 20475
+    },
+    {
+      "component_counts": {
+        "1": 2037,
+        "2": 11
+      },
+      "component_excess": 11,
+      "margin": 5,
+      "states": 98280
+    }
+  ],
+  "bridge_clock_histogram": {
+    "16": 35,
+    "17": 63,
+    "18": 60,
+    "19": 37,
+    "20": 18,
+    "21": 6,
+    "22": 1
+  },
+  "checks": 21673,
+  "coordinate_map": "incoming packed p = ((x mod2) xor old_y_bit3) | ((old_y &7)<<1); cyclic x unchanged",
+  "input_sha256": {
+    "05-knowledge/results/native_packet_decomposition_20261023/native/domains.json": "93e82952e06933273f9d4c47d421a4d4ababe91662c50b62f19fdb7dddd430ca",
+    "05-knowledge/results/sixslot570_20261024/bridges.json": "901fd80fda3f000599bace54d94331e936c82a672a66d898bc15044d0baab2c6",
+    "05-knowledge/results/sixslot570_20261024/labels.txt": "77679f3da07d909b243b4925b1cc19a67ec9d60318caafbd8e4fa62e0f937b8d"
+  },
+  "scope": "Independent audit of concurrent sixslot570 sparse220 bridge completion, plus exact Q-coordinate isomorphism; full middle-grade support6 census not rerun here.",
+  "sharp_extra_alphabet_size": 220,
+  "status": "PASS"
+}

@@ -1,0 +1,7 @@
+{
+  "checks": 3019,
+  "scope": "All1099 fixed-forward-path tournaments n2..6 for fourth-cycle boundary; all75 n2..5 for exact formal determinant and closed-walk series through n+6.",
+  "series_cases": 75,
+  "status": "PASS",
+  "triangle_four_cases": 1099
+}

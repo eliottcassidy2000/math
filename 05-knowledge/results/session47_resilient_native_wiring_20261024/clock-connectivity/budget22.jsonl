@@ -1,0 +1,15 @@
+{"margin":0,"budget":22,"states":1,"fibres":1,"disconnected_fibres":0,"edge_tests":0,"seconds":7.5224e-05,"component_counts":{"1":1}}
+{"margin":1,"budget":22,"states":28,"fibres":28,"disconnected_fibres":0,"edge_tests":0,"seconds":3.845e-06,"component_counts":{"1":28}}
+{"margin":2,"budget":22,"states":378,"fibres":351,"disconnected_fibres":0,"edge_tests":27,"seconds":2.4397e-05,"component_counts":{"1":351}}
+{"margin":3,"budget":22,"states":3276,"fibres":1646,"disconnected_fibres":0,"edge_tests":1630,"seconds":0.00013903,"component_counts":{"1":1646}}
+{"margin":4,"budget":22,"states":20475,"fibres":2048,"disconnected_fibres":0,"edge_tests":18552,"seconds":0.000926037,"component_counts":{"1":2048}}
+{"margin":5,"budget":22,"states":98280,"fibres":2048,"disconnected_fibres":0,"edge_tests":133995,"seconds":0.00411858,"component_counts":{"1":2048}}
+{"margin":6,"budget":22,"states":376740,"fibres":2048,"disconnected_fibres":0,"edge_tests":888566,"seconds":0.0182652,"component_counts":{"1":2048}}
+{"margin":7,"budget":22,"states":1184040,"fibres":2048,"disconnected_fibres":0,"edge_tests":5148113,"seconds":0.101541,"component_counts":{"1":2048}}
+{"margin":8,"budget":22,"states":3108105,"fibres":2048,"disconnected_fibres":0,"edge_tests":24890966,"seconds":0.353567,"component_counts":{"1":2048}}
+{"margin":9,"budget":22,"states":6906900,"fibres":2048,"disconnected_fibres":0,"edge_tests":97117176,"seconds":1.06093,"component_counts":{"1":2048}}
+{"margin":10,"budget":22,"states":13123110,"fibres":2048,"disconnected_fibres":0,"edge_tests":302538230,"seconds":3.22085,"component_counts":{"1":2048}}
+{"margin":11,"budget":22,"states":21474180,"fibres":2048,"disconnected_fibres":0,"edge_tests":744520156,"seconds":7.45058,"component_counts":{"1":2048}}
+{"margin":12,"budget":22,"states":30421755,"fibres":2048,"disconnected_fibres":0,"edge_tests":1435907402,"seconds":14.7386,"component_counts":{"1":2048}}
+{"margin":13,"budget":22,"states":37442160,"fibres":2048,"disconnected_fibres":0,"edge_tests":2179891628,"seconds":21.4417,"component_counts":{"1":2048}}
+{"margin":14,"budget":22,"states":40116600,"fibres":2048,"disconnected_fibres":0,"edge_tests":2625121032,"seconds":25.5823,"component_counts":{"1":2048}}

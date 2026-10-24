@@ -1,67 +1,84 @@
-# Session47: resilient native helpers and weighted wiring
+# Session47: resilient native helpers and the obstructions to wiring
 
-24 October2026. Second verified checkpoint; research remains in progress.
+24 October2026. Third checkpoint; ongoing research and final integration.
 
-## Native helper robustness
+## Native robustness already published
 
-[Theorem and controller](helper-resilience/THEOREM.md),
-[independent second audit](audit-helper-resilience-v2/AUDIT.md).
+[Helper controller](helper-resilience/THEOREM.md) and
+[independent audit](audit-helper-resilience-v2/AUDIT.md): a46-helper bank
+preserves full paired dyadic coverage under any one forced-U restriction at
+occupancy3. The full53 bank at occupancy4 has12 disjoint representations for
+every charge, hence tolerates any11 forced-U restrictions. The exact radius
+is not asserted by the disjoint-packing result. Slots remain physically
+occupied; forced U means selecting the actual U record, not deleting a port.
+The [first audit](audit-helper-resilience/AUDIT.md) remains unchanged.
 
-- A46-helper subset covers every one of2048 paired dyadic charges with exactly
-  three helpers at V after any one named helper is forced to U. It is
-  inclusion-minimal for this robustness, not globally smallest.
-- The full53 supply cannot universally tolerate two forced-U restrictions at
-  occupancy3: owners776 and3139 eliminate charge305. No smaller subbank can
-  repair this deficit at the same occupancy.
-- At occupancy4, every charge has12 pairwise disjoint native representations.
-  Thus any11 forced-U owners leave a representation. Twelve is the sharp
-  uniform DISJOINT-PACKING guarantee, not the proven maximum deletion radius.
-- Mixed restrictions are different: exactly32 directed (one forced-V, one
-  forced-U) pairs fail, among2756 possible pairs; each fails at one charge.
-- Two-core-slot exchanges with occupancy3 compensation change at most8 source
-  slots and50 primary owner-clock occurrences. Occupancy4 uses at most10 slots
-  and64 clocks. Those are separate upper bounds, not equal quantities.
+## Weighted binary connectivity, with its failure boundary
 
-A forced-U owner still occupies its actual U resource. None of these statements
-removes its physical slot or grants spare capacity. All original core pins,
-new explicit helper pins, source kernels and converse partners remain retained.
-The fixed remainder must avoid the whole alternative reservoir. Only
-capacity-one reversible borrowing is used; strict temporal nonreturn does not
-allow a changed helper to return.
+[Complete finite audit and extensions](clock-connectivity/THEOREM.md): incoming
+sixslot570 supplied the sharp joint bound of8 changed sources and22 owner
+clocks on every complete28-source fixed-margin/full-Q fibre. Independent
+algorithms confirm the entire2^28 universe. A denser accepted move grammar
+has rooted depth at most4, giving at most8 events and176 clocks between any
+pair. This does not assert the same route-length bound for the smaller
+minimal220-added-bridge grammar.
 
-Restrictions may vary by destination arrival if known before committing its
-atomic event. Endpoint restoration requires endpoint admissibility. Shared
-cross-source constraints beyond the authenticated interface need their own
-compatibility test; charge coverage alone does not solve them.
+[Deletion-relative gluing](clock-connectivity/SHEET_GLUING.md) gives an exact
+conditional all-size route compiler. Its key hypothesis is genuinely stronger
+than full-bank connectivity: deleting source2071 creates a three-state fibre
+requiring23 clocks. The 22-bound is not hereditary under arbitrary deletion.
+[Cycle/sign diagnostics](owner-cycle-primes/THEOREM.md) explain actual work
+and why a displayed parity-coordinate11 is not an invariant prime mechanism.
 
-The [first audit](audit-helper-resilience/AUDIT.md) is retained as a frozen
-historical nine-packing checkpoint. The current twelve-packing statement uses
-the second certificate, not a silent alteration of that first certificate.
+## Harmonic transfer is a separate, checkable equation
 
-## What the numbers actually preserve
+[Transfer theorem](carrier-transfer/TRANSFER.md) supplies exact finite-ring
+extension and endpoint-readout criteria, plus order-respecting integer lift
+certificates. The distinct dyadic Smith levels suffice; for the inherited
+order-eight bank these are moduli2,4,256. This is a test, not a claim that a
+new carrier automatically passes it or that the few displayed characters
+span every ordinary harmonic direction.
 
-[Owner-cycle and prime diagnostics](owner-cycle-primes/THEOREM.md) identify the
-literal 22-clock witness as four transpositions, two three-cycles and two
-four-cycles. In the old28 menu every local change has one nontrivial cycle;
-fixed margins then imply owner-permutation sign=(-1)^(clock cost). Many new
-helpers have multiple cycles, so the cycle count must be retained in the
-extended formula sign=(-1)^(work-cycle_count).
+[Small native positive control](carrier-transfer/SUSPENSION.md) authenticates
+the COMPLETE order-four and order-six merged metagraphs and an exact integer
+readout identity. It transfers all old harmonic directions at every modulus.
+[Independent audit](audit-carrier-transfer/NATIVE_AUDIT.md) rebuilds all
+classes, lines, colors, readouts and the certificate independently.
+The desired order-eight to order-ten transfer remains open.
 
-The packed parity coordinate11 can be changed to1 by an invertible binary
-basis change without altering any fibre or clock cost. Also no nontrivial
-odd-primary additive character factors through the paired dyadic group alone.
-These facts delimit, rather than dismiss, the suggested {2,3,11} analogy.
-A further connection would need an actual map retaining additional information.
+## What suspension preserves, and what it changes
 
-## Inheritance and work under audit
+[Explicit native obstruction](suspension-obstruction/THEOREM.md): two
+order-five source/path records have isomorphic old targets but nonisomorphic,
+nonconverse enlarged order-seven targets, even with uniquely recognizable
+outer ports. Suspension therefore needs source-incidence information, not
+just a bare old target class.
 
-Incoming1d94c1d1d9e supplied the authenticated53 helpers and compact40 bank.
-Incomingae8d0f15654 supplied the complete28 all-fibre sharp(8 slots,22 clocks)
-classification and the endpoint-preserving order-ten suspension. Independent
-weighted census, harmonic-transfer criteria, small native suspension tests,
-and the bottleneck/compatibility synthesis are being audited separately.
-No order-eight to order-ten harmonic transport or all-size native wiring
-classification is claimed by this checkpoint.
+There is nevertheless an exact all-size triangle conservation law:
 
-Proofs, certificates, hostile controls and exact reproduction commands accompany
-each packet. Source hashes and packet manifests delimit the verification scope.
+    c(H(T,P)) = c(T)+n.
+
+The boundary triangles compensate the endpoint-dependent change in the inner
+target. [The two-port generating function](suspension-obstruction/BOUNDARY_GENERATING_FUNCTION.md)
+recovers all boundary closed-walk counts, including an explicit fourth-cycle
+formula, by a two-by-two Schur determinant. It does not count Hamiltonian
+paths or establish electrical harmonic transfer.
+
+## The common framework
+
+[Bottleneck and cut theory](bottleneck-theory/THEOREM.md) represents a sharp
+clock threshold by a cut certificate and a matching route/MST certificate.
+Its exact neutral-coordinate quotient retains the cost of shared-owner
+changes. Interval boundary distance alone is not a metric; internal neutral
+routing is part of the proof.
+[Supply-to-route criteria](bottleneck-theory/SUPPLY_TO_ROUTE.md) explain why
+charge coverage must be combined with actual compatibility and boundary-cost
+bounds. [Independent theory audit](audit-wiring-theory/PROOF_AUDIT.md) checks
+these claims and the suspension identities separately.
+
+All fixed pins, actual kernels, converse and normalized capacity constraints
+must be retained in each stated interface. Capacity-one reversible borrowing
+is not strict temporal nonreturn. Neither these finite results nor their
+conditional all-size compilers establish a complete all-order native wiring
+classification. Source pins, hostile controls, manifests and normal/optimized
+reproduction commands accompany the packets.

@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    {
+      "source": "session47-suspension-obstruction/BOUNDARY_GENERATING_FUNCTION.md",
+      "snapshot": "inputs/suspension-BOUNDARY_GENERATING_FUNCTION.txt",
+      "sha256": "ad8438213cb952f536b0ee3773a5051ce84bb7c13ddea2c3c6907c7da40cc6a6",
+      "bytes": 4205,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-suspension-obstruction/check_generating.py",
+      "snapshot": "inputs/suspension-check_generating.py",
+      "sha256": "34752c337a18273f74eb5ec3c026108662acf54ca5351537e9faab2155abca6f",
+      "bytes": 2842
+    }
+  ]
+}

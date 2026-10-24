@@ -1,0 +1,199 @@
+{
+  "checker_sha256": "4a6229e4c485fbe149fb840f6b0c3725ca7b33890bab00dd12957278ec1d1fc6",
+  "counterexamples": {
+    "diagonal_C3_record_models_not_native_replays": [
+      {
+        "clock_bottleneck": 6,
+        "old_slots": 1,
+        "total_slots": 2
+      },
+      {
+        "clock_bottleneck": 9,
+        "old_slots": 2,
+        "total_slots": 3
+      },
+      {
+        "clock_bottleneck": 12,
+        "old_slots": 3,
+        "total_slots": 4
+      },
+      {
+        "clock_bottleneck": 15,
+        "old_slots": 4,
+        "total_slots": 5
+      },
+      {
+        "clock_bottleneck": 18,
+        "old_slots": 5,
+        "total_slots": 6
+      },
+      {
+        "clock_bottleneck": 21,
+        "old_slots": 6,
+        "total_slots": 7
+      },
+      {
+        "clock_bottleneck": 24,
+        "old_slots": 7,
+        "total_slots": 8
+      },
+      {
+        "clock_bottleneck": 27,
+        "old_slots": 8,
+        "total_slots": 9
+      },
+      {
+        "clock_bottleneck": 30,
+        "old_slots": 9,
+        "total_slots": 10
+      },
+      {
+        "clock_bottleneck": 33,
+        "old_slots": 10,
+        "total_slots": 11
+      },
+      {
+        "clock_bottleneck": 36,
+        "old_slots": 11,
+        "total_slots": 12
+      },
+      {
+        "clock_bottleneck": 39,
+        "old_slots": 12,
+        "total_slots": 13
+      }
+    ],
+    "disjoint_interval_valid_bridge": 2,
+    "eight_slot_22_weights": [
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4
+    ],
+    "enlarged_universal_budget": [
+      1,
+      9
+    ],
+    "heavy_neutral_budget": 1,
+    "heavy_neutral_weight": 2,
+    "interval_gap_triangle": [
+      0,
+      0,
+      1
+    ],
+    "parity_recoding": {
+      "input": 11,
+      "linear_bijection": true,
+      "output": 1
+    },
+    "same_11_slot_threshold_clock_budgets": [
+      22,
+      23
+    ],
+    "zero_weight_disjoint_interval_gap": 0
+  },
+  "elapsed_seconds": 5.167,
+  "explicit_checks": 2386018,
+  "graphs": {
+    "edge_alphabet": [
+      0,
+      1,
+      3,
+      "absent"
+    ],
+    "rows": [
+      {
+        "connected_graphs": 1,
+        "minimum_total_trees_checked": 1,
+        "vertices": 1,
+        "weighted_graphs": 1
+      },
+      {
+        "connected_graphs": 3,
+        "minimum_total_trees_checked": 3,
+        "vertices": 2,
+        "weighted_graphs": 4
+      },
+      {
+        "connected_graphs": 54,
+        "minimum_total_trees_checked": 69,
+        "vertices": 3,
+        "weighted_graphs": 64
+      },
+      {
+        "connected_graphs": 3834,
+        "minimum_total_trees_checked": 7524,
+        "vertices": 4,
+        "weighted_graphs": 4096
+      }
+    ],
+    "total_graphs": 4165
+  },
+  "intervals": [
+    {
+      "components": 1,
+      "forced_constraint_pairs": 4,
+      "internal_routes": 6,
+      "naturally_labelled_posets": 1,
+      "weighted_interval_pairs": 27
+    },
+    {
+      "components": 2,
+      "forced_constraint_pairs": 32,
+      "internal_routes": 56,
+      "naturally_labelled_posets": 2,
+      "weighted_interval_pairs": 351
+    },
+    {
+      "components": 3,
+      "forced_constraint_pairs": 448,
+      "internal_routes": 794,
+      "naturally_labelled_posets": 7,
+      "weighted_interval_pairs": 6579
+    },
+    {
+      "components": 4,
+      "forced_constraint_pairs": 10240,
+      "internal_routes": 16750,
+      "naturally_labelled_posets": 40,
+      "weighted_interval_pairs": 176715
+    }
+  ],
+  "python_optimization": 1,
+  "quotients": [
+    {
+      "budget_checks": 648,
+      "components": 1,
+      "instances": 216,
+      "scope": "exhaustive two-helper intervals, C2 charges and weights 0/1/2"
+    },
+    {
+      "budget_checks": 67392,
+      "components": 2,
+      "instances": 16848,
+      "scope": "exhaustive two-helper intervals, C2 charges and weights 0/1/2"
+    },
+    {
+      "budget_checks": 70176,
+      "components": 3,
+      "instances": 8772,
+      "scope": "all helper-interval pairs; weights 1/2/3; stated C2 charge patterns"
+    }
+  ],
+  "source_inputs": {
+    "snapshots_verified": 3,
+    "sourcepins_sha256": "4ac8b32f777ab050ea5406d598f7217fffc9b7c5be412c3421a38f10ab12e2fc"
+  },
+  "status": "PASS",
+  "supply": {
+    "complete_r_selected_helper_pairs": 17210,
+    "forbidden_U_deletion_cases": 500,
+    "helper_pair_scope": "r=1..4, all ordered r-subset pairs of a 2r+1-slot bank",
+    "missing_boundary_cases": 12,
+    "packing_scope": "r=1..3, t=0..3, all deletions of at most t in (t+1) disjoint r-sets"
+  }
+}

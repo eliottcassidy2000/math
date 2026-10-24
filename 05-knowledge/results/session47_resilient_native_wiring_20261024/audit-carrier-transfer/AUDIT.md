@@ -1,0 +1,150 @@
+# Session 47 independent audit: harmonic carrier extension
+
+**Status:** PASS for the mathematical statements below and the frozen producer proof. The separate complete native order-four-to-six positive control passes in `NATIVE_AUDIT.md`. The audit supplies a sharper finite gate, not a native enlarged-graph construction. All matrices and labels below are fixed unless an explicit modulus reduction is written.
+
+## 1. Setup and grounding
+
+Let A be the n by n nonsingular integer grounded Laplacian of the old finite connected integer-weighted graph, with a fixed old root. Keep that same root and all old nonroot coordinate labels in the new graph. Its grounded Laplacian is
+
+    N = [[B, C], [C^T, D]],  E = [C; D],  F = [B; C^T].
+
+There are k new coordinates. For m >= 2 put R = Z/mZ, H_m = ker(A mod m), and H'_m = ker(N mod m). These are grounded harmonics, not arbitrary integer representatives. For a graph Laplacian every ungrounded harmonic is uniquely a grounded one plus a constant: subtract its value at the old root. Constants extend as constants, and zero-sum currents annihilate them. Using a new unrelated root without transporting this convention would invalidate coordinate formulas.
+
+The nonsingularity of A is essential for finite dyadic saturation. Connectedness and positive weights imply it. The modular extension criterion itself does not require nonsingularity. Connectedness of the enlarged graph is appropriate for a finite critical-group interpretation, although the finite-ring criterion needs only the displayed matrices.
+
+## 2. Exact finite-ring gate
+
+For an old harmonic x, an extension is (x,y), and its equation is
+
+    F x + E y = 0 mod m.
+
+Consequently every old harmonic extends if and only if
+
+    F H_m subset im(E mod m).                                   (1)
+
+For any finite free R-module use the perfect dot-product character pairing. Smith reduction, or finite-character duality, gives
+
+    (ker M)^perp = im(M^T),    (im M)^perp = ker(M^T).
+
+These identities hold over Z/mZ, including composite m; no field rank argument is being used. Taking annihilators in (1) therefore gives the equivalent test
+
+    F^T z in im(A^T mod m) for every z in ker(E^T mod m).       (2)
+
+Let pi project onto the old coordinates. A second equivalent dual formulation is
+
+    {d in R^n : (d,0) in im(N mod m)} subset im(A mod m),       (3)
+
+where symmetry of both grounded Laplacians identifies transpose images. Indeed H_m subset pi(H'_m) is equivalent, after orthogonal complements, to (3).
+
+Important typing boundary: pi(H'_m) is not automatically contained in H_m. The surjection relevant to an additive section is
+
+    pi : H'_m intersect pi^{-1}(H_m) -> H_m.
+
+It is not in general a map H'_m -> H_m.
+
+When det(D) is a unit in R, the new rows uniquely force y=-D^{-1}C^T x, so (1) is equivalent to
+
+    (B - C D^{-1} C^T) H_m = 0.                                (4)
+
+No rational inverse or cancellation of a nonunit denominator is valid without this hypothesis. A rational Schur complement that happens to be integral still need not give the correct modular test.
+
+## 3. Pointwise extension is weaker than a section at one modulus
+
+Use old A=[2] and
+
+    N = [[4,-1,-1], [-1,2,0], [-1,0,2]].
+
+This is a genuine positive multigraph enlargement: retain two parallel unit root-v edges and add two distinct unit root-new-v paths. Modulo 4 the old harmonics are 0 and 2. The complete set of extensions of 2 is
+
+    (2,1,3), (2,3,1).
+
+Both have additive order 4; hence neither can be the image of an order-2 element under a group homomorphism. Every old character extends pointwise, but there is no additive section. Modulo 2, the new rows force the old coordinate to be 0, so the nonzero old harmonic has no extension.
+
+This example also warns against deducing low-level coverage from an arbitrarily high successful modulus. However A=[2] has saturation level s=1, so it does not alone refute testing only the actual saturation level. For that stronger hostile, append an unchanged old vertex joined to the root by four parallel unit edges:
+
+    A = diag(2,4),
+    B = diag(4,4),  C = [[-1,-1],[0,0]],  D = diag(2,2).
+
+Now s=2. Coverage passes at the true top modulus 4 but fails at modulus 2. All matrices remain grounded Laplacians of connected positive multigraphs.
+
+A useful separate boundary is that im(A) containment in the opposite direction is not supplied by (3). Extension protects old detection against disappearance of old characters. It does not make arbitrary new characters old or prove preservation of every newly created character.
+
+## 4. Fixed-modulus additive sections have ambient matrices
+
+An additive map between R-modules is automatically R-linear. Every R-linear map ker(A mod m) -> R^k extends to an R-linear map R^n -> R^k. This can be proved without invoking an unproved extension principle. Put U A V=diag(d_i). In the i-th Smith coordinate the kernel is generated by h_i=(m/g_i)e_i, with g_i=gcd(d_i,m). A homomorphism's value w_i on h_i must satisfy g_i w_i=0, so every coordinate of w_i is divisible by m/g_i. Choose a preimage t_i under multiplication by m/g_i and set the ambient map's i-th column to t_i. Conjugate back using V. This also covers a zero invariant, with h_i=e_i and g_i=m.
+
+Thus an additive extension section exists at modulus m if and only if there is T over R such that P=[I;T] satisfies N P H_m=0. By the annihilator identity this is equivalent to a matrix Q over R with
+
+    N P = Q A mod m.                                          (5)
+
+This is an existence statement for a section, not a claim that arbitrary pointwise choices are additive or compatible.
+
+## 5. Dyadic saturation: all levels reduce to actual Smith levels
+
+Write an integer Smith decomposition
+
+    U A V = diag(d_1,...,d_n),   a_i = v_2(d_i),   s=max_i a_i,
+
+with d_i nonzero and U,V unimodular. Put v_i=V e_i. Odd units in d_i are invertible modulo every 2^r, so
+
+    ker(A mod 2^r)
+      = sum_i (Z/2^rZ) 2^{max(r-a_i,0)} v_i.                  (6)
+
+For r>=s the coordinatewise scaling map is an injection and gives the exact equality
+
+    H_(2^r) = 2^{r-s} H_(2^s).                               (7)
+
+The right side means the canonical scaled embedding, not ordinary reduction from modulus 2^r to modulus 2^s. If all old harmonics extend at modulus 2^s, scaling any chosen extension proves coverage at every higher level. Thus checking levels 1,...,s suffices. The true-top hostile above shows that pointwise coverage only at level s is insufficient for all levels.
+
+There is a sharper, constructive equivalence for coordinate inclusion and fixed integer N. The following are equivalent:
+
+(a) Every old dyadic harmonic extends at every level r>=1.
+
+(b) Coverage holds at each distinct positive level a_i that occurs among the old Smith invariants.
+
+(c) There is one integer matrix T such that P=[I;T] maps H_(2^r) into H'_(2^r) for every r>=1.
+
+(d) There is an additive extension section at the saturation modulus 2^s (with the trivial case s=0 understood separately).
+
+Proof of the nontrivial direction (b) -> (c): For a_i>0, A v_i is divisible by 2^a_i, so v_i is an old harmonic at that modulus. By (b), choose an integer y_i with
+
+    F v_i + E y_i = 0 mod 2^a_i.
+
+For a_i=0 choose y_i=0. Let Y have columns y_i and define the integer matrix T=Y V^{-1}; integer entries are guaranteed by unimodularity. Then the i-th column of N P V is divisible by 2^a_i. Formula (6) implies that N P kills every generator of H_(2^r), for every r. Hence (c).
+
+The implications (c) -> (a) -> (b) are immediate, and (c) -> (d) is restriction. For (d) -> (c), extend the section to a matrix T modulo 2^s using Section 4, then choose any integer representatives. At levels r>s use (7). At levels r<s, embed x in H_(2^r) as 2^{s-r}x in H_(2^s). Since the same integer P is used, N P (2^{s-r}x)=0 mod2^s can be divided as an integer congruence to obtain N P x=0 mod2^r. This division does not apply to a separately chosen pointwise lift y unless that y has the required divisibility. That missing divisibility is precisely the hostile mechanism.
+
+If s=0 then A is invertible modulo all powers of 2. The grounded bank is zero and the extension property is vacuous; choose T=0. The full ungrounded constant bank still exists and extends constantly. No nontrivial native guarding conclusion follows from this vacuous case.
+
+The hypotheses are genuinely fixed-carrier hypotheses: A, N, the root, coordinate inclusion, and the chosen integer T cannot be silently changed with r. This theorem concerns genuine harmonics (6), not testing a fixed integer potential at ever-increasing moduli. It supplies no claim that an arbitrary non-surjective readout admits an integer right inverse.
+
+## 6. Readout and physical-current boundaries
+
+For an explicitly fixed readout W:R^N -> R^n, the right pointwise question is H_m subset W(H'_m). It has its own annihilator test
+
+    {d : W^T d in im(N^T)} subset im(A^T).
+
+This is meaningful without a coordinate inclusion or any section. The coordinate form P=[I;T] and an exact ambient right-inverse identity are not automatically available for a general W. However the producer correctly proves a more general harmonic-input statement. Stack M=[N;R_new] and J=[0;R_old]. Solving Mz=Jx for every old harmonic at the distinct positive Smith levels lets one choose z_i at each marked v_i's own level. Set ZV=[z_i]. Then the single integer Z obeys (MZ-J)H_(2^r)=0 at every dyadic level. This does not imply R_new Z=R_old on nonharmonic old vectors and need not be a section when R_old is noninjective. It is the correct generalization of order-aware harmonic transport, without any claimed ambient surjectivity.
+
+There is also a finite exact integer certificate. For any integer defect M_0, annihilation of all dyadic H_(2^r) is equivalent to M_0 A^{-1} having only odd denominators, hence equivalent to d M_0=QA for some positive odd integer d and integer Q. Indeed A^{-1}=V diag(d_i^{-1}) U, and the i-th column of M_0 V must be divisible by 2^a_i. Apply this with M_0=NP in the inclusion case or M_0=MZ-J for general readouts. This certificate deliberately ignores odd-primary obstructions.
+
+Likewise a harmonic pullback is not a nodewise current-transport theorem. If old owners are split into distinct new physical rows, summing their currents may cancel nonzero individual debts. To preserve a full nodewise guard, the actual new rows must each satisfy their image/annihilator condition. Endpoint or coarse-row cancellation is insufficient. Resource/port compatibility and native realization remain separate from all of these matrix conditions.
+
+## 7. Independent verification
+
+Reproduction commands, from the workspace root:
+
+    python3 session47-audit-carrier-transfer/check.py
+    python3 -O session47-audit-carrier-transfer/check.py
+
+Both outputs are byte-identical in normal.json and optimized.json. The script uses explicit exceptions, not optimization-sensitive assertions. It independently enumerates kernels and images for 1,024 scalar cases over moduli 2,3,4,6 and 240 symmetric two-old-coordinate cases over moduli 2,4. It compares literal extension coverage, the E-image gate, the annihilator gate, and the current contraction gate. Unit-D cases additionally test unique new-row solving and the Schur residual.
+
+It also checks the complete hostile lift set and its orders; the genuine-top hostile; 1,800 deterministic Smith-level / ambient-section cases (536 with all-level coverage and at least one top-pass/lower-fail case); 48 nontrivial-unimodular-basis kernel-scaling cases; and 400 general-readout cases checking the harmonic-input common integer lift and odd-denominator certificate. These computations support the finite implementations; the proofs above establish the infinite-level statements.
+
+No native enlarged 570-carrier graph, native helper availability, resource disjointness, or common-host tournament realization is asserted by this audit.
+
+## 8. Final producer review
+
+`TRANSFER.md` passes after integrating the true-top counterexample, the Smith-level/common-lift equivalence, the general-readout harmonic-input formulation, the odd-multiplier certificate, and the strengthened physical-row hostile with A=[4], N=diag(4,4). The latter really does transport the complete old bank before the move. The producer's current abstract checker was replayed independently and its 29,457-check receipt matched. No remaining mathematical objection was found within these scopes.
+
+The complete small native order-four-to-six result is separately audited in `NATIVE_AUDIT.md`; that addition is an actual positive finite carrier certificate, not a target-570 realization. Frozen reviewed inputs and all audit artifacts are hashed separately.

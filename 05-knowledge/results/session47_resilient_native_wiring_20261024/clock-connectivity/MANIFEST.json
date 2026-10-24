@@ -1,0 +1,183 @@
+{
+  "status": "PASS independent finite audit with conditional structural extensions",
+  "concurrent_primary_commit": "ae8d0f15654",
+  "baseline_commit": "1d94c1d1d9e03b829bd9a979f829c720e064c960",
+  "artifact_count": 35,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 1349,
+      "sha256": "e600f7d79b8d29a0b93c82d5cdc6f85bf9738e1da7a2a853145cd73180d2fec3"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 14937,
+      "sha256": "e3a16dae8748c2a4cdb48fff6d7801a454e79a7c4442ad04b37c15161e8ad2d2"
+    },
+    {
+      "path": "SHEET_GLUING.md",
+      "bytes": 6190,
+      "sha256": "fb100ea02fd5b50ef3918a0ef1bce377b5aec58572286ffd2fc4852a8fb0b49b"
+    },
+    {
+      "path": "AUDIT.md",
+      "bytes": 3308,
+      "sha256": "751180664fb73217d44a70980911885126ab647dce846b697fa6e38b2356cf72"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 83,
+      "sha256": "2f3936fcbce71d94df3fc09c8a781a50a12e068d25443cd9513be525cb65b5db"
+    },
+    {
+      "path": "input.txt",
+      "bytes": 451,
+      "sha256": "85045bfeefd6bff3426bd12fd4fbe003b721ebec143e665b8a4f1161cceaf537"
+    },
+    {
+      "path": "census.cpp",
+      "bytes": 2203,
+      "sha256": "d92724d076b10c2a216251dcc50799c96450967a33d5b83e03bbdff15efb437e"
+    },
+    {
+      "path": "census_support.cpp",
+      "bytes": 2303,
+      "sha256": "7505d5958faed4c364e1dba10d47a25acdb68c27302d7ca24be8eee5d1442f5c"
+    },
+    {
+      "path": "independent_bfs.cpp",
+      "bytes": 1940,
+      "sha256": "93eb4673df85499aca0e61a4de35cd08165b59cf46a7368bde555a6e2904f269"
+    },
+    {
+      "path": "independent_depth.cpp",
+      "bytes": 2094,
+      "sha256": "15f137abc12b731910b023334c8f0620367a0ccd9c413eb311527a7dd5c4f38d"
+    },
+    {
+      "path": "budget22.jsonl",
+      "bytes": 2223,
+      "sha256": "cb1f45371643d53419ae6625abea46b884bd310d302ef7e0cbcbfec6700bd21a"
+    },
+    {
+      "path": "budget22-support8.jsonl",
+      "bytes": 2405,
+      "sha256": "056e5afe383e9cb08f7ce6644d5809c0402a45983af1bc92b52abc27e67812cb"
+    },
+    {
+      "path": "independent-budget22-support8.jsonl",
+      "bytes": 2114,
+      "sha256": "a2be70ec7d3c37a003380451401cb535ca9dea9e8c2187e559c0c15a256699c3"
+    },
+    {
+      "path": "independent-depth-budget22-support8.jsonl",
+      "bytes": 2459,
+      "sha256": "540c9fa732daa23811ac5233b11d17218cd569fa2f6ec4fef14fe62ca864517c"
+    },
+    {
+      "path": "check.py",
+      "bytes": 8144,
+      "sha256": "64ab3609360b6f483005421b36bdb04d47f896b51e2719bf466cc4408f4884cc"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 5939,
+      "sha256": "3177ae5613278065d90a3a563ef340cf6cbbc146c5b0998a284a9313ee330e75"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 5939,
+      "sha256": "3177ae5613278065d90a3a563ef340cf6cbbc146c5b0998a284a9313ee330e75"
+    },
+    {
+      "path": "construct_route.py",
+      "bytes": 3162,
+      "sha256": "8ff5c2bb1393d8f339a2530b554e55a2d462bd0d003b8fe2762ec8d763428bc1"
+    },
+    {
+      "path": "route18_37.json",
+      "bytes": 7334,
+      "sha256": "7e33a1b38fae3ae8e89decd280e97d548e877f9b544ec7d920886d14f1d3cade"
+    },
+    {
+      "path": "move_bank.py",
+      "bytes": 1719,
+      "sha256": "0a861dcfc3e64031dfc906aa5e83e4fabc74d822aee4f7d3c758823de0296517"
+    },
+    {
+      "path": "move_bank.json",
+      "bytes": 2053,
+      "sha256": "3a11ce27929e27c3df62929b0c753641895e4eb0045e322f24cc4cc2fbf82be1"
+    },
+    {
+      "path": "audit_incoming.py",
+      "bytes": 5028,
+      "sha256": "7434629f51e94c7e4746c7e30360699f5c1ef339055777e0c3915d5ef2abadad"
+    },
+    {
+      "path": "incoming.normal.json",
+      "bytes": 1295,
+      "sha256": "b88f524795c61a2f20dcbd598cf740c347e7c9008341545600694bc94629640c"
+    },
+    {
+      "path": "incoming.optimized.json",
+      "bytes": 1295,
+      "sha256": "b88f524795c61a2f20dcbd598cf740c347e7c9008341545600694bc94629640c"
+    },
+    {
+      "path": "deletion_probe.py",
+      "bytes": 2386,
+      "sha256": "61be587aa38e858df86b67f4a270148bd70dd25f75d66a9354db2fe3acdf19ef"
+    },
+    {
+      "path": "deletion_probe.json",
+      "bytes": 7789,
+      "sha256": "117f3292966ee3bd2b50fde6b4639e2c5cff01f41f5ceda76921a7d02bdc520f"
+    },
+    {
+      "path": "audit_deletions.py",
+      "bytes": 3027,
+      "sha256": "18ad7677eff411c64957d733a4a6dc1da773b2985246fb69e2758cd039d64b85"
+    },
+    {
+      "path": "deletions.normal.json",
+      "bytes": 10912,
+      "sha256": "a324653034a0b1bb0a3d3554668e01df5c2d84509ac5313b2ebb6aa28c36e24c"
+    },
+    {
+      "path": "deletions.optimized.json",
+      "bytes": 10912,
+      "sha256": "a324653034a0b1bb0a3d3554668e01df5c2d84509ac5313b2ebb6aa28c36e24c"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 2048,
+      "sha256": "640c741ce93f4a39c61ae5650160afae896d8ecb69a4113d689e769acf004dd1"
+    },
+    {
+      "path": "inherited_native.normal.log",
+      "bytes": 178,
+      "sha256": "e2df63f26cc6192c111de7011d700fb49bddf4b68fdab33550957501fc79f568"
+    },
+    {
+      "path": "inherited_native.optimized.log",
+      "bytes": 178,
+      "sha256": "e2df63f26cc6192c111de7011d700fb49bddf4b68fdab33550957501fc79f568"
+    },
+    {
+      "path": "OWNER_CYCLE_AUDIT.json",
+      "bytes": 729,
+      "sha256": "65603bbbc5bc4feaf778e07da339d750d0ae694ee58c3c54c1292c3310621a67"
+    },
+    {
+      "path": "owner_cycles.normal.json",
+      "bytes": 17612,
+      "sha256": "f96eeb7370988c92ef510ab0a8572c816550533ca58a546e42abfabcb988ba4c"
+    },
+    {
+      "path": "owner_cycles.optimized.json",
+      "bytes": 17612,
+      "sha256": "f96eeb7370988c92ef510ab0a8572c816550533ca58a546e42abfabcb988ba4c"
+    }
+  ]
+}

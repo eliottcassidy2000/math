@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "bytes": 12725,
+      "path": "AUDIT.md",
+      "sha256": "0dc35db449f49686d09b84f65b86d2a0f3535ada7bc15f3d07f9e6bc49bf15c6"
+    },
+    {
+      "bytes": 325,
+      "path": "LAYOUT_CHECKS.json",
+      "sha256": "bc1118f827f90b74d6498fe0d54897445b38e634c081f446430f7845dec76f0c"
+    },
+    {
+      "bytes": 6234,
+      "path": "NATIVE_AUDIT.md",
+      "sha256": "658cbb6fe2ab6efcca748c3811b1f1a41089f332cd46f9b9afbbe2bea01aabfe"
+    },
+    {
+      "bytes": 2751,
+      "path": "REVIEWED_INPUTS.json",
+      "sha256": "b3ef7a08661bb19e448f6df5720546612f688f06a9d5fd97b171d097e359a9d0"
+    },
+    {
+      "bytes": 9856,
+      "path": "audit_native_probe.py",
+      "sha256": "0e27055f90ae7a2934c67107822e02c4e377287d52848b163487d634debe325b"
+    },
+    {
+      "bytes": 8622,
+      "path": "check.py",
+      "sha256": "2e125d140cb7f8115c255143a75f9c79ce06ccba490cf02ae30098534cf3409e"
+    },
+    {
+      "bytes": 17017,
+      "path": "native-normal.json",
+      "sha256": "96d2445fa58fead00491baeebc4d513d2d92e2b462d69beab17ebee604d78e57"
+    },
+    {
+      "bytes": 17017,
+      "path": "native-optimized.json",
+      "sha256": "96d2445fa58fead00491baeebc4d513d2d92e2b462d69beab17ebee604d78e57"
+    },
+    {
+      "bytes": 1305,
+      "path": "normal.json",
+      "sha256": "930532b052c11f0fed0536b1b13a77792e6cb24ba60137226c41374203902ffa"
+    },
+    {
+      "bytes": 1305,
+      "path": "optimized.json",
+      "sha256": "930532b052c11f0fed0536b1b13a77792e6cb24ba60137226c41374203902ffa"
+    },
+    {
+      "bytes": 42025,
+      "path": "producer-native-replay.json",
+      "sha256": "aff1d5a5e72c477792b7b1ca0446194cc672fecfc72c040f8483ebf85d7ee222"
+    },
+    {
+      "bytes": 6121,
+      "path": "producer-replay.json",
+      "sha256": "5b1bd35943485be3cf198875b5a1d659f8494544c912ac7f6f90a111366d27dc"
+    }
+  ],
+  "independent_core_cases": 3512,
+  "independent_native_checks": 3147,
+  "no_git_operations": true,
+  "normal_optimized_identical": true,
+  "producer_core_checks": 29457,
+  "status": "PASS: core algebra, finite controls, and complete native order4-to6 all-modulus certificate"
+}

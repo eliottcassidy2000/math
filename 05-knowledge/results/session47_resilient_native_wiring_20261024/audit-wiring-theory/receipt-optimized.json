@@ -1,0 +1,251 @@
+{
+  "checker_sha256": "70a6ada3b894e02eb9d3643777a10bce92bb67327aae41f453e79e577f9344cd",
+  "checks_by_section": {
+    "authentication": 8,
+    "contraction": 2324,
+    "graphs": 345307,
+    "hostiles": 12,
+    "intervals": 1345818,
+    "quotients": 132722,
+    "supply": 6662,
+    "suspension": 508026
+  },
+  "elapsed_seconds": 24.035,
+  "explicit_checks": 2340879,
+  "graphs": {
+    "edge_alphabet": [
+      0,
+      2,
+      7,
+      "absent"
+    ],
+    "partitions_tested": 2324,
+    "rng_seed": 47001,
+    "rows": [
+      {
+        "all_minimum_trees": 1,
+        "graphs": 1,
+        "scope": "exhaustive",
+        "vertices": 1
+      },
+      {
+        "all_minimum_trees": 3,
+        "graphs": 4,
+        "scope": "exhaustive",
+        "vertices": 2
+      },
+      {
+        "all_minimum_trees": 69,
+        "graphs": 64,
+        "scope": "exhaustive",
+        "vertices": 3
+      },
+      {
+        "all_minimum_trees": 7524,
+        "graphs": 4096,
+        "scope": "exhaustive",
+        "vertices": 4
+      },
+      {
+        "all_minimum_trees": 309,
+        "graphs": 96,
+        "scope": "seeded extra controls",
+        "vertices": 5
+      },
+      {
+        "all_minimum_trees": 225,
+        "graphs": 24,
+        "scope": "seeded extra controls",
+        "vertices": 6
+      }
+    ]
+  },
+  "hostiles_and_supply": {
+    "forbidden_U_cases": 1286,
+    "helper_pairs": 5340,
+    "missing_boundary_weights": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "input_pins_sha256": "161492a27f8be44112920c6d1151181cb35de571075d8d892a174fdc8fd44569",
+  "intervals": [
+    {
+      "all_labelled_posets": 1,
+      "components": 1,
+      "intervals": 3,
+      "route_pairs": 6,
+      "weighted_interval_pairs": 18
+    },
+    {
+      "all_labelled_posets": 3,
+      "components": 2,
+      "intervals": 21,
+      "route_pairs": 76,
+      "weighted_interval_pairs": 306
+    },
+    {
+      "all_labelled_posets": 19,
+      "components": 3,
+      "intervals": 279,
+      "route_pairs": 1740,
+      "weighted_interval_pairs": 8898
+    },
+    {
+      "all_labelled_posets": 219,
+      "components": 4,
+      "intervals": 6357,
+      "route_pairs": 66352,
+      "weighted_interval_pairs": 416658
+    }
+  ],
+  "python_optimization": 1,
+  "quotients": {
+    "charge_group": "Z x C3",
+    "empty_helper_fibres": 242,
+    "helper_costs": "symmetric, possibly zero and nonmetric",
+    "nonempty_helper_fibres": 2662,
+    "rng_seed": 47002,
+    "rows": [
+      {
+        "budgets": 32,
+        "components": 1,
+        "projected_vertices": 88,
+        "three_helper_instances": 4
+      },
+      {
+        "budgets": 96,
+        "components": 2,
+        "projected_vertices": 283,
+        "three_helper_instances": 12
+      },
+      {
+        "budgets": 608,
+        "components": 3,
+        "projected_vertices": 1900,
+        "three_helper_instances": 76
+      },
+      {
+        "budgets": 7008,
+        "components": 4,
+        "projected_vertices": 24276,
+        "three_helper_instances": 876
+      }
+    ]
+  },
+  "status": "PASS",
+  "suspension": {
+    "extra_order7_fixed_path_tournaments": 32768,
+    "extra_order8_canonicalizations": {
+      "canonical_integer": 2200748,
+      "permutation_counts": [
+        40320,
+        40320
+      ]
+    },
+    "original_scope_total": 1099,
+    "scope": "fixed forward-path tournaments and named examples, not full metagraphs or harmonic transfer",
+    "universe_rows": [
+      {
+        "fixed_forward_path_tournaments": 1,
+        "source_order": 2
+      },
+      {
+        "fixed_forward_path_tournaments": 2,
+        "source_order": 3
+      },
+      {
+        "fixed_forward_path_tournaments": 8,
+        "source_order": 4
+      },
+      {
+        "fixed_forward_path_tournaments": 64,
+        "source_order": 5
+      },
+      {
+        "fixed_forward_path_tournaments": 1024,
+        "source_order": 6
+      },
+      {
+        "fixed_forward_path_tournaments": 32768,
+        "source_order": 7
+      }
+    ],
+    "witnesses": [
+      {
+        "H_canonical_integer": 34881,
+        "H_converse_canonical_integer": 34946,
+        "H_scores": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          4,
+          5
+        ],
+        "H_square_sum": 73,
+        "bits": 2,
+        "canonical_permutation_counts": [
+          120,
+          5040,
+          5040
+        ],
+        "old_canonical_integer": 8,
+        "source_degrees": [
+          2,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "H_canonical_integer": 34889,
+        "H_converse_canonical_integer": 34818,
+        "H_scores": [
+          1,
+          2,
+          2,
+          3,
+          4,
+          4,
+          5
+        ],
+        "H_square_sum": 75,
+        "bits": 3,
+        "canonical_permutation_counts": [
+          120,
+          5040,
+          5040
+        ],
+        "old_canonical_integer": 8,
+        "source_degrees": [
+          3,
+          1,
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{"margin":0,"budget":22,"support":8,"states":1,"fibres":1,"disconnected_fibres":0,"edge_tests":0,"maximum_root_depth":0,"component_counts":{"1":1}}
+{"margin":1,"budget":22,"support":8,"states":28,"fibres":28,"disconnected_fibres":0,"edge_tests":0,"maximum_root_depth":0,"component_counts":{"1":28}}
+{"margin":2,"budget":22,"support":8,"states":378,"fibres":351,"disconnected_fibres":0,"edge_tests":27,"maximum_root_depth":1,"component_counts":{"1":351}}
+{"margin":3,"budget":22,"support":8,"states":3276,"fibres":1646,"disconnected_fibres":0,"edge_tests":1630,"maximum_root_depth":1,"component_counts":{"1":1646}}
+{"margin":4,"budget":22,"support":8,"states":20475,"fibres":2048,"disconnected_fibres":0,"edge_tests":18670,"maximum_root_depth":2,"component_counts":{"1":2048}}
+{"margin":5,"budget":22,"support":8,"states":98280,"fibres":2048,"disconnected_fibres":0,"edge_tests":152079,"maximum_root_depth":2,"component_counts":{"1":2048}}
+{"margin":6,"budget":22,"support":8,"states":376740,"fibres":2048,"disconnected_fibres":0,"edge_tests":1158217,"maximum_root_depth":2,"component_counts":{"1":2048}}
+{"margin":7,"budget":22,"support":8,"states":1184040,"fibres":2048,"disconnected_fibres":0,"edge_tests":7802414,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":8,"budget":22,"support":8,"states":3108105,"fibres":2048,"disconnected_fibres":0,"edge_tests":49799212,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":9,"budget":22,"support":8,"states":6906900,"fibres":2048,"disconnected_fibres":0,"edge_tests":251637830,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":10,"budget":22,"support":8,"states":13123110,"fibres":2048,"disconnected_fibres":0,"edge_tests":955302549,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":11,"budget":22,"support":8,"states":21474180,"fibres":2048,"disconnected_fibres":0,"edge_tests":2633541755,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":12,"budget":22,"support":8,"states":30421755,"fibres":2048,"disconnected_fibres":0,"edge_tests":5385132974,"maximum_root_depth":3,"component_counts":{"1":2048}}
+{"margin":13,"budget":22,"support":8,"states":37442160,"fibres":2048,"disconnected_fibres":0,"edge_tests":8270430741,"maximum_root_depth":4,"component_counts":{"1":2048}}
+{"margin":14,"budget":22,"support":8,"states":40116600,"fibres":2048,"disconnected_fibres":0,"edge_tests":9547992688,"maximum_root_depth":4,"component_counts":{"1":2048}}

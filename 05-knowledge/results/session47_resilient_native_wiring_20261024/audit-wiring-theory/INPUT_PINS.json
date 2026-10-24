@@ -1,0 +1,57 @@
+{
+  "inputs": [
+    {
+      "source": "session47-bottleneck-theory/THEOREM.md",
+      "snapshot": "inputs/bottleneck-THEOREM.txt",
+      "sha256": "3104afcd5d6be54ce52d89b5e5c5ce11ecf9e1d6bc377db2903b58c4d259c58a",
+      "bytes": 20509,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-bottleneck-theory/SUPPLY_TO_ROUTE.md",
+      "snapshot": "inputs/SUPPLY_TO_ROUTE.txt",
+      "sha256": "196072c89bff65839b44419996b5f597f06714cbbdf79ab5d6643cbd05a11091",
+      "bytes": 4945,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-bottleneck-theory/check.py",
+      "snapshot": "inputs/bottleneck-check.py",
+      "sha256": "4a6229e4c485fbe149fb840f6b0c3725ca7b33890bab00dd12957278ec1d1fc6",
+      "bytes": 22227
+    },
+    {
+      "source": "session47-bottleneck-theory/SOURCEPINS.json",
+      "snapshot": "inputs/bottleneck-SOURCEPINS.json",
+      "sha256": "4ac8b32f777ab050ea5406d598f7217fffc9b7c5be412c3421a38f10ab12e2fc",
+      "bytes": 3018
+    },
+    {
+      "source": "session47-bottleneck-theory/inputs/NEUTRAL_FIBRE_LIFTING.txt",
+      "snapshot": "inputs/NEUTRAL_FIBRE_LIFTING.txt",
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+      "bytes": 14785,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-bottleneck-theory/inputs/GUARD_AND_REUSE_CONTRACT.txt",
+      "snapshot": "inputs/GUARD_AND_REUSE_CONTRACT.txt",
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756",
+      "bytes": 4020,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-suspension-obstruction/THEOREM.md",
+      "snapshot": "inputs/suspension-THEOREM.txt",
+      "sha256": "8dc2e609e83767a2d24d499510ae5e23600cb56f3ef264df98097d70d141676c",
+      "bytes": 5616,
+      "archive_format": "Byte-identical plain-text snapshot; any embedded Markdown links are archival source text, not live relocated links."
+    },
+    {
+      "source": "session47-suspension-obstruction/check.py",
+      "snapshot": "inputs/suspension-check.py",
+      "sha256": "a7c44521c9141012453037b96880c8c445604de22ca58efdbb08adf916a03a87",
+      "bytes": 3319
+    }
+  ]
+}

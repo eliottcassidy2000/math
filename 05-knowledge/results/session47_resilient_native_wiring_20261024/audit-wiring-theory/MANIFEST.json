@@ -1,0 +1,176 @@
+{
+  "status": "PASS",
+  "scope": "Frozen independent proof/certificate audit, refreshed archival filenames and provenance only. No mathematical changes or Git operations.",
+  "artifacts": [
+    {
+      "path": "GENERATING_INPUT_PINS.json",
+      "sha256": "2b0954a428fa707de170877092399f0b8760cb749daf18463c4ec5d8d84e6f4e",
+      "bytes": 685
+    },
+    {
+      "path": "INPUT_PINS.json",
+      "sha256": "161492a27f8be44112920c6d1151181cb35de571075d8d892a174fdc8fd44569",
+      "bytes": 2617
+    },
+    {
+      "path": "PORTABILITY_UPDATE.json",
+      "sha256": "4df4cf3590dcaf77fc66f91bfdabb5ec8e9bb21fae0c51a4322495f7b757a822",
+      "bytes": 6080
+    },
+    {
+      "path": "PROOF_AUDIT.md",
+      "sha256": "8762dd7f511ecae6ae89369c1c6c118f57e5c502eefe546ce4ce5a7c00829744",
+      "bytes": 15461
+    },
+    {
+      "path": "README.md",
+      "sha256": "53ed10f986405f291a8eacd98829fa2d1bd84bcd8ceda91d6f360aebd5fff7db",
+      "bytes": 1663
+    },
+    {
+      "path": "generating-normal.json",
+      "sha256": "f770dc65347fc5d325f248f81cc69ee35690217535f1283ff4b0506eb6b6e3fc",
+      "bytes": 2512
+    },
+    {
+      "path": "generating-optimized.json",
+      "sha256": "b57d9039f899624e9bb83fcb1ce3f3134e421c7eef86b5bb4c0c35480fd38b5c",
+      "bytes": 2512
+    },
+    {
+      "path": "independent_check.py",
+      "sha256": "70a6ada3b894e02eb9d3643777a10bce92bb67327aae41f453e79e577f9344cd",
+      "bytes": 28236
+    },
+    {
+      "path": "independent_generating.py",
+      "sha256": "e526d6bc8fdbcc382a76723bb0cd0b04b57e66cacb4b1ca2f62c8938bd2d1ad8",
+      "bytes": 7817
+    },
+    {
+      "path": "inputs/GUARD_AND_REUSE_CONTRACT.txt",
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756",
+      "bytes": 4020
+    },
+    {
+      "path": "inputs/NEUTRAL_FIBRE_LIFTING.txt",
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+      "bytes": 14785
+    },
+    {
+      "path": "inputs/SUPPLY_TO_ROUTE.txt",
+      "sha256": "196072c89bff65839b44419996b5f597f06714cbbdf79ab5d6643cbd05a11091",
+      "bytes": 4945
+    },
+    {
+      "path": "inputs/bottleneck-SOURCEPINS.json",
+      "sha256": "4ac8b32f777ab050ea5406d598f7217fffc9b7c5be412c3421a38f10ab12e2fc",
+      "bytes": 3018
+    },
+    {
+      "path": "inputs/bottleneck-THEOREM.txt",
+      "sha256": "3104afcd5d6be54ce52d89b5e5c5ce11ecf9e1d6bc377db2903b58c4d259c58a",
+      "bytes": 20509
+    },
+    {
+      "path": "inputs/bottleneck-check.py",
+      "sha256": "4a6229e4c485fbe149fb840f6b0c3725ca7b33890bab00dd12957278ec1d1fc6",
+      "bytes": 22227
+    },
+    {
+      "path": "inputs/suspension-BOUNDARY_GENERATING_FUNCTION.txt",
+      "sha256": "ad8438213cb952f536b0ee3773a5051ce84bb7c13ddea2c3c6907c7da40cc6a6",
+      "bytes": 4205
+    },
+    {
+      "path": "inputs/suspension-THEOREM.txt",
+      "sha256": "8dc2e609e83767a2d24d499510ae5e23600cb56f3ef264df98097d70d141676c",
+      "bytes": 5616
+    },
+    {
+      "path": "inputs/suspension-check.py",
+      "sha256": "a7c44521c9141012453037b96880c8c445604de22ca58efdbb08adf916a03a87",
+      "bytes": 3319
+    },
+    {
+      "path": "inputs/suspension-check_generating.py",
+      "sha256": "34752c337a18273f74eb5ec3c026108662acf54ca5351537e9faab2155abca6f",
+      "bytes": 2842
+    },
+    {
+      "path": "normal.log",
+      "sha256": "4f71652f48d71df115b3ed7df95d684fc6a11f8b466f68d550fe7c70eb416da3",
+      "bytes": 88
+    },
+    {
+      "path": "normal.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "optimized.log",
+      "sha256": "4f71652f48d71df115b3ed7df95d684fc6a11f8b466f68d550fe7c70eb416da3",
+      "bytes": 88
+    },
+    {
+      "path": "optimized.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "receipt-normal.json",
+      "sha256": "1be8cd21de4209e3dc56cf0fbbca65acd8d2d0d60296148499e10f598a7d5e0a",
+      "bytes": 5158
+    },
+    {
+      "path": "receipt-optimized.json",
+      "sha256": "bf4791ab872fb8b0f38c95cc8a67f2b2519670e99da1bdf647175281e6e50301",
+      "bytes": 5158
+    },
+    {
+      "path": "replay-bottleneck-normal.json",
+      "sha256": "e04f9381911eb434242a1f18d2f9396ccba12b935eb6f212bd9f66d011b26435",
+      "bytes": 4467
+    },
+    {
+      "path": "replay-bottleneck-normal.log",
+      "sha256": "24da7c264f3aa18fd58d65b5ae9b1711a908d5b6539ab32fe548d2ce673db830",
+      "bytes": 80
+    },
+    {
+      "path": "replay-bottleneck-optimized.json",
+      "sha256": "bca88b575c28906a5437fd25acfda8ad3d8c257bb7556d430a76e80c72669aff",
+      "bytes": 4467
+    },
+    {
+      "path": "replay-bottleneck-optimized.log",
+      "sha256": "24da7c264f3aa18fd58d65b5ae9b1711a908d5b6539ab32fe548d2ce673db830",
+      "bytes": 80
+    },
+    {
+      "path": "replay-generating-normal.json",
+      "sha256": "5512c45759541fb9824f5cb0bc770042d79e5f50f04c5efde5268f11efef7cf4",
+      "bytes": 257
+    },
+    {
+      "path": "replay-generating-optimized.json",
+      "sha256": "5512c45759541fb9824f5cb0bc770042d79e5f50f04c5efde5268f11efef7cf4",
+      "bytes": 257
+    },
+    {
+      "path": "replay-suspension-normal.json",
+      "sha256": "b8c8a2a3251aa6473b7470cee144daf4a303f23fd0a3d7b46a5ea2ee8acdcd25",
+      "bytes": 4203
+    },
+    {
+      "path": "replay-suspension-optimized.json",
+      "sha256": "b8c8a2a3251aa6473b7470cee144daf4a303f23fd0a3d7b46a5ea2ee8acdcd25",
+      "bytes": 4203
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "2056c6bfcbc965ad1e47188fc9340f686f8551aefd9bac8e90a6550d8cb74676",
+      "bytes": 2123
+    }
+  ]
+}

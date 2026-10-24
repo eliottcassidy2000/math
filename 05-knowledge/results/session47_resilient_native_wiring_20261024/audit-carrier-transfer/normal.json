@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "full_nondiagonal_modular_equivalence_cases": 240,
+    "full_scalar_modular_equivalence_cases": 1024,
+    "general_readout_common_lift_cases": 400,
+    "general_readout_positive_cases": 117,
+    "nontrivial_basis_kernel_scaling_cases": 48,
+    "smith_level_and_uniform_section_random_cases": 1800,
+    "smith_positive_cases": 536,
+    "true_top_pass_lower_fail_random_cases": 1
+  },
+  "hostile": {
+    "determinant": 12,
+    "matrix": [
+      [
+        4,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        2,
+        0
+      ],
+      [
+        -1,
+        0,
+        2
+      ]
+    ],
+    "mod2_extension": false,
+    "mod4_additive_section": false,
+    "mod4_extension": true,
+    "old_mod4_nonzero_extensions": [
+      [
+        2,
+        1,
+        3
+      ],
+      [
+        2,
+        3,
+        1
+      ]
+    ]
+  },
+  "saturation_top_hostile": {
+    "matrix": [
+      [
+        4,
+        0,
+        -1,
+        -1
+      ],
+      [
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        2,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        2
+      ]
+    ],
+    "mod2_extension": false,
+    "mod4_extension": true,
+    "old_smith": [
+      2,
+      4
+    ],
+    "true_saturation_level": 2
+  },
+  "status": "PASS"
+}
