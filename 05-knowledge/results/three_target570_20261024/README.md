@@ -9,6 +9,10 @@ to vary. [Proof and exact scope](THEOREM.md).
 equation between176 and368 gives unrestricted coverage with **20 sources and
 63 clocks**. [Conditional charge tables and proof](SHARED-PIN.md).
 
+Late incoming integration also frees occupancies under **twelve moving pins**:
+24 sources/156 clocks globally,24/89 in the interior. It keeps the incoming
+owner frames and fixed2948 record. [Proof and tests](TWELVE-PIN.md).
+
 **PROVED weighted lifting identity:** refresh the full destination reservoir
 according to its actual conditional law. For a lazy reversible visible chain,
 the lift has exactly the same Poincare gap; no low-mass chosen-witness penalty

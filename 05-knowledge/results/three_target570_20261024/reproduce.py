@@ -8,7 +8,7 @@ def main():
         if hashlib.sha256((HERE/p).read_bytes()).hexdigest()!=h:raise RuntimeError('manifest mismatch '+p)
     runs=[('menus',False,'menus.json'),('bank',False,'bank.json')]
     runs += [(p,opt,p+('.optimized' if opt else '.normal')+'.json')
-             for p in ('check','guarded','weighted') for opt in (False,True)]
+             for p in ('check','guarded','weighted','twelve') for opt in (False,True)]
     for name,opt,expected in runs:
         cmd=[sys.executable]+(['-O'] if opt else [])+['-B',str(HERE/(name+'.py'))]
         result=json.loads(subprocess.check_output(cmd,cwd=HERE))

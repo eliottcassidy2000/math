@@ -85,7 +85,8 @@ Then, WITHOUT unweighting any source,
       product_{i in E} a_i(choice_i(J)) * Z_{k-|J|, q-ell(J)}.
 
 The same finite convolution used for support becomes a weighted convolution.
-It retains the integer occupancy clock r and the charge separately. For
+It retains integer occupancy r separately from charge; actual owner-clock
+work remains in the transition ledger. For
 positive weights, Z_{r,g}>0 iff the authenticated support is nonempty;
 no lower bound independent of those weights follows from support alone.
 

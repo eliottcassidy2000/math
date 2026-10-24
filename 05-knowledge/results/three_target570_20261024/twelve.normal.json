@@ -1,0 +1,197 @@
+{
+  "cases": [
+    {
+      "binary_sources": 81,
+      "endpoint_pairs": 1029,
+      "events": 12076,
+      "max_observed_support": 24,
+      "max_observed_work": 111,
+      "ordinary_variables": 68,
+      "root_phases": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_sources": 80,
+      "endpoint_pairs": 1008,
+      "events": 11693,
+      "max_observed_support": 24,
+      "max_observed_work": 104,
+      "ordinary_variables": 67,
+      "root_phases": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "checks": 309672,
+  "example": {
+    "events": [
+      {
+        "clocks": 28,
+        "support": 12
+      },
+      {
+        "clocks": 24,
+        "support": 10
+      },
+      {
+        "clocks": 21,
+        "support": 8
+      },
+      {
+        "clocks": 23,
+        "support": 10
+      },
+      {
+        "clocks": 73,
+        "support": 16
+      },
+      {
+        "clocks": 26,
+        "support": 10
+      },
+      {
+        "clocks": 21,
+        "support": 8
+      },
+      {
+        "clocks": 26,
+        "support": 8
+      },
+      {
+        "clocks": 23,
+        "support": 8
+      }
+    ],
+    "masks": [
+      5757690328275321421863,
+      2306749011121471535,
+      149879848397063913535,
+      2306142097880973439,
+      2306186056978202879,
+      302234013132968048197848,
+      302234013380920800706768,
+      302234014014239351767232,
+      302252459913888275890304,
+      302289353718694900924416
+    ],
+    "sources": [
+      176,
+      368,
+      556,
+      650,
+      676,
+      753,
+      760,
+      776,
+      789,
+      811,
+      827,
+      862,
+      921,
+      1182,
+      1248,
+      1254,
+      1369,
+      1391,
+      1394,
+      1395,
+      1400,
+      1425,
+      1457,
+      1477,
+      1480,
+      1493,
+      1532,
+      1549,
+      1574,
+      1596,
+      1615,
+      1624,
+      1638,
+      1650,
+      1691,
+      1702,
+      1770,
+      1841,
+      1882,
+      1921,
+      1923,
+      1948,
+      1952,
+      1974,
+      2066,
+      2071,
+      2087,
+      2135,
+      2176,
+      2185,
+      2218,
+      2283,
+      2319,
+      2384,
+      2393,
+      2397,
+      2439,
+      2483,
+      2553,
+      2581,
+      2616,
+      2638,
+      2677,
+      2728,
+      2752,
+      2798,
+      2835,
+      2837,
+      2905,
+      2945,
+      2948,
+      2983,
+      3000,
+      3015,
+      3105,
+      3111,
+      3137,
+      3139,
+      3187,
+      3360,
+      3369
+    ]
+  },
+  "incoming_path": "05-knowledge/results/guarded_component_completion_20261024/native/receipt.json",
+  "incoming_revision": "2bc5d106db075752dd28090cb5637555ede01d66",
+  "incoming_sha256": "7f6cf1423d3f32a6d81d26e5ce042d1d4476f34987cf7cd7998fd329f09c2042",
+  "scope": "same twelve owner equations and fixed2948 U; core/helper margins are no longer separately fixed",
+  "status": "PASS literal twelve-pin unrestricted routing checks"
+}

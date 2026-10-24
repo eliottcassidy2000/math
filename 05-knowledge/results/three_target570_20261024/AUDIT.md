@@ -73,6 +73,14 @@ and gives a separate harmonic-transfer criterion for larger carriers. We
 retain all of those scopes. This packet neither needs nor asserts an
 order-eight-to-ten harmonic transfer; it stays on the original carrier.
 
+Late2bc5d106db supplies twelve actual owner controls and an equal-rank upset
+exchange theorem. `TWELVE-PIN.md` retains those twelve equations and their
+fixed2948 record, but uses conditional graded sections to remove its fixed
+helper occupancy. `twelve.py` adds2037 endpoint tests,23769 events and309672
+literal global-owner equality checks, identical under optimization. Its
+incoming JSON is pinned by commit, path and SHA256. The two versions of the
+368 pin belong to distinct families and are never silently combined.
+
 ## Reproduce
 
 From the repository root:
