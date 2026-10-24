@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-23 — a finite paired code can preserve the whole dyadic tower
+
+- **Affected draft:** unpublished `compatible_charged_helpers_20261023/controller/COMPLETE_CHARGE_BANK.md`; no false theorem was published.
+- **First failed implication:** finiteness of the charge code does not restrict its guard coverage to finitely many moduli. The original two-primary critical group has exponent256, so the authenticated paired code tests every original dyadic harmonic character.
+- **Repair / strongest survivor:** retain the exact saturation theorem. Testing the same printed integer X at a higher modulus without its required harmonic lift is a different operation; exact integer current and odd-primary coverage remain unproved here.
+- **Missing coordinate:** distinguish the finite character-group representation from the modulus and integer representatives used to display it. [Corrected proof and audit](../05-knowledge/results/compatible_charged_helpers_20261023/AUDIT.md).
+
 ## 2026-10-23 — reversible native edges need direction-specific transporters
 
 - **Affected draft:** the unpublished literal one-bit route audit in `balanced_native_20261023/audit.py`; no false theorem was published.

@@ -1,0 +1,144 @@
+{
+  "checks_before_replay": 661672,
+  "input_sha256_lf_normalized": {
+    "05-knowledge/results/balanced_native_20261023/SIX_TRADE_LATTICE.md": "26adb7a2421df4ce54b1da45dc236435ca91bd78000ac1dd28a09f28765692d5",
+    "05-knowledge/results/native_packet_decomposition_20261023/interface/COMPENSATOR_LAYERS.md": "7690e566350ecc97b2997c4982bf82ac25052542f741441c05b3bd41ffd02e1d",
+    "05-knowledge/results/native_packet_decomposition_20261023/interface/ENDPOINT_FILTERS.md": "770b5c549d0820c9a0fa57ae9598bc50d30adc10fab0bf49c60ab769c33a76b7",
+    "05-knowledge/results/native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+    "05-knowledge/results/native_packet_decomposition_20261023/workspace/check.py": "304d89ef14f55fd2115611bd046c5613f5e25415d9f6936836f932f8539d3bf9"
+  },
+  "intervals": [
+    {
+      "elements": 1,
+      "naturally_labelled_posets": 1,
+      "unary_forcing_controls": 4,
+      "weighted_interval_pair_controls": 18
+    },
+    {
+      "elements": 2,
+      "naturally_labelled_posets": 2,
+      "unary_forcing_controls": 32,
+      "weighted_interval_pair_controls": 234
+    },
+    {
+      "elements": 3,
+      "naturally_labelled_posets": 7,
+      "unary_forcing_controls": 448,
+      "weighted_interval_pair_controls": 4386
+    },
+    {
+      "elements": 4,
+      "naturally_labelled_posets": 40,
+      "unary_forcing_controls": 10240,
+      "weighted_interval_pair_controls": 117810
+    }
+  ],
+  "native_shared_kernel_controls": [
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 9,
+      "normalized_resources": 2,
+      "prefix_blocks": 1,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 8,
+      "sharp_changed_slot_budget": 2,
+      "sharp_owner_clock_budget": 6,
+      "slots": 2,
+      "source_order": 11
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 9,
+      "normalized_resources": 2,
+      "prefix_blocks": 2,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 16,
+      "sharp_changed_slot_budget": 2,
+      "sharp_owner_clock_budget": 6,
+      "slots": 2,
+      "source_order": 19
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 27,
+      "normalized_resources": 3,
+      "prefix_blocks": 2,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 16,
+      "sharp_changed_slot_budget": 3,
+      "sharp_owner_clock_budget": 9,
+      "slots": 3,
+      "source_order": 19
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 81,
+      "normalized_resources": 4,
+      "prefix_blocks": 2,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 16,
+      "sharp_changed_slot_budget": 4,
+      "sharp_owner_clock_budget": 12,
+      "slots": 4,
+      "source_order": 19
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 9,
+      "normalized_resources": 2,
+      "prefix_blocks": 3,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 24,
+      "sharp_changed_slot_budget": 2,
+      "sharp_owner_clock_budget": 6,
+      "slots": 2,
+      "source_order": 27
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 27,
+      "normalized_resources": 3,
+      "prefix_blocks": 3,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 24,
+      "sharp_changed_slot_budget": 3,
+      "sharp_owner_clock_budget": 9,
+      "slots": 3,
+      "source_order": 27
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 81,
+      "normalized_resources": 4,
+      "prefix_blocks": 3,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 24,
+      "sharp_changed_slot_budget": 4,
+      "sharp_owner_clock_budget": 12,
+      "slots": 4,
+      "source_order": 27
+    },
+    {
+      "accepted_states": 3,
+      "full_kernel_menu_choices": 243,
+      "normalized_resources": 5,
+      "prefix_blocks": 3,
+      "shared_converse_clock": 2,
+      "shared_forward_clock": 24,
+      "sharp_changed_slot_budget": 5,
+      "sharp_owner_clock_budget": 15,
+      "slots": 5,
+      "source_order": 27
+    }
+  ],
+  "quotients": {
+    "exhaustive_n1_n2_cases": 15552,
+    "explicit_exact_integer_product_group_controls": 4,
+    "explicit_heavy_and_coupled_controls": 3,
+    "maximum_observed_state_compression": 12.0,
+    "scope": "All natural posets on1/2 elements, every pair of nonempty helper intervals, every Z2 charge, stated weights and budgets; seeded n3..7.",
+    "seed": 2026102307,
+    "seeded_larger_cases": 1200
+  },
+  "status": "FINITE-EXACT supporting scoped PROVED lifting theorem"
+}

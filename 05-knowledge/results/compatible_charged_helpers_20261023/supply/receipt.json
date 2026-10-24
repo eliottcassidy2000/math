@@ -1,0 +1,6911 @@
+{
+  "all_reserved_closed_words": 648,
+  "banks": [
+    {
+      "V_occupancy": 8,
+      "atomic_support_bound": 18,
+      "charge_values": 2048,
+      "closed_word_reservation": 136,
+      "helpers": 17,
+      "max_witness_multiplicity": 22,
+      "min_witness_multiplicity": 4,
+      "normalized_tile_reservation": 34,
+      "subset_count": 24310
+    },
+    {
+      "V_occupancy": 6,
+      "atomic_support_bound": 14,
+      "charge_values": 2048,
+      "closed_word_reservation": 144,
+      "helpers": 18,
+      "max_witness_multiplicity": 19,
+      "min_witness_multiplicity": 1,
+      "normalized_tile_reservation": 36,
+      "subset_count": 18564
+    },
+    {
+      "V_occupancy": 5,
+      "atomic_support_bound": 12,
+      "charge_values": 2048,
+      "closed_word_reservation": 176,
+      "helpers": 22,
+      "max_witness_multiplicity": 26,
+      "min_witness_multiplicity": 3,
+      "normalized_tile_reservation": 44,
+      "subset_count": 26334
+    },
+    {
+      "V_occupancy": 4,
+      "atomic_support_bound": 10,
+      "charge_values": 2048,
+      "closed_word_reservation": 256,
+      "helpers": 32,
+      "max_witness_multiplicity": 32,
+      "min_witness_multiplicity": 5,
+      "normalized_tile_reservation": 64,
+      "subset_count": 35960
+    },
+    {
+      "V_occupancy": 3,
+      "atomic_support_bound": 8,
+      "charge_values": 2048,
+      "closed_word_reservation": 424,
+      "helpers": 53,
+      "max_witness_multiplicity": 23,
+      "min_witness_multiplicity": 2,
+      "normalized_tile_reservation": 106,
+      "subset_count": 23426
+    },
+    {
+      "V_occupancy": 3,
+      "atomic_support_bound": 8,
+      "charge_values": 2048,
+      "closed_word_reservation": 320,
+      "helpers": 40,
+      "max_witness_multiplicity": 12,
+      "min_witness_multiplicity": 1,
+      "normalized_tile_reservation": 80,
+      "subset_count": 9880
+    }
+  ],
+  "certificate_sha256": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+  "checks": 50019,
+  "guard_scope": "all original dyadic AGGREGATE currents by cited complete paired-code theorem; chosen X mod8 phases; NOT all ordinary per-slot phases",
+  "helper_details": [
+    {
+      "H": 311,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1146": 1,
+        "1275": 1,
+        "1415": 1,
+        "1559": 1,
+        "1608": 1,
+        "1771": 1,
+        "1882": 1,
+        "1915": 1,
+        "1949": 1,
+        "1974": 1,
+        "2002": 1,
+        "2019": 1,
+        "2262": 1,
+        "391": 1,
+        "413": 1,
+        "435": 1,
+        "442": 1,
+        "506": 1,
+        "553": 1,
+        "836": 1,
+        "860": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              6,
+              5,
+              3,
+              0,
+              2,
+              1
+            ]
+          ],
+          "normalized_resource": 749050,
+          "selected_pin_lift": [
+            7,
+            4,
+            6,
+            5,
+            3,
+            0,
+            2,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              6,
+              1,
+              5,
+              4,
+              0,
+              2
+            ]
+          ],
+          "normalized_resource": 872062,
+          "selected_pin_lift": [
+            7,
+            3,
+            6,
+            1,
+            5,
+            4,
+            0,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 23,
+      "self_converse": false,
+      "source": 368
+    },
+    {
+      "H": 445,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1242": 1,
+        "1394": 1,
+        "1399": 1,
+        "1488": 1,
+        "1864": 1,
+        "2068": 1,
+        "2285": 1,
+        "2323": 1,
+        "2396": 1,
+        "2430": 1,
+        "2566": 1,
+        "2738": 1,
+        "2783": 1,
+        "515": 1,
+        "651": 1,
+        "754": 1,
+        "800": 1,
+        "807": 1,
+        "814": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          5
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              3,
+              1,
+              7,
+              2,
+              4,
+              6,
+              0
+            ]
+          ],
+          "normalized_resource": 278322,
+          "selected_pin_lift": [
+            5,
+            3,
+            1,
+            7,
+            2,
+            4,
+            6,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              4,
+              6,
+              3,
+              1,
+              7,
+              2,
+              0
+            ]
+          ],
+          "normalized_resource": 398121,
+          "selected_pin_lift": [
+            5,
+            4,
+            6,
+            3,
+            1,
+            7,
+            2,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 21,
+      "self_converse": false,
+      "source": 556
+    },
+    {
+      "H": 417,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1704": 1,
+        "2247": 1,
+        "2959": 1,
+        "3120": 1,
+        "380": 1,
+        "481": 1,
+        "675": 1,
+        "866": 1
+      },
+      "fixed_clocks": [
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              1,
+              0,
+              3,
+              6,
+              5,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 191472,
+          "selected_pin_lift": [
+            7,
+            1,
+            0,
+            3,
+            6,
+            5,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              0,
+              3,
+              4,
+              7,
+              5,
+              1,
+              2
+            ]
+          ],
+          "normalized_resource": 550373,
+          "selected_pin_lift": [
+            6,
+            0,
+            3,
+            4,
+            7,
+            5,
+            1,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 10,
+      "self_converse": false,
+      "source": 650
+    },
+    {
+      "H": 491,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1183": 1,
+        "1395": 1,
+        "1414": 1,
+        "1492": 1,
+        "1570": 1,
+        "1572": 1,
+        "1682": 1,
+        "1834": 1,
+        "1952": 1,
+        "1971": 1,
+        "2070": 1,
+        "2122": 1,
+        "2229": 1,
+        "2236": 1,
+        "2493": 1,
+        "2542": 1,
+        "2576": 1,
+        "2652": 1,
+        "2714": 1,
+        "2728": 1,
+        "2737": 1,
+        "2746": 1,
+        "2810": 1,
+        "2978": 1,
+        "2993": 1,
+        "3184": 1,
+        "410": 1,
+        "413": 1,
+        "650": 1,
+        "780": 1,
+        "812": 1,
+        "892": 1,
+        "941": 1
+      },
+      "fixed_clocks": [
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              7,
+              2,
+              5,
+              1,
+              6,
+              3,
+              0
+            ]
+          ],
+          "normalized_resource": 308270,
+          "selected_pin_lift": [
+            4,
+            7,
+            2,
+            5,
+            1,
+            6,
+            3,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              0,
+              7,
+              3,
+              1,
+              6,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 632297,
+          "selected_pin_lift": [
+            5,
+            0,
+            7,
+            3,
+            1,
+            6,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 35,
+      "self_converse": false,
+      "source": 676
+    },
+    {
+      "H": 399,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1130": 1,
+        "1146": 1,
+        "1285": 1,
+        "1303": 1,
+        "1427": 1,
+        "1482": 1,
+        "1489": 1,
+        "1494": 1,
+        "1550": 1,
+        "1602": 1,
+        "1647": 1,
+        "1696": 1,
+        "1774": 1,
+        "1797": 1,
+        "1844": 1,
+        "1858": 2,
+        "1949": 1,
+        "202": 1,
+        "2024": 1,
+        "2082": 1,
+        "2083": 1,
+        "2121": 1,
+        "2351": 1,
+        "2387": 1,
+        "2465": 1,
+        "2491": 1,
+        "2652": 1,
+        "2679": 1,
+        "2699": 1,
+        "2723": 1,
+        "2928": 1,
+        "3183": 1,
+        "3263": 1,
+        "3315": 1,
+        "3334": 1,
+        "3351": 1,
+        "346": 1,
+        "436": 1,
+        "542": 1,
+        "543": 2,
+        "555": 1,
+        "74": 1,
+        "872": 1,
+        "92": 1,
+        "929": 1,
+        "932": 2
+      },
+      "fixed_clocks": [
+        [
+          5,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              3,
+              6,
+              2,
+              0,
+              5,
+              7,
+              1
+            ]
+          ],
+          "normalized_resource": 184889,
+          "selected_pin_lift": [
+            4,
+            3,
+            6,
+            2,
+            0,
+            5,
+            7,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              0,
+              3,
+              7,
+              4,
+              5,
+              1,
+              2
+            ]
+          ],
+          "normalized_resource": 157157,
+          "selected_pin_lift": [
+            6,
+            0,
+            3,
+            7,
+            4,
+            5,
+            1,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 51,
+      "self_converse": false,
+      "source": 753
+    },
+    {
+      "H": 285,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1023": 1,
+        "1051": 1,
+        "1063": 1,
+        "1126": 1,
+        "1130": 1,
+        "1143": 1,
+        "1157": 1,
+        "1161": 1,
+        "1164": 1,
+        "1207": 1,
+        "1212": 1,
+        "1250": 1,
+        "1392": 1,
+        "1429": 1,
+        "1441": 1,
+        "1447": 1,
+        "1450": 1,
+        "1457": 1,
+        "1472": 1,
+        "1501": 1,
+        "1531": 1,
+        "1534": 2,
+        "1559": 1,
+        "1626": 1,
+        "1627": 1,
+        "1642": 1,
+        "1646": 1,
+        "1657": 2,
+        "1664": 1,
+        "1679": 1,
+        "1684": 1,
+        "1692": 1,
+        "1693": 1,
+        "1705": 1,
+        "1771": 1,
+        "1816": 1,
+        "1836": 1,
+        "1879": 1,
+        "1901": 1,
+        "1904": 1,
+        "1915": 1,
+        "1997": 1,
+        "2019": 1,
+        "2062": 1,
+        "2063": 1,
+        "2099": 1,
+        "2127": 1,
+        "2148": 1,
+        "2261": 1,
+        "229": 1,
+        "2380": 1,
+        "2431": 2,
+        "2527": 1,
+        "2545": 1,
+        "2546": 1,
+        "2549": 1,
+        "2564": 1,
+        "2654": 1,
+        "2705": 1,
+        "273": 1,
+        "2803": 1,
+        "2823": 1,
+        "2928": 1,
+        "298": 1,
+        "3049": 1,
+        "3200": 1,
+        "341": 1,
+        "343": 1,
+        "379": 1,
+        "380": 1,
+        "385": 1,
+        "392": 1,
+        "435": 1,
+        "442": 1,
+        "474": 1,
+        "479": 1,
+        "481": 1,
+        "501": 1,
+        "524": 1,
+        "537": 1,
+        "540": 1,
+        "553": 1,
+        "556": 1,
+        "647": 1,
+        "651": 1,
+        "654": 1,
+        "675": 1,
+        "722": 1,
+        "756": 1,
+        "769": 2,
+        "775": 1,
+        "778": 1,
+        "803": 1,
+        "809": 1,
+        "825": 1,
+        "836": 2,
+        "838": 1,
+        "859": 1,
+        "862": 1,
+        "866": 1,
+        "869": 1,
+        "896": 1,
+        "913": 1,
+        "924": 1,
+        "925": 1,
+        "986": 1,
+        "989": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              5,
+              6,
+              3,
+              1,
+              2,
+              4,
+              0
+            ]
+          ],
+          "normalized_resource": 795273,
+          "selected_pin_lift": [
+            7,
+            5,
+            6,
+            3,
+            1,
+            2,
+            4,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              3,
+              4,
+              1,
+              2,
+              7,
+              5,
+              0
+            ]
+          ],
+          "normalized_resource": 432913,
+          "selected_pin_lift": [
+            6,
+            3,
+            4,
+            1,
+            2,
+            7,
+            5,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 114,
+      "self_converse": false,
+      "source": 760
+    },
+    {
+      "H": 587,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {},
+      "fixed_clocks": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              5,
+              0,
+              7,
+              6,
+              4,
+              3
+            ]
+          ],
+          "normalized_resource": 402698,
+          "selected_pin_lift": [
+            2,
+            1,
+            5,
+            0,
+            7,
+            6,
+            4,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              6,
+              5,
+              0,
+              2,
+              4,
+              7,
+              3
+            ]
+          ],
+          "normalized_resource": 151350,
+          "selected_pin_lift": [
+            1,
+            6,
+            5,
+            0,
+            2,
+            4,
+            7,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 2,
+      "self_converse": false,
+      "source": 776
+    },
+    {
+      "H": 381,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1107": 2,
+        "1121": 1,
+        "1149": 1,
+        "1180": 1,
+        "1251": 1,
+        "1461": 1,
+        "1615": 1,
+        "1816": 1,
+        "1818": 1,
+        "1852": 1,
+        "1897": 1,
+        "1903": 1,
+        "1937": 1,
+        "1982": 1,
+        "1984": 1,
+        "1992": 1,
+        "220": 1,
+        "221": 1,
+        "2297": 1,
+        "2320": 1,
+        "2438": 1,
+        "2442": 1,
+        "2470": 1,
+        "249": 1,
+        "2514": 1,
+        "2518": 1,
+        "2526": 1,
+        "2530": 1,
+        "2553": 1,
+        "2763": 1,
+        "2884": 1,
+        "334": 1,
+        "439": 1,
+        "550": 1,
+        "588": 1,
+        "650": 1,
+        "671": 1,
+        "718": 2,
+        "753": 1,
+        "773": 1,
+        "863": 1,
+        "883": 1,
+        "897": 1,
+        "919": 1,
+        "952": 1
+      },
+      "fixed_clocks": [
+        [
+          6,
+          6
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              0,
+              2,
+              7,
+              3,
+              5,
+              6,
+              1
+            ]
+          ],
+          "normalized_resource": 864078,
+          "selected_pin_lift": [
+            4,
+            0,
+            2,
+            7,
+            3,
+            5,
+            6,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              1,
+              0,
+              2,
+              5,
+              4,
+              6,
+              3
+            ]
+          ],
+          "normalized_resource": 279597,
+          "selected_pin_lift": [
+            7,
+            1,
+            0,
+            2,
+            5,
+            4,
+            6,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 49,
+      "self_converse": false,
+      "source": 789
+    },
+    {
+      "H": 313,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1059": 1,
+        "1124": 2,
+        "1127": 1,
+        "1178": 1,
+        "1220": 2,
+        "1243": 1,
+        "1248": 4,
+        "1396": 1,
+        "1397": 3,
+        "1444": 1,
+        "1522": 2,
+        "1537": 1,
+        "1571": 1,
+        "1660": 1,
+        "1698": 1,
+        "1765": 1,
+        "1806": 1,
+        "1809": 3,
+        "1832": 1,
+        "1834": 1,
+        "1851": 2,
+        "1867": 1,
+        "1879": 1,
+        "1883": 1,
+        "1897": 1,
+        "1901": 1,
+        "1923": 1,
+        "1932": 1,
+        "1943": 1,
+        "1948": 3,
+        "1951": 1,
+        "1952": 1,
+        "1966": 1,
+        "1995": 1,
+        "1996": 1,
+        "1997": 1,
+        "2000": 1,
+        "2088": 1,
+        "2089": 1,
+        "2136": 1,
+        "2146": 3,
+        "2219": 2,
+        "2246": 1,
+        "2272": 1,
+        "2283": 1,
+        "2292": 1,
+        "2315": 1,
+        "2316": 1,
+        "2323": 1,
+        "2355": 1,
+        "2373": 1,
+        "2383": 1,
+        "2430": 1,
+        "2455": 1,
+        "2456": 2,
+        "2480": 1,
+        "2483": 1,
+        "2493": 2,
+        "2523": 1,
+        "2545": 1,
+        "2566": 1,
+        "2570": 1,
+        "2581": 1,
+        "2621": 1,
+        "2660": 1,
+        "2714": 1,
+        "2738": 3,
+        "2816": 1,
+        "2826": 1,
+        "2832": 1,
+        "2898": 1,
+        "2905": 1,
+        "2979": 1,
+        "3029": 2,
+        "305": 1,
+        "3175": 1,
+        "3256": 1,
+        "3317": 2,
+        "3347": 1,
+        "3369": 1,
+        "3373": 1,
+        "3425": 1,
+        "413": 2,
+        "442": 1,
+        "477": 1,
+        "551": 1,
+        "602": 1,
+        "637": 1,
+        "651": 1,
+        "652": 2,
+        "654": 2,
+        "707": 1,
+        "765": 1,
+        "805": 1,
+        "829": 1,
+        "835": 2,
+        "841": 1,
+        "866": 1,
+        "876": 1,
+        "883": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              6,
+              5,
+              3,
+              1,
+              7,
+              4,
+              0
+            ]
+          ],
+          "normalized_resource": 875714,
+          "selected_pin_lift": [
+            2,
+            6,
+            5,
+            3,
+            1,
+            7,
+            4,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              4,
+              3,
+              1,
+              7,
+              2,
+              6,
+              0
+            ]
+          ],
+          "normalized_resource": 249412,
+          "selected_pin_lift": [
+            5,
+            4,
+            3,
+            1,
+            7,
+            2,
+            6,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 128,
+      "self_converse": false,
+      "source": 811
+    },
+    {
+      "H": 503,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1879": 1,
+        "911": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              6,
+              0,
+              2,
+              5,
+              7,
+              4,
+              1
+            ]
+          ],
+          "normalized_resource": 130603,
+          "selected_pin_lift": [
+            3,
+            6,
+            0,
+            2,
+            5,
+            7,
+            4,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              6,
+              5,
+              7,
+              4,
+              0,
+              2,
+              1
+            ]
+          ],
+          "normalized_resource": 607537,
+          "selected_pin_lift": [
+            3,
+            6,
+            5,
+            7,
+            4,
+            0,
+            2,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 4,
+      "self_converse": false,
+      "source": 827
+    },
+    {
+      "H": 449,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1214": 1,
+        "1291": 1,
+        "1297": 1,
+        "1410": 1,
+        "1473": 1,
+        "1615": 1,
+        "1674": 1,
+        "176": 1,
+        "1841": 1,
+        "1843": 1,
+        "1851": 1,
+        "2072": 1,
+        "2083": 1,
+        "2131": 1,
+        "2144": 1,
+        "2198": 1,
+        "2292": 1,
+        "2322": 1,
+        "2401": 1,
+        "2513": 1,
+        "2532": 1,
+        "2587": 1,
+        "2773": 1,
+        "2798": 1,
+        "2835": 1,
+        "3083": 1,
+        "3306": 1,
+        "474": 1,
+        "477": 1,
+        "637": 1,
+        "711": 1,
+        "862": 1,
+        "873": 1,
+        "939": 1
+      },
+      "fixed_clocks": [
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              6,
+              7,
+              4,
+              3,
+              0,
+              5,
+              1
+            ]
+          ],
+          "normalized_resource": 613150,
+          "selected_pin_lift": [
+            2,
+            6,
+            7,
+            4,
+            3,
+            0,
+            5,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              7,
+              4,
+              6,
+              1,
+              0,
+              5,
+              2
+            ]
+          ],
+          "normalized_resource": 258738,
+          "selected_pin_lift": [
+            3,
+            7,
+            4,
+            6,
+            1,
+            0,
+            5,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 36,
+      "self_converse": false,
+      "source": 862
+    },
+    {
+      "H": 417,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1151": 1,
+        "1157": 1,
+        "1395": 1,
+        "1513": 1,
+        "1572": 1,
+        "1697": 1,
+        "1925": 1,
+        "1951": 1,
+        "2144": 1,
+        "2271": 2,
+        "2297": 1,
+        "234": 1,
+        "2351": 1,
+        "2414": 1,
+        "2430": 1,
+        "2434": 1,
+        "2635": 1,
+        "2699": 1,
+        "2797": 1,
+        "2943": 1,
+        "3054": 1,
+        "3393": 1,
+        "381": 1,
+        "399": 1,
+        "434": 1,
+        "516": 2,
+        "539": 1,
+        "761": 1,
+        "807": 1,
+        "826": 1,
+        "932": 1
+      },
+      "fixed_clocks": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              2,
+              4,
+              1,
+              0,
+              7,
+              5,
+              3
+            ]
+          ],
+          "normalized_resource": 411894,
+          "selected_pin_lift": [
+            6,
+            2,
+            4,
+            1,
+            0,
+            7,
+            5,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              4,
+              6,
+              3,
+              0,
+              7,
+              2,
+              1
+            ]
+          ],
+          "normalized_resource": 888249,
+          "selected_pin_lift": [
+            5,
+            4,
+            6,
+            3,
+            0,
+            7,
+            2,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 35,
+      "self_converse": false,
+      "source": 921
+    },
+    {
+      "H": 513,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1237": 1,
+        "1253": 1,
+        "1262": 1,
+        "1329": 1,
+        "1410": 1,
+        "1424": 1,
+        "1426": 1,
+        "1492": 1,
+        "1505": 1,
+        "1522": 1,
+        "1562": 1,
+        "1604": 1,
+        "1606": 1,
+        "1607": 1,
+        "1610": 1,
+        "1611": 1,
+        "1617": 1,
+        "1623": 1,
+        "1644": 1,
+        "1664": 1,
+        "1682": 1,
+        "1771": 1,
+        "1853": 1,
+        "1885": 1,
+        "1923": 1,
+        "2019": 1,
+        "2039": 1,
+        "2077": 1,
+        "2081": 1,
+        "2102": 1,
+        "2108": 1,
+        "2230": 1,
+        "2272": 1,
+        "2356": 1,
+        "2374": 1,
+        "2384": 1,
+        "2403": 1,
+        "2406": 1,
+        "2485": 1,
+        "2522": 1,
+        "2604": 1,
+        "2615": 1,
+        "2714": 1,
+        "2762": 1,
+        "2831": 1,
+        "2896": 1,
+        "2908": 1,
+        "3008": 1,
+        "3030": 1,
+        "3044": 1,
+        "3052": 1,
+        "3057": 1,
+        "3137": 1,
+        "494": 1,
+        "655": 1,
+        "658": 1,
+        "757": 1,
+        "763": 1,
+        "770": 1,
+        "944": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          4
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              4,
+              0,
+              5,
+              1,
+              6,
+              7,
+              2
+            ]
+          ],
+          "normalized_resource": 136865,
+          "selected_pin_lift": [
+            3,
+            4,
+            0,
+            5,
+            1,
+            6,
+            7,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              4,
+              7,
+              3,
+              2,
+              1,
+              0,
+              5
+            ]
+          ],
+          "normalized_resource": 359331,
+          "selected_pin_lift": [
+            6,
+            4,
+            7,
+            3,
+            2,
+            1,
+            0,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 62,
+      "self_converse": false,
+      "source": 1182
+    },
+    {
+      "H": 533,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 6,
+          "blue": 0,
+          "normalized_units": 3,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 6,
+          "blue": 0,
+          "normalized_units": 3,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1414": 1,
+        "1571": 1,
+        "1771": 1,
+        "1996": 1,
+        "2569": 1,
+        "2601": 1,
+        "2759": 1,
+        "3029": 1,
+        "602": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              1,
+              7,
+              2,
+              6,
+              3,
+              0,
+              5
+            ]
+          ],
+          "normalized_resource": 578266,
+          "selected_pin_lift": [
+            4,
+            1,
+            7,
+            2,
+            6,
+            3,
+            0,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              1,
+              7,
+              5,
+              2,
+              6,
+              0,
+              4
+            ]
+          ],
+          "normalized_resource": 431693,
+          "selected_pin_lift": [
+            3,
+            1,
+            7,
+            5,
+            2,
+            6,
+            0,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 11,
+      "self_converse": false,
+      "source": 1248
+    },
+    {
+      "H": 505,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1334": 1,
+        "1624": 1,
+        "1696": 1,
+        "2054": 1,
+        "2130": 1,
+        "2392": 1,
+        "2875": 1,
+        "3398": 1,
+        "866": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              0,
+              2,
+              1,
+              3,
+              6,
+              7,
+              5
+            ]
+          ],
+          "normalized_resource": 573590,
+          "selected_pin_lift": [
+            4,
+            0,
+            2,
+            1,
+            3,
+            6,
+            7,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              7,
+              1,
+              0,
+              3,
+              2,
+              5,
+              6
+            ]
+          ],
+          "normalized_resource": 21941,
+          "selected_pin_lift": [
+            4,
+            7,
+            1,
+            0,
+            3,
+            2,
+            5,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 11,
+      "self_converse": false,
+      "source": 1254
+    },
+    {
+      "H": 253,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1274": 1,
+        "1559": 2,
+        "1576": 1,
+        "1660": 1,
+        "1834": 1,
+        "1915": 1,
+        "1938": 1,
+        "2355": 1,
+        "2373": 1,
+        "2569": 1,
+        "2581": 1,
+        "2722": 1,
+        "2763": 1,
+        "2794": 2,
+        "3347": 1,
+        "506": 1,
+        "602": 2
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              1,
+              0,
+              6,
+              5,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 86924,
+          "selected_pin_lift": [
+            7,
+            3,
+            1,
+            0,
+            6,
+            5,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              3,
+              5,
+              1,
+              0,
+              6,
+              2
+            ]
+          ],
+          "normalized_resource": 417213,
+          "selected_pin_lift": [
+            7,
+            4,
+            3,
+            5,
+            1,
+            0,
+            6,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 22,
+      "self_converse": false,
+      "source": 1369
+    },
+    {
+      "H": 341,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1627": 1,
+        "1952": 1,
+        "2071": 1,
+        "2454": 1,
+        "2485": 1,
+        "2491": 1,
+        "2654": 1,
+        "2735": 1,
+        "2905": 1,
+        "442": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              2,
+              0,
+              5,
+              6,
+              4,
+              1,
+              3
+            ]
+          ],
+          "normalized_resource": 109849,
+          "selected_pin_lift": [
+            7,
+            2,
+            0,
+            5,
+            6,
+            4,
+            1,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              2,
+              5,
+              6,
+              1,
+              0,
+              4
+            ]
+          ],
+          "normalized_resource": 385165,
+          "selected_pin_lift": [
+            7,
+            3,
+            2,
+            5,
+            6,
+            1,
+            0,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 12,
+      "self_converse": false,
+      "source": 1391
+    },
+    {
+      "H": 449,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1250": 1,
+        "1251": 1,
+        "1520": 1,
+        "2831": 1,
+        "602": 1,
+        "830": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              3,
+              1,
+              4,
+              5,
+              7,
+              6,
+              0
+            ]
+          ],
+          "normalized_resource": 438046,
+          "selected_pin_lift": [
+            2,
+            3,
+            1,
+            4,
+            5,
+            7,
+            6,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              3,
+              5,
+              7,
+              4,
+              6,
+              1,
+              0
+            ]
+          ],
+          "normalized_resource": 69421,
+          "selected_pin_lift": [
+            2,
+            3,
+            5,
+            7,
+            4,
+            6,
+            1,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 8,
+      "self_converse": false,
+      "source": 1395
+    },
+    {
+      "H": 463,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1196": 1,
+        "1260": 1,
+        "130": 1,
+        "1396": 2,
+        "1414": 1,
+        "1557": 1,
+        "1562": 1,
+        "1563": 1,
+        "157": 1,
+        "1678": 1,
+        "1696": 1,
+        "1845": 1,
+        "1934": 1,
+        "1963": 1,
+        "1970": 1,
+        "1990": 1,
+        "2070": 1,
+        "2075": 1,
+        "2086": 1,
+        "2100": 1,
+        "2118": 1,
+        "2140": 1,
+        "2245": 1,
+        "2305": 1,
+        "2327": 1,
+        "2355": 1,
+        "2363": 1,
+        "2364": 1,
+        "2379": 1,
+        "2412": 1,
+        "2504": 1,
+        "254": 1,
+        "2659": 1,
+        "2721": 1,
+        "2727": 1,
+        "2897": 1,
+        "2905": 1,
+        "2957": 1,
+        "2987": 1,
+        "3023": 1,
+        "3139": 1,
+        "3179": 1,
+        "3360": 1,
+        "389": 1,
+        "391": 1,
+        "407": 1,
+        "435": 1,
+        "486": 1,
+        "510": 1,
+        "529": 1,
+        "651": 1,
+        "723": 1,
+        "741": 1,
+        "742": 1,
+        "744": 1,
+        "804": 1,
+        "869": 1
+      },
+      "fixed_clocks": [
+        [
+          2,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              0,
+              3,
+              7,
+              6,
+              1,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 516465,
+          "selected_pin_lift": [
+            5,
+            0,
+            3,
+            7,
+            6,
+            1,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              6,
+              3,
+              2,
+              5,
+              7,
+              1,
+              0
+            ]
+          ],
+          "normalized_resource": 191592,
+          "selected_pin_lift": [
+            4,
+            6,
+            3,
+            2,
+            5,
+            7,
+            1,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 60,
+      "self_converse": false,
+      "source": 1400
+    },
+    {
+      "H": 519,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1448": 1,
+        "183": 1,
+        "2062": 1,
+        "2114": 1,
+        "2139": 1,
+        "2610": 1,
+        "2723": 1
+      },
+      "fixed_clocks": [
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              3,
+              1,
+              0,
+              2,
+              4,
+              7,
+              5
+            ]
+          ],
+          "normalized_resource": 533646,
+          "selected_pin_lift": [
+            6,
+            3,
+            1,
+            0,
+            2,
+            4,
+            7,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              1,
+              0,
+              3,
+              2,
+              4,
+              7,
+              6
+            ]
+          ],
+          "normalized_resource": 3625,
+          "selected_pin_lift": [
+            5,
+            1,
+            0,
+            3,
+            2,
+            4,
+            7,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 9,
+      "self_converse": false,
+      "source": 1493
+    },
+    {
+      "H": 545,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1060": 1,
+        "1324": 1,
+        "1368": 1,
+        "1401": 1,
+        "1412": 1,
+        "1414": 1,
+        "1487": 1,
+        "1497": 1,
+        "1498": 1,
+        "1505": 1,
+        "1522": 1,
+        "1534": 1,
+        "1559": 1,
+        "1565": 1,
+        "1595": 1,
+        "1651": 1,
+        "1656": 1,
+        "183": 1,
+        "1861": 1,
+        "1963": 1,
+        "1966": 1,
+        "1983": 1,
+        "2000": 1,
+        "2056": 1,
+        "2080": 1,
+        "2093": 2,
+        "2094": 1,
+        "2101": 1,
+        "2110": 1,
+        "2135": 1,
+        "2211": 1,
+        "2277": 1,
+        "2357": 1,
+        "2373": 1,
+        "2395": 1,
+        "2405": 1,
+        "2412": 2,
+        "2504": 1,
+        "2506": 1,
+        "2576": 1,
+        "2584": 1,
+        "2586": 1,
+        "2591": 1,
+        "2598": 1,
+        "2721": 1,
+        "2728": 1,
+        "2758": 1,
+        "2759": 1,
+        "2769": 1,
+        "2830": 1,
+        "2843": 1,
+        "2859": 1,
+        "2888": 1,
+        "2909": 1,
+        "2912": 1,
+        "2938": 1,
+        "2944": 1,
+        "2970": 1,
+        "2971": 1,
+        "2986": 1,
+        "3037": 1,
+        "3041": 2,
+        "3103": 1,
+        "3197": 1,
+        "3325": 1,
+        "3329": 1,
+        "413": 2,
+        "494": 1,
+        "506": 1,
+        "767": 1,
+        "773": 1,
+        "780": 1,
+        "822": 1,
+        "926": 1,
+        "927": 1
+      },
+      "fixed_clocks": [
+        [
+          5,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              0,
+              7,
+              2,
+              1,
+              3,
+              6,
+              5
+            ]
+          ],
+          "normalized_resource": 345782,
+          "selected_pin_lift": [
+            4,
+            0,
+            7,
+            2,
+            1,
+            3,
+            6,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              2,
+              1,
+              0,
+              7,
+              3,
+              5,
+              4
+            ]
+          ],
+          "normalized_resource": 749197,
+          "selected_pin_lift": [
+            6,
+            2,
+            1,
+            0,
+            7,
+            3,
+            5,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 81,
+      "self_converse": false,
+      "source": 1574
+    },
+    {
+      "H": 299,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1220": 1,
+        "1400": 1,
+        "1615": 1,
+        "1867": 1,
+        "2273": 1,
+        "2292": 1,
+        "2450": 1,
+        "2654": 1,
+        "3054": 1,
+        "474": 1,
+        "744": 1,
+        "892": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              0,
+              5,
+              4,
+              6,
+              3,
+              2,
+              1
+            ]
+          ],
+          "normalized_resource": 53123,
+          "selected_pin_lift": [
+            7,
+            0,
+            5,
+            4,
+            6,
+            3,
+            2,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              6,
+              3,
+              4,
+              1,
+              0,
+              5,
+              2
+            ]
+          ],
+          "normalized_resource": 417709,
+          "selected_pin_lift": [
+            7,
+            6,
+            3,
+            4,
+            1,
+            0,
+            5,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 14,
+      "self_converse": false,
+      "source": 1596
+    },
+    {
+      "H": 427,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 6,
+          "blue": 0,
+          "normalized_units": 3,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1248": 1,
+        "1492": 1,
+        "1623": 1,
+        "1834": 1,
+        "1851": 1,
+        "1881": 1,
+        "1938": 1,
+        "2016": 1,
+        "2247": 1,
+        "2365": 1,
+        "2563": 1,
+        "2592": 1,
+        "2675": 1,
+        "3015": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              0,
+              5,
+              2,
+              4,
+              1,
+              6,
+              3
+            ]
+          ],
+          "normalized_resource": 711266,
+          "selected_pin_lift": [
+            7,
+            0,
+            5,
+            2,
+            4,
+            1,
+            6,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              5,
+              1,
+              0,
+              6,
+              2,
+              4
+            ]
+          ],
+          "normalized_resource": 58102,
+          "selected_pin_lift": [
+            7,
+            3,
+            5,
+            1,
+            0,
+            6,
+            2,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 16,
+      "self_converse": false,
+      "source": 1615
+    },
+    {
+      "H": 419,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1213": 1,
+        "1293": 1,
+        "1471": 1,
+        "1531": 1,
+        "1687": 1,
+        "1698": 1,
+        "1699": 1,
+        "1774": 1,
+        "1912": 1,
+        "1997": 1,
+        "2089": 1,
+        "2095": 1,
+        "2136": 1,
+        "2305": 2,
+        "235": 1,
+        "2357": 1,
+        "2365": 2,
+        "2373": 1,
+        "2439": 1,
+        "2523": 1,
+        "2533": 1,
+        "2539": 1,
+        "2572": 1,
+        "2579": 1,
+        "2621": 1,
+        "2640": 1,
+        "2732": 1,
+        "2837": 1,
+        "3079": 1,
+        "311": 1,
+        "3360": 1,
+        "392": 1,
+        "602": 1,
+        "673": 1,
+        "88": 1,
+        "883": 1,
+        "892": 1,
+        "897": 1,
+        "911": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              7,
+              6,
+              4,
+              3,
+              1,
+              0,
+              2
+            ]
+          ],
+          "normalized_resource": 25637,
+          "selected_pin_lift": [
+            5,
+            7,
+            6,
+            4,
+            3,
+            1,
+            0,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              7,
+              4,
+              3,
+              5,
+              0,
+              6,
+              1
+            ]
+          ],
+          "normalized_resource": 409118,
+          "selected_pin_lift": [
+            2,
+            7,
+            4,
+            3,
+            5,
+            0,
+            6,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 43,
+      "self_converse": false,
+      "source": 1624
+    },
+    {
+      "H": 447,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1127": 1,
+        "1153": 1,
+        "1242": 1,
+        "1248": 1,
+        "1249": 1,
+        "1328": 1,
+        "1394": 1,
+        "1395": 1,
+        "1409": 1,
+        "1415": 1,
+        "1497": 1,
+        "1581": 1,
+        "1625": 1,
+        "1698": 1,
+        "1771": 1,
+        "1811": 2,
+        "1832": 2,
+        "1845": 1,
+        "1853": 1,
+        "1881": 1,
+        "1882": 1,
+        "1883": 1,
+        "1914": 1,
+        "1938": 1,
+        "1950": 1,
+        "1952": 1,
+        "1997": 1,
+        "2016": 1,
+        "2036": 1,
+        "2037": 1,
+        "2071": 2,
+        "2075": 1,
+        "2080": 1,
+        "2096": 1,
+        "2104": 1,
+        "2139": 1,
+        "2246": 1,
+        "2285": 1,
+        "2305": 1,
+        "2315": 1,
+        "2316": 1,
+        "2395": 2,
+        "2456": 1,
+        "2457": 1,
+        "2461": 1,
+        "2485": 1,
+        "2493": 1,
+        "2519": 1,
+        "2522": 1,
+        "2523": 1,
+        "2531": 2,
+        "2539": 2,
+        "2562": 1,
+        "2563": 1,
+        "2564": 1,
+        "2571": 1,
+        "2580": 2,
+        "2591": 1,
+        "2607": 1,
+        "2616": 1,
+        "2658": 1,
+        "2722": 1,
+        "2751": 1,
+        "2752": 1,
+        "2759": 1,
+        "2771": 1,
+        "2783": 1,
+        "2789": 1,
+        "2847": 1,
+        "2856": 1,
+        "2888": 1,
+        "2896": 1,
+        "2905": 2,
+        "2906": 1,
+        "2976": 1,
+        "3074": 1,
+        "413": 1,
+        "442": 1,
+        "524": 1,
+        "550": 1,
+        "669": 1,
+        "754": 1,
+        "756": 1,
+        "765": 1,
+        "776": 1,
+        "830": 1,
+        "841": 1,
+        "843": 1,
+        "863": 1,
+        "876": 2,
+        "881": 1,
+        "911": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              7,
+              1,
+              3,
+              5,
+              4,
+              6,
+              0
+            ]
+          ],
+          "normalized_resource": 611809,
+          "selected_pin_lift": [
+            2,
+            7,
+            1,
+            3,
+            5,
+            4,
+            6,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              4,
+              6,
+              7,
+              3,
+              5,
+              2,
+              0
+            ]
+          ],
+          "normalized_resource": 203629,
+          "selected_pin_lift": [
+            1,
+            4,
+            6,
+            7,
+            3,
+            5,
+            2,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 103,
+      "self_converse": false,
+      "source": 1650
+    },
+    {
+      "H": 349,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1274": 1,
+        "1559": 1,
+        "1660": 1,
+        "1934": 1,
+        "2532": 1,
+        "2581": 1,
+        "2794": 1,
+        "3347": 1,
+        "602": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              5,
+              4,
+              2,
+              6,
+              3,
+              1,
+              0
+            ]
+          ],
+          "normalized_resource": 36116,
+          "selected_pin_lift": [
+            7,
+            5,
+            4,
+            2,
+            6,
+            3,
+            1,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              2,
+              6,
+              4,
+              3,
+              5,
+              1,
+              0
+            ]
+          ],
+          "normalized_resource": 705534,
+          "selected_pin_lift": [
+            7,
+            2,
+            6,
+            4,
+            3,
+            5,
+            1,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 11,
+      "self_converse": false,
+      "source": 1702
+    },
+    {
+      "H": 339,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1650": 1,
+        "3054": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              5,
+              6,
+              2,
+              1,
+              3,
+              0
+            ]
+          ],
+          "normalized_resource": 9824,
+          "selected_pin_lift": [
+            7,
+            4,
+            5,
+            6,
+            2,
+            1,
+            3,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              2,
+              1,
+              3,
+              5,
+              6,
+              0
+            ]
+          ],
+          "normalized_resource": 72688,
+          "selected_pin_lift": [
+            7,
+            4,
+            2,
+            1,
+            3,
+            5,
+            6,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 4,
+      "self_converse": false,
+      "source": 1770
+    },
+    {
+      "H": 453,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 4,
+      "excluded_target_counts": {
+        "2139": 1,
+        "216": 1,
+        "2610": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              2,
+              1,
+              5,
+              6,
+              3,
+              7,
+              0
+            ]
+          ],
+          "normalized_resource": 713801,
+          "selected_pin_lift": [
+            4,
+            2,
+            1,
+            5,
+            6,
+            3,
+            7,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              2,
+              1,
+              0,
+              4,
+              3,
+              7,
+              5
+            ]
+          ],
+          "normalized_resource": 58447,
+          "selected_pin_lift": [
+            6,
+            2,
+            1,
+            0,
+            4,
+            3,
+            7,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 5,
+      "self_converse": false,
+      "source": 1882
+    },
+    {
+      "H": 345,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1153": 1,
+        "1181": 1,
+        "1229": 2,
+        "1248": 2,
+        "1249": 1,
+        "1274": 1,
+        "1300": 1,
+        "1394": 1,
+        "1396": 1,
+        "1522": 1,
+        "1541": 1,
+        "1558": 1,
+        "1571": 1,
+        "1582": 1,
+        "1602": 1,
+        "1607": 1,
+        "1644": 1,
+        "1660": 1,
+        "1691": 1,
+        "1698": 2,
+        "1811": 1,
+        "1834": 1,
+        "1841": 1,
+        "1845": 1,
+        "1851": 3,
+        "1864": 1,
+        "1879": 2,
+        "1881": 1,
+        "1891": 1,
+        "1932": 1,
+        "1938": 1,
+        "1949": 1,
+        "1952": 2,
+        "1974": 1,
+        "1982": 2,
+        "2000": 1,
+        "2036": 1,
+        "2068": 1,
+        "2071": 1,
+        "2246": 1,
+        "2250": 1,
+        "2267": 1,
+        "2305": 1,
+        "2323": 2,
+        "2340": 1,
+        "2364": 2,
+        "2373": 1,
+        "2430": 1,
+        "2456": 3,
+        "2493": 1,
+        "2532": 1,
+        "2539": 1,
+        "2566": 2,
+        "2569": 1,
+        "2574": 1,
+        "2660": 1,
+        "2679": 1,
+        "2794": 1,
+        "2798": 1,
+        "2898": 1,
+        "2905": 2,
+        "2945": 1,
+        "2986": 1,
+        "524": 1,
+        "541": 1,
+        "637": 1,
+        "704": 1,
+        "724": 1,
+        "740": 1,
+        "742": 1,
+        "810": 1,
+        "811": 3,
+        "830": 1,
+        "841": 1,
+        "843": 1,
+        "860": 1,
+        "864": 2,
+        "869": 1,
+        "883": 1,
+        "911": 1,
+        "926": 1,
+        "935": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              6,
+              2,
+              1,
+              0,
+              5,
+              4,
+              3
+            ]
+          ],
+          "normalized_resource": 267406,
+          "selected_pin_lift": [
+            7,
+            6,
+            2,
+            1,
+            0,
+            5,
+            4,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              1,
+              6,
+              4,
+              3,
+              2,
+              0,
+              5
+            ]
+          ],
+          "normalized_resource": 294461,
+          "selected_pin_lift": [
+            7,
+            1,
+            6,
+            4,
+            3,
+            2,
+            0,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 101,
+      "self_converse": false,
+      "source": 1948
+    },
+    {
+      "H": 525,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 4,
+      "excluded_target_counts": {
+        "1559": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              5,
+              6,
+              0,
+              7,
+              4,
+              3
+            ]
+          ],
+          "normalized_resource": 206029,
+          "selected_pin_lift": [
+            2,
+            1,
+            5,
+            6,
+            0,
+            7,
+            4,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              7,
+              5,
+              6,
+              0,
+              4,
+              3
+            ]
+          ],
+          "normalized_resource": 320846,
+          "selected_pin_lift": [
+            2,
+            1,
+            7,
+            5,
+            6,
+            0,
+            4,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 3,
+      "self_converse": false,
+      "source": 1952
+    },
+    {
+      "H": 409,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1242": 1,
+        "132": 1,
+        "1345": 1,
+        "1347": 1,
+        "1454": 1,
+        "1504": 1,
+        "1513": 1,
+        "1534": 1,
+        "1547": 1,
+        "1626": 1,
+        "1631": 1,
+        "1719": 1,
+        "1784": 1,
+        "1787": 1,
+        "180": 1,
+        "1991": 1,
+        "2033": 1,
+        "2085": 1,
+        "2134": 1,
+        "2141": 1,
+        "2305": 1,
+        "2364": 1,
+        "2367": 1,
+        "2545": 1,
+        "266": 1,
+        "2663": 1,
+        "267": 1,
+        "2802": 1,
+        "2835": 1,
+        "3263": 1,
+        "336": 1,
+        "408": 1,
+        "430": 1,
+        "442": 1,
+        "445": 1,
+        "491": 1,
+        "500": 1,
+        "505": 1,
+        "655": 1,
+        "674": 1,
+        "725": 1,
+        "756": 1,
+        "759": 1,
+        "81": 1,
+        "818": 1,
+        "819": 2,
+        "836": 1,
+        "871": 1,
+        "895": 1,
+        "924": 1,
+        "932": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              0,
+              5,
+              2,
+              3,
+              7,
+              6,
+              1
+            ]
+          ],
+          "normalized_resource": 112497,
+          "selected_pin_lift": [
+            4,
+            0,
+            5,
+            2,
+            3,
+            7,
+            6,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              0,
+              3,
+              7,
+              5,
+              1,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 220262,
+          "selected_pin_lift": [
+            6,
+            0,
+            3,
+            7,
+            5,
+            1,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 54,
+      "self_converse": false,
+      "source": 2066
+    },
+    {
+      "H": 551,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1063": 1,
+        "1065": 1,
+        "1126": 1,
+        "1178": 1,
+        "1274": 1,
+        "1396": 1,
+        "1410": 1,
+        "1495": 1,
+        "1513": 1,
+        "1558": 1,
+        "1559": 1,
+        "1644": 1,
+        "1663": 1,
+        "1703": 1,
+        "1753": 1,
+        "1771": 1,
+        "1838": 1,
+        "1893": 1,
+        "1925": 1,
+        "1984": 2,
+        "2019": 1,
+        "2285": 1,
+        "2325": 1,
+        "2374": 1,
+        "2413": 1,
+        "2521": 1,
+        "2533": 1,
+        "2599": 1,
+        "2603": 1,
+        "2705": 1,
+        "277": 1,
+        "2787": 1,
+        "2802": 1,
+        "305": 1,
+        "442": 1,
+        "517": 1,
+        "550": 1,
+        "747": 1,
+        "754": 1,
+        "767": 2,
+        "863": 2,
+        "937": 1
+      },
+      "fixed_clocks": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              6,
+              0,
+              7,
+              5,
+              4,
+              2,
+              3
+            ]
+          ],
+          "normalized_resource": 587057,
+          "selected_pin_lift": [
+            1,
+            6,
+            0,
+            7,
+            5,
+            4,
+            2,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              2,
+              0,
+              7,
+              3,
+              1,
+              5,
+              4
+            ]
+          ],
+          "normalized_resource": 414585,
+          "selected_pin_lift": [
+            6,
+            2,
+            0,
+            7,
+            3,
+            1,
+            5,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 47,
+      "self_converse": false,
+      "source": 2135
+    },
+    {
+      "H": 345,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1250": 1,
+        "1251": 1,
+        "1520": 1,
+        "2831": 1,
+        "602": 1,
+        "830": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              1,
+              0,
+              3,
+              5,
+              6,
+              2
+            ]
+          ],
+          "normalized_resource": 44380,
+          "selected_pin_lift": [
+            7,
+            4,
+            1,
+            0,
+            3,
+            5,
+            6,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              6,
+              1,
+              5,
+              0,
+              3,
+              2
+            ]
+          ],
+          "normalized_resource": 582526,
+          "selected_pin_lift": [
+            7,
+            4,
+            6,
+            1,
+            5,
+            0,
+            3,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 8,
+      "self_converse": false,
+      "source": 2218
+    },
+    {
+      "H": 347,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1251": 1,
+        "1885": 1,
+        "1943": 1,
+        "2223": 1,
+        "2292": 1,
+        "2305": 1,
+        "2570": 1,
+        "2621": 1,
+        "2794": 1,
+        "3054": 1,
+        "602": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              6,
+              2,
+              0,
+              5,
+              4,
+              1,
+              3
+            ]
+          ],
+          "normalized_resource": 21133,
+          "selected_pin_lift": [
+            7,
+            6,
+            2,
+            0,
+            5,
+            4,
+            1,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              1,
+              6,
+              4,
+              2,
+              0,
+              5,
+              3
+            ]
+          ],
+          "normalized_resource": 294205,
+          "selected_pin_lift": [
+            7,
+            1,
+            6,
+            4,
+            2,
+            0,
+            5,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 13,
+      "self_converse": false,
+      "source": 2283
+    },
+    {
+      "H": 373,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1847": 1,
+        "2016": 1,
+        "2054": 1,
+        "2069": 1,
+        "2087": 1,
+        "2276": 1,
+        "2334": 1,
+        "2395": 1,
+        "2591": 1,
+        "2637": 1,
+        "2648": 1,
+        "2835": 1,
+        "2916": 1,
+        "3041": 1,
+        "3187": 1,
+        "413": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              5,
+              2,
+              1,
+              0,
+              3,
+              6
+            ]
+          ],
+          "normalized_resource": 74845,
+          "selected_pin_lift": [
+            7,
+            4,
+            5,
+            2,
+            1,
+            0,
+            3,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              2,
+              0,
+              3,
+              1,
+              6,
+              5
+            ]
+          ],
+          "normalized_resource": 269499,
+          "selected_pin_lift": [
+            7,
+            4,
+            2,
+            0,
+            3,
+            1,
+            6,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 18,
+      "self_converse": false,
+      "source": 2319
+    },
+    {
+      "H": 529,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1059": 2,
+        "1160": 1,
+        "1182": 1,
+        "1270": 1,
+        "1299": 1,
+        "1304": 1,
+        "1444": 1,
+        "1487": 1,
+        "1505": 1,
+        "1606": 1,
+        "1839": 1,
+        "1847": 1,
+        "1867": 1,
+        "1903": 1,
+        "1938": 1,
+        "1959": 1,
+        "1981": 1,
+        "1985": 1,
+        "2008": 1,
+        "2042": 1,
+        "2069": 1,
+        "2082": 1,
+        "2091": 1,
+        "2130": 1,
+        "2134": 1,
+        "2276": 1,
+        "2289": 1,
+        "2334": 1,
+        "2360": 1,
+        "2369": 1,
+        "2480": 1,
+        "2492": 1,
+        "2500": 1,
+        "2520": 1,
+        "2530": 2,
+        "2533": 1,
+        "2577": 1,
+        "2583": 1,
+        "2614": 1,
+        "2617": 1,
+        "2621": 1,
+        "2646": 1,
+        "2648": 1,
+        "2655": 1,
+        "2667": 1,
+        "2714": 1,
+        "2785": 1,
+        "2787": 1,
+        "2802": 1,
+        "2835": 1,
+        "2837": 1,
+        "2846": 1,
+        "2875": 1,
+        "2885": 1,
+        "2910": 1,
+        "2911": 1,
+        "2916": 1,
+        "3014": 1,
+        "3075": 1,
+        "3083": 1,
+        "3187": 1,
+        "389": 2,
+        "413": 2,
+        "667": 1,
+        "670": 1,
+        "707": 1,
+        "742": 1,
+        "869": 1,
+        "908": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              5,
+              0,
+              7,
+              6,
+              4,
+              2,
+              3
+            ]
+          ],
+          "normalized_resource": 669946,
+          "selected_pin_lift": [
+            1,
+            5,
+            0,
+            7,
+            6,
+            4,
+            2,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              6,
+              5,
+              0,
+              7,
+              4,
+              3
+            ]
+          ],
+          "normalized_resource": 491942,
+          "selected_pin_lift": [
+            2,
+            1,
+            6,
+            5,
+            0,
+            7,
+            4,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 75,
+      "self_converse": false,
+      "source": 2384
+    },
+    {
+      "H": 433,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1128": 1,
+        "113": 1,
+        "1145": 1,
+        "1151": 1,
+        "1161": 1,
+        "1177": 1,
+        "1237": 1,
+        "1329": 1,
+        "1378": 1,
+        "1487": 2,
+        "1505": 1,
+        "1524": 1,
+        "1626": 1,
+        "1657": 1,
+        "1697": 1,
+        "1812": 1,
+        "1840": 1,
+        "1845": 1,
+        "1885": 1,
+        "1902": 1,
+        "1915": 1,
+        "2089": 1,
+        "209": 1,
+        "2220": 2,
+        "2223": 1,
+        "2267": 1,
+        "2290": 1,
+        "2307": 1,
+        "232": 1,
+        "2373": 1,
+        "2430": 1,
+        "2579": 1,
+        "2706": 1,
+        "2738": 1,
+        "28": 1,
+        "2823": 1,
+        "2909": 2,
+        "3057": 2,
+        "3070": 1,
+        "3262": 1,
+        "3330": 1,
+        "339": 1,
+        "410": 1,
+        "448": 1,
+        "470": 1,
+        "570": 1,
+        "578": 1,
+        "672": 1,
+        "686": 1,
+        "762": 1,
+        "780": 2,
+        "785": 1,
+        "819": 1,
+        "880": 1,
+        "910": 1,
+        "924": 1,
+        "936": 1
+      },
+      "fixed_clocks": [
+        [
+          5,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              0,
+              7,
+              4,
+              1,
+              5,
+              2,
+              3
+            ]
+          ],
+          "normalized_resource": 228375,
+          "selected_pin_lift": [
+            6,
+            0,
+            7,
+            4,
+            1,
+            5,
+            2,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              2,
+              0,
+              7,
+              3,
+              5,
+              6,
+              1
+            ]
+          ],
+          "normalized_resource": 817033,
+          "selected_pin_lift": [
+            4,
+            2,
+            0,
+            7,
+            3,
+            5,
+            6,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 64,
+      "self_converse": false,
+      "source": 2393
+    },
+    {
+      "H": 365,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1771": 1,
+        "1847": 1,
+        "2085": 1,
+        "2230": 2,
+        "2591": 1,
+        "2610": 1,
+        "2631": 1,
+        "2648": 1,
+        "2762": 1,
+        "2916": 1,
+        "2979": 1,
+        "3103": 3,
+        "3136": 1,
+        "3172": 1,
+        "413": 1
+      },
+      "fixed_clocks": [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              7,
+              5,
+              3,
+              2,
+              6,
+              4,
+              0
+            ]
+          ],
+          "normalized_resource": 685249,
+          "selected_pin_lift": [
+            1,
+            7,
+            5,
+            3,
+            2,
+            6,
+            4,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              7,
+              4,
+              3,
+              6,
+              5,
+              0
+            ]
+          ],
+          "normalized_resource": 49982,
+          "selected_pin_lift": [
+            2,
+            1,
+            7,
+            4,
+            3,
+            6,
+            5,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 20,
+      "self_converse": false,
+      "source": 2397
+    },
+    {
+      "H": 453,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "2000": 1,
+        "2069": 1,
+        "3256": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              1,
+              4,
+              3,
+              6,
+              2,
+              7,
+              0
+            ],
+            [
+              6,
+              1,
+              4,
+              0,
+              5,
+              2,
+              7,
+              3
+            ]
+          ],
+          "normalized_resource": 207857,
+          "selected_pin_lift": [
+            5,
+            1,
+            4,
+            3,
+            6,
+            2,
+            7,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              6,
+              7,
+              3,
+              1,
+              4,
+              2,
+              0
+            ],
+            [
+              6,
+              4,
+              2,
+              7,
+              5,
+              1,
+              0,
+              3
+            ]
+          ],
+          "normalized_resource": 434281,
+          "selected_pin_lift": [
+            5,
+            6,
+            7,
+            3,
+            1,
+            4,
+            2,
+            0
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 5,
+      "self_converse": true,
+      "source": 2439
+    },
+    {
+      "H": 465,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1147": 1,
+        "1248": 1,
+        "1341": 1,
+        "1397": 1,
+        "1424": 1,
+        "1429": 1,
+        "1523": 1,
+        "1545": 1,
+        "1663": 1,
+        "1703": 1,
+        "176": 1,
+        "1771": 1,
+        "1851": 1,
+        "1853": 1,
+        "1882": 1,
+        "1885": 1,
+        "1893": 1,
+        "1937": 1,
+        "1942": 1,
+        "1961": 1,
+        "1973": 1,
+        "2071": 1,
+        "2072": 1,
+        "2176": 1,
+        "2276": 1,
+        "2327": 1,
+        "2455": 1,
+        "2456": 1,
+        "2486": 1,
+        "2494": 1,
+        "2541": 1,
+        "2573": 1,
+        "2626": 1,
+        "2627": 1,
+        "2645": 1,
+        "2659": 1,
+        "2763": 1,
+        "2831": 1,
+        "2880": 1,
+        "2905": 2,
+        "3024": 1,
+        "3028": 1,
+        "3138": 1,
+        "435": 1,
+        "478": 1,
+        "524": 1,
+        "638": 1,
+        "722": 1,
+        "771": 1,
+        "811": 1,
+        "857": 1,
+        "885": 1,
+        "922": 1,
+        "935": 1
+      },
+      "fixed_clocks": [
+        [
+          3,
+          1
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              6,
+              3,
+              1,
+              4,
+              2,
+              0,
+              5
+            ]
+          ],
+          "normalized_resource": 624750,
+          "selected_pin_lift": [
+            7,
+            6,
+            3,
+            1,
+            4,
+            2,
+            0,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              7,
+              6,
+              1,
+              0,
+              4,
+              3,
+              2
+            ]
+          ],
+          "normalized_resource": 651033,
+          "selected_pin_lift": [
+            5,
+            7,
+            6,
+            1,
+            0,
+            4,
+            3,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 57,
+      "self_converse": false,
+      "source": 2483
+    },
+    {
+      "H": 583,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "724": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              1,
+              4,
+              2,
+              0,
+              6,
+              7,
+              5
+            ]
+          ],
+          "normalized_resource": 398470,
+          "selected_pin_lift": [
+            3,
+            1,
+            4,
+            2,
+            0,
+            6,
+            7,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              0,
+              4,
+              6,
+              7,
+              2,
+              1,
+              5
+            ]
+          ],
+          "normalized_resource": 159527,
+          "selected_pin_lift": [
+            3,
+            0,
+            4,
+            6,
+            7,
+            2,
+            1,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 3,
+      "self_converse": false,
+      "source": 2616
+    },
+    {
+      "H": 455,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1178": 1,
+        "1248": 1,
+        "1391": 1,
+        "1444": 1,
+        "1559": 1,
+        "1571": 1,
+        "1607": 1,
+        "1626": 1,
+        "1698": 1,
+        "1809": 1,
+        "1832": 1,
+        "1845": 1,
+        "1851": 1,
+        "1879": 1,
+        "1891": 1,
+        "1910": 1,
+        "1915": 1,
+        "1923": 1,
+        "1952": 1,
+        "1995": 2,
+        "1996": 1,
+        "2071": 1,
+        "2099": 1,
+        "2136": 1,
+        "2246": 2,
+        "2261": 1,
+        "2272": 1,
+        "2283": 1,
+        "2292": 1,
+        "2305": 1,
+        "2316": 1,
+        "2353": 1,
+        "2383": 1,
+        "2456": 1,
+        "2491": 1,
+        "2493": 1,
+        "2523": 1,
+        "2566": 1,
+        "2738": 1,
+        "2794": 1,
+        "2820": 1,
+        "2832": 1,
+        "2898": 1,
+        "2905": 3,
+        "2979": 2,
+        "302": 1,
+        "3054": 1,
+        "309": 1,
+        "3256": 1,
+        "3373": 1,
+        "413": 1,
+        "503": 1,
+        "506": 1,
+        "651": 1,
+        "703": 1,
+        "830": 1,
+        "835": 1,
+        "880": 1,
+        "883": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          2
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              6,
+              4,
+              3,
+              1,
+              0,
+              7,
+              2
+            ]
+          ],
+          "normalized_resource": 534001,
+          "selected_pin_lift": [
+            5,
+            6,
+            4,
+            3,
+            1,
+            0,
+            7,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              5,
+              6,
+              1,
+              0,
+              7,
+              4,
+              2
+            ]
+          ],
+          "normalized_resource": 904473,
+          "selected_pin_lift": [
+            3,
+            5,
+            6,
+            1,
+            0,
+            7,
+            4,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 66,
+      "self_converse": false,
+      "source": 2638
+    },
+    {
+      "H": 561,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1060": 1,
+        "1063": 1,
+        "1178": 1,
+        "1220": 1,
+        "1274": 1,
+        "1300": 1,
+        "1308": 1,
+        "1605": 1,
+        "1663": 1,
+        "1864": 1,
+        "1951": 1,
+        "2019": 1,
+        "2079": 1,
+        "2085": 1,
+        "2089": 1,
+        "2109": 1,
+        "2140": 1,
+        "2439": 1,
+        "2444": 1,
+        "2460": 1,
+        "2521": 1,
+        "2532": 1,
+        "2537": 1,
+        "2558": 1,
+        "2562": 1,
+        "2572": 1,
+        "2619": 1,
+        "2722": 2,
+        "2750": 1,
+        "277": 1,
+        "2795": 1,
+        "2837": 1,
+        "305": 1,
+        "435": 2,
+        "470": 1,
+        "630": 1,
+        "651": 1,
+        "653": 1,
+        "670": 1,
+        "756": 1,
+        "787": 1,
+        "860": 1,
+        "928": 1,
+        "940": 1
+      },
+      "fixed_clocks": [
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              4,
+              2,
+              1,
+              0,
+              7,
+              3,
+              5
+            ]
+          ],
+          "normalized_resource": 396020,
+          "selected_pin_lift": [
+            6,
+            4,
+            2,
+            1,
+            0,
+            7,
+            3,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              2,
+              6,
+              5,
+              0,
+              7,
+              4,
+              1
+            ]
+          ],
+          "normalized_resource": 625073,
+          "selected_pin_lift": [
+            3,
+            2,
+            6,
+            5,
+            0,
+            7,
+            4,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 48,
+      "self_converse": false,
+      "source": 2677
+    },
+    {
+      "H": 551,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1128": 1,
+        "1182": 1,
+        "1250": 1,
+        "1296": 1,
+        "1395": 1,
+        "1400": 1,
+        "1426": 1,
+        "1486": 1,
+        "1499": 1,
+        "1505": 1,
+        "1534": 1,
+        "1602": 1,
+        "1611": 1,
+        "1681": 1,
+        "1682": 1,
+        "1795": 1,
+        "1797": 1,
+        "1819": 1,
+        "1890": 1,
+        "1897": 1,
+        "1937": 1,
+        "2038": 1,
+        "2058": 1,
+        "2063": 1,
+        "2109": 2,
+        "2110": 1,
+        "2211": 1,
+        "2230": 1,
+        "2295": 1,
+        "2327": 1,
+        "2403": 2,
+        "2481": 1,
+        "2520": 1,
+        "2611": 1,
+        "2614": 1,
+        "2655": 1,
+        "2909": 1,
+        "2926": 2,
+        "2987": 1,
+        "3023": 1,
+        "3198": 1,
+        "3360": 1,
+        "389": 1,
+        "413": 1,
+        "503": 1,
+        "545": 1,
+        "652": 1,
+        "669": 1,
+        "742": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              0,
+              7,
+              1,
+              3,
+              4,
+              2,
+              5
+            ]
+          ],
+          "normalized_resource": 202088,
+          "selected_pin_lift": [
+            6,
+            0,
+            7,
+            1,
+            3,
+            4,
+            2,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              0,
+              7,
+              4,
+              6,
+              2,
+              5,
+              3
+            ]
+          ],
+          "normalized_resource": 170354,
+          "selected_pin_lift": [
+            1,
+            0,
+            7,
+            4,
+            6,
+            2,
+            5,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 54,
+      "self_converse": false,
+      "source": 2728
+    },
+    {
+      "H": 489,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1164": 1,
+        "1207": 1,
+        "1296": 1,
+        "1415": 1,
+        "1576": 1,
+        "1604": 1,
+        "1616": 1,
+        "1647": 1,
+        "1674": 1,
+        "1691": 1,
+        "1696": 1,
+        "1705": 1,
+        "1830": 1,
+        "1847": 1,
+        "1879": 1,
+        "1881": 2,
+        "1891": 1,
+        "1895": 1,
+        "1938": 1,
+        "1941": 1,
+        "1985": 1,
+        "2013": 1,
+        "2020": 1,
+        "2137": 1,
+        "2248": 1,
+        "2305": 1,
+        "2356": 1,
+        "2359": 1,
+        "2383": 1,
+        "2413": 1,
+        "2440": 1,
+        "2467": 1,
+        "2494": 1,
+        "2498": 1,
+        "2519": 1,
+        "2549": 1,
+        "2603": 1,
+        "2665": 1,
+        "2721": 1,
+        "2722": 1,
+        "2732": 2,
+        "2746": 1,
+        "2755": 1,
+        "2757": 1,
+        "2762": 1,
+        "2794": 1,
+        "2810": 1,
+        "2847": 1,
+        "2925": 1,
+        "2979": 1,
+        "3039": 1,
+        "3123": 1,
+        "3266": 1,
+        "346": 1,
+        "392": 1,
+        "541": 1,
+        "652": 1,
+        "714": 1,
+        "769": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              0,
+              6,
+              2,
+              4,
+              1,
+              5
+            ]
+          ],
+          "normalized_resource": 478945,
+          "selected_pin_lift": [
+            7,
+            3,
+            0,
+            6,
+            2,
+            4,
+            1,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              3,
+              6,
+              1,
+              5,
+              0,
+              7,
+              2
+            ]
+          ],
+          "normalized_resource": 582990,
+          "selected_pin_lift": [
+            4,
+            3,
+            6,
+            1,
+            5,
+            0,
+            7,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 63,
+      "self_converse": false,
+      "source": 2752
+    },
+    {
+      "H": 459,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1248": 1,
+        "1444": 1,
+        "2323": 1,
+        "2373": 1,
+        "2903": 1,
+        "413": 1,
+        "652": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          5
+        ],
+        [
+          6,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              4,
+              6,
+              1,
+              0,
+              7,
+              3,
+              2
+            ]
+          ],
+          "normalized_resource": 173865,
+          "selected_pin_lift": [
+            5,
+            4,
+            6,
+            1,
+            0,
+            7,
+            3,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              0,
+              7,
+              6,
+              2,
+              4,
+              3,
+              1
+            ]
+          ],
+          "normalized_resource": 189838,
+          "selected_pin_lift": [
+            5,
+            0,
+            7,
+            6,
+            2,
+            4,
+            3,
+            1
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 9,
+      "self_converse": false,
+      "source": 2798
+    },
+    {
+      "H": 551,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1077": 1,
+        "1127": 1,
+        "1220": 1,
+        "1334": 1,
+        "1424": 1,
+        "1571": 1,
+        "1691": 1,
+        "1704": 1,
+        "1879": 1,
+        "1901": 1,
+        "1914": 2,
+        "1933": 1,
+        "1950": 1,
+        "2036": 1,
+        "2043": 1,
+        "2076": 1,
+        "2096": 1,
+        "2100": 1,
+        "2106": 1,
+        "2108": 1,
+        "2116": 2,
+        "2128": 1,
+        "2132": 1,
+        "2139": 1,
+        "2220": 1,
+        "2228": 1,
+        "2287": 1,
+        "2290": 1,
+        "2316": 1,
+        "2366": 1,
+        "2395": 2,
+        "2403": 1,
+        "2436": 1,
+        "2458": 1,
+        "2490": 1,
+        "2498": 1,
+        "2541": 1,
+        "2561": 1,
+        "2578": 1,
+        "2584": 1,
+        "2591": 1,
+        "2609": 1,
+        "2631": 1,
+        "2758": 1,
+        "2782": 1,
+        "2789": 1,
+        "2815": 1,
+        "2872": 1,
+        "2880": 1,
+        "2910": 1,
+        "2912": 1,
+        "2948": 1,
+        "2964": 1,
+        "3015": 1,
+        "3035": 1,
+        "3049": 1,
+        "3058": 2,
+        "3095": 1,
+        "3124": 1,
+        "3184": 1,
+        "470": 1,
+        "537": 1,
+        "667": 1,
+        "670": 1,
+        "765": 1,
+        "922": 1
+      },
+      "fixed_clocks": [
+        [
+          3,
+          3
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              4,
+              1,
+              3,
+              2,
+              0,
+              7,
+              5
+            ]
+          ],
+          "normalized_resource": 397804,
+          "selected_pin_lift": [
+            6,
+            4,
+            1,
+            3,
+            2,
+            0,
+            7,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              4,
+              0,
+              7,
+              3,
+              5,
+              2,
+              1,
+              6
+            ]
+          ],
+          "normalized_resource": 452698,
+          "selected_pin_lift": [
+            4,
+            0,
+            7,
+            3,
+            5,
+            2,
+            1,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 72,
+      "self_converse": false,
+      "source": 2948
+    },
+    {
+      "H": 425,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1059": 1,
+        "1143": 1,
+        "1157": 1,
+        "125": 1,
+        "1260": 1,
+        "1272": 1,
+        "130": 1,
+        "1312": 1,
+        "1410": 2,
+        "1482": 1,
+        "1529": 1,
+        "1531": 1,
+        "1540": 1,
+        "1574": 1,
+        "1576": 1,
+        "1607": 1,
+        "1816": 1,
+        "1870": 1,
+        "1958": 1,
+        "2002": 1,
+        "2315": 1,
+        "2405": 1,
+        "2406": 1,
+        "2433": 1,
+        "2493": 1,
+        "2494": 1,
+        "2513": 1,
+        "2514": 1,
+        "2522": 1,
+        "2578": 1,
+        "2586": 1,
+        "2620": 1,
+        "2621": 1,
+        "2631": 1,
+        "2632": 1,
+        "2633": 1,
+        "2680": 1,
+        "2762": 1,
+        "2783": 1,
+        "2787": 1,
+        "302": 1,
+        "3044": 1,
+        "3198": 1,
+        "332": 1,
+        "3347": 1,
+        "467": 1,
+        "510": 1,
+        "520": 1,
+        "571": 1,
+        "572": 1,
+        "652": 1,
+        "672": 1,
+        "743": 1,
+        "756": 1,
+        "757": 1,
+        "798": 1,
+        "800": 1,
+        "810": 1,
+        "822": 1,
+        "862": 1,
+        "871": 1,
+        "913": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          1
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              1,
+              3,
+              7,
+              2,
+              0,
+              4,
+              5
+            ]
+          ],
+          "normalized_resource": 445213,
+          "selected_pin_lift": [
+            6,
+            1,
+            3,
+            7,
+            2,
+            0,
+            4,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              1,
+              0,
+              4,
+              7,
+              6,
+              3,
+              2
+            ]
+          ],
+          "normalized_resource": 449942,
+          "selected_pin_lift": [
+            5,
+            1,
+            0,
+            4,
+            7,
+            6,
+            3,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 65,
+      "self_converse": false,
+      "source": 2983
+    },
+    {
+      "H": 399,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "1274": 1,
+        "1559": 1,
+        "1660": 1,
+        "1934": 1,
+        "2532": 1,
+        "2581": 1,
+        "2794": 1,
+        "3347": 1,
+        "602": 1
+      },
+      "fixed_clocks": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              3,
+              0,
+              6,
+              2,
+              4,
+              1,
+              5
+            ]
+          ],
+          "normalized_resource": 304414,
+          "selected_pin_lift": [
+            7,
+            3,
+            0,
+            6,
+            2,
+            4,
+            1,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              7,
+              4,
+              3,
+              2,
+              0,
+              6,
+              1,
+              5
+            ]
+          ],
+          "normalized_resource": 77359,
+          "selected_pin_lift": [
+            7,
+            4,
+            3,
+            2,
+            0,
+            6,
+            1,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 11,
+      "self_converse": false,
+      "source": 3105
+    },
+    {
+      "H": 593,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 4,
+      "excluded_target_counts": {},
+      "fixed_clocks": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              5,
+              4,
+              1,
+              3,
+              0,
+              7,
+              6
+            ]
+          ],
+          "normalized_resource": 423477,
+          "selected_pin_lift": [
+            2,
+            5,
+            4,
+            1,
+            3,
+            0,
+            7,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              5,
+              3,
+              0,
+              4,
+              1,
+              7,
+              6
+            ]
+          ],
+          "normalized_resource": 213450,
+          "selected_pin_lift": [
+            2,
+            5,
+            3,
+            0,
+            4,
+            1,
+            7,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 2,
+      "self_converse": false,
+      "source": 3111
+    },
+    {
+      "H": 545,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 7,
+      "excluded_target_counts": {
+        "1160": 1,
+        "1178": 1,
+        "1220": 1,
+        "1270": 1,
+        "1381": 1,
+        "1406": 1,
+        "1486": 1,
+        "1500": 1,
+        "1582": 1,
+        "1606": 1,
+        "1611": 1,
+        "1613": 1,
+        "1625": 1,
+        "1832": 1,
+        "1847": 1,
+        "1889": 1,
+        "1914": 1,
+        "1941": 1,
+        "1950": 1,
+        "1958": 1,
+        "1961": 1,
+        "2014": 1,
+        "2042": 1,
+        "2069": 1,
+        "2081": 1,
+        "2089": 1,
+        "2092": 1,
+        "2095": 1,
+        "2111": 1,
+        "2115": 1,
+        "2133": 1,
+        "2134": 1,
+        "2139": 1,
+        "2165": 1,
+        "2220": 1,
+        "2270": 1,
+        "2289": 1,
+        "2322": 1,
+        "2323": 1,
+        "2334": 1,
+        "2406": 1,
+        "2485": 1,
+        "2577": 1,
+        "2578": 1,
+        "2581": 1,
+        "2583": 1,
+        "2586": 1,
+        "2594": 1,
+        "2598": 1,
+        "2645": 1,
+        "2754": 1,
+        "2768": 1,
+        "2859": 1,
+        "2878": 1,
+        "2879": 1,
+        "2892": 1,
+        "2910": 1,
+        "2938": 1,
+        "2985": 1,
+        "305": 1,
+        "3057": 1,
+        "3061": 1,
+        "3104": 1,
+        "3112": 1,
+        "3136": 1,
+        "3157": 1,
+        "3180": 1,
+        "3187": 1,
+        "3329": 1,
+        "442": 1,
+        "515": 1,
+        "517": 1,
+        "637": 1,
+        "738": 1,
+        "745": 1,
+        "866": 1,
+        "869": 1
+      },
+      "fixed_clocks": [
+        [
+          7,
+          2
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              3,
+              1,
+              6,
+              5,
+              4,
+              0,
+              7,
+              2
+            ]
+          ],
+          "normalized_resource": 188776,
+          "selected_pin_lift": [
+            3,
+            1,
+            6,
+            5,
+            4,
+            0,
+            7,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              1,
+              0,
+              7,
+              4,
+              6,
+              5,
+              3,
+              2
+            ]
+          ],
+          "normalized_resource": 167795,
+          "selected_pin_lift": [
+            1,
+            0,
+            7,
+            4,
+            6,
+            5,
+            3,
+            2
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 79,
+      "self_converse": false,
+      "source": 3137
+    },
+    {
+      "H": 547,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 6,
+      "excluded_target_counts": {
+        "1537": 1,
+        "1576": 1,
+        "1771": 1,
+        "1940": 1,
+        "1996": 1,
+        "2088": 1,
+        "2109": 1,
+        "3029": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              4,
+              1,
+              7,
+              3,
+              2,
+              0,
+              5
+            ]
+          ],
+          "normalized_resource": 469929,
+          "selected_pin_lift": [
+            6,
+            4,
+            1,
+            7,
+            3,
+            2,
+            0,
+            5
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              5,
+              4,
+              2,
+              1,
+              7,
+              3,
+              0,
+              6
+            ]
+          ],
+          "normalized_resource": 152756,
+          "selected_pin_lift": [
+            5,
+            4,
+            2,
+            1,
+            7,
+            3,
+            0,
+            6
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 10,
+      "self_converse": false,
+      "source": 3139
+    },
+    {
+      "H": 519,
+      "aut": 1,
+      "capacities": [
+        {
+          "black": 4,
+          "blue": 0,
+          "normalized_units": 2,
+          "selected_weight": 2,
+          "target": 1965
+        },
+        {
+          "black": 2,
+          "blue": 0,
+          "normalized_units": 1,
+          "selected_weight": 2,
+          "target": 2234
+        }
+      ],
+      "cost": 5,
+      "excluded_target_counts": {
+        "2237": 1,
+        "2592": 1,
+        "2909": 1,
+        "2940": 1,
+        "3095": 1,
+        "740": 1
+      },
+      "fixed_clocks": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          0
+        ]
+      ],
+      "kernel_lifts": [
+        {
+          "full_canonical_resource_lifts": [
+            [
+              2,
+              1,
+              7,
+              5,
+              4,
+              0,
+              6,
+              3
+            ]
+          ],
+          "normalized_resource": 62618,
+          "selected_pin_lift": [
+            2,
+            1,
+            7,
+            5,
+            4,
+            0,
+            6,
+            3
+          ],
+          "source_word_kernel_size": 1,
+          "target": 1965
+        },
+        {
+          "full_canonical_resource_lifts": [
+            [
+              6,
+              1,
+              7,
+              3,
+              2,
+              0,
+              5,
+              4
+            ]
+          ],
+          "normalized_resource": 129379,
+          "selected_pin_lift": [
+            6,
+            1,
+            7,
+            3,
+            2,
+            0,
+            5,
+            4
+          ],
+          "source_word_kernel_size": 1,
+          "target": 2234
+        }
+      ],
+      "raw_pinned_count": 8,
+      "self_converse": false,
+      "source": 3187
+    }
+  ],
+  "main_bank_deletion_controls": [
+    {
+      "first_missing": 543,
+      "remaining_coverage": 2034,
+      "source": 650
+    },
+    {
+      "first_missing": 119,
+      "remaining_coverage": 2043,
+      "source": 676
+    },
+    {
+      "first_missing": 228,
+      "remaining_coverage": 2041,
+      "source": 760
+    },
+    {
+      "first_missing": 457,
+      "remaining_coverage": 2040,
+      "source": 776
+    },
+    {
+      "first_missing": 1250,
+      "remaining_coverage": 2045,
+      "source": 789
+    },
+    {
+      "first_missing": 273,
+      "remaining_coverage": 2043,
+      "source": 811
+    },
+    {
+      "first_missing": 119,
+      "remaining_coverage": 2043,
+      "source": 827
+    },
+    {
+      "first_missing": 175,
+      "remaining_coverage": 2042,
+      "source": 862
+    },
+    {
+      "first_missing": 446,
+      "remaining_coverage": 2041,
+      "source": 921
+    },
+    {
+      "first_missing": 10,
+      "remaining_coverage": 2040,
+      "source": 1182
+    },
+    {
+      "first_missing": 116,
+      "remaining_coverage": 2040,
+      "source": 1248
+    },
+    {
+      "first_missing": 68,
+      "remaining_coverage": 2039,
+      "source": 1254
+    },
+    {
+      "first_missing": 604,
+      "remaining_coverage": 2043,
+      "source": 1391
+    },
+    {
+      "first_missing": 68,
+      "remaining_coverage": 2040,
+      "source": 1395
+    },
+    {
+      "first_missing": 667,
+      "remaining_coverage": 2044,
+      "source": 1400
+    },
+    {
+      "first_missing": 390,
+      "remaining_coverage": 2040,
+      "source": 1493
+    },
+    {
+      "first_missing": 76,
+      "remaining_coverage": 2040,
+      "source": 1574
+    },
+    {
+      "first_missing": 168,
+      "remaining_coverage": 2042,
+      "source": 1596
+    },
+    {
+      "first_missing": 308,
+      "remaining_coverage": 2039,
+      "source": 1615
+    },
+    {
+      "first_missing": 168,
+      "remaining_coverage": 2038,
+      "source": 1624
+    },
+    {
+      "first_missing": 187,
+      "remaining_coverage": 2042,
+      "source": 1650
+    },
+    {
+      "first_missing": 225,
+      "remaining_coverage": 2042,
+      "source": 1702
+    },
+    {
+      "first_missing": 210,
+      "remaining_coverage": 2044,
+      "source": 1770
+    },
+    {
+      "first_missing": 340,
+      "remaining_coverage": 2041,
+      "source": 1882
+    },
+    {
+      "first_missing": 49,
+      "remaining_coverage": 2038,
+      "source": 1948
+    },
+    {
+      "first_missing": 413,
+      "remaining_coverage": 2041,
+      "source": 2218
+    },
+    {
+      "first_missing": 206,
+      "remaining_coverage": 2046,
+      "source": 2283
+    },
+    {
+      "first_missing": 568,
+      "remaining_coverage": 2041,
+      "source": 2319
+    },
+    {
+      "first_missing": 256,
+      "remaining_coverage": 2034,
+      "source": 2384
+    },
+    {
+      "first_missing": 340,
+      "remaining_coverage": 2042,
+      "source": 2393
+    },
+    {
+      "first_missing": 714,
+      "remaining_coverage": 2044,
+      "source": 2616
+    },
+    {
+      "first_missing": 431,
+      "remaining_coverage": 2042,
+      "source": 2677
+    },
+    {
+      "first_missing": 368,
+      "remaining_coverage": 2038,
+      "source": 2728
+    },
+    {
+      "first_missing": 68,
+      "remaining_coverage": 2040,
+      "source": 2752
+    },
+    {
+      "first_missing": 1254,
+      "remaining_coverage": 2044,
+      "source": 2798
+    },
+    {
+      "first_missing": 119,
+      "remaining_coverage": 2038,
+      "source": 2983
+    },
+    {
+      "first_missing": 116,
+      "remaining_coverage": 2037,
+      "source": 3105
+    },
+    {
+      "first_missing": 656,
+      "remaining_coverage": 2040,
+      "source": 3111
+    },
+    {
+      "first_missing": 441,
+      "remaining_coverage": 2045,
+      "source": 3137
+    },
+    {
+      "first_missing": 49,
+      "remaining_coverage": 2042,
+      "source": 3139
+    }
+  ],
+  "old_closed_words": 224,
+  "old_slots": 28,
+  "selected_helpers": 53,
+  "source_sha256": {
+    "injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632",
+    "metagraph_order8_20261023/merged_edges.tsv.gz": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "native_packet_decomposition_20261023/native/domains.json": "93e82952e06933273f9d4c47d421a4d4ababe91662c50b62f19fdb7dddd430ca"
+  },
+  "status": "FINITE-EXACT authenticated native supply and surjective charge sections",
+  "two_sum": {
+    "distinct_pairs": 1468,
+    "first_missing": 2,
+    "new_source_alphabet": 72,
+    "with_repeated_labels": 1478
+  }
+}

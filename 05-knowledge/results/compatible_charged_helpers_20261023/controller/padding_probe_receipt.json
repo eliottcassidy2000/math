@@ -1,0 +1,95 @@
+{
+  "status": "PROVED tiny counterexample and forced-padding equivalence, FINITE-EXACT minimality control",
+  "group_invariant_factors": [
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      4
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "label_counts": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "multiset_candidate_cases": 146,
+  "forced_padding_cases": 529,
+  "hostiles": [
+    {
+      "moduli": [
+        2,
+        2
+      ],
+      "labels": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "k": 1,
+      "missing": [
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "K4_charge_matchings": {
+    "1": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "2": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "3": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "checks": 1064
+}

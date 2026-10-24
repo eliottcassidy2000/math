@@ -1,0 +1,5 @@
+__pycache__/
+supply/discovery.json
+supply/uv_discovery.json
+supply/banks_discovery.json
+supply/bank_minimal_discovery.json
