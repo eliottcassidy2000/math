@@ -1,0 +1,28 @@
+{
+  "checkpoint": 3,
+  "files_sha256": {
+    "README.md": "4102e6d4f602f44e3ae6e595f762ae1af8cd71958056065287c5a6b01b6f5a4f",
+    "THEOREM.md": "c3f7491ef121ccda4472e6850a4af27e6346f39d4629323c672aec8fc6108e13",
+    "check.normal.txt": "1064b685127e75c3fab288bd7450edb43043e31ec3ea6a7b5d68b1db123b6670",
+    "check.optimized.txt": "1064b685127e75c3fab288bd7450edb43043e31ec3ea6a7b5d68b1db123b6670",
+    "check.py": "c4d70b8261fcf258c8e934a6c532755d107c9f7f25e6a6e3c510e17f128626df",
+    "fractional_weights.json": "2aaf3d0a1fbb55c0485c2e234abd9b626376b49b0398172e3e673fbf1431b74c",
+    "generate.txt": "20cc463eee14c75f57bfc5a81e25d9dbb977df6c73b7a4befb22d067bd804cba",
+    "native-supply.normal.txt": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "native-supply.optimized.txt": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "quad_packings.json": "3dd637e0253e32ce086c89b0f4d0c439315a73557d25a0f11c46cd50c4d0ffc7",
+    "receipt.json": "2f332327f1aa8e60c51a26f6c579c3605e05d08f935aa4b6d5090cea91647808",
+    "robust_bank46.json": "fbeabab4b65df6d1918157c7a930fc0b773dfeaff54ff97d3093a6edf1f954eb",
+    "robust_bank48.json": "1e4511f36298890b9727c971100fce58ed1135b952afda77c7f085eb026332e4",
+    "upper_transversal.json": "28adcd5f32bd4faab2f4ed7fa41df4e2f2486aee8f8dd0dc92626815b8cedd82"
+  },
+  "scope": "46-helper1U bank; 53-helper occupancy4 survives any13U restrictions by exact integer-weighted dual certificates; explicit15U failure leaves radius13or14; sharp uniform disjoint packing12; exact mixed census; actual physical-row guards; conditional causal theorem; not native supply at all orders.",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "verification": {
+    "native_supply_normal": "PASS50020",
+    "native_supply_optimized": "PASS50020",
+    "normal": "PASS656131",
+    "normal_optimized_identical": true,
+    "optimized": "PASS656131"
+  }
+}

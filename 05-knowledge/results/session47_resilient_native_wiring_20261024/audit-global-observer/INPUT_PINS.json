@@ -1,0 +1,40 @@
+{
+  "inputs": [
+    {
+      "source": "session47-global-observer/THEOREM.md",
+      "snapshot": "inputs/producer-THEOREM.md",
+      "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+      "bytes": 5795
+    },
+    {
+      "source": "session47-global-observer/check.py",
+      "snapshot": "inputs/producer-check.py",
+      "sha256": "0be6e05b3789d2df176bd1d0c4e83f174fbf015de30979c35477f8de4fcf7fb1",
+      "bytes": 4263
+    },
+    {
+      "source": "session47-global-observer/normal.json",
+      "snapshot": "inputs/producer-normal.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "source": "session47-global-observer/optimized.json",
+      "snapshot": "inputs/producer-optimized.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "source": "session35-publication/clean-repo/05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.json",
+      "snapshot": "inputs/shared_owner.json",
+      "sha256": "5266665af6f013ff54a64a5b4b7ef83ac35a8b80c01507ef05cc9ed26d1b6880",
+      "bytes": 115347
+    },
+    {
+      "source": "session35-publication/clean-repo/05-knowledge/results/compatible_charged_helpers_20261023/controller/PARTNER_GLUING.md",
+      "snapshot": "inputs/PARTNER_GLUING.md",
+      "sha256": "706e87766fb10ec99bcbb8d8bd0b2cbf72b02e29d336c5dd173cc134b0ec2aa3",
+      "bytes": 5972
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "ARCHIVAL_REFRESH.json": "c43bf2784f6cf1ab9e1737600dcee3ddae2075d9740fe899a579bf058fcb1149",
+    "AUDIT.md": "e62300482ab4017334451e9eaea3ca33a7bc1c4509310add2f9fc4051cfcc04a",
+    "LAYOUT_CHECKS.json": "b6160d5b006fc95544be51b7ee56b6728d74f6f7d37aad87015c6d47a627f1c9",
+    "PACKAGING_CLOSURE.json": "5e0504b3999f3150c5b4874a71a2a0f9b88c132b2fd580d57cf1b19c313a7308",
+    "README.md": "8b0e1e74fb90d37e23cd20ac3c345f762b8beaa328a2bb9ce0d01d0081a08122",
+    "REVIEWED_INPUTS.json": "17d7ab89470bbe3a6fbc0be163b797842e682f91baaadd7383892c345a3fa84e",
+    "check.py": "d9dd63406b5b795137b6e6bf3ec517a28374a3e41562b3718adc51f51d819c09",
+    "check_manifests.py": "48164cab9bdd652f4713a474fbb17f57d3696110d34a069a32d7323b266d403e",
+    "check_portability.py": "f72c54bf7b901a0d39a5b6b0641c1663a3d2df0adf0ff298621dd7d3d0702d67",
+    "inputs/README.txt": "4665325f898d26b957852af61ae82e577a524e77c27c2bc081a87efa02addb07",
+    "inputs/SHARED_OWNER_REPLAY.json": "3aef52f4221c4548ee68d198aea08341ccd34c776d79c5f4b13480b8d9bebd02",
+    "inputs/SYNTHESIS.txt": "286d7bababc458fec87162ae3cfaa30c931b1e6e35bcaa4267c8de9cdad52807",
+    "inputs/shared_owner.py.txt": "3a77d3e437d67a9943956903ef09d2a1a8a5c7fcd7ff23eca63261f16bd5ace8",
+    "inputs/shared_owner.txt": "9ab76ec02a529eaa91760ae9f88ededf46858194edcac96c3880951dc20f71a5",
+    "manifests.normal.json": "92429f74e001b5d5555e50d3640a73237f9d51de30e0bc6666f9c3ea16c3b73a",
+    "manifests.optimized.json": "92429f74e001b5d5555e50d3640a73237f9d51de30e0bc6666f9c3ea16c3b73a",
+    "normal.json": "700932f826da1fba85045af652477e39d583ed08c201c24267e3a84d754e48fb",
+    "optimized.json": "700932f826da1fba85045af652477e39d583ed08c201c24267e3a84d754e48fb",
+    "verify_manifest.py": "5d5aebc705a4904d939a74b057b55ddbbec5dc25643742eb1fdfd9be48057fd3"
+  },
+  "scope": "Reviewed root synthesis and README, source-document pins, independent compact controls, integrity and manifest-only standalone publication verification. No Git or root/source edits.",
+  "status": "PASS final synthesis review"
+}

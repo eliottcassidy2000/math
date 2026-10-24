@@ -1,0 +1,22 @@
+{
+  "nested_original_manifest_delivered": "inputs/native/MANIFEST.json",
+  "normal_optimized_pairs": 6,
+  "python_isolation": "Every child uses -I and cwd=the temporary renamed copy; no original workspace import fallback. Only manifest-listed files plus the root manifest are copied.",
+  "receipt_sha256": {
+    "guard-completeness.normal.json": "ce806bf7af90bc5850f4bb035d77226c58069494919724aff1707fd199d98147",
+    "guard-completeness.optimized.json": "ce806bf7af90bc5850f4bb035d77226c58069494919724aff1707fd199d98147",
+    "helper-raw.normal.json": "7830c31d1b3e2f44979c3a2a0408d40e88c82384cc5abca733a491c35e6eec42",
+    "helper-raw.optimized.json": "7830c31d1b3e2f44979c3a2a0408d40e88c82384cc5abca733a491c35e6eec42",
+    "normal.json": "bf00b79cc8ea8e7d606bf5e4b1f264d1de70fc49441a4379edfc150673dc9199",
+    "odd-part.normal.json": "325adc95fdb2a924033ff2ec85138ea76034c6a41d2b4b6466df9010c855b317",
+    "odd-part.optimized.json": "325adc95fdb2a924033ff2ec85138ea76034c6a41d2b4b6466df9010c855b317",
+    "optimized.json": "bf00b79cc8ea8e7d606bf5e4b1f264d1de70fc49441a4379edfc150673dc9199",
+    "producer-audit.normal.json": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+    "producer-audit.optimized.json": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+    "producer-native.normal.json": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+    "producer-native.optimized.json": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b"
+  },
+  "scope": "Packaging and path closure only; mathematical proofs and receipt bytes unchanged.",
+  "source_pin_snapshots_delivered": 25,
+  "status": "PASS: standalone manifest-only renamed-package replay"
+}

@@ -1,0 +1,208 @@
+{
+  "files": [
+    {
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not relocated live links.",
+      "bytes": 5647,
+      "expected_sha256": "e336d9057cf8d334caf641961d8e5d717dd965e3dc6e8202a08074ca245e8a5b",
+      "original_locator_verification": "Publisher independently authenticated git-show bytes at this exact commit; hash matches frozen archive. No Git was executed by the audit worker.",
+      "original_ref": "617210b43a9015ec308e048eb2c7e07d3db9d99b",
+      "original_repository_path": "05-knowledge/results/sixslot570_20261024/NATIVE570.md",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/617210b43a9015ec308e048eb2c7e07d3db9d99b/05-knowledge/results/sixslot570_20261024/NATIVE570.md",
+      "sha256": "e336d9057cf8d334caf641961d8e5d717dd965e3dc6e8202a08074ca245e8a5b",
+      "snapshot": "inputs/native/NATIVE570.txt",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/NATIVE570.md"
+    },
+    {
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not relocated live links.",
+      "bytes": 7000,
+      "expected_sha256": "8a1bb04aaf95ca386ebe120fff698b8c2bdf906185e3233d3f2688d989ce353e",
+      "original_locator_verification": "Publisher independently authenticated git-show bytes at this exact commit; hash matches frozen archive. No Git was executed by the audit worker.",
+      "original_ref": "617210b43a9015ec308e048eb2c7e07d3db9d99b",
+      "original_repository_path": "05-knowledge/results/sixslot570_20261024/PORTS.md",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/617210b43a9015ec308e048eb2c7e07d3db9d99b/05-knowledge/results/sixslot570_20261024/PORTS.md",
+      "sha256": "8a1bb04aaf95ca386ebe120fff698b8c2bdf906185e3233d3f2688d989ce353e",
+      "snapshot": "inputs/native/PORTS.txt",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/PORTS.md"
+    },
+    {
+      "bytes": 6302,
+      "expected_sha256": "1064bb654fd57bb009fbe53337fe8288239fde0db372a32eea30ea7bcecfab75",
+      "sha256": "1064bb654fd57bb009fbe53337fe8288239fde0db372a32eea30ea7bcecfab75",
+      "snapshot": "inputs/native/native570.py",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/native570.py"
+    },
+    {
+      "bytes": 4668,
+      "expected_sha256": "3817aca270d64940866fdb0c72c44835850860fe49004acd782bfe3f90f95af8",
+      "sha256": "3817aca270d64940866fdb0c72c44835850860fe49004acd782bfe3f90f95af8",
+      "snapshot": "inputs/native/audit570.py",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/audit570.py"
+    },
+    {
+      "bytes": 2061,
+      "expected_sha256": "9e3e7fc27858cac4de651005f5d4ed0cca9c7f292756f6664f5066029590c794",
+      "sha256": "9e3e7fc27858cac4de651005f5d4ed0cca9c7f292756f6664f5066029590c794",
+      "snapshot": "inputs/native/common.py",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/common.py"
+    },
+    {
+      "bytes": 3964,
+      "expected_sha256": "fa1b5041ab708820552def78a7975b493eb48535ebf379b71616fdf6de7bc518",
+      "sha256": "fa1b5041ab708820552def78a7975b493eb48535ebf379b71616fdf6de7bc518",
+      "snapshot": "inputs/native/shelter.py",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/shelter.py"
+    },
+    {
+      "bytes": 31797,
+      "expected_sha256": "45153820c0d209151f448f14793d002833316b94f60bd9e7914f6e435266c2fc",
+      "sha256": "45153820c0d209151f448f14793d002833316b94f60bd9e7914f6e435266c2fc",
+      "snapshot": "inputs/native/contexts570.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/contexts570.json"
+    },
+    {
+      "bytes": 25078,
+      "expected_sha256": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+      "sha256": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+      "snapshot": "inputs/native/native570.normal.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/native570.normal.json"
+    },
+    {
+      "bytes": 25078,
+      "expected_sha256": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+      "sha256": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b",
+      "snapshot": "inputs/native/native570.optimized.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/native570.optimized.json"
+    },
+    {
+      "bytes": 1213,
+      "expected_sha256": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+      "sha256": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+      "snapshot": "inputs/native/audit570.normal.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/audit570.normal.json"
+    },
+    {
+      "bytes": 1213,
+      "expected_sha256": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+      "sha256": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05",
+      "snapshot": "inputs/native/audit570.optimized.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/audit570.optimized.json"
+    },
+    {
+      "bytes": 8787,
+      "expected_sha256": "752b98295be0843a719bfd7d68ffc9902af7fc482b58e39451c5bf8c9ccbf5cd",
+      "sha256": "752b98295be0843a719bfd7d68ffc9902af7fc482b58e39451c5bf8c9ccbf5cd",
+      "snapshot": "inputs/native/shelter.normal.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/shelter.normal.json"
+    },
+    {
+      "bytes": 3659,
+      "expected_sha256": null,
+      "sha256": "4cf3547c978e6d216d3c078466f0c68acc3c720ce79862c5c695a7d123d2678e",
+      "snapshot": "inputs/native/MANIFEST.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/sixslot570_20261024/MANIFEST.json"
+    },
+    {
+      "bytes": 1201654,
+      "expected_sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+      "snapshot": "inputs/original/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz"
+    },
+    {
+      "bytes": 134104,
+      "expected_sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+      "snapshot": "inputs/original/metagraph_order8_20261023/merged_nodes.tsv",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv"
+    },
+    {
+      "bytes": 3357288,
+      "expected_sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+      "snapshot": "inputs/original/metagraph_order8_20261023/owner_map.u16.gz",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz"
+    },
+    {
+      "bytes": 530173,
+      "expected_sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+      "snapshot": "inputs/original/metagraph_order8_electrical_20261023/receipt.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json"
+    },
+    {
+      "bytes": 23249,
+      "expected_sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a",
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a",
+      "snapshot": "inputs/original/session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json"
+    },
+    {
+      "bytes": 434734,
+      "expected_sha256": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+      "sha256": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+      "snapshot": "inputs/original/compatible_charged_helpers_20261023/supply/selected_supply.json",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/compatible_charged_helpers_20261023/supply/selected_supply.json"
+    },
+    {
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not relocated live links.",
+      "bytes": 15164,
+      "expected_sha256": null,
+      "original_locator_verification": "Publisher independently authenticated git-show bytes at this exact commit; hash matches frozen archive. No Git was executed by the audit worker.",
+      "original_ref": "cf87f98a581089b3f84d3fee16324195ab976e1e",
+      "original_repository_path": "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/cf87f98a581089b3f84d3fee16324195ab976e1e/05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632",
+      "snapshot": "inputs/original/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.txt",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md"
+    },
+    {
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not relocated live links.",
+      "bytes": 8903,
+      "expected_sha256": null,
+      "original_locator_verification": "Publisher independently authenticated git-show bytes at this exact commit; hash matches frozen archive. No Git was executed by the audit worker.",
+      "original_ref": "cf87f98a581089b3f84d3fee16324195ab976e1e",
+      "original_repository_path": "05-knowledge/results/metagraph_order8_electrical_20261023/README.md",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/cf87f98a581089b3f84d3fee16324195ab976e1e/05-knowledge/results/metagraph_order8_electrical_20261023/README.md",
+      "sha256": "8a6862aa6315e38ccab785308e2510ffc713d99998e4f76ec2746babe4ff2adb",
+      "snapshot": "inputs/original/metagraph_order8_electrical_20261023/README.txt",
+      "source_path": "session35-publication/clean-repo/05-knowledge/results/metagraph_order8_electrical_20261023/README.md"
+    },
+    {
+      "archive_format": "Byte-identical plain-text archival snapshot of original Markdown; embedded relative links are archival source text, not relocated live links.",
+      "bytes": 9622,
+      "expected_sha256": null,
+      "original_locator_verification": "Publisher independently authenticated git-show bytes at this exact commit; hash matches frozen archive. No Git was executed by the audit worker.",
+      "original_ref": "cf87f98a581089b3f84d3fee16324195ab976e1e",
+      "original_repository_path": "05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/AUDIT.md",
+      "original_url": "https://github.com/eliottcassidy2000/math/blob/cf87f98a581089b3f84d3fee16324195ab976e1e/05-knowledge/results/session45_injective_multisource_moves_20261023/audit-dyadic/AUDIT.md",
+      "sha256": "a280f561fcea18934e214f487d4cc6755b5616f25425017e292baa8b5cbcec29",
+      "snapshot": "inputs/guard-theorem/AUDIT.txt",
+      "source_path": "session45-audit-dyadic/AUDIT.md"
+    },
+    {
+      "bytes": 6674,
+      "expected_sha256": null,
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0",
+      "snapshot": "inputs/guard-theorem/normal.json",
+      "source_path": "session45-audit-dyadic/normal.json"
+    },
+    {
+      "bytes": 11956,
+      "expected_sha256": null,
+      "sha256": "2241234835a59041f1a000bb43470e7999d9827f44d495d4560b4060cc89155e",
+      "snapshot": "inputs/guard-theorem/audit.py",
+      "source_path": "session45-audit-dyadic/audit.py"
+    },
+    {
+      "bytes": 459092,
+      "expected_sha256": null,
+      "sha256": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429",
+      "snapshot": "inputs/guard-theorem/node_labels.json",
+      "source_path": "session45-dyadic-constraints/node_labels.json"
+    }
+  ],
+  "incoming_helper_revision_from_producer": "1d94c1d1d9",
+  "incoming_revision_reported_by_parent": "617210b43a9015ec308e048eb2c7e07d3db9d99b",
+  "note": "No Git command used. Native manifest and historical-input hashes independently checked against materialized bytes before snapshot. Incoming Git commit identity is supplied by the parent, not re-established here.",
+  "original_revision_from_producer": "cf87f98a581089b3f84d3fee16324195ab976e1e"
+}

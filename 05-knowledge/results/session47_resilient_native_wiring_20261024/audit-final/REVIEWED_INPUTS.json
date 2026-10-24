@@ -1,0 +1,136 @@
+{
+  "documents": [
+    {
+      "bytes": 17033,
+      "sha256": "286d7bababc458fec87162ae3cfaa30c931b1e6e35bcaa4267c8de9cdad52807",
+      "snapshot": "inputs/SYNTHESIS.txt",
+      "source_path": "session47-root/final/SYNTHESIS.md"
+    },
+    {
+      "bytes": 4755,
+      "sha256": "4665325f898d26b957852af61ae82e577a524e77c27c2bc081a87efa02addb07",
+      "snapshot": "inputs/README.txt",
+      "source_path": "session47-root/final/README.md"
+    },
+    {
+      "bytes": 19209,
+      "sha256": "c3f7491ef121ccda4472e6850a4af27e6346f39d4629323c672aec8fc6108e13",
+      "source_path": "session47-helper-resilience/final-v3/THEOREM.md"
+    },
+    {
+      "bytes": 7578,
+      "sha256": "385ec19ed8bf689ad55adefb0c783e52b1629e9a00d2017b61cd78bd8cd7e033",
+      "source_path": "session47-audit-helper-resilience/third-audit/AUDIT.md"
+    },
+    {
+      "bytes": 14937,
+      "sha256": "e3a16dae8748c2a4cdb48fff6d7801a454e79a7c4442ad04b37c15161e8ad2d2",
+      "source_path": "session47-clock-connectivity/THEOREM.md"
+    },
+    {
+      "bytes": 6190,
+      "sha256": "fb100ea02fd5b50ef3918a0ef1bce377b5aec58572286ffd2fc4852a8fb0b49b",
+      "source_path": "session47-clock-connectivity/SHEET_GLUING.md"
+    },
+    {
+      "bytes": 5718,
+      "sha256": "d979c60430333b11f4f6e5ba2f19d2baabf1af9aa082ffd2aa481142a22272ee",
+      "source_path": "session47-owner-cycle-primes/THEOREM.md"
+    },
+    {
+      "bytes": 18394,
+      "sha256": "8dd37964e88e3f586d32b4092bbcc5328e4b441e5343decb4e8c020d992f1930",
+      "source_path": "session47-carrier-transfer/TRANSFER.md"
+    },
+    {
+      "bytes": 5967,
+      "sha256": "72ed7fde07f26c945dba2db4076954e1277f361f714e3385521858fef0842d4a",
+      "source_path": "session47-carrier-transfer/SUSPENSION.md"
+    },
+    {
+      "bytes": 6843,
+      "sha256": "f5201c88ea1c2250624667d98df7e4b5643a19f5c083c6a9f6b9fb9027016692",
+      "source_path": "session47-carrier-transfer/five-to-seven/OBSTRUCTION.md"
+    },
+    {
+      "bytes": 12725,
+      "sha256": "0dc35db449f49686d09b84f65b86d2a0f3535ada7bc15f3d07f9e6bc49bf15c6",
+      "source_path": "session47-audit-carrier-transfer/AUDIT.md"
+    },
+    {
+      "bytes": 6234,
+      "sha256": "658cbb6fe2ab6efcca748c3811b1f1a41089f332cd46f9b9afbbe2bea01aabfe",
+      "source_path": "session47-audit-carrier-transfer/NATIVE_AUDIT.md"
+    },
+    {
+      "bytes": 9166,
+      "sha256": "38ad275cbbcf6c2c48c23a71cf45cc3bdb27707b552570aacb59e2714913c91b",
+      "source_path": "session47-audit-suspension-obstruction/AUDIT.md"
+    },
+    {
+      "bytes": 5616,
+      "sha256": "8dc2e609e83767a2d24d499510ae5e23600cb56f3ef264df98097d70d141676c",
+      "source_path": "session47-suspension-obstruction/THEOREM.md"
+    },
+    {
+      "bytes": 4205,
+      "sha256": "ad8438213cb952f536b0ee3773a5051ce84bb7c13ddea2c3c6907c7da40cc6a6",
+      "source_path": "session47-suspension-obstruction/BOUNDARY_GENERATING_FUNCTION.md"
+    },
+    {
+      "bytes": 15461,
+      "sha256": "8762dd7f511ecae6ae89369c1c6c118f57e5c502eefe546ce4ce5a7c00829744",
+      "source_path": "session47-audit-wiring-theory/PROOF_AUDIT.md"
+    },
+    {
+      "bytes": 5795,
+      "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+      "source_path": "session47-global-observer/THEOREM.md"
+    },
+    {
+      "bytes": 8486,
+      "sha256": "74d3d9c05bb8be0969bf3a4ce09acf0e012c750c8f30d6eae950d9b3a3a46abf",
+      "source_path": "session47-audit-global-observer/PROOF_AUDIT.md"
+    },
+    {
+      "bytes": 20509,
+      "sha256": "3104afcd5d6be54ce52d89b5e5c5ce11ecf9e1d6bc377db2903b58c4d259c58a",
+      "source_path": "session47-bottleneck-theory/THEOREM.md"
+    },
+    {
+      "bytes": 4945,
+      "sha256": "196072c89bff65839b44419996b5f597f06714cbbdf79ab5d6643cbd05a11091",
+      "source_path": "session47-bottleneck-theory/SUPPLY_TO_ROUTE.md"
+    },
+    {
+      "bytes": 16787,
+      "sha256": "22b543a53fd6518a8c8c716abe2d73bde164b8b53e561bfbe0e0340522e6c0cf",
+      "source_path": "session47-audit-fresh570/PROOF.md"
+    },
+    {
+      "bytes": 7353,
+      "sha256": "54f2e396c17e9a48611ff0c0dd13e0731da874b90cb86ffd4b14ecdb18530956",
+      "source_path": "session47-audit-fresh570/AUDIT.md"
+    },
+    {
+      "bytes": 794,
+      "sha256": "3aef52f4221c4548ee68d198aea08341ccd34c776d79c5f4b13480b8d9bebd02",
+      "snapshot": "inputs/SHARED_OWNER_REPLAY.json",
+      "source_path": "session47-root/final/SHARED_OWNER_REPLAY.json"
+    },
+    {
+      "bytes": 8240,
+      "original_source_path": "session35-publication/clean-repo/05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.md",
+      "sha256": "9ab76ec02a529eaa91760ae9f88ededf46858194edcac96c3880951dc20f71a5",
+      "source_path": "session47-audit-final/inputs/shared_owner.txt"
+    },
+    {
+      "bytes": 16646,
+      "original_source_path": "session35-publication/clean-repo/05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.py",
+      "sha256": "3a77d3e437d67a9943956903ef09d2a1a8a5c7fcd7ff23eca63261f16bd5ace8",
+      "source_path": "session47-audit-final/inputs/shared_owner.py.txt"
+    }
+  ],
+  "scope": "Exact source documents reviewed for final synthesis, plus archival root snapshots.",
+  "status": "PASS"
+}

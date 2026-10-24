@@ -1,0 +1,9 @@
+{
+  "auto_discovery_published_sibling_layout": true,
+  "explicit_producer_dir": true,
+  "math_and_counts_unchanged": true,
+  "portable_receipt_matches_original": true,
+  "receipt_sha256": "ab79934b5f9c14485865ae255396e32d1fe322271a72b3a4c49b0f87004a9685",
+  "run_from_unrelated_working_directory": true,
+  "status": "PASS"
+}

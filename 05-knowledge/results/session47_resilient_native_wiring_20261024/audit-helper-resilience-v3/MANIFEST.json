@@ -1,0 +1,19 @@
+{
+  "files": {
+    "AUDIT.md": "385ec19ed8bf689ad55adefb0c783e52b1629e9a00d2017b61cd78bd8cd7e033",
+    "SOURCE_PINS.json": "031cd0a8a46b2b2367b666035fd3058bdb37bce1a7f0655bb79442d34115a335",
+    "check.py": "f354bea1255d52a0af32c42695bb22891fffe084e6a63264456ee3b72e5d128d",
+    "fractional_weights.json": "2aaf3d0a1fbb55c0485c2e234abd9b626376b49b0398172e3e673fbf1431b74c",
+    "normal.json": "debe245daabd3e0e31778ac14a5cb9b065e4ee62cde831cbb8dedc21e1fc01d7",
+    "optimized.json": "debe245daabd3e0e31778ac14a5cb9b065e4ee62cde831cbb8dedc21e1fc01d7",
+    "producer-v3-normal.log": "1064b685127e75c3fab288bd7450edb43043e31ec3ea6a7b5d68b1db123b6670",
+    "producer-v3-optimized.log": "1064b685127e75c3fab288bd7450edb43043e31ec3ea6a7b5d68b1db123b6670",
+    "quad_packings12.json": "3dd637e0253e32ce086c89b0f4d0c439315a73557d25a0f11c46cd50c4d0ffc7",
+    "receipt.json": "debe245daabd3e0e31778ac14a5cb9b065e4ee62cde831cbb8dedc21e1fc01d7",
+    "robust_bank46.json": "fbeabab4b65df6d1918157c7a930fc0b773dfeaff54ff97d3093a6edf1f954eb",
+    "robust_bank48.json": "1e4511f36298890b9727c971100fce58ed1135b952afda77c7f085eb026332e4",
+    "upper_transversal.json": "28adcd5f32bd4faab2f4ed7fa41df4e2f2486aee8f8dd0dc92626815b8cedd82",
+    "verify_manifest.py": "44f048c46280f58f0314b2f85c34a9c4baaf771cc45df299df78d0b8c2403a39"
+  },
+  "status": "FROZEN THIRD EXACT INTEGER WEIGHTED RESILIENCE AUDIT"
+}

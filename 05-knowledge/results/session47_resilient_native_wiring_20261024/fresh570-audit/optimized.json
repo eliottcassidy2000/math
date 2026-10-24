@@ -1,0 +1,701 @@
+{
+  "accepted_target_choices": [
+    [
+      570,
+      570,
+      2234,
+      2234
+    ],
+    [
+      2234,
+      2234,
+      570,
+      570
+    ]
+  ],
+  "boundaries": [
+    "Old28 slots fixed; fresh endpoints move while common clocks are fixed.",
+    "Zero fresh margins outside570/2234 are essential to binary filtering.",
+    "Initial and final570 population is2; not entry fromzero.",
+    "Exact integer X current is not preserved.",
+    "No global minimum work23 or arbitrary72-slot fibre connectivity claim.",
+    "No order10 harmonic transfer or Collatz consequence.",
+    "One shared new anchor, private other local owners; no common-host amalgam.",
+    "Compatible unchanged remainder must avoid every reserved alternative."
+  ],
+  "checks": 580,
+  "delta_L": [
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      2,
+      -2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      -2,
+      2
+    ],
+    [
+      2,
+      2,
+      -2,
+      -2,
+      0,
+      0
+    ],
+    [
+      -2,
+      -2,
+      2,
+      2,
+      0,
+      0
+    ]
+  ],
+  "dyadic_scope": "Complete all-dyadic conclusion uses independently audited original 2-primary classification, not the unsupported claim that the full critical-group exponent is256. Original-bank inclusion only.",
+  "fresh_slots": [
+    {
+      "complete_target_capacities": {
+        "2234": 1,
+        "570": 1
+      },
+      "extra_raw_paths": 50,
+      "fixed_clock_owners": [
+        [
+          6,
+          0
+        ]
+      ],
+      "paired_label": [
+        4,
+        35
+      ],
+      "paths": [
+        {
+          "canonical_isomorphism": {
+            "converse": true,
+            "to_canonical_a_or_converse": [
+              0,
+              1,
+              3,
+              2,
+              4,
+              5,
+              7,
+              6
+            ]
+          },
+          "closed_words": [
+            704633,
+            766929,
+            1330222,
+            1392518
+          ],
+          "path": [
+            3,
+            7,
+            6,
+            2,
+            1,
+            4,
+            0,
+            5
+          ],
+          "target": 570,
+          "word": 1392518
+        },
+        {
+          "canonical_isomorphism": {
+            "converse": true,
+            "to_canonical_a_or_converse": [
+              1,
+              0,
+              2,
+              3,
+              5,
+              6,
+              4,
+              7
+            ]
+          },
+          "closed_words": [
+            636601,
+            958541,
+            1138610,
+            1460550
+          ],
+          "path": [
+            6,
+            4,
+            2,
+            7,
+            5,
+            1,
+            0,
+            3
+          ],
+          "target": 2234,
+          "word": 636601
+        }
+      ],
+      "pinned_paths": 52,
+      "raw_targets": {
+        "28": 1,
+        "81": 1,
+        "176": 1,
+        "307": 1,
+        "311": 1,
+        "383": 1,
+        "510": 1,
+        "512": 1,
+        "537": 1,
+        "570": 1,
+        "602": 1,
+        "615": 1,
+        "618": 1,
+        "687": 1,
+        "759": 1,
+        "785": 2,
+        "821": 1,
+        "922": 2,
+        "1143": 1,
+        "1158": 1,
+        "1161": 1,
+        "1181": 1,
+        "1246": 1,
+        "1328": 1,
+        "1335": 1,
+        "1353": 1,
+        "1359": 1,
+        "1396": 1,
+        "1518": 1,
+        "1537": 1,
+        "1539": 1,
+        "1554": 1,
+        "1576": 1,
+        "1646": 1,
+        "1676": 1,
+        "1686": 1,
+        "1771": 1,
+        "1830": 1,
+        "1831": 1,
+        "1913": 1,
+        "1914": 1,
+        "1951": 1,
+        "1999": 1,
+        "2150": 1,
+        "2234": 1,
+        "2235": 1,
+        "2257": 1,
+        "2450": 1,
+        "2987": 1,
+        "3321": 1
+      },
+      "source": 1130,
+      "source_X": 163,
+      "work": 7
+    },
+    {
+      "complete_target_capacities": {
+        "2234": 1,
+        "570": 1
+      },
+      "extra_raw_paths": 29,
+      "fixed_clock_owners": [
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "paired_label": [
+        15,
+        91
+      ],
+      "paths": [
+        {
+          "canonical_isomorphism": {
+            "converse": false,
+            "to_canonical_a_or_converse": [
+              6,
+              5,
+              7,
+              4,
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          "closed_words": [
+            528497,
+            781277,
+            1315874,
+            1568654
+          ],
+          "path": [
+            2,
+            0,
+            3,
+            1,
+            7,
+            6,
+            5,
+            4
+          ],
+          "target": 570,
+          "word": 1315874
+        },
+        {
+          "canonical_isomorphism": {
+            "converse": false,
+            "to_canonical_a_or_converse": [
+              3,
+              7,
+              4,
+              5,
+              6,
+              1,
+              2,
+              0
+            ]
+          },
+          "closed_words": [
+            215433,
+            925555,
+            1171596,
+            1881718
+          ],
+          "path": [
+            6,
+            5,
+            4,
+            1,
+            7,
+            3,
+            2,
+            0
+          ],
+          "target": 2234,
+          "word": 925555
+        }
+      ],
+      "pinned_paths": 31,
+      "raw_targets": {
+        "30": 1,
+        "82": 1,
+        "125": 1,
+        "126": 1,
+        "128": 1,
+        "228": 1,
+        "375": 1,
+        "445": 1,
+        "465": 1,
+        "558": 1,
+        "570": 1,
+        "761": 1,
+        "818": 1,
+        "832": 1,
+        "838": 1,
+        "912": 1,
+        "930": 1,
+        "1023": 1,
+        "1063": 1,
+        "1145": 1,
+        "1490": 1,
+        "1522": 1,
+        "1664": 1,
+        "1675": 2,
+        "1684": 1,
+        "1844": 1,
+        "1909": 1,
+        "2234": 1,
+        "2482": 1,
+        "2569": 1
+      },
+      "source": 1673,
+      "source_X": 219,
+      "work": 6
+    },
+    {
+      "complete_target_capacities": {
+        "2234": 1,
+        "570": 3
+      },
+      "extra_raw_paths": 36,
+      "fixed_clock_owners": [
+        [
+          6,
+          4
+        ]
+      ],
+      "paired_label": [
+        3,
+        81
+      ],
+      "paths": [
+        {
+          "canonical_isomorphism": {
+            "converse": true,
+            "to_canonical_a_or_converse": [
+              1,
+              0,
+              2,
+              4,
+              3,
+              6,
+              5,
+              7
+            ]
+          },
+          "closed_words": [
+            613358,
+            1045162,
+            1051989,
+            1483793
+          ],
+          "path": [
+            2,
+            1,
+            0,
+            7,
+            6,
+            5,
+            4,
+            3
+          ],
+          "target": 570,
+          "word": 1483793
+        },
+        {
+          "canonical_isomorphism": {
+            "converse": false,
+            "to_canonical_a_or_converse": [
+              7,
+              4,
+              3,
+              5,
+              6,
+              2,
+              0,
+              1
+            ]
+          },
+          "closed_words": [
+            252500,
+            433804,
+            1663347,
+            1844651
+          ],
+          "path": [
+            5,
+            3,
+            2,
+            0,
+            7,
+            6,
+            4,
+            1
+          ],
+          "target": 2234,
+          "word": 1663347
+        }
+      ],
+      "pinned_paths": 38,
+      "raw_targets": {
+        "88": 1,
+        "391": 1,
+        "410": 1,
+        "413": 1,
+        "474": 1,
+        "508": 2,
+        "570": 1,
+        "571": 1,
+        "578": 1,
+        "599": 1,
+        "627": 1,
+        "807": 1,
+        "857": 1,
+        "1143": 1,
+        "1144": 1,
+        "1216": 1,
+        "1429": 1,
+        "1548": 1,
+        "1602": 1,
+        "1638": 1,
+        "1687": 1,
+        "1933": 1,
+        "1993": 1,
+        "2136": 1,
+        "2146": 1,
+        "2177": 1,
+        "2234": 1,
+        "2314": 1,
+        "2449": 1,
+        "2523": 1,
+        "2546": 1,
+        "2737": 1,
+        "2898": 1,
+        "3032": 1,
+        "3239": 1,
+        "3330": 1,
+        "3347": 1
+      },
+      "source": 1754,
+      "source_X": 209,
+      "work": 7
+    },
+    {
+      "complete_target_capacities": {
+        "2234": 1,
+        "570": 3
+      },
+      "extra_raw_paths": 2,
+      "fixed_clock_owners": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "paired_label": [
+        8,
+        45
+      ],
+      "paths": [
+        {
+          "canonical_isomorphism": {
+            "converse": true,
+            "to_canonical_a_or_converse": [
+              1,
+              2,
+              0,
+              3,
+              5,
+              4,
+              7,
+              6
+            ]
+          },
+          "closed_words": [
+            446601,
+            960435,
+            1136716,
+            1650550
+          ],
+          "path": [
+            2,
+            0,
+            7,
+            3,
+            1,
+            5,
+            6,
+            4
+          ],
+          "target": 570,
+          "word": 1136716
+        },
+        {
+          "canonical_isomorphism": {
+            "converse": false,
+            "to_canonical_a_or_converse": [
+              7,
+              5,
+              4,
+              6,
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          "closed_words": [
+            743526,
+            954542,
+            1142609,
+            1353625
+          ],
+          "path": [
+            4,
+            0,
+            7,
+            3,
+            2,
+            5,
+            6,
+            1
+          ],
+          "target": 2234,
+          "word": 743526
+        }
+      ],
+      "pinned_paths": 4,
+      "raw_targets": {
+        "183": 1,
+        "336": 1,
+        "570": 1,
+        "2234": 1
+      },
+      "source": 2678,
+      "source_X": 45,
+      "work": 3
+    }
+  ],
+  "integer_X_current_delta": {
+    "570": 256,
+    "1130": 0,
+    "1673": 0,
+    "1754": 0,
+    "2234": -256,
+    "2678": 0
+  },
+  "margin_two_configurations": 6,
+  "physical_rows": [
+    1130,
+    1673,
+    1754,
+    2678,
+    570,
+    2234
+  ],
+  "raw_joint_configurations": 245024,
+  "rejected_target_choices": [
+    {
+      "separator": {
+        "character": 0,
+        "physical_row": 570,
+        "residual_mod256": 20
+      },
+      "target_choices": [
+        570,
+        2234,
+        570,
+        2234
+      ]
+    },
+    {
+      "separator": {
+        "character": 0,
+        "physical_row": 570,
+        "residual_mod256": 92
+      },
+      "target_choices": [
+        570,
+        2234,
+        2234,
+        570
+      ]
+    },
+    {
+      "separator": {
+        "character": 0,
+        "physical_row": 570,
+        "residual_mod256": 164
+      },
+      "target_choices": [
+        2234,
+        570,
+        570,
+        2234
+      ]
+    },
+    {
+      "separator": {
+        "character": 0,
+        "physical_row": 570,
+        "residual_mod256": 236
+      },
+      "target_choices": [
+        2234,
+        570,
+        2234,
+        570
+      ]
+    }
+  ],
+  "resource_counts": {
+    "fresh_occupied": 4,
+    "fresh_reserved": 8,
+    "old28_plus_fresh_occupied": 32,
+    "old28_plus_fresh_reserved": 64,
+    "with_all53_occupied": 85,
+    "with_all53_reserved": 170,
+    "with_main40_occupied": 72,
+    "with_main40_reserved": 144
+  },
+  "status": "PASS: independent native570 finite certificate, with 2-primary-exponent wording correction",
+  "target_score_multisets": {
+    "570": [
+      2,
+      2,
+      2,
+      3,
+      4,
+      5,
+      5,
+      5
+    ],
+    "1965": [
+      2,
+      3,
+      3,
+      3,
+      3,
+      4,
+      5,
+      5
+    ],
+    "2234": [
+      2,
+      2,
+      3,
+      4,
+      4,
+      4,
+      4,
+      5
+    ]
+  },
+  "work": 23
+}

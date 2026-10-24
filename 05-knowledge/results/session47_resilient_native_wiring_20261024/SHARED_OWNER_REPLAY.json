@@ -1,0 +1,14 @@
+{
+  "commands": [
+    "python3 -B 05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.py",
+    "python3 -O -B 05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.py"
+  ],
+  "normal_output": "PASS 8,699; shared_owner.json matches",
+  "optimized_output": "PASS 8,699; shared_owner.json matches",
+  "scope": "Unchanged incoming native moving-owner construction replay, not a new theorem",
+  "source_hashes": {
+    "05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.json": "5266665af6f013ff54a64a5b4b7ef83ac35a8b80c01507ef05cc9ed26d1b6880",
+    "05-knowledge/results/compatible_charged_helpers_20261023/supply/shared_owner.py": "3a77d3e437d67a9943956903ef09d2a1a8a5c7fcd7ff23eca63261f16bd5ace8"
+  },
+  "status": "PASS"
+}

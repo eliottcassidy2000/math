@@ -40,7 +40,7 @@ Both pairs sum to (11,126) in (Z/2)^4 plus Z/128. Both targets have label
 (11,18) and original X=146. For u=e_1130+e_1673-e_1754-e_2678 and
 v=e_570-e_2234 the actual paired edge change is Delta L=2(u v^t+v u^t).
 The authenticated original charge theorem makes2u and2v annihilate every
-original harmonic character mod256. The original critical-group exponent256
+original harmonic character mod256. The original 2-primary critical-group exponent256
 then gives every genuine dyadic level. The actual harmonic equations and
 physical current rows are checked, without splitting owner-role copies.
 

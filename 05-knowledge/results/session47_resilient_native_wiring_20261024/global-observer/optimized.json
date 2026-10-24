@@ -1,0 +1,28 @@
+{
+  "all_four_owner_flag_instances": 46656,
+  "checks": 145809,
+  "native_host_obstructions": [
+    {
+      "branch": 2,
+      "core": "U",
+      "helper": "V",
+      "successors": [
+        3,
+        12
+      ]
+    },
+    {
+      "branch": 6,
+      "core": "V",
+      "helper": "U",
+      "successors": [
+        3,
+        12
+      ]
+    }
+  ],
+  "scope": "Exact all-flag four-owner compiler controls, selected one-global-clock and converse controls, plus incoming local-host global-observer obstruction.",
+  "single_global_pin_instances": 93312,
+  "source_sha256": "5266665af6f013ff54a64a5b4b7ef83ac35a8b80c01507ef05cc9ed26d1b6880",
+  "status": "PASS"
+}

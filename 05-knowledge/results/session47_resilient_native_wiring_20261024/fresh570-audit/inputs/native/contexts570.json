@@ -1,0 +1,2462 @@
+{
+  "best": {
+    "indexed_internal_arc": {
+      "after": {
+        "path": [
+          4,
+          2,
+          0,
+          7,
+          3,
+          5,
+          6,
+          1
+        ],
+        "target": 2234,
+        "word": 953509
+      },
+      "before": {
+        "path": [
+          2,
+          1,
+          0,
+          7,
+          3,
+          5,
+          6,
+          4
+        ],
+        "target": 570,
+        "word": 1476869
+      },
+      "cost": 3,
+      "existing_source": false,
+      "fixed_clocks": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "indexed_arcs": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": 2393,
+      "source_label": [
+        11,
+        0
+      ],
+      "target": 2234
+    },
+    "unrestricted": {
+      "after": {
+        "path": [
+          4,
+          2,
+          0,
+          7,
+          3,
+          5,
+          6,
+          1
+        ],
+        "target": 2234,
+        "word": 953509
+      },
+      "before": {
+        "path": [
+          2,
+          1,
+          0,
+          7,
+          3,
+          5,
+          6,
+          4
+        ],
+        "target": 570,
+        "word": 1476869
+      },
+      "cost": 3,
+      "existing_source": false,
+      "fixed_clocks": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "indexed_arcs": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "source": 2393,
+      "source_label": [
+        11,
+        0
+      ],
+      "target": 2234
+    }
+  },
+  "counts": {
+    "common_source_pairs": 53,
+    "indexed_internal_arc": 9,
+    "unrestricted": 87
+  },
+  "input_revision": "cf87f98a581089b3f84d3fee16324195ab976e1e",
+  "inputs": {
+    "metagraph_order8_20261023/merged_nodes.tsv": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "metagraph_order8_20261023/owner_map.u16.gz": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a",
+    "metagraph_order8_electrical_20261023/receipt.json": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "session45_injective_multisource_moves_20261023/multisource-trades/target_pair_inventory.json": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+  },
+  "pairs": [
+    {
+      "after_path": [
+        5,
+        4,
+        6,
+        2,
+        0,
+        3,
+        7,
+        1
+      ],
+      "before_path": [
+        3,
+        7,
+        6,
+        2,
+        0,
+        5,
+        1,
+        4
+      ],
+      "cost": 5,
+      "fixed": [
+        2,
+        3,
+        4
+      ],
+      "source": 508,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        4,
+        0,
+        7,
+        5,
+        1,
+        2,
+        3
+      ],
+      "before_path": [
+        2,
+        6,
+        3,
+        5,
+        1,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 749,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        1,
+        0,
+        7,
+        5,
+        4,
+        3,
+        2
+      ],
+      "before_path": [
+        5,
+        4,
+        2,
+        1,
+        0,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 891,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        1,
+        5,
+        7,
+        3,
+        2,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        2,
+        1,
+        5,
+        0,
+        7,
+        6,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 928,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        1,
+        2,
+        7,
+        5,
+        4,
+        0,
+        3
+      ],
+      "before_path": [
+        2,
+        7,
+        3,
+        6,
+        4,
+        1,
+        0,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 930,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        1,
+        2,
+        5,
+        3,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        3,
+        6,
+        5,
+        1,
+        0,
+        7,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        3
+      ],
+      "source": 944,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        6,
+        4,
+        7,
+        3,
+        1,
+        0
+      ],
+      "before_path": [
+        3,
+        0,
+        7,
+        6,
+        5,
+        2,
+        1,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 1066,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        6,
+        4,
+        7,
+        3,
+        1,
+        0
+      ],
+      "before_path": [
+        3,
+        1,
+        0,
+        7,
+        5,
+        2,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1066,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        6,
+        4,
+        7,
+        3,
+        1,
+        0
+      ],
+      "before_path": [
+        3,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        2
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1066,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        3,
+        0,
+        7,
+        2,
+        1
+      ],
+      "before_path": [
+        3,
+        0,
+        7,
+        6,
+        5,
+        2,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1066,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        3,
+        0,
+        7,
+        2,
+        1
+      ],
+      "before_path": [
+        3,
+        1,
+        0,
+        7,
+        5,
+        2,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1066,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        3,
+        0,
+        7,
+        2,
+        1
+      ],
+      "before_path": [
+        3,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        2
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1066,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        4,
+        2,
+        7,
+        5,
+        1,
+        0,
+        3
+      ],
+      "before_path": [
+        3,
+        7,
+        6,
+        2,
+        1,
+        4,
+        0,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 1130,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        1,
+        5,
+        6,
+        7,
+        3,
+        2,
+        0
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        5,
+        6,
+        3,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        1
+      ],
+      "source": 1157,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        6,
+        3,
+        7,
+        2,
+        1,
+        0
+      ],
+      "before_path": [
+        3,
+        7,
+        5,
+        6,
+        2,
+        1,
+        0,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1269,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        5,
+        1,
+        0,
+        4,
+        3,
+        2
+      ],
+      "before_path": [
+        5,
+        7,
+        6,
+        3,
+        2,
+        1,
+        0,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1293,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        1,
+        0,
+        3,
+        7,
+        5,
+        4,
+        2
+      ],
+      "before_path": [
+        3,
+        7,
+        6,
+        2,
+        1,
+        4,
+        0,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1297,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        5,
+        1,
+        7,
+        4,
+        3,
+        2
+      ],
+      "before_path": [
+        5,
+        2,
+        0,
+        4,
+        1,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1445,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        4,
+        1,
+        0,
+        3,
+        6,
+        5,
+        2
+      ],
+      "before_path": [
+        3,
+        6,
+        2,
+        0,
+        5,
+        1,
+        7,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        3
+      ],
+      "source": 1450,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        6,
+        2,
+        1,
+        4,
+        7,
+        3,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        5,
+        6,
+        3,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1457,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        3,
+        2,
+        1,
+        4,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        5,
+        6,
+        3,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1457,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        2,
+        0,
+        5,
+        7,
+        6,
+        3,
+        1
+      ],
+      "before_path": [
+        2,
+        0,
+        3,
+        7,
+        6,
+        5,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1459,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        1,
+        4,
+        0,
+        3,
+        7,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        3,
+        7,
+        6,
+        5,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1459,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        1,
+        5,
+        3,
+        2,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        6,
+        2,
+        1,
+        5,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1473,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        3,
+        4,
+        6,
+        7,
+        2,
+        1,
+        0
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        3,
+        6,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1483,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        0,
+        7,
+        2,
+        6,
+        3,
+        5,
+        1
+      ],
+      "before_path": [
+        2,
+        6,
+        3,
+        4,
+        1,
+        0,
+        7,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1501,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        3,
+        1,
+        4,
+        0,
+        5,
+        2
+      ],
+      "before_path": [
+        3,
+        2,
+        0,
+        7,
+        6,
+        5,
+        1,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1564,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        0,
+        5,
+        4,
+        6,
+        3,
+        2,
+        1
+      ],
+      "before_path": [
+        4,
+        2,
+        1,
+        0,
+        5,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1596,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        3,
+        4,
+        1,
+        0,
+        5,
+        2
+      ],
+      "before_path": [
+        4,
+        2,
+        1,
+        0,
+        5,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1596,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        2,
+        1,
+        3,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        6,
+        5,
+        4,
+        1,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1637,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        2,
+        1,
+        3,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        5,
+        4,
+        6,
+        3
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 1637,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        2,
+        1,
+        3,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        3,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1637,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        2,
+        5,
+        4,
+        1,
+        0,
+        7,
+        3
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        6,
+        3,
+        1,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1646,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        1,
+        7,
+        3,
+        2,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        3,
+        1,
+        7,
+        6,
+        5,
+        4
+      ],
+      "cost": 6,
+      "fixed": [
+        3,
+        4
+      ],
+      "source": 1673,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        5,
+        1,
+        0,
+        3,
+        4,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        3,
+        1,
+        7,
+        6,
+        5,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        3
+      ],
+      "source": 1676,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        5,
+        1,
+        0,
+        3,
+        4,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        5,
+        1,
+        7,
+        6,
+        3,
+        4
+      ],
+      "cost": 6,
+      "fixed": [
+        2,
+        3
+      ],
+      "source": 1676,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        5,
+        1,
+        0,
+        3,
+        4,
+        2
+      ],
+      "before_path": [
+        2,
+        7,
+        6,
+        3,
+        1,
+        0,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1682,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        4,
+        0,
+        5,
+        1,
+        2,
+        3
+      ],
+      "before_path": [
+        2,
+        7,
+        6,
+        3,
+        4,
+        1,
+        0,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        5
+      ],
+      "source": 1685,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        4,
+        0,
+        5,
+        1,
+        2,
+        3
+      ],
+      "before_path": [
+        3,
+        7,
+        6,
+        4,
+        1,
+        2,
+        0,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1685,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        4,
+        0,
+        3,
+        7,
+        5,
+        1,
+        2
+      ],
+      "before_path": [
+        2,
+        7,
+        6,
+        3,
+        4,
+        1,
+        0,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        3
+      ],
+      "source": 1685,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        4,
+        0,
+        3,
+        7,
+        5,
+        1,
+        2
+      ],
+      "before_path": [
+        3,
+        7,
+        6,
+        4,
+        1,
+        2,
+        0,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1685,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        3,
+        5,
+        2,
+        1
+      ],
+      "before_path": [
+        4,
+        1,
+        6,
+        5,
+        2,
+        0,
+        7,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1699,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        3,
+        5,
+        2,
+        1
+      ],
+      "before_path": [
+        5,
+        1,
+        6,
+        3,
+        2,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1699,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        3,
+        2,
+        0,
+        7,
+        6,
+        4,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        5,
+        3,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1754,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        3,
+        2,
+        0,
+        7,
+        6,
+        4,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 1754,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        3,
+        2,
+        0,
+        7,
+        6,
+        4,
+        1
+      ],
+      "before_path": [
+        3,
+        6,
+        4,
+        1,
+        0,
+        7,
+        5,
+        2
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1754,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        7,
+        3,
+        2,
+        1,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        1,
+        6,
+        5,
+        4
+      ],
+      "cost": 6,
+      "fixed": [
+        2,
+        3
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        6,
+        5,
+        4,
+        0,
+        3,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        1,
+        6,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        7,
+        3,
+        2,
+        1,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        5,
+        1,
+        6,
+        3,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        2
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        6,
+        5,
+        4,
+        0,
+        3,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        5,
+        1,
+        6,
+        3,
+        4
+      ],
+      "cost": 6,
+      "fixed": [
+        3,
+        6
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        7,
+        3,
+        2,
+        1,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        2,
+        1,
+        6,
+        4,
+        0,
+        7,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        6,
+        5,
+        4,
+        0,
+        3,
+        2
+      ],
+      "before_path": [
+        3,
+        2,
+        1,
+        6,
+        4,
+        0,
+        7,
+        5
+      ],
+      "cost": 6,
+      "fixed": [
+        4,
+        5
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        7,
+        3,
+        2,
+        1,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        4,
+        1,
+        6,
+        2,
+        0,
+        7,
+        5
+      ],
+      "cost": 6,
+      "fixed": [
+        1,
+        4
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        6,
+        5,
+        4,
+        0,
+        3,
+        2
+      ],
+      "before_path": [
+        3,
+        4,
+        1,
+        6,
+        2,
+        0,
+        7,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        5
+      ],
+      "source": 1830,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        5,
+        3,
+        6,
+        4,
+        2,
+        1,
+        0
+      ],
+      "before_path": [
+        3,
+        6,
+        5,
+        2,
+        1,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 1846,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        7,
+        3,
+        1,
+        2,
+        4,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        7,
+        4,
+        6,
+        3,
+        1,
+        0,
+        5
+      ],
+      "cost": 7,
+      "fixed": [
+        1
+      ],
+      "source": 1973,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        4,
+        6,
+        3,
+        0,
+        7,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        5,
+        4,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2118,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        4,
+        6,
+        3,
+        0,
+        7,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        3,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2118,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        4,
+        6,
+        3,
+        0,
+        7,
+        1
+      ],
+      "before_path": [
+        3,
+        4,
+        1,
+        0,
+        7,
+        6,
+        5,
+        2
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2118,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        0,
+        7,
+        3,
+        5,
+        6,
+        2,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        3,
+        5,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2147,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        1,
+        0,
+        3,
+        7,
+        2
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        3,
+        7,
+        6,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2297,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        5,
+        4,
+        1,
+        0,
+        3,
+        7,
+        2
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        5,
+        7,
+        6,
+        3,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2297,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        6,
+        4,
+        1,
+        0,
+        5,
+        2,
+        3
+      ],
+      "before_path": [
+        2,
+        0,
+        3,
+        6,
+        5,
+        1,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2336,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        5,
+        0,
+        3,
+        4,
+        6,
+        2
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        6,
+        3,
+        5,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        1
+      ],
+      "source": 2342,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        1,
+        5,
+        2,
+        3
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        6,
+        4,
+        1,
+        5
+      ],
+      "cost": 6,
+      "fixed": [
+        1,
+        2
+      ],
+      "source": 2393,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        1,
+        5,
+        2,
+        3
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        3,
+        5,
+        6,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        5
+      ],
+      "source": 2393,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        2,
+        0,
+        7,
+        3,
+        5,
+        6,
+        1
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        6,
+        4,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2393,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        2,
+        0,
+        7,
+        3,
+        5,
+        6,
+        1
+      ],
+      "before_path": [
+        2,
+        1,
+        0,
+        7,
+        3,
+        5,
+        6,
+        4
+      ],
+      "cost": 3,
+      "fixed": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source": 2393,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        2,
+        1,
+        5,
+        7,
+        3,
+        6,
+        0
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        6,
+        4,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2410,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        5,
+        0,
+        3,
+        6,
+        4,
+        2
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        6,
+        4,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2410,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        2,
+        1,
+        5,
+        7,
+        3,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        6,
+        2,
+        1,
+        5,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2410,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        1,
+        5,
+        0,
+        3,
+        6,
+        4,
+        2
+      ],
+      "before_path": [
+        3,
+        6,
+        2,
+        1,
+        5,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2410,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        5,
+        2,
+        6,
+        3,
+        0,
+        7,
+        4,
+        1
+      ],
+      "before_path": [
+        3,
+        0,
+        7,
+        2,
+        1,
+        6,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2450,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        2,
+        1,
+        6,
+        7,
+        3,
+        0
+      ],
+      "before_path": [
+        3,
+        0,
+        7,
+        2,
+        1,
+        6,
+        5,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2450,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        7,
+        6,
+        0
+      ],
+      "before_path": [
+        3,
+        2,
+        0,
+        5,
+        1,
+        7,
+        6,
+        4
+      ],
+      "cost": 5,
+      "fixed": [
+        4,
+        5,
+        6
+      ],
+      "source": 2464,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        1,
+        5,
+        2,
+        4,
+        0,
+        7,
+        3
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        6,
+        4,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2526,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        5,
+        4,
+        1,
+        0,
+        3,
+        6,
+        2
+      ],
+      "before_path": [
+        3,
+        6,
+        5,
+        1,
+        2,
+        0,
+        7,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        3
+      ],
+      "source": 2605,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        1,
+        3,
+        5,
+        2
+      ],
+      "before_path": [
+        3,
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4
+      ],
+      "cost": 7,
+      "fixed": [
+        6
+      ],
+      "source": 2651,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        6,
+        0,
+        7,
+        4,
+        1,
+        3,
+        5,
+        2
+      ],
+      "before_path": [
+        3,
+        5,
+        1,
+        0,
+        7,
+        6,
+        2,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2651,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        0,
+        7,
+        3,
+        2,
+        5,
+        6,
+        1
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        1,
+        5,
+        6,
+        4
+      ],
+      "cost": 3,
+      "fixed": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "source": 2678,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        0,
+        7,
+        3,
+        2,
+        5,
+        6,
+        1
+      ],
+      "before_path": [
+        3,
+        6,
+        2,
+        0,
+        7,
+        4,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2678,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        4,
+        0,
+        7,
+        3,
+        2,
+        5,
+        6,
+        1
+      ],
+      "before_path": [
+        3,
+        6,
+        4,
+        0,
+        7,
+        2,
+        1,
+        5
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2678,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        6,
+        4,
+        2,
+        5,
+        1,
+        0,
+        7,
+        3
+      ],
+      "before_path": [
+        2,
+        0,
+        7,
+        3,
+        5,
+        1,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2797,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        4,
+        3,
+        5,
+        6,
+        2,
+        0,
+        7,
+        1
+      ],
+      "before_path": [
+        3,
+        2,
+        1,
+        5,
+        0,
+        7,
+        6,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 2925,
+      "target": 2234
+    },
+    {
+      "after_path": [
+        7,
+        3,
+        0,
+        5,
+        6,
+        4,
+        2,
+        1
+      ],
+      "before_path": [
+        4,
+        1,
+        5,
+        2,
+        0,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 3070,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        3,
+        0,
+        5,
+        6,
+        4,
+        2,
+        1
+      ],
+      "before_path": [
+        5,
+        4,
+        2,
+        1,
+        0,
+        7,
+        6,
+        3
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 3070,
+      "target": 1965
+    },
+    {
+      "after_path": [
+        7,
+        3,
+        0,
+        5,
+        6,
+        4,
+        2,
+        1
+      ],
+      "before_path": [
+        5,
+        6,
+        3,
+        2,
+        1,
+        0,
+        7,
+        4
+      ],
+      "cost": 8,
+      "fixed": [],
+      "source": 3070,
+      "target": 1965
+    }
+  ],
+  "scope": "all 3528 canonical merged sources outside three target rows, including selfconverse and nontrivial automorphism sources; all literal Hamiltonian paths in canonical ordinary representative"
+}

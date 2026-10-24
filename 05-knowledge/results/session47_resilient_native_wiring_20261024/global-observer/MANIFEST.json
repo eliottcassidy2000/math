@@ -1,0 +1,24 @@
+{
+  "artifacts": [
+    {
+      "path": "THEOREM.md",
+      "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+      "bytes": 5795
+    },
+    {
+      "path": "check.py",
+      "sha256": "0be6e05b3789d2df176bd1d0c4e83f174fbf015de30979c35477f8de4fcf7fb1",
+      "bytes": 4263
+    },
+    {
+      "path": "normal.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    }
+  ]
+}

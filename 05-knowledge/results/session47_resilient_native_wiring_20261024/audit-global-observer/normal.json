@@ -1,0 +1,71 @@
+{
+  "checker_sha256": "cf5686c1f4a2f24995742eb090df4854678e75bc9042da4522516cd7aa672dfa",
+  "checks_by_section": {
+    "authentication": 6,
+    "compiler": 263177,
+    "converse": 109606,
+    "hostiles": 5,
+    "native": 21,
+    "pins": 103743,
+    "semicomplete": 17665
+  },
+  "compiler": {
+    "contradictory_flag_instances": 215786,
+    "converse_instances": 109606,
+    "extra_five_six_owner_cases": 512,
+    "extra_seed": 47003,
+    "global_pin_instances": 103743,
+    "rows": [
+      {
+        "all_tournament_four_flag_instances": 1,
+        "owners": 1
+      },
+      {
+        "all_tournament_four_flag_instances": 8,
+        "owners": 2
+      },
+      {
+        "all_tournament_four_flag_instances": 512,
+        "owners": 3
+      },
+      {
+        "all_tournament_four_flag_instances": 262144,
+        "owners": 4
+      }
+    ]
+  },
+  "elapsed_seconds": 2.32,
+  "explicit_checks": 494223,
+  "input_pins_sha256": "f6fade21a5c7fabce84353562f3d737e8e486d0609bcded8163530b966dc5879",
+  "native": {
+    "local_paths_authenticated": 4,
+    "obstructions": [
+      {
+        "branch": 2,
+        "core_bit": 0,
+        "helper_bit": 1,
+        "successors": [
+          3,
+          12
+        ]
+      },
+      {
+        "branch": 6,
+        "core_bit": 1,
+        "helper_bit": 0,
+        "successors": [
+          3,
+          12
+        ]
+      }
+    ],
+    "source_host_order": 14,
+    "source_sha256": "5266665af6f013ff54a64a5b4b7ef83ac35a8b80c01507ef05cc9ed26d1b6880"
+  },
+  "python_optimization": 0,
+  "semicomplete": {
+    "all_insertion_orders": 17665,
+    "all_semicomplete_graphs_through_four": 760
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,14 @@
+{
+  "compact_mathematical_receipts_unchanged": true,
+  "fresh570_manifest_sha256": "2085203cf001b7b8c1ed268384013b3db55e127a7f06b4cc94e07cdb263b05b4",
+  "manifest_file_count_unchanged": 223,
+  "reviewed_input_changes": [
+    {
+      "current_sha256": "8f92f9358b9329071535f984db79ceba75e660b5f13ac3fae85906517cabb762",
+      "previous_sha256": "dd6dde110189193e26e4ab81b060e1a60c034c63f324e018161c36fcb492d91d",
+      "source_path": "session47-audit-fresh570/AUDIT.md"
+    }
+  ],
+  "root_prose_unchanged": true,
+  "status": "PASS archive-only refresh"
+}

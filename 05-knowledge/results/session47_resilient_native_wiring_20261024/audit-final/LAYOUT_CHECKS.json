@@ -1,0 +1,37 @@
+{
+  "copied_files_including_manifests": 263,
+  "layout": "Manifest-listed files only, copied into renamed publication siblings; isolated Python -I from /",
+  "status": "PASS",
+  "tests": [
+    {
+      "optimized": false,
+      "script": "check.py",
+      "status": "PASS byte-identical receipt"
+    },
+    {
+      "optimized": true,
+      "script": "check.py",
+      "status": "PASS byte-identical receipt"
+    },
+    {
+      "optimized": false,
+      "script": "check_manifests.py",
+      "status": "PASS byte-identical receipt"
+    },
+    {
+      "optimized": true,
+      "script": "check_manifests.py",
+      "status": "PASS byte-identical receipt"
+    },
+    {
+      "optimized": false,
+      "script": "verify_manifest.py",
+      "status": "PASS copied integrity and reviewed source hashes"
+    },
+    {
+      "optimized": true,
+      "script": "verify_manifest.py",
+      "status": "PASS copied integrity and reviewed source hashes"
+    }
+  ]
+}

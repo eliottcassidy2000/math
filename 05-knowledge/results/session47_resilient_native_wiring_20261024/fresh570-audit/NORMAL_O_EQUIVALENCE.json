@@ -1,0 +1,42 @@
+{
+  "pairs": [
+    {
+      "checks": 580,
+      "normal": "normal.json",
+      "optimized": "optimized.json",
+      "sha256": "bf00b79cc8ea8e7d606bf5e4b1f264d1de70fc49441a4379edfc150673dc9199"
+    },
+    {
+      "checks": 142,
+      "normal": "producer-native.normal.json",
+      "optimized": "producer-native.optimized.json",
+      "sha256": "f2d7a4ddb394c7332787fb7f610eac530fe49c1ab2bc560bd2fcf98aa577893b"
+    },
+    {
+      "checks": 359,
+      "normal": "producer-audit.normal.json",
+      "optimized": "producer-audit.optimized.json",
+      "sha256": "a7f99a3408549f2e1a5c4af99e0726bd67af3fa83a0657a50d0715f47015ec05"
+    },
+    {
+      "checks": 441763,
+      "normal": "guard-completeness.normal.json",
+      "optimized": "guard-completeness.optimized.json",
+      "sha256": "ce806bf7af90bc5850f4bb035d77226c58069494919724aff1707fd199d98147"
+    },
+    {
+      "checks": 445275,
+      "normal": "odd-part.normal.json",
+      "optimized": "odd-part.optimized.json",
+      "sha256": "325adc95fdb2a924033ff2ec85138ea76034c6a41d2b4b6466df9010c855b317"
+    },
+    {
+      "checks": 254,
+      "normal": "helper-raw.normal.json",
+      "optimized": "helper-raw.optimized.json",
+      "sha256": "7830c31d1b3e2f44979c3a2a0408d40e88c82384cc5abca733a491c35e6eec42"
+    }
+  ],
+  "scope": "native independent audit, both unchanged producer replays, prior independent full filtration replay, odd-part tree certificate, complete raw helper/old-domain audit",
+  "status": "PASS"
+}

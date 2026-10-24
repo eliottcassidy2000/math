@@ -1,0 +1,22 @@
+{
+  "all_verified_packet_files": 226,
+  "mathematical_control_receipts_unchanged": true,
+  "reviewed_input_changes": [
+    {
+      "current_sha256": "286d7bababc458fec87162ae3cfaa30c931b1e6e35bcaa4267c8de9cdad52807",
+      "previous_sha256": "5dfe535e84bc75d6cef9c05ff506e14e2996c1b998ddf64faef52d53c2186a84",
+      "source_path": "session47-root/final/SYNTHESIS.md"
+    },
+    {
+      "current_sha256": "54f2e396c17e9a48611ff0c0dd13e0731da874b90cb86ffd4b14ecdb18530956",
+      "previous_sha256": "8f92f9358b9329071535f984db79ceba75e660b5f13ac3fae85906517cabb762",
+      "source_path": "session47-audit-fresh570/AUDIT.md"
+    }
+  ],
+  "root_change": "Only adds nonempty to rooted spanning tree domain.",
+  "source_manifest_sha256": "c5b262b6753e604a9ad08231d4d6ecc2b6edba97ca1398646dd5a60540396995",
+  "source_packet_files": 51,
+  "source_pinned_snapshots_required_and_checked": 25,
+  "standalone_test": "Actual manifest-only copied renamed bundle; isolated Python -I from /; both modes.",
+  "status": "PASS final packaging closure"
+}

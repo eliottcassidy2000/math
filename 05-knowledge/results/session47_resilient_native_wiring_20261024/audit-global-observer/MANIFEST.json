@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "artifacts": [
+    {
+      "path": "INPUT_PINS.json",
+      "sha256": "f6fade21a5c7fabce84353562f3d737e8e486d0609bcded8163530b966dc5879",
+      "bytes": 1509
+    },
+    {
+      "path": "PROOF_AUDIT.md",
+      "sha256": "74d3d9c05bb8be0969bf3a4ce09acf0e012c750c8f30d6eae950d9b3a3a46abf",
+      "bytes": 8486
+    },
+    {
+      "path": "README.md",
+      "sha256": "247bb67caa6cec2652b9216312abfae501e0c67ca4fe4f0b8d8b7d43f8b7b532",
+      "bytes": 830
+    },
+    {
+      "path": "check_independent.py",
+      "sha256": "cf5686c1f4a2f24995742eb090df4854678e75bc9042da4522516cd7aa672dfa",
+      "bytes": 13635
+    },
+    {
+      "path": "inputs/PARTNER_GLUING.md",
+      "sha256": "706e87766fb10ec99bcbb8d8bd0b2cbf72b02e29d336c5dd173cc134b0ec2aa3",
+      "bytes": 5972
+    },
+    {
+      "path": "inputs/producer-THEOREM.md",
+      "sha256": "e74f15c458d2068de949c99c51a627d53bf1a2e450beb327a5d3a17a4d0bde22",
+      "bytes": 5795
+    },
+    {
+      "path": "inputs/producer-check.py",
+      "sha256": "0be6e05b3789d2df176bd1d0c4e83f174fbf015de30979c35477f8de4fcf7fb1",
+      "bytes": 4263
+    },
+    {
+      "path": "inputs/producer-normal.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "path": "inputs/producer-optimized.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "path": "inputs/shared_owner.json",
+      "sha256": "5266665af6f013ff54a64a5b4b7ef83ac35a8b80c01507ef05cc9ed26d1b6880",
+      "bytes": 115347
+    },
+    {
+      "path": "normal.json",
+      "sha256": "8d4b8d8d48b5d6098558c537d7eaef2304df1f69255d1e71e678c62da291a709",
+      "bytes": 1641
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "cbdfc395d6e2a7beb9410fb7e8e1d0e1b787a4875588b51b72074f40ea966b60",
+      "bytes": 1642
+    },
+    {
+      "path": "producer-replay-normal.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "path": "producer-replay-optimized.json",
+      "sha256": "1a2775e7828875c6379dd4abe9f8f69ec55b684c4b9ba88088bccb06dcb804d9",
+      "bytes": 658
+    },
+    {
+      "path": "verify_manifest.py",
+      "sha256": "e3f82ce895e72a1f9c079757994303cc0af689e084a90145712c24a0a11e7110",
+      "bytes": 1316
+    }
+  ]
+}

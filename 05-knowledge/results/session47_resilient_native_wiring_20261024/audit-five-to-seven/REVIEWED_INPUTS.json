@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "bytes": 8451,
+      "path": "session47-carrier-transfer/five-to-seven/check.py",
+      "sha256": "289c9257a31d1fafcea2fe995552b138aee1536048eb56eb193e7e4a3fd4e8c9"
+    },
+    {
+      "bytes": 6843,
+      "path": "session47-carrier-transfer/five-to-seven/OBSTRUCTION.md",
+      "sha256": "f5201c88ea1c2250624667d98df7e4b5643a19f5c083c6a9f6b9fb9027016692"
+    },
+    {
+      "bytes": 1541961,
+      "path": "session47-carrier-transfer/five-to-seven/normal.json",
+      "sha256": "98fdabe790a6e9fdd019215c0525acb59d3f59eb60ca3a7f6081c5f451db1c4a"
+    },
+    {
+      "bytes": 1541961,
+      "path": "session47-carrier-transfer/five-to-seven/optimized.json",
+      "sha256": "98fdabe790a6e9fdd019215c0525acb59d3f59eb60ca3a7f6081c5f451db1c4a"
+    },
+    {
+      "bytes": 194,
+      "path": "session47-carrier-transfer/five-to-seven/SOURCE_PINS.json",
+      "sha256": "b37ea218fa06b9a23d144c7a8c80d1748469f1c2ec670da3a224bb8aa3ef487b"
+    },
+    {
+      "bytes": 583,
+      "path": "session47-carrier-transfer/five-to-seven/MANIFEST.json",
+      "sha256": "d4f60ac4c7c57273c263cbdb262f0957ad2e95b9995fc46f89ec7eb098ed831b"
+    },
+    {
+      "bytes": 6030,
+      "path": "session47-carrier-transfer/native_suspension_probe.py",
+      "sha256": "c59ff3b9d01f658286cf4555272456c0e638544b3520709cbcb2775f91e8fec2"
+    },
+    {
+      "bytes": 18394,
+      "path": "session47-carrier-transfer/TRANSFER.md",
+      "sha256": "8dd37964e88e3f586d32b4092bbcc5328e4b441e5343decb4e8c020d992f1930"
+    }
+  ],
+  "status": "PASS after precise higher-modulus wording clarification"
+}
