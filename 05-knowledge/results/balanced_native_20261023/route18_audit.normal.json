@@ -1,0 +1,15 @@
+{
+  "atomic_supports": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "checks": 223,
+  "events": 4,
+  "owner_clock_work": 57,
+  "reservoir_closed_ports": 152,
+  "sources": 19,
+  "states": 42,
+  "status": "PASS same-agent independent direct census and physical-row audit"
+}

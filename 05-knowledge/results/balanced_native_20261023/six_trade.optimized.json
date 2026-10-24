@@ -1,0 +1,42 @@
+{
+  "basis_determinant": 2048,
+  "basis_rank": 27,
+  "charge_image_order": 2048,
+  "checks": 10123,
+  "formal_coefficient_L1": 3989,
+  "moves": 1944,
+  "primitive18_formal_coordinates": [
+    226,
+    108,
+    277,
+    -228,
+    363,
+    335,
+    -183,
+    88,
+    413,
+    227,
+    -27,
+    103,
+    191,
+    229,
+    313,
+    256,
+    167,
+    112,
+    56,
+    34,
+    22,
+    13,
+    8,
+    5,
+    2,
+    2,
+    1
+  ],
+  "status": "FINITE-EXACT lattice equality for original28-source supply; feasible route inference excluded",
+  "supports": {
+    "4": 27,
+    "6": 1917
+  }
+}

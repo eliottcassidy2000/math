@@ -2,6 +2,8 @@
 
 **PROVED (conditional native theorem).** For a supplied jointly compatible binary source inventory with paired-charge group G=(Z/2)^4 plus Z/128, every two accepted assignments of that same inventory can be joined by atomic balanced packets changing at most 264 slots each. Every differing slot changes exactly once. The source-group bound is independent of the number of supplied slots. It does not assert that arbitrary native supplies satisfying the hypotheses exist, nor that the same group or constant persists at larger tournament orders.
 
+Concurrent reconciliation: `native_packet_decomposition_20261023/algebra/BOUNDED_CIRCUITS_AND_PRECEDENCE.md` at commit `a793424e20` independently proves this same2D(G) theorem, including the sharp abstract construction, and gives a stronger all-mixture formulation plus an exact precedence hostile. The new extension beyond this shared mechanism is [MULTITARGET.md](MULTITARGET.md), which first compiles integer target cycles and then retains the entire target-row charge vector.
+
 ## Exact interface
 
 Each labelled slot has authenticated U/V alternatives. Sources lie outside U,V, and the two targets have equal paired-charge label. Every alternative retains the same entire declared shared-coordinate record. Every source and kernel lift is explicit. All before/after normalized resource orbits in the supply are mutually disjoint, and disjoint from the unchanged remainder. Electrical acceptance is exactly equality of target margins and the original physical-row paired charges; any additional constraints must also be preserved by every subpacket, not silently omitted.

@@ -3,7 +3,7 @@
 from pathlib import Path
 import argparse,hashlib,json,subprocess,sys
 HERE=Path(__file__).resolve().parent
-RUNS=['one_bit','charts','flow','zero_sum','search28','native18','audit']
+RUNS=['one_bit','charts','flow','zero_sum','search28','native18','audit','route18','route18_audit','multi_target','product_flow','four_move','six_trade']
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--check',action='store_true');args=ap.parse_args()
     for stem in RUNS:
@@ -19,7 +19,7 @@ def main():
         print(stem,'PASS',results[0].get('checks','bounded search'),flush=True)
     files={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(HERE.iterdir()) if p.is_file() and p.name!='MANIFEST.json'}
     manifest={'status':'normal and optimized exact replay PASS','input_revision':'0f9dec9c3e1d',
-      'incoming_domain_revision':'66db753a59','files_sha256':files}
+      'incoming_domain_revision':'66db753a59','incoming_compensator_revision':'a793424e20','files_sha256':files}
     path=HERE/'MANIFEST.json'
     if args.check:
         if json.loads(path.read_text())!=manifest:raise RuntimeError('local-file manifest drift')

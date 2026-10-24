@@ -1,0 +1,475 @@
+{
+  "checks": 140,
+  "closed_ports_per_arrival": [
+    76,
+    76,
+    76,
+    76,
+    76
+  ],
+  "complete_one_active_states": 217,
+  "components": [
+    {
+      "budget": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4,
+        7
+      ],
+      "endpoints_connected": false,
+      "helpers": [
+        1638
+      ],
+      "states": 42
+    },
+    {
+      "budget": 6,
+      "component_sizes": [
+        42
+      ],
+      "endpoints_connected": true,
+      "helpers": [
+        1638
+      ],
+      "states": 42
+    },
+    {
+      "budget": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        5,
+        6,
+        7,
+        9,
+        9,
+        9,
+        9,
+        10
+      ],
+      "endpoints_connected": false,
+      "helpers": [
+        1480,
+        1638,
+        1691,
+        1974,
+        2071,
+        2581,
+        2837,
+        2945,
+        3015,
+        3360
+      ],
+      "states": 217
+    },
+    {
+      "budget": 6,
+      "component_sizes": [
+        217
+      ],
+      "endpoints_connected": true,
+      "helpers": [
+        1480,
+        1638,
+        1691,
+        1974,
+        2071,
+        2581,
+        2837,
+        2945,
+        3015,
+        3360
+      ],
+      "states": 217
+    }
+  ],
+  "current_scope": "full original dyadic bank, not exact unscaled integer-X conservation",
+  "helper_candidates": [
+    1480,
+    1638,
+    1691,
+    1974,
+    2071,
+    2581,
+    2837,
+    2945,
+    3015,
+    3360
+  ],
+  "layer_sizes": {
+    "0": 2,
+    "1480": 10,
+    "1638": 40,
+    "1691": 12,
+    "1974": 19,
+    "2071": 33,
+    "2581": 22,
+    "2837": 7,
+    "2945": 28,
+    "3015": 37,
+    "3360": 7
+  },
+  "ledger": [
+    {
+      "V_currents": "negatives of U currents",
+      "V_sources": [
+        1425,
+        1549,
+        1841,
+        1921,
+        2185,
+        2553,
+        2835,
+        2905,
+        3000
+      ],
+      "Y_residuals": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_helper": [],
+      "helper_U_current_X": 0,
+      "mask": 22416516,
+      "old_U_current_X": 0,
+      "total_U_current_X": 0
+    },
+    {
+      "V_currents": "negatives of U currents",
+      "V_sources": [
+        1425,
+        1457,
+        1549,
+        1638,
+        1841,
+        1921,
+        2176,
+        2835,
+        2905
+      ],
+      "Y_residuals": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_helper": [
+        1638
+      ],
+      "helper_U_current_X": -104,
+      "mask": 5311884,
+      "old_U_current_X": -152,
+      "total_U_current_X": -256
+    },
+    {
+      "V_currents": "negatives of U currents",
+      "V_sources": [
+        176,
+        1457,
+        1549,
+        1638,
+        1923,
+        2176,
+        2185,
+        2835,
+        2905
+      ],
+      "Y_residuals": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_helper": [
+        1638
+      ],
+      "helper_U_current_X": -104,
+      "mask": 5443977,
+      "old_U_current_X": -152,
+      "total_U_current_X": -256
+    },
+    {
+      "V_currents": "negatives of U currents",
+      "V_sources": [
+        176,
+        1477,
+        1532,
+        1549,
+        1638,
+        1923,
+        2176,
+        2185,
+        3369
+      ],
+      "Y_residuals": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_helper": [
+        1638
+      ],
+      "helper_U_current_X": -104,
+      "mask": 134418897,
+      "old_U_current_X": -152,
+      "total_U_current_X": -256
+    },
+    {
+      "V_currents": "negatives of U currents",
+      "V_sources": [
+        176,
+        1394,
+        1457,
+        1477,
+        1532,
+        1923,
+        2087,
+        2176,
+        3369
+      ],
+      "Y_residuals": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_helper": [],
+      "helper_U_current_X": 0,
+      "mask": 134320219,
+      "old_U_current_X": -256,
+      "total_U_current_X": -256
+    }
+  ],
+  "old_sources": [
+    176,
+    1394,
+    1425,
+    1457,
+    1477,
+    1532,
+    1549,
+    1841,
+    1921,
+    1923,
+    2087,
+    2176,
+    2185,
+    2553,
+    2835,
+    2905,
+    3000,
+    3369
+  ],
+  "route": [
+    22416516,
+    5311884,
+    5443977,
+    134418897,
+    134320219
+  ],
+  "route_owner_clock_costs": [
+    14,
+    15,
+    15,
+    13
+  ],
+  "search": [
+    {
+      "budget": 4,
+      "counts": [
+        {
+          "helper_count": 1,
+          "subsets_tested": 10,
+          "successful_subsets": 0
+        },
+        {
+          "helper_count": 2,
+          "subsets_tested": 45,
+          "successful_subsets": 0
+        },
+        {
+          "helper_count": 3,
+          "subsets_tested": 120,
+          "successful_subsets": 0
+        }
+      ],
+      "first_helpers": null
+    },
+    {
+      "budget": 6,
+      "counts": [
+        {
+          "helper_count": 1,
+          "subsets_tested": 10,
+          "successful_subsets": 3
+        }
+      ],
+      "first_helpers": [
+        1638
+      ]
+    },
+    {
+      "budget": 8,
+      "counts": [
+        {
+          "helper_count": 1,
+          "subsets_tested": 10,
+          "successful_subsets": 8
+        }
+      ],
+      "first_helpers": [
+        1480
+      ]
+    }
+  ],
+  "selected_budget": 6,
+  "selected_helpers": [
+    1638
+  ],
+  "sources": [
+    176,
+    1394,
+    1425,
+    1457,
+    1477,
+    1480,
+    1532,
+    1549,
+    1638,
+    1691,
+    1841,
+    1921,
+    1923,
+    1974,
+    2071,
+    2087,
+    2176,
+    2185,
+    2553,
+    2581,
+    2835,
+    2837,
+    2905,
+    2945,
+    3000,
+    3015,
+    3360,
+    3369
+  ],
+  "status": "FINITE-EXACT native one-active-helper route for new primitive18",
+  "total_owner_clock_work": 57
+}

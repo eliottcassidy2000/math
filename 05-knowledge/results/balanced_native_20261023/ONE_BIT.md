@@ -2,6 +2,8 @@
 
 **PROVED (scoped).** One auxiliary bit suffices for injective assignments with arbitrary connected local port graphs. This closes the OPEN one-bit question in `guarded_coverage_20261023/PORTS.md`; that earlier packet remains a frozen historical snapshot. It does not remove an electrical guard that is already disconnected after projection.
 
+Concurrent reconciliation: commit `a793424e20`, `native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md`, independently proves this mechanism and the stronger version where full-record-to-resource maps have nontrivial fibres. That broader theorem, with its actual C3-kernel example, is the current retained-kernel interface. The present proof and BFS are an independent restricted derivation and check; no separate priority or stronger generality is claimed.
+
 ## Statement
 
 Let V be a finite actual port set, and let s labelled slots have connected undirected graphs G_i on their eligible sets E_i subset V. Let a and b be injective eligible assignments. Choose a simple local path gamma_i from a_i to b_i, of length d_i. Enlarge the port inventory to V times {0,1}. Slot i may traverse an edge of G_i at a fixed layer, or change layer at its current base port. The auxiliary bit is unconstrained at intermediate times. No additional changing cross-slot equality is imposed.
