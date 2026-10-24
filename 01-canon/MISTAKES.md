@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** fix one complete U and V record per reservoir slot for the stated reset bound, including its lift marking; quantify shielding on the WHOLE reservoir/control configuration. Require legal fixed-occupancy endpoints with the same requested charge for an exact return. No finite native result changed.
 - **Missing coordinate / next question:** retain the full marked record and the complete factor scope before projecting to occupancy and charge. [Repaired theorem](../05-knowledge/results/guarded_component_completion_20261024/sections/SHIELDED_RESERVOIR.md), [independent audit](../05-knowledge/results/guarded_component_completion_20261024/sections/AUDIT_SHIELDED.md).
 
+## 2026-10-24 — packed group coordinates must not carry into each other
+
+- **Affected probe:** unpublished three-target charge-bank exploration. An integer addition on the packed code `16*x+y` incorrectly carried from the four parity bits into the cyclic coordinate.
+- **Minimal witness / first failed implication:** parity code15 added to itself must be0 in `(Z/2)^4`; the faulty formula returned cyclic code16. A packed display is not the group law.
+- **Detection / repair:** complementary subset grades had unequal coverage counts. Replacing the operation by XOR on the low bits and addition mod128 on the high coordinate restores complement symmetry and the inherited28-source census. The committed20-source bank is independently checked by unpacked tuple Gray enumeration of all2^20 subsets; no incorrect certificate was published.
+- **Survivor / next question:** the actual20-source two-clock bank covers all2048 charges at every occupancy5 through15. See [three-target bank](../05-knowledge/results/three_target570_20261024/bank.py); no coverage monotonicity is presumed.
+
 ## 2026-10-23 — a finite paired code can preserve the whole dyadic tower
 
 - **Affected draft:** unpublished `compatible_charged_helpers_20261023/controller/COMPLETE_CHARGE_BANK.md`; no false theorem was published.

@@ -1,0 +1,22 @@
+{
+  "checks": 97,
+  "epsilon_control_gap": "1/5000",
+  "scope": "nonuniform finite control plus algebraic proof; no asserted ROOT source law",
+  "status": "PASS exact rational conditional-lift identities",
+  "test_marginals": [
+    "4/39",
+    "8/39",
+    "9/13"
+  ],
+  "test_weights": [
+    1,
+    7,
+    2,
+    11,
+    3,
+    13,
+    5,
+    17,
+    19
+  ]
+}
