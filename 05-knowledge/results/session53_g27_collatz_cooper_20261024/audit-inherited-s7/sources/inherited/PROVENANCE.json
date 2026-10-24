@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "source_commit": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+  "method": "git show of exact tracked HEAD blobs; no sparse-checkout changes",
+  "files": [
+    {
+      "repository_path": "05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md",
+      "tracked_at_commit": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+      "mode": "100644",
+      "git_blob_sha": "0f7843111beb576c920dd19c609c90aea122ffb8",
+      "sha256": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+      "bytes": 18712,
+      "materialized_path": "/workspace/scratch/07d5532f2fce/session53-publication/inherited-s7-sources/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md",
+      "present_in_original_sparse_materialization": true
+    },
+    {
+      "repository_path": "04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp",
+      "tracked_at_commit": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+      "mode": "100644",
+      "git_blob_sha": "2b38937f3fd1f511582baba95f2ad0cfe3042192",
+      "sha256": "9034554ca861d527726ae4436a35be42b977cfae1f77f7d8eb0a527c401aca64",
+      "bytes": 17826,
+      "materialized_path": "/workspace/scratch/07d5532f2fce/session53-publication/inherited-s7-sources/04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp",
+      "present_in_original_sparse_materialization": false
+    },
+    {
+      "repository_path": "05-knowledge/results/cooper_s7_weight1_frobenius_check_20261018.out",
+      "tracked_at_commit": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+      "mode": "100644",
+      "git_blob_sha": "9aaee3852d9f929240ba3b6dcf6659a44f88cda0",
+      "sha256": "f42e870e36b692fc96b3be90d6ecca970133c764d944e2c5296adf71e2bef506",
+      "bytes": 10307,
+      "materialized_path": "/workspace/scratch/07d5532f2fce/session53-publication/inherited-s7-sources/05-knowledge/results/cooper_s7_weight1_frobenius_check_20261018.out",
+      "present_in_original_sparse_materialization": true
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "session53-g27-growth": {
+    "manifest_sha256": "22e395ef8e62cec05be58d3ed681d227d02607157a6d241399d3afda41ccd12f",
+    "file_count": 9,
+    "normal_optimized_saved_equal": true,
+    "general_tests": {
+      "all_simple_graphs_orders_1_through_5": 1099,
+      "controls": "PASS",
+      "linear_forests_checked": 33646
+    }
+  },
+  "session53-collatz27-return": {
+    "manifest_sha256": "2640877e5482ff3a93821b237451d146f8aa1b96b74d9be4eed9c99fbb795ab6",
+    "file_count": 12,
+    "normal_optimized_saved_equal": true
+  },
+  "mutations": [
+    {
+      "name": "graph_same_component_join",
+      "mode": "normal",
+      "rejection": "ValueError: polynomial birth mismatch"
+    },
+    {
+      "name": "graph_same_component_join",
+      "mode": "optimized",
+      "rejection": "ValueError: polynomial birth mismatch"
+    },
+    {
+      "name": "graph_singleton_ports",
+      "mode": "normal",
+      "rejection": "ValueError: endpoint transfer mismatch"
+    },
+    {
+      "name": "graph_singleton_ports",
+      "mode": "optimized",
+      "rejection": "ValueError: endpoint transfer mismatch"
+    },
+    {
+      "name": "graph_missing_join",
+      "mode": "normal",
+      "rejection": "ValueError: endpoint transfer mismatch"
+    },
+    {
+      "name": "graph_missing_join",
+      "mode": "optimized",
+      "rejection": "ValueError: endpoint transfer mismatch"
+    },
+    {
+      "name": "graph_false_middlecase",
+      "mode": "normal",
+      "rejection": "ValueError: minimum-cover trichotomy mismatch"
+    },
+    {
+      "name": "graph_false_middlecase",
+      "mode": "optimized",
+      "rejection": "ValueError: minimum-cover trichotomy mismatch"
+    },
+    {
+      "name": "collatz_wrong_odd_slope",
+      "mode": "normal",
+      "rejection": "RuntimeError: affine"
+    },
+    {
+      "name": "collatz_wrong_odd_slope",
+      "mode": "optimized",
+      "rejection": "RuntimeError: affine"
+    },
+    {
+      "name": "collatz_missing_final_bit",
+      "mode": "normal",
+      "rejection": "RuntimeError: exact odd cylinder"
+    },
+    {
+      "name": "collatz_missing_final_bit",
+      "mode": "optimized",
+      "rejection": "RuntimeError: exact odd cylinder"
+    },
+    {
+      "name": "collatz_universal_orientation",
+      "mode": "normal",
+      "rejection": "RuntimeError: slope sign"
+    },
+    {
+      "name": "collatz_universal_orientation",
+      "mode": "optimized",
+      "rejection": "RuntimeError: slope sign"
+    },
+    {
+      "name": "collatz_wrong_source_clock",
+      "mode": "normal",
+      "rejection": "RuntimeError: descents"
+    },
+    {
+      "name": "collatz_wrong_source_clock",
+      "mode": "optimized",
+      "rejection": "RuntimeError: descents"
+    },
+    {
+      "name": "collatz_equal_total_stopping",
+      "mode": "normal",
+      "rejection": "RuntimeError: no transferred total stopping claim"
+    },
+    {
+      "name": "collatz_equal_total_stopping",
+      "mode": "optimized",
+      "rejection": "RuntimeError: no transferred total stopping claim"
+    }
+  ],
+  "independent_prefix_certificate_steps": 59
+}

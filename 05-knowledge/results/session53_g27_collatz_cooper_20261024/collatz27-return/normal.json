@@ -1,0 +1,153 @@
+{
+  "bounded_verification": {
+    "all_words_max_length": 10,
+    "crt_integer_prefixes": 14322,
+    "directed_paley_pair_checks": 85932,
+    "exact_odd_lifts": 32,
+    "positive_lifts_per_return_word": 129
+  },
+  "hostiles": {
+    "coarse_endpoint": 36472996377170786404,
+    "coarse_odd_lift": 1180591620717411303451,
+    "different_successors": [
+      41,
+      17
+    ],
+    "same_residue_sources": [
+      27,
+      34
+    ],
+    "source_reset": [
+      27,
+      41,
+      31
+    ]
+  },
+  "odd": {
+    "first_descent": 37,
+    "first_peak_index": 32,
+    "maximum": 3077,
+    "total": 41
+  },
+  "odd_orbit": [
+    27,
+    41,
+    31,
+    47,
+    71,
+    107,
+    161,
+    121,
+    91,
+    137,
+    103,
+    155,
+    233,
+    175,
+    263,
+    395,
+    593,
+    445,
+    167,
+    251,
+    377,
+    283,
+    425,
+    319,
+    479,
+    719,
+    1079,
+    1619,
+    2429,
+    911,
+    1367,
+    2051,
+    3077,
+    577,
+    433,
+    325,
+    61,
+    23,
+    35,
+    53,
+    5,
+    1
+  ],
+  "odd_valuation_word": [
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    2,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    2,
+    3,
+    1,
+    1,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    4,
+    2,
+    2,
+    4,
+    3,
+    1,
+    1,
+    5,
+    4
+  ],
+  "ordinary": {
+    "first_descent": 96,
+    "first_peak_index": 77,
+    "maximum": 9232,
+    "total": 111
+  },
+  "return_words": {
+    "59": {
+      "carry": 1100931843921811423,
+      "endpoint": 23,
+      "mod7_map": [
+        6,
+        1
+      ],
+      "multiplier_numerator": 450283905890997363,
+      "odd_count": 37
+    },
+    "70": {
+      "carry": 195820718533800070543,
+      "endpoint": 1,
+      "mod7_map": [
+        6,
+        0
+      ],
+      "multiplier_numerator": 36472996377170786403,
+      "odd_count": 41
+    }
+  },
+  "shortcut": {
+    "first_descent": 59,
+    "first_peak_index": 45,
+    "maximum": 4616,
+    "total": 70
+  }
+}

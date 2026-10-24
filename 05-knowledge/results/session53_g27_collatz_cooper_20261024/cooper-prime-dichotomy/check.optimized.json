@@ -1,0 +1,473 @@
+{
+  "base9_digit_law_through": 8000,
+  "coefficient_max": 8000,
+  "hostile_corruption_rejected": true,
+  "independent_binomial_square_through": 100,
+  "p3_strengthening_first_failures": [
+    [
+      2,
+      1
+    ],
+    [
+      7,
+      1
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      23,
+      1
+    ],
+    [
+      29,
+      1
+    ],
+    [
+      37,
+      1
+    ],
+    [
+      43,
+      1
+    ],
+    [
+      53,
+      1
+    ],
+    [
+      67,
+      1
+    ],
+    [
+      71,
+      1
+    ],
+    [
+      79,
+      1
+    ],
+    [
+      107,
+      1
+    ],
+    [
+      109,
+      1
+    ],
+    [
+      113,
+      1
+    ],
+    [
+      127,
+      1
+    ],
+    [
+      137,
+      1
+    ],
+    [
+      149,
+      1
+    ],
+    [
+      151,
+      1
+    ],
+    [
+      163,
+      1
+    ],
+    [
+      179,
+      1
+    ],
+    [
+      191,
+      1
+    ],
+    [
+      193,
+      1
+    ],
+    [
+      197,
+      1
+    ]
+  ],
+  "pair_count": 1886,
+  "prime_count": 46,
+  "rows": [
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 2
+    },
+    {
+      "delta_at_1_mod_p": 1,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 3
+    },
+    {
+      "delta_at_1_mod_p": 1,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 5
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 7
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 11
+    },
+    {
+      "delta_at_1_mod_p": 9,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 13
+    },
+    {
+      "delta_at_1_mod_p": 8,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 17
+    },
+    {
+      "delta_at_1_mod_p": 17,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 19
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 23
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 29
+    },
+    {
+      "delta_at_1_mod_p": 20,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 31
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 37
+    },
+    {
+      "delta_at_1_mod_p": 2,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 41
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 43
+    },
+    {
+      "delta_at_1_mod_p": 24,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 47
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 53
+    },
+    {
+      "delta_at_1_mod_p": 27,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 59
+    },
+    {
+      "delta_at_1_mod_p": 58,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 61
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 67
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 71
+    },
+    {
+      "delta_at_1_mod_p": 67,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 73
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 79
+    },
+    {
+      "delta_at_1_mod_p": 33,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 83
+    },
+    {
+      "delta_at_1_mod_p": 79,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 89
+    },
+    {
+      "delta_at_1_mod_p": 85,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 97
+    },
+    {
+      "delta_at_1_mod_p": 88,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 101
+    },
+    {
+      "delta_at_1_mod_p": 38,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 103
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 107
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 109
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 113
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 127
+    },
+    {
+      "delta_at_1_mod_p": 45,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 131
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 137
+    },
+    {
+      "delta_at_1_mod_p": 47,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 139
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 149
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 151
+    },
+    {
+      "delta_at_1_mod_p": 130,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 157
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 163
+    },
+    {
+      "delta_at_1_mod_p": 54,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 167
+    },
+    {
+      "delta_at_1_mod_p": 142,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 173
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 179
+    },
+    {
+      "delta_at_1_mod_p": 148,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 181
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 191
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 193
+    },
+    {
+      "delta_at_1_mod_p": 0,
+      "first_mod_p2_failure": null,
+      "first_mod_p_failure": null,
+      "good": true,
+      "n_max": 40,
+      "p": 197
+    },
+    {
+      "delta_at_1_mod_p": 62,
+      "first_mod_p2_failure": 1,
+      "first_mod_p_failure": 1,
+      "good": false,
+      "n_max": 40,
+      "p": 199
+    }
+  ],
+  "scope": "FINITE-EXACT; does not prove all n or all primes"
+}

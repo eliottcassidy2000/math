@@ -1,0 +1,81 @@
+{
+  "copy_policy": "MANIFEST.json and only its declared files",
+  "regeneration": [
+    {
+      "exit_code": 0,
+      "mode": "normal",
+      "stderr_bytes": 0,
+      "stdout_sha256": "5d0adee8564f853e32cde1b952531a8b56b64fa5855f7143882ec705919ecba2"
+    },
+    {
+      "exit_code": 0,
+      "mode": "-O",
+      "stderr_bytes": 0,
+      "stdout_sha256": "5d0adee8564f853e32cde1b952531a8b56b64fa5855f7143882ec705919ecba2"
+    }
+  ],
+  "rejection_controls": [
+    {
+      "case": "modified_code",
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "modified_code",
+      "exit_code": 1,
+      "mode": "-O",
+      "rejected": true
+    },
+    {
+      "case": "missing_source",
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "missing_source",
+      "exit_code": 1,
+      "mode": "-O",
+      "rejected": true
+    },
+    {
+      "case": "undeclared_file",
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "undeclared_file",
+      "exit_code": 1,
+      "mode": "-O",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_manifest_path",
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_manifest_path",
+      "exit_code": 1,
+      "mode": "-O",
+      "rejected": true
+    },
+    {
+      "case": "traversal_manifest_path",
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": true
+    },
+    {
+      "case": "traversal_manifest_path",
+      "exit_code": 1,
+      "mode": "-O",
+      "rejected": true
+    }
+  ],
+  "schema": "s7-portability-receipt-v1",
+  "status": "PASS"
+}

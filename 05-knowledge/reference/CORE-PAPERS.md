@@ -5,7 +5,7 @@
 ## Fast frontier snapshot
 
 - **LRC:** repo proof unclosed; external 14/15-total-runner claim unaudited here.
-- **Moments:** [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md) gives GMC exactly through 2; [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md) gives SIC only at 1; JC-bearing restrictions remain.
+- **Moments:** [THM-2022][cp01] gives GMC exactly through 2; [THM-2801][cp04] gives SIC only at 1; JC-bearing restrictions remain.
 - **Tournament citations:** 2412.10572 Irving--Omar; 2307.05569 Grinberg--Stanley; 2406.09697 Klanderman et al.
 - **Flows:** [THM-2177](../../01-canon/theorems/THM-2177-planar-counterexample-to-goemans-unsplittable-cost-flow-conjecture.md) refutes the exact-cost conjecture; cost-free `d_max` and planar `2d_max` survive.
 - **Reciprocals:** support differs from indexed multiplicity; figurate formulas omit repo extensions.
@@ -32,7 +32,7 @@
 
 - **Primary:** [2604.23906v2](https://arxiv.org/abs/2604.23906v2), 2026-09-01. **PREPRINT; abstract/Theorem 1.3 checked 2026-09-06.**
 - **Imported:** computer-assisted divisibility sieve for `k=10,11,12` nonzero speeds; finite-field polynomial shortcut for odd-prime `k+1` and large enough odd-prime modulus. Initial improper tuples bottleneck extension.
-- **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md), [THM-1288](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
+- **Repo consumers:** [LRC14 frontier](../../00-navigation/LRC14-FRONTIER-2026-07-15.md), [finite-check ledger][cp05], [THM-1288](../../01-canon/theorems/THM-1288-c71-refuted-divisor-aligned-clusters.md), and [THM-523][cp02].
 - **Does not prove:** `k=13` (14 runners); the prime shortcut misses composite `k+1=14`. THM-1288 refutes literal v1 Conjecture 7.1: not an inverse theorem.
 
 ### Vaaler — *Some extremal functions in Fourier analysis*
@@ -69,7 +69,7 @@
 - **Repo consumers:**
   [THM-1289, the pinned citation and translation](../../01-canon/theorems/THM-1289-floor-isolated-from-above-by-GK.md),
   [THM-1290 bounded census](../../01-canon/theorems/THM-1290-subgap-exhaustive-census-bounded-height.md),
-  [near-miss ledger](../../00-navigation/LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19-klein-S319.md).
+  [near-miss ledger][cp03].
 - **Does not prove:** an effective `delta`, finiteness of the full
   `(1/14,3/41]` window, or LRC(14).  The equality of the entire accumulation
   set with the preceding spectrum was withdrawn and is Conjecture 1.5 in the
@@ -86,9 +86,9 @@
   wider `s/(ns+k)` stratification.  The repo identifies this `k` with its
   near-floor slack coordinate and uses the paper's gcd arguments as a model.
 - **Repo consumers:**
-  [near-miss ledger, Sections 4--5](../../00-navigation/LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19-klein-S319.md),
-  [LRC14 proof map](../../00-navigation/LRC14-PROOF-MAP.md),
-  [formal spectrum-window arithmetic](../../04-computation/lean/TournamentH7/TournamentH7/LRCSpectrumWindow.lean).
+  [near-miss ledger, Sections 4--5][cp03],
+  [LRC14 proof map][cp06],
+  [formal spectrum-window arithmetic][cp10].
 - **Does not prove:** the amended conjecture for general `n`, bound the order
   `k` for thirteen speeds, or make the LRC(14) sub-gap finite.
 
@@ -103,8 +103,8 @@
   is a basic coordinate system for the repo's first-window work.
 - **Repo consumers:**
   [investigation backlog, spectrum section](../../00-navigation/INVESTIGATION-BACKLOG.md),
-  [near-miss ledger](../../00-navigation/LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19-klein-S319.md),
-  [formal spectrum-window arithmetic](../../04-computation/lean/TournamentH7/TournamentH7/LRCSpectrumWindow.lean).
+  [near-miss ledger][cp03],
+  [formal spectrum-window arithmetic][cp10].
 - **Does not prove:** the proposed spectrum description for all `n`; Fan--Sun
   refute it already at `n=4`.  A Kravitz rung is a candidate value, not a
   classification of all near-floor LRC(14) families.
@@ -117,8 +117,8 @@
   (`n^(O(n^2))`-scale integer speeds), a large-`n` improvement over the union
   bound, and structural estimates for velocities of size `O(n)`.
 - **Repo consumers:**
-  [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md),
-  [finite-check feasibility ledger](../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md),
+  [THM-523][cp02],
+  [finite-check feasibility ledger][cp05],
   [THM-610 covering/deep-hiding dichotomy](../../01-canon/theorems/THM-610-covering-deep-hiding-dichotomy.md).
 - **Does not prove:** LRC at any new fixed frontier case, a small usable bound
   for LRC(14), or a uniform lower bound on the **measure** of lonely times.
@@ -131,7 +131,7 @@
   historical results, tight instances, applications, and open problems through
   its revision date.
 - **Repo consumers:**
-  [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md),
+  [THM-523][cp02],
   [THM-759 tight-ratio bound](../../01-canon/theorems/THM-759-tight-instance-ratio-bound.md),
   [LRC14 finish map](../../00-navigation/LRC14-FINISH-MAP-2026-07-11.md).
 - **Does not prove:** a new runner case or tight-locus classification.  It
@@ -148,7 +148,7 @@
 - **Repo consumers:**
   [THM-515 theta form](../../01-canon/theorems/THM-515-lrc-singular-series-is-the-lonely-measure-theta-form.md),
   [THM-518 route diagnosis](../../01-canon/theorems/THM-518-stranger-decoupling-and-the-bedert-two-route-diagnosis.md),
-  [LRC14 proof map](../../00-navigation/LRC14-PROOF-MAP.md).
+  [LRC14 proof map][cp06].
 - **Does not prove:** the conjectural `1/n` threshold, LRC(14), or any lower
   bound for the **measure** of the lonely-time set.  A bound on maximum
   loneliness must not be silently converted into a measure bound.
@@ -164,7 +164,7 @@
 - **Repo consumers:**
   [THM-1065, exact doubling law](../../01-canon/theorems/THM-1065-doubling-family-mod-six-characterization.md),
   [THM-709, acceleration criterion](../../01-canon/theorems/THM-709-doubling-tight-locus-singleton.md),
-  [THM-523](../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md).
+  [THM-523][cp02].
 - **Does not prove:** classification of every tight vector.  In particular it
   does not establish uniform emptiness of the twelve-speed sporadic branch or
   show that AP/Goddyn--Wong are the complete LRC(14) tight locus.
@@ -241,7 +241,7 @@
 ### de Bondt — *Symmetric Jacobians*
 
 - **Primary/imported:** [arXiv:1206.2865v3](https://arxiv.org/abs/1206.2865) gives stable reductions to specified Jacobian symmetries; dimension and the full symmetry class are load-bearing.
-- **Consumer/guardrail:** [HYP-8905](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md) and MISTAKE-237. It does not reduce full `JC(2)` to a binary symmetric problem or give an NC2/GMC implication.
+- **Consumer/guardrail:** [HYP-8905][cp11] and MISTAKE-237. It does not reduce full `JC(2)` to a binary symmetric problem or give an NC2/GMC implication.
 
 ### Zhao — Hessian-nilpotent polynomials and the Vanishing Conjecture
 
@@ -256,8 +256,8 @@
   The relevant JC reduction uses homogeneous Hessian-nilpotent targets and the
   eventual vanishing of `Delta^m(P^(m+1))`; `Delta^m(P^m)=0` encodes Hessian
   nilpotence in the cited setting.
-- **Repo consumers:** [HYP-8905](../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md),
-  [THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md), [THM-2801](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md), and MISTAKE-237.
+- **Repo consumers:** [HYP-8905][cp11],
+  [THM-2063](../../01-canon/theorems/THM-2063-one-fiber-linear-planar-keller-pairs.md), [THM-2801][cp04], and MISTAKE-237.
 - **Does not prove:** equality with complex Gaussian moment functionals, an
   `NC2 -> GMC(2) -> JC(2)` chain, or full JC(2) from the binary homogeneous
   calculation. VC(4), planar Jelonek/leading-form descent, and Newton/Lame
@@ -336,9 +336,9 @@
 - **Imported role:** distinguishes operator `E_n` from scalar `F_n` and proves
   `GMC(2n) => ker(F_n) MZ => SIC(n)`, plus the global GMC-to-JC implication.
 - **Repo consumers:**
-  [THM-2022, GMC(2)](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
-  [THM-1490, earlier explicit GMC counterexample](../../01-canon/theorems/THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed.md),
-  [THM-2801, sharp SIC boundary](../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md),
+  [THM-2022, GMC(2)][cp01],
+  [THM-1490, earlier explicit GMC counterexample][cp08],
+  [THM-2801, sharp SIC boundary][cp04],
   [GMC2 finish map](../../00-navigation/GMC2-FINISH-MAP-2026-07-21.md).
 - **Does not prove:** any converse: THM-2022 proves `GMC(2)` while THM-2801
   refutes `SIC(2)`.  For the true endpoint, van den Essen--Wright--Zhao
@@ -358,7 +358,7 @@
   [THM-1630, exact citation identification](../../01-canon/theorems/THM-1630-tnc-is-duistermaat-van-der-kallen-theorem-2.md),
   [THM-1645, angular/radial split](../../01-canon/theorems/THM-1645-gmc2-angular-layer-is-dvdk-the-gap-is-purely-radial.md),
   [THM-2067, internal bare-existence replacement](../../01-canon/theorems/THM-2067-galois-orbit-product-closes-one-variable-dvdk.md),
-  [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md),
+  [THM-2022][cp01],
   and [THM-2070, failed-bypass correction](../../01-canon/theorems/THM-2070-horizontal-wick-embedding-and-dihedral-return-cancellation.md).
 - **Does not prove:** the Gaussian radial/factorial step, Frobenius survival of
   a complete Wick face, or an effective first return. The current Lean
@@ -393,9 +393,9 @@
   has five terms and degree four.  A six-term cubic example in four variables
   is also supplied.  Hence GMC is false in every dimension at least three.
 - **Repo consumers:** pair it with
-  [THM-2022](../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md)
+  [THM-2022][cp01]
   for the exact dimensional boundary, and with
-  [THM-1490](../../01-canon/theorems/THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed.md),
+  [THM-1490][cp08],
   whose older outside example only reached four real variables and made no
   priority claim.
 - **Does not prove:** failure of GMC(2).  The paper explicitly says its small
@@ -424,8 +424,8 @@ THM-4169 imports only prime deletion; all other claims are in-repo.
   theorems, and yields the odd-cycle-collection formula
   `H(T)=I(Omega(T),2)` plus its mod-4 refinement.
 - **Repo consumers:**
-  [THM-002 OCF](../../01-canon/theorems/THM-002-ocf.md),
-  [THM-466 higher Rédei tower](../../01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md),
+  [THM-002 OCF][cp07],
+  [THM-466 higher Rédei tower][cp09],
   [CONJ-001/Claim A](../../01-canon/theorems/CONJ-001-claim-a.md).
 - **Does not prove:** that OCF was first discovered in this repository, that
   Hamiltonian-path count classifies tournaments, or any LRC/Paley equivalence.
@@ -441,8 +441,8 @@ THM-4169 imports only prime deletion; all other claims are in-repo.
   Its Corollary 20 is the repo's cleanest explicit citation of OCF, attributed
   there to Grinberg--Stanley.
 - **Repo consumers:**
-  [THM-002 OCF](../../01-canon/theorems/THM-002-ocf.md),
-  [THM-466](../../01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md),
+  [THM-002 OCF][cp07],
+  [THM-466][cp09],
   [canonical definitions](../../01-canon/definitions.md).
 - **Does not prove:** priority for the underlying Grinberg--Stanley formula or
   a complete tournament invariant.  **Correct attribution:** this arXiv ID is
@@ -579,3 +579,15 @@ the first consumer; sharpen **does not prove** and attribution before routing.
 ## External intake
 
 [2026-07-28 owner puzzle bundle — **CITED-ABSTRACT only**](CORE-PAPERS-INTAKE-2026-07-28.md).
+
+[cp01]: ../../01-canon/theorems/THM-2022-gmc2-frobenius-lowest-balanced-face.md
+[cp02]: ../../01-canon/theorems/THM-523-lrc14-singular-series-proof-skeleton.md
+[cp03]: ../../00-navigation/LRC14-NEAR-MISS-LEDGER-AND-SANDWICH-2026-07-19-klein-S319.md
+[cp04]: ../../01-canon/theorems/THM-2801-sharp-special-image-boundary-and-beta-shift-witness.md
+[cp05]: ../../00-navigation/LRC14-FINITE-CHECK-FEASIBILITY-LEDGER-2026-07-19.md
+[cp06]: ../../00-navigation/LRC14-PROOF-MAP.md
+[cp07]: ../../01-canon/theorems/THM-002-ocf.md
+[cp08]: ../../01-canon/theorems/THM-1490-the-gaussian-moment-counterexample-verified-proved-shortened-and-obstructed.md
+[cp09]: ../../01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md
+[cp10]: ../../04-computation/lean/TournamentH7/TournamentH7/LRCSpectrumWindow.lean
+[cp11]: ../hypotheses/HYP-8905-binary-symmetric-jc2-subcase-and-separate-descent-programs.md

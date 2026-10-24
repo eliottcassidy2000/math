@@ -1,0 +1,10 @@
+S4 S5 S6 exact q-series identities checked through q^180
+C7 mod7 Sturm input through 180, bound4: [1, 14, 91, 406, 1463]
+D7 weight3 Eisenstein identity exact through180, bound2
+D2 modular form check modulo4 through q^180, bound24 PASS
+D7 modular form check modulo49 through q^180, bound140 PASS
+Normalized binomial-sum square root independently matches recurrence through180: [1, 2, 22, 336, 6006, 117348, 2428272]
+TheoremD finite range PASS: all primes <=500, all pn<=20000; every inert prime fails n=1 modp
+Exact small inert witnesses: [(3, 336, 1), (5, 117348, 1), (13, 8123136091556640, 9)]
+G(t(q))=theta(q) independently checked through q^180 from binomial F square root
+New p3 base9 digit product and c(9n)=c(n) independently PASS through n=20000

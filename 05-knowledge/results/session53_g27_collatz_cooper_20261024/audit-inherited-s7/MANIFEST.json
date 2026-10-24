@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "bytes": 1680,
+      "path": "PORTABILITY_RECEIPT.json",
+      "sha256": "f8f8e339e4f9f5047dd350111ffedbeb6837318cfef83e79a32abfb8ed321553"
+    },
+    {
+      "bytes": 10893,
+      "path": "REPORT.md",
+      "sha256": "ffdb53c2685c0a91e45f3e612992c78963ebcf2e77c91dd884d46cdc5189b096"
+    },
+    {
+      "bytes": 753,
+      "path": "audit.optimized.out",
+      "sha256": "5d0adee8564f853e32cde1b952531a8b56b64fa5855f7143882ec705919ecba2"
+    },
+    {
+      "bytes": 753,
+      "path": "audit.out",
+      "sha256": "5d0adee8564f853e32cde1b952531a8b56b64fa5855f7143882ec705919ecba2"
+    },
+    {
+      "bytes": 5346,
+      "path": "audit.py",
+      "sha256": "e446816befc29add384824b34ebd4e502fc774a1bc1f8e4c02459b0d74241df6"
+    },
+    {
+      "bytes": 3527,
+      "path": "portability.py",
+      "sha256": "defb3fc29c9f55606f2a370dce1b50ff95d44219c264713d820342b763f8a577"
+    },
+    {
+      "bytes": 5945,
+      "path": "sources/MISTAKE-629.md",
+      "sha256": "4bb852e146d002ac653d0397c79b3d5f3038574effa863956f51d07c646d5252"
+    },
+    {
+      "bytes": 723,
+      "path": "sources/PRIMARY_SOURCE_REFERENCES.json",
+      "sha256": "733cbd0b7c070f6b3a666f6562d64e252f51445942197fe9b5070309f49d1f9f"
+    },
+    {
+      "bytes": 17826,
+      "path": "sources/inherited/04-computation/experiments/cooper_s7_weight1_frobenius_check_20261018.gp",
+      "sha256": "9034554ca861d527726ae4436a35be42b977cfae1f77f7d8eb0a527c401aca64"
+    },
+    {
+      "bytes": 10307,
+      "path": "sources/inherited/05-knowledge/results/cooper_s7_weight1_frobenius_check_20261018.out",
+      "sha256": "f42e870e36b692fc96b3be90d6ecca970133c764d944e2c5296adf71e2bef506"
+    },
+    {
+      "bytes": 18712,
+      "path": "sources/inherited/05-knowledge/results/cooper_s7_weight_one_root_frobenius_20261018.md",
+      "sha256": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4"
+    },
+    {
+      "bytes": 2014,
+      "path": "sources/inherited/PROVENANCE.json",
+      "sha256": "b94c22210f8bed835e707ccd9d9d8ac1e82143c65d820e9cfaf3a0a6e914970d"
+    },
+    {
+      "bytes": 1656,
+      "path": "verify.py",
+      "sha256": "d5b04bca1eff50c42dcfe8507228448e3daa638e56dcd5e22245e688c3e446a3"
+    }
+  ],
+  "schema": "s7-independent-audit-manifest-v1"
+}

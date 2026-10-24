@@ -1,0 +1,13 @@
+{
+  "beukers": {
+    "url": "https://arxiv.org/html/2403.03301v3",
+    "title": "Supercongruences using modular forms",
+    "version": "2403.03301v3",
+    "inspected_sections": ["equation (5)", "Lemma 3.6", "Proposition 4.2 and proof"],
+    "scope": "Primary text inspected with web tool during audit; metadata reference, not a frozen full-paper snapshot. No universal two-pole result attributed directly to this theorem."
+  },
+  "cooper_parametrization": {
+    "citation_as_inherited": "Cooper, Ramanujan J. 29 (2012); Beukers Appendix C 9.11",
+    "scope": "Classical modular parametrization is an explicit mathematical dependency, corroborated by independent coefficients; no new full-paper source audit claimed."
+  }
+}

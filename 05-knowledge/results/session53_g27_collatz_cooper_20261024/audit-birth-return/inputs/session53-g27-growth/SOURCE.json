@@ -1,0 +1,18 @@
+[
+  {
+    "path": "session32-square-sum/README.md",
+    "sha256": "14ebad4c4a43c7daabc08e0277861b9b4852c3ab8e6b7f0b2052bc22dafb47cc"
+  },
+  {
+    "path": "session52-fortunate-square-pattern/THEOREM.md",
+    "sha256": "bc5fc6cf7e642b863728b218b63a10f5bf463039fdabf91afcb2579f3abbbbc3"
+  },
+  {
+    "path": "session50-publication/clean-repo/05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md",
+    "sha256": "81e0f74d8840fa79a0d58123fdf7e126e4e45231e176e9ba3a2be0330b4b296d"
+  },
+  {
+    "path": "session50-publication/clean-repo/05-knowledge/results/collatz_mod6_20260921_berggren_edge_transport.md",
+    "sha256": "a67ec6cb897458f9626aab3d9253df088e9c9af959f9b5dc7aad5ffa82bafae3"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "lift_checks": [
+    {
+      "modulus": 4,
+      "p": 2,
+      "required_Sturm_bound": 24,
+      "verified_through": 150
+    },
+    {
+      "modulus": 9,
+      "p": 3,
+      "required_Sturm_bound": 32,
+      "verified_through": 150
+    },
+    {
+      "modulus": 49,
+      "p": 7,
+      "required_Sturm_bound": 140,
+      "verified_through": 150
+    }
+  ],
+  "scope": "FINITE-EXACT q-series checks; all-order conclusions additionally require stated modularity and Sturm theorem",
+  "weight3_identity_through": 149
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "summary_sha256": "51d9748165bd2a009ce3613372fbdfa7a774af219de26eb178fcc404c1f3f523",
+  "publication_map_sha256": "232f1ef682eb84a986cefed8701c7140a677be2c6a694cb0c13c45aceb950d4f",
+  "mapped_files": 77,
+  "packet_payload_counts": {
+    "cooper-prime-dichotomy": 10,
+    "audit-inherited-s7": 13,
+    "g27-growth": 9,
+    "collatz27-return": 12,
+    "audit-birth-return": 27
+  },
+  "summary_links": [
+    "cooper-prime-dichotomy/REPORT.md",
+    "audit-inherited-s7/REPORT.md",
+    "g27-growth/THEOREM.md",
+    "collatz27-return/REPORT.md",
+    "audit-birth-return/REPORT.md"
+  ],
+  "navigation_source_git_head": "1b91742ce55a202b73c80d56561ba56d00b503a6",
+  "navigation_source_sha256": "9435f84257f76abcdcde313ecec940bb6b8b71ae5a064ba3dc41f44819c60f95",
+  "navigation_result_sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+  "navigation_expansion_byte_exact": true,
+  "navigation_reference_uses": 28,
+  "navigation_bytes_saved": 1053
+}
