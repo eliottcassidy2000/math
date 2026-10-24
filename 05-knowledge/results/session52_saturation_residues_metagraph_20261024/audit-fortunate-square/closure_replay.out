@@ -1,0 +1,42 @@
+{
+  "all_listed_hashes_match_before_and_after": true,
+  "candidate_manifest_sha256": "610765931889818228afd6d25edd8ef1b4bf6f6befd35a0bdde26fa92398fae3",
+  "copied_files_including_root_manifest": 26,
+  "copy_policy": "Only the root manifest and its final listed payloads; no caches or unlisted dependencies.",
+  "independent_results_sha256": "3eb06e3bb21c3ebd8926f64edbc175265b8ce374991bfd07081d0233ee25e341",
+  "package_payload_files": 25,
+  "runs": [
+    {
+      "check": "candidate normal",
+      "status": "PASS",
+      "stdout_sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "check": "candidate optimized",
+      "status": "PASS",
+      "stdout_sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "check": "candidate hostiles normal",
+      "status": "PASS",
+      "stdout_sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "check": "candidate hostiles optimized",
+      "status": "PASS",
+      "stdout_sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "check": "independent normal",
+      "status": "PASS",
+      "stdout_sha256": "c8ccbb7b22fcb713b99e0fc02c2871a7c0bb99976d8f77ba6c63461ce4f8c717"
+    },
+    {
+      "check": "independent optimized",
+      "status": "PASS",
+      "stdout_sha256": "c8ccbb7b22fcb713b99e0fc02c2871a7c0bb99976d8f77ba6c63461ce4f8c717"
+    }
+  ],
+  "status": "PASS",
+  "working_directory": "Unrelated empty directory, outside the copied package."
+}

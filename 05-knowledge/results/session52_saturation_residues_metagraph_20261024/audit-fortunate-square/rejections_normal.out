@@ -1,0 +1,11 @@
+REJECTED: wrong Fortunate endpoint/minimality length
+REJECTED: invalid Lucas base
+REJECTED: incomplete Lucas factorization
+REJECTED: composite 221 passed as prime in the minimality interval
+REJECTED: shifted primorial indexing
+REJECTED: duplicated vertex in a spanning cover
+REJECTED: nonsquare adjacency in a cover
+REJECTED: raw numerical gaps misread as the run-length word
+REJECTED: ordinary Hamiltonicity misread as the complete graph word
+REJECTED: Miller-Rabin base equal to the tested prime
+PASS: 10 hostile controls rejected

@@ -1,0 +1,90 @@
+{
+  "first_extension_failure": {
+    "F": 109,
+    "N": 27,
+    "candidate": 117288381359406970983337,
+    "cofactor": 28406001782370300553,
+    "factor": 4129,
+    "graph_hamilton_path_count": 35,
+    "graph_path": [
+      18,
+      7,
+      2,
+      14,
+      11,
+      5,
+      20,
+      16,
+      9,
+      27,
+      22,
+      3,
+      13,
+      23,
+      26,
+      10,
+      6,
+      19,
+      17,
+      8,
+      1,
+      15,
+      21,
+      4,
+      12,
+      24,
+      25
+    ],
+    "n": 18,
+    "p_next": 67,
+    "prime_gap": 42
+  },
+  "ordinary_graph_runs": [
+    {
+      "length": 5,
+      "value": false
+    },
+    {
+      "length": 3,
+      "value": true
+    },
+    {
+      "length": 5,
+      "value": false
+    },
+    {
+      "length": 1,
+      "value": true
+    },
+    {
+      "length": 1,
+      "value": false
+    },
+    {
+      "length": 2,
+      "value": true
+    }
+  ],
+  "prime_equality_indices": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    14,
+    16,
+    17
+  ],
+  "results_sha256": "7f3ab3cde28031a051d647814c44d0db2979a58cdd54ace0635af98d4cf14c32",
+  "run_lengths": [
+    3,
+    2,
+    3,
+    5,
+    1,
+    1,
+    2
+  ],
+  "status": "PASS"
+}

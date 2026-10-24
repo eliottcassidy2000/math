@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "candidate_manifest_sha256": "610765931889818228afd6d25edd8ef1b4bf6f6befd35a0bdde26fa92398fae3",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 11709,
+      "sha256": "181181798230bec7cff9af88a6ddd762ebe4d6d20ab76ff15ebfcb1bd2ea8b2b"
+    },
+    {
+      "path": "independent_check.py",
+      "bytes": 16262,
+      "sha256": "af65f3461798d3df4220804d534523f937089a5aa7d84e638267af4b76f56035"
+    },
+    {
+      "path": "independent_results.json",
+      "bytes": 122981,
+      "sha256": "3eb06e3bb21c3ebd8926f64edbc175265b8ce374991bfd07081d0233ee25e341"
+    },
+    {
+      "path": "independent_normal.out",
+      "bytes": 888,
+      "sha256": "c8ccbb7b22fcb713b99e0fc02c2871a7c0bb99976d8f77ba6c63461ce4f8c717"
+    },
+    {
+      "path": "independent_optimized.out",
+      "bytes": 888,
+      "sha256": "c8ccbb7b22fcb713b99e0fc02c2871a7c0bb99976d8f77ba6c63461ce4f8c717"
+    },
+    {
+      "path": "replay_normal.out",
+      "bytes": 1168,
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "path": "replay_optimized.out",
+      "bytes": 1168,
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "path": "rejections_normal.out",
+      "bytes": 533,
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "path": "rejections_optimized.out",
+      "bytes": 533,
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "path": "source_pin_audit.json",
+      "bytes": 2584,
+      "sha256": "fd862d493c9eb17b7c6ff33a607a8ae853c046262c0695cb6fb5a4b23929a711"
+    },
+    {
+      "path": "verify_replay.py",
+      "bytes": 4825,
+      "sha256": "b727105f723f2d3967d9fe1b10f609e2bd56fe87ecf208dc9ecf5353f113bf87"
+    },
+    {
+      "path": "closure_replay.out",
+      "bytes": 1561,
+      "sha256": "713b3b818d7a5b46dd0673b88761ab428b1ed1fb3aa78f1501f0d9d7e6cbea79"
+    },
+    {
+      "path": "frozen_candidate/MANIFEST.json",
+      "bytes": 2304,
+      "sha256": "610765931889818228afd6d25edd8ef1b4bf6f6befd35a0bdde26fa92398fae3"
+    },
+    {
+      "path": "frozen_candidate/README.md",
+      "bytes": 1126,
+      "sha256": "e375b31c1eb76a7669c5e3614709b15919a6d626fdddaa7504b63c26d51ce646"
+    },
+    {
+      "path": "frozen_candidate/THEOREM.md",
+      "bytes": 20017,
+      "sha256": "bc5fc6cf7e642b863728b218b63a10f5bf463039fdabf91afcb2579f3abbbbc3"
+    },
+    {
+      "path": "frozen_candidate/SOURCES.json",
+      "bytes": 4694,
+      "sha256": "5d415efa128065bacc4e7fbf52971c67c4d34068fa7da19b839fe28556564d5a"
+    },
+    {
+      "path": "frozen_candidate/check.py",
+      "bytes": 17211,
+      "sha256": "dc09e1a822022f913519393977396617145a71ee1726e4e5b3aba5b61320e77a"
+    },
+    {
+      "path": "frozen_candidate/test_rejections.py",
+      "bytes": 1908,
+      "sha256": "c518e16b0f22ebfbdb2b351544706dd34877a0980a665278454cb145fabaf266"
+    },
+    {
+      "path": "frozen_candidate/results.json",
+      "bytes": 427404,
+      "sha256": "7f3ab3cde28031a051d647814c44d0db2979a58cdd54ace0635af98d4cf14c32"
+    },
+    {
+      "path": "frozen_candidate/inputs/prime_offsets_certificates.json",
+      "bytes": 135501,
+      "sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf"
+    },
+    {
+      "path": "frozen_candidate/check.out",
+      "bytes": 1168,
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "path": "frozen_candidate/check_optimized.out",
+      "bytes": 1168,
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    },
+    {
+      "path": "frozen_candidate/rejections.out",
+      "bytes": 533,
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "path": "frozen_candidate/rejections_optimized.out",
+      "bytes": 533,
+      "sha256": "53c9640e2681634e76fd2669f364cd9ada354c6b8aa3ffbba8296ef21da818bc"
+    },
+    {
+      "path": "frozen_candidate/generation.out",
+      "bytes": 1168,
+      "sha256": "0133c589057c33086c3fe97c9ba1f7827d49a4e8872834e8e8a37712032c559b"
+    }
+  ],
+  "reproduce": [
+    "python3 verify_replay.py",
+    "python3 independent_check.py",
+    "python3 -O independent_check.py"
+  ],
+  "package_root": "AUDIT_MANIFEST.json; the root manifest does not hash itself. All transitive runtime dependencies are included among its payloads.",
+  "dependencies": "Python3 standard library only; every frozen_candidate payload is included. Independent semantic mutations are embedded in independent_check.py."
+}

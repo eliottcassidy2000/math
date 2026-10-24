@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "commit": "f50a8c2f3a307869ec51650851dbc43eaedfc176",
+  "files": [
+    {
+      "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/THEOREM.md",
+      "sha256": "4db86ba83df28cf2c4ce437076194cb1d872d0a5273b0525348c7dd265f79ca8",
+      "bytes": 16430
+    },
+    {
+      "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/certificates.json",
+      "sha256": "f9e555bc6432f90b10faf3b5206693d4b4cef4235b289e9d4b2c6233ac0dcbcf",
+      "bytes": 135501
+    },
+    {
+      "path": "01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md",
+      "sha256": "619ee1a2ae6aed62a1a25775e51cd0ae4090cdbc07ad3a6d17ff16f873174dce",
+      "bytes": 11780
+    },
+    {
+      "path": "01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md",
+      "sha256": "01f8a8ad6c016fa12db5120721687e4bff24470240f6022d61030660419069d1",
+      "bytes": 12241
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+      "sha256": "e9d91f6ffb53d702b2e242089ca57b46ca65475e6c441c5cab8d4da414c85220",
+      "bytes": 29716
+    },
+    {
+      "path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be",
+      "bytes": 12582
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md",
+      "sha256": "81e0f74d8840fa79a0d58123fdf7e126e4e45231e176e9ba3a2be0330b4b296d",
+      "bytes": 32088
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb",
+      "bytes": 18374
+    },
+    {
+      "path": "05-knowledge/results/crossroads_family_20260926_squares.md",
+      "sha256": "f15e24e90ddf4dd840f5b85494f1675a5aa6b5b7bc08006654215174b4ccde38",
+      "bytes": 19748
+    },
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19",
+      "bytes": 27285
+    },
+    {
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+      "bytes": 27147
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "076e0f2d77d38df6e6f05d9cc582f3b7a3033848ad9b16d74c6d6a1510c79a60",
+      "bytes": 1808941
+    }
+  ]
+}
