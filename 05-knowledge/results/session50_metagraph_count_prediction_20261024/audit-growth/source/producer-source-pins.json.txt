@@ -1,0 +1,31 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+  "hash_basis": "literal bytes; no newline normalization",
+  "sources": [
+    {
+      "source_path": "05-knowledge/results/metagraph_growth_20261020/enumeration.md",
+      "archive_path": "archive/enumeration.md.txt",
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+      "bytes": 9481
+    },
+    {
+      "source_path": "05-knowledge/results/metagraph_growth_20261020/growth.md",
+      "archive_path": "archive/growth.md.txt",
+      "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+      "bytes": 15157
+    },
+    {
+      "source_path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "archive_path": "archive/THM-796.md.txt",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "bytes": 34249
+    },
+    {
+      "source_path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+      "archive_path": "archive/THM-781.md.txt",
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+      "bytes": 9507
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{"classes": 1, "endpoint_states": 1, "max_predictor_canonical_order": 0, "order": 1, "parent_classes": 1, "pointed_states": 1, "self_converse": 1, "symmetry_defect": 0, "trace_D": 1}
+{"classes": 1, "endpoint_states": 1, "max_predictor_canonical_order": 1, "order": 2, "parent_classes": 1, "pointed_states": 2, "self_converse": 1, "symmetry_defect": 0, "trace_D": 2}
+{"classes": 2, "endpoint_states": 2, "max_predictor_canonical_order": 2, "order": 3, "parent_classes": 1, "pointed_states": 4, "self_converse": 2, "symmetry_defect": 2, "trace_D": 6}
+{"classes": 4, "endpoint_states": 7, "max_predictor_canonical_order": 3, "order": 4, "parent_classes": 2, "pointed_states": 12, "self_converse": 2, "symmetry_defect": 4, "trace_D": 16}
+{"classes": 12, "endpoint_states": 33, "max_predictor_canonical_order": 4, "order": 5, "parent_classes": 4, "pointed_states": 48, "self_converse": 8, "symmetry_defect": 12, "trace_D": 60}
+{"classes": 56, "endpoint_states": 236, "max_predictor_canonical_order": 5, "order": 6, "parent_classes": 12, "pointed_states": 296, "self_converse": 12, "symmetry_defect": 40, "trace_D": 336}
+PASS 10503

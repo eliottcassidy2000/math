@@ -1,0 +1,199 @@
+{
+  "bounded_countermodels": [
+    {
+      "A_abstract": 56,
+      "B": 64,
+      "M2": 48724,
+      "N": 1024,
+      "S": 12,
+      "V": 34,
+      "black_components_on_support": 1,
+      "black_loops": 24,
+      "blue_components_on_support": 1,
+      "blue_loops": 2,
+      "full_components": 1,
+      "max_merged_degree": 86,
+      "n": 6,
+      "non_native_witness": {
+        "ordinary_fibre": [
+          6,
+          0
+        ],
+        "score_multisets": [
+          [
+            1,
+            1,
+            3,
+            3,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        ],
+        "words": [
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "A_abstract": 48,
+      "B": 64,
+      "M2": 48724,
+      "N": 1024,
+      "S": 20,
+      "V": 34,
+      "black_components_on_support": 1,
+      "black_loops": 24,
+      "blue_components_on_support": 1,
+      "blue_loops": 2,
+      "full_components": 1,
+      "max_merged_degree": 66,
+      "n": 6,
+      "non_native_witness": {
+        "ordinary_fibre": [
+          3,
+          0
+        ],
+        "score_multisets": [
+          [
+            1,
+            2,
+            2,
+            2,
+            4,
+            4
+          ],
+          [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        ],
+        "words": [
+          2,
+          3
+        ]
+      }
+    }
+  ],
+  "bounded_exact_A_ambiguity_set": [
+    48,
+    56
+  ],
+  "finite_moment_orders_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "native_orders_checked": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "star_countermodels": [
+    {
+      "A_abstract": 18,
+      "B": 64,
+      "M2": 1006066,
+      "N": 1024,
+      "S": 2,
+      "V": 10,
+      "black_components_on_support": 1,
+      "black_loops": 460,
+      "blue_components_on_support": 1,
+      "blue_loops": 31,
+      "full_components": 1,
+      "max_merged_degree": 1003,
+      "n": 6,
+      "non_native_witness": {
+        "ordinary_fibre": [
+          8,
+          0
+        ],
+        "score_multisets": [
+          [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ],
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        ],
+        "words": [
+          0,
+          10
+        ]
+      }
+    },
+    {
+      "A_abstract": 10,
+      "B": 64,
+      "M2": 1006066,
+      "N": 1024,
+      "S": 10,
+      "V": 10,
+      "black_components_on_support": 1,
+      "black_loops": 468,
+      "blue_components_on_support": 1,
+      "blue_loops": 23,
+      "full_components": 1,
+      "max_merged_degree": 1003,
+      "n": 6,
+      "non_native_witness": {
+        "ordinary_fibre": [
+          9,
+          0
+        ],
+        "score_multisets": [
+          [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ],
+          [
+            1,
+            1,
+            3,
+            3,
+            3,
+            4
+          ]
+        ],
+        "words": [
+          7,
+          9
+        ]
+      }
+    }
+  ],
+  "status": "PASS"
+}

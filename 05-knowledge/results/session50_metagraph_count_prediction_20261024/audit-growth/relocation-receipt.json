@@ -1,0 +1,24 @@
+{
+  "changed_working_directory": true,
+  "manifest_only_actual_copy": true,
+  "mutated_payload_rejected": true,
+  "normal_and_optimized": {
+    "normal": {
+      "deep": true,
+      "independent_checks": 10503,
+      "manifest_files": 31,
+      "producer_checks": 2641571,
+      "status": "PASS"
+    },
+    "optimized": {
+      "deep": true,
+      "independent_checks": 10503,
+      "manifest_files": 31,
+      "producer_checks": 2641571,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS",
+  "symlink_rejected": true,
+  "unlisted_file_rejected": true
+}

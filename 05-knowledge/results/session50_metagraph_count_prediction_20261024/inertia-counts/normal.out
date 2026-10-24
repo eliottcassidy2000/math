@@ -1,0 +1,8 @@
+n=1: words=1, classes=1, relocation arrows=0, saturated=1/1
+n=2: words=1, classes=1, relocation arrows=0, saturated=1/1
+n=3: words=2, classes=2, relocation arrows=2, saturated=2/2
+n=4: words=8, classes=4, relocation arrows=16, saturated=4/4
+n=5: words=64, classes=12, relocation arrows=208, saturated=12/12
+n=6: words=1024, classes=56, relocation arrows=4864, saturated=56/56
+n=7: words=32768, classes=456, relocation arrows=212992, saturated=456/456
+PASS: native holonomy saturation, independent paths/automorphisms, cycle index, hostile controls

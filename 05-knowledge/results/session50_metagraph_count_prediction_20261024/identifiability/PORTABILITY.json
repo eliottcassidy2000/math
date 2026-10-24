@@ -1,0 +1,38 @@
+{
+  "commands": [
+    {
+      "command": "python native_reference.py --check",
+      "returncode": 0,
+      "stdout_sha256": "36702a24c6a1589db3b08906761ef0f4c0f5a2f657da5a15af21ca74714ca234"
+    },
+    {
+      "command": "python reproduce.py --check",
+      "returncode": 0,
+      "stdout_sha256": "ebb9a14e38cb58a2bc9aa79d0a68c1b8baa11005a576fa567ead41ec38840da6"
+    },
+    {
+      "command": "python -O reproduce.py --check",
+      "returncode": 0,
+      "stdout_sha256": "ebb9a14e38cb58a2bc9aa79d0a68c1b8baa11005a576fa567ead41ec38840da6"
+    },
+    {
+      "command": "python verify.py",
+      "returncode": 0,
+      "stdout_sha256": "c5c4bb62d6d310ca299f78f31ecb0f393098021e3c8a76f679dc617c6b514f50"
+    },
+    {
+      "command": "python -O verify.py",
+      "returncode": 0,
+      "stdout_sha256": "c5c4bb62d6d310ca299f78f31ecb0f393098021e3c8a76f679dc617c6b514f50"
+    },
+    {
+      "command": "python verify_manifest.py",
+      "returncode": 0,
+      "stdout_sha256": "87f75b534ab89a5fada616379b01efb31d60b5e64c5c566a043b1ef6968f3fd8"
+    }
+  ],
+  "method": "Copied only manifest-listed files plus MANIFEST.json into an unrelated temporary directory; no repository or neighboring files used.",
+  "normal_optimized_outputs_identical": true,
+  "source_archives_verified": true,
+  "status": "PASS"
+}

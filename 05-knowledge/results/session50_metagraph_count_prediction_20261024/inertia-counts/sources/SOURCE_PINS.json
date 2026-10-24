@@ -1,0 +1,54 @@
+{
+  "archive_policy": "Exact source bytes; Markdown archived as inert .txt and never imported as code.",
+  "sources": [
+    {
+      "archive": "fixed_path_fibre.txt",
+      "bytes": 9507,
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md"
+    },
+    {
+      "archive": "recursive_incidence.txt",
+      "bytes": 34249,
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md"
+    },
+    {
+      "archive": "tiling_dictionary.txt",
+      "bytes": 13585,
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md"
+    },
+    {
+      "archive": "observer_moments.txt",
+      "bytes": 17119,
+      "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/THEOREM.md"
+    },
+    {
+      "archive": "metagraph_growth.txt",
+      "bytes": 15157,
+      "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "05-knowledge/results/metagraph_growth_20261020/growth.md"
+    },
+    {
+      "archive": "metagraph_enumeration.txt",
+      "bytes": 9481,
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "05-knowledge/results/metagraph_growth_20261020/enumeration.md"
+    },
+    {
+      "archive": "twisted_burnside_tribonacci.txt",
+      "bytes": 23768,
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+      "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+      "source_repository_path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md"
+    }
+  ]
+}

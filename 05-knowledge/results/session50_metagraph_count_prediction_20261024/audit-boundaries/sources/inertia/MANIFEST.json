@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "bytes": 2879,
+      "path": "README.md",
+      "sha256": "604a3c532d442b7419a28f96e5f76c3bf6bbc9c1de516fc16369740928ea5ba4"
+    },
+    {
+      "bytes": 20492,
+      "path": "THEOREM.md",
+      "sha256": "66e7232c087ab73b85467d18898aa5e3e6428a95f5e84b58c51eafc6cbc26fa6"
+    },
+    {
+      "bytes": 18592,
+      "path": "check.py",
+      "sha256": "bece4a639e6c14da7b8a48d60517582509f99d33408635c8ceb363945a622472"
+    },
+    {
+      "bytes": 272672,
+      "path": "normal.json",
+      "sha256": "418392ffc06576198b39bae2c53ad78d4a783fe917884b8d36c5eb21417f6c7d"
+    },
+    {
+      "bytes": 548,
+      "path": "normal.out",
+      "sha256": "b2fadc127e20f1032c5dd0e05c87144f0bfb027b488ed04d9a4ce5c6a74e64b8"
+    },
+    {
+      "bytes": 272672,
+      "path": "optimized.json",
+      "sha256": "418392ffc06576198b39bae2c53ad78d4a783fe917884b8d36c5eb21417f6c7d"
+    },
+    {
+      "bytes": 548,
+      "path": "optimized.out",
+      "sha256": "b2fadc127e20f1032c5dd0e05c87144f0bfb027b488ed04d9a4ce5c6a74e64b8"
+    },
+    {
+      "bytes": 2551,
+      "path": "sources/SOURCE_PINS.json",
+      "sha256": "e6629d364725ff9753f1afa903532e52f24a2021c64bbe885be10933a2921771"
+    },
+    {
+      "bytes": 9507,
+      "path": "sources/fixed_path_fibre.txt",
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+    },
+    {
+      "bytes": 9481,
+      "path": "sources/metagraph_enumeration.txt",
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe"
+    },
+    {
+      "bytes": 15157,
+      "path": "sources/metagraph_growth.txt",
+      "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c"
+    },
+    {
+      "bytes": 17119,
+      "path": "sources/observer_moments.txt",
+      "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4"
+    },
+    {
+      "bytes": 34249,
+      "path": "sources/recursive_incidence.txt",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "bytes": 13585,
+      "path": "sources/tiling_dictionary.txt",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    },
+    {
+      "bytes": 23768,
+      "path": "sources/twisted_burnside_tribonacci.txt",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+    },
+    {
+      "bytes": 2337,
+      "path": "verify_packet.py",
+      "sha256": "4285a254672e09d588e3381856f5877531369f977733ae3e19993129c2fdc6a7"
+    }
+  ],
+  "schema": "session50-inertia-closed-packet-v1"
+}

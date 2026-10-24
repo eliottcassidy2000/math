@@ -1,0 +1,22 @@
+{
+  "commands": [
+    {
+      "command": "python check.py",
+      "returncode": 0,
+      "stdout_sha256": "f8c36155a981301fe9d820cf68ccdda343d1b750017c4e2e1f2ca65ce2fe0ced"
+    },
+    {
+      "command": "python -O check.py",
+      "returncode": 0,
+      "stdout_sha256": "f8c36155a981301fe9d820cf68ccdda343d1b750017c4e2e1f2ca65ce2fe0ced"
+    },
+    {
+      "command": "python verify_manifest.py",
+      "returncode": 0,
+      "stdout_sha256": "bcc2d6e8bb88af81034db7593401f873a41b846e0dc2eaa9bbc3053cb433d299"
+    }
+  ],
+  "method": "Copied only manifest-listed files plus MANIFEST.json into a new temporary directory; reran both modes and manifest verification there.",
+  "normal_optimized_outputs_identical": true,
+  "status": "PASS"
+}

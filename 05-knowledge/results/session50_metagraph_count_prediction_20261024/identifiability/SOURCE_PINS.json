@@ -1,0 +1,47 @@
+[
+  {
+    "archive_path": "archive/THM-643.md.txt",
+    "bytes": 10395,
+    "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff",
+    "source_blob": "a2fb7942e31cf479495eb1d2fe71fa7218fefbb5",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "01-canon/theorems/THM-643-blue-black-line-parity-structure.md",
+    "source_repository": "https://github.com/eliottcassidy2000/math"
+  },
+  {
+    "archive_path": "archive/THM-4731.md.txt",
+    "bytes": 23768,
+    "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+    "source_blob": "5a3290df1ccc4edc2c28ac7e6456427af247e54c",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+    "source_repository": "https://github.com/eliottcassidy2000/math"
+  },
+  {
+    "archive_path": "archive/THM-796.md.txt",
+    "bytes": 34249,
+    "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+    "source_blob": "f211c178796e36dbba8c59904ffb02166c62dcde",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+    "source_repository": "https://github.com/eliottcassidy2000/math"
+  },
+  {
+    "archive_path": "archive/distance_constraints_PROOF.md.txt",
+    "bytes": 14345,
+    "sha256": "c70bb410b38be2cf7bd7ccc9d6b44f2f513733f9581285cff0a129404648dac5",
+    "source_blob": "215b16c55ac00f4ad3b35eb7ffb2c95cae454763",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/merged_metagraph_distance_moment_constraints_20261020/PROOF.md",
+    "source_repository": "https://github.com/eliottcassidy2000/math"
+  },
+  {
+    "archive_path": "archive/fibre_inverse.json",
+    "bytes": 248364,
+    "sha256": "fb137d01103be6a30af6b6cf083998b70092830af193f642cd00e2bbc05a1396",
+    "source_blob": "78c91d69638b9fefe55f28b351943a2bd7eff44a",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/tournament_tiling_metagraph_fibre_inverse_codex_S8.json",
+    "source_repository": "https://github.com/eliottcassidy2000/math"
+  }
+]

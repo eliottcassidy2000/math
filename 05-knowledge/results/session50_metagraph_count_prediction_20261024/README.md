@@ -1,38 +1,67 @@
-# Session50: recovering tournament counts from metagraph moments
+# Session50: metagraph moments, marked growth, and information boundaries
 
-24 October 2026. First checkpoint; marked growth and structural obstructions
-are being integrated separately.
+24 October 2026. Second checkpoint. A further equitable-cell/refinement
+correction is being proved and audited separately.
 
-The [moment theorem](mass-predictions/THEOREM.md) turns authenticated positive
-odd path-fibre sizes into exact arithmetic information about A000568. Its
-[independent audit](audit-moments/AUDIT.md) checks the source atlas, the moment
-normalization, the global inequalities, and the isolated decoder.
+## Exact aggregate recovery
 
-Write h=H(T)/|Aut(T)| for an ordinary class fibre, and K_r for the number of
-ordered (r+1)-tuples of fixed-path words in the same ordinary class. Thus
-K_r=sum_classes h^(r+1). On a converse-merged vertex of literal port mass mu,
-h is mu when mu is odd and mu/2 otherwise. Loops count twice in that mass.
+The [odd-fibre moment theorem](mass-predictions/THEOREM.md), with
+[independent audit](audit-moments/AUDIT.md), recovers A000568(8)=6880 from
+K_0,...,K_7. K_0=2^21 is already known from the order, leaving seven nontrivial
+moment inputs. The decoder uses no supplied count, maximum fibre or Burnside
+formula. Generating these moments without a census remains open.
 
-The first k moments K_0,...,K_(k-1) determine the class count modulo
-2^(2k-popcount(k)). The proof uses the divisibility of
-product_(j=0)^(k-1)(h-(2j+1)) at every odd h, whose constant coefficient is odd.
-The exponent is sharp within the stated degree-k polynomial-certificate class,
-not necessarily among all reconstruction procedures.
+## Exact growth with retained attachment alignments
 
-At order eight, an isolated decoder accepts exactly eight integers. They give
-A000568(8) congruent to6880 modulo32768. A simple globally valid reciprocal
-upper polynomial gives A<=31785.04749<32768. Positivity therefore forces6880.
-No target count, atlas maximum fibre, finite support list, or Burnside formula
-is an input to this decoder. All inequalities are checked exactly over rational
-numbers, rather than by sampling candidate fibre sizes.
+The [parent-only growth theorem](growth-counts/THEOREM.md), with
+[independent audit](audit-growth/AUDIT.md), constructs pointed extension states
+from the complete order-n parent atlas and actual parent automorphism actions.
+Re-rooting uses only order-n deletion identifications. Its matrix D satisfies
+D^2=(n+1)D, and trace(D)/(n+1) is A000568(n+1).
 
-A separate universal decoder needs only modular moments: if
-2k-popcount(k)>=m and sum h=2^m, the residue and1<=A<=2^m uniquely recover A.
-The order-eight example uses twelve residues modulo2^22. These are exact
-aggregate reconstruction statements, not an efficient way to obtain the moments.
+At order eight,54,256 pointed states give trace55,040 and thus6880 ordinary
+classes. Converse gives176 self-converse and3528 merged classes. Child-order
+canonicalization is absent from generation. Marked state totals are not the
+unmarked count. Endpoint eligibility needs a separate anti-endpoint converse
+kernel; ordinary converse does not preserve the end-root state set.
 
-The decisive open step is generating the needed collision moments directly
-from order n or a substantially compressed native metagraph description.
-The test moments were extracted from an existing atlas. Recovering a held-out
-class count from them must not be advertised as a prediction from smaller
-orders alone or as a faster replacement for known enumeration formulas.
+These are marked-incidence projectors, not the spectrum of the original
+blue/black complement-line graph. Diagonal-only counting and pruning by
+singleton refinement cells are proved opportunities; the supplied engine
+builds full D for verification and does not claim a benchmarked speedup.
+
+## What aggregate constraints do not determine
+
+The [information-boundary theorem](identifiability/THEOREM.md), with
+[independent audit](audit-boundaries/AUDIT.md), gives an exact realization
+criterion for the relaxed C,R cube-partition layer. At n=6, two explicit
+partitions match native word/blue/node totals, degree-square sum, allowed local
+signatures, loop totals and stated connectivity constraints, yet permit formal
+counts48 or56. They are explicitly NON-NATIVE partitions, with witnesses
+showing why they are not tournament isomorphism fibres. They do not contradict
+the actual A000568(6)=56; they prove those tested constraints alone omit data.
+
+## Authentic reobservation and symmetry saturation
+
+The [observer-inertia theorem](inertia-counts/THEOREM.md), also
+[independently audited](audit-boundaries/AUDIT.md), retains owner-permutation
+labels on reobservation arrows. For a component with b normalized words and
+closed-walk group G, b|G|<=H. Equality certifies both a full class fibre and
+its complete source automorphism group. Partial graphs give rigorous lower
+and upper count bounds.
+
+Unrestricted-span single-vertex relocation saturates all tested components
+through order seven, without isomorphism canonicalization in generation.
+This finite result is not an all-size connectivity theorem. Fixed-width
+contiguous windows cannot suffice at every size: a three-block cyclic
+inflation has locally unique observer windows but genuine hidden order-three
+symmetry. Bounded span is different from moving a bounded number of vertices.
+
+## Remaining target
+
+The open goal is a compressed native rule that produces the required moments
+or attachment transports from the order or a small preceding metagraph state.
+Known degree-local Burnside algorithms remain exact numerical baselines; these
+packets neither replace them with an n-only formula nor claim universal speed.
+All frozen packets carry their own source pins, exact verification scopes,
+normal/optimized checks and manifest-only relocation instructions.

@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "bytes": 12744,
+      "path": "AUDIT.md",
+      "sha256": "7fb4a18ac23a48fb76669fd4b1f10c1a90d6d9a9e125a81c926a6656f8125451"
+    },
+    {
+      "bytes": 738,
+      "path": "PORTABILITY.json",
+      "sha256": "e0872b8ac27c8a82a6d8a2a0d5e7a2c24bca5abcc124848a5d71e18305198ccf"
+    },
+    {
+      "bytes": 1242,
+      "path": "README.md",
+      "sha256": "32ecfec0413d24cf9b083660824f14e58da1f3924683ed07ccf4df6d69fdc432"
+    },
+    {
+      "bytes": 4460,
+      "path": "SOURCE_PINS.json",
+      "sha256": "1301d0d77da17412f982f1a1adc4cff0b4f9fa0a35423a8fb74e276b68a4c2b6"
+    },
+    {
+      "bytes": 1088,
+      "path": "bytepinned.txt",
+      "sha256": "c7179f39f7d0b76f1bf79b50b4846a55c328acfb0b2149b850c6ca77f6a56596"
+    },
+    {
+      "bytes": 8568,
+      "path": "check.normal.out",
+      "sha256": "f8c36155a981301fe9d820cf68ccdda343d1b750017c4e2e1f2ca65ce2fe0ced"
+    },
+    {
+      "bytes": 8568,
+      "path": "check.optimized.out",
+      "sha256": "f8c36155a981301fe9d820cf68ccdda343d1b750017c4e2e1f2ca65ce2fe0ced"
+    },
+    {
+      "bytes": 20346,
+      "path": "check.py",
+      "sha256": "0da29377693ad952968c5a29e81da31fc2005837dd872086e5c736234494daed"
+    },
+    {
+      "bytes": 3142,
+      "path": "sources/identifiability/MANIFEST.json",
+      "sha256": "1ac1142a7344e1d90df6414a14432e6659f59cdbc8e0ce232bb7fe21d875e641"
+    },
+    {
+      "bytes": 12440,
+      "path": "sources/identifiability/THEOREM.md.txt",
+      "sha256": "150c187bfbca956679b3f8808b344e8233d1e9bdf7148e9446d53a113e52e4b0"
+    },
+    {
+      "bytes": 256377,
+      "path": "sources/identifiability/certificate.json",
+      "sha256": "80e1acd0114492a00d0c093f067d7e321e5964440ee46089e55ec594c2892662"
+    },
+    {
+      "bytes": 5627,
+      "path": "sources/identifiability/native_reference.json",
+      "sha256": "ea3ec05c16d4c26fa4f3ee5c67c5142179422ce4d8a6826da4b103e4cd711cc4"
+    },
+    {
+      "bytes": 9888,
+      "path": "sources/identifiability/reproduce.py.txt",
+      "sha256": "11ae73886d21397795e155ee565382ec0cba4d0d48000468d72db38d9abd1b6c"
+    },
+    {
+      "bytes": 7165,
+      "path": "sources/identifiability/verify.py.txt",
+      "sha256": "86c275fd881e9aa96950dbde715b6beef2521c4851d0f3fa0305546cb78eb2e0"
+    },
+    {
+      "bytes": 2570,
+      "path": "sources/inertia/MANIFEST.json",
+      "sha256": "fba9a7480960dd473fac792e01101e2ea1bee9559469511aa7d73116ce4d21fd"
+    },
+    {
+      "bytes": 20492,
+      "path": "sources/inertia/THEOREM.md.txt",
+      "sha256": "66e7232c087ab73b85467d18898aa5e3e6428a95f5e84b58c51eafc6cbc26fa6"
+    },
+    {
+      "bytes": 18592,
+      "path": "sources/inertia/check.py.txt",
+      "sha256": "bece4a639e6c14da7b8a48d60517582509f99d33408635c8ceb363945a622472"
+    },
+    {
+      "bytes": 272672,
+      "path": "sources/inertia/normal.json",
+      "sha256": "418392ffc06576198b39bae2c53ad78d4a783fe917884b8d36c5eb21417f6c7d"
+    },
+    {
+      "bytes": 1040,
+      "path": "verify_manifest.py",
+      "sha256": "3658aad102b971eb3640603ae823a92da0b85fa4d5fa6ffc6849ed3a21d48635"
+    },
+    {
+      "bytes": 1703,
+      "path": "verify_portable.py",
+      "sha256": "c486e4bec122aa1f6cc9a493109440ceacd7530ef3092f874171ad9722051285"
+    }
+  ],
+  "schema": "sha256-manifest-v1"
+}
