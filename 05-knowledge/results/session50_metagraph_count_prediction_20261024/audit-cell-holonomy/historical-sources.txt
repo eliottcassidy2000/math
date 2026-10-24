@@ -1,0 +1,29 @@
+Historical sources and inherited proof mechanisms. Raw bytes; no newline normalization.
+
+Current historical repository pin supplied to the audit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390.
+Publication first checkpoint supplied to the audit: 189285e7a935d7d6df0d06b6215816dbfac80b77.
+Session39 original publication: a538127eefd3f7575f2b54b629b43624d2e64ab2.
+The Session39 source was recovered by the producer from the Git object at the historical repository pin; it was not materialized in the clean worktree.
+The auditor read its exact archived text and checked the literal SHA256, but did not independently run Git under its no-Git assignment.
+Exact repository paths and producer retrieval context are retained in source/holonomy/pinned.txt.
+
+Archive: source/holonomy/archive/THM-4131-stable-refinement-use.txt
+SHA256: 2b78da209be1f1acc5ba9229079be061f8a08e1cf1f0ed6035583347ca50f376
+Bytes: 13831
+
+Archive: source/holonomy/archive/session39-affine-connections.txt
+SHA256: 5b9a1691cb3350b7aa5ea6ba884ae41b15ed5844118433a15bd7749120c153b5
+Bytes: 8422
+
+Archive: source/holonomy/archive/session40-path-transport-forest-rule.txt
+SHA256: 0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6
+Bytes: 8237
+
+Archive: source/holonomy/archive/session40-prime-cell-burnside-formulas.txt
+SHA256: c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1
+Bytes: 8785
+
+Archive: source/holonomy/archive/session50-growth-theorem.txt
+SHA256: 74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4
+Bytes: 18837
+

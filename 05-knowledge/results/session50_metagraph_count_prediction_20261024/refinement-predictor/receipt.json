@@ -1,0 +1,166 @@
+{
+  "SCC_total_error_order_eight": 28,
+  "child_canonicalization_calls": 0,
+  "computed_parent_total_errors": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    14
+  ],
+  "computed_strong_errors_through_seven": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    14
+  ],
+  "corrected_unpointing_trace": 55040,
+  "deletion_or_reroot_isomorphism_calls": 0,
+  "input_atlas_sha256": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad",
+  "input_parent_class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456
+  ],
+  "operation_counts": {
+    "child_extensions": 54256,
+    "child_refinement_calls": 54256,
+    "parent_action_arc_checks": 34801,
+    "parent_refinement_calls": 532,
+    "parent_subset_action_evaluations": 61944,
+    "refinement_rounds": 132603
+  },
+  "pointed_extension_states": 54256,
+  "pointed_refinement_stream_sha256": "05a380dfdf73f56beb6e95fd6c1f7b6f3b025a358a4f3e4045908f8de7394380",
+  "positive_error_input_parents": [
+    {
+      "action_order": 3,
+      "error": 14,
+      "order": 7,
+      "rows": [
+        74,
+        84,
+        97,
+        22,
+        37,
+        11,
+        56
+      ],
+      "stable_cell_sizes": [
+        7
+      ],
+      "strong": true,
+      "vertex_orbit_sizes": [
+        1,
+        3,
+        3
+      ]
+    }
+  ],
+  "predicted_A000568_order_eight": 6880,
+  "scope": "finite order eight, conditional on complete parent atlas and the proved strong-eight vanishing theorem",
+  "source_boundary": {
+    "call_names": [
+      "ArgumentParser",
+      "Counter",
+      "Path",
+      "RuntimeError",
+      "add",
+      "add_argument",
+      "addaudithook",
+      "all",
+      "any",
+      "append",
+      "attach_vertex",
+      "bit_count",
+      "check_parent",
+      "count",
+      "dict",
+      "dumps",
+      "encode",
+      "enforce_source_boundary",
+      "enumerate",
+      "hexdigest",
+      "is_strong",
+      "isinstance",
+      "items",
+      "len",
+      "list",
+      "loads",
+      "main",
+      "map",
+      "min",
+      "parse",
+      "parse_args",
+      "predict",
+      "print",
+      "range",
+      "read_bytes",
+      "read_text",
+      "require",
+      "resolve",
+      "restrict_io",
+      "set",
+      "sha256",
+      "sorted",
+      "stable_colors",
+      "startswith",
+      "str",
+      "subset_image",
+      "sum",
+      "tuple",
+      "type",
+      "update",
+      "values",
+      "vertex_partition",
+      "walk",
+      "write_text"
+    ],
+    "forbidden_isomorphism_calls_in_source": 0,
+    "imports": [
+      "argparse",
+      "ast",
+      "collections",
+      "hashlib",
+      "json",
+      "pathlib",
+      "sys"
+    ],
+    "target_or_trace_constants_outside_guard": 0
+  },
+  "stable_root_cell_histogram": [
+    [
+      1,
+      53882
+    ],
+    [
+      3,
+      352
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      7,
+      10
+    ]
+  ],
+  "status": "PASS",
+  "target_order": 8,
+  "theorem_strong_error_order_eight": 0,
+  "upper_refinement_trace": 55068,
+  "zero_call_basis": "source boundary, standard-library-only imports, and restricted runtime input"
+}

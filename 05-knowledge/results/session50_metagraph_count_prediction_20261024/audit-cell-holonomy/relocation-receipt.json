@@ -1,0 +1,31 @@
+{
+  "changed_working_directory": true,
+  "generated_cache_rejected": true,
+  "manifest_only_actual_copy": true,
+  "mutated_payload_rejected": true,
+  "normal_optimized_deep_replays": {
+    "normal": {
+      "deep": true,
+      "rerun_scripts": [
+        "independent.py",
+        "independent_predictor.py",
+        "compare_atlas.py",
+        "replay_frozen.py"
+      ],
+      "status": "PASS"
+    },
+    "optimized": {
+      "deep": true,
+      "rerun_scripts": [
+        "independent.py",
+        "independent_predictor.py",
+        "compare_atlas.py",
+        "replay_frozen.py"
+      ],
+      "status": "PASS"
+    }
+  },
+  "status": "PASS",
+  "symlink_rejected": true,
+  "unexpected_file_rejected": true
+}

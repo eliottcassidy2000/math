@@ -1,0 +1,315 @@
+{
+  "balanced_control_nine": {
+    "automorphism_order": 3,
+    "rows": [
+      74,
+      148,
+      289,
+      86,
+      165,
+      267,
+      182,
+      301,
+      91
+    ],
+    "tested_unrestricted_permutations": 362880
+  },
+  "checks": {
+    "216 matchings give sixteen literal classes": 1,
+    "SCC error additivity": 1135,
+    "SCC restriction of stable refinement": 1135,
+    "all labelled through five exact": 1099,
+    "block holonomy full literal group": 2310,
+    "coprime crossing uniform": 18408,
+    "crossing balance": 32268,
+    "directed triangle cell": 7108,
+    "equitable crossing columns": 32268,
+    "equitable crossing rows": 32268,
+    "excluded block family regular nine": 434,
+    "holonomy domain": 3385,
+    "holonomy error formula": 2310,
+    "inherited prime family arithmetic": 1,
+    "inherited seven hostile": 1,
+    "label orbit stabilizer": 6,
+    "matching affine coordinates": 5760,
+    "matching classes twelve symmetric four rigid": 1,
+    "matching family strong error seventy two": 1,
+    "native hostile cells three": 1,
+    "native hostile degree separation": 1,
+    "native hostile error eighteen": 1,
+    "native hostile strong": 1,
+    "no loops": 3843,
+    "nonuniform block matching": 5760,
+    "nonzero matching multiplier": 5760,
+    "order ten lower bound arithmetic": 1,
+    "ordered join additivity": 36,
+    "regular class census sizes": 1,
+    "regular class disjoint exhaustive partition": 6,
+    "regular labelled census sizes": 1,
+    "regular labels unique": 4,
+    "regular leaf degrees": 2667,
+    "regular seven group orders": 1,
+    "regular seven strong": 1,
+    "regular seven total error": 1,
+    "signed generator gauge covariance": 498960,
+    "signed kernel dimension": 3385,
+    "small holonomy literal group": 1075,
+    "small holonomy no unbalanced component": 1075,
+    "stable cells internally regular": 11883,
+    "stable cells odd": 11883,
+    "tournament": 3843,
+    "unrestricted nine factorial balanced symmetry": 1,
+    "unrestricted nine factorial hostile rigidity": 1
+  },
+  "derived_strong_errors": {
+    "order_eight": 0,
+    "order_seven": 14,
+    "through_order_six": 0
+  },
+  "derived_total_error_order_eight": 28,
+  "derived_total_error_order_nine_lower_bound": 114,
+  "derived_total_error_order_ten_lower_bound": 388,
+  "family_errors": {
+    "0": 1662,
+    "18": 648
+  },
+  "family_group_orders": {
+    "1": 648,
+    "3": 1512,
+    "9": 144,
+    "27": 6
+  },
+  "inherited_prime_family_error_lower_bounds": {
+    "5": 160,
+    "7": 8568
+  },
+  "matching_only_family": {
+    "class_group_orders": {
+      "1": 4,
+      "3": 12
+    },
+    "classes": 16,
+    "labelled_presentations": 216,
+    "strong_error_sum": 72
+  },
+  "native_hostile_nine": {
+    "error": 18,
+    "literal_automorphisms": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "rows": [
+      74,
+      148,
+      289,
+      86,
+      293,
+      139,
+      182,
+      285,
+      107
+    ],
+    "stable_cells": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "tested_unrestricted_permutations": 362880
+  },
+  "regular_census": {
+    "1": {
+      "classes": [
+        {
+          "automorphism_order": 1,
+          "labelled_orbit_size": 1,
+          "refinement_error": 0,
+          "rows": [
+            0
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0
+            ]
+          ]
+        }
+      ],
+      "labelled_count": 1
+    },
+    "3": {
+      "classes": [
+        {
+          "automorphism_order": 3,
+          "labelled_orbit_size": 2,
+          "refinement_error": 0,
+          "rows": [
+            2,
+            4,
+            1
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0,
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "labelled_count": 2
+    },
+    "5": {
+      "classes": [
+        {
+          "automorphism_order": 5,
+          "labelled_orbit_size": 24,
+          "refinement_error": 0,
+          "rows": [
+            6,
+            12,
+            24,
+            17,
+            3
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        }
+      ],
+      "labelled_count": 24
+    },
+    "7": {
+      "classes": [
+        {
+          "automorphism_order": 7,
+          "labelled_orbit_size": 720,
+          "refinement_error": 0,
+          "rows": [
+            14,
+            28,
+            56,
+            112,
+            97,
+            67,
+            7
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "automorphism_order": 3,
+          "labelled_orbit_size": 1680,
+          "refinement_error": 14,
+          "rows": [
+            14,
+            28,
+            104,
+            112,
+            37,
+            67,
+            19
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0,
+              2,
+              5
+            ],
+            [
+              1,
+              3,
+              6
+            ],
+            [
+              4
+            ]
+          ]
+        },
+        {
+          "automorphism_order": 21,
+          "labelled_orbit_size": 240,
+          "refinement_error": 0,
+          "rows": [
+            14,
+            52,
+            88,
+            98,
+            41,
+            69,
+            19
+          ],
+          "strong": true,
+          "vertex_orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ]
+        }
+      ],
+      "labelled_count": 2640
+    }
+  },
+  "scc_join_controls": {
+    "maximum_order": 18,
+    "pairs": 36
+  },
+  "schema": "session50-cell-holonomy-v1",
+  "small_labelled_counts": {
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "three_triangle_family": {
+    "constructed": 2744,
+    "holonomy_domain": 2310,
+    "one_regular_nine_cell": 434
+  }
+}

@@ -1,67 +1,57 @@
-# Session50: metagraph moments, marked growth, and information boundaries
+# Session50: from metagraph moments to corrected refinement counts
 
-24 October 2026. Second checkpoint. A further equitable-cell/refinement
-correction is being proved and audited separately.
+24 October 2026. Third checkpoint. The order-nine extension is being packaged
+and audited separately before final integration.
 
-## Exact aggregate recovery
+## Counts from moments
 
-The [odd-fibre moment theorem](mass-predictions/THEOREM.md), with
-[independent audit](audit-moments/AUDIT.md), recovers A000568(8)=6880 from
-K_0,...,K_7. K_0=2^21 is already known from the order, leaving seven nontrivial
-moment inputs. The decoder uses no supplied count, maximum fibre or Burnside
-formula. Generating these moments without a census remains open.
+[Odd-fibre moment reconstruction](mass-predictions/THEOREM.md), with
+[independent audit](audit-moments/AUDIT.md), recovers6880 at order eight from
+K_0,...,K_7. Only seven positive-degree moments are extra data: K_0 is the
+known word-cube size. Producing those moments without a census remains open.
 
-## Exact growth with retained attachment alignments
+## Counts from marked parent growth
 
-The [parent-only growth theorem](growth-counts/THEOREM.md), with
-[independent audit](audit-growth/AUDIT.md), constructs pointed extension states
-from the complete order-n parent atlas and actual parent automorphism actions.
-Re-rooting uses only order-n deletion identifications. Its matrix D satisfies
-D^2=(n+1)D, and trace(D)/(n+1) is A000568(n+1).
+[Parent-only unpointing](growth-counts/THEOREM.md), with
+[independent audit](audit-growth/AUDIT.md), gives D^2=ND and A_N=trace(D)/N.
+Full parent attachment alignments and automorphism actions are retained;
+child-order canonicalization is not a prediction input. Converse and the
+endpoint correction recover self-converse and merged counts without confusing
+marked totals with unmarked classes.
 
-At order eight,54,256 pointed states give trace55,040 and thus6880 ordinary
-classes. Converse gives176 self-converse and3528 merged classes. Child-order
-canonicalization is absent from generation. Marked state totals are not the
-unmarked count. Endpoint eligibility needs a separate anti-endpoint converse
-kernel; ordinary converse does not preserve the end-root state set.
+## A structural correction removes the general reroot tests at order eight
 
-These are marked-incidence projectors, not the spectrum of the original
-blue/black complement-line graph. Diagonal-only counting and pruning by
-singleton refinement cells are proved opportunities; the supplied engine
-builds full D for verification and does not claim a benchmarked speedup.
+The [refinement-error theorem](cell-holonomy/THEOREM.md) extracts counting
+information from the inherited odd-cell and affine-holonomy results. Its new
+application is the error e(T) between stable refinement cells and actual vertex
+orbits, and the SCC generating-function identity E(z)=A(z)^2 E_s(z).
 
-## What aggregate constraints do not determine
+A structural classification proves that every strong order-eight tournament
+has zero refinement error. The complete regular-seven subproblem contributes
+E_s,7=14; therefore E8=28. No order-eight defect census is needed to assume
+that correction.
 
-The [information-boundary theorem](identifiability/THEOREM.md), with
-[independent audit](audit-boundaries/AUDIT.md), gives an exact realization
-criterion for the relaxed C,R cube-partition layer. At n=6, two explicit
-partitions match native word/blue/node totals, degree-square sum, allowed local
-signatures, loop totals and stated connectivity constraints, yet permit formal
-counts48 or56. They are explicitly NON-NATIVE partitions, with witnesses
-showing why they are not tournament isomorphism fibres. They do not contradict
-the actual A000568(6)=56; they prove those tested constraints alone omit data.
+The [isolated refinement predictor](refinement-predictor/THEOREM.md) accepts
+the complete parent atlas and automorphism actions through order seven. It
+sums54,256 attachment-orbit root-cell sizes to U8=55,068, computes the parent
+error14, and returns (55,068−28)/8=6880. It performs no child canonicalization,
+child automorphism search, deletion or reroot-isomorphism test. The
+[independent cell/predictor audit](audit-cell-holonomy/AUDIT.md) reconstructs
+the input atlases independently and verifies the same result.
 
-## Authentic reobservation and symmetry saturation
+The inherited signed-cell holonomy and prior16-class calculation are explicitly
+credited, not rediscovered. Isotropy extraction can discard translation-phase
+information that complete class decoding must retain. The order-nine rigid
+triangle-cell witness explains why zero strong error does not extrapolate.
 
-The [observer-inertia theorem](inertia-counts/THEOREM.md), also
-[independently audited](audit-boundaries/AUDIT.md), retains owner-permutation
-labels on reobservation arrows. For a component with b normalized words and
-closed-walk group G, b|G|<=H. Equality certifies both a full class fibre and
-its complete source automorphism group. Partial graphs give rigorous lower
-and upper count bounds.
+## What cannot be discarded
 
-Unrestricted-span single-vertex relocation saturates all tested components
-through order seven, without isomorphism canonicalization in generation.
-This finite result is not an all-size connectivity theorem. Fixed-width
-contiguous windows cannot suffice at every size: a three-block cyclic
-inflation has locally unique observer windows but genuine hidden order-three
-symmetry. Bounded span is different from moving a bounded number of vertices.
+[Relaxed C,R countermodels](identifiability/THEOREM.md) show that the declared
+aggregate laws and allowed local signatures do not force native realization.
+[Owner-labelled reobservation](inertia-counts/THEOREM.md) gives saturation
+certificates and proves bounded contiguous windows can miss genuine symmetry.
+Both are checked by the [information-boundary audit](audit-boundaries/AUDIT.md).
 
-## Remaining target
-
-The open goal is a compressed native rule that produces the required moments
-or attachment transports from the order or a small preceding metagraph state.
-Known degree-local Burnside algorithms remain exact numerical baselines; these
-packets neither replace them with an n-only formula nor claim universal speed.
-All frozen packets carry their own source pins, exact verification scopes,
-normal/optimized checks and manifest-only relocation instructions.
+These results require native word masses or actual marked parent data. They
+are not a scalar recurrence from the naked blue/black graph, an n-only formula,
+or a claim of faster numerical evaluation than known Burnside algorithms.

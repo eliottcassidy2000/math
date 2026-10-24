@@ -1,0 +1,85 @@
+{
+  "atlas_sha256": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad",
+  "checks": {
+    "complete independent parent atlas match": 8,
+    "disjoint full permutation class removal": 77,
+    "frozen atlas source hash": 1,
+    "input actions are full literal automorphism group": 533,
+    "input actual tournament": 533,
+    "input classes pairwise nonisomorphic": 533,
+    "literal orbit stabilizer": 77,
+    "no child-order canonicalization": 4194
+  },
+  "levels": [
+    {
+      "classes": 1,
+      "group_order_histogram": {
+        "1": 1
+      },
+      "order": 0
+    },
+    {
+      "classes": 1,
+      "group_order_histogram": {
+        "1": 1
+      },
+      "order": 1
+    },
+    {
+      "classes": 1,
+      "group_order_histogram": {
+        "1": 1
+      },
+      "order": 2
+    },
+    {
+      "classes": 2,
+      "group_order_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "order": 3
+    },
+    {
+      "classes": 4,
+      "group_order_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "order": 4
+    },
+    {
+      "classes": 12,
+      "group_order_histogram": {
+        "1": 7,
+        "3": 4,
+        "5": 1
+      },
+      "order": 5
+    },
+    {
+      "classes": 56,
+      "group_order_histogram": {
+        "1": 41,
+        "3": 12,
+        "5": 2,
+        "9": 1
+      },
+      "order": 6
+    },
+    {
+      "classes": 456,
+      "group_order_histogram": {
+        "1": 399,
+        "3": 47,
+        "5": 4,
+        "7": 1,
+        "9": 4,
+        "21": 1
+      },
+      "order": 7
+    }
+  ],
+  "source": "Complete independently generated atlases; literal degree-preserving arc tests authenticate every supplied group.",
+  "status": "PASS"
+}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "README.md": "4c9ebd03d99930f2a18385e71304c05a8c6b5f6a22ca5f8f3849ddd9e785046c",
+    "THEOREM.md": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b",
+    "VALIDATION.md": "ff36bce3379981216c0f5e18c71756d8996f0e9d4962292718c1379e34409f4c",
+    "archive/THM-4131-stable-refinement-use.txt": "2b78da209be1f1acc5ba9229079be061f8a08e1cf1f0ed6035583347ca50f376",
+    "archive/session39-affine-connections.txt": "5b9a1691cb3350b7aa5ea6ba884ae41b15ed5844118433a15bd7749120c153b5",
+    "archive/session40-path-transport-forest-rule.txt": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6",
+    "archive/session40-prime-cell-burnside-formulas.txt": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+    "archive/session50-growth-theorem.txt": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+    "check.py": "a823d3eeb444d22eb2321a88cd05c30d72c4fad087478024c29c5686c21056ab",
+    "normal.out": "85a64231828a04f6b985f105ae834492d57db89b6d391093b3732e4c2e7c6d55",
+    "optimized-receipt.json": "e597d88b7d325394c66a20e9e7c1d5bb31c50505da83302383c8ce55dc442af1",
+    "optimized.out": "85a64231828a04f6b985f105ae834492d57db89b6d391093b3732e4c2e7c6d55",
+    "pinned.txt": "8d33eeac33b07593e2812f0229c487fd89d18bf80263c10b141ffd079c3d29ab",
+    "receipt.json": "e597d88b7d325394c66a20e9e7c1d5bb31c50505da83302383c8ce55dc442af1",
+    "replay.py": "1e159301f021706ec6a7384c12640115d6f080abe35d7a356452af9f1756029c"
+  },
+  "schema": "session50-cell-holonomy-manifest-v1"
+}

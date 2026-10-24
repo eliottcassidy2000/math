@@ -1,0 +1,374 @@
+#!/usr/bin/env python3
+"""Parent-only marked extension/endpoint projectors. No Burnside summation.
+
+canonical() is called on at most parent-order objects during predict().
+Child canonicalization is confined to the explicitly separate audit().
+All proof controls are explicit exceptions, active under Python -O.
+"""
+from collections import Counter
+from functools import lru_cache
+from fractions import Fraction
+from itertools import permutations, product
+import argparse
+import hashlib
+import json
+from pathlib import Path
+
+CHECKS = Counter()
+CANON_ORDERS = Counter()
+
+
+def need(condition, label):
+    CHECKS[label] += 1
+    if not condition:
+        raise RuntimeError(label)
+
+
+def permute(rows, order):
+    """New position i receives old vertex order[i]."""
+    return tuple(sum(((rows[v] >> w) & 1) << j
+                     for j, w in enumerate(order)) for v in order)
+
+
+@lru_cache(maxsize=None)
+def canonical(rows):
+    """Invariant degree refinement; exhaustive permutations within all cells.
+
+    Returns canonical rows and one new-position -> old-vertex order.
+    This is isomorphism testing, not a permutation fixed-object sum.
+    """
+    n = len(rows)
+    CANON_ORDERS[n] += 1
+    colors = tuple(r.bit_count() for r in rows)
+    while True:
+        labels = tuple(sorted(set(colors)))
+        sig = tuple((colors[v], tuple(sum((rows[v] >> w) & 1
+                                          for w in range(n) if colors[w] == c)
+                                     for c in labels)) for v in range(n))
+        names = {s: i for i, s in enumerate(sorted(set(sig)))}
+        refined = tuple(names[s] for s in sig)
+        # Stop when the induced partition is unchanged, not numeric colors.
+        stable = all((colors[i] == colors[j]) == (refined[i] == refined[j])
+                     for i in range(n) for j in range(n))
+        colors = refined
+        if stable:
+            break
+    cells = [tuple(v for v in range(n) if colors[v] == c)
+             for c in sorted(set(colors))]
+    best = None
+    chosen = None
+    for pieces in product(*(permutations(c) for c in cells)):
+        order = tuple(v for cell in pieces for v in cell)
+        candidate = permute(rows, order)
+        if best is None or candidate < best:
+            best, chosen = candidate, order
+    return best, chosen
+
+
+def refinement_sizes(rows):
+    """Isomorphism-invariant color cell size at each vertex, no canonicalizer."""
+    n=len(rows); colors=tuple(r.bit_count() for r in rows)
+    while True:
+        labels=sorted(set(colors))
+        signatures=tuple((colors[v],tuple(sum((rows[v] >> w)&1 for w in range(n)
+                                           if colors[w]==c) for c in labels)) for v in range(n))
+        names={s:i for i,s in enumerate(sorted(set(signatures)))}
+        new=tuple(names[s] for s in signatures)
+        if len(set(new))==len(set(colors)):
+            return tuple(new.count(new[v]) for v in range(n))
+        colors=new
+
+
+def automorphisms(rows):
+    """Literal old->new automorphisms, independent degree-cell enumeration."""
+    n = len(rows)
+    degrees = tuple(r.bit_count() for r in rows)
+    cells = [tuple(v for v in range(n) if degrees[v] == d)
+             for d in sorted(set(degrees))]
+    out = []
+    for pieces in product(*(permutations(c) for c in cells)):
+        mapping = list(range(n))
+        for cell, images in zip(cells, pieces):
+            for a, b in zip(cell, images):
+                mapping[a] = b
+        mapping = tuple(mapping)
+        if permute(rows, mapping) == rows:
+            out.append(mapping)
+    return tuple(out)
+
+
+def transform_subset(mask, mapping):
+    return sum(1 << mapping[v] for v in range(len(mapping)) if mask >> v & 1)
+
+
+def end_paths(rows):
+    n = len(rows)
+    if n == 0:
+        return ()
+    dp = [[0] * n for _ in range(1 << n)]
+    for v in range(n):
+        dp[1 << v][v] = 1
+    for mask in range(1, 1 << n):
+        for v, count in enumerate(dp[mask]):
+            if not count:
+                continue
+            available = rows[v] & ~mask
+            while available:
+                bit = available & -available
+                w = bit.bit_length() - 1
+                dp[mask | bit][w] += count
+                available -= bit
+    return tuple(dp[-1])
+
+
+def extension(rows, incoming):
+    """Old v -> new star iff v is in incoming."""
+    n = len(rows)
+    out = list(rows) + [0]
+    for v in range(n):
+        if incoming >> v & 1:
+            out[v] |= 1 << n
+        else:
+            out[n] |= 1 << v
+    return tuple(out)
+
+
+def opposite(rows):
+    full = (1 << len(rows)) - 1
+    return tuple(full ^ row ^ (1 << v) for v, row in enumerate(rows))
+
+
+def deletion(rows, root):
+    order = tuple(v for v in range(len(rows)) if v != root)
+    deleted = tuple(sum(((rows[v] >> w) & 1) << j
+                        for j, w in enumerate(order)) for v in order)
+    incoming = sum(1 << i for i, v in enumerate(order) if rows[v] >> root & 1)
+    return deleted, incoming
+
+
+def normalized_word(n, word):
+    rows = [0] * n
+    for v in range(n - 1):
+        rows[v] |= 1 << (v + 1)
+    bit = 0
+    for v in range(n):
+        for w in range(v + 2, n):
+            if word >> bit & 1:
+                rows[v] |= 1 << w
+            else:
+                rows[w] |= 1 << v
+            bit += 1
+    return tuple(rows)
+
+
+def word_count(n):
+    return 1 << ((n - 1) * (n - 2) // 2) if n else 1
+
+
+def rooted_key(rows, incoming):
+    rep, order = canonical(rows)
+    new_mask = sum(1 << j for j, v in enumerate(order) if incoming >> v & 1)
+    return rep, new_mask
+
+
+def sparse_product(left, right):
+    result = Counter()
+    for j, a in left.items():
+        for k, b in right[j].items():
+            result[k] += a * b
+    return +result
+
+
+def predict(parent_reps):
+    """Build order n+1 using only order n isomorphism/automorphism tests."""
+    n = len(parent_reps[0]); N = n + 1
+    canonical.cache_clear()
+    CANON_ORDERS.clear()
+    parents = sorted({canonical(t)[0] for t in parent_reps})
+    need(len(parents) == len(parent_reps), 'parent atlas distinct')
+    auts = {t: automorphisms(t) for t in parents}
+    ends = {t: end_paths(t) for t in parents}
+    orbit = {}; states = []; stab = []; lifts = []
+    index = {}
+    for t in parents:
+        orbits = {}
+        for mask in range(1 << n):
+            if mask in orbits:
+                continue
+            members = {transform_subset(mask, g) for g in auts[t]}
+            minimum = min(members)
+            for m in members:
+                orbits[m] = minimum
+            h = sum(transform_subset(mask, g) == mask for g in auts[t])
+            ell = sum(ends[t][v] for v in range(n) if mask >> v & 1) if n else 1
+            need(ell % h == 0, 'endpoint lift divisibility')
+            need(len(members) * h == len(auts[t]), 'parent orbit stabilizer')
+            index[(t, minimum)] = len(states)
+            states.append((t, minimum)); stab.append(h); lifts.append(ell // h)
+        orbit[t] = orbits
+
+    def lookup(t, mask):
+        rep, moved = rooted_key(t, mask)
+        need(rep in orbit, 'deletion belongs to parent atlas')
+        return index[(rep, orbit[rep][moved])]
+
+    D = []; C = []; children = []; root_bounds = []
+    for t, mask in states:
+        child = extension(t, mask); children.append(child)
+        root_bounds.append(refinement_sizes(child)[-1])
+        D.append(Counter(lookup(*deletion(child, v)) for v in range(N)))
+        C.append(lookup(opposite(t), ((1 << n) - 1) ^ mask))
+    need(not CANON_ORDERS or max(CANON_ORDERS) <= n,
+         'prediction never canonicalizes a child')
+    for p, row in enumerate(D):
+        need(sum(row.values()) == N, 'full transfer row sum')
+        need(1 <= row[p] <= root_bounds[p], 'refinement bounds root moving defect')
+        need(row[p] % 2 == 1, 'tournament vertex orbits are odd')
+        need(C[C[p]] == p, 'pointed converse involution')
+        need(Counter({C[q]: v for q, v in row.items()}) == D[C[p]],
+             'converse commutes with transfer')
+        need(sparse_product(row, D) == Counter({q: N*v for q, v in row.items()}),
+             'D squared equals N D')
+        for q, value in row.items():
+            need(D[q] == row, 'root independent transfer row')
+            need(value * stab[q] == row[p] * stab[p], 'child isotropy recovered')
+            need(value * stab[q] == D[q][p] * stab[p], 'reversible isotropy weights')
+    trace_D = sum(row[p] for p, row in enumerate(D))
+    trace_CD = sum(D[C[p]][p] for p in range(len(states)))
+    need(trace_D % N == 0, 'unpointing trace integral')
+    need(trace_CD % N == 0, 'converse trace integral')
+    a = trace_D // N; selfconverse = trace_CD // N
+    need((a + selfconverse) % 2 == 0, 'merged count integral')
+
+    good = {p for p, weight in enumerate(lifts) if weight}
+    R = {}; K = {}; endpoints = {}
+    for p in range(len(states)):
+        row = Counter({q: v for q, v in D[p].items() if q in good})
+        e = sum(row.values()); endpoints[p] = e
+        need(e > 0, 'every tournament has a Hamiltonian endpoint')
+        R[p] = {q: Fraction(v, e) for q, v in row.items()}
+    for p in range(len(states)):
+        K[p] = R[C[p]]
+    if N==2:
+        need(any(C[p] not in good for p in good), 'converse does not preserve endpoint roots hostile')
+    for p in good:
+        need(sparse_product(R[p], R) == R[p], 'endpoint projector idempotent')
+        need(sparse_product(K[p], K) == R[p], 'anti-endpoint square projector')
+        need(sparse_product(R[p], K) == K[p], 'R K equals K')
+        need(sparse_product(K[p], R) == K[p], 'K R equals K')
+    need(sum(R[p].get(p, 0) for p in good) == a, 'endpoint trace counts classes')
+    need(sum(K[p].get(p, 0) for p in good) == selfconverse,
+         'anti-endpoint trace counts self converse')
+    need(sum(lifts) == word_count(N), 'native word cube mass')
+    if n:
+        parent_mass = sum(sum(ends[t]) // len(auts[t]) for t in parents)
+        need(parent_mass == word_count(n), 'parent word cube mass')
+        need(sum(lifts) == (1 << (n - 1)) * parent_mass, 'right lift count')
+
+    # Component representatives are generated from root rows, not child codes.
+    unique_rows = {}
+    for p, row in enumerate(D):
+        signature = tuple(sorted(row.items()))
+        unique_rows.setdefault(signature, p)
+    reps = [children[p] for p in unique_rows.values()]
+    need(len(reps) == a, 'transfer components match trace')
+    report = {
+        'order': N, 'parent_classes': len(parents), 'pointed_states': len(states),
+        'endpoint_pointed_states': len(good), 'native_words': sum(lifts),
+        'trace_D': trace_D, 'trace_converse_D': trace_CD,
+        'root_moving_symmetry_defect': trace_D-len(states),
+        'refinement_singleton_root_states': root_bounds.count(1),
+        'refinement_orbit_upper_bound_exact_states': sum(D[p][p]==b for p,b in enumerate(root_bounds)),
+        'refinement_trace_upper_bound': sum(root_bounds),
+        'refinement_gap_witness': next(({'rows': list(children[p]), 'root': n,
+            'refinement_cell_size': b, 'root_orbit_size': D[p][p],
+            'parent_subset_stabilizer': stab[p], 'child_automorphism_order': stab[p]*D[p][p]}
+            for p,b in enumerate(root_bounds) if D[p][p] != b), None),
+        'classes': a, 'self_converse': selfconverse, 'merged_classes': (a+selfconverse)//2,
+        'pointed_isotropy_histogram': sorted(Counter(stab).items()),
+        'root_orbit_size_histogram': sorted(Counter(D[p][p] for p in range(len(states))).items()),
+        'child_automorphism_histogram': sorted(Counter(stab[p]*D[p][p] for p in unique_rows.values()).items()),
+        'endpoint_count_histogram': sorted(Counter(endpoints[p] for p in unique_rows.values()).items()),
+        'maximum_canonicalized_order_in_prediction': max(CANON_ORDERS, default=0),
+        'kernel_digest': hashlib.sha256(json.dumps([sorted(row.items()) for row in D],separators=(',',':')).encode()).hexdigest(),
+    }
+    return reps, report, dict(n=n,N=N,parents=parents,states=states,stab=stab,lifts=lifts,
+                              D=D,C=C,R=R,K=K,good=good,children=children,lookup=lookup)
+
+
+def audit(data, max_cube=7, max_full_permutation=6):
+    """Independent controls. Child-order canonicalization is allowed HERE only."""
+    n,N = data['n'],data['N']
+    states,D = data['states'],data['D']
+    if N <= max_cube:
+        observed = Counter()
+        word_classes = set()
+        for word in range(word_count(N)):
+            child = normalized_word(N,word)
+            observed[data['lookup'](*deletion(child,N-1))] += 1
+            word_classes.add(canonical(child)[0])
+        need(observed == Counter({p:f for p,f in enumerate(data['lifts']) if f}),
+             'full native cube endpoint fibres')
+        need(len(word_classes) == sum(D[p][p] for p in range(len(states)))//N,
+             'independent native cube class count')
+        child_keys = [canonical(t)[0] for t in data['children']]
+        canon_groups = {}
+        for p,key in enumerate(child_keys):
+            canon_groups.setdefault(key,[]).append(p)
+        for group in canon_groups.values():
+            need(set(D[group[0]]) == set(group), 'child canonicalization independent transfer partition')
+        need(len(word_classes) == len(canon_groups), 'all child classes covered by both engines')
+    if N <= max_full_permutation:
+        full_keys = {}
+        mass = 0
+        for p,child in enumerate(data['children']):
+            c = min(permute(child, order) for order in permutations(range(N)))
+            full_keys.setdefault(c,p)
+            group = automorphisms(child)
+            need(len(group) == data['stab'][p]*D[p][p], 'independent child automorphism group')
+            actual_ends = [0] * N
+            for order in permutations(range(N)):
+                if all(child[order[i]] >> order[i+1] & 1 for i in range(N-1)):
+                    actual_ends[order[-1]] += 1
+            need(actual_ends[-1] == data['lifts'][p]*data['stab'][p],
+                 'brute Hamiltonian endpoint count')
+        need(len(full_keys) == sum(D[p][p] for p in range(len(states)))//N,
+             'full permutation child census')
+        import math
+        mass = sum(math.factorial(N)//(data['stab'][p]*D[p][p]) for p in full_keys.values())
+        need(mass == 1 << (N*(N-1)//2), 'labelled orbit mass independent control')
+
+
+def run(max_order=7, audit_enabled=True):
+    need(type(max_order) is int and 1 <= max_order <= 8, 'valid finite bound')
+    reps=[()]; reports=[]
+    for N in range(1,max_order+1):
+        reps,report,data=predict(reps)
+        if audit_enabled:
+            audit(data)
+        reports.append(report)
+        print(json.dumps(report,sort_keys=True),flush=True)
+    # Published values are controls only. They are never called by predict().
+    expected=[1,1,2,4,12,56,456,6880]
+    expected_sc=[1,1,2,2,8,12,88,176]
+    if max_order>=3:
+        need(reports[2]['pointed_states']==4 and reports[2]['trace_D']==6,
+             'minimal pointed count division hostile')
+    if max_order>=4:
+        need([reports[3][k] for k in ('pointed_states','endpoint_pointed_states',
+             'native_words','classes','self_converse','merged_classes')]==[12,7,8,4,2,3],
+             'six distinct order four counts hostile')
+    need([r['classes'] for r in reports] == expected[:max_order], 'A000568 known prefix control')
+    need([r['self_converse'] for r in reports] == expected_sc[:max_order], 'self converse known prefix control')
+    return {'scope':'parent-only exact transfer; full native cubes through 7; full permutation controls through 6',
+            'reports':reports,'checks':dict(sorted(CHECKS.items())),'total_checks':sum(CHECKS.values())}
+
+
+if __name__ == '__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--max-order',type=int,default=7)
+    parser.add_argument('--receipt',default='receipt.json')
+    args=parser.parse_args()
+    result=run(args.max_order)
+    Path(args.receipt).write_text(json.dumps(result,sort_keys=True,indent=2)+'\n')
+    print('PASS',result['total_checks'],flush=True)

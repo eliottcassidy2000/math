@@ -1,0 +1,44 @@
+{
+  "SCC_error_eight": 28,
+  "canonicalized_order_histogram": {
+    "7": 3584
+  },
+  "checks": {
+    "complete independently generated parent atlas": 1,
+    "corrected upper trace integral": 1,
+    "disjoint full permutation class removal": 56,
+    "independent parent subset orbit partition": 54256,
+    "literal orbit stabilizer": 56,
+    "no child-order canonicalization": 3584,
+    "parent labelled mass": 1,
+    "strong-seven discrepancy from actual parent groups": 1
+  },
+  "corrected_trace": 55040,
+  "deletion_or_reroot_isomorphism_tests": 0,
+  "parent_automorphism_order_histogram": {
+    "1": 399,
+    "3": 47,
+    "5": 4,
+    "7": 1,
+    "9": 4,
+    "21": 1
+  },
+  "parent_classes": 456,
+  "parent_labelled_mass": 2097152,
+  "parent_source": "Complete full-permutation class partition of labelled order six, then all 64 attachments per class and degree-cell canonicalization only at order seven.",
+  "pointed_states": 54256,
+  "predicted_order_eight_classes": 6880,
+  "root_cell_upper_sum": 55068,
+  "root_refinement_size_histogram": {
+    "1": 53882,
+    "3": 352,
+    "5": 12,
+    "7": 10
+  },
+  "schema": "session50-independent-refinement-prediction-v1",
+  "strong_error_eight": {
+    "source": "Odd equitable-cell size proof in audited theorem, not a target census.",
+    "value": 0
+  },
+  "strong_error_seven": 14
+}

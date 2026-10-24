@@ -1,0 +1,35 @@
+{
+  "hash_basis": "literal bytes, no newline normalization",
+  "sources": [
+    {
+      "source_path": "session50-growth-counts/transfer.py",
+      "archive_path": "archive/growth-transfer.py.txt",
+      "sha256": "fd3db75c8425ff4fc2946835e7e4e55ffba905ae4d66fb1a6efd5dda61c9c4ba"
+    },
+    {
+      "source_path": "session50-growth-counts/THEOREM.md",
+      "archive_path": "archive/growth-THEOREM.md.txt",
+      "sha256": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4"
+    },
+    {
+      "source_path": "session50-growth-counts/VALIDATION.md",
+      "archive_path": "archive/growth-VALIDATION.md.txt",
+      "sha256": "d2096668522beac11778400f7fc509180f3f0be78548811e05a9e8ad6353c4ca"
+    },
+    {
+      "source_path": "session50-growth-counts/manifest.json",
+      "archive_path": "archive/growth-manifest.json",
+      "sha256": "162b7a476836683aa3372a8f23540fac6e32e4dba156f3ea27d0ec11d4268ea7"
+    },
+    {
+      "source_path": "session50-cell-holonomy/THEOREM.md",
+      "archive_path": "archive/cell-holonomy-THEOREM.md.txt",
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b"
+    },
+    {
+      "source_path": "session50-cell-holonomy/manifest.json",
+      "archive_path": "archive/cell-holonomy-manifest.json",
+      "sha256": "871737f76c1d964bcad79b93ea144ff8597e52023fc8b7dc3e07fccfea8a343c"
+    }
+  ]
+}

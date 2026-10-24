@@ -1,0 +1,28 @@
+{
+  "schema": "sha256-manifest-v1",
+  "sha256": {
+    "README.md": "3766cec6796e45fbfb416644622df4b37d7f69bb7fa2a916ac4005a2b0e25e3d",
+    "THEOREM.md": "581786fa41f2735cb839c90acc4cb30e5ce1e44a0bd9ad62803dd9b18f06be93",
+    "VALIDATION.md": "ac4750e9e22515bb38b61a9dbfc20a129e72d74e8115896486ed42832b389ba7",
+    "archive/cell-holonomy-THEOREM.md.txt": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b",
+    "archive/cell-holonomy-manifest.json": "871737f76c1d964bcad79b93ea144ff8597e52023fc8b7dc3e07fccfea8a343c",
+    "archive/growth-THEOREM.md.txt": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+    "archive/growth-VALIDATION.md.txt": "d2096668522beac11778400f7fc509180f3f0be78548811e05a9e8ad6353c4ca",
+    "archive/growth-manifest.json": "162b7a476836683aa3372a8f23540fac6e32e4dba156f3ea27d0ec11d4268ea7",
+    "archive/growth-transfer.py.txt": "fd3db75c8425ff4fc2946835e7e4e55ffba905ae4d66fb1a6efd5dda61c9c4ba",
+    "freeze_inputs.py": "faa7ccd84b0c389c539ff42504c87d2b878422380667d556af7a82508dde20ce",
+    "hostile-controls.out": "aec00c758389f0c637c74b1b0e0e6aa1f4c76d75bc9222e395935e4e39324373",
+    "hostile_controls.py": "64dd1a03c986e56c00b7d636a1735a362aac4ac255db5fda14e04385dba798a6",
+    "input-generation.out": "f8394bd016eef16bdb2478acff4cfc1ae62dbb8e816f96fac5ae5e3d59cc03b2",
+    "input-validation.out": "e4b3b5cc4fd2496d427cb3af85ab871fb11830cdb90581ea475b53b3812a85c8",
+    "normal.out": "6836dc8ea2f6b0bacccb8aa61332269d5a9672bd3f5bcd708ce28191ebca39c9",
+    "optimized-receipt.json": "d19fea022c093103d0ba745ffefa8fadd478e994d2accd940039b0b76145fa85",
+    "optimized.out": "6836dc8ea2f6b0bacccb8aa61332269d5a9672bd3f5bcd708ce28191ebca39c9",
+    "parents-through-seven.json": "df16881db1060e0423ed73658bdcb5923266f839681b74ac5b1bddd5a232f3ad",
+    "predictor.py": "085eaa6fa5b5bd2803b22a523601435b34efff31d77ac77ccb441b8736778052",
+    "receipt.json": "d19fea022c093103d0ba745ffefa8fadd478e994d2accd940039b0b76145fa85",
+    "replay.py": "4f245ffce44c5f76211ac88303dc1f6c5125865f9314f57326faa5491b87e3ee",
+    "source-pins.json": "ab0ad06c28957d3c9e3e421c14df045360108dab79d6ab0eb77543b536335fe0",
+    "validate_inputs.py": "799326ff78173ec57e0569cd6698aee1e5b6b8f21e28a8a04acdb87e2a6fb5c4"
+  }
+}

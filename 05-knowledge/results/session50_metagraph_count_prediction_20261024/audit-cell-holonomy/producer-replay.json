@@ -1,0 +1,14 @@
+{
+  "holonomy": {
+    "normal_optimized_identical": true,
+    "receipt_sha256": "e597d88b7d325394c66a20e9e7c1d5bb31c50505da83302383c8ce55dc442af1",
+    "status": "PASS",
+    "stdout_sha256": "85a64231828a04f6b985f105ae834492d57db89b6d391093b3732e4c2e7c6d55"
+  },
+  "predictor": {
+    "normal_optimized_identical": true,
+    "receipt_sha256": "d19fea022c093103d0ba745ffefa8fadd478e994d2accd940039b0b76145fa85",
+    "status": "PASS",
+    "stdout_sha256": "6836dc8ea2f6b0bacccb8aa61332269d5a9672bd3f5bcd708ce28191ebca39c9"
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "SCC_hostile7_inheritance": [
+    {
+      "error": 14,
+      "sizes": [
+        1,
+        7
+      ]
+    },
+    {
+      "error": 14,
+      "sizes": [
+        7,
+        1
+      ]
+    },
+    {
+      "error": 14,
+      "sizes": [
+        1,
+        1,
+        7
+      ]
+    },
+    {
+      "error": 14,
+      "sizes": [
+        1,
+        7,
+        1
+      ]
+    },
+    {
+      "error": 14,
+      "sizes": [
+        7,
+        1,
+        1
+      ]
+    }
+  ],
+  "checks": {
+    "SCC excess additivity": 80,
+    "SCC refinement restriction": 80,
+    "all classes through six zero excess": 76,
+    "disjoint full permutation class removal": 80,
+    "hostile7 sequence inheritance": 5,
+    "hostile7 sequence refinement cells": 5,
+    "literal orbit stabilizer": 80,
+    "prime affine symmetric class count": 3,
+    "prime double rotation orbit disjoint": 118,
+    "prime family ordinary count": 3,
+    "r3 all strong": 216,
+    "r3 canonical class invariant": 216,
+    "r3 distinct degree cells": 216,
+    "r3 error formula": 216,
+    "r3 literal group equals signed kernel": 216,
+    "r3 native excess seventy two": 1,
+    "r3 sixteen classes split twelve four": 1,
+    "r4 degree-only literal group control": 2,
+    "r4 exact gauge quotient": 1,
+    "r4 family classes seven twenty": 1,
+    "r4 gauge orbits disjoint": 720,
+    "r4 kernel offset independent": 720,
+    "regular leaf": 2664,
+    "regular seven all strong": 1,
+    "regular seven census": 1,
+    "regular seven excess fourteen": 1,
+    "regular seven group orders": 1,
+    "small class totals": 1,
+    "stable cell odd": 367,
+    "stable cell regular": 367,
+    "stable cells setwise fixed": 367,
+    "strong fourteen lower bound": 1,
+    "strong ten lower bound": 1,
+    "total ten lower bound convolution": 1,
+    "unique regular five": 1
+  },
+  "derived": {
+    "E10_lower_bound": 388,
+    "E8": 28,
+    "E9_lower_bound": 114,
+    "Estrong10_lower_bound": 160,
+    "Estrong14_lower_bound": 8568,
+    "Estrong7": 14,
+    "Estrong8": 0,
+    "Estrong9_lower_bound": 72
+  },
+  "r3_family": {
+    "classes": 16,
+    "group_order_distribution": {
+      "1": 4,
+      "3": 12
+    },
+    "labelled_configurations": 216,
+    "total_excess": 72
+  },
+  "r4_family": {
+    "affine_configurations": 46656,
+    "classes": 720,
+    "gauge_distribution": [
+      {
+        "automorphism_order": 1,
+        "classes_per_signing": 9,
+        "signings": 56
+      },
+      {
+        "automorphism_order": 3,
+        "classes_per_signing": 27,
+        "signings": 8
+      }
+    ],
+    "literal_controls": [
+      {
+        "automorphism_order": 3,
+        "code": 19998666671304289317,
+        "error": 0
+      },
+      {
+        "automorphism_order": 1,
+        "code": 19928755336798350469,
+        "error": 24
+      }
+    ]
+  },
+  "regular_census": {
+    "5": {
+      "classes": [
+        {
+          "automorphism_order": 5,
+          "code": 76,
+          "error": 0,
+          "orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "strong": true
+        }
+      ],
+      "labels": 24
+    },
+    "7": {
+      "classes": [
+        {
+          "automorphism_order": 7,
+          "code": 17976,
+          "error": 0,
+          "orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "strong": true
+        },
+        {
+          "automorphism_order": 3,
+          "code": 22066,
+          "error": 14,
+          "orbits": [
+            [
+              0,
+              3,
+              5
+            ],
+            [
+              1,
+              4,
+              6
+            ],
+            [
+              2
+            ]
+          ],
+          "strong": true
+        },
+        {
+          "automorphism_order": 21,
+          "code": 85298,
+          "error": 0,
+          "orbits": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "strong": true
+        }
+      ],
+      "labels": 2640
+    }
+  },
+  "schema": "session50-independent-cell-holonomy-v1",
+  "small_census": {
+    "1": {
+      "classes": 1,
+      "labels": 1
+    },
+    "2": {
+      "classes": 1,
+      "labels": 2
+    },
+    "3": {
+      "classes": 2,
+      "labels": 8
+    },
+    "4": {
+      "classes": 4,
+      "labels": 64
+    },
+    "5": {
+      "classes": 12,
+      "labels": 1024
+    },
+    "6": {
+      "classes": 56,
+      "labels": 32768
+    }
+  },
+  "two_prime_matching_families": {
+    "3": {
+      "classes": 2,
+      "group_order_distribution": {
+        "3": 2
+      },
+      "strong_error_contribution": 0
+    },
+    "5": {
+      "classes": 8,
+      "group_order_distribution": {
+        "1": 4,
+        "5": 4
+      },
+      "strong_error_contribution": 160
+    },
+    "7": {
+      "classes": 108,
+      "group_order_distribution": {
+        "1": 102,
+        "7": 6
+      },
+      "strong_error_contribution": 8568
+    }
+  }
+}

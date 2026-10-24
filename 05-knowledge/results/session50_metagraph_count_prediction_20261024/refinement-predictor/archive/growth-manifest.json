@@ -1,0 +1,25 @@
+{
+  "hash_basis": "literal bytes; excludes manifest, caches, and external replay attestations",
+  "sha256": {
+    "README.md": "ad8510b81c3fef502b57eb740203c7c6462ed158afd7a7fdfe06b2379fb04860",
+    "THEOREM.md": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+    "VALIDATION.md": "d2096668522beac11778400f7fc509180f3f0be78548811e05a9e8ad6353c4ca",
+    "archive/THM-781.md.txt": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+    "archive/THM-796.md.txt": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+    "archive/enumeration.md.txt": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+    "archive/growth.md.txt": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+    "normal.out": "445690346207cf785c7ddb6904424b80203098f971f19ff361becb0456865c4b",
+    "optimized-order8.out": "40a254c6ee607787c8bbdbe591304608bccf21c89d4964ee6e8a25483cda6302",
+    "optimized-receipt-order8.json": "f4754e30da2e600f0d5cc8970323f38412fff18ed608461883871bd977530ed4",
+    "optimized-receipt.json": "7c99d25fd80b4c185fa754098c6c99743f7fe29e4ba1b5f251e0f476cee11509",
+    "optimized.out": "445690346207cf785c7ddb6904424b80203098f971f19ff361becb0456865c4b",
+    "order8.out": "40a254c6ee607787c8bbdbe591304608bccf21c89d4964ee6e8a25483cda6302",
+    "receipt-order8.json": "f4754e30da2e600f0d5cc8970323f38412fff18ed608461883871bd977530ed4",
+    "receipt.json": "7c99d25fd80b4c185fa754098c6c99743f7fe29e4ba1b5f251e0f476cee11509",
+    "refinement-hostile.out": "0afc04fe7daa89f6618124496a2c2efdc71feabe63c33a968b921a566c6fb78b",
+    "refinement_hostile.py": "880043dce1f65ebb973796e04b2b2c7534aa239c7250df0f31d988d483f3d503",
+    "replay.py": "8bc72339e0c5752357dfd9de863237dfe648c2e23d1abc797dfef5951a753db6",
+    "source-pins.json": "c452259c88110ab3b39d3193ebe63117e9b5a30199b115af62688375db1226d6",
+    "transfer.py": "fd3db75c8425ff4fc2946835e7e4e55ffba905ae4d66fb1a6efd5dda61c9c4ba"
+  }
+}
