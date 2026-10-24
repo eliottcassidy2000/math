@@ -25,6 +25,8 @@ review, independent computational paths; no independent-agent audit claimed.
    chain. Even optimized bounded-support chains have a relative-activity
    bottleneck on the cyclic-charge control. Global-observer and new-carrier
    harmonic conditions cannot be inferred from local host compatibility.
+   Overlapping balanced admissions are treated as stochastic edge couplings,
+   never as disjoint charts; their full incoming source-weighted mass is paid.
 7. **Incoming correction:** Session47 proves unrestricted suspension fails
    already5->7, and distinguishes the two-primary exponent256 from the full
    critical group. This packet uses only the original authenticated dyadic
@@ -55,17 +57,29 @@ initial replay correctly rejected an unconverted parity basis; the repair
 checks the group automorphism on all3,528 original nodes and group generators.
 This demonstrated unpublished mistake is recorded in `01-canon/MISTAKES.md`.
 
-All three normal/-O receipts agree byte for byte. These checks substantiate
+`balanced.py` independently constructs the reference kernel from literal
+auxiliary subsets, checking strong lumpability for every representative.
+Its24 overlapping-admission toy carriers pass exact detailed balance and
+LDL certificates, the local symmetric-polynomial load bounds, and the bulk
+envelope. Total4,087 checks. Uniform native examples are evaluated exactly.
+
+`receiver.py` rechecks the newest external-owner4 interface, including all164
+normalized full-record options, the literal fixed owner and converse clocks,
+actual cost-eight source2125, and the product-reference normalization. Its
+new weighted theorem is a corollary of the independently audited incoming
+native receiver theorem, not a claim of re-enumerating the entire652-owner host.
+It performs174 checks. The five receipts total1,056,952 checks per mode.
+
+All five normal/-O receipts agree byte for byte. These checks substantiate
 the algebra and implementation; the written coupling, comparison and variance
 proofs establish the unbounded quantifiers. No Lean proof, all-repository test,
 independent referee, or prize-problem closure is claimed.
 
 ## Reproduction
 
-Materialize the frozen sibling `three_target570_20261024` files listed in
-`native.py` from commit34b0a4cbce72b6986fabd6d71041448a17a77004 if the checkout
-is sparse. Preserve their exact bytes. From the repository root run each of
-`check.py`, `native.py`, `robust.py` in this packet using `python3 -B`, and
-again using `python3 -O -B`; compare with its normal/optimized JSON receipts.
-`robust.py` reads its explicitly frozen incoming revision through Git. No
-network request or optimizer is part of the replay.
+Run `reproduce.py` from the repository root. It verifies the manifest, then
+runs all five checkers with `python3 -B` and `python3 -O -B` and compares
+every receipt. The native checker reads its frozen sibling dependencies from
+Git into a temporary directory; it does not require a materialized sibling
+in a sparse checkout. Other native receipts likewise come from explicitly
+frozen Git revisions. No network request or optimizer is part of the replay.

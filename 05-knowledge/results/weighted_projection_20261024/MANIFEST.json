@@ -1,0 +1,30 @@
+{
+  "sha256": {
+    "AUDIT.md": "69f13a811de579763613ff65a25f03f0de2cda93615b73543a15427f3b50883d",
+    "BALANCED.md": "498c25b5a6b8e97c589ded58321b20172a5b7c582ba431102ef80192465f5737",
+    "BOARD.md": "79f279f7fe09d0bf0a7fb5b21cc1641d4deefff6628f56d1e775da3ad09791b0",
+    "EXTENSION.md": "f066130ee966357250254483f04e314d7b262f4631501f555c8aeafffbf07243",
+    "PINS.md": "327f1f434455479cf7318442865e52568427e719ce1d49e1fbad8f0701f89aaf",
+    "PROOF.md": "2118e8b7ab77bd803c7fba3d30890354078370e96926ddd60b7038ce80414806",
+    "README.md": "a360bc36e65273ddfc06c289a9d71aba89b07873309689e94f1d5f42e8b7d9f2",
+    "RECEIVER.md": "d73518cb31f8cac89de687502dea508ae968d92f3bc0a0fb03c22a626aee01cd",
+    "ROBUST.md": "4d00168be13e9dd5cdd2130f1bf00c5082fdfcadc61fcd964fa39a485f02046e",
+    "balanced.normal.json": "7401e06e35e1662c2b7f722305b820f4aa3b25089e6141a964757fa92fde0c8c",
+    "balanced.optimized.json": "7401e06e35e1662c2b7f722305b820f4aa3b25089e6141a964757fa92fde0c8c",
+    "balanced.py": "d99a12b83a14a62ee771fb05556eebeece470044e0f09089728a17995aee6260",
+    "check.normal.json": "b342007aa92a8cd8abdf4a3cbf2140f9d701f0705bc567e7978efabb3234acf1",
+    "check.optimized.json": "b342007aa92a8cd8abdf4a3cbf2140f9d701f0705bc567e7978efabb3234acf1",
+    "check.py": "ceca2427320709a5eeb0c1b3ce193a36b127726fac96095557ebca24f1664a18",
+    "native.normal.json": "ef6ee1c194555d992c3a9fa59c95390c0b9d7bb84be500044a04838170ca5065",
+    "native.optimized.json": "ef6ee1c194555d992c3a9fa59c95390c0b9d7bb84be500044a04838170ca5065",
+    "native.py": "cd0a84a45c6673110bc67567efbb270f5350e9e157233704b2416a8784c53dd0",
+    "receiver.normal.json": "8f62142965fe17e2e1a863f4d87576e880169468dd02e7e10909a0796e5ca9d3",
+    "receiver.optimized.json": "8f62142965fe17e2e1a863f4d87576e880169468dd02e7e10909a0796e5ca9d3",
+    "receiver.py": "0d89dd9a5b2ec0d398003408cef3f7c188e3d4280d3aeebac504ccdad3a93f21",
+    "reproduce.py": "58c270f663d9417575856c6a009489b32f3559813e2d3fcd99b67f9571c0add2",
+    "robust.normal.json": "c9b336a92616e3553ba8f3b8e0658f254bd33c35582cf1771ad66996cf3742ac",
+    "robust.optimized.json": "c9b336a92616e3553ba8f3b8e0658f254bd33c35582cf1771ad66996cf3742ac",
+    "robust.py": "1c498d58e063fc5f1c77b1c06e6e71d2db09e05b67b0346dcd9606ead3e9add6"
+  },
+  "status": "Frozen source-weighted proofs and exact controls"
+}

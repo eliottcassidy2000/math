@@ -22,6 +22,22 @@ is the whole occupancy-dependent partition coefficient, including its zeros.
 | All-size supply | Adjoin authenticated independent records | The original harmonic bank and disjoint resources do not transport automatically |
 | Collatz ROOT | Compare a prescribed native process with a designed reversible chain | Mixing does not prove deterministic entry or positive source charge |
 
+Meaningful incoming updates:8ca0f5fe46 improves forced-U resilience to13,
+which gives `ROBUST.md` a uniform coefficient envelope; its5->7 harmonic
+failure blocks unproved all-order transport. c09b642a62 moves the receiver
+inside the core behind fixed external owner4. `RECEIVER.md` applies a product
+reference to this new partition while preserving BOTH population margins.
+Its `coordinates.py` already records the parity-basis isomorphism used in
+our independently checked repair; the underlying relation is equation(3)
+of the older electrical-code theorem, not a newly discovered invariant.
+
+The balanced-admission refinement replaces a single chosen parent by a
+weighted coupling over all nearest-band admissions. This keeps the same
+complete native fibres and costs while dividing congestion by the number
+of legal parents. It removes the bulk polynomial boundary loss; the extreme
+occupancy and relative-activity hostiles remain. The next lane is sparse
+boundary exchange circuits, not another proof of the conditional-lift identity.
+
 Cards used: controlled forgetting needs a sidecar; re-evaluate certificates
 after fibre changes; audit sections under the next native operation. Incoming
 `guarded_component_completion_20261024/theory/SEPARATOR_SECTIONS.md` restores

@@ -196,8 +196,18 @@ extensions with a fixed complete bank and controlled outside odds. The
 constants are computable from the actual bank weights; none is called an
 independently positive Collatz ROOT score. A different preassigned native
 chain needs a lower conductance comparison with these displayed rates.
-Arbitrary correlated source laws, extra shared pins, changing harmonic
+Uncontrolled correlated source laws, extra shared pins, changing harmonic
 banks, and strict temporal nonreturn require new proofs.
+
+There is a precise extension to a supplied correlated law: if its density
+relative to this product-source law is h with `0<h_min<=h<=h_max`, apply
+Metropolis acceptance `min(1,h(y)/h(x))` to the FULL native lifted chain.
+The same energy/variance comparison gives gap at least the proved gap times
+`h_min/h_max`. Laziness and every legal event cost survive because rejection
+only adds holds. This pays only the extra interaction distortion, not the
+already-handled product of individual source odds. It is uniform only when
+this density ratio is controlled; the epsilon-cut and heavy-boundary hostiles
+prohibit silently assuming such control.
 
 ## 6. Match the reference activity without changing source weights
 

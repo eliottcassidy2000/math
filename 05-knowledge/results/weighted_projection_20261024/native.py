@@ -7,20 +7,21 @@ from pathlib import Path
 from fractions import Fraction as Q
 from collections import defaultdict
 from math import comb
-import hashlib,json,subprocess,sys,random
+import hashlib,json,subprocess,sys,random,tempfile
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
-OLD=HERE.parent/'three_target570_20261024'
 REV='34b0a4cbce72b6986fabd6d71041448a17a77004'
-DEPS={}
+DEPS={};FROZEN=tempfile.TemporaryDirectory(prefix='weighted-projection-deps-')
+OLD=Path(FROZEN.name)
 for name in ('common.py','bank.py','route.py','twelve.py','menus.json','bank.json'):
     p='05-knowledge/results/three_target570_20261024/'+name
     blob=subprocess.check_output(['git','show',REV+':'+p],cwd=ROOT)
-    if not (OLD/name).is_file() or (OLD/name).read_bytes()!=blob:
-        raise RuntimeError('Materialize the frozen inherited dependency without changing it: '+p)
+    (OLD/name).write_bytes(blob)
     DEPS[p]=hashlib.sha256(blob).hexdigest()
 sys.path.insert(0,str(OLD))
+import common
+common.ROOT=ROOT  # frozen data reads use this repository, not the temporary directory
 from route import Router,add,sub,charge
 from twelve import TwoRoots
 from common import data

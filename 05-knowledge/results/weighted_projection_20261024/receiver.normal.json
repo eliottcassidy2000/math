@@ -1,0 +1,30 @@
+{
+  "all_grade_budget": [
+    22,
+    62
+  ],
+  "checks": 174,
+  "core_pair_reference_coordinates": 18,
+  "frozen_revision": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+  "helper_pair_reference_coordinates": 51,
+  "inputs": {
+    "external_pin_sections_20261024/native/receipt.json": "63011821192b6716483c2e694e0ee79b6e0c1cabeff44aa9d88e959f189a3229",
+    "guarded_component_completion_20261024/native/xor_tree_receipt.json": "bce2ab342ae8358c2a65bffe52f3b01b559f47112dad2920a7626ac70ed8c0e5",
+    "guarded_component_completion_20261024/sections/native_2125_receipt.json": "442da9badde3a32750cda430cd9c4342660dca0714c62320bf69a9d9e88dea38",
+    "three_target570_20261024/bank.json": "1e996f843fc895eaf9c6c5b78624bcdbcdae393ee70dbafc06972e4bcffd42e6",
+    "three_target570_20261024/menus.json": "445021cc24c9ed4029e184fc5e3af998e98bec5db471a1394860cb99b651c7fd"
+  },
+  "interior_budget": [
+    22,
+    55
+  ],
+  "reference_mixture_weights": [
+    "3/28",
+    "25/28"
+  ],
+  "reserved_closed_words": 656,
+  "scope": "native interface recheck plus proved weighted corollary; no new global-observer or harmonic-transfer claim",
+  "sources": 82,
+  "status": "PASS incoming native interface replay and weighted receiver constants",
+  "unit_receiver_gap": "67/11515392"
+}
