@@ -8,6 +8,10 @@ review, independent computational paths; no independent-agent audit claimed.
 1. **Reference versus native:** auxiliary bits provide binomial multiplicity,
    not physical supply. Quotient rates are lumpable under their permutations.
    Actual reservoir probabilities are restored by conditional refresh.
+   Final proof review caught a wording overclaim: laziness belongs to the
+   visible kernel; the full refresh has its spectrum plus zeros but can have
+   diagonal probability below1/2. The gap bounds are unchanged. The four-state
+   uniform heat bath (all entries1/4) is the minimal equal-two-fibre control.
 2. **Weights:** source product weights are retained exactly. The elementary
    pair coupling is weight-independent; the Metropolis comparison loses one
    max/min potential ratio, not a global product ratio or its square.

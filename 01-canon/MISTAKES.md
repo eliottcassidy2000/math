@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-24 — conditional refresh preserves the spectrum, not pointwise laziness
+
+- **Affected wording:** the unpublished weighted-projection theorem called the full conditional-refresh chain lazy because its visible kernel was lazy.
+- **Minimal witness / failed implication:** two equally weighted visible states refreshed through two equally weighted records each give the four-state uniform kernel with diagonal1/4, although the visible kernel has diagonal1/2. Conditional resampling changes the full-state holding event.
+- **Repair / strongest survivor:** the lifted spectrum is the visible spectrum plus zeros. Nonnegative spectrum and the stated gap therefore survive exactly; pointwise laziness does not. The theorem and audit now make that distinction. All numerical gap and clock bounds remain unchanged.
+- **Missing coordinate:** distinguish a visible hold from retention of the full marked state. See [weighted proof](../05-knowledge/results/weighted_projection_20261024/PROOF.md), section3, and the inherited exact lifting identity.
+
 ## 2026-10-24 — identical packed groups can use different parity bases
 
 - **Affected probe:** unpublished weighted-projection replay of Session47's fractional helper certificate. It initially compared the certificate's charge-array index directly with the earlier three-target integer code.

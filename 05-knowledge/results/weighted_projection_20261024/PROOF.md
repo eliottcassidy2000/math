@@ -39,7 +39,7 @@ Define, for the complete band 5<=r<=15,
 All quantities are finite and positive, for any positive reservoir weights.
 The following explicit reversible chains exist:
 
-* **Interior:** on all full states with 5<=r<=15, a lazy chain of gap at
+* **Interior:** on all full states with 5<=r<=15, a reversible chain of gap at
   least `1/(2 kappa binom(m+10,2))`. Every event changes at most 22 source
   records and costs at most 54 owner-clock occurrences. Outside weights are
   arbitrary positive numbers; the bound is independent of them.
@@ -50,7 +50,7 @@ The following explicit reversible chains exist:
       H=1+max( sum_{d=1}^5 (A_{5-d}/B_5) e_d(w),
                sum_{d=1}^5 (A_{15+d}/B_15) e_d(w^{-1}) ).   (3)
 
-  A lazy chain on EVERY accepted full state has gap at least
+  A reversible chain on EVERY accepted full state has gap at least
 
       1 / (16 H kappa binom(m+10,2)).                      (4)
 
@@ -129,7 +129,11 @@ tiny-rate factor is hidden in the statement.
 
 Given the new outside state, refresh from its complete conditional reservoir
 law, including on visible holds. The exact identity in
-`../three_target570_20261024/WEIGHTS.md` gives the same lazy spectral gap.
+`../three_target570_20261024/WEIGHTS.md` gives the same projected spectral gap.
+The visible kernel is lazy. Its full conditional-refresh lift need not have
+diagonal probabilities at least one-half: it has the visible spectrum plus
+zero eigenvalues, hence nonnegative spectrum and the same gap. Do not confuse
+these two notions of holding.
 No minimum conditional witness weight is charged a second time.
 
 An outside swap changes at most twenty reservoir sources and two outside
@@ -203,8 +207,12 @@ There is a precise extension to a supplied correlated law: if its density
 relative to this product-source law is h with `0<h_min<=h<=h_max`, apply
 Metropolis acceptance `min(1,h(y)/h(x))` to the FULL native lifted chain.
 The same energy/variance comparison gives gap at least the proved gap times
-`h_min/h_max`. Laziness and every legal event cost survive because rejection
-only adds holds. This pays only the extra interaction distortion, not the
+`h_min/h_max`. Every legal event cost survives because rejection only adds
+holds. Nonnegative spectrum survives as well: the stationary-weighted
+transition matrix after acceptance is the integral of
+`D_t [diag(pi) P] D_t` over t>0, divided by E_pi h, plus a nonnegative
+diagonal rejection matrix, where D_t indicates h>=t. Each integrand is
+positive semidefinite. This pays only the extra interaction distortion, not the
 already-handled product of individual source odds. It is uniform only when
 this density ratio is controlled; the epsilon-cut and heavy-boundary hostiles
 prohibit silently assuming such control.
