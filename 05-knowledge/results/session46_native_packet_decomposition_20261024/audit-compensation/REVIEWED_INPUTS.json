@@ -1,0 +1,94 @@
+{
+  "bundle_relative_files": {
+    "GUARD_AND_REUSE_CONTRACT.md": {
+      "bytes": 4020,
+      "sha256": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756"
+    },
+    "compensated-decomposition/SOURCE_PINS.json": {
+      "bytes": 1322,
+      "sha256": "88d709a24f66bd10a394fb331fc0533971b4d745d82bc1d2df22e55a0b53a572"
+    },
+    "compensated-decomposition/THEOREM.md": {
+      "bytes": 15719,
+      "sha256": "8271da00e9d9e9bb2cc0a3e002cd81957cc50da2f18a640cccbd2371fa911974"
+    },
+    "compensated-decomposition/charges.json": {
+      "bytes": 2043,
+      "sha256": "1357de52728dd96c93c910700c4de470080d71bf6f6afa00998b9f8bd08727c1"
+    },
+    "compensated-decomposition/charges_eighteen.json": {
+      "bytes": 715,
+      "sha256": "8aaa2f44ed6bf5568fd1b45b009cbc61eb190eff421ce3f5644987d221964aef"
+    },
+    "compensated-decomposition/charges_eighteen37.json": {
+      "bytes": 723,
+      "sha256": "b11b2138fa7d9ffabafac4fcd30e7f815747b11af443890724fed5eec15da5ca"
+    },
+    "compensated-decomposition/charges_variants.json": {
+      "bytes": 1682,
+      "sha256": "521fdcc1bdf2db2d531c2e02315309b16722051ca8e8145c3b3e8cd761100d4c"
+    },
+    "compensated-decomposition/check.py": {
+      "bytes": 20859,
+      "sha256": "e408df39837655c1960c32a28911794e1cb489333d247c0fb9c4dac35895d173"
+    },
+    "compensated-decomposition/image_witnesses.json": {
+      "bytes": 2632377,
+      "sha256": "7acfdfb7dd6b25c75d972bc487bb772826639a6ddbfd17867838b263d9a63d56"
+    },
+    "compensated-decomposition/image_witnesses_eighteen.json": {
+      "bytes": 879093,
+      "sha256": "802e4d551969c8b7b7c167b9ad67b90c97c6eec85e0c58c7decc481a1f62d956"
+    },
+    "compensated-decomposition/image_witnesses_eighteen37.json": {
+      "bytes": 878223,
+      "sha256": "9f5f98e96996f9c78ad401d994a209defafb5e2c8b307219f4c15cf0f3e47a81"
+    },
+    "compensated-decomposition/image_witnesses_variants.json": {
+      "bytes": 1974671,
+      "sha256": "38368ff59fbcd6a70bba3f9ffd8d47784ce41a75ff98d03c821dd126d4671654"
+    },
+    "compensated-decomposition/packet.json": {
+      "bytes": 557382,
+      "sha256": "3696dfbd769865fbcb443d597d6cc8b506290dc6fded8f2385e05016d32367d2"
+    },
+    "compensated-decomposition/packet_eighteen.json": {
+      "bytes": 1109,
+      "sha256": "a62bf9941eb52ee05edf82d4578ec4697a28e593fca8f753fe66931a441b02ee"
+    },
+    "compensated-decomposition/packet_eighteen37.json": {
+      "bytes": 1027,
+      "sha256": "bf7768dd12fb2f782b3075a57f1ee7abb5ec73f1befba71c323dd10445c65b95"
+    },
+    "compensated-decomposition/packet_variants.json": {
+      "bytes": 3129,
+      "sha256": "0100d9338969cec290c857de77946f4ebb5cb13f371e2da7b16e62e57ef4f401"
+    },
+    "compensated-decomposition/variants/THEOREM.md": {
+      "bytes": 3345,
+      "sha256": "4729f73455039c43fd2125fbafcba55f76e49b8bbd2eba30da99bbeaff5aed35"
+    },
+    "compensated-decomposition/variants/check.py": {
+      "bytes": 274,
+      "sha256": "8c13cabd6b23461eb436f20127f443e6a9fa792f64432f361bc5add493dd92ec"
+    },
+    "pinned-domains/THEOREM.md": {
+      "bytes": 4001,
+      "sha256": "4548eb852c15bec5128b3a5bae893a5cc9063d9bbcd429ce684448f1c55b5bd8"
+    },
+    "pinned-domains/check.py": {
+      "bytes": 5926,
+      "sha256": "bc9f8ed4c7a70cd5406b5618bb6f2039bdfe90ef4d11bc14a80da55e99703d8b"
+    },
+    "pinned-domains/normal.json": {
+      "bytes": 87199,
+      "sha256": "5eb2ec80d9e24cef1233f243a9dde398666d66286a4743a2e6d6cbf301f3f045"
+    },
+    "pinned-domains/optimized.json": {
+      "bytes": 87199,
+      "sha256": "5eb2ec80d9e24cef1233f243a9dde398666d66286a4743a2e6d6cbf301f3f045"
+    }
+  },
+  "scope": "Root guard/reuse contract and both producer theorem files independently proof-reviewed. Producer code/data retained for provenance; mathematical conclusions independently reproduced, not inferred from producer success. Paths are relative to the final Session46 bundle root.",
+  "status": "PASS"
+}

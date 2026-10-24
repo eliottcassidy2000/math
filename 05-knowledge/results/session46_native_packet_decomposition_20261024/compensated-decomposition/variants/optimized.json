@@ -1,0 +1,9303 @@
+{
+  "all_four_slot_trades": [
+    [
+      [
+        176,
+        1923
+      ],
+      [
+        1394,
+        2837
+      ]
+    ],
+    [
+      [
+        176,
+        2176
+      ],
+      [
+        1457,
+        2553
+      ]
+    ],
+    [
+      [
+        176,
+        3000
+      ],
+      [
+        1841,
+        1923
+      ]
+    ],
+    [
+      [
+        176,
+        3360
+      ],
+      [
+        1457,
+        1549
+      ]
+    ],
+    [
+      [
+        1394,
+        2176
+      ],
+      [
+        1532,
+        3369
+      ]
+    ],
+    [
+      [
+        1394,
+        2185
+      ],
+      [
+        1477,
+        1841
+      ]
+    ],
+    [
+      [
+        1394,
+        2945
+      ],
+      [
+        2581,
+        2835
+      ]
+    ],
+    [
+      [
+        1425,
+        1841
+      ],
+      [
+        1532,
+        2835
+      ]
+    ],
+    [
+      [
+        1425,
+        1921
+      ],
+      [
+        1477,
+        2837
+      ]
+    ],
+    [
+      [
+        1425,
+        1923
+      ],
+      [
+        2071,
+        3015
+      ]
+    ],
+    [
+      [
+        1425,
+        2071
+      ],
+      [
+        1923,
+        3015
+      ]
+    ],
+    [
+      [
+        1425,
+        3000
+      ],
+      [
+        2553,
+        2837
+      ]
+    ],
+    [
+      [
+        1457,
+        1841
+      ],
+      [
+        1480,
+        2553
+      ]
+    ],
+    [
+      [
+        1477,
+        1691
+      ],
+      [
+        1549,
+        3360
+      ]
+    ],
+    [
+      [
+        1477,
+        3000
+      ],
+      [
+        1921,
+        2553
+      ]
+    ],
+    [
+      [
+        1480,
+        1921
+      ],
+      [
+        2905,
+        3360
+      ]
+    ],
+    [
+      [
+        1480,
+        1923
+      ],
+      [
+        2087,
+        2553
+      ]
+    ],
+    [
+      [
+        1532,
+        2176
+      ],
+      [
+        2835,
+        3360
+      ]
+    ],
+    [
+      [
+        1532,
+        2553
+      ],
+      [
+        1549,
+        2835
+      ]
+    ],
+    [
+      [
+        1549,
+        1691
+      ],
+      [
+        2185,
+        3000
+      ]
+    ],
+    [
+      [
+        1549,
+        2176
+      ],
+      [
+        2553,
+        3360
+      ]
+    ],
+    [
+      [
+        1549,
+        2581
+      ],
+      [
+        2087,
+        2176
+      ]
+    ],
+    [
+      [
+        1638,
+        1841
+      ],
+      [
+        1974,
+        2176
+      ]
+    ],
+    [
+      [
+        1638,
+        2176
+      ],
+      [
+        1974,
+        2945
+      ]
+    ],
+    [
+      [
+        1691,
+        1921
+      ],
+      [
+        1841,
+        2553
+      ]
+    ],
+    [
+      [
+        1841,
+        2581
+      ],
+      [
+        3360,
+        3369
+      ]
+    ],
+    [
+      [
+        1921,
+        2837
+      ],
+      [
+        2581,
+        3015
+      ]
+    ]
+  ],
+  "all_one_buffer_clock_tests": [
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 1394,
+      "witness": [
+        65280,
+        73058,
+        66471,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 1394,
+      "witness": [
+        130816,
+        27989,
+        14795,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 18,
+      "source": 1532,
+      "witness": [
+        65280,
+        72610,
+        86426,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 18,
+      "source": 1532,
+      "witness": [
+        130816,
+        30238,
+        38611,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 17,
+      "source": 1841,
+      "witness": [
+        65280,
+        71505,
+        68966,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 17,
+      "source": 1841,
+      "witness": [
+        130816,
+        53034,
+        59566,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 1921,
+      "witness": [
+        65280,
+        103962,
+        67351,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 1921,
+      "witness": [
+        130816,
+        30377,
+        27109,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 14,
+      "source": 1923,
+      "witness": [
+        65280,
+        121866,
+        72755,
+        66971,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 14,
+      "source": 1923,
+      "witness": [
+        130816,
+        64100,
+        45816,
+        9205,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 20,
+      "source": 2087,
+      "witness": [
+        65280,
+        119457,
+        106858,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 20,
+      "source": 2087,
+      "witness": [
+        130816,
+        24213,
+        11614,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 18,
+      "source": 2553,
+      "witness": [
+        65280,
+        124939,
+        106962,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 18,
+      "source": 2553,
+      "witness": [
+        130816,
+        24109,
+        2557,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 17,
+      "source": 2835,
+      "witness": [
+        65280,
+        108084,
+        76497,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 17,
+      "source": 2835,
+      "witness": [
+        130816,
+        14312,
+        4081,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 2905,
+      "witness": [
+        65280,
+        75716,
+        84682,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 2905,
+      "witness": [
+        130816,
+        27593,
+        15531,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 13,
+      "source": 3015,
+      "witness": [
+        65280,
+        85840,
+        92372,
+        100534,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 13,
+      "source": 3015,
+      "witness": [
+        130816,
+        16153,
+        38699,
+        45231,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 13,
+      "source": 3360,
+      "witness": [
+        65280,
+        112196,
+        80398,
+        84551,
+        66267,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 13,
+      "source": 3360,
+      "witness": [
+        130816,
+        64804,
+        46520,
+        22450,
+        18875,
+        65791
+      ]
+    },
+    {
+      "initial": 0,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 3369,
+      "witness": [
+        65280,
+        88465,
+        76003,
+        255
+      ]
+    },
+    {
+      "initial": 1,
+      "minimum_maximum_owner_clock_changes": 16,
+      "source": 3369,
+      "witness": [
+        130816,
+        55068,
+        42606,
+        65791
+      ]
+    }
+  ],
+  "all_one_cost2_buffer_tests": [
+    {
+      "eight_move_witness": [
+        65280,
+        73058,
+        66471,
+        255
+      ],
+      "initial": 0,
+      "legal_states": 12,
+      "six_move_start_component": [
+        65280
+      ],
+      "source": 1394
+    },
+    {
+      "eight_move_witness": [
+        130816,
+        27989,
+        14795,
+        65791
+      ],
+      "initial": 1,
+      "legal_states": 12,
+      "six_move_start_component": [
+        14795,
+        27989,
+        28280,
+        36151,
+        45000,
+        45944,
+        46382,
+        50535,
+        64600,
+        130816
+      ],
+      "source": 1394
+    },
+    {
+      "eight_move_witness": [
+        65280,
+        103962,
+        67351,
+        255
+      ],
+      "initial": 0,
+      "legal_states": 5,
+      "six_move_start_component": [
+        65280
+      ],
+      "source": 1921
+    },
+    {
+      "eight_move_witness": [
+        130816,
+        30377,
+        27109,
+        65791
+      ],
+      "initial": 1,
+      "legal_states": 5,
+      "six_move_start_component": [
+        130816
+      ],
+      "source": 1921
+    },
+    {
+      "eight_move_witness": [
+        65280,
+        75716,
+        84682,
+        255
+      ],
+      "initial": 0,
+      "legal_states": 9,
+      "six_move_start_component": [
+        65280
+      ],
+      "source": 2905
+    },
+    {
+      "eight_move_witness": [
+        130816,
+        27593,
+        15531,
+        65791
+      ],
+      "initial": 1,
+      "legal_states": 9,
+      "six_move_start_component": [
+        15531,
+        27593,
+        28975,
+        35755,
+        46389,
+        55355,
+        59180,
+        130816
+      ],
+      "source": 2905
+    },
+    {
+      "eight_move_witness": [
+        65280,
+        88465,
+        76003,
+        255
+      ],
+      "initial": 0,
+      "legal_states": 4,
+      "six_move_start_component": [
+        65280
+      ],
+      "source": 3369
+    },
+    {
+      "eight_move_witness": [
+        130816,
+        55068,
+        42606,
+        65791
+      ],
+      "initial": 1,
+      "legal_states": 4,
+      "six_move_start_component": [
+        55068,
+        130816
+      ],
+      "source": 3369
+    }
+  ],
+  "checks": 4542,
+  "image_reports": [
+    {
+      "charge": [
+        [
+          1965,
+          2
+        ],
+        [
+          2234,
+          -2
+        ]
+      ],
+      "name": "common_target",
+      "potential_sha256": "697acd5f9e3e037a353ec9f75dba19ef4e446e15069d0cd48347c6b1a0e86b61"
+    },
+    {
+      "charge": [
+        [
+          1638,
+          2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2185,
+          -2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          3000,
+          -2
+        ],
+        [
+          3015,
+          2
+        ]
+      ],
+      "name": "buffer_3015_step_1",
+      "potential_sha256": "14dfb0fc19977b9aed63d883821c42a2d3b9f5f9fbe27666750a72988655d790"
+    },
+    {
+      "charge": [
+        [
+          176,
+          -2
+        ],
+        [
+          1477,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2581,
+          2
+        ],
+        [
+          2837,
+          2
+        ]
+      ],
+      "name": "buffer_3015_step_2",
+      "potential_sha256": "09e2a20083caacfea709ff4aad0b252a19cfd0896f38840614d19adbfa560f77"
+    },
+    {
+      "charge": [
+        [
+          1457,
+          2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          1974,
+          -2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          2945,
+          -2
+        ],
+        [
+          3000,
+          2
+        ]
+      ],
+      "name": "buffer_3015_step_3",
+      "potential_sha256": "ac4c6fd2aab4ac51ba0fd5ee53653a5d11afd16c9d3a98610f58c5b9e11d0120"
+    },
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          3000,
+          -2
+        ],
+        [
+          3015,
+          -2
+        ]
+      ],
+      "name": "buffer_3015_step_4",
+      "potential_sha256": "130478e1ee12b76d4e634ed11145ebe5bfc59ce136e841bfe4ed29e52fae0738"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          2
+        ],
+        [
+          1457,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          2945,
+          -2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "buffer_1394_step_1",
+      "potential_sha256": "5499f52b52a6b937b6a1ee9036086f24c1ebca16b48866849ba554bf984b38ef"
+    },
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1477,
+          2
+        ],
+        [
+          1549,
+          2
+        ],
+        [
+          1974,
+          -2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          2185,
+          -2
+        ],
+        [
+          2837,
+          2
+        ]
+      ],
+      "name": "buffer_1394_step_2",
+      "potential_sha256": "b36d5e2bc7719ddd2e2932185c38ad85b0075ac06c4b7c59fcb8c637aa92402e"
+    },
+    {
+      "charge": [
+        [
+          176,
+          -2
+        ],
+        [
+          1394,
+          -2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          1638,
+          2
+        ],
+        [
+          1974,
+          2
+        ]
+      ],
+      "name": "buffer_1394_step_3",
+      "potential_sha256": "b9121774a510913589a0abe69475be5a861f59e2dcfc7987483d2e244c8542de"
+    },
+    {
+      "charge": [
+        [
+          176,
+          -2
+        ],
+        [
+          1394,
+          2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2905,
+          2
+        ]
+      ],
+      "name": "buffer_1394_2905_step_1",
+      "potential_sha256": "b305e57afba9587720862d64e6056361c0edb1f3a680071a1aeaa40efe89bbee"
+    },
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1480,
+          -2
+        ],
+        [
+          1638,
+          2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          2945,
+          -2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "buffer_1394_2905_step_2",
+      "potential_sha256": "d0313118fab09ac924c89b9f8eacb7adf08f368a0df92802c9f3951967107f84"
+    },
+    {
+      "charge": [
+        [
+          1457,
+          2
+        ],
+        [
+          1477,
+          2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          2905,
+          -2
+        ],
+        [
+          2945,
+          2
+        ]
+      ],
+      "name": "buffer_1394_2905_step_3",
+      "potential_sha256": "5f73ee1f2fef060b09ee39ce8a2101fdd62e1cf3de7cfbc15bf56e89dd20f6f5"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          -2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2185,
+          -2
+        ],
+        [
+          2837,
+          2
+        ],
+        [
+          2945,
+          -2
+        ]
+      ],
+      "name": "buffer_1394_2905_step_4",
+      "potential_sha256": "aa16d91ebb5a815781b41b15ceb9d6b1cd036ae4f7e003c7287ddaeba31825d8"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          2
+        ],
+        [
+          1549,
+          2
+        ],
+        [
+          1921,
+          -2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          2837,
+          2
+        ],
+        [
+          3015,
+          -2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_step_1",
+      "potential_sha256": "578c4cf0766e2e9b372515c64ec84ad3a3a146630f6be3132e2ceb04b8818b0b"
+    },
+    {
+      "charge": [
+        [
+          2087,
+          2
+        ],
+        [
+          2553,
+          2
+        ],
+        [
+          2835,
+          -2
+        ],
+        [
+          2837,
+          -2
+        ],
+        [
+          3000,
+          2
+        ],
+        [
+          3360,
+          -2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_step_2",
+      "potential_sha256": "a82b091521b5ec527afb14f055115b826d85303b6b769b356f105aa2b34f7044"
+    },
+    {
+      "charge": [
+        [
+          1457,
+          -2
+        ],
+        [
+          1477,
+          -2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2185,
+          2
+        ],
+        [
+          2553,
+          -2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_step_3",
+      "potential_sha256": "d79c2db1f0718ab6f3fd4f471193af37cd2a4cd15d4e69f552389c9c79b33811"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          -2
+        ],
+        [
+          1841,
+          -2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          2553,
+          2
+        ],
+        [
+          2837,
+          2
+        ],
+        [
+          2945,
+          2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_step_4",
+      "potential_sha256": "cbf80a941c486068943a120a445686e3b9d0a3d617352282874f777ebc45be1d"
+    },
+    {
+      "charge": [
+        [
+          1480,
+          2
+        ],
+        [
+          1974,
+          -2
+        ],
+        [
+          2071,
+          2
+        ],
+        [
+          2185,
+          2
+        ],
+        [
+          2905,
+          -2
+        ],
+        [
+          3369,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_step_1",
+      "potential_sha256": "91bedeb3a2e39d126afb8138b5633c4235c30b9407259e346ca2e03408ec667a"
+    },
+    {
+      "charge": [
+        [
+          1477,
+          -2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          1691,
+          -2
+        ],
+        [
+          2581,
+          2
+        ],
+        [
+          2945,
+          2
+        ],
+        [
+          3369,
+          2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_step_2",
+      "potential_sha256": "a3ab27338503a1579bebc3e0f03dbd4f5a1222d5cb74b7251cdbfe2ae0860c25"
+    },
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1457,
+          2
+        ],
+        [
+          1480,
+          -2
+        ],
+        [
+          2176,
+          2
+        ],
+        [
+          2837,
+          -2
+        ],
+        [
+          3369,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_step_3",
+      "potential_sha256": "4d2afa9c5a0230f3dd84cbb7cd756ffe8d759b875e2ff504dd3ad729212bb7d9"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1921,
+          -2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2835,
+          2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_step_4",
+      "potential_sha256": "93379e88a735f38ea4e0531fb50d779ff287e3152797d57aa57c78e2f26e7e76"
+    },
+    {
+      "charge": [
+        [
+          176,
+          -2
+        ],
+        [
+          1394,
+          2
+        ],
+        [
+          1477,
+          2
+        ],
+        [
+          1638,
+          2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          2185,
+          -2
+        ],
+        [
+          2581,
+          -2
+        ]
+      ],
+      "name": "buffer_1394_min_work_step_1",
+      "potential_sha256": "89e61d87bb8948390d8e8d63bd1842adee7d6083161ed5db48d796772bceeba6"
+    },
+    {
+      "charge": [
+        [
+          1425,
+          2
+        ],
+        [
+          1457,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2185,
+          2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "buffer_1394_min_work_step_2",
+      "potential_sha256": "863f375495f428ff2868dfc59e9b354bd01865e149d56d8d6b4aefe40510c323"
+    },
+    {
+      "charge": [
+        [
+          1477,
+          -2
+        ],
+        [
+          1691,
+          2
+        ],
+        [
+          1841,
+          -2
+        ],
+        [
+          2176,
+          -2
+        ],
+        [
+          2581,
+          2
+        ],
+        [
+          2837,
+          2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_min_work_step_3",
+      "potential_sha256": "a09b39c88dcdbd59c21b8e62a1f9434090b7b669e9390fa4263fd168a5bc53ff"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          -2
+        ],
+        [
+          1457,
+          -2
+        ],
+        [
+          1974,
+          2
+        ],
+        [
+          2185,
+          2
+        ],
+        [
+          2581,
+          -2
+        ],
+        [
+          2945,
+          2
+        ]
+      ],
+      "name": "eighteen_buffer_1394_min_work_step_4",
+      "potential_sha256": "6aa0a6c239ec20c99537485b4d5f3d1315f5ce887ec0820eb8af87efb6d21dd2"
+    },
+    {
+      "charge": [
+        [
+          1480,
+          2
+        ],
+        [
+          1549,
+          -2
+        ],
+        [
+          1921,
+          -2
+        ],
+        [
+          2071,
+          2
+        ],
+        [
+          2176,
+          2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_min_clock_step_1",
+      "potential_sha256": "3f07c3d27172ebd124febbc494ee3700f51f49c5568ea1a89f608e549c188357"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          2
+        ],
+        [
+          1480,
+          -2
+        ],
+        [
+          1974,
+          -2
+        ],
+        [
+          2185,
+          2
+        ],
+        [
+          2837,
+          -2
+        ],
+        [
+          2945,
+          2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_min_clock_step_2",
+      "potential_sha256": "6f97cbdd7e79e1b08eb0c4c57c3e3f76f738ce03c31b0e675b8e4c3b9ad71240"
+    },
+    {
+      "charge": [
+        [
+          1457,
+          2
+        ],
+        [
+          1477,
+          -2
+        ],
+        [
+          1480,
+          2
+        ],
+        [
+          1691,
+          -2
+        ],
+        [
+          3000,
+          2
+        ],
+        [
+          3369,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_min_clock_step_3",
+      "potential_sha256": "35458521f41af61124c832a4cb72bd5942efb2dce545fe581bc2f39abc85fda4"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          -2
+        ],
+        [
+          2581,
+          2
+        ],
+        [
+          2835,
+          2
+        ],
+        [
+          2945,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_min_clock_step_4",
+      "potential_sha256": "084ad2784e8fe3b52a33a90b09ecb00500bf703e37add9287f19f3ccde7a1254"
+    },
+    {
+      "charge": [
+        [
+          1394,
+          2
+        ],
+        [
+          1425,
+          2
+        ],
+        [
+          2071,
+          -2
+        ],
+        [
+          2905,
+          -2
+        ],
+        [
+          2945,
+          2
+        ],
+        [
+          3000,
+          -2
+        ]
+      ],
+      "name": "eighteen37_buffer_2071_min_clock_step_5",
+      "potential_sha256": "f559f718b7f2e2dd696041b2124b27f37da65f92de3a28a009a4e20aa2129773"
+    }
+  ],
+  "integer_obstruction": {
+    "applies_to": "All28 supplied slots, every buffer initialization, any path length; fixed actual pins and all target margins.",
+    "endpoint_values": [
+      0,
+      2
+    ],
+    "weights": {
+      "1638": 1,
+      "1974": 1
+    }
+  },
+  "literal_closed_ports_full28_common_pin_union": 228,
+  "native_domain_reports": [
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            7,
+            2,
+            3,
+            1,
+            4,
+            6,
+            0
+          ],
+          "resource": 284101,
+          "target": 1965,
+          "word": 577447
+        },
+        {
+          "path": [
+            5,
+            7,
+            6,
+            3,
+            1,
+            4,
+            2,
+            0
+          ],
+          "resource": 585654,
+          "target": 2234,
+          "word": 585654
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 176
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            4,
+            6,
+            1,
+            5,
+            7,
+            3,
+            0
+          ],
+          "resource": 623470,
+          "target": 1965,
+          "word": 944802
+        },
+        {
+          "path": [
+            2,
+            4,
+            3,
+            1,
+            5,
+            7,
+            6,
+            0
+          ],
+          "resource": 590382,
+          "target": 2234,
+          "word": 672418
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1394
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            6,
+            3,
+            4,
+            7,
+            2,
+            1,
+            0
+          ],
+          "resource": 284821,
+          "target": 1965,
+          "word": 1812330
+        },
+        {
+          "path": [
+            5,
+            2,
+            3,
+            4,
+            7,
+            6,
+            1,
+            0
+          ],
+          "resource": 317909,
+          "target": 2234,
+          "word": 1779242
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1425
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            6,
+            2,
+            1,
+            4,
+            7,
+            3,
+            0
+          ],
+          "resource": 935638,
+          "target": 1965,
+          "word": 935638
+        },
+        {
+          "path": [
+            5,
+            3,
+            2,
+            1,
+            4,
+            7,
+            6,
+            0
+          ],
+          "resource": 672854,
+          "target": 2234,
+          "word": 672854
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1457
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            7,
+            6,
+            3,
+            1,
+            4,
+            5,
+            2,
+            0
+          ],
+          "resource": 645314,
+          "target": 1965,
+          "word": 1206133
+        },
+        {
+          "path": [
+            7,
+            6,
+            5,
+            1,
+            4,
+            3,
+            2,
+            0
+          ],
+          "resource": 423741,
+          "target": 2234,
+          "word": 1210236
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1477
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            1,
+            5,
+            7,
+            2,
+            3,
+            4,
+            6,
+            0
+          ],
+          "resource": 159080,
+          "target": 1965,
+          "word": 159080
+        },
+        {
+          "path": [
+            1,
+            5,
+            7,
+            6,
+            3,
+            4,
+            2,
+            0
+          ],
+          "resource": 58300,
+          "target": 2234,
+          "word": 225064
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1480
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            7,
+            4,
+            6,
+            3,
+            0,
+            5,
+            2,
+            1
+          ],
+          "resource": 790945,
+          "target": 1965,
+          "word": 1306206
+        },
+        {
+          "path": [
+            7,
+            0,
+            4,
+            6,
+            3,
+            5,
+            2,
+            1
+          ],
+          "resource": 38626,
+          "target": 2234,
+          "word": 2058525
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 4,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "source": 1532
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            4,
+            6,
+            2,
+            0,
+            5,
+            7,
+            3,
+            1
+          ],
+          "resource": 345721,
+          "target": 1965,
+          "word": 1328888
+        },
+        {
+          "path": [
+            4,
+            3,
+            2,
+            0,
+            5,
+            7,
+            6,
+            1
+          ],
+          "resource": 279609,
+          "target": 2234,
+          "word": 1066104
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "source": 1549
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            1,
+            7,
+            4,
+            6,
+            3,
+            2,
+            0
+          ],
+          "resource": 428741,
+          "target": 1965,
+          "word": 1668410
+        },
+        {
+          "path": [
+            5,
+            1,
+            3,
+            4,
+            6,
+            7,
+            2,
+            0
+          ],
+          "resource": 432844,
+          "target": 2234,
+          "word": 1664307
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1638
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            1,
+            7,
+            2,
+            4,
+            5,
+            3,
+            6,
+            0
+          ],
+          "resource": 575394,
+          "target": 1965,
+          "word": 575394
+        },
+        {
+          "path": [
+            1,
+            7,
+            6,
+            4,
+            5,
+            3,
+            2,
+            0
+          ],
+          "resource": 633722,
+          "target": 2234,
+          "word": 847778
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1691
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            6,
+            1,
+            7,
+            3,
+            4,
+            2,
+            0,
+            5
+          ],
+          "resource": 920993,
+          "target": 1965,
+          "word": 1176158
+        },
+        {
+          "path": [
+            6,
+            1,
+            3,
+            4,
+            7,
+            2,
+            0,
+            5
+          ],
+          "resource": 216420,
+          "target": 2234,
+          "word": 1880731
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 3,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "source": 1841
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            7,
+            2,
+            4,
+            1,
+            5,
+            3,
+            6,
+            0
+          ],
+          "resource": 660606,
+          "target": 1965,
+          "word": 660606
+        },
+        {
+          "path": [
+            7,
+            6,
+            4,
+            1,
+            5,
+            3,
+            2,
+            0
+          ],
+          "resource": 923390,
+          "target": 2234,
+          "word": 923390
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 1921
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            3,
+            7,
+            4,
+            0,
+            6,
+            1,
+            5,
+            2
+          ],
+          "resource": 663386,
+          "target": 1965,
+          "word": 663386
+        },
+        {
+          "path": [
+            3,
+            7,
+            4,
+            6,
+            1,
+            5,
+            0,
+            2
+          ],
+          "resource": 255829,
+          "target": 2234,
+          "word": 1453980
+        },
+        {
+          "path": [
+            3,
+            7,
+            4,
+            1,
+            5,
+            0,
+            6,
+            2
+          ],
+          "resource": 215601,
+          "target": 1559,
+          "word": 1881550
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 4,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "source": 1923
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            6,
+            4,
+            7,
+            2,
+            1,
+            0,
+            3
+          ],
+          "resource": 210676,
+          "target": 1965,
+          "word": 464820
+        },
+        {
+          "path": [
+            5,
+            2,
+            4,
+            7,
+            6,
+            1,
+            0,
+            3
+          ],
+          "resource": 145126,
+          "target": 2234,
+          "word": 987956
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "source": 1974
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            1,
+            7,
+            5,
+            3,
+            0,
+            6,
+            4,
+            2
+          ],
+          "resource": 403221,
+          "target": 1965,
+          "word": 1189716
+        },
+        {
+          "path": [
+            1,
+            7,
+            6,
+            3,
+            0,
+            5,
+            4,
+            2
+          ],
+          "resource": 161620,
+          "target": 2234,
+          "word": 161620
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "source": 2071
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            1,
+            3,
+            0,
+            7,
+            4,
+            5,
+            6
+          ],
+          "resource": 870726,
+          "target": 1965,
+          "word": 958666
+        },
+        {
+          "path": [
+            2,
+            1,
+            7,
+            3,
+            0,
+            4,
+            5,
+            6
+          ],
+          "resource": 479626,
+          "target": 2234,
+          "word": 618700
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 3,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "source": 2087
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            4,
+            6,
+            2,
+            1,
+            7,
+            3,
+            0
+          ],
+          "resource": 682678,
+          "target": 1965,
+          "word": 682678
+        },
+        {
+          "path": [
+            5,
+            4,
+            3,
+            2,
+            1,
+            7,
+            6,
+            0
+          ],
+          "resource": 294353,
+          "target": 2234,
+          "word": 674471
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 2176
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            7,
+            2,
+            1,
+            0,
+            5,
+            6,
+            4,
+            3
+          ],
+          "resource": 456065,
+          "target": 1965,
+          "word": 1641086
+        },
+        {
+          "path": [
+            7,
+            6,
+            1,
+            0,
+            5,
+            2,
+            4,
+            3
+          ],
+          "resource": 593790,
+          "target": 2234,
+          "word": 593790
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "source": 2185
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            6,
+            1,
+            0,
+            3,
+            7,
+            2,
+            4,
+            5
+          ],
+          "resource": 885838,
+          "target": 1965,
+          "word": 885838
+        },
+        {
+          "path": [
+            6,
+            7,
+            1,
+            0,
+            3,
+            2,
+            4,
+            5
+          ],
+          "resource": 282445,
+          "target": 2234,
+          "word": 282445
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 4,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          6
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "source": 2553
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            5,
+            4,
+            6,
+            1,
+            7,
+            3,
+            0
+          ],
+          "resource": 197558,
+          "target": 1965,
+          "word": 730788
+        },
+        {
+          "path": [
+            2,
+            5,
+            4,
+            3,
+            1,
+            7,
+            6,
+            0
+          ],
+          "resource": 459062,
+          "target": 2234,
+          "word": 664804
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 2581
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            1,
+            7,
+            5,
+            6,
+            4,
+            0,
+            3
+          ],
+          "resource": 532377,
+          "target": 1965,
+          "word": 1177106
+        },
+        {
+          "path": [
+            2,
+            1,
+            7,
+            5,
+            0,
+            6,
+            4,
+            3
+          ],
+          "resource": 650374,
+          "target": 2234,
+          "word": 650374
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 3,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "source": 2835
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            1,
+            0,
+            6,
+            2,
+            7,
+            5,
+            4,
+            3
+          ],
+          "resource": 21593,
+          "target": 1965,
+          "word": 1332248
+        },
+        {
+          "path": [
+            1,
+            4,
+            6,
+            2,
+            7,
+            5,
+            0,
+            3
+          ],
+          "resource": 284377,
+          "target": 2234,
+          "word": 1398360
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "source": 2837
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            5,
+            6,
+            1,
+            7,
+            3,
+            0,
+            4
+          ],
+          "resource": 538010,
+          "target": 1965,
+          "word": 619794
+        },
+        {
+          "path": [
+            2,
+            5,
+            3,
+            1,
+            7,
+            6,
+            0,
+            4
+          ],
+          "resource": 449261,
+          "target": 2234,
+          "word": 1647890
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "source": 2905
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            3,
+            6,
+            4,
+            0,
+            7,
+            5,
+            1,
+            2
+          ],
+          "resource": 599914,
+          "target": 1965,
+          "word": 811954
+        },
+        {
+          "path": [
+            3,
+            6,
+            1,
+            0,
+            7,
+            5,
+            4,
+            2
+          ],
+          "resource": 449941,
+          "target": 2234,
+          "word": 803747
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "source": 2945
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            7,
+            4,
+            1,
+            5,
+            2,
+            6,
+            3,
+            0
+          ],
+          "resource": 324033,
+          "target": 1965,
+          "word": 706231
+        },
+        {
+          "path": [
+            7,
+            4,
+            3,
+            5,
+            2,
+            6,
+            1,
+            0
+          ],
+          "resource": 290945,
+          "target": 2234,
+          "word": 978615
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 3000
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            3,
+            0,
+            7,
+            4,
+            2,
+            1,
+            6,
+            5
+          ],
+          "resource": 416521,
+          "target": 1965,
+          "word": 1110604
+        },
+        {
+          "path": [
+            3,
+            0,
+            4,
+            2,
+            7,
+            1,
+            6,
+            5
+          ],
+          "resource": 224629,
+          "target": 2234,
+          "word": 1872522
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 3,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "source": 3015
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            5,
+            1,
+            3,
+            7,
+            2,
+            0,
+            6,
+            4
+          ],
+          "resource": 248587,
+          "target": 1965,
+          "word": 248587
+        },
+        {
+          "path": [
+            5,
+            7,
+            1,
+            3,
+            2,
+            0,
+            6,
+            4
+          ],
+          "resource": 145291,
+          "target": 2234,
+          "word": 145291
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 3,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          4
+        ]
+      ],
+      "source": 3360
+    },
+    {
+      "all_pinned_paths": [
+        {
+          "path": [
+            2,
+            7,
+            4,
+            1,
+            6,
+            5,
+            3,
+            0
+          ],
+          "resource": 811837,
+          "target": 1965,
+          "word": 1206122
+        },
+        {
+          "path": [
+            2,
+            7,
+            4,
+            3,
+            6,
+            5,
+            1,
+            0
+          ],
+          "resource": 288701,
+          "target": 2234,
+          "word": 1271672
+        }
+      ],
+      "automorphisms": 1,
+      "cost": 2,
+      "fixed_local_clock_owners": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          0
+        ]
+      ],
+      "source": 3369
+    }
+  ],
+  "normalized_resources_full28_common_pin_union": 57,
+  "routes": [
+    {
+      "below_threshold_components": {
+        "0": [
+          65280
+        ],
+        "2": [
+          65280
+        ],
+        "4": [
+          65280
+        ]
+      },
+      "buffers": [
+        3015
+      ],
+      "closed_ports_per_state": 68,
+      "closed_ports_union": 136,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        85840,
+        92372,
+        100534,
+        114918
+      ],
+      "max_owner_clock_changes": 13,
+      "minimum_maximum_changed_slots": 6,
+      "name": "buffer_3015",
+      "normalized_resources_per_state": 17,
+      "normalized_resources_union": 34,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          65280,
+          85840,
+          92372,
+          100534,
+          255
+        ],
+        "minimum_clock_bottleneck": 13,
+        "minimum_clock_bottleneck_event_witness": [
+          65280,
+          85840,
+          92372,
+          100534,
+          255
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 4,
+        "minimum_work": {
+          "distance_labels": {
+            "100534": [
+              37,
+              3
+            ],
+            "114918": [
+              37,
+              3
+            ],
+            "255": [
+              50,
+              4
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "85840": [
+              13,
+              1
+            ],
+            "92372": [
+              25,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            65280,
+            85840,
+            92372,
+            100534,
+            255
+          ],
+          "total_owner_clock_work": 50
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "100534": [
+              37,
+              3
+            ],
+            "114918": [
+              37,
+              3
+            ],
+            "255": [
+              50,
+              4
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "85840": [
+              13,
+              1
+            ],
+            "92372": [
+              25,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            65280,
+            85840,
+            92372,
+            100534,
+            255
+          ],
+          "total_owner_clock_work": 50
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        65280,
+        85840,
+        92372,
+        100534,
+        255
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 210676,
+          "selected_bit": 0,
+          "source": 1974,
+          "step": 3
+        },
+        {
+          "resource": 145126,
+          "selected_bit": 1,
+          "source": 1974,
+          "step": 4
+        },
+        {
+          "resource": 459062,
+          "selected_bit": 1,
+          "source": 2581,
+          "step": 2
+        },
+        {
+          "resource": 197558,
+          "selected_bit": 0,
+          "source": 2581,
+          "step": 3
+        },
+        {
+          "resource": 290945,
+          "selected_bit": 1,
+          "source": 3000,
+          "step": 3
+        },
+        {
+          "resource": 324033,
+          "selected_bit": 0,
+          "source": 3000,
+          "step": 4
+        },
+        {
+          "resource": 416521,
+          "selected_bit": 0,
+          "source": 3015,
+          "step": 4
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837,
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000,
+        3015
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            2185,
+            2581,
+            3000
+          ],
+          "new_mask": 85840,
+          "old_mask": 65280,
+          "plus": [
+            1638,
+            1974,
+            3015
+          ],
+          "signed_edge_change": [
+            [
+              1638,
+              1965,
+              -2
+            ],
+            [
+              1638,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              1965,
+              3015,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ],
+            [
+              2234,
+              3015,
+              2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            176,
+            1549,
+            2071
+          ],
+          "new_mask": 92372,
+          "old_mask": 85840,
+          "plus": [
+            1477,
+            2581,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              176,
+              1965,
+              2
+            ],
+            [
+              176,
+              2234,
+              -2
+            ],
+            [
+              1477,
+              1965,
+              -2
+            ],
+            [
+              1477,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2581,
+              -2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1974,
+            2581,
+            2945
+          ],
+          "new_mask": 100534,
+          "old_mask": 92372,
+          "plus": [
+            1457,
+            1691,
+            3000
+          ],
+          "signed_edge_change": [
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              1965,
+              3000,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            2176,
+            3000,
+            3015
+          ],
+          "new_mask": 255,
+          "old_mask": 100534,
+          "plus": [
+            1425,
+            1480,
+            1974
+          ],
+          "signed_edge_change": [
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              1965,
+              3015,
+              2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ],
+            [
+              2234,
+              3015,
+              -2
+            ]
+          ],
+          "step": 4
+        }
+      ],
+      "total_owner_clock_changes": 50
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          65280
+        ],
+        "2": [
+          65280
+        ],
+        "4": [
+          65280
+        ],
+        "6": [
+          65280
+        ]
+      },
+      "buffers": [
+        1394
+      ],
+      "closed_ports_per_state": 68,
+      "closed_ports_union": 136,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66471,
+        73058,
+        80536,
+        84689,
+        85127,
+        86071,
+        94920,
+        102791,
+        103082,
+        116276
+      ],
+      "max_owner_clock_changes": 16,
+      "minimum_maximum_changed_slots": 8,
+      "name": "buffer_1394",
+      "normalized_resources_per_state": 17,
+      "normalized_resources_union": 34,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          65280,
+          73058,
+          66471,
+          255
+        ],
+        "minimum_clock_bottleneck": 16,
+        "minimum_clock_bottleneck_event_witness": [
+          65280,
+          73058,
+          66471,
+          255
+        ],
+        "minimum_events": 3,
+        "minimum_events_at_minimum_clock_bottleneck": 3,
+        "minimum_work": {
+          "distance_labels": {
+            "102791": [
+              32,
+              2
+            ],
+            "103082": [
+              28,
+              2
+            ],
+            "116276": [
+              16,
+              1
+            ],
+            "255": [
+              40,
+              3
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              32,
+              2
+            ],
+            "73058": [
+              16,
+              1
+            ],
+            "80536": [
+              16,
+              1
+            ],
+            "84689": [
+              28,
+              2
+            ],
+            "85127": [
+              32,
+              2
+            ],
+            "86071": [
+              28,
+              2
+            ],
+            "94920": [
+              16,
+              1
+            ]
+          },
+          "events": 3,
+          "path": [
+            65280,
+            116276,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 40
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "102791": [
+              32,
+              2
+            ],
+            "103082": [
+              28,
+              2
+            ],
+            "116276": [
+              16,
+              1
+            ],
+            "255": [
+              40,
+              3
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              32,
+              2
+            ],
+            "73058": [
+              16,
+              1
+            ],
+            "80536": [
+              16,
+              1
+            ],
+            "84689": [
+              28,
+              2
+            ],
+            "85127": [
+              32,
+              2
+            ],
+            "86071": [
+              28,
+              2
+            ],
+            "94920": [
+              16,
+              1
+            ]
+          },
+          "events": 3,
+          "path": [
+            65280,
+            116276,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 40
+        },
+        "slot_budget": 8
+      },
+      "path": [
+        65280,
+        73058,
+        66471,
+        255
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 210676,
+          "selected_bit": 0,
+          "source": 1974,
+          "step": 2
+        },
+        {
+          "resource": 145126,
+          "selected_bit": 1,
+          "source": 1974,
+          "step": 3
+        },
+        {
+          "resource": 279609,
+          "selected_bit": 1,
+          "source": 1549,
+          "step": 2
+        },
+        {
+          "resource": 345721,
+          "selected_bit": 0,
+          "source": 1549,
+          "step": 3
+        },
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 3
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837,
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000,
+        1394
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 16,
+          "changed_slots": 8,
+          "integer_generator_currents": [
+            [],
+            [],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            1549,
+            2581,
+            2945,
+            3000
+          ],
+          "new_mask": 73058,
+          "old_mask": 65280,
+          "plus": [
+            1394,
+            1457,
+            1691,
+            1974
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 16,
+          "changed_slots": 8,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                512
+              ],
+              [
+                2234,
+                -512
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            1974,
+            2071,
+            2176,
+            2185
+          ],
+          "new_mask": 66471,
+          "old_mask": 73058,
+          "plus": [
+            1425,
+            1477,
+            1549,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1477,
+              1965,
+              -2
+            ],
+            [
+              1477,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              -2
+            ],
+            [
+              1549,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              2185,
+              2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              -2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2185,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            176,
+            1394,
+            1549
+          ],
+          "new_mask": 255,
+          "old_mask": 66471,
+          "plus": [
+            1480,
+            1638,
+            1974
+          ],
+          "signed_edge_change": [
+            [
+              176,
+              1965,
+              2
+            ],
+            [
+              176,
+              2234,
+              -2
+            ],
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1638,
+              1965,
+              -2
+            ],
+            [
+              1638,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ]
+          ],
+          "step": 3
+        }
+      ],
+      "total_owner_clock_changes": 44
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          65280
+        ],
+        "2": [
+          65280
+        ],
+        "4": [
+          65280
+        ]
+      },
+      "buffers": [
+        1394,
+        2905
+      ],
+      "closed_ports_per_state": 72,
+      "closed_ports_union": 144,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66471,
+        73058,
+        80536,
+        84689,
+        85127,
+        86071,
+        94920,
+        102791,
+        103082,
+        116276,
+        137427,
+        141252,
+        150218,
+        160852,
+        167632,
+        169014,
+        181076,
+        205209,
+        210993,
+        223493,
+        223784,
+        225377,
+        260104
+      ],
+      "max_owner_clock_changes": 12,
+      "minimum_maximum_changed_slots": 6,
+      "name": "buffer_1394_2905",
+      "normalized_resources_per_state": 18,
+      "normalized_resources_union": 36,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          65280,
+          260104,
+          210993,
+          86071,
+          255
+        ],
+        "minimum_clock_bottleneck": 12,
+        "minimum_clock_bottleneck_event_witness": [
+          65280,
+          260104,
+          210993,
+          86071,
+          255
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 4,
+        "minimum_work": {
+          "distance_labels": {
+            "102791": [
+              48,
+              4
+            ],
+            "103082": [
+              36,
+              3
+            ],
+            "116276": [
+              48,
+              4
+            ],
+            "137427": [
+              36,
+              3
+            ],
+            "141252": [
+              48,
+              4
+            ],
+            "150218": [
+              32,
+              3
+            ],
+            "160852": [
+              36,
+              3
+            ],
+            "167632": [
+              44,
+              4
+            ],
+            "169014": [
+              48,
+              4
+            ],
+            "181076": [
+              48,
+              4
+            ],
+            "205209": [
+              36,
+              3
+            ],
+            "210993": [
+              24,
+              2
+            ],
+            "223493": [
+              24,
+              2
+            ],
+            "223784": [
+              20,
+              2
+            ],
+            "225377": [
+              24,
+              2
+            ],
+            "255": [
+              48,
+              4
+            ],
+            "260104": [
+              12,
+              1
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              48,
+              4
+            ],
+            "80536": [
+              24,
+              2
+            ],
+            "84689": [
+              36,
+              3
+            ],
+            "85127": [
+              36,
+              3
+            ],
+            "86071": [
+              36,
+              3
+            ],
+            "94920": [
+              24,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            65280,
+            260104,
+            210993,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 48
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "102791": [
+              48,
+              4
+            ],
+            "103082": [
+              36,
+              3
+            ],
+            "116276": [
+              48,
+              4
+            ],
+            "137427": [
+              36,
+              3
+            ],
+            "141252": [
+              48,
+              4
+            ],
+            "150218": [
+              32,
+              3
+            ],
+            "160852": [
+              36,
+              3
+            ],
+            "167632": [
+              44,
+              4
+            ],
+            "169014": [
+              48,
+              4
+            ],
+            "181076": [
+              48,
+              4
+            ],
+            "205209": [
+              36,
+              3
+            ],
+            "210993": [
+              24,
+              2
+            ],
+            "223493": [
+              24,
+              2
+            ],
+            "223784": [
+              20,
+              2
+            ],
+            "225377": [
+              24,
+              2
+            ],
+            "255": [
+              48,
+              4
+            ],
+            "260104": [
+              12,
+              1
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              48,
+              4
+            ],
+            "80536": [
+              24,
+              2
+            ],
+            "84689": [
+              36,
+              3
+            ],
+            "85127": [
+              36,
+              3
+            ],
+            "86071": [
+              36,
+              3
+            ],
+            "94920": [
+              24,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            65280,
+            260104,
+            210993,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 48
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        65280,
+        260104,
+        210993,
+        86071,
+        255
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 159080,
+          "selected_bit": 0,
+          "source": 1480,
+          "step": 2
+        },
+        {
+          "resource": 58300,
+          "selected_bit": 1,
+          "source": 1480,
+          "step": 4
+        },
+        {
+          "resource": 449941,
+          "selected_bit": 1,
+          "source": 2945,
+          "step": 3
+        },
+        {
+          "resource": 599914,
+          "selected_bit": 0,
+          "source": 2945,
+          "step": 4
+        },
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 4
+        },
+        {
+          "resource": 538010,
+          "selected_bit": 0,
+          "source": 2905,
+          "step": 3
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837,
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000,
+        1394,
+        2905
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            176,
+            1549,
+            2071
+          ],
+          "new_mask": 260104,
+          "old_mask": 65280,
+          "plus": [
+            1394,
+            1480,
+            2905
+          ],
+          "signed_edge_change": [
+            [
+              176,
+              1965,
+              2
+            ],
+            [
+              176,
+              2234,
+              -2
+            ],
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2905,
+              -2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2905,
+              2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            []
+          ],
+          "minus": [
+            1480,
+            2945,
+            3000
+          ],
+          "new_mask": 210993,
+          "old_mask": 260104,
+          "plus": [
+            1425,
+            1638,
+            1691
+          ],
+          "signed_edge_change": [
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              2
+            ],
+            [
+              1480,
+              2234,
+              -2
+            ],
+            [
+              1638,
+              1965,
+              -2
+            ],
+            [
+              1638,
+              2234,
+              2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            2176,
+            2581,
+            2905
+          ],
+          "new_mask": 86071,
+          "old_mask": 210993,
+          "plus": [
+            1457,
+            1477,
+            2945
+          ],
+          "signed_edge_change": [
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1477,
+              1965,
+              -2
+            ],
+            [
+              1477,
+              2234,
+              2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2905,
+              2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2905,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1394,
+            2185,
+            2945
+          ],
+          "new_mask": 255,
+          "old_mask": 86071,
+          "plus": [
+            1480,
+            1974,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ]
+          ],
+          "step": 4
+        }
+      ],
+      "total_owner_clock_changes": 48
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          261632
+        ],
+        "2": [
+          261632
+        ],
+        "4": [
+          261632,
+          474752,
+          520720
+        ]
+      },
+      "buffers": [
+        1394
+      ],
+      "closed_ports_per_state": 76,
+      "closed_ports_union": 152,
+      "initial": 0,
+      "legal_states": [
+        511,
+        261632,
+        272671,
+        274217,
+        276235,
+        279403,
+        291981,
+        302380,
+        355009,
+        367426,
+        383172,
+        395582,
+        399146,
+        414892,
+        437825,
+        474752,
+        477920,
+        479938,
+        520720
+      ],
+      "max_owner_clock_changes": 17,
+      "minimum_maximum_changed_slots": 6,
+      "name": "eighteen_buffer_1394",
+      "normalized_resources_per_state": 19,
+      "normalized_resources_union": 38,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          261632,
+          437825,
+          274217,
+          272671,
+          511
+        ],
+        "minimum_clock_bottleneck": 17,
+        "minimum_clock_bottleneck_event_witness": [
+          261632,
+          437825,
+          274217,
+          272671,
+          511
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 4,
+        "minimum_work": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "272671": [
+              44,
+              3
+            ],
+            "274217": [
+              30,
+              2
+            ],
+            "276235": [
+              41,
+              3
+            ],
+            "279403": [
+              43,
+              3
+            ],
+            "291981": [
+              53,
+              4
+            ],
+            "302380": [
+              43,
+              3
+            ],
+            "355009": [
+              22,
+              2
+            ],
+            "367426": [
+              37,
+              3
+            ],
+            "383172": [
+              35,
+              3
+            ],
+            "395582": [
+              55,
+              4
+            ],
+            "399146": [
+              44,
+              3
+            ],
+            "414892": [
+              56,
+              4
+            ],
+            "437825": [
+              13,
+              1
+            ],
+            "474752": [
+              9,
+              1
+            ],
+            "477920": [
+              23,
+              2
+            ],
+            "479938": [
+              22,
+              2
+            ],
+            "511": [
+              55,
+              4
+            ],
+            "520720": [
+              9,
+              1
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            437825,
+            274217,
+            279403,
+            511
+          ],
+          "total_owner_clock_work": 55
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "272671": [
+              44,
+              3
+            ],
+            "274217": [
+              30,
+              2
+            ],
+            "276235": [
+              41,
+              3
+            ],
+            "279403": [
+              43,
+              3
+            ],
+            "291981": [
+              53,
+              4
+            ],
+            "302380": [
+              43,
+              3
+            ],
+            "355009": [
+              22,
+              2
+            ],
+            "367426": [
+              37,
+              3
+            ],
+            "383172": [
+              35,
+              3
+            ],
+            "395582": [
+              55,
+              4
+            ],
+            "399146": [
+              44,
+              3
+            ],
+            "414892": [
+              56,
+              4
+            ],
+            "437825": [
+              13,
+              1
+            ],
+            "474752": [
+              9,
+              1
+            ],
+            "477920": [
+              23,
+              2
+            ],
+            "479938": [
+              22,
+              2
+            ],
+            "511": [
+              55,
+              4
+            ],
+            "520720": [
+              9,
+              1
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            437825,
+            274217,
+            279403,
+            511
+          ],
+          "total_owner_clock_work": 55
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        261632,
+        437825,
+        274217,
+        272671,
+        511
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 885838,
+          "selected_bit": 0,
+          "source": 2553,
+          "step": 3
+        },
+        {
+          "resource": 282445,
+          "selected_bit": 1,
+          "source": 2553,
+          "step": 4
+        },
+        {
+          "resource": 21593,
+          "selected_bit": 0,
+          "source": 2837,
+          "step": 2
+        },
+        {
+          "resource": 284377,
+          "selected_bit": 1,
+          "source": 2837,
+          "step": 4
+        },
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 4
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360,
+        1394
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            1921,
+            2581,
+            3015
+          ],
+          "new_mask": 437825,
+          "old_mask": 261632,
+          "plus": [
+            1394,
+            1549,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              -2
+            ],
+            [
+              1549,
+              2234,
+              2
+            ],
+            [
+              1921,
+              1965,
+              2
+            ],
+            [
+              1921,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1965,
+              3015,
+              2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ],
+            [
+              2234,
+              3015,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 17,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -512
+              ],
+              [
+                2234,
+                512
+              ]
+            ]
+          ],
+          "minus": [
+            2835,
+            2837,
+            3360
+          ],
+          "new_mask": 274217,
+          "old_mask": 437825,
+          "plus": [
+            2087,
+            2553,
+            3000
+          ],
+          "signed_edge_change": [
+            [
+              1965,
+              2087,
+              -2
+            ],
+            [
+              1965,
+              2553,
+              -2
+            ],
+            [
+              1965,
+              2835,
+              2
+            ],
+            [
+              1965,
+              2837,
+              2
+            ],
+            [
+              1965,
+              3000,
+              -2
+            ],
+            [
+              1965,
+              3360,
+              2
+            ],
+            [
+              2087,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2553,
+              2
+            ],
+            [
+              2234,
+              2835,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              2
+            ],
+            [
+              2234,
+              3360,
+              -2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 14,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1457,
+            1477,
+            2553
+          ],
+          "new_mask": 272671,
+          "old_mask": 274217,
+          "plus": [
+            1691,
+            1974,
+            2185
+          ],
+          "signed_edge_change": [
+            [
+              1457,
+              1965,
+              2
+            ],
+            [
+              1457,
+              2234,
+              -2
+            ],
+            [
+              1477,
+              1965,
+              2
+            ],
+            [
+              1477,
+              2234,
+              -2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              -2
+            ],
+            [
+              1965,
+              2553,
+              2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2553,
+              -2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 15,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            1394,
+            1841,
+            2176
+          ],
+          "new_mask": 511,
+          "old_mask": 272671,
+          "plus": [
+            2553,
+            2837,
+            2945
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1841,
+              1965,
+              2
+            ],
+            [
+              1841,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              2553,
+              -2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2553,
+              2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ]
+          ],
+          "step": 4
+        }
+      ],
+      "total_owner_clock_changes": 59
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          261632
+        ],
+        "2": [
+          261632
+        ],
+        "4": [
+          261632
+        ]
+      },
+      "buffers": [
+        2071
+      ],
+      "closed_ports_per_state": 76,
+      "closed_ports_union": 152,
+      "initial": 0,
+      "legal_states": [
+        511,
+        261632,
+        269654,
+        273011,
+        273859,
+        275377,
+        282452,
+        287980,
+        288045,
+        293824,
+        298204,
+        298269,
+        305382,
+        305447,
+        309641,
+        324166,
+        329177,
+        332150,
+        336355,
+        344948,
+        351784,
+        360700,
+        360765,
+        369046,
+        379212,
+        398584,
+        398649,
+        399765,
+        406930,
+        417096,
+        419728,
+        427603,
+        428784,
+        428849,
+        440346,
+        453144,
+        479592,
+        516488
+      ],
+      "max_owner_clock_changes": 13,
+      "minimum_maximum_changed_slots": 6,
+      "name": "eighteen37_buffer_2071",
+      "normalized_resources_per_state": 19,
+      "normalized_resources_union": 38,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          261632,
+          351784,
+          479592,
+          332150,
+          511
+        ],
+        "minimum_clock_bottleneck": 12,
+        "minimum_clock_bottleneck_event_witness": [
+          261632,
+          453144,
+          428849,
+          360765,
+          360700,
+          511
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 5,
+        "minimum_work": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "269654": [
+              36,
+              3
+            ],
+            "273011": [
+              36,
+              3
+            ],
+            "273859": [
+              45,
+              4
+            ],
+            "275377": [
+              37,
+              3
+            ],
+            "282452": [
+              36,
+              3
+            ],
+            "287980": [
+              49,
+              4
+            ],
+            "288045": [
+              48,
+              4
+            ],
+            "293824": [
+              37,
+              3
+            ],
+            "298204": [
+              37,
+              3
+            ],
+            "298269": [
+              36,
+              3
+            ],
+            "305382": [
+              37,
+              3
+            ],
+            "305447": [
+              36,
+              3
+            ],
+            "309641": [
+              33,
+              3
+            ],
+            "324166": [
+              50,
+              4
+            ],
+            "329177": [
+              49,
+              4
+            ],
+            "332150": [
+              36,
+              3
+            ],
+            "336355": [
+              49,
+              4
+            ],
+            "344948": [
+              36,
+              3
+            ],
+            "351784": [
+              12,
+              1
+            ],
+            "360700": [
+              37,
+              3
+            ],
+            "360765": [
+              36,
+              3
+            ],
+            "369046": [
+              37,
+              3
+            ],
+            "379212": [
+              36,
+              3
+            ],
+            "398584": [
+              37,
+              3
+            ],
+            "398649": [
+              36,
+              3
+            ],
+            "399765": [
+              37,
+              3
+            ],
+            "406930": [
+              33,
+              3
+            ],
+            "417096": [
+              24,
+              2
+            ],
+            "419728": [
+              25,
+              2
+            ],
+            "427603": [
+              36,
+              3
+            ],
+            "428784": [
+              25,
+              2
+            ],
+            "428849": [
+              24,
+              2
+            ],
+            "440346": [
+              20,
+              2
+            ],
+            "453144": [
+              12,
+              1
+            ],
+            "479592": [
+              24,
+              2
+            ],
+            "511": [
+              49,
+              4
+            ],
+            "516488": [
+              25,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            351784,
+            479592,
+            332150,
+            511
+          ],
+          "total_owner_clock_work": 49
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "269654": [
+              36,
+              3
+            ],
+            "273011": [
+              36,
+              3
+            ],
+            "273859": [
+              57,
+              5
+            ],
+            "275377": [
+              69,
+              6
+            ],
+            "282452": [
+              36,
+              3
+            ],
+            "287980": [
+              57,
+              5
+            ],
+            "288045": [
+              48,
+              4
+            ],
+            "293824": [
+              69,
+              6
+            ],
+            "298204": [
+              45,
+              4
+            ],
+            "298269": [
+              36,
+              3
+            ],
+            "305382": [
+              45,
+              4
+            ],
+            "305447": [
+              36,
+              3
+            ],
+            "309641": [
+              69,
+              6
+            ],
+            "329177": [
+              57,
+              5
+            ],
+            "332150": [
+              36,
+              3
+            ],
+            "336355": [
+              57,
+              5
+            ],
+            "344948": [
+              36,
+              3
+            ],
+            "351784": [
+              12,
+              1
+            ],
+            "360700": [
+              45,
+              4
+            ],
+            "360765": [
+              36,
+              3
+            ],
+            "369046": [
+              57,
+              5
+            ],
+            "379212": [
+              36,
+              3
+            ],
+            "398584": [
+              45,
+              4
+            ],
+            "398649": [
+              36,
+              3
+            ],
+            "399765": [
+              69,
+              6
+            ],
+            "406930": [
+              57,
+              5
+            ],
+            "417096": [
+              24,
+              2
+            ],
+            "419728": [
+              65,
+              6
+            ],
+            "427603": [
+              36,
+              3
+            ],
+            "428784": [
+              33,
+              3
+            ],
+            "428849": [
+              24,
+              2
+            ],
+            "440346": [
+              20,
+              2
+            ],
+            "453144": [
+              12,
+              1
+            ],
+            "479592": [
+              24,
+              2
+            ],
+            "511": [
+              57,
+              5
+            ],
+            "516488": [
+              69,
+              6
+            ]
+          },
+          "events": 5,
+          "path": [
+            261632,
+            453144,
+            428849,
+            428784,
+            360700,
+            511
+          ],
+          "total_owner_clock_work": 57
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        261632,
+        351784,
+        479592,
+        332150,
+        511
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 159080,
+          "selected_bit": 0,
+          "source": 1480,
+          "step": 3
+        },
+        {
+          "resource": 58300,
+          "selected_bit": 1,
+          "source": 1480,
+          "step": 4
+        },
+        {
+          "resource": 288701,
+          "selected_bit": 1,
+          "source": 3369,
+          "step": 2
+        },
+        {
+          "resource": 811837,
+          "selected_bit": 0,
+          "source": 3369,
+          "step": 3
+        },
+        {
+          "resource": 403221,
+          "selected_bit": 0,
+          "source": 2071,
+          "step": 4
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1394,
+        1425,
+        1457,
+        1480,
+        2176,
+        2185,
+        2581,
+        2835,
+        2945,
+        1477,
+        1549,
+        1691,
+        1921,
+        1974,
+        2837,
+        2905,
+        3000,
+        3369,
+        2071
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            1974,
+            2905,
+            3369
+          ],
+          "new_mask": 351784,
+          "old_mask": 261632,
+          "plus": [
+            1480,
+            2071,
+            2185
+          ],
+          "signed_edge_change": [
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              2
+            ],
+            [
+              1965,
+              2071,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              -2
+            ],
+            [
+              1965,
+              2905,
+              2
+            ],
+            [
+              1965,
+              3369,
+              2
+            ],
+            [
+              1974,
+              2234,
+              -2
+            ],
+            [
+              2071,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2905,
+              -2
+            ],
+            [
+              2234,
+              3369,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            []
+          ],
+          "minus": [
+            1477,
+            1549,
+            1691
+          ],
+          "new_mask": 479592,
+          "old_mask": 351784,
+          "plus": [
+            2581,
+            2945,
+            3369
+          ],
+          "signed_edge_change": [
+            [
+              1477,
+              1965,
+              2
+            ],
+            [
+              1477,
+              2234,
+              -2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1691,
+              1965,
+              2
+            ],
+            [
+              1691,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              -2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              1965,
+              3369,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ],
+            [
+              2234,
+              3369,
+              2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1480,
+            2837,
+            3369
+          ],
+          "new_mask": 332150,
+          "old_mask": 479592,
+          "plus": [
+            1425,
+            1457,
+            2176
+          ],
+          "signed_edge_change": [
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              2
+            ],
+            [
+              1480,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2176,
+              -2
+            ],
+            [
+              1965,
+              2837,
+              2
+            ],
+            [
+              1965,
+              3369,
+              2
+            ],
+            [
+              2176,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2837,
+              -2
+            ],
+            [
+              2234,
+              3369,
+              -2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            1921,
+            2071,
+            3000
+          ],
+          "new_mask": 511,
+          "old_mask": 332150,
+          "plus": [
+            1394,
+            1480,
+            2835
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1921,
+              1965,
+              2
+            ],
+            [
+              1921,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2835,
+              -2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2835,
+              2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 4
+        }
+      ],
+      "total_owner_clock_changes": 49
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          65280
+        ],
+        "2": [
+          65280
+        ],
+        "4": [
+          65280
+        ],
+        "6": [
+          65280
+        ]
+      },
+      "buffers": [
+        1394
+      ],
+      "closed_ports_per_state": 68,
+      "closed_ports_union": 136,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66471,
+        73058,
+        80536,
+        84689,
+        85127,
+        86071,
+        94920,
+        102791,
+        103082,
+        116276
+      ],
+      "max_owner_clock_changes": 16,
+      "minimum_maximum_changed_slots": 8,
+      "name": "buffer_1394_min_work",
+      "normalized_resources_per_state": 17,
+      "normalized_resources_union": 34,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          65280,
+          73058,
+          66471,
+          255
+        ],
+        "minimum_clock_bottleneck": 16,
+        "minimum_clock_bottleneck_event_witness": [
+          65280,
+          73058,
+          66471,
+          255
+        ],
+        "minimum_events": 3,
+        "minimum_events_at_minimum_clock_bottleneck": 3,
+        "minimum_work": {
+          "distance_labels": {
+            "102791": [
+              32,
+              2
+            ],
+            "103082": [
+              28,
+              2
+            ],
+            "116276": [
+              16,
+              1
+            ],
+            "255": [
+              40,
+              3
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              32,
+              2
+            ],
+            "73058": [
+              16,
+              1
+            ],
+            "80536": [
+              16,
+              1
+            ],
+            "84689": [
+              28,
+              2
+            ],
+            "85127": [
+              32,
+              2
+            ],
+            "86071": [
+              28,
+              2
+            ],
+            "94920": [
+              16,
+              1
+            ]
+          },
+          "events": 3,
+          "path": [
+            65280,
+            116276,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 40
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "102791": [
+              32,
+              2
+            ],
+            "103082": [
+              28,
+              2
+            ],
+            "116276": [
+              16,
+              1
+            ],
+            "255": [
+              40,
+              3
+            ],
+            "65280": [
+              0,
+              0
+            ],
+            "66471": [
+              32,
+              2
+            ],
+            "73058": [
+              16,
+              1
+            ],
+            "80536": [
+              16,
+              1
+            ],
+            "84689": [
+              28,
+              2
+            ],
+            "85127": [
+              32,
+              2
+            ],
+            "86071": [
+              28,
+              2
+            ],
+            "94920": [
+              16,
+              1
+            ]
+          },
+          "events": 3,
+          "path": [
+            65280,
+            116276,
+            86071,
+            255
+          ],
+          "total_owner_clock_work": 40
+        },
+        "slot_budget": 8
+      },
+      "path": [
+        65280,
+        116276,
+        86071,
+        255
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 593790,
+          "selected_bit": 1,
+          "source": 2185,
+          "step": 2
+        },
+        {
+          "resource": 456065,
+          "selected_bit": 0,
+          "source": 2185,
+          "step": 3
+        },
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 3
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837,
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000,
+        1394
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 16,
+          "changed_slots": 8,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            176,
+            2176,
+            2185,
+            2581
+          ],
+          "new_mask": 116276,
+          "old_mask": 65280,
+          "plus": [
+            1394,
+            1477,
+            1638,
+            1691
+          ],
+          "signed_edge_change": [
+            [
+              176,
+              1965,
+              2
+            ],
+            [
+              176,
+              2234,
+              -2
+            ],
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1477,
+              1965,
+              -2
+            ],
+            [
+              1477,
+              2234,
+              2
+            ],
+            [
+              1638,
+              1965,
+              -2
+            ],
+            [
+              1638,
+              2234,
+              2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              2185,
+              2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2185,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            []
+          ],
+          "minus": [
+            1549,
+            2071,
+            3000
+          ],
+          "new_mask": 86071,
+          "old_mask": 116276,
+          "plus": [
+            1425,
+            1457,
+            2185
+          ],
+          "signed_edge_change": [
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2185,
+              -2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2185,
+              2234,
+              2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1394,
+            2185,
+            2945
+          ],
+          "new_mask": 255,
+          "old_mask": 86071,
+          "plus": [
+            1480,
+            1974,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ]
+          ],
+          "step": 3
+        }
+      ],
+      "total_owner_clock_changes": 40
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          261632
+        ],
+        "2": [
+          261632
+        ],
+        "4": [
+          261632,
+          474752,
+          520720
+        ]
+      },
+      "buffers": [
+        1394
+      ],
+      "closed_ports_per_state": 76,
+      "closed_ports_union": 152,
+      "initial": 0,
+      "legal_states": [
+        511,
+        261632,
+        272671,
+        274217,
+        276235,
+        279403,
+        291981,
+        302380,
+        355009,
+        367426,
+        383172,
+        395582,
+        399146,
+        414892,
+        437825,
+        474752,
+        477920,
+        479938,
+        520720
+      ],
+      "max_owner_clock_changes": 17,
+      "minimum_maximum_changed_slots": 6,
+      "name": "eighteen_buffer_1394_min_work",
+      "normalized_resources_per_state": 19,
+      "normalized_resources_union": 38,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          261632,
+          437825,
+          274217,
+          272671,
+          511
+        ],
+        "minimum_clock_bottleneck": 17,
+        "minimum_clock_bottleneck_event_witness": [
+          261632,
+          437825,
+          274217,
+          272671,
+          511
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 4,
+        "minimum_work": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "272671": [
+              44,
+              3
+            ],
+            "274217": [
+              30,
+              2
+            ],
+            "276235": [
+              41,
+              3
+            ],
+            "279403": [
+              43,
+              3
+            ],
+            "291981": [
+              53,
+              4
+            ],
+            "302380": [
+              43,
+              3
+            ],
+            "355009": [
+              22,
+              2
+            ],
+            "367426": [
+              37,
+              3
+            ],
+            "383172": [
+              35,
+              3
+            ],
+            "395582": [
+              55,
+              4
+            ],
+            "399146": [
+              44,
+              3
+            ],
+            "414892": [
+              56,
+              4
+            ],
+            "437825": [
+              13,
+              1
+            ],
+            "474752": [
+              9,
+              1
+            ],
+            "477920": [
+              23,
+              2
+            ],
+            "479938": [
+              22,
+              2
+            ],
+            "511": [
+              55,
+              4
+            ],
+            "520720": [
+              9,
+              1
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            437825,
+            274217,
+            279403,
+            511
+          ],
+          "total_owner_clock_work": 55
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "272671": [
+              44,
+              3
+            ],
+            "274217": [
+              30,
+              2
+            ],
+            "276235": [
+              41,
+              3
+            ],
+            "279403": [
+              43,
+              3
+            ],
+            "291981": [
+              53,
+              4
+            ],
+            "302380": [
+              43,
+              3
+            ],
+            "355009": [
+              22,
+              2
+            ],
+            "367426": [
+              37,
+              3
+            ],
+            "383172": [
+              35,
+              3
+            ],
+            "395582": [
+              55,
+              4
+            ],
+            "399146": [
+              44,
+              3
+            ],
+            "414892": [
+              56,
+              4
+            ],
+            "437825": [
+              13,
+              1
+            ],
+            "474752": [
+              9,
+              1
+            ],
+            "477920": [
+              23,
+              2
+            ],
+            "479938": [
+              22,
+              2
+            ],
+            "511": [
+              55,
+              4
+            ],
+            "520720": [
+              9,
+              1
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            437825,
+            274217,
+            279403,
+            511
+          ],
+          "total_owner_clock_work": 55
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        261632,
+        437825,
+        274217,
+        279403,
+        511
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 21593,
+          "selected_bit": 0,
+          "source": 2837,
+          "step": 2
+        },
+        {
+          "resource": 284377,
+          "selected_bit": 1,
+          "source": 2837,
+          "step": 3
+        },
+        {
+          "resource": 459062,
+          "selected_bit": 1,
+          "source": 2581,
+          "step": 3
+        },
+        {
+          "resource": 197558,
+          "selected_bit": 0,
+          "source": 2581,
+          "step": 4
+        },
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 4
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360,
+        1394
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            1921,
+            2581,
+            3015
+          ],
+          "new_mask": 437825,
+          "old_mask": 261632,
+          "plus": [
+            1394,
+            1549,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              -2
+            ],
+            [
+              1549,
+              2234,
+              2
+            ],
+            [
+              1921,
+              1965,
+              2
+            ],
+            [
+              1921,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              1965,
+              3015,
+              2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ],
+            [
+              2234,
+              3015,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 17,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -512
+              ],
+              [
+                2234,
+                512
+              ]
+            ]
+          ],
+          "minus": [
+            2835,
+            2837,
+            3360
+          ],
+          "new_mask": 274217,
+          "old_mask": 437825,
+          "plus": [
+            2087,
+            2553,
+            3000
+          ],
+          "signed_edge_change": [
+            [
+              1965,
+              2087,
+              -2
+            ],
+            [
+              1965,
+              2553,
+              -2
+            ],
+            [
+              1965,
+              2835,
+              2
+            ],
+            [
+              1965,
+              2837,
+              2
+            ],
+            [
+              1965,
+              3000,
+              -2
+            ],
+            [
+              1965,
+              3360,
+              2
+            ],
+            [
+              2087,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2553,
+              2
+            ],
+            [
+              2234,
+              2835,
+              -2
+            ],
+            [
+              2234,
+              2837,
+              -2
+            ],
+            [
+              2234,
+              3000,
+              2
+            ],
+            [
+              2234,
+              3360,
+              -2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 13,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            1477,
+            1841,
+            2176
+          ],
+          "new_mask": 279403,
+          "old_mask": 274217,
+          "plus": [
+            1691,
+            2581,
+            2837
+          ],
+          "signed_edge_change": [
+            [
+              1477,
+              1965,
+              2
+            ],
+            [
+              1477,
+              2234,
+              -2
+            ],
+            [
+              1691,
+              1965,
+              -2
+            ],
+            [
+              1691,
+              2234,
+              2
+            ],
+            [
+              1841,
+              1965,
+              2
+            ],
+            [
+              1841,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2176,
+              2
+            ],
+            [
+              1965,
+              2581,
+              -2
+            ],
+            [
+              1965,
+              2837,
+              -2
+            ],
+            [
+              2176,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2581,
+              2
+            ],
+            [
+              2234,
+              2837,
+              2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            []
+          ],
+          "minus": [
+            1394,
+            1457,
+            2581
+          ],
+          "new_mask": 511,
+          "old_mask": 279403,
+          "plus": [
+            1974,
+            2185,
+            2945
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1457,
+              1965,
+              2
+            ],
+            [
+              1457,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              1974,
+              -2
+            ],
+            [
+              1965,
+              2185,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              2
+            ],
+            [
+              2185,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2581,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ]
+          ],
+          "step": 4
+        }
+      ],
+      "total_owner_clock_changes": 55
+    },
+    {
+      "below_threshold_components": {
+        "0": [
+          261632
+        ],
+        "2": [
+          261632
+        ],
+        "4": [
+          261632
+        ]
+      },
+      "buffers": [
+        2071
+      ],
+      "closed_ports_per_state": 76,
+      "closed_ports_union": 152,
+      "initial": 0,
+      "legal_states": [
+        511,
+        261632,
+        269654,
+        273011,
+        273859,
+        275377,
+        282452,
+        287980,
+        288045,
+        293824,
+        298204,
+        298269,
+        305382,
+        305447,
+        309641,
+        324166,
+        329177,
+        332150,
+        336355,
+        344948,
+        351784,
+        360700,
+        360765,
+        369046,
+        379212,
+        398584,
+        398649,
+        399765,
+        406930,
+        417096,
+        419728,
+        427603,
+        428784,
+        428849,
+        440346,
+        453144,
+        479592,
+        516488
+      ],
+      "max_owner_clock_changes": 12,
+      "minimum_maximum_changed_slots": 6,
+      "name": "eighteen37_buffer_2071_min_clock",
+      "normalized_resources_per_state": 19,
+      "normalized_resources_union": 38,
+      "optimal_accounting": {
+        "event_minimum_witness": [
+          261632,
+          351784,
+          479592,
+          332150,
+          511
+        ],
+        "minimum_clock_bottleneck": 12,
+        "minimum_clock_bottleneck_event_witness": [
+          261632,
+          453144,
+          428849,
+          360765,
+          360700,
+          511
+        ],
+        "minimum_events": 4,
+        "minimum_events_at_minimum_clock_bottleneck": 5,
+        "minimum_work": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "269654": [
+              36,
+              3
+            ],
+            "273011": [
+              36,
+              3
+            ],
+            "273859": [
+              45,
+              4
+            ],
+            "275377": [
+              37,
+              3
+            ],
+            "282452": [
+              36,
+              3
+            ],
+            "287980": [
+              49,
+              4
+            ],
+            "288045": [
+              48,
+              4
+            ],
+            "293824": [
+              37,
+              3
+            ],
+            "298204": [
+              37,
+              3
+            ],
+            "298269": [
+              36,
+              3
+            ],
+            "305382": [
+              37,
+              3
+            ],
+            "305447": [
+              36,
+              3
+            ],
+            "309641": [
+              33,
+              3
+            ],
+            "324166": [
+              50,
+              4
+            ],
+            "329177": [
+              49,
+              4
+            ],
+            "332150": [
+              36,
+              3
+            ],
+            "336355": [
+              49,
+              4
+            ],
+            "344948": [
+              36,
+              3
+            ],
+            "351784": [
+              12,
+              1
+            ],
+            "360700": [
+              37,
+              3
+            ],
+            "360765": [
+              36,
+              3
+            ],
+            "369046": [
+              37,
+              3
+            ],
+            "379212": [
+              36,
+              3
+            ],
+            "398584": [
+              37,
+              3
+            ],
+            "398649": [
+              36,
+              3
+            ],
+            "399765": [
+              37,
+              3
+            ],
+            "406930": [
+              33,
+              3
+            ],
+            "417096": [
+              24,
+              2
+            ],
+            "419728": [
+              25,
+              2
+            ],
+            "427603": [
+              36,
+              3
+            ],
+            "428784": [
+              25,
+              2
+            ],
+            "428849": [
+              24,
+              2
+            ],
+            "440346": [
+              20,
+              2
+            ],
+            "453144": [
+              12,
+              1
+            ],
+            "479592": [
+              24,
+              2
+            ],
+            "511": [
+              49,
+              4
+            ],
+            "516488": [
+              25,
+              2
+            ]
+          },
+          "events": 4,
+          "path": [
+            261632,
+            351784,
+            479592,
+            332150,
+            511
+          ],
+          "total_owner_clock_work": 49
+        },
+        "minimum_work_also_minimizes_events": true,
+        "minimum_work_at_minimum_clock_bottleneck": {
+          "distance_labels": {
+            "261632": [
+              0,
+              0
+            ],
+            "269654": [
+              36,
+              3
+            ],
+            "273011": [
+              36,
+              3
+            ],
+            "273859": [
+              57,
+              5
+            ],
+            "275377": [
+              69,
+              6
+            ],
+            "282452": [
+              36,
+              3
+            ],
+            "287980": [
+              57,
+              5
+            ],
+            "288045": [
+              48,
+              4
+            ],
+            "293824": [
+              69,
+              6
+            ],
+            "298204": [
+              45,
+              4
+            ],
+            "298269": [
+              36,
+              3
+            ],
+            "305382": [
+              45,
+              4
+            ],
+            "305447": [
+              36,
+              3
+            ],
+            "309641": [
+              69,
+              6
+            ],
+            "329177": [
+              57,
+              5
+            ],
+            "332150": [
+              36,
+              3
+            ],
+            "336355": [
+              57,
+              5
+            ],
+            "344948": [
+              36,
+              3
+            ],
+            "351784": [
+              12,
+              1
+            ],
+            "360700": [
+              45,
+              4
+            ],
+            "360765": [
+              36,
+              3
+            ],
+            "369046": [
+              57,
+              5
+            ],
+            "379212": [
+              36,
+              3
+            ],
+            "398584": [
+              45,
+              4
+            ],
+            "398649": [
+              36,
+              3
+            ],
+            "399765": [
+              69,
+              6
+            ],
+            "406930": [
+              57,
+              5
+            ],
+            "417096": [
+              24,
+              2
+            ],
+            "419728": [
+              65,
+              6
+            ],
+            "427603": [
+              36,
+              3
+            ],
+            "428784": [
+              33,
+              3
+            ],
+            "428849": [
+              24,
+              2
+            ],
+            "440346": [
+              20,
+              2
+            ],
+            "453144": [
+              12,
+              1
+            ],
+            "479592": [
+              24,
+              2
+            ],
+            "511": [
+              57,
+              5
+            ],
+            "516488": [
+              69,
+              6
+            ]
+          },
+          "events": 5,
+          "path": [
+            261632,
+            453144,
+            428849,
+            428784,
+            360700,
+            511
+          ],
+          "total_owner_clock_work": 57
+        },
+        "slot_budget": 6
+      },
+      "path": [
+        261632,
+        453144,
+        428849,
+        360765,
+        360700,
+        511
+      ],
+      "released_resource_reentries": [
+        {
+          "resource": 623470,
+          "selected_bit": 0,
+          "source": 1394,
+          "step": 4
+        },
+        {
+          "resource": 590382,
+          "selected_bit": 1,
+          "source": 1394,
+          "step": 5
+        },
+        {
+          "resource": 159080,
+          "selected_bit": 0,
+          "source": 1480,
+          "step": 2
+        },
+        {
+          "resource": 58300,
+          "selected_bit": 1,
+          "source": 1480,
+          "step": 3
+        },
+        {
+          "resource": 599914,
+          "selected_bit": 0,
+          "source": 2945,
+          "step": 4
+        },
+        {
+          "resource": 449941,
+          "selected_bit": 1,
+          "source": 2945,
+          "step": 5
+        },
+        {
+          "resource": 290945,
+          "selected_bit": 1,
+          "source": 3000,
+          "step": 3
+        },
+        {
+          "resource": 324033,
+          "selected_bit": 0,
+          "source": 3000,
+          "step": 5
+        },
+        {
+          "resource": 403221,
+          "selected_bit": 0,
+          "source": 2071,
+          "step": 5
+        }
+      ],
+      "satisfies_strict_temporal_nonreturn": false,
+      "sources": [
+        1394,
+        1425,
+        1457,
+        1480,
+        2176,
+        2185,
+        2581,
+        2835,
+        2945,
+        1477,
+        1549,
+        1691,
+        1921,
+        1974,
+        2837,
+        2905,
+        3000,
+        3369,
+        2071
+      ],
+      "steps": [
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ]
+          ],
+          "minus": [
+            1549,
+            1921,
+            3000
+          ],
+          "new_mask": 453144,
+          "old_mask": 261632,
+          "plus": [
+            1480,
+            2071,
+            2176
+          ],
+          "signed_edge_change": [
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1549,
+              1965,
+              2
+            ],
+            [
+              1549,
+              2234,
+              -2
+            ],
+            [
+              1921,
+              1965,
+              2
+            ],
+            [
+              1921,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2071,
+              -2
+            ],
+            [
+              1965,
+              2176,
+              -2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              2071,
+              2234,
+              2
+            ],
+            [
+              2176,
+              2234,
+              2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 1
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            []
+          ],
+          "minus": [
+            1480,
+            1974,
+            2837
+          ],
+          "new_mask": 428849,
+          "old_mask": 453144,
+          "plus": [
+            1394,
+            2185,
+            2945
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1480,
+              1965,
+              2
+            ],
+            [
+              1480,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              1974,
+              2
+            ],
+            [
+              1965,
+              2185,
+              -2
+            ],
+            [
+              1965,
+              2837,
+              2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              1974,
+              2234,
+              -2
+            ],
+            [
+              2185,
+              2234,
+              2
+            ],
+            [
+              2234,
+              2837,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ]
+          ],
+          "step": 2
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [],
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            []
+          ],
+          "minus": [
+            1477,
+            1691,
+            3369
+          ],
+          "new_mask": 360765,
+          "old_mask": 428849,
+          "plus": [
+            1457,
+            1480,
+            3000
+          ],
+          "signed_edge_change": [
+            [
+              1457,
+              1965,
+              -2
+            ],
+            [
+              1457,
+              2234,
+              2
+            ],
+            [
+              1477,
+              1965,
+              2
+            ],
+            [
+              1477,
+              2234,
+              -2
+            ],
+            [
+              1480,
+              1965,
+              -2
+            ],
+            [
+              1480,
+              2234,
+              2
+            ],
+            [
+              1691,
+              1965,
+              2
+            ],
+            [
+              1691,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              3000,
+              -2
+            ],
+            [
+              1965,
+              3369,
+              2
+            ],
+            [
+              2234,
+              3000,
+              2
+            ],
+            [
+              2234,
+              3369,
+              -2
+            ]
+          ],
+          "step": 3
+        },
+        {
+          "changed_owner_clocks": 9,
+          "changed_slots": 4,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ]
+          ],
+          "minus": [
+            1394,
+            2945
+          ],
+          "new_mask": 360700,
+          "old_mask": 360765,
+          "plus": [
+            2581,
+            2835
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              2
+            ],
+            [
+              1394,
+              2234,
+              -2
+            ],
+            [
+              1965,
+              2581,
+              -2
+            ],
+            [
+              1965,
+              2835,
+              -2
+            ],
+            [
+              1965,
+              2945,
+              2
+            ],
+            [
+              2234,
+              2581,
+              2
+            ],
+            [
+              2234,
+              2835,
+              2
+            ],
+            [
+              2234,
+              2945,
+              -2
+            ]
+          ],
+          "step": 4
+        },
+        {
+          "changed_owner_clocks": 12,
+          "changed_slots": 6,
+          "integer_generator_currents": [
+            [],
+            [
+              [
+                1965,
+                -256
+              ],
+              [
+                2234,
+                256
+              ]
+            ],
+            [],
+            [
+              [
+                1965,
+                256
+              ],
+              [
+                2234,
+                -256
+              ]
+            ],
+            []
+          ],
+          "minus": [
+            2071,
+            2905,
+            3000
+          ],
+          "new_mask": 511,
+          "old_mask": 360700,
+          "plus": [
+            1394,
+            1425,
+            2945
+          ],
+          "signed_edge_change": [
+            [
+              1394,
+              1965,
+              -2
+            ],
+            [
+              1394,
+              2234,
+              2
+            ],
+            [
+              1425,
+              1965,
+              -2
+            ],
+            [
+              1425,
+              2234,
+              2
+            ],
+            [
+              1965,
+              2071,
+              2
+            ],
+            [
+              1965,
+              2905,
+              2
+            ],
+            [
+              1965,
+              2945,
+              -2
+            ],
+            [
+              1965,
+              3000,
+              2
+            ],
+            [
+              2071,
+              2234,
+              -2
+            ],
+            [
+              2234,
+              2905,
+              -2
+            ],
+            [
+              2234,
+              2945,
+              2
+            ],
+            [
+              2234,
+              3000,
+              -2
+            ]
+          ],
+          "step": 5
+        }
+      ],
+      "total_owner_clock_changes": 57
+    }
+  ],
+  "scope": "Native partial observer packets with available distinct resources and compatible unchanged remainder. Every physical row and genuine dyadic bank is preserved, plus selected ordinary X mod8. No complete-atlas rewire, common-host amalgam, universal ordinary-port phase preservation, or all-size supply theorem.",
+  "status": "PASS"
+}

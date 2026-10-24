@@ -1,0 +1,110 @@
+{
+  "excluded": [
+    "*.stdout",
+    "proper_balanced_separators.optimized.json"
+  ],
+  "files": [
+    {
+      "bytes": 10767,
+      "path": "AUDIT.md",
+      "sha256": "a7bd966a4157d330c2d4f5566799f3584f5c2575720b92d198a65aa07ae912fc"
+    },
+    {
+      "bytes": 15458,
+      "path": "audit.py",
+      "sha256": "16d38b6ae2fa2f7ba1f72974651c7e7908965f35c70f3fcec7dcb62cf7c90054"
+    },
+    {
+      "bytes": 5978,
+      "path": "audit_cost_boundary.py",
+      "sha256": "05a8a13854f25b19a4f7694adb0d0d00b8a434f5afde41a823c5bb9252c928f8"
+    },
+    {
+      "bytes": 3664,
+      "path": "audit_cost_buckets.py",
+      "sha256": "3947da93cd179d5a27bd00027aafa196088fabafba87de1ccdae2d841f08e1e0"
+    },
+    {
+      "bytes": 5856,
+      "path": "audit_cycles.py",
+      "sha256": "b55c54d520a78e72b063a3cfa095717bdf7b9c9cf3755912606d3c45b1ec886c"
+    },
+    {
+      "bytes": 3150,
+      "path": "verify_manifest.py",
+      "sha256": "4ea98a021cdadf81ba696a75040885ef5d7be6f4279ec4ef855580808a41dcc1"
+    },
+    {
+      "bytes": 86187,
+      "path": "normal.json",
+      "sha256": "a9519445e5decca8a270746e4f65839da3de2f17e501315ace7f496eebf04c3a"
+    },
+    {
+      "bytes": 86187,
+      "path": "optimized.json",
+      "sha256": "a9519445e5decca8a270746e4f65839da3de2f17e501315ace7f496eebf04c3a"
+    },
+    {
+      "bytes": 952239,
+      "path": "proper_balanced_separators.json",
+      "sha256": "e1c94dbba4a68db6a0ef822534a6633d4eefa70349356f26c97971a836eb685f"
+    },
+    {
+      "bytes": 396673,
+      "path": "producer.normal.json",
+      "sha256": "90dd07e6103a933fc1afabddcb2ac4e82e91f298cb0d6919838c8836554679b5"
+    },
+    {
+      "bytes": 396673,
+      "path": "producer.optimized.json",
+      "sha256": "90dd07e6103a933fc1afabddcb2ac4e82e91f298cb0d6919838c8836554679b5"
+    },
+    {
+      "bytes": 6674,
+      "path": "dyadic-replay.normal.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "bytes": 6674,
+      "path": "dyadic-replay.optimized.json",
+      "sha256": "a0a875e8a1b0ba7e38f125b92025e58f0f6c493559bdfd57669b4307b94668e0"
+    },
+    {
+      "bytes": 2200,
+      "path": "cost-boundary.normal.json",
+      "sha256": "3812921c89f6b37ea19745e3d4bb95e18a43405b249e02f83b35b362ed44086b"
+    },
+    {
+      "bytes": 2200,
+      "path": "cost-boundary.optimized.json",
+      "sha256": "3812921c89f6b37ea19745e3d4bb95e18a43405b249e02f83b35b362ed44086b"
+    },
+    {
+      "bytes": 1169,
+      "path": "cost-buckets.normal.json",
+      "sha256": "35daa7c678c8d7e1061f8988a9c7b5a4753a68d3fc661578124e264b05209205"
+    },
+    {
+      "bytes": 1169,
+      "path": "cost-buckets.optimized.json",
+      "sha256": "35daa7c678c8d7e1061f8988a9c7b5a4753a68d3fc661578124e264b05209205"
+    },
+    {
+      "bytes": 22331,
+      "path": "cycles.normal.json",
+      "sha256": "01bb95b9b7793da31ebdf0748d9e5b9dfa8eb3fe17f50cdd26b817199ab0e75f"
+    },
+    {
+      "bytes": 22331,
+      "path": "cycles.optimized.json",
+      "sha256": "01bb95b9b7793da31ebdf0748d9e5b9dfa8eb3fe17f50cdd26b817199ab0e75f"
+    },
+    {
+      "bytes": 9156,
+      "path": "MANIFEST.json",
+      "sha256": "d9781c05685ac50f2bc686e9b603811f149407673bcea5e02f47cdf8a6bb382b"
+    }
+  ],
+  "instruction": "Copy exactly the listed files plus this PUBLISH_MANIFEST.json. No external referenced file is an audit deliverable.",
+  "status": "PASS"
+}

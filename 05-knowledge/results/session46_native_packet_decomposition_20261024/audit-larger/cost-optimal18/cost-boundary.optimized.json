@@ -1,0 +1,68 @@
+{
+  "checks": 76391,
+  "input_sha256": {
+    "cost37.json": "b14752a10a0b8814ba702bacfe97a569c7c0c4dc1ac4b2dc729cb7c937406f75",
+    "original_electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "pool.json": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf"
+  },
+  "proper_subrelation_witness_stream_sha256": "5522d36d2d6fa5a4fae2e39578055af9b81285eda12c90ee7aae8f38cb87e83f",
+  "results": [
+    {
+      "balanced_partitions_examined": 72930,
+      "canonical_primitive_partitions": [],
+      "complete_relation_set_sha256": "0e57a1deb12160f1ed4ca897020fce53b8ad47d5b21a3155b688fb05e9b53801",
+      "cost": 36,
+      "equal_charge_relations": 1129,
+      "minimal_proper_subrelation_side_size_counts": {
+        "2": 288,
+        "3": 832,
+        "4": 9
+      },
+      "parity_admissible_support_sets": 3,
+      "primitive_relations": 0,
+      "support_sets": 190
+    },
+    {
+      "balanced_partitions_examined": 4448730,
+      "canonical_primitive_partitions": [
+        [
+          [
+            1394,
+            1425,
+            1457,
+            1480,
+            2176,
+            2185,
+            2581,
+            2835,
+            2945
+          ],
+          [
+            1477,
+            1549,
+            1691,
+            1921,
+            1974,
+            2837,
+            2905,
+            3000,
+            3369
+          ]
+        ]
+      ],
+      "complete_relation_set_sha256": "e5b393f7b5ca6c0a2af21d88f0089cb055a5347b8b276a01474b73e3f400fd5e",
+      "cost": 37,
+      "equal_charge_relations": 69358,
+      "minimal_proper_subrelation_side_size_counts": {
+        "2": 22680,
+        "3": 45657,
+        "4": 1020
+      },
+      "parity_admissible_support_sets": 183,
+      "primitive_relations": 1,
+      "support_sets": 5700
+    }
+  ],
+  "scope": "Exact minimum ordinary owner-clock cost37 for an18-source primitive equal-charge binary switch in this fixed28 one-slot-per-source supply, once its independent native and full-image endpoint certificate is supplied. Cost<36 impossible since each nonidentity option changes at least2 clocks. No other menus, conventions, supports or all-order claim.",
+  "status": "PASS"
+}

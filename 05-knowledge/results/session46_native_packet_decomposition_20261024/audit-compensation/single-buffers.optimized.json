@@ -1,0 +1,869 @@
+{
+  "cases": [
+    {
+      "buffer": 1394,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        65280,
+        73058,
+        66471,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66471,
+        73058,
+        80536,
+        84689,
+        85127,
+        86071,
+        94920,
+        102791,
+        103082,
+        116276
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        73058,
+        66471,
+        255
+      ]
+    },
+    {
+      "buffer": 1394,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        130816,
+        27989,
+        14795,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        14795,
+        27989,
+        28280,
+        36151,
+        45000,
+        45944,
+        46382,
+        50535,
+        58013,
+        64600,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        14795,
+        27989,
+        28280,
+        36151,
+        45000,
+        45944,
+        46382,
+        50535,
+        64600,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        27989,
+        14795,
+        65791
+      ]
+    },
+    {
+      "buffer": 1532,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        65280,
+        72610,
+        86426,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 18,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        72610,
+        80403,
+        86426,
+        92460,
+        94787,
+        100833
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        72610,
+        86426,
+        255
+      ]
+    },
+    {
+      "buffer": 1532,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        130816,
+        30238,
+        38611,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 18,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        30238,
+        36284,
+        38611,
+        44645,
+        50668,
+        58461,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        30238,
+        38611,
+        65791
+      ]
+    },
+    {
+      "buffer": 1841,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        65280,
+        71505,
+        68966,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 17,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        68966,
+        71505,
+        76444,
+        78037,
+        90828,
+        98990
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        71505,
+        68966,
+        255
+      ]
+    },
+    {
+      "buffer": 1841,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        130816,
+        53034,
+        59566,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 17,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        32081,
+        40243,
+        53034,
+        54627,
+        59566,
+        62105,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        32081,
+        40243,
+        53034,
+        54627,
+        59566,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        53034,
+        59566,
+        65791
+      ]
+    },
+    {
+      "buffer": 1921,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        65280,
+        103962,
+        67351,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        67351,
+        100694,
+        103962
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        103962,
+        67351,
+        255
+      ]
+    },
+    {
+      "buffer": 1921,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        130816,
+        30377,
+        27109,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        27109,
+        30377,
+        63720,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        30377,
+        27109,
+        65791
+      ]
+    },
+    {
+      "buffer": 1923,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        65280,
+        121866,
+        72755,
+        66971,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 14,
+      "exact_slot_bottleneck": 6,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66971,
+        72755,
+        80664,
+        84817,
+        85255,
+        85546,
+        87139,
+        95048,
+        103210,
+        121866
+      ],
+      "six_move_start_component": [
+        255,
+        65280,
+        66971,
+        72755,
+        80664,
+        84817,
+        85255,
+        85546,
+        87139,
+        95048,
+        103210,
+        121866
+      ],
+      "slot_optimal_path": [
+        65280,
+        121866,
+        72755,
+        66971,
+        255
+      ]
+    },
+    {
+      "buffer": 1923,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        130816,
+        64100,
+        45816,
+        9205,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 14,
+      "exact_slot_bottleneck": 6,
+      "initial": 1,
+      "legal_states": [
+        9205,
+        27861,
+        36023,
+        43932,
+        45525,
+        45816,
+        46254,
+        50407,
+        58316,
+        64100,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        9205,
+        27861,
+        36023,
+        43932,
+        45525,
+        45816,
+        46254,
+        50407,
+        58316,
+        64100,
+        65791,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        64100,
+        45816,
+        9205,
+        65791
+      ]
+    },
+    {
+      "buffer": 2087,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        65280,
+        119457,
+        106858,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 20,
+      "exact_slot_bottleneck": 10,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        106858,
+        119457
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        106858,
+        255
+      ]
+    },
+    {
+      "buffer": 2087,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        130816,
+        24213,
+        11614,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 20,
+      "exact_slot_bottleneck": 10,
+      "initial": 1,
+      "legal_states": [
+        11614,
+        24213,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        11614,
+        65791
+      ]
+    },
+    {
+      "buffer": 2553,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        65280,
+        124939,
+        106962,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 18,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        68972,
+        106962,
+        124939,
+        128514
+      ],
+      "six_move_start_component": [
+        65280,
+        124939,
+        128514
+      ],
+      "slot_optimal_path": [
+        65280,
+        124939,
+        106962,
+        255
+      ]
+    },
+    {
+      "buffer": 2553,
+      "buffer_clock_cost": 4,
+      "clock_optimal_path": [
+        130816,
+        24109,
+        2557,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 18,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        2557,
+        6132,
+        24109,
+        62099,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        24109,
+        2557,
+        65791
+      ]
+    },
+    {
+      "buffer": 2835,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        65280,
+        108084,
+        76497,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 17,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        76497,
+        76935,
+        77879,
+        88304,
+        90670,
+        99043,
+        108084,
+        116759,
+        126990
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        108084,
+        76497,
+        255
+      ]
+    },
+    {
+      "buffer": 2835,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        130816,
+        14312,
+        4081,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 17,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        4081,
+        14312,
+        22987,
+        32028,
+        40401,
+        42767,
+        53192,
+        54136,
+        54574,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        4081,
+        14312,
+        22987,
+        32028,
+        40401,
+        42767,
+        53192,
+        54136,
+        54574,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        14312,
+        4081,
+        65791
+      ]
+    },
+    {
+      "buffer": 2905,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        65280,
+        75716,
+        84682,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        71891,
+        75716,
+        84682,
+        95316,
+        102096,
+        103478,
+        115540
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        75716,
+        84682,
+        255
+      ]
+    },
+    {
+      "buffer": 2905,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        130816,
+        27593,
+        15531,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        15531,
+        27593,
+        28975,
+        35755,
+        46389,
+        55355,
+        59180,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        15531,
+        27593,
+        28975,
+        35755,
+        46389,
+        55355,
+        59180,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        27593,
+        15531,
+        65791
+      ]
+    },
+    {
+      "buffer": 3015,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        65280,
+        85840,
+        92372,
+        100534,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 13,
+      "exact_slot_bottleneck": 6,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        85840,
+        92372,
+        100534,
+        114918
+      ],
+      "six_move_start_component": [
+        255,
+        65280,
+        85840,
+        92372,
+        100534,
+        114918
+      ],
+      "slot_optimal_path": [
+        65280,
+        85840,
+        92372,
+        100534,
+        255
+      ]
+    },
+    {
+      "buffer": 3015,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        130816,
+        16153,
+        38699,
+        45231,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 13,
+      "exact_slot_bottleneck": 6,
+      "initial": 1,
+      "legal_states": [
+        16153,
+        30537,
+        38699,
+        45231,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        16153,
+        30537,
+        38699,
+        45231,
+        65791,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        16153,
+        38699,
+        45231,
+        65791
+      ]
+    },
+    {
+      "buffer": 3360,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        65280,
+        112196,
+        80398,
+        84551,
+        66267,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 13,
+      "exact_slot_bottleneck": 6,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        66267,
+        80398,
+        84551,
+        87085,
+        93458,
+        108621,
+        112196
+      ],
+      "six_move_start_component": [
+        255,
+        65280,
+        66267,
+        80398,
+        84551,
+        93458,
+        108621,
+        112196
+      ],
+      "slot_optimal_path": [
+        65280,
+        112196,
+        80398,
+        84551,
+        66267,
+        255
+      ]
+    },
+    {
+      "buffer": 3360,
+      "buffer_clock_cost": 3,
+      "clock_optimal_path": [
+        130816,
+        64804,
+        46520,
+        22450,
+        18875,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 13,
+      "exact_slot_bottleneck": 6,
+      "initial": 1,
+      "legal_states": [
+        18875,
+        22450,
+        37613,
+        43986,
+        46520,
+        50673,
+        64804,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        18875,
+        22450,
+        37613,
+        46520,
+        50673,
+        64804,
+        65791,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        64804,
+        46520,
+        22450,
+        18875,
+        65791
+      ]
+    },
+    {
+      "buffer": 3369,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        65280,
+        88465,
+        76003,
+        255
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 0,
+      "legal_states": [
+        255,
+        65280,
+        76003,
+        88465
+      ],
+      "six_move_start_component": [
+        65280
+      ],
+      "slot_optimal_path": [
+        65280,
+        88465,
+        76003,
+        255
+      ]
+    },
+    {
+      "buffer": 3369,
+      "buffer_clock_cost": 2,
+      "clock_optimal_path": [
+        130816,
+        55068,
+        42606,
+        65791
+      ],
+      "exact_ordinary_clock_bottleneck": 16,
+      "exact_slot_bottleneck": 8,
+      "initial": 1,
+      "legal_states": [
+        42606,
+        55068,
+        65791,
+        130816
+      ],
+      "six_move_start_component": [
+        55068,
+        130816
+      ],
+      "slot_optimal_path": [
+        130816,
+        55068,
+        42606,
+        65791
+      ]
+    }
+  ],
+  "checks": 3436,
+  "input_sha256": {
+    "electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "foundation": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703",
+    "packet": "3696dfbd769865fbcb443d597d6cc8b506290dc6fded8f2385e05016d32367d2"
+  },
+  "scope": "All twelve external sources from the authenticated28 supply, both initial bits; complete fixed-clock U/V menus and all-dyadic physical current via independently certified bank. No assertion for additional source supply.",
+  "status": "PASS"
+}

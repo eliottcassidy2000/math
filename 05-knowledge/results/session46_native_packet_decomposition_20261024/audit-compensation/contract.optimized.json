@@ -1,0 +1,29 @@
+{
+  "checks": 3629,
+  "input_sha256": {
+    "contract": "07adc9e678b63fec59efe96a16033ad6b9216cee56d83916e126d561a23c6756",
+    "edges": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "foundation": "8b66c7bfe03986684f8a5d8ccea0a82c4b868e71dd63af0745dd18bd4c61f703",
+    "routes": "b2d6e2f18705fafbffcbe3c93889afabe399155e4f218c0095c575e100c1e232"
+  },
+  "ordinary_phase_obstruction": {
+    "U_nonloop_incidences": 406,
+    "U_nonloop_weighted_degree": 926,
+    "U_port_phase": 4,
+    "V_port_phase": 0,
+    "full_physical_rows_checked": 3528,
+    "modulus": 8,
+    "odd_U_incidences": [],
+    "potential_nonzero": [
+      [
+        1965,
+        4
+      ]
+    ],
+    "target_U": 1965,
+    "target_V": 2234
+  },
+  "scope": "Independent mathematical review and exact sparse-character test of the separately hashed interpretation contract. The contradiction applies only to demanding every ordinary individual-port phase, not to full nodewise dyadic current. The no-return obstruction applies to the exact binary menus, fixed margins and restored buffers.",
+  "status": "PASS",
+  "strict_temporal_nonreturn_proof": "Every restored binary buffer that changes must reacquire its initial resource, so it must instead remain fixed. Every original binary slot can change at most once. An intermediate therefore projects to a conformal original state; each authenticated original fibre has only its two endpoints. The first nontrivial move must be the entire primitive16/18 atom."
+}

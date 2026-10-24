@@ -1,0 +1,120 @@
+{
+  "status": "Exact native18-source circuit; sharp37-clock minimum and unique minimizer in supplied28options; literal owner-cycle and dyadic reciprocal-polynomial certificates",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1509,
+      "sha256": "4bf26ac97c2691bc305657c358716dbadf6eab410f73bfa785573a01fc58f7c4"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 11812,
+      "sha256": "4c8e709a053cb210ee259b0557301833cfdb1635ffd9f598d9d3532f7c746ba9"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1066,
+      "sha256": "cbe7296cdb40f9bf807c54edf70eea275f3d3e7769e0caf696a0802c86e7c0c0"
+    },
+    {
+      "path": "source_inventory.json",
+      "bytes": 23249,
+      "sha256": "f2dd99459b563ad5955093a1c226055e7427abadfcf0c83e709a5f2d5fcd568a"
+    },
+    {
+      "path": "pool.json",
+      "bytes": 23922,
+      "sha256": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf"
+    },
+    {
+      "path": "candidates.json",
+      "bytes": 387,
+      "sha256": "965106632cce06b603d2069f77c0ee22a09d0855ca96dc6c93cbc6bd11838371"
+    },
+    {
+      "path": "charges.json",
+      "bytes": 489,
+      "sha256": "c286a9a54fab01f8d003655eba4bf8d4c2188d7568cccb646b3cac76ca7c95d3"
+    },
+    {
+      "path": "check.py",
+      "bytes": 11258,
+      "sha256": "27f1c464be228ad6ceaf9064b38aedd87368943566926c7ad42dcd4d0c487636"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 396673,
+      "sha256": "90dd07e6103a933fc1afabddcb2ac4e82e91f298cb0d6919838c8836554679b5"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 396673,
+      "sha256": "90dd07e6103a933fc1afabddcb2ac4e82e91f298cb0d6919838c8836554679b5"
+    },
+    {
+      "path": "solve_images.py",
+      "bytes": 3798,
+      "sha256": "8fad6372ba8897396d7ecc0408a15ca55eb575626aa293a9d1c0b42028c33b92"
+    },
+    {
+      "path": "image_witnesses.json",
+      "bytes": 439248,
+      "sha256": "067be7018a589bb549822ba9f21e8f20f5d8823d420cc49942bc2c207f99e5bc"
+    },
+    {
+      "path": "regeneration.json",
+      "bytes": 169,
+      "sha256": "d758debf81e6526c94a43a012224ae517cea66f1558dc9249f5e72fbaf667f34"
+    },
+    {
+      "path": "cost_boundary.cpp",
+      "bytes": 1903,
+      "sha256": "8c5b29ae0441251b291cc4432a135540cf1c773ea8a5f6c4d462a494970bc408"
+    },
+    {
+      "path": "labels_cost.txt",
+      "bytes": 351,
+      "sha256": "9af9dfadf2f3014b8ab587f26240afb32749d1c69c6cb1cf3f5b6e504813a8b8"
+    },
+    {
+      "path": "cost36.json",
+      "bytes": 157,
+      "sha256": "6377de3c7342c3d7c5beb746fc07f69fe2714f913fc9e35c9a8b843739552288"
+    },
+    {
+      "path": "cost37.json",
+      "bytes": 284,
+      "sha256": "b14752a10a0b8814ba702bacfe97a569c7c0c4dc1ac4b2dc729cb7c937406f75"
+    },
+    {
+      "path": "check_boundary.py",
+      "bytes": 2710,
+      "sha256": "f57a63b7fc43631c7b97bd1b81a395fa23216c9384a99204ba4fce0e7245d920"
+    },
+    {
+      "path": "boundary-normal.json",
+      "bytes": 1334,
+      "sha256": "6d59f21acfe7f0ac5ed29cad54104e5349f453419061a2ae0d8e0936b729fb90"
+    },
+    {
+      "path": "boundary-optimized.json",
+      "bytes": 1334,
+      "sha256": "6d59f21acfe7f0ac5ed29cad54104e5349f453419061a2ae0d8e0936b729fb90"
+    },
+    {
+      "path": "check_cycles.py",
+      "bytes": 5348,
+      "sha256": "598e226314e6978df5b638e536aabc0ca19704815273409a494cafc5c7f50ca0"
+    },
+    {
+      "path": "cycles-normal.json",
+      "bytes": 28167,
+      "sha256": "c8a3c244466099784de7ca2ecb08f11d05f97d30746f8d9fb10260e79dbe9b88"
+    },
+    {
+      "path": "cycles-optimized.json",
+      "bytes": 28167,
+      "sha256": "c8a3c244466099784de7ca2ecb08f11d05f97d30746f8d9fb10260e79dbe9b88"
+    }
+  ]
+}

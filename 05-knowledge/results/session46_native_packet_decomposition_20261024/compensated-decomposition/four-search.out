@@ -1,0 +1,13 @@
+{'k': 0, 'reservoirs': 1, 'span_excluded_reservoirs': 1}
+{'k': 1, 'reservoirs': 12, 'span_excluded_reservoirs': 12}
+{'k': 2, 'reservoirs': 66, 'span_excluded_reservoirs': 66}
+{'k': 3, 'reservoirs': 220, 'span_excluded_reservoirs': 220}
+{'k': 4, 'reservoirs': 495, 'span_excluded_reservoirs': 495}
+{'k': 5, 'reservoirs': 792, 'span_excluded_reservoirs': 791, 'initializations': 32, 'visited': 125}
+{'k': 6, 'reservoirs': 924, 'span_excluded_reservoirs': 917, 'initializations': 448, 'visited': 2506}
+{'k': 7, 'reservoirs': 792, 'span_excluded_reservoirs': 771, 'initializations': 2688, 'visited': 21802}
+{'k': 8, 'reservoirs': 495, 'span_excluded_reservoirs': 460, 'initializations': 8960, 'visited': 113110}
+{'k': 9, 'reservoirs': 220, 'span_excluded_reservoirs': 185, 'initializations': 17920, 'visited': 398672}
+{'k': 10, 'reservoirs': 66, 'initializations': 21504, 'visited': 998903, 'span_excluded_reservoirs': 45}
+{'k': 11, 'reservoirs': 12, 'initializations': 14336, 'visited': 1748553, 'span_excluded_reservoirs': 5}
+{'k': 12, 'reservoirs': 1, 'initializations': 4096, 'visited': 1629465}

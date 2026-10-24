@@ -1,0 +1,15 @@
+{
+  "artifacts": {
+    "../check.py": "e408df39837655c1960c32a28911794e1cb489333d247c0fb9c4dac35895d173",
+    "../image_witnesses.json": "7acfdfb7dd6b25c75d972bc487bb772826639a6ddbfd17867838b263d9a63d56",
+    "../image_witnesses_eighteen37.json": "9f5f98e96996f9c78ad401d994a209defafb5e2c8b307219f4c15cf0f3e47a81",
+    "../packet.json": "3696dfbd769865fbcb443d597d6cc8b506290dc6fded8f2385e05016d32367d2",
+    "../packet_eighteen37.json": "bf7768dd12fb2f782b3075a57f1ee7abb5ec73f1befba71c323dd10445c65b95",
+    "THEOREM.md": "7ef49985ebc3e367d913919db47d3609cb0e1cb2faac7659c9462b7b512f9865",
+    "check.py": "936d36953c41dcbd8378603d50b40b26d53426c2aee55e2880b7f3c03a49059b",
+    "normal.json": "b90a847f2d7c4518af0b25e5e877d04cfd3a17244dac6622a4498c9b30146d26",
+    "optimized.json": "b90a847f2d7c4518af0b25e5e877d04cfd3a17244dac6622a4498c9b30146d26"
+  },
+  "normal_optimized_equal": true,
+  "status": "FROZEN PASS"
+}

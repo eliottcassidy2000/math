@@ -1,0 +1,1363 @@
+{
+  "checks": 262396,
+  "dyadic_weighted_polynomial_tower": [
+    {
+      "accepted_states": 48620,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 4,
+          "coefficient": 72,
+          "slots": 2
+        },
+        {
+          "clocks": 5,
+          "coefficient": 9,
+          "slots": 2
+        },
+        {
+          "clocks": 8,
+          "coefficient": 1008,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 288,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 4704,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 2352,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 8820,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 7056,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 7056,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 8820,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 2352,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 4704,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 288,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 1008,
+          "slots": 14
+        },
+        {
+          "clocks": 32,
+          "coefficient": 9,
+          "slots": 16
+        },
+        {
+          "clocks": 33,
+          "coefficient": 72,
+          "slots": 16
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 2,
+      "odd_clock_cost_states": 24310
+    },
+    {
+      "accepted_states": 1526,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 4,
+          "coefficient": 1,
+          "slots": 2
+        },
+        {
+          "clocks": 8,
+          "coefficient": 34,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 7,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 143,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 74,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 284,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 219,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 219,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 284,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 74,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 143,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 7,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 34,
+          "slots": 14
+        },
+        {
+          "clocks": 33,
+          "coefficient": 1,
+          "slots": 16
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 4,
+      "odd_clock_cost_states": 763
+    },
+    {
+      "accepted_states": 754,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 4,
+          "coefficient": 1,
+          "slots": 2
+        },
+        {
+          "clocks": 8,
+          "coefficient": 15,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 5,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 71,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 39,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 140,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 105,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 105,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 140,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 39,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 71,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 5,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 15,
+          "slots": 14
+        },
+        {
+          "clocks": 33,
+          "coefficient": 1,
+          "slots": 16
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 8,
+      "odd_clock_cost_states": 377
+    },
+    {
+      "accepted_states": 350,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 4,
+          "coefficient": 1,
+          "slots": 2
+        },
+        {
+          "clocks": 8,
+          "coefficient": 7,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 3,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 36,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 15,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 68,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 44,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 44,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 68,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 15,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 36,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 3,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 7,
+          "slots": 14
+        },
+        {
+          "clocks": 33,
+          "coefficient": 1,
+          "slots": 16
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 16,
+      "odd_clock_cost_states": 175
+    },
+    {
+      "accepted_states": 152,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 4,
+          "coefficient": 1,
+          "slots": 2
+        },
+        {
+          "clocks": 8,
+          "coefficient": 3,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 1,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 17,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 7,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 29,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 17,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 17,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 29,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 7,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 17,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 1,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 3,
+          "slots": 14
+        },
+        {
+          "clocks": 33,
+          "coefficient": 1,
+          "slots": 16
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 32,
+      "odd_clock_cost_states": 76
+    },
+    {
+      "accepted_states": 72,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 8,
+          "coefficient": 2,
+          "slots": 4
+        },
+        {
+          "clocks": 9,
+          "coefficient": 1,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "coefficient": 10,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 3,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 10,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 9,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 9,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 10,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 3,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 10,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "coefficient": 1,
+          "slots": 14
+        },
+        {
+          "clocks": 29,
+          "coefficient": 2,
+          "slots": 14
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 64,
+      "odd_clock_cost_states": 36
+    },
+    {
+      "accepted_states": 34,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 12,
+          "coefficient": 5,
+          "slots": 6
+        },
+        {
+          "clocks": 13,
+          "coefficient": 1,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "coefficient": 6,
+          "slots": 8
+        },
+        {
+          "clocks": 17,
+          "coefficient": 4,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "coefficient": 4,
+          "slots": 10
+        },
+        {
+          "clocks": 21,
+          "coefficient": 6,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "coefficient": 1,
+          "slots": 12
+        },
+        {
+          "clocks": 25,
+          "coefficient": 5,
+          "slots": 12
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 128,
+      "odd_clock_cost_states": 17
+    },
+    {
+      "accepted_states": 2,
+      "coefficients": [
+        {
+          "clocks": 0,
+          "coefficient": 1,
+          "slots": 0
+        },
+        {
+          "clocks": 37,
+          "coefficient": 1,
+          "slots": 18
+        }
+      ],
+      "modulus": 256,
+      "odd_clock_cost_states": 1
+    }
+  ],
+  "guarded_polynomial": [
+    {
+      "clocks": 0,
+      "coefficient": 1,
+      "slots": 0
+    },
+    {
+      "clocks": 37,
+      "coefficient": 1,
+      "slots": 18
+    }
+  ],
+  "scope": "Relative permutations of each source owner frame, not source automorphisms, a legal S3 action on the two-state native domain, or a permutation of a common host. Full-bank interpretation uses independently audited complete original paired-charge coordinates and direct native current audit.",
+  "source_sha256": {
+    "candidates": "965106632cce06b603d2069f77c0ee22a09d0855ca96dc6c93cbc6bd11838371",
+    "electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "nodes": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "pool": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf",
+    "producer_cycles": "c8a3c244466099784de7ca2ecb08f11d05f97d30746f8d9fb10260e79dbe9b88"
+  },
+  "sources": [
+    {
+      "new_path": [
+        2,
+        4,
+        3,
+        1,
+        5,
+        7,
+        6,
+        0
+      ],
+      "old_path": [
+        2,
+        4,
+        6,
+        1,
+        5,
+        7,
+        3,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 1394
+    },
+    {
+      "new_path": [
+        5,
+        2,
+        3,
+        4,
+        7,
+        6,
+        1,
+        0
+      ],
+      "old_path": [
+        5,
+        6,
+        3,
+        4,
+        7,
+        2,
+        1,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 1425
+    },
+    {
+      "new_path": [
+        5,
+        3,
+        2,
+        1,
+        4,
+        7,
+        6,
+        0
+      ],
+      "old_path": [
+        5,
+        6,
+        2,
+        1,
+        4,
+        7,
+        3,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 1457
+    },
+    {
+      "new_path": [
+        1,
+        5,
+        7,
+        6,
+        3,
+        4,
+        2,
+        0
+      ],
+      "old_path": [
+        1,
+        5,
+        7,
+        2,
+        3,
+        4,
+        6,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 1480
+    },
+    {
+      "new_path": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        7,
+        6,
+        0
+      ],
+      "old_path": [
+        5,
+        4,
+        6,
+        2,
+        1,
+        7,
+        3,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 2176
+    },
+    {
+      "new_path": [
+        7,
+        6,
+        1,
+        0,
+        5,
+        2,
+        4,
+        3
+      ],
+      "old_path": [
+        7,
+        2,
+        1,
+        0,
+        5,
+        6,
+        4,
+        3
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 2185
+    },
+    {
+      "new_path": [
+        2,
+        5,
+        4,
+        3,
+        1,
+        7,
+        6,
+        0
+      ],
+      "old_path": [
+        2,
+        5,
+        4,
+        6,
+        1,
+        7,
+        3,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 2581
+    },
+    {
+      "failed_directed_arcs": [
+        [
+          6,
+          3
+        ]
+      ],
+      "new_path": [
+        2,
+        1,
+        7,
+        5,
+        0,
+        6,
+        4,
+        3
+      ],
+      "old_path": [
+        2,
+        1,
+        7,
+        5,
+        6,
+        4,
+        0,
+        3
+      ],
+      "owner_clock_cost": 3,
+      "relative_nontrivial_cycles": [
+        [
+          0,
+          4,
+          6
+        ]
+      ],
+      "source": 2835,
+      "third_ambient_path": [
+        2,
+        1,
+        7,
+        5,
+        4,
+        0,
+        6,
+        3
+      ]
+    },
+    {
+      "new_path": [
+        3,
+        6,
+        1,
+        0,
+        7,
+        5,
+        4,
+        2
+      ],
+      "old_path": [
+        3,
+        6,
+        4,
+        0,
+        7,
+        5,
+        1,
+        2
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          1,
+          4
+        ]
+      ],
+      "source": 2945
+    },
+    {
+      "new_path": [
+        7,
+        6,
+        3,
+        1,
+        4,
+        5,
+        2,
+        0
+      ],
+      "old_path": [
+        7,
+        6,
+        5,
+        1,
+        4,
+        3,
+        2,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          5
+        ]
+      ],
+      "source": 1477
+    },
+    {
+      "new_path": [
+        4,
+        6,
+        2,
+        0,
+        5,
+        7,
+        3,
+        1
+      ],
+      "old_path": [
+        4,
+        3,
+        2,
+        0,
+        5,
+        7,
+        6,
+        1
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 1549
+    },
+    {
+      "new_path": [
+        1,
+        7,
+        2,
+        4,
+        5,
+        3,
+        6,
+        0
+      ],
+      "old_path": [
+        1,
+        7,
+        6,
+        4,
+        5,
+        3,
+        2,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 1691
+    },
+    {
+      "new_path": [
+        7,
+        2,
+        4,
+        1,
+        5,
+        3,
+        6,
+        0
+      ],
+      "old_path": [
+        7,
+        6,
+        4,
+        1,
+        5,
+        3,
+        2,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 1921
+    },
+    {
+      "new_path": [
+        5,
+        6,
+        4,
+        7,
+        2,
+        1,
+        0,
+        3
+      ],
+      "old_path": [
+        5,
+        2,
+        4,
+        7,
+        6,
+        1,
+        0,
+        3
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          2,
+          6
+        ]
+      ],
+      "source": 1974
+    },
+    {
+      "new_path": [
+        1,
+        0,
+        6,
+        2,
+        7,
+        5,
+        4,
+        3
+      ],
+      "old_path": [
+        1,
+        4,
+        6,
+        2,
+        7,
+        5,
+        0,
+        3
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          0,
+          4
+        ]
+      ],
+      "source": 2837
+    },
+    {
+      "new_path": [
+        2,
+        5,
+        6,
+        1,
+        7,
+        3,
+        0,
+        4
+      ],
+      "old_path": [
+        2,
+        5,
+        3,
+        1,
+        7,
+        6,
+        0,
+        4
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          3,
+          6
+        ]
+      ],
+      "source": 2905
+    },
+    {
+      "new_path": [
+        7,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3,
+        0
+      ],
+      "old_path": [
+        7,
+        4,
+        3,
+        5,
+        2,
+        6,
+        1,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          1,
+          3
+        ]
+      ],
+      "source": 3000
+    },
+    {
+      "new_path": [
+        2,
+        7,
+        4,
+        1,
+        6,
+        5,
+        3,
+        0
+      ],
+      "old_path": [
+        2,
+        7,
+        4,
+        3,
+        6,
+        5,
+        1,
+        0
+      ],
+      "owner_clock_cost": 2,
+      "relative_nontrivial_cycles": [
+        [
+          1,
+          3
+        ]
+      ],
+      "source": 3369
+    }
+  ],
+  "status": "PASS",
+  "unguarded_polynomial": [
+    {
+      "clocks": 0,
+      "coefficient": 1,
+      "slots": 0
+    },
+    {
+      "clocks": 2,
+      "coefficient": 17,
+      "slots": 1
+    },
+    {
+      "clocks": 3,
+      "coefficient": 1,
+      "slots": 1
+    },
+    {
+      "clocks": 4,
+      "coefficient": 136,
+      "slots": 2
+    },
+    {
+      "clocks": 5,
+      "coefficient": 17,
+      "slots": 2
+    },
+    {
+      "clocks": 6,
+      "coefficient": 680,
+      "slots": 3
+    },
+    {
+      "clocks": 7,
+      "coefficient": 136,
+      "slots": 3
+    },
+    {
+      "clocks": 8,
+      "coefficient": 2380,
+      "slots": 4
+    },
+    {
+      "clocks": 9,
+      "coefficient": 680,
+      "slots": 4
+    },
+    {
+      "clocks": 10,
+      "coefficient": 6188,
+      "slots": 5
+    },
+    {
+      "clocks": 11,
+      "coefficient": 2380,
+      "slots": 5
+    },
+    {
+      "clocks": 12,
+      "coefficient": 12376,
+      "slots": 6
+    },
+    {
+      "clocks": 13,
+      "coefficient": 6188,
+      "slots": 6
+    },
+    {
+      "clocks": 14,
+      "coefficient": 19448,
+      "slots": 7
+    },
+    {
+      "clocks": 15,
+      "coefficient": 12376,
+      "slots": 7
+    },
+    {
+      "clocks": 16,
+      "coefficient": 24310,
+      "slots": 8
+    },
+    {
+      "clocks": 17,
+      "coefficient": 19448,
+      "slots": 8
+    },
+    {
+      "clocks": 18,
+      "coefficient": 24310,
+      "slots": 9
+    },
+    {
+      "clocks": 19,
+      "coefficient": 24310,
+      "slots": 9
+    },
+    {
+      "clocks": 20,
+      "coefficient": 19448,
+      "slots": 10
+    },
+    {
+      "clocks": 21,
+      "coefficient": 24310,
+      "slots": 10
+    },
+    {
+      "clocks": 22,
+      "coefficient": 12376,
+      "slots": 11
+    },
+    {
+      "clocks": 23,
+      "coefficient": 19448,
+      "slots": 11
+    },
+    {
+      "clocks": 24,
+      "coefficient": 6188,
+      "slots": 12
+    },
+    {
+      "clocks": 25,
+      "coefficient": 12376,
+      "slots": 12
+    },
+    {
+      "clocks": 26,
+      "coefficient": 2380,
+      "slots": 13
+    },
+    {
+      "clocks": 27,
+      "coefficient": 6188,
+      "slots": 13
+    },
+    {
+      "clocks": 28,
+      "coefficient": 680,
+      "slots": 14
+    },
+    {
+      "clocks": 29,
+      "coefficient": 2380,
+      "slots": 14
+    },
+    {
+      "clocks": 30,
+      "coefficient": 136,
+      "slots": 15
+    },
+    {
+      "clocks": 31,
+      "coefficient": 680,
+      "slots": 15
+    },
+    {
+      "clocks": 32,
+      "coefficient": 17,
+      "slots": 16
+    },
+    {
+      "clocks": 33,
+      "coefficient": 136,
+      "slots": 16
+    },
+    {
+      "clocks": 34,
+      "coefficient": 1,
+      "slots": 17
+    },
+    {
+      "clocks": 35,
+      "coefficient": 17,
+      "slots": 17
+    },
+    {
+      "clocks": 37,
+      "coefficient": 1,
+      "slots": 18
+    }
+  ]
+}

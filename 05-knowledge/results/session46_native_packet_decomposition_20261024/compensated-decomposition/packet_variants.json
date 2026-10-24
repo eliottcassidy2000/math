@@ -1,0 +1,192 @@
+{
+  "routes": [
+    {
+      "budget": 8,
+      "buffers": [
+        1394
+      ],
+      "costs": [
+        2
+      ],
+      "initial": 0,
+      "name": "buffer_1394_min_work",
+      "path": [
+        65280,
+        116276,
+        86071,
+        255
+      ],
+      "sources": [
+        1425,
+        1457,
+        1477,
+        1480,
+        1638,
+        1691,
+        1974,
+        2837,
+        176,
+        1549,
+        2071,
+        2176,
+        2185,
+        2581,
+        2945,
+        3000,
+        1394
+      ],
+      "states": 12,
+      "step_image_names": [
+        "buffer_1394_min_work_step_1",
+        "buffer_1394_min_work_step_2",
+        "buffer_1394_2905_step_4"
+      ],
+      "step_sizes": [
+        8,
+        6,
+        6
+      ]
+    },
+    {
+      "base_source_order": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360
+      ],
+      "budget": 6,
+      "buffers": [
+        1394
+      ],
+      "initial": 0,
+      "name": "eighteen_buffer_1394_min_work",
+      "path": [
+        261632,
+        437825,
+        274217,
+        279403,
+        511
+      ],
+      "sources": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360,
+        1394
+      ],
+      "states": 19,
+      "step_image_names": [
+        "eighteen_buffer_1394_step_1",
+        "eighteen_buffer_1394_step_2",
+        "eighteen_buffer_1394_min_work_step_3",
+        "eighteen_buffer_1394_min_work_step_4"
+      ],
+      "step_sizes": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "base_source_order": [
+        1394,
+        1425,
+        1457,
+        1480,
+        2176,
+        2185,
+        2581,
+        2835,
+        2945,
+        1477,
+        1549,
+        1691,
+        1921,
+        1974,
+        2837,
+        2905,
+        3000,
+        3369
+      ],
+      "budget": 6,
+      "buffers": [
+        2071
+      ],
+      "initial": 0,
+      "name": "eighteen37_buffer_2071_min_clock",
+      "path": [
+        261632,
+        453144,
+        428849,
+        360765,
+        360700,
+        511
+      ],
+      "sources": [
+        1394,
+        1425,
+        1457,
+        1480,
+        2176,
+        2185,
+        2581,
+        2835,
+        2945,
+        1477,
+        1549,
+        1691,
+        1921,
+        1974,
+        2837,
+        2905,
+        3000,
+        3369,
+        2071
+      ],
+      "states": 38,
+      "step_image_names": [
+        "eighteen37_buffer_2071_min_clock_step_1",
+        "eighteen37_buffer_2071_min_clock_step_2",
+        "eighteen37_buffer_2071_min_clock_step_3",
+        "eighteen37_buffer_2071_min_clock_step_4",
+        "eighteen37_buffer_2071_min_clock_step_5"
+      ],
+      "step_sizes": [
+        6,
+        6,
+        6,
+        4,
+        6
+      ]
+    }
+  ]
+}

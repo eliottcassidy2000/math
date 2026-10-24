@@ -10,7 +10,7 @@ Imposing every clock at which the two advertised endpoint paths agree gives exac
 
 All 57 paths use different normalized black resources: 228 distinct closed ports. For every path the audit reconstructs the actual complement partner, converse source and converse partner matrices and all four literal words; it checks Hamiltonicity, the K involution, the commuting K/converse square, the actual pure-black edge and every fixed physical owner clock. Four shared owner roles and private source-owner labels are retained explicitly. Trivial actual automorphism groups mean hidden owner/kernel lifts do not create additional capacity.
 
-The actual original electrical vectors are checked against all 438,216 edge rows. These tests verify the five Y vectors modulo four and the primitive X modulo 256, plus every selected order-256 separator. Completeness of the entire nodewise dyadic bank is the independently audited Session 45 dyadic-filtration theorem, not an inference that five randomly chosen characters suffice. A fresh normal/optimized re-run of that separate audit is recorded alongside this audit when available.
+The actual original electrical vectors are checked against all 438,216 edge rows. These tests verify the five Y vectors modulo four and the primitive X modulo 256, plus every selected order-256 separator. Completeness of the entire nodewise dyadic bank is the independently audited Session 45 dyadic-filtration theorem, not an inference that five randomly chosen characters suffice. A fresh normal/optimized re-run of that separate audit is recorded alongside this audit: each run passes 530,454 checks with byte-identical receipts.
 
 ## Full-supply obstruction
 
@@ -34,4 +34,4 @@ From the session workspace:
 
 These are selected partial-packet domains, not a replacement of the fully occupied canonical atlas. All-dyadic means the full original **nodewise** dyadic harmonic bank; it does not mean every ordinary per-port character, odd-primary preservation, or evaluation of one unchanged integer X at arbitrarily large moduli. The chosen ordinary per-slot X phase modulo eight is separately retained. Shared physical owner records do not imply agreement of every induced arc in a single common-host tournament. Buffer resources may be revisited at different times, but cannot be used twice in the same packet state.
 
-Route-specific physical-current, image-witness and exact bottleneck audits are separate from this foundation result and will be recorded in ROUTE_AUDIT.md.
+Route-specific physical-current, image-witness and exact bottleneck audits are separate from this foundation result and are recorded in ROUTE_AUDIT.md.

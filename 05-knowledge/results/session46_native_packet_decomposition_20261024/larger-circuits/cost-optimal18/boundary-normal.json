@@ -1,0 +1,61 @@
+{
+  "checks": 70501,
+  "minimum_18_slot_clock_cost_in_supplied_28_options": 37,
+  "reports": [
+    {
+      "balanced_partitions_examined": 72930,
+      "cost": 36,
+      "equal_charge_relations": 1129,
+      "parity_admissible_support_sets": 3,
+      "primitive_relations": 0,
+      "primitives": [],
+      "proper_relation_half_sizes": {
+        "2": 288,
+        "3": 832,
+        "4": 9
+      },
+      "support_sets": 190
+    },
+    {
+      "balanced_partitions_examined": 4448730,
+      "cost": 37,
+      "equal_charge_relations": 69358,
+      "parity_admissible_support_sets": 183,
+      "primitive_relations": 1,
+      "primitives": [
+        {
+          "minus": [
+            1477,
+            1549,
+            1691,
+            1921,
+            1974,
+            2837,
+            2905,
+            3000,
+            3369
+          ],
+          "plus": [
+            1394,
+            1425,
+            1457,
+            1480,
+            2176,
+            2185,
+            2581,
+            2835,
+            2945
+          ]
+        }
+      ],
+      "proper_relation_half_sizes": {
+        "2": 22680,
+        "3": 45657,
+        "4": 1020
+      },
+      "support_sets": 5700
+    }
+  ],
+  "scope": "One of each supplied fixed native binary option per distinct source; not all order8 pinned menus.",
+  "status": "PASS"
+}

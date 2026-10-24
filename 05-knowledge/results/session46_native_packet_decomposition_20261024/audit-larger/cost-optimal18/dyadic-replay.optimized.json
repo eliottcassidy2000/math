@@ -1,0 +1,244 @@
+{
+  "checks": 530454,
+  "filtration": {
+    "binary_nullity": 3363,
+    "binary_rank": 164,
+    "critical_two_primary": "(Z/2)^3358 + (Z/4)^4 + Z/256",
+    "edge_rows": 438216,
+    "fibre_size_distribution": {
+      "1": 642,
+      "2": 545,
+      "3": 310,
+      "4": 139,
+      "5": 44,
+      "6": 15
+    },
+    "half_energy_rank": 3358,
+    "higher_primitive_energy_div_256": 26637417,
+    "higher_primitive_integer_energy": 6819178752,
+    "independent_half_form_sha256": "d1bac9de07a0b445ff14472be8d28d826a24bb0edbc1b789016571971c2fc051",
+    "node_label_fibres": 1695,
+    "odd_edge_kernel_coordinates": 11,
+    "paired_charge_order": 2048,
+    "paired_charge_type": "(Z/2)^4 + Z/128",
+    "quarter_form_rows": [
+      8,
+      12,
+      14,
+      31,
+      8
+    ],
+    "tower": [
+      {
+        "k": 2,
+        "modulus": 4,
+        "predicted_log2_order": 5,
+        "reduced_image_order": 32
+      },
+      {
+        "k": 3,
+        "modulus": 8,
+        "predicted_log2_order": 6,
+        "reduced_image_order": 64
+      },
+      {
+        "k": 4,
+        "modulus": 16,
+        "predicted_log2_order": 7,
+        "reduced_image_order": 128
+      },
+      {
+        "k": 5,
+        "modulus": 32,
+        "predicted_log2_order": 8,
+        "reduced_image_order": 256
+      },
+      {
+        "k": 6,
+        "modulus": 64,
+        "predicted_log2_order": 9,
+        "reduced_image_order": 512
+      },
+      {
+        "k": 7,
+        "modulus": 128,
+        "predicted_log2_order": 10,
+        "reduced_image_order": 1024
+      },
+      {
+        "k": 8,
+        "modulus": 256,
+        "predicted_log2_order": 11,
+        "reduced_image_order": 2048
+      }
+    ],
+    "valuation_ranks": [
+      3358,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "vertices": 3528
+  },
+  "finite_controls": {
+    "carry_cases": 78336,
+    "cut_cases": 5184,
+    "row_image_full_harmonic_cases": 4320
+  },
+  "original_menu_controls": {
+    "higher_carry_failure_bit": 1,
+    "old_rectangle_rejected": [
+      [
+        1238,
+        2246,
+        881,
+        2762,
+        1
+      ]
+    ],
+    "random_multirectangle_tower_cases": 840,
+    "safe_rectangle": [
+      [
+        913,
+        2701,
+        398,
+        528,
+        1
+      ]
+    ],
+    "shared_circuit": [
+      [
+        0,
+        1,
+        398,
+        528,
+        1
+      ],
+      [
+        55,
+        46,
+        398,
+        528,
+        1
+      ]
+    ]
+  },
+  "scope": "All-dyadic inclusion of the original harmonic banks. No native resource authentication, odd-primary preservation, kernel equality, or unconditional all-order native supply claim.",
+  "source_hashes": [
+    {
+      "bytes": 1201654,
+      "path": "05-knowledge/results/metagraph_order8_20261023/merged_edges.tsv.gz",
+      "sha256": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a"
+    },
+    {
+      "bytes": 530173,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "bytes": 8903,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/README.md",
+      "sha256": "8a6862aa6315e38ccab785308e2510ffc713d99998e4f76ec2746babe4ff2adb"
+    },
+    {
+      "bytes": 12277,
+      "path": "05-knowledge/results/metagraph_order8_electrical_20261023/check.py",
+      "sha256": "587f40058a9a9296b93fa0159f610491edf97852492dacfc5e65b02f01eebf08"
+    },
+    {
+      "bytes": 11747,
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/rectangle-bank/THEOREM.md",
+      "sha256": "1a2308adc4e2c3b85535859487d0f5af651383b07a729e0214632c29f27415d1"
+    },
+    {
+      "bytes": 15667,
+      "path": "05-knowledge/results/session44_guarded_native_moves_20261023/electrical-duality/UNIVERSAL_ELECTRICAL_GUARDS.md",
+      "sha256": "ef0739cfea26526563ea2736e5a7bb3b548a4530c236737915d6c1f5bff46426"
+    },
+    {
+      "bytes": 2482,
+      "path": "producer/MANIFEST.json",
+      "sha256": "946f1af382dc8d2aab2bf40d1c7f786cbbe5de4a720d539888c113b574b902b3"
+    },
+    {
+      "bytes": 2780,
+      "path": "producer/README.md",
+      "sha256": "b869c624b9a497d2b280bc79c5127562c51f4dda802172cc9bf0518ee30137eb"
+    },
+    {
+      "bytes": 1275,
+      "path": "producer/SHA256SUMS",
+      "sha256": "389c2e55c3c1b56b21f6aa2c4b9755705791f09ac07389788dc2a4c5fa2eadf9"
+    },
+    {
+      "bytes": 1419,
+      "path": "producer/SOURCE_PINS.json",
+      "sha256": "f448d8311d629bdca88bc04c627fc256e1659170609de2382a313d4a521d3221"
+    },
+    {
+      "bytes": 14575,
+      "path": "producer/THEOREM.md",
+      "sha256": "d6efea63d4ad34b6dac89dae3c32c043115450ea2f4895a5f4699dce327f66a8"
+    },
+    {
+      "bytes": 339,
+      "path": "producer/algebraic_circuit_menu.json",
+      "sha256": "329b08211a501229fe7ce67c0e603566a4e2e9677afb43baff50b211abc23b28"
+    },
+    {
+      "bytes": 12068,
+      "path": "producer/check.py",
+      "sha256": "3c359ad57dbf253be23d71604a4b58cff6748604291866f60516f3396e528faf"
+    },
+    {
+      "bytes": 2551,
+      "path": "producer/compile_menu.py",
+      "sha256": "e770002ed58ae0957c1ad4928c0e1447ef02a62dc56f9dd2740640e162fd41ba"
+    },
+    {
+      "bytes": 2913,
+      "path": "producer/compiler.normal.json",
+      "sha256": "8d7379c483738522ae8b85303f22c2a1397627587f71706ffcccb7837a1eb3fa"
+    },
+    {
+      "bytes": 2913,
+      "path": "producer/compiler.optimized.json",
+      "sha256": "8d7379c483738522ae8b85303f22c2a1397627587f71706ffcccb7837a1eb3fa"
+    },
+    {
+      "bytes": 23831,
+      "path": "producer/inherited-filtration.normal.json",
+      "sha256": "e57cc4990dd9cbab005c672ef9dc463f783c8d78187b7c56e2a551bbda66e514"
+    },
+    {
+      "bytes": 23831,
+      "path": "producer/inherited-filtration.optimized.json",
+      "sha256": "e57cc4990dd9cbab005c672ef9dc463f783c8d78187b7c56e2a551bbda66e514"
+    },
+    {
+      "bytes": 459092,
+      "path": "producer/node_labels.json",
+      "sha256": "552161b7ad90f893375cae6152fe7e36808bdec458064ae77184880512e01429"
+    },
+    {
+      "bytes": 19550,
+      "path": "producer/normal.json",
+      "sha256": "5b7d0787006a2a001b658433effe6fb4d757379bed119fc3d2b560a78c492ec9"
+    },
+    {
+      "bytes": 19550,
+      "path": "producer/optimized.json",
+      "sha256": "5b7d0787006a2a001b658433effe6fb4d757379bed119fc3d2b560a78c492ec9"
+    },
+    {
+      "bytes": 1403,
+      "path": "producer/recheck_filtration.py",
+      "sha256": "3d8fdd998a8e83ac8c56e14a85d4f3411ea7efefd7d4440c50611797fd1a6eec"
+    }
+  ],
+  "status": "PASS: independently certified original filtration, complete marked dyadic tower and shared-row cut/carry laws"
+}

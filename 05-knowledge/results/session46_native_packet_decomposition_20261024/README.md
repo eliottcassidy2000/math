@@ -28,3 +28,20 @@ fully occupied tournament atlas. All-size wiring classification remains open.
 The eighteen-slot family can admit additional lower-precision states; preserving
 only mod 8 does not authenticate its full dyadic atomicity. Charged-buffer
 decompositions and tighter clock-cost certificates are being audited separately.
+
+## Sharp clock minimum and charged decomposition
+
+- [Sharp37-clock18-source circuit](larger-circuits/cost-optimal18/THEOREM.md)
+  and [independent minimum/uniqueness audit](audit-larger/cost-optimal18/AUDIT.md).
+- [Native compensated routes](compensated-decomposition/THEOREM.md),
+  [cost37 extension](compensated-decomposition/cost37/THEOREM.md), and
+  [exact event/work trade-offs](compensated-decomposition/variants/THEOREM.md).
+- [Independent route audit](audit-compensation/ROUTE_AUDIT.md) and
+  [work/clock variant audit](audit-compensation/VARIANT_AUDIT.md).
+- [Guard and reuse contract](GUARD_AND_REUSE_CONTRACT.md): full nodewise
+  currents versus all ordinary port phases; capacity-one borrowing versus
+  strict temporal nonreturn. Positive constructions and stronger obstructions
+  are kept separate.
+
+The general decomposition and move-lattice synthesis are still undergoing final
+scope review. The session is not yet closed.

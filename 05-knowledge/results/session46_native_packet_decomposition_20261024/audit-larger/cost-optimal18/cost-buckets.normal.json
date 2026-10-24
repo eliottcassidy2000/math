@@ -1,0 +1,28 @@
+{
+  "cheap_nine_subsets": 167960,
+  "checks": 6,
+  "occupied_charge_buckets": 2048,
+  "results": [
+    {
+      "complete_relation_set_sha256": "0e57a1deb12160f1ed4ca897020fce53b8ad47d5b21a3155b688fb05e9b53801",
+      "cost": 36,
+      "disjoint_relations": 1129,
+      "expensive_plus_eight_subsets": 0,
+      "matching_charge_pairs_examined": 6853280
+    },
+    {
+      "complete_relation_set_sha256": "e5b393f7b5ca6c0a2af21d88f0089cb055a5347b8b276a01474b73e3f400fd5e",
+      "cost": 37,
+      "disjoint_relations": 69358,
+      "expensive_plus_eight_subsets": 629850,
+      "matching_charge_pairs_examined": 51712521
+    }
+  ],
+  "scope": "Independent exhaustive relation-set enumeration with no support-parity pruning. Uniqueness and primitiveness use the separately verified per-relation proper-subset census, whose complete relation set matches exactly.",
+  "source_sha256": {
+    "census": "3812921c89f6b37ea19745e3d4bb95e18a43405b249e02f83b35b362ed44086b",
+    "original_electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "pool.json": "5ec83458f3e75e0ac8e8b877e2a7415d3347cb8690c530134fdcfb0a77b7d3bf"
+  },
+  "status": "PASS"
+}

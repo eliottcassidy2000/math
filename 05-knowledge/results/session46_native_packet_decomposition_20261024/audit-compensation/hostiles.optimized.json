@@ -1,0 +1,26 @@
+{
+  "controls": [
+    {
+      "control": "altered_physical_owner_lift",
+      "expected_guard": "exact retained owner lift",
+      "status": "REJECTED"
+    },
+    {
+      "control": "resource_renamed_as_extra_capacity",
+      "expected_guard": "actual option recovered",
+      "status": "REJECTED"
+    },
+    {
+      "control": "illegal_intermediate_margin_or_current",
+      "expected_guard": "every advertised intermediate literal state accepted",
+      "status": "REJECTED"
+    },
+    {
+      "control": "corrupted_full_laplacian_image",
+      "expected_guard": "every original physical row exact integer image equation",
+      "status": "REJECTED"
+    }
+  ],
+  "scope": "Temporary corrupted copies only; no producer input modified. All guards are explicit and remain live under optimized Python.",
+  "status": "PASS"
+}

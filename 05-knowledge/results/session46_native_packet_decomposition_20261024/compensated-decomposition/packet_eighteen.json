@@ -1,0 +1,69 @@
+{
+  "inherited_endpoint_sha256": "cbdcf87ba6c1fe8103a3f77b6aff858133a4b366050b2e41f4bfb79c966be8f6",
+  "inherited_endpoint_source": "session46-larger-circuits/candidates.json case9",
+  "routes": [
+    {
+      "base_source_order": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360
+      ],
+      "budget": 6,
+      "buffers": [
+        1394
+      ],
+      "initial": 0,
+      "name": "eighteen_buffer_1394",
+      "path": [
+        261632,
+        437825,
+        274217,
+        272671,
+        511
+      ],
+      "sources": [
+        1549,
+        1691,
+        1974,
+        2087,
+        2185,
+        2553,
+        2837,
+        2945,
+        3000,
+        1457,
+        1477,
+        1841,
+        1921,
+        2176,
+        2581,
+        2835,
+        3015,
+        3360,
+        1394
+      ],
+      "states": 19,
+      "step_sizes": [
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  ]
+}

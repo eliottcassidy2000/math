@@ -1,0 +1,515 @@
+{
+  "checks": 32447,
+  "input_sha256": {
+    "audited_routes": "b2d6e2f18705fafbffcbe3c93889afabe399155e4f218c0095c575e100c1e232",
+    "base_images_0": "7acfdfb7dd6b25c75d972bc487bb772826639a6ddbfd17867838b263d9a63d56",
+    "base_images_1": "802e4d551969c8b7b7c167b9ad67b90c97c6eec85e0c58c7decc481a1f62d956",
+    "base_images_2": "9f5f98e96996f9c78ad401d994a209defafb5e2c8b307219f4c15cf0f3e47a81",
+    "edges": "67107747944898a23248c2a50fc10f81bac4c217e9aedddac4c8116809ee4f8a",
+    "electrical": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27",
+    "optimization": "81729891c8cc91a1cddc64a76d9a74bf853a70bd704d746594ebb35de5d02b4c",
+    "packet": "3696dfbd769865fbcb443d597d6cc8b506290dc6fded8f2385e05016d32367d2",
+    "variant_images": "38368ff59fbcd6a70bba3f9ffd8d47784ce41a75ff98d03c821dd126d4671654",
+    "variants": "0100d9338969cec290c857de77946f4ebb5cb13f371e2da7b16e62e57ef4f401"
+  },
+  "new_exact_image_vectors": 9,
+  "routes": [
+    {
+      "events": 3,
+      "maximum_owner_clocks": 16,
+      "maximum_slots": 8,
+      "name": "buffer_1394_min_work",
+      "optimization_metric": "at_optimal_slot_budget",
+      "path": [
+        65280,
+        116276,
+        86071,
+        255
+      ],
+      "resource_reentry_count": 3,
+      "resource_reentry_ledger": [
+        {
+          "reentered_resources": [],
+          "to_mask": 116276
+        },
+        {
+          "reentered_resources": [
+            593790
+          ],
+          "to_mask": 86071
+        },
+        {
+          "reentered_resources": [
+            456065,
+            623470
+          ],
+          "to_mask": 255
+        }
+      ],
+      "steps": [
+        {
+          "owner_clock_changes": 16,
+          "slot_support": 8,
+          "source_charge": [
+            [
+              176,
+              -2
+            ],
+            [
+              1394,
+              2
+            ],
+            [
+              1477,
+              2
+            ],
+            [
+              1638,
+              2
+            ],
+            [
+              1691,
+              2
+            ],
+            [
+              2176,
+              -2
+            ],
+            [
+              2185,
+              -2
+            ],
+            [
+              2581,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1425,
+              2
+            ],
+            [
+              1457,
+              2
+            ],
+            [
+              1549,
+              -2
+            ],
+            [
+              2071,
+              -2
+            ],
+            [
+              2185,
+              2
+            ],
+            [
+              3000,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1394,
+              -2
+            ],
+            [
+              1480,
+              2
+            ],
+            [
+              1974,
+              2
+            ],
+            [
+              2185,
+              -2
+            ],
+            [
+              2837,
+              2
+            ],
+            [
+              2945,
+              -2
+            ]
+          ]
+        }
+      ],
+      "total_owner_clock_work": 40
+    },
+    {
+      "events": 4,
+      "maximum_owner_clocks": 17,
+      "maximum_slots": 6,
+      "name": "eighteen_buffer_1394_min_work",
+      "optimization_metric": "at_optimal_slot_budget",
+      "path": [
+        261632,
+        437825,
+        274217,
+        279403,
+        511
+      ],
+      "resource_reentry_count": 5,
+      "resource_reentry_ledger": [
+        {
+          "reentered_resources": [],
+          "to_mask": 437825
+        },
+        {
+          "reentered_resources": [
+            21593
+          ],
+          "to_mask": 274217
+        },
+        {
+          "reentered_resources": [
+            284377,
+            459062
+          ],
+          "to_mask": 279403
+        },
+        {
+          "reentered_resources": [
+            197558,
+            623470
+          ],
+          "to_mask": 511
+        }
+      ],
+      "steps": [
+        {
+          "owner_clock_changes": 13,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1394,
+              2
+            ],
+            [
+              1549,
+              2
+            ],
+            [
+              1921,
+              -2
+            ],
+            [
+              2581,
+              -2
+            ],
+            [
+              2837,
+              2
+            ],
+            [
+              3015,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 17,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              2087,
+              2
+            ],
+            [
+              2553,
+              2
+            ],
+            [
+              2835,
+              -2
+            ],
+            [
+              2837,
+              -2
+            ],
+            [
+              3000,
+              2
+            ],
+            [
+              3360,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 13,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1477,
+              -2
+            ],
+            [
+              1691,
+              2
+            ],
+            [
+              1841,
+              -2
+            ],
+            [
+              2176,
+              -2
+            ],
+            [
+              2581,
+              2
+            ],
+            [
+              2837,
+              2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1394,
+              -2
+            ],
+            [
+              1457,
+              -2
+            ],
+            [
+              1974,
+              2
+            ],
+            [
+              2185,
+              2
+            ],
+            [
+              2581,
+              -2
+            ],
+            [
+              2945,
+              2
+            ]
+          ]
+        }
+      ],
+      "total_owner_clock_work": 55
+    },
+    {
+      "events": 5,
+      "maximum_owner_clocks": 12,
+      "maximum_slots": 6,
+      "name": "eighteen37_buffer_2071_min_clock",
+      "optimization_metric": "at_optimal_clock_budget",
+      "path": [
+        261632,
+        453144,
+        428849,
+        360765,
+        360700,
+        511
+      ],
+      "resource_reentry_count": 9,
+      "resource_reentry_ledger": [
+        {
+          "reentered_resources": [],
+          "to_mask": 453144
+        },
+        {
+          "reentered_resources": [
+            159080
+          ],
+          "to_mask": 428849
+        },
+        {
+          "reentered_resources": [
+            58300,
+            290945
+          ],
+          "to_mask": 360765
+        },
+        {
+          "reentered_resources": [
+            599914,
+            623470
+          ],
+          "to_mask": 360700
+        },
+        {
+          "reentered_resources": [
+            324033,
+            403221,
+            449941,
+            590382
+          ],
+          "to_mask": 511
+        }
+      ],
+      "steps": [
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1480,
+              2
+            ],
+            [
+              1549,
+              -2
+            ],
+            [
+              1921,
+              -2
+            ],
+            [
+              2071,
+              2
+            ],
+            [
+              2176,
+              2
+            ],
+            [
+              3000,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1394,
+              2
+            ],
+            [
+              1480,
+              -2
+            ],
+            [
+              1974,
+              -2
+            ],
+            [
+              2185,
+              2
+            ],
+            [
+              2837,
+              -2
+            ],
+            [
+              2945,
+              2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1457,
+              2
+            ],
+            [
+              1477,
+              -2
+            ],
+            [
+              1480,
+              2
+            ],
+            [
+              1691,
+              -2
+            ],
+            [
+              3000,
+              2
+            ],
+            [
+              3369,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 9,
+          "slot_support": 4,
+          "source_charge": [
+            [
+              1394,
+              -2
+            ],
+            [
+              2581,
+              2
+            ],
+            [
+              2835,
+              2
+            ],
+            [
+              2945,
+              -2
+            ]
+          ]
+        },
+        {
+          "owner_clock_changes": 12,
+          "slot_support": 6,
+          "source_charge": [
+            [
+              1394,
+              2
+            ],
+            [
+              1425,
+              2
+            ],
+            [
+              2071,
+              -2
+            ],
+            [
+              2905,
+              -2
+            ],
+            [
+              2945,
+              2
+            ],
+            [
+              3000,
+              -2
+            ]
+          ]
+        }
+      ],
+      "total_owner_clock_work": 57
+    }
+  ],
+  "scope": "Three new variants of already exhaustively audited native fibres. Every intermediate full physical current/margin/pin/resource and every new exact image vector checked. Optimizations are menu-specific and reversible; none imposes strict temporal nonreturn.",
+  "status": "PASS",
+  "verified_total_charge_vectors_available": 29
+}
