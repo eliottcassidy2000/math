@@ -1,0 +1,14 @@
+{
+  "session53-inert-two-step": {
+    "manifest_sha256": "fc3f83939a13ae6e82b6b0d2e807617eed3e9edf11de3380279e1186ec846143",
+    "relocated_cwd": "/tmp",
+    "stdout": "PASS: closed membership, hashes, normal and optimized replay",
+    "nested_hostile_optimized": "REJECTED"
+  },
+  "session53-cooper-mod9-extension": {
+    "manifest_sha256": "8fe437c05a20e02700e4a1a38ed494a406ba9d9345f4b147ef9aad89ba972607",
+    "relocated_cwd": "/tmp",
+    "stdout": "PASS: manifest and normal/-O replay",
+    "nested_hostile_optimized": "REJECTED"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "cooper-mod9-extension": {
+    "manifest": "MANIFEST.json",
+    "sha256": "8fe437c05a20e02700e4a1a38ed494a406ba9d9345f4b147ef9aad89ba972607"
+  },
+  "inert-two-step": {
+    "manifest": "manifest.json",
+    "sha256": "fc3f83939a13ae6e82b6b0d2e807617eed3e9edf11de3380279e1186ec846143"
+  },
+  "audit-frobenius-extension": {
+    "manifest": "MANIFEST.json",
+    "sha256": "7a9f841360630b7097494a8837b65986899a54b437dcdeb2d272121733997afb"
+  },
+  "audit-modular-inputs": {
+    "manifest": "MANIFEST.json",
+    "sha256": "1a50e4c1019e6dc0bb7df12fd86e7395a7cb7c21867aa2fcfdedb44cfeec3e48"
+  },
+  "cartier-rank": {
+    "manifest": "MANIFEST.json",
+    "sha256": "98e2d3b1e39ca9a3f84f7f50dcdc914e1fde63ce9daa56a684db9b72656748ef"
+  }
+}

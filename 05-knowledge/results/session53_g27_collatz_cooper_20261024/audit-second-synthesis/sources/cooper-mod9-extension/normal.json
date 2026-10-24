@@ -1,0 +1,32 @@
+{
+  "H_companion_checked_through": 20,
+  "corrected_C3_companion_checked_through": 2666,
+  "digit_weights": [
+    1,
+    2,
+    4,
+    3,
+    3,
+    6,
+    0,
+    0,
+    0
+  ],
+  "mod27_n1_failure": {
+    "c1": 2,
+    "c9": 26337699740,
+    "difference_mod27": 18
+  },
+  "naive_C3G_equals_H_n1_difference_mod9": 6,
+  "one_defect_criterion_checked": true,
+  "polynomial_product": [
+    1,
+    2,
+    4,
+    3,
+    3,
+    6
+  ],
+  "status": "FINITE-EXACT checks supporting separately stated all-index proof",
+  "through": 8000
+}

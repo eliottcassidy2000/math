@@ -1,0 +1,15 @@
+{
+  "files": {
+    "REPORT.md": "cc4abc46cd8acd9c2a5902c266e2846c13dcd285076d44f8ed6b462403da8c98",
+    "check.py": "62a8119a1b259003e592b4ff6c450d577ff86439d990de2ea87436923e882a0f",
+    "check_modular.py": "d6c5d811fc2fdd0992876209ffe611ff7a12b60d4a1dc7d0e2af89b37b4ccf16",
+    "inherited-proof.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "modular.normal.json": "c6a3aaa0ee9ee33fd4c9cddf3e210bc84290c9b65ce43949e606787f0d753833",
+    "modular.optimized.json": "c6a3aaa0ee9ee33fd4c9cddf3e210bc84290c9b65ce43949e606787f0d753833",
+    "normal.json": "6e7fd93b0859a3162bb6ece1e0c8c050d1d0873b99111b4ae1366c1139de3ea4",
+    "optimized.json": "6e7fd93b0859a3162bb6ece1e0c8c050d1d0873b99111b4ae1366c1139de3ea4",
+    "replay.py": "d333b5f822806795c11a20ff939b66503fe5ee0ba834ec66b71fe2a774cebf0e"
+  },
+  "repo_head": "7818149bf0a1eca778549fdfd1dde34f479421fd",
+  "status": "closed-authoritative-freeze"
+}

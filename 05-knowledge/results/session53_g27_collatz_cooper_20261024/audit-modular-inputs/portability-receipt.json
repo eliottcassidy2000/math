@@ -1,0 +1,19 @@
+{
+  "cases": {
+    "normal_changed": "REJECTED_AS_REQUIRED",
+    "normal_clean": "PASS",
+    "normal_duplicate": "REJECTED_AS_REQUIRED",
+    "normal_duplicate_json_key": "REJECTED_AS_REQUIRED",
+    "normal_extra": "REJECTED_AS_REQUIRED",
+    "normal_missing": "REJECTED_AS_REQUIRED",
+    "normal_unsafe": "REJECTED_AS_REQUIRED",
+    "optimized_changed": "REJECTED_AS_REQUIRED",
+    "optimized_clean": "PASS",
+    "optimized_duplicate": "REJECTED_AS_REQUIRED",
+    "optimized_duplicate_json_key": "REJECTED_AS_REQUIRED",
+    "optimized_extra": "REJECTED_AS_REQUIRED",
+    "optimized_missing": "REJECTED_AS_REQUIRED",
+    "optimized_unsafe": "REJECTED_AS_REQUIRED"
+  },
+  "status": "PASS"
+}

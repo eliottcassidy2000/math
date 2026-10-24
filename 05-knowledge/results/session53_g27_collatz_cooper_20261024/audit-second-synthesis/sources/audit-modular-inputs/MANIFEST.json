@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "bytes": 13778,
+      "path": "REPORT.md",
+      "sha256": "e64d003ec6eea6e48ef37f88bdba9f8f3511b280cbacaa0eb8d9c00e07cbccaf"
+    },
+    {
+      "bytes": 3479,
+      "path": "certificate.py",
+      "sha256": "ea6c1c3f1c11ca16374bcc7819d17b313a65eca15b80c47f49d93c06cbee486c"
+    },
+    {
+      "bytes": 2744,
+      "path": "normal.json",
+      "sha256": "b612806070e8b90bb09700bfd3e4139de6f7de08d5c8fb033fac3cd2b7851365"
+    },
+    {
+      "bytes": 2744,
+      "path": "optimized.json",
+      "sha256": "b612806070e8b90bb09700bfd3e4139de6f7de08d5c8fb033fac3cd2b7851365"
+    },
+    {
+      "bytes": 689,
+      "path": "portability-receipt.json",
+      "sha256": "71167982a1718b5bfec27a23f75082c9e1a13d9258ff827b5419a47c12057b45"
+    },
+    {
+      "bytes": 1902,
+      "path": "portability.py",
+      "sha256": "ff6b85e021d378eaa243b304110ee36eb9dcae1874329d7d422e19a5deb39b1b"
+    },
+    {
+      "bytes": 18712,
+      "path": "sources/inherited-proof.md",
+      "sha256": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4"
+    },
+    {
+      "bytes": 5316,
+      "path": "sources/two-step-proof.md",
+      "sha256": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd"
+    },
+    {
+      "bytes": 2110,
+      "path": "verify.py",
+      "sha256": "939735657d74cb9c2e52576ef118ddb4b0ed06ff2c94695e892ac40721cd859c"
+    }
+  ],
+  "schema": "session53-modular-inputs-v1"
+}

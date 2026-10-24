@@ -1,0 +1,128 @@
+{
+  "binomial_square_root_bound": 240,
+  "c9": 26337699740,
+  "digit_counts_r_units_v1_nonzero": [
+    [
+      1,
+      3,
+      3,
+      6,
+      [
+        3,
+        1,
+        1,
+        2,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    [
+      2,
+      9,
+      18,
+      27,
+      [
+        54,
+        1,
+        2,
+        10,
+        3,
+        0,
+        8,
+        1,
+        2
+      ]
+    ],
+    [
+      3,
+      27,
+      81,
+      108,
+      [
+        621,
+        2,
+        3,
+        42,
+        6,
+        3,
+        39,
+        6,
+        7
+      ]
+    ],
+    [
+      4,
+      81,
+      324,
+      405,
+      [
+        6156,
+        11,
+        8,
+        164,
+        11,
+        16,
+        160,
+        19,
+        16
+      ]
+    ],
+    [
+      5,
+      243,
+      1215,
+      1458,
+      [
+        57591,
+        46,
+        35,
+        610,
+        30,
+        51,
+        605,
+        46,
+        35
+      ]
+    ]
+  ],
+  "hostiles": [
+    "simple swap mod9",
+    "mod27 strengthening",
+    "negative-index deletion",
+    "digit mutation",
+    "coefficientwise square root"
+  ],
+  "mod27_failure": 18,
+  "mod9_digit_bound": 240,
+  "scope": "FINITE-EXACT supplemental tests, not proof of infinite statements",
+  "status": "PASS",
+  "two_step_rows_p_nmax": [
+    [
+      2,
+      60
+    ],
+    [
+      3,
+      26
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      13,
+      1
+    ]
+  ]
+}

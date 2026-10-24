@@ -3,7 +3,7 @@ from pathlib import Path
 p=Path(__file__).resolve().parent
 manifest=json.loads((p/'MANIFEST.json').read_text())
 expected=set(manifest['files'])|{'MANIFEST.json'}
-actual={f.name for f in p.iterdir() if f.is_file()}
+actual={f.relative_to(p).as_posix() for f in p.rglob('*') if f.is_file()}
 if actual!=expected:raise RuntimeError('closed file set mismatch')
 for name,h in manifest['files'].items():
     if hashlib.sha256((p/name).read_bytes()).hexdigest()!=h:raise RuntimeError('hash mismatch '+name)

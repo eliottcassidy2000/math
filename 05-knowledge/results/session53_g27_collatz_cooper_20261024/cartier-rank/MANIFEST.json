@@ -1,0 +1,13 @@
+{
+  "status": "conditional structural corollary PASS",
+  "files": {
+    "REPORT.md": "7973b4c02d5c367a497a06773568f3ce3772f723eb7c2369416238dd4ed00829",
+    "check.py": "85c89e4adf2463692079082b24b46dcdb9ac425829cd1c6b2991bab9b78d7be3",
+    "hostile.py": "d1ea246814a33211df35aee24bd0c2ef71539fd1d956a1a281c57bfe9e61b5f2",
+    "inherited-root-proof.md": "fd7935e86a41854f67817d4f1b3b16d4fcd52134a72757debd2a9d1489ea66b4",
+    "inherited-two-step-proof.md": "4920e61b9c9260a1a91bd0952d9cee982a08ac18349d947d2a23d66361751cbd",
+    "normal.json": "642581d29b670a89a755104b47e5d16a20006546ae39554e822017ded44229dc",
+    "optimized.json": "642581d29b670a89a755104b47e5d16a20006546ae39554e822017ded44229dc",
+    "replay.py": "023ff60d2d711c45c50b92ff1e116b45fe0a6a3ea5bebc8c49d1ffdb23a2bc90"
+  }
+}
