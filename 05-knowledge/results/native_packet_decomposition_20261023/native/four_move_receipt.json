@@ -1,0 +1,345 @@
+{
+  "status": "PROVED exact invariant after finite authenticated label catalogue",
+  "sources": [
+    176,
+    1394,
+    1425,
+    1457,
+    1477,
+    1480,
+    1532,
+    1549,
+    1638,
+    1691,
+    1841,
+    1921,
+    1923,
+    1974,
+    2071,
+    2087,
+    2176,
+    2185,
+    2553,
+    2581,
+    2835,
+    2837,
+    2905,
+    2945,
+    3000,
+    3015,
+    3360,
+    3369
+  ],
+  "coefficients": [
+    -1,
+    -1,
+    0,
+    -1,
+    -2,
+    -2,
+    -1,
+    -1,
+    0,
+    0,
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    0,
+    -2,
+    0,
+    0,
+    0,
+    1,
+    -2,
+    1,
+    1,
+    0,
+    -1,
+    0
+  ],
+  "complete_distinct_pair_universe": 378,
+  "complete_four_slot_trades": [
+    {
+      "positive": [
+        176,
+        1923
+      ],
+      "negative": [
+        1394,
+        2837
+      ]
+    },
+    {
+      "positive": [
+        176,
+        2176
+      ],
+      "negative": [
+        1457,
+        2553
+      ]
+    },
+    {
+      "positive": [
+        176,
+        3000
+      ],
+      "negative": [
+        1841,
+        1923
+      ]
+    },
+    {
+      "positive": [
+        176,
+        3360
+      ],
+      "negative": [
+        1457,
+        1549
+      ]
+    },
+    {
+      "positive": [
+        1394,
+        2176
+      ],
+      "negative": [
+        1532,
+        3369
+      ]
+    },
+    {
+      "positive": [
+        1394,
+        2185
+      ],
+      "negative": [
+        1477,
+        1841
+      ]
+    },
+    {
+      "positive": [
+        1394,
+        2945
+      ],
+      "negative": [
+        2581,
+        2835
+      ]
+    },
+    {
+      "positive": [
+        1425,
+        1841
+      ],
+      "negative": [
+        1532,
+        2835
+      ]
+    },
+    {
+      "positive": [
+        1425,
+        1921
+      ],
+      "negative": [
+        1477,
+        2837
+      ]
+    },
+    {
+      "positive": [
+        1425,
+        1923
+      ],
+      "negative": [
+        2071,
+        3015
+      ]
+    },
+    {
+      "positive": [
+        1425,
+        2071
+      ],
+      "negative": [
+        1923,
+        3015
+      ]
+    },
+    {
+      "positive": [
+        1425,
+        3000
+      ],
+      "negative": [
+        2553,
+        2837
+      ]
+    },
+    {
+      "positive": [
+        1457,
+        1841
+      ],
+      "negative": [
+        1480,
+        2553
+      ]
+    },
+    {
+      "positive": [
+        1477,
+        1691
+      ],
+      "negative": [
+        1549,
+        3360
+      ]
+    },
+    {
+      "positive": [
+        1477,
+        3000
+      ],
+      "negative": [
+        1921,
+        2553
+      ]
+    },
+    {
+      "positive": [
+        1480,
+        1921
+      ],
+      "negative": [
+        2905,
+        3360
+      ]
+    },
+    {
+      "positive": [
+        1480,
+        1923
+      ],
+      "negative": [
+        2087,
+        2553
+      ]
+    },
+    {
+      "positive": [
+        1532,
+        2176
+      ],
+      "negative": [
+        2835,
+        3360
+      ]
+    },
+    {
+      "positive": [
+        1532,
+        2553
+      ],
+      "negative": [
+        1549,
+        2835
+      ]
+    },
+    {
+      "positive": [
+        1549,
+        1691
+      ],
+      "negative": [
+        2185,
+        3000
+      ]
+    },
+    {
+      "positive": [
+        1549,
+        2176
+      ],
+      "negative": [
+        2553,
+        3360
+      ]
+    },
+    {
+      "positive": [
+        1549,
+        2581
+      ],
+      "negative": [
+        2087,
+        2176
+      ]
+    },
+    {
+      "positive": [
+        1638,
+        1841
+      ],
+      "negative": [
+        1974,
+        2176
+      ]
+    },
+    {
+      "positive": [
+        1638,
+        2176
+      ],
+      "negative": [
+        1974,
+        2945
+      ]
+    },
+    {
+      "positive": [
+        1691,
+        1921
+      ],
+      "negative": [
+        1841,
+        2553
+      ]
+    },
+    {
+      "positive": [
+        1841,
+        2581
+      ],
+      "negative": [
+        3360,
+        3369
+      ]
+    },
+    {
+      "positive": [
+        1921,
+        2837
+      ],
+      "negative": [
+        2581,
+        3015
+      ]
+    }
+  ],
+  "endpoint_values": [
+    -4,
+    -8
+  ],
+  "incoming_critical_endpoint_values": [
+    1,
+    1
+  ],
+  "scope": "All fixed-margin original-dyadic moves of support at most4 in this complete28source binary supply, across all current signatures; arbitrary sequences preserve the displayed integer statistic. Budgets4/5 cannot connect these endpoints."
+}

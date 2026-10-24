@@ -1,0 +1,176 @@
+{
+  "checks": 81089,
+  "exhaustive": {
+    "feasible_menu_multisets": 240,
+    "local_connected_graphs": 10,
+    "ordered_endpoint_routes": 2327,
+    "universe": "all nonempty connected local graphs on subsets of 3 labelled resources; 1..3 slots"
+  },
+  "hash_convention": "UTF-8 text with CRLF normalized to LF",
+  "kernels": {
+    "extra_repeated_resource_walk": 1,
+    "noninjective_record_maps": 1890,
+    "random_cases": 600,
+    "same_resource_kernel_edges": 878,
+    "seed": 2026102301
+  },
+  "native": {
+    "cube_reconstruction": [
+      {
+        "blocks": 1,
+        "owners": 8,
+        "paths": 2,
+        "reservoir_words": 8
+      },
+      {
+        "blocks": 2,
+        "owners": 16,
+        "paths": 4,
+        "reservoir_words": 16
+      },
+      {
+        "blocks": 3,
+        "owners": 24,
+        "paths": 8,
+        "reservoir_words": 32
+      },
+      {
+        "blocks": 4,
+        "owners": 32,
+        "paths": 16,
+        "reservoir_words": 64
+      },
+      {
+        "blocks": 5,
+        "owners": 40,
+        "paths": 32,
+        "reservoir_words": 128
+      }
+    ],
+    "full_cube_routes": [
+      {
+        "base_blocks": 1,
+        "clock_work": 8,
+        "events": 4,
+        "horizontal": 2,
+        "slots": 2
+      },
+      {
+        "base_blocks": 2,
+        "clock_work": 28,
+        "events": 14,
+        "horizontal": 8,
+        "slots": 4
+      },
+      {
+        "base_blocks": 3,
+        "clock_work": 88,
+        "events": 44,
+        "horizontal": 24,
+        "slots": 8
+      },
+      {
+        "base_blocks": 4,
+        "clock_work": 240,
+        "events": 120,
+        "horizontal": 64,
+        "slots": 16
+      }
+    ]
+  },
+  "native_kernels": {
+    "exact_native_fibres": [
+      {
+        "full_records": 6,
+        "kernel_fibre_size": 3,
+        "normalized_reservoir_words": 8,
+        "normalized_tiles": 2,
+        "owners": 11,
+        "prefix_blocks": 1
+      },
+      {
+        "full_records": 12,
+        "kernel_fibre_size": 3,
+        "normalized_reservoir_words": 16,
+        "normalized_tiles": 4,
+        "owners": 19,
+        "prefix_blocks": 2
+      },
+      {
+        "full_records": 24,
+        "kernel_fibre_size": 3,
+        "normalized_reservoir_words": 32,
+        "normalized_tiles": 8,
+        "owners": 27,
+        "prefix_blocks": 3
+      },
+      {
+        "full_records": 48,
+        "kernel_fibre_size": 3,
+        "normalized_reservoir_words": 64,
+        "normalized_tiles": 16,
+        "owners": 35,
+        "prefix_blocks": 4
+      }
+    ],
+    "full_record_routes": [
+      {
+        "base_prefix_blocks": 1,
+        "events": 6,
+        "kernel_rotations": 2,
+        "owner_clock_work": 14,
+        "slots": 2,
+        "source_owners": 11,
+        "stabilized_owners": 19
+      },
+      {
+        "base_prefix_blocks": 2,
+        "events": 18,
+        "kernel_rotations": 4,
+        "owner_clock_work": 40,
+        "slots": 4,
+        "source_owners": 19,
+        "stabilized_owners": 27
+      },
+      {
+        "base_prefix_blocks": 3,
+        "events": 52,
+        "kernel_rotations": 8,
+        "owner_clock_work": 112,
+        "slots": 8,
+        "source_owners": 27,
+        "stabilized_owners": 35
+      }
+    ]
+  },
+  "shared_owner_hostile": [
+    {
+      "one_slot_component": 1,
+      "states": 2,
+      "workspace_bits": 0
+    },
+    {
+      "one_slot_component": 4,
+      "states": 8,
+      "workspace_bits": 1
+    },
+    {
+      "one_slot_component": 16,
+      "states": 32,
+      "workspace_bits": 2
+    },
+    {
+      "one_slot_component": 64,
+      "states": 128,
+      "workspace_bits": 3
+    }
+  ],
+  "source_sha256": {
+    "guarded_coverage_20261023/CUBES.md": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "guarded_coverage_20261023/PORTS.md": "7edb7e7bf542d7bcf5e0cf9d4724e6c2b758537f2d3f4c27d3f486c3a3f94d47",
+    "guarded_coverage_20261023/SYNTHESIS.md": "543ad38a202b1863fe6b18513b2feec061f7fd88c12fb4c4ae48f56a82d75558",
+    "session45_injective_multisource_moves_20261023/incoming-integration/WORKSPACE_BOUNDARY.md": "dc19e7b6057117b6d8b09139b131dd82bce6a83c0682916b1a716d2f2505b2ca",
+    "session45_injective_multisource_moves_20261023/injective-completion/THEOREM.md": "4268616ccb2432c999c5827e227ab4658ba4ad48d10c0aba11309336d96ca3ea"
+  },
+  "status": "FINITE-EXACT PASS; all-size theorem proved in ONE_BIT_WORKSPACE.md"
+}

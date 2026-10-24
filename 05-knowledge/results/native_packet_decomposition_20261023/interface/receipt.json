@@ -1,0 +1,69 @@
+{
+  "status": "FINITE-EXACT controls of proved endpoint-filter theorem",
+  "exhaustive": {
+    "pair_systems": 4096,
+    "charged_models": 32768,
+    "monotone_bottleneck_histogram": {
+      "1": 543,
+      "2": 5901,
+      "3": 7560,
+      "4": 18764
+    }
+  },
+  "records": {
+    "seed": 20261023,
+    "full_record_models": 500,
+    "charge_group": "Z x Z/4 x Z/2",
+    "normalized_kernel_hostile": true
+  },
+  "native": [
+    {
+      "slots": 8,
+      "implications": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "accepted_masks": [
+        0,
+        17,
+        238,
+        255
+      ],
+      "exact_integer_accepted": [
+        0,
+        17,
+        238,
+        255
+      ],
+      "sharp_monotone_slot_budget": 6
+    },
+    {
+      "slots": 16,
+      "implications": [],
+      "accepted_masks": [
+        0,
+        65535
+      ],
+      "exact_integer_accepted": [
+        0,
+        65535
+      ],
+      "sharp_monotone_slot_budget": 16
+    }
+  ],
+  "checks": 71637
+}

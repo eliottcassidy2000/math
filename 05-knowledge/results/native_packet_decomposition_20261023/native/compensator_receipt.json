@@ -1,0 +1,930 @@
+{
+  "one_active_full28_states": [
+    19339,
+    154890,
+    172374,
+    669441,
+    789774,
+    791833,
+    862222,
+    921867,
+    926532,
+    1369097,
+    1614350,
+    1630488,
+    2762498,
+    2884890,
+    4212798,
+    4372752,
+    4383249,
+    4391197,
+    4506433,
+    4588181,
+    4727349,
+    4795410,
+    4802068,
+    4932102,
+    5112146,
+    6063364,
+    6440204,
+    8536606,
+    8793348,
+    12618502,
+    12722205,
+    17073686,
+    17219858,
+    17302814,
+    33860108,
+    34342411,
+    37793296,
+    37923330,
+    38045722,
+    67773976
+  ],
+  "single_extra_source_controls": [
+    {
+      "source": 1480,
+      "states": [
+        789774,
+        4212798,
+        4383249,
+        4727349
+      ],
+      "components_at6": [
+        1,
+        1,
+        2
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 1532,
+      "states": [
+        172374,
+        789774,
+        926532,
+        4383249,
+        4506433,
+        5112146
+      ],
+      "components_at6": [
+        1,
+        2,
+        3
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 1549,
+      "states": [
+        19339,
+        789774,
+        4383249,
+        4588181
+      ],
+      "components_at6": [
+        1,
+        1,
+        2
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 1923,
+      "states": [
+        154890,
+        669441,
+        789774,
+        791833,
+        921867,
+        4372752,
+        4383249
+      ],
+      "components_at6": [
+        2,
+        5
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 2176,
+      "states": [
+        789774,
+        862222,
+        4383249,
+        4391197,
+        4795410,
+        4802068,
+        4932102
+      ],
+      "components_at6": [
+        1,
+        1,
+        5
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 2835,
+      "states": [
+        789774,
+        1369097,
+        1614350,
+        1630488,
+        4383249,
+        6063364
+      ],
+      "components_at6": [
+        1,
+        2,
+        3
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 2837,
+      "states": [
+        789774,
+        2762498,
+        2884890,
+        4383249,
+        6440204
+      ],
+      "components_at6": [
+        1,
+        1,
+        3
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 2945,
+      "states": [
+        789774,
+        4383249,
+        8536606,
+        8793348,
+        12618502,
+        12722205
+      ],
+      "components_at6": [
+        1,
+        2,
+        3
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 3000,
+      "states": [
+        789774,
+        4383249,
+        17073686,
+        17219858,
+        17302814
+      ],
+      "components_at6": [
+        1,
+        4
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 3015,
+      "states": [
+        789774,
+        4383249,
+        33860108,
+        34342411,
+        37793296,
+        37923330,
+        38045722
+      ],
+      "components_at6": [
+        2,
+        5
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 3360,
+      "states": [
+        789774,
+        4383249,
+        67773976
+      ],
+      "components_at6": [
+        1,
+        1,
+        1
+      ],
+      "endpoints_connected": false
+    },
+    {
+      "source": 3369,
+      "states": [
+        789774,
+        4383249
+      ],
+      "components_at6": [
+        1,
+        1
+      ],
+      "endpoints_connected": false
+    }
+  ],
+  "eligible_two_source_helper_pairs": [
+    {
+      "sources": [
+        1480,
+        2176
+      ],
+      "states": [
+        789774,
+        862222,
+        4212798,
+        4383249,
+        4391197,
+        4727349,
+        4787241,
+        4795410,
+        4802068,
+        4819504,
+        4932102
+      ],
+      "components_at6": [
+        1,
+        1,
+        9
+      ],
+      "one_active_route": [
+        789774,
+        862222,
+        4795410,
+        4802068,
+        4727349,
+        4383249
+      ]
+    },
+    {
+      "sources": [
+        1480,
+        3015
+      ],
+      "states": [
+        789774,
+        4212798,
+        4383249,
+        4727349,
+        33836578,
+        33860108,
+        34342411,
+        37793296,
+        37923330,
+        38022177,
+        38045722,
+        38283568
+      ],
+      "components_at6": [
+        12
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        1532,
+        1923
+      ],
+      "states": [
+        154890,
+        172374,
+        267868,
+        397902,
+        414040,
+        669441,
+        789774,
+        791833,
+        921867,
+        926532,
+        4331090,
+        4372752,
+        4383249,
+        4506433,
+        5112146,
+        5140544
+      ],
+      "components_at6": [
+        16
+      ],
+      "one_active_route": [
+        789774,
+        921867,
+        5112146,
+        172374,
+        4372752,
+        4383249
+      ]
+    },
+    {
+      "sources": [
+        1549,
+        2835
+      ],
+      "states": [
+        19339,
+        789774,
+        1369097,
+        1614350,
+        1630488,
+        1713028,
+        1835420,
+        4383249,
+        4588181,
+        5292929,
+        5637251,
+        5898642,
+        6063364
+      ],
+      "components_at6": [
+        13
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        1923,
+        2835
+      ],
+      "states": [
+        154890,
+        669441,
+        789774,
+        791833,
+        921867,
+        1369097,
+        1614350,
+        1630488,
+        4372752,
+        4383249,
+        5428480,
+        6063364
+      ],
+      "components_at6": [
+        3,
+        9
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        1923,
+        3369
+      ],
+      "states": [
+        154890,
+        669441,
+        789774,
+        791833,
+        921867,
+        4372752,
+        4383249,
+        134757385,
+        134789648
+      ],
+      "components_at6": [
+        9
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        2176,
+        2945
+      ],
+      "states": [
+        789774,
+        862222,
+        4383249,
+        4391197,
+        4795410,
+        4802068,
+        4932102,
+        8536606,
+        8793348,
+        9003777,
+        9111049,
+        12618502,
+        12722205,
+        12814360,
+        13058068
+      ],
+      "components_at6": [
+        1,
+        2,
+        12
+      ],
+      "one_active_route": [
+        789774,
+        862222,
+        4795410,
+        4802068,
+        4932102,
+        8536606,
+        12722205,
+        4383249
+      ]
+    },
+    {
+      "sources": [
+        2176,
+        3015
+      ],
+      "states": [
+        789774,
+        862222,
+        4383249,
+        4391197,
+        4795410,
+        4802068,
+        4932102,
+        33860108,
+        33924101,
+        34014977,
+        34185492,
+        34342411,
+        37793296,
+        37923330,
+        38045722
+      ],
+      "components_at6": [
+        1,
+        14
+      ],
+      "one_active_route": [
+        789774,
+        862222,
+        4795410,
+        37793296,
+        4383249
+      ]
+    },
+    {
+      "sources": [
+        2945,
+        3000
+      ],
+      "states": [
+        789774,
+        4383249,
+        8536606,
+        8793348,
+        12618502,
+        12722205,
+        17073686,
+        17219858,
+        17302814,
+        25306388,
+        30048268
+      ],
+      "components_at6": [
+        1,
+        10
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        2945,
+        3369
+      ],
+      "states": [
+        789774,
+        4383249,
+        8536606,
+        8793348,
+        12618502,
+        12722205,
+        143395858,
+        146951172,
+        147718149
+      ],
+      "components_at6": [
+        1,
+        8
+      ],
+      "one_active_route": null
+    },
+    {
+      "sources": [
+        3000,
+        3015
+      ],
+      "states": [
+        789774,
+        4383249,
+        17073686,
+        17219858,
+        17302814,
+        33860108,
+        34342411,
+        37793296,
+        37923330,
+        38045722,
+        50373148,
+        54952196,
+        55312920
+      ],
+      "components_at6": [
+        13
+      ],
+      "one_active_route": null
+    }
+  ],
+  "selected_two_source_helper": {
+    "sources": [
+      1532,
+      1923
+    ],
+    "states": [
+      154890,
+      172374,
+      267868,
+      397902,
+      414040,
+      669441,
+      789774,
+      791833,
+      921867,
+      926532,
+      4331090,
+      4372752,
+      4383249,
+      4506433,
+      5112146,
+      5140544
+    ],
+    "components_at6": [
+      16
+    ],
+    "one_active_route": [
+      789774,
+      921867,
+      5112146,
+      172374,
+      4372752,
+      4383249
+    ]
+  },
+  "selected_route": [
+    789774,
+    921867,
+    5112146,
+    172374,
+    4372752,
+    4383249
+  ],
+  "selected_route_debt_ledger": [
+    {
+      "mask": 789774,
+      "V_sources": [
+        1394,
+        1425,
+        1457,
+        1638,
+        1841,
+        1921,
+        2553,
+        2581
+      ],
+      "outside_V_sources": [],
+      "old16_V_sum": 1016,
+      "outside_V_sum": 0,
+      "old16_V_count": 8,
+      "outside_V_count": 0,
+      "source_charge_X_change_old16": 0,
+      "source_charge_X_change_outside": 0,
+      "target_U_degree_delta_old16": 0,
+      "target_U_degree_delta_outside": 0,
+      "U_debt_old16": 0,
+      "U_debt_outside": 0,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 0,
+      "outside_binary_source_charge": 0,
+      "old16_binary_residual": 0,
+      "outside_binary_residual": 0,
+      "V_debts": "negatives of U debts"
+    },
+    {
+      "mask": 921867,
+      "V_sources": [
+        176,
+        1394,
+        1457,
+        1638,
+        1923,
+        2185,
+        2553,
+        2581
+      ],
+      "outside_V_sources": [
+        1923
+      ],
+      "old16_V_sum": 877,
+      "outside_V_sum": 139,
+      "old16_V_count": 7,
+      "outside_V_count": 1,
+      "source_charge_X_change_old16": -278,
+      "source_charge_X_change_outside": 278,
+      "target_U_degree_delta_old16": 2,
+      "target_U_degree_delta_outside": -2,
+      "U_debt_old16": 14,
+      "U_debt_outside": -14,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 0,
+      "outside_binary_source_charge": 0,
+      "old16_binary_residual": 13,
+      "outside_binary_residual": 13,
+      "V_debts": "negatives of U debts"
+    },
+    {
+      "mask": 5112146,
+      "V_sources": [
+        1394,
+        1477,
+        1532,
+        1638,
+        2185,
+        2553,
+        2581,
+        2905
+      ],
+      "outside_V_sources": [
+        1532
+      ],
+      "old16_V_sum": 843,
+      "outside_V_sum": 173,
+      "old16_V_count": 7,
+      "outside_V_count": 1,
+      "source_charge_X_change_old16": -346,
+      "source_charge_X_change_outside": 346,
+      "target_U_degree_delta_old16": 2,
+      "target_U_degree_delta_outside": -2,
+      "U_debt_old16": -54,
+      "U_debt_outside": 54,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 5,
+      "outside_binary_source_charge": 5,
+      "old16_binary_residual": 8,
+      "outside_binary_residual": 8,
+      "V_debts": "negatives of U debts"
+    },
+    {
+      "mask": 172374,
+      "V_sources": [
+        1394,
+        1425,
+        1477,
+        1532,
+        1638,
+        1974,
+        2087,
+        2185
+      ],
+      "outside_V_sources": [
+        1532
+      ],
+      "old16_V_sum": 843,
+      "outside_V_sum": 173,
+      "old16_V_count": 7,
+      "outside_V_count": 1,
+      "source_charge_X_change_old16": -346,
+      "source_charge_X_change_outside": 346,
+      "target_U_degree_delta_old16": 2,
+      "target_U_degree_delta_outside": -2,
+      "U_debt_old16": -54,
+      "U_debt_outside": 54,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 5,
+      "outside_binary_source_charge": 5,
+      "old16_binary_residual": 8,
+      "outside_binary_residual": 8,
+      "V_debts": "negatives of U debts"
+    },
+    {
+      "mask": 4372752,
+      "V_sources": [
+        1477,
+        1638,
+        1921,
+        1923,
+        1974,
+        2087,
+        2185,
+        2905
+      ],
+      "outside_V_sources": [
+        1923
+      ],
+      "old16_V_sum": 877,
+      "outside_V_sum": 139,
+      "old16_V_count": 7,
+      "outside_V_count": 1,
+      "source_charge_X_change_old16": -278,
+      "source_charge_X_change_outside": 278,
+      "target_U_degree_delta_old16": 2,
+      "target_U_degree_delta_outside": -2,
+      "U_debt_old16": 14,
+      "U_debt_outside": -14,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 0,
+      "outside_binary_source_charge": 0,
+      "old16_binary_residual": 13,
+      "outside_binary_residual": 13,
+      "V_debts": "negatives of U debts"
+    },
+    {
+      "mask": 4383249,
+      "V_sources": [
+        176,
+        1477,
+        1691,
+        1974,
+        2071,
+        2087,
+        2185,
+        2905
+      ],
+      "outside_V_sources": [],
+      "old16_V_sum": 1016,
+      "outside_V_sum": 0,
+      "old16_V_count": 8,
+      "outside_V_count": 0,
+      "source_charge_X_change_old16": 0,
+      "source_charge_X_change_outside": 0,
+      "target_U_degree_delta_old16": 0,
+      "target_U_degree_delta_outside": 0,
+      "U_debt_old16": 0,
+      "U_debt_outside": 0,
+      "U_debt_total": 0,
+      "old16_binary_source_charge": 0,
+      "outside_binary_source_charge": 0,
+      "old16_binary_residual": 0,
+      "outside_binary_residual": 0,
+      "V_debts": "negatives of U debts"
+    }
+  ],
+  "selected_route_events": [
+    {
+      "before": 789774,
+      "after": 921867,
+      "changed_sources": [
+        176,
+        1425,
+        1841,
+        1921,
+        1923,
+        2185
+      ],
+      "slot_cost": 6,
+      "ordinary_owner_clock_occurrences": 15
+    },
+    {
+      "before": 921867,
+      "after": 5112146,
+      "changed_sources": [
+        176,
+        1457,
+        1477,
+        1532,
+        1923,
+        2905
+      ],
+      "slot_cost": 6,
+      "ordinary_owner_clock_occurrences": 16
+    },
+    {
+      "before": 5112146,
+      "after": 172374,
+      "changed_sources": [
+        1425,
+        1974,
+        2087,
+        2553,
+        2581,
+        2905
+      ],
+      "slot_cost": 6,
+      "ordinary_owner_clock_occurrences": 15
+    },
+    {
+      "before": 172374,
+      "after": 4372752,
+      "changed_sources": [
+        1394,
+        1425,
+        1532,
+        1921,
+        1923,
+        2905
+      ],
+      "slot_cost": 6,
+      "ordinary_owner_clock_occurrences": 16
+    },
+    {
+      "before": 4372752,
+      "after": 4383249,
+      "changed_sources": [
+        176,
+        1638,
+        1691,
+        1921,
+        1923,
+        2071
+      ],
+      "slot_cost": 6,
+      "ordinary_owner_clock_occurrences": 14
+    }
+  ],
+  "selected_full_restricted_thresholds": [
+    {
+      "budget": 2,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "budget": 4,
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "budget": 6,
+      "component_sizes": [
+        16
+      ]
+    },
+    {
+      "budget": 8,
+      "component_sizes": [
+        16
+      ]
+    }
+  ],
+  "selected_one_active_states": [
+    154890,
+    172374,
+    669441,
+    789774,
+    791833,
+    921867,
+    926532,
+    4372752,
+    4383249,
+    4506433,
+    5112146
+  ],
+  "selected_one_active_components_at6": [
+    11
+  ],
+  "remaining_fixed_U_sources": [
+    1480,
+    1549,
+    2176,
+    2835,
+    2837,
+    2945,
+    3000,
+    3015,
+    3360,
+    3369
+  ]
+}
