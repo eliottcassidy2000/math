@@ -1,0 +1,200 @@
+{
+  "schema": "sha256-byte-pinned-v1",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "bytes": 9031,
+      "sha256": "40280cceaea690d207c525b04a975f617bec603f781505da5c691d1a8fccacf0"
+    },
+    {
+      "path": "PRODUCER_PINS.json",
+      "bytes": 3233,
+      "sha256": "da5d8c0e57e8dd8996cc7e4b4c867fb18703f98f86e597d63576cca83a2761c6"
+    },
+    {
+      "path": "PRODUCER_REPLAY.json",
+      "bytes": 339,
+      "sha256": "f84893fa761c7f5fdafe0594e40f72e986b087abe8218c135705723a3216af48"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1951,
+      "sha256": "6799683f452a9925699444d84ee359ac2aad964f393c697c41984224e4154dee"
+    },
+    {
+      "path": "REPLAY.json",
+      "bytes": 695,
+      "sha256": "3b91cb75062fea2105ad5856c60e10a9eaf41788c867cc962a1ec14bdd9bb14e"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1393,
+      "sha256": "a062519341b3e1e8ec2216427520140811d0fd7687e6859afb595c30613beb59"
+    },
+    {
+      "path": "SUMMARY.json",
+      "bytes": 791,
+      "sha256": "d0fa5f2e5fb96611defe1eb531f122d8dadc9f02236f87a389b8a8c08e47c00e"
+    },
+    {
+      "path": "check.py",
+      "bytes": 12148,
+      "sha256": "0e089629c8ac019f65add5c8c2e3f41dde9c9290eb5de7160877a1b9a63372b4"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 8723,
+      "sha256": "b373a8dbb103421a62fbed4995ac322a995492d643867d7a9bc597c89a883a23"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 8723,
+      "sha256": "b373a8dbb103421a62fbed4995ac322a995492d643867d7a9bc597c89a883a23"
+    },
+    {
+      "path": "producer/MANIFEST.json",
+      "bytes": 3002,
+      "sha256": "1c868b6bbfcc01850a2ea523ab7e690fad0a91c506449869f604b74bce543afe"
+    },
+    {
+      "path": "producer/README.md",
+      "bytes": 2438,
+      "sha256": "02ac2dfafa65eced76e89d4c88b7756c55e9994b96f96b6acc1cf4d469fc8b64"
+    },
+    {
+      "path": "producer/THEOREM.md",
+      "bytes": 13372,
+      "sha256": "dd177251501acdaa091f1fea6ed1d9fd046971939d5714cec869a8e5609b1618"
+    },
+    {
+      "path": "producer/blind_prediction.json",
+      "bytes": 1485,
+      "sha256": "ddb712abb41faa8c76f4ad8902505c11046dc0e44919efa4dc1dd86ba4f17326"
+    },
+    {
+      "path": "producer/check.py",
+      "bytes": 10537,
+      "sha256": "e05d7b1876953143f8ac83b711a3c4dd488120255d0e04137e0a2f398613c87b"
+    },
+    {
+      "path": "producer/eight_moments.json",
+      "bytes": 164,
+      "sha256": "2d7fe6099fb9cd8cb0cfdb7938c1d8f40bde1fc4b447161052dee69d2a88a65d"
+    },
+    {
+      "path": "producer/hand_certificate.json",
+      "bytes": 777,
+      "sha256": "d61fab69ada7a7bb2d813720d68301d8940d29726f206235171d57be6e3c83dd"
+    },
+    {
+      "path": "producer/modular_prediction.json",
+      "bytes": 508,
+      "sha256": "39711a147a6693b42c2245c37378fbfa32dfd37481e0699589a055d456936010"
+    },
+    {
+      "path": "producer/moment_inputs.json",
+      "bytes": 1929,
+      "sha256": "4a32ed8de3468e979425aad0fb65adc41f34ffb15c09c2c35bf141b6c4d79d88"
+    },
+    {
+      "path": "producer/normal.json",
+      "bytes": 200093,
+      "sha256": "08bef807fa52b2ac2f32328589b5a1ca19a59bf3e76a6981ecacc5d606a5ead4"
+    },
+    {
+      "path": "producer/optimized.json",
+      "bytes": 200093,
+      "sha256": "08bef807fa52b2ac2f32328589b5a1ca19a59bf3e76a6981ecacc5d606a5ead4"
+    },
+    {
+      "path": "producer/predictor.py",
+      "bytes": 6666,
+      "sha256": "7936010229e6a87a941ef1a91edcc8c4806137faffccf20e25d24ac79ada1313"
+    },
+    {
+      "path": "producer/sources/SOURCE_PINS.json",
+      "bytes": 1652,
+      "sha256": "0f0800d262953cad93ad676d7e2d150cece7d661321022fc9bbc8b02808c88ad"
+    },
+    {
+      "path": "producer/sources/fibre_theorem.txt",
+      "bytes": 9507,
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+    },
+    {
+      "path": "producer/sources/merged_nodes.tsv.txt",
+      "bytes": 134104,
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "path": "producer/sources/observer_theorem.txt",
+      "bytes": 17119,
+      "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4"
+    },
+    {
+      "path": "producer/sources/rigid_strong_theorem.txt",
+      "bytes": 14810,
+      "sha256": "02e10c2f7b0676b84b257fdf1cb6b6e2fa69e84f00d72d1957af448480603975"
+    },
+    {
+      "path": "producer/sources/small_fibre_audit.json.txt",
+      "bytes": 248364,
+      "sha256": "fb137d01103be6a30af6b6cf083998b70092830af193f642cd00e2bbc05a1396"
+    },
+    {
+      "path": "producer/twelve_residues.json",
+      "bytes": 128,
+      "sha256": "81181263418a700fa5424956dcebb0806e1fecc44874927a0d993f9c6c4144e5"
+    },
+    {
+      "path": "producer/verify_packet.py",
+      "bytes": 2018,
+      "sha256": "9a8288c0d191852d8f5f8892d03e4583d789b913e0ec5a20bfd2e4697d1ccd82"
+    },
+    {
+      "path": "reconstruct.py",
+      "bytes": 4345,
+      "sha256": "2368ca5d9fdbdaccc773171a10cd731ea3f07f81a027573ce9f9e336d18f7b21"
+    },
+    {
+      "path": "simple_certificate.py",
+      "bytes": 1619,
+      "sha256": "dc92a485cb927e8a41883227a43cb5c116a49d78e3cd0a31ce6b5a541412273c"
+    },
+    {
+      "path": "sources/explicit_matrices.json.txt",
+      "bytes": 16503,
+      "sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd"
+    },
+    {
+      "path": "sources/fibre_theorem.txt",
+      "bytes": 9507,
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+    },
+    {
+      "path": "sources/merged_nodes.tsv.txt",
+      "bytes": 134104,
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "path": "sources/observer_theorem.txt",
+      "bytes": 17119,
+      "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4"
+    },
+    {
+      "path": "sources.txt",
+      "bytes": 6572,
+      "sha256": "fe70649ae5931edadac8a56883ced656724b287c5391feeeb0f6afa7a9ce7c30"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 2318,
+      "sha256": "1a32c7b7ca2dce87f2d64df629aabc54c1de2f5860ec8d24b59422049ac9f2c3"
+    },
+    {
+      "path": "verify_producer.py",
+      "bytes": 3441,
+      "sha256": "9f3d128996b8d4158aad0a7ccdd4bc4e59ebcd460d6d26e8b84359324f111f3f"
+    }
+  ]
+}

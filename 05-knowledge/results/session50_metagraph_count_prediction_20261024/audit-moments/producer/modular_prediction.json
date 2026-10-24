@@ -1,0 +1,28 @@
+{
+  "candidate_count": 1,
+  "congruence": {
+    "constant_inverse_mod_modulus": 2137161,
+    "exponent": 22,
+    "k": 12,
+    "modulus": 4194304,
+    "polynomial_coefficients": [
+      316234143225,
+      -703416314160,
+      590546123298,
+      -264300628944,
+      72578259391,
+      -13137458400,
+      1628301884,
+      -140529312,
+      8439783,
+      -345840,
+      9218,
+      -144,
+      1
+    ],
+    "residue": 6880
+  },
+  "first_candidate": 6880,
+  "prediction": 6880,
+  "universe_size": 2097152
+}

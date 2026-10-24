@@ -1,0 +1,147 @@
+Session50 independent finite-moment reconstruction audit. Historical snapshots under sources/ are inert data. Frozen producer code is executed only through isolated subprocess replays.
+
+sources/merged_nodes.tsv.txt
+  commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  repository path: 05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/sources/merged_nodes.tsv.txt
+  sha256: 61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835
+  bytes: 134104
+
+sources/observer_theorem.txt
+  commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  repository path: 05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/THEOREM.md
+  sha256: 0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4
+  bytes: 17119
+
+sources/fibre_theorem.txt
+  commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  repository path: 01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md
+  sha256: 0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0
+  bytes: 9507
+
+sources/explicit_matrices.json.txt
+  commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  repository path: 05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/sources/prior_four_source_packet.json.txt
+  sha256: 2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd
+  bytes: 16503
+
+Producer packet snapshot (new Session50 work, not yet committed when copied):
+
+producer/THEOREM.md
+  original workspace path: session50-mass-predictions/THEOREM.md
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: dd177251501acdaa091f1fea6ed1d9fd046971939d5714cec869a8e5609b1618
+  bytes: 13372
+
+producer/README.md
+  original workspace path: session50-mass-predictions/README.md
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 02ac2dfafa65eced76e89d4c88b7756c55e9994b96f96b6acc1cf4d469fc8b64
+  bytes: 2438
+
+producer/predictor.py
+  original workspace path: session50-mass-predictions/predictor.py
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 7936010229e6a87a941ef1a91edcc8c4806137faffccf20e25d24ac79ada1313
+  bytes: 6666
+
+producer/check.py
+  original workspace path: session50-mass-predictions/check.py
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: e05d7b1876953143f8ac83b711a3c4dd488120255d0e04137e0a2f398613c87b
+  bytes: 10537
+
+producer/verify_packet.py
+  original workspace path: session50-mass-predictions/verify_packet.py
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 9a8288c0d191852d8f5f8892d03e4583d789b913e0ec5a20bfd2e4697d1ccd82
+  bytes: 2018
+
+producer/moment_inputs.json
+  original workspace path: session50-mass-predictions/moment_inputs.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 4a32ed8de3468e979425aad0fb65adc41f34ffb15c09c2c35bf141b6c4d79d88
+  bytes: 1929
+
+producer/eight_moments.json
+  original workspace path: session50-mass-predictions/eight_moments.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 2d7fe6099fb9cd8cb0cfdb7938c1d8f40bde1fc4b447161052dee69d2a88a65d
+  bytes: 164
+
+producer/twelve_residues.json
+  original workspace path: session50-mass-predictions/twelve_residues.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 81181263418a700fa5424956dcebb0806e1fecc44874927a0d993f9c6c4144e5
+  bytes: 128
+
+producer/blind_prediction.json
+  original workspace path: session50-mass-predictions/blind_prediction.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: ddb712abb41faa8c76f4ad8902505c11046dc0e44919efa4dc1dd86ba4f17326
+  bytes: 1485
+
+producer/modular_prediction.json
+  original workspace path: session50-mass-predictions/modular_prediction.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 39711a147a6693b42c2245c37378fbfa32dfd37481e0699589a055d456936010
+  bytes: 508
+
+producer/normal.json
+  original workspace path: session50-mass-predictions/normal.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 08bef807fa52b2ac2f32328589b5a1ca19a59bf3e76a6981ecacc5d606a5ead4
+  bytes: 200093
+
+producer/optimized.json
+  original workspace path: session50-mass-predictions/optimized.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 08bef807fa52b2ac2f32328589b5a1ca19a59bf3e76a6981ecacc5d606a5ead4
+  bytes: 200093
+
+producer/sources/SOURCE_PINS.json
+  original workspace path: session50-mass-predictions/sources/SOURCE_PINS.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 0f0800d262953cad93ad676d7e2d150cece7d661321022fc9bbc8b02808c88ad
+  bytes: 1652
+
+producer/sources/fibre_theorem.txt
+  original workspace path: session50-mass-predictions/sources/fibre_theorem.txt
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0
+  bytes: 9507
+
+producer/sources/merged_nodes.tsv.txt
+  original workspace path: session50-mass-predictions/sources/merged_nodes.tsv.txt
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835
+  bytes: 134104
+
+producer/sources/observer_theorem.txt
+  original workspace path: session50-mass-predictions/sources/observer_theorem.txt
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4
+  bytes: 17119
+
+producer/sources/rigid_strong_theorem.txt
+  original workspace path: session50-mass-predictions/sources/rigid_strong_theorem.txt
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 02e10c2f7b0676b84b257fdf1cb6b6e2fa69e84f00d72d1957af448480603975
+  bytes: 14810
+
+producer/sources/small_fibre_audit.json.txt
+  original workspace path: session50-mass-predictions/sources/small_fibre_audit.json.txt
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: fb137d01103be6a30af6b6cf083998b70092830af193f642cd00e2bbc05a1396
+  bytes: 248364
+
+producer/hand_certificate.json
+  original workspace path: session50-mass-predictions/hand_certificate.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: d61fab69ada7a7bb2d813720d68301d8940d29726f206235171d57be6e3c83dd
+  bytes: 777
+
+producer/MANIFEST.json
+  original workspace path: session50-mass-predictions/MANIFEST.json
+  base source commit: f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390
+  sha256: 1c868b6bbfcc01850a2ea523ab7e690fad0a91c506449869f604b74bce543afe
+  bytes: 3002

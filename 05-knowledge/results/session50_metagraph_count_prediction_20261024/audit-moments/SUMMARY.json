@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+  "independent_order8_rows_checked": 3528,
+  "fresh_small_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "eight_moments": [
+    2097152,
+    810198400,
+    351545786720,
+    164084691719200,
+    80658618203874752,
+    41239651789795691200,
+    21752734067701334577440,
+    11769806604752582871641440
+  ],
+  "modulus": 32768,
+  "residue": 6880,
+  "optimized_integer_interval": [
+    6699,
+    26344
+  ],
+  "short_integer_interval": [
+    1,
+    31785
+  ],
+  "short_exact_upper": "496641366973194539/15625000000000",
+  "prediction": 6880,
+  "scope": "Exact inference from already known finite metagraph mass moments; not an n-only count formula or a demonstrated faster enumeration algorithm."
+}

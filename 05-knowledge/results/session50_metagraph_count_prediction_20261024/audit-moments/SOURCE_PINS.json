@@ -1,0 +1,30 @@
+[
+  {
+    "snapshot": "sources/merged_nodes.tsv.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/sources/merged_nodes.tsv.txt",
+    "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835",
+    "bytes": 134104
+  },
+  {
+    "snapshot": "sources/observer_theorem.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/THEOREM.md",
+    "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4",
+    "bytes": 17119
+  },
+  {
+    "snapshot": "sources/fibre_theorem.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+    "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0",
+    "bytes": 9507
+  },
+  {
+    "snapshot": "sources/explicit_matrices.json.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/sources/prior_four_source_packet.json.txt",
+    "sha256": "2e99b5b0e1e900f4474c970e20a984e07890173d80e618be317fb563b7a6dbfd",
+    "bytes": 16503
+  }
+]

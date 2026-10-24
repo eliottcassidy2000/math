@@ -1,0 +1,10 @@
+{
+  "actual_producer_manifest_only_replay": true,
+  "independent_exact_bounds_and_modular_agreement": true,
+  "independent_short_certificate_agreement": true,
+  "producer_blind_isolated_replay": true,
+  "producer_normal_optimized_identical": true,
+  "producer_pinned_files": 20,
+  "source_manifest_payload_files": 19,
+  "status": "PASS"
+}

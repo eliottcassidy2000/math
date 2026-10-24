@@ -1,0 +1,37 @@
+[
+  {
+    "snapshot": "observer_theorem.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/THEOREM.md",
+    "bytes": 17119,
+    "sha256": "0d3012cfa029877f1e32e10c9c73d778ee80ba0a5aa1f0ca44be6068a89487a4"
+  },
+  {
+    "snapshot": "merged_nodes.tsv.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/observer-moments/sources/merged_nodes.tsv.txt",
+    "bytes": 134104,
+    "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+  },
+  {
+    "snapshot": "small_fibre_audit.json.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/tournament_tiling_metagraph_fibre_inverse_codex_S8.json",
+    "bytes": 248364,
+    "sha256": "fb137d01103be6a30af6b6cf083998b70092830af193f642cd00e2bbc05a1396"
+  },
+  {
+    "snapshot": "fibre_theorem.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+    "bytes": 9507,
+    "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+  },
+  {
+    "snapshot": "rigid_strong_theorem.txt",
+    "source_commit": "f26bc37f4e77f72a7ce4e4f9eabf2b271acc3390",
+    "source_path": "05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md",
+    "bytes": 14810,
+    "sha256": "02e10c2f7b0676b84b257fdf1cb6b6e2fa69e84f00d72d1957af448480603975"
+  }
+]
