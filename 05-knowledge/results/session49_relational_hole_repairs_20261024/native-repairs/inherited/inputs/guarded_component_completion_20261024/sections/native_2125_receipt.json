@@ -1,0 +1,215 @@
+{
+  "H": 401,
+  "X": 122,
+  "actual_clock_cost": 8,
+  "all_reserved_closed_words": 656,
+  "aut": 1,
+  "canon": 35799846,
+  "checks": 596,
+  "converse_blocks": [
+    [
+      2,
+      6,
+      5
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "fixed_clocks": [],
+  "full_UV_count": 2,
+  "label": [
+    122,
+    0,
+    0,
+    1,
+    0
+  ],
+  "nontrivial_common_clock_sets": [],
+  "raw_block_guard_count": 19,
+  "raw_block_guard_target_counts": {
+    "113": 1,
+    "1293": 1,
+    "1303": 1,
+    "1481": 1,
+    "1722": 1,
+    "1924": 1,
+    "1965": 1,
+    "1968": 1,
+    "2073": 1,
+    "2234": 1,
+    "2267": 1,
+    "260": 1,
+    "2863": 1,
+    "365": 1,
+    "400": 1,
+    "424": 1,
+    "553": 1,
+    "927": 1,
+    "930": 1
+  },
+  "records": [
+    {
+      "capacity": {
+        "black": 2,
+        "blue": 0,
+        "selected_weight": 2
+      },
+      "closed_words": [
+        116132,
+        207032,
+        1890119,
+        1981019
+      ],
+      "kernel_lifts": [
+        [
+          5,
+          6,
+          2,
+          0,
+          7,
+          3,
+          4,
+          1
+        ]
+      ],
+      "mask": 1890119,
+      "path": [
+        5,
+        6,
+        2,
+        0,
+        7,
+        3,
+        4,
+        1
+      ],
+      "phase": 0,
+      "resource": 116132,
+      "target": 1965
+    },
+    {
+      "capacity": {
+        "black": 2,
+        "blue": 0,
+        "selected_weight": 2
+      },
+      "closed_words": [
+        491209,
+        666659,
+        1430492,
+        1605942
+      ],
+      "kernel_lifts": [
+        [
+          7,
+          1,
+          0,
+          3,
+          4,
+          5,
+          6,
+          2
+        ]
+      ],
+      "mask": 1605942,
+      "path": [
+        7,
+        1,
+        0,
+        3,
+        4,
+        5,
+        6,
+        2
+      ],
+      "phase": 0,
+      "resource": 491209,
+      "target": 2234
+    }
+  ],
+  "relative_clock_cycle": [
+    0,
+    5,
+    3,
+    2,
+    7,
+    1,
+    6,
+    4
+  ],
+  "retained_blocks": [
+    [
+      5,
+      6,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "scope": "Actual full native path menus, kernels, inverse/converse capacities and target-margin filter; XOR tree is a record predicate, not an asserted shared-owner host embedding.",
+  "source": 2125,
+  "status": "FINITE-EXACT native relative-block repair of coupled pair-predicate obstruction",
+  "supply_hash": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357",
+  "xor_tree": {
+    "all_triples": [
+      [
+        776,
+        1182,
+        2638
+      ],
+      [
+        1391,
+        1948,
+        3139
+      ],
+      [
+        1400,
+        3111,
+        3139
+      ],
+      [
+        2439,
+        2728,
+        3139
+      ]
+    ],
+    "center": 368,
+    "full72_pairs": [
+      [
+        1596,
+        2125
+      ]
+    ],
+    "leaves": [
+      776,
+      3139
+    ],
+    "missing": [
+      1509
+    ],
+    "new_count": 54,
+    "occupancy": 4,
+    "old_count": 53,
+    "repair_witnesses": [
+      [
+        368,
+        676,
+        1770,
+        2125
+      ],
+      [
+        776,
+        1596,
+        3139,
+        2125
+      ]
+    ],
+    "repaired_charge_count": 2048,
+    "residual_pair": 239,
+    "residual_triple": 305
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "checks": 30054,
+  "compared_exact_boundary_minima": 7378,
+  "compared_support_grades": 2100,
+  "compared_tables": 105,
+  "independent_receipt_sha256": "edee80e42b94fdb93d348792df71da7ff2e3cc8e35d8b95ffa7c5e8f7ea2d9ab",
+  "producer_certificate_sha256": "2577ff7c9acb1dab103afbdd78407b367b3c33e531a9b764877f583c9b89f13f",
+  "scope": "All original producer support bitmaps, full complete-grade lists, first holes, source costs, all per-charge boundary minima and supplied minimizing masks match the independent audit.",
+  "status": "PASS"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "archive": "archives/inherited_receiver_theorem.txt",
+    "original_path": "session48-receiver-repairs/THEOREM.md",
+    "bytes": 14503,
+    "sha256": "c8b6b953af1945b998601d27b4b5b320314c9d99ca10aaa7d78409a3c57a33d6",
+    "role": "Historical/proof reference only, not an input to the independent audit."
+  },
+  {
+    "archive": "archives/producer_theorem.txt",
+    "original_path": "session49-native-repairs/THEOREM.md",
+    "bytes": 14329,
+    "sha256": "3e567d13eb0b8c20c28126a15edf1a6bda9960dd33432ba4fd6910930ce5ed6e",
+    "role": "Historical/proof reference only, not an input to the independent audit."
+  },
+  {
+    "archive": "archives/producer_check.py.txt",
+    "original_path": "session49-native-repairs/check.py",
+    "bytes": 17096,
+    "sha256": "6cffe3e220a57089ce690b3d4c8f43dfb56c0a8157f2fb73e6af4b8e8ff47ba8",
+    "role": "Historical/proof reference only, not an input to the independent audit."
+  },
+  {
+    "archive": "archives/producer_certificate.json",
+    "original_path": "session49-native-repairs/certificate.json",
+    "bytes": 2029830,
+    "sha256": "2577ff7c9acb1dab103afbdd78407b367b3c33e531a9b764877f583c9b89f13f",
+    "role": "Historical/proof reference only, not an input to the independent audit."
+  }
+]

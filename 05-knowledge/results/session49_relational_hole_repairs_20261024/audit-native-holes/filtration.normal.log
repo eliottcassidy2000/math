@@ -1,0 +1,1 @@
+{"checks": 441763, "critical_two_primary": "(Z/2)^3358 + (Z/4)^4 + Z/256", "paired_charge_order": 2048, "scope": "Earlier independent filtration re-executed, not a newly derived Session49 theorem.", "status": "PASS"}

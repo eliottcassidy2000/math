@@ -1,0 +1,40 @@
+{
+  "closed_manifest": {
+    "manifest_payload_files": 34,
+    "status": "PASS"
+  },
+  "closed_reproduction": {
+    "normal_optimized_equal": true,
+    "results": {
+      "audit.py": {
+        "checks": 5706796,
+        "literal_routes": 180,
+        "native_slots": 82,
+        "relation_tables": 112,
+        "sha256": "edee80e42b94fdb93d348792df71da7ff2e3cc8e35d8b95ffa7c5e8f7ea2d9ab",
+        "status": "PASS"
+      },
+      "compare_producer.py": {
+        "checks": 30054,
+        "compared_exact_boundary_minima": 7378,
+        "compared_support_grades": 2100,
+        "compared_tables": 105,
+        "independent_receipt_sha256": "edee80e42b94fdb93d348792df71da7ff2e3cc8e35d8b95ffa7c5e8f7ea2d9ab",
+        "producer_certificate_sha256": "2577ff7c9acb1dab103afbdd78407b367b3c33e531a9b764877f583c9b89f13f",
+        "scope": "All original producer support bitmaps, full complete-grade lists, first holes, source costs, all per-charge boundary minima and supplied minimizing masks match the independent audit.",
+        "status": "PASS"
+      },
+      "replay_inherited_filtration.py": {
+        "checks": 441763,
+        "critical_two_primary": "(Z/2)^3358 + (Z/4)^4 + Z/256",
+        "paired_charge_order": 2048,
+        "scope": "Earlier independent filtration re-executed, not a newly derived Session49 theorem.",
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  },
+  "manifest_payload_files": 34,
+  "relocation": "actual fresh manifest-only copy",
+  "status": "PASS"
+}
