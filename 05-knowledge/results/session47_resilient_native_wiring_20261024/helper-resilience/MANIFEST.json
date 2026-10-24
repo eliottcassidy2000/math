@@ -1,0 +1,26 @@
+{
+  "checkpoint": 2,
+  "files_sha256": {
+    "README.md": "aa9220098fb514f5606fd430457ee32a6f7b43e8607474ed636151c392ddd4e9",
+    "THEOREM.md": "a91f59f2887c4222a75528669c79954ed2ee35329b3cc8b748d78eb5c5e79468",
+    "check.normal.txt": "be8e73a6a903e998889a133344b6cda9ac5c840a9ebcf3578f43a1c1576ecf8c",
+    "check.optimized.txt": "be8e73a6a903e998889a133344b6cda9ac5c840a9ebcf3578f43a1c1576ecf8c",
+    "check.py": "5aea1d13ad7eabdd30095caa9bd5e211f99ec712a3f20914d2f0c83dbb425411",
+    "generate.txt": "50dce4490b9ead703c789d1953b3bb2dbc1cb2e96c589a41996dd98e4687aabb",
+    "native-supply.normal.txt": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "native-supply.optimized.txt": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "quad_packings.json": "3dd637e0253e32ce086c89b0f4d0c439315a73557d25a0f11c46cd50c4d0ffc7",
+    "receipt.json": "9d86a4f4ab3dce7a1124faf07124535aada157f922fba5eb26832c9ec9689bcf",
+    "robust_bank46.json": "fbeabab4b65df6d1918157c7a930fc0b773dfeaff54ff97d3093a6edf1f954eb",
+    "robust_bank48.json": "1e4511f36298890b9727c971100fce58ed1135b952afda77c7f085eb026332e4"
+  },
+  "scope": "46-helper1U bank; full53 occupancy3two-U impossibility; 53-helper occupancy4 at least11U resilience with sharp uniform disjoint packing12; exact mixed-restriction census; arrival-indexed causal theorem; no all-order native-supply claim",
+  "status": "READY_FOR_INDEPENDENT_REVIEW",
+  "verification": {
+    "native_supply_normal": "PASS50020",
+    "native_supply_optimized": "PASS50020",
+    "normal": "PASS320960",
+    "normal_optimized_identical": true,
+    "optimized": "PASS320960"
+  }
+}
