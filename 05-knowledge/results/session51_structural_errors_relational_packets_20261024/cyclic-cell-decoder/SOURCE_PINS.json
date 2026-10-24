@@ -1,0 +1,20 @@
+[
+  {
+    "repo_path": "05-knowledge/results/session50_metagraph_count_prediction_20261024/cell-holonomy/THEOREM.md",
+    "archive": "sources/0-THEOREM.md",
+    "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b",
+    "commit": "d0187b4caa6d66076264251077214de74e828059"
+  },
+  {
+    "repo_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/PRIME_CELL_BURNSIDE_FORMULAS.md",
+    "archive": "sources/1-PRIME_CELL_BURNSIDE_FORMULAS.md",
+    "sha256": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+    "commit": "d0187b4caa6d66076264251077214de74e828059"
+  },
+  {
+    "repo_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/regular-blocks/REGULAR_BLOCK_COUNTS.md",
+    "archive": "sources/2-REGULAR_BLOCK_COUNTS.md",
+    "sha256": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097",
+    "commit": "d0187b4caa6d66076264251077214de74e828059"
+  }
+]

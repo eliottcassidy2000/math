@@ -1,0 +1,30 @@
+{
+  "files": {
+    "AUDIT.md": "b4630bf76398507d1045f6220bbc82fc0438ef63884a512ccdf7053b351828ac",
+    "hostile-results.json": "1c97d2035c988668aae3d557cf1b4543a3d723d32f9288fb8b927c9a6a698389",
+    "hostile_replay.py": "60aa8330b652c723d635c5399be48e2dc82f812ed90db129453870b7d2f38d6e",
+    "independent-normal.out": "1acd42b3ded76b9971bd34683a1ec3bce7f75c202fd22453da638ccdea013992",
+    "independent-optimized.out": "1acd42b3ded76b9971bd34683a1ec3bce7f75c202fd22453da638ccdea013992",
+    "independent.py": "2979d23d5c2dec4f710a71e45e5897f0370dd3798dee6790725536c4cf67f574",
+    "optimized.json": "4c9e70a3381c653a1860ec3d0490b50cdc592a96769e4ab0fbc1f975ef5be737",
+    "producer-normal.out": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629",
+    "producer-optimized.out": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629",
+    "producer-pin.json": "9ea9a4d5b90d919bf59172b3fb05e4e981a0b0c816c5fea244bbe341f17f5680",
+    "producer-replay.json": "7212c47d02d2b12e3123890127f32318567fa350b810c65adb87c11ebe0e4a49",
+    "receipt.json": "4c9e70a3381c653a1860ec3d0490b50cdc592a96769e4ab0fbc1f975ef5be737",
+    "reference.py": "e32f6a30e3cba93f2d1eb4aada828d34f5debfc4f6bb8e1ed098a9b639cfbac4",
+    "replay.py": "52ff2ce3671c24270d24ea730be068cec7212575961fbae40fc2506f82ac4617",
+    "source/MANIFEST.json": "2cd761db537fe62eb6cc111095cf619b55a3ef52dcdfe2f35920dabe47846dff",
+    "source/README.md": "a1aee522d9b5bc8b8937da4fc45a3e1cf43f60ee01d02cf313eb0386350ef753",
+    "source/SOURCE_PINS.json": "00487a6d4b5117672bd34f7a4b6b2b5979c04b06cd2ea619a4a11c9b4985acac",
+    "source/THEOREM.md": "f989f58f0f3f6f9593c6d03918f674f375047b493c901fa2b68e065ef86640da",
+    "source/check.py": "817185d79f2e42fcd2cca44a27dcced084e16a718f975017ef9e0e8e7913f9c3",
+    "source/decoder.py": "d4fe38e98a8e4f45f1fc867931bffb9872874c879b647c9e6b6d8d85b7b83942",
+    "source/normal.json": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629",
+    "source/optimized.json": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629",
+    "source/sources/0-THEOREM.md": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b",
+    "source/sources/1-PRIME_CELL_BURNSIDE_FORMULAS.md": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1",
+    "source/sources/2-REGULAR_BLOCK_COUNTS.md": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097",
+    "source/verify_packet.py": "d492498846439dc37ed345083b873b7e8c7914252ff62fa1702b8c150f602d96"
+  }
+}

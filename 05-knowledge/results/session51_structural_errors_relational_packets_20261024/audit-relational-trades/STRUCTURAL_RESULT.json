@@ -1,0 +1,66 @@
+{
+  "alternating_path_controls": [
+    {
+      "forced_clocks_at_cost2": 4,
+      "forced_event_slots": 2,
+      "population": 1,
+      "slots": 2
+    },
+    {
+      "forced_clocks_at_cost2": 8,
+      "forced_event_slots": 4,
+      "population": 2,
+      "slots": 4
+    },
+    {
+      "forced_clocks_at_cost2": 12,
+      "forced_event_slots": 6,
+      "population": 3,
+      "slots": 6
+    },
+    {
+      "forced_clocks_at_cost2": 16,
+      "forced_event_slots": 8,
+      "population": 4,
+      "slots": 8
+    },
+    {
+      "forced_clocks_at_cost2": 20,
+      "forced_event_slots": 10,
+      "population": 5,
+      "slots": 10
+    },
+    {
+      "forced_clocks_at_cost2": 24,
+      "forced_event_slots": 12,
+      "population": 6,
+      "slots": 12
+    },
+    {
+      "forced_clocks_at_cost2": 28,
+      "forced_event_slots": 14,
+      "population": 7,
+      "slots": 14
+    },
+    {
+      "forced_clocks_at_cost2": 32,
+      "forced_event_slots": 16,
+      "population": 8,
+      "slots": 16
+    },
+    {
+      "forced_clocks_at_cost2": 36,
+      "forced_event_slots": 18,
+      "population": 9,
+      "slots": 18
+    }
+  ],
+  "checks": 3078,
+  "consistent_graphs": 420,
+  "graphs": 760,
+  "guarded_endpoint_tests": 562,
+  "neutral_atom_partition_tests": 562,
+  "sharp_zero_sum_sequence_length": 132,
+  "status": "PASS independently verified finite controls; all-size proof reviewed separately",
+  "zero_sum_subset_count": 2
+}

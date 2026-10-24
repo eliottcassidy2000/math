@@ -1,0 +1,1 @@
+{"status": "PASS", "witnesses": [{"automorphism_order": 1, "hamiltonian_paths": 15465, "refinement_error": 40, "rows": [102, 108, 408, 657, 771, 220, 412, 787, 555, 103]}, {"automorphism_order": 1, "hamiltonian_paths": 15549, "refinement_error": 40, "rows": [102, 108, 664, 401, 771, 220, 412, 787, 551, 107]}]}

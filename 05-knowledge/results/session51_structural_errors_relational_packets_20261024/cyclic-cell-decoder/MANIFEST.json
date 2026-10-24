@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1424,
+      "sha256": "a1aee522d9b5bc8b8937da4fc45a3e1cf43f60ee01d02cf313eb0386350ef753"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 949,
+      "sha256": "00487a6d4b5117672bd34f7a4b6b2b5979c04b06cd2ea619a4a11c9b4985acac"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 6957,
+      "sha256": "f989f58f0f3f6f9593c6d03918f674f375047b493c901fa2b68e065ef86640da"
+    },
+    {
+      "path": "check.py",
+      "bytes": 5218,
+      "sha256": "817185d79f2e42fcd2cca44a27dcced084e16a718f975017ef9e0e8e7913f9c3"
+    },
+    {
+      "path": "decoder.py",
+      "bytes": 4421,
+      "sha256": "d4fe38e98a8e4f45f1fc867931bffb9872874c879b647c9e6b6d8d85b7b83942"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 152,
+      "sha256": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 152,
+      "sha256": "f2f96c35bd7750042c93312d55e1edf76ef19b7181a953763e6352a43a811629"
+    },
+    {
+      "path": "sources/0-THEOREM.md",
+      "bytes": 20385,
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b"
+    },
+    {
+      "path": "sources/1-PRIME_CELL_BURNSIDE_FORMULAS.md",
+      "bytes": 8785,
+      "sha256": "c6edbc756f99394a33db90b24e4c3c1b6adfb1501090ac6ea0066ebbe37bfea1"
+    },
+    {
+      "path": "sources/2-REGULAR_BLOCK_COUNTS.md",
+      "bytes": 7066,
+      "sha256": "36931c24cb49df3d393efcecca31e73dda1394d11f8b632c4d2861e816d1b097"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 1889,
+      "sha256": "d492498846439dc37ed345083b873b7e8c7914252ff62fa1702b8c150f602d96"
+    }
+  ]
+}

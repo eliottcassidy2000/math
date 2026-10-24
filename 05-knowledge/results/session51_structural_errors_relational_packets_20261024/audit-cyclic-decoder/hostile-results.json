@@ -1,0 +1,96 @@
+{
+  "mutants": [
+    {
+      "name": "forget_rigid_pins",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: full automorphism order"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: full automorphism order"
+        }
+      ]
+    },
+    {
+      "name": "pin_one_rigid_endpoint",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: full automorphism order"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: full automorphism order"
+        }
+      ]
+    },
+    {
+      "name": "ignore_cycle_frustration",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: full automorphism order"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: full automorphism order"
+        }
+      ]
+    },
+    {
+      "name": "fail_inverse_gain",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: full automorphism order"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: full automorphism order"
+        }
+      ]
+    },
+    {
+      "name": "wrong_generator_rotation",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: actual generated permutation group"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: actual generated permutation group"
+        }
+      ]
+    },
+    {
+      "name": "skip_cyclic_recognition",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: actual generated permutation group"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: actual generated permutation group"
+        }
+      ]
+    },
+    {
+      "name": "wrong_frozen_error",
+      "rejections": [
+        {
+          "optimized": false,
+          "reason": "RuntimeError: literal refinement error"
+        },
+        {
+          "optimized": true,
+          "reason": "RuntimeError: literal refinement error"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

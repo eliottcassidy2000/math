@@ -1,0 +1,1 @@
+{"all_labelled_through_six": {"0": 1, "1": 1, "2": 2, "3": 8, "4": 64, "5": 1024, "6": 32768}, "all_regular_seven": {"accepted_7": 720, "rejected_21": 240, "rejected_3": 1680}, "checks": 175939, "hostile_and_multicell": {"bad7": "rejected", "internal_11": 11, "internal_13": 13, "internal_3": 3, "internal_5": 5, "internal_7": 7, "paley7": "rejected"}, "status": "PASS"}
