@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "all_runs_from_copied_directory_outside_source_tree": true,
+  "PYTHONPATH_removed": true,
+  "results": {
+    "manifest": "PASS exact standalone manifest; root MANIFEST.json alone excluded; nested manifests included",
+    "normal": "{\"checks\": 68153, \"endpoint_routes\": 744, \"freeze_cases\": 4845, \"global_clocks\": 68, \"interior_clocks\": [48, 49], \"native_slots\": 82, \"pair_failures\": 6, \"passing_histogram\": {\"2\": 4, \"3\": 5, \"4\": 9, \"5\": 17, \"6\": 47, \"7\": 241, \"8\": 4522}, \"protected_pairs\": [[1923, 2087], [1923, 2835]], \"status\": \"PASS\", \"ten_frozen_clocks\": 60}",
+    "optimized": "{\"checks\": 68153, \"endpoint_routes\": 744, \"freeze_cases\": 4845, \"global_clocks\": 68, \"interior_clocks\": [48, 49], \"native_slots\": 82, \"pair_failures\": 6, \"passing_histogram\": {\"2\": 4, \"3\": 5, \"4\": 9, \"5\": 17, \"6\": 47, \"7\": 241, \"8\": 4522}, \"protected_pairs\": [[1923, 2087], [1923, 2835]], \"status\": \"PASS\", \"ten_frozen_clocks\": 60}"
+  }
+}

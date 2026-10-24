@@ -1,0 +1,85 @@
+{
+  "git": false,
+  "location": "fresh nested packet, invoked from its parent directory",
+  "network": false,
+  "producer_repository_needed": false,
+  "runs": [
+    {
+      "original_source_files": 22,
+      "packet_files": 40,
+      "source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+      "status": "PASS"
+    },
+    {
+      "original_source_files": 22,
+      "packet_files": 40,
+      "source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+      "status": "PASS"
+    },
+    {
+      "all_full_kernel_lifts": true,
+      "all_full_menus": true,
+      "checks": 115250,
+      "owner4_helper_image": 972,
+      "sources": 82,
+      "status": "PASS"
+    },
+    {
+      "all_full_kernel_lifts": true,
+      "all_full_menus": true,
+      "checks": 115250,
+      "owner4_helper_image": 972,
+      "sources": 82,
+      "status": "PASS"
+    },
+    {
+      "checks": 24830,
+      "global_clocks": 68,
+      "minimum_protected_pairs": [
+        [
+          1923,
+          2087
+        ],
+        [
+          1923,
+          2835
+        ]
+      ],
+      "quadruples": 4845,
+      "status": "PASS",
+      "triples": 1140
+    },
+    {
+      "checks": 24830,
+      "global_clocks": 68,
+      "minimum_protected_pairs": [
+        [
+          1923,
+          2087
+        ],
+        [
+          1923,
+          2835
+        ]
+      ],
+      "quadruples": 4845,
+      "status": "PASS",
+      "triples": 1140
+    },
+    {
+      "checks": 441763,
+      "filtration": "unchanged earlier independent audit re-executed",
+      "full_critical_group_exponent_claimed": false,
+      "paired_charge_order": 2048,
+      "status": "PASS"
+    },
+    {
+      "checks": 441763,
+      "filtration": "unchanged earlier independent audit re-executed",
+      "full_critical_group_exponent_claimed": false,
+      "paired_charge_order": 2048,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

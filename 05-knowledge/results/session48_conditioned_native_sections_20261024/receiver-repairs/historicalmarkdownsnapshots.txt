@@ -1,0 +1,6 @@
+Historical Markdown is retained byte-for-byte as text, not current authored claims.
+inputs/external_pin_sections_20261024/erasure/ERASURE.txt <- 05-knowledge/results/external_pin_sections_20261024/erasure/ERASURE.md
+inputs/external_pin_sections_20261024/native/CORE_PAYS_BOUNDARY.txt <- 05-knowledge/results/external_pin_sections_20261024/native/CORE_PAYS_BOUNDARY.md
+inputs/external_pin_sections_20261024/theory/RECEIVER_BANKS.txt <- 05-knowledge/results/external_pin_sections_20261024/theory/RECEIVER_BANKS.md
+inputs/guarded_component_completion_20261024/native/XOR_TREE.txt <- 05-knowledge/results/guarded_component_completion_20261024/native/XOR_TREE.md
+inputs/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.txt <- 05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md

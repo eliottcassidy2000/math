@@ -1,0 +1,3264 @@
+{
+  "arrival_closed_words": 328,
+  "arrival_units": 82,
+  "checks": 115249,
+  "cores": [
+    176,
+    1394,
+    1425,
+    1457,
+    1477,
+    1480,
+    1532,
+    1549,
+    1638,
+    1691,
+    1841,
+    1921,
+    1923,
+    1974,
+    2071,
+    2087,
+    2176,
+    2185,
+    2553,
+    2581,
+    2835,
+    2837,
+    2905,
+    2945,
+    3000,
+    3015,
+    3360,
+    3369
+  ],
+  "costs": {
+    "1182": 7,
+    "1248": 5,
+    "1254": 6,
+    "1369": 6,
+    "1391": 5,
+    "1394": 2,
+    "1395": 5,
+    "1400": 7,
+    "1425": 2,
+    "1457": 2,
+    "1477": 2,
+    "1480": 2,
+    "1493": 5,
+    "1532": 4,
+    "1549": 2,
+    "1574": 7,
+    "1596": 6,
+    "1615": 6,
+    "1624": 7,
+    "1638": 2,
+    "1650": 7,
+    "1691": 2,
+    "1702": 5,
+    "176": 2,
+    "1770": 5,
+    "1841": 3,
+    "1882": 4,
+    "1921": 2,
+    "1923": 4,
+    "1948": 7,
+    "1952": 4,
+    "1974": 2,
+    "2066": 7,
+    "2071": 2,
+    "2087": 3,
+    "2125": 8,
+    "2135": 6,
+    "2176": 2,
+    "2185": 2,
+    "2218": 5,
+    "2283": 6,
+    "2319": 6,
+    "2384": 7,
+    "2393": 7,
+    "2397": 6,
+    "2439": 5,
+    "2483": 7,
+    "2553": 4,
+    "2581": 2,
+    "2616": 5,
+    "2638": 7,
+    "2677": 6,
+    "2728": 6,
+    "2752": 7,
+    "2798": 6,
+    "2835": 3,
+    "2837": 2,
+    "2905": 2,
+    "2945": 2,
+    "2948": 7,
+    "2983": 7,
+    "3000": 2,
+    "3015": 3,
+    "3105": 5,
+    "3111": 4,
+    "3137": 7,
+    "3139": 6,
+    "3187": 5,
+    "3360": 3,
+    "3369": 2,
+    "368": 6,
+    "556": 6,
+    "650": 6,
+    "676": 6,
+    "753": 7,
+    "760": 7,
+    "776": 5,
+    "789": 7,
+    "811": 7,
+    "827": 5,
+    "862": 6,
+    "921": 6
+  },
+  "free_helpers": [
+    556,
+    650,
+    676,
+    753,
+    760,
+    789,
+    811,
+    827,
+    862,
+    921,
+    1182,
+    1248,
+    1254,
+    1369,
+    1391,
+    1395,
+    1400,
+    1493,
+    1574,
+    1596,
+    1615,
+    1624,
+    1650,
+    1702,
+    1770,
+    1882,
+    1948,
+    1952,
+    2066,
+    2125,
+    2135,
+    2218,
+    2283,
+    2319,
+    2384,
+    2393,
+    2397,
+    2439,
+    2483,
+    2616,
+    2638,
+    2677,
+    2728,
+    2752,
+    2798,
+    2948,
+    2983,
+    3105,
+    3111,
+    3137,
+    3187
+  ],
+  "full_native_records": {
+    "1182": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            4,
+            0,
+            5,
+            1,
+            6,
+            7,
+            2
+          ]
+        ],
+        [
+          [
+            6,
+            4,
+            7,
+            3,
+            2,
+            1,
+            0,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 513,
+      "normalized_resources": [
+        136865,
+        359331
+      ]
+    },
+    "1248": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            1,
+            7,
+            2,
+            6,
+            3,
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            1,
+            7,
+            5,
+            2,
+            6,
+            0,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 533,
+      "normalized_resources": [
+        578266,
+        431693
+      ]
+    },
+    "1254": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            0,
+            2,
+            1,
+            3,
+            6,
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            7,
+            1,
+            0,
+            3,
+            2,
+            5,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 505,
+      "normalized_resources": [
+        573590,
+        21941
+      ]
+    },
+    "1369": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            3,
+            1,
+            0,
+            6,
+            5,
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            3,
+            5,
+            1,
+            0,
+            6,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 253,
+      "normalized_resources": [
+        86924,
+        417213
+      ]
+    },
+    "1391": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            2,
+            0,
+            5,
+            6,
+            4,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            3,
+            2,
+            5,
+            6,
+            1,
+            0,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 341,
+      "normalized_resources": [
+        109849,
+        385165
+      ]
+    },
+    "1394": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            4,
+            6,
+            1,
+            5,
+            7,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            4,
+            3,
+            1,
+            5,
+            7,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 467,
+      "normalized_resources": [
+        623470,
+        590382
+      ]
+    },
+    "1395": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            3,
+            1,
+            4,
+            5,
+            7,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3,
+            5,
+            7,
+            4,
+            6,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 449,
+      "normalized_resources": [
+        438046,
+        69421
+      ]
+    },
+    "1400": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            0,
+            3,
+            7,
+            6,
+            1,
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            4,
+            6,
+            3,
+            2,
+            5,
+            7,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 463,
+      "normalized_resources": [
+        516465,
+        191592
+      ]
+    },
+    "1425": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            6,
+            3,
+            4,
+            7,
+            2,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            2,
+            3,
+            4,
+            7,
+            6,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 313,
+      "normalized_resources": [
+        284821,
+        317909
+      ]
+    },
+    "1457": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            6,
+            2,
+            1,
+            4,
+            7,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            3,
+            2,
+            1,
+            4,
+            7,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 407,
+      "normalized_resources": [
+        935638,
+        672854
+      ]
+    },
+    "1477": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            6,
+            3,
+            1,
+            4,
+            5,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            6,
+            5,
+            1,
+            4,
+            3,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 259,
+      "normalized_resources": [
+        645314,
+        423741
+      ]
+    },
+    "1480": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            5,
+            7,
+            2,
+            3,
+            4,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            5,
+            7,
+            6,
+            3,
+            4,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 425,
+      "normalized_resources": [
+        159080,
+        58300
+      ]
+    },
+    "1493": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            3,
+            1,
+            0,
+            2,
+            4,
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            1,
+            0,
+            3,
+            2,
+            4,
+            7,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 519,
+      "normalized_resources": [
+        533646,
+        3625
+      ]
+    },
+    "1532": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            6,
+            3,
+            0,
+            5,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            0,
+            4,
+            6,
+            3,
+            5,
+            2,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 373,
+      "normalized_resources": [
+        790945,
+        38626
+      ]
+    },
+    "1549": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            6,
+            2,
+            0,
+            5,
+            7,
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            4,
+            3,
+            2,
+            0,
+            5,
+            7,
+            6,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 351,
+      "normalized_resources": [
+        345721,
+        279609
+      ]
+    },
+    "1574": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            0,
+            7,
+            2,
+            1,
+            3,
+            6,
+            5
+          ]
+        ],
+        [
+          [
+            6,
+            2,
+            1,
+            0,
+            7,
+            3,
+            5,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 545,
+      "normalized_resources": [
+        345782,
+        749197
+      ]
+    },
+    "1596": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            0,
+            5,
+            4,
+            6,
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            6,
+            3,
+            4,
+            1,
+            0,
+            5,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 299,
+      "normalized_resources": [
+        53123,
+        417709
+      ]
+    },
+    "1615": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            0,
+            5,
+            2,
+            4,
+            1,
+            6,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            3,
+            5,
+            1,
+            0,
+            6,
+            2,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 427,
+      "normalized_resources": [
+        711266,
+        58102
+      ]
+    },
+    "1624": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            7,
+            6,
+            4,
+            3,
+            1,
+            0,
+            2
+          ]
+        ],
+        [
+          [
+            2,
+            7,
+            4,
+            3,
+            5,
+            0,
+            6,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 419,
+      "normalized_resources": [
+        25637,
+        409118
+      ]
+    },
+    "1638": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            1,
+            7,
+            4,
+            6,
+            3,
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            1,
+            3,
+            4,
+            6,
+            7,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 285,
+      "normalized_resources": [
+        428741,
+        432844
+      ]
+    },
+    "1650": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            7,
+            1,
+            3,
+            5,
+            4,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            6,
+            7,
+            3,
+            5,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 447,
+      "normalized_resources": [
+        611809,
+        203629
+      ]
+    },
+    "1691": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            7,
+            2,
+            4,
+            5,
+            3,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            7,
+            6,
+            4,
+            5,
+            3,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 453,
+      "normalized_resources": [
+        575394,
+        633722
+      ]
+    },
+    "1702": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            5,
+            4,
+            2,
+            6,
+            3,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            2,
+            6,
+            4,
+            3,
+            5,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 349,
+      "normalized_resources": [
+        36116,
+        705534
+      ]
+    },
+    "176": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            7,
+            2,
+            3,
+            1,
+            4,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            7,
+            6,
+            3,
+            1,
+            4,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 315,
+      "normalized_resources": [
+        284101,
+        585654
+      ]
+    },
+    "1770": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            5,
+            6,
+            2,
+            1,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            2,
+            1,
+            3,
+            5,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 339,
+      "normalized_resources": [
+        9824,
+        72688
+      ]
+    },
+    "1841": {
+      "cost": 3,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            1,
+            7,
+            3,
+            4,
+            2,
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            6,
+            1,
+            3,
+            4,
+            7,
+            2,
+            0,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 467,
+      "normalized_resources": [
+        920993,
+        216420
+      ]
+    },
+    "1882": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            2,
+            1,
+            5,
+            6,
+            3,
+            7,
+            0
+          ]
+        ],
+        [
+          [
+            6,
+            2,
+            1,
+            0,
+            4,
+            3,
+            7,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 453,
+      "normalized_resources": [
+        713801,
+        58447
+      ]
+    },
+    "1921": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            2,
+            4,
+            1,
+            5,
+            3,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            6,
+            4,
+            1,
+            5,
+            3,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 323,
+      "normalized_resources": [
+        660606,
+        923390
+      ]
+    },
+    "1923": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            7,
+            4,
+            0,
+            6,
+            1,
+            5,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            7,
+            4,
+            6,
+            1,
+            5,
+            0,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 469,
+      "normalized_resources": [
+        663386,
+        255829
+      ]
+    },
+    "1948": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            6,
+            2,
+            1,
+            0,
+            5,
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            1,
+            6,
+            4,
+            3,
+            2,
+            0,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 345,
+      "normalized_resources": [
+        267406,
+        294461
+      ]
+    },
+    "1952": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            1,
+            5,
+            6,
+            0,
+            7,
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            7,
+            5,
+            6,
+            0,
+            4,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 525,
+      "normalized_resources": [
+        206029,
+        320846
+      ]
+    },
+    "1974": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            6,
+            4,
+            7,
+            2,
+            1,
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            5,
+            2,
+            4,
+            7,
+            6,
+            1,
+            0,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 449,
+      "normalized_resources": [
+        210676,
+        145126
+      ]
+    },
+    "2066": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            0,
+            5,
+            2,
+            3,
+            7,
+            6,
+            1
+          ]
+        ],
+        [
+          [
+            6,
+            0,
+            3,
+            7,
+            5,
+            1,
+            4,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 409,
+      "normalized_resources": [
+        112497,
+        220262
+      ]
+    },
+    "2071": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            7,
+            5,
+            3,
+            0,
+            6,
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            7,
+            6,
+            3,
+            0,
+            5,
+            4,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 495,
+      "normalized_resources": [
+        403221,
+        161620
+      ]
+    },
+    "2087": {
+      "cost": 3,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            1,
+            3,
+            0,
+            7,
+            4,
+            5,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            7,
+            3,
+            0,
+            4,
+            5,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 593,
+      "normalized_resources": [
+        870726,
+        479626
+      ]
+    },
+    "2125": {
+      "cost": 8,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            6,
+            2,
+            0,
+            7,
+            3,
+            4,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            1,
+            0,
+            3,
+            4,
+            5,
+            6,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 401,
+      "normalized_resources": [
+        116132,
+        491209
+      ]
+    },
+    "2135": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            6,
+            0,
+            7,
+            5,
+            4,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            2,
+            0,
+            7,
+            3,
+            1,
+            5,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 551,
+      "normalized_resources": [
+        587057,
+        414585
+      ]
+    },
+    "2176": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            4,
+            6,
+            2,
+            1,
+            7,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            4,
+            3,
+            2,
+            1,
+            7,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 341,
+      "normalized_resources": [
+        682678,
+        294353
+      ]
+    },
+    "2185": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            2,
+            1,
+            0,
+            5,
+            6,
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            6,
+            1,
+            0,
+            5,
+            2,
+            4,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 351,
+      "normalized_resources": [
+        456065,
+        593790
+      ]
+    },
+    "2218": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            1,
+            0,
+            3,
+            5,
+            6,
+            2
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            6,
+            1,
+            5,
+            0,
+            3,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 345,
+      "normalized_resources": [
+        44380,
+        582526
+      ]
+    },
+    "2283": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            6,
+            2,
+            0,
+            5,
+            4,
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            7,
+            1,
+            6,
+            4,
+            2,
+            0,
+            5,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 347,
+      "normalized_resources": [
+        21133,
+        294205
+      ]
+    },
+    "2319": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            5,
+            2,
+            1,
+            0,
+            3,
+            6
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            2,
+            0,
+            3,
+            1,
+            6,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 373,
+      "normalized_resources": [
+        74845,
+        269499
+      ]
+    },
+    "2384": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            5,
+            0,
+            7,
+            6,
+            4,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            6,
+            5,
+            0,
+            7,
+            4,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 529,
+      "normalized_resources": [
+        669946,
+        491942
+      ]
+    },
+    "2393": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            0,
+            7,
+            4,
+            1,
+            5,
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            4,
+            2,
+            0,
+            7,
+            3,
+            5,
+            6,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 433,
+      "normalized_resources": [
+        228375,
+        817033
+      ]
+    },
+    "2397": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            7,
+            5,
+            3,
+            2,
+            6,
+            4,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            7,
+            4,
+            3,
+            6,
+            5,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 365,
+      "normalized_resources": [
+        685249,
+        49982
+      ]
+    },
+    "2439": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            1,
+            4,
+            3,
+            6,
+            2,
+            7,
+            0
+          ],
+          [
+            6,
+            1,
+            4,
+            0,
+            5,
+            2,
+            7,
+            3
+          ]
+        ],
+        [
+          [
+            5,
+            6,
+            7,
+            3,
+            1,
+            4,
+            2,
+            0
+          ],
+          [
+            6,
+            4,
+            2,
+            7,
+            5,
+            1,
+            0,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 453,
+      "normalized_resources": [
+        207857,
+        434281
+      ]
+    },
+    "2483": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            6,
+            3,
+            1,
+            4,
+            2,
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            7,
+            6,
+            1,
+            0,
+            4,
+            3,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 465,
+      "normalized_resources": [
+        624750,
+        651033
+      ]
+    },
+    "2553": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            1,
+            0,
+            3,
+            7,
+            2,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            6,
+            7,
+            1,
+            0,
+            3,
+            2,
+            4,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 531,
+      "normalized_resources": [
+        885838,
+        282445
+      ]
+    },
+    "2581": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            5,
+            4,
+            6,
+            1,
+            7,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            5,
+            4,
+            3,
+            1,
+            7,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 497,
+      "normalized_resources": [
+        197558,
+        459062
+      ]
+    },
+    "2616": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            1,
+            4,
+            2,
+            0,
+            6,
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            0,
+            4,
+            6,
+            7,
+            2,
+            1,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 583,
+      "normalized_resources": [
+        398470,
+        159527
+      ]
+    },
+    "2638": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            6,
+            4,
+            3,
+            1,
+            0,
+            7,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            5,
+            6,
+            1,
+            0,
+            7,
+            4,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 455,
+      "normalized_resources": [
+        534001,
+        904473
+      ]
+    },
+    "2677": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            4,
+            2,
+            1,
+            0,
+            7,
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            2,
+            6,
+            5,
+            0,
+            7,
+            4,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 561,
+      "normalized_resources": [
+        396020,
+        625073
+      ]
+    },
+    "2728": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            0,
+            7,
+            1,
+            3,
+            4,
+            2,
+            5
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            7,
+            4,
+            6,
+            2,
+            5,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 551,
+      "normalized_resources": [
+        202088,
+        170354
+      ]
+    },
+    "2752": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            3,
+            0,
+            6,
+            2,
+            4,
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            3,
+            6,
+            1,
+            5,
+            0,
+            7,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 489,
+      "normalized_resources": [
+        478945,
+        582990
+      ]
+    },
+    "2798": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            4,
+            6,
+            1,
+            0,
+            7,
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            5,
+            0,
+            7,
+            6,
+            2,
+            4,
+            3,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 459,
+      "normalized_resources": [
+        173865,
+        189838
+      ]
+    },
+    "2835": {
+      "cost": 3,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            1,
+            7,
+            5,
+            6,
+            4,
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            7,
+            5,
+            0,
+            6,
+            4,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 527,
+      "normalized_resources": [
+        532377,
+        650374
+      ]
+    },
+    "2837": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            1,
+            0,
+            6,
+            2,
+            7,
+            5,
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            4,
+            6,
+            2,
+            7,
+            5,
+            0,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 559,
+      "normalized_resources": [
+        21593,
+        284377
+      ]
+    },
+    "2905": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            5,
+            6,
+            1,
+            7,
+            3,
+            0,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            5,
+            3,
+            1,
+            7,
+            6,
+            0,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 529,
+      "normalized_resources": [
+        538010,
+        449261
+      ]
+    },
+    "2945": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            6,
+            4,
+            0,
+            7,
+            5,
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            3,
+            6,
+            1,
+            0,
+            7,
+            5,
+            4,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 459,
+      "normalized_resources": [
+        599914,
+        449941
+      ]
+    },
+    "2948": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            4,
+            1,
+            3,
+            2,
+            0,
+            7,
+            5
+          ]
+        ],
+        [
+          [
+            4,
+            0,
+            7,
+            3,
+            5,
+            2,
+            1,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 551,
+      "normalized_resources": [
+        397804,
+        452698
+      ]
+    },
+    "2983": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            1,
+            3,
+            7,
+            2,
+            0,
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            1,
+            0,
+            4,
+            7,
+            6,
+            3,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 425,
+      "normalized_resources": [
+        445213,
+        449942
+      ]
+    },
+    "3000": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            1,
+            5,
+            2,
+            6,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            3,
+            5,
+            2,
+            6,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 215,
+      "normalized_resources": [
+        324033,
+        290945
+      ]
+    },
+    "3015": {
+      "cost": 3,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            0,
+            7,
+            4,
+            2,
+            1,
+            6,
+            5
+          ]
+        ],
+        [
+          [
+            3,
+            0,
+            4,
+            2,
+            7,
+            1,
+            6,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 579,
+      "normalized_resources": [
+        416521,
+        224629
+      ]
+    },
+    "3105": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            3,
+            0,
+            6,
+            2,
+            4,
+            1,
+            5
+          ]
+        ],
+        [
+          [
+            7,
+            4,
+            3,
+            2,
+            0,
+            6,
+            1,
+            5
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 399,
+      "normalized_resources": [
+        304414,
+        77359
+      ]
+    },
+    "3111": {
+      "cost": 4,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            5,
+            4,
+            1,
+            3,
+            0,
+            7,
+            6
+          ]
+        ],
+        [
+          [
+            2,
+            5,
+            3,
+            0,
+            4,
+            1,
+            7,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 593,
+      "normalized_resources": [
+        423477,
+        213450
+      ]
+    },
+    "3137": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            1,
+            6,
+            5,
+            4,
+            0,
+            7,
+            2
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            7,
+            4,
+            6,
+            5,
+            3,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 545,
+      "normalized_resources": [
+        188776,
+        167795
+      ]
+    },
+    "3139": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            4,
+            1,
+            7,
+            3,
+            2,
+            0,
+            5
+          ]
+        ],
+        [
+          [
+            5,
+            4,
+            2,
+            1,
+            7,
+            3,
+            0,
+            6
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 547,
+      "normalized_resources": [
+        469929,
+        152756
+      ]
+    },
+    "3187": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            1,
+            7,
+            5,
+            4,
+            0,
+            6,
+            3
+          ]
+        ],
+        [
+          [
+            6,
+            1,
+            7,
+            3,
+            2,
+            0,
+            5,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 519,
+      "normalized_resources": [
+        62618,
+        129379
+      ]
+    },
+    "3360": {
+      "cost": 3,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            1,
+            3,
+            7,
+            2,
+            0,
+            6,
+            4
+          ]
+        ],
+        [
+          [
+            5,
+            7,
+            1,
+            3,
+            2,
+            0,
+            6,
+            4
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 521,
+      "normalized_resources": [
+        248587,
+        145291
+      ]
+    },
+    "3369": {
+      "cost": 2,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            7,
+            4,
+            1,
+            6,
+            5,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            7,
+            4,
+            3,
+            6,
+            5,
+            1,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 275,
+      "normalized_resources": [
+        811837,
+        288701
+      ]
+    },
+    "368": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            4,
+            6,
+            5,
+            3,
+            0,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            3,
+            6,
+            1,
+            5,
+            4,
+            0,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 311,
+      "normalized_resources": [
+        749050,
+        872062
+      ]
+    },
+    "556": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            5,
+            3,
+            1,
+            7,
+            2,
+            4,
+            6,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            4,
+            6,
+            3,
+            1,
+            7,
+            2,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 445,
+      "normalized_resources": [
+        278322,
+        398121
+      ]
+    },
+    "650": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            1,
+            0,
+            3,
+            6,
+            5,
+            4,
+            2
+          ]
+        ],
+        [
+          [
+            6,
+            0,
+            3,
+            4,
+            7,
+            5,
+            1,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 417,
+      "normalized_resources": [
+        191472,
+        550373
+      ]
+    },
+    "676": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            7,
+            2,
+            5,
+            1,
+            6,
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            0,
+            7,
+            3,
+            1,
+            6,
+            4,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 491,
+      "normalized_resources": [
+        308270,
+        632297
+      ]
+    },
+    "753": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            3,
+            6,
+            2,
+            0,
+            5,
+            7,
+            1
+          ]
+        ],
+        [
+          [
+            6,
+            0,
+            3,
+            7,
+            4,
+            5,
+            1,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 399,
+      "normalized_resources": [
+        184889,
+        157157
+      ]
+    },
+    "760": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            7,
+            5,
+            6,
+            3,
+            1,
+            2,
+            4,
+            0
+          ]
+        ],
+        [
+          [
+            6,
+            3,
+            4,
+            1,
+            2,
+            7,
+            5,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 285,
+      "normalized_resources": [
+        795273,
+        432913
+      ]
+    },
+    "776": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            1,
+            5,
+            0,
+            7,
+            6,
+            4,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            6,
+            5,
+            0,
+            2,
+            4,
+            7,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 587,
+      "normalized_resources": [
+        402698,
+        151350
+      ]
+    },
+    "789": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            4,
+            0,
+            2,
+            7,
+            3,
+            5,
+            6,
+            1
+          ]
+        ],
+        [
+          [
+            7,
+            1,
+            0,
+            2,
+            5,
+            4,
+            6,
+            3
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 381,
+      "normalized_resources": [
+        864078,
+        279597
+      ]
+    },
+    "811": {
+      "cost": 7,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            6,
+            5,
+            3,
+            1,
+            7,
+            4,
+            0
+          ]
+        ],
+        [
+          [
+            5,
+            4,
+            3,
+            1,
+            7,
+            2,
+            6,
+            0
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 313,
+      "normalized_resources": [
+        875714,
+        249412
+      ]
+    },
+    "827": {
+      "cost": 5,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            3,
+            6,
+            0,
+            2,
+            5,
+            7,
+            4,
+            1
+          ]
+        ],
+        [
+          [
+            3,
+            6,
+            5,
+            7,
+            4,
+            0,
+            2,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 503,
+      "normalized_resources": [
+        130603,
+        607537
+      ]
+    },
+    "862": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            2,
+            6,
+            7,
+            4,
+            3,
+            0,
+            5,
+            1
+          ]
+        ],
+        [
+          [
+            3,
+            7,
+            4,
+            6,
+            1,
+            0,
+            5,
+            2
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 449,
+      "normalized_resources": [
+        613150,
+        258738
+      ]
+    },
+    "921": {
+      "cost": 6,
+      "full_resource_kernel_lifts": [
+        [
+          [
+            6,
+            2,
+            4,
+            1,
+            0,
+            7,
+            5,
+            3
+          ]
+        ],
+        [
+          [
+            5,
+            4,
+            6,
+            3,
+            0,
+            7,
+            2,
+            1
+          ]
+        ]
+      ],
+      "guarded_target_records": 2,
+      "hamiltonian_paths": 417,
+      "normalized_resources": [
+        411894,
+        888249
+      ]
+    }
+  },
+  "helper_direct_clock_bound": 29,
+  "helper_edge_clock_bound": 15,
+  "helper_pair_charge_count": 972,
+  "host_owners": 652,
+  "labels": {
+    "1182": 1764,
+    "1248": 826,
+    "1254": 182,
+    "1369": 1129,
+    "1391": 2020,
+    "1394": 1822,
+    "1395": 340,
+    "1400": 769,
+    "1425": 494,
+    "1457": 1232,
+    "1477": 396,
+    "1480": 1152,
+    "1493": 298,
+    "1532": 725,
+    "1549": 1054,
+    "1574": 1943,
+    "1596": 331,
+    "1615": 61,
+    "1624": 400,
+    "1638": 1506,
+    "1650": 411,
+    "1691": 1831,
+    "1702": 1026,
+    "176": 1115,
+    "1770": 1819,
+    "1841": 1592,
+    "1882": 307,
+    "1921": 1431,
+    "1923": 176,
+    "1948": 118,
+    "1952": 24,
+    "1974": 1305,
+    "2066": 1792,
+    "2071": 185,
+    "2087": 1720,
+    "2125": 1956,
+    "2135": 1877,
+    "2176": 1795,
+    "2185": 170,
+    "2218": 1287,
+    "2283": 1214,
+    "2319": 62,
+    "2384": 1691,
+    "2393": 13,
+    "2397": 1990,
+    "2439": 1402,
+    "2483": 758,
+    "2553": 1672,
+    "2581": 421,
+    "2616": 866,
+    "2638": 1596,
+    "2677": 1690,
+    "2728": 744,
+    "2752": 1606,
+    "2798": 671,
+    "2835": 1347,
+    "2837": 1525,
+    "2905": 1410,
+    "2945": 2008,
+    "2948": 355,
+    "2983": 42,
+    "3000": 659,
+    "3015": 487,
+    "3105": 1018,
+    "3111": 1363,
+    "3137": 470,
+    "3139": 227,
+    "3187": 1814,
+    "3360": 1173,
+    "3369": 840,
+    "368": 1204,
+    "556": 1229,
+    "650": 538,
+    "676": 654,
+    "753": 97,
+    "760": 1939,
+    "776": 1065,
+    "789": 1224,
+    "811": 1100,
+    "827": 1491,
+    "862": 1921,
+    "921": 187
+  },
+  "physical_edges": 438216,
+  "reserved_closed_words": 656,
+  "reserved_units": 164,
+  "slots": 82,
+  "source_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+  "status": "PASS independent native full records and original harmonic rows; saturation theorem inherited explicitly",
+  "tree_truth": [
+    {
+      "allowed": false,
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "owner_values": [
+        4,
+        3,
+        3
+      ]
+    },
+    {
+      "allowed": false,
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "owner_values": [
+        4,
+        3,
+        4
+      ]
+    },
+    {
+      "allowed": false,
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "owner_values": [
+        4,
+        4,
+        3
+      ]
+    },
+    {
+      "allowed": true,
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "owner_values": [
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "allowed": true,
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "owner_values": [
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "allowed": false,
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "owner_values": [
+        3,
+        3,
+        4
+      ]
+    },
+    {
+      "allowed": false,
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "owner_values": [
+        3,
+        4,
+        3
+      ]
+    },
+    {
+      "allowed": false,
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "owner_values": [
+        3,
+        4,
+        4
+      ]
+    }
+  ]
+}

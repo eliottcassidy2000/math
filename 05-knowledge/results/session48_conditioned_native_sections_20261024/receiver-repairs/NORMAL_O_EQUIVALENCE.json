@@ -1,0 +1,17 @@
+{
+  "comparisons": {
+    "check": {
+      "checks": 24830,
+      "same": true
+    },
+    "filtration": {
+      "checks": 441763,
+      "same": true
+    },
+    "native": {
+      "checks": 115250,
+      "same": true
+    }
+  },
+  "status": "PASS"
+}

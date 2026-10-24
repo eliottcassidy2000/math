@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "producer_receipt_sha256": "ca79d3634a005f32cabc336501b14cd4738abec7f60b340e8b372dd4051b8352",
+  "all4845_passing_sets_equal": true,
+  "protected_pairs_equal": true,
+  "all6_first_pair_failure_witnesses_equal": true,
+  "global68_equal": true,
+  "replay_dependency": false,
+  "note": "Independent audit.py reconstructs its complete outputs from pinned inputs; no producer code or table is read. This comparison records the producer snapshot checked after independent generation.",
+  "updated_budget_specializations_independently_checked": {
+    "ten_frozen": 60,
+    "eleven_frozen_cost3": 58,
+    "eleven_frozen_cost4": 59
+  }
+}
