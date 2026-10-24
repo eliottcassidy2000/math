@@ -1,0 +1,22 @@
+{
+  "census_rows_compared": 5,
+  "complete_collision_witnesses_compared": 3,
+  "hostile_receipts_rejected": [
+    "inflate target class count",
+    "erase merged loss",
+    "drop a labelled order",
+    "misstate full automorphism histogram",
+    "corrupt target adjacency",
+    "corrupt explicit recenter map",
+    "confuse ordinary and merged witness",
+    "inflate path-cycle bijection to all cycles",
+    "inflate regular lower bound"
+  ],
+  "replay_receipts_compared": [
+    "optimized.json",
+    "producer/optimized.json",
+    "producer-replay-normal.json",
+    "producer-replay-optimized.json"
+  ],
+  "status": "PASS"
+}

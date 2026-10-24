@@ -1,0 +1,9 @@
+REJECTED wrong_Ogg_membership optimized=False RuntimeError: Ogg residue multiplicities
+REJECTED wrong_Ogg_membership optimized=True RuntimeError: Ogg residue multiplicities
+REJECTED wrong_CM_character optimized=False RuntimeError: CM character residue table
+REJECTED wrong_CM_character optimized=True RuntimeError: CM character residue table
+REJECTED forgot_parity_in_generator optimized=False RuntimeError: (1+z^15)R=P formal coefficients
+REJECTED forgot_parity_in_generator optimized=True RuntimeError: (1+z^15)R=P formal coefficients
+REJECTED false_analytic_error_target optimized=False RuntimeError: analytic remainder
+REJECTED false_analytic_error_target optimized=True RuntimeError: analytic remainder
+PASS: all 8 negative-control executions rejected explicit false claims

@@ -1,0 +1,50 @@
+[
+  {
+    "n": 8,
+    "step": 1,
+    "fixed": 8,
+    "edge_orbits": 3
+  },
+  {
+    "n": 8,
+    "step": 3,
+    "fixed": 80,
+    "edge_orbits": 9
+  },
+  {
+    "n": 8,
+    "step": 6,
+    "fixed": 80,
+    "edge_orbits": 9
+  },
+  {
+    "n": 14,
+    "step": 1,
+    "fixed": 64,
+    "edge_orbits": 6
+  },
+  {
+    "n": 14,
+    "step": 3,
+    "fixed": 22144,
+    "edge_orbits": 18
+  },
+  {
+    "n": 14,
+    "step": 5,
+    "fixed": 5327104,
+    "edge_orbits": 30
+  },
+  {
+    "n": 14,
+    "step": 6,
+    "fixed": 22144,
+    "edge_orbits": 18
+  },
+  {
+    "n": 14,
+    "step": 10,
+    "fixed": 5327104,
+    "edge_orbits": 30
+  }
+]

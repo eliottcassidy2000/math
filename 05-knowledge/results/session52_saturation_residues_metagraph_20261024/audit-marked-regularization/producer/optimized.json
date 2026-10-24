@@ -1,0 +1,449 @@
+{
+  "all_small_recenter_checks_Q_orders_0_through_5": 1100,
+  "all_vs_distinguished_cycle_control": {
+    "D_transitive_2_all_cycles_rooted_at_z": 2,
+    "distinguished_cycles": 1
+  },
+  "exhaustive_rows": [
+    {
+      "labelled_hamilton_paths": 1,
+      "labelled_nonextreme_tournaments": 0,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "single_arc_block_checks": 0,
+      "source_automorphism_order_histogram": {
+        "1": 1
+      },
+      "source_converse_merged_classes": 1,
+      "source_nonextreme_merged_classes": 0,
+      "source_nonextreme_ordinary_classes": 0,
+      "source_nonextreme_self_converse_classes": 0,
+      "source_ordinary_classes": 1,
+      "source_self_converse_ordinary_classes": 1,
+      "target_automorphism_order_histogram": {
+        "3": 1
+      },
+      "target_classes_lost_by_forgetting_root": 0,
+      "target_unmarked_classes": 1,
+      "target_unmarked_converse_merged_classes": 1,
+      "targets_with_nonfixed_original_root": 1
+    },
+    {
+      "labelled_hamilton_paths": 2,
+      "labelled_nonextreme_tournaments": 0,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "single_arc_block_checks": 2,
+      "source_automorphism_order_histogram": {
+        "1": 2
+      },
+      "source_converse_merged_classes": 1,
+      "source_nonextreme_merged_classes": 0,
+      "source_nonextreme_ordinary_classes": 0,
+      "source_nonextreme_self_converse_classes": 0,
+      "source_ordinary_classes": 1,
+      "source_self_converse_ordinary_classes": 1,
+      "target_automorphism_order_histogram": {
+        "5": 2
+      },
+      "target_classes_lost_by_forgetting_root": 0,
+      "target_unmarked_classes": 1,
+      "target_unmarked_converse_merged_classes": 1,
+      "targets_with_nonfixed_original_root": 2
+    },
+    {
+      "labelled_hamilton_paths": 12,
+      "labelled_nonextreme_tournaments": 2,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "single_arc_block_checks": 24,
+      "source_automorphism_order_histogram": {
+        "1": 6,
+        "3": 2
+      },
+      "source_converse_merged_classes": 2,
+      "source_nonextreme_merged_classes": 1,
+      "source_nonextreme_ordinary_classes": 1,
+      "source_nonextreme_self_converse_classes": 1,
+      "source_ordinary_classes": 2,
+      "source_self_converse_ordinary_classes": 2,
+      "target_automorphism_order_histogram": {
+        "3": 2,
+        "7": 6
+      },
+      "target_classes_lost_by_forgetting_root": 0,
+      "target_unmarked_classes": 2,
+      "target_unmarked_converse_merged_classes": 2,
+      "targets_with_nonfixed_original_root": 6
+    },
+    {
+      "labelled_hamilton_paths": 192,
+      "labelled_nonextreme_tournaments": 24,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "single_arc_block_checks": 384,
+      "source_automorphism_order_histogram": {
+        "1": 48,
+        "3": 16
+      },
+      "source_converse_merged_classes": 3,
+      "source_nonextreme_merged_classes": 1,
+      "source_nonextreme_ordinary_classes": 1,
+      "source_nonextreme_self_converse_classes": 1,
+      "source_ordinary_classes": 4,
+      "source_self_converse_ordinary_classes": 2,
+      "target_automorphism_order_histogram": {
+        "1": 24,
+        "3": 16,
+        "9": 24
+      },
+      "target_classes_lost_by_forgetting_root": 1,
+      "target_unmarked_classes": 3,
+      "target_unmarked_converse_merged_classes": 3,
+      "targets_with_nonfixed_original_root": 24
+    },
+    {
+      "labelled_hamilton_paths": 7680,
+      "labelled_nonextreme_tournaments": 544,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "single_arc_block_checks": 10240,
+      "source_automorphism_order_histogram": {
+        "1": 840,
+        "3": 160,
+        "5": 24
+      },
+      "source_converse_merged_classes": 10,
+      "source_nonextreme_merged_classes": 6,
+      "source_nonextreme_ordinary_classes": 6,
+      "source_nonextreme_self_converse_classes": 6,
+      "source_ordinary_classes": 12,
+      "source_self_converse_ordinary_classes": 8,
+      "target_automorphism_order_histogram": {
+        "1": 720,
+        "3": 160,
+        "5": 24,
+        "11": 120
+      },
+      "target_classes_lost_by_forgetting_root": 3,
+      "target_unmarked_classes": 9,
+      "target_unmarked_converse_merged_classes": 9,
+      "targets_with_nonfixed_original_root": 120
+    }
+  ],
+  "first_merged_collision_source_order": 5,
+  "first_ordinary_collision_source_order": 4,
+  "larger_controls": {
+    "claims": "sample controls only; not an exhaustive census",
+    "deterministic_samples": 60,
+    "seed": 520043,
+    "source_orders": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "merged_collision_order_5": {
+    "D_1_plus_Q": [
+      "01111100000",
+      "00111110000",
+      "00010111010",
+      "00001111100",
+      "00100110110",
+      "00000011111",
+      "10000001111",
+      "11001000101",
+      "11100000011",
+      "11010001001",
+      "11111000000"
+    ],
+    "D_Q_plus_1": [
+      "01111100000",
+      "00101110100",
+      "00011111000",
+      "01001101100",
+      "00000111110",
+      "00000011111",
+      "10010001011",
+      "11000000111",
+      "10100010011",
+      "11110000001",
+      "11111000000"
+    ],
+    "Q": [
+      "0111",
+      "0010",
+      "0001",
+      "0100"
+    ],
+    "explicit_D_isomorphism_old_to_new": [
+      10,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "other_source_scc_sizes": [
+      1,
+      3,
+      1
+    ],
+    "source_1_plus_Q": [
+      "01111",
+      "00111",
+      "00010",
+      "00001",
+      "00100"
+    ],
+    "source_Q_plus_1": [
+      "01111",
+      "00101",
+      "00011",
+      "01001",
+      "00000"
+    ],
+    "source_aut_order": 3,
+    "source_hamilton_paths": 3,
+    "source_isomorphic": false,
+    "source_isomorphic_to_other_converse": false,
+    "source_order": 5,
+    "source_scc_sizes": [
+      1,
+      1,
+      3
+    ],
+    "target_aut_order": 3,
+    "target_order": 11
+  },
+  "merged_collision_order_8": {
+    "D_1_plus_Q": [
+      "01111111100000000",
+      "00101111110100000",
+      "00011111111000000",
+      "01001111101100000",
+      "00000110111110010",
+      "00000011111111000",
+      "00000001111111100",
+      "00001000111101110",
+      "00000000011111111",
+      "10010000001011111",
+      "11000000000111111",
+      "10100000010011111",
+      "11110001000001101",
+      "11111000000000111",
+      "11111100000000011",
+      "11110110000010001",
+      "11111111000000000"
+    ],
+    "D_Q_plus_1": [
+      "01011111101000000",
+      "00111111110000000",
+      "10011111011000000",
+      "00001101111100100",
+      "00000111111110000",
+      "00000011111111000",
+      "00010001111011100",
+      "00000000111111110",
+      "00100000010111111",
+      "10000000001111111",
+      "01000000100111111",
+      "11100010000011011",
+      "11110000000001111",
+      "11111000000000111",
+      "11101100000100011",
+      "11111110000000001",
+      "11111111000000000"
+    ],
+    "Q": [
+      "0101111",
+      "0011111",
+      "1001111",
+      "0000110",
+      "0000011",
+      "0000001",
+      "0001000"
+    ],
+    "explicit_D_isomorphism_old_to_new": [
+      16,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "other_source_scc_sizes": [
+      3,
+      4,
+      1
+    ],
+    "source_1_plus_Q": [
+      "01111111",
+      "00101111",
+      "00011111",
+      "01001111",
+      "00000110",
+      "00000011",
+      "00000001",
+      "00001000"
+    ],
+    "source_Q_plus_1": [
+      "01011111",
+      "00111111",
+      "10011111",
+      "00001101",
+      "00000111",
+      "00000011",
+      "00010001",
+      "00000000"
+    ],
+    "source_aut_order": 3,
+    "source_hamilton_paths": 15,
+    "source_isomorphic": false,
+    "source_isomorphic_to_other_converse": false,
+    "source_order": 8,
+    "source_scc_sizes": [
+      1,
+      3,
+      4
+    ],
+    "target_aut_order": 3,
+    "target_order": 17
+  },
+  "mutation_controls_rejected": [
+    "converse-copy substitution loses regularity on transitive order two",
+    "same-direction cross rule loses regularity",
+    "reversing only the diagonal matching loses regularity",
+    "forward rather than reversed source path is not a directed target cycle",
+    "single target arc reversal is not the degree-preserving source lift",
+    "full target noncycle complement differs already at source order two",
+    "root common-neighbor criterion requires no source and no sink",
+    "unrestricted full automorphism equality fails at source order two",
+    "distinguished cycle count is not all target Hamilton cycle count"
+  ],
+  "no_extreme_class_count_and_regular_lower_bound_controls": [
+    {
+      "merged_lower_bound": 0,
+      "ordinary_lower_bound": 0,
+      "self_converse_lower_bound": 0,
+      "source_order": 2,
+      "target_regular_order": 5
+    },
+    {
+      "merged_lower_bound": 1,
+      "ordinary_lower_bound": 1,
+      "self_converse_lower_bound": 1,
+      "source_order": 3,
+      "target_regular_order": 7
+    },
+    {
+      "merged_lower_bound": 1,
+      "ordinary_lower_bound": 1,
+      "self_converse_lower_bound": 1,
+      "source_order": 4,
+      "target_regular_order": 9
+    },
+    {
+      "merged_lower_bound": 6,
+      "ordinary_lower_bound": 6,
+      "self_converse_lower_bound": 6,
+      "source_order": 5,
+      "target_regular_order": 11
+    }
+  ],
+  "ordinary_collision_order_4": {
+    "D_1_plus_Q": [
+      "011110000",
+      "001011010",
+      "000111100",
+      "010010110",
+      "000001111",
+      "100100101",
+      "110000011",
+      "101001001",
+      "111100000"
+    ],
+    "D_Q_plus_1": [
+      "010110100",
+      "001111000",
+      "100101100",
+      "000011110",
+      "001001011",
+      "100000111",
+      "010010011",
+      "111000001",
+      "111100000"
+    ],
+    "Q": [
+      "010",
+      "001",
+      "100"
+    ],
+    "explicit_D_isomorphism_old_to_new": [
+      8,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_source_scc_sizes": [
+      3,
+      1
+    ],
+    "source_1_plus_Q": [
+      "0111",
+      "0010",
+      "0001",
+      "0100"
+    ],
+    "source_Q_plus_1": [
+      "0101",
+      "0011",
+      "1001",
+      "0000"
+    ],
+    "source_aut_order": 3,
+    "source_hamilton_paths": 3,
+    "source_isomorphic": false,
+    "source_isomorphic_to_other_converse": true,
+    "source_order": 4,
+    "source_scc_sizes": [
+      1,
+      3
+    ],
+    "target_aut_order": 3,
+    "target_order": 9
+  },
+  "scope_limits": [
+    "The Type-I regularization is known from arXiv:2605.04846v1 Lemma 4.3.",
+    "No first-novelty claim for the structural extractions.",
+    "Source order five is the first merged collision, controlled by exhaustive smaller class pairs.",
+    "No native full-target complement or port-clock equivalence.",
+    "No new general formula for A000568."
+  ],
+  "status": "PASS",
+  "total_labelled_tournaments": 1099,
+  "universe": "all labelled tournaments of source orders 1..5"
+}

@@ -1,0 +1,50 @@
+{
+  "hostile_tests": [
+    {
+      "reason": "path arcs must remain directed forward",
+      "status": "REJECTED",
+      "test": "full converse substituted for C"
+    },
+    {
+      "reason": "LH partner leaves balanced layer",
+      "status": "REJECTED",
+      "test": "endpoint criterion reversed to LH"
+    },
+    {
+      "reason": "actual endpoint correction has plus at start, minus at end",
+      "status": "REJECTED",
+      "test": "start/end transport correction signs swapped"
+    },
+    {
+      "reason": "only z to high and low to z gives regular extension",
+      "status": "REJECTED",
+      "test": "regular extension arc directions inverted"
+    },
+    {
+      "reason": "all off-cycle arcs, including z arcs, must reverse",
+      "status": "REJECTED",
+      "test": "lift reverses old nonpath arcs but not z interior arcs"
+    },
+    {
+      "reason": "n2 has zero free bits and C is identity",
+      "status": "REJECTED",
+      "test": "free C pairing incorrectly includes n2"
+    },
+    {
+      "reason": "n>=4 internal carrier is C-free",
+      "status": "REJECTED",
+      "test": "odd internal-port count accepted under free C"
+    },
+    {
+      "reason": "blue carrier also has free C pairing",
+      "status": "REJECTED",
+      "test": "odd blue-internal-port count accepted"
+    },
+    {
+      "reason": "n6 has 18 optional R edge-orbits but 30 native C-lines",
+      "status": "REJECTED",
+      "test": "R edge quotient substituted for native C-lines"
+    }
+  ],
+  "status": "PASS"
+}

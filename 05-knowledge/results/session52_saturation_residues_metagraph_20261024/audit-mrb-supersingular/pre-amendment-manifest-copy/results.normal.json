@@ -1,0 +1,4382 @@
+{
+  "CM_curve": {
+    "a_invariants": [
+      0,
+      4,
+      0,
+      2,
+      0
+    ],
+    "c4": 160,
+    "discriminant": 512,
+    "j": 8000,
+    "rows": [
+      {
+        "j_mod_p": 2,
+        "ogg": true,
+        "p": 3,
+        "points": 6,
+        "supersingular": false,
+        "trace": -2
+      },
+      {
+        "j_mod_p": 0,
+        "ogg": true,
+        "p": 5,
+        "points": 6,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 6,
+        "ogg": true,
+        "p": 7,
+        "points": 8,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 3,
+        "ogg": true,
+        "p": 11,
+        "points": 18,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 5,
+        "ogg": true,
+        "p": 13,
+        "points": 14,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 10,
+        "ogg": true,
+        "p": 17,
+        "points": 24,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 1,
+        "ogg": true,
+        "p": 19,
+        "points": 22,
+        "supersingular": false,
+        "trace": -2
+      },
+      {
+        "j_mod_p": 19,
+        "ogg": true,
+        "p": 23,
+        "points": 24,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 25,
+        "ogg": true,
+        "p": 29,
+        "points": 30,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 2,
+        "ogg": true,
+        "p": 31,
+        "points": 32,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 8,
+        "ogg": false,
+        "p": 37,
+        "points": 38,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 5,
+        "ogg": true,
+        "p": 41,
+        "points": 36,
+        "supersingular": false,
+        "trace": 6
+      },
+      {
+        "j_mod_p": 2,
+        "ogg": false,
+        "p": 43,
+        "points": 34,
+        "supersingular": false,
+        "trace": 10
+      },
+      {
+        "j_mod_p": 10,
+        "ogg": true,
+        "p": 47,
+        "points": 48,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 50,
+        "ogg": false,
+        "p": 53,
+        "points": 54,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 35,
+        "ogg": true,
+        "p": 59,
+        "points": 66,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 9,
+        "ogg": false,
+        "p": 61,
+        "points": 62,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 27,
+        "ogg": false,
+        "p": 67,
+        "points": 54,
+        "supersingular": false,
+        "trace": 14
+      },
+      {
+        "j_mod_p": 48,
+        "ogg": true,
+        "p": 71,
+        "points": 72,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 43,
+        "ogg": false,
+        "p": 73,
+        "points": 76,
+        "supersingular": false,
+        "trace": -2
+      },
+      {
+        "j_mod_p": 21,
+        "ogg": false,
+        "p": 79,
+        "points": 80,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 32,
+        "ogg": false,
+        "p": 83,
+        "points": 102,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 79,
+        "ogg": false,
+        "p": 89,
+        "points": 108,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 46,
+        "ogg": false,
+        "p": 97,
+        "points": 88,
+        "supersingular": false,
+        "trace": 10
+      },
+      {
+        "j_mod_p": 21,
+        "ogg": false,
+        "p": 101,
+        "points": 102,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 69,
+        "ogg": false,
+        "p": 103,
+        "points": 104,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 82,
+        "ogg": false,
+        "p": 107,
+        "points": 114,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 43,
+        "ogg": false,
+        "p": 109,
+        "points": 110,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 90,
+        "ogg": false,
+        "p": 113,
+        "points": 96,
+        "supersingular": false,
+        "trace": 18
+      },
+      {
+        "j_mod_p": 126,
+        "ogg": false,
+        "p": 127,
+        "points": 128,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 9,
+        "ogg": false,
+        "p": 131,
+        "points": 150,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 54,
+        "ogg": false,
+        "p": 137,
+        "points": 132,
+        "supersingular": false,
+        "trace": 6
+      },
+      {
+        "j_mod_p": 77,
+        "ogg": false,
+        "p": 139,
+        "points": 162,
+        "supersingular": false,
+        "trace": -22
+      },
+      {
+        "j_mod_p": 103,
+        "ogg": false,
+        "p": 149,
+        "points": 150,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 148,
+        "ogg": false,
+        "p": 151,
+        "points": 152,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 150,
+        "ogg": false,
+        "p": 157,
+        "points": 158,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 13,
+        "ogg": false,
+        "p": 163,
+        "points": 166,
+        "supersingular": false,
+        "trace": -2
+      },
+      {
+        "j_mod_p": 151,
+        "ogg": false,
+        "p": 167,
+        "points": 168,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 42,
+        "ogg": false,
+        "p": 173,
+        "points": 174,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 124,
+        "ogg": false,
+        "p": 179,
+        "points": 198,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 36,
+        "ogg": false,
+        "p": 181,
+        "points": 182,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 169,
+        "ogg": false,
+        "p": 191,
+        "points": 192,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 87,
+        "ogg": false,
+        "p": 193,
+        "points": 216,
+        "supersingular": false,
+        "trace": -22
+      },
+      {
+        "j_mod_p": 120,
+        "ogg": false,
+        "p": 197,
+        "points": 198,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 40,
+        "ogg": false,
+        "p": 199,
+        "points": 200,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 193,
+        "ogg": false,
+        "p": 211,
+        "points": 198,
+        "supersingular": false,
+        "trace": 14
+      },
+      {
+        "j_mod_p": 195,
+        "ogg": false,
+        "p": 223,
+        "points": 224,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 55,
+        "ogg": false,
+        "p": 227,
+        "points": 198,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 214,
+        "ogg": false,
+        "p": 229,
+        "points": 230,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 78,
+        "ogg": false,
+        "p": 233,
+        "points": 204,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 113,
+        "ogg": false,
+        "p": 239,
+        "points": 240,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 47,
+        "ogg": false,
+        "p": 241,
+        "points": 216,
+        "supersingular": false,
+        "trace": 26
+      },
+      {
+        "j_mod_p": 219,
+        "ogg": false,
+        "p": 251,
+        "points": 258,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 33,
+        "ogg": false,
+        "p": 257,
+        "points": 288,
+        "supersingular": false,
+        "trace": -30
+      },
+      {
+        "j_mod_p": 110,
+        "ogg": false,
+        "p": 263,
+        "points": 264,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 199,
+        "ogg": false,
+        "p": 269,
+        "points": 270,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 141,
+        "ogg": false,
+        "p": 271,
+        "points": 272,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 244,
+        "ogg": false,
+        "p": 277,
+        "points": 278,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 132,
+        "ogg": false,
+        "p": 281,
+        "points": 300,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 76,
+        "ogg": false,
+        "p": 283,
+        "points": 306,
+        "supersingular": false,
+        "trace": -22
+      },
+      {
+        "j_mod_p": 89,
+        "ogg": false,
+        "p": 293,
+        "points": 294,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 18,
+        "ogg": false,
+        "p": 307,
+        "points": 342,
+        "supersingular": false,
+        "trace": -34
+      },
+      {
+        "j_mod_p": 225,
+        "ogg": false,
+        "p": 311,
+        "points": 312,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 175,
+        "ogg": false,
+        "p": 313,
+        "points": 324,
+        "supersingular": false,
+        "trace": -10
+      },
+      {
+        "j_mod_p": 75,
+        "ogg": false,
+        "p": 317,
+        "points": 318,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 56,
+        "ogg": false,
+        "p": 331,
+        "points": 306,
+        "supersingular": false,
+        "trace": 26
+      },
+      {
+        "j_mod_p": 249,
+        "ogg": false,
+        "p": 337,
+        "points": 352,
+        "supersingular": false,
+        "trace": -14
+      },
+      {
+        "j_mod_p": 19,
+        "ogg": false,
+        "p": 347,
+        "points": 354,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 322,
+        "ogg": false,
+        "p": 349,
+        "points": 350,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 234,
+        "ogg": false,
+        "p": 353,
+        "points": 384,
+        "supersingular": false,
+        "trace": -30
+      },
+      {
+        "j_mod_p": 102,
+        "ogg": false,
+        "p": 359,
+        "points": 360,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 293,
+        "ogg": false,
+        "p": 367,
+        "points": 368,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 167,
+        "ogg": false,
+        "p": 373,
+        "points": 374,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 41,
+        "ogg": false,
+        "p": 379,
+        "points": 418,
+        "supersingular": false,
+        "trace": -38
+      },
+      {
+        "j_mod_p": 340,
+        "ogg": false,
+        "p": 383,
+        "points": 384,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 220,
+        "ogg": false,
+        "p": 389,
+        "points": 390,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 60,
+        "ogg": false,
+        "p": 397,
+        "points": 398,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 381,
+        "ogg": false,
+        "p": 401,
+        "points": 408,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 229,
+        "ogg": false,
+        "p": 409,
+        "points": 388,
+        "supersingular": false,
+        "trace": 22
+      },
+      {
+        "j_mod_p": 39,
+        "ogg": false,
+        "p": 419,
+        "points": 438,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 1,
+        "ogg": false,
+        "p": 421,
+        "points": 422,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 242,
+        "ogg": false,
+        "p": 431,
+        "points": 432,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 206,
+        "ogg": false,
+        "p": 433,
+        "points": 472,
+        "supersingular": false,
+        "trace": -38
+      },
+      {
+        "j_mod_p": 98,
+        "ogg": false,
+        "p": 439,
+        "points": 440,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 26,
+        "ogg": false,
+        "p": 443,
+        "points": 402,
+        "supersingular": false,
+        "trace": 42
+      },
+      {
+        "j_mod_p": 367,
+        "ogg": false,
+        "p": 449,
+        "points": 408,
+        "supersingular": false,
+        "trace": 42
+      },
+      {
+        "j_mod_p": 231,
+        "ogg": false,
+        "p": 457,
+        "points": 484,
+        "supersingular": false,
+        "trace": -26
+      },
+      {
+        "j_mod_p": 163,
+        "ogg": false,
+        "p": 461,
+        "points": 462,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 129,
+        "ogg": false,
+        "p": 463,
+        "points": 464,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 61,
+        "ogg": false,
+        "p": 467,
+        "points": 438,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 336,
+        "ogg": false,
+        "p": 479,
+        "points": 480,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 208,
+        "ogg": false,
+        "p": 487,
+        "points": 488,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 144,
+        "ogg": false,
+        "p": 491,
+        "points": 450,
+        "supersingular": false,
+        "trace": 42
+      },
+      {
+        "j_mod_p": 16,
+        "ogg": false,
+        "p": 499,
+        "points": 486,
+        "supersingular": false,
+        "trace": 14
+      },
+      {
+        "j_mod_p": 455,
+        "ogg": false,
+        "p": 503,
+        "points": 504,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 365,
+        "ogg": false,
+        "p": 509,
+        "points": 510,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 185,
+        "ogg": false,
+        "p": 521,
+        "points": 516,
+        "supersingular": false,
+        "trace": 6
+      },
+      {
+        "j_mod_p": 155,
+        "ogg": false,
+        "p": 523,
+        "points": 562,
+        "supersingular": false,
+        "trace": -38
+      },
+      {
+        "j_mod_p": 426,
+        "ogg": false,
+        "p": 541,
+        "points": 542,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 342,
+        "ogg": false,
+        "p": 547,
+        "points": 502,
+        "supersingular": false,
+        "trace": 46
+      },
+      {
+        "j_mod_p": 202,
+        "ogg": false,
+        "p": 557,
+        "points": 558,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 118,
+        "ogg": false,
+        "p": 563,
+        "points": 534,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 34,
+        "ogg": false,
+        "p": 569,
+        "points": 612,
+        "supersingular": false,
+        "trace": -42
+      },
+      {
+        "j_mod_p": 6,
+        "ogg": false,
+        "p": 571,
+        "points": 594,
+        "supersingular": false,
+        "trace": -22
+      },
+      {
+        "j_mod_p": 499,
+        "ogg": false,
+        "p": 577,
+        "points": 544,
+        "supersingular": false,
+        "trace": 34
+      },
+      {
+        "j_mod_p": 369,
+        "ogg": false,
+        "p": 587,
+        "points": 594,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 291,
+        "ogg": false,
+        "p": 593,
+        "points": 576,
+        "supersingular": false,
+        "trace": 18
+      },
+      {
+        "j_mod_p": 213,
+        "ogg": false,
+        "p": 599,
+        "points": 600,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 187,
+        "ogg": false,
+        "p": 601,
+        "points": 556,
+        "supersingular": false,
+        "trace": 46
+      },
+      {
+        "j_mod_p": 109,
+        "ogg": false,
+        "p": 607,
+        "points": 608,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 31,
+        "ogg": false,
+        "p": 613,
+        "points": 614,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 596,
+        "ogg": false,
+        "p": 617,
+        "points": 588,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 572,
+        "ogg": false,
+        "p": 619,
+        "points": 594,
+        "supersingular": false,
+        "trace": 26
+      },
+      {
+        "j_mod_p": 428,
+        "ogg": false,
+        "p": 631,
+        "points": 632,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 308,
+        "ogg": false,
+        "p": 641,
+        "points": 600,
+        "supersingular": false,
+        "trace": 42
+      },
+      {
+        "j_mod_p": 284,
+        "ogg": false,
+        "p": 643,
+        "points": 694,
+        "supersingular": false,
+        "trace": -50
+      },
+      {
+        "j_mod_p": 236,
+        "ogg": false,
+        "p": 647,
+        "points": 648,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 164,
+        "ogg": false,
+        "p": 653,
+        "points": 654,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 92,
+        "ogg": false,
+        "p": 659,
+        "points": 678,
+        "supersingular": false,
+        "trace": -18
+      },
+      {
+        "j_mod_p": 68,
+        "ogg": false,
+        "p": 661,
+        "points": 662,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 597,
+        "ogg": false,
+        "p": 673,
+        "points": 664,
+        "supersingular": false,
+        "trace": 10
+      },
+      {
+        "j_mod_p": 553,
+        "ogg": false,
+        "p": 677,
+        "points": 678,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 487,
+        "ogg": false,
+        "p": 683,
+        "points": 642,
+        "supersingular": false,
+        "trace": 42
+      },
+      {
+        "j_mod_p": 399,
+        "ogg": false,
+        "p": 691,
+        "points": 646,
+        "supersingular": false,
+        "trace": 46
+      },
+      {
+        "j_mod_p": 289,
+        "ogg": false,
+        "p": 701,
+        "points": 702,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 201,
+        "ogg": false,
+        "p": 709,
+        "points": 710,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 91,
+        "ogg": false,
+        "p": 719,
+        "points": 720,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 3,
+        "ogg": false,
+        "p": 727,
+        "points": 728,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 670,
+        "ogg": false,
+        "p": 733,
+        "points": 734,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 610,
+        "ogg": false,
+        "p": 739,
+        "points": 774,
+        "supersingular": false,
+        "trace": -34
+      },
+      {
+        "j_mod_p": 570,
+        "ogg": false,
+        "p": 743,
+        "points": 744,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 490,
+        "ogg": false,
+        "p": 751,
+        "points": 752,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 430,
+        "ogg": false,
+        "p": 757,
+        "points": 758,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 390,
+        "ogg": false,
+        "p": 761,
+        "points": 708,
+        "supersingular": false,
+        "trace": 54
+      },
+      {
+        "j_mod_p": 310,
+        "ogg": false,
+        "p": 769,
+        "points": 792,
+        "supersingular": false,
+        "trace": -22
+      },
+      {
+        "j_mod_p": 270,
+        "ogg": false,
+        "p": 773,
+        "points": 774,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 130,
+        "ogg": false,
+        "p": 787,
+        "points": 838,
+        "supersingular": false,
+        "trace": -50
+      },
+      {
+        "j_mod_p": 30,
+        "ogg": false,
+        "p": 797,
+        "points": 798,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 719,
+        "ogg": false,
+        "p": 809,
+        "points": 804,
+        "supersingular": false,
+        "trace": 6
+      },
+      {
+        "j_mod_p": 701,
+        "ogg": false,
+        "p": 811,
+        "points": 850,
+        "supersingular": false,
+        "trace": -38
+      },
+      {
+        "j_mod_p": 611,
+        "ogg": false,
+        "p": 821,
+        "points": 822,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 593,
+        "ogg": false,
+        "p": 823,
+        "points": 824,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 557,
+        "ogg": false,
+        "p": 827,
+        "points": 882,
+        "supersingular": false,
+        "trace": -54
+      },
+      {
+        "j_mod_p": 539,
+        "ogg": false,
+        "p": 829,
+        "points": 830,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 449,
+        "ogg": false,
+        "p": 839,
+        "points": 840,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 323,
+        "ogg": false,
+        "p": 853,
+        "points": 854,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 287,
+        "ogg": false,
+        "p": 857,
+        "points": 804,
+        "supersingular": false,
+        "trace": 54
+      },
+      {
+        "j_mod_p": 269,
+        "ogg": false,
+        "p": 859,
+        "points": 802,
+        "supersingular": false,
+        "trace": 58
+      },
+      {
+        "j_mod_p": 233,
+        "ogg": false,
+        "p": 863,
+        "points": 864,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 107,
+        "ogg": false,
+        "p": 877,
+        "points": 878,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 71,
+        "ogg": false,
+        "p": 881,
+        "points": 864,
+        "supersingular": false,
+        "trace": 18
+      },
+      {
+        "j_mod_p": 53,
+        "ogg": false,
+        "p": 883,
+        "points": 886,
+        "supersingular": false,
+        "trace": -2
+      },
+      {
+        "j_mod_p": 17,
+        "ogg": false,
+        "p": 887,
+        "points": 888,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 744,
+        "ogg": false,
+        "p": 907,
+        "points": 898,
+        "supersingular": false,
+        "trace": 10
+      },
+      {
+        "j_mod_p": 712,
+        "ogg": false,
+        "p": 911,
+        "points": 912,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 648,
+        "ogg": false,
+        "p": 919,
+        "points": 920,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 568,
+        "ogg": false,
+        "p": 929,
+        "points": 984,
+        "supersingular": false,
+        "trace": -54
+      },
+      {
+        "j_mod_p": 504,
+        "ogg": false,
+        "p": 937,
+        "points": 972,
+        "supersingular": false,
+        "trace": -34
+      },
+      {
+        "j_mod_p": 472,
+        "ogg": false,
+        "p": 941,
+        "points": 942,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 424,
+        "ogg": false,
+        "p": 947,
+        "points": 918,
+        "supersingular": false,
+        "trace": 30
+      },
+      {
+        "j_mod_p": 376,
+        "ogg": false,
+        "p": 953,
+        "points": 996,
+        "supersingular": false,
+        "trace": -42
+      },
+      {
+        "j_mod_p": 264,
+        "ogg": false,
+        "p": 967,
+        "points": 968,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 232,
+        "ogg": false,
+        "p": 971,
+        "points": 1026,
+        "supersingular": false,
+        "trace": -54
+      },
+      {
+        "j_mod_p": 184,
+        "ogg": false,
+        "p": 977,
+        "points": 984,
+        "supersingular": false,
+        "trace": -6
+      },
+      {
+        "j_mod_p": 136,
+        "ogg": false,
+        "p": 983,
+        "points": 984,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 72,
+        "ogg": false,
+        "p": 991,
+        "points": 992,
+        "supersingular": true,
+        "trace": 0
+      },
+      {
+        "j_mod_p": 24,
+        "ogg": false,
+        "p": 997,
+        "points": 998,
+        "supersingular": true,
+        "trace": 0
+      }
+    ]
+  },
+  "CRT120": [
+    {
+      "chi_minus8": 1,
+      "mod120": 1,
+      "mod15": 1,
+      "mod8": 1,
+      "prime_witness": 241
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 91,
+      "mod15": 1,
+      "mod8": 3,
+      "prime_witness": 211
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 61,
+      "mod15": 1,
+      "mod8": 5,
+      "prime_witness": 61
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 31,
+      "mod15": 1,
+      "mod8": 7,
+      "prime_witness": 31
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 17,
+      "mod15": 2,
+      "mod8": 1,
+      "prime_witness": 17
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 107,
+      "mod15": 2,
+      "mod8": 3,
+      "prime_witness": 107
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 77,
+      "mod15": 2,
+      "mod8": 5,
+      "prime_witness": 197
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 47,
+      "mod15": 2,
+      "mod8": 7,
+      "prime_witness": 47
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 49,
+      "mod15": 4,
+      "mod8": 1,
+      "prime_witness": 409
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 19,
+      "mod15": 4,
+      "mod8": 3,
+      "prime_witness": 19
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 109,
+      "mod15": 4,
+      "mod8": 5,
+      "prime_witness": 109
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 79,
+      "mod15": 4,
+      "mod8": 7,
+      "prime_witness": 79
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 97,
+      "mod15": 7,
+      "mod8": 1,
+      "prime_witness": 97
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 67,
+      "mod15": 7,
+      "mod8": 3,
+      "prime_witness": 67
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 37,
+      "mod15": 7,
+      "mod8": 5,
+      "prime_witness": 37
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 7,
+      "mod15": 7,
+      "mod8": 7,
+      "prime_witness": 7
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 113,
+      "mod15": 8,
+      "mod8": 1,
+      "prime_witness": 113
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 83,
+      "mod15": 8,
+      "mod8": 3,
+      "prime_witness": 83
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 53,
+      "mod15": 8,
+      "mod8": 5,
+      "prime_witness": 53
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 23,
+      "mod15": 8,
+      "mod8": 7,
+      "prime_witness": 23
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 41,
+      "mod15": 11,
+      "mod8": 1,
+      "prime_witness": 41
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 11,
+      "mod15": 11,
+      "mod8": 3,
+      "prime_witness": 11
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 101,
+      "mod15": 11,
+      "mod8": 5,
+      "prime_witness": 101
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 71,
+      "mod15": 11,
+      "mod8": 7,
+      "prime_witness": 71
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 73,
+      "mod15": 13,
+      "mod8": 1,
+      "prime_witness": 73
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 43,
+      "mod15": 13,
+      "mod8": 3,
+      "prime_witness": 43
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 13,
+      "mod15": 13,
+      "mod8": 5,
+      "prime_witness": 13
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 103,
+      "mod15": 13,
+      "mod8": 7,
+      "prime_witness": 103
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 89,
+      "mod15": 14,
+      "mod8": 1,
+      "prime_witness": 89
+    },
+    {
+      "chi_minus8": 1,
+      "mod120": 59,
+      "mod15": 14,
+      "mod8": 3,
+      "prime_witness": 59
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 29,
+      "mod15": 14,
+      "mod8": 5,
+      "prime_witness": 29
+    },
+    {
+      "chi_minus8": -1,
+      "mod120": 119,
+      "mod15": 14,
+      "mod8": 7,
+      "prime_witness": 239
+    }
+  ],
+  "MRB_intervals": {
+    "A8": "[0.187859661380138399049253204599612614475734200775185155149280808285368441896419726572327372641561268809537384159288001070019677831156086, 0.187859661380138399049253204599612614475734200775185155149280808285368441896419726572327372641561268809537384159288001070019677831175809]",
+    "C": "[0.18785964246206712024851793405427323005590309490013878617200468408947723156466021370064275315876934550826454919724242255741501238535552, 0.187859642462067120248517934054273230055903094900138786172004684089477231564660213705950555707445648299420142515273615565046701653702952]",
+    "D": "[0.000000018918071278800735270545339384419831105875046368977276124195891210331759512866376816934115620510117241644014385504972976177453133979817, 0.0000000189180712788007352705453393844198311058750463689772761241958912103317595128716846194827919233012728349620455785126046654458202895875118]",
+    "D_over_q4": "[0.98845074389577451997768768858315011510946713928750297739614187511105007159580124182569489001549647772037053030512898557464981300198294, 0.988450743895774519977687688583150115109467139287502977396141875111050071596078569323851116886824464797183431987081179552913664824588934]",
+    "analytic_tail": "[2.6539012743381513955777966590155965038158446304604742845750540347673219430622115547313928812174748216042516144962074356607034489574128e-84, 2.65390127433815139557779665901559650381584463046047428457505403476732194306221155473139288121747482160425161449620743566070344895787694e-84]",
+    "nearest": [
+      {
+        "index": 8,
+        "lower_margin": "[0.00864437725656518374686235046570327857118376746496623652817511225527440406342626656133786714260265209088642555137111142000303897709939201, 0.0086443772565651837468623504657032785711837674649662365281751122552744040634262665666456696912789548820420188694023044276347282454693653]",
+        "upper_margin": "[0.0106614036994696577077305421792970812889718784910667561583004450599557009135652717335555275426998726430089867639057168640628744535123788, 0.0106614036994696577077305421792970812889718784910667561583004450599557009135652717388633300913761754341645800819369098716945637218851698]"
+      },
+      {
+        "index": 105719004,
+        "lower_margin": "[0.000000000000000115312800764830941889513300282888604958265131376541328919816222241008968935011474087947891207474093408717293243532488129902267383411611, 0.000000000000000115312800764830941889513300282888604958265131376541328919816222241014276737560150390739046800792124601724924932800855285512649399069459]",
+        "upper_margin": "[0.0000000000000000636339108938903781756613590708629734818780639201229221529177039371589446556186086936814712675074756550506127764543993243449182038604966, 0.0000000000000000636339108938903781756613590708629734818780639201229221529177039371642524581672849964726268608255068480582444657227664799549643257129671]"
+      }
+    ],
+    "q4": "[0.0000000191391138057512743337582338649581881874914418936100332399552799490347807393885055621472337471567334184061027781690124238547508252532164, 0.0000000191391138057512743337582338649581881874914418936100332399552799490347807393885055621472337471567334184061027781690124238547508252673239]"
+  },
+  "Ogg_finite_certificate": [
+    {
+      "degree": 1,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          5
+        ],
+        [
+          2,
+          2,
+          3
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 0,
+      "p": 5,
+      "rational_count": 1,
+      "rational_supersingular_j": [
+        0
+      ]
+    },
+    {
+      "degree": 1,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          7
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "g_plus": 0,
+      "p": 7,
+      "rational_count": 1,
+      "rational_supersingular_j": [
+        6
+      ]
+    },
+    {
+      "degree": 2,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          11
+        ],
+        [
+          3,
+          -2,
+          4
+        ],
+        [
+          3,
+          2,
+          4
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          3
+        ]
+      ],
+      "g_plus": 0,
+      "p": 11,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        0,
+        1
+      ]
+    },
+    {
+      "degree": 1,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          13
+        ],
+        [
+          2,
+          2,
+          7
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 0,
+      "p": 13,
+      "rational_count": 1,
+      "rational_supersingular_j": [
+        5
+      ]
+    },
+    {
+      "degree": 2,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          17
+        ],
+        [
+          2,
+          2,
+          9
+        ],
+        [
+          3,
+          -2,
+          6
+        ],
+        [
+          3,
+          2,
+          6
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 0,
+      "p": 17,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        0,
+        8
+      ]
+    },
+    {
+      "degree": 2,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          19
+        ],
+        [
+          4,
+          -2,
+          5
+        ],
+        [
+          4,
+          2,
+          5
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          5
+        ]
+      ],
+      "g_plus": 0,
+      "p": 19,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        7,
+        18
+      ]
+    },
+    {
+      "degree": 3,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          23
+        ],
+        [
+          3,
+          -2,
+          8
+        ],
+        [
+          3,
+          2,
+          8
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          6
+        ],
+        [
+          2,
+          -1,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ]
+      ],
+      "g_plus": 0,
+      "p": 23,
+      "rational_count": 3,
+      "rational_supersingular_j": [
+        0,
+        3,
+        19
+      ]
+    },
+    {
+      "degree": 3,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          29
+        ],
+        [
+          2,
+          2,
+          15
+        ],
+        [
+          3,
+          -2,
+          10
+        ],
+        [
+          3,
+          2,
+          10
+        ],
+        [
+          5,
+          -2,
+          6
+        ],
+        [
+          5,
+          2,
+          6
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 0,
+      "p": 29,
+      "rational_count": 3,
+      "rational_supersingular_j": [
+        0,
+        2,
+        25
+      ]
+    },
+    {
+      "degree": 3,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          31
+        ],
+        [
+          5,
+          -4,
+          7
+        ],
+        [
+          5,
+          4,
+          7
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          8
+        ],
+        [
+          2,
+          -1,
+          4
+        ],
+        [
+          2,
+          1,
+          4
+        ]
+      ],
+      "g_plus": 0,
+      "p": 31,
+      "rational_count": 3,
+      "rational_supersingular_j": [
+        2,
+        4,
+        23
+      ]
+    },
+    {
+      "degree": 3,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          37
+        ],
+        [
+          2,
+          2,
+          19
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 1,
+      "p": 37,
+      "rational_count": 1,
+      "rational_supersingular_j": [
+        8
+      ]
+    },
+    {
+      "degree": 4,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          41
+        ],
+        [
+          2,
+          2,
+          21
+        ],
+        [
+          3,
+          -2,
+          14
+        ],
+        [
+          3,
+          2,
+          14
+        ],
+        [
+          5,
+          -4,
+          9
+        ],
+        [
+          5,
+          4,
+          9
+        ],
+        [
+          6,
+          -2,
+          7
+        ],
+        [
+          6,
+          2,
+          7
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 0,
+      "p": 41,
+      "rational_count": 4,
+      "rational_supersingular_j": [
+        0,
+        3,
+        28,
+        32
+      ]
+    },
+    {
+      "degree": 4,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          43
+        ],
+        [
+          4,
+          -2,
+          11
+        ],
+        [
+          4,
+          2,
+          11
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          11
+        ]
+      ],
+      "g_plus": 1,
+      "p": 43,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        8,
+        41
+      ]
+    },
+    {
+      "degree": 5,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          47
+        ],
+        [
+          3,
+          -2,
+          16
+        ],
+        [
+          3,
+          2,
+          16
+        ],
+        [
+          7,
+          -6,
+          8
+        ],
+        [
+          7,
+          6,
+          8
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          12
+        ],
+        [
+          2,
+          -1,
+          6
+        ],
+        [
+          2,
+          1,
+          6
+        ],
+        [
+          3,
+          -1,
+          4
+        ],
+        [
+          3,
+          1,
+          4
+        ]
+      ],
+      "g_plus": 0,
+      "p": 47,
+      "rational_count": 5,
+      "rational_supersingular_j": [
+        0,
+        9,
+        10,
+        36,
+        44
+      ]
+    },
+    {
+      "degree": 5,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          53
+        ],
+        [
+          2,
+          2,
+          27
+        ],
+        [
+          3,
+          -2,
+          18
+        ],
+        [
+          3,
+          2,
+          18
+        ],
+        [
+          6,
+          -2,
+          9
+        ],
+        [
+          6,
+          2,
+          9
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 1,
+      "p": 53,
+      "rational_count": 3,
+      "rational_supersingular_j": [
+        0,
+        46,
+        50
+      ]
+    },
+    {
+      "degree": 6,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          59
+        ],
+        [
+          3,
+          -2,
+          20
+        ],
+        [
+          3,
+          2,
+          20
+        ],
+        [
+          4,
+          -2,
+          15
+        ],
+        [
+          4,
+          2,
+          15
+        ],
+        [
+          5,
+          -2,
+          12
+        ],
+        [
+          5,
+          2,
+          12
+        ],
+        [
+          7,
+          -4,
+          9
+        ],
+        [
+          7,
+          4,
+          9
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          15
+        ],
+        [
+          3,
+          -1,
+          5
+        ],
+        [
+          3,
+          1,
+          5
+        ]
+      ],
+      "g_plus": 0,
+      "p": 59,
+      "rational_count": 6,
+      "rational_supersingular_j": [
+        0,
+        15,
+        17,
+        28,
+        47,
+        48
+      ]
+    },
+    {
+      "degree": 5,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          61
+        ],
+        [
+          2,
+          2,
+          31
+        ],
+        [
+          5,
+          -4,
+          13
+        ],
+        [
+          5,
+          4,
+          13
+        ],
+        [
+          7,
+          -6,
+          10
+        ],
+        [
+          7,
+          6,
+          10
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 1,
+      "p": 61,
+      "rational_count": 3,
+      "rational_supersingular_j": [
+        9,
+        41,
+        50
+      ]
+    },
+    {
+      "degree": 6,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          67
+        ],
+        [
+          4,
+          -2,
+          17
+        ],
+        [
+          4,
+          2,
+          17
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          17
+        ]
+      ],
+      "g_plus": 2,
+      "p": 67,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        53,
+        66
+      ]
+    },
+    {
+      "degree": 7,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          71
+        ],
+        [
+          3,
+          -2,
+          24
+        ],
+        [
+          3,
+          2,
+          24
+        ],
+        [
+          5,
+          -4,
+          15
+        ],
+        [
+          5,
+          4,
+          15
+        ],
+        [
+          8,
+          -2,
+          9
+        ],
+        [
+          8,
+          2,
+          9
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          18
+        ],
+        [
+          2,
+          -1,
+          9
+        ],
+        [
+          2,
+          1,
+          9
+        ],
+        [
+          3,
+          -1,
+          6
+        ],
+        [
+          3,
+          1,
+          6
+        ],
+        [
+          4,
+          -3,
+          5
+        ],
+        [
+          4,
+          3,
+          5
+        ]
+      ],
+      "g_plus": 0,
+      "p": 71,
+      "rational_count": 7,
+      "rational_supersingular_j": [
+        0,
+        17,
+        24,
+        40,
+        41,
+        48,
+        66
+      ]
+    },
+    {
+      "degree": 6,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          73
+        ],
+        [
+          2,
+          2,
+          37
+        ],
+        [
+          7,
+          -4,
+          11
+        ],
+        [
+          7,
+          4,
+          11
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 2,
+      "p": 73,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        9,
+        56
+      ]
+    },
+    {
+      "degree": 7,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          79
+        ],
+        [
+          5,
+          -2,
+          16
+        ],
+        [
+          5,
+          2,
+          16
+        ],
+        [
+          8,
+          -6,
+          11
+        ],
+        [
+          8,
+          6,
+          11
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          20
+        ],
+        [
+          2,
+          -1,
+          10
+        ],
+        [
+          2,
+          1,
+          10
+        ],
+        [
+          4,
+          -1,
+          5
+        ],
+        [
+          4,
+          1,
+          5
+        ]
+      ],
+      "g_plus": 1,
+      "p": 79,
+      "rational_count": 5,
+      "rational_supersingular_j": [
+        15,
+        17,
+        21,
+        64,
+        69
+      ]
+    },
+    {
+      "degree": 8,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          83
+        ],
+        [
+          3,
+          -2,
+          28
+        ],
+        [
+          3,
+          2,
+          28
+        ],
+        [
+          4,
+          -2,
+          21
+        ],
+        [
+          4,
+          2,
+          21
+        ],
+        [
+          7,
+          -2,
+          12
+        ],
+        [
+          7,
+          2,
+          12
+        ],
+        [
+          9,
+          -8,
+          11
+        ],
+        [
+          9,
+          8,
+          11
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          21
+        ],
+        [
+          3,
+          -1,
+          7
+        ],
+        [
+          3,
+          1,
+          7
+        ]
+      ],
+      "g_plus": 1,
+      "p": 83,
+      "rational_count": 6,
+      "rational_supersingular_j": [
+        0,
+        17,
+        28,
+        50,
+        67,
+        68
+      ]
+    },
+    {
+      "degree": 8,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          89
+        ],
+        [
+          2,
+          2,
+          45
+        ],
+        [
+          3,
+          -2,
+          30
+        ],
+        [
+          3,
+          2,
+          30
+        ],
+        [
+          5,
+          -2,
+          18
+        ],
+        [
+          5,
+          2,
+          18
+        ],
+        [
+          6,
+          -2,
+          15
+        ],
+        [
+          6,
+          2,
+          15
+        ],
+        [
+          7,
+          -6,
+          14
+        ],
+        [
+          7,
+          6,
+          14
+        ],
+        [
+          9,
+          -2,
+          10
+        ],
+        [
+          9,
+          2,
+          10
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 1,
+      "p": 89,
+      "rational_count": 6,
+      "rational_supersingular_j": [
+        0,
+        6,
+        7,
+        13,
+        52,
+        66
+      ]
+    },
+    {
+      "degree": 8,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          97
+        ],
+        [
+          2,
+          2,
+          49
+        ],
+        [
+          7,
+          -2,
+          14
+        ],
+        [
+          7,
+          2,
+          14
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 3,
+      "p": 97,
+      "rational_count": 2,
+      "rational_supersingular_j": [
+        1,
+        20
+      ]
+    },
+    {
+      "degree": 9,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          101
+        ],
+        [
+          2,
+          2,
+          51
+        ],
+        [
+          3,
+          -2,
+          34
+        ],
+        [
+          3,
+          2,
+          34
+        ],
+        [
+          5,
+          -4,
+          21
+        ],
+        [
+          5,
+          4,
+          21
+        ],
+        [
+          6,
+          -2,
+          17
+        ],
+        [
+          6,
+          2,
+          17
+        ],
+        [
+          7,
+          -4,
+          15
+        ],
+        [
+          7,
+          4,
+          15
+        ],
+        [
+          9,
+          -8,
+          13
+        ],
+        [
+          9,
+          8,
+          13
+        ],
+        [
+          10,
+          -6,
+          11
+        ],
+        [
+          10,
+          6,
+          11
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 1,
+      "p": 101,
+      "rational_count": 7,
+      "rational_supersingular_j": [
+        0,
+        3,
+        21,
+        57,
+        59,
+        64,
+        66
+      ]
+    },
+    {
+      "degree": 9,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          103
+        ],
+        [
+          7,
+          -6,
+          16
+        ],
+        [
+          7,
+          6,
+          16
+        ],
+        [
+          8,
+          -2,
+          13
+        ],
+        [
+          8,
+          2,
+          13
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          26
+        ],
+        [
+          2,
+          -1,
+          13
+        ],
+        [
+          2,
+          1,
+          13
+        ],
+        [
+          4,
+          -3,
+          7
+        ],
+        [
+          4,
+          3,
+          7
+        ]
+      ],
+      "g_plus": 2,
+      "p": 103,
+      "rational_count": 5,
+      "rational_supersingular_j": [
+        23,
+        24,
+        34,
+        69,
+        80
+      ]
+    },
+    {
+      "degree": 10,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          107
+        ],
+        [
+          3,
+          -2,
+          36
+        ],
+        [
+          3,
+          2,
+          36
+        ],
+        [
+          4,
+          -2,
+          27
+        ],
+        [
+          4,
+          2,
+          27
+        ],
+        [
+          9,
+          -2,
+          12
+        ],
+        [
+          9,
+          2,
+          12
+        ],
+        [
+          11,
+          -10,
+          12
+        ],
+        [
+          11,
+          10,
+          12
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          27
+        ],
+        [
+          3,
+          -1,
+          9
+        ],
+        [
+          3,
+          1,
+          9
+        ]
+      ],
+      "g_plus": 2,
+      "p": 107,
+      "rational_count": 6,
+      "rational_supersingular_j": [
+        0,
+        16,
+        47,
+        72,
+        81,
+        94
+      ]
+    },
+    {
+      "degree": 9,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          109
+        ],
+        [
+          2,
+          2,
+          55
+        ],
+        [
+          5,
+          -2,
+          22
+        ],
+        [
+          5,
+          2,
+          22
+        ],
+        [
+          10,
+          -2,
+          11
+        ],
+        [
+          10,
+          2,
+          11
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 3,
+      "p": 109,
+      "rational_count": 3
+    },
+    {
+      "degree": 10,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          113
+        ],
+        [
+          2,
+          2,
+          57
+        ],
+        [
+          3,
+          -2,
+          38
+        ],
+        [
+          3,
+          2,
+          38
+        ],
+        [
+          6,
+          -2,
+          19
+        ],
+        [
+          6,
+          2,
+          19
+        ],
+        [
+          9,
+          -4,
+          13
+        ],
+        [
+          9,
+          4,
+          13
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 3,
+      "p": 113,
+      "rational_count": 4
+    },
+    {
+      "degree": 11,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          127
+        ],
+        [
+          8,
+          -6,
+          17
+        ],
+        [
+          8,
+          6,
+          17
+        ],
+        [
+          11,
+          -8,
+          13
+        ],
+        [
+          11,
+          8,
+          13
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          32
+        ],
+        [
+          2,
+          -1,
+          16
+        ],
+        [
+          2,
+          1,
+          16
+        ],
+        [
+          4,
+          -1,
+          8
+        ],
+        [
+          4,
+          1,
+          8
+        ]
+      ],
+      "g_plus": 3,
+      "p": 127,
+      "rational_count": 5
+    },
+    {
+      "degree": 12,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          131
+        ],
+        [
+          3,
+          -2,
+          44
+        ],
+        [
+          3,
+          2,
+          44
+        ],
+        [
+          4,
+          -2,
+          33
+        ],
+        [
+          4,
+          2,
+          33
+        ],
+        [
+          5,
+          -4,
+          27
+        ],
+        [
+          5,
+          4,
+          27
+        ],
+        [
+          7,
+          -6,
+          20
+        ],
+        [
+          7,
+          6,
+          20
+        ],
+        [
+          9,
+          -4,
+          15
+        ],
+        [
+          9,
+          4,
+          15
+        ],
+        [
+          11,
+          -2,
+          12
+        ],
+        [
+          11,
+          2,
+          12
+        ],
+        [
+          12,
+          -10,
+          13
+        ],
+        [
+          12,
+          10,
+          13
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          33
+        ],
+        [
+          3,
+          -1,
+          11
+        ],
+        [
+          3,
+          1,
+          11
+        ],
+        [
+          5,
+          -3,
+          7
+        ],
+        [
+          5,
+          3,
+          7
+        ]
+      ],
+      "g_plus": 1,
+      "p": 131,
+      "rational_count": 10
+    },
+    {
+      "degree": 12,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          137
+        ],
+        [
+          2,
+          2,
+          69
+        ],
+        [
+          3,
+          -2,
+          46
+        ],
+        [
+          3,
+          2,
+          46
+        ],
+        [
+          6,
+          -2,
+          23
+        ],
+        [
+          6,
+          2,
+          23
+        ],
+        [
+          9,
+          -8,
+          17
+        ],
+        [
+          9,
+          8,
+          17
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 4,
+      "p": 137,
+      "rational_count": 4
+    },
+    {
+      "degree": 12,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          139
+        ],
+        [
+          4,
+          -2,
+          35
+        ],
+        [
+          4,
+          2,
+          35
+        ],
+        [
+          5,
+          -2,
+          28
+        ],
+        [
+          5,
+          2,
+          28
+        ],
+        [
+          7,
+          -2,
+          20
+        ],
+        [
+          7,
+          2,
+          20
+        ],
+        [
+          11,
+          -4,
+          13
+        ],
+        [
+          11,
+          4,
+          13
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          35
+        ],
+        [
+          5,
+          -1,
+          7
+        ],
+        [
+          5,
+          1,
+          7
+        ]
+      ],
+      "g_plus": 3,
+      "p": 139,
+      "rational_count": 6
+    },
+    {
+      "degree": 13,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          149
+        ],
+        [
+          2,
+          2,
+          75
+        ],
+        [
+          3,
+          -2,
+          50
+        ],
+        [
+          3,
+          2,
+          50
+        ],
+        [
+          5,
+          -2,
+          30
+        ],
+        [
+          5,
+          2,
+          30
+        ],
+        [
+          6,
+          -2,
+          25
+        ],
+        [
+          6,
+          2,
+          25
+        ],
+        [
+          9,
+          -4,
+          17
+        ],
+        [
+          9,
+          4,
+          17
+        ],
+        [
+          10,
+          -2,
+          15
+        ],
+        [
+          10,
+          2,
+          15
+        ],
+        [
+          11,
+          -8,
+          15
+        ],
+        [
+          11,
+          8,
+          15
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 3,
+      "p": 149,
+      "rational_count": 7
+    },
+    {
+      "degree": 13,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          151
+        ],
+        [
+          5,
+          -4,
+          31
+        ],
+        [
+          5,
+          4,
+          31
+        ],
+        [
+          8,
+          -2,
+          19
+        ],
+        [
+          8,
+          2,
+          19
+        ],
+        [
+          11,
+          -10,
+          16
+        ],
+        [
+          11,
+          10,
+          16
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          38
+        ],
+        [
+          2,
+          -1,
+          19
+        ],
+        [
+          2,
+          1,
+          19
+        ],
+        [
+          4,
+          -3,
+          10
+        ],
+        [
+          4,
+          3,
+          10
+        ],
+        [
+          5,
+          -3,
+          8
+        ],
+        [
+          5,
+          3,
+          8
+        ]
+      ],
+      "g_plus": 3,
+      "p": 151,
+      "rational_count": 7
+    },
+    {
+      "degree": 13,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          157
+        ],
+        [
+          2,
+          2,
+          79
+        ],
+        [
+          7,
+          -4,
+          23
+        ],
+        [
+          7,
+          4,
+          23
+        ],
+        [
+          13,
+          -10,
+          14
+        ],
+        [
+          13,
+          10,
+          14
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 5,
+      "p": 157,
+      "rational_count": 3
+    },
+    {
+      "degree": 14,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          163
+        ],
+        [
+          4,
+          -2,
+          41
+        ],
+        [
+          4,
+          2,
+          41
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          41
+        ]
+      ],
+      "g_plus": 6,
+      "p": 163,
+      "rational_count": 2
+    },
+    {
+      "degree": 15,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          167
+        ],
+        [
+          3,
+          -2,
+          56
+        ],
+        [
+          3,
+          2,
+          56
+        ],
+        [
+          7,
+          -2,
+          24
+        ],
+        [
+          7,
+          2,
+          24
+        ],
+        [
+          8,
+          -2,
+          21
+        ],
+        [
+          8,
+          2,
+          21
+        ],
+        [
+          9,
+          -4,
+          19
+        ],
+        [
+          9,
+          4,
+          19
+        ],
+        [
+          11,
+          -6,
+          16
+        ],
+        [
+          11,
+          6,
+          16
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          42
+        ],
+        [
+          2,
+          -1,
+          21
+        ],
+        [
+          2,
+          1,
+          21
+        ],
+        [
+          3,
+          -1,
+          14
+        ],
+        [
+          3,
+          1,
+          14
+        ],
+        [
+          4,
+          -3,
+          11
+        ],
+        [
+          4,
+          3,
+          11
+        ],
+        [
+          6,
+          -5,
+          8
+        ],
+        [
+          6,
+          -1,
+          7
+        ],
+        [
+          6,
+          1,
+          7
+        ],
+        [
+          6,
+          5,
+          8
+        ]
+      ],
+      "g_plus": 2,
+      "p": 167,
+      "rational_count": 11
+    },
+    {
+      "degree": 15,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          173
+        ],
+        [
+          2,
+          2,
+          87
+        ],
+        [
+          3,
+          -2,
+          58
+        ],
+        [
+          3,
+          2,
+          58
+        ],
+        [
+          6,
+          -2,
+          29
+        ],
+        [
+          6,
+          2,
+          29
+        ],
+        [
+          7,
+          -6,
+          26
+        ],
+        [
+          7,
+          6,
+          26
+        ],
+        [
+          9,
+          -8,
+          21
+        ],
+        [
+          9,
+          8,
+          21
+        ],
+        [
+          11,
+          -10,
+          18
+        ],
+        [
+          11,
+          10,
+          18
+        ],
+        [
+          13,
+          -6,
+          14
+        ],
+        [
+          13,
+          6,
+          14
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 4,
+      "p": 173,
+      "rational_count": 7
+    },
+    {
+      "degree": 16,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          179
+        ],
+        [
+          3,
+          -2,
+          60
+        ],
+        [
+          3,
+          2,
+          60
+        ],
+        [
+          4,
+          -2,
+          45
+        ],
+        [
+          4,
+          2,
+          45
+        ],
+        [
+          5,
+          -2,
+          36
+        ],
+        [
+          5,
+          2,
+          36
+        ],
+        [
+          9,
+          -2,
+          20
+        ],
+        [
+          9,
+          2,
+          20
+        ],
+        [
+          12,
+          -10,
+          17
+        ],
+        [
+          12,
+          -2,
+          15
+        ],
+        [
+          12,
+          2,
+          15
+        ],
+        [
+          12,
+          10,
+          17
+        ],
+        [
+          13,
+          -8,
+          15
+        ],
+        [
+          13,
+          8,
+          15
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          45
+        ],
+        [
+          3,
+          -1,
+          15
+        ],
+        [
+          3,
+          1,
+          15
+        ],
+        [
+          5,
+          -1,
+          9
+        ],
+        [
+          5,
+          1,
+          9
+        ]
+      ],
+      "g_plus": 3,
+      "p": 179,
+      "rational_count": 10
+    },
+    {
+      "degree": 15,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          181
+        ],
+        [
+          2,
+          2,
+          91
+        ],
+        [
+          5,
+          -4,
+          37
+        ],
+        [
+          5,
+          4,
+          37
+        ],
+        [
+          7,
+          -2,
+          26
+        ],
+        [
+          7,
+          2,
+          26
+        ],
+        [
+          10,
+          -6,
+          19
+        ],
+        [
+          10,
+          6,
+          19
+        ],
+        [
+          13,
+          -2,
+          14
+        ],
+        [
+          13,
+          2,
+          14
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 5,
+      "p": 181,
+      "rational_count": 5
+    },
+    {
+      "degree": 17,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          191
+        ],
+        [
+          3,
+          -2,
+          64
+        ],
+        [
+          3,
+          2,
+          64
+        ],
+        [
+          5,
+          -4,
+          39
+        ],
+        [
+          5,
+          4,
+          39
+        ],
+        [
+          8,
+          -6,
+          25
+        ],
+        [
+          8,
+          6,
+          25
+        ],
+        [
+          9,
+          -8,
+          23
+        ],
+        [
+          9,
+          8,
+          23
+        ],
+        [
+          13,
+          -4,
+          15
+        ],
+        [
+          13,
+          4,
+          15
+        ],
+        [
+          15,
+          -14,
+          16
+        ],
+        [
+          15,
+          14,
+          16
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          48
+        ],
+        [
+          2,
+          -1,
+          24
+        ],
+        [
+          2,
+          1,
+          24
+        ],
+        [
+          3,
+          -1,
+          16
+        ],
+        [
+          3,
+          1,
+          16
+        ],
+        [
+          4,
+          -1,
+          12
+        ],
+        [
+          4,
+          1,
+          12
+        ],
+        [
+          5,
+          -3,
+          10
+        ],
+        [
+          5,
+          3,
+          10
+        ],
+        [
+          6,
+          -5,
+          9
+        ],
+        [
+          6,
+          -1,
+          8
+        ],
+        [
+          6,
+          1,
+          8
+        ],
+        [
+          6,
+          5,
+          9
+        ]
+      ],
+      "g_plus": 2,
+      "p": 191,
+      "rational_count": 13
+    },
+    {
+      "degree": 16,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          193
+        ],
+        [
+          2,
+          2,
+          97
+        ],
+        [
+          11,
+          -8,
+          19
+        ],
+        [
+          11,
+          8,
+          19
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 7,
+      "p": 193,
+      "rational_count": 2
+    },
+    {
+      "degree": 17,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          197
+        ],
+        [
+          2,
+          2,
+          99
+        ],
+        [
+          3,
+          -2,
+          66
+        ],
+        [
+          3,
+          2,
+          66
+        ],
+        [
+          6,
+          -2,
+          33
+        ],
+        [
+          6,
+          2,
+          33
+        ],
+        [
+          9,
+          -2,
+          22
+        ],
+        [
+          9,
+          2,
+          22
+        ],
+        [
+          11,
+          -2,
+          18
+        ],
+        [
+          11,
+          2,
+          18
+        ]
+      ],
+      "forms_minusp": [],
+      "g_plus": 6,
+      "p": 197,
+      "rational_count": 5
+    },
+    {
+      "degree": 17,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          199
+        ],
+        [
+          5,
+          -2,
+          40
+        ],
+        [
+          5,
+          2,
+          40
+        ],
+        [
+          7,
+          -4,
+          29
+        ],
+        [
+          7,
+          4,
+          29
+        ],
+        [
+          8,
+          -2,
+          25
+        ],
+        [
+          8,
+          2,
+          25
+        ],
+        [
+          13,
+          -6,
+          16
+        ],
+        [
+          13,
+          6,
+          16
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          50
+        ],
+        [
+          2,
+          -1,
+          25
+        ],
+        [
+          2,
+          1,
+          25
+        ],
+        [
+          4,
+          -3,
+          13
+        ],
+        [
+          4,
+          3,
+          13
+        ],
+        [
+          5,
+          -1,
+          10
+        ],
+        [
+          5,
+          1,
+          10
+        ],
+        [
+          7,
+          -5,
+          8
+        ],
+        [
+          7,
+          5,
+          8
+        ]
+      ],
+      "g_plus": 4,
+      "p": 199,
+      "rational_count": 9
+    },
+    {
+      "degree": 18,
+      "forms_minus4p": [
+        [
+          1,
+          0,
+          211
+        ],
+        [
+          4,
+          -2,
+          53
+        ],
+        [
+          4,
+          2,
+          53
+        ],
+        [
+          5,
+          -4,
+          43
+        ],
+        [
+          5,
+          4,
+          43
+        ],
+        [
+          11,
+          -6,
+          20
+        ],
+        [
+          11,
+          6,
+          20
+        ],
+        [
+          13,
+          -12,
+          19
+        ],
+        [
+          13,
+          12,
+          19
+        ]
+      ],
+      "forms_minusp": [
+        [
+          1,
+          1,
+          53
+        ],
+        [
+          5,
+          -3,
+          11
+        ],
+        [
+          5,
+          3,
+          11
+        ]
+      ],
+      "g_plus": 6,
+      "p": 211,
+      "rational_count": 6
+    }
+  ],
+  "checks": 80797,
+  "mod15": [
+    {
+      "non_ogg": 61,
+      "ogg": [
+        31
+      ],
+      "ordinary_E_prime": 211,
+      "r": 1,
+      "supersingular_E_prime": 31
+    },
+    {
+      "non_ogg": 107,
+      "ogg": [
+        2,
+        17,
+        47
+      ],
+      "ordinary_E_prime": 17,
+      "r": 2,
+      "supersingular_E_prime": 47
+    },
+    {
+      "non_ogg": 79,
+      "ogg": [
+        19
+      ],
+      "ordinary_E_prime": 19,
+      "r": 4,
+      "supersingular_E_prime": 79
+    },
+    {
+      "non_ogg": 37,
+      "ogg": [
+        7
+      ],
+      "ordinary_E_prime": 67,
+      "r": 7,
+      "supersingular_E_prime": 7
+    },
+    {
+      "non_ogg": 53,
+      "ogg": [
+        23
+      ],
+      "ordinary_E_prime": 83,
+      "r": 8,
+      "supersingular_E_prime": 23
+    },
+    {
+      "non_ogg": 101,
+      "ogg": [
+        11,
+        41,
+        71
+      ],
+      "ordinary_E_prime": 11,
+      "r": 11,
+      "supersingular_E_prime": 71
+    },
+    {
+      "non_ogg": 43,
+      "ogg": [
+        13
+      ],
+      "ordinary_E_prime": 43,
+      "r": 13,
+      "supersingular_E_prime": 13
+    },
+    {
+      "non_ogg": 89,
+      "ogg": [
+        29,
+        59
+      ],
+      "ordinary_E_prime": 59,
+      "r": 14,
+      "supersingular_E_prime": 29
+    }
+  ],
+  "ogg_residue_multiplicities": {
+    "1": 1,
+    "2": 3,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "7": 1,
+    "8": 1,
+    "11": 3,
+    "13": 1,
+    "14": 2
+  },
+  "periodic_filter": {
+    "M_d_intervals": {
+      "1": "[0.18785964246206712024851793405427323005590309490013878617200468408947723156466021370064275315876934550826454919724242255741501238535552, 0.187859642462067120248517934054273230055903094900138786172004684089477231564660213705950555707445648299420142515273615565046701653702952]",
+      "15": "[-0.127398342202603343197776605417188728718198757596781172848635600547153900090277541701406837420609440506235734375577296979599719146787103, -0.127398342202603343197776605417188728718198757596781172848635600547153900090277541700927596455319194580246422114098185067158612859388829]",
+      "3": "[-0.246358273271271959464741040920996438532070719703361704223433367619805493051061130783272013292838320778792326805626473639218410234929871, -0.246358273271271959464741040920996438532070719703361704223433367619805493051061130781265729498766338304243556396242839804020515950991481]",
+      "5": "[-0.230764850406659604509221999410814906717657888083627482178828068089292256699756484417429096622944873463269268099181800494024511995476016, -0.230764850406659604509221999410814906717657888083627482178828068089292256699756484416153281210224735854744293791306661532943594800773377]"
+    },
+    "nonunit_MRB": "[-0.349724781475328220776186434914622616531529850190208013553625835161943849660540073499773513460463999661815172790710089066084309371019876, -0.349724781475328220776186434914622616531529850190208013553625835161943849660540073496012173288381633652752115811972204357364391604972119]",
+    "signed_fundamental_period": 30,
+    "unit_MRB": "[0.537584423937395341024704368968895846587432945090346799725630519251421081225200287196654926447150979161016665009214626914779403990316368, 0.537584423937395341024704368968895846587432945090346799725630519251421081225200287205724069167909647961235315305983704631131011024722827]",
+    "unit_density": "8/15",
+    "unit_minus_density_times_MRB": "[0.437392614624292876892161470806616790557617961143606113767228021070366557724048173220147963403179966734659255667735365280087829775004371, 0.437392614624292876892161470806616790557617961143606113767228021070366557724048173232047934149899330356827555734121079267176337752534719]",
+    "unsigned_divergence_leading_coefficient": "4/15"
+  },
+  "schema": 1,
+  "scope": {
+    "CM_point_counts": 167,
+    "Ogg_class_number_range": "5 <= p <= 211",
+    "all_j_point_count_range": "5 <= p <= 107",
+    "formal_coefficient_range": "1 <= n <= 600",
+    "prime_range": "2 <= p < 1000",
+    "theta_coefficient_range": "1 <= n <= 1024"
+  },
+  "shared_wheel": {
+    "count": 5760,
+    "fraction": "192/1001",
+    "modulus": 30030
+  },
+  "status": "PASS"
+}

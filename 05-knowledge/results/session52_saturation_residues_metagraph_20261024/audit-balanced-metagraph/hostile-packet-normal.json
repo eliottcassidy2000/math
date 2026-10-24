@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "last_error_line": "RuntimeError: manifest mismatch: engine.py",
+      "status": "REJECTED",
+      "test": "engine byte tamper"
+    },
+    {
+      "last_error_line": "RuntimeError: independent internal at n=10",
+      "status": "REJECTED",
+      "test": "forged internal scalar with refreshed checksum"
+    },
+    {
+      "last_error_line": "RuntimeError: independent blue_boundary at n=10",
+      "status": "REJECTED",
+      "test": "forged blue boundary with refreshed checksum"
+    }
+  ]
+}

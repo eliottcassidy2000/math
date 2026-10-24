@@ -1,0 +1,13 @@
+REJECTED residue_preserving_wrong_ogg_prime optimized=False RuntimeError: 17 hostile
+REJECTED residue_preserving_wrong_ogg_prime optimized=True RuntimeError: 17 hostile
+REJECTED wrong_curve_with_same_claimed_invariants optimized=False RuntimeError: inherited Bolza twist trace relation
+REJECTED wrong_curve_with_same_claimed_invariants optimized=True RuntimeError: inherited Bolza twist trace relation
+REJECTED wrong_divisor_intersection_sign optimized=False RuntimeError: signed divisor inclusion-exclusion
+REJECTED wrong_divisor_intersection_sign optimized=True RuntimeError: signed divisor inclusion-exclusion
+REJECTED unit_density_substitution optimized=False RuntimeError: unit-filter MRB enclosure
+REJECTED unit_density_substitution optimized=True RuntimeError: unit-filter MRB enclosure
+REJECTED all_j_count_omits_exceptional_j_zero optimized=False RuntimeError: independent class number/point count
+REJECTED all_j_count_omits_exceptional_j_zero optimized=True RuntimeError: independent class number/point count
+REJECTED drop_nonfundamental_order_contribution optimized=False RuntimeError: nonrational pair count
+REJECTED drop_nonfundamental_order_contribution optimized=True RuntimeError: nonrational pair count
+PASS: twelve semantic-mutation executions rejected

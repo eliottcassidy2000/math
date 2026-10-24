@@ -1,0 +1,70 @@
+{
+  "additional_rotation_fixed_controls": [
+    {
+      "edge_orbits": 3,
+      "fixed": 8,
+      "n": 8,
+      "step": 1
+    },
+    {
+      "edge_orbits": 9,
+      "fixed": 80,
+      "n": 8,
+      "step": 3
+    },
+    {
+      "edge_orbits": 9,
+      "fixed": 80,
+      "n": 8,
+      "step": 6
+    },
+    {
+      "edge_orbits": 6,
+      "fixed": 64,
+      "n": 14,
+      "step": 1
+    },
+    {
+      "edge_orbits": 18,
+      "fixed": 22144,
+      "n": 14,
+      "step": 3
+    },
+    {
+      "edge_orbits": 30,
+      "fixed": 5327104,
+      "n": 14,
+      "step": 5
+    },
+    {
+      "edge_orbits": 18,
+      "fixed": 22144,
+      "n": 14,
+      "step": 6
+    },
+    {
+      "edge_orbits": 30,
+      "fixed": 5327104,
+      "n": 14,
+      "step": 10
+    }
+  ],
+  "independent_scalar_orders": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "inherited_n10_class_data": {
+    "merged_balanced_nodes": 6781,
+    "ordinary_balanced_classes": 13333,
+    "self_converse_balanced_classes": 229
+  },
+  "n8_literal_universe": 2097152,
+  "native_C_line_convention": "not optionally R-quotiented",
+  "prior_scalar_provenance": "THM-554 exact full score polynomial and THM-555 total balanced ports through n10 are inherited and reproduced",
+  "producer_manifest_sha256": "7431d29c032d92aa6da1807c436bb839ed9c84909872de31d7f64b09d4963d43",
+  "status": "PASS"
+}

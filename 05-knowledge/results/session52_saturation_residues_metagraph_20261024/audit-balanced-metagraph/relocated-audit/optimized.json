@@ -1,0 +1,440 @@
+{
+  "counts": [
+    {
+      "blue_boundary": 0,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 1,
+        "LH": 0,
+        "LL": 0
+      },
+      "blue_internal": 1,
+      "endpoint": {
+        "HH": 0,
+        "HL": 1,
+        "LH": 0,
+        "LL": 0
+      },
+      "internal": 1,
+      "n": 2,
+      "ports": 1,
+      "reflection_edge_orbits": 0,
+      "reverse_dp_states": 1
+    },
+    {
+      "blue_boundary": 1,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 2,
+        "LH": 1,
+        "LL": 0
+      },
+      "blue_internal": 2,
+      "endpoint": {
+        "HH": 1,
+        "HL": 2,
+        "LH": 1,
+        "LL": 1
+      },
+      "internal": 2,
+      "n": 4,
+      "native_internal_C_lines": 1,
+      "optional_R_internal_edge_orbits": 1,
+      "ports": 5,
+      "reflection_edge_orbits": 2,
+      "reverse_dp_states": 9
+    },
+    {
+      "blue_boundary": 9,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 12,
+        "LH": 9,
+        "LL": 0
+      },
+      "blue_internal": 12,
+      "endpoint": {
+        "HH": 31,
+        "HL": 60,
+        "LH": 35,
+        "LL": 31
+      },
+      "internal": 60,
+      "n": 6,
+      "native_internal_C_lines": 30,
+      "optional_R_internal_edge_orbits": 18,
+      "ports": 157,
+      "reflection_edge_orbits": 6,
+      "reverse_dp_states": 77
+    },
+    {
+      "blue_boundary": 219,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 280,
+        "LH": 219,
+        "LL": 0
+      },
+      "blue_internal": 280,
+      "endpoint": {
+        "HH": 11005,
+        "HL": 18152,
+        "LH": 11787,
+        "LL": 11005
+      },
+      "internal": 18152,
+      "n": 8,
+      "native_internal_C_lines": 9076,
+      "optional_R_internal_edge_orbits": 4608,
+      "ports": 51949,
+      "reflection_edge_orbits": 12,
+      "reverse_dp_states": 977
+    },
+    {
+      "blue_boundary": 18795,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 22904,
+        "LH": 18795,
+        "LL": 0
+      },
+      "blue_internal": 22904,
+      "endpoint": {
+        "HH": 44967565,
+        "HL": 67123248,
+        "LH": 46961451,
+        "LL": 44967565
+      },
+      "internal": 67123248,
+      "n": 10,
+      "native_internal_C_lines": 33561624,
+      "optional_R_internal_edge_orbits": 16786538,
+      "ports": 204019829,
+      "reflection_edge_orbits": 20,
+      "reverse_dp_states": 17338
+    },
+    {
+      "blue_boundary": 5765829,
+      "blue_endpoint": {
+        "HH": 0,
+        "HL": 6803648,
+        "LH": 5765829,
+        "LL": 0
+      },
+      "blue_internal": 6803648,
+      "endpoint": {
+        "HH": 2301770367447,
+        "HL": 3213825974560,
+        "LH": 2371435845579,
+        "LL": 2301770367447
+      },
+      "internal": 3213825974560,
+      "n": 12,
+      "native_internal_C_lines": 1606912987280,
+      "optional_R_internal_edge_orbits": 803458194552,
+      "ports": 10188802555033,
+      "reflection_edge_orbits": 30,
+      "reverse_dp_states": 396960
+    }
+  ],
+  "literal": [
+    {
+      "CR_fixed_internal": 1,
+      "C_fixed_internal": 1,
+      "blue_endpoint": {
+        "HL": 1
+      },
+      "endpoint": {
+        "HL": 1
+      },
+      "hostile_witnesses": {
+        "full_converse_is_not_C": {
+          "C_scores": [
+            1,
+            0
+          ],
+          "converse_scores": [
+            0,
+            1
+          ],
+          "source_scores": [
+            1,
+            0
+          ],
+          "word": 0
+        }
+      },
+      "internal_ports": 1,
+      "literal_digest": "bfc6294698221c19e3ba740855f9beaee7b68ad50eefed5a2695878cdb403065",
+      "n": 2,
+      "reflection_moved_internal": 0
+    },
+    {
+      "CR_fixed_internal": 0,
+      "C_fixed_internal": 0,
+      "blue_endpoint": {
+        "HL": 2,
+        "LH": 1
+      },
+      "endpoint": {
+        "HH": 1,
+        "HL": 2,
+        "LH": 1,
+        "LL": 1
+      },
+      "hostile_witnesses": {
+        "full_converse_is_not_C": {
+          "C_scores": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "converse_scores": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "source_scores": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "word": 0
+        },
+        "wrong_endpoint_internal": {
+          "C_scores": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "source_scores": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "tag": "LH",
+          "word": 0
+        }
+      },
+      "internal_ports": 2,
+      "literal_digest": "bdd7147cd95837029aae9ef9c217d70f9f0956577a7c47d7dc3da75415c9c8d5",
+      "n": 4,
+      "native_C_lines": 1,
+      "optional_R_edge_orbits": 1,
+      "reflection_moved_internal": 0
+    },
+    {
+      "CR_fixed_internal": 0,
+      "C_fixed_internal": 0,
+      "blue_endpoint": {
+        "HL": 12,
+        "LH": 9
+      },
+      "endpoint": {
+        "HH": 31,
+        "HL": 60,
+        "LH": 35,
+        "LL": 31
+      },
+      "hostile_witnesses": {
+        "full_converse_is_not_C": {
+          "C_scores": [
+            3,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "converse_scores": [
+            2,
+            3,
+            3,
+            3,
+            2,
+            2
+          ],
+          "source_scores": [
+            3,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "word": 28
+        },
+        "wrong_endpoint_internal": {
+          "C_scores": [
+            3,
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "source_scores": [
+            3,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "tag": "HH",
+          "word": 28
+        }
+      },
+      "internal_ports": 60,
+      "literal_digest": "dc5fbaa1b04ce52e9030358d203c199765a5be208ef63e873beda23399e82a10",
+      "n": 6,
+      "native_C_lines": 30,
+      "optional_R_edge_orbits": 18,
+      "reflection_moved_internal": 48
+    },
+    {
+      "CR_fixed_internal": 0,
+      "C_fixed_internal": 0,
+      "blue_endpoint": {
+        "HL": 280,
+        "LH": 219
+      },
+      "endpoint": {
+        "HH": 11005,
+        "HL": 18152,
+        "LH": 11787,
+        "LL": 11005
+      },
+      "hostile_witnesses": {
+        "full_converse_is_not_C": {
+          "C_scores": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            3,
+            3,
+            2
+          ],
+          "converse_scores": [
+            3,
+            4,
+            4,
+            4,
+            4,
+            3,
+            3,
+            3
+          ],
+          "source_scores": [
+            4,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4
+          ],
+          "word": 3640
+        },
+        "wrong_endpoint_internal": {
+          "C_scores": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            3,
+            3,
+            2
+          ],
+          "source_scores": [
+            4,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4
+          ],
+          "tag": "HH",
+          "word": 3640
+        }
+      },
+      "internal_ports": 18152,
+      "literal_digest": "d6d705d9ae660b2b1fefb968979e146edbc9f11e3eb2bd096f1ce6b5aa02a12f",
+      "n": 8,
+      "native_C_lines": 9076,
+      "optional_R_edge_orbits": 4608,
+      "reflection_moved_internal": 17872
+    }
+  ],
+  "method": "independent descending coefficient elimination; R polynomial from actual full-edge orbits; binary-order actual matrix enumeration",
+  "rotation_controls": [
+    {
+      "edge_orbits": 0,
+      "fixed": 1,
+      "gcd": 1,
+      "n": 2,
+      "step": 1
+    },
+    {
+      "edge_orbits": 1,
+      "fixed": 2,
+      "gcd": 1,
+      "n": 4,
+      "step": 1
+    },
+    {
+      "edge_orbits": 2,
+      "fixed": 4,
+      "gcd": 1,
+      "n": 6,
+      "step": 1
+    },
+    {
+      "edge_orbits": 3,
+      "fixed": 8,
+      "gcd": 1,
+      "n": 8,
+      "step": 1
+    },
+    {
+      "edge_orbits": 9,
+      "fixed": 80,
+      "gcd": 3,
+      "n": 8,
+      "step": 3
+    },
+    {
+      "edge_orbits": 9,
+      "fixed": 80,
+      "gcd": 3,
+      "n": 8,
+      "step": 6
+    },
+    {
+      "edge_orbits": 4,
+      "fixed": 16,
+      "gcd": 1,
+      "n": 10,
+      "step": 1
+    },
+    {
+      "edge_orbits": 5,
+      "fixed": 32,
+      "gcd": 1,
+      "n": 12,
+      "step": 1
+    }
+  ],
+  "status": "PASS"
+}

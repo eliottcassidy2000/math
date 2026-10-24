@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "INHERITED_BOLZA_EXCERPT.md",
+      "bytes": 2864,
+      "sha256": "3f38131b658e72632444fb7a4cc9e090e43686fbb0aff852a7cfdf7993b8b7ab"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1807,
+      "sha256": "0de765c4719f30dc2d4229bcbb0f08e4dd64249937c93b9531fb300a9dadc941"
+    },
+    {
+      "path": "RELOCATION.json",
+      "bytes": 816,
+      "sha256": "b3de3dba05667fb03914919f65379cc6b8c9a6ab17db47be1712c7b5a19d73c9"
+    },
+    {
+      "path": "RESEARCH.md",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 6274,
+      "sha256": "8e6a62d1ace01ac52fa5581be2d1d7635015d47eb2819dc96c554846d8a3db44"
+    },
+    {
+      "path": "check.out",
+      "bytes": 1673,
+      "sha256": "710689a30feddb732293d3ad98d375d14cab6f610dcb92da5707eab885c63660"
+    },
+    {
+      "path": "check.py",
+      "bytes": 12369,
+      "sha256": "64a50d611a69e8bf9528cf910fbf77374e355982bbdf6f10f4b9dd6c96c69898"
+    },
+    {
+      "path": "check_optimized.out",
+      "bytes": 1673,
+      "sha256": "710689a30feddb732293d3ad98d375d14cab6f610dcb92da5707eab885c63660"
+    },
+    {
+      "path": "rejections.out",
+      "bytes": 779,
+      "sha256": "993a973ffc01bfd1af7756c0597c414e4d5483f299e84cf9ce3599d6d193a7bd"
+    },
+    {
+      "path": "rejections_optimized.out",
+      "bytes": 779,
+      "sha256": "993a973ffc01bfd1af7756c0597c414e4d5483f299e84cf9ce3599d6d193a7bd"
+    },
+    {
+      "path": "results.json",
+      "bytes": 77187,
+      "sha256": "219becfcc15d80a439ca46ab43de4c8d17d8f8347cd95ff8e2d222ee34758a37"
+    },
+    {
+      "path": "results.normal.json",
+      "bytes": 77187,
+      "sha256": "219becfcc15d80a439ca46ab43de4c8d17d8f8347cd95ff8e2d222ee34758a37"
+    },
+    {
+      "path": "test_rejections.py",
+      "bytes": 1465,
+      "sha256": "10dc36e7422a9799a00f3dd525bafce190dba49add12908a79fbadf68d946710"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 428,
+      "sha256": "70da1d0ded82c3982020725a0b716a07eb38166390d9a2ca90dd9125fdeb08a0"
+    }
+  ]
+}

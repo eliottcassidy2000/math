@@ -1,0 +1,67 @@
+{
+  "files": [
+    {
+      "bytes": 3717,
+      "path": "README.md",
+      "sha256": "7dd6ca9d85ace4cbac76924319f4d019e73df4eef1d8eb5bfb1086de55cd5298"
+    },
+    {
+      "bytes": 1320,
+      "path": "SOURCE_PINS.json",
+      "sha256": "8bb78190cede2b19e8bda1350544f156987702c0928396d69df28a5f877c68f1"
+    },
+    {
+      "bytes": 16899,
+      "path": "THEOREM.md",
+      "sha256": "14366d305f5bac159aa2c9fbc7297648ba6fc16c67e6dcc67b8d99dd5b65da14"
+    },
+    {
+      "bytes": 16345,
+      "path": "check.py",
+      "sha256": "8d97d253032dae742396af5d6234adb6bfc459d4c89a1849f1d49e23f0fb37a5"
+    },
+    {
+      "bytes": 8158,
+      "path": "engine.py",
+      "sha256": "eec1af33bf2e4b547a16a6dec79ea5fdec97f6c77159625cbe3c578588837261"
+    },
+    {
+      "bytes": 11005,
+      "path": "normal.json",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e"
+    },
+    {
+      "bytes": 11005,
+      "path": "normal.out",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e"
+    },
+    {
+      "bytes": 11005,
+      "path": "optimized.json",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e"
+    },
+    {
+      "bytes": 11005,
+      "path": "optimized.out",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e"
+    },
+    {
+      "bytes": 1420,
+      "path": "sources/PRIMARY.md",
+      "sha256": "19cc0d5955aa3bc1466c622e1ad8ae69f8bedd01f9656d2ea5b10dd994b26c9e"
+    },
+    {
+      "bytes": 8813,
+      "path": "sources/THM-4557-distinct-skew-Hadamard-construction.md",
+      "sha256": "d198b1a6eeb891a280529902e077b047798b75c52e1c58628c3e5fb04f38266c"
+    },
+    {
+      "bytes": 788,
+      "path": "verify_manifest.py",
+      "sha256": "19f563d13384d71c833e2a9cbfed1e7166781389755ce273e7260d929b1eb820"
+    }
+  ],
+  "packet": "session52-marked-regularization",
+  "schema_version": 1,
+  "status": "PROVED structural statements; CITED known base construction; FINITE-EXACT bounded checks"
+}

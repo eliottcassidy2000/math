@@ -1,0 +1,74 @@
+[
+  {
+    "mutation": "residue_preserving_wrong_ogg_prime",
+    "optimized": false,
+    "replacements": 1,
+    "reason": "RuntimeError: 17 hostile"
+  },
+  {
+    "mutation": "residue_preserving_wrong_ogg_prime",
+    "optimized": true,
+    "replacements": 1,
+    "reason": "RuntimeError: 17 hostile"
+  },
+  {
+    "mutation": "wrong_curve_with_same_claimed_invariants",
+    "optimized": false,
+    "replacements": 1,
+    "reason": "RuntimeError: inherited Bolza twist trace relation"
+  },
+  {
+    "mutation": "wrong_curve_with_same_claimed_invariants",
+    "optimized": true,
+    "replacements": 1,
+    "reason": "RuntimeError: inherited Bolza twist trace relation"
+  },
+  {
+    "mutation": "wrong_divisor_intersection_sign",
+    "optimized": false,
+    "replacements": 3,
+    "reason": "RuntimeError: signed divisor inclusion-exclusion"
+  },
+  {
+    "mutation": "wrong_divisor_intersection_sign",
+    "optimized": true,
+    "replacements": 3,
+    "reason": "RuntimeError: signed divisor inclusion-exclusion"
+  },
+  {
+    "mutation": "unit_density_substitution",
+    "optimized": false,
+    "replacements": 1,
+    "reason": "RuntimeError: unit-filter MRB enclosure"
+  },
+  {
+    "mutation": "unit_density_substitution",
+    "optimized": true,
+    "replacements": 1,
+    "reason": "RuntimeError: unit-filter MRB enclosure"
+  },
+  {
+    "mutation": "all_j_count_omits_exceptional_j_zero",
+    "optimized": false,
+    "replacements": 1,
+    "reason": "RuntimeError: independent class number/point count"
+  },
+  {
+    "mutation": "all_j_count_omits_exceptional_j_zero",
+    "optimized": true,
+    "replacements": 1,
+    "reason": "RuntimeError: independent class number/point count"
+  },
+  {
+    "mutation": "drop_nonfundamental_order_contribution",
+    "optimized": false,
+    "replacements": 1,
+    "reason": "RuntimeError: nonrational pair count"
+  },
+  {
+    "mutation": "drop_nonfundamental_order_contribution",
+    "optimized": true,
+    "replacements": 1,
+    "reason": "RuntimeError: nonrational pair count"
+  }
+]

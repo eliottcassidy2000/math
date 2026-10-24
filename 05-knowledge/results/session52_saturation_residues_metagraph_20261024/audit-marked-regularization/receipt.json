@@ -1,0 +1,45 @@
+{
+  "copied_only_manifest_entries_plus_manifest": true,
+  "corrupted_relocated_producer_receipt_rejected": true,
+  "files_verified_before_relocation": 33,
+  "producer_manifest_sha256": "30ca3999e8c4abffba1b0641d87bdc25840ff0d5c1fd3fa94cadbb4385e2966e",
+  "runs": [
+    {
+      "mode": "normal",
+      "script": "audit.py",
+      "sha256": "a25b51dfc3762a4f020ca88d283d65838f31de87f8386f5ae5af5a8a4eccc977",
+      "status": "PASS"
+    },
+    {
+      "mode": "normal",
+      "script": "producer/check.py",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e",
+      "status": "PASS"
+    },
+    {
+      "mode": "normal",
+      "script": "compare.py",
+      "sha256": "94b3780e5e484b2188432395bf04d49e186894caa049683d7ff4fd31724512ba",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "script": "audit.py",
+      "sha256": "a25b51dfc3762a4f020ca88d283d65838f31de87f8386f5ae5af5a8a4eccc977",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "script": "producer/check.py",
+      "sha256": "07f2ac3779808ac7cce80d824a7941faf791d754a78a6a50c52c3ad9c8d7097e",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "script": "compare.py",
+      "sha256": "94b3780e5e484b2188432395bf04d49e186894caa049683d7ff4fd31724512ba",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,116 @@
+{
+  "retrieved_date_utc": "2026-10-24",
+  "repository": "https://github.com/eliottcassidy2000/math",
+  "checkout_commit": "f50a8c2f3a307869ec51650851dbc43eaedfc176",
+  "inherited_files": [
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "9435f84257f76abcdcde313ecec940bb6b8b71ae5a064ba3dc41f44819c60f95"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079"
+    },
+    {
+      "status": "current_checkout",
+      "path": "session50-publication/clean-repo/05-knowledge/results/session51_structural_errors_relational_packets_20261024/prime-offsets/THEOREM.md",
+      "sha256": "4db86ba83df28cf2c4ce437076194cb1d872d0a5273b0525348c7dd265f79ca8"
+    },
+    {
+      "status": "archived_proof",
+      "path": "session31-publication/replay-FINAL/mrb/MRB_CONTOUR_AUDIT.md",
+      "sha256": "175e51a6c895502ebfafde8f2ec2de7d7ba09c5dfe304c7b79dbb3ddc29d48aa"
+    },
+    {
+      "status": "archived_independent_audit",
+      "path": "session31-publication/replay-FINAL/analytic-audit/AUDIT.md",
+      "sha256": "bc4dfe4af947f286d38f0e054072d9876cc23654941cb0834e910ae277bd2884"
+    }
+  ],
+  "public_sources": [
+    {
+      "title": "Crandall, Unified algorithms for polylogarithm, L-series, and zeta variants (2012), Section 7.5",
+      "url": "https://www.marvinrayburns.com/UniversalTOC25.pdf",
+      "scope": "MRB definition and prior diagonal eta-derivative representation; no modular defect theorem inferred"
+    },
+    {
+      "title": "OEIS A037077",
+      "url": "https://oeis.org/A037077",
+      "scope": "Current definition and published decimal sequence"
+    },
+    {
+      "title": "Aricheta, Supersingular Elliptic Curves and Moonshine, SIGMA 15 (2019), 007",
+      "url": "https://arxiv.org/html/1809.07421v2",
+      "scope": "Introduction and Appendix A: Ogg rationality/genus condition, Monster support, full versus Fricke-only level 15"
+    },
+    {
+      "title": "Delfs and Galbraith, Computing isogenies between supersingular elliptic curves over F_p",
+      "url": "https://arxiv.org/pdf/1310.7789",
+      "scope": "Section 1 total/rational supersingular counts; trace-zero characterization for p>3"
+    },
+    {
+      "title": "Mula, Murru, Pintore, On random sampling of supersingular elliptic curves, Annali di Matematica 204 (2025), 1293–1335",
+      "url": "https://link.springer.com/article/10.1007/s10231-024-01528-x",
+      "scope": "Theorem 4.1: Deuring CM reduction criterion, stated for p>=5"
+    },
+    {
+      "title": "Elkies, Ono, Yang, Reduction of CM elliptic curves and modular function congruences",
+      "url": "https://people.math.wisc.edu/~tonghaiyang/deuring.pdf",
+      "scope": "Section 3: classical CM-to-supersingular reduction mechanism"
+    },
+    {
+      "title": "DLMF 19.8, Quadratic transformations",
+      "url": "https://dlmf.nist.gov/19.8",
+      "scope": "AGM identity 19.8.5 used for r=2 modulus"
+    },
+    {
+      "title": "DLMF 23.15, Definitions",
+      "url": "https://dlmf.nist.gov/23.15",
+      "scope": "Nome and elliptic lambda conventions"
+    },
+    {
+      "title": "Duminil-Copin and Smirnov, The connective constant of the honeycomb lattice equals sqrt(2+sqrt(2))",
+      "url": "https://arxiv.org/abs/1007.0575",
+      "scope": "Exact honeycomb connective constant only; no MRB functional transfer"
+    }
+  ],
+  "user_request_provenance": [
+    {
+      "message_id": "Sentinel_9eecbfc0dfd08191b82910ec22ed586f",
+      "date": "2026-10-22",
+      "scope": "Exact A(m), A(8), q^4 near-defect, nearest index, and expressly open actual-defect mechanism"
+    },
+    {
+      "message_id": "Sentinel_f018c3203bf88191884fda9881fe4879",
+      "date": "2026-10-24",
+      "scope": "Merge prior MRB, fifteen absolute supersingular primes, mod-15 themes and current arithmetic/graph work"
+    }
+  ],
+  "source_limits": [
+    "The later checkout omits the Session31 route; archived publication replay copies, not a chronological log, were used and credited.",
+    "No literature-wide newest-paper or novelty claim.",
+    "LMFDB page was browser-gated and is not used as evidence."
+  ]
+}

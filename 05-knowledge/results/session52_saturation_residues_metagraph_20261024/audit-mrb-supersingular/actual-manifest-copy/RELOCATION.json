@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "normal_optimized_identical": true,
+  "negative_controls_identical": true,
+  "manifest_verified_before_and_after": true,
+  "active_checks": 157050,
+  "commands": [
+    [
+      "python3",
+      "verify_manifest.py"
+    ],
+    [
+      "python3",
+      "check.py"
+    ],
+    [
+      "python3",
+      "-O",
+      "check.py"
+    ],
+    [
+      "python3",
+      "test_rejections.py"
+    ],
+    [
+      "python3",
+      "-O",
+      "test_rejections.py"
+    ],
+    [
+      "python3",
+      "verify_manifest.py"
+    ]
+  ],
+  "results_sha256": "219becfcc15d80a439ca46ab43de4c8d17d8f8347cd95ff8e2d222ee34758a37",
+  "check_stdout_sha256": "710689a30feddb732293d3ad98d375d14cab6f610dcb92da5707eab885c63660",
+  "negative_stdout_sha256": "993a973ffc01bfd1af7756c0597c414e4d5483f299e84cf9ce3599d6d193a7bd"
+}

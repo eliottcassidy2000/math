@@ -1,0 +1,181 @@
+{
+  "counts": [
+    {
+      "anticycle_dp_states": 3,
+      "balanced_blue_ports": 1,
+      "balanced_ports": 1,
+      "blue_polynomial_peak_states": 1,
+      "boundary_black_ports": 0,
+      "boundary_blue_ports": 0,
+      "boundary_ports": 0,
+      "cyclic_orbits_internal_words": 1,
+      "endpoint_ports": {
+        "HH": 0,
+        "HL": 1,
+        "LH": 0,
+        "LL": 0
+      },
+      "full_cube_words": 1,
+      "internal_black_ports": 0,
+      "internal_blue_ports": 1,
+      "internal_ports": 1,
+      "n": 2,
+      "ordinary_polynomial_peak_states": 1,
+      "proper_rotation_fixed_counts": {
+        "1": 1
+      },
+      "row_dp_states": 1
+    },
+    {
+      "anticycle_dp_states": 8,
+      "balanced_blue_ports": 3,
+      "balanced_ports": 5,
+      "blue_polynomial_peak_states": 3,
+      "boundary_black_ports": 2,
+      "boundary_blue_ports": 1,
+      "boundary_ports": 3,
+      "cyclic_orbits_internal_words": 2,
+      "endpoint_ports": {
+        "HH": 1,
+        "HL": 2,
+        "LH": 1,
+        "LL": 1
+      },
+      "full_cube_words": 8,
+      "incident_lines": 4,
+      "internal_black_lines": 0,
+      "internal_black_ports": 0,
+      "internal_blue_lines": 1,
+      "internal_blue_ports": 2,
+      "internal_lines": 1,
+      "internal_ports": 2,
+      "n": 4,
+      "ordinary_polynomial_peak_states": 6,
+      "proper_rotation_fixed_counts": {
+        "1": 2
+      },
+      "row_dp_states": 10
+    },
+    {
+      "anticycle_dp_states": 54,
+      "balanced_blue_ports": 21,
+      "balanced_ports": 157,
+      "blue_polynomial_peak_states": 21,
+      "boundary_black_ports": 88,
+      "boundary_blue_ports": 9,
+      "boundary_ports": 97,
+      "cyclic_orbits_internal_words": 12,
+      "endpoint_ports": {
+        "HH": 31,
+        "HL": 60,
+        "LH": 35,
+        "LL": 31
+      },
+      "full_cube_words": 1024,
+      "incident_lines": 127,
+      "internal_black_lines": 24,
+      "internal_black_ports": 48,
+      "internal_blue_lines": 6,
+      "internal_blue_ports": 12,
+      "internal_lines": 30,
+      "internal_ports": 60,
+      "n": 6,
+      "ordinary_polynomial_peak_states": 86,
+      "proper_rotation_fixed_counts": {
+        "1": 4
+      },
+      "row_dp_states": 90
+    },
+    {
+      "anticycle_dp_states": 727,
+      "balanced_blue_ports": 499,
+      "balanced_ports": 51949,
+      "blue_polynomial_peak_states": 197,
+      "boundary_black_ports": 33578,
+      "boundary_blue_ports": 219,
+      "boundary_ports": 33797,
+      "cyclic_orbits_internal_words": 2040,
+      "endpoint_ports": {
+        "HH": 11005,
+        "HL": 18152,
+        "LH": 11787,
+        "LL": 11005
+      },
+      "full_cube_words": 2097152,
+      "incident_lines": 42873,
+      "internal_black_lines": 8936,
+      "internal_black_ports": 17872,
+      "internal_blue_lines": 140,
+      "internal_blue_ports": 280,
+      "internal_lines": 9076,
+      "internal_ports": 18152,
+      "n": 8,
+      "ordinary_polynomial_peak_states": 3298,
+      "proper_rotation_fixed_counts": {
+        "1": 8,
+        "3": 80
+      },
+      "row_dp_states": 1127
+    },
+    {
+      "anticycle_dp_states": 13627,
+      "balanced_blue_ports": 41699,
+      "balanced_ports": 204019829,
+      "blue_polynomial_peak_states": 2309,
+      "boundary_black_ports": 136877786,
+      "boundary_blue_ports": 18795,
+      "boundary_ports": 136896581,
+      "cyclic_orbits_internal_words": 6102128,
+      "endpoint_ports": {
+        "HH": 44967565,
+        "HL": 67123248,
+        "LH": 46961451,
+        "LL": 44967565
+      },
+      "full_cube_words": 68719476736,
+      "incident_lines": 170458205,
+      "internal_black_lines": 33550172,
+      "internal_black_ports": 67100344,
+      "internal_blue_lines": 11452,
+      "internal_blue_ports": 22904,
+      "internal_lines": 33561624,
+      "internal_ports": 67123248,
+      "n": 10,
+      "proper_rotation_fixed_counts": {
+        "1": 16
+      },
+      "row_dp_states": 19291
+    },
+    {
+      "anticycle_dp_states": 323219,
+      "balanced_blue_ports": 12569477,
+      "balanced_ports": 10188802555033,
+      "blue_polynomial_peak_states": 32877,
+      "boundary_black_ports": 6974970814644,
+      "boundary_blue_ports": 5765829,
+      "boundary_ports": 6974976580473,
+      "cyclic_orbits_internal_words": 247217382688,
+      "endpoint_ports": {
+        "HH": 2301770367447,
+        "HL": 3213825974560,
+        "LH": 2371435845579,
+        "LL": 2301770367447
+      },
+      "full_cube_words": 36028797018963968,
+      "incident_lines": 8581889567753,
+      "internal_black_lines": 1606909585456,
+      "internal_black_ports": 3213819170912,
+      "internal_blue_lines": 3401824,
+      "internal_blue_ports": 6803648,
+      "internal_lines": 1606912987280,
+      "internal_ports": 3213825974560,
+      "n": 12,
+      "proper_rotation_fixed_counts": {
+        "1": 32
+      },
+      "row_dp_states": 426340
+    }
+  ],
+  "max_order": 12,
+  "status": "PASS"
+}

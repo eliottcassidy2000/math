@@ -1,0 +1,5 @@
+PASS: 3725 independent active checks
+Hasse E: 167 primes; all-j Hasse census: 26 primes
+Root-of-unity projection: exact modulo Phi15, n=1..120
+Alternate M=512, N=128 interval certificates nested in all producer M(d) intervals
+Direct ordinary alternating partial sums confirm all four M(d) independently

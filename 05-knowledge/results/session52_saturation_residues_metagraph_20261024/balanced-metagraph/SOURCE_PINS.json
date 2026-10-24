@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "path": "sources/THM-554-score-partition.md",
+      "sha256": "cd63b04ea0395bf1d5cb50fdc23b34d12d39fceab74f627ead2f7f6dc19f7db3"
+    },
+    {
+      "path": "sources/THM-555-score-multiplicities.md",
+      "sha256": "3abc52c76626344ff8a4a79ddc5f754e54b9c3948ffd4304031336cc881b23c8"
+    },
+    {
+      "path": "sources/fixed-path-fibre.txt",
+      "sha256": "0020cbaac8d1321b40d5f0d904ff7a288ffd14a02f3fa94b3d658381600f3ca0"
+    },
+    {
+      "path": "sources/path-transport.md",
+      "sha256": "0654077ad45e2ad926ecc6c7c343429ede4ee5f061444b3ad9d7bdaf96cd6af6"
+    },
+    {
+      "path": "sources/regular-eleven-counts.json",
+      "sha256": "79a1f18a2ba4400a12617099a7dff5fd98bac9b832d94002efc935be879502cd"
+    },
+    {
+      "path": "sources/regular-eleven-theorem.md",
+      "sha256": "d7ec1b4ad135c025cf2a09e63040cb8b22f99db612842bbf6880cdcd679060b6"
+    },
+    {
+      "path": "sources/score-layer-separation.md",
+      "sha256": "0c6b1ef1464bffe4f63ecec364396184d8e8698e2c4a75de0a945351d715155e"
+    },
+    {
+      "path": "sources/tiling-dictionary.txt",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    }
+  ]
+}

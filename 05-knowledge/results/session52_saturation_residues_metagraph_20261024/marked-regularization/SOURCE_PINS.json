@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-24",
+  "local_results": "All claims MR1 through MR9 are proved in THEOREM.md and checked at the stated finite scopes. No literature-priority claim for the extractions.",
+  "sources": [
+    {
+      "authors": [
+        "Omar Hatem",
+        "Sara Mohamed",
+        "Isabel M\u00fcller",
+        "Daoud Siniora"
+      ],
+      "id": "TYPE-I-LEMMA-4.3",
+      "local_record": "sources/PRIMARY.md",
+      "local_record_type": "attribution and paraphrase, not a primary-source snapshot",
+      "location": "Lemma 4.3",
+      "role": "Known base construction, regularity, induced source copies, Type-I property. No novelty claim.",
+      "sha256": "19cc0d5955aa3bc1466c622e1ad8ae69f8bedd01f9656d2ea5b10dd994b26c9e",
+      "title": "Cofinality of Regular Tournaments",
+      "url": "https://arxiv.org/html/2605.04846v1#S4"
+    },
+    {
+      "id": "THM-4557",
+      "local_snapshot": "sources/THM-4557-distinct-skew-Hadamard-construction.md",
+      "repository_path": "01-canon/theorems/THM-4557-doubling-a-doubly-regular-tournament-keeps-its-automorphism-group-hyp-9162.md",
+      "role": "Contrast only: converse-copy skew-Hadamard construction is different; its full-aut theorem is not a dependency.",
+      "sha256": "d198b1a6eeb891a280529902e077b047798b75c52e1c58628c3e5fb04f38266c"
+    }
+  ]
+}

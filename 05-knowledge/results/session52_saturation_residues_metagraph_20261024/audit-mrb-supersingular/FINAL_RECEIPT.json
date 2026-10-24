@@ -1,0 +1,24 @@
+{
+  "status": "FINAL PASS",
+  "producer_manifest_sha256": "5cf13f7a96cee50502f81f0e9e74624a6454f5702a76aa72996d5a34075d6102",
+  "producer_payload_files": 14,
+  "research_sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+  "producer_checks_per_mode": 157050,
+  "independent_checks_per_mode": 3725,
+  "producer_rejection_executions": 8,
+  "additional_semantic_rejection_executions": 12,
+  "normal_and_optimized_match": true,
+  "both_scope_repairs_verified": true,
+  "fourier_and_bolza_addenda_verified": true,
+  "pinned_excerpt_matches_recorded_source": true,
+  "publication_performed": false,
+  "proof_boundaries": [
+    "CM theorem applies at good primes p >= 5; p = 3 is a separate finite check.",
+    "One-curve supersingularity is not Ogg all-j rationality.",
+    "Class-number and all-j censuses remain within their stated finite ranges.",
+    "Fourier boundary sums converge by Dirichlet and use a finite outer sum; no modularity theorem follows.",
+    "Bolza twist preserves geometric CM and zero trace, not rational trace or planar-Jacobian hypotheses.",
+    "The arithmetic nature of C and a modular formula for D remain open.",
+    "Intervals use an audited analytic remainder and directed arithmetic, not a formal proof kernel."
+  ]
+}
