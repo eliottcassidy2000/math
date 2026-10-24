@@ -1,0 +1,106 @@
+{
+  "first_moment": 5508,
+  "input_contract": "Complete almost-regular-eight parent slice inherited from Session50",
+  "order_nine_or_ten_canonicalizations": 0,
+  "parent_count": 85,
+  "parent_sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9",
+  "regular_nine_error_histogram": [
+    [
+      0,
+      3
+    ],
+    [
+      18,
+      3
+    ],
+    [
+      36,
+      2
+    ],
+    [
+      72,
+      7
+    ]
+  ],
+  "regular_nine_trace": 135,
+  "regular_nine_vertex_orbit_multisets": [
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      7
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        3,
+        3
+      ],
+      2
+    ],
+    [
+      [
+        3,
+        3,
+        3
+      ],
+      3
+    ],
+    [
+      [
+        9
+      ],
+      3
+    ]
+  ],
+  "reroot_destinations": 765,
+  "second_moment": 229416,
+  "status": "PASS",
+  "strong_ten_error_histogram": [
+    [
+      14,
+      4
+    ],
+    [
+      18,
+      32
+    ],
+    [
+      40,
+      84
+    ]
+  ],
+  "total_ten_error_histogram": [
+    [
+      14,
+      12
+    ],
+    [
+      18,
+      46
+    ],
+    [
+      36,
+      4
+    ],
+    [
+      40,
+      84
+    ],
+    [
+      72,
+      14
+    ]
+  ],
+  "total_ten_errorful_classes": 160
+}

@@ -1,0 +1,80 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2050,
+      "sha256": "5d4085f14414e48a90bc0039cd4f4da9c1f1359fe747dadcd27af124dfba512e"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 1345,
+      "sha256": "84f124848be363a31882ea19e21a9bf0df9a883e8b8f592db1835de3c1b55cd9"
+    },
+    {
+      "path": "THEOREM.md",
+      "bytes": 19808,
+      "sha256": "6433d3bbeb0f2079b5200c79e88631191ec4f7ec038c848826156fc5692c9002"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 2882,
+      "sha256": "494c99f18b47be94e1c2912e0d1db70989f76cc84589b75185d82f3dc8a137de"
+    },
+    {
+      "path": "check.py",
+      "bytes": 18245,
+      "sha256": "bb27949b778b4a457767a5bd77cf1e0f2f060c8797dcc3bea24e9f9fc5945f31"
+    },
+    {
+      "path": "distribution-normal.json",
+      "bytes": 2089,
+      "sha256": "69a2e56c90cbb472571c7ce9728b843267535fa03d865900633757fc297bb3bb"
+    },
+    {
+      "path": "distribution-optimized.json",
+      "bytes": 2089,
+      "sha256": "69a2e56c90cbb472571c7ce9728b843267535fa03d865900633757fc297bb3bb"
+    },
+    {
+      "path": "distribution_check.py",
+      "bytes": 5717,
+      "sha256": "422f80eb6923dc9eae4acbbfda0f979d45f7d0deeb1e89db64628cb167f39532"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 13993,
+      "sha256": "4c359160678678252f08a1a8131062bc46ef174162ab7dd8802c13c9d1d5fb63"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 13993,
+      "sha256": "4c359160678678252f08a1a8131062bc46ef174162ab7dd8802c13c9d1d5fb63"
+    },
+    {
+      "path": "sources/session50-cell-holonomy-theorem.md",
+      "bytes": 20385,
+      "sha256": "2c8fbc8e21a0f665016f611a6fa819d8bcd97fdd6490445cbf3bda561f560e4b"
+    },
+    {
+      "path": "sources/session50-order-nine-receipt.json",
+      "bytes": 559299,
+      "sha256": "b337c3c6bdcacc0774d9073fc7dba80a08b041e6f80fdb3b964face950e3f548"
+    },
+    {
+      "path": "sources/session50-order-nine-theorem.md",
+      "bytes": 13077,
+      "sha256": "eb35354db91f0623f87aa8d59bb1326c1a985d998afaddbfaa056f9c324ac294"
+    },
+    {
+      "path": "sources/session50-regular-nine-receipt.json",
+      "bytes": 49386,
+      "sha256": "74ec9ba505971a5e6741a4d52b83031b2185ca6c1ab1d6f9b94e4c75a68eb9d9"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 2233,
+      "sha256": "403dfe12552117cd28e4551d57624f8a2308aebfeb2f52510f8a71fc71cec6f0"
+    }
+  ]
+}
