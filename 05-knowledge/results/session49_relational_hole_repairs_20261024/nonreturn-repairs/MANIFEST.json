@@ -1,0 +1,23 @@
+{
+  "files": {
+    "README.md": "e95dbf730c226a7f0f194b7e7d27238e7af30d9f43c7616f6093e39f7ce63d2a",
+    "SOURCEPINS.json": "de2a75d3171b85fe7ede42035f865fc9974d4c878e153dd4b627c72d194a9cba",
+    "THEOREM.md": "b0137066d8b399a848ceb8bb4b330dc3ab4d26acc47fc2b911aac5604902a57b",
+    "check.py": "a1219face4bf8b56a5409e0b35290e7b6c41ffffc9e27d93bfc50f06543b9524",
+    "inputs/AFFINE_PHASE_CODES.txt": "ee0073c2dc16e7196560f5b96ed7b1b8ca490993bdfcd90dfe71b35da8562158",
+    "inputs/CUBES.txt": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+    "inputs/ONE_BIT_WORKSPACE.txt": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+    "inputs/RELATIONAL_KERNEL_HOLONOMY.txt": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927",
+    "inputs/RELATIONAL_SECTIONS.txt": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1",
+    "inputs/SESSION48_SYNTHESIS.txt": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd",
+    "normal-check.txt": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415",
+    "optimized-check.txt": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415",
+    "portability-check.txt": "fcb2f1180885ee0ecf57011c6ee070d8b6de433bd0bc3ecfff5542861d1ea2e1",
+    "portable_check.py": "b4a396214b6faee6ecbae20a3b05a0ade3da05d10d2c87450d9306d0bf74409a",
+    "receipt.json": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415",
+    "verify_manifest.py": "6a737a92349ff947654d70949cbee4f766b2bd251aceeb7e5bda3907df529deb"
+  },
+  "hash_convention": "SHA256 exact raw bytes; manifest excludes itself and includes every other shipped file",
+  "repository_main_at_start": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+  "schema": "session49-nonreturn-repairs-manifest-v1"
+}

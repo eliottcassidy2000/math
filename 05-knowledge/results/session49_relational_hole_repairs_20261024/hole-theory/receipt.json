@@ -1,0 +1,187 @@
+{
+  "binary_marginals": {
+    "actual_named_pairing_instances": 362878,
+    "marginal_cases": 203,
+    "orders": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "pairing_counts": [
+      {
+        "n": 1,
+        "pairings_per_marginal": 1
+      },
+      {
+        "n": 2,
+        "pairings_per_marginal": 2
+      },
+      {
+        "n": 3,
+        "pairings_per_marginal": 6
+      },
+      {
+        "n": 4,
+        "pairings_per_marginal": 24
+      },
+      {
+        "n": 5,
+        "pairings_per_marginal": 120
+      },
+      {
+        "n": 6,
+        "pairings_per_marginal": 720
+      },
+      {
+        "n": 7,
+        "pairings_per_marginal": 5040
+      }
+    ]
+  },
+  "branch_holes": {
+    "all_arbitrary_8_pair_predicates": 256,
+    "graded_predicate_cases": 4096,
+    "joint_three_branch_cases": 4872,
+    "literal_section_witnesses": 3968,
+    "weighted_branch_deletion_queries": 14344
+  },
+  "checks": 684500,
+  "directed_boundary_lifts": {
+    "all_3_vertex_digraphs": 64,
+    "directed_endpoint_tests": 15552,
+    "directed_quotient_cases": 1728,
+    "labelled_fibre_partitions_per_graph": 27
+  },
+  "paid_boundary_lifts": {
+    "all_3_bit_accepted_sets": 256,
+    "endpoint_connectivity_tests": 147456,
+    "literal_lifted_routes": 83608,
+    "pareto_hostile": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "simultaneous_budget_graphs": 8192,
+    "unsplit_quotient_components": 2
+  },
+  "quota_relations": {
+    "all_2_by_3_compatibility_graphs": 64,
+    "balanced_exact_quota_cases": 4992,
+    "charge_robustness_cases": 3520,
+    "constructed_avoiding_relations": 1404,
+    "full_projection_hostiles": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "lower_quota_cases": 2048,
+    "nonempty_quota_families": 704,
+    "positive_hall_cuts": {
+      "0": {
+        "deficit": 1,
+        "left_rows": [
+          1,
+          2,
+          3
+        ],
+        "right_columns": [
+          0,
+          1
+        ]
+      },
+      "1": {
+        "deficit": 1,
+        "left_rows": [
+          1,
+          2,
+          3
+        ],
+        "right_columns": [
+          2,
+          3
+        ]
+      }
+    },
+    "positive_matching_tables": 24,
+    "positive_zero_charge_counts": {
+      "1": 12,
+      "3": 12
+    }
+  },
+  "scope": "finite abstract full-record controls; no native authentication claimed",
+  "source_archives": {
+    "archives": 7,
+    "commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3"
+  },
+  "temporal_nonreturn": {
+    "ordinary_budget3_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ],
+    "released_normalized_units": 0,
+    "states": 9,
+    "strict_record_budget3_history_states": 11,
+    "strict_record_budget3_reachable": false,
+    "strict_record_budget4_history_states": 15,
+    "strict_record_budget4_route": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        0
+      ]
+    ]
+  },
+  "witness_covers": {
+    "all_3_by_3_witness_graphs": 512,
+    "exhaustive_atom_incidence_queries": 4096,
+    "grouped_resource_hostile": {
+      "record_vertex_cover": 3,
+      "resource_atom_cover": [
+        "rho"
+      ]
+    },
+    "maximum_unweighted_cover": 3,
+    "separate_budget_cases": 8192,
+    "weighted_cover_cases": 1536
+  }
+}

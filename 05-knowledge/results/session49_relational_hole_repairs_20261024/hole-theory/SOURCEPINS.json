@@ -1,0 +1,51 @@
+{
+  "inputs/ELECTRICAL_CODES.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 15164,
+    "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md"
+  },
+  "inputs/NEUTRAL_FIBRE_LIFTING.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 14785,
+    "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/compatible_charged_helpers_20261023/compatibility/NEUTRAL_FIBRE_LIFTING.md"
+  },
+  "inputs/RECEIVER_BANKS.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 18411,
+    "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/external_pin_sections_20261024/theory/RECEIVER_BANKS.md"
+  },
+  "inputs/SEPARATOR_SECTIONS.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 12474,
+    "sha256": "fea088650639d923723dfa276ac3f06e809af55758f7a504f0b38efc20b323c2",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/guarded_component_completion_20261024/theory/SEPARATOR_SECTIONS.md"
+  },
+  "inputs/SESSION48_RECEIVER_REPAIRS.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 14503,
+    "sha256": "c8b6b953af1945b998601d27b4b5b320314c9d99ca10aaa7d78409a3c57a33d6",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/receiver-repairs/THEOREM.md"
+  },
+  "inputs/SESSION48_RELATIONAL_SECTIONS.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 16452,
+    "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/relational-sections/THEOREM.md"
+  },
+  "inputs/SESSION48_SYNTHESIS.txt": {
+    "archive": "byte-identical Markdown stored as .txt",
+    "bytes": 30064,
+    "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd",
+    "source_commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+    "source_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/SYNTHESIS.md"
+  }
+}

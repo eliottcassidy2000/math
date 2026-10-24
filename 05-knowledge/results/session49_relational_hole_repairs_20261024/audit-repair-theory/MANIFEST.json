@@ -1,0 +1,278 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 14542,
+      "sha256": "ae71181769ea0aa1b29ff41514b48ccfb624accc3f731f7de1e6af8dc61f0fcb"
+    },
+    "INPUT_PINS.json": {
+      "bytes": 1896,
+      "sha256": "69b149bd4919b57b9a0e854fb19ecc1431115fa89849c3f82e159cbc2e50b2dc"
+    },
+    "PORTABILITY.json": {
+      "bytes": 932,
+      "sha256": "f140dab26267e3db0583444d9f126f6943f305b09c26dc08936408e33af8f8f0"
+    },
+    "PRODUCER_REPLAY.json": {
+      "bytes": 864,
+      "sha256": "9175af01e1793bf3a2090e7f54bf8f3edeb1fcb03f9827437b1685c56b10c89e"
+    },
+    "README.md": {
+      "bytes": 1623,
+      "sha256": "8e31de4e9ca963669abdaf0c300c9c8a79e6c87ba9560bf2b21ec5b5d2d6e382"
+    },
+    "SUMMARY.json": {
+      "bytes": 1672,
+      "sha256": "501178e70ad345c1dfbabb4c99d4759ddcefadd321901c0107805887212f254a"
+    },
+    "independent_check.py": {
+      "bytes": 30435,
+      "sha256": "2ed9a67c7b98b1cfa5f6eb78303d15340b0989821525fd44681fc204bce56a5e"
+    },
+    "inputs/INTEGRATION_README.txt": {
+      "bytes": 1516,
+      "sha256": "a4f8ae8e8a4cf0988b179ddd6647ed4a55ba407b04ed1888610d6c4ba64a7f2d"
+    },
+    "inputs/INTEGRATION_SYNTHESIS.txt": {
+      "bytes": 10936,
+      "sha256": "4b5e0e3f1b7b99e667a67281177f1277a899b72b8d9b1618fe986124e6a32fef"
+    },
+    "inputs/RELATIONAL_KERNEL_HOLONOMY.txt": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    },
+    "inputs/disjoint-sections/MANIFEST.json": {
+      "bytes": 2672,
+      "sha256": "eba2be3351f27b8362683323e08ad0305b7b4e5cd053d1d5068b86a220ff1558"
+    },
+    "inputs/disjoint-sections/NORMAL_O_EQUIVALENCE.json": {
+      "bytes": 170,
+      "sha256": "348f659422aceb51afddb68dd1a3c7856bf0f95fe57375764f597dbba7461079"
+    },
+    "inputs/disjoint-sections/PORTABILITY_REPLAY.json": {
+      "bytes": 3257,
+      "sha256": "b7e2f5386490b36e3e06219e987a6be3ee330fc3f7d46db5da2464b7142cca16"
+    },
+    "inputs/disjoint-sections/README.md": {
+      "bytes": 1711,
+      "sha256": "e873eda62f234edde83c28e3932329896eac5d708e93bbaa7c7dc5576cf3a16b"
+    },
+    "inputs/disjoint-sections/SOURCE_PINS.json": {
+      "bytes": 1934,
+      "sha256": "1c8b36fdf5416bfaef17294ce5bbc5f6c648abf0639d346b9394dbb79f4a0598"
+    },
+    "inputs/disjoint-sections/THEOREM.md": {
+      "bytes": 25881,
+      "sha256": "1bde9345fcd1204ee9c7e1c3b0b9b227058cdbff34c68263428528792c48b32c"
+    },
+    "inputs/disjoint-sections/check.py": {
+      "bytes": 21438,
+      "sha256": "e2f301b7c00460f3df06de94e3643fc3cd5f43245d95344257fc85b7c99c3145"
+    },
+    "inputs/disjoint-sections/inputs/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    "inputs/disjoint-sections/inputs/ONE_BIT_WORKSPACE.txt": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    "inputs/disjoint-sections/inputs/RECEIVER_BANKS.txt": {
+      "bytes": 18411,
+      "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+    },
+    "inputs/disjoint-sections/inputs/RELATIONAL_KERNEL_HOLONOMY.txt": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/disjoint-sections/inputs/RELATIONAL_SECTIONS.txt": {
+      "bytes": 16452,
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+    },
+    "inputs/disjoint-sections/inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    },
+    "inputs/disjoint-sections/normal.json": {
+      "bytes": 3107,
+      "sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd"
+    },
+    "inputs/disjoint-sections/optimized.json": {
+      "bytes": 3107,
+      "sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd"
+    },
+    "inputs/disjoint-sections/reproduce.py": {
+      "bytes": 2214,
+      "sha256": "8de386bd7660a1c11c2b5932f6c979209dbc692552688568fc55fda3706b7a8c"
+    },
+    "inputs/disjoint-sections/verify_manifest.py": {
+      "bytes": 575,
+      "sha256": "a60f7cc7b159ba1e15ba32ef1bf05bed73170e8bf43695c1e38acb6e857a868d"
+    },
+    "inputs/hole-theory/MANIFEST.json": {
+      "bytes": 2278,
+      "sha256": "175dfc8d19137d424353a6e3a4b542722b55b57f17a7b7c1a60c20026ee4f9ab"
+    },
+    "inputs/hole-theory/PORTABILITY.json": {
+      "bytes": 986,
+      "sha256": "2b16565741937934b194358d781d2b96f02bdf9dc37a30980a73f9979287554c"
+    },
+    "inputs/hole-theory/README.md": {
+      "bytes": 1468,
+      "sha256": "72bfa0af8ee83699e4a00b4b3a29d3077565fd36e5c1e84723e69a9a3e7e805e"
+    },
+    "inputs/hole-theory/SOURCEPINS.json": {
+      "bytes": 2651,
+      "sha256": "bb478a762050cef1e5cc60ceee92ebaf8bed4dd37e2a625d6e14503e259a2490"
+    },
+    "inputs/hole-theory/THEOREM.md": {
+      "bytes": 24212,
+      "sha256": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c"
+    },
+    "inputs/hole-theory/VALIDATION.md": {
+      "bytes": 2761,
+      "sha256": "76bcb8028207a252ea8494d11835dd70b8ec0151c8f4f0dd3413aa1cc41ab506"
+    },
+    "inputs/hole-theory/check.py": {
+      "bytes": 25458,
+      "sha256": "f134e029ad64535556e4b7190a62dd56753ca72c813f23bcaf2fecefd6b1dba2"
+    },
+    "inputs/hole-theory/inputs/ELECTRICAL_CODES.txt": {
+      "bytes": 15164,
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+    },
+    "inputs/hole-theory/inputs/NEUTRAL_FIBRE_LIFTING.txt": {
+      "bytes": 14785,
+      "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+    },
+    "inputs/hole-theory/inputs/RECEIVER_BANKS.txt": {
+      "bytes": 18411,
+      "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+    },
+    "inputs/hole-theory/inputs/SEPARATOR_SECTIONS.txt": {
+      "bytes": 12474,
+      "sha256": "fea088650639d923723dfa276ac3f06e809af55758f7a504f0b38efc20b323c2"
+    },
+    "inputs/hole-theory/inputs/SESSION48_RECEIVER_REPAIRS.txt": {
+      "bytes": 14503,
+      "sha256": "c8b6b953af1945b998601d27b4b5b320314c9d99ca10aaa7d78409a3c57a33d6"
+    },
+    "inputs/hole-theory/inputs/SESSION48_RELATIONAL_SECTIONS.txt": {
+      "bytes": 16452,
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+    },
+    "inputs/hole-theory/inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    },
+    "inputs/hole-theory/normal-check.txt": {
+      "bytes": 71,
+      "sha256": "a5ffd47c5525be26198986d96aa7edf4c17046e0e315185561f645db8a94bf87"
+    },
+    "inputs/hole-theory/optimized-check.txt": {
+      "bytes": 71,
+      "sha256": "a5ffd47c5525be26198986d96aa7edf4c17046e0e315185561f645db8a94bf87"
+    },
+    "inputs/hole-theory/receipt.json": {
+      "bytes": 3514,
+      "sha256": "d0d153f9a38420d1a2e047ddd5d255427780910d7625e17abf00ba7938bd7c56"
+    },
+    "inputs/hole-theory/reproduce.py": {
+      "bytes": 2385,
+      "sha256": "ba389013eb0a6977a82f6869bfe9e458a82e8c09e2e739756b2e4a4eb99eea00"
+    },
+    "inputs/nonreturn-repairs/MANIFEST.json": {
+      "bytes": 1791,
+      "sha256": "a4c4808331c300a31651908710030988f4dc8d689753d898cda88687ba717a7e"
+    },
+    "inputs/nonreturn-repairs/README.md": {
+      "bytes": 2237,
+      "sha256": "e95dbf730c226a7f0f194b7e7d27238e7af30d9f43c7616f6093e39f7ce63d2a"
+    },
+    "inputs/nonreturn-repairs/SOURCEPINS.json": {
+      "bytes": 1520,
+      "sha256": "de2a75d3171b85fe7ede42035f865fc9974d4c878e153dd4b627c72d194a9cba"
+    },
+    "inputs/nonreturn-repairs/THEOREM.md": {
+      "bytes": 29562,
+      "sha256": "b0137066d8b399a848ceb8bb4b330dc3ab4d26acc47fc2b911aac5604902a57b"
+    },
+    "inputs/nonreturn-repairs/check.py": {
+      "bytes": 23202,
+      "sha256": "a1219face4bf8b56a5409e0b35290e7b6c41ffffc9e27d93bfc50f06543b9524"
+    },
+    "inputs/nonreturn-repairs/inputs/AFFINE_PHASE_CODES.txt": {
+      "bytes": 22467,
+      "sha256": "ee0073c2dc16e7196560f5b96ed7b1b8ca490993bdfcd90dfe71b35da8562158"
+    },
+    "inputs/nonreturn-repairs/inputs/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    "inputs/nonreturn-repairs/inputs/ONE_BIT_WORKSPACE.txt": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    "inputs/nonreturn-repairs/inputs/RELATIONAL_KERNEL_HOLONOMY.txt": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/nonreturn-repairs/inputs/RELATIONAL_SECTIONS.txt": {
+      "bytes": 16452,
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+    },
+    "inputs/nonreturn-repairs/inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    },
+    "inputs/nonreturn-repairs/normal-check.txt": {
+      "bytes": 5303,
+      "sha256": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415"
+    },
+    "inputs/nonreturn-repairs/optimized-check.txt": {
+      "bytes": 5303,
+      "sha256": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415"
+    },
+    "inputs/nonreturn-repairs/portability-check.txt": {
+      "bytes": 182,
+      "sha256": "fcb2f1180885ee0ecf57011c6ee070d8b6de433bd0bc3ecfff5542861d1ea2e1"
+    },
+    "inputs/nonreturn-repairs/portable_check.py": {
+      "bytes": 1779,
+      "sha256": "b4a396214b6faee6ecbae20a3b05a0ade3da05d10d2c87450d9306d0bf74409a"
+    },
+    "inputs/nonreturn-repairs/receipt.json": {
+      "bytes": 5303,
+      "sha256": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415"
+    },
+    "inputs/nonreturn-repairs/verify_manifest.py": {
+      "bytes": 1474,
+      "sha256": "6a737a92349ff947654d70949cbee4f766b2bd251aceeb7e5bda3907df529deb"
+    },
+    "normal.json": {
+      "bytes": 8971,
+      "sha256": "b943935755e6a27c5215fd8382bab4da3c47bda796c13c39e4106bd191cac149"
+    },
+    "optimized.json": {
+      "bytes": 8971,
+      "sha256": "b943935755e6a27c5215fd8382bab4da3c47bda796c13c39e4106bd191cac149"
+    },
+    "portable_check.py": {
+      "bytes": 2597,
+      "sha256": "f5a425dafc0f0cc7d50f316845ee828659c0c99e0116de69555a2ae75fedc7e8"
+    },
+    "replay_producers.py": {
+      "bytes": 1521,
+      "sha256": "e29cd405d65babab6538d001b5656ff66bd81f916e4c12a21f85938f9580cc24"
+    },
+    "verify_manifest.py": {
+      "bytes": 897,
+      "sha256": "1f20a9f11bc0c1b18fecfb0fe0ecd49cbab2a4dfaabded569befe5354394e33b"
+    }
+  },
+  "hash_convention": "SHA256 raw bytes, exact closure of every file except this root manifest",
+  "schema": "session49-independent-relational-repair-audit-manifest-v1"
+}

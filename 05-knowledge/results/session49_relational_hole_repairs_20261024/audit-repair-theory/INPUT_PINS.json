@@ -1,0 +1,48 @@
+{
+  "inherited_files": {
+    "inputs/RELATIONAL_KERNEL_HOLONOMY.txt": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    "inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    }
+  },
+  "integration_review": {
+    "inputs/INTEGRATION_README.txt": {
+      "bytes": 1516,
+      "sha256": "a4f8ae8e8a4cf0988b179ddd6647ed4a55ba407b04ed1888610d6c4ba64a7f2d",
+      "source": "session49-root/final/README.md"
+    },
+    "inputs/INTEGRATION_SYNTHESIS.txt": {
+      "bytes": 10936,
+      "sha256": "4b5e0e3f1b7b99e667a67281177f1277a899b72b8d9b1618fe986124e6a32fef",
+      "source": "session49-root/final/SYNTHESIS.md"
+    }
+  },
+  "producer_packets": {
+    "disjoint-sections": {
+      "local": "inputs/disjoint-sections",
+      "manifest_listed_files": 16,
+      "manifest_sha256": "eba2be3351f27b8362683323e08ad0305b7b4e5cd053d1d5068b86a220ff1558",
+      "source_packet": "session49-disjoint-sections",
+      "theorem_sha256": "1bde9345fcd1204ee9c7e1c3b0b9b227058cdbff34c68263428528792c48b32c"
+    },
+    "hole-theory": {
+      "local": "inputs/hole-theory",
+      "manifest_listed_files": 17,
+      "manifest_sha256": "175dfc8d19137d424353a6e3a4b542722b55b57f17a7b7c1a60c20026ee4f9ab",
+      "source_packet": "session49-hole-theory",
+      "theorem_sha256": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c"
+    },
+    "nonreturn-repairs": {
+      "local": "inputs/nonreturn-repairs",
+      "manifest_listed_files": 16,
+      "manifest_sha256": "a4c4808331c300a31651908710030988f4dc8d689753d898cda88687ba717a7e",
+      "source_packet": "session49-nonreturn-repairs",
+      "theorem_sha256": "b0137066d8b399a848ceb8bb4b330dc3ab4d26acc47fc2b911aac5604902a57b"
+    }
+  },
+  "schema": "session49-independent-theory-input-pins-v1"
+}

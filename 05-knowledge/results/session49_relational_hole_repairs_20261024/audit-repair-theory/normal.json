@@ -1,0 +1,304 @@
+{
+  "allocations": {
+    "commutative_two_singleton_coefficient": 2,
+    "exterior_and_F2_coefficient": 0,
+    "greedy_extension_cases": 63,
+    "hostile": {
+      "A": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "B": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "allocation_count": 0
+    },
+    "two_rank_two_family_cases": 4096
+  },
+  "antimatroids": {
+    "block_clock_weights": [
+      7,
+      2,
+      5
+    ],
+    "block_slot_weights": [
+      1,
+      2,
+      3
+    ],
+    "full_ground_three_element_antimatroids": 22,
+    "ordered_endpoint_cases": 673
+  },
+  "checks": {
+    "actual native Hamiltonian path": 90,
+    "actual partner kernel transport": 180,
+    "actual phase/key boundary literal owner-clock cost": 15,
+    "all native record pairs have exact key-phase cost formula": 1485,
+    "all three lifts use one normalized unit": 4,
+    "all twenty-four perfect-table relations retain both charges": 1,
+    "antimatroid exact endpoint simultaneous bottlenecks have monotone route": 673,
+    "arbitrary branch-conditioned hole identity": 30340,
+    "augmentation generators have exact advertised nilpotence upper powers": 5,
+    "binary endpoint DAG equals global retired-resource search": 5425,
+    "canonical suffix phase subtracts raw owner offset": 90,
+    "complete six-record paired-key menu under literal fixed-clock pins": 15,
+    "converse reflected clock two preserves phase": 90,
+    "converse-head chart adds two": 90,
+    "cross-matching hyperedge hostile has no allocation": 1,
+    "degree131 sharp augmentation product is full group sum": 1,
+    "disjoint endpoint pair trades do not reacquire resources": 216,
+    "distinct keys literal four-word reservoirs are disjoint": 4,
+    "equal-bank two-branch difference iff": 1146,
+    "every further augmentation factor kills sharp degree131 product": 2048,
+    "every prefix-bit change authenticates actual target class": 147,
+    "exact C2 matching-table polynomial coefficients": 139,
+    "four distinct inverse-converse words": 90,
+    "hyperedge hostile has transversal two in each family": 1,
+    "hyperedge hostile passes even weighted union cardinalities": 3,
+    "joint multibranch difference obstruction retains one shared hole": 13824,
+    "length132 generator-plus-completion sequence is minimally zero-sum": 1,
+    "literal converse partner identity": 90,
+    "literal suffix-owner pin leaves exactly two binary records": 15,
+    "minimal cyclic-three paired trade has at most D pairs": 68,
+    "native hostile cannot avoid resource reacquisition at one slot": 1,
+    "native hostile direct two-slot strict route": 1,
+    "native hostile table is precisely five-state one-slot path": 1,
+    "nonnegative characteristic-zero multiplicity retains two assignments": 1,
+    "paid boundary requires budget-component retention": 1,
+    "paired key endpoint-marked partner transport": 45,
+    "paired key event exact two-clock cost": 45,
+    "paired partition restores exact requested endpoint": 27,
+    "paired trade preserves each population margin separately": 68,
+    "pairwise hole overlaps need not give joint obstruction": 1,
+    "phase change exact three-clock cost": 180,
+    "quota-universal support needs no individually complete conditioned branch": 1,
+    "raw-owner pin zero is not canonical phase zero": 1,
+    "relation-quota feasibility against all complete-table cut deficits": 4992,
+    "resource identification cannot increase transversal number": 4096,
+    "same two lifts need one resource ban": 1,
+    "seed rigidity by all literal permutations": 1,
+    "separate slot-clock minima are not one event": 1,
+    "separate-side deletion budgets retain rectangular quantifier": 8192,
+    "sharp length131 generator multiset has no nonempty zero subset": 1,
+    "sharp universal two-charge margins": 139,
+    "signed or positive-characteristic coefficients can cancel valid assignments": 1,
+    "small two-group Davenport bound by literal subset sums": 1180,
+    "source kernel automorphism": 180,
+    "source kernel lift literal phase": 180,
+    "square-zero coefficient equals full disjoint witness count": 4096,
+    "transversal depletion condition extends every greedy prefix": 63,
+    "truncated polynomial maximum nonzero total degree131": 1,
+    "two capacity alphabets preserve continuous occupancy": 1,
+    "two lifts need two full-record deletions": 1,
+    "two-charge contingency coefficient is integral": 209,
+    "unconditioned completeness can fail after joint relation": 1,
+    "unit-resource quota allocation iff every demand-side cut passes": 13824,
+    "universal ban robustness iff transversal exceeds budget": 1024,
+    "universal charge retention iff positive relation-table quota deficit": 1408,
+    "universal two-charge coverage iff unequal and noncomplementary counts": 139,
+    "weak component contraction loses directed reachability": 1,
+    "whole-assignment weighted vertex-cover equals explicit network cut": 512
+  },
+  "cuts": {
+    "capacity_valid_lift_families": 4096,
+    "empty_family_transversal": 0,
+    "empty_witness_transversal": "infinity",
+    "record_vs_resource_hostile": {
+      "record_transversal": 2,
+      "resource_transversal": 1
+    },
+    "robustness_budget_cases": 1024,
+    "three_by_three_whole_assignment_graphs": 512
+  },
+  "davenport": {
+    "abstract_sharpness": {
+      "accepted_full_states": 2,
+      "minimal_zero_sum_subset_patterns": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          127,
+          15,
+          1
+        ]
+      ],
+      "not_a_native_electrical_bank": true,
+      "not_sharpness_for_only_core_helper_margins": true,
+      "separate_two_slot_population_classes": 132
+    },
+    "conditional_endpoint_packet_bound_slots": 264,
+    "exact_Davenport_constant": 132,
+    "group_order": 2048,
+    "guard_group": "C128 x C2^4",
+    "maximum_augmentation_degree": 131,
+    "scope": "complete additive guard; matched opposite population increments; no unverified relational prefix constraints",
+    "sharp_degree131_coefficient_support": 2048,
+    "small_two_group_multisets_at_bound": 1180,
+    "two_cohort_cyclic_three_pair_sequences": 27
+  },
+  "holes": {
+    "finite_cyclic_branch_pairs": 30340,
+    "joint_relation_hostile": {
+      "group_order": 2,
+      "relation": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "support": [
+        0
+      ]
+    },
+    "three_branch_joint_difference_cases": 13824
+  },
+  "native": {
+    "literal_native_scales": [
+      {
+        "order": 11,
+        "r": 1,
+        "records": 6,
+        "resource_units": 2
+      },
+      {
+        "order": 19,
+        "r": 2,
+        "records": 12,
+        "resource_units": 4
+      },
+      {
+        "order": 27,
+        "r": 3,
+        "records": 24,
+        "resource_units": 8
+      },
+      {
+        "order": 35,
+        "r": 4,
+        "records": 48,
+        "resource_units": 16
+      }
+    ],
+    "phase_one_raw_owner_residue_at_r1": 0,
+    "phase_zero_raw_owner_at_r1": 8,
+    "six_state_boundary": {
+      "clock12_components": [
+        6
+      ],
+      "clock7_components": [
+        2,
+        2,
+        2
+      ],
+      "pair_cost_multiplicities": {
+        "7": 3,
+        "12": 6,
+        "19": 6
+      }
+    }
+  },
+  "nonreturn": {
+    "binary_accepted_table_endpoint_budget_cases": 5425,
+    "hostile_table": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "one_slot_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "strict_threshold": {
+      "owner_clocks": 4,
+      "slots": 2
+    }
+  },
+  "paid_boundaries": {
+    "directed_hostile": "a to b only; weak contraction invents b to a",
+    "incompatible_pareto_minima": [
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "same_resource_before_after": "legal in two alphabets, annihilated in one"
+  },
+  "quota_hall": {
+    "quotas_per_row": [
+      0,
+      1,
+      2
+    ],
+    "scope": "fixed boundary, single independent resource per unit of quota",
+    "three_by_three_incidence_quota_cases": 13824
+  },
+  "relational_quotas": {
+    "binary_charge_full_permutations_counted": 40318,
+    "binary_charge_matching_profiles_through_n6": 139,
+    "feasible_two_by_three_quota_charge_cases": 1408,
+    "four_by_four_unavoidable_two_charge_tables": 24,
+    "infeasible_quota_families_excluded": 4288,
+    "quota_semantics": "number of allowed full pairs, never physical unit capacity"
+  },
+  "schema": "session49-independent-relational-repair-audit-v1"
+}

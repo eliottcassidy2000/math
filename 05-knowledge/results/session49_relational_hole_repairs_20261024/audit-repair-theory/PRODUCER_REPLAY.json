@@ -1,0 +1,26 @@
+{
+  "disjoint-sections": {
+    "manifest_sha256": "eba2be3351f27b8362683323e08ad0305b7b4e5cd053d1d5068b86a220ff1558",
+    "normal_and_optimized": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd"
+    }
+  },
+  "hole-theory": {
+    "manifest_sha256": "175dfc8d19137d424353a6e3a4b542722b55b57f17a7b7c1a60c20026ee4f9ab",
+    "normal_and_optimized": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "a5ffd47c5525be26198986d96aa7edf4c17046e0e315185561f645db8a94bf87"
+    }
+  },
+  "nonreturn-repairs": {
+    "manifest_sha256": "a4c4808331c300a31651908710030988f4dc8d689753d898cda88687ba717a7e",
+    "normal_and_optimized": {
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415"
+    }
+  }
+}

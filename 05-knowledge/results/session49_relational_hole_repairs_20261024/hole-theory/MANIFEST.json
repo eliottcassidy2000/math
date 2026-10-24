@@ -1,0 +1,70 @@
+{
+  "PORTABILITY.json": {
+    "bytes": 986,
+    "sha256": "2b16565741937934b194358d781d2b96f02bdf9dc37a30980a73f9979287554c"
+  },
+  "README.md": {
+    "bytes": 1468,
+    "sha256": "72bfa0af8ee83699e4a00b4b3a29d3077565fd36e5c1e84723e69a9a3e7e805e"
+  },
+  "SOURCEPINS.json": {
+    "bytes": 2651,
+    "sha256": "bb478a762050cef1e5cc60ceee92ebaf8bed4dd37e2a625d6e14503e259a2490"
+  },
+  "THEOREM.md": {
+    "bytes": 24212,
+    "sha256": "03df597c074fda81aeffbccd142ee772e90a2c1772eea7a99696fb1c8ebadd5c"
+  },
+  "VALIDATION.md": {
+    "bytes": 2761,
+    "sha256": "76bcb8028207a252ea8494d11835dd70b8ec0151c8f4f0dd3413aa1cc41ab506"
+  },
+  "check.py": {
+    "bytes": 25458,
+    "sha256": "f134e029ad64535556e4b7190a62dd56753ca72c813f23bcaf2fecefd6b1dba2"
+  },
+  "inputs/ELECTRICAL_CODES.txt": {
+    "bytes": 15164,
+    "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+  },
+  "inputs/NEUTRAL_FIBRE_LIFTING.txt": {
+    "bytes": 14785,
+    "sha256": "c7c633d9d81c3f0e6a74edac5e7a4b08f194bd9d3cffc7f3f0f9751d5f13c4b1"
+  },
+  "inputs/RECEIVER_BANKS.txt": {
+    "bytes": 18411,
+    "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+  },
+  "inputs/SEPARATOR_SECTIONS.txt": {
+    "bytes": 12474,
+    "sha256": "fea088650639d923723dfa276ac3f06e809af55758f7a504f0b38efc20b323c2"
+  },
+  "inputs/SESSION48_RECEIVER_REPAIRS.txt": {
+    "bytes": 14503,
+    "sha256": "c8b6b953af1945b998601d27b4b5b320314c9d99ca10aaa7d78409a3c57a33d6"
+  },
+  "inputs/SESSION48_RELATIONAL_SECTIONS.txt": {
+    "bytes": 16452,
+    "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+  },
+  "inputs/SESSION48_SYNTHESIS.txt": {
+    "bytes": 30064,
+    "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+  },
+  "normal-check.txt": {
+    "bytes": 71,
+    "sha256": "a5ffd47c5525be26198986d96aa7edf4c17046e0e315185561f645db8a94bf87"
+  },
+  "optimized-check.txt": {
+    "bytes": 71,
+    "sha256": "a5ffd47c5525be26198986d96aa7edf4c17046e0e315185561f645db8a94bf87"
+  },
+  "receipt.json": {
+    "bytes": 3514,
+    "sha256": "d0d153f9a38420d1a2e047ddd5d255427780910d7625e17abf00ba7938bd7c56"
+  },
+  "reproduce.py": {
+    "bytes": 2385,
+    "sha256": "ba389013eb0a6977a82f6869bfe9e458a82e8c09e2e739756b2e4a4eb99eea00"
+  }
+}

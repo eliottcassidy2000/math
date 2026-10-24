@@ -1,0 +1,62 @@
+{
+  "davenport": {
+    "abstract_sharpness": {
+      "accepted_full_states": 2,
+      "minimal_zero_sum_subset_patterns": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          127,
+          15,
+          1
+        ]
+      ],
+      "not_a_native_electrical_bank": true,
+      "not_sharpness_for_only_core_helper_margins": true,
+      "separate_two_slot_population_classes": 132
+    },
+    "conditional_endpoint_packet_bound_slots": 264,
+    "exact_Davenport_constant": 132,
+    "group_order": 2048,
+    "guard_group": "C128 x C2^4",
+    "maximum_augmentation_degree": 131,
+    "scope": "complete additive guard; matched opposite population increments; no unverified relational prefix constraints",
+    "sharp_degree131_coefficient_support": 2048,
+    "small_two_group_multisets_at_bound": 1180,
+    "two_cohort_cyclic_three_pair_sequences": 27
+  },
+  "exact_native_six_state_boundary": {
+    "clock12_components": [
+      6
+    ],
+    "clock7_components": [
+      2,
+      2,
+      2
+    ],
+    "pair_cost_multiplicities": {
+      "12": 6,
+      "19": 6,
+      "7": 3
+    }
+  },
+  "exact_native_strict_threshold": {
+    "owner_clocks": 4,
+    "slots": 2
+  },
+  "git_writes": false,
+  "independent_checks": 96914,
+  "independent_receipt_sha256": "b943935755e6a27c5215fd8382bab4da3c47bda796c13c39e4106bd191cac149",
+  "normal_optimized_byte_identical": true,
+  "producer_packets": [
+    "disjoint-sections",
+    "hole-theory",
+    "nonreturn-repairs"
+  ],
+  "proof_audit": "AUDIT.md",
+  "scope": "Conditional all-size proofs and finite independent controls; physical all-size electrical-bank authentication remains separate.",
+  "status": "PASS"
+}

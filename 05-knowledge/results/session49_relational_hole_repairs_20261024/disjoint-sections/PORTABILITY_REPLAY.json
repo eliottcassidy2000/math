@@ -1,0 +1,105 @@
+{
+  "actual_relocation": true,
+  "checks_per_interpreter": 53718,
+  "commands": [
+    [
+      "python",
+      "-B",
+      "check.py"
+    ],
+    [
+      "python",
+      "-O",
+      "-B",
+      "check.py"
+    ]
+  ],
+  "copied_payload": [
+    {
+      "bytes": 170,
+      "path": "NORMAL_O_EQUIVALENCE.json",
+      "sha256": "348f659422aceb51afddb68dd1a3c7856bf0f95fe57375764f597dbba7461079"
+    },
+    {
+      "bytes": 1711,
+      "path": "README.md",
+      "sha256": "e873eda62f234edde83c28e3932329896eac5d708e93bbaa7c7dc5576cf3a16b"
+    },
+    {
+      "bytes": 1934,
+      "path": "SOURCE_PINS.json",
+      "sha256": "1c8b36fdf5416bfaef17294ce5bbc5f6c648abf0639d346b9394dbb79f4a0598"
+    },
+    {
+      "bytes": 25881,
+      "path": "THEOREM.md",
+      "sha256": "1bde9345fcd1204ee9c7e1c3b0b9b227058cdbff34c68263428528792c48b32c"
+    },
+    {
+      "bytes": 21438,
+      "path": "check.py",
+      "sha256": "e2f301b7c00460f3df06de94e3643fc3cd5f43245d95344257fc85b7c99c3145"
+    },
+    {
+      "bytes": 9596,
+      "path": "inputs/CUBES.txt",
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    {
+      "bytes": 15817,
+      "path": "inputs/ONE_BIT_WORKSPACE.txt",
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    {
+      "bytes": 18411,
+      "path": "inputs/RECEIVER_BANKS.txt",
+      "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+    },
+    {
+      "bytes": 23222,
+      "path": "inputs/RELATIONAL_KERNEL_HOLONOMY.txt",
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    {
+      "bytes": 16452,
+      "path": "inputs/RELATIONAL_SECTIONS.txt",
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+    },
+    {
+      "bytes": 30064,
+      "path": "inputs/SESSION48_SYNTHESIS.txt",
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    },
+    {
+      "bytes": 3107,
+      "path": "normal.json",
+      "sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd"
+    },
+    {
+      "bytes": 3107,
+      "path": "optimized.json",
+      "sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd"
+    },
+    {
+      "bytes": 2214,
+      "path": "reproduce.py",
+      "sha256": "8de386bd7660a1c11c2b5932f6c979209dbc692552688568fc55fda3706b7a8c"
+    },
+    {
+      "bytes": 575,
+      "path": "verify_manifest.py",
+      "sha256": "a60f7cc7b159ba1e15ba32ef1bf05bed73170e8bf43695c1e38acb6e857a868d"
+    }
+  ],
+  "manifest_sha256_at_replay": "ebd544e24e987ddf4292e326be1fe8380c700ec7d80ed216b640795e832cf26e",
+  "manifest_verification": {
+    "files": 15,
+    "status": "PASS"
+  },
+  "normal_optimized_mathematical_equivalence": true,
+  "normal_receipt_sha256": "4a81a66d6c799da9bfa47692a32592aeec0bfaa89cf1c038a2ae33ae4917a4fd",
+  "scope": "Copied only the manifest-listed payload and its manifest; no network or imports from prior sessions. If this receipt is subsequently included in a final manifest, the replayed payload hashes remain authoritative.",
+  "status": "PASS",
+  "temporary_directory": "/tmp/session49-disjoint-relocated-c1i40b3f/packet",
+  "temporary_directory_removed_after_success": true
+}

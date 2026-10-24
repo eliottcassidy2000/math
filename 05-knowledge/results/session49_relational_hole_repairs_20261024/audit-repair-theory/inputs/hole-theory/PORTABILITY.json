@@ -1,0 +1,25 @@
+{
+  "closure": "The copied packet has no dependencies on files outside the manifest. Only the Python standard library and interpreter are required.",
+  "copied_files_including_manifest": 18,
+  "method": "Copy exactly MANIFEST.json plus every listed relative path into a new temporary packet directory; run reproduced normal and optimized checkers there.",
+  "normal": {
+    "command": [
+      "python",
+      "-B",
+      "reproduce.py"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS 684500 exact conditions; abstract relational hole/cut/cost packet\nPASS complete manifest closure; 17 listed files\n"
+  },
+  "optimized": {
+    "command": [
+      "python",
+      "-O",
+      "-B",
+      "reproduce.py"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS 684500 exact conditions; abstract relational hole/cut/cost packet\nPASS complete manifest closure; 17 listed files\n"
+  },
+  "verification": "Recorded outputs verified against an actual manifest-only replay of the final frozen packet."
+}

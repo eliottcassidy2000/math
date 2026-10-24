@@ -1,0 +1,14 @@
+[
+  {
+    "archive": "archives/first_native_audit.txt",
+    "bytes": 10300,
+    "sha256": "0389826df586ea62d4f4873ec41156817e107211f28414e00f700f65aa28b698",
+    "source": "session49-audit-native-holes/AUDIT.md"
+  },
+  {
+    "archive": "archives/first_native_manifest.json",
+    "bytes": 3604,
+    "sha256": "c77ee9067796f528f9bb45d3c619d9cdad21f19bcbd70c79a055296ad284dca6",
+    "source": "session49-audit-native-holes/MANIFEST.json"
+  }
+]

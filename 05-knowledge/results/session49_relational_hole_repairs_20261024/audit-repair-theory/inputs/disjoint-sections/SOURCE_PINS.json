@@ -1,0 +1,43 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+  "extraction": "Read-only git show; exact bytes, no newline normalization. Historical Markdown retained as .txt, not live publication links.",
+  "files": [
+    {
+      "local": "inputs/RECEIVER_BANKS.txt",
+      "repository_path": "05-knowledge/results/external_pin_sections_20261024/theory/RECEIVER_BANKS.md",
+      "bytes": 18411,
+      "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+    },
+    {
+      "local": "inputs/ONE_BIT_WORKSPACE.txt",
+      "repository_path": "05-knowledge/results/native_packet_decomposition_20261023/workspace/ONE_BIT_WORKSPACE.md",
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162"
+    },
+    {
+      "local": "inputs/CUBES.txt",
+      "repository_path": "05-knowledge/results/guarded_coverage_20261023/CUBES.md",
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034"
+    },
+    {
+      "local": "inputs/RELATIONAL_KERNEL_HOLONOMY.txt",
+      "repository_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/kernel-relations/RELATIONAL_KERNEL_HOLONOMY.md",
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927"
+    },
+    {
+      "local": "inputs/RELATIONAL_SECTIONS.txt",
+      "repository_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/relational-sections/THEOREM.md",
+      "bytes": 16452,
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1"
+    },
+    {
+      "local": "inputs/SESSION48_SYNTHESIS.txt",
+      "repository_path": "05-knowledge/results/session48_conditioned_native_sections_20261024/SYNTHESIS.md",
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd"
+    }
+  ]
+}

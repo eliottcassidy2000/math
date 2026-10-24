@@ -1,0 +1,37 @@
+{
+  "files": {
+    "inputs/AFFINE_PHASE_CODES.txt": {
+      "bytes": 22467,
+      "sha256": "ee0073c2dc16e7196560f5b96ed7b1b8ca490993bdfcd90dfe71b35da8562158",
+      "source": "session48-linear-phase-codes/AFFINE_PHASE_CODES.md"
+    },
+    "inputs/CUBES.txt": {
+      "bytes": 9596,
+      "sha256": "752292ea5d8c06d57ad954cc8c0eb1f791e068eed76f99cb217574c21db57034",
+      "source": "session48-linear-phase-codes/inputs/CUBES.txt"
+    },
+    "inputs/ONE_BIT_WORKSPACE.txt": {
+      "bytes": 15817,
+      "sha256": "1800a77a164513516eb165a4d178fbf7447efc61e7c017be5cf39867e01fe162",
+      "source": "session48-linear-phase-codes/inputs/ONE_BIT_WORKSPACE.md"
+    },
+    "inputs/RELATIONAL_KERNEL_HOLONOMY.txt": {
+      "bytes": 23222,
+      "sha256": "798ba61b1fd5945dde09988df9d160c034d32b76470896c0bccef3b103762927",
+      "source": "session48-kernel-relations/RELATIONAL_KERNEL_HOLONOMY.md"
+    },
+    "inputs/RELATIONAL_SECTIONS.txt": {
+      "bytes": 16452,
+      "sha256": "b360d833da6a19467f0bf5e9f48eac9ed23f357c89b345c64ce9ba0d92dafbe1",
+      "source": "session48-relational-sections/THEOREM.md"
+    },
+    "inputs/SESSION48_SYNTHESIS.txt": {
+      "bytes": 30064,
+      "sha256": "0a08773fc1660c3b1177933840d58fb74318c1e0e80ad715b7a78c04e268badd",
+      "source": "session48-root/final/SYNTHESIS.md"
+    }
+  },
+  "hash_convention": "SHA256 of exact raw bytes, no newline normalization",
+  "repository_main_at_start": "eb085bb428517b88bf6881cdab6d4bd980e305a3",
+  "schema": "session49-nonreturn-sourcepins-v1"
+}

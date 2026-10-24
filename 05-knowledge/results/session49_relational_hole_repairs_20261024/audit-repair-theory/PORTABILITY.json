@@ -1,0 +1,31 @@
+{
+  "copied_manifest_listed_files": 68,
+  "final_manifest": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS exact manifest closure: 68 files\n"
+  },
+  "initial_manifest": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS exact manifest closure: 68 files\n"
+  },
+  "normal": {
+    "exit_code": 0,
+    "receipt_sha256": "b943935755e6a27c5215fd8382bab4da3c47bda796c13c39e4106bd191cac149",
+    "stderr": "",
+    "stdout": "PASS independent relational repair audit; 96914 checks\n"
+  },
+  "optimized": {
+    "exit_code": 0,
+    "receipt_sha256": "b943935755e6a27c5215fd8382bab4da3c47bda796c13c39e4106bd191cac149",
+    "stderr": "",
+    "stdout": "PASS independent relational repair audit; 96914 checks\n"
+  },
+  "producer_replay": {
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "PASS all three producer archives, normal and optimized\n"
+  },
+  "schema": "session49-manifest-only-relocated-theory-audit-v1"
+}

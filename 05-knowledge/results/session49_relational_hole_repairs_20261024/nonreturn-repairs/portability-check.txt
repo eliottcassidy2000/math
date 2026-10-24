@@ -1,0 +1,1 @@
+{"manifest_only_files": 17, "python_modes": ["normal", "optimized"], "receipt_stdout_sha256": "ee752b23b8de6c81f6cd936954bad7473107b20faebaf870746d400db5fd8415", "status": "passed"}

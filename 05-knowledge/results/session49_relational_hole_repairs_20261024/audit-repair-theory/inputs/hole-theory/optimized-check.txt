@@ -1,0 +1,1 @@
+PASS 684500 exact conditions; abstract relational hole/cut/cost packet
