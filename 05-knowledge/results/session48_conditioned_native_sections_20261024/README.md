@@ -1,63 +1,64 @@
-# Session48: compatible sections beyond frozen-record guarantees
+# Session48: compatible charge sections and exact routing boundaries
 
-24 October2026. First audited checkpoint; research remains active.
+24 October 2026. Second research checkpoint; final integration remains active.
 
-## Frozen-record repair is an availability problem
+## A sharp blocked-phase route
 
-[Native receiver theorem](receiver-repairs/THEOREM.md) and
-[independent fourth-pin audit](audit-four-pin/AUDIT.md) extend the incoming
-`external_pin_sections_20261024` construction without changing its original
-order-eight carrier or the externally fixed owner4 phase.
+The [new route theorem](boundary-bridges/THEOREM.md) and its
+[independent audit](audit-sharp-routing/AUDIT.md) improve the incoming
+20-slot/42-clock bound to **at most eight slots and 33 clocks** for every
+nonempty fibre of the declared 82-slot owner4-pinned family. Core and helper
+populations remain separately fixed. Clock budget 33 is sharp; eight-slot
+optimality is NOT claimed.
 
-- All1,140 three-cheap-freeze cases and the inherited32 forbidden repair
-  labels/eight source choices are independently authenticated.
-- Every one of4,845 FOUR-cheap-freeze choices admits at least two successful
-  existing outside-core repair sources. No one source repairs them all.
-- Exactly two minimum protected choice banks suffice:
-  {1923,2087} and {1923,2835}. Choose an available successful member after
-  identifying the frozen cheap records; do not confuse this adaptive choice
-  with a universal last surviving source.
-- Four cheap plus six outside records may be frozen when a protected pair
-  remains available. This ten-frozen family has global18-slot/60-clock
-  routing. If a successful repair is selected first, the other seven outside
-  records can then be frozen: eleven frozen records, global18/58 or18/59
-  according to the actual chosen repair cost.
-- With more outside records left free, the uniform fourth-freeze bound is
-  18 slots/68 clocks; the interior bound is18/48 or18/49. The incoming
-  triple-freeze global bound similarly sharpens from20/85 to20/68.
+Complete nine-state and thirteen-state fibres give the two signed lower
+witnesses. Every possible move in those small fibres changes at most six
+slots, so their 33-clock obstruction is not manufactured by imposing an
+eight-slot support cap. In the interior core grades 5 through 23, two-point
+charge sections give the stronger 8-slot/27-clock construction.
 
-The availability quantifiers are part of each theorem. These are not claims
-that arbitrary sets of ten or eleven records may be frozen, nor arbitrary
-relational-pin coverage.
+The proof does not concatenate unrelated minima. It retains actual cross-
+charge endpoints and uses the independently established original-core
+8-slot/22-clock connectivity to reach each endpoint within its own sheet.
 
-## A precise relational failure
+## More frozen records, with the correct availability quantifier
 
-With cheap records{176,1425,2071} frozen, repair1841 supplies the stated
-unary-conditioned section. Adding the relation that records1841 and1457
-choose the same target creates holes477 at receiver grade8 and1098 atgrade10.
-The relation reaches INSIDE the receiver. A charge-complete unary table does
-not automatically remain complete after that additional constraint.
-This is a full-record target relation, not an unproved realization by a new
-indexed-owner equality.
+[Receiver repair](receiver-repairs/THEOREM.md) and
+[its independent audit](audit-four-pin/AUDIT.md) retain the first checkpoint.
+Every four-cheap-freeze set has at least two successful existing repairs.
+The minimum universal protected choice banks are {1923,2087} and {1923,2835}.
+Ten frozen records with a protected pair admit global 18-slot/60-clock routing;
+a chosen successful repair can then support eleven adaptively frozen records
+at 18/58 or 18/59. These are not guarantees for an arbitrary final surviving
+source. The more general global bound is 18/68.
 
-## Retained data and verification
+## Genuine relations on retained boundary records
 
-The new native audit reconstructs all82 source menus, complete canonical-path
-kernel lifts, normalized inverse/converse resource closures, the652-owner
-induced source/partner host, the fixed owner4 condition, and actual physical
-source AND target current rows. The original complete dyadic-filtration
-certificate is inherited by exact input hashes and replayed independently.
-No ordinary per-port phase, odd-primary current, or global Hamiltonian host
-observer is inferred from these checks.
+[Relational sections](relational-sections/THEOREM.md) and
+[independent review](audit-relational-sections/AUDIT.md) treat every nonempty
+allowed table on three specified cheap U/V records. Five existing repair
+sources supply the wider receiver band 7 through 11 for every such triple.
+With a cost-three protected repair, the common interior has 20-slot/52-clock
+routes; every nonempty remaining fibre has a 22-slot/76-clock direct bound.
+The grade interval and any frozen outside records are explicit in the theorem.
 
-Every source slot remains occupied; choosing or freezing U is not deletion
-of a physical resource. The receiver-controller routes use capacity-one
-reversible borrowing. They do not claim strict temporal nonreturn, and their
-atomic accepted events need not decompose into individual metagraph-edge moves.
-Kernel multiplicity is never spare capacity.
+The relation “these three records have equal target class” is a concrete
+native example; it changes no owner identification. In contrast, the relation
+that source1841 and source1457 choose the same target reaches inside the
+receiver and creates the certified holes 477 and 1098. A boundary-local
+relational theorem is not arbitrary receiver-wide pin coverage.
 
-Both producer and independent packets include positive/hostile certificates,
-normal/optimized replays and manifest-only relocated reproduction. Only
-manifest-listed artifacts are part of this checkpoint. All-size native wiring
-and unrestricted relational pins remain open; further Session48 lanes are
-being audited separately.
+## Preserved scope
+
+All actual full records, kernel lifts, converse/inverse resources, fixed
+owner4, original nodewise dyadic current equations, and integer event costs
+are retained. Every slot stays occupied, and normalized capacity is one at
+each arrival. These charged receiver routes allow reversible return to a
+released alternative; they do not claim strict temporal nonreturn or a legal
+single-metagraph-edge decomposition of every atomic packet.
+
+The incoming common host consists of local observers. A single global
+Hamiltonian observer and harmonic transport to that larger host are separate
+obligations. All-size native charged supply and arbitrary relational pins
+remain open. Other Session48 kernel and observer-counting results are being
+integrated separately.

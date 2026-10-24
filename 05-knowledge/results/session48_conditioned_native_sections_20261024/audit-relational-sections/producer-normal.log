@@ -1,0 +1,4 @@
+PASS 2584306 exact conditions
+receiver census complete
+PASS 703231 checks; {'routes': 672, 'events': 6188, 'arrivals': 6860, 'maximum_slots': 14, 'maximum_clocks': 38}
+PASS complete portable manifest and both exact checkers

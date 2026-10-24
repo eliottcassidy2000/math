@@ -1,0 +1,547 @@
+{
+  "checks": 703230,
+  "guard_scope": "All original aggregate nodewise dyadic currents by pinned paired-code equivalence; not individual marked-port phases, integer or odd-primary currents.",
+  "inheritance": "Full menu/kernel classification inherited from source-pinned domains, helper supply and XOR-tree certificate. Selected paths, converse, capacities, host restrictions and physical rows independently replayed.",
+  "receiver_census": {
+    "exceptions": {
+      "1532": [],
+      "1841": [
+        {
+          "boundary": [
+            1638,
+            2071,
+            2837
+          ],
+          "grade11_missing": [
+            429
+          ],
+          "grade7_missing": [
+            1752
+          ]
+        }
+      ],
+      "1923": [],
+      "2087": [],
+      "2553": [
+        {
+          "boundary": [
+            1425,
+            1638,
+            2071
+          ],
+          "grade11_missing": [
+            1542
+          ],
+          "grade7_missing": [
+            1752
+          ]
+        },
+        {
+          "boundary": [
+            1638,
+            2071,
+            2837
+          ],
+          "grade11_missing": [
+            509
+          ],
+          "grade7_missing": [
+            1752
+          ]
+        }
+      ],
+      "2835": [],
+      "3015": [],
+      "3360": [
+        {
+          "boundary": [
+            1425,
+            2071,
+            2837
+          ],
+          "grade11_missing": [
+            1785
+          ],
+          "grade7_missing": [
+            1005
+          ]
+        }
+      ]
+    },
+    "fresh_enumeration_controls": [
+      {
+        "boundary": [
+          1638,
+          2071,
+          2837
+        ],
+        "coverage": [
+          1,
+          18,
+          151,
+          676,
+          1517,
+          1969,
+          2046,
+          2047,
+          2048,
+          2048,
+          2048,
+          2047,
+          2046,
+          1969,
+          1517,
+          676,
+          151,
+          18,
+          1
+        ],
+        "repair": 1841
+      },
+      {
+        "boundary": [
+          1425,
+          1638,
+          2071
+        ],
+        "coverage": [
+          1,
+          18,
+          150,
+          661,
+          1481,
+          1950,
+          2043,
+          2047,
+          2048,
+          2048,
+          2048,
+          2047,
+          2043,
+          1950,
+          1481,
+          661,
+          150,
+          18,
+          1
+        ],
+        "repair": 2553
+      },
+      {
+        "boundary": [
+          1638,
+          2071,
+          2837
+        ],
+        "coverage": [
+          1,
+          18,
+          150,
+          663,
+          1487,
+          1963,
+          2045,
+          2047,
+          2048,
+          2048,
+          2048,
+          2047,
+          2045,
+          1963,
+          1487,
+          663,
+          150,
+          18,
+          1
+        ],
+        "repair": 2553
+      },
+      {
+        "boundary": [
+          1425,
+          2071,
+          2837
+        ],
+        "coverage": [
+          1,
+          18,
+          148,
+          642,
+          1410,
+          1897,
+          2033,
+          2047,
+          2048,
+          2048,
+          2048,
+          2047,
+          2033,
+          1897,
+          1410,
+          642,
+          148,
+          18,
+          1
+        ],
+        "repair": 3360
+      },
+      {
+        "boundary": [
+          1638,
+          2071,
+          2837
+        ],
+        "coverage": [
+          1,
+          18,
+          151,
+          672,
+          1519,
+          1979,
+          2048,
+          2048,
+          2048,
+          2048,
+          2048,
+          2048,
+          2048,
+          1979,
+          1519,
+          672,
+          151,
+          18,
+          1
+        ],
+        "repair": 2087
+      }
+    ],
+    "grade6_failure_controls": {
+      "1532": {
+        "boundary": [
+          176,
+          1425,
+          2071
+        ],
+        "grade6_missing": 1741
+      },
+      "1841": {
+        "boundary": [
+          176,
+          1394,
+          1921
+        ],
+        "grade6_missing": 1978
+      },
+      "1923": {
+        "boundary": [
+          176,
+          1394,
+          2176
+        ],
+        "grade6_missing": 1792
+      },
+      "2087": {
+        "boundary": [
+          176,
+          1394,
+          2071
+        ],
+        "grade6_missing": 164
+      },
+      "2553": {
+        "boundary": [
+          176,
+          1394,
+          3369
+        ],
+        "grade6_missing": 33
+      },
+      "2835": {
+        "boundary": [
+          176,
+          1394,
+          1638
+        ],
+        "grade6_missing": 1270
+      },
+      "3015": {
+        "boundary": [
+          176,
+          1394,
+          1477
+        ],
+        "grade6_missing": 1867
+      },
+      "3360": {
+        "boundary": [
+          176,
+          1394,
+          2071
+        ],
+        "grade6_missing": 1123
+      }
+    },
+    "maximum_bad_repairs_at_one_boundary": 2,
+    "minimum_coverage_grades6_to9": {
+      "1532": {
+        "6": 2043,
+        "7": 2048,
+        "8": 2048,
+        "9": 2048
+      },
+      "1841": {
+        "6": 2038,
+        "7": 2047,
+        "8": 2048,
+        "9": 2048
+      },
+      "1923": {
+        "6": 2046,
+        "7": 2048,
+        "8": 2048,
+        "9": 2048
+      },
+      "2087": {
+        "6": 2044,
+        "7": 2048,
+        "8": 2048,
+        "9": 2048
+      },
+      "2553": {
+        "6": 2031,
+        "7": 2047,
+        "8": 2048,
+        "9": 2048
+      },
+      "2835": {
+        "6": 2040,
+        "7": 2048,
+        "8": 2048,
+        "9": 2048
+      },
+      "3015": {
+        "6": 2045,
+        "7": 2048,
+        "8": 2048,
+        "9": 2048
+      },
+      "3360": {
+        "6": 2033,
+        "7": 2047,
+        "8": 2048,
+        "9": 2048
+      }
+    },
+    "repair_sources": [
+      1532,
+      1841,
+      1923,
+      2087,
+      2553,
+      2835,
+      3015,
+      3360
+    ],
+    "triple_count": 1140,
+    "universal_wide_repairs": [
+      1532,
+      1923,
+      2087,
+      2835,
+      3015
+    ]
+  },
+  "routing": {
+    "boundary_controls": {
+      "cases": 160,
+      "maximum_clocks": 66,
+      "maximum_slots": 20,
+      "nonidentity": 136
+    },
+    "literal_route": {
+      "allowed_bit_patterns": [
+        0,
+        7
+      ],
+      "boundary_sources": [
+        1638,
+        2071,
+        2837
+      ],
+      "core_grade": 10,
+      "events": [
+        {
+          "changed_sources": [
+            176,
+            1394,
+            1425,
+            1457,
+            1549,
+            1638,
+            1691,
+            1921,
+            1974,
+            2071,
+            2087,
+            2837,
+            2905,
+            2945
+          ],
+          "clock_occurrences": 29,
+          "support": 14
+        },
+        {
+          "changed_sources": [
+            556,
+            1394,
+            1425,
+            1457,
+            1477,
+            1691,
+            2087,
+            2185,
+            2905,
+            3137
+          ],
+          "clock_occurrences": 30,
+          "support": 10
+        },
+        {
+          "changed_sources": [
+            176,
+            650,
+            1425,
+            1457,
+            1477,
+            1480,
+            1974,
+            2087,
+            2176,
+            2581,
+            2905,
+            3187
+          ],
+          "clock_occurrences": 32,
+          "support": 12
+        }
+      ],
+      "frozen_U_sources": [
+        1532,
+        1841,
+        1923,
+        2553,
+        2835,
+        3015,
+        3360
+      ],
+      "repair_source": 2087,
+      "residual_charge": 0,
+      "states": [
+        {
+          "core_V": [
+            176,
+            1394,
+            1425,
+            1477,
+            1480,
+            1549,
+            1921,
+            2176,
+            2905,
+            2945
+          ],
+          "free_helper_V": [
+            556,
+            650
+          ],
+          "helper_V": [
+            556,
+            650,
+            776,
+            3139
+          ]
+        },
+        {
+          "core_V": [
+            1457,
+            1477,
+            1480,
+            1638,
+            1691,
+            1974,
+            2071,
+            2087,
+            2176,
+            2837
+          ],
+          "free_helper_V": [
+            556,
+            650
+          ],
+          "helper_V": [
+            556,
+            650,
+            776,
+            3139
+          ]
+        },
+        {
+          "core_V": [
+            1394,
+            1425,
+            1480,
+            1638,
+            1974,
+            2071,
+            2176,
+            2185,
+            2837,
+            2905
+          ],
+          "free_helper_V": [
+            650,
+            3137
+          ],
+          "helper_V": [
+            650,
+            776,
+            3137,
+            3139
+          ]
+        },
+        {
+          "core_V": [
+            176,
+            1394,
+            1457,
+            1477,
+            1638,
+            2071,
+            2087,
+            2185,
+            2581,
+            2837
+          ],
+          "free_helper_V": [
+            3137,
+            3187
+          ],
+          "helper_V": [
+            776,
+            3137,
+            3139,
+            3187
+          ]
+        }
+      ]
+    },
+    "summary": {
+      "arrivals": 6860,
+      "events": 6188,
+      "maximum_clocks": 38,
+      "maximum_slots": 14,
+      "routes": 672
+    }
+  },
+  "status": "FINITE-EXACT native census and controls; universal quantifiers proved in THEOREM.md"
+}

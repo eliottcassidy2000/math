@@ -1,0 +1,76 @@
+{
+  "checks": 2584305,
+  "descent": {
+    "exhaustive_descent_cases": 64,
+    "hostiles": [
+      "omitted receiver relation",
+      "noncanonical same-charge witnesses",
+      "cyclic separator inconsistency",
+      "relational neutral envelope false gap",
+      "neutral internal disconnection",
+      "ternary fixed-grade six-slot barrier"
+    ]
+  },
+  "interval_bridge": {
+    "cases": 130866,
+    "positive_outside_gap_cases": 25986
+  },
+  "native_budget": {
+    "all_nonempty_ternary_tables": 255,
+    "bridge_cases": 465440,
+    "common_interior_cases": 27016,
+    "direct_boundary_cases": 77024,
+    "stage_maxima": {
+      "3": {
+        "boundary": 41,
+        "consecutive": 39,
+        "entry": 39,
+        "helper": 52,
+        "outside": 45
+      },
+      "4": {
+        "boundary": 42,
+        "consecutive": 40,
+        "entry": 39,
+        "helper": 53,
+        "outside": 46
+      }
+    }
+  },
+  "native_equal_target_relation": {
+    "boundary_sources": [
+      1638,
+      2071,
+      2837
+    ],
+    "checked_arrivals": 4,
+    "native_targets": [
+      1965,
+      2234
+    ],
+    "new_owner_identifications": 0,
+    "receiver_internal_counterexample": {
+      "equal_target_sources": [
+        1841,
+        1457
+      ],
+      "frozen_cheap_sources": [
+        176,
+        1425,
+        2071
+      ],
+      "holes_by_receiver_grade": {
+        "10": [
+          1098
+        ],
+        "8": [
+          477
+        ],
+        "9": []
+      }
+    }
+  },
+  "sharp_grade_distance": {
+    "enumerated_subset_pairs": 5461
+  }
+}

@@ -1,0 +1,8 @@
+[
+  {"grade":2,"sign":1,"core_states":378,"core_charge_values":351,"total_charge_fibres":2048,"sheet_vertices":447525,"sheet_edges":3750803,"minimum_sheets":170,"maximum_sheets":264,"maximum_edge_clocks":29,"maximum_edge_slots":6,"edge_digest":"5522128522646024707","all_connected":true},
+  {"grade":2,"sign":-1,"core_states":378,"core_charge_values":351,"total_charge_fibres":2048,"sheet_vertices":447525,"sheet_edges":3750803,"minimum_sheets":177,"maximum_sheets":264,"maximum_edge_clocks":29,"maximum_edge_slots":6,"edge_digest":"7710287837918707206","all_connected":true},
+  {"grade":3,"sign":1,"core_states":3276,"core_charge_values":1646,"total_charge_fibres":2048,"sheet_vertices":2098650,"sheet_edges":82618312,"minimum_sheets":980,"maximum_sheets":1072,"maximum_edge_clocks":33,"maximum_edge_slots":8,"edge_digest":"2666218265575023829","all_connected":true},
+  {"grade":3,"sign":-1,"core_states":3276,"core_charge_values":1646,"total_charge_fibres":2048,"sheet_vertices":2098650,"sheet_edges":82618312,"minimum_sheets":970,"maximum_sheets":1079,"maximum_edge_clocks":33,"maximum_edge_slots":8,"edge_digest":"756217931329684510","all_connected":true},
+  {"grade":4,"sign":1,"core_states":20475,"core_charge_values":2048,"total_charge_fibres":2048,"sheet_vertices":2611200,"sheet_edges":81965534,"minimum_sheets":1275,"maximum_sheets":1275,"maximum_edge_clocks":31,"maximum_edge_slots":8,"edge_digest":"13741206829235279165","all_connected":true},
+  {"grade":4,"sign":-1,"core_states":20475,"core_charge_values":2048,"total_charge_fibres":2048,"sheet_vertices":2611200,"sheet_edges":81965534,"minimum_sheets":1275,"maximum_sheets":1275,"maximum_edge_clocks":31,"maximum_edge_slots":8,"edge_digest":"7548445367928448760","all_connected":true}
+]

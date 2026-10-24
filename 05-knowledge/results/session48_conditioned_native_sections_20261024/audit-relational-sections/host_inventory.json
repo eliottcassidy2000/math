@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "frame_count": 82,
+  "pairwise_intersections_checked": 3321,
+  "host_union_order": 652,
+  "shared_frame_pairs": [
+    {
+      "sources": [
+        3139,
+        368
+      ],
+      "owners": [
+        3,
+        4
+      ]
+    },
+    {
+      "sources": [
+        3139,
+        776
+      ],
+      "owners": [
+        3,
+        4
+      ]
+    },
+    {
+      "sources": [
+        368,
+        776
+      ],
+      "owners": [
+        3,
+        4
+      ]
+    }
+  ],
+  "all_other_intersections_empty": true
+}

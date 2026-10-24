@@ -1,0 +1,106 @@
+{
+  "charge_image_entries": {
+    "cheap5": 132658,
+    "cheap6": 682678,
+    "padded5": 128392
+  },
+  "chart_counts": {
+    "cheap5": 190,
+    "cheap6": 1140,
+    "padded5": 160
+  },
+  "cheap_only_grade5_missing_ordered_pairs": 1008,
+  "checked_section_witnesses": 943728,
+  "grade5_ordered_pairs_covered": 4194304,
+  "grade6_ordered_pairs_covered": 4194304,
+  "literal_bridges": [
+    {
+      "actual_virtual_charge": 1129,
+      "first_core": [
+        176,
+        1425,
+        1457,
+        1638,
+        1691
+      ],
+      "first_helpers": [
+        556,
+        2125
+      ],
+      "grade": 5,
+      "second_core": [
+        176,
+        1394,
+        1549,
+        1691,
+        2071
+      ],
+      "second_helpers": [
+        556,
+        753
+      ],
+      "support": 8,
+      "work": 27
+    },
+    {
+      "actual_virtual_charge": 1129,
+      "first_core": [
+        176,
+        1394,
+        1549,
+        1921,
+        1974,
+        2837
+      ],
+      "first_helpers": [
+        556,
+        2125
+      ],
+      "grade": 6,
+      "second_core": [
+        176,
+        1394,
+        1549,
+        2071,
+        2581,
+        2905
+      ],
+      "second_helpers": [
+        556,
+        753
+      ],
+      "support": 8,
+      "work": 27
+    }
+  ],
+  "repaired_hostile": {
+    "changed": [
+      176,
+      1477,
+      1549,
+      1691,
+      2176,
+      2905
+    ],
+    "clock_work": 12,
+    "common_padding": [
+      1532,
+      1394
+    ],
+    "first": [
+      1394,
+      1477,
+      1532,
+      1691,
+      2905
+    ],
+    "second": [
+      176,
+      1394,
+      1532,
+      1549,
+      2176
+    ]
+  },
+  "status": "FINITE-EXACT two-point compatible sections"
+}

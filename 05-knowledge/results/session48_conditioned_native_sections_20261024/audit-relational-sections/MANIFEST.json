@@ -1,0 +1,66 @@
+{
+  "AUDIT.md": {
+    "bytes": 9100,
+    "sha256": "2a25d938cf18bc0dff0fd0baea4039b36b3652373a6e853417a9a18653dcd642"
+  },
+  "PACKET_SNAPSHOT.json": {
+    "bytes": 184,
+    "sha256": "402b657ab17d1f2d93a55c07d27dc777ec51a02f9e3467b7957ebeecb57f2e98"
+  },
+  "closed-normal.log": {
+    "bytes": 605,
+    "sha256": "5d662c14c46e2e7352ee9375d36328115a71d6c051b091eee4936aa0b6873806"
+  },
+  "closed-optimized.log": {
+    "bytes": 605,
+    "sha256": "5d662c14c46e2e7352ee9375d36328115a71d6c051b091eee4936aa0b6873806"
+  },
+  "host_inventory.json": {
+    "bytes": 525,
+    "sha256": "5b45d80cbda89f73d19cd8a9f946755f77bca89996e7bda9b1394987af984666"
+  },
+  "independent-normal.json": {
+    "bytes": 16486,
+    "sha256": "6bbbc28392998e8e805541dddfcde62b3c886a481833fcbd72f8e94b083a81b7"
+  },
+  "independent-normal.log": {
+    "bytes": 338,
+    "sha256": "c85cf68ac003e5d3194283e4ea7ed68033ee6c0331c1dca38aca8804e940a8d3"
+  },
+  "independent-optimized.json": {
+    "bytes": 16486,
+    "sha256": "6bbbc28392998e8e805541dddfcde62b3c886a481833fcbd72f8e94b083a81b7"
+  },
+  "independent-optimized.log": {
+    "bytes": 338,
+    "sha256": "c85cf68ac003e5d3194283e4ea7ed68033ee6c0331c1dca38aca8804e940a8d3"
+  },
+  "independent_check.py": {
+    "bytes": 20023,
+    "sha256": "2a2bfbd510156e8fbfb4cdda68b7e347cbe3200d2edf340f4493e3f2a1099158"
+  },
+  "producer-normal.log": {
+    "bytes": 224,
+    "sha256": "48e4643e5df868884fc128b5d98a4e6c24e49bde01cbe5a845bb7b23d5c3bd9f"
+  },
+  "producer-optimized.log": {
+    "bytes": 224,
+    "sha256": "48e4643e5df868884fc128b5d98a4e6c24e49bde01cbe5a845bb7b23d5c3bd9f"
+  },
+  "reproduce.py": {
+    "bytes": 3481,
+    "sha256": "7e2dde78d33632162de37baeb4e051e3370d7fdef0d83c4125e97fdcd73042f6"
+  },
+  "source-manifests/external_pin_sections_20261024/MANIFEST.json": {
+    "bytes": 2678,
+    "sha256": "98b0168ae43298546fccfeb2fd4fe16506786cdd216a5dcb44e4078d813aec96"
+  },
+  "source-manifests/guarded_component_completion_20261024/MANIFEST.json": {
+    "bytes": 4446,
+    "sha256": "8971ccca03a290fcf225de2a6823d485b015f904e0943f1bbedb06bc52b147fa"
+  },
+  "source_authentication.json": {
+    "bytes": 4255,
+    "sha256": "0e4d0ed2cac5192ba0fa26008997a43463c8a3241fab4364deb172617c3f9cd5"
+  }
+}

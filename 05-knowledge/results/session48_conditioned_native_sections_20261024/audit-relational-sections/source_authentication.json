@@ -1,0 +1,95 @@
+{
+  "upstream_commit": "c09b642a629b7d12b529b88c2697abaee78e73e7",
+  "verified_files": [
+    {
+      "input": "inputs/domains.json",
+      "upstream_path": "05-knowledge/results/native_packet_decomposition_20261023/native/domains.json",
+      "sha256": "93e82952e06933273f9d4c47d421a4d4ababe91662c50b62f19fdb7dddd430ca"
+    },
+    {
+      "input": "inputs/supply.json",
+      "upstream_path": "05-knowledge/results/compatible_charged_helpers_20261023/supply/selected_supply.json",
+      "sha256": "a90c1faf0a62061a622234b1ceb475dab6cc3640aded3428cd3f38a641100357"
+    },
+    {
+      "input": "inputs/owner_map.u16.gz",
+      "upstream_path": "05-knowledge/results/metagraph_order8_20261023/owner_map.u16.gz",
+      "sha256": "653ca594b210b8a63c481accacb2fb8a7a3ed72b6293879a1fa0bae90b0fb60a"
+    },
+    {
+      "input": "inputs/merged_nodes.tsv",
+      "upstream_path": "05-knowledge/results/metagraph_order8_20261023/merged_nodes.tsv",
+      "sha256": "61e4e25a0e83bbde3cdb756bd4a71febb4d0f2b8c5237143184e782738d02835"
+    },
+    {
+      "input": "inputs/electrical.json",
+      "upstream_path": "05-knowledge/results/metagraph_order8_electrical_20261023/receipt.json",
+      "sha256": "417e4cc3af2688df39bbb71701789a6967677ae82ea8d0f0badb8ff50d739b27"
+    },
+    {
+      "input": "inputs/host.json",
+      "upstream_path": "05-knowledge/results/guarded_component_completion_20261024/native/xor_tree_receipt.json",
+      "sha256": "bce2ab342ae8358c2a65bffe52f3b01b559f47112dad2920a7626ac70ed8c0e5"
+    },
+    {
+      "input": "inputs/source2125.json",
+      "upstream_path": "05-knowledge/results/guarded_component_completion_20261024/sections/native_2125_receipt.json",
+      "sha256": "442da9badde3a32750cda430cd9c4342660dca0714c62320bf69a9d9e88dea38"
+    },
+    {
+      "input": "inputs/erasure.json",
+      "upstream_path": "05-knowledge/results/external_pin_sections_20261024/erasure/receipt.json",
+      "sha256": "7948089a5d607ff1a1aa18f5169ed2bda502e5f06be2e9a8c85a78a0c9094ad4"
+    },
+    {
+      "input": "inputs/repair_labels.json",
+      "upstream_path": "05-knowledge/results/external_pin_sections_20261024/theory/repair_labels_receipt.json",
+      "sha256": "c20a5cc0ece38d2c5126443c074612215a0f95e1c348ca80aa7b4d299bbc3649"
+    },
+    {
+      "input": "inputs/ELECTRICAL_CODES.txt",
+      "upstream_path": "05-knowledge/results/injective_native_blocks_20261023/electrical/ELECTRICAL_CODES.md",
+      "sha256": "22641fbdff4a2900686a4afacf51a2a4e38a8c8a008327c198ac37e488448632"
+    },
+    {
+      "input": "inputs/SEPARATOR_SECTIONS.txt",
+      "upstream_path": "05-knowledge/results/guarded_component_completion_20261024/theory/SEPARATOR_SECTIONS.md",
+      "sha256": "fea088650639d923723dfa276ac3f06e809af55758f7a504f0b38efc20b323c2"
+    },
+    {
+      "input": "inputs/RECEIVER_BANKS.txt",
+      "upstream_path": "05-knowledge/results/external_pin_sections_20261024/theory/RECEIVER_BANKS.md",
+      "sha256": "171cf50dcb472d4f6c2b4f6adec95694d7ae770c18402da1e32d2416aa11c752"
+    },
+    {
+      "input": "inputs/CORE_PAYS_BOUNDARY.txt",
+      "upstream_path": "05-knowledge/results/external_pin_sections_20261024/native/CORE_PAYS_BOUNDARY.md",
+      "sha256": "8d97dc684a72926c45de1c15fa809b5ae31185188a2895e78c42e180d16a53c9"
+    },
+    {
+      "input": "inputs/XOR_TREE.txt",
+      "upstream_path": "05-knowledge/results/guarded_component_completion_20261024/native/XOR_TREE.md",
+      "sha256": "9f5cefaf43335b04f3b1564ac8aed03539febb6e7ae082e537973d15c3dc404c"
+    }
+  ],
+  "nested_source_manifests": {
+    "05-knowledge/results/external_pin_sections_20261024/MANIFEST.json": {
+      "sha256": "98b0168ae43298546fccfeb2fd4fe16506786cdd216a5dcb44e4078d813aec96",
+      "matched_pinned_files": [
+        "erasure/receipt.json",
+        "theory/repair_labels_receipt.json",
+        "theory/RECEIVER_BANKS.md",
+        "native/CORE_PAYS_BOUNDARY.md"
+      ]
+    },
+    "05-knowledge/results/guarded_component_completion_20261024/MANIFEST.json": {
+      "sha256": "8971ccca03a290fcf225de2a6823d485b015f904e0943f1bbedb06bc52b147fa",
+      "matched_pinned_files": [
+        "native/xor_tree_receipt.json",
+        "sections/native_2125_receipt.json",
+        "theory/SEPARATOR_SECTIONS.md",
+        "native/XOR_TREE.md"
+      ]
+    }
+  }
+}

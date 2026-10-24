@@ -1,0 +1,2 @@
+PASS independent full native menus and all1140x8 support census
+{"checks": 5157257, "normalization": {"above": 1753, "below": 1849, "consecutive": 14052, "helper": 8653, "outside": 1397}, "routes": {"arrivals": 36947, "events": 32453, "frozen_V_routes": 3927, "maximum_clocks": 41, "maximum_slots": 16, "routes": 4494}, "status": "PASS"}
