@@ -1,0 +1,89 @@
+{
+  "checks": 441763,
+  "filtration": {
+    "binary_nullity": 3363,
+    "binary_rank": 164,
+    "critical_two_primary": "(Z/2)^3358 + (Z/4)^4 + Z/256",
+    "edge_rows": 438216,
+    "fibre_size_distribution": {
+      "1": 642,
+      "2": 545,
+      "3": 310,
+      "4": 139,
+      "5": 44,
+      "6": 15
+    },
+    "half_energy_rank": 3358,
+    "higher_primitive_energy_div_256": 26637417,
+    "higher_primitive_integer_energy": 6819178752,
+    "independent_half_form_sha256": "d1bac9de07a0b445ff14472be8d28d826a24bb0edbc1b789016571971c2fc051",
+    "node_label_fibres": 1695,
+    "odd_edge_kernel_coordinates": 11,
+    "paired_charge_order": 2048,
+    "paired_charge_type": "(Z/2)^4 + Z/128",
+    "quarter_form_rows": [
+      8,
+      12,
+      14,
+      31,
+      8
+    ],
+    "tower": [
+      {
+        "k": 2,
+        "modulus": 4,
+        "predicted_log2_order": 5,
+        "reduced_image_order": 32
+      },
+      {
+        "k": 3,
+        "modulus": 8,
+        "predicted_log2_order": 6,
+        "reduced_image_order": 64
+      },
+      {
+        "k": 4,
+        "modulus": 16,
+        "predicted_log2_order": 7,
+        "reduced_image_order": 128
+      },
+      {
+        "k": 5,
+        "modulus": 32,
+        "predicted_log2_order": 8,
+        "reduced_image_order": 256
+      },
+      {
+        "k": 6,
+        "modulus": 64,
+        "predicted_log2_order": 9,
+        "reduced_image_order": 512
+      },
+      {
+        "k": 7,
+        "modulus": 128,
+        "predicted_log2_order": 10,
+        "reduced_image_order": 1024
+      },
+      {
+        "k": 8,
+        "modulus": 256,
+        "predicted_log2_order": 11,
+        "reduced_image_order": 2048
+      }
+    ],
+    "valuation_ranks": [
+      3358,
+      4,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "vertices": 3528
+  },
+  "scope": "2-primary group and all paired dyadic characters only; full critical-group exponent not asserted.",
+  "status": "PASS: replay of previously independent full original 2-primary filtration and marked harmonic completeness"
+}

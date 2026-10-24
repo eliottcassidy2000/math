@@ -1,0 +1,330 @@
+#!/usr/bin/env python3
+"""Exact native receiver route thresholds; Python standard library only."""
+from pathlib import Path
+from collections import defaultdict, Counter, deque
+from hashlib import sha256
+import argparse, importlib.util, json
+
+P = Path(__file__).resolve().parent
+OLD = P / 'inherited/native-repairs'
+FULL = (1 << 17) - 1
+BASEMASK = (1 << 16) - 1
+TRIPLE = [1457, 1841, 3015]
+CHECKS = 0
+
+def need(ok, why):
+    global CHECKS
+    CHECKS += 1
+    if not ok:
+        raise RuntimeError(why)
+
+def add(a, b):
+    return (((a // 16 + b // 16) % 128) << 4) | ((a ^ b) & 15)
+
+def sub(a, b):
+    return (((a // 16 - b // 16) % 128) << 4) | ((a ^ b) & 15)
+
+def total(xs):
+    q = 0
+    for x in xs:
+        q = add(q, x)
+    return q
+
+def canonical(obj):
+    return (json.dumps(obj, sort_keys=True, separators=(',', ':')) + '\n').encode()
+
+def source_pins():
+    pins = json.loads((P / 'SOURCEPINS.json').read_text())
+    files = {p.relative_to(P).as_posix() for p in (P / 'inherited').rglob('*')
+             if p.is_file() and '__pycache__' not in p.parts and p.suffix != '.pyc'}
+    need(files == set(pins), 'exact inherited source closure')
+    for name, pin in pins.items():
+        data = (P / name).read_bytes()
+        need(len(data) == pin['bytes'] and sha256(data).hexdigest() == pin['sha256'], 'source pin ' + name)
+
+def native():
+    spec = importlib.util.spec_from_file_location('frozen_native_repairs', OLD / 'check.py')
+    old = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(old)
+    old.source_pins()
+    n = old.native()
+    need(n['base'] == [1394,1477,1480,1549,1638,1691,1921,1974,2176,2185,2581,2837,2905,2945,3000,3369], 'original sixteen independent native sources')
+    need(all(n['costs'][s] == 2 for s in n['base']), 'literal two-clock base alternatives')
+    need([n['costs'][s] for s in TRIPLE] == [2,3,3], 'literal eight-clock triple alternatives')
+    need(total(n['labels'][s] for s in TRIPLE) == 1263, 'original triple charge')
+    need(all(f[old.U] == f[old.V] for f in n['potentials']), 'unchanged source diagonals under U/V switches')
+    n['old_checks'] = old.CHECKS
+    n['U'], n['V'] = old.U, old.V
+    return n
+
+def variables(n):
+    groups = [[s] for s in n['base']] + [TRIPLE]
+    grades = [len(g) for g in groups]
+    labels = [total(n['labels'][s] for s in g) for g in groups]
+    clocks = [sum(n['costs'][s] for s in g) for g in groups]
+    deltas = [[sum(2 * (f[s] - f[n['U']]) for s in g) % mod
+               for f, mod in zip(n['potentials'], n['moduli'])] for g in groups]
+    return groups, grades, labels, clocks, deltas
+
+def cost(mask):
+    b, t = (mask & BASEMASK).bit_count(), mask >> 16
+    return b + 3 * t, 2 * b + 8 * t
+
+def from_clock(c):
+    # Every same-grade move has even slot count. The two possible literal costs
+    # at support s are 2s and 2s+2, and all smaller-support costs are smaller.
+    return (c // 4) * 2, c
+
+def enumerate_states(n):
+    groups, grades, labels, clocks, deltas = variables(n)
+    grade = [0] * (FULL + 1)
+    charge = [0] * (FULL + 1)
+    physical = [None] * (FULL + 1)
+    physical[0] = (0,) * len(n['moduli'])
+    fibres = defaultdict(list)
+    signatures = {}
+    for x in range(FULL + 1):
+        if x:
+            bit = x & -x
+            j, y = bit.bit_length() - 1, x ^ bit
+            grade[x] = grade[y] + grades[j]
+            charge[x] = add(charge[y], labels[j])
+            physical[x] = tuple((a + b) % mod for a,b,mod in zip(physical[y], deltas[j], n['moduli']))
+        key = grade[x], charge[x]
+        fibres[key].append(x)
+        if key not in signatures:
+            signatures[key] = physical[x]
+        need(signatures[key] == physical[x], 'every original source/target generator row constant throughout each fibre')
+    # Independent generating-function recurrence checks every multiplicity,
+    # not merely support. It uses the 17 weighted full-record variables.
+    dp = {(0,0): 1}
+    for g, q in zip(grades, labels):
+        nxt = dict(dp)
+        for (k,r), count in dp.items():
+            key = k+g, add(r,q)
+            nxt[key] = nxt.get(key,0) + count
+        dp = nxt
+    need(dp == {key:len(v) for key,v in fibres.items()}, 'independent weighted generating function multiplicities')
+    totalq = total(labels)
+    for x in range(FULL + 1):
+        need(grade[FULL ^ x] == 19-grade[x] and charge[FULL ^ x] == sub(totalq,charge[x]), 'literal complement grade and charge')
+    need(len(fibres) == 23444 and max(map(len,fibres.values())) == 22, 'exact nonempty fibre census')
+    return dict(sorted(fibres.items())), grade, charge, physical, groups, totalq
+
+def solve_fibre(states):
+    m = len(states)
+    direct = [[0] * m for _ in states]
+    edges = []
+    for i in range(m):
+        for j in range(i):
+            s,c = cost(states[i] ^ states[j])
+            need(s % 2 == 0 and from_clock(c) == (s,c), 'joint slot/clock cost chain, not independent minima')
+            direct[i][j] = direct[j][i] = c
+            edges.append((c,s,j,i))
+    parent = list(range(m))
+    tree = [[] for _ in states]
+    def root(a):
+        while parent[a] != a:
+            a = parent[a]
+        return a
+    for c,s,i,j in sorted(edges):
+        a,b = root(i),root(j)
+        if a != b:
+            parent[a] = b
+            tree[i].append((j,c)); tree[j].append((i,c))
+    ordinary = [[0] * m for _ in states]
+    for i in range(m):
+        stack = [(i,-1,0)]
+        while stack:
+            j,prev,c = stack.pop()
+            ordinary[i][j] = c
+            for z,w in tree[j]:
+                if z != prev:
+                    stack.append((z,j,max(c,w)))
+    strict = [row[:] for row in direct]
+    split = [[None] * m for _ in states]
+    primitive = set()
+    # Increasing direct cost strictly increases actual changed support, except
+    # for its harmless within-support triple distinction. Every proper interval
+    # subproblem has smaller support and hence has already been evaluated.
+    for c,s,i,j in sorted(edges):
+        x,y = states[i],states[j]
+        inside = [z for z in range(m) if z not in (i,j) and ((states[z]^x) & ~(x^y)) == 0]
+        if not inside:
+            primitive.add((i,j))
+        for z in inside:
+            v = max(strict[i][z], strict[z][j])
+            if v < strict[i][j]:
+                strict[i][j] = strict[j][i] = v
+                split[i][j] = split[j][i] = z
+    def route(i,j):
+        z = split[i][j]
+        if z is None:
+            return [i,j]
+        return route(i,z)[:-1] + route(z,j)
+    for c,s,i,j in edges:
+        need(ordinary[i][j] <= strict[i][j] <= c, 'ordinary <= strict <= direct')
+        path = route(i,j)
+        changed = 0
+        peak = 0
+        for a,b in zip(path,path[1:]):
+            delta = states[a] ^ states[b]
+            need(not changed & delta and delta & ~(states[i]^states[j]) == 0, 'strict reconstructed route changes target coordinates once only')
+            changed |= delta
+            peak = max(peak,direct[a][b])
+        need(changed == states[i]^states[j] and peak == strict[i][j], 'strict literal endpoint restoration and exact paired bottleneck')
+    pm = max((direct[i][j] for i,j in primitive), default=0)
+    need(pm == max((max(row) for row in strict), default=0), 'primitive uniform criterion equals exact endpoint interval DP')
+    return direct, ordinary, strict, primitive, tree
+
+def components(states, slot_bound, clock_bound):
+    left = set(states)
+    out = []
+    while left:
+        start = min(left); left.remove(start)
+        component = [start]; todo = [start]
+        while todo:
+            a = todo.pop()
+            reached = [b for b in left if cost(a^b)[0] <= slot_bound and cost(a^b)[1] <= clock_bound]
+            for b in reached:
+                left.remove(b); component.append(b); todo.append(b)
+        out.append(sorted(component))
+    return out
+
+def full_state(n, groups, x):
+    corev = sorted(s for j,g in enumerate(groups) if x >> j & 1 for s in g)
+    hp = n['free'][:2]
+    active = set(corev) | set(hp) | {776,3139}
+    used = set()
+    rows = {s:[0]*len(n['potentials']) for s in list(n['data'])+[n['U'],n['V']]}
+    for s,d in n['data'].items():
+        bit = int(s in active); r = d['records'][bit]
+        need(not used & n['literal'][s][bit]['words'], 'literal witness native arrival capacity one')
+        used |= n['literal'][s][bit]['words']
+        for j,f in enumerate(n['potentials']):
+            delta = 2*(f[s]-f[r['target']])
+            rows[s][j] += delta; rows[r['target']][j] -= delta
+    need(len(used) == 328, 'literal witness all 82 source/K/converse occupied units')
+    return {'receiver_mask':x,'core_V':corev,'free_helper_V':hp,'helper_V':sorted(set(hp)|{776,3139})}, rows
+
+def ordinary_route(states, x, y, bound):
+    prev = {x:None}; todo = deque([x])
+    while todo:
+        a = todo.popleft()
+        if a == y:
+            break
+        for b in states:
+            if b not in prev and cost(a^b)[1] <= bound:
+                prev[b] = a; todo.append(b)
+    need(y in prev, 'literal ordinary optimum route exists')
+    path = [y]
+    while path[-1] != x:
+        path.append(prev[path[-1]])
+    return path[::-1]
+
+def literal_route(n, groups, path):
+    states, rows = zip(*(full_state(n,groups,x) for x in path))
+    need(all(all((r[s][j]-rows[0][s][j]) % n['moduli'][j] == 0 for s in r for j in range(len(n['moduli']))) for r in rows), 'literal whole-native generating rows with target diagonals and paired factor two')
+    events = []; counts = Counter()
+    for a,b in zip(path,path[1:]):
+        changed = sorted(s for j,g in enumerate(groups) if (a^b) >> j & 1 for s in g)
+        s,c = cost(a^b)
+        need(len(changed) == s and sum(n['costs'][v] for v in changed) == c, 'literal full-path changed clock occurrences')
+        counts.update(changed)
+        events.append({'changed_sources':changed,'slots':s,'clocks':c})
+    return {'states':list(states),'events':events,'changed_more_than_once':sorted(s for s,c in counts.items() if c>1),'source_change_counts':dict(sorted(counts.items()))}
+
+def main():
+    source_pins(); n = native()
+    fibres, grades, charges, physical, groups, totalq = enumerate_states(n)
+    detailed = []; stats = []; primitives = {}; ordinary_lower = {}; strict_lower = {}; separation = None
+    pair_digest = sha256()
+    for k in range(20):
+        oh,sh,ph,fh = Counter(),Counter(),Counter(),Counter()
+        st = {'grade':k,'states':0,'nonempty_fibres':0,'maximum_fibre_size':0,'endpoint_pairs':0,'primitive_pairs':0,'ordinary_threshold':[0,0],'strict_threshold':[0,0]}
+        for (g,q),states in fibres.items():
+            if g != k:
+                continue
+            d,o,r,primitive,tree = solve_fibre(states)
+            st['states'] += len(states); st['nonempty_fibres'] += 1; st['maximum_fibre_size'] = max(st['maximum_fibre_size'],len(states))
+            pairs = [(i,j) for i in range(len(states)) for j in range(i+1,len(states))]
+            st['endpoint_pairs'] += len(pairs); st['primitive_pairs'] += len(primitive)
+            oc = max((o[i][j] for i,j in pairs),default=0)
+            rc = max((r[i][j] for i,j in pairs),default=0)
+            fh[from_clock(oc)] += 1
+            if oc > st['ordinary_threshold'][1]:
+                st['ordinary_threshold'] = list(from_clock(oc))
+                ordinary_lower[k] = (q,states,oc)
+            if rc > st['strict_threshold'][1]:
+                st['strict_threshold'] = list(from_clock(rc))
+                i,j = min((i,j) for i,j in primitive if d[i][j] == rc)
+                strict_lower[k] = (q,states,states[i],states[j],rc)
+            for i,j in pairs:
+                oh[from_clock(o[i][j])] += 1; sh[from_clock(r[i][j])] += 1
+                pair_digest.update(canonical([k,q,states[i],states[j],list(from_clock(o[i][j])),list(from_clock(r[i][j]))]))
+            for i,j in primitive:
+                x,y = states[i],states[j]
+                a,b = sorted((x&~y,y&~x))
+                value = cost(x^y)
+                need((a,b) not in primitives or primitives[a,b] == value, 'primitive context stripping preserves joint native cost')
+                primitives[a,b] = value; ph[value] += 1
+            detailed.append([g,q,len(states),len(pairs),len(primitive),*from_clock(oc),*from_clock(rc)])
+            if (k,q) == (9,3):
+                x,y = 31171,75320; i,j = states.index(x),states.index(y)
+                need((min(i,j),max(i,j)) in primitive and (o[i][j],r[i][j]) == (18,34), 'strict-vs-ordinary endpoint separation')
+                path = ordinary_route(states,x,y,o[i][j])
+                separation = {'grade':k,'charge':q,'complete_fibre':states,'endpoints':[x,y],
+                              'ordinary_optimum':list(from_clock(o[i][j])),'strict_optimum':list(from_clock(r[i][j])),
+                              'accepted_endpoint_interval':[z for z in states if ((z^x)&~(x^y))==0],
+                              'ordinary_literal_route':literal_route(n,groups,path),
+                              'strict_literal_route':literal_route(n,groups,[x,y])}
+        for name,hist in [('ordinary_pair_optimum_histogram',oh),('strict_pair_optimum_histogram',sh),('primitive_pair_cost_histogram',ph),('ordinary_fibre_threshold_histogram',fh)]:
+            st[name] = [[s,c,count] for (s,c),count in sorted(hist.items())]
+        stats.append(st)
+    # Sharp lower certificates retain the entire finite fibre and cuts below
+    # each coordinate threshold, not merely a costly pair in a connected graph.
+    lower = []
+    for k,(q,states,c) in ordinary_lower.items():
+        s = from_clock(c)[0]
+        sc = components(states,s-1,1000); cc = components(states,1000,c-1)
+        need(len(sc)>1 and len(cc)>1 and len(components(states,s,c))==1, 'sharp ordinary lower cuts and joint upper graph')
+        lower.append({'grade':k,'charge':q,'threshold':[s,c],'complete_fibre':states,'components_below_slot_threshold':sc,'components_below_clock_threshold':cc})
+    strict_witnesses = []
+    for k,(q,states,x,y,c) in strict_lower.items():
+        interval = [z for z in states if ((z^x)&~(x^y))==0]
+        need(set(interval)=={x,y}, 'strict lower witness has no accepted proper endpoint interval state')
+        strict_witnesses.append({'grade':k,'charge':q,'threshold':list(from_clock(c)),'complete_fibre':states,'endpoints':[x,y],'accepted_endpoint_interval':interval})
+    sharp_states = fibres[8,53]
+    need(len(sharp_states)==2 and cost(sharp_states[0]^sharp_states[1])==(16,34), 'inherited sharp two-state control')
+    sharp = {'grade':8,'charge':53,'complete_fibre':sharp_states,'literal_route':literal_route(n,groups,sharp_states)}
+    primitive_rows = [[a,b,s,c] for (a,b),(s,c) in sorted(primitives.items())]
+    need(len(primitive_rows)==2543 and sum(c==34 for a,b,s,c in primitive_rows)==196, 'exact primitive trade census')
+    need(sum(s['endpoint_pairs'] for s in stats)==474896 and sum(s['states'] for s in stats)==131072, 'all actual assignments and all endpoint pairs')
+    # The complement is a counting/isometric involution, not an executed move.
+    for k in range(20):
+        for key in ('ordinary_threshold','strict_threshold','ordinary_pair_optimum_histogram','strict_pair_optimum_histogram','primitive_pair_cost_histogram'):
+            need(stats[k][key]==stats[19-k][key], 'full complementary route-cost classification')
+    phist = Counter((s,c) for a,b,s,c in primitive_rows)
+    detail_bytes = ('grade\tcharge\tstates\tendpoint_pairs\tprimitive_pairs\tordinary_slots\tordinary_clocks\tstrict_slots\tstrict_clocks\n' + ''.join('\t'.join(map(str,row))+'\n' for row in detailed)).encode()
+    cert = {'status':'FINITE-EXACT fixed original native receiver; every exterior full record frozen',
+            'state_encoding':{'base_sources':n['base'],'bit16_triple_sources':TRIPLE,'receiver_slots':19,'independent_binary_variables':17,'full_mask':FULL,'receiver_total_charge':totalq},
+            'native':{'source_count':len(n['data']),'occupied_units':82,'occupied_words':328,'reserved_units':164,'reserved_words':656,'local_frame_owners':652,'original_native_constructor_checks':n['old_checks'],'base_costs':[n['costs'][s] for s in n['base']],'triple_costs':[n['costs'][s] for s in TRIPLE],'base_labels':[n['labels'][s] for s in n['base']],'triple_labels':[n['labels'][s] for s in TRIPLE]},
+            'census':{'assignments':131072,'nonempty_fibres':len(fibres),'maximum_fibre_size':max(map(len,fibres.values())),'unordered_endpoint_pairs':474896,'primitive_endpoint_pairs':sum(s['primitive_pairs'] for s in stats),'distinct_primitive_trades':len(primitives)},
+            'uniform_thresholds':{'grades8_to11':{'ordinary':[16,34],'strict_no_reacquisition':[16,34]},'grades0_to19':{'ordinary':[16,34],'strict_no_reacquisition':[16,34]}},
+            'grades':stats,'ordinary_lower_certificates':lower,'strict_lower_certificates':strict_witnesses,
+            'primitive_trade_cost_histogram':[[s,c,count] for (s,c),count in sorted(phist.items())],
+            'all_primitive_trades':primitive_rows,'sharp_two_state_fibre':sharp,'ordinary_strict_separation':separation,
+            'complete_pair_census':{'summary_file':'fibres.tsv','summary_bytes':len(detail_bytes),'summary_sha256':sha256(detail_bytes).hexdigest(),'pair_record_sha256':pair_digest.hexdigest(),'pair_digest_encoding':'JSON [grade,q,compact_mask_i,compact_mask_j,[ordinary_slots,clocks],[strict_slots,clocks]], compact separators, newline, grade/q then ascending masks'},
+            'checks':CHECKS}
+    return json.loads(json.dumps(cert,sort_keys=True)), detail_bytes
+
+if __name__ == '__main__':
+    ap = argparse.ArgumentParser(); ap.add_argument('--write',action='store_true'); args = ap.parse_args()
+    cert, detail = main()
+    if args.write:
+        (P/'certificate.json').write_text(json.dumps(cert,indent=2,sort_keys=True)+'\n')
+        (P/'fibres.tsv').write_bytes(detail)
+    else:
+        need(cert==json.loads((P/'certificate.json').read_text()),'frozen threshold certificate')
+        need(detail==(P/'fibres.tsv').read_bytes(),'all frozen exact fibre summaries')
+    print(json.dumps({'status':'PASS','checks':cert['checks'],'states':cert['census']['assignments'],'fibres':cert['census']['nonempty_fibres'],'endpoint_pairs':cert['census']['unordered_endpoint_pairs'],'primitive_trades':cert['census']['distinct_primitive_trades'],'uniform_ordinary':[16,34],'uniform_strict_no_reacquisition':[16,34]},sort_keys=True))

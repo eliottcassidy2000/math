@@ -1,0 +1,2888 @@
+{
+  "all_binary_four_coordinate_domains": {
+    "budget_domains": 393210,
+    "domains": 65535,
+    "total_domain_ordered_pairs": 3932160
+  },
+  "all_pair_optimum_sha256": "6e40c8385f1a7e842f703e6247b31f223aa32cad522fe3310b9bfef75f7ea2b4",
+  "base_sources": [
+    1394,
+    1477,
+    1480,
+    1549,
+    1638,
+    1691,
+    1921,
+    1974,
+    2176,
+    2185,
+    2581,
+    2837,
+    2905,
+    2945,
+    3000,
+    3369
+  ],
+  "census": {
+    "assignments": 131072,
+    "fibres": 23444,
+    "max_fibre": 22,
+    "size_histogram": {
+      "1": 3996,
+      "10": 1126,
+      "11": 954,
+      "12": 694,
+      "13": 540,
+      "14": 340,
+      "15": 198,
+      "16": 106,
+      "17": 64,
+      "18": 32,
+      "19": 14,
+      "2": 2662,
+      "20": 6,
+      "21": 2,
+      "22": 2,
+      "3": 2194,
+      "4": 1998,
+      "5": 1918,
+      "6": 1742,
+      "7": 1864,
+      "8": 1504,
+      "9": 1488
+    },
+    "unordered_endpoint_pairs": 474896
+  },
+  "checks": 1521277,
+  "fibre_summary_sha256": "648b82c2da929edf198e06ff06a8167b4e31460289a252f29db5de65bc086036",
+  "grade9_strict_gap_witness": {
+    "accepted_endpoint_interval": [
+      31171,
+      75320
+    ],
+    "all_fibre_V_sources": [
+      [
+        1394,
+        1477,
+        1691,
+        1921,
+        1974,
+        2185,
+        2581,
+        2837,
+        2905
+      ],
+      [
+        1480,
+        1691,
+        1921,
+        1974,
+        2176,
+        2185,
+        2581,
+        2837,
+        3000
+      ],
+      [
+        1477,
+        1480,
+        1549,
+        1638,
+        1691,
+        2185,
+        2837,
+        2945,
+        3000
+      ],
+      [
+        1394,
+        1477,
+        1921,
+        1974,
+        2176,
+        2837,
+        2905,
+        2945,
+        3000
+      ],
+      [
+        1394,
+        1477,
+        1549,
+        1974,
+        2176,
+        2185,
+        2837,
+        2905,
+        3369
+      ],
+      [
+        1480,
+        1549,
+        1921,
+        2176,
+        2581,
+        2837,
+        2905,
+        3000,
+        3369
+      ],
+      [
+        1549,
+        1691,
+        2176,
+        2185,
+        2581,
+        2837,
+        2945,
+        3000,
+        3369
+      ],
+      [
+        1457,
+        1480,
+        1549,
+        1638,
+        1841,
+        1974,
+        2176,
+        2185,
+        3015
+      ],
+      [
+        1457,
+        1480,
+        1549,
+        1638,
+        1841,
+        1921,
+        2581,
+        2905,
+        3015
+      ],
+      [
+        1457,
+        1549,
+        1638,
+        1691,
+        1841,
+        2185,
+        2581,
+        2945,
+        3015
+      ],
+      [
+        1394,
+        1457,
+        1477,
+        1841,
+        1974,
+        2185,
+        2581,
+        3015,
+        3369
+      ]
+    ],
+    "below_clock_cut": [
+      7907,
+      20452,
+      27198,
+      31171,
+      39819,
+      56652,
+      61224
+    ],
+    "below_slot_cut": [
+      7907,
+      20452,
+      27198,
+      31171,
+      39819,
+      56652,
+      61224
+    ],
+    "charge": 3,
+    "direct": [
+      16,
+      34
+    ],
+    "endpoint_V_sources": [
+      [
+        1394,
+        1477,
+        1921,
+        1974,
+        2176,
+        2837,
+        2905,
+        2945,
+        3000
+      ],
+      [
+        1457,
+        1549,
+        1638,
+        1691,
+        1841,
+        2185,
+        2581,
+        2945,
+        3015
+      ]
+    ],
+    "events": [
+      [
+        6,
+        12
+      ],
+      [
+        8,
+        18
+      ],
+      [
+        8,
+        16
+      ]
+    ],
+    "finish": 75320,
+    "grade": 9,
+    "ordinary": [
+      8,
+      18
+    ],
+    "path": [
+      31171,
+      7907,
+      99971,
+      75320
+    ],
+    "path_V_sources": [
+      [
+        1394,
+        1477,
+        1921,
+        1974,
+        2176,
+        2837,
+        2905,
+        2945,
+        3000
+      ],
+      [
+        1394,
+        1477,
+        1691,
+        1921,
+        1974,
+        2185,
+        2581,
+        2837,
+        2905
+      ],
+      [
+        1394,
+        1457,
+        1477,
+        1841,
+        1974,
+        2185,
+        2581,
+        3015,
+        3369
+      ],
+      [
+        1457,
+        1549,
+        1638,
+        1691,
+        1841,
+        2185,
+        2581,
+        2945,
+        3015
+      ]
+    ],
+    "reused_sources": {
+      "1691": 3,
+      "2945": 2,
+      "3369": 2
+    },
+    "start": 31171,
+    "states": [
+      7907,
+      20452,
+      27198,
+      31171,
+      39819,
+      56652,
+      61224,
+      66460,
+      70748,
+      75320,
+      99971
+    ],
+    "strict": [
+      16,
+      34
+    ]
+  },
+  "joint_edge_cost_chain": [
+    [
+      4,
+      8
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      8,
+      16
+    ],
+    [
+      8,
+      18
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      10,
+      22
+    ],
+    [
+      12,
+      24
+    ],
+    [
+      12,
+      26
+    ],
+    [
+      14,
+      28
+    ],
+    [
+      14,
+      30
+    ],
+    [
+      16,
+      34
+    ]
+  ],
+  "labels": {
+    "1394": 1822,
+    "1457": 1232,
+    "1477": 396,
+    "1480": 1152,
+    "1549": 1054,
+    "1638": 1506,
+    "1691": 1831,
+    "1841": 1592,
+    "1921": 1431,
+    "1974": 1305,
+    "2176": 1795,
+    "2185": 170,
+    "2581": 421,
+    "2837": 1525,
+    "2905": 1410,
+    "2945": 2008,
+    "3000": 659,
+    "3015": 487,
+    "3369": 840
+  },
+  "native_clock_costs": {
+    "1394": 2,
+    "1457": 2,
+    "1477": 2,
+    "1480": 2,
+    "1549": 2,
+    "1638": 2,
+    "1691": 2,
+    "1841": 3,
+    "1921": 2,
+    "1974": 2,
+    "2176": 2,
+    "2185": 2,
+    "2581": 2,
+    "2837": 2,
+    "2905": 2,
+    "2945": 2,
+    "3000": 2,
+    "3015": 3,
+    "3369": 2
+  },
+  "per_grade": [
+    {
+      "assignments": 1,
+      "fibres": 1,
+      "gap_pairs": 0,
+      "grade": 0,
+      "max_fibre": 1,
+      "ordinary": [
+        0,
+        0
+      ],
+      "ordinary_lower_witness": null,
+      "ordinary_optimum_histogram": [],
+      "pairs": 0,
+      "primitive_pair_occurrences": 0,
+      "strict": [
+        0,
+        0
+      ],
+      "strict_lower_witness": null,
+      "strict_optimum_histogram": []
+    },
+    {
+      "assignments": 16,
+      "fibres": 16,
+      "gap_pairs": 0,
+      "grade": 1,
+      "max_fibre": 1,
+      "ordinary": [
+        0,
+        0
+      ],
+      "ordinary_lower_witness": null,
+      "ordinary_optimum_histogram": [],
+      "pairs": 0,
+      "primitive_pair_occurrences": 0,
+      "strict": [
+        0,
+        0
+      ],
+      "strict_lower_witness": null,
+      "strict_optimum_histogram": []
+    },
+    {
+      "assignments": 120,
+      "fibres": 118,
+      "gap_pairs": 0,
+      "grade": 2,
+      "max_fibre": 2,
+      "ordinary": [
+        4,
+        8
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          40
+        ],
+        "below_slot_cut": [
+          40
+        ],
+        "charge": 825,
+        "cost": [
+          4,
+          8
+        ],
+        "endpoints": [
+          40,
+          16896
+        ],
+        "events": [
+          [
+            4,
+            8
+          ]
+        ],
+        "path": [
+          40,
+          16896
+        ],
+        "states": [
+          40,
+          16896
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2,
+          "slots": 4
+        }
+      ],
+      "pairs": 2,
+      "primitive_pair_occurrences": 2,
+      "strict": [
+        4,
+        8
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          40,
+          16896
+        ],
+        "charge": 825,
+        "cost": [
+          4,
+          8
+        ],
+        "endpoints": [
+          40,
+          16896
+        ],
+        "states": [
+          40,
+          16896
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2,
+          "slots": 4
+        }
+      ]
+    },
+    {
+      "assignments": 561,
+      "fibres": 491,
+      "gap_pairs": 0,
+      "grade": 3,
+      "max_fibre": 3,
+      "ordinary": [
+        6,
+        12
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          2068
+        ],
+        "below_slot_cut": [
+          2068
+        ],
+        "charge": 87,
+        "cost": [
+          6,
+          12
+        ],
+        "endpoints": [
+          2068,
+          8450
+        ],
+        "events": [
+          [
+            6,
+            12
+          ]
+        ],
+        "path": [
+          2068,
+          8450
+        ],
+        "states": [
+          2068,
+          8450
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 24,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 48,
+          "slots": 6
+        }
+      ],
+      "pairs": 72,
+      "primitive_pair_occurrences": 72,
+      "strict": [
+        6,
+        12
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          2068,
+          8450
+        ],
+        "charge": 87,
+        "cost": [
+          6,
+          12
+        ],
+        "endpoints": [
+          2068,
+          8450
+        ],
+        "states": [
+          2068,
+          8450
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 24,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 48,
+          "slots": 6
+        }
+      ]
+    },
+    {
+      "assignments": 1836,
+      "fibres": 1184,
+      "gap_pairs": 101,
+      "grade": 4,
+      "max_fibre": 5,
+      "ordinary": [
+        8,
+        18
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          6240
+        ],
+        "below_slot_cut": [
+          6240
+        ],
+        "charge": 39,
+        "cost": [
+          8,
+          18
+        ],
+        "endpoints": [
+          6240,
+          98304
+        ],
+        "events": [
+          [
+            8,
+            18
+          ]
+        ],
+        "path": [
+          6240,
+          98304
+        ],
+        "states": [
+          6240,
+          98304
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 134,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 581,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 139,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 10,
+          "slots": 8
+        }
+      ],
+      "pairs": 864,
+      "primitive_pair_occurrences": 862,
+      "strict": [
+        8,
+        18
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          6240,
+          98304
+        ],
+        "charge": 39,
+        "cost": [
+          8,
+          18
+        ],
+        "endpoints": [
+          6240,
+          98304
+        ],
+        "states": [
+          6240,
+          98304
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 134,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 480,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 240,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 10,
+          "slots": 8
+        }
+      ]
+    },
+    {
+      "assignments": 4488,
+      "fibres": 1775,
+      "gap_pairs": 1528,
+      "grade": 5,
+      "max_fibre": 8,
+      "ordinary": [
+        10,
+        22
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          49688
+        ],
+        "below_slot_cut": [
+          49688
+        ],
+        "charge": 109,
+        "cost": [
+          10,
+          22
+        ],
+        "endpoints": [
+          49688,
+          67648
+        ],
+        "events": [
+          [
+            10,
+            22
+          ]
+        ],
+        "path": [
+          49688,
+          67648
+        ],
+        "states": [
+          49688,
+          67648
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 458,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 3457,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 1090,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 176,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 73,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 31,
+          "slots": 10
+        }
+      ],
+      "pairs": 5285,
+      "primitive_pair_occurrences": 5245,
+      "strict": [
+        10,
+        22
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          8293,
+          82432
+        ],
+        "charge": 22,
+        "cost": [
+          10,
+          22
+        ],
+        "endpoints": [
+          8293,
+          82432
+        ],
+        "states": [
+          8293,
+          59396,
+          65576,
+          82432
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 458,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 2184,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 1920,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 110,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 516,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 97,
+          "slots": 10
+        }
+      ]
+    },
+    {
+      "assignments": 8568,
+      "fibres": 1999,
+      "gap_pairs": 8514,
+      "grade": 6,
+      "max_fibre": 13,
+      "ordinary": [
+        12,
+        26
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          1944
+        ],
+        "below_slot_cut": [
+          1944
+        ],
+        "charge": 73,
+        "cost": [
+          12,
+          26
+        ],
+        "endpoints": [
+          1944,
+          73733
+        ],
+        "events": [
+          [
+            12,
+            26
+          ]
+        ],
+        "path": [
+          1944,
+          73733
+        ],
+        "states": [
+          1944,
+          73733
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1070,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 12270,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 3628,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 1455,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 271,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 362,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 12,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 38,
+          "slots": 12
+        }
+      ],
+      "pairs": 19106,
+      "primitive_pair_occurrences": 18827,
+      "strict": [
+        12,
+        26
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          6929,
+          81932
+        ],
+        "charge": 2,
+        "cost": [
+          12,
+          26
+        ],
+        "endpoints": [
+          6929,
+          81932
+        ],
+        "states": [
+          2103,
+          6929,
+          11592,
+          12814,
+          14977,
+          36129,
+          81932
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1070,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 5989,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 6756,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 556,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 3096,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 873,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 313,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 453,
+          "slots": 12
+        }
+      ]
+    },
+    {
+      "assignments": 13260,
+      "fibres": 2042,
+      "gap_pairs": 25011,
+      "grade": 7,
+      "max_fibre": 16,
+      "ordinary": [
+        14,
+        30
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          49522,
+          57570
+        ],
+        "below_slot_cut": [
+          49522,
+          57570
+        ],
+        "charge": 230,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          49522,
+          71692
+        ],
+        "events": [
+          [
+            14,
+            30
+          ]
+        ],
+        "path": [
+          49522,
+          71692
+        ],
+        "states": [
+          49522,
+          57570,
+          71692
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1830,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 26837,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 6745,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 7040,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 544,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 1681,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 32,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 152,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 4,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 2,
+          "slots": 14
+        }
+      ],
+      "pairs": 44867,
+      "primitive_pair_occurrences": 43929,
+      "strict": [
+        14,
+        30
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          13582,
+          66129
+        ],
+        "charge": 14,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          13582,
+          66129
+        ],
+        "states": [
+          13582,
+          15745,
+          35177,
+          43093,
+          52033,
+          65986,
+          66129,
+          100376,
+          126976
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1830,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 11076,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 13884,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 1724,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 7740,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 3522,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1252,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 3171,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 36,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 632,
+          "slots": 14
+        }
+      ]
+    },
+    {
+      "assignments": 17238,
+      "fibres": 2048,
+      "gap_pairs": 45827,
+      "grade": 8,
+      "max_fibre": 21,
+      "ordinary": [
+        16,
+        34
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          20978
+        ],
+        "below_slot_cut": [
+          20978
+        ],
+        "charge": 53,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          20978,
+          69129
+        ],
+        "events": [
+          [
+            16,
+            34
+          ]
+        ],
+        "path": [
+          20978,
+          69129
+        ],
+        "states": [
+          20978,
+          69129
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2444,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 37267,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 8992,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 19954,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 1363,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 3928,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 25,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 216,
+          "slots": 12
+        },
+        {
+          "clocks": 30,
+          "pairs": 13,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 1,
+          "slots": 16
+        }
+      ],
+      "pairs": 74203,
+      "primitive_pair_occurrences": 72367,
+      "strict": [
+        16,
+        34
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          21402,
+          68705
+        ],
+        "charge": 49,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          21402,
+          68705
+        ],
+        "states": [
+          12132,
+          21402,
+          46488,
+          50602,
+          50745,
+          58518,
+          68705,
+          100617
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2444,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 14998,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 19056,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 3662,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 10836,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 8370,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1878,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 9531,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 72,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 3160,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 196,
+          "slots": 16
+        }
+      ]
+    },
+    {
+      "assignments": 19448,
+      "fibres": 2048,
+      "gap_pairs": 59680,
+      "grade": 9,
+      "max_fibre": 22,
+      "ordinary": [
+        14,
+        30
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          38386
+        ],
+        "below_slot_cut": [
+          38386
+        ],
+        "charge": 651,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          38386,
+          88077
+        ],
+        "events": [
+          [
+            14,
+            30
+          ],
+          [
+            8,
+            16
+          ]
+        ],
+        "path": [
+          38386,
+          92768,
+          88077
+        ],
+        "states": [
+          38386,
+          88077,
+          92768
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2742,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 38478,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 10234,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 33247,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 2344,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 5766,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 34,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 198,
+          "slots": 12
+        },
+        {
+          "clocks": 30,
+          "pairs": 6,
+          "slots": 14
+        }
+      ],
+      "pairs": 93049,
+      "primitive_pair_occurrences": 90616,
+      "strict": [
+        16,
+        34
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          31171,
+          75320
+        ],
+        "charge": 3,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          31171,
+          75320
+        ],
+        "states": [
+          7907,
+          20452,
+          27198,
+          31171,
+          39819,
+          56652,
+          61224,
+          66460,
+          70748,
+          75320,
+          99971
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2742,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 16537,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 20400,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 5378,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 10836,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 12738,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1565,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 15909,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 36,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 6320,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 588,
+          "slots": 16
+        }
+      ]
+    },
+    {
+      "assignments": 19448,
+      "fibres": 2048,
+      "gap_pairs": 59680,
+      "grade": 10,
+      "max_fibre": 22,
+      "ordinary": [
+        14,
+        30
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          30641,
+          57846
+        ],
+        "below_slot_cut": [
+          30641,
+          57846
+        ],
+        "charge": 583,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          30641,
+          105479
+        ],
+        "events": [
+          [
+            14,
+            30
+          ]
+        ],
+        "path": [
+          30641,
+          105479
+        ],
+        "states": [
+          30641,
+          57846,
+          105479
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2742,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 38478,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 10234,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 33247,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 2344,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 5766,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 34,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 198,
+          "slots": 12
+        },
+        {
+          "clocks": 30,
+          "pairs": 6,
+          "slots": 14
+        }
+      ],
+      "pairs": 93049,
+      "primitive_pair_occurrences": 90616,
+      "strict": [
+        16,
+        34
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          53495,
+          93708
+        ],
+        "charge": 0,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          53495,
+          93708
+        ],
+        "states": [
+          53495,
+          72308,
+          78690,
+          93708,
+          99173
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2742,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 16537,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 20400,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 5378,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 10836,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 12738,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1565,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 15909,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 36,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 6320,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 588,
+          "slots": 16
+        }
+      ]
+    },
+    {
+      "assignments": 17238,
+      "fibres": 2048,
+      "gap_pairs": 45827,
+      "grade": 11,
+      "max_fibre": 21,
+      "ordinary": [
+        16,
+        34
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          61942
+        ],
+        "below_slot_cut": [
+          61942
+        ],
+        "charge": 1989,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          61942,
+          110093
+        ],
+        "events": [
+          [
+            16,
+            34
+          ]
+        ],
+        "path": [
+          61942,
+          110093
+        ],
+        "states": [
+          61942,
+          110093
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2444,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 37267,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 8992,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 19954,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 1363,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 3928,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 25,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 216,
+          "slots": 12
+        },
+        {
+          "clocks": 30,
+          "pairs": 13,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 1,
+          "slots": 16
+        }
+      ],
+      "pairs": 74203,
+      "primitive_pair_occurrences": 72367,
+      "strict": [
+        16,
+        34
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          56570,
+          75655
+        ],
+        "charge": 16,
+        "cost": [
+          16,
+          34
+        ],
+        "endpoints": [
+          56570,
+          75655
+        ],
+        "states": [
+          54235,
+          56570,
+          68222,
+          75655,
+          93481,
+          94822,
+          102248,
+          110164
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2444,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 14998,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 19056,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 3662,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 10836,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 8370,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1878,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 9531,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 72,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 3160,
+          "slots": 14
+        },
+        {
+          "clocks": 34,
+          "pairs": 196,
+          "slots": 16
+        }
+      ]
+    },
+    {
+      "assignments": 13260,
+      "fibres": 2042,
+      "gap_pairs": 25011,
+      "grade": 12,
+      "max_fibre": 16,
+      "ordinary": [
+        14,
+        30
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          59379
+        ],
+        "below_slot_cut": [
+          59379
+        ],
+        "charge": 1814,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          59379,
+          73501
+        ],
+        "events": [
+          [
+            14,
+            30
+          ]
+        ],
+        "path": [
+          59379,
+          73501
+        ],
+        "states": [
+          59379,
+          73501,
+          81549
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1830,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 26837,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 6745,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 7040,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 544,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 1681,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 32,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 152,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 4,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 2,
+          "slots": 14
+        }
+      ],
+      "pairs": 44867,
+      "primitive_pair_occurrences": 43929,
+      "strict": [
+        14,
+        30
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          58623,
+          72630
+        ],
+        "charge": 1,
+        "cost": [
+          14,
+          30
+        ],
+        "endpoints": [
+          58623,
+          72630
+        ],
+        "states": [
+          58623,
+          63449,
+          72630,
+          77436,
+          102087,
+          103783,
+          125237
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1830,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 11076,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 13884,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 1724,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 7740,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 3522,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 1252,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 3171,
+          "slots": 12
+        },
+        {
+          "clocks": 28,
+          "pairs": 36,
+          "slots": 14
+        },
+        {
+          "clocks": 30,
+          "pairs": 632,
+          "slots": 14
+        }
+      ]
+    },
+    {
+      "assignments": 8568,
+      "fibres": 1999,
+      "gap_pairs": 8514,
+      "grade": 13,
+      "max_fibre": 13,
+      "ordinary": [
+        12,
+        26
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          57334
+        ],
+        "below_slot_cut": [
+          57334
+        ],
+        "charge": 39,
+        "cost": [
+          12,
+          26
+        ],
+        "endpoints": [
+          57334,
+          94969
+        ],
+        "events": [
+          [
+            12,
+            26
+          ]
+        ],
+        "path": [
+          57334,
+          94969
+        ],
+        "states": [
+          57334,
+          94969
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1070,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 12270,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 3628,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 1455,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 271,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 362,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 12,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 38,
+          "slots": 12
+        }
+      ],
+      "pairs": 19106,
+      "primitive_pair_occurrences": 18827,
+      "strict": [
+        12,
+        26
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          62971,
+          93814
+        ],
+        "charge": 0,
+        "cost": [
+          12,
+          26
+        ],
+        "endpoints": [
+          62971,
+          93814
+        ],
+        "states": [
+          62971,
+          74623,
+          81784,
+          93814,
+          106435,
+          125726
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 1070,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 5989,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 6756,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 556,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 3096,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 873,
+          "slots": 10
+        },
+        {
+          "clocks": 24,
+          "pairs": 313,
+          "slots": 12
+        },
+        {
+          "clocks": 26,
+          "pairs": 453,
+          "slots": 12
+        }
+      ]
+    },
+    {
+      "assignments": 4488,
+      "fibres": 1775,
+      "gap_pairs": 1528,
+      "grade": 14,
+      "max_fibre": 8,
+      "ordinary": [
+        10,
+        22
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          61375
+        ],
+        "below_slot_cut": [
+          61375
+        ],
+        "charge": 10,
+        "cost": [
+          10,
+          22
+        ],
+        "endpoints": [
+          61375,
+          119804
+        ],
+        "events": [
+          [
+            10,
+            22
+          ]
+        ],
+        "path": [
+          61375,
+          119804
+        ],
+        "states": [
+          61375,
+          119804
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 458,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 3457,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 1090,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 176,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 73,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 31,
+          "slots": 10
+        }
+      ],
+      "pairs": 5285,
+      "primitive_pair_occurrences": 5245,
+      "strict": [
+        10,
+        22
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          65271,
+          94715
+        ],
+        "charge": 2,
+        "cost": [
+          10,
+          22
+        ],
+        "endpoints": [
+          65271,
+          94715
+        ],
+        "states": [
+          65271,
+          94715,
+          122554
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 458,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 2184,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 1920,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 110,
+          "slots": 8
+        },
+        {
+          "clocks": 20,
+          "pairs": 516,
+          "slots": 10
+        },
+        {
+          "clocks": 22,
+          "pairs": 97,
+          "slots": 10
+        }
+      ]
+    },
+    {
+      "assignments": 1836,
+      "fibres": 1184,
+      "gap_pairs": 101,
+      "grade": 15,
+      "max_fibre": 5,
+      "ordinary": [
+        8,
+        18
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          49151
+        ],
+        "below_slot_cut": [
+          49151
+        ],
+        "charge": 140,
+        "cost": [
+          8,
+          18
+        ],
+        "endpoints": [
+          49151,
+          97786
+        ],
+        "events": [
+          [
+            8,
+            18
+          ]
+        ],
+        "path": [
+          49151,
+          97786
+        ],
+        "states": [
+          49151,
+          97786,
+          118269
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 134,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 581,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 139,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 10,
+          "slots": 8
+        }
+      ],
+      "pairs": 864,
+      "primitive_pair_occurrences": 862,
+      "strict": [
+        8,
+        18
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          49151,
+          97786
+        ],
+        "charge": 140,
+        "cost": [
+          8,
+          18
+        ],
+        "endpoints": [
+          49151,
+          97786
+        ],
+        "states": [
+          49151,
+          97786,
+          118269
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 134,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 480,
+          "slots": 6
+        },
+        {
+          "clocks": 16,
+          "pairs": 240,
+          "slots": 8
+        },
+        {
+          "clocks": 18,
+          "pairs": 10,
+          "slots": 8
+        }
+      ]
+    },
+    {
+      "assignments": 561,
+      "fibres": 491,
+      "gap_pairs": 0,
+      "grade": 16,
+      "max_fibre": 3,
+      "ordinary": [
+        6,
+        12
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          97783
+        ],
+        "below_slot_cut": [
+          97783
+        ],
+        "charge": 12,
+        "cost": [
+          6,
+          12
+        ],
+        "endpoints": [
+          97783,
+          106431
+        ],
+        "events": [
+          [
+            6,
+            12
+          ]
+        ],
+        "path": [
+          97783,
+          106431
+        ],
+        "states": [
+          97783,
+          106431
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 24,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 48,
+          "slots": 6
+        }
+      ],
+      "pairs": 72,
+      "primitive_pair_occurrences": 72,
+      "strict": [
+        6,
+        12
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          97783,
+          106431
+        ],
+        "charge": 12,
+        "cost": [
+          6,
+          12
+        ],
+        "endpoints": [
+          97783,
+          106431
+        ],
+        "states": [
+          97783,
+          106431
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 24,
+          "slots": 4
+        },
+        {
+          "clocks": 12,
+          "pairs": 48,
+          "slots": 6
+        }
+      ]
+    },
+    {
+      "assignments": 120,
+      "fibres": 118,
+      "gap_pairs": 0,
+      "grade": 17,
+      "max_fibre": 2,
+      "ordinary": [
+        4,
+        8
+      ],
+      "ordinary_lower_witness": {
+        "below_clock_cut": [
+          122751
+        ],
+        "below_slot_cut": [
+          122751
+        ],
+        "charge": 785,
+        "cost": [
+          4,
+          8
+        ],
+        "endpoints": [
+          122751,
+          130799
+        ],
+        "events": [
+          [
+            4,
+            8
+          ]
+        ],
+        "path": [
+          122751,
+          130799
+        ],
+        "states": [
+          122751,
+          130799
+        ]
+      },
+      "ordinary_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2,
+          "slots": 4
+        }
+      ],
+      "pairs": 2,
+      "primitive_pair_occurrences": 2,
+      "strict": [
+        4,
+        8
+      ],
+      "strict_lower_witness": {
+        "accepted_interval": [
+          122751,
+          130799
+        ],
+        "charge": 785,
+        "cost": [
+          4,
+          8
+        ],
+        "endpoints": [
+          122751,
+          130799
+        ],
+        "states": [
+          122751,
+          130799
+        ]
+      },
+      "strict_optimum_histogram": [
+        {
+          "clocks": 8,
+          "pairs": 2,
+          "slots": 4
+        }
+      ]
+    },
+    {
+      "assignments": 16,
+      "fibres": 16,
+      "gap_pairs": 0,
+      "grade": 18,
+      "max_fibre": 1,
+      "ordinary": [
+        0,
+        0
+      ],
+      "ordinary_lower_witness": null,
+      "ordinary_optimum_histogram": [],
+      "pairs": 0,
+      "primitive_pair_occurrences": 0,
+      "strict": [
+        0,
+        0
+      ],
+      "strict_lower_witness": null,
+      "strict_optimum_histogram": []
+    },
+    {
+      "assignments": 1,
+      "fibres": 1,
+      "gap_pairs": 0,
+      "grade": 19,
+      "max_fibre": 1,
+      "ordinary": [
+        0,
+        0
+      ],
+      "ordinary_lower_witness": null,
+      "ordinary_optimum_histogram": [],
+      "pairs": 0,
+      "primitive_pair_occurrences": 0,
+      "strict": [
+        0,
+        0
+      ],
+      "strict_lower_witness": null,
+      "strict_optimum_histogram": []
+    }
+  ],
+  "primitive_occurrence_cost_histogram": [
+    {
+      "clocks": 8,
+      "pairs": 16384,
+      "slots": 4
+    },
+    {
+      "clocks": 12,
+      "pairs": 98304,
+      "slots": 6
+    },
+    {
+      "clocks": 16,
+      "pairs": 122880,
+      "slots": 8
+    },
+    {
+      "clocks": 18,
+      "pairs": 20480,
+      "slots": 8
+    },
+    {
+      "clocks": 20,
+      "pairs": 66048,
+      "slots": 10
+    },
+    {
+      "clocks": 22,
+      "pairs": 49664,
+      "slots": 10
+    },
+    {
+      "clocks": 24,
+      "pairs": 10016,
+      "slots": 12
+    },
+    {
+      "clocks": 26,
+      "pairs": 57984,
+      "slots": 12
+    },
+    {
+      "clocks": 28,
+      "pairs": 288,
+      "slots": 14
+    },
+    {
+      "clocks": 30,
+      "pairs": 20224,
+      "slots": 14
+    },
+    {
+      "clocks": 34,
+      "pairs": 1568,
+      "slots": 16
+    }
+  ],
+  "producer_comparison": "PASS: complete pair digest, all2543 primitive trades, all grade pair histograms and thresholds",
+  "scope": "full exterior frozen; exact literal binary receiver records; no all-size charged supply claim",
+  "sharp_grade8_charge53": {
+    "V_sources": [
+      [
+        1477,
+        1638,
+        1691,
+        1921,
+        1974,
+        2176,
+        2905,
+        3000
+      ],
+      [
+        1394,
+        1457,
+        1549,
+        1841,
+        2185,
+        2581,
+        2837,
+        3015
+      ]
+    ],
+    "joint_threshold": [
+      16,
+      34
+    ],
+    "masks": [
+      20978,
+      69129
+    ]
+  },
+  "status": "PASS",
+  "triple_sources": [
+    1457,
+    1841,
+    3015
+  ],
+  "unique_primitive_cost_histogram": [
+    {
+      "clocks": 8,
+      "slots": 4,
+      "trades": 2
+    },
+    {
+      "clocks": 12,
+      "slots": 6,
+      "trades": 48
+    },
+    {
+      "clocks": 16,
+      "slots": 8,
+      "trades": 240
+    },
+    {
+      "clocks": 18,
+      "slots": 8,
+      "trades": 10
+    },
+    {
+      "clocks": 20,
+      "slots": 10,
+      "trades": 516
+    },
+    {
+      "clocks": 22,
+      "slots": 10,
+      "trades": 97
+    },
+    {
+      "clocks": 24,
+      "slots": 12,
+      "trades": 313
+    },
+    {
+      "clocks": 26,
+      "slots": 12,
+      "trades": 453
+    },
+    {
+      "clocks": 28,
+      "slots": 14,
+      "trades": 36
+    },
+    {
+      "clocks": 30,
+      "slots": 14,
+      "trades": 632
+    },
+    {
+      "clocks": 34,
+      "slots": 16,
+      "trades": 196
+    }
+  ],
+  "unique_primitive_trade_digest": "b8909e006272afbdd466199efc490eb39ab1129ad576c53ca96a7368c405f827",
+  "unique_primitive_trades": 2543
+}

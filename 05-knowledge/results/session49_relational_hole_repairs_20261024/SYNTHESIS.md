@@ -60,6 +60,61 @@ must be odd and at least3, but all560 three-subsets exclude the required triple
 charge. Thus at least5 base slots and the3 linked slots change, costing18 clocks.
 Grade8/charge1 attains the bound. This does not by itself prove connectivity.
 
+### Exact non-reacquiring thresholds with the exterior fixed
+
+The [receiver-threshold theorem](receiver-thresholds/THEOREM.md) and
+[independent threshold audit](audit-receiver-thresholds/AUDIT.md) sharpen the
+finite receiver-only question. With triple1457=1841=3015 and every exterior
+record fixed, every nonempty grade/charge fibre connects without resource
+reacquisition using at most16 slots and34 clocks per event, simultaneously.
+Both uniform bounds are sharp. The statement covers all grades0..19; it does
+not assert that every charge occurs at every grade.
+
+At grades9 and10, the exact ordinary uniform threshold is14 slots/30 clocks,
+while strict non-reacquisition requires16/34. Thus the requirement has a genuine
+cost even in the fully authenticated original charged carrier, not just in the
+neutral prefix example below. At grades8 and11, ordinary routing already needs
+16/34. No exterior helper movement or receiver refresh outside the endpoint
+interval is used in the strict theorem.
+
+A stronger endpoint-specific separation occurs at grade9/charge3: the retained
+endpoint pair has exact ordinary optimum8 slots/18 clocks but strict optimum
+16/34. Its certified three-event ordinary route reacquires released resources;
+the strict route must pay the larger event. Pair-optimal thresholds are distinct
+from the worst-case uniform thresholds at that grade.
+
+The structural proof is broader than the finite census. In any finite accepted
+binary family with disjoint alternative resources, a strict route stays in the
+endpoint interval. An accepted pair with no internal accepted interval state
+therefore forces a direct move. Conversely, recursively splitting every other
+pair into accepted intermediate interval states gives disjoint, target-directed
+changes. Uniform strict budgets are exactly the coordinatewise maxima of these
+interval-indecomposable moves. This is a conformal primitive-move mechanism, not
+a claim that arbitrary relational pins have uniformly small primitives.
+
+The receiver census contains131,072 assignments,23,444 nonempty fibres, and
+474,896 unordered endpoint pairs, with at most22 states in a fibre. Independent
+endpoint-monotone dynamic programming and interval recursion agree; ordinary
+path and spanning-tree computations agree separately. The actual event-cost
+pairs form a coordinatewise chain, confirming that the reported slot/clock
+thresholds are jointly attainable rather than incompatible separate minima.
+
+The worst strict endpoints also have an exact counting explanation. There are
+196 normalized primitive trades of support16 and cost34. Each changes the linked
+triple and leaves three independent base bits untouched, so its common contexts
+give the grade polynomial
+
+    196 z^8 (1+z)^3.
+
+Its coefficients196,588,588,196 count all1,568 strict34-clock endpoint pairs at
+grades8..11. There are no extra decomposable critical pairs: every nonzero
+primitive has support at least4, while any same-grade endpoint pair changes at
+most18 slots. A decomposition into two or more primitives therefore uses only
+supports at most14 and costs at most30. This is a structural consequence of the
+audited primitive catalogue, not a conjecture extrapolated from the number196.
+The [polynomial audit supplement](audit-receiver-polynomial/AUDIT.md) pins the
+final generating-function revision separately from the earlier threshold audit.
+
 ## 3. Relational robustness has exact cut certificates
 
 For one requested debt, regard each compatible receiver/repair full-record pair

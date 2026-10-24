@@ -1,0 +1,12 @@
+{"manifest_files": 49, "manifest_sha256": "dd6677578dc41643da3e63584ba3a4b3501d2e71b73f92d81ac67a5d7449e42d", "status": "PASS"}
+{"manifest_files": 49, "manifest_sha256": "dd6677578dc41643da3e63584ba3a4b3501d2e71b73f92d81ac67a5d7449e42d", "status": "PASS"}
+{"checks": 2663575, "endpoint_pairs": 474896, "fibres": 23444, "primitive_trades": 2543, "states": 131072, "status": "PASS", "uniform_ordinary": [16, 34], "uniform_strict_no_reacquisition": [16, 34]}
+{"checks": 2663575, "endpoint_pairs": 474896, "fibres": 23444, "primitive_trades": 2543, "states": 131072, "status": "PASS", "uniform_ordinary": [16, 34], "uniform_strict_no_reacquisition": [16, 34]}
+{"checks": 175980, "routes": {"arrivals": 1644, "events": 1308, "maximum_clocks": 43, "maximum_slots": 16, "routes": 336}, "sharp_boundary": [16, 34], "status": "PASS", "table_cases": 105}
+{"checks": 175980, "routes": {"arrivals": 1644, "events": 1308, "maximum_clocks": 43, "maximum_slots": 16, "routes": 336}, "sharp_boundary": [16, 34], "status": "PASS", "table_cases": 105}
+{"all_full_kernel_lifts": true, "all_full_menus": true, "checks": 115250, "owner4_helper_image": 972, "sources": 82, "status": "PASS"}
+{"all_full_kernel_lifts": true, "all_full_menus": true, "checks": 115250, "owner4_helper_image": 972, "sources": 82, "status": "PASS"}
+{"checks": 441763, "filtration": "unchanged earlier independent audit re-executed", "full_critical_group_exponent_claimed": false, "paired_charge_order": 2048, "status": "PASS"}
+{"checks": 441763, "filtration": "unchanged earlier independent audit re-executed", "full_critical_group_exponent_claimed": false, "paired_charge_order": 2048, "status": "PASS"}
+{"normal_optimized_equal": true, "scripts": 4, "status": "PASS"}
+{"manifest_only_relocation": true, "normal_and_optimized_full_suite": true, "status": "PASS"}

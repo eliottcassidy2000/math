@@ -1,0 +1,48 @@
+{
+  "inherited_filtration": {
+    "checks": 441763,
+    "filtration": "unchanged earlier independent audit re-executed",
+    "full_critical_group_exponent_claimed": false,
+    "paired_charge_order": 2048,
+    "status": "PASS"
+  },
+  "inherited_native": {
+    "all_full_kernel_lifts": true,
+    "all_full_menus": true,
+    "checks": 115250,
+    "owner4_helper_image": 972,
+    "sources": 82,
+    "status": "PASS"
+  },
+  "method": "Copy only manifest-listed files and MANIFEST.json to a fresh temporary directory, then run whole normal/-O suite.",
+  "new_checker": {
+    "checks": 175980,
+    "routes": {
+      "arrivals": 1644,
+      "events": 1308,
+      "maximum_clocks": 43,
+      "maximum_slots": 16,
+      "routes": 336
+    },
+    "sharp_boundary": [
+      16,
+      34
+    ],
+    "status": "PASS",
+    "table_cases": 105
+  },
+  "normal_optimized_stdout_identical": true,
+  "relocation_result": {
+    "manifest_only_relocation": true,
+    "normal_and_optimized_full_suite": true,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "tested_execution_files": {
+    "certificate.json": "2577ff7c9acb1dab103afbdd78407b367b3c33e531a9b764877f583c9b89f13f",
+    "check.py": "6cffe3e220a57089ce690b3d4c8f43dfb56c0a8157f2fb73e6af4b8e8ff47ba8",
+    "inherited/native_certificate.json": "fd949a9e373e7cb36be802d8d850294f59f42b3c4058a3b921ff3ab9026892f0",
+    "inherited/replay_filtration.py": "3d7171ba8f96d5ae06e7d26420b70abf4d8999b0e0152e5d9d6e2cc1eacf26a0",
+    "inherited/verify_native.py": "1238285c68cec5a56b3c701af85b522a528b52cfbca38208855e6cb621d2913d"
+  }
+}

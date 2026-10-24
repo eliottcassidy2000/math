@@ -7,6 +7,11 @@ exact scopes, and remaining all-size obligations.
   [independent audit](audit-native-holes/AUDIT.md): actual receiver-spanning
   equality repairs, exact16/34 boundary, reversible20/68 routes and separate
   atomic strict-nonreturn28/88 bound.
+- [Exact receiver-only thresholds](receiver-thresholds/THEOREM.md), with
+  [independent audit](audit-receiver-thresholds/AUDIT.md): sharp uniform strict16/34
+  bound over all nonempty grade/charge fibres with exterior fixed; grades9 and10 have
+  ordinary14/30 versus strict16/34. These are different scopes from the global
+  finite inventory bounds above.
 - [Conditional hole and cut theory](hole-theory/THEOREM.md): joint branch
   obstructions, resource-ban hitting sets, quota-preserving relational robustness,
   and exact matching-table generating functions.

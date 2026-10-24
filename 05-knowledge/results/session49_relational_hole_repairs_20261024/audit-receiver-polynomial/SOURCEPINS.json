@@ -1,0 +1,42 @@
+{
+  "inputs/final_producer_certificate.json": {
+    "bytes": 209898,
+    "sha256": "70ddd322e13ba1b3047f5daa6fbaa8e736c52118577858b75ff8a011fd298ba6",
+    "source": "session49-receiver-thresholds/certificate.json"
+  },
+  "inputs/independent_audit_result.json": {
+    "bytes": 49011,
+    "sha256": "c5df45605218869f777b95f8cab89a8cf7370ffb187cad1ae6972c43335abb32",
+    "source": "session49-audit-receiver-thresholds/AUDIT_RESULT.json"
+  },
+  "sources/final_producer_MANIFEST.json.txt": {
+    "bytes": 8579,
+    "sha256": "dd6677578dc41643da3e63584ba3a4b3501d2e71b73f92d81ac67a5d7449e42d",
+    "source": "session49-receiver-thresholds/MANIFEST.json"
+  },
+  "sources/final_producer_PORTABILITY_LOG.txt": {
+    "bytes": 1819,
+    "sha256": "1e2763ffe4291b4f4f1213029ce4cc40495f4a4943e6d33787725544a06a5b10",
+    "source": "/tmp/session49-receiver-thresholds-final-gf-relocation.log"
+  },
+  "sources/final_producer_THEOREM.md.txt": {
+    "bytes": 16525,
+    "sha256": "f10bde9422236428de40e0f1e25281477ce79c919585d89ac79f6672022c5fe8",
+    "source": "session49-receiver-thresholds/THEOREM.md"
+  },
+  "sources/final_producer_check.py.txt": {
+    "bytes": 20368,
+    "sha256": "7e4389de276fe9ab73f1dcc015e6d1808849b72a41a35b328ef2454807ff1940",
+    "source": "session49-receiver-thresholds/check.py"
+  },
+  "sources/independent_MANIFEST.json.txt": {
+    "bytes": 7104,
+    "sha256": "57e13af325261d57182d8d69d89438f5f6ef5d0358f55821d8077c04043e34cb",
+    "source": "session49-audit-receiver-thresholds/MANIFEST.json"
+  },
+  "sources/independent_PORTABILITY_RECEIPT.json.txt": {
+    "bytes": 3840,
+    "sha256": "0d7ac82909ab9998b178ff1cdc89f5152e9ffa4cd5fd4dd280dddd63209de96d",
+    "source": "session49-audit-receiver-thresholds-portability.json"
+  }
+}

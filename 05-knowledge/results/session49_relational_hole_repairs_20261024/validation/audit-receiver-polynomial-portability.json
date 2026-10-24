@@ -1,0 +1,85 @@
+{
+  "manifest_only_copy": true,
+  "manifest_sha256": "cd4d004895cb6ba1da5128a55c26cdbea134d3e074ac0fc70e991fbf3e0a7ccf",
+  "normal_optimized_full_suite": true,
+  "status": "PASS",
+  "stdout": [
+    {
+      "manifest_files": 15,
+      "manifest_sha256": "cd4d004895cb6ba1da5128a55c26cdbea134d3e074ac0fc70e991fbf3e0a7ccf",
+      "status": "PASS"
+    },
+    {
+      "manifest_files": 15,
+      "manifest_sha256": "cd4d004895cb6ba1da5128a55c26cdbea134d3e074ac0fc70e991fbf3e0a7ccf",
+      "status": "PASS"
+    },
+    {
+      "checks": 10271,
+      "final_producer_manifest_sha256": "dd6677578dc41643da3e63584ba3a4b3501d2e71b73f92d81ac67a5d7449e42d",
+      "independent_audit_manifest_sha256": "57e13af325261d57182d8d69d89438f5f6ef5d0358f55821d8077c04043e34cb",
+      "normalized_maximal_trades": 196,
+      "ordinary34_total": 2,
+      "pair_digest": "6e40c8385f1a7e842f703e6247b31f223aa32cad522fe3310b9bfef75f7ea2b4",
+      "primitive_completion_formula": "sum_(s,c) N_(s,c) z^(s/2) (1+z)^(16-s+3t) (1+z^3)^(1-t), t=(c-2s)/2",
+      "primitive_pair_total": 463840,
+      "primitive_pairs_by_grade": [
+        0,
+        0,
+        2,
+        72,
+        862,
+        5245,
+        18827,
+        43929,
+        72367,
+        90616,
+        90616,
+        72367,
+        43929,
+        18827,
+        5245,
+        862,
+        72,
+        2,
+        0,
+        0
+      ],
+      "status": "PASS",
+      "strict34_by_grade": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        196,
+        588,
+        588,
+        196,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "strict34_polynomial": "196 z^8 (1+z)^3",
+      "strict34_total": 1568
+    },
+    {
+      "normal_optimized_equal": true,
+      "status": "PASS"
+    },
+    {
+      "manifest_only_relocation": true,
+      "normal_and_optimized_full_suite": true,
+      "status": "PASS"
+    }
+  ],
+  "validated_utc": "2026-10-24T15:36:10.489212+00:00"
+}
