@@ -1,0 +1,16 @@
+{
+  "files": {
+    "AUDIT.md": "d252603e18951c1a8ba58d213a1c9b95bcbedc2aac2bebf74afff5e8cb9e32f2",
+    "SOURCE_PINS.json": "4f5f9e5285ba25b0b4b94e71527650f60371657b92ecd07db04dc99814038e76",
+    "check.py": "04de4c07d0eec6fd445e2b12b082221821389f9a3fb71ad8f8c24ff967be42ce",
+    "inherited-supply-normal.log": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "inherited-supply-optimized.log": "93d97fec6440c11d289eb45f7e094d7426affd61828ea9bcb54216668c79ffa1",
+    "normal.json": "ba4fda92644de3fcbd4268d345ff1a866493da0049f764c89a3b5b78cfc975c1",
+    "optimized.json": "ba4fda92644de3fcbd4268d345ff1a866493da0049f764c89a3b5b78cfc975c1",
+    "quad_packings_initial9.json": "1928a9d11d3ecaf837d9bd6bb1d77a337647a950a8ee3b1e1f908b3dbf707266",
+    "receipt.json": "cf78a4ec81ade097639c78e58be677e5c3fdbabbdad819419fba1116f961c648",
+    "robust_bank46.json": "fbeabab4b65df6d1918157c7a930fc0b773dfeaff54ff97d3093a6edf1f954eb",
+    "verify_manifest.py": "44f048c46280f58f0314b2f85c34a9c4baaf771cc45df299df78d0b8c2403a39"
+  },
+  "status": "FROZEN INITIAL9 PACKING + BANK46 AUDIT"
+}
