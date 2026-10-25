@@ -31,7 +31,12 @@ no proved polynomial bound. No new Hadwiger–Nelson bound is claimed.
    old response can be recovered from individual futures; scalar
    normalization cannot produce the same merger. This gives both a valid
    recurrence and a precise obstruction, while retaining the distinction
-   between aggregate core counts and literal clone owners.
+   between aggregate core counts and literal clone owners. The corrected
+   graded coefficients count signed vertex-weighted tournaments. A
+   [direct clone-cut involution](counting/CLONE_INVOLUTION.md) now pairs their
+   contributions inside each fixed inflated tournament: toggle the first gap
+   throughout one automorphism orbit of nontrivial clone blocks. Its odd
+   size reverses the sign; exactly the pair-free tournaments survive.
 4. [The regular conic action has a geometric boundary](geometry/README.md):
    the inherited free-hourglass/regular-eight-conics criterion is retained
    with its marked direction map. The three divisor-relation modes of

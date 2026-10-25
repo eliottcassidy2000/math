@@ -12,6 +12,7 @@ black-core connectivity proof, or plane chromatic bound is asserted.
 | All-order protected ports | n>=9, min I>=5, {n-4,n-2} contained in I; [proof](ports/NEXT_BOUNDARY.md) | [Boundary review](ports/BOUNDARY_REVIEW.md), including an independent reconstruction of the inherited cyclic exception |
 | Ordinary degree gauge | All target N, descending odd-cycle stages; [proof](counting/README.md) | [Review](counting/INDEPENDENT_REVIEW.md); divisor-square exponent and literal ordered-pair actions |
 | Excess grading and scalar obstruction | Fixed actual/excess grades; individual decorated futures; [proof](counting/EXCESS_EXTENSION.md) | Same review, independent substitution coefficients and literal coloured-tournament inventory |
+| Clone-cut cancellation | Exact inflation fibres, preserving the inflated graph; [proof](counting/CLONE_INVOLUTION.md) | [Independent review](counting/CLONE_REVIEW.md), literal cut-orbit and weighted-quotient comparison |
 | Planar binary-translation obstruction | Injective vertex images in Euclidean R2; [proof](geometry/README.md) | [Review](geometry/AUDIT.md), exact square-equation elimination and unit coordinates |
 | Minimal path language | Named q>=2 colours, Boolean existence; [proof](hn/README.md) | Exact attainable sets, complete small path/C6 words, root proof review |
 | Correlated interfaces and unpartitioned menus | Finite shared-source relations; [proof](hn/RELATIONAL_LIFT.md) | Unit pentagon, literal Boolean assignments versus signed constraints, root proof review |
@@ -45,6 +46,9 @@ read-only; `--refresh` is an explicit publication operation.
   through order5;288 small supported-future comparisons. Coloured inventory
   adds30 literal simultaneous arc/colour canonicalizations and231
   sign/integrality checks through total20.
+- Clone involution: every one of the21 tournament classes through order5,
+  with58 cut orbits, plus the cyclic three-block and asymmetric two-block
+  hostiles. No affine or cycle-index engine is imported by this checker.
 - Geometry: all128 F2^3 direction sets; exact rational square matrices,
   exact chromatic backtracking, all28 distances of an induced cube, and
   all5,040 Fano markings. The four torus-selected direction bases are

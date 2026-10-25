@@ -14,6 +14,7 @@ JOBS = [
     ("counting/check.py", "counting/normal.json", "counting/optimized.json"),
     ("counting/check_excess.py", "counting/excess-normal.json", "counting/excess-optimized.json"),
     ("counting/check_colored_inventory.py", "counting/colored-normal.json", "counting/colored-optimized.json"),
+    ("counting/check_clone_involution.py", "counting/clone-normal.json", "counting/clone-optimized.json"),
     ("ports/INDEPENDENT_REVIEW.md", "ports/review-normal.json", "ports/review-optimized.json"),
     ("counting/INDEPENDENT_REVIEW.md", "counting/review-normal.out", "counting/review-optimized.out"),
     ("hn/RELATIONAL_LIFT.md", "hn/relation-normal.json", "hn/relation-optimized.json"),

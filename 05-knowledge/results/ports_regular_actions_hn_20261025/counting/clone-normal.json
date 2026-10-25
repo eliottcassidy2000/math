@@ -1,0 +1,37 @@
+{
+  "complete_tournament_class_counts_n0_to_5": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "scope": "literal inflation fibers and cut-orbit involution; no enumeration speed claim",
+  "small_fiber_cut_orbits": 58,
+  "status": "PASS",
+  "symmetric_C3_TT2_hostile": {
+    "automorphisms": 3,
+    "cut_orbits": 4,
+    "gap_count": 3,
+    "modules": [
+      2,
+      2,
+      2
+    ],
+    "signed_sum": 0,
+    "toggle_size": 3
+  },
+  "two_nontrivial_orbits_control": {
+    "automorphisms": 1,
+    "cut_orbits": 4,
+    "gap_count": 2,
+    "modules": [
+      2,
+      2,
+      1
+    ],
+    "signed_sum": 0,
+    "toggle_size": 1
+  }
+}
