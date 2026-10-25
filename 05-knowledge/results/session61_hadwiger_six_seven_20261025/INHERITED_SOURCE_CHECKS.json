@@ -1,0 +1,41 @@
+{
+  "scope": "Prior audited free-code and orbit-classification dependencies; exact Git blob readback",
+  "base_commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+  "files": [
+    {
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines/RESULT.md",
+      "commit": "a144b255fce03bc2afb4414cd9804584670e3c5a",
+      "bytes": 25741,
+      "sha256": "eac57a84ee6653ab5bf370e2d8954256d073232c09d60946b3f4abe747b9a314",
+      "same_bytes_at_checkpoint_base": true
+    },
+    {
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines/check.py",
+      "commit": "a144b255fce03bc2afb4414cd9804584670e3c5a",
+      "bytes": 10122,
+      "sha256": "49db151e1d7e6247860bb68ced871c30d55fe157eff76742ab0e0c77ea45731e",
+      "same_bytes_at_checkpoint_base": true
+    },
+    {
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines/certificate.json",
+      "commit": "a144b255fce03bc2afb4414cd9804584670e3c5a",
+      "bytes": 71888,
+      "sha256": "b2372eed1785ea33367a1580de6be97a501b72f1bd97ad63d1297a824f62674f",
+      "same_bytes_at_checkpoint_base": true
+    },
+    {
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/hourglass-symmetry/RESULT.md",
+      "commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+      "bytes": 16145,
+      "sha256": "8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160",
+      "same_bytes_at_checkpoint_base": true
+    },
+    {
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/hourglass-symmetry/verify.py",
+      "commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+      "bytes": 5844,
+      "sha256": "cca73d3360ac6bc0d4fd64aa4ddb922451636446877fade3e180e1c6a4918ea9",
+      "same_bytes_at_checkpoint_base": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "review_scope": "README and adapted producer prose; all publication hashes and three primary script bytes checked",
+  "mathematical_changes": "None relative to final producer prose; approved link/audit-status/CITED-no-local-Lean wording only",
+  "limitations": "External six-colour result remains CITED; no independent Lean/axiom audit claimed by this reviewer",
+  "reviewed_files": {
+    "README.md": "347f6bdef91400a5c762fba1a12938d83ff7caae4575d78ff6084104aef8a2fc",
+    "torus-fano/TORUS_FANO_CAMPEDELLI.md": "43a7f1dd5acc5395f0fad8b79ad203607964bba476139681cf0d661c92b91c2b",
+    "hexagonal/RESULTS.md": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8",
+    "SOURCE_VERIFICATION.json": "b2e9e3c6a3ce7d0c13c058acc4322c92a977485f2763d267cc24dc055af79769"
+  },
+  "primary_scripts_identical_to_sources": true,
+  "all_source_verification_publication_hashes_match": true
+}

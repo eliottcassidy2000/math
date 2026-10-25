@@ -1,0 +1,248 @@
+{
+  "scope": "First checkpoint audited producers and independent audit; exact source and publication bytes retained. Changes are limited to explicit portable links, audit-status provenance, and checksum paths.",
+  "base_commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+  "files": [
+    {
+      "capture_path": "/tmp/session61-hexagonal/RESULTS.md",
+      "path": "hexagonal/RESULTS.md",
+      "source_bytes": 15925,
+      "source_sha256": "16844398802751c8f93118ed5c31c98c3c6d57670bff26059edc019008e04a7e",
+      "publication_bytes": 16035,
+      "publication_sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8",
+      "same_bytes": false
+    },
+    {
+      "capture_path": "/tmp/session61-hexagonal/verify_hexagonal.py",
+      "path": "hexagonal/verify_hexagonal.py",
+      "source_bytes": 8858,
+      "source_sha256": "fca238ecb5dc6436b082ad5f6022a37e066e094af59ecd963f4de95cc4cf2b87",
+      "publication_bytes": 8858,
+      "publication_sha256": "fca238ecb5dc6436b082ad5f6022a37e066e094af59ecd963f4de95cc4cf2b87",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-hexagonal/verification-optimized.json",
+      "path": "hexagonal/verification-optimized.json",
+      "source_bytes": 1921,
+      "source_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "publication_bytes": 1921,
+      "publication_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-hexagonal/verification.json",
+      "path": "hexagonal/verification.json",
+      "source_bytes": 1921,
+      "source_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "publication_bytes": 1921,
+      "publication_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-hexagonal/SHA256SUMS",
+      "path": "hexagonal/SHA256SUMS",
+      "source_bytes": 441,
+      "source_sha256": "5fb99a27f25ed46814a9793b75f6fb8b3db55edb8596a89bb2464981b94a5055",
+      "publication_bytes": 341,
+      "publication_sha256": "3d5175bd626ac80895a3db759c7c554cb498bca8c7cdea214236542d14d0de28",
+      "same_bytes": false
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/AUDIT.md",
+      "path": "audits/lattice/AUDIT.md",
+      "source_bytes": 13870,
+      "source_sha256": "e4b1f93b791ac9a6e7842bb69ac6b3456c7af30448f55089290612b7565cb2c2",
+      "publication_bytes": 13870,
+      "publication_sha256": "e4b1f93b791ac9a6e7842bb69ac6b3456c7af30448f55089290612b7565cb2c2",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/audit.py",
+      "path": "audits/lattice/audit.py",
+      "source_bytes": 8308,
+      "source_sha256": "3b5707dbae9ec5475c3015c2f40a361dc721bd3e509817a1e9f2bccecfc1ab1b",
+      "publication_bytes": 8308,
+      "publication_sha256": "3b5707dbae9ec5475c3015c2f40a361dc721bd3e509817a1e9f2bccecfc1ab1b",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/certificate.json",
+      "path": "audits/lattice/certificate.json",
+      "source_bytes": 6471,
+      "source_sha256": "41b18108e14c5add64085004d5dcca16209d04d006631ff87a05f74ca52bc32f",
+      "publication_bytes": 6471,
+      "publication_sha256": "41b18108e14c5add64085004d5dcca16209d04d006631ff87a05f74ca52bc32f",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/normal.out",
+      "path": "audits/lattice/normal.out",
+      "source_bytes": 629,
+      "source_sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5",
+      "publication_bytes": 629,
+      "publication_sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/optimized.out",
+      "path": "audits/lattice/optimized.out",
+      "source_bytes": 629,
+      "source_sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5",
+      "publication_bytes": 629,
+      "publication_sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/SOURCE_PINS.json",
+      "path": "audits/lattice/SOURCE_PINS.json",
+      "source_bytes": 1585,
+      "source_sha256": "6700747b26c92847b2e85b6586d1b3f3ef29a1b51ebe72c83239562b4f385eac",
+      "publication_bytes": 1585,
+      "publication_sha256": "6700747b26c92847b2e85b6586d1b3f3ef29a1b51ebe72c83239562b4f385eac",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/producer-hexagonal-normal.out",
+      "path": "audits/lattice/producer-hexagonal-normal.out",
+      "source_bytes": 1921,
+      "source_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "publication_bytes": 1921,
+      "publication_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/producer-hexagonal-optimized.out",
+      "path": "audits/lattice/producer-hexagonal-optimized.out",
+      "source_bytes": 1921,
+      "source_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "publication_bytes": 1921,
+      "publication_sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/producer-torus-normal.out",
+      "path": "audits/lattice/producer-torus-normal.out",
+      "source_bytes": 2459,
+      "source_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "publication_bytes": 2459,
+      "publication_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/producer-torus-optimized.out",
+      "path": "audits/lattice/producer-torus-optimized.out",
+      "source_bytes": 2459,
+      "source_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "publication_bytes": 2459,
+      "publication_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-lattice/SHA256SUMS",
+      "path": "audits/lattice/SHA256SUMS",
+      "source_bytes": 855,
+      "source_sha256": "df0394a3d4772a502bbfedcf1c2a521ec627e7f199cd6a83d6bbf061e9b81794",
+      "publication_bytes": 855,
+      "publication_sha256": "df0394a3d4772a502bbfedcf1c2a521ec627e7f199cd6a83d6bbf061e9b81794",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/TORUS_FANO_CAMPEDELLI.md",
+      "path": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "source_bytes": 6442,
+      "source_sha256": "7e2c367bb63ad530ce794dd6ba14fa659fc5c146912953991400c47035ba29dc",
+      "publication_bytes": 6492,
+      "publication_sha256": "43a7f1dd5acc5395f0fad8b79ad203607964bba476139681cf0d661c92b91c2b",
+      "same_bytes": false
+    },
+    {
+      "capture_path": "/tmp/session61-parent/check_torus.py",
+      "path": "torus-fano/check_torus.py",
+      "source_bytes": 5159,
+      "source_sha256": "1b5e9ad5028ab8a0077b7fad912cf472470522721b865a072525f842dfb002ca",
+      "publication_bytes": 5159,
+      "publication_sha256": "1b5e9ad5028ab8a0077b7fad912cf472470522721b865a072525f842dfb002ca",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/normal.json",
+      "path": "torus-fano/normal.json",
+      "source_bytes": 2459,
+      "source_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "publication_bytes": 2459,
+      "publication_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/optimized.json",
+      "path": "torus-fano/optimized.json",
+      "source_bytes": 2459,
+      "source_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "publication_bytes": 2459,
+      "publication_sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/SOURCE_STATUS.md",
+      "path": "SOURCE_STATUS.md",
+      "source_bytes": 2493,
+      "source_sha256": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6",
+      "publication_bytes": 2493,
+      "publication_sha256": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/SOURCE_HASHES.txt",
+      "path": "SOURCE_HASHES.txt",
+      "source_bytes": 222,
+      "source_sha256": "4fe502398fde55c7074c0ac005868b43ed812e9516bc4e58176eaedd640706db",
+      "publication_bytes": 222,
+      "publication_sha256": "4fe502398fde55c7074c0ac005868b43ed812e9516bc4e58176eaedd640706db",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-publication/INHERITED_SOURCE_CHECKS.json",
+      "path": "INHERITED_SOURCE_CHECKS.json",
+      "source_bytes": 1806,
+      "source_sha256": "d4c9ebe7e485d98bdb0ceb5333da8ed33d40b05e6eef9d6a92be55ce20942130",
+      "publication_bytes": 1806,
+      "publication_sha256": "d4c9ebe7e485d98bdb0ceb5333da8ed33d40b05e6eef9d6a92be55ce20942130",
+      "same_bytes": true
+    }
+  ],
+  "adaptations": [
+    {
+      "path": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "old": "independent audit requested. Classical torus/Fano ingredients, new-to-route",
+      "new": "[independent audit passed](../audits/lattice/AUDIT.md). Classical torus/Fano ingredients, new-to-route"
+    },
+    {
+      "path": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "old": "recorded in SOURCE_STATUS.md.",
+      "new": "recorded in [SOURCE_STATUS.md](../SOURCE_STATUS.md)."
+    },
+    {
+      "path": "hexagonal/RESULTS.md",
+      "old": "The torus/Fano/Campedelli continuation is developed in the parent Session61 lane;",
+      "new": "The [torus/Fano/Campedelli continuation](../torus-fano/TORUS_FANO_CAMPEDELLI.md) is developed in a companion note;"
+    },
+    {
+      "path": "hexagonal/RESULTS.md",
+      "old": "treated in the parent's separate torus/Campedelli lane.",
+      "new": "treated in the [torus/Campedelli note](../torus-fano/TORUS_FANO_CAMPEDELLI.md)."
+    },
+    {
+      "path": "hexagonal/RESULTS.md",
+      "old": "The current lower bound for unrestricted HN is sourced and audited separately by the parent.",
+      "new": "The current lower bound for unrestricted HN is [CITED externally](../SOURCE_STATUS.md); no local Lean build or transitive axiom audit is claimed."
+    },
+    {
+      "path": "hexagonal/SHA256SUMS",
+      "change": "Portable relative checksum paths; hashes recomputed only for explicitly adapted publication prose."
+    },
+    {
+      "path": "audits/lattice/SHA256SUMS",
+      "change": "Portable relative checksum paths; hashes recomputed only for explicitly adapted publication prose."
+    }
+  ]
+}

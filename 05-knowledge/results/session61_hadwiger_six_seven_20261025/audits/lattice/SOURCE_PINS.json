@@ -1,0 +1,46 @@
+{
+  "inherited_source_root": "05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines",
+  "files": [
+    {
+      "file": "RESULT.md",
+      "sha256": "eac57a84ee6653ab5bf370e2d8954256d073232c09d60946b3f4abe747b9a314"
+    },
+    {
+      "file": "check.py",
+      "sha256": "49db151e1d7e6247860bb68ced871c30d55fe157eff76742ab0e0c77ea45731e"
+    },
+    {
+      "file": "certificate.json",
+      "sha256": "b2372eed1785ea33367a1580de6be97a501b72f1bd97ad63d1297a824f62674f"
+    }
+  ],
+  "direct_kernel_readback": {
+    "matching_kernels": 4,
+    "all_dependent_crossings_zero": true
+  },
+  "claim": "Surface type and full automorphism group inherited; all torus/combinatorial inputs rederived independently.",
+  "web_source_claims": "No historical naming or novelty claims made by this audit.",
+  "reviewed_producers": [
+    {
+      "source": "/tmp/session61-parent/check_torus.py",
+      "sha256": "1b5e9ad5028ab8a0077b7fad912cf472470522721b865a072525f842dfb002ca"
+    },
+    {
+      "source": "/tmp/session61-parent/TORUS_FANO_CAMPEDELLI.md",
+      "sha256": "7e2c367bb63ad530ce794dd6ba14fa659fc5c146912953991400c47035ba29dc"
+    },
+    {
+      "source": "/tmp/session61-hexagonal/verify_hexagonal.py",
+      "sha256": "fca238ecb5dc6436b082ad5f6022a37e066e094af59ecd963f4de95cc4cf2b87"
+    },
+    {
+      "source": "/tmp/session61-hexagonal/RESULTS.md",
+      "sha256": "16844398802751c8f93118ed5c31c98c3c6d57670bff26059edc019008e04a7e"
+    }
+  ],
+  "producer_replay": {
+    "normal_and_optimized_identical": true,
+    "hexagonal_checks": 857,
+    "torus_checks": 50
+  }
+}

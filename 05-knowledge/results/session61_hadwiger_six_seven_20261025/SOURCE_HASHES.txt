@@ -1,0 +1,2 @@
+607c2601b5ae655c7c116272840e260f71f637aacf611453186e0a1c65111d36  /tmp/session61-parent/sources/hn-six.pdf
+e63688fedef33387f89fec0374dead2c260fad497a9f368e7d1a7be74b531b6b  /tmp/session61-parent/sources/triangles-fano.pdf

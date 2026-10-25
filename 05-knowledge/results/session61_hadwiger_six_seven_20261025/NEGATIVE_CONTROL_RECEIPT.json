@@ -1,0 +1,19 @@
+{
+  "scope": "Deliberate mutant, not a passing checker",
+  "script": "audits/lattice/audit.py",
+  "mutation": "False expected squared cell separation 8/3 in place of 7/3; actual geometry unchanged",
+  "runs": [
+    {
+      "mode": "normal",
+      "returncode": 1,
+      "false_separation_rejected": true,
+      "stderr_sha256": "0c137456a2e3de93d89e5f71cdff262d17595307bc39112f2e1e7d176fbc9a52"
+    },
+    {
+      "mode": "optimized",
+      "returncode": 1,
+      "false_separation_rejected": true,
+      "stderr_sha256": "0c137456a2e3de93d89e5f71cdff262d17595307bc39112f2e1e7d176fbc9a52"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "routes": [
+    {
+      "source": "EXTERNAL_SOURCE_PROVENANCE.md",
+      "target": "SOURCE_STATUS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "hexagonal/RESULTS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "torus-fano/TORUS_FANO_CAMPEDELLI.md"
+    },
+    {
+      "source": "README.md",
+      "target": "audits/lattice/AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "SOURCE_STATUS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "CONCEPT_BOARD.md"
+    },
+    {
+      "source": "README.md",
+      "target": "PUBLICATION_CHECKS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "MANIFEST.json"
+    },
+    {
+      "source": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "target": "../audits/lattice/AUDIT.md"
+    },
+    {
+      "source": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "target": "../SOURCE_STATUS.md"
+    },
+    {
+      "source": "hexagonal/RESULTS.md",
+      "target": "../torus-fano/TORUS_FANO_CAMPEDELLI.md"
+    },
+    {
+      "source": "hexagonal/RESULTS.md",
+      "target": "../torus-fano/TORUS_FANO_CAMPEDELLI.md"
+    },
+    {
+      "source": "hexagonal/RESULTS.md",
+      "target": "../SOURCE_STATUS.md"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "manifest": "hexagonal/SHA256SUMS",
+      "path": "RESULTS.md",
+      "sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8"
+    },
+    {
+      "manifest": "hexagonal/SHA256SUMS",
+      "path": "verify_hexagonal.py",
+      "sha256": "fca238ecb5dc6436b082ad5f6022a37e066e094af59ecd963f4de95cc4cf2b87"
+    },
+    {
+      "manifest": "hexagonal/SHA256SUMS",
+      "path": "verification-optimized.json",
+      "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
+    },
+    {
+      "manifest": "hexagonal/SHA256SUMS",
+      "path": "verification.json",
+      "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "AUDIT.md",
+      "sha256": "e4b1f93b791ac9a6e7842bb69ac6b3456c7af30448f55089290612b7565cb2c2"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "audit.py",
+      "sha256": "3b5707dbae9ec5475c3015c2f40a361dc721bd3e509817a1e9f2bccecfc1ab1b"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "certificate.json",
+      "sha256": "41b18108e14c5add64085004d5dcca16209d04d006631ff87a05f74ca52bc32f"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "normal.out",
+      "sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "optimized.out",
+      "sha256": "9a1b09bb27fda9d89ac573d0383c54a1099aa62281d871f01b0e95a9fbb3f9b5"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "SOURCE_PINS.json",
+      "sha256": "6700747b26c92847b2e85b6586d1b3f3ef29a1b51ebe72c83239562b4f385eac"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "producer-hexagonal-normal.out",
+      "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "producer-hexagonal-optimized.out",
+      "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "producer-torus-normal.out",
+      "sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c"
+    },
+    {
+      "manifest": "audits/lattice/SHA256SUMS",
+      "path": "producer-torus-optimized.out",
+      "sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c"
+    }
+  ]
+}
