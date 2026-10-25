@@ -1,0 +1,1 @@
+{"status": "PASS", "coordinate_counts": [{"n": 2, "C": [0, 0], "frames": 0}, {"n": 3, "C": [0, 0, 0], "frames": 108}, {"n": 3, "C": [0, 0, 1], "frames": 108}, {"n": 4, "C": [0, 0, 0, 0], "frames": 432}, {"n": 4, "C": [0, 0, 1, 1], "frames": 432}], "complete_9_factorial_magic_count": 432, "distinct_paths_last_census": 15552, "path_incidences_last_census": 15552}

@@ -1,0 +1,13 @@
+README.md: OK
+SOURCE_PINS.json: OK
+THEOREM.md: OK
+check-O.log: OK
+check.log: OK
+results.json: OK
+sources/ap-bridge.md: OK
+sources/character-theorem.md: OK
+sources/field_reference.py: OK
+sources/results.json: OK
+sources/witness-2187.json: OK
+sources/witness-729.json: OK
+verify.py: OK

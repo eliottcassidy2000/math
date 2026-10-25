@@ -1,0 +1,12 @@
+[
+  {
+    "file": "sources/ap-frame-results.json",
+    "origin": "/tmp/session57-affine-frame-counts/results.json",
+    "sha256": "96fbe3dac97f405dc4e6a68b30a15044674dee651ca45ba5451027eb6ed04313"
+  },
+  {
+    "file": "sources/ap-frame-verifier.py",
+    "origin": "/tmp/session57-affine-frame-counts/verify.py",
+    "sha256": "8dfc62ac7500129d83e8ca754df06b90f2e5ef897ddb7d38753c12e8b9b5a9c9"
+  }
+]

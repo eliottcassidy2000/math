@@ -1,6 +1,6 @@
 # Session57: square-sum paths and square-magic incidence
 
-25 October 2026. Third checkpoint of an ongoing research session, prepared for independent publication review. Earlier packets are retained. The new affine-frame and prime-plane counting work is reserved for a later checkpoint. No nondegenerate integer magic square of squares, global impossibility theorem, or external novelty claim is made.
+25 October 2026. Fourth research checkpoint, prepared for independent publication review. Earlier packets are retained. The finite-field frame classification now includes all unique-sum frames and its odd-prime extension. Publication status is separate from mathematical verification; this document does not claim a remote commit has completed. No nondegenerate integer magic square of squares, global impossibility theorem, or external novelty claim is made.
 
 ## Main conclusion
 
@@ -28,8 +28,17 @@ Read [SYNTHESIS.md](SYNTHESIS.md) for the hypotheses, proof connections, attribu
 - [Congruent-curve bridge](congruent-curve/PROOF.md) and [audit](audit-quartic-elliptic/audit.md): a guarded AP of three centers in one fixed-gap square set is equivalent to the nine-square condition, and to an AP in eligible doubled elliptic x-coordinates. Common scaling multiplies area and gaps by L², not by 1. The integer-gap exclusion d≤20000 is bounded, not global.
 - [Exact SVG diagrams](diagrams/README.md): [edge-label repair](diagrams/edge-label-repair.svg) and [square totals are not magic](diagrams/square-totals-not-magic.svg).
 
+## Complete fixed-plane frame classification
+
+- [All characteristic-three frames](affine-bare-frame-counts/THEOREM.md) and [independent audit](audit-affine-frames/AUDIT.md): 30(q−9) unordered disjoint unique-sum frames, split into 6(q−9) AP/AP and 24(q−9) mixed frames. Every frame has an AP part. Exactly 1080(q−9) distinct unoriented six-vertex paths, and equally many unordered two-path covers, belong to this prescribed-plane subclass.
+- [Odd-prime extension](prime-plane-frames/prime_plane_frames.md) and [independent audit](audit-prime-frames/AUDIT.md): the cyclotomic projection lemma plus the classical Rédei direction bound force a line factor. With C_p=(p+1)p^(p−1)−p(p+1)/2, there are C_p(q−p²) disjoint frames and (p!)²C_p(q−p²) distinct cross-skeleton Hamilton paths.
+- Only 1/(2p^(p−2)−1) of the frame classes have two line factors: 1/5 at p=3 and 1/249 at p=5. Two paths cannot cover p² distinct edge labels for any prime p≥5. The characteristic-three nine-label certificate does not generalize unchanged.
+- The original AP-only prose incorrectly suggested repeated path realizations across frames. The [corrected publication edition](audit-affine-frames/THEOREM.md) removes that claim; [correction receipts](audit-affine-frames/PUBLICATION_CORRECTIONS.json) distinguish original hashes from the corrected edition. A path's alternating bipartition recovers its unique frame.
+
 ## Verification and scope
 
 The packets pair proof arguments with exact finite or symbolic certificates. Some producer scripts use Python assertions and must be validated in ordinary mode; running them with -O is not effective verification. Their independent exception-safe audits retain checks in both modes. The quartic/elliptic transformed scripts are robustness checks, supplemented by independent symbolic derivations and source comparison, not independent implementations of every producer calculation.
 
 Source attribution and version/hash receipts are retained. Full downloaded articles, preview PNGs, compiled search executables, caches, and rendering logs are excluded. Historical manifests can mention such excluded audit inputs; that is provenance, not publication of those inputs. Earlier Session55 modular results retain their stated scope; finite fields are not integer lifts, and extension-field encodings are not arithmetic modulo q.
+
+Root navigation is checked against the combined publication map. Archived source snapshots retain links in their original context; those historical relative links are not all local navigation links in this collection.

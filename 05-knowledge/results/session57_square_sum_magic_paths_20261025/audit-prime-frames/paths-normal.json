@@ -1,0 +1,14 @@
+{
+  "3": {
+    "line_fraction_denominator": 5,
+    "plane_labels": 9,
+    "two_paths_maximum_labels": 10,
+    "unoriented_paths": 36
+  },
+  "5": {
+    "line_fraction_denominator": 249,
+    "plane_labels": 25,
+    "two_paths_maximum_labels": 18,
+    "unoriented_paths": 14400
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "changes": [
+    {
+      "file": "THEOREM.md",
+      "original_sha256": "887fb85d1f19dd910efbf68bd9ee6c0f96f4499dd94fb7df8b4b30bf71619a6b",
+      "publication_sha256": "35b32dcd9eaec25101a0ccade098b595f755cdce318936da1cc68449d3cd301a",
+      "purpose": "Explicit audit-required correction and historical-snapshot labeling; no numerical theorem or code changes."
+    },
+    {
+      "file": "README.md",
+      "original_sha256": "eb8a6ab85cc3eb7ba384129a443097d387b478148556484b8016707135c05ef8",
+      "publication_sha256": "d03127ceaf27fa0e737486f8e5152e0e888273efba608415d41caa24f73082c9",
+      "purpose": "Explicit audit-required correction and historical-snapshot labeling; no numerical theorem or code changes."
+    }
+  ],
+  "historical_manifest": "SOURCE_SHA256SUMS.txt",
+  "original_sources_retained_unmodified": true
+}

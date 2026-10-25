@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "local_Hamilton_paths": 36,
+  "local_unordered_two_path_covers": 36,
+  "rows": [
+    {
+      "q": 81,
+      "zero_in_plane": true,
+      "all_frames_before_disjointness": 2430,
+      "all_disjoint_frames": 2160,
+      "disjoint_AP_AP_frames": 432,
+      "disjoint_AP_nonAP_frames": 1728,
+      "distinct_unoriented_six_vertex_paths": 77760,
+      "distinct_AP_AP_paths": 15552,
+      "distinct_unordered_two_path_covers": 77760,
+      "brute": {
+        "ambient_triples_B_examined": 85320,
+        "candidate_ordered_triple_pairs_examined": 63504,
+        "all_frames": 2430,
+        "gauge_orbits": 30,
+        "orbit_size": 81,
+        "bad_per_orbit": 9,
+        "unique_six_vertex_paths": 77760,
+        "unique_AP_AP_six_vertex_paths": 15552
+      }
+    },
+    {
+      "q": 729,
+      "zero_in_plane": true,
+      "all_frames_before_disjointness": 21870,
+      "all_disjoint_frames": 21600,
+      "disjoint_AP_AP_frames": 4320,
+      "disjoint_AP_nonAP_frames": 17280,
+      "distinct_unoriented_six_vertex_paths": 777600,
+      "distinct_AP_AP_paths": 155520,
+      "distinct_unordered_two_path_covers": 777600,
+      "brute": null
+    },
+    {
+      "q": 2187,
+      "zero_in_plane": false,
+      "all_frames_before_disjointness": 65610,
+      "all_disjoint_frames": 65340,
+      "disjoint_AP_AP_frames": 13068,
+      "disjoint_AP_nonAP_frames": 52272,
+      "distinct_unoriented_six_vertex_paths": 2352240,
+      "distinct_AP_AP_paths": 470448,
+      "distinct_unordered_two_path_covers": 2352240,
+      "brute": null
+    }
+  ]
+}

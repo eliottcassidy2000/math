@@ -1,0 +1,405 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "q": 81,
+      "modulus_low_first": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "square_plane": [
+        0,
+        1,
+        2,
+        15,
+        16,
+        17,
+        21,
+        22,
+        23
+      ],
+      "C": 1,
+      "directions": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          15,
+          21
+        ],
+        [
+          0,
+          16,
+          23
+        ],
+        [
+          0,
+          17,
+          22
+        ]
+      ],
+      "bad_gauges_by_direction_pair": [
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ],
+        [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17,
+          21,
+          22,
+          23
+        ]
+      ],
+      "unordered_disjoint_AP_frames": 432,
+      "ordered_and_internally_ordered_AP_frames": 31104,
+      "magic_layouts": 432,
+      "cross_skeleton_HP_occurrences": 15552,
+      "bare_non_AP_witness": {
+        "B": [
+          3,
+          4,
+          5
+        ],
+        "D": [
+          7,
+          13,
+          20
+        ]
+      },
+      "independent_brute": {
+        "ambient_lines": 1080,
+        "unordered_line_pairs_examined": 582660,
+        "matching_disjoint_frames": 432,
+        "fully_ordered_frames_checked": 31104,
+        "gauge_fibers_per_layout": 72
+      }
+    },
+    {
+      "q": 729,
+      "modulus_low_first": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "square_plane": [
+        0,
+        1,
+        2,
+        42,
+        43,
+        44,
+        75,
+        76,
+        77
+      ],
+      "C": 0,
+      "directions": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          42,
+          75
+        ],
+        [
+          0,
+          43,
+          77
+        ],
+        [
+          0,
+          44,
+          76
+        ]
+      ],
+      "bad_gauges_by_direction_pair": [
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ],
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ],
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ],
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ],
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ],
+        [
+          0,
+          1,
+          2,
+          42,
+          43,
+          44,
+          75,
+          76,
+          77
+        ]
+      ],
+      "unordered_disjoint_AP_frames": 4320,
+      "ordered_and_internally_ordered_AP_frames": 311040,
+      "magic_layouts": 432,
+      "cross_skeleton_HP_occurrences": 155520,
+      "bare_non_AP_witness": {
+        "B": [
+          3,
+          4,
+          5
+        ],
+        "D": [
+          6,
+          39,
+          73
+        ]
+      },
+      "independent_brute": null
+    },
+    {
+      "q": 2187,
+      "modulus_low_first": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "square_plane": [
+        1,
+        5,
+        6,
+        37,
+        41,
+        42,
+        73,
+        77,
+        78
+      ],
+      "C": 1,
+      "directions": [
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          36,
+          72
+        ],
+        [
+          0,
+          40,
+          80
+        ],
+        [
+          0,
+          44,
+          76
+        ]
+      ],
+      "bad_gauges_by_direction_pair": [
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ],
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ],
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ],
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ],
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ],
+        [
+          2,
+          3,
+          7,
+          38,
+          39,
+          43,
+          74,
+          75,
+          79
+        ]
+      ],
+      "unordered_disjoint_AP_frames": 13068,
+      "ordered_and_internally_ordered_AP_frames": 940896,
+      "magic_layouts": 432,
+      "cross_skeleton_HP_occurrences": 470448,
+      "bare_non_AP_witness": {
+        "B": [
+          0,
+          4,
+          8
+        ],
+        "D": [
+          1,
+          37,
+          77
+        ]
+      },
+      "independent_brute": null
+    }
+  ],
+  "unoriented_HP_per_cross_skeleton": 36,
+  "scope": "AP-only frames with fixed nine-point cross-sum plane; paths are occurrence counts, not deduplicated ambient paths"
+}

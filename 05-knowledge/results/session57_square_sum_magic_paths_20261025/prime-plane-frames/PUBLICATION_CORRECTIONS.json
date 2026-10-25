@@ -1,0 +1,9 @@
+{
+  "file": "prime_plane_frames.md",
+  "original_sha256": "b2f0f2b152c8f762dc8020f8e6dbd0f6de4144d5e1a168ce1be0b8b16e46898e",
+  "publication_sha256": "279fffaf23ceffed15ca39279e66103d293d668f24893706f7a84c08330e5f2f",
+  "purpose": "Insert an explicit multiplication sign to prevent a mathematical bracket followed by parentheses from being rendered as a Markdown link. No mathematical change.",
+  "old_expression": "(p!)^2 [(p+1)p^(p-1)-p(p+1)](q-p^2)",
+  "new_expression": "(p!)^2 [(p+1)p^(p-1)-p(p+1)] * (q-p^2)",
+  "historical_manifest": "SOURCE_SHA256SUMS.txt"
+}

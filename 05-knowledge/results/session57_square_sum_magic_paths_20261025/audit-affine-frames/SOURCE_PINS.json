@@ -1,0 +1,32 @@
+[
+  {
+    "file": "sources/results.json",
+    "origin": "/tmp/session57-character-graphs/results.json",
+    "sha256": "9a5682875e4636295838a68a90a791e82131c60821fdbc6a996feb6429a52637"
+  },
+  {
+    "file": "sources/witness-729.json",
+    "origin": "/tmp/session57-character-graphs/witness-729.json",
+    "sha256": "e7b6bdad84556fad2352ea9d792bf1d398f1cdf78d832a9c0091a0f4f353f69a"
+  },
+  {
+    "file": "sources/witness-2187.json",
+    "origin": "/tmp/session57-character-graphs/witness-2187.json",
+    "sha256": "d393c802709e1eaf0bf59ea9322109ba3458dc9732e89a6c64b35550d81e051c"
+  },
+  {
+    "file": "sources/field_reference.py",
+    "origin": "/tmp/session57-character-graphs/sources/verify.py",
+    "sha256": "b35177b56920941f0e08e46cdb55df86cc03d50bc9e42ab61525c27b9b1f88f2"
+  },
+  {
+    "file": "sources/character-theorem.md",
+    "origin": "/tmp/session57-character-graphs/THEOREM.md",
+    "sha256": "5d18fa6659d9878df02b3487d48d31ca5a31ec6796da75570133888ab141153a"
+  },
+  {
+    "file": "sources/ap-bridge.md",
+    "origin": "/tmp/session57-ap-biclique-bridge/REPORT.md",
+    "sha256": "7fca97fea71296b968103c2136f20f6f776c8165cc0a2a2de99056fcab1f27db"
+  }
+]

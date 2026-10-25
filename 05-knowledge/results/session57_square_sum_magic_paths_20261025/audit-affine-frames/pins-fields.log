@@ -1,0 +1,4 @@
+PASS irreducible 81 [1, 0, 1, 1, 1]
+PASS irreducible 729 [1, 0, 0, 0, 1, 1, 1]
+PASS irreducible 2187 [1, 0, 0, 0, 0, 1, 2, 1]
+PASS source hashes and original source matches

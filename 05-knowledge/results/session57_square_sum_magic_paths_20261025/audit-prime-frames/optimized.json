@@ -1,0 +1,40 @@
+{
+  "direction_census": {
+    "3": {
+      "exact_fourier_tests": 336,
+      "histogram": {
+        "1": 12,
+        "3": 72
+      }
+    },
+    "5": {
+      "exact_fourier_tests": 318780,
+      "histogram": {
+        "1": 30,
+        "4": 1500,
+        "5": 15600,
+        "6": 36000
+      }
+    }
+  },
+  "frame_and_gauge_census": {
+    "3": {
+      "bad_gauge_histogram_n3": {
+        "9": 30
+      },
+      "both_line_duplicates": 54,
+      "frames_in_plane": 270,
+      "gauge_orbits": 30,
+      "predicted_disjoint_n3": 540
+    },
+    "5": {
+      "bad_gauge_histogram_n3": {
+        "25": 3735
+      },
+      "both_line_duplicates": 375,
+      "frames_in_plane": 93375,
+      "gauge_orbits": 3735,
+      "predicted_disjoint_n3": 373500
+    }
+  }
+}

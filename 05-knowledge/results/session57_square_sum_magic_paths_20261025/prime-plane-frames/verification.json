@@ -1,0 +1,89 @@
+{
+  "direction_census": {
+    "2": {
+      "1": 6
+    },
+    "3": {
+      "1": 12,
+      "3": 72
+    },
+    "5": {
+      "1": 30,
+      "4": 1500,
+      "5": 15600,
+      "6": 36000
+    }
+  },
+  "frame_census": [
+    {
+      "p": 2,
+      "n": 2,
+      "C": [
+        0,
+        0
+      ],
+      "unordered_frames": 12,
+      "disjoint": 0,
+      "both_line": 12
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "C": [
+        0,
+        0,
+        0
+      ],
+      "unordered_frames": 24,
+      "disjoint": 0,
+      "both_line": 24
+    },
+    {
+      "p": 2,
+      "n": 3,
+      "C": [
+        0,
+        0,
+        1
+      ],
+      "unordered_frames": 24,
+      "disjoint": 24,
+      "both_line": 24
+    },
+    {
+      "p": 3,
+      "n": 2,
+      "C": [
+        0,
+        0
+      ],
+      "unordered_frames": 270,
+      "disjoint": 0,
+      "both_line": 54
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "C": [
+        0,
+        0,
+        0
+      ],
+      "unordered_frames": 810,
+      "disjoint": 540,
+      "both_line": 162
+    },
+    {
+      "p": 3,
+      "n": 3,
+      "C": [
+        0,
+        0,
+        1
+      ],
+      "unordered_frames": 810,
+      "disjoint": 540,
+      "both_line": 162
+    }
+  ]
+}

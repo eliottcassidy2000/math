@@ -61,16 +61,48 @@ For each fixed positive integer gap, the integer centers are exactly c=r²+s² s
 
 The triangle/curve correspondence, duplication formula, and magic-square connection are classical or recovered from earlier repository work. The session contribution here is a checked, guard-preserving synthesis and bounded certificates, not a priority claim for that connection.
 
-## 7. Active frontier: affine frames and prime-plane counts
+## 7. From the AP subclass to every fixed-plane frame
 
-Further work studies how many disjoint additive frames realize one prescribed finite-field square plane, and whether this extends from characteristic three to prime-sized planes. Those producer packets and their evolving audits are deliberately reserved for a later checkpoint. This checkpoint makes no additional affine-frame enumeration or general-prime theorem claim. The distinction between AP parts, arbitrary parts, path incidences, and distinct ambient paths must be proved before identifying their counts.
+Let A=C+U be a fixed nine-point affine F3-plane. A frame is an unordered pair {B,D} of three-element sets with the addition map B×D→A bijective. The [complete classification](affine-bare-frame-counts/THEOREM.md) now answers the earlier AP-only counting question.
 
-## 8. Productive follow-on questions, not completed results
+After translation, differences of both factors lie in U. Unique addition means (B−B)∩(D−D)={0}. A noncollinear triple determines six of U's eight nonzero vectors; its complement is a punctured line. Therefore the other factor must be a full affine line. Both factors cannot be non-AP.
+
+Counting a distinguished AP part gives 36q presentations: four directions, q/3 cosets, and 27 transversals of the three parallel target lines. The AP/AP presentations are counted twice on forgetting the distinguished part; mixed ones once. Thus there are 30q unordered frames, split as 6q AP/AP and 24q mixed. A gauge class has q distinct members and exactly nine with overlapping parts, yielding 30(q−9) disjoint frames. The AP/AP fraction is 1/5; among disjoint frames this fraction requires q>9.
+
+Each K3,3 has 36 unoriented Hamilton paths. A six-vertex path recovers the unordered alternating bipartition and hence the frame, so these path counts are injective across frames. Consequently there are exactly 1080(q−9) distinct paths in this subclass, not merely incidences. Exactly 36 unordered path pairs cover a K3,3, each sharing one edge; the connected union recovers the frame. Hence the same total counts unordered two-path covers. These are not Hamilton paths of the full q-vertex graph or a census of all ambient paths.
+
+The [independent audit](audit-affine-frames/AUDIT.md) supplies exhaustive triple and path checks, a 9! layout census, field irreducibility checks, and explicit two-path enumeration. F81 gives 2160 disjoint frames and 77760 paths; F729 and F2187 give 21600 and 65340 frames. Both the F81 and F729 planes contain zero; the F2187 witness avoids it. A graph interpretation requires the appropriate square convention. The [AP-only corrected edition](audit-affine-frames/THEOREM.md) and [preservation receipt](audit-affine-frames/PUBLICATION_CORRECTIONS.json) explicitly repair the former false suggestion of repeated path realizations. Numerical AP counts are unchanged.
+
+## 8. Why the all-frame classification extends to odd primes
+
+Let p be an odd prime, q=p^n with n≥2, and U a two-dimensional vector space over F_p inside the additive group of F_q. For one fixed A=C+U, take p-point parts B,D whose p² cross sums give A exactly once. This is an additive factorization theorem before imposing any square or graph condition.
+
+The [prime-plane theorem](prime-plane-frames/prime_plane_frames.md) uses a necessary correction to the naive difference argument: for p>3, the presence of v in a difference set does not imply that every nonzero scalar multiple of v is present. Disjoint difference sets alone do not justify disjoint direction sets by that shortcut.
+
+Instead apply a nonzero linear functional ℓ:U→F_p and a primitive pth root ζ. Unique addition makes the product of the two character sums zero. If Σ_(s∈S) ζ^ℓ(s)=0 for a p-element factor S, its projection-count polynomial has degree at most p−1 and vanishes at ζ. Divisibility by Φ_p=1+T+⋯+T^(p−1), together with total count p, forces every coefficient to equal 1. Thus one factor projects bijectively under ℓ. For every direction ker ℓ, at least one factor avoids that direction: their determined direction sets are disjoint.
+
+The classical Rédei–Megyesi bound says a noncollinear p-point subset determines at least (p+3)/2 directions. Two noncollinear factors would therefore require at least p+3 disjoint directions in a plane with only p+1, impossible. One factor must be an affine line; the other is a transversal. The direction bound is an external classical input, with Somlai's modern proof cited in the packet. The Fourier/cyclotomic argument and counting synthesis are verified session derivations, not a claim of priority for the underlying factorization phenomenon or direction theorem.
+
+Put C_p=(p+1)p^(p−1)−p(p+1)/2. Counting line-first presentations and correcting the double count of two-line frames gives C_p q unordered frames: p(p+1)q/2 have two line factors, and the rest exactly one. Each gauge class is free of size q. Its p² distinct cross differences give exactly p² forbidden gauges, since 2 is invertible. Hence there are C_p(q−p²) disjoint frames. Gauge equivalence of unordered pairs is intrinsic; a translation action requires a consistent orientation and must not silently depend on an arbitrary order.
+
+The line/line class fraction is 1/(2p^(p−2)−1), giving 1/5 at p=3 and 1/249 at p=5. This is also the fraction among disjoint frames when q>p²; it is undefined there when q=p² because none are disjoint. In characteristic two the formula for disjointness fails: all 3q frames are disjoint when 0∉A, and none when 0∈A. No extension to nonprime subfield orders is claimed.
+
+A K_(p,p) cross skeleton has (p!)² unoriented Hamilton paths, with alternating bipartition again ensuring injectivity across frames. Thus the exact prescribed-plane path subclass has (p!)²C_p(q−p²) paths. To interpret them inside a square-sum graph, separately require every value of A to meet its square convention. Neither inducedness nor vertex-square status follows from the additive theorem.
+
+An elementary realization removes the square-plane hypothesis for one infinite family of zero-allowed examples: for every odd prime p, take q=p⁴ and U=F_(p²) as its subfield. Every nonzero u∈U satisfies u^((p⁴−1)/2)=(u^(p²−1))^((p²+1)/2)=1, so is a square in F_q. Thus A=U is a square-valued plane, yielding exactly C_p(p⁴−p²) disjoint square-sum K_(p,p) carriers with this cross-sum set. This is a classical subfield fact combined with the frame count, not a new finite-field existence breakthrough. Zero occurs in A and its edge label requires the zero-allowed convention. Carrier vertices need not be squares; nothing here lifts to integers.
+
+A companion construction avoids zero: take q=p⁶, choose a two-dimensional F_p-subspace U of F_(p³), and C∈F_(p³)\U. Then A=C+U excludes zero and lies in the quadratic-extension square subgroup, since each nonzero u∈F_(p³) has u^((p⁶−1)/2)=(u^(p³−1))^((p³+1)/2)=1. The same theorem gives C_p(p⁶−p²) disjoint carriers with only nonzero square sums for every odd p. It still asserts neither inducedness nor square-valued vertices nor integer lifting.
+
+Two Hamilton paths use at most 4p−2 edges, fewer than p² for p≥5. They therefore cannot cover all p² distinct cross-edge labels. The positive nine-label two-path result is genuinely small-size; it is not a general p-by-p magic-array construction.
+
+Finally, affine parameterizations of a p-point line form AGL(1,p), of order p(p−1) and index (p−2)! in S_p. At p=3 this is all S3, explaining why all 72 ordered presentations of an unordered two-line frame are affine. At p=5 just 20 of the 120 single-line orders are affine. These are cyclic field parameterizations, not increasing real AP orders, and the observation claims no further representation-theoretic classification.
+
+## 9. Productive follow-on questions, not completed results
 
 1. Can a different published bare family meet the full decoration and distinctness locus? The Lagrange exclusions explain why repeating its original-row search cannot do so; they do not settle other families.
 2. Can closure containers and label-preserving divisor filters improve the K4,4 minimum interval? Inspect four-subsets of closures rather than requiring the whole closure to have the decoration. Do not report the current upper endpoint as minimal.
 3. Can the fixed-curve doubled-x AP constraint be attacked directly, deduplicating centers and retaining a common scaling? More isolated triangles or group progressions are insufficient.
 4. What rational-point information is available on the nondegenerate decorated surface beyond ambient dimension and bare points? A resolution claim about X44 needs actual discrepancy analysis, not its dualizing twist alone.
-5. Can the finite-field frame count be refined beyond AP parts, or compared with actual ambient path counts? Specify what is counted and avoid overcounting representations.
+5. The prescribed-plane frame classification and its distinct-path count are now proved above. What remains beyond this scope is a census of all ambient paths or frames with other cross-sum sets. Do not mistake the exact subclass count for that broader enumeration.
 
 These are follow-on questions arising from the verified interfaces, not newly proved hypotheses. The session derives exact maps, counts, family-specific obstructions, repairs, and bounded controls. None resolves the nondegenerate integer magic-square-of-squares existence problem.
