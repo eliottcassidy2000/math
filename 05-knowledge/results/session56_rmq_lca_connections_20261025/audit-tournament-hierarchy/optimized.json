@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "exhaustive": [
+    {
+      "n": 1,
+      "tournaments": 1,
+      "strongly_connected": 1,
+      "prime": 0
+    },
+    {
+      "n": 2,
+      "tournaments": 2,
+      "strongly_connected": 0,
+      "prime": 0
+    },
+    {
+      "n": 3,
+      "tournaments": 8,
+      "strongly_connected": 2,
+      "prime": 2
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "strongly_connected": 24,
+      "prime": 0
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "strongly_connected": 544,
+      "prime": 264
+    }
+  ],
+  "source_pins": {
+    "check.py": "4118cf82b1079945a7261bdd7f4ca1715be9ae575b28dff08c0b1e150291e1b2",
+    "certificate.json": "2077843a874bfe2629e6f5f502080691321a2da7a626a5afc2a4a3f4728a024b",
+    "REPORT.md": "80772c7ab31a3ebabc11da9f3d9531afbcda83fa14bdc525627d46eb7a49f3e0",
+    "source-hashes.txt": "b213ff1d21b8dae9d06d0fb18973f72f2a20bd405da77573914b3e25667829da",
+    "inputs/THM-1862-order-join-reduction-principle.md": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e",
+    "inputs/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106",
+    "inputs/THM-2183-order-join-is-an-exact-tournament-metric-product.md": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc",
+    "inputs/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md": "60ddaa62c9d6e594b994e2e9c7ab2600edf9c763146c950d5ebf009ab025a006",
+    "inputs/THM-3121-path-cover-walk-content-substitution-kernel.md": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+  },
+  "prime_star_H": [
+    9,
+    13,
+    15
+  ],
+  "fixed_Hamilton_order": [
+    {
+      "n": 1,
+      "universe": 1,
+      "H_separating_collisions": 0
+    },
+    {
+      "n": 2,
+      "universe": 1,
+      "H_separating_collisions": 0
+    },
+    {
+      "n": 3,
+      "universe": 2,
+      "H_separating_collisions": 0
+    },
+    {
+      "n": 4,
+      "universe": 8,
+      "H_separating_collisions": 0
+    },
+    {
+      "n": 5,
+      "universe": 64,
+      "H_separating_collisions": 8
+    }
+  ],
+  "notes": [
+    "No asserts: same validations under python -O.",
+    "Independent sparse-table RMQ and binary-lifting child navigation verified; producer uses linear scans.",
+    "Source hashes verified; no all-size enumeration or novel complexity claim."
+  ]
+}

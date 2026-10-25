@@ -1,0 +1,10 @@
+{
+  "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+  "verified": {
+    "THM-1862-order-join-reduction-principle.md": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e",
+    "THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106",
+    "THM-3121-path-cover-walk-content-substitution-kernel.md": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+    "THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md": "60ddaa62c9d6e594b994e2e9c7ab2600edf9c763146c950d5ebf009ab025a006",
+    "THM-2183-order-join-is-an-exact-tournament-metric-product.md": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc"
+  }
+}

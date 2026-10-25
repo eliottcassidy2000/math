@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "explicit_exception_gates": true,
+  "intervals": 31,
+  "distinct_moduli": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    15,
+    24,
+    30,
+    35,
+    36,
+    45,
+    56,
+    105,
+    168,
+    180,
+    210
+  ],
+  "full_global_witness_count": 134,
+  "noncommutative_queries": 88560,
+  "source_sha256": "fff525318dfc1e181ce38bb6908273416be0650975eaa5546a7fa50818a5b5fb",
+  "certificate_sha256": "56708738cce006e6a4eccc0846d211a4e4f8488e87db034f39ccd33211188597",
+  "hostile_true_count": 112,
+  "hostile_overlap_count": 784
+}

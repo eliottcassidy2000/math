@@ -1,0 +1,12 @@
+{
+  "families_on_three_bits": 256,
+  "integer_histograms_on_two_bits": 81,
+  "antichain_associativity_triples": 8000,
+  "compression_pairs": 65536,
+  "ordered_interval_queries": 45760,
+  "crt_interval_queries": 31,
+  "duplicate_identity_rejected": true,
+  "fixed_mask_queries": 28,
+  "overlap_query_identity_rejected": true
+}
+PASS

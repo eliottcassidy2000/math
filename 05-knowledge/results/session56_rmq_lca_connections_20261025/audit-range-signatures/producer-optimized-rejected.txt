@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/session56-overlap-signatures/verify.py", line 158, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/session56-overlap-signatures/verify.py", line 92, in main
+    raise RuntimeError('verification requires assertions; run without -O')
+RuntimeError: verification requires assertions; run without -O

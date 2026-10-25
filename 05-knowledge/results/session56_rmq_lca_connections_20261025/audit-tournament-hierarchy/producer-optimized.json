@@ -1,0 +1,404 @@
+{
+  "universe": "All labelled tournaments n=1..5; lexicographic pair bit=1 means lower vertex beats higher.",
+  "checks": [
+    {
+      "n": 1,
+      "labelled_count": 1,
+      "passed": true
+    },
+    {
+      "n": 2,
+      "labelled_count": 2,
+      "passed": true
+    },
+    {
+      "n": 3,
+      "labelled_count": 8,
+      "passed": true
+    },
+    {
+      "n": 4,
+      "labelled_count": 64,
+      "passed": true
+    },
+    {
+      "n": 5,
+      "labelled_count": 1024,
+      "passed": true
+    }
+  ],
+  "prime_star_H_examples": [
+    {
+      "mask": 10,
+      "H": 9,
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "strong_modules": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "mask": 41,
+      "H": 13,
+      "matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "strong_modules": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "mask": 76,
+      "H": 15,
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "strong_modules": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ]
+    }
+  ],
+  "cut_flux_search": [
+    {
+      "n": 1,
+      "possible_tournaments": 1,
+      "completed": true,
+      "collision": null
+    },
+    {
+      "n": 2,
+      "possible_tournaments": 1,
+      "completed": true,
+      "collision": null
+    },
+    {
+      "n": 3,
+      "possible_tournaments": 2,
+      "completed": true,
+      "collision": null
+    },
+    {
+      "n": 4,
+      "possible_tournaments": 8,
+      "completed": true,
+      "collision": null
+    },
+    {
+      "n": 5,
+      "possible_tournaments": 64,
+      "completed": false,
+      "collision": {
+        "n": 5,
+        "flux": [
+          2,
+          2,
+          0,
+          0
+        ],
+        "first": {
+          "free_mask": 13,
+          "H": 11,
+          "matrix": [
+            [
+              0,
+              1,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              0,
+              0
+            ]
+          ],
+          "ordered_scores": [
+            3,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        "second": {
+          "free_mask": 19,
+          "H": 13,
+          "matrix": [
+            [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          "ordered_scores": [
+            3,
+            2,
+            1,
+            2,
+            2
+          ]
+        },
+        "leftmost_min_cartesian_tree": [
+          2,
+          [
+            0,
+            null,
+            [
+              1,
+              null,
+              null
+            ]
+          ],
+          [
+            3,
+            null,
+            null
+          ]
+        ],
+        "HP_independent_permutation_check": true
+      }
+    }
+  ],
+  "sequence_inverse": {
+    "tournament_counts": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12,
+      56,
+      456
+    ],
+    "strong_counts": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      6,
+      35,
+      353
+    ],
+    "status": "Arithmetic check of stated known inputs, not independent tournament census past n=5"
+  }
+}
