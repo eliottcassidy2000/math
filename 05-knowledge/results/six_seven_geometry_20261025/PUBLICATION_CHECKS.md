@@ -3,7 +3,10 @@
 2026-10-25. The mathematical packet was produced in an isolated current
 worktree; unrelated shared-checkout files were not modified. The starting
 revision was82691d391b, and concurrent mainline checkpoint f7041582a8 was
-read as incoming mathematical evidence. Its overlapping results are cited.
+read as incoming mathematical evidence. Final checkpoints `c24c123d86` and
+`a144b255fc` were then integrated from a clean tree. Their stronger Fano
+classification and exact Picard ranks supersede the earlier open entries in
+our synthesis; overlapping results are cited as recovered.
 The containing Git commit and final remote ancestry check establish publication;
 this prose does not certify a push that has not happened.
 
@@ -71,6 +74,8 @@ shortening redundant displayed link labels in START-HERE, retaining their
 destinations and all mathematical claims, repaired that gate. Existing
 freshness/warning banners remain at their original positions.
 
-The final packet leaves quotient isomorphism classification, nonfree minimal
-models, integral saturation, and arithmetic lifting open. It supplies no
+The final packet leaves properly elliptic quotient isomorphism classification,
+integral saturation and arithmetic lifting open. The incoming audited work
+closes the free quotient classification, nonfree minimal models and hourglass
+Picard rank; those results are linked explicitly. This packet supplies no
 resolution of LRC(14) or the integer-square existence questions.

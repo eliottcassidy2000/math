@@ -23,6 +23,15 @@ characters and K3 deletion/character correspondences in
 `session60_six_seven_geometry_20261025/deck-k3/`; those are concurrent
 shared mechanisms, not novelty claims of this code packet.
 
+**Final incoming update:** checkpoints `c24c123d86` and `a144b255fc` arrived
+before our close-out. Their independently audited
+[seven-line theorem](../../session60_six_seven_geometry_20261025/seven-lines/RESULT.md)
+also proves the16/12/2 census and goes further: the minimal models are
+Campedelli, properly elliptic, and Enriques, respectively. The16 free choices
+give exactly two complex isomorphism classes. These are now recovered results;
+the general5596-system lemma and the shared regular-conic-action criterion
+remain additional connections developed here.
+
 The canonical hostile is a concurrent triple whose three binary labels sum
 to zero. The corrected near miss is treating all quotient singularities as
 crepant: the bad triple gives `1/4(1,1)`, not `A1`. The least-used sidecar is
@@ -168,7 +177,11 @@ action on `Y` fixes the relevant `(-2)`-curves pointwise, with quotient
 normal bundle `O(-4)`. This identifies `Y/S` with the smooth resolution
 locally. Formula (2) does *not* classify the minimal model or Kodaira
 dimension when `r>0`. An ample canonical class of the singular quotient
-does not settle those questions through noncanonical singularities.
+does not settle those questions through noncanonical singularities. The
+incoming theorem cited above supplies the missing geometry: an explicit
+genus-one pencil for `r=1`, and four (-1)-curve contractions to an Enriques
+surface for `r=3`. These classifications are inherited, not consequences
+of formula (2) alone.
 
 ## 4. Every arrangement in the stated seven-root family has free choices
 
@@ -283,9 +296,11 @@ nonzero vectors. Our permutation has type `1^1 2^3`.
 
 The strongest survivor of the old failed incidence bridge is thus a
 *correspondence between markings*, not an automorphism of one marking.
-The extra coordinate is the chosen Fano structure. The next question is
-the isomorphism classification of the 16 free hourglass quotients after
-all geometric automorphisms, not just this reversal; no answer is claimed.
+The extra coordinate is the chosen Fano structure. The initially open
+isomorphism question is now answered by the incoming theorem: the intrinsic
+bicanonical map makes the full D12 orbit test complete in the free case.
+Its two orbits have sizes4 and12 and give exactly two complex surface classes.
+The corresponding converse for the properly elliptic quotients remains open.
 
 ## 6a. The same subgroup acts regularly on the eight central K3 conics
 
@@ -361,9 +376,10 @@ application to our hourglass. The new packet's targeted contribution is
 the explicit bridge to the inherited gauge kernel, the marking census,
 and the reflection correspondence, with their exact domains.
 
-The two new quotient types with `r>0` are not promoted to a birational
-classification. We also leave the full automorphism-orbit classification
-of the free quotient maps open. The positive result already supplies an
+The birational classification for `r>0` and the two free isomorphism classes
+are supplied by the incoming audited theorem, as recorded above. The full
+classification of the properly elliptic quotient isomorphism classes remains
+open. The positive result already supplies an
 actual geometric map from the seven-root hourglass to a well-understood
 surface family; it gives no positive integral square point and no LRC(14)
 or tournament conjecture implication.

@@ -41,9 +41,9 @@
       "sha256": "c872e886cb759bdb74d9989d9de70aa5ad7813bc6620aec298c98e653b2c28d5"
     },
     {
-      "bytes": 6372,
+      "bytes": 6527,
       "path": "audits/FANO_AUDIT.md",
-      "sha256": "70adb43bf6f635890b3653ec931be07c49baf01adf9009c79f0e8359ebcf6c3f"
+      "sha256": "58fdf91a24542760122b42c842729fcfce36ce1b78a45085c6e1734377057562"
     },
     {
       "bytes": 554,
@@ -76,9 +76,9 @@
       "sha256": "22ab9339c41d92dd73b40de454577c6727130f55c1b23d0c476c79648233a9c3"
     },
     {
-      "bytes": 9033,
+      "bytes": 9763,
       "path": "characters/CHARACTER_SEXTICS.md",
-      "sha256": "fb14c34df7c0a0e23341d5b759a37d1d7c7d0ab66a03e25104ded729826b807c"
+      "sha256": "ef05414d5904417b7e4cdc2b480bde5a08b2b65011c093acef412f4b0f8c0a90"
     },
     {
       "bytes": 7385,
@@ -86,9 +86,9 @@
       "sha256": "7b352ee6a7e321f56263d7a79859be0cf2b0fbc783e76105790fa87650380b13"
     },
     {
-      "bytes": 4534,
+      "bytes": 5135,
       "path": "CONCEPT_BOARD.md",
-      "sha256": "6d629c160b1f14a1beb3aac45e41c631095b955461e6051ec435c4d7e72826eb"
+      "sha256": "2caea5420a90c3c73c6da58a5674ea7bad987008c1f075e41c984f10a6666210"
     },
     {
       "bytes": 11750,
@@ -106,19 +106,19 @@
       "sha256": "f497cdea8913ca238cedcc3d1258da0ad60557d08d5de75576e1c31141a6657c"
     },
     {
-      "bytes": 19301,
+      "bytes": 20327,
       "path": "fano_codes/RESULT.md",
-      "sha256": "7b5ba22506eaf39a0c56eb24026b30b240883de44e33cf64301bf01c1b1c5703"
+      "sha256": "dd3f7cb88ef8901110833c552669fff8f877005ffb457f1aaf4e33faffd04b4c"
     },
     {
-      "bytes": 4292,
+      "bytes": 4656,
       "path": "PUBLICATION_CHECKS.md",
-      "sha256": "eb7a8aec45f8832bbed22adcfc5c13e8990f51158f3c0dd8e14339a0f2b1b02f"
+      "sha256": "060c3d2bb91a9bee460073376a83413d5030b497aa060be272b453a738ee573b"
     },
     {
-      "bytes": 3192,
+      "bytes": 3392,
       "path": "README.md",
-      "sha256": "a2dfdf363ea57ee0a89dd36d80c95424fc2fa6efb74bd09074d365afe40748c6"
+      "sha256": "cff1416666cc4486907842460d77701c39d6b06109722918f7fccdc3822a2413"
     },
     {
       "bytes": 1796,
@@ -176,9 +176,9 @@
       "sha256": "f6ff848e694f6b5555138aaa9d408306f0eea68c26160fef53ce6a93eb367894"
     },
     {
-      "bytes": 9938,
+      "bytes": 10640,
       "path": "SYNTHESIS.md",
-      "sha256": "1d7a36418d59559e9fa8b8a9b6ce6e0c21d289ae74d8cf42741d8ed1cedca08d"
+      "sha256": "f286e525db4a6b41fbed5131b3985ae4fa8e4593b2e479e82d8ebf8d2d4aa0a4"
     },
     {
       "bytes": 925,

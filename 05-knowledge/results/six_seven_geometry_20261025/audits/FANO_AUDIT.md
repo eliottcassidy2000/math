@@ -36,7 +36,9 @@ There is no assertion of historical novelty or quotient isomorphism census.
    It has one (-4)-curve, discrepancy -1/2 and K-square drop1. There are two
    such quotient nodes per bad triple. The formula `K^2=2-2r` is for the
    **minimal resolution of singularities**, not its minimal model. The text
-   correctly leaves its Kodaira dimension and minimal model unclassified.
+   correctly does not infer its Kodaira dimension or minimal model from K².
+   The final incoming Session60 classification now supplies these through
+   additional pencil and contraction arguments, cited separately in the text.
 5. The parameter reversal really permutes the seven given linear forms.
    Under the adapted marking it is the old modified complement. It moves
    the Fano structure: an involution of GL(3,2) fixes a two-dimensional

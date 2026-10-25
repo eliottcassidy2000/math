@@ -37,9 +37,12 @@ the Boolean cube, branch incidence and Campedelli quotients to one mechanism.
 
 The session started from `82691d391b`. During research, live main acquired
 `f7041582a8`, the audited [Session60 packet](../session60_six_seven_geometry_20261025/README.md).
-Its character/deletion and Kummer results are shared predecessors here.
-The added mechanisms in this packet are the explicit branch cube, its code
-action, the full marking census, and the resolved-reflection/valuation bridge.
+The later `c24c123d86` and `a144b255fc` also arrived before close-out: they
+prove the same16/12/2 Fano census, classify the minimal models and the two
+free isomorphism classes, and prove hourglass Picard rank58. These are now
+shared predecessors here. Our additional mechanisms are the explicit branch
+cube, its regular-code-action criterion, the universal partial-Steiner probe,
+and the resolved-reflection/valuation bridge.
 No duplicate theorem identifier has been reserved.
 
 The original [divisor/F1 carrier](../reflection_bridge_20261025/geometric_carrier.md)

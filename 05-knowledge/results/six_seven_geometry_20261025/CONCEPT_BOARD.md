@@ -52,6 +52,14 @@ Wildcard: resolve the support reflection and compare its boundary with branch ge
 4. Resolving Cremona changes all lanes: six boundary divisors plus the dense
    stratum recover 3+1+3 under an honest automorphism, but the full toric surface
    has thirteen strata. Root/branch labels remain a separate correspondence.
+5. Final incoming checkpoints `c24c123d86,a144b255fc` close the previously
+   open hourglass Picard rank at58, classify the nonfree minimal models,
+   and identify two free Campedelli isomorphism classes. The branch cube now
+   feeds integral-lattice/saturation questions; the code lane retains its
+   general partial-Steiner bound and common-action criterion; the reflection
+   lane retains its explicit Cremona/nonlift result. The canonical lane is
+   recovered shared structure. Divisor order and the seven-cell mitre remain
+   separate predicates, and no arithmetic existence implication appears.
 
 ## Method cards used
 

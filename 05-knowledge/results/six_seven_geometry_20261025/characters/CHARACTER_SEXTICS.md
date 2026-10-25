@@ -144,6 +144,17 @@ coordinates, then the square roots of each remaining forced linear combination
 of their squares. It never expands characters. The saved receipt compares
 both methods, and compares (C2) to diagonal complete-intersection monomials.
 
+**Final incoming arithmetic connection.** The same saved receipt already
+contains the weight-six mask63 for the first seven displayed forms, omitting
+`E-x-z`. Its character sum is4 at both q=7 and13. Thus the corresponding
+normal double plane has61 and187 points. Adding the **inherited, separately
+proved** resolution correction17q from the incoming
+[Picard upper-bound packet](../../session60_six_seven_geometry_20261025/picard-upper/INDEPENDENT_UPPER_BOUND.md)
+gives180 and408, independently agreeing with its two prime-field counts.
+The extension-field counts, good reduction and discriminant argument are
+not proved by this comparison; the incoming theorem supplies them and now
+proves outer K3 rank19 and hourglass rank58.
+
 ## 5. Connection contract and boundaries
 
 - Source: labelled square-root surface with its projective sign action.

@@ -87,7 +87,14 @@ is a smooth minimal Campedelli surface with `p_g=q=0`, `K²=2`: the group has
 order8, so the covering surface's `chi=8,K²=16` divide by8. The remaining
 12 markings have one bad triple, and2 have three. Their quotient resolutions
 have K²0 and-4 respectively because each bad triple contributes two
-`1/4(1,1)` singularities. Their minimal models remain unclassified here.
+`1/4(1,1)` singularities. The final incoming
+[Session60 theorem](../session60_six_seven_geometry_20261025/seven-lines/RESULT.md)
+classifies their minimal models: properly elliptic for one bad triple;
+Enriques after contracting four (-1)-curves for three. Its bicanonical descent
+argument also shows that the16 free choices give exactly two complex
+Campedelli isomorphism classes, with D12 orbit sizes4 and12. The census and
+classification are recovered concurrent work; the regular-conic-action
+criterion is our additional common mechanism.
 
 The full independent finite universe contains5596 partial Steiner systems
 on seven labelled points; each avoids at least8 of the30 Fano structures.
@@ -158,18 +165,21 @@ an accidental identification: degrees6 versus16, quadratic relations9 versus4.
 
 ## 6. What remains open, and the next decisive probes
 
-- **OPEN:** classify the16 free Campedelli quotient maps under the full
-  geometric automorphism group; parameter reversal already pairs them.
-- **OPEN in this packet:** determine the minimal models of the nonfree
-  quotient resolutions with K²0 or-4. Noncanonical discrepancies block a
-  conclusion from the singular model's ample canonical divisor.
+- **Recovered closure:** the16 free maps have two complex isomorphism classes;
+  the nonfree minimal models are properly elliptic or Enriques. These use
+  additional bicanonical, pencil and contraction arguments in the incoming
+  theorem, not K² alone. Abstract isomorphism classification of the properly
+  elliptic quotients remains **OPEN**.
 - **OPEN:** identify integral saturation and arithmetic/Galois descent of
   the branch-cube lattice. The current result is a rational span and an
   algebraically closed component configuration.
-- **Recovered continuation:** Session60 gives a rational transcendental
-  K3 decomposition and a Picard-rank trichotomy for the hourglass. Our
-  explicit curves provide potential algebraic classes for that next gate;
-  they do not themselves settle its remaining Picard rank.
+- **Recovered closure:** the incoming
+  [exact-rank theorem](../session60_six_seven_geometry_20261025/outer-picard/EXACT_RANK_COROLLARY.md)
+  proves outer K3 rank19 and hourglass rank58, combining an explicit
+  nontorsion elliptic section with two-prime discriminant bounds. Thus the
+  seven deletions form exactly two complex isomorphism classes, of ranks20
+  and19. Our explicit curves now sit inside a known-rank lattice; its integral
+  saturation, rather than the earlier numerical rank choice, is the next gate.
 - **Unchanged OPEN problems:** distinct positive integer-square hourglasses,
   full magic squares of squares, and repository LRC(14).
 
