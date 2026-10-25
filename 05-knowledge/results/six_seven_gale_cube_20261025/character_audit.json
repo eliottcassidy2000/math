@@ -1,0 +1,63 @@
+{
+  "checks": 39,
+  "exterior_cube_dimensions": [
+    0,
+    7
+  ],
+  "n_pg": [
+    [
+      4,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      31
+    ],
+    [
+      9,
+      111
+    ],
+    [
+      10,
+      351
+    ],
+    [
+      11,
+      1023
+    ],
+    [
+      12,
+      2815
+    ],
+    [
+      13,
+      7423
+    ],
+    [
+      14,
+      18943
+    ],
+    [
+      15,
+      47103
+    ],
+    [
+      16,
+      114687
+    ]
+  ],
+  "scope": "Finite controls plus separate proof audit; no producer imports",
+  "status": "PASS"
+}

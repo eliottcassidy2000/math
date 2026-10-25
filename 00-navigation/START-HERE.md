@@ -6,11 +6,10 @@
 **Oct 20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 
 **Oct 25:** [Shape/port/anchor checkpoint](../05-knowledge/results/shape_ports_20261025/README.md):
-audited quartic/sextic nonzero-defect exclusion; exact Collatz departure/refill;
-weighted endpoint/pointed-C3 bijection; corrected pure-blue detour boundary.
+Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-blue boundary.
 
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
-audited K3 branch cube, free Fano-code/Campedelli quotients, and resolved support reflection.
+K3 cubes, free codes, reflection. [Gale continuation](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors.
 
 ## The five-minute orientation
 

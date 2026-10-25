@@ -197,7 +197,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Divisor/F1 bridge](../05-knowledge/results/reflection_bridge_20261025/README.md). [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md): audited branch cube, 16 free code quotients, and resolved reflection; integer-square existence OPEN.
+- [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [six/seven](../05-knowledge/results/six_seven_geometry_20261025/README.md); [Gale/elliptic continuation](../05-knowledge/results/six_seven_gale_cube_20261025/README.md). Integer squares OPEN.
 - [Port/gauge bridge](../05-knowledge/results/ports_regular_actions_hn_20261025/README.md): all-order protected ports; smaller unrestricted A000568 response states; exact clone-cut cancellation. [Owners](../05-knowledge/results/ports_owners_f1_20261025/README.md); [mass](../05-knowledge/results/shape_ports_20261025/tournaments.md). Full black-core connectivity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.

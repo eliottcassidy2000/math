@@ -1,0 +1,9 @@
+{
+  "Fano_systems": 30,
+  "both_free_pairs": 32,
+  "checks": 333,
+  "complementary_pairs": 120,
+  "hourglass_free_order8": 16,
+  "six_root_free_involutions": 8,
+  "status": "PASS"
+}

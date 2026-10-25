@@ -44,7 +44,7 @@ portfolio remains a source of questions rather than a required conclusion.
    configuration by an explicit invertible matrix, permutation, and six
    scalars. Changing square roots to fourth roots separates that balance
    from the K3 condition, locating the scope.
-2. **Seven K3s inside genus seven.** Character decomposition explains the
+2. **Seven K3 contributions to p_g=7.** Character decomposition explains the
    seven-dimensional canonical space using six-line double planes. This
    does not identify the seven canonical characters with a Fano plane:
    their binary rank is six and they have no three-term relation.
@@ -70,10 +70,11 @@ portfolio remains a source of questions rather than a required conclusion.
    resolving the cube branch nodes gives e=2(24+24)-16=80. The outer-root
    description gives e=2(24+8)+16=80 by a different branch divisor.
 8. **F1 seven-support reflection.** Incoming `reflection_bridge_20261025`
-   gives a real seven-point set map that loses four Fano lines. Applied to
-   an explicit good inertia labeling, it creates a dependent geometric
-   triple and destroys the free action. The lost incidence now has a
-   concrete surface consequence.
+   gives a real seven-point set map that loses four Fano lines. Under an arbitrary good inertia labeling, it creates a dependent
+   geometric triple and destroys the free action. With an incidence-adapted
+   labeling it instead realizes the geometric half-turn and preserves
+   quotient type. The marking is an essential sidecar; see the corrected
+   distinction in `COMBINATORIAL_BRIDGES.md`, §7.
 9. **Other sevens in LRC and tournaments.** THM-2523,
    `THM-2523-chi7-hamilton-energy-split-form-and-fano-boundary.md`, has six
    cyclotomic eigenvalues and an indefinite form, but its operator acts on

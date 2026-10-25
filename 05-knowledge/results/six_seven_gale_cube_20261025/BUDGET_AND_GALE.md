@@ -6,6 +6,8 @@ Adjunction, Koszul vanishing, and Gale duality are classical mechanisms.
 This note packages their application to the current root models and claims
 no historical priority for those mechanisms.
 
+BG1 is also recovered in concurrent [Session60, G1](../session60_six_seven_geometry_20261025/thresholds/ROOT_THRESHOLDS.md); the two-parameter outer BG2 identity below is separate from its central Kummer map.
+
 ## 1. A common parameter behind several integers
 
 Let d>=1, r>=2, and n>=d+2. Over an algebraically closed field of

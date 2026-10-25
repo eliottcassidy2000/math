@@ -1,0 +1,584 @@
+{
+  "Fano_kernel_universe": 30,
+  "actual_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      5,
+      6
+    ]
+  ],
+  "adapted_marking": {
+    "J_labels": [
+      7,
+      6,
+      1,
+      5,
+      2,
+      3,
+      4
+    ],
+    "bad_after": 3,
+    "bad_before": 3,
+    "induced_branch_permutation": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      6,
+      5
+    ],
+    "labels": [
+      7,
+      1,
+      6,
+      2,
+      5,
+      4,
+      3
+    ]
+  },
+  "arbitrary_marking": {
+    "J_labels": [
+      6,
+      5,
+      3,
+      4,
+      1,
+      2,
+      7
+    ],
+    "bad_after": 1,
+    "bad_before": 0,
+    "induced_branch_permutation": [
+      4,
+      5,
+      3,
+      2,
+      0,
+      1,
+      6
+    ],
+    "labels": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      5,
+      7
+    ]
+  },
+  "gates": 15334,
+  "half_turn_pairs_by_stratum": {
+    "0": 8,
+    "1": 6,
+    "3": 1
+  },
+  "kernels": [
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 6,
+      "kernel_even_words": [
+        0,
+        15,
+        51,
+        60,
+        85,
+        90,
+        102,
+        105
+      ],
+      "kernel_index": 0
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 11,
+      "kernel_even_words": [
+        0,
+        15,
+        51,
+        60,
+        86,
+        89,
+        101,
+        106
+      ],
+      "kernel_index": 1
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 8,
+      "kernel_even_words": [
+        0,
+        15,
+        53,
+        58,
+        83,
+        92,
+        102,
+        105
+      ],
+      "kernel_index": 2
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 10,
+      "kernel_even_words": [
+        0,
+        15,
+        53,
+        58,
+        86,
+        89,
+        99,
+        108
+      ],
+      "kernel_index": 3
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 9,
+      "kernel_even_words": [
+        0,
+        15,
+        54,
+        57,
+        83,
+        92,
+        101,
+        106
+      ],
+      "kernel_index": 4
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 7,
+      "kernel_even_words": [
+        0,
+        15,
+        54,
+        57,
+        85,
+        90,
+        99,
+        108
+      ],
+      "kernel_index": 5
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 0,
+      "kernel_even_words": [
+        0,
+        23,
+        43,
+        60,
+        77,
+        90,
+        102,
+        113
+      ],
+      "kernel_index": 6
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 5,
+      "kernel_even_words": [
+        0,
+        23,
+        43,
+        60,
+        78,
+        89,
+        101,
+        114
+      ],
+      "kernel_index": 7
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 2,
+      "kernel_even_words": [
+        0,
+        23,
+        45,
+        58,
+        75,
+        92,
+        102,
+        113
+      ],
+      "kernel_index": 8
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 4,
+      "kernel_even_words": [
+        0,
+        23,
+        45,
+        58,
+        78,
+        89,
+        99,
+        116
+      ],
+      "kernel_index": 9
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 3,
+      "kernel_even_words": [
+        0,
+        23,
+        46,
+        57,
+        75,
+        92,
+        101,
+        114
+      ],
+      "kernel_index": 10
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 1,
+      "kernel_even_words": [
+        0,
+        23,
+        46,
+        57,
+        77,
+        90,
+        99,
+        116
+      ],
+      "kernel_index": 11
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 22,
+      "kernel_even_words": [
+        0,
+        27,
+        39,
+        60,
+        77,
+        86,
+        106,
+        113
+      ],
+      "kernel_index": 12
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 20,
+      "kernel_even_words": [
+        0,
+        27,
+        39,
+        60,
+        78,
+        85,
+        105,
+        114
+      ],
+      "kernel_index": 13
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 19,
+      "kernel_even_words": [
+        0,
+        27,
+        45,
+        54,
+        71,
+        92,
+        106,
+        113
+      ],
+      "kernel_index": 14
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 21,
+      "kernel_even_words": [
+        0,
+        27,
+        45,
+        54,
+        78,
+        85,
+        99,
+        120
+      ],
+      "kernel_index": 15
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 18,
+      "kernel_even_words": [
+        0,
+        27,
+        46,
+        53,
+        71,
+        92,
+        105,
+        114
+      ],
+      "kernel_index": 16
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 23,
+      "kernel_even_words": [
+        0,
+        27,
+        46,
+        53,
+        77,
+        86,
+        99,
+        120
+      ],
+      "kernel_index": 17
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 16,
+      "kernel_even_words": [
+        0,
+        29,
+        39,
+        58,
+        75,
+        86,
+        108,
+        113
+      ],
+      "kernel_index": 18
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 14,
+      "kernel_even_words": [
+        0,
+        29,
+        39,
+        58,
+        78,
+        83,
+        105,
+        116
+      ],
+      "kernel_index": 19
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 13,
+      "kernel_even_words": [
+        0,
+        29,
+        43,
+        54,
+        71,
+        90,
+        108,
+        113
+      ],
+      "kernel_index": 20
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 15,
+      "kernel_even_words": [
+        0,
+        29,
+        43,
+        54,
+        78,
+        83,
+        101,
+        120
+      ],
+      "kernel_index": 21
+    },
+    {
+      "bad_triples": 0,
+      "half_turn_partner": 12,
+      "kernel_even_words": [
+        0,
+        29,
+        46,
+        51,
+        71,
+        90,
+        105,
+        116
+      ],
+      "kernel_index": 22
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 17,
+      "kernel_even_words": [
+        0,
+        29,
+        46,
+        51,
+        75,
+        86,
+        101,
+        120
+      ],
+      "kernel_index": 23
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 26,
+      "kernel_even_words": [
+        0,
+        30,
+        39,
+        57,
+        75,
+        85,
+        108,
+        114
+      ],
+      "kernel_index": 24
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 28,
+      "kernel_even_words": [
+        0,
+        30,
+        39,
+        57,
+        77,
+        83,
+        106,
+        116
+      ],
+      "kernel_index": 25
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 24,
+      "kernel_even_words": [
+        0,
+        30,
+        43,
+        53,
+        71,
+        89,
+        108,
+        114
+      ],
+      "kernel_index": 26
+    },
+    {
+      "bad_triples": 3,
+      "half_turn_partner": 29,
+      "kernel_even_words": [
+        0,
+        30,
+        43,
+        53,
+        77,
+        83,
+        102,
+        120
+      ],
+      "kernel_index": 27
+    },
+    {
+      "bad_triples": 1,
+      "half_turn_partner": 25,
+      "kernel_even_words": [
+        0,
+        30,
+        45,
+        51,
+        71,
+        89,
+        106,
+        116
+      ],
+      "kernel_index": 28
+    },
+    {
+      "bad_triples": 3,
+      "half_turn_partner": 27,
+      "kernel_even_words": [
+        0,
+        30,
+        45,
+        51,
+        75,
+        85,
+        102,
+        120
+      ],
+      "kernel_index": 29
+    }
+  ],
+  "labeling_universe": 5040,
+  "line_order": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      -1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      -1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1
+    ]
+  ],
+  "status": "FINITE-EXACT reflection integration audit",
+  "strata": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  }
+}

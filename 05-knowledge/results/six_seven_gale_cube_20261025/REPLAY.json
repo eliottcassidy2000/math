@@ -1,0 +1,42 @@
+{
+  "executions": 14,
+  "manifest_files": 30,
+  "replays": [
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "verify_budget_gale.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "check_character_decomposition.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "check_geometry.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "check_free_deck_codes.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit_character.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "audit_free_quotients.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "check_reflection_markings.py"
+    }
+  ],
+  "status": "PASS"
+}

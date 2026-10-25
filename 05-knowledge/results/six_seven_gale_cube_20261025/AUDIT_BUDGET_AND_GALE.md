@@ -3,8 +3,9 @@
 Reviewer: arithmetic_shapes. Date: 2026-10-25.
 **Verdict: PASS in the stated scope.** No mathematical blocker found.
 
-Reviewed `BUDGET_AND_GALE.md` and `verify_budget_gale.py` in the current
-`six_seven_geometry_20261025` packet. Independently reran the checker:
+Reviewed `BUDGET_AND_GALE.md` and `verify_budget_gale.py` in this session’s original
+`six_seven_geometry_20261025` namespace (now renamed
+`six_seven_gale_cube_20261025` to preserve a concurrent packet). Independently reran the checker:
 305 gates pass, including all 720 permutations at u=v=1, with eight
 matroid-compatible permutations and exactly two projective matches.
 
