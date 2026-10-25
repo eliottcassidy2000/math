@@ -61,3 +61,9 @@ exact SHA-pinned audited twist proof, preserving its bytes.
 recognized notation is classified, real missing links remain rejected, and
 a changed source cannot inherit this exemption. No arbitrary unknown target
 is exempted. The original failed scan is retained in the publication work area.
+
+## Second checkpoint: completed evidence
+
+`SECOND_REPLAY_RECEIPT.json` records 10 scripts and 20 successful ordinary/optimized executions. Paired outputs agree and the applicable stored outputs match exactly; all frozen packet bytes remain unchanged. Every replayed script hash and the current copied-source pins were rechecked before release. The documentation gate passes, and all 69 incoming packet files remain hash-identical.
+
+`SECOND_BUNDLE_CHECK.json` checks UTF-8, native checksums, assertion-safe scripts and local links. `SECOND_FILESET_NEGATIVE_CONTROLS.json` records byte-mutation and extra-file rejection in both Python modes. Exact-commit remote verification and CI visibility follow publication; no missing CI is treated as a pass.

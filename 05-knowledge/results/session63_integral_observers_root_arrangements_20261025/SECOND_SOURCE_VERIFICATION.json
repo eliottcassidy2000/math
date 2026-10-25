@@ -1,0 +1,150 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "source_directory": "session63-specialization",
+      "source_name": "RESULT.md",
+      "packaged": "specialization/RESULT.md",
+      "bytes": 20504,
+      "source_sha256": "4215834d79e992b0c80dafa681ea868a787d2180559c31e6f3ed768aa94b7460",
+      "packaged_sha256": "4215834d79e992b0c80dafa681ea868a787d2180559c31e6f3ed768aa94b7460",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-specialization",
+      "source_name": "check.py",
+      "packaged": "specialization/check.py",
+      "bytes": 8036,
+      "source_sha256": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553",
+      "packaged_sha256": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-specialization",
+      "source_name": "normal.json",
+      "packaged": "specialization/normal.json",
+      "bytes": 12436,
+      "source_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "packaged_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-specialization",
+      "source_name": "optimized.json",
+      "packaged": "specialization/optimized.json",
+      "bytes": 12436,
+      "source_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "packaged_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-specialization",
+      "source_name": "RECEIPT.json",
+      "packaged": "specialization/RECEIPT.json",
+      "bytes": 463,
+      "source_sha256": "a7014ff10c928d9a498b2c28b312774bef2b3a0a8c6cb6323ca0d48cddad535c",
+      "packaged_sha256": "a7014ff10c928d9a498b2c28b312774bef2b3a0a8c6cb6323ca0d48cddad535c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "FOURIER_EFFECTIVITY.md",
+      "packaged": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "bytes": 5063,
+      "source_sha256": "75d16c1f0990fc452f31cb4b82070a9f71ad2315a2f0bc42411ac17c0034797f",
+      "packaged_sha256": "75d16c1f0990fc452f31cb4b82070a9f71ad2315a2f0bc42411ac17c0034797f",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "check_fourier_effectivity.py",
+      "packaged": "fourier-effectivity/check_fourier_effectivity.py",
+      "bytes": 2360,
+      "source_sha256": "81712f93112e9c8b1ba2505c8dd4da44ac31db0d1d103713cfa88a8a403f67cf",
+      "packaged_sha256": "81712f93112e9c8b1ba2505c8dd4da44ac31db0d1d103713cfa88a8a403f67cf",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "fourier-normal.json",
+      "packaged": "fourier-effectivity/fourier-normal.json",
+      "bytes": 1457,
+      "source_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaged_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "fourier-optimized.json",
+      "packaged": "fourier-effectivity/fourier-optimized.json",
+      "bytes": 1457,
+      "source_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaged_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "REPORT.md",
+      "packaged": "audits/specialization/REPORT.md",
+      "bytes": 10038,
+      "source_sha256": "d6a0a4fd12af0a4035539ccf0030417a83846fcf3d4433c24d2bfc947c6ed022",
+      "packaged_sha256": "d6a0a4fd12af0a4035539ccf0030417a83846fcf3d4433c24d2bfc947c6ed022",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "verify.py",
+      "packaged": "audits/specialization/verify.py",
+      "bytes": 6505,
+      "source_sha256": "b0fd50eeaa52594151744337c3eec221a0a4648a4982f155c731524ff3b64050",
+      "packaged_sha256": "b0fd50eeaa52594151744337c3eec221a0a4648a4982f155c731524ff3b64050",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "normal.json",
+      "packaged": "audits/specialization/normal.json",
+      "bytes": 2399,
+      "source_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "packaged_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "optimized.json",
+      "packaged": "audits/specialization/optimized.json",
+      "bytes": 2399,
+      "source_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "packaged_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "root_fourier_replay.json",
+      "packaged": "audits/specialization/root_fourier_replay.json",
+      "bytes": 1457,
+      "source_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaged_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "root_fourier_replay_optimized.json",
+      "packaged": "audits/specialization/root_fourier_replay_optimized.json",
+      "bytes": 1457,
+      "source_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaged_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-publication",
+      "source_name": "FIRST_REMOTE_VERIFICATION.json",
+      "packaged": "FIRST_REMOTE_VERIFICATION.json",
+      "bytes": 17486,
+      "source_sha256": "a9b0cceaea4d87f6de0f6c8f926011a92e860f47186dc1d3e17f568ec1f2ba6a",
+      "packaged_sha256": "a9b0cceaea4d87f6de0f6c8f926011a92e860f47186dc1d3e17f568ec1f2ba6a",
+      "packaging_changes": null
+    }
+  ],
+  "scope": "Exact-byte source copies. Earlier audit-request wording in source notes is historical; the copied independent REPORT records completed proof review and replay."
+}

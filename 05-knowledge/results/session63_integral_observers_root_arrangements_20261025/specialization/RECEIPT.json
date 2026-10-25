@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": 5808,
+  "monomial_cases": 66,
+  "normal_optimized_equal": true,
+  "sha256": {
+    "RESULT.md": "4215834d79e992b0c80dafa681ea868a787d2180559c31e6f3ed768aa94b7460",
+    "check.py": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553",
+    "normal.json": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+    "optimized.json": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c"
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 10,
+  "successful_runs": 20,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "cancellation/check.py",
+      "mode": "normal",
+      "source_sha256": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/cancellation/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 5.411461,
+      "stdout_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "cancellation/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "cancellation/verify_source_recovery.py",
+      "mode": "normal",
+      "source_sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/cancellation/verify_source_recovery.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.098713,
+      "stdout_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "cancellation/source_recovery_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/cancellation/audit.py",
+      "mode": "normal",
+      "source_sha256": "eec7cb1a2d0d9d0fc2005a41cd57c975a5d4e0780f7b41bf642d63b04b94e8a2",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/audits/cancellation/audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.419535,
+      "stdout_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/cancellation/replay_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/cancellation/provenance_audit.py",
+      "mode": "normal",
+      "source_sha256": "9bd3cd757c3f956f57ec3599132915fe161041073112d12a9c0f7ea26621786b",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/audits/cancellation/provenance_audit.py",
+        "--repo",
+        "/workspace/scratch/07d5532f2fce/session63-repo"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.285339,
+      "stdout_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/cancellation/provenance_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "twists/verify.py",
+      "mode": "normal",
+      "source_sha256": "acf6aab18ff6375eba905304edbf7158bd393fdd7d40c9367b55149ce010e30e",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/twists/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.636847,
+      "stdout_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "twists/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "recovery/check_twist_histograms.py",
+      "mode": "normal",
+      "source_sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/recovery/check_twist_histograms.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.240912,
+      "stdout_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "recovery/twist_finite_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/twists/independent_checks.py",
+      "mode": "normal",
+      "source_sha256": "5a0ae9eff6f4ca3212f71c25026df4508e316a3a9e90ca33f4151aa028825f3a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/audits/twists/independent_checks.py",
+        "--reference",
+        "recovery/twist_finite_normal.json"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.343136,
+      "stdout_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/twists/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "specialization/check.py",
+      "mode": "normal",
+      "source_sha256": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/specialization/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.842705,
+      "stdout_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "specialization/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "fourier-effectivity/check_fourier_effectivity.py",
+      "mode": "normal",
+      "source_sha256": "81712f93112e9c8b1ba2505c8dd4da44ac31db0d1d103713cfa88a8a403f67cf",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/fourier-effectivity/check_fourier_effectivity.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.483614,
+      "stdout_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "fourier-effectivity/fourier-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/specialization/verify.py",
+      "mode": "normal",
+      "source_sha256": "b0fd50eeaa52594151744337c3eec221a0a4648a4982f155c731524ff3b64050",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/normal-0v2u1ose/packet/audits/specialization/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.091055,
+      "stdout_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/specialization/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "cancellation/check.py",
+      "mode": "optimized",
+      "source_sha256": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/cancellation/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 8.343339,
+      "stdout_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "cancellation/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "cancellation/verify_source_recovery.py",
+      "mode": "optimized",
+      "source_sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/cancellation/verify_source_recovery.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.281648,
+      "stdout_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "cancellation/source_recovery_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/cancellation/audit.py",
+      "mode": "optimized",
+      "source_sha256": "eec7cb1a2d0d9d0fc2005a41cd57c975a5d4e0780f7b41bf642d63b04b94e8a2",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/audits/cancellation/audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.562979,
+      "stdout_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/cancellation/replay_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/cancellation/provenance_audit.py",
+      "mode": "optimized",
+      "source_sha256": "9bd3cd757c3f956f57ec3599132915fe161041073112d12a9c0f7ea26621786b",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/audits/cancellation/provenance_audit.py",
+        "--repo",
+        "/workspace/scratch/07d5532f2fce/session63-repo"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.594612,
+      "stdout_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/cancellation/provenance_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "twists/verify.py",
+      "mode": "optimized",
+      "source_sha256": "acf6aab18ff6375eba905304edbf7158bd393fdd7d40c9367b55149ce010e30e",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/twists/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.928137,
+      "stdout_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "twists/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "recovery/check_twist_histograms.py",
+      "mode": "optimized",
+      "source_sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/recovery/check_twist_histograms.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.393382,
+      "stdout_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "recovery/twist_finite_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/twists/independent_checks.py",
+      "mode": "optimized",
+      "source_sha256": "5a0ae9eff6f4ca3212f71c25026df4508e316a3a9e90ca33f4151aa028825f3a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/audits/twists/independent_checks.py",
+        "--reference",
+        "recovery/twist_finite_normal.json"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.887399,
+      "stdout_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/twists/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "specialization/check.py",
+      "mode": "optimized",
+      "source_sha256": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/specialization/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.878741,
+      "stdout_sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "specialization/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "fourier-effectivity/check_fourier_effectivity.py",
+      "mode": "optimized",
+      "source_sha256": "81712f93112e9c8b1ba2505c8dd4da44ac31db0d1d103713cfa88a8a403f67cf",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/fourier-effectivity/check_fourier_effectivity.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 4.514374,
+      "stdout_sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "fourier-effectivity/fourier-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/specialization/verify.py",
+      "mode": "optimized",
+      "source_sha256": "b0fd50eeaa52594151744337c3eec221a0a4648a4982f155c731524ff3b64050",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session63-publication/replay-tmp/optimized-bm9l5rc5/packet/audits/specialization/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.262485,
+      "stdout_sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/specialization/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    }
+  ]
+}

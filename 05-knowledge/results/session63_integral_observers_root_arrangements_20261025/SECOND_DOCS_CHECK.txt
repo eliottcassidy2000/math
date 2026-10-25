@@ -1,0 +1,1 @@
+Agent-facing documentation check PASSED: bounded startup surface, frontmatter-derived frontier status, correction sentinels, and router smoke.

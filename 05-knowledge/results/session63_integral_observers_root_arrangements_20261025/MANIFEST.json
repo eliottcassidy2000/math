@@ -8,8 +8,8 @@
     },
     {
       "path": "CONCEPT_BOARD.md",
-      "bytes": 2218,
-      "sha256": "d7adc8656a3975e48bda211ef3f07079e97f83aa8b7bce67a2461c7d0979e93b"
+      "bytes": 2285,
+      "sha256": "426af0e42c407250117fde4726d8e105895ac4cd982d70d704fb36c463bc5926"
     },
     {
       "path": "FIRST_BUNDLE_CHECK.json",
@@ -32,6 +32,11 @@
       "sha256": "1d11195cd81d2610add94fa536e1533aebbbb1e8bc17fe68fc9702b79a9c63b0"
     },
     {
+      "path": "FIRST_REMOTE_VERIFICATION.json",
+      "bytes": 17486,
+      "sha256": "a9b0cceaea4d87f6de0f6c8f926011a92e860f47186dc1d3e17f568ec1f2ba6a"
+    },
+    {
       "path": "FIRST_REPLAY_RECEIPT.json",
       "bytes": 12022,
       "sha256": "55ed8ffb0e3fe19b51fc8a4aa8584ed4191f7cbc2fc95f1141b35db4c1aa99ff"
@@ -48,13 +53,38 @@
     },
     {
       "path": "PUBLICATION_CHECKS.md",
-      "bytes": 3557,
-      "sha256": "a2f3dff4cfb7242dc585c458128b6dc1d34cc94c9783dd8c83601476d89eb7cb"
+      "bytes": 4305,
+      "sha256": "7455cb0b631077e6c5b329de5e2736b51f4207289a98cbc2d17c29f9f71c7475"
     },
     {
       "path": "README.md",
-      "bytes": 3433,
-      "sha256": "6a9f6c7183ad5ed74cef3c281e3eeb5f4de41631e04e62f09dc6b3214235bee8"
+      "bytes": 4531,
+      "sha256": "739d2bbc025947f1748bd5f448d20a9570e73280841336c5c10abefcac0f3025"
+    },
+    {
+      "path": "SECOND_BUNDLE_CHECK.json",
+      "bytes": 4997,
+      "sha256": "9059aa7ae012d5bdbf2b2bc48b29969968cbb5c7ae3a05bb26893699ae234deb"
+    },
+    {
+      "path": "SECOND_DOCS_CHECK.txt",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "SECOND_FILESET_NEGATIVE_CONTROLS.json",
+      "bytes": 504,
+      "sha256": "dbbe8c2b967882dd93a5cb2d021f41e6c6b659f85de87171fa8a9ab297676fc4"
+    },
+    {
+      "path": "SECOND_REPLAY_RECEIPT.json",
+      "bytes": 17011,
+      "sha256": "1497f7308f27ef767938666554d1f8dc5918954e08c82552a466a292daac0342"
+    },
+    {
+      "path": "SECOND_SOURCE_VERIFICATION.json",
+      "bytes": 6670,
+      "sha256": "dafb2f2710e3b5d7bec3ff0a8b25e5c985c9d1a0e532ece6ef8455835b435155"
     },
     {
       "path": "audits/cancellation/INDEPENDENT_V8.json",
@@ -120,6 +150,36 @@
       "path": "audits/cancellation/replay_optimized.json",
       "bytes": 44144,
       "sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e"
+    },
+    {
+      "path": "audits/specialization/REPORT.md",
+      "bytes": 10038,
+      "sha256": "d6a0a4fd12af0a4035539ccf0030417a83846fcf3d4433c24d2bfc947c6ed022"
+    },
+    {
+      "path": "audits/specialization/normal.json",
+      "bytes": 2399,
+      "sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625"
+    },
+    {
+      "path": "audits/specialization/optimized.json",
+      "bytes": 2399,
+      "sha256": "7a34f738f9ed0fa76a68d9d88f29bab906d661eec10004aaab0c6dd2cbd8f625"
+    },
+    {
+      "path": "audits/specialization/root_fourier_replay.json",
+      "bytes": 1457,
+      "sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501"
+    },
+    {
+      "path": "audits/specialization/root_fourier_replay_optimized.json",
+      "bytes": 1457,
+      "sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501"
+    },
+    {
+      "path": "audits/specialization/verify.py",
+      "bytes": 6505,
+      "sha256": "b0fd50eeaa52594151744337c3eec221a0a4648a4982f155c731524ff3b64050"
     },
     {
       "path": "audits/twists/AUDIT.md",
@@ -192,6 +252,26 @@
       "sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb"
     },
     {
+      "path": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "bytes": 5063,
+      "sha256": "75d16c1f0990fc452f31cb4b82070a9f71ad2315a2f0bc42411ac17c0034797f"
+    },
+    {
+      "path": "fourier-effectivity/check_fourier_effectivity.py",
+      "bytes": 2360,
+      "sha256": "81712f93112e9c8b1ba2505c8dd4da44ac31db0d1d103713cfa88a8a403f67cf"
+    },
+    {
+      "path": "fourier-effectivity/fourier-normal.json",
+      "bytes": 1457,
+      "sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501"
+    },
+    {
+      "path": "fourier-effectivity/fourier-optimized.json",
+      "bytes": 1457,
+      "sha256": "d594e5e9d81487779b51dd958c5407f8e5f415feb6effed924ecf50a6b42f501"
+    },
+    {
       "path": "recovery/check_twist_histograms.py",
       "bytes": 6691,
       "sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e"
@@ -205,6 +285,31 @@
       "path": "recovery/twist_finite_optimized.json",
       "bytes": 55708,
       "sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3"
+    },
+    {
+      "path": "specialization/RECEIPT.json",
+      "bytes": 463,
+      "sha256": "a7014ff10c928d9a498b2c28b312774bef2b3a0a8c6cb6323ca0d48cddad535c"
+    },
+    {
+      "path": "specialization/RESULT.md",
+      "bytes": 20504,
+      "sha256": "4215834d79e992b0c80dafa681ea868a787d2180559c31e6f3ed768aa94b7460"
+    },
+    {
+      "path": "specialization/check.py",
+      "bytes": 8036,
+      "sha256": "a1d98eafec1ec3f7983999b853ef7e9694ad3efd36a8c7585e8c09b3e9f38553"
+    },
+    {
+      "path": "specialization/normal.json",
+      "bytes": 12436,
+      "sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c"
+    },
+    {
+      "path": "specialization/optimized.json",
+      "bytes": 12436,
+      "sha256": "501d1e1c17ffab5aea8db397e69082dcc400651b2d1ff3469112afcc1dd0d12c"
     },
     {
       "path": "twists/RESULT.md",

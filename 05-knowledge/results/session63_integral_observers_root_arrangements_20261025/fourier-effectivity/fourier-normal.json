@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "checks": 7552,
+  "smith": [
+    {
+      "r": 1,
+      "multiplicities": {
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "r": 2,
+      "multiplicities": {
+        "1": 1,
+        "2": 2,
+        "4": 1
+      }
+    },
+    {
+      "r": 3,
+      "multiplicities": {
+        "1": 1,
+        "2": 3,
+        "4": 3,
+        "8": 1
+      }
+    },
+    {
+      "r": 4,
+      "multiplicities": {
+        "1": 1,
+        "2": 4,
+        "4": 6,
+        "8": 4,
+        "16": 1
+      }
+    },
+    {
+      "r": 5,
+      "multiplicities": {
+        "1": 1,
+        "2": 5,
+        "4": 10,
+        "8": 10,
+        "16": 5,
+        "32": 1
+      }
+    },
+    {
+      "r": 6,
+      "multiplicities": {
+        "1": 1,
+        "2": 6,
+        "4": 15,
+        "8": 20,
+        "16": 15,
+        "32": 6,
+        "64": 1
+      }
+    }
+  ],
+  "universe": "r1..6 Smith matrices; all81 ternary tables onF2\u00b2, all6561 pair products and all4 translations; four exact Legendre controls",
+  "legendre": [
+    {
+      "q": 7,
+      "lambda": 2,
+      "S": 0,
+      "twists": [
+        4,
+        4
+      ]
+    },
+    {
+      "q": 7,
+      "lambda": 3,
+      "S": -4,
+      "twists": [
+        0,
+        8
+      ]
+    },
+    {
+      "q": 5,
+      "lambda": 2,
+      "S": 2,
+      "twists": [
+        4,
+        0
+      ]
+    },
+    {
+      "q": 5,
+      "lambda": 3,
+      "S": -2,
+      "twists": [
+        0,
+        4
+      ]
+    }
+  ]
+}

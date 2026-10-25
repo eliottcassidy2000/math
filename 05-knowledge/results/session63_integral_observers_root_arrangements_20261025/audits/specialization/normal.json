@@ -1,0 +1,185 @@
+{
+  "Legendre_controls": [
+    {
+      "counts": [
+        4,
+        0
+      ],
+      "lambda": 2,
+      "mean": 2,
+      "p": 5,
+      "variance": 4
+    },
+    {
+      "counts": [
+        0,
+        4
+      ],
+      "lambda": 3,
+      "mean": 2,
+      "p": 5,
+      "variance": 4
+    },
+    {
+      "counts": [
+        4,
+        4
+      ],
+      "lambda": 2,
+      "mean": 4,
+      "p": 7,
+      "variance": 0
+    },
+    {
+      "counts": [
+        0,
+        8
+      ],
+      "lambda": 3,
+      "mean": 4,
+      "p": 7,
+      "variance": 16
+    }
+  ],
+  "Smith_controls": [
+    {
+      "factors": [
+        1
+      ],
+      "rank": 0
+    },
+    {
+      "factors": [
+        1,
+        2
+      ],
+      "rank": 1
+    },
+    {
+      "factors": [
+        1,
+        2,
+        2,
+        4
+      ],
+      "rank": 2
+    },
+    {
+      "factors": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        8
+      ],
+      "rank": 3
+    },
+    {
+      "factors": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        16
+      ],
+      "rank": 4
+    }
+  ],
+  "checks": 521,
+  "fourier_cases": 40,
+  "gcd_chain": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    3000,
+    600,
+    600,
+    600,
+    600,
+    120,
+    120,
+    120,
+    120,
+    24,
+    24,
+    24,
+    24,
+    1
+  ],
+  "graph_controls": [
+    {
+      "Fourier_mod2_invariant_rank": 2,
+      "n": 2,
+      "nontrivial_sign_orbits": 1,
+      "point_lattice_invariant_rank": 1,
+      "trivial_sign_orbits": 1
+    },
+    {
+      "Fourier_mod2_invariant_rank": 4,
+      "n": 3,
+      "nontrivial_sign_orbits": 2,
+      "point_lattice_invariant_rank": 2,
+      "trivial_sign_orbits": 2
+    },
+    {
+      "Fourier_mod2_invariant_rank": 11,
+      "n": 4,
+      "nontrivial_sign_orbits": 7,
+      "point_lattice_invariant_rank": 4,
+      "trivial_sign_orbits": 4
+    }
+  ],
+  "jet_coefficients": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    3000,
+    -30000,
+    150000,
+    -495000,
+    1203000,
+    -2280000,
+    3486000,
+    -4392000,
+    4621200,
+    -4093200,
+    3063600,
+    -1938000,
+    1032840,
+    -460560,
+    169920,
+    -51000,
+    12144,
+    -2208,
+    288,
+    -24,
+    1
+  ],
+  "signed_cases": 112,
+  "status": "PASS"
+}

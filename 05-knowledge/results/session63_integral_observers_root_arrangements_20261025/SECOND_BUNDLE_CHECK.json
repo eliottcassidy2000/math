@@ -1,0 +1,207 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "twists/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "fourier-effectivity/check_fourier_effectivity.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "recovery/check_twist_histograms.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "cancellation/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "cancellation/verify_source_recovery.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "specialization/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/twists/independent_checks.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/cancellation/audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/cancellation/provenance_audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/specialization/verify.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "twists/RESULT.md",
+    "twists/ROOT_STACK.md",
+    "twists/ZETA_AND_EFFECTIVITY.md",
+    "twists/VERIFICATION.md",
+    "twists/verify.py",
+    "twists/normal.json",
+    "twists/optimized.json",
+    "audits/twists/AUDIT.md",
+    "audits/twists/independent_checks.py",
+    "audits/twists/normal.json",
+    "audits/twists/optimized.json",
+    "audits/twists/AUDITED_SOURCE_SHA256.txt",
+    "audits/cancellation/INDEPENDENT_V8.json",
+    "audits/cancellation/RECEIPT.json",
+    "audits/cancellation/REPORT.md",
+    "audits/cancellation/SOURCE_PINS_AUDITED.json",
+    "audits/cancellation/audit.py",
+    "audits/cancellation/producer_normal.json",
+    "audits/cancellation/producer_optimized.json",
+    "audits/cancellation/provenance_audit.py",
+    "audits/cancellation/provenance_normal.json",
+    "audits/cancellation/provenance_optimized.json",
+    "audits/cancellation/replay_normal.json",
+    "audits/cancellation/replay_optimized.json"
+  ],
+  "local_links": [
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../unprotected_ports_cancellation_20261025/valuation/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../unprotected_ports_cancellation_20261025/counting/POSITIVE_JET.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/ROOT_STACK.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "MANIFEST.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [
+    {
+      "path": "twists/RESULT.md",
+      "literal": "[W/G](F_q)",
+      "occurrences": 1,
+      "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+      "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+    }
+  ]
+}

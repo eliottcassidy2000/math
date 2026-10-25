@@ -1,6 +1,6 @@
 # Integral observers, cancellation spectra, and root arrangements
 
-2026-10-25. **Status: first audited research checkpoint.** Scoped proofs and
+2026-10-25. **Status: two audited research checkpoints.** Scoped proofs and
 finite controls are separate. This packet does not claim historical novelty,
 an F1 model, a universal torification classification, an integer-square solution, or an
 LRC/HN consequence. Proposed unifying theories are not promoted by these checks.
@@ -21,6 +21,12 @@ LRC/HN consequence. Proposed unifying theories are not promoted by these checks.
   In characteristic different from 2 and 3, the three fresh means are respectively
   `q²−6q+12`, `q²+q+1` and `q²+4q+1`. Characteristic 3 has separate formulas;
   characteristic 2 is excluded. Fixed twists over extensions are not fresh twists.
+- [Integral specialization and signed-orbit base change](specialization/RESULT.md)
+  · [Fourier lattice and histogram effectivity](fourier-effectivity/FOURIER_EFFECTIVITY.md)
+  · [independent integral/Fourier audit](audits/specialization/REPORT.md).
+  These retain the signed-permutation hypothesis, distinguish invariant modules
+  from multiplication (including the C3 hostile), and separate an integral
+  Fourier lattice from positivity and geometric realizability.
 - [Concept/status board](CONCEPT_BOARD.md) · [reproduction and scope](PUBLICATION_CHECKS.md)
   · [source-copy receipt](FIRST_SOURCE_VERIFICATION.json) · [exact manifest](MANIFEST.json).
 
@@ -37,6 +43,9 @@ this packet use the following mappings; no scratch path is needed to run tests.
 | `session63-recovery` (finite twist checker and outputs only here) | `recovery/` |
 | `session63-audit-cancellation` | `audits/cancellation/` |
 | `session63-audit-twists` | `audits/twists/` |
+| `session63-specialization` | `specialization/` |
+| `session63-root` (Fourier proof/check here) | `fourier-effectivity/` |
+| `session63-audit-specialization` | `audits/specialization/` |
 
 Repository-relative source citations still refer to the repository root.
 Source commit pins remain historical pins; they are not silently advanced.
@@ -55,6 +64,9 @@ python3 -B "$P/audits/cancellation/provenance_audit.py" --repo "$PWD"
 python3 -B "$P/twists/verify.py"
 python3 -B "$P/recovery/check_twist_histograms.py"
 python3 -B "$P/audits/twists/independent_checks.py" --reference "$P/recovery/twist_finite_normal.json"
+python3 -B "$P/specialization/check.py"
+python3 -B "$P/fourier-effectivity/check_fourier_effectivity.py"
+python3 -B "$P/audits/specialization/verify.py"
 python3 -B "$P/verify_packet.py"
 ```
 
@@ -62,3 +74,8 @@ Repeat with `-O` after `-B`. Mathematical checkers print deterministic JSON;
 the corresponding saved normal and optimized outputs must match exactly.
 All these checks use Python's standard library and explicit runtime guards.
 The proof scope is stated in the notes, not inferred from a finite census.
+
+The source Fourier note retains its historical audit-request header. The
+[completed independent audit](audits/specialization/REPORT.md), section 6,
+records its subsequent proof readback and normal/optimized replay. This is
+status reconciliation, not a change to the mathematical source.
