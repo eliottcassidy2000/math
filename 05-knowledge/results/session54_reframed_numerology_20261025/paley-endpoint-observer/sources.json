@@ -1,0 +1,37 @@
+[
+  {
+    "origin": "math/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "copy": "sources/0-the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98"
+  },
+  {
+    "origin": "session27-publication/remote-final-replay/session27-corrections/MISTAKE-658.md",
+    "copy": "sources/1-MISTAKE-658.md",
+    "sha256": "35aa3323a7d14ce99b4426b8dbb1743f3425dda51ae3e4873106e83c74132412"
+  },
+  {
+    "origin": "session25-congruence-review/REVIEW.md",
+    "copy": "sources/2-REVIEW.md",
+    "sha256": "e354cb553625b6090de015daa602c520774c226bcd0a10d5447ece79afbcc5c1"
+  },
+  {
+    "origin": "session32-paley/PALEY_MONSTER_BRIDGE.md",
+    "copy": "sources/3-PALEY_MONSTER_BRIDGE.md",
+    "sha256": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4"
+  },
+  {
+    "origin": "math/07-reflections/tournament-matrix-classic-results-atlas-codex-s210.md",
+    "copy": "sources/4-tournament-matrix-classic-results-atlas-codex-s210.md",
+    "sha256": "b0be22805af178c9044d5049b1018324b06710739338b827e13ed5974c27ab1f"
+  },
+  {
+    "origin": "math/01-canon/theorems/THM-001-redei.md",
+    "copy": "sources/5-THM-001-redei.md",
+    "sha256": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560"
+  },
+  {
+    "origin": "math/01-canon/theorems/THM-002-ocf.md",
+    "copy": "sources/6-THM-002-ocf.md",
+    "sha256": "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e"
+  }
+]

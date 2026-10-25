@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "annotations": [
+    {
+      "path": "05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "additive_only": true,
+      "added_bytes": 420,
+      "new_links_resolve": true
+    },
+    {
+      "path": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "additive_only": true,
+      "added_bytes": 390,
+      "new_links_resolve": true
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md",
+      "additive_only": true,
+      "added_bytes": 724,
+      "new_links_resolve": true
+    }
+  ],
+  "diagram_source_copies": 4
+}

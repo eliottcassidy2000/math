@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "script": "audit.py",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "script": "audit.py",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "script": "hostiles.py",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "script": "hostiles.py",
+      "optimized": true,
+      "status": "PASS"
+    }
+  ]
+}

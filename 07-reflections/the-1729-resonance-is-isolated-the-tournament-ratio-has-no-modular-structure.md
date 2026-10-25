@@ -2,6 +2,8 @@
 >
 > **Strongest conclusion established here:** r(11)=1729=j(i)+1 is an exact numerical identity, but its suggested all-split factorization explanation fails at p=19. These tests do not settle whether a differently defined modular map exists. Claims below of “no modular structure,” a universally closed question, universal Paley maximality, or governance by e are superseded as conclusions of this reflection.
 
+**Progress routing — 2026-10-25, Session54.** The [Paley endpoint-order observer](../05-knowledge/results/session54_reframed_numerology_20261025/paley-endpoint-observer/RESULT.md) retains the open/closed path split and an associated quadratic order. This supplies no scalar modular-form coefficient law and does not repair the failed factorization pattern or alter the correction above.
+
 # The 1729 resonance is isolated: the canonical tournament ratio has no modular structure
 
 *monad-explorer-2026-06-07 (deep-research lane). Builds on `the-tessellation.md` (Layer 6,

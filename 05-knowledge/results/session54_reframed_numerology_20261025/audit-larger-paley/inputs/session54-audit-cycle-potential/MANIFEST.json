@@ -1,0 +1,19 @@
+{
+  "files": {
+    "AUDIT.md": "e2aac7c685a679e35f43bfdfe9126c7cc725e2a1c20a9ac4cc345dd022467c83",
+    "audit.py": "53607d3a63e3a38a19921ac1e805c92dd33274cb3447bf47c3c13a18ed8f9763",
+    "inputs/session54-cycle-potential-classification/MANIFEST.json": "6b05de37509f3a6f041362b21c8bb98f09ec8e27c4c9470df90bf0c3433a1693",
+    "inputs/session54-cycle-potential-classification/README.md": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af",
+    "inputs/session54-cycle-potential-classification/rank-11.json": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea",
+    "inputs/session54-cycle-potential-classification/rank-7.json": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b",
+    "inputs/session54-cycle-potential-classification/replay.py": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359",
+    "inputs/session54-cycle-potential-classification/result-O.json": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db",
+    "inputs/session54-cycle-potential-classification/result.json": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db",
+    "inputs/session54-cycle-potential-classification/verify.py": "ff30186a5cbc97f28e6c5ea58305929a2555506f88e3309a62c8c5b3ab437cde",
+    "producer-replay.txt": "486062d514ac7a9d3e35f60a744c73260687f5f911d9081f615107dbe32ead99",
+    "replay.py": "0f03e530a3e7523a2d80ef6b24217a32af5c730fa65d41f2d71f384c325f96a5",
+    "result-O.json": "5d35982fbc36d361e3a227f36195a5c35d4db625ca58fb7e37ccbad11e28bc00",
+    "result.json": "5d35982fbc36d361e3a227f36195a5c35d4db625ca58fb7e37ccbad11e28bc00"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

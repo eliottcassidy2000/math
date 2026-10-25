@@ -1,0 +1,72 @@
+Independent endpoint-response audit
+
+Verdict: PASS, subject to the exact inherited classification scope stated below.
+The endpoint identity, histogram collapse, fixed-pool optimum, and complete
+optimal-design count are mathematically correct. No producer edits were made.
+
+For a Hamiltonian path from s to t, every vertex is used as a tail except t
+and as a head except s. Summing b_uv=a_u-d_v therefore gives deficiency-a_t+d_s.
+The regular-degree identity |B|=r*deficiency gives deficiency 2 for the classified
+minima. This calculation alone does not make an arbitrary potential word a
+blocker. The producer correctly distinguishes this from classification.
+
+The independently recomputed endpoint matrices use backward subset recurrences
+for EVERY initial vertex, rather than using the producer's single-start forward
+DP and translation. Their off-diagonal values are 1/8 at P7 and 628/1101 at P11.
+Totals are 189 and 95095. All ordered distinct endpoint counts are positive.
+
+Deletion sets were reconstructed directly as outgoing pairs, incoming pairs,
+and stars, with the two exceptional Hall-cut families also constructed at P7.
+Their masks agree exactly with the pinned complete classification. Signed support
+propagation anchored at head 0 independently recovers integer potentials of
+deficiency 2 for each. A full permutation filter enumerates all 189 P7 paths;
+11,907 individual blocker/path incidences verify the endpoint identity, not just
+its aggregate. P7's 49 basic minima have histogram {1:54,2:135}; all 14 additional
+Hall minima have {1:57,2:129,3:3}. Thus 2 minus intersection can be -1 at P7.
+P11's 55 outgoing pairs, 55 incoming pairs, and 11 stars all have the same
+histogram {1:17290,2:77805}; scalar histograms cannot identify them.
+
+For the fixed observer 0 and common omission w, let L exclude 0,w and m=n-2.
+Outgoing pairs give (indicator(U intersect L), indicator(0 in U)*ones), and
+incoming pairs give the transpose. Stars give the equal pairs (ones,ones),
+(zeros,zeros), or (e_v,e_v). For m>=3 the nonconstant pair-side has weight at
+most 2 and cannot be all ones. If its constant opposite side is zero its
+weight is 1 or 2; if that side is one its weight is 0 or 1. Consequently no
+pair produces equal sides, outgoing and incoming cases are disjoint, and the
+producer's explicit decoder reconstructs the original label. In the one-member
+case the omitted w is forced. These observations also cover m=3, that is n=5.
+
+Omitting two forward labels u,v makes O_{0,u} and O_{0,v} indistinguishable;
+omitting two reverse labels makes I_{0,u} and I_{0,v} indistinguishable. Hence
+both directions need at least n-2 queries. At size 2n-4 exactly one omission
+occurs in each direction. Unequal omitted labels u,v cause O_{u,v} and S_v
+to coincide. Matching omissions all work, giving exactly n-1 optimal subsets
+of the already fixed pool. This is not an arbitrary-HP optimum or an adaptive
+lower bound. Different interior routes are not counted as distinct designs.
+
+Fresh signature checks cover every matching and mismatched omission for formal
+n=5,...,31 and every two-label lower-bound collision in both directions.
+A completely independent census of ALL query subsets at n=5,6,7 gives optimal
+sizes 6,8,10 and respectively 4,5,6 optimal subsets. This tests the lower bound
+without relying on the hand-selected collision argument. The n=4 collision
+O_{1,2}=I_{0,3} on retained labels 1,2 is verified as a formal signature example;
+no realizable four-vertex tournament satisfying the hypotheses is asserted.
+
+Scope: source proofs and their pinned independent audit establish the complete
+families at P7/P11. Their rational-rank certificates do not claim integral
+lattice saturation. This packet does not re-audit the entire inherited rank
+and classification machinery; it checks the exact source pins and reconstructs
+the classified sets needed for its new calculations. P11 satisfies both
+hypotheses of the fixed-pool theorem. P7 does not have the required n^2 family.
+Any larger certified Paley application must establish BOTH complete three-family
+classification and all ordered endpoint HP existence; the criterion's forward
+endpoint witness alone is insufficient for the latter. Formal n=5,...,31 tests
+do not establish existence of tournaments with those hypotheses at those orders.
+
+Reproducibility: inputs/producer is a complete frozen plaintext copy, including
+its source pins. The producer's normal/-O replay and content/extra/missing-file
+hostiles passed. The fresh audit has no assert-based checks, external imports,
+or mutable external data. Its normal/-O outputs match. The audit replay checks
+an exact file set and SHA256 digests, reruns both modes from an unrelated working
+directory, and independently rejects changed, added, and missing files. No
+producer mutation is used to test hostiles; only temporary copies are changed.

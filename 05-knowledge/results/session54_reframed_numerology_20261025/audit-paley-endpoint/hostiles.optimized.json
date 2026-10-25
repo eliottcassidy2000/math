@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "hostile": "count mutation",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "source mutation",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "missing source",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "extra file",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "nested extra file",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "false integral product",
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "false q19 congruence",
+      "status": "REJECTED"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"base_flags": 105, "figures": 2, "lift_edges": 945, "r10_counts": [39366, 433026], "scope": "diagram integrity and numeric/label sanity, not full source theorem replay", "self_test": "PASS: mutation, missing, extra, normal/-O", "status": "PASS"}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "CRITERION.md": "31855ee4976dd93f05fe93cd8415caa44f5d5e36fe8e8d5913cb7ad2d359ff14",
+    "README.md": "6b8d2d24f86aea213ed83aa111d2d653311d50ef27774ff97e347b23a823f6b4",
+    "certificate-19.json": "6f354a52b2176f5ad482fe53de4252f830989ce8dfbd75b8e213f1c33fd3a8db",
+    "certificate-23.json": "5632e3ab0f07667ec78c163f8be268ba354e4a7c1e0a899afdb530f26fce5591",
+    "certificate-31.json": "2cc2ccfaf0abf46798eb6cdb471e4f32064ad668b100724ef0e2d6db31f46610",
+    "discover.py": "f47313fd81abc06c4599a34e09f96efa76b2753ab0ad09b112d3818fc43b48fa",
+    "inputs/P11-rank.json": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea",
+    "provenance.json": "72d50fdda42f39f6fd3ec56739966510bacb425e5255d7771f3047b1e4e5893d",
+    "replay.py": "b459efefd0d73a957b3117ca81e88969f31858699328b61e280625314f058ed8",
+    "result-O.json": "193cf725dd673d38e0fda16b9d771db3063b9150e146a3db7a21498979e42ff2",
+    "result.json": "193cf725dd673d38e0fda16b9d771db3063b9150e146a3db7a21498979e42ff2",
+    "small-modular-O.json": "36d43adeac5c3d1da93df58268ba5d0969f5adca5889e16e329a658e11702e96",
+    "small-modular.json": "36d43adeac5c3d1da93df58268ba5d0969f5adca5889e16e329a658e11702e96",
+    "small_modular_probe.py": "7099ffb2367d1d1c761208f1e70c0868b6e10a899a90faabbad35c06234aa4a5",
+    "verify.py": "7f36d02584a394d2727d73e6c1b2b669f8a9da2443c4a8c002111e339851e80a"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

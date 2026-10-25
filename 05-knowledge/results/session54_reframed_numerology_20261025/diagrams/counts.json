@@ -1,0 +1,19 @@
+{
+  "native": {
+    "blockers": 63,
+    "boundary_images": 21,
+    "fiber_size": 3
+  },
+  "r10": {
+    "b0": 39366,
+    "b1": 433026
+  },
+  "typed": {
+    "degree": 5,
+    "flags": 105,
+    "lift_degree": 15,
+    "lift_edges": 945,
+    "lift_vertices": 126,
+    "objects": 42
+  }
+}

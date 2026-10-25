@@ -62,6 +62,8 @@ related:
 
 # HYP-9168 — the HP-blocking number equals the Hall bound
 
+**Progress routing — 2026-10-25, Session54.** The [cycle-packing theorem](../results/session54_reframed_numerology_20261025/cycle-packing-bound/README.md) proves beta_HP=n−1 for every prime-order circulant tournament. The [cycle-potential criterion](../results/session54_reframed_numerology_20261025/cycle-potential-classification/README.md), [larger Paley certificates](../results/session54_reframed_numerology_20261025/larger-paley-certificates/README.md), and [independent audit](../results/session54_reframed_numerology_20261025/audit-larger-paley/AUDIT.md) certify the complete minimum-blocker counts at orders 7,11,19,23,31 as 63,121,361,529,961. HYP-9168 and the general regular-tournament question remain OPEN.
+
 **Setting.** Let `beta(T)` be the fewest arcs of the tournament `T` whose deletion leaves a digraph with no Hamiltonian path. This answers the owner's question of how far a tournament can be shaved before it loses its last Hamiltonian path.
 
 **The bound.** In an HP, every vertex but the first has a predecessor. Delete every arc that enters `X` from outside `Y`, where `|Y| <= |X| - 2`. Then the `|X| - 1` vertices of `X` that need predecessors can find them only in `Y`, which is too small, so no HP survives. The dual uses successors. Hence `beta <= hall`.

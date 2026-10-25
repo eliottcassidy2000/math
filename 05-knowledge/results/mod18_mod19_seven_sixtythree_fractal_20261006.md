@@ -77,6 +77,8 @@ All three `.out` files sit beside their scripts and end in `ALL CHECKS PASSED`.
    * HYP-9162 reduces to one lemma: no vertex of the second copy has a doubly regular out-neighbourhood. The lemma is verified for `k <= 9`.
    * The resemblance of `63 = 56 + 7` to `P_7`'s blocking census (56 Hall obstructions + 7 exotic stars, the line you attached) is NUMEROLOGY: one comes from `2^6 − 1 = 7·2^3 + (2^3 − 1)`, the other from `Aut(P_7)`-orbit counts `21 + 21 + 14 + 7`.
 
+   **Progress routing — 2026-10-25, Session54.** An alternate [equivariant 63-point/F64 construction](session54_reframed_numerology_20261025/sixtythree-bridge/README.md) and [boundary-polarity bridge](session54_reframed_numerology_20261025/boundary-projectivization/README.md) retain specified symmetry data. The original Sierpiński equivalence remains obstructed; this does not revise the precise comparison above.
+
 ## 1. The clock tower (PROVED identities; merge table)
 
 | level `n` | modulus | clock `L_n` | `2^(L_n) − 1` | where it lives in the repo |

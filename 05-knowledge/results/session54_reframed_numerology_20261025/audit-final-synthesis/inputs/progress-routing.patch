@@ -1,0 +1,35 @@
+--- a/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md
++++ b/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md
+@@ -76,6 +76,8 @@
+      * At 63 vertices this is `63 = 8·7 + 7`: eight heptagon orbits around a fixed copy of the Paley heptagon `P_7`.
+    * HYP-9162 reduces to one lemma: no vertex of the second copy has a doubly regular out-neighbourhood. The lemma is verified for `k <= 9`.
+    * The resemblance of `63 = 56 + 7` to `P_7`'s blocking census (56 Hall obstructions + 7 exotic stars, the line you attached) is NUMEROLOGY: one comes from `2^6 − 1 = 7·2^3 + (2^3 − 1)`, the other from `Aut(P_7)`-orbit counts `21 + 21 + 14 + 7`.
++
++   **Progress routing — 2026-10-25, Session54.** An alternate [equivariant 63-point/F64 construction](session54_reframed_numerology_20261025/sixtythree-bridge/README.md) and [boundary-polarity bridge](session54_reframed_numerology_20261025/boundary-projectivization/README.md) retain specified symmetry data. The original Sierpiński equivalence remains obstructed; this does not revise the precise comparison above.
+ 
+ ## 1. The clock tower (PROVED identities; merge table)
+ 
+
+--- a/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md
++++ b/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md
+@@ -1,6 +1,8 @@
+ > **STATUS CORRECTION — 2026-10-22, Session27.** The historical text below is preserved as provenance, not as a theorem of nonmodularity. Its p=19 and p=23 factorizations refute the proposed uniform split-prime pattern behind r(11)=1729. They do not rule out other modular interpretations, prove an asymptotic limit, or establish that Paley tournaments universally maximize H. In particular, lack of small-prime smoothness does not imply distance from every special j-value or absence of all arithmetic structure. The exact identity r(11)=1729 and the numerical table are unaffected. The normalized R(p)=H(T_p)2^(p-1)/p! is different from r(p)=H(T_p)/|Aut(T_p)|; an asserted R-limit cannot be called an r-limit. THM-438 (01-canon/theorems/THM-438-paley-cluster-integrals-are-catalan.md) separately claims R(p)→e; this narrow correction neither audits nor retracts that theorem. The later fixed-H rational-series modular obstruction also has a different sequence and explicit hypotheses, not a blanket prohibition on future bridges. The unbenchmarked minutes-scale Held–Karp estimate at the end is not a certified runtime guarantee; standard subset DP has exponential work and memory.
+ >
+ > **Strongest conclusion established here:** r(11)=1729=j(i)+1 is an exact numerical identity, but its suggested all-split factorization explanation fails at p=19. These tests do not settle whether a differently defined modular map exists. Claims below of “no modular structure,” a universally closed question, universal Paley maximality, or governance by e are superseded as conclusions of this reflection.
++
++**Progress routing — 2026-10-25, Session54.** The [Paley endpoint-order observer](../05-knowledge/results/session54_reframed_numerology_20261025/paley-endpoint-observer/RESULT.md) retains the open/closed path split and an associated quadratic order. This supplies no scalar modular-form coefficient law and does not repair the failed factorization pattern or alter the correction above.
+ 
+ # The 1729 resonance is isolated: the canonical tournament ratio has no modular structure
+ 
+
+--- a/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md
++++ b/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md
+@@ -62,6 +62,8 @@
+ 
+ # HYP-9168 — the HP-blocking number equals the Hall bound
+ 
++**Progress routing — 2026-10-25, Session54.** The [cycle-packing theorem](../results/session54_reframed_numerology_20261025/cycle-packing-bound/README.md) proves beta_HP=n−1 for every prime-order circulant tournament. The [cycle-potential criterion](../results/session54_reframed_numerology_20261025/cycle-potential-classification/README.md), [larger Paley certificates](../results/session54_reframed_numerology_20261025/larger-paley-certificates/README.md), and [independent audit](../results/session54_reframed_numerology_20261025/audit-larger-paley/AUDIT.md) certify the complete minimum-blocker counts at orders 7,11,19,23,31 as 63,121,361,529,961. HYP-9168 and the general regular-tournament question remain OPEN.
++
+ **Setting.** Let `beta(T)` be the fewest arcs of the tournament `T` whose deletion leaves a digraph with no Hamiltonian path. This answers the owner's question of how far a tournament can be shaved before it loses its last Hamiltonian path.
+ 
+ **The bound.** In an HP, every vertex but the first has a predecessor. Delete every arc that enters `X` from outside `Y`, where `|Y| <= |X| - 2`. Then the `|X| - 1` vertices of `X` that need predecessors can find them only in `Y`, which is too small, so no HP survives. The dual uses successors. Hence `beta <= hall`.

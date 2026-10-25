@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "q": 3,
+      "a": 0,
+      "b": 1,
+      "s": 1,
+      "delta": -1,
+      "H": 3,
+      "unrooted_cycles": 1,
+      "norm": 1,
+      "a_mod_q": 0,
+      "b_mod_q": 1,
+      "delta_mod_q": 2,
+      "order_conductor": 1,
+      "order_discriminant": -3,
+      "determinant": 1,
+      "dp_bytes": 64
+    },
+    {
+      "q": 7,
+      "a": 1,
+      "b": 8,
+      "s": 9,
+      "delta": -7,
+      "H": 189,
+      "unrooted_cycles": 24,
+      "norm": 106,
+      "a_mod_q": 1,
+      "b_mod_q": 1,
+      "delta_mod_q": 0,
+      "order_conductor": 7,
+      "order_discriminant": -343,
+      "determinant": 32157432,
+      "dp_bytes": 3072
+    },
+    {
+      "q": 11,
+      "a": 628,
+      "b": 1101,
+      "s": 1729,
+      "delta": -473,
+      "H": 95095,
+      "unrooted_cycles": 5505,
+      "norm": 1362615,
+      "a_mod_q": 1,
+      "b_mod_q": 1,
+      "delta_mod_q": 0,
+      "order_conductor": 473,
+      "order_discriminant": -2461019,
+      "determinant": 40609797590235186952230464055421875,
+      "dp_bytes": 81920
+    },
+    {
+      "q": 19,
+      "a": 3040229428,
+      "b": 3817640437,
+      "s": 6857869865,
+      "delta": -777411009,
+      "H": 1172695746915,
+      "unrooted_cycles": 34358763933,
+      "norm": 14628342186662170441,
+      "a_mod_q": 3,
+      "b_mod_q": 1,
+      "delta_mod_q": 2,
+      "order_conductor": 777411009,
+      "order_discriminant": -11482989661373563539,
+      "determinant": 1893161859811349852055519844389357892378204600661478622862648457185194194741730618278659500352802039735692194530455050229537485279899273050248991976787894756683807384910209611768363385,
+      "dp_bytes": 37748736
+    }
+  ],
+  "checks": [
+    "forward/backward C++ agreement",
+    "independent Python DP q<=11",
+    "permutations q<=7",
+    "quadratic matrix identity",
+    "labelled reconstruction",
+    "symmetrization and scalar hostiles"
+  ]
+}

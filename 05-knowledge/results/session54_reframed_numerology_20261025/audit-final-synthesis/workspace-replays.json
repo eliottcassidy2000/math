@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "audit-larger-paley",
+    "audit-endpoint-response",
+    "diagrams",
+    "audit-paley-endpoint: relocated normal/-O exact fixtures and four closure mutations"
+  ]
+}

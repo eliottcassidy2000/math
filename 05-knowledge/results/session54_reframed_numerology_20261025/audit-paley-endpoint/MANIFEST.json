@@ -1,0 +1,102 @@
+[
+  {
+    "path": "AUDIT.md",
+    "sha256": "4b62ac7e45a5c44ad72ee6e2803c57b7631229c0959ad90e47c58c37732437e9"
+  },
+  {
+    "path": "audit.py",
+    "sha256": "ca3ad72a8570085e7dede877ffdaa305d569369e38b65b69c06d796f8baf6ae7"
+  },
+  {
+    "path": "closed-replay.json",
+    "sha256": "41801c2b52a6b0a02bb67c0ad971659f76804921488884410e8323bd66a2910f"
+  },
+  {
+    "path": "hostiles.normal.json",
+    "sha256": "448090ecebf290158b24244828facbfb2b3e1e2e26ebbfbde8523053cf6a0f07"
+  },
+  {
+    "path": "hostiles.optimized.json",
+    "sha256": "448090ecebf290158b24244828facbfb2b3e1e2e26ebbfbde8523053cf6a0f07"
+  },
+  {
+    "path": "hostiles.py",
+    "sha256": "2e8046a66c55b6a619168a7d4c4b2abba84242b06e80abcd61e4e2d6f2df4676"
+  },
+  {
+    "path": "independent_count.cpp",
+    "sha256": "c83263ce6b023939b92f91ef54be68a149fea275b0ff8f175b005928e7cdb250"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/MANIFEST.json",
+    "sha256": "f0cd99a83f510de52801ec4187dd6a15d4a79f93275ea3e6f49561c32cc8b7b6"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/RESULT.md",
+    "sha256": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/count.cpp",
+    "sha256": "3b372880bccc2c9995e3ee0c3479a61da7f704c6603e10bc549cc50a0c292d1c"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/counts.txt",
+    "sha256": "d265b2739be3567e6b583641b66ae59b3df9e03b41ea42f0665996128abc6b4d"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/receipt.json",
+    "sha256": "42737c1e613dde28e245bcd001135375b0cc48d2c587ba21a625c0d522299895"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/receipt.optimized.json",
+    "sha256": "42737c1e613dde28e245bcd001135375b0cc48d2c587ba21a625c0d522299895"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/0-the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+    "sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/1-MISTAKE-658.md",
+    "sha256": "35aa3323a7d14ce99b4426b8dbb1743f3425dda51ae3e4873106e83c74132412"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/2-REVIEW.md",
+    "sha256": "e354cb553625b6090de015daa602c520774c226bcd0a10d5447ece79afbcc5c1"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/3-PALEY_MONSTER_BRIDGE.md",
+    "sha256": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/4-tournament-matrix-classic-results-atlas-codex-s210.md",
+    "sha256": "b0be22805af178c9044d5049b1018324b06710739338b827e13ed5974c27ab1f"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/5-THM-001-redei.md",
+    "sha256": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources/6-THM-002-ocf.md",
+    "sha256": "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/sources.json",
+    "sha256": "2ffdde92266114cb6ae8391a71f5424267720ef8e839df0fb6c12f26617b7526"
+  },
+  {
+    "path": "inputs/session54-paley-endpoint-observer/verify.py",
+    "sha256": "84c442e945a7c98a187b88f0c4b280287511c74f5e9dcf8a53ef37029cf40a32"
+  },
+  {
+    "path": "normal.json",
+    "sha256": "3576033b939b2941a129f3aa7945c980f0b3bed7498f3da4b71459c445294c69"
+  },
+  {
+    "path": "optimized.json",
+    "sha256": "3576033b939b2941a129f3aa7945c980f0b3bed7498f3da4b71459c445294c69"
+  },
+  {
+    "path": "verify_manifest.py",
+    "sha256": "efde088c722a9fe00a4427d1cb7ddd51c1ad884a83f13b047949f446738e4ad5"
+  }
+]

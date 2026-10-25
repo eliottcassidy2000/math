@@ -1,0 +1,148 @@
+Endpoint responses identify minimum blockers after scalar collapse
+
+Status: PROVED conditional theorem and independently checked finite consequences.
+This is a deduction from the pinned cycle-potential classification and endpoint
+counts, not a new classification, an unconditional all-Paley theorem, or a
+literature-priority claim. No previous packet was modified.
+
+1. Exact endpoint response
+
+Let T be a tournament, B a binary arc word, and suppose
+  b_uv = a_u - d_v on every arc,  sum_v a_v - sum_v d_v = 2.
+For any directed Hamiltonian path P=(v_1,...,v_n) with start s and end t,
+  |B intersect P|
+    = sum_{i=1}^{n-1}(a_{v_i}-d_{v_{i+1}})
+    = sum_v a_v - a_t - (sum_v d_v - d_s)
+    = 2 - a_t + d_s.
+Thus paths with the same actual ordered endpoints have the same response;
+the interior order is irrelevant. The formula is invariant under simultaneous
+constant shifts of both potential lists. Binary potentials themselves are not
+required; only binary arc values are. In a regular tournament with outdegree r,
+|B|=r(sum a-sum d), so the classified minimum blockers of size 2r have the
+required deficiency 2.
+
+The formula does NOT imply B is a blocker. The classified mixed row/column
+nonblockers have a zero-intersection endpoint witness. Nor does every binary
+potential blocker have responses in {1,2}: P7's exceptional Hall families attain
+3. These distinguish the general identity from the special signature theorem.
+
+2. Scalar histograms collapse at P11
+
+For P_q let E_st count HPs with start s and end t. The square-affine action gives
+E_st=A on arcs s->t and E_st=B otherwise (s!=t), with zero diagonal. Each row
+and each column sums to R=r(A+B). Total H=qR. We use A,B here as scalars, not
+as the deletion word B in section 1.
+
+For deletion of the outgoing arcs at a vertex pair U, intersection is
+2-1_{t in U}; for incoming pair U it is 2-1_{s in U}; for the full incident
+star at v it is 2-1_{s=v}-1_{t=v}. In each case exactly 2R paths meet the
+blocker once, and H-2R meet it twice. In the star case the two endpoint events
+are disjoint because an HP has distinct endpoints.
+
+At P11, A=628,B=1101,r=5, R=8645,H=95095. The audited complete classification
+has 55 outgoing pairs,55 incoming pairs,11 stars. ALL 121 minima therefore
+share the scalar intersection histogram
+  intersection 1:17290 paths; intersection 2:77805 paths.
+No scalar histogram identification of these 121 objects is possible.
+
+At P7, A=1,B=8,r=3,R=27,H=189. Its 21+21+7 basic minima share histogram
+  intersection 1:54; intersection 2:135.
+The 14 additional Hall minima instead have histogram
+  intersection 1:57; intersection 2:129; intersection 3:3.
+The checker enumerates all 189 actual P7 paths, independently reconstructs
+integral potentials from each blocker on the bipartite support, and checks the
+identity path by path. For P11 it independently recomputes the fixed-start
+endpoint counts using subset DP, translates to every start, and evaluates all
+121 endpoint-weighted histograms. It does not enumerate P11 deletion subsets.
+
+3. Optimal fixed-observer star-pool theorem
+
+Assume a tournament T on n>=5 vertices has an HP for EVERY ordered pair of
+DISTINCT endpoints, and its complete minimum blocker family consists of the
+outgoing pairs O_U, incoming pairs I_U (|U|=2), and stars S_v, these being n^2
+distinct blockers. Fix observer vertex 0. Choose any one HP for each endpoint
+pair 0->i and i->0, i!=0. These 2(n-1) chosen HPs form the observer star pool.
+Repeated paths with equal endpoints cannot help by section 1.
+
+For an HP query define its bit as 2 minus its blocker intersection. In these
+three families the bit is respectively
+  O_U: 1_{end in U}; I_U:1_{start in U}; S_v:1_{start=v}+1_{end=v}.
+They really are bits since start and end differ. The requisite potential
+representations are (a,d)=(1_U,0), (0,-1_U), and (1_v,-1_v).
+
+Pick any w!=0. Omit BOTH queries 0->w and w->0, retain the remaining 2n-4.
+Let L=V minus {0,w}, m=|L|=n-2>=3, and record the signature (x,y), where
+x_i is the bit on 0->i, y_i the bit on i->0, i in L.
+Write 0_m,1_m for constant vectors, and e_v for a retained unit vector.
+The complete list is:
+  O_U: (1_{U intersect L}, 1_{0 in U} 1_m).
+  I_U: (1_{0 in U} 1_m, 1_{U intersect L}).
+  S_0:(1_m,1_m); S_w:(0_m,0_m); S_v:(e_v,e_v) for v in L.
+Here a vector 1_{U intersect L} is not all ones because |U|=2<m, unless
+m=2, excluded. If 0 not in U its weight is 1 or 2; if 0 in U its weight is
+0 or 1. This list is injective.
+
+Explicit decoder (also implemented verbatim in verify.py):
+- If x=y, it is a star: all ones identifies 0, all zeros identifies w,
+  and the nonzero coordinate of a unit vector identifies a retained vertex.
+- Otherwise, if y is constant and x is NOT all ones, it is outgoing pair.
+  Its retained members are the ones of x; include 0 iff y is all ones.
+  If this yields only one member, include w.
+- Otherwise it is incoming pair. Its retained members are the ones of y;
+  include 0 iff x is all ones; if only one member results, include w.
+The exceptional constant patterns are handled correctly: (0_m,1_m) means
+O_{0,w}, whereas (1_m,0_m) means I_{0,w}. No zero-member case occurs.
+
+Lower bound WITHIN THIS FIXED POOL: if two terminal labels u,v!=0 are
+unqueried, the distinct blockers O_{0,u} and O_{0,v} agree on every retained
+query. Every reverse query has end 0, and every retained forward query has
+end outside {u,v}; their bits agree in both cases. Therefore at most one
+forward query may be omitted. Symmetrically I_{0,u},I_{0,v} show at most one
+reverse query may be omitted. Fewer than 2n-4 queries omit at least three
+of the 2n-2 pool elements, hence omit two in one direction, and fail.
+This proves the sharp optimum 2n-4 inside the fixed-observer star pool.
+Moreover this characterizes ALL optimal fixed subsets: the separate bounds
+force exactly one forward and one reverse omission. Suppose the forward
+omission is 0->u and the reverse omission is v->0 with u!=v. Then O_{u,v}
+and S_v agree on every retained query: their forward vectors both have the
+sole 1 at v, while their reverse vectors are zero (the v coordinate was
+omitted). Hence an optimal separating subset must omit matching labels.
+Conversely the decoder above proves every matching omission works. There are
+exactly n-1 optimal subsets, one for each w!=0. This count concerns subsets
+of the fixed pool of chosen paths, not the many choices of interior HP routes.
+The proved bound concerns fixed separating subsets of this pool. It is NOT an
+optimum over arbitrary HP query sets, and no adaptive-query lower bound is
+claimed.
+
+Boundary hostile n=4: with observer 0, omitted w=3 and retained labels 1,2,
+O_{1,2} and I_{0,3} both give (x,y)=(11,00). Thus the algebraic construction
+fails when m=2. This is a signature countermodel, NOT a claim of a four-vertex
+tournament meeting the theorem's full hypotheses.
+
+4. Scope and certificates
+
+The signature theorem uses no regularity or Paley property beyond its stated
+hypotheses. P11 satisfies them by the audited complete classification and
+strict positivity of independently checked endpoint counts; its pool optimum
+is 18 of the original 20 queries. P7 has extra minima, so the n^2-family
+theorem is NOT applied to P7. Its exceptional Hall response may be -1 rather
+than a bit. Larger certified Paley orders may use the theorem only after BOTH
+complete three-family classification and all ordered endpoint HP existence
+are established. A forward endpoint witness alone is insufficient for the
+latter: check both endpoint orbits. No general Paley rank or endpoint assertion
+is imported implicitly from the conditional criterion.
+
+The checker verifies every omitted w and every family label for n=5,...,31,
+including explicit decoding. It tests lower-bound indistinguishability witnesses
+for every pair of omitted labels in both directions, every unequal forward/reverse
+omission collision, and the n=4 hostile.
+These are finite checks of an already proved algebraic theorem, not claims
+that tournaments with its hypotheses exist at every integer n in that range.
+
+inputs/ pins the source classification, its independent audit, endpoint theorem
+and count receipt, and the larger-order conditional criterion. SOURCES.json
+records original paths and SHA256 hashes. The bundled source files are evidence,
+not an attempt to rerun the complete inherited classification audit. replay.py
+checks the exact delivered file set/digests and independently repeats this new
+checker in normal and optimized Python; its self-test rejects a changed file,
+an extra file, and a missing file. No assertion is used for proof checks.

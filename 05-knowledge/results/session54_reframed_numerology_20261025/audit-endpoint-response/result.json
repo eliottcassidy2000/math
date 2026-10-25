@@ -1,0 +1,497 @@
+{
+  "exhaustive_pool_census": [
+    {
+      "n": 5,
+      "separating_subsets_by_size": {
+        "6": 4,
+        "7": 8,
+        "8": 1
+      }
+    },
+    {
+      "n": 6,
+      "separating_subsets_by_size": {
+        "8": 5,
+        "9": 10,
+        "10": 1
+      }
+    },
+    {
+      "n": 7,
+      "separating_subsets_by_size": {
+        "10": 6,
+        "11": 12,
+        "12": 1
+      }
+    }
+  ],
+  "formal_signature_checks": [
+    {
+      "matching_designs": 4,
+      "n": 5,
+      "queries": 6
+    },
+    {
+      "matching_designs": 5,
+      "n": 6,
+      "queries": 8
+    },
+    {
+      "matching_designs": 6,
+      "n": 7,
+      "queries": 10
+    },
+    {
+      "matching_designs": 7,
+      "n": 8,
+      "queries": 12
+    },
+    {
+      "matching_designs": 8,
+      "n": 9,
+      "queries": 14
+    },
+    {
+      "matching_designs": 9,
+      "n": 10,
+      "queries": 16
+    },
+    {
+      "matching_designs": 10,
+      "n": 11,
+      "queries": 18
+    },
+    {
+      "matching_designs": 11,
+      "n": 12,
+      "queries": 20
+    },
+    {
+      "matching_designs": 12,
+      "n": 13,
+      "queries": 22
+    },
+    {
+      "matching_designs": 13,
+      "n": 14,
+      "queries": 24
+    },
+    {
+      "matching_designs": 14,
+      "n": 15,
+      "queries": 26
+    },
+    {
+      "matching_designs": 15,
+      "n": 16,
+      "queries": 28
+    },
+    {
+      "matching_designs": 16,
+      "n": 17,
+      "queries": 30
+    },
+    {
+      "matching_designs": 17,
+      "n": 18,
+      "queries": 32
+    },
+    {
+      "matching_designs": 18,
+      "n": 19,
+      "queries": 34
+    },
+    {
+      "matching_designs": 19,
+      "n": 20,
+      "queries": 36
+    },
+    {
+      "matching_designs": 20,
+      "n": 21,
+      "queries": 38
+    },
+    {
+      "matching_designs": 21,
+      "n": 22,
+      "queries": 40
+    },
+    {
+      "matching_designs": 22,
+      "n": 23,
+      "queries": 42
+    },
+    {
+      "matching_designs": 23,
+      "n": 24,
+      "queries": 44
+    },
+    {
+      "matching_designs": 24,
+      "n": 25,
+      "queries": 46
+    },
+    {
+      "matching_designs": 25,
+      "n": 26,
+      "queries": 48
+    },
+    {
+      "matching_designs": 26,
+      "n": 27,
+      "queries": 50
+    },
+    {
+      "matching_designs": 27,
+      "n": 28,
+      "queries": 52
+    },
+    {
+      "matching_designs": 28,
+      "n": 29,
+      "queries": 54
+    },
+    {
+      "matching_designs": 29,
+      "n": 30,
+      "queries": 56
+    },
+    {
+      "matching_designs": 30,
+      "n": 31,
+      "queries": 58
+    }
+  ],
+  "n4_formal_countermodel": true,
+  "paley": [
+    {
+      "blockers": 63,
+      "direct_path_checks": 11907,
+      "endpoint_counts": [
+        [
+          0,
+          1,
+          1,
+          8,
+          1,
+          8,
+          8
+        ],
+        [
+          8,
+          0,
+          1,
+          1,
+          8,
+          1,
+          8
+        ],
+        [
+          8,
+          8,
+          0,
+          1,
+          1,
+          8,
+          1
+        ],
+        [
+          1,
+          8,
+          8,
+          0,
+          1,
+          1,
+          8
+        ],
+        [
+          8,
+          1,
+          8,
+          8,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          8,
+          1,
+          8,
+          8,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          8,
+          1,
+          8,
+          8,
+          0
+        ]
+      ],
+      "histograms": [
+        [
+          "Hall",
+          [
+            [
+              1,
+              57
+            ],
+            [
+              2,
+              129
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          14
+        ],
+        [
+          "incoming",
+          [
+            [
+              1,
+              54
+            ],
+            [
+              2,
+              135
+            ]
+          ],
+          21
+        ],
+        [
+          "outgoing",
+          [
+            [
+              1,
+              54
+            ],
+            [
+              2,
+              135
+            ]
+          ],
+          21
+        ],
+        [
+          "star",
+          [
+            [
+              1,
+              54
+            ],
+            [
+              2,
+              135
+            ]
+          ],
+          7
+        ]
+      ],
+      "n": 7,
+      "total_paths": 189
+    },
+    {
+      "blockers": 121,
+      "direct_path_checks": 0,
+      "endpoint_counts": [
+        [
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101
+        ],
+        [
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628
+        ],
+        [
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101
+        ],
+        [
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101
+        ],
+        [
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101
+        ],
+        [
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628,
+          628
+        ],
+        [
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628,
+          628
+        ],
+        [
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101,
+          628
+        ],
+        [
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628,
+          1101
+        ],
+        [
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0,
+          628
+        ],
+        [
+          628,
+          1101,
+          628,
+          628,
+          628,
+          1101,
+          1101,
+          1101,
+          628,
+          1101,
+          0
+        ]
+      ],
+      "histograms": [
+        [
+          "incoming",
+          [
+            [
+              1,
+              17290
+            ],
+            [
+              2,
+              77805
+            ]
+          ],
+          55
+        ],
+        [
+          "outgoing",
+          [
+            [
+              1,
+              17290
+            ],
+            [
+              2,
+              77805
+            ]
+          ],
+          55
+        ],
+        [
+          "star",
+          [
+            [
+              1,
+              17290
+            ],
+            [
+              2,
+              77805
+            ]
+          ],
+          11
+        ]
+      ],
+      "n": 11,
+      "total_paths": 95095
+    }
+  ],
+  "status": "PASS"
+}

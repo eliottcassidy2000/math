@@ -1,0 +1,23 @@
+{
+  "AUDIT.txt": "f8f1759429dea2489244d58a9ea80f2ff909c328bd13278093d101ceaa4b0b8f",
+  "audit.py": "30b0e3063334780111d92c4052e91fdc05f04a0a86effe3bd686c257df74c000",
+  "inputs/producer/MANIFEST.json": "06ae4026cb1a451086250012a9d2b3816d1510622b6d71ec79699e5c5845942b",
+  "inputs/producer/PROOF.txt": "698a1b1b45940cbfcf5ace64c21abd55ba54767b336a3c129352837f2b508ba3",
+  "inputs/producer/SOURCES.json": "a97169e8806dfe5585a8b9b7886d61b4eec3f794ebdfc83b1a9146e8977bb792",
+  "inputs/producer/inputs/CRITERION.md": "31855ee4976dd93f05fe93cd8415caa44f5d5e36fe8e8d5913cb7ad2d359ff14",
+  "inputs/producer/inputs/README.md": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af",
+  "inputs/producer/inputs/RESULT.md": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0",
+  "inputs/producer/inputs/classification-AUDIT.md": "e2aac7c685a679e35f43bfdfe9126c7cc725e2a1c20a9ac4cc345dd022467c83",
+  "inputs/producer/inputs/rank-11.json": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea",
+  "inputs/producer/inputs/rank-7.json": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b",
+  "inputs/producer/inputs/receipt.json": "42737c1e613dde28e245bcd001135375b0cc48d2c587ba21a625c0d522299895",
+  "inputs/producer/inputs/result.json": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db",
+  "inputs/producer/replay.py": "e26f9664dff28ab23988104de54670cad17c2734d6b63f2d20828f392e8204b1",
+  "inputs/producer/result-O.json": "59f236fb43e289a1f5a050ed5609d971370b334fc3495dbe98d0894fd9e4d8ca",
+  "inputs/producer/result.json": "59f236fb43e289a1f5a050ed5609d971370b334fc3495dbe98d0894fd9e4d8ca",
+  "inputs/producer/verify.py": "a7201ffd959ea79f328371c8e355aecf568536254095e5f4b39f1c21e01898bf",
+  "producer-replay.txt": "df5b0e30cfe168fef789967713cddd9797dc3f4f983062ba82ee1ae3420fc40e",
+  "replay.py": "521c6cb9af0cc0560bc834389178670c9385288def9abc820592a8e1d1ed1ad8",
+  "result-O.json": "fa6532a4494594e4c6ee57d53d5d1ef44fc869eb56fd03501feb93c009167b3c",
+  "result.json": "fa6532a4494594e4c6ee57d53d5d1ef44fc869eb56fd03501feb93c009167b3c"
+}

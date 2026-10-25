@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "all_directed_Hamilton_cycles_rooted_at0": 24,
+      "full_difference_rank_mod101": 8,
+      "full_difference_rank_mod2": 8,
+      "n": 7,
+      "rational_rank_already_certified": 8,
+      "scope": "Rank comparison only; no integral-lattice torsion conclusion"
+    },
+    {
+      "all_directed_Hamilton_cycles_rooted_at0": 5505,
+      "full_difference_rank_mod101": 34,
+      "full_difference_rank_mod2": 34,
+      "n": 11,
+      "rational_rank_already_certified": 34,
+      "scope": "Rank comparison only; no integral-lattice torsion conclusion"
+    }
+  ],
+  "status": "PASS"
+}

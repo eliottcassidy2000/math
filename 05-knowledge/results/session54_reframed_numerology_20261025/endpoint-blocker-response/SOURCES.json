@@ -1,0 +1,42 @@
+[
+  {
+    "bundled": "inputs/README.md",
+    "original": "session54-cycle-potential-classification/README.md",
+    "sha256": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af"
+  },
+  {
+    "bundled": "inputs/result.json",
+    "original": "session54-cycle-potential-classification/result.json",
+    "sha256": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db"
+  },
+  {
+    "bundled": "inputs/rank-7.json",
+    "original": "session54-cycle-potential-classification/rank-7.json",
+    "sha256": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b"
+  },
+  {
+    "bundled": "inputs/rank-11.json",
+    "original": "session54-cycle-potential-classification/rank-11.json",
+    "sha256": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea"
+  },
+  {
+    "bundled": "inputs/classification-AUDIT.md",
+    "original": "session54-audit-cycle-potential/AUDIT.md",
+    "sha256": "e2aac7c685a679e35f43bfdfe9126c7cc725e2a1c20a9ac4cc345dd022467c83"
+  },
+  {
+    "bundled": "inputs/RESULT.md",
+    "original": "session54-paley-endpoint-observer/RESULT.md",
+    "sha256": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0"
+  },
+  {
+    "bundled": "inputs/receipt.json",
+    "original": "session54-paley-endpoint-observer/receipt.json",
+    "sha256": "42737c1e613dde28e245bcd001135375b0cc48d2c587ba21a625c0d522299895"
+  },
+  {
+    "bundled": "inputs/CRITERION.md",
+    "original": "session54-larger-paley-certificates/CRITERION.md",
+    "sha256": "31855ee4976dd93f05fe93cd8415caa44f5d5e36fe8e8d5913cb7ad2d359ff14"
+  }
+]

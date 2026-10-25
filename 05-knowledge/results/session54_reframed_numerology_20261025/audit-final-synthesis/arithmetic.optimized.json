@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "gluing_controls": [
+    {
+      "q": 3,
+      "M": 3,
+      "valuation": 1,
+      "conductor": 1
+    },
+    {
+      "q": 7,
+      "M": 1078,
+      "valuation": 2,
+      "conductor": 7
+    },
+    {
+      "q": 11,
+      "M": 91045845,
+      "valuation": 2,
+      "conductor": 473
+    },
+    {
+      "q": 19,
+      "M": 4247362459861422810691,
+      "valuation": 1,
+      "conductor": 777411009
+    }
+  ],
+  "valuation_guards": 426,
+  "larger_endpoint_orbits": [
+    {
+      "q": 19,
+      "ordered_pairs": 342,
+      "queries": 34
+    },
+    {
+      "q": 23,
+      "ordered_pairs": 506,
+      "queries": 42
+    },
+    {
+      "q": 31,
+      "ordered_pairs": 930,
+      "queries": 58
+    }
+  ],
+  "fixed_pool_complete_census": [
+    {
+      "formal_n": 5,
+      "minimum": 6,
+      "optimal_subsets": 4
+    },
+    {
+      "formal_n": 6,
+      "minimum": 8,
+      "optimal_subsets": 5
+    }
+  ],
+  "P11_histogram": [
+    17290,
+    77805
+  ]
+}

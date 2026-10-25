@@ -1,0 +1,1 @@
+PASS: source pins, exact manifest, normal/-O replay, content/extra/missing hostiles

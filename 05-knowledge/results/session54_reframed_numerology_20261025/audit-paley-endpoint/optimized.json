@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "producer_manifest_sha256": "f0cd99a83f510de52801ec4187dd6a15d4a79f93275ea3e6f49561c32cc8b7b6",
+  "records": [
+    {
+      "q": 3,
+      "a": 0,
+      "b": 1,
+      "H": 3,
+      "C": 1,
+      "s": 1,
+      "delta": -1,
+      "N": 1,
+      "M": 3,
+      "conductor": 1,
+      "discriminant": -3,
+      "independent_dp_bytes": 192
+    },
+    {
+      "q": 7,
+      "a": 1,
+      "b": 8,
+      "H": 189,
+      "C": 24,
+      "s": 9,
+      "delta": -7,
+      "N": 106,
+      "M": 1078,
+      "conductor": 7,
+      "discriminant": -343,
+      "independent_dp_bytes": 7168
+    },
+    {
+      "q": 11,
+      "a": 628,
+      "b": 1101,
+      "H": 95095,
+      "C": 5505,
+      "s": 1729,
+      "delta": -473,
+      "N": 1362615,
+      "M": 91045845,
+      "conductor": 473,
+      "discriminant": -2461019,
+      "independent_dp_bytes": 180224
+    },
+    {
+      "q": 19,
+      "a": 3040229428,
+      "b": 3817640437,
+      "H": 1172695746915,
+      "C": 34358763933,
+      "s": 6857869865,
+      "delta": -777411009,
+      "N": 14628342186662170441,
+      "M": 4247362459861422810691,
+      "conductor": 777411009,
+      "discriminant": -11482989661373563539,
+      "independent_dp_bytes": 79691776
+    }
+  ],
+  "scope": "Prime q theorem; independent exact DP q=3,7,11,19; no modular coefficient law; integral order not direct product"
+}

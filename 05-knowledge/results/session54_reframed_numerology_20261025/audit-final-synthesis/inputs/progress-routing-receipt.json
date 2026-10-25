@@ -1,0 +1,33 @@
+{
+  "status": "REVIEW REQUIRED",
+  "date": "2026-10-25",
+  "targets": [
+    {
+      "path": "05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "source_sha256": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b",
+      "result_sha256": "3e50e3938cb5022c983b094d00196d90472a213a14f914968705f1ad540c91ed",
+      "source_bytes": 34371,
+      "result_bytes": 34791,
+      "status": "Staged for review; not published"
+    },
+    {
+      "path": "07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "source_sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98",
+      "result_sha256": "f54e5c0328783e38339252fb8918ce11e4f7a3c7f0e8595d84d1d16bddebd6fd",
+      "source_bytes": 9387,
+      "result_bytes": 9777,
+      "status": "Staged for review; not published"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md",
+      "source_sha256": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434",
+      "result_sha256": "b410f1f093143c9cd1013cffd737dcfdb55c494f17c3252c9fbff1c8d68e973b",
+      "source_bytes": 5403,
+      "result_bytes": 6127,
+      "status": "Staged for review; not published"
+    }
+  ],
+  "archived_snapshots_unchanged": true,
+  "hypothesis_frontmatter_unchanged": true,
+  "reflection_front_warning_preserved": true
+}
