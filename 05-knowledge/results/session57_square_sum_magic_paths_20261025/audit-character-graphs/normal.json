@@ -1,0 +1,159 @@
+{
+  "pinned_source_files": 12,
+  "fields": [
+    {
+      "q": 3,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 5,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 7,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 9,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 11,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 13,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 17,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 19,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 23,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 25,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 27,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 29,
+      "normalized_magic_count": 4
+    },
+    {
+      "q": 31,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 37,
+      "normalized_magic_count": 4
+    },
+    {
+      "q": 41,
+      "normalized_magic_count": 2
+    },
+    {
+      "q": 43,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 47,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 49,
+      "normalized_magic_count": 2
+    },
+    {
+      "q": 53,
+      "normalized_magic_count": 4
+    },
+    {
+      "q": 59,
+      "normalized_magic_count": 8
+    },
+    {
+      "q": 61,
+      "normalized_magic_count": 8
+    },
+    {
+      "q": 67,
+      "normalized_magic_count": 0
+    },
+    {
+      "q": 71,
+      "normalized_magic_count": 8
+    },
+    {
+      "q": 73,
+      "normalized_magic_count": 20
+    },
+    {
+      "q": 79,
+      "normalized_magic_count": 16
+    },
+    {
+      "q": 81,
+      "normalized_magic_count": 54
+    },
+    {
+      "q": 83,
+      "normalized_magic_count": 8
+    },
+    {
+      "q": 89,
+      "normalized_magic_count": 16
+    },
+    {
+      "q": 97,
+      "normalized_magic_count": 36
+    },
+    {
+      "q": 101,
+      "normalized_magic_count": 12
+    }
+  ],
+  "affine_planes": [
+    {
+      "q": 81,
+      "H0_edges": 12,
+      "magic_arrangements": 432,
+      "all_arrangements": 362880,
+      "square_sum_edges": 36
+    },
+    {
+      "q": 729,
+      "H0_edges": 12,
+      "magic_arrangements": 432,
+      "all_arrangements": 362880,
+      "square_sum_edges": 36
+    },
+    {
+      "q": 2187,
+      "H0_edges": 12,
+      "magic_arrangements": 432,
+      "all_arrangements": 362880,
+      "square_sum_edges": 0
+    }
+  ],
+  "F17": {
+    "True": 1152,
+    "False": 112
+  },
+  "F59": {
+    "isolated_vertex": 57,
+    "hp": 0,
+    "magic_total": 3
+  },
+  "status": "PASS",
+  "total_normalized": 202
+}

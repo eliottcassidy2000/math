@@ -1,0 +1,114 @@
+[
+  {
+    "id": "S01",
+    "path": "05-knowledge/results/ap_square_pythagorean_20261019.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "106acbaaade8a65420c615cf1e26401b783f6f217ee238bd38570e620e5f442b",
+    "snapshot": "sources/S01.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/ap_square_pythagorean_20261019.md"
+  },
+  {
+    "id": "S02",
+    "path": "05-knowledge/results/square_sum_common_center_capacity_20261019.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "0b9ea41d95dac433bea355d7861625fec3baacebd19ba8279078c43a650778e1",
+    "snapshot": "sources/S02.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/square_sum_common_center_capacity_20261019.md"
+  },
+  {
+    "id": "S03",
+    "path": "05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "81e0f74d8840fa79a0d58123fdf7e126e4e45231e176e9ba3a2be0330b4b296d",
+    "snapshot": "sources/S03.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md"
+  },
+  {
+    "id": "S04",
+    "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb",
+    "snapshot": "sources/S04.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md"
+  },
+  {
+    "id": "S05",
+    "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/COLOR_FIRST_FAILURE.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "d4a55aa14ad15ba749f530680e1039914a57cd7700f0c2381c04346f72b36945",
+    "snapshot": "sources/S05.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/COLOR_FIRST_FAILURE.md"
+  },
+  {
+    "id": "S06",
+    "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/SYNTHESIS.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "7ceaead5f61da29c9472610be7ce25d1551724ee6d799937470d16aece70e896",
+    "snapshot": "sources/S06.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/SYNTHESIS.md"
+  },
+  {
+    "id": "S07",
+    "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/integer-search/RESULTS.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "68a8b4c770f7fb7ce49ddf460e22e3be23bc4b662a2c80f06de2df31c3cbce4e",
+    "snapshot": "sources/S07.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/integer-search/RESULTS.md"
+  },
+  {
+    "id": "S08",
+    "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/crt-wiring/THEOREM.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450",
+    "snapshot": "sources/S08.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/crt-wiring/THEOREM.md"
+  },
+  {
+    "id": "S09",
+    "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/weighted-crt/THEOREM.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "5707bb744b298bb95086886d6830d5178f83941824d39ca7ae7478da619634cc",
+    "snapshot": "sources/S09.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/weighted-crt/THEOREM.md"
+  },
+  {
+    "id": "S10",
+    "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/carry-lattice/PROOF.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "1827d43121b2bbf29bab26694004e13a16871537ff739aa8d7841136c30da56d",
+    "snapshot": "sources/S10.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/carry-lattice/PROOF.md"
+  },
+  {
+    "id": "S11",
+    "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/correlated-gluing/THEOREM.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "486221eeab577d016d69c6170077fa36135ddf935b497e9ddaeca3058914cf48",
+    "snapshot": "sources/S11.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session56_rmq_lca_connections_20261025/correlated-gluing/THEOREM.md"
+  },
+  {
+    "id": "S12",
+    "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/SYNTHESIS.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "0e4e7a338c7a6ce12a726fadaea96effbbb8153fa4ae82a9e7cab2ef14f7239f",
+    "snapshot": "sources/S12.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session56_rmq_lca_connections_20261025/SYNTHESIS.md"
+  },
+  {
+    "id": "S13",
+    "path": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/TWO-SHEET.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "8cf92e13d7cacfbc714f6411bad9250ce00bf69dd5c7bc03ba23bab37ea95f03",
+    "snapshot": "sources/S13.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/TWO-SHEET.md"
+  },
+  {
+    "id": "S14",
+    "path": "01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md",
+    "commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+    "sha256": "c19a71c4abb918c8c9faec66ba77eeeb2624e1dd038bdf68252ad51cc1ada4ee",
+    "snapshot": "sources/S14.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/01-canon/theorems/THM-4757-linear-forest-loop-expansion-of-hamiltonian-paths.md"
+  }
+]

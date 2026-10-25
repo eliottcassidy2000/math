@@ -1,0 +1,44 @@
+{
+  "Hamiltonian_counts": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    10
+  ],
+  "center_root_limit": 1105,
+  "checks": 44519,
+  "examples": {
+    "1105": {
+      "diamonds": [],
+      "short_gaps": 5,
+      "total_gaps": 13
+    },
+    "41": {
+      "diamonds": [],
+      "short_gaps": 1,
+      "total_gaps": 1
+    },
+    "5": {
+      "diamonds": [],
+      "short_gaps": 0,
+      "total_gaps": 1
+    },
+    "65": {
+      "diamonds": [],
+      "short_gaps": 1,
+      "total_gaps": 4
+    }
+  },
+  "negative_controls": 6,
+  "positive_petals_e_le_500": 68,
+  "source_scope": "14 inheritance snapshots hashed; 3 original carrier pins hashed; no promotion of source conjectures",
+  "status": "PASS",
+  "total_gaps_checked": 998
+}

@@ -1,0 +1,19 @@
+{
+  "external": {
+    "url": "https://arxiv.org/html/1908.03236v2",
+    "checked": "2026-10-25",
+    "pins": [
+      "Section 1, lines 36-48",
+      "Theorem 2.1 and Corollary 2.1, lines 70-80",
+      "Section 5, lines 180-186",
+      "Corollary 7.1, lines 314-316"
+    ],
+    "scope": "Only definitions, center/opposite identities, and explicit F29/F59 arrays adopted. Theorem 2.2 has proof left undone in source; local elementary parity/Euclid derivation supplies this audit. No conjectures adopted."
+  },
+  "boundary": {
+    "original_path": "/tmp/session56-publication/clean-repo/05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+    "snapshot": "input/boundaries/MISTAKE668-context.md",
+    "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19",
+    "scope": "Automatic monotone nesting is not evidence of structure; source theorem identities remain typed."
+  }
+}

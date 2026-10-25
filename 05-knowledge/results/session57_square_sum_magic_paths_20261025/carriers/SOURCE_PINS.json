@@ -1,0 +1,28 @@
+{
+  "external": {
+    "url": "https://arxiv.org/html/1908.03236v2",
+    "arxiv_version": "1908.03236v2",
+    "sections": [
+      "1",
+      "Theorem 2.1",
+      "Corollary 2.1",
+      "5 (F29 witness)",
+      "Corollary 7.1 (F59 witness)"
+    ],
+    "accessed_utc": "2026-10-25"
+  },
+  "internal": [
+    {
+      "path": "/tmp/session56-audit-projectors-covers/inputs/session55_crt_THEOREM.md",
+      "sha256": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450"
+    },
+    {
+      "path": "/tmp/session56-correlated-gluing/THEOREM.md",
+      "sha256": "486221eeab577d016d69c6170077fa36135ddf935b497e9ddaeca3058914cf48"
+    },
+    {
+      "path": "/tmp/session56-overlap-signatures/THEOREM.md",
+      "sha256": "551b6ce5daab0190cbf24b0faa01844551a559a0e526d963f026bf294a3fe4ff"
+    }
+  ]
+}

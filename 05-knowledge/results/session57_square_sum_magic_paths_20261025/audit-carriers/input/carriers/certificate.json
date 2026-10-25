@@ -1,0 +1,1006 @@
+{
+  "LoShu": {
+    "entries": [
+      8,
+      1,
+      6,
+      3,
+      5,
+      7,
+      4,
+      9,
+      2
+    ],
+    "integer_line_sums": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "row_adjacencies_in_square_sum_graph": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "incidence": {
+    "cell_line_incidence_edges": 24,
+    "incidence_cycle_rank": 8,
+    "line_intersection_density": "11/14",
+    "line_intersection_edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "lines": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        3,
+        6
+      ],
+      [
+        1,
+        4,
+        7
+      ],
+      [
+        2,
+        5,
+        8
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        2,
+        4,
+        6
+      ]
+    ]
+  },
+  "shadow_false_triangle": {
+    "edge_witnesses": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          28
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          4,
+          25
+        ]
+      ],
+      [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          24
+        ]
+      ]
+    ],
+    "p": 29,
+    "total": 0,
+    "triangle": [
+      0,
+      1,
+      4
+    ]
+  },
+  "source_F29": {
+    "integer_residue_line_sums": [
+      29,
+      29,
+      58,
+      58,
+      29,
+      29,
+      29,
+      29
+    ],
+    "opposite_sum": 0,
+    "opposite_sum_is_quadratic_residue": true,
+    "p": 29,
+    "paths": [
+      {
+        "cell_labels": [
+          0,
+          1,
+          2
+        ],
+        "increments": [
+          23,
+          5,
+          1
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            23
+          ],
+          [
+            2,
+            28
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          3,
+          4,
+          5
+        ],
+        "increments": [
+          7,
+          0,
+          22
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          6,
+          7,
+          8
+        ],
+        "increments": [
+          28,
+          24,
+          6
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            28
+          ],
+          [
+            2,
+            23
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          0,
+          3,
+          6
+        ],
+        "increments": [
+          23,
+          7,
+          28
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            23
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          1,
+          4,
+          7
+        ],
+        "increments": [
+          5,
+          0,
+          24
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          2,
+          5,
+          8
+        ],
+        "increments": [
+          1,
+          22,
+          6
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            23
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          0,
+          4,
+          8
+        ],
+        "increments": [
+          23,
+          0,
+          6
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            23
+          ],
+          [
+            2,
+            23
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          2,
+          4,
+          6
+        ],
+        "increments": [
+          1,
+          0,
+          28
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      }
+    ],
+    "residues": [
+      23,
+      5,
+      1,
+      7,
+      0,
+      22,
+      28,
+      24,
+      6
+    ],
+    "roots": [
+      9,
+      11,
+      1,
+      6,
+      0,
+      14,
+      12,
+      16,
+      8
+    ],
+    "total_mod_p": 0
+  },
+  "source_F59": {
+    "integer_residue_line_sums": [
+      121,
+      62,
+      62,
+      62,
+      62,
+      121,
+      62,
+      62
+    ],
+    "opposite_sum": 2,
+    "opposite_sum_is_quadratic_residue": false,
+    "p": 59,
+    "paths": [
+      {
+        "cell_labels": [
+          0,
+          1,
+          2
+        ],
+        "increments": [
+          46,
+          26,
+          49
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            46
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          3,
+          4,
+          5
+        ],
+        "increments": [
+          4,
+          1,
+          57
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          6,
+          7,
+          8
+        ],
+        "increments": [
+          12,
+          35,
+          15
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            12
+          ],
+          [
+            2,
+            47
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          0,
+          3,
+          6
+        ],
+        "increments": [
+          46,
+          4,
+          12
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            46
+          ],
+          [
+            2,
+            50
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          1,
+          4,
+          7
+        ],
+        "increments": [
+          26,
+          1,
+          35
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            26
+          ],
+          [
+            2,
+            27
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          2,
+          5,
+          8
+        ],
+        "increments": [
+          49,
+          57,
+          15
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            49
+          ],
+          [
+            2,
+            47
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          0,
+          4,
+          8
+        ],
+        "increments": [
+          46,
+          1,
+          15
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            46
+          ],
+          [
+            2,
+            47
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "cell_labels": [
+          2,
+          4,
+          6
+        ],
+        "increments": [
+          49,
+          1,
+          12
+        ],
+        "vertices": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            49
+          ],
+          [
+            2,
+            50
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      }
+    ],
+    "residues": [
+      46,
+      26,
+      49,
+      4,
+      1,
+      57,
+      12,
+      35,
+      15
+    ],
+    "roots": [
+      20,
+      12,
+      7,
+      2,
+      1,
+      23,
+      22,
+      25,
+      29
+    ],
+    "total_mod_p": 3
+  },
+  "square_sum_graphs": [
+    {
+      "edges": 15,
+      "first_path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9
+      ],
+      "n": 15,
+      "oriented_hamiltonian_paths": 2,
+      "unoriented_hamiltonian_paths": 1
+    },
+    {
+      "edges": 16,
+      "first_path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9,
+        16
+      ],
+      "n": 16,
+      "oriented_hamiltonian_paths": 2,
+      "unoriented_hamiltonian_paths": 1
+    },
+    {
+      "edges": 17,
+      "first_path": [
+        16,
+        9,
+        7,
+        2,
+        14,
+        11,
+        5,
+        4,
+        12,
+        13,
+        3,
+        6,
+        10,
+        15,
+        1,
+        8,
+        17
+      ],
+      "n": 17,
+      "oriented_hamiltonian_paths": 2,
+      "unoriented_hamiltonian_paths": 1
+    },
+    {
+      "edges": 18,
+      "first_path": null,
+      "n": 18,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 20,
+      "first_path": null,
+      "n": 19,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 22,
+      "first_path": null,
+      "n": 20,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 24,
+      "first_path": null,
+      "n": 21,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 26,
+      "first_path": null,
+      "n": 22,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 28,
+      "first_path": [
+        2,
+        23,
+        13,
+        12,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        22,
+        14,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      "n": 23,
+      "oriented_hamiltonian_paths": 6,
+      "unoriented_hamiltonian_paths": 3
+    },
+    {
+      "edges": 30,
+      "first_path": null,
+      "n": 24,
+      "oriented_hamiltonian_paths": 0,
+      "unoriented_hamiltonian_paths": 0
+    },
+    {
+      "edges": 32,
+      "first_path": [
+        2,
+        23,
+        13,
+        12,
+        24,
+        25,
+        11,
+        14,
+        22,
+        3,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        15,
+        21,
+        4,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      "n": 25,
+      "oriented_hamiltonian_paths": 20,
+      "unoriented_hamiltonian_paths": 10
+    }
+  ],
+  "square_total_variant": {
+    "entries": [
+      120,
+      15,
+      90,
+      45,
+      75,
+      105,
+      60,
+      135,
+      30
+    ],
+    "total": 225
+  },
+  "weak_no_wrap_F59": {
+    "actual_integer_square_cells": [
+      0,
+      4
+    ],
+    "integer_line_sums": [
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48,
+      48
+    ],
+    "residues": [
+      4,
+      29,
+      15,
+      27,
+      16,
+      5,
+      17,
+      3,
+      28
+    ],
+    "roots_mod59": [
+      2,
+      18,
+      29,
+      26,
+      4,
+      8,
+      28,
+      11,
+      21
+    ]
+  }
+}

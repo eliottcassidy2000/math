@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "fields": 30,
+  "normalized_magic_grids": 202,
+  "large_witnesses": [
+    729,
+    2187
+  ],
+  "independent_checks": [
+    "tuple finite-field arithmetic",
+    "exhaustive normalized grids",
+    "forward subset Hamiltonian path DP",
+    "Newton trace characteristic polynomial",
+    "F17 brute all permutations both zero conventions"
+  ],
+  "affine_plane_permutation_checks": [
+    {
+      "q": 81,
+      "hyperedges": 12,
+      "magic_arrangements_of_fixed_set": 432,
+      "all_arrangements": 362880
+    },
+    {
+      "q": 2187,
+      "hyperedges": 12,
+      "magic_arrangements_of_fixed_set": 432,
+      "all_arrangements": 362880
+    }
+  ]
+}

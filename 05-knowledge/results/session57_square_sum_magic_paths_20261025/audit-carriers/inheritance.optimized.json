@@ -1,0 +1,64 @@
+{
+  "center_roots_checked": [
+    1,
+    500
+  ],
+  "examples": {
+    "1105": {
+      "diamonds": [],
+      "gaps": [
+        103776,
+        231000,
+        369096,
+        566544,
+        582624,
+        867000,
+        936936,
+        1014000,
+        1068144,
+        1086336,
+        1172184,
+        1197000,
+        1215696
+      ],
+      "short_gaps": [
+        103776,
+        231000,
+        369096,
+        566544,
+        582624
+      ]
+    },
+    "41": {
+      "diamonds": [],
+      "gaps": [
+        720
+      ],
+      "short_gaps": [
+        720
+      ]
+    },
+    "5": {
+      "diamonds": [],
+      "gaps": [
+        24
+      ],
+      "short_gaps": []
+    },
+    "65": {
+      "diamonds": [],
+      "gaps": [
+        2016,
+        3000,
+        3696,
+        4056
+      ],
+      "short_gaps": [
+        2016
+      ]
+    }
+  },
+  "positive_petals_checked": 68,
+  "source_hashes_checked": 14,
+  "status": "FINITE-EXACT"
+}
