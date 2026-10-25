@@ -1,0 +1,285 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "p": 3,
+      "q": 3,
+      "modulus": [
+        0,
+        1
+      ],
+      "admissible_v_count": 0,
+      "checks": []
+    },
+    {
+      "p": 5,
+      "q": 5,
+      "modulus": [
+        0,
+        1
+      ],
+      "admissible_v_count": 0,
+      "checks": []
+    },
+    {
+      "p": 7,
+      "q": 7,
+      "modulus": [
+        0,
+        1
+      ],
+      "admissible_v_count": 0,
+      "checks": []
+    },
+    {
+      "p": 11,
+      "q": 11,
+      "modulus": [
+        0,
+        1
+      ],
+      "admissible_v_count": 2,
+      "checks": [
+        {
+          "v": [
+            3
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            8
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 29,
+      "q": 29,
+      "modulus": [
+        0,
+        1
+      ],
+      "admissible_v_count": 6,
+      "checks": [
+        {
+          "v": [
+            5
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            24
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "q": 9,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "admissible_v_count": 0,
+      "checks": []
+    },
+    {
+      "p": 5,
+      "q": 25,
+      "modulus": [
+        2,
+        0,
+        1
+      ],
+      "admissible_v_count": 2,
+      "checks": [
+        {
+          "v": [
+            0,
+            2
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            0,
+            3
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "q": 27,
+      "modulus": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "admissible_v_count": 6,
+      "checks": [
+        {
+          "v": [
+            0,
+            1,
+            1
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            2,
+            0,
+            1
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "q": 49,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "admissible_v_count": 8,
+      "checks": [
+        {
+          "v": [
+            0,
+            1
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            6,
+            5
+          ],
+          "weighted_sum_numerator": 64,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "q": 81,
+      "modulus": [
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "admissible_v_count": 18,
+      "checks": [
+        {
+          "v": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            2,
+            2,
+            1,
+            1
+          ],
+          "weighted_sum_numerator": 384,
+          "root_weight_numerator": 192
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "q": 125,
+      "modulus": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "admissible_v_count": 30,
+      "checks": [
+        {
+          "v": [
+            0,
+            0,
+            2
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            4,
+            4,
+            4
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "q": 243,
+      "modulus": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "admissible_v_count": 60,
+      "checks": [
+        {
+          "v": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        },
+        {
+          "v": [
+            2,
+            2,
+            2,
+            2,
+            0
+          ],
+          "weighted_sum_numerator": 192,
+          "root_weight_numerator": 0
+        }
+      ]
+    }
+  ]
+}

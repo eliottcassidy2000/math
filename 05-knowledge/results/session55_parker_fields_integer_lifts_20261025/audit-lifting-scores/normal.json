@@ -1,0 +1,92 @@
+{
+  "all_grids_mod_2": 8,
+  "all_grids_mod_3": 27,
+  "cut_10_False": {
+    "feasible": 210,
+    "patterns": 210
+  },
+  "cut_10_True": {
+    "feasible": 252,
+    "patterns": 252
+  },
+  "cut_3_False": {
+    "feasible": 2,
+    "patterns": 3
+  },
+  "cut_3_True": {
+    "feasible": 3,
+    "patterns": 3
+  },
+  "cut_4_False": {
+    "feasible": 4,
+    "patterns": 4
+  },
+  "cut_4_True": {
+    "feasible": 4,
+    "patterns": 6
+  },
+  "cut_5_False": {
+    "feasible": 5,
+    "patterns": 5
+  },
+  "cut_5_True": {
+    "feasible": 5,
+    "patterns": 5
+  },
+  "cut_6_False": {
+    "feasible": 15,
+    "patterns": 15
+  },
+  "cut_6_True": {
+    "feasible": 20,
+    "patterns": 20
+  },
+  "cut_7_False": {
+    "feasible": 7,
+    "patterns": 7
+  },
+  "cut_7_True": {
+    "feasible": 7,
+    "patterns": 7
+  },
+  "cut_8_False": {
+    "feasible": 56,
+    "patterns": 56
+  },
+  "cut_8_True": {
+    "feasible": 70,
+    "patterns": 70
+  },
+  "cut_9_False": {
+    "feasible": 9,
+    "patterns": 9
+  },
+  "cut_9_True": {
+    "feasible": 9,
+    "patterns": 9
+  },
+  "orientations_4_False": {
+    "high_sets": 4,
+    "universe": 8
+  },
+  "orientations_4_True": {
+    "high_sets": 4,
+    "universe": 4
+  },
+  "orientations_6_False": {
+    "high_sets": 15,
+    "universe": 1024
+  },
+  "orientations_6_True": {
+    "high_sets": 20,
+    "universe": 512
+  },
+  "source_sha256": {
+    "session55-carry-lattice/PROOF.md": "1827d43121b2bbf29bab26694004e13a16871537ff739aa8d7841136c30da56d",
+    "session55-carry-lattice/certificate.json": "71aa66f25e924e79019a4661dfb664857039d7c22b1af49f2352696ed71bc3cd",
+    "session55-carry-lattice/verify.py": "ce132bd3525a4d1ec94964f493b9b8a147426b21c20243d82bff36c17f65257f",
+    "session55-residual-score-constraints/README.md": "7d4c420bad9705e047a04c16700aec9970e32fc0e7361c0d3bd49dc9ce56b73d",
+    "session55-residual-score-constraints/THEOREM.md": "3cd24fc48c1fc1beca63ef8cc8e4f15e1724f49143b0b83ec24496353929a95e",
+    "session55-residual-score-constraints/check.py": "550bababda8f9e0b79cc0dd32341c9a9778dddf91e53a22c3c4c2a8b4c529f52"
+  }
+}

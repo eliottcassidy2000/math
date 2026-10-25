@@ -1,0 +1,358 @@
+{
+  "exhaustive": [
+    {
+      "candidate_scores": 2,
+      "digest": "19a653a0d40ddb9a4f09a49c7e914bd5c49c233ba2dc531b2a9dc59d85202123",
+      "kind": "path",
+      "n": 3,
+      "orientations": 2,
+      "realized_scores": 2
+    },
+    {
+      "candidate_scores": 1,
+      "digest": "8c843899cd6049113736cee42dc7007238638c89a2315fe952e5b43122688227",
+      "kind": "cycle",
+      "n": 3,
+      "orientations": 1,
+      "realized_scores": 1
+    },
+    {
+      "candidate_scores": 10,
+      "digest": "d8ddde07ff6bcc5a2898550ef742ff0cf47ffbf2046776a2f5d179f71ec012ca",
+      "kind": "path",
+      "n": 4,
+      "orientations": 8,
+      "realized_scores": 8
+    },
+    {
+      "candidate_scores": 6,
+      "digest": "7f2e0c2790873d9aaf724ca192ff8995e24f0972eb52944eb55e1e8ae4127755",
+      "kind": "cycle",
+      "n": 4,
+      "orientations": 4,
+      "realized_scores": 4
+    },
+    {
+      "candidate_scores": 78,
+      "digest": "ec2cb3ba0ede174d991f2728d876c4263f7e143946a5de9d77d1b1f69bf879fa",
+      "kind": "path",
+      "n": 5,
+      "orientations": 64,
+      "realized_scores": 52
+    },
+    {
+      "candidate_scores": 51,
+      "digest": "07c2ac2c480bc59f5f8147adcb029876c6892bc79d5abaf2897b608a45ef16f4",
+      "kind": "cycle",
+      "n": 5,
+      "orientations": 32,
+      "realized_scores": 31
+    },
+    {
+      "candidate_scores": 826,
+      "digest": "6e2207cdb1fa57ee7c6d91caa710a7708d56a802f660d29d06789df3ddec4c36",
+      "kind": "path",
+      "n": 6,
+      "orientations": 1024,
+      "realized_scores": 478
+    },
+    {
+      "candidate_scores": 580,
+      "digest": "f23372a59df69a7291215da24459f17fde33cc660aa817bcb201306eb9218b4a",
+      "kind": "cycle",
+      "n": 6,
+      "orientations": 512,
+      "realized_scores": 314
+    }
+  ],
+  "hostiles": {
+    "cycle4_bad_H": [
+      0,
+      2
+    ],
+    "cycle4_bad_r": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "cycle4_high_count": 2,
+    "odd_path3_constant_target_total": 0,
+    "odd_path3_total": 1,
+    "path4_high_count": 3,
+    "path4_r": [
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  "internal": [
+    {
+      "balanced_words": 5,
+      "internal_words": 2,
+      "n": 4,
+      "pattern_counts": [
+        {
+          "H": [
+            0,
+            1,
+            3
+          ],
+          "words": 1
+        },
+        {
+          "H": [
+            0,
+            2,
+            3
+          ],
+          "words": 1
+        }
+      ]
+    },
+    {
+      "balanced_words": 157,
+      "internal_words": 60,
+      "n": 6,
+      "pattern_counts": [
+        {
+          "H": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "words": 11
+        },
+        {
+          "H": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "words": 9
+        },
+        {
+          "H": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "words": 10
+        },
+        {
+          "H": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "words": 10
+        },
+        {
+          "H": [
+            0,
+            2,
+            4,
+            5
+          ],
+          "words": 9
+        },
+        {
+          "H": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "words": 11
+        }
+      ]
+    }
+  ],
+  "odd_prescribed_sets": [
+    {
+      "n": 3,
+      "realizable_high_vertices": [
+        0,
+        2
+      ]
+    },
+    {
+      "n": 5,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "n": 7,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "n": 9,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "n": 11,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "n": 13,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "n": 15,
+      "realizable_high_vertices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    }
+  ],
+  "prescribed_sets": [
+    {
+      "kind": "path",
+      "n": 4,
+      "nonrealizable": [],
+      "realizable": 4
+    },
+    {
+      "kind": "cycle",
+      "n": 4,
+      "nonrealizable": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "realizable": 4
+    },
+    {
+      "kind": "path",
+      "n": 6,
+      "nonrealizable": [],
+      "realizable": 15
+    },
+    {
+      "kind": "cycle",
+      "n": 6,
+      "nonrealizable": [],
+      "realizable": 20
+    },
+    {
+      "kind": "path",
+      "n": 8,
+      "nonrealizable": [],
+      "realizable": 56
+    },
+    {
+      "kind": "cycle",
+      "n": 8,
+      "nonrealizable": [],
+      "realizable": 70
+    },
+    {
+      "kind": "path",
+      "n": 10,
+      "nonrealizable": [],
+      "realizable": 210
+    },
+    {
+      "kind": "cycle",
+      "n": 10,
+      "nonrealizable": [],
+      "realizable": 252
+    },
+    {
+      "kind": "path",
+      "n": 12,
+      "nonrealizable": [],
+      "realizable": 792
+    },
+    {
+      "kind": "cycle",
+      "n": 12,
+      "nonrealizable": [],
+      "realizable": 924
+    },
+    {
+      "kind": "path",
+      "n": 14,
+      "nonrealizable": [],
+      "realizable": 3003
+    },
+    {
+      "kind": "cycle",
+      "n": 14,
+      "nonrealizable": [],
+      "realizable": 3432
+    }
+  ]
+}

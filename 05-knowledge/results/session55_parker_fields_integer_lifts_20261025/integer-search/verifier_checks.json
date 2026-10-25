@@ -1,0 +1,24 @@
+{
+  "identical_stdout": true,
+  "mutation_rejections": {
+    "changed_content": {
+      "exit_code": 1,
+      "expected_failure_seen": true
+    },
+    "extra_key": {
+      "exit_code": 1,
+      "expected_failure_seen": true
+    },
+    "missing_file": {
+      "exit_code": 1,
+      "expected_failure_seen": true
+    },
+    "missing_key": {
+      "exit_code": 1,
+      "expected_failure_seen": true
+    }
+  },
+  "normal_exit_code": 0,
+  "optimized_exit_code": 0,
+  "stdout_sha256": "cb974c682c907128a2a996d298c785c4d72a00912c59c4320251c7cdb013623d"
+}

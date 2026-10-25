@@ -1,0 +1,49 @@
+{
+  "schema": "session55-source-record-v1",
+  "accessed_utc_date": "2026-10-25",
+  "sources": [
+    {
+      "author": "O. M. Cain",
+      "title": "Gaussian Integers, Rings, Finite Fields, and the Magic Square of Squares",
+      "version": "arXiv:1908.03236v2, 12 August 2019",
+      "url": "https://arxiv.org/html/1908.03236v2",
+      "short_exact_extracts": [
+        {
+          "location": "Section 5, first sentence",
+          "quote": "At this point we move on from the traditional magic square of squares problem."
+        },
+        {
+          "location": "Section 6, paragraph after Algorithm 6.1",
+          "quote": "We neglect to give a rigorous proof"
+        }
+      ],
+      "verbatim_word_total": 21,
+      "imports": [
+        "Definition of Parker finite field",
+        "F_29 witness and Theorem 5.1",
+        "Field-scaling viewpoint of Algorithm 6.1"
+      ],
+      "not_imported": [
+        "Integer no-wrap sufficiency from field-square status",
+        "Current strongest integer search bound",
+        "Unproved field or ring classification conjectures"
+      ]
+    },
+    {
+      "authors": [
+        "Paul Pierrat",
+        "Francois Thiriet",
+        "Paul Zimmermann"
+      ],
+      "title": "Magic Squares of Squares",
+      "date": "2015-03-13",
+      "url": "https://members.loria.fr/PZimmermann/papers/squares.pdf",
+      "locations": [
+        "Page 1, introduction",
+        "Section 2"
+      ],
+      "short_exact_extracts": [],
+      "use": "Historical calibration only: the small search in this packet is not a new record; arithmetic-progression coprimality must not be silently imposed."
+    }
+  ]
+}
