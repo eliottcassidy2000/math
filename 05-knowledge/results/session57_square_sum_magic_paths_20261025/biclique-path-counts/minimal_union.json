@@ -1,0 +1,42 @@
+{
+  "label_cover_pair_union_edge_distribution": {
+    "9": 204,
+    "10": 1852,
+    "11": 5600,
+    "12": 7720,
+    "13": 3760,
+    "14": 1488
+  },
+  "minimum_union_edges": 9,
+  "maximum_shared_edges": 5,
+  "minimal_union_witness": [
+    {
+      "vertices": [
+        "L0",
+        "R3",
+        "L1",
+        "R1",
+        "L2",
+        "R0",
+        "L3",
+        "R2"
+      ],
+      "mask": 21416,
+      "label_mask": 379
+    },
+    {
+      "vertices": [
+        "L0",
+        "R3",
+        "L2",
+        "R1",
+        "L1",
+        "R2",
+        "L3",
+        "R0"
+      ],
+      "mask": 23144,
+      "label_mask": 471
+    }
+  ]
+}

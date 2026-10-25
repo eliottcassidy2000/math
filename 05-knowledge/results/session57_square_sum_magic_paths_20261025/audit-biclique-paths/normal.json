@@ -1,0 +1,43 @@
+{
+  "cycles": 72,
+  "edge_cover_triples": 675264,
+  "gauges": [
+    {
+      "good": 20,
+      "q": 29
+    },
+    {
+      "good": 50,
+      "q": 59
+    },
+    {
+      "good": 72,
+      "q": 81
+    },
+    {
+      "good": 2178,
+      "q": 2187
+    }
+  ],
+  "label_cover_pairs": 20624,
+  "minimal_nine_edge_pairs": 204,
+  "paths": 576,
+  "source_sha256": {
+    "/tmp/session57-biclique-bridge/THEOREM.md": "3abf8dcf8c863c199cb21fd8715776bc27faa24e39008964adcdfc4e1b0eaaf5",
+    "/tmp/session57-biclique-bridge/certificate.json": "e1396b2556410bcf45f3d3fad44866c6f7bd54329c5e6ea47838714af4fe3b26",
+    "/tmp/session57-biclique-bridge/verify.py": "79b62631e265e36126870f1b94c0d884d1f415e4746f88ff62517e5bd6f3e49e",
+    "/tmp/session57-biclique-path-counts/README.md": "1d85b81edd294fb7248bf6a7b3a8a546c6b889a8fee3fce85fc0323c103014b3",
+    "/tmp/session57-biclique-path-counts/minimal_union.json": "2d489cdc4ae5a24c15102b7d2a3811209d8332d1b5f9e0906f1ee7dd6878d958",
+    "/tmp/session57-biclique-path-counts/results.json": "a762bb18afa195941abc958f945330d17aad51c876dd78c0f23ea5fc6b0b5ed1",
+    "/tmp/session57-biclique-path-counts/verify.py": "d04f9ab01bab8ce6a97e72730320d205f4cc3777b90beab162d903b0a0ff1672"
+  },
+  "status": "PASS",
+  "union_distribution": {
+    "9": 204,
+    "10": 1852,
+    "11": 5600,
+    "12": 7720,
+    "13": 3760,
+    "14": 1488
+  }
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/session57-audit-reduced-frames/audit.py", line 46, in <module>
+    need((len(ps),len(cycs),len(pairs))==(36,6,args.expected_covers),'K33 enumeration')
+  File "/tmp/session57-audit-reduced-frames/audit.py", line 8, in need
+    if not condition: raise RuntimeError(label)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: K33 enumeration

@@ -1,0 +1,33 @@
+{
+  "repository_commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md",
+      "sha256": "01f8a8ad6c016fa12db5120721687e4bff24470240f6022d61030660419069d1",
+      "source_commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+      "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md",
+      "sha256": "619ee1a2ae6aed62a1a25775e51cd0ae4090cdbc07ad3a6d17ff16f873174dce",
+      "source_commit": "73d9abcd5ddc516a4142079bd0ccd7c4022d10fa",
+      "url": "https://github.com/eliottcassidy2000/math/blob/73d9abcd5ddc516a4142079bd0ccd7c4022d10fa/01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md"
+    },
+    {
+      "local_snapshot": "sources/results.json",
+      "sha256": "9a5682875e4636295838a68a90a791e82131c60821fdbc6a996feb6429a52637",
+      "origin": "/tmp/session57-character-graphs/results.json"
+    },
+    {
+      "local_snapshot": "sources/witness-2187.json",
+      "sha256": "d393c802709e1eaf0bf59ea9322109ba3458dc9732e89a6c64b35550d81e051c",
+      "origin": "/tmp/session57-character-graphs/witness-2187.json"
+    },
+    {
+      "local_snapshot": "sources/field.py",
+      "sha256": "b35177b56920941f0e08e46cdb55df86cc03d50bc9e42ab61525c27b9b1f88f2",
+      "origin": "/tmp/session57-character-graphs/sources/verify.py"
+    }
+  ],
+  "search_scope": "01-canon and 05-knowledge Markdown: K4,4/biclique; square-sum and magic-square theorem titles; relevant THM-4510 and THM-4505 read"
+}

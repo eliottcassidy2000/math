@@ -1,0 +1,14 @@
+[
+  {
+    "mode": [],
+    "exit": 1,
+    "last_line": "RuntimeError: triples"
+  },
+  {
+    "mode": [
+      "-O"
+    ],
+    "exit": 1,
+    "last_line": "RuntimeError: triples"
+  }
+]

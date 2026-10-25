@@ -1,0 +1,213 @@
+{
+  "offsets": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "labels_by_edge": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "label_multiplicities": {
+    "(0, 0)": 4,
+    "(1, 0)": 2,
+    "(0, 1)": 2,
+    "(1, 1)": 1,
+    "(-1, 0)": 2,
+    "(-1, 1)": 1,
+    "(0, -1)": 2,
+    "(1, -1)": 1,
+    "(-1, -1)": 1
+  },
+  "counts": {
+    "paths": {
+      "number": 576,
+      "edge_incidence": [
+        252
+      ],
+      "edge_pair_incidence": {
+        "adjacent": [
+          72
+        ],
+        "disjoint": [
+          120
+        ]
+      }
+    },
+    "cycles": {
+      "number": 72,
+      "edge_incidence": [
+        36
+      ],
+      "edge_pair_incidence": {
+        "adjacent": [
+          12
+        ],
+        "disjoint": [
+          20
+        ]
+      }
+    }
+  },
+  "path_label_count_distribution": {
+    "3": 8,
+    "4": 104,
+    "5": 232,
+    "6": 176,
+    "7": 56
+  },
+  "min_label_cover": 2,
+  "number_label_cover_pairs": 20624,
+  "label_cover_witness": [
+    {
+      "vertices": [
+        "L0",
+        "R0",
+        "L1",
+        "R1",
+        "L2",
+        "R2",
+        "L3",
+        "R3"
+      ],
+      "mask": 50737,
+      "label_mask": 82
+    },
+    {
+      "vertices": [
+        "L1",
+        "R2",
+        "L0",
+        "R3",
+        "L2",
+        "R0",
+        "L3",
+        "R1"
+      ],
+      "mask": 14668,
+      "label_mask": 429
+    }
+  ],
+  "min_edge_cover": 3,
+  "number_edge_cover_triples": 675264,
+  "edge_cover_witness": [
+    {
+      "vertices": [
+        "L0",
+        "R0",
+        "L1",
+        "R1",
+        "L2",
+        "R2",
+        "L3",
+        "R3"
+      ],
+      "mask": 50737,
+      "label_mask": 82
+    },
+    {
+      "vertices": [
+        "L0",
+        "R1",
+        "L1",
+        "R2",
+        "L2",
+        "R3",
+        "L3",
+        "R0"
+      ],
+      "mask": 40034,
+      "label_mask": 149
+    },
+    {
+      "vertices": [
+        "L1",
+        "R3",
+        "L0",
+        "R2",
+        "L2",
+        "R0",
+        "L3",
+        "R1"
+      ],
+      "mask": 13708,
+      "label_mask": 313
+    }
+  ],
+  "cycle_cover_pairs": 36
+}

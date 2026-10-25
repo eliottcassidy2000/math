@@ -1,0 +1,29 @@
+{
+  "AP_ranks": [
+    5,
+    4,
+    6
+  ],
+  "F59_valid_gauges": 50,
+  "K33_cycles": 6,
+  "K33_paths": 36,
+  "char3_layouts": 432,
+  "covers": 36,
+  "partner_components": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "real_layouts": 8,
+  "status": "PASS",
+  "two_path_ranks": [
+    7,
+    4,
+    2,
+    4,
+    6
+  ]
+}

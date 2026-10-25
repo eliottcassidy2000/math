@@ -1,6 +1,6 @@
 # Session57: square-sum paths and square-magic incidence
 
-25 October 2026. First verified checkpoint of an ongoing multiwave session. The question is not dismissed as analogy: we test candidate maps, retain what they preserve, and repair the carrier when an implication fails. No integer magic-square solution or external priority is claimed.
+25 October 2026. Second verified checkpoint of an ongoing multiwave session. The question is not dismissed as analogy: we test candidate maps, retain what they preserve, and repair the carrier when an implication fails. No integer magic-square solution or external priority is claimed.
 
 ## Wave 1: identify the exact objects
 
@@ -16,8 +16,17 @@ An ordinary integer magic square whose entries are squares has center e² and co
 
 Finite-field square status does not make canonical representatives integer squares. The earlier Session 55 no-wrap and complete modular classifications remain intact; discussion of Cain's 2019 conjectures refers to that source's historical status, not a reopening of the inherited repository results.
 
-## Verification and next wave
+## Waves 2–3: a positive exact path bridge
 
-All mathematical claims have scoped proofs and independent controls. The character producer uses assertions and is validated normally; its optimized output is not treated as validation. The independent exception-safe auditor passes normal and optimized execution. Full external article text is excluded from this release; source version/hash receipts and original proof reviews are retained.
+- [Decorated K4,4 equivalence](biclique-bridge/THEOREM.md): reflection-matched parts and a parallelogram of offsets make the sixteen edge sums exactly the nine magic values with known multiplicities. Square scaling and a gauge give eight distinct positive integer vertices conditionally on an integer magic square. A bare biclique is insufficient; vertices need not themselves be squares.
+- [Exact path certificates](biclique-path-counts/README.md): K4,4 has 576 unoriented Hamiltonian paths and 72 cycles. Two paths suffice to inspect all nine formal labels; exactly 204 optimal pairs have nine union edges and five shared edges. Three paths are needed to cover all sixteen identified edges. [Independent audit](audit-biclique-paths/AUDIT.md).
+- [Nine-edge linear frame](two-path-frame/THEOREM.md): the two path cycles provide only two linear constraints; four additional reflection/parallelogram constraints are exactly what remains to recover the six magic equations. The shared-coordinate conditions cannot be inferred from the path skeleton alone.
+- [Smaller AP-biclique bridge](ap-biclique-bridge/REPORT.md): two arithmetic-progression parts of K3,3 reduce the carrier to six vertices and two extra diagonal conditions. Two Hamiltonian paths sharing one edge cover all nine identified edges. Their 36 optimal pairs form six partner hexagons. The positive integer normalization makes the selected graph induced, using residue classes1 and3 modulo4. Choudhry's semimagic permutation is explicitly credited. [Independent reduced-frame audit](audit-reduced-frames/AUDIT.md).
 
-The next wave pursues a decorated square-sum K4,4 and sharp two-path certificates, retaining the numerical reflection/parallelogram data rather than confusing a bare dense graph with a magic square. Later bounded integer searches and geometry will be reported separately. Session closure will be announced explicitly after the final verified checkpoint.
+The two-path statement is a certificate with its numerical decoration retained, not an assertion that arbitrary intersecting paths imply magic. Minimum coverage means minimum within the declared edge/label-inspection model, not algebraic independence of square predicates. Over odd fields the collision-free gauge count is exactly q-9 when the nine labels are distinct; zero labels require the zero-allowed convention.
+
+## Verification and continuation
+
+All mathematical claims have independent proof/computational audits. Assertion-based producer path/AP scripts are validated normally only; their -O execution is not described as effective assertion validation. The corresponding independent exception-safe audits pass both modes. Path-writing scripts are relocated only in publication copies with receipts; frozen source lineage is retained.
+
+The next waves test bounded integer bicliques, published all-parameter families, the linear/algebraic-geometric locus, and the separate unequal-square-total interpretation. The earlier Session55 modular classifications remain closed in their stated scopes. The actual nondegenerate integer magic-square existence problem remains open, and the session is still active.

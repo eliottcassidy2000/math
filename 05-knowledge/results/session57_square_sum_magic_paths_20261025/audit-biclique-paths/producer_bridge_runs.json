@@ -1,0 +1,20 @@
+[
+  {
+    "mode": [],
+    "valid_exit": 0,
+    "stdout": "PASS: symbolic identities, finite-field gauges, square labels, near-miss, bare K4,4, and path cover\n",
+    "stderr": "",
+    "tamper_exit": 1,
+    "tamper_error": "RuntimeError: stored certificate differs"
+  },
+  {
+    "mode": [
+      "-O"
+    ],
+    "valid_exit": 0,
+    "stdout": "PASS: symbolic identities, finite-field gauges, square labels, near-miss, bare K4,4, and path cover\n",
+    "stderr": "",
+    "tamper_exit": 1,
+    "tamper_error": "RuntimeError: stored certificate differs"
+  }
+]

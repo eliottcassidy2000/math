@@ -1,0 +1,96 @@
+{
+  "matrix": [
+    37,
+    78,
+    5,
+    77,
+    1,
+    42,
+    6,
+    41,
+    73
+  ],
+  "vertices": [
+    1,
+    5,
+    6,
+    37,
+    41,
+    42,
+    73,
+    77,
+    78
+  ],
+  "center": 1,
+  "graphs": {
+    "True": {
+      "edges": 0,
+      "degrees": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hp_unoriented": 0,
+      "hp_witness_indices": [],
+      "charpoly_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "False": {
+      "edges": 0,
+      "degrees": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hp_unoriented": 0,
+      "hp_witness_indices": [],
+      "charpoly_coefficients": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "q": 2187,
+  "p": 3,
+  "n": 7,
+  "modulus": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    1
+  ]
+}

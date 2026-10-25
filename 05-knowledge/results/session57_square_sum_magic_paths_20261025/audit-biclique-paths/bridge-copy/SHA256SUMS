@@ -1,0 +1,11 @@
+c52bac9397d004cc242842c4ab96c173cce72e22f70c1936d38e608e21b7d03c  ./README.md
+7647b105594562e2672db6de5d0641827f8c0290c1782b48007a4c12a5a3e8f9  ./SOURCE_PINS.json
+3abf8dcf8c863c199cb21fd8715776bc27faa24e39008964adcdfc4e1b0eaaf5  ./THEOREM.md
+e1396b2556410bcf45f3d3fad44866c6f7bd54329c5e6ea47838714af4fe3b26  ./certificate.json
+a9a0d9340d10ac698cc53c090a55102fe6192b4c1b91c5d6bba257afc8232434  ./check.log
+619ee1a2ae6aed62a1a25775e51cd0ae4090cdbc07ad3a6d17ff16f873174dce  ./sources/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md
+01f8a8ad6c016fa12db5120721687e4bff24470240f6022d61030660419069d1  ./sources/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md
+b35177b56920941f0e08e46cdb55df86cc03d50bc9e42ab61525c27b9b1f88f2  ./sources/field.py
+9a5682875e4636295838a68a90a791e82131c60821fdbc6a996feb6429a52637  ./sources/results.json
+d393c802709e1eaf0bf59ea9322109ba3458dc9732e89a6c64b35550d81e051c  ./sources/witness-2187.json
+79b62631e265e36126870f1b94c0d884d1f415e4746f88ff62517e5bd6f3e49e  ./verify.py
