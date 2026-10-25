@@ -1,0 +1,32 @@
+{
+  "denominator_degree": 27,
+  "local_arrays": {
+    "2": 8,
+    "4": 2,
+    "8": 9,
+    "16": 10,
+    "32": 73,
+    "64": 522
+  },
+  "local_masks": {
+    "2": 4,
+    "4": 1,
+    "8": 4,
+    "16": 4,
+    "32": 10,
+    "64": 20
+  },
+  "minimal_period": 60,
+  "rational_numerator_degree": 26,
+  "smith_coefficients": {
+    "(1, 1)": -2,
+    "(1, 2)": -4,
+    "(1, 4)": 4,
+    "(1, 5)": 2,
+    "(1, 6)": 4,
+    "(2, 2)": 2,
+    "(2, 4)": 1
+  },
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

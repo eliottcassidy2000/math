@@ -1,0 +1,97 @@
+{
+  "crt": {
+    "entries": [
+      0,
+      9,
+      1,
+      16,
+      15,
+      14,
+      29,
+      21,
+      30
+    ],
+    "intersection": 0,
+    "masks": [
+      "0x61089888",
+      "0x8a054250"
+    ],
+    "mod5": [
+      0,
+      4,
+      1,
+      1,
+      0,
+      4,
+      4,
+      1,
+      0
+    ],
+    "mod7": [
+      0,
+      2,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0,
+      2
+    ],
+    "modular_line_sum": 10,
+    "modulus": 35,
+    "ordinary_row_sums": [
+      10,
+      45,
+      80
+    ],
+    "square_roots": [
+      0,
+      3,
+      1,
+      4,
+      15,
+      7,
+      8,
+      14,
+      10
+    ]
+  },
+  "doubling": [
+    {
+      "n": 50,
+      "parker": false
+    },
+    {
+      "n": 100,
+      "parker": true
+    },
+    {
+      "n": 200,
+      "parker": false
+    }
+  ],
+  "field_ring_comparison": [
+    {
+      "field_parker": true,
+      "q": 27,
+      "ring_parker": false
+    },
+    {
+      "field_parker": false,
+      "q": 81,
+      "ring_parker": false
+    },
+    {
+      "field_parker": true,
+      "q": 243,
+      "ring_parker": false
+    }
+  ],
+  "schema": "session55-exact-diagrams-v1",
+  "thresholds": {
+    "field_characteristic_2": "all positive exponents Parker",
+    "ring_2_power_nonparker_min_exponent": 7,
+    "ring_3_power_nonparker_min_exponent": 3
+  }
+}

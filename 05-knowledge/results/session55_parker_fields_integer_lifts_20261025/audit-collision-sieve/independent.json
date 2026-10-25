@@ -1,0 +1,21 @@
+{
+  "pairs": 347561,
+  "survivors": 474,
+  "difference_gap_passes": 0,
+  "distinct_magnitudes": 347561,
+  "directions": {
+    "(0, 1)": 9,
+    "(1, -2)": 2,
+    "(1, -1)": 5,
+    "(1, 0)": 9,
+    "(1, 1)": 5,
+    "(1, 2)": 2,
+    "(2, -1)": 2,
+    "(2, 1)": 2
+  },
+  "extra_factors_two": 8,
+  "affine_density": "18129782170164195/874207008934460827483",
+  "primitive_density": "32/1590435",
+  "survivor_sha256": "e0be1bfdec05dcebedcf2ada92ac5a03a28f54feee9b34c6ae377fd1ed29c459",
+  "status": "PASS"
+}

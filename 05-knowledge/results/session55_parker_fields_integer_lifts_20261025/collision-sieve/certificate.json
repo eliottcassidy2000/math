@@ -1,0 +1,727 @@
+{
+  "controls": {
+    "CRT_modulus": 468229211845395,
+    "affine_CRT_density": "18129782170164195/874207008934460827483",
+    "content_hostile": {
+      "p": 11,
+      "passes_after_division": false,
+      "passes_before_division": true,
+      "u": 11,
+      "v": 33
+    },
+    "local": [
+      {
+        "allowed_affine": 9,
+        "allowed_nonzero": 8,
+        "lines": 4,
+        "p": 3,
+        "total_affine": 9,
+        "total_nonzero": 8
+      },
+      {
+        "allowed_affine": 25,
+        "allowed_nonzero": 24,
+        "lines": 6,
+        "p": 5,
+        "total_affine": 25,
+        "total_nonzero": 24
+      },
+      {
+        "allowed_affine": 49,
+        "allowed_nonzero": 48,
+        "lines": 8,
+        "p": 7,
+        "total_affine": 49,
+        "total_nonzero": 48
+      },
+      {
+        "allowed_affine": 81,
+        "allowed_nonzero": 80,
+        "lines": 8,
+        "p": 11,
+        "total_affine": 121,
+        "total_nonzero": 120
+      },
+      {
+        "allowed_affine": 97,
+        "allowed_nonzero": 96,
+        "lines": 8,
+        "p": 13,
+        "total_affine": 169,
+        "total_nonzero": 168
+      },
+      {
+        "allowed_affine": 129,
+        "allowed_nonzero": 128,
+        "lines": 8,
+        "p": 17,
+        "total_affine": 289,
+        "total_nonzero": 288
+      },
+      {
+        "allowed_affine": 145,
+        "allowed_nonzero": 144,
+        "lines": 8,
+        "p": 19,
+        "total_affine": 361,
+        "total_nonzero": 360
+      },
+      {
+        "allowed_affine": 177,
+        "allowed_nonzero": 176,
+        "lines": 8,
+        "p": 23,
+        "total_affine": 529,
+        "total_nonzero": 528
+      },
+      {
+        "allowed_affine": 241,
+        "allowed_nonzero": 240,
+        "lines": 8,
+        "p": 31,
+        "total_affine": 961,
+        "total_nonzero": 960
+      },
+      {
+        "allowed_affine": 337,
+        "allowed_nonzero": 336,
+        "lines": 8,
+        "p": 43,
+        "total_affine": 1849,
+        "total_nonzero": 1848
+      },
+      {
+        "allowed_affine": 369,
+        "allowed_nonzero": 368,
+        "lines": 8,
+        "p": 47,
+        "total_affine": 2209,
+        "total_nonzero": 2208
+      },
+      {
+        "allowed_affine": 529,
+        "allowed_nonzero": 528,
+        "lines": 8,
+        "p": 67,
+        "total_affine": 4489,
+        "total_nonzero": 4488
+      }
+    ],
+    "opposite_gap_conditioned": [
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 3
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 1,
+        "p": 3
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0,
+          1,
+          4
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 9,
+        "p": 5
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 1,
+        "p": 5
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 7
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0,
+          1,
+          6
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 9,
+        "p": 7
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 11
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0,
+          3,
+          8
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 9,
+        "p": 11
+      },
+      {
+        "collision_rejected": 24,
+        "gaps": [
+          0,
+          1,
+          3,
+          4,
+          9,
+          10,
+          12
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 49,
+        "p": 13
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0,
+          2,
+          11
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 9,
+        "p": 13
+      },
+      {
+        "collision_rejected": 16,
+        "gaps": [
+          0,
+          1,
+          2,
+          4,
+          8,
+          9,
+          13,
+          15,
+          16
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 81,
+        "p": 17
+      },
+      {
+        "collision_rejected": 8,
+        "gaps": [
+          0,
+          1,
+          3,
+          14,
+          16
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 25,
+        "p": 17
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 19
+      },
+      {
+        "collision_rejected": 8,
+        "gaps": [
+          0,
+          3,
+          4,
+          15,
+          16
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 25,
+        "p": 19
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 23
+      },
+      {
+        "collision_rejected": 16,
+        "gaps": [
+          0,
+          1,
+          8,
+          11,
+          12,
+          15,
+          22
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 49,
+        "p": 23
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 31
+      },
+      {
+        "collision_rejected": 48,
+        "gaps": [
+          0,
+          1,
+          4,
+          7,
+          13,
+          18,
+          24,
+          27,
+          30
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 81,
+        "p": 31
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 43
+      },
+      {
+        "collision_rejected": 72,
+        "gaps": [
+          0,
+          3,
+          8,
+          9,
+          13,
+          20,
+          23,
+          30,
+          34,
+          35,
+          40
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 121,
+        "p": 43
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 47
+      },
+      {
+        "collision_rejected": 112,
+        "gaps": [
+          0,
+          1,
+          6,
+          11,
+          16,
+          20,
+          23,
+          24,
+          27,
+          31,
+          36,
+          41,
+          46
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 169,
+        "p": 47
+      },
+      {
+        "collision_rejected": 0,
+        "gaps": [
+          0
+        ],
+        "normalized_center": 0,
+        "ordered_pairs": 1,
+        "p": 67
+      },
+      {
+        "collision_rejected": 208,
+        "gaps": [
+          0,
+          3,
+          8,
+          9,
+          13,
+          14,
+          21,
+          28,
+          32,
+          35,
+          39,
+          46,
+          53,
+          54,
+          58,
+          59,
+          64
+        ],
+        "normalized_center": 1,
+        "ordered_pairs": 289,
+        "p": 67
+      }
+    ],
+    "primitive_projective_CRT_density": "32/1590435",
+    "small_CRT": {
+      "allowed": 893025,
+      "modulus": 1155
+    }
+  },
+  "schema": "session55-collision-sieve-v1",
+  "search": {
+    "bank_sha256": "9f526b55da5c4fa90b687c2c528f40d7dd4165a4913356c6a616e42f5955b68f",
+    "baseline_full_gap": {
+      "both_gaps_present": 0,
+      "difference_gap_present": 0,
+      "distinct_magnitudes": 347561,
+      "solutions": []
+    },
+    "bound": 100000,
+    "eligible_centers": 20806,
+    "filtered_full_gap": {
+      "both_gaps_present": 0,
+      "difference_gap_present": 0,
+      "distinct_magnitudes": 474,
+      "solutions": []
+    },
+    "independent_brute_bank_bound": 1000,
+    "pairs": 347561,
+    "remaining": 474,
+    "sequential": [
+      {
+        "before": 347561,
+        "prime": 3,
+        "rejected": 0,
+        "remaining": 347561
+      },
+      {
+        "before": 347561,
+        "prime": 5,
+        "rejected": 0,
+        "remaining": 347561
+      },
+      {
+        "before": 347561,
+        "prime": 7,
+        "rejected": 0,
+        "remaining": 347561
+      },
+      {
+        "before": 347561,
+        "prime": 11,
+        "rejected": 0,
+        "remaining": 347561
+      },
+      {
+        "before": 347561,
+        "prime": 13,
+        "rejected": 41649,
+        "remaining": 305912
+      },
+      {
+        "before": 305912,
+        "prime": 17,
+        "rejected": 76861,
+        "remaining": 229051
+      },
+      {
+        "before": 229051,
+        "prime": 19,
+        "rejected": 88822,
+        "remaining": 140229
+      },
+      {
+        "before": 140229,
+        "prime": 23,
+        "rejected": 51324,
+        "remaining": 88905
+      },
+      {
+        "before": 88905,
+        "prime": 31,
+        "rejected": 58111,
+        "remaining": 30794
+      },
+      {
+        "before": 30794,
+        "prime": 43,
+        "rejected": 20939,
+        "remaining": 9855
+      },
+      {
+        "before": 9855,
+        "prime": 47,
+        "rejected": 7600,
+        "remaining": 2255
+      },
+      {
+        "before": 2255,
+        "prime": 67,
+        "rejected": 1781,
+        "remaining": 474
+      }
+    ],
+    "standalone_rejections": {
+      "11": 0,
+      "13": 41649,
+      "17": 88127,
+      "19": 134345,
+      "23": 130672,
+      "3": 0,
+      "31": 219414,
+      "43": 237537,
+      "47": 264971,
+      "5": 0,
+      "67": 284311,
+      "7": 0
+    },
+    "survivor_samples": [
+      {
+        "e": 2425,
+        "entries": [
+          11135569,
+          -3984815,
+          10491121,
+          5236177,
+          5880625,
+          6525073,
+          1270129,
+          15746065,
+          625681
+        ],
+        "exact_roots": [
+          3337,
+          null,
+          3239,
+          null,
+          2425,
+          null,
+          1127,
+          null,
+          791
+        ],
+        "gcd_uv": 96,
+        "residue_and_carry_67": [
+          [
+            166202,
+            35
+          ],
+          [
+            -59475,
+            10
+          ],
+          [
+            156583,
+            60
+          ],
+          [
+            78151,
+            60
+          ],
+          [
+            87770,
+            35
+          ],
+          [
+            97389,
+            10
+          ],
+          [
+            18957,
+            10
+          ],
+          [
+            235015,
+            60
+          ],
+          [
+            9338,
+            35
+          ]
+        ],
+        "u": 5254944,
+        "v": 4610496
+      },
+      {
+        "e": 3925,
+        "entries": [
+          30658369,
+          -8246135,
+          23804641,
+          8551897,
+          15405625,
+          22259353,
+          7006609,
+          39057385,
+          152881
+        ],
+        "exact_roots": [
+          5537,
+          null,
+          4879,
+          null,
+          3925,
+          null,
+          2647,
+          null,
+          391
+        ],
+        "gcd_uv": 744,
+        "residue_and_carry_67": [
+          [
+            457587,
+            40
+          ],
+          [
+            -123077,
+            24
+          ],
+          [
+            355293,
+            10
+          ],
+          [
+            127640,
+            17
+          ],
+          [
+            229934,
+            47
+          ],
+          [
+            332229,
+            10
+          ],
+          [
+            104576,
+            17
+          ],
+          [
+            582946,
+            3
+          ],
+          [
+            2281,
+            54
+          ]
+        ],
+        "u": 15252744,
+        "v": 8399016
+      },
+      {
+        "e": 4553,
+        "entries": [
+          30217009,
+          3595489,
+          28376929,
+          18889729,
+          20729809,
+          22569889,
+          13082689,
+          37864129,
+          11242609
+        ],
+        "exact_roots": [
+          5497,
+          null,
+          5327,
+          null,
+          4553,
+          null,
+          3617,
+          null,
+          3353
+        ],
+        "gcd_uv": 240,
+        "residue_and_carry_67": [
+          [
+            451000,
+            9
+          ],
+          [
+            53664,
+            1
+          ],
+          [
+            423536,
+            17
+          ],
+          [
+            281936,
+            17
+          ],
+          [
+            309400,
+            9
+          ],
+          [
+            336864,
+            1
+          ],
+          [
+            195264,
+            1
+          ],
+          [
+            565136,
+            17
+          ],
+          [
+            167800,
+            9
+          ]
+        ],
+        "u": 9487200,
+        "v": 7647120
+      }
+    ],
+    "survivor_sha256": "e0be1bfdec05dcebedcf2ada92ac5a03a28f54feee9b34c6ae377fd1ed29c459",
+    "verified_actual_roots": 322872
+  }
+}

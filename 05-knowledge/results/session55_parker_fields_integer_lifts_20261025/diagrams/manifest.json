@@ -1,0 +1,14 @@
+{
+  "README.md": "38d45eea121e5dea792d906ed4e7fd6eec9076d358bf3b4952bf6025f03b0b41",
+  "SOURCE_PINS.json": "26fd6a4cf238789a7965a64864e1038959351337a05f1d02b58c9f3b9c5b305f",
+  "countdata.json": "b66ad3e110918dae8e7a5d666fc66d8aad0a3365cdfa966b851e6019c31f0e58",
+  "crt-shared-cells.svg": "cfdd4d5ba6f0997c0d76f63246471ab34da461c3ea07a1d401c94b255b56ef10",
+  "fields-rings-reentry.svg": "f28c1d1225deca6095d25f2bf09a6ac721aac04674be32c22ad2da3035ef9a81",
+  "generate.py": "3b993407e36a8cefb1060be4c4d50ed84fa00aa5f1e3ca9c8c9d089798c27717",
+  "replay.py": "6dbe4564651e019d5a215a5407e86caea68569a9da9a977a5bcdbdf3c56ab5ec",
+  "sources/CRT_THEOREM.md": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450",
+  "sources/FIELD_THEOREM.md": "ece445f72f51fd0400b4bcb0f4b30f17d62565025755c0f29493a37d7d31ba68",
+  "sources/PADIC_PROOF.md": "8010f2996a695d420daa7b9e7296ccd091156352cdd069bf51f51e7bd4519149",
+  "sources/dyadic_rows.json": "0c281f0683095614b084307df1d28019780624d7830e0853dd62d3a61a7c199d",
+  "sources/field_rows.json": "ed39b099d667bef57bc3a7e57c5538056512e0750b62f3a97565135ccadb28e1"
+}

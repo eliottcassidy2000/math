@@ -1,0 +1,60 @@
+[
+  {
+    "center_one_count": 0,
+    "center_zero_u1_count": 0,
+    "method": "exhaustive_normalized",
+    "modulus_low_first": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "n": 3,
+    "p": 3,
+    "q": 27,
+    "witness": null
+  },
+  {
+    "center_one_count": 48,
+    "center_zero_u1_count": 6,
+    "method": "exhaustive_normalized",
+    "modulus_low_first": [
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "n": 4,
+    "p": 3,
+    "q": 81,
+    "witness": [
+      1,
+      23,
+      15,
+      17,
+      0,
+      22,
+      21,
+      16,
+      2
+    ]
+  },
+  {
+    "center_one_count": 0,
+    "center_zero_u1_count": 0,
+    "method": "exhaustive_normalized",
+    "modulus_low_first": [
+      1,
+      0,
+      0,
+      0,
+      2,
+      1
+    ],
+    "n": 5,
+    "p": 3,
+    "q": 243,
+    "witness": null
+  }
+]

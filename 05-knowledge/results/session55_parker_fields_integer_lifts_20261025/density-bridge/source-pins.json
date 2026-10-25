@@ -1,0 +1,27 @@
+[
+  {
+    "copy": "inputs/THEOREM.md",
+    "source": "session55-finite-field-geometry/THEOREM.md",
+    "sha256": "ece445f72f51fd0400b4bcb0f4b30f17d62565025755c0f29493a37d7d31ba68"
+  },
+  {
+    "copy": "inputs/verify.py",
+    "source": "session55-finite-field-geometry/verify.py",
+    "sha256": "b35177b56920941f0e08e46cdb55df86cc03d50bc9e42ab61525c27b9b1f88f2"
+  },
+  {
+    "copy": "inputs/small_counts.json",
+    "source": "session55-finite-field-geometry/small_counts.json",
+    "sha256": "548864fa5f80966ffc433618152c095797fb08acfa0a58ee53dc4f7b872e1675"
+  },
+  {
+    "copy": "inputs/ring-PROOF.md",
+    "source": "session55-prime-power-counts/PROOF.md",
+    "sha256": "0db790f34982760594c72f8e7615032236d229751a18a179473e9f31dbbe9e4c"
+  },
+  {
+    "copy": "inputs/ring_verify.py",
+    "source": "session55-prime-power-counts/verify.py",
+    "sha256": "c5c809d3464284899e29fdc519a20c7aa5fc228cfa4a4720f117daad455d81db"
+  }
+]

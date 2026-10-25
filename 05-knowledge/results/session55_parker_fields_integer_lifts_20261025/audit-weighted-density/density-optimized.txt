@@ -1,0 +1,1 @@
+PASS: source pins, field slices and counts, general content recurrence, hostile controls, exact density constants

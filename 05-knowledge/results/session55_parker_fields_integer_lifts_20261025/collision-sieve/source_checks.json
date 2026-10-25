@@ -1,0 +1,36 @@
+[
+  {
+    "query": [
+      "rg",
+      "-l",
+      "-i",
+      "Parker.*(square|magic)|(square|magic).*Parker|magic squares? of squares",
+      "math"
+    ],
+    "exit_code": 1,
+    "stdout": ""
+  },
+  {
+    "query": [
+      "rg",
+      "-n",
+      "-i",
+      "collision|discriminant",
+      "session55-finite-field-geometry/THEOREM.md"
+    ],
+    "exit_code": 0,
+    "stdout": "7:A Parker field has no 3 by 3 magic square with nine distinct entries that are squares; zero is permitted. Work over the FIELD F_(p^r), not the ring Z/p^r Z. The standard three-parameter magic plane, normalization of nonzero square center to one, and center-zero constructions are inherited mechanisms (Cain, 2019, Sections 5\u20137). The hostile examples are characteristic two and F_27, which is Parker although Z/27 Z is not. Our niche is the collision arrangement, and our wildcard is the use of a conic slice to remove two character constraints before applying Weil.\n9:Live concept board: magic plane / square-scaling quotient / conic slice / collision arrangement / squarefree character sums / extension-field versus residue-ring arithmetic. No implication about the integer problem is asserted.\n11:## 1. Universal magic plane and collision directions\n27:To prove this, a collision means au+bv=0 with a,b in {-2,-1,0,1,2}, not both zero. If a=0 then v=0, excluded. Otherwise division gives exactly the listed possibilities. Conversely each listed ratio realizes a difference of two grid indices. Repeated listed values in small characteristic only reduce the forbidden set.\n74:Thus sum W >= (q-15-114 sqrt(q))/64. At each of the six distinct roots W is at most 1/2; removing roots costs at most 3. At all other points W is exactly the indicator of six nonzero square entries. Removing the collision set from Section 1 costs at most seven more. The displayed lower bound follows.\n96:A field embedding F_q -> F_(q^m) transports every non-Parker witness. This is an implication along divisibility of extension degrees, not numerical monotonicity in q. Conversely, reduction of a ring witness modulo p can collapse distinct entries; no Parker obstruction propagates from F_p to Z/p^rZ without tracking collisions. The bounded interweaving of Parker and non-Parker orders is therefore not evidence against eventual odd-characteristic existence, nor evidence for an integer square.\n127:PROVED (shorter zero-center threshold). If q is odd, q=1 mod 4 and q>=65, there is a zero-center distinct square witness. Set c=0,u=1 and seek t=v such that t-1,t,t+1 are nonzero squares. Since -1 is a square, all nine entries are then squares. The weighted product of the three quadratic-character indicators has total at least (q-3-2 sqrt(q))/8: the three linear terms vanish, each quadratic term is -1, and the cubic term has absolute value at most 2 sqrt(q). At the three roots the total spurious weight is at most 3/2. The remaining collision parameters are contained in {\u00b12,\u00b11/2}, costing at most four more. The number of valid t is at least (q-47-2 sqrt(q))/8, positive for q>=65. This is a sufficient bound, not the least non-Parker order.\n131:PROVED (square-order elementary construction). Every odd square-order field F_(s\u00b2) with s>=9 is non-Parker. All elements of the subfield F_s are squares in F_(s\u00b2): for a nonzero subfield element, a^((s\u00b2-1)/2)=(a^(s-1))^((s+1)/2)=1. Select u=1 and v outside the at most seven forbidden collision values in F_s. As s>=9 such v exists, so the magic grid with c=0 has nine distinct subfield entries, all squares upstairs. This proof has no character-sum dependency.\n148:An independent implementation checked the full 1730-order universe, all 1714 positive witnesses, all 16 negative complete searches, all 71 small-count records, and every modulus using Frobenius/gcd irreducibility rather than this producer's trial-division algorithm. The external audit also checked collision and six-root equivalences over small prime and extension fields, including characteristics 3 and 5. The census hash is 37bfadf8dc7b223a82699e6c29e8207d58fab220acf8c8cce8b03e3130fa5150. The independently audited first nonzero-center field is 59.\n"
+  },
+  {
+    "dependency": "session55-parker-lifts/certificates.json",
+    "sha256": "c3b5611f6b8790bb859bfe101c7d7cbf1782b4f0817c9d55791377b63b075e04"
+  },
+  {
+    "dependency": "session55-finite-field-geometry/census.json",
+    "sha256": "37bfadf8dc7b223a82699e6c29e8207d58fab220acf8c8cce8b03e3130fa5150"
+  },
+  {
+    "dependency": "session55-finite-field-geometry/THEOREM.md",
+    "sha256": "ece445f72f51fd0400b4bcb0f4b30f17d62565025755c0f29493a37d7d31ba68"
+  }
+]

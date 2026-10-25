@@ -1,0 +1,1 @@
+PASS: direct ring recurrence, bijective descent, primitive/all-unit and actual D4 orbits

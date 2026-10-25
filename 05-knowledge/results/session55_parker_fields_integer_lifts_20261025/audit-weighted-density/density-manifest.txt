@@ -1,0 +1,12 @@
+./PROOF.md: OK
+./README.md: OK
+./certificate.json: OK
+./inputs/THEOREM.md: OK
+./inputs/ring-PROOF.md: OK
+./inputs/ring_verify.py: OK
+./inputs/small_counts.json: OK
+./inputs/verify.py: OK
+./replay-normal.txt: OK
+./replay-optimized.txt: OK
+./source-pins.json: OK
+./verify.py: OK

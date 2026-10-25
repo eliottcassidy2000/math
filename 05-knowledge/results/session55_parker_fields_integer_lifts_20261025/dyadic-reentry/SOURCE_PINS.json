@@ -1,0 +1,20 @@
+{
+  "dependencies": [
+    {
+      "path": "session55-crt-collision-wiring/CLASSIFICATION.md",
+      "sha256": "fb5d0191b0fb203da56df2ebe0c0f5c2a18df1cc4011259332e406da9a5dd766"
+    },
+    {
+      "path": "session55-crt-collision-wiring/THEOREM.md",
+      "sha256": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450"
+    },
+    {
+      "path": "session55-crt-collision-wiring/classification_candidates.json",
+      "sha256": "e74f74b5c4cf056d8e393582dbccc25b27d84f42f6ff1aa47806833f1836f2a7"
+    },
+    {
+      "path": "session55-finite-field-geometry/THEOREM.md",
+      "sha256": "ece445f72f51fd0400b4bcb0f4b30f17d62565025755c0f29493a37d7d31ba68"
+    }
+  ]
+}

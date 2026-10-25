@@ -1,0 +1,8 @@
+{
+  "session55-density-bridge/SHA256SUMS": "040a6f299a4f4c0977293904c0b14f0f34d3bf98cac75517ab3ea497766f5dcc",
+  "session55-density-bridge/certificate.json": "a198067964301580ad08d5bf31f13270ef29767b38644ab9b002434b44b9e156",
+  "session55-density-bridge/verify.py": "f3cc42b384250a132e7230ffbb9823b3ef269cfee52767aba6726e79429099ae",
+  "session55-weighted-crt-counts/SHA256SUMS": "e5d9e6aa80e4998bd8f560fc4f915b4b649c634eb4033c4c8654752794f68d33",
+  "session55-weighted-crt-counts/certificate.json": "83bca40a112d66e445a722d9e4eec1a610a821c6e72d50a33b1799ae887dff07",
+  "session55-weighted-crt-counts/verify.py": "ba0fdd168cf1abfeb3cf54e29f2bbe4348487643d744af1a944c579b454a3b7a"
+}

@@ -1,0 +1,102 @@
+{
+  "proper_divisor_counterpairs": [
+    [
+      100,
+      50
+    ],
+    [
+      196,
+      98
+    ],
+    [
+      300,
+      50
+    ],
+    [
+      300,
+      150
+    ],
+    [
+      588,
+      98
+    ],
+    [
+      588,
+      294
+    ]
+  ],
+  "rows": [
+    {
+      "a": 1,
+      "m": 25,
+      "n": 50,
+      "parker": false
+    },
+    {
+      "a": 2,
+      "m": 25,
+      "n": 100,
+      "parker": true
+    },
+    {
+      "a": 3,
+      "m": 25,
+      "n": 200,
+      "parker": false
+    }
+  ],
+  "smallest_loss": {
+    "from": 50,
+    "line_sum": 28,
+    "obstruction": "Any magic square array modulo 100 reduces modulo 4 to a constant, so its parity is constant; this witness has mixed parity and cannot lift.",
+    "to": 100,
+    "witness": {
+      "entries": [
+        41,
+        6,
+        31,
+        16,
+        26,
+        36,
+        21,
+        46,
+        11
+      ],
+      "local_arrays": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          16,
+          6,
+          6,
+          16,
+          1,
+          11,
+          21,
+          21,
+          11
+        ]
+      ],
+      "square_roots": [
+        29,
+        34,
+        41,
+        46,
+        26,
+        44,
+        39,
+        36,
+        31
+      ]
+    }
+  }
+}

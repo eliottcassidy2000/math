@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="805" viewBox="0 0 1180 805" role="img" aria-labelledby="title desc">
+<title id="title">Fields and quotient rings have different Parker behavior</title><desc id="desc">Characteristic-two fields are always Parker, whereas the rings modulo 2 to the k are non-Parker exactly at k at least seven. Orders 27, 81, 243 distinguish field and ring behavior. Ring orders 50, 100, 200 alternate non-Parker, Parker, non-Parker.</desc>
+<rect width="1180" height="805" fill="#f8fafc"/>
+<text x="36" y="49" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#102a43">Same cardinality does not mean the same arithmetic</text>
+<text x="36" y="82" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#486581">P = Parker (no distinct square-entry magic grid); non-P = such a grid exists.</text>
+<rect x="36" y="110" width="1108" height="110" rx="8" fill="#eaf2f8" stroke="#bcccdc"/>
+<text x="58" y="148" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#102a43">Fields of order 2ʳ: P for every r ≥ 1</text>
+<text x="58" y="185" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#486581">Characteristic 2 forces opposite cells to coincide.</text>
+<text x="655" y="148" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#102a43">Rings ℤ/2ᵏℤ: non-P iff k ≥ 7</text>
+<text x="655" y="185" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#486581">First non-P ring in this family: 128.</text>
+<text x="58" y="266" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#102a43">Order q</text>
+<text x="314" y="266" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#102a43">Field of order q</text>
+<text x="650" y="266" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#102a43">Ring ℤ/qℤ</text>
+<rect x="36" y="286" width="1108" height="56" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="58" y="322" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="600" text-anchor="start" fill="#102a43">27</text>
+<text x="314" y="322" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#854d0e">P</text>
+<text x="650" y="322" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#16624b">non-P</text>
+<rect x="36" y="350" width="1108" height="56" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="58" y="386" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="600" text-anchor="start" fill="#102a43">81</text>
+<text x="314" y="386" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#16624b">non-P</text>
+<text x="650" y="386" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#16624b">non-P</text>
+<rect x="36" y="414" width="1108" height="56" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="58" y="450" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="600" text-anchor="start" fill="#102a43">243</text>
+<text x="314" y="450" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#854d0e">P</text>
+<text x="650" y="450" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="600" text-anchor="start" fill="#16624b">non-P</text>
+<text x="36" y="512" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#486581">F₈₁ is non-P, but F₂₄₃ is P: field embeddings follow degree divisibility, not size.</text>
+<path d="M36,537 L1144,537" stroke="#486581" stroke-width="2" fill="none"/>
+<text x="36" y="575" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#102a43">Smallest doubling re-entry into the Parker rings</text>
+<rect x="36" y="601" width="292" height="91" rx="8" fill="#e3f3eb" stroke="#bcccdc"/>
+<text x="182" y="637" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#102a43">ℤ/50ℤ</text>
+<text x="182" y="672" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#102a43">non-P</text>
+<rect x="444" y="601" width="292" height="91" rx="8" fill="#fff0cd" stroke="#bcccdc"/>
+<text x="590" y="637" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#102a43">ℤ/100ℤ</text>
+<text x="590" y="672" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#102a43">P</text>
+<rect x="852" y="601" width="292" height="91" rx="8" fill="#e3f3eb" stroke="#bcccdc"/>
+<text x="998" y="637" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" text-anchor="middle" fill="#102a43">ℤ/200ℤ</text>
+<text x="998" y="672" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" text-anchor="middle" fill="#102a43">non-P</text>
+<text x="386" y="650" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#102a43">×2 →</text>
+<text x="794" y="650" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#102a43">×2 →</text>
+<text x="36" y="730" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#102a43">Distinctness can collapse under reduction; a witness need not lift through doubling.</text>
+<text x="36" y="761" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#486581">These are exact field/ring statements, not integer-square existence claims.</text>
+<text x="36" y="790" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#486581">Sources: finite-field classification; 2-adic/3-adic thresholds; dyadic re-entry certificate.</text>
+</svg>

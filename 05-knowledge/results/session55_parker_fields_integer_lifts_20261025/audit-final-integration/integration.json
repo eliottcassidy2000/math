@@ -1,0 +1,228 @@
+{
+  "status": "PASS",
+  "map_sha256": "1c3503e3c85f45b22cf078207e505d167faad2f8a02a17ec7ddb907207cc29cc",
+  "mapped_files": 82,
+  "root_links": [
+    {
+      "document": "README.md",
+      "url": "finite-fields/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/THEOREM.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-finite-fields/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-finite-fields/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "integer-search/RESULTS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/integer-search/RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-integer-search/REPORT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-integer-search/REPORT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "carry-lattice/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/carry-lattice/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-lifting-scores/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-lifting-scores/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "residual-scores/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/residual-scores/THEOREM.md"
+    },
+    {
+      "document": "README.md",
+      "url": "recovered/ATLAS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/recovered/ATLAS.md"
+    },
+    {
+      "document": "README.md",
+      "url": "crt-wiring/CLASSIFICATION.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/crt-wiring/CLASSIFICATION.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-odd-rings/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-odd-rings/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "crt-wiring/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/crt-wiring/THEOREM.md"
+    },
+    {
+      "document": "README.md",
+      "url": "padic-lifts/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/padic-lifts/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-padic-lifts/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-padic-lifts/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "prime-power-counts/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/prime-power-counts/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "modular-count-audit/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/modular-count-audit/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "modular-count-audit/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/modular-count-audit/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "SYNTHESIS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/SYNTHESIS.md"
+    },
+    {
+      "document": "README.md",
+      "url": "dyadic-reentry/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/dyadic-reentry/THEOREM.md"
+    },
+    {
+      "document": "README.md",
+      "url": "weighted-crt/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/weighted-crt/THEOREM.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-weighted-density/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-weighted-density/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "density-bridge/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/density-bridge/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "ordinary-count-gf/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/ordinary-count-gf/PROOF.md"
+    },
+    {
+      "document": "README.md",
+      "url": "collision-sieve/RESULTS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/collision-sieve/RESULTS.md"
+    },
+    {
+      "document": "README.md",
+      "url": "audit-collision-sieve/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-collision-sieve/AUDIT.md"
+    },
+    {
+      "document": "README.md",
+      "url": "diagrams/README.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "integer-search/RESULTS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/integer-search/RESULTS.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "audit-integer-search/REPORT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-integer-search/REPORT.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "carry-lattice/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/carry-lattice/PROOF.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "finite-fields/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/THEOREM.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "audit-finite-fields/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-finite-fields/AUDIT.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "diagrams/crt-shared-cells.svg",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/crt-shared-cells.svg"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "crt-wiring/CLASSIFICATION.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/crt-wiring/CLASSIFICATION.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "audit-odd-rings/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-odd-rings/AUDIT.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "diagrams/fields-rings-reentry.svg",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/fields-rings-reentry.svg"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "dyadic-reentry/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/dyadic-reentry/THEOREM.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "prime-power-counts/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/prime-power-counts/PROOF.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "modular-count-audit/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/modular-count-audit/PROOF.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "ordinary-count-gf/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/ordinary-count-gf/PROOF.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "weighted-crt/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/weighted-crt/THEOREM.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "audit-weighted-density/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-weighted-density/AUDIT.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "density-bridge/PROOF.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/density-bridge/PROOF.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "collision-sieve/RESULTS.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/collision-sieve/RESULTS.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "audit-collision-sieve/AUDIT.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/audit-collision-sieve/AUDIT.md"
+    },
+    {
+      "document": "SYNTHESIS.md",
+      "url": "residual-scores/THEOREM.md",
+      "target": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/residual-scores/THEOREM.md"
+    }
+  ],
+  "new_dependency_pins_checked": 7
+}

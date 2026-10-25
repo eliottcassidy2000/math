@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "limit": 160,
+  "elapsed_seconds": 24.057,
+  "examples": {
+    "35": {
+      "total_arrays": 112,
+      "distinct_labeled": 24,
+      "distinct_D4_orbits": 3
+    },
+    "55": {
+      "total_arrays": 182,
+      "distinct_labeled": 40,
+      "distinct_D4_orbits": 5
+    },
+    "201": {
+      "total_arrays": 2708,
+      "distinct_labeled": 0,
+      "distinct_D4_orbits": 0
+    },
+    "36": {
+      "total_arrays": 56,
+      "distinct_labeled": 0,
+      "distinct_D4_orbits": 0
+    },
+    "200": {
+      "total_arrays": 2439,
+      "distinct_labeled": 160,
+      "distinct_D4_orbits": 20
+    },
+    "77": {
+      "total_arrays": 416,
+      "distinct_labeled": 120,
+      "distinct_D4_orbits": 15
+    },
+    "432": {
+      "total_arrays": 7310,
+      "distinct_labeled": 3024,
+      "distinct_D4_orbits": 378
+    }
+  }
+}

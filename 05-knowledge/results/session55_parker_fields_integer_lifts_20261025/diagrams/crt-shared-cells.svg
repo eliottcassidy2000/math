@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="790" viewBox="0 0 1180 790" role="img" aria-labelledby="title desc">
+<title id="title">CRT resolves local collisions, not integer squarehood</title><desc id="desc">The same nine cell labels in two local square-residue grids modulo 5 and 7 combine to nine distinct square residues modulo 35. Their ordinary row sums differ.</desc>
+<rect width="1180" height="790" fill="#f8fafc"/>
+<text x="36" y="49" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" text-anchor="start" fill="#102a43">Shared cell labels are the missing CRT information</text>
+<text x="36" y="82" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#486581">Parker = no magic grid with nine distinct square entries. Zero is allowed.</text>
+<text x="36" y="128" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#102a43">LOCAL: modulo 5</text>
+<text x="414" y="128" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#102a43">LOCAL: modulo 7</text>
+<text x="792" y="128" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#102a43">PRODUCT: modulo 35</text>
+<text x="36" y="157" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#486581">Parker; 3 square values here</text>
+<text x="414" y="157" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#486581">Parker; 3 square values here</text>
+<text x="792" y="157" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#486581">Non-Parker; 9 distinct values</text>
+<rect x="36" y="181" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="45" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 0</text>
+<text x="78" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="126" y="181" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="135" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 1</text>
+<text x="168" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">4</text>
+<rect x="216" y="181" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="225" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 2</text>
+<text x="258" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="36" y="263" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="45" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 3</text>
+<text x="78" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="126" y="263" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="135" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 4</text>
+<text x="168" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="216" y="263" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="225" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 5</text>
+<text x="258" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">4</text>
+<rect x="36" y="345" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="45" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 6</text>
+<text x="78" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">4</text>
+<rect x="126" y="345" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="135" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 7</text>
+<text x="168" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="216" y="345" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="225" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 8</text>
+<text x="258" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="414" y="181" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="423" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 0</text>
+<text x="456" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="504" y="181" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="513" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 1</text>
+<text x="546" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">2</text>
+<rect x="594" y="181" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="603" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 2</text>
+<text x="636" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="414" y="263" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="423" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 3</text>
+<text x="456" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">2</text>
+<rect x="504" y="263" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="513" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 4</text>
+<text x="546" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="594" y="263" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="603" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 5</text>
+<text x="636" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="414" y="345" width="84" height="76" rx="8" fill="#ffedba" stroke="#bcccdc"/>
+<text x="423" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 6</text>
+<text x="456" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="504" y="345" width="84" height="76" rx="8" fill="#d9eaff" stroke="#bcccdc"/>
+<text x="513" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 7</text>
+<text x="546" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="594" y="345" width="84" height="76" rx="8" fill="#d5f1e5" stroke="#bcccdc"/>
+<text x="603" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 8</text>
+<text x="636" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">2</text>
+<rect x="792" y="181" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="801" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 0</text>
+<text x="834" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">0</text>
+<rect x="882" y="181" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="891" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 1</text>
+<text x="924" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">9</text>
+<rect x="972" y="181" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="981" y="199" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 2</text>
+<text x="1014" y="233" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">1</text>
+<rect x="792" y="263" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="801" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 3</text>
+<text x="834" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">16</text>
+<rect x="882" y="263" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="891" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 4</text>
+<text x="924" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">15</text>
+<rect x="972" y="263" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="981" y="281" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 5</text>
+<text x="1014" y="315" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">14</text>
+<rect x="792" y="345" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="801" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 6</text>
+<text x="834" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">29</text>
+<rect x="882" y="345" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="891" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 7</text>
+<text x="924" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">21</text>
+<rect x="972" y="345" width="84" height="76" rx="8" fill="#ffffff" stroke="#bcccdc"/>
+<text x="981" y="363" font-family="DejaVu Sans, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#486581">cell 8</text>
+<text x="1014" y="397" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="600" text-anchor="middle" fill="#102a43">30</text>
+<text x="350" y="307" font-family="DejaVu Sans, sans-serif" font-size="33" font-weight="400" text-anchor="middle" fill="#102a43">×</text>
+<text x="728" y="307" font-family="DejaVu Sans, sans-serif" font-size="33" font-weight="400" text-anchor="middle" fill="#102a43">→</text>
+<text x="36" y="459" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="600" text-anchor="start" fill="#102a43">A: {0,4,8}  {2,3,7}  {1,5,6}</text>
+<text x="414" y="459" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="600" text-anchor="start" fill="#102a43">B: {2,4,6}  {0,5,7}  {1,3,8}</text>
+<text x="792" y="459" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="600" text-anchor="start" fill="#102a43">Equal modulo 35 ⇔ equal locally</text>
+<text x="36" y="490" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#486581">Colour = equal residues within each local grid; cell numbers stay fixed.</text>
+<rect x="36" y="515" width="1108" height="79" rx="8" fill="#eaf2f8" stroke="#bcccdc"/>
+<text x="58" y="547" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#102a43">C₃₅ = C₅ ∩ C₇ = ∅</text>
+<text x="465" y="545" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#102a43">Each A-block meets each B-block in one cell.</text>
+<text x="465" y="574" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#486581">No pair of different cells remains equal in both factors.</text>
+<rect x="36" y="616" width="1108" height="128" rx="8" fill="#fff4e8" stroke="#dca45d"/>
+<text x="58" y="650" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" text-anchor="start" fill="#102a43">Modular magic is not integer magic.</text>
+<text x="58" y="684" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#102a43">Ordinary row sums: 10, 45, 80. They differ, but all are 10 modulo 35.</text>
+<text x="58" y="716" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#486581">Every entry is a square residue modulo 35; that does not make it an integer square.</text>
+<text x="36" y="773" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#486581">Source: CRT collision-wiring theorem, §§2, 4–5. Exact witness and collision masks are replay-checked.</text>
+</svg>

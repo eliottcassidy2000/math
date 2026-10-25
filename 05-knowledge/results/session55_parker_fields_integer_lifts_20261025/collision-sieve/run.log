@@ -1,0 +1,368 @@
+{
+  "bound": 100000,
+  "pairs": 347561,
+  "eligible_centers": 20806,
+  "bank_sha256": "9f526b55da5c4fa90b687c2c528f40d7dd4165a4913356c6a616e42f5955b68f",
+  "verified_actual_roots": 322872,
+  "standalone_rejections": {
+    "3": 0,
+    "5": 0,
+    "7": 0,
+    "11": 0,
+    "13": 41649,
+    "17": 88127,
+    "19": 134345,
+    "23": 130672,
+    "31": 219414,
+    "43": 237537,
+    "47": 264971,
+    "67": 284311
+  },
+  "sequential": [
+    {
+      "prime": 3,
+      "before": 347561,
+      "rejected": 0,
+      "remaining": 347561
+    },
+    {
+      "prime": 5,
+      "before": 347561,
+      "rejected": 0,
+      "remaining": 347561
+    },
+    {
+      "prime": 7,
+      "before": 347561,
+      "rejected": 0,
+      "remaining": 347561
+    },
+    {
+      "prime": 11,
+      "before": 347561,
+      "rejected": 0,
+      "remaining": 347561
+    },
+    {
+      "prime": 13,
+      "before": 347561,
+      "rejected": 41649,
+      "remaining": 305912
+    },
+    {
+      "prime": 17,
+      "before": 305912,
+      "rejected": 76861,
+      "remaining": 229051
+    },
+    {
+      "prime": 19,
+      "before": 229051,
+      "rejected": 88822,
+      "remaining": 140229
+    },
+    {
+      "prime": 23,
+      "before": 140229,
+      "rejected": 51324,
+      "remaining": 88905
+    },
+    {
+      "prime": 31,
+      "before": 88905,
+      "rejected": 58111,
+      "remaining": 30794
+    },
+    {
+      "prime": 43,
+      "before": 30794,
+      "rejected": 20939,
+      "remaining": 9855
+    },
+    {
+      "prime": 47,
+      "before": 9855,
+      "rejected": 7600,
+      "remaining": 2255
+    },
+    {
+      "prime": 67,
+      "before": 2255,
+      "rejected": 1781,
+      "remaining": 474
+    }
+  ],
+  "remaining": 474,
+  "survivor_sha256": "e0be1bfdec05dcebedcf2ada92ac5a03a28f54feee9b34c6ae377fd1ed29c459",
+  "baseline_full_gap": {
+    "distinct_magnitudes": 347561,
+    "difference_gap_present": 0,
+    "both_gaps_present": 0,
+    "solutions": []
+  },
+  "filtered_full_gap": {
+    "distinct_magnitudes": 474,
+    "difference_gap_present": 0,
+    "both_gaps_present": 0,
+    "solutions": []
+  },
+  "survivor_samples": [
+    {
+      "e": 2425,
+      "u": 5254944,
+      "v": 4610496,
+      "gcd_uv": 96,
+      "entries": [
+        11135569,
+        -3984815,
+        10491121,
+        5236177,
+        5880625,
+        6525073,
+        1270129,
+        15746065,
+        625681
+      ],
+      "exact_roots": [
+        3337,
+        null,
+        3239,
+        null,
+        2425,
+        null,
+        1127,
+        null,
+        791
+      ],
+      "residue_and_carry_67": [
+        [
+          166202,
+          35
+        ],
+        [
+          -59475,
+          10
+        ],
+        [
+          156583,
+          60
+        ],
+        [
+          78151,
+          60
+        ],
+        [
+          87770,
+          35
+        ],
+        [
+          97389,
+          10
+        ],
+        [
+          18957,
+          10
+        ],
+        [
+          235015,
+          60
+        ],
+        [
+          9338,
+          35
+        ]
+      ]
+    },
+    {
+      "e": 3925,
+      "u": 15252744,
+      "v": 8399016,
+      "gcd_uv": 744,
+      "entries": [
+        30658369,
+        -8246135,
+        23804641,
+        8551897,
+        15405625,
+        22259353,
+        7006609,
+        39057385,
+        152881
+      ],
+      "exact_roots": [
+        5537,
+        null,
+        4879,
+        null,
+        3925,
+        null,
+        2647,
+        null,
+        391
+      ],
+      "residue_and_carry_67": [
+        [
+          457587,
+          40
+        ],
+        [
+          -123077,
+          24
+        ],
+        [
+          355293,
+          10
+        ],
+        [
+          127640,
+          17
+        ],
+        [
+          229934,
+          47
+        ],
+        [
+          332229,
+          10
+        ],
+        [
+          104576,
+          17
+        ],
+        [
+          582946,
+          3
+        ],
+        [
+          2281,
+          54
+        ]
+      ]
+    },
+    {
+      "e": 4553,
+      "u": 9487200,
+      "v": 7647120,
+      "gcd_uv": 240,
+      "entries": [
+        30217009,
+        3595489,
+        28376929,
+        18889729,
+        20729809,
+        22569889,
+        13082689,
+        37864129,
+        11242609
+      ],
+      "exact_roots": [
+        5497,
+        null,
+        5327,
+        null,
+        4553,
+        null,
+        3617,
+        null,
+        3353
+      ],
+      "residue_and_carry_67": [
+        [
+          451000,
+          9
+        ],
+        [
+          53664,
+          1
+        ],
+        [
+          423536,
+          17
+        ],
+        [
+          281936,
+          17
+        ],
+        [
+          309400,
+          9
+        ],
+        [
+          336864,
+          1
+        ],
+        [
+          195264,
+          1
+        ],
+        [
+          565136,
+          17
+        ],
+        [
+          167800,
+          9
+        ]
+      ]
+    }
+  ],
+  "independent_brute_bank_bound": 1000
+}
+{
+  "full_gap_baseline": {
+    "seconds": [
+      0.08681497799989302,
+      0.08778224499837961,
+      0.08597091900082887
+    ],
+    "median_seconds": 0.08681497799989302
+  },
+  "difference_first_gap_baseline": {
+    "seconds": [
+      0.0357025640005304,
+      0.028578076002304442,
+      0.02774268299981486
+    ],
+    "median_seconds": 0.028578076002304442
+  },
+  "reduced_descending_mask_then_gaps": {
+    "seconds": [
+      0.204140832000121,
+      0.19602467699951376,
+      0.20366549699974712
+    ],
+    "median_seconds": 0.20366549699974712
+  },
+  "polynomial_then_gaps": {
+    "seconds": [
+      1.441882559000078,
+      1.4240413160005119,
+      1.4251011880005535
+    ],
+    "median_seconds": 1.4251011880005535
+  },
+  "mask_then_gaps": {
+    "seconds": [
+      0.37634350000007544,
+      0.3764878910005791,
+      0.3775696650009195
+    ],
+    "median_seconds": 0.3764878910005791
+  },
+  "difference_then_mask_then_sum": {
+    "seconds": [
+      0.03556649099846254,
+      0.02812229199844296,
+      0.03025953199903597
+    ],
+    "median_seconds": 0.03025953199903597
+  },
+  "bank_signature_bitsets_then_gaps": {
+    "seconds": [
+      0.4735693699985859,
+      0.47862542100119754,
+      0.47320227499949397
+    ],
+    "median_seconds": 0.4735693699985859
+  }
+}
