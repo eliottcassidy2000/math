@@ -197,13 +197,13 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
+- [Divisor/F1 bridge](../05-knowledge/results/reflection_bridge_20261025/README.md).
 - [Ports/owners](../05-knowledge/results/ports_owners_f1_20261025/README.md): vertex-rank transfers/finite-alpha forests; guarded endpoint-four detours. [Mass continuation](../05-knowledge/results/shape_ports_20261025/tournaments.md): inherited deficit2k (k>=4), new r<k branch at 2k+1 (k>=3). Endpoint-three n>=7; unrestricted recurrence/black connectivity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
-- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md) makes `d_iso` exactly `l1` on fixed order-join patches by image-swap uncrossing; the ambient quotient still has triangles and is not a partial cube.
+- [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
   THM-3121/3134 give the `C3` profile/jet; THM-3166 diagonalizes order join.
-  THM-3181 proves `Q(-t)=(-1)^nQ(t)`, half-grid profile recovery, and exact
-  fixed-tail polynomial--exponential recurrences of minimal triangular order.
+  THM-3181 proves `Q(-t)=(-1)^nQ(t)`, half-grid profile recovery, and exact fixed-tail polynomial--exponential recurrences of minimal triangular order.
   THM-3202 gives an exact quadratic-time moving-jet `C3` evaluator and a
   factorial-cube C-finite obstruction. THM-3213 closes balanced fixed-depth
   non-P-recursiveness; THM-3226 gives every fixed strong quotient on `q>=3`

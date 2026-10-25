@@ -1,0 +1,8 @@
+{
+  "literal_tournament_triples": 140,
+  "ordered_source_pairs": 196,
+  "sources": 14,
+  "status": "FINITE-EXACT",
+  "tournament_predicates": 5,
+  "verdict": "pass"
+}

@@ -1,0 +1,119 @@
+{
+  "quotient_checks": 496,
+  "rows": [
+    {
+      "edge_slots": 4,
+      "fixed_points": {
+        "C": 0,
+        "CQ": 2,
+        "Q": 4
+      },
+      "g_histogram": {
+        "-1": 3,
+        "0": 4,
+        "1": 3
+      },
+      "k": 2,
+      "proper_sources": 10,
+      "rank_histogram": {
+        "1": 3,
+        "2": 4,
+        "3": 3
+      }
+    },
+    {
+      "edge_slots": 5,
+      "fixed_points": {
+        "C": 0,
+        "CQ": 0,
+        "Q": 6
+      },
+      "g_histogram": {
+        "-1": 4,
+        "0": 6,
+        "1": 4
+      },
+      "k": 3,
+      "proper_sources": 14,
+      "rank_histogram": {
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 3
+      }
+    },
+    {
+      "edge_slots": 6,
+      "fixed_points": {
+        "C": 0,
+        "CQ": 2,
+        "Q": 8
+      },
+      "g_histogram": {
+        "-1": 5,
+        "0": 8,
+        "1": 5
+      },
+      "k": 4,
+      "proper_sources": 18,
+      "rank_histogram": {
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 3
+      }
+    },
+    {
+      "edge_slots": 7,
+      "fixed_points": {
+        "C": 0,
+        "CQ": 0,
+        "Q": 10
+      },
+      "g_histogram": {
+        "-1": 6,
+        "0": 10,
+        "1": 6
+      },
+      "k": 5,
+      "proper_sources": 22,
+      "rank_histogram": {
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 3
+      }
+    },
+    {
+      "edge_slots": 8,
+      "fixed_points": {
+        "C": 0,
+        "CQ": 2,
+        "Q": 12
+      },
+      "g_histogram": {
+        "-1": 7,
+        "0": 12,
+        "1": 7
+      },
+      "k": 6,
+      "proper_sources": 26,
+      "rank_histogram": {
+        "1": 3,
+        "2": 4,
+        "3": 4,
+        "4": 4,
+        "5": 4,
+        "6": 4,
+        "7": 3
+      }
+    }
+  ],
+  "source_action_checks": 100,
+  "source_pair_checks": 2160,
+  "square_actual_vertex_checks": 12,
+  "status": "FINITE-EXACT"
+}

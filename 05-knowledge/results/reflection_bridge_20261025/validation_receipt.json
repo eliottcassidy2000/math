@@ -1,0 +1,37 @@
+[
+  {
+    "checker": "check_divisor_ideal_graph.py",
+    "receipt": "divisor_ideal_graph_receipt.json",
+    "checker_sha256": "c45197d22f0bbd584c3ac7336d3ff4e08400fbfd5084b65222a44e0221a4129e",
+    "receipt_sha256": "07f0102414b041080fcb76d74e4dd6736a6a0d5f27528f44a639e940a2f254a0",
+    "normal_and_optimized_identical": true
+  },
+  {
+    "checker": "graph_bridge_check.py",
+    "receipt": "graph_bridge_receipt.json",
+    "checker_sha256": "1a9814c77716c6d74dfb0235ad07f2f9edb05f7d2cd96f2e4bc97b4a01488c86",
+    "receipt_sha256": "354f574d4cb1edfb7f267c43ce6aa8e71414d0ff80427cb61128dfa3f2b5584c",
+    "normal_and_optimized_identical": true
+  },
+  {
+    "checker": "audit_graph_bridge.py",
+    "receipt": "audit_graph_bridge_receipt.json",
+    "checker_sha256": "421963a41dc4ce64bd1167ca3ec156e3639327069eba0a0c5facbf2435131181",
+    "receipt_sha256": "49d22054f48d0f22f180689065bf8e630621e9e9b8d283019f8fa27035bde5bd",
+    "normal_and_optimized_identical": true
+  },
+  {
+    "checker": "seven_check.py",
+    "receipt": "seven_check.json",
+    "checker_sha256": "664bc82d9688cab27d1c419e9fccc286f14abc312a97567ccf6c1d5657b6131e",
+    "receipt_sha256": "10fbc961cd78251cb456a8b35f71b9d29bf33ef14b19bef968fe9924eea9643e",
+    "normal_and_optimized_identical": true
+  },
+  {
+    "checker": "geometry_check.py",
+    "receipt": "geometry_receipt.json",
+    "checker_sha256": "14136cf1bc679cfd863d6fbf84ea30d3c195815c5a0353c0e4999b980a8d956d",
+    "receipt_sha256": "c587c92876490caced44415135fced904004150c65570a387e74fbe8563bfe10",
+    "normal_and_optimized_identical": true
+  }
+]

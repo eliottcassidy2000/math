@@ -13,6 +13,12 @@ a historical synthesis or promoting computational evidence.
 - **Second false implication:** overlap two `I=J` was said to require even order. The actual order-seven witness with `I=J={2,4}` disproves it; a reflected pair exists in either parity. Also, two missing gaps cost `2k`, not `k+1` for `k>=2`; the already proved corridor supersedes that old next-layer question.
 - **Repaired data and new question:** [complete n<=6 audit, explicit n7 hostile, and weighted branch](../05-knowledge/results/shape_ports_20261025/tournaments.md), with independent arc-set replay, literal targets, no inherited mixedness filter, and exact receipts. Preserve external ports and whole owner fibres in the next recurrence; the new `r<k` branch is not the entire deficit layer.
 
+## 2026-10-25 — reversing the path word is not a marked-tournament operation
+
+- **Affected:** [Klein dictionary, section 5.1](../05-knowledge/results/black_detours_closed_blue_lines_klein_dictionary_20261020.md) wrote `(T,P)->(T,P^rev)`.
+- **Minimal witness / failed implication:** `(1,0)` is not directed in `0->1`; reversing only the word leaves the marked-path universe.
+- **Repair / survivor:** `(T,P)->(T xor E(P),P^rev)`, then normalize; xor reverses path arcs. The Klein action and fixed-point obstruction survive, as in [THM-4733, Proposition A](theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md).
+- **Missing coordinate / next question:** retain the arc set, then test order preservation; see the [reflection bridge](../05-knowledge/results/reflection_bridge_20261025/README.md).
 
 ## 2026-10-25 — a carrier's parameter range and proof-search encoding are part of its type
 

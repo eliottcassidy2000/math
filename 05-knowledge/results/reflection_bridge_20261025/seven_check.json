@@ -1,0 +1,118 @@
+{
+  "boolean_sizes": [
+    1,
+    8
+  ],
+  "central_leaf_image": [
+    "0",
+    "0",
+    "-1/4"
+  ],
+  "coordinate_permutations": 6,
+  "fano_lines": 7,
+  "fano_lines_destroyed": 4,
+  "fano_lines_preserved_by_modified_complement": 3,
+  "historical_covariance_samples": 125,
+  "projective_frames": [
+    {
+      "m": 1,
+      "support_counts": {
+        "1": 3,
+        "2": 3,
+        "3": 1
+      },
+      "total": 7
+    },
+    {
+      "m": 2,
+      "support_counts": {
+        "1": 3,
+        "2": 6,
+        "3": 4
+      },
+      "total": 13
+    },
+    {
+      "m": 3,
+      "support_counts": {
+        "1": 3,
+        "2": 9,
+        "3": 9
+      },
+      "total": 21
+    },
+    {
+      "m": 4,
+      "support_counts": {
+        "1": 3,
+        "2": 12,
+        "3": 16
+      },
+      "total": 31
+    },
+    {
+      "m": 5,
+      "support_counts": {
+        "1": 3,
+        "2": 15,
+        "3": 25
+      },
+      "total": 43
+    },
+    {
+      "m": 6,
+      "support_counts": {
+        "1": 3,
+        "2": 18,
+        "3": 36
+      },
+      "total": 57
+    },
+    {
+      "m": 7,
+      "support_counts": {
+        "1": 3,
+        "2": 21,
+        "3": 49
+      },
+      "total": 73
+    },
+    {
+      "m": 8,
+      "support_counts": {
+        "1": 3,
+        "2": 24,
+        "3": 64
+      },
+      "total": 91
+    },
+    {
+      "m": 9,
+      "support_counts": {
+        "1": 3,
+        "2": 27,
+        "3": 81
+      },
+      "total": 111
+    },
+    {
+      "m": 10,
+      "support_counts": {
+        "1": 3,
+        "2": 30,
+        "3": 100
+      },
+      "total": 133
+    }
+  ],
+  "reflected_leaf_image": [
+    "0",
+    "0",
+    "1/4"
+  ],
+  "reflection_cycles_on_seven": {
+    "fixed": 1,
+    "pairs": 3
+  },
+  "status": "FINITE-EXACT"
+}

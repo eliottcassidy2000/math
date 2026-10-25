@@ -1,0 +1,640 @@
+{
+  "status": "FINITE-EXACT; all explicit checks passed, including under -O",
+  "universe": "D1 and D3 full maps; Dk fixed/witness sets k=1..12; all 8! D8 bijections",
+  "checks": {
+    "equivariance_states": 20,
+    "divisibility_pairs": 71
+  },
+  "k3_table": [
+    {
+      "exponents": [
+        0,
+        0,
+        1
+      ],
+      "graph_code": 16,
+      "graph_edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "closed": false,
+      "strong": false,
+      "blue": false
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        0
+      ],
+      "graph_code": 2,
+      "graph_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "closed": false,
+      "strong": false,
+      "blue": false
+    },
+    {
+      "exponents": [
+        0,
+        1,
+        1
+      ],
+      "graph_code": 18,
+      "graph_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "closed": false,
+      "strong": true,
+      "blue": true
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        0
+      ],
+      "graph_code": 0,
+      "graph_edges": [],
+      "closed": false,
+      "strong": false,
+      "blue": true
+    },
+    {
+      "exponents": [
+        1,
+        0,
+        1
+      ],
+      "graph_code": 48,
+      "graph_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": false,
+      "strong": false,
+      "blue": false
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        0
+      ],
+      "graph_code": 3,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "closed": false,
+      "strong": false,
+      "blue": false
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        1
+      ],
+      "graph_code": 59,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": false,
+      "strong": true,
+      "blue": true
+    },
+    {
+      "exponents": [
+        2,
+        0,
+        0
+      ],
+      "graph_code": 4,
+      "graph_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": true
+    },
+    {
+      "exponents": [
+        2,
+        0,
+        1
+      ],
+      "graph_code": 60,
+      "graph_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": false
+    },
+    {
+      "exponents": [
+        2,
+        1,
+        0
+      ],
+      "graph_code": 15,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": false
+    },
+    {
+      "exponents": [
+        2,
+        1,
+        1
+      ],
+      "graph_code": 63,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": true
+    },
+    {
+      "exponents": [
+        3,
+        0,
+        0
+      ],
+      "graph_code": 45,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": true
+    },
+    {
+      "exponents": [
+        3,
+        0,
+        1
+      ],
+      "graph_code": 61,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": false
+    },
+    {
+      "exponents": [
+        3,
+        1,
+        0
+      ],
+      "graph_code": 47,
+      "graph_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "closed": true,
+      "strong": true,
+      "blue": false
+    }
+  ],
+  "fixed_and_forced_rows": [
+    {
+      "k": 1,
+      "size": 6,
+      "Q_fixed": 2,
+      "CQ_fixed": 0,
+      "forced_empty": []
+    },
+    {
+      "k": 2,
+      "size": 10,
+      "Q_fixed": 4,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 3,
+      "size": 14,
+      "Q_fixed": 6,
+      "CQ_fixed": 0,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 4,
+      "size": 18,
+      "Q_fixed": 8,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "size": 22,
+      "Q_fixed": 10,
+      "CQ_fixed": 0,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 6,
+      "size": 26,
+      "Q_fixed": 12,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 7,
+      "size": 30,
+      "Q_fixed": 14,
+      "CQ_fixed": 0,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 8,
+      "size": 34,
+      "Q_fixed": 16,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 9,
+      "size": 38,
+      "Q_fixed": 18,
+      "CQ_fixed": 0,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 10,
+      "size": 42,
+      "Q_fixed": 20,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 11,
+      "size": 46,
+      "Q_fixed": 22,
+      "CQ_fixed": 0,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "k": 12,
+      "size": 50,
+      "Q_fixed": 24,
+      "CQ_fixed": 2,
+      "forced_empty": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "inherited_d8_counts": {
+    "equivariant": 32,
+    "monotone": 2
+  }
+}
