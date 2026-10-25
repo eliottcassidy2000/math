@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "24 positive multiples of (12,36) on E_6; integer d from 1 through 20000 only; no global exclusion",
+  "doubled_x_center_APs": [],
+  "integer_APs_with_nine_distinct_guard": [],
+  "hostiles": {
+    "group_AP_not_center_AP": "-2257995926870999701/4268239692012450",
+    "torsion_x_AP_rejected": [
+      "(-6,0)",
+      "(0,0)",
+      "(6,0)"
+    ],
+    "two_torsion_translates_duplicate_doubles": true,
+    "individual_scale_not_common_area": true
+  },
+  "common_triangle_denominator_first_three": 92393070
+}
+integer gaps with centers: 96 centers: 105 max per gap: 3

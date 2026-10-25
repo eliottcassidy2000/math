@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "coefficient_factor_identities": 12,
+  "projective_checks": 148,
+  "nonzero_vector_checks": 1632,
+  "boundary": [
+    900,
+    900,
+    12996,
+    900
+  ]
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940">
+<rect width="1400" height="940" fill="#f5f7fb"/>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="55" y="65" font-size="34" fill="#14263d" font-weight="bold" text-anchor="start">Square line totals are not the same as equal line totals</text>
+<text x="55" y="110" font-size="23" fill="#53657a" font-weight="normal" text-anchor="start">A literal integer example: nine distinct positive square entries, eight square line totals.</text>
+<rect x="45" y="150" width="760" height="590" rx="16" fill="white" stroke="none"/>
+<rect x="840" y="150" width="515" height="590" rx="16" fill="white" stroke="none"/>
+<text x="75" y="195" font-size="25" fill="#14263d" font-weight="bold" text-anchor="start">Each displayed cell is a square</text>
+<rect x="75" y="230" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="162" y="291" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">2655²</text>
+<rect x="265" y="230" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="352" y="291" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">2976²</text>
+<rect x="455" y="230" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="542" y="291" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">320²</text>
+<text x="675" y="290" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="start">4001²</text>
+<rect x="75" y="350" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="162" y="411" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">2624²</text>
+<rect x="265" y="350" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="352" y="411" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">2520²</text>
+<rect x="455" y="350" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="542" y="411" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">1665²</text>
+<text x="675" y="410" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="start">4001²</text>
+<rect x="75" y="470" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="162" y="531" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">1440²</text>
+<rect x="265" y="470" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="352" y="531" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">895²</text>
+<rect x="455" y="470" width="175" height="100" rx="9" fill="#edf2f8" stroke="none"/>
+<text x="542" y="531" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">3624²</text>
+<text x="675" y="530" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="start">4001²</text>
+<text x="162" y="640" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="middle">4001²</text>
+<text x="352" y="640" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="middle">4001²</text>
+<text x="542" y="640" font-size="26" fill="#1469ad" font-weight="bold" text-anchor="middle">4001²</text>
+<text x="75" y="700" font-size="24" fill="#1469ad" font-weight="normal" text-anchor="start">All 3 rows and all 3 columns: 16,008,001 = 4001²</text>
+<text x="870" y="202" font-size="27" fill="#14263d" font-weight="bold" text-anchor="start">The diagonals disagree</text>
+<text x="870" y="267" font-size="24" fill="#7c3aad" font-weight="bold" text-anchor="start">Main diagonal  ↘</text>
+<text x="870" y="307" font-size="23" fill="#14263d" font-weight="normal" text-anchor="start">2655² + 2520² + 3624²</text>
+<text x="870" y="350" font-size="25" fill="#7c3aad" font-weight="normal" text-anchor="start">= 26,532,801 = 5151²</text>
+<text x="870" y="423" font-size="24" fill="#b85d13" font-weight="bold" text-anchor="start">Other diagonal  ↙</text>
+<text x="870" y="463" font-size="23" fill="#14263d" font-weight="normal" text-anchor="start">320² + 2520² + 1440²</text>
+<text x="870" y="506" font-size="25" fill="#b85d13" font-weight="normal" text-anchor="start">= 8,526,400 = 2920²</text>
+<rect x="870" y="556" width="455" height="132" rx="12" fill="#fff1ea" stroke="none"/>
+<text x="895" y="605" font-size="28" fill="#b85d13" font-weight="bold" text-anchor="start">NOT A MAGIC SQUARE</text>
+<text x="895" y="651" font-size="26" fill="#b85d13" font-weight="normal" text-anchor="start">4001² ≠ 5151² ≠ 2920²</text>
+<text x="55" y="793" font-size="27" fill="#14263d" font-weight="bold" text-anchor="start">A separate obstruction when equality AND square totals are required</text>
+<text x="55" y="836" font-size="23" fill="#14263d" font-weight="normal" text-anchor="start">Every 3 × 3 magic array has total T = 3 × center. If its nonzero center is e², then T = 3e²</text>
+<text x="55" y="875" font-size="23" fill="#14263d" font-weight="normal" text-anchor="start">cannot be an integer square. This does not settle the usual problem with unrestricted T.</text>
+<text x="55" y="917" font-size="19" fill="#53657a" font-weight="normal" text-anchor="start">Exact integer arithmetic • no distinct-square magic-square solution or prize claim</text>
+</g></svg>

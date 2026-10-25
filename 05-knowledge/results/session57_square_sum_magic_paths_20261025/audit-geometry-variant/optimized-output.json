@@ -1,0 +1,47 @@
+{
+  "graph_subsets_2_2": 16,
+  "graph_subsets_2_3": 64,
+  "graph_subsets_3_3": 512,
+  "graph_subsets_4_4": 65536,
+  "additive_bases_2_2_F3": {
+    "tested": 26,
+    "singular": 0
+  },
+  "additive_bases_2_3_F5": {
+    "tested": 624,
+    "singular": 12
+  },
+  "additive_bases_3_3_F5": {
+    "tested": 3124,
+    "singular": 168
+  },
+  "additive_bases_4_4_F3": {
+    "tested": 2186,
+    "singular": 1052
+  },
+  "line_totals": [
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    16008001,
+    26532801,
+    8526400
+  ],
+  "decoration": {
+    "components": 128,
+    "component_degree": 64,
+    "total_degree": 8192,
+    "component_dualizing_twist": 3
+  },
+  "X44": {
+    "dimension": 6,
+    "degree": 512,
+    "squaring_cover_degree": 32768,
+    "dualizing_twist": 2,
+    "singular_dimension": 3
+  },
+  "checks": 72097,
+  "status": "PASS"
+}

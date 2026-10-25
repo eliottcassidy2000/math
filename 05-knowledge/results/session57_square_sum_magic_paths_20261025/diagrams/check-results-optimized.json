@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Nine distinct nonzero square residues",
+    "All eight modular magic totals equal 3",
+    "57 isolated for both square-sum conventions",
+    "Cross-label matrix exact",
+    "Edge-label multiset equals original grid entries",
+    "Both AP guards",
+    "Six distinct carrier potentials",
+    "Both displayed orders are Hamilton paths",
+    "Nine-edge union and unique shared edge A1 B0, label 46",
+    "36 unoriented K33 Hamilton paths",
+    "36 unordered covering pairs",
+    "Six independent linear label constraints over Q",
+    "Displayed modular labels satisfy all six constraints",
+    "Nine distinct positive integer square entries",
+    "All eight integer line totals independently recomputed",
+    "Every integer line total is square",
+    "Integer variant is not magic",
+    "Source SHA256 sources/ap-bridge.md",
+    "Source SHA256 sources/character-graphs.md",
+    "Source SHA256 sources/square-total-variant.md",
+    "Source SHA256 sources/variant-certificate.py",
+    "Deterministic SVG replay is byte-identical"
+  ],
+  "check_count": 22,
+  "svg_sha256": {
+    "edge-label-repair.svg": "c04ce9e9f80a146df20df78a1871c47e2615b4e9f8db74c511d4298affe3b51c",
+    "square-totals-not-magic.svg": "716c2b8113c2ced4835fe648f85a79ef7fd5a930f78e82d470b86d0f5f72cc2a"
+  }
+}

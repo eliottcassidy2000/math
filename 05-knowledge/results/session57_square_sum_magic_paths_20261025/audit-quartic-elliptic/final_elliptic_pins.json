@@ -1,0 +1,10 @@
+{
+  "normal_and_optimized_exception_checks": "PASS_IDENTICAL",
+  "new_direct_half_assertion_verified": true,
+  "sha256": {
+    "PROOF.md": "714f6312e2fc376a2615e364573e46d87d5004a1a31a92ef7edfed81e5ba4944",
+    "check.py": "3319b8de98a698738e4b65f395f70397461b435da24dfcf2d5b155834dfa88bb",
+    "certificate.json": "0b71b5b363ee6109f5d2eb0ab760521f86e274172c45ab537187b27376c925bc",
+    "check.out": "c4397dc9edb420d717ef63d545571a521a34fd874a10c8a53f71dde53188524d"
+  }
+}

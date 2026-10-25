@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "revision": "known_K44_attribution_correction",
+  "files": {
+    "geometry.md": "9fa6c58b89972c1c9cdf772eccb47a7d588a371f329ddf280e7e68ad3aa3623f",
+    "check_geometry.py": "4f7b8bb750fe04d637461c00d0fe14148d9759368dc34e6b959bfd250c04b8ac",
+    "check_results.json": "afeb7d47d5b0039c310f41241429778744991348ce46ccf41125edac2d40e060"
+  },
+  "correction": "The bare open locus U44(Q) is nonempty by an exact verified, cited known example. No nondegenerate MSOS point is supplied.",
+  "attribution_correction": "Choudhry records the numerical example from Guy and separately attributes the accompanying parametric family to Jean Lagrange. Numerical origin is not attributed to Lagrange without inspection of Guy."
+}

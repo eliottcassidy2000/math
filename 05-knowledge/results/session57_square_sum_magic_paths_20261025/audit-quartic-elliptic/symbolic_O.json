@@ -1,0 +1,13 @@
+{
+  "independent_symbolic_checks": [
+    "cross harmonic",
+    "diagonal norm",
+    "hypotenuse squared is 4 doubled x",
+    "triangle to curve",
+    "center triangle hypotenuse",
+    "center triangle area d/4",
+    "exception safe certificate.py",
+    "exception safe polynomial_certificate.py",
+    "exception safe check.py"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "rows": [
+    323,
+    54755,
+    119715,
+    264195
+  ],
+  "columns": [
+    1,
+    79201,
+    227206,
+    1258561
+  ],
+  "roots": [
+    [
+      18,
+      282,
+      477,
+      1122
+    ],
+    [
+      234,
+      366,
+      531,
+      1146
+    ],
+    [
+      346,
+      446,
+      589,
+      1174
+    ],
+    [
+      514,
+      586,
+      701,
+      1234
+    ]
+  ],
+  "U44_rational_point": true,
+  "distinct_squared_entries": 16,
+  "in_decorated_locus_even_after_row_column_permutations": false
+}

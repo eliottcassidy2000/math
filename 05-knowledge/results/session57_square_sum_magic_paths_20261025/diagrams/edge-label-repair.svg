@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1160" viewBox="0 0 1500 1160">
+<rect width="1500" height="1160" fill="#f5f7fb"/>
+<g font-family="DejaVu Sans, sans-serif">
+<text x="55" y="62" font-size="37" fill="#14263d" font-weight="bold" text-anchor="start">Repair the representation, not the magic square</text>
+<text x="55" y="104" font-size="23" fill="#53657a" font-weight="normal" text-anchor="start">The same nine square values in F₅₉: vertex adjacency loses information; AP edge labels retain it.</text>
+<rect x="45" y="140" width="465" height="560" rx="16" fill="white" stroke="none"/>
+<rect x="555" y="140" width="900" height="560" rx="16" fill="white" stroke="none"/>
+<text x="70" y="185" font-size="23" fill="#14263d" font-weight="bold" text-anchor="start">1  ENTRY VALUES AS VERTICES</text>
+<text x="70" y="223" font-size="19" fill="#53657a" font-weight="normal" text-anchor="start">Original magic grid • every line sums to 3</text>
+<rect x="95" y="250" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="149" y="300" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">15</text>
+<rect x="215" y="250" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="269" y="300" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">35</text>
+<rect x="335" y="250" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="389" y="300" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">12</text>
+<rect x="95" y="337" width="108" height="76" rx="8" fill="#fff1ea" stroke="none"/>
+<text x="149" y="387" font-size="34" fill="#b85d13" font-weight="normal" text-anchor="middle">57</text>
+<rect x="215" y="337" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="269" y="387" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">1</text>
+<rect x="335" y="337" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="389" y="387" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">4</text>
+<rect x="95" y="424" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="149" y="474" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">49</text>
+<rect x="215" y="424" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="269" y="474" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">26</text>
+<rect x="335" y="424" width="108" height="76" rx="8" fill="#edf2f8" stroke="none"/>
+<text x="389" y="474" font-size="34" fill="#14263d" font-weight="normal" text-anchor="middle">46</text>
+<text x="70" y="556" font-size="19" fill="#14263d" font-weight="bold" text-anchor="start">57 is isolated in the entry-value graph.</text>
+<text x="70" y="592" font-size="20" fill="#53657a" font-weight="normal" text-anchor="start">For every other entry v, 57 + v is a</text>
+<text x="70" y="622" font-size="20" fill="#53657a" font-weight="normal" text-anchor="start">nonsquare modulo 59. No Hamilton path.</text>
+<text x="70" y="665" font-size="18" fill="#53657a" font-weight="normal" text-anchor="start">The grid is magic. Its adjacency graph fails.</text>
+<text x="580" y="185" font-size="23" fill="#14263d" font-weight="bold" text-anchor="start">2  THE SAME VALUES AS EDGE LABELS</text>
+<text x="580" y="223" font-size="23" fill="#1469ad" font-weight="bold" text-anchor="start">Retain AP coordinates; move values to edge labels →</text>
+<text x="580" y="265" font-size="22" fill="#14263d" font-weight="normal" text-anchor="start">A = (48, 0, 11), step 11     B = (46, 1, 15), step 14</text>
+<text x="580" y="307" font-size="22" fill="#53657a" font-weight="normal" text-anchor="start">Cross-edge label Lᵢⱼ = Aᵢ + Bⱼ  (mod 59)</text>
+<text x="935" y="357" font-size="22" fill="#14263d" font-weight="bold" text-anchor="middle">B0 = 46</text>
+<text x="1115" y="357" font-size="22" fill="#14263d" font-weight="bold" text-anchor="middle">B1 = 1</text>
+<text x="1295" y="357" font-size="22" fill="#14263d" font-weight="bold" text-anchor="middle">B2 = 15</text>
+<text x="610" y="415" font-size="24" fill="#14263d" font-weight="bold" text-anchor="start">A0 = 48</text>
+<rect x="860" y="378" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="935" y="423" font-size="34" fill="#1469ad" font-weight="bold" text-anchor="middle">35</text>
+<rect x="1040" y="378" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1115" y="423" font-size="34" fill="#b85d13" font-weight="bold" text-anchor="middle">49</text>
+<rect x="1220" y="378" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1295" y="423" font-size="34" fill="#b85d13" font-weight="bold" text-anchor="middle">4</text>
+<text x="610" y="500" font-size="24" fill="#14263d" font-weight="bold" text-anchor="start">A1 = 0</text>
+<rect x="860" y="463" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="935" y="508" font-size="34" fill="#7c3aad" font-weight="bold" text-anchor="middle">46</text>
+<rect x="1040" y="463" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1115" y="508" font-size="34" fill="#1469ad" font-weight="bold" text-anchor="middle">1</text>
+<rect x="1220" y="463" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1295" y="508" font-size="34" fill="#b85d13" font-weight="bold" text-anchor="middle">15</text>
+<text x="610" y="585" font-size="24" fill="#14263d" font-weight="bold" text-anchor="start">A2 = 11</text>
+<rect x="860" y="548" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="935" y="593" font-size="34" fill="#b85d13" font-weight="bold" text-anchor="middle">57</text>
+<rect x="1040" y="548" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1115" y="593" font-size="34" fill="#1469ad" font-weight="bold" text-anchor="middle">12</text>
+<rect x="1220" y="548" width="150" height="68" rx="7" fill="#f6f3fa" stroke="none"/>
+<text x="1295" y="593" font-size="34" fill="#1469ad" font-weight="bold" text-anchor="middle">26</text>
+<text x="580" y="665" font-size="21" fill="#53657a" font-weight="normal" text-anchor="start">Cross-skeleton K₃,₃ only: ambient within-part edges may exist.</text>
+<text x="55" y="745" font-size="28" fill="#14263d" font-weight="bold" text-anchor="start">Two Hamilton paths cover all nine labeled edges</text>
+<text x="845" y="745" font-size="22" fill="#1469ad" font-weight="normal" text-anchor="start">P only</text>
+<text x="985" y="745" font-size="22" fill="#b85d13" font-weight="normal" text-anchor="start">Q only</text>
+<text x="1125" y="745" font-size="22" fill="#7c3aad" font-weight="normal" text-anchor="start">shared: label 46</text>
+<text x="55" y="840" font-size="29" fill="#14263d" font-weight="bold" text-anchor="start">P</text>
+<path d="M155,832 L395,832" stroke="#1469ad" stroke-width="6" fill="none"/>
+<rect x="244.0" y="808" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="275.0" y="841" font-size="25" fill="#1469ad" font-weight="bold" text-anchor="middle">35</text>
+<path d="M395,832 L635,832" stroke="#7c3aad" stroke-width="6" fill="none"/>
+<rect x="484.0" y="808" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="515.0" y="841" font-size="25" fill="#7c3aad" font-weight="bold" text-anchor="middle">46</text>
+<path d="M635,832 L875,832" stroke="#1469ad" stroke-width="6" fill="none"/>
+<rect x="724.0" y="808" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="755.0" y="841" font-size="25" fill="#1469ad" font-weight="bold" text-anchor="middle">1</text>
+<path d="M875,832 L1115,832" stroke="#1469ad" stroke-width="6" fill="none"/>
+<rect x="964.0" y="808" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="995.0" y="841" font-size="25" fill="#1469ad" font-weight="bold" text-anchor="middle">12</text>
+<path d="M1115,832 L1355,832" stroke="#1469ad" stroke-width="6" fill="none"/>
+<rect x="1204.0" y="808" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="1235.0" y="841" font-size="25" fill="#1469ad" font-weight="bold" text-anchor="middle">26</text>
+<rect x="104" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="155" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A0</text>
+<text x="155" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 48</text>
+<rect x="344" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="395" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B0</text>
+<text x="395" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 46</text>
+<rect x="584" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="635" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A1</text>
+<text x="635" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 0</text>
+<rect x="824" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="875" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B1</text>
+<text x="875" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 1</text>
+<rect x="1064" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="1115" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A2</text>
+<text x="1115" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 11</text>
+<rect x="1304" y="807" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="1355" y="840" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B2</text>
+<text x="1355" y="887" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 15</text>
+<text x="55" y="968" font-size="29" fill="#14263d" font-weight="bold" text-anchor="start">Q</text>
+<path d="M155,960 L395,960" stroke="#b85d13" stroke-width="6" fill="none"/>
+<rect x="244.0" y="936" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="275.0" y="969" font-size="25" fill="#b85d13" font-weight="bold" text-anchor="middle">49</text>
+<path d="M395,960 L635,960" stroke="#b85d13" stroke-width="6" fill="none"/>
+<rect x="484.0" y="936" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="515.0" y="969" font-size="25" fill="#b85d13" font-weight="bold" text-anchor="middle">4</text>
+<path d="M635,960 L875,960" stroke="#b85d13" stroke-width="6" fill="none"/>
+<rect x="724.0" y="936" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="755.0" y="969" font-size="25" fill="#b85d13" font-weight="bold" text-anchor="middle">15</text>
+<path d="M875,960 L1115,960" stroke="#7c3aad" stroke-width="6" fill="none"/>
+<rect x="964.0" y="936" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="995.0" y="969" font-size="25" fill="#7c3aad" font-weight="bold" text-anchor="middle">46</text>
+<path d="M1115,960 L1355,960" stroke="#b85d13" stroke-width="6" fill="none"/>
+<rect x="1204.0" y="936" width="62" height="46" rx="7" fill="white" stroke="none"/>
+<text x="1235.0" y="969" font-size="25" fill="#b85d13" font-weight="bold" text-anchor="middle">57</text>
+<rect x="104" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="155" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B1</text>
+<text x="155" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 1</text>
+<rect x="344" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="395" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A0</text>
+<text x="395" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 48</text>
+<rect x="584" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="635" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B2</text>
+<text x="635" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 15</text>
+<rect x="824" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="875" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A1</text>
+<text x="875" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 0</text>
+<rect x="1064" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="1115" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">B0</text>
+<text x="1115" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 46</text>
+<rect x="1304" y="935" width="102" height="50" rx="25" fill="#14263d" stroke="none"/>
+<text x="1355" y="968" font-size="23" fill="white" font-weight="bold" text-anchor="middle">A2</text>
+<text x="1355" y="1015" font-size="17" fill="#53657a" font-weight="normal" text-anchor="middle">value 11</text>
+<text x="55" y="1060" font-size="23" fill="#14263d" font-weight="bold" text-anchor="start">Certificate structure: 4 additive cycle constraints + 2 AP guards = 6 independent linear constraints.</text>
+<text x="55" y="1103" font-size="22" fill="#53657a" font-weight="normal" text-anchor="start">All arithmetic above is modulo 59. This finite-field witness is not an integer solution or a prize claim.</text>
+</g></svg>

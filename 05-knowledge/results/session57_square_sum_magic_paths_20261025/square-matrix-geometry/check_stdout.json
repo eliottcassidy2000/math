@@ -1,0 +1,239 @@
+{
+  "symbolic": [
+    {
+      "r": 2,
+      "s": 2,
+      "codimension": 1,
+      "dimension": 2,
+      "canonical_twist": -2,
+      "degree": 2,
+      "projective_cover_degree": 8,
+      "singular_dimension": null
+    },
+    {
+      "r": 2,
+      "s": 3,
+      "codimension": 2,
+      "dimension": 3,
+      "canonical_twist": -2,
+      "degree": 4,
+      "projective_cover_degree": 32,
+      "singular_dimension": 0
+    },
+    {
+      "r": 3,
+      "s": 3,
+      "codimension": 4,
+      "dimension": 4,
+      "canonical_twist": -1,
+      "degree": 16,
+      "projective_cover_degree": 256,
+      "singular_dimension": 1
+    },
+    {
+      "r": 3,
+      "s": 4,
+      "codimension": 6,
+      "dimension": 5,
+      "canonical_twist": 0,
+      "degree": 64,
+      "projective_cover_degree": 2048,
+      "singular_dimension": 2
+    },
+    {
+      "r": 4,
+      "s": 4,
+      "codimension": 9,
+      "dimension": 6,
+      "canonical_twist": 2,
+      "degree": 512,
+      "projective_cover_degree": 32768,
+      "singular_dimension": 3
+    }
+  ],
+  "finite_controls": [
+    {
+      "r": 2,
+      "s": 2,
+      "p": 3,
+      "exhaustive": true,
+      "nonzero_bases_tested": 26,
+      "singular_supports_with_multiplicity": 0
+    },
+    {
+      "r": 2,
+      "s": 2,
+      "p": 5,
+      "exhaustive": true,
+      "nonzero_bases_tested": 124,
+      "singular_supports_with_multiplicity": 0
+    },
+    {
+      "r": 2,
+      "s": 3,
+      "p": 3,
+      "exhaustive": true,
+      "nonzero_bases_tested": 80,
+      "singular_supports_with_multiplicity": 6
+    },
+    {
+      "r": 2,
+      "s": 3,
+      "p": 5,
+      "exhaustive": true,
+      "nonzero_bases_tested": 624,
+      "singular_supports_with_multiplicity": 12
+    },
+    {
+      "r": 3,
+      "s": 3,
+      "p": 3,
+      "exhaustive": true,
+      "nonzero_bases_tested": 242,
+      "singular_supports_with_multiplicity": 48
+    },
+    {
+      "r": 3,
+      "s": 3,
+      "p": 5,
+      "exhaustive": true,
+      "nonzero_bases_tested": 3124,
+      "singular_supports_with_multiplicity": 168
+    },
+    {
+      "r": 3,
+      "s": 4,
+      "p": 3,
+      "exhaustive": true,
+      "nonzero_bases_tested": 728,
+      "singular_supports_with_multiplicity": 230
+    },
+    {
+      "r": 3,
+      "s": 4,
+      "p": 5,
+      "exhaustive": false,
+      "nonzero_bases_tested": 422,
+      "singular_supports_with_multiplicity": 42
+    },
+    {
+      "r": 4,
+      "s": 4,
+      "p": 3,
+      "exhaustive": true,
+      "nonzero_bases_tested": 2186,
+      "singular_supports_with_multiplicity": 1052
+    },
+    {
+      "r": 4,
+      "s": 4,
+      "p": 5,
+      "exhaustive": false,
+      "nonzero_bases_tested": 2111,
+      "singular_supports_with_multiplicity": 342
+    }
+  ],
+  "decoration": {
+    "base_rank": 3,
+    "base_codimension": 4,
+    "surface_dimension": 2,
+    "distinct_forms": 9,
+    "sign_components": 128,
+    "magic_constraints_rank": 6,
+    "multiplicities": {
+      "C": 4,
+      "C + x": 2,
+      "C + x + y": 1,
+      "C + x - y": 1,
+      "C + y": 2,
+      "C - x": 2,
+      "C - x + y": 1,
+      "C - x - y": 1,
+      "C - y": 2
+    }
+  },
+  "gauge_control": {
+    "row_vertices": [
+      6,
+      438
+    ],
+    "column_vertices": [
+      3,
+      138
+    ],
+    "roots": [
+      [
+        3,
+        12
+      ],
+      [
+        21,
+        24
+      ]
+    ]
+  },
+  "known_K44_certificate": {
+    "source": "https://arxiv.org/html/2508.07806v1",
+    "attribution": "Numerical example recorded by Choudhry from Guy; Jean Lagrange attribution applies to the accompanying parametric family",
+    "original_A": [
+      324,
+      54756,
+      119716,
+      264196
+    ],
+    "original_B": [
+      0,
+      79200,
+      227205,
+      1258560
+    ],
+    "positive_A": [
+      323,
+      54755,
+      119715,
+      264195
+    ],
+    "positive_B": [
+      1,
+      79201,
+      227206,
+      1258561
+    ],
+    "roots": [
+      [
+        18,
+        282,
+        477,
+        1122
+      ],
+      [
+        234,
+        366,
+        531,
+        1146
+      ],
+      [
+        346,
+        446,
+        589,
+        1174
+      ],
+      [
+        514,
+        586,
+        701,
+        1234
+      ]
+    ],
+    "verified_cross_squares": 16,
+    "parallelogram_permutations_tested_per_part": 24,
+    "parallelogram_ordering_counts": [
+      0,
+      0
+    ],
+    "reflected_matchings_tested": 24,
+    "constant_reflected_matchings": 0,
+    "conclusion": "U44(Q) nonempty; this point is not MSOS-decorated"
+  },
+  "status": "PASS: all assertions; geometric/arithmetic scope is stated in geometry.md"
+}

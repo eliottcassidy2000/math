@@ -1,0 +1,42 @@
+[
+  {
+    "source": "/tmp/session57-lagrange-obstruction/ap-addendum.md",
+    "bytes": 8478,
+    "sha256": "1c6c274eac57578650a3fed34e7db2e719eabc87d743ab7dc5955f8743bec722"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/verify_ap.py",
+    "bytes": 2364,
+    "sha256": "98226a6dcf7dfe80dd799924101b3b8cb88182335c555833b9da294fd6fc49d9"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/ap-certificate.json",
+    "bytes": 10103,
+    "sha256": "59a708c55460f0657ba3c6510fd11f757d49b19090fd2346f9e788f3457306b2"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/source-pin.json",
+    "bytes": 280,
+    "sha256": "932cc048fc362c481c1884d9456f57bbce39036cbd9684eecdbf3df56dd848f3"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/proof.md",
+    "bytes": 5294,
+    "sha256": "58a4394264a664996102383ab0d7e78edb1cd71a5ffd2250474ae7bbce111a0b"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/verify.py",
+    "bytes": 2466,
+    "sha256": "c9771c7ec84d940db45e743c6ffa2f6ded25c4c597d9567aac3ecd0822834d8c"
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/certificate.json",
+    "bytes": 6006,
+    "sha256": "41237b2769c82478a0fd54465553e0b43ba32e8abe1c1c118138d9dce9037806"
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/PRIMARY_CONSTRUCTION.md",
+    "bytes": 3877,
+    "sha256": "620e9f13348b74fc80cb51e5520c322ce3fdc52958dc330bca324531634c2893"
+  }
+]

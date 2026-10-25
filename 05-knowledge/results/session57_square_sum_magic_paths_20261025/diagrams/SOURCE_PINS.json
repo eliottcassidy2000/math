@@ -1,0 +1,22 @@
+[
+  {
+    "local": "sources/ap-bridge.md",
+    "source": "/tmp/session57-publication/frozen-second/05-knowledge/results/session57_square_sum_magic_paths_20261025/ap-biclique-bridge/REPORT.md",
+    "sha256": "7fca97fea71296b968103c2136f20f6f776c8165cc0a2a2de99056fcab1f27db"
+  },
+  {
+    "local": "sources/character-graphs.md",
+    "source": "/tmp/session57-publication/frozen-second/05-knowledge/results/session57_square_sum_magic_paths_20261025/character-graphs/THEOREM.md",
+    "sha256": "5d18fa6659d9878df02b3487d48d31ca5a31ec6796da75570133888ab141153a"
+  },
+  {
+    "local": "sources/square-total-variant.md",
+    "source": "/tmp/session57-square-total-variant/RESULT.md",
+    "sha256": "e5344cc1ece3f4312429a230d2d20138bcc0aaca73604babf5340b0265f9ec6d"
+  },
+  {
+    "local": "sources/variant-certificate.py",
+    "source": "/tmp/session57-square-total-variant/certificate.py",
+    "sha256": "f6849dae8c2425d0eac5cf0cb1a8d55133ed644ee86f5d45a6c3daf0da7149df"
+  }
+]

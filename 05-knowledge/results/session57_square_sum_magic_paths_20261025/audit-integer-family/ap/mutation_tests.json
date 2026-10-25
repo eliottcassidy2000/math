@@ -1,0 +1,26 @@
+[
+  {
+    "mutation": "boundary",
+    "optimized": false,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "mutation": "boundary",
+    "optimized": true,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "mutation": "bad_prime",
+    "optimized": false,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "mutation": "bad_prime",
+    "optimized": true,
+    "returncode": 1,
+    "failure_detected": true
+  }
+]

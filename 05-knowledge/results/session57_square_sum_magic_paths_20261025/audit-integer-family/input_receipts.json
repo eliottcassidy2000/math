@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/tmp/session57-integer-bicliques/checker.py",
+    "sha256": "8d85d0877689151424512acbd9120f2b4fa0ace7bf996fdf0bcee366f7a26ef9",
+    "bytes": 3072
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/verify_k44.py",
+    "sha256": "274ae50a068d7d9920c5b71ebdbf43201ec93ae5ff75a560cd606e8aac1857b3",
+    "bytes": 1465
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/closure_search.py",
+    "sha256": "b024e615301f5d26b0f88168137296c865c33fbed506cded616e1a92f20111f3",
+    "bytes": 1060
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/primary_construction.py",
+    "sha256": "a62192ec42025fd2de3b1ae6cf4e866956e1bc3883c047f3ba619aa752384cc5",
+    "bytes": 2836
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/REPORT.md",
+    "sha256": "0ffc0657c413cdc0cc96a8b7427780a3dd3209d140e2d71ed6efc54fdf6a3a91",
+    "bytes": 7709
+  },
+  {
+    "source": "/tmp/session57-integer-bicliques/PRIMARY_CONSTRUCTION.md",
+    "sha256": "3b000e8ebcb0f5b2676548dcfa3945b9246fa46d1edc1d197558b40e53c99fa6",
+    "bytes": 3875
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/verify.py",
+    "sha256": "c9771c7ec84d940db45e743c6ffa2f6ded25c4c597d9567aac3ecd0822834d8c",
+    "bytes": 2466
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/proof.md",
+    "sha256": "58a4394264a664996102383ab0d7e78edb1cd71a5ffd2250474ae7bbce111a0b",
+    "bytes": 5294
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/certificate.json",
+    "sha256": "41237b2769c82478a0fd54465553e0b43ba32e8abe1c1c118138d9dce9037806",
+    "bytes": 6006
+  },
+  {
+    "source": "/tmp/session57-lagrange-obstruction/source-pin.json",
+    "sha256": "932cc048fc362c481c1884d9456f57bbce39036cbd9684eecdbf3df56dd848f3",
+    "bytes": 280
+  }
+]

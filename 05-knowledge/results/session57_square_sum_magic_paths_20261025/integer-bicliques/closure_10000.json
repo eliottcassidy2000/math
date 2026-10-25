@@ -1,0 +1,26 @@
+{
+  "N": 10000,
+  "smallest_k33_in_universe": [
+    673,
+    [
+      1,
+      193,
+      673
+    ],
+    [
+      3,
+      168,
+      483
+    ]
+  ],
+  "smallest_k44_in_universe": null,
+  "eligible_seed_pairs": {
+    "3": 660224,
+    "4": 195219
+  },
+  "unique_neighbor_tuples_checked": {
+    "3": 1836298,
+    "4": 731523
+  },
+  "seconds": 61.847751576999144
+}

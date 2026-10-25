@@ -1,0 +1,32 @@
+{
+  "difference_identities": "PASS",
+  "generic_square_identities": 14,
+  "repaired_cross_square_identities": 2,
+  "bounded_parameter_samples": 600,
+  "published_example_roots": [
+    [
+      6692,
+      8400,
+      35592,
+      42000
+    ],
+    [
+      18445,
+      19131,
+      39525,
+      45381
+    ],
+    [
+      41692,
+      42000,
+      54408,
+      58800
+    ],
+    [
+      52700,
+      52944,
+      63240,
+      67056
+    ]
+  ]
+}

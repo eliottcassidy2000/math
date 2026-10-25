@@ -1,0 +1,135 @@
+{
+  "status": "PASS",
+  "source": "https://arxiv.org/html/2508.07806v1",
+  "attribution": "Jean Lagrange family, reproduced by Ajai Choudhry (2025), equation (1.1)",
+  "old_example": {
+    "N": 1258561,
+    "normalization_root_gcd": 1,
+    "normalization_b0": 0,
+    "normalized_A": [
+      324,
+      54756,
+      119716,
+      264196
+    ],
+    "normalized_B": [
+      0,
+      79200,
+      227205,
+      1258560
+    ],
+    "gauge_t": 1,
+    "left": [
+      323,
+      54755,
+      119715,
+      264195
+    ],
+    "right": [
+      1,
+      79201,
+      227206,
+      1258561
+    ],
+    "roots": [
+      [
+        18,
+        282,
+        477,
+        1122
+      ],
+      [
+        234,
+        366,
+        531,
+        1146
+      ],
+      [
+        346,
+        446,
+        589,
+        1174
+      ],
+      [
+        514,
+        586,
+        701,
+        1234
+      ]
+    ],
+    "left_reflection_defect": 90048,
+    "right_reflection_defect": 952155
+  },
+  "parameter_universe": {
+    "u_min": -200,
+    "u_max": 200,
+    "v_min": -200,
+    "v_max": 200,
+    "restriction": "gcd(u,v)=1"
+  },
+  "primitive_pairs_checked": 97856,
+  "valid_positive_disjoint_pairs": 97780,
+  "best_in_bounded_family": {
+    "N": 1112833,
+    "normalization_root_gcd": 1,
+    "normalization_b0": -1112832,
+    "normalized_A": [
+      8649,
+      44944,
+      242064,
+      725904
+    ],
+    "normalized_B": [
+      0,
+      62640,
+      242352,
+      1112832
+    ],
+    "gauge_t": 1,
+    "left": [
+      8648,
+      44943,
+      242063,
+      725903
+    ],
+    "right": [
+      1,
+      62641,
+      242353,
+      1112833
+    ],
+    "roots": [
+      [
+        93,
+        267,
+        501,
+        1059
+      ],
+      [
+        212,
+        328,
+        536,
+        1076
+      ],
+      [
+        492,
+        552,
+        696,
+        1164
+      ],
+      [
+        852,
+        888,
+        984,
+        1356
+      ]
+    ],
+    "left_reflection_defect": 447545,
+    "right_reflection_defect": 807840,
+    "parameters": [
+      -11,
+      5
+    ]
+  },
+  "claim_scope": "Bounded parameter-family minimum after exact root-gcd normalization and optimal integral gauge, not global K4,4 minimum."
+}

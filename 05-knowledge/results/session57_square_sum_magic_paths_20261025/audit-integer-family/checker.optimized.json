@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "k24_minimum": 274,
+  "k24_roots": [
+    [
+      4,
+      7,
+      11,
+      17
+    ],
+    [
+      16,
+      17,
+      19,
+      23
+    ]
+  ],
+  "k24_pairs_verified": 37401,
+  "k33_minimum": 673,
+  "k33_roots": [
+    [
+      2,
+      13,
+      22
+    ],
+    [
+      14,
+      19,
+      26
+    ],
+    [
+      26,
+      29,
+      34
+    ]
+  ],
+  "k33_seed_pairs": 786,
+  "k33_distinct_right_triples": 1058
+}

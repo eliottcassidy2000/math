@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "nonzero_F47_vectors_times_forms": 6624,
+  "primitive_pairs": 97856,
+  "valid_pairs": 97780,
+  "optimum_N_u_v_t": [
+    1112833,
+    -11,
+    5,
+    1
+  ]
+}

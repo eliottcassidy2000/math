@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "N": 10000,
+  "claim": "No ordinary K4,4 in G_N",
+  "factor_capable_deltas": 2601,
+  "eligible_seed_pairs": 195219,
+  "distinct_right_quadruples": 731523,
+  "seconds": 9.603684189998603
+}

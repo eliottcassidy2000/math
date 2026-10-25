@@ -1,0 +1,26 @@
+[
+  {
+    "checker": "family",
+    "optimized": false,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "checker": "family",
+    "optimized": true,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "checker": "checker",
+    "optimized": false,
+    "returncode": 1,
+    "failure_detected": true
+  },
+  {
+    "checker": "checker",
+    "optimized": true,
+    "returncode": 1,
+    "failure_detected": true
+  }
+]
