@@ -1,13 +1,52 @@
 ---
 id: THM-419
 name: 2d-lattice-chromatic-cap
-status: PROVED (core) + VERIFIED-conjectured (global)
+status: PROVED
 date: 2026-06-06
 session: monad-explorer-2026-06-06-S708
-depends_on:
-  - THM-418   # square/triangular lattice dichotomy (the two special cases)
-  - THM-416   # CM density-quantum totient cap (w<=6 in 2D)
+depends_on: []
 ---
+
+# THM-419: Every positive planar lattice norm layer is three-colourable
+
+**Corrected current theorem — 2026-10-25.** For every positive-definite real
+binary quadratic form Q and every D>0, the graph on Z² with edges of
+squared Q-length D admits a proper colouring periodic under a finite-index
+subgroup, using at most three colours. If Q is not proportional to a rational
+form, each nonempty norm layer is bipartite. The triangular lattice shows
+that the universal bound three is attained.
+
+The [complete repaired proof and exact controls](../../05-knowledge/results/session61_hadwiger_six_seven_20261025/lattice-cap/LATTICE_CAP_REPAIR.md)
+and [independent audit](../../05-knowledge/results/session61_hadwiger_six_seven_20261025/audits/cap/AUDIT.md)
+replace the historical argument below. Three unoriented equal-norm directions
+force the normalized Gram form to be rational. An attained norm vector then
+embeds the normalized layer in an imaginary quadratic field; a ramified-prime
+reduction sends norm-one edge generators to ±1. Colour each edge-generated
+component through the resulting finite cycle. Finite-index periodicity is
+proved with its component/denominator sidecar, not assumed from a residue
+formula on arbitrary vertices.
+
+The nonarithmetic case can have **two** unoriented directions, not one.
+Degenerate mod-three kernel sublattices need not be similar to their source;
+the old recursion was invalid. The hyperbolic nonzero level over F3 has two
+points, not four. The four old census category totals sum to 14,486, not
+16,486; that historical census was not replayed or used in this proof. Its
+saved output labels the square form `(1,0,1)` with `chi-set=[2,3]` and all
+448 forms with `maxchi=3`, although every square-lattice norm layer is
+bipartite. Those old labels are not certificates of exact chromatic numbers.
+
+This result is about one positive distance in a rank-two discrete lattice.
+It establishes no rotation-rank formula, Dehn-invariant criterion, arbitrary
+higher-rank additive-group bound, or whole-plane chromatic value. Historical
+full-plane bounds below are not current source authority.
+
+## Superseded original argument and status (retained as history)
+
+The original frontmatter said `PROVED (core) + VERIFIED-conjectured (global)`
+and listed THM-418 and THM-416 as dependencies. The new self-contained proof
+above replaces that partial status and those dependencies. Every proof-status
+label and consequence in the following preserved text is historical; use the
+current theorem and linked audit instead.
 
 # THM-419: The chromatic cap for 2D lattice unit-distance graphs (χ ≤ 3)
 

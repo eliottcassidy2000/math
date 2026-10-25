@@ -1,0 +1,55 @@
+{
+  "repo_commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+  "sources": [
+    {
+      "bytes": 10962,
+      "path": "05-knowledge/results/plane_cycles_pants_and_six_seven_20261011b.md",
+      "sha256": "e48a0ee4b96b0e45f1c62dfe31151f414d7f3ff978c48d808a576ec94ee3e157"
+    },
+    {
+      "bytes": 12944,
+      "path": "05-knowledge/results/plane_six_reframes_parity_20261011b.md",
+      "sha256": "ea9e0a9974dcfc18ccfb47f910f1a1c87ee781c8bde2c9b05213113ce786d24e"
+    },
+    {
+      "bytes": 12400,
+      "path": "05-knowledge/results/pants_boundary_holonomy_20261011b.md",
+      "sha256": "53b4d09a1bca8eae99bc98cac15ec263a400020fdcc767ecb7ea8fa4e235a104"
+    },
+    {
+      "bytes": 11165,
+      "path": "05-knowledge/results/boundary_palette_compression_20261011.md",
+      "sha256": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7"
+    },
+    {
+      "bytes": 12134,
+      "path": "05-knowledge/results/spindle_tournament_interfaces_20261011g.md",
+      "sha256": "f7583ffa064d0d4c903d4317996f1f45471e2586cfddcbf291eaa07681ccc5d0"
+    },
+    {
+      "bytes": 11807,
+      "path": "05-knowledge/results/unit_equality_candidates_20261011e.md",
+      "sha256": "aef9d8b91ab826cd291d5b3de95e6cca04a341ea853e1e90bf8f0789031b51ab"
+    },
+    {
+      "bytes": 12353,
+      "path": "01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md",
+      "sha256": "223649e38b3d11e871fc998887daf0815be4f565391f9f8bea783fc8fea866f1"
+    },
+    {
+      "bytes": 25741,
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines/RESULT.md",
+      "sha256": "eac57a84ee6653ab5bf370e2d8954256d073232c09d60946b3f4abe747b9a314"
+    },
+    {
+      "bytes": 19815,
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/recovered-bridges/THEOREM.md",
+      "sha256": "20030d4fadd02733b765866833c1bdf89f5c5e262b965cedc337c7d89054d271"
+    },
+    {
+      "bytes": 15196,
+      "path": "05-knowledge/results/session60_six_seven_geometry_20261025/deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "sha256": "4ae02991c6620125ee0468d1c1694bc93d5489291d189e13a54465bf0d4c60dc"
+    }
+  ]
+}

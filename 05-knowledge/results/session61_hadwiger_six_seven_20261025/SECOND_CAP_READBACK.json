@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reviewer": "independent repaired-lattice-cap audit lane",
+  "scope": "Exact source byte/file identity of lattice-cap and audits/cap; local checksum closure; README scope; amended square-form warning in historical repair",
+  "README_sha256": "e7a56be73d84a02e4821ff6422a0b26c11cbe41523c9fba008091401bafb334b",
+  "correction_drafts": [
+    {
+      "draft_path": "THM-419-2d-lattice-chromatic-cap.md",
+      "sha256": "c7cb23b29dcb22f51c939c1aa48cd0f6d11f9c74425d5a103113f11eb1a2f35d"
+    },
+    {
+      "draft_path": "MISTAKES_ENTRY.md",
+      "sha256": "fbdfe04174e339562484628ebed85902ae95f22b7b4535bb682829ba84320cbb"
+    },
+    {
+      "draft_path": "hexagonal_forbidden_s116m.CORRECTION.md",
+      "sha256": "535a952cb3ef71d09e2f79614b06fc9c200cba0381df816807939cb086facbed"
+    }
+  ]
+}

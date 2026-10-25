@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "path": "/tmp/session61-hn-recovery/LATTICE_CAP_REPAIR.md",
+      "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f",
+      "bytes": 15496
+    },
+    {
+      "path": "/tmp/session61-hn-recovery/verify_lattice_cap.py",
+      "sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc",
+      "bytes": 6862
+    },
+    {
+      "path": "/tmp/session61-hn-recovery/normal.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b",
+      "bytes": 2228
+    },
+    {
+      "path": "/tmp/session61-hn-recovery/optimized.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b",
+      "bytes": 2228
+    },
+    {
+      "path": "/tmp/session61-parent/DENSE_FLOWER_CONTROL.md",
+      "sha256": "8cbcc00eb5bbac774e4c9e9992e4cf76a7ee099f5ce4aa58679fe8b1b29cb169",
+      "bytes": 2647
+    },
+    {
+      "path": "/tmp/session61-parent/check_dense_flower.py",
+      "sha256": "947644939701030e5d2cdf9e67c9259a44f00553f1809a9cb36063b57748421f",
+      "bytes": 1337
+    },
+    {
+      "path": "/tmp/session61-parent/dense-flower-normal.json",
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24",
+      "bytes": 2857
+    },
+    {
+      "path": "/tmp/session61-parent/dense-flower-optimized.json",
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24",
+      "bytes": 2857
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/01-canon/theorems/THM-419-2d-lattice-chromatic-cap.md",
+      "sha256": "f90d0883c300cb80b73a72ee99cb674ad6cbe8dd297b28486f892cca2012342b",
+      "bytes": 6835
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/05-knowledge/results/all_forms_chromatic_s708.out",
+      "sha256": "9a048491dd6c238db87cb9e135ddc87387958fe2e8ce8c67e51fd24133cc80c4",
+      "bytes": 24027
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/01-canon/theorems/THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md",
+      "sha256": "db90449c5c8f8f95d1f96f2a1873f06581158f318d65d227171556811479ed33",
+      "bytes": 12336
+    },
+    {
+      "path": "/tmp/session61-parent/SYNTHESIS.md",
+      "sha256": "9eba7d133ea21c0288f2a01ae0bf4c621f1de480456b2134040b45df30cccedc",
+      "bytes": 10219
+    }
+  ],
+  "purpose": "Provenance only; independent audit.py consumes none of these files."
+}

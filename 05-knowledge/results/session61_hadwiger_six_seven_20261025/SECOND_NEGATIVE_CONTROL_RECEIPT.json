@@ -1,0 +1,69 @@
+{
+  "scope": "Four intentional negative controls, not passing primary scripts",
+  "runs": [
+    {
+      "script": "palette-deck/wrong_census_mutant.py",
+      "sha256": "e7879eb1e0f675a7c3d91b5899b0c26d9c20edb94b72a11da9339ed7fc999fe1",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "hourglass dependency census",
+      "stderr_sha256": "508781c65b89ea2a9d892543b9376bfbc2fdd8445f4c08d6439c21a55d93fdd3"
+    },
+    {
+      "script": "palette-deck/wrong_census_mutant.py",
+      "sha256": "e7879eb1e0f675a7c3d91b5899b0c26d9c20edb94b72a11da9339ed7fc999fe1",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "hourglass dependency census",
+      "stderr_sha256": "508781c65b89ea2a9d892543b9376bfbc2fdd8445f4c08d6439c21a55d93fdd3"
+    },
+    {
+      "script": "audits/palette-arithmetic/even_order_false_fixed.py",
+      "sha256": "f40aa56491c39d565d226462f6a208317a420caae228f99e091ac310182bc160",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "all unit classes mod165",
+      "stderr_sha256": "e373693c20cda09526c48a4baa89b7b79aba06afa107d273e4b1f0156b6a196a"
+    },
+    {
+      "script": "audits/palette-arithmetic/even_order_false_fixed.py",
+      "sha256": "f40aa56491c39d565d226462f6a208317a420caae228f99e091ac310182bc160",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "all unit classes mod165",
+      "stderr_sha256": "e373693c20cda09526c48a4baa89b7b79aba06afa107d273e4b1f0156b6a196a"
+    },
+    {
+      "script": "audits/palette-arithmetic/lost_only_one_bit.py",
+      "sha256": "51798dc47833f416f96a07d21094e8f02f22b3a4c817cec4f3af85fabc667dd3",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "exact vector class fiber",
+      "stderr_sha256": "e2ddd6dae57664ed41297289bee9f4c2fb2c544b6e92172468b38ab76e0f8249"
+    },
+    {
+      "script": "audits/palette-arithmetic/lost_only_one_bit.py",
+      "sha256": "51798dc47833f416f96a07d21094e8f02f22b3a4c817cec4f3af85fabc667dd3",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "exact vector class fiber",
+      "stderr_sha256": "e2ddd6dae57664ed41297289bee9f4c2fb2c544b6e92172468b38ab76e0f8249"
+    },
+    {
+      "script": "audits/palette-arithmetic/wrong_completion_census.py",
+      "sha256": "314982d8f549362436a0046e34f50023dbf1cb3ce0548d6400e4c57391c5d52d",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "exact-cover STS census",
+      "stderr_sha256": "1f37d34d451ae72fad922c050d00233f64bf33aa22f9233daca7ad061b2e6113"
+    },
+    {
+      "script": "audits/palette-arithmetic/wrong_completion_census.py",
+      "sha256": "314982d8f549362436a0046e34f50023dbf1cb3ce0548d6400e4c57391c5d52d",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "exact-cover STS census",
+      "stderr_sha256": "1f37d34d451ae72fad922c050d00233f64bf33aa22f9233daca7ad061b2e6113"
+    }
+  ]
+}

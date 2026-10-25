@@ -1,0 +1,728 @@
+{
+  "always_active_checks": 79859,
+  "binary_gain_instances": 59810,
+  "elliptic_controls": [
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 5
+    },
+    {
+      "a_p": 4,
+      "hasse": 4,
+      "p": 7
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 11
+    },
+    {
+      "a_p": 2,
+      "hasse": 2,
+      "p": 13
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 17
+    },
+    {
+      "a_p": -8,
+      "hasse": 11,
+      "p": 19
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 23
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 29
+    },
+    {
+      "a_p": 4,
+      "hasse": 4,
+      "p": 31
+    },
+    {
+      "a_p": -10,
+      "hasse": 27,
+      "p": 37
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 41
+    },
+    {
+      "a_p": -8,
+      "hasse": 35,
+      "p": 43
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 47
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 53
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 59
+    },
+    {
+      "a_p": 14,
+      "hasse": 14,
+      "p": 61
+    },
+    {
+      "a_p": 16,
+      "hasse": 16,
+      "p": 67
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 71
+    },
+    {
+      "a_p": -10,
+      "hasse": 63,
+      "p": 73
+    },
+    {
+      "a_p": 4,
+      "hasse": 4,
+      "p": 79
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 83
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 89
+    },
+    {
+      "a_p": 14,
+      "hasse": 14,
+      "p": 97
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 101
+    },
+    {
+      "a_p": -20,
+      "hasse": 83,
+      "p": 103
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 107
+    },
+    {
+      "a_p": 2,
+      "hasse": 2,
+      "p": 109
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 113
+    },
+    {
+      "a_p": -20,
+      "hasse": 107,
+      "p": 127
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 131
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 137
+    },
+    {
+      "a_p": 16,
+      "hasse": 16,
+      "p": 139
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 149
+    },
+    {
+      "a_p": 4,
+      "hasse": 4,
+      "p": 151
+    },
+    {
+      "a_p": 14,
+      "hasse": 14,
+      "p": 157
+    },
+    {
+      "a_p": -8,
+      "hasse": 155,
+      "p": 163
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 167
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 173
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 179
+    },
+    {
+      "a_p": 26,
+      "hasse": 26,
+      "p": 181
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 191
+    },
+    {
+      "a_p": 2,
+      "hasse": 2,
+      "p": 193
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 197
+    },
+    {
+      "a_p": 28,
+      "hasse": 28,
+      "p": 199
+    },
+    {
+      "a_p": 16,
+      "hasse": 16,
+      "p": 211
+    },
+    {
+      "a_p": 28,
+      "hasse": 28,
+      "p": 223
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 227
+    },
+    {
+      "a_p": -22,
+      "hasse": 207,
+      "p": 229
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 233
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 239
+    },
+    {
+      "a_p": 14,
+      "hasse": 14,
+      "p": 241
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 251
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 257
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 263
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 269
+    },
+    {
+      "a_p": 28,
+      "hasse": 28,
+      "p": 271
+    },
+    {
+      "a_p": 26,
+      "hasse": 26,
+      "p": 277
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 281
+    },
+    {
+      "a_p": -32,
+      "hasse": 251,
+      "p": 283
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 293
+    },
+    {
+      "a_p": 16,
+      "hasse": 16,
+      "p": 307
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 311
+    },
+    {
+      "a_p": -22,
+      "hasse": 291,
+      "p": 313
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 317
+    },
+    {
+      "a_p": -32,
+      "hasse": 299,
+      "p": 331
+    },
+    {
+      "a_p": -34,
+      "hasse": 303,
+      "p": 337
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 347
+    },
+    {
+      "a_p": 14,
+      "hasse": 14,
+      "p": 349
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 353
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 359
+    },
+    {
+      "a_p": 4,
+      "hasse": 4,
+      "p": 367
+    },
+    {
+      "a_p": 38,
+      "hasse": 38,
+      "p": 373
+    },
+    {
+      "a_p": -8,
+      "hasse": 371,
+      "p": 379
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 383
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 389
+    },
+    {
+      "a_p": -34,
+      "hasse": 363,
+      "p": 397
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 401
+    },
+    {
+      "a_p": 38,
+      "hasse": 38,
+      "p": 409
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 419
+    },
+    {
+      "a_p": -22,
+      "hasse": 399,
+      "p": 421
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 431
+    },
+    {
+      "a_p": 2,
+      "hasse": 2,
+      "p": 433
+    },
+    {
+      "a_p": 28,
+      "hasse": 28,
+      "p": 439
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 443
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 449
+    },
+    {
+      "a_p": -10,
+      "hasse": 447,
+      "p": 457
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 461
+    },
+    {
+      "a_p": -20,
+      "hasse": 443,
+      "p": 463
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 467
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 479
+    },
+    {
+      "a_p": -44,
+      "hasse": 443,
+      "p": 487
+    },
+    {
+      "a_p": 0,
+      "hasse": 0,
+      "p": 491
+    },
+    {
+      "a_p": -32,
+      "hasse": 467,
+      "p": 499
+    }
+  ],
+  "fano_crossing_histogram": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  },
+  "fano_exact_cover_count": 30,
+  "finite_field_controls": [
+    {
+      "circle": 3,
+      "common_neighbors_0_1": 2,
+      "p": 2,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 2,
+      "quadratic_d": 1,
+      "quadratic_t": 1
+    },
+    {
+      "circle": 5,
+      "common_neighbors_0_1": 0,
+      "p": 2,
+      "polynomial": [
+        1,
+        1,
+        1
+      ],
+      "q": 4,
+      "quadratic_d": 2,
+      "quadratic_t": 1
+    },
+    {
+      "circle": 9,
+      "common_neighbors_0_1": 2,
+      "p": 2,
+      "polynomial": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "q": 8,
+      "quadratic_d": 1,
+      "quadratic_t": 1
+    },
+    {
+      "circle": 17,
+      "common_neighbors_0_1": 0,
+      "p": 2,
+      "polynomial": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "q": 16,
+      "quadratic_d": 8,
+      "quadratic_t": 1
+    },
+    {
+      "circle": 4,
+      "common_neighbors_0_1": 1,
+      "p": 3,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 3,
+      "quadratic_d": 2,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 10,
+      "common_neighbors_0_1": 1,
+      "p": 3,
+      "polynomial": [
+        1,
+        0,
+        1
+      ],
+      "q": 9,
+      "quadratic_d": 4,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 28,
+      "common_neighbors_0_1": 1,
+      "p": 3,
+      "polynomial": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "q": 27,
+      "quadratic_d": 2,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 6,
+      "common_neighbors_0_1": 2,
+      "p": 5,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 5,
+      "quadratic_d": 2,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 26,
+      "common_neighbors_0_1": 0,
+      "p": 5,
+      "polynomial": [
+        2,
+        0,
+        1
+      ],
+      "q": 25,
+      "quadratic_d": 5,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 8,
+      "common_neighbors_0_1": 0,
+      "p": 7,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 7,
+      "quadratic_d": 3,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 50,
+      "common_neighbors_0_1": 0,
+      "p": 7,
+      "polynomial": [
+        1,
+        0,
+        1
+      ],
+      "q": 49,
+      "quadratic_d": 9,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 12,
+      "common_neighbors_0_1": 2,
+      "p": 11,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 11,
+      "quadratic_d": 2,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 14,
+      "common_neighbors_0_1": 0,
+      "p": 13,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 13,
+      "quadratic_d": 2,
+      "quadratic_t": 0
+    },
+    {
+      "circle": 18,
+      "common_neighbors_0_1": 2,
+      "p": 17,
+      "polynomial": [
+        0,
+        1
+      ],
+      "q": 17,
+      "quadratic_d": 3,
+      "quadratic_t": 0
+    }
+  ],
+  "fixed_mod165": [
+    [
+      29,
+      10
+    ],
+    [
+      74,
+      10
+    ],
+    [
+      134,
+      10
+    ],
+    [
+      149,
+      10
+    ],
+    [
+      164,
+      2
+    ]
+  ],
+  "fixed_ternary_instances": 5422,
+  "graphs": 1100,
+  "minimum_q_sieve": [
+    659,
+    659,
+    2
+  ],
+  "ramified_subgroups": {
+    "3": [
+      1,
+      3,
+      4,
+      9,
+      12,
+      14,
+      16,
+      23,
+      26,
+      27,
+      31,
+      34,
+      36,
+      37,
+      38,
+      42,
+      47,
+      48,
+      49,
+      53
+    ],
+    "5": [
+      1,
+      4,
+      5,
+      14,
+      16,
+      20,
+      23,
+      25,
+      26,
+      31
+    ],
+    "11": [
+      1,
+      11
+    ]
+  },
+  "status": "PASS; finite controls only"
+}

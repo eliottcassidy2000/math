@@ -1,0 +1,18 @@
+{
+  "LATTICE_CAP_REPAIR.md": {
+    "bytes": 15496,
+    "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f"
+  },
+  "normal.json": {
+    "bytes": 2228,
+    "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+  },
+  "optimized.json": {
+    "bytes": 2228,
+    "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+  },
+  "verify_lattice_cap.py": {
+    "bytes": 6862,
+    "sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc"
+  }
+}

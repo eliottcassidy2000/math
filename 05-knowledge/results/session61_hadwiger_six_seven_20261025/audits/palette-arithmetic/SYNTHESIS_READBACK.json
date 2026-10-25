@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "path": "/tmp/session61-parent/SYNTHESIS.md",
+  "sha256": "9eba7d133ea21c0288f2a01ae0bf4c621f1de480456b2134040b45df30cccedc",
+  "verified": [
+    "prime-three bound scoped to K=Q(sqrt(-3))",
+    "genus-two identification explicitly geometric and rational twist retained",
+    "pairwise observer limited to uniform character marginals",
+    "16/12/2 explicitly labeled-kernel counts"
+  ],
+  "scope": "Sections3\u20135; external six-color source and other sections outside assigned audit"
+}

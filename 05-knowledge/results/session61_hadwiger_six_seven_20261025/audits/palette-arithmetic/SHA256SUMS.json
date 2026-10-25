@@ -1,0 +1,16 @@
+{
+  "AUDIT.md": "7677f969895c3a20a19c82b463bf0760f06953bfe51d217e5cd953a375ba1596",
+  "INPUT_PINS.json": "36895ceb99a077ca3487ba632dde4c2fbe37ec6ac79f53e565e8b4c6c6e76262",
+  "NEGATIVE_CONTROLS.json": "7aa92151e8b7a325b13af2d8ee9e172f5505b45fad8794777e563f68bc7adabf",
+  "SYNTHESIS_READBACK.json": "7547fddfeb383e4f59a7db4bc451ae4db9655ed0ef8cde81de83dd9e1f0764da",
+  "check_independent.py": "fcba9ff941025d44e49267a4520d29704bcca736761bdee31216797335894461",
+  "even_order_false_fixed.py": "f40aa56491c39d565d226462f6a208317a420caae228f99e091ac310182bc160",
+  "independent.normal.json": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d",
+  "independent.optimized.json": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d",
+  "lost_only_one_bit.py": "51798dc47833f416f96a07d21094e8f02f22b3a4c817cec4f3af85fabc667dd3",
+  "producer-arithmetic.normal.json": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb",
+  "producer-arithmetic.optimized.json": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb",
+  "producer-palette.normal.json": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320",
+  "producer-palette.optimized.json": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320",
+  "wrong_completion_census.py": "314982d8f549362436a0046e34f50023dbf1cb3ce0548d6400e4c57391c5d52d"
+}

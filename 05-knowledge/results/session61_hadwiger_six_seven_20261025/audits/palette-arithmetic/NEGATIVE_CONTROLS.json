@@ -1,0 +1,38 @@
+[
+  {
+    "mutant": "even_order_false_fixed.py",
+    "optimized": false,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: all unit classes mod165"
+  },
+  {
+    "mutant": "even_order_false_fixed.py",
+    "optimized": true,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: all unit classes mod165"
+  },
+  {
+    "mutant": "wrong_completion_census.py",
+    "optimized": false,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: exact-cover STS census"
+  },
+  {
+    "mutant": "wrong_completion_census.py",
+    "optimized": true,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: exact-cover STS census"
+  },
+  {
+    "mutant": "lost_only_one_bit.py",
+    "optimized": false,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: exact vector class fiber"
+  },
+  {
+    "mutant": "lost_only_one_bit.py",
+    "optimized": true,
+    "returncode": 1,
+    "error_last_line": "RuntimeError: exact vector class fiber"
+  }
+]

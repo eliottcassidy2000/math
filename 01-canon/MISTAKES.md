@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — a correct lattice cap needed a new proof; seven labels did not supply Fano incidence
+
+- **Affected:** [THM-419](theorems/THM-419-2d-lattice-chromatic-cap.md) and the frozen [hexagonal output](../05-knowledge/results/hexagonal_forbidden_s116m.out).
+- **Failed implications / minimal hostiles:** `x²+sqrt(2)xy+y²` has four norm-one vectors, not two; the `x²+6y²` mod-three kernel restriction is not a similar lattice; the hyperbolic nonzero F3 level has two points, not four. The four historical census categories sum to 14,486, not 16,486; that census was not replayed. Its square-form `chi-set=[2,3]` and all-448 `maxchi=3` labels conflict with square-lattice all-layer bipartiteness, so they are not exact-chi certificates.
+- **Strongest survivor / repair:** the all-rank-two positive-distance cap is three, now proved by rational-Gram forcing and ramified-prime reduction on edge-generated components, with periodicity and denominator sidecars. The old proof/status is explicitly superseded, not silently trusted; [complete proof](../05-knowledge/results/session61_hadwiger_six_seven_20261025/lattice-cap/LATTICE_CAP_REPAIR.md) and [independent audit](../05-knowledge/results/session61_hadwiger_six_seven_20261025/audits/cap/AUDIT.md).
+- **Fano repair / new question:** a bare centred hexagon has no canonical Fano incidence, and its inversion fixes no Fano design. Quotienting triangular two-cells by a norm-seven ideal and choosing a face class supplies a genuine Fano design, selecting exactly the special four-code Campedelli orbit. Preserve chirality and marking; [correction sidecar](../05-knowledge/results/hexagonal_forbidden_s116m.CORRECTION.md). Neither a quotient K7 nor a graph-square seven-clique is a Euclidean unit-distance lower-bound witness.
+
 ## 2026-10-25 — a rational summand does not make the graded inventory nonintegral
 
 - **Affected draft:** [excess-graded tournament recurrence](../05-knowledge/results/ports_regular_actions_hn_20261025/counting/EXCESS_EXTENSION.md), reviewed before publication, said its coefficients `b_(M,E)` could be nonintegral.

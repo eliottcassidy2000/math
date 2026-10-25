@@ -1,0 +1,154 @@
+{
+  "scope": "Actual executions in separate frozen packet copies; generated file bytes match frozen publication sources in both modes",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scripts": 5,
+  "runs": [
+    {
+      "script": "lattice-cap/verify_lattice_cap.py",
+      "script_sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "verify_lattice_cap.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.659,
+      "stdout_sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "palette-deck/check.py",
+      "script_sha256": "30f91835181cfc9247e00b91b79f009ed4b3f90afb3ed5c327b5d9dc401ce756",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.102,
+      "stdout_sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "residue-cm/check_arithmetic.py",
+      "script_sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check_arithmetic.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.083,
+      "stdout_sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/cap/audit.py",
+      "script_sha256": "c81be7d71795642384c7311052ac85a361136a9fa7eae599f8d8589dcd993e47",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "audit.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.443,
+      "stdout_sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/palette-arithmetic/check_independent.py",
+      "script_sha256": "fcba9ff941025d44e49267a4520d29704bcca736761bdee31216797335894461",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check_independent.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.404,
+      "stdout_sha256": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "lattice-cap/verify_lattice_cap.py",
+      "script_sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "verify_lattice_cap.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.669,
+      "stdout_sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "palette-deck/check.py",
+      "script_sha256": "30f91835181cfc9247e00b91b79f009ed4b3f90afb3ed5c327b5d9dc401ce756",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.149,
+      "stdout_sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "residue-cm/check_arithmetic.py",
+      "script_sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check_arithmetic.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.134,
+      "stdout_sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/cap/audit.py",
+      "script_sha256": "c81be7d71795642384c7311052ac85a361136a9fa7eae599f8d8589dcd993e47",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "audit.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.537,
+      "stdout_sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/palette-arithmetic/check_independent.py",
+      "script_sha256": "fcba9ff941025d44e49267a4520d29704bcca736761bdee31216797335894461",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check_independent.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.461,
+      "stdout_sha256": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_file_count": 80,
+  "source_byte_integrity": "PASS"
+}

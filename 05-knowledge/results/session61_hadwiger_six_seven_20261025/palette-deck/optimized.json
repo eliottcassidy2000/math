@@ -1,0 +1,61 @@
+{
+  "abstract_six_colour_relation": {
+    "boundary_assignments": 96,
+    "unit_realization": false
+  },
+  "always_active_checks": 11508,
+  "finite_universes": {
+    "all_graphs_orders_0_through_4": 76,
+    "central_matchings": 15,
+    "edge_cochain_cases": 761,
+    "fano_codes": 30,
+    "fano_triple_projections": 1050,
+    "fixed_ternary_cases": 5422,
+    "genus_two_lagrangians": 15
+  },
+  "geometric_NAE": {
+    "boundary_assignments": 24,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "three_colourings": 48,
+    "vertices": 6
+  },
+  "hourglass_dependency_histogram": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  },
+  "negative_controls": [
+    "C3 sign cover C6 always bipartite; no section",
+    "one pair endpoint flip fixes ordered matching, exchanges Fano completion",
+    "all pair shadows agree across 30 kernels; triple shadows distinguish",
+    "even nonzero channel holonomy (1,1,0) invisible to parity",
+    "pairwise NAE shadow falsely admits all-equal ports",
+    "six-colour pair shadows falsely accept triangle gluing"
+  ],
+  "status": "PASS"
+}

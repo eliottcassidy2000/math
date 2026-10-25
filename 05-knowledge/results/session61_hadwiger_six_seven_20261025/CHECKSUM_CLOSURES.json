@@ -2,6 +2,21 @@
   "status": "PASS",
   "files": [
     {
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "check_arithmetic.py",
+      "sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e"
+    },
+    {
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "RESULT.md",
+      "sha256": "e749b38429e0d3879125a3e75bc5af5b74abc2360109998be7252aa7e578d61d"
+    },
+    {
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "receipt.json",
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
+    },
+    {
       "manifest": "hexagonal/SHA256SUMS",
       "path": "RESULTS.md",
       "sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8"
@@ -20,6 +35,41 @@
       "manifest": "hexagonal/SHA256SUMS",
       "path": "verification.json",
       "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "AUDIT.md",
+      "sha256": "c2ad358fe7517abe147b72b3eebe0ed06740414b415ac28d85e316ff947a39b2"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "SOURCE_PINS.json",
+      "sha256": "29746832d94893d7e69bedd5cf571f07fdba2a4bd8361fd637fcd16b93d9e517"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "audit.py",
+      "sha256": "c81be7d71795642384c7311052ac85a361136a9fa7eae599f8d8589dcd993e47"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "normal.json",
+      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "optimized.json",
+      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "producer-normal.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "producer-optimized.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
     },
     {
       "manifest": "audits/lattice/SHA256SUMS",
@@ -70,6 +120,131 @@
       "manifest": "audits/lattice/SHA256SUMS",
       "path": "producer-torus-optimized.out",
       "sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "NEGATIVE_CONTROL_RECEIPT.json",
+      "sha256": "cf727f4cb9393c76b6c942ffc6d6a32ef3fce84ff7deefdb969f7492fa7a04c7"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "RESULT.md",
+      "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "SOURCE_PINS.json",
+      "sha256": "7c979a6f7a110f2dc1d56dd9110388666a98f49fb2ac2aeeb0abe46a4ba31f3a"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "check.py",
+      "sha256": "30f91835181cfc9247e00b91b79f009ed4b3f90afb3ed5c327b5d9dc401ce756"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "normal.json",
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "optimized.json",
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "manifest": "palette-deck/SHA256SUMS.json",
+      "path": "wrong_census_mutant.py",
+      "sha256": "e7879eb1e0f675a7c3d91b5899b0c26d9c20edb94b72a11da9339ed7fc999fe1"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "AUDIT.md",
+      "sha256": "7677f969895c3a20a19c82b463bf0760f06953bfe51d217e5cd953a375ba1596"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "INPUT_PINS.json",
+      "sha256": "36895ceb99a077ca3487ba632dde4c2fbe37ec6ac79f53e565e8b4c6c6e76262"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "NEGATIVE_CONTROLS.json",
+      "sha256": "7aa92151e8b7a325b13af2d8ee9e172f5505b45fad8794777e563f68bc7adabf"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "SYNTHESIS_READBACK.json",
+      "sha256": "7547fddfeb383e4f59a7db4bc451ae4db9655ed0ef8cde81de83dd9e1f0764da"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "check_independent.py",
+      "sha256": "fcba9ff941025d44e49267a4520d29704bcca736761bdee31216797335894461"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "even_order_false_fixed.py",
+      "sha256": "f40aa56491c39d565d226462f6a208317a420caae228f99e091ac310182bc160"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "independent.normal.json",
+      "sha256": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "independent.optimized.json",
+      "sha256": "73877f7a7784c431434cc8e0f8aac5c5a9ef8f7136705e51751f82d478800c9d"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "lost_only_one_bit.py",
+      "sha256": "51798dc47833f416f96a07d21094e8f02f22b3a4c817cec4f3af85fabc667dd3"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "producer-arithmetic.normal.json",
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "producer-arithmetic.optimized.json",
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "producer-palette.normal.json",
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "producer-palette.optimized.json",
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "manifest": "audits/palette-arithmetic/SHA256SUMS.json",
+      "path": "wrong_completion_census.py",
+      "sha256": "314982d8f549362436a0046e34f50023dbf1cb3ce0548d6400e4c57391c5d52d"
+    },
+    {
+      "manifest": "lattice-cap/MANIFEST.json",
+      "path": "LATTICE_CAP_REPAIR.md",
+      "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f"
+    },
+    {
+      "manifest": "lattice-cap/MANIFEST.json",
+      "path": "normal.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "manifest": "lattice-cap/MANIFEST.json",
+      "path": "optimized.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "manifest": "lattice-cap/MANIFEST.json",
+      "path": "verify_lattice_cap.py",
+      "sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc"
     }
   ]
 }

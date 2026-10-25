@@ -1,0 +1,242 @@
+{
+  "checks": 715865,
+  "complete_scalar_target_edges": 109688,
+  "deep_denominator_controls": [
+    {
+      "ell": [
+        1,
+        8191
+      ],
+      "form": [
+        1,
+        0,
+        1
+      ],
+      "h": 16777216,
+      "m": 8192,
+      "normalizer": [
+        4096,
+        0
+      ],
+      "p": 2,
+      "steps": 4,
+      "t": 12
+    },
+    {
+      "ell": [
+        1,
+        0
+      ],
+      "form": [
+        1,
+        0,
+        2
+      ],
+      "h": 1048576,
+      "m": 2048,
+      "normalizer": [
+        1024,
+        0
+      ],
+      "p": 2,
+      "steps": 2,
+      "t": 10
+    },
+    {
+      "ell": [
+        1,
+        1094
+      ],
+      "form": [
+        1,
+        1,
+        1
+      ],
+      "h": 531441,
+      "m": 2187,
+      "normalizer": [
+        729,
+        0
+      ],
+      "p": 3,
+      "steps": 6,
+      "t": 6
+    },
+    {
+      "ell": [
+        1,
+        1201
+      ],
+      "form": [
+        1,
+        1,
+        2
+      ],
+      "h": 117649,
+      "m": 2401,
+      "normalizer": [
+        343,
+        0
+      ],
+      "p": 7,
+      "steps": 2,
+      "t": 3
+    },
+    {
+      "ell": [
+        1,
+        6084
+      ],
+      "form": [
+        1,
+        1,
+        6
+      ],
+      "h": 279841,
+      "m": 12167,
+      "normalizer": [
+        529,
+        0
+      ],
+      "p": 23,
+      "steps": 2,
+      "t": 2
+    }
+  ],
+  "dense_flower": {
+    "chi": 3,
+    "degree_histogram": {
+      "5": 18,
+      "8": 3
+    },
+    "edges": 57,
+    "points_theta": [
+      [
+        -4,
+        4
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        3
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        -1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        -2
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "triangles": 25,
+    "vertices": 21
+  },
+  "general_polygons": 100,
+  "independent_census": {
+    "directed_steps": 18848,
+    "forms": 280,
+    "layers": 4798,
+    "max_m": 79,
+    "max_t": 2,
+    "normalizing_edges_tested": 18848
+  },
+  "ramified_unit_tests": 28548,
+  "residual_odd_girth": 23,
+  "residual_steps": [
+    [
+      -6,
+      0
+    ],
+    [
+      -6,
+      1
+    ],
+    [
+      -5,
+      -1
+    ],
+    [
+      5,
+      1
+    ],
+    [
+      6,
+      -1
+    ],
+    [
+      6,
+      0
+    ]
+  ],
+  "scaled_order_embeddings": 300,
+  "squarefree_d_count": 78,
+  "status": "PASS"
+}

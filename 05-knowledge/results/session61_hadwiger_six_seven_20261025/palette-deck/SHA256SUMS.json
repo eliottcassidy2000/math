@@ -1,0 +1,30 @@
+{
+  "NEGATIVE_CONTROL_RECEIPT.json": {
+    "bytes": 475,
+    "sha256": "cf727f4cb9393c76b6c942ffc6d6a32ef3fce84ff7deefdb969f7492fa7a04c7"
+  },
+  "RESULT.md": {
+    "bytes": 15551,
+    "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+  },
+  "SOURCE_PINS.json": {
+    "bytes": 2186,
+    "sha256": "7c979a6f7a110f2dc1d56dd9110388666a98f49fb2ac2aeeb0abe46a4ba31f3a"
+  },
+  "check.py": {
+    "bytes": 9960,
+    "sha256": "30f91835181cfc9247e00b91b79f009ed4b3f90afb3ed5c327b5d9dc401ce756"
+  },
+  "normal.json": {
+    "bytes": 1269,
+    "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+  },
+  "optimized.json": {
+    "bytes": 1269,
+    "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+  },
+  "wrong_census_mutant.py": {
+    "bytes": 9960,
+    "sha256": "e7879eb1e0f675a7c3d91b5899b0c26d9c20edb94b72a11da9339ed7fc999fe1"
+  }
+}

@@ -1,6 +1,6 @@
 # Hadwiger–Nelson themes inside six/seven geometry
 
-Status: first audited structural checkpoint. Classical ingredients are attributed; the new contribution is an explicit comparison with the repository's marked hourglass geometry, not a literature-wide novelty claim.
+Status: second audited research checkpoint. Classical ingredients are attributed; the new contribution is an explicit comparison with the repository's marked hourglass geometry, not a literature-wide novelty claim.
 
 ## Main connection
 
@@ -10,8 +10,15 @@ The two ideal choices and two face classes give **exactly the special four-eleme
 
 - [Exact lattice and metric bridge](hexagonal/RESULTS.md): exactly two index-seven kernels, `χ(T)=3` but `χ(T²)=7`, and a classical whole-plane seven-colouring proved with strict cell diameter/separation bounds. The safe scale interval is `sqrt(3/7) < h < sqrt(3)/2`.
 - [Torus → Fano → Campedelli](torus-fano/TORUS_FANO_CAMPEDELLI.md): explicit face systems, all thirty designs, all dihedral orbits, four selected free kernels, and the inherited geometric consequence.
-- [Independent proof and hostile audit](audits/lattice/AUDIT.md): separate standard-library reconstruction, exact metric calculation, and the general rank-two lattice proof. The historical THM-419 repair and recovery packet are reserved for the next checkpoint.
+- [Independent proof and hostile audit](audits/lattice/AUDIT.md): separate standard-library reconstruction, exact metric calculation, and the general rank-two lattice proof. The historical THM-419 repair is now supported by the [full lattice-cap packet](lattice-cap/LATTICE_CAP_REPAIR.md) and [second independent audit](audits/cap/AUDIT.md).
 - [External source status](SOURCE_STATUS.md): the September 2026 six-colour lower bound is **CITED**, not independently built or axiom-audited here. None of these bridges improves the plane bound or resolves six versus seven.
+
+## Recovered prior themes
+
+- [Paired palettes, Fano completions and deck correlations](palette-deck/RESULT.md): fifteen six-label pairings match the fifteen genus-two Lagrangians and central Fano pencils. A completion bit and two hidden cohomology bits per cycle remain essential. Specified pairwise sign marginals are blind; triple correlations recover the Fano incidence and inherited surface type.
+- [Arithmetic residue/CM boundary](residue-cm/RESULT.md): conjugation-fixed primes are exactly the local-integrality boundary for norm-one reduction. The CM split/inert pattern provides a real arithmetic comparison, while the cyclotomic-165 bound is a bound on the named residue-colouring method, not the target field's actual chromatic number.
+- [Repaired lattice cap](lattice-cap/LATTICE_CAP_REPAIR.md): every positive norm layer in every rank-two Euclidean lattice is periodically at most three-colourable; the explicit former residual has odd girth 23. The proof does not rely on the defective historical census.
+- [Independent palette/arithmetic audit](audits/palette-arithmetic/AUDIT.md), [independent lattice audit](audits/cap/AUDIT.md), and [correction preimage hashes](CORRECTION_PREIMAGES.json) distinguish proved statements, exact finite controls, inherited geometry and historical failures.
 
 ## What the quotient does not preserve
 

@@ -4,7 +4,7 @@ from pathlib import Path
 import hashlib,json
 ROOT=Path(__file__).resolve().parent
 manifest=json.loads((ROOT/'MANIFEST.json').read_text())
-actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.name!='MANIFEST.json'}
+actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p!=ROOT/'MANIFEST.json'}
 expected={r['path'] for r in manifest['files']}
 if actual!=expected:raise RuntimeError(f'File set mismatch: missing={expected-actual}, extra={actual-expected}')
 for row in manifest['files']:

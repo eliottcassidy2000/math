@@ -1,0 +1,9 @@
+{
+  "incoming_head": "bd128a2766d44c1e34c15efa85de75ef4c2417c2",
+  "incoming_commits": [
+    "3878d6cb",
+    "bd128a27"
+  ],
+  "scope": "All incoming paths preserved. MISTAKES prepend conflict semantically resolved by retaining entire incoming ledger and adding the separately audited Session61 entry below its purpose banner. The incoming frontier edit is retained unchanged. New incoming HN geometry is a comparison to assess in final intake, not silently adopted as a Session61 proof.",
+  "restored_mode": "THM-419 markdown retains original Git mode100755; no intentional mode normalization."
+}

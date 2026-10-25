@@ -1,0 +1,75 @@
+{
+  "repo_HEAD_at_pin": "47eea7cad59b48c1d2584460bcb8d5f05f577ce0",
+  "inputs": [
+    {
+      "path": "/tmp/session61-palette-deck/RESULT.md",
+      "bytes": 15551,
+      "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+    },
+    {
+      "path": "/tmp/session61-palette-deck/check.py",
+      "bytes": 9960,
+      "sha256": "30f91835181cfc9247e00b91b79f009ed4b3f90afb3ed5c327b5d9dc401ce756"
+    },
+    {
+      "path": "/tmp/session61-palette-deck/normal.json",
+      "bytes": 1269,
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "path": "/tmp/session61-palette-deck/optimized.json",
+      "bytes": 1269,
+      "sha256": "3819ec529b2b18ab0ddf74deab93134f2e2edc8f0951a1325c7167c4d9d68320"
+    },
+    {
+      "path": "/tmp/session61-palette-deck/SOURCE_PINS.json",
+      "bytes": 2186,
+      "sha256": "7c979a6f7a110f2dc1d56dd9110388666a98f49fb2ac2aeeb0abe46a4ba31f3a"
+    },
+    {
+      "path": "/tmp/session61-residue-k3/RESULT.md",
+      "bytes": 16372,
+      "sha256": "e749b38429e0d3879125a3e75bc5af5b74abc2360109998be7252aa7e578d61d"
+    },
+    {
+      "path": "/tmp/session61-residue-k3/check_arithmetic.py",
+      "bytes": 5897,
+      "sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e"
+    },
+    {
+      "path": "/tmp/session61-residue-k3/receipt.json",
+      "bytes": 9677,
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
+    },
+    {
+      "path": "/tmp/session61-residue-k3/receipt.optimized.json",
+      "bytes": 9677,
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
+    },
+    {
+      "path": "/tmp/session61-parent/SYNTHESIS.md",
+      "bytes": 10200,
+      "sha256": "23b908a22cd2439eac3a8d460009ae5707aea5648e7038c846f90ac3c5686d9e"
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/01-canon/theorems/THM-4628-residue-colourings-of-the-unit-distance-graph-of-q-zeta55-are-kloosterman-forced-at-every-conjugation-fixed-prime.md",
+      "bytes": 9474,
+      "sha256": "de7ad071935f25ed6e5bd6fdfa22ef5a7a82a29834eeab2a106e32676cf4ecb5"
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/05-knowledge/results/session60_six_seven_geometry_20261025/hourglass-symmetry/RESULT.md",
+      "bytes": 16145,
+      "sha256": "8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160"
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/05-knowledge/results/session60_six_seven_geometry_20261025/recovered-bridges/THEOREM.md",
+      "bytes": 19815,
+      "sha256": "20030d4fadd02733b765866833c1bdf89f5c5e262b965cedc337c7d89054d271"
+    },
+    {
+      "path": "/tmp/math-wt-session61-hadwiger-six-seven/05-knowledge/results/session60_six_seven_geometry_20261025/seven-lines/RESULT.md",
+      "bytes": 25741,
+      "sha256": "eac57a84ee6653ab5bf370e2d8954256d073232c09d60946b3f4abe747b9a314"
+    }
+  ]
+}

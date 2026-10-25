@@ -2,6 +2,18 @@
   "status": "PASS",
   "routes": [
     {
+      "source": "CORRECTIONS.md",
+      "target": "../../../01-canon/theorems/THM-419-2d-lattice-chromatic-cap.md"
+    },
+    {
+      "source": "CORRECTIONS.md",
+      "target": "../hexagonal_forbidden_s116m.CORRECTION.md"
+    },
+    {
+      "source": "CORRECTIONS.md",
+      "target": "../../../01-canon/MISTAKES.md"
+    },
+    {
       "source": "EXTERNAL_SOURCE_PROVENANCE.md",
       "target": "SOURCE_STATUS.md"
     },
@@ -19,7 +31,39 @@
     },
     {
       "source": "README.md",
+      "target": "lattice-cap/LATTICE_CAP_REPAIR.md"
+    },
+    {
+      "source": "README.md",
+      "target": "audits/cap/AUDIT.md"
+    },
+    {
+      "source": "README.md",
       "target": "SOURCE_STATUS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "palette-deck/RESULT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "residue-cm/RESULT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "lattice-cap/LATTICE_CAP_REPAIR.md"
+    },
+    {
+      "source": "README.md",
+      "target": "audits/palette-arithmetic/AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "audits/cap/AUDIT.md"
+    },
+    {
+      "source": "README.md",
+      "target": "CORRECTION_PREIMAGES.json"
     },
     {
       "source": "README.md",

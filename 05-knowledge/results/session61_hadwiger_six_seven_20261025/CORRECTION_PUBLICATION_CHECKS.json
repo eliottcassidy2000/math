@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "05-knowledge/results/hexagonal_forbidden_s116m.out",
+      "unchanged_sha256": "217876c282ab7a141ae5b4bbc1a31076c7a731a5f430c06e81c4dfc1e2b51d87"
+    },
+    {
+      "path": "01-canon/theorems/THM-419-2d-lattice-chromatic-cap.md",
+      "publication_sha256": "c7cb23b29dcb22f51c939c1aa48cd0f6d11f9c74425d5a103113f11eb1a2f35d"
+    },
+    {
+      "path": "05-knowledge/results/hexagonal_forbidden_s116m.CORRECTION.md",
+      "publication_sha256": "535a952cb3ef71d09e2f79614b06fc9c200cba0381df816807939cb086facbed"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "publication_sha256": "dbde7737f0a9f7e7bef799434f12bb72a455bf7cccc2c30c3cfef0a8dac8edba"
+    }
+  ]
+}

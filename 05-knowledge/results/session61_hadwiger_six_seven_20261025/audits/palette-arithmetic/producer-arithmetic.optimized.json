@@ -1,0 +1,586 @@
+{
+  "Weil_integer_lower_bound165": 14,
+  "branch_incidence_controls": {
+    "2": {
+      "central_dependent_triples": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "distinct_normals": 4
+    },
+    "3": {
+      "central_dependent_triples": [
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "distinct_normals": 7
+    },
+    "7": {
+      "central_dependent_triples": [],
+      "distinct_normals": 7
+    },
+    "13": {
+      "central_dependent_triples": [],
+      "distinct_normals": 7
+    }
+  },
+  "checks": 1853,
+  "elliptic_controls": [
+    {
+      "C6_points": 6,
+      "Eminus_points": 6,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 5,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 8,
+      "Eminus_points": 4,
+      "a_p_Eminus": 4,
+      "hasse": 4,
+      "p": 7,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 12,
+      "Eminus_points": 12,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 11,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 10,
+      "Eminus_points": 12,
+      "a_p_Eminus": 2,
+      "hasse": 2,
+      "p": 13,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 18,
+      "Eminus_points": 18,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 17,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 20,
+      "Eminus_points": 28,
+      "a_p_Eminus": -8,
+      "hasse": 11,
+      "p": 19,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 24,
+      "Eminus_points": 24,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 23,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 30,
+      "Eminus_points": 30,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 29,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 32,
+      "Eminus_points": 28,
+      "a_p_Eminus": 4,
+      "hasse": 4,
+      "p": 31,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 58,
+      "Eminus_points": 48,
+      "a_p_Eminus": -10,
+      "hasse": 27,
+      "p": 37,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 42,
+      "Eminus_points": 42,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 41,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 44,
+      "Eminus_points": 52,
+      "a_p_Eminus": -8,
+      "hasse": 35,
+      "p": 43,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 48,
+      "Eminus_points": 48,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 47,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 54,
+      "Eminus_points": 54,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 53,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 60,
+      "Eminus_points": 60,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 59,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 34,
+      "Eminus_points": 48,
+      "a_p_Eminus": 14,
+      "hasse": 14,
+      "p": 61,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 68,
+      "Eminus_points": 52,
+      "a_p_Eminus": 16,
+      "hasse": 16,
+      "p": 67,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 72,
+      "Eminus_points": 72,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 71,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 94,
+      "Eminus_points": 84,
+      "a_p_Eminus": -10,
+      "hasse": 63,
+      "p": 73,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 80,
+      "Eminus_points": 76,
+      "a_p_Eminus": 4,
+      "hasse": 4,
+      "p": 79,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 84,
+      "Eminus_points": 84,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 83,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 90,
+      "Eminus_points": 90,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 89,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 70,
+      "Eminus_points": 84,
+      "a_p_Eminus": 14,
+      "hasse": 14,
+      "p": 97,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 102,
+      "Eminus_points": 102,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 101,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 104,
+      "Eminus_points": 124,
+      "a_p_Eminus": -20,
+      "hasse": 83,
+      "p": 103,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 108,
+      "Eminus_points": 108,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 107,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 106,
+      "Eminus_points": 108,
+      "a_p_Eminus": 2,
+      "hasse": 2,
+      "p": 109,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 114,
+      "Eminus_points": 114,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 113,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 128,
+      "Eminus_points": 148,
+      "a_p_Eminus": -20,
+      "hasse": 107,
+      "p": 127,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 132,
+      "Eminus_points": 132,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 131,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 138,
+      "Eminus_points": 138,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 137,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 140,
+      "Eminus_points": 124,
+      "a_p_Eminus": 16,
+      "hasse": 16,
+      "p": 139,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 150,
+      "Eminus_points": 150,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 149,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 152,
+      "Eminus_points": 148,
+      "a_p_Eminus": 4,
+      "hasse": 4,
+      "p": 151,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 130,
+      "Eminus_points": 144,
+      "a_p_Eminus": 14,
+      "hasse": 14,
+      "p": 157,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 164,
+      "Eminus_points": 172,
+      "a_p_Eminus": -8,
+      "hasse": 155,
+      "p": 163,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 168,
+      "Eminus_points": 168,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 167,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 174,
+      "Eminus_points": 174,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 173,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 180,
+      "Eminus_points": 180,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 179,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 130,
+      "Eminus_points": 156,
+      "a_p_Eminus": 26,
+      "hasse": 26,
+      "p": 181,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 192,
+      "Eminus_points": 192,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 191,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 190,
+      "Eminus_points": 192,
+      "a_p_Eminus": 2,
+      "hasse": 2,
+      "p": 193,
+      "split_in_Eisenstein": true
+    },
+    {
+      "C6_points": 198,
+      "Eminus_points": 198,
+      "a_p_Eminus": 0,
+      "hasse": 0,
+      "p": 197,
+      "split_in_Eisenstein": false
+    },
+    {
+      "C6_points": 200,
+      "Eminus_points": 172,
+      "a_p_Eminus": 28,
+      "hasse": 28,
+      "p": 199,
+      "split_in_Eisenstein": true
+    }
+  ],
+  "fixed_classes165": [
+    [
+      29,
+      10,
+      5
+    ],
+    [
+      74,
+      10,
+      5
+    ],
+    [
+      134,
+      10,
+      5
+    ],
+    [
+      149,
+      10,
+      5
+    ],
+    [
+      164,
+      2,
+      1
+    ]
+  ],
+  "fixed_classes55": [
+    [
+      19,
+      10,
+      5
+    ],
+    [
+      24,
+      10,
+      5
+    ],
+    [
+      29,
+      10,
+      5
+    ],
+    [
+      39,
+      10,
+      5
+    ],
+    [
+      54,
+      2,
+      1
+    ]
+  ],
+  "hostiles": [
+    "order20 does not imply conjugation fixed",
+    "109 fails after adjoining zeta3",
+    "K7 quotient source has chi3",
+    "split prime has norm-one vector pole",
+    "bad branch primes2,3"
+  ],
+  "least_residue_parameter165": 659,
+  "norm_graph_triangle_counts": {
+    "3": 1,
+    "5": 2,
+    "7": 0,
+    "11": 2,
+    "13": 0,
+    "17": 2,
+    "19": 0
+  },
+  "ramified_subgroups165": {
+    "3": [
+      3,
+      9,
+      27,
+      26,
+      23,
+      14,
+      42,
+      16,
+      48,
+      34,
+      47,
+      31,
+      38,
+      4,
+      12,
+      36,
+      53,
+      49,
+      37,
+      1
+    ],
+    "5": [
+      5,
+      25,
+      26,
+      31,
+      23,
+      16,
+      14,
+      4,
+      20,
+      1
+    ],
+    "11": [
+      11,
+      1
+    ]
+  },
+  "status": "FINITE-EXACT controls, not exhaustive all-prime proof",
+  "units_omega6_convention": [
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ]
+  ]
+}

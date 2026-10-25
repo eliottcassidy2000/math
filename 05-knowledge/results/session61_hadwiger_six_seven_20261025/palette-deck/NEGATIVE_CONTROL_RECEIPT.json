@@ -1,0 +1,19 @@
+[
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "wrong_census_mutant.py"
+    ],
+    "returncode": 1,
+    "last_error": "RuntimeError: hourglass dependency census"
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-O",
+      "wrong_census_mutant.py"
+    ],
+    "returncode": 1,
+    "last_error": "RuntimeError: hourglass dependency census"
+  }
+]
