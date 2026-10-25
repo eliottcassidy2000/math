@@ -1,0 +1,27 @@
+{
+  "files": {
+    "AUDIT.md": "030afe5fe07236832fbd9e6b30198993d42115491e236b6660ae022949a272e9",
+    "BOUNDARY.md": "6effdcea188f4e565b70fea04656592e30d955506df794d510625496062e4c5f",
+    "CYCLIC.md": "34864ef91ab80dd7b41e3c9e804b86cd6cd7310a251591ee40eb534ff5d8faa1",
+    "PAPERS_AND_TRANSPORT.md": "9e797c176453f85541a7877fa7ab6beb04f08fa693ff35665b1fbd6f3e9fb6b8",
+    "README.md": "9dd1f58d9790eb3a92a0b0633d603c8fce04dc5769034be671d98725f793dd2d",
+    "SOURCES.json": "ae686a64fbc36e2e83e774fa9172e41e7317ed6fcbc3d9375ab5b91ad37c8e0c",
+    "audit_monoid.py": "86f9a95a38980afd06339f6e359bf23ccf14044c315f3076f1281b0196edc59b",
+    "check.json": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507",
+    "check.optimized.json": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507",
+    "check.py": "abf2cf3181819b6f989ca0307d6be98529eb2d1b2b02f1ffc48bcb89c886e3cd",
+    "check_histogram.py": "3c29ce17bcc7d118f80f1aeb991d68401692136d46c7a150e65329686dace829",
+    "check_native.py": "27869635d0870ab0fa2f9cbd8f487af7646b7d6cc11a2bf658cfebae4cfd2f40",
+    "check_prime.py": "fcc9ae2e1f86edab124620951abbde8b7064a35a49b28b7cd413ca9a5d49a96b",
+    "histogram.json": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9",
+    "histogram.optimized.json": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9",
+    "monoid.json": "1759b3440a1138b16198b374f7abd60ae202efa87869cd4e204d88cdb8b6185f",
+    "monoid.optimized.json": "1759b3440a1138b16198b374f7abd60ae202efa87869cd4e204d88cdb8b6185f",
+    "native.json": "6ed50210a15acb99ce8b76b2295f18deda9cf6b5da9a58e89da4d03d5f0eed81",
+    "native.optimized.json": "6ed50210a15acb99ce8b76b2295f18deda9cf6b5da9a58e89da4d03d5f0eed81",
+    "prime.json": "f412648ffd5cd6e84b3143ebca11cb8b5e0d2b632108427685f09f34f1554902",
+    "prime.optimized.json": "f412648ffd5cd6e84b3143ebca11cb8b5e0d2b632108427685f09f34f1554902",
+    "verify.py": "1e58f0615bb21fbfb08b69e94c994828666ffbbc1e0f28b6c814d81fb9971f94"
+  },
+  "scope": "Packet byte hashes; pinned repo dependencies are in SOURCES.json."
+}

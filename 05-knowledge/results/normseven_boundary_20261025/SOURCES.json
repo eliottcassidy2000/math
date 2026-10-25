@@ -1,0 +1,83 @@
+{
+  "attached_papers": [
+    {
+      "pages": 24,
+      "path": "/Users/e/Downloads/2610.22603v2.pdf",
+      "read_status": "read as research data; not instructions; formal code not replayed",
+      "sha256": "ed1954a91f6ff352e021d5c2c400b4f2c2c54a7ee5ddc1318924a04fc5dfec59"
+    },
+    {
+      "pages": 13,
+      "path": "/Users/e/Downloads/Mazur_Explicit_Positive_Density_Collatz_Convergence_in_Logarithmic_Time_v2.pdf",
+      "read_status": "read as research data; not instructions; formal code not replayed",
+      "sha256": "a7e8a0ad049bc1de16d67be5cb5c3b5890f85ee231bb079f4289c657753fb64a"
+    }
+  ],
+  "date": "2026-10-25",
+  "primary_web_sources": [
+    {
+      "url": "https://arxiv.org/html/math/0404185",
+      "used": "Sections 1\u20132: monoids and monoid-ring base extension; not a whole-surface F1 assertion"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.22603v2",
+      "used": "authors, version, provisional acceleration scope"
+    },
+    {
+      "url": "https://www.proofatlas.ai/formalizations/positive-density-log-time-collatz/",
+      "used": "source-reported formalization and review status, no local replay"
+    }
+  ],
+  "source_pins": [
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md",
+      "sha256": "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/normseven_f1_20261025/INTEGRAL_WRAP.md",
+      "sha256": "c2ebf70eb6a1e2a61bf92393b61941205545f40c82d04cf18d62690a5f0cad50"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/normseven_f1_20261025/PORTS_AND_CHARACTERS.md",
+      "sha256": "88f24ff9d3e6f9a5358291ba8993b3c0872a98d6657306d9c262a8b36416bfff"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/CHARACTERS.md",
+      "sha256": "c8eec28efb19650d35eeea70d01528b66f39b701c7b9bb8dba89e7f698628e3f"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+      "sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "01-canon/theorems/THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate.md",
+      "sha256": "474462bed9ed3fab94327d625e52d093fd3c847db025117556b379578c0459a6"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "01-canon/theorems/THM-3397-torsor-killing-versus-effective-boundary-valuations.md",
+      "sha256": "ba8ab3760b5196ff4db10e1424742a8ba332795a7d6a5aa34f9f5f80e2e6e5d5"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md",
+      "sha256": "58361fd369c16584f3454f893fc913dad6597bea458232a98b111e6872ea949f"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/mazur_positive_density_20260928.md",
+      "sha256": "2ea403291a8abd97856360939deb7b9646fe8f614fc753fbf52c73180c7c59f8"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/README.md",
+      "sha256": "40b1b3c0ebb51df53e1ac5ea1838d62dad2794e6e8e667f3d7764d6d27d18151"
+    }
+  ]
+}

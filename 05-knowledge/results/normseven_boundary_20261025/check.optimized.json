@@ -1,0 +1,95 @@
+{
+  "Fano_codes": 30,
+  "arithmetic_hostile": {
+    "branch": 1,
+    "nonsquare_indices": [
+      3,
+      4,
+      5
+    ],
+    "point": [
+      1,
+      -1,
+      3
+    ],
+    "quotient_D_values": {
+      "0": "1",
+      "108": "2",
+      "113": "2",
+      "29": "2",
+      "39": "0",
+      "58": "0",
+      "75": "0",
+      "86": "0"
+    },
+    "quotient_U_values": {
+      "0": "1",
+      "105": "2",
+      "114": "0",
+      "27": "0",
+      "46": "0",
+      "53": "2",
+      "71": "0",
+      "92": "2"
+    },
+    "twists": [
+      "1",
+      "1",
+      "1/2",
+      "1/2",
+      "-1",
+      "2/3",
+      "-1"
+    ]
+  },
+  "boundary_strata": [
+    {
+      "normalization_sheets": 2,
+      "number_of_strata": 7,
+      "product_points": 16,
+      "vanishing_roots": 1
+    },
+    {
+      "normalization_sheets": 4,
+      "number_of_strata": 12,
+      "product_points": 4,
+      "vanishing_roots": 2
+    },
+    {
+      "normalization_sheets": 8,
+      "number_of_strata": 3,
+      "product_points": 1,
+      "vanishing_roots": 3
+    }
+  ],
+  "charts_per_pair": 7,
+  "complementary_pairs": 120,
+  "gates": 21817748,
+  "ordered_dimension_four_decompositions": 800,
+  "scope": "Algebraic proof separate. All labelled complementary Fano pairs, all seven charts; exact boundary signs for the displayed norm-seven pair; no rational-point existence or Collatz coverage conclusion.",
+  "script_sha256": "abf2cf3181819b6f989ca0307d6be98529eb2d1b2b02f1ffc48bcb89c886e3cd",
+  "status": "FINITE-EXACT",
+  "triple_hostile": {
+    "chart": 3,
+    "point": [
+      0,
+      0,
+      1
+    ],
+    "residue_field_degree": 8,
+    "twists": [
+      1,
+      1,
+      1,
+      1,
+      -2,
+      3,
+      -5
+    ],
+    "unit_radicands": [
+      2,
+      3,
+      5
+    ]
+  }
+}

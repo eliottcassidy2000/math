@@ -4,6 +4,32 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — boundary normalization needs residual classes; composite carries need image indices
+
+- **Candidate implications, not retracted proved theorems:** a rational point
+  of both complementary norm-seven quotients need not lift rationally to
+  the normalization. At `(E,x,z)=(1,-1,3)` with twists
+  `(1,1,1/2,1/2,-1,2/3,-1)`, both quotient algebras have rational points,
+  but a full root would square to 2. At the triple boundary, independent
+  classes 2,3,5 give an eight-degree residual extension. [Exact repair and
+  sharp missing-sheet count](../05-knowledge/results/normseven_boundary_20261025/BOUNDARY.md).
+- **First failed generalization:** for composite m, a nonzero coordinate
+  image need not be all Z/m. Complementary Z/4 generators `(1,2),(0,1)`
+  give conductor exponents `(0,2)`, not the naive prime formula `(0,3)`.
+  Retaining the image indices repairs the formula for all cyclic moduli;
+  [CYCLIC C1–C2](../05-knowledge/results/normseven_boundary_20261025/CYCLIC.md).
+- **External source boundary, not a Lean refutation:** the attached
+  arXiv:2610.22603v2 p.5 displays an Antihydra arrow with clock
+  `3b^2+9b-1` while allowing b=0. The resulting -1 cannot be a native
+  step count. The rendered PDF was checked. A corrected all-b clock was
+  not established; the literal display is excluded from dependencies.
+  The separate Appendix A.11 transitions passed all 576 stated native
+  controls. [Source and scope audit](../05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md).
+- **Missing coordinates / next target:** residual unit squareclasses,
+  coordinate-image indices, canonical source ownership and positive native
+  clocks. Seek fixed-twist arithmetic lifts and nonprincipal conductor
+  ideals; do not infer them from a Laurent inverse or a finite grammar.
+
 ## 2026-10-25 — a character-lift determinant is not an intrinsic root-cover obstruction
 
 - **Candidate, not a retracted theorem:** the inherited norm-seven bit bases

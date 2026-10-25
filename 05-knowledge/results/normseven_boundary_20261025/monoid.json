@@ -1,0 +1,16 @@
+{
+  "box": "[0,2]^6",
+  "inclusion_determinant_branch_valuations": [
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "membership_gates": 87480,
+  "pairs": 120,
+  "scope": "Independent additive-monoid BFS for all 120 pairs in chart 0; no algebraic theorem inferred from a bounded box.",
+  "script_sha256": "86f9a95a38980afd06339f6e359bf23ccf14044c315f3076f1281b0196edc59b",
+  "status": "FINITE-EXACT"
+}

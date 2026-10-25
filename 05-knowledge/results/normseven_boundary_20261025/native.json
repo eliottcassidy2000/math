@@ -1,0 +1,25 @@
+{
+  "blank_entry_clock": 162,
+  "blank_entry_head_displacement": -4,
+  "clock_convention": "A --- instruction counts as the final attempted transition; nonhalting macros count actual executed instructions.",
+  "gates": 1719,
+  "machine": "1RB1LA_1LC0RE_1LF1LD_1RE0LC_1LB1RA_---0LA",
+  "maximum_checked_clock": 210,
+  "receipt_sha256": "0f3f6493ae569a3008477f00273d9a872567130abe8e3ff750b1a6dd81001903",
+  "rule_counts": {
+    "a>=2": 384,
+    "c=0,even b": 16,
+    "c=0,odd b,a=0": 8,
+    "c=0,odd b,a=1": 8,
+    "c=1,d=3,b=0,a=1": 1,
+    "c=1,d=3,even b,a=0": 4,
+    "c=1,d=3,odd b": 8,
+    "c=1,d=3,positive even b,a=1": 3,
+    "c=1,d=6": 16,
+    "c>=2": 128
+  },
+  "script_sha256": "27869635d0870ab0fa2f9cbd8f487af7646b7d6cc11a2bf658cfebae4cfd2f40",
+  "sources": 576,
+  "status": "FINITE-EXACT",
+  "universe": "a=0..5,b=0..7,c=0..5,d in {3,6}; no reachability filter"
+}
