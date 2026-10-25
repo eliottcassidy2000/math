@@ -1,5 +1,6 @@
 {
   "baseline": "2b96df316ec324bb8785c45d672f5562f5f2abfa",
+  "integrated_main": "23cb4665f6cbed8844ef9be8748a0b18a5d307d8",
   "scope": "Scoped proofs and exact finite controls; no headline open-conjecture closure",
   "sha256": {
     "04-computation/shape_anchors_20261025/anchors_independent_audit.py": "aee16a26db9a7ce6faa75a6108c6e0c6dd9af3debd488a29f2b57100d6fe3eff",
@@ -12,8 +13,8 @@
     "04-computation/shape_ports_20261025/verify_packet.py": "3e48a90f52c89ff9e5322fca9d3552f55ff99c8aae82af1a568f1fe1925c26a8",
     "04-computation/shape_ports_20261025/weighted_endpoint_boundary.py": "98ccf6a6ce6d73d659c6fea13b6782fb964de15a1575b8dc8d5a927234f8f45e",
     "04-computation/shape_spectral_20261025/verify_shapes.py": "34e76fa422a4100cd12404479bf1ce4db44ee8567a6fe80ae7cb07df122b2885",
-    "05-knowledge/results/shape_ports_20261025/AUDIT.md": "c40552e1e0ae69f87f7f911855bab7d59878136c7298fe8b47cf9e57672ec362",
-    "05-knowledge/results/shape_ports_20261025/README.md": "d5ba1d3061d6b0f1ace37cd1c6f102c450c729fdc70444684a5f096544cb1fcf",
+    "05-knowledge/results/shape_ports_20261025/AUDIT.md": "c675f9ebf6eb9221f98f29c5860894192e6ef5a24789c9f073a343e7d238010e",
+    "05-knowledge/results/shape_ports_20261025/README.md": "0ffc5f2663c10d8061ae94c6d5057aaab5679cdfdcfee4c53794a0962bfa2512",
     "05-knowledge/results/shape_ports_20261025/anchors_audit.json": "a04263f2ae79d4248631dc1ebc13839f3666e948f8c6d1fade21f2bb9fb2b7ee",
     "05-knowledge/results/shape_ports_20261025/anchors_audit.md": "c04c8ecfa498344209e5538aac798362740196292f124dab78d193b95b2d2a1e",
     "05-knowledge/results/shape_ports_20261025/anchors_collatz_phase.md": "80dbc4ff9ec76e204d360de1b1eb2e7ad04242bcc359170f1aac776a37d0040c",
@@ -26,7 +27,7 @@
     "05-knowledge/results/shape_ports_20261025/collatz_native_refill.md": "13595dab7015b4f43b51de86a0ae53de0a73a66bf97365a9b82466e8b0a2ae83",
     "05-knowledge/results/shape_ports_20261025/shapes-verification.json": "aaffcaec28fc796f13b202ceabd9825ec75be0a86c7d4c1daa340e9996c47881",
     "05-knowledge/results/shape_ports_20261025/shapes.md": "36a36849153f9a177fea6b96311f673908d84aaa3cb6e1e489f9c0644c3f11e4",
-    "05-knowledge/results/shape_ports_20261025/tournaments.md": "76e52030522f17d89a77fc72170b4d6ed183e4e62eecc9602b29bce81f79a354",
+    "05-knowledge/results/shape_ports_20261025/tournaments.md": "bb1cf7d9956c4bd83dabe89c419e76b7649dda743176cb567e8f440b7a62d56e",
     "05-knowledge/results/shape_ports_20261025/tournaments_endpoint_four_seven_control.json": "d4e474f701a55fd63ccf66b37ffc44d10bb704308f7837bb778686dc33befdc7",
     "05-knowledge/results/shape_ports_20261025/tournaments_low_order_detours.json": "518c453b03148d7eac9ccbf5e6b428b4e2f267f010ca2083520d724bb484e750",
     "05-knowledge/results/shape_ports_20261025/tournaments_weighted_endpoint_boundary.json": "eba9c1ccfd5a44a432309454c9696d23c9d1f13a197485d167f535678570f965"

@@ -68,3 +68,22 @@ Git baseline: `2b96df316ec324bb8785c45d672f5562f5f2abfa`. All inherited mathemat
 in the proofs were read at that baseline. Primary literature links in
 shapes.md were separately checked; they support their stated background,
 not an RH/JC/Collatz/P-vs-NP equivalence.
+
+## Concurrent integration
+
+Before publication, main advanced through `c3c7ae07e4`, `e0e957e674`,
+`32693c14f4`, and `e1d2362a1b`. Their ports/owners and Session59 routes were
+read and integrated. The two overlapping correction files were resolved by
+preserving MISTAKE-646, the incoming scope repair, and the additional exact
+hostiles here; the incoming theorem's finite receipts remain unchanged.
+The proofs, all nine checker sources, and their output receipts were
+unchanged by this integration. All **18** normal/optimized packet replays
+passed; the repository documentation gate also passed before integration
+and is checked again on the final merged surface.
+
+Main subsequently advanced to `23cb4665f6` with Session59's final
+root-surface hierarchy, distinctness torsion, and relative-Frobenius audit.
+Its synthesis was read and the two research commits rebased cleanly over it;
+none of this packet's proofs, checkers, or receipts changed. The new incoming
+material strengthens the recorded warning that point counts and support
+geometry do not reconstruct the original arithmetic object.

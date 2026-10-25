@@ -35,6 +35,14 @@ still needs its full directed paths. Neither port collapse nor matching
 enumeration is a black `K` move. A scalar equality of counts does not supply
 an unrestricted recurrence or global reachability.
 
+**Concurrent recovery:** MISTAKE-646 had already recorded the order-six
+exception, and the October 25 [ports/owners checkpoint](../ports_owners_f1_20261025/README.md)
+repaired THM-4734's surviving wording while this packet was being audited.
+The small-order result below is independent corroboration plus the explicit
+order-five, order-seven endpoint-four, and parity controls. The incoming
+fixed-rank owner language uses feedback vertex number; this packet's mass
+lane uses weighted feedback arc cost. No parameter identification is made.
+
 ## 1. The first weighted-endpoint branch
 
 Let `Q[w]` be a pair-free weighted tournament: a homogeneous pair means two

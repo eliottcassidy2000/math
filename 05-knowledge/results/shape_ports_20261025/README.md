@@ -67,6 +67,40 @@ obligations, not a theorem that the named conjectures imply one another.
   common verification framework. A conditional fast search algorithm does
   not supply proofs, bounds on their lengths, or logical equivalences.
 
+## Integration with the concurrent October 25 checkpoints
+
+**RECOVERED / independently checked:** the incoming
+[ports and owners packet](../ports_owners_f1_20261025/anchor.md) gives an
+unrestricted canonical parent forest and exact fixed-rank transfers. Its
+rank is **feedback vertex number**. The mass-deficit theorem here uses
+**weighted feedback arc cost**; these parameters and their operations are
+not interchangeable. Its parent deletion retains a canonical augmentation
+owner and recomputes clone chains; our pointed-C3 collapse retains its
+external port and changes a weight. Neither map is a black K move.
+
+That packet also proves A000568 is not P-recursive. The root audit checks
+the short obstruction: labelled tournament counting gives
+`a_n>=2^(n(n-1)/2)/n!`, while a fixed-order polynomial-coefficient linear
+recurrence bounds successive windows by `C n^D` and hence gives
+`|a_n|<=exp(O(n log n))`. The growth rates conflict. Thus the unrestricted
+recurrence target must allow a growing state/order, nonlinear structure,
+or another coefficient class. This is inherited progress, not a new
+recurrence claim. The already audited October 21 first-owner packet closes
+its stated `delta=2k` layer; that remains prior to our new `r<k` branch.
+
+The incoming source independently repaired THM-4734's surviving order-six
+wording, which MISTAKE-646 had already corrected in another theorem. We
+preserve that lineage and add a complete unfiltered `n<=6` replay, the
+order-seven endpoint-four hostile, and the overlap-parity correction.
+
+[Session59](../session59_f1_geometry_and_information_20261025/SYNTHESIS.md)
+adds toric models, arithmetic twists, signed observer cells and explicit
+Frobenius corrections. Its distinction between a count-equivalent torus
+model and the original arithmetic object is exactly the distinction needed
+by our Newton-support hostile. The operator, coefficient, point-functor and
+positivity obligations stay separate. These incoming packets are linked as
+scoped work, not made dependencies of the new planar or Collatz proofs.
+
 ## Current stopping boundary
 
 All-order black-core connectivity and an unrestricted A000568 recurrence still
