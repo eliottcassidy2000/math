@@ -1,0 +1,53 @@
+{
+  "boundary_systems": 24,
+  "consistent_minima": [
+    [
+      15,
+      "open",
+      6
+    ],
+    [
+      17,
+      "open",
+      6
+    ],
+    [
+      17,
+      "closed",
+      6
+    ],
+    [
+      19,
+      "open",
+      8
+    ],
+    [
+      21,
+      "open",
+      8
+    ],
+    [
+      21,
+      "closed",
+      8
+    ],
+    [
+      23,
+      "open",
+      10
+    ],
+    [
+      25,
+      "open",
+      10
+    ],
+    [
+      25,
+      "closed",
+      10
+    ]
+  ],
+  "order7_hostile_target_HP": 9,
+  "order7_target_black_HP": 0,
+  "status": "PASS"
+}

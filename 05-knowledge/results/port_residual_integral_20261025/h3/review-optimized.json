@@ -1,0 +1,23 @@
+{
+  "affine_orders": [
+    12,
+    40
+  ],
+  "degree_and_witness_orders": [
+    12,
+    512
+  ],
+  "h3_blue_hostiles": [
+    [
+      8,
+      2
+    ],
+    [
+      10,
+      3
+    ]
+  ],
+  "h4_extra_port_hostile": 5,
+  "independent_gaussian_cells": 58,
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "budget_precisions": [
+    1,
+    128
+  ],
+  "four_cycle_cases": 609,
+  "independent_integer_orders": [
+    0,
+    60
+  ],
+  "independent_modular_comparisons": 183,
+  "sharp_odd_cases": 1326,
+  "status": "PASS",
+  "totient_pair_orders": [
+    4,
+    500
+  ],
+  "triple_cases": 950
+}

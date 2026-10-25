@@ -1,0 +1,94 @@
+{
+  "core_unmerged_oracle_range": [
+    0,
+    22
+  ],
+  "exact_transfer_cache_entries": 5480,
+  "intermediate_state_audits": 2642,
+  "lattice_controls": {
+    "genuine_dense_hostile": {
+      "b": 1,
+      "committed_degree": 41,
+      "cycle_counts": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "gauged_exponent": 2,
+      "remaining": 3,
+      "ungauged_exponent": -1
+    },
+    "genuine_dense_old_new_equal": true,
+    "negative_ungauged_channels": 430,
+    "one_prefix_value": 336,
+    "relaxed_lattice_transfers": 374
+  },
+  "order44_control": {
+    "negative_ungauged_channels": 2,
+    "same_intermediate_states": 719,
+    "scalar_cells": 1090
+  },
+  "ordinary_and_core_range": [
+    0,
+    26
+  ],
+  "samples": [
+    {
+      "conversions": 0,
+      "keys": 19,
+      "mode": "ordinary",
+      "n": 10,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 19,
+      "value": 9733056
+    },
+    {
+      "conversions": 1,
+      "keys": 19,
+      "mode": "core",
+      "n": 10,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 20,
+      "value": 8228360
+    },
+    {
+      "conversions": 0,
+      "keys": 63,
+      "mode": "ordinary",
+      "n": 18,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 63,
+      "value": 1783398846284777975419600287232
+    },
+    {
+      "conversions": 4,
+      "keys": 67,
+      "mode": "core",
+      "n": 18,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 85,
+      "value": 1779243949079754721555356353582
+    },
+    {
+      "conversions": 0,
+      "keys": 148,
+      "mode": "ordinary",
+      "n": 26,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 148,
+      "value": 169484335125246268100514597385576342667201246238506672327765919863947264
+    },
+    {
+      "conversions": 8,
+      "keys": 161,
+      "mode": "core",
+      "n": 26,
+      "negative_ungauged_channels": 0,
+      "scalar_cells": 223,
+      "value": 169481052016535667090319200414842125724171995410232777059425367671063808
+    }
+  ],
+  "scope": "integer operations and unchanged adaptive scalar-cell counts; no runtime or positivity claim",
+  "status": "PASS"
+}

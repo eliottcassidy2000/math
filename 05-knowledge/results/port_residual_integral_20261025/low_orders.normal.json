@@ -1,0 +1,892 @@
+{
+  "dependency_sha256": {
+    "audit_core.py": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4",
+    "independent_audit.py": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0"
+  },
+  "failed_ledger_hostiles": [
+    {
+      "blue_step": 1,
+      "branch": "open_penultimate",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        true,
+        false,
+        false
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": true,
+      "n": 12,
+      "ports": [
+        2,
+        7,
+        9
+      ],
+      "source_rows": [
+        1402,
+        3748,
+        1945,
+        2674,
+        1698,
+        2372,
+        3478,
+        2857,
+        2586,
+        1121,
+        2472,
+        533
+      ],
+      "words": [
+        [
+          0,
+          1,
+          10,
+          11,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          10,
+          0,
+          11,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          0,
+          11
+        ]
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_step": 1,
+      "branch": "open_penultimate",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        true,
+        false,
+        false
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": true,
+      "n": 12,
+      "ports": [
+        6,
+        7,
+        9
+      ],
+      "source_rows": [
+        1342,
+        3748,
+        2008,
+        2674,
+        1698,
+        836,
+        3475,
+        2857,
+        2586,
+        3137,
+        2472,
+        53
+      ],
+      "words": [
+        [
+          0,
+          1,
+          10,
+          11,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          10,
+          0,
+          11,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          0,
+          11
+        ]
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_step": 3,
+      "branch": "closed_one",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": false,
+      "n": 14,
+      "ports": [
+        3,
+        5,
+        10
+      ],
+      "source_rows": [
+        7126,
+        12116,
+        13352,
+        7507,
+        12452,
+        13643,
+        8852,
+        13614,
+        2644,
+        13500,
+        2385,
+        13044,
+        9538,
+        1289
+      ],
+      "words": [
+        [
+          12,
+          1,
+          13,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          13,
+          12,
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          0,
+          13,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_step": 3,
+      "branch": "closed_one",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": false,
+      "n": 14,
+      "ports": [
+        3,
+        7,
+        10
+      ],
+      "source_rows": [
+        7030,
+        11732,
+        12584,
+        5971,
+        9380,
+        15690,
+        4756,
+        13613,
+        10832,
+        13494,
+        2373,
+        13020,
+        9490,
+        1097
+      ],
+      "words": [
+        [
+          12,
+          1,
+          13,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          13,
+          12,
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          0,
+          13,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_step": 3,
+      "branch": "closed_zero",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": false,
+      "n": 14,
+      "ports": [
+        5,
+        9,
+        10
+      ],
+      "source_rows": [
+        6622,
+        10100,
+        9320,
+        7634,
+        4516,
+        14153,
+        9872,
+        15654,
+        6724,
+        13469,
+        10513,
+        12918,
+        9286,
+        281
+      ],
+      "words": [
+        [
+          12,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          1,
+          13,
+          0
+        ],
+        [
+          13,
+          12,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          1,
+          0
+        ],
+        [
+          0,
+          13,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "x_to_c": false
+    },
+    {
+      "blue_step": 3,
+      "branch": "closed_zero",
+      "directed_steps": [
+        true,
+        true,
+        true
+      ],
+      "literal_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "literal_target_and_XOR": true,
+      "middle_open": false,
+      "n": 14,
+      "ports": [
+        7,
+        9,
+        10
+      ],
+      "source_rows": [
+        6526,
+        9716,
+        8552,
+        6098,
+        1444,
+        16200,
+        5776,
+        15653,
+        14912,
+        13463,
+        10501,
+        12894,
+        9238,
+        89
+      ],
+      "words": [
+        [
+          12,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          1,
+          13,
+          0
+        ],
+        [
+          13,
+          12,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          1,
+          0
+        ],
+        [
+          0,
+          13,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      ],
+      "x_to_c": false
+    }
+  ],
+  "method": "complete affine source cells; pinned independent GF2 solver; local literal hostile replay",
+  "orders": {
+    "12": {
+      "all_source_branch_cells": 336,
+      "base_source_cells": 322,
+      "branches": [
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_last_movable",
+          "cells": 42
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_one",
+          "cells": 35
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_fixed",
+          "cells": 5
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_movable",
+          "cells": 15
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_tail4",
+          "cells": 1
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_zero",
+          "cells": 56
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_endrun",
+          "cells": 14
+        },
+        {
+          "all_completion_black": [
+            false,
+            true,
+            true
+          ],
+          "branch": "open_penultimate",
+          "cells": 2
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_penultimate",
+          "cells": 40
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_release",
+          "cells": 112
+        }
+      ],
+      "closed_endpair_cells_deferred_to_proved_repairs": 14
+    },
+    "13": {
+      "all_source_branch_cells": 480,
+      "base_source_cells": 464,
+      "branches": [
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_last_movable",
+          "cells": 56
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_one",
+          "cells": 56
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_fixed",
+          "cells": 6
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_movable",
+          "cells": 21
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_tail4",
+          "cells": 1
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_zero",
+          "cells": 84
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_endrun",
+          "cells": 16
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_penultimate",
+          "cells": 56
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_release",
+          "cells": 168
+        }
+      ],
+      "closed_endpair_cells_deferred_to_proved_repairs": 16
+    },
+    "14": {
+      "all_source_branch_cells": 660,
+      "base_source_cells": 642,
+      "branches": [
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_last_movable",
+          "cells": 72
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            false
+          ],
+          "branch": "closed_one",
+          "cells": 2
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_one",
+          "cells": 82
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_fixed",
+          "cells": 7
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_movable",
+          "cells": 28
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_second_tail4",
+          "cells": 1
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            false
+          ],
+          "branch": "closed_zero",
+          "cells": 2
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "closed_zero",
+          "cells": 118
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_endrun",
+          "cells": 18
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_penultimate",
+          "cells": 72
+        },
+        {
+          "all_completion_black": [
+            true,
+            true,
+            true
+          ],
+          "branch": "open_release",
+          "cells": 240
+        }
+      ],
+      "closed_endpair_cells_deferred_to_proved_repairs": 18
+    }
+  },
+  "scope": "order13 complete base closure FINITE-EXACT; order12/14 failures are ledger failures, not connectivity obstructions",
+  "second_word_boundary": [
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 12
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 12
+    },
+    {
+      "branch": "open",
+      "inconsistent": false,
+      "minimizing_inports": [
+        3,
+        6,
+        7,
+        10
+      ],
+      "minimum_middle_inports": 4,
+      "n": 13,
+      "projected_free_components": [
+        [
+          3,
+          8
+        ],
+        [
+          6,
+          9
+        ]
+      ]
+    },
+    {
+      "branch": "closed",
+      "inconsistent": false,
+      "minimizing_inports": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "minimum_middle_inports": 4,
+      "n": 13,
+      "projected_free_components": [
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "branch": "open",
+      "inconsistent": true,
+      "n": 14
+    },
+    {
+      "branch": "closed",
+      "inconsistent": true,
+      "n": 14
+    }
+  ],
+  "status": "PASS"
+}

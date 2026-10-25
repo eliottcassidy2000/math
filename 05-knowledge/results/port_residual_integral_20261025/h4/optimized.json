@@ -1,0 +1,24 @@
+{
+  "affine_orders": [
+    12,
+    120
+  ],
+  "complete_affine_cells": 109,
+  "edge_rectangle_and_reversal_orders": [
+    12,
+    1000
+  ],
+  "hostiles": {
+    "extra_port_5": "first new join 0->5 becomes false",
+    "old_ledger": "0->4 is false"
+  },
+  "literal_models": 327,
+  "scope": "specified three-word certificate only; no Hamiltonian path census",
+  "seeds": [
+    17,
+    233,
+    30030
+  ],
+  "source": "closed blue P, I={4,n-3,n-2},3->1; all source completions",
+  "status": "PASS"
+}
