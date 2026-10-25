@@ -2,7 +2,7 @@
 
 **Current truth:** [Frontier](CURRENT-FRONTIER.md).
 
-**Oct 20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
+**Oct20:** [Overnight](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 
 **Oct 25:** [Shape/port/anchor](../05-knowledge/results/shape_ports_20261025/README.md):
 Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-blue boundary.
@@ -26,7 +26,7 @@ Start with:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-## Current facts
+## Key facts
 
 1. **Repo LRC(14) remains OPEN.** THM-4347 closes height `40`;
    THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,

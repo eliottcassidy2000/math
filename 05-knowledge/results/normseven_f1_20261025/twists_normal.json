@@ -1,0 +1,119 @@
+{
+  "checks": 58994,
+  "fields": [
+    {
+      "base_points": 1,
+      "characteristic": 3,
+      "product_of_total_counts_hostiles": 0,
+      "q": 3,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 64,
+      "twist_count_histogram": {
+        "0": 63,
+        "64": 1
+      }
+    },
+    {
+      "base_points": 7,
+      "characteristic": 5,
+      "product_of_total_counts_hostiles": 24,
+      "q": 5,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 448,
+      "twist_count_histogram": {
+        "0": 57,
+        "64": 7
+      }
+    },
+    {
+      "base_points": 19,
+      "characteristic": 7,
+      "product_of_total_counts_hostiles": 63,
+      "q": 7,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 1216,
+      "twist_count_histogram": {
+        "0": 48,
+        "64": 13,
+        "128": 3
+      }
+    },
+    {
+      "base_points": 67,
+      "characteristic": 11,
+      "product_of_total_counts_hostiles": 64,
+      "q": 11,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 4288,
+      "twist_count_histogram": {
+        "0": 21,
+        "64": 24,
+        "128": 18,
+        "448": 1
+      }
+    },
+    {
+      "base_points": 103,
+      "characteristic": 13,
+      "product_of_total_counts_hostiles": 64,
+      "q": 13,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 6592,
+      "twist_count_histogram": {
+        "0": 10,
+        "64": 18,
+        "128": 27,
+        "192": 8,
+        "448": 1
+      }
+    },
+    {
+      "base_points": 199,
+      "characteristic": 17,
+      "product_of_total_counts_hostiles": 64,
+      "q": 17,
+      "quadratic_relation": null,
+      "sum_full_twist_counts": 12736,
+      "twist_count_histogram": {
+        "0": 7,
+        "128": 21,
+        "192": 18,
+        "256": 3,
+        "384": 14,
+        "448": 1
+      }
+    },
+    {
+      "base_points": 37,
+      "characteristic": 3,
+      "product_of_total_counts_hostiles": 64,
+      "q": 9,
+      "quadratic_relation": 2,
+      "sum_full_twist_counts": 2368,
+      "twist_count_histogram": {
+        "0": 45,
+        "64": 1,
+        "128": 18
+      }
+    },
+    {
+      "base_points": 487,
+      "characteristic": 5,
+      "product_of_total_counts_hostiles": 64,
+      "q": 25,
+      "quadratic_relation": 2,
+      "sum_full_twist_counts": 31168,
+      "twist_count_histogram": {
+        "128": 3,
+        "256": 6,
+        "384": 26,
+        "640": 24,
+        "768": 4,
+        "832": 1
+      }
+    }
+  ],
+  "script_sha256": "94479c7586239f5b526bd4dec6f8532f2ff146d7423e4b9847abff5e74018791",
+  "status": "FINITE-EXACT",
+  "universe": "Every affine branch-free point and all 64 constant square-class twists over F3,F5,F7,F11,F13,F17,F9,F25. Quotient roots counted directly from field squaring."
+}

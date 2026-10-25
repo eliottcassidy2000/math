@@ -1,0 +1,22 @@
+{
+  "AUDIT.md": "14a96e655805af9a63f0b71d826384d34fd20ecec718830797b2870e85b3cd2e",
+  "INTEGRAL_WRAP.md": "c2ebf70eb6a1e2a61bf92393b61941205545f40c82d04cf18d62690a5f0cad50",
+  "KUMMER_AND_F1.md": "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb",
+  "PORTS_AND_CHARACTERS.md": "88f24ff9d3e6f9a5358291ba8993b3c0872a98d6657306d9c262a8b36416bfff",
+  "README.md": "b8ea6b8bdbd98f30cc8ad97ed095f4c4c51926b8d1dd91c022b77f19a3bfa6be",
+  "SOURCES.json": "79e3d098abeebf516d46aa17efb853e9bc84cb3a64d05573f3cbae166cdaf45f",
+  "TWIST_AVERAGE.md": "58171d88a66f9016feae0a1b97f483d469901643090a1ba8840811a506351262",
+  "audit_smith.py": "1dc3c7f59e94eaeb0edbc38bb72522175d9abd593f6aa950538f71dc0d2a02a4",
+  "check.py": "20ba6c8a57e4b6d288e313f40053baa98fe1400407a0b97df3822b5182334293",
+  "check_ports.py": "a2696b94cba9bcab072fcc3f83cfb3670fdea0d6f965c2fc14062e856dcd3c4e",
+  "check_twists.py": "94479c7586239f5b526bd4dec6f8532f2ff146d7423e4b9847abff5e74018791",
+  "normal.json": "ac25d7d5ceecf742c3369ff28d012d9ff00f6f4655ab9481a1a478353f1c5c88",
+  "optimized.json": "ac25d7d5ceecf742c3369ff28d012d9ff00f6f4655ab9481a1a478353f1c5c88",
+  "ports_normal.json": "2f74c99e67e08a8de3c20a0f50b0bae20ce53648168058da9ecc5c11ff797cf1",
+  "ports_optimized.json": "2f74c99e67e08a8de3c20a0f50b0bae20ce53648168058da9ecc5c11ff797cf1",
+  "smith_normal.json": "983b9ec2c682f8c826e312e4b8737d270c807a8baf78899178c73f9c24ae287d",
+  "smith_optimized.json": "983b9ec2c682f8c826e312e4b8737d270c807a8baf78899178c73f9c24ae287d",
+  "twists_normal.json": "06bb1f5f2442a5ad7294b02e09ef24f51a3044c7e115872591e01da9732bb726",
+  "twists_optimized.json": "06bb1f5f2442a5ad7294b02e09ef24f51a3044c7e115872591e01da9732bb726",
+  "verify.py": "e2faf1f4063ecf576bbde745950e31b1270581b8fd1efca9b1ffcab03e9bcbdf"
+}

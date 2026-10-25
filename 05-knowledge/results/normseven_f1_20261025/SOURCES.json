@@ -1,0 +1,59 @@
+{
+  "external_convention": {
+    "author": "Anton Deitmar",
+    "checked": "2026-10-25",
+    "role": "Monoids, localization, base extension. Pointed convention explicitly distinguished.",
+    "sections": "1-3",
+    "title": "Schemes over F1",
+    "url": "https://arxiv.org/html/math/0404185v7"
+  },
+  "incoming_work": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+  "repository_sources": [
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md",
+      "sha256": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/COMBINATORIAL_BRIDGES.md",
+      "sha256": "f8596db79cffd81c8f0861dcc877ccf2e1fe182a4ec66ea00b5ee6aed6b9d0d9"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/incidence/cyclic_common_kernel.md",
+      "sha256": "ddcc9783b06c7c8d08bf63e79aa370520b413c727aa77e1c5264b388e9a429bf"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+      "sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/reflection_bridge_20261025/geometric_carrier.md",
+      "sha256": "3a3160c2db5e1190edbb2a8a4a192f824ceb8159bd5b2e8c636775331c05ddd0"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+      "sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/arithmetic-configurations/RESULT.md",
+      "sha256": "70539557adc283ec5e2632d16ffc0ef301e661b1c9a6dc3bf312bbd5ea0aa2a7"
+    },
+    {
+      "commit": "1f804be357b6ca3aa4b52840f9af8e25165f3125",
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/projective_eight/RESULT.md",
+      "sha256": "cd3ef25cf5b2b25ab4f46083d83926e442ce57203e9828b69649c005457bb916"
+    },
+    {
+      "commit": "1f804be357b6ca3aa4b52840f9af8e25165f3125",
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "sha256": "8a5c7a02cf3b319c034f8821d9d425c3c644c69c35e96edfa958f9cf6589c905"
+    }
+  ],
+  "second_incoming_work": "1f804be357b6ca3aa4b52840f9af8e25165f3125"
+}

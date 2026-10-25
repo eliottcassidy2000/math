@@ -196,7 +196,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ## Tournaments
 
 ### Reliable structural toolkit
-- [S62](START-HERE.md): cyclic kernels; pair holonomy.
+- [S62](START-HERE.md); [norm-seven/F1](../05-knowledge/results/normseven_f1_20261025/README.md).
 - [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [six/seven](../05-knowledge/results/six_seven_geometry_20261025/README.md); [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md); [HN6/7/8](S61.md). Integer squares OPEN.
 - [Port/gauge bridge](../05-knowledge/results/ports_regular_actions_hn_20261025/README.md): all-order protected ports; smaller unrestricted A000568 response states; exact clone-cut cancellation. [Owners](../05-knowledge/results/ports_owners_f1_20261025/README.md); [mass](../05-knowledge/results/shape_ports_20261025/tournaments.md). Full black-core connectivity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.

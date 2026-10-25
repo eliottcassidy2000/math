@@ -4,6 +4,27 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — a character-lift determinant is not an intrinsic root-cover obstruction
+
+- **Candidate, not a retracted theorem:** the inherited norm-seven bit bases
+  have integer determinant3. Treating that as an unavoidable obstruction to
+  monomial arithmetic recovery forgets which lift and base units were kept.
+- **Minimal witness / repair:** replace the third D character mask4 by5;
+  the determinant becomes1, with new coordinate `w4*w6/(b5*b6)`. Both
+  quotient fields are unchanged. More generally an integral unimodular lift
+  of every invertible binary matrix exists, at the cost of Laurent powers
+  and the base-radicand corrections. [Proof and exact census](../05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md).
+- **Strongest survivor / boundary:** determinant3 is a real degree-three
+  obstruction for the *unmarked ambient torus map*. The repaired Laurent
+  inverse is not an affine inverse across zero coordinates. Likewise field
+  ranks alone do not recover integral incidence torsion: a full length49
+  support has Smith factor49, and length16 has a punctured factor4.
+  [Universal-ring repair](../05-knowledge/results/normseven_f1_20261025/INTEGRAL_WRAP.md).
+- **Missing coordinate / new question:** preserve the permitted coordinate
+  operations, base units and boundary valuations; seek a compatible boundary
+  atlas rather than promoting a torus identity to the entire branched surface.
+
+
 ## 2026-10-25 — a boundary product needs every cross-constraint, and an edge count needs the inner triangle
 
 - **Affected provisional draft:** [HN six/seven/eight boundary packet](../05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md), repaired before proof promotion. The32-vertex example has31 edges, not28: the three inner-triangle edges were omitted from the prose total. Exact pair-distance checks recover all31.
