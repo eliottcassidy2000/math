@@ -1,0 +1,46 @@
+{
+  "C3_squared_subgroup_hostile": {
+    "full_action_depth": 1,
+    "subgroup_depth": 3
+  },
+  "F21_doubling_t_squared_coefficients": {
+    "correct": 7,
+    "independent_copy_error": 5
+  },
+  "closed_family_formula_controls": [
+    {
+      "depth": 1,
+      "gaps": 5,
+      "leading_coefficient": 4,
+      "rank": 1
+    },
+    {
+      "depth": 5,
+      "gaps": 25,
+      "leading_coefficient": 3000,
+      "rank": 2
+    },
+    {
+      "depth": 25,
+      "gaps": 125,
+      "leading_coefficient": 295639038085937500,
+      "rank": 3
+    }
+  ],
+  "explicit_C5_squared_TT2": {
+    "base_vertices": 25,
+    "full_automorphism_order": 25,
+    "inflated_vertices": 50,
+    "invariant_gap_toggle_rank": 1,
+    "rational_cancellation_depth": 5,
+    "rooted_refinement_class_counts": [
+      2,
+      3,
+      15,
+      21,
+      25
+    ]
+  },
+  "scope": "exact concrete TRR certificate; infinite existence uses cited Godsil theorem",
+  "status": "PASS"
+}

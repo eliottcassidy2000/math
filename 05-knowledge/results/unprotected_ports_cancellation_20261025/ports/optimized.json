@@ -1,0 +1,77 @@
+{
+  "critical_blue_sources": [
+    {
+      "interior_ports": [
+        5,
+        7,
+        9,
+        10,
+        11
+      ],
+      "n": 13,
+      "rows": [
+        350,
+        2804,
+        1496,
+        2226,
+        5600,
+        3909,
+        7560,
+        2849,
+        7690,
+        5213,
+        6283,
+        4629,
+        175
+      ]
+    },
+    {
+      "interior_ports": [
+        6,
+        8,
+        10,
+        12,
+        13
+      ],
+      "n": 15,
+      "rows": [
+        2750,
+        5492,
+        8936,
+        17874,
+        11236,
+        22344,
+        11905,
+        23842,
+        15941,
+        29834,
+        26645,
+        21038,
+        25693,
+        18603,
+        343
+      ]
+    }
+  ],
+  "endpoint_four_guard_cells": 1044,
+  "endpoint_four_order_range": [
+    12,
+    40
+  ],
+  "general_guard_cells": 1662,
+  "general_order_range": [
+    12,
+    17
+  ],
+  "h3_hostile": "n12,I={3,9,10},3->1 permits blue last word",
+  "h4_forward_affine_cells": 1008,
+  "h4_hostile": "n12,I={4,9,10},3->1 forces a->4 false",
+  "inherited_tail_routes": 4,
+  "literal_models_per_new_cell": 2,
+  "permutation_degree_antipodal_orders": [
+    12,
+    300
+  ],
+  "scope": "endpoint-four h>=5 and h4 with1->3; exact general degree exclusions",
+  "status": "PASS"
+}

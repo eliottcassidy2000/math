@@ -1,0 +1,60 @@
+{
+  "coefficient_range": [
+    0,
+    18
+  ],
+  "scope": "adaptive scalar-cell domination; no bit-cost or runtime improvement claim",
+  "status": "PASS",
+  "strict_linear_kernel": {
+    "coefficients": [
+      8,
+      -6,
+      1
+    ],
+    "cycle_counts": [
+      1,
+      2,
+      3
+    ],
+    "moments_1_2_3": [
+      0,
+      0,
+      192
+    ]
+  },
+  "vandermonde_checks": 63,
+  "work_counts_not_timings": [
+    {
+      "adaptive_keys": 7,
+      "adaptive_scalar_cells": 7,
+      "n": 6,
+      "new_scalar_cells": 24,
+      "new_vector_keys": 7,
+      "old_scalar_keys": 7
+    },
+    {
+      "adaptive_keys": 19,
+      "adaptive_scalar_cells": 20,
+      "n": 10,
+      "new_scalar_cells": 88,
+      "new_vector_keys": 19,
+      "old_scalar_keys": 22
+    },
+    {
+      "adaptive_keys": 38,
+      "adaptive_scalar_cells": 45,
+      "n": 14,
+      "new_scalar_cells": 222,
+      "new_vector_keys": 38,
+      "old_scalar_keys": 49
+    },
+    {
+      "adaptive_keys": 67,
+      "adaptive_scalar_cells": 85,
+      "n": 18,
+      "new_scalar_cells": 463,
+      "new_vector_keys": 67,
+      "old_scalar_keys": 94
+    }
+  ]
+}
