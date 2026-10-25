@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "package_root": "/tmp/session61-publication/third-frozen",
+  "scope": "Final package readback only: synthesis sections3\u20135, unchanged previously rendered SVG, palette/arithmetic summaries and guardrails in README and CONCEPT_BOARD; no new math or publication actions.",
+  "files": [
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640",
+      "byte_identical_to_prior_audited_source": true
+    },
+    {
+      "path": "figures/six-seven-hn-map.svg",
+      "sha256": "7eda8c662c00467e6ab1602bf03daa3bc6a30d822a60d8f99b05dd4ef64e8d4c",
+      "byte_identical_to_prior_audited_source": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "6af7785eb9d31ed369badd5ec567884c33377ef94c5343ddabad2a99a5466e0f",
+      "byte_identical_to_prior_audited_source": null
+    },
+    {
+      "path": "CONCEPT_BOARD.md",
+      "sha256": "7eda903486efcafec2816b14da8e5054f43bd5354cd6f18c08039335ed235c15",
+      "byte_identical_to_prior_audited_source": null
+    }
+  ],
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "dense-flower/DENSE_FLOWER_CONTROL.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "incoming/INCOMING_CUBE.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "figures/six-seven-hn-map.svg",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "hexagonal/RESULTS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "audits/lattice/AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "lattice-cap/LATTICE_CAP_REPAIR.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "audits/cap/AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "SOURCE_STATUS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "palette-deck/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "residue-cm/RESULT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "lattice-cap/LATTICE_CAP_REPAIR.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "audits/palette-arithmetic/AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "audits/cap/AUDIT.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "CORRECTION_PREIMAGES.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "MANIFEST.json",
+      "exists": true
+    }
+  ],
+  "scope_findings": [
+    "Prime-three coloring bound remains explicitly limited to Q(sqrt(-3)).",
+    "Geometric genus-two identification and rational twist boundary retained.",
+    "One/two-character observer marginal scope retained; 16/12/2 are labeled kernels.",
+    "Cyclotomic165 bound remains a lower bound for the named residue method, never source chromatic number.",
+    "No new K3 rank, HN closure, integer-square solution, or local certification of external six-color theorem is asserted.",
+    "Figure bytes match the prior SVG rendered and visually inspected without layout or scope defects."
+  ],
+  "replay_scope": "No duplicate math replay requested for this readback; earlier independent normal/-O replays remain pinned, publisher owns nine-script final replay."
+}

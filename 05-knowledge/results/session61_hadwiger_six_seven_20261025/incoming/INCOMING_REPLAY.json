@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "scope": "Two upstream exact checkers materialized directly from pinned Git blobs; no duplicated source script published. Parent separately reviewed geometric proofs.",
+  "runs": [
+    {
+      "label": "gale",
+      "source_commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/verify_budget_gale.py",
+      "source_sha256": "975f86c34a7958ed340c1681bcf5101c086d899a0d84d391d29aa0415464a3d8",
+      "mode": "normal",
+      "returncode": 0,
+      "stored_stdout": "incoming-gale-normal.json",
+      "stdout_sha256": "605b793a801d827bc95dc17406cfb2599622641c20487ebe759a96ee32eecfb3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "gale",
+      "source_commit": "c05e56c19147903a108d2d06b7bb5532508f8ca3",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/verify_budget_gale.py",
+      "source_sha256": "975f86c34a7958ed340c1681bcf5101c086d899a0d84d391d29aa0415464a3d8",
+      "mode": "optimized",
+      "returncode": 0,
+      "stored_stdout": "incoming-gale-optimized.json",
+      "stdout_sha256": "605b793a801d827bc95dc17406cfb2599622641c20487ebe759a96ee32eecfb3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cube",
+      "source_commit": "bd128a2766d44c1e34c15efa85de75ef4c2417c2",
+      "source_path": "05-knowledge/results/ports_regular_actions_hn_20261025/geometry/check.py",
+      "source_sha256": "335cf8cda435fc3d68e7304f0f94ef5131ee3573eedd43393bc349e94a8059c0",
+      "mode": "normal",
+      "returncode": 0,
+      "stored_stdout": "incoming-cube-normal.json",
+      "stdout_sha256": "0c735a913a4f7a97013d580b4c183d22634480e4af4d271a789339efe538f74d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "cube",
+      "source_commit": "bd128a2766d44c1e34c15efa85de75ef4c2417c2",
+      "source_path": "05-knowledge/results/ports_regular_actions_hn_20261025/geometry/check.py",
+      "source_sha256": "335cf8cda435fc3d68e7304f0f94ef5131ee3573eedd43393bc349e94a8059c0",
+      "mode": "optimized",
+      "returncode": 0,
+      "stored_stdout": "incoming-cube-optimized.json",
+      "stdout_sha256": "0c735a913a4f7a97013d580b4c183d22634480e4af4d271a789339efe538f74d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

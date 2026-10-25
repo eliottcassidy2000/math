@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "synthesis": {
+    "path": "/tmp/session61-parent/SYNTHESIS.md",
+    "sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640",
+    "checked_scope": "Sections3–5; preserved earlier scope fixes plus notation readback",
+    "checks": {
+      "coordinates": true,
+      "cyclotomic55": true,
+      "cyclotomic165": true,
+      "CM_congruences": true,
+      "p3_scoped": true,
+      "geometric": true,
+      "marginal_scoped": true,
+      "labeled_counts": true
+    }
+  },
+  "figure": {
+    "path": "/tmp/session61-parent/six-seven-hn-map.svg",
+    "sha256": "7eda8c662c00467e6ab1602bf03daa3bc6a30d822a60d8f99b05dd4ef64e8d4c",
+    "verification": "SVG text and original SVG rendered with Inkscape; visually inspected, no overlap/clipping, source/quotient caveat and marking dependence clear."
+  },
+  "scope_limits": "No new mathematical expansion, external six-color theorem not newly certified, no repository edits or publication by auditor."
+}

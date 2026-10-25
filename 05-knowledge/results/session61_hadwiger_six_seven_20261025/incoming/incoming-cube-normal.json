@@ -1,0 +1,68 @@
+{
+  "cube": {
+    "distance_checks": 28,
+    "hostile_controls": 2,
+    "intersection_spectrum": {
+      "-8": 1,
+      "-4": 3,
+      "0": 3,
+      "4": 1
+    },
+    "unit_edges": 12,
+    "vertices": 8
+  },
+  "directions": {
+    "chromatic_histogram": {
+      "1": 1,
+      "2": 63,
+      "4": 63,
+      "8": 1
+    },
+    "embedding_eligible_sets": 57,
+    "noncoloop_collapse_rows": 2296,
+    "sets": 128,
+    "square_flat_dimension_histogram": {
+      "1": 36,
+      "2": 35,
+      "4": 28,
+      "6": 21,
+      "8": 8
+    }
+  },
+  "fano": {
+    "bad_count_rank_labellings": {
+      "0,3": 2688,
+      "1,2": 2016,
+      "3,1": 336
+    },
+    "labellings": 5040,
+    "quotients_by_GL3": {
+      "0,3": 16,
+      "1,2": 12,
+      "3,1": 2
+    },
+    "torus_selected_directions": [
+      [
+        7,
+        3,
+        5
+      ],
+      [
+        4,
+        7,
+        2
+      ],
+      [
+        7,
+        5,
+        3
+      ],
+      [
+        4,
+        2,
+        7
+      ]
+    ]
+  },
+  "status": "PASS"
+}

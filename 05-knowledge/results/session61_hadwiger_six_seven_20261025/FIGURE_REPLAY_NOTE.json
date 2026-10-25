@@ -1,0 +1,9 @@
+{
+  "initial_attempt": "Both generator executions exited0 and SVG bytes matched, but first normal-mode stderr contained Fontconfig no-writable-cache-directory warnings; exact mode-output gate therefore rejected that replay.",
+  "recovery": "Normal/optimized generator rerun with warmed /tmp Matplotlib cache, then full combined replay; both pass with empty stderr and identical SVG bytes. Source code and SVG were not modified.",
+  "initial_stderr_sha256": "489f6ae5af977ee999a1a1e02633315542f247d82bd5efb6822b744f8feec7c3",
+  "passing_receipts": [
+    "THIRD_REPLAY_RECEIPT.json",
+    "FINAL_REPLAY_RECEIPT.json"
+  ]
+}

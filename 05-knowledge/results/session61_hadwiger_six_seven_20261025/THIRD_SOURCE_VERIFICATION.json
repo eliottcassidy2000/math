@@ -1,0 +1,111 @@
+{
+  "scope": "Final synthesis, original figure, dense-flower control, incoming pinned replay receipts and prior verified checkpoint. Every captured source copied unchanged; no downloaded sources or preview PNGs included. Root summaries are explicitly final editorial routing.",
+  "base_commit": "9269dd9e52ef404a56206eaa9f5b7136e0e0e9e5",
+  "files": [
+    {
+      "capture_path": "/tmp/session61-parent/SYNTHESIS.md",
+      "path": "SYNTHESIS.md",
+      "bytes": 10271,
+      "sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/DENSE_FLOWER_CONTROL.md",
+      "path": "dense-flower/DENSE_FLOWER_CONTROL.md",
+      "bytes": 2647,
+      "sha256": "8cbcc00eb5bbac774e4c9e9992e4cf76a7ee099f5ce4aa58679fe8b1b29cb169",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/check_dense_flower.py",
+      "path": "dense-flower/check_dense_flower.py",
+      "bytes": 1337,
+      "sha256": "947644939701030e5d2cdf9e67c9259a44f00553f1809a9cb36063b57748421f",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/dense-flower-normal.json",
+      "path": "dense-flower/dense-flower-normal.json",
+      "bytes": 2857,
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/dense-flower-optimized.json",
+      "path": "dense-flower/dense-flower-optimized.json",
+      "bytes": 2857,
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/make_figure.py",
+      "path": "figures/make_figure.py",
+      "bytes": 2858,
+      "sha256": "f0de15c25d2d829b36851b2729b885959369a5ca6cb8be252d6d244f48102d8e",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/six-seven-hn-map.svg",
+      "path": "figures/six-seven-hn-map.svg",
+      "bytes": 15544,
+      "sha256": "7eda8c662c00467e6ab1602bf03daa3bc6a30d822a60d8f99b05dd4ef64e8d4c",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/INCOMING_CUBE.md",
+      "path": "incoming/INCOMING_CUBE.md",
+      "bytes": 2158,
+      "sha256": "a2684fb5328530abdada55cea617be553c8e857a67230c2f0300a394f3f2c0fb",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/incoming-cube-normal.json",
+      "path": "incoming/incoming-cube-normal.json",
+      "bytes": 1010,
+      "sha256": "0c735a913a4f7a97013d580b4c183d22634480e4af4d271a789339efe538f74d",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/incoming-cube-optimized.json",
+      "path": "incoming/incoming-cube-optimized.json",
+      "bytes": 1010,
+      "sha256": "0c735a913a4f7a97013d580b4c183d22634480e4af4d271a789339efe538f74d",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/incoming-gale-normal.json",
+      "path": "incoming/incoming-gale-normal.json",
+      "bytes": 1744,
+      "sha256": "605b793a801d827bc95dc17406cfb2599622641c20487ebe759a96ee32eecfb3",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-parent/incoming-gale-optimized.json",
+      "path": "incoming/incoming-gale-optimized.json",
+      "bytes": 1744,
+      "sha256": "605b793a801d827bc95dc17406cfb2599622641c20487ebe759a96ee32eecfb3",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-publication/INCOMING_REPLAY.json",
+      "path": "incoming/INCOMING_REPLAY.json",
+      "bytes": 2492,
+      "sha256": "ed6c843250436800fff3eeca064b9ec3544deafc23d2edb8f58254c7d06824af",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-publication/second-completion.json",
+      "path": "SECOND_CHECKPOINT_PUBLICATION.json",
+      "bytes": 19627,
+      "sha256": "03ab3cc677d105b8f9decd615c51f524f0c4ea70e9585f4c9e1467b46e8cc4d9",
+      "same_bytes": true
+    },
+    {
+      "capture_path": "/tmp/session61-audit-palette-arithmetic-final-readback.json",
+      "path": "FINAL_PALETTE_SOURCE_READBACK.json",
+      "bytes": 987,
+      "sha256": "01590a5015c1e3ce4fea3330d731b0d91cf5252374b7baa3b5a6a5711c74cad7",
+      "same_bytes": true
+    }
+  ]
+}

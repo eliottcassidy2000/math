@@ -2,21 +2,6 @@
   "status": "PASS",
   "files": [
     {
-      "manifest": "residue-cm/SHA256SUMS",
-      "path": "check_arithmetic.py",
-      "sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e"
-    },
-    {
-      "manifest": "residue-cm/SHA256SUMS",
-      "path": "RESULT.md",
-      "sha256": "e749b38429e0d3879125a3e75bc5af5b74abc2360109998be7252aa7e578d61d"
-    },
-    {
-      "manifest": "residue-cm/SHA256SUMS",
-      "path": "receipt.json",
-      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
-    },
-    {
       "manifest": "hexagonal/SHA256SUMS",
       "path": "RESULTS.md",
       "sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8"
@@ -37,39 +22,19 @@
       "sha256": "75337aaf4e948daa8037eaa27e0aa2eb711901c4325ffed163925b9c04097713"
     },
     {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "AUDIT.md",
-      "sha256": "c2ad358fe7517abe147b72b3eebe0ed06740414b415ac28d85e316ff947a39b2"
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "check_arithmetic.py",
+      "sha256": "b8c563f42ae00c24fb8da4e88ac7461b926fb10109b4c9c9db1733d6c410b81e"
     },
     {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "SOURCE_PINS.json",
-      "sha256": "29746832d94893d7e69bedd5cf571f07fdba2a4bd8361fd637fcd16b93d9e517"
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "RESULT.md",
+      "sha256": "e749b38429e0d3879125a3e75bc5af5b74abc2360109998be7252aa7e578d61d"
     },
     {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "audit.py",
-      "sha256": "c81be7d71795642384c7311052ac85a361136a9fa7eae599f8d8589dcd993e47"
-    },
-    {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "normal.json",
-      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
-    },
-    {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "optimized.json",
-      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
-    },
-    {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "producer-normal.json",
-      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
-    },
-    {
-      "manifest": "audits/cap/SHA256SUMS",
-      "path": "producer-optimized.json",
-      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+      "manifest": "residue-cm/SHA256SUMS",
+      "path": "receipt.json",
+      "sha256": "1c6639035d02ce3280902fe70edb1892238822237df7f5dd8af5c73eef612adb"
     },
     {
       "manifest": "audits/lattice/SHA256SUMS",
@@ -120,6 +85,41 @@
       "manifest": "audits/lattice/SHA256SUMS",
       "path": "producer-torus-optimized.out",
       "sha256": "5946fe16fa632fe3bb9a45438d8c73cf274fb3d427890862f3e2c7f01c4b382c"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "AUDIT.md",
+      "sha256": "c2ad358fe7517abe147b72b3eebe0ed06740414b415ac28d85e316ff947a39b2"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "SOURCE_PINS.json",
+      "sha256": "29746832d94893d7e69bedd5cf571f07fdba2a4bd8361fd637fcd16b93d9e517"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "audit.py",
+      "sha256": "c81be7d71795642384c7311052ac85a361136a9fa7eae599f8d8589dcd993e47"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "normal.json",
+      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "optimized.json",
+      "sha256": "e0cd7075d882899f3637542ca7a5efb991510cf7d519683faebd05bb07dbd609"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "producer-normal.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "manifest": "audits/cap/SHA256SUMS",
+      "path": "producer-optimized.json",
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
     },
     {
       "manifest": "palette-deck/SHA256SUMS.json",

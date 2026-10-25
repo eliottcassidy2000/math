@@ -2,6 +2,10 @@
   "status": "PASS",
   "routes": [
     {
+      "source": "EXTERNAL_SOURCE_PROVENANCE.md",
+      "target": "SOURCE_STATUS.md"
+    },
+    {
       "source": "CORRECTIONS.md",
       "target": "../../../01-canon/theorems/THM-419-2d-lattice-chromatic-cap.md"
     },
@@ -14,8 +18,20 @@
       "target": "../../../01-canon/MISTAKES.md"
     },
     {
-      "source": "EXTERNAL_SOURCE_PROVENANCE.md",
-      "target": "SOURCE_STATUS.md"
+      "source": "README.md",
+      "target": "SYNTHESIS.md"
+    },
+    {
+      "source": "README.md",
+      "target": "dense-flower/DENSE_FLOWER_CONTROL.md"
+    },
+    {
+      "source": "README.md",
+      "target": "incoming/INCOMING_CUBE.md"
+    },
+    {
+      "source": "README.md",
+      "target": "figures/six-seven-hn-map.svg"
     },
     {
       "source": "README.md",
@@ -76,6 +92,10 @@
     {
       "source": "README.md",
       "target": "MANIFEST.json"
+    },
+    {
+      "source": "incoming/INCOMING_GALE.md",
+      "target": "INCOMING_CUBE.md"
     },
     {
       "source": "torus-fano/TORUS_FANO_CAMPEDELLI.md",

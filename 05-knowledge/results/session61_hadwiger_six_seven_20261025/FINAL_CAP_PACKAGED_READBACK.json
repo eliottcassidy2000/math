@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "scope": "Final packaged readback only: SYNTHESIS Section 6; cap/dense-flower/commensurator summaries in README and CONCEPT_BOARD; complete dense-flower note. No new mathematics, repository edits, current Hadwiger-Nelson literature audit, or global 21-point extremality proof.",
+  "package_root": "/tmp/session61-publication/third-frozen",
+  "reviewed_files": [
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 10271,
+      "sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4487,
+      "sha256": "6af7785eb9d31ed369badd5ec567884c33377ef94c5343ddabad2a99a5466e0f"
+    },
+    {
+      "path": "CONCEPT_BOARD.md",
+      "bytes": 3443,
+      "sha256": "7eda903486efcafec2816b14da8e5054f43bd5354cd6f18c08039335ed235c15"
+    },
+    {
+      "path": "dense-flower/DENSE_FLOWER_CONTROL.md",
+      "bytes": 2647,
+      "sha256": "8cbcc00eb5bbac774e4c9e9992e4cf76a7ee099f5ce4aa58679fe8b1b29cb169"
+    },
+    {
+      "path": "dense-flower/check_dense_flower.py",
+      "bytes": 1337,
+      "sha256": "947644939701030e5d2cdf9e67c9259a44f00553f1809a9cb36063b57748421f"
+    },
+    {
+      "path": "dense-flower/dense-flower-normal.json",
+      "bytes": 2857,
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24"
+    },
+    {
+      "path": "dense-flower/dense-flower-optimized.json",
+      "bytes": 2857,
+      "sha256": "1a3114e5fa4640021179e454a6cef8bdf5b25440905e6e76b8dad4f51294cf24"
+    },
+    {
+      "path": "lattice-cap/LATTICE_CAP_REPAIR.md",
+      "bytes": 15496,
+      "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f"
+    },
+    {
+      "path": "lattice-cap/verify_lattice_cap.py",
+      "bytes": 6862,
+      "sha256": "4aefbc348aa23a9545e9265261c4c9a23798ed4e1a88497b2cd9bb580ec766fc"
+    },
+    {
+      "path": "lattice-cap/normal.json",
+      "bytes": 2228,
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "path": "lattice-cap/optimized.json",
+      "bytes": 2228,
+      "sha256": "af1f4dcc58247baf1990f6765d937c150de9118b799f7d556c1d5f2fc5dbd16b"
+    },
+    {
+      "path": "lattice-cap/MANIFEST.json",
+      "bytes": 523,
+      "sha256": "726f2d3ba08f77d7e58c736b294ef9a0c1b2643b4c96c93a94ced4b37714de15"
+    }
+  ],
+  "unchanged_audited_source_files": 17,
+  "source_bytes_match": true,
+  "cap_checksum_closure": [
+    "AUDIT.md: OK",
+    "SOURCE_PINS.json: OK",
+    "audit.py: OK",
+    "normal.json: OK",
+    "optimized.json: OK",
+    "producer-normal.json: OK",
+    "producer-optimized.json: OK"
+  ],
+  "dense_replay": {
+    "normal_optimized_byte_identical": true,
+    "supplied_outputs_match": true,
+    "vertices": 21,
+    "edges": 57,
+    "triangles": 25,
+    "degree_histogram": {
+      "5": 18,
+      "8": 3
+    },
+    "chromatic_number": 3
+  },
+  "proof_readback": [
+    "Periodic at-most-three cap is scoped to one positive distance on a rank-two discrete Euclidean lattice; zero-step layers are explicitly allowed.",
+    "The D=36 layer of x^2+xy+6y^2 has three opposite step pairs and exact odd girth 23; the cap and lower bound are not inferred from a census.",
+    "The ratio alpha/beta=(11+5sqrt(-3))/14 has norm one and trace11/7; nonintegrality of its rational trace excludes finite order.",
+    "Commensurability zO~O is equivalent to z in Q(omega) for nonzero z, and rotation commensurators are its unit-modulus elements. This is distinct from the six exact lattice units.",
+    "The conjugate norm-seven ideals sum to O: 3(alpha+beta)-2alpha beta=1. Infinite-order rotation therefore does not itself prove lattice/field escape.",
+    "Dense-flower counts concern an explicit configuration; no new global extremality, rotation-rank formula, high-rank additive-group cap or full-plane chromatic conclusion is asserted."
+  ],
+  "blockers": []
+}

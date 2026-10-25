@@ -1,0 +1,75 @@
+{
+  "scope": "Intentional failures on final combined packet; not passing primary scripts",
+  "runs": [
+    {
+      "script": "palette-deck/wrong_census_mutant.py",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "hourglass dependency census",
+      "stderr_sha256": "393de8abf5224337918f74bade2ce12e5683e2b7a481b58eef6bcb9d637abc34"
+    },
+    {
+      "script": "palette-deck/wrong_census_mutant.py",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "hourglass dependency census",
+      "stderr_sha256": "393de8abf5224337918f74bade2ce12e5683e2b7a481b58eef6bcb9d637abc34"
+    },
+    {
+      "script": "audits/palette-arithmetic/even_order_false_fixed.py",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "all unit classes mod165",
+      "stderr_sha256": "cc7bb925fcc2dbeeb8e8cc5c59f205127be6b74654ea6d47fbeaef969b4cd36a"
+    },
+    {
+      "script": "audits/palette-arithmetic/even_order_false_fixed.py",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "all unit classes mod165",
+      "stderr_sha256": "cc7bb925fcc2dbeeb8e8cc5c59f205127be6b74654ea6d47fbeaef969b4cd36a"
+    },
+    {
+      "script": "audits/palette-arithmetic/lost_only_one_bit.py",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "exact vector class fiber",
+      "stderr_sha256": "1c8fd4eeb9832695e5d306bfd947aaf129032346c7c88e1199cc8c48446b4e2c"
+    },
+    {
+      "script": "audits/palette-arithmetic/lost_only_one_bit.py",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "exact vector class fiber",
+      "stderr_sha256": "1c8fd4eeb9832695e5d306bfd947aaf129032346c7c88e1199cc8c48446b4e2c"
+    },
+    {
+      "script": "audits/palette-arithmetic/wrong_completion_census.py",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "exact-cover STS census",
+      "stderr_sha256": "80afbf331fa473cdfb87e919342292039242e1c1c85be5df590f9a80c339b7a8"
+    },
+    {
+      "script": "audits/palette-arithmetic/wrong_completion_census.py",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "exact-cover STS census",
+      "stderr_sha256": "80afbf331fa473cdfb87e919342292039242e1c1c85be5df590f9a80c339b7a8"
+    },
+    {
+      "script": "audits/lattice/audit.py, deliberate in-memory expected-value mutation",
+      "mode": "normal",
+      "returncode": 1,
+      "expected_error": "exact cell distance",
+      "stderr_sha256": "0c137456a2e3de93d89e5f71cdff262d17595307bc39112f2e1e7d176fbc9a52"
+    },
+    {
+      "script": "audits/lattice/audit.py, deliberate in-memory expected-value mutation",
+      "mode": "optimized",
+      "returncode": 1,
+      "expected_error": "exact cell distance",
+      "stderr_sha256": "0c137456a2e3de93d89e5f71cdff262d17595307bc39112f2e1e7d176fbc9a52"
+    }
+  ]
+}

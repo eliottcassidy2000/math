@@ -1,6 +1,10 @@
 # Hadwiger–Nelson themes inside six/seven geometry
 
-Status: second audited research checkpoint. Classical ingredients are attributed; the new contribution is an explicit comparison with the repository's marked hourglass geometry, not a literature-wide novelty claim.
+Status: final audited research package. Classical ingredients are attributed; the new contribution is an explicit comparison with the repository's marked hourglass geometry, not a literature-wide novelty claim.
+
+[Integrated synthesis](SYNTHESIS.md) · [Recovered dense-flower/rotation hostile](dense-flower/DENSE_FLOWER_CONTROL.md) · [Incoming geometric continuation](incoming/INCOMING_CUBE.md)
+
+![The marked lattice-to-surface correspondence](figures/six-seven-hn-map.svg)
 
 ## Main connection
 

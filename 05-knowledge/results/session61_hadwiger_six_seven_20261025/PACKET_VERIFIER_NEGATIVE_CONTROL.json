@@ -1,0 +1,19 @@
+{
+  "scope": "Separate scratch copy with intentionally corrupted README; published bytes untouched",
+  "runs": [
+    {
+      "mode": "normal",
+      "returncode": 1,
+      "corrupted_file": "README.md",
+      "byte_mismatch_rejected": true,
+      "stderr_sha256": "694991b91fc2f73687b85261357509fed506cc828b5a8cb70abcc7e1436d80c4"
+    },
+    {
+      "mode": "optimized",
+      "returncode": 1,
+      "corrupted_file": "README.md",
+      "byte_mismatch_rejected": true,
+      "stderr_sha256": "694991b91fc2f73687b85261357509fed506cc828b5a8cb70abcc7e1436d80c4"
+    }
+  ]
+}

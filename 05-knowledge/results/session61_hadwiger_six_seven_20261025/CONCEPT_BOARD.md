@@ -1,29 +1,26 @@
-# Session 61: inherited Hadwiger--Nelson themes in six/seven geometry
+# Session 61: final Hadwiger–Nelson / six-seven comparison board
 
-Status: research board. Items below are questions and typed comparison lanes, not unaudited theorem claims.
+Status: final audited links and explicit non-implications. The user anchor was to merge earlier Hadwiger–Nelson themes into the investigation of six and seven, using maps rather than numerical resemblance.
 
-User anchor: merge the repository's earlier Hadwiger--Nelson work into the investigation of six and seven. A matching integer is not a bridge: each proposed connection owes an explicit map, preserved predicate, loss ledger, sidecar and decisive test.
+## Portfolio and six live concepts
 
-## Portfolio
+| Lane / object | Preserved mechanism and result | Lost coordinate / stopping boundary |
+|---|---|---|
+| Anchor: dual A2 flower and primal Voronoi cell | Explicit Eisenstein coordinates, two norm-seven ideals, exact strict cell separation, classical seven-colouring | Projective labels alone lose metric and boundary ownership; primal E=0 is infinity |
+| Anchor: quotient triangular two-cells | Torus faces give two Fano systems per chirality, selecting the special four-code Campedelli orbit | A graph covering can raise chromatic number; quotient K7 is not a unit K7 in the plane |
+| Niche: positive lattice norm layers | Rational-Gram forcing and ramified-prime reduction give periodic at-most-three colourings; old proof repaired | Keep components/denominators; rank-two discrete lattice is not arbitrary finite-rank field data |
+| Wildcard: paired palettes and deck gluing | Fifteen matchings/Lagrangians/pencils; completion bit; hidden H1 kernel of dimension twice the cycle rank | Scalar parity and pairwise boundary shadows discard genuine global constraints |
+| Wildcard: canonical-character observations | The specified pairwise sign marginals collapse all thirty kernels; cubic correlations recover incidence | The preserved observer family is part of the theorem; no unrestricted tomography claim |
+| Arithmetic / geometric reflection | Conjugation-fixed-prime criterion, CM split/inert comparison, dense 21-point/57-edge three-colour hostile | Rational twists, prime identity and actual unit realizability remain essential; method bounds are not target chromatic values |
 
-- **Anchor:** actual hourglass dual A2 hexagon, Eisenstein norm-seven quotient, and the classical seven-colour construction; preserve the Euclidean metric sidecar rather than only projective incidence.
-- **Niche:** audit the all-rank-two lattice three-colour mechanism, including imaginary-quadratic ramification and the precise scope of earlier claims.
-- **Wildcard:** ternary palette plus binary lift versus sign-cube/Fano quotient data; test the cohomological compatibility instead of equating small numbers.
+## Inheritance and corrections
 
-## Five live concepts
+Closest mechanisms were Session 60's marked root/deck geometry, the earlier fixed-ternary parity compiler, and the corrected residue-colouring lemma. Canonical hostiles were the three-colourable triangular graph with seven-colour quotient, irrational rhombus, non-similar mod-three restriction, and incompatible global seams. The least-used sidecars—metric, chirality, higher correlations, component origin and prime conjugation—produce the successful comparisons.
 
-| Object / representation | Question / operation | Coordinate at risk | Cheapest decisive test |
-|---|---|---|---|
-| Hourglass branch arrangement / dual A2 hexagon | Identify an actual Euclidean lattice map | Metric and scale are lost under projective equivalence | Exact Gram matrix and squared-distance identities |
-| Eisenstein lattice / norm-seven quotient | Recover the seven-colour periodic pattern | Centre colours alone do not establish cell separation | Exact nearest same-colour cell distance, including boundary ownership |
-| Rank-two additive lattice / unit-distance graph | Audit three-colourability and field reduction | Arbitrary rank-two spans need not be an integral ring | Full lattice/field case split plus hostile controls |
-| Ternary palette plus bit / cocycles | Test six-colour lift constraints | A local bit choice may fail global compatibility | Explicit cocycle and gauge tests on cycles |
-| Sign cube / Fano quotient / CM reflection | Compare arithmetic and geometric symmetries | Binary incidence does not retain Euclidean distances | Explicit action and a counterexample to untyped transfer |
+The old centred-hexagon “IS Fano” claim is repaired positively by retaining quotient triangular faces; its raw output remains unchanged. THM-419 now routes to a full proof while its flawed historical argument and census labels are explicitly superseded. Incoming canonical-balance/Gale and binary-Cayley/cube geometry were retained and their pinned checkers replayed without broadening this session into unrelated work.
 
-## Inheritance and evidence policy
+## Final boundary
 
-Closest inherited mechanism: Session 60's explicitly marked six-plus-one dual geometry and its warning that projective, binary and metric structures differ. Hostile examples and repaired near misses must be supplied by the recovery/audit lanes before promotion. The metric and arithmetic sidecars are deliberately retained.
+The external September 2026 six-colour lower bound is CITED; no local Lean build or transitive axiom audit is claimed. The plane six-versus-seven choice, new unit-distance equality gadgets, integer-square hourglasses and new Picard-rank claims remain outside these conclusions. The synthesis's next problem is a research direction, not an unfinished publication obligation.
 
-A September 23, 2026 external six-colour source and its formal-source root have been inspected by the parent. Unless a successful local build is supplied, this is **CITED**, not an independently verified formalization. Exact claims and source URLs belong in the parent's source-status note.
-
-Potential repairs to earlier Fano identification and rank-two proof text remain under audit. No correction is promoted solely by this board. Each received result must be compared against all five concepts before publication.
+Research move used: audit the quotient's loss ledger before transporting a conclusion; restore the minimal missing sidecar and test a hostile example. No new universal meta-pattern is canonized from a single session alone.
