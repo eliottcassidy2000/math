@@ -1,0 +1,107 @@
+{
+  "Fano_structures": 30,
+  "GL3_order": 168,
+  "arithmetic": {
+    "7": {
+      "disc_representative": -24,
+      "middle": -42,
+      "normalized_root_sum": "-10/7",
+      "remaining_quadratic": "T**2 + 10*T + 49",
+      "residual_polynomial": "T**4 - 4*T**3 - 42*T**2 - 196*T + 2401",
+      "trace": 4,
+      "trace_square": 100
+    },
+    "13": {
+      "disc_representative": -48,
+      "middle": -234,
+      "normalized_root_sum": "-22/13",
+      "remaining_quadratic": "T**2 + 22*T + 169",
+      "residual_polynomial": "T**4 - 4*T**3 - 234*T**2 - 676*T + 28561",
+      "trace": 4,
+      "trace_square": 484
+    }
+  },
+  "canonical_invariant_dimension": 4,
+  "checks": 5316,
+  "counts": {
+    "7": [
+      {
+        "N": 180,
+        "S": 4,
+        "n": 1,
+        "norm_nonresidue": null,
+        "p": 7,
+        "q": 7
+      },
+      {
+        "N": 3384,
+        "S": 100,
+        "n": 2,
+        "norm_nonresidue": 3,
+        "p": 7,
+        "q": 49
+      }
+    ],
+    "13": [
+      {
+        "N": 408,
+        "S": 4,
+        "n": 1,
+        "norm_nonresidue": null,
+        "p": 13,
+        "q": 13
+      },
+      {
+        "N": 32088,
+        "S": 484,
+        "n": 2,
+        "norm_nonresidue": 2,
+        "p": 13,
+        "q": 169
+      }
+    ]
+  },
+  "doubling_v2": [
+    -2,
+    -4,
+    -6,
+    -8,
+    -10
+  ],
+  "eighteen_class_determinant": -16384,
+  "fiber_valuations": [
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      2
+    ],
+    [
+      2,
+      3,
+      6
+    ],
+    [
+      2,
+      4,
+      6
+    ],
+    [
+      2,
+      3,
+      8
+    ]
+  ],
+  "hourglass_picard_rank": 58,
+  "involution_fixed_census": {
+    "3": 21
+  },
+  "outer_picard_rank": 19,
+  "reflection_kernel_pairs": 15,
+  "scope": "Finite arithmetic checks plus geometric and primary-source proof in AUDIT.md, not machine-verified cohomology.",
+  "status": "PASS"
+}

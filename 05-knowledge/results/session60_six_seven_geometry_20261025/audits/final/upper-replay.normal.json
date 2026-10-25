@@ -1,0 +1,363 @@
+{
+  "branch_lines": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      -1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ]
+  ],
+  "field_counts": {
+    "11": [
+      {
+        "affine_character_histogram": {
+          "-1": 30,
+          "0": 47,
+          "1": 44
+        },
+        "character_sum": 14,
+        "n": 1,
+        "p": 11,
+        "q": 11,
+        "quadratic_nonresidue": null,
+        "residual18_trace": 14,
+        "resolved_points": 334,
+        "singular_points": 147
+      },
+      {
+        "affine_character_histogram": {
+          "-1": 6924,
+          "0": 597,
+          "1": 7120
+        },
+        "character_sum": 196,
+        "n": 2,
+        "p": 11,
+        "q": 121,
+        "quadratic_nonresidue": 2,
+        "residual18_trace": 196,
+        "resolved_points": 17016,
+        "singular_points": 14959
+      }
+    ],
+    "13": [
+      {
+        "affine_character_histogram": {
+          "-1": 54,
+          "0": 57,
+          "1": 58
+        },
+        "character_sum": 4,
+        "n": 1,
+        "p": 13,
+        "q": 13,
+        "quadratic_nonresidue": null,
+        "residual18_trace": 4,
+        "resolved_points": 408,
+        "singular_points": 187
+      },
+      {
+        "affine_character_histogram": {
+          "-1": 13620,
+          "0": 837,
+          "1": 14104
+        },
+        "character_sum": 484,
+        "n": 2,
+        "p": 13,
+        "q": 169,
+        "quadratic_nonresidue": 2,
+        "residual18_trace": 484,
+        "resolved_points": 32088,
+        "singular_points": 29215
+      }
+    ],
+    "5": [
+      {
+        "affine_character_histogram": {
+          "-1": 3,
+          "0": 17,
+          "1": 5
+        },
+        "character_sum": 2,
+        "n": 1,
+        "p": 5,
+        "q": 5,
+        "quadratic_nonresidue": null,
+        "residual18_trace": 2,
+        "resolved_points": 118,
+        "singular_points": 33
+      },
+      {
+        "affine_character_histogram": {
+          "-1": 252,
+          "0": 117,
+          "1": 256
+        },
+        "character_sum": 4,
+        "n": 2,
+        "p": 5,
+        "q": 25,
+        "quadratic_nonresidue": 2,
+        "residual18_trace": 4,
+        "resolved_points": 1080,
+        "singular_points": 655
+      }
+    ],
+    "7": [
+      {
+        "affine_character_histogram": {
+          "-1": 9,
+          "0": 27,
+          "1": 13
+        },
+        "character_sum": 4,
+        "n": 1,
+        "p": 7,
+        "q": 7,
+        "quadratic_nonresidue": null,
+        "residual18_trace": 4,
+        "resolved_points": 180,
+        "singular_points": 61
+      },
+      {
+        "affine_character_histogram": {
+          "-1": 1032,
+          "0": 237,
+          "1": 1132
+        },
+        "character_sum": 100,
+        "n": 2,
+        "p": 7,
+        "q": 49,
+        "quadratic_nonresidue": 3,
+        "residual18_trace": 100,
+        "resolved_points": 3384,
+        "singular_points": 2551
+      }
+    ]
+  },
+  "incidences": [
+    {
+      "lines": [
+        0,
+        1,
+        2
+      ],
+      "point": [
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    {
+      "lines": [
+        0,
+        5
+      ],
+      "point": [
+        "0",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "lines": [
+        0,
+        3,
+        4
+      ],
+      "point": [
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "lines": [
+        3,
+        5
+      ],
+      "point": [
+        "1",
+        "-2",
+        "1"
+      ]
+    },
+    {
+      "lines": [
+        2,
+        4
+      ],
+      "point": [
+        "1",
+        "-1",
+        "-1"
+      ]
+    },
+    {
+      "lines": [
+        2,
+        5
+      ],
+      "point": [
+        "1",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "lines": [
+        2,
+        3
+      ],
+      "point": [
+        "1",
+        "-1",
+        "1"
+      ]
+    },
+    {
+      "lines": [
+        4,
+        5
+      ],
+      "point": [
+        "1",
+        "0",
+        "-1"
+      ]
+    },
+    {
+      "lines": [
+        1,
+        5
+      ],
+      "point": [
+        "1",
+        "1",
+        "-2"
+      ]
+    },
+    {
+      "lines": [
+        1,
+        4
+      ],
+      "point": [
+        "1",
+        "1",
+        "-1"
+      ]
+    },
+    {
+      "lines": [
+        1,
+        3
+      ],
+      "point": [
+        "1",
+        "1",
+        "1"
+      ]
+    }
+  ],
+  "intersection_multiplicities": {
+    "2": 9,
+    "3": 2
+  },
+  "residual_polynomials": {
+    "11": {
+      "middle_coefficient": 0,
+      "positive_reciprocal_coefficients": [
+        1,
+        -14,
+        0,
+        -1694,
+        14641
+      ],
+      "positive_reciprocity_forced": false,
+      "trace": 14,
+      "trace_square": 196
+    },
+    "13": {
+      "artin_tate_discriminant_squareclass_representative": -48,
+      "factorization": "(T-13)^2*(T^2+22*T+169)",
+      "middle_coefficient": -234,
+      "normalized_root_sum": "-22/13",
+      "positive_reciprocal_coefficients": [
+        1,
+        -4,
+        -234,
+        -676,
+        28561
+      ],
+      "positive_reciprocity_forced": true,
+      "quadratic_root_sum": -22,
+      "trace": 4,
+      "trace_square": 484
+    },
+    "5": {
+      "middle_coefficient": 0,
+      "positive_reciprocal_coefficients": [
+        1,
+        -2,
+        0,
+        -50,
+        625
+      ],
+      "positive_reciprocity_forced": false,
+      "trace": 2,
+      "trace_square": 4
+    },
+    "7": {
+      "artin_tate_discriminant_squareclass_representative": -24,
+      "factorization": "(T-7)^2*(T^2+10*T+49)",
+      "middle_coefficient": -42,
+      "normalized_root_sum": "-10/7",
+      "positive_reciprocal_coefficients": [
+        1,
+        -4,
+        -42,
+        -196,
+        2401
+      ],
+      "positive_reciprocity_forced": true,
+      "quadratic_root_sum": -10,
+      "trace": 4,
+      "trace_square": 100
+    }
+  },
+  "three_line_determinants": [
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ]
+}

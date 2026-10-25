@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="720" viewBox="0 0 1300 720">
+<rect width="1300" height="720" fill="#101827"/>
+<g font-family="sans-serif">
+<text x="45" y="47" fill="#f8fafc" font-size="28" font-weight="bold">Six and seven: maps, characters, and surface quotients</text>
+<text x="45" y="78" fill="#b8c7db" font-size="17">Specified complex hourglass geometry. Picard ranks are geometric; classical ingredients are attributed in the proofs.</text>
+<rect x="390" y="110" width="520" height="105" rx="13" fill="#243a54" stroke="#7dd3fc"/>
+<text x="650" y="148" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="bold">Seven-root hourglass resolution</text>
+<text x="650" y="185" text-anchor="middle" fill="#bae6fd" font-size="22">p_g = 7  |  K² = 16  |  Picard rank = 58</text>
+<path d="M490 215 L305 270 M810 215 L995 270" stroke="#7dd3fc" fill="none" stroke-width="2"/>
+<g fill="#192b40" stroke="#3b5878"><rect x="45" y="270" width="540" height="185" rx="12"/><rect x="625" y="270" width="630" height="185" rx="12"/></g>
+<text x="70" y="306" fill="#7dd3fc" font-size="21" font-weight="bold">Seven coordinate K3 quotients</text>
+<text x="70" y="342" fill="#f8fafc" font-size="19">1 central Kummer K3: Picard rank 20</text>
+<text x="70" y="375" fill="#f8fafc" font-size="19">6 equivalent outer K3s: Picard rank 19</text>
+<text x="70" y="415" fill="#b8c7db" font-size="17">Seven size-six sign characters separate the two-forms.</text>
+<text x="650" y="306" fill="#7dd3fc" font-size="21" font-weight="bold">30 rank-three Fano-code quotients</text>
+<text x="650" y="342" fill="#f8fafc" font-size="19">16 Campedelli choices → 2 isomorphism classes</text>
+<text x="650" y="375" fill="#f8fafc" font-size="19">12 properly elliptic choices; 2 Enriques choices</text>
+<text x="650" y="415" fill="#b8c7db" font-size="17">The extra Fano marking is not the branch-line matroid.</text>
+<rect x="45" y="490" width="1210" height="150" rx="12" fill="#203330" stroke="#4d8278"/>
+<text x="70" y="527" fill="#99f6e4" font-size="21" font-weight="bold">The same six-label characters also reach genus-two curves</text>
+<text x="70" y="562" fill="#f8fafc" font-size="19">Generic base-line section: genus 49; Jacobian isogenous to 35 elliptic factors and 7 genus-two factors.</text>
+<text x="70" y="597" fill="#c7ded9" font-size="17">Marked Fano pairings give seven Richelot kernels. This curve is a 2H-section, not a surface quotient.</text>
+<text x="45" y="685" fill="#fdba74" font-size="17">These are structural correspondences, not a proof of an integer square hourglass or a magic square of distinct squares.</text>
+</g></svg>

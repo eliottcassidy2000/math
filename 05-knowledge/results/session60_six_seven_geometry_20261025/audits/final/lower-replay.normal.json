@@ -1,0 +1,104 @@
+{
+  "checks": 87,
+  "fibers": [
+    {
+      "fiber": "I2",
+      "place": 0,
+      "root_rank": 1,
+      "valuations": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "fiber": "I2",
+      "place": -2,
+      "root_rank": 1,
+      "valuations": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "fiber": "I0*",
+      "place": 1,
+      "root_rank": 4,
+      "valuations": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "fiber": "I0*",
+      "place": -1,
+      "root_rank": 4,
+      "valuations": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "fiber": "I2*",
+      "place": "infinity",
+      "root_rank": 6,
+      "valuations": [
+        2,
+        3,
+        8
+      ]
+    }
+  ],
+  "lower_bound_snapshot_hourglass_possibilities": [
+    58,
+    64
+  ],
+  "lower_bound_snapshot_outer_possibilities": [
+    19,
+    20
+  ],
+  "proved_outer_picard_lower_bound": 19,
+  "scope": "Algebra certificate plus cited/inherited geometry; no exact-rank upper bound claimed by this script.",
+  "specialization": {
+    "curve": "Y^2=u^3-36u",
+    "double": [
+      "25/4",
+      "-35/8"
+    ],
+    "doubling_valuation_controls": [
+      {
+        "exponent": 1,
+        "v2_x": -2
+      },
+      {
+        "exponent": 2,
+        "v2_x": -4
+      },
+      {
+        "exponent": 3,
+        "v2_x": -6
+      },
+      {
+        "exponent": 4,
+        "v2_x": -8
+      },
+      {
+        "exponent": 5,
+        "v2_x": -10
+      },
+      {
+        "exponent": 6,
+        "v2_x": -12
+      }
+    ],
+    "point": [
+      "-3",
+      "9"
+    ]
+  },
+  "status": "PASS",
+  "trivial_lattice_rank": 18
+}

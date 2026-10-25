@@ -1,0 +1,45 @@
+{
+  "checked_date": "2026-10-25",
+  "inherited_inputs": [
+    {
+      "read_path": "/tmp/session60-deck-k3/HODGE_DECOMPOSITION.md",
+      "sha256": "c26f73fa83a8179b8f6092b91a03d63ee4978c397ffe736b18142fa113f37783"
+    },
+    {
+      "read_path": "/tmp/session60-deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "sha256": "4ae02991c6620125ee0468d1c1694bc93d5489291d189e13a54465bf0d4c60dc"
+    },
+    {
+      "read_path": "/tmp/session60-hourglass-symmetries/RESULT.md",
+      "sha256": "8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160"
+    },
+    {
+      "read_path": "/tmp/math-wt-session60-publication/05-knowledge/results/session57_square_sum_magic_paths_20261025/congruent-curve/PROOF.md",
+      "sha256": "714f6312e2fc376a2615e364573e46d87d5004a1a31a92ef7edfed81e5ba4944"
+    }
+  ],
+  "primary_inputs": [
+    {
+      "authors": "Matthias Schuett, Tetsuji Shioda",
+      "title": "Elliptic Surfaces",
+      "url": "https://arxiv.org/pdf/0907.0298",
+      "locations": [
+        "Section 4.5, Table 1, printed page 14",
+        "Proposition 6.6, printed page 24",
+        "Corollary 6.13, printed page 29"
+      ],
+      "imported": "Kodaira valuation classification, trivial lattice and Shioda-Tate formula",
+      "status": "CITED and inspected"
+    },
+    {
+      "authors": "Alice Garbagnati, Alessandra Sarti",
+      "title": "Kummer surfaces and K3 surfaces with (Z/2Z)^4 symplectic action",
+      "url": "https://sarti.pages.math.cnrs.fr/home/GarbagnatiSarti_RMJ.pdf",
+      "locations": [
+        "Section 10.2, printed pages 54-55"
+      ],
+      "imported": "Diagonal-three-quadric model and even-sign six-line double-plane quotient; nodal specializations and T-transfer are independently handled by inherited packet",
+      "status": "CITED and inspected"
+    }
+  ]
+}

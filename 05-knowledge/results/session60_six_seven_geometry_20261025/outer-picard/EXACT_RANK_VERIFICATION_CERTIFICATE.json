@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "frozen_on": "2026-10-25",
+  "conclusions": {
+    "outer_geometric_picard_rank": 19,
+    "hourglass_geometric_picard_rank": 58,
+    "outer_transcendental_rank": 3,
+    "hourglass_transcendental_rank": 20,
+    "elliptic_mordell_weil_rank_over_Ct": 1,
+    "elliptic_mordell_weil_rank_over_Qt": 1,
+    "deletion_K3_complex_isomorphism_classes": 2
+  },
+  "primitive_section_claim": false,
+  "parent_reported_final_audit": "PASS before freeze, 2026-10-25 16:43 UTC",
+  "upper_source_files": [
+    {
+      "read_path": "/tmp/session60-picard-upper/INDEPENDENT_UPPER_BOUND.md",
+      "sha256": "1a95bf5984509e9f7a1c0f5b6801ee219e0482672c953aaac645782d2870ed6c"
+    },
+    {
+      "read_path": "/tmp/session60-picard-upper/check_counts.py",
+      "sha256": "c9967fec78bc1cb91589ee7161bd5c488b5fd9d0827f741d4fdf39548b467930"
+    },
+    {
+      "read_path": "/tmp/session60-picard-upper/results.json",
+      "sha256": "262bb362c6fb2bedeeff9eba6c870692e987e13a38ab72ee7ed9d22818675acf"
+    },
+    {
+      "read_path": "/tmp/session60-picard-upper/results-optimized.json",
+      "sha256": "262bb362c6fb2bedeeff9eba6c870692e987e13a38ab72ee7ed9d22818675acf"
+    }
+  ],
+  "blockers": [],
+  "owned_changes_only": "/tmp/session60-outer-picard; no Git operations"
+}

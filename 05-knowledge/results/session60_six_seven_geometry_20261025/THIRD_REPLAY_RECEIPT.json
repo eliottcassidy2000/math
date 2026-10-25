@@ -1,0 +1,125 @@
+{
+  "scope": "Actual executions in separate frozen packet copies; generated file bytes match frozen publication sources in both modes",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scripts": 4,
+  "runs": [
+    {
+      "script": "picard-upper/check_counts.py",
+      "script_sha256": "c9967fec78bc1cb91589ee7161bd5c488b5fd9d0827f741d4fdf39548b467930",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check_counts.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.095,
+      "stdout_sha256": "262bb362c6fb2bedeeff9eba6c870692e987e13a38ab72ee7ed9d22818675acf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "outer-picard/check_lower_bound.py",
+      "script_sha256": "2dd732acef515949f239e895ddef98e4cc3c152810a23223821f77c97486935e",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check_lower_bound.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.409,
+      "stdout_sha256": "9004071574dae0907ef7861ec3a139ade46a5ba45eb68295417380433369eaad",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "reflection/check.py",
+      "script_sha256": "2ed8a09dd5443d201a14306ffeef574b050e3951ce765a807f8250830b3f8f75",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.019,
+      "stdout_sha256": "51cd83ccc2df8dab7d6290ec2927ae9a9c7b721cf13ca5728ccaecbb6f65dc20",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/final/independent_check.py",
+      "script_sha256": "8b44ece0b73b612def77a8f211222db7dc95ce07a33cab2784539593e614918b",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "independent_check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.536,
+      "stdout_sha256": "a135f0987f53960cf24529e9c6b8a118feeeb732ac7a3ccb326c0af9530d02f3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "picard-upper/check_counts.py",
+      "script_sha256": "c9967fec78bc1cb91589ee7161bd5c488b5fd9d0827f741d4fdf39548b467930",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check_counts.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.165,
+      "stdout_sha256": "262bb362c6fb2bedeeff9eba6c870692e987e13a38ab72ee7ed9d22818675acf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "outer-picard/check_lower_bound.py",
+      "script_sha256": "2dd732acef515949f239e895ddef98e4cc3c152810a23223821f77c97486935e",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check_lower_bound.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.664,
+      "stdout_sha256": "9004071574dae0907ef7861ec3a139ade46a5ba45eb68295417380433369eaad",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "reflection/check.py",
+      "script_sha256": "2ed8a09dd5443d201a14306ffeef574b050e3951ce765a807f8250830b3f8f75",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.046,
+      "stdout_sha256": "51cd83ccc2df8dab7d6290ec2927ae9a9c7b721cf13ca5728ccaecbb6f65dc20",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/final/independent_check.py",
+      "script_sha256": "8b44ece0b73b612def77a8f211222db7dc95ce07a33cab2784539593e614918b",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "independent_check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.953,
+      "stdout_sha256": "a135f0987f53960cf24529e9c6b8a118feeeb732ac7a3ccb326c0af9530d02f3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_file_count": 120,
+  "source_byte_integrity": "PASS"
+}

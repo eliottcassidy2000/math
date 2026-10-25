@@ -30,7 +30,7 @@ The six outer branch lines are tangent to a conic. Their branch parameters are {
 
 The double-plane quotient is therefore a Kummer surface of Picard rank20. An explicit Gale transform separately identifies the original central six-root K3 with the classical diagonal Kummer model; this is not inferred merely from having a finite map to a Kummer surface. The rational Shioda equation contains a factor27, so the complex identification must not be silently promoted to an untwisted Q-isomorphism.
 
-The other six K3 quotients share one Picard rank rho_outer, presently bounded18≤rho_outer≤20. Hence rho(Y7)=6rho_outer−56 is one of52,58,64. Determining which is a genuine remaining problem, not supplied by the matching numbers6 and7.
+At the first checkpoint, the other six K3 quotients shared one Picard rank with the valid bound18≤rho_outer≤20, giving the alternatives52,58,64 for rho(Y7)=6rho_outer−56. The independently audited third-checkpoint argument in §7 now proves rho_outer=19 and rho(Y7)=58; the former remaining question is closed.
 
 ## 5. Thirty Fano-code choices produce three different kinds of surface
 
@@ -51,6 +51,34 @@ A base-line pullback is a2H-section of the root surface, not a coordinate H-sect
 The old marked six-point Fano pairing supplies an actual maximal isotropic subgroup of genus-two two-torsion, hence a Richelot correspondence. An explicit transverse slice of the hourglass gives seven nonsingular genus-two targets. The pants cuff/seam model describes the same two-torsion vector space: cuff restriction forgets exactly four classes, and the seam data restore them.
 
 These are marked constructions. An explicit Möbius obstruction shows why the Paley label permutation must not be mistaken for an automorphism of the fixed displayed curve. The Richelot target equations are asserted over C; unverified rational twists are not silently discarded.
+
+## 7. The remaining Picard-rank choice is resolved
+
+The six equivalent outer K3 surfaces have geometric Picard rank EXACTLY19. Therefore the hourglass resolution has geometric Picard rank58, and its rational transcendental Hodge structure has rank20: one rank-two central Kummer contribution and six rank-three outer contributions. This sharpens the valid first-checkpoint alternatives52,58,64 to58. Unequal Picard ranks also prove that the central and outer K3s are not isomorphic: the seven quotients form exactly two complex isomorphism classes, with multiplicities1 and6.
+
+The lower bound is constructive. A symplectic quotient of the outer K3 has elliptic model
+
+Y²=(X−d)(X+d)(X−d(t+1)),  d=1−t²,
+
+with fibers I₂,I₂,I₀*,I₀*,I₂*. Their trivial lattice has rank18. The rational section P=(dt,d²) is not torsion, giving rank at least19. At t=2, translating X by3 gives the congruent-number curve Y²=u³−36u, and P specializes to(−3,9). An elementary2-adic doubling argument proves non-torsion. The standard triangle map gives the3–4–5 triangle of area6 and, after the appropriate doubling/scaling, the square AP(1,25,49), with central square value25, center root5, and gap24. This is a concrete elliptic correspondence, not a deduction from matching sixes.
+
+The upper bound is independent arithmetic geometry. Exact counts over F₇,F₄₉ are180,3384; over F₁₃,F₁₆₉ they are408,32088. The smooth reductions have18 explicit rational branch-resolution divisor classes. Point counts and functional-equation constraints determine the remaining Frobenius factors. Both reductions have geometric Picard rank20, but their Néron–Severi discriminant square classes are−6 and−3. The verified Tate/Artin–Tate and specialization argument excludes rank20 in characteristic zero. Thus the lower bound is sharp.
+
+Shioda–Tate then gives Mordell–Weil rank1 over both C(t) and Q(t). The displayed section is non-torsion; it is NOT claimed to generate the full group or be primitive. Neither a CM conclusion for the whole outer K3 nor a new integer-square hourglass follows from the special area-six fiber.
+
+## 8. The incoming Boolean seven has a genuine geometric reflection—but no fixed Fano descent
+
+A concurrent repository result constructs modified complement on the Boolean seven obtained by contracting the empty/full boundary pair. Its cycle type is1·2³. An explicit marking identifies this permutation with the actual hourglass symmetry(E,x,z)↦(E,−x,−z): the central branch is fixed and the three outer opposite pairs are exchanged.
+
+This is a real geometric lift, but no Fano incidence on those seven labels can be preserved. Every nonidentity involution in GL(3,F₂) fixes three nonzero vectors, while this reflection fixes only one. It therefore pairs the thirty Fano kernels without fixing any. It gives isomorphisms between quotient surfaces with exchanged kernels, not an automorphism descended through a fixed marked kernel.
+
+Its determinant-twisted canonical action has invariant dimension4, different from the1,3,5 possibilities for deck involutions. The quotient resolution has geometric genus4; no full birational classification of that new quotient is asserted.
+
+## Final boundaries
+
+This session obtains structural bridges through adjunction, deck characters, binary codes, quotient geometry, conic/Jacobian maps, and arithmetic specialization. Numerical coincidences that do not preserve these objects remain rejected. Classical Kummer, Campedelli and Richelot ingredients are attributed; no literature-wide novelty claim is made.
+
+The new exact Picard ranks close the uncertainty recorded at the first checkpoint. Future questions include the precise transcendental lattices and integral correspondence indices, arithmetic twists of selected quotient models, and actual integer gap addition. These are future directions, not automatically active work. No integer magic-square-of-distinct-squares existence/nonexistence result, RH theorem, or full tournament-path theorem is claimed.
 
 ## Scope
 

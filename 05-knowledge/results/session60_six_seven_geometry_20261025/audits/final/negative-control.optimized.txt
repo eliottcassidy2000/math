@@ -1,0 +1,6 @@
+Intentional mutation: expected #Z(F_7)=181 instead of 180.
+Return code: 1
+Traceback (most recent call last):
+  File "<string>", line 76, in <module>
+  File "<string>", line 15, in req
+RuntimeError: independent point counts

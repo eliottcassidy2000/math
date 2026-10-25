@@ -1,0 +1,145 @@
+{
+  "scope": "Current relative links plus explicitly located original-source archival routes",
+  "routes": [
+    {
+      "source": "README.md",
+      "target": "thresholds/ROOT_THRESHOLDS.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "deck-k3/HODGE_DECOMPOSITION.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "hourglass-symmetry/RESULT.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "deck-k3/KUMMER_GALE_BRIDGE.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "seven-lines/RESULT.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "recovered-bridges/THEOREM.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "picard-upper/INDEPENDENT_UPPER_BOUND.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "reflection/BOOLEAN_REFLECTION.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "figures/six_seven_map.svg",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "CONCEPT_BOARD.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "SYNTHESIS.md",
+      "kind": "local"
+    },
+    {
+      "source": "README.md",
+      "target": "PUBLICATION_CHECKS.md",
+      "kind": "local"
+    },
+    {
+      "source": "outer-picard/README.md",
+      "target": "EXACT_RANK_COROLLARY.md",
+      "kind": "local"
+    },
+    {
+      "source": "outer-picard/README.md",
+      "target": "LOWER_BOUND.md",
+      "kind": "local"
+    },
+    {
+      "source": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "target": "LOWER_BOUND.md",
+      "kind": "local"
+    },
+    {
+      "source": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "target": "../picard-upper/INDEPENDENT_UPPER_BOUND.md",
+      "kind": "local"
+    },
+    {
+      "source": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "target": "../audits/final/AUDIT.md",
+      "kind": "local"
+    },
+    {
+      "source": "deck-k3/LATER_RESULTS.md",
+      "target": "../outer-picard/EXACT_RANK_COROLLARY.md",
+      "kind": "local"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../trijection_reset_20261020/arithmetic.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../FRAGMENT-DECODE-mu3-depth2-tree-klein-S691.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../../../01-canon/MISTAKES.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../../../01-canon/theorems/THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../session58_hourglass_complement_geometry_20261025/hourglasses/THEOREM.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "../session59_f1_geometry_and_information_20261025/cyclotomic-support/CYCLOTOMIC_SUPPORT_DYNAMICS.md",
+      "kind": "archival-at-source-commit"
+    },
+    {
+      "source": "audits/final/incoming-seven.at-82691d39.md",
+      "target": "seven_check.json",
+      "kind": "archival-at-source-commit"
+    }
+  ]
+}

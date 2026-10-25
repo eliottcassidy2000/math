@@ -1,0 +1,19 @@
+{
+  "script": "audits/final/independent_check.py",
+  "mutation": "Change expected F7 count180 to181; actual counts untouched",
+  "expected_outcome": "deliberate failure",
+  "runs": [
+    {
+      "mode": "normal",
+      "returncode": 1,
+      "wrong_F7_count_rejected": true,
+      "stderr_sha256": "ea35cb28725251eab1865e3bfab766e78a5ca58dd16b6e07abb81a09f854b59b"
+    },
+    {
+      "mode": "optimized",
+      "returncode": 1,
+      "wrong_F7_count_rejected": true,
+      "stderr_sha256": "ea35cb28725251eab1865e3bfab766e78a5ca58dd16b6e07abb81a09f854b59b"
+    }
+  ]
+}

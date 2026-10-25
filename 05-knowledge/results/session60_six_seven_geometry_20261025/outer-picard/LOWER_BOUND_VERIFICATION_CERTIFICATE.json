@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "claim": "The outer six-root K3 has geometric Picard number at least 19; the inherited hourglass identity leaves ranks 58 or 64 in this lower-bound snapshot.",
+  "scope": [
+    "Characteristic zero / complex geometric Picard ranks",
+    "Explicit elliptic model and section arithmetic exact",
+    "Kodaira and Shioda-Tate cited",
+    "Rational Hodge quotient transfer inherited",
+    "No exact-rank upper bound in this snapshot",
+    "No global K3 CM conclusion from the j=1728 fiber",
+    "No square-center AP or magic-square solution inferred"
+  ],
+  "commands": [
+    "python3 check_lower_bound.py",
+    "python3 -O check_lower_bound.py",
+    "cmp lower_check_output.txt lower_optimized_output.txt"
+  ],
+  "explicit_checks": 87,
+  "optimized_check_uses_assert": false,
+  "hostile_controls": [
+    "Wrong sign X=+dz fails birational identity",
+    "Replacing section Y=d^2 by Y=d fails membership",
+    "Infinity is included, not dropped",
+    "Torsion claim disproved by unbounded doubling denominator valuations, not finite point sampling"
+  ],
+  "blockers": [],
+  "separate_investigation": "probe_counts.py is an exploratory upper-bound probe and is NOT part of this lower-bound proof certificate."
+}

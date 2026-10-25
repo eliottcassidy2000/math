@@ -1,0 +1,26 @@
+{
+  "scope": "Explicit lower-bound and incoming-reflection source pins",
+  "files": [
+    {
+      "capture_path": "/tmp/session60-deck-k3/HODGE_DECOMPOSITION.md",
+      "sha256": "c26f73fa83a8179b8f6092b91a03d63ee4978c397ffe736b18142fa113f37783"
+    },
+    {
+      "capture_path": "/tmp/session60-deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "sha256": "4ae02991c6620125ee0468d1c1694bc93d5489291d189e13a54465bf0d4c60dc"
+    },
+    {
+      "capture_path": "/tmp/session60-hourglass-symmetries/RESULT.md",
+      "sha256": "8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160"
+    },
+    {
+      "capture_path": "/tmp/math-wt-session60-publication/05-knowledge/results/session57_square_sum_magic_paths_20261025/congruent-curve/PROOF.md",
+      "sha256": "714f6312e2fc376a2615e364573e46d87d5004a1a31a92ef7edfed81e5ba4944"
+    },
+    {
+      "path": "05-knowledge/results/reflection_bridge_20261025/seven.md",
+      "commit": "82691d391b4beef9682ef956526391bef5f91948",
+      "sha256": "93234b5f14b6f364a90a2e618dbf0a1cf77e87293e76886326be48ab86186e72"
+    }
+  ]
+}

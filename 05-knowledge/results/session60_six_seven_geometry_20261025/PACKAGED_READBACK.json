@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reviewer": "independent final rank/reflection audit lane",
+  "scope": "Readback of packaged exact-rank corollary, two K3 isomorphism classes, Mordell-Weil rank1 and portable audit paths",
+  "files": [
+    {
+      "path": "outer-picard/EXACT_RANK_COROLLARY.md",
+      "sha256": "79a990988c572f9a17ad460d0d844ac3fad7c93e213b1d6896c104d930973d53"
+    },
+    {
+      "path": "audits/final/AUDIT.md",
+      "sha256": "a06d036d9b2fbff69a199f1e38c41153f1340950f8fa7288e357f09d42125236"
+    }
+  ],
+  "boundaries": [
+    "No primitive/generator assertion",
+    "Original lower-bound and Hodge snapshots remain preserved",
+    "Only portable paths changed in audited text"
+  ]
+}
