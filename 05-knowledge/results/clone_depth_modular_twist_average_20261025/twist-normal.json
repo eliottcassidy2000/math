@@ -1,0 +1,751 @@
+{
+ "euler_stratification": {
+  "etale_sheets_times_chiU": 448,
+  "total": 80
+ },
+ "expansion_in_q_minus_1": [
+  7,
+  -4,
+  1
+ ],
+ "fields": [
+  {
+   "char": 5,
+   "hourglass": {
+    "S_six_central_deletion": 7,
+    "S_six_outer_deletions_distinct_values": [
+     3
+    ],
+    "U": 7,
+    "max_abs_S_by_size": {
+     "2": 3,
+     "4": 5,
+     "6": 7
+    },
+    "max_etale": 64,
+    "max_full": 96,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 7,
+    "parallel_pair_sums": [
+     -1,
+     -1,
+     -1
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 8,
+    "max_etale": 32,
+    "max_full": 64,
+    "min_etale": 0,
+    "min_full": 4,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 5,
+    "max_etale": 256,
+    "max_full": 320,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 5
+  },
+  {
+   "char": 7,
+   "hourglass": {
+    "S_six_central_deletion": 7,
+    "S_six_outer_deletions_distinct_values": [
+     5
+    ],
+    "U": 19,
+    "max_abs_S_by_size": {
+     "2": 7,
+     "4": 9,
+     "6": 7
+    },
+    "max_etale": 128,
+    "max_full": 160,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 7,
+    "parallel_pair_sums": [
+     7,
+     7,
+     7
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 22,
+    "max_etale": 96,
+    "max_full": 96,
+    "min_etale": 0,
+    "min_full": 32,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 13,
+    "max_etale": 512,
+    "max_full": 512,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 7
+  },
+  {
+   "char": 11,
+   "hourglass": {
+    "S_six_central_deletion": 31,
+    "S_six_outer_deletions_distinct_values": [
+     9
+    ],
+    "U": 67,
+    "max_abs_S_by_size": {
+     "2": 9,
+     "4": 13,
+     "6": 31
+    },
+    "max_etale": 448,
+    "max_full": 448,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 7,
+    "parallel_pair_sums": [
+     7,
+     7,
+     7
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 74,
+    "max_etale": 224,
+    "max_full": 224,
+    "min_etale": 32,
+    "min_full": 64,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 53,
+    "max_etale": 1280,
+    "max_full": 1280,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 11
+  },
+  {
+   "char": 13,
+   "hourglass": {
+    "S_six_central_deletion": 19,
+    "S_six_outer_deletions_distinct_values": [
+     5
+    ],
+    "U": 103,
+    "max_abs_S_by_size": {
+     "2": 13,
+     "4": 19,
+     "6": 19
+    },
+    "max_etale": 448,
+    "max_full": 536,
+    "min_etale": 0,
+    "min_full": 72,
+    "n": 7,
+    "parallel_pair_sums": [
+     -5,
+     -5,
+     -5
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 112,
+    "max_etale": 256,
+    "max_full": 304,
+    "min_etale": 32,
+    "min_full": 88,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 85,
+    "max_etale": 1280,
+    "max_full": 1344,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 13
+  },
+  {
+   "char": 17,
+   "hourglass": {
+    "S_six_central_deletion": 19,
+    "S_six_outer_deletions_distinct_values": [
+     37
+    ],
+    "U": 199,
+    "max_abs_S_by_size": {
+     "2": 13,
+     "4": 21,
+     "6": 37
+    },
+    "max_etale": 448,
+    "max_full": 664,
+    "min_etale": 0,
+    "min_full": 120,
+    "n": 7,
+    "parallel_pair_sums": [
+     -13,
+     -13,
+     -13
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 212,
+    "max_etale": 320,
+    "max_full": 392,
+    "min_etale": 64,
+    "min_full": 188,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 173,
+    "max_etale": 1280,
+    "max_full": 1536,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 17
+  },
+  {
+   "char": 19,
+   "hourglass": {
+    "S_six_central_deletion": 43,
+    "S_six_outer_deletions_distinct_values": [
+     39
+    ],
+    "U": 259,
+    "max_abs_S_by_size": {
+     "2": 19,
+     "4": 27,
+     "6": 43
+    },
+    "max_etale": 832,
+    "max_full": 832,
+    "min_etale": 0,
+    "min_full": 96,
+    "n": 7,
+    "parallel_pair_sums": [
+     19,
+     19,
+     19
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 274,
+    "max_etale": 480,
+    "max_full": 512,
+    "min_etale": 128,
+    "min_full": 288,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 229,
+    "max_etale": 2304,
+    "max_full": 2304,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 19
+  },
+  {
+   "char": 23,
+   "hourglass": {
+    "S_six_central_deletion": 67,
+    "S_six_outer_deletions_distinct_values": [
+     7
+    ],
+    "U": 403,
+    "max_abs_S_by_size": {
+     "2": 19,
+     "4": 29,
+     "6": 67
+    },
+    "max_etale": 832,
+    "max_full": 1120,
+    "min_etale": 192,
+    "min_full": 336,
+    "n": 7,
+    "parallel_pair_sums": [
+     19,
+     19,
+     19
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 422,
+    "max_etale": 576,
+    "max_full": 728,
+    "min_etale": 224,
+    "min_full": 424,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 365,
+    "max_etale": 2304,
+    "max_full": 2944,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 23
+  },
+  {
+   "char": 29,
+   "hourglass": {
+    "S_six_central_deletion": 31,
+    "S_six_outer_deletions_distinct_values": [
+     43
+    ],
+    "U": 679,
+    "max_abs_S_by_size": {
+     "2": 27,
+     "4": 29,
+     "6": 43
+    },
+    "max_etale": 1216,
+    "max_full": 1432,
+    "min_etale": 384,
+    "min_full": 584,
+    "n": 7,
+    "parallel_pair_sums": [
+     -25,
+     -25,
+     -25
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 704,
+    "max_etale": 928,
+    "max_full": 1024,
+    "min_etale": 512,
+    "min_full": 676,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 629,
+    "max_etale": 3328,
+    "max_full": 3904,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 29
+  },
+  {
+   "char": 31,
+   "hourglass": {
+    "S_six_central_deletion": -17,
+    "S_six_outer_deletions_distinct_values": [
+     13
+    ],
+    "U": 787,
+    "max_abs_S_by_size": {
+     "2": 31,
+     "4": 39,
+     "6": 17
+    },
+    "max_etale": 1216,
+    "max_full": 1504,
+    "min_etale": 512,
+    "min_full": 768,
+    "n": 7,
+    "parallel_pair_sums": [
+     31,
+     31,
+     31
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 814,
+    "max_etale": 1120,
+    "max_full": 1152,
+    "min_etale": 640,
+    "min_full": 896,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 733,
+    "max_etale": 3328,
+    "max_full": 3456,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 31
+  },
+  {
+   "char": 37,
+   "hourglass": {
+    "S_six_central_deletion": 139,
+    "S_six_outer_deletions_distinct_values": [
+     29
+    ],
+    "U": 1159,
+    "max_abs_S_by_size": {
+     "2": 37,
+     "4": 43,
+     "6": 139
+    },
+    "max_etale": 2368,
+    "max_full": 2648,
+    "min_etale": 768,
+    "min_full": 904,
+    "n": 7,
+    "parallel_pair_sums": [
+     -29,
+     -29,
+     -29
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 1192,
+    "max_etale": 1600,
+    "max_full": 1776,
+    "min_etale": 928,
+    "min_full": 1112,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 1093,
+    "max_etale": 4352,
+    "max_full": 4928,
+    "min_etale": 0,
+    "min_full": 32,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 37
+  },
+  {
+   "char": 41,
+   "hourglass": {
+    "S_six_central_deletion": 43,
+    "S_six_outer_deletions_distinct_values": [
+     45
+    ],
+    "U": 1447,
+    "max_abs_S_by_size": {
+     "2": 37,
+     "4": 47,
+     "6": 45
+    },
+    "max_etale": 1984,
+    "max_full": 2392,
+    "min_etale": 1024,
+    "min_full": 1400,
+    "n": 7,
+    "parallel_pair_sums": [
+     -37,
+     -37,
+     -37
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 1484,
+    "max_etale": 1760,
+    "max_full": 1960,
+    "min_etale": 1088,
+    "min_full": 1468,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 1373,
+    "max_etale": 5376,
+    "max_full": 5888,
+    "min_etale": 0,
+    "min_full": 384,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 41
+  },
+  {
+   "char": 43,
+   "hourglass": {
+    "S_six_central_deletion": 19,
+    "S_six_outer_deletions_distinct_values": [
+     -1
+    ],
+    "U": 1603,
+    "max_abs_S_by_size": {
+     "2": 43,
+     "4": 43,
+     "6": 19
+    },
+    "max_etale": 2368,
+    "max_full": 2560,
+    "min_etale": 1152,
+    "min_full": 1632,
+    "n": 7,
+    "parallel_pair_sums": [
+     43,
+     43,
+     43
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 1642,
+    "max_etale": 2080,
+    "max_full": 2112,
+    "min_etale": 1376,
+    "min_full": 1760,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 1525,
+    "max_etale": 6400,
+    "max_full": 6400,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 43
+  },
+  {
+   "char": 5,
+   "hourglass": {
+    "S_six_central_deletion": 127,
+    "S_six_outer_deletions_distinct_values": [
+     -1
+    ],
+    "U": 487,
+    "max_abs_S_by_size": {
+     "2": 17,
+     "4": 31,
+     "6": 127
+    },
+    "max_etale": 832,
+    "max_full": 1400,
+    "min_etale": 128,
+    "min_full": 360,
+    "n": 7,
+    "parallel_pair_sums": [
+     -17,
+     -17,
+     -17
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 508,
+    "max_etale": 576,
+    "max_full": 880,
+    "min_etale": 192,
+    "min_full": 472,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 445,
+    "max_etale": 2304,
+    "max_full": 4096,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 25
+  },
+  {
+   "char": 7,
+   "hourglass": {
+    "S_six_central_deletion": 55,
+    "S_six_outer_deletions_distinct_values": [
+     87
+    ],
+    "U": 2119,
+    "max_abs_S_by_size": {
+     "2": 41,
+     "4": 55,
+     "6": 87
+    },
+    "max_etale": 3136,
+    "max_full": 4280,
+    "min_etale": 1408,
+    "min_full": 1704,
+    "n": 7,
+    "parallel_pair_sums": [
+     -41,
+     -41,
+     -41
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 2164,
+    "max_etale": 2368,
+    "max_full": 2992,
+    "min_etale": 1408,
+    "min_full": 2008,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 2029,
+    "max_etale": 6400,
+    "max_full": 10752,
+    "min_etale": 0,
+    "min_full": 896,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 49
+  },
+  {
+   "char": 3,
+   "hourglass": {
+    "S_six_central_deletion": 1,
+    "S_six_outer_deletions_distinct_values": [
+     1
+    ],
+    "U": 1,
+    "max_abs_S_by_size": {
+     "2": 1,
+     "4": 1,
+     "6": 1
+    },
+    "max_etale": 64,
+    "max_full": 64,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 7,
+    "parallel_pair_sums": [
+     1,
+     1,
+     1
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 1,
+    "max_etale": 32,
+    "max_full": 32,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 1,
+    "max_etale": 256,
+    "max_full": 256,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 3
+  },
+  {
+   "char": 3,
+   "hourglass": {
+    "S_six_central_deletion": 29,
+    "S_six_outer_deletions_distinct_values": [
+     -3
+    ],
+    "U": 37,
+    "max_abs_S_by_size": {
+     "2": 5,
+     "4": 13,
+     "6": 29
+    },
+    "max_etale": 128,
+    "max_full": 232,
+    "min_etale": 0,
+    "min_full": 8,
+    "n": 7,
+    "parallel_pair_sums": [
+     -3,
+     -3,
+     -3
+    ],
+    "twist_classes": 64
+   },
+   "k3six": {
+    "U": 43,
+    "max_etale": 64,
+    "max_full": 140,
+    "min_etale": 0,
+    "min_full": 60,
+    "n": 6,
+    "twist_classes": 32
+   },
+   "nine": {
+    "U": 25,
+    "max_etale": 512,
+    "max_full": 640,
+    "min_etale": 0,
+    "min_full": 0,
+    "n": 9,
+    "twist_classes": 256
+   },
+   "q": 9
+  }
+ ],
+ "seven_subsets": {
+  "chi_U": {
+   "2": 8,
+   "3": 7,
+   "4": 6,
+   "5": 5
+  },
+  "chi_equals_pg_only_for_t3": [
+   3
+  ],
+  "p_g": 7,
+  "t3_census": {
+   "2": 4,
+   "3": 18,
+   "4": 12,
+   "5": 2
+  }
+ }
+}
