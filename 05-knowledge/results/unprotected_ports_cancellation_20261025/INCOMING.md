@@ -1,6 +1,6 @@
 # Concurrent results and the resulting new deductions
 
-2026-10-25. Integrated origin/main through61a9ae6734 from a clean checkpoint.
+2026-10-25. Integrated origin/main through4bb68b9930 from clean checkpoints.
 The exact wraparound and one-toggle constructions appeared during this
 session. Their statements are now available, while the user's older-theme
 pointer also led independently to the July Hasse-coordinate bridge.
@@ -89,3 +89,25 @@ pairwise-shadow failures reinforce the need to retain a common source
 in all port tests. No metric or conic predicate is used as a tournament
 connectivity premise. The geometry lane remains an orthogonal source of
 testable quotient-loss examples, not a claimed proof transfer.
+
+## Last incoming ring and marking refinements
+
+The [universal-ring wrap theorem](../normseven_f1_20261025/INTEGRAL_WRAP.md)
+arrived at the final integration. It identifies the full incidence kernel
+as a free module plus R[D], for arbitrary coefficient rings and cyclic
+lengths coprime to three. It strengthens the incidence side beyond both
+field calculations. Its single nonunit Smith factor concerns the full
+three-direction incidence matrix; the several p factors in our difference-
+power theorem concern a different matrix. They are compatible statements,
+not competing Smith forms. Its composite examples D=4 and D=49 make the
+remaining precision obligation concrete: field rank alone loses torsion
+exponents, just as modular evaluation-node collisions cannot justify an
+integer recurrence before its divisions are controlled.
+
+The [marked-port calculation](../normseven_f1_20261025/PORTS_AND_CHARACTERS.md)
+also changes a cubic parity observation into a pair observation by an
+explicit binary shear. It preserves the whole fibre while changing the
+allowed queries. This is exactly the qualification required when comparing
+the evaluation quotient with a compressed response: transport the actual
+query family, rather than silently enlarging it in new coordinates. No
+new detour claim is imported from that arithmetic coordinate change.

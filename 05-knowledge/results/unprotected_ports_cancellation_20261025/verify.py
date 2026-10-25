@@ -29,6 +29,8 @@ INHERITED = [
     "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/normal.json",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/incidence/cyclic_common_kernel.md",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/common-action/COMMON_ACTION_BRIDGE.md",
+    "05-knowledge/results/normseven_f1_20261025/INTEGRAL_WRAP.md",
+    "05-knowledge/results/normseven_f1_20261025/PORTS_AND_CHARACTERS.md",
 ]
 
 

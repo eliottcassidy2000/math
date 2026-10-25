@@ -6,6 +6,8 @@
     "01-canon/theorems/THM-4557-doubling-a-doubly-regular-tournament-keeps-its-automorphism-group-hyp-9162.md": "d198b1a6eeb891a280529902e077b047798b75c52e1c58628c3e5fb04f38266c",
     "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
     "05-knowledge/results/black_detours_closed_blue_lines_klein_dictionary_20261020.md": "183e48d1e4e9c19b5c37c3db4b545e9bbb529c1c31b9acf2cde8411a970eeaf5",
+    "05-knowledge/results/normseven_f1_20261025/INTEGRAL_WRAP.md": "c2ebf70eb6a1e2a61bf92393b61941205545f40c82d04cf18d62690a5f0cad50",
+    "05-knowledge/results/normseven_f1_20261025/PORTS_AND_CHARACTERS.md": "88f24ff9d3e6f9a5358291ba8993b3c0872a98d6657306d9c262a8b36416bfff",
     "05-knowledge/results/ports_regular_actions_hn_20261025/counting/CLONE_INVOLUTION.md": "ad2c6678d929799da9c043a1ff14cab659f575af9b29090be9c47631a6877483",
     "05-knowledge/results/ports_regular_actions_hn_20261025/counting/EXCESS_EXTENSION.md": "7dd2960038f5b026f329d4829895f02e3dc3859538ecfe0e14672937c7cdd760",
     "05-knowledge/results/ports_regular_actions_hn_20261025/counting/README.md": "59b3e3378223c9d75400ef819721cafcd7fd0d5cb9786189f61363c7bfe1afeb",
@@ -24,7 +26,7 @@
   "packet": {
     ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
     "AUDIT.md": "9b12b9aa0aefb22f4034631badd4974ec356e7b97dd29ec8421514a1298a2ad6",
-    "INCOMING.md": "53d6a5a8c9f67e5b8f45c59bd364635c6dd322d68cf8e1813b742379a016b8d7",
+    "INCOMING.md": "7fb9a226c4bd0aa8216a454945cf7212dedc5a818e510cd76fd7cc3cc5af4083",
     "README.md": "03d3e48413c1de7a8dbb6dde0c063c1bbb5d16396663ec80d502f0d07e051a05",
     "bridges/INDEPENDENT_REVIEW.md": "70734d8fe1663d1c3e66ce94a5965be7bc82b4a74cfea5328e89dc5ff2495485",
     "bridges/README.md": "120c97c0092ff5a1d6f00dd21cde102d865fea36e06d7c4282fc0bb755607052",
@@ -65,6 +67,6 @@
     "valuation/optimized.json": "e612f90cfa36bf77aca3d484facef5be7a6e08044f72ec802ff3a9d6bbb23acc",
     "valuation/review-normal.json": "3365fedfd94bfc5682c8cf7d6515122116615588162a32c596a1d03d51487d3b",
     "valuation/review-optimized.json": "3365fedfd94bfc5682c8cf7d6515122116615588162a32c596a1d03d51487d3b",
-    "verify.py": "838e5b07f2759e0c5cec267a654b770a8f21f5c572fb701ac652dcf4a7062797"
+    "verify.py": "710889635d7337f7b4c3709c1361d295aab75fb6a7137d3e23a153a1b6b14947"
   }
 }
