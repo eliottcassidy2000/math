@@ -1,0 +1,1 @@
+[{"counts": [16, 64, 64, 256], "even_energy": "256", "odd_energy": "0", "p": 3}, {"counts": [36, 88, 88, 320], "even_energy": "324", "odd_energy": "4", "p": 5}, {"counts": [64, 160, 160, 384], "even_energy": "448", "odd_energy": "64", "p": 7}]

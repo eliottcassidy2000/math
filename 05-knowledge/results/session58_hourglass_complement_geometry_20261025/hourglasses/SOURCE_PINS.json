@@ -1,0 +1,49 @@
+{
+  "external": [
+    {
+      "url": "https://arxiv.org/html/1908.03236v2",
+      "pins": [
+        "Section2 definition",
+        "Theorem2.1",
+        "Corollary2.1",
+        "Section2 AP-only example"
+      ],
+      "checked": "2026-10-25",
+      "copied_full_text": false
+    },
+    {
+      "url": "https://ir.cwi.nl/pub/6839/6839D.pdf",
+      "metadata_url": "https://ir.cwi.nl/pub/6839",
+      "title": "Steiner triple systems without forbidden subconfigurations",
+      "author": "A. E. Brouwer",
+      "year": 1977,
+      "pins": [
+        "Section3 printed pages6\u20137: mitre block list and AG(2,3) two-point deletion"
+      ],
+      "checked": "2026-10-25",
+      "copied_full_text": false
+    }
+  ],
+  "internal": [
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/MISTAKES.md",
+      "sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/05-knowledge/results/FRAGMENT-DECODE-mu3-depth2-tree-klein-S691.md",
+      "sha256": "9e7a0355278d07aced84628ff134a0e9fdfa0097a4da6089a017006c8afefb17"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/theorems/THM-2473-sporadic-keller-branch-tower-depressed-trisection-anatomy.md",
+      "sha256": "cb19e6115c43b90d33586185f207bb2e30314d48206ec45501a455eb8b19502a"
+    },
+    {
+      "path": "/tmp/session57-ap-biclique-bridge/REPORT.md",
+      "sha256": "7fca97fea71296b968103c2136f20f6f776c8165cc0a2a2de99056fcab1f27db"
+    },
+    {
+      "path": "/tmp/session57-congruent-curve/PROOF.md",
+      "sha256": "714f6312e2fc376a2615e364573e46d87d5004a1a31a92ef7edfed81e5ba4944"
+    }
+  ]
+}

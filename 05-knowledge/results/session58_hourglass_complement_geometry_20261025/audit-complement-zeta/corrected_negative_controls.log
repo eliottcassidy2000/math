@@ -1,0 +1,14 @@
+[
+  {
+    "optimized": false,
+    "exit": 1,
+    "detected": true,
+    "mutation": "require odd involution nonfixed count"
+  },
+  {
+    "optimized": true,
+    "exit": 1,
+    "detected": true,
+    "mutation": "require odd involution nonfixed count"
+  }
+]

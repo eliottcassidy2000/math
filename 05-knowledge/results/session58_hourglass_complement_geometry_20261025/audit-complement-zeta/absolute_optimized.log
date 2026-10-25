@@ -1,0 +1,102 @@
+{
+  "prime_controls": [
+    {
+      "p": 3,
+      "C_p": 30,
+      "forbidden_first_count": -180,
+      "F_p2_deletion_counts_n1_to8": [
+        0,
+        0,
+        24,
+        72,
+        240,
+        720,
+        2184,
+        6552
+      ],
+      "N_at_1": -240
+    },
+    {
+      "p": 5,
+      "C_p": 3735,
+      "forbidden_first_count": -74700,
+      "F_p2_deletion_counts_n1_to8": [
+        0,
+        0,
+        120,
+        600,
+        3120,
+        15600,
+        78120,
+        390600
+      ],
+      "N_at_1": -89640
+    },
+    {
+      "p": 7,
+      "C_p": 941164,
+      "forbidden_first_count": -39528888,
+      "F_p2_deletion_counts_n1_to8": [
+        0,
+        0,
+        336,
+        2352,
+        16800,
+        117600,
+        823536,
+        5764752
+      ],
+      "N_at_1": -45175872
+    }
+  ],
+  "tournament_types": [
+    {
+      "n": 1,
+      "N": 1,
+      "self_converse": 1,
+      "two_cycles": 0,
+      "quotient": 1
+    },
+    {
+      "n": 2,
+      "N": 1,
+      "self_converse": 1,
+      "two_cycles": 0,
+      "quotient": 1
+    },
+    {
+      "n": 3,
+      "N": 2,
+      "self_converse": 2,
+      "two_cycles": 0,
+      "quotient": 2
+    },
+    {
+      "n": 4,
+      "N": 4,
+      "self_converse": 2,
+      "two_cycles": 1,
+      "quotient": 3
+    },
+    {
+      "n": 5,
+      "N": 12,
+      "self_converse": 8,
+      "two_cycles": 2,
+      "quotient": 10
+    }
+  ],
+  "lambda_power_map_hostile": {
+    "deleted_grid": "{0,1,2}^2",
+    "source": [
+      -1,
+      0
+    ],
+    "square_image": [
+      1,
+      0
+    ],
+    "outcome": "naive psi_2 does not restrict to complement"
+  },
+  "scope": "Finite exact checks support separately supplied proofs; no novelty or RH claim."
+}

@@ -1,0 +1,414 @@
+{
+  "baseline_commit": "44f15df8c4a24e5624d399862c0cdb1769b2cbb1",
+  "input_inventory": [
+    {
+      "origin": "/tmp/session58-hourglasses/THEOREM.md",
+      "publication_path": "hourglasses/THEOREM.md",
+      "bytes": 14286,
+      "sha256": "d56acb9bd7bb6fb5ce0f0fbf69ad66a3b8f046e2f24ce05657aeb57ba039d202"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/MITRE_AFFINE_BRIDGE.md",
+      "publication_path": "hourglasses/MITRE_AFFINE_BRIDGE.md",
+      "bytes": 7081,
+      "sha256": "4febec1f0441dab517e4bc1db9e345d46ece704bf3e17cc864b3792f9527e64a"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/SOURCE_PINS.json",
+      "publication_path": "hourglasses/SOURCE_PINS.json",
+      "bytes": 1673,
+      "sha256": "ffcee24f5c2c059bec24e85cfa991f124c81e90cc0ed3460b7dd9a328d6cbd2e"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/check.py",
+      "publication_path": "hourglasses/check.py",
+      "bytes": 5690,
+      "sha256": "0e022d0e5ce72f1f28666bf161042471f22cdf92e3be1e8f97a7dc42398c855e"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/check_geometry.py",
+      "publication_path": "hourglasses/check_geometry.py",
+      "bytes": 3342,
+      "sha256": "f93f16c0b0e7db5e65093479ff58c4793b0edaaa271be29045cd2ea59964b7cd"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/certificate.json",
+      "publication_path": "hourglasses/certificate.json",
+      "bytes": 5464,
+      "sha256": "e018ba60705c1c7f548f82e9720708278120deeb75d7960059058d7efb8a2650"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/geometry-certificate.json",
+      "publication_path": "hourglasses/geometry-certificate.json",
+      "bytes": 1183,
+      "sha256": "46a60aeb72e92268daff412a4c8ce18b796d27429568ddc3edd1cab9fcdd0f90"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/check.out",
+      "publication_path": "hourglasses/check.out",
+      "bytes": 3076,
+      "sha256": "695a06c3481e1176751e3307b614b1439153f6c436dc5118e9a1826fa2496ba7"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/check-optimized.out",
+      "publication_path": "hourglasses/check-optimized.out",
+      "bytes": 3076,
+      "sha256": "695a06c3481e1176751e3307b614b1439153f6c436dc5118e9a1826fa2496ba7"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/geometry.out",
+      "publication_path": "hourglasses/geometry.out",
+      "bytes": 639,
+      "sha256": "7730f829b742f43608cc2ede3bc3fc9136be85777e1c83e63c0bedd7677fb8b4"
+    },
+    {
+      "origin": "/tmp/session58-hourglasses/geometry-optimized.out",
+      "publication_path": "hourglasses/geometry-optimized.out",
+      "bytes": 639,
+      "sha256": "7730f829b742f43608cc2ede3bc3fc9136be85777e1c83e63c0bedd7677fb8b4"
+    },
+    {
+      "origin": "/tmp/session58-hourglass-fiber-product/fiber_product.md",
+      "publication_path": "hourglass-fiber-product/fiber_product.md",
+      "bytes": 11897,
+      "sha256": "1cee20c81f6a16707baf55634527464828fa13517c47d20f45195d6e8e34b82a"
+    },
+    {
+      "origin": "/tmp/session58-hourglass-fiber-product/check.py",
+      "publication_path": "hourglass-fiber-product/check.py",
+      "bytes": 2984,
+      "sha256": "de7725dadb0b1744bbd6f669b5092da4ef8aee6e14995afa65a8402a3701ea28"
+    },
+    {
+      "origin": "/tmp/session58-hourglass-fiber-product/results.json",
+      "publication_path": "hourglass-fiber-product/results.json",
+      "bytes": 4500,
+      "sha256": "731fe9d58bf1d95d107e5e8d773c59250d33870d8b1bcf8c7c9a9df410261116"
+    },
+    {
+      "origin": "/tmp/session58-hourglass-fiber-product/check.out",
+      "publication_path": "hourglass-fiber-product/check.out",
+      "bytes": 4500,
+      "sha256": "731fe9d58bf1d95d107e5e8d773c59250d33870d8b1bcf8c7c9a9df410261116"
+    },
+    {
+      "origin": "/tmp/session58-hourglass-fiber-product/check-optimized.out",
+      "publication_path": "hourglass-fiber-product/check-optimized.out",
+      "bytes": 4500,
+      "sha256": "731fe9d58bf1d95d107e5e8d773c59250d33870d8b1bcf8c7c9a9df410261116"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/THEOREM.md",
+      "publication_path": "complement-tournaments/THEOREM.md",
+      "bytes": 11679,
+      "sha256": "9463f2e7ed9b98bcb2eeba04a85a97757dee91e3c36edbdea9f776f485afdb87"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/SOURCE_PINS.json",
+      "publication_path": "complement-tournaments/SOURCE_PINS.json",
+      "bytes": 1607,
+      "sha256": "77cdbe2d36ff5710eb1135360fe6d1cd98d012326cca817699eaf30cee9340f1"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/verify.py",
+      "publication_path": "complement-tournaments/verify.py",
+      "bytes": 5080,
+      "sha256": "9246f13ac2bf4cf406a7fb7ed34504b17b4c0433571f8bee65f8d25cd23d31f6"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/certificate.json",
+      "publication_path": "complement-tournaments/certificate.json",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/run.log",
+      "publication_path": "complement-tournaments/run.log",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/run_O.log",
+      "publication_path": "complement-tournaments/run_O.log",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-complement-tournaments/SHA256SUMS",
+      "publication_path": "complement-tournaments/SOURCE_SHA256SUMS.txt",
+      "bytes": 469,
+      "sha256": "8ed0ae136670d55e4e97b51d02510950150a731ad7c7ecb4989866a190a35617"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/ABSOLUTE_GEOMETRY_BRIDGES.md",
+      "publication_path": "absolute-geometry/ABSOLUTE_GEOMETRY_BRIDGES.md",
+      "bytes": 14346,
+      "sha256": "0ad4d63b50f078965b26dba33effda80d81e0cb26d31457531251251a0847fc0"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/verify_bridges.py",
+      "publication_path": "absolute-geometry/verify_bridges.py",
+      "bytes": 3256,
+      "sha256": "fc470b7c36fe3ac222f09f57416336a1386ca4acbac0fdc331a9d2e66d80f5ab"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/verification.json",
+      "publication_path": "absolute-geometry/verification.json",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/normal.log",
+      "publication_path": "absolute-geometry/normal.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/optimized.log",
+      "publication_path": "absolute-geometry/optimized.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-absolute-geometry/SHA256SUMS",
+      "publication_path": "absolute-geometry/SOURCE_SHA256SUMS.txt",
+      "bytes": 420,
+      "sha256": "657606517040bc1d404c5c6ae82d21a9e252a589a2ea526aa69db25a058a3970"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/AUDIT.md",
+      "publication_path": "audit-hourglasses/AUDIT.md",
+      "bytes": 9275,
+      "sha256": "b14aaa968f4bb53059d3c996ea20b8dd47b629fc1d01b3bdd8c8c21572f0da4e"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/AUDITED_SHA256.txt",
+      "publication_path": "audit-hourglasses/AUDITED_SHA256.txt",
+      "bytes": 1126,
+      "sha256": "7f66b6b09d94af91d325f11244337daab31ccdc9498d73589bd9ff1a73cfc8da"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/check.py",
+      "publication_path": "audit-hourglasses/check.py",
+      "bytes": 3355,
+      "sha256": "ac7d9036cb22d6893fabd8e262ae72c78955a03a44e19d79407c005951429934"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/projective_check.py",
+      "publication_path": "audit-hourglasses/projective_check.py",
+      "bytes": 985,
+      "sha256": "9ddccd356a08238cf6583c80e7ae7f1541fc3f22944ece8470d5217f671076e1"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/mitre_check.py",
+      "publication_path": "audit-hourglasses/mitre_check.py",
+      "bytes": 2705,
+      "sha256": "6171c482251ecbbc54ccc317bb25bc3102e1ecd50face1e9f5fdb44ec6968ece"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/normal.json",
+      "publication_path": "audit-hourglasses/normal.json",
+      "bytes": 2955,
+      "sha256": "67f95a8d8f18d375a4a0f4a80b47da2f6e2033fccba4a1e35115a2ef01795c84"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/optimized.json",
+      "publication_path": "audit-hourglasses/optimized.json",
+      "bytes": 2955,
+      "sha256": "67f95a8d8f18d375a4a0f4a80b47da2f6e2033fccba4a1e35115a2ef01795c84"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/projective-normal.json",
+      "publication_path": "audit-hourglasses/projective-normal.json",
+      "bytes": 244,
+      "sha256": "0359366e07f8aea31c6f2942efd10d7de34474ca5278151af8bed08909de0dc3"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/projective-optimized.json",
+      "publication_path": "audit-hourglasses/projective-optimized.json",
+      "bytes": 244,
+      "sha256": "0359366e07f8aea31c6f2942efd10d7de34474ca5278151af8bed08909de0dc3"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/mitre-normal.json",
+      "publication_path": "audit-hourglasses/mitre-normal.json",
+      "bytes": 267,
+      "sha256": "2f90003d7c4beafa7b4e492a427f6fa87445996a50b9b6530266a2ff710e781b"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/mitre-optimized.json",
+      "publication_path": "audit-hourglasses/mitre-optimized.json",
+      "bytes": 267,
+      "sha256": "2f90003d7c4beafa7b4e492a427f6fa87445996a50b9b6530266a2ff710e781b"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/producer-geometry-normal.json",
+      "publication_path": "audit-hourglasses/producer-geometry-normal.json",
+      "bytes": 639,
+      "sha256": "7730f829b742f43608cc2ede3bc3fc9136be85777e1c83e63c0bedd7677fb8b4"
+    },
+    {
+      "origin": "/tmp/session58-audit-hourglasses/producer-geometry-optimized.json",
+      "publication_path": "audit-hourglasses/producer-geometry-optimized.json",
+      "bytes": 639,
+      "sha256": "7730f829b742f43608cc2ede3bc3fc9136be85777e1c83e63c0bedd7677fb8b4"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/AUDIT.md",
+      "publication_path": "audit-complement-zeta/AUDIT.md",
+      "bytes": 9707,
+      "sha256": "c1388d7db4be72a340bdaf4da6bed1c41f985f59d75b9ea3e978b0e78d2c380a"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/INITIAL_REVIEWED_SOURCE_HASHES.json",
+      "publication_path": "audit-complement-zeta/INITIAL_REVIEWED_SOURCE_HASHES.json",
+      "bytes": 2178,
+      "sha256": "eae58bc6514d6d69475a16be4e2dfb52f923e1bf0f8318f98f75513ace0c6778"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/REVIEWED_SOURCE_HASHES.json",
+      "publication_path": "audit-complement-zeta/REVIEWED_SOURCE_HASHES.json",
+      "bytes": 2178,
+      "sha256": "eae58bc6514d6d69475a16be4e2dfb52f923e1bf0f8318f98f75513ace0c6778"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/SHA256SUMS",
+      "publication_path": "audit-complement-zeta/SOURCE_SHA256SUMS.txt",
+      "bytes": 2230,
+      "sha256": "ef6e825b68c104a05ee16beff75a1f4c297bd192ca19ee77f38d7e19142c0722"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/absolute_corrected_normal.log",
+      "publication_path": "audit-complement-zeta/absolute_corrected_normal.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/absolute_corrected_optimized.log",
+      "publication_path": "audit-complement-zeta/absolute_corrected_optimized.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/absolute_normal.log",
+      "publication_path": "audit-complement-zeta/absolute_normal.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/absolute_optimized.log",
+      "publication_path": "audit-complement-zeta/absolute_optimized.log",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/complement_normal.log",
+      "publication_path": "audit-complement-zeta/complement_normal.log",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/complement_optimized.log",
+      "publication_path": "audit-complement-zeta/complement_optimized.log",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/corrected_negative_controls.log",
+      "publication_path": "audit-complement-zeta/corrected_negative_controls.log",
+      "bytes": 254,
+      "sha256": "aafb5745d0d52921651a9cd34bb4be3627349c17d0d24e82de81de41474bc65d"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/corrected_negative_controls.py",
+      "publication_path": "audit-complement-zeta/corrected_negative_controls.py",
+      "bytes": 910,
+      "sha256": "f0fbfe6062690c8fd04b20302673b25b708085b872b209be040a37481a60f705"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/corrected_negative_results.json",
+      "publication_path": "audit-complement-zeta/corrected_negative_results.json",
+      "bytes": 254,
+      "sha256": "aafb5745d0d52921651a9cd34bb4be3627349c17d0d24e82de81de41474bc65d"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/independent_audit.py",
+      "publication_path": "audit-complement-zeta/independent_audit.py",
+      "bytes": 4543,
+      "sha256": "e2d2cb7ba1500cd941faabfa77beffed002f2a5cc6fa57b7f10e3b1794ac7fe9"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/independent_normal.log",
+      "publication_path": "audit-complement-zeta/independent_normal.log",
+      "bytes": 750,
+      "sha256": "66a8ade20e36a2400170470885da16eb81e6aa063384edecb2276d13cd2b4872"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/independent_optimized.log",
+      "publication_path": "audit-complement-zeta/independent_optimized.log",
+      "bytes": 750,
+      "sha256": "66a8ade20e36a2400170470885da16eb81e6aa063384edecb2276d13cd2b4872"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/independent_results.json",
+      "publication_path": "audit-complement-zeta/independent_results.json",
+      "bytes": 750,
+      "sha256": "66a8ade20e36a2400170470885da16eb81e6aa063384edecb2276d13cd2b4872"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/negative_controls.log",
+      "publication_path": "audit-complement-zeta/negative_controls.log",
+      "bytes": 775,
+      "sha256": "7db72e42c114044016de8b7079cbca57f65aa6f26c2c1ebfa1d0a400884c9f4e"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/negative_controls.py",
+      "publication_path": "audit-complement-zeta/negative_controls.py",
+      "bytes": 1876,
+      "sha256": "7ff939f1846e2897b9728db8547304db8cd345b8b778824e6bd96cb4b646b0c6"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/negative_results.json",
+      "publication_path": "audit-complement-zeta/negative_results.json",
+      "bytes": 775,
+      "sha256": "7db72e42c114044016de8b7079cbca57f65aa6f26c2c1ebfa1d0a400884c9f4e"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/replays/absolute/corrected.py",
+      "publication_path": "audit-complement-zeta/replays/absolute/corrected.py",
+      "bytes": 3256,
+      "sha256": "fc470b7c36fe3ac222f09f57416336a1386ca4acbac0fdc331a9d2e66d80f5ab"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/replays/absolute/verification.json",
+      "publication_path": "audit-complement-zeta/replays/absolute/verification.json",
+      "bytes": 1709,
+      "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/replays/absolute/verify_bridges.py",
+      "publication_path": "audit-complement-zeta/replays/absolute/verify_bridges.py",
+      "bytes": 2600,
+      "sha256": "b08951f48830b77e1dd3fffea7ecb82bfc9de931698ec355621ae02ee4ebf8cb"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/replays/complement/certificate.json",
+      "publication_path": "audit-complement-zeta/replays/complement/certificate.json",
+      "bytes": 10608,
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "origin": "/tmp/session58-audit-complement-zeta/replays/complement/verify.py",
+      "publication_path": "audit-complement-zeta/replays/complement/verify.py",
+      "bytes": 5080,
+      "sha256": "9246f13ac2bf4cf406a7fb7ed34504b17b4c0433571f8bee65f8d25cd23d31f6"
+    }
+  ],
+  "excluded": [
+    "worker messages and startup logs",
+    "__pycache__ and binaries",
+    "downloaded primary full texts and private attachments",
+    "unaudited prime-support and observer-profile new waves"
+  ],
+  "source_manifests": "Historical source manifests are retained as SOURCE_SHA256SUMS.txt or AUDITED_SHA256.txt; original absolute paths identify provenance, not execution requirements."
+}

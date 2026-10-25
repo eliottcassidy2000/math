@@ -1,0 +1,40 @@
+{
+  "repository_commit": "44f15df8c4a24e5624d399862c0cdb1769b2cbb1",
+  "sources": [
+    {
+      "path": "/tmp/session56-publication/clean-repo/AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/MISTAKES.md",
+      "sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/05-knowledge/results/trijection_four_nodes_three_edges_20261020.md",
+      "sha256": "96b4a5208ab9d6bd8cdad7788812040b350c517d03c7d24365a0d370472d9afd"
+    },
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "sha256": "bb990b326f4dced3118a83ef240accb47ebf387c9586dcd67994507a64194098"
+    },
+    {
+      "path": "/tmp/session57-path-inheritance/sources/S11.md",
+      "sha256": "486221eeab577d016d69c6170077fa36135ddf935b497e9ddaeca3058914cf48"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://oeis.org/A000568",
+      "accessed": "2026-10-25",
+      "scope": "sequence definition and small count comparison only"
+    }
+  ]
+}

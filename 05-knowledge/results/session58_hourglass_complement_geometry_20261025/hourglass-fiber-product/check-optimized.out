@@ -1,0 +1,256 @@
+{
+  "symbolic_rank_all_characteristics": 6,
+  "monic_pivot_determinant": 1,
+  "finite_fields": [
+    {
+      "p": 3,
+      "cone_roots": [
+        33,
+        129,
+        129,
+        513
+      ],
+      "projective_roots": [
+        16,
+        64,
+        64,
+        256
+      ],
+      "affine_square_entry_parameters": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "projective_covariance": "0",
+      "even_energy": "256",
+      "odd_energy": "0",
+      "direct_shared_root_check": true
+    },
+    {
+      "p": 5,
+      "cone_roots": [
+        145,
+        353,
+        353,
+        1281
+      ],
+      "projective_roots": [
+        36,
+        88,
+        88,
+        320
+      ],
+      "affine_square_entry_parameters": [
+        11,
+        9,
+        9,
+        7
+      ],
+      "projective_covariance": "236/81",
+      "even_energy": "324",
+      "odd_energy": "4",
+      "direct_shared_root_check": true
+    },
+    {
+      "p": 7,
+      "cone_roots": [
+        385,
+        961,
+        961,
+        2305
+      ],
+      "projective_roots": [
+        64,
+        160,
+        160,
+        384
+      ],
+      "affine_square_entry_parameters": [
+        28,
+        22,
+        22,
+        16
+      ],
+      "projective_covariance": "-1/4",
+      "even_energy": "448",
+      "odd_energy": "64",
+      "direct_shared_root_check": true
+    },
+    {
+      "p": 11,
+      "cone_roots": [
+        1441,
+        4481,
+        4481,
+        12801
+      ],
+      "projective_roots": [
+        144,
+        448,
+        448,
+        1280
+      ],
+      "affine_square_entry_parameters": [
+        46,
+        36,
+        36,
+        26
+      ],
+      "projective_covariance": "-64/81",
+      "even_energy": "1536",
+      "odd_energy": "256",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 13,
+      "cone_roots": [
+        2353,
+        6433,
+        6433,
+        16129
+      ],
+      "projective_roots": [
+        196,
+        536,
+        536,
+        1344
+      ],
+      "affine_square_entry_parameters": [
+        103,
+        73,
+        73,
+        43
+      ],
+      "projective_covariance": "-1492/2401",
+      "even_energy": "1732",
+      "odd_energy": "388",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 17,
+      "cone_roots": [
+        5185,
+        10625,
+        10625,
+        24577
+      ],
+      "projective_roots": [
+        324,
+        664,
+        664,
+        1536
+      ],
+      "affine_square_entry_parameters": [
+        281,
+        153,
+        153,
+        105
+      ],
+      "projective_covariance": "3548/6561",
+      "even_energy": "2020",
+      "odd_energy": "484",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 19,
+      "cone_roots": [
+        7201,
+        14977,
+        14977,
+        41473
+      ],
+      "projective_roots": [
+        400,
+        832,
+        832,
+        2304
+      ],
+      "affine_square_entry_parameters": [
+        226,
+        118,
+        118,
+        82
+      ],
+      "projective_covariance": "896/625",
+      "even_energy": "2816",
+      "odd_energy": "512",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 23,
+      "cone_roots": [
+        12673,
+        24641,
+        24641,
+        64769
+      ],
+      "projective_roots": [
+        576,
+        1120,
+        1120,
+        2944
+      ],
+      "affine_square_entry_parameters": [
+        540,
+        276,
+        276,
+        188
+      ],
+      "projective_covariance": "431/324",
+      "even_energy": "3584",
+      "odd_energy": "640",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 29,
+      "cone_roots": [
+        25201,
+        40097,
+        40097,
+        109313
+      ],
+      "projective_roots": [
+        900,
+        1432,
+        1432,
+        3904
+      ],
+      "affine_square_entry_parameters": [
+        911,
+        393,
+        393,
+        267
+      ],
+      "projective_covariance": "91436/50625",
+      "even_energy": "4804",
+      "odd_energy": "900",
+      "direct_shared_root_check": false
+    },
+    {
+      "p": 31,
+      "cone_roots": [
+        30721,
+        39361,
+        39361,
+        103681
+      ],
+      "projective_roots": [
+        1024,
+        1312,
+        1312,
+        3456
+      ],
+      "affine_square_entry_parameters": [
+        1216,
+        376,
+        376,
+        256
+      ],
+      "projective_covariance": "1775/1024",
+      "even_energy": "4288",
+      "odd_energy": "832",
+      "direct_shared_root_check": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "path": "audit-hourglasses/check.py",
+      "original_sha256": "ac7d9036cb22d6893fabd8e262ae72c78955a03a44e19d79407c005951429934",
+      "publication_sha256": "fcfd48c5e0240526c1075cee0ab46ac814b6c7ede6155f7ff0ca5e5202d2b66f",
+      "change": "Only script-relative output directory and sibling producer certificate paths; no mathematical/code-check changes."
+    }
+  ],
+  "original_sources_unchanged": true,
+  "historical_audit_replay_note": "audit-complement-zeta/replays/absolute/verify_bridges.py is deliberately the old assertion-based snapshot used by negative_controls.py, not the final producer verifier. corrected.py is the repaired replay."
+}

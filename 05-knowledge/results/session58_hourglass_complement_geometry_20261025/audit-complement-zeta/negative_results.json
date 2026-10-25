@@ -1,0 +1,40 @@
+[
+  {
+    "target": "independent exception",
+    "optimized": false,
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "target": "complement perturbed order-five count",
+    "optimized": false,
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "target": "original absolute injected false assertion",
+    "optimized": false,
+    "exit": 1,
+    "detected": true,
+    "known_defect": true
+  },
+  {
+    "target": "independent exception",
+    "optimized": true,
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "target": "complement perturbed order-five count",
+    "optimized": true,
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "target": "original absolute injected false assertion",
+    "optimized": true,
+    "exit": 0,
+    "detected": false,
+    "known_defect": true
+  }
+]

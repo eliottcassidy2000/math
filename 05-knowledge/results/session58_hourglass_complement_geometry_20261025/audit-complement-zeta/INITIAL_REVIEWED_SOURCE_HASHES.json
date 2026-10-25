@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/tmp/session58-complement-tournaments/SHA256SUMS",
+    "sha256": "8ed0ae136670d55e4e97b51d02510950150a731ad7c7ecb4989866a190a35617"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/SOURCE_PINS.json",
+    "sha256": "77cdbe2d36ff5710eb1135360fe6d1cd98d012326cca817699eaf30cee9340f1"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/THEOREM.md",
+    "sha256": "9463f2e7ed9b98bcb2eeba04a85a97757dee91e3c36edbdea9f776f485afdb87"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/certificate.json",
+    "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/run.log",
+    "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/run_O.log",
+    "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/verify.py",
+    "sha256": "9246f13ac2bf4cf406a7fb7ed34504b17b4c0433571f8bee65f8d25cd23d31f6"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/ABSOLUTE_GEOMETRY_BRIDGES.md",
+    "sha256": "0ad4d63b50f078965b26dba33effda80d81e0cb26d31457531251251a0847fc0"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/SHA256SUMS",
+    "sha256": "657606517040bc1d404c5c6ae82d21a9e252a589a2ea526aa69db25a058a3970"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/normal.log",
+    "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/optimized.log",
+    "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/verification.json",
+    "sha256": "8a6c8d7f6385d17a28307fd28ddcfda56f48a07d93dfd3f673fac361134bfbc2"
+  },
+  {
+    "path": "/tmp/session58-absolute-geometry/verify_bridges.py",
+    "sha256": "fc470b7c36fe3ac222f09f57416336a1386ca4acbac0fdc331a9d2e66d80f5ab"
+  },
+  {
+    "path": "/tmp/session57-prime-plane-frames/prime_plane_frames.md",
+    "sha256": "b2f0f2b152c8f762dc8020f8e6dbd0f6de4144d5e1a168ce1be0b8b16e46898e"
+  }
+]

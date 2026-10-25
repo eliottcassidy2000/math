@@ -1,0 +1,64 @@
+{
+  "census_columns": [
+    "n",
+    "graphs",
+    "graph_pairs",
+    "tournaments",
+    "self_converse",
+    "converse_pairs",
+    "profiles"
+  ],
+  "census": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      4,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      4,
+      11,
+      6,
+      4,
+      2,
+      3,
+      3
+    ],
+    [
+      5,
+      34,
+      18,
+      12,
+      8,
+      10,
+      10
+    ]
+  ],
+  "direct_p3_frame_count": 270,
+  "gauge_classes": 30,
+  "normalized_bad_locus_checks": 810,
+  "affine_27_point_charts": 30,
+  "negative_exception_flag": "--negative-exception",
+  "all_checks": "PASS"
+}
