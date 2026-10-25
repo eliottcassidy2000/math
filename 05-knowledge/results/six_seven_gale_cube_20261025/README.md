@@ -47,6 +47,11 @@ and Enriques; the sixteen free kernels give exactly two complex Campedelli
 classes. These conclusions use incidence and explicit geometry, not numerical
 invariants alone. See [Session60's quotient classification](../session60_six_seven_geometry_20261025/seven-lines/RESULT.md).
 
+The last incoming norm-seven torus construction supplies **two of our 32
+complementary free pairs**. Keeping the marked quotient maps gives two
+normalized fiber-product presentations of the hourglass; see the
+[norm-seven continuation](NORM_SEVEN_CONTINUATION.md).
+
 ## Which tempting identifications fail
 
 Seven canonical characters have binary rank six; seven Fano points have rank

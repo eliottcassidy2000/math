@@ -1,6 +1,6 @@
 {
-  "executions": 14,
-  "manifest_files": 30,
+  "executions": 16,
+  "manifest_files": 33,
   "replays": [
     {
       "normal": "PASS",
@@ -36,6 +36,11 @@
       "normal": "PASS",
       "optimized": "PASS",
       "script": "check_reflection_markings.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "script": "check_norm_seven_pairs.py"
     }
   ],
   "status": "PASS"

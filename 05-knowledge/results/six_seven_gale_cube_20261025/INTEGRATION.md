@@ -62,3 +62,27 @@ The broad unification attempt currently has a precise common operation:
 pass to a quotient or representation, record the discarded information,
 then test whether the target predicate survives. It organizes these examples
 without asserting logical equivalence between unrelated open problems.
+
+## Last incoming bridge: norm seven and normalized recovery
+
+Session61's [torus-face construction](../session61_hadwiger_six_seven_20261025/torus-fano/TORUS_FANO_CAMPEDELLI.md)
+uses the two conjugate norm-seven Eisenstein ideals and two triangle types
+to select the special four-kernel Campedelli orbit. Retaining each ideal's
+pair of face designs gives two of our 32 complementary free pairs. The
+[narrow continuation](NORM_SEVEN_CONTINUATION.md) checks the common marking
+and applies our normalization theorem. Thus the lattice construction
+selects two reconstructions of the hourglass root surface, not just four
+isomorphic abstract quotient surfaces. The maps to P² remain part of the data.
+
+The same session's [palette/deck result](../session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md)
+recovers Fano incidence from third character moments while first and second
+moments are blind. This complements our abstract exterior-cube test: the
+useful information is a specified triple character, not seven as a count.
+
+The latest [port/counting packet](../ports_regular_actions_hn_20261025/README.md)
+adds protected nonconsecutive ports, a smaller unrestricted A000568 response
+graph and exact signed clone-cut cancellation. Full black-core connectivity
+remains OPEN. Its cube-coordinate relation identifies the three divisor
+relation modes with centered planar cube coordinates subject to norm and
+injectivity conditions. That gives a further representation map with an
+explicit geometric constraint, not an automatic plane-colouring bound.

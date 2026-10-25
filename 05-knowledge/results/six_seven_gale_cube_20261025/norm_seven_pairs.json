@@ -1,0 +1,506 @@
+{
+  "Fano_universe": 30,
+  "actual_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      5,
+      6
+    ]
+  ],
+  "all_complementary_free_pairs": [
+    [
+      8,
+      17
+    ],
+    [
+      8,
+      21
+    ],
+    [
+      8,
+      25
+    ],
+    [
+      8,
+      26
+    ],
+    [
+      9,
+      16
+    ],
+    [
+      9,
+      20
+    ],
+    [
+      9,
+      24
+    ],
+    [
+      9,
+      27
+    ],
+    [
+      10,
+      15
+    ],
+    [
+      10,
+      19
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      10,
+      27
+    ],
+    [
+      11,
+      14
+    ],
+    [
+      11,
+      18
+    ],
+    [
+      11,
+      21
+    ],
+    [
+      11,
+      26
+    ],
+    [
+      14,
+      19
+    ],
+    [
+      14,
+      24
+    ],
+    [
+      14,
+      27
+    ],
+    [
+      15,
+      18
+    ],
+    [
+      15,
+      25
+    ],
+    [
+      15,
+      26
+    ],
+    [
+      16,
+      18
+    ],
+    [
+      16,
+      21
+    ],
+    [
+      16,
+      25
+    ],
+    [
+      17,
+      19
+    ],
+    [
+      17,
+      20
+    ],
+    [
+      17,
+      24
+    ],
+    [
+      18,
+      27
+    ],
+    [
+      19,
+      26
+    ],
+    [
+      20,
+      25
+    ],
+    [
+      21,
+      24
+    ]
+  ],
+  "branch_order": [
+    "E",
+    "E+x",
+    "E-x",
+    "E+z",
+    "E-z",
+    "E+x+z",
+    "E-x-z"
+  ],
+  "branch_vectors": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      -1
+    ]
+  ],
+  "complementary_free_pair_count": 32,
+  "constructions": [
+    {
+      "Fano_index": 18,
+      "binary_marking": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
+        7
+      ],
+      "branch_residues": [
+        0,
+        1,
+        6,
+        2,
+        5,
+        3,
+        4
+      ],
+      "branch_triples": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "face_type": "U",
+      "ideal_generator": [
+        2,
+        -1
+      ],
+      "ideal_root": 2,
+      "kernel_even_words": [
+        0,
+        27,
+        46,
+        53,
+        71,
+        92,
+        105,
+        114
+      ]
+    },
+    {
+      "Fano_index": 16,
+      "binary_marking": [
+        1,
+        2,
+        4,
+        6,
+        3,
+        7,
+        5
+      ],
+      "branch_residues": [
+        0,
+        1,
+        6,
+        2,
+        5,
+        3,
+        4
+      ],
+      "branch_triples": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "face_type": "D",
+      "ideal_generator": [
+        2,
+        -1
+      ],
+      "ideal_root": 2,
+      "kernel_even_words": [
+        0,
+        29,
+        39,
+        58,
+        75,
+        86,
+        108,
+        113
+      ]
+    },
+    {
+      "Fano_index": 19,
+      "binary_marking": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        3,
+        6
+      ],
+      "branch_residues": [
+        0,
+        1,
+        6,
+        4,
+        3,
+        5,
+        2
+      ],
+      "branch_triples": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "face_type": "U",
+      "ideal_generator": [
+        3,
+        1
+      ],
+      "ideal_root": 4,
+      "kernel_even_words": [
+        0,
+        23,
+        46,
+        57,
+        75,
+        92,
+        101,
+        114
+      ]
+    },
+    {
+      "Fano_index": 17,
+      "binary_marking": [
+        1,
+        2,
+        4,
+        7,
+        3,
+        6,
+        5
+      ],
+      "branch_residues": [
+        0,
+        1,
+        6,
+        4,
+        3,
+        5,
+        2
+      ],
+      "branch_triples": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "face_type": "D",
+      "ideal_generator": [
+        3,
+        1
+      ],
+      "ideal_root": 4,
+      "kernel_even_words": [
+        0,
+        15,
+        53,
+        58,
+        86,
+        89,
+        99,
+        108
+      ]
+    }
+  ],
+  "distinct_selected_kernel_count": 4,
+  "free_kernels": 16,
+  "gates": 219,
+  "geometric_consequence": "Each selected pair recovers the normal root cover by normalization of the finite quotient fiber product.",
+  "labeling_universe": 5040,
+  "scope": "No tournament orientation or chromatic assertion; no arithmetic point lifting.",
+  "selected_pair_count": 2,
+  "selected_pairs": [
+    [
+      16,
+      18
+    ],
+    [
+      17,
+      19
+    ]
+  ],
+  "status": "FINITE-EXACT norm-seven complementary-pair integration"
+}

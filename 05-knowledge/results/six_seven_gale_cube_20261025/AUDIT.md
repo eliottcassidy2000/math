@@ -52,9 +52,10 @@ no claim that the geometric automorphism destroys freeness.
 | `check_free_deck_codes.py` | All 5,040 binary labelings, 1,395 rank-three subgroups of F2^6, 84 six-subsets, 36 seven-subsets and 240 labelled Paley tournaments; good, all-bad and relabelling controls | `free_deck_codes.json` |
 | `audit_character.py` | 39 independent gates; three canonical-dimension calculations for n=4,…,16, local D4/sign equations and exterior-cube dimensions | `character_audit.json` |
 | `audit_free_quotients.py` | 333 independent gates; point inertia, all thirty Fanos, 120 complementary pairs and 32 free pairs | `free_quotients_audit.json` |
+| `check_norm_seven_pairs.py` | 219 gates; two norm-seven residue maps and their face systems; common markings, complementary free kernels, distinct pairs among all 32 | `norm_seven_pairs.json` |
 | `check_reflection_markings.py` | 15,334 gates; two explicit markings, actual triple incidence, all thirty kernels and their bad-triple strata | `reflection_markings.json` |
 
-Each of the seven checkers is run normally and under `python -O`: **14
+Each of the eight checkers is run normally and under `python -O`: **16
 executions**, exact JSON equality and byte-identical output against the frozen
 receipts. Exception-based gates remain active under optimization. Run:
 
@@ -67,6 +68,21 @@ repository or claim to independently reprove Session60's Picard-rank theorem.
 Navigation is outside this packet's frozen manifest because it is maintained
 concurrently. The manifest excludes itself and the replay receipt to avoid
 circular hashes.
+
+## Late norm-seven synthesis
+
+The [continuation](NORM_SEVEN_CONTINUATION.md) combines incoming Session61
+face designs with the already-audited normalized fiber-product theorem.
+A second lane independently recomputed the common marking, complementarity
+and freeness, deriving actual triple incidence from determinants and
+enumerating all thirty codes independently. The review also corrected the
+face-type wording: the k=4 families equal the k=2 families with U/D swapped,
+so their named types must be transported even though the unordered pair is
+unchanged. Final independent verdict: PASS after this precision edit.
+The only new deduction is selection of two marked recovery
+presentations; the lattice/torus and surface-classification inputs remain
+credited to Session61 and Session60. No chromatic, unmarked-moduli, arithmetic
+descent or orientation claim is added.
 
 ## Limits retained
 

@@ -84,6 +84,13 @@ portfolio remains a source of questions rather than a required conclusion.
    carrier; its native arc operations and converse are additional data.
    No current map transports an LRC maximum or Collatz trajectory.
 
+10. **Norm seven meets the same hourglass.** Session61 keeps the triangular
+   faces of two norm-seven lattice quotients. Each supplies a complementary
+   free Fano pair. The two pairs select two normalized fiber-product
+   reconstructions of the root surface. This strengthens the quotient lane
+   while retaining its marked cover maps and losing any chromatic implication;
+   see [the continuation](NORM_SEVEN_CONTINUATION.md).
+
 Each successful view was checked against the other board entries: branch
 incidence controls code freeness; code characters control canonical forms;
 canonical degree explains the threshold; Gale keeps coefficients; the

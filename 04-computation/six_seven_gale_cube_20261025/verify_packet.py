@@ -18,6 +18,7 @@ CASES = [
     ('audit_character.py', 'character_audit.json', False),
     ('audit_free_quotients.py', 'free_quotients_audit.json', False),
     ('check_reflection_markings.py', 'reflection_markings.json', True),
+    ('check_norm_seven_pairs.py', 'norm_seven_pairs.json', False),
 ]
 
 
