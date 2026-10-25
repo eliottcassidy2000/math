@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "portable_normal_optimized": true,
+  "rejected_each_mode": [
+    "corrupt",
+    "missing",
+    "extra",
+    "nested-extra"
+  ],
+  "no_final_map_pin": true
+}

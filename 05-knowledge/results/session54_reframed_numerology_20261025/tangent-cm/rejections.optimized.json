@@ -1,0 +1,22 @@
+[
+  {
+    "case": "missing_conductor",
+    "rejected": true,
+    "reason": "complete group screen"
+  },
+  {
+    "case": "damaged_rational_map",
+    "rejected": true,
+    "reason": "field substitution"
+  },
+  {
+    "case": "false_exponential_threshold",
+    "rejected": true,
+    "reason": "exponential lower bound"
+  },
+  {
+    "case": "false_positive_control",
+    "rejected": true,
+    "reason": "positive CM control"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "alter-j8000",
+    "optimized": false,
+    "exit": 1,
+    "last_line": "RuntimeError: multiplication charpoly n=4"
+  },
+  {
+    "name": "alter-j8000",
+    "optimized": true,
+    "exit": 1,
+    "last_line": "RuntimeError: multiplication charpoly n=4"
+  },
+  {
+    "name": "omit-n168",
+    "optimized": false,
+    "exit": 1,
+    "last_line": "RuntimeError: brute group screen to5000"
+  },
+  {
+    "name": "omit-n168",
+    "optimized": true,
+    "exit": 1,
+    "last_line": "RuntimeError: brute group screen to5000"
+  },
+  {
+    "name": "remove-nonfundamental-minus12",
+    "optimized": false,
+    "exit": 1,
+    "last_line": "RuntimeError: forms -12"
+  },
+  {
+    "name": "remove-nonfundamental-minus12",
+    "optimized": true,
+    "exit": 1,
+    "last_line": "RuntimeError: forms -12"
+  },
+  {
+    "name": "wrong-trace-bound",
+    "optimized": false,
+    "exit": 1,
+    "last_line": "RuntimeError: Taylor 15"
+  },
+  {
+    "name": "wrong-trace-bound",
+    "optimized": true,
+    "exit": 1,
+    "last_line": "RuntimeError: Taylor 15"
+  }
+]

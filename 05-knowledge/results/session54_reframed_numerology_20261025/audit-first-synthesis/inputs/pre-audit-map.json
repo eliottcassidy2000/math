@@ -1,0 +1,432 @@
+{
+  "destination": "05-knowledge/results/session54_reframed_numerology_20261025",
+  "packet_manifests": {
+    "dismissed-atlas": "0a9ff22a2bf5a211695aae86070853f021332c99dfa3b0cdfe3edbcefbe88393",
+    "cross-base-fractal": "92db3b170771188fac5c9d55faec8c4c5d18e4fc8f34d93c74b78abfd0794e95",
+    "audit-cross-base": "356a31ea3b2f3f357ae1cbcc041792e266798704ed996f9c7b988509a66fb106",
+    "tangent-cm": "66465399d9a82a4ec9afc661fc4cb93502b2f632157d08ebf4a1366f21b16eba",
+    "audit-tangent-cm": "1f1afa53bf9846f1128a1fd8d6a85cb00ac944d5e82b32fb185835ada6f35dc2"
+  },
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/REPORT.md",
+      "bytes": 11508,
+      "sha256": "5a7661deada644acab045642223a20a21757d10fd49828365adcec151c197fad"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/SOURCES.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/SOURCES.json",
+      "bytes": 5898,
+      "sha256": "07a0a8cc25d21917b3164dea8d6649f9facff109fdfda881c642c04ef35c8b9d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/catalan-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/catalan-correction.txt",
+      "bytes": 1867,
+      "sha256": "f592d1e2b4e664428467f4d9db5cbaf8268380fbb0807a6b5aade2d8c6eff8e6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/collatz-paley-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/collatz-paley-correction.txt",
+      "bytes": 1870,
+      "sha256": "29c57ae70cc4cffe932f165b46ddcd0d79d21e21b7b30bfb3f751aabc501a576"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/fifteen-mrb-collatz.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/fifteen-mrb-collatz.txt",
+      "bytes": 4298,
+      "sha256": "eb50006c0c385747dcde3e470c55a38bc24ac1f2cadf4f9276f46b18d1617df6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/lattice-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/lattice-correction.txt",
+      "bytes": 4371,
+      "sha256": "ac142bca93f4cc1141fc00e839d3ab759267de49a2cf597221ff89571ddb2fb2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/paley-modular-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/paley-modular-correction.txt",
+      "bytes": 5140,
+      "sha256": "88b55b735a825520645c6053ab55fe913b383c3031ea83975a319a301832bacc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/pascal-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/pascal-correction.txt",
+      "bytes": 1877,
+      "sha256": "cea57395be50b36de201d217f37cb019f7194c4f7cde4a998834b1d48178f3eb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/repunit-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/repunit-correction.txt",
+      "bytes": 3312,
+      "sha256": "7edfefa68324b1805b4fe877520a1d9c795e30a2b5f7e77b4fc7a220d898ba4b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/self-converse-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/self-converse-correction.txt",
+      "bytes": 1644,
+      "sha256": "cb9eb46cf8b79666992e8e2d0d8a6afe54ee836e26f36e38280778f0c3b97157"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session52-mrb.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session52-mrb.txt",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session52-summary.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session52-summary.txt",
+      "bytes": 6684,
+      "sha256": "ac317948da12bf683dc30ba746254e748d409c321668eabff47430ef3be06943"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session53-summary.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session53-summary.txt",
+      "bytes": 15157,
+      "sha256": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/MANIFEST.json",
+      "bytes": 1395,
+      "sha256": "0a9ff22a2bf5a211695aae86070853f021332c99dfa3b0cdfe3edbcefbe88393"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/REPORT.md",
+      "bytes": 9727,
+      "sha256": "2326e437bd53a6c0bfc2e2b9bdabb5e6bb0dcf6d9049341be484d46a6516f357"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check-O.out",
+      "bytes": 964,
+      "sha256": "83ee695a43c15df46166ebfebda6e53cc71ce44abbf510552386a1c6dd18c72c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check.out",
+      "bytes": 964,
+      "sha256": "83ee695a43c15df46166ebfebda6e53cc71ce44abbf510552386a1c6dd18c72c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check.py",
+      "bytes": 3439,
+      "sha256": "85bba736b76a2ebf684b45ebbc4abc6192b483827d17ee0cf7f62eef445de251"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/hostile.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/hostile.py",
+      "bytes": 694,
+      "sha256": "90f2510d1f111c3718574f55410c01955f73c78a131c02aee1273d37e7213314"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/replay.py",
+      "bytes": 969,
+      "sha256": "17397c968e0d3203b1b4f506c7c058d419138dc9c9e79a7b6ef581e90426bed0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/clock-fractal.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/clock-fractal.md",
+      "bytes": 34371,
+      "sha256": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod3-digit-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod3-digit-law.md",
+      "bytes": 8349,
+      "sha256": "aa300c0928063514e42300e33e8b3e73555677fed3f04dc7e868a3a1b441e917"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod4-dyadic-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod4-dyadic-law.md",
+      "bytes": 5190,
+      "sha256": "db04a57725b52e595b9347400d3fcf44b4dc65fb380a783b5edb988e0bbda46c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod9-digit-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod9-digit-law.md",
+      "bytes": 3718,
+      "sha256": "cc4abc46cd8acd9c2a5902c266e2846c13dcd285076d44f8ed6b462403da8c98"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/prior-transversality-published.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/prior-transversality-published.md",
+      "bytes": 53441,
+      "sha256": "c341592c374d56afd25f6fa6aa13f5246a7a4f098927ad60594f68b4ca037f16"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/manifest.json",
+      "bytes": 1014,
+      "sha256": "92db3b170771188fac5c9d55faec8c4c5d18e4fc8f34d93c74b78abfd0794e95"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/REPORT.md",
+      "bytes": 5765,
+      "sha256": "65179df9af20b3912649ee0f25955c38a66ad41b0e46c69a5e9f7a1d99fb6844"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check-O.out",
+      "bytes": 896,
+      "sha256": "a1c2230ebd605ed7f5f99a68020ce9c1c333c5e440afc0482099a99f51fa8084"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check.out",
+      "bytes": 896,
+      "sha256": "a1c2230ebd605ed7f5f99a68020ce9c1c333c5e440afc0482099a99f51fa8084"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check_independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check_independent.py",
+      "bytes": 3624,
+      "sha256": "577b09953244d889676dcf60b297e657a78ada0e19ec5642c99b47f171628417"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check_packet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check_packet.py",
+      "bytes": 2592,
+      "sha256": "994382049b93e7e28eb697039c6470ef9290b5ee299f251394399bb672adaef7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/packet.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/packet.out",
+      "bytes": 429,
+      "sha256": "557782b69f79be2f4a16dc28f07d44b22784e0485e5f8f361bd6d48a30eb2a4b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/replay.py",
+      "bytes": 779,
+      "sha256": "225cfaa14d52850a0d4d46935b7842d01cd481914f3a3e9d4408292e83d695a0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/manifest.json",
+      "bytes": 604,
+      "sha256": "356a31ea3b2f3f357ae1cbcc041792e266798704ed996f9c7b988509a66fb106"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/README.md",
+      "bytes": 1690,
+      "sha256": "eb4df2dbc1852376551b21dfcd7d131486bc98754932a9b82b144f61deb92809"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/RESEARCH.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/RESEARCH.md",
+      "bytes": 8797,
+      "sha256": "d51b79e17a3b102497fd6c8e6c2cb2c748c12b4e28c80e4b03c8250ad2bc50db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/SOURCES.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/SOURCES.json",
+      "bytes": 2949,
+      "sha256": "f30d3193e5abd574e9906b86ec915f15d8cdb4962d2102231cb6c145088ce31a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/check.py",
+      "bytes": 4906,
+      "sha256": "cbb1e50a358328e0b9206b9c8626ef842435757f1b1c3177e4d707aff3ccc1dc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/inputs/inherited/INHERITED_BOLZA_EXCERPT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/inputs/inherited/INHERITED_BOLZA_EXCERPT.md",
+      "bytes": 2864,
+      "sha256": "3f38131b658e72632444fb7a4cc9e090e43686fbb0aff852a7cfdf7993b8b7ab"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/inputs/inherited/session52-RESEARCH.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/inputs/inherited/session52-RESEARCH.md",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/rejections.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/rejections.normal.json",
+      "bytes": 426,
+      "sha256": "2bd9a7044f3040faacdd85224a7bfd162eafd752703ff8c458ba806b28925863"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/rejections.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/rejections.optimized.json",
+      "bytes": 426,
+      "sha256": "2bd9a7044f3040faacdd85224a7bfd162eafd752703ff8c458ba806b28925863"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/results.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/results.normal.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/results.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/results.optimized.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/test_rejections.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/test_rejections.py",
+      "bytes": 1267,
+      "sha256": "e60cdb318ec69297dae20c878348c83d8bb79d3c1515df332e41b33033f276be"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/verify_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/verify_manifest.py",
+      "bytes": 1211,
+      "sha256": "dffad16bf1426d96f4dcffcf4b8d2e138915cd006db4cc62548b3c326a8d83cd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/MANIFEST.json",
+      "bytes": 1862,
+      "sha256": "66465399d9a82a4ec9afc661fc4cb93502b2f632157d08ebf4a1366f21b16eba"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/AUDIT.md",
+      "bytes": 8394,
+      "sha256": "eeb859709a373c3d8c7cefde7f86057e0ef6588ced1528a4cc203c5dbb6c03f4"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audit_closed_packet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audit_closed_packet.py",
+      "bytes": 1770,
+      "sha256": "efef82f2d0376421fa8735ce046d664fca4bea665ec1a45af45f0c2ce5e4c216"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audit_small_discriminants.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audit_small_discriminants.py",
+      "bytes": 1290,
+      "sha256": "e6457c1552bc32129ebf311bf0918ca42265ffa39c80d61c89a07dd4bf9219c3"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audited-producer-hashes.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audited-producer-hashes.txt",
+      "bytes": 302,
+      "sha256": "5c95df092b19a36374da2c3b15ffe4fa68b4cc1fb59663fdfe2b0bceb78f3fe6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/closed-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/closed-replay.json",
+      "bytes": 1278,
+      "sha256": "08af11da86d92dfc29ceccf8dcbf3bf8c27971da886fd0a1e65bbf5d2a1b4b3e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/forms.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/forms.normal.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/forms.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/forms.optimized.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/hostiles.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/hostiles.json",
+      "bytes": 1055,
+      "sha256": "fc356cc34589067c6b3f0cd38aeea0110cd1ad1180b5cb9e99fc91ba20bbf787"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/hostiles.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/hostiles.py",
+      "bytes": 1281,
+      "sha256": "64d1f8a64f081cc5dc286a34ffbf63c5242f9a597fc3f3a680ce586d88c3df70"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.normal.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.optimized.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.py",
+      "bytes": 1744,
+      "sha256": "1fe7d737300d3a2a9f48b72a787686ee6d6a21ebc6e15a9e1d651d7ab006ce3b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/inputs/producer-results.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/inputs/producer-results.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/nested-extra.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/nested-extra.json",
+      "bytes": 308,
+      "sha256": "8d933af7179ccee2c316ca88de67abbc64237abdd91e12b520c34fe3b071c2d6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/publication-closed-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/publication-closed-replay.json",
+      "bytes": 1475,
+      "sha256": "6f49a5fc4b65d2f965d2176a7e648adcf1971e87998ede811c0881d8c3a96085"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/publication-independent-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/publication-independent-replay.json",
+      "bytes": 381,
+      "sha256": "c89b6273eb7ce1d0436e2666575fd390470ae20e9ac91626fa0d43b5b06e3dbc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/replay.new.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/replay.new.normal.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/replay.new.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/replay.new.optimized.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/source-equivalence.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/source-equivalence.json",
+      "bytes": 1956,
+      "sha256": "52a63d23cc4d32770beb2c8a0e705afb94180b25712b796b82d87c7a82f1949b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/sources/REFERENCE_NOTES.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/sources/REFERENCE_NOTES.md",
+      "bytes": 1648,
+      "sha256": "9466de99e06d697fe75ce47e0d8a59436423dce7c5cd34229e4073ed606d82df"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/verify_audit_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/verify_audit_manifest.py",
+      "bytes": 459,
+      "sha256": "3d3d6bd32573460bc4b84600b4659688cc67063927177e9bccb35f986c77b51b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/MANIFEST.json",
+      "bytes": 2320,
+      "sha256": "1f1afa53bf9846f1128a1fd8d6a85cb00ac944d5e82b32fb185835ada6f35dc2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-root/first/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/README.md",
+      "bytes": 4539,
+      "sha256": "4b71d44decbfe5329482c49a886a9b2535592399634e44b527c43de6c008569b"
+    }
+  ]
+}

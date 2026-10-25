@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-10-25",
+  "sources": [
+    {
+      "title": "Computing the endomorphism ring of an elliptic curve over a number field",
+      "authors": "John E. Cremona and Andrew V. Sutherland",
+      "url": "https://lucant.org/papers/2023/230123-Cremona.pdf",
+      "version": "LuCaNT Version 2, 30 June 2023",
+      "locator": "Section 2.3, action of complex conjugation and Galois group description",
+      "used": "The ring class Galois group is the generalized dihedral group of the ideal class group. Complex conjugation sends an ideal-class singular modulus to the inverse-class singular modulus; all conjugates real iff class group exponent at most two.",
+      "not_used": "No purported completeness of abelian-discriminant tables is used. No GRH algorithm or heuristic running-time claim is used.",
+      "private_research_snapshot_sha256": "2037856cfc69c7db0703ef3a18e34631767eea9171d6a05f41ba090cca470d7a",
+      "publication_status": "Bibliographic provenance only. The third-party article is not redistributed and is not a runtime dependency."
+    },
+    {
+      "title": "Rational Products of Singular Moduli",
+      "authors": "Yuri Bilu, Florian Luca, Amalia Pizarro-Madariaga",
+      "url": "https://arxiv.org/pdf/1410.1806",
+      "version": "arXiv:1410.1806v2, 29 July 2015",
+      "locator": "Opening formula; Proposition 2.1; Proposition 2.5; Table 2, discriminant -15",
+      "used": "Singular moduli are algebraic integers of degree the order class number. Primitive reduced forms parameterize all conjugates. The absolute difference between |j(tau)| and exp(2*pi*Im(tau)) is at most 2079 on the fundamental domain. H_-15(X)=X^2+191025X-121287375.",
+      "not_used": "No global class-number-one or class-number-two completeness table is needed.",
+      "private_research_snapshot_sha256": "976e516695aaadcfa0b7f9be4f92a23f035fb3f1b6c58a503021d4680b951363",
+      "publication_status": "Bibliographic provenance only. The third-party article is not redistributed and is not a runtime dependency."
+    },
+    {
+      "title": "Session52 MRB, Ogg primes, and the mod-15 filter",
+      "local_path": "session52-mrb-supersingular/RESEARCH.md",
+      "locator": "Section 2, m8 -> lambda=3-2sqrt(2) -> j8000 -> CM discriminant -8",
+      "used": "Positive CM control and exact inherited AGM/lattice argument; MRB defect boundary and Bolza prior lineage.",
+      "snapshot": "inputs/inherited/session52-RESEARCH.md",
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "title": "Inherited Bolza excerpt",
+      "local_path": "session52-mrb-supersingular/INHERITED_BOLZA_EXCERPT.md",
+      "locator": "THM-4012 Sections 5.1-5.2",
+      "used": "The j8000 CM elliptic factor is inherited, not newly discovered.",
+      "snapshot": "inputs/inherited/INHERITED_BOLZA_EXCERPT.md",
+      "sha256": "3f38131b658e72632444fb7a4cc9e090e43686fbb0aff852a7cfdf7993b8b7ab"
+    }
+  ]
+}

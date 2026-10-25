@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "mapped_files": 70,
+  "summary_links": [
+    "dismissed-atlas/REPORT.md",
+    "cross-base-fractal/REPORT.md",
+    "audit-cross-base/REPORT.md",
+    "tangent-cm/RESEARCH.md",
+    "audit-tangent-cm/AUDIT.md"
+  ],
+  "atlas_slices": 11,
+  "source_equivalence_files": 10,
+  "no_article_payload": true,
+  "navigation_delta": 15,
+  "navigation_lines": 450,
+  "packet_pins": {
+    "dismissed-atlas": "0a9ff22a2bf5a211695aae86070853f021332c99dfa3b0cdfe3edbcefbe88393",
+    "cross-base-fractal": "92db3b170771188fac5c9d55faec8c4c5d18e4fc8f34d93c74b78abfd0794e95",
+    "audit-cross-base": "356a31ea3b2f3f357ae1cbcc041792e266798704ed996f9c7b988509a66fb106",
+    "tangent-cm": "66465399d9a82a4ec9afc661fc4cb93502b2f632157d08ebf4a1366f21b16eba",
+    "audit-tangent-cm": "1f1afa53bf9846f1128a1fd8d6a85cb00ac944d5e82b32fb185835ada6f35dc2"
+  }
+}

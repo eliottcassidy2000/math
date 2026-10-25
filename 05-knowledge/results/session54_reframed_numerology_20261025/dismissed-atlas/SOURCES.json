@@ -1,0 +1,116 @@
+{
+  "historical_checkout_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03",
+  "extraction": "Exact UTF-8 source line slices; source_sha256 hashes the entire original file. Snapshot hashes and line ranges permit verification without transporting the huge mistakes ledger. Frozen publication files retain their original source paths and full-file hashes; they are not claimed to belong to historical_checkout_head.",
+  "sources": [
+    {
+      "key": "repunit-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 19727,
+      "line_end": 19740,
+      "snapshot": "sources/repunit-correction.txt",
+      "snapshot_sha256": "7edfefa68324b1805b4fe877520a1d9c795e30a2b5f7e77b4fc7a220d898ba4b",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "paley-modular-correction",
+      "original_path": "session50-publication/clean-repo/07-reflections/the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md",
+      "source_sha256": "f5368f1695aff406178f8ce9577c76d400d7bc9a26c80c321012646860d6fb98",
+      "line_start": 1,
+      "line_end": 65,
+      "snapshot": "sources/paley-modular-correction.txt",
+      "snapshot_sha256": "88b55b735a825520645c6053ab55fe913b383c3031ea83975a319a301832bacc",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "collatz-paley-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 3459,
+      "line_end": 3464,
+      "snapshot": "sources/collatz-paley-correction.txt",
+      "snapshot_sha256": "29c57ae70cc4cffe932f165b46ddcd0d79d21e21b7b30bfb3f751aabc501a576",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "fifteen-mrb-collatz",
+      "original_path": "session50-publication/clean-repo/05-knowledge/results/signature_axis_cat_map_rr_mrb_20261022.md",
+      "source_sha256": "d12dbdb162d3c19f1182a898bf746deac0276a1629efb56680221e70564d3f08",
+      "line_start": 105,
+      "line_end": 144,
+      "snapshot": "sources/fifteen-mrb-collatz.txt",
+      "snapshot_sha256": "eb50006c0c385747dcde3e470c55a38bc24ac1f2cadf4f9276f46b18d1617df6",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "lattice-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 19741,
+      "line_end": 19770,
+      "snapshot": "sources/lattice-correction.txt",
+      "snapshot_sha256": "ac142bca93f4cc1141fc00e839d3ab759267de49a2cf597221ff89571ddb2fb2",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "self-converse-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 15653,
+      "line_end": 15677,
+      "snapshot": "sources/self-converse-correction.txt",
+      "snapshot_sha256": "cb9eb46cf8b79666992e8e2d0d8a6afe54ee836e26f36e38280778f0c3b97157",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "pascal-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 11740,
+      "line_end": 11768,
+      "snapshot": "sources/pascal-correction.txt",
+      "snapshot_sha256": "cea57395be50b36de201d217f37cb019f7194c4f7cde4a998834b1d48178f3eb",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "catalan-correction",
+      "original_path": "session50-publication/clean-repo/01-canon/MISTAKES.md",
+      "source_sha256": "84bdabd592153a40d257cd2a08b945b7484036ed6ce671de2346768970d62b0c",
+      "line_start": 2595,
+      "line_end": 2610,
+      "snapshot": "sources/catalan-correction.txt",
+      "snapshot_sha256": "f592d1e2b4e664428467f4d9db5cbaf8268380fbb0807a6b5aade2d8c6eff8e6",
+      "source_head": "bbe2ae278aeabdf707fdfca3c1bf0d3208564b03"
+    },
+    {
+      "key": "session52-mrb",
+      "original_path": "session52-publication/frozen-final/05-knowledge/results/session52_saturation_residues_metagraph_20261024/mrb-supersingular/RESEARCH.md",
+      "source_sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+      "line_start": 1,
+      "line_end": 319,
+      "snapshot": "sources/session52-mrb.txt",
+      "snapshot_sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+      "source_head": null
+    },
+    {
+      "key": "session52-summary",
+      "original_path": "session52-publication/frozen-final/05-knowledge/results/session52_saturation_residues_metagraph_20261024/README.md",
+      "source_sha256": "2f50f01b956b30fd0dc06d266cc8007b495c1536e99bee830db466a0e42ca74f",
+      "line_start": 1,
+      "line_end": 120,
+      "snapshot": "sources/session52-summary.txt",
+      "snapshot_sha256": "ac317948da12bf683dc30ba746254e748d409c321668eabff47430ef3be06943",
+      "source_head": null
+    },
+    {
+      "key": "session53-summary",
+      "original_path": "session53-publication/frozen-final/05-knowledge/results/session53_g27_collatz_cooper_20261024/README.md",
+      "source_sha256": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439",
+      "line_start": 1,
+      "line_end": 300,
+      "snapshot": "sources/session53-summary.txt",
+      "snapshot_sha256": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439",
+      "source_head": null
+    }
+  ]
+}

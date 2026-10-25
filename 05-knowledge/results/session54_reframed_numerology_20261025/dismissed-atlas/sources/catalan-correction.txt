@@ -1,0 +1,16 @@
+  - "(ii) is sharp" is sharp only up to an additive constant.
+  - `k_inf/D → 1` was placed inside a PROVED item; it is NUMERICAL.
+  - The HYP-9240 sufficient condition needed `excess < s_0/2`, not `< ⌈s_0/2⌉`.
+- **Numbers.** The fair-bit absorption figures (0.18 / 0.53 / 0.72; "shortest pattern 9") are for unconstrained bits. The length-9 pattern starts with an even bit, impossible after a two-run.
+  - Realisable values: ρ_1 = 0.172, 0.519 and ρ_2 = 0.184, 0.529 at s = 100, 1000.
+- **THM-4602.**
+  - Statements (1), (2), (3)(a)–(b) are themselves KNOWN (Babai–Cameron 2000; Gunderson–Semeraro 2017; arXiv:2204.10775), not just their ingredients.
+  - Positive real friezes are a slice `p_(i,i+1) = p_(1n) = 1` of the totally positive part, not the whole part.
+  - Any ordering of P^1(F_p) gives the Paley class. What the Singer ordering adds is closure as a frieze.
+  - Constant quiddities cover at most (p+1)/2 points; the parabolic −2 covers p.
+  - "Paley = finite-field totally positive tournament" is an ANALOGY. The counterpart of total positivity is a transitive subtournament of size ≤ tt(QR_p) + 1.
+- **Catalan.** The "dictionary" between THM-438 and Conway–Coxeter friezes reused the plane-tree mechanism retracted in MISTAKE-060/061: THM-438's C_k is a signed Möbius sum over even-series patterns. It is now a NUMERICAL COINCIDENCE.
+- **HYP-9241.** First filed as a "Karlin–McGregor / total-positivity law". The data show independent pair events instead: `q_2 = q_01 q_12 q_02` within 3%, whereas Karlin–McGregor would give π/4 for Brownian walkers. Renamed to the pair-independence product law.
+- **Reusable rules.**
+  - Measure certificate depths from a stated origin (run end vs time j) and test the earliest example.
+  - Before asserting that a transition cannot occur, check both orbits' long runs, not only the source's.

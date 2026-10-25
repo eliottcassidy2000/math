@@ -1,0 +1,77 @@
+{
+  "Frostman_precision_through": 14,
+  "binomial_square_coefficients_through": 120,
+  "finite_survivors_through_2000": [
+    [
+      0,
+      1,
+      13
+    ],
+    [
+      0,
+      1,
+      2,
+      7,
+      13
+    ]
+  ],
+  "independent_digit_enumeration_and_BSGS": [
+    [
+      1,
+      6,
+      [
+        2,
+        4,
+        4
+      ]
+    ],
+    [
+      2,
+      54,
+      [
+        6,
+        18,
+        24
+      ]
+    ],
+    [
+      3,
+      486,
+      [
+        18,
+        72,
+        126
+      ]
+    ],
+    [
+      4,
+      4374,
+      [
+        54,
+        270,
+        594
+      ]
+    ],
+    [
+      5,
+      39366,
+      [
+        162,
+        972,
+        2592
+      ]
+    ],
+    [
+      6,
+      354294,
+      [
+        486,
+        3402,
+        10692
+      ]
+    ]
+  ],
+  "interval_constant_K_through": 100000,
+  "negative_and_positive_similarity": true,
+  "status": "PASS"
+}

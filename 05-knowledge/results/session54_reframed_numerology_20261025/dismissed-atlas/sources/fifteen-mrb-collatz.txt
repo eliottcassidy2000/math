@@ -1,0 +1,39 @@
+
+So the definite product (a one-dimensional positive-definite Jacobi theta) and the indefinite Hecke sum are the Euclidean and Lorentzian faces of the same identity family.
+
+## 5. The supplied MRB documents (data; checked, `mrb_checks.out`)
+
+* **Finite irrationality theorem ("alternating roots").** The trace argument is correct. Each `n^(1/n)`, `n ≥ 2`, has trace 0 in `L_N`, so a rational `S_N` would equal 0 or −1. The bounds hold: `S_5 = 0.0064479 > 1/200`, the minimum odd partial sum for `5 ≤ N ≤ 59` is `S_5` (`S_3 = −0.0280` is lower), and the minimum even partial sum is 0.2239 (at `N = 58`). As the document itself says, this does not reach the limit.
+* **Prime-defect theorem ("prime persistence").**
+  * The defect `D_p` was computed numerically for `p = 3, 5, 7, 11, 101, 211`. `|D_p + 4πi log2/(p−1)|` lies within the stated bound `(30 log p + 661)/p²` in every case.
+  * `D_p` has a nonzero real part coming from the remainder (`0.0067` at `p = 101`).
+  * The paper's own caveat stands: a Galois conjugate need not be continuous in the real embedding.
+  * Typed ANALOGY with modular data: Galois symmetry of modular tensor categories (Coste–Gannon) acts through `Gal(Q(ζ_N)/Q)` on S-matrix entries. The MRB defect uses Kummer automorphisms that fix every root of unity and move radicals. These are complementary directions in `Q(μ_∞, radicals)`. No theorem is claimed.
+* **Ising rings.**
+  * The identity `C_MRB = Σ[(g_(n,−)/2)^(1/n) − (g_(n,+)/2)^(1/n)]` is exact.
+  * The periodic and antiperiodic rings are two spin structures on the circle. Under `SL2(Z)`, the three even torus spin structures are cyclically permuted by the cat map with period `π(2) = 3`. That is the same period the Ising category's `C` has (HYP-9372 (c)).
+  * At the special coupling `e^(−2K) = √5` (`K = −ln5/4`, antiferromagnetic), the transfer-matrix eigenvalue ratio is `(1−√5)/(1+√5) = −1/φ²`. The normalised partition functions `e^(−nK)·Z` of the periodic and antiperiodic rings become `2^n L_n` and `2^n √5 F_n`: Lucas and Fibonacci. The unnormalised `Z` carries an extra `5^(−n/4)`; the audit checked this exactly in `Q(√5)` for `n ≤ 20`.
+
+## 6. The Collatz abstract (data; checked)
+
+The abstract claims a complete proof. Its parametrisation `N = a·2^n − 2` with `a` odd is the trailing-ones (Mersenne-line) coordinate `N/2 = a·2^(n−1) − 1`; see the repo's Mersenne-line work, S21.
+
+Its key mechanism is that the "15 mod 16" run turns into a "huge factor `2^k`" at the vertical maximum. This is false in general:
+* starting from `2^k − 1`, `k` rising steps reach `3^k − 1`;
+* by lifting the exponent, `v_2(3^k − 1) = 1` for odd `k` and `2 + v_2(k)` for even `k` (`mrb_checks.out`, `k = 2..12`).
+
+So `15 = 2⁴ − 1 → 80 = 2⁴·5` is the unique coincidence `v_2 = k` with `k ≥ 2` (`k = 1` gives `1 → 2`); already `31 → 242 = 2·121`. The audit checked the valuation law for all `k ≤ 2000`. The abstract's "100%" blocking of divergence therefore does not follow. Session31 audits a supplied Collatz contraction proof separately.
+
+## 7. The "15"s
+
+* No base has Fibonacci period 15 (§1).
+* 15 = `6/c_eff` of Lee–Yang (§4).
+* The cat map's projective order is 15 for exactly 12 census entries: `M(3,5)`, `M(3,11)`, `M(4,5)`, `M(4,11)`, `M(5,11)`, `SU(2)_3`, `SU(2)_9`, `SU(2)_20`, `SU(2)_29`, `SU(2)_59`, `SU(2)_60` and `D(Z_22)` (THM-4762 census; the pre-audit list had five).
+* The supersingular primes (Ogg), Mazur's 15 torsion groups, the 15 pentagon tilings and the Conway–Schneeberger theorem have no map to the objects here. They were not pursued: NUMEROLOGY.
+
+## 8. Next questions
+
+* Is faithfulness modulo the centre (HYP-9372 (b), one-directional) a theorem for every modular data without an Ising-type factor?
+* Beyond `W(p)` and `W(p,p')`, where FGST give the structure: is there a `C2`-cofinite VOA with `K ≥ 3`, and does its graded piece `R_K` have finite image (HYP-9373)?
+* Is there a mock-modular (indefinite) analogue of THM-4763? Completions of mock theta functions carry non-semisimple `SL2(Z)` actions through Eichler integrals. Do hyperbolic elements then grow like a power of the dilatation?
+* Is there a twisted (Kummer) analogue of the Galois action on modular data that sees the MRB defect?

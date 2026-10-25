@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "independent_multiplication_matrices": [
+    {
+      "n": 3,
+      "degree": 1,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 4,
+      "degree": 1,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 5,
+      "degree": 2,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 6,
+      "degree": 1,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 7,
+      "degree": 3,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 8,
+      "degree": 2,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 9,
+      "degree": 3,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 10,
+      "degree": 2,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 12,
+      "degree": 2,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 13,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 14,
+      "degree": 3,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 15,
+      "degree": 4,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 16,
+      "degree": 4,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 18,
+      "degree": 3,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 20,
+      "degree": 4,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 21,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 24,
+      "degree": 4,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 26,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 28,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 30,
+      "degree": 4,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 36,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 40,
+      "degree": 8,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 42,
+      "degree": 6,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 48,
+      "degree": 8,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 56,
+      "degree": 12,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 60,
+      "degree": 8,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 72,
+      "degree": 12,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 84,
+      "degree": 12,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 120,
+      "degree": 16,
+      "multiplication_charpoly_matches": true
+    },
+    {
+      "n": 168,
+      "degree": 24,
+      "multiplication_charpoly_matches": true
+    }
+  ],
+  "group_brute_limit": 5000,
+  "symbolic_legendre": true
+}

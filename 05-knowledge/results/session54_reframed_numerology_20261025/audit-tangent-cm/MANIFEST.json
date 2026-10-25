@@ -1,0 +1,27 @@
+{
+  "scope": "Text-only publication edition of independent tangent-Legendre CM audit. Third-party sources are bibliographic provenance only.",
+  "private_original_manifest_sha256": "625bbd2a6e91557ce7a1438e960b5b2ca38ec0e49bf5213be6a07f7b821a10a0",
+  "files": {
+    "AUDIT.md": "eeb859709a373c3d8c7cefde7f86057e0ef6588ced1528a4cc203c5dbb6c03f4",
+    "audit_closed_packet.py": "efef82f2d0376421fa8735ce046d664fca4bea665ec1a45af45f0c2ce5e4c216",
+    "audit_small_discriminants.py": "e6457c1552bc32129ebf311bf0918ca42265ffa39c80d61c89a07dd4bf9219c3",
+    "audited-producer-hashes.txt": "5c95df092b19a36374da2c3b15ffe4fa68b4cc1fb59663fdfe2b0bceb78f3fe6",
+    "closed-replay.json": "08af11da86d92dfc29ceccf8dcbf3bf8c27971da886fd0a1e65bbf5d2a1b4b3e",
+    "forms.normal.json": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e",
+    "forms.optimized.json": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e",
+    "hostiles.json": "fc356cc34589067c6b3f0cd38aeea0110cd1ad1180b5cb9e99fc91ba20bbf787",
+    "hostiles.py": "64d1f8a64f081cc5dc286a34ffbf63c5242f9a597fc3f3a680ce586d88c3df70",
+    "independent.normal.json": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419",
+    "independent.optimized.json": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419",
+    "independent.py": "1fe7d737300d3a2a9f48b72a787686ee6d6a21ebc6e15a9e1d651d7ab006ce3b",
+    "inputs/producer-results.json": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5",
+    "nested-extra.json": "8d933af7179ccee2c316ca88de67abbc64237abdd91e12b520c34fe3b071c2d6",
+    "publication-closed-replay.json": "6f49a5fc4b65d2f965d2176a7e648adcf1971e87998ede811c0881d8c3a96085",
+    "publication-independent-replay.json": "c89b6273eb7ce1d0436e2666575fd390470ae20e9ac91626fa0d43b5b06e3dbc",
+    "replay.new.normal.json": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5",
+    "replay.new.optimized.json": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5",
+    "source-equivalence.json": "52a63d23cc4d32770beb2c8a0e705afb94180b25712b796b82d87c7a82f1949b",
+    "sources/REFERENCE_NOTES.md": "9466de99e06d697fe75ce47e0d8a59436423dce7c5cd34229e4073ed606d82df",
+    "verify_audit_manifest.py": "3d3d6bd32573460bc4b84600b4659688cc67063927177e9bccb35f986c77b51b"
+  }
+}

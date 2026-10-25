@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "independent.py normal/-O exact match to original receipts",
+    "audit_small_discriminants.py normal/-O exact match to original receipts",
+    "hostiles.py all8 independent mutations rejected and exact match to original receipts"
+  ],
+  "original_audit_manifest_sha256": "625bbd2a6e91557ce7a1438e960b5b2ca38ec0e49bf5213be6a07f7b821a10a0"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "optimized": false,
+    "nested_extra": "REJECTED",
+    "reason": "RuntimeError: file set mismatch: missing=[] extra=['inputs/extra.json']"
+  },
+  {
+    "optimized": true,
+    "nested_extra": "REJECTED",
+    "reason": "RuntimeError: file set mismatch: missing=[] extra=['inputs/extra.json']"
+  }
+]

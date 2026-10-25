@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "REPORT.md": "5a7661deada644acab045642223a20a21757d10fd49828365adcec151c197fad",
+    "SOURCES.json": "07a0a8cc25d21917b3164dea8d6649f9facff109fdfda881c642c04ef35c8b9d",
+    "sources/catalan-correction.txt": "f592d1e2b4e664428467f4d9db5cbaf8268380fbb0807a6b5aade2d8c6eff8e6",
+    "sources/collatz-paley-correction.txt": "29c57ae70cc4cffe932f165b46ddcd0d79d21e21b7b30bfb3f751aabc501a576",
+    "sources/fifteen-mrb-collatz.txt": "eb50006c0c385747dcde3e470c55a38bc24ac1f2cadf4f9276f46b18d1617df6",
+    "sources/lattice-correction.txt": "ac142bca93f4cc1141fc00e839d3ab759267de49a2cf597221ff89571ddb2fb2",
+    "sources/paley-modular-correction.txt": "88b55b735a825520645c6053ab55fe913b383c3031ea83975a319a301832bacc",
+    "sources/pascal-correction.txt": "cea57395be50b36de201d217f37cb019f7194c4f7cde4a998834b1d48178f3eb",
+    "sources/repunit-correction.txt": "7edfefa68324b1805b4fe877520a1d9c795e30a2b5f7e77b4fc7a220d898ba4b",
+    "sources/self-converse-correction.txt": "cb9eb46cf8b79666992e8e2d0d8a6afe54ee836e26f36e38280778f0c3b97157",
+    "sources/session52-mrb.txt": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+    "sources/session52-summary.txt": "ac317948da12bf683dc30ba746254e748d409c321668eabff47430ef3be06943",
+    "sources/session53-summary.txt": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "actual_coefficients_through": 4096,
+  "direct_rows": [
+    {
+      "counts_b0_b1_b2": [
+        2,
+        4,
+        4
+      ],
+      "period": 6,
+      "r": 1
+    },
+    {
+      "counts_b0_b1_b2": [
+        6,
+        18,
+        24
+      ],
+      "period": 54,
+      "r": 2
+    },
+    {
+      "counts_b0_b1_b2": [
+        18,
+        72,
+        126
+      ],
+      "period": 486,
+      "r": 3
+    },
+    {
+      "counts_b0_b1_b2": [
+        54,
+        270,
+        594
+      ],
+      "period": 4374,
+      "r": 4
+    },
+    {
+      "counts_b0_b1_b2": [
+        162,
+        972,
+        2592
+      ],
+      "period": 39366,
+      "r": 5
+    }
+  ],
+  "full_integer_exponents_through_2000": [
+    [
+      0,
+      1,
+      13
+    ],
+    [
+      0,
+      1,
+      2,
+      7,
+      13
+    ]
+  ],
+  "holdout_counts": [
+    39366,
+    433026
+  ],
+  "holdout_r": 10,
+  "hostile_controls": 6,
+  "status": "PASS finite tests, infinite claims proved separately"
+}
