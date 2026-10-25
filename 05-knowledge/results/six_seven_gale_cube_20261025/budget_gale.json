@@ -1,0 +1,106 @@
+{
+  "gates": 305,
+  "matroid_compatible": 8,
+  "projective_matches": [
+    [
+      5,
+      2,
+      1,
+      4,
+      3,
+      0
+    ],
+    [
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  ],
+  "square_root_thresholds": [
+    {
+      "canonical_coefficient": 0,
+      "canonical_sections": 1,
+      "d": 1,
+      "degree": 4,
+      "n": 4,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 1,
+      "canonical_sections": 5,
+      "d": 1,
+      "degree": 8,
+      "n": 5,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 0,
+      "canonical_sections": 1,
+      "d": 2,
+      "degree": 8,
+      "n": 6,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 1,
+      "canonical_sections": 7,
+      "d": 2,
+      "degree": 16,
+      "n": 7,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 0,
+      "canonical_sections": 1,
+      "d": 3,
+      "degree": 16,
+      "n": 8,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 1,
+      "canonical_sections": 9,
+      "d": 3,
+      "degree": 32,
+      "n": 9,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 0,
+      "canonical_sections": 1,
+      "d": 4,
+      "degree": 32,
+      "n": 10,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 1,
+      "canonical_sections": 11,
+      "d": 4,
+      "degree": 64,
+      "n": 11,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 0,
+      "canonical_sections": 1,
+      "d": 5,
+      "degree": 64,
+      "n": 12,
+      "r": 2
+    },
+    {
+      "canonical_coefficient": 1,
+      "canonical_sections": 13,
+      "d": 5,
+      "degree": 128,
+      "n": 13,
+      "r": 2
+    }
+  ],
+  "status": "PASS",
+  "universe": "d=1..5,r=2..5,d+2<=n<=2d+5; symbolic u,v; all720 permutations at u=v=1"
+}
