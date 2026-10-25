@@ -1,0 +1,825 @@
+{
+  "status": "PASS",
+  "method": "adjacent-generator signed-orbit BFS plus independent permutation signs",
+  "census": [
+    {
+      "n": 0,
+      "graph_types": 1,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 0,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 0,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 1,
+      "graph_types": 1,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 1,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 2,
+      "graph_types": 2,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 0,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 0,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 3,
+      "graph_types": 4,
+      "royle_even": 2,
+      "even_edge_royle_even": 2,
+      "rank": 2,
+      "connected_royle_even": 1,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 4,
+      "graph_types": 11,
+      "royle_even": 4,
+      "even_edge_royle_even": 3,
+      "rank": 3,
+      "connected_royle_even": 2,
+      "connected_odd_edge_royle_even": 1,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 5,
+      "graph_types": 34,
+      "royle_even": 12,
+      "even_edge_royle_even": 10,
+      "rank": 10,
+      "connected_royle_even": 8,
+      "connected_odd_edge_royle_even": 1,
+      "connected_nonzero_alpha": 7,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 6,
+      "graph_types": 156,
+      "royle_even": 56,
+      "even_edge_royle_even": 34,
+      "rank": 32,
+      "connected_royle_even": 43,
+      "connected_odd_edge_royle_even": 20,
+      "connected_nonzero_alpha": 21,
+      "connected_even_edge_zero_alpha": 2
+    }
+  ],
+  "series": {
+    "T": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12,
+      56
+    ],
+    "D": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      8,
+      12
+    ],
+    "C": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      34
+    ],
+    "R": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      32
+    ],
+    "K": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  },
+  "royle_even_types": [
+    {
+      "n": 0,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 1
+    },
+    {
+      "n": 1,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": true,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 1
+    },
+    {
+      "n": 2,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 2
+    },
+    {
+      "n": 3,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 6
+    },
+    {
+      "n": 3,
+      "mask": 3,
+      "edge_count": 2,
+      "connected": true,
+      "alpha": "1/3",
+      "orbit_size": 3,
+      "automorphisms": 2
+    },
+    {
+      "n": 4,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 24
+    },
+    {
+      "n": 4,
+      "mask": 3,
+      "edge_count": 2,
+      "connected": false,
+      "alpha": "1/3",
+      "orbit_size": 12,
+      "automorphisms": 2
+    },
+    {
+      "n": 4,
+      "mask": 7,
+      "edge_count": 3,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 4,
+      "automorphisms": 6
+    },
+    {
+      "n": 4,
+      "mask": 30,
+      "edge_count": 4,
+      "connected": true,
+      "alpha": "1/3",
+      "orbit_size": 3,
+      "automorphisms": 8
+    },
+    {
+      "n": 5,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 120
+    },
+    {
+      "n": 5,
+      "mask": 3,
+      "edge_count": 2,
+      "connected": false,
+      "alpha": "1/3",
+      "orbit_size": 30,
+      "automorphisms": 4
+    },
+    {
+      "n": 5,
+      "mask": 7,
+      "edge_count": 3,
+      "connected": false,
+      "alpha": "0",
+      "orbit_size": 20,
+      "automorphisms": 6
+    },
+    {
+      "n": 5,
+      "mask": 15,
+      "edge_count": 4,
+      "connected": true,
+      "alpha": "1/5",
+      "orbit_size": 5,
+      "automorphisms": 24
+    },
+    {
+      "n": 5,
+      "mask": 29,
+      "edge_count": 4,
+      "connected": true,
+      "alpha": "-1/15",
+      "orbit_size": 60,
+      "automorphisms": 2
+    },
+    {
+      "n": 5,
+      "mask": 54,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "1/3",
+      "orbit_size": 15,
+      "automorphisms": 8
+    },
+    {
+      "n": 5,
+      "mask": 58,
+      "edge_count": 4,
+      "connected": true,
+      "alpha": "2/15",
+      "orbit_size": 60,
+      "automorphisms": 2
+    },
+    {
+      "n": 5,
+      "mask": 62,
+      "edge_count": 5,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 60,
+      "automorphisms": 2
+    },
+    {
+      "n": 5,
+      "mask": 63,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 60,
+      "automorphisms": 2
+    },
+    {
+      "n": 5,
+      "mask": 126,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "1/5",
+      "orbit_size": 10,
+      "automorphisms": 12
+    },
+    {
+      "n": 5,
+      "mask": 221,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "-1/15",
+      "orbit_size": 60,
+      "automorphisms": 2
+    },
+    {
+      "n": 5,
+      "mask": 495,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 15,
+      "automorphisms": 8
+    },
+    {
+      "n": 6,
+      "mask": 0,
+      "edge_count": 0,
+      "connected": false,
+      "alpha": "1",
+      "orbit_size": 1,
+      "automorphisms": 720
+    },
+    {
+      "n": 6,
+      "mask": 3,
+      "edge_count": 2,
+      "connected": false,
+      "alpha": "1/3",
+      "orbit_size": 60,
+      "automorphisms": 12
+    },
+    {
+      "n": 6,
+      "mask": 7,
+      "edge_count": 3,
+      "connected": false,
+      "alpha": "0",
+      "orbit_size": 60,
+      "automorphisms": 12
+    },
+    {
+      "n": 6,
+      "mask": 15,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "1/5",
+      "orbit_size": 30,
+      "automorphisms": 24
+    },
+    {
+      "n": 6,
+      "mask": 31,
+      "edge_count": 5,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 6,
+      "automorphisms": 120
+    },
+    {
+      "n": 6,
+      "mask": 45,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "-1/15",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 61,
+      "edge_count": 5,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 120,
+      "automorphisms": 6
+    },
+    {
+      "n": 6,
+      "mask": 102,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "1/3",
+      "orbit_size": 45,
+      "automorphisms": 16
+    },
+    {
+      "n": 6,
+      "mask": 106,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "2/15",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 110,
+      "edge_count": 5,
+      "connected": false,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 111,
+      "edge_count": 6,
+      "connected": false,
+      "alpha": "1/15",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 120,
+      "edge_count": 4,
+      "connected": false,
+      "alpha": "1/9",
+      "orbit_size": 90,
+      "automorphisms": 8
+    },
+    {
+      "n": 6,
+      "mask": 122,
+      "edge_count": 5,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 123,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "2/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 126,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "1/9",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 127,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 238,
+      "edge_count": 6,
+      "connected": false,
+      "alpha": "1/5",
+      "orbit_size": 60,
+      "automorphisms": 12
+    },
+    {
+      "n": 6,
+      "mask": 246,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "2/45",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 254,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 120,
+      "automorphisms": 6
+    },
+    {
+      "n": 6,
+      "mask": 255,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 120,
+      "automorphisms": 6
+    },
+    {
+      "n": 6,
+      "mask": 510,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/5",
+      "orbit_size": 15,
+      "automorphisms": 48
+    },
+    {
+      "n": 6,
+      "mask": 659,
+      "edge_count": 5,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 685,
+      "edge_count": 6,
+      "connected": false,
+      "alpha": "-1/15",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 693,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "1/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 694,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "1/45",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 695,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 701,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 762,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 763,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/45",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 922,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "-1/9",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 923,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 954,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 957,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "-1/15",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 958,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "2/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 959,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1743,
+      "edge_count": 8,
+      "connected": false,
+      "alpha": "1/15",
+      "orbit_size": 90,
+      "automorphisms": 8
+    },
+    {
+      "n": 6,
+      "mask": 1749,
+      "edge_count": 7,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1751,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1759,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 90,
+      "automorphisms": 8
+    },
+    {
+      "n": 6,
+      "mask": 1781,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "-1/45",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 1789,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1880,
+      "edge_count": 6,
+      "connected": true,
+      "alpha": "2/15",
+      "orbit_size": 60,
+      "automorphisms": 12
+    },
+    {
+      "n": 6,
+      "mask": 1883,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "2/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1885,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/45",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 1887,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 1917,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 720,
+      "automorphisms": 1
+    },
+    {
+      "n": 6,
+      "mask": 2012,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 90,
+      "automorphisms": 8
+    },
+    {
+      "n": 6,
+      "mask": 2014,
+      "edge_count": 9,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 2015,
+      "edge_count": 10,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 2046,
+      "edge_count": 10,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 4063,
+      "edge_count": 11,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 60,
+      "automorphisms": 12
+    },
+    {
+      "n": 6,
+      "mask": 5941,
+      "edge_count": 8,
+      "connected": true,
+      "alpha": "-1/45",
+      "orbit_size": 180,
+      "automorphisms": 4
+    },
+    {
+      "n": 6,
+      "mask": 6011,
+      "edge_count": 10,
+      "connected": true,
+      "alpha": "-1/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 7101,
+      "edge_count": 10,
+      "connected": true,
+      "alpha": "-1/45",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 7103,
+      "edge_count": 11,
+      "connected": true,
+      "alpha": "0",
+      "orbit_size": 360,
+      "automorphisms": 2
+    },
+    {
+      "n": 6,
+      "mask": 15870,
+      "edge_count": 12,
+      "connected": true,
+      "alpha": "1/15",
+      "orbit_size": 15,
+      "automorphisms": 48
+    }
+  ]
+}

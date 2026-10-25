@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "bound": 100000,
+  "local_exponents_checked": 100,
+  "checks": [
+    "nonnegative integer closed coefficients",
+    "divisor ancestry at all n <= bound",
+    "independent rational local expansions",
+    "Euler product reconstruction at all n <= bound",
+    "H split linear cancellation"
+  ],
+  "samples": [
+    {
+      "n": 1,
+      "factorization": [],
+      "N": 0,
+      "P": 0
+    },
+    {
+      "n": 5,
+      "factorization": [
+        [
+          5,
+          1
+        ]
+      ],
+      "N": 0,
+      "P": 0
+    },
+    {
+      "n": 25,
+      "factorization": [
+        [
+          5,
+          2
+        ]
+      ],
+      "N": 0,
+      "P": 0
+    },
+    {
+      "n": 65,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "N": 4,
+      "P": 4
+    },
+    {
+      "n": 130,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "N": 4,
+      "P": 0
+    },
+    {
+      "n": 195,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "N": 4,
+      "P": 0
+    },
+    {
+      "n": 325,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "N": 15,
+      "P": 11
+    },
+    {
+      "n": 845,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "N": 15,
+      "P": 11
+    },
+    {
+      "n": 1105,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "N": 150,
+      "P": 138
+    },
+    {
+      "n": 4225,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "N": 54,
+      "P": 28
+    },
+    {
+      "n": 71825,
+      "factorization": [
+        [
+          5,
+          2
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "N": 1592,
+      "P": 730
+    }
+  ],
+  "first_nonzero": 65,
+  "sums": {
+    "N": 515553,
+    "P": 178798
+  }
+}

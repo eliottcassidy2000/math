@@ -1,0 +1,754 @@
+{
+  "connected": {
+    "all": [
+      0,
+      1,
+      0,
+      1,
+      2,
+      8,
+      43
+    ],
+    "good": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      7,
+      21
+    ],
+    "zero_even": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ],
+    "odd_edges": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      20
+    ],
+    "even_edges": [
+      0,
+      1,
+      0,
+      1,
+      1,
+      7,
+      23
+    ]
+  },
+  "direct": {
+    "T": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12,
+      56
+    ],
+    "C": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      34
+    ],
+    "R": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      32
+    ]
+  },
+  "parity_multiset_coefficients": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      34,
+      22
+    ]
+  ],
+  "records": [
+    {
+      "n": 1,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 3,
+      "mask": 3,
+      "alpha": "1/3",
+      "component_sizes": [
+        3
+      ]
+    },
+    {
+      "n": 4,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 4,
+      "mask": 3,
+      "alpha": "1/3",
+      "component_sizes": [
+        3,
+        1
+      ]
+    },
+    {
+      "n": 4,
+      "mask": 7,
+      "alpha": "0",
+      "component_sizes": [
+        4
+      ]
+    },
+    {
+      "n": 4,
+      "mask": 30,
+      "alpha": "1/3",
+      "component_sizes": [
+        4
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 3,
+      "alpha": "1/3",
+      "component_sizes": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 7,
+      "alpha": "0",
+      "component_sizes": [
+        4,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 15,
+      "alpha": "1/5",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 29,
+      "alpha": "-1/15",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 54,
+      "alpha": "1/3",
+      "component_sizes": [
+        4,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 58,
+      "alpha": "2/15",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 62,
+      "alpha": "0",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 63,
+      "alpha": "1/15",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 126,
+      "alpha": "1/5",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 221,
+      "alpha": "-1/15",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "mask": 495,
+      "alpha": "1/15",
+      "component_sizes": [
+        5
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 0,
+      "alpha": "1",
+      "component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 3,
+      "alpha": "1/3",
+      "component_sizes": [
+        3,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 7,
+      "alpha": "0",
+      "component_sizes": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 15,
+      "alpha": "1/5",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 31,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 45,
+      "alpha": "-1/15",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 61,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 102,
+      "alpha": "1/3",
+      "component_sizes": [
+        4,
+        1,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 106,
+      "alpha": "2/15",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 110,
+      "alpha": "0",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 111,
+      "alpha": "1/15",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 120,
+      "alpha": "1/9",
+      "component_sizes": [
+        3,
+        3
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 122,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 123,
+      "alpha": "2/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 126,
+      "alpha": "1/9",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 127,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 238,
+      "alpha": "1/5",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 246,
+      "alpha": "2/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 254,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 255,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 510,
+      "alpha": "1/5",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 659,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 685,
+      "alpha": "-1/15",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 693,
+      "alpha": "1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 694,
+      "alpha": "1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 695,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 701,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 762,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 763,
+      "alpha": "1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 922,
+      "alpha": "-1/9",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 923,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 954,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 957,
+      "alpha": "-1/15",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 958,
+      "alpha": "2/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 959,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1743,
+      "alpha": "1/15",
+      "component_sizes": [
+        5,
+        1
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1749,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1751,
+      "alpha": "1/15",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1759,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1781,
+      "alpha": "-1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1789,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1880,
+      "alpha": "2/15",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1883,
+      "alpha": "2/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1885,
+      "alpha": "1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1887,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 1917,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 2012,
+      "alpha": "1/15",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 2014,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 2015,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 2046,
+      "alpha": "1/15",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 4063,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 5941,
+      "alpha": "-1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 6011,
+      "alpha": "-1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 7101,
+      "alpha": "-1/45",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 7103,
+      "alpha": "0",
+      "component_sizes": [
+        6
+      ]
+    },
+    {
+      "n": 6,
+      "mask": 15870,
+      "alpha": "1/15",
+      "component_sizes": [
+        6
+      ]
+    }
+  ]
+}

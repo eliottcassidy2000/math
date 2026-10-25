@@ -1,0 +1,38 @@
+[
+  {
+    "mutation": "wrong_support_count",
+    "mode": "normal",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: support stratum size"
+  },
+  {
+    "mutation": "wrong_support_count",
+    "mode": "optimized",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: support stratum size"
+  },
+  {
+    "mutation": "wrong_gcd",
+    "mode": "normal",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: exact truncated gcd"
+  },
+  {
+    "mutation": "wrong_gcd",
+    "mode": "optimized",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: exact truncated gcd"
+  },
+  {
+    "mutation": "wrong_torus_count",
+    "mode": "normal",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: torus stratum count"
+  },
+  {
+    "mutation": "wrong_torus_count",
+    "mode": "optimized",
+    "outcome": "rejected",
+    "last_error_line": "RuntimeError: torus stratum count"
+  }
+]

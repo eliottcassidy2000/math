@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "census": [
+    {
+      "n": 0,
+      "graph_types": 1,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 0,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 0,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 1,
+      "graph_types": 1,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 1,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 2,
+      "graph_types": 2,
+      "royle_even": 1,
+      "even_edge_royle_even": 1,
+      "rank": 1,
+      "connected_royle_even": 0,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 0,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 3,
+      "graph_types": 4,
+      "royle_even": 2,
+      "even_edge_royle_even": 2,
+      "rank": 2,
+      "connected_royle_even": 1,
+      "connected_odd_edge_royle_even": 0,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 4,
+      "graph_types": 11,
+      "royle_even": 4,
+      "even_edge_royle_even": 3,
+      "rank": 3,
+      "connected_royle_even": 2,
+      "connected_odd_edge_royle_even": 1,
+      "connected_nonzero_alpha": 1,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 5,
+      "graph_types": 34,
+      "royle_even": 12,
+      "even_edge_royle_even": 10,
+      "rank": 10,
+      "connected_royle_even": 8,
+      "connected_odd_edge_royle_even": 1,
+      "connected_nonzero_alpha": 7,
+      "connected_even_edge_zero_alpha": 0
+    },
+    {
+      "n": 6,
+      "graph_types": 156,
+      "royle_even": 56,
+      "even_edge_royle_even": 34,
+      "rank": 32,
+      "connected_royle_even": 43,
+      "connected_odd_edge_royle_even": 20,
+      "connected_nonzero_alpha": 21,
+      "connected_even_edge_zero_alpha": 2
+    }
+  ],
+  "series": {
+    "T": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12,
+      56
+    ],
+    "D": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      8,
+      12
+    ],
+    "C": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      34
+    ],
+    "R": [
+      1,
+      1,
+      1,
+      2,
+      3,
+      10,
+      32
+    ],
+    "K": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2
+    ]
+  }
+}

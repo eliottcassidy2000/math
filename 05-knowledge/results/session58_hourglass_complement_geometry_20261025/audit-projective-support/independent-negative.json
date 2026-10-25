@@ -1,0 +1,14 @@
+[
+  {
+    "mode": [],
+    "exit": 1,
+    "failure_detected": true
+  },
+  {
+    "mode": [
+      "-O"
+    ],
+    "exit": 1,
+    "failure_detected": true
+  }
+]

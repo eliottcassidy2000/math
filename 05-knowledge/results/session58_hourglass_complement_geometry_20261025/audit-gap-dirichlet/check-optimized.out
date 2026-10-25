@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "bound": 5000,
+  "direct_box_count": 11,
+  "direct_triple_totals": {
+    "N": 6025,
+    "P": 2592,
+    "T": 10498,
+    "PT": 5010
+  },
+  "checks": [
+    "direct signed-orbit triple enumeration vs Euler coefficients",
+    "total and all-triple divisor ancestry",
+    "ramified/inert primitive stripping",
+    "unit correction",
+    "all-triple cubic local series through exponent 100"
+  ],
+  "samples": [
+    {
+      "n": 1,
+      "N": 0,
+      "P": 0,
+      "T": 0,
+      "PT": 0
+    },
+    {
+      "n": 5,
+      "N": 0,
+      "P": 0,
+      "T": 0,
+      "PT": 0
+    },
+    {
+      "n": 25,
+      "N": 0,
+      "P": 0,
+      "T": 0,
+      "PT": 0
+    },
+    {
+      "n": 65,
+      "N": 4,
+      "P": 4,
+      "T": 4,
+      "PT": 4
+    },
+    {
+      "n": 130,
+      "N": 4,
+      "P": 0,
+      "T": 4,
+      "PT": 0
+    },
+    {
+      "n": 195,
+      "N": 4,
+      "P": 0,
+      "T": 4,
+      "PT": 0
+    },
+    {
+      "n": 325,
+      "N": 15,
+      "P": 11,
+      "T": 35,
+      "PT": 31
+    },
+    {
+      "n": 845,
+      "N": 15,
+      "P": 11,
+      "T": 35,
+      "PT": 31
+    },
+    {
+      "n": 1105,
+      "N": 150,
+      "P": 138,
+      "T": 286,
+      "PT": 274
+    },
+    {
+      "n": 4225,
+      "N": 54,
+      "P": 28,
+      "T": 220,
+      "PT": 154
+    }
+  ]
+}

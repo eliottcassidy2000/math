@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "ell": 3,
+      "a": 1,
+      "actual_split_primes": [
+        5
+      ],
+      "center": 5,
+      "gap_count": 1,
+      "projective_points": 1,
+      "fiber_size": 1
+    },
+    {
+      "ell": 5,
+      "a": 2,
+      "actual_split_primes": [
+        5
+      ],
+      "center": 25,
+      "gap_count": 2,
+      "projective_points": 1,
+      "fiber_size": 2
+    },
+    {
+      "ell": 5,
+      "a": 2,
+      "actual_split_primes": [
+        5,
+        13
+      ],
+      "center": 4225,
+      "gap_count": 12,
+      "projective_points": 6,
+      "fiber_size": 2
+    },
+    {
+      "ell": 7,
+      "a": 3,
+      "actual_split_primes": [
+        5
+      ],
+      "center": 125,
+      "gap_count": 3,
+      "projective_points": 1,
+      "fiber_size": 3
+    },
+    {
+      "ell": 7,
+      "a": 3,
+      "actual_split_primes": [
+        5,
+        13
+      ],
+      "center": 274625,
+      "gap_count": 24,
+      "projective_points": 8,
+      "fiber_size": 3
+    }
+  ],
+  "minimal_hostile": {
+    "ell": 5,
+    "center": 25,
+    "indices": [
+      1,
+      2
+    ],
+    "gaps": [
+      600,
+      336
+    ],
+    "v5": [
+      2,
+      0
+    ],
+    "projective_point": "the unique point of P^0(F_5)"
+  }
+}

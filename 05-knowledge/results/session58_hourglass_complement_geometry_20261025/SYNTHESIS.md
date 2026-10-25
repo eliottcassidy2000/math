@@ -1,6 +1,6 @@
 # Concept board: which bridges preserve the mathematical object?
 
-Session 58, second checkpoint. Session ongoing. The organizing principle is a shared labelled carrier with an explicit consumer, not a visual or numerical analogy.
+Session 58, third and final research checkpoint. All planned research lanes are audited; publication verification is separate. The organizing principle is a shared labelled carrier with an explicit consumer, not a visual or numerical analogy.
 
 ## 1. Seven cells, five shared labels, three free values
 
@@ -108,4 +108,75 @@ Freshly resampling the tournament for each observation loses this repair. Squari
 
 ## Second-checkpoint boundary
 
-The new arithmetic and observer results extend the concept board without erasing the first checkpoint. Original SVG diagrams illustrate the exact carrier and finite quadratic repair, with independently replayable text data; PNG review previews and full external articles are excluded. The analytic Dirichlet-series wave remains pending and is not included. Session ongoing; integer-square existence, F1 descent, and RH are not closed.
+The new arithmetic and observer results extend the concept board without erasing the first checkpoint. Original SVG diagrams illustrate the exact carrier and finite quadratic repair, with independently replayable text data; PNG review previews and full external articles are excluded. At the second checkpoint the analytic Dirichlet-series wave was pending. The final additions below include its completed audit; integer-square existence, descent of the hourglass equations, and RH are not closed.
+
+## 10. Dirichlet ancestry and Delange asymptotics for necessary candidates
+
+Write N(e) for the repeated-maximum candidate count at center root e, and P(e) for its primitive count. The unique ancestry partition gives N(e)=Σ_(d|e)P(d). Thus their absolutely convergent Dirichlet series satisfy F(s)=ζ(s)G(s) for Re(s)>1. Each is a finite linear combination of explicit Euler products, NOT itself an asserted Euler product; N(1)=P(1)=0 already prevents ordinary multiplicativity. The primitive unit correction is a constant Dirichlet term, not another ζ term.
+
+For the leading component, let χ_4 be the character modulo four and define
+
+    H(s)=(1−2^(−s))^10
+         × ∏_(p≡1 mod4)(1+18p^(−s)+5p^(−2s))(1−p^(−s))^18
+         × ∏_(p≡3 mod4)(1−p^(−2s))^10.
+
+Cancellation of every linear local term makes H holomorphic by locally uniform absolute convergence on Re(s)>1/2. Finite factors may vanish; a global nonvanishing claim is neither needed nor made. At s=1 its factors are positive and H(1)>0. Positive integer powers of ζ and L(s,χ_4) give meromorphic continuation with the sole possible pole at 1, without a zero-free-region or RH hypothesis. The leading pole orders of F,G are 11,10, with common leading Laurent coefficient
+
+    C=H(1)(π/4)^10/48 > 0.
+
+Applying Delange's original theorem to the ordinary Laplace transforms F(s)/s and G(s)/s of the nonnegative nondecreasing summatory functions proves
+
+    Σ_(e≤x)N(e) ~ C x(log x)^10/10!,
+    Σ_(e≤x)P(e) ~ C x(log x)^9/9!.
+
+The bound x is on the center ROOT, not its square. No error term or complete lower-order polynomial is claimed. The aggregate primitive-to-total ratio is asymptotic to 10/log x. Comparing to all gap triples gives candidate survival ratios of order (log x)^−3 with the explicit Euler-product/factorial constants in the packet; these are ratios of aggregate counts, not averages of per-center fractions.
+
+For actual signed gap relations A(e), the same hereditary partition still gives A(e)=Σ_(d|e)A_prim(d) and domination 0≤A≤N, 0≤A_prim≤P. Hence their Dirichlet series converge for Re(s)>1 and obey the same ζ convolution there. No continuation, pole, or asymptotic for these actual-relation series follows. This is the exact boundary between arithmetic ancestry and the explicitly countable necessary filter.
+
+## 11. A positive toric carrier, with its point convention stated
+
+At squarefree split center e=∏p_i, the ternary projective indexing refines to exact supports S. It preserves
+
+    gcd(e²,d)=(e/∏_(i∈S)p_i)²,
+    #gaps of exact support S=2^(|S|−1).
+
+Higher balanced valuation is truncated by the gcd; it must not be silently set equal to two. Inactive-coordinate deletion is exact square division and preserves any existing additive relation. The closure/containment diagram of coordinate strata transports this divisibility structure, not arbitrary projective hyperplanes or numerical addition.
+
+Standard projective space over Z supplies a genuine geometric carrier: its support-S stratum is G_m^(|S|−1), with (q−1)^(|S|−1) points over F_q. Summing gives 1+q+...+q^(k−1). At q=3 this matches the arithmetic strata; varying q is not an interpolation of integer gaps. This positive carrier coexists with the earlier no-descent warnings because the hourglass equations themselves were not transported.
+
+At formal q=1 the polynomial gives k, also the number of zero-dimensional strata and closed coordinate points. In the explicitly specified free pointed-monoid model F1={0,1}, however, underlying topological points and literal Hom(Spec F1,−) are indexed by ALL nonempty supports and number 2^k−1. The residue multiplicative rank at S is |S|−1. Thus the rank-zero/Weyl-style count k differs from raw Hom already on the projective line (two versus three). This is a convention-specific boundary, not a universal claim about all F1 models.
+
+## 12. Why uniform higher exponents do not give the same projective bijection
+
+Fix an auxiliary odd prime ℓ, put a=(ℓ−1)/2, and take integer center e=∏p_i^a with k≥1. Balanced-representative reduction identifies Gaussian gap indices with (F_ℓ^k\{0})/{±1}, not generally with projective space. Passing to full scalar classes maps onto P^(k−1)(F_ℓ) with constant fiber a. The projective map is bijective precisely when ℓ=3.
+
+Support survives this quotient, but absolute integer index magnitudes need not. The exact formula is
+
+    gcd(e²,d(j))=∏p_i^(2(a−|j_i|)).
+
+At ℓ=5,e=25, the signed index classes j=1,2 give gaps 600,336 with gcd(625,d)=25,1. Both collapse to the sole point of P^0(F_5). Thus projectivization loses actual valuation data even with one coordinate. Keep the scalar class modulo signs, or the original signed index, as a sidecar. Neither reduction nor projectivization turns integer exponent addition, Gaussian phase multiplication, or numerical gap addition into field addition.
+
+## 13. Component products locate the observer's invisible modes
+
+For the order-sign coefficient α_X, disjoint unions satisfy α_(G⊔H)=α_G α_H; signed permutation sums acquire the binomial interleaving factor. Royle-even admissibility is componentwise, including permutations of equal components. No exterior-algebra sign appears when equal components are exchanged. Odd-edge components have α=0, even when paired into a globally even-edge graph.
+
+Let A be the connected admissible unlabelled graph types, A_even/A_odd their edge-parity subclasses, and A_good those with α≠0 (necessarily even-edge). The ordinary formal Euler products are
+
+    T(z)=∏_(C∈A)(1−z^|C|)^−1,
+    D(z)=∏_(C∈A_even)(1−z^|C|)^−1 ∏_(C∈A_odd)(1+z^|C|)^−1,
+    C(z)=(T(z)+D(z))/2,
+    R(z)=∏_(C∈A_good)(1−z^|C|)^−1.
+
+Here coefficients of T count tournament types, D self-converse types, C converse types and R observer rank, by the inherited signed-Walsh basis. These are formal unlabelled-type generating functions, not labelled exponential series or simple numerical formulas for all ranks.
+
+Let Z count multisets of connected even-edge zero-α types, and O_even count multisets containing an even number of odd-edge admissible components. Then C=R Z O_even and K=C−R=R(Z O_even−1). This separates two kernel mechanisms: a connected even-edge cancellation and a nonempty even collection of odd-edge components. The kernel here is the converse-side ADJOINT kernel, not the larger graph-pair-domain kernel.
+
+The two distinct connected six-vertex zero types with masks 255 and 2015 give a component-multiset injection and inclusion-exclusion bound
+
+    k_n ≥ 2c_(n−6) − c_(n−12),
+
+with c_0=1 and c_j=0 for j<0. The bound is sharp at n=6, where c_6=34 and rank is32. It propagates certified basis modes to all sizes; it does not exhibit individual tournament-profile collisions or rule out nonlinear shared-latent repair. Connected-component exponents remain nontrivial information, not data recoverable from the tournament count alone.
+
+## Final scope ledger
+
+The session's structural, arithmetic, analytic and observer results preserve the specific maps and losses above. Necessary-candidate asymptotics are not actual-hourglass asymptotics. A standard toric carrier is not descent of the hourglass equations. Component kernel bounds concern linear mixture information, not point collisions. No distinct integer-square hourglass or full square is constructed or excluded in general; no RH theorem is claimed. Publication verification is a separate status from completion of this research package.

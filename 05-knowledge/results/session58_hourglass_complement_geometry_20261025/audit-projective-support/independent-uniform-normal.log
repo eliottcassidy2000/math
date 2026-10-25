@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "ell": 3,
+      "k": 1,
+      "center": 5,
+      "gaps": 1,
+      "projective_points": 1,
+      "fiber": 1
+    },
+    {
+      "ell": 3,
+      "k": 2,
+      "center": 65,
+      "gaps": 4,
+      "projective_points": 4,
+      "fiber": 1
+    },
+    {
+      "ell": 5,
+      "k": 1,
+      "center": 25,
+      "gaps": 2,
+      "projective_points": 1,
+      "fiber": 2
+    },
+    {
+      "ell": 5,
+      "k": 2,
+      "center": 4225,
+      "gaps": 12,
+      "projective_points": 6,
+      "fiber": 2
+    },
+    {
+      "ell": 7,
+      "k": 1,
+      "center": 125,
+      "gaps": 3,
+      "projective_points": 1,
+      "fiber": 3
+    },
+    {
+      "ell": 7,
+      "k": 2,
+      "center": 274625,
+      "gaps": 24,
+      "projective_points": 8,
+      "fiber": 3
+    }
+  ],
+  "negative_mutations": [
+    {
+      "flags": [],
+      "exit": 1
+    },
+    {
+      "flags": [
+        "-O"
+      ],
+      "exit": 1
+    }
+  ]
+}

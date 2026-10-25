@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "gap_enumeration": "positive Pythagorean legs",
+  "integer_rows": [
+    {
+      "e": 1,
+      "count": 0,
+      "deletion_slices": 1
+    },
+    {
+      "e": 5,
+      "count": 1,
+      "deletion_slices": 2
+    },
+    {
+      "e": 13,
+      "count": 1,
+      "deletion_slices": 2
+    },
+    {
+      "e": 65,
+      "count": 4,
+      "deletion_slices": 4
+    },
+    {
+      "e": 85,
+      "count": 4,
+      "deletion_slices": 4
+    },
+    {
+      "e": 1105,
+      "count": 13,
+      "deletion_slices": 8
+    },
+    {
+      "e": 32045,
+      "count": 40,
+      "deletion_slices": 16
+    }
+  ],
+  "projective_orbit_rows": [
+    {
+      "k": 1,
+      "q": 2,
+      "orbits": 1
+    },
+    {
+      "k": 1,
+      "q": 3,
+      "orbits": 1
+    },
+    {
+      "k": 1,
+      "q": 5,
+      "orbits": 1
+    },
+    {
+      "k": 1,
+      "q": 7,
+      "orbits": 1
+    },
+    {
+      "k": 2,
+      "q": 2,
+      "orbits": 3
+    },
+    {
+      "k": 2,
+      "q": 3,
+      "orbits": 4
+    },
+    {
+      "k": 2,
+      "q": 5,
+      "orbits": 6
+    },
+    {
+      "k": 2,
+      "q": 7,
+      "orbits": 8
+    },
+    {
+      "k": 3,
+      "q": 2,
+      "orbits": 7
+    },
+    {
+      "k": 3,
+      "q": 3,
+      "orbits": 13
+    },
+    {
+      "k": 3,
+      "q": 5,
+      "orbits": 31
+    },
+    {
+      "k": 3,
+      "q": 7,
+      "orbits": 57
+    },
+    {
+      "k": 4,
+      "q": 2,
+      "orbits": 15
+    },
+    {
+      "k": 4,
+      "q": 3,
+      "orbits": 40
+    },
+    {
+      "k": 4,
+      "q": 5,
+      "orbits": 156
+    },
+    {
+      "k": 4,
+      "q": 7,
+      "orbits": 400
+    },
+    {
+      "k": 5,
+      "q": 2,
+      "orbits": 31
+    },
+    {
+      "k": 5,
+      "q": 3,
+      "orbits": 121
+    },
+    {
+      "k": 5,
+      "q": 5,
+      "orbits": 781
+    },
+    {
+      "k": 5,
+      "q": 7,
+      "orbits": 2801
+    }
+  ],
+  "pointed_monoid_chart_gluing": "PASS k=1..5",
+  "negative_flag": "--negative"
+}

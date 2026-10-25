@@ -1,0 +1,21 @@
+{
+  "repository_commit": "44f15df8c4a24e5624d399862c0cdb1769b2cbb1",
+  "sources": [
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+    },
+    {
+      "path": "/tmp/session58-observer-profile-algebra/THEOREM.md",
+      "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4"
+    },
+    {
+      "path": "/tmp/session58-observer-profile-algebra/walsh_certificate.json",
+      "sha256": "7aeb2a901cd262fb12f9e856bb86bb1f76a340425097c71decf0349d8c40c4ec"
+    },
+    {
+      "path": "/tmp/session58-observer-profile-algebra/edge_actions.py",
+      "sha256": "512d842afd7ed74817158be6703ac849315878e14f8f70a97a0c248a82ac449c"
+    }
+  ]
+}

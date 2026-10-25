@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/tmp/session58-projective-support-bridge/UNIFORM_EXPONENT_ADDENDUM.md",
+    "sha256": "a6f3263f1d19105d3a30840192b67aeb72d5bba93fe05ca16ad6cc9611d3348c"
+  },
+  {
+    "path": "/tmp/session58-projective-support-bridge/verify_uniform_exponents.py",
+    "sha256": "e671a02e027ba4afa3b92371b9b99326299cce68764247bd691e9a7f1beb0b44"
+  },
+  {
+    "path": "/tmp/session58-projective-support-bridge/uniform-verification.json",
+    "sha256": "1d42192908c7d96dae1d314b8528e17f49d78f86f27f9336b7277b4038eed103"
+  },
+  {
+    "path": "/tmp/session58-projective-support-bridge/uniform-normal.log",
+    "sha256": "1d42192908c7d96dae1d314b8528e17f49d78f86f27f9336b7277b4038eed103"
+  },
+  {
+    "path": "/tmp/session58-projective-support-bridge/uniform-optimized.log",
+    "sha256": "1d42192908c7d96dae1d314b8528e17f49d78f86f27f9336b7277b4038eed103"
+  },
+  {
+    "path": "/tmp/session58-projective-support-bridge/ADDENDUM_SHA256SUMS",
+    "sha256": "2baa07af52012e038a692d8b2f8f3a5c4f8bcf0147fa815315d9eb815e9014e3"
+  }
+]

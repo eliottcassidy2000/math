@@ -1,0 +1,12 @@
+{
+  "edits": [
+    {
+      "path": "audit-profile-component-series/check.py",
+      "original_sha256": "54fcd171b7c74c4369a87d6143c3cee1c98009b3ae9067637fd5cc6b010f5e9c",
+      "publication_sha256": "a76b3f04c741222a21532676c295a35b7d6e72887d5725fbc6c1bfb53c158a54",
+      "purpose": "Replace temporary absolute certificate path with sibling packet path; mathematical checks unchanged."
+    }
+  ],
+  "original_sources_unchanged": true,
+  "source_manifests": "Original source hash manifests describe input locations/bytes. They are retained with SOURCE names; publication map pins current bytes."
+}
