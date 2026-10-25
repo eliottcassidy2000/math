@@ -1,0 +1,805 @@
+{
+  "odd_overlap_two": {
+    "I": [
+      2,
+      4
+    ],
+    "J": [
+      2,
+      4
+    ],
+    "n": 7,
+    "rows": [
+      42,
+      124,
+      57,
+      112,
+      33,
+      64,
+      21
+    ]
+  },
+  "orders": [
+    {
+      "labelled_universe": 1,
+      "n": 1,
+      "retained": 0,
+      "rows": [],
+      "three_black_detours": 0
+    },
+    {
+      "labelled_universe": 2,
+      "n": 2,
+      "retained": 0,
+      "rows": [],
+      "three_black_detours": 0
+    },
+    {
+      "labelled_universe": 8,
+      "n": 3,
+      "retained": 0,
+      "rows": [],
+      "three_black_detours": 0
+    },
+    {
+      "labelled_universe": 64,
+      "n": 4,
+      "retained": 0,
+      "rows": [],
+      "three_black_detours": 0
+    },
+    {
+      "labelled_universe": 1024,
+      "n": 5,
+      "retained": 2,
+      "rows": [
+        {
+          "anti_failure_witnesses": null,
+          "black_source_paths": 6,
+          "black_target_paths": 0,
+          "certificate": null,
+          "source_rows": [
+            2,
+            4,
+            9,
+            19,
+            7
+          ],
+          "target_all_paths": 1,
+          "target_rows": [
+            30,
+            28,
+            24,
+            16,
+            0
+          ]
+        },
+        {
+          "anti_failure_witnesses": null,
+          "black_source_paths": 10,
+          "black_target_paths": 0,
+          "certificate": null,
+          "source_rows": [
+            2,
+            12,
+            9,
+            17,
+            7
+          ],
+          "target_all_paths": 3,
+          "target_rows": [
+            30,
+            20,
+            24,
+            18,
+            0
+          ]
+        }
+      ],
+      "three_black_detours": 0
+    },
+    {
+      "labelled_universe": 32768,
+      "n": 6,
+      "retained": 12,
+      "rows": [
+        {
+          "anti_failure_witnesses": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "black_source_paths": 18,
+          "black_target_paths": 26,
+          "certificate": [
+            [
+              0,
+              1,
+              5,
+              3,
+              4,
+              2
+            ],
+            [
+              1,
+              5,
+              4,
+              0,
+              3,
+              2
+            ],
+            [
+              1,
+              2,
+              4,
+              0,
+              3,
+              5
+            ]
+          ],
+          "source_rows": [
+            18,
+            36,
+            9,
+            19,
+            38,
+            13
+          ],
+          "target_all_paths": 33,
+          "target_rows": [
+            46,
+            28,
+            56,
+            48,
+            33,
+            2
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              1,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "black_source_paths": 18,
+          "black_target_paths": 22,
+          "certificate": [
+            [
+              0,
+              1,
+              5,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              4,
+              0,
+              2,
+              1,
+              3
+            ],
+            [
+              4,
+              0,
+              2,
+              5,
+              1,
+              3
+            ]
+          ],
+          "source_rows": [
+            18,
+            52,
+            9,
+            19,
+            36,
+            13
+          ],
+          "target_all_paths": 29,
+          "target_rows": [
+            46,
+            12,
+            56,
+            48,
+            35,
+            2
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "black_source_paths": 32,
+          "black_target_paths": 22,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              3
+            ],
+            [
+              1,
+              2,
+              4,
+              0,
+              5,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              0,
+              5
+            ]
+          ],
+          "source_rows": [
+            18,
+            44,
+            25,
+            17,
+            34,
+            13
+          ],
+          "target_all_paths": 29,
+          "target_rows": [
+            46,
+            20,
+            40,
+            50,
+            37,
+            2
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "black_source_paths": 26,
+          "black_target_paths": 12,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              3
+            ],
+            [
+              1,
+              2,
+              4,
+              0,
+              5,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              0,
+              5
+            ]
+          ],
+          "source_rows": [
+            18,
+            60,
+            25,
+            17,
+            32,
+            13
+          ],
+          "target_all_paths": 17,
+          "target_rows": [
+            46,
+            4,
+            40,
+            50,
+            39,
+            2
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "black_source_paths": 26,
+          "black_target_paths": 12,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              5,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              5,
+              3,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              0,
+              4,
+              5
+            ]
+          ],
+          "source_rows": [
+            10,
+            4,
+            41,
+            18,
+            39,
+            11
+          ],
+          "target_all_paths": 17,
+          "target_rows": [
+            54,
+            60,
+            24,
+            49,
+            32,
+            4
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              2,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "black_source_paths": 32,
+          "black_target_paths": 22,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              5,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              5,
+              3,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              0,
+              4,
+              5
+            ]
+          ],
+          "source_rows": [
+            10,
+            20,
+            41,
+            18,
+            37,
+            11
+          ],
+          "target_all_paths": 29,
+          "target_rows": [
+            54,
+            44,
+            24,
+            49,
+            34,
+            4
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "black_source_paths": 26,
+          "black_target_paths": 12,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              5,
+              3,
+              4
+            ],
+            [
+              0,
+              2,
+              5,
+              3,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3,
+              1,
+              4,
+              5
+            ]
+          ],
+          "source_rows": [
+            10,
+            12,
+            57,
+            16,
+            35,
+            11
+          ],
+          "target_all_paths": 17,
+          "target_rows": [
+            54,
+            52,
+            8,
+            51,
+            36,
+            4
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              1,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          "black_source_paths": 22,
+          "black_target_paths": 12,
+          "certificate": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              3
+            ],
+            [
+              0,
+              2,
+              4,
+              1,
+              5,
+              3
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              1,
+              5
+            ]
+          ],
+          "source_rows": [
+            10,
+            28,
+            57,
+            16,
+            33,
+            11
+          ],
+          "target_all_paths": 17,
+          "target_rows": [
+            54,
+            36,
+            8,
+            51,
+            38,
+            4
+          ]
+        },
+        {
+          "anti_failure_witnesses": null,
+          "black_source_paths": 12,
+          "black_target_paths": 0,
+          "certificate": null,
+          "source_rows": [
+            6,
+            4,
+            8,
+            51,
+            39,
+            7
+          ],
+          "target_all_paths": 9,
+          "target_rows": [
+            58,
+            60,
+            57,
+            16,
+            32,
+            8
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "black_source_paths": 30,
+          "black_target_paths": 12,
+          "certificate": [
+            [
+              0,
+              1,
+              4,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              4,
+              2,
+              0,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              0,
+              3,
+              4,
+              5
+            ]
+          ],
+          "source_rows": [
+            6,
+            20,
+            8,
+            51,
+            37,
+            7
+          ],
+          "target_all_paths": 17,
+          "target_rows": [
+            58,
+            44,
+            57,
+            16,
+            34,
+            8
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "black_source_paths": 32,
+          "black_target_paths": 22,
+          "certificate": [
+            [
+              0,
+              2,
+              3,
+              4,
+              5,
+              1
+            ],
+            [
+              5,
+              3,
+              4,
+              2,
+              1,
+              0
+            ],
+            [
+              1,
+              5,
+              3,
+              4,
+              2,
+              0
+            ]
+          ],
+          "source_rows": [
+            6,
+            12,
+            24,
+            49,
+            35,
+            7
+          ],
+          "target_all_paths": 29,
+          "target_rows": [
+            58,
+            52,
+            41,
+            18,
+            36,
+            8
+          ]
+        },
+        {
+          "anti_failure_witnesses": [
+            [
+              3,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "black_source_paths": 18,
+          "black_target_paths": 22,
+          "certificate": [
+            [
+              0,
+              2,
+              3,
+              5,
+              1,
+              4
+            ],
+            [
+              2,
+              1,
+              0,
+              3,
+              5,
+              4
+            ],
+            [
+              2,
+              0,
+              3,
+              4,
+              1,
+              5
+            ]
+          ],
+          "source_rows": [
+            6,
+            28,
+            24,
+            49,
+            33,
+            7
+          ],
+          "target_all_paths": 29,
+          "target_rows": [
+            58,
+            36,
+            41,
+            18,
+            38,
+            8
+          ]
+        }
+      ],
+      "three_black_detours": 11
+    }
+  ],
+  "status": "FINITE-EXACT complete labelled universes n<=6"
+}

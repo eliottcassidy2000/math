@@ -1,0 +1,80 @@
+{
+  "checks": 161420,
+  "limitation": "No global stopping-time, recurrence-entry or convergence theorem.",
+  "scope": "Inherited parity-isometry mechanism, explicit all-source phase proof, finite replay controls only.",
+  "special_controls": [
+    {
+      "actual_bit": 1,
+      "blocks": 1,
+      "departure": "53",
+      "ell": 61,
+      "ordinary_clock": 100,
+      "phase": 2,
+      "source": "27",
+      "template_bit": 0
+    },
+    {
+      "actual_bit": 0,
+      "blocks": 1,
+      "departure": "450283905890997386",
+      "ell": 59,
+      "ordinary_clock": 96,
+      "phase": 0,
+      "source": "576460752303423515",
+      "template_bit": 1
+    },
+    {
+      "actual_bit": 0,
+      "blocks": 1,
+      "departure": "1350851717672992124",
+      "ell": 60,
+      "ordinary_clock": 98,
+      "phase": 1,
+      "source": "1152921504606847003",
+      "template_bit": 1
+    },
+    {
+      "actual_bit": 0,
+      "blocks": 2,
+      "departure": "128083994787268184645564261786926256",
+      "ell": 118,
+      "ordinary_clock": 192,
+      "phase": 0,
+      "source": "209923714958077886127437625648218139",
+      "template_bit": 1
+    }
+  ],
+  "status": "PASS",
+  "universe": {
+    "block_depths": [
+      0,
+      4
+    ],
+    "count_caps": [
+      0,
+      1,
+      27,
+      100,
+      4096
+    ],
+    "count_depths": [
+      0,
+      12
+    ],
+    "lifts": [
+      1,
+      2,
+      7
+    ],
+    "phase_sources": 885,
+    "phases": [
+      0,
+      58
+    ],
+    "positive_sources": [
+      1,
+      4096
+    ]
+  },
+  "word": "11011111010110111011110100111011011111100111100010101000100"
+}

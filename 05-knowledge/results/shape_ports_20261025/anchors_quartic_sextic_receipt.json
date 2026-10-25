@@ -1,0 +1,82 @@
+{
+  "checks": 661,
+  "degree_universe": {
+    "A": [
+      1,
+      24
+    ],
+    "B": [
+      1,
+      24
+    ]
+  },
+  "identity_J0": "3*kappa**4*z**2*(kappa*z**3 + 8)*(10*kappa**2*z**6 + 61*kappa*z**3 + 64)/16384",
+  "normalization": "Res_d(I-L,K-M)=3N/512; K(d_from_I)-M=N/(384r^2)",
+  "open": "Other genus-six terminal degree pairs, planar JC, and Collatz remain open.",
+  "polynomial_controls": [
+    {
+      "degree_J": 11,
+      "kappa": 1,
+      "z": "x"
+    },
+    {
+      "degree_J": 23,
+      "kappa": 1,
+      "z": "x**2 + x + 1"
+    },
+    {
+      "degree_J": 35,
+      "kappa": 1,
+      "z": "x**3 - 2*x"
+    },
+    {
+      "degree_J": 11,
+      "kappa": 2,
+      "z": "x"
+    },
+    {
+      "degree_J": 23,
+      "kappa": 2,
+      "z": "x**2 + x + 1"
+    },
+    {
+      "degree_J": 35,
+      "kappa": 2,
+      "z": "x**3 - 2*x"
+    },
+    {
+      "degree_J": 11,
+      "kappa": -3,
+      "z": "x"
+    },
+    {
+      "degree_J": 23,
+      "kappa": -3,
+      "z": "x**2 + x + 1"
+    },
+    {
+      "degree_J": 35,
+      "kappa": -3,
+      "z": "x**3 - 2*x"
+    }
+  ],
+  "rational_pole_controls": [
+    {
+      "degree_infinity_J": 11,
+      "finite_pole": 1,
+      "m": 1
+    },
+    {
+      "degree_infinity_J": 23,
+      "finite_pole": 1,
+      "m": 2
+    },
+    {
+      "degree_infinity_J": 35,
+      "finite_pole": 1,
+      "m": 3
+    }
+  ],
+  "scope": "Exact symbolic identities plus a closed finite control universe; all-degree proof is in the companion note.",
+  "status": "PASS"
+}

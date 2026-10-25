@@ -5,6 +5,10 @@
 
 **Oct 20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 
+**Oct 25:** [Shape/port/anchor checkpoint](../05-knowledge/results/shape_ports_20261025/README.md):
+audited quartic/sextic nonzero-defect exclusion; exact Collatz departure/refill;
+weighted endpoint/pointed-C3 bijection; corrected pure-blue detour boundary.
+
 ## The five-minute orientation
 
 1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.

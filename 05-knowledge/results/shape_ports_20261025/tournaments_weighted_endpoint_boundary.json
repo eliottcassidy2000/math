@@ -1,0 +1,120 @@
+{
+  "boundary_classes": [
+    {
+      "k": 2,
+      "mass": 9,
+      "records": 2,
+      "source_owner_classes": 2,
+      "strong": false,
+      "target_classes": 1
+    },
+    {
+      "k": 2,
+      "mass": 5,
+      "records": 2,
+      "source_owner_classes": 2,
+      "strong": true,
+      "target_classes": 1
+    },
+    {
+      "k": 3,
+      "mass": 20,
+      "records": 12,
+      "source_owner_classes": 12,
+      "strong": false,
+      "target_classes": 12
+    },
+    {
+      "k": 3,
+      "mass": 14,
+      "records": 8,
+      "source_owner_classes": 8,
+      "strong": true,
+      "target_classes": 8
+    },
+    {
+      "k": 4,
+      "mass": 35,
+      "records": 90,
+      "source_owner_classes": 90,
+      "strong": false,
+      "target_classes": 90
+    },
+    {
+      "k": 4,
+      "mass": 27,
+      "records": 60,
+      "source_owner_classes": 60,
+      "strong": true,
+      "target_classes": 60
+    },
+    {
+      "k": 5,
+      "mass": 54,
+      "records": 840,
+      "source_owner_classes": 840,
+      "strong": false,
+      "target_classes": 840
+    },
+    {
+      "k": 5,
+      "mass": 44,
+      "records": 592,
+      "source_owner_classes": 592,
+      "strong": true,
+      "target_classes": 592
+    },
+    {
+      "k": 6,
+      "mass": 77,
+      "records": 9450,
+      "source_owner_classes": 9450,
+      "strong": false,
+      "target_classes": 9450
+    },
+    {
+      "k": 6,
+      "mass": 65,
+      "records": 7060,
+      "source_owner_classes": 7060,
+      "strong": true,
+      "target_classes": 7060
+    }
+  ],
+  "exact_weighted_feedback_controls": 178,
+  "matching_bijection": [
+    {
+      "all_marked_span_two": 2,
+      "k": 2,
+      "strong_marked_span_two": 2
+    },
+    {
+      "all_marked_span_two": 12,
+      "k": 3,
+      "strong_marked_span_two": 8
+    },
+    {
+      "all_marked_span_two": 90,
+      "k": 4,
+      "strong_marked_span_two": 60
+    },
+    {
+      "all_marked_span_two": 840,
+      "k": 5,
+      "strong_marked_span_two": 592
+    },
+    {
+      "all_marked_span_two": 9450,
+      "k": 6,
+      "strong_marked_span_two": 7060
+    },
+    {
+      "all_marked_span_two": 124740,
+      "k": 7,
+      "strong_marked_span_two": 97944
+    }
+  ],
+  "relabel_controls": 28,
+  "scope": "Only r<k at mass deficit 2k+1; not the full mass layer or A000568",
+  "status": "PROVED scoped family; FINITE-EXACT controls"
+}

@@ -1,0 +1,8 @@
+{
+  "checks": 28,
+  "passed": true,
+  "producer_imports": false,
+  "status": "FINITE-EXACT supporting independent proof audit",
+  "sympy_version": "1.14.0",
+  "universe": "formal polynomial jet ring; four exact rational comparison charts"
+}

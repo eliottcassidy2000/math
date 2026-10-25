@@ -1,0 +1,57 @@
+{
+  "all_order_claims": "proved separately in shapes.md; no extrapolation from this finite run",
+  "checks": 80,
+  "jacobian_support_hostiles": [
+    {
+      "coefficients": {
+        "x^0y^0": 1,
+        "x^0y^3": 6,
+        "x^1y^1": -6
+      },
+      "t": -1
+    },
+    {
+      "coefficients": {
+        "x^0y^0": 1,
+        "x^0y^3": 2,
+        "x^1y^1": -2
+      },
+      "t": 1
+    },
+    {
+      "coefficients": {
+        "x^0y^0": 1
+      },
+      "t": 2
+    },
+    {
+      "coefficients": {
+        "x^0y^0": 1,
+        "x^0y^3": -2,
+        "x^1y^1": 2
+      },
+      "t": 3
+    }
+  ],
+  "passed": true,
+  "rational_infinite_order_rotations": [
+    {
+      "parameter": "1/2",
+      "trace": "6/5"
+    },
+    {
+      "parameter": "2/3",
+      "trace": "10/13"
+    },
+    {
+      "parameter": "2",
+      "trace": "-6/5"
+    },
+    {
+      "parameter": "3",
+      "trace": "-8/5"
+    }
+  ],
+  "status": "FINITE-EXACT",
+  "universe": "named 2x2 matrix controls; t=-1,1,2,3 polynomial pairs; 36 rational point evaluations"
+}

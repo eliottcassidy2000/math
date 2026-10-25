@@ -1,14 +1,13 @@
 # Current Frontier
 
-**2026-09-08.** Statuses: **PROVED**, **CITED**,
-**FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**,
-**REFUTED**, **SUPERSEDED**.
+**2026-09-08.** Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
 **Oct 20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
+**Oct 25:** [Audited checkpoint](../05-knowledge/results/shape_ports_20261025/README.md): quartic/sextic exclusion, Collatz phase/refill, weighted endpoint and pure-blue correction.
+
 ## LRC(14)
 
 ### Headline
-
 **Repository proof OPEN.** THM-2923 closes all `3,432` seven-window roots; the remainder has
 at most six speeds. THM-2051/2052 leave a sparse code of rank `>=11`; failed
 gates are not danger.
@@ -391,7 +390,8 @@ lift/phase clocks.
   tuple is now at least `(8,5,4,3,3)` for `ell=(3,5,7,11,13)`. The requested
   challenges `(3,9),(5,6),(7,5),(11,4),(13,4)` all remain **OPEN**; the public
   `131199`-field file is a named finite population, not a world census.
-- **Jacobian/Dixmier:** `JC(2),DC(2)` **OPEN**. THM-4130--4378 close named
+- **Jacobian/Dixmier:** `JC(2),DC(2)` **OPEN**. The [new source proof](../05-knowledge/results/shape_ports_20261025/anchors_quartic_sextic.md)
+  closes the genus-six monic `(4,6)` nonzero-defect branch; `(3,7),(4,5),(4,10),(6,9)` remain. THM-4130--4378 close named
   `M=8--12` cells; THM-4226 closes dense `M=13`. In THM-4308's chart,
   THM-4380/4388 close weight12/13 by row12; THM-4385/4389 give the row10
   elliptic carrier/pencil. At weight14, THM-4390/4395 reach rows9/10;

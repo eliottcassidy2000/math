@@ -4,6 +4,16 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — endpoint-four and parity hostiles extend the recovered endpoint-three correction
+
+- **Lineage:** MISTAKE-646 already contained the order-six obstruction; the concurrent ports/owners checkpoint repaired its surviving THM-4734 overclaim. This packet independently replays the complete small head and adds the endpoint-four and overlap-parity controls.
+- **Affected:** [THM-4734](theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md), its title and section 1; [HYP-9348](../05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md), parts (a), (b), and the stale (d) frontier.
+- **First failed implication:** a strong-mixed order-six census was promoted to every closed blue line. Source `(6,4,8,51,39,7)` has literal target `C3 -> C3`, with nine Hamilton paths, all blue. The analogous endpoint-four order-seven source has target `C3 -> 1 -> C3`, also nine all-blue paths, refuting the unfiltered hypothesis. Absence of black paths excludes incoming black moves as well, since a K move retains its path's blue/black status.
+- **Mechanism and strongest survivor:** the palindromic joins `C3 -> TT_m -> C3` produce the same obstruction for endpoint scores `(2,n-3)`. Retain the actual target's admissibility. The order-three endpoint layer survives for `n>=7` and the eleven admissible order-six presentations; order-ten counts are unchanged. The filtered endpoint-four question and all-order black-core connectivity remain OPEN.
+- **Second false implication:** overlap two `I=J` was said to require even order. The actual order-seven witness with `I=J={2,4}` disproves it; a reflected pair exists in either parity. Also, two missing gaps cost `2k`, not `k+1` for `k>=2`; the already proved corridor supersedes that old next-layer question.
+- **Repaired data and new question:** [complete n<=6 audit, explicit n7 hostile, and weighted branch](../05-knowledge/results/shape_ports_20261025/tournaments.md), with independent arc-set replay, literal targets, no inherited mixedness filter, and exact receipts. Preserve external ports and whole owner fibres in the next recurrence; the new `r<k` branch is not the entire deficit layer.
+
+
 ## 2026-10-25 — a carrier's parameter range and proof-search encoding are part of its type
 
 - **Affected draft:** the unpublished [F1/conic bridge](../05-knowledge/results/ports_owners_f1_20261025/f1_bridge.md), independently reviewed before publication.

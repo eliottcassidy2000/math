@@ -1,6 +1,6 @@
 ---
 id: THM-4734
-title: "Three-black detours: the closed blue endpoint-three layer (n-4,3) is complete at order ten, and the endpoint-four layer (n-5,4) is complete at orders nine and ten. (A) Order ten, (6,3): all 86,016 closed standard-blue marked presentations (21 port pairs x 2^12 blue middles) have three successive directed black K moves to the literal target K_P(T): 86,013 by the inherited template bank of endpoint_three_repairs_20261020h, the remaining three (closed middles, I = {3,6} = J, {5,6}, {7,8}) by the labelled search with independent replay; this fills the order the structural theorem (n >= 11) left unclassified, so the (n-4,3) layer is now settled for every n >= 7 (orders 7-9 by the packet's probe, 10 here, >= 11 by its proof). (B) The next layer (n-5,4), |I| = 3: all 10,240 presentations at n = 9 and all 143,360 at n = 10 have three-black detours (9,915 + 325 and 141,050 + 2,310 by bank and search; no unresolved presentation, no nonstrong partner). The presentations escaping the inherited bank are concentrated on the consecutive-port patterns I = {2,3,4}, {2,n-3,n-2} (closed) and {n-4,n-3,n-2} (closed and open), with a handful of isolated port triples; no single word template covers any of these patterns entirely (the best covers exactly half), so the structural (n-5,4) theorem will need two complementary ledgers per pattern. (C) The packet's general-k lemmas (one-step cyclic cut black for n > 4k-2; the common final word (a,z,b,W,c) black for n > 4k-2; the movable-cut mechanism) apply to k = 4 from n = 15 on; the range 11..14 and the exhaustive case partition remain open"
+title: "Endpoint-three detours at order ten with the order-six pure-blue exception; finite endpoint-four coverage at orders nine and ten"
 status: >
   FINITE-EXACT (pre-audit): (A) order_ten_bank.out / .json (86,016 presentations, bank coverage by template, three
   residual rows) and order_ten_residuals.out / .json (the three labelled certificates: words, independent anti-reversal
@@ -46,13 +46,17 @@ outputs:
 
 **FINITE-EXACT (pre-audit)** as itemized in the status.
 
-**Scope repair, 2026-10-25:** MISTAKE-646 already corrected the universal
-endpoint-three threshold to n>=7. Its order-six source
-`(6,4,8,51,39,7)` has pure-blue partner `C3 -> C3`, so no black detour
-can enter that target. The stale n>=6 wording in this title and body is
-repaired here; the original finite receipts are not changed or promoted.
-See the independently [audited order-ten packet](../../05-knowledge/results/endpoint_three_order10_20261021/README.md)
-and the [new endpoint-four continuation](../../05-knowledge/results/ports_owners_f1_20261025/endpoint.md).
+**Scope correction, 2026-10-25:** MISTAKE-646 already corrected the
+universal endpoint-three threshold to `n>=7`. The incoming
+[ports/owners packet](../../05-knowledge/results/ports_owners_f1_20261025/README.md)
+repaired the stale title and body. The independent
+[complete low-order audit](../../05-knowledge/results/shape_ports_20261025/tournaments.md)
+now records all 12 order-six presentations, exactly 11 detours, the two
+order-five pure-blue targets, and the odd-order overlap-two witness.
+The `C3 -> C3` target has no incident black move. Original finite receipts
+and their pre-audit status are unchanged. See also the separately
+[audited order-ten packet](../../05-knowledge/results/endpoint_three_order10_20261021/README.md)
+and the [guarded endpoint-four continuation](../../05-knowledge/results/ports_owners_f1_20261025/endpoint.md).
 
 ## 0. Setting (endpoint_three_repairs_20261020h)
 
@@ -69,7 +73,8 @@ of the same black component and is not a bridge.
 
 ## 1. Order ten, layer (6,3)
 
-The packet proved the layer for `n >= 11` and certified `n = 7..9` without the order-six filter; order ten was
+The packet proved the layer for `n >= 11` and certified the **strong-mixed**
+`n = 6..9` presentations by its probe; order ten was
 "not claimed". Here all `21 x 4096 = 86,016` presentations were run through the inherited bank
 (templates: release/cyclic ledgers, closed_no_chord, closed_chord, L2, C, A/B cuts, last_c_x,
 C_two_ports, closed_last_c cuts, end-pair ledgers, mirrored TT3). Result:
@@ -90,13 +95,19 @@ I={5,6}: (0,1,2,3,4,5,8,6,7,9), (0,1,2,3,9,8,7,4,6,5), (0,1,2,3,9,7,4,6,8,5)   e
 I={7,8}: (0,1,2,3,4,6,7,8,5,9), (0,1,2,3,8,5,9,4,6,7), (0,1,2,3,8,9,4,5,6,7)   excesses 0,-1,1
 ```
 
-(The first residual is the `I = J` overlap-two case, possible only at even order; all three
-have endpoint-excess-zero words, so blackness is witnessed by actual arcs, never by scores.)
-Hence **every closed blue (n-4,3) line has a three-black detour for every n >= 7**: orders
-7-9 (packet probe, all 96 + 640 + 7,680 presentations), order 10 (here, no
-filter), orders >= 11 (packet theorem). The earlier order-six count of 11 had
-excluded the pure-blue-target presentation; it does not establish an unfiltered
-order-six theorem. The displayed order-ten cyclic-cut hostile of R1
+(The first residual is the `I = J` overlap-two case. This overlap is possible
+in either parity; at order seven, `I=J={2,4}` is an explicit example. All
+three residuals have endpoint-excess-zero words, so blackness is witnessed
+by actual arcs, never by scores.)
+Hence the inherited conclusion is **every closed blue `(n-4,3)` line for
+`n>=7`**, and at `n=6` exactly the eleven presentations outside the
+pure-blue-target exception. Orders 7--9 use the packet probe, order ten
+uses this computation, and orders >=11 use the packet theorem. The complete
+unfiltered order-six universe has 12 presentations: source
+`(6,4,8,51,39,7)` maps to `(58,60,57,16,32,8)=C3 -> C3`, whose nine Hamilton
+paths are all blue, making any black detour impossible. At order five,
+both retained endpoint-three presentations likewise have pure-blue targets.
+The displayed order-ten cyclic-cut hostile of R1
 (blue one-step cut) is among the 86,013 bank-covered presentations.
 
 ## 2. Orders nine and ten, layer (5,4) / (6,4)

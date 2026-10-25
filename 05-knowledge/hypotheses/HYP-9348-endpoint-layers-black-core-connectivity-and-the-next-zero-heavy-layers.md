@@ -1,7 +1,7 @@
 ---
 id: HYP-9348
-title: "After THM-4733/4734/4736: the structural (n-5,4) endpoint theorem and its two-ledger patterns, black-core connectivity through the trijection coordinates, the deficit-(k+1) zero-heavy layer, and the fixed-tile-free comparison of arithmetic Klein sets"
-status: OPEN (pre-audit); every item carries its finite evidence and the first untested case
+title: "Filtered endpoint-four detours and black-core connectivity; zero-heavy layers through the first weighted endpoint"
+status: OPEN corrected endpoint/black-core questions; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
 source: mac-mini-2026-10-20-debtcones
 depends_on:
   - 01-canon/theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md
@@ -15,10 +15,22 @@ related:
 
 # HYP-9348 -- the next layers
 
+**Updated 2026-10-25:** the unfiltered statement in (a) is refuted below;
+(b) retains its non-pure-blue domain; (d) now routes the already proved
+corridor and the new weighted-endpoint branch. Original statements remain
+in Git history; the failure mechanisms are recorded in `01-canon/MISTAKES.md`.
+
 ## (a) The structural (n-5,4) theorem
 
-**Claim.** Every closed blue marked line with endpoint scores `(n-5, 4)` has a three-black
-detour to its literal target for every `n >= 7`. Evidence: exact at `n = 9, 10` (THM-4734);
+**REFUTED as originally unfiltered.** At `n=7`, source
+`(6,4,8,19,103,79,15)` has endpoint scores `(2,4)` and a closed blue standard
+word. Its literal target is `(122,124,121,112,32,64,16)=C3 -> 1 -> C3`,
+whose nine Hamilton paths are all blue. Thus no black detour reaches it.
+The [exact witness](../results/shape_ports_20261025/tournaments.md) also
+repairs THM-4734's analogous order-six omission.
+
+**OPEN repaired question.** Does every such line whose literal target is
+not pure blue admit a three-black detour for every `n>=7`? Evidence: exact at `n = 9, 10` (THM-4734);
 the packet's general-`k` lemmas (cyclic cut and common final word black for `n > 14`,
 movable cut) cover the non-adjacent closed rows from `n = 15`. What is missing: the rows
 where the three ports are consecutive at the start (`I = {2,3,4}`), at the end
@@ -33,8 +45,10 @@ templates of the search.
 
 **Claim** (the lane's conjecture; THM-4731 verifies it for `n <= 8`): all non-pure-blue
 classes lie in one black component of the line metagraph. The endpoint layers remove one
-family of potential bridges at a time (`k = 2` all `n`, `k = 3` all `n`, `k = 4` at
-`n <= 10`). In the trijection coordinates (graphs on ordered `[n-1]`; THM-4733 Proposition A)
+family of potential bridges within their admitted domain: `k=2` has its
+inherited theorem; `k=3` has all `n>=7` and eleven admissible order-six
+presentations; `k=4` is checked at `n=9,10`. Pure-blue targets cannot be
+removed by a black detour, and no `k=4` census for every `n<=10` is asserted. In the trijection coordinates (graphs on ordered `[n-1]`; THM-4733 Proposition A)
 a K move along `Q` is "change the marked path, then complement"; a three-black detour is a
 closed walk of three coordinate changes whose complement bits cancel to `E(P)`. Question:
 is there a `k`-independent movable-cut word, written in these coordinates, that repairs every
@@ -48,16 +62,27 @@ is bypassed by the movable cut at `k = 3`. For `k = 4` the analogous orbit obstr
 the common final words should be listed (the orders where `r_Q r_P` has an orbit that a port
 set of size three can balance); THM-4734's data suggest `n = 11..14` only.
 
-## (d) The deficit-(k+1) zero-heavy layer
+## (d) The corrected zero-heavy boundary
 
-THM-4736 gives `Z_{k,k}` and `Z^s_{k,k}`. At deficit `k + 1` the identity admits a shared
-endpoint (`t = 2k - 1`, defect graph a path `P_3` plus a matching), two missing gaps, a missing
-gap plus reduced gaps, and three-endpoint unit intervals. **Claim.** `Z_{k,k+1}` is still a
-finite sum of matching-type counts with explicit collapse corrections; the first unknown value
-is `Z_{2,3}` (weight 11 at `k = 2`), computable by the packet's complete `k = 2` compiler, and
-`Z_{3,4}` (weight 23) by an extension of zero_heavy_delta_k.py with shared endpoints. The
-strong sequence `11, 344, 15490, 1520100` (`k = 2..5`, the last predicted) is not in OEIS
-(not checked yet).
+**SUPERSEDED:** the old “next deficit k+1” question is closed by the
+[robustness packet](../results/zero_heavy_robustness_20261021a/zero_heavy.md)
+and [two-unit/first-owner extension](../results/zero_heavy_extension_20261021a/README.md).
+They reach deficit `2k` in their stated parameter ranges, with exact
+small-parameter controls. The old paragraph incorrectly allowed two
+missing gaps at `k+1`: the exact identity
+
+    delta=(k+1)d+kh+U
+
+charges two missing gaps `2k>k+1` for every `k>=2`. Shared endpoints first
+appear at `k+1`, while two missing gaps first appear at `2k`.
+
+The [new weighted-endpoint branch](../results/shape_ports_20261025/tournaments.md)
+closes `r<k` at deficit `2k+1`: for `k>=3` it has
+`2(k-1)(2k-3)!!` classes generally and `2(k-1)I_(k-1)` strongly. At `k=2`
+two marked records merge into one class. The literal pointed-triangle
+collapse proves `H_k^s=2(k-1)I_(k-1)` while retaining its external port.
+The other `r=k` families at this deficit, the unrestricted owner grammar,
+and an unrestricted A000568 recurrence remain **OPEN**.
 
 ## (e) Arithmetic Klein sets and the fixed-tile-free cube
 
