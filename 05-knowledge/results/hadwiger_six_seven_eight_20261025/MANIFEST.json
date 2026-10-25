@@ -103,8 +103,8 @@
     },
     {
       "path": "CONCEPT_BOARD.md",
-      "bytes": 3908,
-      "sha256": "343ad6df1d74e0102b67f61fbceff6096fcdd87bd65829ee7b100e50d2a31c16"
+      "bytes": 4638,
+      "sha256": "91494973aaca77eeb79d128c096738a0b2ea60d433803deceb5e3f292cf04e6b"
     },
     {
       "path": "cube_boundary/check.py",
@@ -208,8 +208,8 @@
     },
     {
       "path": "PUBLICATION_CHECKS.md",
-      "bytes": 2682,
-      "sha256": "05403372053349a9c4533e93ea1e76dee622024c50ef79f17ceb94322746e63d"
+      "bytes": 3229,
+      "sha256": "b0ea203d0859f6e46a229852ea30cf7047dbacb1fcd332a51b42eae58d5041a9"
     },
     {
       "path": "README.md",
@@ -228,13 +228,13 @@
     },
     {
       "path": "SOURCE_PINS.json",
-      "bytes": 4462,
-      "sha256": "37470c2cdee339c1aa47152c846779070dd4b6313708d4f8f3d395aa2abcc925"
+      "bytes": 4721,
+      "sha256": "7998d05686a00bc78bcca39d499c73eed4885487ff23f2dd02e9d06cb58acc36"
     },
     {
       "path": "SYNTHESIS.md",
-      "bytes": 8668,
-      "sha256": "f76e44555c806c1f63c28b122621302d63915f752f37482a36a0f42d6fb95f46"
+      "bytes": 9070,
+      "sha256": "a98071c0d6c3dfca215dbcfe360b3530fe657bc097c5cceb0ec414592a504c80"
     },
     {
       "path": "verify_packet.py",

@@ -45,3 +45,7 @@ staged diff, verifies the manifest against committed Git blobs, pushes, then
 fetches and checks that HEAD is not ahead of origin/main. The final chat
 reports the observed Git outcome rather than treating this procedure as
 evidence that a push has happened.
+
+## Observed final checks
+
+`agents/check_docs.py` PASS after shortening displayed startup labels and routing the new summary through S61. All64 resolved local Markdown destinations exist. The first published checkpoint at1f804be357 has48 exact manifest-matching Git blobs. The final packet retains the same mathematical code and successful eight-pair REPLAY receipt; subsequent changes are navigation, provenance, audit status and the credited incoming normalized-fiber-product consequence. The frozen file set includes48 files plus its manifest.

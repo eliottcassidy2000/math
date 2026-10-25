@@ -4,6 +4,11 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — a boundary product needs every cross-constraint, and an edge count needs the inner triangle
+
+- **Affected provisional draft:** [HN six/seven/eight boundary packet](../05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md), repaired before proof promotion. The32-vertex example has31 edges, not28: the three inner-triangle edges were omitted from the prose total. Exact pair-distance checks recover all31.
+- **First failed implication / repair:** conditional independence of private interiors does not justify multiplying extension counts across an undecomposed cross-edge. Use literal union of fragments meeting only at the named ports; impose extra port edges as separate indicator factors, or enlarge the boundary for interior cross-constraints. The Fourier product survives exactly under these repaired hypotheses. Full independent proof and coordinate replay are in the [audit](../05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/BOUNDARY_AUDIT.md).
+
 ## 2026-10-25 — a correct lattice cap needed a new proof; seven labels did not supply Fano incidence
 
 - **Affected:** [THM-419](theorems/THM-419-2d-lattice-chromatic-cap.md) and the frozen [hexagonal output](../05-knowledge/results/hexagonal_forbidden_s116m.out).

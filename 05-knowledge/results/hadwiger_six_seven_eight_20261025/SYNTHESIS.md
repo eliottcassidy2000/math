@@ -75,6 +75,8 @@ adjoins a point and remembers four-block incidence; the other identifies
 opposite cube vertices and remembers unit distances. Neither transfers
 the torus K7's chromatic lower bound to the Euclidean plane.
 
+The incoming [norm-seven continuation](../six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md) also proves that the two face designs for each ideal give complementary free kernels. Their two Campedelli quotient models recover the normal hourglass by a normalized fiber product. This is an inherited geometric use of keeping both chiral designs, not a claim that their union is one Steiner system.
+
 A second numerical temptation also fails decisively. The28 sextic character
 labels in the eight-root formula p_g=28+3 and the28 equianharmonic
 quadrangles are inequivalent permutation representations: z->4z fixes one

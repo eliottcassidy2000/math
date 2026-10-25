@@ -8,11 +8,11 @@
 Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-blue boundary.
 
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
-K3 cubes, free codes, reflection. [Gale continuation](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors.
+K3 cubes, free codes, reflection. [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors. [HN6/7/8](S61.md): metric fold and boundary modes.
 
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic incidence and twisted pair transport.
 
-## The five-minute orientation
+## Orientation
 
 1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
 2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
@@ -26,7 +26,7 @@ Start with:
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
 
-## Nineteen high-signal facts
+## Current facts
 
 1. **Repo LRC(14) remains OPEN.** THM-4347 closes height `40`;
    THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,
@@ -112,7 +112,7 @@ python3 agents/start_session.py --topic "<target statement or object>"
 | Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |
 | Agent process | [`../agents/README.md`](../agents/README.md) | [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md) |
 
-## Before promoting a result
+## Promotion checks
 
 - Read [guardrails](../01-canon/ACTIVE-GUARDRAILS.md); search claims and corrections.
 - State scope, quantifiers, direction, mechanism, boundaries and dependencies.

@@ -59,3 +59,7 @@ counting. No new universal meta-pattern is promoted from this one session.
 Every completed lane records source, target, map, preserved predicate, loss,
 needed sidecar and cheapest decisive test. The synthesis records the final
 cross-lane consequences and stopping boundaries.
+
+## Final comparison and stop
+
+The metric fold identifies antipodes; the projective construction adjoins an origin; the palette decomposition retains a four-frame residual; the boundary table retains pair modes invisible to coordinate and parity observers. These are different operations on marked eight-point carriers. The new exact graphs have prescribed exterior colors, leaving the universal HN quantifier untouched. Concurrent Session62 owns the general local-coefficient formula; the incoming norm-seven continuation uses both chiral kernels to reconstruct the hourglass. All four lanes reached proofs and independent controls; further work requires an actual high-palette boundary obstruction with realizable metric seams.
