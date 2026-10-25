@@ -1,0 +1,8292 @@
+{
+  "additive_fields": [
+    {
+      "characteristic": 2,
+      "count": 1,
+      "dimension": 1,
+      "q": 2
+    },
+    {
+      "characteristic": 2,
+      "count": 21,
+      "dimension": 2,
+      "q": 4
+    },
+    {
+      "characteristic": 2,
+      "count": 301,
+      "dimension": 3,
+      "q": 8
+    },
+    {
+      "characteristic": 2,
+      "count": 3165,
+      "dimension": 4,
+      "q": 16
+    },
+    {
+      "characteristic": 2,
+      "count": 28861,
+      "dimension": 5,
+      "q": 32
+    },
+    {
+      "characteristic": 2,
+      "count": 246141,
+      "dimension": 6,
+      "q": 64
+    },
+    {
+      "characteristic": 3,
+      "count": 2,
+      "dimension": 1,
+      "q": 3
+    },
+    {
+      "characteristic": 3,
+      "count": 200,
+      "dimension": 2,
+      "q": 9
+    },
+    {
+      "characteristic": 3,
+      "count": 13754,
+      "dimension": 3,
+      "q": 27
+    },
+    {
+      "characteristic": 3,
+      "count": 474320,
+      "dimension": 4,
+      "q": 81
+    },
+    {
+      "characteristic": 5,
+      "count": 20,
+      "dimension": 1,
+      "q": 5
+    },
+    {
+      "characteristic": 5,
+      "count": 10680,
+      "dimension": 2,
+      "q": 25
+    },
+    {
+      "characteristic": 7,
+      "count": 78,
+      "dimension": 1,
+      "q": 7
+    },
+    {
+      "characteristic": 7,
+      "count": 97392,
+      "dimension": 2,
+      "q": 49
+    },
+    {
+      "characteristic": 11,
+      "count": 530,
+      "dimension": 1,
+      "q": 11
+    },
+    {
+      "characteristic": 13,
+      "count": 1020,
+      "dimension": 1,
+      "q": 13
+    }
+  ],
+  "cyclic_groups": [
+    {
+      "count": 0,
+      "n": 1
+    },
+    {
+      "count": 1,
+      "n": 2
+    },
+    {
+      "count": 2,
+      "n": 3
+    },
+    {
+      "count": 13,
+      "n": 4
+    },
+    {
+      "count": 20,
+      "n": 5
+    },
+    {
+      "count": 57,
+      "n": 6
+    },
+    {
+      "count": 78,
+      "n": 7
+    },
+    {
+      "count": 173,
+      "n": 8
+    },
+    {
+      "count": 224,
+      "n": 9
+    },
+    {
+      "count": 417,
+      "n": 10
+    },
+    {
+      "count": 530,
+      "n": 11
+    },
+    {
+      "count": 805,
+      "n": 12
+    },
+    {
+      "count": 1020,
+      "n": 13
+    },
+    {
+      "count": 1441,
+      "n": 14
+    },
+    {
+      "count": 1742,
+      "n": 15
+    },
+    {
+      "count": 2317,
+      "n": 16
+    },
+    {
+      "count": 2768,
+      "n": 17
+    },
+    {
+      "count": 3513,
+      "n": 18
+    },
+    {
+      "count": 4122,
+      "n": 19
+    },
+    {
+      "count": 5069,
+      "n": 20
+    },
+    {
+      "count": 5852,
+      "n": 21
+    },
+    {
+      "count": 7041,
+      "n": 22
+    },
+    {
+      "count": 8030,
+      "n": 23
+    },
+    {
+      "count": 9445,
+      "n": 24
+    },
+    {
+      "count": 10680,
+      "n": 25
+    },
+    {
+      "count": 12385,
+      "n": 26
+    },
+    {
+      "count": 13850,
+      "n": 27
+    },
+    {
+      "count": 15853,
+      "n": 28
+    },
+    {
+      "count": 17612,
+      "n": 29
+    },
+    {
+      "count": 19929,
+      "n": 30
+    },
+    {
+      "count": 21990,
+      "n": 31
+    },
+    {
+      "count": 24653,
+      "n": 32
+    },
+    {
+      "count": 27032,
+      "n": 33
+    },
+    {
+      "count": 30081,
+      "n": 34
+    },
+    {
+      "count": 32810,
+      "n": 35
+    },
+    {
+      "count": 36229,
+      "n": 36
+    },
+    {
+      "count": 39348,
+      "n": 37
+    },
+    {
+      "count": 43201,
+      "n": 38
+    },
+    {
+      "count": 46694,
+      "n": 39
+    },
+    {
+      "count": 50989,
+      "n": 40
+    },
+    {
+      "count": 54920,
+      "n": 41
+    },
+    {
+      "count": 59673,
+      "n": 42
+    },
+    {
+      "count": 64050,
+      "n": 43
+    },
+    {
+      "count": 69293,
+      "n": 44
+    },
+    {
+      "count": 74132,
+      "n": 45
+    },
+    {
+      "count": 79905,
+      "n": 46
+    },
+    {
+      "count": 85238,
+      "n": 47
+    },
+    {
+      "count": 91525,
+      "n": 48
+    },
+    {
+      "count": 97392,
+      "n": 49
+    },
+    {
+      "count": 104257,
+      "n": 50
+    },
+    {
+      "count": 110642,
+      "n": 51
+    },
+    {
+      "count": 118093,
+      "n": 52
+    },
+    {
+      "count": 125060,
+      "n": 53
+    },
+    {
+      "count": 133113,
+      "n": 54
+    },
+    {
+      "count": 140670,
+      "n": 55
+    },
+    {
+      "count": 149357,
+      "n": 56
+    },
+    {
+      "count": 157520,
+      "n": 57
+    },
+    {
+      "count": 166881,
+      "n": 58
+    },
+    {
+      "count": 175682,
+      "n": 59
+    },
+    {
+      "count": 185701,
+      "n": 60
+    },
+    {
+      "count": 195180,
+      "n": 61
+    },
+    {
+      "count": 205921,
+      "n": 62
+    },
+    {
+      "count": 216062,
+      "n": 63
+    },
+    {
+      "count": 227533,
+      "n": 64
+    },
+    {
+      "count": 238400,
+      "n": 65
+    },
+    {
+      "count": 250617,
+      "n": 66
+    },
+    {
+      "count": 262218,
+      "n": 67
+    },
+    {
+      "count": 275213,
+      "n": 68
+    },
+    {
+      "count": 287564,
+      "n": 69
+    },
+    {
+      "count": 301377,
+      "n": 70
+    },
+    {
+      "count": 314510,
+      "n": 71
+    },
+    {
+      "count": 329125,
+      "n": 72
+    },
+    {
+      "count": 343080,
+      "n": 73
+    },
+    {
+      "count": 358561,
+      "n": 74
+    },
+    {
+      "count": 373322,
+      "n": 75
+    },
+    {
+      "count": 389677,
+      "n": 76
+    },
+    {
+      "count": 405308,
+      "n": 77
+    },
+    {
+      "count": 422553,
+      "n": 78
+    },
+    {
+      "count": 439062,
+      "n": 79
+    },
+    {
+      "count": 457229,
+      "n": 80
+    },
+    {
+      "count": 474632,
+      "n": 81
+    },
+    {
+      "count": 493761,
+      "n": 82
+    },
+    {
+      "count": 512090,
+      "n": 83
+    },
+    {
+      "count": 532165,
+      "n": 84
+    },
+    {
+      "count": 551460,
+      "n": 85
+    },
+    {
+      "count": 572545,
+      "n": 86
+    },
+    {
+      "count": 592790,
+      "n": 87
+    },
+    {
+      "count": 614893,
+      "n": 88
+    },
+    {
+      "count": 636152,
+      "n": 89
+    },
+    {
+      "count": 659289,
+      "n": 90
+    },
+    {
+      "count": 681570,
+      "n": 91
+    },
+    {
+      "count": 705773,
+      "n": 92
+    },
+    {
+      "count": 729092,
+      "n": 93
+    },
+    {
+      "count": 754401,
+      "n": 94
+    },
+    {
+      "count": 778790,
+      "n": 95
+    },
+    {
+      "count": 805189,
+      "n": 96
+    },
+    {
+      "count": 830688,
+      "n": 97
+    },
+    {
+      "count": 858241,
+      "n": 98
+    },
+    {
+      "count": 884834,
+      "n": 99
+    },
+    {
+      "count": 913549,
+      "n": 100
+    },
+    {
+      "count": 941300,
+      "n": 101
+    },
+    {
+      "count": 971193,
+      "n": 102
+    },
+    {
+      "count": 1000110,
+      "n": 103
+    },
+    {
+      "count": 1031213,
+      "n": 104
+    },
+    {
+      "count": 1061312,
+      "n": 105
+    },
+    {
+      "count": 1093665,
+      "n": 106
+    },
+    {
+      "count": 1124978,
+      "n": 107
+    },
+    {
+      "count": 1158565,
+      "n": 108
+    },
+    {
+      "count": 1191132,
+      "n": 109
+    },
+    {
+      "count": 1226017,
+      "n": 110
+    },
+    {
+      "count": 1259822,
+      "n": 111
+    },
+    {
+      "count": 1296013,
+      "n": 112
+    },
+    {
+      "count": 1331120,
+      "n": 113
+    },
+    {
+      "count": 1368633,
+      "n": 114
+    },
+    {
+      "count": 1405050,
+      "n": 115
+    },
+    {
+      "count": 1443917,
+      "n": 116
+    },
+    {
+      "count": 1481660,
+      "n": 117
+    },
+    {
+      "count": 1521921,
+      "n": 118
+    },
+    {
+      "count": 1561022,
+      "n": 119
+    },
+    {
+      "count": 1602661,
+      "n": 120
+    }
+  ],
+  "discriminant": {
+    "nine_root_discriminant": "2^4608 * product(z_i)^256",
+    "small_direct_trace_checks": [
+      {
+        "determinant": 8,
+        "roots": 1
+      },
+      {
+        "determinant": 9216,
+        "roots": 2
+      },
+      {
+        "determinant": 5566277615616,
+        "roots": 3
+      },
+      {
+        "determinant": 793176230249158201524722073600000000,
+        "roots": 4
+      }
+    ]
+  },
+  "scope": "All-n and all-finite-field formulas proved by finite exact 512-subset certification plus SNF inclusion-exclusion.",
+  "snf": {
+    "absolute_triple_determinants": {
+      "0": 8,
+      "1": 32,
+      "2": 32,
+      "3": 4,
+      "4": 8
+    },
+    "signed_rank_coefficients": {
+      "0": {
+        "0": 1,
+        "1": -9,
+        "2": 28,
+        "3": -20
+      },
+      "2": {
+        "0": 1,
+        "1": -4,
+        "2": 6,
+        "3": -3
+      },
+      "3": {
+        "0": 1,
+        "1": -9,
+        "2": 24,
+        "3": -16
+      },
+      "5": {
+        "0": 1,
+        "1": -9,
+        "2": 28,
+        "3": -20
+      },
+      "7": {
+        "0": 1,
+        "1": -9,
+        "2": 28,
+        "3": -20
+      }
+    },
+    "signed_snf": [
+      {
+        "coefficient": 1,
+        "invariants": []
+      },
+      {
+        "coefficient": -9,
+        "invariants": [
+          1
+        ]
+      },
+      {
+        "coefficient": 20,
+        "invariants": [
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": 1,
+        "invariants": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "coefficient": -10,
+        "invariants": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -4,
+        "invariants": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -4,
+        "invariants": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 8,
+        "invariants": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -3,
+        "invariants": [
+          1,
+          2,
+          2
+        ]
+      }
+    ],
+    "subset_count": 512,
+    "subset_size_snf_histogram": [
+      {
+        "count": 1,
+        "invariants": [],
+        "size": 0
+      },
+      {
+        "count": 9,
+        "invariants": [
+          1
+        ],
+        "size": 1
+      },
+      {
+        "count": 28,
+        "invariants": [
+          1,
+          1
+        ],
+        "size": 2
+      },
+      {
+        "count": 8,
+        "invariants": [
+          1,
+          2
+        ],
+        "size": 2
+      },
+      {
+        "count": 8,
+        "invariants": [
+          1,
+          1
+        ],
+        "size": 3
+      },
+      {
+        "count": 32,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 3
+      },
+      {
+        "count": 32,
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "size": 3
+      },
+      {
+        "count": 4,
+        "invariants": [
+          1,
+          1,
+          3
+        ],
+        "size": 3
+      },
+      {
+        "count": 4,
+        "invariants": [
+          1,
+          1,
+          4
+        ],
+        "size": 3
+      },
+      {
+        "count": 4,
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "size": 3
+      },
+      {
+        "count": 92,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 4
+      },
+      {
+        "count": 33,
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "size": 4
+      },
+      {
+        "count": 1,
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "size": 4
+      },
+      {
+        "count": 113,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 5
+      },
+      {
+        "count": 13,
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "size": 5
+      },
+      {
+        "count": 82,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 6
+      },
+      {
+        "count": 2,
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "size": 6
+      },
+      {
+        "count": 36,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 7
+      },
+      {
+        "count": 9,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 8
+      },
+      {
+        "count": 1,
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "size": 9
+      }
+    ],
+    "subsets": [
+      {
+        "indices": [],
+        "invariants": [],
+        "mask": 0
+      },
+      {
+        "indices": [
+          0
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 1
+      },
+      {
+        "indices": [
+          1
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 2
+      },
+      {
+        "indices": [
+          0,
+          1
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 3
+      },
+      {
+        "indices": [
+          2
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 4
+      },
+      {
+        "indices": [
+          0,
+          2
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 5
+      },
+      {
+        "indices": [
+          1,
+          2
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 6
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 7
+      },
+      {
+        "indices": [
+          3
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 8
+      },
+      {
+        "indices": [
+          0,
+          3
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 9
+      },
+      {
+        "indices": [
+          1,
+          3
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 10
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 11
+      },
+      {
+        "indices": [
+          2,
+          3
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 12
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 13
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 14
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 15
+      },
+      {
+        "indices": [
+          4
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 16
+      },
+      {
+        "indices": [
+          0,
+          4
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 17
+      },
+      {
+        "indices": [
+          1,
+          4
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 18
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 19
+      },
+      {
+        "indices": [
+          2,
+          4
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 20
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 21
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 22
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 23
+      },
+      {
+        "indices": [
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 24
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 25
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 26
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 27
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 28
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 29
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 30
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 31
+      },
+      {
+        "indices": [
+          5
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 32
+      },
+      {
+        "indices": [
+          0,
+          5
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 33
+      },
+      {
+        "indices": [
+          1,
+          5
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 34
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 35
+      },
+      {
+        "indices": [
+          2,
+          5
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 36
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 37
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 38
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 39
+      },
+      {
+        "indices": [
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 40
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 41
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 42
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 43
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 44
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 45
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 46
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 47
+      },
+      {
+        "indices": [
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 48
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 49
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 50
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 51
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 52
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 53
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 54
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 55
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 56
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 57
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 58
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 59
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 60
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 61
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 62
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 63
+      },
+      {
+        "indices": [
+          6
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 64
+      },
+      {
+        "indices": [
+          0,
+          6
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 65
+      },
+      {
+        "indices": [
+          1,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 66
+      },
+      {
+        "indices": [
+          0,
+          1,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 67
+      },
+      {
+        "indices": [
+          2,
+          6
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 68
+      },
+      {
+        "indices": [
+          0,
+          2,
+          6
+        ],
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "mask": 69
+      },
+      {
+        "indices": [
+          1,
+          2,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 70
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 71
+      },
+      {
+        "indices": [
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 72
+      },
+      {
+        "indices": [
+          0,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 73
+      },
+      {
+        "indices": [
+          1,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 74
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 75
+      },
+      {
+        "indices": [
+          2,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 76
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 77
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 78
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 79
+      },
+      {
+        "indices": [
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 80
+      },
+      {
+        "indices": [
+          0,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 81
+      },
+      {
+        "indices": [
+          1,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 82
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 83
+      },
+      {
+        "indices": [
+          2,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 84
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 85
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 86
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 87
+      },
+      {
+        "indices": [
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 88
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 89
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 90
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 91
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 92
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 93
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 94
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 95
+      },
+      {
+        "indices": [
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 96
+      },
+      {
+        "indices": [
+          0,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          4
+        ],
+        "mask": 97
+      },
+      {
+        "indices": [
+          1,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          3
+        ],
+        "mask": 98
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 99
+      },
+      {
+        "indices": [
+          2,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 100
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 101
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 102
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 103
+      },
+      {
+        "indices": [
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 104
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 105
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 106
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 107
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 108
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 109
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 110
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 111
+      },
+      {
+        "indices": [
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 112
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 113
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 114
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 115
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 116
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 117
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 118
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 119
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 120
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 121
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 122
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 123
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 124
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 125
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 126
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 127
+      },
+      {
+        "indices": [
+          7
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 128
+      },
+      {
+        "indices": [
+          0,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 129
+      },
+      {
+        "indices": [
+          1,
+          7
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 130
+      },
+      {
+        "indices": [
+          0,
+          1,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 131
+      },
+      {
+        "indices": [
+          2,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 132
+      },
+      {
+        "indices": [
+          0,
+          2,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          4
+        ],
+        "mask": 133
+      },
+      {
+        "indices": [
+          1,
+          2,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 134
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 135
+      },
+      {
+        "indices": [
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 136
+      },
+      {
+        "indices": [
+          0,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 137
+      },
+      {
+        "indices": [
+          1,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 138
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 139
+      },
+      {
+        "indices": [
+          2,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          3
+        ],
+        "mask": 140
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 141
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 142
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 143
+      },
+      {
+        "indices": [
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 144
+      },
+      {
+        "indices": [
+          0,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 145
+      },
+      {
+        "indices": [
+          1,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 146
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 147
+      },
+      {
+        "indices": [
+          2,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 148
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 149
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 150
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 151
+      },
+      {
+        "indices": [
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 152
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 153
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 154
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 155
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 156
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 157
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 158
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 159
+      },
+      {
+        "indices": [
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 160
+      },
+      {
+        "indices": [
+          0,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          3
+        ],
+        "mask": 161
+      },
+      {
+        "indices": [
+          1,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 162
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 163
+      },
+      {
+        "indices": [
+          2,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 164
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 165
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 166
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 167
+      },
+      {
+        "indices": [
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 168
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 169
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 170
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 171
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 172
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 173
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 174
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 175
+      },
+      {
+        "indices": [
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 176
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 177
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 178
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 179
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 180
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 181
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 182
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 183
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 184
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 185
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 186
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 187
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 188
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 189
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 190
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 191
+      },
+      {
+        "indices": [
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 192
+      },
+      {
+        "indices": [
+          0,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 193
+      },
+      {
+        "indices": [
+          1,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 194
+      },
+      {
+        "indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 195
+      },
+      {
+        "indices": [
+          2,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 196
+      },
+      {
+        "indices": [
+          0,
+          2,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 197
+      },
+      {
+        "indices": [
+          1,
+          2,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 198
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 199
+      },
+      {
+        "indices": [
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 200
+      },
+      {
+        "indices": [
+          0,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 201
+      },
+      {
+        "indices": [
+          1,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 202
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 203
+      },
+      {
+        "indices": [
+          2,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 204
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 205
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 206
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 207
+      },
+      {
+        "indices": [
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 208
+      },
+      {
+        "indices": [
+          0,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 209
+      },
+      {
+        "indices": [
+          1,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 210
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 211
+      },
+      {
+        "indices": [
+          2,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 212
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 213
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 214
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 215
+      },
+      {
+        "indices": [
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 216
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 217
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 218
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 219
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 220
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 221
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 222
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 223
+      },
+      {
+        "indices": [
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 224
+      },
+      {
+        "indices": [
+          0,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 225
+      },
+      {
+        "indices": [
+          1,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 226
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 227
+      },
+      {
+        "indices": [
+          2,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 228
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 229
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 230
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 231
+      },
+      {
+        "indices": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 232
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 233
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 234
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 235
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 236
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 237
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 238
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 239
+      },
+      {
+        "indices": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 240
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 241
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 242
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 243
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 244
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 245
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 246
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 247
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 248
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 249
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 250
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 251
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 252
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 253
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 254
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 255
+      },
+      {
+        "indices": [
+          8
+        ],
+        "invariants": [
+          1
+        ],
+        "mask": 256
+      },
+      {
+        "indices": [
+          0,
+          8
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 257
+      },
+      {
+        "indices": [
+          1,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 258
+      },
+      {
+        "indices": [
+          0,
+          1,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 259
+      },
+      {
+        "indices": [
+          2,
+          8
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 260
+      },
+      {
+        "indices": [
+          0,
+          2,
+          8
+        ],
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "mask": 261
+      },
+      {
+        "indices": [
+          1,
+          2,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 262
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 263
+      },
+      {
+        "indices": [
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 264
+      },
+      {
+        "indices": [
+          0,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 265
+      },
+      {
+        "indices": [
+          1,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          3
+        ],
+        "mask": 266
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 267
+      },
+      {
+        "indices": [
+          2,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          4
+        ],
+        "mask": 268
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 269
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 270
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 271
+      },
+      {
+        "indices": [
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 272
+      },
+      {
+        "indices": [
+          0,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 273
+      },
+      {
+        "indices": [
+          1,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 274
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 275
+      },
+      {
+        "indices": [
+          2,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 276
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 277
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 278
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 279
+      },
+      {
+        "indices": [
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 280
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 281
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 282
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 283
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 284
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 285
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 286
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 287
+      },
+      {
+        "indices": [
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 288
+      },
+      {
+        "indices": [
+          0,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 289
+      },
+      {
+        "indices": [
+          1,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 290
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 291
+      },
+      {
+        "indices": [
+          2,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 292
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 293
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 294
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 295
+      },
+      {
+        "indices": [
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 296
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 297
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 298
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 299
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 300
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 301
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 302
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 303
+      },
+      {
+        "indices": [
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 304
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 305
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 306
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 307
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 308
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 309
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 310
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 311
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 312
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 313
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 314
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 315
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 316
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 317
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 318
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 319
+      },
+      {
+        "indices": [
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          2
+        ],
+        "mask": 320
+      },
+      {
+        "indices": [
+          0,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "mask": 321
+      },
+      {
+        "indices": [
+          1,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          4
+        ],
+        "mask": 322
+      },
+      {
+        "indices": [
+          0,
+          1,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 323
+      },
+      {
+        "indices": [
+          2,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "mask": 324
+      },
+      {
+        "indices": [
+          0,
+          2,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          2,
+          2
+        ],
+        "mask": 325
+      },
+      {
+        "indices": [
+          1,
+          2,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 326
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 327
+      },
+      {
+        "indices": [
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 328
+      },
+      {
+        "indices": [
+          0,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 329
+      },
+      {
+        "indices": [
+          1,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 330
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 331
+      },
+      {
+        "indices": [
+          2,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 332
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 333
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 334
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 335
+      },
+      {
+        "indices": [
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 336
+      },
+      {
+        "indices": [
+          0,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 337
+      },
+      {
+        "indices": [
+          1,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 338
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 339
+      },
+      {
+        "indices": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 340
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 341
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 342
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 343
+      },
+      {
+        "indices": [
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 344
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 345
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 346
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 347
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 348
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 349
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 350
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 351
+      },
+      {
+        "indices": [
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 352
+      },
+      {
+        "indices": [
+          0,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 353
+      },
+      {
+        "indices": [
+          1,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 354
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 355
+      },
+      {
+        "indices": [
+          2,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 356
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 357
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 358
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 359
+      },
+      {
+        "indices": [
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 360
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 361
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 362
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 363
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 364
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 365
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 366
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 367
+      },
+      {
+        "indices": [
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 368
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 369
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 370
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 371
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 372
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 373
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 374
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 375
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 376
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 377
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 378
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 379
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 380
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 381
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 382
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 383
+      },
+      {
+        "indices": [
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 384
+      },
+      {
+        "indices": [
+          0,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 385
+      },
+      {
+        "indices": [
+          1,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 386
+      },
+      {
+        "indices": [
+          0,
+          1,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 387
+      },
+      {
+        "indices": [
+          2,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 388
+      },
+      {
+        "indices": [
+          0,
+          2,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 389
+      },
+      {
+        "indices": [
+          1,
+          2,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 390
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 391
+      },
+      {
+        "indices": [
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 392
+      },
+      {
+        "indices": [
+          0,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 393
+      },
+      {
+        "indices": [
+          1,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 394
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 395
+      },
+      {
+        "indices": [
+          2,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 396
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 397
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 398
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 399
+      },
+      {
+        "indices": [
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 400
+      },
+      {
+        "indices": [
+          0,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 401
+      },
+      {
+        "indices": [
+          1,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 402
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 403
+      },
+      {
+        "indices": [
+          2,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 404
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 405
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 406
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 407
+      },
+      {
+        "indices": [
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 408
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 409
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 410
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 411
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 412
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 413
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 414
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 415
+      },
+      {
+        "indices": [
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 416
+      },
+      {
+        "indices": [
+          0,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 417
+      },
+      {
+        "indices": [
+          1,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 418
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 419
+      },
+      {
+        "indices": [
+          2,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 420
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 421
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 422
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 423
+      },
+      {
+        "indices": [
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 424
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 425
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 426
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 427
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 428
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 429
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 430
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 431
+      },
+      {
+        "indices": [
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 432
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 433
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 434
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 435
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 436
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 437
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 438
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 439
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 440
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 441
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 442
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 443
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 444
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 445
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 446
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 447
+      },
+      {
+        "indices": [
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1
+        ],
+        "mask": 448
+      },
+      {
+        "indices": [
+          0,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 449
+      },
+      {
+        "indices": [
+          1,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 450
+      },
+      {
+        "indices": [
+          0,
+          1,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 451
+      },
+      {
+        "indices": [
+          2,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 452
+      },
+      {
+        "indices": [
+          0,
+          2,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 453
+      },
+      {
+        "indices": [
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 454
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          2
+        ],
+        "mask": 455
+      },
+      {
+        "indices": [
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 456
+      },
+      {
+        "indices": [
+          0,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 457
+      },
+      {
+        "indices": [
+          1,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 458
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 459
+      },
+      {
+        "indices": [
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 460
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 461
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 462
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 463
+      },
+      {
+        "indices": [
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 464
+      },
+      {
+        "indices": [
+          0,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 465
+      },
+      {
+        "indices": [
+          1,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 466
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 467
+      },
+      {
+        "indices": [
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 468
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 469
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 470
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 471
+      },
+      {
+        "indices": [
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 472
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 473
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 474
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 475
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 476
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 477
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 478
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 479
+      },
+      {
+        "indices": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 480
+      },
+      {
+        "indices": [
+          0,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 481
+      },
+      {
+        "indices": [
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 482
+      },
+      {
+        "indices": [
+          0,
+          1,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 483
+      },
+      {
+        "indices": [
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 484
+      },
+      {
+        "indices": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 485
+      },
+      {
+        "indices": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 486
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 487
+      },
+      {
+        "indices": [
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 488
+      },
+      {
+        "indices": [
+          0,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 489
+      },
+      {
+        "indices": [
+          1,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 490
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 491
+      },
+      {
+        "indices": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 492
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 493
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 494
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 495
+      },
+      {
+        "indices": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 496
+      },
+      {
+        "indices": [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 497
+      },
+      {
+        "indices": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 498
+      },
+      {
+        "indices": [
+          0,
+          1,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 499
+      },
+      {
+        "indices": [
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 500
+      },
+      {
+        "indices": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 501
+      },
+      {
+        "indices": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 502
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 503
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 504
+      },
+      {
+        "indices": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 505
+      },
+      {
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 506
+      },
+      {
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 507
+      },
+      {
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 508
+      },
+      {
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 509
+      },
+      {
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 510
+      },
+      {
+        "indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "invariants": [
+          1,
+          1,
+          1
+        ],
+        "mask": 511
+      }
+    ],
+    "vectors": [
+      [
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "source_sha256": "f18abf94bddf6f5b01c04c35cda2cc83a88607986081cebd9b1bdd129c4bf97e"
+}

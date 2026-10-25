@@ -31,3 +31,19 @@ The corrected primitive unordered quotient counts have nonnegative integral coef
 ## 7. Cyclic units provide an exact symmetry compiler
 
 For the specified pointed cyclic monoid C_m∪{0}, projective points are nonzero vectors modulo common unit scaling. Exact support S has m^(|S|−1) points; summing gives ((m+1)^k−1)/m. Power maps, coordinate permutations, and diagonal twists admit an exact cycle-congruence fixed-point formula. It works even for noninvertible powers, where full tail/period counts replace permutation-cycle language. Base-preserving Hom and unrestricted base maps must be distinguished. The q−1 unit group models projective finite-field point sets and Frobenius support dynamics; it supplies no missing additive field operation or integer Schur relation.
+
+## 8. Resolving singularities recovers the concealed twist
+
+Resolving the four A1 nodes of the shared-root surface gives an explicit blowup of the product of its two smooth AP conics. Its extension counts are q^(2n)+(4+2ε^n)q^n+1, where ε=χ_q(−1). The four trivial and two sign Picard directions recover splitting information that canceled in the singular surface's total zeta. The eight-ray toric fan over the splitting field and the blowup construction provide two descriptions of the same resolution. This is an exact comparison of specified surfaces, not a claim that zeta functions determine varieties.
+
+## 9. A universal torsion formula for the deformed branch complement
+
+For any finite abelian group A, let N=|A| and h_d=|A[d]|. The number of labelled group-magic arrays with none of their nine entries equal to the identity is
+
+N³−9N²+(20+8h₂)N+1−10h₂−4h₃−4h₄−3h₂².
+
+The proof is inclusion–exclusion in the nine integer character rows (1,i,j), i,j∈{−1,0,1}, retaining their Smith invariant factors. Additive finite fields and multiplicative finite fields are two different substitutions into this same theorem. Only2-,3-,4-torsion appears here.
+
+Over the complex numbers, the corresponding multiplicative toric-arrangement complement has Poincare polynomial1+12t+57t²+105t³, whereas the additive hyperplane complement has1+9t+28t²+20t³, using the cited primary arrangement theorem. The deformation is smooth but nonproper; flatness does not force equal topology or arithmetic counts.
+
+The ordinary nine-root pullback has discriminant2^4608(z₁⋯z₉)^256 in its displayed free basis. Away from2 and these branch divisors it is finite étale of degree512. That degree counts geometric fibers with multiplicity conventions removed on the étale locus, not512 rational points over each finite-field base point.

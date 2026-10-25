@@ -1,0 +1,446 @@
+{
+  "groups": [
+    {
+      "N": 1,
+      "all_nonidentity": 0,
+      "cyclic_factors": [],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 2,
+      "all_nonidentity": 1,
+      "cyclic_factors": [
+        2
+      ],
+      "h": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 2,
+        "5": 1,
+        "6": 2
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 3,
+      "all_nonidentity": 2,
+      "cyclic_factors": [
+        3
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 1,
+        "5": 1,
+        "6": 3
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 4,
+      "all_nonidentity": 13,
+      "cyclic_factors": [
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 4,
+        "5": 1,
+        "6": 2
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 5,
+      "all_nonidentity": 20,
+      "cyclic_factors": [
+        5
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 5,
+        "6": 1
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 7,
+      "all_nonidentity": 78,
+      "cyclic_factors": [
+        7
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 8,
+      "all_nonidentity": 173,
+      "cyclic_factors": [
+        8
+      ],
+      "h": {
+        "1": 1,
+        "2": 2,
+        "3": 1,
+        "4": 4,
+        "5": 1,
+        "6": 2
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 9,
+      "all_nonidentity": 224,
+      "cyclic_factors": [
+        9
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 1,
+        "5": 1,
+        "6": 3
+      },
+      "injective_pairs": 24
+    },
+    {
+      "N": 12,
+      "all_nonidentity": 805,
+      "cyclic_factors": [
+        12
+      ],
+      "h": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 1,
+        "6": 6
+      },
+      "injective_pairs": 48
+    },
+    {
+      "N": 15,
+      "all_nonidentity": 1742,
+      "cyclic_factors": [
+        15
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 1,
+        "5": 5,
+        "6": 3
+      },
+      "injective_pairs": 128
+    },
+    {
+      "N": 4,
+      "all_nonidentity": 21,
+      "cyclic_factors": [
+        2,
+        2
+      ],
+      "h": {
+        "1": 1,
+        "2": 4,
+        "3": 1,
+        "4": 4,
+        "5": 1,
+        "6": 4
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 6,
+      "all_nonidentity": 57,
+      "cyclic_factors": [
+        2,
+        3
+      ],
+      "h": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 1,
+        "6": 6
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 8,
+      "all_nonidentity": 229,
+      "cyclic_factors": [
+        2,
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 4,
+        "3": 1,
+        "4": 8,
+        "5": 1,
+        "6": 4
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 12,
+      "all_nonidentity": 941,
+      "cyclic_factors": [
+        2,
+        6
+      ],
+      "h": {
+        "1": 1,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 1,
+        "6": 12
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 9,
+      "all_nonidentity": 200,
+      "cyclic_factors": [
+        3,
+        3
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 9,
+        "4": 1,
+        "5": 1,
+        "6": 9
+      },
+      "injective_pairs": 48
+    },
+    {
+      "N": 27,
+      "all_nonidentity": 13826,
+      "cyclic_factors": [
+        3,
+        9
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 9,
+        "4": 1,
+        "5": 1,
+        "6": 9
+      },
+      "injective_pairs": 552
+    },
+    {
+      "N": 16,
+      "all_nonidentity": 2469,
+      "cyclic_factors": [
+        4,
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 4,
+        "3": 1,
+        "4": 16,
+        "5": 1,
+        "6": 4
+      },
+      "injective_pairs": 96
+    },
+    {
+      "N": 25,
+      "all_nonidentity": 10680,
+      "cyclic_factors": [
+        5,
+        5
+      ],
+      "h": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 25,
+        "6": 1
+      },
+      "injective_pairs": 480
+    },
+    {
+      "N": 16,
+      "all_nonidentity": 2797,
+      "cyclic_factors": [
+        2,
+        2,
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 8,
+        "3": 1,
+        "4": 16,
+        "5": 1,
+        "6": 8
+      },
+      "injective_pairs": 0
+    },
+    {
+      "N": 32,
+      "all_nonidentity": 25837,
+      "cyclic_factors": [
+        2,
+        4,
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 8,
+        "3": 1,
+        "4": 32,
+        "5": 1,
+        "6": 8
+      },
+      "injective_pairs": 384
+    },
+    {
+      "N": 24,
+      "all_nonidentity": 9757,
+      "cyclic_factors": [
+        2,
+        3,
+        4
+      ],
+      "h": {
+        "1": 1,
+        "2": 4,
+        "3": 3,
+        "4": 8,
+        "5": 1,
+        "6": 12
+      },
+      "injective_pairs": 224
+    },
+    {
+      "N": 16,
+      "all_nonidentity": 3165,
+      "cyclic_factors": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "h": {
+        "1": 1,
+        "2": 16,
+        "3": 1,
+        "4": 16,
+        "5": 1,
+        "6": 16
+      },
+      "injective_pairs": 0
+    }
+  ],
+  "signed_SNF": {
+    "()": 1,
+    "(1, 1)": 20,
+    "(1, 1, 1)": 1,
+    "(1, 1, 2)": -10,
+    "(1, 1, 3)": -4,
+    "(1, 1, 4)": -4,
+    "(1, 2)": 8,
+    "(1, 2, 2)": -3,
+    "(1,)": -9
+  },
+  "status": "PASS",
+  "trace_checks": [
+    {
+      "degree": 2,
+      "determinant": 0,
+      "z": [
+        0
+      ]
+    },
+    {
+      "degree": 2,
+      "determinant": 8,
+      "z": [
+        2
+      ]
+    },
+    {
+      "degree": 4,
+      "determinant": 9216,
+      "z": [
+        -2,
+        3
+      ]
+    },
+    {
+      "degree": 8,
+      "determinant": 0,
+      "z": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "degree": 8,
+      "determinant": 13589544960000,
+      "z": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "degree": 16,
+      "determinant": 11705608000810438270228273496605065216,
+      "z": [
+        -2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "degree": 32,
+      "determinant": 960707065031514171113260724005092130594722985098208231994688025736713316406787634626560000000000000000,
+      "z": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ]
+    }
+  ]
+}

@@ -11,3 +11,7 @@ Reproduce each packet with its displayed command. Run `python3 verify_packet.py`
 Source-pinning files distinguish previously published repository material from new work. The positive-audit manifest records both the original audit capture paths and portable relative paths. The signed-flags checksum list was normalized to packet-relative filenames without changing the mathematical source. No downloaded full article or private attachment is included.
 
 The bounded repository startup/documentation checker passes without loosening its limits. No CI result is implied by these local checks.
+
+## Second checkpoint
+
+Five new producer/audit scripts are replayed normally and with optimization, with the exact results recorded in SECOND_REPLAY_RECEIPT.json. The geometry resolution producer uses assertions: its normal run validates those gates, while its optimized run checks output consistency. The independent resolution auditor uses always-active exceptions in both modes. The branch auditor’s source-certificate lookup was made relative to the sibling graph-magic-degeneration packet; only this location was changed. Frozen source hashes are retained in its audit, while the packaged script receives a fresh checksum. No third-wave hierarchy or distinctness claim is included in this checkpoint.

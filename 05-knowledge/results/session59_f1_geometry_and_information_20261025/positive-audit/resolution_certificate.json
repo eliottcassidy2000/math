@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "always_active_checks": 141,
+  "conic_basis_determinant": -8,
+  "fan_rays": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      -1
+    ]
+  ],
+  "fan_self_intersections": [
+    -2,
+    -1,
+    -2,
+    -1,
+    -2,
+    -1,
+    -2,
+    -1
+  ],
+  "picard_trivial_rank": 4,
+  "picard_sign_rank": 2,
+  "direct_prime_field_blowup_counts": [
+    {
+      "q": 3,
+      "epsilon": -1,
+      "conic_points": 4,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 16
+    },
+    {
+      "q": 5,
+      "epsilon": 1,
+      "conic_points": 6,
+      "infinity_points": 2,
+      "rational_blowup_centers": 4,
+      "resolution_points": 56
+    },
+    {
+      "q": 7,
+      "epsilon": -1,
+      "conic_points": 8,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 64
+    },
+    {
+      "q": 11,
+      "epsilon": -1,
+      "conic_points": 12,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 144
+    },
+    {
+      "q": 13,
+      "epsilon": 1,
+      "conic_points": 14,
+      "infinity_points": 2,
+      "rational_blowup_centers": 4,
+      "resolution_points": 248
+    },
+    {
+      "q": 17,
+      "epsilon": 1,
+      "conic_points": 18,
+      "infinity_points": 2,
+      "rational_blowup_centers": 4,
+      "resolution_points": 392
+    },
+    {
+      "q": 19,
+      "epsilon": -1,
+      "conic_points": 20,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 400
+    },
+    {
+      "q": 23,
+      "epsilon": -1,
+      "conic_points": 24,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 576
+    },
+    {
+      "q": 29,
+      "epsilon": 1,
+      "conic_points": 30,
+      "infinity_points": 2,
+      "rational_blowup_centers": 4,
+      "resolution_points": 1016
+    },
+    {
+      "q": 31,
+      "epsilon": -1,
+      "conic_points": 32,
+      "infinity_points": 0,
+      "rational_blowup_centers": 0,
+      "resolution_points": 1024
+    }
+  ]
+}

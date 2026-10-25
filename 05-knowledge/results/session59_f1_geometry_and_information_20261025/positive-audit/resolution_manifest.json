@@ -1,0 +1,16 @@
+{
+  "reviewed_at_utc": "2026-10-25T15:33:00Z",
+  "input": {
+    "../toric-shared-roots/RESOLUTION.md": "fbe3ff5bd96258b4c4af8dd0624fb9ccf87529f3b14ed82965fd4d00d598bb81"
+  },
+  "outputs": {
+    "RESOLUTION_AUDIT.md": "a35a8f016c4c5feda12ce1b8652a0fcad667946de19bb2e1292d4f472540d91a",
+    "check_resolution.optimized.out": "e43827353e7bff0aeb6faa6964f6b29fec962cd3718c4f8ae13fe7d26c7bfa2d",
+    "resolution_certificate.json": "5d9602045dd4ca354023ece83bdf07fad0797a46c74f7999be952d56b6d1158b",
+    "check_resolution.out": "e43827353e7bff0aeb6faa6964f6b29fec962cd3718c4f8ae13fe7d26c7bfa2d",
+    "check_resolution.py": "e429cb4005d3448d8cfe1cbb758da0620764814e7ebe1b2595733d2a68d3fdce"
+  },
+  "source_capture_paths": {
+    "/tmp/session59-f1-geometry/RESOLUTION.md": "fbe3ff5bd96258b4c4af8dd0624fb9ccf87529f3b14ed82965fd4d00d598bb81"
+  }
+}

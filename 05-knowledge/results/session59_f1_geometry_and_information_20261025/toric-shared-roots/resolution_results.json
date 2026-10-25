@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "field_rows": [
+    {
+      "q": 3,
+      "p": 3,
+      "degree": 1,
+      "epsilon": -1,
+      "conic": 4,
+      "basepoints": 0,
+      "singular_base": 16,
+      "resolution": 16,
+      "rational_map_image_before_blowup": 16
+    },
+    {
+      "q": 5,
+      "p": 5,
+      "degree": 1,
+      "epsilon": 1,
+      "conic": 6,
+      "basepoints": 4,
+      "singular_base": 36,
+      "resolution": 56,
+      "rational_map_image_before_blowup": 20
+    },
+    {
+      "q": 7,
+      "p": 7,
+      "degree": 1,
+      "epsilon": -1,
+      "conic": 8,
+      "basepoints": 0,
+      "singular_base": 64,
+      "resolution": 64,
+      "rational_map_image_before_blowup": 64
+    },
+    {
+      "q": 11,
+      "p": 11,
+      "degree": 1,
+      "epsilon": -1,
+      "conic": 12,
+      "basepoints": 0,
+      "singular_base": 144,
+      "resolution": 144,
+      "rational_map_image_before_blowup": 144
+    },
+    {
+      "q": 13,
+      "p": 13,
+      "degree": 1,
+      "epsilon": 1,
+      "conic": 14,
+      "basepoints": 4,
+      "singular_base": 196,
+      "resolution": 248,
+      "rational_map_image_before_blowup": 148
+    },
+    {
+      "q": 9,
+      "p": 3,
+      "degree": 2,
+      "epsilon": 1,
+      "conic": 10,
+      "basepoints": 4,
+      "singular_base": 100,
+      "resolution": 136,
+      "rational_map_image_before_blowup": 68
+    },
+    {
+      "q": 25,
+      "p": 5,
+      "degree": 2,
+      "epsilon": 1,
+      "conic": 26,
+      "basepoints": 4,
+      "singular_base": 676,
+      "resolution": 776,
+      "rational_map_image_before_blowup": 580
+    },
+    {
+      "q": 49,
+      "p": 7,
+      "degree": 2,
+      "epsilon": 1,
+      "conic": 50,
+      "basepoints": 4,
+      "singular_base": 2500,
+      "resolution": 2696,
+      "rational_map_image_before_blowup": 2308
+    }
+  ],
+  "fan": {
+    "rays": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    "self_intersections": [
+      -2,
+      -1,
+      -2,
+      -1,
+      -2,
+      -1,
+      -2,
+      -1
+    ],
+    "intersection_rank": 6,
+    "anticanonical_square": 4,
+    "picard_characteristic_polynomial": "(x - 1)**4*(x + 1)**2",
+    "involution_power_traces": [
+      2,
+      6,
+      2,
+      6,
+      2,
+      6,
+      2,
+      6
+    ]
+  },
+  "symbolic": {
+    "parametrization": true,
+    "blowup_chart": true,
+    "zeta_power_sums": true
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "scope": "Frozen second-checkpoint scripts, actual normal/optimized executions; assertion removal noted per script",
+  "runs": [
+    {
+      "script": "toric-shared-roots/check_resolution.py",
+      "script_sha256": "75e04b8b3012bf346443d3f13cfac7c0cf633167adf80df42a4f8a09d2f47f79",
+      "optimized": false,
+      "assertion_count": 22,
+      "returncode": 0,
+      "seconds": 0.465,
+      "stdout_sha256": "ebbc63034d8c3ad8cdeb06a8ffa28cf8a0220ec0c2ea4c6cbd2cec7baabee5a9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "toric-shared-roots/check_resolution.py",
+      "script_sha256": "75e04b8b3012bf346443d3f13cfac7c0cf633167adf80df42a4f8a09d2f47f79",
+      "optimized": true,
+      "assertion_count": 22,
+      "returncode": 0,
+      "seconds": 2.123,
+      "stdout_sha256": "ebbc63034d8c3ad8cdeb06a8ffa28cf8a0220ec0c2ea4c6cbd2cec7baabee5a9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check_resolution.py",
+      "script_sha256": "e429cb4005d3448d8cfe1cbb758da0620764814e7ebe1b2595733d2a68d3fdce",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 8.298,
+      "stdout_sha256": "e43827353e7bff0aeb6faa6964f6b29fec962cd3718c4f8ae13fe7d26c7bfa2d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check_resolution.py",
+      "script_sha256": "e429cb4005d3448d8cfe1cbb758da0620764814e7ebe1b2595733d2a68d3fdce",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 9.608,
+      "stdout_sha256": "e43827353e7bff0aeb6faa6964f6b29fec962cd3718c4f8ae13fe7d26c7bfa2d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check_branch_arrangements.py",
+      "script_sha256": "f18abf94bddf6f5b01c04c35cda2cc83a88607986081cebd9b1bdd129c4bf97e",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.148,
+      "stdout_sha256": "21c6cb03e3fa6ed8f82adce61b43bd6b1315845431b10b66db50c49c7cc89ee7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check_branch_arrangements.py",
+      "script_sha256": "f18abf94bddf6f5b01c04c35cda2cc83a88607986081cebd9b1bdd129c4bf97e",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 3.034,
+      "stdout_sha256": "21c6cb03e3fa6ed8f82adce61b43bd6b1315845431b10b66db50c49c7cc89ee7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_independent.py",
+      "script_sha256": "1e7a7b81702db54acdfade9e37edd402add750a685d80cb072e0501fbdb1675a",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.598,
+      "stdout_sha256": "07b06bdb7603bb3b62590495937fb829d3c87535164fbde482d611aee7aa1afb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_independent.py",
+      "script_sha256": "1e7a7b81702db54acdfade9e37edd402add750a685d80cb072e0501fbdb1675a",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.802,
+      "stdout_sha256": "07b06bdb7603bb3b62590495937fb829d3c87535164fbde482d611aee7aa1afb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_magic_arrangements.py",
+      "script_sha256": "e9d43fc7e4c574f9e53d558405b564255c6b9a4dbfa65d9fc4b52683739b47d0",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.109,
+      "stdout_sha256": "0d604ff7f2ddaef4a7790087d6994f53048912181fe716741e9e54af8e9eeddd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_magic_arrangements.py",
+      "script_sha256": "e9d43fc7e4c574f9e53d558405b564255c6b9a4dbfa65d9fc4b52683739b47d0",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.14,
+      "stdout_sha256": "0d604ff7f2ddaef4a7790087d6994f53048912181fe716741e9e54af8e9eeddd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

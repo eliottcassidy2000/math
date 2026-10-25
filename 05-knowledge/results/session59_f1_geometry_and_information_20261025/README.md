@@ -2,7 +2,7 @@
 
 User focus: the field with one element. This session distinguishes explicitly specified monoid models, torified counting models, blue presentations, additive degenerations, and formal absolute-zeta transforms. They are not interchangeable definitions of a field of cardinality one.
 
-Status: first audited checkpoint; later extensions are published separately. Consult each theorem packet and its audit for exact domains and verification. No historical-priority claim; classical ingredients are cited in the packets. No integer-square hourglass/full-square solution, general tournament-class separation theorem, or Riemann Hypothesis proof is claimed.
+Status: two audited checkpoints; further extensions are separated until reviewed. Consult each theorem packet and its audit for exact domains and verification. No historical-priority claim; classical ingredients are cited in the packets. No integer-square hourglass/full-square solution, general tournament-class separation theorem, or Riemann Hypothesis proof is claimed.
 
 ## Packet map
 
@@ -20,3 +20,9 @@ Status: first audited checkpoint; later extensions are published separately. Con
 ## Reproduction
 
 `PUBLICATION_CHECKS.md` records replay scope and limitations. `MANIFEST.json` is the explicit file list; run `python3 verify_packet.py` to verify exact packet bytes.
+
+## Second-checkpoint additions
+
+- `toric-shared-roots/RESOLUTION.md`: four-node resolution, extension counts and Picard action.
+- `graph-magic-degeneration/branch-addendum.md`: universal torsion formula, branch discriminant and arrangement topology.
+- `positive-audit/RESOLUTION_AUDIT.md` and `branch-audit/AUDIT.md`: independent second-checkpoint audits.
