@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — mixed-order binomial valuations need a lower bound and the normalized minus one
+
+- **Affected proof:** [THM-4764 source, Theorem B double-prime](../05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md).
+  For general `M=p^a c`, `p` not dividing c, it incorrectly used
+  `v_p(binomial(M,mu))=a-v_p(mu)` and omitted `-1` in the normalized
+  coefficient valuation. The displayed theorem statement survives.
+- **Concrete hostile controls:** `p=3,M=15,mu=7` gives valuation 2, while
+  the claimed equality gives 1. Already at the linear term the normalized
+  coefficient must be a p-unit, not have valuation one.
+- **Repair and strongest survivor:** use the inequality from
+  `binomial(M,mu)=(M/mu)binomial(M-1,mu-1)` and the lower bound
+  `v_p(e_{j,o'})-(j-1)+mu-1-v_p(mu)`. It is exact at mu=1 and at least
+  one for higher terms after the stated cyclic-subgroup divisibility.
+  This proves the same mixed-order candidate lower bound; equality in
+  HYP-9374 remains OPEN.
+- **Controls and provenance:** [audit and exact checker](../05-knowledge/results/normseven_boundary_20261025/AUDIT.md).
+  The source proof and checksum were repaired, and its overbroad
+  first-in-repo wording was narrowed to the initial bounded search.
+
 ## 2026-10-25 — boundary normalization needs residual classes; composite carries need image indices
 
 - **Candidate implications, not retracted proved theorems:** a rational point

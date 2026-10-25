@@ -1,0 +1,15 @@
+{
+  "gates": 15000,
+  "higher_normalized_valuations": "at least 1 throughout the declared universe; general proof in repaired source",
+  "hostile": {
+    "M": 15,
+    "actual_binomial_valuation": 2,
+    "incorrect_equality_rhs": 1,
+    "mu": 7,
+    "p": 3
+  },
+  "linear_normalized_valuation": 0,
+  "script_sha256": "c803c64969230c82b5365059570f36f265467f2b9a6d24f58dc63f53d2ee6e9f",
+  "status": "FINITE-EXACT",
+  "universe": "p=3,5,7; every odd M=1..99 and mu=1..M; normalized j=1 coefficient"
+}

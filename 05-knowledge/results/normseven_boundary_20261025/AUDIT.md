@@ -33,7 +33,7 @@ No independent human/agent audit; no formal theorem-prover build.
 
 ## Exact computation
 
-All six scripts use explicit exception gates, which remain active with
+All seven scripts use explicit exception gates, which remain active with
 `python -O`. Each normal/optimized receipt pair is byte-identical.
 
 | Script | Explicit universe / result | Gates |
@@ -44,6 +44,7 @@ All six scripts use explicit exception gates, which remain active with
 | check_native.py | 576 literal sources, all ten simplified rule branches; blank entry after 162 native steps | 1,719 |
 | check_histogram.py | 2,672 inverse histories, sources 1,5,13, depths 1..6, valuations 1..8, moduli 3,9,27,81 | 31,963 |
 | check_stack.py | 972 complete low-dimensional complement/inertia cases; 23 norm-seven strata including the open; literal source decoder | 2,313,956 |
+| check_valuation_repair.py | p=3,5,7, every odd M=1..99 and mu=1..M; binomial inequality and normalized linear/higher terms | 15,000 |
 
 The monoid audit imports no producer code and generates reachable exponent
 vectors by addition before comparing with the predicted residue ideals.
@@ -68,11 +69,12 @@ python3 -B 05-knowledge/results/normseven_boundary_20261025/check_prime.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_native.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_histogram.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_stack.py
+python3 -B 05-knowledge/results/normseven_boundary_20261025/check_valuation_repair.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/verify.py
 python3 agents/check_docs.py
 ```
 
-Repeat the first six commands with `-O` to reproduce their optimized
+Repeat the first seven commands with `-O` to reproduce their optimized
 receipts. The packet verifier checks source hashes at pinned Git revisions,
 receipt/script consistency, both replay modes, and the manifest. Attached
 PDF hashes are recorded; absence of a user's local Download files on
@@ -88,6 +90,19 @@ Fourier effectivity) were read, and their root-stack result led to the
 additional exact 2-product theorem in STACK_GLUE. The frontier conflict
 was resolved by retaining both S63 and the new chart route. No unrelated
 source text was discarded.
+
+A later sync received 65549429c0 (THM-4764 and THM-4765). Both theorem
+files and their full source packet were read. Theorem B double-prime in
+[the source proof](../clone_depth_modular_twist_average_20261025/README.md)
+used an unjustified binomial-valuation equality and omitted a normalized
+`-1`. The concrete hostile `p=3,M=15,mu=7` has valuation 2 rather than 1.
+The repaired lower bound is enough: after the cyclic-subgroup divisibility,
+the linear term has the stated valuation and every higher term vanishes
+modulo p. The theorem statement survives; HYP-9374 remains OPEN.
+The proof, its source checksum, and MISTAKES.md were repaired together.
+The new checker verifies those two steps directly with integer binomial
+coefficients and rational normalization. This does not constitute an
+independent audit of the entire incoming packet.
 
 ## Remaining limitations
 

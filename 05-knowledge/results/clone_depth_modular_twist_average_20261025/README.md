@@ -30,8 +30,9 @@ Every one of those numbers is now verified and placed inside a proved law. The o
 Closest proved mechanism: Session62's exact root order (2)–(3). Canonical hostile: the transposition
 (even action: `1+t+t^2`, no zero). Corrected near miss: the single labelled gap toggle (MISTAKE-free but
 refuted in CLONE_INVOLUTION §5). Least-used sidecar: the **prime-by-prime reduction** of the integer
-polynomial `P_A`, never examined before in the repository (bounded search: no mod-`p` vanishing-order
-statement for orbit or Burnside polynomials was found; 2-adic valuations of A000568 are THM-305).
+polynomial `P_A` (not found in this session's initial bounded search). Concurrent earlier work already
+records the elementary-abelian and cyclic spectra in [valuation/README](../unprotected_ports_cancellation_20261025/valuation/README.md);
+no first-in-repo claim is made. The 2-adic valuations of A000568 are THM-305.
 
 | Live concept | Object / operation | What this packet changes | Lost coordinate / test |
 |---|---|---|---|
@@ -152,8 +153,10 @@ d_p ≥ min( { |A|/o' : p ∤ E_{o'}/p^e }  ∪  { |A|/o' - p^j + p^(j-1) : p �
 *Proof.* Group the terms of `P` by the `p'`-part `o'` of the element order and put `s' = 1 + t^{o'}`,
 which equals `o'·s·(unit power series)` since `p ∤ o'`. The term of order `p^j o'` is
 `(e_{j,o'}/|A|) (s'^{p^j} + p s' g_j(s'))^{M}`, `M = p^{e-j} m / o'`, and the binomial expansion in `μ`
-has coefficients of valuation `v_p(e_{j,o'}) - (j-1) + (μ - v_p(μ))`, using `v_p(C(M,μ)) = e - j - v_p(μ)`
-for `p ∤` the cofactor. Divisibility `p^(j-1) | e_{j,o'}` holds because elements of order `p^j o'` come in
+has coefficients of valuation at least `v_p(e_{j,o'}) - (j-1) + (μ - 1 - v_p(μ))`, using
+`v_p(C(M,μ)) >= e - j - v_p(μ)`. This follows from
+`C(M,μ)=(M/μ)C(M-1,μ-1)`; equality is guaranteed at μ=1, but not in general.
+Divisibility `p^(j-1) | e_{j,o'}` holds because elements of order `p^j o'` come in
 generator sets of cyclic subgroups, of size `φ(p^j)φ(o')`. Hence all `μ ≥ 2` terms vanish mod `p`, the
 `μ = 1` terms survive exactly when `v_p(e_{j,o'}) = j - 1`, at `s`-order `|A|/o' - p^j + p^(j-1)`, and the
 `μ = 0` terms of all `j` with the same `o'` add up to `(E_{o'}/|A|) s'^{|A|/o'}` times a unit series.
@@ -161,6 +164,13 @@ Divisibility `p^e | E_{o'}`: the elements with `p'`-part conjugate to a fixed `h
 `[A : C_A(h)]` times the number of `p`-elements of `C_A(h)`, and by Frobenius' theorem the latter is a
 multiple of `|C_A(h)|_p`. Every surviving term therefore has `s`-order in the displayed candidate set, so
 the order of `P mod p` is at least its minimum. ∎
+
+**Proof correction, 2026-10-25:** the previous draft asserted equality in the general binomial
+valuation and omitted the `-1` in the normalized coefficient. At p=3, M=15, μ=7,
+`v_3(C(15,7))=2>1=v_3(15)-v_3(7)`. The inequality above is sufficient: for μ>=2 and odd p,
+`μ-1-v_p(μ)>=1`; at μ=1 the normalized valuation is exactly `v_p(e_{j,o'})-(j-1)`.
+Thus all higher terms vanish as claimed and the theorem statement is unchanged. Exact controls and
+the correction lineage are in [the boundary packet audit](../normseven_boundary_20261025/AUDIT.md).
 
 Equality fails only if candidate orders collide and cancel; this never happens in the 22 groups tested
 (five mixed-order groups and seventeen `p`-groups, where Theorem B makes it a theorem). The equality

@@ -24,7 +24,8 @@ def main():
             raise RuntimeError('source pin mismatch: '+source['path'])
     for script,label in [('check.py','check'),('audit_monoid.py','monoid'),
                          ('check_prime.py','prime'),('check_native.py','native'),
-                         ('check_histogram.py','histogram'),('check_stack.py','stack')]:
+                         ('check_histogram.py','histogram'),('check_stack.py','stack'),
+                         ('check_valuation_repair.py','valuation_repair')]:
         receipt=(base/(label+'.json')).read_bytes()
         if json.loads(receipt)['script_sha256'] != digest((base/script).read_bytes()):
             raise RuntimeError('script/receipt mismatch: '+script)
@@ -34,7 +35,7 @@ def main():
                 raise RuntimeError('replay mismatch: '+script+' '+suffix)
     print(json.dumps({'status':'PASS','manifest_files':len(manifest['files']),
                       'pinned_repo_sources':len(sources['source_pins']),
-                      'normal_optimized_pairs':6},sort_keys=True))
+                      'normal_optimized_pairs':7},sort_keys=True))
 
 
 if __name__ == '__main__':
