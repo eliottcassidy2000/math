@@ -35,6 +35,25 @@ space. It detects the actual singularity of the quotient above a triple
 crossing. This is a precise place where the seven-point object does more
 than count seven things.
 
+The final incoming [six/seven packet](../six_seven_geometry_20261025/README.md)
+adds another actual connection: the good Fano subgroups act regularly on
+eight branch conics of the central six-root K3 precisely when they act
+freely on the hourglass. Its resolved Boolean reflection uses a different
+geometric carrier and does not erase the earlier coordinate-point
+obstruction. The [hourglass branch-label reflection](../session60_six_seven_geometry_20261025/reflection/BOOLEAN_REFLECTION.md)
+realizes cycle type1*2^3 geometrically but fixes none of the30 Fano kernels.
+In the four-bit model this reflection is simply
+(v,epsilon)->(v+(1,1,1),epsilon): it is fixed-point-free on the sixteen
+good kernels. This agrees with the inherited Fano obstruction and explains
+why a symmetry can exchange quotients without descending to a fixed one.
+
+These incoming mechanisms are inherited; the new four-bit action supplies
+their explicit coordinate description on good codes. The carrier, chosen
+kernel and any marking remain part of the data. The separate incoming
+[exact Picard computation](../session60_six_seven_geometry_20261025/outer-picard/README.md)
+now records19 for outer-deletion K3s and58 for the hourglass, replacing
+the earlier finite list of possibilities; none is used in our detour proof.
+
 ## The Monster partition has a specified action
 
 The recovered [valuation and modular calculation](../session32_square_monster_20261023/monster/MONSTER_BABY_PRIME_PARTITION.md)

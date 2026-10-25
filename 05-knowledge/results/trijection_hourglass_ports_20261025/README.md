@@ -79,6 +79,9 @@ The session began at clean82691d391b, after fetching the live shared
 surface. Incomingf7041582a8 andc24c123d86 were read before finalizing
 geometry; their stronger classifications supersede our initial open
 minimal-model question. Those overlaps are corroboration, not new claims.
+The final clean rebase also integrated the six/seven continuation through
+e4d54b0131; its branch-cube criterion and resolved-reflection constructions
+are linked in the bridge ledger, with their separate carriers retained.
 The missing local.machine-id prevented the legacy message processor;
 no registration or message state was invented.
 
