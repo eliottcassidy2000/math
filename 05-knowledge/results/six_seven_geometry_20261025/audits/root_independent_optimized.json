@@ -1,0 +1,82 @@
+{
+  "cases": 252,
+  "central_F41": {
+    "intersection_size_counts": {
+      "0": 16,
+      "2": 12
+    },
+    "nodes": 24,
+    "points_per_conic": 42
+  },
+  "cube_models": [
+    {
+      "components": 1,
+      "eigenvalues": {
+        "32": 1
+      },
+      "genus": 17,
+      "matrix_rank": 1,
+      "t": 0
+    },
+    {
+      "components": 2,
+      "eigenvalues": {
+        "0": 1,
+        "16": 1
+      },
+      "genus": 5,
+      "matrix_rank": 1,
+      "t": 1
+    },
+    {
+      "components": 4,
+      "eigenvalues": {
+        "-8": 1,
+        "0": 2,
+        "8": 1
+      },
+      "genus": 1,
+      "matrix_rank": 2,
+      "t": 2
+    },
+    {
+      "components": 8,
+      "eigenvalues": {
+        "-8": 1,
+        "-4": 3,
+        "0": 3,
+        "4": 1
+      },
+      "genus": 0,
+      "matrix_rank": 5,
+      "t": 3
+    }
+  ],
+  "incident_triple_histogram": {
+    "0": 16,
+    "1": 120,
+    "2": 108,
+    "3": 8
+  },
+  "joint_code_cube_labellings": [
+    {
+      "bad_triples": 0,
+      "labelings": 2688,
+      "translation_rank": 3
+    },
+    {
+      "bad_triples": 1,
+      "labelings": 2016,
+      "translation_rank": 2
+    },
+    {
+      "bad_triples": 3,
+      "labelings": 336,
+      "translation_rank": 1
+    }
+  ],
+  "producer_proof_sha256": "7d4adfcf2ec0b8e07fc73d32336d09f25a475c7b4abd7bab615864683735add9",
+  "producer_script_sha256": "15f9355877e029d606785b5279aaa7925635310079ca3e9a25f85ff519ea0655",
+  "source_sha256": "c872e886cb759bdb74d9989d9de70aa5ad7813bc6620aec298c98e653b2c28d5",
+  "status": "FINITE-EXACT independent controls; accompanying audit owns proof judgment"
+}

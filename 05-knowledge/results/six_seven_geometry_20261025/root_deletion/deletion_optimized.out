@@ -1,0 +1,377 @@
+{
+  "cases": 252,
+  "central_conics_F17": {
+    "component_points": [
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "distinct_nodes": 24,
+    "pair_intersections": {
+      "000-001": 2,
+      "000-010": 2,
+      "000-011": 0,
+      "000-100": 2,
+      "000-101": 0,
+      "000-110": 0,
+      "000-111": 0,
+      "001-010": 0,
+      "001-011": 2,
+      "001-100": 0,
+      "001-101": 2,
+      "001-110": 0,
+      "001-111": 0,
+      "010-011": 2,
+      "010-100": 0,
+      "010-101": 0,
+      "010-110": 2,
+      "010-111": 0,
+      "011-100": 0,
+      "011-101": 0,
+      "011-110": 0,
+      "011-111": 2,
+      "100-101": 2,
+      "100-110": 2,
+      "100-111": 0,
+      "101-110": 0,
+      "101-111": 2,
+      "110-111": 2
+    },
+    "q": 17,
+    "sqrt_minus_one": 4,
+    "union_points": 120
+  },
+  "cube_models": [
+    {
+      "divisor_span_rank": 1,
+      "edge_multiplicity": 16,
+      "matrix": null,
+      "spectrum": {
+        "32": 1
+      },
+      "t": 0
+    },
+    {
+      "divisor_span_rank": 1,
+      "edge_multiplicity": 8,
+      "matrix": null,
+      "spectrum": {
+        "0": 1,
+        "16": 1
+      },
+      "t": 1
+    },
+    {
+      "divisor_span_rank": 2,
+      "edge_multiplicity": 4,
+      "matrix": null,
+      "spectrum": {
+        "-8": 1,
+        "0": 2,
+        "8": 1
+      },
+      "t": 2
+    },
+    {
+      "divisor_span_rank": 5,
+      "edge_multiplicity": 2,
+      "matrix": [
+        [
+          -2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          -2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          -2,
+          2,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          -2,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          -2,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          2,
+          -2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          -2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          2,
+          -2
+        ]
+      ],
+      "spectrum": {
+        "-4": 3,
+        "-8": 1,
+        "0": 3,
+        "4": 1
+      },
+      "t": 3
+    }
+  ],
+  "hourglass": [
+    {
+      "branch_components": 8,
+      "branch_nodes": 24,
+      "component_genus": 0,
+      "deleted": "E",
+      "fixed_euler": 16,
+      "incident_triples": 3,
+      "quotient_euler": 48,
+      "restriction_groups": [
+        [
+          "E+x",
+          "E-x"
+        ],
+        [
+          "E+z",
+          "E-z"
+        ],
+        [
+          "E+x+z",
+          "E-x-z"
+        ]
+      ],
+      "six_root_nodes": 0
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E+x",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E-x"
+        ],
+        [
+          "E+z"
+        ],
+        [
+          "E-z"
+        ],
+        [
+          "E+x+z"
+        ],
+        [
+          "E-x-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E-x",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E+x"
+        ],
+        [
+          "E+z"
+        ],
+        [
+          "E-z"
+        ],
+        [
+          "E+x+z"
+        ],
+        [
+          "E-x-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E+z",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E-z"
+        ],
+        [
+          "E+x"
+        ],
+        [
+          "E-x"
+        ],
+        [
+          "E+x+z"
+        ],
+        [
+          "E-x-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E-z",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E+z"
+        ],
+        [
+          "E+x"
+        ],
+        [
+          "E-x"
+        ],
+        [
+          "E+x+z"
+        ],
+        [
+          "E-x-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E+x+z",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E-x-z"
+        ],
+        [
+          "E+x"
+        ],
+        [
+          "E-x"
+        ],
+        [
+          "E+z"
+        ],
+        [
+          "E-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    },
+    {
+      "branch_components": 2,
+      "branch_nodes": 8,
+      "component_genus": 5,
+      "deleted": "E-x-z",
+      "fixed_euler": -16,
+      "incident_triples": 1,
+      "quotient_euler": 32,
+      "restriction_groups": [
+        [
+          "E",
+          "E+x+z"
+        ],
+        [
+          "E+x"
+        ],
+        [
+          "E-x"
+        ],
+        [
+          "E+z"
+        ],
+        [
+          "E-z"
+        ]
+      ],
+      "six_root_nodes": 8
+    }
+  ],
+  "source_sha256": "15f9355877e029d606785b5279aaa7925635310079ca3e9a25f85ff519ea0655",
+  "status": "FINITE-EXACT",
+  "t_histogram": {
+    "0": 16,
+    "1": 120,
+    "2": 108,
+    "3": 8
+  },
+  "universe": "36 seven-root subsets x 7 deletions"
+}

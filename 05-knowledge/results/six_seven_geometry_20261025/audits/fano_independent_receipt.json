@@ -1,0 +1,16 @@
+{
+  "Fano_structures": 30,
+  "all30_group_sets_match_producer": true,
+  "canonical_invariants": 0,
+  "hourglass_bad_triple_histogram": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  },
+  "method": "all pair-compatible triple systems; Fano structures selected as exact7 covers",
+  "minimum_disjoint_Fano": 8,
+  "partial_system_count": 5596,
+  "producer_source_sha256": "9022432a3d2990971b0921578f2571cabe37751db43c93cb14434ff9ff55d7e9",
+  "source_sha256": "0839e520078a1eaa68cbf65d5dcf86ecc30e3d841604314db524dc59972171ea",
+  "status": "PASS"
+}

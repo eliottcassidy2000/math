@@ -1,8 +1,18 @@
 # Seven canonical forms are seven sextic characters
 
-**Status: proof candidate pending independent audit.** Classical abelian-cover
+**Status: PROVED**, with [independent audit: PASS](../audits/CHARACTER_AUDIT.md).
+Classical abelian-cover
 mechanisms are rederived here; no historical-priority claim. The exact magic
 arrangement application and the connection contract are the purpose.
+
+**Concurrent recovery:** while this proof and its point-count checker were
+being written, `origin/main` received `f7041582a8`, the independently audited
+[Session60 deck packet](../../session60_six_seven_geometry_20261025/deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md).
+It proves (C1)--(C4)'s character/deletion mechanisms and also supplies a
+stronger [rational transcendental Hodge decomposition](../../session60_six_seven_geometry_20261025/deck-k3/HODGE_DECOMPOSITION.md).
+These overlapping statements are recovered/independently checked here. The
+per-character finite-field count replay (C5) is an additional verification
+instrument; the branch cube and code quotient are developed in other folders.
 
 ## 1. Scope and the even-character algebra
 

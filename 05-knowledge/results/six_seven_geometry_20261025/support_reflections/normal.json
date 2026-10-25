@@ -1,0 +1,96 @@
+{
+  "actual_hourglass": {
+    "basis_matrix": "Matrix([[1, -1, -1], [-1, -1, 0], [-1, 2, -1]])",
+    "determinant": 5,
+    "fixed_base_branch_values": [
+      "25",
+      "25",
+      "-175 - 600*I",
+      "-175 + 600*I"
+    ],
+    "line_pairing_zero_based": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "nodes": 15,
+    "nonlift_ratio": "X*(Y - 2*Z)/(Y*(X + 2*Z))",
+    "remaining_node_pairs": 6
+  },
+  "anticanonical_dimensions": [
+    7,
+    19
+  ],
+  "auxiliary_bad_parameters": [
+    -6,
+    2,
+    3
+  ],
+  "checks": 126,
+  "finite_field_counts": {
+    "2": {
+      "Gamma": 13,
+      "P2": 7,
+      "V": 7
+    },
+    "3": {
+      "Gamma": 22,
+      "P2": 13,
+      "V": 16
+    },
+    "5": {
+      "Gamma": 46,
+      "P2": 31,
+      "V": 40
+    },
+    "7": {
+      "Gamma": 78,
+      "P2": 57,
+      "V": 72
+    }
+  },
+  "hourglass_fan_rays": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      0,
+      -1
+    ]
+  ],
+  "source_sha256": "f6ff848e694f6b5555138aaa9d408306f0eea68c26160fef53ce6a93eb367894",
+  "status": "FINITE-EXACT; geometric proofs are separate",
+  "support_strata": {
+    "Gamma": 13,
+    "V": 7,
+    "removed_rank_zero": 6
+  },
+  "transitive_tournament_edges": 6,
+  "transitive_tournament_vertices": 6
+}

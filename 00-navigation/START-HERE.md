@@ -9,6 +9,9 @@
 audited quartic/sextic nonzero-defect exclusion; exact Collatz departure/refill;
 weighted endpoint/pointed-C3 bijection; corrected pure-blue detour boundary.
 
+**Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
+audited K3 branch cube, free Fano-code/Campedelli quotients, and resolved support reflection.
+
 ## The five-minute orientation
 
 1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
@@ -97,13 +100,13 @@ Then read frontier, guardrails, theorem; logs are history.
 
 | Topic | Read first | Then use |
 |---|---|---|
-| LRC(14) proof | [`CURRENT-FRONTIER.md#lrc14`](CURRENT-FRONTIER.md#lrc14) | [`LRC14-PROOF-MAP.md`](LRC14-PROOF-MAP.md); preserve owner/tie, origin, current, continuation, equality |
+| LRC(14) proof | [Frontier](CURRENT-FRONTIER.md#lrc14) | [Proof map](LRC14-PROOF-MAP.md); preserve owner/tie, origin, current, continuation, equality |
 | LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
-| LRC literature | [`CORE-PAPERS.md#lonely-runner-conjecture`](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [`LRC-TECHNIQUE-INDEX.md`](LRC-TECHNIQUE-INDEX.md), source paper |
-| NC2 / GMC | [`CURRENT-FRONTIER.md#nc2-and-gaussian-moments`](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
-| Jacobian / Dixmier / Poisson | [`CURRENT-FRONTIER.md#other-active-portfolio`](CURRENT-FRONTIER.md#other-active-portfolio) | [`CORE-PAPERS.md#jacobian-dixmier-and-poisson`](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
-| Tournaments | [`CURRENT-FRONTIER.md#tournaments`](CURRENT-FRONTIER.md#tournaments) | [`TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md`](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [`THE-ZOO.md`](THE-ZOO.md) with its freshness banner |
-| Integer sequences / additive bases | [`CURRENT-FRONTIER.md#integer-sequences`](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
+| LRC literature | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [Techniques](LRC-TECHNIQUE-INDEX.md), source paper |
+| NC2 / GMC | [Frontier](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
+| Jacobian / Dixmier / Poisson | [Frontier](CURRENT-FRONTIER.md#other-active-portfolio) | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
+| Tournaments | [Frontier](CURRENT-FRONTIER.md#tournaments) | [Invariant atlas](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [Zoo](THE-ZOO.md) with its freshness banner |
+| Integer sequences / additive bases | [Frontier](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
 | Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content, branch order, ancestry, chamber, consumers |
 | ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
 | Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
@@ -113,11 +116,11 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Before promoting a result
 
-- Search the exact statement and matching `MISTAKE-*`; read [`ACTIVE-GUARDRAILS.md`](../01-canon/ACTIVE-GUARDRAILS.md).
-- State scope, quantifiers, direction, mechanism, boundary, dependencies, and non-consequences.
-- For a connection, name the map, preserved predicate, loss, sidecar, and decisive test.
-- For computation, freeze universe, filters, controls, command, output, and hashes where practical.
-- Check identifiers against filenames, frontmatter, indexes, and remote history; cite ID plus slug.
+- Search the statement and corrections; read [guardrails](../01-canon/ACTIVE-GUARDRAILS.md).
+- State scope, quantifiers, direction, mechanism, boundary, dependencies and limits.
+- Connections: map, preserved predicate, loss, sidecar, decisive test.
+- Computations: fixed universe, filters, controls, command, output and hashes.
+- Check IDs in files, frontmatter, indexes and remote history; cite ID plus slug.
 
 ## Maintaining this brief
 

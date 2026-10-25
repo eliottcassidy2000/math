@@ -1,0 +1,84 @@
+{
+  "jobs": [
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "characters/check_characters.py",
+      "source_sha256": "7b352ee6a7e321f56263d7a79859be0cf2b0fbc783e76105790fa87650380b13",
+      "stdout_bytes": 225,
+      "stdout_sha256": "70823123f163bc4c97a822d88f30c1fa7131cabaa0987da6ad08f07fd9969179"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "root_deletion/check_deletion.py",
+      "source_sha256": "15f9355877e029d606785b5279aaa7925635310079ca3e9a25f85ff519ea0655",
+      "stdout_bytes": 6480,
+      "stdout_sha256": "a6ee5137dc2d54a5edc2a1b863c26b76dc3bf8acf301a0ec945390f3773e8a11"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "fano_codes/check.py",
+      "source_sha256": "9022432a3d2990971b0921578f2571cabe37751db43c93cb14434ff9ff55d7e9",
+      "stdout_bytes": 28656,
+      "stdout_sha256": "19e6f72bbf68f532922b3a4d9c165a3eb90a77f563fec34f68e5361674c97ff9"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "support_reflections/verify.py",
+      "source_sha256": "f6ff848e694f6b5555138aaa9d408306f0eea68c26160fef53ce6a93eb367894",
+      "stdout_bytes": 1520,
+      "stdout_sha256": "1962d1d0ba1afb9671d70fb1ec5101cc9e74ce83b43da9fe163d3a40ec2003b5"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "audits/check_fano_independent.py",
+      "source_sha256": "0839e520078a1eaa68cbf65d5dcf86ecc30e3d841604314db524dc59972171ea",
+      "stdout_bytes": 554,
+      "stdout_sha256": "8ffb5f577007f24aa740b98189a065838a541e98b3b8ca27288cebd30ec23cb8"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "audits/check_root_independent.py",
+      "source_sha256": "c872e886cb759bdb74d9989d9de70aa5ad7813bc6620aec298c98e653b2c28d5",
+      "stdout_bytes": 1680,
+      "stdout_sha256": "3a5c09b3b5c9e516234889b96c5a7546f0552422bde75e3f5a098cbcfd8ac883"
+    },
+    {
+      "normal_optimized_equal": true,
+      "return_codes": [
+        0,
+        0
+      ],
+      "script": "audits/check_character_support_independent.py",
+      "source_sha256": "c206f0d9a4a8a8391953ba0e64f353c82b9e463d70602085719975b85d20b8aa",
+      "stdout_bytes": 1534,
+      "stdout_sha256": "e9b5f42058549a6e7141bfe6912962d1e4e9aa6fa9d2bb1e6640166c17ec34e0"
+    }
+  ],
+  "python": "3.13.14",
+  "scope": "exact finite replays plus separately written mathematical proof audits; no Lean claim",
+  "status": "PASS"
+}

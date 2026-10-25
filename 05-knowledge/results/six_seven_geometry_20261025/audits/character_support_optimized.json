@@ -1,0 +1,82 @@
+{
+  "cremona": {
+    "branch_crossings": 15,
+    "fixed_fibres_F17": [
+      {
+        "branch_value": 8,
+        "sheets": [
+          5,
+          12
+        ],
+        "u": 1,
+        "v": 4
+      },
+      {
+        "branch_value": 8,
+        "sheets": [
+          5,
+          12
+        ],
+        "u": 1,
+        "v": 13
+      },
+      {
+        "branch_value": 9,
+        "sheets": [
+          3,
+          14
+        ],
+        "u": 16,
+        "v": 4
+      },
+      {
+        "branch_value": 15,
+        "sheets": [
+          7,
+          10
+        ],
+        "u": 16,
+        "v": 13
+      }
+    ],
+    "integer_identity": true,
+    "polynomial_terms": 19,
+    "remaining_node_pairs": 6
+  },
+  "direct_projective_root_enumeration": [
+    {
+      "character_points": 64,
+      "fibre_values": [
+        0,
+        64
+      ],
+      "projective_ambient_points": 1093,
+      "q": 3,
+      "root_points": 64
+    },
+    {
+      "character_points": 88,
+      "fibre_values": [
+        0,
+        8,
+        64
+      ],
+      "projective_ambient_points": 19531,
+      "q": 5,
+      "root_points": 88
+    },
+    {
+      "character_points": 160,
+      "fibre_values": [
+        0,
+        16,
+        64
+      ],
+      "projective_ambient_points": 137257,
+      "q": 7,
+      "root_points": 160
+    }
+  ],
+  "source_sha256": "c206f0d9a4a8a8391953ba0e64f353c82b9e463d70602085719975b85d20b8aa",
+  "status": "PASS / FINITE-EXACT independent controls"
+}
