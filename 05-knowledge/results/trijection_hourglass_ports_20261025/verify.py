@@ -46,7 +46,7 @@ def read(path):
 
 def main():
     files=sorted(p for p in HERE.rglob('*') if p.is_file() and
-        '__pycache__' not in p.parts and p.suffix in {'.py','.md','.json'} and
+        '__pycache__' not in p.parts and (p.suffix in {'.py','.md','.json'} or p.name=='.gitattributes') and
         p.name not in {'manifest.json','verification.json','verification-optimized.json'})
     if '--refresh' in sys.argv:
         record={'packet':{str(p.relative_to(HERE)).replace('\\','/'):digest(p) for p in files},

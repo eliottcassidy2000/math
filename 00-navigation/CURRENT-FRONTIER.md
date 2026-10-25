@@ -197,9 +197,8 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ### Reliable structural toolkit
 
-- [Consecutive-port detours](../05-knowledge/results/trijection_hourglass_ports_20261025/README.md): every k>=4,n>=2k+3 with consecutive incoming tail; uniform cyclic-exception repair, affine menu certificates, four-bit good-code action. Nonconsecutive ports/global black connectivity OPEN.
 - [Divisor/F1 bridge](../05-knowledge/results/reflection_bridge_20261025/README.md). [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md): audited branch cube, 16 free code quotients, and resolved reflection; integer-square existence OPEN.
-- [Ports/owners](../05-knowledge/results/ports_owners_f1_20261025/README.md): vertex-rank transfers/finite-alpha forests; guarded endpoint-four detours. [Mass continuation](../05-knowledge/results/shape_ports_20261025/tournaments.md): inherited deficit2k (k>=4), new r<k branch at 2k+1 (k>=3). Endpoint-three n>=7; unrestricted recurrence/black connectivity OPEN.
+- [Tail repairs](../05-knowledge/results/trijection_hourglass_ports_20261025/README.md): k>=4,n>=2k+3; affine certificates. [Owners](../05-knowledge/results/ports_owners_f1_20261025/README.md); [mass](../05-knowledge/results/shape_ports_20261025/tournaments.md). Endpoint-three n>=7; general connectivity/A000568 OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.
