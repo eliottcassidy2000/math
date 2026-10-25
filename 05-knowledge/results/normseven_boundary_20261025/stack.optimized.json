@@ -1,0 +1,13 @@
+{
+  "all_complement_and_inertia_cases_dimensions_1_to_3": 972,
+  "gates": 2313956,
+  "normseven_strata_including_open": 23,
+  "recovered_source_counts": {
+    "(0, 64)": 1,
+    "(1, 32)": 7,
+    "(2, 16)": 12,
+    "(3, 8)": 3
+  },
+  "script_sha256": "c8dcf9f08a386b8d9676fd42a0dae74edf280a050dfde9d80f97620c6ccf380c",
+  "status": "FINITE-EXACT"
+}

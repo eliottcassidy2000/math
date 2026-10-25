@@ -33,7 +33,7 @@ No independent human/agent audit; no formal theorem-prover build.
 
 ## Exact computation
 
-All five scripts use explicit exception gates, which remain active with
+All six scripts use explicit exception gates, which remain active with
 `python -O`. Each normal/optimized receipt pair is byte-identical.
 
 | Script | Explicit universe / result | Gates |
@@ -43,6 +43,7 @@ All five scripts use explicit exception gates, which remain active with
 | check_prime.py | Prime and composite decompositions listed in CYCLIC C4; sharp composite hostile and coprime gap counts | 39,643 |
 | check_native.py | 576 literal sources, all ten simplified rule branches; blank entry after 162 native steps | 1,719 |
 | check_histogram.py | 2,672 inverse histories, sources 1,5,13, depths 1..6, valuations 1..8, moduli 3,9,27,81 | 31,963 |
+| check_stack.py | 972 complete low-dimensional complement/inertia cases; 23 norm-seven strata including the open; literal source decoder | 2,313,956 |
 
 The monoid audit imports no producer code and generates reachable exponent
 vectors by addition before comparing with the predicted residue ideals.
@@ -66,11 +67,12 @@ python3 -B 05-knowledge/results/normseven_boundary_20261025/audit_monoid.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_prime.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_native.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_histogram.py
+python3 -B 05-knowledge/results/normseven_boundary_20261025/check_stack.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/verify.py
 python3 agents/check_docs.py
 ```
 
-Repeat the first five commands with `-O` to reproduce their optimized
+Repeat the first six commands with `-O` to reproduce their optimized
 receipts. The packet verifier checks source hashes at pinned Git revisions,
 receipt/script consistency, both replay modes, and the manifest. Attached
 PDF hashes are recorded; absence of a user's local Download files on
@@ -79,6 +81,13 @@ another machine does not prevent checking the repo packet.
 `agents/check_docs.py` passed after the route update. The current frontier
 entry is a replacement, keeping the bounded-startup budget intact. No
 chronological session log was used as a current mathematical authority.
+
+The final sync received f093b00695 and 2b69da9a76. Their mathematical
+result files (cancellation, specialization, twist mass, root stack and
+Fourier effectivity) were read, and their root-stack result led to the
+additional exact 2-product theorem in STACK_GLUE. The frontier conflict
+was resolved by retaining both S63 and the new chart route. No unrelated
+source text was discarded.
 
 ## Remaining limitations
 

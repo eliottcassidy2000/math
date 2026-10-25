@@ -332,6 +332,13 @@ it does not force an uninformative tournament.
 
 ## 8. Boundaries and next questions
 
+Incoming work subsequently supplied a conceptual gluing description:
+[STACK_GLUE S1–S3](STACK_GLUE.md) identifies X with the two quotient schemes'
+2-fibre product over the simultaneous root stack. The comparison to their
+ordinary product is exactly the normalization map computed here. The
+missing data are root-object isomorphisms, with the residual torsor in
+(11), rather than an arbitrary choice of extra labels.
+
 The construction closes the stated algebraic chart-compatibility problem;
 it does not establish rational points or six-colour forcing. The exact
 remaining arithmetic problem is the vanishing of the residual class map

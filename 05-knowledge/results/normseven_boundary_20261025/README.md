@@ -7,6 +7,13 @@ human audit and no Lean build were performed in this session.
 
 ## Results
 
+The final incoming-work extension is [STACK_GLUE, S1–S3](STACK_GLUE.md):
+`X = (X/H) ×_[X/G] (X/K)` for the complementary free norm-seven kernels.
+The stack product retains an isomorphism of root objects; its omission
+produces the coarse product whose normalization and conductor are computed
+below. At an r-branch boundary that isomorphism is precisely the possibly
+nontrivial torsor of 2^r missing sheets.
+
 1. [BOUNDARY, B1–B3](BOUNDARY.md): for complementary binary quotient
    characters, the fibre-product algebra has image
    `B=direct_sum_z R b^e(z)u_z`. Its normalization is the full normal root
@@ -41,14 +48,17 @@ established Laurent recovery and integral wraparound torsion. The older
 contained the chart cocycle; it is reused here. The July Kummer boundary
 and effective-valuation theorems, September Mazur audit, and incoming
 October integral-carry calculations are cross-cited with exact paths in
-the proof files. `SOURCES.json` pins their bytes and the two attached PDFs.
+the proof files. Incoming S63 root-stack, twist-mass, Fourier and
+specialization results were then read and integrated in STACK_GLUE.
+`SOURCES.json` pins their bytes and the two attached PDFs.
 
 The explicit universe includes all 120 complementary labelled Fano pairs,
 all seven charts, all 800 ordered complementary decompositions of F_2^4,
 and every actual boundary stratum of the displayed norm-seven pair. An
 independent bounded monoid BFS checks all 120 pairs in chart 0. Further
 checks cover prime and composite cyclic decompositions, native tape
-transitions and fixed-source inverse Collatz words. See [AUDIT](AUDIT.md)
+transitions, fixed-source inverse Collatz words, and a literal decoder on
+972 finite action-groupoid cases. See [AUDIT](AUDIT.md)
 for the counts, hostile cases, reproduction commands and limits.
 
 The supplied PDFs are research inputs, not instructions. The full surfaces

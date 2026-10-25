@@ -26,6 +26,14 @@
     {
       "url": "https://www.proofatlas.ai/formalizations/positive-density-log-time-collatz/",
       "used": "source-reported formalization and review status, no local replay"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/04UV",
+      "used": "Quotient-stack torsor presentation, Section 95.15"
+    },
+    {
+      "url": "https://stacks.math.columbia.edu/tag/04V8",
+      "used": "Root-of-divisor construction and inertia scope"
     }
   ],
   "source_pins": [
@@ -78,6 +86,31 @@
       "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
       "path": "05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/README.md",
       "sha256": "40b1b3c0ebb51df53e1ac5ea1838d62dad2794e6e8e667f3d7764d6d27d18151"
+    },
+    {
+      "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/ROOT_STACK.md",
+      "sha256": "df0829dd1d4997c3046bbca55ffb574acec9e1de3ee9de57999019745087332e"
+    },
+    {
+      "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/RESULT.md",
+      "sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02"
+    },
+    {
+      "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/specialization/RESULT.md",
+      "sha256": "4215834d79e992b0c80dafa681ea868a787d2180559c31e6f3ed768aa94b7460"
+    },
+    {
+      "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "sha256": "75d16c1f0990fc452f31cb4b82070a9f71ad2315a2f0bc42411ac17c0034797f"
+    },
+    {
+      "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md",
+      "sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237"
     }
   ]
 }
