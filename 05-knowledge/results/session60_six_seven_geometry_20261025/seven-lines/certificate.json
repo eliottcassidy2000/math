@@ -1,0 +1,4787 @@
+{
+  "D12_generators": {
+    "R": [
+      0,
+      5,
+      6,
+      2,
+      1,
+      3,
+      4
+    ],
+    "S": [
+      0,
+      3,
+      4,
+      1,
+      2,
+      5,
+      6
+    ]
+  },
+  "D12_orbits": [
+    {
+      "dependent_crossings": 1,
+      "kernels": [
+        [
+          0,
+          15,
+          51,
+          60,
+          85,
+          90,
+          102,
+          105
+        ],
+        [
+          0,
+          23,
+          43,
+          60,
+          77,
+          90,
+          102,
+          113
+        ],
+        [
+          0,
+          27,
+          45,
+          54,
+          78,
+          85,
+          99,
+          120
+        ],
+        [
+          0,
+          29,
+          43,
+          54,
+          78,
+          83,
+          101,
+          120
+        ],
+        [
+          0,
+          30,
+          39,
+          57,
+          77,
+          83,
+          106,
+          116
+        ],
+        [
+          0,
+          30,
+          45,
+          51,
+          71,
+          89,
+          106,
+          116
+        ]
+      ],
+      "representative_kernel": [
+        0,
+        15,
+        51,
+        60,
+        85,
+        90,
+        102,
+        105
+      ],
+      "representative_labels": [
+        1,
+        2,
+        4,
+        7,
+        6,
+        5,
+        3
+      ],
+      "size": 6,
+      "stabilizer_order": 2,
+      "stabilizer_permutations": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "dependent_crossings": 0,
+      "kernels": [
+        [
+          0,
+          15,
+          51,
+          60,
+          86,
+          89,
+          101,
+          106
+        ],
+        [
+          0,
+          15,
+          54,
+          57,
+          83,
+          92,
+          101,
+          106
+        ],
+        [
+          0,
+          15,
+          54,
+          57,
+          85,
+          90,
+          99,
+          108
+        ],
+        [
+          0,
+          23,
+          43,
+          60,
+          78,
+          89,
+          101,
+          114
+        ],
+        [
+          0,
+          23,
+          45,
+          58,
+          78,
+          89,
+          99,
+          116
+        ],
+        [
+          0,
+          23,
+          46,
+          57,
+          77,
+          90,
+          99,
+          116
+        ],
+        [
+          0,
+          27,
+          39,
+          60,
+          77,
+          86,
+          106,
+          113
+        ],
+        [
+          0,
+          27,
+          39,
+          60,
+          78,
+          85,
+          105,
+          114
+        ],
+        [
+          0,
+          27,
+          45,
+          54,
+          71,
+          92,
+          106,
+          113
+        ],
+        [
+          0,
+          29,
+          39,
+          58,
+          78,
+          83,
+          105,
+          116
+        ],
+        [
+          0,
+          29,
+          43,
+          54,
+          71,
+          90,
+          108,
+          113
+        ],
+        [
+          0,
+          29,
+          46,
+          51,
+          71,
+          90,
+          105,
+          116
+        ]
+      ],
+      "representative_kernel": [
+        0,
+        15,
+        51,
+        60,
+        86,
+        89,
+        101,
+        106
+      ],
+      "representative_labels": [
+        1,
+        2,
+        4,
+        7,
+        5,
+        6,
+        3
+      ],
+      "size": 12,
+      "stabilizer_order": 1,
+      "stabilizer_permutations": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "dependent_crossings": 1,
+      "kernels": [
+        [
+          0,
+          15,
+          53,
+          58,
+          83,
+          92,
+          102,
+          105
+        ],
+        [
+          0,
+          23,
+          45,
+          58,
+          75,
+          92,
+          102,
+          113
+        ],
+        [
+          0,
+          27,
+          46,
+          53,
+          77,
+          86,
+          99,
+          120
+        ],
+        [
+          0,
+          29,
+          46,
+          51,
+          75,
+          86,
+          101,
+          120
+        ],
+        [
+          0,
+          30,
+          39,
+          57,
+          75,
+          85,
+          108,
+          114
+        ],
+        [
+          0,
+          30,
+          43,
+          53,
+          71,
+          89,
+          108,
+          114
+        ]
+      ],
+      "representative_kernel": [
+        0,
+        15,
+        53,
+        58,
+        83,
+        92,
+        102,
+        105
+      ],
+      "representative_labels": [
+        1,
+        2,
+        4,
+        7,
+        6,
+        3,
+        5
+      ],
+      "size": 6,
+      "stabilizer_order": 2,
+      "stabilizer_permutations": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "dependent_crossings": 0,
+      "kernels": [
+        [
+          0,
+          15,
+          53,
+          58,
+          86,
+          89,
+          99,
+          108
+        ],
+        [
+          0,
+          23,
+          46,
+          57,
+          75,
+          92,
+          101,
+          114
+        ],
+        [
+          0,
+          27,
+          46,
+          53,
+          71,
+          92,
+          105,
+          114
+        ],
+        [
+          0,
+          29,
+          39,
+          58,
+          75,
+          86,
+          108,
+          113
+        ]
+      ],
+      "representative_kernel": [
+        0,
+        15,
+        53,
+        58,
+        86,
+        89,
+        99,
+        108
+      ],
+      "representative_labels": [
+        1,
+        2,
+        4,
+        7,
+        3,
+        6,
+        5
+      ],
+      "size": 4,
+      "stabilizer_order": 3,
+      "stabilizer_permutations": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          4,
+          6,
+          5,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "dependent_crossings": 3,
+      "kernels": [
+        [
+          0,
+          30,
+          43,
+          53,
+          77,
+          83,
+          102,
+          120
+        ],
+        [
+          0,
+          30,
+          45,
+          51,
+          75,
+          85,
+          102,
+          120
+        ]
+      ],
+      "representative_kernel": [
+        0,
+        30,
+        43,
+        53,
+        77,
+        83,
+        102,
+        120
+      ],
+      "representative_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        6
+      ],
+      "size": 2,
+      "stabilizer_order": 6,
+      "stabilizer_permutations": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          6,
+          5,
+          4,
+          3
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          4,
+          6,
+          5,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "Fano_quotient_count": 30,
+  "canonical_character_rank": 6,
+  "canonical_only_nonempty_relation_mask": 127,
+  "char3_crossing_histogram": {
+    "0": 12,
+    "1": 10,
+    "2": 6,
+    "4": 2
+  },
+  "determinant_histogram": {
+    "0": 3,
+    "1": 18,
+    "2": 12,
+    "3": 2
+  },
+  "determinants": {
+    "(0, 1, 2)": 0,
+    "(0, 1, 3)": 1,
+    "(0, 1, 4)": -1,
+    "(0, 1, 5)": 1,
+    "(0, 1, 6)": -1,
+    "(0, 2, 3)": -1,
+    "(0, 2, 4)": 1,
+    "(0, 2, 5)": -1,
+    "(0, 2, 6)": 1,
+    "(0, 3, 4)": 0,
+    "(0, 3, 5)": -1,
+    "(0, 3, 6)": 1,
+    "(0, 4, 5)": 1,
+    "(0, 4, 6)": -1,
+    "(0, 5, 6)": 0,
+    "(1, 2, 3)": -2,
+    "(1, 2, 4)": 2,
+    "(1, 2, 5)": -2,
+    "(1, 2, 6)": 2,
+    "(1, 3, 4)": 2,
+    "(1, 3, 5)": -1,
+    "(1, 3, 6)": 3,
+    "(1, 4, 5)": -1,
+    "(1, 4, 6)": -1,
+    "(1, 5, 6)": 2,
+    "(2, 3, 4)": -2,
+    "(2, 3, 5)": -1,
+    "(2, 3, 6)": -1,
+    "(2, 4, 5)": 3,
+    "(2, 4, 6)": -1,
+    "(2, 5, 6)": -2,
+    "(3, 4, 5)": 2,
+    "(3, 4, 6)": -2,
+    "(3, 5, 6)": -2,
+    "(4, 5, 6)": 2
+  },
+  "generic_crossing_histogram": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  },
+  "matroids": {
+    "0": {
+      "characteristic_polynomial": {
+        "0": -12,
+        "1": 18,
+        "2": -7,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -10,
+            "1": 15,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 0
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 2
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ]
+    },
+    "11": {
+      "characteristic_polynomial": {
+        "0": -12,
+        "1": 18,
+        "2": -7,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -10,
+            "1": 15,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 0
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 2
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ]
+    },
+    "2": {
+      "characteristic_polynomial": {
+        "0": -3,
+        "1": 6,
+        "2": -4,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -1,
+            "1": 3,
+            "2": -3,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 12
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 8
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 8
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 8
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 8
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 8
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -3,
+            "1": 6,
+            "2": -4,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 8
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    "3": {
+      "characteristic_polynomial": {
+        "0": -10,
+        "1": 16,
+        "2": -7,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 3
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 3
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 3
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 3
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 3
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -7,
+            "1": 12,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 3
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ]
+    },
+    "5": {
+      "characteristic_polynomial": {
+        "0": -12,
+        "1": 18,
+        "2": -7,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -10,
+            "1": 15,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 0
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 2
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ]
+    },
+    "7": {
+      "characteristic_polynomial": {
+        "0": -12,
+        "1": 18,
+        "2": -7,
+        "3": 1
+      },
+      "deletions": [
+        {
+          "characteristic_polynomial": {
+            "0": -10,
+            "1": 15,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E",
+          "triple_count": 0
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E+x+z",
+          "triple_count": 2
+        },
+        {
+          "characteristic_polynomial": {
+            "0": -8,
+            "1": 13,
+            "2": -6,
+            "3": 1
+          },
+          "label": "E-x-z",
+          "triple_count": 2
+        }
+      ],
+      "dependent_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ]
+    }
+  },
+  "quotients": [
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        46,
+        51,
+        71,
+        90,
+        105,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        6,
+        5,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        39,
+        58,
+        78,
+        83,
+        105,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        6,
+        7,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        46,
+        57,
+        77,
+        90,
+        99,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        7,
+        5,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        45,
+        58,
+        78,
+        89,
+        99,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        7,
+        6,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        46,
+        53,
+        71,
+        92,
+        105,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        39,
+        60,
+        78,
+        85,
+        105,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        46,
+        57,
+        75,
+        92,
+        101,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        3,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        43,
+        60,
+        78,
+        89,
+        101,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        6,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        43,
+        54,
+        71,
+        90,
+        108,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        3,
+        5,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        39,
+        58,
+        75,
+        86,
+        108,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        3,
+        7,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        45,
+        54,
+        71,
+        92,
+        106,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        5,
+        3,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          5,
+          6
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        39,
+        60,
+        77,
+        86,
+        106,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        5,
+        7,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        54,
+        57,
+        85,
+        90,
+        99,
+        108
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        3,
+        5,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        53,
+        58,
+        86,
+        89,
+        99,
+        108
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        3,
+        6,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        54,
+        57,
+        83,
+        92,
+        101,
+        106
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        5,
+        3,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0
+      ],
+      "central_degree_each": 4,
+      "central_self_intersection_each": [
+        "-4"
+      ],
+      "dependent_char3_crossings": 0,
+      "dependent_crossings": 0,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        51,
+        60,
+        86,
+        89,
+        101,
+        106
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        5,
+        6,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        4
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        46,
+        51,
+        75,
+        86,
+        101,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        5,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            4
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        4
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          6
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        29,
+        43,
+        54,
+        78,
+        83,
+        101,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            4
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        4
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        46,
+        53,
+        77,
+        86,
+        99,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        5,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            4
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        4
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          2,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        27,
+        45,
+        54,
+        78,
+        85,
+        99,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        6,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            4
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        45,
+        51,
+        71,
+        89,
+        106,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        39,
+        57,
+        77,
+        83,
+        106,
+        116
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        3,
+        5,
+        7,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          5
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        43,
+        53,
+        71,
+        89,
+        108,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        3,
+        6,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        39,
+        57,
+        75,
+        85,
+        108,
+        114
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        5,
+        3,
+        7,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        45,
+        58,
+        75,
+        92,
+        102,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        3,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        23,
+        43,
+        60,
+        77,
+        90,
+        102,
+        113
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        5,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 2,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        53,
+        58,
+        83,
+        92,
+        102,
+        105
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        6,
+        3,
+        5
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2
+      ],
+      "central_degree_each": 2,
+      "central_self_intersection_each": [
+        "-2",
+        "-2"
+      ],
+      "dependent_char3_crossings": 1,
+      "dependent_crossings": 1,
+      "fano_lines": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        15,
+        51,
+        60,
+        85,
+        90,
+        102,
+        105
+      ],
+      "labels": [
+        1,
+        2,
+        4,
+        7,
+        6,
+        5,
+        3
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "A1"
+        },
+        {
+          "components": [
+            0,
+            0
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            2
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "A1"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "central_degree_each": 1,
+      "central_self_intersection_each": [
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "dependent_char3_crossings": 4,
+      "dependent_crossings": 3,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          4,
+          6
+        ],
+        [
+          2,
+          3,
+          6
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        45,
+        51,
+        75,
+        85,
+        102,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            6
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            6
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            6
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    },
+    {
+      "central_components": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "central_degree_each": 1,
+      "central_self_intersection_each": [
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "dependent_char3_crossings": 4,
+      "dependent_crossings": 3,
+      "fano_lines": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ],
+        [
+          1,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ],
+      "kernel": [
+        0,
+        30,
+        43,
+        53,
+        77,
+        83,
+        102,
+        120
+      ],
+      "labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        6
+      ],
+      "representatives": 168,
+      "singularity_incidence": [
+        {
+          "components": [
+            0,
+            2
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            4,
+            6
+          ],
+          "triple": [
+            0,
+            1,
+            2
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            4
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            6
+          ],
+          "triple": [
+            0,
+            3,
+            4
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            0,
+            6
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        },
+        {
+          "components": [
+            2,
+            4
+          ],
+          "triple": [
+            0,
+            5,
+            6
+          ],
+          "type": "1/4(1,1)"
+        }
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT plus elementary proof in RESULT.md",
+  "universe": {
+    "binary_constant_weight4_generator_triples": 6545,
+    "integer_branch_rows": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1
+      ]
+    ],
+    "label_bijections": 5040,
+    "labels": [
+      "E",
+      "E+x",
+      "E-x",
+      "E+z",
+      "E-z",
+      "E+x+z",
+      "E-x-z"
+    ],
+    "rank_tests": 768
+  }
+}

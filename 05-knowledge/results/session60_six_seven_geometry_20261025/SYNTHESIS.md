@@ -32,6 +32,26 @@ The double-plane quotient is therefore a Kummer surface of Picard rank20. An exp
 
 The other six K3 quotients share one Picard rank rho_outer, presently bounded18≤rho_outer≤20. Hence rho(Y7)=6rho_outer−56 is one of52,58,64. Determining which is a genuine remaining problem, not supplied by the matching numbers6 and7.
 
+## 5. Thirty Fano-code choices produce three different kinds of surface
+
+A Fano plane is not the hourglass branch matroid. It enters by adding a rank-three quotient of the rank-six projective sign group, with the seven inertia labels mapped bijectively to the seven nonzero binary vectors. There are exactly30 such kernels, realized as simplex sign codes.
+
+Relative to the actual three branch crossings, the number d of dependent Fano triples is0,1,3 with multiplicities16,12,2. The d=0 codes act freely on the resolved hourglass and give numerical Campedelli surfaces, p_g=q=0,K²=2. A clean blowup-base computation gives the LINEAR identity 2K=f*(H−Σdependent E_i), not merely a numerical intersection formula.
+
+For d=1 this is the pullback of a free pencil, producing connected genus-one fibers and P_(2m)=m+1: the minimal surface is properly elliptic. For d=3 four disjoint rational−1 curves contract; the resulting surface has nontrivial two-torsion canonical class and p_g=q=0, hence is Enriques. K²=0 alone was not used to infer either classification.
+
+The realized D12 action has kernel-orbits4,12,6,6,2. Intrinsic recovery of the complete bicanonical plane map proves that the sixteen Campedelli choices give exactly two complex isomorphism classes, with full automorphism groups C2×A4 and(C2)^3. The two Enriques choices are related by a realized symmetry; no full Enriques automorphism classification is claimed.
+
+## 6. The same weight-six characters lead to genus-two curves
+
+Restrict the root cover to a generic line in its BASE plane. The resulting curve has genus17 at six roots and49 at seven roots. Its Jacobian decomposes up to isogeny into15 elliptic factors plus one genus-two factor, respectively35 elliptic factors plus seven genus-two factors. The genus-two factors are indexed by exactly the size-six characters that produce the surface's one or seven holomorphic two-form sectors.
+
+A base-line pullback is a2H-section of the root surface, not a coordinate H-section. The latter has genus5 or17. This distinction is necessary for the adjunction and curve-count comparisons.
+
+The old marked six-point Fano pairing supplies an actual maximal isotropic subgroup of genus-two two-torsion, hence a Richelot correspondence. An explicit transverse slice of the hourglass gives seven nonsingular genus-two targets. The pants cuff/seam model describes the same two-torsion vector space: cuff restriction forgets exactly four classes, and the seam data restore them.
+
+These are marked constructions. An explicit Möbius obstruction shows why the Paley label permutation must not be mistaken for an automorphism of the fixed displayed curve. The Richelot target equations are asserted over C; unverified rational twists are not silently discarded.
+
 ## Scope
 
-These statements compare specified geometric objects, character sectors, markings and quotient maps. Classical results remain attributed. No integer distinct-square existence/nonexistence result, RH theorem, or full tournament-path solution is claimed. Fano-code surface quotients and curve/Richelot bridges are excluded from this checkpoint pending their separate audits.
+These statements compare specified geometric objects, character sectors, markings and quotient maps. Classical results remain attributed. No integer distinct-square existence/nonexistence result, RH theorem, or full tournament-path solution is claimed. The Fano-code and curve/Richelot extensions above are included only with their independent second-checkpoint audits.

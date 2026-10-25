@@ -1,0 +1,5 @@
+PASS: 768 full-subset ranks by two methods; 35 determinants; small-field complements.
+PASS: 5040 label bijections / 168 = 30 Fano kernels, independently constant-weight enumerated.
+PASS: generic dependent crossings 0:16, 1:12, 3:2; characteristic3 0:12, 1:10, 2:6, 4:2.
+PASS: canonical rank6, deletion involutions, central component degrees, incidence and adjunction census.
+PASS: realized D12 orbits: d0 sizes4+12; d1 sizes6+6; d3 size2.

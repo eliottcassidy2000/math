@@ -1,0 +1,1312 @@
+{
+  "status": "PASS",
+  "geometric_targets": [
+    {
+      "omitted": 0,
+      "delta": -162,
+      "bracket_discriminants": [
+        -864,
+        4800,
+        432
+      ],
+      "pairwise_resultants": [
+        2624400,
+        236196,
+        26244
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 1,
+      "delta": 474,
+      "bracket_discriminants": [
+        2592,
+        1440,
+        4160
+      ],
+      "pairwise_resultants": [
+        18198756,
+        11009124,
+        898704
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 2,
+      "delta": -537,
+      "bracket_discriminants": [
+        5616,
+        -2268,
+        1600
+      ],
+      "pairwise_resultants": [
+        41525136,
+        7209225,
+        10381284
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 3,
+      "delta": -105,
+      "bracket_discriminants": [
+        100,
+        18720,
+        2160
+      ],
+      "pairwise_resultants": [
+        396900,
+        176400,
+        99225
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 4,
+      "delta": -60,
+      "bracket_discriminants": [
+        144,
+        2400,
+        18144
+      ],
+      "pairwise_resultants": [
+        3600,
+        291600,
+        3600
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 5,
+      "delta": -129,
+      "bracket_discriminants": [
+        2240,
+        -108,
+        -4320
+      ],
+      "pairwise_resultants": [
+        66564,
+        2812329,
+        599076
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    },
+    {
+      "omitted": 6,
+      "delta": -68,
+      "bracket_discriminants": [
+        -1200,
+        -1456,
+        -96
+      ],
+      "pairwise_resultants": [
+        295936,
+        115600,
+        115600
+      ],
+      "identity": "sum F_i(x) B_i(z) = -Delta (x-z)^2"
+    }
+  ],
+  "normalized_Fp_cases": [
+    {
+      "omitted": 0,
+      "p": 11,
+      "points": 12
+    },
+    {
+      "omitted": 0,
+      "p": 17,
+      "points": 30
+    },
+    {
+      "omitted": 0,
+      "p": 19,
+      "points": 20
+    },
+    {
+      "omitted": 0,
+      "p": 23,
+      "points": 24
+    },
+    {
+      "omitted": 0,
+      "p": 29,
+      "points": 30
+    },
+    {
+      "omitted": 0,
+      "p": 31,
+      "points": 32
+    },
+    {
+      "omitted": 0,
+      "p": 37,
+      "points": 38
+    },
+    {
+      "omitted": 0,
+      "p": 41,
+      "points": 42
+    },
+    {
+      "omitted": 0,
+      "p": 43,
+      "points": 44
+    },
+    {
+      "omitted": 0,
+      "p": 47,
+      "points": 48
+    },
+    {
+      "omitted": 0,
+      "p": 53,
+      "points": 58
+    },
+    {
+      "omitted": 0,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 0,
+      "p": 61,
+      "points": 66
+    },
+    {
+      "omitted": 0,
+      "p": 67,
+      "points": 68
+    },
+    {
+      "omitted": 0,
+      "p": 71,
+      "points": 72
+    },
+    {
+      "omitted": 0,
+      "p": 73,
+      "points": 74
+    },
+    {
+      "omitted": 0,
+      "p": 79,
+      "points": 80
+    },
+    {
+      "omitted": 0,
+      "p": 83,
+      "points": 84
+    },
+    {
+      "omitted": 0,
+      "p": 89,
+      "points": 90
+    },
+    {
+      "omitted": 0,
+      "p": 97,
+      "points": 98
+    },
+    {
+      "omitted": 0,
+      "p": 101,
+      "points": 102
+    },
+    {
+      "omitted": 1,
+      "p": 11,
+      "points": 12
+    },
+    {
+      "omitted": 1,
+      "p": 17,
+      "points": 22
+    },
+    {
+      "omitted": 1,
+      "p": 19,
+      "points": 20
+    },
+    {
+      "omitted": 1,
+      "p": 23,
+      "points": 28
+    },
+    {
+      "omitted": 1,
+      "p": 29,
+      "points": 38
+    },
+    {
+      "omitted": 1,
+      "p": 31,
+      "points": 32
+    },
+    {
+      "omitted": 1,
+      "p": 37,
+      "points": 50
+    },
+    {
+      "omitted": 1,
+      "p": 41,
+      "points": 46
+    },
+    {
+      "omitted": 1,
+      "p": 43,
+      "points": 44
+    },
+    {
+      "omitted": 1,
+      "p": 47,
+      "points": 40
+    },
+    {
+      "omitted": 1,
+      "p": 53,
+      "points": 58
+    },
+    {
+      "omitted": 1,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 1,
+      "p": 61,
+      "points": 62
+    },
+    {
+      "omitted": 1,
+      "p": 67,
+      "points": 68
+    },
+    {
+      "omitted": 1,
+      "p": 71,
+      "points": 76
+    },
+    {
+      "omitted": 1,
+      "p": 73,
+      "points": 86
+    },
+    {
+      "omitted": 1,
+      "p": 83,
+      "points": 96
+    },
+    {
+      "omitted": 1,
+      "p": 89,
+      "points": 102
+    },
+    {
+      "omitted": 1,
+      "p": 97,
+      "points": 94
+    },
+    {
+      "omitted": 1,
+      "p": 101,
+      "points": 114
+    },
+    {
+      "omitted": 2,
+      "p": 11,
+      "points": 12
+    },
+    {
+      "omitted": 2,
+      "p": 17,
+      "points": 18
+    },
+    {
+      "omitted": 2,
+      "p": 19,
+      "points": 16
+    },
+    {
+      "omitted": 2,
+      "p": 23,
+      "points": 24
+    },
+    {
+      "omitted": 2,
+      "p": 29,
+      "points": 34
+    },
+    {
+      "omitted": 2,
+      "p": 31,
+      "points": 32
+    },
+    {
+      "omitted": 2,
+      "p": 37,
+      "points": 42
+    },
+    {
+      "omitted": 2,
+      "p": 41,
+      "points": 46
+    },
+    {
+      "omitted": 2,
+      "p": 43,
+      "points": 48
+    },
+    {
+      "omitted": 2,
+      "p": 47,
+      "points": 48
+    },
+    {
+      "omitted": 2,
+      "p": 53,
+      "points": 54
+    },
+    {
+      "omitted": 2,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 2,
+      "p": 61,
+      "points": 54
+    },
+    {
+      "omitted": 2,
+      "p": 67,
+      "points": 60
+    },
+    {
+      "omitted": 2,
+      "p": 71,
+      "points": 68
+    },
+    {
+      "omitted": 2,
+      "p": 73,
+      "points": 70
+    },
+    {
+      "omitted": 2,
+      "p": 79,
+      "points": 80
+    },
+    {
+      "omitted": 2,
+      "p": 83,
+      "points": 92
+    },
+    {
+      "omitted": 2,
+      "p": 89,
+      "points": 86
+    },
+    {
+      "omitted": 2,
+      "p": 97,
+      "points": 110
+    },
+    {
+      "omitted": 2,
+      "p": 101,
+      "points": 98
+    },
+    {
+      "omitted": 3,
+      "p": 11,
+      "points": 12
+    },
+    {
+      "omitted": 3,
+      "p": 17,
+      "points": 22
+    },
+    {
+      "omitted": 3,
+      "p": 19,
+      "points": 28
+    },
+    {
+      "omitted": 3,
+      "p": 23,
+      "points": 28
+    },
+    {
+      "omitted": 3,
+      "p": 29,
+      "points": 30
+    },
+    {
+      "omitted": 3,
+      "p": 31,
+      "points": 28
+    },
+    {
+      "omitted": 3,
+      "p": 37,
+      "points": 46
+    },
+    {
+      "omitted": 3,
+      "p": 41,
+      "points": 42
+    },
+    {
+      "omitted": 3,
+      "p": 43,
+      "points": 36
+    },
+    {
+      "omitted": 3,
+      "p": 47,
+      "points": 48
+    },
+    {
+      "omitted": 3,
+      "p": 53,
+      "points": 62
+    },
+    {
+      "omitted": 3,
+      "p": 59,
+      "points": 68
+    },
+    {
+      "omitted": 3,
+      "p": 61,
+      "points": 74
+    },
+    {
+      "omitted": 3,
+      "p": 67,
+      "points": 64
+    },
+    {
+      "omitted": 3,
+      "p": 71,
+      "points": 88
+    },
+    {
+      "omitted": 3,
+      "p": 73,
+      "points": 86
+    },
+    {
+      "omitted": 3,
+      "p": 79,
+      "points": 64
+    },
+    {
+      "omitted": 3,
+      "p": 83,
+      "points": 84
+    },
+    {
+      "omitted": 3,
+      "p": 89,
+      "points": 82
+    },
+    {
+      "omitted": 3,
+      "p": 97,
+      "points": 94
+    },
+    {
+      "omitted": 3,
+      "p": 101,
+      "points": 94
+    },
+    {
+      "omitted": 4,
+      "p": 11,
+      "points": 16
+    },
+    {
+      "omitted": 4,
+      "p": 17,
+      "points": 18
+    },
+    {
+      "omitted": 4,
+      "p": 19,
+      "points": 20
+    },
+    {
+      "omitted": 4,
+      "p": 23,
+      "points": 20
+    },
+    {
+      "omitted": 4,
+      "p": 29,
+      "points": 34
+    },
+    {
+      "omitted": 4,
+      "p": 31,
+      "points": 36
+    },
+    {
+      "omitted": 4,
+      "p": 37,
+      "points": 38
+    },
+    {
+      "omitted": 4,
+      "p": 41,
+      "points": 46
+    },
+    {
+      "omitted": 4,
+      "p": 43,
+      "points": 36
+    },
+    {
+      "omitted": 4,
+      "p": 47,
+      "points": 48
+    },
+    {
+      "omitted": 4,
+      "p": 53,
+      "points": 46
+    },
+    {
+      "omitted": 4,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 4,
+      "p": 61,
+      "points": 54
+    },
+    {
+      "omitted": 4,
+      "p": 67,
+      "points": 76
+    },
+    {
+      "omitted": 4,
+      "p": 71,
+      "points": 88
+    },
+    {
+      "omitted": 4,
+      "p": 73,
+      "points": 82
+    },
+    {
+      "omitted": 4,
+      "p": 79,
+      "points": 80
+    },
+    {
+      "omitted": 4,
+      "p": 83,
+      "points": 80
+    },
+    {
+      "omitted": 4,
+      "p": 89,
+      "points": 78
+    },
+    {
+      "omitted": 4,
+      "p": 97,
+      "points": 114
+    },
+    {
+      "omitted": 4,
+      "p": 101,
+      "points": 106
+    },
+    {
+      "omitted": 5,
+      "p": 11,
+      "points": 12
+    },
+    {
+      "omitted": 5,
+      "p": 17,
+      "points": 18
+    },
+    {
+      "omitted": 5,
+      "p": 19,
+      "points": 24
+    },
+    {
+      "omitted": 5,
+      "p": 23,
+      "points": 24
+    },
+    {
+      "omitted": 5,
+      "p": 29,
+      "points": 42
+    },
+    {
+      "omitted": 5,
+      "p": 31,
+      "points": 32
+    },
+    {
+      "omitted": 5,
+      "p": 37,
+      "points": 34
+    },
+    {
+      "omitted": 5,
+      "p": 41,
+      "points": 46
+    },
+    {
+      "omitted": 5,
+      "p": 47,
+      "points": 48
+    },
+    {
+      "omitted": 5,
+      "p": 53,
+      "points": 54
+    },
+    {
+      "omitted": 5,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 5,
+      "p": 61,
+      "points": 62
+    },
+    {
+      "omitted": 5,
+      "p": 67,
+      "points": 68
+    },
+    {
+      "omitted": 5,
+      "p": 71,
+      "points": 80
+    },
+    {
+      "omitted": 5,
+      "p": 73,
+      "points": 78
+    },
+    {
+      "omitted": 5,
+      "p": 79,
+      "points": 88
+    },
+    {
+      "omitted": 5,
+      "p": 83,
+      "points": 84
+    },
+    {
+      "omitted": 5,
+      "p": 89,
+      "points": 78
+    },
+    {
+      "omitted": 5,
+      "p": 97,
+      "points": 102
+    },
+    {
+      "omitted": 5,
+      "p": 101,
+      "points": 102
+    },
+    {
+      "omitted": 6,
+      "p": 11,
+      "points": 16
+    },
+    {
+      "omitted": 6,
+      "p": 19,
+      "points": 20
+    },
+    {
+      "omitted": 6,
+      "p": 23,
+      "points": 28
+    },
+    {
+      "omitted": 6,
+      "p": 29,
+      "points": 30
+    },
+    {
+      "omitted": 6,
+      "p": 31,
+      "points": 32
+    },
+    {
+      "omitted": 6,
+      "p": 37,
+      "points": 38
+    },
+    {
+      "omitted": 6,
+      "p": 41,
+      "points": 46
+    },
+    {
+      "omitted": 6,
+      "p": 43,
+      "points": 48
+    },
+    {
+      "omitted": 6,
+      "p": 47,
+      "points": 56
+    },
+    {
+      "omitted": 6,
+      "p": 53,
+      "points": 50
+    },
+    {
+      "omitted": 6,
+      "p": 59,
+      "points": 60
+    },
+    {
+      "omitted": 6,
+      "p": 61,
+      "points": 82
+    },
+    {
+      "omitted": 6,
+      "p": 67,
+      "points": 64
+    },
+    {
+      "omitted": 6,
+      "p": 71,
+      "points": 72
+    },
+    {
+      "omitted": 6,
+      "p": 73,
+      "points": 78
+    },
+    {
+      "omitted": 6,
+      "p": 79,
+      "points": 88
+    },
+    {
+      "omitted": 6,
+      "p": 83,
+      "points": 108
+    },
+    {
+      "omitted": 6,
+      "p": 89,
+      "points": 102
+    },
+    {
+      "omitted": 6,
+      "p": 97,
+      "points": 110
+    },
+    {
+      "omitted": 6,
+      "p": 101,
+      "points": 102
+    }
+  ],
+  "normalized_Fp2_cases": [
+    {
+      "omitted": 0,
+      "p": 11,
+      "points_over_p2": 134
+    },
+    {
+      "omitted": 0,
+      "p": 17,
+      "points_over_p2": 286
+    },
+    {
+      "omitted": 0,
+      "p": 19,
+      "points_over_p2": 406
+    },
+    {
+      "omitted": 0,
+      "p": 23,
+      "points_over_p2": 590
+    },
+    {
+      "omitted": 0,
+      "p": 29,
+      "points_over_p2": 758
+    },
+    {
+      "omitted": 0,
+      "p": 31,
+      "points_over_p2": 1086
+    },
+    {
+      "omitted": 1,
+      "p": 11,
+      "points_over_p2": 134
+    },
+    {
+      "omitted": 1,
+      "p": 17,
+      "points_over_p2": 286
+    },
+    {
+      "omitted": 1,
+      "p": 19,
+      "points_over_p2": 406
+    },
+    {
+      "omitted": 1,
+      "p": 23,
+      "points_over_p2": 542
+    },
+    {
+      "omitted": 1,
+      "p": 29,
+      "points_over_p2": 886
+    },
+    {
+      "omitted": 1,
+      "p": 31,
+      "points_over_p2": 958
+    },
+    {
+      "omitted": 2,
+      "p": 11,
+      "points_over_p2": 134
+    },
+    {
+      "omitted": 2,
+      "p": 17,
+      "points_over_p2": 318
+    },
+    {
+      "omitted": 2,
+      "p": 19,
+      "points_over_p2": 358
+    },
+    {
+      "omitted": 2,
+      "p": 23,
+      "points_over_p2": 558
+    },
+    {
+      "omitted": 2,
+      "p": 29,
+      "points_over_p2": 918
+    },
+    {
+      "omitted": 2,
+      "p": 31,
+      "points_over_p2": 958
+    },
+    {
+      "omitted": 3,
+      "p": 11,
+      "points_over_p2": 134
+    },
+    {
+      "omitted": 3,
+      "p": 17,
+      "points_over_p2": 286
+    },
+    {
+      "omitted": 3,
+      "p": 19,
+      "points_over_p2": 374
+    },
+    {
+      "omitted": 3,
+      "p": 23,
+      "points_over_p2": 510
+    },
+    {
+      "omitted": 3,
+      "p": 29,
+      "points_over_p2": 790
+    },
+    {
+      "omitted": 3,
+      "p": 31,
+      "points_over_p2": 942
+    },
+    {
+      "omitted": 4,
+      "p": 11,
+      "points_over_p2": 118
+    },
+    {
+      "omitted": 4,
+      "p": 17,
+      "points_over_p2": 286
+    },
+    {
+      "omitted": 4,
+      "p": 19,
+      "points_over_p2": 310
+    },
+    {
+      "omitted": 4,
+      "p": 23,
+      "points_over_p2": 510
+    },
+    {
+      "omitted": 4,
+      "p": 29,
+      "points_over_p2": 886
+    },
+    {
+      "omitted": 4,
+      "p": 31,
+      "points_over_p2": 942
+    },
+    {
+      "omitted": 5,
+      "p": 11,
+      "points_over_p2": 134
+    },
+    {
+      "omitted": 5,
+      "p": 17,
+      "points_over_p2": 318
+    },
+    {
+      "omitted": 5,
+      "p": 19,
+      "points_over_p2": 358
+    },
+    {
+      "omitted": 5,
+      "p": 23,
+      "points_over_p2": 558
+    },
+    {
+      "omitted": 5,
+      "p": 29,
+      "points_over_p2": 854
+    },
+    {
+      "omitted": 5,
+      "p": 31,
+      "points_over_p2": 1022
+    },
+    {
+      "omitted": 6,
+      "p": 11,
+      "points_over_p2": 118
+    },
+    {
+      "omitted": 6,
+      "p": 19,
+      "points_over_p2": 342
+    },
+    {
+      "omitted": 6,
+      "p": 23,
+      "points_over_p2": 542
+    },
+    {
+      "omitted": 6,
+      "p": 29,
+      "points_over_p2": 886
+    },
+    {
+      "omitted": 6,
+      "p": 31,
+      "points_over_p2": 894
+    }
+  ],
+  "raw_twist_counterexamples": [
+    {
+      "omitted": 0,
+      "p": 53,
+      "source": 58,
+      "raw_target": 50
+    },
+    {
+      "omitted": 0,
+      "p": 61,
+      "source": 66,
+      "raw_target": 58
+    },
+    {
+      "omitted": 1,
+      "p": 23,
+      "source": 28,
+      "raw_target": 20
+    },
+    {
+      "omitted": 1,
+      "p": 29,
+      "source": 38,
+      "raw_target": 22
+    },
+    {
+      "omitted": 1,
+      "p": 53,
+      "source": 58,
+      "raw_target": 50
+    },
+    {
+      "omitted": 1,
+      "p": 89,
+      "source": 102,
+      "raw_target": 78
+    },
+    {
+      "omitted": 2,
+      "p": 19,
+      "source": 16,
+      "raw_target": 24
+    },
+    {
+      "omitted": 2,
+      "p": 29,
+      "source": 34,
+      "raw_target": 26
+    },
+    {
+      "omitted": 2,
+      "p": 37,
+      "source": 42,
+      "raw_target": 34
+    },
+    {
+      "omitted": 2,
+      "p": 43,
+      "source": 48,
+      "raw_target": 40
+    },
+    {
+      "omitted": 2,
+      "p": 67,
+      "source": 60,
+      "raw_target": 76
+    },
+    {
+      "omitted": 2,
+      "p": 71,
+      "source": 68,
+      "raw_target": 76
+    },
+    {
+      "omitted": 2,
+      "p": 73,
+      "source": 70,
+      "raw_target": 78
+    },
+    {
+      "omitted": 2,
+      "p": 89,
+      "source": 86,
+      "raw_target": 94
+    },
+    {
+      "omitted": 2,
+      "p": 97,
+      "source": 110,
+      "raw_target": 86
+    },
+    {
+      "omitted": 2,
+      "p": 101,
+      "source": 98,
+      "raw_target": 106
+    },
+    {
+      "omitted": 3,
+      "p": 17,
+      "source": 22,
+      "raw_target": 14
+    },
+    {
+      "omitted": 3,
+      "p": 23,
+      "source": 28,
+      "raw_target": 20
+    },
+    {
+      "omitted": 3,
+      "p": 37,
+      "source": 46,
+      "raw_target": 30
+    },
+    {
+      "omitted": 3,
+      "p": 59,
+      "source": 68,
+      "raw_target": 52
+    },
+    {
+      "omitted": 3,
+      "p": 61,
+      "source": 74,
+      "raw_target": 50
+    },
+    {
+      "omitted": 3,
+      "p": 79,
+      "source": 64,
+      "raw_target": 96
+    },
+    {
+      "omitted": 4,
+      "p": 11,
+      "source": 16,
+      "raw_target": 8
+    },
+    {
+      "omitted": 4,
+      "p": 29,
+      "source": 34,
+      "raw_target": 26
+    },
+    {
+      "omitted": 4,
+      "p": 41,
+      "source": 46,
+      "raw_target": 38
+    },
+    {
+      "omitted": 4,
+      "p": 43,
+      "source": 36,
+      "raw_target": 52
+    },
+    {
+      "omitted": 4,
+      "p": 67,
+      "source": 76,
+      "raw_target": 60
+    },
+    {
+      "omitted": 4,
+      "p": 71,
+      "source": 88,
+      "raw_target": 56
+    },
+    {
+      "omitted": 4,
+      "p": 73,
+      "source": 82,
+      "raw_target": 66
+    },
+    {
+      "omitted": 4,
+      "p": 89,
+      "source": 78,
+      "raw_target": 102
+    },
+    {
+      "omitted": 4,
+      "p": 97,
+      "source": 114,
+      "raw_target": 82
+    },
+    {
+      "omitted": 4,
+      "p": 101,
+      "source": 106,
+      "raw_target": 98
+    },
+    {
+      "omitted": 5,
+      "p": 37,
+      "source": 34,
+      "raw_target": 42
+    },
+    {
+      "omitted": 5,
+      "p": 41,
+      "source": 46,
+      "raw_target": 38
+    },
+    {
+      "omitted": 5,
+      "p": 71,
+      "source": 80,
+      "raw_target": 64
+    },
+    {
+      "omitted": 5,
+      "p": 73,
+      "source": 78,
+      "raw_target": 70
+    },
+    {
+      "omitted": 5,
+      "p": 79,
+      "source": 88,
+      "raw_target": 72
+    },
+    {
+      "omitted": 6,
+      "p": 41,
+      "source": 46,
+      "raw_target": 38
+    },
+    {
+      "omitted": 6,
+      "p": 43,
+      "source": 48,
+      "raw_target": 40
+    },
+    {
+      "omitted": 6,
+      "p": 47,
+      "source": 56,
+      "raw_target": 40
+    },
+    {
+      "omitted": 6,
+      "p": 61,
+      "source": 82,
+      "raw_target": 42
+    },
+    {
+      "omitted": 6,
+      "p": 67,
+      "source": 64,
+      "raw_target": 72
+    },
+    {
+      "omitted": 6,
+      "p": 73,
+      "source": 78,
+      "raw_target": 70
+    },
+    {
+      "omitted": 6,
+      "p": 83,
+      "source": 108,
+      "raw_target": 60
+    },
+    {
+      "omitted": 6,
+      "p": 97,
+      "source": 110,
+      "raw_target": 86
+    }
+  ],
+  "scope": "Independent audit; Q-normalized finite checks are supplementary to the C-only producer packet, not evidence that arbitrary rescalings preserve the Q quotient."
+}

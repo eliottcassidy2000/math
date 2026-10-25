@@ -1,0 +1,51 @@
+{
+  "inheritance_files": [
+    {
+      "path": "/tmp/session59-publication/clean-repo/05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglasses/THEOREM.md",
+      "sha256": "d56acb9bd7bb6fb5ce0f0fbf69ad66a3b8f046e2f24ce05657aeb57ba039d202"
+    },
+    {
+      "path": "/tmp/session59-publication/clean-repo/05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglasses/MITRE_AFFINE_BRIDGE.md",
+      "sha256": "4febec1f0441dab517e4bc1db9e345d46ece704bf3e17cc864b3792f9527e64a"
+    },
+    {
+      "path": "/tmp/session59-publication/clean-repo/05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/branch-addendum.md",
+      "sha256": "89f858f8871a6608dee911949fc6f91029d4d16f85cef8bc255a4c193028e094"
+    },
+    {
+      "path": "/tmp/session59-publication/clean-repo/05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/distinctness-addendum.md",
+      "sha256": "407bd205a2f5bd5629dc6261db24a69f11dbccc3dace5fc7d3d0729111afd9e1"
+    }
+  ],
+  "primary_sources": [
+    {
+      "title": "Cyclic flats of binary matroids",
+      "location": "published manuscript section8.2 p34",
+      "url": "https://acris.aalto.fi/ws/portalfiles/portal/62863545/Freij_Hollanti_Cyclic_Flats.1_s2.0_S0196885821000038_main_1.pdf",
+      "status": "primary PDF text inspected"
+    },
+    {
+      "title": "Surfaces with DIF != DEF real structures",
+      "location": "sections1.3-1.5; Proposition1.3, Lemma1.7, Theorem1.10",
+      "url": "https://webdoc.sub.gwdg.de/ebook/serien/e/mpi_mathematik/2005/76.pdf",
+      "status": "primary PDF text inspected"
+    },
+    {
+      "title": "A brief introduction to Enriques surfaces",
+      "location": "v2 section3 p6",
+      "url": "https://arxiv.org/pdf/1412.7744",
+      "status": "primary PDF text inspected"
+    },
+    {
+      "title": "Complex Algebraic Surfaces Class19",
+      "location": "sections3-5",
+      "url": "https://math.stanford.edu/~vakil/02-245/sclass19A.pdf",
+      "status": "author lecture notes inspected; classification terminology only, explicit pencil proof independent"
+    }
+  ],
+  "blocker_retry": {
+    "initial": "https://arxiv.org/html/1906.10936v3 returned cache miss",
+    "changed_retry": "https://arxiv.org/pdf/1906.10936 and institutional published PDF read successfully",
+    "permissions_denials": []
+  }
+}

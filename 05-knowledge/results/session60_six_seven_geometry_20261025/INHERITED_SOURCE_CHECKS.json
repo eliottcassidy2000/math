@@ -1,0 +1,55 @@
+{
+  "scope": "Read-back of explicitly inherited repository source pins",
+  "files": [
+    {
+      "path": "05-knowledge/results/sixes_and_sevens_20261006.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "2c1ee5e794073779430c92e4116aee699c43d50b5d9f89fd2a731f802dc72bed"
+    },
+    {
+      "path": "05-knowledge/results/plane_cycles_pants_and_six_seven_20261011b.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "e48a0ee4b96b0e45f1c62dfe31151f414d7f3ff978c48d808a576ec94ee3e157"
+    },
+    {
+      "path": "05-knowledge/results/pants_boundary_holonomy_20261011b.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "53b4d09a1bca8eae99bc98cac15ec263a400020fdcc767ecb7ea8fa4e235a104"
+    },
+    {
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c"
+    },
+    {
+      "path": "05-knowledge/results/shape_ports_20261025/README.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "0ffc5f2663c10d8061ae94c6d5057aaab5679cdfdcfee4c53794a0962bfa2512"
+    },
+    {
+      "path": "05-knowledge/results/shape_ports_20261025/anchors_quartic_sextic.md",
+      "commit": "25a46e7796178ec00770580ab7cf9aed548d3b26",
+      "sha256": "954c9e945be8acc3e41a02f08e1a35c1cf7f4e1a3a23006db2602961d45a1017"
+    },
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglasses/THEOREM.md",
+      "commit": "f7041582a8bc1b987c73ed4ee9d3ffb7e37a0932",
+      "sha256": "d56acb9bd7bb6fb5ce0f0fbf69ad66a3b8f046e2f24ce05657aeb57ba039d202"
+    },
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglasses/MITRE_AFFINE_BRIDGE.md",
+      "commit": "f7041582a8bc1b987c73ed4ee9d3ffb7e37a0932",
+      "sha256": "4febec1f0441dab517e4bc1db9e345d46ece704bf3e17cc864b3792f9527e64a"
+    },
+    {
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/branch-addendum.md",
+      "commit": "f7041582a8bc1b987c73ed4ee9d3ffb7e37a0932",
+      "sha256": "89f858f8871a6608dee911949fc6f91029d4d16f85cef8bc255a4c193028e094"
+    },
+    {
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/distinctness-addendum.md",
+      "commit": "f7041582a8bc1b987c73ed4ee9d3ffb7e37a0932",
+      "sha256": "407bd205a2f5bd5629dc6261db24a69f11dbccc3dace5fc7d3d0729111afd9e1"
+    }
+  ]
+}

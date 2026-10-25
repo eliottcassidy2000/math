@@ -2,7 +2,7 @@
 
 User focus: connect six-root K3 resolutions and seven-root hourglasses with other occurrences of six and seven. The connections here use actual maps, characters, equations and invariants, not the recurrence of a numeral.
 
-Status: first audited checkpoint. **PROVED** statements retain the hypotheses in their packets; classical identifications are **CITED**, and bounded algebraic controls are **FINITE-EXACT**. No historical-priority claim is made. Publication status is established by the containing Git commit and independent remote readback, not this text alone.
+Status: second audited checkpoint. **PROVED** statements retain the hypotheses in their packets; classical identifications are **CITED**, and bounded algebraic controls are **FINITE-EXACT**. No historical-priority claim is made. Publication status is established by the containing Git commit and independent remote readback, not this text alone.
 
 ## Results
 
@@ -10,6 +10,9 @@ Status: first audited checkpoint. **PROVED** statements retain the hypotheses in
 - [Deck characters and K3 quotients](deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md): seven canonical forms correspond to seven actual root-deletion maps onto six-root K3 resolutions. The six-root even-sign subgroup has fifteen symplectic involutions, each with eight fixed points. Quotient and resolution models are kept separate.
 - [Hodge decomposition](deck-k3/HODGE_DECOMPOSITION.md): the seven K3 correspondences give an orthogonal decomposition of the rational transcendental Hodge structure, with pairing scale two. For the hourglass this gives `rho(Y)=6 rho_outer-56`, hence `rho(Y)` belongs to `{52,58,64}`; this checkpoint does not decide the outer K3 rank.
 - [Hourglass symmetry and CM](hourglass-symmetry/RESULT.md): the full projective branch-arrangement group is the dihedral group of order twelve. The central deletion is related to the genus-two curve `v^2=u^6-1`, whose Jacobian is isogenous over C to a square of a j=0 elliptic curve. The [explicit Gale transform](deck-k3/KUMMER_GALE_BRIDGE.md) identifies the central six-root K3 itself as Kummer, rather than inferring this from its Kummer quotient.
+
+- [Fano-code surface quotients](seven-lines/RESULT.md): thirty chosen rank-three kernels have dependency counts0,1,3 in multiplicities16,12,2. Their minimal models are respectively Campedelli, properly elliptic and Enriques. The sixteen Campedelli choices give exactly two complex isomorphism classes, with full automorphism groups C2×A4 and (C2)^3; no corresponding elliptic classification is asserted.
+- [Curve, pants and Richelot bridges](recovered-bridges/THEOREM.md): transverse base-line curves have genus17/49 and one/seven genus-two character quotients. An inherited Fano pairing supplies maximal isotropic two-torsion kernels; an actual magic slice gives seven nonsingular geometric Richelot targets. The base-line section is2H, notH, and label actions need not lift to the fixed curve.
 
 [Concept board](CONCEPT_BOARD.md) records the inherited mechanisms and hostiles. [Synthesis](SYNTHESIS.md) gives the connection ledger and remaining frontier. Independent audits, exact source captures and replay receipts accompany the packets.
 

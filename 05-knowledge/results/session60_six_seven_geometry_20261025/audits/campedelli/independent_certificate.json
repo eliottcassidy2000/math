@@ -1,0 +1,1926 @@
+{
+  "D12_orbits": [
+    {
+      "d": 1,
+      "nonidentity_C3_fixed_deck_elements": [],
+      "size": 6,
+      "stabilizer": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ],
+      "stabilizer_order": 2
+    },
+    {
+      "d": 0,
+      "nonidentity_C3_fixed_deck_elements": [],
+      "size": 12,
+      "stabilizer": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "stabilizer_order": 1
+    },
+    {
+      "d": 1,
+      "nonidentity_C3_fixed_deck_elements": [],
+      "size": 6,
+      "stabilizer": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ],
+      "stabilizer_order": 2
+    },
+    {
+      "d": 0,
+      "nonidentity_C3_fixed_deck_elements": [
+        2,
+        2
+      ],
+      "size": 4,
+      "stabilizer": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          4,
+          6,
+          5,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ]
+      ],
+      "stabilizer_order": 3
+    },
+    {
+      "d": 3,
+      "nonidentity_C3_fixed_deck_elements": [],
+      "size": 2,
+      "stabilizer": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          6,
+          5,
+          4,
+          3
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          0,
+          3,
+          4,
+          6,
+          5,
+          2,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ],
+        [
+          0,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ]
+      ],
+      "stabilizer_order": 6
+    }
+  ],
+  "all_rank3_subgroups": 1395,
+  "dependency_histogram": {
+    "0": 16,
+    "1": 12,
+    "3": 2
+  },
+  "eigendisor_RR_cases": 8,
+  "intersection_histogram": {
+    "2": 12,
+    "3": 3
+  },
+  "matching_histogram": {
+    "0": 8,
+    "1": 6,
+    "3": 1
+  },
+  "records": [
+    {
+      "d": 3,
+      "even_code": [
+        0,
+        30,
+        45,
+        51,
+        75,
+        85,
+        102,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        25,
+        30,
+        42,
+        45,
+        51,
+        52
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 3,
+      "even_code": [
+        0,
+        30,
+        43,
+        53,
+        77,
+        83,
+        102,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        25,
+        30,
+        43,
+        44,
+        50,
+        53
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        29,
+        46,
+        51,
+        75,
+        86,
+        101,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        26,
+        29,
+        41,
+        46,
+        51,
+        52
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        29,
+        43,
+        54,
+        78,
+        83,
+        101,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        26,
+        29,
+        43,
+        44,
+        49,
+        54
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        27,
+        46,
+        53,
+        77,
+        86,
+        99,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        27,
+        28,
+        41,
+        46,
+        50,
+        53
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        27,
+        45,
+        54,
+        78,
+        85,
+        99,
+        120
+      ],
+      "fixed_triples": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "kernel6": [
+        0,
+        7,
+        27,
+        28,
+        42,
+        45,
+        49,
+        54
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        30,
+        45,
+        51,
+        71,
+        89,
+        106,
+        116
+      ],
+      "fixed_triples": [
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        11,
+        21,
+        30,
+        38,
+        45,
+        51,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        30,
+        39,
+        57,
+        77,
+        83,
+        106,
+        116
+      ],
+      "fixed_triples": [
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        11,
+        21,
+        30,
+        39,
+        44,
+        50,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        29,
+        46,
+        51,
+        71,
+        90,
+        105,
+        116
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        11,
+        22,
+        29,
+        37,
+        46,
+        51,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        29,
+        39,
+        58,
+        78,
+        83,
+        105,
+        116
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        11,
+        22,
+        29,
+        39,
+        44,
+        49,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        23,
+        46,
+        57,
+        77,
+        90,
+        99,
+        116
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        11,
+        23,
+        28,
+        37,
+        46,
+        50,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        23,
+        45,
+        58,
+        78,
+        89,
+        99,
+        116
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        11,
+        23,
+        28,
+        38,
+        45,
+        49,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        30,
+        43,
+        53,
+        71,
+        89,
+        108,
+        114
+      ],
+      "fixed_triples": [
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        13,
+        19,
+        30,
+        38,
+        43,
+        53,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        30,
+        39,
+        57,
+        75,
+        85,
+        108,
+        114
+      ],
+      "fixed_triples": [
+        [
+          0,
+          5,
+          6
+        ]
+      ],
+      "kernel6": [
+        0,
+        13,
+        19,
+        30,
+        39,
+        42,
+        52,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        27,
+        46,
+        53,
+        71,
+        92,
+        105,
+        114
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        13,
+        22,
+        27,
+        35,
+        46,
+        53,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        27,
+        39,
+        60,
+        78,
+        85,
+        105,
+        114
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        13,
+        22,
+        27,
+        39,
+        42,
+        49,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        23,
+        46,
+        57,
+        75,
+        92,
+        101,
+        114
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        13,
+        23,
+        26,
+        35,
+        46,
+        52,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        23,
+        43,
+        60,
+        78,
+        89,
+        101,
+        114
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        13,
+        23,
+        26,
+        38,
+        43,
+        49,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        29,
+        43,
+        54,
+        71,
+        90,
+        108,
+        113
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        14,
+        19,
+        29,
+        37,
+        43,
+        54,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        29,
+        39,
+        58,
+        75,
+        86,
+        108,
+        113
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        14,
+        19,
+        29,
+        39,
+        41,
+        52,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        27,
+        45,
+        54,
+        71,
+        92,
+        106,
+        113
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        14,
+        21,
+        27,
+        35,
+        45,
+        54,
+        56
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        27,
+        39,
+        60,
+        77,
+        86,
+        106,
+        113
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        14,
+        21,
+        27,
+        39,
+        41,
+        50,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        23,
+        45,
+        58,
+        75,
+        92,
+        102,
+        113
+      ],
+      "fixed_triples": [
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "kernel6": [
+        0,
+        14,
+        23,
+        25,
+        35,
+        45,
+        52,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        23,
+        43,
+        60,
+        77,
+        90,
+        102,
+        113
+      ],
+      "fixed_triples": [
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "kernel6": [
+        0,
+        14,
+        23,
+        25,
+        37,
+        43,
+        50,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        15,
+        54,
+        57,
+        85,
+        90,
+        99,
+        108
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        15,
+        19,
+        28,
+        37,
+        42,
+        54,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        15,
+        53,
+        58,
+        86,
+        89,
+        99,
+        108
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        15,
+        19,
+        28,
+        38,
+        41,
+        53,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        15,
+        54,
+        57,
+        83,
+        92,
+        101,
+        106
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        15,
+        21,
+        26,
+        35,
+        44,
+        54,
+        57
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 0,
+      "even_code": [
+        0,
+        15,
+        51,
+        60,
+        86,
+        89,
+        101,
+        106
+      ],
+      "fixed_triples": [],
+      "kernel6": [
+        0,
+        15,
+        21,
+        26,
+        38,
+        41,
+        51,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        15,
+        53,
+        58,
+        83,
+        92,
+        102,
+        105
+      ],
+      "fixed_triples": [
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "kernel6": [
+        0,
+        15,
+        22,
+        25,
+        35,
+        44,
+        53,
+        58
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "d": 1,
+      "even_code": [
+        0,
+        15,
+        51,
+        60,
+        85,
+        90,
+        102,
+        105
+      ],
+      "fixed_triples": [
+        [
+          0,
+          3,
+          4
+        ]
+      ],
+      "kernel6": [
+        0,
+        15,
+        22,
+        25,
+        37,
+        42,
+        51,
+        60
+      ],
+      "node_orbits": [
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "quotient_points": 2,
+          "stabilizer_order": 2,
+          "triple": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "quotient_points": 1,
+          "stabilizer_order": 1,
+          "triple": [
+            0,
+            5,
+            6
+          ]
+        }
+      ]
+    }
+  ],
+  "route": "all 1395 rank-three subgroups of C2^6, not 5040 line-label permutations",
+  "status": "PASS",
+  "triple_centers": [
+    {
+      "indices": [
+        0,
+        1,
+        2
+      ],
+      "point": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "indices": [
+        0,
+        3,
+        4
+      ],
+      "point": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "indices": [
+        0,
+        5,
+        6
+      ],
+      "point": [
+        0,
+        1,
+        -1
+      ]
+    }
+  ],
+  "valid_Fano_kernels": 30
+}

@@ -1,0 +1,125 @@
+{
+  "scope": "Actual executions in separate frozen packet copies; generated file bytes match frozen publication sources in both modes",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scripts": 4,
+  "runs": [
+    {
+      "script": "seven-lines/check.py",
+      "script_sha256": "49db151e1d7e6247860bb68ced871c30d55fe157eff76742ab0e0c77ea45731e",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.575,
+      "stdout_sha256": "c3d4f7db7eab84aac3704767376c8c0a50b921a3f11cf2e79c6f2bde9aa6909b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/campedelli/independent_check.py",
+      "script_sha256": "8f4f10efe4ddc84bfb02b41c0840e95c09d2b642190918b8604400d518bc650a",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "independent_check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.095,
+      "stdout_sha256": "d8fe9fb69a1511ac08c1cb151d8f4946a07be809aa75510d6d0de45d04d065bf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "recovered-bridges/check.py",
+      "script_sha256": "184642280d799faff0c6c73f0ea2ba3ebbc452d15b8a78c5cceecfcfadbddcbe",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.984,
+      "stdout_sha256": "6fdb6febc394149edafb03b074053f54752288fafe8afdcc6f103337e001a687",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/curves/check_curve_independent.py",
+      "script_sha256": "6d9a662cc02221a835a4a25fad1d9b7c546bb1cc9985efb95949dc1c3928fdbc",
+      "mode": "normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "check_curve_independent.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.614,
+      "stdout_sha256": "50cb3265b306378cee3a4538b718e19b84958f1bf0661893ed9c0827c79ff89b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "seven-lines/check.py",
+      "script_sha256": "49db151e1d7e6247860bb68ced871c30d55fe157eff76742ab0e0c77ea45731e",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.061,
+      "stdout_sha256": "c3d4f7db7eab84aac3704767376c8c0a50b921a3f11cf2e79c6f2bde9aa6909b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/campedelli/independent_check.py",
+      "script_sha256": "8f4f10efe4ddc84bfb02b41c0840e95c09d2b642190918b8604400d518bc650a",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "independent_check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.156,
+      "stdout_sha256": "d8fe9fb69a1511ac08c1cb151d8f4946a07be809aa75510d6d0de45d04d065bf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "recovered-bridges/check.py",
+      "script_sha256": "184642280d799faff0c6c73f0ea2ba3ebbc452d15b8a78c5cceecfcfadbddcbe",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.488,
+      "stdout_sha256": "6fdb6febc394149edafb03b074053f54752288fafe8afdcc6f103337e001a687",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "audits/curves/check_curve_independent.py",
+      "script_sha256": "6d9a662cc02221a835a4a25fad1d9b7c546bb1cc9985efb95949dc1c3928fdbc",
+      "mode": "optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "check_curve_independent.py"
+      ],
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.102,
+      "stdout_sha256": "50cb3265b306378cee3a4538b718e19b84958f1bf0661893ed9c0827c79ff89b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_file_count": 77,
+  "source_byte_integrity": "PASS"
+}
