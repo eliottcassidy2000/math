@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_sha256": "0dd019b0173baa60ea10772d8afe15342f37a7ee870329d329c895b8accce689",
+  "explicit_checks": 91064,
+  "normal_optimized_identical": true,
+  "normal_exact_checks_identical": true,
+  "bare_asserts_remaining": 0,
+  "negative_controls": [
+    {
+      "mode": "normal",
+      "exit_code": 1,
+      "rejects_wrong_genus": true
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejects_wrong_genus": true
+    }
+  ],
+  "independent_audit_checks": 825,
+  "independent_audit_normal_optimized_identical": true,
+  "source_provenance": "../audits/deck-kummer/SOURCE_PROVENANCE.json"
+}

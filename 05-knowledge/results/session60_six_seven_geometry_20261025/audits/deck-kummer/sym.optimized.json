@@ -1,0 +1,66 @@
+{
+  "CM_NS_intersection_determinant": -3,
+  "Shioda_cover": "W^2=27*(E^2-x^2)*(E^2-z^2)*(E^2-(x+z)^2)",
+  "boundaries": [
+    "complex geometric assertions do not identify rational twists",
+    "D12 is full projective base-arrangement group, not asserted full surface automorphism group",
+    "original diagonal K3 Kummer property requires separate argument"
+  ],
+  "canonical_representation": "det(base A) tensor permutation on seven root coordinates",
+  "checks": 116,
+  "genus_two_polynomial": "2*t**5 - 5*t**4 + 5*t**2 - 2*t",
+  "geometric_Kummer_picard_rank": 20,
+  "line_order": [
+    "E",
+    "E+x",
+    "E-x",
+    "E+z",
+    "E-z",
+    "E+x+z",
+    "E-x-z"
+  ],
+  "rational_branch_values": [
+    "infinity",
+    "-1",
+    "0",
+    "1/2",
+    "1",
+    "2"
+  ],
+  "signed_permutation_subgroup_order": 768,
+  "sixroot_node_counts": [
+    0,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "status": "PASS",
+  "symmetry_order": 12,
+  "triple_incidence": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      5,
+      6
+    ]
+  ],
+  "universe": {
+    "deletions": 7,
+    "line_pairs": 21,
+    "linear_symmetries": 12,
+    "lines": 7,
+    "ordered_root_basis_images": 30
+  }
+}

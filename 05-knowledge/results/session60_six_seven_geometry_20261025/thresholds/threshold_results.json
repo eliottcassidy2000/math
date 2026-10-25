@@ -1,0 +1,954 @@
+{
+  "status": "FINITE-EXACT controls, not a replacement for the proof",
+  "hilbert_formula_comparisons": 1500,
+  "smoothness_support_controls": [
+    {
+      "d": 1,
+      "n": 5,
+      "full_size_nonzero_minors": 10,
+      "smooth_jacobian_supports": 6,
+      "coordinate_restriction_general_position": true
+    },
+    {
+      "d": 2,
+      "n": 7,
+      "full_size_nonzero_minors": 35,
+      "smooth_jacobian_supports": 29,
+      "coordinate_restriction_general_position": true
+    },
+    {
+      "d": 3,
+      "n": 9,
+      "full_size_nonzero_minors": 126,
+      "smooth_jacobian_supports": 130,
+      "coordinate_restriction_general_position": true
+    },
+    {
+      "d": 4,
+      "n": 11,
+      "full_size_nonzero_minors": 462,
+      "smooth_jacobian_supports": 562,
+      "coordinate_restriction_general_position": true
+    }
+  ],
+  "square_root_threshold_rows": [
+    {
+      "d": 1,
+      "n": 3,
+      "r": 2,
+      "codimension": 1,
+      "canonical_coefficient": -1,
+      "degree": 2,
+      "cover_degree": 4,
+      "geometric_genus": 0,
+      "canonical_top_intersection": -2,
+      "euler_characteristic": 2,
+      "curve_genus": 0
+    },
+    {
+      "d": 1,
+      "n": 4,
+      "r": 2,
+      "codimension": 2,
+      "canonical_coefficient": 0,
+      "degree": 4,
+      "cover_degree": 8,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 0,
+      "curve_genus": 1
+    },
+    {
+      "d": 1,
+      "n": 5,
+      "r": 2,
+      "codimension": 3,
+      "canonical_coefficient": 1,
+      "degree": 8,
+      "cover_degree": 16,
+      "geometric_genus": 5,
+      "canonical_top_intersection": 8,
+      "euler_characteristic": -8,
+      "curve_genus": 5
+    },
+    {
+      "d": 2,
+      "n": 5,
+      "r": 2,
+      "codimension": 2,
+      "canonical_coefficient": -1,
+      "degree": 4,
+      "cover_degree": 16,
+      "geometric_genus": 0,
+      "canonical_top_intersection": 4,
+      "euler_characteristic": 8
+    },
+    {
+      "d": 2,
+      "n": 6,
+      "r": 2,
+      "codimension": 3,
+      "canonical_coefficient": 0,
+      "degree": 8,
+      "cover_degree": 32,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 24
+    },
+    {
+      "d": 2,
+      "n": 7,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": 1,
+      "degree": 16,
+      "cover_degree": 64,
+      "geometric_genus": 7,
+      "canonical_top_intersection": 16,
+      "euler_characteristic": 80
+    },
+    {
+      "d": 3,
+      "n": 7,
+      "r": 2,
+      "codimension": 3,
+      "canonical_coefficient": -1,
+      "degree": 8,
+      "cover_degree": 64,
+      "geometric_genus": 0,
+      "canonical_top_intersection": -8,
+      "euler_characteristic": -24
+    },
+    {
+      "d": 3,
+      "n": 8,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": 0,
+      "degree": 16,
+      "cover_degree": 128,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -128
+    },
+    {
+      "d": 3,
+      "n": 9,
+      "r": 2,
+      "codimension": 5,
+      "canonical_coefficient": 1,
+      "degree": 32,
+      "cover_degree": 256,
+      "geometric_genus": 9,
+      "canonical_top_intersection": 32,
+      "euler_characteristic": -512
+    },
+    {
+      "d": 4,
+      "n": 9,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": -1,
+      "degree": 16,
+      "cover_degree": 256,
+      "geometric_genus": 0,
+      "canonical_top_intersection": 16,
+      "euler_characteristic": 224
+    },
+    {
+      "d": 4,
+      "n": 10,
+      "r": 2,
+      "codimension": 5,
+      "canonical_coefficient": 0,
+      "degree": 32,
+      "cover_degree": 512,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 960
+    },
+    {
+      "d": 4,
+      "n": 11,
+      "r": 2,
+      "codimension": 6,
+      "canonical_coefficient": 1,
+      "degree": 64,
+      "cover_degree": 1024,
+      "geometric_genus": 11,
+      "canonical_top_intersection": 64,
+      "euler_characteristic": 3712
+    },
+    {
+      "d": 5,
+      "n": 11,
+      "r": 2,
+      "codimension": 5,
+      "canonical_coefficient": -1,
+      "degree": 32,
+      "cover_degree": 1024,
+      "geometric_genus": 0,
+      "canonical_top_intersection": -32,
+      "euler_characteristic": -1600
+    },
+    {
+      "d": 5,
+      "n": 12,
+      "r": 2,
+      "codimension": 6,
+      "canonical_coefficient": 0,
+      "degree": 64,
+      "cover_degree": 2048,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -6912
+    },
+    {
+      "d": 5,
+      "n": 13,
+      "r": 2,
+      "codimension": 7,
+      "canonical_coefficient": 1,
+      "degree": 128,
+      "cover_degree": 4096,
+      "geometric_genus": 13,
+      "canonical_top_intersection": 128,
+      "euler_characteristic": -27008
+    },
+    {
+      "d": 6,
+      "n": 13,
+      "r": 2,
+      "codimension": 6,
+      "canonical_coefficient": -1,
+      "degree": 64,
+      "cover_degree": 4096,
+      "geometric_genus": 0,
+      "canonical_top_intersection": 64,
+      "euler_characteristic": 12032
+    },
+    {
+      "d": 6,
+      "n": 14,
+      "r": 2,
+      "codimension": 7,
+      "canonical_coefficient": 0,
+      "degree": 128,
+      "cover_degree": 8192,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 51072
+    },
+    {
+      "d": 6,
+      "n": 15,
+      "r": 2,
+      "codimension": 8,
+      "canonical_coefficient": 1,
+      "degree": 256,
+      "cover_degree": 16384,
+      "geometric_genus": 15,
+      "canonical_top_intersection": 256,
+      "euler_characteristic": 199936
+    }
+  ],
+  "surface_controls": [
+    {
+      "d": 2,
+      "n": 4,
+      "r": 2,
+      "codimension": 1,
+      "canonical_coefficient": -2,
+      "degree": 2,
+      "cover_degree": 8,
+      "geometric_genus": 0,
+      "canonical_top_intersection": 8,
+      "euler_characteristic": 4
+    },
+    {
+      "d": 2,
+      "n": 5,
+      "r": 2,
+      "codimension": 2,
+      "canonical_coefficient": -1,
+      "degree": 4,
+      "cover_degree": 16,
+      "geometric_genus": 0,
+      "canonical_top_intersection": 4,
+      "euler_characteristic": 8
+    },
+    {
+      "d": 2,
+      "n": 6,
+      "r": 2,
+      "codimension": 3,
+      "canonical_coefficient": 0,
+      "degree": 8,
+      "cover_degree": 32,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 24
+    },
+    {
+      "d": 2,
+      "n": 7,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": 1,
+      "degree": 16,
+      "cover_degree": 64,
+      "geometric_genus": 7,
+      "canonical_top_intersection": 16,
+      "euler_characteristic": 80
+    },
+    {
+      "d": 2,
+      "n": 8,
+      "r": 2,
+      "codimension": 5,
+      "canonical_coefficient": 2,
+      "degree": 32,
+      "cover_degree": 128,
+      "geometric_genus": 31,
+      "canonical_top_intersection": 128,
+      "euler_characteristic": 256
+    },
+    {
+      "d": 2,
+      "n": 9,
+      "r": 2,
+      "codimension": 6,
+      "canonical_coefficient": 3,
+      "degree": 64,
+      "cover_degree": 256,
+      "geometric_genus": 111,
+      "canonical_top_intersection": 576,
+      "euler_characteristic": 768
+    }
+  ],
+  "canonical_surface_classification": [
+    {
+      "d": 2,
+      "n": 7,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": 1,
+      "degree": 16,
+      "cover_degree": 64,
+      "geometric_genus": 7,
+      "canonical_top_intersection": 16,
+      "euler_characteristic": 80
+    },
+    {
+      "d": 2,
+      "n": 5,
+      "r": 3,
+      "codimension": 2,
+      "canonical_coefficient": 1,
+      "degree": 9,
+      "cover_degree": 81,
+      "geometric_genus": 5,
+      "canonical_top_intersection": 9,
+      "euler_characteristic": 63
+    },
+    {
+      "d": 2,
+      "n": 4,
+      "r": 5,
+      "codimension": 1,
+      "canonical_coefficient": 1,
+      "degree": 5,
+      "cover_degree": 125,
+      "geometric_genus": 4,
+      "canonical_top_intersection": 5,
+      "euler_characteristic": 55
+    }
+  ],
+  "all_incidence_arrangement_controls": [
+    {
+      "name": "seven GP lines",
+      "n": 7,
+      "intersection_multiplicities": {
+        "2": 21
+      },
+      "resolved_K_squared": 16,
+      "resolved_euler": 80,
+      "resolved_chi_O": 8,
+      "positive_genus_concurrent_quotients": [],
+      "obstruction_mechanism": "positive geometric genus"
+    },
+    {
+      "name": "magic nine",
+      "n": 9,
+      "intersection_multiplicities": {
+        "3": 8,
+        "2": 12
+      },
+      "resolved_K_squared": 576,
+      "resolved_euler": 768,
+      "resolved_chi_O": 112,
+      "positive_genus_concurrent_quotients": [],
+      "obstruction_mechanism": "positive geometric genus"
+    },
+    {
+      "name": "hourglass seven",
+      "n": 7,
+      "intersection_multiplicities": {
+        "3": 3,
+        "2": 12
+      },
+      "resolved_K_squared": 16,
+      "resolved_euler": 80,
+      "resolved_chi_O": 8,
+      "positive_genus_concurrent_quotients": [],
+      "obstruction_mechanism": "positive geometric genus"
+    },
+    {
+      "name": "four concurrent plus two transverse",
+      "n": 6,
+      "intersection_multiplicities": {
+        "2": 9,
+        "4": 1
+      },
+      "resolved_K_squared": -8,
+      "resolved_euler": 8,
+      "resolved_chi_O": 0,
+      "positive_genus_concurrent_quotients": [
+        1
+      ],
+      "obstruction_mechanism": "positive-genus curve quotient"
+    },
+    {
+      "name": "four concurrent plus one transverse",
+      "n": 5,
+      "intersection_multiplicities": {
+        "2": 4,
+        "4": 1
+      },
+      "resolved_K_squared": 0,
+      "resolved_euler": 0,
+      "resolved_chi_O": 0,
+      "positive_genus_concurrent_quotients": [
+        1
+      ],
+      "obstruction_mechanism": "positive-genus curve quotient"
+    },
+    {
+      "name": "six concurrent plus one transverse",
+      "n": 7,
+      "intersection_multiplicities": {
+        "2": 6,
+        "6": 1
+      },
+      "resolved_K_squared": -128,
+      "resolved_euler": -64,
+      "resolved_chi_O": -16,
+      "positive_genus_concurrent_quotients": [
+        17
+      ],
+      "obstruction_mechanism": "positive-genus curve quotient"
+    }
+  ],
+  "equal_degree_Calabi_Yau_rows_d1_through_d6": [
+    {
+      "d": 1,
+      "n": 4,
+      "r": 2,
+      "codimension": 2,
+      "canonical_coefficient": 0,
+      "degree": 4,
+      "cover_degree": 8,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 0,
+      "curve_genus": 1
+    },
+    {
+      "d": 1,
+      "n": 3,
+      "r": 3,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 3,
+      "cover_degree": 9,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 0,
+      "curve_genus": 1
+    },
+    {
+      "d": 2,
+      "n": 6,
+      "r": 2,
+      "codimension": 3,
+      "canonical_coefficient": 0,
+      "degree": 8,
+      "cover_degree": 32,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 24
+    },
+    {
+      "d": 2,
+      "n": 4,
+      "r": 4,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 4,
+      "cover_degree": 64,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 24
+    },
+    {
+      "d": 3,
+      "n": 8,
+      "r": 2,
+      "codimension": 4,
+      "canonical_coefficient": 0,
+      "degree": 16,
+      "cover_degree": 128,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -128
+    },
+    {
+      "d": 3,
+      "n": 6,
+      "r": 3,
+      "codimension": 2,
+      "canonical_coefficient": 0,
+      "degree": 9,
+      "cover_degree": 243,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -144
+    },
+    {
+      "d": 3,
+      "n": 5,
+      "r": 5,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 5,
+      "cover_degree": 625,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -200
+    },
+    {
+      "d": 4,
+      "n": 10,
+      "r": 2,
+      "codimension": 5,
+      "canonical_coefficient": 0,
+      "degree": 32,
+      "cover_degree": 512,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 960
+    },
+    {
+      "d": 4,
+      "n": 6,
+      "r": 6,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 6,
+      "cover_degree": 7776,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 2610
+    },
+    {
+      "d": 5,
+      "n": 12,
+      "r": 2,
+      "codimension": 6,
+      "canonical_coefficient": 0,
+      "degree": 64,
+      "cover_degree": 2048,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -6912
+    },
+    {
+      "d": 5,
+      "n": 9,
+      "r": 3,
+      "codimension": 3,
+      "canonical_coefficient": 0,
+      "degree": 27,
+      "cover_degree": 6561,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -9720
+    },
+    {
+      "d": 5,
+      "n": 8,
+      "r": 4,
+      "codimension": 2,
+      "canonical_coefficient": 0,
+      "degree": 16,
+      "cover_degree": 16384,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -14208
+    },
+    {
+      "d": 5,
+      "n": 7,
+      "r": 7,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 7,
+      "cover_degree": 117649,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": -39984
+    },
+    {
+      "d": 6,
+      "n": 14,
+      "r": 2,
+      "codimension": 7,
+      "canonical_coefficient": 0,
+      "degree": 128,
+      "cover_degree": 8192,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 51072
+    },
+    {
+      "d": 6,
+      "n": 8,
+      "r": 8,
+      "codimension": 1,
+      "canonical_coefficient": 0,
+      "degree": 8,
+      "cover_degree": 2097152,
+      "geometric_genus": 1,
+      "canonical_top_intersection": 0,
+      "euler_characteristic": 720608
+    }
+  ],
+  "coordinate_section_ladders": {
+    "three_quadrics_genus_five": [
+      {
+        "d": 3,
+        "n": 7,
+        "r": 2,
+        "codimension": 3,
+        "canonical_coefficient": -1,
+        "degree": 8,
+        "cover_degree": 64,
+        "geometric_genus": 0,
+        "canonical_top_intersection": -8,
+        "euler_characteristic": -24
+      },
+      {
+        "d": 2,
+        "n": 6,
+        "r": 2,
+        "codimension": 3,
+        "canonical_coefficient": 0,
+        "degree": 8,
+        "cover_degree": 32,
+        "geometric_genus": 1,
+        "canonical_top_intersection": 0,
+        "euler_characteristic": 24
+      },
+      {
+        "d": 1,
+        "n": 5,
+        "r": 2,
+        "codimension": 3,
+        "canonical_coefficient": 1,
+        "degree": 8,
+        "cover_degree": 16,
+        "geometric_genus": 5,
+        "canonical_top_intersection": 8,
+        "euler_characteristic": -8,
+        "curve_genus": 5
+      }
+    ],
+    "four_quadrics_degree_sixteen": [
+      {
+        "d": 3,
+        "n": 8,
+        "r": 2,
+        "codimension": 4,
+        "canonical_coefficient": 0,
+        "degree": 16,
+        "cover_degree": 128,
+        "geometric_genus": 1,
+        "canonical_top_intersection": 0,
+        "euler_characteristic": -128
+      },
+      {
+        "d": 2,
+        "n": 7,
+        "r": 2,
+        "codimension": 4,
+        "canonical_coefficient": 1,
+        "degree": 16,
+        "cover_degree": 64,
+        "geometric_genus": 7,
+        "canonical_top_intersection": 16,
+        "euler_characteristic": 80
+      },
+      {
+        "d": 1,
+        "n": 6,
+        "r": 2,
+        "codimension": 4,
+        "canonical_coefficient": 2,
+        "degree": 16,
+        "cover_degree": 32,
+        "geometric_genus": 17,
+        "canonical_top_intersection": 32,
+        "euler_characteristic": -32,
+        "curve_genus": 17
+      }
+    ]
+  },
+  "concurrent_local_cones": [
+    {
+      "r": 2,
+      "concurrent_lines": 3,
+      "exceptional_degree": 2,
+      "exceptional_genus": 0,
+      "discrepancy": 0
+    },
+    {
+      "r": 2,
+      "concurrent_lines": 4,
+      "exceptional_degree": 4,
+      "exceptional_genus": 1,
+      "discrepancy": -1
+    },
+    {
+      "r": 2,
+      "concurrent_lines": 5,
+      "exceptional_degree": 8,
+      "exceptional_genus": 5,
+      "discrepancy": -2
+    },
+    {
+      "r": 2,
+      "concurrent_lines": 6,
+      "exceptional_degree": 16,
+      "exceptional_genus": 17,
+      "discrepancy": -3
+    },
+    {
+      "r": 2,
+      "concurrent_lines": 7,
+      "exceptional_degree": 32,
+      "exceptional_genus": 49,
+      "discrepancy": -4
+    },
+    {
+      "r": 2,
+      "concurrent_lines": 8,
+      "exceptional_degree": 64,
+      "exceptional_genus": 129,
+      "discrepancy": -5
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 3,
+      "exceptional_degree": 3,
+      "exceptional_genus": 1,
+      "discrepancy": -1
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 4,
+      "exceptional_degree": 9,
+      "exceptional_genus": 10,
+      "discrepancy": -3
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 5,
+      "exceptional_degree": 27,
+      "exceptional_genus": 55,
+      "discrepancy": -5
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 6,
+      "exceptional_degree": 81,
+      "exceptional_genus": 244,
+      "discrepancy": -7
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 7,
+      "exceptional_degree": 243,
+      "exceptional_genus": 973,
+      "discrepancy": -9
+    },
+    {
+      "r": 3,
+      "concurrent_lines": 8,
+      "exceptional_degree": 729,
+      "exceptional_genus": 3646,
+      "discrepancy": -11
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 3,
+      "exceptional_degree": 4,
+      "exceptional_genus": 3,
+      "discrepancy": -2
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 4,
+      "exceptional_degree": 16,
+      "exceptional_genus": 33,
+      "discrepancy": -5
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 5,
+      "exceptional_degree": 64,
+      "exceptional_genus": 225,
+      "discrepancy": -8
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 6,
+      "exceptional_degree": 256,
+      "exceptional_genus": 1281,
+      "discrepancy": -11
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 7,
+      "exceptional_degree": 1024,
+      "exceptional_genus": 6657,
+      "discrepancy": -14
+    },
+    {
+      "r": 4,
+      "concurrent_lines": 8,
+      "exceptional_degree": 4096,
+      "exceptional_genus": 32769,
+      "discrepancy": -17
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 3,
+      "exceptional_degree": 5,
+      "exceptional_genus": 6,
+      "discrepancy": -3
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 4,
+      "exceptional_degree": 25,
+      "exceptional_genus": 76,
+      "discrepancy": -7
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 5,
+      "exceptional_degree": 125,
+      "exceptional_genus": 626,
+      "discrepancy": -11
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 6,
+      "exceptional_degree": 625,
+      "exceptional_genus": 4376,
+      "discrepancy": -15
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 7,
+      "exceptional_degree": 3125,
+      "exceptional_genus": 28126,
+      "discrepancy": -19
+    },
+    {
+      "r": 5,
+      "concurrent_lines": 8,
+      "exceptional_degree": 15625,
+      "exceptional_genus": 171876,
+      "discrepancy": -23
+    }
+  ],
+  "hostile_projective_cones": [
+    {
+      "n": 5,
+      "concurrent_lines": 4,
+      "dualizing_coefficient": -1,
+      "base_curve_genus": 1,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 1,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -1,
+      "resolution_K_squared": 0
+    },
+    {
+      "n": 6,
+      "concurrent_lines": 5,
+      "dualizing_coefficient": 0,
+      "base_curve_genus": 5,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 5,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -2,
+      "resolution_K_squared": -32
+    },
+    {
+      "n": 7,
+      "concurrent_lines": 6,
+      "dualizing_coefficient": 1,
+      "base_curve_genus": 17,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 17,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -3,
+      "resolution_K_squared": -128
+    },
+    {
+      "n": 8,
+      "concurrent_lines": 7,
+      "dualizing_coefficient": 2,
+      "base_curve_genus": 49,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 49,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -4,
+      "resolution_K_squared": -384
+    },
+    {
+      "n": 9,
+      "concurrent_lines": 8,
+      "dualizing_coefficient": 3,
+      "base_curve_genus": 129,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 129,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -5,
+      "resolution_K_squared": -1024
+    },
+    {
+      "n": 10,
+      "concurrent_lines": 9,
+      "dualizing_coefficient": 4,
+      "base_curve_genus": 321,
+      "resolution_geometric_genus": 0,
+      "resolution_irregularity": 321,
+      "resolution_Kodaira_dimension": "-infinity",
+      "discrepancy": -6,
+      "resolution_K_squared": -2560
+    }
+  ]
+}

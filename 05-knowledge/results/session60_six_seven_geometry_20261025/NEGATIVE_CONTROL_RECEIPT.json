@@ -1,0 +1,18 @@
+{
+  "script": "audits/deck-kummer/negative_control_mutant.py",
+  "expected_outcome": "deliberate failure",
+  "runs": [
+    {
+      "mode": "normal",
+      "returncode": 1,
+      "wrong_genus_rejected": true,
+      "stderr_sha256": "ba067e33e89fa1c50fd03597249ab55a674cb74345a694cc23dd314ebaa3372c"
+    },
+    {
+      "mode": "optimized",
+      "returncode": 1,
+      "wrong_genus_rejected": true,
+      "stderr_sha256": "ba067e33e89fa1c50fd03597249ab55a674cb74345a694cc23dd314ebaa3372c"
+    }
+  ]
+}

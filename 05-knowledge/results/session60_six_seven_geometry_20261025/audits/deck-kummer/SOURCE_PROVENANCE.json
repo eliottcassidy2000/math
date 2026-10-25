@@ -1,0 +1,11 @@
+{
+  "original_source_path": "/tmp/session60-deck-k3/check_deck_characters.py",
+  "original_preserved_copy": "/tmp/session60-audit-deck-kummer/original_check_deck_characters.py",
+  "original_sha256": "b1c17c4475c6d12b7ab4dfbd2ea65488a842eae726e599ed93bedc4a5a188031",
+  "corrected_sha256": "0dd019b0173baa60ea10772d8afe15342f37a7ee870329d329c895b8accce689",
+  "assert_sites_converted": 28,
+  "change": "Bare asserts replaced with explicit require/RuntimeError gates; report records explicit check count and optimization safety. No theorem or expected value changed.",
+  "portable_corrected_source": "../../deck-k3/check_deck_characters.py",
+  "portable_original_copy": "original_check_deck_characters.py",
+  "capture_paths_are_historical": true
+}

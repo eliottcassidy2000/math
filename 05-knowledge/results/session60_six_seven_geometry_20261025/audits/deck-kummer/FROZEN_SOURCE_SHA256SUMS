@@ -1,0 +1,17 @@
+4ae02991c6620125ee0468d1c1694bc93d5489291d189e13a54465bf0d4c60dc  ../../deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md
+63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d  ../../deck-k3/EXACT_CHECKS.json
+c26f73fa83a8179b8f6092b91a03d63ee4978c397ffe736b18142fa113f37783  ../../deck-k3/HODGE_DECOMPOSITION.md
+4b2ab7a29538916fcd236a66b91ce1d399cfafdb28727cc3773e5a89cb32ecfd  ../../deck-k3/KUMMER_GALE_BRIDGE.md
+9e48bd8627c865e40455239a5b8a8a6776fd86e588bb35718c9ed2d8bacfa04f  ../../deck-k3/SHA256SUMS
+9220f851d9cc3364c5dec1882ec9e08e214e56627145dd80256c3400a46780d0  ../../deck-k3/VERIFICATION_CERTIFICATE.json
+0dd019b0173baa60ea10772d8afe15342f37a7ee870329d329c895b8accce689  ../../deck-k3/check_deck_characters.py
+63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d  ../../deck-k3/check_output.txt
+63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d  ../../deck-k3/optimized_check_output.txt
+8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160  ../../hourglass-symmetry/RESULT.md
+2bdacc5404643732677240e7f5b78811feacce6bbb7a9c0ec98b222877cbbab5  ../../hourglass-symmetry/SHA256SUMS
+3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419  ../../hourglass-symmetry/independent-normal.json
+3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419  ../../hourglass-symmetry/independent-optimized.json
+eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db  ../../hourglass-symmetry/normal.json
+eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db  ../../hourglass-symmetry/optimized.json
+cca73d3360ac6bc0d4fd64aa4ddb922451636446877fade3e180e1c6a4918ea9  ../../hourglass-symmetry/verify.py
+a9331229e8f10b602381ecda35a66112899b4dfbfd33963ffb2ce1c37b862f7b  ../../hourglass-symmetry/verify_independent.py

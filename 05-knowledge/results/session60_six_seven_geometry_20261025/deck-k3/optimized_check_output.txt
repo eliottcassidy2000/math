@@ -1,0 +1,127 @@
+{
+  "explicit_checks": 91064,
+  "gale": {
+    "normal_rank": 3,
+    "parameters": [
+      "-1",
+      "-1/3",
+      "-1/4",
+      "-1/2",
+      "0",
+      "-2/5"
+    ],
+    "relation_rank": 3,
+    "vanishing_moments": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "weights": [
+      "-20/3",
+      "4860",
+      "-5120/3",
+      "960",
+      "60",
+      "-12500/3"
+    ]
+  },
+  "genus": {
+    "5": 0,
+    "6": 1,
+    "7": 7,
+    "8": 31,
+    "9": 111
+  },
+  "hodge_numeric_controls": {
+    "b2_hourglass": 78,
+    "rho_hourglass_options": [
+      52,
+      58,
+      64
+    ],
+    "rho_outer_options": [
+      18,
+      19,
+      20
+    ],
+    "rho_sum_offset": 76
+  },
+  "hostile_controls": {
+    "single_pair_flip_pg": 5,
+    "two_generator_subgroup_pg": 0
+  },
+  "hourglass_deletions": [
+    {
+      "nodes": 0,
+      "omitted": 0,
+      "picard_lower_bound": 16,
+      "triples": 0
+    },
+    {
+      "nodes": 8,
+      "omitted": 1,
+      "picard_lower_bound": 18,
+      "triples": 2
+    },
+    {
+      "nodes": 8,
+      "omitted": 2,
+      "picard_lower_bound": 18,
+      "triples": 2
+    },
+    {
+      "nodes": 8,
+      "omitted": 3,
+      "picard_lower_bound": 18,
+      "triples": 2
+    },
+    {
+      "nodes": 8,
+      "omitted": 4,
+      "picard_lower_bound": 18,
+      "triples": 2
+    },
+    {
+      "nodes": 8,
+      "omitted": 5,
+      "picard_lower_bound": 18,
+      "triples": 2
+    },
+    {
+      "nodes": 8,
+      "omitted": 6,
+      "picard_lower_bound": 18,
+      "triples": 2
+    }
+  ],
+  "involution_pg_census": {
+    "2": {
+      "count": 21,
+      "pg": 5
+    },
+    "4": {
+      "count": 35,
+      "pg": 3
+    },
+    "6": {
+      "count": 7,
+      "pg": 1
+    }
+  },
+  "optimization_safe": true,
+  "simplex_nonzero_weight": 4,
+  "six_root_fixed_point_tests": {
+    "fixed_points_each": 8,
+    "involutions": 1260,
+    "subsets": 84,
+    "triple_census": {
+      "0": 2,
+      "1": 20,
+      "2": 46,
+      "3": 16
+    }
+  },
+  "status": "FINITE-EXACT PASS"
+}

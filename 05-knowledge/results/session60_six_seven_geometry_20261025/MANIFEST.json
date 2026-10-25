@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "checkpoint": "first",
+  "files": [
+    {
+      "path": "CONCEPT_BOARD.md",
+      "bytes": 2456,
+      "sha256": "24ef6b9a772b16d071ff4fc9772c34c5b6aaafbad7ecf403eb19ee3ded601fe8"
+    },
+    {
+      "path": "NEGATIVE_CONTROL_RECEIPT.json",
+      "bytes": 499,
+      "sha256": "44c56d4d8055dea4d5db5d70a03189a35e8fc7d9f50953028caeb7f0643a1f8e"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.md",
+      "bytes": 2558,
+      "sha256": "68457e21dfb22a831dbea75ca4f7dca968810ed2303ece5632b3e1bf74feef1b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3100,
+      "sha256": "5f4124d101e1d9d55a385e82b0efee9675e16e988a67ad839713439d739464de"
+    },
+    {
+      "path": "REPLAY_RECEIPT.json",
+      "bytes": 7415,
+      "sha256": "973c0a466059b54da604d16124c81f6bf14fa86aee935f6cde8abdb52da92bd3"
+    },
+    {
+      "path": "SOURCE_VERIFICATION.json",
+      "bytes": 20731,
+      "sha256": "c858919d25d23d9dbacd1b75eb7516e086eee986f2b9759857f9b55f11efadc7"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 4687,
+      "sha256": "6e022940e833c72b77636019b41cf1d60342d8e0fca54ffc0ef7bbb29c25b1d1"
+    },
+    {
+      "path": "audits/deck-kummer/AUDIT.md",
+      "bytes": 9735,
+      "sha256": "26261cb4fb1014e7f2319044165291f88f10976bee81da215f21da617e3e28fc"
+    },
+    {
+      "path": "audits/deck-kummer/FROZEN_SOURCE_SHA256SUMS",
+      "bytes": 1788,
+      "sha256": "5ac1cc8b95e48858ae93bb1bb0974a01af68e2eaaff9a52f0e15e6e5b4a3c35a"
+    },
+    {
+      "path": "audits/deck-kummer/SHA256SUMS",
+      "bytes": 1597,
+      "sha256": "13431edc23667b3d916a90537302bc6520dfe9ccb9ef5cebc827a32bb4adadc5"
+    },
+    {
+      "path": "audits/deck-kummer/SOURCE_PROVENANCE.json",
+      "bytes": 746,
+      "sha256": "378ecb800502db94c125da92e42bebb69263edfba67ecc1bab4eb977e100883a"
+    },
+    {
+      "path": "audits/deck-kummer/audit.normal.json",
+      "bytes": 403,
+      "sha256": "20c2f737804c49502de104b91b5df852b935d39f49174626f99fde78c7899b2f"
+    },
+    {
+      "path": "audits/deck-kummer/audit.optimized.json",
+      "bytes": 403,
+      "sha256": "20c2f737804c49502de104b91b5df852b935d39f49174626f99fde78c7899b2f"
+    },
+    {
+      "path": "audits/deck-kummer/corrected-deck.normal.json",
+      "bytes": 1996,
+      "sha256": "63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d"
+    },
+    {
+      "path": "audits/deck-kummer/corrected-deck.optimized.json",
+      "bytes": 1996,
+      "sha256": "63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d"
+    },
+    {
+      "path": "audits/deck-kummer/deck.normal.json",
+      "bytes": 1939,
+      "sha256": "3b34e6324dbdd95ad9b5952486b548549af0bdd6d25197e84e39cde98bf1a911"
+    },
+    {
+      "path": "audits/deck-kummer/deck.optimized.json",
+      "bytes": 1939,
+      "sha256": "3b34e6324dbdd95ad9b5952486b548549af0bdd6d25197e84e39cde98bf1a911"
+    },
+    {
+      "path": "audits/deck-kummer/independent_audit.py",
+      "bytes": 6760,
+      "sha256": "1ac49ec8534b742248f5adeb969de51caa5c55b5b99f0db6544c456926aaf696"
+    },
+    {
+      "path": "audits/deck-kummer/negative-normal.txt",
+      "bytes": 422,
+      "sha256": "6bbeb88db8afb746d73e4d05c653de3a062da4b8b6b30403c071b42bca9ffa88"
+    },
+    {
+      "path": "audits/deck-kummer/negative-optimized.txt",
+      "bytes": 422,
+      "sha256": "6bbeb88db8afb746d73e4d05c653de3a062da4b8b6b30403c071b42bca9ffa88"
+    },
+    {
+      "path": "audits/deck-kummer/negative_control_mutant.py",
+      "bytes": 7342,
+      "sha256": "8ab7ec8f61b2fe113c37400539fb52e999c86542919288ac2b015df145f7221d"
+    },
+    {
+      "path": "audits/deck-kummer/original_check_deck_characters.py",
+      "bytes": 6178,
+      "sha256": "b1c17c4475c6d12b7ab4dfbd2ea65488a842eae726e599ed93bedc4a5a188031"
+    },
+    {
+      "path": "audits/deck-kummer/sym-independent.normal.json",
+      "bytes": 1179,
+      "sha256": "3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419"
+    },
+    {
+      "path": "audits/deck-kummer/sym-independent.optimized.json",
+      "bytes": 1179,
+      "sha256": "3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419"
+    },
+    {
+      "path": "audits/deck-kummer/sym.normal.json",
+      "bytes": 1226,
+      "sha256": "eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db"
+    },
+    {
+      "path": "audits/deck-kummer/sym.optimized.json",
+      "bytes": 1226,
+      "sha256": "eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db"
+    },
+    {
+      "path": "audits/thresholds/THRESHOLD_AUDIT.md",
+      "bytes": 4912,
+      "sha256": "3bc50cc8cd29043e3b0e4060e622918eb7ba4514009da0ec47eecaa07e2cb3c8"
+    },
+    {
+      "path": "audits/thresholds/check_threshold_independent.py",
+      "bytes": 3262,
+      "sha256": "65ddb8a5ee28c1d1fc436408fb4e4db34257b46a72896d769e06e59969029f7a"
+    },
+    {
+      "path": "audits/thresholds/threshold_independent_results.json",
+      "bytes": 70914,
+      "sha256": "7026dbb3741719fcb6cb5817b4509ec80dbb7420e32646a497ef3d3307588857"
+    },
+    {
+      "path": "deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "bytes": 15196,
+      "sha256": "4ae02991c6620125ee0468d1c1694bc93d5489291d189e13a54465bf0d4c60dc"
+    },
+    {
+      "path": "deck-k3/EXACT_CHECKS.json",
+      "bytes": 1996,
+      "sha256": "63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d"
+    },
+    {
+      "path": "deck-k3/HODGE_DECOMPOSITION.md",
+      "bytes": 5779,
+      "sha256": "c26f73fa83a8179b8f6092b91a03d63ee4978c397ffe736b18142fa113f37783"
+    },
+    {
+      "path": "deck-k3/KUMMER_GALE_BRIDGE.md",
+      "bytes": 3764,
+      "sha256": "4b2ab7a29538916fcd236a66b91ce1d399cfafdb28727cc3773e5a89cb32ecfd"
+    },
+    {
+      "path": "deck-k3/SHA256SUMS",
+      "bytes": 726,
+      "sha256": "9e48bd8627c865e40455239a5b8a8a6776fd86e588bb35718c9ed2d8bacfa04f"
+    },
+    {
+      "path": "deck-k3/VERIFICATION_CERTIFICATE.json",
+      "bytes": 628,
+      "sha256": "9220f851d9cc3364c5dec1882ec9e08e214e56627145dd80256c3400a46780d0"
+    },
+    {
+      "path": "deck-k3/check_deck_characters.py",
+      "bytes": 7340,
+      "sha256": "0dd019b0173baa60ea10772d8afe15342f37a7ee870329d329c895b8accce689"
+    },
+    {
+      "path": "deck-k3/check_output.txt",
+      "bytes": 1996,
+      "sha256": "63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d"
+    },
+    {
+      "path": "deck-k3/optimized_check_output.txt",
+      "bytes": 1996,
+      "sha256": "63315f295f76308f5fdfc45100c680fa3eadda2a98b836873e41616a015c427d"
+    },
+    {
+      "path": "hourglass-symmetry/RESULT.md",
+      "bytes": 16145,
+      "sha256": "8e9cfb15cd2219e78a39f90e3ec85ad8bbba48073e2a8ffbe597011caa3cd160"
+    },
+    {
+      "path": "hourglass-symmetry/SHA256SUMS",
+      "bytes": 582,
+      "sha256": "2bdacc5404643732677240e7f5b78811feacce6bbb7a9c0ec98b222877cbbab5"
+    },
+    {
+      "path": "hourglass-symmetry/independent-normal.json",
+      "bytes": 1179,
+      "sha256": "3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419"
+    },
+    {
+      "path": "hourglass-symmetry/independent-optimized.json",
+      "bytes": 1179,
+      "sha256": "3c586eda933bd9314094991729ff0c596c04e49ec135f1198dd7d4d3adbc3419"
+    },
+    {
+      "path": "hourglass-symmetry/normal.json",
+      "bytes": 1226,
+      "sha256": "eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db"
+    },
+    {
+      "path": "hourglass-symmetry/optimized.json",
+      "bytes": 1226,
+      "sha256": "eebf9644ddbe835a7fc2b8a3aa9248ec1d0de310b304bb95174428c23c43b6db"
+    },
+    {
+      "path": "hourglass-symmetry/verify.py",
+      "bytes": 5844,
+      "sha256": "cca73d3360ac6bc0d4fd64aa4ddb922451636446877fade3e180e1c6a4918ea9"
+    },
+    {
+      "path": "hourglass-symmetry/verify_independent.py",
+      "bytes": 2597,
+      "sha256": "a9331229e8f10b602381ecda35a66112899b4dfbfd33963ffb2ce1c37b862f7b"
+    },
+    {
+      "path": "thresholds/PACKET_RECEIPT.json",
+      "bytes": 999,
+      "sha256": "18ed6aa7f8e4d39f5bf2bb7151cc27d14a35e161fe048ff41808acbbcda1d56d"
+    },
+    {
+      "path": "thresholds/ROOT_THRESHOLDS.md",
+      "bytes": 20093,
+      "sha256": "90e24c872d70866ef5d4320cbd00bb3ecb69deded38aaf6fa31407fd4f01c957"
+    },
+    {
+      "path": "thresholds/check_thresholds.py",
+      "bytes": 11843,
+      "sha256": "e7368143c2b2b3762547b6633a4ff1bf5be9cdd14b1de5f29c2f3cb5b1c99805"
+    },
+    {
+      "path": "thresholds/replay-normal.txt",
+      "bytes": 146,
+      "sha256": "789f6fdb3aadc260a1b12eb3fca54dbea3e9726cec4fd73438b4de61a176b322"
+    },
+    {
+      "path": "thresholds/replay-optimized.txt",
+      "bytes": 146,
+      "sha256": "789f6fdb3aadc260a1b12eb3fca54dbea3e9726cec4fd73438b4de61a176b322"
+    },
+    {
+      "path": "thresholds/threshold_results.json",
+      "bytes": 21537,
+      "sha256": "fcda2e6d5cc792faf95c572b5b334191fcb4234509c5876a2f15ecc04b6edb2b"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 881,
+      "sha256": "3719d8bd7c08f061336a0606837723b2c4760212b0b76a3a0abb9b6366415535"
+    }
+  ]
+}

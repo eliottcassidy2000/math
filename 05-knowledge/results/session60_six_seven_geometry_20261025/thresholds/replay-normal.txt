@@ -1,0 +1,1 @@
+PASS: 1500 independent Hilbert comparisons; general-position matrix controls d=1..4; thresholds d=1..6; cone guards. Wrote threshold_results.json

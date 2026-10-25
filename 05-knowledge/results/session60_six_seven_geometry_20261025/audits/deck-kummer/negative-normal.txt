@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/tmp/session60-audit-deck-kummer/negative_control_mutant.py", line 85, in <module>
+    require(list(report["genus"].values())==[999,1,7,31,111], "original source line 75")
+  File "/tmp/session60-audit-deck-kummer/negative_control_mutant.py", line 17, in require
+    raise RuntimeError("Verification failed: " + message)
+RuntimeError: Verification failed: original source line 75

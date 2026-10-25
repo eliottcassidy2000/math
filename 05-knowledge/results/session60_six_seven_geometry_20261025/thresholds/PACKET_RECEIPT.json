@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN coherent packet; independent parent reasoning gate passed; dedicated audit pending",
+  "checks": {
+    "normal": "PASS",
+    "optimized": "PASS; explicit check gates remain active under -O",
+    "replay_output": "byte-identical threshold_results.json"
+  },
+  "files": {
+    "ROOT_THRESHOLDS.md": {
+      "bytes": 20093,
+      "sha256": "90e24c872d70866ef5d4320cbd00bb3ecb69deded38aaf6fa31407fd4f01c957"
+    },
+    "check_thresholds.py": {
+      "bytes": 11843,
+      "sha256": "e7368143c2b2b3762547b6633a4ff1bf5be9cdd14b1de5f29c2f3cb5b1c99805"
+    },
+    "threshold_results.json": {
+      "bytes": 21537,
+      "sha256": "fcda2e6d5cc792faf95c572b5b334191fcb4234509c5876a2f15ecc04b6edb2b"
+    },
+    "replay-normal.txt": {
+      "bytes": 146,
+      "sha256": "789f6fdb3aadc260a1b12eb3fca54dbea3e9726cec4fd73438b4de61a176b322"
+    },
+    "replay-optimized.txt": {
+      "bytes": 146,
+      "sha256": "789f6fdb3aadc260a1b12eb3fca54dbea3e9726cec4fd73438b4de61a176b322"
+    }
+  }
+}
