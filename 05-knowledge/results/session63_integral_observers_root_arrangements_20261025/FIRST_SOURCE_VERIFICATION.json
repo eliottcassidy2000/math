@@ -1,0 +1,357 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "RESULT.md",
+      "packaged": "cancellation/RESULT.md",
+      "bytes": 21869,
+      "source_sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+      "packaged_sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "check.py",
+      "packaged": "cancellation/check.py",
+      "bytes": 11952,
+      "source_sha256": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19",
+      "packaged_sha256": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "normal.json",
+      "packaged": "cancellation/normal.json",
+      "bytes": 31598,
+      "source_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaged_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "optimized.json",
+      "packaged": "cancellation/optimized.json",
+      "bytes": 31598,
+      "source_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaged_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "SOURCE_PINS.json",
+      "packaged": "cancellation/SOURCE_PINS.json",
+      "bytes": 1479,
+      "source_sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d",
+      "packaged_sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "verify_source_recovery.py",
+      "packaged": "cancellation/verify_source_recovery.py",
+      "bytes": 2642,
+      "source_sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb",
+      "packaged_sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "source_recovery_normal.json",
+      "packaged": "cancellation/source_recovery_normal.json",
+      "bytes": 1368,
+      "source_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "packaged_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-cancellation",
+      "source_name": "source_recovery_optimized.json",
+      "packaged": "cancellation/source_recovery_optimized.json",
+      "bytes": 1368,
+      "source_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "packaged_sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "INDEPENDENT_V8.json",
+      "packaged": "audits/cancellation/INDEPENDENT_V8.json",
+      "bytes": 1530,
+      "source_sha256": "a678fef7d41acfacb3a8558582a85e241205a7ff6470beaee7dd4f4551088809",
+      "packaged_sha256": "a678fef7d41acfacb3a8558582a85e241205a7ff6470beaee7dd4f4551088809",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "RECEIPT.json",
+      "packaged": "audits/cancellation/RECEIPT.json",
+      "bytes": 897,
+      "source_sha256": "896df0a85a5c51fa633fb5c076d08785d7d34d0cbacbbee44bdaac2080bafead",
+      "packaged_sha256": "896df0a85a5c51fa633fb5c076d08785d7d34d0cbacbbee44bdaac2080bafead",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "REPORT.md",
+      "packaged": "audits/cancellation/REPORT.md",
+      "bytes": 9022,
+      "source_sha256": "47e962d1805dc6669e5094c4819b232e0cc42799b68ef8fcea8644f6280deb9f",
+      "packaged_sha256": "47e962d1805dc6669e5094c4819b232e0cc42799b68ef8fcea8644f6280deb9f",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "SOURCE_PINS_AUDITED.json",
+      "packaged": "audits/cancellation/SOURCE_PINS_AUDITED.json",
+      "bytes": 1479,
+      "source_sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d",
+      "packaged_sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "audit.py",
+      "packaged": "audits/cancellation/audit.py",
+      "bytes": 7716,
+      "source_sha256": "eec7cb1a2d0d9d0fc2005a41cd57c975a5d4e0780f7b41bf642d63b04b94e8a2",
+      "packaged_sha256": "eec7cb1a2d0d9d0fc2005a41cd57c975a5d4e0780f7b41bf642d63b04b94e8a2",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "producer_normal.json",
+      "packaged": "audits/cancellation/producer_normal.json",
+      "bytes": 31598,
+      "source_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaged_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "producer_optimized.json",
+      "packaged": "audits/cancellation/producer_optimized.json",
+      "bytes": 31598,
+      "source_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaged_sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "provenance_audit.py",
+      "packaged": "audits/cancellation/provenance_audit.py",
+      "bytes": 2254,
+      "source_sha256": "9bd3cd757c3f956f57ec3599132915fe161041073112d12a9c0f7ea26621786b",
+      "packaged_sha256": "9bd3cd757c3f956f57ec3599132915fe161041073112d12a9c0f7ea26621786b",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "provenance_normal.json",
+      "packaged": "audits/cancellation/provenance_normal.json",
+      "bytes": 2143,
+      "source_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "packaged_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "provenance_optimized.json",
+      "packaged": "audits/cancellation/provenance_optimized.json",
+      "bytes": 2143,
+      "source_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "packaged_sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "replay_normal.json",
+      "packaged": "audits/cancellation/replay_normal.json",
+      "bytes": 44144,
+      "source_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "packaged_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "replay_optimized.json",
+      "packaged": "audits/cancellation/replay_optimized.json",
+      "bytes": 44144,
+      "source_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "packaged_sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-cancellation",
+      "source_name": "SHA256SUMS",
+      "packaged": "audits/cancellation/SHA256SUMS",
+      "bytes": 1024,
+      "source_sha256": "b24dcfe8d6e00ba23c1c63cc51fef47ac6d84567d9f256763246f600c4841b35",
+      "packaged_sha256": "b24dcfe8d6e00ba23c1c63cc51fef47ac6d84567d9f256763246f600c4841b35",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "RESULT.md",
+      "packaged": "twists/RESULT.md",
+      "bytes": 20340,
+      "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+      "packaged_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "ROOT_STACK.md",
+      "packaged": "twists/ROOT_STACK.md",
+      "bytes": 3514,
+      "source_sha256": "df0829dd1d4997c3046bbca55ffb574acec9e1de3ee9de57999019745087332e",
+      "packaged_sha256": "df0829dd1d4997c3046bbca55ffb574acec9e1de3ee9de57999019745087332e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "ZETA_AND_EFFECTIVITY.md",
+      "packaged": "twists/ZETA_AND_EFFECTIVITY.md",
+      "bytes": 5562,
+      "source_sha256": "ffb955241ee2f19303e70a770ac59db96ceea8ed0399ef39462d84ffb1875fd3",
+      "packaged_sha256": "ffb955241ee2f19303e70a770ac59db96ceea8ed0399ef39462d84ffb1875fd3",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "VERIFICATION.md",
+      "packaged": "twists/VERIFICATION.md",
+      "bytes": 2620,
+      "source_sha256": "31fb5559b43f9c2c9bf54d6ffabf054675909ab62d2002e22fa13bee014cdfc7",
+      "packaged_sha256": "31fb5559b43f9c2c9bf54d6ffabf054675909ab62d2002e22fa13bee014cdfc7",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "verify.py",
+      "packaged": "twists/verify.py",
+      "bytes": 5601,
+      "source_sha256": "acf6aab18ff6375eba905304edbf7158bd393fdd7d40c9367b55149ce010e30e",
+      "packaged_sha256": "acf6aab18ff6375eba905304edbf7158bd393fdd7d40c9367b55149ce010e30e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "normal.json",
+      "packaged": "twists/normal.json",
+      "bytes": 5249,
+      "source_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "packaged_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "optimized.json",
+      "packaged": "twists/optimized.json",
+      "bytes": 5249,
+      "source_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "packaged_sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-twists",
+      "source_name": "SHA256SUMS.txt",
+      "packaged": "twists/SHA256SUMS.txt",
+      "bytes": 563,
+      "source_sha256": "121bf2bf083c3d914e83af78e48c39d5b29491702b1dd40b0a5543c28be009a0",
+      "packaged_sha256": "121bf2bf083c3d914e83af78e48c39d5b29491702b1dd40b0a5543c28be009a0",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "AUDIT.md",
+      "packaged": "audits/twists/AUDIT.md",
+      "bytes": 11690,
+      "source_sha256": "f3cf4894f6059c706907f09a4ec43d757c0204667f9b3e3de0d9638705757294",
+      "packaged_sha256": "f3cf4894f6059c706907f09a4ec43d757c0204667f9b3e3de0d9638705757294",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "independent_checks.py",
+      "packaged": "audits/twists/independent_checks.py",
+      "bytes": 5420,
+      "source_sha256": "5a0ae9eff6f4ca3212f71c25026df4508e316a3a9e90ca33f4151aa028825f3a",
+      "packaged_sha256": "5a0ae9eff6f4ca3212f71c25026df4508e316a3a9e90ca33f4151aa028825f3a",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "normal.json",
+      "packaged": "audits/twists/normal.json",
+      "bytes": 5658,
+      "source_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "packaged_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "optimized.json",
+      "packaged": "audits/twists/optimized.json",
+      "bytes": 5658,
+      "source_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "packaged_sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "AUDITED_SOURCE_SHA256.txt",
+      "packaged": "audits/twists/AUDITED_SOURCE_SHA256.txt",
+      "bytes": 481,
+      "source_sha256": "74d60dc49706275a84dfe6aad9800bae2498fe3236210e77d06667347bcb1b01",
+      "packaged_sha256": "74d60dc49706275a84dfe6aad9800bae2498fe3236210e77d06667347bcb1b01",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "SHA256SUMS.txt",
+      "packaged": "audits/twists/SHA256SUMS.txt",
+      "bytes": 414,
+      "source_sha256": "0dd0a7d1c7ecc78df91b00429fc2d8f37bca599c46e4aca60634bfa02fc53733",
+      "packaged_sha256": "0dd0a7d1c7ecc78df91b00429fc2d8f37bca599c46e4aca60634bfa02fc53733",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-recovery",
+      "source_name": "check_twist_histograms.py",
+      "packaged": "recovery/check_twist_histograms.py",
+      "bytes": 6691,
+      "source_sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e",
+      "packaged_sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-recovery",
+      "source_name": "twist_finite_normal.json",
+      "packaged": "recovery/twist_finite_normal.json",
+      "bytes": 55708,
+      "source_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "packaged_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-recovery",
+      "source_name": "twist_finite_optimized.json",
+      "packaged": "recovery/twist_finite_optimized.json",
+      "bytes": 55708,
+      "source_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "packaged_sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-publication",
+      "source_name": "verify_packet.py",
+      "packaged": "verify_packet.py",
+      "bytes": 966,
+      "source_sha256": "a0aa3f5b67c84e9dff9d85880d62d90faf948e2a6a4e5080a8e82bb2997ab388",
+      "packaged_sha256": "a0aa3f5b67c84e9dff9d85880d62d90faf948e2a6a4e5080a8e82bb2997ab388",
+      "packaging_changes": null
+    }
+  ],
+  "scope": "Exact-byte copies. Original working-directory names in source prose are historical locators; README maps them to the portable package. No mathematical text or program was edited."
+}

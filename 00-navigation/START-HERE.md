@@ -10,12 +10,12 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
 K3 cubes, free codes, reflection. [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors. [HN6/7/8](S61.md): metric fold and boundary modes.
 
-[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic incidence and twisted pair transport.
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic kernels; twisted transport. [S63](S63.md): modular depth/root stacks.
 
 ## Orientation
 
 1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
-2. **Do not chase old shortcuts:** uniform good period `q <= 25` is false; uniform emptiness of the twelve-speed sporadic branch remains open.
+2. **Old shortcuts:** no uniform good period `q <= 25`; twelve-speed sporadic emptiness remains **OPEN**.
 3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** Anchor / Niche / Wildcard; require mechanisms, hostiles, and preserved/lost coordinates.
@@ -122,5 +122,5 @@ python3 agents/start_session.py --topic "<target statement or object>"
 
 ## Maintaining this brief
 
-Keep session-independent facts here and in `CURRENT-FRONTIER.md`; superseded
-arguments belong in historical files.
+Keep current facts here and in `CURRENT-FRONTIER.md`; superseded arguments
+belong in history.

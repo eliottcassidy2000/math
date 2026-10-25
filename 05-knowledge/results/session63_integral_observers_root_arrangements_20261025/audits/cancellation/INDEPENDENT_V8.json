@@ -1,0 +1,19 @@
+{
+  "verdict": "PASS",
+  "record_type": "Summary transcribed from completed pure-V8 tool output, not a recovered in-memory store",
+  "engine": "JavaScript BigInt; no producer imports, shell, or floating-point arithmetic",
+  "arithmetic_cases": 47,
+  "characteristic_depth_checks": 705,
+  "coefficient_characteristics": [0, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43],
+  "root_partition_counts": [2, 3, 15, 21, 25],
+  "full_automorphism_order": 25,
+  "inflated_homogeneous_pairs": 25,
+  "degree_layers": [25, 24],
+  "subset_orbits": 1342208,
+  "depths": {"Q": 5, "F2": 25, "F3": 25, "F5": 21},
+  "shifted_coefficients": [0, 0, 0, 0, 0, 3000, -30000, 150000, -495000, 1203000, -2280000, 3486000, -4392000, 4621200, -4093200, 3063600, -1938000, 1032840, -460560, 169920, -51000, 12144, -2208, 288, -24, 1],
+  "additional_odd_action_controls": 9,
+  "even_transposition_depth_F2": 0,
+  "execution_history": "Original V8 computation completed while shell execution stalled. Initial persistence failed after 259.5 seconds. After environment recovery the destination was confirmed absent and no matching processes remained. This is the single bounded persistence retry. Earlier interrupted shell executions were not treated as completed audits; fresh normal and optimized replays are recorded separately.",
+  "provenance_update": "Regular elementary-abelian spectrum and exact witness recovered from a971f9b4; negation identifies the connection sets. Earlier unlocated-source wording is superseded. See provenance_normal.json."
+}

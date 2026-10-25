@@ -1,0 +1,35 @@
+{
+  "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+  "files": [
+    {
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+      "sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03"
+    },
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/counting/CLONE_INVOLUTION.md",
+      "sha256": "ad2c6678d929799da9c043a1ff14cab659f575af9b29090be9c47631a6877483"
+    },
+    {
+      "path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    }
+  ],
+  "recovered_concurrent_source": {
+    "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+    "files": [
+      {
+        "path": "05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/README.md",
+        "sha256": "40b1b3c0ebb51df53e1ac5ea1838d62dad2794e6e8e667f3d7764d6d27d18151"
+      },
+      {
+        "path": "05-knowledge/results/unprotected_ports_cancellation_20261025/counting/POSITIVE_JET.md",
+        "sha256": "fb51c64611f6d9793c49696d1e3f83fa60aa9e3deea0e57bafe2ef7cdd3ab577"
+      },
+      {
+        "path": "05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/INDEPENDENT_REVIEW.md",
+        "sha256": "8705a6dad013e831d9337588c6fcfec28d8a4e11e88ed4435cf01a760b0ad888"
+      }
+    ],
+    "witness_identification": "source S = -reconstructed S; (u,b) -> (-u,b)"
+  }
+}

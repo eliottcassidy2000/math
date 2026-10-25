@@ -1,0 +1,2 @@
+# Preserve exact audited proof, source and certificate bytes.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

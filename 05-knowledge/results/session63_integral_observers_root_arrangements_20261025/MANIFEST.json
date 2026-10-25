@@ -1,0 +1,255 @@
+{
+  "format": "sha256-exact-file-set-v1",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 134,
+      "sha256": "2d7cea0c9d735c5d0be075a757a61d7c05566173bd938ff89f189b06a057fca5"
+    },
+    {
+      "path": "CONCEPT_BOARD.md",
+      "bytes": 2218,
+      "sha256": "d7adc8656a3975e48bda211ef3f07079e97f83aa8b7bce67a2461c7d0979e93b"
+    },
+    {
+      "path": "FIRST_BUNDLE_CHECK.json",
+      "bytes": 4040,
+      "sha256": "57fbc58268f7d780fb62b21d957a1a9d120687192f93003e9fe407e1dfbbb771"
+    },
+    {
+      "path": "FIRST_DOCS_CHECK.txt",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "FIRST_FILESET_NEGATIVE_CONTROLS.json",
+      "bytes": 504,
+      "sha256": "dbbe8c2b967882dd93a5cb2d021f41e6c6b659f85de87171fa8a9ab297676fc4"
+    },
+    {
+      "path": "FIRST_LINK_PARSER_CONTROLS.json",
+      "bytes": 3235,
+      "sha256": "1d11195cd81d2610add94fa536e1533aebbbb1e8bc17fe68fc9702b79a9c63b0"
+    },
+    {
+      "path": "FIRST_REPLAY_RECEIPT.json",
+      "bytes": 12022,
+      "sha256": "55ed8ffb0e3fe19b51fc8a4aa8584ed4191f7cbc2fc95f1141b35db4c1aa99ff"
+    },
+    {
+      "path": "FIRST_ROUTE_CHECK.json",
+      "bytes": 204,
+      "sha256": "2ad8b011ce92ef6222947a2187fdc405ab85f1439a53b20da557a10222a5f652"
+    },
+    {
+      "path": "FIRST_SOURCE_VERIFICATION.json",
+      "bytes": 15729,
+      "sha256": "5328b4a58c6a29c223cfeebb128932f3064c2532da51daabc919005f5a49bc12"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.md",
+      "bytes": 3557,
+      "sha256": "a2f3dff4cfb7242dc585c458128b6dc1d34cc94c9783dd8c83601476d89eb7cb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3433,
+      "sha256": "6a9f6c7183ad5ed74cef3c281e3eeb5f4de41631e04e62f09dc6b3214235bee8"
+    },
+    {
+      "path": "audits/cancellation/INDEPENDENT_V8.json",
+      "bytes": 1530,
+      "sha256": "a678fef7d41acfacb3a8558582a85e241205a7ff6470beaee7dd4f4551088809"
+    },
+    {
+      "path": "audits/cancellation/RECEIPT.json",
+      "bytes": 897,
+      "sha256": "896df0a85a5c51fa633fb5c076d08785d7d34d0cbacbbee44bdaac2080bafead"
+    },
+    {
+      "path": "audits/cancellation/REPORT.md",
+      "bytes": 9022,
+      "sha256": "47e962d1805dc6669e5094c4819b232e0cc42799b68ef8fcea8644f6280deb9f"
+    },
+    {
+      "path": "audits/cancellation/SHA256SUMS",
+      "bytes": 1024,
+      "sha256": "b24dcfe8d6e00ba23c1c63cc51fef47ac6d84567d9f256763246f600c4841b35"
+    },
+    {
+      "path": "audits/cancellation/SOURCE_PINS_AUDITED.json",
+      "bytes": 1479,
+      "sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d"
+    },
+    {
+      "path": "audits/cancellation/audit.py",
+      "bytes": 7716,
+      "sha256": "eec7cb1a2d0d9d0fc2005a41cd57c975a5d4e0780f7b41bf642d63b04b94e8a2"
+    },
+    {
+      "path": "audits/cancellation/producer_normal.json",
+      "bytes": 31598,
+      "sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd"
+    },
+    {
+      "path": "audits/cancellation/producer_optimized.json",
+      "bytes": 31598,
+      "sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd"
+    },
+    {
+      "path": "audits/cancellation/provenance_audit.py",
+      "bytes": 2254,
+      "sha256": "9bd3cd757c3f956f57ec3599132915fe161041073112d12a9c0f7ea26621786b"
+    },
+    {
+      "path": "audits/cancellation/provenance_normal.json",
+      "bytes": 2143,
+      "sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188"
+    },
+    {
+      "path": "audits/cancellation/provenance_optimized.json",
+      "bytes": 2143,
+      "sha256": "89abb4d86b28c2c1b6d82b24890736c2dc143c8512841bb731ed59c1f849e188"
+    },
+    {
+      "path": "audits/cancellation/replay_normal.json",
+      "bytes": 44144,
+      "sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e"
+    },
+    {
+      "path": "audits/cancellation/replay_optimized.json",
+      "bytes": 44144,
+      "sha256": "d652b8d36327f4ad0c69701d7bb691f4574617cf7738d1bc21ce41f0a427166e"
+    },
+    {
+      "path": "audits/twists/AUDIT.md",
+      "bytes": 11690,
+      "sha256": "f3cf4894f6059c706907f09a4ec43d757c0204667f9b3e3de0d9638705757294"
+    },
+    {
+      "path": "audits/twists/AUDITED_SOURCE_SHA256.txt",
+      "bytes": 481,
+      "sha256": "74d60dc49706275a84dfe6aad9800bae2498fe3236210e77d06667347bcb1b01"
+    },
+    {
+      "path": "audits/twists/SHA256SUMS.txt",
+      "bytes": 414,
+      "sha256": "0dd0a7d1c7ecc78df91b00429fc2d8f37bca599c46e4aca60634bfa02fc53733"
+    },
+    {
+      "path": "audits/twists/independent_checks.py",
+      "bytes": 5420,
+      "sha256": "5a0ae9eff6f4ca3212f71c25026df4508e316a3a9e90ca33f4151aa028825f3a"
+    },
+    {
+      "path": "audits/twists/normal.json",
+      "bytes": 5658,
+      "sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c"
+    },
+    {
+      "path": "audits/twists/optimized.json",
+      "bytes": 5658,
+      "sha256": "acd7b6604dd9ffdbaa4c0fad44c39de219c2299dd996245a17645976c6fc2e0c"
+    },
+    {
+      "path": "cancellation/RESULT.md",
+      "bytes": 21869,
+      "sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237"
+    },
+    {
+      "path": "cancellation/SOURCE_PINS.json",
+      "bytes": 1479,
+      "sha256": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d"
+    },
+    {
+      "path": "cancellation/check.py",
+      "bytes": 11952,
+      "sha256": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19"
+    },
+    {
+      "path": "cancellation/normal.json",
+      "bytes": 31598,
+      "sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd"
+    },
+    {
+      "path": "cancellation/optimized.json",
+      "bytes": 31598,
+      "sha256": "0be85bbae39f80d6422d48b72d145f983b1cae07b40db5fa2b0f5c1558a518fd"
+    },
+    {
+      "path": "cancellation/source_recovery_normal.json",
+      "bytes": 1368,
+      "sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e"
+    },
+    {
+      "path": "cancellation/source_recovery_optimized.json",
+      "bytes": 1368,
+      "sha256": "a66af5278c666615ce63f8c0b659a550fa18a48fafaa87942d4de769bb911a7e"
+    },
+    {
+      "path": "cancellation/verify_source_recovery.py",
+      "bytes": 2642,
+      "sha256": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb"
+    },
+    {
+      "path": "recovery/check_twist_histograms.py",
+      "bytes": 6691,
+      "sha256": "65501b15e6dc174b917dd7203ecbaacf9d3b8a3fb1818e46ce5d133942c0265e"
+    },
+    {
+      "path": "recovery/twist_finite_normal.json",
+      "bytes": 55708,
+      "sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3"
+    },
+    {
+      "path": "recovery/twist_finite_optimized.json",
+      "bytes": 55708,
+      "sha256": "436f256a3ed33fd06b301334727d3f4662bffd6f0cec40fd62327af83b3265c3"
+    },
+    {
+      "path": "twists/RESULT.md",
+      "bytes": 20340,
+      "sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02"
+    },
+    {
+      "path": "twists/ROOT_STACK.md",
+      "bytes": 3514,
+      "sha256": "df0829dd1d4997c3046bbca55ffb574acec9e1de3ee9de57999019745087332e"
+    },
+    {
+      "path": "twists/SHA256SUMS.txt",
+      "bytes": 563,
+      "sha256": "121bf2bf083c3d914e83af78e48c39d5b29491702b1dd40b0a5543c28be009a0"
+    },
+    {
+      "path": "twists/VERIFICATION.md",
+      "bytes": 2620,
+      "sha256": "31fb5559b43f9c2c9bf54d6ffabf054675909ab62d2002e22fa13bee014cdfc7"
+    },
+    {
+      "path": "twists/ZETA_AND_EFFECTIVITY.md",
+      "bytes": 5562,
+      "sha256": "ffb955241ee2f19303e70a770ac59db96ceea8ed0399ef39462d84ffb1875fd3"
+    },
+    {
+      "path": "twists/normal.json",
+      "bytes": 5249,
+      "sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed"
+    },
+    {
+      "path": "twists/optimized.json",
+      "bytes": 5249,
+      "sha256": "e7583686dd525fb65b65c5e731eedccebe3304ecd586f469f0bec14b651685ed"
+    },
+    {
+      "path": "twists/verify.py",
+      "bytes": 5601,
+      "sha256": "acf6aab18ff6375eba905304edbf7158bd393fdd7d40c9367b55149ce010e30e"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 966,
+      "sha256": "a0aa3f5b67c84e9dff9d85880d62d90faf948e2a6a4e5080a8e82bb2997ab388"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "core_adjacency_entries_checked": 625,
+  "core_isomorphism": "u -> -u over F5^2",
+  "inflated_adjacency_entries_checked": 2500,
+  "inflated_isomorphism": "(u,b) -> (-u,b)",
+  "mod5_source_nonzero_coefficients": {
+    "21": 4,
+    "22": 3,
+    "23": 3,
+    "24": 4,
+    "25": 1
+  },
+  "positive_jet_convention": "Q(u) = -P(-1-u)",
+  "reconstructed_connection_set": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "source_commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+  "source_connection_set": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "source_path": "05-knowledge/results/unprotected_ports_cancellation_20261025/counting/POSITIVE_JET.md",
+  "source_section": 4,
+  "status": "PASS",
+  "subset_orbits": 1342208
+}

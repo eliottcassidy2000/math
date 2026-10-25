@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "startup_delta_bytes": -11,
+  "startup_total_bytes": 179976,
+  "frontier_lines": 450,
+  "start_lines": 126,
+  "preserved_line_endings": true,
+  "incoming_routes_preserved": true
+}

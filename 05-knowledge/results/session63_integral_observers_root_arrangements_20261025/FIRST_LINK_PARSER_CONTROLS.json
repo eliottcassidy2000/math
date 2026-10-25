@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "scope": "Targeted parser controls in relocated copies; unrelated inherited-link failures caused by relocation are not claimed as full bundle passes. Full unrelocated packet gate passes separately.",
+  "checker_sha256": "d18e6327acc56cf36734732d59f8d81fee13e7872128f05b28aa6d140c823082",
+  "cases": [
+    {
+      "mode": "normal",
+      "control": "exact audited notation",
+      "targeted_gate_passed": true,
+      "targeted_issues": [],
+      "notation": [
+        {
+          "path": "twists/RESULT.md",
+          "literal": "[W/G](F_q)",
+          "occurrences": 1,
+          "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+          "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+        }
+      ]
+    },
+    {
+      "mode": "normal",
+      "control": "real missing Markdown link",
+      "targeted_gate_passed": true,
+      "targeted_issues": [
+        "README.md missing local link absent.md"
+      ],
+      "notation": [
+        {
+          "path": "twists/RESULT.md",
+          "literal": "[W/G](F_q)",
+          "occurrences": 1,
+          "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+          "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+        }
+      ]
+    },
+    {
+      "mode": "normal",
+      "control": "unapproved notation source change",
+      "targeted_gate_passed": true,
+      "targeted_issues": [
+        "Quotient-stack notation exclusion requires the exact audited source and one occurrence",
+        "twists/RESULT.md missing local link F_q"
+      ],
+      "notation": []
+    },
+    {
+      "mode": "optimized",
+      "control": "exact audited notation",
+      "targeted_gate_passed": true,
+      "targeted_issues": [],
+      "notation": [
+        {
+          "path": "twists/RESULT.md",
+          "literal": "[W/G](F_q)",
+          "occurrences": 1,
+          "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+          "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+        }
+      ]
+    },
+    {
+      "mode": "optimized",
+      "control": "real missing Markdown link",
+      "targeted_gate_passed": true,
+      "targeted_issues": [
+        "README.md missing local link absent.md"
+      ],
+      "notation": [
+        {
+          "path": "twists/RESULT.md",
+          "literal": "[W/G](F_q)",
+          "occurrences": 1,
+          "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+          "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+        }
+      ]
+    },
+    {
+      "mode": "optimized",
+      "control": "unapproved notation source change",
+      "targeted_gate_passed": true,
+      "targeted_issues": [
+        "Quotient-stack notation exclusion requires the exact audited source and one occurrence",
+        "twists/RESULT.md missing local link F_q"
+      ],
+      "notation": []
+    }
+  ]
+}

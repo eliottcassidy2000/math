@@ -1,0 +1,289 @@
+{
+  "compact_twist_resolution_checks": [
+    {
+      "base_strata": {
+        "0": 1,
+        "1": 1,
+        "2": 6,
+        "3": 5
+      },
+      "compact_histogram": {
+        "0": 15,
+        "8": 18,
+        "16": 19,
+        "24": 6,
+        "32": 3,
+        "40": 2,
+        "64": 1
+      },
+      "compact_sum": 832,
+      "exceptional_conic_instances": 4,
+      "free_sum": 64,
+      "means": {
+        "compact": 13,
+        "free": 1,
+        "nodes": 5,
+        "resolved": 28
+      },
+      "node_histogram": {
+        "0": 31,
+        "8": 26,
+        "16": 7
+      },
+      "node_sum": 320,
+      "nonzero_nonsquare": 2,
+      "p": 3,
+      "resolved_histogram": {
+        "0": 15,
+        "16": 12,
+        "32": 21,
+        "48": 6,
+        "64": 10
+      },
+      "resolved_sum": 1792
+    },
+    {
+      "base_strata": {
+        "0": 7,
+        "1": 9,
+        "2": 12,
+        "3": 3
+      },
+      "compact_histogram": {
+        "0": 6,
+        "8": 6,
+        "16": 18,
+        "24": 7,
+        "32": 12,
+        "40": 3,
+        "72": 3,
+        "80": 6,
+        "88": 1,
+        "96": 2
+      },
+      "compact_sum": 1984,
+      "exceptional_conic_instances": 16,
+      "free_sum": 448,
+      "means": {
+        "compact": 31,
+        "free": 7,
+        "nodes": 3,
+        "resolved": 46
+      },
+      "node_histogram": {
+        "0": 44,
+        "8": 18,
+        "24": 2
+      },
+      "node_sum": 192,
+      "nonzero_nonsquare": 2,
+      "p": 5,
+      "resolved_histogram": {
+        "0": 6,
+        "16": 18,
+        "32": 12,
+        "48": 6,
+        "64": 6,
+        "80": 9,
+        "96": 2,
+        "112": 3,
+        "144": 1,
+        "208": 1
+      },
+      "resolved_sum": 2944
+    },
+    {
+      "base_strata": {
+        "0": 19,
+        "1": 23,
+        "2": 12,
+        "3": 3
+      },
+      "compact_histogram": {
+        "0": 1,
+        "16": 6,
+        "32": 15,
+        "48": 18,
+        "64": 6,
+        "72": 6,
+        "88": 6,
+        "128": 3,
+        "160": 3
+      },
+      "compact_sum": 3648,
+      "exceptional_conic_instances": 36,
+      "free_sum": 1216,
+      "means": {
+        "compact": 57,
+        "free": 19,
+        "nodes": 3,
+        "resolved": 78
+      },
+      "node_histogram": {
+        "0": 46,
+        "8": 12,
+        "16": 6
+      },
+      "node_sum": 192,
+      "nonzero_nonsquare": 3,
+      "p": 7,
+      "resolved_histogram": {
+        "0": 1,
+        "16": 6,
+        "32": 15,
+        "48": 12,
+        "64": 6,
+        "128": 9,
+        "144": 6,
+        "160": 9
+      },
+      "resolved_sum": 4992
+    },
+    {
+      "base_strata": {
+        "0": 67,
+        "1": 51,
+        "2": 12,
+        "3": 3
+      },
+      "compact_histogram": {
+        "0": 6,
+        "72": 6,
+        "112": 6,
+        "128": 9,
+        "144": 20,
+        "160": 9,
+        "192": 1,
+        "216": 6,
+        "448": 1
+      },
+      "compact_sum": 8512,
+      "exceptional_conic_instances": 100,
+      "free_sum": 4288,
+      "means": {
+        "compact": 133,
+        "free": 67,
+        "nodes": 3,
+        "resolved": 166
+      },
+      "node_histogram": {
+        "0": 46,
+        "8": 12,
+        "16": 6
+      },
+      "node_sum": 192,
+      "nonzero_nonsquare": 2,
+      "p": 11,
+      "resolved_histogram": {
+        "0": 6,
+        "112": 6,
+        "128": 9,
+        "144": 14,
+        "160": 15,
+        "192": 1,
+        "304": 6,
+        "320": 6,
+        "448": 1
+      },
+      "resolved_sum": 10624
+    },
+    {
+      "base_strata": {
+        "0": 103,
+        "1": 65,
+        "2": 12,
+        "3": 3
+      },
+      "compact_histogram": {
+        "72": 6,
+        "104": 9,
+        "192": 32,
+        "208": 12,
+        "280": 1,
+        "296": 3,
+        "536": 1
+      },
+      "compact_sum": 11712,
+      "exceptional_conic_instances": 144,
+      "free_sum": 6592,
+      "means": {
+        "compact": 183,
+        "free": 103,
+        "nodes": 3,
+        "resolved": 222
+      },
+      "node_histogram": {
+        "0": 44,
+        "8": 18,
+        "24": 2
+      },
+      "node_sum": 192,
+      "nonzero_nonsquare": 2,
+      "p": 13,
+      "resolved_histogram": {
+        "176": 6,
+        "192": 32,
+        "208": 21,
+        "400": 3,
+        "592": 1,
+        "848": 1
+      },
+      "resolved_sum": 14208
+    }
+  ],
+  "euler_hostile": {
+    "chi_U": 7,
+    "chi_V": 448,
+    "chi_X": 56,
+    "chi_Y": 80
+  },
+  "interpretation": "Finite exact controls; all-order statements are separately proved in RESULT.md.",
+  "power_map_orbit_checks": [
+    {
+      "moduli": [
+        2
+      ],
+      "stabilizer_subgroups": 2,
+      "verified_cases": 96
+    },
+    {
+      "moduli": [
+        4
+      ],
+      "stabilizer_subgroups": 3,
+      "verified_cases": 288
+    },
+    {
+      "moduli": [
+        6
+      ],
+      "stabilizer_subgroups": 4,
+      "verified_cases": 576
+    },
+    {
+      "moduli": [
+        2,
+        2
+      ],
+      "stabilizer_subgroups": 5,
+      "verified_cases": 480
+    },
+    {
+      "moduli": [
+        2,
+        4
+      ],
+      "stabilizer_subgroups": 7,
+      "verified_cases": 1344
+    },
+    {
+      "moduli": [
+        3,
+        3
+      ],
+      "stabilizer_subgroups": 6,
+      "verified_cases": 1296
+    }
+  ],
+  "status": "PASS"
+}

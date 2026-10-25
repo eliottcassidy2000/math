@@ -1,0 +1,17 @@
+{
+  "audited_producer_input_sha256": {
+    "RESULT.md": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+    "SOURCE_PINS.json": "1099696d9839f3bcd46cd15c24ac581565f162ca6d53f0bf2a23be36a325015d",
+    "check.py": "b1c9dd2081adb3f0240e073aef31010e07ea5f6a412cea14ebc68648b5de6b19",
+    "verify_source_recovery.py": "66af386fefa2cc408c6c30b63724a4492aaeecf97c7e7ed2139e9ad65c7ddfdb"
+  },
+  "depth_checks": 705,
+  "independent_arithmetic_cases": 47,
+  "independent_normal_optimized_identical": true,
+  "producer_normal_optimized_identical": true,
+  "producer_output_matches_original": true,
+  "provenance_normal_optimized_identical": true,
+  "source_classification": "Recovered concurrent regular-spectrum theorem and exact witness; general odd-action and diagonal interfaces separately scoped",
+  "source_commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+  "verdict": "PASS"
+}
