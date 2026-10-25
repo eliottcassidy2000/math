@@ -1,0 +1,9 @@
+{
+  "source_commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+  "source_path": "04-computation/six_seven_gale_cube_20261025/check_geometry.py",
+  "source_sha256": "26f47b43b575e4ef762d1c910b53a0cd16be4678e400d03dc500e671dd0a5e6a",
+  "checks": 10576,
+  "transition_count": 252,
+  "normal_optimized_equal": true,
+  "output_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4"
+}

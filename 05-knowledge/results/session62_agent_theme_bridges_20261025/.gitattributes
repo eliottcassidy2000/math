@@ -1,2 +1,5 @@
 # Preserve exact audited source and certificate bytes across checkouts.
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve generated SVG path-data whitespace with its audited byte hash.
+figures/*.svg -whitespace

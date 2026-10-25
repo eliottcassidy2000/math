@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "universe": "regular C3^k actions for k2,3,4; all group elements; direct bouquet coboundaries overF2",
+  "records": [
+    {
+      "k": 2,
+      "gap_dimension": 9,
+      "common_fixed_dimension": 1,
+      "cancellation_order": 3,
+      "full_H1": 10,
+      "forgotten_H1": 8
+    },
+    {
+      "k": 3,
+      "gap_dimension": 27,
+      "common_fixed_dimension": 1,
+      "cancellation_order": 9,
+      "full_H1": 55,
+      "forgotten_H1": 52
+    },
+    {
+      "k": 4,
+      "gap_dimension": 81,
+      "common_fixed_dimension": 1,
+      "cancellation_order": 27,
+      "full_H1": 244,
+      "forgotten_H1": 240
+    }
+  ]
+}

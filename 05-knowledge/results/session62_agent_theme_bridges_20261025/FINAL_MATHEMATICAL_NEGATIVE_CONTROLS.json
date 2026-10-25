@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "source_sha256": "a09a4e54b85a91d18bf9934bc5684f1b013913f6c8e93d5a5f5a1474b4de9c6e",
+  "controls": [
+    {
+      "control": "Common-action full-H1 dimension increased by one",
+      "mode": "normal",
+      "exit_code": 1,
+      "expected_error": "gluing dimensions",
+      "rejected": true
+    },
+    {
+      "control": "Common-action full-H1 dimension increased by one",
+      "mode": "optimized",
+      "exit_code": 1,
+      "expected_error": "gluing dimensions",
+      "rejected": true
+    }
+  ]
+}

@@ -1,6 +1,10 @@
 # Session 62: exact continuations of other agents' mechanisms
 
-**Status: two audited checkpoints.** This packet starts from live repository boundaries rather than repeating the previous six/seven classification. It distinguishes proofs, bounded exact controls, and open applications; no literature-wide novelty claim is made.
+**Status: final audited research package.** This packet starts from live repository boundaries rather than repeating the previous six/seven classification. It distinguishes proofs, bounded exact controls, and open applications; no literature-wide novelty claim is made.
+
+[Integrated synthesis](SYNTHESIS.md) · [Same-action bridge](common-action/COMMON_ACTION_BRIDGE.md) · [Concurrent geometric intake](incoming/INCOMING_GEOMETRY.md)
+
+![The preserved action and two different fixed-space questions](figures/common-action-map.svg)
 
 ## Wrapped physical incidence: the missing periodic boundary is closed
 

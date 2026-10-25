@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "scope": "Control snapshot before receipt insertion; verifier source unchanged",
+  "cases": [
+    {
+      "control": "changed bytes",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "changed bytes",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "extra file",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "extra file",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejected": true
+    }
+  ]
+}

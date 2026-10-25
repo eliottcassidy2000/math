@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "Pinned inherited-source exact replay; not independent proof of all geometric consequences",
+  "runs": [
+    {
+      "source_commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/check_geometry.py",
+      "source_sha256": "26f47b43b575e4ef762d1c910b53a0cd16be4678e400d03dc500e671dd0a5e6a",
+      "mode": "normal",
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "stdout_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "stored_certificate": "geometry-normal.json"
+    },
+    {
+      "source_commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/check_geometry.py",
+      "source_sha256": "26f47b43b575e4ef762d1c910b53a0cd16be4678e400d03dc500e671dd0a5e6a",
+      "mode": "optimized",
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "stdout_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "stored_certificate": "geometry-normal.json"
+    },
+    {
+      "source_commit": "6b54e60825c6d1df286699fee37db42239948211",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/check_norm_seven_pairs.py",
+      "source_sha256": "32ab829587eb76dc4f29a3f41b3076196cac870e2f5530a4fe011fef4060ad05",
+      "mode": "normal",
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "stdout_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "stored_certificate": "pairs-normal.json"
+    },
+    {
+      "source_commit": "6b54e60825c6d1df286699fee37db42239948211",
+      "source_path": "04-computation/six_seven_gale_cube_20261025/check_norm_seven_pairs.py",
+      "source_sha256": "32ab829587eb76dc4f29a3f41b3076196cac870e2f5530a4fe011fef4060ad05",
+      "mode": "optimized",
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "stdout_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "stored_certificate": "pairs-normal.json"
+    }
+  ]
+}

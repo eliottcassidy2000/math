@@ -1,0 +1,9 @@
+{
+  "source_commit": "6b54e60825c6d1df286699fee37db42239948211",
+  "source_path": "04-computation/six_seven_gale_cube_20261025/check_norm_seven_pairs.py",
+  "source_sha256": "32ab829587eb76dc4f29a3f41b3076196cac870e2f5530a4fe011fef4060ad05",
+  "receipt_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+  "normal_optimized_equal": true,
+  "checks": 219,
+  "scope": "exact marking/kernel replay; normalized fiber-product theorem inherited from source proof"
+}

@@ -1,6 +1,6 @@
 # Session 62 concept board
 
-The first two checkpoints promote four independently audited lanes. A shared-action synthesis is reserved for the final integration, not inferred from coincident dimensions.
+Four independently audited lanes now meet in the explicitly typed [same-action bridge](common-action/COMMON_ACTION_BRIDGE.md), not in an identification by coincident dimensions.
 
 | Concept / object | Inherited mechanism and operation | Lost coordinate / decisive test | Checkpoint status |
 |---|---|---|---|
@@ -25,3 +25,9 @@ Across the other live lanes, this gives a specific comparison question: does a p
 ## Second-checkpoint comparison
 
 The clone theorem separates a minimum over individual fixed spaces from the common fixed space. The pair-transport theorem uses the latter as its holonomy invariant. The palette theorem distinguishes response dimension from Boolean state count and exposes coefficient-characteristic loss through an integer lattice. The incidence theorem independently exhibits a characteristic-sensitive constant mode, with support anchors deciding whether it survives. These comparisons retain the operation, coefficient field and boundary conditions; equal dimension alone is never used to identify the carriers.
+
+## Final shared-action closure and incoming work
+
+Fix the actual odd-order permutation action. Its subset-orbit enumerator observes the minimum fixed-space dimension of one element; a separately specified connected graph local system observes the common fixed space of its full holonomy image. For the regular nine-gap C3² action these are 3 and 1; with two generating cycle holonomies over F2 the full and parity-forgotten H1 dimensions are 10 and 8. The gluing graph, representation and field are required sidecars, not intrinsic tournament moves.
+
+Two concurrent Gale-geometry checkpoints were preserved and read as mathematical input. Their genus-five elliptic decomposition is distinct from the central genus-two factors; their normal hourglass fiber-product reconstruction retains the two quotient maps over one base plane. [The intake note](incoming/INCOMING_GEOMETRY.md) separates source theorems from finite replay. These are useful comparisons, not new geometric or colouring claims.

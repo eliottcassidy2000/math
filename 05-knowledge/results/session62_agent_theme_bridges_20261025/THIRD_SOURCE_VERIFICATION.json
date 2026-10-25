@@ -1,0 +1,182 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/SYNTHESIS.md",
+      "packaged": "SYNTHESIS.md",
+      "source_sha256": "0d8b07c891daf112e4c1b08fa17234842aa2ada35c8020f6d72b85a4b5b66754",
+      "packaged_sha256": "9505bec5191d2228e9217e0652763b56cc47e117263154d8408f285ab5b7f707",
+      "bytes": 10414,
+      "packaging_changes": "Appended navigation block only; original mathematical prose unchanged."
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/COMMON_ACTION_BRIDGE.md",
+      "packaged": "common-action/COMMON_ACTION_BRIDGE.md",
+      "source_sha256": "6538f317916a0e6d027e1b19234f69e26206f144c5dbfe104017b99e135c8c22",
+      "packaged_sha256": "6538f317916a0e6d027e1b19234f69e26206f144c5dbfe104017b99e135c8c22",
+      "bytes": 3202,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/check_common_action.py",
+      "packaged": "common-action/check_common_action.py",
+      "source_sha256": "a09a4e54b85a91d18bf9934bc5684f1b013913f6c8e93d5a5f5a1474b4de9c6e",
+      "packaged_sha256": "a09a4e54b85a91d18bf9934bc5684f1b013913f6c8e93d5a5f5a1474b4de9c6e",
+      "bytes": 1673,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/common-action-normal.json",
+      "packaged": "common-action/common-action-normal.json",
+      "source_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "packaged_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "bytes": 646,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/common-action-optimized.json",
+      "packaged": "common-action/common-action-optimized.json",
+      "source_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "packaged_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "bytes": 646,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/figures/common-action-map.svg",
+      "packaged": "figures/common-action-map.svg",
+      "source_sha256": "423f86abdc27e4a504c2299652a5cb31f45ace71eded769c50e59b8634961c14",
+      "packaged_sha256": "423f86abdc27e4a504c2299652a5cb31f45ace71eded769c50e59b8634961c14",
+      "bytes": 11081,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/figures/make_action_map.py",
+      "packaged": "figures/make_action_map.py",
+      "source_sha256": "60fdf2e5409e0e4d61b06ad88010c2235e932c78f2611322557e1e2f869f4d10",
+      "packaged_sha256": "60fdf2e5409e0e4d61b06ad88010c2235e932c78f2611322557e1e2f869f4d10",
+      "bytes": 2302,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/INCOMING_GEOMETRY.md",
+      "packaged": "incoming/INCOMING_GEOMETRY.md",
+      "source_sha256": "cdda3aaaacaf46cdfa3821a021cb38dec74f7a3168ab43d77589802ad6ba46ea",
+      "packaged_sha256": "cdda3aaaacaf46cdfa3821a021cb38dec74f7a3168ab43d77589802ad6ba46ea",
+      "bytes": 3600,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/REPLAY.json",
+      "packaged": "incoming/REPLAY.json",
+      "source_sha256": "f24cdadafc4df0a9644b53f6021441278e63b0fbd125314d49d97c0493661bec",
+      "packaged_sha256": "f24cdadafc4df0a9644b53f6021441278e63b0fbd125314d49d97c0493661bec",
+      "bytes": 402,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/PAIRS_REPLAY.json",
+      "packaged": "incoming/PAIRS_REPLAY.json",
+      "source_sha256": "18b300228be4873906b857340aa56a5a71851f1bdf2b911a8b524180105e0766",
+      "packaged_sha256": "18b300228be4873906b857340aa56a5a71851f1bdf2b911a8b524180105e0766",
+      "bytes": 486,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/geometry-normal.json",
+      "packaged": "incoming/geometry-normal.json",
+      "source_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "packaged_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "bytes": 2424,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/geometry-optimized.json",
+      "packaged": "incoming/geometry-optimized.json",
+      "source_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "packaged_sha256": "181d2e7912042c1006fbcb45e48fa3a3e8e2c1b13def8f49917ba072115078c4",
+      "bytes": 2424,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/pairs-normal.json",
+      "packaged": "incoming/pairs-normal.json",
+      "source_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "packaged_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "bytes": 5931,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-root/incoming/pairs-optimized.json",
+      "packaged": "incoming/pairs-optimized.json",
+      "source_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "packaged_sha256": "4fa307e77b655f640b74f23848f5827f3aed0a7843bc90d5b6acf65aa7565b5e",
+      "bytes": 5931,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/COMMON_ACTION_AUDIT.md",
+      "packaged": "audits/holonomy-clone/COMMON_ACTION_AUDIT.md",
+      "source_sha256": "bf8e332a5eab8e086fb0d35aa06dd8a700c16b15f69f2bafbc491310bfdfc63a",
+      "packaged_sha256": "bf8e332a5eab8e086fb0d35aa06dd8a700c16b15f69f2bafbc491310bfdfc63a",
+      "bytes": 3014,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/README.md",
+      "packaged": "audits/holonomy-clone/README.md",
+      "source_sha256": "3a8a97949792d571d2901e04a1f2495d858c707277d7e49477fe3ce8059a56c8",
+      "packaged_sha256": "3a8a97949792d571d2901e04a1f2495d858c707277d7e49477fe3ce8059a56c8",
+      "bytes": 1996,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/manifest.json",
+      "packaged": "audits/holonomy-clone/manifest.json",
+      "source_sha256": "3f40e175b8fe4e4835c5d7b51140f6b8b1931164d2b400b47ef5f45fef736b0c",
+      "packaged_sha256": "3f40e175b8fe4e4835c5d7b51140f6b8b1931164d2b400b47ef5f45fef736b0c",
+      "bytes": 2007,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/source-common-normal.json",
+      "packaged": "audits/holonomy-clone/source-common-normal.json",
+      "source_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "packaged_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "bytes": 646,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/source-common-optimized.json",
+      "packaged": "audits/holonomy-clone/source-common-optimized.json",
+      "source_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "packaged_sha256": "138b87410e84aed9924ae69852eb694037362280f62418540890a02a79020699",
+      "bytes": 646,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/SYNTHESIS_FIGURE_AUDIT.md",
+      "packaged": "audits/holonomy-clone/SYNTHESIS_FIGURE_AUDIT.md",
+      "source_sha256": "1d965771a813c8d52074c472c8f83e0a4b5c1ed19070cc249ad049febf91a41d",
+      "packaged_sha256": "1d965771a813c8d52074c472c8f83e0a4b5c1ed19070cc249ad049febf91a41d",
+      "bytes": 3283,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-audit-holonomy-clone/synthesis-figure-manifest.json",
+      "packaged": "audits/holonomy-clone/synthesis-figure-manifest.json",
+      "source_sha256": "2e6918fb1e507fa5fef4cde6f0cafbded40a963bf12c4c729f62c8aae00bf168",
+      "packaged_sha256": "2e6918fb1e507fa5fef4cde6f0cafbded40a963bf12c4c729f62c8aae00bf168",
+      "bytes": 943,
+      "packaging_changes": null
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session62-publication/SECOND_REMOTE_VERIFICATION.json",
+      "packaged": "SECOND_REMOTE_VERIFICATION.json",
+      "source_sha256": "1d5dd9c9339ad6ed50c2789022fa7ea18a45ec2cc477509fe2f1fc8a8ce9e8e2",
+      "packaged_sha256": "1d5dd9c9339ad6ed50c2789022fa7ea18a45ec2cc477509fe2f1fc8a8ce9e8e2",
+      "bytes": 15038,
+      "packaging_changes": null
+    }
+  ],
+  "scope": "Exact source copies except explicitly declared synthesis navigation. PNG used for local visual audit is not published. Inherited checker source paths are pinned to their original Git commits, not duplicated."
+}

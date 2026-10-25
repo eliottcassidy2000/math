@@ -1,0 +1,151 @@
+{
+  "checks": 10576,
+  "cube": {
+    "edges": 12,
+    "intersection_matrix_rank": 5,
+    "intersection_points": 24,
+    "spectrum": {
+      "-4": 3,
+      "-8": 1,
+      "0": 3,
+      "4": 1
+    },
+    "vertices": 8
+  },
+  "dual_conic": {
+    "A2_vectors": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "Mobius_matrix": [
+      [
+        2,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "binary_sextic_multiplier": -27,
+    "determinant": "3/4"
+  },
+  "elliptic_j": {
+    "E0": "1728",
+    "E1": "21952/9",
+    "E2": "35152/9"
+  },
+  "outer": {
+    "component_field": "Q(sqrt2)",
+    "components": 2,
+    "genus": 5,
+    "intersection_field": "Q(i)",
+    "intersections": 8
+  },
+  "r_census": {
+    "0": 16,
+    "1": 120,
+    "2": 108,
+    "3": 8
+  },
+  "scope": "Does not prove Kummer identification, Picard rank, rational-point density, or any famous open conjecture.",
+  "status": "FINITE-EXACT",
+  "transition_census": [
+    {
+      "count": 8,
+      "new_triples": 2,
+      "old_triples": 2,
+      "r": 0
+    },
+    {
+      "count": 8,
+      "new_triples": 3,
+      "old_triples": 3,
+      "r": 0
+    },
+    {
+      "count": 16,
+      "new_triples": 2,
+      "old_triples": 1,
+      "r": 1
+    },
+    {
+      "count": 76,
+      "new_triples": 3,
+      "old_triples": 2,
+      "r": 1
+    },
+    {
+      "count": 28,
+      "new_triples": 4,
+      "old_triples": 3,
+      "r": 1
+    },
+    {
+      "count": 4,
+      "new_triples": 2,
+      "old_triples": 0,
+      "r": 2
+    },
+    {
+      "count": 40,
+      "new_triples": 3,
+      "old_triples": 1,
+      "r": 2
+    },
+    {
+      "count": 52,
+      "new_triples": 4,
+      "old_triples": 2,
+      "r": 2
+    },
+    {
+      "count": 12,
+      "new_triples": 5,
+      "old_triples": 3,
+      "r": 2
+    },
+    {
+      "count": 2,
+      "new_triples": 3,
+      "old_triples": 0,
+      "r": 3
+    },
+    {
+      "count": 4,
+      "new_triples": 4,
+      "old_triples": 1,
+      "r": 3
+    },
+    {
+      "count": 2,
+      "new_triples": 5,
+      "old_triples": 2,
+      "r": 3
+    }
+  ],
+  "transition_count": 252,
+  "universe": "all252 labelled six-old/one-new transitions among nine magic lines; symbolic algebra and finite n6..20 formula controls"
+}

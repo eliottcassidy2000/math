@@ -1,0 +1,15 @@
+{
+  "artifacts": {
+    "SYNTHESIS_FIGURE_AUDIT.md": "1d965771a813c8d52074c472c8f83e0a4b5c1ed19070cc249ad049febf91a41d"
+  },
+  "prior_theorem_sources_and_audit_artifacts_unchanged": true,
+  "replay": "Final unchanged generator run with --png; SVG and PNG both byte-identical to source artifacts; final PNG visually inspected",
+  "scope": "SYNTHESIS sections 2,4,5 and full common-action figure; other synthesis sections owned by other audits",
+  "sources": {
+    "session62-root/SYNTHESIS.md": "37635c450f49875fdaf1c016d8887ec9319f2fcca6c7c4777b0b3c627367fb15",
+    "session62-root/figures/common-action-map.png": "fabfabd26dded83418b9786fa6392a954284e11f8f42a21ba8fdcc5f3198afa4",
+    "session62-root/figures/common-action-map.svg": "423f86abdc27e4a504c2299652a5cb31f45ace71eded769c50e59b8634961c14",
+    "session62-root/figures/make_action_map.py": "60fdf2e5409e0e4d61b06ad88010c2235e932c78f2611322557e1e2f869f4d10"
+  },
+  "status": "PASS"
+}

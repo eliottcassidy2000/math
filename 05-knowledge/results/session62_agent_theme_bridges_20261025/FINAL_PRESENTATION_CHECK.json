@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "svg_xml_valid": true,
+  "svg_sha256": "423f86abdc27e4a504c2299652a5cb31f45ace71eded769c50e59b8634961c14",
+  "source_synthesis_sha256": "0d8b07c891daf112e4c1b08fa17234842aa2ada35c8020f6d72b85a4b5b66754",
+  "packaged_synthesis_sha256": "9505bec5191d2228e9217e0652763b56cc47e117263154d8408f285ab5b7f707",
+  "source_exact_prefix": true,
+  "only_adaptation": "Appended navigation block",
+  "published_png": false
+}

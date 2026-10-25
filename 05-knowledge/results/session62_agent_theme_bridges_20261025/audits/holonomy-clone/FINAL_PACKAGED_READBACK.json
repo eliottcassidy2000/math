@@ -1,0 +1,76 @@
+{
+  "appended_navigation_targets": [
+    "incidence/cyclic_common_kernel.md",
+    "audits/incidence/AUDIT.md",
+    "clone/README.md",
+    "audits/holonomy-clone/CLONE_AUDIT.md",
+    "palettes/RESULT.md",
+    "audits/palettes/AUDIT.md",
+    "holonomy/TWISTED_PAIR_LIFTS.md",
+    "audits/holonomy-clone/HOLONOMY_AUDIT.md",
+    "common-action/COMMON_ACTION_BRIDGE.md",
+    "audits/holonomy-clone/COMMON_ACTION_AUDIT.md",
+    "incoming/INCOMING_GEOMETRY.md",
+    "figures/common-action-map.svg",
+    "figures/make_action_map.py",
+    "PUBLICATION_CHECKS.md",
+    "MANIFEST.json"
+  ],
+  "common_action_replays": "Copied checker ordinary and optimized stdout byte-identical to packaged normal/optimized receipts",
+  "completed_original_audit_manifest_artifacts": 13,
+  "completed_original_audit_manifest_theorem_sources": 6,
+  "current_original_synthesis_sha256": "0d8b07c891daf112e4c1b08fa17234842aa2ada35c8020f6d72b85a4b5b66754",
+  "edits_to_package": false,
+  "figure_generator_sha256": "60fdf2e5409e0e4d61b06ad88010c2235e932c78f2611322557e1e2f869f4d10",
+  "figure_svg_sha256": "423f86abdc27e4a504c2299652a5cb31f45ace71eded769c50e59b8634961c14",
+  "full_publisher_replay": "Separate publisher process; not certified by this narrow readback",
+  "historical_pin_note": "Earlier synthesis audit manifest remains truthful historical provenance; this targeted current readback certifies final \u00a7\u00a72/4/5 against current original synthesis and its navigation-only packaging. Other sections are owned by other lane audits.",
+  "historical_synthesis_audit_snapshot_sha256": "37635c450f49875fdaf1c016d8887ec9319f2fcca6c7c4777b0b3c627367fb15",
+  "issues": [],
+  "package": "/workspace/scratch/07d5532f2fce/session62-repo/05-knowledge/results/session62_agent_theme_bridges_20261025",
+  "packaged_synthesis_sha256": "9505bec5191d2228e9217e0652763b56cc47e117263154d8408f285ab5b7f707",
+  "png": "Intentionally absent from package; local inspected PNG hash matches preserved historical manifest",
+  "scope": "Final copied common-action proof/check/receipts, figure SVG+generator, holonomy-clone audit manifest closure, SYNTHESIS sections 2/4/5 and appended navigation",
+  "sections": {
+    "2": {
+      "review": "PASS; scope, hypotheses, examples and exclusions match frozen proofs",
+      "sha256": "68267da703a389c2fca2bede143f32fabcbefdbce3697d8c67c3c4b58730dc1d"
+    },
+    "4": {
+      "review": "PASS; scope, hypotheses, examples and exclusions match frozen proofs",
+      "sha256": "b6bf655dda39ff915025db60cdb73c97ee091f2c04cffb1cbb8b11a0285698e4"
+    },
+    "5": {
+      "review": "PASS; scope, hypotheses, examples and exclusions match frozen proofs",
+      "sha256": "ece607e2004ceccc24b75b859bc5385e0846ac117d0b1cbc96cfb5e48f174680"
+    }
+  },
+  "status": "PASS",
+  "verified_packaged_paths": [
+    "SYNTHESIS.md",
+    "audits/holonomy-clone/CLONE_AUDIT.md",
+    "audits/holonomy-clone/COMMON_ACTION_AUDIT.md",
+    "audits/holonomy-clone/HOLONOMY_AUDIT.md",
+    "audits/holonomy-clone/README.md",
+    "audits/holonomy-clone/SYNTHESIS_FIGURE_AUDIT.md",
+    "audits/holonomy-clone/check_independent.py",
+    "audits/holonomy-clone/normal.json",
+    "audits/holonomy-clone/optimized.json",
+    "audits/holonomy-clone/source-clone-normal.json",
+    "audits/holonomy-clone/source-clone-optimized.json",
+    "audits/holonomy-clone/source-common-normal.json",
+    "audits/holonomy-clone/source-common-optimized.json",
+    "audits/holonomy-clone/source-holonomy-normal.json",
+    "audits/holonomy-clone/source-holonomy-optimized.json",
+    "clone/README.md",
+    "clone/check.py",
+    "common-action/COMMON_ACTION_BRIDGE.md",
+    "common-action/check_common_action.py",
+    "common-action/common-action-normal.json",
+    "common-action/common-action-optimized.json",
+    "figures/common-action-map.svg",
+    "figures/make_action_map.py",
+    "holonomy/TWISTED_PAIR_LIFTS.md",
+    "holonomy/check_holonomy.py"
+  ]
+}
