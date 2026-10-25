@@ -1,0 +1,932 @@
+{
+  "graph_census": {
+    "2": {
+      "edge_vectors_tested": 19683,
+      "graphs": 512,
+      "vertex_vectors_tested": 32768
+    },
+    "3": {
+      "edge_vectors_tested": 262144,
+      "graphs": 512,
+      "vertex_vectors_tested": 373248
+    }
+  },
+  "group_family_magic_census": [
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 2,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 1,
+      "group_size": 1,
+      "magic_arrays": 1,
+      "modulus": 2,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 243,
+      "group_size": 3,
+      "magic_arrays": 27,
+      "modulus": 3,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 3,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 3,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 4,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 4,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 4,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 4,
+      "t": 3
+    },
+    {
+      "five_coordinate_candidates": 3125,
+      "group_size": 5,
+      "magic_arrays": 125,
+      "modulus": 5,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 5,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 5,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 5,
+      "t": 3
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 5,
+      "t": 4
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 6,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 6,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 6,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 243,
+      "group_size": 3,
+      "magic_arrays": 27,
+      "modulus": 6,
+      "t": 3
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 6,
+      "t": 4
+    },
+    {
+      "five_coordinate_candidates": 32,
+      "group_size": 2,
+      "magic_arrays": 8,
+      "modulus": 6,
+      "t": 5
+    },
+    {
+      "five_coordinate_candidates": 16807,
+      "group_size": 7,
+      "magic_arrays": 343,
+      "modulus": 7,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 3
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 4
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 5
+    },
+    {
+      "five_coordinate_candidates": 7776,
+      "group_size": 6,
+      "magic_arrays": 216,
+      "modulus": 7,
+      "t": 6
+    },
+    {
+      "five_coordinate_candidates": 32768,
+      "group_size": 8,
+      "magic_arrays": 512,
+      "modulus": 8,
+      "t": 0
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 8,
+      "t": 1
+    },
+    {
+      "five_coordinate_candidates": 32768,
+      "group_size": 8,
+      "magic_arrays": 512,
+      "modulus": 8,
+      "t": 2
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 8,
+      "t": 3
+    },
+    {
+      "five_coordinate_candidates": 32768,
+      "group_size": 8,
+      "magic_arrays": 512,
+      "modulus": 8,
+      "t": 4
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 8,
+      "t": 5
+    },
+    {
+      "five_coordinate_candidates": 32768,
+      "group_size": 8,
+      "magic_arrays": 512,
+      "modulus": 8,
+      "t": 6
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group_size": 4,
+      "magic_arrays": 64,
+      "modulus": 8,
+      "t": 7
+    },
+    {
+      "five_coordinate_candidates": 1024,
+      "group": "C2 x C2",
+      "group_size": 4,
+      "magic_arrays": 64
+    }
+  ],
+  "scope": "Finite checks supplement proofs; no square rational-point or F1 descent claim.",
+  "seam_census": [
+    {
+      "compatible_pairs": 512,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 32,
+      "globally_consistent": 32,
+      "intersection_components": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "modulus": 2,
+      "name": "K33_paths",
+      "obstruction_classes": 16
+    },
+    {
+      "compatible_pairs": 19683,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 243,
+      "globally_consistent": 243,
+      "intersection_components": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "modulus": 3,
+      "name": "K33_paths",
+      "obstruction_classes": 81
+    },
+    {
+      "compatible_pairs": 262144,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 1024,
+      "globally_consistent": 1024,
+      "intersection_components": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "modulus": 4,
+      "name": "K33_paths",
+      "obstruction_classes": 256
+    },
+    {
+      "compatible_pairs": 512,
+      "edges1": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "fiber_size": 128,
+      "globally_consistent": 128,
+      "intersection_components": [
+        2,
+        3,
+        3
+      ],
+      "modulus": 2,
+      "name": "K44_frozen_paths",
+      "obstruction_classes": 4
+    },
+    {
+      "compatible_pairs": 19683,
+      "edges1": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "fiber_size": 2187,
+      "globally_consistent": 2187,
+      "intersection_components": [
+        2,
+        3,
+        3
+      ],
+      "modulus": 3,
+      "name": "K44_frozen_paths",
+      "obstruction_classes": 9
+    },
+    {
+      "compatible_pairs": 262144,
+      "edges1": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "fiber_size": 16384,
+      "globally_consistent": 16384,
+      "intersection_components": [
+        2,
+        3,
+        3
+      ],
+      "modulus": 4,
+      "name": "K44_frozen_paths",
+      "obstruction_classes": 16
+    },
+    {
+      "compatible_pairs": 32,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 32,
+      "globally_consistent": 32,
+      "intersection_components": [
+        6
+      ],
+      "modulus": 2,
+      "name": "K33_hourglasses",
+      "obstruction_classes": 1
+    },
+    {
+      "compatible_pairs": 243,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 243,
+      "globally_consistent": 243,
+      "intersection_components": [
+        6
+      ],
+      "modulus": 3,
+      "name": "K33_hourglasses",
+      "obstruction_classes": 1
+    },
+    {
+      "compatible_pairs": 1024,
+      "edges1": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "edges2": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "fiber_size": 1024,
+      "globally_consistent": 1024,
+      "intersection_components": [
+        6
+      ],
+      "modulus": 4,
+      "name": "K33_hourglasses",
+      "obstruction_classes": 1
+    }
+  ],
+  "source_sha256": "f5a697f38aadb386c926e956612a56e914dde88be4c860f24eabef37544d494c",
+  "symbolic": {
+    "deformed_magic_entries": [
+      "E*t*x + E + x",
+      "(E - t*x*z - x - z)/(t**2*x*z + t*x + t*z + 1)",
+      "E*t*z + E + z",
+      "(E*t*z + E - x + z)/(t*x + 1)",
+      "E",
+      "(E*t*x + E + x - z)/(t*z + 1)",
+      "(E - z)/(t*z + 1)",
+      "E*t**2*x*z + E*t*x + E*t*z + E + t*x*z + x + z",
+      "(E - x)/(t*x + 1)"
+    ],
+    "four_cycle": "a*c*t + a - b*d*t - b + c - d",
+    "hourglass_relative_ranks": [
+      4,
+      4
+    ],
+    "magic_smith_invariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "raw_product_hostile": {
+      "cycle_labels": [
+        "eps",
+        "0",
+        "0",
+        "0"
+      ],
+      "divided_cycle_difference": "eps",
+      "raw_product_difference": "0",
+      "ring": "F2[eps]/(eps^2)",
+      "t": "eps"
+    },
+    "root_cover_discriminant": "2^4608 * (z_1 * ... * z_9)^256",
+    "root_cover_rank": 512,
+    "shared_root_cover_rank": 32,
+    "special_fiber": [
+      "E + x",
+      "E - x - z",
+      "E + z",
+      "E - x + z",
+      "E",
+      "E + x - z",
+      "E - z",
+      "E + x + z",
+      "E - x"
+    ]
+  }
+}

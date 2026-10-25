@@ -1,0 +1,19 @@
+{
+  "reviewed_at_utc": "2026-10-25T15:27:00Z",
+  "inputs": {
+    "../toric-shared-roots/RESULT.md": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+    "../graph-magic-degeneration/RESULT.md": "405e5b3324a708864e91a7293f980c67e9fc9cbe86e3e80114a3b9dd8a1601b9"
+  },
+  "outputs": {
+    "AUDIT.md": "74673d24acad19d0be6a054bf7e4be916fd9713c920426ee9376729447a61ce7",
+    "check.optimized.out": "092fca125037e41c0e16abdaeb6ae6441f93cea16045bc73b498d561d4967037",
+    "certificate.json": "eb40fd046485780641cdfcd194b1dcb25ecfb4c17d948f464aed639c23ee9a4c",
+    "check.out": "092fca125037e41c0e16abdaeb6ae6441f93cea16045bc73b498d561d4967037",
+    "check.py": "65c3a194526b3d474f39aee6aedd5e3c10be0eb675e174953fdda433706a6080"
+  },
+  "amendment_reviewed_at_utc": "2026-10-25T15:35:00Z",
+  "source_capture_paths": {
+    "/tmp/session59-f1-geometry/RESULT.md": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+    "/tmp/session59-f1-wildcards/RESULT.md": "405e5b3324a708864e91a7293f980c67e9fc9cbe86e3e80114a3b9dd8a1601b9"
+  }
+}

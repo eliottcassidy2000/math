@@ -1,0 +1,22 @@
+{
+  "frozen_packet_corrections": {
+    "D65_generated_subgroup": "24Z, not the frozen prose 12Z",
+    "automorphism_degeneracy": "k=0 as well as k=1"
+  },
+  "scope": "Independent finite-exact controls; universal claims rely on audited proofs.",
+  "seed": 59261025,
+  "source_packet_untouched": true,
+  "statistics": {
+    "arithmetic_boundary_controls": 2,
+    "coefficient_hom_cases": 256,
+    "cycle_start_rotations": 576,
+    "descent_cases": 125,
+    "descent_fixed_lift_classes": 1801,
+    "descent_negative_controls": 1,
+    "functional_graph_cases": 1380,
+    "projective_lift_classes": 2376,
+    "semilinear_cases": 384,
+    "tail_period_cells": 10888
+  },
+  "status": "PASS"
+}

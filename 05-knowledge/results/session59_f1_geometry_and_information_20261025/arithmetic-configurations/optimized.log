@@ -1,0 +1,598 @@
+{
+  "status": "PASS",
+  "ordered_direct": [
+    {
+      "q": 2,
+      "k": 0,
+      "points": 0,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 2,
+      "k": 1,
+      "points": 1,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 2,
+      "k": 2,
+      "points": 3,
+      "triple_universe": 1,
+      "C": 6,
+      "D": 6
+    },
+    {
+      "q": 2,
+      "k": 3,
+      "points": 7,
+      "triple_universe": 35,
+      "C": 60,
+      "D": 42
+    },
+    {
+      "q": 2,
+      "k": 4,
+      "points": 15,
+      "triple_universe": 455,
+      "C": 414,
+      "D": 210
+    },
+    {
+      "q": 2,
+      "k": 5,
+      "points": 31,
+      "triple_universe": 4495,
+      "C": 2460,
+      "D": 930
+    },
+    {
+      "q": 3,
+      "k": 0,
+      "points": 0,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 3,
+      "k": 1,
+      "points": 1,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 3,
+      "k": 2,
+      "points": 4,
+      "triple_universe": 4,
+      "C": 24,
+      "D": 24
+    },
+    {
+      "q": 3,
+      "k": 3,
+      "points": 13,
+      "triple_universe": 286,
+      "C": 900,
+      "D": 828
+    },
+    {
+      "q": 3,
+      "k": 4,
+      "points": 40,
+      "triple_universe": 9880,
+      "C": 22416,
+      "D": 18960
+    },
+    {
+      "q": 5,
+      "k": 0,
+      "points": 0,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 5,
+      "k": 1,
+      "points": 1,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 5,
+      "k": 2,
+      "points": 6,
+      "triple_universe": 20,
+      "C": 120,
+      "D": 120
+    },
+    {
+      "q": 5,
+      "k": 3,
+      "points": 31,
+      "triple_universe": 4495,
+      "C": 20664,
+      "D": 20304
+    },
+    {
+      "q": 7,
+      "k": 0,
+      "points": 0,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 7,
+      "k": 1,
+      "points": 1,
+      "triple_universe": 0,
+      "C": 0,
+      "D": 0
+    },
+    {
+      "q": 7,
+      "k": 2,
+      "points": 8,
+      "triple_universe": 56,
+      "C": 336,
+      "D": 336
+    },
+    {
+      "q": 7,
+      "k": 3,
+      "points": 57,
+      "triple_universe": 29260,
+      "C": 151740,
+      "D": 150732
+    }
+  ],
+  "frobenius_orbits": [
+    {
+      "q": 2,
+      "k": 1,
+      "split111": 0,
+      "type12": 0,
+      "type3": 0,
+      "total": 0,
+      "primitive_split111": 0,
+      "primitive_type12": 0,
+      "primitive_type3": 0,
+      "primitive_total": 0
+    },
+    {
+      "q": 2,
+      "k": 2,
+      "split111": 1,
+      "type12": 3,
+      "type3": 2,
+      "total": 6,
+      "primitive_split111": 1,
+      "primitive_type12": 3,
+      "primitive_type3": 2,
+      "primitive_total": 6
+    },
+    {
+      "q": 2,
+      "k": 3,
+      "split111": 10,
+      "type12": 37,
+      "type3": 22,
+      "total": 69,
+      "primitive_split111": 7,
+      "primitive_type12": 28,
+      "primitive_type3": 16,
+      "primitive_total": 51
+    },
+    {
+      "q": 3,
+      "k": 1,
+      "split111": 0,
+      "type12": 0,
+      "type3": 0,
+      "total": 0,
+      "primitive_split111": 0,
+      "primitive_type12": 0,
+      "primitive_type3": 0,
+      "primitive_total": 0
+    },
+    {
+      "q": 3,
+      "k": 2,
+      "split111": 4,
+      "type12": 12,
+      "type3": 8,
+      "total": 24,
+      "primitive_split111": 4,
+      "primitive_type12": 12,
+      "primitive_type3": 8,
+      "primitive_total": 24
+    },
+    {
+      "q": 3,
+      "k": 3,
+      "split111": 150,
+      "type12": 426,
+      "type3": 248,
+      "total": 824,
+      "primitive_split111": 138,
+      "primitive_type12": 390,
+      "primitive_type3": 224,
+      "primitive_total": 752
+    },
+    {
+      "q": 5,
+      "k": 1,
+      "split111": 0,
+      "type12": 0,
+      "type3": 0,
+      "total": 0,
+      "primitive_split111": 0,
+      "primitive_type12": 0,
+      "primitive_type3": 0,
+      "primitive_total": 0
+    },
+    {
+      "q": 5,
+      "k": 2,
+      "split111": 20,
+      "type12": 60,
+      "type3": 40,
+      "total": 120,
+      "primitive_split111": 20,
+      "primitive_type12": 60,
+      "primitive_type3": 40,
+      "primitive_total": 120
+    },
+    {
+      "q": 5,
+      "k": 3,
+      "split111": 3444,
+      "type12": 8860,
+      "type3": 5240,
+      "total": 17544,
+      "primitive_split111": 3384,
+      "primitive_type12": 8680,
+      "primitive_type3": 5120,
+      "primitive_total": 17184
+    }
+  ],
+  "polynomials_t_ascending": {
+    "0": [
+      0
+    ],
+    "1": [
+      0
+    ],
+    "2": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "3": [
+      0,
+      6,
+      2,
+      18,
+      24,
+      9,
+      1
+    ],
+    "4": [
+      0,
+      12,
+      -10,
+      56,
+      78,
+      102,
+      109,
+      54,
+      12,
+      1
+    ],
+    "5": [
+      0,
+      20,
+      -40,
+      110,
+      137,
+      390,
+      505,
+      495,
+      462,
+      275,
+      90,
+      15,
+      1
+    ],
+    "6": [
+      0,
+      30,
+      -95,
+      165,
+      132,
+      974,
+      1370,
+      2100,
+      2547,
+      2343,
+      1995,
+      1305,
+      546,
+      135,
+      18,
+      1
+    ]
+  },
+  "primitive_t_ascending": {
+    "0": [
+      0
+    ],
+    "1": [
+      0
+    ],
+    "2": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "3": [
+      0,
+      0,
+      -7,
+      15,
+      24,
+      9,
+      1
+    ],
+    "4": [
+      0,
+      0,
+      0,
+      -10,
+      -18,
+      66,
+      105,
+      54,
+      12,
+      1
+    ],
+    "5": [
+      0,
+      0,
+      0,
+      0,
+      -13,
+      -30,
+      -30,
+      225,
+      402,
+      270,
+      90,
+      15,
+      1
+    ],
+    "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      -16,
+      -45,
+      -60,
+      -45,
+      708,
+      1455,
+      1215,
+      540,
+      135,
+      18,
+      1
+    ]
+  },
+  "unordered_primitive_t_ascending": {
+    "0": [
+      0
+    ],
+    "1": [
+      0
+    ],
+    "2": [
+      0,
+      2,
+      3,
+      1
+    ],
+    "3": [
+      0,
+      0,
+      6,
+      19,
+      18,
+      7,
+      1
+    ],
+    "4": [
+      0,
+      0,
+      0,
+      21,
+      69,
+      109,
+      92,
+      42,
+      10,
+      1
+    ],
+    "5": [
+      0,
+      0,
+      0,
+      0,
+      62,
+      258,
+      488,
+      591,
+      470,
+      238,
+      74,
+      13,
+      1
+    ],
+    "6": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      171,
+      870,
+      2085,
+      3095,
+      3246,
+      2467,
+      1325,
+      485,
+      115,
+      16,
+      1
+    ]
+  },
+  "effective_minimum_ranks": [
+    {
+      "k": 2,
+      "rank": 1,
+      "multiplicity": 2
+    },
+    {
+      "k": 3,
+      "rank": 2,
+      "multiplicity": 6
+    },
+    {
+      "k": 4,
+      "rank": 3,
+      "multiplicity": 21
+    },
+    {
+      "k": 5,
+      "rank": 4,
+      "multiplicity": 62
+    },
+    {
+      "k": 6,
+      "rank": 5,
+      "multiplicity": 171
+    },
+    {
+      "k": 7,
+      "rank": 6,
+      "multiplicity": 460
+    },
+    {
+      "k": 8,
+      "rank": 7,
+      "multiplicity": 1233
+    },
+    {
+      "k": 9,
+      "rank": 8,
+      "multiplicity": 3330
+    },
+    {
+      "k": 10,
+      "rank": 9,
+      "multiplicity": 9111
+    },
+    {
+      "k": 11,
+      "rank": 10,
+      "multiplicity": 25304
+    },
+    {
+      "k": 12,
+      "rank": 11,
+      "multiplicity": 71325
+    },
+    {
+      "k": 13,
+      "rank": 12,
+      "multiplicity": 203758
+    },
+    {
+      "k": 14,
+      "rank": 13,
+      "multiplicity": 588771
+    },
+    {
+      "k": 15,
+      "rank": 14,
+      "multiplicity": 1717188
+    },
+    {
+      "k": 16,
+      "rank": 15,
+      "multiplicity": 5045097
+    },
+    {
+      "k": 17,
+      "rank": 16,
+      "multiplicity": 14905946
+    },
+    {
+      "k": 18,
+      "rank": 17,
+      "multiplicity": 44226351
+    },
+    {
+      "k": 19,
+      "rank": 18,
+      "multiplicity": 131630512
+    },
+    {
+      "k": 20,
+      "rank": 19,
+      "multiplicity": 392663349
+    }
+  ],
+  "zeta_residues": {
+    "N_at_1_over_21": "-1/48",
+    "M_at_1_over_20": "-1/48"
+  },
+  "positive_rational_zeta_control": {
+    "points_affine_line": [
+      3,
+      9,
+      27,
+      81,
+      243
+    ],
+    "zeta": "1/(1-3t)",
+    "residue_at_1_over_3": -1
+  },
+  "hostiles": {
+    "first_total_torification_failure": {
+      "k": 4,
+      "t2": -10
+    },
+    "first_primitive_failure": {
+      "k": 3,
+      "t2": -7
+    },
+    "naive_unordered_q3_k2": {
+      "split": 4,
+      "geometric": 24
+    }
+  },
+  "scope": "Necessary support filter only; no numerical gap-addition test."
+}

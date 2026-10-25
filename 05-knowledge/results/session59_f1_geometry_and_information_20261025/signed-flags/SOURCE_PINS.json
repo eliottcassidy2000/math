@@ -1,0 +1,24 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "read_commit": "2b96df316ec324bb8785c45d672f5562f5f2abfa",
+  "inputs": [
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/observer-profile-algebra/THEOREM.md",
+      "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4"
+    },
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/complement-tournaments/THEOREM.md",
+      "sha256": "9463f2e7ed9b98bcb2eeba04a85a97757dee91e3c36edbdea9f776f485afdb87"
+    }
+  ],
+  "external": [
+    {
+      "authors": "Javier L\u00f3pez Pe\u00f1a and Oliver Lorscheid",
+      "title": "Torified varieties and their geometries over F1",
+      "version": "arXiv:0903.2173v3",
+      "url": "https://arxiv.org/html/0903.2173v3",
+      "used": "Definition 1.5; \u00a71.3.5 Example 1.17; affine-torification caveat",
+      "checked": "2026-10-25"
+    }
+  ]
+}

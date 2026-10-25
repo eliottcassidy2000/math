@@ -1,0 +1,185 @@
+{
+  "scope": "Frozen first-checkpoint scripts, actual normal/optimized executions; assertion removal noted per script",
+  "runs": [
+    {
+      "script": "toric-shared-roots/check.py",
+      "script_sha256": "264ccb2d28905c52ee2595bd887c8686952628447a54fbb63f7ca440e50d13b4",
+      "optimized": false,
+      "assertion_count": 26,
+      "returncode": 0,
+      "seconds": 0.537,
+      "stdout_sha256": "58cd3034540e8493187ec1816c6cfbb526b69cdcdb02130572fec4eebdc33b14",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "toric-shared-roots/check.py",
+      "script_sha256": "264ccb2d28905c52ee2595bd887c8686952628447a54fbb63f7ca440e50d13b4",
+      "optimized": true,
+      "assertion_count": 26,
+      "returncode": 0,
+      "seconds": 1.94,
+      "stdout_sha256": "58cd3034540e8493187ec1816c6cfbb526b69cdcdb02130572fec4eebdc33b14",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "signed-flags/verify.py",
+      "script_sha256": "a33625486baeb6cebc65d7ab1efbcab4419fe627e68ceff6e24a43ad7d9029f2",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.124,
+      "stdout_sha256": "db1042fb58333df36533189546e540d32bd0a4adfc9160404b055d3dcafe6d63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "signed-flags/verify.py",
+      "script_sha256": "a33625486baeb6cebc65d7ab1efbcab4419fe627e68ceff6e24a43ad7d9029f2",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.303,
+      "stdout_sha256": "db1042fb58333df36533189546e540d32bd0a4adfc9160404b055d3dcafe6d63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "cyclotomic-support/verify_cyclotomic.py",
+      "script_sha256": "35bae85f36f31159db2337bb0c47c2b4801f9b981168c966fdfaec2c5e8c73e6",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.72,
+      "stdout_sha256": "b37cfcbd6e97e3672ed7e5eba346ff8418b3cb9ac81aa57a2b3eceea750405a8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "cyclotomic-support/verify_cyclotomic.py",
+      "script_sha256": "35bae85f36f31159db2337bb0c47c2b4801f9b981168c966fdfaec2c5e8c73e6",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.673,
+      "stdout_sha256": "b37cfcbd6e97e3672ed7e5eba346ff8418b3cb9ac81aa57a2b3eceea750405a8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check.py",
+      "script_sha256": "65c3a194526b3d474f39aee6aedd5e3c10be0eb675e174953fdda433706a6080",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.741,
+      "stdout_sha256": "092fca125037e41c0e16abdaeb6ae6441f93cea16045bc73b498d561d4967037",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check.py",
+      "script_sha256": "65c3a194526b3d474f39aee6aedd5e3c10be0eb675e174953fdda433706a6080",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.327,
+      "stdout_sha256": "092fca125037e41c0e16abdaeb6ae6441f93cea16045bc73b498d561d4967037",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_ordered_counts.py",
+      "script_sha256": "578a1e7d084f2b9cc46a832d9aca019d1495d47d18275001ee7c2fb6ab9592a2",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.032,
+      "stdout_sha256": "41dbf40e733131214f104d2b9f7cadddd2c254b07d2465762f697d526516778f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_ordered_counts.py",
+      "script_sha256": "578a1e7d084f2b9cc46a832d9aca019d1495d47d18275001ee7c2fb6ab9592a2",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.034,
+      "stdout_sha256": "41dbf40e733131214f104d2b9f7cadddd2c254b07d2465762f697d526516778f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_signed_flags.py",
+      "script_sha256": "cb8c13e99b96016de6291d1ae08fd011025c595c1efce3c33d9164e621e3a27d",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.198,
+      "stdout_sha256": "ab8c0ae772598619f8a160d53257aa7694ab4d93280b7a8c90bf52b42f1531e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_signed_flags.py",
+      "script_sha256": "cb8c13e99b96016de6291d1ae08fd011025c595c1efce3c33d9164e621e3a27d",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.215,
+      "stdout_sha256": "ab8c0ae772598619f8a160d53257aa7694ab4d93280b7a8c90bf52b42f1531e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "arithmetic-configurations/verify.py",
+      "script_sha256": "59bffa5b38462f51c6d12cd7eb0b8d2f869b19741131bb95ca915a97d7cac119",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.679,
+      "stdout_sha256": "3207226f964dd7a3c8d2d2b27474685deb936721190f4f52d9a2876d709bafa3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "arithmetic-configurations/verify.py",
+      "script_sha256": "59bffa5b38462f51c6d12cd7eb0b8d2f869b19741131bb95ca915a97d7cac119",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.945,
+      "stdout_sha256": "3207226f964dd7a3c8d2d2b27474685deb936721190f4f52d9a2876d709bafa3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check.py",
+      "script_sha256": "f5a697f38aadb386c926e956612a56e914dde88be4c860f24eabef37544d494c",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 6.43,
+      "stdout_sha256": "dda8568ad33e627b3e6a40eeb4d162bd91427c33423eecfe3ab9c833d66f4574",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check.py",
+      "script_sha256": "f5a697f38aadb386c926e956612a56e914dde88be4c860f24eabef37544d494c",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 7.63,
+      "stdout_sha256": "dda8568ad33e627b3e6a40eeb4d162bd91427c33423eecfe3ab9c833d66f4574",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "cyclotomic-audit/audit_independent.py",
+      "script_sha256": "806e10c64f913aafe21ad5c54e36751430ac5ee8149457100ad87d57a94ec9f9",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.145,
+      "stdout_sha256": "4e3137e88d69232041c2feee27c90307f8c9df72938300358620120d40646cbd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "cyclotomic-audit/audit_independent.py",
+      "script_sha256": "806e10c64f913aafe21ad5c54e36751430ac5ee8149457100ad87d57a94ec9f9",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.477,
+      "stdout_sha256": "4e3137e88d69232041c2feee27c90307f8c9df72938300358620120d40646cbd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

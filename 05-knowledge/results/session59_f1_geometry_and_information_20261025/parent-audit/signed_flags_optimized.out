@@ -1,0 +1,7 @@
+r,j,n 3 2 6 coefficients 16 q1jets [0, 0, 180] PASS
+r,j,n 3 4 10 coefficients 46 q1jets [0, 0, 0, 0, 226800] PASS
+r,j,n 3 6 14 coefficients 92 q1jets [0, 0, 0, 0, 0, 0, 1362160800] PASS
+r,j,n 2 2 5 coefficients 11 q1jets [8, 40, 118] PASS
+r,j,n 4 3 9 coefficients 37 q1jets [1152, 20736, 204096, 1413312] PASS
+mask 255 jets [0, 0, 180] D [1, 1, 2, 1, 1, -1, -2, -3, -3, -2, -1, 1, 1, 2, 1, 1]
+mask 2015 jets [0, 0, 204] D [1, 1, 2, 3, -1, 1, -4, -3, -3, -4, 1, -1, 3, 2, 1, 1]

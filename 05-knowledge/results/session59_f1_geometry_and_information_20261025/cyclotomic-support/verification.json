@@ -1,0 +1,139 @@
+{
+  "method": "exact enumeration with explicit RuntimeError gates; no assert statements",
+  "samples": {
+    "arithmetic_e65": {
+      "(0, 1)": 3000,
+      "(1, -1)": 2016,
+      "(1, 0)": 4056,
+      "(1, 1)": 3696
+    },
+    "arithmetic_e65_generated_subgroup": "24Z",
+    "dynamics_m12_k3_r2": {
+      "0,1": 7,
+      "0,2": 14,
+      "1,1": 6,
+      "1,2": 30,
+      "2,1": 18,
+      "2,2": 108
+    },
+    "dynamics_m6_k3_r2": {
+      "0,1": 7,
+      "0,2": 14,
+      "1,1": 6,
+      "1,2": 30
+    },
+    "dynamics_m8_k3_r3": {
+      "0,1": 13,
+      "0,2": 78
+    },
+    "higher_exponent_e25": {
+      "C4_projective_zero_space_count": 1,
+      "gap_count": 2,
+      "j1": 600,
+      "j2": 336
+    },
+    "q3_quadratic_descent_support_sizes": {
+      "(0, 1)": {
+        "1": 2,
+        "2": 2
+      },
+      "(1, 0)": {
+        "2": 4
+      }
+    },
+    "twisted_m4_k3_r3": {
+      "b": [
+        0,
+        1,
+        2
+      ],
+      "cycle_counts": {
+        "1": 1,
+        "3": 4,
+        "6": 3
+      },
+      "fixed": 1,
+      "orbit_count": 8,
+      "order": 6,
+      "sigma": [
+        1,
+        2,
+        0
+      ]
+    },
+    "twisted_m6_k3_r5": {
+      "b": [
+        0,
+        1,
+        2
+      ],
+      "cycle_counts": {
+        "1": 1,
+        "2": 1,
+        "3": 4,
+        "6": 7
+      },
+      "fixed": 1,
+      "orbit_count": 13,
+      "order": 6,
+      "sigma": [
+        1,
+        2,
+        0
+      ]
+    },
+    "twisted_m8_k3_r7": {
+      "b": [
+        0,
+        1,
+        2
+      ],
+      "cycle_counts": {
+        "1": 1,
+        "3": 4,
+        "6": 13
+      },
+      "fixed": 1,
+      "orbit_count": 18,
+      "order": 6,
+      "sigma": [
+        1,
+        2,
+        0
+      ]
+    },
+    "unit_orbit_table_k3": {
+      "1": 7,
+      "10": 43,
+      "11": 22,
+      "12": 71,
+      "13": 24,
+      "14": 51,
+      "15": 50,
+      "16": 64,
+      "2": 13,
+      "3": 14,
+      "4": 22,
+      "5": 16,
+      "6": 35,
+      "7": 18,
+      "8": 37,
+      "9": 29
+    }
+  },
+  "statistics": {
+    "coefficient_hom_cases": 144,
+    "composition_point_cases": 2009,
+    "count_cases": 40,
+    "cyclic_burnside_cases": 21,
+    "exhaustive_twist_cases": 3024,
+    "functional_graph_cases": 468,
+    "larger_twist_cases": 3168,
+    "power_fixed_cases": 440,
+    "tail_period_cells": 3200,
+    "twisted_descent_formula_cases": 36,
+    "twisted_descent_raw_cases": 22,
+    "unit_orbit_cases": 32
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,1257 @@
+{
+  "status": "PASS",
+  "scope": "Bounded finite checks, not substitutes for RESULT.md proofs",
+  "field_rows": [
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 1,
+      "epsilon": null,
+      "count": 3,
+      "boundary": 1,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 2,
+      "epsilon": null,
+      "count": 7,
+      "boundary": 3,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 3,
+      "epsilon": null,
+      "count": 15,
+      "boundary": 7,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 4,
+      "epsilon": null,
+      "count": 31,
+      "boundary": 15,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 5,
+      "epsilon": null,
+      "count": 63,
+      "boundary": 31,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 1,
+      "q": 2,
+      "r": 6,
+      "epsilon": null,
+      "count": 127,
+      "boundary": 63,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 1,
+      "epsilon": -1,
+      "count": 4,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 2,
+      "epsilon": -1,
+      "count": 16,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 3,
+      "epsilon": -1,
+      "count": 64,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 4,
+      "epsilon": -1,
+      "count": 256,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 5,
+      "epsilon": -1,
+      "count": 1024,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 1,
+      "q": 3,
+      "r": 6,
+      "epsilon": -1,
+      "count": 4096,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 1,
+      "epsilon": 1,
+      "count": 6,
+      "boundary": 2,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 2,
+      "epsilon": 1,
+      "count": 36,
+      "boundary": 20,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 3,
+      "epsilon": 1,
+      "count": 246,
+      "boundary": 182,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 4,
+      "epsilon": 1,
+      "count": 1896,
+      "boundary": 1640,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 5,
+      "epsilon": 1,
+      "count": 15786,
+      "boundary": 14762,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 1,
+      "q": 5,
+      "r": 6,
+      "epsilon": 1,
+      "count": 136956,
+      "boundary": 132860,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 1,
+      "epsilon": -1,
+      "count": 8,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 2,
+      "epsilon": -1,
+      "count": 64,
+      "boundary": 0,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 3,
+      "epsilon": -1,
+      "count": 512,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 4,
+      "epsilon": -1,
+      "count": 4096,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 5,
+      "epsilon": -1,
+      "count": 32768,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 1,
+      "q": 7,
+      "r": 6,
+      "epsilon": -1,
+      "count": 262144,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 1,
+      "epsilon": -1,
+      "count": 12,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 2,
+      "epsilon": -1,
+      "count": 144,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 3,
+      "epsilon": -1,
+      "count": 1728,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 4,
+      "epsilon": -1,
+      "count": 20736,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 5,
+      "epsilon": -1,
+      "count": 248832,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 1,
+      "q": 11,
+      "r": 6,
+      "epsilon": -1,
+      "count": 2985984,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 1,
+      "epsilon": 1,
+      "count": 14,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 2,
+      "epsilon": 1,
+      "count": 196,
+      "boundary": 52,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 3,
+      "epsilon": 1,
+      "count": 3030,
+      "boundary": 1302,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 4,
+      "epsilon": 1,
+      "count": 53288,
+      "boundary": 32552,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 5,
+      "epsilon": 1,
+      "count": 1062634,
+      "boundary": 813802,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 13,
+      "degree": 1,
+      "q": 13,
+      "r": 6,
+      "epsilon": 1,
+      "count": 23331036,
+      "boundary": 20345052,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 1,
+      "epsilon": 1,
+      "count": 18,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 2,
+      "epsilon": 1,
+      "count": 324,
+      "boundary": 68,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 3,
+      "epsilon": 1,
+      "count": 6342,
+      "boundary": 2246,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 4,
+      "epsilon": 1,
+      "count": 139656,
+      "boundary": 74120,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 5,
+      "epsilon": 1,
+      "count": 3494538,
+      "boundary": 2445962,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 17,
+      "degree": 1,
+      "q": 17,
+      "r": 6,
+      "epsilon": 1,
+      "count": 97493964,
+      "boundary": 80716748,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 1,
+      "epsilon": -1,
+      "count": 20,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 2,
+      "epsilon": -1,
+      "count": 400,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 3,
+      "epsilon": -1,
+      "count": 8000,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 4,
+      "epsilon": -1,
+      "count": 160000,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 5,
+      "epsilon": -1,
+      "count": 3200000,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 19,
+      "degree": 1,
+      "q": 19,
+      "r": 6,
+      "epsilon": -1,
+      "count": 64000000,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 1,
+      "epsilon": -1,
+      "count": 24,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 2,
+      "epsilon": -1,
+      "count": 576,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 3,
+      "epsilon": -1,
+      "count": 13824,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 4,
+      "epsilon": -1,
+      "count": 331776,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 5,
+      "epsilon": -1,
+      "count": 7962624,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 23,
+      "degree": 1,
+      "q": 23,
+      "r": 6,
+      "epsilon": -1,
+      "count": 191102976,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 1,
+      "epsilon": 1,
+      "count": 30,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 2,
+      "epsilon": 1,
+      "count": 900,
+      "boundary": 116,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 3,
+      "epsilon": 1,
+      "count": 28566,
+      "boundary": 6614,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 4,
+      "epsilon": 1,
+      "count": 991656,
+      "boundary": 377000,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 5,
+      "epsilon": 1,
+      "count": 38699370,
+      "boundary": 21489002,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 29,
+      "degree": 1,
+      "q": 29,
+      "r": 6,
+      "epsilon": 1,
+      "count": 1706763420,
+      "boundary": 1224873116,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 1,
+      "epsilon": -1,
+      "count": 32,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 2,
+      "epsilon": -1,
+      "count": 1024,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 3,
+      "epsilon": -1,
+      "count": 32768,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 4,
+      "epsilon": -1,
+      "count": 1048576,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 5,
+      "epsilon": -1,
+      "count": 33554432,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 31,
+      "degree": 1,
+      "q": 31,
+      "r": 6,
+      "epsilon": -1,
+      "count": 1073741824,
+      "boundary": 0,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 1,
+      "epsilon": null,
+      "count": 5,
+      "boundary": 1,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 2,
+      "epsilon": null,
+      "count": 21,
+      "boundary": 5,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 3,
+      "epsilon": null,
+      "count": 85,
+      "boundary": 21,
+      "independent_pair_enumeration": true,
+      "direct_projective_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 4,
+      "epsilon": null,
+      "count": 341,
+      "boundary": 85,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 5,
+      "epsilon": null,
+      "count": 1365,
+      "boundary": 341,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 2,
+      "degree": 2,
+      "q": 4,
+      "r": 6,
+      "epsilon": null,
+      "count": 5461,
+      "boundary": 1365,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 1,
+      "epsilon": 1,
+      "count": 10,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 2,
+      "epsilon": 1,
+      "count": 100,
+      "boundary": 36,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 3,
+      "epsilon": 1,
+      "count": 1126,
+      "boundary": 614,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 4,
+      "epsilon": 1,
+      "count": 14536,
+      "boundary": 10440,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 5,
+      "epsilon": 1,
+      "count": 210250,
+      "boundary": 177482,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 3,
+      "degree": 2,
+      "q": 9,
+      "r": 6,
+      "epsilon": 1,
+      "count": 3279340,
+      "boundary": 3017196,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 1,
+      "epsilon": 1,
+      "count": 26,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 2,
+      "epsilon": 1,
+      "count": 676,
+      "boundary": 100,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 3,
+      "epsilon": 1,
+      "count": 18726,
+      "boundary": 4902,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 4,
+      "epsilon": 1,
+      "count": 571976,
+      "boundary": 240200,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 5,
+      "epsilon": 1,
+      "count": 19732426,
+      "boundary": 11769802,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 5,
+      "degree": 2,
+      "q": 25,
+      "r": 6,
+      "epsilon": 1,
+      "count": 767823276,
+      "boundary": 576720300,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 1,
+      "epsilon": 1,
+      "count": 50,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 2,
+      "epsilon": 1,
+      "count": 2500,
+      "boundary": 196,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 3,
+      "epsilon": 1,
+      "count": 129606,
+      "boundary": 19014,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 4,
+      "epsilon": 1,
+      "count": 7152776,
+      "boundary": 1844360,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 5,
+      "epsilon": 1,
+      "count": 433706890,
+      "boundary": 178902922,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 7,
+      "degree": 2,
+      "q": 49,
+      "r": 6,
+      "epsilon": 1,
+      "count": 29584173900,
+      "boundary": 17353583436,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 1,
+      "epsilon": 1,
+      "count": 122,
+      "boundary": 2,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 2,
+      "epsilon": 1,
+      "count": 14884,
+      "boundary": 484,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 3,
+      "epsilon": 1,
+      "count": 1844646,
+      "boundary": 116646,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 4,
+      "epsilon": 1,
+      "count": 235471688,
+      "boundary": 28111688,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 5,
+      "epsilon": 1,
+      "count": 31658116810,
+      "boundary": 6774916810,
+      "independent_pair_enumeration": true
+    },
+    {
+      "p": 11,
+      "degree": 2,
+      "q": 121,
+      "r": 6,
+      "epsilon": 1,
+      "count": 4618738951212,
+      "boundary": 1632754951212,
+      "independent_pair_enumeration": true
+    }
+  ],
+  "symbolic": {
+    "coordinate_change": true,
+    "interior_branch_point": [
+      "1",
+      "0",
+      "sqrt(2)",
+      "1",
+      "1"
+    ],
+    "radicands": [
+      0,
+      2,
+      0,
+      2
+    ],
+    "tangent_radicand_values": [
+      2,
+      -2,
+      -2,
+      2
+    ],
+    "polynomials": [
+      {
+        "r": 1,
+        "split": "T + 1",
+        "nonsplit": "T + 1",
+        "difference": "0"
+      },
+      {
+        "r": 2,
+        "split": "T**2 + 2*T + 1",
+        "nonsplit": "T**2 + 2*T + 1",
+        "difference": "0"
+      },
+      {
+        "r": 3,
+        "split": "T**3 + 5*T**2 - T + 1",
+        "nonsplit": "T**3 + 3*T**2 + 3*T + 1",
+        "difference": "2*T**2 - 4*T"
+      },
+      {
+        "r": 4,
+        "split": "T**4 + 12*T**3 - 10*T**2 + 4*T + 1",
+        "nonsplit": "T**4 + 4*T**3 + 6*T**2 + 4*T + 1",
+        "difference": "8*T**3 - 16*T**2"
+      },
+      {
+        "r": 5,
+        "split": "T**5 + 27*T**4 - 38*T**3 + 22*T**2 - 3*T + 1",
+        "nonsplit": "T**5 + 5*T**4 + 10*T**3 + 10*T**2 + 5*T + 1",
+        "difference": "22*T**4 - 48*T**3 + 12*T**2 - 8*T"
+      },
+      {
+        "r": 6,
+        "split": "T**6 + 58*T**5 - 113*T**4 + 92*T**3 - 33*T**2 + 6*T + 1",
+        "nonsplit": "T**6 + 6*T**5 + 15*T**4 + 20*T**3 + 15*T**2 + 6*T + 1",
+        "difference": "52*T**5 - 128*T**4 + 72*T**3 - 48*T**2"
+      },
+      {
+        "r": 7,
+        "split": "T**7 + 121*T**6 - 299*T**5 + 317*T**4 - 173*T**3 + 51*T**2 - 5*T + 1",
+        "nonsplit": "T**7 + 7*T**6 + 21*T**5 + 35*T**4 + 35*T**3 + 21*T**2 + 7*T + 1",
+        "difference": "114*T**6 - 320*T**5 + 282*T**4 - 208*T**3 + 30*T**2 - 12*T"
+      },
+      {
+        "r": 8,
+        "split": "T**8 + 248*T**7 - 740*T**6 + 968*T**5 - 698*T**4 + 296*T**3 - 68*T**2 + 8*T + 1",
+        "nonsplit": "T**8 + 8*T**7 + 28*T**6 + 56*T**5 + 70*T**4 + 56*T**3 + 28*T**2 + 8*T + 1",
+        "difference": "240*T**7 - 768*T**6 + 912*T**5 - 768*T**4 + 240*T**3 - 96*T**2"
+      }
+    ]
+  },
+  "semigroup": [
+    {
+      "r": 1,
+      "degree": 0,
+      "distinct_monomials": 1
+    },
+    {
+      "r": 1,
+      "degree": 1,
+      "distinct_monomials": 3
+    },
+    {
+      "r": 1,
+      "degree": 2,
+      "distinct_monomials": 5
+    },
+    {
+      "r": 1,
+      "degree": 3,
+      "distinct_monomials": 7
+    },
+    {
+      "r": 1,
+      "degree": 4,
+      "distinct_monomials": 9
+    },
+    {
+      "r": 1,
+      "degree": 5,
+      "distinct_monomials": 11
+    },
+    {
+      "r": 2,
+      "degree": 0,
+      "distinct_monomials": 1
+    },
+    {
+      "r": 2,
+      "degree": 1,
+      "distinct_monomials": 5
+    },
+    {
+      "r": 2,
+      "degree": 2,
+      "distinct_monomials": 13
+    },
+    {
+      "r": 2,
+      "degree": 3,
+      "distinct_monomials": 25
+    },
+    {
+      "r": 2,
+      "degree": 4,
+      "distinct_monomials": 41
+    },
+    {
+      "r": 2,
+      "degree": 5,
+      "distinct_monomials": 61
+    },
+    {
+      "r": 3,
+      "degree": 0,
+      "distinct_monomials": 1
+    },
+    {
+      "r": 3,
+      "degree": 1,
+      "distinct_monomials": 7
+    },
+    {
+      "r": 3,
+      "degree": 2,
+      "distinct_monomials": 25
+    },
+    {
+      "r": 3,
+      "degree": 3,
+      "distinct_monomials": 63
+    },
+    {
+      "r": 3,
+      "degree": 4,
+      "distinct_monomials": 129
+    },
+    {
+      "r": 3,
+      "degree": 5,
+      "distinct_monomials": 231
+    },
+    {
+      "r": 4,
+      "degree": 0,
+      "distinct_monomials": 1
+    },
+    {
+      "r": 4,
+      "degree": 1,
+      "distinct_monomials": 9
+    },
+    {
+      "r": 4,
+      "degree": 2,
+      "distinct_monomials": 41
+    },
+    {
+      "r": 4,
+      "degree": 3,
+      "distinct_monomials": 129
+    },
+    {
+      "r": 4,
+      "degree": 4,
+      "distinct_monomials": 321
+    },
+    {
+      "r": 4,
+      "degree": 5,
+      "distinct_monomials": 681
+    }
+  ],
+  "blue_assignments": {
+    "base": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "plus": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "minus": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "full": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  }
+}

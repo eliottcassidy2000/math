@@ -1,0 +1,2 @@
+f043db14b51e03b01d7424add1253a14057bd97b513a59d4c0088623e647c38d  cyclotomic-support/CYCLOTOMIC_SUPPORT_DYNAMICS.md
+35bae85f36f31159db2337bb0c47c2b4801f9b981168c966fdfaec2c5e8c73e6  cyclotomic-support/verify_cyclotomic.py
