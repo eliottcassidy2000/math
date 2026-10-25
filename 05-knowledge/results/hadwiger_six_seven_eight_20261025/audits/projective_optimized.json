@@ -1,0 +1,26 @@
+{
+  "affine_inversion_fixed": 0,
+  "affine_linear_parts": 168,
+  "blocks": [
+    14,
+    14
+  ],
+  "conic_marking": [
+    7,
+    3,
+    5,
+    4,
+    6,
+    1,
+    2,
+    0
+  ],
+  "cube_preservers": 6,
+  "generated_PGL": 336,
+  "generated_PSL": 168,
+  "linear_inversion_fixed": 4,
+  "order3_fixed_pairs": 1,
+  "order3_fixed_quadrangles": 4,
+  "source_sha256": "7b4c2a5be5399052c3ea3be154f1f5a968409bdebc0b970fdd76fc9bf5aaee63",
+  "status": "PASS / FINITE-EXACT independent review"
+}

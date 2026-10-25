@@ -1,0 +1,90 @@
+{
+  "repository_sources": [
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "git_blob_sha256": "7d4adfcf2ec0b8e07fc73d32336d09f25a475c7b4abd7bab615864683735add9"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/six_seven_geometry_20261025/fano_codes/RESULT.md",
+      "git_blob_sha256": "dd3f7cb88ef8901110833c552669fff8f877005ffb457f1aaf4e33faffd04b4c"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/six_seven_geometry_20261025/characters/CHARACTER_SEXTICS.md",
+      "git_blob_sha256": "ef05414d5904417b7e4cdc2b480bde5a08b2b65011c093acef412f4b0f8c0a90"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/SYNTHESIS.md",
+      "git_blob_sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/torus-fano/TORUS_FANO_CAMPEDELLI.md",
+      "git_blob_sha256": "43a7f1dd5acc5395f0fad8b79ad203607964bba476139681cf0d661c92b91c2b"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "git_blob_sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/SOURCE_STATUS.md",
+      "git_blob_sha256": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/geometry/README.md",
+      "git_blob_sha256": "8919a2a4c6d7f74caf3576f8aee84ff5621c21cac709833ccc35bfd4946d0784"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/hn/README.md",
+      "git_blob_sha256": "57408a14049d053b2dc8483a62af914b0ff4fbf3fc79fd62822e29756b4dd029"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/spindle_tournament_interfaces_20261011g.md",
+      "git_blob_sha256": "f7583ffa064d0d4c903d4317996f1f45471e2586cfddcbf291eaa07681ccc5d0"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/plane_six_reframes_parity_20261011b.md",
+      "git_blob_sha256": "ea9e0a9974dcfc18ccfb47f910f1a1c87ee781c8bde2c9b05213113ce786d24e"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "git_blob_sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    {
+      "commit": "863864b62c45670a76a5f8c6aa2fb7b2f0f07855",
+      "path": "05-knowledge/results/lattices_codes_tournaments_20261021.md",
+      "git_blob_sha256": "a40881807161bc99d2ef2caff95162e609e84795b77beb23aa61bb4b392e623e"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/holonomy/TWISTED_PAIR_LIFTS.md",
+      "git_blob_sha256": "bfa426ff8c7107af9ecf8fcf837ab3b23a65e49ac2492f8e6c8b65d3aa062134"
+    },
+    {
+      "commit": "9807ae1678f508621f98c80b5ff279b6799e5c74",
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/palettes/RESULT.md",
+      "git_blob_sha256": "cb1d3a5d9b599d623e63aeea7412a3ad184470f8ebf7f20c48a99e1580e87211"
+    }
+  ],
+  "primary_external_sources": [
+    {
+      "url": "https://kam.mff.cuni.cz/~spring/2017/papers/equilateral_triangles_in_Fano.pdf",
+      "scope": "Caldero-Germoni2016 Lemmas3-4 and Proposition9; projective construction read and independently rederived; no novelty claim"
+    },
+    {
+      "url": "https://arxiv.org/html/1804.02385",
+      "scope": "de Grey v3 classical flower and spindle context; not used as current lower-bound source"
+    }
+  ],
+  "external_plane_status": "Inherited qualified Session61 SOURCE_STATUS only; no new bound or formal proof verification in this packet."
+}

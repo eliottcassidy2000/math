@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="535" viewBox="0 0 1040 535">
+<rect width="1040" height="535" fill="#f7f8fb"/>
+<text x="520.0" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#203040">One collision forces the A2 flower</text>
+<line x1="100.000" y1="350.000" x2="260.000" y2="350.000" stroke="#526579" stroke-width="2"/>
+<line x1="100.000" y1="350.000" x2="100.000" y2="205.000" stroke="#526579" stroke-width="2"/>
+<line x1="100.000" y1="350.000" x2="165.000" y2="285.000" stroke="#526579" stroke-width="2"/>
+<line x1="260.000" y1="350.000" x2="260.000" y2="205.000" stroke="#526579" stroke-width="2"/>
+<line x1="260.000" y1="350.000" x2="325.000" y2="285.000" stroke="#526579" stroke-width="2"/>
+<line x1="100.000" y1="205.000" x2="260.000" y2="205.000" stroke="#526579" stroke-width="2"/>
+<line x1="100.000" y1="205.000" x2="165.000" y2="140.000" stroke="#526579" stroke-width="2"/>
+<line x1="260.000" y1="205.000" x2="325.000" y2="140.000" stroke="#526579" stroke-width="2"/>
+<line x1="165.000" y1="285.000" x2="325.000" y2="285.000" stroke="#526579" stroke-width="2"/>
+<line x1="165.000" y1="285.000" x2="165.000" y2="140.000" stroke="#526579" stroke-width="2"/>
+<line x1="325.000" y1="285.000" x2="325.000" y2="140.000" stroke="#526579" stroke-width="2"/>
+<line x1="165.000" y1="140.000" x2="325.000" y2="140.000" stroke="#526579" stroke-width="2"/>
+<circle cx="100.000" cy="350.000" r="8" fill="#c14343"/>
+<text x="75" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#c14343">000</text>
+<circle cx="260.000" cy="350.000" r="8" fill="#2466a0"/>
+<text x="283" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">100</text>
+<circle cx="100.000" cy="205.000" r="8" fill="#2466a0"/>
+<text x="72" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">010</text>
+<circle cx="260.000" cy="205.000" r="8" fill="#2466a0"/>
+<text x="286" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">110</text>
+<circle cx="165.000" cy="285.000" r="8" fill="#2466a0"/>
+<text x="140" y="270" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">001</text>
+<circle cx="325.000" cy="285.000" r="8" fill="#2466a0"/>
+<text x="353" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">101</text>
+<circle cx="165.000" cy="140.000" r="8" fill="#2466a0"/>
+<text x="137" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">011</text>
+<circle cx="325.000" cy="140.000" r="8" fill="#c14343"/>
+<text x="351" y="125" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#c14343">111</text>
+<text x="215" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#203040">8 labels · 12 edges · χ=2</text>
+<text x="215" y="453" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#526579">Abstract cube shown schematically</text>
+<line x1="405.000" y1="245.000" x2="555.000" y2="245.000" stroke="#203040" stroke-width="3"/>
+<line x1="555.000" y1="245.000" x2="540.000" y2="235.000" stroke="#203040" stroke-width="3"/>
+<line x1="555.000" y1="245.000" x2="540.000" y2="255.000" stroke="#203040" stroke-width="3"/>
+<text x="480" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">one fibre</text>
+<text x="480" y="225" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#c14343">000 ≡ 111</text>
+<line x1="795.000" y1="245.000" x2="920.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<line x1="795.000" y1="245.000" x2="732.500" y2="136.747" stroke="#526579" stroke-width="2"/>
+<line x1="795.000" y1="245.000" x2="732.500" y2="353.253" stroke="#526579" stroke-width="2"/>
+<line x1="920.000" y1="245.000" x2="857.500" y2="136.747" stroke="#526579" stroke-width="2"/>
+<line x1="920.000" y1="245.000" x2="857.500" y2="353.253" stroke="#526579" stroke-width="2"/>
+<line x1="732.500" y1="136.747" x2="857.500" y2="136.747" stroke="#526579" stroke-width="2"/>
+<line x1="732.500" y1="136.747" x2="670.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<line x1="857.500" y1="136.747" x2="795.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<line x1="732.500" y1="353.253" x2="857.500" y2="353.253" stroke="#526579" stroke-width="2"/>
+<line x1="732.500" y1="353.253" x2="670.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<line x1="857.500" y1="353.253" x2="795.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<line x1="670.000" y1="245.000" x2="795.000" y2="245.000" stroke="#526579" stroke-width="2"/>
+<circle cx="795.000" cy="245.000" r="8" fill="#c14343"/>
+<circle cx="920.000" cy="245.000" r="8" fill="#2466a0"/>
+<text x="948.0" y="251.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">100</text>
+<circle cx="732.500" cy="136.747" r="8" fill="#2466a0"/>
+<text x="718.5" y="119.36413862476533" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">010</text>
+<circle cx="857.500" cy="136.747" r="8" fill="#2466a0"/>
+<text x="871.5" y="119.36413862476533" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">110</text>
+<circle cx="732.500" cy="353.253" r="8" fill="#2466a0"/>
+<text x="718.5" y="382.6358613752347" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">001</text>
+<circle cx="857.500" cy="353.253" r="8" fill="#2466a0"/>
+<text x="871.5" y="382.6358613752347" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">101</text>
+<circle cx="670.000" cy="245.000" r="8" fill="#2466a0"/>
+<text x="642.0" y="251.0" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">011</text>
+<text x="795" y="276" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#c14343">000 = 111</text>
+<text x="795" y="425" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#203040">7 points · 12 unit edges · χ=3</text>
+<text x="795" y="453" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#526579">Unit spokes and unit hexagon sides</text>
+<text x="520.0" y="506" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#203040">Every planar unit-edge drawing of Q3 with seven distinct images has this form.</text>
+</svg>

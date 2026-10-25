@@ -1,0 +1,148 @@
+{
+  "checks": 52230,
+  "graph_universes": {
+    "three_parallel_edges": {
+      "census": [
+        {
+          "completion": false,
+          "count": 59904,
+          "epsilon": 0,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 14976,
+          "epsilon": 0,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 4992,
+          "epsilon": 0,
+          "full_frame": true
+        },
+        {
+          "completion": false,
+          "count": 20736,
+          "epsilon": 1,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 6048,
+          "epsilon": 1,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 864,
+          "epsilon": 1,
+          "full_frame": true
+        },
+        {
+          "completion": false,
+          "count": 2304,
+          "epsilon": 2,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 720,
+          "epsilon": 2,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 48,
+          "epsilon": 2,
+          "full_frame": true
+        }
+      ],
+      "cycle_rank": 2,
+      "edges": 3,
+      "instances": 110592,
+      "vertices": 2
+    },
+    "triangle": {
+      "census": [
+        {
+          "completion": false,
+          "count": 18432,
+          "epsilon": 0,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 18432,
+          "epsilon": 0,
+          "full_frame": true
+        },
+        {
+          "completion": false,
+          "count": 27648,
+          "epsilon": 1,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 13824,
+          "epsilon": 1,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 13824,
+          "epsilon": 1,
+          "full_frame": true
+        },
+        {
+          "completion": false,
+          "count": 9216,
+          "epsilon": 2,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 6912,
+          "epsilon": 2,
+          "full_frame": false
+        },
+        {
+          "completion": true,
+          "count": 2304,
+          "epsilon": 2,
+          "full_frame": true
+        }
+      ],
+      "cycle_rank": 1,
+      "edges": 3,
+      "instances": 110592,
+      "vertices": 3
+    }
+  },
+  "group_split": "48=2*24; all 2304 products checked",
+  "hostile": {
+    "fixed_free_word": [
+      5,
+      4,
+      7,
+      6,
+      1,
+      0,
+      3,
+      2
+    ],
+    "fixed_sets": [
+      [
+        0,
+        7
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  },
+  "source_sha256": "9aebdd42c760ceda90137d5f37f3f28e4b9d0be7108bb92f9281da03ac3bb12a",
+  "status": "PASS independent finite checks"
+}

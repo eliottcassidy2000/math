@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "normal_optimized_identical": true,
+      "receipt": "metric_spindle/normal.json",
+      "receipt_data_identical": true,
+      "script": "metric_spindle/check.py",
+      "source_sha256": "18efb56b18f0a3b5898648ad6551d67a3668575d3b8acc3d871afc744d5d909f",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "projective_eight/normal.json",
+      "receipt_data_identical": true,
+      "script": "projective_eight/check.py",
+      "source_sha256": "f1801304b544c7558ef1533ec0bf5ae6feaeb98c88c098e88578abf0552de2be",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "fano_eight/receipt.json",
+      "receipt_data_identical": true,
+      "script": "fano_eight/check.py",
+      "source_sha256": "998414c92c62bc4e266f5c7a6512b6dc058eb58ab19e80a841d8b902eb145a05",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "cube_boundary/normal.json",
+      "receipt_data_identical": true,
+      "script": "cube_boundary/check.py",
+      "source_sha256": "1ebb7220d10bdb7bc38ac6cfe82a47623716d3f346a926d3998f5d4ca9741857",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audits/metric.normal.json",
+      "receipt_data_identical": true,
+      "script": "audits/check_metric_independent.py",
+      "source_sha256": "920a99aa3df0600940751fbb810e8c7bc4660b0c6e92daa2e5a2e728d321f7b4",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audits/projective_independent.json",
+      "receipt_data_identical": true,
+      "script": "audits/check_projective_independent.py",
+      "source_sha256": "7b4c2a5be5399052c3ea3be154f1f5a968409bdebc0b970fdd76fc9bf5aaee63",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audits/palette-normal.json",
+      "receipt_data_identical": true,
+      "script": "audits/check_palette_independent.py",
+      "source_sha256": "9aebdd42c760ceda90137d5f37f3f28e4b9d0be7108bb92f9281da03ac3bb12a",
+      "status": "PASS"
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audits/boundary_independent.json",
+      "receipt_data_identical": true,
+      "script": "audits/check_boundary_independent.py",
+      "source_sha256": "985ab0162ec58fd35db61564c849078a0b6a38a60453270f94f0154c772da0cd",
+      "status": "PASS"
+    }
+  ],
+  "script_pairs": 8,
+  "status": "PASS"
+}

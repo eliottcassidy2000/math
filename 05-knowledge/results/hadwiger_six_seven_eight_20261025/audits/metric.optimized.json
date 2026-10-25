@@ -1,0 +1,16 @@
+{
+  "collision_census": {
+    "two_circles_three_intersections_impossible": 12,
+    "unit_loop_impossible": 12,
+    "wheel_quotient": 4
+  },
+  "color_counts": {
+    "cube2": 2,
+    "spindle3": 0,
+    "spindle4": 384,
+    "wheel2": 0,
+    "wheel3": 6
+  },
+  "method": "K2,3 obstruction and exact Gram distances",
+  "status": "PASS"
+}

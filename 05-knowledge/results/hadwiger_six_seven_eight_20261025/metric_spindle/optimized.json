@@ -1,0 +1,114 @@
+{
+  "Moser_basis_determinant": "1/144",
+  "Moser_four_color_witness": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    2,
+    3
+  ],
+  "Moser_four_colorings": 384,
+  "checks": 297,
+  "collision_pair_census": {
+    "edge_forbidden": 12,
+    "opposite_fold": 4,
+    "second_collision_forced": 12
+  },
+  "descended_cube_automorphisms": 12,
+  "distance_two_witness": {
+    "forced": [
+      [
+        0,
+        3
+      ],
+      [
+        4,
+        7
+      ]
+    ],
+    "pair": [
+      0,
+      3
+    ]
+  },
+  "faithful_cube_vectors": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "3/5",
+      "4/5"
+    ],
+    [
+      "5/13",
+      "12/13"
+    ]
+  ],
+  "fold_coordinates": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      -1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "image_squared_distance_counts": {
+    "1": 12,
+    "3": 6,
+    "4": 3
+  },
+  "labelled_squared_distance_counts": {
+    "0": 1,
+    "1": 18,
+    "3": 6,
+    "4": 3
+  },
+  "source_sha256": "18efb56b18f0a3b5898648ad6551d67a3668575d3b8acc3d871afc744d5d909f",
+  "status": "FINITE-EXACT; all-image classification is proved in RESULT.md",
+  "unit_graphs": {
+    "Moser": [
+      7,
+      11,
+      4
+    ],
+    "cube": [
+      8,
+      12,
+      2
+    ],
+    "flower": [
+      7,
+      12,
+      3
+    ]
+  }
+}

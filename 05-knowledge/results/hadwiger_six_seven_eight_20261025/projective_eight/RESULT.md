@@ -3,6 +3,7 @@
 **Status: CITED classical construction; PROVED explicit transport and loss
 statements; FINITE-EXACT group and incidence controls.** No new plane bound,
 surface automorphism or literature-wide novelty is asserted.
+[Independent audit: PASS](../audits/PROJECTIVE_AUDIT.md).
 
 ## Inheritance and source
 

@@ -1,0 +1,311 @@
+{
+  "automorphism_orders": {
+    "SQS8": 1344,
+    "cube": 48,
+    "fixed_origin": 168
+  },
+  "bouquet_census": [
+    {
+      "cycle_rank": 0,
+      "instances": 1,
+      "rows": [
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 1,
+          "invariant_even_dimension": 2,
+          "sections": 8
+        }
+      ]
+    },
+    {
+      "cycle_rank": 1,
+      "instances": 48,
+      "rows": [
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 8,
+          "invariant_even_dimension": 0,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 8,
+          "invariant_even_dimension": 0,
+          "sections": 2
+        },
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 12,
+          "invariant_even_dimension": 1,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": false,
+          "instances": 6,
+          "invariant_even_dimension": 1,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 6,
+          "invariant_even_dimension": 1,
+          "sections": 4
+        },
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 4,
+          "invariant_even_dimension": 2,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": false,
+          "instances": 3,
+          "invariant_even_dimension": 2,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 1,
+          "invariant_even_dimension": 2,
+          "sections": 8
+        }
+      ]
+    },
+    {
+      "cycle_rank": 2,
+      "instances": 2304,
+      "rows": [
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 1248,
+          "invariant_even_dimension": 0,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": false,
+          "instances": 312,
+          "invariant_even_dimension": 0,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 104,
+          "invariant_even_dimension": 0,
+          "sections": 2
+        },
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 432,
+          "invariant_even_dimension": 1,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": false,
+          "instances": 126,
+          "invariant_even_dimension": 1,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 18,
+          "invariant_even_dimension": 1,
+          "sections": 4
+        },
+        {
+          "completion_compatible": false,
+          "frame_compatible": false,
+          "instances": 48,
+          "invariant_even_dimension": 2,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": false,
+          "instances": 15,
+          "invariant_even_dimension": 2,
+          "sections": 0
+        },
+        {
+          "completion_compatible": true,
+          "frame_compatible": true,
+          "instances": 1,
+          "invariant_even_dimension": 2,
+          "sections": 8
+        }
+      ]
+    }
+  ],
+  "extended_code_words": [
+    0,
+    15,
+    51,
+    60,
+    85,
+    90,
+    102,
+    105,
+    150,
+    153,
+    165,
+    170,
+    195,
+    204,
+    240,
+    255
+  ],
+  "hostiles": {
+    "edge_lost": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "individually_soluble_loops": {
+      "coordinate_permutation": [
+        1,
+        2,
+        0
+      ],
+      "fixed_sets": [
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "gains": [
+        0,
+        5
+      ],
+      "joint_fixed_set": []
+    },
+    "shear": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5,
+      7,
+      6
+    ]
+  },
+  "hyperplane_blocks": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      3,
+      4,
+      5
+    ],
+    [
+      0,
+      2,
+      4,
+      6
+    ],
+    [
+      1,
+      3,
+      4,
+      6
+    ],
+    [
+      1,
+      2,
+      5,
+      6
+    ],
+    [
+      0,
+      3,
+      5,
+      6
+    ],
+    [
+      1,
+      2,
+      4,
+      7
+    ],
+    [
+      0,
+      3,
+      4,
+      7
+    ],
+    [
+      0,
+      2,
+      5,
+      7
+    ],
+    [
+      1,
+      3,
+      5,
+      7
+    ],
+    [
+      0,
+      1,
+      6,
+      7
+    ],
+    [
+      2,
+      3,
+      6,
+      7
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "source_sha256": "998414c92c62bc4e266f5c7a6512b6dc058eb58ab19e80a841d8b902eb145a05",
+  "status": "FINITE-EXACT supporting the accompanying proofs",
+  "universes": {
+    "affine_maps": 1344,
+    "all_point_permutations": 40320,
+    "bouquet_instances": 2353,
+    "palette_transports": 48,
+    "tree_instances": 2304
+  },
+  "unordered_direction_bases": 28
+}
