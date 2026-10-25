@@ -1,0 +1,112 @@
+{
+ "A1": {
+  "halted": false,
+  "macro_steps": 230504000,
+  "final_bits": [
+   1,
+   1,
+   28,
+   25
+  ],
+  "seconds": 60.0
+ },
+ "A2": {
+  "halted": false,
+  "macro_steps": 163726000,
+  "final_bits": [
+   0,
+   27,
+   26
+  ],
+  "seconds": 60.0
+ },
+ "A3": {
+  "halted": false,
+  "macro_steps": 1305000,
+  "final_bits": [
+   199945,
+   199945,
+   2
+  ],
+  "seconds": 60.0
+ },
+ "A4": {
+  "halted": false,
+  "macro_steps": 53000,
+  "final_bits": [
+   10290,
+   2
+  ],
+  "seconds": 61.1
+ },
+ "A5": {
+  "halted": false,
+  "macro_steps": 157238000,
+  "final_bits": [
+   0,
+   27,
+   25
+  ],
+  "seconds": 60.0
+ },
+ "A6": {
+  "halted": false,
+  "macro_steps": 169016000,
+  "final_bits": [
+   0,
+   25,
+   28
+  ],
+  "seconds": 60.0
+ },
+ "A7": {
+  "halted": false,
+  "macro_steps": 1484000,
+  "final_bits": [
+   186527,
+   1,
+   186527
+  ],
+  "seconds": 60.0
+ },
+ "A8": {
+  "halted": false,
+  "macro_steps": 902000,
+  "final_bits": [
+   276185,
+   276188
+  ],
+  "seconds": 60.0
+ },
+ "A9": {
+  "halted": false,
+  "macro_steps": 2294000,
+  "final_bits": [
+   2,
+   272084,
+   272081
+  ],
+  "seconds": 60.0
+ },
+ "A10": {
+  "halted": false,
+  "macro_steps": 157889000,
+  "final_bits": [
+   1,
+   26,
+   26
+  ],
+  "seconds": 60.0
+ },
+ "A11": {
+  "halted": false,
+  "macro_steps": 1369000,
+  "final_bits": [
+   400068,
+   2,
+   337,
+   2
+  ],
+  "seconds": 38.5
+ }
+}

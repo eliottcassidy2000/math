@@ -1,0 +1,156 @@
+[
+ {
+  "machine": "A1",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   1175,
+   [
+    1,
+    7,
+    9,
+    6
+   ]
+  ]
+ },
+ {
+  "machine": "A2",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   1584,
+   [
+    10,
+    13,
+    7
+   ]
+  ]
+ },
+ {
+  "machine": "A3",
+  "predicted": 60,
+  "matched_in_order": 39,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   3082330,
+   [
+    1158,
+    672,
+    5
+   ]
+  ]
+ },
+ {
+  "machine": "A4",
+  "predicted": 60,
+  "matched_in_order": 56,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   3914428,
+   [
+    254,
+    1872
+   ]
+  ]
+ },
+ {
+  "machine": "A5",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   1905,
+   [
+    11,
+    13,
+    7
+   ]
+  ]
+ },
+ {
+  "machine": "A6",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   3177,
+   [
+    10,
+    2,
+    60
+   ]
+  ]
+ },
+ {
+  "machine": "A7",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   15706,
+   [
+    75,
+    27,
+    7
+   ]
+  ]
+ },
+ {
+  "machine": "A8",
+  "predicted": 60,
+  "matched_in_order": 19,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   2282994,
+   [
+    434,
+    717
+   ]
+  ]
+ },
+ {
+  "machine": "A9",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   21224,
+   [
+    38,
+    25,
+    30
+   ]
+  ]
+ },
+ {
+  "machine": "A10",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   2371,
+   [
+    5,
+    0,
+    34
+   ]
+  ]
+ },
+ {
+  "machine": "A11",
+  "predicted": 60,
+  "matched_in_order": 60,
+  "tm_steps_used": 4000000,
+  "last_match": [
+   6581,
+   [
+    34,
+    21,
+    16,
+    3
+   ]
+  ]
+ }
+]
