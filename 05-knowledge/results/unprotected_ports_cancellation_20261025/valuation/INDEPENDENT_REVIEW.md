@@ -6,6 +6,24 @@ and finite-logarithm specialization are valid. The concrete 50-vertex
 tournament consequence also passes the independent finite audit below.
 No infinite TRR existence theorem was independently reviewed here.
 
+The cyclic extension added later was separately reviewed by the recurrence
+reviewer. Its exact recursion aligns the Euler-phi coefficients and leaves
+(u^(p^r)-A^(p^(r-1)))/p^r, with A=u^p+p*C_p(u). The expansion has integral
+coefficients of valuation j-1-v_p(j), so exactly j=1 survives modulo p.
+Iteration gives the stated all-scale formula. The unique lowest term is
+at degree p^(r-1), with coefficient -1. Every other scale has strictly
+higher least degree. Distinct scale supports have exponent valuation a,
+so they are disjoint and give exactly1+r*(p-1) nonzero terms.
+
+The same reviewer independently checked the common ordinary derivative:
+after differentiating the cyclic formula only phi(1),phi(p) survive mod p.
+The elementary abelian derivative agrees. Both polynomials are monic,
+but their difference need not be; its zero constant, canceled leading
+term and zero derivative put it in span{u^p,...,u^(q-p)}. No assertion
+that every vector in this span is realized is made. At r=2 the exact
+difference is (p-1)*C_p((1+u)^p-1). These are proof audits, supplemented
+by the producer's independent direct binomial-shift controls.
+
 ## 1. Identity, valuations, and the smallest cases
 
 For the regular elementary-abelian action, every nonidentity element has

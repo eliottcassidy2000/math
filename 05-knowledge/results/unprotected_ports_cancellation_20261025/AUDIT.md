@@ -78,6 +78,16 @@ before reduction; primes dividing q-1 leave the pure monomial u^q.
 The second and third mechanisms are distinct. The r=1 equality boundary,
 formal p=3 cases, and the characteristic-two jump are explicit controls.
 
+The late cyclic extension has a separate independent proof audit, recorded
+in the valuation review. Euler-phi alignment gives an exact integral
+recursion; the same valuations reduce it to a sum of p-power carries.
+Its modular depth p^(r-1) and1+r(p-1) nonzero monomials are all-order
+theorems. The17 cyclic arithmetic cases additionally compare a direct
+subset-orbit polynomial shift with the positive power formula. Equal
+ordinary derivatives for the cyclic and elementary abelian polynomials
+are proved and checked, with their missing p-multiple coefficients
+explicitly retained. The difference polynomial is not claimed to be monic.
+
 ## Cyclic operators and older source recovery
 
 The periodic incidence proof keeps the physical prime separate from the

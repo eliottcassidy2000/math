@@ -252,3 +252,10 @@ control, canonical blocks, and the complete cycle action are retained
 wherever a genuine tournament claim is made. No theorem here identifies
 the cut-orbit polynomial with an isomorphism-class identifier, transports
 blackness, or closes unrestricted black-core connectivity.
+
+Concurrent integration: Session62 independently supplies the minimum-cycle
+theorem and an explicit observer family, avoiding the existence input used
+in section3 here. See [the comparison](../INCOMING.md) for exact overlap and
+the resulting modular-depth theorem. The [valuation note](../valuation/README.md)
+determines the full characteristic spectrum; the rational minimum-cycle
+formula alone does not survive reduction in every characteristic.

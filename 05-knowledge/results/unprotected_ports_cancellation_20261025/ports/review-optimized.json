@@ -1,0 +1,9 @@
+{
+  "endcap_word_orders": 501,
+  "independent_even_antipodal_orders": 251,
+  "order_range": [
+    12,
+    512
+  ],
+  "status": "PASS"
+}

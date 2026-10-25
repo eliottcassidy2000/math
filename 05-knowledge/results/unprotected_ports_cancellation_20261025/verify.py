@@ -26,6 +26,7 @@ INHERITED = [
     "05-knowledge/results/black_detours_closed_blue_lines_klein_dictionary_20261020.md",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/check.py",
+    "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/normal.json",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/incidence/cyclic_common_kernel.md",
     "05-knowledge/results/session62_agent_theme_bridges_20261025/common-action/COMMON_ACTION_BRIDGE.md",
 ]
@@ -70,7 +71,8 @@ def main():
             parsed += 1
         if path.suffix != ".md":
             continue
-        for url in re.findall(r"\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
+        prose = re.sub(r"```.*?```", "", path.read_text(encoding="utf-8"), flags=re.S)
+        for url in re.findall(r"\]\(([^)]+)\)", prose):
             if "://" in url or url.startswith("#"):
                 continue
             target = url.split("#", 1)[0].strip("<>")

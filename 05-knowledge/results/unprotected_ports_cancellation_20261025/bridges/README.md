@@ -7,6 +7,12 @@ form of powers of the cyclic difference. **FINITE-EXACT:** independent
 physical incidence and matrix controls. These results do not identify a
 kernel vector with a binary error pattern, a detour, or a section.
 
+Concurrent provenance: the arriving Session62 packet gives a stronger
+arbitrary-support theorem and a wider interval range. The overlap and the
+distinct difference-depth/Hasse refinements here are recorded in
+[INCOMING.md](../INCOMING.md); this note does not supersede that stronger
+support classification.
+
 ## 1. Inherited mechanism and the two different primes
 
 The source is the [cube-plus-bridge common-kernel theorem](../../trijection_hourglass_ports_20261025/incidence/common_kernel.md).

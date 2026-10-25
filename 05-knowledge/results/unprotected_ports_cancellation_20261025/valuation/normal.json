@@ -1,5 +1,126 @@
 {
   "cases": 17,
+  "cyclic_finite_cases": [
+    {
+      "nonzero_modular_monomials": 3,
+      "p": 3,
+      "physical_depth": 1,
+      "q": 3,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 5,
+      "p": 3,
+      "physical_depth": 3,
+      "q": 9,
+      "r": 2
+    },
+    {
+      "nonzero_modular_monomials": 7,
+      "p": 3,
+      "physical_depth": 9,
+      "q": 27,
+      "r": 3
+    },
+    {
+      "nonzero_modular_monomials": 9,
+      "p": 3,
+      "physical_depth": 27,
+      "q": 81,
+      "r": 4
+    },
+    {
+      "nonzero_modular_monomials": 5,
+      "p": 5,
+      "physical_depth": 1,
+      "q": 5,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 9,
+      "p": 5,
+      "physical_depth": 5,
+      "q": 25,
+      "r": 2
+    },
+    {
+      "nonzero_modular_monomials": 13,
+      "p": 5,
+      "physical_depth": 25,
+      "q": 125,
+      "r": 3
+    },
+    {
+      "nonzero_modular_monomials": 17,
+      "p": 5,
+      "physical_depth": 125,
+      "q": 625,
+      "r": 4
+    },
+    {
+      "nonzero_modular_monomials": 7,
+      "p": 7,
+      "physical_depth": 1,
+      "q": 7,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 13,
+      "p": 7,
+      "physical_depth": 7,
+      "q": 49,
+      "r": 2
+    },
+    {
+      "nonzero_modular_monomials": 19,
+      "p": 7,
+      "physical_depth": 49,
+      "q": 343,
+      "r": 3
+    },
+    {
+      "nonzero_modular_monomials": 11,
+      "p": 11,
+      "physical_depth": 1,
+      "q": 11,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 21,
+      "p": 11,
+      "physical_depth": 11,
+      "q": 121,
+      "r": 2
+    },
+    {
+      "nonzero_modular_monomials": 13,
+      "p": 13,
+      "physical_depth": 1,
+      "q": 13,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 25,
+      "p": 13,
+      "physical_depth": 13,
+      "q": 169,
+      "r": 2
+    },
+    {
+      "nonzero_modular_monomials": 19,
+      "p": 19,
+      "physical_depth": 1,
+      "q": 19,
+      "r": 1
+    },
+    {
+      "nonzero_modular_monomials": 23,
+      "p": 23,
+      "physical_depth": 1,
+      "q": 23,
+      "r": 1
+    }
+  ],
   "max_q": 625,
   "status": "PASS",
   "universe": [

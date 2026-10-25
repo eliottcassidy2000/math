@@ -113,7 +113,7 @@ def main():
                 for r in range(1, bound + 1)]
     rows = [check(p, r) for p, r in universe]
     cyclic = []
-    for p, bound in [(3, 3), (5, 3), (7, 2)]:
+    for p, bound in [(3, 4), (5, 4), (7, 3), (11, 2), (13, 2), (19, 1), (23, 1)]:
         for r in range(1, bound + 1):
             q = p**r
             numerator = [0] * (q + 1)
@@ -125,16 +125,28 @@ def main():
                     numerator[j] += phi * x
             need(all(x % q == 0 for x in numerator), "cyclic integrality")
             poly = [x // q for x in numerator]
-            direct_P = [sum((1 if a == 0 else (p - 1) * p**(a - 1))
+            direct_numerators = [sum((1 if a == 0 else (p - 1) * p**(a - 1))
                             * comb(q // p**a, j // p**a)
-                            for a in range(r + 1) if j % p**a == 0) // q
+                            for a in range(r + 1) if j % p**a == 0)
                         for j in range(q + 1)]
+            need(all(x % q == 0 for x in direct_numerators), "cyclic orbit division")
+            direct_P = [x // q for x in direct_numerators]
             literal_shift = [-sum((-1)**k * comb(k, j) * direct_P[k]
                                   for k in range(j, q + 1)) for j in range(q + 1)]
             need(poly == literal_shift, "cyclic independent shift")
             need(depth(poly) == 1, "cyclic rational depth")
             actual = depth(poly, p)
-            need(actual == q // p, "finite cyclic modular-depth signal")
+            need(actual == q // p, "cyclic modular depth")
+            carry_residue = [0] * (q + 1)
+            carry_residue[q] = 1
+            for a in range(r):
+                for j in range(1, p):
+                    degree = q - p**(a + 1) + p**a * j
+                    carry_residue[degree] -= comb(p, j) // p
+            need([x % p for x in poly] == [x % p for x in carry_residue],
+                 "cyclic all-scale modular formula")
+            need(sum(x % p != 0 for x in poly) == 1 + r * (p - 1),
+                 "cyclic scale-sparse monomial count")
             elementary_numerator = [(q - 1) * x for x in
                 power([0] + [comb(p, i) for i in range(1, p + 1)], q // p)]
             elementary_numerator[q] += 1
@@ -144,7 +156,8 @@ def main():
             need(all((poly[j] - elementary[j]) % p == 0
                      for j in range(q + 1) if j % p or j in (0, q)),
                  "Frobenius difference support")
-            cyclic.append({"p": p, "r": r, "q": q, "physical_depth": actual})
+            cyclic.append({"p": p, "r": r, "q": q, "physical_depth": actual,
+                           "nonzero_modular_monomials": 1 + r * (p - 1)})
     print(json.dumps({"status": "PASS", "cases": len(rows), "max_q": 625,
                       "universe": rows, "cyclic_finite_cases": cyclic}, indent=2, sort_keys=True))
 

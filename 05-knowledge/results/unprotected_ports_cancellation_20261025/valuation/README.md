@@ -153,13 +153,38 @@ by the cyclic regular action C_(p^r). Its exact positive polynomial is
     Q_cyc(u)=1/p^r * sum_(a=0)^r phi(p^a)
                             *((1+u)^(p^a)-1)^(p^(r-a)).
 
-**FINITE-EXACT:** for (p,r)=(3,1..3),(5,1..3),(7,1..2), its rational
-depth is one and its characteristic-p depth is p^(r-1). Thus at q=25
-the two regular actions already have different modular depths,5 versus21.
-The checker computes these eight cases directly. **OPEN in this packet:**
-the suggested all-r cyclic modular-depth formula. This is a precise next
-valuation problem, not an asserted extension of (V6), whose proof uses
-the elementary abelian cycle inventory.
+**PROVED:** its rational depth is one and its characteristic-p depth is
+p^(r-1), for every odd prime p and every r>=1. The cyclic cycle inventory
+differs from the elementary abelian one, so this needs a separate proof.
+Write R_r=Q_cyc for order p^r, R_0(u)=u, and A=(1+u)^p-1. Aligning the
+Euler-phi weights in the displayed sum gives the exact recursion
+
+    R_r(u)=R_(r-1)(A)+(u^(p^r)-A^(p^(r-1)))/p^r.     (V10)
+
+The last quotient is integral by the same termwise valuations (V4),
+with A=u^p+p*C_p(u). Only its j=1 term survives modulo p. Since A=u^p
+modulo p, reduction and iteration give
+
+    R_r(u)=R_(r-1)(u^p)-u^(q-p)*C_p(u) mod p,
+    R_r(u)=u^q-sum_(a=0)^(r-1)
+                   u^(q-p^(a+1))*C_p(u^(p^a)) mod p. (V11)
+
+The least degree in the a-th summand is q-(p-1)*p^a. These strictly
+decrease as a increases, and the final a=r-1 gives h=p^(r-1) with
+coefficient -1. This proves the exact modular depth. Over Q, the full
+q-cycle summands have a positive linear coefficient phi(q), proving
+depth one. At q=25 the two regular actions have modular depths5 versus21.
+The checker compares the direct integer polynomials and (V11) on the same
+17-case universe as the elementary abelian controls; no all-order claim
+rests on extending that finite range.
+
+The formula is also sparse across scales. Each nonleading exponent is
+q-(p-j)*p^a, with1<=j<p, and has p-adic valuation exactly a. Supports
+from different a are therefore disjoint. Every coefficient of C_p at
+degrees1,...,p-1 is nonzero modulo p by (V7). Consequently R_r modulo p
+has exactly1+r*(p-1) nonzero monomials despite degree p^r. This is a
+small exact encoding for this family of modular orbit polynomials, not
+an encoding of all tournament isomorphism classes.
 
 One all-order comparison is already exact. Differentiating the integral
 cyclic polynomial cancels the q denominator and gives
@@ -183,3 +208,12 @@ The q=25 case has depths5 and21 despite (V8). Coefficients at positive
 p-multiple degrees are the missing coordinates; Hasse coefficients can
 retain them. This is a second explicit observation-kernel bridge to the
 older cyclic work, beyond the common theme of division by the physical prime.
+
+At r=2 this difference already has the exact integral carry expression
+
+    Q_cyc(u)-Q(u)=(p-1)*C_p((1+u)^p-1).              (V12)
+
+For p=5 it reduces to4u^5+3u^10+3u^15+4u^20. More generally (V11)
+exhibits each additional p-power scale explicitly. These are polynomial
+carry and differentiation identities; a regular cyclic action need not
+be silently identified with the elementary abelian tournament construction.

@@ -16,6 +16,7 @@ formula or a proved faster enumeration algorithm.
 | Cancellation action | **PROVED:** positive shifted cut polynomial and exact minimum-cycle depth; correlated doubling retains shared action data | [Positive jets](counting/POSITIVE_JET.md) |
 | Physical wrap | **PROVED:** complete cyclic parametrization for p>3, interval dimension formula for p>=19, and exact difference-kernel depths | [Cyclic proof](bridges/README.md) |
 | Coefficient spectrum | **PROVED:** regular elementary abelian gap actions have depth h, q-p+1, or q according to the coefficient characteristic | [Valuation proof](valuation/README.md) |
+| Cyclic carries | **PROVED:** a degree-p^r regular cyclic orbit polynomial has exactly1+r(p-1) nonzero terms modulo p, with exact depth p^(r-1) | [All-scale formula](valuation/README.md) |
 
 The port theorem retains every literal vertex and every middle arc.
 It constructs three black moves to the original marked target, rather
@@ -96,3 +97,19 @@ None of these replaces the literal arc conditions in a black detour.
    and prime divisors of element multiplicities must be retained.
 
 These are future targets, not assertions of work continuing after publication.
+
+## Concurrent integration and reproduction
+
+[Incoming comparison](INCOMING.md) identifies overlap with Session62 and
+applies the new characteristic formula to its explicit observer tournaments.
+This yields an elementary unbounded family with one toggle and rational,
+physical-characteristic and other exceptional-characteristic depths that
+separate more strongly as the order grows. The July Hasse bridge and the
+ordinary-derivative comparison in the valuation note make the old-theme
+connection concrete.
+
+See [the audit](AUDIT.md) and the independent reviews in each lane. From the
+repository root run `python 05-knowledge/results/unprotected_ports_cancellation_20261025/replay.py`
+and `python 05-knowledge/results/unprotected_ports_cancellation_20261025/verify.py`.
+Replay checks maintained receipts; the verifier checks source pins and
+links. Both support `-O`, and `--refresh` is the explicit write mode.

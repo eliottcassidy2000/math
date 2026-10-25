@@ -1,0 +1,23 @@
+{
+  "adaptive_scalar_totals": [
+    [
+      6,
+      7
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      14,
+      45
+    ],
+    [
+      18,
+      85
+    ]
+  ],
+  "literal_prefix_records": 740,
+  "stage_checks": 90,
+  "status": "PASS"
+}
