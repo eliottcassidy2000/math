@@ -1,0 +1,9 @@
+Pinned source/input/receipt files: 37 PASS
+Required checkers without removable assertions: 5
+Local Markdown targets: 31 PASS
+Normal/optimized replay: anchor_check.py PASS
+Normal/optimized replay: endpoint_check.py PASS
+Normal/optimized replay: gap_check.py PASS
+Normal/optimized replay: gap_owner_audit.py PASS
+Normal/optimized replay: f1_check.py PASS
+PASS
