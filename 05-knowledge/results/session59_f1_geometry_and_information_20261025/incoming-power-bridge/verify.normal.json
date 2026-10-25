@@ -1,0 +1,35 @@
+{
+  "Q7_r2_tail_period_points": {
+    "(0, 1)": 3,
+    "(0, 2)": 2,
+    "(1, 1)": 1,
+    "(1, 2)": 2
+  },
+  "gates": {
+    "additive_specialization": 6,
+    "composition": 36,
+    "conic_chart": 11,
+    "conic_equivariance": 132,
+    "example": 1,
+    "exceptional_difference": 2475,
+    "fixed_count": 132,
+    "frobenius_special_fiber": 6,
+    "group_law": 6,
+    "integer_reduction": 2475,
+    "power_polynomial": 6,
+    "prime_power": 6,
+    "relative_frobenius": 6,
+    "tail_period": 2640,
+    "tangent": 6,
+    "zero_special_fiber": 6
+  },
+  "scope": {
+    "conic_and_dynamics": "p in [2,3,5,7,11,13,17,19,23,29,31]; r=1..12; t=0..3; period-divisor n=1..5",
+    "integer_reduction": "coprime 1<=n<m<=12; powers=1..5; same primes",
+    "limits": "No extension-field enumeration, root-surface recertification, parent-automaton construction, or external novelty test.",
+    "polynomials": "exact Z[t,u,v], r,s=1..6; characteristic-p checks p=2,3,5,7,11,13"
+  },
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "total_gates": 7950
+}

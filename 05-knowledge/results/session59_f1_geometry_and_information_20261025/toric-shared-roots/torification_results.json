@@ -1,0 +1,739 @@
+{
+  "status": "PASS",
+  "scope": "Characteristic-zero exact incidence and local Jacobian checks",
+  "selected_surfaces": [
+    {
+      "n": 5,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "labels": [
+        "E",
+        "E+x",
+        "E-x",
+        "E+z",
+        "E-z"
+      ],
+      "multiplicities": {
+        "2": 4,
+        "3": 2
+      },
+      "triplepoints": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "incident": [
+            "E",
+            "E+x",
+            "E-x"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 1,
+          "geometric_root_lifts": 2
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "incident": [
+            "E",
+            "E+z",
+            "E-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 1,
+          "geometric_root_lifts": 2
+        }
+      ],
+      "total_nodes": 4
+    },
+    {
+      "n": 6,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "labels": [
+        "E",
+        "E+x",
+        "E-x",
+        "E+z",
+        "E-z",
+        "E+x+z"
+      ],
+      "multiplicities": {
+        "2": 9,
+        "3": 2
+      },
+      "triplepoints": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "incident": [
+            "E",
+            "E+x",
+            "E-x"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 2,
+          "geometric_root_lifts": 4
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "incident": [
+            "E",
+            "E+z",
+            "E-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 2,
+          "geometric_root_lifts": 4
+        }
+      ],
+      "total_nodes": 8
+    },
+    {
+      "n": 7,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "labels": [
+        "E",
+        "E+x",
+        "E-x",
+        "E+z",
+        "E-z",
+        "E+x+z",
+        "E-x-z"
+      ],
+      "multiplicities": {
+        "2": 12,
+        "3": 3
+      },
+      "triplepoints": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "incident": [
+            "E",
+            "E+x",
+            "E-x"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 3,
+          "geometric_root_lifts": 8
+        },
+        {
+          "point": [
+            0,
+            1,
+            -1
+          ],
+          "incident": [
+            "E",
+            "E+x+z",
+            "E-x-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 3,
+          "geometric_root_lifts": 8
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "incident": [
+            "E",
+            "E+z",
+            "E-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 3,
+          "geometric_root_lifts": 8
+        }
+      ],
+      "total_nodes": 24
+    },
+    {
+      "n": 9,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "labels": [
+        "E",
+        "E+x",
+        "E-x",
+        "E+z",
+        "E-z",
+        "E+x+z",
+        "E-x-z",
+        "E+x-z",
+        "E-x+z"
+      ],
+      "multiplicities": {
+        "2": 12,
+        "3": 8
+      },
+      "triplepoints": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "incident": [
+            "E",
+            "E+x",
+            "E-x"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            0,
+            1,
+            -1
+          ],
+          "incident": [
+            "E",
+            "E+x+z",
+            "E-x-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "incident": [
+            "E",
+            "E+z",
+            "E-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            0,
+            1,
+            1
+          ],
+          "incident": [
+            "E",
+            "E+x-z",
+            "E-x+z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            1,
+            -1,
+            0
+          ],
+          "incident": [
+            "E+x",
+            "E+x+z",
+            "E+x-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            1,
+            0,
+            -1
+          ],
+          "incident": [
+            "E+z",
+            "E+x+z",
+            "E-x+z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            1,
+            0,
+            1
+          ],
+          "incident": [
+            "E-z",
+            "E-x-z",
+            "E+x-z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        },
+        {
+          "point": [
+            1,
+            1,
+            0
+          ],
+          "incident": [
+            "E-x",
+            "E-x-z",
+            "E-x+z"
+          ],
+          "local_alpha": "2",
+          "local_beta": "-1",
+          "jacobian_rank": 5,
+          "geometric_root_lifts": 32
+        }
+      ],
+      "total_nodes": 256
+    }
+  ],
+  "hourglass_minus": {
+    "n": 7,
+    "indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      7,
+      8
+    ],
+    "labels": [
+      "E",
+      "E+x",
+      "E-x",
+      "E+z",
+      "E-z",
+      "E+x-z",
+      "E-x+z"
+    ],
+    "multiplicities": {
+      "2": 12,
+      "3": 3
+    },
+    "triplepoints": [
+      {
+        "point": [
+          0,
+          0,
+          1
+        ],
+        "incident": [
+          "E",
+          "E+x",
+          "E-x"
+        ],
+        "local_alpha": "2",
+        "local_beta": "-1",
+        "jacobian_rank": 3,
+        "geometric_root_lifts": 8
+      },
+      {
+        "point": [
+          0,
+          1,
+          0
+        ],
+        "incident": [
+          "E",
+          "E+z",
+          "E-z"
+        ],
+        "local_alpha": "2",
+        "local_beta": "-1",
+        "jacobian_rank": 3,
+        "geometric_root_lifts": 8
+      },
+      {
+        "point": [
+          0,
+          1,
+          1
+        ],
+        "incident": [
+          "E",
+          "E+x-z",
+          "E-x+z"
+        ],
+        "local_alpha": "2",
+        "local_beta": "-1",
+        "jacobian_rank": 3,
+        "geometric_root_lifts": 8
+      }
+    ],
+    "total_nodes": 24
+  },
+  "all_subset_census": {
+    "5": {
+      "0": 28,
+      "1": 76,
+      "2": 22
+    },
+    "6": {
+      "0": 2,
+      "1": 20,
+      "2": 46,
+      "3": 16
+    },
+    "7": {
+      "2": 4,
+      "3": 18,
+      "4": 12,
+      "5": 2
+    },
+    "8": {
+      "4": 1,
+      "5": 4,
+      "6": 4
+    },
+    "9": {
+      "8": 1
+    }
+  },
+  "invariants": [
+    {
+      "n": 4,
+      "degree": 2,
+      "canonical_multiple": -2,
+      "canonical_square": 8,
+      "geometric_genus": 0,
+      "resolution_euler": 4
+    },
+    {
+      "n": 5,
+      "degree": 4,
+      "canonical_multiple": -1,
+      "canonical_square": 4,
+      "geometric_genus": 0,
+      "resolution_euler": 8
+    },
+    {
+      "n": 6,
+      "degree": 8,
+      "canonical_multiple": 0,
+      "canonical_square": 0,
+      "geometric_genus": 1,
+      "resolution_euler": 24
+    },
+    {
+      "n": 7,
+      "degree": 16,
+      "canonical_multiple": 1,
+      "canonical_square": 16,
+      "geometric_genus": 7,
+      "resolution_euler": 80
+    },
+    {
+      "n": 8,
+      "degree": 32,
+      "canonical_multiple": 2,
+      "canonical_square": 128,
+      "geometric_genus": 31,
+      "resolution_euler": 256
+    },
+    {
+      "n": 9,
+      "degree": 64,
+      "canonical_multiple": 3,
+      "canonical_square": 576,
+      "geometric_genus": 111,
+      "resolution_euler": 768
+    }
+  ],
+  "full_arrangement": [
+    {
+      "point": [
+        0,
+        0,
+        1
+      ],
+      "incident": [
+        "E",
+        "E+x",
+        "E-x"
+      ]
+    },
+    {
+      "point": [
+        0,
+        1,
+        -1
+      ],
+      "incident": [
+        "E",
+        "E+x+z",
+        "E-x-z"
+      ]
+    },
+    {
+      "point": [
+        0,
+        1,
+        0
+      ],
+      "incident": [
+        "E",
+        "E+z",
+        "E-z"
+      ]
+    },
+    {
+      "point": [
+        0,
+        1,
+        1
+      ],
+      "incident": [
+        "E",
+        "E+x-z",
+        "E-x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -2,
+        -1
+      ],
+      "incident": [
+        "E+z",
+        "E+x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -2,
+        1
+      ],
+      "incident": [
+        "E-z",
+        "E+x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -1,
+        -2
+      ],
+      "incident": [
+        "E+x",
+        "E-x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -1,
+        -1
+      ],
+      "incident": [
+        "E+x",
+        "E+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -1,
+        0
+      ],
+      "incident": [
+        "E+x",
+        "E+x+z",
+        "E+x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -1,
+        1
+      ],
+      "incident": [
+        "E+x",
+        "E-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        -1,
+        2
+      ],
+      "incident": [
+        "E+x",
+        "E-x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        0,
+        -1
+      ],
+      "incident": [
+        "E+z",
+        "E+x+z",
+        "E-x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        0,
+        1
+      ],
+      "incident": [
+        "E-z",
+        "E-x-z",
+        "E+x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        1,
+        -2
+      ],
+      "incident": [
+        "E-x",
+        "E+x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        1,
+        -1
+      ],
+      "incident": [
+        "E-x",
+        "E+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        1,
+        0
+      ],
+      "incident": [
+        "E-x",
+        "E-x-z",
+        "E-x+z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "incident": [
+        "E-x",
+        "E-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        1,
+        2
+      ],
+      "incident": [
+        "E-x",
+        "E+x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        2,
+        -1
+      ],
+      "incident": [
+        "E+z",
+        "E-x-z"
+      ]
+    },
+    {
+      "point": [
+        1,
+        2,
+        1
+      ],
+      "incident": [
+        "E-z",
+        "E-x+z"
+      ]
+    }
+  ]
+}

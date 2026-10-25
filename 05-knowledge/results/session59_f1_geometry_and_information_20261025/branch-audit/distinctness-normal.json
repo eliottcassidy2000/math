@@ -1,0 +1,2463 @@
+{
+  "canonical_differences": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      -2
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      -2
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "discarded_rows": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "field_tests": [
+    {
+      "I": 0,
+      "N": 2,
+      "dimension": 1,
+      "p": 2
+    },
+    {
+      "I": 0,
+      "N": 4,
+      "dimension": 2,
+      "p": 2
+    },
+    {
+      "I": 0,
+      "N": 8,
+      "dimension": 3,
+      "p": 2
+    },
+    {
+      "I": 0,
+      "N": 16,
+      "dimension": 4,
+      "p": 2
+    },
+    {
+      "I": 0,
+      "N": 3,
+      "dimension": 1,
+      "p": 3
+    },
+    {
+      "I": 48,
+      "N": 9,
+      "dimension": 2,
+      "p": 3
+    },
+    {
+      "I": 624,
+      "N": 27,
+      "dimension": 3,
+      "p": 3
+    },
+    {
+      "I": 0,
+      "N": 5,
+      "dimension": 1,
+      "p": 5
+    },
+    {
+      "I": 480,
+      "N": 25,
+      "dimension": 2,
+      "p": 5
+    },
+    {
+      "I": 0,
+      "N": 7,
+      "dimension": 1,
+      "p": 7
+    },
+    {
+      "I": 2016,
+      "N": 49,
+      "dimension": 2,
+      "p": 7
+    },
+    {
+      "I": 40,
+      "N": 11,
+      "dimension": 1,
+      "p": 11
+    }
+  ],
+  "groups": [
+    {
+      "N": 1,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        1
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 2,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 3,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        3
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 4,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        4
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 5,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        5
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 6,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        6
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 7,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        7
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 8,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        8
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 9,
+      "distinct_arrays": 216,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        9
+      ],
+      "injective_pairs": 24
+    },
+    {
+      "N": 10,
+      "distinct_arrays": 80,
+      "distinct_nonidentity_arrays": 8,
+      "factors": [
+        10
+      ],
+      "injective_pairs": 8
+    },
+    {
+      "N": 11,
+      "distinct_arrays": 440,
+      "distinct_nonidentity_arrays": 80,
+      "factors": [
+        11
+      ],
+      "injective_pairs": 40
+    },
+    {
+      "N": 12,
+      "distinct_arrays": 576,
+      "distinct_nonidentity_arrays": 144,
+      "factors": [
+        12
+      ],
+      "injective_pairs": 48
+    },
+    {
+      "N": 13,
+      "distinct_arrays": 936,
+      "distinct_nonidentity_arrays": 288,
+      "factors": [
+        13
+      ],
+      "injective_pairs": 72
+    },
+    {
+      "N": 14,
+      "distinct_arrays": 672,
+      "distinct_nonidentity_arrays": 240,
+      "factors": [
+        14
+      ],
+      "injective_pairs": 48
+    },
+    {
+      "N": 15,
+      "distinct_arrays": 1920,
+      "distinct_nonidentity_arrays": 768,
+      "factors": [
+        15
+      ],
+      "injective_pairs": 128
+    },
+    {
+      "N": 16,
+      "distinct_arrays": 1536,
+      "distinct_nonidentity_arrays": 672,
+      "factors": [
+        16
+      ],
+      "injective_pairs": 96
+    },
+    {
+      "N": 17,
+      "distinct_arrays": 2720,
+      "distinct_nonidentity_arrays": 1280,
+      "factors": [
+        17
+      ],
+      "injective_pairs": 160
+    },
+    {
+      "N": 18,
+      "distinct_arrays": 2592,
+      "distinct_nonidentity_arrays": 1296,
+      "factors": [
+        18
+      ],
+      "injective_pairs": 144
+    },
+    {
+      "N": 19,
+      "distinct_arrays": 4104,
+      "distinct_nonidentity_arrays": 2160,
+      "factors": [
+        19
+      ],
+      "injective_pairs": 216
+    },
+    {
+      "N": 20,
+      "distinct_arrays": 4000,
+      "distinct_nonidentity_arrays": 2200,
+      "factors": [
+        20
+      ],
+      "injective_pairs": 200
+    },
+    {
+      "N": 21,
+      "distinct_arrays": 6048,
+      "distinct_nonidentity_arrays": 3456,
+      "factors": [
+        21
+      ],
+      "injective_pairs": 288
+    },
+    {
+      "N": 22,
+      "distinct_arrays": 5280,
+      "distinct_nonidentity_arrays": 3120,
+      "factors": [
+        22
+      ],
+      "injective_pairs": 240
+    },
+    {
+      "N": 23,
+      "distinct_arrays": 8096,
+      "distinct_nonidentity_arrays": 4928,
+      "factors": [
+        23
+      ],
+      "injective_pairs": 352
+    },
+    {
+      "N": 24,
+      "distinct_arrays": 8064,
+      "distinct_nonidentity_arrays": 5040,
+      "factors": [
+        24
+      ],
+      "injective_pairs": 336
+    },
+    {
+      "N": 25,
+      "distinct_arrays": 11000,
+      "distinct_nonidentity_arrays": 7040,
+      "factors": [
+        25
+      ],
+      "injective_pairs": 440
+    },
+    {
+      "N": 26,
+      "distinct_arrays": 9984,
+      "distinct_nonidentity_arrays": 6528,
+      "factors": [
+        26
+      ],
+      "injective_pairs": 384
+    },
+    {
+      "N": 27,
+      "distinct_arrays": 14256,
+      "distinct_nonidentity_arrays": 9504,
+      "factors": [
+        27
+      ],
+      "injective_pairs": 528
+    },
+    {
+      "N": 28,
+      "distinct_arrays": 13440,
+      "distinct_nonidentity_arrays": 9120,
+      "factors": [
+        28
+      ],
+      "injective_pairs": 480
+    },
+    {
+      "N": 29,
+      "distinct_arrays": 17864,
+      "distinct_nonidentity_arrays": 12320,
+      "factors": [
+        29
+      ],
+      "injective_pairs": 616
+    },
+    {
+      "N": 30,
+      "distinct_arrays": 17520,
+      "distinct_nonidentity_arrays": 12264,
+      "factors": [
+        30
+      ],
+      "injective_pairs": 584
+    },
+    {
+      "N": 31,
+      "distinct_arrays": 22320,
+      "distinct_nonidentity_arrays": 15840,
+      "factors": [
+        31
+      ],
+      "injective_pairs": 720
+    },
+    {
+      "N": 32,
+      "distinct_arrays": 21504,
+      "distinct_nonidentity_arrays": 15456,
+      "factors": [
+        32
+      ],
+      "injective_pairs": 672
+    },
+    {
+      "N": 33,
+      "distinct_arrays": 27720,
+      "distinct_nonidentity_arrays": 20160,
+      "factors": [
+        33
+      ],
+      "injective_pairs": 840
+    },
+    {
+      "N": 34,
+      "distinct_arrays": 26112,
+      "distinct_nonidentity_arrays": 19200,
+      "factors": [
+        34
+      ],
+      "injective_pairs": 768
+    },
+    {
+      "N": 35,
+      "distinct_arrays": 33600,
+      "distinct_nonidentity_arrays": 24960,
+      "factors": [
+        35
+      ],
+      "injective_pairs": 960
+    },
+    {
+      "N": 36,
+      "distinct_arrays": 32832,
+      "distinct_nonidentity_arrays": 24624,
+      "factors": [
+        36
+      ],
+      "injective_pairs": 912
+    },
+    {
+      "N": 37,
+      "distinct_arrays": 39960,
+      "distinct_nonidentity_arrays": 30240,
+      "factors": [
+        37
+      ],
+      "injective_pairs": 1080
+    },
+    {
+      "N": 38,
+      "distinct_arrays": 38304,
+      "distinct_nonidentity_arrays": 29232,
+      "factors": [
+        38
+      ],
+      "injective_pairs": 1008
+    },
+    {
+      "N": 39,
+      "distinct_arrays": 47736,
+      "distinct_nonidentity_arrays": 36720,
+      "factors": [
+        39
+      ],
+      "injective_pairs": 1224
+    },
+    {
+      "N": 40,
+      "distinct_arrays": 46400,
+      "distinct_nonidentity_arrays": 35960,
+      "factors": [
+        40
+      ],
+      "injective_pairs": 1160
+    },
+    {
+      "N": 4,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2,
+        2
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 8,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2,
+        4
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 16,
+      "distinct_arrays": 1536,
+      "distinct_nonidentity_arrays": 672,
+      "factors": [
+        4,
+        4
+      ],
+      "injective_pairs": 96
+    },
+    {
+      "N": 8,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2,
+        2,
+        2
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 16,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2,
+        2,
+        4
+      ],
+      "injective_pairs": 0
+    },
+    {
+      "N": 24,
+      "distinct_arrays": 5376,
+      "distinct_nonidentity_arrays": 3360,
+      "factors": [
+        2,
+        3,
+        4
+      ],
+      "injective_pairs": 224
+    },
+    {
+      "N": 32,
+      "distinct_arrays": 12288,
+      "distinct_nonidentity_arrays": 8832,
+      "factors": [
+        2,
+        4,
+        4
+      ],
+      "injective_pairs": 384
+    },
+    {
+      "N": 9,
+      "distinct_arrays": 432,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        3,
+        3
+      ],
+      "injective_pairs": 48
+    },
+    {
+      "N": 27,
+      "distinct_arrays": 14904,
+      "distinct_nonidentity_arrays": 9936,
+      "factors": [
+        3,
+        9
+      ],
+      "injective_pairs": 552
+    },
+    {
+      "N": 18,
+      "distinct_arrays": 3456,
+      "distinct_nonidentity_arrays": 1728,
+      "factors": [
+        3,
+        6
+      ],
+      "injective_pairs": 192
+    },
+    {
+      "N": 25,
+      "distinct_arrays": 12000,
+      "distinct_nonidentity_arrays": 7680,
+      "factors": [
+        5,
+        5
+      ],
+      "injective_pairs": 480
+    },
+    {
+      "N": 16,
+      "distinct_arrays": 0,
+      "distinct_nonidentity_arrays": 0,
+      "factors": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "injective_pairs": 0
+    }
+  ],
+  "records": [
+    {
+      "invariants": [],
+      "mask": 0
+    },
+    {
+      "invariants": [
+        2
+      ],
+      "mask": 1
+    },
+    {
+      "invariants": [
+        2
+      ],
+      "mask": 2
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 3
+    },
+    {
+      "invariants": [
+        2
+      ],
+      "mask": 4
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 5
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 6
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 7
+    },
+    {
+      "invariants": [
+        2
+      ],
+      "mask": 8
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 9
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 10
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 11
+    },
+    {
+      "invariants": [
+        2,
+        4
+      ],
+      "mask": 12
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 13
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 14
+    },
+    {
+      "invariants": [
+        2,
+        2
+      ],
+      "mask": 15
+    },
+    {
+      "invariants": [
+        1
+      ],
+      "mask": 16
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 17
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 18
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 19
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 20
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 21
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 22
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 23
+    },
+    {
+      "invariants": [
+        1,
+        6
+      ],
+      "mask": 24
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 25
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 26
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 27
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 28
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 29
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 30
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 31
+    },
+    {
+      "invariants": [
+        1
+      ],
+      "mask": 32
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 33
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 34
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 35
+    },
+    {
+      "invariants": [
+        1,
+        6
+      ],
+      "mask": 36
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 37
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 38
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 39
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 40
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 41
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 42
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 43
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 44
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 45
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 46
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 47
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 48
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 49
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 50
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 51
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 52
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 53
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 54
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 55
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 56
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 57
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 58
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 59
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 60
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 61
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 62
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 63
+    },
+    {
+      "invariants": [
+        1
+      ],
+      "mask": 64
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 65
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 66
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 67
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 68
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 69
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 70
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 71
+    },
+    {
+      "invariants": [
+        1,
+        6
+      ],
+      "mask": 72
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 73
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 74
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 75
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 76
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 77
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 78
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 79
+    },
+    {
+      "invariants": [
+        1,
+        3
+      ],
+      "mask": 80
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 81
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 82
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 83
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 84
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 85
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 86
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 87
+    },
+    {
+      "invariants": [
+        1,
+        3
+      ],
+      "mask": 88
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 89
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 90
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 91
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 92
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 93
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 94
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 95
+    },
+    {
+      "invariants": [
+        1,
+        5
+      ],
+      "mask": 96
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 97
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 98
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 99
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 100
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 101
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 102
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 103
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 104
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 105
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 106
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 107
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 108
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 109
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 110
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 111
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 112
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 113
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 114
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 115
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 116
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 117
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 118
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 119
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 120
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 121
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 122
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 123
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 124
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 125
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 126
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 127
+    },
+    {
+      "invariants": [
+        1
+      ],
+      "mask": 128
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 129
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 130
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 131
+    },
+    {
+      "invariants": [
+        1,
+        6
+      ],
+      "mask": 132
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 133
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 134
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 135
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 136
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 137
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 138
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 139
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 140
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 141
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 142
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 143
+    },
+    {
+      "invariants": [
+        1,
+        5
+      ],
+      "mask": 144
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 145
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 146
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 147
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 148
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 149
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 150
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 151
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 152
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 153
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 154
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 155
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 156
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 157
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 158
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 159
+    },
+    {
+      "invariants": [
+        1,
+        3
+      ],
+      "mask": 160
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 161
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 162
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 163
+    },
+    {
+      "invariants": [
+        1,
+        3
+      ],
+      "mask": 164
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 165
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 166
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 167
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 168
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 169
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 170
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 171
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 172
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 173
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 174
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 175
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 176
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 177
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 178
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 179
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 180
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 181
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 182
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 183
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 184
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 185
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 186
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 187
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 188
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 189
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 190
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 191
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 192
+    },
+    {
+      "invariants": [
+        1,
+        4
+      ],
+      "mask": 193
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 194
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 195
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 196
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 197
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 198
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 199
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 200
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 201
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 202
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 203
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 204
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 205
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 206
+    },
+    {
+      "invariants": [
+        1,
+        2
+      ],
+      "mask": 207
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 208
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 209
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 210
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 211
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 212
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 213
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 214
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 215
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 216
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 217
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 218
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 219
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 220
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 221
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 222
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 223
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 224
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 225
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 226
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 227
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 228
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 229
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 230
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 231
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 232
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 233
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 234
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 235
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 236
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 237
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 238
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 239
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 240
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 241
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 242
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 243
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 244
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 245
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 246
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 247
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 248
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 249
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 250
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 251
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 252
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 253
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 254
+    },
+    {
+      "invariants": [
+        1,
+        1
+      ],
+      "mask": 255
+    }
+  ],
+  "retained_rows": [
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      -2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      -1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      -2
+    ]
+  ],
+  "signed_SNF": {
+    "()": 1,
+    "(1, 1)": -2,
+    "(1, 2)": -4,
+    "(1, 3)": 0,
+    "(1, 4)": 4,
+    "(1, 5)": 2,
+    "(1, 6)": 4,
+    "(1,)": -4,
+    "(2, 2)": 2,
+    "(2, 4)": 1,
+    "(2,)": -4
+  },
+  "status": "PASS"
+}

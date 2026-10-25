@@ -1,0 +1,5 @@
+m 5 triple_distribution {0: 28, 1: 76, 2: 22} pg 0 K2 4 smooth_Euler 8 PASS
+m 6 triple_distribution {0: 2, 1: 20, 2: 46, 3: 16} pg 1 K2 0 smooth_Euler 24 PASS
+m 7 triple_distribution {2: 4, 3: 18, 4: 12, 5: 2} pg 7 K2 16 smooth_Euler 80 PASS
+m 8 triple_distribution {4: 1, 5: 4, 6: 4} pg 31 K2 128 smooth_Euler 256 PASS
+m 9 triple_distribution {8: 1} pg 111 K2 576 smooth_Euler 768 PASS

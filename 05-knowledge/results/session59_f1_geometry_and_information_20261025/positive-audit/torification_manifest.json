@@ -1,0 +1,16 @@
+{
+  "reviewed_at_utc": "2026-10-25T15:46:00Z",
+  "input": {
+    "../toric-shared-roots/TORIFICATION_OBSTRUCTION.md": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c"
+  },
+  "outputs": {
+    "TORIFICATION_AUDIT.md": "147204b4a8f46a2b87389ae16c9e438f286c347f065689d5245849e3a44ef240",
+    "torification_certificate.json": "2721509a8a438fc3b4297aa4924002dbac79cd12180c7fb9a480a252aab2ca8b",
+    "check_torification.py": "aa9ba6f36ea32d4f5e4f33ddea09366a5200f26bd1b429e57f57ca458896b2b2",
+    "check_torification.optimized.out": "c873f738abc300bcd508309227a77923eaa29d6a0805f75b9adabaf35a6b6f23",
+    "check_torification.out": "c873f738abc300bcd508309227a77923eaa29d6a0805f75b9adabaf35a6b6f23"
+  },
+  "source_capture_paths": {
+    "/tmp/session59-f1-geometry/TORIFICATION_OBSTRUCTION.md": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c"
+  }
+}

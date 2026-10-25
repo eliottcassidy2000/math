@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="500" viewBox="0 0 1300 500">
+<rect width="1300" height="500" fill="#101827"/>
+<text x="45" y="48" fill="#f8fafc" font-family="sans-serif" font-size="27" font-weight="bold">Retaining square roots changes the geometry</text>
+<text x="45" y="79" fill="#b8c7db" font-family="sans-serif" font-size="17">A fixed chain over C: canonical invariants refer to minimal resolutions; node counts to the singular models.</text>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7dd3fc"/></marker></defs>
+<g font-family="sans-serif">
+<g fill="#192b40" stroke="#3b5878" stroke-width="1.5"><rect x="45" y="145" width="210" height="210" rx="12"/><rect x="295" y="145" width="210" height="210" rx="12"/><rect x="545" y="145" width="210" height="210" rx="12"/><rect x="795" y="145" width="210" height="210" rx="12"/><rect x="1045" y="145" width="210" height="210" rx="12"/></g>
+<g text-anchor="middle" fill="#f8fafc" font-size="21" font-weight="bold"><text x="150" y="180">5 roots</text><text x="400" y="180">6 roots</text><text x="650" y="180">7 roots</text><text x="900" y="180">8 roots</text><text x="1150" y="180">9 roots</text></g>
+<g text-anchor="middle" fill="#7dd3fc" font-size="17"><text x="150" y="212">Shared toric base</text><text x="400" y="212">K3 resolution</text><text x="650" y="212">Hourglass</text><text x="900" y="212">General type</text><text x="1150" y="212">Full magic surface</text></g>
+<g text-anchor="middle" fill="#dbeafe" font-size="18"><text x="150" y="257">p_g = 0</text><text x="400" y="257">p_g = 1</text><text x="650" y="257">p_g = 7</text><text x="900" y="257">p_g = 31</text><text x="1150" y="257">p_g = 111</text><text x="150" y="288">K² = 4</text><text x="400" y="288">K² = 0</text><text x="650" y="288">K² = 16</text><text x="900" y="288">K² = 128</text><text x="1150" y="288">K² = 576</text><text x="150" y="328">4 nodes</text><text x="400" y="328">8 nodes</text><text x="650" y="328">24 nodes</text><text x="900" y="328">80 nodes</text><text x="1150" y="328">256 nodes</text></g>
+<g stroke="#7dd3fc" stroke-width="2" marker-end="url(#arr)"><path d="M294 126 H256"/><path d="M544 126 H506"/><path d="M794 126 H756"/><path d="M1044 126 H1006"/></g>
+<g fill="#b8c7db" font-size="14" text-anchor="middle"><text x="275" y="111">degree 2</text><text x="525" y="111">degree 2</text><text x="775" y="111">degree 2</text><text x="1025" y="111">degree 2</text></g>
+<path d="M295 385 H1255" stroke="#fb923c" stroke-width="3"/>
+<text x="775" y="414" text-anchor="middle" fill="#fdba74" font-size="18">No finite decomposition into split tori: positive geometric genus obstructs rationality.</text>
+<text x="45" y="458" fill="#b8c7db" font-size="15">Forgetful maps run left. A geometric obstruction to torification is not an obstruction to integer-square points.</text>
+</g></svg>

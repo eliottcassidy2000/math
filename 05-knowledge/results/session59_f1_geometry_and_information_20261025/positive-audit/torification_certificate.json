@@ -1,0 +1,374 @@
+{
+  "status": "PASS",
+  "always_active_checks": 1464,
+  "surfaces": [
+    {
+      "surface": "H",
+      "forms": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "triples": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "vanishing_forms": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "vanishing_forms": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "point": [
+            0,
+            1,
+            -1
+          ],
+          "vanishing_forms": [
+            0,
+            5,
+            6
+          ]
+        }
+      ],
+      "double_points": 12,
+      "geometric_nodes": 24,
+      "verified_distinct_nodes_F17": 24,
+      "canonical_index": 1,
+      "degree": 16,
+      "K_squared": 16,
+      "p_g": 7,
+      "local_quadric_relations": [
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "surface": "M",
+      "forms": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1
+        ]
+      ],
+      "triples": [
+        {
+          "point": [
+            0,
+            0,
+            1
+          ],
+          "vanishing_forms": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "point": [
+            0,
+            1,
+            0
+          ],
+          "vanishing_forms": [
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "point": [
+            0,
+            1,
+            -1
+          ],
+          "vanishing_forms": [
+            0,
+            5,
+            6
+          ]
+        },
+        {
+          "point": [
+            0,
+            1,
+            1
+          ],
+          "vanishing_forms": [
+            0,
+            7,
+            8
+          ]
+        },
+        {
+          "point": [
+            1,
+            -1,
+            0
+          ],
+          "vanishing_forms": [
+            1,
+            5,
+            7
+          ]
+        },
+        {
+          "point": [
+            1,
+            1,
+            0
+          ],
+          "vanishing_forms": [
+            2,
+            6,
+            8
+          ]
+        },
+        {
+          "point": [
+            1,
+            0,
+            -1
+          ],
+          "vanishing_forms": [
+            3,
+            5,
+            8
+          ]
+        },
+        {
+          "point": [
+            1,
+            0,
+            1
+          ],
+          "vanishing_forms": [
+            4,
+            6,
+            7
+          ]
+        }
+      ],
+      "double_points": 12,
+      "geometric_nodes": 256,
+      "verified_distinct_nodes_F17": 256,
+      "canonical_index": 3,
+      "degree": 64,
+      "K_squared": 576,
+      "p_g": 111,
+      "local_quadric_relations": [
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          -2,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "all_coordinate_subset_triple_counts": {
+    "4": {
+      "0": 78,
+      "1": 48
+    },
+    "5": {
+      "0": 28,
+      "1": 76,
+      "2": 22
+    },
+    "6": {
+      "0": 2,
+      "1": 20,
+      "2": 46,
+      "3": 16
+    },
+    "7": {
+      "2": 4,
+      "3": 18,
+      "4": 12,
+      "5": 2
+    },
+    "8": {
+      "4": 1,
+      "5": 4,
+      "6": 4
+    },
+    "9": {
+      "8": 1
+    }
+  },
+  "euler_crosschecks": [
+    {
+      "n": 4,
+      "p_g": 0,
+      "K_squared": 8,
+      "resolved_euler": 4
+    },
+    {
+      "n": 5,
+      "p_g": 0,
+      "K_squared": 4,
+      "resolved_euler": 8
+    },
+    {
+      "n": 6,
+      "p_g": 1,
+      "K_squared": 0,
+      "resolved_euler": 24
+    },
+    {
+      "n": 7,
+      "p_g": 7,
+      "K_squared": 16,
+      "resolved_euler": 80
+    },
+    {
+      "n": 8,
+      "p_g": 31,
+      "K_squared": 128,
+      "resolved_euler": 256
+    },
+    {
+      "n": 9,
+      "p_g": 111,
+      "K_squared": 576,
+      "resolved_euler": 768
+    }
+  ]
+}

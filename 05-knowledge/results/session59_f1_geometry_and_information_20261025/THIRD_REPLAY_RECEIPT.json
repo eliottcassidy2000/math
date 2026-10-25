@@ -1,0 +1,165 @@
+{
+  "scope": "Frozen third-checkpoint scripts, actual normal/optimized executions; assertion removal noted per script",
+  "runs": [
+    {
+      "script": "toric-shared-roots/check_torification.py",
+      "script_sha256": "636e88daf48acd455e3509529d53aeb16cd4455ea79bc8dd75c951e568df2892",
+      "optimized": false,
+      "assertion_count": 22,
+      "returncode": 0,
+      "seconds": 0.831,
+      "stdout_sha256": "4f1a7d489fa9e5cfe7eb27435b00eb54c2d1a7b8d446ab6522af0d8aa1ce321b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "toric-shared-roots/check_torification.py",
+      "script_sha256": "636e88daf48acd455e3509529d53aeb16cd4455ea79bc8dd75c951e568df2892",
+      "optimized": true,
+      "assertion_count": 22,
+      "returncode": 0,
+      "seconds": 2.298,
+      "stdout_sha256": "4f1a7d489fa9e5cfe7eb27435b00eb54c2d1a7b8d446ab6522af0d8aa1ce321b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check_torification.py",
+      "script_sha256": "aa9ba6f36ea32d4f5e4f33ddea09366a5200f26bd1b429e57f57ca458896b2b2",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.158,
+      "stdout_sha256": "c873f738abc300bcd508309227a77923eaa29d6a0805f75b9adabaf35a6b6f23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "positive-audit/check_torification.py",
+      "script_sha256": "aa9ba6f36ea32d4f5e4f33ddea09366a5200f26bd1b429e57f57ca458896b2b2",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.387,
+      "stdout_sha256": "c873f738abc300bcd508309227a77923eaa29d6a0805f75b9adabaf35a6b6f23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check_distinct_magic.py",
+      "script_sha256": "92e70e1536257dda3ad162abc7a3e1c7b020956f94a0b75f5bc51731df72fb0f",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 3.852,
+      "stdout_sha256": "7e9bc9ba42bef2d06acc4697e9c5294be86df9c87792d73a259901bd8b76ae0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "graph-magic-degeneration/check_distinct_magic.py",
+      "script_sha256": "92e70e1536257dda3ad162abc7a3e1c7b020956f94a0b75f5bc51731df72fb0f",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 3.808,
+      "stdout_sha256": "7e9bc9ba42bef2d06acc4697e9c5294be86df9c87792d73a259901bd8b76ae0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_distinctness.py",
+      "script_sha256": "7b2ba34466b064d671d7aa5c28f39c1fdfdee5e94dfcedecbcdfcfabc3713f01",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.31,
+      "stdout_sha256": "1bf0bbb1ab130358953fda676cf1e95660c996e746300d8207b1d71379c1e68d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_distinctness.py",
+      "script_sha256": "7b2ba34466b064d671d7aa5c28f39c1fdfdee5e94dfcedecbcdfcfabc3713f01",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.567,
+      "stdout_sha256": "1bf0bbb1ab130358953fda676cf1e95660c996e746300d8207b1d71379c1e68d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_combined_topology.py",
+      "script_sha256": "d3c9f4c151a098f315d589bd2aa0f41678b8ff5857b3fa0345c38097f6c9177a",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.495,
+      "stdout_sha256": "29c3be9bd50a4db03353d9f8b2d278774c9af0002819ff5c8c5abd4376c15c94",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "branch-audit/check_combined_topology.py",
+      "script_sha256": "d3c9f4c151a098f315d589bd2aa0f41678b8ff5857b3fa0345c38097f6c9177a",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.749,
+      "stdout_sha256": "29c3be9bd50a4db03353d9f8b2d278774c9af0002819ff5c8c5abd4376c15c94",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_magic_distinctness.py",
+      "script_sha256": "16a4508910604fd75623204c389db0ab445885209b63ba165e999b4bbf756525",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.072,
+      "stdout_sha256": "327899a5b24c7f663a126852f7eac458ccf3e4bf5037a3961e127ad7d9b47e6e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_magic_distinctness.py",
+      "script_sha256": "16a4508910604fd75623204c389db0ab445885209b63ba165e999b4bbf756525",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.086,
+      "stdout_sha256": "327899a5b24c7f663a126852f7eac458ccf3e4bf5037a3961e127ad7d9b47e6e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_root_surface_hierarchy.py",
+      "script_sha256": "54ad67fd76ab95fde3a46306c46def77abce7ae4dc2f5f3411008ec6eb3f8b46",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.018,
+      "stdout_sha256": "f36dc1c2d1168324deef53c38e7045b82085a0a9bb8f5cb49a6eecc546ca9a3d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "parent-audit/check_root_surface_hierarchy.py",
+      "script_sha256": "54ad67fd76ab95fde3a46306c46def77abce7ae4dc2f5f3411008ec6eb3f8b46",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 0.043,
+      "stdout_sha256": "f36dc1c2d1168324deef53c38e7045b82085a0a9bb8f5cb49a6eecc546ca9a3d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "incoming-power-bridge/verify_bridge.py",
+      "script_sha256": "6d32af9fba881e7e9a5a99c72e6b38ab714f72ab728120f678c17b8a8b6f443b",
+      "optimized": false,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 1.132,
+      "stdout_sha256": "732f0e241f48027df64e7396480853992a14dc03056419ec10f78a6c9eeecbff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "script": "incoming-power-bridge/verify_bridge.py",
+      "script_sha256": "6d32af9fba881e7e9a5a99c72e6b38ab714f72ab728120f678c17b8a8b6f443b",
+      "optimized": true,
+      "assertion_count": 0,
+      "returncode": 0,
+      "seconds": 2.253,
+      "stdout_sha256": "732f0e241f48027df64e7396480853992a14dc03056419ec10f78a6c9eeecbff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

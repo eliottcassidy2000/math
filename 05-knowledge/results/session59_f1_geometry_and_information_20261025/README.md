@@ -2,7 +2,7 @@
 
 User focus: the field with one element. This session distinguishes explicitly specified monoid models, torified counting models, blue presentations, additive degenerations, and formal absolute-zeta transforms. They are not interchangeable definitions of a field of cardinality one.
 
-Status: two audited checkpoints; further extensions are separated until reviewed. Consult each theorem packet and its audit for exact domains and verification. No historical-priority claim; classical ingredients are cited in the packets. No integer-square hourglass/full-square solution, general tournament-class separation theorem, or Riemann Hypothesis proof is claimed.
+Status: final audited research package. Publication verification is recorded separately; exact scope and dependencies are in the packet proofs and audits. Consult each theorem packet and its audit for exact domains and verification. No historical-priority claim; classical ingredients are cited in the packets. No integer-square hourglass/full-square solution, general tournament-class separation theorem, or Riemann Hypothesis proof is claimed.
 
 ## Packet map
 
@@ -26,3 +26,14 @@ Status: two audited checkpoints; further extensions are separated until reviewed
 - `toric-shared-roots/RESOLUTION.md`: four-node resolution, extension counts and Picard action.
 - `graph-magic-degeneration/branch-addendum.md`: universal torsion formula, branch discriminant and arrangement topology.
 - `positive-audit/RESOLUTION_AUDIT.md` and `branch-audit/AUDIT.md`: independent second-checkpoint audits.
+
+## Third-checkpoint additions
+
+- `toric-shared-roots/TORIFICATION_OBSTRUCTION.md`: root-surface hierarchy and its birational obstruction.
+- `graph-magic-degeneration/distinctness-addendum.md`: injective magic arrays and the extra torsion retained by distinctness.
+- `positive-audit/TORIFICATION_AUDIT.md`: independent geometric audit.
+- `figures/root_surface_ladder.svg`: original vector summary with conventions and visual QA in `figures/README.md`.
+
+- `incoming-power-bridge/BRIDGE.md`: incoming conic powers, exact cyclic-unit dynamics, and the distinction between base-preserving powers and relative Frobenius.
+
+- `branch-audit/THIRD_AUDIT.md`: independent distinctness and combined-topology audit.

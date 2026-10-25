@@ -47,3 +47,31 @@ The proof is inclusion–exclusion in the nine integer character rows (1,i,j), i
 Over the complex numbers, the corresponding multiplicative toric-arrangement complement has Poincare polynomial1+12t+57t²+105t³, whereas the additive hyperplane complement has1+9t+28t²+20t³, using the cited primary arrangement theorem. The deformation is smooth but nonproper; flatness does not force equal topology or arithmetic counts.
 
 The ordinary nine-root pullback has discriminant2^4608(z₁⋯z₉)^256 in its displayed free basis. Away from2 and these branch divisors it is finite étale of degree512. That degree counts geometric fibers with multiplicity conventions removed on the étale locus, not512 rational points over each finite-field base point.
+
+## 10. The actual square-root surfaces cross a birational boundary
+
+Over the complex numbers, retain n of the nine magic linear forms and adjoin their projective square roots. For n=5,...,9 these are integral complete intersections of n−3 quadrics in P^(n−1). If the chosen line arrangement has τ triple intersections, the surface has exactly2^(n−4)τ ordinary double points and no other singularities. On its minimal resolution, K is the pullback of O(n−6). The geometric genera are0,1,7,31,111 for n=5,6,7,8,9 respectively.
+
+In the specific nested chain from the shared five roots to a six-root intermediate, an hourglass, an eight-root intermediate, and the full nine-root surface, the node counts are4,8,24,80,256; K² is4,0,16,128,576. Six-root resolutions are K3 surfaces. From seven roots onward the resolutions are of general type. The full-square invariants are a recovered result of Auel–Singer, explicitly attributed in the packet, not a novelty claim.
+
+Positive geometric genus rules out rationality, hence any finite locally-closed split-torus torification of these n≥6 surfaces or any nonempty open subset. This is stronger than the earlier obstruction to one chosen toric morphism. It does not exclude blue presentations or every notion of F1 geometry, and it says nothing by itself about the existence of distinct positive integer-square points.
+
+## 11. Distinctness introduces new torsion
+
+For a finite abelian group A, N=|A| and h_d=|A[d]|, the number of gap pairs producing nine distinct offsets is
+
+I(A)=N²−4(1+h₂)N−2−4h₂+4h₄+2h₅+4h₆+2h₂²+h₂h₄.
+
+There are N·I(A) labelled injective magic arrays and (N−9)I(A) with no identity entry. A twelve-difference description and an independently reduced eight-difference description have identical Smith counts. Distinctness introduces5-torsion and a mixed2/3-torsion term: h₆=h₂h₃, so6 is not a new independent torsion coordinate. These terms were absent from the nonidentity-only formula.
+
+For example C₃×C₃ gives432 injective arrays, recovering the characteristic-three affine-plane census, while C₉ gives216. Equal cardinality does not determine the answer. The existence criterion |A|≥9 and |2A|≥4 is a compact reformulation/reproof of the cited prior finite-abelian3-magic classification, not a new existence theorem claim.
+
+## 12. Incoming conic powers: a real bridge and a base-change boundary
+
+The concurrent repository conic UV=W² is P¹ over Z, including characteristic2. Its coordinate power maps coincide exactly with the k=2 cyclotomic projective maps. Fixed points over F_Q number2+gcd(Q−1,r−1), and the full noninvertible tail/period formulas transport as well. Integer reduction forgets sizes and exceptional-set growth; no blue-path predicate is inferred from the count.
+
+The generic torus r-power map extends uniquely over the flat family as [r]_t(z)=((1+tz)^r−1)/t, an integral polynomial. At t=0 it becomes multiplication by r. Modulo a prime p, [p]_t=t^(p−1)z^p, so its additive special fiber is zero, not ordinary Frobenius. The exact repair is relative Frobenius z↦z^p into the base-twisted family G_(t^p). The base map cannot be forgotten. No characteristic-zero lambda structure or automatic square-point transport is claimed.
+
+## Session boundary and remaining targets
+
+This session closes the stated constructions, count identities, geometric obstructions and their audits. The next meaningful open questions are whether the positive unordered counting model can be related to an actual torification of its quotient, how to retain arithmetic gap addition beyond support geometry, and what additional intrinsic observer data survives reference erasure. They are future directions, not results established here or automatically running follow-ups. No integer magic-square-of-distinct-squares existence/nonexistence theorem or RH proof is claimed.
