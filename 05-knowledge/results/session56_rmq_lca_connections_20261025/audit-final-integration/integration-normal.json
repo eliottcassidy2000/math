@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "preaudit_map_sha256": "9036db21c00f430dbc2c43b04ae8b0fd4c3666fc90f823313aa4ac4417455687",
+  "new_files": 115,
+  "new_bytes": 478928,
+  "prior_files": 157,
+  "root_relative_links": 58,
+  "connection_cards": 17,
+  "bundled_source_pins": "PASS",
+  "root_sha256": {
+    "README.md": "e79120a9a0b5f6e4a7cfc597b20250ae54448034773e00d86b81e55c469f695b",
+    "CONNECTIONS.md": "ae282ad431f0be97d4cfbdc628e09f47be02c19d9c33438895ff90ed971954cc",
+    "SYNTHESIS.md": "0e4e7a338c7a6ce12a726fadaea96effbbb8153fa4ae82a9e7cab2ef14f7239f"
+  }
+}

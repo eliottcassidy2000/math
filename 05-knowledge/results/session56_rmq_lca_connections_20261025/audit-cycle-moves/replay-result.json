@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "producer_routes_replayed": 27620,
+  "generic_cycle_reversals_replayed": 35857,
+  "explicit_exception_checks": true
+}

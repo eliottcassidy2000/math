@@ -1,0 +1,1 @@
+PASS: recomputed exact counts, all tournament arcs, entire fibre, H counts, no triangle move, and deterministic SVGs.

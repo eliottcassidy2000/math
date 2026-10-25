@@ -1,0 +1,307 @@
+{
+  "rows": [
+    {
+      "n": 1,
+      "forest_coefficients": [
+        1
+      ],
+      "score_fibres": 1,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 1,
+      "direct_forest_coefficients": [
+        1
+      ]
+    },
+    {
+      "n": 2,
+      "forest_coefficients": [
+        1
+      ],
+      "score_fibres": 1,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 1,
+      "direct_forest_coefficients": [
+        1,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "forest_coefficients": [
+        1,
+        1
+      ],
+      "score_fibres": 2,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 2,
+      "direct_forest_coefficients": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "forest_coefficients": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "score_fibres": 8,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 8,
+      "direct_forest_coefficients": [
+        1,
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "n": 5,
+      "forest_coefficients": [
+        1,
+        6,
+        15,
+        19,
+        11
+      ],
+      "score_fibres": 52,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 52,
+      "direct_forest_coefficients": [
+        1,
+        6,
+        15,
+        19,
+        11
+      ]
+    },
+    {
+      "n": 6,
+      "forest_coefficients": [
+        1,
+        10,
+        45,
+        116,
+        176,
+        130
+      ],
+      "score_fibres": 478,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 478,
+      "direct_forest_coefficients": [
+        1,
+        10,
+        45,
+        116,
+        176,
+        130
+      ]
+    },
+    {
+      "n": 7,
+      "forest_coefficients": [
+        1,
+        15,
+        105,
+        445,
+        1224,
+        2109,
+        1807
+      ],
+      "score_fibres": 5706,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ],
+      "direct_orientation_scores": 5706,
+      "direct_forest_coefficients": [
+        1,
+        15,
+        105,
+        445,
+        1224,
+        2109,
+        1807
+      ]
+    },
+    {
+      "n": 8,
+      "forest_coefficients": [
+        1,
+        21,
+        210,
+        1310,
+        5570,
+        16338,
+        30947,
+        29427
+      ],
+      "score_fibres": 83824,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 9,
+      "forest_coefficients": [
+        1,
+        28,
+        378,
+        3241,
+        19480,
+        84823,
+        263518,
+        537499,
+        552976
+      ],
+      "score_fibres": 1461944,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 10,
+      "forest_coefficients": [
+        1,
+        36,
+        630,
+        7084,
+        56826,
+        339774,
+        1524864,
+        4981386,
+        10787823,
+        11811844
+      ],
+      "score_fibres": 29510268,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 11,
+      "forest_coefficients": [
+        1,
+        45,
+        990,
+        14106,
+        145061,
+        1132110,
+        6831320,
+        31632110,
+        107967594,
+        245733764,
+        283092349
+      ],
+      "score_fibres": 676549450,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 12,
+      "forest_coefficients": [
+        1,
+        55,
+        1485,
+        26115,
+        334149,
+        3284155,
+        25432092,
+        155895780,
+        744033090,
+        2639018810,
+        6264248039,
+        7529536245
+      ],
+      "score_fibres": 17361810016,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 13,
+      "forest_coefficients": [
+        1,
+        66,
+        2145,
+        45595,
+        709290,
+        8547480,
+        82197059,
+        638260992,
+        3985826880,
+        19570911130,
+        71805437367,
+        176706251346,
+        220201158997
+      ],
+      "score_fibres": 492999348348,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    },
+    {
+      "n": 14,
+      "forest_coefficients": [
+        1,
+        78,
+        3003,
+        75856,
+        1408385,
+        20381076,
+        237482127,
+        2264687368,
+        17734659984,
+        112930376420,
+        569285567270,
+        2152265611548,
+        5465145719590,
+        7025473163526
+      ],
+      "score_fibres": 15345359136232,
+      "methods": [
+        "weighted_composition_inclusion_exclusion",
+        "subset_tree_partition_recurrence_with_path_run_determinants"
+      ]
+    }
+  ],
+  "triangle_control": {
+    "unrooted_forest_polynomial": [
+      1,
+      3,
+      3
+    ],
+    "unrooted_total": 7,
+    "det_I_plus_L": 16
+  },
+  "weighted_cache_states": 508,
+  "elapsed_seconds": 0.9315305670024827
+}

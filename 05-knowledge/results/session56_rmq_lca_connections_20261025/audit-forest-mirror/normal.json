@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "multigraph_deletion_contraction_checks": 648,
+  "multigraph_universe": "3 labelled vertices; each nonloop multiplicity 0..2; loop multiplicity 0..1; dilation t=0..3",
+  "independent_full_forest_rows_through": 7,
+  "coefficient_structure_checks_through": 14,
+  "formal_tree_fixed_point_degree": 32,
+  "exception_safe_negative_control": "PASS"
+}

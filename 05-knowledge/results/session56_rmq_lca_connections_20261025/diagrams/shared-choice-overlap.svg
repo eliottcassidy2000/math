@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc"><title id="title">Shared choice, not independent resampling</title><desc id="desc">Exact overlap counts for CRT blocks [2,5] and [5,3]. Independent pairing fabricates 128 distinct outcomes; the same F5 state join recovers 112 true arrays and zero distinct arrays.</desc><defs><marker id="teal" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#007f79"/></marker><marker id="mut" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#50637b"/></marker><marker id="blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#326ba8"/></marker><marker id="red" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#b34836"/></marker></defs><rect width="1200" height="800" fill="#f6f8fc"/>
+<text x="45" y="55" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="29" font-weight="700" text-anchor="start">01  /  SHARED CHOICE ≠ INDEPENDENT RESAMPLING</text>
+<text x="45" y="92" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" text-anchor="start">Finite-exact CRT witness: local state counts 8 × 7 × 2</text>
+<rect x="45" y="125" width="1110" height="150" rx="16" fill="white" stroke="#d4dfe9" stroke-width="2"/>
+<text x="85" y="169" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" text-anchor="start">Block [2,5]</text>
+<text x="85" y="215" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" text-anchor="start">8 × 7 = 56 rows</text>
+<text x="600" y="166" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle">ONE physical F₅ choice</text>
+<text x="600" y="206" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" text-anchor="middle">7 actual states</text>
+<text x="880" y="169" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" text-anchor="start">Block [5,3]</text>
+<text x="880" y="215" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" text-anchor="start">7 × 2 = 14 rows</text>
+<text x="600" y="250" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="400" text-anchor="middle">The shared state ID must agree in both occurrences.</text>
+<rect x="45" y="315" width="535" height="240" rx="16" fill="white" stroke="#b34836" stroke-width="2"/>
+<rect x="620" y="315" width="535" height="240" rx="16" fill="white" stroke="#007f79" stroke-width="2"/>
+<path d="M300.000,278.000 L300.000,310.000" stroke="#b34836" stroke-width="3" fill="none" marker-end="url(#red)"/>
+<path d="M890.000,278.000 L890.000,310.000" stroke="#007f79" stroke-width="3" fill="none" marker-end="url(#teal)"/>
+<text x="75" y="355" fill="#b34836" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">WRONG COUPLING</text>
+<text x="650" y="355" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">EXACT COUPLING</text>
+<text x="75" y="396" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" text-anchor="start">Resample F₅ independently</text>
+<text x="650" y="396" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" text-anchor="start">Join on the same F₅ state</text>
+<text x="75" y="440" fill="#b34836" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="700" text-anchor="start">56 × 14 = 784 pairs</text>
+<text x="650" y="440" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700" text-anchor="start">8 × 7 × 2 = 112 true arrays</text>
+<text x="75" y="482" fill="#b34836" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" text-anchor="start">128 fabricated all-distinct outcomes</text>
+<text x="650" y="482" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="400" text-anchor="start">0 all-distinct arrays</text>
+<text x="75" y="522" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">Here, independently paired zero masks are fake.</text>
+<text x="650" y="522" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">Compatible union first; count each choice once.</text>
+<rect x="45" y="590" width="1110" height="154" rx="16" fill="white" stroke="#d4dfe9" stroke-width="2"/>
+<text x="70" y="627" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">FIXED MASK</text>
+<text x="300" y="627" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="700" text-anchor="start">m AND m = m</text>
+<text x="70" y="665" fill="#007f79" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">CORRELATED COPY</text>
+<text x="300" y="665" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" text-anchor="start">Choose s once, then use (s,s): meet returns the same law.</text>
+<text x="70" y="703" fill="#b34836" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">RESAMPLING</text>
+<text x="300" y="703" fill="#172b43" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="400" text-anchor="start">Choose s and t separately: a different coupling, not idempotence.</text>
+<text x="45" y="779" fill="#50637b" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Scope: this exact product-family repair does not reconstruct arbitrary global laws from marginals.</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "RESULT.md": "6188dc39ea856db0d232b318fb5b4fe067517e5c651edceb8814e1f88ecdbd84",
+    "SOURCES.json": "8918b72ac44e0967ce0bfb8773065398c59ec08323a71a7661548c619debcf1b",
+    "check.py": "b0c462c720d10ba895e1ac4d8c76c2218d982c64dd73164e18fde9db7b0b0c15",
+    "inputs/01-collatz_amortized_excess_budget_20261005.md": "b1f0dfecbe4ecf1cc4ebee71149534d522930fab93ea088d961fcb9f09d11dff",
+    "inputs/02-THM-4735-valuation-dependent-debt-cones-optimal-terminal-splits-and-the-debt-two-obstruction-to-universal-cone-coverage.md": "37bda03951bd8c7fd703c182d682fc22675b97e1fc8c2ced63e1ae47cfad325f",
+    "inputs/03-reset_20260926_clock.md": "8a68c53ad3b16bceaa1fb2067cdd4e38a2138f7ed8b544637dac51d7a8842569",
+    "inputs/04-REPORT.md": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a",
+    "inputs/05-PROOF.md": "8d88458b81e96f7039c3915f5241ca7b27794bed475ae657e9c241c3123c10c6",
+    "normal.json": "2c4147a50a2735f7f0f496ad68bc0235e57f8ca2e0ee78f71dd121b000251a53",
+    "optimized.json": "2c4147a50a2735f7f0f496ad68bc0235e57f8ca2e0ee78f71dd121b000251a53"
+  }
+}

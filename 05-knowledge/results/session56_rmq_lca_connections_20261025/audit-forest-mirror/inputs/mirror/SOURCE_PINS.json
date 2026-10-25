@@ -1,0 +1,45 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "742b2da433aada661d8a5093d8e540e6ed7dc63b",
+  "verdict": "RECOVERED core mirror/forest bridge, NOT new Session56 discovery. Classical facts receive an independent compact proof and finite controls.",
+  "bounded_search": "Targeted git ls-tree filename search and git show of Session31 mirror/tree-moment/forest sources. Not a literature-wide novelty claim. An initial broad grep was not used as absence evidence.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/tree-moments/TREE_MOMENT_BRIDGE.md",
+      "local": "sources/TREE_MOMENT_BRIDGE.md",
+      "sha256": "41b885384b4af3227c15ce6f599bf37f9942efc765555c59a3d0bd16b4b42a86"
+    },
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/tree-moments/README.md",
+      "local": "sources/README.md",
+      "sha256": "4c7901eaaca07603ae857a70974ce055da007caf3ca0f26b20c858a60098518e"
+    },
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/HAMILTONIAN_FOREST_SIZE_BIAS.md",
+      "local": "sources/HAMILTONIAN_FOREST_SIZE_BIAS.md",
+      "sha256": "5f21be709975d2bc99886258618921bf74370cd654c69972e612c4d724e86c0c"
+    },
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/mirror/HAMILTONIAN_FOREST_AUDIT.md",
+      "local": "sources/HAMILTONIAN_FOREST_AUDIT.md",
+      "sha256": "0b96adcc85cc91f1d21eff62d9516e48395c02797d9cc95b3653bdc04c046555"
+    },
+    {
+      "path": "05-knowledge/results/session31_mirror_mrb_20261022/SYNTHESIS.md",
+      "local": "sources/SYNTHESIS.md",
+      "sha256": "90fb5e9749811518dbed1b99ab794ddd9857f59d5ade4192b21041d9d1c4b4d3"
+    }
+  ],
+  "external_primary_sources": [
+    {
+      "url": "https://dlmf.nist.gov/4.13",
+      "claim": "Lambert W branch definitions and tree function",
+      "checked": "2026-10-25"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0602575v2",
+      "claim": "det(I+L) counts spanning rooted forests",
+      "checked": "2026-10-25"
+    }
+  ]
+}

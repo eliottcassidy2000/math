@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "all_simple_graphs_through_n5": 1099,
+  "path_complements": [
+    {
+      "n": 3,
+      "fibres": 2,
+      "coarse_pairs": 1,
+      "pair_edge_mass": 1
+    },
+    {
+      "n": 4,
+      "fibres": 8,
+      "coarse_pairs": 4,
+      "pair_edge_mass": 4
+    },
+    {
+      "n": 5,
+      "fibres": 52,
+      "coarse_pairs": 26,
+      "pair_edge_mass": 32
+    },
+    {
+      "n": 6,
+      "fibres": 478,
+      "coarse_pairs": 239,
+      "pair_edge_mass": 512
+    },
+    {
+      "n": 7,
+      "fibres": 5706,
+      "coarse_pairs": 2853,
+      "pair_edge_mass": 16384
+    }
+  ],
+  "exception_safe_control": "PASS"
+}

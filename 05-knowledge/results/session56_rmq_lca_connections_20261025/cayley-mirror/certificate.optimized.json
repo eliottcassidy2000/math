@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "coefficient_checks_through": 24,
+  "coefficients": [
+    "1",
+    "1",
+    "3/2",
+    "8/3",
+    "125/24",
+    "54/5",
+    "16807/720",
+    "16384/315",
+    "531441/4480",
+    "156250/567"
+  ],
+  "forests": [
+    {
+      "n": 1,
+      "unrooted": 1,
+      "rooted": 1
+    },
+    {
+      "n": 2,
+      "unrooted": 2,
+      "rooted": 3
+    },
+    {
+      "n": 3,
+      "unrooted": 7,
+      "rooted": 16
+    },
+    {
+      "n": 4,
+      "unrooted": 38,
+      "rooted": 125
+    },
+    {
+      "n": 5,
+      "unrooted": 291,
+      "rooted": 1296
+    },
+    {
+      "n": 6,
+      "unrooted": 2932,
+      "rooted": 16807
+    }
+  ],
+  "rigorous_rational_interval_controls": [
+    {
+      "n": 4,
+      "M": 250,
+      "lower_decimal_illustration": 1.9999999986547017,
+      "upper_decimal_illustration": 2.0000000004666867,
+      "width_decimal_illustration": 1.8119848956877856e-09,
+      "outward_lower_30dp": "1.999999998654701626542445054051",
+      "outward_upper_30dp": "2.000000000466686522230230621868",
+      "rational_bound_checked": true
+    },
+    {
+      "n": 16,
+      "M": 60,
+      "lower_decimal_illustration": 1.2396277295227622,
+      "upper_decimal_illustration": 1.2396277295227622,
+      "width_decimal_illustration": 4.828427866985871e-23,
+      "outward_lower_30dp": "1.239627729522762141818416327856",
+      "outward_upper_30dp": "1.239627729522762141818464612136",
+      "rational_bound_checked": true
+    }
+  ],
+  "note": "Displayed decimals are illustrations, not outward-rounded endpoints. Exact fractions are evaluated by this verifier."
+}

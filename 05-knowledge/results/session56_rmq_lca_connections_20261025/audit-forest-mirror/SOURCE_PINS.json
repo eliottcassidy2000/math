@@ -1,0 +1,83 @@
+{
+  "inputs": [
+    {
+      "path": "inputs/forest/REPORT.md",
+      "sha256": "9a7b2107f5dfc3245a251f46eef51698932a4b006d94c607f757497cd917c886"
+    },
+    {
+      "path": "inputs/forest/SHA256SUMS",
+      "sha256": "ffbd20b00951e4c43f8181b92d75f81ab3f7855e3138b919153e5d84d648b91b"
+    },
+    {
+      "path": "inputs/forest/certificate.json",
+      "sha256": "65038ddb13245d787d89a15fb8757dc391f756ad05336e1851c5c3443cca7037"
+    },
+    {
+      "path": "inputs/forest/check.py",
+      "sha256": "139b4f5462bfbfa31ac5976946431feb6a8555b7729bde6ac9010fe59919240b"
+    },
+    {
+      "path": "inputs/forest/optimized.out",
+      "sha256": "291b30215e33346dbeae64dc6fa097939b750cdbff6d257abfe4c93f52fbfbde"
+    },
+    {
+      "path": "inputs/forest/run.out",
+      "sha256": "291b30215e33346dbeae64dc6fa097939b750cdbff6d257abfe4c93f52fbfbde"
+    },
+    {
+      "path": "inputs/mirror/PROOF.md",
+      "sha256": "f2a8eeac02084585ed6920f4cec44e081412d9054a22e41b51a73793879f09b2"
+    },
+    {
+      "path": "inputs/mirror/README.md",
+      "sha256": "3369112f1264edc93d217a051a7f146105e584fbf3760d9626408afc3987cd02"
+    },
+    {
+      "path": "inputs/mirror/SHA256SUMS",
+      "sha256": "375963e2a976c60019fd6fe1498b20173af12666c51e398953b26f5599eecb5a"
+    },
+    {
+      "path": "inputs/mirror/SOURCE_PINS.json",
+      "sha256": "f0b9f40b9093b03bfab989a6b6fa88938640ae4237270384bf9decc2db70aa05"
+    },
+    {
+      "path": "inputs/mirror/candidate-paths.txt",
+      "sha256": "4ea21c5388ec9ff2967c3cc1f4f1ca555bb9b6e198337adf05e1f20480e51951"
+    },
+    {
+      "path": "inputs/mirror/certificate.json",
+      "sha256": "6762bf94846f219a13dd1dc696046dc832719fb808c37907a0538e9cde7a5f0c"
+    },
+    {
+      "path": "inputs/mirror/certificate.optimized.json",
+      "sha256": "6762bf94846f219a13dd1dc696046dc832719fb808c37907a0538e9cde7a5f0c"
+    },
+    {
+      "path": "inputs/mirror/sources/HAMILTONIAN_FOREST_AUDIT.md",
+      "sha256": "0b96adcc85cc91f1d21eff62d9516e48395c02797d9cc95b3653bdc04c046555"
+    },
+    {
+      "path": "inputs/mirror/sources/HAMILTONIAN_FOREST_SIZE_BIAS.md",
+      "sha256": "5f21be709975d2bc99886258618921bf74370cd654c69972e612c4d724e86c0c"
+    },
+    {
+      "path": "inputs/mirror/sources/README.md",
+      "sha256": "4c7901eaaca07603ae857a70974ce055da007caf3ca0f26b20c858a60098518e"
+    },
+    {
+      "path": "inputs/mirror/sources/SYNTHESIS.md",
+      "sha256": "90fb5e9749811518dbed1b99ab794ddd9857f59d5ade4192b21041d9d1c4b4d3"
+    },
+    {
+      "path": "inputs/mirror/sources/TREE_MOMENT_BRIDGE.md",
+      "sha256": "41b885384b4af3227c15ce6f599bf37f9942efc765555c59a3d0bd16b4b42a86"
+    },
+    {
+      "path": "inputs/mirror/verify.py",
+      "sha256": "b0b50942b3a359f2ef2d981fb5918e8c6c021670e0eb67004652088410b416dd"
+    }
+  ],
+  "forest_source": "/tmp/session56-score-forest-counts",
+  "mirror_source": "/tmp/session56-cayley-mirror-bridge",
+  "scope": "Exact frozen local files audited, not a remote bibliographic verification"
+}

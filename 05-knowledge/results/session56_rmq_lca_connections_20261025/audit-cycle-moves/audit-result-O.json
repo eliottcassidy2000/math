@@ -1,0 +1,201 @@
+{
+  "method": "Independent induced-subgraph 2-regular cycle detection and BFS; explicit RuntimeError checks, unaffected by -O",
+  "path_census": [
+    {
+      "n": 1,
+      "orientations": 1,
+      "fibres": 1,
+      "induced_cycle_counts": {},
+      "undirected_move_edges": 0,
+      "fibre_size_histogram": {
+        "1": 1
+      },
+      "maximum_BFS_distance_from_representative": 0
+    },
+    {
+      "n": 2,
+      "orientations": 1,
+      "fibres": 1,
+      "induced_cycle_counts": {},
+      "undirected_move_edges": 0,
+      "fibre_size_histogram": {
+        "1": 1
+      },
+      "maximum_BFS_distance_from_representative": 0
+    },
+    {
+      "n": 3,
+      "orientations": 2,
+      "fibres": 2,
+      "induced_cycle_counts": {},
+      "undirected_move_edges": 0,
+      "fibre_size_histogram": {
+        "1": 2
+      },
+      "maximum_BFS_distance_from_representative": 0
+    },
+    {
+      "n": 4,
+      "orientations": 8,
+      "fibres": 8,
+      "induced_cycle_counts": {},
+      "undirected_move_edges": 0,
+      "fibre_size_histogram": {
+        "1": 8
+      },
+      "maximum_BFS_distance_from_representative": 0
+    },
+    {
+      "n": 5,
+      "orientations": 64,
+      "fibres": 52,
+      "induced_cycle_counts": {
+        "3": 1,
+        "4": 1
+      },
+      "undirected_move_edges": 12,
+      "fibre_size_histogram": {
+        "1": 42,
+        "2": 8,
+        "3": 2
+      },
+      "maximum_BFS_distance_from_representative": 2
+    },
+    {
+      "n": 6,
+      "orientations": 1024,
+      "fibres": 478,
+      "induced_cycle_counts": {
+        "3": 4,
+        "4": 3
+      },
+      "undirected_move_edges": 704,
+      "fibre_size_histogram": {
+        "1": 258,
+        "2": 100,
+        "3": 44,
+        "5": 8,
+        "4": 34,
+        "9": 6,
+        "7": 10,
+        "6": 10,
+        "8": 4,
+        "11": 2,
+        "10": 2
+      },
+      "maximum_BFS_distance_from_representative": 3
+    },
+    {
+      "n": 7,
+      "orientations": 32768,
+      "fibres": 5706,
+      "induced_cycle_counts": {
+        "3": 10,
+        "4": 6
+      },
+      "undirected_move_edges": 53248,
+      "fibre_size_histogram": {
+        "1": 1824,
+        "2": 1026,
+        "3": 532,
+        "5": 280,
+        "4": 456,
+        "6": 208,
+        "12": 92,
+        "9": 112,
+        "7": 156,
+        "20": 22,
+        "25": 14,
+        "8": 196,
+        "32": 8,
+        "19": 30,
+        "10": 84,
+        "31": 12,
+        "13": 64,
+        "24": 22,
+        "11": 64,
+        "18": 40,
+        "27": 8,
+        "17": 22,
+        "34": 10,
+        "15": 52,
+        "22": 28,
+        "35": 14,
+        "21": 16,
+        "23": 4,
+        "41": 10,
+        "14": 70,
+        "16": 56,
+        "28": 20,
+        "44": 12,
+        "47": 6,
+        "53": 6,
+        "30": 22,
+        "51": 2,
+        "39": 4,
+        "69": 4,
+        "36": 6,
+        "42": 8,
+        "26": 18,
+        "29": 4,
+        "43": 4,
+        "57": 2,
+        "38": 8,
+        "55": 4,
+        "49": 8,
+        "91": 2,
+        "68": 2,
+        "50": 4,
+        "37": 4,
+        "66": 4,
+        "45": 4,
+        "33": 12,
+        "46": 4
+      },
+      "maximum_BFS_distance_from_representative": 5
+    }
+  ],
+  "generic": [
+    {
+      "n": 1,
+      "graphs": 1,
+      "states": 1,
+      "sharpness_witnesses": 0
+    },
+    {
+      "n": 2,
+      "graphs": 2,
+      "states": 3,
+      "sharpness_witnesses": 0
+    },
+    {
+      "n": 3,
+      "graphs": 8,
+      "states": 27,
+      "sharpness_witnesses": 1
+    },
+    {
+      "n": 4,
+      "graphs": 64,
+      "states": 729,
+      "sharpness_witnesses": 26
+    },
+    {
+      "n": 5,
+      "graphs": 1024,
+      "states": 59049,
+      "sharpness_witnesses": 733
+    }
+  ],
+  "sharpness": [
+    {
+      "mask": 13,
+      "Hamilton_paths": 11
+    },
+    {
+      "mask": 19,
+      "Hamilton_paths": 13
+    }
+  ],
+  "status": "PASS"
+}

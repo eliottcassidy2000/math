@@ -1,0 +1,46 @@
+{
+  "schema": "correlated-choice-gluing-v1",
+  "checks": {
+    "partial_assignment_associativity_triples": 19683,
+    "binary_chain_relation_triples": 4096,
+    "rational_diagonal_laws": 80
+  },
+  "hostile": {
+    "moduli": [
+      2,
+      5,
+      3
+    ],
+    "local_state_counts": [
+      8,
+      7,
+      2
+    ],
+    "left_rows": 56,
+    "right_rows": 14,
+    "repaired_rows": 112,
+    "independent_rows": 784,
+    "repaired_distinct_count": 0,
+    "fabricated_distinct_count": 128,
+    "histogram": {
+      "0x1000880": 16,
+      "0x61089888": 16,
+      "0x80040200": 16,
+      "0x8a054250": 16,
+      "0x2e1cebb88": 12,
+      "0x495742ea2": 12,
+      "0x98b456ad5": 12,
+      "0xfffffffff": 12
+    },
+    "same_mask_F5_pair_count": 17,
+    "F5_state_count": 7
+  },
+  "boundary_controls": {
+    "parity_original_rows": 4,
+    "marginal_join_rows": 8,
+    "cycle_pairwise_consistent": true,
+    "cycle_global_rows": 0,
+    "zero_weight_safe": true,
+    "scalar_evaluation_not_multiplicative": true
+  }
+}

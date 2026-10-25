@@ -1,0 +1,31 @@
+{
+  "checkout_head": "1b91742ce55a202b73c80d56561ba56d00b503a6",
+  "sources": [
+    {
+      "source": "math/05-knowledge/results/collatz_amortized_excess_budget_20261005.md",
+      "snapshot": "inputs/01-collatz_amortized_excess_budget_20261005.md",
+      "sha256": "b1f0dfecbe4ecf1cc4ebee71149534d522930fab93ea088d961fcb9f09d11dff"
+    },
+    {
+      "source": "math/01-canon/theorems/THM-4735-valuation-dependent-debt-cones-optimal-terminal-splits-and-the-debt-two-obstruction-to-universal-cone-coverage.md",
+      "snapshot": "inputs/02-THM-4735-valuation-dependent-debt-cones-optimal-terminal-splits-and-the-debt-two-obstruction-to-universal-cone-coverage.md",
+      "sha256": "37bda03951bd8c7fd703c182d682fc22675b97e1fc8c2ced63e1ae47cfad325f"
+    },
+    {
+      "source": "math/05-knowledge/results/reset_20260926_clock.md",
+      "snapshot": "inputs/03-reset_20260926_clock.md",
+      "sha256": "8a68c53ad3b16bceaa1fb2067cdd4e38a2138f7ed8b544637dac51d7a8842569"
+    },
+    {
+      "source": "session53-collatz27-return/REPORT.md",
+      "snapshot": "inputs/04-REPORT.md",
+      "sha256": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a"
+    },
+    {
+      "source": "session33-publication/frozen-FINAL/05-knowledge/results/session33_continuation_states_20261023/clocks/PROOF.md",
+      "snapshot": "inputs/05-PROOF.md",
+      "sha256": "8d88458b81e96f7039c3915f5241ca7b27794bed475ae657e9c241c3123c10c6"
+    }
+  ],
+  "missing_direct_dependency": "05-knowledge/results/charge_palettes_boundary_20261020g/charge.md"
+}

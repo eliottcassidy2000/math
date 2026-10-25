@@ -1,6 +1,6 @@
-# Session 56: RMQ/LCA as exact interfaces, not universal summaries
+# Session56: RMQ/LCA as exact interfaces, not universal summaries
 
-25 October 2026. Second verified checkpoint; research is ongoing. The user's request is to connect range-minimum queries and least-common-ancestor algorithms with older niche themes and current arithmetic/tournament work. Classical algorithms are credited, and no external novelty or A000568 speedup is claimed.
+25 October 2026. Final research packet; session closure is announced separately after remote verification. The user's request is to connect range-minimum queries and least-common-ancestor algorithms with older niche themes and current arithmetic/tournament work. Classical algorithms are credited, and no external novelty or A000568 speedup is claimed.
 
 ## 1. Overlap-safe signature aggregation
 
@@ -39,8 +39,16 @@ The [ten-card historical atlas](niche-atlas/ATLAS.md) supplies a source, target,
 
 - [Partition projectors](partition-projectors/THEOREM.md): zeta coordinates diagonalize meet convolution. Formal signed Möbius projectors exist, but a nonnegative real idempotent is only zero or a deterministic state. Independent resampling and correlated reuse are different operations.
 - [Hierarchy covers](hierarchy-covers/REPORT.md): the minimum number of same-label rooted hierarchies containing a given nonempty-cluster family equals its crossing graph's chromatic number. Affine lines on nine points require four trees. A synchronous common-refinement filtration can still fit one tree; it does not retain all independent prime clusters as nodes.
-- [Independent algebra/cover audit](audit-projectors-covers/REPORT.md) checks the signed and probabilistic statements, tree-cover constructions, actual Session55 nine-cell CRT example and odd-cycle hostile. The hierarchy producer's assertions are validated in normal mode; its optimized output is not treated as assertion validation. The independent exception-safe audit validates both modes.
+- [Independent algebra/cover audit](audit-projectors-covers/REPORT.md) checks the signed and probabilistic statements, tree-cover constructions, actual Session 55 nine-cell CRT example and odd-cycle hostile. The hierarchy producer's assertions are validated in normal mode; its optimized output is not treated as assertion validation. The independent exception-safe audit validates both modes.
+
+## 6. Final bridges and structural results
+
+- [Requested list of seventeen connections](CONNECTIONS.md) and [session synthesis](SYNTHESIS.md).
+- [Correlated overlap and join-tree gluing](correlated-gluing/THEOREM.md), [guarded affine debt summaries](debt-range/RESULT.md), and [independent audit](audit-gluing-debt/REPORT.md).
+- [Forest-locked degree-fibre cycle moves](cycle-moves/REPORT.md) and [independent audit](audit-cycle-moves/AUDIT.md): triangles and quadrilaterals suffice, sharply, while stronger native guards remain separate.
+- [Score fibres counted by unrooted forests](score-forest-counts/REPORT.md), [parity/complement corollaries](score-forest-counts/COROLLARIES.md), [recovered Cayley–mirror bridge](cayley-mirror/PROOF.md), and [independent audit](audit-forest-mirror/REPORT.md).
+- [Exact diagrams and replay](diagrams/README.md).
 
 ## Verification and scope
 
-Exact proofs, finite universes, independent certificates and source pins accompany both lanes. No whole external article is republished. Earlier Session 55 results remain unchanged. Publication uses temporary storage because the original overlay is full; no Git pack data is deleted. The session will have a separately announced end after further connection cards and audits are packaged.
+Exact proofs, finite universes, independent certificates and source pins accompany both lanes. No whole external article is republished. Earlier Session 55 results remain unchanged. Publication uses temporary storage because the original overlay is full; no Git pack data is deleted. The verified final publication receipt and explicit end message determine session closure.

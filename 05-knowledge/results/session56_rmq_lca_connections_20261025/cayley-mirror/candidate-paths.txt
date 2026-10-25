@@ -1,0 +1,2 @@
+04-computation/sk_S4_lemniscatic_lambert_thm3012.py
+05-knowledge/results/sk_S4_lemniscatic_lambert_thm3012.out
