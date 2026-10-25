@@ -1,0 +1,440 @@
+{
+  "checks": 123237,
+  "common_action_bridge": {
+    "common_fixed_dimension": 1,
+    "even_coboundary_image": 256,
+    "forgotten_H1": 8,
+    "full_H1": 10,
+    "full_coboundary_image": 256,
+    "gaps": 9,
+    "minimum_individual_fixed_dimension": 3,
+    "vertex_assignments": 512
+  },
+  "exterior": {
+    "C2_sign": {
+      "minimum_fixed_dimension": 0,
+      "polynomial": [
+        1,
+        0
+      ],
+      "root_order": 0
+    },
+    "C3_real_rotation": {
+      "minimum_fixed_dimension": 0,
+      "polynomial": [
+        1,
+        0,
+        1
+      ],
+      "root_order": 0
+    },
+    "C3_rotation_plus_trivial": {
+      "minimum_fixed_dimension": 1,
+      "polynomial": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "root_order": 1
+    },
+    "D3_real_standard": {
+      "minimum_fixed_dimension": 0,
+      "polynomial": [
+        1,
+        0,
+        0
+      ],
+      "root_order": 0
+    },
+    "complex_C3_scalar_hostile": {
+      "minimum_fixed_dimension": 0,
+      "polynomial": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "root_order": 1
+    }
+  },
+  "fano": {
+    "affine_incidence_maps": 48,
+    "candidate_four_line_sets": 70,
+    "fano_completions": 2
+  },
+  "holonomy": {
+    "census": [
+      {
+        "beta": 0,
+        "cases": 1,
+        "fixed_even_dimension": 2,
+        "lost_dimension": 0
+      },
+      {
+        "beta": 1,
+        "cases": 2,
+        "fixed_even_dimension": 0,
+        "lost_dimension": 0
+      },
+      {
+        "beta": 1,
+        "cases": 3,
+        "fixed_even_dimension": 1,
+        "lost_dimension": 1
+      },
+      {
+        "beta": 1,
+        "cases": 1,
+        "fixed_even_dimension": 2,
+        "lost_dimension": 2
+      },
+      {
+        "beta": 2,
+        "cases": 26,
+        "fixed_even_dimension": 0,
+        "lost_dimension": 2
+      },
+      {
+        "beta": 2,
+        "cases": 9,
+        "fixed_even_dimension": 1,
+        "lost_dimension": 3
+      },
+      {
+        "beta": 2,
+        "cases": 1,
+        "fixed_even_dimension": 2,
+        "lost_dimension": 4
+      },
+      {
+        "beta": 3,
+        "cases": 194,
+        "fixed_even_dimension": 0,
+        "lost_dimension": 4
+      },
+      {
+        "beta": 3,
+        "cases": 21,
+        "fixed_even_dimension": 1,
+        "lost_dimension": 5
+      },
+      {
+        "beta": 3,
+        "cases": 1,
+        "fixed_even_dimension": 2,
+        "lost_dimension": 6
+      }
+    ],
+    "gain_cases": 112945,
+    "linear_cases": 259
+  },
+  "literal_tournaments": {
+    "T33": {
+      "automorphisms_proved_by_observers": 9,
+      "clone_pairs": 12,
+      "vertices": 33
+    },
+    "k1_pairs": [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "k2": {
+      "automorphisms_proved_by_observers": 9,
+      "base_vertices": 15,
+      "clone_pairs": 9,
+      "gap_minimum_cycles": 3,
+      "inflated_vertices": 24
+    },
+    "k3": {
+      "automorphisms_proved_by_observers": 27,
+      "base_vertices": 36,
+      "clone_pairs": 27,
+      "gap_minimum_cycles": 9,
+      "inflated_vertices": 63
+    },
+    "k4": {
+      "automorphisms_proved_by_observers": 81,
+      "base_vertices": 93,
+      "clone_pairs": 81,
+      "gap_minimum_cycles": 27,
+      "inflated_vertices": 174
+    }
+  },
+  "odd_actions": {
+    "C15_three_plus_five": {
+      "group_order": 15,
+      "leading_coefficient": 8,
+      "minimum_cycles": 2,
+      "point_orbits": 2,
+      "points": 8,
+      "polynomial": [
+        1,
+        2,
+        4,
+        6,
+        6,
+        6,
+        4,
+        2,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        3,
+        0,
+        3,
+        0,
+        1
+      ],
+      "root_order": 2
+    },
+    "C2_even_hostile": {
+      "group_order": 2,
+      "leading_coefficient": 1,
+      "minimum_cycles": 1,
+      "point_orbits": 1,
+      "points": 2,
+      "polynomial": [
+        1,
+        1,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        1,
+        1
+      ],
+      "root_order": 0
+    },
+    "C3_diagonal_two_orbits": {
+      "group_order": 3,
+      "leading_coefficient": 6,
+      "minimum_cycles": 2,
+      "point_orbits": 2,
+      "points": 6,
+      "polynomial": [
+        1,
+        2,
+        5,
+        8,
+        5,
+        2,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        4,
+        0,
+        1
+      ],
+      "root_order": 2
+    },
+    "C3_independent_two_orbits": {
+      "group_order": 9,
+      "leading_coefficient": 4,
+      "minimum_cycles": 2,
+      "point_orbits": 2,
+      "points": 6,
+      "polynomial": [
+        1,
+        2,
+        3,
+        4,
+        3,
+        2,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "root_order": 2
+    },
+    "C3_regular": {
+      "group_order": 3,
+      "leading_coefficient": 2,
+      "minimum_cycles": 1,
+      "point_orbits": 1,
+      "points": 3,
+      "polynomial": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        1
+      ],
+      "root_order": 1
+    },
+    "C3xC3_four_projections": {
+      "group_order": 9,
+      "leading_coefficient": 24,
+      "minimum_cycles": 6,
+      "point_orbits": 4,
+      "points": 12,
+      "polynomial": [
+        1,
+        4,
+        10,
+        28,
+        63,
+        96,
+        108,
+        96,
+        63,
+        28,
+        10,
+        4,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        -2,
+        7,
+        -4,
+        7,
+        -2,
+        1
+      ],
+      "root_order": 6
+    },
+    "C3xC3_regular": {
+      "group_order": 9,
+      "leading_coefficient": 24,
+      "minimum_cycles": 3,
+      "point_orbits": 1,
+      "points": 9,
+      "polynomial": [
+        1,
+        1,
+        4,
+        12,
+        14,
+        14,
+        12,
+        4,
+        1,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        -2,
+        7,
+        -4,
+        7,
+        -2,
+        1
+      ],
+      "root_order": 3
+    },
+    "C9_regular": {
+      "group_order": 9,
+      "leading_coefficient": 6,
+      "minimum_cycles": 1,
+      "point_orbits": 1,
+      "points": 9,
+      "polynomial": [
+        1,
+        1,
+        4,
+        10,
+        14,
+        14,
+        10,
+        4,
+        1,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        4,
+        6,
+        8,
+        6,
+        4,
+        0,
+        1
+      ],
+      "root_order": 1
+    },
+    "Frobenius21_on7": {
+      "group_order": 21,
+      "leading_coefficient": 2,
+      "minimum_cycles": 1,
+      "point_orbits": 1,
+      "points": 7,
+      "polynomial": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "residual_polynomial": [
+        1,
+        0,
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "root_order": 1
+    },
+    "empty": {
+      "group_order": 1,
+      "leading_coefficient": 1,
+      "minimum_cycles": 0,
+      "point_orbits": 0,
+      "points": 0,
+      "polynomial": [
+        1
+      ],
+      "residual_polynomial": [
+        1
+      ],
+      "root_order": 0
+    },
+    "trivial3": {
+      "group_order": 1,
+      "leading_coefficient": 1,
+      "minimum_cycles": 3,
+      "point_orbits": 3,
+      "points": 3,
+      "polynomial": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "residual_polynomial": [
+        1
+      ],
+      "root_order": 3
+    }
+  },
+  "status": "PASS"
+}

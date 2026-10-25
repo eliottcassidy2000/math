@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 1,
+  "successful_runs": 2,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "check_independent.py",
+      "mode": "normal",
+      "source_sha256": "b376a0aed17cbc351a369ec25573677420b525b50667294763ea03ebc1bbe405",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-holonomy-audit/normal-55ozw2fv/packet/check_independent.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.473952,
+      "stdout_sha256": "6b0337ca38521fb36d8b377fec74bb9ddfd13e06d45ac40b66b6a91853b7ebf4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "normal.json",
+      "source_unchanged": true
+    },
+    {
+      "script": "check_independent.py",
+      "mode": "optimized",
+      "source_sha256": "b376a0aed17cbc351a369ec25573677420b525b50667294763ea03ebc1bbe405",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-holonomy-audit/optimized-a68pmaso/packet/check_independent.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.925554,
+      "stdout_sha256": "6b0337ca38521fb36d8b377fec74bb9ddfd13e06d45ac40b66b6a91853b7ebf4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "normal.json",
+      "source_unchanged": true
+    }
+  ]
+}

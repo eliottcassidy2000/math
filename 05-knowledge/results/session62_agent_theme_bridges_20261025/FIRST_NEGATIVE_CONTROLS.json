@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "scope": "Deliberately false inputs must fail, not successful mathematical runs",
+  "cases": [
+    {
+      "control": "lost dimension increased by one",
+      "mode": "normal",
+      "exit_code": 1,
+      "expected_error": "twisted Euler formula",
+      "rejected": true
+    },
+    {
+      "control": "lost dimension increased by one",
+      "mode": "optimized",
+      "exit_code": 1,
+      "expected_error": "twisted Euler formula",
+      "rejected": true
+    },
+    {
+      "control": "manifest README byte mutation",
+      "mode": "normal",
+      "exit_code": 1,
+      "expected_error": "Byte mismatch",
+      "rejected": true
+    },
+    {
+      "control": "manifest README byte mutation",
+      "mode": "optimized",
+      "exit_code": 1,
+      "expected_error": "Byte mismatch",
+      "rejected": true
+    },
+    {
+      "control": "manifest extra file",
+      "mode": "normal",
+      "exit_code": 1,
+      "expected_error": "File set mismatch",
+      "rejected": true
+    },
+    {
+      "control": "manifest extra file",
+      "mode": "optimized",
+      "exit_code": 1,
+      "expected_error": "File set mismatch",
+      "rejected": true
+    }
+  ]
+}

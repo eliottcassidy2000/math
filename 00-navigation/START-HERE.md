@@ -1,15 +1,16 @@
 # Start Here
 
-**Rolling brief — 2026-09-06.**
-[`CURRENT-FRONTIER.md`](CURRENT-FRONTIER.md) owns status.
+**Current truth:** [Frontier](CURRENT-FRONTIER.md).
 
 **Oct 20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 
-**Oct 25:** [Shape/port/anchor checkpoint](../05-knowledge/results/shape_ports_20261025/README.md):
+**Oct 25:** [Shape/port/anchor](../05-knowledge/results/shape_ports_20261025/README.md):
 Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-blue boundary.
 
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
 K3 cubes, free codes, reflection. [Gale continuation](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors.
+
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic incidence and twisted pair transport.
 
 ## The five-minute orientation
 
@@ -19,13 +20,11 @@ K3 cubes, free codes, reflection. [Gale continuation](../05-knowledge/results/si
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
 5. **Research posture:** Anchor / Niche / Wildcard; require mechanisms, hostiles, and preserved/lost coordinates.
 
-Run this bounded packet first:
+Start with:
 
 ```bash
 python3 agents/start_session.py --topic "<target statement or object>"
 ```
-
-Then read frontier, guardrails, theorem; logs are history.
 
 ## Nineteen high-signal facts
 
@@ -115,13 +114,13 @@ Then read frontier, guardrails, theorem; logs are history.
 
 ## Before promoting a result
 
-- Search the statement and corrections; read [guardrails](../01-canon/ACTIVE-GUARDRAILS.md).
-- State scope, quantifiers, direction, mechanism, boundary, dependencies and limits.
-- Connections: map, preserved predicate, loss, sidecar, decisive test.
-- Computations: fixed universe, filters, controls, command, output and hashes.
-- Check IDs in files, frontmatter, indexes and remote history; cite ID plus slug.
+- Read [guardrails](../01-canon/ACTIVE-GUARDRAILS.md); search claims and corrections.
+- State scope, quantifiers, direction, mechanism, boundaries and dependencies.
+- Give maps, preserved predicates, losses, sidecars and decisive tests.
+- Fix computation universe, filters, controls, commands, outputs and hashes.
+- Check IDs in files/frontmatter/indexes/remote history; cite ID plus slug.
 
 ## Maintaining this brief
 
-Keep only session-independent facts. Update this page and `CURRENT-FRONTIER.md`
-together; preserve superseded arguments only in historical files.
+Keep session-independent facts here and in `CURRENT-FRONTIER.md`; superseded
+arguments belong in historical files.

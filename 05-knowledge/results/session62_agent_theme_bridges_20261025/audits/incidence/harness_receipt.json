@@ -1,0 +1,60 @@
+{
+  "deterministic_output_checks": [
+    {
+      "path": "direct_results.json",
+      "sha256": "900402da6805f855725e1cd41fd09dda331ea433fd98ca8c436b1157457a1553",
+      "normal_equals_optimized": true
+    },
+    {
+      "path": "direct_cases.json",
+      "sha256": "9ef2be212dddcc69fc095d8de74193e1f84face7c9c02b9e6aa57dd46352d7cc",
+      "normal_equals_optimized": true
+    },
+    {
+      "path": "full_smith_results.json",
+      "sha256": "1118e637b2a25e24744661741b2dc8ddcc3c85e8686d1d97f701cbebf9d15302",
+      "normal_equals_optimized": true
+    },
+    {
+      "path": "direct_normal.log",
+      "sha256": "8fc0c212bf777b72f743836bd35cadba1a9cbe4c49bcfbebe8437fc0f709e310",
+      "normal_equals_optimized": true
+    },
+    {
+      "path": "smith_normal.log",
+      "sha256": "2adff92a01d9f6b9e7ef4987c75d1ae2593ec8396a9eee793ba19f1f35e7e3ac",
+      "normal_equals_optimized": true
+    }
+  ],
+  "negative_controls": [
+    {
+      "script": "direct_audit.py",
+      "optimized": false,
+      "exit_code": 1,
+      "expected_error": "physical-incidence audit rejected 1 false claims",
+      "rejected": true
+    },
+    {
+      "script": "direct_audit.py",
+      "optimized": true,
+      "exit_code": 1,
+      "expected_error": "physical-incidence audit rejected 1 false claims",
+      "rejected": true
+    },
+    {
+      "script": "exact_smith_audit.py",
+      "optimized": false,
+      "exit_code": 1,
+      "expected_error": "full-matrix rank mismatch",
+      "rejected": true
+    },
+    {
+      "script": "exact_smith_audit.py",
+      "optimized": true,
+      "exit_code": 1,
+      "expected_error": "full-matrix rank mismatch",
+      "rejected": true
+    }
+  ],
+  "bare_assert_count": 0
+}

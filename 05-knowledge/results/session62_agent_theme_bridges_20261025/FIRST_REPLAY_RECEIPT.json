@@ -1,0 +1,146 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 4,
+  "successful_runs": 8,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "incidence/verify_wrap.py",
+      "mode": "normal",
+      "source_sha256": "03a805894d8df33f6079d1cd54bd8195bd6ae0b0c064e02c4c0bfebd344bc219",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/normal-74e_8x42/packet/incidence/verify_wrap.py",
+        "--output",
+        "verification.json"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 55.944782,
+      "stdout_sha256": "343f65cc14b3a9ad81241eb2dce627229083e8a992dcb815712f47d88dc7e4c0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": null,
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/incidence/direct_audit.py",
+      "mode": "normal",
+      "source_sha256": "305f2a2741f33151b6ad2de34203dbcd65b1a96e98fef1fcc5f724ec961df45d",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/normal-74e_8x42/packet/audits/incidence/direct_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 8.184668,
+      "stdout_sha256": "8fc0c212bf777b72f743836bd35cadba1a9cbe4c49bcfbebe8437fc0f709e310",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/incidence/direct_normal.log",
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/incidence/exact_smith_audit.py",
+      "mode": "normal",
+      "source_sha256": "31269ad685290701717bac306c7236e9202c9bbd6872fe577c0b088c8e7a6802",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/normal-74e_8x42/packet/audits/incidence/exact_smith_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 4.477424,
+      "stdout_sha256": "2adff92a01d9f6b9e7ef4987c75d1ae2593ec8396a9eee793ba19f1f35e7e3ac",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/incidence/smith_normal.log",
+      "source_unchanged": true
+    },
+    {
+      "script": "holonomy/check_holonomy.py",
+      "mode": "normal",
+      "source_sha256": "e99ceb1353576b8d68c511353af601d2153a0a8bc85f8b9010a67f9b8e902e59",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/normal-74e_8x42/packet/holonomy/check_holonomy.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 17.30749,
+      "stdout_sha256": "2b99000d7d20168a7f0d59840a452bc972700451003f5da9f2a113211e9f64f7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "holonomy/normal.json",
+      "source_unchanged": true
+    },
+    {
+      "script": "incidence/verify_wrap.py",
+      "mode": "optimized",
+      "source_sha256": "03a805894d8df33f6079d1cd54bd8195bd6ae0b0c064e02c4c0bfebd344bc219",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/optimized-1ls9j_nl/packet/incidence/verify_wrap.py",
+        "--output",
+        "verification.json"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 58.157916,
+      "stdout_sha256": "343f65cc14b3a9ad81241eb2dce627229083e8a992dcb815712f47d88dc7e4c0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": null,
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/incidence/direct_audit.py",
+      "mode": "optimized",
+      "source_sha256": "305f2a2741f33151b6ad2de34203dbcd65b1a96e98fef1fcc5f724ec961df45d",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/optimized-1ls9j_nl/packet/audits/incidence/direct_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 12.194957,
+      "stdout_sha256": "8fc0c212bf777b72f743836bd35cadba1a9cbe4c49bcfbebe8437fc0f709e310",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/incidence/direct_normal.log",
+      "source_unchanged": true
+    },
+    {
+      "script": "audits/incidence/exact_smith_audit.py",
+      "mode": "optimized",
+      "source_sha256": "31269ad685290701717bac306c7236e9202c9bbd6872fe577c0b088c8e7a6802",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/optimized-1ls9j_nl/packet/audits/incidence/exact_smith_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 6.7978,
+      "stdout_sha256": "2adff92a01d9f6b9e7ef4987c75d1ae2593ec8396a9eee793ba19f1f35e7e3ac",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "audits/incidence/smith_normal.log",
+      "source_unchanged": true
+    },
+    {
+      "script": "holonomy/check_holonomy.py",
+      "mode": "optimized",
+      "source_sha256": "e99ceb1353576b8d68c511353af601d2153a0a8bc85f8b9010a67f9b8e902e59",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session62-publication/frozen-replay/optimized-1ls9j_nl/packet/holonomy/check_holonomy.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 14.90228,
+      "stdout_sha256": "2b99000d7d20168a7f0d59840a452bc972700451003f5da9f2a113211e9f64f7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "holonomy/normal.json",
+      "source_unchanged": true
+    }
+  ]
+}

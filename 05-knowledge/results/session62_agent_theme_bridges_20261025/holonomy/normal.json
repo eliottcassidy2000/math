@@ -1,0 +1,322 @@
+{
+  "status": "PASS",
+  "checks": 582928,
+  "connected_graph_transport_cases": 116539,
+  "universe": "all connected labeled simple graphs on1..4 vertices; every S3 edge transport; all48 affine one-cycle transports",
+  "dimension_census": [
+    {
+      "beta": 0,
+      "holonomy_order": 1,
+      "lost_dimension": 0,
+      "cases": 3571
+    },
+    {
+      "beta": 1,
+      "holonomy_order": 1,
+      "lost_dimension": 2,
+      "cases": 3276
+    },
+    {
+      "beta": 1,
+      "holonomy_order": 2,
+      "lost_dimension": 1,
+      "cases": 9828
+    },
+    {
+      "beta": 1,
+      "holonomy_order": 3,
+      "lost_dimension": 0,
+      "cases": 6552
+    },
+    {
+      "beta": 2,
+      "holonomy_order": 1,
+      "lost_dimension": 4,
+      "cases": 1296
+    },
+    {
+      "beta": 2,
+      "holonomy_order": 2,
+      "lost_dimension": 3,
+      "cases": 11664
+    },
+    {
+      "beta": 2,
+      "holonomy_order": 3,
+      "lost_dimension": 2,
+      "cases": 10368
+    },
+    {
+      "beta": 2,
+      "holonomy_order": 6,
+      "lost_dimension": 2,
+      "cases": 23328
+    },
+    {
+      "beta": 3,
+      "holonomy_order": 1,
+      "lost_dimension": 6,
+      "cases": 216
+    },
+    {
+      "beta": 3,
+      "holonomy_order": 2,
+      "lost_dimension": 5,
+      "cases": 4536
+    },
+    {
+      "beta": 3,
+      "holonomy_order": 3,
+      "lost_dimension": 4,
+      "cases": 5616
+    },
+    {
+      "beta": 3,
+      "holonomy_order": 6,
+      "lost_dimension": 4,
+      "cases": 36288
+    }
+  ],
+  "cycle_hostiles": [
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 0,
+      "scalar_compatible": true,
+      "frame_count": 8
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 1,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 2,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 3,
+      "scalar_compatible": true,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 4,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 5,
+      "scalar_compatible": true,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 6,
+      "scalar_compatible": true,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        0,
+        1,
+        2
+      ],
+      "gain": 7,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 0,
+      "scalar_compatible": true,
+      "frame_count": 4
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 1,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 2,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 3,
+      "scalar_compatible": true,
+      "frame_count": 4
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 4,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 5,
+      "scalar_compatible": true,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 6,
+      "scalar_compatible": true,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        0,
+        2
+      ],
+      "gain": 7,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 0,
+      "scalar_compatible": true,
+      "frame_count": 2
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 1,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 2,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 3,
+      "scalar_compatible": true,
+      "frame_count": 2
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 4,
+      "scalar_compatible": false,
+      "frame_count": 0
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 5,
+      "scalar_compatible": true,
+      "frame_count": 2
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 6,
+      "scalar_compatible": true,
+      "frame_count": 2
+    },
+    {
+      "sigma": [
+        1,
+        2,
+        0
+      ],
+      "gain": 7,
+      "scalar_compatible": false,
+      "frame_count": 0
+    }
+  ]
+}

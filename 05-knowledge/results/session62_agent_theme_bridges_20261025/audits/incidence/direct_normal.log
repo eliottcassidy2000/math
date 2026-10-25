@@ -1,0 +1,47 @@
+p=5 complete, tests=75, errors=0
+p=7 complete, tests=180, errors=0
+p=11 complete, tests=345, errors=0
+p=13 complete, tests=540, errors=0
+p=17 complete, tests=795, errors=0
+p=19 complete, tests=1080, errors=0
+p=23 complete, tests=1425, errors=0
+p=29 complete, tests=1860, errors=0
+p=31 complete, tests=2325, errors=0
+p=37 complete, tests=2880, errors=0
+p=43 complete, tests=3525, errors=0
+{
+  "kind": "FINITE-EXACT",
+  "physical_primes": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    43
+  ],
+  "coefficient_characteristics": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    43,
+    47,
+    101
+  ],
+  "L": "every 1<=L<=p",
+  "test_count": 3525,
+  "errors": []
+}

@@ -1,0 +1,30 @@
+exact full-matrix SNF p=5 complete
+exact full-matrix SNF p=7 complete
+exact full-matrix SNF p=11 complete
+exact full-matrix SNF p=13 complete
+exact full-matrix SNF p=17 complete
+exact full-matrix SNF p=19 complete
+exact full-matrix SNF p=23 complete
+exact full-matrix SNF p=29 complete
+exact full-matrix SNF p=31 complete
+exact full-matrix SNF p=37 complete
+exact full-matrix SNF p=43 complete
+{
+  "kind": "FINITE-EXACT over every coefficient field",
+  "count": 235,
+  "physical_primes": [
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    43
+  ],
+  "L": "every1<=L<=p",
+  "errors": 0
+}

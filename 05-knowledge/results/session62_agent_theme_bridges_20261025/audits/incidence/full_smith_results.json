@@ -1,0 +1,3167 @@
+{
+  "summary": {
+    "kind": "FINITE-EXACT over every coefficient field",
+    "count": 235,
+    "physical_primes": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      43
+    ],
+    "L": "every1<=L<=p",
+    "errors": 0
+  },
+  "cases": [
+    {
+      "p": 5,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 5,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 5,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 5,
+      "L": 4,
+      "rank_Q": 12,
+      "nonunit_invariants": [
+        5
+      ],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 4,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 5,
+      "L": 5,
+      "rank_Q": 12,
+      "nonunit_invariants": [
+        5
+      ],
+      "forest": {
+        "generic_dim": 8,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 7,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 7,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 7,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 7,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 7,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [
+        7
+      ],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 4,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 7,
+      "L": 6,
+      "rank_Q": 16,
+      "nonunit_invariants": [
+        7
+      ],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 8,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 7,
+      "L": 7,
+      "rank_Q": 16,
+      "nonunit_invariants": [
+        7
+      ],
+      "forest": {
+        "generic_dim": 12,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 11,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 11,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 11,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 11,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 11,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 11,
+      "L": 6,
+      "rank_Q": 18,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 11,
+      "L": 7,
+      "rank_Q": 20,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 11,
+      "L": 8,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 10,
+        "char_p_dim": 10
+      }
+    },
+    {
+      "p": 11,
+      "L": 9,
+      "rank_Q": 24,
+      "nonunit_invariants": [
+        11
+      ],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 12,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 11,
+      "L": 10,
+      "rank_Q": 24,
+      "nonunit_invariants": [
+        11
+      ],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 16,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 11,
+      "L": 11,
+      "rank_Q": 24,
+      "nonunit_invariants": [
+        11
+      ],
+      "forest": {
+        "generic_dim": 20,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 13,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 13,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 13,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 13,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 13,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 13,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 13,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 13,
+      "L": 8,
+      "rank_Q": 24,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 13,
+      "L": 9,
+      "rank_Q": 26,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": false,
+        "c_compatible": true,
+        "generic_dim": 10,
+        "char_p_dim": 10
+      }
+    },
+    {
+      "p": 13,
+      "L": 10,
+      "rank_Q": 28,
+      "nonunit_invariants": [
+        13
+      ],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 12,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 13,
+      "L": 11,
+      "rank_Q": 28,
+      "nonunit_invariants": [
+        13
+      ],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 16,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 13,
+      "L": 12,
+      "rank_Q": 28,
+      "nonunit_invariants": [
+        13
+      ],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 20,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 13,
+      "L": 13,
+      "rank_Q": 28,
+      "nonunit_invariants": [
+        13
+      ],
+      "forest": {
+        "generic_dim": 24,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 17,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 17,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 17,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 17,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 17,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 17,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 17,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 17,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 17,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 17,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 17,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 11,
+        "char_p_dim": 12
+      }
+    },
+    {
+      "p": 17,
+      "L": 12,
+      "rank_Q": 34,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 14,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 17,
+      "L": 13,
+      "rank_Q": 35,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 17,
+        "char_p_dim": 18
+      }
+    },
+    {
+      "p": 17,
+      "L": 14,
+      "rank_Q": 36,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 20,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 17,
+      "L": 15,
+      "rank_Q": 36,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 11,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 24,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 17,
+      "L": 16,
+      "rank_Q": 36,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 28,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 17,
+      "L": 17,
+      "rank_Q": 36,
+      "nonunit_invariants": [
+        17
+      ],
+      "forest": {
+        "generic_dim": 32,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 19,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 19,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 19,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 19,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 19,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 19,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 19,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 19,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 19,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 19,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 19,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 19,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 19,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 15,
+        "char_p_dim": 16
+      }
+    },
+    {
+      "p": 19,
+      "L": 14,
+      "rank_Q": 38,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 18,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 19,
+      "L": 15,
+      "rank_Q": 39,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 21,
+        "char_p_dim": 22
+      }
+    },
+    {
+      "p": 19,
+      "L": 16,
+      "rank_Q": 40,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 24,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 19,
+      "L": 17,
+      "rank_Q": 40,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 13,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 28,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 19,
+      "L": 18,
+      "rank_Q": 40,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "free_components": 16,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 32,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 19,
+      "L": 19,
+      "rank_Q": 40,
+      "nonunit_invariants": [
+        19
+      ],
+      "forest": {
+        "generic_dim": 36,
+        "char_p_dim": 37
+      }
+    },
+    {
+      "p": 23,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 23,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 23,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 23,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 23,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 23,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 23,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 23,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 23,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 23,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 23,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 23,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 23,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 15,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 23,
+      "L": 14,
+      "rank_Q": 39,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 17,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 23,
+      "L": 15,
+      "rank_Q": 41,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 19,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 23,
+      "L": 16,
+      "rank_Q": 43,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 21,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 23,
+      "L": 17,
+      "rank_Q": 45,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 23,
+        "char_p_dim": 24
+      }
+    },
+    {
+      "p": 23,
+      "L": 18,
+      "rank_Q": 46,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 26,
+        "char_p_dim": 27
+      }
+    },
+    {
+      "p": 23,
+      "L": 19,
+      "rank_Q": 47,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 12,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 29,
+        "char_p_dim": 30
+      }
+    },
+    {
+      "p": 23,
+      "L": 20,
+      "rank_Q": 48,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 32,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 23,
+      "L": 21,
+      "rank_Q": 48,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 17,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 36,
+        "char_p_dim": 37
+      }
+    },
+    {
+      "p": 23,
+      "L": 22,
+      "rank_Q": 48,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "free_components": 20,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 40,
+        "char_p_dim": 41
+      }
+    },
+    {
+      "p": 23,
+      "L": 23,
+      "rank_Q": 48,
+      "nonunit_invariants": [
+        23
+      ],
+      "forest": {
+        "generic_dim": 44,
+        "char_p_dim": 45
+      }
+    },
+    {
+      "p": 29,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 29,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 29,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 29,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 29,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 29,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 29,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 29,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 29,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 29,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 29,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 29,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 29,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 15,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 29,
+      "L": 14,
+      "rank_Q": 39,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 17,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 29,
+      "L": 15,
+      "rank_Q": 41,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 19,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 29,
+      "L": 16,
+      "rank_Q": 43,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 21,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 29,
+      "L": 17,
+      "rank_Q": 45,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 23,
+        "char_p_dim": 23
+      }
+    },
+    {
+      "p": 29,
+      "L": 18,
+      "rank_Q": 47,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 9,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 25,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 29,
+      "L": 19,
+      "rank_Q": 49,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 27,
+        "char_p_dim": 27
+      }
+    },
+    {
+      "p": 29,
+      "L": 20,
+      "rank_Q": 51,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 11,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 29,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 29,
+      "L": 21,
+      "rank_Q": 53,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 12,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 31,
+        "char_p_dim": 31
+      }
+    },
+    {
+      "p": 29,
+      "L": 22,
+      "rank_Q": 55,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 13,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 33,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 29,
+      "L": 23,
+      "rank_Q": 57,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 35,
+        "char_p_dim": 36
+      }
+    },
+    {
+      "p": 29,
+      "L": 24,
+      "rank_Q": 58,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 16,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 38,
+        "char_p_dim": 39
+      }
+    },
+    {
+      "p": 29,
+      "L": 25,
+      "rank_Q": 59,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 18,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 41,
+        "char_p_dim": 42
+      }
+    },
+    {
+      "p": 29,
+      "L": 26,
+      "rank_Q": 60,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 20,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 44,
+        "char_p_dim": 45
+      }
+    },
+    {
+      "p": 29,
+      "L": 27,
+      "rank_Q": 60,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 23,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 48,
+        "char_p_dim": 49
+      }
+    },
+    {
+      "p": 29,
+      "L": 28,
+      "rank_Q": 60,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "free_components": 26,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 52,
+        "char_p_dim": 53
+      }
+    },
+    {
+      "p": 29,
+      "L": 29,
+      "rank_Q": 60,
+      "nonunit_invariants": [
+        29
+      ],
+      "forest": {
+        "generic_dim": 56,
+        "char_p_dim": 57
+      }
+    },
+    {
+      "p": 31,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 31,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 31,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 31,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 31,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 31,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 31,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 31,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 31,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 31,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 31,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 31,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 31,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 15,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 31,
+      "L": 14,
+      "rank_Q": 39,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 17,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 31,
+      "L": 15,
+      "rank_Q": 41,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 19,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 31,
+      "L": 16,
+      "rank_Q": 43,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 21,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 31,
+      "L": 17,
+      "rank_Q": 45,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 23,
+        "char_p_dim": 23
+      }
+    },
+    {
+      "p": 31,
+      "L": 18,
+      "rank_Q": 47,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 9,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 25,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 31,
+      "L": 19,
+      "rank_Q": 49,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 27,
+        "char_p_dim": 27
+      }
+    },
+    {
+      "p": 31,
+      "L": 20,
+      "rank_Q": 51,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 11,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 29,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 31,
+      "L": 21,
+      "rank_Q": 53,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 12,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 31,
+        "char_p_dim": 31
+      }
+    },
+    {
+      "p": 31,
+      "L": 22,
+      "rank_Q": 55,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 13,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 33,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 31,
+      "L": 23,
+      "rank_Q": 57,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 35,
+        "char_p_dim": 35
+      }
+    },
+    {
+      "p": 31,
+      "L": 24,
+      "rank_Q": 59,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 15,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 37,
+        "char_p_dim": 37
+      }
+    },
+    {
+      "p": 31,
+      "L": 25,
+      "rank_Q": 61,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 16,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 39,
+        "char_p_dim": 40
+      }
+    },
+    {
+      "p": 31,
+      "L": 26,
+      "rank_Q": 62,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 18,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 42,
+        "char_p_dim": 43
+      }
+    },
+    {
+      "p": 31,
+      "L": 27,
+      "rank_Q": 63,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 20,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 45,
+        "char_p_dim": 46
+      }
+    },
+    {
+      "p": 31,
+      "L": 28,
+      "rank_Q": 64,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 22,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 48,
+        "char_p_dim": 49
+      }
+    },
+    {
+      "p": 31,
+      "L": 29,
+      "rank_Q": 64,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 25,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 52,
+        "char_p_dim": 53
+      }
+    },
+    {
+      "p": 31,
+      "L": 30,
+      "rank_Q": 64,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "free_components": 28,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 56,
+        "char_p_dim": 57
+      }
+    },
+    {
+      "p": 31,
+      "L": 31,
+      "rank_Q": 64,
+      "nonunit_invariants": [
+        31
+      ],
+      "forest": {
+        "generic_dim": 60,
+        "char_p_dim": 61
+      }
+    },
+    {
+      "p": 37,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 37,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 37,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 37,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 37,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 37,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 37,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 37,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 37,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 37,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 37,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 37,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 37,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 15,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 37,
+      "L": 14,
+      "rank_Q": 39,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 17,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 37,
+      "L": 15,
+      "rank_Q": 41,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 19,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 37,
+      "L": 16,
+      "rank_Q": 43,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 21,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 37,
+      "L": 17,
+      "rank_Q": 45,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 23,
+        "char_p_dim": 23
+      }
+    },
+    {
+      "p": 37,
+      "L": 18,
+      "rank_Q": 47,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 9,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 25,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 37,
+      "L": 19,
+      "rank_Q": 49,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 27,
+        "char_p_dim": 27
+      }
+    },
+    {
+      "p": 37,
+      "L": 20,
+      "rank_Q": 51,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 11,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 29,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 37,
+      "L": 21,
+      "rank_Q": 53,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 12,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 31,
+        "char_p_dim": 31
+      }
+    },
+    {
+      "p": 37,
+      "L": 22,
+      "rank_Q": 55,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 13,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 33,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 37,
+      "L": 23,
+      "rank_Q": 57,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 35,
+        "char_p_dim": 35
+      }
+    },
+    {
+      "p": 37,
+      "L": 24,
+      "rank_Q": 59,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 15,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 37,
+        "char_p_dim": 37
+      }
+    },
+    {
+      "p": 37,
+      "L": 25,
+      "rank_Q": 61,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 16,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 39,
+        "char_p_dim": 39
+      }
+    },
+    {
+      "p": 37,
+      "L": 26,
+      "rank_Q": 63,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 17,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 41,
+        "char_p_dim": 41
+      }
+    },
+    {
+      "p": 37,
+      "L": 27,
+      "rank_Q": 65,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 18,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 43,
+        "char_p_dim": 43
+      }
+    },
+    {
+      "p": 37,
+      "L": 28,
+      "rank_Q": 67,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 19,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 45,
+        "char_p_dim": 45
+      }
+    },
+    {
+      "p": 37,
+      "L": 29,
+      "rank_Q": 69,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 20,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 47,
+        "char_p_dim": 47
+      }
+    },
+    {
+      "p": 37,
+      "L": 30,
+      "rank_Q": 71,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 21,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 49,
+        "char_p_dim": 49
+      }
+    },
+    {
+      "p": 37,
+      "L": 31,
+      "rank_Q": 73,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 22,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 51,
+        "char_p_dim": 52
+      }
+    },
+    {
+      "p": 37,
+      "L": 32,
+      "rank_Q": 74,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 24,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 54,
+        "char_p_dim": 55
+      }
+    },
+    {
+      "p": 37,
+      "L": 33,
+      "rank_Q": 75,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 26,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 57,
+        "char_p_dim": 58
+      }
+    },
+    {
+      "p": 37,
+      "L": 34,
+      "rank_Q": 76,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 28,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 60,
+        "char_p_dim": 61
+      }
+    },
+    {
+      "p": 37,
+      "L": 35,
+      "rank_Q": 76,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 31,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 64,
+        "char_p_dim": 65
+      }
+    },
+    {
+      "p": 37,
+      "L": 36,
+      "rank_Q": 76,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "free_components": 34,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 68,
+        "char_p_dim": 69
+      }
+    },
+    {
+      "p": 37,
+      "L": 37,
+      "rank_Q": 76,
+      "nonunit_invariants": [
+        37
+      ],
+      "forest": {
+        "generic_dim": 72,
+        "char_p_dim": 73
+      }
+    },
+    {
+      "p": 43,
+      "L": 1,
+      "rank_Q": 4,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 0,
+        "char_p_dim": 0
+      }
+    },
+    {
+      "p": 43,
+      "L": 2,
+      "rank_Q": 7,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 1,
+        "char_p_dim": 1
+      }
+    },
+    {
+      "p": 43,
+      "L": 3,
+      "rank_Q": 10,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 2,
+        "char_p_dim": 2
+      }
+    },
+    {
+      "p": 43,
+      "L": 4,
+      "rank_Q": 13,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 3,
+        "char_p_dim": 3
+      }
+    },
+    {
+      "p": 43,
+      "L": 5,
+      "rank_Q": 16,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 4,
+        "char_p_dim": 4
+      }
+    },
+    {
+      "p": 43,
+      "L": 6,
+      "rank_Q": 19,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 5,
+        "char_p_dim": 5
+      }
+    },
+    {
+      "p": 43,
+      "L": 7,
+      "rank_Q": 22,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 6,
+        "char_p_dim": 6
+      }
+    },
+    {
+      "p": 43,
+      "L": 8,
+      "rank_Q": 25,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 7,
+        "char_p_dim": 7
+      }
+    },
+    {
+      "p": 43,
+      "L": 9,
+      "rank_Q": 28,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 0,
+        "has_odd_free": false,
+        "c_compatible": false,
+        "generic_dim": 8,
+        "char_p_dim": 8
+      }
+    },
+    {
+      "p": 43,
+      "L": 10,
+      "rank_Q": 31,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 1,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 9,
+        "char_p_dim": 9
+      }
+    },
+    {
+      "p": 43,
+      "L": 11,
+      "rank_Q": 33,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 2,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 11,
+        "char_p_dim": 11
+      }
+    },
+    {
+      "p": 43,
+      "L": 12,
+      "rank_Q": 35,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 3,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 13,
+        "char_p_dim": 13
+      }
+    },
+    {
+      "p": 43,
+      "L": 13,
+      "rank_Q": 37,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 4,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 15,
+        "char_p_dim": 15
+      }
+    },
+    {
+      "p": 43,
+      "L": 14,
+      "rank_Q": 39,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 5,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 17,
+        "char_p_dim": 17
+      }
+    },
+    {
+      "p": 43,
+      "L": 15,
+      "rank_Q": 41,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 6,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 19,
+        "char_p_dim": 19
+      }
+    },
+    {
+      "p": 43,
+      "L": 16,
+      "rank_Q": 43,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 7,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 21,
+        "char_p_dim": 21
+      }
+    },
+    {
+      "p": 43,
+      "L": 17,
+      "rank_Q": 45,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 8,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 23,
+        "char_p_dim": 23
+      }
+    },
+    {
+      "p": 43,
+      "L": 18,
+      "rank_Q": 47,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 9,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 25,
+        "char_p_dim": 25
+      }
+    },
+    {
+      "p": 43,
+      "L": 19,
+      "rank_Q": 49,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 10,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 27,
+        "char_p_dim": 27
+      }
+    },
+    {
+      "p": 43,
+      "L": 20,
+      "rank_Q": 51,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 11,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 29,
+        "char_p_dim": 29
+      }
+    },
+    {
+      "p": 43,
+      "L": 21,
+      "rank_Q": 53,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 12,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 31,
+        "char_p_dim": 31
+      }
+    },
+    {
+      "p": 43,
+      "L": 22,
+      "rank_Q": 55,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 13,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 33,
+        "char_p_dim": 33
+      }
+    },
+    {
+      "p": 43,
+      "L": 23,
+      "rank_Q": 57,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 14,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 35,
+        "char_p_dim": 35
+      }
+    },
+    {
+      "p": 43,
+      "L": 24,
+      "rank_Q": 59,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 15,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 37,
+        "char_p_dim": 37
+      }
+    },
+    {
+      "p": 43,
+      "L": 25,
+      "rank_Q": 61,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 16,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 39,
+        "char_p_dim": 39
+      }
+    },
+    {
+      "p": 43,
+      "L": 26,
+      "rank_Q": 63,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 17,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 41,
+        "char_p_dim": 41
+      }
+    },
+    {
+      "p": 43,
+      "L": 27,
+      "rank_Q": 65,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 18,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 43,
+        "char_p_dim": 43
+      }
+    },
+    {
+      "p": 43,
+      "L": 28,
+      "rank_Q": 67,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 19,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 45,
+        "char_p_dim": 45
+      }
+    },
+    {
+      "p": 43,
+      "L": 29,
+      "rank_Q": 69,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 20,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 47,
+        "char_p_dim": 47
+      }
+    },
+    {
+      "p": 43,
+      "L": 30,
+      "rank_Q": 71,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 21,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 49,
+        "char_p_dim": 49
+      }
+    },
+    {
+      "p": 43,
+      "L": 31,
+      "rank_Q": 73,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 22,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 51,
+        "char_p_dim": 51
+      }
+    },
+    {
+      "p": 43,
+      "L": 32,
+      "rank_Q": 75,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 23,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 53,
+        "char_p_dim": 53
+      }
+    },
+    {
+      "p": 43,
+      "L": 33,
+      "rank_Q": 77,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 24,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 55,
+        "char_p_dim": 55
+      }
+    },
+    {
+      "p": 43,
+      "L": 34,
+      "rank_Q": 79,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 25,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 57,
+        "char_p_dim": 57
+      }
+    },
+    {
+      "p": 43,
+      "L": 35,
+      "rank_Q": 81,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 26,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 59,
+        "char_p_dim": 59
+      }
+    },
+    {
+      "p": 43,
+      "L": 36,
+      "rank_Q": 83,
+      "nonunit_invariants": [],
+      "forest": {
+        "free_components": 27,
+        "has_odd_free": true,
+        "c_compatible": false,
+        "generic_dim": 61,
+        "char_p_dim": 61
+      }
+    },
+    {
+      "p": 43,
+      "L": 37,
+      "rank_Q": 85,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 28,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 63,
+        "char_p_dim": 64
+      }
+    },
+    {
+      "p": 43,
+      "L": 38,
+      "rank_Q": 86,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 30,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 66,
+        "char_p_dim": 67
+      }
+    },
+    {
+      "p": 43,
+      "L": 39,
+      "rank_Q": 87,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 32,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 69,
+        "char_p_dim": 70
+      }
+    },
+    {
+      "p": 43,
+      "L": 40,
+      "rank_Q": 88,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 34,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 72,
+        "char_p_dim": 73
+      }
+    },
+    {
+      "p": 43,
+      "L": 41,
+      "rank_Q": 88,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 37,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 76,
+        "char_p_dim": 77
+      }
+    },
+    {
+      "p": 43,
+      "L": 42,
+      "rank_Q": 88,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "free_components": 40,
+        "has_odd_free": true,
+        "c_compatible": true,
+        "generic_dim": 80,
+        "char_p_dim": 81
+      }
+    },
+    {
+      "p": 43,
+      "L": 43,
+      "rank_Q": 88,
+      "nonunit_invariants": [
+        43
+      ],
+      "forest": {
+        "generic_dim": 84,
+        "char_p_dim": 85
+      }
+    }
+  ]
+}

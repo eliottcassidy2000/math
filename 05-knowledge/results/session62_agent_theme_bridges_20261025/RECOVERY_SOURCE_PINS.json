@@ -1,0 +1,64 @@
+{
+  "status": "VERIFIED",
+  "commit": "fde0dc637d81397de2b857e61d1e993ba11231bc",
+  "read_utc": "2026-10-25T21:54:00Z",
+  "scope": "Repository-source provenance, not new mathematical proof",
+  "sources": [
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "git_blob": "2cec5bccb589bd413b3b09e02058fcd91f305d88",
+      "bytes": 35034,
+      "sha256": "6ebe0862b3acbae2960102b514574ea82e507dd9305abbaa25797975317ea20b",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/00-navigation/CURRENT-FRONTIER.md"
+    },
+    {
+      "path": "00-navigation/FRONTIER-CONNECTION-SIDECARS.md",
+      "git_blob": "59842dce1cc979a740928f155ce1f24b81ac4965",
+      "bytes": 16781,
+      "sha256": "fbd315e27e115ff917b1c5d1c26d00fef38e4b1d83a42f00efb6484e9bb670c2",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/00-navigation/FRONTIER-CONNECTION-SIDECARS.md"
+    },
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/README.md",
+      "git_blob": "cf0d2bc4888c113c5e2c70c1fd64e8a97234e038",
+      "bytes": 9288,
+      "sha256": "ecbcc5867ad51746ee5b4c512940759cdc9e96be0b440bd73132f202614057d1",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/ports_regular_actions_hn_20261025/README.md"
+    },
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/hn/RELATIONAL_LIFT.md",
+      "git_blob": "60697fd763fcce59c3025324d18616bb12e1bcdc",
+      "bytes": 15133,
+      "sha256": "75840863507537e714ed83ed8c24a8209d662448c63b3ced8afa47e2a1f9b24d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/ports_regular_actions_hn_20261025/hn/RELATIONAL_LIFT.md"
+    },
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/counting/README.md",
+      "git_blob": "cb6dd425b9117e787bafdbaab6597cdfd6725a6f",
+      "bytes": 10746,
+      "sha256": "59b3e3378223c9d75400ef819721cafcd7fd0d5cb9786189f61363c7bfe1afeb",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/ports_regular_actions_hn_20261025/counting/README.md"
+    },
+    {
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/BUDGET_AND_GALE.md",
+      "git_blob": "522c7eb666752eeef492fdbcd1ace5f440a42488",
+      "bytes": 7967,
+      "sha256": "3918edcc4d5372b8d1a90c3dfa5c5c060acd71dd60b70f8053cdfe24f1ef8dc7",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/six_seven_gale_cube_20261025/BUDGET_AND_GALE.md"
+    },
+    {
+      "path": "05-knowledge/results/trijection_hourglass_ports_20261025/incidence/common_kernel.md",
+      "git_blob": "59a53f7db0a08c40116ae4303096bcd3d638eef6",
+      "bytes": 7266,
+      "sha256": "1341959e738513d4ed70e7dab92bb244f8aab1054aec7f5ccb4da01ce8758aaf",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/trijection_hourglass_ports_20261025/incidence/common_kernel.md"
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/SYNTHESIS.md",
+      "git_blob": "4f4916fcdd5b700a3f76737541a6d01850922c19",
+      "bytes": 10271,
+      "sha256": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640",
+      "url": "https://github.com/eliottcassidy2000/math/blob/fde0dc637d81397de2b857e61d1e993ba11231bc/05-knowledge/results/session61_hadwiger_six_seven_20261025/SYNTHESIS.md"
+    }
+  ]
+}
