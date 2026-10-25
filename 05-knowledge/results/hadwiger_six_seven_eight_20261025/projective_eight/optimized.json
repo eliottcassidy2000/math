@@ -1,0 +1,107 @@
+{
+  "PSL_elements_preserving_standard_cube": 6,
+  "binary_labels": [
+    1,
+    2,
+    4,
+    3,
+    6,
+    7,
+    5,
+    0
+  ],
+  "chiral_SQS_blocks": [
+    14,
+    14
+  ],
+  "conic_basis": [
+    7,
+    3,
+    5
+  ],
+  "conic_component_labels": [
+    7,
+    3,
+    5,
+    4,
+    6,
+    1,
+    2,
+    0
+  ],
+  "derived_Fano_triples": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      2,
+      6
+    ],
+    [
+      0,
+      4,
+      5
+    ],
+    [
+      1,
+      2,
+      4
+    ],
+    [
+      1,
+      5,
+      6
+    ],
+    [
+      2,
+      3,
+      5
+    ],
+    [
+      3,
+      4,
+      6
+    ]
+  ],
+  "equianharmonic_blocks": 28,
+  "label_order": "0,1,2,3,4,5,6,infinity",
+  "minus_inverse_affine": {
+    "columns": [
+      1,
+      4,
+      2
+    ],
+    "fixed_points": [],
+    "translation": 1
+  },
+  "negative_controls": [
+    "28 blocks have two completions per triple",
+    "opposite chirality requires a new affine marking",
+    "shear preserves design but destroys intersection",
+    "transitive affine PSL has no common origin",
+    "28 sextic labels and 28 quadrangles have different characters"
+  ],
+  "order3_fixed_counts_28sets": {
+    "equianharmonic_quadruples": 4,
+    "two_subsets": 1
+  },
+  "status": "PASS",
+  "universe": {
+    "PGL": 336,
+    "PSL": 168,
+    "four_subsets": 70
+  },
+  "walsh_eigenvalues_mask_order": [
+    4,
+    0,
+    0,
+    -4,
+    0,
+    -4,
+    -4,
+    -8
+  ]
+}
