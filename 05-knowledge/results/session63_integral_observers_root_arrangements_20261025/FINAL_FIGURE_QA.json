@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "generator_sha256": "ac1e9e89739026fd5dfd3060dcb26d5e6f4d8c0298975553b86b0d1420ef38ac",
+  "svg_published": true,
+  "png_published": false,
+  "visual_inspection": "Final source PNG viewed directly by publication agent; legible scopes and formulas, no overlap or clipping. Hash-identical regenerated PNGs need no separate pixel interpretation. Two independent mathematical/visual readbacks retained in audits.",
+  "runs": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "svg_sha256": "189afe94a05853bf94354b8f202ef9eab9a605b44f09a0811b33186b926ac351",
+      "png_sha256": "4faf9fe35db1fca5d45272b3afd452a5aee168416b7cc1498bbe3f10df827240",
+      "expected_bytes_match": true
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "svg_sha256": "189afe94a05853bf94354b8f202ef9eab9a605b44f09a0811b33186b926ac351",
+      "png_sha256": "4faf9fe35db1fca5d45272b3afd452a5aee168416b7cc1498bbe3f10df827240",
+      "expected_bytes_match": true
+    }
+  ]
+}

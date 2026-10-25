@@ -1,0 +1,394 @@
+{
+  "status": "PASS",
+  "old_local_commit": "e8de1d03a94492e1dd6d67ea2d1b85944f0911be",
+  "rebased_local_commit": "b7f1e064453ccbe78cb808fb501c79e573c1884c",
+  "incoming_head": "65549429c0d0e146562872114dd08d830c901ee8",
+  "packet_tree_unchanged": true,
+  "incoming_paths": [
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "mode": "100644",
+      "blob": "51679500aa1533091b890b60abeb6bf187189b14",
+      "bytes": 35132,
+      "sha256": "bf8e81db8c678fcdbe9f5629f6df4b2160f4a3b09074483e893d84d48b5cdaf7"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "mode": "100644",
+      "blob": "7197f8f60df98f0e8770125859704322abf84560",
+      "bytes": 1825907,
+      "sha256": "a482013436af4ecd4ebd1539f8ae5ef6d368631f8bca5540b151948df656b2cd"
+    },
+    {
+      "path": "01-canon/theorems/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+      "mode": "100644",
+      "blob": "8f7ae5ed10531721d8b34083614f69eeede45ba4",
+      "bytes": 6776,
+      "sha256": "670f69b5883161b7b32543c6d47c6c1c4b532e11d4caa65168abf8131c8cd191"
+    },
+    {
+      "path": "01-canon/theorems/THM-4765-quadratic-twists-of-a-square-root-cover-average-to-the-branch-complement.md",
+      "mode": "100644",
+      "blob": "cfe010efb0d15e0e8d66b43364729e6f8d520fa1",
+      "bytes": 5307,
+      "sha256": "02b3e3b7c2578b135c8e2973b6f3be32459f7df2fcdbc9087f762a1e73950780"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9374-mixed-order-clone-depth-equals-the-candidate-minimum.md",
+      "mode": "100644",
+      "blob": "35e825f115599cdbda28d2fdf4d6fccc98082098",
+      "bytes": 3476,
+      "sha256": "5ace17f969dcb0c0ccec1511775cccfc117d5f476ce053fe24ffec4bec1653ad"
+    },
+    {
+      "path": "05-knowledge/hypotheses/INDEX.md",
+      "mode": "100644",
+      "blob": "64edf41b5d0a29ec07bf51ace9e39e7beea47465",
+      "bytes": 113040,
+      "sha256": "bb4b035992a5fe67f61c418f9e356599b450bdf7f7b16e6566fd3423193a2adb"
+    },
+    {
+      "path": "05-knowledge/results/INDEX.md",
+      "mode": "100755",
+      "blob": "e5c3fc64faf528eef3246b21bb89ba68068d83c0",
+      "bytes": 2881752,
+      "sha256": "952b29dc821b86a49f1601dc38fa8f497237a0da886ca661176ce61328d67489"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md",
+      "mode": "100644",
+      "blob": "bbef7c86910107b4a77f375b75e68429166c608e",
+      "bytes": 24661,
+      "sha256": "a4281e618c1f310dfae86ea00e64d4fb682f39196b254af702ac50642070d183"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/SHA256SUMS",
+      "mode": "100644",
+      "blob": "cef8ac1563a7b9cc44a67085de4f94810baf2644",
+      "bytes": 839,
+      "sha256": "c0de8941d8ef465a52ea955aa11dadd37492eba821e5c73e94bbda04d560f5e6"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/census_orbits.c",
+      "mode": "100644",
+      "blob": "1173944bf1ebb6f0fc25218a7657196a8e8fe96a",
+      "bytes": 1644,
+      "sha256": "44f9d2b8f7b1abefd207597b57ee72d4b5fefad321ee7125bdcf6b96dc1f3203"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/census_z25.out",
+      "mode": "100644",
+      "blob": "651ff3c68a5d0853fef6a0167dc0b4589ef3b0bd",
+      "bytes": 169,
+      "sha256": "73dda4bfa4993964e2c89a385f7ad93e8bd2867092cb38c8db604a9e1f449953"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/census_z5sq.out",
+      "mode": "100644",
+      "blob": "4d8e1c4d4a1e6ec2be976f7ea4f4e0fe8916ab09",
+      "bytes": 174,
+      "sha256": "72dfdcfea86b88531c8acba851c3edbb38f1cbac4d954851911fefd3485821d9"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/check_clone_depth.py",
+      "mode": "100644",
+      "blob": "39b06a1d9d909117c10a3772d97ac6823098e0ef",
+      "bytes": 16421,
+      "sha256": "92d0042640151432fb9e1a0dd1233a24c5ce518931d2184ce2c5aef2a1b5de4f"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/check_twist_average.py",
+      "mode": "100644",
+      "blob": "f78605b81482ad564ba551815a89c98ce4fb9df7",
+      "bytes": 9105,
+      "sha256": "15dedcad5a6922e1384a14a58d33a793b3b10e27149361e7e1774e545994d3d5"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/clone-normal.json",
+      "mode": "100644",
+      "blob": "80f4e1fb6b264b3f85d085f44a3353872cc7ab03",
+      "bytes": 46538,
+      "sha256": "b1e4f8294002b188ddd1eed9d00f3638559bfd7342dd6e376915633cc5b383d2"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/clone-optimized.json",
+      "mode": "100644",
+      "blob": "80f4e1fb6b264b3f85d085f44a3353872cc7ab03",
+      "bytes": 46538,
+      "sha256": "b1e4f8294002b188ddd1eed9d00f3638559bfd7342dd6e376915633cc5b383d2"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/twist-normal.json",
+      "mode": "100644",
+      "blob": "9c1618cb5a9df4d78c99f13725c1cfd500f5ea12",
+      "bytes": 12096,
+      "sha256": "7d709ef432e8d8dcdb762d53fa48ebbf3b4173d12272b9d0c9ea57f8aea5521e"
+    },
+    {
+      "path": "05-knowledge/results/clone_depth_modular_twist_average_20261025/twist-optimized.json",
+      "mode": "100644",
+      "blob": "9c1618cb5a9df4d78c99f13725c1cfd500f5ea12",
+      "bytes": 12096,
+      "sha256": "7d709ef432e8d8dcdb762d53fa48ebbf3b4173d12272b9d0c9ea57f8aea5521e"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/AUDIT.md",
+      "mode": "100644",
+      "blob": "9d8e6f535d39f56f507a391447a113f1d10040ad",
+      "bytes": 5346,
+      "sha256": "030afe5fe07236832fbd9e6b30198993d42115491e236b6660ae022949a272e9"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/BOUNDARY.md",
+      "mode": "100644",
+      "blob": "4303159310f895517c4b6a4d89a6f470a019bd9b",
+      "bytes": 17395,
+      "sha256": "6effdcea188f4e565b70fea04656592e30d955506df794d510625496062e4c5f"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/CYCLIC.md",
+      "mode": "100644",
+      "blob": "9b9b93a450afd31e2a1d7275e2c4f935e8737997",
+      "bytes": 7202,
+      "sha256": "34864ef91ab80dd7b41e3c9e804b86cd6cd7310a251591ee40eb534ff5d8faa1"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/MANIFEST.json",
+      "mode": "100644",
+      "blob": "ed39d1120cb0fa1b190a2bba09c4aa17474768e4",
+      "bytes": 2085,
+      "sha256": "ca46ff311ad52cf7e84be1e623c0aee45b96b89962dabecb304e4aed753e33c4"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "mode": "100644",
+      "blob": "6e7263fb0bbe2cbc5c0ab81c754a226f9287135f",
+      "bytes": 11831,
+      "sha256": "9e797c176453f85541a7877fa7ab6beb04f08fa693ff35665b1fbd6f3e9fb6b8"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/README.md",
+      "mode": "100644",
+      "blob": "53a0c2851cfda58712840075b0c2f0c3d7fdae0b",
+      "bytes": 3640,
+      "sha256": "9dd1f58d9790eb3a92a0b0633d603c8fce04dc5769034be671d98725f793dd2d"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/SOURCES.json",
+      "mode": "100644",
+      "blob": "bd3e13e93c48bf35bb07b5454415857a227e87b5",
+      "bytes": 3671,
+      "sha256": "ae686a64fbc36e2e83e774fa9172e41e7317ed6fcbc3d9375ab5b91ad37c8e0c"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/audit_monoid.py",
+      "mode": "100644",
+      "blob": "bbad5689d9640af9aa87ea59f4dab70ef010bb43",
+      "bytes": 2707,
+      "sha256": "86f9a95a38980afd06339f6e359bf23ccf14044c315f3076f1281b0196edc59b"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check.json",
+      "mode": "100644",
+      "blob": "d1a0b02a51abfc7087df8d146e5d87ace99b7937",
+      "bytes": 1758,
+      "sha256": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check.optimized.json",
+      "mode": "100644",
+      "blob": "d1a0b02a51abfc7087df8d146e5d87ace99b7937",
+      "bytes": 1758,
+      "sha256": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check.py",
+      "mode": "100644",
+      "blob": "90d240fd7661f7f23b612a88f36dca879c8fbfa0",
+      "bytes": 8606,
+      "sha256": "abf2cf3181819b6f989ca0307d6be98529eb2d1b2b02f1ffc48bcb89c886e3cd"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check_histogram.py",
+      "mode": "100644",
+      "blob": "c995e26f6374b7fb6adb0a6d867c604e9c8062dc",
+      "bytes": 3351,
+      "sha256": "3c29ce17bcc7d118f80f1aeb991d68401692136d46c7a150e65329686dace829"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check_native.py",
+      "mode": "100644",
+      "blob": "ba8d693826e32a2931b80778584a9e9e86e346c4",
+      "bytes": 4109,
+      "sha256": "27869635d0870ab0fa2f9cbd8f487af7646b7d6cc11a2bf658cfebae4cfd2f40"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/check_prime.py",
+      "mode": "100644",
+      "blob": "704814d1499acddb06fa795fb737876e461ad313",
+      "bytes": 5851,
+      "sha256": "fcc9ae2e1f86edab124620951abbde8b7064a35a49b28b7cd413ca9a5d49a96b"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/histogram.json",
+      "mode": "100644",
+      "blob": "7e12a247886ae7c4615f9dc297a077cd6eb791bf",
+      "bytes": 1678,
+      "sha256": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/histogram.optimized.json",
+      "mode": "100644",
+      "blob": "7e12a247886ae7c4615f9dc297a077cd6eb791bf",
+      "bytes": 1678,
+      "sha256": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/monoid.json",
+      "mode": "100644",
+      "blob": "f6cc0b276fb23e914e0e38664808cde919075ab7",
+      "bytes": 408,
+      "sha256": "1759b3440a1138b16198b374f7abd60ae202efa87869cd4e204d88cdb8b6185f"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/monoid.optimized.json",
+      "mode": "100644",
+      "blob": "f6cc0b276fb23e914e0e38664808cde919075ab7",
+      "bytes": 408,
+      "sha256": "1759b3440a1138b16198b374f7abd60ae202efa87869cd4e204d88cdb8b6185f"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/native.json",
+      "mode": "100644",
+      "blob": "085073543d136fc22219cd65b803f82d21bd4533",
+      "bytes": 873,
+      "sha256": "6ed50210a15acb99ce8b76b2295f18deda9cf6b5da9a58e89da4d03d5f0eed81"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/native.optimized.json",
+      "mode": "100644",
+      "blob": "085073543d136fc22219cd65b803f82d21bd4533",
+      "bytes": 873,
+      "sha256": "6ed50210a15acb99ce8b76b2295f18deda9cf6b5da9a58e89da4d03d5f0eed81"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/prime.json",
+      "mode": "100644",
+      "blob": "80064dfa83fe3f4747c99b60b0dfc0295f36ed01",
+      "bytes": 3974,
+      "sha256": "f412648ffd5cd6e84b3143ebca11cb8b5e0d2b632108427685f09f34f1554902"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/prime.optimized.json",
+      "mode": "100644",
+      "blob": "80064dfa83fe3f4747c99b60b0dfc0295f36ed01",
+      "bytes": 3974,
+      "sha256": "f412648ffd5cd6e84b3143ebca11cb8b5e0d2b632108427685f09f34f1554902"
+    },
+    {
+      "path": "05-knowledge/results/normseven_boundary_20261025/verify.py",
+      "mode": "100644",
+      "blob": "972894cc8ef5ef20653db6dbbf5b4e650f36dd06",
+      "bytes": 1849,
+      "sha256": "1e58f0615bb21fbfb08b69e94c994828666ffbbc1e0f28b6c814d81fb9971f94"
+    },
+    {
+      "path": "07-reflections/critical-expansion-depth-fifty-vertex-tournament-and-hourglass-twists-klein-20261025.md",
+      "mode": "100644",
+      "blob": "dc214736f147447d8dadb468fa30d9500afbe1dc",
+      "bytes": 10176,
+      "sha256": "159446b7d54329063d534d56fc950dee1373e4b2c15ec43ab707733248812e35"
+    },
+    {
+      "path": "agents/boxeph/inbox/MSG-1306-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/broadcast/MSG-3253-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/death-star/inbox/MSG-2243-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/kind-pasteur/inbox/MSG-2766-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/mac-mini/inbox/MSG-1920-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/monad-compute/inbox/MSG-2314-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/monad-explorer/inbox/MSG-2174-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/monad-formalizer/inbox/MSG-2255-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/monad-researcher/inbox/MSG-2366-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/monad-reviewer/inbox/MSG-2374-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/opus/inbox/MSG-2409-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/oracle/inbox/MSG-2424-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    },
+    {
+      "path": "agents/windesk/inbox/MSG-2291-from-klein-2026-10-25-klein-2026-10-25-twist-thm-47.md",
+      "mode": "100644",
+      "blob": "68bc8953730f24a060cc3ab72880db5826d84c36",
+      "bytes": 3558,
+      "sha256": "9bf652f9e343037d4bb63508581e13e6a5ed35fd3e7972bb30d3356505e382cf"
+    }
+  ]
+}

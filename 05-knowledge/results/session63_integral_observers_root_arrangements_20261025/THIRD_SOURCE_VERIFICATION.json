@@ -1,0 +1,249 @@
+{
+  "status": "VERIFIED",
+  "files": [
+    {
+      "source_directory": "session63-root",
+      "source_name": "PROPOSED_UNIFYING_THEORY.md",
+      "packaged": "PROPOSED_UNIFYING_THEORY.md",
+      "source_bytes": 11798,
+      "source_sha256": "bac6f0af9c57f166ca4aa640bacf811df406b12dba6c34f32844ce120457f876",
+      "packaged_sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441",
+      "packaging_changes": "Appended declared presentation-only navigation suffix; exact audited body retained as a byte prefix."
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "SYNTHESIS.md",
+      "packaged": "SYNTHESIS.md",
+      "source_bytes": 10985,
+      "source_sha256": "3f96a7af16b7fc99b5d9991ccf198c8a477a8e314e256976a9c315ffcda73ed2",
+      "packaged_sha256": "2a4af9c1e4fb5e4354874b3b63470b9b946aa58cf03f45f6d51591c4e7bf732c",
+      "packaging_changes": "Appended declared presentation-only navigation suffix; exact audited body retained as a byte prefix."
+    },
+    {
+      "source_directory": "session63-root",
+      "source_name": "CURRENT_SOURCE_UPDATE.md",
+      "packaged": "CURRENT_SOURCE_UPDATE.md",
+      "source_bytes": 1956,
+      "source_sha256": "750c3f6d647d54cdfd6ace804a2a30c966c0cc3f1d2b239702639b1fd5568c65",
+      "packaged_sha256": "750c3f6d647d54cdfd6ace804a2a30c966c0cc3f1d2b239702639b1fd5568c65",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "figures",
+      "source_name": "make_observer_map.py",
+      "packaged": "figures/make_observer_map.py",
+      "source_bytes": 2436,
+      "source_sha256": "ac1e9e89739026fd5dfd3060dcb26d5e6f4d8c0298975553b86b0d1420ef38ac",
+      "packaged_sha256": "ac1e9e89739026fd5dfd3060dcb26d5e6f4d8c0298975553b86b0d1420ef38ac",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "figures",
+      "source_name": "integral-observer-map.svg",
+      "packaged": "figures/integral-observer-map.svg",
+      "source_bytes": 11527,
+      "source_sha256": "189afe94a05853bf94354b8f202ef9eab9a605b44f09a0811b33186b926ac351",
+      "packaged_sha256": "189afe94a05853bf94354b8f202ef9eab9a605b44f09a0811b33186b926ac351",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "00_README.md",
+      "packaged": "recovery/sources/00_README.md",
+      "source_bytes": 19580,
+      "source_sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03",
+      "packaged_sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "01_COMMON_ACTION_BRIDGE.md",
+      "packaged": "recovery/sources/01_COMMON_ACTION_BRIDGE.md",
+      "source_bytes": 3202,
+      "source_sha256": "6538f317916a0e6d027e1b19234f69e26206f144c5dbfe104017b99e135c8c22",
+      "packaged_sha256": "6538f317916a0e6d027e1b19234f69e26206f144c5dbfe104017b99e135c8c22",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "02_cyclic_common_kernel.md",
+      "packaged": "recovery/sources/02_cyclic_common_kernel.md",
+      "source_bytes": 15939,
+      "source_sha256": "ddcc9783b06c7c8d08bf63e79aa370520b413c727aa77e1c5264b388e9a429bf",
+      "packaged_sha256": "ddcc9783b06c7c8d08bf63e79aa370520b413c727aa77e1c5264b388e9a429bf",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "03_RESULT.md",
+      "packaged": "recovery/sources/03_RESULT.md",
+      "source_bytes": 15393,
+      "source_sha256": "cb1d3a5d9b599d623e63aeea7412a3ad184470f8ebf7f20c48a99e1580e87211",
+      "packaged_sha256": "cb1d3a5d9b599d623e63aeea7412a3ad184470f8ebf7f20c48a99e1580e87211",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "04_RESULT.md",
+      "packaged": "recovery/sources/04_RESULT.md",
+      "source_bytes": 18721,
+      "source_sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+      "packaged_sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "05_TORIFICATION_OBSTRUCTION.md",
+      "packaged": "recovery/sources/05_TORIFICATION_OBSTRUCTION.md",
+      "source_bytes": 14233,
+      "source_sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c",
+      "packaged_sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "06_RESULT.md",
+      "packaged": "recovery/sources/06_RESULT.md",
+      "source_bytes": 18876,
+      "source_sha256": "405e5b3324a708864e91a7293f980c67e9fc9cbe86e3e80114a3b9dd8a1601b9",
+      "packaged_sha256": "405e5b3324a708864e91a7293f980c67e9fc9cbe86e3e80114a3b9dd8a1601b9",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "07_branch-addendum.md",
+      "packaged": "recovery/sources/07_branch-addendum.md",
+      "source_bytes": 10425,
+      "source_sha256": "89f858f8871a6608dee911949fc6f91029d4d16f85cef8bc255a4c193028e094",
+      "packaged_sha256": "89f858f8871a6608dee911949fc6f91029d4d16f85cef8bc255a4c193028e094",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "08_distinctness-addendum.md",
+      "packaged": "recovery/sources/08_distinctness-addendum.md",
+      "source_bytes": 10854,
+      "source_sha256": "407bd205a2f5bd5629dc6261db24a69f11dbccc3dace5fc7d3d0729111afd9e1",
+      "packaged_sha256": "407bd205a2f5bd5629dc6261db24a69f11dbccc3dace5fc7d3d0729111afd9e1",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "09_fiber_product.md",
+      "packaged": "recovery/sources/09_fiber_product.md",
+      "source_bytes": 11897,
+      "source_sha256": "1cee20c81f6a16707baf55634527464828fa13517c47d20f45195d6e8e34b82a",
+      "packaged_sha256": "1cee20c81f6a16707baf55634527464828fa13517c47d20f45195d6e8e34b82a",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "10_ROOT_THRESHOLDS.md",
+      "packaged": "recovery/sources/10_ROOT_THRESHOLDS.md",
+      "source_bytes": 20093,
+      "source_sha256": "90e24c872d70866ef5d4320cbd00bb3ecb69deded38aaf6fa31407fd4f01c957",
+      "packaged_sha256": "90e24c872d70866ef5d4320cbd00bb3ecb69deded38aaf6fa31407fd4f01c957",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "11_DELETION_AND_CUBE.md",
+      "packaged": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "source_bytes": 17328,
+      "source_sha256": "7d4adfcf2ec0b8e07fc73d32336d09f25a475c7b4abd7bab615864683735add9",
+      "packaged_sha256": "7d4adfcf2ec0b8e07fc73d32336d09f25a475c7b4abd7bab615864683735add9",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "12_RESULT.md",
+      "packaged": "recovery/sources/12_RESULT.md",
+      "source_bytes": 13358,
+      "source_sha256": "8a5c7a02cf3b319c034f8821d9d425c3c644c69c35e96edfa958f9cf6589c905",
+      "packaged_sha256": "8a5c7a02cf3b319c034f8821d9d425c3c644c69c35e96edfa958f9cf6589c905",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "sources",
+      "source_name": "13_SYNTHESIS.md",
+      "packaged": "recovery/sources/13_SYNTHESIS.md",
+      "source_bytes": 9070,
+      "source_sha256": "a98071c0d6c3dfca215dbcfe360b3530fe657bc097c5cceb0ec414592a504c80",
+      "packaged_sha256": "a98071c0d6c3dfca215dbcfe360b3530fe657bc097c5cceb0ec414592a504c80",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-recovery",
+      "source_name": "SOURCE_PINS.json",
+      "packaged": "recovery/SOURCE_PINS.json",
+      "source_bytes": 8027,
+      "source_sha256": "2a190e79b88a0af9e8046a23363c06349ee074e0f200ed55958598aad37c4170",
+      "packaged_sha256": "2a190e79b88a0af9e8046a23363c06349ee074e0f200ed55958598aad37c4170",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-recovery",
+      "source_name": "REPOSITORY_MAP_AND_PROPOSALS.md",
+      "packaged": "recovery/REPOSITORY_MAP_AND_PROPOSALS.md",
+      "source_bytes": 13796,
+      "source_sha256": "fe500c034eb9bb14de668c1f879ab29108cf5984eea235399b06f9d3b6aa1056",
+      "packaged_sha256": "fe500c034eb9bb14de668c1f879ab29108cf5984eea235399b06f9d3b6aa1056",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "PROPOSED_THEORY_AUDIT.md",
+      "packaged": "audits/specialization/PROPOSED_THEORY_AUDIT.md",
+      "source_bytes": 3170,
+      "source_sha256": "7b2e62d8507402e86e2ea788cb5bbac60d7d95ef7d58fb9739b3e8625147cc11",
+      "packaged_sha256": "7b2e62d8507402e86e2ea788cb5bbac60d7d95ef7d58fb9739b3e8625147cc11",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-specialization",
+      "source_name": "FINAL_ROOT_READBACK.md",
+      "packaged": "audits/specialization/FINAL_ROOT_READBACK.md",
+      "source_bytes": 1602,
+      "source_sha256": "f88ac0acae0a25fc9e403f702b09277753a8c464b654ab5509fab0770af98a0a",
+      "packaged_sha256": "f88ac0acae0a25fc9e403f702b09277753a8c464b654ab5509fab0770af98a0a",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "READBACK_SYNTHESIS_THEORY_FIGURE.md",
+      "packaged": "audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md",
+      "source_bytes": 2564,
+      "source_sha256": "85096149f7d1ae23b44ec6e66e6854eeda90922ed8b0517eddb7e052d94cc708",
+      "packaged_sha256": "85096149f7d1ae23b44ec6e66e6854eeda90922ed8b0517eddb7e052d94cc708",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-audit-twists",
+      "source_name": "SHA256SUMS.txt",
+      "packaged": "audits/twists/SHA256SUMS.txt",
+      "source_bytes": 516,
+      "source_sha256": "6935d0d2214fa98d6c533d94b094f6bab8ac6fca9bc40854e4879384900afc38",
+      "packaged_sha256": "6935d0d2214fa98d6c533d94b094f6bab8ac6fca9bc40854e4879384900afc38",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-publication",
+      "source_name": "SECOND_REMOTE_VERIFICATION.json",
+      "packaged": "SECOND_REMOTE_VERIFICATION.json",
+      "source_bytes": 8682,
+      "source_sha256": "e4b91488ee84ef9637136aa155deb1d80d106fd344a3d572f87197cac2e48dfe",
+      "packaged_sha256": "e4b91488ee84ef9637136aa155deb1d80d106fd344a3d572f87197cac2e48dfe",
+      "packaging_changes": null
+    },
+    {
+      "source_directory": "session63-publication",
+      "source_name": "verify_final_presentation.py",
+      "packaged": "verify_final_presentation.py",
+      "source_bytes": 1963,
+      "source_sha256": "33582da21955ebb022e2fc922c35bb8a60f122c670d378438d63f9b5b17fe559",
+      "packaged_sha256": "33582da21955ebb022e2fc922c35bb8a60f122c670d378438d63f9b5b17fe559",
+      "packaging_changes": null
+    }
+  ],
+  "scope": "All sources exact except the declared navigation suffixes. The refreshed twist-audit checksum list adds its final readback; historical earlier receipts are preserved. PNG remains an external visual-QA artifact."
+}

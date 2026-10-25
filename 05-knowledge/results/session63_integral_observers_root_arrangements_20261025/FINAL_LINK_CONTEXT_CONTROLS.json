@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "Targeted rejection controls in relocated packet copies; unrelated relocated inherited links are not claimed as full passes. Full original-context gates run separately.",
+  "checker_sha256": "7a4e022b2aa7f1715467ba7ccb2b2854bbd6807cb02a17ab6a40cccd30fa9215",
+  "cases": [
+    {
+      "mode": "normal",
+      "control": "real current missing link",
+      "targeted_rejection": [
+        "README.md missing local link definitely-absent.md"
+      ],
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "control": "historical byte tamper",
+      "targeted_rejection": [
+        "Historical snapshot pin mismatch recovery/sources/00_README.md"
+      ],
+      "rejected": true
+    },
+    {
+      "mode": "normal",
+      "control": "unlisted archive missing link",
+      "targeted_rejection": [
+        "recovery/sources/unlisted.md missing local link definitely-absent.md"
+      ],
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "control": "real current missing link",
+      "targeted_rejection": [
+        "README.md missing local link definitely-absent.md"
+      ],
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "control": "historical byte tamper",
+      "targeted_rejection": [
+        "Historical snapshot pin mismatch recovery/sources/00_README.md"
+      ],
+      "rejected": true
+    },
+    {
+      "mode": "optimized",
+      "control": "unlisted archive missing link",
+      "targeted_rejection": [
+        "recovery/sources/unlisted.md missing local link definitely-absent.md"
+      ],
+      "rejected": true
+    }
+  ]
+}

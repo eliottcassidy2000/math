@@ -2,8 +2,8 @@
 
 This board routes audited statements; it is not a claim that the objects below
 are interchangeable. The first two checkpoints contain cancellation, twist, integral-specialization
-and Fourier lanes. The proposed synthesis remains separate until its own
-explicitly labeled publication.
+and Fourier lanes. The [proposed synthesis](PROPOSED_UNIFYING_THEORY.md) is now published with
+explicit status boundaries and scoped final readbacks, not as a universal theorem.
 
 | Live concept | Retained coordinate / boundary | Evidence in this checkpoint |
 |---|---|---|
@@ -12,7 +12,7 @@ explicitly labeled publication.
 | Marked twist mass | Carrier, stabilizer, and quotient; open/singular/resolved distinctions | [Mass proof](twists/RESULT.md), [direct projective audit](audits/twists/AUDIT.md) |
 | Arithmetic extension | Fixed twist family versus fresh twist classes; power map | [Zeta and character norm](twists/ZETA_AND_EFFECTIVITY.md) |
 | Retained multiplication and effectivity | Invariant modules, multiplication, integral Fourier coordinates and positivity are distinct | [Specialization](specialization/RESULT.md), [Fourier criterion](fourier-effectivity/FOURIER_EFFECTIVITY.md), [independent audit](audits/specialization/REPORT.md) |
-| Proposed unifying framework | A research program, not an equivalence or a solved conjecture | Pending separately labeled synthesis; no promotion here |
+| Proposed unifying framework | A research program, not a universal equivalence or solved conjecture | [Theory proposal](PROPOSED_UNIFYING_THEORY.md), [synthesis](SYNTHESIS.md), final scoped readbacks |
 
 ## Inheritance and negative controls
 
@@ -26,3 +26,10 @@ coefficient reduction from an invariant-space recount, and fixed extension
 families from fieldwise averaging. The 64-twist mean is not an ordinary
 geometric average motive. No identification is inferred merely from matching
 dimensions, the number seven, or the value of a point-count polynomial at one.
+
+## Final distinction
+
+The concrete proofs and recovered source identifications are separated from
+the organizing proposal. A common carrier or Fourier matrix does not transport
+colorability, rational points, torification or legal tournament moves without
+a proved map and its operation/realizability hypotheses. The [source update](CURRENT_SOURCE_UPDATE.md) resolves the earlier search boundary; the old map remains explicitly historical.

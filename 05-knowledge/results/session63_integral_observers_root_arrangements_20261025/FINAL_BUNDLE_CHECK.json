@@ -1,0 +1,817 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "verify_final_presentation.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "twists/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "figures/make_observer_map.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "fourier-effectivity/check_fourier_effectivity.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "recovery/check_twist_histograms.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "cancellation/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "cancellation/verify_source_recovery.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "specialization/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/twists/independent_checks.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/cancellation/audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/cancellation/provenance_audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/specialization/verify.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "twists/RESULT.md",
+    "twists/ROOT_STACK.md",
+    "twists/ZETA_AND_EFFECTIVITY.md",
+    "twists/VERIFICATION.md",
+    "twists/verify.py",
+    "twists/normal.json",
+    "twists/optimized.json",
+    "audits/twists/AUDIT.md",
+    "audits/twists/independent_checks.py",
+    "audits/twists/normal.json",
+    "audits/twists/optimized.json",
+    "audits/twists/AUDITED_SOURCE_SHA256.txt",
+    "audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md",
+    "audits/cancellation/INDEPENDENT_V8.json",
+    "audits/cancellation/RECEIPT.json",
+    "audits/cancellation/REPORT.md",
+    "audits/cancellation/SOURCE_PINS_AUDITED.json",
+    "audits/cancellation/audit.py",
+    "audits/cancellation/producer_normal.json",
+    "audits/cancellation/producer_optimized.json",
+    "audits/cancellation/provenance_audit.py",
+    "audits/cancellation/provenance_normal.json",
+    "audits/cancellation/provenance_optimized.json",
+    "audits/cancellation/replay_normal.json",
+    "audits/cancellation/replay_optimized.json"
+  ],
+  "local_links": [
+    {
+      "from": "PUBLICATION_CHECKS.md",
+      "to": "LATE_INCOMING.md",
+      "exists": true
+    },
+    {
+      "from": "LATE_INCOMING.md",
+      "to": "../normseven_boundary_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "LATE_INCOMING.md",
+      "to": "../clone_depth_modular_twist_average_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "LATE_INCOMING.md",
+      "to": "../../../01-canon/theorems/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+      "exists": true
+    },
+    {
+      "from": "LATE_INCOMING.md",
+      "to": "../../../01-canon/theorems/THM-4765-quadratic-twists-of-a-square-root-cover-average-to-the-branch-complement.md",
+      "exists": true
+    },
+    {
+      "from": "LATE_INCOMING.md",
+      "to": "../../../05-knowledge/hypotheses/HYP-9374-mixed-order-clone-depth-equals-the-candidate-minimum.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "README.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "PROPOSED_UNIFYING_THEORY.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "twists/ROOT_STACK.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "CURRENT_SOURCE_UPDATE.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "recovery/README.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "audits/specialization/FINAL_ROOT_READBACK.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "figures/integral-observer-map.svg",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "figures/make_observer_map.py",
+      "exists": true
+    },
+    {
+      "from": "PROPOSED_UNIFYING_THEORY.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "README.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "PROPOSED_UNIFYING_THEORY.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "twists/ROOT_STACK.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "CURRENT_SOURCE_UPDATE.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "recovery/README.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "audits/specialization/FINAL_ROOT_READBACK.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "figures/integral-observer-map.svg",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "figures/make_observer_map.py",
+      "exists": true
+    },
+    {
+      "from": "SYNTHESIS.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "PROPOSED_UNIFYING_THEORY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "PROPOSED_UNIFYING_THEORY.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "from": "CONCEPT_BOARD.md",
+      "to": "CURRENT_SOURCE_UPDATE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PROPOSED_UNIFYING_THEORY.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "figures/integral-observer-map.svg",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CURRENT_SOURCE_UPDATE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "recovery/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "LATE_INCOMING.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "cancellation/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/cancellation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../unprotected_ports_cancellation_20261025/valuation/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../unprotected_ports_cancellation_20261025/counting/POSITIVE_JET.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/ROOT_STACK.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "twists/ZETA_AND_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/twists/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "specialization/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "fourier-effectivity/FOURIER_EFFECTIVITY.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "MANIFEST.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/specialization/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "../CURRENT_SOURCE_UPDATE.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "REPOSITORY_MAP_AND_PROPOSALS.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "SOURCE_PINS.json",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/00_README.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/01_COMMON_ACTION_BRIDGE.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/02_cyclic_common_kernel.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/03_RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/04_RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/05_TORIFICATION_OBSTRUCTION.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/06_RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/07_branch-addendum.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/08_distinctness-addendum.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/09_fiber_product.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/10_ROOT_THRESHOLDS.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/11_DELETION_AND_CUBE.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/12_RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "recovery/README.md",
+      "to": "sources/13_SYNTHESIS.md",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [
+    {
+      "path": "twists/RESULT.md",
+      "literal": "[W/G](F_q)",
+      "occurrences": 1,
+      "source_sha256": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+      "reason": "Literal quotient-stack rational-point notation, not an intended Markdown destination; audited proof bytes preserved."
+    }
+  ],
+  "historical_source_links": [
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../audits/BOUNDARY_AUDIT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/BOUNDARY_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../spindle_tournament_interfaces_20261011g.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/spindle_tournament_interfaces_20261011g.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../plane_six_reframes_parity_20261011b.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/plane_six_reframes_parity_20261011b.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../six_seven_gale_cube_20261025/BRANCH_CUBE_AND_DOUBLE_COVER.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/six_seven_gale_cube_20261025/BRANCH_CUBE_AND_DOUBLE_COVER.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../ports_regular_actions_hn_20261025/geometry/README.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/ports_regular_actions_hn_20261025/geometry/README.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../session62_agent_theme_bridges_20261025/palettes/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session62_agent_theme_bridges_20261025/palettes/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/12_RESULT.md",
+      "to": "../../../../01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "01-canon/theorems/THM-4614-three-colourable-contexts-cannot-change-the-six-colour-port-relation-in-q-zeta55.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "metric_spindle/cube_to_flower.svg",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/cube_to_flower.svg",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "metric_spindle/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "audits/METRIC_AUDIT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/METRIC_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "projective_eight/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/projective_eight/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "../six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "audits/PROJECTIVE_AUDIT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/PROJECTIVE_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "fano_eight/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/fano_eight/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "audits/PALETTE_AUDIT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/PALETTE_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "cube_boundary/RESULT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "audits/BOUNDARY_AUDIT.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/audits/BOUNDARY_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "README.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/README.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/13_SYNTHESIS.md",
+      "to": "CONCEPT_BOARD.md",
+      "original_source": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/CONCEPT_BOARD.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../audits/ROOT_DELETION_AUDIT.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/six_seven_geometry_20261025/audits/ROOT_DELETION_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../../session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../../session59_f1_geometry_and_information_20261025/positive-audit/TORIFICATION_AUDIT.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/positive-audit/TORIFICATION_AUDIT.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../../session60_six_seven_geometry_20261025/deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session60_six_seven_geometry_20261025/deck-k3/DECK_CHARACTERS_AND_K3_QUOTIENTS.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../../session60_six_seven_geometry_20261025/deck-k3/KUMMER_GALE_BRIDGE.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/session60_six_seven_geometry_20261025/deck-k3/KUMMER_GALE_BRIDGE.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    },
+    {
+      "from": "recovery/sources/11_DELETION_AND_CUBE.md",
+      "to": "../../reflection_bridge_20261025/seven.md",
+      "original_source": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+      "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+      "resolved_repository_path": "05-knowledge/results/reflection_bridge_20261025/seven.md",
+      "exists_at_original_commit": true,
+      "scope": "Historical source-context resolution, not a claim this archive-relative link is current navigation."
+    }
+  ],
+  "historical_unresolved_links": []
+}

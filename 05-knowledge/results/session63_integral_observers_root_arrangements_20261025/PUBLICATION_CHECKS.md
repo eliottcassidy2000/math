@@ -67,3 +67,49 @@ is exempted. The original failed scan is retained in the publication work area.
 `SECOND_REPLAY_RECEIPT.json` records 10 scripts and 20 successful ordinary/optimized executions. Paired outputs agree and the applicable stored outputs match exactly; all frozen packet bytes remain unchanged. Every replayed script hash and the current copied-source pins were rechecked before release. The documentation gate passes, and all 69 incoming packet files remain hash-identical.
 
 `SECOND_BUNDLE_CHECK.json` checks UTF-8, native checksums, assertion-safe scripts and local links. `SECOND_FILESET_NEGATIVE_CONTROLS.json` records byte-mutation and extra-file rejection in both Python modes. Exact-commit remote verification and CI visibility follow publication; no missing CI is treated as a pass.
+
+## Historical source contexts and final presentation
+
+The 14 recovery snapshots are exact copies of their original Git blobs, each
+rechecked at the pinned commit (`FINAL_HISTORICAL_SOURCE_VERIFICATION.json`).
+They retain their original relative links. The bundle gate resolves those
+links in the original commit/source context and reports any historically
+unresolved target separately; it does not mislabel archive-relative links as
+current package navigation. Current package routes must resolve normally.
+`FINAL_LINK_CONTEXT_CONTROLS.json` rejects current missing links, byte changes
+to a pinned historical snapshot, and missing links in an unlisted archive file
+in both Python modes.
+
+The synthesis and proposed theory preserve their final audited source bytes
+as exact prefixes. Only the explicitly marked navigation suffixes are added.
+The portable final-presentation checker validates those prefixes, all third-
+checkpoint source pins, all historical snapshot SHA256/Git hashes, SVG XML,
+and the absence of a published PNG. The two scoped final readbacks distinguish
+proved/recovered results from a coherence-reviewed organizing proposal.
+
+`FINAL_FIGURE_QA.json` records direct visual inspection and separate ordinary/
+optimized regeneration of both SVG and QA-only PNG. Both modes reproduce the
+audited hashes exactly. Explicit writable external Matplotlib/XDG caches are
+used; the full combined replay also regenerates the published SVG without
+changing any packet bytes. No PNG is published.
+
+## Final checkpoint: completed evidence
+
+`FINAL_REPLAY_RECEIPT.json` records 12 scripts and 24 successful ordinary/optimized executions. Paired outputs agree and the applicable stored outputs match exactly; all frozen packet bytes remain unchanged. Every replayed script hash and the current copied-source pins were rechecked before release. The documentation gate passes, and all 69 incoming packet files remain hash-identical.
+
+`FINAL_BUNDLE_CHECK.json` checks UTF-8, native checksums, assertion-safe scripts and local links. `FINAL_FILESET_NEGATIVE_CONTROLS.json` records byte-mutation and extra-file rejection in both Python modes. Exact-commit remote verification and CI visibility follow publication; no missing CI is treated as a pass.
+
+The deterministic Matplotlib SVG contains trailing spaces inside path data.
+A file-specific `.gitattributes` whitespace exception preserves its audited
+bytes; no proof/source whitespace policy is relaxed. XML validity, exact SVG
+hash, visual inspection and normal/optimized regeneration remain enforced.
+
+## Late incoming preservation
+
+Before the final upload, the expected-head check found two new mainline
+commits. A clean rebase retained all 55 incoming changed paths and the exact
+pre-rebase packet subtree (`FINAL_REBASE_PRESERVATION.json`). The bounded
+[LATE_INCOMING.md](LATE_INCOMING.md) note records source-read scope only.
+The current documentation gate was rerun after the rebase; unchanged
+mathematical checker hashes and source prefixes remain pinned to the completed
+24-execution replay. No broader incoming theorem was silently promoted.

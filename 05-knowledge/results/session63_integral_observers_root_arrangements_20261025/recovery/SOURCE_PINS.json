@@ -1,0 +1,114 @@
+[
+  {
+    "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "c9d025205682b5113727f317f499f8daeea590a6",
+    "sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03",
+    "local": "session63-recovery/sources/00_README.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md"
+  },
+  {
+    "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/common-action/COMMON_ACTION_BRIDGE.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "26727784a639a6c96250ff53d9e648f7e2e58873",
+    "sha256": "6538f317916a0e6d027e1b19234f69e26206f144c5dbfe104017b99e135c8c22",
+    "local": "session63-recovery/sources/01_COMMON_ACTION_BRIDGE.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session62_agent_theme_bridges_20261025/common-action/COMMON_ACTION_BRIDGE.md"
+  },
+  {
+    "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/incidence/cyclic_common_kernel.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "3afe4bd68a8226d229a4852e3e65160cce37a04d",
+    "sha256": "ddcc9783b06c7c8d08bf63e79aa370520b413c727aa77e1c5264b388e9a429bf",
+    "local": "session63-recovery/sources/02_cyclic_common_kernel.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session62_agent_theme_bridges_20261025/incidence/cyclic_common_kernel.md"
+  },
+  {
+    "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/palettes/RESULT.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "93cfc686e20b063345e978fa8984077424efe834",
+    "sha256": "cb1d3a5d9b599d623e63aeea7412a3ad184470f8ebf7f20c48a99e1580e87211",
+    "local": "session63-recovery/sources/03_RESULT.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session62_agent_theme_bridges_20261025/palettes/RESULT.md"
+  },
+  {
+    "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/RESULT.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "d3f6a261e64c9c1df381e8a28687cf832250adeb",
+    "sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+    "local": "session63-recovery/sources/04_RESULT.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/RESULT.md"
+  },
+  {
+    "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "889b978ccc0611249202e9e253ffe81e4c9db248",
+    "sha256": "c6f77ebf8ef7259ea92c381a3a15fc2dc12e2df840d013ecd4c4653c8377d60c",
+    "local": "session63-recovery/sources/05_TORIFICATION_OBSTRUCTION.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/TORIFICATION_OBSTRUCTION.md"
+  },
+  {
+    "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/RESULT.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "3bd110897813778a8738831cf71327dfe79220b1",
+    "sha256": "405e5b3324a708864e91a7293f980c67e9fc9cbe86e3e80114a3b9dd8a1601b9",
+    "local": "session63-recovery/sources/06_RESULT.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/RESULT.md"
+  },
+  {
+    "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/branch-addendum.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "84901aad527f6bca990642ab1ab77bc0336660a2",
+    "sha256": "89f858f8871a6608dee911949fc6f91029d4d16f85cef8bc255a4c193028e094",
+    "local": "session63-recovery/sources/07_branch-addendum.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/branch-addendum.md"
+  },
+  {
+    "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/distinctness-addendum.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "c5229973e4812209e0ca7becffaa4fe4a64093df",
+    "sha256": "407bd205a2f5bd5629dc6261db24a69f11dbccc3dace5fc7d3d0729111afd9e1",
+    "local": "session63-recovery/sources/08_distinctness-addendum.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session59_f1_geometry_and_information_20261025/graph-magic-degeneration/distinctness-addendum.md"
+  },
+  {
+    "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglass-fiber-product/fiber_product.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "2f790a3cf4c3eecba979c258563e7902b95a862c",
+    "sha256": "1cee20c81f6a16707baf55634527464828fa13517c47d20f45195d6e8e34b82a",
+    "local": "session63-recovery/sources/09_fiber_product.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session58_hourglass_complement_geometry_20261025/hourglass-fiber-product/fiber_product.md"
+  },
+  {
+    "path": "05-knowledge/results/session60_six_seven_geometry_20261025/thresholds/ROOT_THRESHOLDS.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "206a290cd22457a11a8dbe5fb5b9031d12963739",
+    "sha256": "90e24c872d70866ef5d4320cbd00bb3ecb69deded38aaf6fa31407fd4f01c957",
+    "local": "session63-recovery/sources/10_ROOT_THRESHOLDS.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/session60_six_seven_geometry_20261025/thresholds/ROOT_THRESHOLDS.md"
+  },
+  {
+    "path": "05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "0ca6c5e5f0fbc63cb0600af0ead8f475221f5902",
+    "sha256": "7d4adfcf2ec0b8e07fc73d32336d09f25a475c7b4abd7bab615864683735add9",
+    "local": "session63-recovery/sources/11_DELETION_AND_CUBE.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/six_seven_geometry_20261025/root_deletion/DELETION_AND_CUBE.md"
+  },
+  {
+    "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "33bb49a661d271f1c944fe323e843824b3bf22c5",
+    "sha256": "8a5c7a02cf3b319c034f8821d9d425c3c644c69c35e96edfa958f9cf6589c905",
+    "local": "session63-recovery/sources/12_RESULT.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md"
+  },
+  {
+    "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+    "commit": "eaa81fd80089cc3b0a56d346f59403a0cfb730c2",
+    "blob": "0bdc92876d19d64a0e619301797281f4cfab17bc",
+    "sha256": "a98071c0d6c3dfca215dbcfe360b3530fe657bc097c5cceb0ec414592a504c80",
+    "local": "session63-recovery/sources/13_SYNTHESIS.md",
+    "url": "https://github.com/eliottcassidy2000/math/blob/eaa81fd80089cc3b0a56d346f59403a0cfb730c2/05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md"
+  }
+]

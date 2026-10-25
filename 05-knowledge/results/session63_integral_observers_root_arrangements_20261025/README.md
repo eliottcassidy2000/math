@@ -1,9 +1,26 @@
 # Integral observers, cancellation spectra, and root arrangements
 
-2026-10-25. **Status: two audited research checkpoints.** Scoped proofs and
+2026-10-25. **Status: audited results plus a separately proposed framework.** Scoped proofs and
 finite controls are separate. This packet does not claim historical novelty,
 an F1 model, a universal torification classification, an integer-square solution, or an
 LRC/HN consequence. Proposed unifying theories are not promoted by these checks.
+
+## Start with the synthesis and the proposed theory
+
+**[Integrated synthesis](SYNTHESIS.md) · [Proposed unifying framework](PROPOSED_UNIFYING_THEORY.md)**
+
+**PROVED / RECOVERED:** the concrete, scoped compatibility results and hostile
+examples below. **PROPOSED FRAMEWORK:** integral carrier + operation/context
+bank + realizability condition, reviewed for mathematical coherence, not proved
+as a universal equivalence or classification. Its named lemmas have their own
+proofs; its broad organizing program and next steps remain proposals.
+
+![Keep the construction and distinguish its observers](figures/integral-observer-map.svg)
+
+[Current source reconciliation](CURRENT_SOURCE_UPDATE.md) supersedes the old
+search boundary without rewriting the [historical recovery map](recovery/README.md).
+[Late concurrent intake](LATE_INCOMING.md) records preserved subsequent work
+without importing its broader unaudited claims.
 
 ## Read the results
 
@@ -40,17 +57,19 @@ this packet use the following mappings; no scratch path is needed to run tests.
 |---|---|
 | `session63-cancellation` | `cancellation/` |
 | `session63-twists` | `twists/` |
-| `session63-recovery` (finite twist checker and outputs only here) | `recovery/` |
+| `session63-recovery` | `recovery/` (historical source map/pins plus finite checks) |
 | `session63-audit-cancellation` | `audits/cancellation/` |
 | `session63-audit-twists` | `audits/twists/` |
 | `session63-specialization` | `specialization/` |
-| `session63-root` (Fourier proof/check here) | `fourier-effectivity/` |
+| `session63-root` | root synthesis/theory; `fourier-effectivity/`; `figures/` |
 | `session63-audit-specialization` | `audits/specialization/` |
 
 Repository-relative source citations still refer to the repository root.
 Source commit pins remain historical pins; they are not silently advanced.
-The broader recovery map and proposed framework are reserved for a later,
-separately audited checkpoint, not claimed as part of this one.
+The broader recovery map is now archived with its current reconciliation.
+The proposed framework is prominently linked above and remains distinct from
+proved concrete results; final readbacks certify scope and coherence, not a
+universal classification theorem.
 
 ## Reproduce
 
@@ -67,6 +86,7 @@ python3 -B "$P/audits/twists/independent_checks.py" --reference "$P/recovery/twi
 python3 -B "$P/specialization/check.py"
 python3 -B "$P/fourier-effectivity/check_fourier_effectivity.py"
 python3 -B "$P/audits/specialization/verify.py"
+python3 -B "$P/verify_final_presentation.py"
 python3 -B "$P/verify_packet.py"
 ```
 
@@ -79,3 +99,9 @@ The source Fourier note retains its historical audit-request header. The
 [completed independent audit](audits/specialization/REPORT.md), section 6,
 records its subsequent proof readback and normal/optimized replay. This is
 status reconciliation, not a change to the mathematical source.
+
+The figure generator requires Matplotlib. Give `MPLCONFIGDIR` and
+`XDG_CACHE_HOME` explicit writable directories outside this packet before
+running `python3 "$P/figures/make_observer_map.py"`. Its default output is
+only the published SVG; `--png` additionally makes a visual-QA preview. The
+preview PNG was inspected but is intentionally not a published packet file.
