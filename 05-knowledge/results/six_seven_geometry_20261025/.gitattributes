@@ -1,0 +1,2 @@
+# Certificates hash exact bytes; preserve this packet across Windows/Unix checkouts.
+* -text

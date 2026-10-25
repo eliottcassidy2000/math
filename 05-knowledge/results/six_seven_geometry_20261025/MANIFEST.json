@@ -1,6 +1,11 @@
 {
   "files": [
     {
+      "bytes": 93,
+      "path": ".gitattributes",
+      "sha256": "4897e7677225f866768ea893030a157bd5cec00e392a982d1e75a72a78c78bc9"
+    },
+    {
       "bytes": 3988,
       "path": "audits/CHARACTER_AUDIT.md",
       "sha256": "c28ca2cc530ad43af78f8bb6faa5e212ed8e9a5ba65f799ddb907ac63e27b653"
@@ -106,9 +111,9 @@
       "sha256": "7b5ba22506eaf39a0c56eb24026b30b240883de44e33cf64301bf01c1b1c5703"
     },
     {
-      "bytes": 4158,
+      "bytes": 4292,
       "path": "PUBLICATION_CHECKS.md",
-      "sha256": "17eeeb1146cfbceba92b06bf13a66346e3761b2a2b82ef2d3f912f317fb08ef9"
+      "sha256": "eb7a8aec45f8832bbed22adcfc5c13e8990f51158f3c0dd8e14339a0f2b1b02f"
     },
     {
       "bytes": 3192,

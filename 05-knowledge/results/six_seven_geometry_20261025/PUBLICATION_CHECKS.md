@@ -55,7 +55,8 @@ the existence of distinct positive integer-square points.
 ## File integrity and document gate
 
 `MANIFEST.json` records every packet file except itself, with exact byte size
-and SHA-256. Run
+and SHA-256. The packet-local `.gitattributes` disables newline conversion so
+Git preserves those exact certificate/source bytes across checkouts. Run
 
     python3 -B 05-knowledge/results/six_seven_geometry_20261025/verify_packet.py
 
