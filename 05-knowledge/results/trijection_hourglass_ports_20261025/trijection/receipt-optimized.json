@@ -1,0 +1,68 @@
+{
+  "controls": [
+    "odd signed cycle",
+    "literal reversed-join hostile",
+    "genuine blue final hostiles"
+  ],
+  "counts": {
+    "common_reflection_families": 2137,
+    "exact_two_blue_families": 152,
+    "guarded_affine_cells": 2438,
+    "literal_pair_comparisons": 2030,
+    "long_cut_blue_queries": 14300,
+    "overlap_cycle_tables": 441,
+    "three_move_ledgers": 1728
+  },
+  "legal_tiny_ledgers": 36,
+  "literal_small_family_histogram": {
+    "2": {
+      "1": 1
+    },
+    "3": {
+      "1": 2,
+      "2": 1
+    },
+    "4": {
+      "1": 2,
+      "2": 2,
+      "4": 1
+    },
+    "5": {
+      "1": 28,
+      "2": 6,
+      "4": 2,
+      "8": 2,
+      "16": 1
+    }
+  },
+  "long_cut_blue_failures": [
+    [
+      15,
+      9,
+      3,
+      3
+    ],
+    [
+      15,
+      9,
+      6,
+      3
+    ],
+    [
+      18,
+      9,
+      3,
+      3
+    ],
+    [
+      18,
+      9,
+      6,
+      3
+    ]
+  ],
+  "new_overlap_cells": 276,
+  "scope": "finite exact; unrestricted theorem is in README",
+  "source_population_with_cell_multiplicity": "834752813769925800570125210453998363697540245445059457971447649112153955531427119104",
+  "status": "PASS"
+}

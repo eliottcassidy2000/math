@@ -1,0 +1,485 @@
+{
+  "cases": 53,
+  "first_bridge_at_L": 11,
+  "method": "parallelism-built lines plus full nullspace; no producer imports",
+  "status": "PASS",
+  "universe": [
+    {
+      "J": 1,
+      "L": 2,
+      "bridge_modes": 0,
+      "coupled": 2,
+      "cube_modes": 1,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 2,
+      "L": 3,
+      "bridge_modes": 0,
+      "coupled": 4,
+      "cube_modes": 2,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 3,
+      "L": 4,
+      "bridge_modes": 0,
+      "coupled": 6,
+      "cube_modes": 3,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 4,
+      "L": 5,
+      "bridge_modes": 0,
+      "coupled": 8,
+      "cube_modes": 4,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 5,
+      "L": 6,
+      "bridge_modes": 0,
+      "coupled": 10,
+      "cube_modes": 5,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 6,
+      "L": 7,
+      "bridge_modes": 0,
+      "coupled": 12,
+      "cube_modes": 6,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 7,
+      "L": 8,
+      "bridge_modes": 0,
+      "coupled": 14,
+      "cube_modes": 7,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 8,
+      "L": 9,
+      "bridge_modes": 0,
+      "coupled": 16,
+      "cube_modes": 8,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 9,
+      "L": 10,
+      "bridge_modes": 0,
+      "coupled": 18,
+      "cube_modes": 9,
+      "first_bridge_support": null,
+      "p": 23
+    },
+    {
+      "J": 11,
+      "L": 11,
+      "bridge_modes": 1,
+      "coupled": 22,
+      "cube_modes": 10,
+      "first_bridge_support": 12,
+      "p": 23
+    },
+    {
+      "J": 13,
+      "L": 12,
+      "bridge_modes": 2,
+      "coupled": 26,
+      "cube_modes": 11,
+      "first_bridge_support": 12,
+      "p": 23
+    },
+    {
+      "J": 15,
+      "L": 13,
+      "bridge_modes": 3,
+      "coupled": 30,
+      "cube_modes": 12,
+      "first_bridge_support": 12,
+      "p": 23
+    },
+    {
+      "J": 17,
+      "L": 14,
+      "bridge_modes": 4,
+      "coupled": 34,
+      "cube_modes": 13,
+      "first_bridge_support": 12,
+      "p": 23
+    },
+    {
+      "J": 1,
+      "L": 2,
+      "bridge_modes": 0,
+      "coupled": 2,
+      "cube_modes": 1,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 2,
+      "L": 3,
+      "bridge_modes": 0,
+      "coupled": 4,
+      "cube_modes": 2,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 3,
+      "L": 4,
+      "bridge_modes": 0,
+      "coupled": 6,
+      "cube_modes": 3,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 4,
+      "L": 5,
+      "bridge_modes": 0,
+      "coupled": 8,
+      "cube_modes": 4,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 5,
+      "L": 6,
+      "bridge_modes": 0,
+      "coupled": 10,
+      "cube_modes": 5,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 6,
+      "L": 7,
+      "bridge_modes": 0,
+      "coupled": 12,
+      "cube_modes": 6,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 7,
+      "L": 8,
+      "bridge_modes": 0,
+      "coupled": 14,
+      "cube_modes": 7,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 8,
+      "L": 9,
+      "bridge_modes": 0,
+      "coupled": 16,
+      "cube_modes": 8,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 9,
+      "L": 10,
+      "bridge_modes": 0,
+      "coupled": 18,
+      "cube_modes": 9,
+      "first_bridge_support": null,
+      "p": 29
+    },
+    {
+      "J": 11,
+      "L": 11,
+      "bridge_modes": 1,
+      "coupled": 22,
+      "cube_modes": 10,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 13,
+      "L": 12,
+      "bridge_modes": 2,
+      "coupled": 26,
+      "cube_modes": 11,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 15,
+      "L": 13,
+      "bridge_modes": 3,
+      "coupled": 30,
+      "cube_modes": 12,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 17,
+      "L": 14,
+      "bridge_modes": 4,
+      "coupled": 34,
+      "cube_modes": 13,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 19,
+      "L": 15,
+      "bridge_modes": 5,
+      "coupled": 38,
+      "cube_modes": 14,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 21,
+      "L": 16,
+      "bridge_modes": 6,
+      "coupled": 42,
+      "cube_modes": 15,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 23,
+      "L": 17,
+      "bridge_modes": 7,
+      "coupled": 46,
+      "cube_modes": 16,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 25,
+      "L": 18,
+      "bridge_modes": 8,
+      "coupled": 50,
+      "cube_modes": 17,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 27,
+      "L": 19,
+      "bridge_modes": 9,
+      "coupled": 54,
+      "cube_modes": 18,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 29,
+      "L": 20,
+      "bridge_modes": 10,
+      "coupled": 58,
+      "cube_modes": 19,
+      "first_bridge_support": 12,
+      "p": 29
+    },
+    {
+      "J": 1,
+      "L": 2,
+      "bridge_modes": 0,
+      "coupled": 2,
+      "cube_modes": 1,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 2,
+      "L": 3,
+      "bridge_modes": 0,
+      "coupled": 4,
+      "cube_modes": 2,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 3,
+      "L": 4,
+      "bridge_modes": 0,
+      "coupled": 6,
+      "cube_modes": 3,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 4,
+      "L": 5,
+      "bridge_modes": 0,
+      "coupled": 8,
+      "cube_modes": 4,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 5,
+      "L": 6,
+      "bridge_modes": 0,
+      "coupled": 10,
+      "cube_modes": 5,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 6,
+      "L": 7,
+      "bridge_modes": 0,
+      "coupled": 12,
+      "cube_modes": 6,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 7,
+      "L": 8,
+      "bridge_modes": 0,
+      "coupled": 14,
+      "cube_modes": 7,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 8,
+      "L": 9,
+      "bridge_modes": 0,
+      "coupled": 16,
+      "cube_modes": 8,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 9,
+      "L": 10,
+      "bridge_modes": 0,
+      "coupled": 18,
+      "cube_modes": 9,
+      "first_bridge_support": null,
+      "p": 31
+    },
+    {
+      "J": 11,
+      "L": 11,
+      "bridge_modes": 1,
+      "coupled": 22,
+      "cube_modes": 10,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 13,
+      "L": 12,
+      "bridge_modes": 2,
+      "coupled": 26,
+      "cube_modes": 11,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 15,
+      "L": 13,
+      "bridge_modes": 3,
+      "coupled": 30,
+      "cube_modes": 12,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 17,
+      "L": 14,
+      "bridge_modes": 4,
+      "coupled": 34,
+      "cube_modes": 13,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 19,
+      "L": 15,
+      "bridge_modes": 5,
+      "coupled": 38,
+      "cube_modes": 14,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 21,
+      "L": 16,
+      "bridge_modes": 6,
+      "coupled": 42,
+      "cube_modes": 15,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 23,
+      "L": 17,
+      "bridge_modes": 7,
+      "coupled": 46,
+      "cube_modes": 16,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 25,
+      "L": 18,
+      "bridge_modes": 8,
+      "coupled": 50,
+      "cube_modes": 17,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 27,
+      "L": 19,
+      "bridge_modes": 9,
+      "coupled": 54,
+      "cube_modes": 18,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 29,
+      "L": 20,
+      "bridge_modes": 10,
+      "coupled": 58,
+      "cube_modes": 19,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 31,
+      "L": 21,
+      "bridge_modes": 11,
+      "coupled": 62,
+      "cube_modes": 20,
+      "first_bridge_support": 12,
+      "p": 31
+    },
+    {
+      "J": 33,
+      "L": 22,
+      "bridge_modes": 12,
+      "coupled": 66,
+      "cube_modes": 21,
+      "first_bridge_support": 12,
+      "p": 31
+    }
+  ]
+}

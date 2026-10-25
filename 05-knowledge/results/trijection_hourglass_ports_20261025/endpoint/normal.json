@@ -1,0 +1,110 @@
+{
+  "counts": {
+    "exhaustive_n10": 2560,
+    "exhaustive_n9": 256,
+    "n12_exception": 2,
+    "permutation_pairs_n11_to200": 19095,
+    "sampled_n11_to60": 3050
+  },
+  "filters": "literal stated guards only; no mixedness, strongness, clone or isomorphism filter",
+  "newly_covered": {
+    "blocked_odd_prefix_lengths": [
+      3,
+      5,
+      7
+    ],
+    "h": 3,
+    "n": 19,
+    "rows": [
+      65526,
+      56244,
+      5960,
+      446547,
+      442276,
+      288844,
+      513938,
+      421676,
+      351784,
+      482344,
+      481322,
+      413772,
+      368800,
+      413518,
+      430100,
+      77732,
+      420031,
+      299303,
+      32775
+    ]
+  },
+  "omitted_guard_hostiles": [
+    {
+      "failed_joins": [
+        [
+          15,
+          1
+        ]
+      ],
+      "reversed_guard": [
+        3,
+        17
+      ],
+      "rows": [
+        65526,
+        86460,
+        174280,
+        366993,
+        408484,
+        358348,
+        454042,
+        381184,
+        274948,
+        287950,
+        457118,
+        521122,
+        336452,
+        409738,
+        430364,
+        209714,
+        419669,
+        267179,
+        32775
+      ]
+    },
+    {
+      "failed_joins": [
+        [
+          2,
+          16
+        ]
+      ],
+      "reversed_guard": [
+        16,
+        2
+      ],
+      "rows": [
+        65526,
+        126628,
+        243928,
+        523507,
+        428514,
+        502852,
+        361346,
+        518944,
+        434734,
+        400444,
+        285140,
+        512320,
+        385522,
+        446032,
+        361332,
+        67072,
+        403217,
+        316483,
+        32775
+      ]
+    }
+  ],
+  "small_source_digest": "c9bedac6b622c62bf187dce42e3c17c507142e0571fd71a8745d6589a87e1d8e",
+  "status": "PASS; structural proof supplemented by bounded controls"
+}

@@ -1,0 +1,106 @@
+{
+  "counts": {
+    "exhaustive_n10": 4096,
+    "exhaustive_n11": 65536,
+    "exhaustive_n9": 512,
+    "n10_generic_black": 4096,
+    "n11_generic_black": 65535,
+    "n11_generic_blue_word": 1,
+    "n11_repaired_exception": 1,
+    "n9_generic_black": 512,
+    "sampled_n12_to80": 552
+  },
+  "exception": {
+    "anti_failure_witnesses": [
+      [
+        0,
+        6,
+        3,
+        10
+      ],
+      [
+        0,
+        7,
+        7,
+        8
+      ],
+      [
+        0,
+        3,
+        10,
+        8
+      ]
+    ],
+    "cycle": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      5
+    ],
+    "repair": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        5,
+        9,
+        10,
+        6,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        9,
+        10,
+        6,
+        7,
+        8
+      ]
+    ],
+    "source_rows": [
+      126,
+      220,
+      472,
+      976,
+      1952,
+      1102,
+      1936,
+      1825,
+      1571,
+      1063,
+      15
+    ]
+  },
+  "exhaustive_digest": "2b1c6ea34e2551afe02e4e4ec949edb71084e38cd501d99846e5b5abd4b70e8a",
+  "filters": "exact tail ports only; no middle, strongness, mixedness, clone or isomorphism filter",
+  "independence": "arc sets versus bit rows; exception independently rebuilt from cycle transport",
+  "status": "PASS; structural proof with explicit unique-head certificate"
+}

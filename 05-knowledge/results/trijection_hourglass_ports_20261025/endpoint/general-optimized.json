@@ -1,0 +1,53 @@
+{
+  "counts": {
+    "direct_exception_family_k4_to80": 77,
+    "sampled_k4_to20_twenty_orders_both_chords": 1360
+  },
+  "filters": "consecutive tail ports only; no middle or quotient filter",
+  "naive_translation_hostile": {
+    "failed_joins": [
+      [
+        6,
+        9
+      ],
+      [
+        9,
+        7
+      ]
+    ],
+    "k": 5,
+    "n": 13,
+    "rows": [
+      254,
+      444,
+      952,
+      1968,
+      4000,
+      8000,
+      4254,
+      7968,
+      7745,
+      7235,
+      6215,
+      4175,
+      31
+    ],
+    "word": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      7,
+      8,
+      10,
+      11,
+      12
+    ]
+  },
+  "status": "PASS; scoped all-k theorem, bounded exact controls",
+  "universe": "k4..20, n2k+3..2k+22, two deterministic sources per chord; exact exceptional carrier k4..80"
+}

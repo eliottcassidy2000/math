@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "k_range": [
+    4,
+    50
+  ],
+  "boundary_orders": [
+    11,
+    103
+  ],
+  "literal_certificates": 47,
+  "directed_black_moves": 141,
+  "all_sources_reconstructed_from_cyclic_difference_set": true
+}

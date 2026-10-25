@@ -1,0 +1,366 @@
+{
+  "actual29": [
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 2,
+      "points": 8,
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "coupled_nullity": 2,
+      "adjacent_cube_rank": 2,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 3,
+      "points": 12,
+      "dimensions": [
+        4,
+        3,
+        4
+      ],
+      "coupled_rank": 7,
+      "coupled_nullity": 4,
+      "adjacent_cube_rank": 4,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 4,
+      "points": 16,
+      "dimensions": [
+        6,
+        4,
+        6
+      ],
+      "coupled_rank": 10,
+      "coupled_nullity": 6,
+      "adjacent_cube_rank": 6,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 5,
+      "points": 20,
+      "dimensions": [
+        9,
+        5,
+        8
+      ],
+      "coupled_rank": 14,
+      "coupled_nullity": 8,
+      "adjacent_cube_rank": 8,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 6,
+      "points": 24,
+      "dimensions": [
+        12,
+        6,
+        10
+      ],
+      "coupled_rank": 18,
+      "coupled_nullity": 10,
+      "adjacent_cube_rank": 10,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 7,
+      "points": 28,
+      "dimensions": [
+        15,
+        7,
+        12
+      ],
+      "coupled_rank": 22,
+      "coupled_nullity": 12,
+      "adjacent_cube_rank": 12,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 8,
+      "points": 32,
+      "dimensions": [
+        18,
+        8,
+        14
+      ],
+      "coupled_rank": 26,
+      "coupled_nullity": 14,
+      "adjacent_cube_rank": 14,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 9,
+      "points": 36,
+      "dimensions": [
+        21,
+        9,
+        16
+      ],
+      "coupled_rank": 30,
+      "coupled_nullity": 16,
+      "adjacent_cube_rank": 16,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 10,
+      "points": 40,
+      "dimensions": [
+        24,
+        11,
+        18
+      ],
+      "coupled_rank": 35,
+      "coupled_nullity": 18,
+      "adjacent_cube_rank": 18,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 11,
+      "points": 44,
+      "dimensions": [
+        27,
+        13,
+        21
+      ],
+      "coupled_rank": 39,
+      "coupled_nullity": 22,
+      "adjacent_cube_rank": 20,
+      "extra_kernel_dimensions": 2
+    },
+    {
+      "p": 29,
+      "w": [
+        3,
+        9
+      ],
+      "length": 12,
+      "points": 48,
+      "dimensions": [
+        30,
+        15,
+        24
+      ],
+      "coupled_rank": 43,
+      "coupled_nullity": 26,
+      "adjacent_cube_rank": 22,
+      "extra_kernel_dimensions": 4
+    }
+  ],
+  "generic101": [
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 2,
+      "points": 8,
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "coupled_rank": 4,
+      "coupled_nullity": 2,
+      "adjacent_cube_rank": 2,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 3,
+      "points": 12,
+      "dimensions": [
+        4,
+        3,
+        4
+      ],
+      "coupled_rank": 7,
+      "coupled_nullity": 4,
+      "adjacent_cube_rank": 4,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 4,
+      "points": 16,
+      "dimensions": [
+        6,
+        4,
+        6
+      ],
+      "coupled_rank": 10,
+      "coupled_nullity": 6,
+      "adjacent_cube_rank": 6,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 5,
+      "points": 20,
+      "dimensions": [
+        8,
+        5,
+        8
+      ],
+      "coupled_rank": 13,
+      "coupled_nullity": 8,
+      "adjacent_cube_rank": 8,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 6,
+      "points": 24,
+      "dimensions": [
+        10,
+        6,
+        10
+      ],
+      "coupled_rank": 16,
+      "coupled_nullity": 10,
+      "adjacent_cube_rank": 10,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 7,
+      "points": 28,
+      "dimensions": [
+        12,
+        7,
+        12
+      ],
+      "coupled_rank": 19,
+      "coupled_nullity": 12,
+      "adjacent_cube_rank": 12,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 8,
+      "points": 32,
+      "dimensions": [
+        14,
+        8,
+        14
+      ],
+      "coupled_rank": 22,
+      "coupled_nullity": 14,
+      "adjacent_cube_rank": 14,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 9,
+      "points": 36,
+      "dimensions": [
+        16,
+        9,
+        16
+      ],
+      "coupled_rank": 25,
+      "coupled_nullity": 16,
+      "adjacent_cube_rank": 16,
+      "extra_kernel_dimensions": 0
+    },
+    {
+      "p": 101,
+      "w": [
+        17,
+        37
+      ],
+      "length": 10,
+      "points": 40,
+      "dimensions": [
+        18,
+        10,
+        18
+      ],
+      "coupled_rank": 28,
+      "coupled_nullity": 18,
+      "adjacent_cube_rank": 18,
+      "extra_kernel_dimensions": 0
+    }
+  ]
+}
