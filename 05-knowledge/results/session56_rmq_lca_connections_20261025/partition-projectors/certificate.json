@@ -1,0 +1,180 @@
+{
+  "schema": "partition-projectors-v1",
+  "arithmetic": "exact integers and Fraction",
+  "partition_checks": [
+    {
+      "n": 1,
+      "states": 1,
+      "projector_pairs": 1,
+      "basis_pairs": 1
+    },
+    {
+      "n": 2,
+      "states": 2,
+      "projector_pairs": 4,
+      "basis_pairs": 4
+    },
+    {
+      "n": 3,
+      "states": 5,
+      "projector_pairs": 25,
+      "basis_pairs": 25
+    },
+    {
+      "n": 4,
+      "states": 15,
+      "projector_pairs": 225,
+      "basis_pairs": 225
+    },
+    {
+      "n": 5,
+      "states": 52,
+      "projector_pairs": 2704,
+      "basis_pairs": 2704
+    }
+  ],
+  "pi3": {
+    "partitions": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "primitive_projectors": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        -1,
+        -1,
+        -1,
+        1
+      ]
+    ],
+    "idempotents": 32,
+    "nonnegative_idempotents": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "rational_grid": {
+    "denominators": [
+      1,
+      8
+    ],
+    "histograms_counted_with_repetitions": 1286,
+    "stable_histograms_counted_with_repetitions": 40
+  },
+  "mixture_hostile": {
+    "p": [
+      "0",
+      "1/2",
+      "1/2",
+      "0",
+      "0"
+    ],
+    "independent_meet": [
+      "1/2",
+      "1/4",
+      "1/4",
+      "0",
+      "0"
+    ],
+    "correlated_meet": [
+      "0",
+      "1/2",
+      "1/2",
+      "0",
+      "0"
+    ]
+  },
+  "group_operation_caveat": "uniform C2 is non-Dirac idempotent under group convolution, not under meet",
+  "source_snapshots_verified": 3
+}

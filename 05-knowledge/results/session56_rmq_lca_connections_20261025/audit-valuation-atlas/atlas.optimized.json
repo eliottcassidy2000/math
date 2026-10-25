@@ -1,0 +1,13 @@
+{
+  "carry_cocycles": 8000,
+  "carry_pairs": 10000,
+  "mask_interval_queries": 18356,
+  "named_port_k": [
+    2,
+    5
+  ],
+  "paired_address_checks": 12,
+  "scope": "Atlas elementary controls only; inherited theorems checked as pinned scoped claims, proposals remain OPEN.",
+  "standard_Collatz_steps": 1200,
+  "status": "PASS"
+}

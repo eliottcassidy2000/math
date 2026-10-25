@@ -1,0 +1,32 @@
+{
+  "CRT_2_by_3": {
+    "clusters": 5,
+    "crossing_edges": 6,
+    "minimum_trees": 2
+  },
+  "affine_plane_F3": {
+    "clusters": 12,
+    "crossing_edges": 54,
+    "minimum_trees": 4
+  },
+  "all_cluster_families_on_3_labels": 128,
+  "all_labelled_graph_realizations_n_le_5": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "diagonal_CRT": {
+    "diagonal_level_one_blocks": 6,
+    "independent_nontrivial_blocks_absent": 5,
+    "minimum_diagonal_trees": 1
+  },
+  "odd_cycle_hostile": {
+    "clusters": 5,
+    "crossing_edges": 5,
+    "minimum_trees": 3
+  },
+  "status": "PASS"
+}

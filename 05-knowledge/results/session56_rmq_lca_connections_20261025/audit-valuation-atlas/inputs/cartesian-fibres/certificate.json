@@ -1,0 +1,122 @@
+{
+  "capacity_bounds": [
+    {
+      "n": 7,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 0,
+      "ordered_shapes": 429
+    },
+    {
+      "n": 8,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 3,
+      "ordered_shapes": 1430
+    },
+    {
+      "n": 10,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 10,
+      "ordered_shapes": 16796
+    },
+    {
+      "n": 20,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 97,
+      "ordered_shapes": 6564120420
+    },
+    {
+      "n": 50,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 921,
+      "ordered_shapes": 1978261657756160653623774456
+    },
+    {
+      "n": 100,
+      "necessary_fixed_sidecar_bits_from_orbit_bound": 4237,
+      "ordered_shapes": 896519947090131496687170070074100632420837521538745909320
+    }
+  ],
+  "caveat": "Encoding capacity only; no counting-time lower bound.",
+  "cross_branch_arrays": [
+    [
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      0,
+      1
+    ]
+  ],
+  "fibre_counts": [
+    {
+      "max_fibre": 1,
+      "min_fibre": 1,
+      "n": 0,
+      "permutations": 1,
+      "shapes": 1,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 1,
+      "min_fibre": 1,
+      "n": 1,
+      "permutations": 1,
+      "shapes": 1,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 1,
+      "min_fibre": 1,
+      "n": 2,
+      "permutations": 2,
+      "shapes": 2,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 2,
+      "min_fibre": 1,
+      "n": 3,
+      "permutations": 6,
+      "shapes": 5,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 3,
+      "min_fibre": 1,
+      "n": 4,
+      "permutations": 24,
+      "shapes": 14,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 8,
+      "min_fibre": 1,
+      "n": 5,
+      "permutations": 120,
+      "shapes": 42,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 20,
+      "min_fibre": 1,
+      "n": 6,
+      "permutations": 720,
+      "shapes": 132,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 80,
+      "min_fibre": 1,
+      "n": 7,
+      "permutations": 5040,
+      "shapes": 429,
+      "weighted_sum": "1"
+    },
+    {
+      "max_fibre": 210,
+      "min_fibre": 1,
+      "n": 8,
+      "permutations": 40320,
+      "shapes": 1430,
+      "weighted_sum": "1"
+    }
+  ],
+  "ternary_array_cases": 1092
+}

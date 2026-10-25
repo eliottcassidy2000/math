@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/session56-audit-projectors-covers/verify.py", line 170, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/session56-audit-projectors-covers/verify.py", line 104, in main
+    if '--self-test-failure' in sys.argv:need(False,'intentional exception guard')
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/session56-audit-projectors-covers/verify.py", line 13, in need
+    if not ok: raise RuntimeError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: intentional exception guard

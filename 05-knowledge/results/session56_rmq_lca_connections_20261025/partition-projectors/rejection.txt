@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/session56-partition-projectors/verify.py", line 97, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/tmp/session56-partition-projectors/verify.py", line 49, in main
+    need(False,'intentional rejection guard'); return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/session56-partition-projectors/verify.py", line 9, in need
+    if not x: raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: intentional rejection guard

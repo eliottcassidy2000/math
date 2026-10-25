@@ -1,0 +1,68 @@
+{
+  "Collatz_replays": 48,
+  "capacity_n": [
+    0,
+    100
+  ],
+  "fibres": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      3,
+      5,
+      6
+    ],
+    [
+      4,
+      14,
+      24
+    ],
+    [
+      5,
+      42,
+      120
+    ],
+    [
+      6,
+      132,
+      720
+    ],
+    [
+      7,
+      429,
+      5040
+    ],
+    [
+      8,
+      1430,
+      40320
+    ]
+  ],
+  "finite_cap_cases": 288,
+  "hostiles": [
+    "tree loses min value",
+    "natural order fails",
+    "duplicate depth infinite",
+    "finite cap only lower bound",
+    "crossed CRT no one hierarchy",
+    "fuel exhaustion not coverage"
+  ],
+  "limits": "Finite controls supplement proofs; no global convergence, tournament runtime bound, or atlas implementation promotion.",
+  "status": "PASS",
+  "tied_arrays": 3280,
+  "tropical_triples": 4096,
+  "valuation_record_cases": 3124
+}

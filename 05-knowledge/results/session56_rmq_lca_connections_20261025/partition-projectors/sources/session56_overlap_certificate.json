@@ -1,0 +1,1248 @@
+{
+  "schema": "overlap-safe-signature-v1",
+  "checks": {
+    "families_on_three_bits": 256,
+    "integer_histograms_on_two_bits": 81,
+    "antichain_associativity_triples": 8000,
+    "compression_pairs": 65536,
+    "ordered_interval_queries": 45760,
+    "crt_interval_queries": 31,
+    "duplicate_identity_rejected": true,
+    "fixed_mask_queries": 28,
+    "overlap_query_identity_rejected": true
+  },
+  "hostile": {
+    "mods": [
+      2,
+      5,
+      3
+    ],
+    "interval": [
+      0,
+      2
+    ],
+    "modulus": 30,
+    "histogram": {
+      "0x1000880": 16,
+      "0x61089888": 16,
+      "0x80040200": 16,
+      "0x8a054250": 16,
+      "0x2e1cebb88": 12,
+      "0x495742ea2": 12,
+      "0x98b456ad5": 12,
+      "0xfffffffff": 12
+    },
+    "total_arrays": 112,
+    "minimal_masks": [
+      "0x1000880",
+      "0x80040200"
+    ],
+    "overlap_total": 784,
+    "overlap_false_distinct": true,
+    "distinct_local_witness": null
+  },
+  "rows": [
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        0,
+        0
+      ],
+      "modulus": 2,
+      "histogram": {
+        "0x2e1cebb88": 2,
+        "0x495742ea2": 2,
+        "0x98b456ad5": 2,
+        "0xfffffffff": 2
+      },
+      "total_arrays": 8,
+      "minimal_masks": [
+        "0x2e1cebb88",
+        "0x495742ea2",
+        "0x98b456ad5"
+      ],
+      "overlap_total": 64,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        0,
+        1
+      ],
+      "modulus": 10,
+      "histogram": {
+        "0x1000880": 8,
+        "0x61089888": 8,
+        "0x80040200": 8,
+        "0x8a054250": 8,
+        "0x2e1cebb88": 6,
+        "0x495742ea2": 6,
+        "0x98b456ad5": 6,
+        "0xfffffffff": 6
+      },
+      "total_arrays": 56,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "overlap_total": 3136,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        0,
+        2
+      ],
+      "modulus": 30,
+      "histogram": {
+        "0x1000880": 16,
+        "0x61089888": 16,
+        "0x80040200": 16,
+        "0x8a054250": 16,
+        "0x2e1cebb88": 12,
+        "0x495742ea2": 12,
+        "0x98b456ad5": 12,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 112,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "overlap_total": 784,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        1,
+        1
+      ],
+      "modulus": 5,
+      "histogram": {
+        "0x61089888": 2,
+        "0x8a054250": 2,
+        "0xfffffffff": 3
+      },
+      "total_arrays": 7,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 49,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        1,
+        2
+      ],
+      "modulus": 15,
+      "histogram": {
+        "0x61089888": 4,
+        "0x8a054250": 4,
+        "0xfffffffff": 6
+      },
+      "total_arrays": 14,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 196,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        5,
+        3
+      ],
+      "interval": [
+        2,
+        2
+      ],
+      "modulus": 3,
+      "histogram": {
+        "0xfffffffff": 2
+      },
+      "total_arrays": 2,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "overlap_total": 4,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        0
+      ],
+      "modulus": 5,
+      "histogram": {
+        "0x61089888": 2,
+        "0x8a054250": 2,
+        "0xfffffffff": 3
+      },
+      "total_arrays": 7,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 49,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        1
+      ],
+      "modulus": 35,
+      "histogram": {
+        "0x0": 24,
+        "0x61089888": 38,
+        "0x8a054250": 38,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 112,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 12544,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          0,
+          4,
+          1,
+          1,
+          0,
+          4,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "mods": [
+        5,
+        7
+      ],
+      "interval": [
+        1,
+        1
+      ],
+      "modulus": 7,
+      "histogram": {
+        "0x61089888": 6,
+        "0x8a054250": 6,
+        "0xfffffffff": 4
+      },
+      "total_arrays": 16,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 256,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        0
+      ],
+      "modulus": 2,
+      "histogram": {
+        "0x2e1cebb88": 2,
+        "0x495742ea2": 2,
+        "0x98b456ad5": 2,
+        "0xfffffffff": 2
+      },
+      "total_arrays": 8,
+      "minimal_masks": [
+        "0x2e1cebb88",
+        "0x495742ea2",
+        "0x98b456ad5"
+      ],
+      "overlap_total": 64,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        1
+      ],
+      "modulus": 6,
+      "histogram": {
+        "0x2e1cebb88": 4,
+        "0x495742ea2": 4,
+        "0x98b456ad5": 4,
+        "0xfffffffff": 4
+      },
+      "total_arrays": 16,
+      "minimal_masks": [
+        "0x2e1cebb88",
+        "0x495742ea2",
+        "0x98b456ad5"
+      ],
+      "overlap_total": 256,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        2
+      ],
+      "modulus": 30,
+      "histogram": {
+        "0x1000880": 16,
+        "0x61089888": 16,
+        "0x80040200": 16,
+        "0x8a054250": 16,
+        "0x2e1cebb88": 12,
+        "0x495742ea2": 12,
+        "0x98b456ad5": 12,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 112,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "overlap_total": 224,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        0,
+        3
+      ],
+      "modulus": 210,
+      "histogram": {
+        "0x0": 384,
+        "0x1000880": 304,
+        "0x61089888": 304,
+        "0x80040200": 304,
+        "0x8a054250": 304,
+        "0x2e1cebb88": 48,
+        "0x495742ea2": 48,
+        "0x98b456ad5": 48,
+        "0xfffffffff": 48
+      },
+      "total_arrays": 1792,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 3211264,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          1,
+          1,
+          0,
+          4,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        1,
+        1
+      ],
+      "modulus": 3,
+      "histogram": {
+        "0xfffffffff": 2
+      },
+      "total_arrays": 2,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "overlap_total": 4,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        1,
+        2
+      ],
+      "modulus": 15,
+      "histogram": {
+        "0x61089888": 4,
+        "0x8a054250": 4,
+        "0xfffffffff": 6
+      },
+      "total_arrays": 14,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 196,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        1,
+        3
+      ],
+      "modulus": 105,
+      "histogram": {
+        "0x0": 48,
+        "0x61089888": 76,
+        "0x8a054250": 76,
+        "0xfffffffff": 24
+      },
+      "total_arrays": 224,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 1568,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          1,
+          1,
+          0,
+          4,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        2,
+        2
+      ],
+      "modulus": 5,
+      "histogram": {
+        "0x61089888": 2,
+        "0x8a054250": 2,
+        "0xfffffffff": 3
+      },
+      "total_arrays": 7,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 49,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        2,
+        3
+      ],
+      "modulus": 35,
+      "histogram": {
+        "0x0": 24,
+        "0x61089888": 38,
+        "0x8a054250": 38,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 112,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 12544,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          0,
+          4,
+          1,
+          1,
+          0,
+          4,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "mods": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "interval": [
+        3,
+        3
+      ],
+      "modulus": 7,
+      "histogram": {
+        "0x61089888": 6,
+        "0x8a054250": 6,
+        "0xfffffffff": 4
+      },
+      "total_arrays": 16,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 256,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        0,
+        0
+      ],
+      "modulus": 4,
+      "histogram": {
+        "0xfffffffff": 2
+      },
+      "total_arrays": 2,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "overlap_total": 4,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        0,
+        1
+      ],
+      "modulus": 36,
+      "histogram": {
+        "0x61089888": 12,
+        "0x8a054250": 12,
+        "0x110922424": 12,
+        "0xe04600103": 12,
+        "0xfffffffff": 8
+      },
+      "total_arrays": 56,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "overlap_total": 3136,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        0,
+        2
+      ],
+      "modulus": 180,
+      "histogram": {
+        "0x0": 144,
+        "0x61089888": 76,
+        "0x8a054250": 76,
+        "0x110922424": 36,
+        "0xe04600103": 36,
+        "0xfffffffff": 24
+      },
+      "total_arrays": 392,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 10976,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          7,
+          4,
+          4,
+          1,
+          7,
+          7,
+          4,
+          1
+        ],
+        [
+          1,
+          4,
+          0,
+          4,
+          0,
+          1,
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        1,
+        1
+      ],
+      "modulus": 9,
+      "histogram": {
+        "0x61089888": 6,
+        "0x8a054250": 6,
+        "0x110922424": 6,
+        "0xe04600103": 6,
+        "0xfffffffff": 4
+      },
+      "total_arrays": 28,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "overlap_total": 784,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        1,
+        2
+      ],
+      "modulus": 45,
+      "histogram": {
+        "0x0": 72,
+        "0x61089888": 38,
+        "0x8a054250": 38,
+        "0x110922424": 18,
+        "0xe04600103": 18,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 196,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "overlap_total": 38416,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": [
+        [
+          1,
+          7,
+          4,
+          4,
+          1,
+          7,
+          7,
+          4,
+          1
+        ],
+        [
+          1,
+          4,
+          0,
+          4,
+          0,
+          1,
+          0,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "mods": [
+        4,
+        9,
+        5
+      ],
+      "interval": [
+        2,
+        2
+      ],
+      "modulus": 5,
+      "histogram": {
+        "0x61089888": 2,
+        "0x8a054250": 2,
+        "0xfffffffff": 3
+      },
+      "total_arrays": 7,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 49,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        0,
+        0
+      ],
+      "modulus": 3,
+      "histogram": {
+        "0xfffffffff": 2
+      },
+      "total_arrays": 2,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "overlap_total": 4,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        0,
+        1
+      ],
+      "modulus": 24,
+      "histogram": {
+        "0x2e1cebb88": 4,
+        "0x495742ea2": 4,
+        "0x98b456ad5": 4,
+        "0xfffffffff": 6
+      },
+      "total_arrays": 18,
+      "minimal_masks": [
+        "0x2e1cebb88",
+        "0x495742ea2",
+        "0x98b456ad5"
+      ],
+      "overlap_total": 324,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        0,
+        2
+      ],
+      "modulus": 168,
+      "histogram": {
+        "0x1000880": 48,
+        "0x61089888": 60,
+        "0x80040200": 48,
+        "0x8a054250": 60,
+        "0x2e1cebb88": 16,
+        "0x495742ea2": 16,
+        "0x98b456ad5": 16,
+        "0xfffffffff": 24
+      },
+      "total_arrays": 288,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "overlap_total": 2592,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        1,
+        1
+      ],
+      "modulus": 8,
+      "histogram": {
+        "0x2e1cebb88": 2,
+        "0x495742ea2": 2,
+        "0x98b456ad5": 2,
+        "0xfffffffff": 3
+      },
+      "total_arrays": 9,
+      "minimal_masks": [
+        "0x2e1cebb88",
+        "0x495742ea2",
+        "0x98b456ad5"
+      ],
+      "overlap_total": 81,
+      "overlap_false_distinct": false,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        1,
+        2
+      ],
+      "modulus": 56,
+      "histogram": {
+        "0x1000880": 24,
+        "0x61089888": 30,
+        "0x80040200": 24,
+        "0x8a054250": 30,
+        "0x2e1cebb88": 8,
+        "0x495742ea2": 8,
+        "0x98b456ad5": 8,
+        "0xfffffffff": 12
+      },
+      "total_arrays": 144,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "overlap_total": 20736,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    },
+    {
+      "mods": [
+        3,
+        8,
+        7
+      ],
+      "interval": [
+        2,
+        2
+      ],
+      "modulus": 7,
+      "histogram": {
+        "0x61089888": 6,
+        "0x8a054250": 6,
+        "0xfffffffff": 4
+      },
+      "total_arrays": 16,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "overlap_total": 256,
+      "overlap_false_distinct": true,
+      "distinct_local_witness": null
+    }
+  ],
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "false_overlap_local_arrays": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      4,
+      1,
+      1,
+      0,
+      4,
+      4,
+      1,
+      0
+    ],
+    [
+      1,
+      4,
+      0,
+      4,
+      0,
+      1,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "false_overlap_component_ids": [
+    "index0_mod2",
+    "index1_mod5",
+    "index1_mod5",
+    "index2_mod3"
+  ]
+}

@@ -1,0 +1,10 @@
+THEOREM.md: OK
+README.md: OK
+verify.py: OK
+certificate.json: OK
+certificate.optimized.json: OK
+rejection.txt: OK
+SOURCE_PINS.json: OK
+sources/session55_weighted_crt_THEOREM.md: OK
+sources/session56_overlap_THEOREM.md: OK
+sources/session56_overlap_certificate.json: OK

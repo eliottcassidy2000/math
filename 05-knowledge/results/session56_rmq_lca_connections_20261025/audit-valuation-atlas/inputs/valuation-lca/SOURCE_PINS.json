@@ -1,0 +1,27 @@
+[
+  {
+    "snapshot": "inputs/session55-crt.md",
+    "source": "session55-crt-collision-wiring/THEOREM.md",
+    "sha256": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450"
+  },
+  {
+    "snapshot": "inputs/session55-lifts.md",
+    "source": "session55-padic-lifts/PROOF.md",
+    "sha256": "8010f2996a695d420daa7b9e7296ccd091156352cdd069bf51f51e7bd4519149"
+  },
+  {
+    "snapshot": "inputs/session53-repeated.md",
+    "source": "session53-collatz27-repeated-block/REPORT.md",
+    "sha256": "8d02613eeeb37ef032ea86b6023b9329ba17e514756563772f6e29a34bb43e18"
+  },
+  {
+    "snapshot": "inputs/guarded-pumping.md",
+    "source": "session53-collatz27-repeated-block/inputs/03-collatz_guarded_pumping_memory_20261004.md",
+    "sha256": "440cba209e8227945a489cc683fd72d2a7cfa335950a64f13edcd96d0a304fd1"
+  },
+  {
+    "snapshot": "inputs/session53-base.md",
+    "source": "session53-collatz27-repeated-block/inputs/05-REPORT.md",
+    "sha256": "75296d5140f16fe22d2f3b6a6e130626f4e121233e99d4d8d6a219c20ee2289a"
+  }
+]

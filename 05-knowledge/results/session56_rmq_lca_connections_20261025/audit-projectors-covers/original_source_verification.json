@@ -1,0 +1,17 @@
+[
+  {
+    "source": "/workspace/scratch/07d5532f2fce/session55-publication/frozen-final/05-knowledge/results/session55_parker_fields_integer_lifts_20261025/weighted-crt/THEOREM.md",
+    "sha256": "5707bb744b298bb95086886d6830d5178f83941824d39ca7ae7478da619634cc",
+    "matches_snapshot": true
+  },
+  {
+    "source": "/tmp/session56-overlap-signatures/THEOREM.md",
+    "sha256": "551b6ce5daab0190cbf24b0faa01844551a559a0e526d963f026bf294a3fe4ff",
+    "matches_snapshot": true
+  },
+  {
+    "source": "/tmp/session56-overlap-signatures/certificate.json",
+    "sha256": "56708738cce006e6a4eccc0846d211a4e4f8488e87db034f39ccd33211188597",
+    "matches_snapshot": true
+  }
+]

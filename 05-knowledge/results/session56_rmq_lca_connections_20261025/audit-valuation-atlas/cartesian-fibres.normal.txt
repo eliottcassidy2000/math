@@ -1,0 +1,1 @@
+PASS: all permutation fibres n<=8, tied RMQ signatures, exact capacity bounds

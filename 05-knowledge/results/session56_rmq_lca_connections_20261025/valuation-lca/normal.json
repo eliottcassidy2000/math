@@ -1,0 +1,23 @@
+{
+  "27_word": "11011111010110111011110100111011011111100111100010101000100",
+  "CRT_exponent_checks": 100,
+  "CRT_masks": [
+    "0x61089888",
+    "0x8a054250"
+  ],
+  "Collatz_marked_path_replays": 60,
+  "LoShu_first_separating_depths": {
+    "p2": 7,
+    "p3": 3
+  },
+  "hostiles": [
+    "natural integer order invalid",
+    "duplicates never separate",
+    "cross-prime blocks nonlaminar",
+    "27 supports one block only"
+  ],
+  "ordered_pair_checks": 107582,
+  "record_cases": 3224,
+  "scope": "Finite controls validate independently proved exact carrier; no universal coverage or integer-square witness.",
+  "status": "PASS"
+}

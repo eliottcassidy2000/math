@@ -1,0 +1,43 @@
+{
+  "Collatz_affine_steps": 1200,
+  "Zeckendorf_carry_pairs": 2500,
+  "cartesian_arrays": 3279,
+  "cartesian_interval_queries": 81192,
+  "higher_arity_controls": {
+    "r": [
+      3,
+      8
+    ],
+    "tested_integer_coefficients": [
+      -12,
+      12
+    ]
+  },
+  "limits": [
+    "No native tournament realization",
+    "No persistent structure implemented or benchmarked",
+    "No arithmetic global closure"
+  ],
+  "low_bit_trie_pairs": 2016,
+  "mask_range_queries": 18356,
+  "minplus_associativity_triples": 4096,
+  "named_port_counts": {
+    "2": [
+      4,
+      2
+    ],
+    "3": [
+      18,
+      12
+    ],
+    "4": [
+      48,
+      36
+    ],
+    "5": [
+      100,
+      80
+    ]
+  },
+  "status": "FINITE-EXACT PASS"
+}

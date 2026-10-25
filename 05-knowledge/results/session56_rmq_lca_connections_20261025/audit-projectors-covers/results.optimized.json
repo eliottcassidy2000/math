@@ -1,0 +1,56 @@
+{
+  "C5": {
+    "clique": 2,
+    "edges": 5,
+    "trees": 3,
+    "vertices": 5
+  },
+  "Session55_nine_cell_AB": {
+    "edges": 9,
+    "trees": 2,
+    "vertices": 6
+  },
+  "affine": {
+    "edges": 54,
+    "trees": 4,
+    "vertices": 12
+  },
+  "cluster_families_n3": 128,
+  "diagonal": {
+    "edges": 0,
+    "trees": 1,
+    "vertices": 7
+  },
+  "graph_realizations": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 8,
+    "4": 64,
+    "5": 1024
+  },
+  "no_top_identity": [
+    -1,
+    1,
+    1
+  ],
+  "probability_grid": {
+    "count": 1286,
+    "nonnegative_signed_idempotents": 6,
+    "stable": 40
+  },
+  "projector_state_counts": [
+    1,
+    2,
+    5,
+    15,
+    52
+  ],
+  "six_label_CRT": {
+    "edges": 6,
+    "trees": 2,
+    "vertices": 5
+  },
+  "source_pins": 17,
+  "status": "PASS"
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-2248-higher-interaction-defect-complex-and-tropical-trace-spectrum.md",
+    "sha256": "2ad5426100461cf39b72b9a424b9c81e37d69238e29f2f65fe29387b6b43770f"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-2253-online-dyadic-contrast-tournament-extractor.md",
+    "sha256": "e676480ba12de26e3c8699866bcae059675b44c633245335dc3080200ab69c31"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-2330-partition-lattice-gordian-lift-spectrum.md",
+    "sha256": "a923899c3082700ed39b815b4c8619f55ce694b5c7d10633e7bf19133875582c"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-2897-partition-cap-tropical-convolution-and-alternating-pair-ladder.md",
+    "sha256": "8eda5146ed10d62dddf793c613f52a26b2eb7198b37bff9c998b8daa4424b7fa"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-3339-fibonacci-three-ray-berggren-transplant-and-moving-owner-obstruction.md",
+    "sha256": "1e4aa8cd9d6cc9bf342328a4af0e5db8cd7eefb51eea08460d03f2c6410cee51"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md",
+    "sha256": "bae74f2b5503a36c59996db3ad310c819c8597e0550c6cd9ef53719dcaa5926f"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-3503-rule30-odometer-ultrametric-regrading-and-orbit-closure-dimensions.md",
+    "sha256": "95269b2e21090ee30179ea0f335800df91a9678ac635181fbbe8100f9b149c9d"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+    "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "05-knowledge/results/duck_zeckendorf_20260925.md",
+    "sha256": "be61262367a8f863345578655d9be63b45815e5944c97a3dc4239a4e66bd38c7"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-ports/PORT_SIGNATURES.md",
+    "sha256": "0d535d3d8500c498a18d9de136940abf1407603eb6265e98af0be03461d5d04e"
+  },
+  {
+    "commit": "4f1760fd1eff346767c032524c932d5e317401d2",
+    "path": "05-knowledge/results/square_sum_ports_20261023/README.md",
+    "sha256": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68"
+  },
+  {
+    "local_packet_path": "session55-crt-collision-wiring/THEOREM.md",
+    "sha256": "72945f751dd6a1f79b899b202233bbf27dc78fefd0a3420f217979334b956450"
+  },
+  {
+    "local_packet_path": "session55-weighted-crt-counts/THEOREM.md",
+    "sha256": "5707bb744b298bb95086886d6830d5178f83941824d39ca7ae7478da619634cc"
+  }
+]
