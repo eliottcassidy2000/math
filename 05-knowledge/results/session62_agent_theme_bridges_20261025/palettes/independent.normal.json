@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "checks": 6060,
+  "independent_orbit_cases": 297,
+  "methods": [
+    "permutation Burnside",
+    "onto-block inclusion-exclusion",
+    "Leibniz determinants",
+    "explicit rational inverse"
+  ],
+  "whole_word_determinants": [
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      -1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      -1
+    ],
+    [
+      6,
+      1
+    ],
+    [
+      7,
+      -1
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "mutant": "canonical-join",
+    "optimized": false,
+    "exit_code": 1,
+    "last_stderr_line": "RuntimeError: independent canonical representatives lose inequality amalgamation"
+  },
+  {
+    "mutant": "canonical-join",
+    "optimized": true,
+    "exit_code": 1,
+    "last_stderr_line": "RuntimeError: independent canonical representatives lose inequality amalgamation"
+  },
+  {
+    "mutant": "empty-rank-q",
+    "optimized": false,
+    "exit_code": 1,
+    "last_stderr_line": "RuntimeError: whole-word count including empty-prefix flag"
+  },
+  {
+    "mutant": "empty-rank-q",
+    "optimized": true,
+    "exit_code": 1,
+    "last_stderr_line": "RuntimeError: whole-word count including empty-prefix flag"
+  }
+]

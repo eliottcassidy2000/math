@@ -1,6 +1,6 @@
 # Session 62: exact continuations of other agents' mechanisms
 
-**Status: first audited checkpoint.** This packet starts from live repository boundaries rather than repeating the previous six/seven classification. It distinguishes proofs, bounded exact controls, and open applications; no literature-wide novelty claim is made.
+**Status: two audited checkpoints.** This packet starts from live repository boundaries rather than repeating the previous six/seven classification. It distinguishes proofs, bounded exact controls, and open applications; no literature-wide novelty claim is made.
 
 ## Wrapped physical incidence: the missing periodic boundary is closed
 
@@ -28,6 +28,20 @@ The [unordered-pair transport proof](holonomy/TWISTED_PAIR_LIFTS.md) extends the
 where `f` is `2`, `1`, or `0` for trivial, transposition, or transitive pair holonomy. Thus the old `2*beta` loss is not valid for arbitrary pair permutations. A three-cycle holonomy repairs every even gain on a single cycle, but does not erase higher-cycle obstructions. Compatible endpoint choices are not the same as trivializing the entire affine transport.
 
 The [independent audit](audits/holonomy-clone/HOLONOMY_AUDIT.md) reconstructs the affine equations and Fano parity halves without importing the producer. The geometric comparison concerns marked label actions, not a plane-colouring construction or an identification of different eight-state automata.
+
+## Clone cancellation: one element and the whole group see different ranks
+
+The [clone theorem](clone/README.md) proves that, for a finite odd-order permutation action on gaps, the subset-orbit polynomial vanishes at `t=-1` to order equal to the **minimum number of cycles of one group element**. The rank of legal invariant toggles instead counts the orbits of the **whole group**. These quantities need not agree: a genuine 24-vertex tournament realizes the regular `C3^2` action on nine gaps, with cancellation order three but only one invariant toggle direction.
+
+The proof includes the exact operation sidecar, equality boundary, real exterior-invariant interpretation and an unbounded family of actual tournament realizations. The [independent audit](audits/holonomy-clone/CLONE_AUDIT.md) separates the abstract group calculation from the intrinsic tournament construction. No faster enumeration or black-path transport follows automatically.
+
+## Palettes: Boolean states, weighted continuations and integral information
+
+The [palette continuation theorem](palettes/RESULT.md) retains joint boundary relations and their relative colour alignments. Over the rationals, with all singleton-list letters and named queries allowed, three linear interfaces have different sharp dimensions: `q` for a nonempty prefix, `q+1` for the whole path-counting series including the empty path, and `q^2` for two-port response. These are not the inherited Boolean automaton's `q+2` states.
+
+The [independent audit and extensions](audits/palettes/AUDIT.md) identify the exceptional coefficient characteristics and the exact integer lattice: the quotient by the integer span of **nonempty-word** matrices is `(Z/(q-1)Z)^q`; including the identity reduces this to `(Z/(q-1)Z)^(q-1)`. The [independent Smith controls](integer-response/integer-response-normal.json) verify `q=2,...,8`; the general statement has an explicit lattice proof, not a numerical extrapolation.
+
+A single homogeneous linear scalar register attached to the deterministic Boolean state loses necessary responses. This does **not** exclude an arbitrary `q+2`-dimensional weighted automaton: the `q+1` construction already fits. Separate palette marginals likewise cannot replace one common exterior assignment. No new plane-colouring bound or realizable equality gadget is claimed.
 
 ## Scope and inheritance
 

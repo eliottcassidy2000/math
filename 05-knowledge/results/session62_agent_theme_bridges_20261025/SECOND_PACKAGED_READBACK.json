@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "reviews": [
+    {
+      "reviewer": "audit_holonomy_clone_lifts",
+      "scope": "clone mathematical source, copied normal/optimized replay and root clone summary",
+      "status": "PASS",
+      "readme_sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03"
+    },
+    {
+      "reviewer": "audit_palette_response_minimality",
+      "scope": "30 scoped palette/audit/integer files, 73 readback gates, final and historical receipts, root palette summary",
+      "status": "PASS",
+      "root_readme_sha256": "53fe5aa0180708941efc5e1f4ad8819f7c58c598c66abcfd493f4b6aa8c3f4db"
+    }
+  ]
+}

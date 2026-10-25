@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "command": [
+        "python3",
+        "session62-palettes/check.py",
+        "--mutant",
+        "canonical-join"
+      ],
+      "exit_code": 1,
+      "expected_failure": "independent canonical representatives lose inequality amalgamation",
+      "last_stderr_line": "RuntimeError: independent canonical representatives lose inequality amalgamation"
+    },
+    {
+      "command": [
+        "python3",
+        "session62-palettes/check.py",
+        "--mutant",
+        "empty-rank-q"
+      ],
+      "exit_code": 1,
+      "expected_failure": "whole-word count including empty-prefix flag",
+      "last_stderr_line": "RuntimeError: whole-word count including empty-prefix flag"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "session62-palettes/check.py",
+        "--mutant",
+        "canonical-join"
+      ],
+      "exit_code": 1,
+      "expected_failure": "independent canonical representatives lose inequality amalgamation",
+      "last_stderr_line": "RuntimeError: independent canonical representatives lose inequality amalgamation"
+    },
+    {
+      "command": [
+        "python3",
+        "-O",
+        "session62-palettes/check.py",
+        "--mutant",
+        "empty-rank-q"
+      ],
+      "exit_code": 1,
+      "expected_failure": "whole-word count including empty-prefix flag",
+      "last_stderr_line": "RuntimeError: whole-word count including empty-prefix flag"
+    }
+  ]
+}

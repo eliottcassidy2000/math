@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "checks": 156007,
+  "orbit_formula_cases": 150,
+  "DFA_budget_cases": 144,
+  "random_invariant_join_projection_cases": 1200,
+  "literal_transition_checks": 70412,
+  "path_words": 6046,
+  "two_port_words": 670,
+  "geometric_assignments_enumerated": 729,
+  "geometric_boundary_rows": 24,
+  "geometric_joint_orbits": 4,
+  "rank_table": [
+    {
+      "q": 2,
+      "processed_prefix": 2,
+      "whole_word": 3,
+      "two_port": 4,
+      "hankel_det": 1
+    },
+    {
+      "q": 3,
+      "processed_prefix": 3,
+      "whole_word": 4,
+      "two_port": 9,
+      "hankel_det": -1
+    },
+    {
+      "q": 4,
+      "processed_prefix": 4,
+      "whole_word": 5,
+      "two_port": 16,
+      "hankel_det": 1
+    },
+    {
+      "q": 5,
+      "processed_prefix": 5,
+      "whole_word": 6,
+      "two_port": 25,
+      "hankel_det": -1
+    },
+    {
+      "q": 6,
+      "processed_prefix": 6,
+      "whole_word": 7,
+      "two_port": 36,
+      "hankel_det": 1
+    },
+    {
+      "q": 7,
+      "processed_prefix": 7,
+      "whole_word": 8,
+      "two_port": 49,
+      "hankel_det": -1
+    },
+    {
+      "q": 8,
+      "processed_prefix": 8,
+      "whole_word": 9,
+      "two_port": 64,
+      "hankel_det": 1
+    }
+  ],
+  "q6_w6_budgets": {
+    "path_orbits": 1282,
+    "cycle_orbits": 5863,
+    "path_named": 373248,
+    "cycle_named": 2239488
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "integer-response/check_integer_response.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "palettes/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "palettes/check_independent.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "holonomy/check_holonomy.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "clone/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "incidence/verify_wrap.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/palettes/check_audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/holonomy-clone/check_independent.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/incidence/exact_smith_audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "audits/incidence/direct_audit.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "clone/README.md",
+    "clone/check.py",
+    "clone/normal.json",
+    "clone/optimized.json",
+    "audits/incidence/AUDIT.md",
+    "audits/incidence/direct_audit.py",
+    "audits/incidence/exact_smith_audit.py",
+    "audits/incidence/direct_results.json",
+    "audits/incidence/direct_cases.json",
+    "audits/incidence/full_smith_results.json",
+    "audits/incidence/harness_receipt.json",
+    "audits/incidence/direct_normal.log",
+    "audits/incidence/smith_normal.log"
+  ],
+  "local_links": [
+    {
+      "from": "README.md",
+      "to": "incidence/cyclic_common_kernel.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/incidence/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "holonomy/TWISTED_PAIR_LIFTS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/holonomy-clone/HOLONOMY_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "clone/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/holonomy-clone/CLONE_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "palettes/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "audits/palettes/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "integer-response/integer-response-normal.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "RECOVERY_SOURCE_PINS.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "MANIFEST.json",
+      "exists": true
+    }
+  ]
+}

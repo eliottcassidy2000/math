@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checks": 9866,
+  "universes": {
+    "recurrence_parameter_cases": 520,
+    "explicit_group_parameter_cases": 60,
+    "exhaustive_relation_pairs": 1568,
+    "direct_basis_words": 203,
+    "integral_row_vectors": 4203,
+    "integral_residue_vectors": 16739
+  },
+  "ranks": [
+    {
+      "q": 2,
+      "prefix_Q": 2,
+      "whole_series_Q": 3,
+      "two_port_Q": 4
+    },
+    {
+      "q": 3,
+      "prefix_Q": 3,
+      "whole_series_Q": 4,
+      "two_port_Q": 9
+    },
+    {
+      "q": 4,
+      "prefix_Q": 4,
+      "whole_series_Q": 5,
+      "two_port_Q": 16
+    },
+    {
+      "q": 5,
+      "prefix_Q": 5,
+      "whole_series_Q": 6,
+      "two_port_Q": 25
+    },
+    {
+      "q": 6,
+      "prefix_Q": 6,
+      "whole_series_Q": 7,
+      "two_port_Q": 36
+    },
+    {
+      "q": 7,
+      "prefix_Q": 7,
+      "whole_series_Q": 8,
+      "two_port_Q": 49
+    },
+    {
+      "q": 8,
+      "prefix_Q": 8,
+      "whole_series_Q": 9,
+      "two_port_Q": 64
+    }
+  ],
+  "exceptional_characteristic_example": {
+    "q": 3,
+    "p": 2,
+    "positive_word_span": 6,
+    "including_empty_word_span": 7,
+    "whole_series_rank": 4
+  }
+}

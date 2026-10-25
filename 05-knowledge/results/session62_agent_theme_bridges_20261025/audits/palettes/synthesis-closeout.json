@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "SYNTHESIS.md section 3 only, and complete integer response Smith checker q2..8",
+  "synthesis_precision_fixes": "All q/k, joint-variable, lost/fictional witness, signed-span, q3/Q scalar-register, and final grammar corrections verified.",
+  "smith_replay": "Normal and optimized output identical to root saved outputs; all 14 lattice indices checked as invariant-factor products.",
+  "files": {
+    "SYNTHESIS.md": "0d8b07c891daf112e4c1b08fa17234842aa2ada35c8020f6d72b85a4b5b66754",
+    "check_integer_response.py": "b49e3924d1a2c76069b73086f316571b40869ee1ddb7478b4f739dde089b86ed",
+    "integer-response-normal.json": "d74c8eb1aeddbe1ef2e3590629a089d7db786beea9df5a47b93c6f61dc607bfb",
+    "integer-response-optimized.json": "d74c8eb1aeddbe1ef2e3590629a089d7db786beea9df5a47b93c6f61dc607bfb"
+  }
+}

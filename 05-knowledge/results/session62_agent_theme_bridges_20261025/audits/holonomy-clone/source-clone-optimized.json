@@ -1,0 +1,305 @@
+{
+  "complex_hostile": {
+    "exterior_polynomial": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "min_fixed_dimension": 0,
+    "root_order": 1
+  },
+  "cyclic_nine": {
+    "cycle_types": {
+      "1,1,1,1,1,1,1,1,1": 1,
+      "3,3,3": 2,
+      "9": 6
+    },
+    "group_order": 9,
+    "leading_coefficient": 6,
+    "min_cycles": 1,
+    "point_orbits": 1,
+    "points": 9,
+    "polynomial": [
+      1,
+      1,
+      4,
+      10,
+      14,
+      14,
+      10,
+      4,
+      1,
+      1
+    ],
+    "root_order": 1,
+    "subset_orbits": 60
+  },
+  "cyclic_three": {
+    "cycle_types": {
+      "1,1,1": 1,
+      "3": 2
+    },
+    "group_order": 3,
+    "leading_coefficient": 2,
+    "min_cycles": 1,
+    "point_orbits": 1,
+    "points": 3,
+    "polynomial": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "root_order": 1,
+    "subset_orbits": 4
+  },
+  "empty": {
+    "cycle_types": {
+      "": 1
+    },
+    "group_order": 1,
+    "leading_coefficient": 1,
+    "min_cycles": 0,
+    "point_orbits": 0,
+    "points": 0,
+    "polynomial": [
+      1
+    ],
+    "root_order": 0,
+    "subset_orbits": 1
+  },
+  "even_hostile": {
+    "cycle_types": {
+      "1,1": 1,
+      "2": 1
+    },
+    "group_order": 2,
+    "leading_coefficient": 1,
+    "min_cycles": 1,
+    "point_orbits": 1,
+    "points": 2,
+    "polynomial": [
+      1,
+      1,
+      1
+    ],
+    "root_order": 0,
+    "subset_orbits": 3
+  },
+  "even_hostile_exterior_polynomial": [
+    1,
+    1,
+    0
+  ],
+  "four_projection_orbits": {
+    "cycle_types": {
+      "1,1,1,1,1,1,1,1,1,1,1,1": 1,
+      "1,1,1,3,3,3": 8
+    },
+    "group_order": 9,
+    "leading_coefficient": 24,
+    "min_cycles": 6,
+    "point_orbits": 4,
+    "points": 12,
+    "polynomial": [
+      1,
+      4,
+      10,
+      28,
+      63,
+      96,
+      108,
+      96,
+      63,
+      28,
+      10,
+      4,
+      1
+    ],
+    "root_order": 6,
+    "subset_orbits": 512
+  },
+  "k1_boundary": {
+    "homogeneous_pairs": [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "vertices": 6
+  },
+  "regular_c3_squared": {
+    "cycle_types": {
+      "1,1,1,1,1,1,1,1,1": 1,
+      "3,3,3": 8
+    },
+    "group_order": 9,
+    "leading_coefficient": 24,
+    "min_cycles": 3,
+    "point_orbits": 1,
+    "points": 9,
+    "polynomial": [
+      1,
+      1,
+      4,
+      12,
+      14,
+      14,
+      12,
+      4,
+      1,
+      1
+    ],
+    "root_order": 3,
+    "subset_orbits": 64
+  },
+  "regular_c3_squared_factor_quotients": [
+    [
+      1,
+      0,
+      4,
+      8,
+      6,
+      8,
+      4,
+      0,
+      1
+    ],
+    [
+      1,
+      -1,
+      5,
+      3,
+      3,
+      5,
+      -1,
+      1
+    ],
+    [
+      1,
+      -2,
+      7,
+      -4,
+      7,
+      -2,
+      1
+    ]
+  ],
+  "tournament_24": {
+    "automorphisms": 9,
+    "base_score_classes": {
+      "6": 9,
+      "7": 3,
+      "10": 3
+    },
+    "base_vertices": 15,
+    "cycle_types": {
+      "1,1,1,1,1,1,1,1,1": 1,
+      "3,3,3": 8
+    },
+    "group_order": 9,
+    "leading_coefficient": 24,
+    "literal_homogeneous_pairs": 9,
+    "min_cycles": 3,
+    "point_orbits": 1,
+    "points": 9,
+    "polynomial": [
+      1,
+      1,
+      4,
+      12,
+      14,
+      14,
+      12,
+      4,
+      1,
+      1
+    ],
+    "root_order": 3,
+    "subset_orbits": 64,
+    "vertices": 24
+  },
+  "tournament_33": {
+    "automorphisms": 9,
+    "base_score_classes": {
+      "7": 3,
+      "8": 9,
+      "10": 3,
+      "13": 3,
+      "16": 3
+    },
+    "base_vertices": 21,
+    "cycle_types": {
+      "1,1,1,1,1,1,1,1,1,1,1,1": 1,
+      "1,1,1,3,3,3": 8
+    },
+    "group_order": 9,
+    "leading_coefficient": 24,
+    "literal_homogeneous_pairs": 12,
+    "min_cycles": 6,
+    "point_orbits": 4,
+    "points": 12,
+    "polynomial": [
+      1,
+      4,
+      10,
+      28,
+      63,
+      96,
+      108,
+      96,
+      63,
+      28,
+      10,
+      4,
+      1
+    ],
+    "root_order": 6,
+    "subset_orbits": 512,
+    "vertices": 33
+  },
+  "tournament_63_structure": {
+    "automorphisms": 27,
+    "base_score_classes": {
+      "16": 27,
+      "19": 3,
+      "22": 3,
+      "25": 3
+    },
+    "base_vertices": 36,
+    "literal_homogeneous_pairs": 27,
+    "min_cycles": 9,
+    "point_orbits": 1,
+    "points": 27,
+    "vertices": 63
+  },
+  "trivial_five": {
+    "cycle_types": {
+      "1,1,1,1,1": 1
+    },
+    "group_order": 1,
+    "leading_coefficient": 1,
+    "min_cycles": 5,
+    "point_orbits": 5,
+    "points": 5,
+    "polynomial": [
+      1,
+      5,
+      10,
+      10,
+      5,
+      1
+    ],
+    "root_order": 5,
+    "subset_orbits": 32
+  }
+}

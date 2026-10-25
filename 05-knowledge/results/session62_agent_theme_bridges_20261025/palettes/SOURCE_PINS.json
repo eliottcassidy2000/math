@@ -1,0 +1,29 @@
+{
+  "repository_commit": "fde0dc637d81",
+  "sources": [
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/hn/README.md",
+      "sha256": "57408a14049d053b2dc8483a62af914b0ff4fbf3fc79fd62822e29756b4dd029"
+    },
+    {
+      "path": "05-knowledge/results/ports_regular_actions_hn_20261025/hn/RELATIONAL_LIFT.md",
+      "sha256": "75840863507537e714ed83ed8c24a8209d662448c63b3ced8afa47e2a1f9b24d"
+    },
+    {
+      "path": "05-knowledge/results/boundary_palette_compression_20261011.md",
+      "sha256": "c7318387c1c27acc2b7c17962405210bdc8cf0cd01b70982518d1268e2c2b7f7"
+    },
+    {
+      "path": "05-knowledge/results/spindle_tournament_interfaces_20261011g.md",
+      "sha256": "f7583ffa064d0d4c903d4317996f1f45471e2586cfddcbf291eaa07681ccc5d0"
+    },
+    {
+      "path": "05-knowledge/results/boundary_context_weights_20261011d.md",
+      "sha256": "d79d9135432acf2d39d3c0f0ab4c482fdb4de1e0fd01fcf52e414962f81a565d"
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/palette-deck/RESULT.md",
+      "sha256": "e85f046a6b72d16bd7aefcbec0c8cc8fde886537b36ef289213fc1226c01a5a4"
+    }
+  ]
+}
