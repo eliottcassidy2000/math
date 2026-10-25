@@ -1,0 +1,32 @@
+[
+  {
+    "source_packet": "session58-hourglasses",
+    "file": "THEOREM.md",
+    "sha256": "d56acb9bd7bb6fb5ce0f0fbf69ad66a3b8f046e2f24ce05657aeb57ba039d202"
+  },
+  {
+    "source_packet": "session58-hourglasses",
+    "file": "MITRE_AFFINE_BRIDGE.md",
+    "sha256": "4febec1f0441dab517e4bc1db9e345d46ece704bf3e17cc864b3792f9527e64a"
+  },
+  {
+    "source_packet": "session58-hourglass-fiber-product",
+    "file": "fiber_product.md",
+    "sha256": "1cee20c81f6a16707baf55634527464828fa13517c47d20f45195d6e8e34b82a"
+  },
+  {
+    "source_packet": "session58-observer-profile-algebra",
+    "file": "THEOREM.md",
+    "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4"
+  },
+  {
+    "source_packet": "session58-observer-profile-algebra",
+    "file": "direct_certificate.json",
+    "sha256": "169876afcd3cebc3acd76f39c74dbea49e63fb01562e3515e9949e3914f77125"
+  },
+  {
+    "source_packet": "session58-observer-profile-algebra",
+    "file": "quadratic_certificate.json",
+    "sha256": "228c0737316bff4acaf1e630bd7d264ee09c477d23d5c609aaa788760be28f18"
+  }
+]

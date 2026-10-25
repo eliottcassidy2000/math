@@ -1,0 +1,97 @@
+[
+  {
+    "r": 1,
+    "integral": "0",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 2,
+    "integral": "1/15",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 3,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 4,
+    "integral": "1/35",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 5,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 6,
+    "integral": "1/63",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 7,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 8,
+    "integral": "1/99",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 9,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 10,
+    "integral": "1/143",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 11,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 12,
+    "integral": "1/195",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 13,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 14,
+    "integral": "1/255",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 15,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 16,
+    "integral": "1/323",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 17,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  },
+  {
+    "r": 18,
+    "integral": "1/399",
+    "valid_Royle_even_family": false
+  },
+  {
+    "r": 19,
+    "integral": "0",
+    "valid_Royle_even_family": true
+  }
+]

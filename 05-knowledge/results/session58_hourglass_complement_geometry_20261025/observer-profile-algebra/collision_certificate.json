@@ -1,0 +1,10 @@
+{
+  "n": 6,
+  "full_classes": 34,
+  "distinct_profiles": 34,
+  "collisions": [],
+  "omitted_graph_masks": [
+    255,
+    2015
+  ]
+}

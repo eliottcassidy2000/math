@@ -1,0 +1,33 @@
+{
+  "repository_commit": "44f15df8c4a24e5624d399862c0cdb1769b2cbb1",
+  "sources": [
+    {
+      "path": "/tmp/session56-publication/clean-repo/01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+    },
+    {
+      "path": "/tmp/session58-complement-tournaments/THEOREM.md",
+      "sha256": "9463f2e7ed9b98bcb2eeba04a85a97757dee91e3c36edbdea9f776f485afdb87"
+    },
+    {
+      "path": "/tmp/session58-complement-tournaments/verify.py",
+      "sha256": "9246f13ac2bf4cf406a7fb7ed34504b17b4c0433571f8bee65f8d25cd23d31f6"
+    },
+    {
+      "path": "/tmp/session58-complement-tournaments/certificate.json",
+      "sha256": "3d82e3e575516c79da986070d32dfbb13794a2eb0e6f9146b29472d2907ee803"
+    },
+    {
+      "path": "/tmp/session56-score-forest-counts/REPORT.md",
+      "sha256": "9a7b2107f5dfc3245a251f46eef51698932a4b006d94c607f757497cd917c886"
+    },
+    {
+      "path": "/tmp/session56-score-forest-counts/COROLLARIES.md",
+      "sha256": "82aa2c23f1b98eff2f0e813338ae0284916b3acf65d41fc8b082601b03153e10"
+    },
+    {
+      "path": "/tmp/session56-cayley-mirror-bridge/sources/HAMILTONIAN_FOREST_SIZE_BIAS.md",
+      "sha256": "5f21be709975d2bc99886258618921bf74370cd654c69972e612c4d724e86c0c"
+    }
+  ]
+}

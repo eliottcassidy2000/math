@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "bound": 3000,
+  "positive_gaps": 3172,
+  "all_divisor_checks": 24496,
+  "triple_root_gcd_checks": 4501,
+  "tropical_counts": {
+    "65": {
+      "triples": 4,
+      "filter_pass": 4
+    },
+    "1105": {
+      "triples": 286,
+      "filter_pass": 150
+    }
+  },
+  "replays": [
+    {
+      "mode": "normal",
+      "exit": 0,
+      "certificate_matches": true
+    },
+    {
+      "mode": "optimized",
+      "exit": 0,
+      "certificate_matches": true
+    }
+  ],
+  "negative_controls": "PASS",
+  "source_type": {
+    "title": "Preprint",
+    "type": "publication",
+    "subtype": "preprint"
+  },
+  "source_date": "2026-08-13",
+  "sha256_candidate": "ed1ab261f28aec007037c5b54a7356da25d1018bb9a82b9c32d718a272e865d1"
+}

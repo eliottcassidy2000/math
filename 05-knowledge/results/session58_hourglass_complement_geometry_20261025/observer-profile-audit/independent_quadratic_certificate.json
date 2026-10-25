@@ -1,0 +1,50 @@
+{
+  "rank": 34,
+  "selected_minor_matches_labeled_features": true,
+  "determinant": "211991592542375584355844096000000",
+  "modulus": 1000000007,
+  "determinant_modulus": 967372386,
+  "normalization_denominator_power_of_720": 36,
+  "square_feature_edges": {
+    "3": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "15": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ]
+    ]
+  },
+  "mixture_contrasts": [
+    {
+      "mask": 3,
+      "raw": -1105920,
+      "normalized_positive_minus_negative": "-1/57600"
+    },
+    {
+      "mask": 15,
+      "raw": 276480,
+      "normalized_positive_minus_negative": "1/230400"
+    }
+  ]
+}

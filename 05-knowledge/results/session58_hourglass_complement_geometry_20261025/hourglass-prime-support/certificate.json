@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "center_bound": 3000,
+  "positive_gaps_checked": 3172,
+  "one_split_prime_centers": 1487,
+  "schur_triples": 0,
+  "balanced_index_extra_divisibility": {
+    "e": 65,
+    "gap": 3000,
+    "prime": 5,
+    "valuation": 3,
+    "exponent": 1,
+    "indices": [
+      0,
+      1
+    ]
+  },
+  "samples": {
+    "5": {
+      "gap_count": 1,
+      "gaps": [
+        24
+      ]
+    },
+    "25": {
+      "gap_count": 2,
+      "gaps": [
+        336,
+        600
+      ]
+    },
+    "65": {
+      "gap_count": 4,
+      "gaps": [
+        2016,
+        3000,
+        3696,
+        4056
+      ]
+    },
+    "125": {
+      "gap_count": 3,
+      "gaps": [
+        8400,
+        10296,
+        15000
+      ]
+    },
+    "1105": {
+      "gap_count": 13,
+      "gaps": [
+        103776,
+        231000,
+        369096,
+        566544,
+        582624,
+        867000,
+        936936,
+        1014000,
+        1068144,
+        1086336,
+        1172184,
+        1197000,
+        1215696
+      ]
+    }
+  },
+  "projective_checks": {
+    "65": {
+      "points": 4,
+      "lines": 1,
+      "points_per_line": 4,
+      "lines_containing_schur_triple": 0
+    },
+    "1105": {
+      "points": 13,
+      "lines": 13,
+      "points_per_line": 4,
+      "lines_containing_schur_triple": 0
+    }
+  }
+}

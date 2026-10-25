@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "direct_projective_checks": [
+    {
+      "k": 0,
+      "points": 0,
+      "all_distinct_triples": 0,
+      "tropical_triples": 0,
+      "primitive_tropical_triples": 0
+    },
+    {
+      "k": 1,
+      "points": 1,
+      "all_distinct_triples": 0,
+      "tropical_triples": 0,
+      "primitive_tropical_triples": 0
+    },
+    {
+      "k": 2,
+      "points": 4,
+      "all_distinct_triples": 4,
+      "tropical_triples": 4,
+      "primitive_tropical_triples": 4
+    },
+    {
+      "k": 3,
+      "points": 13,
+      "all_distinct_triples": 286,
+      "tropical_triples": 150,
+      "primitive_tropical_triples": 138
+    },
+    {
+      "k": 4,
+      "points": 40,
+      "all_distinct_triples": 9880,
+      "tropical_triples": 3736,
+      "primitive_tropical_triples": 3160
+    },
+    {
+      "k": 5,
+      "points": 121,
+      "all_distinct_triples": 287980,
+      "tropical_triples": 82860,
+      "primitive_tropical_triples": 65640
+    }
+  ],
+  "independent_matrix_word_checks": [
+    {
+      "k": 0,
+      "nonzero_column_matrices": 0,
+      "first_pair_equal": 0,
+      "all_pairs_equal": 0,
+      "distinct_projective_column_matrices": 0
+    },
+    {
+      "k": 1,
+      "nonzero_column_matrices": 8,
+      "first_pair_equal": 8,
+      "all_pairs_equal": 8,
+      "distinct_projective_column_matrices": 0
+    },
+    {
+      "k": 2,
+      "nonzero_column_matrices": 368,
+      "first_pair_equal": 80,
+      "all_pairs_equal": 32,
+      "distinct_projective_column_matrices": 192
+    },
+    {
+      "k": 3,
+      "nonzero_column_matrices": 8888,
+      "first_pair_equal": 632,
+      "all_pairs_equal": 104,
+      "distinct_projective_column_matrices": 7200
+    }
+  ],
+  "ogf_numerator": [
+    0,
+    0,
+    4,
+    2,
+    -126
+  ],
+  "ogf_denominator": [
+    1,
+    -37,
+    422,
+    -1982,
+    3801,
+    -2205
+  ],
+  "initial_values": [
+    0,
+    0,
+    4,
+    150,
+    3736,
+    82860,
+    1771324,
+    37415490,
+    787233136,
+    16542340440,
+    347461617844
+  ],
+  "recurrence_checked_through": 40,
+  "density_asymptotic": "(7/9)^k",
+  "general_exponent_checks": [
+    {
+      "exponents": [],
+      "points": 0,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        1
+      ],
+      "points": 1,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        2
+      ],
+      "points": 2,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        3
+      ],
+      "points": 3,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        4
+      ],
+      "points": 4,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        5
+      ],
+      "points": 5,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        6
+      ],
+      "points": 6,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        7
+      ],
+      "points": 7,
+      "candidate_triples": 0,
+      "primitive_candidate_triples": 0
+    },
+    {
+      "exponents": [
+        1,
+        2
+      ],
+      "points": 7,
+      "candidate_triples": 15,
+      "primitive_candidate_triples": 11
+    },
+    {
+      "exponents": [
+        2,
+        2
+      ],
+      "points": 12,
+      "candidate_triples": 54,
+      "primitive_candidate_triples": 28
+    },
+    {
+      "exponents": [
+        3,
+        3
+      ],
+      "points": 24,
+      "candidate_triples": 252,
+      "primitive_candidate_triples": 72
+    },
+    {
+      "exponents": [
+        1,
+        1,
+        2
+      ],
+      "points": 22,
+      "candidate_triples": 492,
+      "primitive_candidate_triples": 320
+    },
+    {
+      "exponents": [
+        1,
+        2,
+        3
+      ],
+      "points": 52,
+      "candidate_triples": 3315,
+      "primitive_candidate_triples": 1140
+    },
+    {
+      "exponents": [
+        2,
+        2,
+        2
+      ],
+      "points": 62,
+      "candidate_triples": 5098,
+      "primitive_candidate_triples": 1648
+    }
+  ],
+  "primitive_ogf_numerator": [
+    0,
+    0,
+    4,
+    10,
+    -120
+  ],
+  "primitive_ogf_denominator": [
+    1,
+    -32,
+    284,
+    -928,
+    960
+  ],
+  "primitive_initial_values": [
+    0,
+    0,
+    4,
+    138,
+    3160,
+    65640,
+    1327264,
+    26630688,
+    533119360,
+    10665390720,
+    213325709824
+  ],
+  "primitive_recurrence_starts_at": 5,
+  "primitive_k4_residual": -120
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/tmp/session58-observer-profile-algebra/direct_check.py",
+    "sha256": "db4da7333cd247c789407631fed3e77c9fd3397effd8c2945b15e26437120e4a"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/profile_collision.py",
+    "sha256": "45d2e313725eb694ed4c2fe59b2f2aaa90c8b4f3cd5322ad3e24020d2dab5d03"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/analyze.py",
+    "sha256": "62bdb40549d75141784dd5d5650e9ee176301a299f060ecd9586d00bb1cc8557"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/direct_certificate.json",
+    "sha256": "169876afcd3cebc3acd76f39c74dbea49e63fb01562e3515e9949e3914f77125"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/collision_certificate.json",
+    "sha256": "eafc23543ebcba21b71be73d8b8132304a7b8957bc8ba69a737e44f6438e28b9"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/walsh_certificate.json",
+    "sha256": "7aeb2a901cd262fb12f9e856bb86bb1f76a340425097c71decf0349d8c40c4ec"
+  },
+  {
+    "path": "/tmp/session58-complement-tournaments/THEOREM.md",
+    "sha256": "9463f2e7ed9b98bcb2eeba04a85a97757dee91e3c36edbdea9f776f485afdb87"
+  },
+  {
+    "path": "/tmp/session58-publication/clean-repo/01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+    "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/THEOREM.md",
+    "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/quadratic_check.py",
+    "sha256": "f8bf54f7a64d869c96e9dbdb8cb8af59cc692504dec02694e7d22b83c66e9551"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/quadratic_certificate.json",
+    "sha256": "228c0737316bff4acaf1e630bd7d264ee09c477d23d5c609aaa788760be28f18"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/family_check.py",
+    "sha256": "083763ed4d450003bb655b1dfaddc22c7fa2f0ceff0050ce78939cb33fc2bbef"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/edge_actions.py",
+    "sha256": "512d842afd7ed74817158be6703ac849315878e14f8f70a97a0c248a82ac449c"
+  },
+  {
+    "path": "/tmp/session58-observer-profile-algebra/family_certificate.json",
+    "sha256": "c2794f5d1017031df6aa2d3ed02c4eca69f41f2efd7aa1efbc9f80208523234a"
+  }
+]

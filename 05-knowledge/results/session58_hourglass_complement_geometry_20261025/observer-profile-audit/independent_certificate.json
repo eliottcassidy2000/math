@@ -1,0 +1,14 @@
+{
+  "independent_method": "Adjacent-transposition BFS, no imports from source scripts",
+  "graph_isomorphism_classes": 156,
+  "tournament_isomorphism_classes": 56,
+  "converse_classes": 34,
+  "graph_complement_pair_columns": 78,
+  "distinct_profile_rows": 34,
+  "exact_rational_rank": 32,
+  "direct_certificate_matrix_exact_match": true,
+  "mixture_equality_checked_exactly": true,
+  "positive_support": 9,
+  "negative_support": 12,
+  "positive_mass": 122880
+}

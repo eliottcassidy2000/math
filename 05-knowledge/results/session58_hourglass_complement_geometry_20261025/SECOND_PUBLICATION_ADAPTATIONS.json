@@ -1,0 +1,72 @@
+{
+  "edits": [
+    {
+      "path": "audit-profile-algebra/quadratic_audit.py",
+      "original_sha256": "774ee545558f09c46c72184c4a66c824a393d5a8559182a3aa9bd9fb8d587b2b",
+      "publication_sha256": "552a8b7c4063b798d051cda2ae4f22fec168d8a21d492c1c754a078d2c17f1ac",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "audit-profile-algebra/check_producer.py",
+      "original_sha256": "a8fb1b3acc99f595c3dc7b3844c925752f4649a5bce26cd0dbb06480b5062683",
+      "publication_sha256": "0b4e511effcad35ca82d888d5455874b18c782162c545a8be60738a6d4ad0bdf",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "observer-profile-audit/audit_walsh.py",
+      "original_sha256": "cb454295dfd63fbaa8717e9e368747412ddd9f3e08b3cc6294b265145e1a6b7e",
+      "publication_sha256": "5e47f3037fb9836d003404f86464870a6296c3be1b317489e0477cfb99072907",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "observer-profile-audit/audit_quadratic.py",
+      "original_sha256": "e02c59103a147f8d430846aa620a70880c81e8b2c9497dfc423889ae6269e861",
+      "publication_sha256": "f5d9b606f6bab8b7f37a348137a9ab383fd63da472e6ae9a944ab02a0a4b7da0",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "observer-profile-audit/audit.py",
+      "original_sha256": "a03e657b351f755b8ec09df24af25f5b4df4a875218689edf5d77c961b7309d8",
+      "publication_sha256": "af2ca409cfe03e6167d5cc225ef75de0cea3c810927b9d564c681450a739267f",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "audit-prime-support/audit.py",
+      "original_sha256": "c56bd30aed73cf57fb649931f68106d3d749a38639256d56bdaaa272d3f8e8b0",
+      "publication_sha256": "33e82f2dc649d160d51355f7fb7dd948a7827493df07a0b8b3ebabdec9ce3e1c",
+      "purpose": "Replace temporary absolute paths with script-relative packet paths; no mathematical or test edits."
+    },
+    {
+      "path": "hourglass-prime-support/RESULT.md",
+      "original_sha256": "4ba79e88ec9835a17251e8276a447b7008a58b1b93d0cc506c90d6252c90c351",
+      "publication_sha256": "4929903731f77207f95ac279bc190594007eb49bcf9ac9a6fde6f385707ff8b3",
+      "purpose": "Clarify excluded third-party source copies are not delivered; preserve all mathematical claims and primary citation."
+    },
+    {
+      "path": "audit-prime-support/audit.py",
+      "input_edition_sha256": "33e82f2dc649d160d51355f7fb7dd948a7827493df07a0b8b3ebabdec9ce3e1c",
+      "publication_sha256": "84ed5eb20cf9c29c6a46b035936bf60a3f28f0630a8a142c07249c22e70f80e4",
+      "purpose": "Retain authored bibliographic facts; make excluded PDF checksum recheck optional via --source-dir and explicitly report false when not rechecked. All arithmetic tests unchanged."
+    },
+    {
+      "path": "observer-profile-audit/audit.py",
+      "input_edition_sha256": "af2ca409cfe03e6167d5cc225ef75de0cea3c810927b9d564c681450a739267f",
+      "publication_sha256": "dcd6bf9dcaec7ba19ad03f77d1f3677eec645febff53a233b08224eeec4f79d3",
+      "purpose": "Replace 11 removable assertions by explicit RuntimeError guards using AST transformation; add --negative-check probe. AST unparse reformats source and removes comments; mathematical predicates unchanged."
+    },
+    {
+      "path": "observer-profile-audit/audit_walsh.py",
+      "input_edition_sha256": "5e47f3037fb9836d003404f86464870a6296c3be1b317489e0477cfb99072907",
+      "publication_sha256": "0c306ee8657c8c3a4a49b24e4977e7c353076735a0eb0d51fe04e162eee1436e",
+      "purpose": "Replace 2 removable assertions by explicit RuntimeError guards using AST transformation; add --negative-check probe. AST unparse reformats source and removes comments; mathematical predicates unchanged."
+    },
+    {
+      "path": "observer-profile-audit/audit_quadratic.py",
+      "input_edition_sha256": "f5d9b606f6bab8b7f37a348137a9ab383fd63da472e6ae9a944ab02a0a4b7da0",
+      "publication_sha256": "38814fc61c9d18ab5524a37e183dadd894b05a7491ea298ca07ec1f3b0782d2d",
+      "purpose": "Replace 7 removable assertions by explicit RuntimeError guards using AST transformation; add --negative-check probe. AST unparse reformats source and removes comments; mathematical predicates unchanged."
+    }
+  ],
+  "original_sources_unchanged": true,
+  "historical_caveats": "observer-profile-audit/AUDIT.md retains earlier graphs-placeholder and external-helper findings. The final producer has the unused graph-placeholder field removed and bundled edge_actions.py; no absolute runtime dependency remains there."
+}

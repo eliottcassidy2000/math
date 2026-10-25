@@ -1,0 +1,53 @@
+[
+  {
+    "n": 1,
+    "graphs": 1,
+    "dimension": 1,
+    "rank": 1,
+    "zero_masks": [],
+    "all_walsh_rows_exact_match": true
+  },
+  {
+    "n": 2,
+    "graphs": 2,
+    "dimension": 1,
+    "rank": 1,
+    "zero_masks": [],
+    "all_walsh_rows_exact_match": true
+  },
+  {
+    "n": 3,
+    "graphs": 4,
+    "dimension": 2,
+    "rank": 2,
+    "zero_masks": [],
+    "all_walsh_rows_exact_match": true
+  },
+  {
+    "n": 4,
+    "graphs": 11,
+    "dimension": 3,
+    "rank": 3,
+    "zero_masks": [],
+    "all_walsh_rows_exact_match": true
+  },
+  {
+    "n": 5,
+    "graphs": 34,
+    "dimension": 10,
+    "rank": 10,
+    "zero_masks": [],
+    "all_walsh_rows_exact_match": true
+  },
+  {
+    "n": 6,
+    "graphs": 156,
+    "dimension": 34,
+    "rank": 32,
+    "zero_masks": [
+      255,
+      2015
+    ],
+    "all_walsh_rows_exact_match": true
+  }
+]

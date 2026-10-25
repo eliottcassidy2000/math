@@ -1,0 +1,141 @@
+{
+  "table": [
+    {
+      "n": 1,
+      "graph_classes": 1,
+      "converse_classes": 1,
+      "rank": 1,
+      "distinct_profiles": 1,
+      "zero_modes": []
+    },
+    {
+      "n": 2,
+      "graph_classes": 2,
+      "converse_classes": 1,
+      "rank": 1,
+      "distinct_profiles": 1,
+      "zero_modes": []
+    },
+    {
+      "n": 3,
+      "graph_classes": 4,
+      "converse_classes": 2,
+      "rank": 2,
+      "distinct_profiles": 2,
+      "zero_modes": []
+    },
+    {
+      "n": 4,
+      "graph_classes": 11,
+      "converse_classes": 3,
+      "rank": 3,
+      "distinct_profiles": 3,
+      "zero_modes": []
+    },
+    {
+      "n": 5,
+      "graph_classes": 34,
+      "converse_classes": 10,
+      "rank": 10,
+      "distinct_profiles": 10,
+      "zero_modes": []
+    },
+    {
+      "n": 6,
+      "graph_classes": 156,
+      "converse_classes": 34,
+      "rank": 32,
+      "distinct_profiles": 34,
+      "zero_modes": [
+        {
+          "mask": 255,
+          "sum": 0,
+          "automorphisms": 6,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        },
+        {
+          "mask": 2015,
+          "sum": 0,
+          "automorphisms": 2,
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "integral": "0",
+  "two_star_order_sum": 0
+}
