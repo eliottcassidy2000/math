@@ -1,0 +1,36 @@
+{
+  "absolute_points": [
+    3,
+    6,
+    7,
+    12,
+    14
+  ],
+  "all_native_group_checks": 2646,
+  "all_quotient_pairs": 3969,
+  "all_typed_group_flag_checks": 18522,
+  "base_flags": 105,
+  "base_objects": 42,
+  "both_sheet_twins": "exactly native boundary fibers",
+  "derivative_directions": 63,
+  "field_subfield": [
+    0,
+    1,
+    58,
+    59
+  ],
+  "hostiles": [
+    "old phase 1",
+    "bare point inversion",
+    "equal native intersections with unequal transported incidence"
+  ],
+  "independent_minimum_blockers": 63,
+  "inverse_preserved_lines": 0,
+  "lift_degree": 15,
+  "lift_edges": 945,
+  "lift_objects": 126,
+  "native_flag_symmetry_checks": 39690,
+  "producer_manifest": "9b52b7d7495d418de0f561b8ae7e95c08736f316b2d0c7926a01a54d08248439",
+  "scope": "Paley-7 minimum blockers only; no Hamiltonian-count or all-size transfer",
+  "status": "PASS"
+}

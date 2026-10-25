@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "all_verified_inclusion_minimal": true,
+      "expansion": [
+        {
+          "T_size": 0,
+          "minimum_union_size": 0
+        },
+        {
+          "T_size": 1,
+          "minimum_union_size": 3
+        },
+        {
+          "T_size": 2,
+          "minimum_union_size": 5
+        },
+        {
+          "T_size": 3,
+          "minimum_union_size": 6
+        },
+        {
+          "T_size": 4,
+          "minimum_union_size": 6
+        },
+        {
+          "T_size": 5,
+          "minimum_union_size": 7
+        }
+      ],
+      "n": 7,
+      "scope": "does not certify global minimum or classify exotic blockers",
+      "verified_HP_blockers": 63
+    },
+    {
+      "all_verified_inclusion_minimal": true,
+      "expansion": [
+        {
+          "T_size": 0,
+          "minimum_union_size": 0
+        },
+        {
+          "T_size": 1,
+          "minimum_union_size": 5
+        },
+        {
+          "T_size": 2,
+          "minimum_union_size": 8
+        },
+        {
+          "T_size": 3,
+          "minimum_union_size": 9
+        },
+        {
+          "T_size": 4,
+          "minimum_union_size": 10
+        },
+        {
+          "T_size": 5,
+          "minimum_union_size": 10
+        },
+        {
+          "T_size": 6,
+          "minimum_union_size": 10
+        },
+        {
+          "T_size": 7,
+          "minimum_union_size": 11
+        },
+        {
+          "T_size": 8,
+          "minimum_union_size": 11
+        },
+        {
+          "T_size": 9,
+          "minimum_union_size": 11
+        }
+      ],
+      "n": 11,
+      "scope": "does not certify global minimum or classify exotic blockers",
+      "verified_HP_blockers": 121
+    }
+  ],
+  "status": "PASS"
+}

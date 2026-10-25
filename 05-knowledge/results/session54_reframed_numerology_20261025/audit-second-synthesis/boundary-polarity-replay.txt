@@ -1,0 +1,1 @@
+PASS: closed audit manifest; independent normal/-O; pinned producer replay; four mutation hostiles

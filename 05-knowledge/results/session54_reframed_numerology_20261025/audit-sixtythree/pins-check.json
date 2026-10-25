@@ -1,0 +1,50 @@
+{
+  "01-canon/ACTIVE-GUARDRAILS.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "01-canon/MISTAKES.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "05-knowledge/results/sixes_and_sevens_20261006.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "AGENTS.md": {
+    "exists": true,
+    "hash_match": true
+  },
+  "CONVERSE.md": {
+    "hash_match": true
+  },
+  "README.md": {
+    "hash_match": true
+  },
+  "converse-O.json": {
+    "hash_match": true
+  },
+  "converse.json": {
+    "hash_match": true
+  },
+  "extend_converse.py": {
+    "hash_match": true
+  },
+  "result-O.json": {
+    "hash_match": true
+  },
+  "result.json": {
+    "hash_match": true
+  },
+  "verify.py": {
+    "hash_match": true
+  }
+}

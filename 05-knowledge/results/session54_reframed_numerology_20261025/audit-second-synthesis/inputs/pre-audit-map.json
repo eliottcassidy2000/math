@@ -1,0 +1,1947 @@
+{
+  "destination": "05-knowledge/results/session54_reframed_numerology_20261025",
+  "packet_manifests": {
+    "dismissed-atlas": "0a9ff22a2bf5a211695aae86070853f021332c99dfa3b0cdfe3edbcefbe88393",
+    "cross-base-fractal": "92db3b170771188fac5c9d55faec8c4c5d18e4fc8f34d93c74b78abfd0794e95",
+    "audit-cross-base": "356a31ea3b2f3f357ae1cbcc041792e266798704ed996f9c7b988509a66fb106",
+    "tangent-cm": "66465399d9a82a4ec9afc661fc4cb93502b2f632157d08ebf4a1366f21b16eba",
+    "audit-tangent-cm": "1f1afa53bf9846f1128a1fd8d6a85cb00ac944d5e82b32fb185835ada6f35dc2",
+    "audit-first-synthesis": "221f68ce6835335fbff6ff82db9753e2f587d7696f7a2765988c1f045a8d1ca6",
+    "sixtythree-bridge": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e",
+    "audit-sixtythree": "48a70dc1310861bcbc3290830456aa9b683a108e746f8712e54b4cfa79dab6fa",
+    "p11-stress": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26",
+    "audit-p11": "4c851fdc4e26297b5f2cfc17a08ce41048b66a7e5808e160c87db956c8e17c3e",
+    "fractal-budget-transfer": "5d9519992f6ff49e9e8765a7d50928634179f890492586a60fa8818aa76b841d",
+    "audit-budget-transfer": "a87df0f33b3286934c04dd0beaa2297f6e5018b9223f0a20dd8b00d233305b6f",
+    "rational-cm-observer": "7f7e26f77074700b5b3adb40b575d99723e2faa64e8e8ad81bbad87fee58d223",
+    "audit-rational-observer": "7b9c10ebd8486648471480b4c52422fe661c9b6b8e9226f65172a5769697fc0d",
+    "boundary-projectivization": "9b52b7d7495d418de0f561b8ae7e95c08736f316b2d0c7926a01a54d08248439",
+    "audit-boundary-polarity": "72cf12265eea599c3d6c7a7c79478ae78f082c892a2ccc38c7415413f1571a99",
+    "cycle-packing-bound": "5213de5e2193cd43e952d529277bb44eca5053fa4d86d9b9afcee944458bc116",
+    "audit-cycle-packing": "fc3b197c25bed626dffa5164e8e477b8d36c696a2bb2cf1501d8935b6cca1ea4",
+    "cycle-potential-classification": "6b05de37509f3a6f041362b21c8bb98f09ec8e27c4c9470df90bf0c3433a1693",
+    "audit-cycle-potential": "9733ade0901b07b2e6d00e80e43b4d4355215bb7d85e937b0fb459dd4a75587a"
+  },
+  "files": [
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/REPORT.md",
+      "bytes": 11508,
+      "sha256": "5a7661deada644acab045642223a20a21757d10fd49828365adcec151c197fad"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/SOURCES.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/SOURCES.json",
+      "bytes": 5898,
+      "sha256": "07a0a8cc25d21917b3164dea8d6649f9facff109fdfda881c642c04ef35c8b9d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/catalan-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/catalan-correction.txt",
+      "bytes": 1867,
+      "sha256": "f592d1e2b4e664428467f4d9db5cbaf8268380fbb0807a6b5aade2d8c6eff8e6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/collatz-paley-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/collatz-paley-correction.txt",
+      "bytes": 1870,
+      "sha256": "29c57ae70cc4cffe932f165b46ddcd0d79d21e21b7b30bfb3f751aabc501a576"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/fifteen-mrb-collatz.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/fifteen-mrb-collatz.txt",
+      "bytes": 4298,
+      "sha256": "eb50006c0c385747dcde3e470c55a38bc24ac1f2cadf4f9276f46b18d1617df6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/lattice-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/lattice-correction.txt",
+      "bytes": 4371,
+      "sha256": "ac142bca93f4cc1141fc00e839d3ab759267de49a2cf597221ff89571ddb2fb2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/paley-modular-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/paley-modular-correction.txt",
+      "bytes": 5140,
+      "sha256": "88b55b735a825520645c6053ab55fe913b383c3031ea83975a319a301832bacc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/pascal-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/pascal-correction.txt",
+      "bytes": 1877,
+      "sha256": "cea57395be50b36de201d217f37cb019f7194c4f7cde4a998834b1d48178f3eb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/repunit-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/repunit-correction.txt",
+      "bytes": 3312,
+      "sha256": "7edfefa68324b1805b4fe877520a1d9c795e30a2b5f7e77b4fc7a220d898ba4b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/self-converse-correction.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/self-converse-correction.txt",
+      "bytes": 1644,
+      "sha256": "cb9eb46cf8b79666992e8e2d0d8a6afe54ee836e26f36e38280778f0c3b97157"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session52-mrb.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session52-mrb.txt",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session52-summary.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session52-summary.txt",
+      "bytes": 6684,
+      "sha256": "ac317948da12bf683dc30ba746254e748d409c321668eabff47430ef3be06943"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/sources/session53-summary.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/sources/session53-summary.txt",
+      "bytes": 15157,
+      "sha256": "9cfdbfc9bdca4294f26bd1edce0df88694cccdbe347f2e034af976a77d1f7439"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-dismissed-atlas/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/dismissed-atlas/MANIFEST.json",
+      "bytes": 1395,
+      "sha256": "0a9ff22a2bf5a211695aae86070853f021332c99dfa3b0cdfe3edbcefbe88393"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/REPORT.md",
+      "bytes": 9727,
+      "sha256": "2326e437bd53a6c0bfc2e2b9bdabb5e6bb0dcf6d9049341be484d46a6516f357"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check-O.out",
+      "bytes": 964,
+      "sha256": "83ee695a43c15df46166ebfebda6e53cc71ce44abbf510552386a1c6dd18c72c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check.out",
+      "bytes": 964,
+      "sha256": "83ee695a43c15df46166ebfebda6e53cc71ce44abbf510552386a1c6dd18c72c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/check.py",
+      "bytes": 3439,
+      "sha256": "85bba736b76a2ebf684b45ebbc4abc6192b483827d17ee0cf7f62eef445de251"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/hostile.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/hostile.py",
+      "bytes": 694,
+      "sha256": "90f2510d1f111c3718574f55410c01955f73c78a131c02aee1273d37e7213314"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/replay.py",
+      "bytes": 969,
+      "sha256": "17397c968e0d3203b1b4f506c7c058d419138dc9c9e79a7b6ef581e90426bed0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/clock-fractal.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/clock-fractal.md",
+      "bytes": 34371,
+      "sha256": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod3-digit-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod3-digit-law.md",
+      "bytes": 8349,
+      "sha256": "aa300c0928063514e42300e33e8b3e73555677fed3f04dc7e868a3a1b441e917"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod4-dyadic-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod4-dyadic-law.md",
+      "bytes": 5190,
+      "sha256": "db04a57725b52e595b9347400d3fcf44b4dc65fb380a783b5edb988e0bbda46c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/mod9-digit-law.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/mod9-digit-law.md",
+      "bytes": 3718,
+      "sha256": "cc4abc46cd8acd9c2a5902c266e2846c13dcd285076d44f8ed6b462403da8c98"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/sources/prior-transversality-published.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/sources/prior-transversality-published.md",
+      "bytes": 53441,
+      "sha256": "c341592c374d56afd25f6fa6aa13f5246a7a4f098927ad60594f68b4ca037f16"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cross-base-fractal/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cross-base-fractal/manifest.json",
+      "bytes": 1014,
+      "sha256": "92db3b170771188fac5c9d55faec8c4c5d18e4fc8f34d93c74b78abfd0794e95"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/REPORT.md",
+      "bytes": 5765,
+      "sha256": "65179df9af20b3912649ee0f25955c38a66ad41b0e46c69a5e9f7a1d99fb6844"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check-O.out",
+      "bytes": 896,
+      "sha256": "a1c2230ebd605ed7f5f99a68020ce9c1c333c5e440afc0482099a99f51fa8084"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check.out",
+      "bytes": 896,
+      "sha256": "a1c2230ebd605ed7f5f99a68020ce9c1c333c5e440afc0482099a99f51fa8084"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check_independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check_independent.py",
+      "bytes": 3624,
+      "sha256": "577b09953244d889676dcf60b297e657a78ada0e19ec5642c99b47f171628417"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/check_packet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/check_packet.py",
+      "bytes": 2592,
+      "sha256": "994382049b93e7e28eb697039c6470ef9290b5ee299f251394399bb672adaef7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/packet.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/packet.out",
+      "bytes": 429,
+      "sha256": "557782b69f79be2f4a16dc28f07d44b22784e0485e5f8f361bd6d48a30eb2a4b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/replay.py",
+      "bytes": 779,
+      "sha256": "225cfaa14d52850a0d4d46935b7842d01cd481914f3a3e9d4408292e83d695a0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cross-base/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cross-base/manifest.json",
+      "bytes": 604,
+      "sha256": "356a31ea3b2f3f357ae1cbcc041792e266798704ed996f9c7b988509a66fb106"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/README.md",
+      "bytes": 1690,
+      "sha256": "eb4df2dbc1852376551b21dfcd7d131486bc98754932a9b82b144f61deb92809"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/RESEARCH.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/RESEARCH.md",
+      "bytes": 8797,
+      "sha256": "d51b79e17a3b102497fd6c8e6c2cb2c748c12b4e28c80e4b03c8250ad2bc50db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/SOURCES.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/SOURCES.json",
+      "bytes": 2949,
+      "sha256": "f30d3193e5abd574e9906b86ec915f15d8cdb4962d2102231cb6c145088ce31a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/check.py",
+      "bytes": 4906,
+      "sha256": "cbb1e50a358328e0b9206b9c8626ef842435757f1b1c3177e4d707aff3ccc1dc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/inputs/inherited/INHERITED_BOLZA_EXCERPT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/inputs/inherited/INHERITED_BOLZA_EXCERPT.md",
+      "bytes": 2864,
+      "sha256": "3f38131b658e72632444fb7a4cc9e090e43686fbb0aff852a7cfdf7993b8b7ab"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/inputs/inherited/session52-RESEARCH.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/inputs/inherited/session52-RESEARCH.md",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/rejections.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/rejections.normal.json",
+      "bytes": 426,
+      "sha256": "2bd9a7044f3040faacdd85224a7bfd162eafd752703ff8c458ba806b28925863"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/rejections.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/rejections.optimized.json",
+      "bytes": 426,
+      "sha256": "2bd9a7044f3040faacdd85224a7bfd162eafd752703ff8c458ba806b28925863"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/results.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/results.normal.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/results.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/results.optimized.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/test_rejections.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/test_rejections.py",
+      "bytes": 1267,
+      "sha256": "e60cdb318ec69297dae20c878348c83d8bb79d3c1515df332e41b33033f276be"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/verify_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/verify_manifest.py",
+      "bytes": 1211,
+      "sha256": "dffad16bf1426d96f4dcffcf4b8d2e138915cd006db4cc62548b3c326a8d83cd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-tangent-cm-publication/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/tangent-cm/MANIFEST.json",
+      "bytes": 1862,
+      "sha256": "66465399d9a82a4ec9afc661fc4cb93502b2f632157d08ebf4a1366f21b16eba"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/AUDIT.md",
+      "bytes": 8394,
+      "sha256": "eeb859709a373c3d8c7cefde7f86057e0ef6588ced1528a4cc203c5dbb6c03f4"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audit_closed_packet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audit_closed_packet.py",
+      "bytes": 1770,
+      "sha256": "efef82f2d0376421fa8735ce046d664fca4bea665ec1a45af45f0c2ce5e4c216"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audit_small_discriminants.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audit_small_discriminants.py",
+      "bytes": 1290,
+      "sha256": "e6457c1552bc32129ebf311bf0918ca42265ffa39c80d61c89a07dd4bf9219c3"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/audited-producer-hashes.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/audited-producer-hashes.txt",
+      "bytes": 302,
+      "sha256": "5c95df092b19a36374da2c3b15ffe4fa68b4cc1fb59663fdfe2b0bceb78f3fe6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/closed-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/closed-replay.json",
+      "bytes": 1278,
+      "sha256": "08af11da86d92dfc29ceccf8dcbf3bf8c27971da886fd0a1e65bbf5d2a1b4b3e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/forms.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/forms.normal.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/forms.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/forms.optimized.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/hostiles.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/hostiles.json",
+      "bytes": 1055,
+      "sha256": "fc356cc34589067c6b3f0cd38aeea0110cd1ad1180b5cb9e99fc91ba20bbf787"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/hostiles.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/hostiles.py",
+      "bytes": 1281,
+      "sha256": "64d1f8a64f081cc5dc286a34ffbf63c5242f9a597fc3f3a680ce586d88c3df70"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.normal.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.optimized.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/independent.py",
+      "bytes": 1744,
+      "sha256": "1fe7d737300d3a2a9f48b72a787686ee6d6a21ebc6e15a9e1d651d7ab006ce3b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/inputs/producer-results.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/inputs/producer-results.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/nested-extra.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/nested-extra.json",
+      "bytes": 308,
+      "sha256": "8d933af7179ccee2c316ca88de67abbc64237abdd91e12b520c34fe3b071c2d6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/publication-closed-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/publication-closed-replay.json",
+      "bytes": 1475,
+      "sha256": "6f49a5fc4b65d2f965d2176a7e648adcf1971e87998ede811c0881d8c3a96085"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/publication-independent-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/publication-independent-replay.json",
+      "bytes": 381,
+      "sha256": "c89b6273eb7ce1d0436e2666575fd390470ae20e9ac91626fa0d43b5b06e3dbc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/replay.new.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/replay.new.normal.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/replay.new.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/replay.new.optimized.json",
+      "bytes": 17874,
+      "sha256": "ab017b3ed82f2bc13cf1cde901353ff516346ab8b73fcafbb31b9ad1dbef11e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/source-equivalence.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/source-equivalence.json",
+      "bytes": 1956,
+      "sha256": "52a63d23cc4d32770beb2c8a0e705afb94180b25712b796b82d87c7a82f1949b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/sources/REFERENCE_NOTES.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/sources/REFERENCE_NOTES.md",
+      "bytes": 1648,
+      "sha256": "9466de99e06d697fe75ce47e0d8a59436423dce7c5cd34229e4073ed606d82df"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/verify_audit_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/verify_audit_manifest.py",
+      "bytes": 459,
+      "sha256": "3d3d6bd32573460bc4b84600b4659688cc67063927177e9bccb35f986c77b51b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-tangent-cm-publication/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-tangent-cm/MANIFEST.json",
+      "bytes": 2320,
+      "sha256": "1f1afa53bf9846f1128a1fd8d6a85cb00ac944d5e82b32fb185835ada6f35dc2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/AUDIT.md",
+      "bytes": 8127,
+      "sha256": "6c187ce719bcb3f8a5ba67f3c63640041ed5375adb36c25f01f8ce563f69f2af"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/arithmetic.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/arithmetic.normal.json",
+      "bytes": 924,
+      "sha256": "eee44bd9e5b83f1a320eddd1485951d2c2b8ff405b5b294abdbcce8fd38df912"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/arithmetic.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/arithmetic.optimized.json",
+      "bytes": 924,
+      "sha256": "eee44bd9e5b83f1a320eddd1485951d2c2b8ff405b5b294abdbcce8fd38df912"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/check_arithmetic.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/check_arithmetic.py",
+      "bytes": 2092,
+      "sha256": "bb6beff511d9b2128b94ff7aaf3aa88e2a04bc062f4ecbf0acaf61facba3c869"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/check_integration.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/check_integration.py",
+      "bytes": 4299,
+      "sha256": "0d0be38e9685fecbcf906c181508246e68680070d931ee8c4de3edbc2f96bdbd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/closure-receipt.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/closure-receipt.json",
+      "bytes": 181,
+      "sha256": "94d369dd20b324cb83938b4c7039c9ba9fe69c527aa5faac304bd99bf182458d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-audit-closure.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-audit-closure.out",
+      "bytes": 36,
+      "sha256": "fd5242442a294279d0f43689923c345164b2b12bacd1f7c2bc5c6b9f626d40e3"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-closure.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-closure.json",
+      "bytes": 1475,
+      "sha256": "6f49a5fc4b65d2f965d2176a7e648adcf1971e87998ede811c0881d8c3a96085"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-forms.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-forms.normal.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-forms.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-forms.optimized.json",
+      "bytes": 1435,
+      "sha256": "eb6c5a0b224294ebd3785dbffbec27a659054d1fb89226ec6f964b4cc5a93d0e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-hostiles.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-hostiles.normal.json",
+      "bytes": 1055,
+      "sha256": "fc356cc34589067c6b3f0cd38aeea0110cd1ad1180b5cb9e99fc91ba20bbf787"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-hostiles.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-hostiles.optimized.json",
+      "bytes": 1055,
+      "sha256": "fc356cc34589067c6b3f0cd38aeea0110cd1ad1180b5cb9e99fc91ba20bbf787"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-independent.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-independent.normal.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cm-independent.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cm-independent.optimized.json",
+      "bytes": 2918,
+      "sha256": "c3ec9ed71933c1e12ff92e6671bf498802f90c434084310ab6191f07241f1419"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cross-base-closure.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cross-base-closure.out",
+      "bytes": 429,
+      "sha256": "557782b69f79be2f4a16dc28f07d44b22784e0485e5f8f361bd6d48a30eb2a4b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/cross-base-independent.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/cross-base-independent.out",
+      "bytes": 114,
+      "sha256": "e5a27411d814435327c02af000a86a44950f9ec8e386b9428459de5a4cf730de"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/inputs/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/inputs/README.md",
+      "bytes": 4539,
+      "sha256": "4b71d44decbfe5329482c49a886a9b2535592399634e44b527c43de6c008569b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/inputs/pre-audit-map.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/inputs/pre-audit-map.json",
+      "bytes": 24536,
+      "sha256": "5f13f63e8d622a5a7e91ddd7d9e869cf808896813269c7ea31dc6c7f8863f485"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/integration.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/integration.normal.json",
+      "bytes": 853,
+      "sha256": "dcb4aeacc0cbaff6ed7ec78b08aa226817436e8422e16f61e94a33557abc67e1"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/integration.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/integration.optimized.json",
+      "bytes": 853,
+      "sha256": "dcb4aeacc0cbaff6ed7ec78b08aa226817436e8422e16f61e94a33557abc67e1"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/replay.py",
+      "bytes": 1325,
+      "sha256": "e463c47df742cd50b324efdfc2c103ca0c66dbe4aaa0af0848fdaa8695a3c61e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-first-synthesis/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-first-synthesis/MANIFEST.json",
+      "bytes": 2084,
+      "sha256": "221f68ce6835335fbff6ff82db9753e2f587d7696f7a2765988c1f045a8d1ca6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/CONVERSE.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/CONVERSE.md",
+      "bytes": 4764,
+      "sha256": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/README.md",
+      "bytes": 8220,
+      "sha256": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/converse-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/converse-O.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/converse.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/converse.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/extend_converse.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/extend_converse.py",
+      "bytes": 2176,
+      "sha256": "e92686c562bd864ff4c173f66017608fc6cd154960f6f4549e387680da5736ab"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/01-canon/ACTIVE-GUARDRAILS.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/01-canon/ACTIVE-GUARDRAILS.md",
+      "bytes": 23187,
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/01-canon/MISTAKES.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/01-canon/MISTAKES.md",
+      "bytes": 1783843,
+      "sha256": "6d3759beab6340d5d164ca64d365a759c8e6b989bf7dbe10eed8c6853105a40c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "bytes": 7855,
+      "sha256": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "bytes": 34371,
+      "sha256": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/05-knowledge/results/sixes_and_sevens_20261006.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/05-knowledge/results/sixes_and_sevens_20261006.md",
+      "bytes": 42001,
+      "sha256": "2c1ee5e794073779430c92e4116aee699c43d50b5d9f89fd2a731f802dc72bed"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/inputs/AGENTS.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/inputs/AGENTS.md",
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/replay.py",
+      "bytes": 2094,
+      "sha256": "acb353842921ecfd23293124fc331a0e7117ddcdd609aa9c7a5475feda90926f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/result-O.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/result.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/source-pins.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/source-pins.json",
+      "bytes": 1546,
+      "sha256": "51375e4b754a1412b002691eab2919b983b7a89c797bf2fef1a0af5e240250bc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/verify.py",
+      "bytes": 5064,
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-sixtythree-bridge/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/sixtythree-bridge/MANIFEST.json",
+      "bytes": 1781,
+      "sha256": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/REPORT.md",
+      "bytes": 6778,
+      "sha256": "053536c731a76df8d0255ee5b610056be48abcdd7015edd66014b48978d3352b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/audit.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/audit.py",
+      "bytes": 5296,
+      "sha256": "e58e1e6202b944d912e6bf89e46f71b0a106965486a99f55c6e242891ed71f46"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/CONVERSE.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/CONVERSE.md",
+      "bytes": 4764,
+      "sha256": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/README.md",
+      "bytes": 8220,
+      "sha256": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/converse-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/converse-O.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/converse.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/converse.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/extend_converse.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/extend_converse.py",
+      "bytes": 2176,
+      "sha256": "e92686c562bd864ff4c173f66017608fc6cd154960f6f4549e387680da5736ab"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/result-O.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/result.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/source-pins.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/source-pins.json",
+      "bytes": 1546,
+      "sha256": "51375e4b754a1412b002691eab2919b983b7a89c797bf2fef1a0af5e240250bc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/frozen/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/frozen/verify.py",
+      "bytes": 5064,
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/hostile-controls.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/hostile-controls.json",
+      "bytes": 1223,
+      "sha256": "1991b87cd2a98089ac008973ec0f8dc0e3af227d9f1f4a3633d048f3cbaa68e6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/hostile_controls.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/hostile_controls.py",
+      "bytes": 1100,
+      "sha256": "612ea382065ca3bebeff6eea562f7bafac5acdb66cff0e14dfd13a326d07f3d7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/pins-check.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/pins-check.json",
+      "bytes": 1001,
+      "sha256": "fdde749a1d3fac6f98edfdd3906da1f7daf983e171bf2520edac01ad685d9d3b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/CONVERSE.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/CONVERSE.md",
+      "bytes": 4764,
+      "sha256": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/MANIFEST.json",
+      "bytes": 1781,
+      "sha256": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/README.md",
+      "bytes": 8220,
+      "sha256": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/converse-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/converse-O.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/converse.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/converse.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/extend_converse.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/extend_converse.py",
+      "bytes": 2176,
+      "sha256": "e92686c562bd864ff4c173f66017608fc6cd154960f6f4549e387680da5736ab"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/01-canon/ACTIVE-GUARDRAILS.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/01-canon/ACTIVE-GUARDRAILS.md",
+      "bytes": 23187,
+      "sha256": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/01-canon/MISTAKES.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/01-canon/MISTAKES.md",
+      "bytes": 1783843,
+      "sha256": "6d3759beab6340d5d164ca64d365a759c8e6b989bf7dbe10eed8c6853105a40c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "bytes": 7855,
+      "sha256": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+      "bytes": 34371,
+      "sha256": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/05-knowledge/results/sixes_and_sevens_20261006.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/05-knowledge/results/sixes_and_sevens_20261006.md",
+      "bytes": 42001,
+      "sha256": "2c1ee5e794073779430c92e4116aee699c43d50b5d9f89fd2a731f802dc72bed"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/inputs/AGENTS.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/inputs/AGENTS.md",
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/replay.py",
+      "bytes": 2094,
+      "sha256": "acb353842921ecfd23293124fc331a0e7117ddcdd609aa9c7a5475feda90926f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/result-O.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/result.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/source-pins.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/source-pins.json",
+      "bytes": 1546,
+      "sha256": "51375e4b754a1412b002691eab2919b983b7a89c797bf2fef1a0af5e240250bc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/producer/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/producer/verify.py",
+      "bytes": 5064,
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/replay.py",
+      "bytes": 2445,
+      "sha256": "e013cfe77642ff3275ed75c20045f2f2a7c8d9850a23c7e1c9244b412fc6cd69"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/replayed-converse-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/replayed-converse-O.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/replayed-converse.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/replayed-converse.json",
+      "bytes": 5891,
+      "sha256": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/replayed-result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/replayed-result-O.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/replayed-result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/replayed-result.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/result-O.json",
+      "bytes": 1576,
+      "sha256": "7f5d8eaf32f23733dc824ba47691070ec3b04a29a3ead1f3632c70d9eecee572"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/result.json",
+      "bytes": 1576,
+      "sha256": "7f5d8eaf32f23733dc824ba47691070ec3b04a29a3ead1f3632c70d9eecee572"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-sixtythree/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-sixtythree/MANIFEST.json",
+      "bytes": 3977,
+      "sha256": "48a70dc1310861bcbc3290830456aa9b683a108e746f8712e54b4cfa79dab6fa"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/README.md",
+      "bytes": 6651,
+      "sha256": "a8a643faeb6f2bdca863e39450ac49d0f5271eced6af12d07bb6bd9f412a9d89"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/check_independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/check_independent.py",
+      "bytes": 2369,
+      "sha256": "6ab9a2e5a75fe4357df9afd8c40e06ad984560f975a2787a08e8b8cdb470443e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/fixed-points-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/fixed-points-O.json",
+      "bytes": 16546,
+      "sha256": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/fixed-points.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/fixed-points.json",
+      "bytes": 16546,
+      "sha256": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/fixed_point_stress.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/fixed_point_stress.py",
+      "bytes": 2219,
+      "sha256": "7a45cc8b9c8b01b93a7c5cb8153d111e437f1c5d851a1f319ee841874b856ee5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/hall.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/hall.py",
+      "bytes": 2297,
+      "sha256": "6f9fda619b1b5ceb63e53e07586248577782ce2cbee7b832740778f730dac726"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/independent-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/independent-O.json",
+      "bytes": 1723,
+      "sha256": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/independent.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/independent.json",
+      "bytes": 1723,
+      "sha256": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/replay.py",
+      "bytes": 1917,
+      "sha256": "d989cab592f22e7eb5516fa8316a2d66f6a727a22c7224f32af0fb9f90a08446"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/result-O.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/result.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-p11-stress/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/p11-stress/MANIFEST.json",
+      "bytes": 1164,
+      "sha256": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/REPORT.md",
+      "bytes": 4857,
+      "sha256": "23234e54f1999fa4ab387802c264ecae78e71783bd14b4f7efa83f963069c2d0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/audit.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/audit.py",
+      "bytes": 3717,
+      "sha256": "236947ba2555262cf2268a68c541f9ed9821db4070c17fb63651425c82c532a6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/closure-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/closure-O.json",
+      "bytes": 339,
+      "sha256": "d7e440c5e24ea27f743ae0d6fc0278f9e9db3030a4305e264c1c415599eeb8af"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/closure.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/closure.json",
+      "bytes": 339,
+      "sha256": "d7e440c5e24ea27f743ae0d6fc0278f9e9db3030a4305e264c1c415599eeb8af"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/closure.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/closure.py",
+      "bytes": 820,
+      "sha256": "345196b92b38e15073027e91a8efcb17ed0b2bb6eea141f46fab951d1e9a5c2f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/independent-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/independent-O.json",
+      "bytes": 985,
+      "sha256": "0d73991be95f3a58839d199f81b10580290547073b20d6cafb86b1add2331460"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/independent.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/independent.json",
+      "bytes": 985,
+      "sha256": "0d73991be95f3a58839d199f81b10580290547073b20d6cafb86b1add2331460"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/MANIFEST.json",
+      "bytes": 1164,
+      "sha256": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/README.md",
+      "bytes": 6651,
+      "sha256": "a8a643faeb6f2bdca863e39450ac49d0f5271eced6af12d07bb6bd9f412a9d89"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/check_independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/check_independent.py",
+      "bytes": 2369,
+      "sha256": "6ab9a2e5a75fe4357df9afd8c40e06ad984560f975a2787a08e8b8cdb470443e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/fixed-points-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/fixed-points-O.json",
+      "bytes": 16546,
+      "sha256": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/fixed-points.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/fixed-points.json",
+      "bytes": 16546,
+      "sha256": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/fixed_point_stress.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/fixed_point_stress.py",
+      "bytes": 2219,
+      "sha256": "7a45cc8b9c8b01b93a7c5cb8153d111e437f1c5d851a1f319ee841874b856ee5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/hall.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/hall.py",
+      "bytes": 2297,
+      "sha256": "6f9fda619b1b5ceb63e53e07586248577782ce2cbee7b832740778f730dac726"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/independent-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/independent-O.json",
+      "bytes": 1723,
+      "sha256": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/independent.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/independent.json",
+      "bytes": 1723,
+      "sha256": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/replay.py",
+      "bytes": 1917,
+      "sha256": "d989cab592f22e7eb5516fa8316a2d66f6a727a22c7224f32af0fb9f90a08446"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/result-O.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/producer/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/producer/result.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/replay.log",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/replay.log",
+      "bytes": 88,
+      "sha256": "486062d514ac7a9d3e35f60a744c73260687f5f911d9081f615107dbe32ead99"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/replay.py",
+      "bytes": 2989,
+      "sha256": "69ceaf25cfcb78617a05ea6b60a1e298eef2397bb412201a7d98945a2e2c7583"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-p11/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-p11/MANIFEST.json",
+      "bytes": 2135,
+      "sha256": "4c851fdc4e26297b5f2cfc17a08ce41048b66a7e5808e160c87db956c8e17c3e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/REPORT.md",
+      "bytes": 5769,
+      "sha256": "913f36e6a264b938a4bdcf2a90d45d697fdea9167ffa607908b7b544c45a716c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/check-O.out",
+      "bytes": 2189,
+      "sha256": "cfd136cb999526838d36840ed9cc0b42b1d1274e8f59cacfba835f36ffd23b04"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/check.out",
+      "bytes": 2189,
+      "sha256": "cfd136cb999526838d36840ed9cc0b42b1d1274e8f59cacfba835f36ffd23b04"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/check.py",
+      "bytes": 2809,
+      "sha256": "5b47f47c55d73cd1b21cd76734caa5182104999e75d28560b68c2aed54c57b68"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/hostile.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/hostile.py",
+      "bytes": 697,
+      "sha256": "3fb8f5515a8daf80a1135d9f0307ef73d488a5e57a5786071e73e7b350b4afb8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/replay.py",
+      "bytes": 969,
+      "sha256": "17397c968e0d3203b1b4f506c7c058d419138dc9c9e79a7b6ef581e90426bed0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/sources/cross-base-proof.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/sources/cross-base-proof.md",
+      "bytes": 9727,
+      "sha256": "2326e437bd53a6c0bfc2e2b9bdabb5e6bb0dcf6d9049341be484d46a6516f357"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-fractal-budget-transfer/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/fractal-budget-transfer/manifest.json",
+      "bytes": 604,
+      "sha256": "5d9519992f6ff49e9e8765a7d50928634179f890492586a60fa8818aa76b841d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/REPORT.md",
+      "bytes": 5096,
+      "sha256": "dbf9bb5cb16a0f58bd7fc93e8b2a49f88e53e7e4e69e738d2bc11ece829e536f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/check-O.out",
+      "bytes": 2113,
+      "sha256": "209044433234235586d1ebec02fc8d8202b11ea5f5b44787e3872a155cd46f17"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/check.out",
+      "bytes": 2113,
+      "sha256": "209044433234235586d1ebec02fc8d8202b11ea5f5b44787e3872a155cd46f17"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/check_independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/check_independent.py",
+      "bytes": 3411,
+      "sha256": "67613d20a906fe0f0980849bc5515bd665a8b234a134547165930c72020dfb7a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/REPORT.md",
+      "bytes": 5769,
+      "sha256": "913f36e6a264b938a4bdcf2a90d45d697fdea9167ffa607908b7b544c45a716c"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/check-O.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/check-O.out",
+      "bytes": 2189,
+      "sha256": "cfd136cb999526838d36840ed9cc0b42b1d1274e8f59cacfba835f36ffd23b04"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/check.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/check.out",
+      "bytes": 2189,
+      "sha256": "cfd136cb999526838d36840ed9cc0b42b1d1274e8f59cacfba835f36ffd23b04"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/check.py",
+      "bytes": 2809,
+      "sha256": "5b47f47c55d73cd1b21cd76734caa5182104999e75d28560b68c2aed54c57b68"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/hostile.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/hostile.py",
+      "bytes": 697,
+      "sha256": "3fb8f5515a8daf80a1135d9f0307ef73d488a5e57a5786071e73e7b350b4afb8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/manifest.json",
+      "bytes": 604,
+      "sha256": "5d9519992f6ff49e9e8765a7d50928634179f890492586a60fa8818aa76b841d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/replay.py",
+      "bytes": 969,
+      "sha256": "17397c968e0d3203b1b4f506c7c058d419138dc9c9e79a7b6ef581e90426bed0"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/frozen-target/sources/cross-base-proof.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/frozen-target/sources/cross-base-proof.md",
+      "bytes": 9727,
+      "sha256": "2326e437bd53a6c0bfc2e2b9bdabb5e6bb0dcf6d9049341be484d46a6516f357"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/packet.out",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/packet.out",
+      "bytes": 404,
+      "sha256": "d4e44e659cfed30f324c546002108dea5d229a6bc31876a3a22b338edb52aafe"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/replay.py",
+      "bytes": 1492,
+      "sha256": "a68e19a87e023d230ed1649d2550249c3d165756738adc455f452f59c634bfb8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-budget-transfer/manifest.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-budget-transfer/manifest.json",
+      "bytes": 1315,
+      "sha256": "a87df0f33b3286934c04dd0beaa2297f6e5018b9223f0a20dd8b00d233305b6f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/README.md",
+      "bytes": 1309,
+      "sha256": "f9d500a3227b8cc7dcc88a04a3443e0d18dbadfad2d4293529dc72539debc2e5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/SOURCES.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/SOURCES.json",
+      "bytes": 1974,
+      "sha256": "f6d9f246557bc01a0a1d0b7ece91a43bd3e19fede6db2af9341383a025e325d6"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/THEOREM.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/THEOREM.md",
+      "bytes": 7805,
+      "sha256": "520255265a3a323600689ba19ebecc646f09f9253e35e91cf897acc3d83c59bb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/check.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/check.py",
+      "bytes": 3076,
+      "sha256": "80dc5f0c61b9a0a796b614e472e9041a98e04ab361d0fab8bed8b371a68bbf77"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/rejections.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/rejections.normal.json",
+      "bytes": 314,
+      "sha256": "96bc590d37e1e6c5263e12ed65d1197e14773cbad3f2d1e4bec66912df8b8351"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/rejections.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/rejections.optimized.json",
+      "bytes": 314,
+      "sha256": "96bc590d37e1e6c5263e12ed65d1197e14773cbad3f2d1e4bec66912df8b8351"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/results.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/results.normal.json",
+      "bytes": 2518,
+      "sha256": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/results.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/results.optimized.json",
+      "bytes": 2518,
+      "sha256": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/test_rejections.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/test_rejections.py",
+      "bytes": 934,
+      "sha256": "4092cf30731aaa550dae76658173405c300ee4811d3a3585d6188333dcded218"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/verify_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/verify_manifest.py",
+      "bytes": 1211,
+      "sha256": "dffad16bf1426d96f4dcffcf4b8d2e138915cd006db4cc62548b3c326a8d83cd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-rational-cm-observer/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/rational-cm-observer/MANIFEST.json",
+      "bytes": 1048,
+      "sha256": "7f7e26f77074700b5b3adb40b575d99723e2faa64e8e8ad81bbad87fee58d223"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/AUDIT.md",
+      "bytes": 5859,
+      "sha256": "0192259564ee6d98d1aa7527ea52e600e6f48ac0007994bd69415afa009e9875"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/audit_closed_packet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/audit_closed_packet.py",
+      "bytes": 1849,
+      "sha256": "fb689779c4322ef08131880f0086888888c8aa7110e840db524c74929d4027c5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/closed-replay.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/closed-replay.json",
+      "bytes": 1475,
+      "sha256": "19d037833cdb24e5dc6bb1d41366b273c7376c2039c38f0200df376d5e9e302f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/independent-rejections.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/independent-rejections.json",
+      "bytes": 1091,
+      "sha256": "c8ac61046aa8346de883c409fd09b237a07ff72a855ce67dd526f4d8d113ccf2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/independent.normal.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/independent.normal.json",
+      "bytes": 7051,
+      "sha256": "6d80463727ed5c10b14d4b8d3bd40a36669e292d1ca9e5965f351b47c3f575ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/independent.optimized.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/independent.optimized.json",
+      "bytes": 7051,
+      "sha256": "6d80463727ed5c10b14d4b8d3bd40a36669e292d1ca9e5965f351b47c3f575ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/independent.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/independent.py",
+      "bytes": 2390,
+      "sha256": "16d631fa1bb43a1ecd86a78b32b707661aae44a33158d88851cf49d0a1cefeba"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/inputs/producer-results.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/inputs/producer-results.json",
+      "bytes": 2518,
+      "sha256": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/test_independent_rejections.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/test_independent_rejections.py",
+      "bytes": 1135,
+      "sha256": "a76815e433b67f3374ca8aa4ef109f9da8c8d437d702057337da32b0f09dffa4"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/verify_audit_manifest.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/verify_audit_manifest.py",
+      "bytes": 459,
+      "sha256": "3d3d6bd32573460bc4b84600b4659688cc67063927177e9bccb35f986c77b51b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-rational-observer/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-rational-observer/MANIFEST.json",
+      "bytes": 1189,
+      "sha256": "7b9c10ebd8486648471480b4c52422fe661c9b6b8e9226f65172a5769697fc0d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/README.md",
+      "bytes": 5814,
+      "sha256": "3802a9e1c629d193534fdcb5555315c34eddcda9f24ef931583c8aa75beb3782"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/TWO-SHEET.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/TWO-SHEET.md",
+      "bytes": 3814,
+      "sha256": "8cf92e13d7cacfbc714f6411bad9250ce00bf69dd5c7bc03ba23bab37ea95f03"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/algebra-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/algebra-O.json",
+      "bytes": 14651,
+      "sha256": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/algebra.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/algebra.json",
+      "bytes": 14651,
+      "sha256": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/algebra.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/algebra.py",
+      "bytes": 2104,
+      "sha256": "d5cf775aea0544c1a32f4b621571fce2c52666c2a6ffdb02592af483f2830adc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/blockers.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/blockers.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/provenance.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/provenance.json",
+      "bytes": 467,
+      "sha256": "dc7a04db10efb281115d3eea48f3551f8cd32e80291624bed51fead69d19f7dd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/replay.py",
+      "bytes": 1893,
+      "sha256": "f4d65f58fe9eef67d759f59790e78bbfddf1ac7014c5c30a6d8e08f7652be7c8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/result-O.json",
+      "bytes": 7584,
+      "sha256": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/result.json",
+      "bytes": 7584,
+      "sha256": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/two-sheet-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/two-sheet-O.json",
+      "bytes": 4018,
+      "sha256": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/two-sheet.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/two-sheet.json",
+      "bytes": 4018,
+      "sha256": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/two_sheet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/two_sheet.py",
+      "bytes": 2225,
+      "sha256": "0cd36a1a80686c0b75bd22eae735281e5c60223f5d86bf42fb0ae4e5453078d9"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/verify.py",
+      "bytes": 2878,
+      "sha256": "f0c2aba2cfdb7dc5e4a108d1dd945a8ca0b5d2053433132b3550418667b57cda"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/verify_base.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/verify_base.py",
+      "bytes": 5064,
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-boundary-projectivization/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/boundary-projectivization/MANIFEST.json",
+      "bytes": 1383,
+      "sha256": "9b52b7d7495d418de0f561b8ae7e95c08736f316b2d0c7926a01a54d08248439"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/REPORT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/REPORT.md",
+      "bytes": 5371,
+      "sha256": "73b8c38e6ae11f8af8bd5285fcfec35f2b9a40eeb75a8e15c05fd5d0d43d492d"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/audit.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/audit.py",
+      "bytes": 6739,
+      "sha256": "dc5183de1f7d20838a1c08d73527587260eac1aea237328bf1dd9955e603c049"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/MANIFEST.json",
+      "bytes": 1383,
+      "sha256": "9b52b7d7495d418de0f561b8ae7e95c08736f316b2d0c7926a01a54d08248439"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/README.md",
+      "bytes": 5814,
+      "sha256": "3802a9e1c629d193534fdcb5555315c34eddcda9f24ef931583c8aa75beb3782"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/TWO-SHEET.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/TWO-SHEET.md",
+      "bytes": 3814,
+      "sha256": "8cf92e13d7cacfbc714f6411bad9250ce00bf69dd5c7bc03ba23bab37ea95f03"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/algebra-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/algebra-O.json",
+      "bytes": 14651,
+      "sha256": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/algebra.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/algebra.json",
+      "bytes": 14651,
+      "sha256": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/algebra.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/algebra.py",
+      "bytes": 2104,
+      "sha256": "d5cf775aea0544c1a32f4b621571fce2c52666c2a6ffdb02592af483f2830adc"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/blockers.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/blockers.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/provenance.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/provenance.json",
+      "bytes": 467,
+      "sha256": "dc7a04db10efb281115d3eea48f3551f8cd32e80291624bed51fead69d19f7dd"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/replay.py",
+      "bytes": 1893,
+      "sha256": "f4d65f58fe9eef67d759f59790e78bbfddf1ac7014c5c30a6d8e08f7652be7c8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/result-O.json",
+      "bytes": 7584,
+      "sha256": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/result.json",
+      "bytes": 7584,
+      "sha256": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/two-sheet-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/two-sheet-O.json",
+      "bytes": 4018,
+      "sha256": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/two-sheet.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/two-sheet.json",
+      "bytes": 4018,
+      "sha256": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/two_sheet.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/two_sheet.py",
+      "bytes": 2225,
+      "sha256": "0cd36a1a80686c0b75bd22eae735281e5c60223f5d86bf42fb0ae4e5453078d9"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/verify.py",
+      "bytes": 2878,
+      "sha256": "f0c2aba2cfdb7dc5e4a108d1dd945a8ca0b5d2053433132b3550418667b57cda"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/input/verify_base.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/input/verify_base.py",
+      "bytes": 5064,
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/replay.py",
+      "bytes": 1628,
+      "sha256": "f66283b5c8f5dfa5fe312bfa3065f30e900266e82aac950b1594d28203c29cdb"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/result-O.json",
+      "bytes": 867,
+      "sha256": "09ebed37331659330a30ea75e836293790547fcc5d9a222ea3469b94196a07f8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/result.json",
+      "bytes": 867,
+      "sha256": "09ebed37331659330a30ea75e836293790547fcc5d9a222ea3469b94196a07f8"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-boundary-polarity/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-boundary-polarity/MANIFEST.json",
+      "bytes": 1998,
+      "sha256": "72cf12265eea599c3d6c7a7c79478ae78f082c892a2ccc38c7415413f1571a99"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/README.md",
+      "bytes": 5116,
+      "sha256": "3ef10f65bab62d73413e9e47481a2ee5fc9343adb9482dc9bd154305c7dd3748"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/inputs/HYP-9168.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/inputs/HYP-9168.md",
+      "bytes": 5403,
+      "sha256": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/inputs/Hall-census.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/inputs/Hall-census.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/inputs/P7-blockers.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/inputs/P7-blockers.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/provenance.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/provenance.json",
+      "bytes": 530,
+      "sha256": "20cdc5e486ed89f5b959191e92e0e26bb1c6a2d14556121d327594f1d58b6699"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/replay.py",
+      "bytes": 1829,
+      "sha256": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/result-O.json",
+      "bytes": 5278,
+      "sha256": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/result.json",
+      "bytes": 5278,
+      "sha256": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/verify.py",
+      "bytes": 2919,
+      "sha256": "005bec7f06f7ed24e44608d0f301e500d4c0079b7775d6a1a470b59f187b7783"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-packing-bound/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-packing-bound/MANIFEST.json",
+      "bytes": 874,
+      "sha256": "5213de5e2193cd43e952d529277bb44eca5053fa4d86d9b9afcee944458bc116"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/AUDIT.md",
+      "bytes": 2923,
+      "sha256": "b36f58122422d5900496bfac7fe5f0d14e2e7f87ffeb78f12d2fbf8e0d25efd1"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/audit.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/audit.py",
+      "bytes": 3372,
+      "sha256": "d1d69688c443e1ef3d6dc44facbf1a69f44b3ec96229c0b85e9e701f7de608fe"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/math/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/math/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md",
+      "bytes": 5403,
+      "sha256": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/MANIFEST.json",
+      "bytes": 874,
+      "sha256": "5213de5e2193cd43e952d529277bb44eca5053fa4d86d9b9afcee944458bc116"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/README.md",
+      "bytes": 5116,
+      "sha256": "3ef10f65bab62d73413e9e47481a2ee5fc9343adb9482dc9bd154305c7dd3748"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/HYP-9168.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/HYP-9168.md",
+      "bytes": 5403,
+      "sha256": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/Hall-census.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/Hall-census.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/P7-blockers.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/inputs/P7-blockers.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/provenance.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/provenance.json",
+      "bytes": 530,
+      "sha256": "20cdc5e486ed89f5b959191e92e0e26bb1c6a2d14556121d327594f1d58b6699"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/replay.py",
+      "bytes": 1829,
+      "sha256": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/result-O.json",
+      "bytes": 5278,
+      "sha256": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/result.json",
+      "bytes": 5278,
+      "sha256": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-cycle-packing-bound/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-cycle-packing-bound/verify.py",
+      "bytes": 2919,
+      "sha256": "005bec7f06f7ed24e44608d0f301e500d4c0079b7775d6a1a470b59f187b7783"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-p11-stress/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-p11-stress/MANIFEST.json",
+      "bytes": 1164,
+      "sha256": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-p11-stress/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-p11-stress/result.json",
+      "bytes": 167058,
+      "sha256": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-sixtythree-bridge/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-sixtythree-bridge/MANIFEST.json",
+      "bytes": 1781,
+      "sha256": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/inputs/session54-sixtythree-bridge/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/inputs/session54-sixtythree-bridge/result.json",
+      "bytes": 15079,
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/replay.py",
+      "bytes": 1957,
+      "sha256": "0f03e530a3e7523a2d80ef6b24217a32af5c730fa65d41f2d71f384c325f96a5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/replay.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/replay.txt",
+      "bytes": 88,
+      "sha256": "486062d514ac7a9d3e35f60a744c73260687f5f911d9081f615107dbe32ead99"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/result-O.json",
+      "bytes": 302,
+      "sha256": "fd2e5bd14c622b2857dd2970b3b3241863c133f3f677e665d5006c99451b4b2a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/result.json",
+      "bytes": 302,
+      "sha256": "fd2e5bd14c622b2857dd2970b3b3241863c133f3f677e665d5006c99451b4b2a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-packing/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-packing/MANIFEST.json",
+      "bytes": 2486,
+      "sha256": "fc3b197c25bed626dffa5164e8e477b8d36c696a2bb2cf1501d8935b6cca1ea4"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/README.md",
+      "bytes": 9660,
+      "sha256": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/rank-11.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/rank-11.json",
+      "bytes": 6168,
+      "sha256": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/rank-7.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/rank-7.json",
+      "bytes": 1619,
+      "sha256": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/replay.py",
+      "bytes": 1829,
+      "sha256": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/result-O.json",
+      "bytes": 85817,
+      "sha256": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/result.json",
+      "bytes": 85817,
+      "sha256": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/verify.py",
+      "bytes": 5242,
+      "sha256": "ff30186a5cbc97f28e6c5ea58305929a2555506f88e3309a62c8c5b3ab437cde"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-cycle-potential-classification/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/cycle-potential-classification/MANIFEST.json",
+      "bytes": 767,
+      "sha256": "6b05de37509f3a6f041362b21c8bb98f09ec8e27c4c9470df90bf0c3433a1693"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/AUDIT.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/AUDIT.md",
+      "bytes": 4667,
+      "sha256": "e2aac7c685a679e35f43bfdfe9126c7cc725e2a1c20a9ac4cc345dd022467c83"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/audit.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/audit.py",
+      "bytes": 5987,
+      "sha256": "53607d3a63e3a38a19921ac1e805c92dd33274cb3447bf47c3c13a18ed8f9763"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/MANIFEST.json",
+      "bytes": 767,
+      "sha256": "6b05de37509f3a6f041362b21c8bb98f09ec8e27c4c9470df90bf0c3433a1693"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/README.md",
+      "bytes": 9660,
+      "sha256": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/rank-11.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/rank-11.json",
+      "bytes": 6168,
+      "sha256": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/rank-7.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/rank-7.json",
+      "bytes": 1619,
+      "sha256": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/replay.py",
+      "bytes": 1829,
+      "sha256": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/result-O.json",
+      "bytes": 85817,
+      "sha256": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/result.json",
+      "bytes": 85817,
+      "sha256": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/inputs/session54-cycle-potential-classification/verify.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/inputs/session54-cycle-potential-classification/verify.py",
+      "bytes": 5242,
+      "sha256": "ff30186a5cbc97f28e6c5ea58305929a2555506f88e3309a62c8c5b3ab437cde"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/producer-replay.txt",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/producer-replay.txt",
+      "bytes": 88,
+      "sha256": "486062d514ac7a9d3e35f60a744c73260687f5f911d9081f615107dbe32ead99"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/replay.py",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/replay.py",
+      "bytes": 1957,
+      "sha256": "0f03e530a3e7523a2d80ef6b24217a32af5c730fa65d41f2d71f384c325f96a5"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/result-O.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/result-O.json",
+      "bytes": 877,
+      "sha256": "5d35982fbc36d361e3a227f36195a5c35d4db625ca58fb7e37ccbad11e28bc00"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/result.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/result.json",
+      "bytes": 877,
+      "sha256": "5d35982fbc36d361e3a227f36195a5c35d4db625ca58fb7e37ccbad11e28bc00"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-audit-cycle-potential/MANIFEST.json",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/audit-cycle-potential/MANIFEST.json",
+      "bytes": 1663,
+      "sha256": "9733ade0901b07b2e6d00e80e43b4d4355215bb7d85e937b0fb459dd4a75587a"
+    },
+    {
+      "source": "/workspace/scratch/07d5532f2fce/session54-root/second/README.md",
+      "destination": "05-knowledge/results/session54_reframed_numerology_20261025/README.md",
+      "bytes": 13641,
+      "sha256": "ae917911527b5d72bf7a30bd81ef38fa627bc9fb270051843afa20b884820799"
+    }
+  ]
+}

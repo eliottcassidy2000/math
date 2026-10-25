@@ -1,0 +1,22 @@
+{
+  "files": {
+    "CONVERSE.md": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db",
+    "README.md": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83",
+    "converse-O.json": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125",
+    "converse.json": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125",
+    "extend_converse.py": "e92686c562bd864ff4c173f66017608fc6cd154960f6f4549e387680da5736ab",
+    "inputs/01-canon/ACTIVE-GUARDRAILS.md": "fa66fea75074f148c78af934fe4b135c5e35d9f9f5c800c294df396265389b47",
+    "inputs/01-canon/MISTAKES.md": "6d3759beab6340d5d164ca64d365a759c8e6b989bf7dbe10eed8c6853105a40c",
+    "inputs/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e",
+    "inputs/05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md": "f09deca8e7b6b18eb49540a4a27cd3b93d591cccadad2032fc8cad55f0f9993b",
+    "inputs/05-knowledge/results/sixes_and_sevens_20261006.md": "2c1ee5e794073779430c92e4116aee699c43d50b5d9f89fd2a731f802dc72bed",
+    "inputs/AGENTS.md": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+    "replay.py": "acb353842921ecfd23293124fc331a0e7117ddcdd609aa9c7a5475feda90926f",
+    "result-O.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "result.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "source-pins.json": "51375e4b754a1412b002691eab2919b983b7a89c797bf2fef1a0af5e240250bc",
+    "verify.py": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+  },
+  "format": "sha256-exact-file-set-v1",
+  "replay": "python -B /path/to/packet/replay.py --self-test"
+}

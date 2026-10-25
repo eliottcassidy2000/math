@@ -1,0 +1,162 @@
+{
+  "GF_rational_sample_count_per_budget": 4,
+  "budgets": [
+    {
+      "budget": 0,
+      "first_four": [
+        2,
+        6,
+        18,
+        54
+      ],
+      "hankel_rank": 1,
+      "initial": [
+        2
+      ]
+    },
+    {
+      "budget": 1,
+      "first_four": [
+        4,
+        18,
+        72,
+        270
+      ],
+      "hankel_rank": 2,
+      "initial": [
+        2,
+        2
+      ]
+    },
+    {
+      "budget": 2,
+      "first_four": [
+        4,
+        24,
+        126,
+        594
+      ],
+      "hankel_rank": 3,
+      "initial": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "budget": 3,
+      "first_four": [
+        4,
+        24,
+        144,
+        810
+      ],
+      "hankel_rank": 4,
+      "initial": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "budget": 4,
+      "first_four": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "hankel_rank": 5,
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "budget": 5,
+      "first_four": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "hankel_rank": 6,
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "budget": 6,
+      "first_four": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "hankel_rank": 7,
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "budget": 7,
+      "first_four": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "hankel_rank": 8,
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "budget": 8,
+      "first_four": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "hankel_rank": 9,
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "digit_enumeration_depth": 6,
+  "hostile_models_rejected": 3,
+  "matrix_levels": 30,
+  "status": "PASS"
+}

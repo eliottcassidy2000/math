@@ -1,0 +1,1 @@
+PASS: exact audit closure; manifest-only producer relocation; all source pins; producer and independent normal/-O replay; semantic and extra/digest/missing-file hostiles

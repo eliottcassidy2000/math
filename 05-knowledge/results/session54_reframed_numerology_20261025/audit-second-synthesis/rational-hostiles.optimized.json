@@ -1,0 +1,50 @@
+[
+  {
+    "case": "wrong_N3",
+    "optimized": false,
+    "rejected": true,
+    "reason": "RuntimeError: independent LCM 3"
+  },
+  {
+    "case": "wrong_N3",
+    "optimized": true,
+    "rejected": true,
+    "reason": "RuntimeError: independent LCM 3"
+  },
+  {
+    "case": "omit_five_d1",
+    "optimized": false,
+    "rejected": true,
+    "reason": "RuntimeError: factorization"
+  },
+  {
+    "case": "omit_five_d1",
+    "optimized": true,
+    "rejected": true,
+    "reason": "RuntimeError: factorization"
+  },
+  {
+    "case": "wrong_passing_count",
+    "optimized": false,
+    "rejected": true,
+    "reason": "RuntimeError: producer bounded count"
+  },
+  {
+    "case": "wrong_passing_count",
+    "optimized": true,
+    "rejected": true,
+    "reason": "RuntimeError: producer bounded count"
+  },
+  {
+    "case": "wrong_affine_normalization",
+    "optimized": false,
+    "rejected": true,
+    "reason": "RuntimeError: affine CM elimination"
+  },
+  {
+    "case": "wrong_affine_normalization",
+    "optimized": true,
+    "rejected": true,
+    "reason": "RuntimeError: affine CM elimination"
+  }
+]

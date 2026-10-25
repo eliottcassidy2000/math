@@ -1,0 +1,19 @@
+{
+  "sixtythree-bridge/README.md": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83",
+  "sixtythree-bridge/CONVERSE.md": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db",
+  "audit-sixtythree/REPORT.md": "053536c731a76df8d0255ee5b610056be48abcdd7015edd66014b48978d3352b",
+  "p11-stress/README.md": "a8a643faeb6f2bdca863e39450ac49d0f5271eced6af12d07bb6bd9f412a9d89",
+  "audit-p11/REPORT.md": "23234e54f1999fa4ab387802c264ecae78e71783bd14b4f7efa83f963069c2d0",
+  "fractal-budget-transfer/REPORT.md": "913f36e6a264b938a4bdcf2a90d45d697fdea9167ffa607908b7b544c45a716c",
+  "audit-budget-transfer/REPORT.md": "dbf9bb5cb16a0f58bd7fc93e8b2a49f88e53e7e4e69e738d2bc11ece829e536f",
+  "rational-cm-observer/README.md": "f9d500a3227b8cc7dcc88a04a3443e0d18dbadfad2d4293529dc72539debc2e5",
+  "rational-cm-observer/THEOREM.md": "520255265a3a323600689ba19ebecc646f09f9253e35e91cf897acc3d83c59bb",
+  "audit-rational-observer/AUDIT.md": "0192259564ee6d98d1aa7527ea52e600e6f48ac0007994bd69415afa009e9875",
+  "boundary-projectivization/README.md": "3802a9e1c629d193534fdcb5555315c34eddcda9f24ef931583c8aa75beb3782",
+  "boundary-projectivization/TWO-SHEET.md": "8cf92e13d7cacfbc714f6411bad9250ce00bf69dd5c7bc03ba23bab37ea95f03",
+  "audit-boundary-polarity/REPORT.md": "73b8c38e6ae11f8af8bd5285fcfec35f2b9a40eeb75a8e15c05fd5d0d43d492d",
+  "cycle-packing-bound/README.md": "3ef10f65bab62d73413e9e47481a2ee5fc9343adb9482dc9bd154305c7dd3748",
+  "audit-cycle-packing/AUDIT.md": "b36f58122422d5900496bfac7fe5f0d14e2e7f87ffeb78f12d2fbf8e0d25efd1",
+  "cycle-potential-classification/README.md": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af",
+  "audit-cycle-potential/AUDIT.md": "e2aac7c685a679e35f43bfdfe9126c7cc725e2a1c20a9ac4cc345dd022467c83"
+}

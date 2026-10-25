@@ -1,0 +1,162 @@
+{
+  "budgets": [
+    {
+      "b": 0,
+      "first_four_totals": [
+        2,
+        6,
+        18,
+        54
+      ],
+      "initial": [
+        2
+      ],
+      "minimal_pole_order": 1,
+      "numerator_in_x": [
+        2
+      ]
+    },
+    {
+      "b": 1,
+      "first_four_totals": [
+        4,
+        18,
+        72,
+        270
+      ],
+      "initial": [
+        2,
+        2
+      ],
+      "minimal_pole_order": 2,
+      "numerator_in_x": [
+        4,
+        -2
+      ]
+    },
+    {
+      "b": 2,
+      "first_four_totals": [
+        4,
+        24,
+        126,
+        594
+      ],
+      "initial": [
+        2,
+        2,
+        0
+      ],
+      "minimal_pole_order": 3,
+      "numerator_in_x": [
+        4,
+        -4,
+        2
+      ]
+    },
+    {
+      "b": 3,
+      "first_four_totals": [
+        4,
+        24,
+        144,
+        810
+      ],
+      "initial": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "minimal_pole_order": 4,
+      "numerator_in_x": [
+        4,
+        -8,
+        8,
+        -2
+      ]
+    },
+    {
+      "b": 4,
+      "first_four_totals": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "minimal_pole_order": 5,
+      "numerator_in_x": [
+        4,
+        -12,
+        16,
+        -8,
+        2
+      ]
+    },
+    {
+      "b": 5,
+      "first_four_totals": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimal_pole_order": 6,
+      "numerator_in_x": [
+        4,
+        -16,
+        28,
+        -24,
+        12,
+        -2
+      ]
+    },
+    {
+      "b": 6,
+      "first_four_totals": [
+        4,
+        24,
+        144,
+        864
+      ],
+      "initial": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimal_pole_order": 7,
+      "numerator_in_x": [
+        4,
+        -20,
+        44,
+        -52,
+        36,
+        -12,
+        2
+      ]
+    }
+  ],
+  "direct_orbit_depth": 4,
+  "hostile_controls": 4,
+  "status": "PASS",
+  "transfer_and_GF_levels": 20
+}

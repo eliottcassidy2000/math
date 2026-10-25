@@ -1,0 +1,14 @@
+{
+  "copied_dependencies": {
+    "blockers.json": {
+      "sha256": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+      "source": "result.json"
+    },
+    "verify_base.py": {
+      "sha256": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb",
+      "source": "verify.py"
+    }
+  },
+  "source_manifest_sha256": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e",
+  "source_packet": "session54-sixtythree-bridge"
+}

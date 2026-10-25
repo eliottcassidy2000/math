@@ -1,0 +1,17 @@
+[
+  {
+    "hostile": "missing",
+    "rejected": true,
+    "reason": "file-set mismatch: ['independent.json']"
+  },
+  {
+    "hostile": "nested-extra",
+    "rejected": true,
+    "reason": "file-set mismatch: ['nested/extra']"
+  },
+  {
+    "hostile": "modified",
+    "rejected": true,
+    "reason": "digest mismatch: fixed-points.json"
+  }
+]

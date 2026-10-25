@@ -1,0 +1,1 @@
+PASS: manifest, exact file set, arbitrary-directory normal/-O replay, mutation hostiles

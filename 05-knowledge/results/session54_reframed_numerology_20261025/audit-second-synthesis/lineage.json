@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "git_pinned_or_byte_identical_sources": [
+    "01-canon/ACTIVE-GUARDRAILS.md",
+    "01-canon/MISTAKES.md",
+    "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+    "05-knowledge/results/mod18_mod19_seven_sixtythree_fractal_20261006.md",
+    "05-knowledge/results/sixes_and_sevens_20261006.md",
+    "AGENTS.md",
+    "boundary/blockers.json",
+    "boundary/verify_base.py",
+    "packing/inputs/HYP-9168.md",
+    "packing/inputs/Hall-census.json",
+    "packing/inputs/P7-blockers.json"
+  ],
+  "budget_inheritance": true
+}

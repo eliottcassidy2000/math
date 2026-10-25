@@ -1,0 +1,20 @@
+{
+  "files": {
+    "README.md": "3802a9e1c629d193534fdcb5555315c34eddcda9f24ef931583c8aa75beb3782",
+    "TWO-SHEET.md": "8cf92e13d7cacfbc714f6411bad9250ce00bf69dd5c7bc03ba23bab37ea95f03",
+    "algebra-O.json": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff",
+    "algebra.json": "1958c71f2ce9801e0dbc9b1904dddcc078c695b4c7143570eef3c901e5878fff",
+    "algebra.py": "d5cf775aea0544c1a32f4b621571fce2c52666c2a6ffdb02592af483f2830adc",
+    "blockers.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "provenance.json": "dc7a04db10efb281115d3eea48f3551f8cd32e80291624bed51fead69d19f7dd",
+    "replay.py": "f4d65f58fe9eef67d759f59790e78bbfddf1ac7014c5c30a6d8e08f7652be7c8",
+    "result-O.json": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253",
+    "result.json": "5d99cecdc8a42b8b8e1dcea8d56acc5be9bdd360f58cc57b5468bf5e8f4d3253",
+    "two-sheet-O.json": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca",
+    "two-sheet.json": "f568a48d86e1138b9d7727b1d913704e456a3036d4c4ad47a05bc7e565c268ca",
+    "two_sheet.py": "0cd36a1a80686c0b75bd22eae735281e5c60223f5d86bf42fb0ae4e5453078d9",
+    "verify.py": "f0c2aba2cfdb7dc5e4a108d1dd945a8ca0b5d2053433132b3550418667b57cda",
+    "verify_base.py": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

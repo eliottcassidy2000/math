@@ -1,0 +1,59 @@
+{
+  "G42_equations": 2646,
+  "blockers": 63,
+  "candidate_counts": {
+    "5": 20349,
+    "6": 54264
+  },
+  "enumeration_method": "independent DFS Hamiltonian paths and arc-cover bitsets; no producer imports",
+  "fixed_blockers": [
+    295431
+  ],
+  "hostile_naive_converse_mismatches": 42,
+  "metric_witness": [
+    63,
+    2883,
+    8
+  ],
+  "orbits": [
+    {
+      "phase_orders": [
+        9
+      ],
+      "size": 42,
+      "stabilizer_order": 1
+    },
+    {
+      "phase_orders": [
+        3
+      ],
+      "size": 14,
+      "stabilizer_order": 3
+    },
+    {
+      "phase_orders": [
+        1
+      ],
+      "size": 7,
+      "stabilizer_order": 6
+    }
+  ],
+  "paths": 189,
+  "source_hashes": {
+    "CONVERSE.md": "18d568c129941ec7b3dbf4b1c7becc14b990b09e77a1f7c7774e51dcc045e8db",
+    "README.md": "716c0776db45065193de1a00849bd0b951bec403c175d728617b5d2eed57ae83",
+    "converse-O.json": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125",
+    "converse.json": "909636adbf7641f7efe837ee9d531e1cff7df0f6f354288034cad2b829912125",
+    "extend_converse.py": "e92686c562bd864ff4c173f66017608fc6cd154960f6f4549e387680da5736ab",
+    "result-O.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "result.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "source-pins.json": "51375e4b754a1412b002691eab2919b983b7a89c797bf2fef1a0af5e240250bc",
+    "verify.py": "4d1eb6ba8afa6ea7bd5588ef61bcf550b1121312c43da94c924f40d3d6e7b3fb"
+  },
+  "status": "PASS",
+  "xor_witness": [
+    63,
+    2883,
+    2940
+  ]
+}

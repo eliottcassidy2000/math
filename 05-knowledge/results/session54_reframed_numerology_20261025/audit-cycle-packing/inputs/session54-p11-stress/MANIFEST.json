@@ -1,0 +1,17 @@
+{
+  "dependencies": "Python standard library only; all mathematical data reconstructed from P7/P11 arc rule",
+  "files": {
+    "README.md": "a8a643faeb6f2bdca863e39450ac49d0f5271eced6af12d07bb6bd9f412a9d89",
+    "check_independent.py": "6ab9a2e5a75fe4357df9afd8c40e06ad984560f975a2787a08e8b8cdb470443e",
+    "fixed-points-O.json": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7",
+    "fixed-points.json": "a8bbe12b96cdccfbfdd862ff641e1eee072bc70d9cfc9f9ec1d9c6078db046e7",
+    "fixed_point_stress.py": "7a45cc8b9c8b01b93a7c5cb8153d111e437f1c5d851a1f319ee841874b856ee5",
+    "hall.py": "6f9fda619b1b5ceb63e53e07586248577782ce2cbee7b832740778f730dac726",
+    "independent-O.json": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c",
+    "independent.json": "65152368162961e68d491c21f75d980dc55932ace647055ccaff055b90ec0e1c",
+    "replay.py": "d989cab592f22e7eb5516fa8316a2d66f6a727a22c7224f32af0fb9f90a08446",
+    "result-O.json": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a",
+    "result.json": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

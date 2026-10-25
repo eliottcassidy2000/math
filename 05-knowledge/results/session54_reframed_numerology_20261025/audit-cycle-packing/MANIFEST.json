@@ -1,0 +1,26 @@
+{
+  "files": {
+    "AUDIT.md": "b36f58122422d5900496bfac7fe5f0d14e2e7f87ffeb78f12d2fbf8e0d25efd1",
+    "audit.py": "d1d69688c443e1ef3d6dc44facbf1a69f44b3ec96229c0b85e9e701f7de608fe",
+    "inputs/math/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434",
+    "inputs/session54-cycle-packing-bound/MANIFEST.json": "5213de5e2193cd43e952d529277bb44eca5053fa4d86d9b9afcee944458bc116",
+    "inputs/session54-cycle-packing-bound/README.md": "3ef10f65bab62d73413e9e47481a2ee5fc9343adb9482dc9bd154305c7dd3748",
+    "inputs/session54-cycle-packing-bound/inputs/HYP-9168.md": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434",
+    "inputs/session54-cycle-packing-bound/inputs/Hall-census.json": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a",
+    "inputs/session54-cycle-packing-bound/inputs/P7-blockers.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "inputs/session54-cycle-packing-bound/provenance.json": "20cdc5e486ed89f5b959191e92e0e26bb1c6a2d14556121d327594f1d58b6699",
+    "inputs/session54-cycle-packing-bound/replay.py": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359",
+    "inputs/session54-cycle-packing-bound/result-O.json": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff",
+    "inputs/session54-cycle-packing-bound/result.json": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff",
+    "inputs/session54-cycle-packing-bound/verify.py": "005bec7f06f7ed24e44608d0f301e500d4c0079b7775d6a1a470b59f187b7783",
+    "inputs/session54-p11-stress/MANIFEST.json": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26",
+    "inputs/session54-p11-stress/result.json": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a",
+    "inputs/session54-sixtythree-bridge/MANIFEST.json": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e",
+    "inputs/session54-sixtythree-bridge/result.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "replay.py": "0f03e530a3e7523a2d80ef6b24217a32af5c730fa65d41f2d71f384c325f96a5",
+    "replay.txt": "486062d514ac7a9d3e35f60a744c73260687f5f911d9081f615107dbe32ead99",
+    "result-O.json": "fd2e5bd14c622b2857dd2970b3b3241863c133f3f677e665d5006c99451b4b2a",
+    "result.json": "fd2e5bd14c622b2857dd2970b3b3241863c133f3f677e665d5006c99451b4b2a"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

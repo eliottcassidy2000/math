@@ -1,0 +1,355 @@
+{
+  "fixed_blockers": [
+    295431
+  ],
+  "map": [
+    {
+      "blocker": 63,
+      "exponent": 8,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 455,
+      "exponent": 2,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 3591,
+      "exponent": 59,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 295431,
+      "exponent": 0,
+      "type": "star"
+    },
+    {
+      "blocker": 28679,
+      "exponent": 32,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 229383,
+      "exponent": 47,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1835015,
+      "exponent": 62,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 593931,
+      "exponent": 10,
+      "type": "two-source"
+    },
+    {
+      "blocker": 2883,
+      "exponent": 57,
+      "type": "common-out"
+    },
+    {
+      "blocker": 163893,
+      "exponent": 39,
+      "type": "common-out"
+    },
+    {
+      "blocker": 529541,
+      "exponent": 40,
+      "type": "two-source"
+    },
+    {
+      "blocker": 528441,
+      "exponent": 9,
+      "type": "star"
+    },
+    {
+      "blocker": 37457,
+      "exponent": 33,
+      "type": "common-in"
+    },
+    {
+      "blocker": 1577041,
+      "exponent": 25,
+      "type": "two-source"
+    },
+    {
+      "blocker": 657697,
+      "exponent": 15,
+      "type": "common-in"
+    },
+    {
+      "blocker": 538657,
+      "exponent": 13,
+      "type": "two-source"
+    },
+    {
+      "blocker": 676097,
+      "exponent": 7,
+      "type": "two-source"
+    },
+    {
+      "blocker": 823809,
+      "exponent": 1,
+      "type": "two-source"
+    },
+    {
+      "blocker": 66702,
+      "exponent": 34,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1335302,
+      "exponent": 30,
+      "type": "common-out"
+    },
+    {
+      "blocker": 1114202,
+      "exponent": 19,
+      "type": "two-source"
+    },
+    {
+      "blocker": 75818,
+      "exponent": 49,
+      "type": "two-source"
+    },
+    {
+      "blocker": 65994,
+      "exponent": 18,
+      "type": "star"
+    },
+    {
+      "blocker": 279306,
+      "exponent": 24,
+      "type": "common-in"
+    },
+    {
+      "blocker": 213258,
+      "exponent": 22,
+      "type": "two-source"
+    },
+    {
+      "blocker": 360970,
+      "exponent": 16,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1124418,
+      "exponent": 51,
+      "type": "common-in"
+    },
+    {
+      "blocker": 1049812,
+      "exponent": 28,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1197076,
+      "exponent": 60,
+      "type": "common-in"
+    },
+    {
+      "blocker": 11428,
+      "exponent": 37,
+      "type": "two-source"
+    },
+    {
+      "blocker": 303268,
+      "exponent": 6,
+      "type": "common-in"
+    },
+    {
+      "blocker": 148868,
+      "exponent": 52,
+      "type": "two-source"
+    },
+    {
+      "blocker": 296580,
+      "exponent": 4,
+      "type": "two-source"
+    },
+    {
+      "blocker": 29828,
+      "exponent": 36,
+      "type": "star"
+    },
+    {
+      "blocker": 504,
+      "exponent": 17,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 3640,
+      "exponent": 11,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 28728,
+      "exponent": 5,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 229432,
+      "exponent": 41,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1835064,
+      "exponent": 56,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 22040,
+      "exponent": 3,
+      "type": "common-out"
+    },
+    {
+      "blocker": 786856,
+      "exponent": 48,
+      "type": "common-out"
+    },
+    {
+      "blocker": 595080,
+      "exponent": 42,
+      "type": "common-in"
+    },
+    {
+      "blocker": 1058928,
+      "exponent": 43,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1196368,
+      "exponent": 58,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1052240,
+      "exponent": 27,
+      "type": "star"
+    },
+    {
+      "blocker": 1344080,
+      "exponent": 31,
+      "type": "two-source"
+    },
+    {
+      "blocker": 157984,
+      "exponent": 46,
+      "type": "two-source"
+    },
+    {
+      "blocker": 305696,
+      "exponent": 61,
+      "type": "two-source"
+    },
+    {
+      "blocker": 239648,
+      "exponent": 45,
+      "type": "star"
+    },
+    {
+      "blocker": 4032,
+      "exponent": 26,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 29120,
+      "exponent": 20,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 229824,
+      "exponent": 14,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1835456,
+      "exponent": 50,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 110784,
+      "exponent": 12,
+      "type": "common-out"
+    },
+    {
+      "blocker": 443136,
+      "exponent": 55,
+      "type": "two-source"
+    },
+    {
+      "blocker": 1982720,
+      "exponent": 54,
+      "type": "star"
+    },
+    {
+      "blocker": 32256,
+      "exponent": 35,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 232960,
+      "exponent": 29,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1838592,
+      "exponent": 23,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1772544,
+      "exponent": 21,
+      "type": "common-out"
+    },
+    {
+      "blocker": 258048,
+      "exponent": 44,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 1863680,
+      "exponent": 38,
+      "type": "two-sink"
+    },
+    {
+      "blocker": 2064384,
+      "exponent": 53,
+      "type": "two-sink"
+    }
+  ],
+  "orbits": [
+    {
+      "phase_orders": [
+        9
+      ],
+      "size": 42,
+      "types": [
+        "two-sink",
+        "two-source"
+      ]
+    },
+    {
+      "phase_orders": [
+        3
+      ],
+      "size": 14,
+      "types": [
+        "common-in",
+        "common-out"
+      ]
+    },
+    {
+      "phase_orders": [
+        1
+      ],
+      "size": 7,
+      "types": [
+        "star"
+      ]
+    }
+  ],
+  "ordinary_even_fixed_count": 7,
+  "status": "PASS"
+}

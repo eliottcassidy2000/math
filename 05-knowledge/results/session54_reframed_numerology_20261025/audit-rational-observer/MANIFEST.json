@@ -1,0 +1,16 @@
+{
+  "scope": "Independent text-only audit of uniform rational-observer CM conductor bound.",
+  "producer_manifest_sha256": "7f7e26f77074700b5b3adb40b575d99723e2faa64e8e8ad81bbad87fee58d223",
+  "files": {
+    "AUDIT.md": "0192259564ee6d98d1aa7527ea52e600e6f48ac0007994bd69415afa009e9875",
+    "audit_closed_packet.py": "fb689779c4322ef08131880f0086888888c8aa7110e840db524c74929d4027c5",
+    "closed-replay.json": "19d037833cdb24e5dc6bb1d41366b273c7376c2039c38f0200df376d5e9e302f",
+    "independent-rejections.json": "c8ac61046aa8346de883c409fd09b237a07ff72a855ce67dd526f4d8d113ccf2",
+    "independent.normal.json": "6d80463727ed5c10b14d4b8d3bd40a36669e292d1ca9e5965f351b47c3f575ca",
+    "independent.optimized.json": "6d80463727ed5c10b14d4b8d3bd40a36669e292d1ca9e5965f351b47c3f575ca",
+    "independent.py": "16d631fa1bb43a1ecd86a78b32b707661aae44a33158d88851cf49d0a1cefeba",
+    "inputs/producer-results.json": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f",
+    "test_independent_rejections.py": "a76815e433b67f3374ca8aa4ef109f9da8c8d437d702057337da32b0f09dffa4",
+    "verify_audit_manifest.py": "3d3d6bd32573460bc4b84600b4659688cc67063927177e9bccb35f986c77b51b"
+  }
+}

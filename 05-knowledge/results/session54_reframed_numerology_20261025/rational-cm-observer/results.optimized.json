@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "bounds": [
+    {
+      "d": 1,
+      "N": 120,
+      "prime_exponents": {
+        "2": 3,
+        "3": 1,
+        "5": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 8
+    },
+    {
+      "d": 2,
+      "N": 240,
+      "prime_exponents": {
+        "2": 4,
+        "3": 1,
+        "5": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 16
+    },
+    {
+      "d": 3,
+      "N": 65520,
+      "prime_exponents": {
+        "2": 4,
+        "3": 2,
+        "5": 1,
+        "7": 1,
+        "13": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 30
+    },
+    {
+      "d": 4,
+      "N": 2227680,
+      "prime_exponents": {
+        "2": 5,
+        "3": 2,
+        "5": 1,
+        "7": 1,
+        "13": 1,
+        "17": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 36
+    },
+    {
+      "d": 5,
+      "N": 122522400,
+      "prime_exponents": {
+        "2": 5,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "11": 1,
+        "13": 1,
+        "17": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 46
+    },
+    {
+      "d": 6,
+      "N": 122522400,
+      "prime_exponents": {
+        "2": 5,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "11": 1,
+        "13": 1,
+        "17": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 68
+    },
+    {
+      "d": 7,
+      "N": 3553149600,
+      "prime_exponents": {
+        "2": 5,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "11": 1,
+        "13": 1,
+        "17": 1,
+        "29": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 70
+    },
+    {
+      "d": 8,
+      "N": 7106299200,
+      "prime_exponents": {
+        "2": 6,
+        "3": 2,
+        "5": 2,
+        "7": 1,
+        "11": 1,
+        "13": 1,
+        "17": 1,
+        "29": 1
+      },
+      "sanity_range": [
+        3,
+        500
+      ],
+      "passing_count": 82
+    }
+  ],
+  "positive_affine_CM_control": {
+    "n": 5,
+    "d": 1,
+    "R": "85995*X-52515",
+    "minimal_polynomial": "J^2+191025*J-121287375",
+    "CM_discriminant": -15
+  },
+  "hostile_controls": [
+    "constant R=8000 has CM values at unbounded n",
+    "R=1/X has pole at n4",
+    "R=X/2 at n3 passes d1 group screen but gives nonintegral -1/2",
+    "n15 divides N1 but has square subgroup size2"
+  ]
+}

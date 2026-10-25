@@ -1,0 +1,16 @@
+{
+  "P11_fixed_ten_arc_candidates": 55,
+  "P11_multiplier3_fixed_minima": 1,
+  "P7_all_minima": 63,
+  "P7_profile_universe": 9261,
+  "inherited": {
+    "7": 63,
+    "11": 121
+  },
+  "manifest": "PASS",
+  "profile_only_hostiles": {
+    "7": "PASS",
+    "11": "PASS"
+  },
+  "source_provenance": "PASS"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "case": "wrong_odd_formula",
+    "rejected": true,
+    "reason": "odd prime-power formula"
+  },
+  {
+    "case": "wrong_N3",
+    "rejected": true,
+    "reason": "degree-three control"
+  },
+  {
+    "case": "wrong_affine_CM_control",
+    "rejected": true,
+    "reason": "H-15 affine positive control"
+  }
+]

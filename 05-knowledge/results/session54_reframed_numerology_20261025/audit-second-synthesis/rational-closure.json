@@ -1,0 +1,76 @@
+{
+  "status": "CLOSED REPLAY PASS",
+  "manifest_sha256": "7f7e26f77074700b5b3adb40b575d99723e2faa64e8e8ad81bbad87fee58d223",
+  "checks": [
+    {
+      "script": "verify_manifest.py",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "script": "check.py",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "script": "test_rejections.py",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "script": "verify_manifest.py",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "script": "check.py",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "script": "test_rejections.py",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "hostile": "corrupt",
+      "optimized": false,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "corrupt",
+      "optimized": true,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "missing",
+      "optimized": false,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "missing",
+      "optimized": true,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "extra",
+      "optimized": false,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "extra",
+      "optimized": true,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "nested-extra",
+      "optimized": false,
+      "status": "REJECTED"
+    },
+    {
+      "hostile": "nested-extra",
+      "optimized": true,
+      "status": "REJECTED"
+    }
+  ]
+}

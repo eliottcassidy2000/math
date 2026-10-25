@@ -1,0 +1,55 @@
+{
+  "independent_checks": [
+    {
+      "equality_certificate_count_by_t": {
+        "0": 21,
+        "1": 7,
+        "4": 7,
+        "5": 21
+      },
+      "examples": 63,
+      "hall": 56,
+      "minimum_by_k": {
+        "2": 6,
+        "3": 6,
+        "4": 7,
+        "5": 7,
+        "6": 6,
+        "7": 6
+      },
+      "n": 7,
+      "restoration_checks": 378,
+      "tested": 2002
+    },
+    {
+      "equality_certificate_count_by_t": {
+        "0": 55,
+        "9": 55
+      },
+      "examples": 121,
+      "hall": 110,
+      "minimum_by_k": {
+        "2": 10,
+        "3": 12,
+        "4": 14,
+        "5": 15,
+        "6": 15,
+        "7": 15,
+        "8": 15,
+        "9": 14,
+        "10": 12,
+        "11": 10
+      },
+      "n": 11,
+      "restoration_checks": 1210,
+      "tested": 497420
+    },
+    {
+      "invariant_10_sets": 55,
+      "invariant_5_sets": 11,
+      "surviving_paths": 65,
+      "unique_fixed_blocker": 1127034851951647
+    }
+  ],
+  "status": "PASS"
+}

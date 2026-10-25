@@ -1,0 +1,14 @@
+{
+  "files": {
+    "README.md": "3ef10f65bab62d73413e9e47481a2ee5fc9343adb9482dc9bd154305c7dd3748",
+    "inputs/HYP-9168.md": "2d07492345640705ff007691141ff13738e7c0170ecb5535b4e9a9953a045434",
+    "inputs/Hall-census.json": "2a74c66bee4eec3e74b01d49984ddfb8dbff3c3a2e02702c73eae514c1e8b26a",
+    "inputs/P7-blockers.json": "5c90e90ce01a89dbfad3f234d1472603a2e55340c9174109a6b54b8faf9b5af2",
+    "provenance.json": "20cdc5e486ed89f5b959191e92e0e26bb1c6a2d14556121d327594f1d58b6699",
+    "replay.py": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359",
+    "result-O.json": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff",
+    "result.json": "f30ee6b51f5e239169b1bc160ecf513361f66440d9e57037dc8d57bbb0375aff",
+    "verify.py": "005bec7f06f7ed24e44608d0f301e500d4c0079b7775d6a1a470b59f187b7783"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

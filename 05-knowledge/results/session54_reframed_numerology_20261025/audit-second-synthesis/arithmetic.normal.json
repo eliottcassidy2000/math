@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "norm_checked_nonzero": 63,
+  "conjugation_fixed": 7,
+  "inversion_fixed": 1,
+  "projective_points": 21,
+  "vectors_per_point": 3,
+  "projective_lines": 21,
+  "points_per_line": 5,
+  "base_flags": 105,
+  "lifted_edges": 945,
+  "lifted_degree": 15,
+  "Jordan_budgets": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "Hall_r_checked": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    27,
+    29
+  ],
+  "N_d_1_to_8": [
+    120,
+    240,
+    65520,
+    2227680,
+    122522400,
+    122522400,
+    3553149600,
+    7106299200
+  ],
+  "affine_n5_CM_identity": true
+}

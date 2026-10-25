@@ -1,0 +1,62 @@
+[
+  {
+    "packet": "sixtythree",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  },
+  {
+    "packet": "p11",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  },
+  {
+    "packet": "budget-transfer",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  },
+  {
+    "packet": "boundary-polarity",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  },
+  {
+    "packet": "cycle-packing",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  },
+  {
+    "packet": "cycle-potential",
+    "status": "PASS",
+    "command": [
+      "python",
+      "-B",
+      "replay.py",
+      "--self-test"
+    ]
+  }
+]

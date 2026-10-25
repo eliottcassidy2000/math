@@ -1,0 +1,15 @@
+{
+  "scope": "Portable text-only rational-observer supplement; frozen classification editions unchanged.",
+  "files": {
+    "README.md": "f9d500a3227b8cc7dcc88a04a3443e0d18dbadfad2d4293529dc72539debc2e5",
+    "SOURCES.json": "f6d9f246557bc01a0a1d0b7ece91a43bd3e19fede6db2af9341383a025e325d6",
+    "THEOREM.md": "520255265a3a323600689ba19ebecc646f09f9253e35e91cf897acc3d83c59bb",
+    "check.py": "80dc5f0c61b9a0a796b614e472e9041a98e04ab361d0fab8bed8b371a68bbf77",
+    "rejections.normal.json": "96bc590d37e1e6c5263e12ed65d1197e14773cbad3f2d1e4bec66912df8b8351",
+    "rejections.optimized.json": "96bc590d37e1e6c5263e12ed65d1197e14773cbad3f2d1e4bec66912df8b8351",
+    "results.normal.json": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f",
+    "results.optimized.json": "4af34d947c1db1ef371de7378893e369bcc8f4d31de0de12cf7cab3857fe1b6f",
+    "test_rejections.py": "4092cf30731aaa550dae76658173405c300ee4811d3a3585d6188333dcded218",
+    "verify_manifest.py": "dffad16bf1426d96f4dcffcf4b8d2e138915cd006db4cc62548b3c326a8d83cd"
+  }
+}

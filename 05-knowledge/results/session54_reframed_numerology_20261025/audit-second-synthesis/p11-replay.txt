@@ -1,0 +1,1 @@
+PASS: manifest-only relocation normal/-O; corrupt/missing/nested-extra rejected normal/-O

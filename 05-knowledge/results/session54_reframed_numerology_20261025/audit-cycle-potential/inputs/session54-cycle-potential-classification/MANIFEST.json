@@ -1,0 +1,13 @@
+{
+  "dependencies": "Self-contained finite cycle/endpoint certificates; Python standard library only",
+  "files": {
+    "README.md": "07cbc8f33e2ea4066fc5b02f953eb46f984f5b37b3ce627ade8fca733909b2af",
+    "rank-11.json": "7c28b44bc90da4961bc0e8838f6cc16a2cff920300810711387c4f866293c5ea",
+    "rank-7.json": "c9b193839bf824d4a52603763d1e727d03d91b6cf4d3b55036c218f5935f1b8b",
+    "replay.py": "4eabd403ab51c4664a84827743255cb493088cada77945af20c810cfe5fcb359",
+    "result-O.json": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db",
+    "result.json": "b94a52a28377951f0bbeaf859c912862bab26fd438426c0f37d05e623485e9db",
+    "verify.py": "ff30186a5cbc97f28e6c5ea58305929a2555506f88e3309a62c8c5b3ab437cde"
+  },
+  "format": "sha256-exact-file-set-v1"
+}

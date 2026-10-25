@@ -1,0 +1,5 @@
+normal replay.py: PASS closed file set, SHA256 manifest and normal/-O exact replay
+normal hostile.py: PASS corruption, missing member, unexpected nested member rejected
+-O replay.py: PASS closed file set, SHA256 manifest and normal/-O exact replay
+-O hostile.py: PASS corruption, missing member, unexpected nested member rejected
+PASS actual isolated manifest-only normal/-O replay and hostile rejection

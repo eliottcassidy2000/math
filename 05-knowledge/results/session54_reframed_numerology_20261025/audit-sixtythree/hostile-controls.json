@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "rejections": [
+    {
+      "mutation": "wrong_exponent",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "RuntimeError: producer exponent rows"
+    },
+    {
+      "mutation": "wrong_exponent",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "RuntimeError: producer exponent rows"
+    },
+    {
+      "mutation": "missing_blocker",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "RuntimeError: producer census"
+    },
+    {
+      "mutation": "missing_blocker",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "RuntimeError: producer census"
+    },
+    {
+      "mutation": "wrong_subset",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "RuntimeError: producer subset rows"
+    },
+    {
+      "mutation": "wrong_subset",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "RuntimeError: producer subset rows"
+    },
+    {
+      "mutation": "wrong_fourier",
+      "optimized": false,
+      "returncode": 1,
+      "reason": "RuntimeError: Fourier rows"
+    },
+    {
+      "mutation": "wrong_fourier",
+      "optimized": true,
+      "returncode": 1,
+      "reason": "RuntimeError: Fourier rows"
+    }
+  ]
+}

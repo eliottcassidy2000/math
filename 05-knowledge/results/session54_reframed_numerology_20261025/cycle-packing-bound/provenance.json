@@ -1,0 +1,11 @@
+{
+  "source_files": {
+    "inputs/HYP-9168.md": "math/05-knowledge/hypotheses/HYP-9168-hp-blocking-number-equals-hall-bound.md",
+    "inputs/Hall-census.json": "session54-p11-stress/result.json",
+    "inputs/P7-blockers.json": "session54-sixtythree-bridge/result.json"
+  },
+  "source_manifests": {
+    "session54-p11-stress/MANIFEST.json": "0855158ced20c231100eeb5d8faf9094337e2a28dd26ad74befb437997814f26",
+    "session54-sixtythree-bridge/MANIFEST.json": "63c4f7bab73cefde83192b5ca65e71a3b139cb4cb674111b3dee45ba2b3bd35e"
+  }
+}
