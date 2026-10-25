@@ -1,0 +1,18 @@
+{
+  "actual_degree_range": [
+    0,
+    4
+  ],
+  "excess_degree_range": [
+    0,
+    5
+  ],
+  "literal_colored_inventories": 30,
+  "scope": "signed colored source tournaments; not vertex counts of resulting cores",
+  "sign_integrality_coefficients": 231,
+  "sign_integrality_total_degree_range": [
+    0,
+    20
+  ],
+  "status": "PASS"
+}

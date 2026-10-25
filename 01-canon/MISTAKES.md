@@ -4,6 +4,20 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — a rational summand does not make the graded inventory nonintegral
+
+- **Affected draft:** [excess-graded tournament recurrence](../05-knowledge/results/ports_regular_actions_hn_20261025/counting/EXCESS_EXTENSION.md), reviewed before publication, said its coefficients `b_(M,E)` could be nonintegral.
+- **First failed implication:** rational signed Burnside summands were confused with their aggregate coefficients. In fact `(-1)^E b_(M,E)` counts isomorphism classes of M-vertex tournaments with nonnegative integer vertex colours of total E. Along an odd d-cycle a constant colour contributes `1/(1+z^d)`; even cycles fix no tournaments. This proves signed integrality in every degree, not just the tested prefix.
+- **Repair / survivor:** retain the exact actual-degree/excess-degree recurrence and its scalar-normalization obstruction; replace the draft claim by the coloured-inventory theorem. Negative coefficients remain possible, and M is a source-tournament size, not the size of a particular resulting pair-free core. Independent literal arc/colour canonicalization and sign gates are recorded in the [review](../05-knowledge/results/ports_regular_actions_hn_20261025/counting/INDEPENDENT_REVIEW.md).
+- **Missing coordinate / next question:** distinguish a signed combinatorial inventory from a termwise rational expansion; seek a target-preserving cancellation that keeps clone allocations exact.
+
+## 2026-10-25 — the insertion predecessor cannot be moved into the removed block
+
+- **Affected probes:** the unpublished endpoint-four hole repair at n=11 and protected-port repair at h=4 in [the nonconsecutive-port packet](../05-knowledge/results/ports_regular_actions_hn_20261025/ports/README.md).
+- **Minimal tested failure / first implication:** at n=11, h=6, moving `(3,4,5)` to the end also moves h-1=5; the proposed final word needs the false join `5->0`. At h=4, moving vertex3 similarly leaves the false join `3->0`. The path-edge XOR also fails, so the schematic insertion is not a move to the claimed target.
+- **Repair / survivor:** keep the endpoint-four hole at n>=12 and the protected family at h>=5. A later direct arc witness removes an unrelated size restriction and proves the full [protected-port theorem](../05-knowledge/results/ports_regular_actions_hn_20261025/ports/NEXT_BOUNDARY.md). Literal hostile sources remain in the receipts; neither failed ledger is a connectivity counterexample.
+- **Missing coordinate / next question:** retain the actual predecessor after each surgery, and test the legality guard against the proposed cyclic symmetry before imposing a weaker degree-capacity bound.
+
 ## 2026-10-25 — endpoint-four and parity hostiles extend the recovered endpoint-three correction
 
 - **Lineage:** MISTAKE-646 already contained the order-six obstruction; the concurrent ports/owners checkpoint repaired its surviving THM-4734 overclaim. This packet independently replays the complete small head and adds the endpoint-four and overlap-parity controls.

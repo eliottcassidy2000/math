@@ -1,0 +1,41 @@
+{
+  "counts": {
+    "A_literal_sources": 72,
+    "B_literal_sources": 1034,
+    "B_reflection_overlap_sources": 356,
+    "C_literal_sources": 64
+  },
+  "h4": {
+    "blue": [
+      false,
+      false,
+      false
+    ],
+    "missing": [
+      [
+        2,
+        3,
+        0
+      ]
+    ],
+    "same_target": false,
+    "xor": false
+  },
+  "n11": {
+    "blue": [
+      false,
+      false,
+      false
+    ],
+    "missing": [
+      [
+        2,
+        5,
+        0
+      ]
+    ],
+    "same_target": false,
+    "xor": false
+  },
+  "status": "PASS"
+}

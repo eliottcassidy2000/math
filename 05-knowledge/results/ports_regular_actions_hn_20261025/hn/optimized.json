@@ -1,0 +1,53 @@
+{
+  "bounded_query_bridge": {
+    "degree": 60060,
+    "first_different_query": 59,
+    "last_equal_odd_query": 57,
+    "responses": [
+      2,
+      60
+    ]
+  },
+  "cycle_list_words": [
+    {
+      "colourable": false,
+      "count": 24336,
+      "length": 6,
+      "q": 3
+    },
+    {
+      "colourable": true,
+      "count": 22320,
+      "length": 6,
+      "q": 3
+    },
+    {
+      "colourable": false,
+      "count": 1972,
+      "length": 4,
+      "q": 4
+    },
+    {
+      "colourable": true,
+      "count": 8028,
+      "length": 4,
+      "q": 4
+    }
+  ],
+  "distinguishing_state_pairs": 161,
+  "first_offsets": {
+    "-1": 17,
+    "1": 17
+  },
+  "path_list_words": 10140,
+  "physical_hostile_vertices": 20,
+  "prime_endpoints_in_open_square_window": 52,
+  "scope": "exact finite controls; no HN or Fortune lower-bound/conjecture closure",
+  "states_at_q4_q5_q6": [
+    6,
+    7,
+    8
+  ],
+  "status": "PASS",
+  "transition_identities": 87376
+}

@@ -128,6 +128,15 @@ MISTAKE-310/401/466. Quantifier order is a sidecar: fixed-fibre richness need
 not survive optimization, witness selection, or sort projection; see
 THM-4090/4094/4095.
 
+**Continuation test:** when compressing a growing object, specify all future
+queries and quotient their responses. Conserved actual degree can turn a lost
+response direction into a scalar gauge; Boolean feasibility can instead merge
+all multi-choice path states. **Counterindications:** substitution excess breaks
+the first conservation law, while singleton counting queries and shared exterior
+assignments defeat the second compression. The distinct mechanisms and hostile
+controls are proved in the [degree-gauge](../05-knowledge/results/ports_regular_actions_hn_20261025/counting/README.md)
+and [circle-port language](../05-knowledge/results/ports_regular_actions_hn_20261025/hn/RELATIONAL_LIFT.md) packets.
+
 ## Re-evaluate a certificate after every fibre-changing operation
 
 **Trigger/action:** when a quotient, specialization, dilation, or migrated

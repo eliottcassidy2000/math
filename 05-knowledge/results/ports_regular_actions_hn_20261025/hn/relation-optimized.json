@@ -1,0 +1,12 @@
+{
+  "C5_colourings_q2_q3": [
+    0,
+    30
+  ],
+  "independent_product_rows": 4,
+  "joint_list_rows": 2,
+  "menu_families": 300,
+  "phantom_accepting_rows": 1,
+  "signed_systems": 19200,
+  "status": "PASS"
+}

@@ -1,0 +1,31 @@
+{
+  "bivariate_coefficients_checked": 120,
+  "individual_continuation_minimality_checks": 288,
+  "literal_pairfree_class_range": [
+    0,
+    5
+  ],
+  "pairfree_counts": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    5,
+    26,
+    255,
+    4602,
+    147095,
+    8228360,
+    814376271,
+    144675514036,
+    46750576790829,
+    27782162886369788
+  ],
+  "scope": "exact graded repair; no timing or graph-size improvement claimed",
+  "status": "PASS",
+  "total_degree_range": [
+    0,
+    14
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "counts": {
+    "first_hole_affine_cells": 196,
+    "first_hole_literal_sources": 392,
+    "higher_one_hole_affine_and_literal_cells": 240,
+    "permutation_cases": 6441,
+    "protected_literal_sources": 160,
+    "protected_port_affine_cells": 3836
+  },
+  "hostiles": {
+    "n11": {
+      "blue_feasible": [
+        false,
+        false,
+        false
+      ],
+      "illegal": [
+        [
+          2,
+          5,
+          0
+        ]
+      ],
+      "target": false
+    },
+    "n11_rows": [
+      190,
+      988,
+      760,
+      1936,
+      800,
+      1354,
+      1945,
+      1840,
+      1541,
+      1057,
+      23
+    ],
+    "protected_h4": {
+      "blue_feasible": [
+        false,
+        false,
+        false
+      ],
+      "illegal": [
+        [
+          2,
+          3,
+          0
+        ]
+      ],
+      "target": false
+    }
+  },
+  "scope": "affine cells quantify all source completions; literal models are deterministic corroboration",
+  "status": "PASS",
+  "universes": {
+    "first_hole": "n12..60, all four branch cells and every completion",
+    "higher_one_hole": "k5..16,n2k+5..2k+14,both chord cells",
+    "permutations": "n8..120,all4<=h<=n-4",
+    "protected": "k4..6,n4k-1..4k+1,every admissible port set with min>=5 and both chord cells"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "cyclic_exception_k_range": [
+    4,
+    40
+  ],
+  "hostile": "n=15,I={4,11,13},2->4 forces the final join 3->0 false",
+  "literal_models_per_certified_cell": 2,
+  "one_hole_affine_guard_cells": 660,
+  "one_hole_k_range": [
+    5,
+    24
+  ],
+  "one_hole_n_range": "k+6 .. 2k+7",
+  "protected_affine_guard_cells": 2044,
+  "protected_conditional_exceptions": 4,
+  "protected_order_range": [
+    9,
+    17
+  ],
+  "scope": "all protected port sets; unrestricted black-core connectivity remains open",
+  "status": "PASS"
+}
