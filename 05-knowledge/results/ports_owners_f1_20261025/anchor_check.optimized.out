@@ -1,0 +1,10 @@
+Class universe: [1, 1, 1, 2, 4, 12, 56, 456]
+Feedback-rank rows: {0: {0: 1}, 1: {0: 1}, 2: {0: 1}, 3: {0: 1, 1: 1}, 4: {0: 1, 1: 3}, 5: {0: 1, 1: 8, 2: 3}, 6: {0: 1, 1: 20, 2: 34, 3: 1}, 7: {0: 1, 1: 47, 2: 287, 3: 120, 4: 1}}
+Canonical augmentation children: 525 PASS
+Parent outdegree histograms (n,rank): {'1,0': {0: 1}, '2,0': {1: 1}, '3,0': {3: 1}, '4,0': {8: 1}, '4,1': {0: 1, 1: 1, 2: 1}, '5,0': {20: 1}, '5,1': {2: 2, 4: 2, 5: 2, 6: 2}, '5,2': {0: 2, 1: 1}, '6,0': {47: 1}, '6,1': {6: 2, 8: 1, 10: 1, 11: 1, 12: 1, 13: 1, 15: 3, 16: 2, 17: 3, 18: 3, 19: 1, 20: 1}, '6,2': {0: 1, 1: 5, 2: 4, 3: 7, 4: 8, 5: 3, 6: 4, 7: 1, 8: 1}, '6,3': {1: 1}}
+Ordinary-owner projection hostile: {"augmentation_owner": [1, [3, 2, 0]], "canonical_parent": [0, [1, 0, 0]], "n": 5, "ordinary_owner": [0, [3, 1, 0]], "ordinary_parent_projection": [0, [1, 1, 0]], "rank": 2, "rows": [6, 12, 24, 17, 3]}
+Deletion-induced clone merger: {"deleted": 0, "new_parent_pairs": [[1, 2]], "rows": [2, 4, 1]}
+Complete alpha=3 forest: [{"H": 1, "clone_sizes": [3], "id": "3.1", "parent": null, "rows": [0, 1, 3]}, {"H": 3, "clone_sizes": [1, 1, 1, 1], "id": "4.1", "parent": "3.1", "rows": [0, 5, 9, 3]}, {"H": 3, "clone_sizes": [1, 1, 1, 1], "id": "4.2", "parent": "3.1", "rows": [2, 4, 1, 7]}, {"H": 5, "clone_sizes": [1, 1, 2], "id": "4.3", "parent": "3.1", "rows": [4, 1, 10, 3]}, {"H": 13, "clone_sizes": [1, 1, 1, 1, 1], "id": "5.1", "parent": "4.1", "rows": [2, 12, 17, 5, 11]}, {"H": 15, "clone_sizes": [1, 1, 1, 1, 1], "id": "5.2", "parent": "4.3", "rows": [6, 12, 24, 17, 3]}, {"H": 15, "clone_sizes": [1, 1, 1, 1, 1], "id": "5.3", "parent": "4.3", "rows": [16, 5, 9, 3, 14]}, {"H": 45, "clone_sizes": [1, 1, 1, 1, 1, 1], "id": "6.1", "parent": "5.1", "rows": [10, 20, 33, 38, 13, 19]}, {"H": 189, "clone_sizes": [1, 1, 1, 1, 1, 1, 1], "id": "7.1", "parent": "6.1", "rows": [14, 52, 88, 98, 41, 69, 19]}]
+Imported class helper SHA256: 3cbb610596bb4430af69924ba991ed11efc67d7ccee4a93b318cd7b638bc3d26
+PASS: exact ranks, literal ports, canonical ownership, clone tests and forest roots
+Scope: complete through n=7; general finite-state transducer proved separately, not materialized

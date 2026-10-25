@@ -1,0 +1,62 @@
+{
+  "status": "FINITE-EXACT independent weighted-isomorphism and clone audit",
+  "layers": [
+    {
+      "k": 3,
+      "delta": 4,
+      "strong": false,
+      "scope": "complete structural layer",
+      "classes": 2985,
+      "raw": 3075,
+      "rejected": 90
+    },
+    {
+      "k": 3,
+      "delta": 4,
+      "strong": true,
+      "scope": "complete structural layer",
+      "classes": 650,
+      "raw": 674,
+      "rejected": 24
+    },
+    {
+      "k": 3,
+      "delta": 5,
+      "strong": false,
+      "scope": "complete structural layer",
+      "classes": 6060,
+      "raw": 6375,
+      "rejected": 315
+    },
+    {
+      "k": 3,
+      "delta": 5,
+      "strong": true,
+      "scope": "complete structural layer",
+      "classes": 1046,
+      "raw": 1106,
+      "rejected": 60
+    }
+  ],
+  "boundary_cells": [
+    {
+      "k": 4,
+      "delta": 7,
+      "strong": false,
+      "scope": "one missing gap and one unit gap",
+      "classes": 6720,
+      "raw": 7560,
+      "rejected": 840
+    },
+    {
+      "k": 4,
+      "delta": 7,
+      "strong": true,
+      "scope": "one missing gap and one unit gap",
+      "classes": 2808,
+      "raw": 3108,
+      "rejected": 300
+    }
+  ],
+  "checks": 46725
+}

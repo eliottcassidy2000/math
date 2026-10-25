@@ -1,0 +1,7 @@
+Projective toric bijection: primes 2,3,5,7,11,13; points 47
+Primitive parameter/power controls: 602
+Odd-prime coefficient lifts PASS; characteristic-two original-model hostile retained
+psi_3: (3,4,5) -> (63,16,65); blue recipe at 63 -> (63,1984,1985)
+Nested-set power carriers: explicit involution orbits in 18 cases PASS
+Local zeta: fixed-count exponential recursion equals two-factor product through degree 10
+PASS: exact carrier and failed subfamily transport; no RH implication established

@@ -4,6 +4,19 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — a carrier's parameter range and proof-search encoding are part of its type
+
+- **Affected draft:** the unpublished [F1/conic bridge](../05-knowledge/results/ports_owners_f1_20261025/f1_bridge.md), independently reviewed before publication.
+- **Failed implications:** every one-fixed-point involution was identified with the particular Boolean choice family, although that family has size `2^(k-1)+1`; bounded proof search was placed in NP without specifying how the length cap is encoded.
+- **Repair / strongest survivor:** the Boolean identification requires `n=2^(k-2)` in the consecutive Euclid parameters; the general nested-set orbit construction remains valid. Polynomial proof verification gives an NP bounded-search instance with a **unary** length cap, or complexity measured in the numeric cap, not automatically with a binary cap. Arbitrary integer cardinalities map to the toric conic over Q; primitive integral coordinates require gcd normalization.
+- **Missing coordinates:** retain the actual family parameter, integer content, and resource encoding. The commuting power maps, exact orbit identities, and explicit failure to preserve the blue-path subfamily survive. No RH or P-versus-NP implication was proved or published by these drafts.
+
+## 2026-10-25 — the endpoint-three order-six filter survived in a theorem title and body
+
+- **Affected source:** [THM-4734, endpoint-three order ten](theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md) still claimed every n>=6 despite MISTAKE-646's existing correction. The 11 order-six presentations had omitted one pure-blue-target case.
+- **Witness / repair:** source rows `(6,4,8,51,39,7)` have partner `C3 -> C3`, which has no incident black path move. The universal threshold is n>=7. The title and body now say so and route to the newer audited order-ten packet; original finite receipts and their pre-audit status are preserved.
+- **Mechanism / strongest survivor:** a filtered finite head does not extend an unfiltered all-order theorem. Orders7–9, the separate order10 certificate and the structural n>=11 argument remain the stated completion. The [new endpoint checker](../05-knowledge/results/ports_owners_f1_20261025/endpoint_check.py) retains the order-six hostile explicitly; no new connectivity obstruction is inferred elsewhere.
+
 ## 2026-10-24 — a graded trace is not an unspecified topological invariant
 
 - **Affected sources:** [THM-587](theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md) and [THM-588](theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md).

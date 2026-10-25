@@ -1,0 +1,51 @@
+{
+  "counts": {
+    "exhaustive_n10_A_black": 512,
+    "exhaustive_n10_B_black": 512,
+    "exhaustive_n11_A_black": 8192,
+    "exhaustive_n11_B_black": 8192,
+    "exhaustive_n7_A_black": 2,
+    "exhaustive_n7_B_small_illegal_step": 2,
+    "exhaustive_n8_A_black": 8,
+    "exhaustive_n8_B_black": 8,
+    "exhaustive_n9_A_black": 64,
+    "exhaustive_n9_B_black": 64,
+    "prefix_exact_threshold": 34,
+    "sampled_prefix": 1156,
+    "sampled_second_port_A": 560,
+    "sampled_second_port_B": 560
+  },
+  "exhaustive_digest": "9ddad596ed74ee6c44bd131d623a8ff8370e9a38976455e4d4b699d8f2e726e9",
+  "filters": "only stated source arcs; no strongness, mixedness, isomorphism or clone filter",
+  "independence": "local arc-set and bit-row K and anti evaluators; no producer imports",
+  "pure_target_order6_paths": 9,
+  "status": "PASS; finite exact and deterministic bounded controls",
+  "wrong_guard_hostiles": {
+    "A": {
+      "n": 7,
+      "rows": [
+        10,
+        12,
+        9,
+        112,
+        39,
+        71,
+        23
+      ],
+      "wrong_ledger_first_illegal_step": 2
+    },
+    "B": {
+      "n": 7,
+      "rows": [
+        10,
+        4,
+        9,
+        82,
+        39,
+        79,
+        23
+      ],
+      "wrong_ledger_first_illegal_step": 2
+    }
+  }
+}

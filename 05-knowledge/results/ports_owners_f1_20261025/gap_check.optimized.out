@@ -1,0 +1,670 @@
+{
+  "status": "FINITE-EXACT controls; proofs in gap.md",
+  "layers": [
+    {
+      "k": 2,
+      "delta": 0,
+      "strong": false,
+      "classes": 3,
+      "sectors": {
+        "full": 3,
+        "raw_full": 3
+      },
+      "max_unit_cell": 1,
+      "feedback_checks": 3,
+      "relabel_checks": 6,
+      "clone_hostile": null
+    },
+    {
+      "k": 2,
+      "delta": 0,
+      "strong": true,
+      "classes": 2,
+      "sectors": {
+        "full": 2,
+        "raw_full": 2
+      },
+      "max_unit_cell": 1,
+      "feedback_checks": 2,
+      "relabel_checks": 4,
+      "clone_hostile": null
+    },
+    {
+      "k": 2,
+      "delta": 1,
+      "strong": false,
+      "classes": 15,
+      "sectors": {
+        "full": 15,
+        "raw_full": 15
+      },
+      "max_unit_cell": 3,
+      "feedback_checks": 15,
+      "relabel_checks": 8,
+      "clone_hostile": null
+    },
+    {
+      "k": 2,
+      "delta": 1,
+      "strong": true,
+      "classes": 6,
+      "sectors": {
+        "full": 6,
+        "raw_full": 6
+      },
+      "max_unit_cell": 3,
+      "feedback_checks": 6,
+      "relabel_checks": 8,
+      "clone_hostile": null
+    },
+    {
+      "k": 2,
+      "delta": 2,
+      "strong": false,
+      "classes": 42,
+      "sectors": {
+        "full": 30,
+        "missing": 12,
+        "raw_full": 30,
+        "raw_missing": 15,
+        "rejected": 3
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 42,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "gaps": [
+          2,
+          2,
+          2,
+          0,
+          2
+        ],
+        "clone_pairs": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "k": 2,
+      "delta": 2,
+      "strong": true,
+      "classes": 11,
+      "sectors": {
+        "full": 6,
+        "missing": 5,
+        "raw_full": 6,
+        "raw_missing": 6,
+        "rejected": 1
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 11,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "gaps": [
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "clone_pairs": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "k": 2,
+      "delta": 3,
+      "strong": false,
+      "classes": 81,
+      "sectors": {
+        "full": 30,
+        "missing": 48,
+        "overlap": 3,
+        "raw_full": 30,
+        "raw_missing": 60,
+        "raw_overlap": 3,
+        "rejected": 12
+      },
+      "max_unit_cell": 7,
+      "feedback_checks": 81,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "gaps": [
+          2,
+          2,
+          2,
+          0,
+          1
+        ],
+        "clone_pairs": [
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "k": 2,
+      "delta": 3,
+      "strong": true,
+      "classes": 15,
+      "sectors": {
+        "full": 2,
+        "missing": 10,
+        "overlap": 3,
+        "raw_full": 2,
+        "raw_missing": 12,
+        "raw_overlap": 3,
+        "rejected": 2
+      },
+      "max_unit_cell": 7,
+      "feedback_checks": 15,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "gaps": [
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "clone_pairs": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "k": 3,
+      "delta": 4,
+      "strong": false,
+      "classes": 2985,
+      "sectors": {
+        "full": 2415,
+        "missing": 540,
+        "overlap": 30,
+        "raw_full": 2415,
+        "raw_missing": 630,
+        "raw_overlap": 30,
+        "rejected": 90
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "gaps": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          2
+        ],
+        "clone_pairs": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "k": 3,
+      "delta": 4,
+      "strong": true,
+      "classes": 650,
+      "sectors": {
+        "full": 450,
+        "missing": 176,
+        "overlap": 24,
+        "raw_full": 450,
+        "raw_missing": 200,
+        "raw_overlap": 24,
+        "rejected": 24
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "gaps": [
+          0,
+          3,
+          3,
+          3,
+          0,
+          2,
+          0
+        ],
+        "clone_pairs": [
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "k": 4,
+      "delta": 5,
+      "strong": false,
+      "classes": 133665,
+      "sectors": {
+        "full": 126630,
+        "missing": 6720,
+        "overlap": 315,
+        "raw_full": 126630,
+        "raw_missing": 7560,
+        "raw_overlap": 315,
+        "rejected": 840
+      },
+      "max_unit_cell": 3,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "gaps": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          3
+        ],
+        "clone_pairs": [
+          [
+            12,
+            14
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            13,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "k": 4,
+      "delta": 5,
+      "strong": true,
+      "classes": 33616,
+      "sectors": {
+        "full": 30562,
+        "missing": 2808,
+        "overlap": 246,
+        "raw_full": 30562,
+        "raw_missing": 3108,
+        "raw_overlap": 246,
+        "rejected": 300
+      },
+      "max_unit_cell": 3,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "gaps": [
+          0,
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          3,
+          0
+        ],
+        "clone_pairs": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "k": 4,
+      "delta": 6,
+      "strong": false,
+      "classes": 305550,
+      "sectors": {
+        "full": 272790,
+        "missing": 30240,
+        "overlap": 2520,
+        "raw_full": 272790,
+        "raw_missing": 34020,
+        "raw_overlap": 2520,
+        "rejected": 3780
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "gaps": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          2
+        ],
+        "clone_pairs": [
+          [
+            12,
+            14
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            13,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "k": 4,
+      "delta": 6,
+      "strong": true,
+      "classes": 65176,
+      "sectors": {
+        "full": 53872,
+        "missing": 9828,
+        "overlap": 1476,
+        "raw_full": 53872,
+        "raw_missing": 10878,
+        "raw_overlap": 1476,
+        "rejected": 1050
+      },
+      "max_unit_cell": 5,
+      "feedback_checks": 0,
+      "relabel_checks": 8,
+      "clone_hostile": {
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "gaps": [
+          0,
+          4,
+          4,
+          4,
+          4,
+          4,
+          0,
+          2,
+          0
+        ],
+        "clone_pairs": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ]
+        ]
+      }
+    }
+  ],
+  "overlap_graph_counts": [
+    {
+      "k": 2,
+      "all": 3,
+      "indecomposable": 3
+    },
+    {
+      "k": 3,
+      "all": 30,
+      "indecomposable": 24
+    },
+    {
+      "k": 4,
+      "all": 315,
+      "indecomposable": 246
+    },
+    {
+      "k": 5,
+      "all": 3780,
+      "indecomposable": 3012
+    }
+  ],
+  "I_1_to_8": [
+    1,
+    2,
+    10,
+    74,
+    706,
+    8162,
+    110410,
+    1708394
+  ],
+  "J_1_to_8": [
+    0,
+    3,
+    24,
+    246,
+    3012,
+    42618,
+    683088,
+    12231822
+  ],
+  "checks": 7739819
+}
