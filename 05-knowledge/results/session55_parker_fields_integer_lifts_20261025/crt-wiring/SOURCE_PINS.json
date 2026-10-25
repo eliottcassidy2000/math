@@ -1,0 +1,12 @@
+{
+  "prime_field_theorem": {
+    "path": "session55-finite-field-geometry/THEOREM.md",
+    "sha256": "ece445f72f51fd0400b4bcb0f4b30f17d62565025755c0f29493a37d7d31ba68"
+  },
+  "prime_field_census": {
+    "path": "session55-finite-field-geometry/census.json",
+    "sha256": "37bfadf8dc7b223a82699e6c29e8207d58fab220acf8c8cce8b03e3130fa5150"
+  },
+  "literature": [{"url": "https://arxiv.org/html/1908.03236v2#S9", "author": "O. M. Cain", "role": "Conjectures 9.3 and 9.4 identify proposed maxima 201 and 3216; not used as proofs.", "accessed": "2026-10-25"}],
+  "independent_ring_audit": "session55-audit-odd-rings"
+}

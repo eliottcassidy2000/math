@@ -1,0 +1,8427 @@
+{
+  "schema": "fixed-cell-crt-collision-v1",
+  "domain": "Z/nZ (not extension fields)",
+  "pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "limit_inclusive": 160,
+  "components": [
+    {
+      "modulus": 2,
+      "full_mask_count": 4,
+      "minimal": [
+        {
+          "mask": "0x495742ea2",
+          "entries": [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x2e1cebb88",
+          "entries": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "mask": "0x98b456ad5",
+          "entries": [
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 3,
+      "full_mask_count": 1,
+      "minimal": [
+        {
+          "mask": "0xfffffffff",
+          "entries": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 4,
+      "full_mask_count": 1,
+      "minimal": [
+        {
+          "mask": "0xfffffffff",
+          "entries": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 5,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            1,
+            4,
+            0,
+            4,
+            0,
+            1,
+            0,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 7,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 8,
+      "full_mask_count": 4,
+      "minimal": [
+        {
+          "mask": "0x495742ea2",
+          "entries": [
+            4,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            4
+          ]
+        },
+        {
+          "mask": "0x2e1cebb88",
+          "entries": [
+            0,
+            4,
+            4,
+            4,
+            0,
+            4,
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "mask": "0x98b456ad5",
+          "entries": [
+            4,
+            4,
+            0,
+            4,
+            0,
+            4,
+            0,
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 9,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            4,
+            7,
+            1,
+            7,
+            1,
+            4,
+            1,
+            4,
+            7
+          ]
+        },
+        {
+          "mask": "0x110922424",
+          "entries": [
+            4,
+            1,
+            7,
+            4,
+            1,
+            7,
+            4,
+            1,
+            7
+          ]
+        },
+        {
+          "mask": "0xe04600103",
+          "entries": [
+            4,
+            4,
+            4,
+            1,
+            1,
+            1,
+            7,
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 11,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 13,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            0,
+            12,
+            1,
+            1,
+            0,
+            12,
+            12,
+            1,
+            0
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 16,
+      "full_mask_count": 4,
+      "minimal": [
+        {
+          "mask": "0x495742ea2",
+          "entries": [
+            9,
+            1,
+            9,
+            1,
+            1,
+            1,
+            9,
+            1,
+            9
+          ]
+        },
+        {
+          "mask": "0x2e1cebb88",
+          "entries": [
+            1,
+            9,
+            9,
+            9,
+            1,
+            9,
+            9,
+            9,
+            1
+          ]
+        },
+        {
+          "mask": "0x98b456ad5",
+          "entries": [
+            9,
+            9,
+            1,
+            9,
+            1,
+            9,
+            1,
+            9,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 17,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x10102420",
+          "entries": [
+            1,
+            0,
+            16,
+            15,
+            0,
+            2,
+            1,
+            0,
+            16
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            1,
+            15,
+            1,
+            0,
+            0,
+            0,
+            16,
+            2,
+            16
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            0,
+            16,
+            1,
+            1,
+            0,
+            16,
+            16,
+            1,
+            0
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            1,
+            16,
+            0,
+            16,
+            0,
+            1,
+            0,
+            1,
+            16
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 19,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            17,
+            4,
+            4,
+            1,
+            17,
+            17,
+            4,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            4,
+            17,
+            1,
+            17,
+            1,
+            4,
+            1,
+            4,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 23,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x10102420",
+          "entries": [
+            13,
+            1,
+            12,
+            0,
+            1,
+            2,
+            13,
+            1,
+            12
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            13,
+            0,
+            13,
+            1,
+            1,
+            1,
+            12,
+            2,
+            12
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 25,
+      "full_mask_count": 7,
+      "minimal": [
+        {
+          "mask": "0x300000104",
+          "entries": [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        },
+        {
+          "mask": "0x800820001",
+          "entries": [
+            16,
+            16,
+            21,
+            6,
+            1,
+            21,
+            6,
+            11,
+            11
+          ]
+        },
+        {
+          "mask": "0x10102420",
+          "entries": [
+            16,
+            1,
+            11,
+            21,
+            1,
+            6,
+            16,
+            1,
+            11
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            16,
+            21,
+            16,
+            1,
+            1,
+            1,
+            11,
+            6,
+            11
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            0,
+            24,
+            1,
+            1,
+            0,
+            24,
+            24,
+            1,
+            0
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            1,
+            24,
+            0,
+            24,
+            0,
+            1,
+            0,
+            1,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 27,
+      "full_mask_count": 12,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            4,
+            16,
+            10,
+            7,
+            1,
+            22,
+            19,
+            13,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 29,
+      "full_mask_count": 4,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 31,
+      "full_mask_count": 3,
+      "minimal": [
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 32,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x10502420",
+          "entries": [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ]
+        },
+        {
+          "mask": "0x404602002",
+          "entries": [
+            9,
+            17,
+            9,
+            1,
+            1,
+            1,
+            25,
+            17,
+            25
+          ]
+        },
+        {
+          "mask": "0x201820980",
+          "entries": [
+            17,
+            9,
+            9,
+            25,
+            1,
+            9,
+            25,
+            25,
+            17
+          ]
+        },
+        {
+          "mask": "0x980040205",
+          "entries": [
+            9,
+            9,
+            17,
+            9,
+            1,
+            25,
+            17,
+            25,
+            25
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            25,
+            9,
+            9,
+            1,
+            25,
+            25,
+            9,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            9,
+            25,
+            1,
+            25,
+            1,
+            9,
+            1,
+            9,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 37,
+      "full_mask_count": 4,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            9,
+            27,
+            26,
+            0,
+            11,
+            10,
+            28,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 41,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            31,
+            9,
+            8,
+            0,
+            33,
+            32,
+            10,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 43,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x10102420",
+          "entries": [
+            21,
+            1,
+            24,
+            4,
+            1,
+            41,
+            21,
+            1,
+            24
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            21,
+            4,
+            21,
+            1,
+            1,
+            1,
+            24,
+            41,
+            24
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            41,
+            4,
+            4,
+            1,
+            41,
+            41,
+            4,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            4,
+            41,
+            1,
+            41,
+            1,
+            4,
+            1,
+            4,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 47,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x10102420",
+          "entries": [
+            25,
+            1,
+            24,
+            0,
+            1,
+            2,
+            25,
+            1,
+            24
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            25,
+            0,
+            25,
+            1,
+            1,
+            1,
+            24,
+            2,
+            24
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 49,
+      "full_mask_count": 9,
+      "minimal": [
+        {
+          "mask": "0x820000",
+          "entries": [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        },
+        {
+          "mask": "0x100000004",
+          "entries": [
+            36,
+            43,
+            22,
+            36,
+            1,
+            15,
+            29,
+            8,
+            15
+          ]
+        },
+        {
+          "mask": "0x200000100",
+          "entries": [
+            36,
+            8,
+            8,
+            22,
+            1,
+            29,
+            43,
+            43,
+            15
+          ]
+        },
+        {
+          "mask": "0x800000001",
+          "entries": [
+            36,
+            36,
+            29,
+            43,
+            1,
+            8,
+            22,
+            15,
+            15
+          ]
+        },
+        {
+          "mask": "0x10102420",
+          "entries": [
+            36,
+            1,
+            15,
+            29,
+            1,
+            22,
+            36,
+            1,
+            15
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            36,
+            29,
+            36,
+            1,
+            1,
+            1,
+            15,
+            22,
+            15
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 53,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            36,
+            16,
+            15,
+            0,
+            38,
+            37,
+            17,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 59,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            49,
+            26,
+            46,
+            57,
+            1,
+            4,
+            15,
+            35,
+            12
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 61,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            56,
+            4,
+            3,
+            0,
+            58,
+            57,
+            5,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 64,
+      "full_mask_count": 20,
+      "minimal": [
+        {
+          "mask": "0x2000",
+          "entries": [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ]
+        },
+        {
+          "mask": "0x400000",
+          "entries": [
+            9,
+            17,
+            41,
+            33,
+            1,
+            33,
+            25,
+            49,
+            57
+          ]
+        },
+        {
+          "mask": "0x820000",
+          "entries": [
+            49,
+            57,
+            25,
+            41,
+            1,
+            25,
+            41,
+            9,
+            17
+          ]
+        },
+        {
+          "mask": "0x100000004",
+          "entries": [
+            9,
+            41,
+            17,
+            9,
+            1,
+            57,
+            49,
+            25,
+            57
+          ]
+        },
+        {
+          "mask": "0x200000100",
+          "entries": [
+            49,
+            9,
+            9,
+            25,
+            1,
+            41,
+            57,
+            57,
+            17
+          ]
+        },
+        {
+          "mask": "0x800000001",
+          "entries": [
+            9,
+            9,
+            49,
+            41,
+            1,
+            25,
+            17,
+            57,
+            57
+          ]
+        },
+        {
+          "mask": "0x1000880",
+          "entries": [
+            33,
+            25,
+            9,
+            41,
+            1,
+            25,
+            57,
+            41,
+            33
+          ]
+        },
+        {
+          "mask": "0x80040200",
+          "entries": [
+            9,
+            25,
+            33,
+            25,
+            1,
+            41,
+            33,
+            41,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 67,
+      "full_mask_count": 5,
+      "minimal": [
+        {
+          "mask": "0x10102420",
+          "entries": [
+            36,
+            1,
+            33,
+            65,
+            1,
+            4,
+            36,
+            1,
+            33
+          ]
+        },
+        {
+          "mask": "0x404600002",
+          "entries": [
+            36,
+            65,
+            36,
+            1,
+            1,
+            1,
+            33,
+            4,
+            33
+          ]
+        },
+        {
+          "mask": "0x61089888",
+          "entries": [
+            1,
+            65,
+            4,
+            4,
+            1,
+            65,
+            65,
+            4,
+            1
+          ]
+        },
+        {
+          "mask": "0x8a054250",
+          "entries": [
+            4,
+            65,
+            1,
+            65,
+            1,
+            4,
+            1,
+            4,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 71,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            16,
+            43,
+            15,
+            0,
+            1,
+            2,
+            58,
+            30,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 73,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            23,
+            49,
+            48,
+            0,
+            25,
+            24,
+            50,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 79,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            9,
+            65,
+            8,
+            0,
+            1,
+            2,
+            73,
+            16,
+            72
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 81,
+      "full_mask_count": 12,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            4,
+            64,
+            16,
+            13,
+            1,
+            70,
+            67,
+            19,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 83,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            7,
+            4,
+            75,
+            69,
+            1,
+            16,
+            10,
+            81,
+            78
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 89,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            79,
+            9,
+            8,
+            0,
+            81,
+            80,
+            10,
+            88
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 97,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            93,
+            3,
+            2,
+            0,
+            95,
+            94,
+            4,
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 101,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            19,
+            81,
+            80,
+            0,
+            21,
+            20,
+            82,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 103,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            49,
+            7,
+            50,
+            2,
+            1,
+            0,
+            55,
+            98,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 107,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            9,
+            40,
+            61,
+            53,
+            1,
+            56,
+            48,
+            69,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 109,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            104,
+            4,
+            3,
+            0,
+            106,
+            105,
+            5,
+            108
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 113,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            104,
+            8,
+            7,
+            0,
+            106,
+            105,
+            9,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 121,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            4,
+            20,
+            100,
+            97,
+            1,
+            26,
+            23,
+            103,
+            119
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 125,
+      "full_mask_count": 12,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            99,
+            25,
+            24,
+            0,
+            101,
+            100,
+            26,
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 127,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            9,
+            0,
+            121,
+            113,
+            1,
+            16,
+            8,
+            2,
+            120
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 128,
+      "full_mask_count": 21,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            9,
+            97,
+            25,
+            17,
+            1,
+            113,
+            105,
+            33,
+            121
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 131,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            25,
+            81,
+            28,
+            4,
+            1,
+            129,
+            105,
+            52,
+            108
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 137,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            120,
+            16,
+            15,
+            0,
+            122,
+            121,
+            17,
+            136
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 139,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            16,
+            5,
+            121,
+            106,
+            1,
+            35,
+            20,
+            136,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 149,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            123,
+            25,
+            24,
+            0,
+            125,
+            124,
+            26,
+            148
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 151,
+      "full_mask_count": 10,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            9,
+            0,
+            145,
+            137,
+            1,
+            16,
+            8,
+            2,
+            144
+          ]
+        }
+      ]
+    },
+    {
+      "modulus": 157,
+      "full_mask_count": 6,
+      "minimal": [
+        {
+          "mask": "0x0",
+          "entries": [
+            1,
+            120,
+            36,
+            35,
+            0,
+            122,
+            121,
+            37,
+            156
+          ]
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "n": 2,
+      "prime_power_components": [
+        2
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 3,
+      "prime_power_components": [
+        3
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 1,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 4,
+      "prime_power_components": [
+        4
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 1,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 5,
+      "prime_power_components": [
+        5
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 6,
+      "prime_power_components": [
+        2,
+        3
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 7,
+      "prime_power_components": [
+        7
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 8,
+      "prime_power_components": [
+        8
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 9,
+      "prime_power_components": [
+        9
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "witness": null
+    },
+    {
+      "n": 10,
+      "prime_power_components": [
+        2,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 11,
+      "prime_power_components": [
+        11
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 12,
+      "prime_power_components": [
+        4,
+        3
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 1,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 13,
+      "prime_power_components": [
+        13
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 14,
+      "prime_power_components": [
+        2,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 15,
+      "prime_power_components": [
+        3,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 16,
+      "prime_power_components": [
+        16
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 17,
+      "prime_power_components": [
+        17
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 18,
+      "prime_power_components": [
+        2,
+        9
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 16,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 19,
+      "prime_power_components": [
+        19
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 20,
+      "prime_power_components": [
+        4,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 21,
+      "prime_power_components": [
+        3,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 22,
+      "prime_power_components": [
+        2,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 23,
+      "prime_power_components": [
+        23
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 24,
+      "prime_power_components": [
+        8,
+        3
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 25,
+      "prime_power_components": [
+        25
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 7,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 26,
+      "prime_power_components": [
+        2,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 27,
+      "prime_power_components": [
+        27
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4,
+          16,
+          10,
+          7,
+          1,
+          22,
+          19,
+          13,
+          25
+        ],
+        "square_roots": [
+          25,
+          23,
+          19,
+          14,
+          26,
+          20,
+          17,
+          16,
+          22
+        ],
+        "local_entries": [
+          [
+            4,
+            16,
+            10,
+            7,
+            1,
+            22,
+            19,
+            13,
+            25
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 28,
+      "prime_power_components": [
+        4,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 29,
+      "prime_power_components": [
+        29
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          22,
+          6,
+          5,
+          0,
+          24,
+          23,
+          7,
+          28
+        ],
+        "square_roots": [
+          28,
+          15,
+          21,
+          18,
+          0,
+          16,
+          20,
+          23,
+          17
+        ],
+        "local_entries": [
+          [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 30,
+      "prime_power_components": [
+        2,
+        3,
+        5
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 31,
+      "prime_power_components": [
+        31
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 32,
+      "prime_power_components": [
+        32
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x10502420",
+        "0x404602002",
+        "0x201820980",
+        "0x980040205",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 33,
+      "prime_power_components": [
+        3,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 34,
+      "prime_power_components": [
+        2,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 35,
+      "prime_power_components": [
+        5,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          0,
+          9,
+          1,
+          16,
+          15,
+          14,
+          29,
+          21,
+          30
+        ],
+        "square_roots": [
+          0,
+          32,
+          34,
+          31,
+          20,
+          28,
+          27,
+          21,
+          25
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 36,
+      "prime_power_components": [
+        4,
+        9
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "witness": null
+    },
+    {
+      "n": 37,
+      "prime_power_components": [
+        37
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          9,
+          27,
+          26,
+          0,
+          11,
+          10,
+          28,
+          36
+        ],
+        "square_roots": [
+          36,
+          34,
+          29,
+          27,
+          0,
+          23,
+          26,
+          19,
+          31
+        ],
+        "local_entries": [
+          [
+            1,
+            9,
+            27,
+            26,
+            0,
+            11,
+            10,
+            28,
+            36
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 38,
+      "prime_power_components": [
+        2,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 39,
+      "prime_power_components": [
+        3,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 40,
+      "prime_power_components": [
+        8,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 41,
+      "prime_power_components": [
+        41
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          31,
+          9,
+          8,
+          0,
+          33,
+          32,
+          10,
+          40
+        ],
+        "square_roots": [
+          40,
+          21,
+          38,
+          34,
+          0,
+          22,
+          27,
+          25,
+          32
+        ],
+        "local_entries": [
+          [
+            1,
+            31,
+            9,
+            8,
+            0,
+            33,
+            32,
+            10,
+            40
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 42,
+      "prime_power_components": [
+        2,
+        3,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 43,
+      "prime_power_components": [
+        43
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 44,
+      "prime_power_components": [
+        4,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 45,
+      "prime_power_components": [
+        9,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          34,
+          40,
+          4,
+          10,
+          16,
+          25,
+          31,
+          19
+        ],
+        "square_roots": [
+          44,
+          32,
+          25,
+          43,
+          35,
+          41,
+          40,
+          34,
+          37
+        ],
+        "local_entries": [
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ],
+          [
+            1,
+            4,
+            0,
+            4,
+            0,
+            1,
+            0,
+            1,
+            4
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 46,
+      "prime_power_components": [
+        2,
+        23
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 47,
+      "prime_power_components": [
+        47
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 48,
+      "prime_power_components": [
+        16,
+        3
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 49,
+      "prime_power_components": [
+        49
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 50,
+      "prime_power_components": [
+        2,
+        25
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 19,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          41,
+          6,
+          31,
+          16,
+          26,
+          36,
+          21,
+          46,
+          11
+        ],
+        "square_roots": [
+          29,
+          34,
+          41,
+          46,
+          26,
+          44,
+          39,
+          36,
+          31
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x300000104"
+        ]
+      }
+    },
+    {
+      "n": 51,
+      "prime_power_components": [
+        3,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 52,
+      "prime_power_components": [
+        4,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 53,
+      "prime_power_components": [
+        53
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          36,
+          16,
+          15,
+          0,
+          38,
+          37,
+          17,
+          52
+        ],
+        "square_roots": [
+          52,
+          47,
+          49,
+          42,
+          0,
+          41,
+          39,
+          32,
+          30
+        ],
+        "local_entries": [
+          [
+            1,
+            36,
+            16,
+            15,
+            0,
+            38,
+            37,
+            17,
+            52
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 54,
+      "prime_power_components": [
+        2,
+        27
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 23,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          31,
+          16,
+          37,
+          34,
+          28,
+          22,
+          19,
+          40,
+          25
+        ],
+        "square_roots": [
+          29,
+          50,
+          35,
+          40,
+          28,
+          34,
+          37,
+          38,
+          49
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            4,
+            16,
+            10,
+            7,
+            1,
+            22,
+            19,
+            13,
+            25
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 55,
+      "prime_power_components": [
+        5,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          15,
+          9,
+          1,
+          31,
+          45,
+          4,
+          34,
+          26,
+          20
+        ],
+        "square_roots": [
+          35,
+          52,
+          54,
+          41,
+          45,
+          53,
+          43,
+          46,
+          30
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 56,
+      "prime_power_components": [
+        8,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 57,
+      "prime_power_components": [
+        3,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 58,
+      "prime_power_components": [
+        2,
+        29
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          22,
+          35,
+          34,
+          0,
+          24,
+          23,
+          36,
+          57
+        ],
+        "square_roots": [
+          57,
+          44,
+          37,
+          40,
+          0,
+          42,
+          49,
+          52,
+          41
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 59,
+      "prime_power_components": [
+        59
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          49,
+          26,
+          46,
+          57,
+          1,
+          4,
+          15,
+          35,
+          12
+        ],
+        "square_roots": [
+          52,
+          47,
+          39,
+          36,
+          58,
+          57,
+          30,
+          34,
+          37
+        ],
+        "local_entries": [
+          [
+            49,
+            26,
+            46,
+            57,
+            1,
+            4,
+            15,
+            35,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 60,
+      "prime_power_components": [
+        4,
+        3,
+        5
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 61,
+      "prime_power_components": [
+        61
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          56,
+          4,
+          3,
+          0,
+          58,
+          57,
+          5,
+          60
+        ],
+        "square_roots": [
+          60,
+          42,
+          59,
+          53,
+          0,
+          34,
+          39,
+          35,
+          50
+        ],
+        "local_entries": [
+          [
+            1,
+            56,
+            4,
+            3,
+            0,
+            58,
+            57,
+            5,
+            60
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 62,
+      "prime_power_components": [
+        2,
+        31
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 63,
+      "prime_power_components": [
+        9,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          28,
+          16,
+          22,
+          58,
+          1,
+          7,
+          43,
+          49,
+          37
+        ],
+        "square_roots": [
+          35,
+          59,
+          43,
+          52,
+          62,
+          49,
+          50,
+          56,
+          53
+        ],
+        "local_entries": [
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 64,
+      "prime_power_components": [
+        64
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 20,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 65,
+      "prime_power_components": [
+        5,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          40,
+          64,
+          26,
+          51,
+          0,
+          14,
+          39,
+          1,
+          25
+        ],
+        "square_roots": [
+          40,
+          57,
+          39,
+          44,
+          0,
+          53,
+          52,
+          64,
+          60
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 66,
+      "prime_power_components": [
+        2,
+        3,
+        11
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 67,
+      "prime_power_components": [
+        67
+      ],
+      "component_parker": [
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 68,
+      "prime_power_components": [
+        4,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 69,
+      "prime_power_components": [
+        3,
+        23
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 70,
+      "prime_power_components": [
+        2,
+        5,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          35,
+          44,
+          1,
+          16,
+          50,
+          14,
+          29,
+          56,
+          65
+        ],
+        "square_roots": [
+          35,
+          52,
+          69,
+          66,
+          50,
+          42,
+          57,
+          56,
+          45
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 71,
+      "prime_power_components": [
+        71
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          16,
+          43,
+          15,
+          0,
+          1,
+          2,
+          58,
+          30,
+          57
+        ],
+        "square_roots": [
+          67,
+          55,
+          50,
+          0,
+          70,
+          59,
+          49,
+          39,
+          46
+        ],
+        "local_entries": [
+          [
+            16,
+            43,
+            15,
+            0,
+            1,
+            2,
+            58,
+            30,
+            57
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 72,
+      "prime_power_components": [
+        8,
+        9
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 16,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 73,
+      "prime_power_components": [
+        73
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          23,
+          49,
+          48,
+          0,
+          25,
+          24,
+          50,
+          72
+        ],
+        "square_roots": [
+          72,
+          60,
+          66,
+          62,
+          0,
+          68,
+          43,
+          59,
+          46
+        ],
+        "local_entries": [
+          [
+            1,
+            23,
+            49,
+            48,
+            0,
+            25,
+            24,
+            50,
+            72
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 74,
+      "prime_power_components": [
+        2,
+        37
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          46,
+          27,
+          26,
+          0,
+          48,
+          47,
+          28,
+          73
+        ],
+        "square_roots": [
+          73,
+          40,
+          45,
+          64,
+          0,
+          60,
+          63,
+          56,
+          43
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            9,
+            27,
+            26,
+            0,
+            11,
+            10,
+            28,
+            36
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 75,
+      "prime_power_components": [
+        3,
+        25
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 7,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 76,
+      "prime_power_components": [
+        4,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 77,
+      "prime_power_components": [
+        7,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          15,
+          9,
+          56,
+          42,
+          1,
+          37,
+          23,
+          70,
+          64
+        ],
+        "square_roots": [
+          64,
+          74,
+          56,
+          63,
+          76,
+          53,
+          67,
+          42,
+          69
+        ],
+        "local_entries": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 78,
+      "prime_power_components": [
+        2,
+        3,
+        13
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 79,
+      "prime_power_components": [
+        79
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          65,
+          8,
+          0,
+          1,
+          2,
+          73,
+          16,
+          72
+        ],
+        "square_roots": [
+          76,
+          67,
+          61,
+          0,
+          78,
+          70,
+          51,
+          75,
+          54
+        ],
+        "local_entries": [
+          [
+            9,
+            65,
+            8,
+            0,
+            1,
+            2,
+            73,
+            16,
+            72
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 80,
+      "prime_power_components": [
+        16,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 81,
+      "prime_power_components": [
+        81
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4,
+          64,
+          16,
+          13,
+          1,
+          70,
+          67,
+          19,
+          79
+        ],
+        "square_roots": [
+          79,
+          73,
+          77,
+          65,
+          80,
+          50,
+          43,
+          71,
+          59
+        ],
+        "local_entries": [
+          [
+            4,
+            64,
+            16,
+            13,
+            1,
+            70,
+            67,
+            19,
+            79
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 82,
+      "prime_power_components": [
+        2,
+        41
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          72,
+          9,
+          8,
+          0,
+          74,
+          73,
+          10,
+          81
+        ],
+        "square_roots": [
+          81,
+          62,
+          79,
+          48,
+          0,
+          60,
+          55,
+          66,
+          73
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            31,
+            9,
+            8,
+            0,
+            33,
+            32,
+            10,
+            40
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 83,
+      "prime_power_components": [
+        83
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          7,
+          4,
+          75,
+          69,
+          1,
+          16,
+          10,
+          81,
+          78
+        ],
+        "square_roots": [
+          67,
+          81,
+          65,
+          61,
+          82,
+          79,
+          50,
+          74,
+          59
+        ],
+        "local_entries": [
+          [
+            7,
+            4,
+            75,
+            69,
+            1,
+            16,
+            10,
+            81,
+            78
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 84,
+      "prime_power_components": [
+        4,
+        3,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 85,
+      "prime_power_components": [
+        5,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          35,
+          34,
+          16,
+          66,
+          0,
+          19,
+          69,
+          51,
+          50
+        ],
+        "square_roots": [
+          50,
+          68,
+          81,
+          61,
+          0,
+          62,
+          67,
+          51,
+          55
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            16,
+            15,
+            0,
+            2,
+            1,
+            0,
+            16
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x10102420"
+        ]
+      }
+    },
+    {
+      "n": 86,
+      "prime_power_components": [
+        2,
+        43
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 87,
+      "prime_power_components": [
+        3,
+        29
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          30,
+          51,
+          6,
+          63,
+          0,
+          24,
+          81,
+          36,
+          57
+        ],
+        "square_roots": [
+          57,
+          72,
+          66,
+          69,
+          0,
+          45,
+          78,
+          81,
+          75
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 88,
+      "prime_power_components": [
+        8,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 89,
+      "prime_power_components": [
+        89
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          79,
+          9,
+          8,
+          0,
+          81,
+          80,
+          10,
+          88
+        ],
+        "square_roots": [
+          88,
+          48,
+          86,
+          50,
+          0,
+          80,
+          76,
+          59,
+          55
+        ],
+        "local_entries": [
+          [
+            1,
+            79,
+            9,
+            8,
+            0,
+            81,
+            80,
+            10,
+            88
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 90,
+      "prime_power_components": [
+        2,
+        9,
+        5
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 17,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          40,
+          19,
+          61,
+          31,
+          10,
+          79,
+          49,
+          1,
+          70
+        ],
+        "square_roots": [
+          70,
+          73,
+          59,
+          79,
+          80,
+          77,
+          83,
+          89,
+          50
+        ],
+        "local_entries": [
+          [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            7,
+            4,
+            1,
+            7,
+            4,
+            1,
+            7
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ],
+        "local_masks": [
+          "0x2e1cebb88",
+          "0x110922424",
+          "0x61089888"
+        ]
+      }
+    },
+    {
+      "n": 91,
+      "prime_power_components": [
+        7,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          51,
+          0,
+          77,
+          78,
+          79,
+          65,
+          14,
+          64
+        ],
+        "square_roots": [
+          90,
+          73,
+          0,
+          70,
+          78,
+          66,
+          52,
+          77,
+          83
+        ],
+        "local_entries": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 92,
+      "prime_power_components": [
+        4,
+        23
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 93,
+      "prime_power_components": [
+        3,
+        31
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 94,
+      "prime_power_components": [
+        2,
+        47
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 95,
+      "prime_power_components": [
+        5,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          80,
+          74,
+          1,
+          36,
+          20,
+          4,
+          39,
+          61,
+          55
+        ],
+        "square_roots": [
+          55,
+          82,
+          94,
+          89,
+          75,
+          93,
+          77,
+          74,
+          70
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            4,
+            17,
+            1,
+            17,
+            1,
+            4,
+            1,
+            4,
+            17
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 96,
+      "prime_power_components": [
+        32,
+        3
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x10502420",
+        "0x404602002",
+        "0x201820980",
+        "0x980040205",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 97,
+      "prime_power_components": [
+        97
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          93,
+          3,
+          2,
+          0,
+          95,
+          94,
+          4,
+          96
+        ],
+        "square_roots": [
+          96,
+          53,
+          87,
+          83,
+          0,
+          80,
+          71,
+          95,
+          75
+        ],
+        "local_entries": [
+          [
+            1,
+            93,
+            3,
+            2,
+            0,
+            95,
+            94,
+            4,
+            96
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 98,
+      "prime_power_components": [
+        2,
+        49
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 17,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          85,
+          22,
+          43,
+          8,
+          50,
+          92,
+          57,
+          78,
+          15
+        ],
+        "square_roots": [
+          55,
+          62,
+          71,
+          78,
+          50,
+          76,
+          69,
+          64,
+          57
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x820000"
+        ]
+      }
+    },
+    {
+      "n": 99,
+      "prime_power_components": [
+        9,
+        11
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          37,
+          97,
+          67,
+          31,
+          1,
+          70,
+          34,
+          4,
+          64
+        ],
+        "square_roots": [
+          64,
+          85,
+          65,
+          74,
+          98,
+          86,
+          76,
+          97,
+          91
+        ],
+        "local_entries": [
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ],
+          [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 100,
+      "prime_power_components": [
+        4,
+        25
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 7,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 101,
+      "prime_power_components": [
+        101
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          19,
+          81,
+          80,
+          0,
+          21,
+          20,
+          82,
+          100
+        ],
+        "square_roots": [
+          100,
+          76,
+          92,
+          79,
+          0,
+          83,
+          90,
+          53,
+          91
+        ],
+        "local_entries": [
+          [
+            1,
+            19,
+            81,
+            80,
+            0,
+            21,
+            20,
+            82,
+            100
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 102,
+      "prime_power_components": [
+        2,
+        3,
+        17
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 103,
+      "prime_power_components": [
+        103
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          49,
+          7,
+          50,
+          2,
+          1,
+          0,
+          55,
+          98,
+          56
+        ],
+        "square_roots": [
+          96,
+          78,
+          87,
+          65,
+          102,
+          0,
+          63,
+          60,
+          57
+        ],
+        "local_entries": [
+          [
+            49,
+            7,
+            50,
+            2,
+            1,
+            0,
+            55,
+            98,
+            56
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 104,
+      "prime_power_components": [
+        8,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 105,
+      "prime_power_components": [
+        3,
+        5,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          0,
+          9,
+          36,
+          51,
+          15,
+          84,
+          99,
+          21,
+          30
+        ],
+        "square_roots": [
+          0,
+          102,
+          99,
+          81,
+          90,
+          63,
+          78,
+          84,
+          60
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 106,
+      "prime_power_components": [
+        2,
+        53
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          36,
+          69,
+          68,
+          0,
+          38,
+          37,
+          70,
+          105
+        ],
+        "square_roots": [
+          105,
+          100,
+          57,
+          64,
+          0,
+          94,
+          67,
+          74,
+          83
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            36,
+            16,
+            15,
+            0,
+            38,
+            37,
+            17,
+            52
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 107,
+      "prime_power_components": [
+        107
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          40,
+          61,
+          53,
+          1,
+          56,
+          48,
+          69,
+          100
+        ],
+        "square_roots": [
+          104,
+          88,
+          75,
+          69,
+          106,
+          85,
+          72,
+          60,
+          97
+        ],
+        "local_entries": [
+          [
+            9,
+            40,
+            61,
+            53,
+            1,
+            56,
+            48,
+            69,
+            100
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 108,
+      "prime_power_components": [
+        4,
+        27
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4,
+          16,
+          64,
+          88,
+          28,
+          76,
+          100,
+          40,
+          52
+        ],
+        "square_roots": [
+          106,
+          104,
+          100,
+          94,
+          82,
+          88,
+          98,
+          92,
+          86
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            16,
+            10,
+            7,
+            1,
+            22,
+            19,
+            13,
+            25
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 109,
+      "prime_power_components": [
+        109
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          104,
+          4,
+          3,
+          0,
+          106,
+          105,
+          5,
+          108
+        ],
+        "square_roots": [
+          108,
+          70,
+          107,
+          60,
+          0,
+          91,
+          66,
+          88,
+          76
+        ],
+        "local_entries": [
+          [
+            1,
+            104,
+            4,
+            3,
+            0,
+            106,
+            105,
+            5,
+            108
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 110,
+      "prime_power_components": [
+        2,
+        5,
+        11
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          15,
+          64,
+          1,
+          86,
+          100,
+          4,
+          89,
+          26,
+          75
+        ],
+        "square_roots": [
+          75,
+          102,
+          109,
+          96,
+          100,
+          108,
+          87,
+          86,
+          85
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 111,
+      "prime_power_components": [
+        3,
+        37
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          75,
+          9,
+          27,
+          63,
+          0,
+          48,
+          84,
+          102,
+          36
+        ],
+        "square_roots": [
+          75,
+          108,
+          66,
+          84,
+          0,
+          60,
+          63,
+          93,
+          105
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            27,
+            26,
+            0,
+            11,
+            10,
+            28,
+            36
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 112,
+      "prime_power_components": [
+        16,
+        7
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 113,
+      "prime_power_components": [
+        113
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          104,
+          8,
+          7,
+          0,
+          106,
+          105,
+          9,
+          112
+        ],
+        "square_roots": [
+          112,
+          68,
+          102,
+          81,
+          0,
+          85,
+          61,
+          110,
+          98
+        ],
+        "local_entries": [
+          [
+            1,
+            104,
+            8,
+            7,
+            0,
+            106,
+            105,
+            9,
+            112
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 114,
+      "prime_power_components": [
+        2,
+        3,
+        19
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 115,
+      "prime_power_components": [
+        5,
+        23
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          105,
+          24,
+          81,
+          46,
+          70,
+          94,
+          59,
+          1,
+          35
+        ],
+        "square_roots": [
+          75,
+          93,
+          106,
+          69,
+          70,
+          97,
+          98,
+          114,
+          60
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            13,
+            1,
+            12,
+            0,
+            1,
+            2,
+            13,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x10102420"
+        ]
+      }
+    },
+    {
+      "n": 116,
+      "prime_power_components": [
+        4,
+        29
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          88,
+          80,
+          64,
+          92,
+          0,
+          24,
+          52,
+          36,
+          28
+        ],
+        "square_roots": [
+          88,
+          102,
+          108,
+          98,
+          58,
+          100,
+          96,
+          110,
+          104
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 117,
+      "prime_power_components": [
+        9,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          25,
+          13,
+          103,
+          91,
+          79,
+          52,
+          40,
+          64
+        ],
+        "square_roots": [
+          116,
+          112,
+          65,
+          83,
+          91,
+          103,
+          104,
+          92,
+          109
+        ],
+        "local_entries": [
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ],
+          [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 118,
+      "prime_power_components": [
+        2,
+        59
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          49,
+          26,
+          105,
+          116,
+          60,
+          4,
+          15,
+          94,
+          71
+        ],
+        "square_roots": [
+          111,
+          106,
+          79,
+          82,
+          60,
+          116,
+          89,
+          84,
+          81
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            49,
+            26,
+            46,
+            57,
+            1,
+            4,
+            15,
+            35,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 119,
+      "prime_power_components": [
+        7,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          51,
+          84,
+          49,
+          85,
+          2,
+          86,
+          0,
+          50
+        ],
+        "square_roots": [
+          118,
+          102,
+          98,
+          112,
+          85,
+          108,
+          101,
+          0,
+          106
+        ],
+        "local_entries": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            16,
+            15,
+            0,
+            2,
+            1,
+            0,
+            16
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x10102420"
+        ]
+      }
+    },
+    {
+      "n": 120,
+      "prime_power_components": [
+        8,
+        3,
+        5
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 121,
+      "prime_power_components": [
+        121
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4,
+          20,
+          100,
+          97,
+          1,
+          26,
+          23,
+          103,
+          119
+        ],
+        "square_roots": [
+          119,
+          96,
+          111,
+          63,
+          120,
+          68,
+          109,
+          64,
+          102
+        ],
+        "local_entries": [
+          [
+            4,
+            20,
+            100,
+            97,
+            1,
+            26,
+            23,
+            103,
+            119
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 122,
+      "prime_power_components": [
+        2,
+        61
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          56,
+          65,
+          64,
+          0,
+          58,
+          57,
+          66,
+          121
+        ],
+        "square_roots": [
+          121,
+          80,
+          63,
+          114,
+          0,
+          88,
+          83,
+          96,
+          111
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            56,
+            4,
+            3,
+            0,
+            58,
+            57,
+            5,
+            60
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 123,
+      "prime_power_components": [
+        3,
+        41
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          42,
+          72,
+          9,
+          90,
+          0,
+          33,
+          114,
+          51,
+          81
+        ],
+        "square_roots": [
+          81,
+          102,
+          120,
+          75,
+          0,
+          63,
+          96,
+          66,
+          114
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            31,
+            9,
+            8,
+            0,
+            33,
+            32,
+            10,
+            40
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 124,
+      "prime_power_components": [
+        4,
+        31
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 125,
+      "prime_power_components": [
+        125
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          99,
+          25,
+          24,
+          0,
+          101,
+          100,
+          26,
+          124
+        ],
+        "square_roots": [
+          124,
+          82,
+          120,
+          93,
+          100,
+          74,
+          115,
+          76,
+          68
+        ],
+        "local_entries": [
+          [
+            1,
+            99,
+            25,
+            24,
+            0,
+            101,
+            100,
+            26,
+            124
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 126,
+      "prime_power_components": [
+        2,
+        9,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 17,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          22,
+          37,
+          7,
+          49,
+          64,
+          79,
+          121,
+          91,
+          106
+        ],
+        "square_roots": [
+          106,
+          109,
+          77,
+          119,
+          118,
+          95,
+          115,
+          91,
+          104
+        ],
+        "local_entries": [
+          [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            7,
+            4,
+            1,
+            7,
+            4,
+            1,
+            7
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ],
+        "local_masks": [
+          "0x2e1cebb88",
+          "0x110922424",
+          "0x61089888"
+        ]
+      }
+    },
+    {
+      "n": 127,
+      "prime_power_components": [
+        127
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          0,
+          121,
+          113,
+          1,
+          16,
+          8,
+          2,
+          120
+        ],
+        "square_roots": [
+          124,
+          0,
+          116,
+          85,
+          126,
+          123,
+          95,
+          111,
+          82
+        ],
+        "local_entries": [
+          [
+            9,
+            0,
+            121,
+            113,
+            1,
+            16,
+            8,
+            2,
+            120
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 128,
+      "prime_power_components": [
+        128
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 21,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          97,
+          25,
+          17,
+          1,
+          113,
+          105,
+          33,
+          121
+        ],
+        "square_roots": [
+          125,
+          113,
+          123,
+          105,
+          127,
+          103,
+          109,
+          111,
+          117
+        ],
+        "local_entries": [
+          [
+            9,
+            97,
+            25,
+            17,
+            1,
+            113,
+            105,
+            33,
+            121
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 129,
+      "prime_power_components": [
+        3,
+        43
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 130,
+      "prime_power_components": [
+        2,
+        5,
+        13
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          105,
+          64,
+          91,
+          116,
+          0,
+          14,
+          39,
+          66,
+          25
+        ],
+        "square_roots": [
+          105,
+          122,
+          91,
+          96,
+          0,
+          118,
+          117,
+          116,
+          125
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 131,
+      "prime_power_components": [
+        131
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          25,
+          81,
+          28,
+          4,
+          1,
+          129,
+          105,
+          52,
+          108
+        ],
+        "square_roots": [
+          126,
+          122,
+          91,
+          129,
+          130,
+          103,
+          74,
+          107,
+          97
+        ],
+        "local_entries": [
+          [
+            25,
+            81,
+            28,
+            4,
+            1,
+            129,
+            105,
+            52,
+            108
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 132,
+      "prime_power_components": [
+        4,
+        3,
+        11
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 133,
+      "prime_power_components": [
+        7,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          99,
+          93,
+          77,
+          112,
+          1,
+          23,
+          58,
+          42,
+          36
+        ],
+        "square_roots": [
+          97,
+          108,
+          77,
+          70,
+          132,
+          116,
+          115,
+          112,
+          127
+        ],
+        "local_entries": [
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          [
+            4,
+            17,
+            1,
+            17,
+            1,
+            4,
+            1,
+            4,
+            17
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 134,
+      "prime_power_components": [
+        2,
+        67
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 135,
+      "prime_power_components": [
+        27,
+        5
+      ],
+      "component_parker": [
+        false,
+        true
+      ],
+      "parker": false,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          85,
+          124,
+          91,
+          61,
+          55,
+          49,
+          19,
+          121,
+          25
+        ],
+        "square_roots": [
+          110,
+          112,
+          116,
+          121,
+          80,
+          128,
+          118,
+          124,
+          130
+        ],
+        "local_entries": [
+          [
+            4,
+            16,
+            10,
+            7,
+            1,
+            22,
+            19,
+            13,
+            25
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ],
+        "local_masks": [
+          "0x0",
+          "0x61089888"
+        ]
+      }
+    },
+    {
+      "n": 136,
+      "prime_power_components": [
+        8,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 137,
+      "prime_power_components": [
+        137
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          120,
+          16,
+          15,
+          0,
+          122,
+          121,
+          17,
+          136
+        ],
+        "square_roots": [
+          136,
+          95,
+          133,
+          120,
+          0,
+          81,
+          126,
+          90,
+          100
+        ],
+        "local_entries": [
+          [
+            1,
+            120,
+            16,
+            15,
+            0,
+            122,
+            121,
+            17,
+            136
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 138,
+      "prime_power_components": [
+        2,
+        3,
+        23
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 12,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 139,
+      "prime_power_components": [
+        139
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          16,
+          5,
+          121,
+          106,
+          1,
+          35,
+          20,
+          136,
+          125
+        ],
+        "square_roots": [
+          135,
+          127,
+          128,
+          84,
+          138,
+          70,
+          115,
+          85,
+          79
+        ],
+        "local_entries": [
+          [
+            16,
+            5,
+            121,
+            106,
+            1,
+            35,
+            20,
+            136,
+            125
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 140,
+      "prime_power_components": [
+        4,
+        5,
+        7
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          0,
+          44,
+          36,
+          16,
+          120,
+          84,
+          64,
+          56,
+          100
+        ],
+        "square_roots": [
+          70,
+          122,
+          134,
+          136,
+          120,
+          112,
+          132,
+          126,
+          130
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 141,
+      "prime_power_components": [
+        3,
+        47
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 5,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 142,
+      "prime_power_components": [
+        2,
+        71
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 17,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          87,
+          114,
+          15,
+          0,
+          72,
+          2,
+          129,
+          30,
+          57
+        ],
+        "square_roots": [
+          75,
+          126,
+          121,
+          0,
+          72,
+          130,
+          93,
+          110,
+          117
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            16,
+            43,
+            15,
+            0,
+            1,
+            2,
+            58,
+            30,
+            57
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 143,
+      "prime_power_components": [
+        11,
+        13
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          64,
+          26,
+          103,
+          78,
+          53,
+          130,
+          92,
+          12
+        ],
+        "square_roots": [
+          142,
+          135,
+          130,
+          112,
+          78,
+          129,
+          91,
+          90,
+          122
+        ],
+        "local_entries": [
+          [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ],
+          [
+            1,
+            12,
+            0,
+            12,
+            0,
+            1,
+            0,
+            1,
+            12
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 144,
+      "prime_power_components": [
+        16,
+        9
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 16,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 145,
+      "prime_power_components": [
+        5,
+        29
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          30,
+          109,
+          6,
+          121,
+          0,
+          24,
+          139,
+          36,
+          115
+        ],
+        "square_roots": [
+          115,
+          102,
+          124,
+          134,
+          0,
+          132,
+          107,
+          139,
+          75
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            1,
+            22,
+            6,
+            5,
+            0,
+            24,
+            23,
+            7,
+            28
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 146,
+      "prime_power_components": [
+        2,
+        73
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 17,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          96,
+          49,
+          48,
+          0,
+          98,
+          97,
+          50,
+          145
+        ],
+        "square_roots": [
+          145,
+          86,
+          139,
+          84,
+          0,
+          78,
+          103,
+          132,
+          119
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            23,
+            49,
+            48,
+            0,
+            25,
+            24,
+            50,
+            72
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 147,
+      "prime_power_components": [
+        3,
+        49
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 148,
+      "prime_power_components": [
+        4,
+        37
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          112,
+          120,
+          64,
+          100,
+          0,
+          48,
+          84,
+          28,
+          36
+        ],
+        "square_roots": [
+          112,
+          114,
+          140,
+          138,
+          74,
+          134,
+          122,
+          130,
+          142
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            27,
+            26,
+            0,
+            11,
+            10,
+            28,
+            36
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 149,
+      "prime_power_components": [
+        149
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          123,
+          25,
+          24,
+          0,
+          125,
+          124,
+          26,
+          148
+        ],
+        "square_roots": [
+          148,
+          102,
+          144,
+          89,
+          0,
+          107,
+          78,
+          131,
+          105
+        ],
+        "local_entries": [
+          [
+            1,
+            123,
+            25,
+            24,
+            0,
+            125,
+            124,
+            26,
+            148
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 150,
+      "prime_power_components": [
+        2,
+        3,
+        25
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 19,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          141,
+          6,
+          81,
+          66,
+          126,
+          36,
+          21,
+          96,
+          111
+        ],
+        "square_roots": [
+          129,
+          84,
+          141,
+          96,
+          126,
+          144,
+          111,
+          114,
+          81
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0xfffffffff",
+          "0x300000104"
+        ]
+      }
+    },
+    {
+      "n": 151,
+      "prime_power_components": [
+        151
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 10,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          0,
+          145,
+          137,
+          1,
+          16,
+          8,
+          2,
+          144
+        ],
+        "square_roots": [
+          148,
+          0,
+          121,
+          99,
+          150,
+          147,
+          92,
+          105,
+          139
+        ],
+        "local_entries": [
+          [
+            9,
+            0,
+            145,
+            137,
+            1,
+            16,
+            8,
+            2,
+            144
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 152,
+      "prime_power_components": [
+        8,
+        19
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 153,
+      "prime_power_components": [
+        9,
+        17
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 8,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          34,
+          67,
+          49,
+          136,
+          70,
+          52,
+          85,
+          118
+        ],
+        "square_roots": [
+          152,
+          85,
+          115,
+          146,
+          136,
+          130,
+          103,
+          119,
+          98
+        ],
+        "local_entries": [
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ],
+          [
+            1,
+            0,
+            16,
+            15,
+            0,
+            2,
+            1,
+            0,
+            16
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x10102420"
+        ]
+      }
+    },
+    {
+      "n": 154,
+      "prime_power_components": [
+        2,
+        7,
+        11
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 9,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          15,
+          86,
+          133,
+          42,
+          78,
+          114,
+          23,
+          70,
+          141
+        ],
+        "square_roots": [
+          141,
+          102,
+          133,
+          140,
+          120,
+          130,
+          109,
+          112,
+          113
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ],
+          [
+            4,
+            9,
+            1,
+            9,
+            1,
+            4,
+            1,
+            4,
+            9
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 155,
+      "prime_power_components": [
+        5,
+        31
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 4,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          0,
+          64,
+          1,
+          126,
+          125,
+          124,
+          94,
+          31,
+          95
+        ],
+        "square_roots": [
+          0,
+          147,
+          154,
+          116,
+          125,
+          93,
+          123,
+          124,
+          85
+        ],
+        "local_entries": [
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1,
+            0,
+            1,
+            0,
+            2
+          ]
+        ],
+        "local_masks": [
+          "0x61089888",
+          "0x8a054250"
+        ]
+      }
+    },
+    {
+      "n": 156,
+      "prime_power_components": [
+        4,
+        3,
+        13
+      ],
+      "component_parker": [
+        true,
+        true,
+        true
+      ],
+      "parker": true,
+      "full_masks": 3,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 157,
+      "prime_power_components": [
+        157
+      ],
+      "component_parker": [
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1,
+          120,
+          36,
+          35,
+          0,
+          122,
+          121,
+          37,
+          156
+        ],
+        "square_roots": [
+          156,
+          80,
+          151,
+          105,
+          0,
+          114,
+          146,
+          115,
+          129
+        ],
+        "local_entries": [
+          [
+            1,
+            120,
+            36,
+            35,
+            0,
+            122,
+            121,
+            37,
+            156
+          ]
+        ],
+        "local_masks": [
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 158,
+      "prime_power_components": [
+        2,
+        79
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          9,
+          144,
+          87,
+          0,
+          80,
+          2,
+          73,
+          16,
+          151
+        ],
+        "square_roots": [
+          155,
+          146,
+          97,
+          0,
+          80,
+          88,
+          107,
+          154,
+          133
+        ],
+        "local_entries": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            9,
+            65,
+            8,
+            0,
+            1,
+            2,
+            73,
+            16,
+            72
+          ]
+        ],
+        "local_masks": [
+          "0x495742ea2",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 159,
+      "prime_power_components": [
+        3,
+        53
+      ],
+      "component_parker": [
+        true,
+        false
+      ],
+      "parker": false,
+      "full_masks": 6,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          54,
+          36,
+          69,
+          15,
+          0,
+          144,
+          90,
+          123,
+          105
+        ],
+        "square_roots": [
+          105,
+          153,
+          102,
+          117,
+          0,
+          147,
+          120,
+          138,
+          129
+        ],
+        "local_entries": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            36,
+            16,
+            15,
+            0,
+            38,
+            37,
+            17,
+            52
+          ]
+        ],
+        "local_masks": [
+          "0xfffffffff",
+          "0x0"
+        ]
+      }
+    },
+    {
+      "n": 160,
+      "prime_power_components": [
+        32,
+        5
+      ],
+      "component_parker": [
+        true,
+        true
+      ],
+      "parker": false,
+      "full_masks": 13,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          105,
+          129,
+          121,
+          81,
+          65,
+          49,
+          9,
+          1,
+          25
+        ],
+        "square_roots": [
+          125,
+          143,
+          149,
+          151,
+          145,
+          153,
+          157,
+          159,
+          155
+        ],
+        "local_entries": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ],
+        "local_masks": [
+          "0x10502420",
+          "0x61089888"
+        ]
+      }
+    }
+  ],
+  "smallest_nonparker_with_only_parker_components": 35
+}

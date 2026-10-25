@@ -1,0 +1,48 @@
+{
+  "128": {
+    "labelled_magic_arrays": 1536,
+    "square_residues": 23
+  },
+  "16": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 4
+  },
+  "2": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 2
+  },
+  "27": {
+    "labelled_magic_arrays": 216,
+    "square_residues": 11
+  },
+  "3": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 2
+  },
+  "32": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 7
+  },
+  "4": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 2
+  },
+  "64": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 12
+  },
+  "8": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 3
+  },
+  "9": {
+    "labelled_magic_arrays": 0,
+    "square_residues": 4
+  },
+  "fixed_mod3_root_children_mod9": 27,
+  "source_sha256": {
+    "PROOF.md": "8010f2996a695d420daa7b9e7296ccd091156352cdd069bf51f51e7bd4519149",
+    "certificate.json": "f97852c77fa4d403e3b0f4f063b706f8311bbb4c654ca2cf443c66a7ca4d7ccc",
+    "verify.py": "ba80c94a80b2a3c280fc36dc75d8cf511ea7b7015fbf833f79c324e4662289cb"
+  }
+}

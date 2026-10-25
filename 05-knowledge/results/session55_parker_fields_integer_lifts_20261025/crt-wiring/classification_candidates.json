@@ -1,0 +1,7090 @@
+{
+  "scope": "All remaining candidates after prime-power and odd-part reduction; dependency theorem must be supplied separately",
+  "odd_prime_parker": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    31,
+    43,
+    47,
+    67
+  ],
+  "odd_parker": [
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    31,
+    33,
+    39,
+    43,
+    47,
+    49,
+    51,
+    57,
+    67,
+    69,
+    75,
+    93,
+    129,
+    141,
+    147,
+    201
+  ],
+  "candidate_count": 203,
+  "parker_count_including_1": 137,
+  "largest_parker": 3216,
+  "parker_moduli": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    30,
+    31,
+    32,
+    33,
+    34,
+    36,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    46,
+    47,
+    48,
+    49,
+    51,
+    52,
+    56,
+    57,
+    60,
+    62,
+    64,
+    66,
+    67,
+    68,
+    69,
+    72,
+    75,
+    76,
+    78,
+    80,
+    84,
+    86,
+    88,
+    92,
+    93,
+    94,
+    96,
+    100,
+    102,
+    104,
+    112,
+    114,
+    120,
+    124,
+    129,
+    132,
+    134,
+    136,
+    138,
+    141,
+    144,
+    147,
+    152,
+    156,
+    168,
+    172,
+    176,
+    184,
+    186,
+    188,
+    192,
+    196,
+    201,
+    204,
+    208,
+    228,
+    240,
+    248,
+    258,
+    264,
+    268,
+    272,
+    276,
+    282,
+    300,
+    304,
+    312,
+    336,
+    344,
+    368,
+    372,
+    376,
+    402,
+    408,
+    456,
+    496,
+    516,
+    528,
+    536,
+    552,
+    564,
+    588,
+    624,
+    688,
+    744,
+    752,
+    804,
+    816,
+    912,
+    1032,
+    1072,
+    1104,
+    1128,
+    1488,
+    1608,
+    2064,
+    2256,
+    3216
+  ],
+  "local_antichains": {
+    "2": [
+      {
+        "mask": "0x495742ea2",
+        "entries": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x2e1cebb88",
+        "entries": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": "0x98b456ad5",
+        "entries": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ]
+      }
+    ],
+    "3": [
+      {
+        "mask": "0xfffffffff",
+        "entries": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "4": [
+      {
+        "mask": "0xfffffffff",
+        "entries": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "5": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          0,
+          4,
+          1,
+          1,
+          0,
+          4,
+          4,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          1,
+          4,
+          0,
+          4,
+          0,
+          1,
+          0,
+          1,
+          4
+        ]
+      }
+    ],
+    "7": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "8": [
+      {
+        "mask": "0x495742ea2",
+        "entries": [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          4
+        ]
+      },
+      {
+        "mask": "0x2e1cebb88",
+        "entries": [
+          0,
+          4,
+          4,
+          4,
+          0,
+          4,
+          4,
+          4,
+          0
+        ]
+      },
+      {
+        "mask": "0x98b456ad5",
+        "entries": [
+          4,
+          4,
+          0,
+          4,
+          0,
+          4,
+          0,
+          4,
+          4
+        ]
+      }
+    ],
+    "9": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          7,
+          4,
+          4,
+          1,
+          7,
+          7,
+          4,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          4,
+          7,
+          1,
+          7,
+          1,
+          4,
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "mask": "0x110922424",
+        "entries": [
+          4,
+          1,
+          7,
+          4,
+          1,
+          7,
+          4,
+          1,
+          7
+        ]
+      },
+      {
+        "mask": "0xe04600103",
+        "entries": [
+          4,
+          4,
+          4,
+          1,
+          1,
+          1,
+          7,
+          7,
+          7
+        ]
+      }
+    ],
+    "11": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          9,
+          4,
+          4,
+          1,
+          9,
+          9,
+          4,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          4,
+          9,
+          1,
+          9,
+          1,
+          4,
+          1,
+          4,
+          9
+        ]
+      }
+    ],
+    "13": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          0,
+          12,
+          1,
+          1,
+          0,
+          12,
+          12,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          1,
+          12,
+          0,
+          12,
+          0,
+          1,
+          0,
+          1,
+          12
+        ]
+      }
+    ],
+    "16": [
+      {
+        "mask": "0x495742ea2",
+        "entries": [
+          9,
+          1,
+          9,
+          1,
+          1,
+          1,
+          9,
+          1,
+          9
+        ]
+      },
+      {
+        "mask": "0x2e1cebb88",
+        "entries": [
+          1,
+          9,
+          9,
+          9,
+          1,
+          9,
+          9,
+          9,
+          1
+        ]
+      },
+      {
+        "mask": "0x98b456ad5",
+        "entries": [
+          9,
+          9,
+          1,
+          9,
+          1,
+          9,
+          1,
+          9,
+          9
+        ]
+      }
+    ],
+    "17": [
+      {
+        "mask": "0x10102420",
+        "entries": [
+          1,
+          0,
+          16,
+          15,
+          0,
+          2,
+          1,
+          0,
+          16
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          1,
+          15,
+          1,
+          0,
+          0,
+          0,
+          16,
+          2,
+          16
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          0,
+          16,
+          1,
+          1,
+          0,
+          16,
+          16,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          1,
+          16,
+          0,
+          16,
+          0,
+          1,
+          0,
+          1,
+          16
+        ]
+      }
+    ],
+    "19": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          17,
+          4,
+          4,
+          1,
+          17,
+          17,
+          4,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          4,
+          17,
+          1,
+          17,
+          1,
+          4,
+          1,
+          4,
+          17
+        ]
+      }
+    ],
+    "23": [
+      {
+        "mask": "0x10102420",
+        "entries": [
+          13,
+          1,
+          12,
+          0,
+          1,
+          2,
+          13,
+          1,
+          12
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          13,
+          0,
+          13,
+          1,
+          1,
+          1,
+          12,
+          2,
+          12
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "25": [
+      {
+        "mask": "0x300000104",
+        "entries": [
+          16,
+          6,
+          6,
+          16,
+          1,
+          11,
+          21,
+          21,
+          11
+        ]
+      },
+      {
+        "mask": "0x800820001",
+        "entries": [
+          16,
+          16,
+          21,
+          6,
+          1,
+          21,
+          6,
+          11,
+          11
+        ]
+      },
+      {
+        "mask": "0x10102420",
+        "entries": [
+          16,
+          1,
+          11,
+          21,
+          1,
+          6,
+          16,
+          1,
+          11
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          16,
+          21,
+          16,
+          1,
+          1,
+          1,
+          11,
+          6,
+          11
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          0,
+          24,
+          1,
+          1,
+          0,
+          24,
+          24,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          1,
+          24,
+          0,
+          24,
+          0,
+          1,
+          0,
+          1,
+          24
+        ]
+      }
+    ],
+    "31": [
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "32": [
+      {
+        "mask": "0x10502420",
+        "entries": [
+          9,
+          1,
+          25,
+          17,
+          1,
+          17,
+          9,
+          1,
+          25
+        ]
+      },
+      {
+        "mask": "0x404602002",
+        "entries": [
+          9,
+          17,
+          9,
+          1,
+          1,
+          1,
+          25,
+          17,
+          25
+        ]
+      },
+      {
+        "mask": "0x201820980",
+        "entries": [
+          17,
+          9,
+          9,
+          25,
+          1,
+          9,
+          25,
+          25,
+          17
+        ]
+      },
+      {
+        "mask": "0x980040205",
+        "entries": [
+          9,
+          9,
+          17,
+          9,
+          1,
+          25,
+          17,
+          25,
+          25
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          25,
+          9,
+          9,
+          1,
+          25,
+          25,
+          9,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          9,
+          25,
+          1,
+          25,
+          1,
+          9,
+          1,
+          9,
+          25
+        ]
+      }
+    ],
+    "43": [
+      {
+        "mask": "0x10102420",
+        "entries": [
+          21,
+          1,
+          24,
+          4,
+          1,
+          41,
+          21,
+          1,
+          24
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          21,
+          4,
+          21,
+          1,
+          1,
+          1,
+          24,
+          41,
+          24
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          41,
+          4,
+          4,
+          1,
+          41,
+          41,
+          4,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          4,
+          41,
+          1,
+          41,
+          1,
+          4,
+          1,
+          4,
+          41
+        ]
+      }
+    ],
+    "47": [
+      {
+        "mask": "0x10102420",
+        "entries": [
+          25,
+          1,
+          24,
+          0,
+          1,
+          2,
+          25,
+          1,
+          24
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          25,
+          0,
+          25,
+          1,
+          1,
+          1,
+          24,
+          2,
+          24
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "49": [
+      {
+        "mask": "0x820000",
+        "entries": [
+          36,
+          22,
+          43,
+          8,
+          1,
+          43,
+          8,
+          29,
+          15
+        ]
+      },
+      {
+        "mask": "0x100000004",
+        "entries": [
+          36,
+          43,
+          22,
+          36,
+          1,
+          15,
+          29,
+          8,
+          15
+        ]
+      },
+      {
+        "mask": "0x200000100",
+        "entries": [
+          36,
+          8,
+          8,
+          22,
+          1,
+          29,
+          43,
+          43,
+          15
+        ]
+      },
+      {
+        "mask": "0x800000001",
+        "entries": [
+          36,
+          36,
+          29,
+          43,
+          1,
+          8,
+          22,
+          15,
+          15
+        ]
+      },
+      {
+        "mask": "0x10102420",
+        "entries": [
+          36,
+          1,
+          15,
+          29,
+          1,
+          22,
+          36,
+          1,
+          15
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          36,
+          29,
+          36,
+          1,
+          1,
+          1,
+          15,
+          22,
+          15
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "64": [
+      {
+        "mask": "0x2000",
+        "entries": [
+          9,
+          33,
+          25,
+          17,
+          1,
+          49,
+          41,
+          33,
+          57
+        ]
+      },
+      {
+        "mask": "0x400000",
+        "entries": [
+          9,
+          17,
+          41,
+          33,
+          1,
+          33,
+          25,
+          49,
+          57
+        ]
+      },
+      {
+        "mask": "0x820000",
+        "entries": [
+          49,
+          57,
+          25,
+          41,
+          1,
+          25,
+          41,
+          9,
+          17
+        ]
+      },
+      {
+        "mask": "0x100000004",
+        "entries": [
+          9,
+          41,
+          17,
+          9,
+          1,
+          57,
+          49,
+          25,
+          57
+        ]
+      },
+      {
+        "mask": "0x200000100",
+        "entries": [
+          49,
+          9,
+          9,
+          25,
+          1,
+          41,
+          57,
+          57,
+          17
+        ]
+      },
+      {
+        "mask": "0x800000001",
+        "entries": [
+          9,
+          9,
+          49,
+          41,
+          1,
+          25,
+          17,
+          57,
+          57
+        ]
+      },
+      {
+        "mask": "0x1000880",
+        "entries": [
+          33,
+          25,
+          9,
+          41,
+          1,
+          25,
+          57,
+          41,
+          33
+        ]
+      },
+      {
+        "mask": "0x80040200",
+        "entries": [
+          9,
+          25,
+          33,
+          25,
+          1,
+          41,
+          33,
+          41,
+          57
+        ]
+      }
+    ],
+    "67": [
+      {
+        "mask": "0x10102420",
+        "entries": [
+          36,
+          1,
+          33,
+          65,
+          1,
+          4,
+          36,
+          1,
+          33
+        ]
+      },
+      {
+        "mask": "0x404600002",
+        "entries": [
+          36,
+          65,
+          36,
+          1,
+          1,
+          1,
+          33,
+          4,
+          33
+        ]
+      },
+      {
+        "mask": "0x61089888",
+        "entries": [
+          1,
+          65,
+          4,
+          4,
+          1,
+          65,
+          65,
+          4,
+          1
+        ]
+      },
+      {
+        "mask": "0x8a054250",
+        "entries": [
+          4,
+          65,
+          1,
+          65,
+          1,
+          4,
+          1,
+          4,
+          65
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "n": 1,
+      "dyadic_exponent": 0,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 2,
+      "dyadic_exponent": 1,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 3,
+      "dyadic_exponent": 0,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 4,
+      "dyadic_exponent": 2,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 5,
+      "dyadic_exponent": 0,
+      "odd_part": 5,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 6,
+      "dyadic_exponent": 1,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 7,
+      "dyadic_exponent": 0,
+      "odd_part": 7,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 8,
+      "dyadic_exponent": 3,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 9,
+      "dyadic_exponent": 0,
+      "odd_part": 9,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "witness": null
+    },
+    {
+      "n": 10,
+      "dyadic_exponent": 1,
+      "odd_part": 5,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 11,
+      "dyadic_exponent": 0,
+      "odd_part": 11,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 12,
+      "dyadic_exponent": 2,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0xfffffffff"
+      ],
+      "witness": null
+    },
+    {
+      "n": 13,
+      "dyadic_exponent": 0,
+      "odd_part": 13,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 14,
+      "dyadic_exponent": 1,
+      "odd_part": 7,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 15,
+      "dyadic_exponent": 0,
+      "odd_part": 15,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 16,
+      "dyadic_exponent": 4,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 17,
+      "dyadic_exponent": 0,
+      "odd_part": 17,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 18,
+      "dyadic_exponent": 1,
+      "odd_part": 9,
+      "parker": true,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 19,
+      "dyadic_exponent": 0,
+      "odd_part": 19,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 20,
+      "dyadic_exponent": 2,
+      "odd_part": 5,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 21,
+      "dyadic_exponent": 0,
+      "odd_part": 21,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 22,
+      "dyadic_exponent": 1,
+      "odd_part": 11,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 23,
+      "dyadic_exponent": 0,
+      "odd_part": 23,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 24,
+      "dyadic_exponent": 3,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 25,
+      "dyadic_exponent": 0,
+      "odd_part": 25,
+      "parker": true,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 26,
+      "dyadic_exponent": 1,
+      "odd_part": 13,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 28,
+      "dyadic_exponent": 2,
+      "odd_part": 7,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 30,
+      "dyadic_exponent": 1,
+      "odd_part": 15,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 31,
+      "dyadic_exponent": 0,
+      "odd_part": 31,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 32,
+      "dyadic_exponent": 5,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0x10502420",
+        "0x404602002",
+        "0x201820980",
+        "0x980040205",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 33,
+      "dyadic_exponent": 0,
+      "odd_part": 33,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 34,
+      "dyadic_exponent": 1,
+      "odd_part": 17,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 36,
+      "dyadic_exponent": 2,
+      "odd_part": 9,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250",
+        "0x110922424",
+        "0xe04600103"
+      ],
+      "witness": null
+    },
+    {
+      "n": 38,
+      "dyadic_exponent": 1,
+      "odd_part": 19,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 39,
+      "dyadic_exponent": 0,
+      "odd_part": 39,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 40,
+      "dyadic_exponent": 3,
+      "odd_part": 5,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 42,
+      "dyadic_exponent": 1,
+      "odd_part": 21,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 43,
+      "dyadic_exponent": 0,
+      "odd_part": 43,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 44,
+      "dyadic_exponent": 2,
+      "odd_part": 11,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 46,
+      "dyadic_exponent": 1,
+      "odd_part": 23,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 47,
+      "dyadic_exponent": 0,
+      "odd_part": 47,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 48,
+      "dyadic_exponent": 4,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0x495742ea2",
+        "0x2e1cebb88",
+        "0x98b456ad5"
+      ],
+      "witness": null
+    },
+    {
+      "n": 49,
+      "dyadic_exponent": 0,
+      "odd_part": 49,
+      "parker": true,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 50,
+      "dyadic_exponent": 1,
+      "odd_part": 25,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          41,
+          6,
+          31,
+          16,
+          26,
+          36,
+          21,
+          46,
+          11
+        ],
+        "square_roots": [
+          29,
+          34,
+          41,
+          46,
+          26,
+          44,
+          39,
+          36,
+          31
+        ],
+        "local_arrays": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 51,
+      "dyadic_exponent": 0,
+      "odd_part": 51,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 52,
+      "dyadic_exponent": 2,
+      "odd_part": 13,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 56,
+      "dyadic_exponent": 3,
+      "odd_part": 7,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 57,
+      "dyadic_exponent": 0,
+      "odd_part": 57,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 60,
+      "dyadic_exponent": 2,
+      "odd_part": 15,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 62,
+      "dyadic_exponent": 1,
+      "odd_part": 31,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 64,
+      "dyadic_exponent": 6,
+      "odd_part": 1,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 66,
+      "dyadic_exponent": 1,
+      "odd_part": 33,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 67,
+      "dyadic_exponent": 0,
+      "odd_part": 67,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 68,
+      "dyadic_exponent": 2,
+      "odd_part": 17,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 69,
+      "dyadic_exponent": 0,
+      "odd_part": 69,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 72,
+      "dyadic_exponent": 3,
+      "odd_part": 9,
+      "parker": true,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 75,
+      "dyadic_exponent": 0,
+      "odd_part": 75,
+      "parker": true,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 76,
+      "dyadic_exponent": 2,
+      "odd_part": 19,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 78,
+      "dyadic_exponent": 1,
+      "odd_part": 39,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 80,
+      "dyadic_exponent": 4,
+      "odd_part": 5,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 84,
+      "dyadic_exponent": 2,
+      "odd_part": 21,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 86,
+      "dyadic_exponent": 1,
+      "odd_part": 43,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 88,
+      "dyadic_exponent": 3,
+      "odd_part": 11,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 92,
+      "dyadic_exponent": 2,
+      "odd_part": 23,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 93,
+      "dyadic_exponent": 0,
+      "odd_part": 93,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 94,
+      "dyadic_exponent": 1,
+      "odd_part": 47,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 96,
+      "dyadic_exponent": 5,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0x10502420",
+        "0x404602002",
+        "0x201820980",
+        "0x980040205",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 98,
+      "dyadic_exponent": 1,
+      "odd_part": 49,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          85,
+          22,
+          43,
+          8,
+          50,
+          92,
+          57,
+          78,
+          15
+        ],
+        "square_roots": [
+          55,
+          62,
+          71,
+          78,
+          50,
+          76,
+          69,
+          64,
+          57
+        ],
+        "local_arrays": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 100,
+      "dyadic_exponent": 2,
+      "odd_part": 25,
+      "parker": true,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 102,
+      "dyadic_exponent": 1,
+      "odd_part": 51,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 104,
+      "dyadic_exponent": 3,
+      "odd_part": 13,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 112,
+      "dyadic_exponent": 4,
+      "odd_part": 7,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 114,
+      "dyadic_exponent": 1,
+      "odd_part": 57,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 120,
+      "dyadic_exponent": 3,
+      "odd_part": 15,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 124,
+      "dyadic_exponent": 2,
+      "odd_part": 31,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 129,
+      "dyadic_exponent": 0,
+      "odd_part": 129,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 132,
+      "dyadic_exponent": 2,
+      "odd_part": 33,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 134,
+      "dyadic_exponent": 1,
+      "odd_part": 67,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 136,
+      "dyadic_exponent": 3,
+      "odd_part": 17,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 138,
+      "dyadic_exponent": 1,
+      "odd_part": 69,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 141,
+      "dyadic_exponent": 0,
+      "odd_part": 141,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 144,
+      "dyadic_exponent": 4,
+      "odd_part": 9,
+      "parker": true,
+      "minimal_masks": [
+        "0x822000",
+        "0x1000880",
+        "0x80040200",
+        "0x100002004",
+        "0x200400100",
+        "0x800400001",
+        "0x10102420",
+        "0x404600002"
+      ],
+      "witness": null
+    },
+    {
+      "n": 147,
+      "dyadic_exponent": 0,
+      "odd_part": 147,
+      "parker": true,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 150,
+      "dyadic_exponent": 1,
+      "odd_part": 75,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          141,
+          6,
+          81,
+          66,
+          126,
+          36,
+          21,
+          96,
+          111
+        ],
+        "square_roots": [
+          129,
+          84,
+          141,
+          96,
+          126,
+          144,
+          111,
+          114,
+          81
+        ],
+        "local_arrays": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 152,
+      "dyadic_exponent": 3,
+      "odd_part": 19,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 156,
+      "dyadic_exponent": 2,
+      "odd_part": 39,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 160,
+      "dyadic_exponent": 5,
+      "odd_part": 5,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          105,
+          129,
+          121,
+          81,
+          65,
+          49,
+          9,
+          1,
+          25
+        ],
+        "square_roots": [
+          125,
+          143,
+          149,
+          151,
+          145,
+          153,
+          157,
+          159,
+          155
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 168,
+      "dyadic_exponent": 3,
+      "odd_part": 21,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 172,
+      "dyadic_exponent": 2,
+      "odd_part": 43,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 176,
+      "dyadic_exponent": 4,
+      "odd_part": 11,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 184,
+      "dyadic_exponent": 3,
+      "odd_part": 23,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 186,
+      "dyadic_exponent": 1,
+      "odd_part": 93,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 188,
+      "dyadic_exponent": 2,
+      "odd_part": 47,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 192,
+      "dyadic_exponent": 6,
+      "odd_part": 3,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 196,
+      "dyadic_exponent": 2,
+      "odd_part": 49,
+      "parker": true,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 200,
+      "dyadic_exponent": 3,
+      "odd_part": 25,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          116,
+          56,
+          156,
+          16,
+          176,
+          136,
+          196,
+          96,
+          36
+        ],
+        "square_roots": [
+          154,
+          184,
+          166,
+          196,
+          176,
+          156,
+          186,
+          164,
+          194
+        ],
+        "local_arrays": [
+          [
+            4,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            4
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 201,
+      "dyadic_exponent": 0,
+      "odd_part": 201,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 204,
+      "dyadic_exponent": 2,
+      "odd_part": 51,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 208,
+      "dyadic_exponent": 4,
+      "odd_part": 13,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 224,
+      "dyadic_exponent": 5,
+      "odd_part": 7,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          169,
+          65,
+          217,
+          49,
+          1,
+          177,
+          9,
+          161,
+          57
+        ],
+        "square_roots": [
+          211,
+          207,
+          203,
+          217,
+          223,
+          199,
+          221,
+          175,
+          197
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 228,
+      "dyadic_exponent": 2,
+      "odd_part": 57,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 240,
+      "dyadic_exponent": 4,
+      "odd_part": 15,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 248,
+      "dyadic_exponent": 3,
+      "odd_part": 31,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 258,
+      "dyadic_exponent": 1,
+      "odd_part": 129,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 264,
+      "dyadic_exponent": 3,
+      "odd_part": 33,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 268,
+      "dyadic_exponent": 2,
+      "odd_part": 67,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 272,
+      "dyadic_exponent": 4,
+      "odd_part": 17,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 276,
+      "dyadic_exponent": 2,
+      "odd_part": 69,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 282,
+      "dyadic_exponent": 1,
+      "odd_part": 141,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 288,
+      "dyadic_exponent": 5,
+      "odd_part": 9,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          73,
+          97,
+          121,
+          49,
+          1,
+          241,
+          169,
+          193,
+          217
+        ],
+        "square_roots": [
+          269,
+          257,
+          277,
+          281,
+          287,
+          265,
+          275,
+          241,
+          251
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 294,
+      "dyadic_exponent": 1,
+      "odd_part": 147,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          183,
+          120,
+          141,
+          204,
+          246,
+          288,
+          57,
+          78,
+          15
+        ],
+        "square_roots": [
+          153,
+          258,
+          267,
+          216,
+          246,
+          174,
+          225,
+          162,
+          237
+        ],
+        "local_arrays": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 300,
+      "dyadic_exponent": 2,
+      "odd_part": 75,
+      "parker": true,
+      "minimal_masks": [
+        "0x300000104",
+        "0x800820001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 304,
+      "dyadic_exponent": 4,
+      "odd_part": 19,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 312,
+      "dyadic_exponent": 3,
+      "odd_part": 39,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 320,
+      "dyadic_exponent": 6,
+      "odd_part": 5,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          265,
+          289,
+          281,
+          81,
+          65,
+          49,
+          169,
+          161,
+          185
+        ],
+        "square_roots": [
+          285,
+          303,
+          261,
+          311,
+          255,
+          313,
+          307,
+          271,
+          245
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 336,
+      "dyadic_exponent": 4,
+      "odd_part": 21,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 344,
+      "dyadic_exponent": 3,
+      "odd_part": 43,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 352,
+      "dyadic_exponent": 5,
+      "odd_part": 11,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          265,
+          97,
+          345,
+          81,
+          1,
+          273,
+          9,
+          257,
+          89
+        ],
+        "square_roots": [
+          307,
+          305,
+          299,
+          343,
+          351,
+          327,
+          349,
+          321,
+          331
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 368,
+      "dyadic_exponent": 4,
+      "odd_part": 23,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 372,
+      "dyadic_exponent": 2,
+      "odd_part": 93,
+      "parker": true,
+      "minimal_masks": [
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 376,
+      "dyadic_exponent": 3,
+      "odd_part": 47,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 392,
+      "dyadic_exponent": 3,
+      "odd_part": 49,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          36,
+          120,
+          92,
+          8,
+          344,
+          288,
+          204,
+          176,
+          260
+        ],
+        "square_roots": [
+          386,
+          356,
+          370,
+          372,
+          344,
+          316,
+          314,
+          328,
+          302
+        ],
+        "local_arrays": [
+          [
+            4,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            4
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 400,
+      "dyadic_exponent": 4,
+      "odd_part": 25,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          41,
+          81,
+          281,
+          241,
+          1,
+          161,
+          121,
+          321,
+          361
+        ],
+        "square_roots": [
+          379,
+          391,
+          341,
+          329,
+          399,
+          369,
+          389,
+          361,
+          381
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            9,
+            1,
+            1,
+            1,
+            9,
+            1,
+            9
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 402,
+      "dyadic_exponent": 1,
+      "odd_part": 201,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 408,
+      "dyadic_exponent": 3,
+      "odd_part": 51,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 416,
+      "dyadic_exponent": 5,
+      "odd_part": 13,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          169,
+          129,
+          313,
+          209,
+          65,
+          337,
+          233,
+          1,
+          377
+        ],
+        "square_roots": [
+          403,
+          385,
+          389,
+          391,
+          351,
+          359,
+          333,
+          415,
+          325
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            12,
+            1,
+            1,
+            0,
+            12,
+            12,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 448,
+      "dyadic_exponent": 6,
+      "odd_part": 7,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          393,
+          289,
+          217,
+          273,
+          1,
+          177,
+          233,
+          161,
+          57
+        ],
+        "square_roots": [
+          419,
+          431,
+          357,
+          343,
+          447,
+          423,
+          403,
+          399,
+          405
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 456,
+      "dyadic_exponent": 3,
+      "odd_part": 57,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 480,
+      "dyadic_exponent": 5,
+      "odd_part": 15,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          105,
+          129,
+          441,
+          81,
+          225,
+          369,
+          9,
+          321,
+          345
+        ],
+        "square_roots": [
+          435,
+          447,
+          459,
+          471,
+          465,
+          423,
+          477,
+          399,
+          405
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 496,
+      "dyadic_exponent": 4,
+      "odd_part": 31,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 516,
+      "dyadic_exponent": 2,
+      "odd_part": 129,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 528,
+      "dyadic_exponent": 4,
+      "odd_part": 33,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 536,
+      "dyadic_exponent": 3,
+      "odd_part": 67,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 544,
+      "dyadic_exponent": 5,
+      "odd_part": 17,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          425,
+          33,
+          409,
+          273,
+          289,
+          305,
+          169,
+          1,
+          153
+        ],
+        "square_roots": [
+          493,
+          497,
+          475,
+          441,
+          527,
+          489,
+          531,
+          543,
+          459
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            16,
+            1,
+            1,
+            0,
+            16,
+            16,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 552,
+      "dyadic_exponent": 3,
+      "odd_part": 69,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 564,
+      "dyadic_exponent": 2,
+      "odd_part": 141,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 576,
+      "dyadic_exponent": 6,
+      "odd_part": 9,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          73,
+          97,
+          409,
+          337,
+          1,
+          241,
+          169,
+          481,
+          505
+        ],
+        "square_roots": [
+          541,
+          527,
+          475,
+          457,
+          575,
+          473,
+          563,
+          529,
+          523
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            7,
+            4,
+            4,
+            1,
+            7,
+            7,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 588,
+      "dyadic_exponent": 2,
+      "odd_part": 147,
+      "parker": true,
+      "minimal_masks": [
+        "0x820000",
+        "0x100000004",
+        "0x200000100",
+        "0x800000001",
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 600,
+      "dyadic_exponent": 3,
+      "odd_part": 75,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          516,
+          456,
+          156,
+          216,
+          576,
+          336,
+          396,
+          96,
+          36
+        ],
+        "square_roots": [
+          546,
+          516,
+          534,
+          504,
+          576,
+          456,
+          486,
+          564,
+          594
+        ],
+        "local_arrays": [
+          [
+            4,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 608,
+      "dyadic_exponent": 5,
+      "odd_part": 19,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          457,
+          321,
+          441,
+          593,
+          1,
+          17,
+          169,
+          289,
+          153
+        ],
+        "square_roots": [
+          531,
+          545,
+          587,
+          553,
+          607,
+          583,
+          595,
+          591,
+          571
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            17,
+            4,
+            4,
+            1,
+            17,
+            17,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 624,
+      "dyadic_exponent": 4,
+      "odd_part": 39,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 672,
+      "dyadic_exponent": 5,
+      "odd_part": 21,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          393,
+          513,
+          441,
+          273,
+          225,
+          177,
+          9,
+          609,
+          57
+        ],
+        "square_roots": [
+          573,
+          591,
+          651,
+          567,
+          657,
+          633,
+          669,
+          609,
+          645
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 688,
+      "dyadic_exponent": 4,
+      "odd_part": 43,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 704,
+      "dyadic_exponent": 6,
+      "odd_part": 11,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          265,
+          97,
+          345,
+          81,
+          1,
+          625,
+          361,
+          609,
+          441
+        ],
+        "square_roots": [
+          637,
+          657,
+          603,
+          695,
+          703,
+          679,
+          685,
+          625,
+          683
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 736,
+      "dyadic_exponent": 5,
+      "odd_part": 23,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          553,
+          577,
+          345,
+          529,
+          1,
+          209,
+          393,
+          161,
+          185
+        ],
+        "square_roots": [
+          691,
+          639,
+          667,
+          713,
+          735,
+          695,
+          685,
+          575,
+          645
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 744,
+      "dyadic_exponent": 3,
+      "odd_part": 93,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 752,
+      "dyadic_exponent": 4,
+      "odd_part": 47,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 784,
+      "dyadic_exponent": 4,
+      "odd_part": 49,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          281,
+          561,
+          729,
+          449,
+          1,
+          337,
+          57,
+          225,
+          505
+        ],
+        "square_roots": [
+          741,
+          673,
+          757,
+          657,
+          783,
+          713,
+          755,
+          769,
+          645
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            9,
+            1,
+            1,
+            1,
+            9,
+            1,
+            9
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 800,
+      "dyadic_exponent": 5,
+      "odd_part": 25,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          41,
+          481,
+          281,
+          241,
+          1,
+          561,
+          521,
+          321,
+          761
+        ],
+        "square_roots": [
+          771,
+          641,
+          741,
+          729,
+          799,
+          681,
+          739,
+          689,
+          731
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 804,
+      "dyadic_exponent": 2,
+      "odd_part": 201,
+      "parker": true,
+      "minimal_masks": [
+        "0x10102420",
+        "0x404600002",
+        "0x61089888",
+        "0x8a054250"
+      ],
+      "witness": null
+    },
+    {
+      "n": 816,
+      "dyadic_exponent": 4,
+      "odd_part": 51,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 832,
+      "dyadic_exponent": 6,
+      "odd_part": 13,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          585,
+          545,
+          729,
+          209,
+          65,
+          753,
+          233,
+          417,
+          377
+        ],
+        "square_roots": [
+          637,
+          785,
+          805,
+          727,
+          767,
+          775,
+          749,
+          753,
+          715
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            12,
+            1,
+            1,
+            0,
+            12,
+            12,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 912,
+      "dyadic_exponent": 4,
+      "odd_part": 57,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 960,
+      "dyadic_exponent": 6,
+      "odd_part": 15,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          585,
+          609,
+          921,
+          81,
+          705,
+          369,
+          489,
+          801,
+          825
+        ],
+        "square_roots": [
+          765,
+          783,
+          891,
+          951,
+          735,
+          903,
+          813,
+          879,
+          885
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            1,
+            1,
+            0,
+            4,
+            4,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 992,
+      "dyadic_exponent": 5,
+      "odd_part": 31,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          745,
+          33,
+          217,
+          465,
+          1,
+          529,
+          777,
+          961,
+          249
+        ],
+        "square_roots": [
+          931,
+          783,
+          837,
+          775,
+          991,
+          969,
+          845,
+          961,
+          869
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1032,
+      "dyadic_exponent": 3,
+      "odd_part": 129,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1056,
+      "dyadic_exponent": 5,
+      "odd_part": 33,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          969,
+          801,
+          345,
+          81,
+          705,
+          273,
+          9,
+          609,
+          441
+        ],
+        "square_roots": [
+          1011,
+          993,
+          981,
+          1047,
+          945,
+          921,
+          1053,
+          849,
+          1035
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1072,
+      "dyadic_exponent": 4,
+      "odd_part": 67,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1088,
+      "dyadic_exponent": 6,
+      "odd_part": 17,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          137,
+          865,
+          409,
+          17,
+          833,
+          561,
+          169,
+          801,
+          441
+        ],
+        "square_roots": [
+          1053,
+          945,
+          1019,
+          969,
+          833,
+          935,
+          1075,
+          1009,
+          1067
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            15,
+            1,
+            0,
+            0,
+            0,
+            16,
+            2,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1104,
+      "dyadic_exponent": 4,
+      "odd_part": 69,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1128,
+      "dyadic_exponent": 3,
+      "odd_part": 141,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1176,
+      "dyadic_exponent": 3,
+      "odd_part": 147,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          36,
+          120,
+          876,
+          792,
+          1128,
+          288,
+          204,
+          960,
+          1044
+        ],
+        "square_roots": [
+          1170,
+          1140,
+          1002,
+          960,
+          1128,
+          1056,
+          1098,
+          1044,
+          1086
+        ],
+        "local_arrays": [
+          [
+            4,
+            0,
+            4,
+            0,
+            0,
+            0,
+            4,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1200,
+      "dyadic_exponent": 4,
+      "odd_part": 75,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          441,
+          81,
+          681,
+          1041,
+          801,
+          561,
+          921,
+          321,
+          1161
+        ],
+        "square_roots": [
+          1179,
+          1191,
+          1059,
+          1071,
+          999,
+          1119,
+          1011,
+          1161,
+          1131
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            9,
+            1,
+            1,
+            1,
+            9,
+            1,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1216,
+      "dyadic_exponent": 6,
+      "odd_part": 19,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          457,
+          929,
+          1049,
+          593,
+          1,
+          625,
+          169,
+          289,
+          761
+        ],
+        "square_roots": [
+          1027,
+          1039,
+          1157,
+          1161,
+          1215,
+          1191,
+          1203,
+          1199,
+          1141
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            17,
+            4,
+            4,
+            1,
+            17,
+            17,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1248,
+      "dyadic_exponent": 5,
+      "odd_part": 39,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          585,
+          129,
+          729,
+          1041,
+          897,
+          753,
+          1065,
+          417,
+          1209
+        ],
+        "square_roots": [
+          1053,
+          1071,
+          1221,
+          1143,
+          975,
+          1191,
+          1149,
+          1119,
+          1131
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            12,
+            1,
+            1,
+            0,
+            12,
+            12,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1344,
+      "dyadic_exponent": 6,
+      "odd_part": 21,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          393,
+          1185,
+          1113,
+          273,
+          897,
+          177,
+          681,
+          609,
+          57
+        ],
+        "square_roots": [
+          1245,
+          1263,
+          1029,
+          1239,
+          1119,
+          1305,
+          1299,
+          1071,
+          1077
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1376,
+      "dyadic_exponent": 5,
+      "odd_part": 43,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1033,
+          385,
+          1337,
+          305,
+          1,
+          1073,
+          41,
+          993,
+          345
+        ],
+        "square_roots": [
+          1203,
+          1263,
+          1163,
+          1335,
+          1375,
+          1177,
+          1091,
+          1249,
+          1291
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            41,
+            4,
+            4,
+            1,
+            41,
+            41,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1472,
+      "dyadic_exponent": 6,
+      "odd_part": 23,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          841,
+          161,
+          473,
+          1105,
+          1,
+          369,
+          1001,
+          1313,
+          633
+        ],
+        "square_roots": [
+          1443,
+          1265,
+          1317,
+          1335,
+          1471,
+          1287,
+          1389,
+          1329,
+          1205
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            13,
+            0,
+            13,
+            1,
+            1,
+            1,
+            12,
+            2,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1488,
+      "dyadic_exponent": 4,
+      "odd_part": 93,
+      "parker": true,
+      "minimal_masks": [
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1504,
+      "dyadic_exponent": 5,
+      "odd_part": 47,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1129,
+          801,
+          1081,
+          1457,
+          1,
+          49,
+          425,
+          705,
+          377
+        ],
+        "square_roots": [
+          1411,
+          1215,
+          1269,
+          1175,
+          1503,
+          1497,
+          1309,
+          1457,
+          1317
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1568,
+      "dyadic_exponent": 5,
+      "odd_part": 49,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1065,
+          1345,
+          729,
+          1233,
+          1,
+          337,
+          841,
+          225,
+          505
+        ],
+        "square_roots": [
+          1427,
+          1457,
+          1541,
+          1401,
+          1567,
+          1497,
+          1539,
+          1553,
+          1429
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1600,
+      "dyadic_exponent": 6,
+      "odd_part": 25,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          841,
+          481,
+          281,
+          1041,
+          1,
+          561,
+          1321,
+          1121,
+          761
+        ],
+        "square_roots": [
+          1571,
+          1391,
+          1541,
+          1321,
+          1599,
+          1369,
+          1389,
+          1489,
+          1419
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1608,
+      "dyadic_exponent": 3,
+      "odd_part": 201,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 1632,
+      "dyadic_exponent": 5,
+      "odd_part": 51,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          969,
+          33,
+          1497,
+          273,
+          1377,
+          849,
+          1257,
+          1089,
+          153
+        ],
+        "square_roots": [
+          1581,
+          1551,
+          1563,
+          1497,
+          1377,
+          1449,
+          1347,
+          1599,
+          1275
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            16,
+            1,
+            1,
+            0,
+            16,
+            16,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1824,
+      "dyadic_exponent": 5,
+      "odd_part": 57,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1065,
+          321,
+          441,
+          1809,
+          609,
+          1233,
+          777,
+          897,
+          153
+        ],
+        "square_roots": [
+          1635,
+          1761,
+          1803,
+          1689,
+          1521,
+          1545,
+          1773,
+          1617,
+          1749
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            17,
+            4,
+            4,
+            1,
+            17,
+            17,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 1984,
+      "dyadic_exponent": 6,
+      "odd_part": 31,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1737,
+          33,
+          217,
+          465,
+          1,
+          1521,
+          1769,
+          1953,
+          249
+        ],
+        "square_roots": [
+          1923,
+          1775,
+          1829,
+          1705,
+          1983,
+          1945,
+          1837,
+          1519,
+          1675
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2064,
+      "dyadic_exponent": 4,
+      "odd_part": 129,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 2112,
+      "dyadic_exponent": 6,
+      "odd_part": 33,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          969,
+          801,
+          345,
+          81,
+          705,
+          1329,
+          1065,
+          609,
+          441
+        ],
+        "square_roots": [
+          1827,
+          1713,
+          1989,
+          2103,
+          1761,
+          1977,
+          1779,
+          1905,
+          2091
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            4,
+            4,
+            1,
+            9,
+            9,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2144,
+      "dyadic_exponent": 5,
+      "odd_part": 67,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1609,
+          65,
+          473,
+          1009,
+          1,
+          1137,
+          1673,
+          2081,
+          537
+        ],
+        "square_roots": [
+          1875,
+          2097,
+          2075,
+          1945,
+          2143,
+          2057,
+          1923,
+          2079,
+          2011
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            1,
+            65,
+            4,
+            4,
+            1,
+            65,
+            65,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2208,
+      "dyadic_exponent": 5,
+      "odd_part": 69,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2025,
+          2049,
+          345,
+          2001,
+          1473,
+          945,
+          393,
+          897,
+          921
+        ],
+        "square_roots": [
+          2163,
+          1983,
+          2139,
+          1863,
+          1887,
+          2121,
+          2157,
+          2001,
+          1749
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2256,
+      "dyadic_exponent": 4,
+      "odd_part": 141,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 2352,
+      "dyadic_exponent": 4,
+      "odd_part": 147,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1065,
+          561,
+          729,
+          1233,
+          1569,
+          1905,
+          57,
+          225,
+          2073
+        ],
+        "square_roots": [
+          2211,
+          2241,
+          2325,
+          2127,
+          1959,
+          2031,
+          2283,
+          2337,
+          2115
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            9,
+            1,
+            1,
+            1,
+            9,
+            1,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2400,
+      "dyadic_exponent": 5,
+      "odd_part": 75,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1641,
+          1281,
+          1881,
+          1041,
+          801,
+          561,
+          2121,
+          321,
+          2361
+        ],
+        "square_roots": [
+          1971,
+          2241,
+          2091,
+          2121,
+          2049,
+          2169,
+          2211,
+          2289,
+          2331
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2496,
+      "dyadic_exponent": 6,
+      "odd_part": 39,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          585,
+          1377,
+          729,
+          1041,
+          897,
+          753,
+          1065,
+          417,
+          1209
+        ],
+        "square_roots": [
+          2301,
+          2319,
+          2469,
+          2391,
+          2145,
+          2439,
+          2163,
+          2289,
+          2379
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            12,
+            1,
+            1,
+            0,
+            12,
+            12,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2752,
+      "dyadic_exponent": 6,
+      "odd_part": 43,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1225,
+          993,
+          537,
+          2065,
+          1,
+          689,
+          2217,
+          1761,
+          1529
+        ],
+        "square_roots": [
+          2717,
+          2449,
+          2459,
+          2665,
+          2751,
+          2407,
+          2637,
+          2639,
+          2379
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            21,
+            4,
+            21,
+            1,
+            1,
+            1,
+            24,
+            41,
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "n": 2976,
+      "dyadic_exponent": 5,
+      "odd_part": 93,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1737,
+          33,
+          1209,
+          465,
+          993,
+          1521,
+          777,
+          1953,
+          249
+        ],
+        "square_roots": [
+          2541,
+          2751,
+          2325,
+          2697,
+          2913,
+          2937,
+          2829,
+          2511,
+          2853
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 3008,
+      "dyadic_exponent": 6,
+      "odd_part": 47,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          777,
+          2209,
+          25,
+          2257,
+          1,
+          753,
+          2985,
+          801,
+          2233
+        ],
+        "square_roots": [
+          2909,
+          2961,
+          3003,
+          2633,
+          3007,
+          2727,
+          2605,
+          2639,
+          2699
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            25,
+            0,
+            25,
+            1,
+            1,
+            1,
+            24,
+            2,
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "n": 3136,
+      "dyadic_exponent": 6,
+      "odd_part": 49,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2633,
+          2913,
+          729,
+          1233,
+          1,
+          1905,
+          2409,
+          225,
+          505
+        ],
+        "square_roots": [
+          2787,
+          3025,
+          3109,
+          2871,
+          3135,
+          3065,
+          2675,
+          3121,
+          2997
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 3216,
+      "dyadic_exponent": 4,
+      "odd_part": 201,
+      "parker": true,
+      "minimal_masks": [
+        "0x2000",
+        "0x400000",
+        "0x1000880",
+        "0x80040200"
+      ],
+      "witness": null
+    },
+    {
+      "n": 3264,
+      "dyadic_exponent": 6,
+      "odd_part": 51,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2313,
+          1953,
+          1497,
+          2193,
+          3009,
+          561,
+          1257,
+          801,
+          441
+        ],
+        "square_roots": [
+          2787,
+          3087,
+          3195,
+          2601,
+          3009,
+          3111,
+          2835,
+          2799,
+          3243
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            15,
+            1,
+            0,
+            0,
+            0,
+            16,
+            2,
+            16
+          ]
+        ]
+      }
+    },
+    {
+      "n": 3648,
+      "dyadic_exponent": 6,
+      "odd_part": 57,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2889,
+          2145,
+          2265,
+          1809,
+          2433,
+          3057,
+          2601,
+          2721,
+          1977
+        ],
+        "square_roots": [
+          3459,
+          3471,
+          3099,
+          2985,
+          3231,
+          3129,
+          3597,
+          3441,
+          3573
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            17,
+            4,
+            4,
+            1,
+            17,
+            17,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4128,
+      "dyadic_exponent": 5,
+      "odd_part": 129,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2409,
+          1761,
+          4089,
+          3057,
+          1377,
+          3825,
+          2793,
+          993,
+          345
+        ],
+        "square_roots": [
+          3699,
+          3585,
+          3915,
+          3657,
+          3441,
+          3897,
+          3843,
+          3825,
+          3957
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            41,
+            4,
+            4,
+            1,
+            41,
+            41,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4288,
+      "dyadic_exponent": 6,
+      "odd_part": 67,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          3721,
+          2209,
+          2649,
+          3217,
+          1,
+          1073,
+          1641,
+          2081,
+          569
+        ],
+        "square_roots": [
+          4227,
+          4241,
+          3813,
+          3753,
+          4287,
+          4153,
+          4211,
+          3951,
+          3829
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            36,
+            65,
+            36,
+            1,
+            1,
+            1,
+            33,
+            4,
+            33
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4416,
+      "dyadic_exponent": 6,
+      "odd_part": 69,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          2313,
+          3105,
+          3417,
+          2577,
+          1473,
+          369,
+          3945,
+          4257,
+          633
+        ],
+        "square_roots": [
+          3939,
+          4209,
+          3525,
+          4233,
+          4095,
+          4185,
+          4269,
+          3951,
+          4149
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            13,
+            0,
+            13,
+            1,
+            1,
+            1,
+            12,
+            2,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4512,
+      "dyadic_exponent": 5,
+      "odd_part": 141,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4137,
+          801,
+          4089,
+          2961,
+          3009,
+          3057,
+          1929,
+          705,
+          1881
+        ],
+        "square_roots": [
+          4419,
+          4143,
+          3525,
+          4089,
+          3855,
+          4425,
+          4317,
+          3807,
+          3573
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4704,
+      "dyadic_exponent": 5,
+      "odd_part": 147,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1065,
+          2913,
+          729,
+          1233,
+          1569,
+          1905,
+          2409,
+          225,
+          2073
+        ],
+        "square_roots": [
+          4563,
+          4593,
+          4677,
+          4185,
+          4017,
+          4089,
+          3891,
+          4689,
+          4059
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 4800,
+      "dyadic_exponent": 6,
+      "odd_part": 75,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          4041,
+          3681,
+          1881,
+          1041,
+          3201,
+          561,
+          4521,
+          2721,
+          2361
+        ],
+        "square_roots": [
+          4221,
+          4209,
+          4059,
+          4521,
+          4449,
+          4569,
+          4461,
+          4689,
+          3819
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            16,
+            6,
+            6,
+            16,
+            1,
+            11,
+            21,
+            21,
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "n": 5952,
+      "dyadic_exponent": 6,
+      "odd_part": 93,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          1737,
+          33,
+          4185,
+          465,
+          3969,
+          1521,
+          3753,
+          1953,
+          249
+        ],
+        "square_roots": [
+          5085,
+          5169,
+          5115,
+          5673,
+          5889,
+          5913,
+          5805,
+          5487,
+          5643
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            1,
+            2,
+            2,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 6432,
+      "dyadic_exponent": 5,
+      "odd_part": 201,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          3753,
+          4353,
+          4761,
+          3153,
+          2145,
+          1137,
+          5961,
+          6369,
+          537
+        ],
+        "square_roots": [
+          5763,
+          5313,
+          6363,
+          5961,
+          5361,
+          6345,
+          5715,
+          5697,
+          6165
+        ],
+        "local_arrays": [
+          [
+            9,
+            1,
+            25,
+            17,
+            1,
+            17,
+            9,
+            1,
+            25
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            65,
+            4,
+            4,
+            1,
+            65,
+            65,
+            4,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "n": 8256,
+      "dyadic_exponent": 6,
+      "odd_part": 129,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          6729,
+          993,
+          537,
+          7569,
+          5505,
+          3441,
+          2217,
+          1761,
+          4281
+        ],
+        "square_roots": [
+          6915,
+          7953,
+          7173,
+          8169,
+          7137,
+          7911,
+          7539,
+          6993,
+          7797
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            21,
+            4,
+            21,
+            1,
+            1,
+            1,
+            24,
+            41,
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "n": 9024,
+      "dyadic_exponent": 6,
+      "odd_part": 141,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          777,
+          5217,
+          3033,
+          5265,
+          3009,
+          753,
+          2985,
+          801,
+          5241
+        ],
+        "square_roots": [
+          8925,
+          7473,
+          7995,
+          8649,
+          7521,
+          7239,
+          8205,
+          8655,
+          8715
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            25,
+            0,
+            25,
+            1,
+            1,
+            1,
+            24,
+            2,
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "n": 9408,
+      "dyadic_exponent": 6,
+      "odd_part": 147,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          5769,
+          2913,
+          729,
+          1233,
+          6273,
+          1905,
+          2409,
+          225,
+          6777
+        ],
+        "square_roots": [
+          7491,
+          9297,
+          9381,
+          8457,
+          7839,
+          8793,
+          8595,
+          9393,
+          8469
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            22,
+            43,
+            8,
+            1,
+            43,
+            8,
+            29,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "n": 12864,
+      "dyadic_exponent": 6,
+      "odd_part": 201,
+      "parker": false,
+      "minimal_masks": [
+        "0x0"
+      ],
+      "witness": {
+        "entries": [
+          12297,
+          10785,
+          2649,
+          11793,
+          8577,
+          5361,
+          1641,
+          6369,
+          4857
+        ],
+        "square_roots": [
+          12669,
+          11343,
+          11451,
+          10185,
+          11391,
+          12729,
+          10797,
+          11727,
+          12405
+        ],
+        "local_arrays": [
+          [
+            9,
+            33,
+            25,
+            17,
+            1,
+            49,
+            41,
+            33,
+            57
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            65,
+            36,
+            1,
+            1,
+            1,
+            33,
+            4,
+            33
+          ]
+        ]
+      }
+    }
+  ]
+}

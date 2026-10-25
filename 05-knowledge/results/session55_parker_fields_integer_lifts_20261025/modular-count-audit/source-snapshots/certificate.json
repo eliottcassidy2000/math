@@ -1,0 +1,262 @@
+{
+  "generating_function_controls": [
+    {
+      "coefficients_k0_to_12": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1536,
+        21504,
+        216576,
+        1926144,
+        16215552,
+        133014528
+      ],
+      "numerator": {
+        "7": 1536
+      },
+      "p": 2,
+      "verified_through_degree": 30
+    },
+    {
+      "coefficients_k0_to_12": [
+        0,
+        0,
+        0,
+        216,
+        14256,
+        480384,
+        13894416,
+        383660280,
+        10436016672,
+        282468921408,
+        7632934432992,
+        206145707626584,
+        5566442455168848
+      ],
+      "numerator": {
+        "3": 216,
+        "4": 5832
+      },
+      "p": 3,
+      "verified_through_degree": 30
+    }
+  ],
+  "normalized_limits": {
+    "p2": "1/504",
+    "p3": "27/728"
+  },
+  "ordinary_censuses": [
+    {
+      "h": 0,
+      "labelled_ordinary_count": 0,
+      "modulus": 1,
+      "p": 2,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 1,
+      "labelled_ordinary_count": 0,
+      "modulus": 2,
+      "p": 2,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 2,
+      "labelled_ordinary_count": 0,
+      "modulus": 4,
+      "p": 2,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 3,
+      "labelled_ordinary_count": 0,
+      "modulus": 8,
+      "p": 2,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 4,
+      "labelled_ordinary_count": 1536,
+      "modulus": 16,
+      "p": 2,
+      "valid_offset_pairs": 96
+    },
+    {
+      "h": 5,
+      "labelled_ordinary_count": 21504,
+      "modulus": 32,
+      "p": 2,
+      "valid_offset_pairs": 672
+    },
+    {
+      "h": 6,
+      "labelled_ordinary_count": 215040,
+      "modulus": 64,
+      "p": 2,
+      "valid_offset_pairs": 3360
+    },
+    {
+      "h": 7,
+      "labelled_ordinary_count": 1904640,
+      "modulus": 128,
+      "p": 2,
+      "valid_offset_pairs": 14880
+    },
+    {
+      "h": 8,
+      "labelled_ordinary_count": 15998976,
+      "modulus": 256,
+      "p": 2,
+      "valid_offset_pairs": 62496
+    },
+    {
+      "h": 9,
+      "labelled_ordinary_count": 131088384,
+      "modulus": 512,
+      "p": 2,
+      "valid_offset_pairs": 256032
+    },
+    {
+      "h": 0,
+      "labelled_ordinary_count": 0,
+      "modulus": 1,
+      "p": 3,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 1,
+      "labelled_ordinary_count": 0,
+      "modulus": 3,
+      "p": 3,
+      "valid_offset_pairs": 0
+    },
+    {
+      "h": 2,
+      "labelled_ordinary_count": 216,
+      "modulus": 9,
+      "p": 3,
+      "valid_offset_pairs": 24
+    },
+    {
+      "h": 3,
+      "labelled_ordinary_count": 14256,
+      "modulus": 27,
+      "p": 3,
+      "valid_offset_pairs": 528
+    },
+    {
+      "h": 4,
+      "labelled_ordinary_count": 480168,
+      "modulus": 81,
+      "p": 3,
+      "valid_offset_pairs": 5928
+    },
+    {
+      "h": 5,
+      "labelled_ordinary_count": 13880160,
+      "modulus": 243,
+      "p": 3,
+      "valid_offset_pairs": 57120
+    },
+    {
+      "h": 6,
+      "labelled_ordinary_count": 383179896,
+      "modulus": 729,
+      "p": 3,
+      "valid_offset_pairs": 525624
+    }
+  ],
+  "raw_mod3_magic_count": 27,
+  "scope": "Labelled distinct square RESIDUES; zero allowed; no integer witness or external novelty claim.",
+  "square_censuses": [
+    {
+      "k": 1,
+      "labelled_square_count": 0,
+      "modulus": 2,
+      "p": 2
+    },
+    {
+      "k": 2,
+      "labelled_square_count": 0,
+      "modulus": 4,
+      "p": 2
+    },
+    {
+      "k": 3,
+      "labelled_square_count": 0,
+      "modulus": 8,
+      "p": 2
+    },
+    {
+      "k": 4,
+      "labelled_square_count": 0,
+      "modulus": 16,
+      "p": 2
+    },
+    {
+      "k": 5,
+      "labelled_square_count": 0,
+      "modulus": 32,
+      "p": 2
+    },
+    {
+      "k": 6,
+      "labelled_square_count": 0,
+      "modulus": 64,
+      "p": 2
+    },
+    {
+      "k": 7,
+      "labelled_square_count": 1536,
+      "modulus": 128,
+      "p": 2
+    },
+    {
+      "k": 8,
+      "labelled_square_count": 21504,
+      "modulus": 256,
+      "p": 2
+    },
+    {
+      "k": 9,
+      "labelled_square_count": 216576,
+      "modulus": 512,
+      "p": 2
+    },
+    {
+      "k": 1,
+      "labelled_square_count": 0,
+      "modulus": 3,
+      "p": 3
+    },
+    {
+      "k": 2,
+      "labelled_square_count": 0,
+      "modulus": 9,
+      "p": 3
+    },
+    {
+      "k": 3,
+      "labelled_square_count": 216,
+      "modulus": 27,
+      "p": 3
+    },
+    {
+      "k": 4,
+      "labelled_square_count": 14256,
+      "modulus": 81,
+      "p": 3
+    },
+    {
+      "k": 5,
+      "labelled_square_count": 480384,
+      "modulus": 243,
+      "p": 3
+    }
+  ]
+}

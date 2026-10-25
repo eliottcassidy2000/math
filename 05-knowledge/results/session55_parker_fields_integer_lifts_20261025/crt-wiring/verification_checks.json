@@ -1,0 +1,18 @@
+{
+  "optimized_census_identical": true,
+  "optimized_candidate_verify": true,
+  "optimized_mutation_tests": [
+    {
+      "mutation": "changed",
+      "rejected": true
+    },
+    {
+      "mutation": "missing",
+      "rejected": true
+    },
+    {
+      "mutation": "extra",
+      "rejected": true
+    }
+  ]
+}

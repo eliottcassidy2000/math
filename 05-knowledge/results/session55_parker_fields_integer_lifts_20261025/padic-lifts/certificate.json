@@ -1,0 +1,538 @@
+{
+  "censuses": [
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 2,
+      "square_residues": 2
+    },
+    {
+      "all_magic_square_residue_arrays": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 3,
+      "square_residues": 2
+    },
+    {
+      "all_magic_square_residue_arrays": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 4,
+      "square_residues": 2
+    },
+    {
+      "all_magic_square_residue_arrays": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          4,
+          4,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          4,
+          0,
+          4,
+          4,
+          4,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          4
+        ],
+        [
+          4,
+          4,
+          0,
+          4,
+          0,
+          4,
+          0,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 8,
+      "square_residues": 3
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 9,
+      "square_residues": 4
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 16,
+      "square_residues": 4
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 216,
+      "first": [
+        4,
+        16,
+        10,
+        7,
+        1,
+        22,
+        19,
+        13,
+        25
+      ],
+      "modulus": 27,
+      "square_residues": 11
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 32,
+      "square_residues": 7
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 0,
+      "first": null,
+      "modulus": 64,
+      "square_residues": 12
+    },
+    {
+      "all_magic_square_residue_arrays": null,
+      "distinct_magic_arrays": 1536,
+      "first": [
+        9,
+        97,
+        25,
+        17,
+        1,
+        113,
+        105,
+        33,
+        121
+      ],
+      "modulus": 128,
+      "square_residues": 23
+    }
+  ],
+  "fixed_p59_root_towers": [
+    [
+      21,
+      2912,
+      6393,
+      7400037,
+      19517398,
+      17177700574,
+      1366954777086,
+      58605938927923,
+      7106466943935331
+    ],
+    [
+      11,
+      955,
+      108866,
+      8324026,
+      153732358,
+      7302975348,
+      1019635782732,
+      122963558538863,
+      3353233185833925
+    ],
+    [
+      28,
+      1444,
+      11887,
+      2681814,
+      475258893,
+      12628971976,
+      434434308386,
+      77582630337775,
+      4335665320863084
+    ],
+    [
+      8,
+      657,
+      25024,
+      5570257,
+      538734141,
+      10547674327,
+      558894611660,
+      120014165882972,
+      2469301167552108
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    [
+      26,
+      616,
+      84160,
+      11380005,
+      253727225,
+      20271607597,
+      1918395621442,
+      71600637196374,
+      7266292079808103
+    ],
+    [
+      29,
+      855,
+      115728,
+      3401792,
+      427509427,
+      23305086995,
+      2047970701763,
+      56798303367781,
+      8426133246814078
+    ],
+    [
+      18,
+      1847,
+      203745,
+      11704969,
+      617573019,
+      32074242175,
+      242976910380,
+      64947915515674,
+      6672317607710119
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "lo_shu_towers": [
+    {
+      "entries": [
+        22,
+        1,
+        16,
+        7,
+        13,
+        19,
+        10,
+        25,
+        4
+      ],
+      "levels": [
+        {
+          "k": 3,
+          "least_roots": [
+            7,
+            1,
+            4,
+            13,
+            11,
+            10,
+            8,
+            5,
+            2
+          ],
+          "modulus": 27,
+          "no_wrap": false
+        },
+        {
+          "k": 4,
+          "least_roots": [
+            34,
+            1,
+            4,
+            13,
+            16,
+            10,
+            35,
+            5,
+            2
+          ],
+          "modulus": 81,
+          "no_wrap": true
+        },
+        {
+          "k": 5,
+          "least_roots": [
+            47,
+            1,
+            4,
+            68,
+            16,
+            91,
+            35,
+            5,
+            2
+          ],
+          "modulus": 243,
+          "no_wrap": true
+        },
+        {
+          "k": 6,
+          "least_roots": [
+            47,
+            1,
+            4,
+            175,
+            259,
+            334,
+            278,
+            5,
+            2
+          ],
+          "modulus": 729,
+          "no_wrap": true
+        },
+        {
+          "k": 7,
+          "least_roots": [
+            47,
+            1,
+            4,
+            175,
+            470,
+            334,
+            451,
+            5,
+            2
+          ],
+          "modulus": 2187,
+          "no_wrap": true
+        }
+      ],
+      "p": 3,
+      "sum": 39
+    },
+    {
+      "entries": [
+        57,
+        1,
+        41,
+        17,
+        33,
+        49,
+        25,
+        65,
+        9
+      ],
+      "levels": [
+        {
+          "k": 7,
+          "least_roots": [
+            21,
+            1,
+            13,
+            23,
+            17,
+            7,
+            5,
+            31,
+            3
+          ],
+          "modulus": 128,
+          "no_wrap": true
+        },
+        {
+          "k": 8,
+          "least_roots": [
+            43,
+            1,
+            51,
+            23,
+            17,
+            7,
+            5,
+            33,
+            3
+          ],
+          "modulus": 256,
+          "no_wrap": true
+        },
+        {
+          "k": 9,
+          "least_roots": [
+            85,
+            1,
+            51,
+            23,
+            111,
+            7,
+            5,
+            33,
+            3
+          ],
+          "modulus": 512,
+          "no_wrap": true
+        },
+        {
+          "k": 10,
+          "least_roots": [
+            85,
+            1,
+            205,
+            233,
+            111,
+            7,
+            5,
+            33,
+            3
+          ],
+          "modulus": 1024,
+          "no_wrap": true
+        },
+        {
+          "k": 11,
+          "least_roots": [
+            427,
+            1,
+            307,
+            279,
+            111,
+            7,
+            5,
+            479,
+            3
+          ],
+          "modulus": 2048,
+          "no_wrap": true
+        }
+      ],
+      "p": 2,
+      "sum": 99
+    }
+  ],
+  "odd_smooth_samples": 101
+}
