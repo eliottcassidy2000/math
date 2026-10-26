@@ -1,0 +1,244 @@
+{
+  "all_cell_counts": {
+    "12": {
+      "all": 336,
+      "base": 322,
+      "closed_last_movable": 42,
+      "closed_one": 35,
+      "closed_second_fixed": 5,
+      "closed_second_movable": 15,
+      "closed_second_tail4": 1,
+      "closed_zero": 56,
+      "open_endrun": 14,
+      "open_penultimate": 42,
+      "open_release": 112,
+      "residual": 14
+    },
+    "13": {
+      "all": 480,
+      "base": 464,
+      "closed_last_movable": 56,
+      "closed_one": 56,
+      "closed_second_fixed": 6,
+      "closed_second_movable": 21,
+      "closed_second_tail4": 1,
+      "closed_zero": 84,
+      "open_endrun": 16,
+      "open_penultimate": 56,
+      "open_release": 168,
+      "residual": 16
+    },
+    "14": {
+      "all": 660,
+      "base": 642,
+      "closed_last_movable": 72,
+      "closed_one": 84,
+      "closed_second_fixed": 7,
+      "closed_second_movable": 28,
+      "closed_second_tail4": 1,
+      "closed_zero": 120,
+      "open_endrun": 18,
+      "open_penultimate": 72,
+      "open_release": 240,
+      "residual": 18
+    }
+  },
+  "boundary_minima": [
+    [
+      12,
+      "open",
+      "inconsistent"
+    ],
+    [
+      12,
+      "closed",
+      "inconsistent"
+    ],
+    [
+      13,
+      "open",
+      4
+    ],
+    [
+      13,
+      "closed",
+      4
+    ],
+    [
+      14,
+      "open",
+      "inconsistent"
+    ],
+    [
+      14,
+      "closed",
+      "inconsistent"
+    ]
+  ],
+  "failed_cells": [
+    [
+      12,
+      [
+        2,
+        7,
+        9
+      ],
+      true,
+      true,
+      1,
+      "open_penultimate"
+    ],
+    [
+      12,
+      [
+        6,
+        7,
+        9
+      ],
+      true,
+      true,
+      1,
+      "open_penultimate"
+    ],
+    [
+      14,
+      [
+        3,
+        5,
+        10
+      ],
+      false,
+      true,
+      3,
+      "closed_one"
+    ],
+    [
+      14,
+      [
+        3,
+        7,
+        10
+      ],
+      false,
+      true,
+      3,
+      "closed_one"
+    ],
+    [
+      14,
+      [
+        5,
+        9,
+        10
+      ],
+      false,
+      false,
+      3,
+      "closed_zero"
+    ],
+    [
+      14,
+      [
+        7,
+        9,
+        10
+      ],
+      false,
+      false,
+      3,
+      "closed_zero"
+    ]
+  ],
+  "literal_hostiles": [
+    [
+      12,
+      [
+        2,
+        7,
+        9
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    [
+      12,
+      [
+        6,
+        7,
+        9
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    [
+      14,
+      [
+        3,
+        5,
+        10
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ],
+    [
+      14,
+      [
+        3,
+        7,
+        10
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ],
+    [
+      14,
+      [
+        5,
+        9,
+        10
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ],
+    [
+      14,
+      [
+        7,
+        9,
+        10
+      ],
+      [
+        false,
+        false,
+        true
+      ]
+    ]
+  ],
+  "source_dimensions": {
+    "12": {
+      "18": 336
+    },
+    "13": {
+      "23": 480
+    },
+    "14": {
+      "28": 660
+    }
+  },
+  "status": "PASS"
+}

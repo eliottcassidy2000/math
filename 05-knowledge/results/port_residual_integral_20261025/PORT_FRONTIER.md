@@ -8,6 +8,13 @@ to its exact labelled K target. The inherited proof includes a
 strong-target, mixedness, module, disjoint-port, or isomorphism filter.
 Full black-core connectivity across all endpoint layers remains **OPEN**.
 
+**Isolated finite extension:** [LOW_ORDERS.md](LOW_ORDERS.md) and its
+[independent review](LOW_ORDERS_REVIEW.md) also prove the complete closed
+endpoint-four claim at n=13. All464 base affine cells pass;16 residual
+cells are covered by the structural repairs below. This does not imply
+the threshold n>=13: at n12 and n14 the old ledgers have explicit blue
+word witnesses, without establishing a connectivity obstruction.
+
 ## 1. Exact statement
 
 Let T be any tournament on n>=15 vertices. Let
@@ -141,7 +148,8 @@ It has no positive-length black detour.
 
 This is a real obstruction to replacing n>=15 by an unfiltered
 n>=7 statement. It is not a claim that15 is the optimal threshold.
-The present synthesis does not settle any remaining orders11..14.
+The all-order synthesis alone does not settle orders11..14. The separate
+finite certificate now closes13;11,12,14 remain outside this theorem.
 The failed fixed-cut hostiles in the earlier packets likewise remain
 failures of their ledgers, rather than global connectivity obstructions.
 

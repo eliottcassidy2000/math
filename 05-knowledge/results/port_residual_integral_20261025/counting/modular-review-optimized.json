@@ -1,0 +1,14 @@
+{
+  "absolute_27_bits": 67108864,
+  "absolute_two_bits": 0,
+  "constant_tail_basis_transfers": 74592,
+  "mask_drop_nonzero_tail_to_zero": true,
+  "normalized_two_bits": 2,
+  "odd_division_checks": 2460,
+  "order50_odd_partitions": 3658,
+  "product_lattice_hostile": true,
+  "sparse_dense_squares": 5376,
+  "status": "PASS",
+  "strict_larger_module_hostile": true,
+  "terminal_Y0_hostile": true
+}

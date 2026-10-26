@@ -1,0 +1,7 @@
+{
+  "acyclic_graphs": 204,
+  "modular_comparisons": 1224,
+  "naive_initial_shift_failures": 168,
+  "prefix_coordinates": 2040,
+  "status": "PASS"
+}

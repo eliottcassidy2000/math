@@ -16,6 +16,11 @@ smaller unrestricted structural counting recurrence remain **OPEN**.
   disjoint-port or isomorphism filter. The inherited head uses24 complete
   affine systems; the infinite tail is structural. The order-seven
   pure-blue target remains a genuine obstruction at smaller orders.
+  A separate [finite certificate](LOW_ORDERS.md), checked by an
+  [independent raw-arc solver](LOW_ORDERS_REVIEW.md), also closes order13.
+  Its480 affine cells represent4,026,531,840 normalized labelled sources.
+  The unchanged ledgers fail in two order12 and four order14 cells;
+  these are template failures, not connectivity obstructions.
 - [h=3, 1->3](h3/README.md) and [h=4, 3->1](h4/README.md): each new
   branch works for every n>=12 with incoming ports {h,n-3,n-2,n-1} at
   vertex0. The first uses induced degrees along a reversal-product
@@ -29,6 +34,13 @@ smaller unrestricted structural counting recurrence remain **OPEN**.
   product lattice. All shifts are nonnegative; destination gauges make
   conversions and mergers commute. The same sparse/dense state graph
   and scalar rank are retained. [Independent review](counting/INDEPENDENT_REVIEW.md).
+- [Fixed-precision moment quotient](counting/MODULAR.md): modulo2^K,
+  every channel Y_r with r>=K is the same tail value. The allowed
+  transitions preserve this module, reducing adaptive storage to
+  min(h,S,K) weight coordinates per nonterminal fibre. Ordinary states
+  were already scalar; the reduction affects clone-excess banks.
+  [Independent review](counting/MODULAR_REVIEW.md). Absolute K-bit
+  precision and normalized K-bit precision remain different requests.
 - [Parity and positive interpolation](parity/README.md): the user's
   odd-action identity extends through exact canonical clone inflation.
   If c_N counts pair-free classes, c_N is odd precisely for positive odd
@@ -88,13 +100,28 @@ the even denominator before reducing and inverts only its odd part.
 The incoming synchronized-action spectrum also reinforces the retained
 operation boundary: modular depth is not independent-toggle rank.
 
+The [live-merge connection ledger](INCOMING.md) also records the incoming
+Fourier positivity criterion, sparse-carry conductors and regular-action
+depth formulas, retaining each source's status and operation boundary.
+
 The next port target is the still-unsettled low-order head and other
 endpoint/open-path layers, not the exhausted closed n>=15 family.
-For counting, the next target is a precision-dependent continuation
-quotient of the integral transfer. It must preserve actual mergers and
-pay for every requested output bit. These are proposed targets, not
-consequences of the current proofs. No connection to Collatz, RH, HN or
-LRC is asserted from these tournament results.
+For counting, the constant-tail theorem now supplies one exact
+precision-dependent continuation quotient. Further reduction would need
+the remaining congruences in the actual moment module. A
+[reverse valuation potential](counting/REVERSE_POTENTIAL.md) also gives a
+proved construction for normalized ordinary digits: a reverse graph
+pass pays the baseline before residue arithmetic. Its implementation in
+the production engine remains open; the extra pass is not free. No
+connection to Collatz, RH, HN or LRC is asserted from these tournament
+results.
+
+A precise next compression probe is the Newton basis
+F_j(X)=X product_(0<=i<j)(X-2^i) on the moment nodes X=2^(m-b).
+Test its divisibility filtration and the transported batch operations
+together. Additional congruences between the lower coordinates cannot
+be discarded merely because high channels become redundant. This is
+an OPEN follow-up, not an additional compression claimed here.
 
 ## Reproduction
 

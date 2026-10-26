@@ -1,7 +1,7 @@
 ---
 id: HYP-9348
 title: "Filtered endpoint-four detours and black-core connectivity; zero-heavy layers through the first weighted endpoint"
-status: OPEN corrected endpoint/black-core questions; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
+status: OPEN corrected endpoint/black-core questions; PROVED closed endpoint-four n>=15 and FINITE-EXACT n=13; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
 source: mac-mini-2026-10-20-debtcones
 depends_on:
   - 01-canon/theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md
@@ -29,17 +29,26 @@ whose nine Hamilton paths are all blue. Thus no black detour reaches it.
 The [exact witness](../results/shape_ports_20261025/tournaments.md) also
 repairs THM-4734's analogous order-six omission.
 
+**PROVED closed large-order part.** Every closed blue endpoint-(n-5,4)
+marked path at `n>=15` now has three directed black moves to its exact
+labelled K target, with no additional source filter. The
+[exhaustion proof](../results/port_residual_integral_20261025/PORT_FRONTIER.md)
+combines the earlier base bank with both chord branches at h=3 and h=4
+and the other unprotected-port repairs. Arbitrary shared/reflected ports
+and clone configurations are retained literally.
+
+**FINITE-EXACT isolated extension.** At `n=13`, the
+[complete affine certificate](../results/port_residual_integral_20261025/LOW_ORDERS.md)
+and [independent union-find review](../results/port_residual_integral_20261025/LOW_ORDERS_REVIEW.md)
+close all464 base cells plus16 structurally repaired residual cells.
+
 **OPEN repaired question.** Does every such line whose literal target is
-not pure blue admit a three-black detour for every `n>=7`? Evidence: exact at `n = 9, 10` (THM-4734);
-the packet's general-`k` lemmas (cyclic cut and common final word black for `n > 14`,
-movable cut) cover the non-adjacent closed rows from `n = 15`. What is missing: the rows
-where the three ports are consecutive at the start (`I = {2,3,4}`), at the end
-(`{n-4,n-3,n-2}`, closed and open) or split (`{2,n-3,n-2}`); in each of these the best single
-word template covers exactly half of the pattern (uniform_ledger_test.out), so the proof
-needs two complementary ledgers per pattern, separated by one middle arc, as in the `k = 3`
-`epsilon` branches; and the orders `11..14`, where the cyclic-cut bound fails. First test:
-find the splitting arc for closed `{2,3,4}` at `n = 10` from the 64 distinct certificate
-templates of the search.
+not pure blue admit a three-black detour for every `n>=7`? The inherited
+order9,10 result is THM-4734. The closed orders11,12,14 remain outside
+the new theorem; other open-path cases are not inferred from it. The
+unchanged base ledgers have exactly two failed cells at12 and four at14,
+each a legal, target-correct ledger with a blue word. These explicit
+witnesses are failures of those ledgers, not black-connectivity obstructions.
 
 ## (b) Black-core connectivity
 
@@ -47,7 +56,8 @@ templates of the search.
 classes lie in one black component of the line metagraph. The endpoint layers remove one
 family of potential bridges within their admitted domain: `k=2` has its
 inherited theorem; `k=3` has all `n>=7` and eleven admissible order-six
-presentations; `k=4` is checked at `n=9,10`. Pure-blue targets cannot be
+presentations; `k=4` is checked at `n=9,10`, and all closed lines are
+now repaired at `n=13` and every `n>=15`. Pure-blue targets cannot be
 removed by a black detour, and no `k=4` census for every `n<=10` is asserted. In the trijection coordinates (graphs on ordered `[n-1]`; THM-4733 Proposition A)
 a K move along `Q` is "change the marked path, then complement"; a three-black detour is a
 closed walk of three coordinate changes whose complement bits cancel to `E(P)`. Question:
@@ -55,12 +65,15 @@ is there a `k`-independent movable-cut word, written in these coordinates, that 
 closed line whose port set is not an interval? The packet's section-9 words are the case
 `k = 3`; the half-covering template of THM-4734 section 2 is their `k = 4` shadow.
 
-## (c) The order-ten remainder is empty; what about order 17
+## (c) Fixed-word obstructions and the surviving small-order head
 
-The packet's second fixed-word obstruction (`n = 17`, reflection-product orbits `3,3,5,3,3`)
-is bypassed by the movable cut at `k = 3`. For `k = 4` the analogous orbit obstructions of
-the common final words should be listed (the orders where `r_Q r_P` has an orbit that a port
-set of size three can balance); THM-4734's data suggest `n = 11..14` only.
+The old second fixed-word obstruction (`n=17`, reflection-product orbits
+`3,3,5,3,3`) is bypassed by the movable cut at `k=3`. Closed `k=4` lines
+at17 are now covered by (a). The new low-order audit locates the next
+actual failures: a blue first word at12 and a blue common final word
+at14. Their full port sets and literal witnesses are retained in the
+linked certificate. A useful next question is whether a repair using
+the offending word's exact symmetry closes those six affine families.
 
 ## (d) The corrected zero-heavy boundary
 

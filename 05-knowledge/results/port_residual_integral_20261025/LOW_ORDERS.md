@@ -6,9 +6,11 @@ ledger. At order12, two cells admit a blue first word; at order14, four
 cells admit a blue last word. The six second-word budget systems all
 exclude three incoming middle ports.
 
-The order13 consequence is submitted for independent review. This packet
-does not alter [PORT_FRONTIER.md](PORT_FRONTIER.md), lower an inherited
-all-order threshold, or treat a failed ledger as a connectivity obstruction.
+The order13 consequence passed an
+[independent signed-union-find review](LOW_ORDERS_REVIEW.md), which imports
+neither producer elimination engine. It supplements
+[PORT_FRONTIER.md](PORT_FRONTIER.md) at one isolated order, without lowering
+an all-order threshold or treating a failed ledger as a connectivity obstruction.
 
 ## 1. Inheritance, exact question, and pinned sources
 
@@ -116,8 +118,8 @@ are linked in [PORT_FRONTIER.md](PORT_FRONTIER.md), section3.
 Consequently the full order13 closed endpoint-four claim follows from
 this complete finite certificate plus those proved residual repairs:
 every such marked path has three black moves to its exact labelled
-K_P(T). This consequence awaits the requested independent review before
-the maintained frontier is updated. The n>=15 proof is unchanged.
+K_P(T). This consequence is independently accepted; the maintained
+frontier records its FINITE-EXACT scope. The n>=15 proof is unchanged.
 The isolated order13 conclusion does not imply a threshold n>=13,
 because order14 still needs a different repair in the cells below.
 

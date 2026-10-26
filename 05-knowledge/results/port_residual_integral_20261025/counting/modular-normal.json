@@ -1,0 +1,90 @@
+{
+  "absolute_precision_bits": [
+    1,
+    6
+  ],
+  "additional_core_order": 44,
+  "controls": {
+    "arbitrary_constant_tail_transfers": 1489,
+    "sparse_dense_commutations": 1489
+  },
+  "exact_count_comparisons": 498,
+  "normalized_hostile": {
+    "absolute_27_bits": 67108864,
+    "absolute_2_bits": 0,
+    "baseline_bits": 25,
+    "n": 50,
+    "normalized_2_bits": 2
+  },
+  "ordinary_and_core_orders": [
+    0,
+    40
+  ],
+  "samples": [
+    {
+      "K": 1,
+      "exact_cells": 85,
+      "modular_cells": 63,
+      "n": 18,
+      "residue": 0
+    },
+    {
+      "K": 2,
+      "exact_cells": 85,
+      "modular_cells": 74,
+      "n": 18,
+      "residue": 2
+    },
+    {
+      "K": 6,
+      "exact_cells": 85,
+      "modular_cells": 85,
+      "n": 18,
+      "residue": 46
+    },
+    {
+      "K": 1,
+      "exact_cells": 223,
+      "modular_cells": 155,
+      "n": 26,
+      "residue": 0
+    },
+    {
+      "K": 2,
+      "exact_cells": 223,
+      "modular_cells": 185,
+      "n": 26,
+      "residue": 0
+    },
+    {
+      "K": 6,
+      "exact_cells": 223,
+      "modular_cells": 217,
+      "n": 26,
+      "residue": 0
+    },
+    {
+      "K": 1,
+      "exact_cells": 803,
+      "modular_cells": 523,
+      "n": 40,
+      "residue": 0
+    },
+    {
+      "K": 2,
+      "exact_cells": 803,
+      "modular_cells": 649,
+      "n": 40,
+      "residue": 2
+    },
+    {
+      "K": 6,
+      "exact_cells": 803,
+      "modular_cells": 771,
+      "n": 40,
+      "residue": 2
+    }
+  ],
+  "scope": "constant-tail module and absolute residues; no positivity or minimum-rank claim",
+  "status": "PASS"
+}

@@ -34,6 +34,10 @@ INHERITED = [
     "05-knowledge/results/shape_ports_20261025/tournaments.md",
     "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md",
     "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/cancellation/REPORT.md",
+    "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/specialization/RESULT.md",
+    "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/fourier-effectivity/FOURIER_EFFECTIVITY.md",
+    "05-knowledge/results/normseven_boundary_20261025/README.md",
+    "01-canon/theorems/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
 ]
 
 
