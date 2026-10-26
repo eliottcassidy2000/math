@@ -1,0 +1,244 @@
+{
+ "8": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [
+   25,
+   27,
+   29,
+   31,
+   32,
+   36,
+   38,
+   42,
+   69,
+   71,
+   73,
+   75,
+   76,
+   80,
+   82,
+   86,
+   113,
+   115,
+   117,
+   119,
+   120,
+   124,
+   126,
+   130,
+   157,
+   159,
+   161,
+   163,
+   164,
+   168,
+   170,
+   174,
+   201,
+   203,
+   205,
+   207,
+   208,
+   212,
+   214,
+   218,
+   245,
+   247,
+   249,
+   251,
+   252,
+   256,
+   258,
+   262,
+   289,
+   291,
+   293,
+   295,
+   296,
+   300
+  ],
+  "other": [],
+  "exit_overshoots_sample": [
+   40,
+   60,
+   76,
+   80,
+   164
+  ]
+ },
+ "9": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   3,
+   7,
+   11,
+   15,
+   19,
+   23,
+   27,
+   31,
+   35,
+   39
+  ]
+ },
+ "10": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   994,
+   1006,
+   1022,
+   1026,
+   1046
+  ]
+ },
+ "11": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   61,
+   69,
+   73,
+   77
+  ]
+ },
+ "12": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   156
+  ]
+ },
+ "13": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   3,
+   7,
+   11,
+   15,
+   19,
+   23,
+   27,
+   31,
+   35,
+   39,
+   43,
+   47,
+   51
+  ]
+ },
+ "14": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   14670,
+   14674,
+   14682,
+   14690,
+   14694
+  ]
+ },
+ "15": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [
+   3,
+   11,
+   22,
+   29,
+   36,
+   39,
+   50,
+   57,
+   64,
+   83,
+   94,
+   101,
+   108,
+   111,
+   122,
+   129,
+   136,
+   155,
+   166,
+   173,
+   180,
+   183,
+   194,
+   201,
+   208,
+   227,
+   238,
+   245,
+   252,
+   255,
+   266,
+   273,
+   280,
+   299
+  ],
+  "other": [],
+  "exit_overshoots_sample": [
+   65,
+   97
+  ]
+ },
+ "16": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   4,
+   8
+  ]
+ },
+ "17": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   3,
+   7,
+   11,
+   15,
+   19,
+   23,
+   27,
+   31,
+   35,
+   39,
+   43,
+   47,
+   51,
+   55,
+   59,
+   63
+  ]
+ },
+ "18": {
+  "O": 300,
+  "halt_offsets": [],
+  "capture_offsets": [],
+  "other": [],
+  "exit_overshoots_sample": [
+   233174
+  ]
+ }
+}

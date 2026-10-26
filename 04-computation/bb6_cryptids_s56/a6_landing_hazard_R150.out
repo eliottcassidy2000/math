@@ -1,0 +1,5 @@
+d=15 landing e_d=14694 (1s): halt 0/301, capture 17/301 (deltas [-139, -128, -97, -90, -53, -46]), distinct exits 2 top [(97, 217), (65, 67)]; actual entry fate ('exit', 65)
+d=19 landing e_d=233174 (2s): halt 0/301, capture 0/301 (deltas []), distinct exits 2 top [(129, 285), (53, 16)]; actual entry fate ('exit', 129)
+d=23 landing e_d=3728426 (13s): halt 0/301, capture 0/301 (deltas []), distinct exits 1 top [(137, 301)]; actual entry fate ('exit', 137)
+d=27 landing e_d=59652526 (269s): halt 0/301, capture 17/301 (deltas [-121, -114, -111, -100, -65, -58]), distinct exits 1 top [(189, 284)]; actual entry fate ('exit', 189)
+d=31 landing e_d=954437418 (416s): halt 0/301, capture 0/301 (deltas []), distinct exits 1 top [(121, 301)]; actual entry fate ('exit', 121)

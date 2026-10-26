@@ -1,0 +1,91 @@
+depth 1 time 0.0 sweeps 1.000e+00 computed sweeps 1 phases 1 l2 jumps 0
+depth 2 time 0.0 sweeps 3.000e+00 computed sweeps 3 phases 3 l2 jumps 0
+depth 3 time 0.0 sweeps 4.000e+00 computed sweeps 4 phases 8 l2 jumps 0
+[0s] sweeps 4.000e+00 depth 3 W bits 8
+depth 4 time 0.0 sweeps 5.000e+00 computed sweeps 5 phases 10 l2 jumps 0
+depth 5 time 0.0 sweeps 9.000e+00 computed sweeps 9 phases 24 l2 jumps 0
+depth 6 time 0.0 sweeps 2.200e+01 computed sweeps 13 phases 56 l2 jumps 0
+depth 7 time 0.0 sweeps 2.700e+01 computed sweeps 18 phases 90 l2 jumps 0
+depth 8 time 0.0 sweeps 4.700e+01 computed sweeps 23 phases 626 l2 jumps 0
+depth 9 time 0.0 sweeps 8.200e+01 computed sweeps 38 phases 737 l2 jumps 0
+depth 10 time 0.0 sweeps 2.350e+02 computed sweeps 42 phases 799 l2 jumps 0
+depth 11 time 0.0 sweeps 3.070e+02 computed sweeps 66 phases 1090 l2 jumps 0
+depth 12 time 0.0 sweeps 5.390e+02 computed sweeps 82 phases 1281 l2 jumps 0
+depth 13 time 0.0 sweeps 1.004e+03 computed sweeps 152 phases 2546 l2 jumps 0
+depth 14 time 0.0 sweeps 2.893e+03 computed sweeps 156 phases 2620 l2 jumps 0
+depth 15 time 0.1 sweeps 3.914e+03 computed sweeps 213 phases 4109 l2 jumps 0
+depth 16 time 0.1 sweeps 6.882e+03 computed sweeps 269 phases 4996 l2 jumps 0
+depth 17 time 0.3 sweeps 1.316e+04 computed sweeps 568 phases 8940 l2 jumps 0
+depth 18 time 0.3 sweeps 3.773e+04 computed sweeps 572 phases 9003 l2 jumps 0
+depth 19 time 0.3 sweeps 5.184e+04 computed sweeps 727 phases 11885 l2 jumps 0
+depth 20 time 0.4 sweeps 9.147e+04 computed sweeps 931 phases 15851 l2 jumps 0
+depth 21 time 0.8 sweeps 1.723e+05 computed sweeps 2049 phases 34097 l2 jumps 0
+depth 22 time 0.8 sweeps 5.034e+05 computed sweeps 2053 phases 34221 l2 jumps 0
+depth 23 time 1.0 sweeps 7.017e+05 computed sweeps 2569 phases 44588 l2 jumps 0
+depth 24 time 1.2 sweeps 1.246e+06 computed sweeps 3352 phases 59521 l2 jumps 0
+depth 25 time 5.7 sweeps 2.462e+06 computed sweeps 7356 phases 145561 l2 jumps 0
+depth 26 time 5.7 sweeps 7.038e+06 computed sweeps 7360 phases 145715 l2 jumps 0
+depth 27 time 7.3 sweeps 9.867e+06 computed sweeps 9203 phases 192874 l2 jumps 0
+depth 28 time 13.8 sweeps 1.750e+07 computed sweeps 12043 phases 260200 l2 jumps 0
+depth 29 time 26.2 sweeps 3.485e+07 computed sweeps 26808 phases 621212 l2 jumps 0
+depth 30 time 26.3 sweeps 9.927e+07 computed sweeps 26812 phases 621381 l2 jumps 0
+depth 31 time 37.1 sweeps 1.401e+08 computed sweeps 33762 phases 847908 l2 jumps 0
+depth 32 time 44.9 sweeps 2.487e+08 computed sweeps 44182 phases 1130159 l2 jumps 0
+[60s] sweeps 4.362e+08 depth 32 W bits 37
+depth 33 time 74.7 sweeps 4.824e+08 computed sweeps 99005 phases 2838932 l2 jumps 0
+depth 34 time 74.7 sweeps 1.403e+09 computed sweeps 99009 phases 2839093 l2 jumps 0
+depth 35 time 90.3 sweeps 1.998e+09 computed sweeps 125182 phases 3735798 l2 jumps 0
+[120s] sweeps 2.122e+09 depth 35 W bits 39
+depth 36 time 141.1 sweeps 3.564e+09 computed sweeps 163270 phases 5535885 l2 jumps 0
+[180s] sweeps 6.338e+09 depth 36 W bits 41
+depth 37 time 211.1 sweeps 6.969e+09 computed sweeps 368156 phases 11578506 l2 jumps 0
+depth 38 time 211.1 sweeps 2.027e+10 computed sweeps 368160 phases 11578755 l2 jumps 0
+[240s] sweeps 2.582e+10 depth 38 W bits 43
+depth 39 time 269.9 sweeps 2.903e+10 computed sweeps 468078 phases 15199416 l2 jumps 0
+depth 40 time 297.5 sweeps 5.181e+10 computed sweeps 610203 phases 19771113 l2 jumps 0
+[300s] sweeps 8.426e+10 depth 40 W bits 45
+[360s] sweeps 8.531e+10 depth 40 W bits 45
+[420s] sweeps 8.562e+10 depth 40 W bits 45
+[480s] sweeps 9.087e+10 depth 40 W bits 45
+[540s] sweeps 9.584e+10 depth 40 W bits 45
+[600s] sweeps 9.619e+10 depth 40 W bits 45
+[660s] sweeps 9.681e+10 depth 40 W bits 45
+[720s] sweeps 9.692e+10 depth 40 W bits 45
+[780s] sweeps 9.733e+10 depth 40 W bits 45
+[840s] sweeps 1.033e+11 depth 40 W bits 45
+[900s] sweeps 1.038e+11 depth 40 W bits 45
+[960s] sweeps 1.049e+11 depth 40 W bits 45
+[1020s] sweeps 1.050e+11 depth 40 W bits 45
+[1080s] sweeps 1.054e+11 depth 40 W bits 45
+depth 41 time 1132.7 sweeps 1.055e+11 computed sweeps 1390714 phases 47482248 l2 jumps 0
+depth 42 time 1132.7 sweeps 2.995e+11 computed sweeps 1390718 phases 47482492 l2 jumps 0
+[1140s] sweeps 3.773e+11 depth 42 W bits 47
+[1200s] sweeps 3.774e+11 depth 42 W bits 47
+[1260s] sweeps 3.782e+11 depth 42 W bits 47
+[1320s] sweeps 3.785e+11 depth 42 W bits 47
+[1380s] sweeps 3.816e+11 depth 42 W bits 47
+[1440s] sweeps 3.819e+11 depth 42 W bits 47
+[1500s] sweeps 3.828e+11 depth 42 W bits 47
+depth 43 time 1534.5 sweeps 4.291e+11 computed sweeps 1772739 phases 62167600 l2 jumps 0
+[1560s] sweeps 4.400e+11 depth 43 W bits 47
+[1620s] sweeps 4.416e+11 depth 43 W bits 47
+[1680s] sweeps 4.426e+11 depth 43 W bits 47
+[1742s] sweeps 4.550e+11 depth 43 W bits 47
+[1802s] sweeps 4.568e+11 depth 43 W bits 47
+depth 44 time 1847.9 sweeps 7.634e+11 computed sweeps 2301813 phases 80141045 l2 jumps 0
+[1862s] sweeps 1.242e+12 depth 44 W bits 49
+[1922s] sweeps 1.242e+12 depth 44 W bits 49
+[1982s] sweeps 1.242e+12 depth 44 W bits 49
+[2042s] sweeps 1.243e+12 depth 44 W bits 49
+[2102s] sweeps 1.243e+12 depth 44 W bits 49
+[2162s] sweeps 1.246e+12 depth 44 W bits 49
+[2222s] sweeps 1.246e+12 depth 44 W bits 49
+[2282s] sweeps 1.246e+12 depth 44 W bits 49
+[2342s] sweeps 1.247e+12 depth 44 W bits 49
+[2402s] sweeps 1.257e+12 depth 44 W bits 49
+[2463s] sweeps 1.257e+12 depth 44 W bits 49
+[2523s] sweeps 1.257e+12 depth 44 W bits 49
+[2583s] sweeps 1.257e+12 depth 44 W bits 49
+[2643s] sweeps 1.258e+12 depth 44 W bits 49
+[2703s] sweeps 1.261e+12 depth 44 W bits 49
+[2763s] sweeps 1.261e+12 depth 44 W bits 49

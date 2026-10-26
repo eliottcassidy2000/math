@@ -1,0 +1,201 @@
+{
+ "machine": "A2",
+ "steps": 60000000,
+ "halted": false,
+ "final_scale": 48734715,
+ "anchor_steps": 12003726,
+ "episodes": 11,
+ "by_log2L": [
+  [
+   3,
+   1
+  ],
+  [
+   6,
+   1
+  ],
+  [
+   7,
+   1
+  ],
+  [
+   8,
+   1
+  ],
+  [
+   10,
+   1
+  ],
+  [
+   14,
+   1
+  ],
+  [
+   16,
+   1
+  ],
+  [
+   19,
+   1
+  ],
+  [
+   21,
+   1
+  ],
+  [
+   22,
+   1
+  ],
+  [
+   24,
+   1
+  ]
+ ],
+ "smallest_margins": [
+  [
+   2,
+   9
+  ],
+  [
+   8,
+   177
+  ],
+  [
+   26,
+   121
+  ],
+  [
+   34,
+   1561
+  ],
+  [
+   88,
+   337
+  ],
+  [
+   3588,
+   19409
+  ],
+  [
+   10382,
+   119001
+  ],
+  [
+   115310,
+   623761
+  ],
+  [
+   532582,
+   2637945
+  ],
+  [
+   548568,
+   4242777
+  ]
+ ],
+ "sum_inv_L": 0.12869545860202503,
+ "labels": {
+  "o_small": 11
+ },
+ "episode_sample": [
+  {
+   "start_step": 0,
+   "L": 9,
+   "label": "o_small",
+   "last_margin": 2,
+   "min_margin": 2,
+   "checks": 1,
+   "len": 2
+  },
+  {
+   "start_step": 60,
+   "L": 121,
+   "label": "o_small",
+   "last_margin": 26,
+   "min_margin": 26,
+   "checks": 3,
+   "len": 10
+  },
+  {
+   "start_step": 96,
+   "L": 177,
+   "label": "o_small",
+   "last_margin": 8,
+   "min_margin": 8,
+   "checks": 4,
+   "len": 13
+  },
+  {
+   "start_step": 193,
+   "L": 337,
+   "label": "o_small",
+   "last_margin": 88,
+   "min_margin": 88,
+   "checks": 4,
+   "len": 13
+  },
+  {
+   "start_step": 949,
+   "L": 1561,
+   "label": "o_small",
+   "last_margin": 34,
+   "min_margin": 34,
+   "checks": 7,
+   "len": 22
+  },
+  {
+   "start_step": 12081,
+   "L": 19409,
+   "label": "o_small",
+   "last_margin": 3588,
+   "min_margin": 3588,
+   "checks": 10,
+   "len": 31
+  },
+  {
+   "start_step": 74325,
+   "L": 119001,
+   "label": "o_small",
+   "last_margin": 10382,
+   "min_margin": 10382,
+   "checks": 13,
+   "len": 40
+  },
+  {
+   "start_step": 389823,
+   "L": 623761,
+   "label": "o_small",
+   "last_margin": 115310,
+   "min_margin": 115310,
+   "checks": 15,
+   "len": 46
+  },
+  {
+   "start_step": 1649180,
+   "L": 2637945,
+   "label": "o_small",
+   "last_margin": 532582,
+   "min_margin": 532582,
+   "checks": 17,
+   "len": 52
+  },
+  {
+   "start_step": 2651952,
+   "L": 4242777,
+   "label": "o_small",
+   "last_margin": 548568,
+   "min_margin": 548568,
+   "checks": 18,
+   "len": 55
+  },
+  {
+   "start_step": 12654733,
+   "L": 20247033,
+   "label": "o_small",
+   "last_margin": 3832108,
+   "min_margin": 3832108,
+   "checks": 20,
+   "len": 61
+  }
+ ]
+}

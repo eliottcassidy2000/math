@@ -1,0 +1,180 @@
+{
+ "machine": "A10",
+ "steps": 60000000,
+ "halted": false,
+ "final_scale": 60000139,
+ "anchor_steps": 30000028,
+ "episodes": 10,
+ "by_log2L": [
+  [
+   3,
+   1
+  ],
+  [
+   8,
+   1
+  ],
+  [
+   11,
+   1
+  ],
+  [
+   12,
+   1
+  ],
+  [
+   13,
+   2
+  ],
+  [
+   15,
+   2
+  ],
+  [
+   18,
+   1
+  ],
+  [
+   23,
+   1
+  ]
+ ],
+ "smallest_margins": [
+  [
+   4,
+   8
+  ],
+  [
+   228,
+   464
+  ],
+  [
+   978,
+   3000
+  ],
+  [
+   1812,
+   5880
+  ],
+  [
+   2070,
+   10232
+  ],
+  [
+   3950,
+   12112
+  ],
+  [
+   5082,
+   37816
+  ],
+  [
+   20306,
+   53040
+  ],
+  [
+   192088,
+   454192
+  ],
+  [
+   2600802,
+   10989360
+  ]
+ ],
+ "sum_inv_L": 0.1278864593634057,
+ "labels": {
+  "b0_small": 10
+ },
+ "episode_sample": [
+  {
+   "start_step": 0,
+   "L": 8,
+   "label": "b0_small",
+   "last_margin": 4,
+   "min_margin": 4,
+   "checks": 1,
+   "len": 2
+  },
+  {
+   "start_step": 431,
+   "L": 464,
+   "label": "b0_small",
+   "last_margin": 228,
+   "min_margin": 228,
+   "checks": 5,
+   "len": 11
+  },
+  {
+   "start_step": 2955,
+   "L": 3000,
+   "label": "b0_small",
+   "last_margin": 978,
+   "min_margin": 978,
+   "checks": 8,
+   "len": 17
+  },
+  {
+   "start_step": 5831,
+   "L": 5880,
+   "label": "b0_small",
+   "last_margin": 1812,
+   "min_margin": 1812,
+   "checks": 9,
+   "len": 19
+  },
+  {
+   "start_step": 10179,
+   "L": 10232,
+   "label": "b0_small",
+   "last_margin": 2070,
+   "min_margin": 2070,
+   "checks": 10,
+   "len": 21
+  },
+  {
+   "start_step": 12056,
+   "L": 12112,
+   "label": "b0_small",
+   "last_margin": 3950,
+   "min_margin": 3950,
+   "checks": 10,
+   "len": 21
+  },
+  {
+   "start_step": 37752,
+   "L": 37816,
+   "label": "b0_small",
+   "last_margin": 5082,
+   "min_margin": 5082,
+   "checks": 12,
+   "len": 25
+  },
+  {
+   "start_step": 52969,
+   "L": 53040,
+   "label": "b0_small",
+   "last_margin": 20306,
+   "min_margin": 20306,
+   "checks": 12,
+   "len": 25
+  },
+  {
+   "start_step": 454106,
+   "L": 454192,
+   "label": "b0_small",
+   "last_margin": 192088,
+   "min_margin": 192088,
+   "checks": 15,
+   "len": 31
+  },
+  {
+   "start_step": 10989239,
+   "L": 10989360,
+   "label": "b0_small",
+   "last_margin": 2600802,
+   "min_margin": 2600802,
+   "checks": 20,
+   "len": 41
+  }
+ ]
+}

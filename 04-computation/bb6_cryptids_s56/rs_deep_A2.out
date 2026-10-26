@@ -1,0 +1,9 @@
+[60s] segments 8.6446e+05 state bits 22 stats {'steps': 4325730, 'l1_jumps': 0, 'l2_jumps': 0}
+[120s] segments 2.1623e+06 state bits 22 stats {'steps': 10813698, 'l1_jumps': 0, 'l2_jumps': 0}
+[180s] segments 3.6621e+06 state bits 23 stats {'steps': 18311487, 'l1_jumps': 0, 'l2_jumps': 0}
+[240s] segments 5.0518e+06 state bits 23 stats {'steps': 25257753, 'l1_jumps': 0, 'l2_jumps': 0}
+[300s] segments 5.9481e+06 state bits 25 stats {'steps': 29739544, 'l1_jumps': 0, 'l2_jumps': 0}
+[360s] segments 6.9233e+06 state bits 25 stats {'steps': 34608617, 'l1_jumps': 0, 'l2_jumps': 0}
+[420s] segments 7.9158e+06 state bits 25 stats {'steps': 39571801, 'l1_jumps': 0, 'l2_jumps': 0}
+[480s] segments 9.4337e+06 state bits 24 stats {'steps': 47154519, 'l1_jumps': 0, 'l2_jumps': 0}
+[540s] segments 1.0647e+07 state bits 25 stats {'steps': 53218593, 'l1_jumps': 0, 'l2_jumps': 0}

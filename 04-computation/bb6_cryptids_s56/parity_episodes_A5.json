@@ -1,0 +1,103 @@
+{
+ "machine": "A5",
+ "steps": 60000000,
+ "halted": false,
+ "final_scale": 80689783,
+ "anchor_steps": 11999735,
+ "episodes": 5,
+ "by_log2L": [
+  [
+   5,
+   1
+  ],
+  [
+   9,
+   1
+  ],
+  [
+   10,
+   1
+  ],
+  [
+   12,
+   1
+  ],
+  [
+   18,
+   1
+  ]
+ ],
+ "smallest_margins": [
+  [
+   2,
+   58
+  ],
+  [
+   154,
+   1546
+  ],
+  [
+   192,
+   986
+  ],
+  [
+   218,
+   5506
+  ],
+  [
+   35364,
+   398334
+  ]
+ ],
+ "sum_inv_L": 0.019086539130610383,
+ "labels": {
+  "o_small": 5
+ },
+ "episode_sample": [
+  {
+   "start_step": 21,
+   "L": 58,
+   "label": "o_small",
+   "last_margin": 2,
+   "min_margin": 2,
+   "checks": 3,
+   "len": 7
+  },
+  {
+   "start_step": 594,
+   "L": 986,
+   "label": "o_small",
+   "last_margin": 192,
+   "min_margin": 192,
+   "checks": 6,
+   "len": 18
+  },
+  {
+   "start_step": 938,
+   "L": 1546,
+   "label": "o_small",
+   "last_margin": 154,
+   "min_margin": 154,
+   "checks": 7,
+   "len": 21
+  },
+  {
+   "start_step": 3395,
+   "L": 5506,
+   "label": "o_small",
+   "last_margin": 218,
+   "min_margin": 218,
+   "checks": 9,
+   "len": 27
+  },
+  {
+   "start_step": 248729,
+   "L": 398334,
+   "label": "o_small",
+   "last_margin": 35364,
+   "min_margin": 35364,
+   "checks": 15,
+   "len": 45
+  }
+ ]
+}

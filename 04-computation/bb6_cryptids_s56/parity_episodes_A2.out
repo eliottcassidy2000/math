@@ -1,0 +1,5 @@
+A2: 6.00e+07 macro steps (122s), halted False, final scale L = 48734715 (2^25.5), anchor steps 12003726, dangerous episodes 11
+  episodes by log2(L) at start: [(3, 1), (6, 1), (7, 1), (8, 1), (10, 1), (14, 1), (16, 1), (19, 1), (21, 1), (22, 1), (24, 1)]
+  smallest |halting margin| seen in episodes (margin, L): [(2, 9), (8, 177), (26, 121), (34, 1561), (88, 337), (3588, 19409), (10382, 119001), (115310, 623761), (532582, 2637945), (548568, 4242777)]
+  sum over episodes of 1/L (expected halts if P(halt|episode) = c/L, per unit c): 1.2870e-01
+  episode-creating labels: {'o_small': 11}
