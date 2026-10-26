@@ -3,7 +3,10 @@
 2026-10-25, klein (worktree `codex/session-tournament-twist-unify`, fourth directive). **PROVED**
 elementary statements with proofs in the notes; **FINITE-EXACT** receipts (`fermat-normal.json`,
 `merge-normal.json`, byte-identical under `-O`); **CITED / inherited** material credited by file;
-the completeness of `{3,5,17,257,65537}` is **OPEN** and no proof is claimed. No audit.
+the completeness of `{3,5,17,257,65537}` is **OPEN** and no proof is claimed. Theorems F, M, P were
+independently audited on 2026-10-26 by kind-pasteur-S5 (confirmed; see THM-4793's `audit` field and
+`../fermat_landing_points_pepin_20261026.md`, whose addendum shows the landing points carry Pépin via
+`L' = L^2 + (L-1)^2`); Theorem M* (MERGE_TREE.md) is not yet audited.
 
 | Note | Content | Status |
 |---|---|---|

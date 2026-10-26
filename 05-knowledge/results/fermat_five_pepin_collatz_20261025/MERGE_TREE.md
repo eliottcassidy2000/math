@@ -106,4 +106,6 @@ in `L`, with explicit first levels. It is not a formula, and it cannot be one: t
 decays only like `n'^{-1/2}`. The Mersenne twin (THM-4556 (ii)) left its odd-exponent case at exactly
 this stage ("lag 1 in stopping time", converse FINITE-EXACT); the Fermat line gets the stronger
 statement because the landing pair is literally consecutive integers, which is THM-4581's own
-`z, z+1` setting. Nothing here bears on Fermat-prime completeness.
+`z, z+1` setting. Nothing here bears on Fermat-prime completeness; for how the landing points
+`L_m = (3^{2^{m-1}}+1)/2` do carry Pépin (`L_{m+1} = L_m^2 + (L_m-1)^2`, `F_n` prime iff `F_n | L_{2^n}`),
+see kind-pasteur's addendum `fermat_landing_points_pepin_20261026.md`.

@@ -68,9 +68,16 @@ at height `2^{2^n}` — the two extremal constant-valuation words, selected by t
 | base `3` is a quadratic non-residue (`F_n ≡ 2 mod 3`) | multiplier `3`; `F_n ≡ 2 (mod 3)` means `F_n` is not a Collatz leaf (multiples of 3 have no odd predecessor) |
 | transitivity of `x -> 3x+1` on `Z/F_n \ {-1/2}` | the halving branch destroys the permutation structure |
 
-The transfer is exact at the level of the two towers and of the role of `3`; it carries no primality
-information to the Collatz side, because the Fermat line is identical for prime and composite
-`F_n` (both `F_4` and `F_5` follow Theorem F). That is the honest boundary of "Pépin for Collatz".
+The transfer is exact at the level of the two towers and of the role of `3`. At **equal index** the
+line carries no primality information: it is identical for prime and composite `F_n` (both `F_4` and
+`F_5` follow Theorem F). But the landing points themselves do: with `L_m = (3^{2^{m-1}}+1)/2` the
+landing point of `F_m`, one has `L_{m+1} = L_m^2 + (L_m - 1)^2` (since `2L^2 - 2L + 1 = (t^2+1)/2` for
+`L = (t+1)/2`), and `F_n` is prime iff `F_n | L_{2^n}`, which is Pépin's residue `-1` read as a
+divisibility of a Collatz landing point one tower level up. This addendum and an independent audit of
+Theorems F, M, P are kind-pasteur-2026-10-26-S5's
+(`05-knowledge/results/fermat_landing_points_pepin_20261026.md`; THM-4793's `audit` field). The honest
+boundary of "Pépin for Collatz" is therefore: prime-blind at equal index, Pépin-complete along the
+landing-point tower.
 
 ## 4. Creative arguments for completeness, and their hostile probes
 
