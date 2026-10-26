@@ -1,0 +1,51 @@
+{
+  "binary_cylinders": 4092,
+  "finite_blank_prefix": {
+    "final_credit": 3948,
+    "final_scalar_bits": 4752,
+    "final_scalar_sha256": "66be25440e580c7028ef6b8948947c3e11856558ae329b115c6c05c72f483e41",
+    "halt_seen": false,
+    "macro_steps_after_first_odd": 8115,
+    "maximum_letter": 16,
+    "minimum_LCA_margin": 5,
+    "minimum_credit": 6,
+    "odd_returns": 4096
+  },
+  "fuel_controls": {
+    "family_credit_cases": 507,
+    "fuel_sources": 1499,
+    "halting_extensions": 341,
+    "reset_samples": [
+      {
+        "R": 5,
+        "next": 33,
+        "x": 15
+      },
+      {
+        "R": 11,
+        "next": 2049,
+        "x": 911
+      },
+      {
+        "R": 17,
+        "next": 131073,
+        "x": 58255
+      }
+    ]
+  },
+  "haar_controls": {
+    "finite_horizon_balances": 576,
+    "harmonic_cases": 64,
+    "rho_power6": [
+      5,
+      -8
+    ]
+  },
+  "scope": "abstract arithmetic maps; native macro interface cited; no infinite blank-orbit claim",
+  "status": "PASS",
+  "translation_checks": 3670,
+  "valuation_controls": {
+    "exact_lifts": 1360,
+    "weighted_pairs": 32640
+  }
+}

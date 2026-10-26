@@ -1,0 +1,29 @@
+{
+  "all_literal_H_blue_sources": 16,
+  "fallback_cells": 6,
+  "families": [
+    {
+      "H_blue_dimension": 3,
+      "base_dimension": 18,
+      "guard_dimension": 15,
+      "ports": [
+        2,
+        7,
+        9
+      ]
+    },
+    {
+      "H_blue_dimension": 3,
+      "base_dimension": 18,
+      "guard_dimension": 15,
+      "ports": [
+        6,
+        7,
+        9
+      ]
+    }
+  ],
+  "guard_selector_cells": 16,
+  "omitted_guard_cells": 6,
+  "status": "PASS"
+}

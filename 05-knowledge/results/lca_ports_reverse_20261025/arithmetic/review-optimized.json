@@ -1,0 +1,16 @@
+{
+  "eventual_poles": 80,
+  "finite_cylinder_lifts": 160,
+  "harmonic_cases": 20,
+  "infinite_blank_orbit_claim": false,
+  "native_clocks_checked": false,
+  "odd_return_controls": 2032,
+  "one_run_sources": 48,
+  "periodic_F_words": 340,
+  "positive_integer_halting_extensions": 221,
+  "quadratic_root_and_power_checks": 2,
+  "reset_credit_cases": 240,
+  "status": "PASS",
+  "translations": 968,
+  "weighted_LCA_pairs": 960
+}

@@ -1,0 +1,27 @@
+{
+  "actual_stage_degree_pairs": [
+    [
+      9,
+      5
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      6,
+      4
+    ]
+  ],
+  "classified_port_sets": 165,
+  "full_source_cells": 4,
+  "full_source_dimension": 28,
+  "guard_dimension": 27,
+  "guard_half_cells": 8,
+  "other_end_final_degree_pair": [
+    8,
+    8
+  ],
+  "status": "PASS",
+  "unique_failed_points": 4
+}

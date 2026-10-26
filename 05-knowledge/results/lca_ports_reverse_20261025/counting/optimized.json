@@ -1,0 +1,592 @@
+{
+  "exact_and_intermediate_orders": [
+    0,
+    50
+  ],
+  "hostiles": {
+    "absolute_truncation": {
+      "absolute_mod2": 0,
+      "n": 7,
+      "normalized_mod2": 1
+    },
+    "exact_merge": {
+      "cycle_histories": [
+        [
+          23
+        ],
+        [
+          9,
+          9,
+          5
+        ]
+      ],
+      "defect": [
+        0,
+        2
+      ],
+      "n": 26,
+      "remaining": 3,
+      "stage": 3
+    },
+    "summand_vs_sum": {
+      "minimum_summand_valuation": 25,
+      "n": 50,
+      "normalized_mod4": 2,
+      "sum_valuation": 26
+    },
+    "zero_skip": {
+      "baseline": 3,
+      "n": 7,
+      "original_cost": 0,
+      "reduced_cost": 1
+    }
+  },
+  "intermediate_coordinate_checks": 12589,
+  "normalized_comparisons": 408,
+  "normalized_precision_bits": [
+    1,
+    8
+  ],
+  "partition_path_checks": 3725,
+  "pruned_unpruned_comparisons": 153,
+  "samples": [
+    {
+      "exact_bit_observations": {
+        "coordinate_checks": 927,
+        "max_Y_bits": 1179,
+        "max_Z_bits": 1154
+      },
+      "n": 50,
+      "precision_runs": [
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 1330,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 12626,
+            "max_modular_sum_bits": 27,
+            "max_product_bits": 52,
+            "max_residue_bits": 26,
+            "max_shifted_product_bits": 77,
+            "modular_updates": 887,
+            "multiply_operand_bit_sum": 31080,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 629,
+            "precision_bits": 26,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 628,
+            "zero_source_edges": 515
+          },
+          "normalized_bits": 1,
+          "normalized_residue": 0,
+          "normalized_work": {
+            "cost_pruned_edges": 1751,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 143,
+            "max_modular_sum_bits": 2,
+            "max_product_bits": 1,
+            "max_residue_bits": 1,
+            "max_shifted_product_bits": 1,
+            "modular_updates": 152,
+            "multiply_operand_bit_sum": 304,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 153,
+            "precision_bits": 1,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 152,
+            "zero_source_edges": 829
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 1299,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 13593,
+            "max_modular_sum_bits": 28,
+            "max_product_bits": 54,
+            "max_residue_bits": 27,
+            "max_shifted_product_bits": 80,
+            "modular_updates": 936,
+            "multiply_operand_bit_sum": 34261,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 646,
+            "precision_bits": 27,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 645,
+            "zero_source_edges": 497
+          },
+          "normalized_bits": 2,
+          "normalized_residue": 2,
+          "normalized_work": {
+            "cost_pruned_edges": 1695,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 226,
+            "max_modular_sum_bits": 3,
+            "max_product_bits": 2,
+            "max_residue_bits": 2,
+            "max_shifted_product_bits": 2,
+            "modular_updates": 154,
+            "multiply_operand_bit_sum": 397,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 155,
+            "precision_bits": 2,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 154,
+            "zero_source_edges": 883
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 1214,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 18391,
+            "max_modular_sum_bits": 32,
+            "max_product_bits": 62,
+            "max_residue_bits": 31,
+            "max_shifted_product_bits": 91,
+            "modular_updates": 1116,
+            "multiply_operand_bit_sum": 46518,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 710,
+            "precision_bits": 31,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 709,
+            "zero_source_edges": 402
+          },
+          "normalized_bits": 6,
+          "normalized_residue": 46,
+          "normalized_work": {
+            "cost_pruned_edges": 1459,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 1673,
+            "max_modular_sum_bits": 7,
+            "max_product_bits": 12,
+            "max_residue_bits": 6,
+            "max_shifted_product_bits": 14,
+            "modular_updates": 402,
+            "multiply_operand_bit_sum": 2899,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 367,
+            "precision_bits": 6,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 366,
+            "zero_source_edges": 871
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 1039,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 29777,
+            "max_modular_sum_bits": 42,
+            "max_product_bits": 82,
+            "max_residue_bits": 41,
+            "max_shifted_product_bits": 122,
+            "modular_updates": 1493,
+            "multiply_operand_bit_sum": 81682,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 795,
+            "precision_bits": 41,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 794,
+            "zero_source_edges": 200
+          },
+          "normalized_bits": 16,
+          "normalized_residue": 17134,
+          "normalized_work": {
+            "cost_pruned_edges": 1008,
+            "edge_scans": 2732,
+            "layer_residue_bit_sum": 6740,
+            "max_modular_sum_bits": 17,
+            "max_product_bits": 32,
+            "max_residue_bits": 16,
+            "max_shifted_product_bits": 43,
+            "modular_updates": 712,
+            "multiply_operand_bit_sum": 14795,
+            "odd_factorial_setup_products": 50,
+            "odd_inverse_calls": 501,
+            "precision_bits": 16,
+            "scalar_slots_peak": 365,
+            "transfer_cache_entries": 500,
+            "zero_source_edges": 1012
+          }
+        }
+      ],
+      "structure": {
+        "baseline": 25,
+        "defect_coordinates_stored": 3518,
+        "edges": 2732,
+        "extra_incoming_edges": 1806,
+        "max_original_cost": 1178,
+        "max_reduced_cost": 785,
+        "merged_vertices": 273,
+        "peak_weight_slots_two_layers": 365,
+        "reverse_relaxations": 2732,
+        "stage_distinctions_lost_if_omitted": 278,
+        "vertices_including_terminal": 927
+      }
+    },
+    {
+      "exact_bit_observations": {
+        "coordinate_checks": 5120,
+        "max_Y_bits": 3083,
+        "max_Z_bits": 3043
+      },
+      "n": 80,
+      "precision_runs": [
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 8496,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 101374,
+            "max_modular_sum_bits": 42,
+            "max_product_bits": 82,
+            "max_residue_bits": 41,
+            "max_shifted_product_bits": 122,
+            "modular_updates": 5201,
+            "multiply_operand_bit_sum": 310360,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 1980,
+            "precision_bits": 41,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 1979,
+            "zero_source_edges": 4412
+          },
+          "normalized_bits": 1,
+          "normalized_residue": 0,
+          "normalized_work": {
+            "cost_pruned_edges": 12651,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 348,
+            "max_modular_sum_bits": 2,
+            "max_product_bits": 1,
+            "max_residue_bits": 1,
+            "max_shifted_product_bits": 1,
+            "modular_updates": 363,
+            "multiply_operand_bit_sum": 726,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 364,
+            "precision_bits": 1,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 363,
+            "zero_source_edges": 5095
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 8383,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 107330,
+            "max_modular_sum_bits": 43,
+            "max_product_bits": 84,
+            "max_residue_bits": 42,
+            "max_shifted_product_bits": 125,
+            "modular_updates": 5408,
+            "multiply_operand_bit_sum": 331096,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 2004,
+            "precision_bits": 42,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 2003,
+            "zero_source_edges": 4318
+          },
+          "normalized_bits": 2,
+          "normalized_residue": 0,
+          "normalized_work": {
+            "cost_pruned_edges": 12322,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 549,
+            "max_modular_sum_bits": 3,
+            "max_product_bits": 2,
+            "max_residue_bits": 2,
+            "max_shifted_product_bits": 2,
+            "modular_updates": 371,
+            "multiply_operand_bit_sum": 951,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 372,
+            "precision_bits": 2,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 371,
+            "zero_source_edges": 5416
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 8015,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 130290,
+            "max_modular_sum_bits": 47,
+            "max_product_bits": 92,
+            "max_residue_bits": 46,
+            "max_shifted_product_bits": 137,
+            "modular_updates": 6061,
+            "multiply_operand_bit_sum": 403618,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 2109,
+            "precision_bits": 46,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 2108,
+            "zero_source_edges": 4033
+          },
+          "normalized_bits": 6,
+          "normalized_residue": 32,
+          "normalized_work": {
+            "cost_pruned_edges": 10909,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 5320,
+            "max_modular_sum_bits": 7,
+            "max_product_bits": 12,
+            "max_residue_bits": 6,
+            "max_shifted_product_bits": 16,
+            "modular_updates": 1245,
+            "multiply_operand_bit_sum": 9094,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 944,
+            "precision_bits": 6,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 943,
+            "zero_source_edges": 5955
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 7257,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 191477,
+            "max_modular_sum_bits": 57,
+            "max_product_bits": 112,
+            "max_residue_bits": 56,
+            "max_shifted_product_bits": 167,
+            "modular_updates": 7780,
+            "multiply_operand_bit_sum": 625446,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 2238,
+            "precision_bits": 56,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 2237,
+            "zero_source_edges": 3072
+          },
+          "normalized_bits": 16,
+          "normalized_residue": 25888,
+          "normalized_work": {
+            "cost_pruned_edges": 8079,
+            "edge_scans": 18109,
+            "layer_residue_bit_sum": 25377,
+            "max_modular_sum_bits": 17,
+            "max_product_bits": 32,
+            "max_residue_bits": 16,
+            "max_shifted_product_bits": 47,
+            "modular_updates": 2639,
+            "multiply_operand_bit_sum": 54643,
+            "odd_factorial_setup_products": 80,
+            "odd_inverse_calls": 1260,
+            "precision_bits": 16,
+            "scalar_slots_peak": 1970,
+            "transfer_cache_entries": 1259,
+            "zero_source_edges": 7391
+          }
+        }
+      ],
+      "structure": {
+        "baseline": 40,
+        "defect_coordinates_stored": 24392,
+        "edges": 18109,
+        "extra_incoming_edges": 12990,
+        "max_original_cost": 3082,
+        "max_reduced_cost": 2052,
+        "merged_vertices": 1695,
+        "peak_weight_slots_two_layers": 1970,
+        "reverse_relaxations": 18109,
+        "stage_distinctions_lost_if_omitted": 1243,
+        "vertices_including_terminal": 5120
+      }
+    },
+    {
+      "exact_bit_observations": {
+        "coordinate_checks": 13445,
+        "max_Y_bits": 4854,
+        "max_Z_bits": 4804
+      },
+      "n": 100,
+      "precision_runs": [
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 22430,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 301687,
+            "max_modular_sum_bits": 52,
+            "max_product_bits": 102,
+            "max_residue_bits": 51,
+            "max_shifted_product_bits": 152,
+            "modular_updates": 13248,
+            "multiply_operand_bit_sum": 1008878,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 3374,
+            "precision_bits": 51,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 3373,
+            "zero_source_edges": 14366
+          },
+          "normalized_bits": 1,
+          "normalized_residue": 0,
+          "normalized_work": {
+            "cost_pruned_edges": 35629,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 535,
+            "max_modular_sum_bits": 2,
+            "max_product_bits": 1,
+            "max_residue_bits": 1,
+            "max_shifted_product_bits": 1,
+            "modular_updates": 554,
+            "multiply_operand_bit_sum": 1108,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 555,
+            "precision_bits": 1,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 554,
+            "zero_source_edges": 13861
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 22278,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 317396,
+            "max_modular_sum_bits": 53,
+            "max_product_bits": 104,
+            "max_residue_bits": 52,
+            "max_shifted_product_bits": 155,
+            "modular_updates": 13715,
+            "multiply_operand_bit_sum": 1061331,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 3390,
+            "precision_bits": 52,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 3389,
+            "zero_source_edges": 14051
+          },
+          "normalized_bits": 2,
+          "normalized_residue": 0,
+          "normalized_work": {
+            "cost_pruned_edges": 34701,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 751,
+            "max_modular_sum_bits": 3,
+            "max_product_bits": 2,
+            "max_residue_bits": 2,
+            "max_shifted_product_bits": 2,
+            "modular_updates": 564,
+            "multiply_operand_bit_sum": 1354,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 565,
+            "precision_bits": 2,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 564,
+            "zero_source_edges": 14779
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 21469,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 377805,
+            "max_modular_sum_bits": 57,
+            "max_product_bits": 112,
+            "max_residue_bits": 56,
+            "max_shifted_product_bits": 167,
+            "modular_updates": 15331,
+            "multiply_operand_bit_sum": 1274624,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 3484,
+            "precision_bits": 56,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 3483,
+            "zero_source_edges": 13244
+          },
+          "normalized_bits": 6,
+          "normalized_residue": 44,
+          "normalized_work": {
+            "cost_pruned_edges": 31103,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 10536,
+            "max_modular_sum_bits": 7,
+            "max_product_bits": 12,
+            "max_residue_bits": 6,
+            "max_shifted_product_bits": 16,
+            "modular_updates": 2382,
+            "multiply_operand_bit_sum": 17648,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 1517,
+            "precision_bits": 6,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 1516,
+            "zero_source_edges": 16559
+          }
+        },
+        {
+          "absolute_work": {
+            "cost_pruned_edges": 19467,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 534737,
+            "max_modular_sum_bits": 67,
+            "max_product_bits": 132,
+            "max_residue_bits": 66,
+            "max_shifted_product_bits": 197,
+            "modular_updates": 19501,
+            "multiply_operand_bit_sum": 1901376,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 3649,
+            "precision_bits": 66,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 3648,
+            "zero_source_edges": 11076
+          },
+          "normalized_bits": 16,
+          "normalized_residue": 40044,
+          "normalized_work": {
+            "cost_pruned_edges": 23347,
+            "edge_scans": 50044,
+            "layer_residue_bit_sum": 51470,
+            "max_modular_sum_bits": 17,
+            "max_product_bits": 32,
+            "max_residue_bits": 16,
+            "max_shifted_product_bits": 47,
+            "modular_updates": 5245,
+            "multiply_operand_bit_sum": 108605,
+            "odd_factorial_setup_products": 100,
+            "odd_inverse_calls": 1948,
+            "precision_bits": 16,
+            "scalar_slots_peak": 4930,
+            "transfer_cache_entries": 1947,
+            "zero_source_edges": 21452
+          }
+        }
+      ],
+      "structure": {
+        "baseline": 50,
+        "defect_coordinates_stored": 70675,
+        "edges": 50044,
+        "extra_incoming_edges": 36600,
+        "max_original_cost": 4853,
+        "max_reduced_cost": 3234,
+        "merged_vertices": 4721,
+        "peak_weight_slots_two_layers": 4930,
+        "reverse_relaxations": 50044,
+        "stage_distinctions_lost_if_omitted": 2897,
+        "vertices_including_terminal": 13445
+      }
+    }
+  ],
+  "scope": "ordinary structural DAG integration; operation and operand-bit counters, not timings or bit-complexity bounds",
+  "source_hash_semantics": "SHA256 with CRLF normalized to LF; POSIX relative paths",
+  "source_sha256": {
+    "lca_ports_reverse_20261025/counting/check.py": "fd366f1901bba107d2cba08714e06be3d952083ad9fd627ea31154459a38b5cb",
+    "lca_ports_reverse_20261025/counting/reverse.py": "072667270929660d407961f127f89b7ac2d97825d900a07112af8acc11cf70bf",
+    "port_residual_integral_20261025/counting/check.py": "f0edc024d0264a27d8d46512328aa4c6ce5c01e239151c5c99b5e51a84489546",
+    "port_residual_integral_20261025/precision/check.py": "9107ca384b3f891c759932262769ecf741be76eb5b4e45fd45931a307a62fc6e"
+  },
+  "status": "PASS",
+  "unmerged_partition_orders": [
+    0,
+    34
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "complete_literal_old_blue_sources": 16,
+  "method": "standalone full-affine Gaussian proof gates plus all16 literal symmetric sources",
+  "new_guards": [
+    [
+      4,
+      9
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      7,
+      5
+    ]
+  ],
+  "new_words": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      5,
+      6,
+      7,
+      8,
+      11
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      5,
+      7,
+      8,
+      11,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      6
+    ]
+  ],
+  "old_first_reflection_product_cycles": [
+    [
+      0,
+      6,
+      2
+    ],
+    [
+      1,
+      7,
+      3
+    ],
+    [
+      4,
+      10,
+      8
+    ],
+    [
+      5,
+      11,
+      9
+    ]
+  ],
+  "scope": "both complete order12 failed base cells have three-black repairs; no quotient or clone contraction",
+  "source_cells": [
+    {
+      "blue_old_first_dimension": 3,
+      "five_black_fallback_cells": [
+        {
+          "branch": "open",
+          "dimension": 2
+        },
+        {
+          "branch": "closed_zero",
+          "dimension": 1
+        },
+        {
+          "branch": "closed_one",
+          "dimension": 1
+        }
+      ],
+      "full_dimension": 18,
+      "inherited_hostile_rows": [
+        1402,
+        3748,
+        1945,
+        2674,
+        1698,
+        2372,
+        3478,
+        2857,
+        2586,
+        1121,
+        2472,
+        533
+      ],
+      "literal_blue_sources": 8,
+      "new_guard_all_completion_black": [
+        true,
+        true,
+        true
+      ],
+      "new_guard_dimension": 15,
+      "old_all_completion_black": [
+        false,
+        true,
+        true
+      ],
+      "omitted_guard_hostiles": [
+        {
+          "illegal_join": [
+            4,
+            9
+          ],
+          "illegal_word": 1,
+          "omitted_guard": [
+            4,
+            9
+          ],
+          "source_rows": [
+            1402,
+            3588,
+            1033,
+            2066,
+            38,
+            2126,
+            2206,
+            2367,
+            2686,
+            1277,
+            2552,
+            533
+          ]
+        },
+        {
+          "illegal_join": [
+            10,
+            5
+          ],
+          "illegal_word": 1,
+          "omitted_guard": [
+            10,
+            5
+          ],
+          "source_rows": [
+            1402,
+            3652,
+            1161,
+            2066,
+            550,
+            3150,
+            2204,
+            2363,
+            2686,
+            1261,
+            2520,
+            533
+          ]
+        },
+        {
+          "illegal_join": [
+            5,
+            7
+          ],
+          "illegal_word": 2,
+          "omitted_guard": [
+            7,
+            5
+          ],
+          "source_rows": [
+            1402,
+            3588,
+            1161,
+            2066,
+            614,
+            2254,
+            2190,
+            2331,
+            2686,
+            1261,
+            2552,
+            533
+          ]
+        }
+      ],
+      "ports": [
+        2,
+        7,
+        9
+      ]
+    },
+    {
+      "blue_old_first_dimension": 3,
+      "five_black_fallback_cells": [
+        {
+          "branch": "open",
+          "dimension": 2
+        },
+        {
+          "branch": "closed_zero",
+          "dimension": 1
+        },
+        {
+          "branch": "closed_one",
+          "dimension": 1
+        }
+      ],
+      "full_dimension": 18,
+      "inherited_hostile_rows": [
+        1342,
+        3748,
+        2008,
+        2674,
+        1698,
+        836,
+        3475,
+        2857,
+        2586,
+        3137,
+        2472,
+        53
+      ],
+      "literal_blue_sources": 8,
+      "new_guard_all_completion_black": [
+        true,
+        true,
+        true
+      ],
+      "new_guard_dimension": 15,
+      "old_all_completion_black": [
+        false,
+        true,
+        true
+      ],
+      "omitted_guard_hostiles": [
+        {
+          "illegal_join": [
+            4,
+            9
+          ],
+          "illegal_word": 1,
+          "omitted_guard": [
+            4,
+            9
+          ],
+          "source_rows": [
+            1342,
+            3588,
+            1032,
+            2066,
+            38,
+            78,
+            2207,
+            2367,
+            2686,
+            3325,
+            2552,
+            53
+          ]
+        },
+        {
+          "illegal_join": [
+            10,
+            5
+          ],
+          "illegal_word": 1,
+          "omitted_guard": [
+            10,
+            5
+          ],
+          "source_rows": [
+            1342,
+            3652,
+            1160,
+            2066,
+            550,
+            1102,
+            2205,
+            2363,
+            2686,
+            3309,
+            2520,
+            53
+          ]
+        },
+        {
+          "illegal_join": [
+            5,
+            7
+          ],
+          "illegal_word": 2,
+          "omitted_guard": [
+            7,
+            5
+          ],
+          "source_rows": [
+            1342,
+            3588,
+            1160,
+            2066,
+            614,
+            206,
+            2191,
+            2331,
+            2686,
+            3309,
+            2552,
+            53
+          ]
+        }
+      ],
+      "ports": [
+        6,
+        7,
+        9
+      ]
+    }
+  ],
+  "status": "PASS"
+}

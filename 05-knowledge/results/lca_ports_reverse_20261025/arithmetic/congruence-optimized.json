@@ -1,0 +1,28 @@
+{
+  "congruence_families": 442,
+  "credit_range": [
+    1,
+    12
+  ],
+  "dyadic_exponents": [
+    0,
+    16
+  ],
+  "exact_reset_values": 2210,
+  "guarded_halt_checks": 24132,
+  "hostiles": [
+    "q instead of 9q",
+    "R0+2 below m"
+  ],
+  "odd_q_range": [
+    1,
+    51
+  ],
+  "period_indices": [
+    0,
+    4
+  ],
+  "scope": "fixed modular observations across different starting integers; no blank-orbit claim",
+  "simultaneous_modulus_lists": 2,
+  "status": "PASS"
+}

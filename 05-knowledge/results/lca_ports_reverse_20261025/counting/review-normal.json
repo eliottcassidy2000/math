@@ -1,0 +1,24 @@
+{
+  "direct_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ],
+  "literal_permutations": 46234,
+  "odd_partition_paths_at50": 3658,
+  "path_count_orders": [
+    0,
+    50
+  ],
+  "status": "PASS",
+  "structural_immutability_orders": [
+    0,
+    50
+  ]
+}
