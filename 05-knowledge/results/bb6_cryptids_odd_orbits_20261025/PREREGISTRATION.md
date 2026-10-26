@@ -18,3 +18,13 @@ Predictions (each is falsifiable by the named output file):
 - **P6 (capture is the only non-returning mechanism).** Every certified capture found anywhere in this session
   (A6 or the generic engine) is a period-2 depth-1 chain of the form P(v0, 4 v0 + 29) / P(v0, 4 v0 + 33) for A6;
   for the other machines no capture is found within the runs.
+
+## Addendum (committed while `a6_landing_hazard_R150` is computing d = 31; d = 15, 19, 23, 27 already seen)
+
+Seen: capture combs of density 17/301 around the actual landings at d = 15 and d = 27, none at d = 19, 23.
+- **P7 (period-12 capture windows).** At d = 31 (= 7 mod 12) the +-150 neighbourhood of the actual landing
+  e_31 = 954437418 contains 0 captures and 0 halts (`a6_landing_hazard_R150.out`).
+- **P8.** At d = 39 (= 3 mod 12), if computed, the landing neighbourhood contains captures with density >= 2%.
+- **P9 (A11).** Countdown ends of A11 have uniform (a0, b mod 2): over random starts with 100 <= c/2 <= 400,
+  the halting fraction is within 0.25 +- 0.03 for both parities of c (checked once already; re-run with a
+  different seed and c range 400..1200 must agree).
