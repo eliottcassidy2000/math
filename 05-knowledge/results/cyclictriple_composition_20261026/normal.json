@@ -1,0 +1,626 @@
+{
+  "growth": {
+    "cases": 12,
+    "quotient_embedding_orders": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25
+    ],
+    "symmetry_drop": {
+      "child_aut": 1594323,
+      "child_vertices": 52,
+      "parent_aut": 1948617,
+      "parent_vertices": 44
+    },
+    "unpointed_hostile": {
+      "children": [
+        "00011",
+        "01001"
+      ],
+      "parents": [
+        "011",
+        "101"
+      ]
+    }
+  },
+  "necklaces": {
+    "m3_move_multiplicities": [
+      [
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        3,
+        0
+      ]
+    ],
+    "rows": [
+      {
+        "automorphism_orders": {
+          "27": 2,
+          "81": 2
+        },
+        "classes": 4,
+        "m": 3,
+        "mass_identity": "8/81",
+        "period_classes": {
+          "1": 2,
+          "3": 2
+        },
+        "undirected_quotient_edges": 3,
+        "vertices": 12
+      },
+      {
+        "automorphism_orders": {
+          "1215": 2,
+          "243": 6
+        },
+        "classes": 8,
+        "m": 5,
+        "mass_identity": "32/1215",
+        "period_classes": {
+          "1": 2,
+          "5": 6
+        },
+        "undirected_quotient_edges": 10,
+        "vertices": 20
+      },
+      {
+        "automorphism_orders": {
+          "15309": 2,
+          "2187": 18
+        },
+        "classes": 20,
+        "m": 7,
+        "mass_identity": "128/15309",
+        "period_classes": {
+          "1": 2,
+          "7": 18
+        },
+        "undirected_quotient_edges": 49,
+        "vertices": 28
+      },
+      {
+        "automorphism_orders": {
+          "177147": 2,
+          "19683": 56,
+          "59049": 2
+        },
+        "classes": 60,
+        "m": 9,
+        "mass_identity": "512/177147",
+        "period_classes": {
+          "1": 2,
+          "3": 2,
+          "9": 56
+        },
+        "undirected_quotient_edges": 231,
+        "vertices": 36
+      },
+      {
+        "automorphism_orders": {
+          "177147": 186,
+          "1948617": 2
+        },
+        "classes": 188,
+        "m": 11,
+        "mass_identity": "2048/1948617",
+        "period_classes": {
+          "1": 2,
+          "11": 186
+        },
+        "undirected_quotient_edges": 979,
+        "vertices": 44
+      },
+      {
+        "automorphism_orders": {
+          "1594323": 630,
+          "20726199": 2
+        },
+        "classes": 632,
+        "m": 13,
+        "mass_identity": "8192/20726199",
+        "period_classes": {
+          "1": 2,
+          "13": 630
+        },
+        "undirected_quotient_edges": 4030,
+        "vertices": 52
+      }
+    ]
+  },
+  "small_exhaustion": [
+    {
+      "cyclic_structures": 1,
+      "labelled_tournaments": 1,
+      "n": 1
+    },
+    {
+      "cyclic_structures": 1,
+      "labelled_tournaments": 2,
+      "n": 2
+    },
+    {
+      "cyclic_structures": 2,
+      "labelled_tournaments": 8,
+      "n": 3
+    },
+    {
+      "cyclic_structures": 11,
+      "labelled_tournaments": 64,
+      "n": 4
+    },
+    {
+      "cyclic_structures": 208,
+      "labelled_tournaments": 1024,
+      "n": 5
+    }
+  ],
+  "witness": {
+    "automorphism_element_orders": [
+      {
+        "1": 1,
+        "3": 44,
+        "9": 36
+      },
+      {
+        "1": 1,
+        "3": 26
+      }
+    ],
+    "class_labelled_multiplicities": {
+      "0": 16,
+      "1": 48,
+      "2": 48,
+      "3": 16
+    },
+    "cyclic_count": 67,
+    "cyclic_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        4,
+        9
+      ],
+      [
+        0,
+        4,
+        10
+      ],
+      [
+        0,
+        4,
+        11
+      ],
+      [
+        0,
+        5,
+        8
+      ],
+      [
+        0,
+        5,
+        9
+      ],
+      [
+        0,
+        5,
+        10
+      ],
+      [
+        0,
+        5,
+        11
+      ],
+      [
+        0,
+        6,
+        8
+      ],
+      [
+        0,
+        6,
+        9
+      ],
+      [
+        0,
+        6,
+        10
+      ],
+      [
+        0,
+        6,
+        11
+      ],
+      [
+        0,
+        7,
+        8
+      ],
+      [
+        0,
+        7,
+        9
+      ],
+      [
+        0,
+        7,
+        10
+      ],
+      [
+        0,
+        7,
+        11
+      ],
+      [
+        1,
+        4,
+        8
+      ],
+      [
+        1,
+        4,
+        9
+      ],
+      [
+        1,
+        4,
+        10
+      ],
+      [
+        1,
+        4,
+        11
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        1,
+        5,
+        9
+      ],
+      [
+        1,
+        5,
+        10
+      ],
+      [
+        1,
+        5,
+        11
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        1,
+        6,
+        9
+      ],
+      [
+        1,
+        6,
+        10
+      ],
+      [
+        1,
+        6,
+        11
+      ],
+      [
+        1,
+        7,
+        8
+      ],
+      [
+        1,
+        7,
+        9
+      ],
+      [
+        1,
+        7,
+        10
+      ],
+      [
+        1,
+        7,
+        11
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        2,
+        4,
+        9
+      ],
+      [
+        2,
+        4,
+        10
+      ],
+      [
+        2,
+        4,
+        11
+      ],
+      [
+        2,
+        5,
+        8
+      ],
+      [
+        2,
+        5,
+        9
+      ],
+      [
+        2,
+        5,
+        10
+      ],
+      [
+        2,
+        5,
+        11
+      ],
+      [
+        2,
+        6,
+        8
+      ],
+      [
+        2,
+        6,
+        9
+      ],
+      [
+        2,
+        6,
+        10
+      ],
+      [
+        2,
+        6,
+        11
+      ],
+      [
+        2,
+        7,
+        8
+      ],
+      [
+        2,
+        7,
+        9
+      ],
+      [
+        2,
+        7,
+        10
+      ],
+      [
+        2,
+        7,
+        11
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        3,
+        4,
+        9
+      ],
+      [
+        3,
+        4,
+        10
+      ],
+      [
+        3,
+        4,
+        11
+      ],
+      [
+        3,
+        5,
+        8
+      ],
+      [
+        3,
+        5,
+        9
+      ],
+      [
+        3,
+        5,
+        10
+      ],
+      [
+        3,
+        5,
+        11
+      ],
+      [
+        3,
+        6,
+        8
+      ],
+      [
+        3,
+        6,
+        9
+      ],
+      [
+        3,
+        6,
+        10
+      ],
+      [
+        3,
+        6,
+        11
+      ],
+      [
+        3,
+        7,
+        8
+      ],
+      [
+        3,
+        7,
+        9
+      ],
+      [
+        3,
+        7,
+        10
+      ],
+      [
+        3,
+        7,
+        11
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        8,
+        9,
+        10
+      ]
+    ],
+    "full_labelled_fibre": 128,
+    "prime_carousel_automorphisms": {
+      "3": 3,
+      "5": 5,
+      "7": 7,
+      "9": 9
+    },
+    "representatives": [
+      {
+        "automorphisms": 81,
+        "hamiltonian_paths": 462915,
+        "path_orbits": 5715,
+        "rows": [
+          250,
+          252,
+          249,
+          240,
+          4000,
+          4032,
+          3984,
+          3840,
+          2575,
+          3087,
+          2319,
+          15
+        ]
+      },
+      {
+        "automorphisms": 27,
+        "hamiltonian_paths": 462915,
+        "path_orbits": 17145,
+        "rows": [
+          242,
+          244,
+          241,
+          247,
+          4000,
+          4032,
+          3984,
+          3840,
+          2575,
+          3087,
+          2319,
+          15
+        ]
+      },
+      {
+        "automorphisms": 27,
+        "hamiltonian_paths": 462915,
+        "path_orbits": 17145,
+        "rows": [
+          242,
+          244,
+          241,
+          247,
+          3872,
+          3904,
+          3856,
+          3952,
+          2575,
+          3087,
+          2319,
+          15
+        ]
+      },
+      {
+        "automorphisms": 81,
+        "hamiltonian_paths": 462915,
+        "path_orbits": 5715,
+        "rows": [
+          242,
+          244,
+          241,
+          247,
+          3872,
+          3904,
+          3856,
+          3952,
+          527,
+          1039,
+          271,
+          1807
+        ]
+      }
+    ]
+  }
+}

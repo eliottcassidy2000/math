@@ -43,6 +43,8 @@ related:
 > component vertex sets and C3-types survive, not their ordinary isotypes.
 > See the [proof, exact controls, and correction lineage](../../05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md)
 > and [classification framework](../../05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md).
+> The [companion necklace classification](../../05-knowledge/results/cyclictriple_composition_20261026/README.md)
+> gives complete carousel fibres, weighted flip spectra and pointed growth.
 
 Let `T` be a tournament on `V`, `|V| = n`, and `C3(T)` the 3-uniform hypergraph of its cyclic
 triples (its intransitivity structure). Let `𝒯(T)` be the modular decomposition tree (Gallai):

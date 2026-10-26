@@ -59,6 +59,9 @@ a historical synthesis or promoting computational evidence.
   extensions give H=11 versus 13; ordinary endpoint classes and degree
   do not suffice. Proofs, independent audits, exact universes and replay:
   [classification packet](../05-knowledge/results/tournament_composition_classification_20261026/README.md).
+- **Companion recovery:** the [necklace and quotient-spectrum packet](../05-knowledge/results/cyclictriple_composition_20261026/README.md)
+  independently verifies the emblem by a walk sieve and classifies complete
+  carousel fibres, their weighted flip operators and marked induced growth.
 
 ## 2026-10-26 — Randomly recovered Sylvester / Lucas–Lehmer seed mismatch
 

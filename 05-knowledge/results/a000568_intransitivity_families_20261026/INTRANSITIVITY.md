@@ -5,6 +5,8 @@
 > has 12 vertices and orders 81/27. The repair retains the child-colour stabilizer;
 > the cited fibre theorem, H-invariance and finite counts survive. See
 > [the sharp 4p theorem and independent controls](../tournament_composition_classification_20261026/fibre/RESULT.md).
+> The [companion necklace packet](../cyclictriple_composition_20261026/README.md)
+> classifies full carousel fibres and their weighted modular-flip spectra.
 
 klein, 2026-10-26. The object is a tournament `T` on a finite set `V`, i.e. a complete
 antisymmetric binary relation, and its **intransitivity structure**: the 3-uniform hypergraph

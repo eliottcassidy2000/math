@@ -1,0 +1,35 @@
+{
+  "base_commit": "fc3768ac5f",
+  "sample": [
+    "collatz_height_envelope_20261011.md",
+    "procgen_tension_20260926_ranks_christoffel_duality.md",
+    "continuing11_20260908_quadratic_family.md",
+    "planar_jc48_sep07_higher_odd.md",
+    "collatz_mod6_20260917_zsigmondy_triad.md",
+    "sc_partition_formula.md",
+    "lrc14_composite_clock_capacity_thm4447.md",
+    "gold_prefix_side_poset_20261019.md",
+    "metagraph_spectrum_torus_session16_20261020.md",
+    "collatz_directions_20260926.md",
+    "amm12592-allR-transient-theorem-boxeph.md",
+    "shared_frontiers_and_reset_two_20261004.md"
+  ],
+  "sample_file_sha256": {
+    "amm12592-allR-transient-theorem-boxeph.md": "a74306401fedabadff491196b6da0bbf11b5d8c0e8b570fd93240c92604976f4",
+    "collatz_directions_20260926.md": "a82a1fdad104d25a493cf1669f23875c1f8e7d443104a7fdd84179db32271a62",
+    "collatz_height_envelope_20261011.md": "8593aba4063aa84faebd054d9517124916a9b7be02589103705e6d75047fa97d",
+    "collatz_mod6_20260917_zsigmondy_triad.md": "51399f510b102f3a804517d714613974d358d59d48f04ab4e09fb838b61e136e",
+    "continuing11_20260908_quadratic_family.md": "8c67a6297b72d42c0d233e563615f8356a9103b4bb7cf76deba724074b058018",
+    "gold_prefix_side_poset_20261019.md": "ab595fdceb304c810df55c16407d4c02c90662ed6d1178b98ce8edb63ead8258",
+    "lrc14_composite_clock_capacity_thm4447.md": "6d97e85b872baa5b858908b3e8fc82487dcd9c9c07ec69ffa6a040acd95faf68",
+    "metagraph_spectrum_torus_session16_20261020.md": "2edb51d112a0e133403ef1061ad1de7545e50953fa3803810195ccb2f87a3534",
+    "planar_jc48_sep07_higher_odd.md": "c8d6916293e9eb76427c41c57270e8e303844a8a7960daa0cecb5edf42788f0b",
+    "procgen_tension_20260926_ranks_christoffel_duality.md": "3166d48db0366f9b8ea3b55d5282d2ef03cc670faf784f500c5381eba5687584",
+    "sc_partition_formula.md": "9e405089881e7d650227503da4ab22bed08d050a5f1121289eb67ee569208f1c",
+    "shared_frontiers_and_reset_two_20261004.md": "ec4086e3bc0ef6e816da04220cc5dde5d08bc1e693c308df522dd19c9392b74d"
+  },
+  "seed": 20261026,
+  "universe": "top-level 05-knowledge/results/*.md excluding names containing 20261025 or 20261026; sorted with Windows pathlib.Path ordering (case-insensitive)",
+  "universe_sha256": "9aa82211fc14e2136b481a42537582b5757bc85f94ace45555e87e6473dd314c",
+  "universe_size": 1915
+}

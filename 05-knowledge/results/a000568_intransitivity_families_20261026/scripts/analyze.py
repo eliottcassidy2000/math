@@ -1,4 +1,4 @@
-"""Per-n analysis of the class tables: C3-invariance of H/|Aut|, labelled C3-structure counts, fibre spectrum,
+"""Per-n analysis of supplied finite class tables: C3-invariance tests of H/|Aut|, labelled C3-structure counts, fibre spectrum,
 Hartley information E[log2 N], labelled prime probability, THM-1430 tiling identity, tree-shape table."""
 import os
 DATA=os.environ.get("DATA",".")
@@ -10,7 +10,7 @@ for n in range(3, 10):
     # THM-1430: sum H/|Aut| = 2^{C(n-1,2)}
     tiling=sum(Fraction(int(r['H']),int(r['aut'])) for r in rows)
     ok1430 = (tiling==2**((n-1)*(n-2)//2))
-    # C3-invariance of H, |Aut|, c3, strong-component multiset
+    # Finite tests only; |Aut| first fails at n=12. SCC field records sizes, not types.
     groups=collections.defaultdict(list)
     for r in rows: groups[r['c3hash']].append(r)
     bad=0
