@@ -1,0 +1,293 @@
+{
+ "self_tests": {
+  "C3": [
+   3,
+   3,
+   1
+  ],
+  "T5=Z5{1,2}": [
+   15,
+   5,
+   3
+  ],
+  "P7": [
+   189,
+   21,
+   9
+  ],
+  "random_bruteforce_checks": 60
+ },
+ "n=3": {
+  "method": "exhaustive labelled",
+  "tc_values": [
+   1
+  ],
+  "strong_tc_min": 1,
+  "busch_min_H": 3,
+  "tc_7_or_21": []
+ },
+ "n=4": {
+  "method": "exhaustive labelled",
+  "tc_values": [
+   1,
+   5
+  ],
+  "strong_tc_min": 5,
+  "busch_min_H": 5,
+  "tc_7_or_21": []
+ },
+ "n=5": {
+  "method": "exhaustive labelled",
+  "tc_values": [
+   1,
+   3,
+   5,
+   9,
+   11,
+   13
+  ],
+  "strong_tc_min": 3,
+  "busch_min_H": 9,
+  "tc_7_or_21": []
+ },
+ "n=6": {
+  "method": "exhaustive labelled",
+  "tc_values": [
+   1,
+   3,
+   5,
+   9,
+   11,
+   13,
+   15,
+   17,
+   19,
+   23,
+   25,
+   29,
+   31,
+   33,
+   37,
+   41,
+   43
+  ],
+  "strong_tc_min": 9,
+  "busch_min_H": 15,
+  "tc_7_or_21": []
+ },
+ "n=7": {
+  "method": "invariant enumeration",
+  "aut_lower_bound": 3,
+  "types": {
+   "(3,)": {
+    "pair_orbits": 11,
+    "invariant_tournaments": 2048,
+    "strong": 1088,
+    "min_H_strong_invariant": 45,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   },
+   "(3, 3)": {
+    "pair_orbits": 7,
+    "invariant_tournaments": 128,
+    "strong": 56,
+    "min_H_strong_invariant": 99,
+    "aut_checked": 12,
+    "tc_7_or_21": []
+   },
+   "(5,)": {
+    "pair_orbits": 5,
+    "invariant_tournaments": 32,
+    "strong": 8,
+    "min_H_strong_invariant": 135,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   },
+   "(7,)": {
+    "pair_orbits": 3,
+    "invariant_tournaments": 8,
+    "strong": 8,
+    "min_H_strong_invariant": 175,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   }
+  }
+ },
+ "n=8": {
+  "method": "invariant enumeration",
+  "aut_lower_bound": 3,
+  "types": {
+   "(3,)": {
+    "pair_orbits": 16,
+    "invariant_tournaments": 65536,
+    "strong": 44640,
+    "min_H_strong_invariant": 75,
+    "aut_checked": 6240,
+    "tc_7_or_21": []
+   },
+   "(3, 3)": {
+    "pair_orbits": 10,
+    "invariant_tournaments": 1024,
+    "strong": 528,
+    "min_H_strong_invariant": 153,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   },
+   "(5,)": {
+    "pair_orbits": 8,
+    "invariant_tournaments": 256,
+    "strong": 96,
+    "min_H_strong_invariant": 255,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   },
+   "(7,)": {
+    "pair_orbits": 4,
+    "invariant_tournaments": 16,
+    "strong": 0,
+    "min_H_strong_invariant": null,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   }
+  }
+ },
+ "n=9": {
+  "method": "invariant enumeration",
+  "aut_lower_bound": 5,
+  "types": {
+   "(3, 3)": {
+    "pair_orbits": 14,
+    "invariant_tournaments": 16384,
+    "strong": 10336,
+    "min_H_strong_invariant": 225,
+    "aut_checked": 1032,
+    "tc_7_or_21": []
+   },
+   "(3, 3, 3)": {
+    "pair_orbits": 12,
+    "invariant_tournaments": 4096,
+    "strong": 3760,
+    "min_H_strong_invariant": 1011,
+    "aut_checked": 432,
+    "tc_7_or_21": []
+   },
+   "(5,)": {
+    "pair_orbits": 12,
+    "invariant_tournaments": 4096,
+    "strong": 2176,
+    "min_H_strong_invariant": 405,
+    "aut_checked": 192,
+    "tc_7_or_21": []
+   },
+   "(7,)": {
+    "pair_orbits": 6,
+    "invariant_tournaments": 64,
+    "strong": 16,
+    "min_H_strong_invariant": 2163,
+    "aut_checked": 4,
+    "tc_7_or_21": []
+   }
+  }
+ },
+ "n=10": {
+  "method": "invariant enumeration",
+  "aut_lower_bound": 7,
+  "types": {
+   "(3, 3)": {
+    "pair_orbits": 19,
+    "invariant_tournaments": 524288,
+    "strong": 391104,
+    "min_H_strong_invariant": 405,
+    "aut_checked": 50784,
+    "tc_7_or_21": []
+   },
+   "(3, 3, 3)": {
+    "pair_orbits": 15,
+    "invariant_tournaments": 32768,
+    "strong": 23520,
+    "min_H_strong_invariant": 1269,
+    "aut_checked": 4392,
+    "tc_7_or_21": []
+   },
+   "(5,)": {
+    "pair_orbits": 17,
+    "invariant_tournaments": 131072,
+    "strong": 89280,
+    "min_H_strong_invariant": 675,
+    "aut_checked": 14400,
+    "tc_7_or_21": []
+   },
+   "(5, 5)": {
+    "pair_orbits": 9,
+    "invariant_tournaments": 512,
+    "strong": 480,
+    "min_H_strong_invariant": 8175,
+    "aut_checked": 40,
+    "tc_7_or_21": []
+   },
+   "(7,)": {
+    "pair_orbits": 9,
+    "invariant_tournaments": 512,
+    "strong": 192,
+    "min_H_strong_invariant": 4151,
+    "aut_checked": 0,
+    "tc_7_or_21": []
+   }
+  }
+ },
+ "n=11": {
+  "method": "invariant enumeration",
+  "aut_lower_bound": 11,
+  "types": {
+   "(3, 3, 3)": {
+    "pair_orbits": 19,
+    "invariant_tournaments": 524288,
+    "strong": 392000,
+    "min_H_strong_invariant": 1701,
+    "aut_checked": 56040,
+    "tc_7_or_21": []
+   },
+   "(5, 5)": {
+    "pair_orbits": 11,
+    "invariant_tournaments": 2048,
+    "strong": 992,
+    "min_H_strong_invariant": 11475,
+    "aut_checked": 200,
+    "tc_7_or_21": []
+   },
+   "(5, 3)": {
+    "pair_orbits": 13,
+    "invariant_tournaments": 8192,
+    "strong": 4352,
+    "min_H_strong_invariant": 2025,
+    "aut_checked": 288,
+    "tc_7_or_21": []
+   },
+   "(5, 3, 3)": {
+    "pair_orbits": 9,
+    "invariant_tournaments": 512,
+    "strong": 224,
+    "min_H_strong_invariant": 24795,
+    "aut_checked": 48,
+    "tc_7_or_21": []
+   },
+   "(7,)": {
+    "pair_orbits": 13,
+    "invariant_tournaments": 8192,
+    "strong": 4352,
+    "min_H_strong_invariant": 6489,
+    "aut_checked": 816,
+    "tc_7_or_21": []
+   },
+   "(11,)": {
+    "pair_orbits": 5,
+    "invariant_tournaments": 32,
+    "strong": 32,
+    "min_H_strong_invariant": 92411,
+    "aut_checked": 2,
+    "tc_7_or_21": []
+   }
+  }
+ },
+ "total_hits": []
+}

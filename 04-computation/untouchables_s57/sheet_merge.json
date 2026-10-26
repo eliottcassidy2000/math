@@ -1,0 +1,71 @@
+{
+ "R": {
+  "reflection_and_shift_identities_checked_on": "|x| <= 1e5",
+  "syracuse_not_conjugated_by_unit_shift_counterexamples_below_2000": 999,
+  "first": [
+   3,
+   5,
+   7,
+   9,
+   11
+  ]
+ },
+ "K": {
+  "odd_m_checked": 1000,
+  "mismatches": 0,
+  "alternating_moduli_up_to_101": [
+   3,
+   5,
+   9,
+   11,
+   13,
+   17,
+   19,
+   25,
+   27,
+   29,
+   33,
+   37,
+   41,
+   43,
+   53,
+   57,
+   59,
+   61,
+   65,
+   67,
+   81,
+   83,
+   97,
+   99,
+   101
+  ],
+  "non_alternating_up_to_101": [
+   7,
+   15,
+   21,
+   23,
+   31,
+   35,
+   39,
+   45,
+   47,
+   49,
+   51,
+   55,
+   63,
+   69,
+   71,
+   73,
+   75,
+   77,
+   79,
+   85,
+   87,
+   89,
+   91,
+   93,
+   95
+  ]
+ }
+}

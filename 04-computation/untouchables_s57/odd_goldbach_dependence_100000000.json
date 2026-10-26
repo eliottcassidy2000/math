@@ -1,0 +1,51 @@
+{
+ "N": 100000000,
+ "1000000": {
+  "odd_touchable": 499998,
+  "touched_by_other_sources": 443732,
+  "goldbach_dependent": 56266,
+  "share_of_odd_touchables": 0.11253245012980052,
+  "single_semiprime_only": 3,
+  "single_semiprime_only_list": [
+   9,
+   11,
+   39
+  ],
+  "odd_untouchables": [
+   5
+  ],
+  "largest_goldbach_dependent": 999999
+ },
+ "10000000": {
+  "odd_touchable": 4999998,
+  "touched_by_other_sources": 4537267,
+  "goldbach_dependent": 462731,
+  "share_of_odd_touchables": 0.0925462370184948,
+  "single_semiprime_only": 3,
+  "single_semiprime_only_list": [
+   9,
+   11,
+   39
+  ],
+  "odd_untouchables": [
+   5
+  ],
+  "largest_goldbach_dependent": 9999993
+ },
+ "100000000": {
+  "odd_touchable": 49999998,
+  "touched_by_other_sources": 45882159,
+  "goldbach_dependent": 4117839,
+  "share_of_odd_touchables": 0.08235678329427133,
+  "single_semiprime_only": 3,
+  "single_semiprime_only_list": [
+   9,
+   11,
+   39
+  ],
+  "odd_untouchables": [
+   5
+  ],
+  "largest_goldbach_dependent": 99999999
+ }
+}

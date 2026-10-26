@@ -1,0 +1,14 @@
+{
+ "N": 1000000,
+ "1000000": {
+  "odd_touchable": 499998,
+  "touched_by_other_sources": 443732,
+  "goldbach_dependent": 56266,
+  "share_of_odd_touchables": 0.11253245012980052,
+  "single_semiprime_only": 3,
+  "odd_untouchables": [
+   5
+  ],
+  "largest_goldbach_dependent": 999999
+ }
+}
