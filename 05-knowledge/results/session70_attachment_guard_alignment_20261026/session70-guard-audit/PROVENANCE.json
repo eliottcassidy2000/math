@@ -1,0 +1,74 @@
+{
+  "audit_date": "2026-10-26",
+  "repository_sources": [
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "commit": "fb872272125510c317b8114dd3f697b433c595f9",
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a"
+    },
+    {
+      "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt",
+      "commit": "fb872272125510c317b8114dd3f697b433c595f9",
+      "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee"
+    }
+  ],
+  "external_sources": [
+    {
+      "title": "On arc-traceable tournaments",
+      "authors": [
+        "Arthur H. Busch",
+        "Michael S. Jacobson",
+        "K. B. Reid"
+      ],
+      "year": 2006,
+      "url": "https://doi.org/10.1002/jgt.20173",
+      "journal": "Journal of Graph Theory 53(2), 157–166",
+      "verification": "Publisher metadata plus theorem independently read in 2007 restatement and 2005 author thesis"
+    },
+    {
+      "title": "Extremal results on arc-traceable tournaments",
+      "authors": [
+        "Arthur H. Busch",
+        "Michael S. Jacobson"
+      ],
+      "year": 2007,
+      "url": "https://combinatorialpress.com/article/jcmcc/Volume%20063/vol-063-paper%201.pdf",
+      "journal": "Journal of Combinatorial Mathematics and Combinatorial Computing 63, 3–15",
+      "printed_pages": [
+        4,
+        5
+      ],
+      "theorem": "1.1",
+      "sha256": "30f3fd1533d3c28f250060982981bd997ed3d70b98dc1773fafacde6dbe33a3a",
+      "verification": "Primary downloaded PDF inspected visually; k≥4 checked against scan",
+      "publish_source_bytes": false
+    },
+    {
+      "title": "Arc-traceable tournaments",
+      "author": "Arthur H. Busch",
+      "year": 2005,
+      "url": "https://digital.auraria.edu/downloads/ma7yx-pcr25/AA00005831_00001.pdf",
+      "type": "University of Colorado at Denver doctoral thesis",
+      "theorems": [
+        {
+          "number": "4.7",
+          "printed_pages": [
+            42,
+            43
+          ]
+        },
+        {
+          "number": "4.12",
+          "printed_pages": [
+            45,
+            46,
+            47
+          ]
+        }
+      ],
+      "sha256": "76c57cfb33b8ad32e7e830e811bb3a3a38d4a2eeea72416d03b45412f51cdf19",
+      "verification": "Primary institutional PDF downloaded; theorem statements and proofs inspected",
+      "publish_source_bytes": false
+    }
+  ]
+}

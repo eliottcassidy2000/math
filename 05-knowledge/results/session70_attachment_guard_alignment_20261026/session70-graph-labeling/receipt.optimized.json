@@ -1,0 +1,757 @@
+{
+  "false_claim_negative_control": "rejected",
+  "graceful": {
+    "factorial_rows": [
+      {
+        "guard_fiber_size": 2,
+        "k": 1,
+        "m": 3,
+        "one_color_component_sizes": [
+          2
+        ],
+        "one_color_guard_profiles": 1,
+        "states": 2,
+        "two_color_component_sizes": [
+          2
+        ]
+      },
+      {
+        "guard_fiber_size": 4,
+        "k": 2,
+        "m": 8,
+        "one_color_component_sizes": [
+          4,
+          4
+        ],
+        "one_color_guard_profiles": 2,
+        "states": 8,
+        "two_color_component_sizes": [
+          8
+        ]
+      },
+      {
+        "guard_fiber_size": 8,
+        "k": 3,
+        "m": 15,
+        "one_color_component_sizes": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "one_color_guard_profiles": 6,
+        "states": 48,
+        "two_color_component_sizes": [
+          48
+        ]
+      },
+      {
+        "guard_fiber_size": 16,
+        "k": 4,
+        "m": 24,
+        "one_color_component_sizes": [
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "one_color_guard_profiles": 24,
+        "states": 384,
+        "two_color_component_sizes": [
+          384
+        ]
+      }
+    ],
+    "m12_candidate_count": 56,
+    "m12_components": [
+      [
+        0,
+        5,
+        6,
+        10,
+        12
+      ],
+      [
+        1,
+        3,
+        7,
+        9
+      ],
+      [
+        2
+      ],
+      [
+        4,
+        8,
+        11
+      ]
+    ],
+    "m12_contact_supports": {
+      "11": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "6": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "9": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "m12_fixed": [
+      [
+        5,
+        6
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        12
+      ]
+    ],
+    "m12_free_colors": [
+      6,
+      9,
+      11
+    ],
+    "m12_states": [
+      [
+        [
+          2,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      [
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      [
+        [
+          4,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      [
+        [
+          5,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          1,
+          12
+        ]
+      ]
+    ],
+    "m12_width_two_components": [
+      2,
+      3
+    ]
+  },
+  "matching": {
+    "hostile": {
+      "connector": [
+        1,
+        4,
+        2
+      ],
+      "negative_components": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ]
+      ],
+      "p": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "positive_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "q": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "rows": [
+      {
+        "guard_profiles": 1,
+        "ordered_final_context_checks": 0,
+        "r": 1,
+        "states": 1
+      },
+      {
+        "guard_profiles": 3,
+        "ordered_final_context_checks": 6,
+        "r": 2,
+        "states": 3
+      },
+      {
+        "guard_profiles": 15,
+        "ordered_final_context_checks": 210,
+        "r": 3,
+        "states": 15
+      },
+      {
+        "guard_profiles": 105,
+        "ordered_final_context_checks": 10920,
+        "r": 4,
+        "states": 105
+      },
+      {
+        "guard_profiles": 945,
+        "ordered_final_context_checks": 0,
+        "r": 5,
+        "states": 945
+      }
+    ],
+    "total_contexts": 11136
+  },
+  "petersen": {
+    "K33_branch_parts": [
+      [
+        2,
+        8,
+        9
+      ],
+      [
+        3,
+        6,
+        7
+      ]
+    ],
+    "K33_cycles": 6,
+    "K33_cycles_using_all_suppression_marks": 2,
+    "K33_graceful_labels": [
+      0,
+      1,
+      2,
+      3,
+      6,
+      9
+    ],
+    "K33_subdivided_paths": [
+      [
+        2,
+        1,
+        6
+      ],
+      [
+        3,
+        4,
+        9
+      ],
+      [
+        7,
+        5,
+        8
+      ]
+    ],
+    "K5_cycles": 12,
+    "K5_graceful_label_sets": [],
+    "K5_normalized_label_sets_checked": 84,
+    "Petersen_minus_zero_cycles": 2,
+    "balanced_K5_cycles": 0,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        9
+      ]
+    ],
+    "hamilton_path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      9,
+      6,
+      8,
+      5,
+      7
+    ],
+    "hamilton_path_count_unoriented": 120,
+    "local_two_port_rule_two_factors": 6,
+    "perfect_matchings": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          9
+        ]
+      ]
+    ],
+    "two_factor_component_sizes": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ]
+    ]
+  },
+  "schema": "session70.graph-alignment.v1",
+  "square_sum": {
+    "Q25_endpoints": [
+      [
+        2,
+        18
+      ],
+      [
+        3,
+        18
+      ],
+      [
+        4,
+        18
+      ],
+      [
+        8,
+        18
+      ],
+      [
+        9,
+        18
+      ],
+      [
+        10,
+        18
+      ],
+      [
+        11,
+        18
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        18,
+        23
+      ],
+      [
+        18,
+        22
+      ]
+    ],
+    "Q25_path": [
+      2,
+      23,
+      13,
+      12,
+      24,
+      25,
+      11,
+      14,
+      22,
+      3,
+      1,
+      8,
+      17,
+      19,
+      6,
+      10,
+      15,
+      21,
+      4,
+      5,
+      20,
+      16,
+      9,
+      7,
+      18
+    ],
+    "Q25_tree_block_quotient": {
+      "components_after_cut": 6,
+      "cut_size": 3,
+      "edges_with_multiplicity": 20,
+      "vertices": 13
+    },
+    "counts": {
+      "1": 1,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 0,
+      "19": 0,
+      "2": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 3,
+      "24": 0,
+      "25": 10,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "degree_two_endpoint_hostile": [
+      18,
+      7,
+      9,
+      16,
+      20,
+      5,
+      11,
+      14,
+      2,
+      23,
+      13,
+      12,
+      4,
+      21,
+      15,
+      10,
+      6,
+      19,
+      17,
+      8,
+      1,
+      3,
+      22
+    ]
+  }
+}

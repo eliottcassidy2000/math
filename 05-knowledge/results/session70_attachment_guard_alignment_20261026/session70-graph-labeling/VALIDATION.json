@@ -1,0 +1,36 @@
+{
+  "assert_statements": 0,
+  "code_sha256": "824a72a986719d53983d2fb2bd12cc0a1f6fa43f2ba945db27d014a2c508d61a",
+  "external_dependencies": [],
+  "portable_tempdir_replay": [
+    {
+      "mode": [],
+      "output_sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff",
+      "receipt_equal": true,
+      "returncode": 0
+    },
+    {
+      "hostile": true,
+      "mode": [],
+      "rejection": "intentional false claim: bare K5 cycles lift through Petersen ports",
+      "returncode": 1
+    },
+    {
+      "mode": [
+        "-O"
+      ],
+      "output_sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff",
+      "receipt_equal": true,
+      "returncode": 0
+    },
+    {
+      "hostile": true,
+      "mode": [
+        "-O"
+      ],
+      "rejection": "intentional false claim: bare K5 cycles lift through Petersen ports",
+      "returncode": 1
+    }
+  ],
+  "report_sha256": "3859b1c1e588da3945764ec840870981af9e7b5bd2f95114dedccb053f23208b"
+}

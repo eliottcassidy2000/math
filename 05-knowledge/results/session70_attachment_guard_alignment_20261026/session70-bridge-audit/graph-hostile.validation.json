@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "normal",
+    "returncode": 1,
+    "expected_error": "intentional false claim: bare K5 cycles lift through Petersen ports",
+    "stdout_bytes": 0
+  },
+  {
+    "mode": "optimized",
+    "returncode": 1,
+    "expected_error": "intentional false claim: bare K5 cycles lift through Petersen ports",
+    "stdout_bytes": 0
+  }
+]

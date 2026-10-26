@@ -1,0 +1,30 @@
+{
+  "base_commit": "fb872272125510c317b8114dd3f697b433c595f9",
+  "initial_audit_manifest": "SHA256SUMS-INITIAL",
+  "reviewed_graph_packet": [
+    {
+      "path": "session70-graph-labeling/REPORT.md",
+      "sha256": "3859b1c1e588da3945764ec840870981af9e7b5bd2f95114dedccb053f23208b"
+    },
+    {
+      "path": "session70-graph-labeling/verify_graph_alignment.py",
+      "sha256": "824a72a986719d53983d2fb2bd12cc0a1f6fa43f2ba945db27d014a2c508d61a"
+    },
+    {
+      "path": "session70-graph-labeling/receipt.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff"
+    },
+    {
+      "path": "session70-graph-labeling/receipt.optimized.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff"
+    },
+    {
+      "path": "session70-graph-labeling/SOURCE_PROVENANCE.json",
+      "sha256": "e3ec5f6e17dd44a87d31c19ae07352eed089c6e92918950f6aa45a4239e82281"
+    },
+    {
+      "path": "session70-graph-labeling/VALIDATION.json",
+      "sha256": "28f41401f1484339c8541a9970df3fa52937122215945a5a805877cf198e95d8"
+    }
+  ]
+}

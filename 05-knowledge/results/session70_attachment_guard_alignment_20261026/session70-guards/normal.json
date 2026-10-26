@@ -1,0 +1,258 @@
+{
+  "checks": 1346651,
+  "fixed_path_exhaustion": [
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 1,
+      "maximum_H": 1,
+      "maximum_all_missing_pairs": 0,
+      "maximum_missing_internal_pairs": 0,
+      "n": 1,
+      "strong_presentations": 1
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 1,
+      "maximum_H": 1,
+      "maximum_all_missing_pairs": 0,
+      "maximum_missing_internal_pairs": 0,
+      "n": 2,
+      "strong_presentations": 0
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 2,
+      "maximum_H": 3,
+      "maximum_all_missing_pairs": 1,
+      "maximum_missing_internal_pairs": 0,
+      "n": 3,
+      "strong_presentations": 1
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 8,
+      "maximum_H": 5,
+      "maximum_all_missing_pairs": 3,
+      "maximum_missing_internal_pairs": 0,
+      "n": 4,
+      "strong_presentations": 5
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 64,
+      "maximum_H": 15,
+      "maximum_all_missing_pairs": 6,
+      "maximum_missing_internal_pairs": 1,
+      "n": 5,
+      "strong_presentations": 50
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 1024,
+      "maximum_H": 45,
+      "maximum_all_missing_pairs": 10,
+      "maximum_missing_internal_pairs": 1,
+      "n": 6,
+      "strong_presentations": 903
+    },
+    {
+      "decoder": "PASS",
+      "fixed_path_presentations": 32768,
+      "maximum_H": 189,
+      "maximum_all_missing_pairs": 15,
+      "maximum_missing_internal_pairs": 3,
+      "n": 7,
+      "strong_presentations": 30773
+    }
+  ],
+  "labelled_exhaustion": [
+    {
+      "all_labelled_tournaments": 1,
+      "decoder": "PASS",
+      "n": 1
+    },
+    {
+      "all_labelled_tournaments": 2,
+      "decoder": "PASS",
+      "n": 2
+    },
+    {
+      "all_labelled_tournaments": 8,
+      "decoder": "PASS",
+      "n": 3
+    },
+    {
+      "all_labelled_tournaments": 64,
+      "decoder": "PASS",
+      "n": 4
+    },
+    {
+      "all_labelled_tournaments": 1024,
+      "decoder": "PASS",
+      "n": 5
+    }
+  ],
+  "local_guard_partition": [
+    {
+      "n": 1,
+      "one_step_elementary_guard_cells": 1,
+      "states": 1
+    },
+    {
+      "n": 2,
+      "one_step_elementary_guard_cells": 1,
+      "states": 1
+    },
+    {
+      "n": 3,
+      "one_step_elementary_guard_cells": 2,
+      "states": 2
+    },
+    {
+      "n": 4,
+      "one_step_elementary_guard_cells": 7,
+      "states": 8
+    }
+  ],
+  "minimal_local_hostile": {
+    "full_permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "legal": [
+      false,
+      true
+    ],
+    "local_guard_vector": [
+      false,
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    "masks": [
+      0,
+      5
+    ],
+    "n": 4,
+    "named_local_moves": [
+      [
+        0,
+        2,
+        3,
+        1
+      ],
+      [
+        0,
+        3,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        3
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ]
+    ],
+    "rows": [
+      [
+        2,
+        4,
+        9,
+        3
+      ],
+      [
+        6,
+        12,
+        8,
+        1
+      ]
+    ],
+    "shortest_local_trace": [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        2,
+        3,
+        1
+      ]
+    ]
+  },
+  "nontraceable_strong_hostile": {
+    "H": 9,
+    "core": [
+      20,
+      1,
+      2,
+      7,
+      12
+    ],
+    "n": 5,
+    "ordinary_mask": 10,
+    "restoration_witnesses": [
+      [
+        4,
+        1,
+        0
+      ]
+    ],
+    "rows": [
+      20,
+      1,
+      2,
+      7,
+      14
+    ]
+  },
+  "seed": 700314159,
+  "seeded_random_controls": [
+    {
+      "n": 8,
+      "seeded_samples": 40,
+      "strong_samples": 36
+    },
+    {
+      "n": 9,
+      "seeded_samples": 40,
+      "strong_samples": 36
+    },
+    {
+      "n": 10,
+      "seeded_samples": 40,
+      "strong_samples": 39
+    },
+    {
+      "n": 11,
+      "seeded_samples": 40,
+      "strong_samples": 39
+    }
+  ],
+  "status": "PASS"
+}

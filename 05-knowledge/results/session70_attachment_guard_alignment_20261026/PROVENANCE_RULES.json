@@ -1,12 +1,17 @@
 {
   "schema": "session70-provenance-rules-v1",
   "sha256sum_lanes": [
-    "session70-vitali"
+    "session70-vitali",
+    "session70-graph-labeling"
   ],
   "sha256sum_manifests": [
     {
       "lane": "session70-bridge-audit",
       "file": "SHA256SUMS-INITIAL"
+    },
+    {
+      "lane": "session70-bridge-audit",
+      "file": "SHA256SUMS-GRAPH"
     }
   ],
   "source_ledgers": [
@@ -20,6 +25,17 @@
       "rows_key": "inherited",
       "snapshot_key": "local_snapshot",
       "pin_key": "commit"
+    },
+    {
+      "lane": "session70-graph-labeling",
+      "file": "SOURCE_PROVENANCE.json",
+      "rows_key": "sources",
+      "snapshot_key": "snapshot_path",
+      "ledger_pin_key": "base_commit"
+    },
+    {
+      "lane": "source-snapshots",
+      "file": "SOURCE_SNAPSHOTS.json"
     }
   ],
   "reviewed_bindings": [
@@ -48,6 +64,67 @@
       "path": "session70-bridge-audit/vitali-replay.optimized.json",
       "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
       "equal_to": "session70-vitali/check.optimized.json"
+    },
+    {
+      "path": "session70-graph-labeling/REPORT.md",
+      "sha256": "3859b1c1e588da3945764ec840870981af9e7b5bd2f95114dedccb053f23208b"
+    },
+    {
+      "path": "session70-graph-labeling/verify_graph_alignment.py",
+      "sha256": "824a72a986719d53983d2fb2bd12cc0a1f6fa43f2ba945db27d014a2c508d61a"
+    },
+    {
+      "path": "session70-graph-labeling/receipt.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff"
+    },
+    {
+      "path": "session70-graph-labeling/receipt.optimized.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff"
+    },
+    {
+      "path": "session70-graph-labeling/SOURCE_PROVENANCE.json",
+      "sha256": "e3ec5f6e17dd44a87d31c19ae07352eed089c6e92918950f6aa45a4239e82281"
+    },
+    {
+      "path": "session70-graph-labeling/VALIDATION.json",
+      "sha256": "28f41401f1484339c8541a9970df3fa52937122215945a5a805877cf198e95d8"
+    },
+    {
+      "path": "session70-bridge-audit/graph-replay.normal.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff",
+      "equal_to": "session70-graph-labeling/receipt.json"
+    },
+    {
+      "path": "session70-bridge-audit/graph-replay.optimized.json",
+      "sha256": "346900a91d5f5cc0392c8b4f41a8ba0811be7979c68c4bc22f175398b9bfa4ff",
+      "equal_to": "session70-graph-labeling/receipt.optimized.json"
+    },
+    {
+      "path": "session70-guards/REPORT.md",
+      "sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+    },
+    {
+      "path": "session70-guards/check.py",
+      "sha256": "62332b585c5ef31dd83bcce56449683d2a509f02a05bef76a4a77ee68c6ed68d"
+    },
+    {
+      "path": "session70-root/SYNTHESIS.md",
+      "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "2011b0f26774017e597571915857c039c403ba0c3e79d445e71eabc90cab81d8"
+    }
+  ],
+  "native_manifests": [
+    {
+      "lane": "session70-guards",
+      "file": "MANIFEST.json",
+      "path_key": "name"
+    },
+    {
+      "lane": "session70-guard-audit",
+      "file": "PUBLICATION-MANIFEST.json"
     }
   ]
 }

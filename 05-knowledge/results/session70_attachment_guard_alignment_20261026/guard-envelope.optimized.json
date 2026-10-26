@@ -1,0 +1,8 @@
+{
+  "decoded_arc_corruption_normal": "REJECTED",
+  "decoded_arc_corruption_optimized": "REJECTED",
+  "exact_files": 7,
+  "normal_replay": "PASS",
+  "optimized_replay": "PASS",
+  "status": "PASS"
+}

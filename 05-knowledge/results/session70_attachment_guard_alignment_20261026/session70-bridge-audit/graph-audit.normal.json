@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "K33 explicit graceful labels": 1,
+    "K5 odd difference obstruction": 1,
+    "accepted successor assignment exact": 6152,
+    "actual overwrite legality equals assignment test": 105328,
+    "all normalized K5 labels rejected": 84,
+    "exact isolated leaf vertices": 7,
+    "exactly two actual edges per color leaf": 7,
+    "exhaustive all actual choices match state formula": 6,
+    "fixed actual forest": 7,
+    "formula state actually graceful": 500,
+    "literal state count": 7,
+    "no-op/change-indicator hostile distinguishes signs": 7,
+    "normalized K5 complete search cardinality": 1,
+    "one-color profiles reconstruct precisely pi": 7,
+    "remaining core is one tree": 7
+  },
+  "graceful_overwrite": [
+    {
+      "actual_overwrite_requests": 6,
+      "guard_classes": 1,
+      "k": 1,
+      "literal_states": 2,
+      "loop_requests_included": true,
+      "m": 3,
+      "max_batch_width": 2,
+      "sign_fiber": 2
+    },
+    {
+      "actual_overwrite_requests": 568,
+      "guard_classes": 2,
+      "k": 2,
+      "literal_states": 8,
+      "loop_requests_included": true,
+      "m": 8,
+      "max_batch_width": 2,
+      "sign_fiber": 4
+    },
+    {
+      "actual_overwrite_requests": 30192,
+      "guard_classes": 6,
+      "k": 3,
+      "literal_states": 48,
+      "loop_requests_included": true,
+      "m": 15,
+      "max_batch_width": 2,
+      "sign_fiber": 8
+    },
+    {
+      "actual_overwrite_requests": 34560,
+      "guard_classes": 24,
+      "k": 4,
+      "literal_states": 384,
+      "loop_requests_included": true,
+      "m": 24,
+      "max_batch_width": 1,
+      "sign_fiber": 16
+    },
+    {
+      "actual_overwrite_requests": 10,
+      "guard_classes": 1,
+      "k": 1,
+      "literal_states": 2,
+      "loop_requests_included": true,
+      "m": 5,
+      "max_batch_width": 2,
+      "sign_fiber": 2
+    },
+    {
+      "actual_overwrite_requests": 872,
+      "guard_classes": 2,
+      "k": 2,
+      "literal_states": 8,
+      "loop_requests_included": true,
+      "m": 10,
+      "max_batch_width": 2,
+      "sign_fiber": 4
+    },
+    {
+      "actual_overwrite_requests": 39120,
+      "guard_classes": 6,
+      "k": 3,
+      "literal_states": 48,
+      "loop_requests_included": true,
+      "m": 17,
+      "max_batch_width": 2,
+      "sign_fiber": 8
+    }
+  ],
+  "nonplanar_gracefulness": {
+    "K33_differences": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "K33_labels": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        6,
+        9
+      ]
+    ],
+    "normalized_K5_sets": 84,
+    "possible_K5_odd_difference_counts": [
+      0,
+      4,
+      6
+    ]
+  },
+  "producer_imports": false,
+  "status": "PASS",
+  "total_checks": 112122
+}

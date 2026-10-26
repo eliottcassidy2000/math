@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "bytes": 16467,
+      "name": "REPORT.md",
+      "sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+    },
+    {
+      "bytes": 2264,
+      "name": "SOURCE_PINS.json",
+      "sha256": "f077c552f79647d578b871c726dbd01f1e50a2a3c862fe2748bd96d332af4f30"
+    },
+    {
+      "bytes": 10216,
+      "name": "check.py",
+      "sha256": "62332b585c5ef31dd83bcce56449683d2a509f02a05bef76a4a77ee68c6ed68d"
+    },
+    {
+      "bytes": 4221,
+      "name": "normal.json",
+      "sha256": "a90a181e453d072ed8a2c3ebce297bb56e3243e258a927c279e419064ce51c60"
+    },
+    {
+      "bytes": 4221,
+      "name": "optimized.json",
+      "sha256": "a90a181e453d072ed8a2c3ebce297bb56e3243e258a927c279e419064ce51c60"
+    },
+    {
+      "bytes": 1946,
+      "name": "verify.py",
+      "sha256": "f0d384a7bbbabe0fb2605bff71fc77f08077b6527590e5f258008403a2c2f50a"
+    }
+  ],
+  "scope": "Integrity ledger, not an external trust anchor."
+}

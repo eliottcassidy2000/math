@@ -1,0 +1,141 @@
+{
+  "local_guard_controls": {
+    "composed_permutation": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "first_step_legal": [
+      true,
+      true
+    ],
+    "masks": [
+      0,
+      5
+    ],
+    "minimal_collision_order": 4,
+    "named_trace": [
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        0,
+        2,
+        3,
+        1
+      ]
+    ],
+    "rows": [
+      [
+        2,
+        4,
+        9,
+        3
+      ],
+      [
+        6,
+        12,
+        8,
+        1
+      ]
+    ],
+    "second_step_legal": [
+      false,
+      true
+    ]
+  },
+  "negative_controls": {
+    "corrupted_core_omitting_4_to_3_rejected": true,
+    "naive_core_equals_tournament_rejected": true,
+    "nonstrong_TT3_reachability_claim_rejected": true
+  },
+  "results": [
+    {
+      "decoder_failures": 0,
+      "max_H": 1,
+      "max_unused_arcs": 0,
+      "n": 1,
+      "reachability_failures": 0,
+      "states": 1,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 1,
+      "max_unused_arcs": 0,
+      "n": 2,
+      "reachability_failures": 0,
+      "states": 1,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 3,
+      "max_unused_arcs": 1,
+      "n": 3,
+      "reachability_failures": 0,
+      "states": 2,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 5,
+      "max_unused_arcs": 3,
+      "n": 4,
+      "reachability_failures": 0,
+      "states": 8,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 15,
+      "max_unused_arcs": 6,
+      "n": 5,
+      "reachability_failures": 0,
+      "states": 64,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 45,
+      "max_unused_arcs": 10,
+      "n": 6,
+      "reachability_failures": 0,
+      "states": 1024,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "max_H": 189,
+      "max_unused_arcs": 15,
+      "n": 7,
+      "reachability_failures": 0,
+      "states": 32768,
+      "universe": "all X_n fixed-identity-path"
+    },
+    {
+      "decoder_failures": 0,
+      "n": 8,
+      "states": 503,
+      "universe": "seed70473 random dense masks plus 3 structured controls"
+    },
+    {
+      "decoder_failures": 0,
+      "n": 9,
+      "states": 503,
+      "universe": "seed70473 random dense masks plus 3 structured controls"
+    },
+    {
+      "decoder_failures": 0,
+      "n": 10,
+      "states": 503,
+      "universe": "seed70473 random dense masks plus 3 structured controls"
+    }
+  ],
+  "schema": "session70-independent-hamilton-core-audit-v1",
+  "seed": 70473
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session70-graph-labeling/verify_graph_alignment.py", line 370, in <module>
+    main()
+  File "/workspace/scratch/07d5532f2fce/session70-graph-labeling/verify_graph_alignment.py", line 364, in main
+    need(result["petersen"]["balanced_K5_cycles"]==12,
+  File "/workspace/scratch/07d5532f2fce/session70-graph-labeling/verify_graph_alignment.py", line 15, in need
+    raise ValueError(label)
+ValueError: intentional false claim: bare K5 cycles lift through Petersen ports

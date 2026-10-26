@@ -1,0 +1,27 @@
+{
+  "all_fixed_path_orders": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "compared": [
+    "independent DFS adjacency union and H count",
+    "audit DFS versus producer endpoint subset DP",
+    "both independent SCC/separator decoders"
+  ],
+  "cross_implementation_cases": 176,
+  "producer_check_sha256": "62332b585c5ef31dd83bcce56449683d2a509f02a05bef76a4a77ee68c6ed68d",
+  "producer_report_sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563",
+  "seed": 70499,
+  "seeded_dense_samples_per_order": 20,
+  "seeded_orders": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "status": "PASS"
+}

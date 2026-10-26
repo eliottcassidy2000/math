@@ -1,0 +1,47 @@
+{
+  "exclusions": [
+    "Full external PDF source files",
+    "External source OCR/transcriptions",
+    "Page screenshots",
+    "Exploratory programs",
+    "Timing-bearing historical JSONL logs"
+  ],
+  "files": [
+    {
+      "bytes": 14165,
+      "path": "REPORT.md",
+      "sha256": "85059fa4b7d42c2b0a7c38174fea39e3733b308a402c836a37aac9665b8ecdd5"
+    },
+    {
+      "bytes": 6330,
+      "path": "verify_reconstruction.py",
+      "sha256": "dea0c7ace1da8c8a694ad29c2fe8b73b7ef670395ce4df0f00eb3ebe0f5d61f0"
+    },
+    {
+      "bytes": 2761,
+      "path": "receipt-normal.json",
+      "sha256": "fe2f05a9898f11804ef42780b7b273801bce58285b1e3c41065b61936800ebb4"
+    },
+    {
+      "bytes": 2761,
+      "path": "receipt-optimized.json",
+      "sha256": "fe2f05a9898f11804ef42780b7b273801bce58285b1e3c41065b61936800ebb4"
+    },
+    {
+      "bytes": 2446,
+      "path": "PROVENANCE.json",
+      "sha256": "12c0ff046f471349eab6caa5c9eabfa21ab8da5a9c5125e497ceedef934adbb2"
+    },
+    {
+      "bytes": 4502,
+      "path": "CROSS_REVIEW.md",
+      "sha256": "60fe4dc25c53caf1ee4c8082e2e8aa46a12ea0b16a1df560697db5c9c933c885"
+    },
+    {
+      "bytes": 607,
+      "path": "cross-review-receipt.json",
+      "sha256": "9250ed8a0b1e305f45b374d1d6487cdd6282fa9e9d0cb4274b57fcabf7749845"
+    }
+  ],
+  "schema": "session70-independent-audit-publication-v1"
+}

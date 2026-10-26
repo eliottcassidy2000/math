@@ -1,0 +1,49 @@
+{
+  "attribution": "Theorem 1.1 credits Busch, Jacobson and Reid (2006), DOI 10.1002/jgt.20173.",
+  "files": [
+    {
+      "bytes": 6823,
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 23418,
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "bytes": 15560,
+      "git_blob": "594680d1a428fcfd1eab33cf1cddf22a98c41821",
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a"
+    },
+    {
+      "bytes": 23523,
+      "git_blob": "ca7f43ce683f88ba79ba1aaa9454eeac3d721f30",
+      "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    {
+      "bytes": 7589,
+      "git_blob": "8eea31ba0fd1b00475ab6bd405368a12c1d06caa",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/inputs/THEOREM.txt",
+      "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee"
+    },
+    {
+      "bytes": 8217,
+      "git_blob": "684c0c90a63e7d4b28f20cd25bd5f7bbdf75c337",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/COUNT_FREE_ENUMERATION.md",
+      "sha256": "4d1ce0b7022ed3d3a9c25cd124ec0e30ec7e65a9a4ddc454a1d2bd7f71d9aa7e"
+    }
+  ],
+  "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+  "primary_input": {
+    "citation": "Busch and Jacobson, Extremal results on arc-traceable tournaments, JCMCC 63 (2007), 3\u201315, Theorem 1.1, printed pages 4\u20135",
+    "method": "independent visual inspection of rendered pages; PDF remains scratch-only",
+    "sha256": "30f3fd1533d3c28f250060982981bd997ed3d70b98dc1773fafacde6dbe33a3a",
+    "url": "https://combinatorialpress.com/article/jcmcc/Volume%20063/vol-063-paper%201.pdf"
+  },
+  "repository": "eliottcassidy2000/math"
+}

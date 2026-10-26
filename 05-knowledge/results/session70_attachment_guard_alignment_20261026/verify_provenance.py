@@ -45,15 +45,22 @@ def main():
             check_bytes(lane + '/' + file.lstrip('*'), digest)
     for source in rules.get('source_ledgers', []):
         lane = source['lane']
-        rows = json.loads(path(lane + '/' + source['file']).read_text())
+        ledger = json.loads(path(lane + '/' + source['file']).read_text())
+        rows = ledger
         if source.get('rows_key'):
             rows = rows[source['rows_key']]
         for row in rows:
             data = check_bytes(lane + '/' + row[source.get('snapshot_key', 'snapshot')], row['sha256'], row.get('bytes'))
-            need(re.fullmatch('[0-9a-f]{40}', row[source.get('pin_key', 'pin')]) is not None, 'nonexact source pin')
+            pin = ledger[source['ledger_pin_key']] if source.get('ledger_pin_key') else row[source.get('pin_key', 'pin')]
+            need(re.fullmatch('[0-9a-f]{40}', pin) is not None, 'nonexact source pin')
             blob = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
             need(blob == row['git_blob'], 'source Git blob mismatch')
             source_rows += 1
+    for record in rules.get('native_manifests', []):
+        ledger = json.loads(path(record['lane'] + '/' + record['file']).read_text())
+        rows = ledger[record.get('rows_key', 'files')]
+        for row in rows:
+            check_bytes(record['lane'] + '/' + row[record.get('path_key', 'path')], row['sha256'], row.get('bytes'))
     for binding in rules.get('reviewed_bindings', []):
         data = check_bytes(binding['path'], binding['sha256'], binding.get('bytes'))
         if binding.get('equal_to'):

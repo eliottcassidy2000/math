@@ -1,0 +1,103 @@
+{
+  "base_commit": "fb872272125510c317b8114dd3f697b433c595f9",
+  "sources": [
+    {
+      "bytes": 4228,
+      "git_blob": "1ad105c39bdb2d5fd36e36aa797413253475badf",
+      "repository_path": "05-knowledge/results/graceful_fixed_color_counterexample_20261019/ARITHMETIC_FIXED_COLOR_COUNTEREXAMPLE.md",
+      "sha256": "11cdbfbe17644ab6c231f013ae2dcc3ad7a68f6bab9b8539545be71932a31828",
+      "snapshot_path": "sources/00-ARITHMETIC_FIXED_COLOR_COUNTEREXAMPLE.md"
+    },
+    {
+      "bytes": 8647,
+      "git_blob": "b0639a0b94dda3c485e8097ac1dcc0f481824d5a",
+      "repository_path": "05-knowledge/results/graceful_upper_tail_two_color_connectivity_20261019/UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md",
+      "sha256": "b5147a72ae7e52e8be7ff52332292d5a43941378b934ec01fe6a78f9e88d5e23",
+      "snapshot_path": "sources/01-UPPER_TAIL_TWO_COLOR_CONNECTIVITY.md"
+    },
+    {
+      "bytes": 9955,
+      "git_blob": "5360ce2aa04d3c58c588f12753db9fad7e29edf2",
+      "repository_path": "05-knowledge/results/graceful_factorial_fibers_20261019/GRACEFUL_FACTORIAL_FIBERS.md",
+      "sha256": "2169b1b85982fbe26a93b906c27a61aabfc7c544ecce9d901e8828bf1a18266d",
+      "snapshot_path": "sources/02-GRACEFUL_FACTORIAL_FIBERS.md"
+    },
+    {
+      "bytes": 26657,
+      "git_blob": "2d65903ba5c5d8df18cb5d49f93b2a5818a5b882",
+      "repository_path": "05-knowledge/results/graceful_square_exchange_20261019.md",
+      "sha256": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8",
+      "snapshot_path": "sources/03-graceful_square_exchange_20261019.md"
+    },
+    {
+      "bytes": 11898,
+      "git_blob": "4f834799aea676c3d0a4758423648f15ddb0992e",
+      "repository_path": "05-knowledge/results/graceful_linear_partition_routes_20261019/LINEAR_PARTITION_DIAMETER.md",
+      "sha256": "9fe5f70ec12c931ed6b07e2f1c33e11aff0307cdb8da817614026c3f56efcb53",
+      "snapshot_path": "sources/04-LINEAR_PARTITION_DIAMETER.md"
+    },
+    {
+      "bytes": 6894,
+      "git_blob": "4e29351dd4b78bdadca735dde5466138191b3aae",
+      "repository_path": "05-knowledge/results/graceful_target_monotonicity_obstruction_20261019/PRIMARY_SOURCE_ATTRIBUTION.md",
+      "sha256": "7a1797edf810e07602f9ff915ce829426ebe3a1ee5eee7bb6388090bf56c00c6",
+      "snapshot_path": "sources/05-PRIMARY_SOURCE_ATTRIBUTION.md"
+    },
+    {
+      "bytes": 18374,
+      "git_blob": "cd0025524d68780fba1a22615ff590b1fec83500",
+      "repository_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb",
+      "snapshot_path": "sources/06-README.md"
+    },
+    {
+      "bytes": 15910,
+      "git_blob": "9601b1c8c3d72df73870304835a68521339eca14",
+      "repository_path": "05-knowledge/results/square_sum_ports_20261023/README.md",
+      "sha256": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68",
+      "snapshot_path": "sources/07-README.md"
+    },
+    {
+      "bytes": 14764,
+      "git_blob": "af3b50517a0e2916f1d6ead113f3bd224400bfab",
+      "repository_path": "05-knowledge/results/session32_square_monster_20261023/square-sum/README.md",
+      "sha256": "2238f0366e7eeffd9fe61e342bc1f583e5eaa163afeb1e977b74fe172fc69a6a",
+      "snapshot_path": "sources/08-README.md"
+    },
+    {
+      "bytes": 17864,
+      "git_blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "repository_path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/SYNTHESIS.md",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea",
+      "snapshot_path": "sources/09-SYNTHESIS.md"
+    },
+    {
+      "bytes": 15718,
+      "git_blob": "13ef5118280c11052778ceaae42068bb25b60bdf",
+      "repository_path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/REPORT.md",
+      "sha256": "ce4b1297b85557e971df72b8a963ab298b6e5354077e1ecda873cd0b511b0ab6",
+      "snapshot_path": "sources/10-REPORT.md"
+    },
+    {
+      "bytes": 15299,
+      "git_blob": "aeec93b86ded0c1245202a2e54a9e97c7d92f5f4",
+      "repository_path": "05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
+      "sha256": "128d084d32d3680a0d86a3ec881606268b4195ecf93fec00fdee92e092f751c1",
+      "snapshot_path": "sources/11-PORT_TRANSFER.md"
+    },
+    {
+      "bytes": 12710,
+      "git_blob": "ad2e33be02bcc97243bbab05fa6238f813aa6924",
+      "repository_path": "05-knowledge/results/graceful_polynomial_diameter_20261019/POLYNOMIAL_STAIRCASE_DIAMETER.md",
+      "sha256": "b73a3aaac2f10cf743107834425fde3aa9236cef073cb98ce9bbb7bcf9bf3021",
+      "snapshot_path": "sources/12-POLYNOMIAL_STAIRCASE_DIAMETER.md"
+    },
+    {
+      "bytes": 10157,
+      "git_blob": "5ad5948f088d8e2039627c775ba88b0ae532d230",
+      "repository_path": "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md",
+      "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e",
+      "snapshot_path": "sources/13-THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md"
+    }
+  ]
+}

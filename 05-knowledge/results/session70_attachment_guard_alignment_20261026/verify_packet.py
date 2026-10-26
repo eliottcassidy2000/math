@@ -90,15 +90,17 @@ def replay(manifest):
         env.update(PYTHONDONTWRITEBYTECODE='1', PYTHONHASHSEED='0')
         for job in manifest.get('replays', []):
             expected = safe_path(job['normal']).read_bytes()
-            args = [x.replace('{packet}', str(packet)) for x in job.get('args', [])]
             script = packet / job['script']
             for optimized in (False, True):
+                output = Path(temp) / ('receipt-' + str(len(results)) + ('-optimized' if optimized else '-normal') + '.json')
+                args = [x.replace('{packet}', str(packet)).replace('{output}', str(output)) for x in job.get('args', [])]
                 flags = ['-B'] + (['-I'] if job.get('isolated', True) else []) + (['-O'] if optimized else [])
                 proc = subprocess.run([sys.executable, *flags, str(script), *args],
                                       cwd=script.parent, env=env, capture_output=True,
                                       timeout=job.get('timeout_seconds', 600))
                 need(proc.returncode == 0, 'replay failed: ' + job['script'] + '\n' + proc.stderr.decode(errors='replace'))
-                need(proc.stdout == expected, 'replay receipt mismatch: ' + job['script'])
+                actual_receipt = output.read_bytes() if job.get('receipt_file', False) else proc.stdout
+                need(actual_receipt == expected, 'replay receipt mismatch: ' + job['script'])
             results.append({'script': job['script'], 'normal': 'PASS', 'optimized': 'PASS',
                             'receipt_sha256': hashlib.sha256(expected).hexdigest()})
         for job in manifest.get('negative_controls', []):

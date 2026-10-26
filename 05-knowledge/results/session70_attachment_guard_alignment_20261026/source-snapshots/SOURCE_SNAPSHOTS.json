@@ -1,0 +1,66 @@
+[
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "AGENTS.md",
+    "snapshot": "00_AGENTS.md",
+    "bytes": 6823,
+    "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+    "git_blob": "fdde24ac382ea703618dc52685054c6528071a41"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "01-canon/ACTIVE-GUARDRAILS.md",
+    "snapshot": "01_ACTIVE-GUARDRAILS.md",
+    "bytes": 23418,
+    "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+    "snapshot": "02_README.md",
+    "bytes": 15560,
+    "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+    "git_blob": "594680d1a428fcfd1eab33cf1cddf22a98c41821"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+    "snapshot": "03_REPORT.md",
+    "bytes": 23523,
+    "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94",
+    "git_blob": "ca7f43ce683f88ba79ba1aaa9454eeac3d721f30"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/inputs/THEOREM.txt",
+    "snapshot": "04_THEOREM.txt",
+    "bytes": 7589,
+    "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee",
+    "git_blob": "8eea31ba0fd1b00475ab6bd405368a12c1d06caa"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/COUNT_FREE_ENUMERATION.md",
+    "snapshot": "05_COUNT_FREE_ENUMERATION.md",
+    "bytes": 8217,
+    "sha256": "4d1ce0b7022ed3d3a9c25cd124ec0e30ec7e65a9a4ddc454a1d2bd7f71d9aa7e",
+    "git_blob": "684c0c90a63e7d4b28f20cd25bd5f7bbdf75c337"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+    "snapshot": "06_README.md",
+    "bytes": 15560,
+    "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+    "git_blob": "594680d1a428fcfd1eab33cf1cddf22a98c41821"
+  },
+  {
+    "pin": "fb872272125510c317b8114dd3f697b433c595f9",
+    "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt",
+    "snapshot": "07_THEOREM.txt",
+    "bytes": 7589,
+    "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee",
+    "git_blob": "8eea31ba0fd1b00475ab6bd405368a12c1d06caa"
+  }
+]

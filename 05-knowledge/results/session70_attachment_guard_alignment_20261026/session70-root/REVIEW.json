@@ -1,0 +1,31 @@
+{
+  "schema": "session70-root-synthesis-review-v1",
+  "status": "ACCEPTED",
+  "reviewed_files": [
+    {
+      "file": "SYNTHESIS.md",
+      "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6"
+    },
+    {
+      "file": "README.final.md",
+      "sha256": "2011b0f26774017e597571915857c039c403ba0c3e79d445e71eabc90cab81d8"
+    }
+  ],
+  "mathematical_review": [
+    "The independent bridge audit accepted the alignment, matching, graceful-guard and Petersen scopes.",
+    "The independent guard audit accepted the all-order reconstruction, elementary trace extension, and pointwise algebra distinction.",
+    "The final wording excludes deleted endpoints from the detour statement and distinguishes valid presentation states from an adjoined failure sink."
+  ],
+  "corrections_applied_before_final_publication": [
+    "The graceful hostile has 12 colors and 13 vertices, not tournament order 12.",
+    "At least one of the two detours avoids a deleted vertex other than the arc endpoints.",
+    "2^M counts valid X_n presentation states; explicit totalization adds a separate failure sink.",
+    "The replay command explicitly passes --replay; a default hash-only run is not described as a replay."
+  ],
+  "proof_inputs": [
+    "CITED Busch-Jacobson-Reid nontraceable-arc structural theorem and Camion theorem.",
+    "INHERITED labelled Hamilton-path relocation connectivity, with both left and right moves.",
+    "INHERITED C4 alignment family and Session69 P3 ordinary response recursion."
+  ],
+  "scope": "Mathematical and semantic review of the named final prose. Remote publication and whole-packet replay are separately verified."
+}
