@@ -1,0 +1,207 @@
+{
+  "repository": "calr3/tinycryptids",
+  "commit": "3c43f97768d4ea06d70e0eb154ba88060bc36dec",
+  "queried_tree_sha": "3c43f97768d4ea06d70e0eb154ba88060bc36dec",
+  "api_url": "https://api.github.com/repos/calr3/tinycryptids/git/trees/3c43f97768d4ea06d70e0eb154ba88060bc36dec?recursive=1",
+  "truncated": false,
+  "checks": [
+    {
+      "path": "lean/Check.lean",
+      "expected": "cdcb04150bf64fb34ab8d912f7ed83fa037d44e1",
+      "remote": "cdcb04150bf64fb34ab8d912f7ed83fa037d44e1",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids.lean",
+      "expected": "38fdb9c8fa01742220063c98ed6fa1625c5d314b",
+      "remote": "38fdb9c8fa01742220063c98ed6fa1625c5d314b",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Basic.lean",
+      "expected": "615d90ea9073cf2c5dcaff1a81eaa3e9c4c09418",
+      "remote": "615d90ea9073cf2c5dcaff1a81eaa3e9c4c09418",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Basic3.lean",
+      "expected": "8055d82676fab47c2565a7d0d1a03443a2dd34df",
+      "remote": "8055d82676fab47c2565a7d0d1a03443a2dd34df",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Beep.lean",
+      "expected": "3d995508a024b8bdc89f652e360cde8a6bdd0cc2",
+      "remote": "3d995508a024b8bdc89f652e360cde8a6bdd0cc2",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Lemmas.lean",
+      "expected": "b727d00dfd45a3e6a4521f174bde4299221f3a74",
+      "remote": "b727d00dfd45a3e6a4521f174bde4299221f3a74",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Routines.lean",
+      "expected": "a272c9b16b55cae2187055439bf167cea7a7a54e",
+      "remote": "a272c9b16b55cae2187055439bf167cea7a7a54e",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Core/Sys.lean",
+      "expected": "d332a4e381e493ec09d164d1d770851e50d2fffc",
+      "remote": "d332a4e381e493ec09d164d1d770851e50d2fffc",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/Defs.lean",
+      "expected": "91e7d18dc9ffcb27f219439d689678b14f991d5f",
+      "remote": "91e7d18dc9ffcb27f219439d689678b14f991d5f",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Cycle.lean",
+      "expected": "ff08245c5c344cfefbd1bd606ab38cafb994d4d1",
+      "remote": "ff08245c5c344cfefbd1bd606ab38cafb994d4d1",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Machine.lean",
+      "expected": "1145ac578c2d37af0fd9edf60b2a77b66f75bcfc",
+      "remote": "1145ac578c2d37af0fd9edf60b2a77b66f75bcfc",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Main.lean",
+      "expected": "b3dde7a4f34fe0bc407dbdef0c4826623f803ac1",
+      "remote": "b3dde7a4f34fe0bc407dbdef0c4826623f803ac1",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Spec.lean",
+      "expected": "81c7a190ca382cfd5e062fbca98e71b73460429f",
+      "remote": "81c7a190ca382cfd5e062fbca98e71b73460429f",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Step.lean",
+      "expected": "b9d6d7086f325c275ef0937cc37478e6614158c7",
+      "remote": "b9d6d7086f325c275ef0937cc37478e6614158c7",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz/Tac.lean",
+      "expected": "72239254e6a999813178c4813b1c6d27de083d05",
+      "remote": "72239254e6a999813178c4813b1c6d27de083d05",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz3/Machine.lean",
+      "expected": "be0e69db3ccd9ff1358e1941b9a9897de6f4e4fa",
+      "remote": "be0e69db3ccd9ff1358e1941b9a9897de6f4e4fa",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz3/Main.lean",
+      "expected": "e9e347ca3c6ebd1d3d5690cf966676386d5e65ae",
+      "remote": "e9e347ca3c6ebd1d3d5690cf966676386d5e65ae",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz3/Step.lean",
+      "expected": "6e5df849f82de8b250d23784ac9bc287e1256794",
+      "remote": "6e5df849f82de8b250d23784ac9bc287e1256794",
+      "match": true
+    },
+    {
+      "path": "lean/TinyCryptids/WeakCollatz3/Tac.lean",
+      "expected": "360ea6a57d722ee86730e04a76c251949d8d187e",
+      "remote": "360ea6a57d722ee86730e04a76c251949d8d187e",
+      "match": true
+    },
+    {
+      "path": "lean/lake-manifest.json",
+      "expected": "db8203149d76e8381fc525ff14836b03f46f34ca",
+      "remote": "db8203149d76e8381fc525ff14836b03f46f34ca",
+      "match": true
+    },
+    {
+      "path": "lean/lakefile.lean",
+      "expected": "6c1c7bd2e62ca33f5bd08747aab1558612baafab",
+      "remote": "6c1c7bd2e62ca33f5bd08747aab1558612baafab",
+      "match": true
+    },
+    {
+      "path": "lean/lean-toolchain",
+      "expected": "d0eb99ff68d76c831521c84404ad1fd549f51ac0",
+      "remote": "d0eb99ff68d76c831521c84404ad1fd549f51ac0",
+      "match": true
+    },
+    {
+      "path": "tools/sim.c",
+      "expected": "d9fc943e681f6da85d1e4308613bf3a316107e98",
+      "remote": "d9fc943e681f6da85d1e4308613bf3a316107e98",
+      "match": true
+    },
+    {
+      "path": "tools/tm.py",
+      "expected": "ff0f6ea7a54f8077269fa2e8116c8a4ef61cf2ca",
+      "remote": "ff0f6ea7a54f8077269fa2e8116c8a4ef61cf2ca",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/PROOF.md",
+      "expected": "f4263ebc916a9afe71fe0070c223256d5d82199d",
+      "remote": "f4263ebc916a9afe71fe0070c223256d5d82199d",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/README.md",
+      "expected": "b565a113e79289d4e6702b09d2d33c7288ea492d",
+      "remote": "b565a113e79289d4e6702b09d2d33c7288ea492d",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/RECORDS.md",
+      "expected": "73a483f4ff42025f5f28315d2a748d8e6e8731f6",
+      "remote": "73a483f4ff42025f5f28315d2a748d8e6e8731f6",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/build.py",
+      "expected": "753bdd1b3a76390472cc30d64b0da56671a23a89",
+      "remote": "753bdd1b3a76390472cc30d64b0da56671a23a89",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/test_e2e.py",
+      "expected": "aa6cf2eb19cab89fd147cf2d31cbd451da3c0d41",
+      "remote": "aa6cf2eb19cab89fd147cf2d31cbd451da3c0d41",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/weakcollatz.txt",
+      "expected": "190e375c917328c501d2a83410ca759ea8aa6cc3",
+      "remote": "190e375c917328c501d2a83410ca759ea8aa6cc3",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/sym3/build.py",
+      "expected": "e222e103c776e103892dd85ce801f2a5429b9204",
+      "remote": "e222e103c776e103892dd85ce801f2a5429b9204",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/sym3/test_e2e.py",
+      "expected": "dc5e2a2541bc7cdc7c930873dddc5e0555abb683",
+      "remote": "dc5e2a2541bc7cdc7c930873dddc5e0555abb683",
+      "match": true
+    },
+    {
+      "path": "weakcollatz/sym3/weakcollatz3.txt",
+      "expected": "dcede5a547b94fdee625909dba3b29ff9ea3af28",
+      "remote": "dcede5a547b94fdee625909dba3b29ff9ea3af28",
+      "match": true
+    }
+  ]
+}

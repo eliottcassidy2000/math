@@ -1,0 +1,58 @@
+{
+  "codec": {
+    "canonical_arc_corruptions_rejected": 45,
+    "full_tables": [
+      {
+        "full_read_write_move_target_tables": 25,
+        "states": 1
+      },
+      {
+        "full_read_write_move_target_tables": 6561,
+        "states": 2
+      }
+    ],
+    "valid_payload_change_decodes_as_changed_source": true
+  },
+  "continuation_hostile": [
+    {
+      "mask": 69,
+      "ordered_profile": [
+        15,
+        78,
+        198,
+        240,
+        120
+      ],
+      "two_vertex_context_H": 123
+    },
+    {
+      "mask": 76,
+      "ordered_profile": [
+        15,
+        90,
+        210,
+        240,
+        120
+      ],
+      "two_vertex_context_H": 135
+    }
+  ],
+  "historical_math_receipts_equal": true,
+  "lrc_threshold_controls": {
+    "method": "exact common-denominator integer grid, k<=3 and speeds 1..6",
+    "rational_threshold_tuple_cases": 774,
+    "yes_cases": 446
+  },
+  "source_integrity": {
+    "assert_statements": 0,
+    "fresh_git_readback_performed": false,
+    "historical_audit_manifest_rows_verified": 6,
+    "mode": "OFFLINE_PINNED_SNAPSHOTS",
+    "producer_manifest_rows_verified": 17,
+    "provenance_basis": "Historical audited commit:path provenance, sealed SHA-256 snapshot bytes, and recorded Git blob object IDs; not a fresh Git or remote check.",
+    "snapshot_sha256_and_pinned_git_blob_oid_matches": 11,
+    "source_commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "unchanged_historical_math_functions": 9
+  },
+  "status": "PASS_INDEPENDENT_FINITE_AUDIT_OFFLINE_SNAPSHOTS"
+}

@@ -1,0 +1,159 @@
+{
+  "repo": "eliottcassidy2000/math",
+  "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "comparisons": [
+    {
+      "local_path": "session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "repo_path": "05-knowledge/hypotheses/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "match": "byte-identical",
+      "repo_bytes": 4841,
+      "local_bytes": 4841,
+      "repo_sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72",
+      "local_sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "repo_path": "07-reflections/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "match": "byte-identical",
+      "repo_bytes": 2913,
+      "local_bytes": 2913,
+      "repo_sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea",
+      "local_sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "repo_path": "04-computation/lrc14_broad_concept_atlas_codex_s135.py",
+      "match": "byte-identical",
+      "repo_bytes": 19936,
+      "local_bytes": 19936,
+      "repo_sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9",
+      "local_sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "repo_path": "05-knowledge/results/lrc14_broad_concept_atlas_codex_s135.out",
+      "match": "byte-identical",
+      "repo_bytes": 17494,
+      "local_bytes": 17494,
+      "repo_sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30",
+      "local_sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "repo_path": "05-knowledge/hypotheses/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "match": "byte-identical",
+      "repo_bytes": 6064,
+      "local_bytes": 6064,
+      "repo_sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f",
+      "local_sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "repo_path": "05-knowledge/hypotheses/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "match": "byte-identical",
+      "repo_bytes": 2361,
+      "local_bytes": 2361,
+      "repo_sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5",
+      "local_sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/04-computation/tropical_cluster_H.py",
+      "repo_path": "04-computation/tropical_cluster_H.py",
+      "match": "byte-identical",
+      "repo_bytes": 22204,
+      "local_bytes": 22204,
+      "repo_sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e",
+      "local_sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/04-computation/weil_rh_tournament.py",
+      "repo_path": "04-computation/weil_rh_tournament.py",
+      "match": "byte-identical",
+      "repo_bytes": 25292,
+      "local_bytes": 25292,
+      "repo_sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca",
+      "local_sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/04-computation/dihedral_tournament.py",
+      "repo_path": "04-computation/dihedral_tournament.py",
+      "match": "byte-identical",
+      "repo_bytes": 24771,
+      "local_bytes": 24771,
+      "repo_sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1",
+      "local_sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "repo_path": "07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "match": "trailing-newline-only",
+      "repo_bytes": 3208,
+      "local_bytes": 3209,
+      "repo_sha256": "6657b86864192cd2551d3d0a6da45ada2c94225825c008d831a45dd86144112f",
+      "local_sha256": "d79368983c78a29617680fb1a38454d5b2e821299345c987c1ecdab31549cda4"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "repo_path": "07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "match": "trailing-newline-only",
+      "repo_bytes": 9855,
+      "local_bytes": 9856,
+      "repo_sha256": "e2205e474f41fc11da154edddb7538c778c4d9e546a0937def651076df539399",
+      "local_sha256": "af0bd11dc9430d390f71cdf95552c60d5b016ce204220f1b339ffbc6fe913e96"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out",
+      "repo_path": "05-knowledge/results/dihedral_tournament.out",
+      "match": "byte-identical",
+      "repo_bytes": 17261,
+      "local_bytes": 17261,
+      "repo_sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0",
+      "local_sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out",
+      "repo_path": "05-knowledge/results/weil_rh_tournament.out",
+      "match": "byte-identical",
+      "repo_bytes": 21078,
+      "local_bytes": 21078,
+      "repo_sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195",
+      "local_sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out",
+      "repo_path": "05-knowledge/results/tropical_cluster_H.out",
+      "match": "byte-identical",
+      "repo_bytes": 14222,
+      "local_bytes": 14222,
+      "repo_sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075",
+      "local_sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "repo_path": "05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "match": "trailing-newline-only",
+      "repo_bytes": 17346,
+      "local_bytes": 17347,
+      "repo_sha256": "8b0f81eb8cae4b1011c608552d373b7bf27e0e2b1cea22ed4b294cc2abf73aeb",
+      "local_sha256": "3ca7ade0fbe84490c55427d10834bdc75c8e7c9c53d1e81173253efc05fd6efc"
+    },
+    {
+      "local_path": "session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "repo_path": "agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "match": "trailing-newline-only",
+      "repo_bytes": 2336,
+      "local_bytes": 2337,
+      "repo_sha256": "6585147b87b38eb90ce669802578b471ba3580e68eeabb115b37c51222d11d29",
+      "local_sha256": "b520828716efff589d425996731b70e15a05744029884948eb69faf4ed8839a6"
+    },
+    {
+      "local_path": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "repo_path": "05-knowledge/hypotheses/HYP-3546-perfect-numbers-are-forcade-arc-hypercube-dimensions.md",
+      "match": "byte-identical",
+      "repo_bytes": 6574,
+      "local_bytes": 6574,
+      "repo_sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc",
+      "local_sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc"
+    }
+  ]
+}

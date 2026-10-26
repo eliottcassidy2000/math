@@ -1,0 +1,12 @@
+{
+  "repository": "calr3/tinycryptids",
+  "commit": "3c43f97768d4ea06d70e0eb154ba88060bc36dec",
+  "api_url": "https://api.github.com/repos/calr3/tinycryptids/git/trees/3c43f97768d4ea06d70e0eb154ba88060bc36dec?recursive=1",
+  "tree_sha": "3c43f97768d4ea06d70e0eb154ba88060bc36dec",
+  "truncated": false,
+  "tree_entry_count": 217,
+  "licensing_paths": [],
+  "root_readme_blob": "05c6451c38f16563b16784a39c74f9932db2f1cf",
+  "root_readme_licensing_section_found": false,
+  "decision": "No identifiable license file or root README permission grant at pinned commit; do not vendor external source; publish an explicitly separate authored-math replay and historical source-audit receipts."
+}

@@ -1,0 +1,212 @@
+{
+  "cylinders": [
+    {
+      "m": 1,
+      "modulus": 3,
+      "safe_classes": 2
+    },
+    {
+      "m": 2,
+      "modulus": 9,
+      "safe_classes": 4
+    },
+    {
+      "m": 3,
+      "modulus": 27,
+      "safe_classes": 8
+    },
+    {
+      "m": 4,
+      "modulus": 81,
+      "safe_classes": 16
+    },
+    {
+      "m": 5,
+      "modulus": 243,
+      "safe_classes": 32
+    },
+    {
+      "m": 6,
+      "modulus": 729,
+      "safe_classes": 64
+    },
+    {
+      "m": 7,
+      "modulus": 2187,
+      "safe_classes": 128
+    },
+    {
+      "m": 8,
+      "modulus": 6561,
+      "safe_classes": 256
+    },
+    {
+      "m": 9,
+      "modulus": 19683,
+      "safe_classes": 512
+    },
+    {
+      "m": 10,
+      "modulus": 59049,
+      "safe_classes": 1024
+    }
+  ],
+  "external_software_executed_by_auditor": false,
+  "independent_native": {
+    "fresh_native_macro_cases": 121,
+    "head_relative_to_origin": -12242,
+    "macro_checkpoints": [
+      {
+        "cost": 15,
+        "cumulative": 15,
+        "n": 0
+      },
+      {
+        "cost": 73,
+        "cumulative": 88,
+        "n": 6
+      },
+      {
+        "cost": 277,
+        "cumulative": 365,
+        "n": 16
+      },
+      {
+        "cost": 907,
+        "cumulative": 1272,
+        "n": 34
+      },
+      {
+        "cost": 2757,
+        "cumulative": 4029,
+        "n": 64
+      },
+      {
+        "cost": 7957,
+        "cumulative": 11986,
+        "n": 114
+      },
+      {
+        "cost": 22777,
+        "cumulative": 34763,
+        "n": 196
+      },
+      {
+        "cost": 64407,
+        "cumulative": 99170,
+        "n": 334
+      },
+      {
+        "cost": 180307,
+        "cumulative": 279477,
+        "n": 564
+      },
+      {
+        "cost": 504027,
+        "cumulative": 783504,
+        "n": 946
+      },
+      {
+        "cost": 1403967,
+        "cumulative": 2187471,
+        "n": 1584
+      },
+      {
+        "cost": 3906393,
+        "cumulative": 6093864,
+        "n": 2646
+      },
+      {
+        "cost": 10861903,
+        "cumulative": 16955767,
+        "n": 4416
+      },
+      {
+        "cost": 30196527,
+        "cumulative": 47152294,
+        "n": 7366
+      },
+      {
+        "cost": 24576,
+        "cumulative": 47176870,
+        "n": 12284
+      }
+    ],
+    "nonzero_span": 12289,
+    "ones": 4098,
+    "status": "PASS",
+    "steps": 47176870
+  },
+  "lean_or_rust_build_performed_by_auditor": false,
+  "manifest_docs_not_downloaded": [
+    "weakcollatz/PROOF.md",
+    "weakcollatz/README.md",
+    "weakcollatz/RECORDS.md"
+  ],
+  "native_costs": [
+    15,
+    73,
+    277,
+    907,
+    2757,
+    7957,
+    22777,
+    64407,
+    180307,
+    504027,
+    1403967,
+    3906393,
+    10861903,
+    30196527,
+    24576
+  ],
+  "native_total": 47176870,
+  "negative_periodic_extensions": 2046,
+  "orbit_with_seed": [
+    0,
+    6,
+    16,
+    34,
+    64,
+    114,
+    196,
+    334,
+    564,
+    946,
+    1584,
+    2646,
+    4416,
+    7366,
+    12284
+  ],
+  "orientation_pairs": 174251,
+  "scope": "Independent native and finite arithmetic verification; proofs of infinite statements are in AUDIT.md. No all-seed halting conclusion.",
+  "sigma_ratios": {
+    "114": "40/19",
+    "12284": "5586/3071",
+    "1584": "403/132",
+    "16": "31/16",
+    "196": "57/28",
+    "2646": "380/147",
+    "334": "252/167",
+    "34": "27/17",
+    "4416": "127/46",
+    "564": "112/47",
+    "6": "2",
+    "64": "127/64",
+    "7366": "5760/3683",
+    "946": "72/43"
+  },
+  "source_blobs_verified": 30,
+  "status": "PASS",
+  "targeted_lean_import_closure": 15,
+  "unavailable_root_imports": [
+    "TinyCryptids.WeakCollatz16.Main",
+    "TinyCryptids.WeakCollatzV1.M23",
+    "TinyCryptids.Fermat.M90",
+    "TinyCryptids.Sierpinski.M60",
+    "TinyCryptids.Riesel.M76",
+    "TinyCryptids.OddPerfect.M37",
+    "TinyCryptids.TwinPrimes.M18"
+  ]
+}

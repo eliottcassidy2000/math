@@ -1,6 +1,6 @@
 # Session 65: guarded machines and faithful tournament interfaces
 
-**First independently audited checkpoint — 2026-10-26.** The exact statements
+**Second independently audited checkpoint — 2026-10-26.** The exact statements
 below are separated from cited external results and bounded computation.
 No global arithmetic conjecture, new asymptotic machine classification, or
 unrestricted tournament-connectivity result is claimed.
@@ -56,13 +56,44 @@ Multiplication by two reverses the 3-adic tournament orientation, but digit
 avoidance is not invariant under the relevant kernel. Neither conjecture is
 resolved by these maps or the bounded censuses.
 
+### Binary 3-adic continuation and the supplied sequence
+
+The [weak-Collatz/MB report](session65-weakcollatz/REPORT.md) identifies the
+supplied sequence and proves the binary 3-adic survivor-set description,
+density-one integer halting, and a sparse exception bound. Its alternating-lex
+orientation is transitive and matches the stated tournament bridge. The
+[independent audit](session65-audit-weakcollatz/AUDIT.md) separates those proofs
+from finite native-machine and external source observations. The
+[portable amendment](session65-audit-weakcollatz/PORTABILITY.md) reruns authored
+math/native checks without redistributing unlicensed external source; historical
+external-source gates are explicitly not rerun by that entry point.
+
+### Goldbach machines, multiply-perfect constraints, and typed reductions
+
+The [Goldbach and concept-lineage report](session65-twentyfive/REPORT.md) tracks
+the 2016 27-state, later 25-state, and cited 21-state results without inferring
+Goldbach from bounded runs. Licensed Lean sources are inspected, not locally
+built. The [independent audit](session65-audit-goldbach/REPORT.md) checks the
+exact source closure and transition-table transport. The
+[multiply-perfect report](session65-root/multiperfect/REPORT.md) proves scoped
+parity-budget consequences, not odd-perfect-number nonexistence.
+
+The [typed reduction atlas](session65-reductions/REPORT.md) specifies carriers,
+predicates, preserved structure and losses. A shared universal target is not
+an equivalence of fixed problems; finite verification is not uniform halting
+decidability. Its [independent audit](session65-audit-reductions/REPORT.md) and
+[offline amendment](session65-audit-reductions/PORTABILITY_AMENDMENT.md) check
+all eleven pinned inputs, identical mathematical consequences, and missing/
+wrong-byte/provenance hostile controls without requiring Git at replay time.
+
 ## Evidence and reproduction
 
 The [concept board](CONCEPT_BOARD.md) records preserved predicates, losses and
 hostiles. Both lanes have separate independent audits and deterministic
-normal/optimized receipts. The full first checkpoint runs five authored
-mathematical/provenance checkers in both Python modes, including every shipped
-runtime dependency. From this packet directory:
+normal/optimized receipts. The cumulative second checkpoint runs fourteen authored mathematical/provenance
+checkers and hostile-test drivers in both Python modes, including every shipped
+runtime dependency. A C compiler (`gcc`) is required for the independently
+authored native MB replay; no external machine simulator is bundled. From this packet directory:
 
 ```sh
 python3 verify_packet.py
@@ -74,7 +105,8 @@ The replay copies the complete packet before executing, clears ambient Python
 import overrides, checks saved stdout, and rejects input mutation. The output
 receipt and scratch directory must stay outside this packet. These commands
 do not require a source checkout, network, Coq, Lean or third-party Python
-packages. Frozen notes retain their original wording (including a historical
+packages. Python runs in isolated mode (`-I -B`). Historical source-audit entry
+points are retained as evidence, not substituted for portable replay tasks. Frozen notes retain their original wording (including a historical
 “audit pending” label); the linked final PASS audits resolve that audit state
 without altering the sealed proof bytes.
 

@@ -1,0 +1,289 @@
+{
+  "sha": "6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+  "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fccb4e9c6bbfd571c595639b235eb5498ba2a1c",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/1fccb4e9c6bbfd571c595639b235eb5498ba2a1c"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9823cb972e9c43630263d2862e97e599c2092d9",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/a9823cb972e9c43630263d2862e97e599c2092d9"
+    },
+    {
+      "path": ".github/workflows/lean_action_ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1",
+      "size": 200,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c",
+      "size": 7,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c"
+    },
+    {
+      "path": "26_to_25.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "728f19e6994e39fce6dc7c41a52f9db72eb3a706",
+      "size": 6985,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/728f19e6994e39fce6dc7c41a52f9db72eb3a706"
+    },
+    {
+      "path": "27_to_26.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc0539bc4516b6c7fe4b84f6caa7994ef7d0e94a",
+      "size": 171,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/fc0539bc4516b6c7fe4b84f6caa7994ef7d0e94a"
+    },
+    {
+      "path": "GoldbachTm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dfbdbf8daac8dfd88727d9811a16db0628b2bbd",
+      "size": 629,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/9dfbdbf8daac8dfd88727d9811a16db0628b2bbd"
+    },
+    {
+      "path": "GoldbachTm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf227208ec8e946a478548066cbd80385186bc4b",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/bf227208ec8e946a478548066cbd80385186bc4b"
+    },
+    {
+      "path": "GoldbachTm/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "622ba799863ee6cfbdff60289ba1837514558842",
+      "size": 4194,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/622ba799863ee6cfbdff60289ba1837514558842"
+    },
+    {
+      "path": "GoldbachTm/Format.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dee066531c5c7113d9f37a33df17adc40ba8a73e",
+      "size": 116,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/dee066531c5c7113d9f37a33df17adc40ba8a73e"
+    },
+    {
+      "path": "GoldbachTm/ListBlank.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "091918f107c7b697099b56d85c9b34cd3f595f7b",
+      "size": 1361,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/091918f107c7b697099b56d85c9b34cd3f595f7b"
+    },
+    {
+      "path": "GoldbachTm/Tm25",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d1f0b5d7ea9caecc71cafadc50cc4e00ca8813d",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/0d1f0b5d7ea9caecc71cafadc50cc4e00ca8813d"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Content.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d4781ec8bfc1c31a378eccbbcf11e23876e7eea",
+      "size": 3386,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/6d4781ec8bfc1c31a378eccbbcf11e23876e7eea"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Miscellaneous.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b21fdf03c78c567e9b9446f97aa81f2176c8c895",
+      "size": 4315,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/b21fdf03c78c567e9b9446f97aa81f2176c8c895"
+    },
+    {
+      "path": "GoldbachTm/Tm25/PBP.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6191f6a01a4de2a734bb0fc56c8e5e91575d16b9",
+      "size": 7413,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/6191f6a01a4de2a734bb0fc56c8e5e91575d16b9"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Prime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b8cfc122b0a4d2700c875f287a1cd03b4d75e63",
+      "size": 16370,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/3b8cfc122b0a4d2700c875f287a1cd03b4d75e63"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Search0.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68d8b2fd991554aef7bd80b275b2994e1d60783",
+      "size": 8138,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/a68d8b2fd991554aef7bd80b275b2994e1d60783"
+    },
+    {
+      "path": "GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d5f043a32d9ec8d4c8320f9270618d7e58facfc",
+      "size": 1129,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/3d5f043a32d9ec8d4c8320f9270618d7e58facfc"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Sim25.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d943c0be8a4e839d832f8e8018de865f51f3a3b",
+      "size": 318,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/8d943c0be8a4e839d832f8e8018de865f51f3a3b"
+    },
+    {
+      "path": "GoldbachTm/Tm25/Transition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82de13e715537bd76369ea99dc3184a170ea26cd",
+      "size": 1319,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/82de13e715537bd76369ea99dc3184a170ea26cd"
+    },
+    {
+      "path": "GoldbachTm/Tm25/TuringMachine25.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c1ede90cc821687f6108a38bb08d2508de44d43",
+      "size": 7543,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/3c1ede90cc821687f6108a38bb08d2508de44d43"
+    },
+    {
+      "path": "GoldbachTm/Tm31",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0dab62b0112f74420c0c1a160f5f215fd80efe4",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/e0dab62b0112f74420c0c1a160f5f215fd80efe4"
+    },
+    {
+      "path": "GoldbachTm/Tm31/Content.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9cb35cddc219728a96fbfe3516ac067b021522d",
+      "size": 2916,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/a9cb35cddc219728a96fbfe3516ac067b021522d"
+    },
+    {
+      "path": "GoldbachTm/Tm31/PBP.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9289b0d5e6c4a45d109e6353f229dce1ef26772",
+      "size": 7563,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/c9289b0d5e6c4a45d109e6353f229dce1ef26772"
+    },
+    {
+      "path": "GoldbachTm/Tm31/Prime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fccc23ad6d7f520d4f185164a4affa554db6d185",
+      "size": 17871,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/fccc23ad6d7f520d4f185164a4affa554db6d185"
+    },
+    {
+      "path": "GoldbachTm/Tm31/Search0.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7238e54f0b4c060da9f16a3d5452db1ed38d12ee",
+      "size": 12922,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/7238e54f0b4c060da9f16a3d5452db1ed38d12ee"
+    },
+    {
+      "path": "GoldbachTm/Tm31/Sim31.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d14c6e140c32246929d3bd7f089c1f65af14429",
+      "size": 318,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/4d14c6e140c32246929d3bd7f089c1f65af14429"
+    },
+    {
+      "path": "GoldbachTm/Tm31/Transition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a02236dc7009b4a460c2d50879c621b991247310",
+      "size": 3233,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/a02236dc7009b4a460c2d50879c621b991247310"
+    },
+    {
+      "path": "GoldbachTm/Tm31/TuringMachine31.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61c529a64ba80a7f731094121f69ec95be995c7b",
+      "size": 7818,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/61c529a64ba80a7f731094121f69ec95be995c7b"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee533f098e2e557e97892688ba97d6240a5107bf",
+      "size": 1284,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/ee533f098e2e557e97892688ba97d6240a5107bf"
+    },
+    {
+      "path": "archieve",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4f9f2428f334df3c19545306fd84c77018b5110",
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/trees/d4f9f2428f334df3c19545306fd84c77018b5110"
+    },
+    {
+      "path": "archieve/Busy beaver - Wikipedia_2024-10-17T08:56:05UTC.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aba930020555855cfac7e4b9b9be474732006ced",
+      "size": 1506633,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/aba930020555855cfac7e4b9b9be474732006ced"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0",
+      "size": 3118,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0"
+    },
+    {
+      "path": "lakefile.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e94a91d6cef5604b33cd38557cd0dddfc4c75950",
+      "size": 539,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/e94a91d6cef5604b33cd38557cd0dddfc4c75950"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57a4710c03ea5e18577887531a95c7ce63a515e7",
+      "size": 29,
+      "url": "https://api.github.com/repos/lengyijun/goldbach_tm/git/blobs/57a4710c03ea5e18577887531a95c7ce63a515e7"
+    }
+  ],
+  "truncated": false
+}

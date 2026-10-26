@@ -1,0 +1,36 @@
+{
+  "status": "PASS_SCOPED_INDEPENDENT_AUDIT",
+  "producer_report_sha256": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 14113,
+      "sha256": "7b0693f3b33b6aecf5f2a9a62ce04ba127bceafccc1f35ffef89c24fbdad023c"
+    },
+    {
+      "path": "check.py",
+      "bytes": 8479,
+      "sha256": "437dc3385900f004cb2cbbcd143c1ded6d77249e6db22fd7e70edb3678c78e08"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867"
+    },
+    {
+      "path": "producer-normal.json",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    },
+    {
+      "path": "producer-optimized.json",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    }
+  ]
+}

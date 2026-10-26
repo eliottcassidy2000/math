@@ -1,0 +1,381 @@
+{
+  "historical_math_consequence_keys_equal": [
+    "codec",
+    "continuation_hostile",
+    "lrc_threshold_controls"
+  ],
+  "normal_optimized_byte_equal": true,
+  "runtime_environment": {
+    "ambient_PYTHONPATH_used": false,
+    "git_checkout_present": false,
+    "git_on_PATH": false,
+    "python_isolated_mode": true
+  },
+  "snapshot_hostiles": [
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/00-AGENTS.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/00-AGENTS.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/00-AGENTS.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/00-AGENTS.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/00-AGENTS.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/00-AGENTS.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/01-00-navigation__RESEARCH-PROTOCOL.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/01-00-navigation__RESEARCH-PROTOCOL.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md"
+    },
+    {
+      "mutation": "wrong_bytes",
+      "outcomes": [
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "RuntimeError: producer manifest mismatch: inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md"
+    },
+    {
+      "mutation": "missing_file",
+      "outcomes": [
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md'",
+          "exit_code": 1,
+          "mode": "normal"
+        },
+        {
+          "error": "FileNotFoundError: [Errno 2] No such file or directory: '<isolated-package>/session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md'",
+          "exit_code": 1,
+          "mode": "optimized"
+        }
+      ],
+      "snapshot": "inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md"
+    }
+  ],
+  "source_snapshot_hostile_cases": 22,
+  "source_snapshot_hostile_runs": 44,
+  "status": "PASS_OFFLINE_PACKAGE_AND_HOSTILES",
+  "tampered_provenance_manifest_rejected": [
+    {
+      "exit_code": 1,
+      "mode": "normal"
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized"
+    }
+  ]
+}

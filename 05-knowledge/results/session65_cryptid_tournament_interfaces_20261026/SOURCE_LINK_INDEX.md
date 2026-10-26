@@ -151,6 +151,89 @@ Context: `05-knowledge/results/cardinality_bridges_20261018m.md` at `6a8ad5d3bf0
 Context: `05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
 
 
+## session65-reductions/inputs/00-AGENTS.md
+
+Context: `AGENTS.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md
+
+Context: `00-navigation/RESEARCH-PROTOCOL.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md
+
+Context: `01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md
+
+Context: `05-knowledge/results/session33_continuation_states_20261023/tournament/BOUNDARY_OBSERVABILITY.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md
+
+Context: `05-knowledge/results/session33_continuation_states_20261023/metagraph-memory/NOTE.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md
+
+Context: `05-knowledge/results/session33_continuation_states_20261023/ports/PORT_CONNECTION_ALGEBRA.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md
+
+Context: `05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md` at `5d87c3b009e92b3a89fda58c310ecbd1feed8c5c`.
+
+- [05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md](../normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md)
+- [05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md](../session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md)
+- [05-knowledge/results/session56_rmq_lca_connections_20261025/debt-range/RESULT.md](../session56_rmq_lca_connections_20261025/debt-range/RESULT.md)
+- [05-knowledge/results/collatz_bugs_20260925.md](../collatz_bugs_20260925.md)
+- [05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md](../port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md)
+
+## session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md
+
+Context: `05-knowledge/results/session63_integral_observers_root_arrangements_20261025/PROPOSED_UNIFYING_THEORY.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/README.md](../session63_integral_observers_root_arrangements_20261025/README.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/SYNTHESIS.md](../session63_integral_observers_root_arrangements_20261025/SYNTHESIS.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/PROPOSED_UNIFYING_THEORY.md](../session63_integral_observers_root_arrangements_20261025/PROPOSED_UNIFYING_THEORY.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md](../session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/cancellation/REPORT.md](../session63_integral_observers_root_arrangements_20261025/audits/cancellation/REPORT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/RESULT.md](../session63_integral_observers_root_arrangements_20261025/twists/RESULT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/ROOT_STACK.md](../session63_integral_observers_root_arrangements_20261025/twists/ROOT_STACK.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/ZETA_AND_EFFECTIVITY.md](../session63_integral_observers_root_arrangements_20261025/twists/ZETA_AND_EFFECTIVITY.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/twists/AUDIT.md](../session63_integral_observers_root_arrangements_20261025/audits/twists/AUDIT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/specialization/RESULT.md](../session63_integral_observers_root_arrangements_20261025/specialization/RESULT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/fourier-effectivity/FOURIER_EFFECTIVITY.md](../session63_integral_observers_root_arrangements_20261025/fourier-effectivity/FOURIER_EFFECTIVITY.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/specialization/REPORT.md](../session63_integral_observers_root_arrangements_20261025/audits/specialization/REPORT.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/CURRENT_SOURCE_UPDATE.md](../session63_integral_observers_root_arrangements_20261025/CURRENT_SOURCE_UPDATE.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/recovery/README.md](../session63_integral_observers_root_arrangements_20261025/recovery/README.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/specialization/FINAL_ROOT_READBACK.md](../session63_integral_observers_root_arrangements_20261025/audits/specialization/FINAL_ROOT_READBACK.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md](../session63_integral_observers_root_arrangements_20261025/audits/twists/READBACK_SYNTHESIS_THEORY_FIGURE.md)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/figures/integral-observer-map.svg](../session63_integral_observers_root_arrangements_20261025/figures/integral-observer-map.svg)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/figures/make_observer_map.py](../session63_integral_observers_root_arrangements_20261025/figures/make_observer_map.py)
+- [05-knowledge/results/session63_integral_observers_root_arrangements_20261025/PUBLICATION_CHECKS.md](../session63_integral_observers_root_arrangements_20261025/PUBLICATION_CHECKS.md)
+
+## session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md
+
+Context: `05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/RESULT.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md
+
+Context: `01-canon/theorems/THM-643-blue-black-line-parity-structure.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+- [05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/README.md](../merged_metagraph_black_quotient_bridges_20261020/README.md)
+- [05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/audit/audit_receipt.md](../merged_metagraph_black_quotient_bridges_20261020/audit/audit_receipt.md)
+- [05-knowledge/results/odd_blue_spectrum_hollow_cubes_20261020/audit_independent/independent_n9_cap_witness.json](../odd_blue_spectrum_hollow_cubes_20261020/audit_independent/independent_n9_cap_witness.json)
+- [05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md](../merged_metagraph_purity_and_strong_core_20261020/PURE_BLUE_STRONG_CYCLE_REDUCTION.md)
+
+## session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md
+
+Context: `05-knowledge/hypotheses/HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
 ## session65-repo/01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md
 
 Context: `01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
@@ -159,3 +242,102 @@ Context: `01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-pr
 ## session65-repo/01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md
 
 Context: `01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-root/multiperfect/inherited-HYP-3546.md
+
+Context: `05-knowledge/hypotheses/HYP-3546-perfect-numbers-are-forcade-arc-hypercube-dimensions.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md
+
+Context: `05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md
+
+Context: `07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md
+
+Context: `07-reflections/repo-history-niche-connection-atlas-codex-20260629.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md
+
+Context: `05-knowledge/hypotheses/HYP-2218-goldbach-lemoine-same-pair-projection.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md
+
+Context: `05-knowledge/hypotheses/HYP-2219-goldbach-lemoine-same-pair-bridge.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md
+
+Context: `05-knowledge/hypotheses/HYP-2936-lrc14-broad-concept-carrier-atlas.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md
+
+Context: `agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md
+
+Context: `07-reflections/lrc14-broad-concept-carrier-atlas-codex-s135.md` at `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`.
+
+
+## session65-twentyfive/inputs/cryptids/README.md
+
+External source: `google-deepmind/cryptids` at `6c28d8524fa008c6fb5aadb759df74a55ce96423`.
+
+- [Cryptids/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/README.md)
+- [BusyBeaver/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/README.md)
+- [BusyBeaver/Bridge.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/Bridge.lean)
+- [Cryptids](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids)
+- [Cryptids/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/README.md)
+- [Cryptids/Semantics/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Semantics/README.md)
+- [BusyBeaver](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver)
+- [BusyBeaver/BB6/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/BB6/README.md)
+- [BusyBeaver/BB33/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/BB33/README.md)
+- [BusyBeaver/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/README.md)
+- [BusyBeaver/BB6/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/BB6/README.md)
+- [BusyBeaver/BB33/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/BB33/README.md)
+- [Cryptids/Goldbach21.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Goldbach21.lean)
+- [Cryptids/Zf380.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Zf380.lean)
+- [Cryptids/Riemann104.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Riemann104.lean)
+- [comparator/constructive.json](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/constructive.json)
+- [Cryptids/Semantics/Zf/Soundness.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Semantics/Zf/Soundness.lean)
+- [Cryptids/Semantics/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Semantics/README.md#foundational-note-conzf-in-lean-and-constructive-equivalence)
+- [comparator/all.json](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/all.json)
+- [comparator/busy_beaver.json](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/busy_beaver.json)
+- [artifacts/riemann_95/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts/riemann_95/README.md)
+- [comparator/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/README.md)
+- [comparator/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/README.md)
+- [Cryptids/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/README.md)
+- [Cryptids/Machines.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Machines.lean)
+- [Cryptids/Propositions.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Propositions.lean)
+- [Cryptids/Goldbach21.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Goldbach21.lean)
+- [Cryptids/Zf380.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Zf380.lean)
+- [Cryptids/Riemann95.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Riemann95.lean)
+- [Cryptids/Semantics/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Semantics/README.md)
+- [BusyBeaver/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/README.md)
+- [BusyBeaver/Defs.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/Defs.lean)
+- [BusyBeaver/Basic.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/Basic.lean)
+- [BusyBeaver/Bridge.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaver/Bridge.lean)
+- [Challenge.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Challenge.lean)
+- [BusyBeaverChallenge.lean](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/BusyBeaverChallenge.lean)
+- [comparator](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator)
+- [comparator/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/comparator/README.md)
+- [artifacts](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts)
+- [artifacts/goldbach_21/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts/goldbach_21/README.md)
+- [artifacts/zf_380/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts/zf_380/README.md)
+- [artifacts/riemann_104/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts/riemann_104/README.md)
+- [artifacts/riemann_95/README.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/artifacts/riemann_95/README.md)
+- [baselines](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/baselines)
+- [baselines/PROVENANCE.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/baselines/PROVENANCE.md)
+- [RELATED_WORK.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/RELATED_WORK.md)
+- [verify.py](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/verify.py)
+- [CONTRIBUTING.md](https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/CONTRIBUTING.md)

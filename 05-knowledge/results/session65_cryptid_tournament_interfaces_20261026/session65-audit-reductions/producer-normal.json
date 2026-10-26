@@ -1,0 +1,302 @@
+{
+  "arithmetic": {
+    "constant_valuation_fixed_points": [
+      {
+        "collatz": "-1",
+        "k": 1,
+        "twisted": "1"
+      },
+      {
+        "collatz": "1",
+        "k": 2,
+        "twisted": "3/5"
+      },
+      {
+        "collatz": "1/5",
+        "k": 3,
+        "twisted": "9/19"
+      },
+      {
+        "collatz": "1/13",
+        "k": 4,
+        "twisted": "27/65"
+      }
+    ],
+    "finite_LRC_positive_controls": [
+      {
+        "closed_components": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ],
+        "first_witness": "1/2",
+        "min_distance": "1/2",
+        "speeds": [
+          1
+        ]
+      },
+      {
+        "closed_components": [
+          [
+            "1/3",
+            "1/3"
+          ],
+          [
+            "2/3",
+            "2/3"
+          ]
+        ],
+        "first_witness": "1/3",
+        "min_distance": "1/3",
+        "speeds": [
+          1,
+          2
+        ]
+      },
+      {
+        "closed_components": [
+          [
+            "1/4",
+            "1/4"
+          ],
+          [
+            "3/4",
+            "3/4"
+          ]
+        ],
+        "first_witness": "1/4",
+        "min_distance": "1/4",
+        "speeds": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "closed_components": [
+          [
+            "1/5",
+            "1/5"
+          ],
+          [
+            "2/5",
+            "2/5"
+          ],
+          [
+            "3/5",
+            "3/5"
+          ],
+          [
+            "4/5",
+            "4/5"
+          ]
+        ],
+        "first_witness": "1/5",
+        "min_distance": "1/5",
+        "speeds": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "closed_components": [
+          [
+            "1/6",
+            "1/6"
+          ],
+          [
+            "5/6",
+            "5/6"
+          ]
+        ],
+        "first_witness": "1/6",
+        "min_distance": "1/6",
+        "speeds": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "impossible_half_threshold_for_speeds_1_2": []
+  },
+  "codec": {
+    "by_state_count": [
+      {
+        "states": 1,
+        "tables": 4
+      },
+      {
+        "states": 2,
+        "tables": 81
+      },
+      {
+        "states": 3,
+        "tables": 4096
+      }
+    ],
+    "canonical_single_arc_mutations_rejected": 45,
+    "corpus_sha256": "1600e46cb0ba93dd742e67964373148539da0b25b192b2d7c7ed7d803b68454b",
+    "maximum_encoded_vertices": 15,
+    "total": 4181,
+    "total_encoded_vertices": 49758
+  },
+  "source_integrity": {
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "verified_source_snapshots": 11
+  },
+  "status": "PASS_FINITE_CONTROLS_ONLY",
+  "tournaments": [
+    {
+      "automorphism_order_sum": 1,
+      "automorphism_sizes": [
+        1
+      ],
+      "labelled_tournaments": 1,
+      "n": 1,
+      "unlabelled_orbits_by_Burnside": 1
+    },
+    {
+      "automorphism_order_sum": 2,
+      "automorphism_sizes": [
+        1
+      ],
+      "labelled_tournaments": 2,
+      "n": 2,
+      "unlabelled_orbits_by_Burnside": 1
+    },
+    {
+      "automorphism_order_sum": 12,
+      "automorphism_sizes": [
+        1,
+        3
+      ],
+      "labelled_tournaments": 8,
+      "n": 3,
+      "unlabelled_orbits_by_Burnside": 2
+    },
+    {
+      "automorphism_order_sum": 96,
+      "automorphism_sizes": [
+        1,
+        3
+      ],
+      "labelled_tournaments": 64,
+      "n": 4,
+      "unlabelled_orbits_by_Burnside": 4
+    },
+    {
+      "automorphism_order_sum": 1440,
+      "automorphism_sizes": [
+        1,
+        3,
+        5
+      ],
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "unlabelled_orbits_by_Burnside": 12
+    }
+  ],
+  "write_label_hostile": {
+    "same_source_read_target_skeleton": [
+      [
+        "A",
+        0,
+        "B"
+      ],
+      [
+        "A",
+        1,
+        "HALT"
+      ],
+      [
+        "B",
+        0,
+        "A"
+      ],
+      [
+        "B",
+        1,
+        "A"
+      ]
+    ],
+    "write_one_machine": {
+      "executed_instructions": 3,
+      "outcome": "halt",
+      "trace": [
+        {
+          "head": 0,
+          "instruction": [
+            1,
+            1,
+            "B"
+          ],
+          "ones": [],
+          "q": "A",
+          "read": 0,
+          "step": 0
+        },
+        {
+          "head": 1,
+          "instruction": [
+            0,
+            -1,
+            "A"
+          ],
+          "ones": [
+            0
+          ],
+          "q": "B",
+          "read": 0,
+          "step": 1
+        },
+        {
+          "head": 0,
+          "instruction": null,
+          "ones": [
+            0
+          ],
+          "q": "A",
+          "read": 1,
+          "step": 2
+        }
+      ]
+    },
+    "write_zero_machine": {
+      "first_seen": 0,
+      "outcome": "repeated_configuration",
+      "step": 2,
+      "trace": [
+        {
+          "head": 0,
+          "instruction": [
+            0,
+            1,
+            "B"
+          ],
+          "ones": [],
+          "q": "A",
+          "read": 0,
+          "step": 0
+        },
+        {
+          "head": 1,
+          "instruction": [
+            0,
+            -1,
+            "A"
+          ],
+          "ones": [],
+          "q": "B",
+          "read": 0,
+          "step": 1
+        }
+      ]
+    }
+  }
+}

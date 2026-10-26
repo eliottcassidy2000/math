@@ -1,0 +1,86 @@
+{
+  "files": [
+    {
+      "bytes": 6823,
+      "git_blob_oid_sha1": "fdde24ac382ea703618dc52685054c6528071a41",
+      "repo_path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "snapshot": "inputs/00-AGENTS.md"
+    },
+    {
+      "bytes": 10465,
+      "git_blob_oid_sha1": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "repo_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "snapshot": "inputs/01-00-navigation__RESEARCH-PROTOCOL.md"
+    },
+    {
+      "bytes": 9804,
+      "git_blob_oid_sha1": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "repo_path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "snapshot": "inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "bytes": 16487,
+      "git_blob_oid_sha1": "c94d9650e7a05ad936d81f32f273c70ff416c003",
+      "repo_path": "05-knowledge/results/session33_continuation_states_20261023/tournament/BOUNDARY_OBSERVABILITY.md",
+      "sha256": "ca1963b56bbbdd1c45a797be27482c8a6c020267f11e037c9ea83ef264d0e65b",
+      "snapshot": "inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md"
+    },
+    {
+      "bytes": 12491,
+      "git_blob_oid_sha1": "0b7f2958c8c0b495d2b24d6341704554f3026912",
+      "repo_path": "05-knowledge/results/session33_continuation_states_20261023/metagraph-memory/NOTE.md",
+      "sha256": "2ac0f3065d483134f8777e81e02ccd6ef20dfc8657eec67955794581f1d68769",
+      "snapshot": "inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md"
+    },
+    {
+      "bytes": 18962,
+      "git_blob_oid_sha1": "4e3f2cd7b2bbd7cadd6b813cba6ee9867df922fd",
+      "repo_path": "05-knowledge/results/session33_continuation_states_20261023/ports/PORT_CONNECTION_ALGEBRA.md",
+      "sha256": "f0497923251d09d2e035f586c6068503458048e10e622e61be5cb3be7afcc700",
+      "snapshot": "inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md"
+    },
+    {
+      "bytes": 18389,
+      "git_blob_oid_sha1": "c228871f97b7b4f4c9df0cd99982526347bc3bdb",
+      "repo_path": "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md",
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+      "snapshot": "inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md"
+    },
+    {
+      "bytes": 13126,
+      "git_blob_oid_sha1": "a6b53e5e6601b372d754fbc343eb525d3e0eb5fc",
+      "repo_path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/PROPOSED_UNIFYING_THEORY.md",
+      "sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441",
+      "snapshot": "inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md"
+    },
+    {
+      "bytes": 18721,
+      "git_blob_oid_sha1": "d3f6a261e64c9c1df381e8a28687cf832250adeb",
+      "repo_path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/toric-shared-roots/RESULT.md",
+      "sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+      "snapshot": "inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md"
+    },
+    {
+      "bytes": 10395,
+      "git_blob_oid_sha1": "a2fb7942e31cf479495eb1d2fe71fa7218fefbb5",
+      "repo_path": "01-canon/theorems/THM-643-blue-black-line-parity-structure.md",
+      "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff",
+      "snapshot": "inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md"
+    },
+    {
+      "bytes": 5342,
+      "git_blob_oid_sha1": "b05b31b24d3e0c5d4a132dab7f3cc587bafc11a8",
+      "repo_path": "05-knowledge/hypotheses/HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+      "sha256": "ce6fe5deb1a3ebf6483a8bd4754f62e14030a4bdb3557b1e0a9ce8f24b16af3f",
+      "snapshot": "inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md"
+    }
+  ],
+  "git_blob_oid_acquisition": "Read-only rev-parse of the stated commit:path, independently matched against Git blob framing of the pinned snapshot bytes; portable runtime performs no Git readback.",
+  "historical_audit_receipt_sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867",
+  "mode": "OFFLINE_PINNED_SNAPSHOTS",
+  "producer_source_pins_sha256": "1c203205287a884f5eb38091b9e0503b8bdb7ce21823c678950412087993e192",
+  "source_commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee"
+}

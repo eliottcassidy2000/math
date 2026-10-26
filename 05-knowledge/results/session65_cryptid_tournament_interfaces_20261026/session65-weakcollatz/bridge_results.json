@@ -1,0 +1,109 @@
+{
+  "orbit": [
+    6,
+    16,
+    34,
+    64,
+    114,
+    196,
+    334,
+    564,
+    946,
+    1584,
+    2646,
+    4416,
+    7366,
+    12284
+  ],
+  "branch_word_with_halt": "001110110100012",
+  "native_costs": [
+    15,
+    73,
+    277,
+    907,
+    2757,
+    7957,
+    22777,
+    64407,
+    180307,
+    504027,
+    1403967,
+    3906393,
+    10861903,
+    30196527,
+    24576
+  ],
+  "native_total": 47176870,
+  "sigma_ratios": {
+    "6": "2",
+    "16": "31/16",
+    "34": "27/17",
+    "64": "127/64",
+    "114": "40/19",
+    "196": "57/28",
+    "334": "252/167",
+    "564": "112/47",
+    "946": "72/43",
+    "1584": "403/132",
+    "2646": "380/147",
+    "4416": "127/46",
+    "7366": "5760/3683",
+    "12284": "5586/3071"
+  },
+  "sigma_successor_coincidences": [
+    946
+  ],
+  "cylinders": [
+    {
+      "m": 1,
+      "modulus": 3,
+      "safe_residues": 2
+    },
+    {
+      "m": 2,
+      "modulus": 9,
+      "safe_residues": 4
+    },
+    {
+      "m": 3,
+      "modulus": 27,
+      "safe_residues": 8
+    },
+    {
+      "m": 4,
+      "modulus": 81,
+      "safe_residues": 16
+    },
+    {
+      "m": 5,
+      "modulus": 243,
+      "safe_residues": 32
+    },
+    {
+      "m": 6,
+      "modulus": 729,
+      "safe_residues": 64
+    },
+    {
+      "m": 7,
+      "modulus": 2187,
+      "safe_residues": 128
+    },
+    {
+      "m": 8,
+      "modulus": 6561,
+      "safe_residues": 256
+    },
+    {
+      "m": 9,
+      "modulus": 19683,
+      "safe_residues": 512
+    }
+  ],
+  "alternating_lex_orientation_pairs": 43435,
+  "negative_nonhalting_controls": [
+    -9,
+    -11
+  ],
+  "scope": "Finite verification only; general cylinder/measure/tournament results have separate elementary proofs."
+}

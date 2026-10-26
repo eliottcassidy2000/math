@@ -1,0 +1,11 @@
+{
+  "session65-twentyfive/REPORT.md": [
+    {
+      "source_sha256": "ab758cf6229a09163567f50ad2a07af4c4a25116bd0667e2845e7c16353d5e23",
+      "literal": "[x^n](sum_p",
+      "replacement": "[x^n] (sum_p",
+      "occurrences": 1,
+      "reason": "Coefficient extraction followed by generating-function evaluation, not a Markdown link; archived proof bytes unchanged"
+    }
+  ]
+}

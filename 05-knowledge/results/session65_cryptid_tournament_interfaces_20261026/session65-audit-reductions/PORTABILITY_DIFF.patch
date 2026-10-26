@@ -1,0 +1,123 @@
+--- historical/check.py
++++ new/portable_check.py
+@@ -1,8 +1,10 @@
+ #!/usr/bin/env python3
+-"""Independent, finite audit controls; standard library, explicit guards.
+-
+-Does not decide a famous conjecture or validate an external paper's proof.
+-Producer code is locally authored session code inspected before this import.
++"""OFFLINE pinned-snapshot replay of the sealed independent audit.
++
++No Git checkout, Git executable, ambient PYTHONPATH, or network is required.
++The mathematical routines are byte-identical to historical check.py.
++The full source gate validates pinned snapshot bytes and pre-recorded Git blob
++object IDs; it does NOT claim a fresh Git/remote provenance readback.
+ """
+ import ast
+ import hashlib
+@@ -11,12 +13,10 @@
+ import math
+ from pathlib import Path
+ import runpy
+-import subprocess
+ from fractions import Fraction
+ 
+ ROOT = Path(__file__).resolve().parent
+ PRODUCER = ROOT.parent / 'session65-reductions'
+-P = runpy.run_path(str(PRODUCER / 'check.py'))
+ 
+ def need(ok, msg):
+     if not ok:
+@@ -152,6 +152,7 @@
+         'normal.json': '153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3',
+         'optimized.json': '153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3',
+         'SOURCE_PINS.json': '1c203205287a884f5eb38091b9e0503b8bdb7ce21823c678950412087993e192',
++        'MANIFEST.json': 'f634f265c00ba54651808490fc856bc6755052ee83e2454a89abfc7ec6b7c22c',
+     }
+     for path, expected in frozen.items():
+         need(hashlib.sha256((PRODUCER/path).read_bytes()).hexdigest() == expected,
+@@ -161,19 +162,68 @@
+         b = (PRODUCER/row['path']).read_bytes()
+         need(len(b) == row['bytes'] and hashlib.sha256(b).hexdigest() == row['sha256'],
+              'producer manifest mismatch: '+row['path'])
+-    pins=json.loads((PRODUCER/'SOURCE_PINS.json').read_text())
+-    for row in pins['files']:
+-        content=(PRODUCER/row['snapshot']).read_bytes()
+-        need(hashlib.sha256(content).hexdigest()==row['sha256'], 'snapshot pin')
+-        actual=subprocess.check_output(['git','-C',str(ROOT.parent/'session65-repo'),'show',pins['commit']+':'+row['repo_path']])
+-        need(content==actual,'git provenance')
+-    # No Python assert: neither auditor nor producer gates can disappear under -O.
+-    for path in (Path(__file__),PRODUCER/'check.py'):
+-        need(not any(isinstance(n,ast.Assert) for n in ast.walk(ast.parse(path.read_text()))),'disabled assert gate')
+-    return {'git_commit':pins['commit'],'snapshot_and_git_blob_matches':len(pins['files']),
+-            'frozen_primary_files':len(frozen),'manifest_rows_verified':len(manifest['files']),
+-            'assert_statements':0}
+-
+-print(json.dumps({'status':'PASS_INDEPENDENT_FINITE_AUDIT_ONLY','codec':codecs(),
+-                  'continuation_hostile':continuation(),'lrc_threshold_controls':lrc(),
+-                  'source_integrity':pin_check()},sort_keys=True,indent=2))
++    historical_manifest_bytes = (ROOT/'MANIFEST.json').read_bytes()
++    need(hashlib.sha256(historical_manifest_bytes).hexdigest() == '97563fe59556f61e36c5595c97011ccbf27ff8b23e93a513a3a08750d446a12d',
++         'historical audit manifest changed')
++    historical_manifest = json.loads(historical_manifest_bytes)
++    for row in historical_manifest['files']:
++        b = (ROOT/row['path']).read_bytes()
++        need(len(b) == row['bytes'] and hashlib.sha256(b).hexdigest() == row['sha256'],
++             'historical audit seal mismatch: '+row['path'])
++    offline_bytes = (ROOT/'OFFLINE_SOURCE_PINS.json').read_bytes()
++    need(hashlib.sha256(offline_bytes).hexdigest() ==
++         '7c3d4df7cba05caccd2d99b428e9e9654f746a3feae95110127ebd155b55dd39',
++         'offline provenance pin manifest changed')
++    offline = json.loads(offline_bytes)
++    pins = json.loads((PRODUCER/'SOURCE_PINS.json').read_text())
++    need(offline['mode'] == 'OFFLINE_PINNED_SNAPSHOTS', 'offline mode')
++    need(offline['source_commit'] == pins['commit'] ==
++         '6a8ad5d3bf01a232da4de41bcbff68390a9337ee', 'commit pin')
++    need(offline['producer_source_pins_sha256'] == frozen['SOURCE_PINS.json'], 'source pin linkage')
++    need(len(pins['files']) == len(offline['files']) == 11, 'eleven source pins required')
++    source_rows = {r['snapshot']: r for r in pins['files']}
++    need(len(source_rows) == 11 and len({r['snapshot'] for r in offline['files']}) == 11,
++         'duplicate snapshot pin')
++    for row in offline['files']:
++        original = source_rows[row['snapshot']]
++        need(all(row[key] == original[key] for key in ('repo_path','snapshot','sha256')),
++             'offline/original source pin mismatch')
++        content = (PRODUCER/row['snapshot']).read_bytes()
++        need(len(content) == row['bytes'] and hashlib.sha256(content).hexdigest() == row['sha256'],
++             'offline snapshot content mismatch: '+row['snapshot'])
++        oid = hashlib.sha1(b'blob '+str(len(content)).encode()+b'\0'+content).hexdigest()
++        need(oid == row['git_blob_oid_sha1'], 'offline Git blob OID mismatch: '+row['snapshot'])
++    original_source = (ROOT/'check.py').read_text()
++    portable_source = Path(__file__).read_text()
++    original_ast, portable_ast = ast.parse(original_source), ast.parse(portable_source)
++    math_names = ('need','own_encode','own_decode','codecs','adjacency','covers',
++                  'hamiltonian','continuation','lrc')
++    old_functions = {n.name: ast.get_source_segment(original_source,n) for n in original_ast.body
++                     if isinstance(n,ast.FunctionDef)}
++    new_functions = {n.name: ast.get_source_segment(portable_source,n) for n in portable_ast.body
++                     if isinstance(n,ast.FunctionDef)}
++    for name in math_names:
++        need(old_functions[name] == new_functions[name], 'historical math function changed: '+name)
++    for path in (Path(__file__),ROOT/'check.py',PRODUCER/'check.py'):
++        need(not any(isinstance(n,ast.Assert) for n in ast.walk(ast.parse(path.read_text()))),
++             'disabled assert gate')
++    return {'mode':'OFFLINE_PINNED_SNAPSHOTS', 'source_commit':pins['commit'],
++            'snapshot_sha256_and_pinned_git_blob_oid_matches':11,
++            'producer_manifest_rows_verified':len(manifest['files']),
++            'historical_audit_manifest_rows_verified':len(historical_manifest['files']),
++            'unchanged_historical_math_functions':len(math_names), 'assert_statements':0,
++            'fresh_git_readback_performed':False,
++            'provenance_basis':'Historical audited commit:path provenance, sealed SHA-256 snapshot bytes, and recorded Git blob object IDs; not a fresh Git or remote check.'}
++
++# Verify the whole offline closure BEFORE loading the producer implementation.
++source_integrity = pin_check()
++P = runpy.run_path(str(PRODUCER / 'check.py'))
++consequences = {'codec':codecs(), 'continuation_hostile':continuation(),
++                'lrc_threshold_controls':lrc()}
++for receipt_name in ('normal.json','optimized.json'):
++    receipt = json.loads((ROOT/receipt_name).read_text())
++    for key,value in consequences.items():
++        need(value == receipt[key], 'historical consequence mismatch: '+receipt_name+':'+key)
++print(json.dumps({'status':'PASS_INDEPENDENT_FINITE_AUDIT_OFFLINE_SNAPSHOTS',
++                  **consequences, 'source_integrity':source_integrity,
++                  'historical_math_receipts_equal':True},sort_keys=True,indent=2))

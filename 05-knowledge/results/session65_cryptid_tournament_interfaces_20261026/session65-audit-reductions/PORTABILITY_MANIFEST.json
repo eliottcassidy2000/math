@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "bytes": 4942,
+      "path": "OFFLINE_SOURCE_PINS.json",
+      "sha256": "7c3d4df7cba05caccd2d99b428e9e9654f746a3feae95110127ebd155b55dd39"
+    },
+    {
+      "bytes": 5278,
+      "path": "PORTABILITY_AMENDMENT.md",
+      "sha256": "2b4ee176ac5a398d02544b3aeb1c14b35b02a7ad6c797b4ee5b87f578c7def04"
+    },
+    {
+      "bytes": 7441,
+      "path": "PORTABILITY_DIFF.patch",
+      "sha256": "a80c669165b8005be61f1892214ef99a0e69ffa1aadb2ade0c6f36ad1d642ab3"
+    },
+    {
+      "bytes": 11964,
+      "path": "portable_check.py",
+      "sha256": "d8aeeb7049237832781c89fe229b3a8c20576737e8467267d3e2b31ab2240f08"
+    },
+    {
+      "bytes": 4345,
+      "path": "portable_hostiles.py",
+      "sha256": "7c5b30bcbc5dd021f21624152c7641e6a2ce49de553ca2eaedb6425834c51d46"
+    },
+    {
+      "bytes": 1538,
+      "path": "portable-normal.json",
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572"
+    },
+    {
+      "bytes": 1538,
+      "path": "portable-optimized.json",
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572"
+    },
+    {
+      "bytes": 16117,
+      "path": "portable-hostiles.json",
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386"
+    },
+    {
+      "bytes": 16117,
+      "path": "portable-hostiles-optimized.json",
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386"
+    }
+  ],
+  "historical_files_unchanged": 6,
+  "historical_manifest_sha256": "97563fe59556f61e36c5595c97011ccbf27ff8b23e93a513a3a08750d446a12d",
+  "runtime_mode": "OFFLINE_PINNED_SNAPSHOTS",
+  "status": "PASS_PORTABILITY_AMENDMENT_ONLY"
+}

@@ -1,0 +1,120 @@
+{
+  "status": "PASS finite exact controls; NOT a Lean rebuild",
+  "portable": "run commands from directory containing verify.py",
+  "runs": [
+    {
+      "command": "python3 -B verify.py",
+      "returncode": 0,
+      "stdout_path": "checks.json",
+      "stdout_sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -O -B verify.py",
+      "returncode": 0,
+      "stdout_path": "checks-O.json",
+      "stdout_sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "stderr": ""
+    }
+  ],
+  "normal_optimized_byte_identical": true,
+  "upstream_byte_checks": [
+    {
+      "path": "inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "expected_git_blob": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1",
+      "actual_git_blob": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1"
+    },
+    {
+      "path": "inputs/goldbach_tm/26_to_25.md",
+      "expected_git_blob": "728f19e6994e39fce6dc7c41a52f9db72eb3a706",
+      "actual_git_blob": "728f19e6994e39fce6dc7c41a52f9db72eb3a706"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm.lean",
+      "expected_git_blob": "9dfbdbf8daac8dfd88727d9811a16db0628b2bbd",
+      "actual_git_blob": "9dfbdbf8daac8dfd88727d9811a16db0628b2bbd"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "expected_git_blob": "622ba799863ee6cfbdff60289ba1837514558842",
+      "actual_git_blob": "622ba799863ee6cfbdff60289ba1837514558842"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "expected_git_blob": "dee066531c5c7113d9f37a33df17adc40ba8a73e",
+      "actual_git_blob": "dee066531c5c7113d9f37a33df17adc40ba8a73e"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "expected_git_blob": "091918f107c7b697099b56d85c9b34cd3f595f7b",
+      "actual_git_blob": "091918f107c7b697099b56d85c9b34cd3f595f7b"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "expected_git_blob": "6d4781ec8bfc1c31a378eccbbcf11e23876e7eea",
+      "actual_git_blob": "6d4781ec8bfc1c31a378eccbbcf11e23876e7eea"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "expected_git_blob": "b21fdf03c78c567e9b9446f97aa81f2176c8c895",
+      "actual_git_blob": "b21fdf03c78c567e9b9446f97aa81f2176c8c895"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "expected_git_blob": "6191f6a01a4de2a734bb0fc56c8e5e91575d16b9",
+      "actual_git_blob": "6191f6a01a4de2a734bb0fc56c8e5e91575d16b9"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "expected_git_blob": "3b8cfc122b0a4d2700c875f287a1cd03b4d75e63",
+      "actual_git_blob": "3b8cfc122b0a4d2700c875f287a1cd03b4d75e63"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "expected_git_blob": "a68d8b2fd991554aef7bd80b275b2994e1d60783",
+      "actual_git_blob": "a68d8b2fd991554aef7bd80b275b2994e1d60783"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "expected_git_blob": "3d5f043a32d9ec8d4c8320f9270618d7e58facfc",
+      "actual_git_blob": "3d5f043a32d9ec8d4c8320f9270618d7e58facfc"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "expected_git_blob": "8d943c0be8a4e839d832f8e8018de865f51f3a3b",
+      "actual_git_blob": "8d943c0be8a4e839d832f8e8018de865f51f3a3b"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "expected_git_blob": "82de13e715537bd76369ea99dc3184a170ea26cd",
+      "actual_git_blob": "82de13e715537bd76369ea99dc3184a170ea26cd"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "expected_git_blob": "3c1ede90cc821687f6108a38bb08d2508de44d43",
+      "actual_git_blob": "3c1ede90cc821687f6108a38bb08d2508de44d43"
+    },
+    {
+      "path": "inputs/goldbach_tm/LICENSE",
+      "expected_git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "actual_git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "inputs/goldbach_tm/lake-manifest.json",
+      "expected_git_blob": "e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0",
+      "actual_git_blob": "e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0"
+    },
+    {
+      "path": "inputs/goldbach_tm/lakefile.lean",
+      "expected_git_blob": "e94a91d6cef5604b33cd38557cd0dddfc4c75950",
+      "actual_git_blob": "e94a91d6cef5604b33cd38557cd0dddfc4c75950"
+    },
+    {
+      "path": "inputs/goldbach_tm/lean-toolchain",
+      "expected_git_blob": "57a4710c03ea5e18577887531a95c7ce63a515e7",
+      "actual_git_blob": "57a4710c03ea5e18577887531a95c7ce63a515e7"
+    }
+  ],
+  "lean_build": "NOT RUN: lake and Lean toolchain absent",
+  "lean_axiom_print": "NOT RUN"
+}

@@ -1,0 +1,53 @@
+{
+  "codec": {
+    "canonical_arc_corruptions_rejected": 45,
+    "full_tables": [
+      {
+        "full_read_write_move_target_tables": 25,
+        "states": 1
+      },
+      {
+        "full_read_write_move_target_tables": 6561,
+        "states": 2
+      }
+    ],
+    "valid_payload_change_decodes_as_changed_source": true
+  },
+  "continuation_hostile": [
+    {
+      "mask": 69,
+      "ordered_profile": [
+        15,
+        78,
+        198,
+        240,
+        120
+      ],
+      "two_vertex_context_H": 123
+    },
+    {
+      "mask": 76,
+      "ordered_profile": [
+        15,
+        90,
+        210,
+        240,
+        120
+      ],
+      "two_vertex_context_H": 135
+    }
+  ],
+  "lrc_threshold_controls": {
+    "method": "exact common-denominator integer grid, k<=3 and speeds 1..6",
+    "rational_threshold_tuple_cases": 774,
+    "yes_cases": 446
+  },
+  "source_integrity": {
+    "assert_statements": 0,
+    "frozen_primary_files": 5,
+    "git_commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "manifest_rows_verified": 17,
+    "snapshot_and_git_blob_matches": 11
+  },
+  "status": "PASS_INDEPENDENT_FINITE_AUDIT_ONLY"
+}

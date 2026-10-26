@@ -1,7 +1,7 @@
 # Provenance, source contexts and licensing
 
 The approved lane/audit files were copied byte for byte. Their seals are
-recorded in `FIRST_SOURCE_VERIFICATION.json`; the closed shipped file set is
+recorded in `FIRST_SOURCE_VERIFICATION.json` and `SECOND_SOURCE_VERIFICATION.json`; the closed shipped file set is
 `MANIFEST.json`. The initial mathematical context is repository commit
 `6a8ad5d3bf01a232da4de41bcbff68390a9337ee`. Integration fast-forwarded cleanly
 to `fcc112a69d7080db4cd619d6e7927be1992bc51e` before session-owned edits.
@@ -35,5 +35,29 @@ certificate for the three four-state machines is claimed.
 
 External published theorems and verification bounds remain CITED, not newly
 reproved or rerun. Community machine registries retain their independent-
-verification qualifications. All five executed packet checkers are authored
-Python with standard-library dependencies only.
+verification qualifications. Python replay dependencies are standard-library only. The portable MB checker
+also compiles independently authored C with `gcc` in a temporary directory.
+
+## Second-checkpoint closure
+
+The Goldbach proof-source allowlist retains Apache-2.0 licenses, copied DeepMind
+license and original source headers. These sources support static audits only;
+no local Lean build or equivalence-kernel certification is claimed. The
+DeepMind README remains verbatim: its original links are checked against the
+pinned complete upstream tree in `DEEPMIND_PINNED_TREE.json` and routed by the
+source index, not treated as bundled runtime dependencies.
+
+The tinycryptids repository at the recorded pin has no located redistribution
+grant. Its sources, Rust excerpt and binaries are omitted. Historical source
+observations/receipts remain historical. `PORTABILITY.md` explicitly lists the
+omitted-source gates; the new authored native/math replay does not claim to
+reperform them. The reductions amendment similarly distinguishes saved-source
+hash/object-ID checks from a fresh Git readback.
+
+`REPO_PROVENANCE.json` records four legacy snapshots with exactly one additional
+trailing newline; both original and packaged hashes and the exact transform
+are retained in `DEPENDENCY_PINS.json`. Other inherited source copies remain
+byte-identical. `ENCODING_PINS.json` preserves one byte-identical UTF-16 historical
+output. No encoding normalization is applied. One nested Session64 report uses
+its previously verified original result-root link context. A hash-locked
+coefficient-extraction notation exception is not a Markdown link.

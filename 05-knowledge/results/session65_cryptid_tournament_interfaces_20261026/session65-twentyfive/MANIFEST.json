@@ -1,0 +1,232 @@
+{
+  "repo_base": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "lengyijun_commit": "6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+  "deepmind_commit": "6c28d8524fa008c6fb5aadb759df74a55ce96423",
+  "files": [
+    {
+      "path": "RECEIPT.json",
+      "bytes": 4813,
+      "sha256": "bbb85de3f7721f062862c8cdc0fd7ae24dc035f19540c5ffa8d3bb4050fd0a21"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 18174,
+      "sha256": "ab758cf6229a09163567f50ad2a07af4c4a25116bd0667e2845e7c16353d5e23"
+    },
+    {
+      "path": "SOURCE_TREE.json",
+      "bytes": 10656,
+      "sha256": "f6cb7b757789baeea5412c4c9c63c2af893fee5be876f2595461367ba1f6254f"
+    },
+    {
+      "path": "checks-O.json",
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537"
+    },
+    {
+      "path": "inputs/04-computation/dihedral_tournament.py",
+      "bytes": 24771,
+      "sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1"
+    },
+    {
+      "path": "inputs/04-computation/tropical_cluster_H.py",
+      "bytes": 22204,
+      "sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e"
+    },
+    {
+      "path": "inputs/04-computation/weil_rh_tournament.py",
+      "bytes": 25292,
+      "sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca"
+    },
+    {
+      "path": "inputs/05-knowledge/results/dihedral_tournament.out",
+      "bytes": 17261,
+      "sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0"
+    },
+    {
+      "path": "inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "bytes": 17347,
+      "sha256": "3ca7ade0fbe84490c55427d10834bdc75c8e7c9c53d1e81173253efc05fd6efc"
+    },
+    {
+      "path": "inputs/05-knowledge/results/tropical_cluster_H.out",
+      "bytes": 14222,
+      "sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075"
+    },
+    {
+      "path": "inputs/05-knowledge/results/weil_rh_tournament.out",
+      "bytes": 21078,
+      "sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195"
+    },
+    {
+      "path": "inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "bytes": 9856,
+      "sha256": "af0bd11dc9430d390f71cdf95552c60d5b016ce204220f1b339ffbc6fe913e96"
+    },
+    {
+      "path": "inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "bytes": 3209,
+      "sha256": "d79368983c78a29617680fb1a38454d5b2e821299345c987c1ecdab31549cda4"
+    },
+    {
+      "path": "inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "bytes": 4841,
+      "sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72"
+    },
+    {
+      "path": "inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "bytes": 2361,
+      "sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5"
+    },
+    {
+      "path": "inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "bytes": 6064,
+      "sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f"
+    },
+    {
+      "path": "inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "bytes": 2337,
+      "sha256": "b520828716efff589d425996731b70e15a05744029884948eb69faf4ed8839a6"
+    },
+    {
+      "path": "inputs/cryptids/Cryptids/Goldbach21.lean",
+      "bytes": 91375,
+      "sha256": "89b6fdd98244b11d56627eae35812ad1de081bc230aa35d5558a446ca767b04c"
+    },
+    {
+      "path": "inputs/cryptids/Cryptids/Semantics/Goldbach.lean",
+      "bytes": 3274,
+      "sha256": "de1d5b33b89df3bb92bffca71a726e5e675daed5b5c5aebcd1ec31cb65486a0a"
+    },
+    {
+      "path": "inputs/cryptids/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "inputs/cryptids/README.md",
+      "bytes": 8627,
+      "sha256": "f59f80f9f07a7744c1ac38430bfc8b22588948c7bfa82540fc5fd4ef53e6d9ba"
+    },
+    {
+      "path": "inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "bytes": 200,
+      "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c"
+    },
+    {
+      "path": "inputs/goldbach_tm/26_to_25.md",
+      "bytes": 6985,
+      "sha256": "8506d17f5d8d0f707782d032291a600f228305b07a97e0fb3dae1f1143ecb857"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "bytes": 4194,
+      "sha256": "e862b629dd2388b55686b5f9e830634ace0a0b60617882e2ca400d0925ef6267"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "bytes": 116,
+      "sha256": "56ee595d5e9a2e6380cf549760d43be9d884dbae33e0627c484ee27fa92b4736"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "bytes": 1361,
+      "sha256": "5d5dcdb627761ffb1d35893cd7099cbc2517c1f28d96a2945135ae00189ec7a3"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "bytes": 3386,
+      "sha256": "c6903fe3294e08fcef8709fc5a5ab223821d3e315c10b7b99f6d3b84a44187de"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "bytes": 4315,
+      "sha256": "1c92313d6878b8b63593bc16300f15c0a4e670699f5fbb6528813f547e5077de"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "bytes": 7413,
+      "sha256": "df885722eacea266de412eb27cc41f79f808362ac51ca425ed6747ba2ccb6dbc"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "bytes": 16370,
+      "sha256": "4afda6358ef645f54a28018bf0da3eca36bd3c4dd60b4a6d64e2c46dc9949f89"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "bytes": 8138,
+      "sha256": "0982b99f4f4240440a28b344d69045853f850ccb75766915f07f93140a627fce"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "bytes": 1129,
+      "sha256": "9f868951849f5690556c3f08a04c0fb96ba575cc61c299ce535fdad56365cbd9"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "bytes": 318,
+      "sha256": "f5b2846a68dc001d884d44fd64ed344221159fd4449459a63ee538c77b67a7b9"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "bytes": 1319,
+      "sha256": "b889d7369d6d802bac96728c1742e8d733dc083f177fefec8b38d0b82c402e22"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "bytes": 7543,
+      "sha256": "9fa72dad7c4b903747ab81debe6cc1a068e9cf548fe1a10ab0b33375e791e9e0"
+    },
+    {
+      "path": "inputs/goldbach_tm/GoldbachTm.lean",
+      "bytes": 629,
+      "sha256": "314836ec6e8ecaebd433e25d2bdb4c9fb9118e58151ab41b05002670365ecea4"
+    },
+    {
+      "path": "inputs/goldbach_tm/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "inputs/goldbach_tm/lake-manifest.json",
+      "bytes": 3118,
+      "sha256": "c7602c58bd2ab7fba6541f8436cb03e125545252100f16ab2f2fd19639a6f2e6"
+    },
+    {
+      "path": "inputs/goldbach_tm/lakefile.lean",
+      "bytes": 539,
+      "sha256": "50490dc263747af3482a649966ce2a07514d20649332ed53eac75fa4c4c5dfac"
+    },
+    {
+      "path": "inputs/goldbach_tm/lean-toolchain",
+      "bytes": 29,
+      "sha256": "d52d5cdb3e01a10bfad5a9ff41525619b09c1da9ec7be25b232a37216ede2df4"
+    },
+    {
+      "path": "inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "bytes": 2913,
+      "sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea"
+    },
+    {
+      "path": "inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "bytes": 17494,
+      "sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30"
+    },
+    {
+      "path": "inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "bytes": 19936,
+      "sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 6861,
+      "sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0"
+    }
+  ]
+}

@@ -1,0 +1,774 @@
+{
+  "status": "ROOT_APPROVED_AND_INDEPENDENTLY_SOURCE_SEALED",
+  "source_context": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "files": [
+    {
+      "source": "session65-twentyfive/ALLOWLIST.txt",
+      "packaged": "session65-twentyfive/ALLOWLIST.txt",
+      "sha256": "c01d05ddaa528c77c8ec3af604786514884b35fccc96b2a02f7ae9e198c909d0",
+      "bytes": 2031
+    },
+    {
+      "source": "session65-twentyfive/MANIFEST.json",
+      "packaged": "session65-twentyfive/MANIFEST.json",
+      "sha256": "11bb06053495d41a9e82af4ff41974f1b01b76cd3d99939d51b0bf425a81d2b6",
+      "bytes": 8240
+    },
+    {
+      "source": "session65-twentyfive/RECEIPT.json",
+      "packaged": "session65-twentyfive/RECEIPT.json",
+      "sha256": "bbb85de3f7721f062862c8cdc0fd7ae24dc035f19540c5ffa8d3bb4050fd0a21",
+      "bytes": 4813
+    },
+    {
+      "source": "session65-twentyfive/REPORT.md",
+      "packaged": "session65-twentyfive/REPORT.md",
+      "sha256": "ab758cf6229a09163567f50ad2a07af4c4a25116bd0667e2845e7c16353d5e23",
+      "bytes": 18174
+    },
+    {
+      "source": "session65-twentyfive/SHA256SUMS",
+      "packaged": "session65-twentyfive/SHA256SUMS",
+      "sha256": "5183f1bc8e0ea780810eb09e6571bed4f0e130d9dced09441a84913e4974fc9b",
+      "bytes": 4962
+    },
+    {
+      "source": "session65-twentyfive/SOURCE_TREE.json",
+      "packaged": "session65-twentyfive/SOURCE_TREE.json",
+      "sha256": "f6cb7b757789baeea5412c4c9c63c2af893fee5be876f2595461367ba1f6254f",
+      "bytes": 10656
+    },
+    {
+      "source": "session65-twentyfive/checks-O.json",
+      "packaged": "session65-twentyfive/checks-O.json",
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "bytes": 5801
+    },
+    {
+      "source": "session65-twentyfive/checks.json",
+      "packaged": "session65-twentyfive/checks.json",
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "bytes": 5801
+    },
+    {
+      "source": "session65-twentyfive/inputs/04-computation/dihedral_tournament.py",
+      "packaged": "session65-twentyfive/inputs/04-computation/dihedral_tournament.py",
+      "sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1",
+      "bytes": 24771
+    },
+    {
+      "source": "session65-twentyfive/inputs/04-computation/tropical_cluster_H.py",
+      "packaged": "session65-twentyfive/inputs/04-computation/tropical_cluster_H.py",
+      "sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e",
+      "bytes": 22204
+    },
+    {
+      "source": "session65-twentyfive/inputs/04-computation/weil_rh_tournament.py",
+      "packaged": "session65-twentyfive/inputs/04-computation/weil_rh_tournament.py",
+      "sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca",
+      "bytes": 25292
+    },
+    {
+      "source": "session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out",
+      "packaged": "session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out",
+      "sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0",
+      "bytes": 17261
+    },
+    {
+      "source": "session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "packaged": "session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "sha256": "3ca7ade0fbe84490c55427d10834bdc75c8e7c9c53d1e81173253efc05fd6efc",
+      "bytes": 17347
+    },
+    {
+      "source": "session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out",
+      "packaged": "session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out",
+      "sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075",
+      "bytes": 14222
+    },
+    {
+      "source": "session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out",
+      "packaged": "session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out",
+      "sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195",
+      "bytes": 21078
+    },
+    {
+      "source": "session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "packaged": "session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "sha256": "af0bd11dc9430d390f71cdf95552c60d5b016ce204220f1b339ffbc6fe913e96",
+      "bytes": 9856
+    },
+    {
+      "source": "session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "packaged": "session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "sha256": "d79368983c78a29617680fb1a38454d5b2e821299345c987c1ecdab31549cda4",
+      "bytes": 3209
+    },
+    {
+      "source": "session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "packaged": "session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72",
+      "bytes": 4841
+    },
+    {
+      "source": "session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "packaged": "session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5",
+      "bytes": 2361
+    },
+    {
+      "source": "session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "packaged": "session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f",
+      "bytes": 6064
+    },
+    {
+      "source": "session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "packaged": "session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "sha256": "b520828716efff589d425996731b70e15a05744029884948eb69faf4ed8839a6",
+      "bytes": 2337
+    },
+    {
+      "source": "session65-twentyfive/inputs/cryptids/Cryptids/Goldbach21.lean",
+      "packaged": "session65-twentyfive/inputs/cryptids/Cryptids/Goldbach21.lean",
+      "sha256": "89b6fdd98244b11d56627eae35812ad1de081bc230aa35d5558a446ca767b04c",
+      "bytes": 91375
+    },
+    {
+      "source": "session65-twentyfive/inputs/cryptids/Cryptids/Semantics/Goldbach.lean",
+      "packaged": "session65-twentyfive/inputs/cryptids/Cryptids/Semantics/Goldbach.lean",
+      "sha256": "de1d5b33b89df3bb92bffca71a726e5e675daed5b5c5aebcd1ec31cb65486a0a",
+      "bytes": 3274
+    },
+    {
+      "source": "session65-twentyfive/inputs/cryptids/LICENSE",
+      "packaged": "session65-twentyfive/inputs/cryptids/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "source": "session65-twentyfive/inputs/cryptids/README.md",
+      "packaged": "session65-twentyfive/inputs/cryptids/README.md",
+      "sha256": "f59f80f9f07a7744c1ac38430bfc8b22588948c7bfa82540fc5fd4ef53e6d9ba",
+      "bytes": 8627
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c",
+      "bytes": 200
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/26_to_25.md",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/26_to_25.md",
+      "sha256": "8506d17f5d8d0f707782d032291a600f228305b07a97e0fb3dae1f1143ecb857",
+      "bytes": 6985
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "sha256": "e862b629dd2388b55686b5f9e830634ace0a0b60617882e2ca400d0925ef6267",
+      "bytes": 4194
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "sha256": "56ee595d5e9a2e6380cf549760d43be9d884dbae33e0627c484ee27fa92b4736",
+      "bytes": 116
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "sha256": "5d5dcdb627761ffb1d35893cd7099cbc2517c1f28d96a2945135ae00189ec7a3",
+      "bytes": 1361
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "sha256": "c6903fe3294e08fcef8709fc5a5ab223821d3e315c10b7b99f6d3b84a44187de",
+      "bytes": 3386
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "sha256": "1c92313d6878b8b63593bc16300f15c0a4e670699f5fbb6528813f547e5077de",
+      "bytes": 4315
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "sha256": "df885722eacea266de412eb27cc41f79f808362ac51ca425ed6747ba2ccb6dbc",
+      "bytes": 7413
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "sha256": "4afda6358ef645f54a28018bf0da3eca36bd3c4dd60b4a6d64e2c46dc9949f89",
+      "bytes": 16370
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "sha256": "0982b99f4f4240440a28b344d69045853f850ccb75766915f07f93140a627fce",
+      "bytes": 8138
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "sha256": "9f868951849f5690556c3f08a04c0fb96ba575cc61c299ce535fdad56365cbd9",
+      "bytes": 1129
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "sha256": "f5b2846a68dc001d884d44fd64ed344221159fd4449459a63ee538c77b67a7b9",
+      "bytes": 318
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "sha256": "b889d7369d6d802bac96728c1742e8d733dc083f177fefec8b38d0b82c402e22",
+      "bytes": 1319
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "sha256": "9fa72dad7c4b903747ab81debe6cc1a068e9cf548fe1a10ab0b33375e791e9e0",
+      "bytes": 7543
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm.lean",
+      "sha256": "314836ec6e8ecaebd433e25d2bdb4c9fb9118e58151ab41b05002670365ecea4",
+      "bytes": 629
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/LICENSE",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/lake-manifest.json",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/lake-manifest.json",
+      "sha256": "c7602c58bd2ab7fba6541f8436cb03e125545252100f16ab2f2fd19639a6f2e6",
+      "bytes": 3118
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/lakefile.lean",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/lakefile.lean",
+      "sha256": "50490dc263747af3482a649966ce2a07514d20649332ed53eac75fa4c4c5dfac",
+      "bytes": 539
+    },
+    {
+      "source": "session65-twentyfive/inputs/goldbach_tm/lean-toolchain",
+      "packaged": "session65-twentyfive/inputs/goldbach_tm/lean-toolchain",
+      "sha256": "d52d5cdb3e01a10bfad5a9ff41525619b09c1da9ec7be25b232a37216ede2df4",
+      "bytes": 29
+    },
+    {
+      "source": "session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "packaged": "session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea",
+      "bytes": 2913
+    },
+    {
+      "source": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "packaged": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30",
+      "bytes": 17494
+    },
+    {
+      "source": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "packaged": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9",
+      "bytes": 19936
+    },
+    {
+      "source": "session65-twentyfive/verify.py",
+      "packaged": "session65-twentyfive/verify.py",
+      "sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0",
+      "bytes": 6861
+    },
+    {
+      "source": "session65-root/multiperfect/REPORT.md",
+      "packaged": "session65-root/multiperfect/REPORT.md",
+      "sha256": "ce1bf0e01b696f2e258b46d5e587c552096093a0961c1f54d70526d037e304e8",
+      "bytes": 5112
+    },
+    {
+      "source": "session65-root/multiperfect/SHA256SUMS",
+      "packaged": "session65-root/multiperfect/SHA256SUMS",
+      "sha256": "868a4474c3afa988409f5dead7a6d8361f251896ba5d91c47f7ae1cfd207e323",
+      "bytes": 398
+    },
+    {
+      "source": "session65-root/multiperfect/check.py",
+      "packaged": "session65-root/multiperfect/check.py",
+      "sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5",
+      "bytes": 1900
+    },
+    {
+      "source": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "packaged": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc",
+      "bytes": 6574
+    },
+    {
+      "source": "session65-root/multiperfect/normal.json",
+      "packaged": "session65-root/multiperfect/normal.json",
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "bytes": 5363
+    },
+    {
+      "source": "session65-root/multiperfect/optimized.json",
+      "packaged": "session65-root/multiperfect/optimized.json",
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "bytes": 5363
+    },
+    {
+      "source": "session65-audit-goldbach/ALLOWLIST.txt",
+      "packaged": "session65-audit-goldbach/ALLOWLIST.txt",
+      "sha256": "94d6d495a492499e99e00b59bfa0710c57d6e0acb66da0350c0de528ea2a2413",
+      "bytes": 295
+    },
+    {
+      "source": "session65-audit-goldbach/INPUTS.json",
+      "packaged": "session65-audit-goldbach/INPUTS.json",
+      "sha256": "d3739c415f62ff16ff66c265f8c18e36e7645dd11e3b4ce13e25f4ffe972f6a3",
+      "bytes": 10695
+    },
+    {
+      "source": "session65-audit-goldbach/MANIFEST.json",
+      "packaged": "session65-audit-goldbach/MANIFEST.json",
+      "sha256": "7651ce4ae5f6bd8caa0fc9715903b96a980368a511a164897b8940f37b153617",
+      "bytes": 2070
+    },
+    {
+      "source": "session65-audit-goldbach/RECEIPT.json",
+      "packaged": "session65-audit-goldbach/RECEIPT.json",
+      "sha256": "3c432c392e64f69f142009160f6f5f83be90a9a0a35ad01977196a20ffe287e4",
+      "bytes": 1398
+    },
+    {
+      "source": "session65-audit-goldbach/REPORT.md",
+      "packaged": "session65-audit-goldbach/REPORT.md",
+      "sha256": "ce95fb305144cc30982b34dbe2c58000b6e1b8f406702bf116449be77d91e49b",
+      "bytes": 3658
+    },
+    {
+      "source": "session65-audit-goldbach/REPO_PROVENANCE.json",
+      "packaged": "session65-audit-goldbach/REPO_PROVENANCE.json",
+      "sha256": "b130891318e1052711574f9d37ce60ea0baae3490d99e03f08e131ef4554c98e",
+      "bytes": 8002
+    },
+    {
+      "source": "session65-audit-goldbach/SOURCE_RECEIPT.json",
+      "packaged": "session65-audit-goldbach/SOURCE_RECEIPT.json",
+      "sha256": "8217f6135e4cba1777abee77caa175e0280f82bdcd683cbf6645567aeec8d1fa",
+      "bytes": 7319
+    },
+    {
+      "source": "session65-audit-goldbach/goldbach/REPORT.md",
+      "packaged": "session65-audit-goldbach/goldbach/REPORT.md",
+      "sha256": "5d47059d3322326d41f786ba3ba2e57581cf40d47768a2696efa7483f4d33b57",
+      "bytes": 9584
+    },
+    {
+      "source": "session65-audit-goldbach/goldbach/check.py",
+      "packaged": "session65-audit-goldbach/goldbach/check.py",
+      "sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876",
+      "bytes": 11865
+    },
+    {
+      "source": "session65-audit-goldbach/goldbach/normal.json",
+      "packaged": "session65-audit-goldbach/goldbach/normal.json",
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "bytes": 2864
+    },
+    {
+      "source": "session65-audit-goldbach/goldbach/optimized.json",
+      "packaged": "session65-audit-goldbach/goldbach/optimized.json",
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "bytes": 2864
+    },
+    {
+      "source": "session65-audit-goldbach/multiperfect/REPORT.md",
+      "packaged": "session65-audit-goldbach/multiperfect/REPORT.md",
+      "sha256": "73faa62630f364eeaa2428885ff679f2b9b458dea25c95a12030ddadb10cf701",
+      "bytes": 5311
+    },
+    {
+      "source": "session65-audit-goldbach/multiperfect/check.py",
+      "packaged": "session65-audit-goldbach/multiperfect/check.py",
+      "sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d",
+      "bytes": 5221
+    },
+    {
+      "source": "session65-audit-goldbach/multiperfect/normal.json",
+      "packaged": "session65-audit-goldbach/multiperfect/normal.json",
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "bytes": 5334
+    },
+    {
+      "source": "session65-audit-goldbach/multiperfect/optimized.json",
+      "packaged": "session65-audit-goldbach/multiperfect/optimized.json",
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "bytes": 5334
+    },
+    {
+      "source": "session65-audit-goldbach/SHA256SUMS",
+      "packaged": "session65-audit-goldbach/SHA256SUMS",
+      "sha256": "72049c8e45cc129083e3d2e84d75da35a373202643023b9e1bd92f2f72eadf2a",
+      "bytes": 1274
+    },
+    {
+      "source": "session65-reductions/READBACK.md",
+      "packaged": "session65-reductions/READBACK.md",
+      "sha256": "6ef3462f05af1455a1b411fb7fe83b6f2dbfbe94de06d9b009404f809157a243",
+      "bytes": 3771
+    },
+    {
+      "source": "session65-reductions/REPORT.md",
+      "packaged": "session65-reductions/REPORT.md",
+      "sha256": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898",
+      "bytes": 36564
+    },
+    {
+      "source": "session65-reductions/SOURCE_PINS.json",
+      "packaged": "session65-reductions/SOURCE_PINS.json",
+      "sha256": "1c203205287a884f5eb38091b9e0503b8bdb7ce21823c678950412087993e192",
+      "bytes": 3471
+    },
+    {
+      "source": "session65-reductions/check.py",
+      "packaged": "session65-reductions/check.py",
+      "sha256": "a5bf1c7b398393416d660008b9f7804f77de2ca39dc9592c3beaa80e68626396",
+      "bytes": 10541
+    },
+    {
+      "source": "session65-reductions/inputs/00-AGENTS.md",
+      "packaged": "session65-reductions/inputs/00-AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "bytes": 6823
+    },
+    {
+      "source": "session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+      "packaged": "session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "bytes": 10465
+    },
+    {
+      "source": "session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "packaged": "session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "bytes": 9804
+    },
+    {
+      "source": "session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+      "packaged": "session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+      "sha256": "ca1963b56bbbdd1c45a797be27482c8a6c020267f11e037c9ea83ef264d0e65b",
+      "bytes": 16487
+    },
+    {
+      "source": "session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+      "packaged": "session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+      "sha256": "2ac0f3065d483134f8777e81e02ccd6ef20dfc8657eec67955794581f1d68769",
+      "bytes": 12491
+    },
+    {
+      "source": "session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+      "packaged": "session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+      "sha256": "f0497923251d09d2e035f586c6068503458048e10e622e61be5cb3be7afcc700",
+      "bytes": 18962
+    },
+    {
+      "source": "session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+      "packaged": "session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+      "bytes": 18389
+    },
+    {
+      "source": "session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+      "packaged": "session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+      "sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441",
+      "bytes": 13126
+    },
+    {
+      "source": "session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+      "packaged": "session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+      "sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+      "bytes": 18721
+    },
+    {
+      "source": "session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+      "packaged": "session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+      "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff",
+      "bytes": 10395
+    },
+    {
+      "source": "session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+      "packaged": "session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+      "sha256": "ce6fe5deb1a3ebf6483a8bd4754f62e14030a4bdb3557b1e0a9ce8f24b16af3f",
+      "bytes": 5342
+    },
+    {
+      "source": "session65-reductions/normal.json",
+      "packaged": "session65-reductions/normal.json",
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "bytes": 5358
+    },
+    {
+      "source": "session65-reductions/optimized.json",
+      "packaged": "session65-reductions/optimized.json",
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "bytes": 5358
+    },
+    {
+      "source": "session65-reductions/MANIFEST.json",
+      "packaged": "session65-reductions/MANIFEST.json",
+      "sha256": "f634f265c00ba54651808490fc856bc6755052ee83e2454a89abfc7ec6b7c22c",
+      "bytes": 3449
+    },
+    {
+      "source": "session65-audit-reductions/REPORT.md",
+      "packaged": "session65-audit-reductions/REPORT.md",
+      "sha256": "7b0693f3b33b6aecf5f2a9a62ce04ba127bceafccc1f35ffef89c24fbdad023c",
+      "bytes": 14113
+    },
+    {
+      "source": "session65-audit-reductions/check.py",
+      "packaged": "session65-audit-reductions/check.py",
+      "sha256": "437dc3385900f004cb2cbbcd143c1ded6d77249e6db22fd7e70edb3678c78e08",
+      "bytes": 8479
+    },
+    {
+      "source": "session65-audit-reductions/normal.json",
+      "packaged": "session65-audit-reductions/normal.json",
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867",
+      "bytes": 1137
+    },
+    {
+      "source": "session65-audit-reductions/optimized.json",
+      "packaged": "session65-audit-reductions/optimized.json",
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867",
+      "bytes": 1137
+    },
+    {
+      "source": "session65-audit-reductions/producer-normal.json",
+      "packaged": "session65-audit-reductions/producer-normal.json",
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "bytes": 5358
+    },
+    {
+      "source": "session65-audit-reductions/producer-optimized.json",
+      "packaged": "session65-audit-reductions/producer-optimized.json",
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "bytes": 5358
+    },
+    {
+      "source": "session65-audit-reductions/MANIFEST.json",
+      "packaged": "session65-audit-reductions/MANIFEST.json",
+      "sha256": "97563fe59556f61e36c5595c97011ccbf27ff8b23e93a513a3a08750d446a12d",
+      "bytes": 1057
+    },
+    {
+      "source": "session65-audit-reductions/OFFLINE_SOURCE_PINS.json",
+      "packaged": "session65-audit-reductions/OFFLINE_SOURCE_PINS.json",
+      "sha256": "7c3d4df7cba05caccd2d99b428e9e9654f746a3feae95110127ebd155b55dd39",
+      "bytes": 4942
+    },
+    {
+      "source": "session65-audit-reductions/PORTABILITY_AMENDMENT.md",
+      "packaged": "session65-audit-reductions/PORTABILITY_AMENDMENT.md",
+      "sha256": "2b4ee176ac5a398d02544b3aeb1c14b35b02a7ad6c797b4ee5b87f578c7def04",
+      "bytes": 5278
+    },
+    {
+      "source": "session65-audit-reductions/PORTABILITY_DIFF.patch",
+      "packaged": "session65-audit-reductions/PORTABILITY_DIFF.patch",
+      "sha256": "a80c669165b8005be61f1892214ef99a0e69ffa1aadb2ade0c6f36ad1d642ab3",
+      "bytes": 7441
+    },
+    {
+      "source": "session65-audit-reductions/portable_check.py",
+      "packaged": "session65-audit-reductions/portable_check.py",
+      "sha256": "d8aeeb7049237832781c89fe229b3a8c20576737e8467267d3e2b31ab2240f08",
+      "bytes": 11964
+    },
+    {
+      "source": "session65-audit-reductions/portable_hostiles.py",
+      "packaged": "session65-audit-reductions/portable_hostiles.py",
+      "sha256": "7c5b30bcbc5dd021f21624152c7641e6a2ce49de553ca2eaedb6425834c51d46",
+      "bytes": 4345
+    },
+    {
+      "source": "session65-audit-reductions/portable-normal.json",
+      "packaged": "session65-audit-reductions/portable-normal.json",
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572",
+      "bytes": 1538
+    },
+    {
+      "source": "session65-audit-reductions/portable-optimized.json",
+      "packaged": "session65-audit-reductions/portable-optimized.json",
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572",
+      "bytes": 1538
+    },
+    {
+      "source": "session65-audit-reductions/portable-hostiles.json",
+      "packaged": "session65-audit-reductions/portable-hostiles.json",
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386",
+      "bytes": 16117
+    },
+    {
+      "source": "session65-audit-reductions/portable-hostiles-optimized.json",
+      "packaged": "session65-audit-reductions/portable-hostiles-optimized.json",
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386",
+      "bytes": 16117
+    },
+    {
+      "source": "session65-audit-reductions/PORTABILITY_MANIFEST.json",
+      "packaged": "session65-audit-reductions/PORTABILITY_MANIFEST.json",
+      "sha256": "a5ecca50a930f3445b5786acc8a1a05f84e35b27c13b6b02701c45ef884b37ef",
+      "bytes": 1670
+    },
+    {
+      "source": "session65-audit-weakcollatz/AUDIT.md",
+      "packaged": "session65-audit-weakcollatz/AUDIT.md",
+      "sha256": "e0a7b4a6bf4c8ff72e28b930346514c2ccc442e2c0d569531007191e585b3688",
+      "bytes": 12211
+    },
+    {
+      "source": "session65-audit-weakcollatz/PORTABILITY.md",
+      "packaged": "session65-audit-weakcollatz/PORTABILITY.md",
+      "sha256": "295825848e071b40c95f2d83e162d17de500ba02692af7fab0ebdacf29811be3",
+      "bytes": 4825
+    },
+    {
+      "source": "session65-audit-weakcollatz/independent_audit.py",
+      "packaged": "session65-audit-weakcollatz/independent_audit.py",
+      "sha256": "7effb218875ea10ee4c22b98ae33551231a90d8d3bc323dcc83cd212c8d8f570",
+      "bytes": 7129
+    },
+    {
+      "source": "session65-audit-weakcollatz/manifest.json",
+      "packaged": "session65-audit-weakcollatz/manifest.json",
+      "sha256": "bd012ddc91d2939d58d9860b8d196cc0880ad64bd7a842867b61c9a3424e25ad",
+      "bytes": 1791
+    },
+    {
+      "source": "session65-audit-weakcollatz/native_mb.c",
+      "packaged": "session65-audit-weakcollatz/native_mb.c",
+      "sha256": "21e5cf69ccc2362601a419a8c6b54fc7d022bb6b736adf274ae8206a97f624e6",
+      "bytes": 3009
+    },
+    {
+      "source": "session65-audit-weakcollatz/native_mb.json",
+      "packaged": "session65-audit-weakcollatz/native_mb.json",
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "bytes": 788
+    },
+    {
+      "source": "session65-audit-weakcollatz/native_mb_unoptimized.json",
+      "packaged": "session65-audit-weakcollatz/native_mb_unoptimized.json",
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "bytes": 788
+    },
+    {
+      "source": "session65-audit-weakcollatz/normal.json",
+      "packaged": "session65-audit-weakcollatz/normal.json",
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "bytes": 3803
+    },
+    {
+      "source": "session65-audit-weakcollatz/optimized.json",
+      "packaged": "session65-audit-weakcollatz/optimized.json",
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "bytes": 3803
+    },
+    {
+      "source": "session65-audit-weakcollatz/portability_license_check.json",
+      "packaged": "session65-audit-weakcollatz/portability_license_check.json",
+      "sha256": "f82b7b39f4682acf394997d8463a899a2d0238bbd6915313991840ed3f05a7fb",
+      "bytes": 687
+    },
+    {
+      "source": "session65-audit-weakcollatz/portable_closure_receipt.json",
+      "packaged": "session65-audit-weakcollatz/portable_closure_receipt.json",
+      "sha256": "4df95d8a876a0150d36bb5890ccc5423df151f52a031ef5126118571a93e613b",
+      "bytes": 1966
+    },
+    {
+      "source": "session65-audit-weakcollatz/portable_math_audit.py",
+      "packaged": "session65-audit-weakcollatz/portable_math_audit.py",
+      "sha256": "2cfeb3f33c284bf5545dc032938ff12f7300035249bac747771dd151439f6445",
+      "bytes": 8667
+    },
+    {
+      "source": "session65-audit-weakcollatz/portable_normal.json",
+      "packaged": "session65-audit-weakcollatz/portable_normal.json",
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "bytes": 4125
+    },
+    {
+      "source": "session65-audit-weakcollatz/portable_optimized.json",
+      "packaged": "session65-audit-weakcollatz/portable_optimized.json",
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "bytes": 4125
+    },
+    {
+      "source": "session65-audit-weakcollatz/producer_replay_normal.json",
+      "packaged": "session65-audit-weakcollatz/producer_replay_normal.json",
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "bytes": 1691
+    },
+    {
+      "source": "session65-audit-weakcollatz/producer_replay_optimized.json",
+      "packaged": "session65-audit-weakcollatz/producer_replay_optimized.json",
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "bytes": 1691
+    },
+    {
+      "source": "session65-audit-weakcollatz/remote_git_pin.json",
+      "packaged": "session65-audit-weakcollatz/remote_git_pin.json",
+      "sha256": "e5a833cd6aeb9a83f92f403fbacd44f5b131b6b9b833b89343d907a663f78517",
+      "bytes": 7003
+    },
+    {
+      "source": "session65-weakcollatz/REPORT.md",
+      "packaged": "session65-weakcollatz/REPORT.md",
+      "sha256": "598dad7b38dca598e1bc769827aa724844d807193d7ff4be48d2d5f6781b1674",
+      "bytes": 11842
+    },
+    {
+      "source": "session65-weakcollatz/bridge_results.json",
+      "packaged": "session65-weakcollatz/bridge_results.json",
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "bytes": 1691
+    },
+    {
+      "source": "session65-weakcollatz/bridge_results_optimized.json",
+      "packaged": "session65-weakcollatz/bridge_results_optimized.json",
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "bytes": 1691
+    },
+    {
+      "source": "session65-weakcollatz/verification_receipt.json",
+      "packaged": "session65-weakcollatz/verification_receipt.json",
+      "sha256": "1906b71327574a915ba30121dbf92ba5c109407e77b8d82fe0978a7c170a9f65",
+      "bytes": 2225
+    },
+    {
+      "source": "session65-weakcollatz/verify_bridge.py",
+      "packaged": "session65-weakcollatz/verify_bridge.py",
+      "sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+      "bytes": 2790
+    },
+    {
+      "source": "session65-audit-weakcollatz/PORTABILITY_MANIFEST.json",
+      "packaged": "session65-audit-weakcollatz/PORTABILITY_MANIFEST.json",
+      "sha256": "887a916afa0c2e7f8f308be59afe7e67fb9ce17b459cadd7fc5a04385285489f",
+      "bytes": 4803
+    }
+  ]
+}

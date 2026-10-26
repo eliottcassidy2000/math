@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-I",
+        "session65-audit-weakcollatz/portable_math_audit.py"
+      ],
+      "exit_code": 0,
+      "matches_portable_normal": true,
+      "stdout_sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-O",
+        "session65-audit-weakcollatz/portable_math_audit.py"
+      ],
+      "exit_code": 0,
+      "matches_portable_normal": true,
+      "stdout_sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "session65-weakcollatz/verify_bridge.py"
+      ],
+      "exit_code": 0,
+      "matches_sealed_producer": true,
+      "stdout_sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    },
+    {
+      "command": [
+        "python3",
+        "-I",
+        "-O",
+        "session65-weakcollatz/verify_bridge.py"
+      ],
+      "exit_code": 0,
+      "matches_sealed_producer": true,
+      "stdout_sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    }
+  ],
+  "copied_audit_inputs": [
+    "AUDIT.md",
+    "independent_audit.py",
+    "native_mb.c",
+    "native_mb.json",
+    "native_mb_unoptimized.json",
+    "normal.json",
+    "optimized.json",
+    "producer_replay_normal.json",
+    "producer_replay_optimized.json",
+    "remote_git_pin.json",
+    "manifest.json",
+    "portable_math_audit.py",
+    "portable_normal.json",
+    "portable_optimized.json",
+    "portability_license_check.json",
+    "PORTABILITY.md"
+  ],
+  "copied_producer_inputs": [
+    "REPORT.md",
+    "bridge_results.json",
+    "bridge_results_optimized.json",
+    "verification_receipt.json",
+    "verify_bridge.py"
+  ],
+  "external_sources_executed": false,
+  "lean_or_rust_build_performed": false,
+  "status": "PASS_FROZEN_PORTABLE_CLOSURE",
+  "tinycryptids_directory_absent": true
+}

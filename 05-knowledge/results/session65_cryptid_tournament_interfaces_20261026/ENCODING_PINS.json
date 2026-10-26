@@ -1,0 +1,7 @@
+{
+  "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out": {
+    "source_sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30",
+    "encoding": "utf-16",
+    "reason": "Byte-identical BOM-prefixed historical computation output, not executable source; preserve original bytes"
+  }
+}

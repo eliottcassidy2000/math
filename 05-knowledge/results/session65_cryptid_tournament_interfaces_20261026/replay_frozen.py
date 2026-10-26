@@ -17,7 +17,7 @@ for mode,flag in [('normal',[]),('optimized',['-O'])]:
    name=task['script'];f=frozen/name
    tree=ast.parse(f.read_text());bare=sum(isinstance(n,ast.Assert) for n in ast.walk(tree))
    if bare:raise RuntimeError(f'Primary script has {bare} optimization-removed assertions: {name}')
-   command=[sys.executable,*flag,str(f),*task.get('args',[])]
+   command=[sys.executable,*task.get('python_flags',[]),*flag,str(f),*task.get('args',[])]
    env=os.environ.copy();env.pop('PYTHONPATH',None);env.pop('PYTHONHOME',None);env['PYTHONDONTWRITEBYTECODE']='1';env['PYTHONHASHSEED']='0';env.update(task.get('environment',{}))
    start=time.monotonic();r=subprocess.run(command,cwd=frozen/task.get('cwd','.'),env=env,capture_output=True,timeout=task.get('timeout',600));elapsed=time.monotonic()-start
    if r.returncode:raise RuntimeError(f'{name} {mode} exit {r.returncode}\n{r.stderr.decode(errors="replace")}')

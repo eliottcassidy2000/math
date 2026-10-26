@@ -1,0 +1,130 @@
+{
+  "also_include_manifest": "session65-audit-weakcollatz/PORTABILITY_MANIFEST.json",
+  "excluded_external_source_prefix": "session65-weakcollatz/tinycryptids/",
+  "files": [
+    {
+      "bytes": 12211,
+      "sha256": "e0a7b4a6bf4c8ff72e28b930346514c2ccc442e2c0d569531007191e585b3688",
+      "source": "session65-audit-weakcollatz/AUDIT.md"
+    },
+    {
+      "bytes": 4825,
+      "sha256": "295825848e071b40c95f2d83e162d17de500ba02692af7fab0ebdacf29811be3",
+      "source": "session65-audit-weakcollatz/PORTABILITY.md"
+    },
+    {
+      "bytes": 7129,
+      "sha256": "7effb218875ea10ee4c22b98ae33551231a90d8d3bc323dcc83cd212c8d8f570",
+      "source": "session65-audit-weakcollatz/independent_audit.py"
+    },
+    {
+      "bytes": 1791,
+      "sha256": "bd012ddc91d2939d58d9860b8d196cc0880ad64bd7a842867b61c9a3424e25ad",
+      "source": "session65-audit-weakcollatz/manifest.json"
+    },
+    {
+      "bytes": 3009,
+      "sha256": "21e5cf69ccc2362601a419a8c6b54fc7d022bb6b736adf274ae8206a97f624e6",
+      "source": "session65-audit-weakcollatz/native_mb.c"
+    },
+    {
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "source": "session65-audit-weakcollatz/native_mb.json"
+    },
+    {
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "source": "session65-audit-weakcollatz/native_mb_unoptimized.json"
+    },
+    {
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "source": "session65-audit-weakcollatz/normal.json"
+    },
+    {
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "source": "session65-audit-weakcollatz/optimized.json"
+    },
+    {
+      "bytes": 687,
+      "sha256": "f82b7b39f4682acf394997d8463a899a2d0238bbd6915313991840ed3f05a7fb",
+      "source": "session65-audit-weakcollatz/portability_license_check.json"
+    },
+    {
+      "bytes": 1966,
+      "sha256": "4df95d8a876a0150d36bb5890ccc5423df151f52a031ef5126118571a93e613b",
+      "source": "session65-audit-weakcollatz/portable_closure_receipt.json"
+    },
+    {
+      "bytes": 8667,
+      "sha256": "2cfeb3f33c284bf5545dc032938ff12f7300035249bac747771dd151439f6445",
+      "source": "session65-audit-weakcollatz/portable_math_audit.py"
+    },
+    {
+      "bytes": 4125,
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "source": "session65-audit-weakcollatz/portable_normal.json"
+    },
+    {
+      "bytes": 4125,
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "source": "session65-audit-weakcollatz/portable_optimized.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-audit-weakcollatz/producer_replay_normal.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-audit-weakcollatz/producer_replay_optimized.json"
+    },
+    {
+      "bytes": 7003,
+      "sha256": "e5a833cd6aeb9a83f92f403fbacd44f5b131b6b9b833b89343d907a663f78517",
+      "source": "session65-audit-weakcollatz/remote_git_pin.json"
+    },
+    {
+      "bytes": 11842,
+      "sha256": "598dad7b38dca598e1bc769827aa724844d807193d7ff4be48d2d5f6781b1674",
+      "source": "session65-weakcollatz/REPORT.md"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results_optimized.json"
+    },
+    {
+      "bytes": 2225,
+      "sha256": "1906b71327574a915ba30121dbf92ba5c109407e77b8d82fe0978a7c170a9f65",
+      "source": "session65-weakcollatz/verification_receipt.json"
+    },
+    {
+      "bytes": 2790,
+      "sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+      "source": "session65-weakcollatz/verify_bridge.py"
+    }
+  ],
+  "historical_nonportable_checker": "session65-audit-weakcollatz/independent_audit.py",
+  "no_lean_or_rust_build": true,
+  "old_manifest_preserved": true,
+  "portable_task": {
+    "script": "session65-audit-weakcollatz/portable_math_audit.py",
+    "stored_stdout": "session65-audit-weakcollatz/portable_normal.json",
+    "timeout": 120
+  },
+  "producer_task": {
+    "script": "session65-weakcollatz/verify_bridge.py",
+    "stored_stdout": "session65-weakcollatz/bridge_results.json",
+    "timeout": 120
+  },
+  "status": "APPROVED_PORTABLE_AUTHORED_MATH_CLOSURE_WITH_HISTORICAL_SOURCE_RECEIPTS"
+}

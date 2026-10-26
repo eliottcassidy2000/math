@@ -1,0 +1,41 @@
+{
+  "status": "PASS scoped independent finite checks",
+  "runs": [
+    {
+      "command": "python3 -B session65-audit-goldbach/goldbach/check.py",
+      "returncode": 0,
+      "stdout_path": "goldbach/normal.json",
+      "stdout_sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -O -B session65-audit-goldbach/goldbach/check.py",
+      "returncode": 0,
+      "stdout_path": "goldbach/optimized.json",
+      "stdout_sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -B session65-audit-goldbach/multiperfect/check.py",
+      "returncode": 0,
+      "stdout_path": "multiperfect/normal.json",
+      "stdout_sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -O -B session65-audit-goldbach/multiperfect/check.py",
+      "returncode": 0,
+      "stdout_path": "multiperfect/optimized.json",
+      "stdout_sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "stderr": ""
+    }
+  ],
+  "normal_optimized_byte_identical": {
+    "goldbach": true,
+    "multiperfect": true
+  },
+  "external_software_executed": false,
+  "producer_checker_executed": false,
+  "local_lean_build": "NOT RUN",
+  "endpoint_axiom_audit": "NOT RUN"
+}

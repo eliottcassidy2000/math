@@ -1,0 +1,70 @@
+{
+  "status": "PASS within scoped reports",
+  "payload_files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 10695,
+      "sha256": "d3739c415f62ff16ff66c265f8c18e36e7645dd11e3b4ce13e25f4ffe972f6a3"
+    },
+    {
+      "path": "RECEIPT.json",
+      "bytes": 1398,
+      "sha256": "3c432c392e64f69f142009160f6f5f83be90a9a0a35ad01977196a20ffe287e4"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 3658,
+      "sha256": "ce95fb305144cc30982b34dbe2c58000b6e1b8f406702bf116449be77d91e49b"
+    },
+    {
+      "path": "REPO_PROVENANCE.json",
+      "bytes": 8002,
+      "sha256": "b130891318e1052711574f9d37ce60ea0baae3490d99e03f08e131ef4554c98e"
+    },
+    {
+      "path": "SOURCE_RECEIPT.json",
+      "bytes": 7319,
+      "sha256": "8217f6135e4cba1777abee77caa175e0280f82bdcd683cbf6645567aeec8d1fa"
+    },
+    {
+      "path": "goldbach/REPORT.md",
+      "bytes": 9584,
+      "sha256": "5d47059d3322326d41f786ba3ba2e57581cf40d47768a2696efa7483f4d33b57"
+    },
+    {
+      "path": "goldbach/check.py",
+      "bytes": 11865,
+      "sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876"
+    },
+    {
+      "path": "goldbach/normal.json",
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d"
+    },
+    {
+      "path": "goldbach/optimized.json",
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d"
+    },
+    {
+      "path": "multiperfect/REPORT.md",
+      "bytes": 5311,
+      "sha256": "73faa62630f364eeaa2428885ff679f2b9b458dea25c95a12030ddadb10cf701"
+    },
+    {
+      "path": "multiperfect/check.py",
+      "bytes": 5221,
+      "sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d"
+    },
+    {
+      "path": "multiperfect/normal.json",
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95"
+    },
+    {
+      "path": "multiperfect/optimized.json",
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95"
+    }
+  ]
+}

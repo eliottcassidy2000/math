@@ -1,0 +1,16 @@
+ALLOWLIST.txt
+INPUTS.json
+MANIFEST.json
+RECEIPT.json
+REPORT.md
+REPO_PROVENANCE.json
+SHA256SUMS
+SOURCE_RECEIPT.json
+goldbach/REPORT.md
+goldbach/check.py
+goldbach/normal.json
+goldbach/optimized.json
+multiperfect/REPORT.md
+multiperfect/check.py
+multiperfect/normal.json
+multiperfect/optimized.json

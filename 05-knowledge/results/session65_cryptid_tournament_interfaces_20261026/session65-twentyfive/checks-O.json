@@ -1,0 +1,383 @@
+{
+  "arithmetic": {
+    "convolution_counts_match": true,
+    "even_numbers_tested": 249,
+    "maximum_even": 500,
+    "same_marginals_disjoint_pair_fibres": {
+      "A": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "B": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "small_witnesses": {
+      "4": [
+        [
+          2,
+          2
+        ]
+      ],
+      "6": [
+        [
+          3,
+          3
+        ]
+      ],
+      "8": [
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "10": [
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "12": [
+        [
+          5,
+          7
+        ],
+        [
+          7,
+          5
+        ]
+      ],
+      "14": [
+        [
+          3,
+          11
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          11,
+          3
+        ]
+      ],
+      "16": [
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          13,
+          3
+        ]
+      ],
+      "18": [
+        [
+          5,
+          13
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          13,
+          5
+        ]
+      ],
+      "20": [
+        [
+          3,
+          17
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          17,
+          3
+        ]
+      ]
+    }
+  },
+  "control_isomorphism": {
+    "branches_checked": 50,
+    "defined_instructions": 49,
+    "halting_branch": [
+      24,
+      0
+    ],
+    "lean_state_to_wiki_state": {
+      "0": "A",
+      "1": "D",
+      "10": "L",
+      "11": "M",
+      "12": "N",
+      "13": "U",
+      "14": "O",
+      "15": "P",
+      "16": "Q",
+      "17": "R",
+      "18": "X",
+      "19": "Y",
+      "2": "E",
+      "20": "F",
+      "21": "S",
+      "22": "B",
+      "23": "C",
+      "24": "T",
+      "3": "G",
+      "4": "H",
+      "5": "I",
+      "6": "V",
+      "7": "J",
+      "8": "W",
+      "9": "K"
+    }
+  },
+  "external_commit": "6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+  "lrc_cutoff_hostile": {
+    "first_good_reduced_denominator": 27,
+    "good_numerators_at_27": [
+      2,
+      25
+    ],
+    "speeds": [
+      26,
+      52,
+      78,
+      104,
+      130,
+      156,
+      182,
+      208,
+      234,
+      260,
+      286,
+      312,
+      339
+    ]
+  },
+  "pair_shadow_checks": {
+    "inverse_swap_and_diagonal": true,
+    "ordered_prime_pairs_through_200": 2025
+  },
+  "reachable_padding": {
+    "extra_steps_per_replaced_transition": 2,
+    "local_tape_patterns_checked": 4,
+    "new_states_reached_from_blank": true,
+    "original_states": 25,
+    "padded_states": 27
+  },
+  "static_flag_counts": {
+    "GoldbachTm.lean": 0,
+    "GoldbachTm/Basic.lean": 0,
+    "GoldbachTm/Format.lean": 0,
+    "GoldbachTm/ListBlank.lean": 0,
+    "GoldbachTm/Tm25/Content.lean": 0,
+    "GoldbachTm/Tm25/Miscellaneous.lean": 0,
+    "GoldbachTm/Tm25/PBP.lean": 0,
+    "GoldbachTm/Tm25/Prime.lean": 0,
+    "GoldbachTm/Tm25/Search0.lean": 0,
+    "GoldbachTm/Tm25/SearchUnvisitedBranch.lean": 0,
+    "GoldbachTm/Tm25/Sim25.lean": 0,
+    "GoldbachTm/Tm25/Transition.lean": 0,
+    "GoldbachTm/Tm25/TuringMachine25.lean": 0,
+    "lakefile.lean": 0
+  },
+  "status": "FINITE-EXACT; static source audit, not a Lean rebuild",
+  "trace": {
+    "cfg45": true,
+    "halted": false,
+    "macro_blocks": [
+      {
+        "n": 4,
+        "step": 45
+      },
+      {
+        "n": 6,
+        "step": 132
+      },
+      {
+        "n": 8,
+        "step": 301
+      },
+      {
+        "n": 10,
+        "step": 596
+      },
+      {
+        "n": 12,
+        "step": 1101
+      },
+      {
+        "n": 14,
+        "step": 1988
+      },
+      {
+        "n": 16,
+        "step": 3263
+      },
+      {
+        "n": 18,
+        "step": 5160
+      },
+      {
+        "n": 20,
+        "step": 7805
+      },
+      {
+        "n": 22,
+        "step": 11522
+      },
+      {
+        "n": 24,
+        "step": 16497
+      },
+      {
+        "n": 26,
+        "step": 22730
+      },
+      {
+        "n": 28,
+        "step": 31045
+      },
+      {
+        "n": 30,
+        "step": 42232
+      },
+      {
+        "n": 32,
+        "step": 55473
+      },
+      {
+        "n": 34,
+        "step": 71276
+      },
+      {
+        "n": 36,
+        "step": 90349
+      },
+      {
+        "n": 38,
+        "step": 112132
+      },
+      {
+        "n": 40,
+        "step": 139443
+      },
+      {
+        "n": 42,
+        "step": 170962
+      },
+      {
+        "n": 44,
+        "step": 206133
+      },
+      {
+        "n": 46,
+        "step": 248388
+      },
+      {
+        "n": 48,
+        "step": 296857
+      },
+      {
+        "n": 50,
+        "step": 350064
+      },
+      {
+        "n": 52,
+        "step": 412685
+      },
+      {
+        "n": 54,
+        "step": 490078
+      },
+      {
+        "n": 56,
+        "step": 573581
+      },
+      {
+        "n": 58,
+        "step": 662322
+      },
+      {
+        "n": 60,
+        "step": 763891
+      },
+      {
+        "n": 62,
+        "step": 872944
+      },
+      {
+        "n": 64,
+        "step": 994199
+      },
+      {
+        "n": 66,
+        "step": 1127912
+      },
+      {
+        "n": 68,
+        "step": 1270485
+      },
+      {
+        "n": 70,
+        "step": 1430950
+      },
+      {
+        "n": 72,
+        "step": 1606881
+      },
+      {
+        "n": 74,
+        "step": 1793334
+      }
+    ],
+    "steps": 2000000,
+    "visited_control_states": 25
+  }
+}

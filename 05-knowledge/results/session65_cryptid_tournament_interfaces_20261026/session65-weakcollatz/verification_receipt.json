@@ -1,0 +1,46 @@
+{
+  "math_verifier_authorship": "Independently written for this session, standalone Python standard library, optimization-safe explicit require checks.",
+  "normal_command": "python3 verify_bridge.py > bridge_results.json",
+  "optimized_command": "python3 -O verify_bridge.py > bridge_results_optimized.json",
+  "normal_optimized_identical": true,
+  "external_test_note": "The following outputs are transcribed accurately from observed tool runs, not raw log files. External tinycryptids test code and C interpreter were run unmodified; not independently authored simulators.",
+  "external_tests": [
+    {
+      "command": "gcc -O3 -o tools/sim tools/sim.c && python3 weakcollatz/test_e2e.py",
+      "cwd": "tinycryptids",
+      "exit_code": 0,
+      "stdout": "macro steps checked: 1829\nrun from the blank tape: 1839 macro steps, rounds 2 .. 300\n10^8 steps: limit OK\n"
+    },
+    {
+      "command": "python3 weakcollatz/sym3/test_e2e.py",
+      "cwd": "tinycryptids",
+      "exit_code": 0,
+      "stdout": "macro steps checked: 1829\nrun from the blank tape: 1837 macro steps, rounds 3 .. 300\n10^8 steps: limit OK\n"
+    }
+  ],
+  "native_MB_simulation": {
+    "interpreter": "external tinycryptids tools/tm.py + compiled tools/sim.c",
+    "machine_table": "1RB1LC_1RC1RB_1RD0LE_1LA1LD_1RH0LA",
+    "maxsteps": 50000000,
+    "observed_output": {
+      "status": "halt",
+      "steps": 47176870,
+      "ones": 4098,
+      "tape_length": 12289
+    },
+    "independent_check": "The separately authored verify_bridge.py sums source-derived macro step formulas to the same total."
+  },
+  "lean_audit": {
+    "build_performed": false,
+    "reason": "Neither lean nor lake available in PATH; no installed elan toolchains observed.",
+    "local_import_closure_files": 15,
+    "forbidden_tokens_found": [],
+    "token_scan": "sorry, admit, axiom, unsafe, native_decide",
+    "actual_print_axioms_performed": false
+  },
+  "sha256": {
+    "verify_bridge.py": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+    "bridge_results.json": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+    "bridge_results_optimized.json": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+  }
+}

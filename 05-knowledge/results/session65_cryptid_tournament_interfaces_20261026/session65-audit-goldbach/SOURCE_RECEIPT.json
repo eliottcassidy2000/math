@@ -1,0 +1,239 @@
+{
+  "observed_utc": "2026-10-26",
+  "method": "Read-only GitHub connector; no downloaded software executed",
+  "ci": {
+    "id": 26210149415,
+    "url": "https://github.com/lengyijun/goldbach_tm/actions/runs/26210149415",
+    "head_sha": "6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-05-21T06:45:50Z",
+    "updated_at": "2026-05-21T06:48:06Z",
+    "workflow_path": ".github/workflows/lean_action_ci.yml",
+    "jobs": [
+      {
+        "id": 77118861892,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 26210149415,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run leanprover/lean-action@v1",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          }
+        ]
+      }
+    ]
+  },
+  "fresh_source_tree": {
+    "sha": "6cd292062516a0a14ea1b34f2ab75154cae7ab1e",
+    "truncated": false,
+    "blob_entries": [
+      {
+        "path": ".github/workflows/lean_action_ci.yml",
+        "sha": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1",
+        "size": 200
+      },
+      {
+        "path": ".gitignore",
+        "sha": "bfb30ec8c762cc74d4ee1593ab48fc091d04ca4c",
+        "size": 7
+      },
+      {
+        "path": "26_to_25.md",
+        "sha": "728f19e6994e39fce6dc7c41a52f9db72eb3a706",
+        "size": 6985
+      },
+      {
+        "path": "27_to_26.md",
+        "sha": "fc0539bc4516b6c7fe4b84f6caa7994ef7d0e94a",
+        "size": 171
+      },
+      {
+        "path": "GoldbachTm.lean",
+        "sha": "9dfbdbf8daac8dfd88727d9811a16db0628b2bbd",
+        "size": 629
+      },
+      {
+        "path": "GoldbachTm/Basic.lean",
+        "sha": "622ba799863ee6cfbdff60289ba1837514558842",
+        "size": 4194
+      },
+      {
+        "path": "GoldbachTm/Format.lean",
+        "sha": "dee066531c5c7113d9f37a33df17adc40ba8a73e",
+        "size": 116
+      },
+      {
+        "path": "GoldbachTm/ListBlank.lean",
+        "sha": "091918f107c7b697099b56d85c9b34cd3f595f7b",
+        "size": 1361
+      },
+      {
+        "path": "GoldbachTm/Tm25/Content.lean",
+        "sha": "6d4781ec8bfc1c31a378eccbbcf11e23876e7eea",
+        "size": 3386
+      },
+      {
+        "path": "GoldbachTm/Tm25/Miscellaneous.lean",
+        "sha": "b21fdf03c78c567e9b9446f97aa81f2176c8c895",
+        "size": 4315
+      },
+      {
+        "path": "GoldbachTm/Tm25/PBP.lean",
+        "sha": "6191f6a01a4de2a734bb0fc56c8e5e91575d16b9",
+        "size": 7413
+      },
+      {
+        "path": "GoldbachTm/Tm25/Prime.lean",
+        "sha": "3b8cfc122b0a4d2700c875f287a1cd03b4d75e63",
+        "size": 16370
+      },
+      {
+        "path": "GoldbachTm/Tm25/Search0.lean",
+        "sha": "a68d8b2fd991554aef7bd80b275b2994e1d60783",
+        "size": 8138
+      },
+      {
+        "path": "GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+        "sha": "3d5f043a32d9ec8d4c8320f9270618d7e58facfc",
+        "size": 1129
+      },
+      {
+        "path": "GoldbachTm/Tm25/Sim25.lean",
+        "sha": "8d943c0be8a4e839d832f8e8018de865f51f3a3b",
+        "size": 318
+      },
+      {
+        "path": "GoldbachTm/Tm25/Transition.lean",
+        "sha": "82de13e715537bd76369ea99dc3184a170ea26cd",
+        "size": 1319
+      },
+      {
+        "path": "GoldbachTm/Tm25/TuringMachine25.lean",
+        "sha": "3c1ede90cc821687f6108a38bb08d2508de44d43",
+        "size": 7543
+      },
+      {
+        "path": "GoldbachTm/Tm31/Content.lean",
+        "sha": "a9cb35cddc219728a96fbfe3516ac067b021522d",
+        "size": 2916
+      },
+      {
+        "path": "GoldbachTm/Tm31/PBP.lean",
+        "sha": "c9289b0d5e6c4a45d109e6353f229dce1ef26772",
+        "size": 7563
+      },
+      {
+        "path": "GoldbachTm/Tm31/Prime.lean",
+        "sha": "fccc23ad6d7f520d4f185164a4affa554db6d185",
+        "size": 17871
+      },
+      {
+        "path": "GoldbachTm/Tm31/Search0.lean",
+        "sha": "7238e54f0b4c060da9f16a3d5452db1ed38d12ee",
+        "size": 12922
+      },
+      {
+        "path": "GoldbachTm/Tm31/Sim31.lean",
+        "sha": "4d14c6e140c32246929d3bd7f089c1f65af14429",
+        "size": 318
+      },
+      {
+        "path": "GoldbachTm/Tm31/Transition.lean",
+        "sha": "a02236dc7009b4a460c2d50879c621b991247310",
+        "size": 3233
+      },
+      {
+        "path": "GoldbachTm/Tm31/TuringMachine31.lean",
+        "sha": "61c529a64ba80a7f731094121f69ec95be995c7b",
+        "size": 7818
+      },
+      {
+        "path": "LICENSE",
+        "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "size": 11357
+      },
+      {
+        "path": "README.md",
+        "sha": "ee533f098e2e557e97892688ba97d6240a5107bf",
+        "size": 1284
+      },
+      {
+        "path": "archieve/Busy beaver - Wikipedia_2024-10-17T08:56:05UTC.pdf",
+        "sha": "aba930020555855cfac7e4b9b9be474732006ced",
+        "size": 1506633
+      },
+      {
+        "path": "lake-manifest.json",
+        "sha": "e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0",
+        "size": 3118
+      },
+      {
+        "path": "lakefile.lean",
+        "sha": "e94a91d6cef5604b33cd38557cd0dddfc4c75950",
+        "size": 539
+      },
+      {
+        "path": "lean-toolchain",
+        "sha": "57a4710c03ea5e18577887531a95c7ce63a515e7",
+        "size": 29
+      }
+    ]
+  },
+  "table": {
+    "url": "https://github.com/lengyijun/goldbach_tm/blob/6cd292062516a0a14ea1b34f2ab75154cae7ab1e/GoldbachTm/Tm25/TuringMachine25.lean",
+    "git_blob": "3c1ede90cc821687f6108a38bb08d2508de44d43",
+    "local_path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean"
+  },
+  "deepmind_readme": {
+    "url": "https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/README.md",
+    "git_blob": "217e0d5a15a91c303801fe2373bd3c91c9e4cb30",
+    "local_path": "session65-twentyfive/inputs/cryptids/README.md"
+  },
+  "endpoint_proposition": {
+    "url": "https://github.com/google-deepmind/cryptids/blob/6c28d8524fa008c6fb5aadb759df74a55ce96423/Cryptids/Propositions.lean",
+    "git_blob": "f6835d20093f49812e70061a0e59244e924e8600",
+    "namespace": "ConjectureMachines",
+    "declaration": "def GoldbachConjecture : Prop :=\n  ∀ n : ℕ, 2 < n → Even n → ∃ p q : ℕ, Nat.Prime p ∧ Nat.Prime q ∧ n = p + q"
+  },
+  "limitations": [
+    "No local Lean/lake build",
+    "No endpoint #print axioms",
+    "Not a current smallest-machine or minimum-state theorem",
+    "No recomputation of upstream CI logs/kernel artifacts"
+  ],
+  "fresh_byte_comparisons": {
+    "saved_leng_files_matched_to_fresh_pinned_tree": 19,
+    "table_fresh_fetch_match": true,
+    "deepmind_readme_fresh_fetch_match": true
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "family": [
+    {
+      "abundancy": "2",
+      "apex": 3,
+      "arc_dimension": 6,
+      "binary_valuation": 2,
+      "exponent": 2,
+      "multiperfect": true,
+      "order": 4,
+      "sigma_apex": 4
+    },
+    {
+      "abundancy": "2",
+      "apex": 7,
+      "arc_dimension": 28,
+      "binary_valuation": 3,
+      "exponent": 3,
+      "multiperfect": true,
+      "order": 8,
+      "sigma_apex": 8
+    },
+    {
+      "abundancy": "3",
+      "apex": 15,
+      "arc_dimension": 120,
+      "binary_valuation": 3,
+      "exponent": 4,
+      "multiperfect": true,
+      "order": 16,
+      "sigma_apex": 24
+    },
+    {
+      "abundancy": "2",
+      "apex": 31,
+      "arc_dimension": 496,
+      "binary_valuation": 5,
+      "exponent": 5,
+      "multiperfect": true,
+      "order": 32,
+      "sigma_apex": 32
+    },
+    {
+      "abundancy": "13/4",
+      "apex": 63,
+      "arc_dimension": 2016,
+      "binary_valuation": 3,
+      "exponent": 6,
+      "multiperfect": false,
+      "order": 64,
+      "sigma_apex": 104
+    },
+    {
+      "abundancy": "2",
+      "apex": 127,
+      "arc_dimension": 8128,
+      "binary_valuation": 7,
+      "exponent": 7,
+      "multiperfect": true,
+      "order": 128,
+      "sigma_apex": 128
+    },
+    {
+      "abundancy": "27/8",
+      "apex": 255,
+      "arc_dimension": 32640,
+      "binary_valuation": 4,
+      "exponent": 8,
+      "multiperfect": false,
+      "order": 256,
+      "sigma_apex": 432
+    },
+    {
+      "abundancy": "37/16",
+      "apex": 511,
+      "arc_dimension": 130816,
+      "binary_valuation": 4,
+      "exponent": 9,
+      "multiperfect": false,
+      "order": 512,
+      "sigma_apex": 592
+    },
+    {
+      "abundancy": "3",
+      "apex": 1023,
+      "arc_dimension": 523776,
+      "binary_valuation": 9,
+      "exponent": 10,
+      "multiperfect": true,
+      "order": 1024,
+      "sigma_apex": 1536
+    },
+    {
+      "abundancy": "135/64",
+      "apex": 2047,
+      "arc_dimension": 2096128,
+      "binary_valuation": 4,
+      "exponent": 11,
+      "multiperfect": false,
+      "order": 2048,
+      "sigma_apex": 2160
+    },
+    {
+      "abundancy": "273/64",
+      "apex": 4095,
+      "arc_dimension": 8386560,
+      "binary_valuation": 5,
+      "exponent": 12,
+      "multiperfect": false,
+      "order": 4096,
+      "sigma_apex": 8736
+    },
+    {
+      "abundancy": "2",
+      "apex": 8191,
+      "arc_dimension": 33550336,
+      "binary_valuation": 13,
+      "exponent": 13,
+      "multiperfect": true,
+      "order": 8192,
+      "sigma_apex": 8192
+    },
+    {
+      "abundancy": "11/4",
+      "apex": 16383,
+      "arc_dimension": 134209536,
+      "binary_valuation": 11,
+      "exponent": 14,
+      "multiperfect": false,
+      "order": 16384,
+      "sigma_apex": 22528
+    },
+    {
+      "abundancy": "19/8",
+      "apex": 32767,
+      "arc_dimension": 536854528,
+      "binary_valuation": 11,
+      "exponent": 15,
+      "multiperfect": false,
+      "order": 32768,
+      "sigma_apex": 38912
+    },
+    {
+      "abundancy": "3483/1024",
+      "apex": 65535,
+      "arc_dimension": 2147450880,
+      "binary_valuation": 5,
+      "exponent": 16,
+      "multiperfect": false,
+      "order": 65536,
+      "sigma_apex": 111456
+    },
+    {
+      "abundancy": "2",
+      "apex": 131071,
+      "arc_dimension": 8589869056,
+      "binary_valuation": 17,
+      "exponent": 17,
+      "multiperfect": true,
+      "order": 131072,
+      "sigma_apex": 131072
+    },
+    {
+      "abundancy": "925/256",
+      "apex": 262143,
+      "arc_dimension": 34359607296,
+      "binary_valuation": 9,
+      "exponent": 18,
+      "multiperfect": false,
+      "order": 262144,
+      "sigma_apex": 473600
+    },
+    {
+      "abundancy": "2",
+      "apex": 524287,
+      "arc_dimension": 137438691328,
+      "binary_valuation": 19,
+      "exponent": 19,
+      "multiperfect": true,
+      "order": 524288,
+      "sigma_apex": 524288
+    },
+    {
+      "abundancy": "1953/512",
+      "apex": 1048575,
+      "arc_dimension": 549755289600,
+      "binary_valuation": 10,
+      "exponent": 20,
+      "multiperfect": false,
+      "order": 1048576,
+      "sigma_apex": 1999872
+    },
+    {
+      "abundancy": "9633/4096",
+      "apex": 2097151,
+      "arc_dimension": 2199022206976,
+      "binary_valuation": 8,
+      "exponent": 21,
+      "multiperfect": false,
+      "order": 2097152,
+      "sigma_apex": 2466048
+    },
+    {
+      "abundancy": "23085/8192",
+      "apex": 4194303,
+      "arc_dimension": 8796090925056,
+      "binary_valuation": 8,
+      "exponent": 22,
+      "multiperfect": false,
+      "order": 4194304,
+      "sigma_apex": 5909760
+    },
+    {
+      "abundancy": "267723/131072",
+      "apex": 8388607,
+      "arc_dimension": 35184367894528,
+      "binary_valuation": 5,
+      "exponent": 23,
+      "multiperfect": false,
+      "order": 8388608,
+      "sigma_apex": 8567136
+    },
+    {
+      "abundancy": "297297/65536",
+      "apex": 16777215,
+      "arc_dimension": 140737479966720,
+      "binary_valuation": 7,
+      "exponent": 24,
+      "multiperfect": false,
+      "order": 16777216,
+      "sigma_apex": 38054016
+    }
+  ],
+  "hostiles": {
+    "120": "three-perfect, not perfect",
+    "21": "sigma=32 but21 does not divide32; power-of-two cancellation test only applies to the specified arc family"
+  },
+  "independent_sigma_values": 10000,
+  "odd_budget_values": 5000,
+  "status": "PASS"
+}

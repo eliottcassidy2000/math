@@ -2,26 +2,127 @@
   {
     "script": "session65-cryptids/check.py",
     "stored_stdout": "session65-cryptids/normal.json",
-    "timeout": 600
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
   },
   {
     "script": "session65-audit-cryptids/independent_check.py",
     "stored_stdout": "session65-audit-cryptids/normal.json",
-    "timeout": 600
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
   },
   {
     "script": "session65-fifteens/check.py",
     "stored_stdout": "session65-fifteens/receipt.json",
-    "timeout": 600
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
   },
   {
     "script": "session65-fifteens/check_general_permutation.py",
     "stored_stdout": "session65-fifteens/general-receipt.json",
-    "timeout": 600
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
   },
   {
     "script": "session65-audit-fifteens/independent_check.py",
     "stored_stdout": "session65-audit-fifteens/receipt.json",
-    "timeout": 600
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-weakcollatz/verify_bridge.py",
+    "stored_stdout": "session65-weakcollatz/bridge_results.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-audit-weakcollatz/portable_math_audit.py",
+    "stored_stdout": "session65-audit-weakcollatz/portable_normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-twentyfive/verify.py",
+    "stored_stdout": "session65-twentyfive/checks.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-audit-goldbach/goldbach/check.py",
+    "stored_stdout": "session65-audit-goldbach/goldbach/normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-root/multiperfect/check.py",
+    "stored_stdout": "session65-root/multiperfect/normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-audit-goldbach/multiperfect/check.py",
+    "stored_stdout": "session65-audit-goldbach/multiperfect/normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-reductions/check.py",
+    "stored_stdout": "session65-reductions/normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-audit-reductions/portable_check.py",
+    "stored_stdout": "session65-audit-reductions/portable-normal.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-audit-reductions/portable_hostiles.py",
+    "stored_stdout": "session65-audit-reductions/portable-hostiles.json",
+    "timeout": 600,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
   }
 ]

@@ -1,0 +1,292 @@
+{
+  "family": [
+    {
+      "D": 6,
+      "M": 3,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 2,
+      "sigma_D": 12,
+      "sigma_M": 4,
+      "v2_sigma_M": 2
+    },
+    {
+      "D": 28,
+      "M": 7,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 3,
+      "sigma_D": 56,
+      "sigma_M": 8,
+      "v2_sigma_M": 3
+    },
+    {
+      "D": 120,
+      "M": 15,
+      "abundancy": "3",
+      "multiperfect": true,
+      "r": 4,
+      "sigma_D": 360,
+      "sigma_M": 24,
+      "v2_sigma_M": 3
+    },
+    {
+      "D": 496,
+      "M": 31,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 5,
+      "sigma_D": 992,
+      "sigma_M": 32,
+      "v2_sigma_M": 5
+    },
+    {
+      "D": 2016,
+      "M": 63,
+      "abundancy": "13/4",
+      "multiperfect": false,
+      "r": 6,
+      "sigma_D": 6552,
+      "sigma_M": 104,
+      "v2_sigma_M": 3
+    },
+    {
+      "D": 8128,
+      "M": 127,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 7,
+      "sigma_D": 16256,
+      "sigma_M": 128,
+      "v2_sigma_M": 7
+    },
+    {
+      "D": 32640,
+      "M": 255,
+      "abundancy": "27/8",
+      "multiperfect": false,
+      "r": 8,
+      "sigma_D": 110160,
+      "sigma_M": 432,
+      "v2_sigma_M": 4
+    },
+    {
+      "D": 130816,
+      "M": 511,
+      "abundancy": "37/16",
+      "multiperfect": false,
+      "r": 9,
+      "sigma_D": 302512,
+      "sigma_M": 592,
+      "v2_sigma_M": 4
+    },
+    {
+      "D": 523776,
+      "M": 1023,
+      "abundancy": "3",
+      "multiperfect": true,
+      "r": 10,
+      "sigma_D": 1571328,
+      "sigma_M": 1536,
+      "v2_sigma_M": 9
+    },
+    {
+      "D": 2096128,
+      "M": 2047,
+      "abundancy": "135/64",
+      "multiperfect": false,
+      "r": 11,
+      "sigma_D": 4421520,
+      "sigma_M": 2160,
+      "v2_sigma_M": 4
+    },
+    {
+      "D": 8386560,
+      "M": 4095,
+      "abundancy": "273/64",
+      "multiperfect": false,
+      "r": 12,
+      "sigma_D": 35773920,
+      "sigma_M": 8736,
+      "v2_sigma_M": 5
+    },
+    {
+      "D": 33550336,
+      "M": 8191,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 13,
+      "sigma_D": 67100672,
+      "sigma_M": 8192,
+      "v2_sigma_M": 13
+    },
+    {
+      "D": 134209536,
+      "M": 16383,
+      "abundancy": "11/4",
+      "multiperfect": false,
+      "r": 14,
+      "sigma_D": 369076224,
+      "sigma_M": 22528,
+      "v2_sigma_M": 11
+    },
+    {
+      "D": 536854528,
+      "M": 32767,
+      "abundancy": "19/8",
+      "multiperfect": false,
+      "r": 15,
+      "sigma_D": 1275029504,
+      "sigma_M": 38912,
+      "v2_sigma_M": 11
+    },
+    {
+      "D": 2147450880,
+      "M": 65535,
+      "abundancy": "3483/1024",
+      "multiperfect": false,
+      "r": 16,
+      "sigma_D": 7304268960,
+      "sigma_M": 111456,
+      "v2_sigma_M": 5
+    },
+    {
+      "D": 8589869056,
+      "M": 131071,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 17,
+      "sigma_D": 17179738112,
+      "sigma_M": 131072,
+      "v2_sigma_M": 17
+    },
+    {
+      "D": 34359607296,
+      "M": 262143,
+      "abundancy": "925/256",
+      "multiperfect": false,
+      "r": 18,
+      "sigma_D": 124150924800,
+      "sigma_M": 473600,
+      "v2_sigma_M": 9
+    },
+    {
+      "D": 137438691328,
+      "M": 524287,
+      "abundancy": "2",
+      "multiperfect": true,
+      "r": 19,
+      "sigma_D": 274877382656,
+      "sigma_M": 524288,
+      "v2_sigma_M": 19
+    },
+    {
+      "D": 549755289600,
+      "M": 1048575,
+      "abundancy": "1953/512",
+      "multiperfect": false,
+      "r": 20,
+      "sigma_D": 2097015782400,
+      "sigma_M": 1999872,
+      "v2_sigma_M": 10
+    },
+    {
+      "D": 2199022206976,
+      "M": 2097151,
+      "abundancy": "9633/4096",
+      "multiperfect": false,
+      "r": 21,
+      "sigma_D": 5171675029248,
+      "sigma_M": 2466048,
+      "v2_sigma_M": 8
+    },
+    {
+      "D": 8796090925056,
+      "M": 4194303,
+      "abundancy": "23085/8192",
+      "multiperfect": false,
+      "r": 22,
+      "sigma_D": 24787324097280,
+      "sigma_M": 5909760,
+      "v2_sigma_M": 8
+    },
+    {
+      "D": 35184367894528,
+      "M": 8388607,
+      "abundancy": "267723/131072",
+      "multiperfect": false,
+      "r": 23,
+      "sigma_D": 71866337019552,
+      "sigma_M": 8567136,
+      "v2_sigma_M": 5
+    },
+    {
+      "D": 140737479966720,
+      "M": 16777215,
+      "abundancy": "297297/65536",
+      "multiperfect": false,
+      "r": 24,
+      "sigma_D": 638440408045440,
+      "sigma_M": 38054016,
+      "v2_sigma_M": 7
+    }
+  ],
+  "hostiles": {
+    "120": {
+      "k": 3,
+      "sigma": 360
+    },
+    "21": {
+      "does_not_divide_sigma": true,
+      "sigma": 32
+    },
+    "5": {
+      "Euler_form_not_sufficient": true,
+      "sigma": 6
+    },
+    "9": {
+      "sigma": 13,
+      "square_not_sufficient": true
+    }
+  },
+  "multiperfect_census_through_100000": [
+    [
+      6,
+      2
+    ],
+    [
+      28,
+      2
+    ],
+    [
+      120,
+      3
+    ],
+    [
+      496,
+      2
+    ],
+    [
+      672,
+      3
+    ],
+    [
+      8128,
+      2
+    ],
+    [
+      30240,
+      4
+    ],
+    [
+      32760,
+      4
+    ]
+  ],
+  "odd_ledger_checks": 50000,
+  "odd_witnesses_through_99999": [],
+  "paired_divisor_checks": 10000,
+  "sealed_hashes": 5,
+  "sieve_limit": 100000,
+  "status": "PASS FINITE-EXACT; no odd nonexistence inference"
+}

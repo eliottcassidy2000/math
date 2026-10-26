@@ -1,0 +1,159 @@
+{
+  "arithmetic": {
+    "even_targets": 249,
+    "first_pair_counts": {
+      "4": 1,
+      "6": 1,
+      "8": 2,
+      "10": 3,
+      "12": 2,
+      "14": 3,
+      "16": 4,
+      "18": 4,
+      "20": 4
+    },
+    "largest_even": 500,
+    "odd_prime_pairs": 2025
+  },
+  "integrity": {
+    "git_blob_checks": 19,
+    "manifest_entries": 45,
+    "sha256_entries": 45,
+    "source_files": 48
+  },
+  "padding": {
+    "blank_new_state_path": [
+      25,
+      26
+    ],
+    "coupled_old_steps": 10000,
+    "far_tape_sentinels_preserved": true,
+    "guarded_local_configurations": 2352,
+    "halting_toy_old_new_attempts": [
+      2,
+      4
+    ],
+    "ordinary_branches_tested": 49,
+    "padded_steps": 10020,
+    "selected_instruction_visits": 10,
+    "translations": [
+      -11,
+      0,
+      17
+    ],
+    "undefined_selection_rejected": true,
+    "unselected_read_controls": 2352
+  },
+  "source_static": {
+    "endpoint_axiom_audit": "NOT RUN",
+    "external_imports_not_built": [
+      "Mathlib.Computability.TuringMachine",
+      "Mathlib.Data.Nat.ModEq",
+      "Mathlib.Data.Nat.Prime.Basic",
+      "Mathlib.Data.Nat.Prime.Defs",
+      "Mathlib.Tactic.Ring.RingNF"
+    ],
+    "lean_build": "NOT RUN",
+    "local_import_cone": [
+      "GoldbachTm.Basic",
+      "GoldbachTm.Format",
+      "GoldbachTm.ListBlank",
+      "GoldbachTm.Tm25.Content",
+      "GoldbachTm.Tm25.Miscellaneous",
+      "GoldbachTm.Tm25.PBP",
+      "GoldbachTm.Tm25.Prime",
+      "GoldbachTm.Tm25.Search0",
+      "GoldbachTm.Tm25.Transition",
+      "GoldbachTm.Tm25.TuringMachine25"
+    ],
+    "root_endpoint_import": true
+  },
+  "status": "PASS FINITE-EXACT and static source audit only",
+  "table": {
+    "hostile_mutations_rejected": 4,
+    "ordinary_instructions": 49,
+    "renaming": [
+      "A",
+      "D",
+      "E",
+      "G",
+      "H",
+      "I",
+      "V",
+      "J",
+      "W",
+      "K",
+      "L",
+      "M",
+      "N",
+      "U",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "X",
+      "Y",
+      "F",
+      "S",
+      "B",
+      "C",
+      "T"
+    ],
+    "slots": 50
+  },
+  "trace": {
+    "infinite_nonhalting_conclusion": false,
+    "macro_blocks": [
+      {
+        "n": 4,
+        "step": 45
+      },
+      {
+        "n": 6,
+        "step": 132
+      },
+      {
+        "n": 8,
+        "step": 301
+      },
+      {
+        "n": 10,
+        "step": 596
+      },
+      {
+        "n": 12,
+        "step": 1101
+      },
+      {
+        "n": 14,
+        "step": 1988
+      },
+      {
+        "n": 16,
+        "step": 3263
+      },
+      {
+        "n": 18,
+        "step": 5160
+      },
+      {
+        "n": 20,
+        "step": 7805
+      },
+      {
+        "n": 22,
+        "step": 11522
+      },
+      {
+        "n": 24,
+        "step": 16497
+      },
+      {
+        "n": 26,
+        "step": 22730
+      }
+    ],
+    "microsteps": 30000,
+    "visited_states": 25
+  }
+}

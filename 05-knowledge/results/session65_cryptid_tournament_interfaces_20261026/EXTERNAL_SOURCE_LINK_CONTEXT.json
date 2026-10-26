@@ -1,0 +1,10 @@
+{
+  "session65-twentyfive/inputs/cryptids/README.md": {
+    "source_sha256": "f59f80f9f07a7744c1ac38430bfc8b22588948c7bfa82540fc5fd4ef53e6d9ba",
+    "repository": "google-deepmind/cryptids",
+    "commit": "6c28d8524fa008c6fb5aadb759df74a55ce96423",
+    "repository_context": "README.md",
+    "tree_snapshot": "DEEPMIND_PINNED_TREE.json",
+    "tree_sha256": "52b1a425084fc236703794b944f879d2727b7afdeff1e4dd04c13174bff3af93"
+  }
+}
