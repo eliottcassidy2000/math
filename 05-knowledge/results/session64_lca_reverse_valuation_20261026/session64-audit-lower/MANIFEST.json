@@ -1,0 +1,38 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 8496,
+      "sha256": "dbe60e8e8fe4ad5651c4738cf7eeeffad0497764324a7a08796873a8581ddcc1"
+    },
+    "check.py": {
+      "bytes": 12820,
+      "sha256": "62a350edaa51067421a3ad5cc57ecd9d8209d21dd558e8842e5d6850a4e0c371"
+    },
+    "core.py": {
+      "bytes": 10779,
+      "sha256": "d384947bee0e8ef7260c313783fc36bdc29aa35aa1cb18779ee63ea03ab3e0af"
+    },
+    "found.json": {
+      "bytes": 19739,
+      "sha256": "81b5105261fa744562ad69d3c37d51501baaae1f6a69d7aadbcb91b9c67cf0d5"
+    },
+    "normal.json": {
+      "bytes": 221001,
+      "sha256": "65714e7459954c19f4271b785c7e24c12edea87c45f15c01a4f857984c62144c"
+    },
+    "optimized.json": {
+      "bytes": 221001,
+      "sha256": "65714e7459954c19f4271b785c7e24c12edea87c45f15c01a4f857984c62144c"
+    }
+  },
+  "independence": "Independent signed-component source/anti equations; producer code is not imported. Whole dimension3 illegal leaves and all singleton-blue loci enumerated completely. Actual clone blocks exhaust all subsets and reconstruct literal arcs.",
+  "normal_optimized_identical": true,
+  "predecessor_n11_manifest_sha256": "7f697a152839cec47572093ffe75e15f3ef252a3a033561ae4c4900244f1bc8b",
+  "reproduction": [
+    "python3 check.py > normal.json",
+    "python3 -O check.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "scope": "Complete finite closed marked endpoint-four closure at n8,n9,n10. Combined with audited n>=11 yields n>=8; exact n7 pure-blue obstruction proves optimality of8 for this unfiltered local replacement threshold. Whole black-core connectivity not claimed.",
+  "status": "SEALED PASS"
+}

@@ -1,0 +1,62 @@
+{
+  "naive_scalar_substitution_hostiles": {
+    "order4": {
+      "actual": 2,
+      "naive": 0
+    },
+    "order6": {
+      "actual": 26,
+      "naive": 20
+    }
+  },
+  "orders": [
+    0,
+    6
+  ],
+  "rows": [
+    {
+      "labelled": 1,
+      "n": 0,
+      "ordinary": 1,
+      "pair_free_core": 1
+    },
+    {
+      "labelled": 1,
+      "n": 1,
+      "ordinary": 1,
+      "pair_free_core": 1
+    },
+    {
+      "labelled": 2,
+      "n": 2,
+      "ordinary": 1,
+      "pair_free_core": 0
+    },
+    {
+      "labelled": 8,
+      "n": 3,
+      "ordinary": 2,
+      "pair_free_core": 1
+    },
+    {
+      "labelled": 64,
+      "n": 4,
+      "ordinary": 4,
+      "pair_free_core": 2
+    },
+    {
+      "labelled": 1024,
+      "n": 5,
+      "ordinary": 12,
+      "pair_free_core": 5
+    },
+    {
+      "labelled": 32768,
+      "n": 6,
+      "ordinary": 56,
+      "pair_free_core": 26
+    }
+  ],
+  "scope": "Literal tournament relabeling orbits and homogeneous-pair test; no inherited counting or clone routines imported.",
+  "status": "PASS"
+}

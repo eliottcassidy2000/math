@@ -1,0 +1,343 @@
+{
+  "incoming_commit": "2a9a9c342e5940f0e50b97fba87a7cfb7a24de7b",
+  "incoming_parent": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+  "incoming_packet_tree": "f245aa791eb1814079d351e8a17cecf2e8229d72",
+  "captured_utc": "2026-10-26T00:56:22.239918+00:00",
+  "incoming_files": [
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/.gitattributes",
+      "git_blob_sha1": "71cb1cfd0c9ed64b773f8f648351b1c0a94e3853",
+      "sha256": "f102787df6993229c0893d2cdfb1efcd8b2564cacdf6c0fac79581e70a88213b",
+      "bytes": 53,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/AUDIT.md",
+      "git_blob_sha1": "73d00902b7a81f6f3b6022076ab9d75e30257c87",
+      "sha256": "b79f35d85da2194f53e19519da7440ac039a09b867e915685f20dcfd7f78b55f",
+      "bytes": 5358,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/PORT_FRONTIER.md",
+      "git_blob_sha1": "bf7940eb43599d7f47a3fdef485c6f74021bca8b",
+      "sha256": "b9f9d446a8b30054ee72d3256f997e67bdd0aadb8dbf9b2c2be5f0d5999f9ed5",
+      "bytes": 6045,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/PORT_FRONTIER_REVIEW.md",
+      "git_blob_sha1": "04683763d757cd96f2851f78426ad52e30c8e72b",
+      "sha256": "6061e21e7425fad109480fbda7078cb4e83aef9cb5f45f1b23f139741a14c061",
+      "bytes": 10558,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/README.md",
+      "git_blob_sha1": "4be227407c06fa878e295e224438bea631b9a077",
+      "sha256": "6f36950e9cd041b692c31266afbbbde671178ff39c772032e6f1dccd4b1b1787",
+      "bytes": 6773,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/CONGRUENCE_REVIEW.md",
+      "git_blob_sha1": "fb3a2ed8fc46a47780841e264822bd8224fd5575",
+      "sha256": "32643884012bd7b3711a8a2e837ee6bdd5266f2cd434c5b210b99caaef69ea34",
+      "bytes": 8217,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/INDEPENDENT_REVIEW.md",
+      "git_blob_sha1": "c7bdb124ea0f4a299f914f3f193f0c19709a75d3",
+      "sha256": "d047dee93b55f4a44bbc31b8c9d01e19421a22500561e01ddcc72517c79b15fc",
+      "bytes": 14891,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/README.md",
+      "git_blob_sha1": "477e1a700275e0830806b3c43f82be7bc361fef9",
+      "sha256": "88f83d3d2b0a144bd6ad423ee4b2de15ae6778ca046c5cecd274416eadd49457",
+      "bytes": 13315,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/check.py",
+      "git_blob_sha1": "f878467847919fc14fbb0f6781924d425cb1518f",
+      "sha256": "c4e6738841ff05cee30f3d553e5b6639491d2b545c879e9a04a92582165edf11",
+      "bytes": 8644,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/congruence-normal.json",
+      "git_blob_sha1": "452c7f65df2698b2d40a5e8a51e429fb9728bcbf",
+      "sha256": "71261873ec943c014e38e8667d0085646919318e6cf38bc6ba2b8b351091aff5",
+      "bytes": 471,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/congruence-optimized.json",
+      "git_blob_sha1": "452c7f65df2698b2d40a5e8a51e429fb9728bcbf",
+      "sha256": "71261873ec943c014e38e8667d0085646919318e6cf38bc6ba2b8b351091aff5",
+      "bytes": 471,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/normal.json",
+      "git_blob_sha1": "5c2ef4408b39e1f115dde646473bdfd72c445444",
+      "sha256": "9b00f9aa1334312ce677f670e65890ba2409b1767aa3ac2db9511057a2894f5c",
+      "bytes": 1112,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/optimized.json",
+      "git_blob_sha1": "5c2ef4408b39e1f115dde646473bdfd72c445444",
+      "sha256": "9b00f9aa1334312ce677f670e65890ba2409b1767aa3ac2db9511057a2894f5c",
+      "bytes": 1112,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/review-normal.json",
+      "git_blob_sha1": "19015d9fa657985735297a00c3bce7b54ad3c8ce",
+      "sha256": "9a45c50823219d2536552ba6c0348ab633051b7ae59b3f2360348ec764990089",
+      "bytes": 426,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/review-optimized.json",
+      "git_blob_sha1": "19015d9fa657985735297a00c3bce7b54ad3c8ce",
+      "sha256": "9a45c50823219d2536552ba6c0348ab633051b7ae59b3f2360348ec764990089",
+      "bytes": 426,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/INDEPENDENT_REVIEW.md",
+      "git_blob_sha1": "61f4547019633e576e85e444b7b62b0646bca2d0",
+      "sha256": "79ae34af60ba82965bd22a899b44d8e4904bcd9692239ea2dfaccb13cf21ea81",
+      "bytes": 12665,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
+      "git_blob_sha1": "ebda52cc8bc0159db3deda37345b6eaa83706532",
+      "sha256": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f",
+      "bytes": 13147,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/check.py",
+      "git_blob_sha1": "5e7e55825daedd97cfc983c84dcf112ff5ff7243",
+      "sha256": "fd366f1901bba107d2cba08714e06be3d952083ad9fd627ea31154459a38b5cb",
+      "bytes": 8498,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/normal.json",
+      "git_blob_sha1": "8a7d338f45615b8232ca92c1c533121234c019c1",
+      "sha256": "1cd431dd70793ed18f583209c920bff5c373df765ee727b391205350ccff5ac0",
+      "bytes": 19998,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/optimized.json",
+      "git_blob_sha1": "8a7d338f45615b8232ca92c1c533121234c019c1",
+      "sha256": "1cd431dd70793ed18f583209c920bff5c373df765ee727b391205350ccff5ac0",
+      "bytes": 19998,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/reverse.py",
+      "git_blob_sha1": "8fde61175747cf4ebfc0a2ae60b3ad57a0b306b3",
+      "sha256": "072667270929660d407961f127f89b7ac2d97825d900a07112af8acc11cf70bf",
+      "bytes": 12537,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/review-normal.json",
+      "git_blob_sha1": "d237c3aaf903a2405729f3b07d1854365ba9a69b",
+      "sha256": "14b78c544be4ea415110477e47ba68b132dd3e9acc3a34487b0bb1ea6ebc0ed1",
+      "bytes": 288,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/review-optimized.json",
+      "git_blob_sha1": "d237c3aaf903a2405729f3b07d1854365ba9a69b",
+      "sha256": "14b78c544be4ea415110477e47ba68b132dd3e9acc3a34487b0bb1ea6ebc0ed1",
+      "bytes": 288,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/manifest.json",
+      "git_blob_sha1": "d9a65a5e629e136ba20a4e5a49ebdf64bcea6ccb",
+      "sha256": "fdf922194298189521f60e4858c36acf84a08416fe695924fabe164687c58f24",
+      "bytes": 8234,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/INDEPENDENT_REVIEW.md",
+      "git_blob_sha1": "85d926c14acac9abafdd0f218d6e8d257f185acc",
+      "sha256": "79d8d18d658ed24f2a574d24565d16bcd1d5246963512147c3d8ad6adf6927b5",
+      "bytes": 12296,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/README.md",
+      "git_blob_sha1": "b4b4ce485a8596543fcba2f8b763d1a41b616f79",
+      "sha256": "be5559f67e2eee18119fc690582b654bcdd9d99a8c26cc03003ef7769138c349",
+      "bytes": 10675,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/check.py",
+      "git_blob_sha1": "5fe5bf158bfdebecb3a6e37478c9c9070b8c3f8c",
+      "sha256": "7a3e7c9db9a9c434e99dcc44fe505ea55a20692386a1c61f8e2c1cf7378b2aea",
+      "bytes": 11225,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/normal.json",
+      "git_blob_sha1": "a244deaf65051fefd9d0d220c95184581660f33e",
+      "sha256": "c9480c023bd7ae705e1cad9103311f538476346b2046161fecc49915f17c3036",
+      "bytes": 5478,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/optimized.json",
+      "git_blob_sha1": "a244deaf65051fefd9d0d220c95184581660f33e",
+      "sha256": "c9480c023bd7ae705e1cad9103311f538476346b2046161fecc49915f17c3036",
+      "bytes": 5478,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/review-normal.json",
+      "git_blob_sha1": "6632963645e15d1a0a41a6731cafc9aeb7af528b",
+      "sha256": "ef7dfd541c392f6fc56dc8fd24bf44743cbc172292e7c8d0d6e92f4f07bf1672",
+      "bytes": 472,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order12/review-optimized.json",
+      "git_blob_sha1": "6632963645e15d1a0a41a6731cafc9aeb7af528b",
+      "sha256": "ef7dfd541c392f6fc56dc8fd24bf44743cbc172292e7c8d0d6e92f4f07bf1672",
+      "bytes": 472,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/GUARD_EXTENSION.md",
+      "git_blob_sha1": "52469e65b7cfca90eb5ac14d4a9a1f326e9bac23",
+      "sha256": "81c4e2e5a413de51e8d2519c7e42ad31f174611fe65a975d8eb45053201dda08",
+      "bytes": 3409,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/INDEPENDENT_REVIEW.md",
+      "git_blob_sha1": "c08e27effa56386274c19786600ab1f41343817f",
+      "sha256": "bdd873065494e52599452c0ea3cdcad7d1b1dcd2b8cebed54cdc46087cd70633",
+      "bytes": 11395,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/README.md",
+      "git_blob_sha1": "b30326c54c5f72e316cb916398204ab0eb68d0ba",
+      "sha256": "898d7026903fd8be32ad1f88fb09c65cfecd167669310d9f14effa6eee8cb890",
+      "bytes": 10415,
+      "reviewed_prose_or_scope": true
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/check.py",
+      "git_blob_sha1": "e02cbb118ad61cbc79d25486df022157cf98a111",
+      "sha256": "c04e655d28b6ba98d89f8a704446831bc1c3267d3cfa11b63633dc4f71ff4730",
+      "bytes": 8193,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/normal.json",
+      "git_blob_sha1": "b3d24c7f1dba81a346f74293a2bfd89f68238f9b",
+      "sha256": "8a2581dcd985f0a60ff34292193dbdc90653112c37e16447188719e2dfec05ec",
+      "bytes": 10683,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/optimized.json",
+      "git_blob_sha1": "b3d24c7f1dba81a346f74293a2bfd89f68238f9b",
+      "sha256": "8a2581dcd985f0a60ff34292193dbdc90653112c37e16447188719e2dfec05ec",
+      "bytes": 10683,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/review-normal.json",
+      "git_blob_sha1": "f0148421d84571b4ec1b1941c60dbf8431111e1a",
+      "sha256": "5f17c9c3fd829890b1711187c295dabb984cb1f2c2cc9455288f199216767e85",
+      "bytes": 370,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/review-optimized.json",
+      "git_blob_sha1": "f0148421d84571b4ec1b1941c60dbf8431111e1a",
+      "sha256": "5f17c9c3fd829890b1711187c295dabb984cb1f2c2cc9455288f199216767e85",
+      "bytes": 370,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/replay.py",
+      "git_blob_sha1": "9a5d6b47453e09c9ffe04648b9fd2892496c05ec",
+      "sha256": "a2ee05eecf04dd8c2c1d3cb1247e1079abb2eb27920d6eecaf033ecda905995d",
+      "bytes": 2740,
+      "reviewed_prose_or_scope": false
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/verify.py",
+      "git_blob_sha1": "cfb89308d673f5568ef37f0502fc5b6b4e53a693",
+      "sha256": "0e4bb604ba1592911c98797091c1ae7091e15c4bec5bbe031d173b689bd36c45",
+      "bytes": 5034,
+      "reviewed_prose_or_scope": false
+    }
+  ],
+  "session64_comparison_files": [
+    {
+      "path": "session64-root/SYNTHESIS.md",
+      "sha256": "54233f0dc980175ce53094bdc3bb1ca7030dc0cd96151cbe9d03e34e84f0c0b3",
+      "bytes": 5667
+    },
+    {
+      "path": "session64-root/CONNECTIONS.md",
+      "sha256": "c064397b0a3edc077795cbb81ab227bbd363aa95527d73a08db8a9432d33d688",
+      "bytes": 12283
+    },
+    {
+      "path": "session64-repairs/README.md",
+      "sha256": "cefb67a943d293ac60ead18a6be7aedf905164958ffad1f6525e068ee9529f1b",
+      "bytes": 8548
+    },
+    {
+      "path": "session64-repairs/boundary/README.md",
+      "sha256": "66c9cea012d572afcc5fd9fe495bf74f1b51f87ea2ec18ea1a10e24f24bf95d6",
+      "bytes": 5187
+    },
+    {
+      "path": "session64-counting/SKIP_CONTRACTION.md",
+      "sha256": "13914664e447420e15a9f39dbaaf0f1043e68fa79765d7628bcb0f8fa7c4d719",
+      "bytes": 5537
+    },
+    {
+      "path": "session64-counting/NEWTON_QUOTIENT.md",
+      "sha256": "dd9bd9c2ca86404bf53b047111288ba1734e0ae20c7e2a6db136664cdcf3b154",
+      "bytes": 11150
+    },
+    {
+      "path": "session64-reverse-valuation/REPORT.md",
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+      "bytes": 18389
+    },
+    {
+      "path": "session64-audit-dynamics/REPORT.md",
+      "sha256": "0b0a11ceb39ad5d0e5c9f875866024e316ea33759cb8d749c280fe5b48abc3b3",
+      "bytes": 11089
+    },
+    {
+      "path": "session64-audit-synthesis/REPORT.md",
+      "sha256": "c1cc8c7ff96e87524635a9d7db05052e3c985421d37ff1db3813da4586159194",
+      "bytes": 10505
+    }
+  ],
+  "method": "Targeted git show at pinned commit; read proof/scope and audit prose. Hashing unreviewed files is identity verification only, not their mathematical or executable validation. No incoming producer rerun. No repository edits."
+}

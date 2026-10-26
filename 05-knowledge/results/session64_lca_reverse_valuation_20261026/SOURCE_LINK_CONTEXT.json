@@ -28,5 +28,89 @@
     "repository_context": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
     "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
     "kind": "Exact historical repository snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS.md": {
+    "source_sha256": "f0f1fdd86ff08db5f22b90207e4f496229285992bf752cd2bedd21ddfe1516fa",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS_REVIEW.md": {
+    "source_sha256": "cd604b1798660eafc2576960325c8ad4a969f46b84fe44cb94990fe6860848e7",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS_REVIEW.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/PORT_FRONTIER.md": {
+    "source_sha256": "34484675f3ed43f4644034d8a2031f54e6f066be39d4dc763c0f3a398d5bfb80",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/PORT_FRONTIER.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/counting/MODULAR.md": {
+    "source_sha256": "9bca1a5dac2f090d1738bffc27814c6cfd203923fb80ceb693fe99b8830d5e9c",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/counting/MODULAR.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/counting/README.md": {
+    "source_sha256": "e3b44b2de0adde938eb1b9766c31c3397870195b867c97d4fdb179cfb6d26fee",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/counting/README.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md": {
+    "source_sha256": "da354b38db47c176763e8c9ed0ea832d5356a4d9c7eb62d51e10a80b3ae66591",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_REVIEW.md": {
+    "source_sha256": "535b601b2978b577e89c39f52367ca54777a0dfc48a683cfa3a5e8667e8ba707",
+    "repository_context": "05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_REVIEW.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-repo/05-knowledge/results/ports_regular_actions_hn_20261025/counting/CLONE_INVOLUTION.md": {
+    "source_sha256": "ad2c6678d929799da9c043a1ff14cab659f575af9b29090be9c47631a6877483",
+    "repository_context": "05-knowledge/results/ports_regular_actions_hn_20261025/counting/CLONE_INVOLUTION.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact inherited repository source snapshot"
+  },
+  "session64-root/prior-debt.md": {
+    "source_sha256": "6188dc39ea856db0d232b318fb5b4fe067517e5c651edceb8814e1f88ecdbd84",
+    "repository_context": "05-knowledge/results/session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact prior source snapshot"
+  },
+  "session64-root/prior-lca.md": {
+    "source_sha256": "cd7d016bf0b901ad8b645c6705a65a99ae911db49899db79cbf45a1a98536430",
+    "repository_context": "05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact prior source snapshot"
+  },
+  "session64-counting/NEWTON_QUOTIENT.md": {
+    "source_sha256": "dd9bd9c2ca86404bf53b047111288ba1734e0ae20c7e2a6db136664cdcf3b154",
+    "repository_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/NEWTON_QUOTIENT.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Original intended result-root link context; relocated proof bytes unchanged"
+  },
+  "session64-root/CONNECTIONS.md": {
+    "source_sha256": "c064397b0a3edc077795cbb81ab227bbd363aa95527d73a08db8a9432d33d688",
+    "repository_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/CONNECTIONS.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Original intended result-root link context; relocated proof bytes unchanged"
+  },
+  "session64-root/SYNTHESIS.md": {
+    "source_sha256": "54233f0dc980175ce53094bdc3bb1ca7030dc0cd96151cbe9d03e34e84f0c0b3",
+    "repository_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/SYNTHESIS.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Original intended result-root link context; relocated proof bytes unchanged"
+  },
+  "session64-audit-synthesis/prior-connections.md": {
+    "source_sha256": "ae282ad431f0be97d4cfbdc628e09f47be02c19d9c33438895ff90ed971954cc",
+    "repository_context": "05-knowledge/results/session56_rmq_lca_connections_20261025/CONNECTIONS.md",
+    "commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+    "kind": "Exact Session56 source snapshot; historical claims retain their own scope"
   }
 }

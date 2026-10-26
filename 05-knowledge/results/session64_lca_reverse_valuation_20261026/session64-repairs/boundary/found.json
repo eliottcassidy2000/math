@@ -1,0 +1,1156 @@
+[
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      4,
+      8,
+      18,
+      167,
+      207,
+      159,
+      15
+    ],
+    "words": [
+      [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        1
+      ],
+      [
+        3,
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      20,
+      8,
+      82,
+      165,
+      207,
+      151,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      4,
+      24,
+      50,
+      163,
+      199,
+      159,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      20,
+      24,
+      114,
+      161,
+      199,
+      151,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      4,
+      40,
+      18,
+      167,
+      203,
+      159,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      20,
+      40,
+      82,
+      165,
+      203,
+      151,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      4,
+      56,
+      50,
+      163,
+      195,
+      159,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      14,
+      20,
+      56,
+      114,
+      161,
+      195,
+      151,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        2,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      36,
+      72,
+      18,
+      167,
+      205,
+      155,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      52,
+      72,
+      82,
+      165,
+      205,
+      147,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      36,
+      88,
+      50,
+      163,
+      197,
+      155,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      52,
+      88,
+      114,
+      161,
+      197,
+      147,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5,
+        6,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      36,
+      104,
+      18,
+      167,
+      201,
+      155,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      52,
+      104,
+      82,
+      165,
+      201,
+      147,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      36,
+      120,
+      50,
+      163,
+      193,
+      155,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 8,
+    "ports": [
+      4,
+      5,
+      6
+    ],
+    "middle_open": false,
+    "x_to_c": true,
+    "source_rows": [
+      14,
+      52,
+      120,
+      114,
+      161,
+      193,
+      147,
+      15
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7
+      ]
+    ],
+    "old_label": "h4_backward",
+    "failure": "illegal whole leaf"
+  },
+  {
+    "n": 9,
+    "ports": [
+      2,
+      3,
+      4
+    ],
+    "middle_open": true,
+    "x_to_c": true,
+    "source_rows": [
+      226,
+      452,
+      393,
+      275,
+      39,
+      78,
+      156,
+      312,
+      113
+    ],
+    "words": [
+      [
+        0,
+        5,
+        6,
+        7,
+        8,
+        4,
+        1,
+        2,
+        3
+      ],
+      [
+        6,
+        0,
+        5,
+        7,
+        8,
+        4,
+        1,
+        2,
+        3
+      ],
+      [
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ]
+    ],
+    "old_label": "open_release",
+    "failure": "blue singleton"
+  },
+  {
+    "n": 9,
+    "ports": [
+      2,
+      3,
+      5
+    ],
+    "middle_open": true,
+    "x_to_c": false,
+    "source_rows": [
+      210,
+      420,
+      329,
+      147,
+      294,
+      77,
+      154,
+      308,
+      105
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        1,
+        3,
+        0,
+        4,
+        5,
+        6,
+        7,
+        8,
+        2
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        2
+      ]
+    ],
+    "old_label": "open_release",
+    "failure": "blue singleton"
+  },
+  {
+    "n": 9,
+    "ports": [
+      2,
+      3,
+      5
+    ],
+    "middle_open": false,
+    "x_to_c": false,
+    "source_rows": [
+      210,
+      308,
+      329,
+      147,
+      420,
+      77,
+      154,
+      294,
+      105
+    ],
+    "words": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        0
+      ],
+      [
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        8,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        2,
+        7,
+        8
+      ]
+    ],
+    "old_label": "closed_zero",
+    "failure": "blue singleton"
+  },
+  {
+    "n": 9,
+    "ports": [
+      3,
+      4,
+      7
+    ],
+    "middle_open": true,
+    "x_to_c": true,
+    "source_rows": [
+      102,
+      204,
+      408,
+      305,
+      99,
+      198,
+      396,
+      281,
+      51
+    ],
+    "words": [
+      [
+        0,
+        6,
+        7,
+        8,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        4,
+        2,
+        0,
+        6,
+        7,
+        8,
+        1,
+        5
+      ],
+      [
+        3,
+        4,
+        2,
+        0,
+        1,
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    "old_label": "open_release",
+    "failure": "blue singleton"
+  },
+  {
+    "n": 9,
+    "ports": [
+      3,
+      5,
+      7
+    ],
+    "middle_open": true,
+    "x_to_c": false,
+    "source_rows": [
+      86,
+      172,
+      344,
+      177,
+      354,
+      197,
+      394,
+      277,
+      43
+    ],
+    "words": [
+      [
+        0,
+        4,
+        5,
+        6,
+        7,
+        8,
+        1,
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        0,
+        4,
+        7,
+        8,
+        1,
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8
+      ]
+    ],
+    "old_label": "open_release",
+    "failure": "blue singleton"
+  }
+]

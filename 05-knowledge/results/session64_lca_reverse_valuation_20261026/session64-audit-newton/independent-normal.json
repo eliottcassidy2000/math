@@ -1,0 +1,194 @@
+{
+  "core_counts_0_to_16": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    5,
+    26,
+    255,
+    4602,
+    147095,
+    8228360,
+    814376271,
+    144675514036,
+    46750576790829,
+    27782162886369788,
+    30627747826224835041,
+    63068062296297157506286
+  ],
+  "core_orders": [
+    0,
+    48
+  ],
+  "native_controls": {
+    "actual_legal_batches": 4044,
+    "all_node_observations": 1315755,
+    "legal_kernel_node_checks": 13295,
+    "legal_transition_node_checks": 13295,
+    "native_complete_core_counts": 441,
+    "native_intermediate_states": 105201,
+    "signed_excess_batches": 2293,
+    "terminal_batches": 2132,
+    "terminal_stage_states": 1234,
+    "unrestricted_ordinary_exact_counts": 49,
+    "zero_dense_vectors": 6943,
+    "zero_sparse_keys": 79222
+  },
+  "normalized_order50_hostile": {
+    "absolute_mod4": 0,
+    "normalized_mod4": 2,
+    "required_absolute_bits": 27
+  },
+  "ordinary_counts_0_to_16": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168,
+    48542114686912,
+    28401423719122304,
+    31021002160355166848,
+    63530415842308265100288
+  ],
+  "partition_terms": 24661,
+  "precision_bits": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    9,
+    12,
+    16,
+    24
+  ],
+  "production_sha256": "0342e4682a78de8505fde96b71f7d34c9038dbde3ace163793a3375c7c93ab6a",
+  "samples": [
+    {
+      "K": 4,
+      "bits": 4,
+      "cells": 1,
+      "n": 2,
+      "residue": 0
+    },
+    {
+      "K": 9,
+      "bits": 9,
+      "cells": 1,
+      "n": 2,
+      "residue": 0
+    },
+    {
+      "K": 24,
+      "bits": 24,
+      "cells": 1,
+      "n": 2,
+      "residue": 0
+    },
+    {
+      "K": 4,
+      "bits": 124,
+      "cells": 31,
+      "n": 12,
+      "residue": 4
+    },
+    {
+      "K": 9,
+      "bits": 288,
+      "cells": 32,
+      "n": 12,
+      "residue": 180
+    },
+    {
+      "K": 24,
+      "bits": 768,
+      "cells": 32,
+      "n": 12,
+      "residue": 5580468
+    },
+    {
+      "K": 4,
+      "bits": 630,
+      "cells": 166,
+      "n": 24,
+      "residue": 8
+    },
+    {
+      "K": 9,
+      "bits": 1510,
+      "cells": 174,
+      "n": 24,
+      "residue": 248
+    },
+    {
+      "K": 24,
+      "bits": 4352,
+      "cells": 182,
+      "n": 24,
+      "residue": 10417912
+    },
+    {
+      "K": 4,
+      "bits": 3688,
+      "cells": 962,
+      "n": 44,
+      "residue": 14
+    },
+    {
+      "K": 9,
+      "bits": 8735,
+      "cells": 1001,
+      "n": 44,
+      "residue": 222
+    },
+    {
+      "K": 24,
+      "bits": 24743,
+      "cells": 1065,
+      "n": 44,
+      "residue": 593118
+    },
+    {
+      "K": 4,
+      "bits": 4895,
+      "cells": 1282,
+      "n": 48,
+      "residue": 8
+    },
+    {
+      "K": 9,
+      "bits": 11676,
+      "cells": 1335,
+      "n": 48,
+      "residue": 344
+    },
+    {
+      "K": 24,
+      "bits": 32818,
+      "cells": 1411,
+      "n": 48,
+      "residue": 4408664
+    }
+  ],
+  "scope": "Independent native signed clone-excess validation; no runtime, normalized-Newton, literal-clone quotient, or ordinary-state reduction claim.",
+  "sparse_image_sizes_K4_S4": {
+    "(0, 1, 4)": 128,
+    "(0, 2, 5)": 64,
+    "(0, 4)": 16,
+    "(0,)": 16,
+    "(1, 4)": 8,
+    "(1,)": 8,
+    "(4,)": 1
+  },
+  "status": "PASS"
+}

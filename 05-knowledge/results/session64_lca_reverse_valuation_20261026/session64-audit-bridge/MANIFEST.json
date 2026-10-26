@@ -1,0 +1,51 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 6935,
+      "sha256": "042b68e8b772e06a797b28db6d8ccc870a784693974476b96aa532acc5d49e87"
+    },
+    "bridge.normal.json": {
+      "bytes": 18215,
+      "sha256": "a1c86263808f61fa1392a8d4eae3f7b742d820789b4928ab297575f591d5c996"
+    },
+    "bridge.optimized.json": {
+      "bytes": 18215,
+      "sha256": "a1c86263808f61fa1392a8d4eae3f7b742d820789b4928ab297575f591d5c996"
+    },
+    "bridge_check.py": {
+      "bytes": 5318,
+      "sha256": "e6a16d5598136508f1a025c10fb580e5ead1d1e26ccb5c392aee0ca4e51b14b0"
+    },
+    "certificates.json": {
+      "bytes": 19822,
+      "sha256": "df599d03e016246071638812264ec65e3c2ef651e96ec28f79a85ac1345cb013"
+    },
+    "core.py": {
+      "bytes": 10779,
+      "sha256": "d384947bee0e8ef7260c313783fc36bdc29aa35aa1cb18779ee63ea03ab3e0af"
+    },
+    "n10.normal.json": {
+      "bytes": 6070,
+      "sha256": "e0b099c6eb72a76b4858e19dc523b8409368c554acf69542ad5bfbbb57f29b63"
+    },
+    "n10.optimized.json": {
+      "bytes": 6070,
+      "sha256": "e0b099c6eb72a76b4858e19dc523b8409368c554acf69542ad5bfbbb57f29b63"
+    },
+    "n10_check.py": {
+      "bytes": 5839,
+      "sha256": "d446b9518b294a80d1899bd745926605a46da64d32aaf070265a055e9d9d60f2"
+    }
+  },
+  "predecessor_audit_manifest_sha256": "02f19be02053ac16736ce758d3df07104e3ccaa0ca039e182f2417cca2896763",
+  "reproduction": [
+    "python3 bridge_check.py > bridge.normal.json",
+    "python3 -O bridge_check.py > bridge.optimized.json",
+    "cmp bridge.normal.json bridge.optimized.json",
+    "python3 n10_check.py > n10.normal.json",
+    "python3 -O n10_check.py > n10.optimized.json",
+    "cmp n10.normal.json n10.optimized.json"
+  ],
+  "scope": "All-size sufficient bridge theorem plus bounded exact controls; independent n10 old-menu diagnostic only",
+  "status": "SEALED PASS"
+}

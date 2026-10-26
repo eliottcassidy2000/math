@@ -1,0 +1,137 @@
+{
+  "absolute_precision_bits": [
+    1,
+    9
+  ],
+  "arbitrary_integer_polynomial_transfer_squares": 8000,
+  "bounded_degree_image_cardinality_cases": 48,
+  "complete_count_comparisons": 405,
+  "core_orders": [
+    0,
+    44
+  ],
+  "exact_intermediate_state_checks": 75304,
+  "exhaustive_quotient_cardinality_cases": 16,
+  "kernel_generator_checks": 1140,
+  "literal_pairfree_class_counts_orders_0_to_5": [
+    1,
+    1,
+    0,
+    1,
+    2,
+    5
+  ],
+  "precision_example_K64": [
+    64,
+    63,
+    61,
+    58,
+    54,
+    49,
+    43,
+    36,
+    28,
+    19,
+    9
+  ],
+  "samples": [
+    {
+      "K": 2,
+      "n": 18,
+      "new_allocated_residue_bits": 141,
+      "new_cells": 74,
+      "old_allocated_residue_bits": 148,
+      "old_cells": 74
+    },
+    {
+      "K": 4,
+      "n": 18,
+      "new_allocated_residue_bits": 307,
+      "new_cells": 80,
+      "old_allocated_residue_bits": 328,
+      "old_cells": 82
+    },
+    {
+      "K": 9,
+      "n": 18,
+      "new_allocated_residue_bits": 760,
+      "new_cells": 85,
+      "old_allocated_residue_bits": 765,
+      "old_cells": 85
+    },
+    {
+      "K": 2,
+      "n": 26,
+      "new_allocated_residue_bits": 353,
+      "new_cells": 185,
+      "old_allocated_residue_bits": 370,
+      "old_cells": 185
+    },
+    {
+      "K": 4,
+      "n": 26,
+      "new_allocated_residue_bits": 758,
+      "new_cells": 200,
+      "old_allocated_residue_bits": 836,
+      "old_cells": 209
+    },
+    {
+      "K": 9,
+      "n": 26,
+      "new_allocated_residue_bits": 1859,
+      "new_cells": 215,
+      "old_allocated_residue_bits": 2007,
+      "old_cells": 223
+    },
+    {
+      "K": 2,
+      "n": 40,
+      "new_allocated_residue_bits": 1237,
+      "new_cells": 649,
+      "old_allocated_residue_bits": 1298,
+      "old_cells": 649
+    },
+    {
+      "K": 4,
+      "n": 40,
+      "new_allocated_residue_bits": 2708,
+      "new_cells": 708,
+      "old_allocated_residue_bits": 2940,
+      "old_cells": 735
+    },
+    {
+      "K": 9,
+      "n": 40,
+      "new_allocated_residue_bits": 6389,
+      "new_cells": 735,
+      "old_allocated_residue_bits": 7155,
+      "old_cells": 795
+    },
+    {
+      "K": 2,
+      "n": 44,
+      "new_allocated_residue_bits": 1674,
+      "new_cells": 880,
+      "old_allocated_residue_bits": 1760,
+      "old_cells": 880
+    },
+    {
+      "K": 4,
+      "n": 44,
+      "new_allocated_residue_bits": 3688,
+      "new_cells": 962,
+      "old_allocated_residue_bits": 3984,
+      "old_cells": 996
+    },
+    {
+      "K": 9,
+      "n": 44,
+      "new_allocated_residue_bits": 8735,
+      "new_cells": 1001,
+      "old_allocated_residue_bits": 9729,
+      "old_cells": 1081
+    }
+  ],
+  "scope": "Exact clone-excess absolute residues; image-lattice Newton compression, not an ordinary scalar-state reduction or normalized-precision theorem.",
+  "status": "PASS"
+}

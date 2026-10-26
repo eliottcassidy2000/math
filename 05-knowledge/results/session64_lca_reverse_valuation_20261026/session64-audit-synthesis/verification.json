@@ -1,0 +1,114 @@
+{
+  "checked_checksum_lists": [
+    {
+      "files": 12,
+      "path": "session64-audit-counting/SHA256SUMS"
+    },
+    {
+      "files": 7,
+      "path": "session64-audit-dynamics/SHA256SUMS"
+    },
+    {
+      "files": 13,
+      "path": "session64-audit-newton/INPUTS_SHA256SUMS"
+    },
+    {
+      "files": 12,
+      "path": "session64-audit-newton/SHA256SUMS"
+    },
+    {
+      "files": 10,
+      "path": "session64-counting/SHA256SUMS"
+    },
+    {
+      "files": 3,
+      "path": "session64-reverse-valuation/SHA256SUMS"
+    },
+    {
+      "files": 4,
+      "path": "session64-root/newton-lca/SHA256SUMS"
+    }
+  ],
+  "checked_manifests": [
+    {
+      "files": 9,
+      "path": "session64-audit-bridge/MANIFEST.json"
+    },
+    {
+      "files": 5,
+      "path": "session64-audit-eleven/MANIFEST.json"
+    },
+    {
+      "files": 6,
+      "path": "session64-audit-lower/MANIFEST.json"
+    },
+    {
+      "files": 5,
+      "path": "session64-audit-repairs/MANIFEST.json"
+    },
+    {
+      "files": 7,
+      "path": "session64-repairs/MANIFEST.json"
+    },
+    {
+      "files": 5,
+      "path": "session64-repairs/boundary/MANIFEST.json"
+    },
+    {
+      "files": 1,
+      "path": "session64-repairs/bridge/MANIFEST.json"
+    },
+    {
+      "files": 5,
+      "path": "session64-repairs/next10/MANIFEST.json"
+    },
+    {
+      "files": 5,
+      "path": "session64-repairs/next11/MANIFEST.json"
+    }
+  ],
+  "fresh_lca_replay": {
+    "diagonal_lca_checks": 588,
+    "exhaustive_image_cases": 72,
+    "kernel_transition_evaluations": 58968,
+    "prime_nodes": [
+      2,
+      3,
+      5
+    ],
+    "scope": "Independent observation-module and LCA bridge, not a replay of full clone recurrence.",
+    "status": "PASS"
+  },
+  "normal_optimized_pairs": [
+    "session64-audit-bridge/bridge.normal.json",
+    "session64-audit-bridge/n10.normal.json",
+    "session64-audit-counting/audit-normal.json",
+    "session64-audit-counting/contraction-audit-normal.json",
+    "session64-audit-counting/contraction-producer-replay-normal.json",
+    "session64-audit-counting/producer-replay-normal.json",
+    "session64-audit-dynamics/normal.json",
+    "session64-audit-eleven/normal.json",
+    "session64-audit-lower/normal.json",
+    "session64-audit-newton/independent-normal.json",
+    "session64-audit-newton/lca-replay-normal.json",
+    "session64-audit-newton/literal-normal.json",
+    "session64-audit-newton/producer-replay-normal.json",
+    "session64-audit-repairs/normal.json",
+    "session64-counting/contracted-normal.json",
+    "session64-counting/newton-normal.json",
+    "session64-counting/reverse-normal.json",
+    "session64-repairs/boundary/full-normal.json",
+    "session64-repairs/next10/full-normal.json",
+    "session64-repairs/next11/normal.json",
+    "session64-repairs/normal.json",
+    "session64-reverse-valuation/normal.json",
+    "session64-root/newton-lca/normal.json"
+  ],
+  "root_sha256": {
+    "CONNECTIONS.md": "c064397b0a3edc077795cbb81ab227bbd363aa95527d73a08db8a9432d33d688",
+    "SYNTHESIS.md": "54233f0dc980175ce53094bdc3bb1ca7030dc0cd96151cbe9d03e34e84f0c0b3"
+  },
+  "scope": "Source-seal and synthesis consistency audit; no claim to rerun every long native engine.",
+  "source_files": 129,
+  "status": "PASS"
+}

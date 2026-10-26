@@ -1,0 +1,341 @@
+{
+  "all_joins_and_targets_valid": true,
+  "counts": {
+    "all_source_cells": 140,
+    "base_cells": 130,
+    "endpair_cells": 10,
+    "failed_leaves": 9,
+    "leaves": 151,
+    "passing_leaves": 142
+  },
+  "failed_leaves": [
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            true,
+            false,
+            false
+          ],
+          "dimension": 0,
+          "source_rows": [
+            482,
+            900,
+            905,
+            531,
+            551,
+            78,
+            158,
+            312,
+            632,
+            225
+          ],
+          "step": 1
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "open_release",
+      "middle_open": true,
+      "ports": [
+        2,
+        3,
+        4
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            true,
+            false,
+            false
+          ],
+          "dimension": 0,
+          "source_rows": [
+            434,
+            620,
+            713,
+            401,
+            806,
+            588,
+            409,
+            306,
+            550,
+            201
+          ],
+          "step": 1
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "closed_zero",
+      "middle_open": false,
+      "ports": [
+        2,
+        3,
+        6
+      ],
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            true,
+            false,
+            false
+          ],
+          "dimension": 0,
+          "source_rows": [
+            434,
+            804,
+            713,
+            147,
+            806,
+            588,
+            155,
+            306,
+            620,
+            201
+          ],
+          "step": 1
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "open_release",
+      "middle_open": true,
+      "ports": [
+        2,
+        3,
+        6
+      ],
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            false,
+            false,
+            true
+          ],
+          "dimension": 0,
+          "source_rows": [
+            410,
+            612,
+            617,
+            402,
+            422,
+            585,
+            665,
+            294,
+            614,
+            153
+          ],
+          "step": 3
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "closed_zero",
+      "middle_open": false,
+      "ports": [
+        2,
+        5,
+        6
+      ],
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            false,
+            false,
+            true
+          ],
+          "dimension": 0,
+          "source_rows": [
+            422,
+            660,
+            936,
+            83,
+            677,
+            330,
+            151,
+            808,
+            602,
+            105
+          ],
+          "step": 3
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "closed_one",
+      "middle_open": false,
+      "ports": [
+        3,
+        4,
+        6
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            true,
+            false,
+            false
+          ],
+          "dimension": 0,
+          "source_rows": [
+            230,
+            396,
+            920,
+            561,
+            611,
+            198,
+            398,
+            792,
+            569,
+            99
+          ],
+          "step": 1
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "open_release",
+      "middle_open": true,
+      "ports": [
+        3,
+        4,
+        8
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            true,
+            false,
+            false
+          ],
+          "dimension": 0,
+          "source_rows": [
+            182,
+            300,
+            728,
+            177,
+            866,
+            708,
+            395,
+            786,
+            557,
+            75
+          ],
+          "step": 1
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "open_release",
+      "middle_open": true,
+      "ports": [
+        3,
+        6,
+        8
+      ],
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            false,
+            false,
+            true
+          ],
+          "dimension": 0,
+          "source_rows": [
+            118,
+            204,
+            424,
+            785,
+            678,
+            586,
+            412,
+            809,
+            563,
+            71
+          ],
+          "step": 3
+        }
+      ],
+      "dimension": 9,
+      "guards": [
+        [
+          1,
+          3,
+          1
+        ]
+      ],
+      "label": "h3_forward",
+      "middle_open": false,
+      "ports": [
+        3,
+        7,
+        8
+      ],
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "actual_old_blue_flags": [
+            false,
+            false,
+            true
+          ],
+          "dimension": 0,
+          "source_rows": [
+            398,
+            564,
+            744,
+            210,
+            421,
+            329,
+            659,
+            802,
+            590,
+            57
+          ],
+          "step": 3
+        }
+      ],
+      "dimension": 10,
+      "guards": [],
+      "label": "closed_zero",
+      "middle_open": false,
+      "ports": [
+        4,
+        5,
+        6
+      ],
+      "x_to_c": false
+    }
+  ],
+  "literal_marked_sources": 143360,
+  "method": "independent signed components, not the producer Gaussian",
+  "raw_dimensions": {
+    "10": 140
+  },
+  "scope": "Complete dimensions-only old-menu diagnostic. Nine singleton old-blue sources remain; no replacement search and no connectivity obstruction claimed.",
+  "status": "PASS / DIAGNOSTIC ONLY"
+}

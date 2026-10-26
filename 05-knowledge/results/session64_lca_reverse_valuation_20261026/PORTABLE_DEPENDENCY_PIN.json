@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED",
+  "reason": "newton_modular.py controls imports the inherited literal_pairfree_classes reference; this additional source snapshot makes the replay self-contained",
+  "source_commit": "9e79465c2cfae960c3b26762aa9f3e15340789ea",
+  "source_path": "05-knowledge/results/ports_regular_actions_hn_20261025/counting/check_excess.py",
+  "packaged": "session64-repo/05-knowledge/results/ports_regular_actions_hn_20261025/counting/check_excess.py",
+  "git_blob": "599516ae5bff752a0cbbeb4f32fce4c9bd312530",
+  "bytes": 6492,
+  "sha256": "ab30aa7837d992f7e9e2389addb269110a3b0b40c78876210d31fa7c2ab5c27f",
+  "source_unchanged": true
+}

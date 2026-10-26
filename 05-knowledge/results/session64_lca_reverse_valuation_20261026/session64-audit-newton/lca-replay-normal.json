@@ -1,0 +1,12 @@
+{
+  "diagonal_lca_checks": 588,
+  "exhaustive_image_cases": 72,
+  "kernel_transition_evaluations": 58968,
+  "prime_nodes": [
+    2,
+    3,
+    5
+  ],
+  "scope": "Independent observation-module and LCA bridge, not a replay of full clone recurrence.",
+  "status": "PASS"
+}

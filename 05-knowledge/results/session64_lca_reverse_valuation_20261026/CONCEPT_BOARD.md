@@ -23,3 +23,13 @@ Counting uses the reverse suffix-minimum gauge on its original ordinary DAG
 and exact contraction of forced administrative skips. The dynamics lane
 retains punctures, integer-ray tests and chronological debt. These carriers
 share bookkeeping patterns, not a global convergence theorem.
+
+## Final checkpoint update
+
+The independently completed order-8/9/10 families and order-seven obstruction
+make the local endpoint-four threshold sharp at n >= 8. The all-size bridge
+retains degree, actual permutation and port data as sufficient gates.
+Newton precision now has an exact LCA sum interpretation, but unit residues
+and lawful operations are still essential. The signed-core observation bank
+is not the ordinary scalar recurrence; normalized and absolute precision
+remain distinct. The final synthesis preserves all global open questions.
