@@ -1,0 +1,107 @@
+{
+  "abstract_relation_pairs": 576,
+  "all15_pairings_census": {
+    "((1, 1, 1), 6, 3, 1)": 2,
+    "((1, 1, 4), 4, 2, 2)": 3,
+    "((1, 3, 3), 2, 1, 4)": 6,
+    "((3, 3, 4), 4, 2, 0)": 3,
+    "((4, 4, 4), 12, 6, 1)": 1
+  },
+  "cross_unit_contact_fixed_center_counts": [
+    25,
+    20
+  ],
+  "hexagon_geometric_palette_maps": 12,
+  "individual_Gram_constraint_ranks": [
+    4,
+    4
+  ],
+  "joint_Gram_constraint_rank": 5,
+  "mirror_pairing_even_action": [
+    [
+      0,
+      1,
+      2
+    ],
+    6
+  ],
+  "scope": "exact finite controls; all-order proofs and geometry limitations in RESULT.md",
+  "six_color_single_diamond": [
+    [
+      20,
+      12,
+      12,
+      12,
+      12,
+      12
+    ],
+    [
+      12,
+      20,
+      12,
+      12,
+      12,
+      12
+    ],
+    [
+      12,
+      12,
+      20,
+      12,
+      12,
+      12
+    ],
+    [
+      12,
+      12,
+      12,
+      20,
+      12,
+      12
+    ],
+    [
+      12,
+      12,
+      12,
+      12,
+      20,
+      12
+    ],
+    [
+      12,
+      12,
+      12,
+      12,
+      12,
+      20
+    ]
+  ],
+  "six_color_two_diamonds_diagonal_offdiagonal": [
+    1120,
+    1056
+  ],
+  "status": "PASS",
+  "strip_enumerated_colorings": 46182,
+  "strip_exact_geometry_lengths": 20,
+  "two_loop_fixed_frames": [
+    [
+      0,
+      7
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "unit_star_total_colorings": 93750,
+  "unit_star_weight_histogram": {
+    "0": 720,
+    "1": 10800,
+    "2": 23400,
+    "3": 10800,
+    "4": 930,
+    "5": 6
+  },
+  "wheel_boundary_support": 14910,
+  "wheel_total_six_colorings": 24600
+}

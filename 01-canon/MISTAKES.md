@@ -13,6 +13,33 @@ a historical synthesis or promoting computational evidence.
 - **Strongest survivor and repair:** the open-central criterion is unchanged; the complete central divisor has zero, eight or infinitely many points over every infinite field of characteristic not two. Two soluble triple ports force a soluble conic and infinitely many open points. [Proof and independent audits](../05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md).
 - **Missing coordinate and new question:** the transverse coefficient controls the tangent conic even when the whole central scheme is fixed. For `d=(2/delta,1,1,1,-1,1,-1)` the same eight nodes resolve to `a^2+b^2=delta*c^2`; delta2 has rational lifts and delta3 has none. Preserve the model (normal surface, divisor normalization, or resolution) and its second-order equation.
 
+## 2026-10-26 — a unit arc flow needs the full least-squares potential
+
+- **Affected statement:** [THM-895](theorems/THM-895-helmholtz-identity-perron-census.md)
+  assigned potential d/(2n) to the unit antisymmetric tournament flow,
+  where d=2s-(n-1), and called x/(4n) its Hodge gradient energy.
+- **Minimal witness:** on K2, d=(1,-1). That potential fits only half the
+  unit arc and leaves nonzero residual divergence. The least-squares
+  potential is (1/2,-1/2), with gradient energy1 and residual0.
+- **First failed implication:** checking the energy of a chosen potential
+  does not check that it solves the normal equations. The 400 old tests
+  therefore certified a tautological scaling, not the projection.
+- **Repair / strongest survivor:** phi=d/n, gradient energy x/n, residual
+  energy C(n,2)-x/n, and a +8 change in x changes energy by8/n. Include
+  all triangles when claiming zero harmonic part. The floating Perron
+  correlations survive positive affine rescaling; they are numerical
+  evidence, not exact spectral certificates.
+- **Related lost coordinate:** a transitive relation is the sign of a
+  potential difference, but its unit arc array is generally not a
+  coboundary. The [June reflection](../07-reflections/tournaments-are-intransitivity-among-n-things.md)
+  now carries this boundary. Residual energy equals
+  (n-1)(n-2)/6+8c3/n; cyclic-triangle count alone still loses incidence.
+- **Independent controls / next question:** [exact audit](../05-knowledge/results/rank_geometry_metagraph_20261026/information/RESULT.md)
+  checks normal equations, orthogonality and rational energies on all
+  labelled tournaments through n5. Order-five classes with upper-pair
+  codes8 and10 share scores,H,Aut and both energies. Preserve labelled
+  curls and actual ports when seeking a structural counting recurrence.
+
 ## 2026-10-26 — Session66: retain literal cycles, endpoint conventions, and the exact rank branch
 
 - **Cycle/support failure:** [THM-209](theorems/THM-209-independence-polynomial.md)

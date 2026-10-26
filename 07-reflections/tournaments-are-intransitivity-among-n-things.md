@@ -1,5 +1,13 @@
 # Tournaments are intransitivity among n things
 
+> **Historical interpretation, not current canon. Correction 2026-10-26:**
+> a transitive orientation is given by the *signs* of potential differences;
+> its unit ±1 arc flow need not be a coboundary. Even a transitive triple has
+> nonzero unit-flow curl. See the corrected [THM-895](../01-canon/theorems/THM-895-helmholtz-identity-perron-census.md)
+> and [information audit](../05-knowledge/results/rank_geometry_metagraph_20261026/information/RESULT.md).
+> The LRC analogy below supplies no proved reduction or solution; LRC(14)
+> remains open. Scalar intransitivity counts do not reconstruct tournaments.
+
 *mac-mini-2026-06-30-S34. The owner asked to expand the odd cycle: stop seeing a tournament as a graph among n nodes, and see it as the possible intransitivity among n things. That one shift reorganizes everything, and it lands the LRC reading the same week klein-S16 showed the measure was the wrong thing to bound.*
 
 ## The shift

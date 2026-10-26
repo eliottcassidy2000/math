@@ -1,0 +1,77 @@
+{
+  "actual_entry": 10952205219944621,
+  "actual_live_credit": 47,
+  "actual_native_macro_index": 86,
+  "actual_prefix_hostiles": [
+    {
+      "Q_fuel_after_P": 12,
+      "entry_precision": 15,
+      "executed_macros": 147,
+      "initial_binary_agreement": 98,
+      "m": 2
+    },
+    {
+      "Q_fuel_after_P": 18,
+      "entry_precision": 21,
+      "executed_macros": 153,
+      "initial_binary_agreement": 98,
+      "m": 3
+    },
+    {
+      "Q_fuel_after_P": 24,
+      "entry_precision": 27,
+      "executed_macros": 159,
+      "initial_binary_agreement": 98,
+      "m": 4
+    },
+    {
+      "Q_fuel_after_P": 48,
+      "entry_precision": 51,
+      "executed_macros": 183,
+      "initial_binary_agreement": 98,
+      "m": 8
+    },
+    {
+      "Q_fuel_after_P": 96,
+      "entry_precision": 99,
+      "executed_macros": 231,
+      "initial_binary_agreement": 98,
+      "m": 16
+    },
+    {
+      "Q_fuel_after_P": 192,
+      "entry_precision": 195,
+      "executed_macros": 327,
+      "initial_binary_agreement": 98,
+      "m": 32
+    }
+  ],
+  "balanced_words": 71,
+  "distinct_sensors_including_zero": 67,
+  "equal_center_controls": 5,
+  "generic_constant_fibre_sources": 120,
+  "moduli": [
+    1,
+    2,
+    8,
+    15,
+    30,
+    27525120
+  ],
+  "payload_sha256": "15e92d0ed116ba0622d341c6fa2f74237d30a7109b00caca0475e440251e195b",
+  "scope": "finite controls; no nonhalting or source7 alternative claim",
+  "sensor_histogram": {
+    "0": 1,
+    "1": 30,
+    "2": 22,
+    "4": 6,
+    "5": 3,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "11": 2
+  },
+  "separation_H": 11,
+  "status": "PASS",
+  "transport_checks": 560
+}

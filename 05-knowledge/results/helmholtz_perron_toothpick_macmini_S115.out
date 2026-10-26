@@ -1,7 +1,7 @@
-(A) THE HELMHOLTZ IDENTITY -- exact check on random + exhaustive tournaments
-   gradient energy == x/(4n) on 400 random tournaments n=3..9: True
-   (proof: sum_(u<v) (d_u-d_v)^2 = n sum d^2 - (sum d)^2 = n x; /(2n)^2 = x/(4n))
-   cycle energy = C(n,2) - x/(4n); harmonic part = 0 (complete graph).
+(A) THE CORRECTED HELMHOLTZ IDENTITY -- integral normal-equation checks
+   gradient energy == x/n on K2 plus 400 random tournaments n=3..9: True
+   Normal equations and orthogonality checked independently with integer residuals.
+   cycle energy = C(n,2) - x/n; harmonic part = 0 on the filled clique complex.
 
 (B) KENDALL-WEI / PERRON
    n=5: labeled 1024; lambda=0 count 120 (= n! = 120: True)  corr(lambda, -x) = 0.9313

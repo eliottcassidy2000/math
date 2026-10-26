@@ -1,0 +1,104 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": "all labelled tournaments n=0..5",
+  "rows": [
+    {
+      "n": 0,
+      "labelled": 1,
+      "classes": 1,
+      "charts": 1,
+      "fibre_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 1,
+      "labelled": 1,
+      "classes": 1,
+      "charts": 1,
+      "fibre_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "labelled": 2,
+      "classes": 1,
+      "charts": 1,
+      "fibre_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "n": 3,
+      "labelled": 8,
+      "classes": 2,
+      "charts": 2,
+      "fibre_histogram": {
+        "1": 2
+      }
+    },
+    {
+      "n": 4,
+      "labelled": 64,
+      "classes": 4,
+      "charts": 8,
+      "fibre_histogram": {
+        "1": 3,
+        "5": 1
+      }
+    },
+    {
+      "n": 5,
+      "labelled": 1024,
+      "classes": 12,
+      "charts": 64,
+      "fibre_histogram": {
+        "1": 4,
+        "3": 1,
+        "5": 3,
+        "9": 2,
+        "11": 1,
+        "13": 1
+      }
+    }
+  ],
+  "first_score_H_collision": {
+    "n": 5,
+    "scores": [
+      1,
+      1,
+      2,
+      3,
+      3
+    ],
+    "H": 9,
+    "codes": [
+      8,
+      10
+    ],
+    "automorphisms": [
+      1,
+      1
+    ],
+    "cyclic_triangles": [
+      3,
+      3
+    ]
+  },
+  "unit_flow_normalization_hostile": "K2 rejects phi=d/(2n)",
+  "order32_capacity_test": true,
+  "reflection_defect_n6": {
+    "tournaments": 32768,
+    "minimum": 2,
+    "histogram": {
+      "2": 512,
+      "4": 3072,
+      "6": 7680,
+      "8": 10240,
+      "10": 7680,
+      "12": 3072,
+      "14": 512
+    }
+  }
+}

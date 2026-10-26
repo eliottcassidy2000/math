@@ -4,10 +4,11 @@ Owner brief: Helmholtz + arborescences beyond Hamiltonian paths; Kendall-Wei/Per
 self-composition invariant; toothpick/automata isomorphism hunting.
 
 (A) THE HELMHOLTZ IDENTITY (exact): HodgeRank the unit arc flow of a tournament on K_n.
-    Potential phi = d/(2n) (least squares); harmonic part = 0 (complete graph);
-      GRADIENT ENERGY = sum_{u<v} (phi_u - phi_v)^2 = (n x)/(4 n^2) = x/(4n),
-      CYCLE ENERGY   = C(n,2) - x/(4n).
-    So THM-866's axis IS the Helmholtz gradient energy (x4n); the +8 walk is
+    Corrected 2026-10-26: phi = d/n (least squares); harmonic part = 0
+    on the filled clique complex, with every triangle included.
+      GRADIENT ENERGY = sum_{u<v} (phi_u - phi_v)^2 = x/n,
+      CYCLE ENERGY   = C(n,2) - x/n.
+    So THM-866's axis IS the Helmholtz gradient energy (times n); the +8 walk is
     gradient-energy ascent; feedback (Kendall-Wei) lives on the curl side.
 (B) KENDALL-WEI / PERRON census: lambda = spectral radius of the adjacency.
     (i) lambda = 0 <=> transitive (acyclic <=> nilpotent, one line) -- verify;
@@ -24,11 +25,11 @@ import numpy as np
 from itertools import combinations
 sys.stdout.reconfigure(line_buffering=True)
 
-print("(A) THE HELMHOLTZ IDENTITY -- exact check on random + exhaustive tournaments")
+print("(A) THE CORRECTED HELMHOLTZ IDENTITY -- integral normal-equation checks")
 rng = np.random.default_rng(20260716)
 ok = True
-for trial in range(400):
-    n = int(rng.integers(3, 10))
+for trial in range(401):
+    n = 2 if trial == 0 else int(rng.integers(3, 10))
     A = np.zeros((n, n))
     for u, v in combinations(range(n), 2):
         if rng.random() < 0.5: A[u, v] = 1
@@ -36,12 +37,23 @@ for trial in range(400):
     s = A.sum(1)
     d = 2 * s - (n - 1)
     x = float((d ** 2).sum())
-    phi = d / (2 * n)
+    phi = d / n
     grad_e = sum((phi[u] - phi[v]) ** 2 for u, v in combinations(range(n), 2))
-    ok &= abs(grad_e - x / (4 * n)) < 1e-9
-print(f"   gradient energy == x/(4n) on 400 random tournaments n=3..9: {ok}")
-print("   (proof: sum_(u<v) (d_u-d_v)^2 = n sum d^2 - (sum d)^2 = n x; /(2n)^2 = x/(4n))")
-print("   cycle energy = C(n,2) - x/(4n); harmonic part = 0 (complete graph).")
+    ok &= abs(grad_e - x / n) < 1e-9
+    # Integral scaled residual, independent of the floating energy check.
+    di = d.astype(np.int64)
+    residual = n * (A - A.T).astype(np.int64) - (di[:, None] - di[None, :])
+    if np.any(residual.sum(1)):
+        raise RuntimeError("least-squares normal equations failed")
+    if sum(int(residual[u, v]) * int(di[u] - di[v]) for u, v in combinations(range(n), 2)):
+        raise RuntimeError("gradient/residual orthogonality failed")
+    if sum(int(residual[u, v]) ** 2 for u, v in combinations(range(n), 2)) != n*n*math.comb(n, 2)-n*int(x):
+        raise RuntimeError("integral residual energy failed")
+if not ok:
+    raise RuntimeError("gradient energy check failed")
+print(f"   gradient energy == x/n on K2 plus 400 random tournaments n=3..9: {ok}")
+print("   Normal equations and orthogonality checked independently with integer residuals.")
+print("   cycle energy = C(n,2) - x/n; harmonic part = 0 on the filled clique complex.")
 
 print()
 print("(B) KENDALL-WEI / PERRON")
@@ -75,7 +87,7 @@ for n in (5, 6):
     if n == 5:
         print("        per-level (x: lam-range):", {int(k): (round(v[0],3), round(v[1],3)) for k, v in list(spreads.items())})
     # Helmholtz reading: corr with cycle energy
-    cyc = math.comb(n, 2) - xs / (4 * n)
+    cyc = math.comb(n, 2) - xs / n
     print(f"        corr(lambda, cycle-energy) = {np.corrcoef(lams, cyc)[0,1]:.4f}")
 
 print()

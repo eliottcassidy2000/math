@@ -1,0 +1,296 @@
+{
+  "all_labelings_of_representatives_n0_5": 1552,
+  "brute_labeled_cases_n0_5": 1100,
+  "charts": [
+    {
+      "classes": 1,
+      "n": 0,
+      "words": 1
+    },
+    {
+      "classes": 1,
+      "n": 1,
+      "words": 1
+    },
+    {
+      "classes": 1,
+      "n": 2,
+      "words": 1
+    },
+    {
+      "classes": 2,
+      "n": 3,
+      "words": 2
+    },
+    {
+      "classes": 4,
+      "n": 4,
+      "words": 8
+    },
+    {
+      "classes": 12,
+      "n": 5,
+      "words": 64
+    },
+    {
+      "classes": 56,
+      "n": 6,
+      "words": 1024
+    },
+    {
+      "classes": 456,
+      "n": 7,
+      "words": 32768
+    }
+  ],
+  "class_and_clone_cases_n0_8": 7413,
+  "clone_layers": [
+    {
+      "by_core_order": {
+        "0": 1
+      },
+      "n": 0
+    },
+    {
+      "by_core_order": {
+        "1": 1
+      },
+      "n": 1
+    },
+    {
+      "by_core_order": {
+        "1": 1
+      },
+      "n": 2
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 1
+      },
+      "n": 3
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 1,
+        "4": 2
+      },
+      "n": 4
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 2,
+        "4": 4,
+        "5": 5
+      },
+      "n": 5
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 4,
+        "4": 8,
+        "5": 17,
+        "6": 26
+      },
+      "n": 6
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 5,
+        "4": 16,
+        "5": 47,
+        "6": 132,
+        "7": 255
+      },
+      "n": 7
+    },
+    {
+      "by_core_order": {
+        "1": 1,
+        "3": 7,
+        "4": 26,
+        "5": 107,
+        "6": 444,
+        "7": 1693,
+        "8": 4602
+      },
+      "n": 8
+    }
+  ],
+  "counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ],
+  "growth": [
+    {
+      "canonical_search_leaves": 1,
+      "classes": 1,
+      "labelled_parent_masks": 1,
+      "n": 1,
+      "rooted_extensions": 1
+    },
+    {
+      "canonical_search_leaves": 2,
+      "classes": 1,
+      "labelled_parent_masks": 2,
+      "n": 2,
+      "rooted_extensions": 2
+    },
+    {
+      "canonical_search_leaves": 6,
+      "classes": 2,
+      "labelled_parent_masks": 4,
+      "n": 3,
+      "rooted_extensions": 4
+    },
+    {
+      "canonical_search_leaves": 20,
+      "classes": 4,
+      "labelled_parent_masks": 16,
+      "n": 4,
+      "rooted_extensions": 12
+    },
+    {
+      "canonical_search_leaves": 76,
+      "classes": 12,
+      "labelled_parent_masks": 64,
+      "n": 5,
+      "rooted_extensions": 48
+    },
+    {
+      "canonical_search_leaves": 416,
+      "classes": 56,
+      "labelled_parent_masks": 384,
+      "n": 6,
+      "rooted_extensions": 296
+    },
+    {
+      "canonical_search_leaves": 3670,
+      "classes": 456,
+      "labelled_parent_masks": 3584,
+      "n": 7,
+      "rooted_extensions": 3040
+    },
+    {
+      "canonical_search_leaves": 58520,
+      "classes": 6880,
+      "labelled_parent_masks": 58368,
+      "n": 8,
+      "rooted_extensions": 54256
+    }
+  ],
+  "hostiles": {
+    "C3_weight_multiset_loses_orientation": true,
+    "arbitrary_clone_partition_merges": true,
+    "false_divide_by_n": "rooted=4, n=3, classes=2",
+    "first_H_collision": [
+      9,
+      40,
+      3
+    ],
+    "path_complement_depends_on_retained_spine": {
+      "n": 4,
+      "source": 34,
+      "target_classes": [
+        0,
+        9,
+        34,
+        40
+      ]
+    },
+    "repeated_ports_and_internal_ranks": 6
+  },
+  "independent_reverse_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880
+  ],
+  "literal_chart_cases_n0_7": 33869,
+  "literal_path_and_operation_cases_n0_6": 1335,
+  "marked_port_inventories_n0_5": 388,
+  "masses": [
+    {
+      "chart_words": 1,
+      "classes": 1,
+      "labelled_tournaments": 1,
+      "n": 0,
+      "rooted_classes": 0
+    },
+    {
+      "chart_words": 1,
+      "classes": 1,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "rooted_classes": 1
+    },
+    {
+      "chart_words": 1,
+      "classes": 1,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "rooted_classes": 2
+    },
+    {
+      "chart_words": 2,
+      "classes": 2,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "rooted_classes": 4
+    },
+    {
+      "chart_words": 8,
+      "classes": 4,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "rooted_classes": 12
+    },
+    {
+      "chart_words": 64,
+      "classes": 12,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "rooted_classes": 48
+    },
+    {
+      "chart_words": 1024,
+      "classes": 56,
+      "labelled_tournaments": 32768,
+      "n": 6,
+      "rooted_classes": 296
+    },
+    {
+      "chart_words": 32768,
+      "classes": 456,
+      "labelled_tournaments": 2097152,
+      "n": 7,
+      "rooted_classes": 3040
+    },
+    {
+      "chart_words": 2097152,
+      "classes": 6880,
+      "labelled_tournaments": 268435456,
+      "n": 8,
+      "rooted_classes": 54256
+    }
+  ],
+  "scope": "exact class enumeration through n8; explicit finite gates",
+  "status": "PASS",
+  "weighted_core_allocations": 7413
+}
