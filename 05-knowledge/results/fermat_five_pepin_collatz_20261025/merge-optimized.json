@@ -1,0 +1,295 @@
+{
+"merge_consecutive": {
+"3,4": {
+"value": 17,
+"odd_index_m1": 3,
+"odd_index_m2": 0,
+"bits": 5
+},
+"4,5": {
+"value": 17,
+"odd_index_m1": 0,
+"odd_index_m2": 5,
+"bits": 5
+},
+"5,6": {
+"value": 11,
+"odd_index_m1": 4,
+"odd_index_m2": 4,
+"bits": 4
+},
+"6,7": {
+"value": 5,
+"odd_index_m1": 7,
+"odd_index_m2": 43,
+"bits": 3
+},
+"7,8": {
+"value": 47,
+"odd_index_m1": 6,
+"odd_index_m2": 6,
+"bits": 6
+},
+"8,9": {
+"value": 23,
+"odd_index_m1": 40,
+"odd_index_m2": 6,
+"bits": 5
+},
+"9,10": {
+"value": 23,
+"odd_index_m1": 6,
+"odd_index_m2": 6,
+"bits": 5
+},
+"10,11": {
+"value": 577,
+"odd_index_m1": 2,
+"odd_index_m2": 48,
+"bits": 10
+},
+"11,12": {
+"value": 137,
+"odd_index_m1": 24,
+"odd_index_m2": 7,
+"bits": 8
+},
+"12,13": {
+"value": 5,
+"odd_index_m1": 38,
+"odd_index_m2": 14,
+"bits": 3
+},
+"13,14": {
+"value": 821,
+"odd_index_m1": 8,
+"odd_index_m2": 8,
+"bits": 10
+},
+"14,15": {
+"value": 29,
+"odd_index_m1": 10,
+"odd_index_m2": 27,
+"bits": 5
+},
+"15,16": {
+"value": 923,
+"odd_index_m1": 10,
+"odd_index_m2": 10,
+"bits": 10
+},
+"16,17": {
+"value": 209,
+"odd_index_m1": 20,
+"odd_index_m2": 20,
+"bits": 8
+},
+"17,18": {
+"value": 3691,
+"odd_index_m1": 10,
+"odd_index_m2": 10,
+"bits": 12
+},
+"18,19": {
+"value": 11,
+"odd_index_m1": 28,
+"odd_index_m2": 28,
+"bits": 4
+},
+"19,20": {
+"value": 37,
+"odd_index_m1": 26,
+"odd_index_m2": 14,
+"bits": 6
+},
+"20,21": {
+"value": 11,
+"odd_index_m1": 16,
+"odd_index_m2": 52,
+"bits": 4
+},
+"21,22": {
+"value": 66431,
+"odd_index_m1": 12,
+"odd_index_m2": 12,
+"bits": 17
+},
+"22,23": {
+"value": 2845,
+"odd_index_m1": 35,
+"odd_index_m2": 35,
+"bits": 12
+},
+"23,24": {
+"value": 298937,
+"odd_index_m1": 14,
+"odd_index_m2": 14,
+"bits": 19
+},
+"24,25": {
+"value": 22447,
+"odd_index_m1": 23,
+"odd_index_m2": 23,
+"bits": 15
+},
+"25,26": {
+"value": 37367,
+"odd_index_m1": 14,
+"odd_index_m2": 14,
+"bits": 16
+},
+"26,27": {
+"value": 29,
+"odd_index_m1": 51,
+"odd_index_m2": 80,
+"bits": 5
+},
+"27,28": {
+"value": 29,
+"odd_index_m1": 80,
+"odd_index_m2": 51,
+"bits": 5
+},
+"28,29": {
+"value": 11,
+"odd_index_m1": 52,
+"odd_index_m2": 57,
+"bits": 4
+},
+"29,30": {
+"value": 5380841,
+"odd_index_m1": 16,
+"odd_index_m2": 16,
+"bits": 23
+},
+"30,31": {
+"value": 11,
+"odd_index_m1": 57,
+"odd_index_m2": 81,
+"bits": 4
+},
+"31,32": {
+"value": 12106891,
+"odd_index_m1": 18,
+"odd_index_m2": 18,
+"bits": 24
+},
+"32,33": {
+"value": 29,
+"odd_index_m1": 80,
+"odd_index_m2": 51,
+"bits": 5
+},
+"33,34": {
+"value": 24213781,
+"odd_index_m1": 18,
+"odd_index_m2": 18,
+"bits": 25
+},
+"34,35": {
+"value": 5,
+"odd_index_m1": 55,
+"odd_index_m2": 108,
+"bits": 3
+},
+"35,36": {
+"value": 5,
+"odd_index_m1": 108,
+"odd_index_m2": 79,
+"bits": 3
+},
+"36,37": {
+"value": 11,
+"odd_index_m1": 76,
+"odd_index_m2": 57,
+"bits": 4
+},
+"37,38": {
+"value": 435848051,
+"odd_index_m1": 20,
+"odd_index_m2": 20,
+"bits": 29
+},
+"38,39": {
+"value": 11,
+"odd_index_m1": 57,
+"odd_index_m2": 40,
+"bits": 4
+},
+"39,40": {
+"value": 1961316227,
+"odd_index_m1": 22,
+"odd_index_m2": 22,
+"bits": 31
+}
+},
+"equal_stopping_time_blocks": {
+"3": [
+4
+],
+"6": [
+3
+],
+"8": [
+5,
+6
+],
+"10": [
+9,
+10
+],
+"15": [
+13,
+14
+],
+"20": [
+20
+],
+"32": [
+15,
+16,
+17,
+18,
+19
+],
+"39": [
+12
+],
+"44": [
+7,
+8,
+39,
+40
+],
+"56": [
+11,
+21,
+22,
+23,
+24,
+25,
+26,
+28,
+33,
+34
+],
+"61": [
+29,
+30,
+37,
+38
+],
+"80": [
+36
+],
+"85": [
+27,
+31,
+32
+],
+"109": [
+35
+]
+}
+}
+{"theorem_M_checks": {"2": {"merge_index": [4, 4], "ok": true}, "3": {"merge_index": [6, 6], "ok": true}, "4": {"merge_index": [6, 6], "ok": true}, "5": {"merge_index": [24, 7], "ok": true}, "6": {"merge_index": [8, 8], "ok": true}, "7": {"merge_index": [10, 10], "ok": true}, "8": {"merge_index": [10, 10], "ok": true}, "9": {"merge_index": [26, 14], "ok": true}, "10": {"merge_index": [12, 12], "ok": true}, "11": {"merge_index": [14, 14], "ok": true}, "12": {"merge_index": [14, 14], "ok": true}, "13": {"merge_index": [80, 51], "ok": true}, "14": {"merge_index": [16, 16], "ok": true}, "15": {"merge_index": [18, 18], "ok": true}, "16": {"merge_index": [18, 18], "ok": true}, "17": {"merge_index": [108, 79], "ok": true}, "18": {"merge_index": [20, 20], "ok": true}, "19": {"merge_index": [22, 22], "ok": true}}, "all_ok": true}
