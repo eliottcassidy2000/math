@@ -1,6 +1,6 @@
 # Start Here
 
-**Current truth:** [Frontier](CURRENT-FRONTIER.md).
+**Truth:** [Frontier](CURRENT-FRONTIER.md).
 
 **Oct20:** [Prime arithmetic](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md); [prior](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 

@@ -6,6 +6,11 @@ Result labels below are local to their linked files. No priority claim is
 made. The inherited reconstruction theorem remains a dependency, not a
 new result of this packet.
 
+[Publication reconciliation at b1255a717b](INCOMING.md) records Session72
+and the corrected THM-4808 audit. Its current-status update supersedes
+historical pre-audit descriptions; proved lane bodies retain their base495
+source pins.
+
 The strongest closure is that **four markers recover every tournament
 with two distinct ordered ports**, including nonstrong cores. The new
 image criterion identifies exactly which oriented graphs can be Hamilton

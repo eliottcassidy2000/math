@@ -108,6 +108,9 @@ def main():
     for path, sha in manifest["inherited_sources"].items():
         require(digest(git_blob(manifest["source_revision"], path)) == sha,
                 f"historical source hash: {path}")
+    for entry in manifest.get("additional_sources", []):
+        require(digest(git_blob(entry["revision"], entry["path"])) == entry["sha256"],
+                f"additional source hash: {entry['path']}")
     patch_counts = {p: replay_patches(p, args.live) for p in manifest["patch_records"]}
     suites = manifest["suites"]
     for suite in suites:
@@ -122,6 +125,7 @@ def main():
     print(json.dumps({"status": "PASS", "packet_files": len(expected),
                       "review_bindings": len(manifest["review_bindings"]),
                       "historical_sources": len(manifest["inherited_sources"]),
+                      "additional_sources": len(manifest.get("additional_sources", [])),
                       "live_maintained_files_checked": args.live,
                       "patches": patch_counts, "runs": runs},
                      indent=2, sort_keys=True))

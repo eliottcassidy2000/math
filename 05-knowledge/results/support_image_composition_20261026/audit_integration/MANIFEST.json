@@ -18,6 +18,14 @@
     "COMPOSITION_AUDIT.md": "deba5447546506ab2328540d80d202c633a0ebee369f06a5a6a3c559fd04a7b0",
     "ROOT_AUDIT.md": "5df2c4616980c66c90d04727e4f655a51fa7ebf1ca56667ffafd399414d42f2d"
   },
+  "post_audit_publication_reconciliation": {
+    "inverse_reproduces_previous_readme": true,
+    "new": "new result of this packet.\n\n[Publication reconciliation at b1255a717b](INCOMING.md) records Session72\nand the corrected THM-4808 audit. Its current-status update supersedes\nhistorical pre-audit descriptions; proved lane bodies retain their base495\nsource pins.\n\n",
+    "old": "new result of this packet.\n\n",
+    "previous_readme_sha256": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde",
+    "scope": "One publication reconciliation link/status paragraph inserted after initial status/base paragraph; proof summaries untouched. Incoming addendum is separately reviewed.",
+    "updated_readme_sha256": "feb3887b0cb8020a239cdaab137561dab5b35d75fc99858bf0948bd7a7032824"
+  },
   "readme_promotion": {
     "candidate_sha256": "470d85ce037a788bf90d4d9300fa9d80cabcd6d092b5797ec416d9ebbc83c474",
     "inverse_reproduces_candidate": true,
@@ -29,7 +37,7 @@
     "AUDIT.md": "f845610425fe5208dcba1ff60011336b73bda4c64abb3baab04a9c678f533d9c",
     "BOARD.md": "1d5c885d4c48b252754276072dd79d8355d158a645336910fee25bd3e7a96ff6",
     "COMPOSITION.md": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
-    "README.md": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde"
+    "README.md": "feb3887b0cb8020a239cdaab137561dab5b35d75fc99858bf0948bd7a7032824"
   },
   "root_local_links": {
     "all_exist": true,

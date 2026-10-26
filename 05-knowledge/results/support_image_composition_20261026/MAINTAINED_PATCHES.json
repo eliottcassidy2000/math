@@ -16,13 +16,17 @@
       ]
     },
     {
-      "after_sha256": "c5ea9cd460dce84addff22ef2baa7358ffd294338f46314a2394876ecde216b8",
+      "after_sha256": "b703e146d92f18506354df0da8e5bf51196407c79a165b31c6b29f69aaaa2433",
       "before_sha256": "33f0480ff750cbab7102ce7611f260445fbf57049658a5e030c00de368a8fd2d",
       "path": "00-navigation/START-HERE.md",
       "replacements": [
         {
           "new": "[Maps](../05-knowledge/results/support_image_composition_20261026/README.md).",
           "old": "[Sieve/path](../05-knowledge/results/sieve_path_merge_20261026/README.md)."
+        },
+        {
+          "new": "**Truth:** [Frontier](CURRENT-FRONTIER.md).",
+          "old": "**Current truth:** [Frontier](CURRENT-FRONTIER.md)."
         }
       ]
     }

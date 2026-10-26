@@ -1,0 +1,33 @@
+{
+  "abc_control": {
+    "Euclid_pair": [
+      16,
+      9
+    ],
+    "factorizations": [
+      "5^2*7",
+      "2^5*3^2",
+      "337"
+    ],
+    "radical": 70770,
+    "sign": -1,
+    "squared_hypotenuse": 113569,
+    "triple": [
+      175,
+      288,
+      337
+    ],
+    "word": "ADU"
+  },
+  "historical_arithmetic_source_pin_count": 13,
+  "historical_research_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "incoming_files": {
+    "INCOMING.md": "aa248f1ef7331bd427f0ca86f72a21b2ba51eab27015db4093085b3ed801b0b4",
+    "INCOMING_SOURCES.json": "2ba52b97b7212f6dc456349a244a7e07fc896f49fbee9d64a2eff862ffd3061f"
+  },
+  "incoming_revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+  "incoming_source_pin_count": 9,
+  "mismatches": [],
+  "spectral_census_reexecuted": false,
+  "verdict": "PASS scoped incoming integration review"
+}

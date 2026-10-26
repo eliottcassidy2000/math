@@ -1,11 +1,60 @@
 {
+  "additional_sources": [
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/README.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "9f8bc48be8d31db62c324ca0c43ac212ba006e423f8648b6319c7063f2d32839"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-root/WALSH_REALIZABILITY.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even/EVEN_GRAPH_OPERATION_ENVELOPE.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "b7c345c3bc4ed239fb1cef644832d17ec49d28c13fed10faf313d7bb44a071c1"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even/SCORE_PARITY_QUOTIENT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "94ce8274fbd5784a6af52e1ec23edf336bea05bf72b84ede69a1d9e2c88a00f8"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even-audit/REPORT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "0c68e86d480288ac472d5ede4eb3aa42bd2a8b3953902cedefc5936099a48101"
+    },
+    {
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "70d8245ec53ed98a7f11617cfb850ad9b63844127d741c603cf2c4a05a95cf5c"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "bb84afe3d69dd643886ba4beb5d6c07f0d4ed34defb5bb88e91d4f96066d2918"
+    },
+    {
+      "path": "04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/REPORT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "56cd6f8a2d5ad019c55a98b8000db16625ff2da66e6da78707e3a6bbb7c2cbd2"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "af3a4d23838dc4aa865c771467a6e5d504630b8f250fe625f2f25fc0c51d8e70"
+    }
+  ],
   "files": {
     ".gitattributes": "05bce1f34342a39f8e6b5a3f06183ca80dfe09934dd7d2e19fba4bf4a10ecbfc",
     "AUDIT.md": "f845610425fe5208dcba1ff60011336b73bda4c64abb3baab04a9c678f533d9c",
     "BOARD.md": "1d5c885d4c48b252754276072dd79d8355d158a645336910fee25bd3e7a96ff6",
     "COMPOSITION.md": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
-    "MAINTAINED_PATCHES.json": "bc971bf99032f65d70c353fb7f0e5386c5df288192d07cd0c022d91220cacf20",
-    "README.md": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde",
+    "INCOMING.md": "aa248f1ef7331bd427f0ca86f72a21b2ba51eab27015db4093085b3ed801b0b4",
+    "INCOMING_SOURCES.json": "2ba52b97b7212f6dc456349a244a7e07fc896f49fbee9d64a2eff862ffd3061f",
+    "MAINTAINED_PATCHES.json": "7b8cd6e8dc896c461c0e30e98a954271de5a5ce1a2a0168ec12b9a8dce97f7a2",
+    "README.md": "feb3887b0cb8020a239cdaab137561dab5b35d75fc99858bf0948bd7a7032824",
     "arithmetic/MANIFEST.json": "adf491fee4ff1c3b0ed25acb764463610292f5ac393670b118e8894459eef9f2",
     "arithmetic/README.md": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
     "arithmetic/SOURCES.md": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
@@ -29,8 +78,11 @@
     "audit_image/optimized.json": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
     "audit_image/producer_replay.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
     "audit_image/producer_replay.optimized.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "audit_incoming/MANIFEST.json": "3789d99207b5223ae511351a231f299a620c47c200b1b8b5ca8250eb929f6a25",
+    "audit_incoming/REPORT.md": "c39f57d72aaa6fea343c4263490e05274c832668bef83035ea0278db97b0633b",
+    "audit_incoming/VERIFICATION.json": "113556f0c886fd7f374e4e2717975e1820d3872642e5e93597690dbecef9dcc5",
     "audit_integration/COMPOSITION_AUDIT.md": "deba5447546506ab2328540d80d202c633a0ebee369f06a5a6a3c559fd04a7b0",
-    "audit_integration/MANIFEST.json": "4294f8c089bb9a4f101a58a734a4813f68e4de5ee38bdc4e970a946022d4b747",
+    "audit_integration/MANIFEST.json": "ae9f948fd5ce10c706da02f4e2b264742ee649dc558f4ede08494627b6018500",
     "audit_integration/ROOT_AUDIT.md": "5df2c4616980c66c90d04727e4f655a51fa7ebf1ca56667ffafd399414d42f2d",
     "audit_sandwich/MANIFEST.json": "aba049badb1bec426ae730cfaba076975d22deeab8684d9cdc300201eb1e7ae9",
     "audit_sandwich/REPORT.md": "4c0185ace16bef514185ccb7aac5eac4b123d8a6c1ea3ebe9f61ab72c8459b91",
@@ -56,7 +108,7 @@
     "sandwich/check.py": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
     "sandwich/normal.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
     "sandwich/optimized.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
-    "verify_packet.py": "078f36d320c056e364fb9711f84c5d63627f91c5a4d02c2340a6c05a4e181fed"
+    "verify_packet.py": "3bc3df97d77261cceac9002dfa5f188246ba439fd35e06597b7a449885db9914"
   },
   "inherited_sources": {
     "00-navigation/META-PATTERNS.md": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
@@ -418,8 +470,28 @@
     },
     {
       "path": "README.md",
-      "sha256": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde",
+      "sha256": "feb3887b0cb8020a239cdaab137561dab5b35d75fc99858bf0948bd7a7032824",
       "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "audit_incoming/REPORT.md",
+      "sha256": "c39f57d72aaa6fea343c4263490e05274c832668bef83035ea0278db97b0633b",
+      "source": "audit_incoming/MANIFEST.json"
+    },
+    {
+      "path": "audit_incoming/VERIFICATION.json",
+      "sha256": "113556f0c886fd7f374e4e2717975e1820d3872642e5e93597690dbecef9dcc5",
+      "source": "audit_incoming/MANIFEST.json"
+    },
+    {
+      "path": "INCOMING.md",
+      "sha256": "aa248f1ef7331bd427f0ca86f72a21b2ba51eab27015db4093085b3ed801b0b4",
+      "source": "audit_incoming/MANIFEST.json"
+    },
+    {
+      "path": "INCOMING_SOURCES.json",
+      "sha256": "2ba52b97b7212f6dc456349a244a7e07fc896f49fbee9d64a2eff862ffd3061f",
+      "source": "audit_incoming/MANIFEST.json"
     }
   ],
   "source_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",

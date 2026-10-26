@@ -1,0 +1,51 @@
+{
+  "read_scope": "Session72 overview, Walsh realization, operation envelope relevant theorem/scope sections, score-parity specialization and audit dispositions; THM4808 current status and corrected scopes; HYP9418 statuses/evidence boundaries; THM audit sections1\u20132; targeted MISTAKE678 entry, not the whole ledger.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/README.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "9f8bc48be8d31db62c324ca0c43ac212ba006e423f8648b6319c7063f2d32839"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-root/WALSH_REALIZABILITY.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even/EVEN_GRAPH_OPERATION_ENVELOPE.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "b7c345c3bc4ed239fb1cef644832d17ec49d28c13fed10faf313d7bb44a071c1"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even/SCORE_PARITY_QUOTIENT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "94ce8274fbd5784a6af52e1ec23edf336bea05bf72b84ede69a1d9e2c88a00f8"
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even-audit/REPORT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "0c68e86d480288ac472d5ede4eb3aa42bd2a8b3953902cedefc5936099a48101"
+    },
+    {
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "70d8245ec53ed98a7f11617cfb850ad9b63844127d741c603cf2c4a05a95cf5c"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "bb84afe3d69dd643886ba4beb5d6c07f0d4ed34defb5bb88e91d4f96066d2918"
+    },
+    {
+      "path": "04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/REPORT.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "56cd6f8a2d5ad019c55a98b8000db16625ff2da66e6da78707e3a6bbb7c2cbd2"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "revision": "b1255a717b156fdcbe768e3298e4a21bb9d4f083",
+      "sha256": "af3a4d23838dc4aa865c771467a6e5d504630b8f250fe625f2f25fc0c51d8e70"
+    }
+  ],
+  "status": "Read/integration addendum; no independent rerun of incoming proofs or spectral censuses"
+}
