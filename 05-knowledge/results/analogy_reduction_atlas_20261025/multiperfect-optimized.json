@@ -1,0 +1,25 @@
+{
+"bound": 2000000,
+"k_perfect": {
+"2": [
+6,
+28,
+496,
+8128
+],
+"3": [
+120,
+672,
+523776
+],
+"4": [
+30240,
+32760
+]
+},
+"all_prime_factors_supersingular": false,
+"first_nonsupersingular_factor": [
+8128,
+127
+]
+}
