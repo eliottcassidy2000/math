@@ -1,0 +1,300 @@
+{
+  "arithmetic": "integers and fractions in Q(phi); no floats",
+  "matching_diagram": {
+    "S4_centralizer_size": 8,
+    "S4_double_cosets": 2,
+    "involution_counts_n0_through_n6": {
+      "0": 1,
+      "1": 1,
+      "2": 2,
+      "3": 4,
+      "4": 10,
+      "5": 26,
+      "6": 76
+    },
+    "ordered_pairs_roundtripped": 6574,
+    "product_only_hostile": {
+      "component_counts": [
+        2,
+        1
+      ],
+      "same_product": [
+        0,
+        1
+      ]
+    },
+    "same_individual_matching_type_different_joint_components": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ]
+    ],
+    "whole_sides_not_atomic_segments": true
+  },
+  "native_conjunction_laws": [
+    {
+      "guard_matrix_determinant": 1,
+      "k": 1,
+      "proper_subset_guards": 1,
+      "states": 2,
+      "top_gap": "1"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 2,
+      "proper_subset_guards": 3,
+      "states": 4,
+      "top_gap": "1/2"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 3,
+      "proper_subset_guards": 7,
+      "states": 8,
+      "top_gap": "1/4"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 4,
+      "proper_subset_guards": 15,
+      "states": 16,
+      "top_gap": "1/8"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 5,
+      "proper_subset_guards": 31,
+      "states": 32,
+      "top_gap": "1/16"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 6,
+      "proper_subset_guards": 63,
+      "states": 64,
+      "top_gap": "1/32"
+    },
+    {
+      "guard_matrix_determinant": 1,
+      "k": 7,
+      "proper_subset_guards": 127,
+      "states": 128,
+      "top_gap": "1/64"
+    }
+  ],
+  "nonoverlap_hostile": {
+    "bad_piece_area_sum": 5,
+    "bad_square_origins": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "bad_union_area": 4,
+    "declared_seam_graph": "P5",
+    "distinct_local_ports": true,
+    "good_square_origins": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "good_union_area": 5,
+    "tree_holonomy_vacuous": true,
+    "warning": "P5 is the declared seam graph, not the full incidental-contact graph."
+  },
+  "penrose_native_guard": {
+    "D": [
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "2",
+          "-1"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ]
+      ]
+    ],
+    "K_illegal": [
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ]
+    ],
+    "K_legal": [
+      [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ],
+      [
+        [
+          "2",
+          "-1"
+        ],
+        [
+          "1",
+          "-1"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ]
+    ],
+    "area_ratio": [
+      "0",
+      "1"
+    ],
+    "field": "Q(phi), phi^2=phi+1",
+    "gram_off_diagonal": [
+      "-1/2",
+      "1/2"
+    ],
+    "illegal_guard": false,
+    "legal_guard": true,
+    "nonoverlap_both": true,
+    "reflection_used": false,
+    "rotation_determinant": 1,
+    "same_counts": {
+      "dart": 1,
+      "kite": 1
+    },
+    "same_simple_incidence": "K2"
+  },
+  "status": "FINITE-EXACT"
+}

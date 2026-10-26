@@ -1,0 +1,125 @@
+{
+  "active_checks": 6186654,
+  "census": [
+    {
+      "involutions": 1,
+      "pairs": 1,
+      "sides": 0
+    },
+    {
+      "involutions": 1,
+      "pairs": 1,
+      "sides": 1
+    },
+    {
+      "involutions": 2,
+      "pairs": 4,
+      "sides": 2
+    },
+    {
+      "involutions": 4,
+      "pairs": 16,
+      "sides": 3
+    },
+    {
+      "involutions": 10,
+      "pairs": 100,
+      "sides": 4
+    },
+    {
+      "involutions": 26,
+      "pairs": 676,
+      "sides": 5
+    },
+    {
+      "involutions": 76,
+      "pairs": 5776,
+      "sides": 6
+    },
+    {
+      "involutions": 232,
+      "pairs": 53824,
+      "sides": 7
+    }
+  ],
+  "endpoint_parity_cases": 7505,
+  "flat_control": "whole-side ED != atomized seam incidence",
+  "geometry": {
+    "five_square_origins": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "holonomy_scope": "tree consistency; not nonoverlap",
+    "ports": [
+      [
+        "E"
+      ],
+      [
+        "W",
+        "N"
+      ],
+      [
+        "S",
+        "W"
+      ],
+      [
+        "E",
+        "S"
+      ],
+      [
+        "N"
+      ]
+    ],
+    "positive_area_overlaps": [
+      [
+        0,
+        4,
+        1
+      ]
+    ]
+  },
+  "pairs_total": 60398,
+  "product_only_collision": {
+    "first_shapes": [
+      [
+        1,
+        "path"
+      ],
+      [
+        1,
+        "path"
+      ]
+    ],
+    "product": [
+      0,
+      1
+    ],
+    "second_shapes": [
+      [
+        2,
+        "cycle"
+      ]
+    ]
+  },
+  "scope": "finite carrier audit and exact hostile witnesses, not a dissection enumeration or Penrose extension solver",
+  "status": "PASS",
+  "universe": "all ordered pairs of totalized partial involutions on n named sides, 0<=n<=7"
+}

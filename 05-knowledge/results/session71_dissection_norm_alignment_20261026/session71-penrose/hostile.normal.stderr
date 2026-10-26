@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session71-penrose/check_carriers.py", line 215, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session71-penrose/check_carriers.py", line 210, in main
+    if '--inject-fault' in sys.argv:require(False,'injected hostile: guard acceptance changed')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session71-penrose/check_carriers.py", line 10, in require
+    if not p: raise RuntimeError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: injected hostile: guard acceptance changed

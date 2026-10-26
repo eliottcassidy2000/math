@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 232, in <module>
+    main()
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 219, in main
+    need(R(-10).sign() >= 0, "CORRUPTION: staged band overlaps dart band")
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 16, in need
+    raise ValueError(message)
+ValueError: CORRUPTION: staged band overlaps dart band

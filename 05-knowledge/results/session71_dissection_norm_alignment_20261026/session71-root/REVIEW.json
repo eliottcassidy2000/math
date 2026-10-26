@@ -1,0 +1,45 @@
+{
+  "schema": "session71-root-reviewed-synthesis-v1",
+  "status": "ACCEPTED",
+  "files": [
+    {
+      "source_file": "README.final.md",
+      "sha256": "0afea41121f802948584f64c3fa3fce7e7b72263835d1fc118459cab513cffa2",
+      "bytes": 6288
+    },
+    {
+      "source_file": "BRIDGES.md",
+      "sha256": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b",
+      "bytes": 14611
+    },
+    {
+      "source_file": "draw_penrose_guards.py",
+      "sha256": "1bf6c688d409d1982f9ace37593c4e88821a51f2faae48b8a7b68b52cee1937b",
+      "bytes": 2538
+    },
+    {
+      "source_file": "penrose-guards.svg",
+      "sha256": "d480b6fd68a617334f01ba625dc3aa2d30c3e6ecf82a3283a0afc4dc16bf5c65",
+      "bytes": 41079
+    },
+    {
+      "source_file": "penrose-guards.png",
+      "sha256": "d5e11875b9936c7bbc7f655c6714a146e68702bdbf4e83d7327f0137633da20e",
+      "bytes": 114906
+    }
+  ],
+  "mathematical_scope": [
+    "Norm/geometry review accepted Gaussian/Farey, labelled-rank, real-degree-four/complex-degree-eight, D4 root action, and sharp golden non-Galois degree-eight refinements.",
+    "Matching review accepted whole-side involutions, partial-affine guard semantics, finite Penrose conjunctions, connected SE(2) frame criterion and nonoverlap boundary.",
+    "The front-page scope review accepted the linked summary; diagram pixels and coordinate source were inspected."
+  ],
+  "source_scope": "External Dudeney optimality is CITED in the no-flip polygonal category; no full independent case-proof certification claimed.",
+  "drawing_scope": "Original mathematical illustration from audited coordinates. Floating-point rendering is not a proof. Matplotlib is required only to regenerate the illustration.",
+  "corrections_applied": [
+    "Explicit number-field and real-versus-complex coordinate conventions.",
+    "Connected seam graph required for uniqueness up to one common rigid motion.",
+    "Signed-law linear dimension distinguished from normalized affine dimension.",
+    "Whole intrinsic sides distinguished from an atomized seam refinement.",
+    "All repeated44/5 cardinalities kept separate absent an operation-preserving map."
+  ]
+}

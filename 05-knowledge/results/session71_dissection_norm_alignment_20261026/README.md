@@ -1,77 +1,114 @@
-# Session71: dissection norms, boundary memory, and exact bridges
+# Session71: Dudeney, Gaussian norms, and native Penrose alignment guards
 
-2026-10-26. First verified checkpoint: arithmetic and inherited-geometry lane.
-The matching/Penrose synthesis is in progress. New elementary deductions are
-separated from CITED external results and finite replay.
+2026-10-26. **PROVED** elementary interfaces below, **CITED** external dissection
+optimality, and **FINITE-EXACT** controls are kept separate. No new proof of
+Dudeney's four-piece minimum or broad equivalence of open problems is claimed.
 
-## A source correction before using the optimality theorem
+## Main answer
 
-The requested paper is Demaine–Kamata–Uehara,
-[Dudeney's Dissection is Optimal, v3](https://arxiv.org/html/2412.03865v3).
-The [official v4 notice](https://arxiv.org/abs/2412.03865v4) says v3 accidentally
-compiled an outdated file and v4 corrects the cut-graph analysis. Our version
-comparison is recorded separately; the served artifacts did not establish the
-expected substantive delta. We do not silently replace versions or claim an
-independent certification of the entire case analysis.
+Fermat's two-square theorem relates to the problem through **norm and coordinate
+compatibility**, not as the reason three pieces are impossible. The strongest
+structural connections found here are exact maps that retain the information
+subsequent operations can observe:
 
-The external result is CITED: four pieces are optimal for square/equilateral
-triangle dissections using polygonal pieces and no flipping. The paper uses
-matching diagrams, topology, angles and lengths. Fermat's two-square theorem
-is not a stated dependency. Flips and curved-piece extensions are not settled
-by that theorem.
+1. **Gaussian squaring ↔ a canonical Pythagorean/Farey graph.** The inherited
+   map preserves determinant/Lorentz adjacency; norms alone do not.
+2. **Whole-side matching diagrams ↔ two named involutions.** Both involutions,
+   node types and endpoint order are needed. Their product alone loses even
+   connectedness.
+3. **Marked Penrose placements ↔ the Boolean conjunction test system.** Actual
+   nonoverlapping kite/dart moves realize every hidden-bit conjunction, giving
+   the same exact correlation obstruction as Session70's tournament family.
+4. **Length gluing ↔ guarded partial-affine maps.** Sign, ordered offset and
+   admissible interval form a closed exact carrier; cancellation alone loses
+   legality.
 
-## The actual arithmetic bridge
+[Full cross-domain synthesis and proofs map](session71-root/BRIDGES.md).
 
-[The norm and boundary report](session71-norms/REPORT.md) recovers the repo's
-Gaussian-square/Farey/Pythagorean maps and the earlier rigid-ear obstruction
-PS-D2 in `prime_shells_20260921_dissections.md`.
+![The exact marked Penrose attachment control](session71-root/penrose-guards.svg)
 
-- Fermat's criterion distinguishes 5=1²+2² from 44, whose prime factor 11
-  occurs to odd exponent. Gaussian squaring gives the exact Pythagorean map
-  (m,n) ↦ (m²−n²,2mn,m²+n²). Norm-only records lose angular/determinant data.
-- Normalize the equilateral triangle to side 2. Its equal-area square has
-  side θ=3^(1/4), outside Q(√3). For regular-closed polygonal pieces, each square side is a sum of whole
-  exposed polygon-edge lengths. Thus each side needs an exposed edge length outside
-  Q(√3). This is an edge-length module obstruction, not a count of pieces:
-  four exposed edge occurrences need not come from four distinct pieces.
-- No square of that area has all real x/y coordinates in Q(√3), even tilted:
-  its edge would require a²+b²=√3, and the conjugation √3↦−√3 contradicts
-  a sum of real squares. Adjoining θ removes this target-coordinate
-  obstruction. Coordinate fields and edge-length fields are distinct.
+## Arithmetic: a precise bridge and a decisive boundary
 
-These facts explain an arithmetic component of geometric compatibility,
-NOT the three-versus-four threshold. Indeed scaling the triangle/square pair
-to area 5 or area 44 leaves its optimum unchanged, while square-to-itself at
-either area uses one piece. Representability of an area cannot determine the
-minimum dissection size without the shapes and permitted motions.
+The two-square criterion separates5=1²+2² from44=4·11. Yet triangle/square
+pairs scaled to either area have the same four-piece optimum in the cited
+category, while square-to-itself uses one piece. Area-norm membership cannot
+therefore determine the minimum.
 
-## Two sharper exact interfaces
+For the side-two triangle, the square side isθ=3^(1/4). Recovering the earlier
+PS-D2 rigid-ear theorem gives an orientation-free edge-length obstruction:
+each square side needs an exposed piece-edge length outside Q(√3). That is
+four exposed edge occurrences, **not necessarily four different pieces**.
 
-[The independent norm/geometry audit](session71-norm-audit/REPORT.md) proves:
+A sharper target-coordinate theorem distinguishes two conventions:
 
-- Simultaneous target vertices require a real Cartesian coordinate field of
-  degree at least four, attained by Q(θ). For complex vertex coordinates the
-  minimum is eight, attained by Q(θ,i). No abelian complex number field works;
-  every degree-eight Galois example has dihedral group D4. The obstruction is
-  conjugate positivity of z·conjugate(z), not the number of pieces. The theorem
-  concerns the target vertices, not the coordinates of Dudeney's actual cuts.
-- For rational matrices and a Q-independent boundary basis β, the unconstrained
-  length equations Ax=BCβ are solvable iff rank[A|BC]=rank A. This retains
-  labelled relations, not just their number. Positivity, topology, orientations,
-  nonoverlap, and a piece budget remain additional geometric requirements.
+- Real Cartesian x/y coordinates need a number field of degree at least4;
+  Q(θ) attains it. No totally real field works.
+- Complex vertex coordinates need degree at least8; Q(θ,i) attains it with
+  Galois group D4. No abelian complex number field works.
 
-## What 44 and 5 count
+The four roots±θ,±iθ carry the exact square-dihedral permutation action,
+but field automorphisms are not rigid motions of the entire plane. These
+statements concern target vertices, not the field of Dudeney's cut coordinates.
 
-Several recovered 44s and 5s concern genuinely different objects: strong-atom
-rooted-complement targets, an order-six pure-black tournament count, !5=44
-permutations, and the paper's displayed cut-type inventory. Equal cardinality
-alone supplies no incidence-, symmetry-, or operation-preserving isomorphism.
-The report pins the individual sources and their proved/cited/finite scopes.
+There is a golden counterpart: equal-area similar Penrose kite/dart copies
+also require complex degree at least8. The explicit field Q(ζ5,√φ) attains
+it but is **not Galois**, unlike the triangle/square example. Native Penrose
+tiles are not obstructed: they have area ratioφ, rather than equal areas.
 
-## Verification and next boundary
+- [Norms, Pythagorean maps, prior44/5 recovery](session71-norms/REPORT.md)
+- [Independent field and labelled-rank proofs](session71-norm-audit/REPORT.md)
+- [Golden norm review](session71-norm-audit/PENROSE_P5_REVIEW.md)
 
-Native sources, portable exact checks, normal/optimized receipts and reviewed
-hashes accompany the arithmetic report. The full session will add the
-matching-diagram transport carrier, precise Penrose placement tests and an
-independent geometric audit. None of these implies a graph-to-geometry
-isomorphism without a specified map and retained gluing data.
+## Geometry: what gluing must remember
+
+The Penrose construction uses disjoint finite marked placements and the same
+named translation for either hidden kite orientation. Subset moves have guard
+value∏b_j. Singleton guards recover k bits; the signed-law response space has
+dimension2^k. Proper-subset marginals of parity mixtures agree, but a global
+move distinguishes them. This is not a theorem about infinite tiling extension.
+
+The dissection length carrier is(ε,c,I), representing x↦εx+c on its exact
+admissible interval. A balanced twelve-step chain with totalsθ and2 has
+identity formal composition but empty domain. The analogous angle-charge
+carriers are Z6 for triangle/square and Z10 for pentagon/square: similar
+corner-count consequences, **not isomorphic charge groups**.
+
+Finally, flat Euclidean seam transport develops consistent frames but does
+not ensure nonoverlap. A five-square path returns its last square onto its
+first. This is the geometric counterpart of keeping Petersen's local run
+options while still needing a separate global connectivity test.
+
+- [Matching, Penrose, and Euclidean carrier proofs](session71-penrose/REPORT.md)
+- [Partial-affine guards and angle charges](session71-dudeney/REPORT.md)
+- [Independent matching and geometric audit](session71-matching-audit/AUDIT.md)
+
+## Forty-four, five, and source versions
+
+The displayed paper inventory has44 square cut types and5 triangle cut types,
+with46 listed pairs surviving its filters. This is distinct from !5=44,
+the earlier pure-black tournament count44, and rooted-complement target counts
+5 and44. No structure-preserving bijection between those entire sets is proved.
+
+The requested [arXiv v3](https://arxiv.org/html/2412.03865v3) has an official
+[v4 correction notice](https://arxiv.org/abs/2412.03865v4). The current primary
+publication is [ITCS2026, DOI10.4230/LIPIcs.ITCS.2026.47](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITCS.2026.47).
+Our ledger records exact served-version observations and figure-label cautions;
+it does not claim a full independent certification of the paper's case proof.
+Its theorem covers polygonal pieces without flips, not the flipped/curved
+extensions discussed there.
+
+[Incoming repository corrections](INCOMING_RECONCILIATION.md) preserve the
+updated HYP-9416 scopes without rewriting frozen historical source bytes.
+
+## Reproduction and remaining frontier
+
+Run `python3 -B verify_packet.py --replay` in this packet. The envelope checks
+curated files, source provenance, producer and independent normal/optimized
+receipts, and explicit hostile controls. Dependencies and exact finite universes
+are recorded in the lane reports. The drawing is an illustration of separately
+verified exact coordinates, not a floating-point proof.
+
+The remaining challenge is an economical geometric carrier that retains
+realization, positivity, marks, permitted motions and global nonoverlap without
+merely storing every raw assembly. The exact subcarriers here provide constraints
+and reusable components; they are not a universal dissection classifier.

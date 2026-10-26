@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 252, in <module>
+    main()
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 239, in main
+    need(path_shapes == cycle_shapes, "CORRUPTION: product claimed faithful")
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 16, in need
+    raise ValueError(message)
+ValueError: CORRUPTION: product claimed faithful

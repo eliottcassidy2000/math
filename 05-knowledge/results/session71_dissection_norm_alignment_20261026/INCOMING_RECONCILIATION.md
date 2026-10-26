@@ -31,3 +31,26 @@ reconstruction and arithmetic observers. We preserve it without claiming a
 new graph-to-dissection isomorphism. These corrections do not invalidate this
 packet's norm, coordinate-field, labelled-rank results or its warning that
 shared `44`/`5` cardinalities alone supply no structure-preserving map.
+
+## Later incoming reset carrier (before final checkpoint)
+
+Incoming commits `e383abccae` and `ffaa87ea4e` add the
+[unnamed-carrier/dissection packet](../unnamed_carrier_dissection_20261026/README.md).
+Their full commits are preserved in this publication's ancestry.
+
+Its U2 reset lemma concerns a **different operation menu**: if the reset kernel's
+entire row depends only on observation q, and an involution tau is a separate
+allowed operation, the coarsest exactly lumpable carrier preserving both is
+`(q(x),q(tau x))`. Necessity follows by observing now and after tau; sufficiency
+follows because tau swaps the pair and equal q gives identical reset rows.
+Fresh reset can therefore erase alignment that our named geometric and
+Hamilton-path guards retain. The packet explicitly excludes blue-coloured
+joins and arbitrary assembly grammars from that minimality claim.
+
+The incoming packet also reports a FINITE-EXACT order-eight census with 6,008
+strong classes, distinct joint and correctly port-forgotten response histograms.
+All-order strong-atom histogram classification remains OPEN. This later census
+was **not independently replayed by Session71**. It extends the incoming finite
+frontier without changing the pinned 5/44 counts or identifying their objects
+with the paper's cut patterns. No assertion about infinite Penrose extension,
+full geometric realization, or Dudeney piece-count optimality transfers from U2.

@@ -1,0 +1,52 @@
+{
+  "active_checks": 468013,
+  "all_k_proof": "disjoint oblique columns [3j,3j+1], dart band [0,1], staged band [-11,-10], attached band [-1,0]",
+  "bad_good_endpoint_matches": [
+    [
+      false,
+      false
+    ],
+    [
+      true,
+      true
+    ]
+  ],
+  "dart_angles_degrees": [
+    72,
+    36,
+    216,
+    36
+  ],
+  "field": "independent Q(sqrt(5)) implementation",
+  "kite_angles_degrees": [
+    72,
+    72,
+    144,
+    72
+  ],
+  "placement_census": [
+    {
+      "k": 1,
+      "state_subset_placements": 4
+    },
+    {
+      "k": 2,
+      "state_subset_placements": 16
+    },
+    {
+      "k": 3,
+      "state_subset_placements": 64
+    },
+    {
+      "k": 4,
+      "state_subset_placements": 256
+    },
+    {
+      "k": 5,
+      "state_subset_placements": 1024
+    }
+  ],
+  "scope": "finite marked local-matching guards; no infinite tiling extendibility assertion",
+  "status": "PASS",
+  "total_state_subset_placements": 1364
+}

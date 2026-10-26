@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "normal",
+    "mutation": "involution",
+    "returncode": 1,
+    "last_line": "ValueError: not an involution"
+  },
+  {
+    "mode": "normal",
+    "mutation": "overlap",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: overlaps erased"
+  },
+  {
+    "mode": "normal",
+    "mutation": "product",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: product claimed faithful"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "involution",
+    "returncode": 1,
+    "last_line": "ValueError: not an involution"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "overlap",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: overlaps erased"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "product",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: product claimed faithful"
+  }
+]

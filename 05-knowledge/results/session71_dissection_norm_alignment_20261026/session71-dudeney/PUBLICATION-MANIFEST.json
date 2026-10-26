@@ -1,0 +1,15 @@
+{
+  "scope": "Curated Session71 Dudeney proof-audit, angle-charge and partial-affine guard payload. Manifest itself may accompany it. Whole dissection proof remains CITED; exact checks are abstract chains, charge arithmetic and transcribed case lists.",
+  "file_count": 8,
+  "excluded": "Raw downloaded HTML/PDF, extracted full text, and rendered source pages remain local evidence; URLs/version/hash pins are included.",
+  "files": {
+    "REPORT.md": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa",
+    "verify_transport.py": "2597b81470498da1076cc6b094c33b03bd47d7c7f4903c520192cec3452392b5",
+    "check.normal.json": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b",
+    "check.optimized.json": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b",
+    "PROVENANCE.json": "d50be536080eb835d54c6281dfa9d00deb3943d2e11b5d7dbecd4ea39693810b",
+    "version-observation.json": "1325f8bc695ff8361badae127e07a1abea9954836d81b88784084be2a2fced32",
+    "download-receipt.json": "cd22b2efb67f60039238949dc41cdfcf1d68af51748ba0a460f5e1b45bbb30b8",
+    "published-download-receipt.json": "050e1a38d3f63218213132cb0315851a85f7eb48252c72d50c2ca0137cefbd3c"
+  }
+}

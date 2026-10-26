@@ -20,4 +20,4 @@ Git origin and are not separately relicensed here.
 
 The packet-local `.gitattributes` exempts only this exact HTML from newline
 normalization and whitespace lint, preserving its original bytes and trailing
-spaces. All authored files remain subject to the ordinary whitespace gate.
+spaces. All authored prose and checker files remain subject to the ordinary whitespace gate.

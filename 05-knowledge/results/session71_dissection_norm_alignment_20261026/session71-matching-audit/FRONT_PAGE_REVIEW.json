@@ -1,0 +1,69 @@
+{
+  "accepted_boundaries": [
+    "External four-piece optimum remains cited and restricted to polygonal no-flip category",
+    "Degree4 real Cartesian field versus degree8 complex coordinate field distinguished",
+    "Square-dihedral root permutation action not identified with rigid motions of the whole plane",
+    "Golden equal-area degree8 non-Galois statement follows separately accepted norm-lane refinement",
+    "Native unequal-area Penrose tiles expressly unaffected",
+    "Native guards are finite disconnected marked-placement operations, not infinite tiling extension",
+    "Two-involution product loss and nonisomorphic Z6/Z10 angle groups correctly stated",
+    "Four exposed edge occurrences not conflated with four pieces"
+  ],
+  "artifact_boundary": "Separate new receipt; original audit files unchanged.",
+  "assembly_caveat": "Relative links validated against planned source files; final assembled packet-root link resolution remains publication gate.",
+  "optional_wording_precision": "Item2 could distinguish data needed for bare ED recovery from endpoint-order sidecar needed for geometric use. This is not a blocker.",
+  "planned_installation": "packet-root README.md",
+  "planned_relative_links": [
+    {
+      "exists": true,
+      "link": "session71-root/BRIDGES.md",
+      "planned_source": "session71-root/BRIDGES.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-root/penrose-guards.svg",
+      "planned_source": "session71-root/penrose-guards.svg"
+    },
+    {
+      "exists": true,
+      "link": "session71-norms/REPORT.md",
+      "planned_source": "session71-norms/REPORT.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-norm-audit/REPORT.md",
+      "planned_source": "session71-norm-audit/REPORT.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-norm-audit/PENROSE_P5_REVIEW.md",
+      "planned_source": "session71-norm-audit/PENROSE_P5_REVIEW.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-penrose/REPORT.md",
+      "planned_source": "session71-penrose/REPORT.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-dudeney/REPORT.md",
+      "planned_source": "session71-dudeney/REPORT.md"
+    },
+    {
+      "exists": true,
+      "link": "session71-matching-audit/AUDIT.md",
+      "planned_source": "session71-matching-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "link": "INCOMING_RECONCILIATION.md",
+      "planned_source": "session71-publication/INCOMING_RECONCILIATION.md"
+    }
+  ],
+  "reviewed_frontpage": {
+    "path": "session71-root/README.final.md",
+    "sha256": "0afea41121f802948584f64c3fa3fce7e7b72263835d1fc118459cab513cffa2"
+  },
+  "scope": "Front-page mathematical typing and planned relative links; underlying accepted proofs not rederived here",
+  "status": "PASS"
+}

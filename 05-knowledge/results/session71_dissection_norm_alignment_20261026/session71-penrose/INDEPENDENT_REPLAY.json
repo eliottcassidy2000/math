@@ -1,0 +1,17 @@
+{
+  "reviewed_checker": "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py",
+  "checker_sha256": "ae4f61aea370676ab3370d73fb8636feeda6dcd14cc100da9133c0d4687bdedf",
+  "receipt_sha256": "5c3e4ea55b5ffcdcef060260f32c9314263796c5eab44aa3415cb2c43cbd37e3",
+  "normal_and_optimized_replayed": true,
+  "receipt_byte_match": true,
+  "active_checks": 468013,
+  "state_subset_coordinate_placements": 1364,
+  "review_scope": [
+    "Q(sqrt5) arithmetic independent of producer Q(phi)",
+    "corner cosines and reflex flags",
+    "polygon simplicity and signed area",
+    "Gram form and determinant +1",
+    "actual moved-coordinate color guards",
+    "disjoint columns and staging bands"
+  ]
+}

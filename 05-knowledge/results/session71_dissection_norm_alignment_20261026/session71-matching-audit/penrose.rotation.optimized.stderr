@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 232, in <module>
+    main()
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 217, in main
+    need(determinant(rotate(U), rotate(V)) == -ONE, "CORRUPTION: direct map called reflection")
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check_penrose.py", line 16, in need
+    raise ValueError(message)
+ValueError: CORRUPTION: direct map called reflection

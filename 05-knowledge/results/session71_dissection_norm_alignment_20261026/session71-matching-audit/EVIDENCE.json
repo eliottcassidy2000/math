@@ -1,0 +1,214 @@
+{
+  "external_sources": [
+    {
+      "artifact_version_uncertainty": "v4 notice not resolved by equal served normalized text",
+      "sections": "2,3.1,3.2,3.3,3.4",
+      "url": "https://arxiv.org/html/2412.03865v3"
+    },
+    {
+      "figure": "9, printed page35; same-color rule in page33 text",
+      "pixels_inspected": true,
+      "retrieved_sha256": "4d844c3aa90a1c588115af813695f6a98b90f9fa674d969ba564d1a99b9087b0",
+      "url": "https://web.ma.utexas.edu/users/radin/Pentaplexity.pdf"
+    }
+  ],
+  "hostile_controls": {
+    "actual_byte_corruptions_per_mode": 4,
+    "distinction": "semantic controls are intentional contradictory assertions or malformed involution input; byte corruptions test archived integrity only",
+    "mode": "normal and optimized",
+    "semantic_controls_per_mode": 6,
+    "status": "all rejected"
+  },
+  "independent_results": {
+    "endpoint_sign_cases": 7505,
+    "involution_active_checks": 6186654,
+    "involution_pairs": 60398,
+    "normal_optimized_byte_identical": true,
+    "penrose_active_checks": 468013,
+    "penrose_placements": 1364,
+    "producer_receipts_independently_replayed_and_identical": true
+  },
+  "owned_artifacts": [
+    {
+      "bytes": 17338,
+      "path": "AUDIT.md",
+      "sha256": "1663f599efab88d33054eb94434a29ee4d4fd68f039392fe785e602738c6e351"
+    },
+    {
+      "bytes": 9936,
+      "path": "check.py",
+      "sha256": "fb256fc6820bdd920ac2dd9bea2d9bdfa94f94d139aa796c60088beafb3a1077"
+    },
+    {
+      "bytes": 8770,
+      "path": "check_penrose.py",
+      "sha256": "ae4f61aea370676ab3370d73fb8636feeda6dcd14cc100da9133c0d4687bdedf"
+    },
+    {
+      "bytes": 844,
+      "path": "corruption.json",
+      "sha256": "2757fbd46cfff79bf6533529ad16d26010cb4d1a8a2c264a72a9064cea9dfe7f"
+    },
+    {
+      "bytes": 1119,
+      "path": "dudeney.replay.normal.json",
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    {
+      "bytes": 1119,
+      "path": "dudeney.replay.optimized.json",
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    {
+      "bytes": 595,
+      "path": "involution.normal.stderr",
+      "sha256": "38e8c89b7f6f44db9125310f794389863d6ba15e284af696dab2f949133faad9"
+    },
+    {
+      "bytes": 595,
+      "path": "involution.optimized.stderr",
+      "sha256": "38e8c89b7f6f44db9125310f794389863d6ba15e284af696dab2f949133faad9"
+    },
+    {
+      "bytes": 1853,
+      "path": "normal.json",
+      "sha256": "be6e61bc6e2bf162ad1739597de00f13c1fcfda0b2768e96bf12d4ccd258d0a8"
+    },
+    {
+      "bytes": 1853,
+      "path": "optimized.json",
+      "sha256": "be6e61bc6e2bf162ad1739597de00f13c1fcfda0b2768e96bf12d4ccd258d0a8"
+    },
+    {
+      "bytes": 476,
+      "path": "overlap.normal.stderr",
+      "sha256": "4f082f3ca8f7beadf318d1bf4695746d6a346e5ad9b7b4fefba640f3dde1a0c7"
+    },
+    {
+      "bytes": 476,
+      "path": "overlap.optimized.stderr",
+      "sha256": "4f082f3ca8f7beadf318d1bf4695746d6a346e5ad9b7b4fefba640f3dde1a0c7"
+    },
+    {
+      "bytes": 511,
+      "path": "penrose.color.normal.stderr",
+      "sha256": "6878293ae274c321164ef6d6fb60bbd2caa4c9f8a5cb453b59e1ed930d3e2507"
+    },
+    {
+      "bytes": 511,
+      "path": "penrose.color.optimized.stderr",
+      "sha256": "6878293ae274c321164ef6d6fb60bbd2caa4c9f8a5cb453b59e1ed930d3e2507"
+    },
+    {
+      "bytes": 906,
+      "path": "penrose.corruption.json",
+      "sha256": "87afca53cd448c3f867e99f0ccb5fe02b6f4b415803b1ffd0f2a5818b0ec2577"
+    },
+    {
+      "bytes": 938,
+      "path": "penrose.normal.json",
+      "sha256": "5c3e4ea55b5ffcdcef060260f32c9314263796c5eab44aa3415cb2c43cbd37e3"
+    },
+    {
+      "bytes": 938,
+      "path": "penrose.optimized.json",
+      "sha256": "5c3e4ea55b5ffcdcef060260f32c9314263796c5eab44aa3415cb2c43cbd37e3"
+    },
+    {
+      "bytes": 534,
+      "path": "penrose.rotation.normal.stderr",
+      "sha256": "1d351d010240e4e3b5e5a62d17f0e6a06b499ee332450c0514a74c46c0b4a592"
+    },
+    {
+      "bytes": 534,
+      "path": "penrose.rotation.optimized.stderr",
+      "sha256": "1d351d010240e4e3b5e5a62d17f0e6a06b499ee332450c0514a74c46c0b4a592"
+    },
+    {
+      "bytes": 515,
+      "path": "penrose.stage.normal.stderr",
+      "sha256": "e48ddbed018a322a78acc9809a7d3f7fee9faeb047bb281e4d5613669be33dfd"
+    },
+    {
+      "bytes": 515,
+      "path": "penrose.stage.optimized.stderr",
+      "sha256": "e48ddbed018a322a78acc9809a7d3f7fee9faeb047bb281e4d5613669be33dfd"
+    },
+    {
+      "bytes": 4477,
+      "path": "producer.replay.normal.json",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    },
+    {
+      "bytes": 4477,
+      "path": "producer.replay.optimized.json",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    },
+    {
+      "bytes": 488,
+      "path": "product.normal.stderr",
+      "sha256": "c0a389385b4ee9cdb503d746df79c1af48450a6976da8f178b90e58c1d71dc69"
+    },
+    {
+      "bytes": 488,
+      "path": "product.optimized.stderr",
+      "sha256": "c0a389385b4ee9cdb503d746df79c1af48450a6976da8f178b90e58c1d71dc69"
+    },
+    {
+      "bytes": 1818,
+      "path": "verify_evidence.py",
+      "sha256": "23f98f6decd1ed36755946c0100d3e1712f61957a9c360f856d620a8672213a2"
+    }
+  ],
+  "peer_review": {
+    "coverage": "Q(sqrt5) checker and replay; AUDIT.md Sections1-3 and check.py core: orbit-node inverse, parallel links, fixed-point stops, total and partial product hostiles, assembly-dependent flip signs, five-square ports/overlap, SE(2) development",
+    "qualification": "Relabeling finite check covers component-shape invariance, not all incidence labels; all-order incidence equivalence separately proved.",
+    "reviewer": "connect_penrose_boundary_carriers",
+    "status": "PASS as reported in collaboration"
+  },
+  "repository_pin": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+  "reviewed_producer_snapshots": [
+    {
+      "bytes": 23280,
+      "path": "session71-dudeney/REPORT.md",
+      "sha256": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa"
+    },
+    {
+      "bytes": 5866,
+      "path": "session71-dudeney/verify_transport.py",
+      "sha256": "2597b81470498da1076cc6b094c33b03bd47d7c7f4903c520192cec3452392b5"
+    },
+    {
+      "bytes": 1119,
+      "path": "session71-dudeney/check.normal.json",
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    {
+      "bytes": 1119,
+      "path": "session71-dudeney/check.optimized.json",
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    {
+      "bytes": 20684,
+      "path": "session71-penrose/REPORT.md",
+      "sha256": "59d822bd4b341326a22a1790fa835c561e474f1322d2465b62c02620423d31a2"
+    },
+    {
+      "bytes": 9919,
+      "path": "session71-penrose/check_carriers.py",
+      "sha256": "09a226fe6ccfbcf68fd7afb68936d0c34f9d475d7dcc0d0d1c282d05397b0c92"
+    },
+    {
+      "bytes": 4477,
+      "path": "session71-penrose/normal.json",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    },
+    {
+      "bytes": 4477,
+      "path": "session71-penrose/optimized.json",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    }
+  ],
+  "scope": "Independent combinatorial and geometric audit; not full Dudeney case proof or infinite Penrose extendibility",
+  "status": "PASS"
+}

@@ -1,0 +1,90 @@
+{
+  "date_utc": "2026-10-26",
+  "repo_base": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2412.03865v3",
+      "role": "requested proof version"
+    },
+    {
+      "url": "https://arxiv.org/abs/2412.03865v4",
+      "role": "explicit correction notice"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "role": "source license"
+    },
+    {
+      "url": "https://doi.org/10.4230/LIPIcs.ITCS.2026.47",
+      "role": "current published primary version; theorem/case-inventory/presentation cross-check only",
+      "publication_date": "2026-01-23",
+      "venue": "ITCS 2026",
+      "pages": "47:1\u201347:22"
+    },
+    {
+      "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol362-itcs2026/html/LIPIcs.ITCS.2026.47/LIPIcs.ITCS.2026.47.html",
+      "role": "published HTML inspected"
+    }
+  ],
+  "files": {
+    "REPORT.md": {
+      "bytes": 23280,
+      "sha256": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa"
+    },
+    "verify_transport.py": {
+      "bytes": 5866,
+      "sha256": "2597b81470498da1076cc6b094c33b03bd47d7c7f4903c520192cec3452392b5"
+    },
+    "check.normal.json": {
+      "bytes": 1119,
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    "check.optimized.json": {
+      "bytes": 1119,
+      "sha256": "e8585225968aef2c0f7721cf6aedb27f52e2dd8961686b09dbca9ef8183ed31b"
+    },
+    "v3.html": {
+      "bytes": 474334,
+      "sha256": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc"
+    },
+    "v4.html": {
+      "bytes": 474099,
+      "sha256": "d379ed838cf15d0580ef06e779863dc257206bae2808ba09c28d0c44069feae1"
+    },
+    "v3.pdf": {
+      "bytes": 2823925,
+      "sha256": "f44d6ed622d82666ea9e073c8d28f2bd46ab74c0e63193a594ab02a91e9d4c42"
+    },
+    "v4.pdf": {
+      "bytes": 2823923,
+      "sha256": "d1ce6c72f489e852e49938e9de48d8ae9ee08c0687f44823cec08d59ce5e52be"
+    },
+    "version-observation.json": {
+      "bytes": 210,
+      "sha256": "1325f8bc695ff8361badae127e07a1abea9954836d81b88784084be2a2fced32"
+    },
+    "published.html": {
+      "bytes": 349888,
+      "sha256": "9ad24d29d7f1f7ac9f88cd281b4e87a257806afa8296c50f5f50725145f99395"
+    },
+    "published.pdf": {
+      "bytes": 3145740,
+      "sha256": "d6ed68b9b0be8bf7eb7182685ef247d12a1410da8378b2fcb97b3a4fb3c3c280"
+    },
+    "published-download-receipt.json": {
+      "bytes": 538,
+      "sha256": "050e1a38d3f63218213132cb0315851a85f7eb48252c72d50c2ca0137cefbd3c"
+    }
+  },
+  "publication_recommendation": [
+    "REPORT.md",
+    "verify_transport.py",
+    "check.normal.json",
+    "check.optimized.json",
+    "PROVENANCE.json",
+    "version-observation.json",
+    "published-download-receipt.json"
+  ],
+  "scope": "Dependency and transfer audit; not independent exhaustive dissection proof",
+  "files_scope": "Files lists both publication artifacts and local downloaded source evidence. Raw HTML/PDF and renders are intentionally not required publication payload; source URLs and hashes are pins."
+}

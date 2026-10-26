@@ -1,0 +1,41 @@
+{
+  "archive_boundary": "New separate review receipt; earlier audit artifacts left unchanged",
+  "findings": [
+    "Whole-side ED exact isomorphism and product-only hostile correctly scoped",
+    "Guarded affine transport and arbitrary-positive-threshold minimality correct",
+    "Triangle-square and pentagon-square angle groups correctly distinguished",
+    "Native geometric Boolean guard isomorphism does not identify entire tiling and tournament spaces",
+    "Connected declared seam graph now explicit for uniqueness up to common motion",
+    "SE(2) no-flip restriction and independent component motions now explicit",
+    "Signed-law dimension 2^k distinguished from normalized affine dimension 2^k-1",
+    "Figure coordinates implement exact reviewed poses; floating point is display-only",
+    "Actual rendered PNG shows matching versus mismatching paired endpoint marks and no overlaps",
+    "Caption limits claim to finite local matching, not infinite extension"
+  ],
+  "initial_required_repair": "Missing connectedness qualifier in frame-development summary",
+  "repair_status": "Applied and independently verified",
+  "reviewed_files": [
+    {
+      "bytes": 14611,
+      "path": "session71-root/BRIDGES.md",
+      "sha256": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b"
+    },
+    {
+      "bytes": 2538,
+      "path": "session71-root/draw_penrose_guards.py",
+      "sha256": "1bf6c688d409d1982f9ace37593c4e88821a51f2faae48b8a7b68b52cee1937b"
+    },
+    {
+      "bytes": 41079,
+      "path": "session71-root/penrose-guards.svg",
+      "sha256": "d480b6fd68a617334f01ba625dc3aa2d30c3e6ecf82a3283a0afc4dc16bf5c65"
+    },
+    {
+      "bytes": 114906,
+      "path": "session71-root/penrose-guards.png",
+      "sha256": "d5e11875b9936c7bbc7f655c6714a146e68702bdbf4e83d7327f0137633da20e"
+    }
+  ],
+  "scope": "BRIDGES sections 2,4,6-8 plus mathematical illustration source and actual PNG pixels; section5 field refinements audited separately by norm lane",
+  "status": "PASS"
+}

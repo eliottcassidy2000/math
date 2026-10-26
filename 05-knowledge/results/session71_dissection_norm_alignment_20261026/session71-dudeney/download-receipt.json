@@ -1,0 +1,20 @@
+[
+  {
+    "file": "v4.html",
+    "url": "https://arxiv.org/html/2412.03865v4",
+    "bytes": 474099,
+    "sha256": "d379ed838cf15d0580ef06e779863dc257206bae2808ba09c28d0c44069feae1"
+  },
+  {
+    "file": "v3.pdf",
+    "url": "https://arxiv.org/pdf/2412.03865v3",
+    "bytes": 2823925,
+    "sha256": "f44d6ed622d82666ea9e073c8d28f2bd46ab74c0e63193a594ab02a91e9d4c42"
+  },
+  {
+    "file": "v4.pdf",
+    "url": "https://arxiv.org/pdf/2412.03865v4",
+    "bytes": 2823923,
+    "sha256": "d1ce6c72f489e852e49938e9de48d8ae9ee08c0687f44823cec08d59ce5e52be"
+  }
+]

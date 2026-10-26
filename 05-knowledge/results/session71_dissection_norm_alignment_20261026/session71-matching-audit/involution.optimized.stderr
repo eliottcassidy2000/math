@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 252, in <module>
+    main()
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 235, in main
+    check_involution((1, 2, 0))
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 23, in check_involution
+    need(all(p[p[i]] == i for i in range(n)), "not an involution")
+  File "/workspace/scratch/07d5532f2fce/session71-matching-audit/check.py", line 16, in need
+    raise ValueError(message)
+ValueError: not an involution

@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://web.ma.utexas.edu/users/radin/Pentaplexity.pdf",
+    "title": "Pentaplexity",
+    "author": "Roger Penrose",
+    "doi": "10.1007/BF03024384",
+    "sha256_retrieved_pdf": "4d844c3aa90a1c588115af813695f6a98b90f9fa674d969ba564d1a99b9087b0",
+    "bytes": 1042968,
+    "visually_inspected": "printed page35 Fig9, matching colors and polygon angles",
+    "retrieval_date_utc": "2026-10-26"
+  },
+  {
+    "url": "https://arxiv.org/html/2412.03865v3",
+    "version": "v3 2025-07-31",
+    "sha256_retrieved_html": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc",
+    "bytes": 474334,
+    "inspected": "Theorem1, Definition2, Lemma10",
+    "retrieval_date_utc": "2026-10-26"
+  }
+]

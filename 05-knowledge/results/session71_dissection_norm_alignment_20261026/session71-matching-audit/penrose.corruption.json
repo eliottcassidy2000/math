@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "normal",
+    "mutation": "color",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: endpoint marking erased"
+  },
+  {
+    "mode": "normal",
+    "mutation": "rotation",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: direct map called reflection"
+  },
+  {
+    "mode": "normal",
+    "mutation": "stage",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: staged band overlaps dart band"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "color",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: endpoint marking erased"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "rotation",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: direct map called reflection"
+  },
+  {
+    "mode": "optimized",
+    "mutation": "stage",
+    "returncode": 1,
+    "last_line": "ValueError: CORRUPTION: staged band overlaps dart band"
+  }
+]

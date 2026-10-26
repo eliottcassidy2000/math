@@ -1,0 +1,51 @@
+[
+  {
+    "repository_path": "AGENTS.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+    "local": "sources/00_AGENTS.md",
+    "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+  },
+  {
+    "repository_path": "01-canon/ACTIVE-GUARDRAILS.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+    "local": "sources/01_ACTIVE-GUARDRAILS.md",
+    "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+  },
+  {
+    "repository_path": "00-navigation/RESEARCH-PROTOCOL.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+    "local": "sources/02_RESEARCH-PROTOCOL.md",
+    "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+  },
+  {
+    "repository_path": "05-knowledge/results/fivefold_boundary_20261018g.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "efb4017f52f91b79dd176931043038a2039259b7",
+    "local": "sources/03_fivefold_boundary_20261018g.md",
+    "sha256": "c56aa493928e053fc7fe2002a5c6900aab7018ac74f0934fdd3aad0854c6fd14"
+  },
+  {
+    "repository_path": "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "fcd692c3d4e34fe2d4237f6d04fd31f9cc7cf698",
+    "local": "sources/04_THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+  },
+  {
+    "repository_path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-root/SYNTHESIS.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "95dae0fc50182f76de98c638d9bfdfb801c67f4d",
+    "local": "sources/05_SYNTHESIS.md",
+    "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6"
+  },
+  {
+    "repository_path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md",
+    "git_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "git_blob": "1619d2b4d7e69df2a96e70ade51d9841f946533a",
+    "local": "sources/06_REPORT.md",
+    "sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+  }
+]

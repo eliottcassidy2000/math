@@ -1,0 +1,50 @@
+{
+  "actual_copy_corruptions": [
+    {
+      "one_byte_change_rejected": true,
+      "source": "check.py"
+    },
+    {
+      "one_byte_change_rejected": true,
+      "source": "check_penrose.py"
+    },
+    {
+      "one_byte_change_rejected": true,
+      "source": "normal.json"
+    },
+    {
+      "one_byte_change_rejected": true,
+      "source": "penrose.normal.json"
+    }
+  ],
+  "scope": "frozen byte integrity, not mathematical proof verification",
+  "status": "PASS",
+  "verified_files": [
+    "AUDIT.md",
+    "check.py",
+    "check_penrose.py",
+    "corruption.json",
+    "dudeney.replay.normal.json",
+    "dudeney.replay.optimized.json",
+    "involution.normal.stderr",
+    "involution.optimized.stderr",
+    "normal.json",
+    "optimized.json",
+    "overlap.normal.stderr",
+    "overlap.optimized.stderr",
+    "penrose.color.normal.stderr",
+    "penrose.color.optimized.stderr",
+    "penrose.corruption.json",
+    "penrose.normal.json",
+    "penrose.optimized.json",
+    "penrose.rotation.normal.stderr",
+    "penrose.rotation.optimized.stderr",
+    "penrose.stage.normal.stderr",
+    "penrose.stage.optimized.stderr",
+    "producer.replay.normal.json",
+    "producer.replay.optimized.json",
+    "product.normal.stderr",
+    "product.optimized.stderr",
+    "verify_evidence.py"
+  ]
+}

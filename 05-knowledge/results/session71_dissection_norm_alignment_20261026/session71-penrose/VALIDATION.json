@@ -1,0 +1,21 @@
+{
+  "executions": [
+    {
+      "exit_code": 0,
+      "mode": "normal",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    },
+    {
+      "exit_code": 0,
+      "mode": "optimized",
+      "sha256": "96f6b20fd4cb0f5a5dc8a29806c1777c1bba98c089dd9483833aba1e1dabc8cd"
+    }
+  ],
+  "injected_failure_exits": [
+    1,
+    1
+  ],
+  "normal_optimized_match": true,
+  "source_snapshots_verified": 7,
+  "status": "PASS"
+}

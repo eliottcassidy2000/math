@@ -1,8 +1,8 @@
 {
-  "active_checks": 515,
-  "inert_source_snapshots": 18,
-  "native_hash_lists": 1,
-  "reviewed_bindings": 41,
+  "active_checks": 1247,
+  "inert_source_snapshots": 25,
+  "native_hash_lists": 2,
+  "reviewed_bindings": 125,
   "snapshot_programs_executed": false,
   "status": "PASS"
 }

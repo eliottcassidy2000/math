@@ -1,0 +1,15 @@
+{
+  "auditor": "/root/audit_norm_geometry_interfaces",
+  "status": "ACCEPTED",
+  "reviewed_report_sha256": "59d822bd4b341326a22a1790fa835c561e474f1322d2465b62c02620423d31a2",
+  "scope": "Theorem P5: equal-area Penrose kite/dart finite-abelian-field impossibility and degree-eight escape",
+  "checked": [
+    "native area ratio phi",
+    "norm equation N(b/a)=phi",
+    "reflected templates remain cyclotomic",
+    "abelian compositum and extension of golden sign automorphism",
+    "phi not square in Q(zeta5)",
+    "degree8 Q(zeta5,sqrt(phi)) construction"
+  ],
+  "not_claimed": "minimum-piece theorem"
+}

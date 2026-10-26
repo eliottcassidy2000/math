@@ -1,0 +1,1 @@
+Wrote penrose-guards.svg and penrose-guards.png; exact predicates are checked separately.
