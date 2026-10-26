@@ -1,0 +1,12 @@
+{
+  "files": {
+    "README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "SOURCE_PINS.json": "9a365176b61db7985331335795acd8108f2baf9ffb263c86fb53a6e0c584b0b8",
+    "check_finite_field.py": "f3082927900a979924590aec0806f9d38516690a29ec192025eb12e205335730",
+    "receipt.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "receipt.optimized.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c"
+  },
+  "gates": 3616,
+  "normal_optimized_identical": true,
+  "status": "producer frozen; independent proof audit pending"
+}

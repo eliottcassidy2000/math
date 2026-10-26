@@ -1,0 +1,14 @@
+{
+  "checks": 7923,
+  "method": "Literal search of each CRT class; independent area-derived radii.",
+  "status": "PASS",
+  "universe": {
+    "moduli": [
+      1,
+      40
+    ],
+    "three_lift_instances": 1080,
+    "twin_lower_prime_max": 101,
+    "twins": 9
+  }
+}

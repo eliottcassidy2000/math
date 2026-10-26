@@ -1,0 +1,24 @@
+{
+  "checks": 81771,
+  "files": {
+    "AUDIT_TREE.md": "b8559517bafc0a1a757c0480ca3c3ac12a7688a038d14c460257e566b483a458",
+    "README.md": "9d274221f4afb60e4ac6b87928231acd5e3d00605b90ffaab0d94c0204a8fb6a",
+    "SOURCES.json": "aa1ae4fd319181fe141bd40c40fdad7a6540fc1f2f6f5add9a51cb5bb227f75d",
+    "audit_tree_independent.py": "f70552b88310fc90d345449bfce4c2fa5a798eb965097a30289b5899ae211645",
+    "check_arithmetic.py": "6056612a678848899ed0e06805990b418d9abf8664e2d58b0778ce1b0cbc1adb",
+    "normal.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "optimized.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "tree.independent.normal.json": "b415bdd91d896366fb7131998d3bb506a42c5190292c674ce859908365b82bbd",
+    "tree.independent.optimized.json": "b415bdd91d896366fb7131998d3bb506a42c5190292c674ce859908365b82bbd",
+    "tree.replay.normal.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "tree.replay.optimized.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c"
+  },
+  "outgoing_tree_audit": {
+    "independent_checks": 2892,
+    "producer_checks": 198535,
+    "proof_hash": "748c64f37d09b24cb425cde4a1c193f4f293395837f789460fbc9f5dd6a8be10",
+    "status": "PASS"
+  },
+  "source_commit": "52fde1af0df4",
+  "status": "PROVED + FINITE-EXACT; INDEPENDENT AUDIT PENDING"
+}

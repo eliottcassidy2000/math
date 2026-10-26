@@ -1,0 +1,230 @@
+{
+  "checks": 198535,
+  "first_twin_images": [
+    {
+      "D_depth": 1,
+      "U_edge_depths": [
+        0,
+        1
+      ],
+      "pair": [
+        3,
+        5
+      ],
+      "triple": [
+        15,
+        8,
+        17
+      ]
+    },
+    {
+      "D_depth": 2,
+      "U_edge_depths": [
+        1,
+        2
+      ],
+      "pair": [
+        5,
+        7
+      ],
+      "triple": [
+        35,
+        12,
+        37
+      ]
+    },
+    {
+      "D_depth": 5,
+      "U_edge_depths": [
+        4,
+        5
+      ],
+      "pair": [
+        11,
+        13
+      ],
+      "triple": [
+        143,
+        24,
+        145
+      ]
+    },
+    {
+      "D_depth": 8,
+      "U_edge_depths": [
+        7,
+        8
+      ],
+      "pair": [
+        17,
+        19
+      ],
+      "triple": [
+        323,
+        36,
+        325
+      ]
+    },
+    {
+      "D_depth": 14,
+      "U_edge_depths": [
+        13,
+        14
+      ],
+      "pair": [
+        29,
+        31
+      ],
+      "triple": [
+        899,
+        60,
+        901
+      ]
+    },
+    {
+      "D_depth": 20,
+      "U_edge_depths": [
+        19,
+        20
+      ],
+      "pair": [
+        41,
+        43
+      ],
+      "triple": [
+        1763,
+        84,
+        1765
+      ]
+    },
+    {
+      "D_depth": 29,
+      "U_edge_depths": [
+        28,
+        29
+      ],
+      "pair": [
+        59,
+        61
+      ],
+      "triple": [
+        3599,
+        120,
+        3601
+      ]
+    },
+    {
+      "D_depth": 35,
+      "U_edge_depths": [
+        34,
+        35
+      ],
+      "pair": [
+        71,
+        73
+      ],
+      "triple": [
+        5183,
+        144,
+        5185
+      ]
+    },
+    {
+      "D_depth": 50,
+      "U_edge_depths": [
+        49,
+        50
+      ],
+      "pair": [
+        101,
+        103
+      ],
+      "triple": [
+        10403,
+        204,
+        10405
+      ]
+    },
+    {
+      "D_depth": 53,
+      "U_edge_depths": [
+        52,
+        53
+      ],
+      "pair": [
+        107,
+        109
+      ],
+      "triple": [
+        11663,
+        216,
+        11665
+      ]
+    }
+  ],
+  "hostiles": {
+    "failed_prime_continuation": [
+      9,
+      40,
+      41
+    ],
+    "half_sized_nonprimitive": [
+      8,
+      6,
+      10
+    ],
+    "non_twin_semiprime": [
+      21,
+      20,
+      29
+    ],
+    "omega_not_Omega": [
+      63,
+      16,
+      65
+    ],
+    "root_not_twin": [
+      3,
+      4,
+      5
+    ]
+  },
+  "restricted_graph": {
+    "D_graph_edges": [
+      [
+        [
+          15,
+          8,
+          17
+        ],
+        [
+          35,
+          12,
+          37
+        ]
+      ]
+    ],
+    "isolated_D_vertices_in_universe": 340,
+    "shared_edge_pairs": [
+      [
+        3,
+        5
+      ]
+    ]
+  },
+  "scope": "FINITE-EXACT; global conclusions use RESULT.md proofs",
+  "status": "PASS",
+  "universes": {
+    "Euclid_m_at_most": 120,
+    "Euclid_nodes": 2930,
+    "coprime_odd_root_y_at_most": 199,
+    "distinct_semiprime_fibres": 396,
+    "odd_leg_fibre_a_at_most": 1999,
+    "odd_root_pairs": 4075,
+    "prime_cap": 20001,
+    "prime_odd_vertices": 2261,
+    "ternary_depth_at_most": 8,
+    "ternary_nodes": 9841,
+    "twin_edges": 342
+  }
+}

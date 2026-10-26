@@ -1,0 +1,36 @@
+{
+  "local": {
+    "01-canon/MISTAKES.md": "d6b9d9569e6e1c7e5e61f957f6ea355ea9c9c9f28936da84d066967cd9568af1",
+    "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95",
+    "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+    "05-knowledge/results/aliquot_power_124_20261026/INCOMING_S69.md": "eca101fd238955152e48f402f7103978d11f5c6ae8d634492d4346b3ab768da5",
+    "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19",
+    "05-knowledge/results/perfect_core_twin_edges_20261019/PERFECT_CORE_TWIN_EDGES.md": "84555d68b2e1342a7dd9967f962c5edeb83a49c25862eee58b8a3f8f7905fcb8",
+    "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-root/DIVISOR_F1_BRIDGE.md": "ebc62f958bcb1fa2e92057f9538218ad50cc5cc7dc911b062fa02618308fe025",
+    "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-aliquot/REPORT.md": "d2304477142ed9a5ab22b636f311815270a62516f680077d58ed9f2a79192cca"
+  },
+  "primary": [
+    {
+      "location": "p.331 introduction; p.332 Theorem2",
+      "scope": "Classical Euclid parametrization and fixed odd-leg factor partitions; no prime-radius theorem imported.",
+      "url": "https://www.fq.math.ca/Papers1/46_47-4/Tripathi.pdf"
+    },
+    {
+      "location": "pp.1226\u20131227; Proposition2 example and abc formulation",
+      "scope": "Polynomial Pythagorean identity and uniform epsilon conjecture; no integer/twin consequence imported as proved.",
+      "url": "https://dms.umontreal.ca/~andrew/PDF/abc.pdf"
+    },
+    {
+      "location": "Section1, Theorem1.1",
+      "scope": "Monoids, monoid rings and base-extension adjunction only.",
+      "url": "https://arxiv.org/html/math/0404185v7"
+    },
+    {
+      "location": "Theorem2 and proof, pp.368\u2013369",
+      "scope": "Classical count of primitive triples with fixed inradius; prime specialization independently rederived with both Euclid branches.",
+      "url": "https://www.fq.math.ca/Papers1/44-4/quartRobbins04_2006.pdf"
+    }
+  ],
+  "retrieved": "2026-10-26",
+  "source_commit": "52fde1af0df4"
+}

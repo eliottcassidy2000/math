@@ -1,0 +1,75 @@
+# Independent audits and exact replay scope
+
+**VERIFIED: all four proof lanes and the integrated presentation pass.**
+Producer freeze records that say an audit was pending are preserved as
+historical evidence; the independent reports below give the current verdict.
+The tree producer made a status/link-only promotion with explicit hash lineage.
+None of these results is a formally checked Lean theorem or a newly reserved
+canon ID.
+
+| Lane | Producer gates | Independent review | Additional independent gates |
+|---|---:|---|---:|
+| Twin edges, two rays, line-graph isomorphism |198,535|[Tree audit](arithmetic/AUDIT_TREE.md): side enumeration, factor splits, graph adjacency and common square25|2,892|
+| Prime radii, aliquot/abc/F1 maps |81,771|[Arithmetic audit](audit_arithmetic/AUDIT.md): geometric radii, literal divisors, radical and augmentation review|522|
+| Paired conic designs and determinant character |3,616|[Field audit](audit_field/AUDIT.md): full permutation groups, independent field arithmetic and exact labels|1,902|
+| Fixed-modulus obstruction |23,044|[Residue audit](audit_residue/AUDIT.md): literal CRT search, multiple lifts, geometric radius reconstruction|7,923|
+
+The producer total is **306,966**, and the separate executable audit total is
+**13,239**. Repeated normal/optimized runs are not counted as new evidence.
+The [integration audit](audit_integration/REPORT.md) adds22 explicit checks
+and independent visual inspection of the SVG at1520×728. Its reviewed hashes
+bind the final README, concept board and SVG. The root separately inspected
+a native Quick Look render, fixed a preview sizing issue and separated the
+lower graph label from the mapping arrow before that audit froze.
+
+All-parameter statements rest on the written algebraic proofs and explicitly
+cited classical inputs. Finite computations validate implementation, complete
+finite universes and hostile controls. The full permutation classification at
+eight points and the marking census at3,7,31 are expressly FINITE-EXACT; they
+do not extrapolate to all fields or all Mersenne primes.
+
+## Review amendments and mathematical boundaries
+
+- Fixed-inradius cardinalities are classical: Robbins'2006 Theorem2 is now
+  cited before the explicit prime-inradius branches. The new connection uses
+  the marked even-leg exradius, whose primality selects the twin branch.
+- The full centre abc triple retains enough data to recover m and the twin
+  pair on its marked image. The loss occurs if its domain restriction is
+  dropped, not in that invertible map itself.
+- The isomorphism is `L(H)≅J`, with isolated prime vertices of H discarded
+  by the line graph. The target J has exactly one edge; it is not the full
+  ternary tree. Omega counts prime factors with multiplicity.
+- No canonical section from a residual conic point to a unique integer
+  triangle is claimed. The triangle is unique given the twin pair; CRT shows
+  why its residual point cannot recover that pair.
+- The finite geometry uses t=m/n for its exponential marking, reciprocal to
+  residual slope r=n/m. In that section r is not the inradius. The pole is
+  t=infinity, not the integer tree root. Fano lines are derived from blocks
+  through that pole, then by deleting it.
+- A paired design, its ordered pair and its unordered pair have different
+  symmetry groups. The whole Berggren action is PGL, not PSL, and the middle
+  branch exchanges the designs. Endpoint UU/A collision and the16-state
+  replay test exactly which extra bit repairs that finite loss.
+- The finite-field producer's receipt initially named a stale proof filename;
+  it was corrected before freeze. No mathematical claim changed.
+
+These draft repairs are documented in the independent reports; no known
+false statement was left in maintained inherited canon. The previous S57
+Goldbach and THM-4748 fibre-minimum corrections remain intact.
+
+## Source and reproduction contract
+
+The research base is52fde1af0df4. Incoming365ab05300 and5e645b2a88 were read
+and credited: the two Fano systems, full Paley action and point-stripping
+ladder are inherited. The current packet adds the paired eight-point designs,
+their branch transport, the twin graph/radius dictionary and explicit losses.
+The incoming large tournament recursion is contextual source material, not
+a computation replayed or newly proved in this packet.
+
+Run `python3 -I -B 05-knowledge/results/twin_pythagorean_124_20261026/verify_packet.py`.
+It checks the complete packet file universe and SHA256 bytes, local source
+pins and review bindings, then executes every producer and independent
+checker normally and with optimization against frozen receipts. It never
+overwrites a receipt. The manifest is an integrity record, not an independent
+mathematical proof. PNG is explicitly binary in `.gitattributes`; text
+artifacts retain LF bytes across checkouts.

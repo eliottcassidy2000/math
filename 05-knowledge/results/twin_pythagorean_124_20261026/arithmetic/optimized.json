@@ -1,0 +1,258 @@
+{
+  "complete_fibre_74": [
+    70,
+    142,
+    5329
+  ],
+  "direct_side_triples": 158,
+  "euclid_triples": 8156,
+  "first_nonexhaustive_twin_p_through_97": 71,
+  "first_twin_rows": [
+    {
+      "centre_radical": 30,
+      "p": 3,
+      "q": 5,
+      "square_radical": 510,
+      "target": 6,
+      "triple": [
+        15,
+        8,
+        17
+      ]
+    },
+    {
+      "centre_radical": 210,
+      "p": 5,
+      "q": 7,
+      "square_radical": 7770,
+      "target": 8,
+      "triple": [
+        35,
+        12,
+        37
+      ]
+    },
+    {
+      "centre_radical": 858,
+      "p": 11,
+      "q": 13,
+      "square_radical": 124410,
+      "target": 14,
+      "triple": [
+        143,
+        24,
+        145
+      ]
+    },
+    {
+      "centre_radical": 1938,
+      "p": 17,
+      "q": 19,
+      "square_radical": 125970,
+      "target": 20,
+      "triple": [
+        323,
+        36,
+        325
+      ]
+    },
+    {
+      "centre_radical": 26970,
+      "p": 29,
+      "q": 31,
+      "square_radical": 24299970,
+      "target": 32,
+      "triple": [
+        899,
+        60,
+        901
+      ]
+    },
+    {
+      "centre_radical": 74046,
+      "p": 41,
+      "q": 43,
+      "square_radical": 130691190,
+      "target": 44,
+      "triple": [
+        1763,
+        84,
+        1765
+      ]
+    },
+    {
+      "centre_radical": 107970,
+      "p": 59,
+      "q": 61,
+      "square_radical": 388799970,
+      "target": 62,
+      "triple": [
+        3599,
+        120,
+        3601
+      ]
+    },
+    {
+      "centre_radical": 31098,
+      "p": 71,
+      "q": 73,
+      "square_radical": 161243130,
+      "target": 74,
+      "triple": [
+        5183,
+        144,
+        5185
+      ]
+    }
+  ],
+  "gates": 81771,
+  "normal_optimized_contract": "same source; explicit RuntimeError gates; deterministic JSON",
+  "prime_radius_pairs_in_euclid_universe": [
+    [
+      3,
+      5,
+      [
+        15,
+        8,
+        17
+      ]
+    ],
+    [
+      5,
+      7,
+      [
+        35,
+        12,
+        37
+      ]
+    ],
+    [
+      11,
+      13,
+      [
+        143,
+        24,
+        145
+      ]
+    ],
+    [
+      17,
+      19,
+      [
+        323,
+        36,
+        325
+      ]
+    ],
+    [
+      29,
+      31,
+      [
+        899,
+        60,
+        901
+      ]
+    ],
+    [
+      41,
+      43,
+      [
+        1763,
+        84,
+        1765
+      ]
+    ],
+    [
+      59,
+      61,
+      [
+        3599,
+        120,
+        3601
+      ]
+    ],
+    [
+      71,
+      73,
+      [
+        5183,
+        144,
+        5185
+      ]
+    ],
+    [
+      101,
+      103,
+      [
+        10403,
+        204,
+        10405
+      ]
+    ],
+    [
+      107,
+      109,
+      [
+        11663,
+        216,
+        11665
+      ]
+    ],
+    [
+      137,
+      139,
+      [
+        19043,
+        276,
+        19045
+      ]
+    ],
+    [
+      149,
+      151,
+      [
+        22499,
+        300,
+        22501
+      ]
+    ],
+    [
+      179,
+      181,
+      [
+        32399,
+        360,
+        32401
+      ]
+    ],
+    [
+      191,
+      193,
+      [
+        36863,
+        384,
+        36865
+      ]
+    ],
+    [
+      197,
+      199,
+      [
+        39203,
+        396,
+        39205
+      ]
+    ]
+  ],
+  "status": "PASS",
+  "twin_pairs": 205,
+  "universes": {
+    "aliquot_target_max": 100,
+    "direct_hypotenuse_max": 1000,
+    "divisor_polynomial_N_max": 1000,
+    "euclid_m_max": 200,
+    "prime_radius_max": 199,
+    "proved_common_source_bound": 9801,
+    "twin_lower_prime_max": 10000
+  }
+}

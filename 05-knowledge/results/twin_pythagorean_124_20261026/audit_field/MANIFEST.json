@@ -1,0 +1,18 @@
+{
+  "files": {
+    "AUDIT.md": "faddc203d12a98728ffa0a9213be93c9a30a149d9ee1e11ee953289f1a8fb374",
+    "check_independent.py": "8bf127bd30b3fb130cff4696680be5206efc15b24040837867804f50039ba742",
+    "normal.json": "630bc2911cdf526083ed094c67ebd417ac4cf8d8ec41f3f1b4572707e17761ab",
+    "optimized.json": "630bc2911cdf526083ed094c67ebd417ac4cf8d8ec41f3f1b4572707e17761ab",
+    "producer.normal.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "producer.optimized.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c"
+  },
+  "independent_gates": 1902,
+  "producer_files": {
+    "README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "check_finite_field.py": "f3082927900a979924590aec0806f9d38516690a29ec192025eb12e205335730",
+    "receipt.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c"
+  },
+  "producer_gates": 3616,
+  "status": "PASS"
+}

@@ -1,0 +1,179 @@
+{
+  "child_manifests": [
+    [
+      "arithmetic",
+      "MANIFEST.json"
+    ],
+    [
+      "audit_arithmetic",
+      "MANIFEST.json"
+    ],
+    [
+      "audit_field",
+      "MANIFEST.json"
+    ],
+    [
+      "audit_integration",
+      "MANIFEST.json"
+    ],
+    [
+      "audit_residue",
+      "MANIFEST.json"
+    ],
+    [
+      "finite_field",
+      "MANIFEST.json"
+    ],
+    [
+      "tree",
+      "SOURCE_MANIFEST.json"
+    ]
+  ],
+  "files": {
+    ".gitattributes": "9f99cdeaba64b7be4f03c6380629c622077171f472985c022c54feb98d207e00",
+    "AUDIT.md": "bede616da8a257db8e4b749fe72c355267835bbf3b394a7c0188795d09c25132",
+    "CONNECTION_BOARD.md": "55fca506aa04224a16a87be8757c6ecdf9795b6f5f725f6205df5bcb6d39756c",
+    "ISOMORPHISM.svg": "e9edb5c58e25ec82ef76e95d4230a443d0e6fb1e299a086de770b56e8eb1e746",
+    "README.md": "d52d1177dd1e185100a68f30c351eab0f272790459d793513f4e611ae4ca90c6",
+    "arithmetic/AUDIT_TREE.md": "b8559517bafc0a1a757c0480ca3c3ac12a7688a038d14c460257e566b483a458",
+    "arithmetic/MANIFEST.json": "86d713aa2461b98f9bc00224e847c6483352ff35f4bc9d0f00aa5514c0f7883d",
+    "arithmetic/README.md": "9d274221f4afb60e4ac6b87928231acd5e3d00605b90ffaab0d94c0204a8fb6a",
+    "arithmetic/SOURCES.json": "aa1ae4fd319181fe141bd40c40fdad7a6540fc1f2f6f5add9a51cb5bb227f75d",
+    "arithmetic/audit_tree_independent.py": "f70552b88310fc90d345449bfce4c2fa5a798eb965097a30289b5899ae211645",
+    "arithmetic/check_arithmetic.py": "6056612a678848899ed0e06805990b418d9abf8664e2d58b0778ce1b0cbc1adb",
+    "arithmetic/normal.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "arithmetic/optimized.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "arithmetic/tree.independent.normal.json": "b415bdd91d896366fb7131998d3bb506a42c5190292c674ce859908365b82bbd",
+    "arithmetic/tree.independent.optimized.json": "b415bdd91d896366fb7131998d3bb506a42c5190292c674ce859908365b82bbd",
+    "arithmetic/tree.replay.normal.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "arithmetic/tree.replay.optimized.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "audit_arithmetic/AUDIT.md": "f22bbb0fb54c56e423a75bb7521cba990608556ce292fc8925db30c8aed8b348",
+    "audit_arithmetic/MANIFEST.json": "8803ea74b0a828adf5c14d660bafb393892b90dc80dfa63cc2504c514e080b0b",
+    "audit_arithmetic/check.py": "f9c9d850ad0102ac0f0e7cd416d7a9cdc85e155594794b2476bb7e0c8f91ced3",
+    "audit_arithmetic/normal.json": "62955787ec1c574832ff405f686dcbdae143cbb3dbd142c9a42901631a455b04",
+    "audit_arithmetic/optimized.json": "62955787ec1c574832ff405f686dcbdae143cbb3dbd142c9a42901631a455b04",
+    "audit_field/AUDIT.md": "faddc203d12a98728ffa0a9213be93c9a30a149d9ee1e11ee953289f1a8fb374",
+    "audit_field/MANIFEST.json": "8d0e8955cad62c06f4fa718bff07a07ba6effc910f39622a396dbee720210832",
+    "audit_field/check_independent.py": "8bf127bd30b3fb130cff4696680be5206efc15b24040837867804f50039ba742",
+    "audit_field/normal.json": "630bc2911cdf526083ed094c67ebd417ac4cf8d8ec41f3f1b4572707e17761ab",
+    "audit_field/optimized.json": "630bc2911cdf526083ed094c67ebd417ac4cf8d8ec41f3f1b4572707e17761ab",
+    "audit_field/producer.normal.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "audit_field/producer.optimized.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "audit_integration/ISOMORPHISM.png": "3571cd64e9e02fad7805ba0867154c12aebebcdf935d4226de3a3a8aa36b5d5d",
+    "audit_integration/MANIFEST.json": "09080a8dcd586ed04eb39086e9f698711624c60ac75393849726fbec0152d2f4",
+    "audit_integration/REPORT.md": "f4038e96cdaa920d59d8fb073e040e409ef67eafac9df958c4f7ed0ae0b8b236",
+    "audit_integration/checks.json": "a92434611e8cbee697e449777209237d0bcf7bd59d98d88e2d8ee40838ac8677",
+    "audit_residue/AUDIT.md": "babeefb59d7b19ba9206f23ad0fed4369e70e5f3f0221775b04c95397b7b39ef",
+    "audit_residue/MANIFEST.json": "e0afef905781e86b7922534f59810f76f1e22d174d90b01a3d86dfbee55dcf96",
+    "audit_residue/check_independent.py": "0d537eaad1f2cade3a8686a1758cc931bd8f7858499944971f701bbf931132e7",
+    "audit_residue/normal.json": "9d5407e5b355f352484e5c04fc1463a42e2e8240eb6af47ef3a9ce27f4c4ed64",
+    "audit_residue/optimized.json": "9d5407e5b355f352484e5c04fc1463a42e2e8240eb6af47ef3a9ce27f4c4ed64",
+    "audit_residue/producer.normal.json": "769d1a25b07b69355b6bf258c6cddf07dfe1bd56fea76839c45b47eaec80ae92",
+    "audit_residue/producer.optimized.json": "769d1a25b07b69355b6bf258c6cddf07dfe1bd56fea76839c45b47eaec80ae92",
+    "finite_field/MANIFEST.json": "fba3cc3983ca0180fb854561095d4086dbefcbd9f8119c32f0af5d8b91c2e2d9",
+    "finite_field/README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "finite_field/SOURCE_PINS.json": "9a365176b61db7985331335795acd8108f2baf9ffb263c86fb53a6e0c584b0b8",
+    "finite_field/check_finite_field.py": "f3082927900a979924590aec0806f9d38516690a29ec192025eb12e205335730",
+    "finite_field/receipt.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "finite_field/receipt.optimized.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "residue_obstruction/README.md": "b2149d1b4a2b0b14f89f22c34b6907b976df8e00102c3a6fe981b5aa689e1f42",
+    "residue_obstruction/check.py": "ba451fbe8b4cf4aa4ca7146a6b9a4d6d9d2e49d68056c81e3c028224eeccf7b9",
+    "residue_obstruction/normal.json": "769d1a25b07b69355b6bf258c6cddf07dfe1bd56fea76839c45b47eaec80ae92",
+    "residue_obstruction/optimized.json": "769d1a25b07b69355b6bf258c6cddf07dfe1bd56fea76839c45b47eaec80ae92",
+    "tree/RESULT.md": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3",
+    "tree/SOURCES.md": "474996b0c70d8707c037fdb2a6d93d32d692a51f5e0ab0840686535ef987bbaa",
+    "tree/SOURCE_MANIFEST.json": "370fa7de883185cfe685f9a052c95c92aa61ff0e308dbb95d4476163fc815d65",
+    "tree/check_tree.py": "63adaee9b46c898e26fd1229552498c386cedfc2a06f290790d249157bf022c4",
+    "tree/normal.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "tree/optimized.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "verify_packet.py": "8f7f4a58a47f5b3c38923dc30af8939debce22e0d72713c4070cec5e25f1cbbf"
+  },
+  "incoming_commits": [
+    "365ab05300",
+    "5e645b2a88"
+  ],
+  "independent_executable_gates": 13239,
+  "integration_checks": 22,
+  "producer_gates": 306966,
+  "research_base": "52fde1af0df4543960465978c7788726304d4208",
+  "reviewed_files": {
+    "CONNECTION_BOARD.md": "55fca506aa04224a16a87be8757c6ecdf9795b6f5f725f6205df5bcb6d39756c",
+    "ISOMORPHISM.svg": "e9edb5c58e25ec82ef76e95d4230a443d0e6fb1e299a086de770b56e8eb1e746",
+    "README.md": "d52d1177dd1e185100a68f30c351eab0f272790459d793513f4e611ae4ca90c6",
+    "arithmetic/README.md": "9d274221f4afb60e4ac6b87928231acd5e3d00605b90ffaab0d94c0204a8fb6a",
+    "arithmetic/check_arithmetic.py": "6056612a678848899ed0e06805990b418d9abf8664e2d58b0778ce1b0cbc1adb",
+    "arithmetic/normal.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "arithmetic/optimized.json": "35b99de84cf0c4fbf26bc9c8ff74da777811e817dbc9f24f1e079f5debbdb22b",
+    "finite_field/README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "finite_field/check_finite_field.py": "f3082927900a979924590aec0806f9d38516690a29ec192025eb12e205335730",
+    "finite_field/receipt.json": "b84c315371893ffd6910b8a479adf37c30da0bb19b440e63339484ef91b68f8c",
+    "residue_obstruction/README.md": "b2149d1b4a2b0b14f89f22c34b6907b976df8e00102c3a6fe981b5aa689e1f42",
+    "residue_obstruction/check.py": "ba451fbe8b4cf4aa4ca7146a6b9a4d6d9d2e49d68056c81e3c028224eeccf7b9"
+  },
+  "sources": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/MISTAKES.md": "d6b9d9569e6e1c7e5e61f957f6ea355ea9c9c9f28936da84d066967cd9568af1",
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95",
+    "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+    "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md": "c4326fc09841f79adf685c321d32410354d9cd43b1810a197ade3c1e2d832e70",
+    "01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md": "eb4982e2971ae46d54102724aacc208bce7682f48ae941b15588a22f69029ea9",
+    "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e",
+    "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67",
+    "05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md": "efa41b48c634b69542cf59d6876f2598c23698e8bb8a049c90c2cd7fe87ee5fc",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/aliquot_power_124_20261026/CONNECTION_BOARD.md": "9e9397586635848717feb9fe251ecb76244cf8febc2c4952370375dcb0612991",
+    "05-knowledge/results/aliquot_power_124_20261026/INCOMING_S69.md": "eca101fd238955152e48f402f7103978d11f5c6ae8d634492d4346b3ab768da5",
+    "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19",
+    "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9",
+    "05-knowledge/results/perfect_core_twin_edges_20261019/PERFECT_CORE_TWIN_EDGES.md": "84555d68b2e1342a7dd9967f962c5edeb83a49c25862eee58b8a3f8f7905fcb8",
+    "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md": "fd52d3b3c37a601840c84497372e36c6049867f004d0845dc9a7de9c86163e6c",
+    "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-root/DIVISOR_F1_BRIDGE.md": "ebc62f958bcb1fa2e92057f9538218ad50cc5cc7dc911b062fa02618308fe025",
+    "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-aliquot/REPORT.md": "d2304477142ed9a5ab22b636f311815270a62516f680077d58ed9f2a79192cca",
+    "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+  },
+  "status": "INDEPENDENT_PROOF_AND_INTEGRATION_AUDITS_PASS",
+  "suites": [
+    {
+      "receipt": "tree/normal.json",
+      "script": "tree/check_tree.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "arithmetic/normal.json",
+      "script": "arithmetic/check_arithmetic.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "finite_field/receipt.json",
+      "script": "finite_field/check_finite_field.py",
+      "status": "FINITE-EXACT; self-contained elementary proof in README.md"
+    },
+    {
+      "receipt": "residue_obstruction/normal.json",
+      "script": "residue_obstruction/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "arithmetic/tree.independent.normal.json",
+      "script": "arithmetic/audit_tree_independent.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "audit_arithmetic/normal.json",
+      "script": "audit_arithmetic/check.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "audit_field/normal.json",
+      "script": "audit_field/check_independent.py",
+      "status": "PASS"
+    },
+    {
+      "receipt": "audit_residue/normal.json",
+      "script": "audit_residue/check_independent.py",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "base_revision": "52fde1af0df4",
+  "concurrent_input": {
+    "future_path": "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md",
+    "scope": "branch U,A,D naming and integer Euclid convention; independent paired-design proof",
+    "sha256": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+  },
+  "incoming_input": {
+    "github_blob_sha": "ca7f43ce683f88ba79ba1aaa9454eeac3d721f30",
+    "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+    "read_via": "GitHub fetch_file connector, 2026-10-26",
+    "ref": "5e645b2a88",
+    "repository": "eliottcassidy2000/math"
+  },
+  "local_inputs": [
+    {
+      "path": "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "sha256": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e"
+    },
+    {
+      "path": "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "sha256": "fd52d3b3c37a601840c84497372e36c6049867f004d0845dc9a7de9c86163e6c"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md",
+      "sha256": "efa41b48c634b69542cf59d6876f2598c23698e8bb8a049c90c2cd7fe87ee5fc"
+    }
+  ]
+}

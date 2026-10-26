@@ -1,0 +1,46 @@
+{
+  "direct_hypotenuse_max": 2000,
+  "direct_triples": 319,
+  "factor_square_odd_leg_max": 999,
+  "gates": 2892,
+  "prime_edges_seen_in_direct_universe": [
+    [
+      3,
+      5
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      17,
+      19
+    ],
+    [
+      29,
+      31
+    ],
+    [
+      41,
+      43
+    ],
+    [
+      59,
+      61
+    ]
+  ],
+  "semiprime_fibres": 194,
+  "shared_edge_pairs": [
+    [
+      3,
+      5
+    ]
+  ],
+  "status": "PASS",
+  "twin_lower_bound_exclusive": 2000,
+  "twin_pairs": 61
+}

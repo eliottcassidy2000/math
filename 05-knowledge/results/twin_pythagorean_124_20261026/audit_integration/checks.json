@@ -1,0 +1,41 @@
+{
+  "bounded_repairs": "canonical-conic-lift wording repaired; pole derived-design and reciprocal-slope clarity verified",
+  "check_labels": [
+    "first image",
+    "second image",
+    "third image",
+    "opposite square flags",
+    "unique-six positive anchor",
+    "T3 collision target",
+    "T5 centre6 distinct T3 centre4",
+    "actual D edge",
+    "marked radii 3",
+    "marked radii 5",
+    "marked radii 11",
+    "UU-A reciprocal slope (4, 3)",
+    "UU-A reciprocal slope (5, 2)",
+    "root r4 t2",
+    "CRT equal residues",
+    "CRT r2 t4",
+    "three displayed fibre witnesses",
+    "svg view box",
+    "svg accessible unique ids",
+    "svg triple labels",
+    "svg line-graph label",
+    "svg radius label"
+  ],
+  "checks": 22,
+  "final_reviewed_hashes": {
+    "CONNECTION_BOARD.md": "55fca506aa04224a16a87be8757c6ecdf9795b6f5f725f6205df5bcb6d39756c",
+    "ISOMORPHISM.svg": "e9edb5c58e25ec82ef76e95d4230a443d0e6fb1e299a086de770b56e8eb1e746",
+    "README.md": "d52d1177dd1e185100a68f30c351eab0f272790459d793513f4e611ae4ca90c6"
+  },
+  "pre_review_hashes": {
+    "CONNECTION_BOARD.md": "116801eca9bd34794a30271601c6ad253c63da587e4452bbf421a673b06ef697",
+    "ISOMORPHISM.svg": "e9edb5c58e25ec82ef76e95d4230a443d0e6fb1e299a086de770b56e8eb1e746",
+    "README.md": "ffe1c75c443ad1627537c46631eca3473ffb488a7c33dda1ee0aabb97a64aed3"
+  },
+  "render": "sharp density144, PNG1520x728; visually inspected",
+  "rendered_png_sha256": "3571cd64e9e02fad7805ba0867154c12aebebcdf935d4226de3a3a8aa36b5d5d",
+  "status": "PASS"
+}

@@ -1,0 +1,48 @@
+{
+  "audit_lineage": {
+    "delta": "status and audit link only; mathematical proof and checker unchanged",
+    "reviewed_RESULT.md": "748c64f37d09b24cb425cde4a1c193f4f293395837f789460fbc9f5dd6a8be10"
+  },
+  "external_sources": [
+    {
+      "read": "Introduction and Theorems1\u20133, printed331\u2013333",
+      "role": "Euclid parity and classical fixed odd-leg count",
+      "url": "https://www.fq.math.ca/Papers1/46_47-4/Tripathi.pdf"
+    },
+    {
+      "read": "Section2 and Lemma2.4, PDF pages2\u20133",
+      "role": "Berggren matrices and U spine; parity guard recorded",
+      "url": "https://arxiv.org/pdf/2304.05230",
+      "version": "v1"
+    }
+  ],
+  "files": {
+    "RESULT.md": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3",
+    "SOURCES.md": "474996b0c70d8707c037fdb2a6d93d32d692a51f5e0ab0840686535ef987bbaa",
+    "check_tree.py": "63adaee9b46c898e26fd1229552498c386cedfc2a06f290790d249157bf022c4",
+    "normal.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c",
+    "optimized.json": "ea1ebee807b5fb0e09400bfa66634178b146ee09d94252c207bad39c8c7c233c"
+  },
+  "independent_audit": {
+    "independent_gates": 2892,
+    "path": "../arithmetic/AUDIT_TREE.md",
+    "sha256": "b8559517bafc0a1a757c0480ca3c3ac12a7688a038d14c460257e566b483a458"
+  },
+  "inherited": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95",
+    "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+    "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md": "c4326fc09841f79adf685c321d32410354d9cd43b1810a197ade3c1e2d832e70",
+    "01-canon/theorems/THM-3756-odd-square-ordinal-berggren-affine-descent.md": "eb4982e2971ae46d54102724aacc208bce7682f48ae941b15588a22f69029ea9",
+    "05-knowledge/reference/CORE-PAPERS-PYTHAGOREAN.md": "efa41b48c634b69542cf59d6876f2598c23698e8bb8a049c90c2cd7fe87ee5fc",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19"
+  },
+  "replay": {
+    "checks": 198535,
+    "normal_optimized": "byte-identical"
+  },
+  "source_base_commit": "52fde1af0d",
+  "status": "PROVED elementary deductions; independently audited PASS; computation FINITE-EXACT"
+}
