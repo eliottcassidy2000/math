@@ -1,0 +1,8 @@
+searched 16 forms x 4 powers; exact identities found: 0
+deg B = 0: exact on all 119 primes: False
+deg B = 1: exact on all 119 primes: False
+deg B = 2: exact on all 119 primes: True
+  A(p) = (0) p^0 + (319/1024) p^1 + (-487/1024) p^2 + (3/16) p^3 + (-25/1024) p^4 + (1/1024) p^5
+  B(p) = (0) p^0 + (1/1024) p^1 + (-1/1024) p^2
+  A(p) factored: p*(p - 1)*(p**3 - 24*p**2 + 168*p - 319)/1024
+  B(p) factored: -p*(p - 1)/1024

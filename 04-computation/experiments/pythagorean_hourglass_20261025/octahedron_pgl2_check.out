@@ -1,0 +1,5 @@
+p = 5 (mod 4 = 1): T_oct = 0, (p-5) T_W4 = 0  [OK]; T_W4 = q(q-1)(-4-a): True; U(W4) = T_W4 - q(q-1)(q-4): True; U(W4) = -q(q-1)(q+a): True; U(oct) = q(q-1)((5-q)a+3q): True; U(oct) = T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3: True
+p = 7 (mod 4 = 3): T_oct = -2352, (p-5) T_W4 = -2352  [OK]; T_W4 = q(q-1)(-4-a): True; U(W4) = T_W4 - q(q-1)(q-4): True; U(W4) = -q(q-1)(q+a): True; U(oct) = q(q-1)((5-q)a+3q): True; U(oct) = T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3: True
+p = 11 (mod 4 = 3): T_oct = 26400, (p-5) T_W4 = 26400  [OK]; T_W4 = q(q-1)(-4-a): True; U(W4) = T_W4 - q(q-1)(q-4): True; U(W4) = -q(q-1)(q+a): True; U(oct) = q(q-1)((5-q)a+3q): True; U(oct) = T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3: True
+p = 13 (mod 4 = 1): T_oct = -32448, (p-5) T_W4 = -32448  [OK]; T_W4 = q(q-1)(-4-a): True; U(W4) = T_W4 - q(q-1)(q-4): True; U(W4) = -q(q-1)(q+a): True
+S_oct = (q - 5) S_W4: q = 1 mod 4: 13/13 primes, q = 3 mod 4: 14/14 primes (5 <= q < 110)

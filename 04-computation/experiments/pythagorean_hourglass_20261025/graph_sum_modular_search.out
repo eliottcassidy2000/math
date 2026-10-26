@@ -1,0 +1,4 @@
+searched 16 forms x 4 powers; exact identities found: 0
+T_K4 = a_p(eta(4z)^6) for all p: True ; T_K5 = (p - 4) T_K4: True ; T_(K5-e) = T_(K5-2K2): True
+EXACT: T_(K5-e)(p) = -4 + 0 p + 0 p^2 + (-1) 1(p) p^0 a_p[w4 N8]
+exact identities: 1

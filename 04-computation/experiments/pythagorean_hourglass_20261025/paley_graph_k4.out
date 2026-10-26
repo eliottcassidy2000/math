@@ -1,0 +1,1 @@
+K4(Paley graph G_p) = p(p-1)[(1) p^2 + (-20) p + (81) + (1) a_p(eta(4z)^6)]/1536  -- exact on all 59 primes p = 1 mod 4 below 700: True

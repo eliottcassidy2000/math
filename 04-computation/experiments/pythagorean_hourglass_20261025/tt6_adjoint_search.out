@@ -1,0 +1,7 @@
+weight-6 level-8 newform: T_3 eigenvalue 20 q-expansion [1, 0, 20, 0, -74, 0, -24, 0, 157, 0, 124]
+poly6 + f8(deg2)                              (10 columns, 67 primes): NOT in span
+poly6 + f8(deg2) + |b|^2(deg1)                (12 columns, 67 primes): NOT in span
+poly6 + f8(deg3) + |b|^2(deg2)                (14 columns, 67 primes): EXACT (rank 14); nonzero: {'p^1': '-10193/32768', 'p^2': '7753/16384', 'p^3': '-6141/32768', 'p^4': '877/32768', 'p^5': '-25/16384', 'p^6': '1/32768', 'p^1 a(f8)': '-105/32768', 'p^2 a(f8)': '7/2048', 'p^3 a(f8)': '-7/32768', 'p^1 |b|^2': '1/4096', 'p^2 |b|^2': '-1/4096'}
+poly6 + f8(deg2) + |b|^2(deg1) + c6(deg1)     (14 columns, 67 primes): NOT in span
+poly6+-(2/p) + f8 + |b|^2 + c6                (21 columns, 67 primes): NOT in span
+everything                                    (32 columns, 67 primes): EXACT (rank 32); nonzero: {'p^1': '-10193/32768', 'p^2': '7753/16384', 'p^3': '-6141/32768', 'p^4': '877/32768', 'p^5': '-25/16384', 'p^6': '1/32768', 'p^1 a(f8)': '-105/32768', 'p^2 a(f8)': '7/2048', 'p^3 a(f8)': '-7/32768', 'p^1 |b|^2': '1/4096', 'p^2 |b|^2': '-1/4096'}

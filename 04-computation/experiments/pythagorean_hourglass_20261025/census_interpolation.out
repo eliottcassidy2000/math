@@ -1,0 +1,7 @@
+data: TT5 at 122 q, TT6 at 70 q, S_W4 at 40 q, S_(K6-P6) at 23 q
+S_oct = (q - 5) S_W4 at every computed q: True (23 primes)
+five vertices: 41 primes, 7 unknowns, rank 7: EXACT ['0', '315', '-483', '192', '-25', '1', '1']
+   matches A5 = q(q-1)(q-3)(q^2 - 21q + 105), B5 = 1: True
+six vertices: 24 primes, 10 unknowns (D free), rank 10: EXACT ['0', '-9717', '15002', '-6105', '869', '-50', '1', '-105', '7', '-8']
+   matches A6 = q(q-1)(q-3)(q^3 - 46q^2 + 682q - 3239), B6 = 7(q - 15), D = -8: True
+S_W4 = sum_x chi(x) a_x^2 + (q - 3) at every p = 3 mod 4 with data: True

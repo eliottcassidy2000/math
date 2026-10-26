@@ -1,0 +1,14 @@
+(A) pointwise criterion and 2^(6-r) count: 9995 (twist, point) pairs, 0 disagreements
+(B) central line: Hilbert decision vs brute force (|x|,|z| <= 40): 465 agree, 39 disagree [((1, -2, 2, 13, -13, 13, -13), True, False), ((1, 10, -10, -7, 7, 10, -10), True, False), ((1, 7, -7, -2, 2, 7, -7), True, False), ((1, -3, 3, 11, -11, 11, -11), True, False), ((1, 13, -13, 2, -2, 7, -7), True, False)]
+    displayed twists: Pythagorean True, (1,1,-1,1,-1,7,-7) False, (1,2,-2,3,-3,6,-6) False, untwisted False
+(C) line E=0     : 6 nonvanishing forms, 3 branch points, cover rank 2, 8 components (over Qbar) of genus 0
+(C) line E+x=0   : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(C) line E-x=0   : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(C) line E+z=0   : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(C) line E-z=0   : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(C) line E+x+z=0 : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(C) line E-x-z=0 : 6 nonvanishing forms, 5 branch points, cover rank 4, 2 components (over Qbar) of genus 5
+(D) untwisted d = 1: boundary lifts with |x|,|z| <= 60: 0 []
+(E) Pythagorean twist, central base points (0:x:z) with 0 < x, z < 400 that lift: 6; all of the form (a^2, b^2) with a^2 + b^2 = c^2: True; triples [(3, 4, 5), (4, 3, 5), (5, 12, 13), (8, 15, 17), (12, 5, 13), (15, 8, 17)]
+(B') Hilbert-soluble twists missed by the |x|,|z| <= 40 box: 39; explicit lifts found for 39 (max height 625), none found for 0 []
+    e.g. [((1, -2, 2, 13, -13, 13, -13), (0, -104, 225)), ((1, 10, -10, -7, 7, 10, -10), (0, -289, 280)), ((1, 7, -7, -2, 2, 7, -7), (0, -81, 56))]

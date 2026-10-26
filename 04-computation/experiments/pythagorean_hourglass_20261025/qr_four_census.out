@@ -1,0 +1,19 @@
+(L) n=7: 3 regular classes; bound 0; TT4 range [0, 7]; below bound 0; equality & doubly regular 1; equality & not DR 0; DR but not equal 0
+(L) n=11: 1223 regular classes; bound 55; TT4 range [55, 110]; below bound 0; equality & doubly regular 1; equality & not DR 0; DR but not equal 0
+(L) n=15: 300 random regular tournaments; min TT4 340 vs bound 315; violations of the equivalence 0
+(L) n=19: 300 random regular tournaments; min TT4 1088 vs bound 1026; violations of the equivalence 0
+(L) n=23: 300 random regular tournaments; min TT4 2646 vs bound 2530; violations of the equivalence 0
+(L) Paley P_7: TT4 = 0, bound 0, doubly regular True
+(L) Paley P_11: TT4 = 55, bound 55, doubly regular True
+(L) Paley P_19: TT4 = 1026, bound 1026, doubly regular True
+(L) Paley P_23: TT4 = 2530, bound 2530, doubly regular True
+(L) Paley P_31: TT4 = 9765, bound 9765, doubly regular True
+(L) Paley P_43: TT4 = 40635, bound 40635, doubly regular True
+(G) p=7: g^2 = -7.000000+0.000000j (-p = -7); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=11: g^2 = -11.000000+0.000000j (-p = -11); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=19: g^2 = -19.000000+0.000000j (-p = -19); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=23: g^2 = -23.000000+0.000000j (-p = -23); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=31: g^2 = -31.000000+0.000000j (-p = -31); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=43: g^2 = -43.000000+0.000000j (-p = -43); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(G) p=47: g^2 = -47.000000+0.000000j (-p = -47); S^2 = J - pI: True; |eigenvalues| = sqrt(p): True
+(Q) odd primes p != q < 200: (p*/q) = (q/p) fails 0 of 1980; '(p/q)(q/p) = -1 iff both = 3 mod 4 (both Paley tournaments)' fails 0

@@ -1,0 +1,6 @@
+(i) dim_F2 ker(A^2+A+I) by class: {'TT4': [0], 'sink+C3': [2], 'strong C4': [0], 'source+C3': [2]}
+(ii) first arithmetic witnesses (n = product, Monsky nullity = pure 2-Selmer dimension):
+     strong C4 : primes (3, 11, 19, 43), n = 26961, nullity 0
+     source+C3 : primes (3, 11, 19, 107), n = 67089, nullity 2
+     sink+C3   : primes (3, 11, 19, 163), n = 102201, nullity 2
+     TT4       : primes (3, 11, 59, 83), n = 161601, nullity 0
