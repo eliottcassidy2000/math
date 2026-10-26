@@ -1,6 +1,6 @@
 ---
 id: HYP-9390
-title: "The six-vertex Paley census is the level-32 adjoint. (a) For q = 3 (mod 4), TT6(P_q) = q(q-1)(q^4 - 49q^3 + 828q^2 - 5313q + 10193 - 7(q-15)a_q - 8|b(q)|^2)/2^15. Here a_q is the coefficient (Frobenius trace) of the Apery form eta(2z)^4 eta(4z)^4, and b = LMFDB 32.3.c.a is the non-CM weight-3 chi_-4 newform of HYP-9276, with |b(q)|^2 = q^2 minus the Sym^2 Frobenius trace (at primes, |b(q)|^2 = q^2 - b(q^2)). Given THM-4780 and HYP-9274 (B), at primes p = 3 (mod 4) this is equivalent to HYP-9276 (1) at those primes. (b) The wheel identity S_W4(q) = -4 - a_q holds at prime powers. (c) Seven vertices: the census meets 37 further dense sums (multiplicities listed). TT7 at 72 values of q lies outside the span of the six-vertex motives and of 97 GL(2) newform orbits of 2-power level, so seven vertices carry new arithmetic, isolated exactly as g(q); its identification is open."
+title: "The six-vertex Paley census is the level-32 adjoint. (a) For q = 3 (mod 4), TT6(P_q) = q(q-1)(q^4 - 49q^3 + 828q^2 - 5313q + 10193 - 7(q-15)a_q - 8|b(q)|^2)/2^15. Here a_q is the coefficient (Frobenius trace) of the Apery form eta(2z)^4 eta(4z)^4, and b = LMFDB 32.3.c.a is the non-CM weight-3 chi_-4 newform of HYP-9276, with |b(q)|^2 = q^2 minus the Sym^2 Frobenius trace (at primes, |b(q)|^2 = q^2 - b(q^2)). Given THM-4780 and HYP-9274 (B), at primes p = 3 (mod 4) this is equivalent to HYP-9276 (1) at those primes. (b) The wheel identity S_W4(q) = -4 - a_q holds at prime powers. (c) Seven vertices: the census meets 37 further dense sums (multiplicities listed). TT7 at 72 values of q lies outside the span of the six-vertex motives and of 97 GL(2) newform orbits of 2-power level, so seven vertices carry new arithmetic, isolated exactly as g(q); resolved structurally in HYP-9391 (four rank-4 Siegel-type motives)."
 status: >
   OPEN, CONDITIONAL.
   (a) At primes p = 3 (mod 4) it is PROVED conditional on HYP-9276, by THM-4780 (5), HYP-9274 (B) and THM-4653.
@@ -108,8 +108,10 @@ with `deg A7 ≤ 7`, `deg B7 ≤ 2` and `deg C7 ≤ 1`.
 
   It is not in the span of `q^i` (`i ≤ 3`), `a_q`, `q·a_q`, `|b|²`, plus any single orbit above, or all orbits of weight 3, 5, 6 or `{5, 6}` jointly.
 - **Verdict.** The seven-vertex census carries arithmetic outside every GL(2) candidate tried.
-- **Plausible source.** Twelve of the 37 genuine graphs have a vertex adjacent to all others (degree 6; `census_level_forecast.out`). Summing over that vertex gives the trace of the genus-2 curve `y² = ∏_{i≤6}(x − x_i)`, which points to genus-2 (Siegel-type) motives rather than newforms.
-- **Not tested here.** Weight-4 and weight-2 orbits jointly (too many columns for 72 values), products of two forms, and non-2-power levels.
+- **Resolved structurally in [HYP-9391](HYP-9391-the-seven-vertex-paley-census-and-four-genus-two-type-motives.md)** (same session, 2026-10-26):
+  - every genuine sum is known terms plus at most one of four explicit two-parameter Legendre triple products;
+  - TT7 gets an exact `O(q²)` formula (all 71 counted values);
+  - the new arithmetic is four irreducible weight-5 motives of rank at least 4 with USp(4) statistics (conjecturally genus-2 Siegel), plus `8.6.a.a` and `4.6.a.a` through the twisted fourth Legendre moment.
 
 ## Remarks
 

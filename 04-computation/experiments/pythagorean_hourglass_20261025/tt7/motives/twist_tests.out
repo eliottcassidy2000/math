@@ -1,0 +1,9 @@
+307 primes in [307, 4999]
+  twist 1     : largest off-diagonal |E[e m_i m_j]| = 0.070; diagonal [0.964 0.931 0.957 0.956]
+  twist (2/p) : largest off-diagonal |E[e m_i m_j]| = 0.097; diagonal [ 0.024  0.174 -0.01  -0.004]
+  twist (3/p) : largest off-diagonal |E[e m_i m_j]| = 0.133; diagonal [ 0.095  0.023 -0.04  -0.133]
+  twist (-3/p): largest off-diagonal |E[e m_i m_j]| = 0.133; diagonal [-0.095 -0.023  0.04   0.133]
+  twist (5/p) : largest off-diagonal |E[e m_i m_j]| = 0.084; diagonal [ 0.025 -0.014 -0.142 -0.057]
+  twist (7/p) : largest off-diagonal |E[e m_i m_j]| = 0.118; diagonal [0.019 0.058 0.037 0.158]
+max |m_i| over primes >= 2000: [2.594 3.156 3.102 3.011] (184 primes)
+fraction of primes >= 2000 with |m_i| > 2: [0.065 0.033 0.027 0.06 ]

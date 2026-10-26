@@ -1,0 +1,5 @@
+untwisted sum a_l^4 in span(poly + a84) over 76 primes: NOT
+untwisted sum a_l^4 in span(+ a46) over 76 primes: EXACT {'1': '-3', 'q': '-9', 'q^2': '-4', 'q^3': '2', 'a46': '-1'}
+untwisted sum a_l^4 in span(+ a86 + a46) over 76 primes: EXACT {'1': '-3', 'q': '-9', 'q^2': '-4', 'q^3': '2', 'a46': '-1'}
+untwisted sum a_l^4 in span(+ chi_-4 polys) over 76 primes: EXACT {'1': '-3', 'q': '-9', 'q^2': '-4', 'q^3': '2', 'a46': '-1'}
+untwisted sum a_l^2: EXACT {'1': '-3', 'q': '-2', 'q^2': '1'}

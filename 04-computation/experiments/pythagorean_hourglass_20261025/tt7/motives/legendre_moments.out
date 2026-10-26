@@ -1,0 +1,6 @@
+M_2 = -q - 1 - a_q(8.4.a.a) (the wheel / Ahlgren-Ono): True
+M_4 in span(poly + a84 terms) over 76 primes: NOT
+M_4 in span(+ 8.6.a.a) over 76 primes: NOT
+M_4 in span(+ 4.6.a.a) over 76 primes: NOT
+M_4 in span(+ both weight 6) over 76 primes: EXACT {'1': '-1', 'q': '-3', 'q^2': '-2', 'q a84': '-3', 'a86': '-1', 'a46': '-1'}
+M_4 in span(+ both weight 6 + chi_-4 polys) over 76 primes: EXACT {'1': '-1', 'q': '-3', 'q^2': '-2', 'q a84': '-3', 'a86': '-1', 'a46': '-1'}

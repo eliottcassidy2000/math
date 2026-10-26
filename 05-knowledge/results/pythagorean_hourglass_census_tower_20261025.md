@@ -12,7 +12,7 @@
 Canon produced:
 - [THM-4780](../../01-canon/theorems/THM-4780-paley-census-tower-to-six-vertices-wheel-octahedron-pgl2-hamiltonian-path-complement.md) (PROVED).
 - [HYP-9390](../hypotheses/HYP-9390-the-six-vertex-paley-census-is-the-level-32-adjoint.md) (OPEN, conditional on HYP-9276).
-- HYP-9391 was reserved and is released unused.
+- [HYP-9391](../hypotheses/HYP-9391-the-seven-vertex-paley-census-and-four-genus-two-type-motives.md) (OPEN; seven vertices, 2026-10-26 continuation).
 
 Scripts are in `04-computation/experiments/pythagorean_hourglass_20261025/`. Every `.py` there has an output file beside it except the TT5 search-history scripts `tt5_exact_poly.py`, `tt5_residual_fit.py`, `tt5_scaling.py` and `tt5_modular_search.py` (the last one's output is the first line of `tt5_exact_f8.out`, which imports it); `paley_tt5_arith.py` and `paley_tt6.py` write `paley_tt5_data.out` and `paley_tt6_data.out`.
 
@@ -115,7 +115,7 @@ klein's atlas (`analogy_reduction_atlas_20261025/QR_TOURNAMENT.md`, HYP-9375) is
 | 4 | `(q−3)(q−7)` | none (`K4` killed) | the Gauss identity (doubly regular) |
 | 5 | `(q−3)(q²−21q+105) + S_W4` | the wheel `W4` (multiplicity +1) | `S_W4 = −4 − a_q`, Apéry form `η(2z)⁴η(4z)⁴` (`₄F₃(1)`, Ahlgren–Ono) |
 | 6 | `(q−3)(q³−46q²+682q−3239) + 7(q−15)S_W4 − 8S_{K6−P6}` | `K6 − P6` (−8); the octahedron (+1), which reduces to `(q−5)W4` | `S_{K6−P6} = |b(q)|² − q² − 7`, the adjoint of `32.3.c.a` (THM-4653 + HYP-9276; conditional, HYP-9276 is OPEN) |
-| 7 | `A7 + B7·S_W4 + C7·S_{K6−P6} + g(q)` (audit's exact reduced form) | 37 genuine + `K7 − C7 = ±(q−6)(K6 − P6)` | **new**: `g(q)` fits no GL(2) candidate tried (HYP-9390 (c)) |
+| 7 | `P5(q) − 2(14q²−701q+7254)a_q + 46c_q − 83d_q − 64(q−31)\|b\|² − 64Y02 − 48Y05 − 64Y09 + 96Y18` (HYP-9391) | 37 genuine + `K7 − C7 = ±(q−6)(K6 − P6)` | `8.6.a.a`, `4.6.a.a` (twisted fourth Legendre moment) and **four rank-4 weight-5 motives** with USp(4) statistics (conjecturally genus-2 Siegel) |
 
 **The formulas.** In closed modular form, for primes `p ≡ 3 (mod 4)` (`TT6` conditional on HYP-9276):
 ```
@@ -152,6 +152,26 @@ TT6(P_p) = p(p−1)(p⁴ − 49p³ + 828p² − 5313p + 10193 − 7(p−15)a_p �
 - `A(p) + B(p)a_p` alone does not fit `TT6`.
 - The weight-6 level-8 newform `8.6.a.a` (`q + 20q³ − 74q⁵ − 24q⁷ + …`), the CM forms of `Q(√−2)`, `Q(√−7)` (weights 3 and 5; the `Q(√−3)` columns of `tt6_search.py` ignore the unit ambiguity of `4p = a² + 3b²` and are not the CM newforms, e.g. `−37` instead of `26` at `p = 19` in weight 3, so that case is untested), `(2/p)` twists and `a_p²` all have coefficient 0 or fail (`tt6_adjoint_search.out`, `tt6_search.out`).
 
+### 4b. Seven vertices (continuation, 2026-10-26; HYP-9391)
+
+**Method.**
+- All 37 genuine seven-vertex sums were computed exactly at 43 primes, by an `O(q⁵)` contraction and an `O(q⁴)` degree-3 elimination.
+- 21 of them lie in the span of the known motives. Each of the other 16 equals known terms plus one of four two-parameter triple products. These come from summing out three degree-3 "cone" vertices with the Legendre table:
+```
+Y02 = − Σ φ(s)φ(t)φ(t−1) L(s)² L(t/s),     Y05 = − Σ φ(s−1)φ(t)φ(t−1) L(s)² L(t/s),
+Y09 =   Σ φ(s)φ(s−1)φ(t) L(s)L(t)L(t/s),   Y18 =   Σ φ(s−1)φ(t−1) L(s)L(t)L(t/s).
+```
+
+**Results.**
+- **Closed formula.** `TT7(P_q)` has an exact `O(q²)` closed form, which reproduces all 71 counted values.
+- **Weight-6 forms.** They enter through the twisted fourth moment `Σ φ(λ)a_λ⁴ = −2q² − 3q − 1 − 3q a_q − c_q − d_q`.
+- **Four new motives.** Modulo all of this, the triple products carry exactly four new motives:
+  - each is irreducible of weight 5;
+  - normalised traces exceed 2 at about 5% of large primes, so each has rank ≥ 4, not GL(2);
+  - their moments and small-value frequencies match USp(4);
+  - none is a twist of another, and none is induced.
+- **Identification.** They are conjecturally the spinor motives of four genus-2 Siegel eigenforms, which would explain why no newform ever fitted.
+
 ## 5. The remaining clauses
 
 **Cauchy–Schwarz and the triangle inequality.** For a norm that comes from an inner product they are equivalent:
@@ -185,7 +205,7 @@ TT6(P_p) = p(p−1)(p⁴ − 49p³ + 828p² − 5313p + 10193 − 7(p−15)a_p �
 
 ## 6. Open problems
 
-1. **Seven vertices** (HYP-9390 (c)). `TT7(P_q)` is computed at 72 values. It is not in the span of the six-vertex motives or of 97 newform orbits of 2-power level, singly or by weight. The genuine part `g(q) = Σ m_H S_H` is isolated exactly (`tt7/tt7_genuine_part.out`). The next step is to compute the 37 genuine five-variable sums one by one and identify their motives. Twelve have a cone vertex, which gives genus-2 curves `y² = ∏(x − x_i)`; Siegel-type motives are the natural guess.
+1. **Seven vertices** (HYP-9391). Identify the four new rank-4 motives. They are the new parts of `Y02`, `Y09`, `Y18` and `Y05 + Y18`, two-parameter Legendre triple products costing `O(q²)`. Steps: separate them exactly from the known motives, get degree-4 Euler factors over `F_{q²}`, then search the conductor with PARI `lfun` or compare with paramodular data.
 2. **HYP-9276** (`M_q = −b(q²) − 2q − 1`). Proving it makes `TT6` unconditional. The routes are listed in the 2026-10-14 note: Hijikata trace, Katz middle convolution, an elliptic K3 pullback.
 3. **The wheel identity at prime powers.** It is FINITE-EXACT at five prime powers. Extend Ahlgren–Ono's threefold count to `F_q`.
 4. **The McCarthy–Springfield cross-link.** Is their weight-3 level-32 non-CM form the same `32.3.c.a`? If so, it is linear in the 4-vertex count of the fourth-power Paley digraph and adjoint in the 6-vertex count of the Paley tournament.
