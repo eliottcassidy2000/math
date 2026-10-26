@@ -108,6 +108,8 @@ int main(int argc, char **argv) {
     for (int r : rep) { Canon c = C.run(fibre[r]); printf(" w=%d(|Aut|=%d)", r, c.aut); } printf("\n");
     unordered_map<u128, long long, H128> partnerClasses; partnerClasses.reserve(1 << 22);
     unordered_map<u128, int, H128> partnerSmallestModule;
+    unordered_map<u128, int, H128> partnerReps;   // bitmask of fibre representatives (by index in rep) reaching the partner class
+    unordered_map<u128, u128, H128> partnerConverse;   // canonical form of the partner's converse
     for (int r : rep) {
         const Tour &T = fibre[r]; long long H = 0, blue = 0, prime = 0, nonprime = 0, oldModuleSurvived = 0, inFibre = 0; map<int, long long> smallMod;
         // the six proper modules of T_w: blocks and triangles
@@ -120,6 +122,8 @@ int main(int argc, char **argv) {
             for (auto M : oldMods) if (isModule(K, M)) oldModuleSurvived++;
             int sm = smallestModuleSize(K); if (sm > n) prime++; else { nonprime++; smallMod[sm]++; }
             u128 cw = C.run(K).best; local[cw]++; partnerClasses[cw]++; partnerSmallestModule[cw] = sm;
+            { int ri = 0; for (size_t q = 0; q < rep.size(); q++) if (rep[q] == r) ri = (int)q; partnerReps[cw] |= 1 << ri;
+              if (!partnerConverse.count(cw)) { Tour Kop; uint16_t full = (1u << n) - 1; for (int u = 0; u < n; u++) Kop.adj[u] = (~K.adj[u]) & full & ~(1u << u); partnerConverse[cw] = C.run(Kop).best; } }
             for (size_t i = 0; i < fibreCanon.size(); i++) if (fibreCanon[i] == cw) { inFibre++; break; }
         });
         printf("w=%d: H=%lld blue=%lld black=%lld; partners prime=%lld nonprime=%lld (smallest-module sizes:", r, H, blue, H - blue, prime, nonprime);
@@ -129,6 +133,10 @@ int main(int argc, char **argv) {
     map<long long, long long> hist; long long primeClasses = 0; for (auto &kv : partnerClasses) { hist[kv.second]++; if (partnerSmallestModule[kv.first] > n) primeClasses++; }
     printf("all representatives: distinct partner classes %zu (prime %lld); multiplicity histogram (presentations per class: classes):", partnerClasses.size(), primeClasses);
     int shown = 0; for (auto &kv : hist) { if (shown++ < 12) printf(" %lld:%lld", kv.first, kv.second); } printf("%s\n", hist.size() > 12 ? " ..." : "");
+    // which pairs of fibre representatives share partner classes, and are the shared partners self-converse?
+    { map<int, long long> byMask, byMaskSC; for (auto &kv : partnerReps) { byMask[kv.second]++; if (partnerConverse[kv.first] == kv.first) byMaskSC[kv.second]++; }
+      printf("partner classes by set of fibre representatives reaching them (mask over rep order w="); for (int r : rep) printf("%d,", r); printf("): ");
+      for (auto &kv : byMask) printf(" mask%d:%lld(self-converse %lld)", kv.first, kv.second, byMaskSC[kv.first]); printf("\n"); }
     printf("done in %.0f s\n", chrono::duration<double>(chrono::steady_clock::now() - t0).count());
     return 0;
 }
