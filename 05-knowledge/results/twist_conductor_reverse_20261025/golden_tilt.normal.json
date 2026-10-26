@@ -1,0 +1,61 @@
+{
+  "basis": "(1,q), q=(sqrt(5)-1)/2",
+  "conditional_counter_drift": [
+    -3,
+    4
+  ],
+  "conditional_mean_letter": [
+    0,
+    2
+  ],
+  "counter_range": "1..horizon",
+  "horizon_range": [
+    1,
+    32
+  ],
+  "independent_horizon_comparisons": 528,
+  "q6": [
+    5,
+    -8
+  ],
+  "q6_in_basis_1_sqrt5": [
+    9,
+    -4
+  ],
+  "samples": [
+    {
+      "a6_conditional": [
+        "13/64",
+        "1/8"
+      ],
+      "a6_ordinary": "1/64",
+      "horizon": 6
+    },
+    {
+      "a6_conditional": [
+        "8723/16384",
+        "671/2048"
+      ],
+      "a6_ordinary": "671/16384",
+      "horizon": 12
+    },
+    {
+      "a6_conditional": [
+        "369906615/536870912",
+        "28454355/67108864"
+      ],
+      "a6_ordinary": "28454355/536870912",
+      "horizon": 24
+    },
+    {
+      "a6_conditional": [
+        "12514774582271/17592186044416",
+        "962674967867/2199023255552"
+      ],
+      "a6_ordinary": "962674967867/17592186044416",
+      "horizon": 32
+    }
+  ],
+  "status": "FINITE-EXACT PASS",
+  "tail_handling": "letters landing above remaining horizon contribute exactly zero; never renormalized"
+}

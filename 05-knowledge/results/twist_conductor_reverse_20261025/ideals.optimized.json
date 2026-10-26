@@ -1,0 +1,9 @@
+{
+  "codimension_two_hostile": "I=(x,y,z), valuations miss 1 not in IA",
+  "coefficient_conductor_checks": 340,
+  "nonprincipal_ideal": "(x,z)",
+  "normalization_hostile": "t and wt pass, integral ratio w fails",
+  "overlap_checks": 26,
+  "scope": "finite monomial identities; ideal/localization/normality proofs are in CONDUCTOR_IDEALS.md",
+  "status": "FINITE-EXACT PASS"
+}

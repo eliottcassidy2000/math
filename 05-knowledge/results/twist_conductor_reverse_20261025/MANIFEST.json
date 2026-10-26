@@ -1,0 +1,156 @@
+{
+  "external_sources": [
+    {
+      "author": "Ruben A. Hidalgo",
+      "title": "Hyperelliptic quotients of generalized Humbert curves",
+      "url": "https://arxiv.org/html/1705.09337v5",
+      "used": "Theorem 1, Corollary 1, section 6; classical attribution, not novelty"
+    },
+    {
+      "path": "/Users/e/Downloads/2610.22603v2.pdf",
+      "used": "section 2.2 parameter targets; native halt-clock discrepancy inherited, no native clock used"
+    }
+  ],
+  "hash_semantics": "SHA256 after CRLF-to-LF normalization",
+  "packet": {
+    ".gitattributes": "f29df8e90a8a804ce145c296bb7a50bb385be94676334467d5d5fd13371299e0",
+    "AUDIT.md": "6057628c5d39d5fe0221c17e2fa47e3649233c3c824b1f3f0f6d2de3729bcd56",
+    "CONDUCTOR_IDEALS.md": "13f0239997149167358d54eace74cd397b16dc8f845e54660a5c639f5a929986",
+    "DYNAMICS_EXTENSION.md": "6191e7c5a2cafda4e4c42bb8305b1476ce3a930251b7645a16ce65c32ff3c86d",
+    "FIXED_TWISTS.md": "30633a06c26226944997dfc8bd1a28082dd0acc2f6ce693dab02c5da6c40f32a",
+    "INCOMING.md": "950fde162d9e75d3a844f4425cc3a450a57c8649ad3ad7d720b8c929bd08d5ba",
+    "PORT_CODES.md": "14f0c47570f75780b00f4bbb59b85492b8902d01d24c183f3e7e802659230ed5",
+    "README.md": "ca6de2f453806f25e01f59cc7a91d8254506d12ef3b468f41af4361da6c36cae",
+    "check_geometry.py": "c9568f8b4eb4b890c8ed5d536faf6e9f6e130da70ca4efeca5dd85ce1b6ae8d6",
+    "check_golden_tilt.py": "7b3329ea480a0a4b2d2646d83ff00c8e2c4401e2bbc2cfe116fb91adf55d8075",
+    "check_ideals.py": "84ba71ea184346126d023b4971b23c59e1438bf231a0b729239fbbbb3852b21a",
+    "check_port_codes.py": "1a2e6adf506e789c1ff9a67531433ea7e7229202691abe6058ad10e48bb515a2",
+    "check_repairs.py": "acd539e7866fc4cdc5bb3ec0c062dbdbd8d0c5d36b447017323acff58a7b98ea",
+    "check_reverse.py": "06e8911b353b189e6bf24316f725e648aa42ac71ae7fb60b43552e8fb75d2971",
+    "geometry.normal.json": "aa4df4c3d680787cd75c553960600991495f7ecec2773a4c878a1b99b4708cef",
+    "geometry.optimized.json": "aa4df4c3d680787cd75c553960600991495f7ecec2773a4c878a1b99b4708cef",
+    "golden_tilt.normal.json": "c5bca30981f59e6c89ea602bebd664162db436e823ae8c0b40c8431f6ba84058",
+    "golden_tilt.optimized.json": "c5bca30981f59e6c89ea602bebd664162db436e823ae8c0b40c8431f6ba84058",
+    "ideals.normal.json": "cc9aeff3b085a312057353f5aa999922506d6d3f899acac1ad87c90536458c84",
+    "ideals.optimized.json": "cc9aeff3b085a312057353f5aa999922506d6d3f899acac1ad87c90536458c84",
+    "port_codes.normal.json": "2481bad1a51aad03a247ef85fb2ec82e409189650645ffd0ca04185d75c7d6aa",
+    "port_codes.optimized.json": "2481bad1a51aad03a247ef85fb2ec82e409189650645ffd0ca04185d75c7d6aa",
+    "repairs.normal.json": "4e2aebcbc180249e1e9545d27bafc1641f1d6687f1856efa64590f917d4a6373",
+    "repairs.optimized.json": "4e2aebcbc180249e1e9545d27bafc1641f1d6687f1856efa64590f917d4a6373",
+    "reverse.normal.json": "c49cc06909a8041444065bb5734d87da47f14e1b7ac592b6b6eecc80f3033755",
+    "reverse.optimized.json": "c49cc06909a8041444065bb5734d87da47f14e1b7ac592b6b6eecc80f3033755",
+    "reverse_ordinary_check.py": "53c53ae40c79b43c5442d8a9347d49d80b6f569dc028235f772230d417f79c32",
+    "sat_repair_0.json": "bf62e2a87cfb51764d99390c8bfc003f27bd601aac4fe2a9eb595c1bef807bfc",
+    "sat_repair_1.json": "4a001c054d30ba878ad09a08c5306eb141b7e446d1f4be0a15966635a9a4a76b",
+    "sat_repair_2.json": "7d3a0533781a3e5da2be7852852b893787918d85759db3ad32c3aef03934f57e",
+    "sat_repair_3.json": "9997c94333499fdec08d730db20bca2680a9b6c6ef2d992d9c64dcd1e8e6ec03",
+    "sat_repairs.py": "86758072c1eb9eacb0115ebf37ecd9470302b7c3c91b582b4a51fa6c8fe6ab1b",
+    "search_fixed_first.py": "db64f34badc1f10874ef177798223b5a31337b6c4380e2ff3e9f1322b35fc8c3",
+    "search_repairs.json": "77b9d0df8f72cd5b677bd42c7059057ba83bdb38de61d98b83f1bbecb92ad93a",
+    "search_repairs.py": "5ceb80a0c59685c600997121243000c1220b8119713bc6376669b906b8512bde",
+    "search_repairs_four.json": "46fbf3e05cbf032f53ef8c46084b640332735ec1932ce065a63ed97f814b3662",
+    "verify_packet.py": "b8f3834610e53272d9d1623315c5850f5a1d801d4a95de8cdf8761de8a328ed7"
+  },
+  "sources": {
+    "01-canon/theorems/THM-261-petersen-root-orthogonality.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "86ecf3cdfa49939e99370e155028fd3cf429b6ed669369187def953838408ec7"
+    },
+    "01-canon/theorems/THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "474462bed9ed3fab94327d625e52d093fd3c847db025117556b379578c0459a6"
+    },
+    "01-canon/theorems/THM-3397-torsor-killing-versus-effective-boundary-valuations.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "ba8ab3760b5196ff4db10e1424742a8ba332795a7d6a5aa34f9f5f80e2e6e5d5"
+    },
+    "01-canon/theorems/THM-4701-kuratowski-graphs-the-petersen-graph-and-the-finite-unit-circle-graphs.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a"
+    },
+    "05-knowledge/results/endpoint_four_repairs_20261021/audit/audit_core.py": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4"
+    },
+    "05-knowledge/results/endpoint_four_repairs_20261021/audit/independent_audit.py": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0"
+    },
+    "05-knowledge/results/normseven_boundary_20261025/BOUNDARY.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "1ee9524bbe8938fcf38ab11b3df86e7799ca7a34e70491ef072da1d6803d7eab"
+    },
+    "05-knowledge/results/normseven_boundary_20261025/CONTINUATION.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "06d98e88aa66a0fc2e45364ea0ee87bed84defeb47ff3f0bfe7a6905fedfadc8"
+    },
+    "05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "da354b38db47c176763e8c9ed0ea832d5356a4d9c7eb62d51e10a80b3ae66591"
+    },
+    "05-knowledge/results/port_residual_integral_20261025/counting/modular.py": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "409ba3e713af5df27869a290c53fb1b6e5530b73159289817a14483af23f11c1"
+    },
+    "05-knowledge/results/port_residual_integral_20261025/low_orders.normal.json": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "739d432ff2a7ae4ebb1b9296b52630cae0c0c844316d2d0a1c6b8594c8f8b333"
+    },
+    "05-knowledge/results/port_residual_integral_20261025/low_orders.py": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "e69b0fc8bc88833fda724ac95f3d1287b40c2bd02a5d07e975ecb27db66b138b"
+    },
+    "05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "8b0f81eb8cae4b1011c608552d373b7bf27e0e2b1cea22ed4b294cc2abf73aeb"
+    },
+    "05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "cd7d016bf0b901ad8b645c6705a65a99ae911db49899db79cbf45a1a98536430"
+    },
+    "05-knowledge/results/session60_six_seven_geometry_20261025/audits/curves/CURVE_BRIDGE_AUDIT.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "33e464f424b9de52875b9c8c5928fb4c83a27548aa72386883aedbcb31e16641"
+    },
+    "05-knowledge/results/session60_six_seven_geometry_20261025/recovered-bridges/THEOREM.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "20030d4fadd02733b765866833c1bdf89f5c5e262b965cedc337c7d89054d271"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-counting/CONTRACTION_AUDIT.md": {
+      "revision": "9e79465c2c",
+      "sha256": "a736fdaf1c4f2aaac914f36e7e5912e6b8d5de573e5cf32e72597653cf166a08"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-dynamics/REPORT.md": {
+      "revision": "9e79465c2c",
+      "sha256": "0b0a11ceb39ad5d0e5c9f875866024e316ea33759cb8d749c280fe5b48abc3b3"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/REVERSE_IMPLEMENTATION.md": {
+      "revision": "9e79465c2c",
+      "sha256": "b1b689eda6aa50774830b69527f0cd103757130e31c5e1080c508b6cc284063a"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/SKIP_CONTRACTION.md": {
+      "revision": "9e79465c2c",
+      "sha256": "13914664e447420e15a9f39dbaaf0f1043e68fa79765d7628bcb0f8fa7c4d719"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-repairs/README.md": {
+      "revision": "9e79465c2c",
+      "sha256": "cefb67a943d293ac60ead18a6be7aedf905164958ffad1f6525e068ee9529f1b"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-repairs/next11/README.md": {
+      "revision": "9e79465c2c",
+      "sha256": "be5170df20e34e72011760a78c8cf312d0158fec68abc12250c3bf3df3c8bb2d"
+    },
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md": {
+      "revision": "9e79465c2c",
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed"
+    },
+    "05-knowledge/results/six_seven_gale_cube_20261025/BRANCH_CUBE_AND_DOUBLE_COVER.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "d881723c9a1c965dcf37e18d321c6b331c9696119c78f05747bc3a71010c878f"
+    },
+    "05-knowledge/results/six_seven_gale_cube_20261025/GENUS_FIVE_ELLIPTIC_FACTORS.md": {
+      "revision": "1b4e6dcc0f25",
+      "sha256": "6bdfc5b298da7ee2a115a6073aff295ab45f7cfcbc59052c28c06d774369c879"
+    }
+  }
+}

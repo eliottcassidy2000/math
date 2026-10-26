@@ -1,0 +1,49 @@
+{
+  "counts": [
+    {
+      "free_kernel_count": 10,
+      "ordered_assignments": 60,
+      "patterns": {
+        "(3, 1, 1)": 10
+      },
+      "ports": 5
+    },
+    {
+      "free_kernel_count": 91,
+      "ordered_assignments": 546,
+      "patterns": {
+        "(3, 3, 1)": 70,
+        "(5, 1, 1)": 21
+      },
+      "ports": 7
+    },
+    {
+      "free_kernel_count": 820,
+      "ordered_assignments": 4920,
+      "patterns": {
+        "(3, 3, 3)": 280,
+        "(5, 3, 1)": 504,
+        "(7, 1, 1)": 36
+      },
+      "ports": 9
+    }
+  ],
+  "disjoint_pair_hostiles": [
+    {
+      "disjoint_pair_sum_is_inertia": true,
+      "is_pair_sum": false,
+      "ports": 5
+    },
+    {
+      "disjoint_pair_sum_is_inertia": false,
+      "is_pair_sum": true,
+      "ports": 6
+    },
+    {
+      "disjoint_pair_sum_is_inertia": false,
+      "is_pair_sum": false,
+      "ports": 7
+    }
+  ],
+  "status": "FINITE-EXACT PASS"
+}

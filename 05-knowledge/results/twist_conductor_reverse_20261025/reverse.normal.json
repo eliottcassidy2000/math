@@ -1,0 +1,163 @@
+{
+  "a50_normalized_mod4": 2,
+  "independent_partition_comparisons": 488,
+  "normalized_bits": [
+    1,
+    8
+  ],
+  "orders": [
+    0,
+    60
+  ],
+  "retained_zero_residue_nodes_exercised": true,
+  "samples": [
+    {
+      "active_edges": 19,
+      "active_nodes": 18,
+      "baseline": 7,
+      "n": 14,
+      "normalized_bits": 1,
+      "odd_coefficient_evaluations": 19,
+      "residue": 1,
+      "retained_zero_residue_nodes": 1,
+      "structural_edges": 58,
+      "structural_nodes": 38
+    },
+    {
+      "active_edges": 19,
+      "active_nodes": 18,
+      "baseline": 7,
+      "n": 14,
+      "normalized_bits": 2,
+      "odd_coefficient_evaluations": 19,
+      "residue": 3,
+      "retained_zero_residue_nodes": 0,
+      "structural_edges": 58,
+      "structural_nodes": 38
+    },
+    {
+      "active_edges": 35,
+      "active_nodes": 28,
+      "baseline": 7,
+      "n": 14,
+      "normalized_bits": 8,
+      "odd_coefficient_evaluations": 35,
+      "residue": 139,
+      "retained_zero_residue_nodes": 0,
+      "structural_edges": 58,
+      "structural_nodes": 38
+    },
+    {
+      "active_edges": 44,
+      "active_nodes": 42,
+      "baseline": 15,
+      "n": 30,
+      "normalized_bits": 1,
+      "odd_coefficient_evaluations": 44,
+      "residue": 0,
+      "retained_zero_residue_nodes": 3,
+      "structural_edges": 472,
+      "structural_nodes": 213
+    },
+    {
+      "active_edges": 44,
+      "active_nodes": 42,
+      "baseline": 15,
+      "n": 30,
+      "normalized_bits": 2,
+      "odd_coefficient_evaluations": 44,
+      "residue": 0,
+      "retained_zero_residue_nodes": 1,
+      "structural_edges": 472,
+      "structural_nodes": 213
+    },
+    {
+      "active_edges": 143,
+      "active_nodes": 116,
+      "baseline": 15,
+      "n": 30,
+      "normalized_bits": 8,
+      "odd_coefficient_evaluations": 137,
+      "residue": 228,
+      "retained_zero_residue_nodes": 0,
+      "structural_edges": 472,
+      "structural_nodes": 213
+    },
+    {
+      "active_edges": 158,
+      "active_nodes": 150,
+      "baseline": 25,
+      "n": 50,
+      "normalized_bits": 1,
+      "odd_coefficient_evaluations": 158,
+      "residue": 0,
+      "retained_zero_residue_nodes": 7,
+      "structural_edges": 2732,
+      "structural_nodes": 927
+    },
+    {
+      "active_edges": 158,
+      "active_nodes": 150,
+      "baseline": 25,
+      "n": 50,
+      "normalized_bits": 2,
+      "odd_coefficient_evaluations": 158,
+      "residue": 2,
+      "retained_zero_residue_nodes": 4,
+      "structural_edges": 2732,
+      "structural_nodes": 927
+    },
+    {
+      "active_edges": 440,
+      "active_nodes": 365,
+      "baseline": 25,
+      "n": 50,
+      "normalized_bits": 8,
+      "odd_coefficient_evaluations": 376,
+      "residue": 238,
+      "retained_zero_residue_nodes": 6,
+      "structural_edges": 2732,
+      "structural_nodes": 927
+    },
+    {
+      "active_edges": 156,
+      "active_nodes": 150,
+      "baseline": 30,
+      "n": 60,
+      "normalized_bits": 1,
+      "odd_coefficient_evaluations": 156,
+      "residue": 0,
+      "retained_zero_residue_nodes": 7,
+      "structural_edges": 5499,
+      "structural_nodes": 1721
+    },
+    {
+      "active_edges": 156,
+      "active_nodes": 150,
+      "baseline": 30,
+      "n": 60,
+      "normalized_bits": 2,
+      "odd_coefficient_evaluations": 156,
+      "residue": 0,
+      "retained_zero_residue_nodes": 3,
+      "structural_edges": 5499,
+      "structural_nodes": 1721
+    },
+    {
+      "active_edges": 704,
+      "active_nodes": 584,
+      "baseline": 30,
+      "n": 60,
+      "normalized_bits": 8,
+      "odd_coefficient_evaluations": 539,
+      "residue": 104,
+      "retained_zero_residue_nodes": 6,
+      "structural_edges": 5499,
+      "structural_nodes": 1721
+    }
+  ],
+  "script_sha256": "06e8911b353b189e6bf24316f725e648aa42ac71ae7fb60b43552e8fb75d2971",
+  "status": "FINITE-EXACT",
+  "structural_edges_checked": 73557,
+  "structural_precision_pruning_exercised": true
+}

@@ -1,0 +1,115 @@
+{
+  "status": "FINITE-EXACT SEARCH",
+  "blocks": 4,
+  "scope": "four literal sources, forward contiguous blocks from the marked path",
+  "results": [
+    {
+      "words": null,
+      "candidate_words": 3394,
+      "legal_black_pairs_tried": 4128,
+      "n": 14,
+      "ports": [
+        3,
+        5,
+        10
+      ],
+      "source_rows": [
+        7126,
+        12116,
+        13352,
+        7507,
+        12452,
+        13643,
+        8852,
+        13614,
+        2644,
+        13500,
+        2385,
+        13044,
+        9538,
+        1289
+      ]
+    },
+    {
+      "words": null,
+      "candidate_words": 3394,
+      "legal_black_pairs_tried": 4264,
+      "n": 14,
+      "ports": [
+        3,
+        7,
+        10
+      ],
+      "source_rows": [
+        7030,
+        11732,
+        12584,
+        5971,
+        9380,
+        15690,
+        4756,
+        13613,
+        10832,
+        13494,
+        2373,
+        13020,
+        9490,
+        1097
+      ]
+    },
+    {
+      "words": null,
+      "candidate_words": 3394,
+      "legal_black_pairs_tried": 4392,
+      "n": 14,
+      "ports": [
+        5,
+        9,
+        10
+      ],
+      "source_rows": [
+        6622,
+        10100,
+        9320,
+        7634,
+        4516,
+        14153,
+        9872,
+        15654,
+        6724,
+        13469,
+        10513,
+        12918,
+        9286,
+        281
+      ]
+    },
+    {
+      "words": null,
+      "candidate_words": 3394,
+      "legal_black_pairs_tried": 4294,
+      "n": 14,
+      "ports": [
+        7,
+        9,
+        10
+      ],
+      "source_rows": [
+        6526,
+        9716,
+        8552,
+        6098,
+        1444,
+        16200,
+        5776,
+        15653,
+        14912,
+        13463,
+        10501,
+        12894,
+        9238,
+        89
+      ]
+    }
+  ]
+}
