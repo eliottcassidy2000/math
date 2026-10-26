@@ -803,9 +803,9 @@ all heights (THM-1289, published), δ ineffective.
 - **Module shattering and the carousel finite-field dictionary (opus, 2026-10-26-S59; [note](../05-knowledge/results/module_shattering_lines_carousel_finite_field_20261026.md), THM-4804, HYP-9414).**
   Owner directive: the normal-basis/Frobenius reading of the carousel decorations, the proof that composition families are not closed under complement lines, LCA and
   the field with one element. PROVED: every complement line shatters every proper non-singleton module (the two ends of a line share no module; strong-module trees
-  share no internal node; the LCA interface is rebuilt; no substitution fibre or stack is closed under lines); the carousel classes are the Frobenius orbits of
+  share no internal node; the LCA interface is rebuilt; no labelled substitution fibre or stack family is closed under lines); the carousel classes are the Frobenius orbits of
   F_(2^m) (least period = field degree, Aut/C_3^m = the Galois group over the decoration field, Gauss's counts, tc(T_w) = H_m d/(m 3^m)); q-ary and F_(1^m)
-  versions. FINITE-EXACT at n = 12: no old module survives in any of the 1,851,660 partners, 98.6% prime, the rest with a pair module, all presentations black,
+  versions. FINITE-EXACT at n = 12: no old module survives in any of the 1,851,660 partners, 98.6% prime, the rest with one or two pair modules, all presentations black,
   distinct tilings give distinct partner classes (45,424 partner classes, 296 shared: 148 between the |Aut| = 27 converse pair, 74 + 74 between 81- and 27-classes). Next: injectivity for every odd m, the pair-module partners, the orbit-size law
   for every decorated fibre (HYP-9414).
 - **Presentation counts of metagraph nodes (opus, 2026-10-20-S48; [note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md), THM-4741, HYP-9352).**
