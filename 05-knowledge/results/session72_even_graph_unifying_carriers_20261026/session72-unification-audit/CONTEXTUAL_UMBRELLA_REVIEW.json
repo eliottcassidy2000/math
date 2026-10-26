@@ -1,0 +1,25 @@
+{
+  "accepted_dependency": {
+    "path": "session72-response/REPORT.md",
+    "section": "7",
+    "sha256": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da"
+  },
+  "accepted_sha256": "dde32c751f8ab3a728afdbaa632dcdf64ec621df6182cfbee67f3c8b639235c7",
+  "additive_evidence_note": "Outside the unchanged26-file core audit manifest; does not replace earlier frozen review receipts.",
+  "additive_review_scope": "Section0.1, The formal umbrella: contextual factorization; accepted sections2-6 remain in scope. Section1 mathematical claims remain assigned to the even-graph auditor.",
+  "checks": [
+    "Finite sorts, finite-dimensional spaces, multilinear operations, and linear observations are retained.",
+    "One-hole contexts use the definition in linked response-report section7: other inputs may be filled by basis states, hence by arbitrary fixed inputs through multilinearity.",
+    "Annihilator stability gives well-defined quotient operations in every input slot; kernel inclusion gives minimum linear dimensions.",
+    "For nonnegative state-basis operations, positivity concerns the exact image cones, not arbitrary coordinate orthants.",
+    "Same-sample copy, selected ports, postselection, guards, or correlations are not supplied by an undeclared weaker operation language.",
+    "The abstract principle is explicitly standard and inherited, not claimed as a new foundational theorem."
+  ],
+  "front_page_unchanged_sha256": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+  "previous_accepted_sha256": "d2e9554967b2af05d87a6d2b6b5fbf5bffe2558be31404fc6d660a1e6ab09044",
+  "section2_through_end_sha256": "52b209d5446d0ff012cacd52200360bcc7ae4d35ee9f20e90bc2261778fce8ff",
+  "source_path": "session72-root/UNIFYING_THEOREMS.md",
+  "status": "FROZEN ACCEPTED",
+  "umbrella_text_sha256": "bf473a236eeb374404209cefdab15b5c58288ce82802ed69385d54fdca5f1520",
+  "unresolved_blockers_in_scope": []
+}

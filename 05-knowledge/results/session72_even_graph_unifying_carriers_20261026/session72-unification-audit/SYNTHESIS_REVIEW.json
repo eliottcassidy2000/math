@@ -1,0 +1,44 @@
+{
+  "accepted_sha256": "d2e9554967b2af05d87a6d2b6b5fbf5bffe2558be31404fc6d660a1e6ab09044",
+  "additive_evidence_note": "This new review file is deliberately outside the unchanged26-file core audit manifest.",
+  "audit_evidence": {
+    "publication_manifest": "PUBLICATION-MANIFEST.json",
+    "sha256": "ed163b951ba38c430aca595ab7addc22c80ee6ff27dc640f22ab54ab3d4e1b3a"
+  },
+  "initial_reviewed_sha256": "8f1d42338a6f743bc93b1dae96419997550fc55ce7da9f7e28985481e1578b17",
+  "previous_accepted_sha256": "e72a9ccd233aea5fe2e1771e1af4a9018afdecedebdd5d500f8e4eba5c375948",
+  "required_repairs_verified": [
+    "X is nonempty finite; q is onto Q; M is a finite transformation monoid containing identity.",
+    "Linear response ranks and reset weights use one declared coefficient field; positive cones are real.",
+    "Cyclic arity r is positive, periods are positive, and ambient m is a positive multiple of their lcm.",
+    "Sparse phase completeness quantifies nonempty prime-power layers; singletons count connected."
+  ],
+  "review_scope": {
+    "accepted_sections": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "excluded_sections": [
+      "0",
+      "1"
+    ],
+    "exclusion_reason": "Even-graph/Walsh-operation claims assigned to the separate even-graph auditor. Front-page README is a separate review, not implicitly accepted here."
+  },
+  "source_path": "session72-root/UNIFYING_THEOREMS.md",
+  "status": "FROZEN ACCEPTED",
+  "substantive_scope_checks": [
+    "Only preselected-word terminal observations in the reset rank theorem; not same-sample trajectory, adaptive, or postselected observations.",
+    "Pair-law kernel27 versus full literal-law kernel41 at n5 are distinguished.",
+    "Successful test-return restoration plus absorbing failure; initial laws on valid states.",
+    "n5 determinant-minus-one certificate gives every-field depth2; n6 certificate establishes Q and F2 only.",
+    "Sharp guard-product depth remains an OPEN conjecture over Q; degree lower bound is proved.",
+    "Cyclic phase data classify actual states modulo common translation; arbitrary sparse residue assignments require realizability.",
+    "Native Paley7/F8 triple obstruction retains the full21-element native group rather than GL3(F2).",
+    "Factorial no-go concerns fixed finite-dimensional time-homogeneous linear carriers in characteristic0; characteristicp quotient is separately scoped.",
+    "LU uses a nonempty factor index set, odd ambient m>=3 for the native carousel, and makes no hardness or polynomial-size claim."
+  ],
+  "unresolved_blockers_in_scope": []
+}

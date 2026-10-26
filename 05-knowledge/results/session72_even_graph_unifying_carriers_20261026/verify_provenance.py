@@ -70,11 +70,11 @@ def main():
             source_rows += 1
     for record in rules.get('native_manifests', []):
         ledger = json.loads(path(record['lane'] + '/' + record['file']).read_text())
-        rows = ledger[record.get('rows_key', 'files')]
+        rows = ledger if record.get('root_mapping') else ledger[record.get('rows_key', 'files')]
         if record.get('mapping'):
             rows = [{'path': key, 'sha256': value} for key, value in rows.items()]
         for row in rows:
-            check_bytes(record['lane'] + '/' + row[record.get('path_key', 'path')], row['sha256'], row.get('bytes'))
+            check_bytes(record['lane'] + '/' + record.get('path_prefix', '') + row[record.get('path_key', 'path')], row['sha256'], row.get('bytes'))
     for binding in rules.get('reviewed_bindings', []):
         data = check_bytes(binding['path'], binding['sha256'], binding.get('bytes'))
         if binding.get('equal_to'):

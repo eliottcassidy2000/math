@@ -1,0 +1,125 @@
+{
+  "external_binary_inputs": [],
+  "files": [
+    {
+      "bytes": 22249,
+      "path": "REPORT.md",
+      "sha256": "ff77fa633d88c761315fc53097c022c5d4f1ac40cbc7c9fb8d4b744750d9c09b"
+    },
+    {
+      "bytes": 13623,
+      "path": "THEOREM-CYCLIC-ALIGNMENT.md",
+      "sha256": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf"
+    },
+    {
+      "bytes": 5484,
+      "path": "VERIFICATION.md",
+      "sha256": "1249db91f71fdb19af809e9b834a55e268be132819960a69b068788c8f12e5c0"
+    },
+    {
+      "bytes": 4795,
+      "path": "STATUS_LEDGER.json",
+      "sha256": "1654221f97c0fd3b298a716d5909ab64a682c36cb93389501c1644436c5b2814"
+    },
+    {
+      "bytes": 5231,
+      "path": "SOURCE_PINS.json",
+      "sha256": "c4846e2152109999222a8934bcd100cd77bfde8108f659fa7386b53d69d80420"
+    },
+    {
+      "bytes": 1318,
+      "path": "EXTERNAL_SOURCES.json",
+      "sha256": "5035a1a9733188e81387459fb42704239fae98da128b76b68fe22822f2981173"
+    },
+    {
+      "bytes": 19169,
+      "path": "check.py",
+      "sha256": "2762b5133c9d44288b5e60393d2fd45089d21672fa4f155b9ebfe44fe5b63b21"
+    },
+    {
+      "bytes": 4072,
+      "path": "check.normal.json",
+      "sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e"
+    },
+    {
+      "bytes": 4072,
+      "path": "check.optimized.json",
+      "sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e"
+    },
+    {
+      "bytes": 319,
+      "path": "hostile.normal-optimized.json",
+      "sha256": "fd36183b6815265a941ce3bb26657b9844a01d8f5c9b05e887b1db2f5422d676"
+    },
+    {
+      "bytes": 12496,
+      "path": "sources/00-THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md",
+      "sha256": "e735afde9b135e5a9a4fcd2dae293d10fec11e10b250f7799f61e1590fdb4306"
+    },
+    {
+      "bytes": 9143,
+      "path": "sources/01-THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md",
+      "sha256": "b45fc4a6b7f1dd7ef2f9f63e1b219c72e69e87c4c5242aff44f3900c3466ae46"
+    },
+    {
+      "bytes": 26674,
+      "path": "sources/02-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+    },
+    {
+      "bytes": 6318,
+      "path": "sources/03-THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "sha256": "96a42fde86f56e976dcc159f43a8dbe084842f9a24b0d9895dd3c0aeb274c71c"
+    },
+    {
+      "bytes": 15441,
+      "path": "sources/04-REPORT.md",
+      "sha256": "468dfdadcdb99161cb0a2cec411c26df4c2b5e3c458bc29b63104dc8c8cf50ee"
+    },
+    {
+      "bytes": 17291,
+      "path": "sources/05-REPORT.md",
+      "sha256": "e7c8ada6114c2fc6a5837eb04d93ffb586a21c17f1050ba06a50131d20fcc877"
+    },
+    {
+      "bytes": 6758,
+      "path": "sources/06-CENTER_BANK_APPENDIX.md",
+      "sha256": "cb4c0dabdd48f177a10c1fb44dc77c6c1b295eb5e24c8837f2591a57a062be2b"
+    },
+    {
+      "bytes": 20251,
+      "path": "sources/07-REPORT.md",
+      "sha256": "d5883d398c362ce0e406a6055afc655e0a01e566546ee00074892c31f0f4c11f"
+    },
+    {
+      "bytes": 23280,
+      "path": "sources/08-REPORT.md",
+      "sha256": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa"
+    },
+    {
+      "bytes": 20684,
+      "path": "sources/09-REPORT.md",
+      "sha256": "59d822bd4b341326a22a1790fa835c561e474f1322d2465b62c02620423d31a2"
+    },
+    {
+      "bytes": 14668,
+      "path": "sources/10-why-the-advances-work-observation-composition-and-non-backtracking-macmini-20261026.md",
+      "sha256": "3a23a4890d57dc4865d91a4ebfe9388a9e8f1ab5e3232389c75c545615b4084b"
+    },
+    {
+      "bytes": 19570,
+      "path": "sources/11-THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "sha256": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935"
+    },
+    {
+      "bytes": 15901,
+      "path": "sources/12-THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "sha256": "581f7e8bc9f6b51fcf959adcdd8fdc04df1319ee2d595e7c94ea15a3d345d6bd"
+    }
+  ],
+  "scratch_only": [
+    "seal_sources.py"
+  ],
+  "source_pin": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "status": "FROZEN FOR PARENT PUBLICATION"
+}

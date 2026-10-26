@@ -1,0 +1,52 @@
+{
+  "schema": "session72-root-synthesis-review-v1",
+  "status": "ACCEPTED",
+  "files": [
+    {
+      "source_file": "README.final.md",
+      "sha256": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+      "bytes": 7747
+    },
+    {
+      "source_file": "UNIFYING_THEOREMS.md",
+      "sha256": "dde32c751f8ab3a728afdbaa632dcdf64ec621df6182cfbee67f3c8b639235c7",
+      "bytes": 18889
+    },
+    {
+      "source_file": "WALSH_REALIZABILITY.md",
+      "sha256": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df",
+      "bytes": 4724
+    },
+    {
+      "source_file": "check_walsh_cone.py",
+      "sha256": "2496d190698bc91dfe97d581a7b29c4b9610634eca5c3647f68353c80c79326a",
+      "bytes": 3599
+    },
+    {
+      "source_file": "walsh.normal.json",
+      "sha256": "da4d181068a0615b525bfe2de42f195811843c409b5c19b5794fdcb8cef2e9da",
+      "bytes": 1964
+    },
+    {
+      "source_file": "walsh.optimized.json",
+      "sha256": "da4d181068a0615b525bfe2de42f195811843c409b5c19b5794fdcb8cef2e9da",
+      "bytes": 1964
+    }
+  ],
+  "scope_reviews": [
+    "Independent symmetry audit accepted the harmonic/counting/codec/gap sections and the exact Walsh realization-cone matrix.",
+    "Independent response/alignment audit accepted reset incidence/cycle/cone results, test-return/depth scope, cyclic/P7/native field interpretations and the contextual-factorization addition.",
+    "Both audits reviewed front-page scope; final finite-state, absorbing-failure, time-homogeneous and nonempty-layer qualifications were applied."
+  ],
+  "status_boundaries": [
+    "Classical equinumerosity, existing Walsh/count/spectrum/codecs, contextual factorization and rank-repair principles are explicitly credited as cited/inherited/standard.",
+    "Sharp restored-test depth ceil((n-2)/2) for all n>=3 over Q is OPEN; lower bound proved, equality checked through n=6 only.",
+    "Arc-flip quotient spectra are not assertions about literal Hamilton-path-complement metagraphs.",
+    "State identification, marked-state reconstruction, law response rank, positive realization and computational efficiency are distinct predicates."
+  ],
+  "proof_inputs": [
+    "The theorem-specific native reports and independently replayed exact receipts, with declared fields and finite universes.",
+    "Primary Royle-Praeger-Glasby-Freedman-Devillers theorem, arXiv2204.01947v2 / J.AlgebraicCombin.57(2023)."
+  ],
+  "publication_scope": "Mathematical/semantic review of final root prose. Whole-packet replay, remote bytes, modes, ancestry, and CI status are separately recorded by publication receipts."
+}

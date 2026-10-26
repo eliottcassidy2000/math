@@ -1,0 +1,33 @@
+{
+  "replays": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "session72-cross-domain/native-paley/check_native_paley.py"
+      ],
+      "exact_receipt_match": true,
+      "receipt_sha256": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "session72-cross-domain/native-paley/check_native_paley.py"
+      ],
+      "exact_receipt_match": true,
+      "receipt_sha256": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191",
+      "returncode": 0
+    }
+  ],
+  "source_hashes": {
+    "MANIFEST.json": "68662a84f20a4acd2bb7226495e0569116d550f5e4052975551bf8abeccd7ada",
+    "README.md": "194625fc91b47171ca68e58caf468bf46832d158fda93148aab0bd70acaa5dad",
+    "check.normal.json": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191",
+    "check.optimized.json": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191",
+    "check_native_paley.py": "edb952e327e4f3dd0261c34ad42a43ac554974bf9544912ce4183443110611d0"
+  },
+  "status": "PASS"
+}

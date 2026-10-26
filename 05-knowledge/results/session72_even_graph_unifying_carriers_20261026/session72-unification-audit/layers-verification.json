@@ -1,0 +1,59 @@
+{
+  "independent_hostiles": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "session72-unification-audit/layer_universality_audit.py",
+        "--inject"
+      ],
+      "expected_failure": true,
+      "returncode": 1
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "session72-unification-audit/layer_universality_audit.py",
+        "--inject"
+      ],
+      "expected_failure": true,
+      "returncode": 1
+    }
+  ],
+  "independent_normal_optimized_match": true,
+  "independent_receipt_sha256": "696eacaac7fc6f39949701342dd5461ac1ac05f3e2b78ad8307927e37731d89a",
+  "independent_source_sha256": "f81356dcd3055472532dd5ede084d64e2870032eefc009c3946f324b5d6a2a48",
+  "producer_replays": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "session72-cross-domain/layer-universality/check_layers.py"
+      ],
+      "exact_receipt_match": true,
+      "receipt_sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "session72-cross-domain/layer-universality/check_layers.py"
+      ],
+      "exact_receipt_match": true,
+      "receipt_sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e",
+      "returncode": 0
+    }
+  ],
+  "source_hashes": {
+    "MANIFEST.json": "171c2b982f0977317138681b3c217a93c32f5569f13da34da46a921dd4baeb1d",
+    "README.md": "48bb8ac16a7407c08772d943f094cd5703fa3a29c7e96618bd0f11ad2a458d1d",
+    "check.normal.json": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e",
+    "check.optimized.json": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e",
+    "check_layers.py": "b2eee92d20bb311f33c708a9cdc50966ef1147a2b21c801e83257b6856fbc916"
+  },
+  "status": "PASS"
+}

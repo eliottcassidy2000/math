@@ -1,0 +1,97 @@
+{
+  "files": [
+    {
+      "bytes": 12496,
+      "git_blob": "c65f00599a5446c35efed2d65a4eeb02a8ea769d",
+      "path": "01-canon/theorems/THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md",
+      "sha256": "e735afde9b135e5a9a4fcd2dae293d10fec11e10b250f7799f61e1590fdb4306",
+      "snapshot": "sources/00-THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md"
+    },
+    {
+      "bytes": 9143,
+      "git_blob": "66b8da022edb9e84639b2bf9bba23be2a74f6a71",
+      "path": "01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md",
+      "sha256": "b45fc4a6b7f1dd7ef2f9f63e1b219c72e69e87c4c5242aff44f3900c3466ae46",
+      "snapshot": "sources/01-THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md"
+    },
+    {
+      "bytes": 26674,
+      "git_blob": "fcd692c3d4e34fe2d4237f6d04fd31f9cc7cf698",
+      "path": "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+      "snapshot": "sources/02-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md"
+    },
+    {
+      "bytes": 6318,
+      "git_blob": "e75b6c8517878e07ec73336c877d3adfc8e21485",
+      "path": "01-canon/theorems/THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "sha256": "96a42fde86f56e976dcc159f43a8dbe084842f9a24b0d9895dd3c0aeb274c71c",
+      "snapshot": "sources/03-THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md"
+    },
+    {
+      "bytes": 15441,
+      "git_blob": "353d476bd878e5e8eb469c271f1e6ffb05cba769",
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-root27/REPORT.md",
+      "sha256": "468dfdadcdb99161cb0a2cec411c26df4c2b5e3c458bc29b63104dc8c8cf50ee",
+      "snapshot": "sources/04-REPORT.md"
+    },
+    {
+      "bytes": 17291,
+      "git_blob": "d1552604fa284713bc62e6cd9f6f2ee88d8bbda4",
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-incoming-review/REPORT.md",
+      "sha256": "e7c8ada6114c2fc6a5837eb04d93ffb586a21c17f1050ba06a50131d20fcc877",
+      "snapshot": "sources/05-REPORT.md"
+    },
+    {
+      "bytes": 6758,
+      "git_blob": "b49f74dcd2118dfa399fc2330d378bb10cd10829",
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-audit-root27/CENTER_BANK_APPENDIX.md",
+      "sha256": "cb4c0dabdd48f177a10c1fb44dc77c6c1b295eb5e24c8837f2591a57a062be2b",
+      "snapshot": "sources/06-CENTER_BANK_APPENDIX.md"
+    },
+    {
+      "bytes": 20251,
+      "git_blob": "559ee2580cb92be17c33347889683d7fe5be9d7f",
+      "path": "05-knowledge/results/session68_tournament_composition_classification_20261026/session68-arithmetic/REPORT.md",
+      "sha256": "d5883d398c362ce0e406a6055afc655e0a01e566546ee00074892c31f0f4c11f",
+      "snapshot": "sources/07-REPORT.md"
+    },
+    {
+      "bytes": 23280,
+      "git_blob": "7e5f4117b0a646b000877cd174045b4f84856cad",
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-dudeney/REPORT.md",
+      "sha256": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa",
+      "snapshot": "sources/08-REPORT.md"
+    },
+    {
+      "bytes": 20684,
+      "git_blob": "4f18991c69b1058a59ddf851c49bd547e9891431",
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-penrose/REPORT.md",
+      "sha256": "59d822bd4b341326a22a1790fa835c561e474f1322d2465b62c02620423d31a2",
+      "snapshot": "sources/09-REPORT.md"
+    },
+    {
+      "bytes": 14668,
+      "git_blob": "10f7b6ecbcbe42d56c50d26e7ce27d08e999c126",
+      "path": "07-reflections/why-the-advances-work-observation-composition-and-non-backtracking-macmini-20261026.md",
+      "sha256": "3a23a4890d57dc4865d91a4ebfe9388a9e8f1ab5e3232389c75c545615b4084b",
+      "snapshot": "sources/10-why-the-advances-work-observation-composition-and-non-backtracking-macmini-20261026.md"
+    },
+    {
+      "bytes": 19570,
+      "git_blob": "4a82aed8f3d47dc0df482a24e2ede39b13e1fcd7",
+      "path": "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "sha256": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935",
+      "snapshot": "sources/11-THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md"
+    },
+    {
+      "bytes": 15901,
+      "git_blob": "9ad1af1e7142181074ba0b4d8562525b1ec1a6ae",
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "sha256": "581f7e8bc9f6b51fcf959adcdd8fdc04df1319ee2d595e7c94ea15a3d345d6bd",
+      "snapshot": "sources/12-THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md"
+    }
+  ],
+  "pin": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "repository": "eliottcassidy2000/math"
+}

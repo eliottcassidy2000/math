@@ -1,0 +1,34 @@
+{
+  "replays": [
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "session72-cross-domain/check.py"
+      ],
+      "output_sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+      "returncode": 0
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "session72-cross-domain/check.py"
+      ],
+      "output_sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+      "returncode": 0
+    }
+  ],
+  "source_hashes": {
+    "MANIFEST.json": "f632682224ef776d7e1035cc21c648689a90ade1e331ca1ac88f5b5317a9a260",
+    "REPORT.md": "ff77fa633d88c761315fc53097c022c5d4f1ac40cbc7c9fb8d4b744750d9c09b",
+    "THEOREM-CYCLIC-ALIGNMENT.md": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+    "check.normal.json": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+    "check.optimized.json": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+    "check.py": "2762b5133c9d44288b5e60393d2fd45089d21672fa4f155b9ebfe44fe5b63b21"
+  },
+  "status": "PASS"
+}

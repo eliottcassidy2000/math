@@ -1,0 +1,21 @@
+{
+  "checked_utc_date": "2026-10-26",
+  "sources": [
+    {
+      "authors": [
+        "Guillaume Rabusseau",
+        "Borja Balle",
+        "Shay B. Cohen"
+      ],
+      "scope": "Section2 context, transition tensor, Hankel and minimal-rank background; no approximation theorem imported",
+      "title": "Low-Rank Approximation of Weighted Tree Automata",
+      "url": "https://proceedings.mlr.press/v51/rabusseau16.pdf"
+    },
+    {
+      "author": "Laszlo Lovasz",
+      "scope": "Primary abstract background counterpart; no theorem imported into reset proof",
+      "title": "The rank of connection matrices and the dimension of graph algebras",
+      "url": "https://arxiv.org/abs/math/0408232"
+    }
+  ]
+}

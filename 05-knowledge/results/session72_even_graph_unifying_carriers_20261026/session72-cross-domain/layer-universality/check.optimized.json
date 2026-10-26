@@ -1,0 +1,13 @@
+{
+  "duplicates_and_empty_supports": true,
+  "families": 276,
+  "graph_family_cases": 2084,
+  "index_sizes": [
+    1,
+    2,
+    3
+  ],
+  "parent_theorem_sha256": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+  "scope": "Representation universality only; no complexity or huge native graph census claim",
+  "status": "PASS"
+}

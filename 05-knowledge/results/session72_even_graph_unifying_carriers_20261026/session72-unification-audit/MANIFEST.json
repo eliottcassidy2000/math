@@ -1,0 +1,139 @@
+{
+  "additional_replays": [
+    "paley7-verification.json",
+    "paley7-producer-replay.json",
+    "layers-verification.json"
+  ],
+  "core_replay": "combined-verification.json",
+  "files": [
+    {
+      "bytes": 4508,
+      "path": "PRODUCER_PINS.json",
+      "sha256": "2dd320828fc6fa31b83fc4ff97e726c4e9c2d861e9166191acc39981d20776db"
+    },
+    {
+      "bytes": 23283,
+      "path": "REPORT.md",
+      "sha256": "73efac2f74b402deda55ddf6e2ba53cb6c9c59f56c60a0cfd52049ee52970374"
+    },
+    {
+      "bytes": 1837,
+      "path": "SOURCE_PINS.json",
+      "sha256": "fbc45e52d8a13cf35f25039759e1a86954cf355b19514a42911f578f926627b2"
+    },
+    {
+      "bytes": 19349,
+      "path": "check.py",
+      "sha256": "c57f964493675f64c1746ec1b04a6eecc6baa45978bd5a6e0abbea93f7662c97"
+    },
+    {
+      "bytes": 6247,
+      "path": "combined-verification.json",
+      "sha256": "a83e57f5a5d908f9f1c875f1a428406f8ac4ae5fb8f041c04f1ed350ce69a4bb"
+    },
+    {
+      "bytes": 1273,
+      "path": "cross-domain-replay.json",
+      "sha256": "fed9002125d13c69dcc7709abeda7f7c9e6db2b3a453888ace38488d87dc263f"
+    },
+    {
+      "bytes": 2399,
+      "path": "layer_universality_audit.py",
+      "sha256": "f81356dcd3055472532dd5ede084d64e2870032eefc009c3946f324b5d6a2a48"
+    },
+    {
+      "bytes": 2109,
+      "path": "layers-verification.json",
+      "sha256": "4363a5a86b759f2c639c63fdb0a0800535ece43178ea2bd5cd91cd0adb29d363"
+    },
+    {
+      "bytes": 252,
+      "path": "layers.normal.json",
+      "sha256": "696eacaac7fc6f39949701342dd5461ac1ac05f3e2b78ad8307927e37731d89a"
+    },
+    {
+      "bytes": 252,
+      "path": "layers.optimized.json",
+      "sha256": "696eacaac7fc6f39949701342dd5461ac1ac05f3e2b78ad8307927e37731d89a"
+    },
+    {
+      "bytes": 10273,
+      "path": "normal.json",
+      "sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01"
+    },
+    {
+      "bytes": 10273,
+      "path": "optimized.json",
+      "sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01"
+    },
+    {
+      "bytes": 1255,
+      "path": "paley7-producer-replay.json",
+      "sha256": "48d3d376d404f65d3c98788c81e982053ab78673f46a96e0ec901274e18eda4e"
+    },
+    {
+      "bytes": 970,
+      "path": "paley7-verification.json",
+      "sha256": "078ecf7db1582c24d3a1214ef60e9f7bfb434b61da8eef2a17b8b599a80f70ee"
+    },
+    {
+      "bytes": 1451,
+      "path": "paley7.normal.json",
+      "sha256": "a96fb28ab6af058815a1b036e0cfec516c4c13285030434edc12b90f6a5f3372"
+    },
+    {
+      "bytes": 1451,
+      "path": "paley7.optimized.json",
+      "sha256": "a96fb28ab6af058815a1b036e0cfec516c4c13285030434edc12b90f6a5f3372"
+    },
+    {
+      "bytes": 4242,
+      "path": "paley7_audit.py",
+      "sha256": "506cdf77586ea13dae1c477ee3f29a8960a1a4966bc57948f94f8b549dc9cc98"
+    },
+    {
+      "bytes": 6823,
+      "path": "sources/AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 10916,
+      "path": "sources/README.md",
+      "sha256": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463"
+    },
+    {
+      "bytes": 1490,
+      "path": "sources/S68.md",
+      "sha256": "d992b7cd3fb1faff99ff260829d0cceea0fcb9c3e38c31279fbcc57e9140be9c"
+    },
+    {
+      "bytes": 2380,
+      "path": "sources/S69.md",
+      "sha256": "e5b1667e9a908ff33f9b0180cd7a1194061d8f6b74f6192c09ae7dc562951605"
+    },
+    {
+      "bytes": 12496,
+      "path": "sources/THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md",
+      "sha256": "e735afde9b135e5a9a4fcd2dae293d10fec11e10b250f7799f61e1590fdb4306"
+    },
+    {
+      "bytes": 10270,
+      "path": "sources/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346"
+    },
+    {
+      "bytes": 3311,
+      "path": "verification.json",
+      "sha256": "e97959510d1dcc28c8cdf6a8e3f7ae8429a15044511a07ff28d5f70025f33e0c"
+    },
+    {
+      "bytes": 3075,
+      "path": "verify.py",
+      "sha256": "8c080214489a4951c49fa59f7c0d18f89a46516c3a05b99ba182a27aa306b141"
+    }
+  ],
+  "mathematical_correction": "Partial-affine common-centre/commutation statements repaired to retain domains before sealing.",
+  "repository_input_pin": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "status": "FROZEN ACCEPTED AUDIT",
+  "unresolved_mathematical_blockers": []
+}

@@ -1,0 +1,103 @@
+{
+  "independent_replays": [
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py"
+      ],
+      "receipt_sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "field"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "45c7c8cc8da1f0207f3c8a33719dc81e904f899232be5d163b82a3fc0bfd91a1"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "trajectory"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "ea30502c4be9e0b455669f2169b74bc2f026bdd24070f0dedb71cb0104b8c7de"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "sparse"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "a4546ccaf654b450b7af7be2c21fe7f2aa033b203fb167c1e3d055283bdce608"
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py"
+      ],
+      "receipt_sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "field"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "45c7c8cc8da1f0207f3c8a33719dc81e904f899232be5d163b82a3fc0bfd91a1"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "trajectory"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "ea30502c4be9e0b455669f2169b74bc2f026bdd24070f0dedb71cb0104b8c7de"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "sparse"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "a4546ccaf654b450b7af7be2c21fe7f2aa033b203fb167c1e3d055283bdce608"
+    }
+  ],
+  "inherited_source_pins_verified": 6,
+  "producer_replays": [],
+  "status": "PASS"
+}

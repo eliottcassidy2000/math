@@ -1,0 +1,19 @@
+{
+  "earlier_frozen_manifests_and_receipts_unchanged": true,
+  "exact_only_addition_verified": "These are single-arc-flip quotients, not the literal Hamilton-\npath-complement metagraph, whose legal-path dependence needs separate analysis.",
+  "final_readme_sha256": "7d38db3d9cf2d21d5839e9a6a09c8af79faf6cae2dcc73f4f1f517f9ffb566b7",
+  "front_page_findings": [
+    "Same-order unlabelled sign-even count is correctly distinguished from Eulerian graph counts.",
+    "Weighted single-arc quotient gaps4,8,2(n-1) retain correct n boundaries, inherited/new scope, loops and multiplicities.",
+    "Explicit warning correctly separates source-independent arc-flip kernels from literal Hamilton-path-complement and source-dependent legal-path operations.",
+    "Full Walsh type-law cone loses no information and is correctly distinguished from smaller nonsimplicial response cones.",
+    "Injective identifier transport, extra markings, finite versus all-order status, and no prize-closure boundary are preserved.",
+    "Other theorem-family numeric claims are unchanged summaries of separately audited source reports; this receipt does not replace their independent proofs."
+  ],
+  "required_corrections": [],
+  "review_scope": "Final front-page anchor/scope review plus exact single-warning change to previously scoped-audited synthesis; no new research",
+  "status": "PASS",
+  "synthesis_current_sha256": "d2e9554967b2af05d87a6d2b6b5fbf5bffe2558be31404fc6d660a1e6ab09044",
+  "synthesis_math_unchanged": true,
+  "synthesis_previous_sha256": "e72a9ccd233aea5fe2e1771e1af4a9018afdecedebdd5d500f8e4eba5c375948"
+}

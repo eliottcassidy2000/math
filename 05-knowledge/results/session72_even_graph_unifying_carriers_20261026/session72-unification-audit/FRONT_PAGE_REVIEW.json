@@ -1,0 +1,37 @@
+{
+  "accepted_companion_synthesis_sha256": "d2e9554967b2af05d87a6d2b6b5fbf5bffe2558be31404fc6d660a1e6ab09044",
+  "accepted_sha256": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+  "additive_evidence_note": "This file is separate additive evidence outside the unchanged26-file core audit manifest.",
+  "other_scope_checks": [
+    "Reset theorem uses terminal observations of preselected words, not trajectories or conditional tests.",
+    "Native n5 pair-law loss27 is distinguished from full literal-law loss41.",
+    "n5 determinant-minus-one result is every-field; n6 two-test result is stated only over Q and F2.",
+    "Guard-depth equality for all n is OPEN over Q; only the degree lower bound and finite cases through6 are proved.",
+    "Cyclic arity r>=1, joint phase class rather than absolute tuple, and nonempty prime-power layers are explicit.",
+    "Native carousel is scoped to odd periods; sparse optimization and complexity are not claimed.",
+    "Native Paley7 pair-orbit versus triple-orbit distinction and F8 ranks2/3 match the independent audit.",
+    "Finite source identification is not promoted to all-order marked or compositional reconstruction."
+  ],
+  "previous_reviewed_sha256": "7d38db3d9cf2d21d5839e9a6a09c8af79faf6cae2dcc73f4f1f517f9ffb566b7",
+  "required_summary_repairs_verified": [
+    "Test-return summary explicitly uses a finite valid state set and absorbing failure.",
+    "Factorial no-go explicitly concerns fixed finite-dimensional time-homogeneous linear carriers."
+  ],
+  "review_scope": {
+    "accepted_sections": [
+      "2: reset response and positivity summary",
+      "3: test-return, finite-field bounds and OPEN depth conjecture",
+      "4: cyclic phases, prime layers and native Paley7/F8",
+      "What this unifies: partial domains, factorial-Hankel limits and finite-versus-all-order boundaries"
+    ],
+    "excluded": [
+      "Section1 harmonic/even-graph claims",
+      "Walsh-realizability aside",
+      "Bibliographic novelty and publication-priority assertions"
+    ],
+    "exclusion_reason": "Excluded material is handled by the separate even-graph auditor or credited source reports."
+  },
+  "source_path": "session72-root/README.final.md",
+  "status": "FROZEN ACCEPTED",
+  "unresolved_blockers_in_scope": []
+}

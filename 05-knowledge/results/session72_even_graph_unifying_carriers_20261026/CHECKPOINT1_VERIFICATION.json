@@ -1,0 +1,32 @@
+{
+  "ahead_behind": "0\t0",
+  "all_path_bytes_equal": true,
+  "changed_paths_verified": 65,
+  "ci": {
+    "check_runs": 0,
+    "checked_at": "2026-10-26T23:14:40.133Z",
+    "commit": "00f1c9aa3989be5084c8626ae593ee4f573c5bbd",
+    "status_contexts": 0,
+    "workflow_runs": 0,
+    "zero_is_not_pass": true
+  },
+  "commit": "00f1c9aa3989be5084c8626ae593ee4f573c5bbd",
+  "entire_packet_files_verified": 63,
+  "local_head": "00f1c9aa3989be5084c8626ae593ee4f573c5bbd",
+  "main_head": "00f1c9aa3989be5084c8626ae593ee4f573c5bbd",
+  "parent": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "required_ancestors_preserved": true,
+  "status": "VERIFIED",
+  "tree": "6778383843a97331aece38aa7f429a48dda37cbd",
+  "validation": {
+    "docs": "PASS",
+    "each_replayed_normal_and_optimized": true,
+    "packet_mutation_checks": 28,
+    "portable_jobs": 7,
+    "provenance_checks": 833,
+    "provenance_mutation_checks": 16,
+    "whitespace": "PASS"
+  },
+  "whole_tree_equal": true,
+  "worktree_clean": true
+}

@@ -1,0 +1,235 @@
+{
+  "checks": {
+    "arithmetic": {
+      "Collatz_merge": 17,
+      "binary_word_pairs": 961,
+      "legal_root7_macros": 110,
+      "refill": {
+        "after_P": 2,
+        "after_switch": 9,
+        "delta": 684,
+        "old_fuel": 5
+      }
+    },
+    "cyclic_phase": {
+      "all_pass": true,
+      "candidate_edge_assignments": 21534,
+      "edge_subgraphs": 17100,
+      "profiles": 347,
+      "signatures": 2250,
+      "states": 45520
+    },
+    "finite_field": {
+      "basis_multiplication_pairs": 729,
+      "normal_basis_words": 8,
+      "tensor_dimension": 27,
+      "tensor_factors": 9
+    },
+    "geometry": {
+      "Gaussian_vector_pairs": 14641,
+      "flat_square_union_area": 4,
+      "formal_center_partial_domain_hostile": true,
+      "matching_product_hostile": {
+        "identity_pair_components": 2,
+        "swap_pair_components": 1
+      },
+      "piece_area_sum": 5,
+      "rational_probes": 70993,
+      "split_words": 5461
+    },
+    "moments": {
+      "characteristics": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13
+      ],
+      "cyclic_alias": -87178291199,
+      "factorial_hankel_degrees": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "parity_law_dimensions": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "native_tournament": {
+      "bit_colors": 62,
+      "direct_automorphism_censuses": 12,
+      "examples": [
+        {
+          "aut": 81,
+          "order": 12,
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              0,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        {
+          "aut": 27,
+          "order": 12,
+          "rows": [
+            [
+              1,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 81,
+          "order": 12,
+          "rows": [
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "aut": 2187,
+          "order": 24,
+          "rows": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 729,
+          "order": 24,
+          "rows": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 729,
+          "order": 24,
+          "rows": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "aut": 729,
+          "order": 24,
+          "rows": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ]
+        }
+      ],
+      "outer_tournaments": 104,
+      "pair_module_closures": 24272
+    },
+    "source_files_verified": 13
+  },
+  "status": "PASS"
+}

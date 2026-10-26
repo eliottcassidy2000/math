@@ -1,0 +1,15 @@
+{
+  "controls": [
+    {
+      "expected_failure": true,
+      "mode": "normal",
+      "returncode": 1
+    },
+    {
+      "expected_failure": true,
+      "mode": "optimized",
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}

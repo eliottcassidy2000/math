@@ -1,0 +1,34 @@
+{
+  "dependency": {
+    "path": "../THEOREM-CYCLIC-ALIGNMENT.md",
+    "sha256": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf"
+  },
+  "files": [
+    {
+      "bytes": 2938,
+      "path": "README.md",
+      "sha256": "48bb8ac16a7407c08772d943f094cd5703fa3a29c7e96618bd0f11ad2a458d1d"
+    },
+    {
+      "bytes": 348,
+      "path": "check.normal.json",
+      "sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e"
+    },
+    {
+      "bytes": 348,
+      "path": "check.optimized.json",
+      "sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e"
+    },
+    {
+      "bytes": 2350,
+      "path": "check_layers.py",
+      "sha256": "b2eee92d20bb311f33c708a9cdc50966ef1147a2b21c801e83257b6856fbc916"
+    },
+    {
+      "bytes": 228,
+      "path": "hostile.json",
+      "sha256": "22e27137f5ea08dce34c92c7046bec86b4162d6ba1e4ac35ab749c91421e5cad"
+    }
+  ],
+  "status": "FROZEN SUPPLEMENT"
+}

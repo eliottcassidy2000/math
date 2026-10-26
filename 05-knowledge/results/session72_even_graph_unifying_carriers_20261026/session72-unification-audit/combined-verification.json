@@ -1,0 +1,174 @@
+{
+  "independent_replays": [
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py"
+      ],
+      "receipt_sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "field"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "45c7c8cc8da1f0207f3c8a33719dc81e904f899232be5d163b82a3fc0bfd91a1"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "trajectory"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "ea30502c4be9e0b455669f2169b74bc2f026bdd24070f0dedb71cb0104b8c7de"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "sparse"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "a4546ccaf654b450b7af7be2c21fe7f2aa033b203fb167c1e3d055283bdce608"
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py"
+      ],
+      "receipt_sha256": "1ded2e34ce026324f22f7b97683f0bef0f1d8fe92be2e0bc8e7c847a4ef80e01",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "field"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "45c7c8cc8da1f0207f3c8a33719dc81e904f899232be5d163b82a3fc0bfd91a1"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "trajectory"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "ea30502c4be9e0b455669f2169b74bc2f026bdd24070f0dedb71cb0104b8c7de"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-unification-audit/check.py",
+        "--inject",
+        "sparse"
+      ],
+      "expected_failure": true,
+      "returncode": 1,
+      "stderr_sha256": "a4546ccaf654b450b7af7be2c21fe7f2aa033b203fb167c1e3d055283bdce608"
+    }
+  ],
+  "inherited_source_pins_verified": 6,
+  "producer_replays": [
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-response/check.py"
+      ],
+      "name": "session72-response",
+      "optimized": false,
+      "receipt_sha256": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a",
+      "returncode": 0,
+      "source_hashes": {
+        "REPORT.md": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+        "check.py": "f8e7cdbb049f266c8ebd1443eb0006d8204023ef3497e0266cb1d0b951f480b3"
+      }
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-response/check.py"
+      ],
+      "name": "session72-response",
+      "optimized": true,
+      "receipt_sha256": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a",
+      "returncode": 0,
+      "source_hashes": {
+        "REPORT.md": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+        "check.py": "f8e7cdbb049f266c8ebd1443eb0006d8204023ef3497e0266cb1d0b951f480b3"
+      }
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session72-cross-domain/check.py"
+      ],
+      "name": "session72-cross-domain",
+      "optimized": false,
+      "receipt_sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+      "returncode": 0,
+      "source_hashes": {
+        "REPORT.md": "ff77fa633d88c761315fc53097c022c5d4f1ac40cbc7c9fb8d4b744750d9c09b",
+        "THEOREM-CYCLIC-ALIGNMENT.md": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+        "VERIFICATION.md": "1249db91f71fdb19af809e9b834a55e268be132819960a69b068788c8f12e5c0",
+        "check.py": "2762b5133c9d44288b5e60393d2fd45089d21672fa4f155b9ebfe44fe5b63b21"
+      }
+    },
+    {
+      "byte_match": true,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session72-cross-domain/check.py"
+      ],
+      "name": "session72-cross-domain",
+      "optimized": true,
+      "receipt_sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e",
+      "returncode": 0,
+      "source_hashes": {
+        "REPORT.md": "ff77fa633d88c761315fc53097c022c5d4f1ac40cbc7c9fb8d4b744750d9c09b",
+        "THEOREM-CYCLIC-ALIGNMENT.md": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+        "VERIFICATION.md": "1249db91f71fdb19af809e9b834a55e268be132819960a69b068788c8f12e5c0",
+        "check.py": "2762b5133c9d44288b5e60393d2fd45089d21672fa4f155b9ebfe44fe5b63b21"
+      }
+    }
+  ],
+  "status": "PASS"
+}

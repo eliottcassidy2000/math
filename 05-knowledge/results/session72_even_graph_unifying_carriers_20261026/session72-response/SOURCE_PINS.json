@@ -1,0 +1,40 @@
+{
+  "repository_commit": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "sources": [
+    {
+      "original_repository_path": "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md",
+      "sha256": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463",
+      "snapshot": "sources/unnamed-README.md"
+    },
+    {
+      "original_repository_path": "01-canon/theorems/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346",
+      "snapshot": "sources/THM-840.md"
+    },
+    {
+      "original_repository_path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94",
+      "snapshot": "sources/S69-response.md"
+    },
+    {
+      "original_repository_path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-root/SYNTHESIS.md",
+      "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6",
+      "snapshot": "sources/S70-synthesis.md"
+    },
+    {
+      "original_repository_path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-root/BRIDGES.md",
+      "sha256": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b",
+      "snapshot": "sources/S71-bridges.md"
+    },
+    {
+      "original_repository_path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "sha256": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8",
+      "snapshot": "sources/HYP-9416.md"
+    },
+    {
+      "original_repository_path": "07-reflections/why-the-advances-work-observation-composition-and-non-backtracking-macmini-20261026.md",
+      "sha256": "3a23a4890d57dc4865d91a4ebfe9388a9e8f1ab5e3232389c75c545615b4084b",
+      "snapshot": "sources/incoming-framework-reflection.md"
+    }
+  ]
+}

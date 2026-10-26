@@ -1,0 +1,120 @@
+{
+  "F8": {
+    "Fano_family_sizes": [
+      7,
+      7
+    ],
+    "cyclic_triangles": 14,
+    "exponent_masks": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ],
+    "ordered_triple_orbits": 10,
+    "trace_arcs_checked": 42,
+    "triple_ranks": [
+      2,
+      3
+    ],
+    "triple_sums": [
+      0,
+      4
+    ]
+  },
+  "automorphisms": 21,
+  "common_in": [
+    [
+      6
+    ],
+    []
+  ],
+  "common_out": [
+    [],
+    [
+      2
+    ]
+  ],
+  "in0_profiles_to_out0": {
+    "3": [
+      0,
+      0,
+      1
+    ],
+    "5": [
+      0,
+      1,
+      0
+    ],
+    "6": [
+      1,
+      0,
+      0
+    ]
+  },
+  "pair_matching_automorphisms": [
+    {
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "slots": [
+        0,
+        1
+      ]
+    },
+    {
+      "permutation": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "slots": [
+        0,
+        2
+      ]
+    },
+    {
+      "permutation": [
+        6,
+        1,
+        3,
+        5,
+        0,
+        2,
+        4
+      ],
+      "slots": [
+        1,
+        2
+      ]
+    }
+  ],
+  "permutations_examined": 5040,
+  "scope": "native Paley7 automorphism action, no cyclic all-arity counterexample; rank-minus-two only on cyclic triangle locus",
+  "status": "PASS",
+  "triples": [
+    [
+      0,
+      1,
+      3
+    ],
+    [
+      0,
+      1,
+      5
+    ]
+  ]
+}

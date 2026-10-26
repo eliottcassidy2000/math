@@ -1,0 +1,92 @@
+{
+  "claims": [
+    {
+      "boundary": "Cyclic simultaneous translation, not independent local quotients or law marginals.",
+      "id": "CA1",
+      "source": "THEOREM-CYCLIC-ALIGNMENT.md#1",
+      "statement": "All-arity cyclic orbit count, complete named pair-phase classification, and triangle congruence realization criterion.",
+      "status": "PROVED"
+    },
+    {
+      "boundary": "Completeness on actual states; arbitrary sparse labels need a separate realization test.",
+      "id": "CA2",
+      "source": "THEOREM-CYCLIC-ALIGNMENT.md#2",
+      "statement": "A retained-edge phase observation is complete exactly when every prime-power layer induces a connected graph.",
+      "status": "PROVED"
+    },
+    {
+      "boundary": "m odd and at least 3; named construction only, not arbitrary tournament classification.",
+      "id": "CA3",
+      "source": "THEOREM-CYCLIC-ALIGNMENT.md#4",
+      "statement": "All-arity binary colours have a native odd-carousel tournament realization with canonical module recovery and automorphism order 3^(rm)m/L.",
+      "status": "PROVED"
+    },
+    {
+      "boundary": "Classify actual partial maps; coefficient triples need not be unique on lower-dimensional or empty domains. Common-centre/commutation criteria are formal-total until domain membership/composition equality is separately checked.",
+      "id": "GA",
+      "source": "REPORT.md#3",
+      "statement": "Exact guarded affine composition, cocycle displacement and domain pullback.",
+      "status": "PROVED"
+    },
+    {
+      "boundary": "Fixed-dimensional multiplicative/linear time-homogeneous carriers only; growing or nonlinear/clocked states not excluded.",
+      "id": "FM1",
+      "source": "sources/00-THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md",
+      "statement": "THM-2810 factorial-Hankel faithfulness, zero algebra annihilator in characteristic zero and exact ideal (s^p) in characteristic p.",
+      "status": "INHERITED AUDITED / INDEPENDENT CONTROLS REPLAYED"
+    },
+    {
+      "boundary": "No descending global rank or root27 survival conclusion.",
+      "id": "root27",
+      "source": "SOURCE_PINS.json",
+      "statement": "Source-fixed carry switch, macro86 seven-bit refill, corrected full-match residual-valuation branch.",
+      "status": "INHERITED AUDITED / NAMED HOSTILES REPLAYED"
+    },
+    {
+      "boundary": "Canonical raw image and represented norms; no arbitrary null-image equivalence or LRC/dissection implication.",
+      "id": "GN1",
+      "source": "sources/02-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "statement": "THM-3333 Gaussian-square Lorentz/determinant identity and norm65 hostile.",
+      "status": "INHERITED AUDITED / INDEPENDENT CONTROLS REPLAYED"
+    },
+    {
+      "boundary": "This lane replays elementary domain/overlap controls, not the complete exact Penrose geometry checker or infinite tiling extension.",
+      "id": "Session71",
+      "source": "SOURCE_PINS.json",
+      "statement": "Native Penrose conjunction guards, partial affine length domains, and flat-seam nonoverlap boundary.",
+      "status": "INHERITED SCOPED PROOFS"
+    },
+    {
+      "id": "THM-4807",
+      "source": "sources/11-THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "statement": "Incoming elementary Hamilton-path reconstruction; concurrent Session70/BJR lineage credited.",
+      "status": "AUDITED AT INPUT PIN / NOT REPROVED HERE"
+    },
+    {
+      "id": "THM-4808",
+      "source": "sources/12-THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "statement": "Incoming filing says PROVED elementary and Pre-audit at filing; reflection wording does not promote it.",
+      "status": "PRE-AUDIT AT INPUT PIN / NOT A DEPENDENCY"
+    },
+    {
+      "boundary": "No universal size bound; target and permitted operations must be fixed before a hostile search.",
+      "id": "geometry-proposal",
+      "source": "REPORT.md#7",
+      "statement": "Economical frame-domain-global-contact carrier for a specified geometric family.",
+      "status": "OPEN / FALSIFIABLE PROPOSAL"
+    }
+  ],
+  "coordination_blocker": {
+    "action": "python3 agents/processor.py --status --peek --limit 8",
+    "mathematical_impact": "none; direct collaboration tools available",
+    "reason": "Checkout has no .machine-id; no registration or invented identity used.",
+    "status": "BLOCKED NOT EXECUTED SUCCESSFULLY",
+    "target": "local targeted agent inbox"
+  },
+  "publication": {
+    "lane_commits": false,
+    "lane_shared_edits": false,
+    "status": "PARENT OWNED"
+  },
+  "repository_pin": "4950589d056a64f8807774cf7da893dcafcd63a0"
+}

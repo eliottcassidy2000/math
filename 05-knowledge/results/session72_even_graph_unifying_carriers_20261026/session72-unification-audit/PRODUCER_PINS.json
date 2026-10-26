@@ -1,0 +1,135 @@
+{
+  "files": [
+    {
+      "bytes": 34451,
+      "path": "REPORT.md",
+      "producer": "session72-response",
+      "sha256": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da"
+    },
+    {
+      "bytes": 18169,
+      "path": "check.py",
+      "producer": "session72-response",
+      "sha256": "f8e7cdbb049f266c8ebd1443eb0006d8204023ef3497e0266cb1d0b951f480b3"
+    },
+    {
+      "bytes": 57065,
+      "path": "normal.json",
+      "producer": "session72-response",
+      "sha256": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a"
+    },
+    {
+      "bytes": 57065,
+      "path": "optimized.json",
+      "producer": "session72-response",
+      "sha256": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a"
+    },
+    {
+      "bytes": 1974,
+      "path": "PUBLICATION-MANIFEST.json",
+      "producer": "session72-response",
+      "sha256": "731d3f2b67f1771823b2be44bc72a0348f46866e4ed6d823cdf3849dd4e3473c"
+    },
+    {
+      "bytes": 22249,
+      "path": "REPORT.md",
+      "producer": "session72-cross-domain",
+      "sha256": "ff77fa633d88c761315fc53097c022c5d4f1ac40cbc7c9fb8d4b744750d9c09b"
+    },
+    {
+      "bytes": 13623,
+      "path": "THEOREM-CYCLIC-ALIGNMENT.md",
+      "producer": "session72-cross-domain",
+      "sha256": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf"
+    },
+    {
+      "bytes": 19169,
+      "path": "check.py",
+      "producer": "session72-cross-domain",
+      "sha256": "2762b5133c9d44288b5e60393d2fd45089d21672fa4f155b9ebfe44fe5b63b21"
+    },
+    {
+      "bytes": 4072,
+      "path": "check.normal.json",
+      "producer": "session72-cross-domain",
+      "sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e"
+    },
+    {
+      "bytes": 4072,
+      "path": "check.optimized.json",
+      "producer": "session72-cross-domain",
+      "sha256": "31e959c21ab5d9382ddaa2d6912b596c77755d1d65accb2efd2080353a2f039e"
+    },
+    {
+      "bytes": 4366,
+      "path": "MANIFEST.json",
+      "producer": "session72-cross-domain",
+      "sha256": "f632682224ef776d7e1035cc21c648689a90ade1e331ca1ac88f5b5317a9a260"
+    },
+    {
+      "bytes": 7245,
+      "path": "README.md",
+      "producer": "session72-cross-domain/native-paley",
+      "sha256": "194625fc91b47171ca68e58caf468bf46832d158fda93148aab0bd70acaa5dad"
+    },
+    {
+      "bytes": 5036,
+      "path": "check_native_paley.py",
+      "producer": "session72-cross-domain/native-paley",
+      "sha256": "edb952e327e4f3dd0261c34ad42a43ac554974bf9544912ce4183443110611d0"
+    },
+    {
+      "bytes": 1785,
+      "path": "check.normal.json",
+      "producer": "session72-cross-domain/native-paley",
+      "sha256": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191"
+    },
+    {
+      "bytes": 1785,
+      "path": "check.optimized.json",
+      "producer": "session72-cross-domain/native-paley",
+      "sha256": "fefd05169c0ac9b3ce25b75076ad52f6018fb2653aa93e82767c9f80fe8b9191"
+    },
+    {
+      "bytes": 1129,
+      "path": "MANIFEST.json",
+      "producer": "session72-cross-domain/native-paley",
+      "sha256": "68662a84f20a4acd2bb7226495e0569116d550f5e4052975551bf8abeccd7ada"
+    },
+    {
+      "bytes": 2938,
+      "path": "README.md",
+      "producer": "session72-cross-domain/layer-universality",
+      "sha256": "48bb8ac16a7407c08772d943f094cd5703fa3a29c7e96618bd0f11ad2a458d1d"
+    },
+    {
+      "bytes": 2350,
+      "path": "check_layers.py",
+      "producer": "session72-cross-domain/layer-universality",
+      "sha256": "b2eee92d20bb311f33c708a9cdc50966ef1147a2b21c801e83257b6856fbc916"
+    },
+    {
+      "bytes": 348,
+      "path": "check.normal.json",
+      "producer": "session72-cross-domain/layer-universality",
+      "sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e"
+    },
+    {
+      "bytes": 348,
+      "path": "check.optimized.json",
+      "producer": "session72-cross-domain/layer-universality",
+      "sha256": "9597770427087ea2d36ead30ec133c7f567fb221a95c16f72b54036da7651f1e"
+    },
+    {
+      "bytes": 948,
+      "path": "MANIFEST.json",
+      "producer": "session72-cross-domain/layer-universality",
+      "sha256": "171c2b982f0977317138681b3c217a93c32f5569f13da34da46a921dd4baeb1d"
+    }
+  ],
+  "layer_supplement_replay_receipt": "layers-verification.json",
+  "replay_receipt": "combined-verification.json",
+  "repository_input_pin": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "supplement_replay_receipt": "paley7-producer-replay.json",
+  "verdict": "ACCEPT"
+}

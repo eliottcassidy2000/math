@@ -1,0 +1,65 @@
+{
+  "hostile_gates": [
+    {
+      "expected_exception": true,
+      "mutation": "rank",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "rank",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "trace",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "trace",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "cone",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "cone",
+      "optimized": true,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "return",
+      "optimized": false,
+      "returncode": 1
+    },
+    {
+      "expected_exception": true,
+      "mutation": "return",
+      "optimized": true,
+      "returncode": 1
+    }
+  ],
+  "manifest_files_verified": 14,
+  "positive_replays": [
+    {
+      "matches_frozen": true,
+      "optimized": false,
+      "returncode": 0
+    },
+    {
+      "matches_frozen": true,
+      "optimized": true,
+      "returncode": 0
+    }
+  ]
+}

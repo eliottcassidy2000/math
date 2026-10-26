@@ -1,0 +1,17 @@
+{
+  "injected_failures": [
+    {
+      "expected_error": "injected explicit failure",
+      "mode": "normal",
+      "pass": true,
+      "returncode": 1
+    },
+    {
+      "expected_error": "injected explicit failure",
+      "mode": "optimized",
+      "pass": true,
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}

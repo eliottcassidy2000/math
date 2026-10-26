@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-26",
+  "source_policy": "Primary author teaching sources; mathematics imported only as specified; no external PDF or HTML is packaged.",
+  "sources": [
+    {
+      "title": "Keith Conrad, Linear Independence of Characters",
+      "url": "https://kconrad.math.uconn.edu/blurbs/galoistheory/linearchar.pdf",
+      "location": "Theorem 3.7, printed pages 4-5",
+      "import": "Every finite cyclic extension has a normal basis.",
+      "verification": "Directly opened and inspected theorem and proof with web tool; normal basis role is also independently checked by auditor.",
+      "does_not_prove": "Native carousel realization, sparse phase-graph criterion, or any Collatz/geometry transfer."
+    },
+    {
+      "title": "Noam Elkies, Math 250: Higher Algebra (2001-2002)",
+      "url": "https://people.math.harvard.edu/~elkies/M250.01/index.html",
+      "location": "Finite-field example in Galois theory section",
+      "import": "Finite fields have cyclic Frobenius Galois groups and their subfield degrees are divisibility-controlled.",
+      "verification": "Direct page inspection; tensor decomposition is proved in the theorem note, not quoted as a result of this source.",
+      "does_not_prove": "The new native construction or priority for the elementary synthesis."
+    }
+  ]
+}

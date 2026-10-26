@@ -1,0 +1,42 @@
+{
+  "commit": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "files": [
+    {
+      "blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "repository_path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "snapshot": "sources/AGENTS.md"
+    },
+    {
+      "blob": "56e04f922c958ac642c05bff6c32f7995f36a51d",
+      "repository_path": "00-navigation/S68.md",
+      "sha256": "d992b7cd3fb1faff99ff260829d0cceea0fcb9c3e38c31279fbcc57e9140be9c",
+      "snapshot": "sources/S68.md"
+    },
+    {
+      "blob": "b0c73f93c3b3bd791ae02e652ff5f29780a9f386",
+      "repository_path": "00-navigation/S69.md",
+      "sha256": "e5b1667e9a908ff33f9b0180cd7a1194061d8f6b74f6192c09ae7dc562951605",
+      "snapshot": "sources/S69.md"
+    },
+    {
+      "blob": "9c30bee83bb0b631ac21430341c1e472a28d3ee8",
+      "repository_path": "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md",
+      "sha256": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463",
+      "snapshot": "sources/README.md"
+    },
+    {
+      "blob": "c65f00599a5446c35efed2d65a4eeb02a8ea769d",
+      "repository_path": "01-canon/theorems/THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md",
+      "sha256": "e735afde9b135e5a9a4fcd2dae293d10fec11e10b250f7799f61e1590fdb4306",
+      "snapshot": "sources/THM-2810-factorial-hankel-faithfulness-and-bounded-radial-carrier-no-go.md"
+    },
+    {
+      "blob": "c56096765b00934a25b22c604e0938e4e38c5bcd",
+      "repository_path": "01-canon/theorems/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346",
+      "snapshot": "sources/THM-840-hamming-five-continuation-congruence-boundary.md"
+    }
+  ],
+  "repository": "eliottcassidy2000/math"
+}

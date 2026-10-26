@@ -1,0 +1,16 @@
+{
+  "EXTERNAL_SOURCES.json": "0a898258b848c3390a2793476f37a072a7ff2ab824b12fbb5c8f3c579f8d7dbf",
+  "REPORT.md": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+  "SOURCE_PINS.json": "aadcef47791c33b018bfedb22a5e54b3e87e6575bac10858ff53dc37d86c0d7d",
+  "check.py": "f8e7cdbb049f266c8ebd1443eb0006d8204023ef3497e0266cb1d0b951f480b3",
+  "normal.json": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a",
+  "optimized.json": "715669401e10af5e79343da8743df1e6ee0130a48dc4b3b6a6553bae4620145a",
+  "sources/HYP-9416.md": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8",
+  "sources/S69-response.md": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94",
+  "sources/S70-synthesis.md": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6",
+  "sources/S71-bridges.md": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b",
+  "sources/THM-840.md": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346",
+  "sources/incoming-framework-reflection.md": "3a23a4890d57dc4865d91a4ebfe9388a9e8f1ab5e3232389c75c545615b4084b",
+  "sources/unnamed-README.md": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463",
+  "verify.py": "4ac278d27db78cc99664fc7c53615c13f3428a14211a82e87cbfd8b687744814"
+}
