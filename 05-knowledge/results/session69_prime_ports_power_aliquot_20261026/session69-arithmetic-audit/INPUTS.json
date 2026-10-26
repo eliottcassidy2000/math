@@ -1,0 +1,77 @@
+{
+  "source_commit": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "files": [
+    {
+      "lane": "power",
+      "path": "REPORT.md",
+      "bytes": 18294,
+      "sha256": "a3c030e528df19d4ae2cdad4aa6033efcabc46039c82d12b4fde0638af00c1aa"
+    },
+    {
+      "lane": "power",
+      "path": "check.py",
+      "bytes": 6513,
+      "sha256": "b4b4d01dbe7f02a2bb4360dd0dae74b8e1860b1b78e50e2e90d33724158807f1"
+    },
+    {
+      "lane": "power",
+      "path": "MANIFEST.json",
+      "bytes": 1643,
+      "sha256": "7764d77d870a3604f09a69aed5cf54c1cde5dc1fcd2191197e990cdfd6527217"
+    },
+    {
+      "lane": "power",
+      "path": "results.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "lane": "power",
+      "path": "results.optimized.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "lane": "aliquot",
+      "path": "REPORT.md",
+      "bytes": 13451,
+      "sha256": "d2304477142ed9a5ab22b636f311815270a62516f680077d58ed9f2a79192cca"
+    },
+    {
+      "lane": "aliquot",
+      "path": "check.py",
+      "bytes": 7258,
+      "sha256": "aa157e08afc2c0a9a48d377eeff10f41bce74d5b16ffec1801086d7e602b21cb"
+    },
+    {
+      "lane": "aliquot",
+      "path": "SOURCE_PINS.json",
+      "bytes": 3344,
+      "sha256": "b52529115876c88cb0ddc3f1d67ee6a0d75dbb2b369b85b38b8933fba18938ab"
+    },
+    {
+      "lane": "aliquot",
+      "path": "SHA256SUMS",
+      "bytes": 1090,
+      "sha256": "abd4cfb70f4b9b582c7b7124c51648b343ccdc9d9e2379712c2cc4c9d28968c3"
+    },
+    {
+      "lane": "aliquot",
+      "path": "source/aliquot_fibers.py",
+      "bytes": 4419,
+      "sha256": "90e8584d4df789dcb1b35c04914d94d470d646c4bc5a50e5c7f64b36ad3ff124"
+    },
+    {
+      "lane": "aliquot",
+      "path": "normal.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    },
+    {
+      "lane": "aliquot",
+      "path": "optimized.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    }
+  ]
+}

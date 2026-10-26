@@ -1,0 +1,195 @@
+{
+  "status": "ALL CHECKS PASSED",
+  "checks": 57332,
+  "universe": {
+    "origin_and_occurrence_values": 5000,
+    "row_intersection_bases": 120,
+    "row_value_cap": 1000000,
+    "square_later_bases": 10000
+  },
+  "canonical_later_first_30": [
+    6,
+    10,
+    14,
+    18,
+    20,
+    22,
+    26,
+    28,
+    30,
+    34,
+    36,
+    38,
+    42,
+    44,
+    46,
+    50,
+    52,
+    54,
+    58,
+    60,
+    62,
+    66,
+    68,
+    70,
+    72,
+    74,
+    76,
+    78,
+    82,
+    84
+  ],
+  "canonical_later_count_upto_10000": 4859,
+  "arbitrary_later_first": 4,
+  "abc_binary_term_first_quality_above_one": {
+    "n": 72,
+    "triple": [
+      1,
+      8,
+      9
+    ],
+    "radical": 6
+  },
+  "abc_binary_term_quality_above_one_count_upto_10000": 4,
+  "first_allpower_vs_square_origin_disagreement": 27,
+  "sample_rows": [
+    {
+      "n": 1,
+      "allpower_origin": 1,
+      "square_origin": 1,
+      "allpower_occurrences_excluding_base1": 0,
+      "square_occurrences_excluding_base1": 0
+    },
+    {
+      "n": 2,
+      "allpower_origin": 1,
+      "square_origin": 1,
+      "allpower_occurrences_excluding_base1": 1,
+      "square_occurrences_excluding_base1": 1
+    },
+    {
+      "n": 3,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 1,
+      "square_occurrences_excluding_base1": 1
+    },
+    {
+      "n": 4,
+      "allpower_origin": 1,
+      "square_origin": 1,
+      "allpower_occurrences_excluding_base1": 3,
+      "square_occurrences_excluding_base1": 3
+    },
+    {
+      "n": 6,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 2,
+      "square_occurrences_excluding_base1": 2
+    },
+    {
+      "n": 8,
+      "allpower_origin": 1,
+      "square_origin": 1,
+      "allpower_occurrences_excluding_base1": 5,
+      "square_occurrences_excluding_base1": 4
+    },
+    {
+      "n": 9,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 2,
+      "square_occurrences_excluding_base1": 2
+    },
+    {
+      "n": 12,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 3,
+      "square_occurrences_excluding_base1": 3
+    },
+    {
+      "n": 15,
+      "allpower_origin": 15,
+      "square_origin": 15,
+      "allpower_occurrences_excluding_base1": 1,
+      "square_occurrences_excluding_base1": 1
+    },
+    {
+      "n": 18,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 3,
+      "square_occurrences_excluding_base1": 3
+    },
+    {
+      "n": 25,
+      "allpower_origin": 5,
+      "square_origin": 5,
+      "allpower_occurrences_excluding_base1": 2,
+      "square_occurrences_excluding_base1": 2
+    },
+    {
+      "n": 27,
+      "allpower_origin": 3,
+      "square_origin": 27,
+      "allpower_occurrences_excluding_base1": 2,
+      "square_occurrences_excluding_base1": 1
+    },
+    {
+      "n": 36,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 5,
+      "square_occurrences_excluding_base1": 5
+    },
+    {
+      "n": 49,
+      "allpower_origin": 7,
+      "square_origin": 7,
+      "allpower_occurrences_excluding_base1": 2,
+      "square_occurrences_excluding_base1": 2
+    },
+    {
+      "n": 64,
+      "allpower_origin": 1,
+      "square_origin": 1,
+      "allpower_occurrences_excluding_base1": 14,
+      "square_occurrences_excluding_base1": 10
+    },
+    {
+      "n": 81,
+      "allpower_origin": 3,
+      "square_origin": 3,
+      "allpower_occurrences_excluding_base1": 3,
+      "square_occurrences_excluding_base1": 3
+    },
+    {
+      "n": 216,
+      "allpower_origin": 3,
+      "square_origin": 27,
+      "allpower_occurrences_excluding_base1": 6,
+      "square_occurrences_excluding_base1": 4
+    }
+  ],
+  "paley7": {
+    "automorphisms": 21,
+    "hamiltonian_paths": 189,
+    "proper_nonsingleton_modules": [],
+    "Q": [
+      1,
+      2,
+      4
+    ],
+    "F8_alpha_powers": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ]
+  }
+}

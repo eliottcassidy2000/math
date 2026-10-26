@@ -1,0 +1,104 @@
+{
+  "Booker_equal_prime_supplement_cases": 1204,
+  "Booker_large_run_repeated": false,
+  "cancellation_cases": 536,
+  "checks": 3173300,
+  "complete_aliquot_fibers_sha256": "e6447137be466632f2e3d477cfde2396440e2c476f37ae30fae8bef007287dca",
+  "complete_aliquot_target_cap": 1000,
+  "density_samples_X_qualifying_even_failures": [
+    [
+      100,
+      37,
+      13
+    ],
+    [
+      1000,
+      454,
+      46
+    ],
+    [
+      10000,
+      4859,
+      141
+    ],
+    [
+      100000,
+      49550,
+      450
+    ],
+    [
+      1000000,
+      498513,
+      1487
+    ]
+  ],
+  "first_binary_quality": [
+    72,
+    1,
+    8,
+    9,
+    6
+  ],
+  "guarded_branch_core_cap": 300,
+  "guarded_branch_prime_cap": 499,
+  "guarded_branches": 27827,
+  "independent_DP_Paley_H": 189,
+  "independent_DP_order4_tournaments_H5": 24,
+  "inverse_bound_checks": 919641,
+  "origin_and_count_cap": 20000,
+  "overlap_cases": 242,
+  "row_bases": 180,
+  "row_cap": 2000000,
+  "row_pairs": 32580,
+  "small_complete_fibers": {
+    "2": [],
+    "3": [
+      4
+    ],
+    "4": [
+      9
+    ],
+    "5": [],
+    "6": [
+      6,
+      25
+    ],
+    "7": [
+      8
+    ],
+    "8": [
+      10,
+      49
+    ],
+    "9": [
+      15
+    ],
+    "10": [
+      14
+    ],
+    "11": [
+      21
+    ],
+    "12": [
+      121
+    ],
+    "13": [
+      27,
+      35
+    ],
+    "14": [
+      22,
+      169
+    ],
+    "21": [
+      18,
+      51,
+      91
+    ]
+  },
+  "source_ABC_cases": 19999,
+  "source_bound": 998001,
+  "square_later_cap": 1000000,
+  "status": "PASS",
+  "twin_pairs": 24
+}

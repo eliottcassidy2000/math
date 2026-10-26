@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "power_manifest_entries": 9,
+  "aliquot_manifest_entries": 13,
+  "original_receipts_match": true,
+  "normal_optimized_receipts_match": true,
+  "negative_control_gates_match": true,
+  "full_aliquot_target_range": [
+    2,
+    1000
+  ],
+  "independent_complete_fibers_match_inherited_algorithm": true,
+  "complete_fibers_sha256": "e6447137be466632f2e3d477cfde2396440e2c476f37ae30fae8bef007287dca",
+  "independent_active_checks": 3173300
+}
+

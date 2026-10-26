@@ -1,0 +1,302 @@
+{
+  "schema": "session69-frozen-packet-v1",
+  "source_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6405,
+      "sha256": "8820c0b2e4a4997675f6469783cbfc4728217b452e856d47af465a155d54b322"
+    },
+    {
+      "path": "session69-aliquot/ALLOWLIST.txt",
+      "bytes": 243,
+      "sha256": "00bc409dafb3a8ba816c411a3b017b536fd2ef40a7ef72d891af6dc5a44c164f"
+    },
+    {
+      "path": "session69-aliquot/NEGATIVE_CONTROL.json",
+      "bytes": 94,
+      "sha256": "cefb3f07d912d04073ad8cc5aafc709a118e2842fc5df00e4e11b7faa6300a1a"
+    },
+    {
+      "path": "session69-aliquot/README.md",
+      "bytes": 1122,
+      "sha256": "3cdfd06215306db2720af40c56cc866f5e4e0ca1720c98f896d24fb2dd4590ce"
+    },
+    {
+      "path": "session69-aliquot/REPORT.md",
+      "bytes": 13451,
+      "sha256": "d2304477142ed9a5ab22b636f311815270a62516f680077d58ed9f2a79192cca"
+    },
+    {
+      "path": "session69-aliquot/SHA256SUMS",
+      "bytes": 1090,
+      "sha256": "abd4cfb70f4b9b582c7b7124c51648b343ccdc9d9e2379712c2cc4c9d28968c3"
+    },
+    {
+      "path": "session69-aliquot/SOURCE_PINS.json",
+      "bytes": 3344,
+      "sha256": "b52529115876c88cb0ddc3f1d67ee6a0d75dbb2b369b85b38b8933fba18938ab"
+    },
+    {
+      "path": "session69-aliquot/check.py",
+      "bytes": 7258,
+      "sha256": "aa157e08afc2c0a9a48d377eeff10f41bce74d5b16ffec1801086d7e602b21cb"
+    },
+    {
+      "path": "session69-aliquot/negative-normal.stderr",
+      "bytes": 529,
+      "sha256": "341cb574d714e77b275fb0674fa4ca02858b8f91933acf7d7f710b5ea7d55480"
+    },
+    {
+      "path": "session69-aliquot/negative-normal.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-aliquot/negative-optimized.stderr",
+      "bytes": 529,
+      "sha256": "341cb574d714e77b275fb0674fa4ca02858b8f91933acf7d7f710b5ea7d55480"
+    },
+    {
+      "path": "session69-aliquot/negative-optimized.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-aliquot/normal.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    },
+    {
+      "path": "session69-aliquot/optimized.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    },
+    {
+      "path": "session69-aliquot/source/aliquot_fibers.py",
+      "bytes": 4419,
+      "sha256": "90e8584d4df789dcb1b35c04914d94d470d646c4bc5a50e5c7f64b36ad3ff124"
+    },
+    {
+      "path": "session69-arithmetic-audit/ALLOWLIST.txt",
+      "bytes": 545,
+      "sha256": "7058b7e44167ddbfd190491977c4d58644257ca595301a932cf0cfd6aa88e327"
+    },
+    {
+      "path": "session69-arithmetic-audit/INPUTS.json",
+      "bytes": 2151,
+      "sha256": "cd958ad5826f03f5e9b78b8386247ad9873a2f54a34727305044feade26ff47c"
+    },
+    {
+      "path": "session69-arithmetic-audit/NEGATIVE_CONTROLS.json",
+      "bytes": 293,
+      "sha256": "0e758dfbab0c7048c43cc7854b00ee54c9afe1b97180a3869b70a5928a0d5809"
+    },
+    {
+      "path": "session69-arithmetic-audit/README.md",
+      "bytes": 1332,
+      "sha256": "84ae6cfc4260e7b6eb14c9091f6cc02dd3833f3b86844ec3c6833bda1a2cb710"
+    },
+    {
+      "path": "session69-arithmetic-audit/REPORT.md",
+      "bytes": 15179,
+      "sha256": "a7b5521d1c982b4630bae2bc5b2de1fa24f3bf79b12393aa3ec84a87f576cef2"
+    },
+    {
+      "path": "session69-arithmetic-audit/SHA256SUMS",
+      "bytes": 1986,
+      "sha256": "702024b6407042166fdd94127c1bf7b62a1c76eb12d5e11033b6c775684d9168"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.negative.normal.stderr",
+      "bytes": 529,
+      "sha256": "341cb574d714e77b275fb0674fa4ca02858b8f91933acf7d7f710b5ea7d55480"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.negative.normal.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.negative.optimized.stderr",
+      "bytes": 529,
+      "sha256": "341cb574d714e77b275fb0674fa4ca02858b8f91933acf7d7f710b5ea7d55480"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.negative.optimized.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.normal.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    },
+    {
+      "path": "session69-arithmetic-audit/aliquot.optimized.json",
+      "bytes": 4323,
+      "sha256": "74c85296577ceb45f94200261b801ef8dd0d5a79dc6a0d6fe880969198d76996"
+    },
+    {
+      "path": "session69-arithmetic-audit/check_independent.py",
+      "bytes": 9367,
+      "sha256": "2ab2d39606e20d59082922da5f89aa89f6608c5e53416ebecca266b724307d6a"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.negative.normal.stderr",
+      "bytes": 608,
+      "sha256": "248e906e3b5d2a52edae7fe167ccb4cbacbc4e8875e9d67ccdf867dc20b406ce"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.negative.normal.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.negative.optimized.stderr",
+      "bytes": 608,
+      "sha256": "248e906e3b5d2a52edae7fe167ccb4cbacbc4e8875e9d67ccdf867dc20b406ce"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.negative.optimized.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.normal.json",
+      "bytes": 1547,
+      "sha256": "631dd2046add6a5d648fa4a1166709cb0f8dc20a01ab0b6be21589ed3d581b1d"
+    },
+    {
+      "path": "session69-arithmetic-audit/independent.optimized.json",
+      "bytes": 1547,
+      "sha256": "631dd2046add6a5d648fa4a1166709cb0f8dc20a01ab0b6be21589ed3d581b1d"
+    },
+    {
+      "path": "session69-arithmetic-audit/power.normal.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "path": "session69-arithmetic-audit/power.optimized.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "path": "session69-arithmetic-audit/verification.json",
+      "bytes": 462,
+      "sha256": "926184610eb009ec6e8a1cb8cd71af380098114975b8ac0ace8d25b31cb75840"
+    },
+    {
+      "path": "session69-arithmetic-audit/verify_inputs.py",
+      "bytes": 3419,
+      "sha256": "fb2947f40e202179245524f903d4818643a7d9c2e83c8355ddd5bc1c1f22ba8f"
+    },
+    {
+      "path": "session69-power/MANIFEST.json",
+      "bytes": 1643,
+      "sha256": "7764d77d870a3604f09a69aed5cf54c1cde5dc1fcd2191197e990cdfd6527217"
+    },
+    {
+      "path": "session69-power/REPORT.md",
+      "bytes": 18294,
+      "sha256": "a3c030e528df19d4ae2cdad4aa6033efcabc46039c82d12b4fde0638af00c1aa"
+    },
+    {
+      "path": "session69-power/check.py",
+      "bytes": 6513,
+      "sha256": "b4b4d01dbe7f02a2bb4360dd0dae74b8e1860b1b78e50e2e90d33724158807f1"
+    },
+    {
+      "path": "session69-power/inputs/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md",
+      "bytes": 17640,
+      "sha256": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95"
+    },
+    {
+      "path": "session69-power/inputs/THM-2433-operation-fibre-deletion-incidence-and-startup-scar.md",
+      "bytes": 13431,
+      "sha256": "9b0242a31d7268947932037ec9c9f5d946424155cddd4ff6b0f0f294d8c508c9"
+    },
+    {
+      "path": "session69-power/inputs/arithmetic_seams_20260921_operations.md",
+      "bytes": 13961,
+      "sha256": "8f94f7d8ce0ed31aee6c4dd825ba0d2bd0dd8748903b4fefa3b8cfe346886d41"
+    },
+    {
+      "path": "session69-power/inputs/collatz_paley_bridge_20261001.md",
+      "bytes": 25709,
+      "sha256": "73b2a14a04498ee61986aac0fa682f853b59be537e8817466d6c2ca2761b7b52"
+    },
+    {
+      "path": "session69-power/inputs/mersenne_switch_parity_f21_compression_20261006.md",
+      "bytes": 37033,
+      "sha256": "3bedbd1338c7e8c7d86e3e14078b33baa6c138be6be52df27ca6bff38b7ec4ff"
+    },
+    {
+      "path": "session69-power/results.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "path": "session69-power/results.optimized.json",
+      "bytes": 4090,
+      "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
+    },
+    {
+      "path": "verify_mutations.py",
+      "bytes": 2941,
+      "sha256": "d1700e53440a689d7566ecb4d9cb8417f23ab1f67ddf834c195956552b88c57b"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 4876,
+      "sha256": "e98edb4fa4c2a3c0b18f901a2ef9501b1231f741ca5c630f20085f0cac988895"
+    }
+  ],
+  "replays": [
+    {
+      "script": "session69-power/check.py",
+      "normal": "session69-power/results.json",
+      "optimized": "session69-power/results.optimized.json"
+    },
+    {
+      "script": "session69-aliquot/check.py",
+      "normal": "session69-aliquot/normal.json",
+      "optimized": "session69-aliquot/optimized.json"
+    },
+    {
+      "script": "session69-arithmetic-audit/check_independent.py",
+      "normal": "session69-arithmetic-audit/independent.normal.json",
+      "optimized": "session69-arithmetic-audit/independent.optimized.json"
+    },
+    {
+      "script": "session69-arithmetic-audit/verify_inputs.py",
+      "normal": "session69-arithmetic-audit/verification.json",
+      "optimized": "session69-arithmetic-audit/verification.json",
+      "args": [
+        "--power",
+        "session69-power",
+        "--aliquot",
+        "session69-aliquot"
+      ]
+    }
+  ],
+  "negative_controls": [
+    {
+      "script": "session69-aliquot/check.py",
+      "args": [
+        "--negative-control"
+      ],
+      "exit_code": 1,
+      "stderr_contains": "negative-control target6 completeness"
+    },
+    {
+      "script": "session69-arithmetic-audit/check_independent.py",
+      "args": [
+        "--negative-control"
+      ],
+      "exit_code": 1,
+      "stderr_contains": "negative-control canonical first-six"
+    }
+  ]
+}

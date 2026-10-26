@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/workspace/shared/session69-aliquot/check.py", line 138, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/shared/session69-aliquot/check.py", line 54, in main
+    demand(actual[6]==target6,'negative-control target6 completeness')
+  File "/workspace/shared/session69-aliquot/check.py", line 10, in demand
+    if not ok: raise RuntimeError(msg)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: negative-control target6 completeness

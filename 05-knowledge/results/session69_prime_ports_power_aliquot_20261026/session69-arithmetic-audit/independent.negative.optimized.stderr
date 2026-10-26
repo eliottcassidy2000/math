@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session69-arithmetic-audit/check_independent.py", line 229, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/07d5532f2fce/session69-arithmetic-audit/check_independent.py", line 123, in main
+    need(later[0]==(4 if args.negative_control else 6),'negative-control canonical first-six')
+  File "/workspace/scratch/07d5532f2fce/session69-arithmetic-audit/check_independent.py", line 18, in need
+    raise RuntimeError(label)
+RuntimeError: negative-control canonical first-six

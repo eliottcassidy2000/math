@@ -1,0 +1,73 @@
+{
+  "pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "source_checkout_status": "## codex/session68-classification",
+  "copied_source": "source/aliquot_fibers.py",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "materialized": true,
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41"
+    },
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "97aeb898b05cc2f2ff7f220ea96059266b749b27c5a339a300fdb166f89b0bd7",
+      "materialized": true,
+      "git_blob": "daa6f73fe8e34682d7be7b28c6e1cfbb2823f46b"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS-ABC-IUT.md",
+      "sha256": "0703a4e87dca6b49270ad4d122d20da2f54e29734743f84a5655a6292e21ba93",
+      "materialized": false,
+      "git_blob": "648d38d257e3e0a0d9c14092f7b0fcb008fb2401"
+    },
+    {
+      "path": "01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md",
+      "sha256": "b1ee8286eb75a65b15a0cecb1a8ef6631a9820dee5482bce2628b273c87d5aaf",
+      "materialized": true,
+      "git_blob": "f4fe5bfcf76bd936c2ffb47d03407e78aad1042c"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "materialized": true,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "materialized": true,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8"
+    },
+    {
+      "path": "01-canon/theorems/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md",
+      "sha256": "f40f5b4300143a965e174824bad20e8d5a0059d18f6f5a1a1b5d259f0d9337da",
+      "materialized": true,
+      "git_blob": "3dfc47aabd5cdfd6d00368dc84301087a97071d4"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md",
+      "sha256": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b",
+      "materialized": false,
+      "git_blob": "0a17ac7d2208f237b3bc15021dc10d28b0703f5f"
+    },
+    {
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-aliquot/REPORT.md",
+      "sha256": "6c819ddbe023f67ccb32f2bd8791c4e3db16c3dab817785c21bddb6028c3b175",
+      "materialized": true,
+      "git_blob": "178197e219423462c49657e682a01bfb83340644"
+    },
+    {
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-aliquot/scripts/aliquot_fibers.py",
+      "sha256": "90e8584d4df789dcb1b35c04914d94d470d646c4bc5a50e5c7f64b36ad3ff124",
+      "materialized": true,
+      "git_blob": "0a156596be70df4f494e25079ff84dfd220997dd"
+    },
+    {
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-audit-tc-scope/REPORT.md",
+      "sha256": "84f3585446080a5fee68de59702b6777ddfa352951b340422859c52b0a53d146",
+      "materialized": true,
+      "git_blob": "20b9be1bf9ca84e65d69b9fc5a9d4127db5c8c8e"
+    }
+  ]
+}
