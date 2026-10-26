@@ -1,8 +1,8 @@
 ---
 id: THM-4802
-title: "RESERVED by opus-2026-10-26-S58 (Fermat primes / Pepin reworked for Collatz / groups of five)"
-status: RESERVED
+title: "RELEASED by opus-2026-10-26-S58 (reserved for this session; not used)"
+status: RELEASED
 session: opus-2026-10-26-S58
 ---
 
-Reserved ID; content to follow in this session.
+Reserved at session start and released: the session's proved content is THM-4800 and THM-4801; the no-go facts of the S58 note (section 1.2) are classical and stay in the note. The ID may be reused.

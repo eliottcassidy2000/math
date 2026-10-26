@@ -1,0 +1,28 @@
+{
+ "fermat_type_m1201_1500": {
+  "observed": 677,
+  "E_corrected": 671.981490897216,
+  "sd": 25.611630166837116,
+  "window": [
+   607.9524154801231,
+   736.0105663143088
+  ],
+  "E_uncorrected": 697.269374460638,
+  "survivors": 28421,
+  "algebraic_removed": 1071,
+  "pass": true
+ },
+ "mersenne_type_p401_520": {
+  "observed": 323,
+  "E_corrected": 324.05558136932194,
+  "sd": 17.546423305225566,
+  "window": [
+   280.18952310625804,
+   367.92163963238585
+  ],
+  "E_uncorrected": 348.0692160469871,
+  "survivors": 6644,
+  "algebraic_removed": 497,
+  "pass": true
+ }
+}
