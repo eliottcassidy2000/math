@@ -1,0 +1,129 @@
+{
+  "Steiner_designs": 30,
+  "arbitrary_inertia_cases": 464,
+  "complementary_pairs": 120,
+  "conductor_component_checks": 5376,
+  "field_cases": [
+    {
+      "characteristic": 3,
+      "free_kernels": 12,
+      "free_pairs": 18,
+      "moments": [
+        {
+          "absolute": "73/4",
+          "root": 2,
+          "square": "121"
+        },
+        {
+          "absolute": "73/4",
+          "root": 4,
+          "square": "121"
+        }
+      ],
+      "q": 3,
+      "stratum_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 6,
+        "3": 5
+      }
+    },
+    {
+      "characteristic": 5,
+      "free_kernels": 16,
+      "free_pairs": 32,
+      "moments": [
+        {
+          "absolute": "129/4",
+          "root": 2,
+          "square": "309"
+        },
+        {
+          "absolute": "129/4",
+          "root": 4,
+          "square": "309"
+        }
+      ],
+      "q": 5,
+      "stratum_counts": {
+        "0": 7,
+        "1": 9,
+        "2": 12,
+        "3": 3
+      }
+    },
+    {
+      "characteristic": 7,
+      "free_kernels": 16,
+      "free_pairs": 32,
+      "moments": [
+        {
+          "absolute": "185/4",
+          "root": 2,
+          "square": "533"
+        },
+        {
+          "absolute": "185/4",
+          "root": 4,
+          "square": "533"
+        }
+      ],
+      "q": 7,
+      "stratum_counts": {
+        "0": 19,
+        "1": 23,
+        "2": 12,
+        "3": 3
+      }
+    },
+    {
+      "characteristic": 3,
+      "free_kernels": 12,
+      "free_pairs": 18,
+      "moments": [
+        {
+          "absolute": "241/4",
+          "root": 2,
+          "square": "793"
+        },
+        {
+          "absolute": "241/4",
+          "root": 4,
+          "square": "793"
+        }
+      ],
+      "q": 9,
+      "stratum_counts": {
+        "0": 37,
+        "1": 43,
+        "2": 6,
+        "3": 5
+      }
+    },
+    {
+      "characteristic": 5,
+      "free_kernels": 16,
+      "free_pairs": 32,
+      "moments": [
+        {
+          "absolute": "689/4",
+          "root": 2,
+          "square": "2549"
+        },
+        {
+          "absolute": "689/4",
+          "root": 4,
+          "square": "2549"
+        }
+      ],
+      "q": 25,
+      "stratum_counts": {
+        "0": 487,
+        "1": 149,
+        "2": 12,
+        "3": 3
+      }
+    }
+  ],
+  "status": "FINITE-EXACT independent audit"
+}

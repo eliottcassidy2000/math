@@ -1,0 +1,37 @@
+{
+  "central_point_checks": 161280,
+  "claims_not_made": [
+    "A bounded search decides arbitrary conic solubility",
+    "The central divisor determines rational resolution lifts",
+    "The finite controls prove the unbounded trichotomy"
+  ],
+  "finite_twist_histogram": {
+    "all_pair_classes_square_not_decided_here": 64,
+    "eight": 144,
+    "zero": 3888
+  },
+  "gates": 184940,
+  "integer_norm_checks": 500,
+  "node_equation_checks": 64,
+  "parametrization_checks": 312,
+  "primitive_delta3_solutions_mod9": [],
+  "rational_norm_checks": 1250,
+  "status": "FINITE-EXACT",
+  "universe": {
+    "all_square_pair_twists_deliberately_not_decided_by_bounded_search": true,
+    "central_base_height": 5,
+    "central_projective_base_points": 40,
+    "integer_norm_range": [
+      1,
+      500
+    ],
+    "outer_twists": 4096,
+    "rational_norm_grid": "m=1..50,n=1..25",
+    "twist_values": [
+      -2,
+      -1,
+      1,
+      2
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "exhaustive_successful_lifts": 21198,
+  "explicit_controls": {
+    "affine_hostile": {
+      "collapsed_points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "common_image": [
+        0,
+        0
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "m5_one_auxiliary_lift": [
+      [
+        2,
+        5
+      ],
+      [
+        5,
+        13
+      ]
+    ],
+    "m6_exponent5_lift": [
+      [
+        -1
+      ]
+    ],
+    "m7_one_auxiliary_lift": [
+      [
+        2,
+        7
+      ],
+      [
+        7,
+        25
+      ]
+    ]
+  },
+  "rank2": [
+    {
+      "determinant_fibres": {
+        "1": 6
+      },
+      "invertible": 6,
+      "liftable": 6,
+      "m": 2
+    },
+    {
+      "determinant_fibres": {
+        "1": 24,
+        "2": 24
+      },
+      "invertible": 48,
+      "liftable": 48,
+      "m": 3
+    },
+    {
+      "determinant_fibres": {
+        "1": 48,
+        "3": 48
+      },
+      "invertible": 96,
+      "liftable": 96,
+      "m": 4
+    },
+    {
+      "determinant_fibres": {
+        "1": 120,
+        "2": 120,
+        "3": 120,
+        "4": 120
+      },
+      "invertible": 480,
+      "liftable": 240,
+      "m": 5
+    },
+    {
+      "determinant_fibres": {
+        "1": 144,
+        "5": 144
+      },
+      "invertible": 288,
+      "liftable": 288,
+      "m": 6
+    },
+    {
+      "determinant_fibres": {
+        "1": 336,
+        "2": 336,
+        "3": 336,
+        "4": 336,
+        "5": 336,
+        "6": 336
+      },
+      "invertible": 2016,
+      "liftable": 672,
+      "m": 7
+    },
+    {
+      "determinant_fibres": {
+        "1": 384,
+        "3": 384,
+        "5": 384,
+        "7": 384
+      },
+      "invertible": 1536,
+      "liftable": 768,
+      "m": 8
+    },
+    {
+      "determinant_fibres": {
+        "1": 648,
+        "2": 648,
+        "4": 648,
+        "5": 648,
+        "7": 648,
+        "8": 648
+      },
+      "invertible": 3888,
+      "liftable": 1296,
+      "m": 9
+    },
+    {
+      "determinant_fibres": {
+        "1": 720,
+        "3": 720,
+        "7": 720,
+        "9": 720
+      },
+      "invertible": 2880,
+      "liftable": 1440,
+      "m": 10
+    },
+    {
+      "determinant_fibres": {
+        "1": 1320,
+        "2": 1320,
+        "3": 1320,
+        "4": 1320,
+        "5": 1320,
+        "6": 1320,
+        "7": 1320,
+        "8": 1320,
+        "9": 1320,
+        "10": 1320
+      },
+      "invertible": 13200,
+      "liftable": 2640,
+      "m": 11
+    },
+    {
+      "determinant_fibres": {
+        "1": 1152,
+        "5": 1152,
+        "7": 1152,
+        "11": 1152
+      },
+      "invertible": 4608,
+      "liftable": 2304,
+      "m": 12
+    }
+  ],
+  "rank3_exhaustive": [
+    {
+      "invertible": 168,
+      "lifted": 168,
+      "m": 2
+    },
+    {
+      "invertible": 11232,
+      "lifted": 11232,
+      "m": 3
+    }
+  ],
+  "seeded_constructive_controls": {
+    "invertible_inputs": 1392,
+    "moduli": [
+      2,
+      30
+    ],
+    "one_character_repairs": 905,
+    "ranks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "seed": 261026
+  },
+  "status": "FINITE-EXACT controls; all-rank theorem has a separate proof"
+}

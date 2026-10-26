@@ -5,6 +5,14 @@ statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
 
+## 2026-10-26 — an open-central dichotomy misses eight rational nodes
+
+- **Corrected proved claim:** [THM-4773, fixed-twist boundary lifts](theorems/THM-4773-fixed-twist-rational-lifts-on-the-hourglass-boundary-central-conic-outer-genus-five.md) and its source promoted the open central line's none-or-infinite statement to the complete central divisor.
+- **Minimal witness:** `d=(1,1,1,1,-1,1,-1)` has exactly eight rational central points `[0:0:0:1:+/-1:+/-1:+/-1]`, all over `(0:0:1)`, while its open central part has none. The source already listed this soluble triple but its summary omitted the closed stratum.
+- **First failed implication:** a rational point of the singular divisor need not lift to the normalization of one of its geometric conic components. Conjugate branches can meet at a rational node.
+- **Strongest survivor and repair:** the open-central criterion is unchanged; the complete central divisor has zero, eight or infinitely many points over every infinite field of characteristic not two. Two soluble triple ports force a soluble conic and infinitely many open points. [Proof and independent audits](../05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md).
+- **Missing coordinate and new question:** the transverse coefficient controls the tangent conic even when the whole central scheme is fixed. For `d=(2/delta,1,1,1,-1,1,-1)` the same eight nodes resolve to `a^2+b^2=delta*c^2`; delta2 has rational lifts and delta3 has none. Preserve the model (normal surface, divisor normalization, or resolution) and its second-order equation.
+
 ## 2026-10-26 — Session66: retain literal cycles, endpoint conventions, and the exact rank branch
 
 - **Cycle/support failure:** [THM-209](theorems/THM-209-independence-polynomial.md)

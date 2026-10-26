@@ -1,0 +1,20 @@
+{
+  "base_commit": "983768efde84",
+  "files": {
+    "01-canon/theorems/THM-4773-fixed-twist-rational-lifts-on-the-hourglass-boundary-central-conic-outer-genus-five.md": "22858e55f48fab11e2b620aff5ba084146ab3c07f56b091c7a7ecfdd3e4184f5",
+    "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/twists/FIXED_TWIST_LIFTS.md": "41303fe0ca0b2e2875a443dccf03422f3bfcd6d358eb0e389d085651e5f77dd8",
+    "05-knowledge/results/normseven_boundary_20261025/BOUNDARY.md": "1ee9524bbe8938fcf38ab11b3df86e7799ca7a34e70491ef072da1d6803d7eab",
+    "05-knowledge/results/normseven_boundary_20261025/CYCLIC.md": "34864ef91ab80dd7b41e3c9e804b86cd6cd7310a251591ee40eb534ff5d8faa1",
+    "05-knowledge/results/normseven_boundary_20261025/STACK_GLUE.md": "5e7075ba6326aab35ab2fcab60b3b4313e4bc1fd0aa2d03f11a692e9ee2e2d92",
+    "05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md": "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb",
+    "05-knowledge/results/normseven_f1_20261025/TWIST_AVERAGE.md": "58171d88a66f9016feae0a1b97f483d469901643090a1ba8840811a506351262",
+    "05-knowledge/results/session60_six_seven_geometry_20261025/outer-picard/EXACT_RANK_COROLLARY.md": "79a990988c572f9a17ad460d0d844ac3fad7c93e213b1d6896c104d930973d53",
+    "05-knowledge/results/session60_six_seven_geometry_20261025/picard-upper/INDEPENDENT_UPPER_BOUND.md": "1a95bf5984509e9f7a1c0f5b6801ee219e0482672c953aaac645782d2870ed6c",
+    "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/RESULT.md": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+    "05-knowledge/results/six_seven_gale_cube_20261025/BUDGET_AND_GALE.md": "8e6d6bf9200abb5d79bb7aa74e7a54a7db57247db2af154e182843dc0eeb69b2",
+    "05-knowledge/results/six_seven_gale_cube_20261025/GENUS_FIVE_ELLIPTIC_FACTORS.md": "6bdfc5b298da7ee2a115a6073aff295ab45f7cfcbc59052c28c06d774369c879",
+    "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267",
+    "05-knowledge/results/twist_conductor_reverse_20261025/FIXED_TWISTS.md": "30633a06c26226944997dfc8bd1a28082dd0acc2f6ce693dab02c5da6c40f32a"
+  },
+  "note": "THM-4773 and its source are pinned after the explicit correction; others are inherited current sources."
+}

@@ -1,13 +1,13 @@
 ---
 id: THM-4773
-title: "Fixed-twist rational lifts on the hourglass boundary: a base point y of P^2 lifts to the twisted seven-root surface X_d over a field k (char k != 2) iff the nonzero values d_i L_i(y) share one squareclass, with 2^(6-r) lifts; over an infinite field, open central-line E = 0 lifts exist iff the three parallel-pair port characters are trivial on the twist (-d_1 d_2, -d_3 d_4, -d_5 d_6 squares) and the conic w^2 = d_1 d_5 d_3^2 s^2 + d_3 d_5 t^2 has a k-point, which over Q is decided by Hilbert symbols; the Pythagorean twist (1,1,-1,1,-1,1,-1) makes this conic the unit circle and gives the rational point (0:3:3:4:4:5:5) from (3,4,5); on each outer line the lift locus is a twisted genus-five curve pair, hence finite over a number field; over Q the untwisted surface has no boundary lifts. Over number fields the dichotomy is: central line none or infinitely many, outer lines finitely many."
+title: "Fixed-twist rational lifts on the hourglass boundary: a base point y of P^2 lifts to the twisted seven-root surface X_d over a field k (char k != 2) iff the nonzero values d_i L_i(y) share one squareclass, with 2^(6-r) lifts; over an infinite field, open central-line E = 0 lifts exist iff the three parallel-pair port characters are trivial on the twist (-d_1 d_2, -d_3 d_4, -d_5 d_6 squares) and the conic w^2 = d_1 d_5 d_3^2 s^2 + d_3 d_5 t^2 has a k-point, which over Q is decided by Hilbert symbols; the Pythagorean twist (1,1,-1,1,-1,1,-1) makes this conic the unit circle and gives the rational point (0:3:3:4:4:5:5) from (3,4,5); on each outer line the lift locus is a twisted genus-five curve pair, hence finite over a number field; over Q the untwisted surface has no boundary lifts. Over number fields the open central line has none or infinitely many lifts; the complete central divisor on the finite normal surface has zero, exactly eight, or infinitely many rational points (corrected 2026-10-26). Outer lines have finitely many."
 status: >
   PROVED (klein, 2026-10-25) for the pointwise criterion and the central-line theorem over infinite fields;
   finite fields require an actual nondegenerate conic point, as the F3 correction demonstrates; CITED for the genus-five
   components (six_seven_gale_cube_20261025 GENUS_FIVE_ELLIPTIC_FACTORS / BRANCH_CUBE_AND_DOUBLE_COVER; Session60)
   and Faltings' theorem. FINITE-EXACT: Hilbert-symbol decision agrees with brute-force existence (height <= 25) on
   300 random twists and eight displayed ones; untwisted surface has no lifts on E = 0 up to height 60; Pythagorean
-  twist lifts exactly 4 of 6521 base points of height <= 12. Not independently audited.
+  twist lifts exactly 4 of 6521 base points of height <= 12. The complete-central trichotomy correction was independently audited on 2026-10-26; the original finite Hilbert-symbol census is not thereby independently audited.
 session: klein-2026-10-25 (codex/session-tournament-twist-unify)
 source: 05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/twists/FIXED_TWIST_LIFTS.md
 scripts:
@@ -44,6 +44,15 @@ Forms `L = (E, E+x, E-x, E+z, E-z, E+x+z, E-x-z)`, twist `d`, surface `X_d : s_i
 4. **Outer lines and points over number fields.** The lift locus over an outer line is the `d`-twist of the two
    genus-five branch components (CITED), finite over number fields by Faltings (CITED); the fifteen
    special points are finite squareclass tests (`(0:0:1)` lifts iff `d_3 ~ -d_4 ~ d_5 ~ -d_6`).
+
+5. **Complete central divisor (corrected 2026-10-26).** Over an infinite field of characteristic
+   different from two it has zero, eight, or infinitely many rational points. The finite-eight
+   case occurs exactly when one of `-d2/d1,-d4/d3,-d6/d5` is nonsquare and the opposite triple
+   passes its remaining three squareclass tests. For `d=(1,1,1,1,-1,1,-1)` the eight points are
+   `[0:0:0:1:+/-1:+/-1:+/-1]`; the open central part is empty. Two soluble triple ports force
+   all three pair classes square and a rational conic point, hence infinitely many open lifts.
+   See [the full proof and resolution distinction](../../05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md).
+   This repairs the earlier title/source's false complete-central none-or-infinite claim.
 
 ## Mechanism and boundary
 

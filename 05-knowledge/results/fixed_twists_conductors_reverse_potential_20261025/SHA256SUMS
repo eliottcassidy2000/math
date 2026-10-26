@@ -1,5 +1,5 @@
 a3858945e5c2a716d8d2b5b7f47b900d24efd6b3b5da7830b384ec8cdaf72bc1  ./CONCEPT_BOARD.md
-bf32ee27047958438f298a6d395797ba2a3b85a329f4213182d980dadb3e30c9  ./README.md
+244a8cd0dcf658fc27deb0eac0d51f0dd97939ce6f9e227adbe753eb58e0916e  ./README.md
 15d7fd036d877335b2e0134846142018cc1b153367b0e5cb6476809ba681f0da  ./antihydra/ANTIHYDRA.md
 c598b3b4eff2eeedc3bdbe2c630f5023c3cedc0ebe698b4e052da615362e0cee  ./antihydra/antihydra_2e6.json
 67fc0e4005dfe23010b47c3827264b040ff13178e91a43c08e7c9d4f06a064fb  ./antihydra/antihydra_sim.py
@@ -24,7 +24,7 @@ f97d6a3cfca74a4b524e03ade66d186d16be351543484cb466b56ae148995c28  ./lca/LCA_AND_
 ad60162ed42cf0c1ed2c23aa97d2b53f18e5e64dc9512b9cfd1e7ab50abad528  ./lca/check_lca_merges.py
 2f5864d591ee8cd04a86cbaace4d4e872256c96472f60cf973a79cbe3e416f71  ./lca/lca-normal.json
 2f5864d591ee8cd04a86cbaace4d4e872256c96472f60cf973a79cbe3e416f71  ./lca/lca-optimized.json
-30db7d974d88bc36217317ce5f9d8bc1ffe3a94644f8a0d9d28c21c6f8ad055e  ./twists/FIXED_TWIST_LIFTS.md
+41303fe0ca0b2e2875a443dccf03422f3bfcd6d358eb0e389d085651e5f77dd8  ./twists/FIXED_TWIST_LIFTS.md
 f50349e882db2dc702d4e7c054a147c183f62fa17affc16e56dac74ff3534898  ./twists/check_boundary_lifts.py
 7b1b939e81383c0c0f4067e05159dfac0365f18322d2d11d9294811e9b711344  ./twists/check_central_conic.py
 bea729ab26103ea768c73e567c9dae40f3b27e092cafcc3a06e3a3d591c07228  ./twists/conic-normal.txt

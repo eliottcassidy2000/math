@@ -64,9 +64,16 @@ finitely many points over a number field. The twelve double points and three tri
 finite squareclass tests: e.g. `(0:0:1)` lifts iff `d_3 ~ -d_4 ~ d_5 ~ -d_6`, so the twist
 `(1,1,1,1,-1,1,-1)` lifts it while `d = 1` does not.
 
-**Dichotomy.** For a fixed twist over a number field, the central line carries either no rational
-lift or infinitely many (a conic), each outer line finitely many (genus five), and the fifteen
-special points finitely many; the untwisted surface has none at all. Over `Q` with height ≤ 12 the
+**Corrected trichotomy (2026-10-26).** For a fixed twist over a number field, the complete central
+divisor on the finite normal root surface has zero, exactly eight, or infinitely many rational
+points. Only the *open* central line has the none-or-infinite dichotomy. The displayed twist
+`(1,1,1,1,-1,1,-1)` is the finite-eight witness: only `(0:0:1)` lifts, giving
+`[0:0:0:1:±1:±1:±1]`. If two central triple ports lift, all three pair-port classes
+are squares and their rational conic point forces infinitely many open-central lifts; hence
+a nonempty finite case has exactly one triple port, with eight points. See the
+[complete classification and resolution distinction](../../normseven_arithmetic_f1_20261026/boundary/RESULT.md).
+Each outer line has finitely many lifts (genus five), and the fifteen special points have finite
+squareclass tests; over Q the untwisted surface has no boundary lifts. Over `Q` with height ≤ 12 the
 Pythagorean twist lifts exactly 4 of 6521 points of `P^2`, all on the boundary (receipt
 `lifts-normal.txt`).
 
