@@ -9,8 +9,15 @@ status: >
   the ingredients THM-4601 (valuation-two counts), THM-4556 (Mersenne line and its equal-time merge), THM-4581
   (pair-chain coalescence) and the 4x+1 rule are inherited. Not independently audited. Completeness of the five Fermat
   primes is OPEN and not addressed by this theorem.
+  EXTENDED 2026-10-26 (klein, Theorem M* in MERGE_TREE.md): for L = 1 mod 4 the pair (T(y), x) = (3x-1, x) is THM-4581's
+  chain with state (0,-1) at Terras time 2L+1 (the orbits are the consecutive integers 3^(L+1)+1, 3^(L+1)+2); the merge
+  index d(L) satisfies d(L) >= L+5 (PROVED, three odd steps never suffice), d(L) = L+5 if L = 81 mod 256 (PROVED; only-if
+  FINITE-EXACT to depth 20 and L <= 1500), the depth is a 2-adically locally constant function of L (absorption within n'
+  post-prefix Terras steps is decided by L mod 2^(n'-2)), the first rows of the tree are listed, and no uniform bound
+  d(L) <= L+c exists on the progression (89.5% of classes unabsorbed at depth 20; THM-4581's rate beyond). Receipts
+  tree-normal.json, depth-normal.json, chain-normal.json; direct check 0 mismatches on 375 values.
 session: klein-2026-10-25 (codex/session-tournament-twist-unify)
-source: 05-knowledge/results/fermat_five_pepin_collatz_20261025/PEPIN_COLLATZ.md
+source: 05-knowledge/results/fermat_five_pepin_collatz_20261025/PEPIN_COLLATZ.md (Theorems F, M, P) and MERGE_TREE.md (Theorem M*)
 scripts:
   - 05-knowledge/results/fermat_five_pepin_collatz_20261025/check_fermat_line.py (+ fermat-normal.json / fermat-optimized.json)
   - 05-knowledge/results/fermat_five_pepin_collatz_20261025/check_merge_points.py (+ merge-normal.json / merge-optimized.json)
@@ -47,6 +54,13 @@ Let `S(x) = (3x+1)/2^v(x)` on odd `x`, `v(x) = v_2(3x+1)`.
    `S(a) = 4 S(b) + 1` and `S^2(a) = S^2(b)`: first coincidence at odd index exactly `L + 2`. For
    `L ≡ 3 (mod 4)` the `4x+1` relation appears one step later (index `L + 3`); for `L ≡ 1 (mod 4)` not
    within `L + 3` steps.
+3'. **The case `L ≡ 1 (mod 4)` (Theorem M*, added 2026-10-26).** `T(y) = 3x - 1`, so `(T(y), x)` is a
+   THM-4581 pair with chain state `(1,-1)`, forced to `(0,-1)` at Terras time `2L+1` where the orbits are
+   `3^(L+1)+1` and `3^(L+1)+2`. Lemma D (parity and size of the first three odd steps) gives
+   `d(L) >= L+5`; the chain enumeration over `(L+1) mod 2^(n'-2)` decides absorption within `n'`
+   post-prefix Terras steps for every `L` in a class: `d = L+5` iff `L ≡ 81 (mod 256)` (only-if
+   certified to depth 20), `d = L+6` on `145, 445 (mod 512)`, `305 (mod 1024)`, `1793 (mod 2048)`, and
+   so on; the tree does not terminate and the depth has no closed form.
 4. **Pépin, affine form.** For `n >= 1`, `F_n` is prime iff `x -> 3x+1` on `Z/F_n` has cycle type
    `(1, 2^(2^n))`: it is conjugate to `x -> 3x` by `x -> x + 1/2`, and `3` generates `(Z/F_n)^x` iff
    `3^((F_n-1)/2) ≡ -1`.
