@@ -1,0 +1,1291 @@
+{
+  "incoming_arithmetic_base": "52fde1af0d",
+  "inherited_discovery_records": [
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-163-H-walsh-hadamard-structure.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (n=3 through n=6, exhaustive)"
+      ],
+      "title": "THM-163: H Walsh-Hadamard Fourier Structure"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "01-canon/theorems/THM-164-fourier-cycle-bridge.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (n=5 exhaustive, n=6 partial, n=7 regular)"
+      ],
+      "title": "THM-164: Fourier-Cycle Bridge"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "01-canon/theorems/THM-167-quadratic-H-formula.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (exhaustive, 2640 regular tournaments)"
+      ],
+      "title": "THM-167: Quadratic H Formula for Regular n=7"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-168-lambda-completeness.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (exhaustive n=5,6; n=7 regular; n=7 general pending)"
+      ],
+      "title": "THM-168: Lambda Pair-Coverage Completeness"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-169-vitali-atom-characterization.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED finite evidence (reported exhaustive n<=6 and sampled n=7);"
+      ],
+      "title": "THM-169: Complete Characterization of the Vitali Atom (4-Reversal H-Change)"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-170-vitali-two-channel-formula.md",
+      "provenance_as_written": [
+        "**Author:** kind-pasteur-2026-03-13-S61",
+        "**Date:** 2026-03-13"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** CONFIRMED (166/166 verified, 0 failures)"
+      ],
+      "title": "THM-170: Vitali Atom Two-Channel Formula at n=8"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-171-c3-disjointness-from-lambda.md",
+      "provenance_as_written": [
+        "**Date:** 2026-03-13",
+        "**Author:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED"
+      ],
+      "title": "THM-171: c3 Disjointness Preservation from Lambda Graph"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-172-c5-lambda-determined.md",
+      "provenance_as_written": [
+        "**Date:** 2026-03-13",
+        "**Author:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (computational, n=5 exhaustive, n=6 exhaustive, n=7 50k samples, n=8 confirmed via 67 Vitali pairs)"
+      ],
+      "title": "THM-172: Total Directed 5-Cycle Count is Lambda-Determined"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-173-c5-per-vertex-set-formula.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [
+        "**Status:** VERIFIED (n=5 exhaustive, n=6 500/500, n=7 200/200)"
+      ],
+      "title": "THM-173: Per-Vertex-Set Formula for c5_dir"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "01-canon/theorems/THM-398-lrc-reduction-to-Cprime-and-dominance-dodge.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S572"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED scoped primitive-C′ reduction and dodge criteria; unrestricted C′ REFUTED; primitive C′ OPEN"
+      ],
+      "title": "THM-398 — LRC reduces to C′, and the dominance-dodge lemma"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "01-canon/theorems/THM-401-pair-sum-sieve-modulus-is-2n-minus-1.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S590"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED (the modulus identity, parts i–iii); the transversal characterization is VERIFIED-with-exceptions"
+      ],
+      "title": "THM-401 — the pair-sum sieve's modulus is `C = 2n−1`"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "01-canon/theorems/THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md",
+      "provenance_as_written": [
+        "**Source:** opus-2026-06-03-S599c (remote-control). Makes rigorous the master-object frame of"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED (M1, M3 rigorous; M2 a rigorous corollary). Verified exactly at n=4,5."
+      ],
+      "title": "THM-406 — The covering-depth master object: factorial moments are overlap volumes, and the \"five principles of fundamentality\" are the spectral theorem"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "01-canon/theorems/THM-436-solvability-threshold-is-the-overlapping-triangle-threshold-C5.md",
+      "provenance_as_written": [
+        "**Source:** opus-2026-06-07-S703, from the user's derived-series picture of the roots↔coefficients"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED (group theory — classical, recomputed exactly) + PROVED (combinatorial 5-point"
+      ],
+      "title": "THM-436 — The quintic solvability threshold IS the two-overlapping-cyclic-triangles threshold, realized as the round tournament C₅; A_n-perfectness mirrors the LRC Vitali wall (no finite commutator/Bonferroni tower)"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "01-canon/theorems/THM-439-the-witness-tower-is-the-cyclotomic-tower-depth-is-the-wall.md",
+      "provenance_as_written": [
+        "**Source:** opus-2026-06-07-S704 (developing the radical tower ↔ witness tower, user request). Builds"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED (rationality ⟹ witness tower ⊆ ℚ^ab; the depth definition) + VERIFIED (depth"
+      ],
+      "title": "THM-439 — The LRC witness tower is the cyclotomic (abelian) tower automatically; its substance is the cyclotomic DEPTH q*(S), and the Abel–Ruffini analog is the Bonferroni tower, not the field tower"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-441-convolution-correlation-adjoint-duality-unifies-the-repo.md",
+      "provenance_as_written": [
+        "**Source:** opus-2026-06-07-S706, from the user's seed \"for complex-valued functions the"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED (the operator identities — classical, recomputed exactly) + VERIFIED (the repo"
+      ],
+      "title": "THM-441 — Cross-correlation is the adjoint of convolution; this duality unifies the repo's clock/shell faces, the tournament converse, and additive energy"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "01-canon/theorems/THM-496-lattice-perfection-gate-resonant-crossover.md",
+      "provenance_as_written": [
+        "date: 2026-06-13",
+        "session: monad-explorer-2026-06-13 (deep-research; OPEN-Q-057 frontier)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED (bounds) + VERIFIED exact-integer (full connected-patch enumeration"
+      ],
+      "title": "THM-496: the lattice-perfection gate for the resonant-product crossover"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "01-canon/theorems/THM-504-lrc-singular-series-T3-conditional-convergence.md",
+      "provenance_as_written": [
+        "source: kind-pasteur-2026-06-14-S2"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED-in-scope — the half-period positivity lemma (A) is proved; the conditional-convergence structure (B) is proved heuristically + verified numerically; the ruling-out of within-level √-cancellation (C) is established computationally with mechanism. The full inf L>0 (C'(14)) remains open."
+      ],
+      "title": "THM-504 — the |T|=3 conditional-convergence barrier"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "01-canon/theorems/THM-601-cap-universe-nest-lemma.md",
+      "provenance_as_written": [
+        "source: klein-2026-07-01-S92 (canonizing HYP-3837/HYP-3838, klein-S91)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED (complete exact-rational verification over the finite universe: all 8100 subsets, zero violations; mechanism lemma — the mediant criterion — proved for the boundary and verified on all 79 violations outside the universe)"
+      ],
+      "title": "THM-601: the Cap-Universe Nest Lemma"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "01-canon/theorems/THM-657-covering-reformulation-diameterfree-k11-13.md",
+      "provenance_as_written": [
+        "source: mac-mini-2026-07-07-S57 (HYP-5297)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: PROVED (the reformulation and the (7/6)E[W] bound are elementary; below). The diameter-free REDUCTION is exact-arithmetic modulo the single extremal lemma \"consecutive minimizes mu_{1/7}\" (THM-530, verified k>=8 not proved; k=13 re-verified 0/120 random below the block this session). Machine-verified: W = 1 - coverage = sum(g-1/7)_+ identity (Wmax = 6/7 exact); mu(block) = 0.6263/0.5699/0.4425 at k=11/12/13 (= 1.9x/2.9x/7.8x the bars 0.3312/0.1993/0.0565); Stevens iid baseline mu_iid = 0.9984/0.9951/0.9883."
+      ],
+      "title": "THM-657 — the covering reformulation (diameter-free k=11,12,13)"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/algorithmic_collatz_measure_20261005.md",
+      "provenance_as_written": [
+        "source atom and a finite verification transcript together with the code.",
+        "source and [HYP-2104](../hypotheses/HYP-2104-lrc-vitali-handoff.md); the"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Algorithmic information and arithmetic mass in Collatz certificates"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_clock_holonomy_20261007.md",
+      "provenance_as_written": [
+        "source because T has no positive fixed point. A zero-charge loop must",
+        "source-seam, zero-charge, signed-domain, or unsupported-period hostiles."
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED elementary certificate rules, with FINITE-EXACT controls."
+      ],
+      "title": "A common-future proof keeps its clock barrier; a charged loop can certify a period"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_effective_prefix_mass_20261005.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Atomic prefix mass, multifractal addresses, and discounted Collatz receipts"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_fundamental_integration_20261009.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "New threads: keep the source, the incidence, and the named terminal"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_information_dimension_bridge_20261005.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [
+        "**Status:** **PROVED** below: the exact-cylinder/coefficient identity, the"
+      ],
+      "title": "Information and dimension for the Syracuse law: exact bounds and numerical spectrum evidence"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_spectrum_equality_and_stitched_sheets_20261005.md",
+      "provenance_as_written": [
+        "**Session:** opus, `pascal-lyapunov-20261005` (fifth task), 2026-10-05.",
+        "Author-audited only; audit OWED. Collatz OPEN.**"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status: VERIFIED (finite numerical) for the partition functions (float64, valuations to `44`; the Syracuse law to"
+      ],
+      "title": "Equality in the Syracuse spectrum bound at levels 17-20 and the stitched sheets (2026-10-05): the deficits `bound - slope` fall at every level through `20` with no plateau, like `n^-1.5` to `n^-2` for `2 < q <= 4` (equality, bounded prefactor) and like `n^-0.8` to `n^-1` near `q = 2` and for `q >= 6` (equality with a slowly growing prefactor; a limit above `0.007` excluded); the centre of every odd multiplication table is `+-4^-1` and `3x-1`, `3x+1` swap the two values (the rational 2-cycle `{1/4, -1/4}` of the sign conjugacy); the A/B triples `(n, ceil(n/2), 2n+1)` carry `4y = -+1 (mod z)` and are the sheet-pair split `z = -+1 (mod 4)`; the atom operator on consecutive integers is the sibling `4I+1`; primality is blind to the sheets"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_tail_quotient_integration_20261009.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "What parity conjugacy preserves, and what the Collatz target adds"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_two_sheet_receipts_20261005.md",
+      "provenance_as_written": [
+        "**Session:** opus, `pascal-lyapunov-20261005` (third task; worktree `codex/session-pascal-lyapunov-20261005`), 2026-10-05."
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status: PROVED (Propositions A, B, Theorems C, D, E below; elementary); FINITE-EXACT (one script, section 8:"
+      ],
+      "title": "The two-sheet receipt calculus (2026-10-05): reversed `3x-1` paths are the multipliers, a `3x-1`-rooted multiplier costs exactly one fusion relation, the trunk move `m_j = (2^j+1)/3` pays every `-1 mod 2^k` cell, a 16-bit plain-first prefix code with `3x-1`-rooted multipliers covers every odd residue class but `-1 mod 2^16` (the Applegate--Lagarias multipliers `5, 7, 13, 23` are `3x-1`-cyclic and not needed), universal two-sheet receipts cost `0.75` fusion relations per integer below `2^16`, and the first trunk multiplier is the sheet commutator `U_+(3x) = U_-(U_+(x))` whose shadow orbit merges with the orbit of `x` through the quarter-child relation with probability exactly `1/3` (`1/2` in every deep cell, decided at step `k-3`)"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/vitali_selector_certificate_20261005.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Quotient selectors, finite certificates, and three different stopping questions"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/anti-poisson-coimage-atlas-s604.md",
+      "provenance_as_written": [
+        "source: codex-2026-06-03-S604"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS / atlas; anti-Poisson read of LRC, coimage fundamentals, strong tournament residuals, and adjacent repo threads"
+      ],
+      "title": "Everything Through the Anti-Poisson Frame"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/blindspot-triads.md",
+      "provenance_as_written": [
+        "**Date:** 2026-05-29",
+        "**Source:** `04-computation/meta_blindspot_probe_s95.py`"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Blindspot Triads"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/cauldron-complexity-and-variant-atlas-s619.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Cauldron Complexity And Variant Atlas (S619)"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/chemistry-and-the-independence-polynomial.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S19d",
+        "**Arising from:** The practical deliverables audit and the question of chemistry connections"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Chemistry and the Independence Polynomial"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/chromatic-number-of-the-plane-narrowing-attempts-and-the-combinatorial-wall-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (χ(ℝ²) narrowing attempts)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: NO ELIMINATION of {5,6,7} (a major open problem) — but a useful rigorous META-statement + reframings. (1) χ_f(ℝ²)=1/m₁ ≤ 4.36 < 5, so the fractional/spectral/measure bound CANNOT reach 5: narrowing {5,6,7} is IRREDUCIBLY COMBINATORIAL = the LRC Vitali-wall integrality gap (rigorous, given known m₁). (2) LOESCHIAN reframing: 5,6 are not norms a²+ab+b², so no Eisenstein-hexagonal periodic coloring uses 5 or 6; 7=N(2+ζ6) is the smallest ⟹ the periodic upper bound is exactly 7, and a 6-coloring must be non-Eisenstein. (3) Field-tower: χ climbs ℚ²=2, ℤ[ζ6]=3, +√−11≥4, →[5,7]; both ends of [5,7] escape the cyclotomic floor 3. (4) Heegner roadmap: χ = 2 + (#independent Heegner rotations)."
+      ],
+      "title": "χ(ℝ²) ∈ {5,6,7}: narrowing attempts, and why it's a combinatorial wall"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/cnp-lee-yang-chromatic-roots-and-the-wall-s689.md",
+      "provenance_as_written": [
+        "source: claude-2026-06-06-S689"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: NO elimination of {5,6,7} (open) — but the Lee-Yang lens the user asked for: VERIFIED Lee-Yang circle of the HN gadget + the outward march + an honest analytic-wall meta-statement"
+      ],
+      "title": "χ(ℝ²) through the Lee-Yang lens: the HN gadget's zeros are a circle, and where the analytic methods die"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/computational-irreducibility.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Lossy Types and Computational Irreducibility"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/convolution-correlation-adjoint-unifies-clock-shell-converse-s706.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-07-S706 (user seed: cross-correlation is the adjoint of convolution)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — the convolution/cross-correlation ADJOINT duality is the single operator-theoretic"
+      ],
+      "title": "Cross-correlation is the adjoint of convolution — and that is the whole engine room"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Cyclotomic Delsarte/Beurling-Selberg magic: shell contact beats Fourier slogans"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/dfs-three-sparks-cf-active-leg-law-gridmax-fills-singer-generic-opus-S403.md",
+      "provenance_as_written": [
+        "**Instance:** opus-2026-07-19-S403 (owner: creative connection pursuit — DFS old threads,"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "DFS through old threads, three sparks: the CF active-leg law, the window that fills itself, and the pole that isn't"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/eigenvectors-and-atoms.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Eigenvectors, the Number 8, and the Vitali Atom"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/even-cycles-covering-systems-and-the-parity-covering-lens-s708.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-08-S708 (user: Explore covering systems / Owens min-modulus 42; Work On the"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: RESULT + EXPLORATION + bridge. The even-cycle question answers YES (THM-443, classical;"
+      ],
+      "title": "Even cycles, covering systems, and the one lens under both: parity-covering"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/geometric-topological-graph-routes-and-the-projections-they-inspire-kps.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The geometry of LRC(14): five lenses, the routes they open, and the proof technologies they project onto"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/hadwiger-nelson-lrc-unit-distance-one-graph-three-invariants-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (HN ∪ LRC ∪ UD unification)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: UNIFICATION — Hadwiger–Nelson, the unit-distance problem, and the LRC are three invariants (chromatic number χ / edge density |E| / independence density α) of the SAME forbidden-distance Cayley graph. Master quantity: the independence density α, with χ_f = 1/α. Shared technique: the Fourier transform of the forbidden-distance measure (Bessel J0 for the plane, Dirichlet kernel for LRC arcs, lattice structure factor for UD) via the Hoffman/Lovász spectral bound (verified: triangular χ≥3 tight, plane χ≥3.48). Shared structure: Eisenstein/π/3 (Cl2(π/3)). Shared hardness: incommensurate rotations = LRC Diophantine resonance (Moser spindle θ=33.56°)."
+      ],
+      "title": "Hadwiger–Nelson, unit distance, LRC: one graph, three invariants"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/hadwiger-nelson-the-z7z-keystone-the-same-7-and-the-heegner-tower-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (HN deep dive, extending S685/S687/S703)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — resolves the sharp question (the LRC ±2π/3 is the WITNESS/F(T,x) face, not the depth PGF) and extends the repo's HN cluster (S685 Niven=Dehn, S687 field tower, S703 density rosette) with: (1) the z⁷−z KEYSTONE unification — the 7-coloring = ℤ[ζ₆]/(2+ζ₆)≅𝔽₇, and the HN upper bound 7 = the forbidden tournament value 7 = Φ₃(2) = N(2+ζ₆) = |PG(2,2)| (the SAME 7); (2) the HEEGNER tower conjecture (χ=3↦√−3, χ=4↦√−11, χ=5↦√−19; class number 1 = the rigidity to force a color); (3) the Niven=Dehn=field-escape=Cl₂(π/3) coherence. Many HN statements collected."
+      ],
+      "title": "Hadwiger–Nelson: the z⁷−z keystone, the \"same 7\", and the Heegner tower"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/lossy-and-lossless.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Lossy and Lossless: What Geometry Determines"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-2q-the-qr-minus-one-gate-on-the-correlation-constant-kps-s34.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The QR(-1) gate: the quadratic character of Z/q governs the LRC decorrelation constant"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-coimage-fundamentality-made-rigorous-s599.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S599c (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: RIGOR + WILD ABSTRACTION — the master object is a COIMAGE (canonical epi–mono factorization), and the five \"principles of fundamentality\" are this one universal property read in five categories: spectral theorem (Hilbert), sufficient statistic (Markov/statistics), information bottleneck (info lattice), pushforward (measure), Yoneda-uniqueness (representable functors). Poisson baseline = Rényi thinning fixed point. All four wild meta-claims pinned to standard theorems."
+      ],
+      "title": "Fundamentality made rigorous: the master object is a coimage"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "07-reflections/lrc-collatz-famous-problems-not-pvsnp-but-the-cancellation-family-s599.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S599e (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS (with a hard NO) — LRC, Collatz, Riemann, Goldbach, twin primes are NOT \"fundamentally P vs NP\" (category error: conjecture vs complexity class). They share a precise STRUCTURE: control the sign/non-vanishing of an inclusion–exclusion / oscillatory sum uniformly, where the obstruction is a measure-zero arithmetic resonance with NO finite certificate (the (★)/Vitali/natural-proofs wall). The repo's own Rédei/OCR theorem is the SOLVED GF(2) face. By MRDP/Hilbert-10 the family is undecidable ⟹ provably NOT reducible to one problem — shared shape, NOT shared resolution."
+      ],
+      "title": "Are LRC, Collatz, … \"fundamentally P vs NP\"? No — they are the cancellation family"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "07-reflections/lrc-collatz-the-same-two-block-question-s596.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S596 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — Collatz and the LRC residual are the SAME question: a 2-adic ×odd/÷2 orbit hitting a target, easy by measure/density, hard on a measure-zero arithmetic residual that reduces to a bounded TWO-BLOCK (2-power vs 3-power / 2-adic × odd) Diophantine obstruction"
+      ],
+      "title": "Collatz is the same two-block question as the LRC residual"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-cover-to-congruence-translator-and-the-small-owner-theorem-s574.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S574 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: NEW THEOREM (Lemma C, w-free) via the cover→congruence translator; two proved criteria cover 99% of multiple-of-14 configs; residual = large-binding-owner ~1%"
+      ],
+      "title": "The cover→congruence translator, and the small-owner theorem it hands you"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-depth-polynomial-vitali-s603.md",
+      "provenance_as_written": [
+        "source: claude-2026-06-03-S603"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: framework + proved identities + a Vitali-wall resolution of the finer-invariant question"
+      ],
+      "title": "The LRC depth polynomial, and why the finer invariant lives only at top order"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-iterated-logs-are-the-inverse-hyperoperation-tower-s597.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S597 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — the deeper abstraction behind loglog/logloglog inequalities (iterated log = inverse hyperoperation tower = depth of a scale-hierarchy) + my own: the worry-set's obstruction-prime count is ω(2n−1) ~ loglog n, with iterated-ω height ~ log*"
+      ],
+      "title": "Iterated logs are the inverse hyperoperation tower"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-master-object-what-makes-things-fundamental-s599.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S599 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: META-SYNTHESIS — the covering-depth distribution p_k is one instance of a recurring master-object pattern (pushforward of a coverage/count map = occupation measure = density of states = additive-function distribution = partition function = persistence diagram = kinematic measure); five principles of what makes an object fundamental; grounded: the 'free' baseline of {p_k} is Poisson(2nδ), LRC = arithmetic correlation never beats the witness floor (a constrained large-deviation statement)"
+      ],
+      "title": "The master object, and what makes things fundamental"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-n14-certificate-calculus-formalization-s580.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC n=14 certificate calculus formalization (S580)"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-n14-twisted-involutions-s606.md",
+      "provenance_as_written": [
+        "source: claude-2026-06-03-S606",
+        "session's real output is a *deep* understanding of which involutions can do this,"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: deep study of twisted involutions + verified reduction mechanism; n=14 NOT closed (obstruction pinned)"
+      ],
+      "title": "Twisted involutions for LRC@14: which ones can certify, and why the obvious ones can't"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-paper-sieve-vs-certificate-compression-s580.md",
+      "provenance_as_written": [
+        "source: codex-2026-06-03-S580"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: comparative synthesis and proof-program"
+      ],
+      "title": "Paper Sieve vs Certificate Compression for total n=11,12,13"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-pvsnp-inclusion-exclusion-cancellation-many-fields-s599.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S599d (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — P vs NP read through the covering-depth master object: p_0 = Σ_S(−1)^{|S|}meas(∩D_i) is a permanent-shaped inclusion–exclusion sum, and P-vs-NP is the question of when its alternating-sign CANCELLATION collapses it to a tractable (low-rank/telescoping) form. Rigorously ties ~12 fields; PROVED: LRC-instance ∈ NP via a poly-size arrangement-vertex witness; the worry-set = the all-orders-cancellation locus = the natural-proofs-barrier shadow."
+      ],
+      "title": "P vs NP is the cancellation question for an inclusion–exclusion master object"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-redei-solved-face-transfer-menu-s599.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S599f (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: CREATIVE MENU + one VERIFIED anchor — how the SOLVED face (Rédei/GF(2) involution on the permanent-shaped Ham-path count) transfers truths & speedups to LRC/Collatz/Riemann. VERIFIED: worry-set = self-converse round-tournament classes = 2^⌊(n-2)/2⌋ (64 at n=14) ⟹ an enumeration SPEEDUP (count tournaments, not configs) and a Rédei forced-parity certificate. Plus 8 further transfer mechanisms, each labelled by rigor."
+      ],
+      "title": "Mining the solved face: how Rédei transfers to the unsolved siblings"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-resonance-lattice-pvsnp-s604.md",
+      "provenance_as_written": [
+        "source: claude-2026-06-03-S604"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: proved Poisson formula + verified + complexity placement + conjectures"
+      ],
+      "title": "The resonance lattice, and where LRC sits in the P-vs-NP landscape"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-sleeve-saturation-the-covering-foundation-s578.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S578 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: FORMALIZATION of sleeve saturation (the covering foundation unifying Φ, the Vitali wall, and the additive folds) + two extensions (the saturation recursion; the alignment principle)"
+      ],
+      "title": "Sleeve saturation: the covering foundation"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-the-cancellation-is-between-levels-not-within-kps2.md",
+      "provenance_as_written": [
+        "**Source:** kind-pasteur-2026-06-14-S2 (THM-504). Dispatch: improve the"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC: the singular series' cancellation lives between support levels, not within them"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-the-pair-sum-sieve-modulus-is-2n-1-an-identity-s590.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S590 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: THEOREM (THM-401) — the pair-sum sieve's modulus IS 2n-1, proved three independent ways (Farey, summand-shell, odd-square); \"multi-sieve = additive face\" is now an identity; sidesteps resonance energy"
+      ],
+      "title": "The pair-sum sieve's modulus is 2n−1 — an identity, not an analogy"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc-the-vitali-handoff-equation-is-multiple-of-n-s573.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-03-S573 (remote-control)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: CONNECTION (unifies S551o Vitali wall with the S571/S572 reduction) + quantified: Criterion B′ = the Vitali-covering iff proves 72–97% of C′ (→97% at n=14)"
+      ],
+      "title": "The Vitali handoff equation is `n | v`"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Broad Concept Carrier Atlas"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-equioscillation-autocorrelation-atlas-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Equioscillation as autocorrelation, not analogy"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Even/Odd Positive/Negative Duality Bridge"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-history-synthesis-patterns-and-reframings-opus-S399.md",
+      "provenance_as_written": [
+        "**Instance:** opus-2026-07-19-S399 (owner-directed synthesis session)",
+        "source*; phase clocks THM-373; pressure lifts THM-377). Then, across phases 12–14, at least six"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "The LRC(14) campaign read as history: strategy families, the triage law, the wall count, and the tournament arc"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-miss-zeta-word-compatibility-codex-s71.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Miss-Zeta Word Compatibility"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-niche-past-work-closure-bridge-codex-20260627.md",
+      "provenance_as_written": [
+        "**Session:** codex-2026-06-27."
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** synthesis and executable routing scout; not a proof."
+      ],
+      "title": "LRC14 Niche Past-Work Closure Bridge"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-q0-vitali-atom-cone-codex-s70.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Q0, Vitali Atoms, and the Generated Cone"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-random031-niche-history-connections-codex-20260629.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Random031 Niche-History Connections"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Small-Pattern Adjacency Atlas"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-topology-geometry-graph-proof-routes-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Topology Geometry Graph Proof Routes"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-zipper-theorem-pattern-atlas-codex-s166.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Zipper Theorem Pattern Atlas Reflection"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/one-antipodal-map-the-topological-toolkit-merged.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "One antipodal map: Borsuk–Ulam, Ky Fan, Ham Sandwich, Kaczynski, all on the arc-hypercube"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/protein-folding-and-the-tower.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18y",
+        "**Arising from:** Where the Tower Reaches (S18x), deep dive into protein structure"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Protein Folding and the Tower"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/pushes-and-pulls-on-the-hard-core-d7-unification-the-covering-witness-construction-and-the-imaginary-quadratic-pull.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Pushes and pulls on the hard core: the D₇ unification, the explicit covering-witness construction (Φ_{14d}), and the imaginary-quadratic-norm pull"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/reframing-the-last-two-details-resonant-reduces-to-off-grid-bulk-rigidity-is-a-finite-equioscillation-system.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Reframing the last two details to fit: the resonant survivor REDUCES to the off-grid bulk (v's danger is on-grid, the optimum dodges it), and the rigidity is a FINITE equioscillation system (3 sum-14 binding pairs at the units)"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/resonance-lattices-everywhere-s605.md",
+      "provenance_as_written": [
+        "source: claude-2026-06-03-S605"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: synthesis (carrier-level unification) + verified concrete observations"
+      ],
+      "title": "Resonance lattices everywhere"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/seventeen-vitali-atoms.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18m",
+        "**Arising from:** Complete repo search for the Vitali atom pattern"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Seventeen Vitali Atoms"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "07-reflections/space-filling-tournaments.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-22-S20l"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Space-Filling Tournaments"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "07-reflections/the-13-comb-lever-is-the-eisenstein-resonance-types-of-numbers-and-tournaments-opus-20260703.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The 13-comb lever is the Eisenstein resonance — and rational/irrational time, tournament type, and covering certificate are one trichotomy"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-almost-lonely-theorem-at-most-one-near-and-the-n14-counterexample-locus-s553o.md",
+      "provenance_as_written": [
+        "source: oracle-2026-06-01-S553o"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: progress (a provable LRC-adjacent theorem: \"at most one runner is near\"; honest n=14 counterexample-impossibility locus)"
+      ],
+      "title": "The \"Almost Lonely\" Theorem (at most one near), and the n=14 Counterexample Locus"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-bockstein-frontier-what-jc2-and-lrc14-are-both-approaching-macmini-S142.md",
+      "provenance_as_written": [
+        "**Instance:** mac-mini-2026-07-27-S142 (owner: push the JC₂ and LRC14 frontier; examine how our"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "The Bockstein frontier: what JC₂ and LRC(14) are both approaching"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-cartesian-product-trichotomy-amplify-neutral-degrade-s2.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The Cartesian-product trichotomy: why the product construction is unit-distance only"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-cyclotomic-witness-tower-and-the-depth-wall-s704.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-07-S704 (user: \"work on the radical tower and the witness tower\")"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: DEVELOPS + HONESTLY DEFLATES HYP-2303 into THM-439. The LRC witness tower IS the cyclotomic"
+      ],
+      "title": "The cyclotomic witness tower, and why the wall is the depth"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-density-floor-is-a-circle-covering-problem-macmini-S57.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The density floor was a circle-covering problem all along"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-fine-pinch-is-a-local-LP-clearance-and-the-first-spreading-window-s556o.md",
+      "provenance_as_written": [
+        "source: oracle-2026-06-01-S556o"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: progress (the fine pinch = a local LP clearance; the first-spreading-window; the wall as the LP degeneracy)"
+      ],
+      "title": "The Fine Pinch Is a Local LP Clearance — and Lonely Times Live in the First Spreading Window"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-fta-duality-coefficients-roots-and-the-constant-term-observer-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (the coefficient↔root / n+1↔n duality)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — the Fundamental Theorem of Algebra (n+1 coefficients incl. the constant ↔ n roots with multiplicity) is the master n+1↔n map threading the repo. The covering-depth distribution {p_k} IS a polynomial; p_0 (the lonely measure) is the constant term = the OBSERVER/ground state; the worry-set ⟺ p_0=0 ⟺ z=0 is a root (the n+1→n degree collapse, verified). Multiplicities ↔ degeneracy (the all-orders cancellation / worry-set). The roots are the Lee-Yang/partition-function spectrum. The repo's problems are coefficient↔root dualities of a defining polynomial."
+      ],
+      "title": "The FTA duality: coefficients ↔ roots, the constant term as observer"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-index-theorem-frame-lrc-is-the-nonvanishing-of-an-index-analytic-equals-topological.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The index-theorem frame: LRC(2p) ⟺ an index = (p−1)/2 is nonzero, where analytic (equidistribution/Euler char) = topological (Borsuk-Ulam degree), and parity = p mod 4 selects the method — for n=14 the ODD index forces it"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/the-lattice-perfection-gate-nine-is-the-first-imperfect-size.md",
+      "provenance_as_written": [
+        "source: monad-explorer-2026-06-13 (deep-research; OPEN-Q-057 frontier; complements the"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: REFLECTION grounded in PROVED bounds (THM-496) + exhaustive exact-integer"
+      ],
+      "title": "The lattice-perfection gate: 9 is the first imperfect size, and it propagates to 27"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-product-defect-profiles-irreducibility-s5.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The product-defect: irreducibility is the rule, but always by a hair"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-real-problem.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The Real Problem"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-saddle-index-is-p-minus-1-over-2-borsuk-ulam-forcing-meets-the-vitali-core-kps.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The saddle index is (p−1)/2: Borsuk–Ulam forcing meets mac-mini's Vitali core"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-seven-impossibility-tested-the-crt-reduction-is-right-the-window-construction-fails-s552o.md",
+      "provenance_as_written": [
+        "source: oracle-2026-06-01-S552o"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: proof attempt (n=14 via \"the 7 impossibility\") — CRT 7-reduction confirmed; the 7-gon-window construction provably fails on the singleton class"
+      ],
+      "title": "\"The 7 Impossibility\" for LRC@14, Tested: the CRT 7-Reduction Is Right, the 7-Gon-Window Construction Provably Fails"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-signed-lrc-is-blind-to-the-open-core-Cprime-s709.md",
+      "provenance_as_written": [
+        "source: monad-explorer-2026-06-06-S709 (deep-research, signed→unsigned structural-reduction lane)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: RIGOROUS structural reduction. Recalls canon (THM-369 n-grid witness; THM-398 LRC⟺C′;"
+      ],
+      "title": "The signed LRC is blind to the open core C′"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-solvability-tower-galois-lrc-icosahedron-s703.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-07-S703 (user seed: derived-series monodromy of roots↔coefficients; \"no quintic"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — the user's solvability/derived-series picture, verified (THM-436), pushed onto the"
+      ],
+      "title": "The solvability tower: Galois ↔ LRC ↔ the icosahedron"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-topology-of-the-lrc-cap-is-euler-char-of-the-cover-nerve-lonely-is-the-hole-certified-by-borsuk-ulam.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The topology of the LRC: the cap is the Euler characteristic of the danger-cover nerve, the lonely point is the cover's HOLE, and n=14's certificate is the Borsuk-Ulam odd degree — and every other proof route is a shadow of this geometry"
+    },
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/the-triangular-lattice-is-the-2d-chromatic-ceiling-s708.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The triangular lattice is the 2D chromatic ceiling — and why it is the *same* ceiling as the density quantum"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-two-targets-are-one-the-bimodal-phi4-extremizer-and-the-dualities-are-the-inclusion-exclusion-parity.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The two proof targets are ONE: consec is the bimodal/φ⁴ extremizer (max κ₂ even, max κ₃ odd, min κ₄), and the even/odd + positive/negative dualities are the inclusion-exclusion parity (Eisenstein/Legendre)"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/the-unique-channel-dvdk-in-lean-and-the-cancellation-inclusion-exclusion-dictionary-boxeph-S229.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The unique-channel DvdK in Lean, and the cancellation ↔ inclusion-exclusion dictionary"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-unit-norm-group-the-rotation-rank-and-the-cyclotomic-floor-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (de Grey field-set question)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: HONEST CORRECTION + refinement + cross-problem unification. de Grey's χ=5 graph does NOT provably force ≥3 distinct √−d — the field COUNT is the wrong invariant (Minkowski sums preserve the field; by Hilbert 90 the unit-norm group |β|=1 of ONE imaginary-quadratic field is INFINITE rank, so independent rotations pack within fixed fields; de Grey plausibly lives in ℚ(√−3,√−11)). Corrects S699m's Heegner-field-count conjecture. The RIGHT invariant is the ROTATION RANK = # multiplicatively-independent non-torsion unit-norm rotations; χ = 3 + rank (cyclotomic floor 0, Moser 1, de Grey ≥2). Shared object across HN/UD/LRC = unit-norm elements: LRC = torsion (cyclotomic clock), UD = ball-count (Sawin CM), HN = rank (de Grey)."
+      ],
+      "title": "The unit-norm group, the rotation rank, and the cyclotomic floor"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/the-vitali-atom.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18l",
+        "**Arising from:** The three towers (S18k), the +1 identity (S18g), the tessellation (S18f)"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "The Vitali Atom"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-vitali-wall-brouwer-equioscillation-and-the-cyclotomic-core-construction.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "The Vitali wall + Brouwer's equioscillation: measure handles the bulk, the CYCLOTOMIC construction handles the core — and my recent cyclotomic work IS the construction side"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/the-vitali-wall-measure-vs-set-and-why-the-core-needs-construction-not-measure-s551o.md",
+      "provenance_as_written": [
+        "source: oracle-2026-06-01-S551o"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SUPERSEDED as a no-go claim about all measure methods; corrected scope below (2026-10-05)"
+      ],
+      "title": "The Vitali Wall: Measure vs Set, and Why the LRC Core Needs Construction, Not Measure"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/three-seams-the-quantized-seven-tile-wall-moment-blindness-and-the-sliver-kind-pasteur-S128c90.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Three seams: the quantized seven-tile wall, moment blindness with numbers, and what owns the sliver"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/tiling-half-tiling-interlocking-recursions-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "Tiling/Half-Tiling Interlocking Recursions"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/twenty-six-necessary-conditions-for-an-LRC-counterexample-the-thin-locus-s554o.md",
+      "provenance_as_written": [
+        "source: oracle-2026-06-01-S554o"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: synthesis (26 necessary conditions a counterexample to LRC@14 must satisfy; the thin locus)"
+      ],
+      "title": "Twenty-Six Necessary Conditions for an LRC@14 Counterexample"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/two-thirds.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18t",
+        "**Arising from:** D(sqrt(2)) = 0.670 ≈ 2/3, Napolitano's 67% phase transition, T_11 transitivity = 2/3"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Two-Thirds"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/u22-the-unit-cocyclic-extension-and-the-two-value-tricks-s705.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-07-S705 (user: work on u(22)∈{60,61}; creative proof/disproof tricks)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SHARPENS the reduction + Moser-ring evidence for 60; does NOT resolve u(22). The 61-edge UDG"
+      ],
+      "title": "u(22) ∈ {60,61}: the unit-cocyclic extension, and a menu of two-value tricks"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/what-survives-the-audit.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18z",
+        "**Arising from:** The protein folding reflection (S18y) and the need for rigorous self-correction"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "What Survives the Audit"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/where-the-tower-reaches.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18x",
+        "**Arising from:** The entire S18 arc, the CD tower architecture, the dimension axis"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Where the Tower Reaches"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/why-four-is-not-arbitrary.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18v",
+        "**Arising from:** The honest assessment (S18u) and the question \"what if n=4 is structural?\""
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Why Four Is Not Arbitrary"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/why-seventeen.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18n",
+        "**Arising from:** The observation that the 17 Vitali atoms fall into categories of size 2 or 3"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "Why Seventeen"
+    }
+  ],
+  "inherited_index_base": "078ac6b72c7efe8d933c3ee9cbf9aeab7ab6f343",
+  "reading_count": 29,
+  "sampled_records": [
+    {
+      "lane": "Colouring, lattice geometry, and integrality",
+      "path": "07-reflections/hadwiger-nelson-the-z7z-keystone-the-same-7-and-the-heegner-tower-s699.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-06-S699 (HN deep dive, extending S685/S687/S703)"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: SYNTHESIS — resolves the sharp question (the LRC ±2π/3 is the WITNESS/F(T,x) face, not the depth PGF) and extends the repo's HN cluster (S685 Niven=Dehn, S687 field tower, S703 density rosette) with: (1) the z⁷−z KEYSTONE unification — the 7-coloring = ℤ[ζ₆]/(2+ζ₆)≅𝔽₇, and the HN upper bound 7 = the forbidden tournament value 7 = Φ₃(2) = N(2+ζ₆) = |PG(2,2)| (the SAME 7); (2) the HEEGNER tower conjecture (χ=3↦√−3, χ=4↦√−11, χ=5↦√−19; class number 1 = the rigidity to force a color); (3) the Niven=Dehn=field-escape=Cl₂(π/3) coherence. Many HN statements collected."
+      ],
+      "title": "Hadwiger–Nelson: the z⁷−z keystone, the \"same 7\", and the Heegner tower"
+    },
+    {
+      "lane": "Cross-topic recovery and other companion ideas",
+      "path": "07-reflections/even-cycles-covering-systems-and-the-parity-covering-lens-s708.md",
+      "provenance_as_written": [
+        "source: opus-2026-06-08-S708 (user: Explore covering systems / Owens min-modulus 42; Work On the"
+      ],
+      "status_as_written_not_revalidated": [
+        "status: RESULT + EXPLORATION + bridge. The even-cycle question answers YES (THM-443, classical;"
+      ],
+      "title": "Even cycles, covering systems, and the one lens under both: parity-covering"
+    },
+    {
+      "lane": "Finite tournament observers and completion data",
+      "path": "01-canon/theorems/THM-171-c3-disjointness-from-lambda.md",
+      "provenance_as_written": [
+        "**Date:** 2026-03-13",
+        "**Author:** kind-pasteur-2026-03-13-S61"
+      ],
+      "status_as_written_not_revalidated": [
+        "**Status:** PROVED"
+      ],
+      "title": "THM-171: c3 Disjointness Preservation from Lambda Graph"
+    },
+    {
+      "lane": "LRC, moment atoms, compatibility, and boundary witnesses",
+      "path": "07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "LRC14 Small-Pattern Adjacency Atlas"
+    },
+    {
+      "lane": "Source measures, proof receipts, and tail equivalence",
+      "path": "05-knowledge/results/collatz_tail_quotient_integration_20261009.md",
+      "provenance_as_written": [],
+      "status_as_written_not_revalidated": [],
+      "title": "What parity conjugacy preserves, and what the Collatz target adds"
+    },
+    {
+      "lane": "Speculative towers, physics, and information analogies",
+      "path": "07-reflections/the-vitali-atom.md",
+      "provenance_as_written": [
+        "**Session:** kind-pasteur-2026-03-21-S18l",
+        "**Arising from:** The three towers (S18k), the +1 identity (S18g), the tessellation (S18f)"
+      ],
+      "status_as_written_not_revalidated": [],
+      "title": "The Vitali Atom"
+    }
+  ],
+  "sampling_rule": "one per lane, random.Random(20261026: + lane), Python string seed",
+  "session_base": "563022f89374",
+  "status": "DISCOVERY AND READING LEDGER; historical status strings are not proof endorsements",
+  "targeted_reading_pins": [
+    {
+      "path": "01-canon/theorems/THM-169-vitali-atom-characterization.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "392b5f12578b79dc3b38f87daa73c3d545ee67eacf5140771fb33853ec409c9e"
+    },
+    {
+      "path": "01-canon/theorems/THM-170-vitali-two-channel-formula.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "3c3fcb495050afda8397d63add0067fea3b8dedbff75c962c013e1a7cc5ada8d"
+    },
+    {
+      "path": "01-canon/theorems/THM-171-c3-disjointness-from-lambda.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "1a7ba386d3b4d23361caab3a766fe9b81d0610aa3cf4b5886df7fa903dac1ba1"
+    },
+    {
+      "path": "01-canon/theorems/THM-2176-gordian-continuation-profile-and-interaction-cocycle.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "b1683ddd6bbac866350679d744adb57f11946b2a81c56aa5fd23091f68320f66"
+    },
+    {
+      "path": "01-canon/theorems/THM-2242-tournament-complement-transport-and-knot-kernel-green-rigidity.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "7db6c761e4be750840d5b408637c1c8297e9b76ba2ecc24e9142cb808f5b6e13"
+    },
+    {
+      "path": "01-canon/theorems/THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "fa956e50d6be8e389acca4bbd4c5d3582ed9649cfee37839e793eb461c15b2e0"
+    },
+    {
+      "path": "01-canon/theorems/THM-561-miss-zeta-factorial-atom-inversion.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "db3a1230615ccd0c634fe87f5fc201f87336e995c966ef71813497814fd52860"
+    },
+    {
+      "path": "01-canon/theorems/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346"
+    },
+    {
+      "path": "05-knowledge/results/abc_difference_families_20261011c.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "377a5ffc5881324fade14759859182beb3f525b7a364c4a8c8d576d0126f27d2"
+    },
+    {
+      "path": "05-knowledge/results/aligned_port_refinement_20261023/PROOF.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "b7ab473c23551b0c135665920959095473a604ebb7131a40853d25ab491bf8f3"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_power_124_20261026/README.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "c0dff724182e51332a2116014b05648e88a97216069e45e9be8237847b4874a0"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_power_124_20261026/chains/RESULT.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "48b6909999b616afb389c82dea510db1cbf8145e31d5f8b76d582ef033b086ac"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/INCOMING.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "c20299558fb5943b83051254aaa1e0e124e91f36189cc4ba81a0ccdd28d457be"
+    },
+    {
+      "path": "05-knowledge/results/boundary_support_20261020_metagraph.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "9c9a760996f5adc53bf069394553ea06ee874f2f9ad5272f96986b76c2027593"
+    },
+    {
+      "path": "05-knowledge/results/collatz_tail_quotient_integration_20261009.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "4a0c521f797a440e68d9e6064db5373f37d45a030de1af8157fccae1135a878d"
+    },
+    {
+      "path": "05-knowledge/results/hn_metagraph_information_20261026/enumeration/RESULT.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "c17d9903024677d6f3198d3920cbb0e3e08de862f1f7f85e4210aa03421ebaf9"
+    },
+    {
+      "path": "05-knowledge/results/pants_boundary_holonomy_20261011b.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "53b4d09a1bca8eae99bc98cac15ec263a400020fdcc767ecb7ea8fa4e235a104"
+    },
+    {
+      "path": "05-knowledge/results/perfect_core_twin_edges_20261019/PERFECT_CORE_TWIN_EDGES.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "84555d68b2e1342a7dd9967f962c5edeb83a49c25862eee58b8a3f8f7905fcb8"
+    },
+    {
+      "path": "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/ARITHMETIC.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "0c6dedbc370795392893d885020341e228cddb7d2206e5838b1bc70206de78ca"
+    },
+    {
+      "path": "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+    },
+    {
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-wiring/RESULT.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "15a2d1b6320acd163ac34081e5c3cf92a9a22b6aaef7ce06e2f3a17b753898a4"
+    },
+    {
+      "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/README.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "8820c0b2e4a4997675f6469783cbfc4728217b452e856d47af465a155d54b322"
+    },
+    {
+      "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-power/REPORT.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "a3c030e528df19d4ae2cdad4aa6033efcabc46039c82d12b4fde0638af00c1aa"
+    },
+    {
+      "path": "05-knowledge/results/three_sorted_metagraph_continuation_minimization_codex_S11.out",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "554bdc3947dbb1d73335afdda0dea8ada2a0ee53760ac28f0ff3a570758b6106"
+    },
+    {
+      "path": "05-knowledge/results/vitali_atom_recovery_20261011.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "2b1d1b87e5e7cd746ce08414d2e7f3805ed9cdc493bc7ceb1758621be1b20b0a"
+    },
+    {
+      "path": "07-reflections/even-cycles-covering-systems-and-the-parity-covering-lens-s708.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "70c92d4746915ea8b01746d69853b561f5fea7ba65d9a2e3f82b1c96bf039101"
+    },
+    {
+      "path": "07-reflections/hadwiger-nelson-the-z7z-keystone-the-same-7-and-the-heegner-tower-s699.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "e8efbe3d80c1e053009c513b48bf43c49b7fd586007750b04d81ba6d5d4a4054"
+    },
+    {
+      "path": "07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "359112a68a737ec9ce810c23aa9dc470540ee1b1f8c31878cfab2b3f84892e00"
+    },
+    {
+      "path": "07-reflections/the-vitali-atom.md",
+      "scope": "targeted passages; not a whole-file proof audit",
+      "sha256": "8e3c16bc3cc351a7faae9a11fb7b3355fda9025dcb392588ec0c9bf7bbb1d7e8"
+    }
+  ]
+}
