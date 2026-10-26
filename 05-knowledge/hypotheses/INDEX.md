@@ -65,9 +65,7 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2088--2090 and THM-2092/2093 (PROVED):** flat persistence, the global splice, height transfer, and dyadic cocircuit flags make every no-pair cut branch finite. The banks are not enumerated.
 - **THM-2091/THM-2094/THM-2096 (PROVED):** centered energy is necessary, the four-`7|q` branch is empty, and Cayley-tree variance raises bounded-bank thresholds; complete maximum-tree information can be stronger.
 - **THM-2097/2100/2112 (PROVED):** every depth-four rank-seven template has an explicit whole-row finite box, but no box is enumerated or proved empty.
-- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses.
-  blockers; a joint Toeplitz certificate closes a row missed by scalar clocks.
-  `13`-blocker or at least five nonblocker terminals projectively parallel to
+- **THM-2098/2099/2103/2119 (PROVED):** guarded sizes `8..10` split into pure, low-mixed, and high-vertical lanes; only pure rows inherit the collision budget. Pair trees miss dyadic rows; pure-transverse rank eight is projectively three-sparse under THM-2119's exact hypotheses. blockers; a joint Toeplitz certificate closes a row missed by scalar clocks. `13`-blocker or at least five nonblocker terminals projectively parallel to
   the guard modulo thirteen. THM-2124 proves the complementary finite-plane
   seven-pencil theorem; its all-eight pencil and moving offsets remain open.
 - **THM-2117/2121 (PROVED):** clocks, the maximum Hunter tree, and all scalar
