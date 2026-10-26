@@ -1,0 +1,175 @@
+{
+  "cases_including_baseline": 14,
+  "checks": [
+    {
+      "case": "baseline",
+      "expected": "PASS",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "baseline",
+      "expected": "PASS",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "append-byte",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "append-byte",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "bit-flip",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "bit-flip",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "missing-file",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "missing-file",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "extra-file",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "extra-file",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "file-symlink",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "file-symlink",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "mode-change",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "mode-change",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "duplicate-row",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "duplicate-row",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "wrong-source-pin",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "wrong-source-pin",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "absolute-path",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "absolute-path",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "parent-traversal",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "parent-traversal",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "wrong-schema",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "wrong-schema",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "unlisted-replay",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "unlisted-replay",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    },
+    {
+      "case": "wrong-evidence-binding",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": false
+    },
+    {
+      "case": "wrong-evidence-binding",
+      "expected": "REJECT",
+      "observed": "PASS",
+      "optimized": true
+    }
+  ],
+  "normal_and_optimized_checks": 28,
+  "status": "PASS"
+}

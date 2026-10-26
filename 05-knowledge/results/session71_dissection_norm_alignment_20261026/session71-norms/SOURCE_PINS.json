@@ -1,0 +1,72 @@
+[
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "blob": "fcd692c3d4e34fe2d4237f6d04fd31f9cc7cf698",
+    "snapshot": "sources/01-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+    "blob": "74e9436a9eeeca776a69cb8a789270643dd5223c",
+    "snapshot": "sources/02-THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+    "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "01-canon/theorems/THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+    "blob": "d357ef5bacc18eeb33da5da788a458df567c2a62",
+    "snapshot": "sources/03-THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+    "sha256": "4ea8a64c2b435ca738e4b5f0ef54ac34d9160b01d0c5ddc1cc4c52830955a1e3"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "01-canon/theorems/THM-644-gridsym-fiber-law-and-anti-redei.md",
+    "blob": "c1d41e4bb9ea7a6387fd89333e98c14fb75f6ad0",
+    "snapshot": "sources/04-THM-644-gridsym-fiber-law-and-anti-redei.md",
+    "sha256": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "01-canon/theorems/THM-1600-laplace-layer-exact-at-degree-one-and-span-two-eliminated.md",
+    "blob": "a6c1acb6e8d5db2f38b281eddeab395a53be1287",
+    "snapshot": "sources/05-THM-1600-laplace-layer-exact-at-degree-one-and-span-two-eliminated.md",
+    "sha256": "88e1173cb0739cf05b5dfb37658ebe806fe965479d4ca0ea3df44925eaeda7e9"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "05-knowledge/results/fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+    "blob": "610c67d42e671d7940af698e54845d8c0e838a3f",
+    "snapshot": "sources/06-fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+    "sha256": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+    "blob": "f2b9375bd46c787a4bac06d66dd2c8f5680e6ed6",
+    "snapshot": "sources/07-HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+    "sha256": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "05-knowledge/results/normseven_arithmetic_f1_20261026/README.md",
+    "blob": "ca4e5c0ac980e0cf47ae08d5219fa0006e55516e",
+    "snapshot": "sources/08-README.md",
+    "sha256": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md",
+    "blob": "5362eac85b725aefc2726870ffc5f7181dc7eaa9",
+    "snapshot": "sources/09-RESULT.md",
+    "sha256": "8c9c2c5aecf1cd076649b3485b52490ec342fc4007c70a1b8ff9049891afc1af"
+  },
+  {
+    "source_commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "source_path": "05-knowledge/results/prime_shells_20260921_dissections.md",
+    "blob": "b757ebf204063e5372d2c401c25bec48d8bef892",
+    "snapshot": "sources/10-prime_shells_20260921_dissections.md",
+    "sha256": "2bf31eaf88464607c41f22b48addca73acd3934efbe0c29c7141afb2da16c6bd"
+  }
+]

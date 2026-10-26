@@ -1,0 +1,206 @@
+{
+  "schema": "session71-provenance-rules-v1",
+  "allowed_source_pins": [
+    "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "1b61c5c884a290d83e6271fad144cdfe669252a4"
+  ],
+  "sha256sum_manifests": [
+    {
+      "lane": "session71-norm-audit",
+      "file": "ARTIFACT_SHA256.txt"
+    }
+  ],
+  "source_ledgers": [
+    {
+      "lane": "session71-norms",
+      "file": "SOURCE_PINS.json",
+      "pin_key": "source_commit",
+      "blob_key": "blob"
+    },
+    {
+      "lane": "session71-norm-audit",
+      "file": "SOURCE_PINS.json",
+      "pin_key": "commit",
+      "require_row_key": "snapshot"
+    },
+    {
+      "lane": "source-snapshots",
+      "file": "SOURCE_SNAPSHOTS.json"
+    }
+  ],
+  "native_manifests": [
+    {
+      "lane": "session71-norms",
+      "file": "PUBLICATION-MANIFEST.json",
+      "mapping": true
+    }
+  ],
+  "reviewed_bindings": [
+    {
+      "path": "session71-norms/EXTERNAL_SOURCES.json",
+      "sha256": "790a313c1f47a4599765f94df178c41f862df0dbc50b08e156be86280da8c143"
+    },
+    {
+      "path": "session71-norms/REPORT.md",
+      "sha256": "a1a83aba7162a076a169320d79a28d14f41dd4cbe09171c3d223f36ab2ed5efd"
+    },
+    {
+      "path": "session71-norms/SOURCE_PINS.json",
+      "sha256": "f264554358e8d639b226f34015dfc000f2b381455f6f99c0525c3b77258d16b6"
+    },
+    {
+      "path": "session71-norms/check.py",
+      "sha256": "f7e1a568f90073a4b60ab5aecd01981941eacc4c8dde3415e0ac36a6756c6c11"
+    },
+    {
+      "path": "session71-norms/normal.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0"
+    },
+    {
+      "path": "session71-norms/optimized.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0"
+    },
+    {
+      "path": "session71-norms/sources/01-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+    },
+    {
+      "path": "session71-norms/sources/02-THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84"
+    },
+    {
+      "path": "session71-norms/sources/03-THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+      "sha256": "4ea8a64c2b435ca738e4b5f0ef54ac34d9160b01d0c5ddc1cc4c52830955a1e3"
+    },
+    {
+      "path": "session71-norms/sources/04-THM-644-gridsym-fiber-law-and-anti-redei.md",
+      "sha256": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e"
+    },
+    {
+      "path": "session71-norms/sources/05-THM-1600-laplace-layer-exact-at-degree-one-and-span-two-eliminated.md",
+      "sha256": "88e1173cb0739cf05b5dfb37658ebe806fe965479d4ca0ea3df44925eaeda7e9"
+    },
+    {
+      "path": "session71-norms/sources/06-fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "sha256": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903"
+    },
+    {
+      "path": "session71-norms/sources/07-HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "sha256": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252"
+    },
+    {
+      "path": "session71-norms/sources/08-README.md",
+      "sha256": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2"
+    },
+    {
+      "path": "session71-norms/sources/09-RESULT.md",
+      "sha256": "8c9c2c5aecf1cd076649b3485b52490ec342fc4007c70a1b8ff9049891afc1af"
+    },
+    {
+      "path": "session71-norms/sources/10-prime_shells_20260921_dissections.md",
+      "sha256": "2bf31eaf88464607c41f22b48addca73acd3934efbe0c29c7141afb2da16c6bd"
+    },
+    {
+      "path": "session71-norms/sources/11-dudeney-2412.03865v3.html",
+      "sha256": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc"
+    },
+    {
+      "path": "session71-norms/PUBLICATION-MANIFEST.json",
+      "sha256": "e4783320839218cfb6ec7b236ac54ff4c30195c4d2a2ab11035328e5375b330b"
+    },
+    {
+      "path": "session71-norm-audit/CROSS_REVIEW.md",
+      "sha256": "7470c38cf9ea44181f2cf4955229522b97cfeb4e9a1ab984c19254f696eae499"
+    },
+    {
+      "path": "session71-norm-audit/PENROSE_P5_REVIEW.md",
+      "sha256": "4fb4947d62656ed1854ec4de82fd86c2c163ac1bdd938a988e27e729e08a0961"
+    },
+    {
+      "path": "session71-norm-audit/REPORT.md",
+      "sha256": "86038e967421f6603b9bd0c00fd393cad38c2768d3254124976a18da081e2dc2"
+    },
+    {
+      "path": "session71-norm-audit/SOURCE_PINS.json",
+      "sha256": "d6e49a4efd291c3e1cf756679752ee983052172b23fa3816307c739aa3a80f3d"
+    },
+    {
+      "path": "session71-norm-audit/check-normal.json",
+      "sha256": "3c273525a15c74a272b1dc6d525eec2bcd78225bc40d3f6c83d741e1035aaadb"
+    },
+    {
+      "path": "session71-norm-audit/check-optimized.json",
+      "sha256": "3c273525a15c74a272b1dc6d525eec2bcd78225bc40d3f6c83d741e1035aaadb"
+    },
+    {
+      "path": "session71-norm-audit/check_norm_rank.py",
+      "sha256": "25a34b18fc9f0b131c3b40802a5068a20982aba2e4c7bd28b11ca65c62a4808e"
+    },
+    {
+      "path": "session71-norm-audit/check_penrose_p5.py",
+      "sha256": "e6dd7d388db49c865b6303dbfa84b1beb6be064fb6d34b7b9d5a4161792cb2d1"
+    },
+    {
+      "path": "session71-norm-audit/penrose-p5-exact.json",
+      "sha256": "2ec0be41db6ceacfc3b9c5b2a952488daea6a27d6f806293376e02d962d8fb84"
+    },
+    {
+      "path": "session71-norm-audit/penrose-p5-optimized.json",
+      "sha256": "2ec0be41db6ceacfc3b9c5b2a952488daea6a27d6f806293376e02d962d8fb84"
+    },
+    {
+      "path": "session71-norm-audit/producer-normal.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0"
+    },
+    {
+      "path": "session71-norm-audit/producer-optimized.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0"
+    },
+    {
+      "path": "session71-norm-audit/sources/00_AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "session71-norm-audit/sources/01_ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "path": "session71-norm-audit/sources/02_RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "session71-norm-audit/sources/03_META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    },
+    {
+      "path": "session71-norm-audit/sources/04_CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+    },
+    {
+      "path": "session71-norm-audit/sources/05_THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+    },
+    {
+      "path": "session71-norm-audit/sources/06_THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84"
+    },
+    {
+      "path": "session71-norm-audit/ARTIFACT_SHA256.txt",
+      "sha256": "68610e0cb3fa97af5e905d8c9273685d547d96cc2eadb6534d05d4a2fe25d3f6"
+    },
+    {
+      "path": "session71-norm-audit/producer-normal.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "equal_to": "session71-norms/normal.json"
+    },
+    {
+      "path": "session71-norm-audit/producer-optimized.json",
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "equal_to": "session71-norms/optimized.json"
+    },
+    {
+      "path": "README.md",
+      "sha256": "57f0f9063e4f957d455b7cc386d45bd584fe36898483b314afbf51e2ce5a1712"
+    }
+  ]
+}

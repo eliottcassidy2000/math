@@ -1,0 +1,318 @@
+{
+  "schema": "session71-native-preserving-curation-v1",
+  "scope": "Explicit curated files; native files and native manifests preserved byte-for-byte.",
+  "files": [
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "ARTIFACT_SHA256.txt",
+      "packet_path": "session71-norm-audit/ARTIFACT_SHA256.txt",
+      "bytes": 1799,
+      "sha256": "68610e0cb3fa97af5e905d8c9273685d547d96cc2eadb6534d05d4a2fe25d3f6",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "CROSS_REVIEW.md",
+      "packet_path": "session71-norm-audit/CROSS_REVIEW.md",
+      "bytes": 2765,
+      "sha256": "7470c38cf9ea44181f2cf4955229522b97cfeb4e9a1ab984c19254f696eae499",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "PENROSE_P5_REVIEW.md",
+      "packet_path": "session71-norm-audit/PENROSE_P5_REVIEW.md",
+      "bytes": 1786,
+      "sha256": "4fb4947d62656ed1854ec4de82fd86c2c163ac1bdd938a988e27e729e08a0961",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "REPORT.md",
+      "packet_path": "session71-norm-audit/REPORT.md",
+      "bytes": 14380,
+      "sha256": "86038e967421f6603b9bd0c00fd393cad38c2768d3254124976a18da081e2dc2",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "SOURCE_PINS.json",
+      "packet_path": "session71-norm-audit/SOURCE_PINS.json",
+      "bytes": 3089,
+      "sha256": "d6e49a4efd291c3e1cf756679752ee983052172b23fa3816307c739aa3a80f3d",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "check-normal.json",
+      "packet_path": "session71-norm-audit/check-normal.json",
+      "bytes": 955,
+      "sha256": "3c273525a15c74a272b1dc6d525eec2bcd78225bc40d3f6c83d741e1035aaadb",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "check-optimized.json",
+      "packet_path": "session71-norm-audit/check-optimized.json",
+      "bytes": 955,
+      "sha256": "3c273525a15c74a272b1dc6d525eec2bcd78225bc40d3f6c83d741e1035aaadb",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "check_norm_rank.py",
+      "packet_path": "session71-norm-audit/check_norm_rank.py",
+      "bytes": 5333,
+      "sha256": "25a34b18fc9f0b131c3b40802a5068a20982aba2e4c7bd28b11ca65c62a4808e",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "check_penrose_p5.py",
+      "packet_path": "session71-norm-audit/check_penrose_p5.py",
+      "bytes": 883,
+      "sha256": "e6dd7d388db49c865b6303dbfa84b1beb6be064fb6d34b7b9d5a4161792cb2d1",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "penrose-p5-exact.json",
+      "packet_path": "session71-norm-audit/penrose-p5-exact.json",
+      "bytes": 260,
+      "sha256": "2ec0be41db6ceacfc3b9c5b2a952488daea6a27d6f806293376e02d962d8fb84",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "penrose-p5-optimized.json",
+      "packet_path": "session71-norm-audit/penrose-p5-optimized.json",
+      "bytes": 260,
+      "sha256": "2ec0be41db6ceacfc3b9c5b2a952488daea6a27d6f806293376e02d962d8fb84",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "producer-normal.json",
+      "packet_path": "session71-norm-audit/producer-normal.json",
+      "bytes": 754,
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "producer-optimized.json",
+      "packet_path": "session71-norm-audit/producer-optimized.json",
+      "bytes": 754,
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/00_AGENTS.md",
+      "packet_path": "session71-norm-audit/sources/00_AGENTS.md",
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/01_ACTIVE-GUARDRAILS.md",
+      "packet_path": "session71-norm-audit/sources/01_ACTIVE-GUARDRAILS.md",
+      "bytes": 23418,
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/02_RESEARCH-PROTOCOL.md",
+      "packet_path": "session71-norm-audit/sources/02_RESEARCH-PROTOCOL.md",
+      "bytes": 10465,
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/03_META-PATTERNS.md",
+      "packet_path": "session71-norm-audit/sources/03_META-PATTERNS.md",
+      "bytes": 27147,
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/04_CORE-PAPERS.md",
+      "packet_path": "session71-norm-audit/sources/04_CORE-PAPERS.md",
+      "bytes": 42860,
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/05_THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "packet_path": "session71-norm-audit/sources/05_THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "bytes": 26674,
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norm-audit",
+      "native_path": "sources/06_THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "packet_path": "session71-norm-audit/sources/06_THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "bytes": 38415,
+      "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "EXTERNAL_SOURCES.json",
+      "packet_path": "session71-norms/EXTERNAL_SOURCES.json",
+      "bytes": 1556,
+      "sha256": "790a313c1f47a4599765f94df178c41f862df0dbc50b08e156be86280da8c143",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "PUBLICATION-MANIFEST.json",
+      "packet_path": "session71-norms/PUBLICATION-MANIFEST.json",
+      "bytes": 2381,
+      "sha256": "e4783320839218cfb6ec7b236ac54ff4c30195c4d2a2ab11035328e5375b330b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "REPORT.md",
+      "packet_path": "session71-norms/REPORT.md",
+      "bytes": 15455,
+      "sha256": "a1a83aba7162a076a169320d79a28d14f41dd4cbe09171c3d223f36ab2ed5efd",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "SOURCE_PINS.json",
+      "packet_path": "session71-norms/SOURCE_PINS.json",
+      "bytes": 4064,
+      "sha256": "f264554358e8d639b226f34015dfc000f2b381455f6f99c0525c3b77258d16b6",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "check.py",
+      "packet_path": "session71-norms/check.py",
+      "bytes": 8857,
+      "sha256": "f7e1a568f90073a4b60ab5aecd01981941eacc4c8dde3415e0ac36a6756c6c11",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "normal.json",
+      "packet_path": "session71-norms/normal.json",
+      "bytes": 754,
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "optimized.json",
+      "packet_path": "session71-norms/optimized.json",
+      "bytes": 754,
+      "sha256": "acef4b41d34572c303f078a080e3d105a769307def567e2358f3acab776a3af0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/01-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "packet_path": "session71-norms/sources/01-THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+      "bytes": 26674,
+      "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/02-THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "packet_path": "session71-norms/sources/02-THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+      "bytes": 38415,
+      "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/03-THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+      "packet_path": "session71-norms/sources/03-THM-3358-admissible-composite-parabolic-compiler-and-hensel-normal-offset-atlas.md",
+      "bytes": 28721,
+      "sha256": "4ea8a64c2b435ca738e4b5f0ef54ac34d9160b01d0c5ddc1cc4c52830955a1e3",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/04-THM-644-gridsym-fiber-law-and-anti-redei.md",
+      "packet_path": "session71-norms/sources/04-THM-644-gridsym-fiber-law-and-anti-redei.md",
+      "bytes": 7877,
+      "sha256": "951e74975ec351f13d10836126d7ee0c815c62ee0a8d1319039ab5cdebe4069e",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/05-THM-1600-laplace-layer-exact-at-degree-one-and-span-two-eliminated.md",
+      "packet_path": "session71-norms/sources/05-THM-1600-laplace-layer-exact-at-degree-one-and-span-two-eliminated.md",
+      "bytes": 8748,
+      "sha256": "88e1173cb0739cf05b5dfb37658ebe806fe965479d4ca0ea3df44925eaeda7e9",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/06-fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "packet_path": "session71-norms/sources/06-fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "bytes": 12148,
+      "sha256": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/07-HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "packet_path": "session71-norms/sources/07-HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "bytes": 7296,
+      "sha256": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/08-README.md",
+      "packet_path": "session71-norms/sources/08-README.md",
+      "bytes": 5102,
+      "sha256": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/09-RESULT.md",
+      "packet_path": "session71-norms/sources/09-RESULT.md",
+      "bytes": 12609,
+      "sha256": "8c9c2c5aecf1cd076649b3485b52490ec342fc4007c70a1b8ff9049891afc1af",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/10-prime_shells_20260921_dissections.md",
+      "packet_path": "session71-norms/sources/10-prime_shells_20260921_dissections.md",
+      "bytes": 14332,
+      "sha256": "2bf31eaf88464607c41f22b48addca73acd3934efbe0c29c7141afb2da16c6bd",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-norms",
+      "native_path": "sources/11-dudeney-2412.03865v3.html",
+      "packet_path": "session71-norms/sources/11-dudeney-2412.03865v3.html",
+      "bytes": 474334,
+      "sha256": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc",
+      "mode": 420
+    },
+    {
+      "native_lane": "session71-root",
+      "native_path": "README.checkpoint1.md",
+      "packet_path": "session71-root/README.checkpoint1.md",
+      "bytes": 4429,
+      "sha256": "57f0f9063e4f957d455b7cc386d45bd584fe36898483b314afbf51e2ce5a1712",
+      "mode": 420
+    }
+  ]
+}

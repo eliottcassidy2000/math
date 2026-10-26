@@ -1,0 +1,42 @@
+{
+  "checks": 824939,
+  "derangements5": 44,
+  "gaussian_ray_count": 625,
+  "integer_norm_universe": [
+    1,
+    10000
+  ],
+  "norm_controls": {
+    "44": [],
+    "5": [
+      [
+        1,
+        2
+      ]
+    ],
+    "65": [
+      [
+        1,
+        8
+      ],
+      [
+        4,
+        7
+      ]
+    ]
+  },
+  "ordered_ray_pairs": 390625,
+  "paper_list_counts": {
+    "after_tri_diff": 46,
+    "cc_pairs": 64,
+    "square": 44,
+    "triangle": 5
+  },
+  "primitive_euclid_rows": 518,
+  "proof_boundary": "Controls corroborate elementary proofs; paper exhaustion and minimum4 are cited, not re-proved.",
+  "quadratic_field_pairs": 6561,
+  "rational_cells": 4000,
+  "represented_integer_norms": 2749,
+  "source_pins_verified": 10,
+  "status": "PASS"
+}

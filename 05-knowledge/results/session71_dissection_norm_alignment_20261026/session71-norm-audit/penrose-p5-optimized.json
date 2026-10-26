@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checks": 5,
+  "dart_oriented_oblique_area": "3/2 - sqrt(5)/2",
+  "kite_oriented_oblique_area": "1/2 - sqrt(5)/2",
+  "physical_area_ratio": "1/2 + sqrt(5)/2",
+  "scope": "Exact template-area controls; field theorem audited by proof."
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "AGENTS.md",
+    "snapshot": "sources/00_AGENTS.md",
+    "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+    "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "01-canon/ACTIVE-GUARDRAILS.md",
+    "snapshot": "sources/01_ACTIVE-GUARDRAILS.md",
+    "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+    "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "00-navigation/RESEARCH-PROTOCOL.md",
+    "snapshot": "sources/02_RESEARCH-PROTOCOL.md",
+    "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+    "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "00-navigation/META-PATTERNS.md",
+    "snapshot": "sources/03_META-PATTERNS.md",
+    "git_blob": "346991110594940fc0aa36138b984f61be1dfe04",
+    "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "05-knowledge/reference/CORE-PAPERS.md",
+    "snapshot": "sources/04_CORE-PAPERS.md",
+    "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+    "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "01-canon/theorems/THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "snapshot": "sources/05_THM-3333-gaussian-square-farey-pythagorean-triangular-light-cone.md",
+    "git_blob": "fcd692c3d4e34fe2d4237f6d04fd31f9cc7cf698",
+    "sha256": "68d2b2d69316a07e3939471ffc753196b090a261b21526acc1f7cd15d5cc0391"
+  },
+  {
+    "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+    "path": "01-canon/theorems/THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+    "snapshot": "sources/06_THM-3336-primitive-gaussian-multiplication-content-curved-farey-triangulation.md",
+    "git_blob": "74e9436a9eeeca776a69cb8a789270643dd5223c",
+    "sha256": "b9f8d421b4347dc58aed70604c47d4c310f0aecc5620f01ec2729ad980ba5f84"
+  },
+  {
+    "url": "https://arxiv.org/html/2412.03865v3",
+    "version": "v3, 2025-07-31",
+    "read_via": "web plus shared paper-lane downloaded HTML",
+    "local_path": "/workspace/scratch/07d5532f2fce/session71-dudeney/v3.html",
+    "sha256": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc",
+    "claims": [
+      "Theorem1 no-flip polygonal minimum",
+      "section4 normalization",
+      "Observation3",
+      "Lemma9"
+    ]
+  },
+  {
+    "url": "https://isa-afp.org/entries/Gaussian_Integers.html",
+    "author": "Manuel Eberl",
+    "entry_date": "2020-04-24",
+    "read_via": "web",
+    "scope": "primary formalization entry identifies both two-square and Euclid-formula applications; theory-page fetch failed; no local build"
+  }
+]

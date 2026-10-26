@@ -1,0 +1,69 @@
+{
+  "checks": 38815,
+  "field_scope": "target vertices only, not dissection cuts",
+  "galois_order": 8,
+  "gaussian_identity_box": [
+    -5,
+    5
+  ],
+  "norm_integer_universe": [
+    1,
+    1000
+  ],
+  "primitive_parameter_box": [
+    -20,
+    20
+  ],
+  "rank_scope": "unconstrained linear equalities only; no embedding or piece count",
+  "rank_universe": {
+    "dudeney": {
+      "fail": 656,
+      "pass": 73,
+      "total": 729
+    },
+    "golden": {
+      "fail": 6048,
+      "pass": 513,
+      "total": 6561
+    }
+  },
+  "representations_nonnegative_ordered": {
+    "2": [
+      [
+        1,
+        1
+      ]
+    ],
+    "5": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "44": [],
+    "65": [
+      [
+        1,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        8,
+        1
+      ]
+    ]
+  },
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

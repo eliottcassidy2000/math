@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://arxiv.org/html/2412.03865v3",
+    "title": "Dudeney\u2019s Dissection is Optimal",
+    "authors": [
+      "Erik D. Demaine",
+      "Tonan Kamata",
+      "Ryuhei Uehara"
+    ],
+    "version": "v3, 31 July 2025",
+    "access_date_utc": "2026-10-26",
+    "locations_checked": [
+      "Theorem 1",
+      "Section 4, Lemma 13",
+      "Lemma 14",
+      "Section 5.1 cc-diff and tri-diff lists"
+    ],
+    "scope": "Polygonal pieces; translations and rotations; flipping forbidden. Our checker verifies display-list arithmetic, not exhaustion.",
+    "snapshot": "sources/11-dudeney-2412.03865v3.html",
+    "sha256": "506f5cd73c54453053b3c9549b69c24a5dfeb0f312710ec9d2cf06d2f3fbffcc",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence": "The pinned arXiv v3 HTML identifies License: CC BY 4.0 and lists all three authors.",
+    "snapshot_handling": "Inert source snapshot for exact provenance and reproducibility; not executable site content."
+  },
+  {
+    "url": "https://kconrad.math.uconn.edu/blurbs/ugradnumthy/Zinotes.pdf",
+    "title": "The Gaussian Integers",
+    "author": "Keith Conrad",
+    "access_date_utc": "2026-10-26",
+    "locations_checked": [
+      "Theorem 1.2",
+      "Theorem 8.3",
+      "Theorems 9.6\u20139.9"
+    ],
+    "scope": "Classical multiplicative norm, primitive Pythagorean parametrization, prime splitting. Rational norm extension is rederived and recovered from repository canon."
+  }
+]
