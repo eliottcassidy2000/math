@@ -44,6 +44,9 @@ audits; those do not automatically audit this packet's new algebraic claims.
 * Port-code counts divide by GL(2,2) only after verifying all assignments
   span. Largest dimension is distinguished from inclusion-maximality.
   The b=6 and b=7 controls prevent extending the special Petersen rule.
+  The nine-extension codec is exhaustively inverted through b=9. Six cases
+  change one old quotient label, necessarily; their reversibility is not
+  falsely promoted to preserving frozen input palettes or projective lines.
 * D1 is a conditional probability law using the incoming harmonic function;
   it is not a new deterministic orbit map. All infinite-alphabet tails are
   retained. The uniform-integrability obstruction follows from absolute
@@ -57,7 +60,7 @@ audits; those do not automatically audit this packet's new algebraic claims.
 |---|---|
 | `check_geometry.py` | 1,377 rational parameter substitutions; exact polynomial gcds; all 15 nonidentity deck elements and all 45 pairs of free involutions; original U/D characters; explicit elliptic squareclass |
 | `check_ideals.py` | monomial exponent box 0..12 in the sign-invariant ring; both ideals P and m; normalized DVR exponent 0..12 and both w parities |
-| `check_port_codes.py` | all 3^b column assignments for b=5,7,9; complete GL(2,2) orbit counts; b=5/6/7 disjoint-port hostiles |
+| `check_port_codes.py` | all 3^b column assignments for b=5,7,9; complete GL(2,2) orbit counts; 921 recursive/projective round trips; b=5/6/7 disjoint-port hostiles |
 | `check_golden_tilt.py` | independent Q and Q(sqrt(5)) horizon recursions, horizons 1..32 and all initial counters <= horizon: 528 comparisons |
 | `check_repairs.py` | complete blue loci of six failed affine cells: exactly 20 literal sources; directedness, blackness, XOR, exact labelled endpoint and converse transport |
 | `check_reverse.py` | N=0..60, K=1..8: 488 independent odd-partition comparisons; 73,557 structural edges; previous absolute engine for N=0..40 and N=50; order50 and invalid-type hostiles |

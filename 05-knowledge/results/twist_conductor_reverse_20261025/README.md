@@ -23,8 +23,10 @@ no independent human/agent proof audit or Lean formalization is claimed.
 3. [Petersen and port codes](PORT_CODES.md): the five-port circuit explains
    the Petersen compatibility relation. Named nonzero binary quotient columns
    extend it to all branch counts; odd counts require three odd colour
-   classes in a minimum-rank quotient. The number of maximum-dimensional
-   free kernels is `(3^(b-1)-1)/8` for odd b. **CITED classical kernel
+   classes in a minimum-rank quotient. A reversible nine-extension rule
+   identifies the resulting sets with projective points over F9, while
+   recording the one-port changes required by six of the nine rules.
+   The count is `(3^(b-1)-1)/8` for odd b. **CITED classical kernel
    criterion, PROVED specialization/count, FINITE-EXACT controls.**
 4. [Golden conditional law](DYNAMICS_EXTENSION.md): conditioning the Haar
    barrier model on eventual ruin gives a geometric valuation law with mean
@@ -33,8 +35,9 @@ no independent human/agent proof audit or Lean formalization is claimed.
    the sharp L^p concentration cost is explicit. **PROVED measure scope;
    Collatz convergence and Antihydra's marked orbit remain OPEN.**
 5. [Incoming integration](INCOMING.md): concurrent Session64 now proves the
-   stronger three-black closed endpoint-four replacement for n>=11 and
-   implements reverse valuations with direct skip contraction. Our separate
+   sharp three-black closed endpoint-four replacement for n>=8, and
+   implements reverse valuations, direct skip contraction and a signed
+   Newton precision bank. Our separate
    twenty-source repair replay and 488 unmerged-partition comparisons are
    retained as controls, not replacements for that stronger frontier.
 
@@ -58,7 +61,7 @@ Niche: the six order-12/14 endpoint-four ledger failures and production
 reverse valuation transport. Wildcard: Petersen/K5/K3,3, least common
 ancestors, and the precise valuation coding of Antihydra.
 
-Closest proved mechanisms: the previous norm-seven packet's conductor,
+Closest proved mechanisms: the [previous norm-seven packet](../normseven_boundary_20261025/README.md)'s conductor,
 root-stack reconstruction and single-root test; THM-2685's divisor/class
 gate and THM-3397's separation of torsor killing from effective valuations;
 the port packet's complete order-13 audit and reverse-DAG theorem.

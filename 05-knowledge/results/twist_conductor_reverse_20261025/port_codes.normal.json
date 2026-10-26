@@ -45,5 +45,8 @@
       "ports": 7
     }
   ],
+  "exact_codec_roundtrips": 921,
+  "projective_incidence_claimed": false,
+  "recursive_kernel_rule": "A_(m+1)=9 A_m+1; named least-port transfer",
   "status": "FINITE-EXACT PASS"
 }

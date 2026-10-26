@@ -3,6 +3,32 @@
 2026-10-25. Initial HEAD was 1b4e6dcc0f25. A mid-session fetch brought
 5d87c3b009 and 9e79465c2c from the concurrent Session64 packet.
 
+**Current update:** the next fetch brought 2a9a9c342e and f265adc2b8.
+Session64 now proves the **sharp n>=8** closed endpoint-four threshold,
+with a whole-illegal-leaf repair at n8 and the actual order-seven obstruction.
+Its [boundary proof](../session64_lca_reverse_valuation_20261026/session64-repairs/boundary/README.md)
+and [independent lower audit](../session64_lca_reverse_valuation_20261026/session64-audit-lower/AUDIT.md)
+were read in full. The earlier n>=11 threshold below records the first
+incoming checkpoint, not the current strongest result.
+
+The [Newton quotient](../session64_lca_reverse_valuation_20261026/session64-counting/NEWTON_QUOTIENT.md)
+now compresses the **signed clone-excess weight bank at absolute precision**
+using precisions K,K-1,K-3,K-6,... . Its [LCA proof](../session64_lca_reverse_valuation_20261026/session64-root/newton-lca/REPORT.md)
+identifies each triangular loss as a sum of named pairwise valuation depths.
+These proofs were read, including the sparse-support and negative-division
+hostiles. It leaves the already scalar ordinary state graph unchanged.
+This is a DVR evaluation-lattice theorem; our non-UFD ideal example explains
+why local valuation data cannot automatically diagonalize a global module.
+
+The separate [Mahler/LCA arithmetic note](../lca_ports_reverse_20261025/arithmetic/README.md)
+recovers the exact translation z=b+3 to ceil(3z/2), and the reset family
+x_R=(2^(R+2)+7)/9, R=5 mod6. Its old depth is one, its next letter is two,
+yet its new depth is R. The congruence extension preserves any fixed finite
+modulus while R grows. This strengthens the obstruction against a finite
+congruence-only rank; our density argument supplies the separate quantitative
+cost of retaining a source through refinement. Neither proves failure on
+the marked blank-tape orbit or on a Collatz trajectory.
+
 The following statements were read in their proofs and scope notes, rather
 than inferred from commit titles:
 

@@ -96,3 +96,57 @@ the three-star hostile in FIXED_TWISTS.md already shows its arity-three loss.
 Source: [Hidalgo, Theorem 1 and Corollary 1](https://arxiv.org/html/1705.09337v5#S3.SS1).
 Our independent finite control checks all nonzero column assignments at
 b=5,7,9 and their GL(2,2) orbits, plus the b=5/6/7 disjoint-pair hostile.
+
+## A reversible nine-extension rule, retaining observer order
+
+There is a constructive explanation of (P2), beyond matching cardinalities.
+Let P_m be the partitions of ordered ports {0,...,2m} into three unlabelled
+blocks of odd size. These are exactly the largest-dimensional free kernels
+for b=2m+1. For m=1 there is one partition into singletons. Order the three
+blocks B_0,B_1,B_2 by their least port. Append r=2m+1 and s=2m+2. Each
+(i,j) in {0,1,2}^2 defines one extension:
+
+* i=j: add both r,s to B_i.
+* i!=j: move the least old port in B_i union B_j to the other one of those
+  two blocks; then add r to B_i and s to B_j.
+
+In the second case both selected blocks first become even, possibly empty,
+then become nonempty odd blocks. The moved port is retained by name. Add
+one exceptional partition {{0,...,2m},{r},{s}}.
+
+Every partition in P_(m+1) arises uniquely. Remove r and s. If they shared
+a block, recover the diagonal case. Otherwise their two blocks become even
+and the third is odd. If both even blocks are empty, this is the exception.
+If not, move the least port in their union to the other block. This is an
+involution on that fixed union and produces two nonempty odd blocks.
+Canonically ordering the recovered blocks, with their retained association
+to r and s, recovers (i,j). Both directions and disjointness are proved.
+Consequently
+
+    A_1=1,     A_(m+1)=9A_m+1,     A_m=(9^m-1)/8.     (P3)
+
+This supplies an explicit set bijection with P^(m-1)(F_9). Fix symbols
+(i,j) -> i+j*theta, theta^2=-1 over F_3. Normalize projective vectors so
+their rightmost nonzero coordinate is 1. Encode an ordinary extension by
+prepending its symbol to the old vector, and the exception by (1,0,...,0).
+The unique three-singleton base encodes (1). The inverse recursion recovers
+every named partition. These are all normalized projective vectors.
+
+The least-port order and nine-symbol labelling are essential sidecars. This
+is a reversible family construction, not an identification of geometric
+incidence: free-subgroup compatibility has not been mapped to projective
+collinearity, and port permutations have not been proved F_9-linear.
+Using the inherited three colour names, the off-diagonal rule **changes one
+old port's quotient label**; it preserves
+its identity and full decoder, not the restriction of the old colouring.
+That change is necessary: the old labels sum to zero, so adding unequal
+new labels cannot still sum to zero unless an old label changes. One moved
+port attains this minimum. The nine cases therefore have a precise cost:
+three preserve all old quotient labels, six change exactly one. A consumer
+which freezes input palettes must reject the latter until it supplies a
+legal operation implementing that change. Reversible encoding alone is not
+a native compatible extension.
+Thus 10,91,820 now have a concrete recursive codec connecting their two
+occurrences. The checker exhausts the extension and both inverses through
+b=9. Adding two branch ports is not a native tournament move or a change
+of a fixed curve without specifying new branch positions and twists.

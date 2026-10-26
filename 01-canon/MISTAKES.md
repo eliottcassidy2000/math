@@ -30,6 +30,26 @@ a historical synthesis or promoting computational evidence.
   certificate. Higher-layer connectivity remains separate from a local
   path decoder.
 
+## 2026-10-25 — normalization changes the operator bank; field coordinates need their basis
+
+- **Rejected extension, not a retracted theorem:** testing multiplication
+  by old roots need not test membership in the conductor after normalization.
+  With `t^2=pi,w^2=2`, the image `B=R[t,wt]` has normalization `A=R[t,w]`.
+  The element1 passes the old t,wt tests but fails the integral ratio w.
+  [Exact ideal formula and repair, I1/I4](../05-knowledge/results/twist_conductor_reverse_20261025/CONDUCTOR_IDEALS.md).
+  The first failed implication is that the old roots still generate the
+  normalized R-module. Retain the new ratio and its relation.
+- **Additional boundary:** for `R=Q[x,y,z]/(xy-z^2)` and
+  `B=R+(x,y,z)w`, all height-one comparisons miss the proper conductor
+  `(x,y,z)A`. Valuation reconstruction requires reflexive target coefficient
+  ideals. The full ideal-colon intersection remains exact.
+- **Draft computation corrected before publication:** the golden checker
+  initially used `(9,-4)` as q^6 coordinates in the basis `(1,q)`, although
+  those coordinates belong to `(1,sqrt(5))`. The check rejected it; the
+  correct pair is `(5,-8)`. Both bases are explicitly labelled in the final
+  [receipt and audit](../05-knowledge/results/twist_conductor_reverse_20261025/AUDIT.md).
+  The identity q^6=9-4sqrt(5) was never the error.
+
 ## 2026-10-25 — mixed-order binomial valuations need a lower bound and the normalized minus one
 
 - **Affected proof:** [THM-4764 source, Theorem B double-prime](../05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md).
