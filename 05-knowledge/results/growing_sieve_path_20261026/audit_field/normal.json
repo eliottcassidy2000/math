@@ -1,0 +1,119 @@
+{
+  "D_period": 105,
+  "chart_tournaments": 16,
+  "full_automorphisms": 21,
+  "full_vector_states_mod105": 18432,
+  "gates": 6499,
+  "hamilton_paths": [
+    189
+  ],
+  "projected_states": 3072,
+  "projection_fibre_size": 6,
+  "projectivities_from_ordered_triples": 336,
+  "radical_bit_witness": [
+    {
+      "C": 2022210961,
+      "bit": 0,
+      "hit": false,
+      "pair": [
+        187,
+        100
+      ],
+      "radical": 2099693897070,
+      "support": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        29,
+        41,
+        193,
+        233
+      ],
+      "triple": [
+        24969,
+        37400,
+        44969
+      ]
+    },
+    {
+      "C": 29723484025,
+      "bit": 1,
+      "hit": false,
+      "pair": [
+        386,
+        153
+      ],
+      "radical": 2099693897070,
+      "support": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        29,
+        41,
+        193,
+        233
+      ],
+      "triple": [
+        125587,
+        118116,
+        172405
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT independent audit controls",
+  "twin_quality_witness": [
+    {
+      "C": 21025,
+      "bit": 0,
+      "hit": false,
+      "pair": [
+        12,
+        1
+      ],
+      "radical": 124410,
+      "support": [
+        2,
+        3,
+        5,
+        11,
+        13,
+        29
+      ],
+      "triple": [
+        143,
+        24,
+        145
+      ]
+    },
+    {
+      "C": 34828890625,
+      "bit": 0,
+      "hit": true,
+      "pair": [
+        432,
+        1
+      ],
+      "radical": 8358844170,
+      "support": [
+        2,
+        3,
+        5,
+        431,
+        433,
+        1493
+      ],
+      "triple": [
+        186623,
+        864,
+        186625
+      ]
+    }
+  ],
+  "wheel_survivors": 21
+}

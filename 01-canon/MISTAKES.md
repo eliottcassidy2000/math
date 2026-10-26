@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — citation provenance does not discharge a quantifier
+
+- **Regression:** incoming `2c85cab14a` preserved the earlier scoped proof in THM-4805 but restored an unqualified all-k Mersenne singleton headline, duplicated A'(ii), and weakened the scopes in its source and navigation mirrors. Relabelling a result CITED answers where it came from, not whether its hypotheses hold.
+- **Repair:** keep the S57 finite range, cite the later audit's reported finite partitions separately, and retain distinct-prime Goldbach for the all-k statement everywhere. Remove the duplicate unqualified clause. Restore the prime/unit exceptions in the first-handful prose and the positive abc domains. No new counterexample to the global conjecture is asserted; no unrelated numerical audit is repeated.
+- **Mechanism and lineage:** a merge of two independently corrected versions can preserve the proof while reverting its public quantifier. [Exact replacement record](../05-knowledge/results/growing_sieve_path_20261026/REGRESSION_CORRECTIONS.json) is pinned to the incoming commit; the previous correction and MISTAKE-675 remain as provenance. Future merges must compare the title, status, body and maintained summaries against the same scoped statement.
+
 ## 2026-10-26 — small-source endpoints, conditional Mersenne coverage, and ray units
 
 - **Source / bounded review:** [THM-4805 / aliquot-sources-of-2-5-7-21](theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md) and its [S60 source note](../05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md), incoming revision `54617edb71`. This repairs four demonstrated domain/quantifier defects; the remaining theorem and computational claims are not fully audited by this review.

@@ -1,0 +1,99 @@
+{
+  "census": [
+    {
+      "distinct_used_supports": 1,
+      "labelled_tournaments": 1,
+      "missing_arcs_total": 0,
+      "n": 1,
+      "strong": 1,
+      "strong_vertex_deletion_checks": 1,
+      "with_missing_arcs": 0
+    },
+    {
+      "distinct_used_supports": 2,
+      "labelled_tournaments": 2,
+      "missing_arcs_total": 0,
+      "n": 2,
+      "strong": 0,
+      "strong_vertex_deletion_checks": 0,
+      "with_missing_arcs": 0
+    },
+    {
+      "distinct_used_supports": 8,
+      "labelled_tournaments": 8,
+      "missing_arcs_total": 6,
+      "n": 3,
+      "strong": 2,
+      "strong_vertex_deletion_checks": 6,
+      "with_missing_arcs": 6
+    },
+    {
+      "distinct_used_supports": 64,
+      "labelled_tournaments": 64,
+      "missing_arcs_total": 72,
+      "n": 4,
+      "strong": 24,
+      "strong_vertex_deletion_checks": 96,
+      "with_missing_arcs": 24
+    },
+    {
+      "distinct_used_supports": 1024,
+      "labelled_tournaments": 1024,
+      "missing_arcs_total": 1120,
+      "n": 5,
+      "strong": 544,
+      "strong_vertex_deletion_checks": 2720,
+      "with_missing_arcs": 360
+    },
+    {
+      "distinct_used_supports": 32768,
+      "labelled_tournaments": 32768,
+      "missing_arcs_total": 22320,
+      "n": 6,
+      "strong": 22320,
+      "strong_vertex_deletion_checks": 133920,
+      "with_missing_arcs": 6720
+    }
+  ],
+  "checks": 205584,
+  "first_strong_unused_arc": {
+    "code": 10,
+    "n": 5,
+    "rows": [
+      20,
+      1,
+      2,
+      7,
+      14
+    ],
+    "used": [
+      20,
+      1,
+      2,
+      7,
+      12
+    ],
+    "witnesses": [
+      [
+        4,
+        1,
+        0
+      ]
+    ]
+  },
+  "independent_method": "subset endpoint DP versus literal permutations through5",
+  "non_strong_hostile": {
+    "deleted_vertex": 1,
+    "rows": [
+      6,
+      4,
+      0
+    ],
+    "used": [
+      2,
+      4,
+      0
+    ]
+  },
+  "status": "PASS"
+}

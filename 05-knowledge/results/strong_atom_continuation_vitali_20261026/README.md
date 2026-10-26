@@ -247,10 +247,16 @@ even before later output observations, the minimum state counts are
 has only 32,272 cells. Its 496 lost states are separated by guards.
 The exact fixed-length state cost in these universes is M free bits.
 
-**Resolved in the continuation:** [guard reconstruction G1-G2](../guard_reconstruction_20261026/README.md)
-proves this for every finite size, using Busch's non-traceable-arc structure
-theorem. This packet's finite census and exponential family alone did not
-prove it. If the observation keeps only distributions under fresh uniform
+The all-order named-guard claim is now **PROVED** by concurrent continuations:
+[guard reconstruction G1–G2](../guard_reconstruction_20261026/README.md),
+[Session70](../session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md),
+and [Hamilton-support reconstruction P1–P4](../growing_sieve_path_20261026/paths/RESULT.md).
+The full Hamilton-path arc support determines every labelled tournament;
+these proofs use the classical nontraceable-arc structure theorem, with
+different routes to the missing orientations. The named state count is
+exactly `2^binom(n-1,2)` at every order. This is a later proof, not an
+extrapolation of this packet's finite census. If the observation keeps only
+distributions under fresh uniform
 re-marking, a smaller stochastic quotient may exist; it answers a different
 question and must not stand in for the actual named path protocol.
 
@@ -282,5 +288,6 @@ independently of the producer's path DFS. There is no separate-agent audit.
 The remaining problem is **useful compression of the admissible alignment
 and efficient generation of new strong/prime atoms**. The sufficient closed
 carrier and its exact finite coefficients are now explicit. No universal
-constant-size root/interface, all-order guard-injectivity theorem, or
-cross-domain Collatz/ABC consequence is claimed.
+constant-size root/interface or cross-domain Collatz/ABC consequence is claimed.
+The separate all-order named-guard question is closed by the later
+reconstruction theorem linked in C5; useful fresh/unnamed compression remains open.

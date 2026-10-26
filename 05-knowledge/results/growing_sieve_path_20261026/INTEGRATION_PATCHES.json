@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "after_sha256": "0e608498995806a0b805a8f45e27ea088c06268bdd611ae1889116780abdf450",
+      "before_sha256": "278653eae3864b8d4ea6fdb18d8391dea83b5ad737221aa78934e8adbd1b107e",
+      "path": "00-navigation/START-HERE.md",
+      "replacements": [
+        {
+          "new": "[Sieve/path](../05-knowledge/results/growing_sieve_path_20261026/README.md).\n",
+          "old": "[Twin/Pythagorean](../05-knowledge/results/twin_pythagorean_124_20261026/README.md).\n"
+        }
+      ]
+    },
+    {
+      "after_sha256": "0ff8e711f49f3f659986a5bc16e97ecf9db51506de4e5b20284d2499a4e350f0",
+      "before_sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "replacements": [
+        {
+          "new": "The all-order named-guard claim is now **PROVED** by\n[Hamilton-support reconstruction P1\u2013P4](../growing_sieve_path_20261026/paths/RESULT.md),\nusing the classical nontraceable-arc separator theorem and an independently\naudited deletion-reachability lemma. The one-step guard language determines\nevery labelled tournament, so the state count is exactly `2^binom(n-1,2)`\nat every order. This is a later proof, not an extrapolation of this finite census.\nIf the observation keeps only distributions under fresh uniform\n",
+          "old": "The all-order claim that guards alone distinguish every presentation is\n**OPEN here**. Neither the finite census nor the exponential family proves\nit. If the observation keeps only distributions under fresh uniform\n"
+        },
+        {
+          "new": "constant-size root/interface or cross-domain Collatz/ABC consequence is claimed.\nThe separate all-order named-guard question is closed by the later\nreconstruction theorem linked in C5; useful fresh/unnamed compression remains open.\n",
+          "old": "constant-size root/interface, all-order guard-injectivity theorem, or\ncross-domain Collatz/ABC consequence is claimed.\n"
+        }
+      ]
+    }
+  ],
+  "scope": "Navigation routing and promotion of C5 using the independently proved all-order named-guard theorem.",
+  "source_revision": "2c85cab14a5e3bf229d3c3993247ed17b2f92d97"
+}

@@ -1,0 +1,167 @@
+{
+  "algorithms": [
+    "path-constraint subcube filling",
+    "independent vertex DFS",
+    "SCC and vertex-deletion cut closure"
+  ],
+  "encoding": "lexicographic unordered pairs, low bit first, 1 means smaller label -> larger label",
+  "gates": 321237,
+  "status": "FINITE-EXACT PASS",
+  "tables": [
+    {
+      "languages": 1,
+      "missing_arcs": 0,
+      "n": 1,
+      "paths": 1,
+      "tournaments": 1,
+      "unions": 1
+    },
+    {
+      "languages": 2,
+      "missing_arcs": 0,
+      "n": 2,
+      "paths": 2,
+      "tournaments": 2,
+      "unions": 2
+    },
+    {
+      "deletion_checks": 6,
+      "languages": 8,
+      "missing_arcs": 6,
+      "n": 3,
+      "paths": 12,
+      "strong": 2,
+      "tournaments": 8,
+      "unions": 8
+    },
+    {
+      "deletion_checks": 144,
+      "languages": 64,
+      "missing_arcs": 72,
+      "n": 4,
+      "paths": 192,
+      "strong": 24,
+      "tournaments": 64,
+      "unions": 64
+    },
+    {
+      "deletion_checks": 4040,
+      "internal_missing_arcs": 120,
+      "languages": 1024,
+      "missing_arcs": 1120,
+      "n": 5,
+      "paths": 7680,
+      "strong": 544,
+      "tournaments": 1024,
+      "unions": 1024
+    },
+    {
+      "deletion_checks": 178560,
+      "internal_missing_arcs": 2880,
+      "languages": 32768,
+      "missing_arcs": 22320,
+      "n": 6,
+      "paths": 737280,
+      "strong": 22320,
+      "tournaments": 32768,
+      "unions": 32768
+    }
+  ],
+  "universe": "all labelled tournaments 1<=n<=6; no quotient or sampling",
+  "witnesses": {
+    "first_strong_missing": {
+      "arc": [
+        4,
+        1
+      ],
+      "blocks": [
+        16,
+        8,
+        4,
+        2
+      ],
+      "mask": 10,
+      "n": 5,
+      "paths": [
+        [
+          0,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          4,
+          3,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          4,
+          3
+        ],
+        [
+          3,
+          0,
+          4,
+          2,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          4,
+          2
+        ],
+        [
+          3,
+          2,
+          1,
+          0,
+          4
+        ],
+        [
+          4,
+          3,
+          0,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      ],
+      "rows": [
+        20,
+        1,
+        2,
+        7,
+        14
+      ],
+      "separator": 0,
+      "used_rows": [
+        20,
+        1,
+        2,
+        7,
+        12
+      ]
+    }
+  }
+}

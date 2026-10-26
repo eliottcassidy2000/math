@@ -1,0 +1,36 @@
+{
+  "local_links_verified": {
+    "METHOD.md": [
+      "../../../01-canon/theorems/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "../strong_atom_continuation_vitali_20261026/README.md"
+    ],
+    "README.md": [
+      "paths/RESULT.md",
+      "audit_paths/PROOF_AUDIT.md",
+      "../strong_atom_continuation_vitali_20261026/README.md",
+      "sieve/README.md",
+      "field/README.md",
+      "../../../01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "../../../01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "audit_field/AUDIT.md",
+      "METHOD.md",
+      "CONNECTION_BOARD.md",
+      "AUDIT.md",
+      "REGRESSION_CORRECTIONS.json"
+    ]
+  },
+  "own_files": {
+    "REPORT.md": "73692fd5ac2a55d4c1e0c5e097dc9be9e59152e37109fd6919d0dc837c2d4bcc"
+  },
+  "reviewed_files": {
+    "METHOD.md": "ebdaf85992ba9be84a5af34ef4427cf896eb05e45ba93771ac78a751bdeb10f3",
+    "README.md": "0f813024f71105cf2e11b9e3878ad3860aacb7d0737bda4e2ad89eb3f51effb2"
+  },
+  "scope": "Mathematical review of README.md and METHOD.md against the frozen lanes; no new full computation replay. Corrected scalar-output wording reviewed. Root AUDIT.md now exists.",
+  "status": "PASS after wording repair",
+  "supporting_proofs": {
+    "field/README.md": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+    "paths/RESULT.md": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+    "sieve/README.md": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c"
+  }
+}

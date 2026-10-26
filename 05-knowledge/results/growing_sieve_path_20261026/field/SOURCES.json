@@ -1,0 +1,16 @@
+{
+  "base_revision": "2c85cab14a5e",
+  "files": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e",
+    "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67",
+    "05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b",
+    "05-knowledge/reference/CORE-PAPERS-ABC-IUT.md": "0703a4e87dca6b49270ad4d122d20da2f54e29734743f84a5655a6292e21ba93",
+    "05-knowledge/results/fresh_remarking_quotient_and_divisor_arrangements_20261026.md": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/f1/RESULT.md": "a6d9111f0bc5997224e01f17075424a0d332ec3a969e570912f7b60cf8b9c15b",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1",
+    "05-knowledge/results/twin_pythagorean_124_20261026/finite_field/README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "05-knowledge/results/twin_pythagorean_124_20261026/residue_obstruction/README.md": "b2149d1b4a2b0b14f89f22c34b6907b976df8e00102c3a6fe981b5aa689e1f42"
+  },
+  "scope": "All new algebra is self-contained; references identify inherited mechanisms and status boundaries. Fresh remarking conjectures are not proved dependencies."
+}

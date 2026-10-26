@@ -1,0 +1,19 @@
+{
+  "audit": {
+    "changes_since_review": "status and audit link only",
+    "independent_gates": 6499,
+    "path": "../audit_field/AUDIT.md",
+    "reviewed_proof_sha256": "5dd8eaf5fb47c0029cb291d1aa53da843d0719714bb4aacccc68a539b9cef898",
+    "sha256": "5aeb260f417881dbf9ade15bd3beee5d8efd73b60c3412ac374d46821151e09f"
+  },
+  "files": {
+    "README.md": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+    "SOURCES.json": "d71df0a0fa76fae87539c0e75abafeb35f1e34cc206c198def2ced141b0d2230",
+    "check.py": "032410f418a4a3303220e0f31fc401c5e35b21492071e5ddc95897ee7b60325c",
+    "normal.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "optimized.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3"
+  },
+  "gates": 18007,
+  "normal_optimized_identical": true,
+  "status": "PASS: independent audit; mathematical proof promoted without body changes"
+}

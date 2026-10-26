@@ -1,0 +1,151 @@
+{
+  "base_revision": "2c85cab14a5e",
+  "owned_files": [
+    {
+      "path": "RESULT.md",
+      "sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd"
+    },
+    {
+      "path": "check_paths.py",
+      "sha256": "8bc966ab56947622c1c40aa59773aa2d986d9c913e5802353b1f9d59246750d7"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333"
+    }
+  ],
+  "primary_reading": [
+    {
+      "author": "Arthur H. Busch",
+      "local_reading_copy": "/tmp/busch-arc-traceable-2005.pdf",
+      "metadata_url": "https://digital.auraria.edu/work/ns/41db4fad-5ef6-4a5a-9ead-092fa2e70d3b",
+      "pdf_sha256": "76c57cfb33b8ad32e7e830e811bb3a3a38d4a2eeea72416d03b45412f51cdf19",
+      "read_claims": [
+        {
+          "number": "Proposition 4.1",
+          "pdf_zero_based_pages": [
+            46
+          ],
+          "printed_pages": [
+            39
+          ],
+          "scope": "strong tournament; nonseparating vertex implies all incident arcs traceable"
+        },
+        {
+          "number": "Theorem 4.7",
+          "pdf_zero_based_pages": [
+            49,
+            50
+          ],
+          "printed_pages": [
+            42,
+            43
+          ],
+          "scope": "strong tournament; two internally vertex-disjoint reverse paths imply arc traceable"
+        },
+        {
+          "number": "Theorem 4.12",
+          "pdf_zero_based_pages": [
+            52,
+            53,
+            54
+          ],
+          "printed_pages": [
+            45,
+            46,
+            47
+          ],
+          "scope": "strong tournament; nontraceable arc implies separating vertex with at least four ordered strong components, endpoint and dominance conditions; necessary only"
+        }
+      ],
+      "rendered_statement_page_inspected": true,
+      "rendered_statement_page_sha256": "66a8f4ba40074029a94943da8a6b87f4289c5872843d07f350c01554a508d89f",
+      "text_sha256": "0522dfcd255d314aff81b0c1e1ea1c12f03823fe49e7f88dd4f330b10c8f5de9",
+      "title": "Arc-traceable Tournaments",
+      "url": "https://digital.auraria.edu/downloads/ma7yx-pcr25/AA00005831_00001.pdf",
+      "year": 2005
+    },
+    {
+      "authors": [
+        "A. H. Busch",
+        "M. S. Jacobson",
+        "K. B. Reid"
+      ],
+      "journal": "Journal of Graph Theory 53:157-166",
+      "read_scope": "Publisher metadata and abstract read; numbered proof dependency uses the thesis instead",
+      "title": "On arc-traceable tournaments",
+      "url": "https://doi.org/10.1002/jgt.20173",
+      "year": 2006
+    }
+  ],
+  "promotion": {
+    "audit_path": "../audit_paths/PROOF_AUDIT.md",
+    "change": "Replace candidate status by PROVED and add audit link only; mathematical body identical",
+    "promoted_proof_sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+    "reviewed_proof_sha256": "4332eae549913d0575ed668c579ec45a480f4e9e663ece3b705512eebde4be1f"
+  },
+  "receipt": {
+    "gates": 321237,
+    "independent_enumerations": [
+      "constraint-subcube filling",
+      "vertex DFS"
+    ],
+    "normal_optimized_identical": true,
+    "universe": "Every labelled tournament n=1,...,6"
+  },
+  "repository_sources": [
+    {
+      "path": "00-navigation/START-HERE.md",
+      "sha256": "278653eae3864b8d4ea6fdb18d8391dea83b5ad737221aa78934e8adbd1b107e"
+    },
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "551c5b66982a8c7faa967fc41068888876c61906bb2a57803a15544d201c9a3c"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+    },
+    {
+      "path": "05-knowledge/results/session25_spectrum_wiring_20261021/session25-wiring/RESULT.md",
+      "sha256": "15a2d1b6320acd163ac34081e5c3cf92a9a22b6aaef7ce06e2f3a17b753898a4"
+    },
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a"
+    },
+    {
+      "path": "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md",
+      "sha256": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "sha256": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252"
+    },
+    {
+      "path": "05-knowledge/results/fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "sha256": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903"
+    },
+    {
+      "path": "01-canon/theorems/THM-4526-shaved-tournaments-path-plus-chord-and-the-largest-unavoidable-graphs.md",
+      "sha256": "22d8597058ca26c060553b7becde6673a1f54e3df35d0cbd0556c875d649ac2f"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "55d0fa51d394298fbbbc8438f0a1d85291437d925f90f32cbc9226b706a4f109"
+    }
+  ],
+  "status": "PROVED P1\u2013P4 after independent mathematical audit PASS; classical separator CITED; finite receipts exact"
+}

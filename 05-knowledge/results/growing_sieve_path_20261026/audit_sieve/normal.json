@@ -1,0 +1,170 @@
+{
+  "checks": 490523,
+  "counts": {
+    "100": 8,
+    "1000": 35,
+    "10000": 205
+  },
+  "first_false": [
+    [
+      2,
+      7,
+      9,
+      true
+    ],
+    [
+      3,
+      23,
+      25,
+      true
+    ],
+    [
+      5,
+      47,
+      49,
+      true
+    ],
+    [
+      7,
+      167,
+      169,
+      true
+    ],
+    [
+      11,
+      167,
+      169,
+      true
+    ],
+    [
+      13,
+      359,
+      361,
+      true
+    ],
+    [
+      17,
+      359,
+      361,
+      true
+    ],
+    [
+      19,
+      839,
+      841,
+      true
+    ],
+    [
+      23,
+      839,
+      841,
+      true
+    ],
+    [
+      29,
+      1367,
+      1369,
+      true
+    ],
+    [
+      31,
+      1367,
+      1369,
+      true
+    ],
+    [
+      37,
+      1847,
+      1849,
+      true
+    ],
+    [
+      41,
+      1847,
+      1849,
+      true
+    ],
+    [
+      43,
+      2207,
+      2209,
+      true
+    ],
+    [
+      47,
+      3719,
+      3721,
+      true
+    ],
+    [
+      53,
+      3719,
+      3721,
+      true
+    ],
+    [
+      59,
+      3719,
+      3721,
+      true
+    ],
+    [
+      61,
+      4757,
+      4759,
+      false
+    ]
+  ],
+  "independence": "literal trial division, no producer imports, literal root enumeration instead of producer CRT root generation",
+  "status": "PASS",
+  "universe": {
+    "B_integers": [
+      2,
+      101
+    ],
+    "all_height_recurrence": [
+      3,
+      10000
+    ],
+    "first_false_prime_cutoffs_through": 61,
+    "first_false_search_limit": 5000,
+    "literal_wheel_cutoffs": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "self_hit_x": [
+      3,
+      1000
+    ]
+  },
+  "wheels": [
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      3,
+      6,
+      1
+    ],
+    [
+      5,
+      30,
+      3
+    ],
+    [
+      7,
+      210,
+      15
+    ],
+    [
+      11,
+      2310,
+      135
+    ]
+  ]
+}

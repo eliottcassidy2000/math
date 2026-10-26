@@ -1,0 +1,351 @@
+{
+  "D_ray_period": 105,
+  "D_ray_wheel_survivors": 21,
+  "G_B_H_orders": [
+    336,
+    42,
+    21
+  ],
+  "all_state_Aut": 21,
+  "all_state_H": [
+    189
+  ],
+  "all_state_tc": 9,
+  "gates": 18007,
+  "homogeneous_states": 16,
+  "primitive_pairs": 192,
+  "quality_by_bit_controls": {
+    "": {
+      "abc_C": 25,
+      "bit": 0,
+      "factorizations": [
+        {
+          "3": 1
+        },
+        {
+          "2": 2
+        },
+        {
+          "5": 1
+        }
+      ],
+      "pair": [
+        2,
+        1
+      ],
+      "prime_support": [
+        2,
+        3,
+        5
+      ],
+      "quality_above_one": false,
+      "radical": 30,
+      "triple": [
+        3,
+        4,
+        5
+      ],
+      "word": ""
+    },
+    "A": {
+      "abc_C": 841,
+      "bit": 1,
+      "factorizations": [
+        {
+          "3": 1,
+          "7": 1
+        },
+        {
+          "2": 2,
+          "5": 1
+        },
+        {
+          "29": 1
+        }
+      ],
+      "pair": [
+        5,
+        2
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        7,
+        29
+      ],
+      "quality_above_one": false,
+      "radical": 6090,
+      "triple": [
+        21,
+        20,
+        29
+      ],
+      "word": "A"
+    },
+    "ADU": {
+      "abc_C": 113569,
+      "bit": 1,
+      "factorizations": [
+        {
+          "5": 2,
+          "7": 1
+        },
+        {
+          "2": 5,
+          "3": 2
+        },
+        {
+          "337": 1
+        }
+      ],
+      "pair": [
+        16,
+        9
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        7,
+        337
+      ],
+      "quality_above_one": true,
+      "radical": 70770,
+      "triple": [
+        175,
+        288,
+        337
+      ],
+      "word": "ADU"
+    },
+    "UU": {
+      "abc_C": 625,
+      "bit": 0,
+      "factorizations": [
+        {
+          "7": 1
+        },
+        {
+          "2": 3,
+          "3": 1
+        },
+        {
+          "5": 2
+        }
+      ],
+      "pair": [
+        4,
+        3
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "quality_above_one": true,
+      "radical": 210,
+      "triple": [
+        7,
+        24,
+        25
+      ],
+      "word": "UU"
+    }
+  },
+  "reachable_refined_states": 3072,
+  "same_observer_twins": [
+    {
+      "D_exponent": 5,
+      "abc_C": 21025,
+      "factorizations": [
+        {
+          "11": 1,
+          "13": 1
+        },
+        {
+          "2": 3,
+          "3": 1
+        },
+        {
+          "5": 1,
+          "29": 1
+        }
+      ],
+      "pair": [
+        12,
+        1
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        11,
+        13,
+        29
+      ],
+      "quality_above_one": false,
+      "radical": 124410,
+      "state": [
+        5,
+        0,
+        12,
+        1
+      ],
+      "triple": [
+        143,
+        24,
+        145
+      ],
+      "twins": [
+        11,
+        13
+      ]
+    },
+    {
+      "D_exponent": 215,
+      "abc_C": 34828890625,
+      "factorizations": [
+        {
+          "431": 1,
+          "433": 1
+        },
+        {
+          "2": 5,
+          "3": 3
+        },
+        {
+          "5": 3,
+          "1493": 1
+        }
+      ],
+      "pair": [
+        432,
+        1
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        431,
+        433,
+        1493
+      ],
+      "quality_above_one": true,
+      "radical": 8358844170,
+      "state": [
+        5,
+        0,
+        12,
+        1
+      ],
+      "triple": [
+        186623,
+        864,
+        186625
+      ],
+      "twins": [
+        431,
+        433
+      ]
+    }
+  ],
+  "same_radical_opposite_bits": [
+    {
+      "abc_C": 2022210961,
+      "bit": 0,
+      "factorizations": [
+        {
+          "3": 1,
+          "7": 1,
+          "29": 1,
+          "41": 1
+        },
+        {
+          "2": 3,
+          "5": 2,
+          "11": 1,
+          "17": 1
+        },
+        {
+          "193": 1,
+          "233": 1
+        }
+      ],
+      "pair": [
+        187,
+        100
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        29,
+        41,
+        193,
+        233
+      ],
+      "quality_above_one": false,
+      "radical": 2099693897070,
+      "triple": [
+        24969,
+        37400,
+        44969
+      ],
+      "word": "UUUDUDDDU"
+    },
+    {
+      "abc_C": 29723484025,
+      "bit": 1,
+      "factorizations": [
+        {
+          "7": 2,
+          "11": 1,
+          "233": 1
+        },
+        {
+          "2": 2,
+          "3": 2,
+          "17": 1,
+          "193": 1
+        },
+        {
+          "5": 1,
+          "29": 2,
+          "41": 1
+        }
+      ],
+      "pair": [
+        386,
+        153
+      ],
+      "prime_support": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        29,
+        41,
+        193,
+        233
+      ],
+      "quality_above_one": false,
+      "radical": 2099693897070,
+      "triple": [
+        125587,
+        118116,
+        172405
+      ],
+      "word": "DUUDDDDDUA"
+    }
+  ],
+  "scope": "No universal abc bound, twin-prime infinitude, or global Hamilton-gap implication.",
+  "status": "FINITE-EXACT controls; elementary proofs in README.md",
+  "wheel_modulus": 15
+}

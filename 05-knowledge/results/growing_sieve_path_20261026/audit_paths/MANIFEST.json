@@ -1,0 +1,35 @@
+{
+  "metadata_pin_repair": {
+    "base_revision_pin": "55d0fa51d394298fbbbc8438f0a1d85291437d925f90f32cbc9226b706a4f109",
+    "current_sources_sha256": "d1cc29b62720f266b7d05b827cddc9fc67039014126d85e432fc6f1733ab1b9e",
+    "exact_inverse_single_pin_edit_hash_verified": true,
+    "field": "repository_sources entry01-canon/MISTAKES.md",
+    "path": "paths/SOURCES.json",
+    "previous_pin": "546e3c61d36142421637f89560061af51fa958577ac181bb29efeaf49527f9d6",
+    "previous_sources_sha256": "a05e0bcfb21a8ca794a70fae7f1d074fbc51274ba05b8ee25c46f5afefbe30e7",
+    "scope": "provenance metadata only; mathematical proof unchanged"
+  },
+  "own_files": {
+    "PROOF_AUDIT.md": "49fe772ff7fc478e16d564365689b26b1fc07f17ba798e8b2d564a9a300090ea"
+  },
+  "primary_source": {
+    "read": "Theorem4.12 statement and proof, printed45--47; rendered statement inspected",
+    "sha256": "76c57cfb33b8ad32e7e830e811bb3a3a38d4a2eeea72416d03b45412f51cdf19",
+    "url": "https://digital.auraria.edu/downloads/ma7yx-pcr25/AA00005831_00001.pdf"
+  },
+  "promotion": {
+    "current_proof_sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+    "exact_inverse_status_link_edit_hash_verified": true,
+    "previous_proof_sha256": "4332eae549913d0575ed668c579ec45a480f4e9e663ece3b705512eebde4be1f"
+  },
+  "reviewed_sources": {
+    "05-knowledge/results/growing_sieve_path_20261026/paths/RESULT.md": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+    "05-knowledge/results/growing_sieve_path_20261026/paths/SOURCES.json": "d1cc29b62720f266b7d05b827cddc9fc67039014126d85e432fc6f1733ab1b9e",
+    "05-knowledge/results/growing_sieve_path_20261026/paths/check_paths.py": "8bc966ab56947622c1c40aa59773aa2d986d9c913e5802353b1f9d59246750d7",
+    "05-knowledge/results/growing_sieve_path_20261026/paths/normal.json": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+    "05-knowledge/results/growing_sieve_path_20261026/paths/optimized.json": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a"
+  },
+  "scope": "No root-owned verifier or receipts are bound by this subagent manifest. Status/link-only promotion of the proof is covered; substantive changes require renewed review.",
+  "status": "PASS: independent mathematical proof audit"
+}

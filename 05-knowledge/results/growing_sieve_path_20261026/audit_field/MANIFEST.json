@@ -1,0 +1,22 @@
+{
+  "files": {
+    "AUDIT.md": "5aeb260f417881dbf9ade15bd3beee5d8efd73b60c3412ac374d46821151e09f",
+    "check_independent.py": "eca7a85a519f59ba2cc494e44f5d1f2c50968bd5cb074287b45a49ad634d894f",
+    "normal.json": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+    "optimized.json": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+    "producer_replay.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "producer_replay.optimized.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3"
+  },
+  "independent_gates": 6499,
+  "inherited_source_pins_verified": 10,
+  "normal_optimized_identical": true,
+  "producer_files": {
+    "README.md": "5dd8eaf5fb47c0029cb291d1aa53da843d0719714bb4aacccc68a539b9cef898",
+    "SOURCES.json": "d71df0a0fa76fae87539c0e75abafeb35f1e34cc206c198def2ced141b0d2230",
+    "check.py": "032410f418a4a3303220e0f31fc401c5e35b21492071e5ddc95897ee7b60325c",
+    "normal.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "optimized.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3"
+  },
+  "producer_gates": 18007,
+  "verdict": "PASS; reviewed mathematical bytes frozen"
+}

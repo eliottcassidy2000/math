@@ -1,0 +1,371 @@
+{
+  "files": {
+    ".gitattributes": "6cac7e3ba10653a00b01d4028829ee18e893cf7da69218d5f41d6caea105dfaa",
+    "AUDIT.md": "d1dda738ba4659436a89915bfb0a3760160acbb8dec8433a22989d916c05d7f4",
+    "CONNECTION_BOARD.md": "119bd342b37bdb39335c9a9d80f0d930d502a1edcc0499d4eda0c949f00bbeb9",
+    "INTEGRATION_PATCHES.json": "1b98ff97a5ae457d220bbc1259340fe17bc34c9b33748a6d48e5dff827713ea7",
+    "METHOD.md": "ebdaf85992ba9be84a5af34ef4427cf896eb05e45ba93771ac78a751bdeb10f3",
+    "README.md": "0f813024f71105cf2e11b9e3878ad3860aacb7d0737bda4e2ad89eb3f51effb2",
+    "REGRESSION_CORRECTIONS.json": "5fc1c9092928605c900766aed2d7af497aeb20b5642025d7e19bcc7f67e85759",
+    "audit_field/AUDIT.md": "5aeb260f417881dbf9ade15bd3beee5d8efd73b60c3412ac374d46821151e09f",
+    "audit_field/MANIFEST.json": "58b6892e50d742099636fdf0b11640a62c8055d391927749e0663bdb41eb40c6",
+    "audit_field/check_independent.py": "eca7a85a519f59ba2cc494e44f5d1f2c50968bd5cb074287b45a49ad634d894f",
+    "audit_field/normal.json": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+    "audit_field/optimized.json": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+    "audit_field/producer_replay.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "audit_field/producer_replay.optimized.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "audit_integration/MANIFEST.json": "8eb5da5ce7b4f270487303b08fa412bb5cf37d4f0549e8722d9bf6117cc0205d",
+    "audit_integration/REPORT.md": "73692fd5ac2a55d4c1e0c5e097dc9be9e59152e37109fd6919d0dc837c2d4bcc",
+    "audit_paths/MANIFEST.json": "5a3b6eb9cd399a59ae5045730165ce1bb0cb9ea3e2ef57f676d7622a1145e09f",
+    "audit_paths/PROOF_AUDIT.md": "49fe772ff7fc478e16d564365689b26b1fc07f17ba798e8b2d564a9a300090ea",
+    "audit_paths/check.py": "661697c8d040635cebd94df405424722f5b028bc25fb970a021dcf30976518e5",
+    "audit_paths/normal.json": "a93dd635f48be951108e16c369adbccfb327e9bc31247445d001448c2859e856",
+    "audit_paths/optimized.json": "a93dd635f48be951108e16c369adbccfb327e9bc31247445d001448c2859e856",
+    "audit_sieve/MANIFEST.json": "e569b7d078d5576100ce53c1766ee7cdb900b25473c3c05747574533590e1ab4",
+    "audit_sieve/REGRESSION_AUDIT.md": "ac6b8a9cce78bb2c5282d8f62799b33e8cbff4646a1a5b4ed3cbb8cd06740895",
+    "audit_sieve/REPORT.md": "8956dc7cf31e96d6e0c8c0be4192011616f369b0cf3161034122a67727125c0c",
+    "audit_sieve/check_audit.py": "74bc760618a84c4fe2f5fe71d8d72f659ebb825f82d9c3b1826a674c5c821845",
+    "audit_sieve/normal.json": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c",
+    "audit_sieve/optimized.json": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c",
+    "field/MANIFEST.json": "dade82d53dd0ace913440544253be46bfd5af5bedc2394db26f5a2584a47762d",
+    "field/README.md": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+    "field/SOURCES.json": "d71df0a0fa76fae87539c0e75abafeb35f1e34cc206c198def2ced141b0d2230",
+    "field/check.py": "032410f418a4a3303220e0f31fc401c5e35b21492071e5ddc95897ee7b60325c",
+    "field/normal.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "field/optimized.json": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+    "paths/RESULT.md": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+    "paths/SOURCES.json": "d1cc29b62720f266b7d05b827cddc9fc67039014126d85e432fc6f1733ab1b9e",
+    "paths/check_paths.py": "8bc966ab56947622c1c40aa59773aa2d986d9c913e5802353b1f9d59246750d7",
+    "paths/normal.json": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+    "paths/optimized.json": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+    "sieve/README.md": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+    "sieve/SOURCES.md": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7",
+    "sieve/SOURCE_MANIFEST.json": "cf57c6ac181976e6e42efbcc36077e9c5e0109880aa9c253c278fb87a1bcab1b",
+    "sieve/check.py": "6bf90a20791362acce270f7989fe34f244898b6ea70b2ef176c5668bdcc8b2e4",
+    "sieve/normal.json": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+    "sieve/optimized.json": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+    "verify_packet.py": "078f36d320c056e364fb9711f84c5d63627f91c5a4d02c2340a6c05a4e181fed"
+  },
+  "inherited_sources": {
+    "00-navigation/CURRENT-FRONTIER.md": "551c5b66982a8c7faa967fc41068888876c61906bb2a57803a15544d201c9a3c",
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "00-navigation/START-HERE.md": "278653eae3864b8d4ea6fdb18d8391dea83b5ad737221aa78934e8adbd1b107e",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/MISTAKES.md": "55d0fa51d394298fbbbc8438f0a1d85291437d925f90f32cbc9226b706a4f109",
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-2447-twin-gap-local-prime-harmonics-and-detrended-spectrum.md": "514dd288026bea9d0bf7d7168f25c583b15c8b44cec9af79a73f0156b826f710",
+    "01-canon/theorems/THM-4526-shaved-tournaments-path-plus-chord-and-the-largest-unavoidable-graphs.md": "22d8597058ca26c060553b7becde6673a1f54e3df35d0cbd0556c875d649ac2f",
+    "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e",
+    "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67",
+    "05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b",
+    "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252",
+    "05-knowledge/reference/CORE-PAPERS-ABC-IUT.md": "0703a4e87dca6b49270ad4d122d20da2f54e29734743f84a5655a6292e21ba93",
+    "05-knowledge/reference/CORE-PAPERS-ANALYTIC-NUMBER-THEORY.md": "86ec2a76aba0c073afe5d39f784c7b353d9053fb283de22e6b5d6fd858c900d7",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/fresh_remarking_quotient_and_divisor_arrangements_20261026.md": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/f1/RESULT.md": "a6d9111f0bc5997224e01f17075424a0d332ec3a969e570912f7b60cf8b9c15b",
+    "05-knowledge/results/prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md": "97ad046cf212f9364a82f4757f7e32c0262629ffe0862d0b47f46bb33f6cc151",
+    "05-knowledge/results/prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md": "c23b2c1c48bc6c2aaa6b1a75c29e21c6f52f893f6b065f6727c0c1bbc0506070",
+    "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256",
+    "05-knowledge/results/session25_spectrum_wiring_20261021/session25-wiring/RESULT.md": "15a2d1b6320acd163ac34081e5c3cf92a9a22b6aaef7ce06e2f3a17b753898a4",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+    "05-knowledge/results/twin_pythagorean_124_20261026/finite_field/README.md": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+    "05-knowledge/results/twin_pythagorean_124_20261026/residue_obstruction/README.md": "b2149d1b4a2b0b14f89f22c34b6907b976df8e00102c3a6fe981b5aa689e1f42",
+    "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+  },
+  "patch_records": [
+    "REGRESSION_CORRECTIONS.json",
+    "INTEGRATION_PATCHES.json"
+  ],
+  "promotion_boundary": "Earlier candidate hashes remain historical review references. Status/link-only promotion was independently verified by the lane reviewers; final files are bound above. The verifier does not recreate missing candidate files.",
+  "review_bindings": [
+    {
+      "path": "paths/RESULT.md",
+      "sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+      "source": "paths/SOURCES.json"
+    },
+    {
+      "path": "paths/check_paths.py",
+      "sha256": "8bc966ab56947622c1c40aa59773aa2d986d9c913e5802353b1f9d59246750d7",
+      "source": "paths/SOURCES.json"
+    },
+    {
+      "path": "paths/normal.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+      "source": "paths/SOURCES.json"
+    },
+    {
+      "path": "paths/optimized.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+      "source": "paths/SOURCES.json"
+    },
+    {
+      "path": "audit_paths/PROOF_AUDIT.md",
+      "sha256": "49fe772ff7fc478e16d564365689b26b1fc07f17ba798e8b2d564a9a300090ea",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "paths/RESULT.md",
+      "sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "paths/SOURCES.json",
+      "sha256": "d1cc29b62720f266b7d05b827cddc9fc67039014126d85e432fc6f1733ab1b9e",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "paths/check_paths.py",
+      "sha256": "8bc966ab56947622c1c40aa59773aa2d986d9c913e5802353b1f9d59246750d7",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "paths/normal.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "paths/optimized.json",
+      "sha256": "3390810c49229331ba25bd038794053dc8e74688c8ea3a2f6a93299af4ad5333",
+      "source": "audit_paths/MANIFEST.json"
+    },
+    {
+      "path": "sieve/README.md",
+      "sha256": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+      "source": "sieve/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "sieve/SOURCES.md",
+      "sha256": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7",
+      "source": "sieve/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "sieve/check.py",
+      "sha256": "6bf90a20791362acce270f7989fe34f244898b6ea70b2ef176c5668bdcc8b2e4",
+      "source": "sieve/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "sieve/normal.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+      "source": "sieve/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "sieve/optimized.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+      "source": "sieve/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "sieve/README.md",
+      "sha256": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "sieve/check.py",
+      "sha256": "6bf90a20791362acce270f7989fe34f244898b6ea70b2ef176c5668bdcc8b2e4",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "sieve/normal.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "sieve/optimized.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "sieve/SOURCES.md",
+      "sha256": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "REGRESSION_CORRECTIONS.json",
+      "sha256": "5fc1c9092928605c900766aed2d7af497aeb20b5642025d7e19bcc7f67e85759",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "audit_sieve/REPORT.md",
+      "sha256": "8956dc7cf31e96d6e0c8c0be4192011616f369b0cf3161034122a67727125c0c",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "audit_sieve/REGRESSION_AUDIT.md",
+      "sha256": "ac6b8a9cce78bb2c5282d8f62799b33e8cbff4646a1a5b4ed3cbb8cd06740895",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "audit_sieve/check_audit.py",
+      "sha256": "74bc760618a84c4fe2f5fe71d8d72f659ebb825f82d9c3b1826a674c5c821845",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "audit_sieve/normal.json",
+      "sha256": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "audit_sieve/optimized.json",
+      "sha256": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c",
+      "source": "audit_sieve/MANIFEST.json"
+    },
+    {
+      "path": "field/README.md",
+      "sha256": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+      "source": "field/MANIFEST.json"
+    },
+    {
+      "path": "field/SOURCES.json",
+      "sha256": "d71df0a0fa76fae87539c0e75abafeb35f1e34cc206c198def2ced141b0d2230",
+      "source": "field/MANIFEST.json"
+    },
+    {
+      "path": "field/check.py",
+      "sha256": "032410f418a4a3303220e0f31fc401c5e35b21492071e5ddc95897ee7b60325c",
+      "source": "field/MANIFEST.json"
+    },
+    {
+      "path": "field/normal.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "field/MANIFEST.json"
+    },
+    {
+      "path": "field/optimized.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/AUDIT.md",
+      "sha256": "5aeb260f417881dbf9ade15bd3beee5d8efd73b60c3412ac374d46821151e09f",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/check_independent.py",
+      "sha256": "eca7a85a519f59ba2cc494e44f5d1f2c50968bd5cb074287b45a49ad634d894f",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/normal.json",
+      "sha256": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/optimized.json",
+      "sha256": "b10502455c41cc76fb7619adf7cf1fbb7900342dbec269632787ff5a12f48a1a",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/producer_replay.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_field/producer_replay.optimized.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "field/SOURCES.json",
+      "sha256": "d71df0a0fa76fae87539c0e75abafeb35f1e34cc206c198def2ced141b0d2230",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "field/check.py",
+      "sha256": "032410f418a4a3303220e0f31fc401c5e35b21492071e5ddc95897ee7b60325c",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "field/normal.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "field/optimized.json",
+      "sha256": "4a770d4f198dd5509107530c0c8c458b1050bac043672d90c0d639b45710aaa3",
+      "source": "audit_field/MANIFEST.json"
+    },
+    {
+      "path": "audit_integration/REPORT.md",
+      "sha256": "73692fd5ac2a55d4c1e0c5e097dc9be9e59152e37109fd6919d0dc837c2d4bcc",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "METHOD.md",
+      "sha256": "ebdaf85992ba9be84a5af34ef4427cf896eb05e45ba93771ac78a751bdeb10f3",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0f813024f71105cf2e11b9e3878ad3860aacb7d0737bda4e2ad89eb3f51effb2",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "field/README.md",
+      "sha256": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "paths/RESULT.md",
+      "sha256": "67e1b911741f09d29fbf072e9075ff06a438060732849405759e6b7dea1c53dd",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "sieve/README.md",
+      "sha256": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+      "source": "audit_integration/MANIFEST.json"
+    }
+  ],
+  "source_revision": "2c85cab14a5e3bf229d3c3993247ed17b2f92d97",
+  "status": "Reviewed proofs and finite exact receipts; this manifest verifies byte identity, not mathematical validity.",
+  "suites": [
+    {
+      "checks": 321237,
+      "count_key": "gates",
+      "normal_receipt": "paths/normal.json",
+      "optimized_receipt": "paths/optimized.json",
+      "program": "paths/check_paths.py",
+      "receipt_status": "FINITE-EXACT PASS"
+    },
+    {
+      "checks": 380043,
+      "count_key": "checks",
+      "normal_receipt": "sieve/normal.json",
+      "optimized_receipt": "sieve/optimized.json",
+      "program": "sieve/check.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 18007,
+      "count_key": "gates",
+      "normal_receipt": "field/normal.json",
+      "optimized_receipt": "field/optimized.json",
+      "program": "field/check.py",
+      "receipt_status": "FINITE-EXACT controls; elementary proofs in README.md"
+    },
+    {
+      "checks": 205584,
+      "count_key": "checks",
+      "normal_receipt": "audit_paths/normal.json",
+      "optimized_receipt": "audit_paths/optimized.json",
+      "program": "audit_paths/check.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 490523,
+      "count_key": "checks",
+      "normal_receipt": "audit_sieve/normal.json",
+      "optimized_receipt": "audit_sieve/optimized.json",
+      "program": "audit_sieve/check_audit.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 6499,
+      "count_key": "gates",
+      "normal_receipt": "audit_field/normal.json",
+      "optimized_receipt": "audit_field/optimized.json",
+      "program": "audit_field/check_independent.py",
+      "receipt_status": "FINITE-EXACT independent audit controls"
+    }
+  ]
+}

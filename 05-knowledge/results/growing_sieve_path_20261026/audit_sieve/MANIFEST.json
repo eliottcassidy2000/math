@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "../sieve/README.md",
+      "sha256": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c"
+    },
+    {
+      "path": "../sieve/check.py",
+      "sha256": "6bf90a20791362acce270f7989fe34f244898b6ea70b2ef176c5668bdcc8b2e4"
+    },
+    {
+      "path": "../sieve/normal.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce"
+    },
+    {
+      "path": "../sieve/optimized.json",
+      "sha256": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce"
+    },
+    {
+      "path": "../sieve/SOURCES.md",
+      "sha256": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7"
+    },
+    {
+      "path": "../REGRESSION_CORRECTIONS.json",
+      "sha256": "5fc1c9092928605c900766aed2d7af497aeb20b5642025d7e19bcc7f67e85759"
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "8956dc7cf31e96d6e0c8c0be4192011616f369b0cf3161034122a67727125c0c"
+    },
+    {
+      "path": "REGRESSION_AUDIT.md",
+      "sha256": "ac6b8a9cce78bb2c5282d8f62799b33e8cbff4646a1a5b4ed3cbb8cd06740895"
+    },
+    {
+      "path": "check_audit.py",
+      "sha256": "74bc760618a84c4fe2f5fe71d8d72f659ebb825f82d9c3b1826a674c5c821845"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c"
+    }
+  ],
+  "hash_boundary_note": "The producer source-manifest hash is historical reviewed metadata; it is not a live mutual manifest hash dependency.",
+  "historical_reviewed_producer_source_manifest_sha256": "0b8fb981602f14c64cfc3097d24288d9980a1e515c46db6b2b5a5f47f30835d2",
+  "independent_gates": 490523,
+  "producer_gates": 380043,
+  "promotion": {
+    "change": "Status and audit link only; exact inverse verified",
+    "promoted_README_sha256": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+    "promoted_SOURCES_sha256": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7",
+    "reviewed_README_sha256": "5c825bdc81fedc3fd920012396ef5dda0acf2558d61ec0dde0b8e8d5a7f7cf06",
+    "reviewed_SOURCES_sha256": "2a6955df657637b5e1cd276f7fd53fb95bff14e38e0819cb7685a1f4b02d75e8"
+  },
+  "proof_scope": "W1-W3 and stated boundaries, independent finite checks; separate bounded S60 regression review",
+  "receipts_normal_optimized_identical": true,
+  "regression_scope": {
+    "file_count": 6,
+    "full_THM4805_audit": false,
+    "replacement_count": 18,
+    "source_revision": "2c85cab14a"
+  },
+  "status": "PASS"
+}

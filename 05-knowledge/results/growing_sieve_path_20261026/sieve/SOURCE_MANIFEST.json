@@ -1,0 +1,45 @@
+{
+  "base_revision": "2c85cab14a",
+  "checks": 380043,
+  "external_source": {
+    "author": "Adam J. Harper",
+    "date": "2015-02-05",
+    "read": "Section1, Definition1.1, Proposition1.2 basic version and proof, printed1\u20133",
+    "scope": "Classical M\u00f6bius sieve indicator and square-root cutoff; no unstated analytic input",
+    "url": "https://warwick.ac.uk/fac/sci/maths/people/staff/harper/elementarymethodsnotes1.pdf"
+  },
+  "files": {
+    "README.md": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+    "SOURCES.md": "f473f7bd73b23516b1ab49721b208fca5116f138bb75df5e6ef960f4693620a7",
+    "check.py": "6bf90a20791362acce270f7989fe34f244898b6ea70b2ef176c5668bdcc8b2e4",
+    "normal.json": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce",
+    "optimized.json": "feaf5d1c3496b1eb5975c1396e9c1d3e06aeaf0e9dab04437c0deb6eeeaaf6ce"
+  },
+  "independent_audit": {
+    "checks": 490523,
+    "normal_optimized_identical": true,
+    "receipt_sha256": "2e759ce60ef82017ec7365de70ff3b0af42a55315c9abe2e863184d384cbb90c",
+    "report": "../audit_sieve/REPORT.md",
+    "sha256": "8956dc7cf31e96d6e0c8c0be4192011616f369b0cf3161034122a67727125c0c",
+    "verdict": "PASS"
+  },
+  "inherited": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/theorems/THM-2447-twin-gap-local-prime-harmonics-and-detrended-spectrum.md": "514dd288026bea9d0bf7d7168f25c583b15c8b44cec9af79a73f0156b826f710",
+    "05-knowledge/reference/CORE-PAPERS-ANALYTIC-NUMBER-THEORY.md": "86ec2a76aba0c073afe5d39f784c7b353d9053fb283de22e6b5d6fd858c900d7",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/prime_pairs_local_symmetry_20261019/power-depth-rough-pairs.md": "97ad046cf212f9364a82f4757f7e32c0262629ffe0862d0b47f46bb33f6cc151",
+    "05-knowledge/results/prime_pairs_local_symmetry_20261019/prime-pairs-structural-note.md": "c23b2c1c48bc6c2aaa6b1a75c29e21c6f52f893f6b065f6727c0c1bbc0506070",
+    "05-knowledge/results/twin_pythagorean_124_20261026/residue_obstruction/README.md": "b2149d1b4a2b0b14f89f22c34b6907b976df8e00102c3a6fe981b5aa689e1f42",
+    "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+  },
+  "normal_optimized_identical": true,
+  "promotion_lineage": {
+    "kind": "status/link-only; reverse replacements recover both reviewed SHA256 values",
+    "reviewed_README.md": "5c825bdc81fedc3fd920012396ef5dda0acf2558d61ec0dde0b8e8d5a7f7cf06",
+    "reviewed_SOURCES.md": "2a6955df657637b5e1cd276f7fd53fb95bff14e38e0819cb7685a1f4b02d75e8",
+    "reviewed_SOURCE_MANIFEST.json": "0b8fb981602f14c64cfc3097d24288d9980a1e515c46db6b2b5a5f47f30835d2"
+  },
+  "status": "PROVED elementary identities and boundary statements; independently audited PASS; computation FINITE-EXACT"
+}
