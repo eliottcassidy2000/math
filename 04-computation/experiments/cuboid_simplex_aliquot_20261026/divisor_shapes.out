@@ -1,0 +1,34 @@
+affine arrangement of the k facet hyperplanes of a (k-1)-simplex: realized sign vectors (exact construction)
+  k = 2: 3 of 4 realized = 2^k - 1, the missing one all-negative: True
+  k = 3: 7 of 8 realized = 2^k - 1, the missing one all-negative: True
+  k = 4: 15 of 16 realized = 2^k - 1, the missing one all-negative: True
+  k = 5: 31 of 32 realized = 2^k - 1, the missing one all-negative: True
+  k = 6: 63 of 64 realized = 2^k - 1, the missing one all-negative: True
+  k = 7: 127 of 128 realized = 2^k - 1, the missing one all-negative: True
+  k = 8: 255 of 256 realized = 2^k - 1, the missing one all-negative: True
+
+n = 30 = 2*3*5: proper divisors [1, 2, 3, 5, 6, 10, 15]
+   s(n) = 42 = 1 + e1 + e2 = 1 + 10 + 31  (e_j elementary symmetric in the primes)
+   counts: divisors 8 = 2^k, proper 7 = 2^k - 1, boundary faces of the simplex 6 = 2^k - 2
+   Moebius-weighted proper sum 1 = -mu(n) = 1; reduced Euler characteristic of S^(k-2) = -1
+   pairs {d, n/d}: [(1, 30), (2, 15), (3, 10), (5, 6)]  -> 4 projective regions
+n = 42 = 2*3*7: proper divisors [1, 2, 3, 6, 7, 14, 21]
+   s(n) = 54 = 1 + e1 + e2 = 1 + 12 + 41  (e_j elementary symmetric in the primes)
+   counts: divisors 8 = 2^k, proper 7 = 2^k - 1, boundary faces of the simplex 6 = 2^k - 2
+   Moebius-weighted proper sum 1 = -mu(n) = 1; reduced Euler characteristic of S^(k-2) = -1
+   pairs {d, n/d}: [(1, 42), (2, 21), (3, 14), (6, 7)]  -> 4 projective regions
+n = 105 = 3*5*7: proper divisors [1, 3, 5, 7, 15, 21, 35]
+   s(n) = 87 = 1 + e1 + e2 = 1 + 15 + 71  (e_j elementary symmetric in the primes)
+   counts: divisors 8 = 2^k, proper 7 = 2^k - 1, boundary faces of the simplex 6 = 2^k - 2
+   Moebius-weighted proper sum 1 = -mu(n) = 1; reduced Euler characteristic of S^(k-2) = -1
+   pairs {d, n/d}: [(1, 105), (3, 35), (5, 21), (7, 15)]  -> 4 projective regions
+n = 210 = 2*3*5*7: proper divisors [1, 2, 3, 5, 6, 7, 10, 14, 15, 21, 30, 35, 42, 70, 105]
+   s(n) = 366 = 1 + e1 + e2 + e3 = 1 + 17 + 101 + 247  (e_j elementary symmetric in the primes)
+   counts: divisors 16 = 2^k, proper 15 = 2^k - 1, boundary faces of the simplex 14 = 2^k - 2
+   Moebius-weighted proper sum -1 = -mu(n) = -1; reduced Euler characteristic of S^(k-2) = 1
+   pairs {d, n/d}: [(1, 210), (2, 105), (3, 70), (5, 42), (6, 35), (7, 30), (10, 21), (14, 15)]  -> 8 projective regions
+
+s^-1(42) (complete, since composite preimages are <= 41^2): [30, 1681]
+   30 = {2: 1, 3: 1, 5: 1}
+   1681 = {41: 2}
+three-prime squarefree n (primes < 60) with equal s(n): 55 values; smallest: s = 154: [(2, 5, 17), (2, 7, 13)], s = 285: [(3, 5, 29), (3, 7, 23)], s = 303: [(3, 5, 31), (3, 11, 17)], s = 314: [(2, 5, 37), (2, 7, 29), (2, 13, 17)]

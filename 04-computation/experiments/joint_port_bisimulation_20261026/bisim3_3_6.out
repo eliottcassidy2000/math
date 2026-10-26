@@ -1,0 +1,40 @@
+n = 3: 2 classes, 8 rooted states (2 strong); V1 transitions 2, V2 transitions 12; 11 gluing contexts  [0s + 0s]
+  V1 obs free     :      2 initial ->      4 stable cells (strong states: 2 of 2)
+  V1 obs sand     :      4 initial ->      5 stable cells (strong states: 2 of 2)
+  V1 obs free+sand:      5 initial ->      6 stable cells (strong states: 2 of 2)
+  V1 obs glue     :      7 initial ->      8 stable cells (strong states: 2 of 2)  = no compression
+  V2 obs free     :      2 initial ->      2 stable cells (strong states: 1 of 2)
+  V2 obs sand     :      4 initial ->      5 stable cells (strong states: 1 of 2)
+  V2 obs free+sand:      5 initial ->      5 stable cells (strong states: 1 of 2)
+  V2 obs glue     :      7 initial ->      7 stable cells (strong states: 1 of 2)
+  [0s]
+n = 4: 4 classes, 32 rooted states (12 strong); V1 transitions 8, V2 transitions 96; 11 gluing contexts  [0s + 0s]
+  V1 obs free     :      4 initial ->     11 stable cells (strong states: 5 of 12)
+  V1 obs sand     :     12 initial ->     14 stable cells (strong states: 7 of 12)
+  V1 obs free+sand:     22 initial ->     24 stable cells (strong states: 8 of 12)
+  V1 obs glue     :     30 initial ->     30 stable cells (strong states: 12 of 12)
+  V2 obs free     :      4 initial ->      4 stable cells (strong states: 1 of 12)
+  V2 obs sand     :     12 initial ->     18 stable cells (strong states: 6 of 12)
+  V2 obs free+sand:     22 initial ->     22 stable cells (strong states: 6 of 12)
+  V2 obs glue     :     30 initial ->     30 stable cells (strong states: 12 of 12)
+  [0s]
+n = 5: 12 classes, 176 rooted states (92 strong); V1 transitions 68, V2 transitions 1312; 11 gluing contexts  [0s + 0s]
+  V1 obs free     :     12 initial ->     60 stable cells (strong states: 42 of 92)
+  V1 obs sand     :     39 initial ->     64 stable cells (strong states: 50 of 92)
+  V1 obs free+sand:    116 initial ->    125 stable cells (strong states: 63 of 92)
+  V1 obs glue     :    169 initial ->    173 stable cells (strong states: 92 of 92)
+  V2 obs free     :     12 initial ->     12 stable cells (strong states: 6 of 92)
+  V2 obs sand     :     39 initial ->     93 stable cells (strong states: 54 of 92)
+  V2 obs free+sand:    116 initial ->    116 stable cells (strong states: 54 of 92)
+  V2 obs glue     :    169 initial ->    169 stable cells (strong states: 88 of 92)
+  [0s]
+n = 6: 56 classes, 1408 rooted states (946 strong); V1 transitions 1056, V2 transitions 31392; 11 gluing contexts  [0s + 1s]
+  V1 obs free     :     56 initial ->    691 stable cells (strong states: 607 of 946)
+  V1 obs sand     :    152 initial ->    445 stable cells (strong states: 390 of 946)
+  V1 obs free+sand:   1146 initial ->   1272 stable cells (strong states: 885 of 946)
+  V1 obs glue     :   1378 initial ->   1394 stable cells (strong states: 946 of 946)
+  V2 obs free     :     56 initial ->     56 stable cells (strong states: 35 of 946)
+  V2 obs sand     :    152 initial ->    657 stable cells (strong states: 444 of 946)
+  V2 obs free+sand:   1146 initial ->   1146 stable cells (strong states: 759 of 946)
+  V2 obs glue     :   1378 initial ->   1378 stable cells (strong states: 930 of 946)
+  [1s]

@@ -1,0 +1,6 @@
+n = 7: 353 strong atoms; presentations tc = H/|Aut| from 9 to 159; 9985 distinct joint rooted targets  [21s]
+  distinct joint response histograms F_A: 353 (atoms sharing a histogram: [])
+  after forgetting ports (target free classes with multiplicity): 353 distinct
+  with the blue refinement B_A: 353 distinct
+  atoms with blue presentations: 79
+  joint targets strong / nonstrong: 9516 / 469

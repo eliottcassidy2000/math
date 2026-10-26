@@ -1,0 +1,24 @@
+n = 3: 1 strong atoms; presentations tc = H/|Aut| from 1 to 1; 1 distinct joint rooted targets  [0s]
+  distinct joint response histograms F_A: 1 (atoms sharing a histogram: [])
+  after forgetting ports (target free classes with multiplicity): 1 distinct
+  with the blue refinement B_A: 1 distinct
+  atoms with blue presentations: 1
+  joint targets strong / nonstrong: 0 / 1
+n = 4: 1 strong atoms; presentations tc = H/|Aut| from 5 to 5; 5 distinct joint rooted targets  [0s]
+  distinct joint response histograms F_A: 1 (atoms sharing a histogram: [])
+  after forgetting ports (target free classes with multiplicity): 1 distinct
+  with the blue refinement B_A: 1 distinct
+  atoms with blue presentations: 1
+  joint targets strong / nonstrong: 2 / 3
+n = 5: 6 strong atoms; presentations tc = H/|Aut| from 3 to 13; 44 distinct joint rooted targets  [0s]
+  distinct joint response histograms F_A: 6 (atoms sharing a histogram: [])
+  after forgetting ports (target free classes with multiplicity): 6 distinct
+  with the blue refinement B_A: 6 distinct
+  atoms with blue presentations: 6
+  joint targets strong / nonstrong: 32 / 12
+n = 6: 35 strong atoms; presentations tc = H/|Aut| from 9 to 43; 547 distinct joint rooted targets  [0s]
+  distinct joint response histograms F_A: 35 (atoms sharing a histogram: [])
+  after forgetting ports (target free classes with multiplicity): 35 distinct
+  with the blue refinement B_A: 35 distinct
+  atoms with blue presentations: 9
+  joint targets strong / nonstrong: 484 / 63

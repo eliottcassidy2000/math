@@ -1,0 +1,7 @@
+81 (+++): H = 462915, |Aut| = 81, tc = 5715, distinct partner classes 5715; entrance-block phase counts {'sym': 462915}  [24s]
+27 (++-): H = 462915, |Aut| = 27, tc = 17145, distinct partner classes 17145; entrance-block phase counts {1: 154305, 2: 154305, 0: 154305}  [48s]
+cyclic triples: 67 vs 67; H: 462915 vs 462915
+partner-class histograms (labelled paths) equal: False
+  partner classes common to both: 74; only in 81: 5641; only in 27: 17071
+presentation-level partner histograms equal: False; sums 5715 vs 17145
+27 case: partner histograms by entrance phase (0 = the odd child's block): {0: (154305, 5715), 1: (154305, 5715), 2: (154305, 5715)} ; phases 1 and 2 equal: False ; phase 0 equals phase 1: False

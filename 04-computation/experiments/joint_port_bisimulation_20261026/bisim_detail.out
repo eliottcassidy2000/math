@@ -1,0 +1,4 @@
+n = 4: 12 strong joint states; gluing observation alone separates them into 12 cells, with V1 dynamics 12; one-sided collisions: 0 fibres, 0 pairs, of which the gluing observation separates 0 and the closed data 0
+n = 5: 92 strong joint states; gluing observation alone separates them into 88 cells, with V1 dynamics 92; one-sided collisions: 2 fibres, 7 pairs, of which the gluing observation separates 0 and the closed data 7
+n = 6: 946 strong joint states; gluing observation alone separates them into 930 cells, with V1 dynamics 946; one-sided collisions: 12 fibres, 20 pairs, of which the gluing observation separates 0 and the closed data 20
+n = 7: 14162 strong joint states; gluing observation alone separates them into 14111 cells, with V1 dynamics 14162; one-sided collisions: 39 fibres, 70 pairs, of which the gluing observation separates 0 and the closed data 70

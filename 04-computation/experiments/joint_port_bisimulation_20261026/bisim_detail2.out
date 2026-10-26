@@ -1,0 +1,3 @@
+n = 5: 92 strong joint states; two-sided contexts (order <= 2, 9 pairs) alone separate them into 92 cells; one-sided collision pairs 7, separated by two-sided contexts: 7; by the singleton sandwich H alone: 6
+n = 6: 946 strong joint states; two-sided contexts (order <= 2, 9 pairs) alone separate them into 946 cells; one-sided collision pairs 20, separated by two-sided contexts: 20; by the singleton sandwich H alone: 17
+n = 7: 14162 strong joint states; two-sided contexts (order <= 2, 9 pairs) alone separate them into 14162 cells; one-sided collision pairs 70, separated by two-sided contexts: 70; by the singleton sandwich H alone: 64

@@ -1,0 +1,21 @@
+n = 3: 2 tournament classes, 8 rooted two-port states, 2 re-mark/complement transitions [0.0s]
+  observation triv   :     1 initial cells ->     2 stable cells (of 8 rooted states)
+  observation free   :     2 initial cells ->     4 stable cells (of 8 rooted states)
+  observation sand   :     4 initial cells ->     5 stable cells (of 8 rooted states)
+  observation oneside:     7 initial cells ->     8 stable cells (of 8 rooted states)   = full joint rooted classes (no compression)
+  (one-sided classes, free class) leaves 1 fibres with several joint states; sandwich H separates 0 of them
+  [0.0s]
+n = 4: 4 tournament classes, 32 rooted two-port states, 8 re-mark/complement transitions [0.0s]
+  observation triv   :     1 initial cells ->     2 stable cells (of 32 rooted states)
+  observation free   :     4 initial cells ->    11 stable cells (of 32 rooted states)
+  observation sand   :    12 initial cells ->    14 stable cells (of 32 rooted states)
+  observation oneside:    30 initial cells ->    30 stable cells (of 32 rooted states)
+  (one-sided classes, free class) leaves 2 fibres with several joint states; sandwich H separates 2 of them
+  [0.0s]
+n = 5: 12 tournament classes, 176 rooted two-port states, 68 re-mark/complement transitions [0.0s]
+  observation triv   :     1 initial cells ->     6 stable cells (of 176 rooted states)
+  observation free   :    12 initial cells ->    60 stable cells (of 176 rooted states)
+  observation sand   :    39 initial cells ->    64 stable cells (of 176 rooted states)
+  observation oneside:   169 initial cells ->   173 stable cells (of 176 rooted states)
+  (one-sided classes, free class) leaves 5 fibres with several joint states; sandwich H separates 5 of them
+  [0.1s]

@@ -1,0 +1,1 @@
+{"n": 3, "states": 8, "strong": 2, "result": {"V1/free": [2, 4, 2], "V1/sand": [4, 5, 2], "V1/free+sand": [5, 6, 2], "V1/glue": [7, 8, 2], "V2/free": [2, 2, 1], "V2/sand": [4, 5, 1], "V2/free+sand": [5, 5, 1], "V2/glue": [7, 7, 1]}}
