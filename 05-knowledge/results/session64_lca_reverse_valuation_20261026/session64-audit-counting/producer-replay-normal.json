@@ -1,0 +1,245 @@
+{
+  "full_class_enumeration_and_exact_bit_samples": [
+    {
+      "classes": 1,
+      "labelled_tournaments": 1,
+      "n": 0
+    },
+    {
+      "classes": 1,
+      "labelled_tournaments": 1,
+      "n": 1
+    },
+    {
+      "classes": 1,
+      "labelled_tournaments": 2,
+      "n": 2
+    },
+    {
+      "classes": 2,
+      "labelled_tournaments": 8,
+      "n": 3
+    },
+    {
+      "classes": 4,
+      "labelled_tournaments": 64,
+      "n": 4
+    },
+    {
+      "classes": 12,
+      "labelled_tournaments": 1024,
+      "n": 5
+    },
+    {
+      "classes": 56,
+      "labelled_tournaments": 32768,
+      "n": 6
+    },
+    {
+      "max_exact_Y_bits": 410,
+      "max_exact_Z_bits": 395,
+      "n": 30,
+      "negative_coordinate_scale_exponents": 133,
+      "prefix_coordinates": 213,
+      "summed_exact_Y_value_bits": 14152,
+      "summed_exact_Z_value_bits": 16615
+    },
+    {
+      "max_exact_Y_bits": 1179,
+      "max_exact_Z_bits": 1154,
+      "n": 50,
+      "negative_coordinate_scale_exponents": 599,
+      "prefix_coordinates": 927,
+      "summed_exact_Y_value_bits": 130972,
+      "summed_exact_Z_value_bits": 150238
+    },
+    {
+      "max_exact_Y_bits": 4854,
+      "max_exact_Z_bits": 4804,
+      "n": 100,
+      "negative_coordinate_scale_exponents": 9164,
+      "prefix_coordinates": 13445,
+      "summed_exact_Y_value_bits": 5193606,
+      "summed_exact_Z_value_bits": 5534143
+    }
+  ],
+  "hostiles": {
+    "absolute_zero_normalized_nonzero": true,
+    "initial_only_baseline_subtraction_invalid": true,
+    "order50_baseline": 25,
+    "order50_normalized_mod4": 2,
+    "same_key_distinct_stages": true
+  },
+  "modular_comparisons": 432,
+  "normalized_precision_bits": [
+    1,
+    8
+  ],
+  "operation_samples": [
+    {
+      "K": 2,
+      "active_edges": 44,
+      "active_input_states": 41,
+      "active_vertices_including_terminal": 42,
+      "baseline": 15,
+      "edge_updates": 44,
+      "edges": 472,
+      "input_states": 212,
+      "maximum_suffix_potential": 409,
+      "n": 30,
+      "residue_precision_bits": 2,
+      "valuation_filtered_edges": 428,
+      "vertices_including_terminal": 213
+    },
+    {
+      "K": 8,
+      "active_edges": 143,
+      "active_input_states": 115,
+      "active_vertices_including_terminal": 116,
+      "baseline": 15,
+      "edge_updates": 143,
+      "edges": 472,
+      "input_states": 212,
+      "maximum_suffix_potential": 409,
+      "n": 30,
+      "residue_precision_bits": 8,
+      "valuation_filtered_edges": 329,
+      "vertices_including_terminal": 213
+    },
+    {
+      "K": 2,
+      "active_edges": 158,
+      "active_input_states": 149,
+      "active_vertices_including_terminal": 150,
+      "baseline": 25,
+      "edge_updates": 158,
+      "edges": 2732,
+      "input_states": 926,
+      "maximum_suffix_potential": 1178,
+      "n": 50,
+      "residue_precision_bits": 2,
+      "valuation_filtered_edges": 2574,
+      "vertices_including_terminal": 927
+    },
+    {
+      "K": 8,
+      "active_edges": 440,
+      "active_input_states": 364,
+      "active_vertices_including_terminal": 365,
+      "baseline": 25,
+      "edge_updates": 440,
+      "edges": 2732,
+      "input_states": 926,
+      "maximum_suffix_potential": 1178,
+      "n": 50,
+      "residue_precision_bits": 8,
+      "valuation_filtered_edges": 2292,
+      "vertices_including_terminal": 927
+    },
+    {
+      "K": 2,
+      "active_edges": 156,
+      "active_input_states": 149,
+      "active_vertices_including_terminal": 150,
+      "baseline": 30,
+      "edge_updates": 156,
+      "edges": 5499,
+      "input_states": 1720,
+      "maximum_suffix_potential": 1714,
+      "n": 60,
+      "residue_precision_bits": 2,
+      "valuation_filtered_edges": 5343,
+      "vertices_including_terminal": 1721
+    },
+    {
+      "K": 8,
+      "active_edges": 704,
+      "active_input_states": 583,
+      "active_vertices_including_terminal": 584,
+      "baseline": 30,
+      "edge_updates": 704,
+      "edges": 5499,
+      "input_states": 1720,
+      "maximum_suffix_potential": 1714,
+      "n": 60,
+      "residue_precision_bits": 8,
+      "valuation_filtered_edges": 4795,
+      "vertices_including_terminal": 1721
+    },
+    {
+      "K": 2,
+      "active_edges": 374,
+      "active_input_states": 359,
+      "active_vertices_including_terminal": 360,
+      "baseline": 40,
+      "edge_updates": 374,
+      "edges": 18109,
+      "input_states": 5119,
+      "maximum_suffix_potential": 3082,
+      "n": 80,
+      "residue_precision_bits": 2,
+      "valuation_filtered_edges": 17735,
+      "vertices_including_terminal": 5120
+    },
+    {
+      "K": 8,
+      "active_edges": 1408,
+      "active_input_states": 1178,
+      "active_vertices_including_terminal": 1179,
+      "baseline": 40,
+      "edge_updates": 1408,
+      "edges": 18109,
+      "input_states": 5119,
+      "maximum_suffix_potential": 3082,
+      "n": 80,
+      "residue_precision_bits": 8,
+      "valuation_filtered_edges": 16701,
+      "vertices_including_terminal": 5120
+    },
+    {
+      "K": 2,
+      "active_edges": 568,
+      "active_input_states": 549,
+      "active_vertices_including_terminal": 550,
+      "baseline": 50,
+      "edge_updates": 568,
+      "edges": 50044,
+      "input_states": 13444,
+      "maximum_suffix_potential": 4853,
+      "n": 100,
+      "residue_precision_bits": 2,
+      "valuation_filtered_edges": 49476,
+      "vertices_including_terminal": 13445
+    },
+    {
+      "K": 8,
+      "active_edges": 2576,
+      "active_input_states": 2180,
+      "active_vertices_including_terminal": 2181,
+      "baseline": 50,
+      "edge_updates": 2576,
+      "edges": 50044,
+      "input_states": 13444,
+      "maximum_suffix_potential": 4853,
+      "n": 100,
+      "residue_precision_bits": 8,
+      "valuation_filtered_edges": 47468,
+      "vertices_including_terminal": 13445
+    }
+  ],
+  "ordinary_orders": {
+    "additional": [
+      60,
+      80,
+      100
+    ],
+    "consecutive": [
+      0,
+      50
+    ]
+  },
+  "prefix_coordinate_checks": 32875,
+  "scope": "Unrestricted ordinary e=0; same structural graph, reverse pass plus optional exact valuation filter; no clone/core or runtime improvement claim.",
+  "status": "PASS",
+  "unmerged_partition_comparisons": 28
+}

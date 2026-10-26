@@ -15,3 +15,11 @@ it does not promote the broader research program.
 The canonical hostile is the order-seven target with nine Hamiltonian paths,
 all blue. A failed fixed menu is not a connectivity obstruction; conversely,
 a finite repair is not global connectivity. Order 11 remains open.
+
+## Second checkpoint update
+
+The endpoint threshold is now n >= 11 with actual transient clone transport.
+Counting uses the reverse suffix-minimum gauge on its original ordinary DAG
+and exact contraction of forced administrative skips. The dynamics lane
+retains punctures, integer-ray tests and chronological debt. These carriers
+share bookkeeping patterns, not a global convergence theorem.

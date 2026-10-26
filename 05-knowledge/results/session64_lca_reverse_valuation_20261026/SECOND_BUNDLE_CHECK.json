@@ -1,0 +1,370 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-dynamics/audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-counting/audit_reverse.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-counting/audit_contraction.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-repairs/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-eleven/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-reverse-valuation/check_valuation.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-counting/reverse_ordinary.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-counting/contracted_ordinary.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/inherited/audit_core.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/inherited/independent_audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/next11/check.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "session64-audit-dynamics/REPORT.md",
+    "session64-audit-dynamics/audit.py",
+    "session64-audit-dynamics/normal.json",
+    "session64-audit-dynamics/optimized.json",
+    "session64-audit-dynamics/prior-valuation-lca.md",
+    "session64-audit-dynamics/prior-debt-range.md",
+    "session64-audit-dynamics/prior-source-audit.md",
+    "session64-audit-counting/audit_reverse.py",
+    "session64-audit-counting/REVERSE_AUDIT.md",
+    "session64-audit-counting/audit-normal.json",
+    "session64-audit-counting/audit-optimized.json",
+    "session64-audit-counting/producer-replay-normal.json",
+    "session64-audit-counting/producer-replay-optimized.json",
+    "session64-audit-counting/audit_contraction.py",
+    "session64-audit-counting/CONTRACTION_AUDIT.md",
+    "session64-audit-counting/contraction-audit-normal.json",
+    "session64-audit-counting/contraction-audit-optimized.json",
+    "session64-audit-counting/contraction-producer-replay-normal.json",
+    "session64-audit-counting/contraction-producer-replay-optimized.json",
+    "session64-audit-repairs/AUDIT.md",
+    "session64-audit-repairs/check.py",
+    "session64-audit-repairs/found.json",
+    "session64-audit-repairs/normal.json",
+    "session64-audit-repairs/optimized.json",
+    "session64-audit-eleven/AUDIT.md",
+    "session64-audit-eleven/check.py",
+    "session64-audit-eleven/found.json",
+    "session64-audit-eleven/normal.json",
+    "session64-audit-eleven/optimized.json",
+    "session64-reverse-valuation/REPORT.md",
+    "session64-reverse-valuation/check_valuation.py",
+    "session64-reverse-valuation/report.json",
+    "session64-repairs/README.md",
+    "session64-repairs/check.py",
+    "session64-repairs/found.json",
+    "session64-repairs/normal.json",
+    "session64-repairs/optimized.json",
+    "session64-repairs/inherited/audit_core.py",
+    "session64-repairs/inherited/independent_audit.py",
+    "session64-repairs/next11/README.md",
+    "session64-repairs/next11/check.py",
+    "session64-repairs/next11/found.json",
+    "session64-repairs/next11/normal.json",
+    "session64-repairs/next11/optimized.json"
+  ],
+  "local_links": [
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_bugs_20260925.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../mazur_positive_density_20260928.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../unprotected_ports_cancellation_20261025/valuation/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-repairs/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/found.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/normal.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-repairs/normal.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../port_residual_integral_20261025/PORT_FRONTIER.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "MANIFEST.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/next11/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-eleven/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-counting/REVERSE_IMPLEMENTATION.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-counting/REVERSE_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-counting/SKIP_CONTRACTION.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-counting/CONTRACTION_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-reverse-valuation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-dynamics/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "SOURCE_LINK_INDEX.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "SECOND_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../mazur_positive_density_20260928.md",
+      "exists": true
+    },
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../../../01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md",
+      "exists": true
+    },
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../unprotected_ports_cancellation_20261025/valuation/README.md",
+      "exists": true
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+      "exists": true
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../collatz_bugs_20260925.md",
+      "exists": true
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [
+    {
+      "path": "session64-audit-dynamics/prior-debt-range.md",
+      "literal": "[1:j](x)",
+      "occurrences": 1,
+      "source_sha256": "6188dc39ea856db0d232b318fb5b4fe067517e5c651edceb8814e1f88ecdbd84",
+      "reason": "Literal indexed affine-composition evaluation, not a Markdown destination; source bytes unchanged"
+    }
+  ],
+  "historical_source_links": [
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../mazur_positive_density_20260928.md",
+      "original_context": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/mazur_positive_density_20260928.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../../../01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md",
+      "original_context": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "01-canon/theorems/THM-4517-no-root-uniform-positive-density-of-collatz-basins.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-audit-dynamics/prior-source-audit.md",
+      "to": "../unprotected_ports_cancellation_20261025/valuation/README.md",
+      "original_context": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "original_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+      "original_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+      "original_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../collatz_bugs_20260925.md",
+      "original_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/collatz_bugs_20260925.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session64-reverse-valuation/REPORT.md",
+      "to": "../port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md",
+      "original_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+      "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+      "resolved_repository_path": "05-knowledge/results/port_residual_integral_20261025/counting/REVERSE_POTENTIAL.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    }
+  ],
+  "historical_unresolved_links": []
+}

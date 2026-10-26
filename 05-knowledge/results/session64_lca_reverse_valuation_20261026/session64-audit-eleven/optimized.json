@@ -1,0 +1,3447 @@
+{
+  "counts": {
+    "all_source_cells": 224,
+    "base_cells": 212,
+    "base_distinct_sources_repaired": 4,
+    "base_failed_leaves": 4,
+    "base_uniform_success": 208,
+    "closed_endpair_cells": 12,
+    "endpair_distinct_sources_repaired": 3,
+    "endpair_failed_leaves": 2,
+    "endpair_leaves": 25,
+    "endpair_uniform_success": 23
+  },
+  "endpair_partition": [
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              3,
+              9,
+              1
+            ]
+          ],
+          "name": "h2_cx_3c",
+          "words": [
+            [
+              10,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            [
+              10,
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              1,
+              8,
+              9
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              1,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              3,
+              9,
+              0
+            ]
+          ],
+          "name": "h2_cx_c3",
+          "words": [
+            [
+              1,
+              2,
+              0,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              1,
+              2,
+              0,
+              3,
+              9,
+              10,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              0,
+              1,
+              2,
+              3,
+              9,
+              10,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        2,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 14,
+          "guards": [],
+          "name": "h2_xc",
+          "words": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              10,
+              8,
+              9
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              10,
+              8,
+              1,
+              9
+            ],
+            [
+              0,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              1,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        2,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h3_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 12,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ],
+          "name": "h3_backward_4b",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 12,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ],
+          "name": "h3_backward_b4",
+          "words": [
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2,
+              3
+            ],
+            [
+              1,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        3,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h3_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 12,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              0
+            ]
+          ],
+          "name": "h3_backward_4b",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 12,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ],
+            [
+              1,
+              4,
+              1
+            ]
+          ],
+          "name": "h3_backward_b4",
+          "words": [
+            [
+              0,
+              1,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2,
+              3
+            ],
+            [
+              1,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              0,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        3,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h4_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h4_backward",
+          "words": [
+            [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        4,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h4_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h4_backward",
+          "words": [
+            [
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              2,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        4,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h5_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h5_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        5,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h5_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              0,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h5_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        5,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h6_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              0,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              0,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h6_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        6,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h6_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              0,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              0,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h6_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        6,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h7_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              0,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              0,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h7_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        7,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "leaves": [
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              1
+            ]
+          ],
+          "name": "h7_forward",
+          "words": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              3,
+              4,
+              5,
+              6,
+              0,
+              7,
+              8,
+              9,
+              10,
+              2
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              0,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "dimension": 13,
+          "guards": [
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "name": "h7_backward",
+          "words": [
+            [
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              0,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        }
+      ],
+      "ports": [
+        7,
+        8,
+        9
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    }
+  ],
+  "failed_old_leaves": [
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 3
+        }
+      ],
+      "distinct_blue_union_sources": 1,
+      "guards": [],
+      "kind": "base",
+      "middle_open": false,
+      "old_ledger": "closed_one",
+      "ports": [
+        3,
+        4,
+        7
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 3
+        }
+      ],
+      "distinct_blue_union_sources": 1,
+      "guards": [],
+      "kind": "base",
+      "middle_open": false,
+      "old_ledger": "closed_one",
+      "ports": [
+        3,
+        5,
+        7
+      ],
+      "source_dimension": 14,
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 3
+        }
+      ],
+      "distinct_blue_union_sources": 1,
+      "guards": [],
+      "kind": "base",
+      "middle_open": false,
+      "old_ledger": "closed_zero",
+      "ports": [
+        4,
+        6,
+        7
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 3
+        }
+      ],
+      "distinct_blue_union_sources": 1,
+      "guards": [],
+      "kind": "base",
+      "middle_open": false,
+      "old_ledger": "closed_zero",
+      "ports": [
+        5,
+        6,
+        7
+      ],
+      "source_dimension": 14,
+      "x_to_c": false
+    },
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 2
+        }
+      ],
+      "distinct_blue_union_sources": 1,
+      "guards": [
+        [
+          1,
+          3,
+          0
+        ]
+      ],
+      "kind": "endpair",
+      "middle_open": false,
+      "old_ledger": "h6_backward",
+      "ports": [
+        6,
+        8,
+        9
+      ],
+      "source_dimension": 13,
+      "x_to_c": true
+    },
+    {
+      "blue_loci": [
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 2
+        },
+        {
+          "dimension": 0,
+          "sources": 1,
+          "step": 3
+        }
+      ],
+      "distinct_blue_union_sources": 2,
+      "guards": [
+        [
+          1,
+          3,
+          1
+        ]
+      ],
+      "kind": "endpair",
+      "middle_open": false,
+      "old_ledger": "h7_forward",
+      "ports": [
+        7,
+        8,
+        9
+      ],
+      "source_dimension": 13,
+      "x_to_c": false
+    }
+  ],
+  "independent_solver_controls": {
+    "brute_assignments_per_system": 64,
+    "consistent_systems": 51,
+    "inconsistent_systems": 45,
+    "raw_systems": 96
+  },
+  "input_sha256": "ffdefbd3854d11afabaabe14e341b8f5f3e480798a8e09b8acf4554e68ff177c",
+  "literal_marked_sources": 3670016,
+  "literal_repairs": [
+    {
+      "literal_target_rows": [
+        1178,
+        620,
+        217,
+        1456,
+        866,
+        709,
+        1417,
+        1810,
+        551,
+        1101,
+        310
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            3,
+            5,
+            6,
+            9
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              10,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            870,
+            1428,
+            1832,
+            595,
+            1189,
+            1354,
+            662,
+            301,
+            1624,
+            1202,
+            201
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            7,
+            8,
+            10
+          ],
+          "actual_last_outports": [
+            3,
+            4,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              7,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            152,
+            621,
+            217,
+            1456,
+            866,
+            709,
+            1417,
+            1810,
+            551,
+            1101,
+            311
+          ],
+          "word": [
+            1,
+            3,
+            4,
+            5,
+            2,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            3,
+            4,
+            7,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            3,
+            6,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              3
+            ],
+            "reflected_ordered_pair": [
+              8,
+              10
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            870,
+            1432,
+            1858,
+            597,
+            1189,
+            1294,
+            690,
+            301,
+            1624,
+            1202,
+            201
+          ],
+          "word": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            2,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "old_ledger": "closed_one",
+      "old_words": [
+        [
+          9,
+          1,
+          10,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          10,
+          9,
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "ports": [
+        3,
+        4,
+        7
+      ],
+      "source_rows": [
+        870,
+        1428,
+        1832,
+        595,
+        1189,
+        1354,
+        662,
+        301,
+        1624,
+        1202,
+        201
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1194,
+        684,
+        345,
+        1712,
+        355,
+        1732,
+        395,
+        1812,
+        555,
+        1109,
+        342
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            3,
+            5,
+            7,
+            9
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              10,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            854,
+            1364,
+            1704,
+            339,
+            1700,
+            331,
+            1684,
+            299,
+            1620,
+            1194,
+            169
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            6,
+            8,
+            10
+          ],
+          "actual_last_outports": [
+            3,
+            5,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              6
+            ],
+            "reflected_ordered_pair": [
+              6,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            168,
+            685,
+            345,
+            1712,
+            355,
+            1732,
+            395,
+            1812,
+            555,
+            1109,
+            343
+          ],
+          "word": [
+            1,
+            3,
+            4,
+            5,
+            2,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            3,
+            5,
+            7,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            3,
+            5,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              3
+            ],
+            "reflected_ordered_pair": [
+              8,
+              10
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            854,
+            1368,
+            1730,
+            341,
+            1700,
+            271,
+            1712,
+            299,
+            1620,
+            1194,
+            169
+          ],
+          "word": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            2,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "old_ledger": "closed_one",
+      "old_words": [
+        [
+          9,
+          1,
+          10,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          10,
+          9,
+          1,
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          0,
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "ports": [
+        3,
+        5,
+        7
+      ],
+      "source_rows": [
+        854,
+        1364,
+        1704,
+        339,
+        1700,
+        331,
+        1684,
+        299,
+        1620,
+        1194,
+        169
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1234,
+        844,
+        665,
+        1329,
+        1634,
+        199,
+        1420,
+        794,
+        565,
+        1129,
+        422
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            3,
+            6,
+            8,
+            9
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              10,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            814,
+            1204,
+            1384,
+            722,
+            421,
+            1864,
+            659,
+            1317,
+            1610,
+            1174,
+            89
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            5,
+            7,
+            10
+          ],
+          "actual_last_outports": [
+            4,
+            6,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              3
+            ],
+            "reflected_ordered_pair": [
+              10,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            208,
+            845,
+            665,
+            1329,
+            1634,
+            199,
+            1420,
+            794,
+            565,
+            1129,
+            423
+          ],
+          "word": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            2,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            6,
+            7,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            3,
+            4,
+            6
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              4
+            ],
+            "reflected_ordered_pair": [
+              7,
+              10
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            814,
+            1208,
+            1442,
+            724,
+            421,
+            1864,
+            535,
+            1377,
+            1610,
+            1174,
+            89
+          ],
+          "word": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            2,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "old_ledger": "closed_zero",
+      "old_words": [
+        [
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1,
+          10,
+          0
+        ],
+        [
+          10,
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1,
+          0
+        ],
+        [
+          0,
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "ports": [
+        4,
+        6,
+        7
+      ],
+      "source_rows": [
+        814,
+        1204,
+        1384,
+        722,
+        421,
+        1864,
+        659,
+        1317,
+        1610,
+        1174,
+        89
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1250,
+        908,
+        793,
+        1585,
+        1123,
+        1222,
+        398,
+        796,
+        569,
+        1137,
+        454
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            3,
+            7,
+            8,
+            9
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              10,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            798,
+            1140,
+            1256,
+            466,
+            932,
+            841,
+            1681,
+            1315,
+            1606,
+            1166,
+            57
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            5,
+            6,
+            10
+          ],
+          "actual_last_outports": [
+            5,
+            6,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              6,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            224,
+            909,
+            793,
+            1585,
+            1123,
+            1222,
+            398,
+            796,
+            569,
+            1137,
+            455
+          ],
+          "word": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            2,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            5,
+            6,
+            7,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              4,
+              10
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            798,
+            1144,
+            1378,
+            468,
+            932,
+            841,
+            1681,
+            1063,
+            1730,
+            1166,
+            57
+          ],
+          "word": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            7,
+            2,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "old_ledger": "closed_zero",
+      "old_words": [
+        [
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1,
+          10,
+          0
+        ],
+        [
+          10,
+          9,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1,
+          0
+        ],
+        [
+          0,
+          10,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "ports": [
+        5,
+        6,
+        7
+      ],
+      "source_rows": [
+        798,
+        1140,
+        1256,
+        466,
+        932,
+        841,
+        1681,
+        1315,
+        1606,
+        1166,
+        57
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1858,
+        1676,
+        1433,
+        817,
+        1059,
+        199,
+        414,
+        793,
+        562,
+        1140,
+        488
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            3,
+            7,
+            9,
+            10
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              4
+            ],
+            "reflected_ordered_pair": [
+              8,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            190,
+            372,
+            616,
+            1234,
+            996,
+            1864,
+            1665,
+            1318,
+            1613,
+            1163,
+            23
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            4,
+            5,
+            6,
+            8
+          ],
+          "actual_last_outports": [
+            6,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              5
+            ],
+            "reflected_ordered_pair": [
+              8,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            832,
+            1677,
+            1433,
+            817,
+            1059,
+            199,
+            414,
+            793,
+            562,
+            1140,
+            489
+          ],
+          "word": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            2,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            6,
+            8,
+            9,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              5
+            ],
+            "reflected_ordered_pair": [
+              2,
+              10
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            190,
+            376,
+            674,
+            1236,
+            996,
+            1864,
+            1541,
+            1378,
+            1613,
+            1163,
+            23
+          ],
+          "word": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6,
+            2,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        true,
+        false
+      ],
+      "old_ledger": "h6_backward",
+      "old_words": [
+        [
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          0,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "ports": [
+        6,
+        8,
+        9
+      ],
+      "source_rows": [
+        190,
+        372,
+        616,
+        1234,
+        996,
+        1864,
+        1665,
+        1318,
+        1613,
+        1163,
+        23
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1922,
+        1892,
+        1609,
+        1043,
+        807,
+        589,
+        153,
+        318,
+        620,
+        1224,
+        496
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            0,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "actual_last_outports": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              5
+            ],
+            "reflected_ordered_pair": [
+              7,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            126,
+            156,
+            440,
+            1008,
+            1248,
+            1474,
+            1926,
+            1793,
+            1555,
+            1079,
+            15
+          ],
+          "word": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            3,
+            4,
+            7
+          ],
+          "actual_last_outports": [
+            7,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              4,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            896,
+            1893,
+            1609,
+            1043,
+            807,
+            589,
+            153,
+            318,
+            620,
+            1224,
+            497
+          ],
+          "word": [
+            1,
+            5,
+            6,
+            7,
+            2,
+            3,
+            4,
+            8,
+            9,
+            10,
+            0
+          ]
+        },
+        {
+          "actual_first_inports": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              2
+            ],
+            "reflected_ordered_pair": [
+              2,
+              10
+            ]
+          },
+          "literal_twin_pairs": [
+            [
+              4,
+              5
+            ]
+          ],
+          "source_rows": [
+            126,
+            184,
+            314,
+            1008,
+            1472,
+            1488,
+            1926,
+            1541,
+            1667,
+            1079,
+            15
+          ],
+          "word": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            2,
+            3,
+            4,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        true,
+        false
+      ],
+      "old_ledger": "h7_forward",
+      "old_words": [
+        [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          2
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "ports": [
+        7,
+        8,
+        9
+      ],
+      "source_rows": [
+        126,
+        156,
+        440,
+        1008,
+        1248,
+        1474,
+        1926,
+        1793,
+        1555,
+        1079,
+        15
+      ],
+      "target_twin_pairs": []
+    },
+    {
+      "literal_target_rows": [
+        1922,
+        1828,
+        1577,
+        1075,
+        103,
+        961,
+        143,
+        286,
+        604,
+        1240,
+        496
+      ],
+      "new_steps": [
+        {
+          "actual_first_inports": [
+            7,
+            8,
+            9,
+            10
+          ],
+          "actual_last_outports": [
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              5
+            ],
+            "reflected_ordered_pair": [
+              7,
+              1
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            126,
+            220,
+            472,
+            976,
+            1952,
+            1102,
+            1936,
+            1825,
+            1571,
+            1063,
+            15
+          ],
+          "word": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            1
+          ]
+        },
+        {
+          "actual_first_inports": [
+            2,
+            6,
+            7,
+            8,
+            9
+          ],
+          "actual_last_outports": [
+            0,
+            5,
+            8,
+            9
+          ],
+          "black_witness": {
+            "arc_values": [
+              0,
+              1
+            ],
+            "ordered_pair": [
+              0,
+              3
+            ],
+            "reflected_ordered_pair": [
+              1,
+              9
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            1924,
+            801,
+            1578,
+            1075,
+            103,
+            961,
+            143,
+            286,
+            604,
+            1240,
+            498
+          ],
+          "word": [
+            3,
+            4,
+            0,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            1
+          ]
+        },
+        {
+          "actual_first_inports": [
+            0,
+            1,
+            5,
+            10
+          ],
+          "actual_last_outports": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "black_witness": {
+            "arc_values": [
+              1,
+              0
+            ],
+            "ordered_pair": [
+              0,
+              3
+            ],
+            "reflected_ordered_pair": [
+              10,
+              8
+            ]
+          },
+          "literal_twin_pairs": [],
+          "source_rows": [
+            110,
+            220,
+            496,
+            980,
+            1921,
+            1114,
+            1936,
+            1825,
+            1571,
+            1063,
+            15
+          ],
+          "word": [
+            3,
+            4,
+            0,
+            1,
+            2,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        }
+      ],
+      "old_blue_flags": [
+        false,
+        false,
+        true
+      ],
+      "old_ledger": "h7_forward",
+      "old_words": [
+        [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          2
+        ],
+        [
+          1,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10,
+          2
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          0,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "ports": [
+        7,
+        8,
+        9
+      ],
+      "source_rows": [
+        126,
+        220,
+        472,
+        976,
+        1952,
+        1102,
+        1936,
+        1825,
+        1571,
+        1063,
+        15
+      ],
+      "target_twin_pairs": []
+    }
+  ],
+  "method": "independent raw forward-pair Gaussian; exact source partitions and complete singleton union; actual arc replay",
+  "order7_hostile": {
+    "black_paths": 0,
+    "directed_paths": 9,
+    "permutations_tested": 5040,
+    "source": [
+      6,
+      4,
+      8,
+      19,
+      103,
+      79,
+      15
+    ],
+    "target": [
+      122,
+      124,
+      121,
+      112,
+      32,
+      64,
+      16
+    ]
+  },
+  "scope": "FINITE-EXACT full marked directed closed blue endpoint-four closure at order11; combined with audited n>=12 yields n>=11. Optimal threshold and whole black-core connectivity remain open.",
+  "source_dimensions": {
+    "14": 224
+  },
+  "status": "PASS",
+  "transient_clone_control": {
+    "ordered_clone_block": [
+      5,
+      4
+    ],
+    "source": [
+      126,
+      156,
+      440,
+      1008,
+      1248,
+      1474,
+      1926,
+      1793,
+      1555,
+      1079,
+      15
+    ],
+    "state_after_two_moves": [
+      126,
+      184,
+      314,
+      1008,
+      1472,
+      1488,
+      1926,
+      1541,
+      1667,
+      1079,
+      15
+    ],
+    "target": [
+      1922,
+      1892,
+      1609,
+      1043,
+      807,
+      589,
+      153,
+      318,
+      620,
+      1224,
+      496
+    ],
+    "target_twin_pairs": []
+  }
+}

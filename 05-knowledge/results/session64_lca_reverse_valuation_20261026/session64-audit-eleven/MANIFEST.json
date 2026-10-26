@@ -1,0 +1,35 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 7641,
+      "sha256": "f32004362e52edccae974255fc49b7fafc844b913b7e66a7f0952174e49c9b6a"
+    },
+    "check.py": {
+      "bytes": 18332,
+      "sha256": "a5413d8aa8c58a1936ce575b407d3ab7c6055cd7bf0b1ff1b79d0bb2b1010b92"
+    },
+    "found.json": {
+      "bytes": 4931,
+      "sha256": "ffdefbd3854d11afabaabe14e341b8f5f3e480798a8e09b8acf4554e68ff177c"
+    },
+    "normal.json": {
+      "bytes": 57256,
+      "sha256": "959e5be0b6139cbbbaf7c10d145a8da7f884c19ff70781e8db5f46344fe78040"
+    },
+    "optimized.json": {
+      "bytes": 57256,
+      "sha256": "959e5be0b6139cbbbaf7c10d145a8da7f884c19ff70781e8db5f46344fe78040"
+    }
+  },
+  "independence": "No producer code imports; independent raw Gaussian equations and actual literal arc replay. Seven data certificates are the complete decoded blue-locus union.",
+  "normal_optimized_identical": true,
+  "predecessor_independent_checker_sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761",
+  "predecessor_independent_manifest_sha256": "02f19be02053ac16736ce758d3df07104e3ccaa0ca039e182f2417cca2896763",
+  "reproduction": [
+    "python3 check.py > normal.json",
+    "python3 -O check.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "scope": "Complete finite marked directed closed blue endpoint-four closure at order11; combined with sealed n>=12 gives n>=11; no threshold optimality or whole black-core connectivity claim",
+  "status": "SEALED PASS"
+}

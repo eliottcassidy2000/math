@@ -1,8 +1,10 @@
 # Session 64: exact endpoint repairs and reverse valuation
 
-2026-10-26. **First audited checkpoint: closed marked endpoint-four repairs.**
-The reverse-valuation and broader inheritance lanes are not part of this first
-checkpoint; they require their own independent audit and later release.
+2026-10-26. **Second audited checkpoint: n >= 11 endpoint repairs, reverse
+valuation and exact dynamics.** The original checkpoint below is preserved
+as its n >= 12 milestone; the separately audited order-11 extension strengthens
+that local threshold. Newton compression and the final synthesis remain for
+a later checkpoint.
 
 ## Result and exact boundary
 
@@ -63,3 +65,47 @@ reconstructs the equations independently without importing that engine.
 Source references to other research packets denote their repository paths,
 not new discoveries. Proved scope, finite certificates, and the still-open
 connectivity/counting questions remain distinct.
+
+## Second checkpoint: stronger head and exact valuation carriers
+
+- **Closed marked endpoint-four now n >= 11:** [order-11 producer](session64-repairs/next11/README.md)
+  and [independent audit](session64-audit-eleven/AUDIT.md) cover all 224 source
+  cells. Seven exhaustive exceptional sources have 21 literal black moves.
+  The transient ordered clone block `(5,4)` forms and splits under actual
+  operations; it is not suppressed by a clone-free assumption. This checkpoint
+  does not claim threshold optimality or full black-core connectivity.
+- **Unrestricted ordinary A000568 reverse pass:** [implementation](session64-counting/REVERSE_IMPLEMENTATION.md)
+  and [audit](session64-audit-counting/REVERSE_AUDIT.md) retain the complete
+  structurally reachable ordinary state DAG, exact merged integer weights,
+  suffix-minimum potential and requested normalized binary precision.
+  Arithmetic budget filtering is not a new structural quotient.
+- **Smaller direct DAG:** [forced-skip contraction](session64-counting/SKIP_CONTRACTION.md)
+  and [audit](session64-audit-counting/CONTRACTION_AUDIT.md) remove only
+  deterministic unaffordable/early-terminal unit-zero-cost chains. Active
+  stage and defect information remain; arbitrary zero batches cannot be erased.
+- **Punctured valuation coding, LCA and guarded debt:** [dynamics proof](session64-reverse-valuation/REPORT.md)
+  and [audit](session64-audit-dynamics/REPORT.md) distinguish the full countable
+  valuation shift on the nonsingular odd 2-adic domain from positive-integer
+  admissibility. The macro/odd-section/native-machine clocks remain distinct.
+  Neither Collatz convergence nor Antihydra blank-tape halting is proved.
+
+The dynamics term “reverse” and the counting reverse potential refer to
+separate carriers; no mathematical identification is inferred from that word.
+Some exact source prose has deliberately retained its original relative link
+context. Use the [source-link index](SOURCE_LINK_INDEX.md), rather than assuming
+all links inside archived prose are relative to its new nested location.
+The full producer counting checksum list also names the unreleased Newton
+lane; selected release bytes are pinned in [the second copy receipt](SECOND_SOURCE_VERIFICATION.json).
+
+Additional portable commands (same P as above; repeat with `-O` after `-B`):
+
+```sh
+python3 -B "$P/session64-repairs/next11/check.py"
+python3 -B "$P/session64-audit-eleven/check.py"
+python3 -B "$P/session64-counting/reverse_ordinary.py" --repo "$PWD"
+python3 -B "$P/session64-counting/contracted_ordinary.py"
+python3 -B "$P/session64-audit-counting/audit_reverse.py"
+python3 -B "$P/session64-audit-counting/audit_contraction.py"
+python3 -B "$P/session64-reverse-valuation/check_valuation.py"
+python3 -B "$P/session64-audit-dynamics/audit.py"
+```

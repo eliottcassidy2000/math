@@ -1,0 +1,364 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 10,
+  "successful_runs": 20,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "session64-repairs/check.py",
+      "mode": "normal",
+      "source_sha256": "2004c55c07a00b60eda8db0a91d5f31d6f09ee43adcc7ed7f96d2ee120011641",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-repairs/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.522029,
+      "stdout_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-repairs/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-repairs/check.py",
+      "mode": "normal",
+      "source_sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-audit-repairs/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 7.836198,
+      "stdout_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-repairs/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-repairs/next11/check.py",
+      "mode": "normal",
+      "source_sha256": "d66f0be69ad9b3f353c57dbe8669cdce6cf566d3872f67ddc3860e324d201aaa",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-repairs/next11/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.392692,
+      "stdout_sha256": "af2fe38a5a314e5c0ea6b3d84f59220a30e0127b14b01bf344ea02a89b6f6ed1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-repairs/next11/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-eleven/check.py",
+      "mode": "normal",
+      "source_sha256": "a5413d8aa8c58a1936ce575b407d3ab7c6055cd7bf0b1ff1b79d0bb2b1010b92",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-audit-eleven/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.756717,
+      "stdout_sha256": "959e5be0b6139cbbbaf7c10d145a8da7f884c19ff70781e8db5f46344fe78040",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-eleven/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-counting/reverse_ordinary.py",
+      "mode": "normal",
+      "source_sha256": "04d8ac415d8bfec7dd818702e4cee8e718c528248f4f3da2cd100d89e7496312",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-counting/reverse_ordinary.py",
+        "--repo",
+        "/workspace/scratch/07d5532f2fce/session64-repo"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.2472,
+      "stdout_sha256": "990c33f58129a96015709e0bb3641d4de86bfe996b637fc37fcb585fa0280811",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-counting/reverse-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-counting/contracted_ordinary.py",
+      "mode": "normal",
+      "source_sha256": "63b45349cacb5eb9312c6f98a02e0e459a4e478b6319e6f87005b4c6211fd37a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-counting/contracted_ordinary.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.093645,
+      "stdout_sha256": "f5c5e16aa6484b6cbbc823df71a4485f3941c32cc2682752139af4b1e4e9ea2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-counting/contracted-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-counting/audit_reverse.py",
+      "mode": "normal",
+      "source_sha256": "b62c377b835eb6f170d187fb30ed2b552818114991058e0bbbdb12a622755263",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-audit-counting/audit_reverse.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 12.385701,
+      "stdout_sha256": "53b0e895d2c9fbed0a351f637309556c6e1ac943c8fb669fdbc235bc67eb7e87",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-counting/audit-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-counting/audit_contraction.py",
+      "mode": "normal",
+      "source_sha256": "7bfa7b3e39e5544c703083eb8578b7568d5040123166e3e82d53455db0c2507a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-audit-counting/audit_contraction.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.417993,
+      "stdout_sha256": "bb24858217d555c9fd3518e2de84a1e6ecd173bc072e70db4f4ea24d122d7db6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-counting/contraction-audit-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-reverse-valuation/check_valuation.py",
+      "mode": "normal",
+      "source_sha256": "97743626055018e7d8f877753bafb2d2b1a333eb13e3dee23bd5aed616954465",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-reverse-valuation/check_valuation.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.28385,
+      "stdout_sha256": "e9fc0d6f0956bf7c10cef00a6a86652f0ec15ea76b482d59b529d520807e344d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-reverse-valuation/report.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-dynamics/audit.py",
+      "mode": "normal",
+      "source_sha256": "bab1979169d1944df5af8a6be44a7e1804cd28f7a7f2e3725fc2674cd1f05af6",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/normal-1a0i1554/packet/session64-audit-dynamics/audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.608236,
+      "stdout_sha256": "660b1ccd47a777a00b52f737c65877f1fdf94b4bea5293b1869b4c3a256b44c8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-dynamics/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-repairs/check.py",
+      "mode": "optimized",
+      "source_sha256": "2004c55c07a00b60eda8db0a91d5f31d6f09ee43adcc7ed7f96d2ee120011641",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-repairs/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.347892,
+      "stdout_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-repairs/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-repairs/check.py",
+      "mode": "optimized",
+      "source_sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-audit-repairs/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 8.244347,
+      "stdout_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-repairs/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-repairs/next11/check.py",
+      "mode": "optimized",
+      "source_sha256": "d66f0be69ad9b3f353c57dbe8669cdce6cf566d3872f67ddc3860e324d201aaa",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-repairs/next11/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.748481,
+      "stdout_sha256": "af2fe38a5a314e5c0ea6b3d84f59220a30e0127b14b01bf344ea02a89b6f6ed1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-repairs/next11/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-eleven/check.py",
+      "mode": "optimized",
+      "source_sha256": "a5413d8aa8c58a1936ce575b407d3ab7c6055cd7bf0b1ff1b79d0bb2b1010b92",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-audit-eleven/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.93422,
+      "stdout_sha256": "959e5be0b6139cbbbaf7c10d145a8da7f884c19ff70781e8db5f46344fe78040",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-eleven/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-counting/reverse_ordinary.py",
+      "mode": "optimized",
+      "source_sha256": "04d8ac415d8bfec7dd818702e4cee8e718c528248f4f3da2cd100d89e7496312",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-counting/reverse_ordinary.py",
+        "--repo",
+        "/workspace/scratch/07d5532f2fce/session64-repo"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.797909,
+      "stdout_sha256": "990c33f58129a96015709e0bb3641d4de86bfe996b637fc37fcb585fa0280811",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-counting/reverse-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-counting/contracted_ordinary.py",
+      "mode": "optimized",
+      "source_sha256": "63b45349cacb5eb9312c6f98a02e0e459a4e478b6319e6f87005b4c6211fd37a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-counting/contracted_ordinary.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 3.668784,
+      "stdout_sha256": "f5c5e16aa6484b6cbbc823df71a4485f3941c32cc2682752139af4b1e4e9ea2f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-counting/contracted-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-counting/audit_reverse.py",
+      "mode": "optimized",
+      "source_sha256": "b62c377b835eb6f170d187fb30ed2b552818114991058e0bbbdb12a622755263",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-audit-counting/audit_reverse.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 11.998894,
+      "stdout_sha256": "53b0e895d2c9fbed0a351f637309556c6e1ac943c8fb669fdbc235bc67eb7e87",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-counting/audit-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-counting/audit_contraction.py",
+      "mode": "optimized",
+      "source_sha256": "7bfa7b3e39e5544c703083eb8578b7568d5040123166e3e82d53455db0c2507a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-audit-counting/audit_contraction.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 4.150648,
+      "stdout_sha256": "bb24858217d555c9fd3518e2de84a1e6ecd173bc072e70db4f4ea24d122d7db6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-counting/contraction-audit-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-reverse-valuation/check_valuation.py",
+      "mode": "optimized",
+      "source_sha256": "97743626055018e7d8f877753bafb2d2b1a333eb13e3dee23bd5aed616954465",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-reverse-valuation/check_valuation.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.047125,
+      "stdout_sha256": "e9fc0d6f0956bf7c10cef00a6a86652f0ec15ea76b482d59b529d520807e344d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-reverse-valuation/report.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session64-audit-dynamics/audit.py",
+      "mode": "optimized",
+      "source_sha256": "bab1979169d1944df5af8a6be44a7e1804cd28f7a7f2e3725fc2674cd1f05af6",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session64-publication/replay-scratch/optimized-mbn94kud/packet/session64-audit-dynamics/audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.641914,
+      "stdout_sha256": "660b1ccd47a777a00b52f737c65877f1fdf94b4bea5293b1869b4c3a256b44c8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session64-audit-dynamics/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    }
+  ]
+}

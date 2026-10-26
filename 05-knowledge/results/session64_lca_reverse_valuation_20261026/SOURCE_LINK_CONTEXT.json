@@ -1,0 +1,32 @@
+{
+  "session64-counting/REVERSE_IMPLEMENTATION.md": {
+    "source_sha256": "b1b689eda6aa50774830b69527f0cd103757130e31c5e1080c508b6cc284063a",
+    "repository_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REVERSE_IMPLEMENTATION.md",
+    "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+    "kind": "Original intended result-root link context; relocated source prose is preserved exactly"
+  },
+  "session64-reverse-valuation/REPORT.md": {
+    "source_sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+    "repository_context": "05-knowledge/results/session64_lca_reverse_valuation_20261026/REPORT.md",
+    "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+    "kind": "Original intended result-root link context; relocated source prose is preserved exactly"
+  },
+  "session64-audit-dynamics/prior-valuation-lca.md": {
+    "source_sha256": "cd7d016bf0b901ad8b645c6705a65a99ae911db49899db79cbf45a1a98536430",
+    "repository_context": "05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md",
+    "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+    "kind": "Exact historical repository snapshot"
+  },
+  "session64-audit-dynamics/prior-debt-range.md": {
+    "source_sha256": "6188dc39ea856db0d232b318fb5b4fe067517e5c651edceb8814e1f88ecdbd84",
+    "repository_context": "05-knowledge/results/session56_rmq_lca_connections_20261025/debt-range/RESULT.md",
+    "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+    "kind": "Exact historical repository snapshot"
+  },
+  "session64-audit-dynamics/prior-source-audit.md": {
+    "source_sha256": "9e797c176453f85541a7877fa7ab6beb04f08fa693ff35665b1fbd6f3e9fb6b8",
+    "repository_context": "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md",
+    "commit": "5d87c3b009e92b3a89fda58c310ecbd1feed8c5c",
+    "kind": "Exact historical repository snapshot"
+  }
+}

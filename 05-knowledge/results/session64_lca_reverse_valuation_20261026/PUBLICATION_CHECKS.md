@@ -30,3 +30,7 @@ Every replayed script and approved source hash was rechecked before release.
 checksums and local links. `FIRST_FILESET_NEGATIVE_CONTROLS.json` records
 ordinary/optimized rejection of byte mutation and an unexpected file.
 Exact-commit remote verification and CI visibility follow publication.
+
+## Second checkpoint evidence
+
+`SECOND_REPLAY_RECEIPT.json` records 10 mathematical/provenance scripts and 20 successful ordinary/optimized executions. Paired outputs match exactly, all designated saved outputs agree, and the original frozen input packet remains unchanged. Every replayed script and current approved source hash was rechecked. `SECOND_DOCS_CHECK.txt` passes the documentation gate. `SECOND_BUNDLE_CHECK.json` verifies assertion-safe Python, native checksum pins, UTF-8 and local or explicitly pinned original-context links. `SECOND_FILESET_NEGATIVE_CONTROLS.json` rejects byte mutation and extra-file mutants in both Python modes. Exact remote tree/blob/mode verification and CI visibility follow the publication operation.

@@ -1,0 +1,164 @@
+{
+  "exact_count_comparisons": 54,
+  "normalized_modular_comparisons": 432,
+  "normalized_precision_bits": [
+    1,
+    8
+  ],
+  "ordinary_orders": {
+    "additional": [
+      60,
+      80,
+      100
+    ],
+    "consecutive": [
+      0,
+      50
+    ]
+  },
+  "samples": [
+    {
+      "K": 2,
+      "contracted_active_input_states": 11,
+      "contracted_active_updates": 14,
+      "contracted_edges": 398,
+      "contracted_input_states": 138,
+      "forced_vertices_removed": 74,
+      "full_active_input_states": 41,
+      "full_active_updates": 44,
+      "full_edges": 472,
+      "full_input_states": 212,
+      "n": 30,
+      "skipped_prefix_minimum_strictly_above_aggregate": 5
+    },
+    {
+      "K": 8,
+      "contracted_active_input_states": 48,
+      "contracted_active_updates": 76,
+      "contracted_edges": 398,
+      "contracted_input_states": 138,
+      "forced_vertices_removed": 74,
+      "full_active_input_states": 115,
+      "full_active_updates": 143,
+      "full_edges": 472,
+      "full_input_states": 212,
+      "n": 30,
+      "skipped_prefix_minimum_strictly_above_aggregate": 5
+    },
+    {
+      "K": 2,
+      "contracted_active_input_states": 22,
+      "contracted_active_updates": 31,
+      "contracted_edges": 2454,
+      "contracted_input_states": 648,
+      "forced_vertices_removed": 278,
+      "full_active_input_states": 149,
+      "full_active_updates": 158,
+      "full_edges": 2732,
+      "full_input_states": 926,
+      "n": 50,
+      "skipped_prefix_minimum_strictly_above_aggregate": 20
+    },
+    {
+      "K": 8,
+      "contracted_active_input_states": 134,
+      "contracted_active_updates": 210,
+      "contracted_edges": 2454,
+      "contracted_input_states": 648,
+      "forced_vertices_removed": 278,
+      "full_active_input_states": 364,
+      "full_active_updates": 440,
+      "full_edges": 2732,
+      "full_input_states": 926,
+      "n": 50,
+      "skipped_prefix_minimum_strictly_above_aggregate": 20
+    },
+    {
+      "K": 2,
+      "contracted_active_input_states": 23,
+      "contracted_active_updates": 30,
+      "contracted_edges": 5016,
+      "contracted_input_states": 1237,
+      "forced_vertices_removed": 483,
+      "full_active_input_states": 149,
+      "full_active_updates": 156,
+      "full_edges": 5499,
+      "full_input_states": 1720,
+      "n": 60,
+      "skipped_prefix_minimum_strictly_above_aggregate": 52
+    },
+    {
+      "K": 8,
+      "contracted_active_input_states": 214,
+      "contracted_active_updates": 335,
+      "contracted_edges": 5016,
+      "contracted_input_states": 1237,
+      "forced_vertices_removed": 483,
+      "full_active_input_states": 583,
+      "full_active_updates": 704,
+      "full_edges": 5499,
+      "full_input_states": 1720,
+      "n": 60,
+      "skipped_prefix_minimum_strictly_above_aggregate": 52
+    },
+    {
+      "K": 2,
+      "contracted_active_input_states": 36,
+      "contracted_active_updates": 51,
+      "contracted_edges": 16866,
+      "contracted_input_states": 3876,
+      "forced_vertices_removed": 1243,
+      "full_active_input_states": 359,
+      "full_active_updates": 374,
+      "full_edges": 18109,
+      "full_input_states": 5119,
+      "n": 80,
+      "skipped_prefix_minimum_strictly_above_aggregate": 153
+    },
+    {
+      "K": 8,
+      "contracted_active_input_states": 420,
+      "contracted_active_updates": 650,
+      "contracted_edges": 16866,
+      "contracted_input_states": 3876,
+      "forced_vertices_removed": 1243,
+      "full_active_input_states": 1178,
+      "full_active_updates": 1408,
+      "full_edges": 18109,
+      "full_input_states": 5119,
+      "n": 80,
+      "skipped_prefix_minimum_strictly_above_aggregate": 153
+    },
+    {
+      "K": 2,
+      "contracted_active_input_states": 45,
+      "contracted_active_updates": 64,
+      "contracted_edges": 47147,
+      "contracted_input_states": 10547,
+      "forced_vertices_removed": 2897,
+      "full_active_input_states": 549,
+      "full_active_updates": 568,
+      "full_edges": 50044,
+      "full_input_states": 13444,
+      "n": 100,
+      "skipped_prefix_minimum_strictly_above_aggregate": 440
+    },
+    {
+      "K": 8,
+      "contracted_active_input_states": 765,
+      "contracted_active_updates": 1161,
+      "contracted_edges": 47147,
+      "contracted_input_states": 10547,
+      "forced_vertices_removed": 2897,
+      "full_active_input_states": 2180,
+      "full_active_updates": 2576,
+      "full_edges": 50044,
+      "full_input_states": 13444,
+      "n": 100,
+      "skipped_prefix_minimum_strictly_above_aggregate": 440
+    }
+  ],
+  "scope": "Direct deterministic zero-cost unit-skip contraction only; stage remains at every active branching vertex. No new defect equivalence or clone-excess model.",
+  "status": "PASS",
+  "surviving_prefix_coordinate_checks": 24102
+}

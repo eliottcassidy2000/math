@@ -1,0 +1,95 @@
+{
+  "blank_antihydra_macro_prefix": {
+    "a": 9884,
+    "first_35_valuations": [
+      4,
+      2,
+      2,
+      1,
+      1,
+      4,
+      1,
+      2,
+      2,
+      2,
+      3,
+      1,
+      2,
+      1,
+      4,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1,
+      1,
+      8,
+      1,
+      2,
+      2,
+      2,
+      1,
+      4,
+      1,
+      2,
+      1,
+      3
+    ],
+    "initial_macro_states": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        6,
+        23
+      ]
+    ],
+    "min_a": 6,
+    "min_a_first_index": 0,
+    "odd_returns": 10000,
+    "reverse_requirement_for_prefix": 1,
+    "status": "FINITE_PREFIX_ONLY",
+    "valuation_csv_sha256": "99b0e9e1fcb53c64d24da5363dffc6d6a653be6d37ccc61d25a65fd88eacfb2e",
+    "valuation_sum": 19939,
+    "x_bit_length": 11669,
+    "x_sha256_hex_encoding": "4f24d6f0690f5d19c6da5c96f15a7af324d10f024bf8a75d16fb2b1498c06886"
+  },
+  "controls": {
+    "barrier_checks": 12285,
+    "branch_round_trips": 38232,
+    "cylinder_checks": 2730,
+    "exceptional_prefixes": 2730,
+    "integer_inverse_checks": 2000,
+    "isometry_pairs": 510,
+    "periodic_words": 2728,
+    "prefix_words": 1365
+  },
+  "finite_horizon_ruin_mass_a6": {
+    "1": "0",
+    "12": "671/16384",
+    "24": "28454355/536870912",
+    "48": "4100196140602453173/73786976294838206464",
+    "6": "1/64"
+  },
+  "hostiles": [
+    "zero/infinite valuation rejected",
+    "finite prefix collision is not common future",
+    "Collatz integer siblings do not transport to twisted integers",
+    "twisted positive integer barrier-hitting words 1^a",
+    "periodic words produce negative or noninteger 2-adic points",
+    "coefficient drift is not positive integer convergence"
+  ],
+  "status": "PASS"
+}
