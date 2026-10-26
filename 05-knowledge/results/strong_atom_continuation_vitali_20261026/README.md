@@ -247,9 +247,10 @@ even before later output observations, the minimum state counts are
 has only 32,272 cells. Its 496 lost states are separated by guards.
 The exact fixed-length state cost in these universes is M free bits.
 
-The all-order claim that guards alone distinguish every presentation is
-**OPEN here**. Neither the finite census nor the exponential family proves
-it. If the observation keeps only distributions under fresh uniform
+**Resolved in the continuation:** [guard reconstruction G1-G2](../guard_reconstruction_20261026/README.md)
+proves this for every finite size, using Busch's non-traceable-arc structure
+theorem. This packet's finite census and exponential family alone did not
+prove it. If the observation keeps only distributions under fresh uniform
 re-marking, a smaller stochastic quotient may exist; it answers a different
 question and must not stand in for the actual named path protocol.
 

@@ -1,6 +1,13 @@
 """
 vitali_holonomy_composition.py -- kind-pasteur-2026-03-13-S61
 
+CORRECTION 2026-10-26: the original cycle routine used trace(A**k)/k,
+which counts closed walks, not simple directed k-cycles. The routine below
+now enumerates simple cycles. The old .out is preserved with a correction
+banner; its c7 numbers and cycle-based regressions are superseded.
+Exact four-state reconstruction and guard audit:
+05-knowledge/results/guard_reconstruction_20261026/CONNECTIONS.md.
+
 Can we COMPOSE multiple Vitali atoms? If T has two overlapping
 Vitali-compatible subsets S1 and S2, what happens when we reverse both?
 
@@ -16,7 +23,7 @@ must encode dc7. Let me find the exact formula.
 """
 
 import numpy as np
-from itertools import combinations
+from itertools import combinations, permutations
 from collections import Counter, defaultdict
 
 def bits_to_adj(bits, n):
@@ -56,8 +63,15 @@ def sub_scores(A, n, subset):
     return tuple(sorted([sum(A[subset[i]][subset[j]] for j in range(k) if i != j) for i in range(k)]))
 
 def count_directed_k_cycles(A, n, k):
-    Ak = np.linalg.matrix_power(A, k)
-    return int(np.trace(Ak)) // k
+    # Fix the smallest vertex to remove rotations; opposite directions differ.
+    total = 0
+    for subset in combinations(range(n), k):
+        first = subset[0]
+        for tail in permutations(subset[1:]):
+            cycle = (first,) + tail
+            if all(A[cycle[i]][cycle[(i + 1) % k]] for i in range(k)):
+                total += 1
+    return total
 
 def find_all_vitali_subsets(A, n, L=None):
     """Find all 4-vertex subsets that form a Vitali atom."""

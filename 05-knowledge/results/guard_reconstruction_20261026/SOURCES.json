@@ -1,0 +1,141 @@
+{
+  "base_commit": "fb8722721255",
+  "status": "Targeted reading ledger, not a whole-corpus or whole-file proof audit. Historical sources are discovery material unless explicitly rechecked.",
+  "local_hash_basis": "SHA256 of UTF-8 file bytes with CRLF normalized to LF",
+  "targeted_sources": [
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "sha256": "6886bee82564bfed5cf519e51c3ba3d8807f8f160aa59d050072f15c1d4ee589"
+    },
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md",
+      "sha256": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1"
+    },
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/HISTORY.md",
+      "sha256": "9dc2028e893e6f7954e495fc34a2360e07a15a42cb01f0d2e563ac7e3b0f7fe4"
+    },
+    {
+      "path": "05-knowledge/results/vitali_atom_recovery_20261011.md",
+      "sha256": "2b1d1b87e5e7cd746ce08414d2e7f3805ed9cdc493bc7ceb1758621be1b20b0a"
+    },
+    {
+      "path": "05-knowledge/results/vitali_overlap_hidden_dim.out",
+      "sha256": "0c6359f784e16e6ca4895a70d99f3478812c883feb8d6000af5154e9c4fe648b"
+    },
+    {
+      "path": "05-knowledge/results/vitali_chirality_dimension.out",
+      "sha256": "5b3e22f75330d52029d958ca1cb0622150874d22afaba9170276b91d9ff50faa"
+    },
+    {
+      "path": "05-knowledge/results/vitali_holonomy_composition.out",
+      "sha256": "f398d9ddde3d778ec2279ac17dfdf24b927a49eb28e2ad6466b94632c6c286c2"
+    },
+    {
+      "path": "04-computation/vitali_holonomy_composition.py",
+      "sha256": "b7326c1f2b59ec1bf1180be8f0f8ee80e46bc5ee77b009689ccda4b88902bff0"
+    },
+    {
+      "path": "05-knowledge/results/graceful_factorial_fibers_20261019/GRACEFUL_FACTORIAL_FIBERS.md",
+      "sha256": "2169b1b85982fbe26a93b906c27a61aabfc7c544ecce9d901e8828bf1a18266d"
+    },
+    {
+      "path": "05-knowledge/results/graceful_square_exchange_20261019.md",
+      "sha256": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8"
+    },
+    {
+      "path": "01-canon/theorems/THM-2793-oriented-ramp-reference-and-rooted-graceful-gap-reconstruction.md",
+      "sha256": "4a3dbcc173c2245f289edd951e438f40a355f58500e48bb2dcc0e9d23ebbf314"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_ports_20261023/README.md",
+      "sha256": "515660d7eb044ce694bd43ccddc6cb45e5b2908808e2c4b633acc5c67a8eea68"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_bipartite_bridge_20261019/SQUARE_SUM_BIPARTITE_CLEANUP.md",
+      "sha256": "e1fc74b527a08345c44dfe57c209bc1285691ad2cc1d0cf28f61674b57495430"
+    },
+    {
+      "path": "05-knowledge/results/defect_transitions_20261020/petersen.md",
+      "sha256": "ff585c8d3a77dc50fe4a93f8756ada0286ce6311e23dd9a8e37eba683f9e8db3"
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/KERNELS.md",
+      "sha256": "5e7f9f13a0cd7e1f3a2f46c75f0541acd546f8bf9a5ae982c7666f7a835f7fa0"
+    },
+    {
+      "path": "05-knowledge/results/sumner_t5_petersen_collatz_20261005.md",
+      "sha256": "040ac1d922592ee1c147d852ec237b6a4662c60af45badd882f69e55ab012356"
+    },
+    {
+      "path": "05-knowledge/results/unit_path_ring_kuratowski_pythagorean_yang_mills_20261018.md",
+      "sha256": "1ed962e2c3e9b159c087316bd81516d4e16e533a0b71329d98e632670de9c6fa"
+    },
+    {
+      "path": "01-canon/theorems/THM-071-walsh-fourier-diagonalization.md",
+      "sha256": "efe4b791dbe4d451bd806318b4040de80e41986d9fef66078a504e4ce0aff534"
+    },
+    {
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+    }
+  ],
+  "primary_source": {
+    "author": "Arthur H. Busch",
+    "title": "Arc-Traceable Tournaments",
+    "type": "PhD thesis",
+    "institution": "University of Colorado at Denver",
+    "year": 2005,
+    "url": "https://digital.auraria.edu/downloads/ma7yx-pcr25/AA00005831_00001.pdf",
+    "pdf_sha256": "76c57cfb33b8ad32e7e830e811bb3a3a38d4a2eeea72416d03b45412f51cdf19",
+    "required_dependency": "Theorem 4.12(i)-(iii), printed pages45-47, PDF pages53-55",
+    "additional_passages_checked": "Proposition4.1; Theorem4.7 and proof, printed pages39,42-43, PDF pages47,50-51",
+    "novelty": "No reconstruction-priority claim; failed web search is not evidence of novelty."
+  },
+  "legacy_correction": {
+    "path": "04-computation/vitali_holonomy_composition.py",
+    "before_git_blob_sha256": "4b6f5c2a9269eaef82758b00419b27909c4fab246604b43b10d3eb7d23a84e54",
+    "after_normalized_sha256": "b7326c1f2b59ec1bf1180be8f0f8ee80e46bc5ee77b009689ccda4b88902bff0",
+    "mechanism": "trace(A^k)/k counts closed walks, not simple cycles"
+  },
+  "verification_inputs": [
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/strong-atlas.json",
+      "sha256": "f140ee49cec729f9ab172970a7ad282214ff1e0dbbc76b6bca767fbde1d7e457"
+    },
+    {
+      "path": "04-computation/vitali_holonomy_composition.py",
+      "sha256": "b7326c1f2b59ec1bf1180be8f0f8ee80e46bc5ee77b009689ccda4b88902bff0"
+    }
+  ],
+  "incoming_integration": {
+    "commit": "a8fcb1c840",
+    "status": "Read as inherited results; no separate Session70 receipts replayed by this packet.",
+    "sources": [
+      {
+        "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md",
+        "sha256": "3159646021bf7b2c2ad6025f636274a1e6f4f60df87f1728e3f2f4b095923563"
+      },
+      {
+        "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guard-audit/REPORT.md",
+        "sha256": "85059fa4b7d42c2b0a7c38174fea39e3733b308a402c836a37aac9665b8ecdd5"
+      },
+      {
+        "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-root/SYNTHESIS.md",
+        "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6"
+      },
+      {
+        "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-vitali/REPORT.md",
+        "sha256": "da137bfa8ad50378a29f963b87e7b7950b8878c4cfea79590c06783c0d4d4792"
+      },
+      {
+        "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-graph-labeling/REPORT.md",
+        "sha256": "3859b1c1e588da3945764ec840870981af9e7b5bd2f95114dedccb053f23208b"
+      }
+    ]
+  }
+}

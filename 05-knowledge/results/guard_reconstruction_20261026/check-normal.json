@@ -1,0 +1,542 @@
+{
+  "fixed_path_census": [
+    {
+      "missing_arcs": 0,
+      "n": 1,
+      "states": 1,
+      "within_strong_missing": 0
+    },
+    {
+      "missing_arcs": 0,
+      "n": 2,
+      "states": 1,
+      "within_strong_missing": 0
+    },
+    {
+      "missing_arcs": 1,
+      "n": 3,
+      "states": 2,
+      "within_strong_missing": 0
+    },
+    {
+      "missing_arcs": 3,
+      "n": 4,
+      "states": 8,
+      "within_strong_missing": 0
+    },
+    {
+      "missing_arcs": 22,
+      "n": 5,
+      "states": 64,
+      "within_strong_missing": 9
+    },
+    {
+      "missing_arcs": 127,
+      "n": 6,
+      "states": 1024,
+      "within_strong_missing": 48
+    },
+    {
+      "missing_arcs": 1178,
+      "n": 7,
+      "states": 32768,
+      "within_strong_missing": 394
+    }
+  ],
+  "graceful": [
+    {
+      "guard_classes": 1,
+      "k": 1,
+      "replacement_checks": 4,
+      "states": 2,
+      "vertices": 4
+    },
+    {
+      "guard_classes": 2,
+      "k": 2,
+      "replacement_checks": 64,
+      "states": 8,
+      "vertices": 9
+    },
+    {
+      "guard_classes": 6,
+      "k": 3,
+      "replacement_checks": 864,
+      "states": 48,
+      "vertices": 16
+    },
+    {
+      "guard_classes": 24,
+      "k": 4,
+      "replacement_checks": 12288,
+      "states": 384,
+      "vertices": 25
+    }
+  ],
+  "graphs": {
+    "K33": {
+      "directed_words": 72,
+      "undirected_cycles": 6,
+      "unoriented_paths": 36,
+      "used_edges": 9
+    },
+    "K33_routes": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        1,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        8,
+        5,
+        7
+      ],
+      [
+        9,
+        4,
+        3
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        7
+      ]
+    ],
+    "K5": {
+      "directed_words": 120,
+      "undirected_cycles": 12,
+      "unoriented_paths": 60,
+      "used_edges": 10
+    },
+    "Petersen": {
+      "directed_words": 240,
+      "undirected_cycles": 0,
+      "unoriented_paths": 120,
+      "used_edges": 15
+    },
+    "Petersen_matching_action_order": 120,
+    "Petersen_matching_complement_cycles": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "Petersen_matching_transposition_action": [
+      1,
+      0,
+      3,
+      2,
+      5,
+      4
+    ],
+    "Petersen_matchings": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          9
+        ]
+      ]
+    ],
+    "matching_cycle_matrix": [
+      [
+        3,
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        2,
+        3,
+        1,
+        2,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        3,
+        2,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        2,
+        1,
+        3,
+        2
+      ],
+      [
+        2,
+        1,
+        1,
+        2,
+        2,
+        3
+      ]
+    ],
+    "signed_frames": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "square_sum": [
+    {
+      "n": 25,
+      "paths": 10,
+      "uses_1_15": 0,
+      "without_1_15": 10,
+      "witness": null
+    },
+    {
+      "n": 27,
+      "paths": 35,
+      "uses_1_15": 17,
+      "without_1_15": 18,
+      "witness": [
+        3,
+        13,
+        12,
+        24,
+        25,
+        11,
+        14,
+        22,
+        27,
+        9,
+        16,
+        20,
+        5,
+        4,
+        21,
+        15,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        26,
+        23,
+        2,
+        7,
+        18
+      ]
+    }
+  ],
+  "vitali": {
+    "guarded_component": [
+      401896,
+      440806,
+      828520
+    ],
+    "mixed_lambda_difference": [
+      [
+        [
+          0,
+          4
+        ],
+        -2
+      ],
+      [
+        [
+          0,
+          6
+        ],
+        -2
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        2
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        2
+      ],
+      [
+        [
+          2,
+          4
+        ],
+        2
+      ],
+      [
+        [
+          3,
+          4
+        ],
+        -2
+      ],
+      [
+        [
+          3,
+          5
+        ],
+        -2
+      ],
+      [
+        [
+          3,
+          6
+        ],
+        -2
+      ],
+      [
+        [
+          4,
+          5
+        ],
+        -2
+      ]
+    ],
+    "square": [
+      {
+        "H": 141,
+        "lambda_preserved": true,
+        "mask": 401896,
+        "simple_c7": 14,
+        "trace_A7_over_7": 227
+      },
+      {
+        "H": 143,
+        "lambda_preserved": true,
+        "mask": 440806,
+        "simple_c7": 15,
+        "trace_A7_over_7": 228
+      },
+      {
+        "H": 143,
+        "lambda_preserved": true,
+        "mask": 828520,
+        "simple_c7": 15,
+        "trace_A7_over_7": 228
+      },
+      {
+        "H": 95,
+        "lambda_preserved": false,
+        "mask": 801894,
+        "simple_c7": 7,
+        "trace_A7_over_7": 154
+      }
+    ],
+    "subsets": [
+      [
+        0,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        3,
+        4,
+        6
+      ]
+    ]
+  }
+}

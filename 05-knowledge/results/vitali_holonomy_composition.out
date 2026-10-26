@@ -1,3 +1,13 @@
+HISTORICAL OUTPUT / CORRECTION 2026-10-26
+The c7 fields below used trace(A^7)/7, counting closed walks rather than
+simple directed cycles. Those fields and cycle-based regressions are
+SUPERSEDED. For the first four-state witness, the correct simple-cycle
+counts are14,15,15,7; the old trace values are227,228,228,154.
+The raw commuting reversals have a four-state orbit; the lambda-preserving
+guarded component has three states. Exact correction and reproduction:
+05-knowledge/results/guard_reconstruction_20261026/CONNECTIONS.md.
+The source routine is repaired; the historical transcript is retained below.
+
 ============================================================
 MULTIPLE VITALI ATOMS AND COMPOSITION
 ============================================================

@@ -1,0 +1,145 @@
+{
+  "81_27_control": {
+    "H": [
+      462915,
+      462915
+    ],
+    "same_labelled_cyclic_triples": 67,
+    "trace_supports_differ": true
+  },
+  "Petersen_matchings": 6,
+  "all_labelled": [
+    {
+      "missing": 0,
+      "n": 1,
+      "states": 1
+    },
+    {
+      "missing": 0,
+      "n": 2,
+      "states": 2
+    },
+    {
+      "missing": 6,
+      "n": 3,
+      "states": 8
+    },
+    {
+      "missing": 72,
+      "n": 4,
+      "states": 64
+    },
+    {
+      "missing": 1120,
+      "n": 5,
+      "states": 1024
+    }
+  ],
+  "fixed_path_six": {
+    "missing": 127,
+    "states": 1024
+  },
+  "legacy_cycle_correction": [
+    {
+      "H": 141,
+      "mask": 401896,
+      "simple_cycles_3_to_7": [
+        12,
+        18,
+        30,
+        26,
+        14
+      ]
+    },
+    {
+      "H": 143,
+      "mask": 440806,
+      "simple_cycles_3_to_7": [
+        12,
+        18,
+        30,
+        26,
+        15
+      ]
+    },
+    {
+      "H": 143,
+      "mask": 828520,
+      "simple_cycles_3_to_7": [
+        12,
+        18,
+        30,
+        26,
+        15
+      ]
+    },
+    {
+      "H": 95,
+      "mask": 801894,
+      "simple_cycles_3_to_7": [
+        10,
+        15,
+        18,
+        16,
+        7
+      ]
+    }
+  ],
+  "random_samples": [
+    {
+      "n": 8,
+      "states": 20
+    },
+    {
+      "n": 9,
+      "states": 20
+    },
+    {
+      "n": 10,
+      "states": 20
+    },
+    {
+      "n": 11,
+      "states": 20
+    },
+    {
+      "n": 12,
+      "states": 20
+    }
+  ],
+  "random_seed": 20261026729,
+  "strong_seven": {
+    "classes": 353,
+    "missing": 11
+  },
+  "upset_family": [
+    {
+      "missing": 1,
+      "n": 5
+    },
+    {
+      "missing": 3,
+      "n": 7
+    },
+    {
+      "missing": 6,
+      "n": 9
+    },
+    {
+      "missing": 10,
+      "n": 11
+    },
+    {
+      "missing": 15,
+      "n": 13
+    },
+    {
+      "missing": 21,
+      "n": 15
+    },
+    {
+      "missing": 28,
+      "n": 17
+    }
+  ]
+}

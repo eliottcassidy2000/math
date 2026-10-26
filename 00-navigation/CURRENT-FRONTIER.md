@@ -195,7 +195,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 ## Tournaments
 
-- [S67](S67.md); [S68](S68.md); [S69](S69.md); [Named guards CLOSED](S70.md); [HN](HN.md); [Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md); [Atoms](../05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md).
+- [S67](S67.md); [S68](S68.md); [S69](S69.md); [Named guards CLOSED](S70.md); [HN](HN.md); [Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md); [Guards](../05-knowledge/results/guard_reconstruction_20261026/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.
 - [Classification](../05-knowledge/results/tournament_composition_classification_20261026/README.md): THM-4803 repair, 4p onset, Sylow towers. [Charts](../05-knowledge/results/rank_geometry_metagraph_20261026/README.md), [ports](../05-knowledge/results/lca_ports_reverse_20261025/README.md): connectivity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
