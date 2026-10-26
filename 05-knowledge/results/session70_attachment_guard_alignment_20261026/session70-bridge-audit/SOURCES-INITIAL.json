@@ -1,0 +1,44 @@
+{
+  "graph_prose_frozen_in_this_initial_audit": false,
+  "inherited": [
+    {
+      "commit": "fb872272125510c317b8114dd3f697b433c595f9",
+      "git_blob": "594680d1a428fcfd1eab33cf1cddf22a98c41821",
+      "local_snapshot": "inherited/README.md",
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a"
+    },
+    {
+      "commit": "fb872272125510c317b8114dd3f697b433c595f9",
+      "git_blob": "c56096765b00934a25b22c604e0938e4e38c5bcd",
+      "local_snapshot": "inherited/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "path": "01-canon/theorems/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346"
+    },
+    {
+      "commit": "fb872272125510c317b8114dd3f697b433c595f9",
+      "git_blob": "e75b6c8517878e07ec73336c877d3adfc8e21485",
+      "local_snapshot": "inherited/THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "path": "01-canon/theorems/THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "sha256": "96a42fde86f56e976dcc159f43a8dbe084842f9a24b0d9895dd3c0aeb274c71c"
+    }
+  ],
+  "reviewed_vitali": [
+    {
+      "path": "session70-vitali/REPORT.md",
+      "sha256": "da137bfa8ad50378a29f963b87e7b7950b8878c4cfea79590c06783c0d4d4792"
+    },
+    {
+      "path": "session70-vitali/check_alignment_moments.py",
+      "sha256": "e3836182474bf9a336c148f73ab1fb24640bef79cd31b077545592da3e734d88"
+    },
+    {
+      "path": "session70-vitali/check.normal.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327"
+    },
+    {
+      "path": "session70-vitali/check.optimized.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327"
+    }
+  ]
+}

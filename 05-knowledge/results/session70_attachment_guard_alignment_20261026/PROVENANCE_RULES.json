@@ -1,0 +1,53 @@
+{
+  "schema": "session70-provenance-rules-v1",
+  "sha256sum_lanes": [
+    "session70-vitali"
+  ],
+  "sha256sum_manifests": [
+    {
+      "lane": "session70-bridge-audit",
+      "file": "SHA256SUMS-INITIAL"
+    }
+  ],
+  "source_ledgers": [
+    {
+      "lane": "session70-vitali",
+      "file": "SOURCES.json"
+    },
+    {
+      "lane": "session70-bridge-audit",
+      "file": "SOURCES-INITIAL.json",
+      "rows_key": "inherited",
+      "snapshot_key": "local_snapshot",
+      "pin_key": "commit"
+    }
+  ],
+  "reviewed_bindings": [
+    {
+      "path": "session70-vitali/REPORT.md",
+      "sha256": "da137bfa8ad50378a29f963b87e7b7950b8878c4cfea79590c06783c0d4d4792"
+    },
+    {
+      "path": "session70-vitali/check_alignment_moments.py",
+      "sha256": "e3836182474bf9a336c148f73ab1fb24640bef79cd31b077545592da3e734d88"
+    },
+    {
+      "path": "session70-vitali/check.normal.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327"
+    },
+    {
+      "path": "session70-vitali/check.optimized.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327"
+    },
+    {
+      "path": "session70-bridge-audit/vitali-replay.normal.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "equal_to": "session70-vitali/check.normal.json"
+    },
+    {
+      "path": "session70-bridge-audit/vitali-replay.optimized.json",
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "equal_to": "session70-vitali/check.optimized.json"
+    }
+  ]
+}

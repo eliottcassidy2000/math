@@ -1,0 +1,335 @@
+{
+  "checks": {
+    "all black": 254,
+    "all proper full marginals equal": 247,
+    "all proper guard moments equal": 247,
+    "all truncation ranks": 35,
+    "complete carrier repairs hostile": 7,
+    "complete named moments invert": 7,
+    "distinct native alignments": 7,
+    "exhaustive seed rigidity": 2,
+    "independent full GF2 rank": 7,
+    "independent seed source isomorphism": 1,
+    "independent seed target isomorphism": 1,
+    "integer zeta diagonal one": 7,
+    "integer zeta upper triangular": 7,
+    "native guard equals Boolean monomial": 21844,
+    "native matrix agrees with independent zeta transform": 7,
+    "native top guard separates parity laws": 7,
+    "native tournament": 254,
+    "no rotation-fixed physical path": 1,
+    "paired rooted source fixed": 254,
+    "paired rooted target fixed": 254,
+    "parity laws equal total mass": 7,
+    "relative frame mismatch double transposition": 1,
+    "relative frame mismatch is not source automorphism": 1,
+    "retained reference path is a lawful chart choice": 1,
+    "rigidity wrapper degree separation": 254,
+    "seed guard distinguishes": 1,
+    "seed tournaments": 1,
+    "source roots fixed": 254,
+    "standard marked path": 254,
+    "strong native source": 254,
+    "target roots fixed": 254,
+    "top-deleted hostile collides": 7,
+    "triangle has three Hamilton paths": 1,
+    "zero-dimensional boundary": 1
+  },
+  "imports_inherited_producer": false,
+  "relative_frame_mismatch": [
+    0,
+    3,
+    2,
+    1,
+    5,
+    4,
+    6
+  ],
+  "scope": "all 2^k C4 states and all 2^k simultaneous block guards, k=1..7; theorem all k",
+  "seed_rigidity": {
+    "X": {
+      "automorphisms": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "permutations_tested": 5040
+    },
+    "tau_X": {
+      "automorphisms": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "permutations_tested": 5040
+    }
+  },
+  "status": "PASS",
+  "tables": [
+    {
+      "alignments": 2,
+      "full_rank": 2,
+      "k": 1,
+      "matrix_sha256": "252c0b6b080fa045acfcd1437f693f3be2be2ac8223ea525d492fa19ab028942",
+      "n": 9,
+      "native_guard_tests": 4,
+      "top_probability_gap": "1",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 1,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 2,
+          "t": 1
+        }
+      ]
+    },
+    {
+      "alignments": 4,
+      "full_rank": 4,
+      "k": 2,
+      "matrix_sha256": "02b5b9bfeecb1178c0dc54ac88b371ff0a62d4f31de97407bdfdfee69f9a271d",
+      "n": 16,
+      "native_guard_tests": 16,
+      "top_probability_gap": "1/2",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 3,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 3,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 4,
+          "t": 2
+        }
+      ]
+    },
+    {
+      "alignments": 8,
+      "full_rank": 8,
+      "k": 3,
+      "matrix_sha256": "8349046a836824dd8ead195b2d11b2518e5dcaf5193dca5c9833ceb577e808eb",
+      "n": 23,
+      "native_guard_tests": 64,
+      "top_probability_gap": "1/4",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 7,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 4,
+          "rank": 4,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 7,
+          "t": 2
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 8,
+          "t": 3
+        }
+      ]
+    },
+    {
+      "alignments": 16,
+      "full_rank": 16,
+      "k": 4,
+      "matrix_sha256": "c7f7e12e9fb24e2214f8bdaa25951e50076e727c13ffdb220d8d8e94b97d0398",
+      "n": 30,
+      "native_guard_tests": 256,
+      "top_probability_gap": "1/8",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 15,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 11,
+          "rank": 5,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 5,
+          "rank": 11,
+          "t": 2
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 15,
+          "t": 3
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 16,
+          "t": 4
+        }
+      ]
+    },
+    {
+      "alignments": 32,
+      "full_rank": 32,
+      "k": 5,
+      "matrix_sha256": "622d67e9dc880b85560435a01d02ae1a55b9a96f83d90ddee97e3096bba1c8eb",
+      "n": 37,
+      "native_guard_tests": 1024,
+      "top_probability_gap": "1/16",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 31,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 26,
+          "rank": 6,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 16,
+          "rank": 16,
+          "t": 2
+        },
+        {
+          "missing_linear_rank": 6,
+          "rank": 26,
+          "t": 3
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 31,
+          "t": 4
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 32,
+          "t": 5
+        }
+      ]
+    },
+    {
+      "alignments": 64,
+      "full_rank": 64,
+      "k": 6,
+      "matrix_sha256": "b995b9e5df5280444173a99d686033a5e7f568ee34b5bf26537990df3d22d169",
+      "n": 44,
+      "native_guard_tests": 4096,
+      "top_probability_gap": "1/32",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 63,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 57,
+          "rank": 7,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 42,
+          "rank": 22,
+          "t": 2
+        },
+        {
+          "missing_linear_rank": 22,
+          "rank": 42,
+          "t": 3
+        },
+        {
+          "missing_linear_rank": 7,
+          "rank": 57,
+          "t": 4
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 63,
+          "t": 5
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 64,
+          "t": 6
+        }
+      ]
+    },
+    {
+      "alignments": 128,
+      "full_rank": 128,
+      "k": 7,
+      "matrix_sha256": "05a11678fdc554e1e9593df6e34c0d40c13d1b11d9567ca93e60d2d1239ab4ba",
+      "n": 51,
+      "native_guard_tests": 16384,
+      "top_probability_gap": "1/64",
+      "truncation_ranks": [
+        {
+          "missing_linear_rank": 127,
+          "rank": 1,
+          "t": 0
+        },
+        {
+          "missing_linear_rank": 120,
+          "rank": 8,
+          "t": 1
+        },
+        {
+          "missing_linear_rank": 99,
+          "rank": 29,
+          "t": 2
+        },
+        {
+          "missing_linear_rank": 64,
+          "rank": 64,
+          "t": 3
+        },
+        {
+          "missing_linear_rank": 29,
+          "rank": 99,
+          "t": 4
+        },
+        {
+          "missing_linear_rank": 8,
+          "rank": 120,
+          "t": 5
+        },
+        {
+          "missing_linear_rank": 1,
+          "rank": 127,
+          "t": 6
+        },
+        {
+          "missing_linear_rank": 0,
+          "rank": 128,
+          "t": 7
+        }
+      ]
+    }
+  ],
+  "total_checks": 24741
+}

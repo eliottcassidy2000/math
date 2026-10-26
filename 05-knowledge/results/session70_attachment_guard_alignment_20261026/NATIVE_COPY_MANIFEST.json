@@ -1,0 +1,270 @@
+{
+  "schema": "session70-native-preserving-curation-v1",
+  "scope": "Explicit curated files; native files and native manifests preserved byte-for-byte.",
+  "files": [
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "AUDIT-INITIAL.md",
+      "packet_path": "session70-bridge-audit/AUDIT-INITIAL.md",
+      "bytes": 10427,
+      "sha256": "b589b1e818427e309648f71d280c89328c05652046db4f71cb1b1c421b0ca204",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "SHA256SUMS-INITIAL",
+      "packet_path": "session70-bridge-audit/SHA256SUMS-INITIAL",
+      "bytes": 988,
+      "sha256": "9869b358811c1f0b87fc81be67b41d3a3f0474109111136bef18dadd507e0814",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "SOURCES-INITIAL.json",
+      "packet_path": "session70-bridge-audit/SOURCES-INITIAL.json",
+      "bytes": 1900,
+      "sha256": "1f9ac70ac8cba3eb96b956434ff7b0f99f75861c897e9c7e60849ac7795b14fb",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "audit.normal.json",
+      "packet_path": "session70-bridge-audit/audit.normal.json",
+      "bytes": 7146,
+      "sha256": "256d1988e29f0091c5c55f868acb65c6a8cb8294c8384aa674e28e50c35ec8ea",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "audit.optimized.json",
+      "packet_path": "session70-bridge-audit/audit.optimized.json",
+      "bytes": 7146,
+      "sha256": "256d1988e29f0091c5c55f868acb65c6a8cb8294c8384aa674e28e50c35ec8ea",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "audit_bridge_bounds.py",
+      "packet_path": "session70-bridge-audit/audit_bridge_bounds.py",
+      "bytes": 15138,
+      "sha256": "b33318c27b063344a283721d3773d162603f68d3a255e24f0374f55f817d9946",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "inherited/README.md",
+      "packet_path": "session70-bridge-audit/inherited/README.md",
+      "bytes": 15560,
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "inherited/THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "packet_path": "session70-bridge-audit/inherited/THM-2237-truncated-boolean-moment-interval-and-parity-top-atom-majorants.md",
+      "bytes": 6318,
+      "sha256": "96a42fde86f56e976dcc159f43a8dbe084842f9a24b0d9895dd3c0aeb274c71c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "inherited/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "packet_path": "session70-bridge-audit/inherited/THM-840-hamming-five-continuation-congruence-boundary.md",
+      "bytes": 10270,
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "vitali-replay.normal.json",
+      "packet_path": "session70-bridge-audit/vitali-replay.normal.json",
+      "bytes": 7450,
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-bridge-audit",
+      "native_path": "vitali-replay.optimized.json",
+      "packet_path": "session70-bridge-audit/vitali-replay.optimized.json",
+      "bytes": 7450,
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "CHECKS.md",
+      "packet_path": "session70-vitali/CHECKS.md",
+      "bytes": 2118,
+      "sha256": "431cd9fbf709c09aa8a540a786bf74a48cce59329ad5e9bed15f5b7da8776388",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "REPORT.md",
+      "packet_path": "session70-vitali/REPORT.md",
+      "bytes": 20601,
+      "sha256": "da137bfa8ad50378a29f963b87e7b7950b8878c4cfea79590c06783c0d4d4792",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "SHA256SUMS",
+      "packet_path": "session70-vitali/SHA256SUMS",
+      "bytes": 2258,
+      "sha256": "93e9b79cd994f6362884acb361e32d614063085205368853eb10ea0f418216ff",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "SOURCES.json",
+      "packet_path": "session70-vitali/SOURCES.json",
+      "bytes": 5556,
+      "sha256": "d8b83de2f1cf6c73326eabde2a99324de4bd06c6f5d815cdd16598bb73135c1c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "check.normal.json",
+      "packet_path": "session70-vitali/check.normal.json",
+      "bytes": 7450,
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "check.optimized.json",
+      "packet_path": "session70-vitali/check.optimized.json",
+      "bytes": 7450,
+      "sha256": "ada554eb657e00356f91c676e16995cd141630ebac3c47b9ff4e8ce8b71f6327",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "check_alignment_moments.py",
+      "packet_path": "session70-vitali/check_alignment_moments.py",
+      "bytes": 9468,
+      "sha256": "e3836182474bf9a336c148f73ab1fb24640bef79cd31b077545592da3e734d88",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/00_README.md",
+      "packet_path": "session70-vitali/sources/00_README.md",
+      "bytes": 15560,
+      "sha256": "b88bd3b7f4dff05a2afdb0ccfa10864b18d7db91c68dd9cfec3bd1b272d2cb2a",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/01_HISTORY.md",
+      "packet_path": "session70-vitali/sources/01_HISTORY.md",
+      "bytes": 15346,
+      "sha256": "9dc2028e893e6f7954e495fc34a2360e07a15a42cb01f0d2e563ac7e3b0f7fe4",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/02_vitali_atom_recovery_20261011.md",
+      "packet_path": "session70-vitali/sources/02_vitali_atom_recovery_20261011.md",
+      "bytes": 15533,
+      "sha256": "2b1d1b87e5e7cd746ce08414d2e7f3805ed9cdc493bc7ceb1758621be1b20b0a",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/03_THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md",
+      "packet_path": "session70-vitali/sources/03_THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md",
+      "bytes": 7562,
+      "sha256": "fa956e50d6be8e389acca4bbd4c5d3582ed9649cfee37839e793eb461c15b2e0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/04_THM-561-miss-zeta-factorial-atom-inversion.md",
+      "packet_path": "session70-vitali/sources/04_THM-561-miss-zeta-factorial-atom-inversion.md",
+      "bytes": 2747,
+      "sha256": "db3a1230615ccd0c634fe87f5fc201f87336e995c966ef71813497814fd52860",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/05_THM-840-hamming-five-continuation-congruence-boundary.md",
+      "packet_path": "session70-vitali/sources/05_THM-840-hamming-five-continuation-congruence-boundary.md",
+      "bytes": 10270,
+      "sha256": "497e4d7594c9cb0c0a31b9220f8f01ab94133898127c8ca770acd78965c1e346",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/07_README.md",
+      "packet_path": "session70-vitali/sources/07_README.md",
+      "bytes": 17459,
+      "sha256": "80916b65ea984a480dd0edbfb503b15ed7c624608a1cd5b49ece451ba07f4c3d",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/08_AUDIT_COMPILER.md",
+      "packet_path": "session70-vitali/sources/08_AUDIT_COMPILER.md",
+      "bytes": 5371,
+      "sha256": "f29e1300b523ad5f839061787801f29676cdf7c8083d6d4738cc3149826e6eb1",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/09_THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "packet_path": "session70-vitali/sources/09_THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "bytes": 34249,
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/10_three_sorted_metagraph_continuation_minimization_codex_S11.out",
+      "packet_path": "session70-vitali/sources/10_three_sorted_metagraph_continuation_minimization_codex_S11.out",
+      "bytes": 5461,
+      "sha256": "554bdc3947dbb1d73335afdda0dea8ada2a0ee53760ac28f0ff3a570758b6106",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/11_controls.py",
+      "packet_path": "session70-vitali/sources/11_controls.py",
+      "bytes": 10216,
+      "sha256": "71f8033fa7cfbe13a75e0bda6b95010d048113cbaa9dc2e4ccb7fbbcd2eb9942",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/12_the-vitali-atom.md",
+      "packet_path": "session70-vitali/sources/12_the-vitali-atom.md",
+      "bytes": 12997,
+      "sha256": "8e3c16bc3cc351a7faae9a11fb7b3355fda9025dcb392588ec0c9bf7bbb1d7e8",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/13_THM-2237.md",
+      "packet_path": "session70-vitali/sources/13_THM-2237.md",
+      "bytes": 6318,
+      "sha256": "96a42fde86f56e976dcc159f43a8dbe084842f9a24b0d9895dd3c0aeb274c71c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/14_fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "packet_path": "session70-vitali/sources/14_fresh_remarking_quotient_and_divisor_arrangements_20261026.md",
+      "bytes": 12148,
+      "sha256": "88dd92bccf2b29ad877a3c590859513ac3092d0af5a61439b320470f8415a903",
+      "mode": 420
+    },
+    {
+      "native_lane": "session70-vitali",
+      "native_path": "sources/15_HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "packet_path": "session70-vitali/sources/15_HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "bytes": 7296,
+      "sha256": "869a972c3376bb654f77dc655492377e79414fceddfabd80fbca21dd0ef29252",
+      "mode": 420
+    }
+  ]
+}

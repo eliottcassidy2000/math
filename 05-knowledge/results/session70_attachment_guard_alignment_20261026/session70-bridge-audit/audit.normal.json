@@ -1,0 +1,374 @@
+{
+  "Petersen": {
+    "K33_Hamilton_cycles": 6,
+    "K33_Hamilton_cycles_using_all_subdivision_marks": 2,
+    "K33_parts": [
+      [
+        2,
+        8,
+        9
+      ],
+      [
+        3,
+        6,
+        7
+      ]
+    ],
+    "K33_subdivision_chains": [
+      [
+        2,
+        1,
+        6
+      ],
+      [
+        3,
+        4,
+        9
+      ],
+      [
+        7,
+        5,
+        8
+      ]
+    ],
+    "K5_Hamilton_cycles": 12,
+    "Petersen_component_sizes": [
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "Petersen_minus_0_Hamilton_cycles": 2,
+    "Petersen_two_factors": 6,
+    "balanced_K5_cycles": 0,
+    "port_lifts": 6
+  },
+  "alignment": {
+    "maps": [
+      [
+        0,
+        1,
+        4,
+        2,
+        3,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        4,
+        1,
+        5,
+        3,
+        6
+      ]
+    ],
+    "relative_defect": [
+      0,
+      3,
+      2,
+      1,
+      5,
+      4,
+      6
+    ],
+    "seed_automorphism_orders": [
+      1,
+      1
+    ],
+    "tables": [
+      {
+        "guards": 2,
+        "k": 1,
+        "matrix_sha256": "252c0b6b080fa045acfcd1437f693f3be2be2ac8223ea525d492fa19ab028942",
+        "n": 9,
+        "native_guard_tests": 4,
+        "parity_gap": "1",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "states": 2
+      },
+      {
+        "guards": 4,
+        "k": 2,
+        "matrix_sha256": "02b5b9bfeecb1178c0dc54ac88b371ff0a62d4f31de97407bdfdfee69f9a271d",
+        "n": 16,
+        "native_guard_tests": 16,
+        "parity_gap": "1/2",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            0
+          ]
+        ],
+        "states": 4
+      },
+      {
+        "guards": 8,
+        "k": 3,
+        "matrix_sha256": "8349046a836824dd8ead195b2d11b2518e5dcaf5193dca5c9833ceb577e808eb",
+        "n": 23,
+        "native_guard_tests": 64,
+        "parity_gap": "1/4",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            1,
+            4,
+            4
+          ],
+          [
+            2,
+            7,
+            1
+          ],
+          [
+            3,
+            8,
+            0
+          ]
+        ],
+        "states": 8
+      },
+      {
+        "guards": 16,
+        "k": 4,
+        "matrix_sha256": "c7f7e12e9fb24e2214f8bdaa25951e50076e727c13ffdb220d8d8e94b97d0398",
+        "n": 30,
+        "native_guard_tests": 256,
+        "parity_gap": "1/8",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            15
+          ],
+          [
+            1,
+            5,
+            11
+          ],
+          [
+            2,
+            11,
+            5
+          ],
+          [
+            3,
+            15,
+            1
+          ],
+          [
+            4,
+            16,
+            0
+          ]
+        ],
+        "states": 16
+      },
+      {
+        "guards": 32,
+        "k": 5,
+        "matrix_sha256": "622d67e9dc880b85560435a01d02ae1a55b9a96f83d90ddee97e3096bba1c8eb",
+        "n": 37,
+        "native_guard_tests": 1024,
+        "parity_gap": "1/16",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            31
+          ],
+          [
+            1,
+            6,
+            26
+          ],
+          [
+            2,
+            16,
+            16
+          ],
+          [
+            3,
+            26,
+            6
+          ],
+          [
+            4,
+            31,
+            1
+          ],
+          [
+            5,
+            32,
+            0
+          ]
+        ],
+        "states": 32
+      },
+      {
+        "guards": 64,
+        "k": 6,
+        "matrix_sha256": "b995b9e5df5280444173a99d686033a5e7f568ee34b5bf26537990df3d22d169",
+        "n": 44,
+        "native_guard_tests": 4096,
+        "parity_gap": "1/32",
+        "rank_rows_t_d_missing": [
+          [
+            0,
+            1,
+            63
+          ],
+          [
+            1,
+            7,
+            57
+          ],
+          [
+            2,
+            22,
+            42
+          ],
+          [
+            3,
+            42,
+            22
+          ],
+          [
+            4,
+            57,
+            7
+          ],
+          [
+            5,
+            63,
+            1
+          ],
+          [
+            6,
+            64,
+            0
+          ]
+        ],
+        "states": 64
+      }
+    ]
+  },
+  "checks": {
+    "K33 lift spanning iff all subdivision marks used": 6,
+    "K33 marked response reconstructs all deleted-vertex Hamilton cycles": 1,
+    "K5 bare Hamilton cycles": 1,
+    "actual suppression chains": 3,
+    "all native two-factors are two pentagons": 1,
+    "all proper full marginals equal": 120,
+    "all-spoke contraction K5": 1,
+    "black endpoint degree obstruction": 126,
+    "context length r-1": 11136,
+    "endpoint matching cardinality": 5,
+    "every positive prefix remains a path forest": 33186,
+    "exact integral Mobius inverse": 5460,
+    "final positive object is a spanning path": 11136,
+    "hostile bare quotient lift rejected": 1,
+    "local port rule lifts exactly": 6,
+    "native Petersen two-factor count": 1,
+    "native arc count": 126,
+    "native strong source": 126,
+    "no K5 Hamilton cycle uses balanced spoke ports": 1,
+    "normalized native full guard gap": 6,
+    "normalized proper moments equal": 6,
+    "one connector profiles separate every matching": 5,
+    "quotient port rule neither loses nor invents 2-factors": 1,
+    "relative defect equals (1 3)(4 5)": 1,
+    "relative defect is not source automorphism": 1,
+    "same final context has irrevocable negative cycle": 11136,
+    "same jointly rooted endpoint types": 252,
+    "seed independently decoded from free mask": 2,
+    "seed native guard": 1,
+    "seed strong": 2,
+    "simultaneous native subset guard": 5460,
+    "source target map orientation": 1,
+    "standard path legal": 126,
+    "suppressed graph exact K33": 1,
+    "truncated rank in three characteristics": 81,
+    "unique unrestricted seed isomorphism and rigidity": 2,
+    "unique wrapper degree strata": 126
+  },
+  "endpoint_pairing": [
+    {
+      "ordered_final_contexts": 0,
+      "r": 1,
+      "states": 1
+    },
+    {
+      "ordered_final_contexts": 6,
+      "r": 2,
+      "states": 3
+    },
+    {
+      "ordered_final_contexts": 210,
+      "r": 3,
+      "states": 15
+    },
+    {
+      "ordered_final_contexts": 10920,
+      "r": 4,
+      "states": 105
+    },
+    {
+      "ordered_final_contexts": 0,
+      "r": 5,
+      "states": 945
+    }
+  ],
+  "negative_control": "EXPECTED REJECTION",
+  "producer_imports": false,
+  "status": "PASS",
+  "total_checks": 78653
+}
