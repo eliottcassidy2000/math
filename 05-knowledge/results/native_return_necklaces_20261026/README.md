@@ -47,8 +47,16 @@ Recovered stronger prior results, not new claims here:
   gives complete decorated necklace fibres, physical flip multiplicities,
   spectra, and marked-gap growth. Its two growth children of `011 ~ 101`
   are the analogue of our cut-dependent returns, not the same move.
-  Incoming `1886609075` reserves THM-4804/HYP-9414 only; neither is a proved
-  dependency of this packet.
+- The later pull through `8970493290` supplied **THM-4804**,
+  [module shattering and normal-basis dictionary](../../../01-canon/theorems/THM-4804-complement-lines-shatter-every-module-and-the-carousel-fibre-as-frobenius-orbits-of-a-normal-basis.md).
+  Its actual module-set proof and Frobenius dictionary were checked and
+  integrated; N4's basic dictionary is now inherited concurrent work.
+  Its source corollary overreached from labelled sets to unlabelled tree
+  shapes. The exact order-four witness below repairs that clause without
+  changing the module-set theorem. The incoming pre-audit checkpoint is
+  not imported as an independently audited package. The new
+  [norm-seven taxonomy integration](../norm7_taxonomy_zero_20261026/INTEGRATION.md)
+  likewise distinguishes the normal-basis map from whole-surface F1 claims.
 
 | Live concept | Exact map or operation | Preserved predicate; required sidecar |
 |---|---|---|
@@ -197,6 +205,44 @@ Moving position 1 to the end gives the legal path `(0,2,3,1)` and mask 2,
 which is outside `G_4`. Thus complement closure does not give relocation
 closure. Keeping both an expression and its current path is indispensable.
 This witness also shows why no all-order metagraph coverage follows from N3.
+
+**N3 interface corollary (PROVED).** Every expression-subtree interval
+`M=[a,b]` has a uniform baseline relation to each outside vertex. The actual
+relation differs from that baseline only possibly at the two pairs
+`(a,a-1)` and `(b,b+1)` that exist. Hence its cross-interface error matrix
+has at most two nonzero entries and rank at most two, over any field.
+
+*Proof.* For any outside leaf `x`, `LCA(x,y)` is the same ancestor for every
+leaf `y` of the subtree. Thus its J/star label gives one uniform baseline.
+Only a forced consecutive path edge can override this rule. The only such
+edges crossing a contiguous subtree's boundary are its two endpoint pairs. ∎
+
+This is a precise rerouting around module shattering: retain an interval,
+two endpoint ports, and the baseline rather than demand zero interface
+error. Under `tau` the J/star labels switch and the hinge exceptions are
+recomputed, so the same expression topology continues to describe the
+presentation. These are expression intervals, not canonical modules. The
+bound does not give closure under relocation; the escape above still applies.
+
+**Correction to incoming THM-4804's scope.** Its module-shattering theorem
+does not force a change of unlabelled tree shape. Masks 2 and 5 have unique
+proper non-singleton modules `{0,3}` and `{1,2}` respectively, yet they are
+isomorphic via the vertex map `(1,3,0,2)`. Thus the old module disappears
+while the same unlabelled tournament class returns. This is the same
+incoming blue-loop pair, checked by literal arcs and all subset modules.
+The source note, theorem summary and mistakes ledger have been narrowed
+to the valid fixed-labelled-module statement. A common tree shape is not
+the sidecar that the proof needs.
+
+The final incoming [Session67 synthesis](../session67_metagraph_enumeration_information_20261026/README.md),
+commit `69cffefe07`, already provides complete inherited all-order structural
+recurrences and ordinary-class recognition by relocation components. Its
+small scalar/family grammar remains open. Our grammar is a smaller native
+constructor family, not a replacement for those all-order algorithms. Its
+future-extension hostile is also relevant: equal present core and full
+current automorphism cycle index need not give the same child counting
+mass. Thus the actual attachment alignment remains necessary even after
+retaining much more information than an automorphism order.
 
 The exact counts for orders 1 through 10 are
 
@@ -453,8 +499,8 @@ The most useful remaining questions are now explicit:
    growth must use vector-space charts or a larger explicit common field.
 
 These questions preserve the actual remaining obligations. Universal
-Collatz entry, the Rule 30 moving-center questions, all-order tournament
-metagraph connectivity, LRC(14), and six-colour forcing remain open here.
+Collatz entry, the Rule 30 moving-center questions, all-order black-core
+connectivity, LRC(14), and six-colour forcing remain open here.
 
 ## Reproduction and scope of verification
 
@@ -469,7 +515,8 @@ assertions. Its exact universe is all controller words through length 7
 on both initial bits (21,845 words, 291,272 prefix states); all pairs of
 marked presentations through order 5 for common legal relocation controls;
 the `J/star` grammar through order 10, independently checked against
-recursive permutation images through order 7; every binary word in chosen
+recursive permutation images through order 7; all 28,813 subtree interfaces
+of 2,321 recursively separable permutations through order 7; every binary word in chosen
 normal bases in degrees 2–9; all four-letter cyclic words of lengths 1–6;
 all 1,013 non-all-one multiplier masks of lengths 1–9; 780 valuation words
 of lengths 1–4 with exponents 1–5, with 16 actual integer sources each;

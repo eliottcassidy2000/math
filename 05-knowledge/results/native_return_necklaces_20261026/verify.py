@@ -5,7 +5,7 @@ Run from any directory: python3 verify.py [--output receipt.json].
 The finite universes below test the proofs in README.md, not universal Collatz.
 """
 from functools import lru_cache
-from itertools import permutations, product
+from itertools import combinations, permutations, product
 from pathlib import Path
 import argparse
 import hashlib
@@ -77,8 +77,50 @@ def grammar_checks():
     require(rho((2, 4, 1, 3)) == 2 and rho((3, 1, 4, 2)) == 5, 'forbidden witnesses')
     require(reframe(4, 1, (0, 2, 3, 1)) == 2, 'relocation escape')
     require(1 in g[4] and 2 not in g[4], 'escape membership')
+    def modules(t):
+        return [list(m) for size in (2, 3) for m in combinations(range(4), size)
+                if all(len({edge(4, t, x, y) for y in m}) == 1 for x in range(4) if x not in m)]
+    require(modules(2) == [[0, 3]] and modules(5) == [[1, 2]], 'module-set versus shape hostile')
+    p = (1, 3, 0, 2)
+    require(all(edge(4, 2, i, j) == edge(4, 5, p[i], p[j]) for i, j in combinations(range(4), 2)),
+            'same class after module shattering')
     return {'counts': counts, 'permutation_cross_check_through_n': 7,
+            'module_shape_hostile': {'masks': [2, 5], 'modules': [[[0, 3]], [[1, 2]]], 'isomorphism': list(p)},
             'relocation_escape': {'input': 1, 'path': [0, 2, 3, 1], 'output': 2}}
+
+
+def interface_checks():
+    trees = interfaces = 0
+    def blocks(p, offset=0):
+        if len(p) == 1:
+            return [(offset, offset)]
+        for cut in range(1, len(p)):
+            if max(p[:cut]) < min(p[cut:]) or min(p[:cut]) > max(p[cut:]):
+                a, b = blocks(p[:cut], offset), blocks(p[cut:], offset+cut)
+                if a is not None and b is not None:
+                    return [(offset, offset+len(p)-1)]+a+b
+        return None
+    for n in range(1, 8):
+        for p in permutations(range(n)):
+            intervals = blocks(p)
+            if intervals is None:
+                continue
+            t = rho(p)
+            trees += 1
+            for left, right in intervals:
+                errors = []
+                for x in range(n):
+                    if left <= x <= right:
+                        continue
+                    baseline = int(p[left] < p[x])
+                    require(all(int(p[y] < p[x]) == baseline for y in range(left, right+1)), 'subtree baseline')
+                    for y in range(left, right+1):
+                        if edge(n, t, y, x) != baseline:
+                            errors.append((y, x))
+                require(set(errors) <= {(left, left-1), (right, right+1)}, 'two-port interface')
+                require(len(errors) <= 2, 'two endpoint corrections')
+                interfaces += 1
+    return {'separable_permutations_through_n': 7, 'trees': trees, 'subtree_interfaces': interfaces}
 
 
 MAPS = {'I': (1, 0), 'F': (1, 1), 'C0': (0, 0), 'C1': (0, 1)}
@@ -361,6 +403,7 @@ def main():
     parser.add_argument('--output', type=Path)
     args = parser.parse_args()
     receipt = {'status': 'FINITE-EXACT PASS', 'grammar': grammar_checks(),
+               'two_port_interfaces': interface_checks(),
                'compiler': compiler_checks(), 'difference': difference_checks(),
                'normal_basis': field_checks(), 'cyclic_sections': cyclic_checks(),
                'reset_inverse': reset_inverse_checks(),

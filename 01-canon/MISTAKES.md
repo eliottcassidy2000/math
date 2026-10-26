@@ -4,6 +4,31 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — shattering labelled modules does not shatter unlabelled tree shape
+
+- **Source and failed implication:** [THM-4804](theorems/THM-4804-complement-lines-shatter-every-module-and-the-carousel-fibre-as-frobenius-orbits-of-a-normal-basis.md)
+  and source corollary (d) correctly prove that a complement line destroys
+  every old proper non-singleton module as a vertex set, but additionally
+  excluded a common unlabelled tree shape. New modules can use new sets.
+- **Minimal witness:** in `X_4`, free-bit order `(0,2),(0,3),(1,3)`, masks
+  2 and 5 are complement partners and isomorphic via `(1,3,0,2)`. Their
+  unique proper non-singleton modules are respectively `{0,3}` and `{1,2}`.
+  For order three the only nonprime type is transitive and its path partner
+  is cyclic, so this same-class nonprime witness first occurs at four.
+- **Repair and strongest survivor:** the two ends share no proper
+  non-singleton module *set*, and their strong-module trees share no proper
+  internal vertex set; the root remains. A family with a common fixed
+  labelled proper module contains no two ends of a line. The statements
+  about fixed labelled substitution blocks and common labelled strong
+  modules survive. Tree shape or unlabelled block type is insufficient.
+- **Missing coordinate and next question:** retain the actual leaf sets and
+  path. The [native-return packet](../05-knowledge/results/native_return_necklaces_20261026/README.md)
+  instead proves a two-endpoint-error interface for expression intervals,
+  with a separate relocation hostile. Its checker exhausts the witness's
+  modules and checks its isomorphism by literal arcs. The source note and
+  theorem summary are corrected in place; no claim that all partners are
+  prime or have different isomorphism type survives this implication.
+
 ## 2026-10-26 — compactness needs limit identification; a root cover is not its sign bundle
 
 - **Source:** the [analogy atlas](../05-knowledge/results/analogy_reduction_atlas_20261025/ATLAS.md)

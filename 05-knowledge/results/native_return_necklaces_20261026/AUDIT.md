@@ -46,9 +46,13 @@ to README.md; no scarce global theorem or hypothesis ID is reserved.
   still does not realize the entire four-map semigroup. The archived full
   states remain distinct, and forgetting them is a separate operation.
 
-No new demonstrated error in a maintained theorem was found in this
-session. The new hostiles refute candidate shortcuts, not live proved canon;
-the incoming THM-4803 correction is already recorded in MISTAKES.md.
+The final incoming pull exposed a demonstrated error in THM-4804's
+corollary: shattering old labelled modules was extended to excluding a
+shared unlabelled tree shape. Masks 2 and 5 are isomorphic partners whose
+unique proper modules are different vertex sets. The source and theorem
+summary were repaired, with lineage in MISTAKES.md. The core module-set
+proof is unchanged. The independent literal-arc and subset checks in this
+packet certify the witness. The incoming THM-4803 repair was already logged.
 
 ## Computational independence and limits
 
