@@ -806,7 +806,7 @@ all heights (THM-1289, published), δ ineffective.
   share no internal node; the LCA interface is rebuilt; no substitution fibre or stack is closed under lines); the carousel classes are the Frobenius orbits of
   F_(2^m) (least period = field degree, Aut/C_3^m = the Galois group over the decoration field, Gauss's counts, tc(T_w) = H_m d/(m 3^m)); q-ary and F_(1^m)
   versions. FINITE-EXACT at n = 12: no old module survives in any of the 1,851,660 partners, 98.6% prime, the rest with a pair module, all presentations black,
-  distinct tilings give distinct partner classes (45,424 partner classes, 296 shared). Next: injectivity for every odd m, the pair-module partners, the orbit-size law
+  distinct tilings give distinct partner classes (45,424 partner classes, 296 shared: 148 between the |Aut| = 27 converse pair, 74 + 74 between 81- and 27-classes). Next: injectivity for every odd m, the pair-module partners, the orbit-size law
   for every decorated fibre (HYP-9414).
 - **Presentation counts of metagraph nodes (opus, 2026-10-20-S48; [note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md), THM-4741, HYP-9352).**
   Owner directive: next obligations toward a complete classification of tournament metagraph structure, in the language of intransitivity of information or
