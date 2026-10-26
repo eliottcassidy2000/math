@@ -1,0 +1,13 @@
+{
+  "purpose": "Read-only concurrent result snapshot for attribution. No source checker executed; native claims are not blanket-promoted by copying.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_path": "05-knowledge/results/cyclictriple_composition_20261026/README.md",
+      "source_pin": "c9a8823436ed8c49a3effafd40353880a9909a76",
+      "git_blob": "c08eb4a2ebe0d1dded00d54c173ba887bb7aadfb",
+      "bytes": 20835,
+      "sha256": "a0e6faed7d6e454699b3eaa0a5da2bbc1d613288665eb4a205d8ee69f04caa4e"
+    }
+  ]
+}

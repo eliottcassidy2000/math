@@ -1,0 +1,80 @@
+{
+  "base_commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "boundary": "This packet classifies one full ordinary C3-realization stratum at each n=4*3^d; it does not catalog all prime tournaments or classify all metagraph edges.",
+  "concurrent_prior_commit": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+  "primary_sources_checked": [
+    {
+      "role": "Cited modular decomposition, common strong modules and independent realization node choices.",
+      "url": "https://arxiv.org/html/1805.04607v1"
+    },
+    {
+      "role": "Cited canonical modular quotient representation.",
+      "url": "https://www.cs.colostate.edu/pubserv/pubs/McConnell-rmm-digraphDecomp.pdf"
+    }
+  ],
+  "schema": "session68-decorated-classification-provenance-v1",
+  "source_snapshots": [
+    {
+      "bytes": 11281,
+      "commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "80772c7ab31a3ebabc11da9f3d9531afbcda83fa14bdc525627d46eb7a49f3e0",
+      "snapshot": "sources/01-session56-hierarchy.txt",
+      "source_repo_path": "05-knowledge/results/session56_rmq_lca_connections_20261025/tournament-hierarchy/REPORT.md"
+    },
+    {
+      "bytes": 15825,
+      "commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
+      "snapshot": "sources/02-weighted-core.txt",
+      "source_repo_path": "05-knowledge/results/weighted_core_transport_20261020/core_count.md"
+    },
+    {
+      "bytes": 9804,
+      "commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "snapshot": "sources/03-path-cover-kernel.txt",
+      "source_repo_path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "bytes": 11162,
+      "commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044",
+      "snapshot": "sources/04-existing-wreath-divisibility.txt",
+      "source_repo_path": "01-canon/theorems/THM-3134-tournament-endpoint-jet-and-c3-newton-profile-transform.md"
+    },
+    {
+      "bytes": 8936,
+      "commit": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6",
+      "snapshot": "sources/05-concurrent-classification.txt",
+      "source_repo_path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md"
+    },
+    {
+      "bytes": 14862,
+      "commit": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "sha256": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5",
+      "snapshot": "sources/06-concurrent-fibre.txt",
+      "source_repo_path": "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md"
+    },
+    {
+      "bytes": 15887,
+      "commit": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "sha256": "5c69544898f408d7cddb90e93e6f7b5224f1bff3f38a0caab368f9e58ce079f3",
+      "snapshot": "sources/07-concurrent-arithmetic.txt",
+      "source_repo_path": "05-knowledge/results/tournament_composition_classification_20261026/arithmetic/RESULT.md"
+    },
+    {
+      "bytes": 10685,
+      "commit": null,
+      "sha256": "a41aa8b46601908da13abac6fd1e9566655e19e1dccc64ebd9f6cfba8d7c773c",
+      "snapshot": "sources/08-session67-incoming-review.txt",
+      "source_local_path": "/workspace/scratch/07d5532f2fce/session67-incoming/INCOMING_INTEGRATION.md",
+      "status": "Parent-supplied incoming review; uncommitted snapshot, not canonical baseline."
+    }
+  ],
+  "verification": {
+    "check_count": 29077,
+    "external_dependency": "No package/network/repository input needed for replay.",
+    "normal_optimized_byte_identical": true
+  }
+}

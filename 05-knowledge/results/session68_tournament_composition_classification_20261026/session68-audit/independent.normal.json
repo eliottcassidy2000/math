@@ -1,0 +1,57 @@
+{
+  "W2_BFS": {
+    "labelled_colorings": 512,
+    "ordinary_types": 24,
+    "stabilizer_exponent_histogram": {
+      "0": 2,
+      "1": 10,
+      "2": 8,
+      "3": 2,
+      "4": 2
+    }
+  },
+  "direct_Hamilton_DFS_flux": [
+    {
+      "-3": 73710,
+      "-1": 267624,
+      "1": 121581
+    },
+    {
+      "-4": 4293,
+      "-3": 44064,
+      "-2": 86535,
+      "-1": 132084,
+      "0": 120258,
+      "1": 64017,
+      "2": 11664
+    }
+  ],
+  "full_fibre_n12": {
+    "automorphism_orders": [
+      81,
+      27,
+      27,
+      81
+    ],
+    "hypergraph_action_order": 1296,
+    "node_choice_realizations": 128,
+    "ordinary_orbit_sizes": [
+      16,
+      48,
+      48,
+      16
+    ]
+  },
+  "module_reversal_all_covers_n6": {
+    "covers": 385,
+    "profile": {
+      "1": 27,
+      "2": 117,
+      "3": 150,
+      "4": 75,
+      "5": 15,
+      "6": 1
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,29 @@
+{
+  "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "files": [
+    {
+      "path": "METAGRAPH_BOUNDARY.md",
+      "sha256": "a6d0828715696cc0cc5a82e96c0a3a0dd4f846f32feb55fb90a5a6556c69b177"
+    },
+    {
+      "path": "check_line_boundary.py",
+      "sha256": "aaad646fd54596b5f773db8f638c4fc04419a1ca28f974090d64e7a96f677a32"
+    },
+    {
+      "path": "line_boundary.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "line_boundary.optimized.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "inputs/THM-646-line-metagraph-score-complement-skeleton.md",
+      "sha256": "203525a858e167724249038f5e6f5610ac82ce0c10a44f43c7ca9d4a7d4a7664"
+    },
+    {
+      "path": "inputs/THM-785-cyclic-triangle-flow-on-blue-black-metagraph.md",
+      "sha256": "7570d2d88b8b9bce29cfce67540ed0182399c7f2bdbe2e5ea83a098f803768a8"
+    }
+  ]
+}

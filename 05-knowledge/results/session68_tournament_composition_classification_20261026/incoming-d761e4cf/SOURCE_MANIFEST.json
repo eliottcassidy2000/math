@@ -1,0 +1,29 @@
+{
+  "purpose": "Concurrent literature/inheritance snapshots; native assertions are not independently promoted by copying. No incoming checker is executed.",
+  "files": [
+    {
+      "path": "README.md",
+      "source_path": "05-knowledge/results/tournament_composition_classification_20261026/README.md",
+      "source_pin": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "git_blob": "46c5c523a935c3271545fef062428206c7255c58",
+      "bytes": 4984,
+      "sha256": "23d7b17fefd07cfc6a0d763f7ba15d2feabbdb656adf75f7edcc47c860ff205c"
+    },
+    {
+      "path": "CLASSIFICATION.md",
+      "source_path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "source_pin": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "git_blob": "63ead76e66bf475ee7c5a09ffecba4aab45298c4",
+      "bytes": 8936,
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "path": "AUDIT.md",
+      "source_path": "05-knowledge/results/tournament_composition_classification_20261026/AUDIT.md",
+      "source_pin": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+      "git_blob": "d6ce788a6e50d5419a06a01b91e13bd9eb744281",
+      "bytes": 5061,
+      "sha256": "a2b3c372a343cb3402ffba7e9bfa84c3731faf18e87254f478d257ad2bee8afc"
+    }
+  ]
+}

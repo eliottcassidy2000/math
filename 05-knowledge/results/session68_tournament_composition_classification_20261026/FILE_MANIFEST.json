@@ -1,0 +1,214 @@
+{
+  "schema": "session68-frozen-packet-v1",
+  "checkpoint": 1,
+  "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 14,
+      "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9"
+    },
+    {
+      "path": "NATIVE_SOURCE_MANIFEST.json",
+      "bytes": 7023,
+      "sha256": "2281ecaa91740e047fd71f06a54770f8a3e08adfd4372f2c97aa2f8388e8b401"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.md",
+      "bytes": 1211,
+      "sha256": "1ad3e5f08609805ff51b16fe2022fb90109e33ad98c77cdb4343ebd379d0eaed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5882,
+      "sha256": "68e93fb51884d9081ad24540e096b3ec5f35e5afd504ce6528e4a1252eefb8e0"
+    },
+    {
+      "path": "incoming-c9a88234/README.md",
+      "bytes": 20835,
+      "sha256": "a0e6faed7d6e454699b3eaa0a5da2bbc1d613288665eb4a205d8ee69f04caa4e"
+    },
+    {
+      "path": "incoming-c9a88234/SOURCE_MANIFEST.json",
+      "bytes": 529,
+      "sha256": "acd2c389c3ede8240a9830642e51b1c67d1cccc3844862a3bbb47e78fad418d8"
+    },
+    {
+      "path": "incoming-d761e4cf/AUDIT.md",
+      "bytes": 5061,
+      "sha256": "a2b3c372a343cb3402ffba7e9bfa84c3731faf18e87254f478d257ad2bee8afc"
+    },
+    {
+      "path": "incoming-d761e4cf/CLASSIFICATION.md",
+      "bytes": 8936,
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "path": "incoming-d761e4cf/README.md",
+      "bytes": 4984,
+      "sha256": "23d7b17fefd07cfc6a0d763f7ba15d2feabbdb656adf75f7edcc47c860ff205c"
+    },
+    {
+      "path": "incoming-d761e4cf/SOURCE_MANIFEST.json",
+      "bytes": 1305,
+      "sha256": "bb6029ccf82c317804b961865f2a75ad925b7db3c3cc863316e76d381c684c12"
+    },
+    {
+      "path": "session68-audit/CHECKPOINT1_AUDIT.md",
+      "bytes": 3643,
+      "sha256": "212b2a50db850706dfc1f520b88f7931c50556ba98f1bf4d2339b7a1af16be16"
+    },
+    {
+      "path": "session68-audit/independent.normal.json",
+      "bytes": 888,
+      "sha256": "c5caba58bb91965aa952235f58b69cf8ed95f083899da1aeae4eac285d9c3415"
+    },
+    {
+      "path": "session68-audit/independent.optimized.json",
+      "bytes": 888,
+      "sha256": "c5caba58bb91965aa952235f58b69cf8ed95f083899da1aeae4eac285d9c3415"
+    },
+    {
+      "path": "session68-audit/independent_controls.py",
+      "bytes": 5662,
+      "sha256": "6eef2fdbc7592f0b15df1bb2dc15f02694cc26c34e37a5aa1af2069e224ce480"
+    },
+    {
+      "path": "session68-classification/CLASSIFICATION.md",
+      "bytes": 22748,
+      "sha256": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f"
+    },
+    {
+      "path": "session68-classification/PROVENANCE.json",
+      "bytes": 3787,
+      "sha256": "f0508b54f2eefaed6e968d6ca841c40620c78936b19fd2ff19ee3dc17e03f859"
+    },
+    {
+      "path": "session68-classification/PUBLICATION_MANIFEST.json",
+      "bytes": 2558,
+      "sha256": "2709b0e5fd5561813a33b9a3811fa193cded4e1fc72606fbb2b1d4941f0fd80c"
+    },
+    {
+      "path": "session68-classification/README.md",
+      "bytes": 1974,
+      "sha256": "e2c9d8290747fa9d8cb9aad291f22e4431ac35358cddf9e275381435578f18cb"
+    },
+    {
+      "path": "session68-classification/check_classification.py",
+      "bytes": 16581,
+      "sha256": "7c4575f5fad738cced9b5320ea2a8e668ef50c0bc88db50e9013122fd615b105"
+    },
+    {
+      "path": "session68-classification/receipt.normal.json",
+      "bytes": 9212,
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "session68-classification/receipt.optimized.json",
+      "bytes": 9212,
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "session68-classification/sources/01-session56-hierarchy.txt",
+      "bytes": 11281,
+      "sha256": "80772c7ab31a3ebabc11da9f3d9531afbcda83fa14bdc525627d46eb7a49f3e0"
+    },
+    {
+      "path": "session68-classification/sources/02-weighted-core.txt",
+      "bytes": 15825,
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9"
+    },
+    {
+      "path": "session68-classification/sources/03-path-cover-kernel.txt",
+      "bytes": 9804,
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "session68-classification/sources/04-existing-wreath-divisibility.txt",
+      "bytes": 11162,
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "path": "session68-classification/sources/05-concurrent-classification.txt",
+      "bytes": 8936,
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "path": "session68-classification/sources/06-concurrent-fibre.txt",
+      "bytes": 14862,
+      "sha256": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5"
+    },
+    {
+      "path": "session68-classification/sources/07-concurrent-arithmetic.txt",
+      "bytes": 15887,
+      "sha256": "5c69544898f408d7cddb90e93e6f7b5224f1bff3f38a0caab368f9e58ce079f3"
+    },
+    {
+      "path": "session68-classification/sources/08-session67-incoming-review.txt",
+      "bytes": 10685,
+      "sha256": "a41aa8b46601908da13abac6fd1e9566655e19e1dccc64ebd9f6cfba8d7c773c"
+    },
+    {
+      "path": "session68-root/MANIFEST.json",
+      "bytes": 973,
+      "sha256": "220424c9e478a02cb7daac5182cd5923ce7d6e98887453498e201b911f5c6adb"
+    },
+    {
+      "path": "session68-root/METAGRAPH_BOUNDARY.md",
+      "bytes": 6635,
+      "sha256": "a6d0828715696cc0cc5a82e96c0a3a0dd4f846f32feb55fb90a5a6556c69b177"
+    },
+    {
+      "path": "session68-root/check_line_boundary.py",
+      "bytes": 2654,
+      "sha256": "aaad646fd54596b5f773db8f638c4fc04419a1ca28f974090d64e7a96f677a32"
+    },
+    {
+      "path": "session68-root/inputs/THM-646-line-metagraph-score-complement-skeleton.md",
+      "bytes": 5490,
+      "sha256": "203525a858e167724249038f5e6f5610ac82ce0c10a44f43c7ca9d4a7d4a7664"
+    },
+    {
+      "path": "session68-root/inputs/THM-785-cyclic-triangle-flow-on-blue-black-metagraph.md",
+      "bytes": 20375,
+      "sha256": "7570d2d88b8b9bce29cfce67540ed0182399c7f2bdbe2e5ea83a098f803768a8"
+    },
+    {
+      "path": "session68-root/line_boundary.json",
+      "bytes": 6380,
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "session68-root/line_boundary.optimized.json",
+      "bytes": 6380,
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "verify_mutations.py",
+      "bytes": 2941,
+      "sha256": "4c02443cb5cc5e8bd5fd393300660b93e613c9351fdb8bfccebe1b1eccece431"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 3901,
+      "sha256": "c9cd5a3ae9ae46f14de9712f99da9f2e1a1ee5a2e463bc46867f8fbbc424c83f"
+    }
+  ],
+  "replays": [
+    {
+      "script": "session68-classification/check_classification.py",
+      "normal": "session68-classification/receipt.normal.json",
+      "optimized": "session68-classification/receipt.optimized.json"
+    },
+    {
+      "script": "session68-root/check_line_boundary.py",
+      "normal": "session68-root/line_boundary.json",
+      "optimized": "session68-root/line_boundary.optimized.json"
+    },
+    {
+      "script": "session68-audit/independent_controls.py",
+      "normal": "session68-audit/independent.normal.json",
+      "optimized": "session68-audit/independent.optimized.json"
+    }
+  ]
+}

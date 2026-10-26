@@ -1,0 +1,81 @@
+{
+  "excluded_internal_files": [
+    "startup.txt",
+    "messages.txt",
+    "RESEARCH-PROTOCOL.pinned.md"
+  ],
+  "files": [
+    {
+      "bytes": 22748,
+      "path": "CLASSIFICATION.md",
+      "sha256": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f"
+    },
+    {
+      "bytes": 1974,
+      "path": "README.md",
+      "sha256": "e2c9d8290747fa9d8cb9aad291f22e4431ac35358cddf9e275381435578f18cb"
+    },
+    {
+      "bytes": 3787,
+      "path": "PROVENANCE.json",
+      "sha256": "f0508b54f2eefaed6e968d6ca841c40620c78936b19fd2ff19ee3dc17e03f859"
+    },
+    {
+      "bytes": 16581,
+      "path": "check_classification.py",
+      "sha256": "7c4575f5fad738cced9b5320ea2a8e668ef50c0bc88db50e9013122fd615b105"
+    },
+    {
+      "bytes": 9212,
+      "path": "receipt.normal.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "bytes": 9212,
+      "path": "receipt.optimized.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "bytes": 11281,
+      "path": "sources/01-session56-hierarchy.txt",
+      "sha256": "80772c7ab31a3ebabc11da9f3d9531afbcda83fa14bdc525627d46eb7a49f3e0"
+    },
+    {
+      "bytes": 15825,
+      "path": "sources/02-weighted-core.txt",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9"
+    },
+    {
+      "bytes": 9804,
+      "path": "sources/03-path-cover-kernel.txt",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "bytes": 11162,
+      "path": "sources/04-existing-wreath-divisibility.txt",
+      "sha256": "532266c35af01e36dc64e0e9cad34f733917c10bd5440625fd05f65f01b55044"
+    },
+    {
+      "bytes": 8936,
+      "path": "sources/05-concurrent-classification.txt",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "bytes": 14862,
+      "path": "sources/06-concurrent-fibre.txt",
+      "sha256": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5"
+    },
+    {
+      "bytes": 15887,
+      "path": "sources/07-concurrent-arithmetic.txt",
+      "sha256": "5c69544898f408d7cddb90e93e6f7b5224f1bff3f38a0caab368f9e58ce079f3"
+    },
+    {
+      "bytes": 10685,
+      "path": "sources/08-session67-incoming-review.txt",
+      "sha256": "a41aa8b46601908da13abac6fd1e9566655e19e1dccc64ebd9f6cfba8d7c773c"
+    }
+  ],
+  "publication_owner": "parent/publisher; no shared-repository mutation by this lane",
+  "schema": "session68-classification-publication-v1"
+}
