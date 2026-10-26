@@ -1,0 +1,250 @@
+{
+  "blue_join_hostile": {
+    "blue_outputs": [
+      true,
+      false
+    ],
+    "left_rows": [
+      [
+        2,
+        12,
+        41,
+        17,
+        39,
+        75,
+        31
+      ],
+      [
+        2,
+        20,
+        9,
+        51,
+        37,
+        71,
+        31
+      ]
+    ],
+    "right_rows": [
+      2,
+      20,
+      9,
+      51,
+      37,
+      71,
+      31
+    ],
+    "same_input_joint_pairs_and_colour": true
+  },
+  "literal_reset_quotients": [
+    {
+      "n": 1,
+      "presentations": 1,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "free/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/colour/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/fixed_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        }
+      }
+    },
+    {
+      "n": 2,
+      "presentations": 1,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "free/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/colour/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/fixed_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        },
+        "joint/free_reset": {
+          "cells": 1,
+          "strict_refinements": 0
+        }
+      }
+    },
+    {
+      "n": 3,
+      "presentations": 2,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        },
+        "free/free_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        },
+        "joint/colour/free_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        },
+        "joint/fixed_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        },
+        "joint/free_reset": {
+          "cells": 2,
+          "strict_refinements": 0
+        }
+      }
+    },
+    {
+      "n": 4,
+      "presentations": 8,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 7,
+          "strict_refinements": 1
+        },
+        "free/free_reset": {
+          "cells": 7,
+          "strict_refinements": 1
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 8,
+          "strict_refinements": 0
+        },
+        "joint/colour/free_reset": {
+          "cells": 8,
+          "strict_refinements": 0
+        },
+        "joint/fixed_reset": {
+          "cells": 8,
+          "strict_refinements": 0
+        },
+        "joint/free_reset": {
+          "cells": 8,
+          "strict_refinements": 0
+        }
+      }
+    },
+    {
+      "n": 5,
+      "presentations": 64,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 50,
+          "strict_refinements": 1
+        },
+        "free/free_reset": {
+          "cells": 50,
+          "strict_refinements": 1
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 64,
+          "strict_refinements": 1
+        },
+        "joint/colour/free_reset": {
+          "cells": 64,
+          "strict_refinements": 1
+        },
+        "joint/fixed_reset": {
+          "cells": 64,
+          "strict_refinements": 1
+        },
+        "joint/free_reset": {
+          "cells": 64,
+          "strict_refinements": 1
+        }
+      }
+    },
+    {
+      "n": 6,
+      "presentations": 1024,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 740,
+          "strict_refinements": 1
+        },
+        "free/free_reset": {
+          "cells": 732,
+          "strict_refinements": 1
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 1024,
+          "strict_refinements": 1
+        },
+        "joint/colour/free_reset": {
+          "cells": 1024,
+          "strict_refinements": 1
+        },
+        "joint/fixed_reset": {
+          "cells": 1024,
+          "strict_refinements": 1
+        },
+        "joint/free_reset": {
+          "cells": 1024,
+          "strict_refinements": 1
+        }
+      }
+    },
+    {
+      "n": 7,
+      "presentations": 32768,
+      "protocols": {
+        "free/colour/free_reset": {
+          "cells": 24754,
+          "strict_refinements": 1
+        },
+        "free/free_reset": {
+          "cells": 24654,
+          "strict_refinements": 1
+        },
+        "joint/colour/fixed_reset": {
+          "cells": 32272,
+          "strict_refinements": 1
+        },
+        "joint/colour/free_reset": {
+          "cells": 32272,
+          "strict_refinements": 1
+        },
+        "joint/fixed_reset": {
+          "cells": 32268,
+          "strict_refinements": 1
+        },
+        "joint/free_reset": {
+          "cells": 32268,
+          "strict_refinements": 1
+        }
+      }
+    }
+  ]
+}
