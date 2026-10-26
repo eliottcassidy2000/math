@@ -1,0 +1,52 @@
+{
+  "files": {
+    ".gitattributes": "6cac7e3ba10653a00b01d4028829ee18e893cf7da69218d5f41d6caea105dfaa",
+    "README.md": "62c398a3c882a8a09f9e2b339a058a740bca52931bbeb1e40b5cbecbf915e3f5",
+    "REVIEW.md": "ba03d1f3f906485469c58681a2aaa263284b3d82944223830cd53ff26907fbb1",
+    "check_two_step.py": "ec33936b9caa00cd9c466cf02b5f9b4f418d83cbced53aa566be357b702e6b8e",
+    "normal.json": "fb8286096ee0064494266e95494ae58694790bc4051ca0549c7b61f51b01a556",
+    "optimized.json": "fb8286096ee0064494266e95494ae58694790bc4051ca0549c7b61f51b01a556",
+    "verify.py": "c1df676c2d6a06218a6fe7c96de54171dfb6431098a07c19aebd8f7b236e5665"
+  },
+  "gates": 83912,
+  "inspected_revision": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+  "normal_optimized_identical": true,
+  "portability_change": "Only the default DP-source path changes from absolute scratch location to sibling packet location.",
+  "review": "REVIEW.md; independent mathematical review of synthesis, direct rule and portability edit. Hash integrity is not proof.",
+  "reviewed_sources": [
+    {
+      "blob": "fffb450732023f41e37b5a308b2e92e72866975d",
+      "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+      "path": "05-knowledge/results/guard_reconstruction_20261026/README.md",
+      "sha256": "0e8d76b8bfca01b5c3d016a62dcd5aff3c2450a41971c7a46a0d3a91b6157799"
+    },
+    {
+      "blob": "9b470552a123bd395ee9154637a74dbb2a7e40b6",
+      "commit": "c2039c32f9726b09ed0e09d5f5c126fc72975897",
+      "path": "05-knowledge/results/guard_reconstruction_20261026/CONNECTIONS.md",
+      "sha256": "fb67c41d40ba3bc95eb0a2f8a310493b426f47960b463385827ddff71993a183"
+    },
+    {
+      "blob": "95dae0fc50182f76de98c638d9bfdfb801c67f4d",
+      "commit": "a8fcb1c840eee074ec01059fa466ab638bb91690",
+      "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-root/SYNTHESIS.md",
+      "sha256": "9e55eb1aedc91fad53fce6a075a8f151c54a08ff18941502b21c7173eb85f8f6"
+    },
+    {
+      "commit": "9f2a9722ef3a01c5db9b97757bce488b99caa2c5",
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "sha256": "0215695e58d93c4ade817b8c8228f98e3b747824106d4b2a6faaf81d9932188c"
+    },
+    {
+      "commit": "9f2a9722ef3a01c5db9b97757bce488b99caa2c5",
+      "path": "04-computation/experiments/joint_port_bisimulation_20261026/audit_hyp9416/REPORT.md",
+      "sha256": "28037017257848efaf3a6ea2a7e3b02e4ee87e40020b34f783278d148da5c5ae"
+    }
+  ],
+  "scratch_checker_sha256": "2437a6b49c5ca05a39d783e724a006ecc603a34fb9a513f59273d66662701839",
+  "status": "PASS: direct decoder proof reviewed; exhaustive finite replay complete",
+  "support_source": {
+    "path": "05-knowledge/results/growing_sieve_path_20261026/audit_paths/check.py",
+    "sha256": "661697c8d040635cebd94df405424722f5b028bc25fb970a021dcf30976518e5"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "census": [
+    {
+      "labelled_tournaments": 1,
+      "missing_internal_arcs": 0,
+      "missing_outer_arcs": 0,
+      "n": 1,
+      "nonfull_supports": 0
+    },
+    {
+      "labelled_tournaments": 2,
+      "missing_internal_arcs": 0,
+      "missing_outer_arcs": 0,
+      "n": 2,
+      "nonfull_supports": 0
+    },
+    {
+      "labelled_tournaments": 8,
+      "missing_internal_arcs": 0,
+      "missing_outer_arcs": 6,
+      "n": 3,
+      "nonfull_supports": 6
+    },
+    {
+      "labelled_tournaments": 64,
+      "missing_internal_arcs": 0,
+      "missing_outer_arcs": 72,
+      "n": 4,
+      "nonfull_supports": 24
+    },
+    {
+      "labelled_tournaments": 1024,
+      "missing_internal_arcs": 120,
+      "missing_outer_arcs": 1000,
+      "n": 5,
+      "nonfull_supports": 360
+    },
+    {
+      "labelled_tournaments": 32768,
+      "missing_internal_arcs": 2880,
+      "missing_outer_arcs": 19440,
+      "n": 6,
+      "nonfull_supports": 6720
+    }
+  ],
+  "dp_source_sha256": "661697c8d040635cebd94df405424722f5b028bc25fb970a021dcf30976518e5",
+  "first_internal": {
+    "certificate": {
+      "arc": [
+        4,
+        1
+      ],
+      "forward_middle_vertices": [
+        2,
+        3
+      ],
+      "kind": "internal",
+      "reverse_middle_vertices": [
+        0
+      ]
+    },
+    "code": 10,
+    "n": 5,
+    "rows": [
+      20,
+      1,
+      2,
+      7,
+      14
+    ],
+    "support": [
+      20,
+      1,
+      2,
+      7,
+      12
+    ]
+  },
+  "gates": 83912,
+  "labelled_tournaments": 33867,
+  "method": "Runpy imports only prior independent subset-endpoint DP; fresh traversal SCCs and direct two-step decoder; literal tournament rows are oracle.",
+  "missing_internal_count_histogram": [
+    {
+      "arcs": 1560,
+      "forward": 2,
+      "reverse": 1
+    },
+    {
+      "arcs": 1440,
+      "forward": 3,
+      "reverse": 1
+    }
+  ],
+  "scope_hostiles": {
+    "Paley7_existing_arc_0_to_1_counts": [
+      1,
+      2
+    ],
+    "transitive3_missing_outer_forward_count": 1
+  },
+  "status": "FINITE-EXACT PASS",
+  "universe": "Every labelled tournament at orders1..6, without quotient/filter; one explicit Paley7 scope hostile"
+}
