@@ -86,6 +86,9 @@ def run(seconds, max_depth):
     status = 'time'
     info = None
     gram, pmax = 2, 3000
+    computed = 0
+    cur_depth = 0
+    prof = []
     while time.time() - t0 < seconds:
         W = Ws[-1]
         if depth_of(0, W) > max_depth:
@@ -101,9 +104,16 @@ def run(seconds, max_depth):
             status, info = 'CAPTURE', {'W': W, 'base': b, 'translation': D, 'labels': cyc, 'E': E}
             break
         nsw += 1
+        computed += 1
         toks.append(t)
         Ws.append(W2)
         tr.point(W2, nsw)
+        dW2 = depth_of(0, W2)
+        if dW2 > cur_depth:
+            cur_depth = dW2
+            prof.append((dW2, round(time.time() - t0, 1), nsw, computed, acc.STATS['phases'], acc.STATS['l2_jumps']))
+            print('depth', dW2, 'time', prof[-1][1], 'sweeps %.3e' % nsw, 'computed sweeps', computed,
+                  'phases', acc.STATS['phases'], 'l2 jumps', acc.STATS['l2_jumps'], flush=True)
         n = len(toks)
         if len(Ws) > 20000:
             del Ws[:10000]
@@ -158,6 +168,7 @@ def run(seconds, max_depth):
             last_print = time.time()
             print(f'[{time.time() - t0:.0f}s] sweeps {nsw:.3e} depth {depth_of(0, Ws[-1])} W bits {Ws[-1].bit_length()}',
                   flush=True)
+    run.prof = prof
     return status, info, tr, nsw, Ws[-1]
 
 
@@ -174,5 +185,5 @@ if __name__ == '__main__':
         r = tr.rows[d]
         print(d, r['entry'][0] if r['entry'] else None, r['N_below'], r['N_above'], r['T_below'], r['T_above'], flush=True)
         out.append({'d': d, **{k: (v if not isinstance(v, tuple) else list(v)) for k, v in r.items()}})
-    json.dump({'status': status, 'info': str(info), 'sweeps': nsw, 'final_W': str(W), 'rows': out},
+    json.dump({'status': status, 'info': str(info), 'sweeps': nsw, 'final_W': str(W), 'rows': out, 'profile': run.prof},
               open(os.path.join(HERE, 'a6_orbit_deep.json'), 'w'), indent=1, default=str)
