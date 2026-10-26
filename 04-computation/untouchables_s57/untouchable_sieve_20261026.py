@@ -165,6 +165,14 @@ def odd_composite_squares(N, mult):
                 mult[j] += 1
 
 
+@nb.njit(cache=False)
+def hist_u8(a):
+    h = np.zeros(256, np.int64)
+    for i in range(a.shape[0]):
+        h[a[i]] += 1
+    return h
+
+
 def run(N, seg=1 << 22):
     t0 = time.time()
     primes = primes_upto(int(math.isqrt(2 * N)) + 2)
@@ -206,7 +214,8 @@ def odd_untouchables(N):
 if __name__ == '__main__':
     N = int(float(sys.argv[1]))
     mult, dt = run(N)
-    even_untouch = int(np.sum(mult[1:] == 0))   # j >= 1 <-> k = 2j >= 2
+    bc = hist_u8(mult[1:])                      # j >= 1 <-> k = 2j >= 2 (no int64 temporaries at N = 1e10)
+    even_untouch = int(bc[0])
     oddbad, L = odd_untouchables(N)
     total = even_untouch + len(oddbad)
     print(f'N = {N}: even untouchables {even_untouch}, odd untouchables (k <= {L} checked) {oddbad}, '
@@ -220,7 +229,6 @@ if __name__ == '__main__':
         marks[str(x)] = int(np.count_nonzero(mult[1:x // 2 + 1] == 0)) + (1 if x >= 5 else 0)
         x *= 10
     print('untouchables <= 10^e:', marks, flush=True)
-    bc = np.bincount(mult[1:], minlength=256)
     dist = {int(v): int(c) for v, c in enumerate(bc) if c}
     json.dump({'N': N, 'counts_at_powers_of_ten': marks, 'even_untouchables': even_untouch, 'odd_untouchables_checked_to': L, 'odd_untouchables': oddbad,
                'total': total, 'share': total / N, 'multiplicity_distribution_even_k': dist},
