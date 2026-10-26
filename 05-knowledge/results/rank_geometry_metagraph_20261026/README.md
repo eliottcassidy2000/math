@@ -84,9 +84,14 @@ rational-point possibilities to zero/eight/infinite; the eight singular
 rational points can fail to lift to the smooth resolution. This changes
 which arithmetic boundary data must be retained in any proposed gluing.
 
-The separately requested norm-seven session was started in another chat
-and is pursuing that resolved fixed-twist boundary. Its in-progress work
-is not a proved dependency of this packet.
+The separately requested norm-seven session completed during integration.
+Its [resolved-fibre result](../normseven_descent_moments_20261026/RESOLVED_FIBRES.md)
+gives two twists with the same residue field Q(sqrt(13)) and identical
+good-prime fibre zeta functions, but minimum resolution-lifting degrees
+two and four. The distinction is a tangent-conic obstruction at3. The
+[parent review](NORMSEVEN_REVIEW.md) checks its proof and independently
+replays the packet. This is about the specified closed fibres, not entire
+surface zeta functions or the interior integer-square problem.
 
 Here are the exact parallels and their limits:
 

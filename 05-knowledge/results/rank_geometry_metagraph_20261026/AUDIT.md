@@ -58,8 +58,10 @@ The session started from clean current `983768efde84`, recovered Session66
 before deriving, and read incoming `2daf5e00af` as mathematical evidence.
 The latter's marked determinant and complete-boundary corrections are
 linked with their own audits; they are not relabelled as discoveries of
-this packet. A separately requested norm-seven chat is continuing the
-resolved fixed-twist boundary, with no in-progress claim used as a proof.
+this packet. The separately requested norm-seven chat then completed at
+`a3b6805487`; its resolved fixed-twist comparison received a
+[parent review and independent replay](NORMSEVEN_REVIEW.md). Rebase conflicts
+in navigation and MISTAKES retained both sessions' corrections and routes.
 
 Every universal result is supported by its displayed argument. Finite
 counts do not prove all-order connectivity, infinite source7 survival,
