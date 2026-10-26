@@ -1,0 +1,46 @@
+{
+  "blocks": 32,
+  "hostiles": [
+    "wrong fifth token",
+    "wrong +3 recurrence"
+  ],
+  "invariants": 560,
+  "native_blank_checkpoints": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      19,
+      5,
+      6
+    ],
+    [
+      128,
+      16,
+      18
+    ],
+    [
+      633,
+      39,
+      42
+    ],
+    [
+      2794,
+      86,
+      90
+    ],
+    [
+      11723,
+      181,
+      186
+    ],
+    [
+      48012,
+      372,
+      378
+    ]
+  ],
+  "status": "PASS"
+}

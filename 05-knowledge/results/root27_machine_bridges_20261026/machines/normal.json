@@ -1,0 +1,71 @@
+{
+  "clock_cases": 194,
+  "configuration_tournament_steps": 6640,
+  "exponential_blank_block_lengths": [
+    0,
+    6,
+    18,
+    42,
+    90,
+    186,
+    378
+  ],
+  "exponential_blank_times": [
+    0,
+    19,
+    128,
+    633,
+    2794,
+    11723,
+    48012
+  ],
+  "goldbach_native_checkpoints": [
+    [
+      45,
+      4
+    ],
+    [
+      132,
+      6
+    ],
+    [
+      301,
+      8
+    ],
+    [
+      596,
+      10
+    ],
+    [
+      1101,
+      12
+    ],
+    [
+      1988,
+      14
+    ],
+    [
+      3263,
+      16
+    ],
+    [
+      5160,
+      18
+    ],
+    [
+      7805,
+      20
+    ],
+    [
+      11522,
+      22
+    ]
+  ],
+  "hostiles": [
+    "wrong published exponential pair",
+    "wrong exponential +3 recurrence",
+    "same control graph opposite halting"
+  ],
+  "scope": "finite native validation; all-order proofs and cited Lean boundary in README",
+  "status": "PASS"
+}

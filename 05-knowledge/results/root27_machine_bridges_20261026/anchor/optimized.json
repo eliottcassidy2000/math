@@ -1,0 +1,75 @@
+{
+  "actual_root27_charge_failure": {
+    "a": 21,
+    "after": 22,
+    "before": 25,
+    "e": 4,
+    "index": 19,
+    "k": 2,
+    "x": 57971215
+  },
+  "blank_warmup_z_a": [
+    [
+      7,
+      0
+    ],
+    [
+      11,
+      2
+    ],
+    [
+      17,
+      4
+    ],
+    [
+      26,
+      6
+    ],
+    [
+      39,
+      5
+    ]
+  ],
+  "controls": {
+    "binary_cylinders": 510,
+    "concatenation_cuts": 8982,
+    "dual_guard_controls": 8000,
+    "frontier_return_controls": 32,
+    "leaf_expansion_controls": 3928,
+    "literal_forest_lifts": 567,
+    "pump_cylinder_controls": 8600
+  },
+  "noncomb_halt": {
+    "a": 0,
+    "executed": 21,
+    "halted": true,
+    "word": "1111000010000010100000",
+    "z": 78894
+  },
+  "open": "Universal root7 tree-source exclusion / root27 debt inequality",
+  "pump_family_count": 344,
+  "pump_fuel_histogram": {
+    "1": 183,
+    "2": 111,
+    "3": 10,
+    "4": 31,
+    "5": 8,
+    "6": 1
+  },
+  "scope": "ELEMENTARY_PROOFS_AND_BOUNDED_EXACT_CONTROLS",
+  "six_forest_counts_e0_to3": [
+    1,
+    6,
+    33,
+    182
+  ],
+  "status": "PASS",
+  "tree_counts_e0_to5": [
+    1,
+    1,
+    3,
+    12,
+    55,
+    273
+  ]
+}

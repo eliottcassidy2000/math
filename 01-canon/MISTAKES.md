@@ -4,6 +4,40 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — retain the native read symbol and configuration parameter in an exponential bell
+
+- **Affected source:** the exponential-bell example in
+  [BusyBeaverWiki, Bell, revision 6789](https://wiki.bbchallenge.org/w/index.php?title=Bell&oldid=6789),
+  for the literal table `1RB0LC_1RC1RA_1LA0RB`. Its displayed middle
+  pair and `a_(k+1)=2a_k+3` recurrence do not match native execution.
+- **Minimal witness:** at the first block's fifth read, the actual token
+  is C1, not C0. The first 19 transitions leave six occupied cells,
+  giving C4 under the stated `2n-2` cell parameterization, not C5.
+- **Repair and mechanism:** define C_n by state A, head 0, and ones at
+  `-2n+2,...,-1`. The exact translated return is C_(2n+2), shifted by
+  `2n+3` cells, in `4n^2+10n+5` native transitions. A tape-interval
+  induction proves every block. Native time, translation distance and
+  configuration parameter are three different quantities.
+- **Audit / strongest survivor:** the table is still an exponential
+  bell and is syntactically nonhalting. The complete proof, corrected
+  transcript and independent dense-tape controls are in
+  [the machine packet](../05-knowledge/results/root27_machine_bridges_20261026/machines/README.md)
+  and [independent review](../05-knowledge/results/root27_machine_bridges_20261026/machines/INDEPENDENT_REVIEW.md).
+  No correction to other bell tables, external page edit, or external
+  formal build is claimed.
+- **Next test:** for any compressed machine diagram, check literal
+  occupied cells and read tokens before transferring its recurrence or
+  identifying its parameter with a tournament count.
+
+## 2026-10-26 — pointwise escape does not imply order preservation
+
+The preliminary root-27 cross-section draft called V “strictly increasing.”
+It proves only `V(z)>z` on positive odd inputs. Indeed V(5)=27>V(7)=11.
+The [repaired cross-section proof](../05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md)
+now states pointwise escape explicitly. Its inverse descent and root
+construction use that weaker property and survive; no monotone comparison
+of two different forward orbits follows.
+
 ## 2026-10-25 — reject an early path endpoint before reading its second neighbour
 
 - **Affected implementation:** `directedPath` in

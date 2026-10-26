@@ -1,0 +1,11 @@
+{
+  "guarded_returns": 2304,
+  "leaf_checks": 3845,
+  "literal_mismatch_checks": 1270,
+  "pumped_blocks": 71,
+  "pumped_literal_checks": 27264,
+  "scope": "finite independent controls; universal proof audit in review",
+  "section_clock_edges": 62,
+  "status": "PASS",
+  "translated_native_macros": 23023
+}

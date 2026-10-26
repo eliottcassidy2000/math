@@ -1,0 +1,27 @@
+{
+  "canonical_K_images_outside_code": 20800,
+  "complete_transition_tables": 20800,
+  "hostile": {
+    "changed_pair": [
+      [
+        0,
+        5
+      ]
+    ],
+    "halt": {
+      "kind": "halt",
+      "steps": 3
+    },
+    "loop": {
+      "first": 0,
+      "kind": "repeat",
+      "period": 2,
+      "steps": 2
+    },
+    "order": 8
+  },
+  "joint_frame_relabellings": 40320,
+  "padding_trace_controls": 262,
+  "scope": "finite program syntax with marked Hamiltonian frame; no halting equivalence for unframed graph moves",
+  "status": "PASS"
+}

@@ -1,0 +1,86 @@
+{
+  "extension_patterns": [
+    {
+      "modulus": 924,
+      "prime": 463,
+      "residue": 463,
+      "signs": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 211,
+      "residue": 211,
+      "signs": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 199,
+      "residue": 199,
+      "signs": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 2719,
+      "residue": 871,
+      "signs": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 2003,
+      "residue": 155,
+      "signs": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 827,
+      "residue": 827,
+      "signs": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 2663,
+      "residue": 815,
+      "signs": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "modulus": 924,
+      "prime": 563,
+      "residue": 563,
+      "signs": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "scope": "FINITE_SIGN_AND_CRT_CONTROLS_ONLY",
+  "status": "PASS"
+}
