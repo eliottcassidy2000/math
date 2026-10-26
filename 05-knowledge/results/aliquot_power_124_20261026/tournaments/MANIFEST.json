@@ -1,0 +1,11 @@
+{
+  "checks": 8494,
+  "files": {
+    "TOURNAMENTS_124.md": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9",
+    "check_tournaments_124.py": "027d19f5eb64be7f4d83c9482c07131d863301e430eb02c2558b4670808d6f7c",
+    "normal.json": "889aee8d7513adc9d2c3b7049c2011bed837f12854a98b97720ce9f1bbda6067",
+    "optimized.json": "889aee8d7513adc9d2c3b7049c2011bed837f12854a98b97720ce9f1bbda6067"
+  },
+  "normal_optimized_identical": true,
+  "status": "FROZEN_FOR_INDEPENDENT_AUDIT"
+}

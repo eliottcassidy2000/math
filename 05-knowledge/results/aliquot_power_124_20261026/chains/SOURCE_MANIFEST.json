@@ -1,0 +1,28 @@
+{
+  "files": {
+    "AUDIT_ALIQUOT.md": "2a292ffa67d7e09426f40d18000a67bb688dcbeeb00bd3335ecbee5277f1f841",
+    "RESULT.md": "48b6909999b616afb389c82dea510db1cbf8145e31d5f8b76d582ef033b086ac",
+    "SOURCES.md": "049975c1fa1b0a1b9517a821056f413b5ba5362cbb90ff7da7494ca0fd552e51",
+    "aliquot_audit.normal.json": "df07d0ec96ecb1ff43368075c456bcdeaed835298f77027b4f89ee1cba25128e",
+    "aliquot_audit.optimized.json": "df07d0ec96ecb1ff43368075c456bcdeaed835298f77027b4f89ee1cba25128e",
+    "audit_aliquot.py": "5d2c1e88a19870b80c25026401e029070cab0bfdee971966054efdad5b5f870c",
+    "check.py": "63956a289445c8ade9386ed1453a9d390cf733534a5733432a4f40867809b540",
+    "normal.json": "4847fb13f19b3ce377478e4e77f6fd3c46f853efa07fc8438d5c70565bc6aa75",
+    "optimized.json": "4847fb13f19b3ce377478e4e77f6fd3c46f853efa07fc8438d5c70565bc6aa75"
+  },
+  "independent_audit": {
+    "path": "../aliquot/AUDIT_CHAINS.md",
+    "promotion_change": "status and audit link only",
+    "reviewed_pre_promotion_proof_sha256": "ddbd208d5188c3eaa673dd855bcf6a37e453e01645c9e5f33abdf268e8b8b354",
+    "sha256": "519361bad617769ea96078c3bc8339b151d027551952ca3a8eb6ad1efda52b4f"
+  },
+  "inherited": {
+    "01-canon/theorems/THM-3833-abc-conditional-cube-radical-and-hyperbolic-power-finiteness.md": "b1ee8286eb75a65b15a0cecb1a8ef6631a9820dee5482bce2628b273c87d5aaf",
+    "05-knowledge/reference/CORE-PAPERS-ABC-IUT.md": "0703a4e87dca6b49270ad4d122d20da2f54e29734743f84a5655a6292e21ba93",
+    "05-knowledge/results/arithmetic_braids_20260917_summand.md": "ea77e19774af976f5aad8052e26d0440bc3c022afbe93176fc84c843dab07d86",
+    "05-knowledge/results/collatz_aliquot_lehmer_five_20260927.md": "c3448486209a3ca7d5713d78d56500ad63434df09674797af55cedd7c33fb19b"
+  },
+  "normal_optimized_identical": true,
+  "receipt_gates": 268651,
+  "status": "proof and implementation independently audited PASS; abc conclusion explicitly conditional"
+}

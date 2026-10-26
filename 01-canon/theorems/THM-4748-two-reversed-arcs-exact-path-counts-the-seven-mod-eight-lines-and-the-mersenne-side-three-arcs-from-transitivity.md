@@ -85,7 +85,7 @@ related:
      * Take a crossing pair with `p = q = 0` and odd `r`, together with a disjoint `C_3`.
      * Then `H = 3(2^(r+2) + 2·3^r − 1) ≡ 7 (mod 8)`, and the odd part of `H + 1` is at least `3^(r+1)/(4(r+1))` for `r ≥ 5`.
    * **Finite record (FINITE-EXACT).**
-     * The class census for `n ≤ 9`: the classes with `H = 31, 63, 127, 255` have least feedback arc number 3 (`two_arc_formulas.py`).
+     * The class census for `n ≤ 9`: the minimum feedback arc number over realizations of each value `H = 31, 63, 127, 255` is 3 (`two_arc_formulas.py`). This is not a statement about every class with that value: the row-mask tournament `(106,60,89,48,97,68,10)` has `H = 127` and minimum feedback arc number 5. See the [exact witness and correction](../../05-knowledge/results/aliquot_power_124_20261026/CORRECTIONS.md).
      * Three reversed arcs (all configurations, `m ≤ 13`) reach `2^k − 1` for every `4 ≤ k ≤ 11` and for `k = 15`, but not for `k = 12, 13, 14` (`three_arc_census.py`).
      * The largest odd part of `H + 1` among their `7 (mod 8)` values is 13, 37, 97, 343, 829, 3737, 7267 at `m = 7, …, 13`.
      * Among the strong classes with `H < 2100`, the least feedback arc number of `H = 2^k − 1` is 3 for `5 ≤ k ≤ 11`. The fan and its converse are the only realizations with `fa ≤ 3` exactly for `k = 6, 9, 11` (`H = 63, 511, 2047`). For `k = 5, 7, 8, 10` there are 4, 4, 24 and 8 such classes (`fan_uniqueness.py`).

@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — conditional coverage and minima over fibres retain their quantifiers
+
+- **Source / first failed implication:** the [S57 aliquot report](../05-knowledge/results/s57_untouchables_root27_20261026/README.md), section3, stated globally that only odd targets3,5,7 lack a distinct-prime partition of their predecessor. For targets at least9 this imports the OPEN distinct-prime Goldbach antecedent. The surrounding finite evidence did not supply that theorem.
+- **Repair / strongest survivor:** the sentence now explicitly assumes every even integer at least8 is a sum of two distinct primes. Then `s(pq)=1+p+q` covers odd targets at least9, and3,7 have the power-of-two sources4,8. No counterexample to the conjecture is asserted. The finite census survives; repeated-prime partitions are invalid witnesses (`s(9)=4`, not7).
+- **Independent finite witness to a second quantifier error:** [THM-4748 / two-reversed-arcs](theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md) had a finite-record bullet readable as saying every class with H in{31,63,127,255} has minimum feedback number3. The row masks `(106,60,89,48,97,68,10)` give H127 and feedback number5 over all7! orders. Its OCF profile `(1,45,9)` independently gives127. This is a concrete witness, with no global minimality claim.
+- **Repair / missing coordinate:** the minimum over the fibre of a specified H value is3; individual members may need more. The theorem's fan construction and lower bound survive. Retain the tournament, rather than H alone. The two errors share a quantifier loss, not an equivalence of their mathematical targets.
+- **Reproduction / next question:** [correction lineage and exact packet](../05-knowledge/results/aliquot_power_124_20261026/CORRECTIONS.md) retain before/after hashes, literal controls and independent audits. Remaining questions are coverage without Goldbach and the full feedback spectrum inside a fixed-H fibre.
+
 ## 2026-10-26 — shattering labelled modules does not shatter unlabelled tree shape
 
 - **Source and failed implication:** [THM-4804](theorems/THM-4804-complement-lines-shatter-every-module-and-the-carousel-fibre-as-frobenius-orbits-of-a-normal-basis.md)

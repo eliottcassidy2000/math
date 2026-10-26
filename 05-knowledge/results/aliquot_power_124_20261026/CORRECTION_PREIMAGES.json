@@ -1,0 +1,19 @@
+{
+  "base_commit": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "changes": [
+    {
+      "path": "05-knowledge/results/s57_untouchables_root27_20261026/README.md",
+      "postimage_sha256": "a98e4a1e3ecfc17d31a48508914c52253c9911c706ede318916ea64feb75ca09",
+      "preimage_sha256": "167060452d72685677e9eb621f7cb1a2adb70734ee33d8ac953c7d5a1fc1d465",
+      "removed": "- **The structural reason 5 is alone:** the only odd `k` whose `k - 1` has no distinct-prime partition are 3, 5 and 7.\n  Two of these are Mersenne, `3 = s(4)` and `7 = s(8)`, and 5 is not.",
+      "replacement": "- **Conditional reason 5 would be alone:** if every even integer at least 8 is a sum of two distinct primes,\n  the only odd `k >= 3` whose `k - 1` lacks such a partition are 3, 5 and 7.\n  The exceptions 3 and 7 are touched by `s(4)` and `s(8)`; 5 is untouchable.\n  The distinct-prime Goldbach antecedent is OPEN. The former unconditional sentence\n  was a quantifier overreach; see the [2026-10-26 correction](../aliquot_power_124_20261026/CORRECTIONS.md)."
+    },
+    {
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "postimage_sha256": "e83a80296e20d4ae93f24a64756a808368926d52ed08e31e2602c4f3905794fd",
+      "preimage_sha256": "922e02be904c3b58e7d27dcf2ca13afb13dfcd16db4704a253a531736c5d34e0",
+      "removed": "     * The class census for `n \u2264 9`: the classes with `H = 31, 63, 127, 255` have least feedback arc number 3 (`two_arc_formulas.py`).",
+      "replacement": "     * The class census for `n \u2264 9`: the minimum feedback arc number over realizations of each value `H = 31, 63, 127, 255` is 3 (`two_arc_formulas.py`). This is not a statement about every class with that value: the row-mask tournament `(106,60,89,48,97,68,10)` has `H = 127` and minimum feedback arc number 5. See the [exact witness and correction](../../05-knowledge/results/aliquot_power_124_20261026/CORRECTIONS.md)."
+    }
+  ]
+}

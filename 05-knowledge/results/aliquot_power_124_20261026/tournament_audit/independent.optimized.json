@@ -1,0 +1,67 @@
+{
+  "F8": {
+    "line": [
+      2,
+      4,
+      6
+    ],
+    "line_span_size": 4,
+    "normal": [
+      3,
+      5,
+      7
+    ],
+    "normal_span_size": 8
+  },
+  "H127": {
+    "Aut": 1,
+    "H": 127,
+    "alpha": [
+      1,
+      45,
+      9
+    ],
+    "attaining_order": [
+      1,
+      2,
+      4,
+      0,
+      5,
+      6,
+      3
+    ],
+    "cycle_counts": {
+      "3": 11,
+      "5": 23,
+      "7": 11
+    },
+    "feedback_histogram": {
+      "5": 9,
+      "6": 65,
+      "7": 230,
+      "8": 493,
+      "9": 766,
+      "10": 957,
+      "11": 957,
+      "12": 766,
+      "13": 493,
+      "14": 230,
+      "15": 65,
+      "16": 9
+    },
+    "minimum_feedback": 5,
+    "rows": [
+      106,
+      60,
+      89,
+      48,
+      97,
+      68,
+      10
+    ]
+  },
+  "checks": 2042,
+  "flag_count_2_to1000": 467,
+  "scope": "Independent finite controls for the exact proof audit; no new all-order tc or ordinary spectrum completeness claim.",
+  "status": "PASS"
+}

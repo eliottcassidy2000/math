@@ -1,0 +1,9 @@
+{
+  "checker_sha256": "5d2c1e88a19870b80c25026401e029070cab0bfdee971966054efdad5b5f870c",
+  "gates": 16005,
+  "method": "add each proper divisor to its strict multiples; primality from composite marking",
+  "producer_receipt_sha256": "9ef780d23709b11196065167dac972ed32d60434fecd086d79c474547a7d3103",
+  "source_bound": 3481,
+  "status": "PASS",
+  "target_bound": 60
+}

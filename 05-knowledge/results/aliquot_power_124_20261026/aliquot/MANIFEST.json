@@ -1,0 +1,63 @@
+{
+  "chain_audit": {
+    "independent_direct_square_census_counts": [
+      2,
+      5,
+      11,
+      23,
+      47,
+      95,
+      191
+    ],
+    "independent_direct_square_census_m": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "replayed_checks": 268651,
+    "status": "PASS"
+  },
+  "checks": 19801,
+  "date": "2026-10-26",
+  "files": {
+    "AUDIT_CHAINS.md": "519361bad617769ea96078c3bc8339b151d027551952ca3a8eb6ad1efda52b4f",
+    "INHERITED_FIBRES.json": "fae7872bb3b9b87d6526d3d7ec499aef349e9f96c8bd9acc0b0cf7c92b46768c",
+    "README.md": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19",
+    "chains.replay.normal.json": "4847fb13f19b3ce377478e4e77f6fd3c46f853efa07fc8438d5c70565bc6aa75",
+    "chains.replay.optimized.json": "4847fb13f19b3ce377478e4e77f6fd3c46f853efa07fc8438d5c70565bc6aa75",
+    "check_aliquot.py": "61324c5a5c1be9b3094006a00372710c41fb9a6aee205d696deb2e54ac6afd06",
+    "results.normal.json": "9ef780d23709b11196065167dac972ed32d60434fecd086d79c474547a7d3103",
+    "results.optimized.json": "9ef780d23709b11196065167dac972ed32d60434fecd086d79c474547a7d3103"
+  },
+  "independent_audit": {
+    "bounded_change": "Status and audit link only",
+    "independent_additive_sieve_checks": 16005,
+    "path": "../chains/AUDIT_ALIQUOT.md",
+    "pre_promotion_proof_sha256": "b86f1eb6e7f671370bd12fac0253a7ca3e3af7d9fb166d9c2283c1947b676063",
+    "sha256": "2a292ffa67d7e09426f40d18000a67bb688dcbeeb00bd3335ecbee5277f1f841"
+  },
+  "normal_optimized_identical": true,
+  "primary_sources": [
+    {
+      "location": "Theorem1.1, pages1-2; proof and exponent primality read",
+      "url": "https://kconrad.math.uconn.edu/blurbs/ugradnumthy/perfect-numbers-mersenne.pdf",
+      "use": "Euclid-Euler theorem only"
+    },
+    {
+      "location": "Section1, page1",
+      "url": "https://math.dartmouth.edu/~carlp/uupaper3.pdf",
+      "use": "Distinct-Goldbach sufficient implication and odd-untouchable open boundary"
+    },
+    {
+      "location": "Slide36, PDF page39",
+      "url": "https://math.dartmouth.edu/~carlp/upintconf.pdf",
+      "use": "Same open boundary and explicit small odd sources"
+    }
+  ],
+  "scope": "Unique perfect target of a prime square proved from Euclid-Euler; inverse fibres through60 inherited and independently recertified. No odd-untouchable closure.",
+  "status": "INDEPENDENT_AUDIT_PASS"
+}

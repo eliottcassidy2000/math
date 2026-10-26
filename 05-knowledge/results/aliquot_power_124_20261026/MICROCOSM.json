@@ -1,0 +1,1598 @@
+{
+  "base_universe": [
+    1,
+    32
+  ],
+  "fibre_universe": {
+    "proved_source_bound": 961,
+    "targets": [
+      2,
+      32
+    ]
+  },
+  "first_row_order": "minimum numerical base",
+  "power_and_combined_base_domain": "base>=2; exponent>=1; doubling height>=0",
+  "rows": [
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": "all primes",
+      "n": 1,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": null,
+      "prime_square_preimages": [],
+      "s_n": 0,
+      "square": 1,
+      "square_combined_address_count": 0,
+      "square_combined_addresses": [],
+      "square_combined_first_base": null,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": [],
+      "n": 2,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 2,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 4,
+      "square_combined_address_count": 3,
+      "square_combined_addresses": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          4,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 2,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 27,
+      "doubling_first_row_n": 3,
+      "inverse_fibre": [
+        4
+      ],
+      "n": 3,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 3,
+      "prime_square_preimages": [
+        4
+      ],
+      "s_n": 1,
+      "square": 9,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          9,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 9,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": [
+        9
+      ],
+      "n": 4,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 2,
+      "prime_square_preimages": [
+        9
+      ],
+      "s_n": 3,
+      "square": 16,
+      "square_combined_address_count": 8,
+      "square_combined_addresses": [
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          8,
+          1,
+          1
+        ],
+        [
+          16,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 2,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 125,
+      "doubling_first_row_n": 5,
+      "inverse_fibre": [],
+      "n": 5,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 5,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 25,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          5,
+          2,
+          0
+        ],
+        [
+          25,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 5,
+      "square_doubling_first_row": 25,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 27,
+      "doubling_first_row_n": 3,
+      "inverse_fibre": [
+        6,
+        25
+      ],
+      "n": 6,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": true,
+      "power_first_base_n": 6,
+      "prime_square_preimages": [
+        25
+      ],
+      "s_n": 6,
+      "square": 36,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          6,
+          2,
+          0
+        ],
+        [
+          9,
+          1,
+          2
+        ],
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          36,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 9,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 343,
+      "doubling_first_row_n": 7,
+      "inverse_fibre": [
+        8
+      ],
+      "n": 7,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 7,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 49,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          7,
+          2,
+          0
+        ],
+        [
+          49,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 7,
+      "square_doubling_first_row": 49,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": [
+        10,
+        49
+      ],
+      "n": 8,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 2,
+      "prime_square_preimages": [
+        49
+      ],
+      "s_n": 7,
+      "square": 64,
+      "square_combined_address_count": 14,
+      "square_combined_addresses": [
+        [
+          2,
+          1,
+          5
+        ],
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          6,
+          0
+        ],
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          8,
+          1,
+          3
+        ],
+        [
+          8,
+          2,
+          0
+        ],
+        [
+          16,
+          1,
+          2
+        ],
+        [
+          32,
+          1,
+          1
+        ],
+        [
+          64,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 2,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 729,
+      "doubling_first_row_n": 9,
+      "inverse_fibre": [
+        15
+      ],
+      "n": 9,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 3,
+      "prime_square_preimages": [],
+      "s_n": 4,
+      "square": 81,
+      "square_combined_address_count": 3,
+      "square_combined_addresses": [
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          9,
+          2,
+          0
+        ],
+        [
+          81,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 81,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 125,
+      "doubling_first_row_n": 5,
+      "inverse_fibre": [
+        14
+      ],
+      "n": 10,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 10,
+      "prime_square_preimages": [],
+      "s_n": 8,
+      "square": 100,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          10,
+          2,
+          0
+        ],
+        [
+          25,
+          1,
+          2
+        ],
+        [
+          50,
+          1,
+          1
+        ],
+        [
+          100,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 5,
+      "square_doubling_first_row": 25,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1331,
+      "doubling_first_row_n": 11,
+      "inverse_fibre": [
+        21
+      ],
+      "n": 11,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 11,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 121,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          11,
+          2,
+          0
+        ],
+        [
+          121,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 11,
+      "square_doubling_first_row": 121,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 27,
+      "doubling_first_row_n": 3,
+      "inverse_fibre": [
+        121
+      ],
+      "n": 12,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 12,
+      "prime_square_preimages": [
+        121
+      ],
+      "s_n": 16,
+      "square": 144,
+      "square_combined_address_count": 8,
+      "square_combined_addresses": [
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          6,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          4
+        ],
+        [
+          12,
+          2,
+          0
+        ],
+        [
+          18,
+          1,
+          3
+        ],
+        [
+          36,
+          1,
+          2
+        ],
+        [
+          72,
+          1,
+          1
+        ],
+        [
+          144,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 9,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 2197,
+      "doubling_first_row_n": 13,
+      "inverse_fibre": [
+        27,
+        35
+      ],
+      "n": 13,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 13,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 169,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          13,
+          2,
+          0
+        ],
+        [
+          169,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 13,
+      "square_doubling_first_row": 169,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 343,
+      "doubling_first_row_n": 7,
+      "inverse_fibre": [
+        22,
+        169
+      ],
+      "n": 14,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 14,
+      "prime_square_preimages": [
+        169
+      ],
+      "s_n": 10,
+      "square": 196,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          7,
+          2,
+          2
+        ],
+        [
+          14,
+          2,
+          0
+        ],
+        [
+          49,
+          1,
+          2
+        ],
+        [
+          98,
+          1,
+          1
+        ],
+        [
+          196,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 7,
+      "square_doubling_first_row": 49,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 3375,
+      "doubling_first_row_n": 15,
+      "inverse_fibre": [
+        16,
+        33
+      ],
+      "n": 15,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 15,
+      "prime_square_preimages": [],
+      "s_n": 9,
+      "square": 225,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          15,
+          2,
+          0
+        ],
+        [
+          225,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 15,
+      "square_doubling_first_row": 225,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": [
+        12,
+        26
+      ],
+      "n": 16,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 2,
+      "prime_square_preimages": [],
+      "s_n": 15,
+      "square": 256,
+      "square_combined_address_count": 20,
+      "square_combined_addresses": [
+        [
+          2,
+          1,
+          7
+        ],
+        [
+          2,
+          2,
+          6
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          4
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          8,
+          0
+        ],
+        [
+          4,
+          1,
+          6
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          8,
+          1,
+          5
+        ],
+        [
+          8,
+          2,
+          2
+        ],
+        [
+          16,
+          1,
+          4
+        ],
+        [
+          16,
+          2,
+          0
+        ],
+        [
+          32,
+          1,
+          3
+        ],
+        [
+          64,
+          1,
+          2
+        ],
+        [
+          128,
+          1,
+          1
+        ],
+        [
+          256,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 2,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 4913,
+      "doubling_first_row_n": 17,
+      "inverse_fibre": [
+        39,
+        55
+      ],
+      "n": 17,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 17,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 289,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          17,
+          2,
+          0
+        ],
+        [
+          289,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 17,
+      "square_doubling_first_row": 289,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 729,
+      "doubling_first_row_n": 9,
+      "inverse_fibre": [
+        289
+      ],
+      "n": 18,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 18,
+      "prime_square_preimages": [
+        289
+      ],
+      "s_n": 21,
+      "square": 324,
+      "square_combined_address_count": 6,
+      "square_combined_addresses": [
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          9,
+          2,
+          2
+        ],
+        [
+          18,
+          2,
+          0
+        ],
+        [
+          81,
+          1,
+          2
+        ],
+        [
+          162,
+          1,
+          1
+        ],
+        [
+          324,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 81,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 6859,
+      "doubling_first_row_n": 19,
+      "inverse_fibre": [
+        65,
+        77
+      ],
+      "n": 19,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 19,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 361,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          19,
+          2,
+          0
+        ],
+        [
+          361,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 19,
+      "square_doubling_first_row": 361,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 125,
+      "doubling_first_row_n": 5,
+      "inverse_fibre": [
+        34,
+        361
+      ],
+      "n": 20,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 20,
+      "prime_square_preimages": [
+        361
+      ],
+      "s_n": 22,
+      "square": 400,
+      "square_combined_address_count": 8,
+      "square_combined_addresses": [
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          10,
+          2,
+          2
+        ],
+        [
+          20,
+          2,
+          0
+        ],
+        [
+          25,
+          1,
+          4
+        ],
+        [
+          50,
+          1,
+          3
+        ],
+        [
+          100,
+          1,
+          2
+        ],
+        [
+          200,
+          1,
+          1
+        ],
+        [
+          400,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 5,
+      "square_doubling_first_row": 25,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 9261,
+      "doubling_first_row_n": 21,
+      "inverse_fibre": [
+        18,
+        51,
+        91
+      ],
+      "n": 21,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 21,
+      "prime_square_preimages": [],
+      "s_n": 11,
+      "square": 441,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          21,
+          2,
+          0
+        ],
+        [
+          441,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 21,
+      "square_doubling_first_row": 441,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1331,
+      "doubling_first_row_n": 11,
+      "inverse_fibre": [
+        20,
+        38
+      ],
+      "n": 22,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 22,
+      "prime_square_preimages": [],
+      "s_n": 14,
+      "square": 484,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          11,
+          2,
+          2
+        ],
+        [
+          22,
+          2,
+          0
+        ],
+        [
+          121,
+          1,
+          2
+        ],
+        [
+          242,
+          1,
+          1
+        ],
+        [
+          484,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 11,
+      "square_doubling_first_row": 121,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 12167,
+      "doubling_first_row_n": 23,
+      "inverse_fibre": [
+        57,
+        85
+      ],
+      "n": 23,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 23,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 529,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          23,
+          2,
+          0
+        ],
+        [
+          529,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 23,
+      "square_doubling_first_row": 529,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 27,
+      "doubling_first_row_n": 3,
+      "inverse_fibre": [
+        529
+      ],
+      "n": 24,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 24,
+      "prime_square_preimages": [
+        529
+      ],
+      "s_n": 36,
+      "square": 576,
+      "square_combined_address_count": 11,
+      "square_combined_addresses": [
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          6,
+          2,
+          4
+        ],
+        [
+          9,
+          1,
+          6
+        ],
+        [
+          12,
+          2,
+          2
+        ],
+        [
+          18,
+          1,
+          5
+        ],
+        [
+          24,
+          2,
+          0
+        ],
+        [
+          36,
+          1,
+          4
+        ],
+        [
+          72,
+          1,
+          3
+        ],
+        [
+          144,
+          1,
+          2
+        ],
+        [
+          288,
+          1,
+          1
+        ],
+        [
+          576,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 9,
+      "square_row_available_by_base_n": true
+    },
+    {
+      "cube_doubling_first_row": 15625,
+      "doubling_first_row_n": 25,
+      "inverse_fibre": [
+        95,
+        119,
+        143
+      ],
+      "n": 25,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 5,
+      "prime_square_preimages": [],
+      "s_n": 6,
+      "square": 625,
+      "square_combined_address_count": 3,
+      "square_combined_addresses": [
+        [
+          5,
+          4,
+          0
+        ],
+        [
+          25,
+          2,
+          0
+        ],
+        [
+          625,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 5,
+      "square_doubling_first_row": 625,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 2197,
+      "doubling_first_row_n": 13,
+      "inverse_fibre": [
+        46
+      ],
+      "n": 26,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 26,
+      "prime_square_preimages": [],
+      "s_n": 16,
+      "square": 676,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          13,
+          2,
+          2
+        ],
+        [
+          26,
+          2,
+          0
+        ],
+        [
+          169,
+          1,
+          2
+        ],
+        [
+          338,
+          1,
+          1
+        ],
+        [
+          676,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 13,
+      "square_doubling_first_row": 169,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 19683,
+      "doubling_first_row_n": 27,
+      "inverse_fibre": [
+        69,
+        133
+      ],
+      "n": 27,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 3,
+      "prime_square_preimages": [],
+      "s_n": 13,
+      "square": 729,
+      "square_combined_address_count": 4,
+      "square_combined_addresses": [
+        [
+          3,
+          6,
+          0
+        ],
+        [
+          9,
+          3,
+          0
+        ],
+        [
+          27,
+          2,
+          0
+        ],
+        [
+          729,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 3,
+      "square_doubling_first_row": 729,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 343,
+      "doubling_first_row_n": 7,
+      "inverse_fibre": [
+        28
+      ],
+      "n": 28,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": true,
+      "power_first_base_n": 28,
+      "prime_square_preimages": [],
+      "s_n": 28,
+      "square": 784,
+      "square_combined_address_count": 8,
+      "square_combined_addresses": [
+        [
+          7,
+          2,
+          4
+        ],
+        [
+          14,
+          2,
+          2
+        ],
+        [
+          28,
+          2,
+          0
+        ],
+        [
+          49,
+          1,
+          4
+        ],
+        [
+          98,
+          1,
+          3
+        ],
+        [
+          196,
+          1,
+          2
+        ],
+        [
+          392,
+          1,
+          1
+        ],
+        [
+          784,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 7,
+      "square_doubling_first_row": 49,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 24389,
+      "doubling_first_row_n": 29,
+      "inverse_fibre": [
+        115,
+        187
+      ],
+      "n": 29,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 29,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 841,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          29,
+          2,
+          0
+        ],
+        [
+          841,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 29,
+      "square_doubling_first_row": 841,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 3375,
+      "doubling_first_row_n": 15,
+      "inverse_fibre": [
+        841
+      ],
+      "n": 30,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 30,
+      "prime_square_preimages": [
+        841
+      ],
+      "s_n": 42,
+      "square": 900,
+      "square_combined_address_count": 5,
+      "square_combined_addresses": [
+        [
+          15,
+          2,
+          2
+        ],
+        [
+          30,
+          2,
+          0
+        ],
+        [
+          225,
+          1,
+          2
+        ],
+        [
+          450,
+          1,
+          1
+        ],
+        [
+          900,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 15,
+      "square_doubling_first_row": 225,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 29791,
+      "doubling_first_row_n": 31,
+      "inverse_fibre": [
+        32,
+        125,
+        161,
+        209,
+        221
+      ],
+      "n": 31,
+      "n_already_in_strictly_earlier_doubling_row": false,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 31,
+      "prime_square_preimages": [],
+      "s_n": 1,
+      "square": 961,
+      "square_combined_address_count": 2,
+      "square_combined_addresses": [
+        [
+          31,
+          2,
+          0
+        ],
+        [
+          961,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 31,
+      "square_doubling_first_row": 961,
+      "square_row_available_by_base_n": false
+    },
+    {
+      "cube_doubling_first_row": 1,
+      "doubling_first_row_n": 1,
+      "inverse_fibre": [
+        58,
+        961
+      ],
+      "n": 32,
+      "n_already_in_strictly_earlier_doubling_row": true,
+      "perfect_fixed_point": false,
+      "power_first_base_n": 2,
+      "prime_square_preimages": [
+        961
+      ],
+      "s_n": 31,
+      "square": 1024,
+      "square_combined_address_count": 27,
+      "square_combined_addresses": [
+        [
+          2,
+          1,
+          9
+        ],
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          5,
+          5
+        ],
+        [
+          2,
+          6,
+          4
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          2,
+          8,
+          2
+        ],
+        [
+          2,
+          9,
+          1
+        ],
+        [
+          2,
+          10,
+          0
+        ],
+        [
+          4,
+          1,
+          8
+        ],
+        [
+          4,
+          2,
+          6
+        ],
+        [
+          4,
+          3,
+          4
+        ],
+        [
+          4,
+          4,
+          2
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          8,
+          1,
+          7
+        ],
+        [
+          8,
+          2,
+          4
+        ],
+        [
+          8,
+          3,
+          1
+        ],
+        [
+          16,
+          1,
+          6
+        ],
+        [
+          16,
+          2,
+          2
+        ],
+        [
+          32,
+          1,
+          5
+        ],
+        [
+          32,
+          2,
+          0
+        ],
+        [
+          64,
+          1,
+          4
+        ],
+        [
+          128,
+          1,
+          3
+        ],
+        [
+          256,
+          1,
+          2
+        ],
+        [
+          512,
+          1,
+          1
+        ],
+        [
+          1024,
+          1,
+          0
+        ]
+      ],
+      "square_combined_first_base": 2,
+      "square_doubling_first_row": 1,
+      "square_row_available_by_base_n": true
+    }
+  ],
+  "shape_control": {
+    "face_profile": [
+      1,
+      3,
+      3,
+      0
+    ],
+    "n": 30,
+    "prime_weights": [
+      2,
+      3,
+      5
+    ],
+    "weighted_sum": 42
+  },
+  "status": "PASS",
+  "zero_fibre": [
+    1
+  ]
+}

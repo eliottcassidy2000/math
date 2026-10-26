@@ -310,8 +310,11 @@ distinct-prime partitions, or a partition plus another source. Verdicts on the t
 - **Rule out:** non-semiprime coverage is not uniform. Its failure set has a share that is decreasing but still 8%,
   and a PP-type bounded mean would leave it positive. No covering argument can replace Goldbach, though failure would
   need both shapes to fail at once.
-- **The structural reason 5 is alone:** the only odd `k` whose `k - 1` has no distinct-prime partition are 3, 5 and 7.
-  Two of these are Mersenne, `3 = s(4)` and `7 = s(8)`, and 5 is not.
+- **Conditional reason 5 would be alone:** if every even integer at least 8 is a sum of two distinct primes,
+  the only odd `k >= 3` whose `k - 1` lacks such a partition are 3, 5 and 7.
+  The exceptions 3 and 7 are touched by `s(4)` and `s(8)`; 5 is untouchable.
+  The distinct-prime Goldbach antecedent is OPEN. The former unconditional sentence
+  was a quantifier overreach; see the [2026-10-26 correction](../aliquot_power_124_20261026/CORRECTIONS.md).
 
 ## 4. The F1 dictionary: what is exact
 

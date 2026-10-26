@@ -1,0 +1,313 @@
+{
+  "F8_marking": {
+    "changed_generator_image": [
+      3,
+      5,
+      7
+    ],
+    "line_image": [
+      2,
+      4,
+      6
+    ],
+    "line_rank": 2,
+    "normal_orbit_rank": 3,
+    "power_table": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ]
+  },
+  "checks": 8494,
+  "collatz_cycle": {
+    "cycle": [
+      1,
+      4,
+      2
+    ],
+    "modulus": 7,
+    "multiplier": 4,
+    "no_quotient_hostile": [
+      2,
+      9
+    ]
+  },
+  "divisor_universe": {
+    "criterion": "total prime-factor multiplicity <=2; ghost coordinates removed",
+    "flag_counts": {
+      "flag": 467,
+      "not_flag": 532
+    },
+    "n_max": 1000,
+    "n_min": 2
+  },
+  "graph_controls": {
+    "K3": [
+      1,
+      3
+    ],
+    "P4": [
+      1,
+      4,
+      3
+    ]
+  },
+  "literal_witnesses": {
+    "H127": {
+      "Aut": 1,
+      "H": 127,
+      "alpha": [
+        1,
+        45,
+        9
+      ],
+      "cycle_lengths": {
+        "3": 11,
+        "5": 23,
+        "7": 11
+      },
+      "min_feedback": 5,
+      "rows": [
+        106,
+        60,
+        89,
+        48,
+        97,
+        68,
+        10
+      ],
+      "tc": 127
+    },
+    "H31": {
+      "Aut": 1,
+      "H": 31,
+      "alpha": [
+        1,
+        13,
+        1
+      ],
+      "cycle_lengths": {
+        "3": 6,
+        "5": 7
+      },
+      "min_feedback": null,
+      "rows": [
+        42,
+        60,
+        25,
+        48,
+        33,
+        4
+      ],
+      "tc": 31
+    },
+    "H63": {
+      "Aut": 1,
+      "H": 63,
+      "alpha": [
+        1,
+        31
+      ],
+      "cycle_lengths": {
+        "3": 8,
+        "5": 17,
+        "7": 6
+      },
+      "min_feedback": null,
+      "rows": [
+        102,
+        252,
+        248,
+        241,
+        225,
+        192,
+        128,
+        1
+      ],
+      "tc": 63
+    },
+    "Paley7": {
+      "Aut": 21,
+      "H": 189,
+      "alpha": [
+        1,
+        80,
+        7
+      ],
+      "cycle_lengths": {
+        "3": 14,
+        "5": 42,
+        "7": 24
+      },
+      "min_feedback": null,
+      "rows": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "tc": 9
+    }
+  },
+  "scope": "Finite independent controls; general flag criterion proved in note; H exclusions inherited; tc all-order exclusion OPEN",
+  "small_tournaments": {
+    "1": {
+      "H_spectrum": [
+        1
+      ],
+      "labelled_tournaments": 1,
+      "odd_cycle_profiles": [
+        [
+          1
+        ]
+      ],
+      "tc_spectrum": [
+        1
+      ]
+    },
+    "2": {
+      "H_spectrum": [
+        1
+      ],
+      "labelled_tournaments": 2,
+      "odd_cycle_profiles": [
+        [
+          1
+        ]
+      ],
+      "tc_spectrum": [
+        1
+      ]
+    },
+    "3": {
+      "H_spectrum": [
+        1,
+        3
+      ],
+      "labelled_tournaments": 8,
+      "odd_cycle_profiles": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "tc_spectrum": [
+        1
+      ]
+    },
+    "4": {
+      "H_spectrum": [
+        1,
+        3,
+        5
+      ],
+      "labelled_tournaments": 64,
+      "odd_cycle_profiles": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "tc_spectrum": [
+        1,
+        5
+      ]
+    },
+    "5": {
+      "H_spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ],
+      "labelled_tournaments": 1024,
+      "odd_cycle_profiles": [
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "tc_spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13
+      ]
+    }
+  },
+  "status": "PASS",
+  "triangle_stacks": [
+    {
+      "H": 3,
+      "alpha": [
+        1,
+        1
+      ],
+      "triangles": 1
+    },
+    {
+      "H": 9,
+      "alpha": [
+        1,
+        2,
+        1
+      ],
+      "triangles": 2
+    },
+    {
+      "H": 27,
+      "alpha": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "triangles": 3
+    }
+  ]
+}

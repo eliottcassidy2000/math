@@ -1,0 +1,168 @@
+{
+  "checker_sha256": "63956a289445c8ade9386ed1453a9d390cf733534a5733432a4f40867809b540",
+  "conditional_boundary": "No numerical ABC inequality or effective constant is tested.",
+  "delayed_census": [
+    {
+      "bound": 20000,
+      "delayed_even": 9795,
+      "k": 2,
+      "nondelayed_all": 206
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9944,
+      "k": 3,
+      "nondelayed_all": 57
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9968,
+      "k": 4,
+      "nondelayed_all": 33
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9978,
+      "k": 5,
+      "nondelayed_all": 23
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9981,
+      "k": 6,
+      "nondelayed_all": 20
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9983,
+      "k": 7,
+      "nondelayed_all": 18
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9985,
+      "k": 8,
+      "nondelayed_all": 16
+    },
+    {
+      "bound": 20000,
+      "delayed_even": 9986,
+      "k": 9,
+      "nondelayed_all": 15
+    }
+  ],
+  "first_rows_36": {
+    "combined": 3,
+    "doubling": 9
+  },
+  "gates": {
+    "combined_fibres": 19999,
+    "composite_mersenne_hostile": 1,
+    "delay_census": 2080,
+    "delay_classifier": 160000,
+    "delay_not_perfection": 1,
+    "distinct_abc_maps": 1,
+    "divisor_sum_independent": 20000,
+    "doubling_fibres": 20000,
+    "exact_square_boundary": 10,
+    "first_delayed_exponent": 4083,
+    "first_occurrence_controls": 19,
+    "invalid_abc_domain": 2,
+    "no_aliquot_quotient_conjugacy": 1,
+    "noncommutation_hostile": 1,
+    "perfect_finite_controls": 1,
+    "perfect_square_diagrams": 5,
+    "power_fibres": 19999,
+    "power_of_two_hostile": 12,
+    "prime_power_abc_identity": 66,
+    "prime_power_abc_radical": 66,
+    "primitive_abc_edges": 19999,
+    "primitive_scale_hostile": 1,
+    "semidirect_operation": 2304
+  },
+  "perfect_diagrams": [
+    {
+      "N": 6,
+      "a": 1,
+      "chain": [
+        9,
+        4,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 28,
+      "a": 2,
+      "chain": [
+        49,
+        8,
+        7,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 496,
+      "a": 4,
+      "chain": [
+        961,
+        32,
+        31,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 8128,
+      "a": 6,
+      "chain": [
+        16129,
+        128,
+        127,
+        1,
+        0
+      ]
+    },
+    {
+      "N": 33550336,
+      "a": 12,
+      "chain": [
+        67092481,
+        8192,
+        8191,
+        1,
+        0
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT; all-parameter conclusions use RESULT.md proofs",
+  "total_gates": 268651,
+  "universe": {
+    "abc_edges": [
+      2,
+      20000
+    ],
+    "census_ceilings": "1..256,1000,4096,10000,20000",
+    "delay_exponents": [
+      2,
+      9
+    ],
+    "first_exponent_bases": [
+      2,
+      4096
+    ],
+    "mersenne_a": [
+      1,
+      12
+    ],
+    "prime_power_abc": "p prime<=31,k1..6",
+    "semidirect": "n1..64,j0..5,k1..6",
+    "square_boundary_m": [
+      1,
+      10
+    ],
+    "table_value_bound": 20000
+  }
+}
