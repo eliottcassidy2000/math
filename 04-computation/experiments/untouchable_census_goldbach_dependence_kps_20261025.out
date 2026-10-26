@@ -1,0 +1,33 @@
+N = 1000000, sieve limit L = 10000000, composite-case pairs = 2509482, time 15.5s
+untouchables <= N: 150232
+first 40: [2, 5, 52, 88, 96, 120, 124, 146, 162, 188, 206, 210, 216, 238, 246, 248, 262, 268, 276, 288, 290, 292, 304, 306, 322, 324, 326, 336, 342, 372, 406, 408, 426, 430, 448, 472, 474, 498, 516, 518]
+PASS U1 first 40 untouchables equal A005114  [[2, 5, 52, 88, 96, 120, 124, 146, 162, 188, 206, 210]]
+PASS U2 count of untouchables <= 10 equals A057978 (2)  [2]
+PASS U2 count of untouchables <= 100 equals A057978 (5)  [5]
+PASS U2 count of untouchables <= 1000 equals A057978 (89)  [89]
+PASS U2 count of untouchables <= 10000 equals A057978 (1212)  [1212]
+PASS U2 count of untouchables <= 100000 equals A057978 (13863)  [13863]
+PASS U2 count of untouchables <= 1000000 equals A057978 (150232)  [150232]
+PASS U3 the only odd untouchable <= N is 5  [[5]]
+PASS U4 independent brute force (all n <= (M-1)^2, M=3000) agrees with the case-split census  [(318, 318)]
+odd m in [3,N]: 499999; touchable: 499998; with a non-semiprime source: 443731; Goldbach-dependent (only p*q sources): 56267
+share of odd touchables that are Goldbach-dependent: 0.1125
+first 30 Goldbach-dependent odd m: [3, 9, 11, 17, 19, 23, 25, 27, 29, 35, 37, 39, 45, 47, 51, 53, 59, 61, 67, 69, 71, 75, 77, 79, 83, 85, 91, 93, 95, 99]
+largest 10 Goldbach-dependent odd m <= N: [999783, 999807, 999849, 999855, 999867, 999891, 999921, 999963, 999981, 999999]
+PASS U5 every odd m in [9, N] has m-1 = p+q with p != q primes (distinct Goldbach, this range only)
+PASS U6 odd m in {1,3,7} touchable (s(p)=1, s(4)=3, s(8)=7) and 5 not
+untouchables <= N by residue mod  2: [150231, 1]
+untouchables <= N by residue mod  3: [65349, 41873, 43010]
+untouchables <= N by residue mod  4: [83603, 1, 66628, 0]
+untouchables <= N by residue mod  5: [27675, 35525, 31933, 33931, 21168]
+untouchables <= N by residue mod  6: [65349, 0, 43009, 0, 41873, 1]
+untouchables <= N by residue mod  7: [22234, 20439, 18186, 26415, 19465, 22166, 21327]
+untouchables <= N by residue mod 12: [35017, 0, 17708, 0, 23285, 1, 30332, 0, 25301, 0, 18588, 0]
+untouchables <= N by residue mod 14: [22234, 0, 18186, 0, 19465, 1, 21327, 0, 20439, 0, 26415, 0, 22165, 0]
+untouchables <= N by residue mod 15: [12096, 6854, 7799, 11090, 4782, 7569, 17355, 10682, 11296, 11356, 8010, 11316, 13452, 11545, 5030]
+even untouchables: 150231; == 0 mod 4: 83603; == 2 mod 4: 66628; == 0 mod 6: 65349; == 2 mod 6: 43009; == 4 mod 6: 41873
+density of untouchables <= N: 0.15023
+first 20 Chowla-untouchables (m not of the form sigma(n)-n-1): [1, 4, 51, 87, 95, 119, 123, 145, 161, 187, 205, 209, 215, 237, 245, 247, 261, 267, 275, 287]
+PASS U7 Chowla shift: m is s'-touchable iff m+1 is s-touchable (definitional; 4 = 5-1 is the only even one <= N-1)
+12 checks, 0 failed; total time 27.2s
+ALL CHECKS PASSED
