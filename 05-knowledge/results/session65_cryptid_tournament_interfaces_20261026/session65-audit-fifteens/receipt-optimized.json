@@ -1,0 +1,338 @@
+{
+  "arithmetic": {
+    "defect_distribution": {
+      "1": 4,
+      "3": 4
+    },
+    "extension": "t^2=2",
+    "hasse_coefficient_all_j_checked": 1369,
+    "p": 37,
+    "prime_field_trace_zero_j": [
+      8
+    ],
+    "supersingular_j_coefficients": [
+      [
+        3,
+        10
+      ],
+      [
+        3,
+        27
+      ],
+      [
+        8,
+        0
+      ]
+    ]
+  },
+  "source_sha256": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091",
+  "status": "PASS: independent finite-exact audit, not conjecture proof",
+  "ternary": {
+    "all_exponent_residue_lifts_depths": [
+      {
+        "allones_least_exponent": 0,
+        "k": 1,
+        "period": 2,
+        "two_free": 1,
+        "zero_free": 2
+      },
+      {
+        "allones_least_exponent": 2,
+        "k": 2,
+        "period": 6,
+        "two_free": 2,
+        "zero_free": 4
+      },
+      {
+        "allones_least_exponent": 8,
+        "k": 3,
+        "period": 18,
+        "two_free": 4,
+        "zero_free": 8
+      },
+      {
+        "allones_least_exponent": 26,
+        "k": 4,
+        "period": 54,
+        "two_free": 8,
+        "zero_free": 16
+      },
+      {
+        "allones_least_exponent": 80,
+        "k": 5,
+        "period": 162,
+        "two_free": 16,
+        "zero_free": 32
+      },
+      {
+        "allones_least_exponent": 242,
+        "k": 6,
+        "period": 486,
+        "two_free": 32,
+        "zero_free": 64
+      },
+      {
+        "allones_least_exponent": 728,
+        "k": 7,
+        "period": 1458,
+        "two_free": 64,
+        "zero_free": 128
+      },
+      {
+        "allones_least_exponent": 2186,
+        "k": 8,
+        "period": 4374,
+        "two_free": 128,
+        "zero_free": 256
+      },
+      {
+        "allones_least_exponent": 6560,
+        "k": 9,
+        "period": 13122,
+        "two_free": 256,
+        "zero_free": 512
+      },
+      {
+        "allones_least_exponent": 19682,
+        "k": 10,
+        "period": 39366,
+        "two_free": 512,
+        "zero_free": 1024
+      }
+    ],
+    "allones_branch_tested_to_depth": 100,
+    "digit_omission_exponents": {
+      "0": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        15
+      ],
+      "1": [
+        1,
+        3,
+        9
+      ],
+      "2": [
+        0,
+        2,
+        8
+      ]
+    },
+    "exponent_bound": 1000,
+    "persistence_chain_ternary": [
+      "222222222222222",
+      "1122221122",
+      "2101",
+      "0"
+    ]
+  },
+  "tournaments": {
+    "additional_permutation_structure_checks": 5760,
+    "all_orientation_permutation_pairs_checked": 484918,
+    "all_permutations_n_le_5": [
+      {
+        "n": 0,
+        "permutations": 1,
+        "tournaments_per_permutation": 1
+      },
+      {
+        "n": 1,
+        "permutations": 1,
+        "tournaments_per_permutation": 1
+      },
+      {
+        "n": 2,
+        "permutations": 2,
+        "tournaments_per_permutation": 2
+      },
+      {
+        "n": 3,
+        "permutations": 6,
+        "tournaments_per_permutation": 8
+      },
+      {
+        "n": 4,
+        "permutations": 24,
+        "tournaments_per_permutation": 64
+      },
+      {
+        "n": 5,
+        "permutations": 120,
+        "tournaments_per_permutation": 1024
+      }
+    ],
+    "all_types_n6": [
+      {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "distribution": {
+          "0": 32768
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "distribution": {
+          "1": 2048,
+          "3": 8192,
+          "5": 12288,
+          "7": 8192,
+          "9": 2048
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "distribution": {
+          "0": 128,
+          "2": 1536,
+          "4": 6912,
+          "6": 13824,
+          "8": 10368
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "distribution": {
+          "2": 512,
+          "4": 3072,
+          "6": 7680,
+          "8": 10240,
+          "10": 7680,
+          "12": 3072,
+          "14": 512
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          1,
+          4
+        ],
+        "distribution": {
+          "1": 64,
+          "3": 1152,
+          "5": 7104,
+          "7": 16128,
+          "9": 7104,
+          "11": 1152,
+          "13": 64
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          2,
+          3
+        ],
+        "distribution": {
+          "1": 32,
+          "3": 704,
+          "5": 4320,
+          "7": 10880,
+          "9": 11744,
+          "11": 4800,
+          "13": 288
+        }
+      },
+      {
+        "cycle_type": [
+          1,
+          5
+        ],
+        "distribution": {
+          "0": 8,
+          "2": 240,
+          "4": 2520,
+          "6": 10400,
+          "8": 12600,
+          "10": 6000,
+          "12": 1000
+        }
+      },
+      {
+        "cycle_type": [
+          2,
+          2,
+          2
+        ],
+        "distribution": {
+          "3": 512,
+          "5": 3072,
+          "7": 7680,
+          "9": 10240,
+          "11": 7680,
+          "13": 3072,
+          "15": 512
+        }
+      },
+      {
+        "cycle_type": [
+          2,
+          4
+        ],
+        "distribution": {
+          "2": 64,
+          "4": 1152,
+          "6": 7104,
+          "8": 16128,
+          "10": 7104,
+          "12": 1152,
+          "14": 64
+        }
+      },
+      {
+        "cycle_type": [
+          3,
+          3
+        ],
+        "distribution": {
+          "0": 32,
+          "2": 480,
+          "4": 2880,
+          "6": 8640,
+          "8": 12960,
+          "10": 7776
+        }
+      },
+      {
+        "cycle_type": [
+          6
+        ],
+        "distribution": {
+          "1": 24,
+          "3": 728,
+          "5": 6360,
+          "7": 12888,
+          "9": 9736,
+          "11": 2760,
+          "13": 264,
+          "15": 8
+        }
+      }
+    ]
+  }
+}

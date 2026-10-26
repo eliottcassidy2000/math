@@ -1,0 +1,262 @@
+{
+  "hostiles": {
+    "all_k_clock_proof": "C on 0(01)^k: only cell zero changes, exactly 2k+1 instructions",
+    "fixed_window_exit": true,
+    "missing_control": true,
+    "missing_head": true,
+    "same_population_position_loss": true,
+    "terminal_000_guard_required": true
+  },
+  "marked_native": {
+    "explicit_head_exits": 744,
+    "native_transitions_checked": 3096,
+    "nonimage_tournaments_rejected": 3,
+    "valid_in_window": 2352
+  },
+  "native": {
+    "blank_orbit": {
+      "bouncer_bell": {
+        "head": 57,
+        "macro_calls": 3421,
+        "native_steps": 10001,
+        "ones": 72,
+        "state": "A",
+        "support_max": 124,
+        "support_min": -11
+      },
+      "irregular": {
+        "head": -52,
+        "macro_calls": 5036,
+        "native_steps": 10056,
+        "ones": 52,
+        "state": "A",
+        "support_max": 31,
+        "support_min": -54
+      },
+      "sandwich": {
+        "head": 15,
+        "macro_calls": 4201,
+        "native_steps": 10005,
+        "ones": 112,
+        "state": "A",
+        "support_max": 78,
+        "support_min": -96
+      }
+    },
+    "branch_counts": {
+      "blank_orbit": {
+        "bouncer_bell": {
+          "erase": 1122,
+          "pump000": 668,
+          "pump01": 508,
+          "pump1": 1123
+        },
+        "irregular": {
+          "A00": 134,
+          "A01": 282,
+          "A1": 2243,
+          "sweep0": 2061,
+          "sweep11": 316
+        },
+        "sandwich": {
+          "A0": 1243,
+          "A1": 853,
+          "B0": 1243,
+          "B1": 862
+        }
+      },
+      "extended_long": {
+        "bouncer_bell": {
+          "pump000": 7,
+          "pump01": 7,
+          "pump1": 7
+        },
+        "irregular": {
+          "sweep0": 7,
+          "sweep11": 7
+        },
+        "sandwich": {
+          "A1": 7,
+          "B1": 7
+        }
+      },
+      "hostiles": {
+        "bouncer_bell": {
+          "erase": 1,
+          "pump1": 1
+        }
+      },
+      "producer_long": {
+        "bouncer_bell": {
+          "pump000": 201,
+          "pump01": 201,
+          "pump1": 201
+        },
+        "irregular": {
+          "sweep0": 201,
+          "sweep11": 201
+        }
+      },
+      "producer_universe": {
+        "bouncer_bell": {
+          "erase": 9217,
+          "pump000": 5202,
+          "pump01": 2508,
+          "pump1": 5601
+        },
+        "irregular": {
+          "A00": 8191,
+          "A01": 5120,
+          "A1": 9217,
+          "sweep0": 17515,
+          "sweep11": 5013
+        },
+        "sandwich": {
+          "A0": 13311,
+          "A1": 9217,
+          "B0": 13311,
+          "B1": 9217
+        }
+      },
+      "seeded_sparse_signed": {
+        "bouncer_bell": {
+          "erase": 367,
+          "pump000": 778,
+          "pump01": 222,
+          "pump1": 306
+        },
+        "irregular": {
+          "A00": 537,
+          "A01": 133,
+          "A1": 198,
+          "sweep0": 750,
+          "sweep11": 62
+        },
+        "sandwich": {
+          "A0": 615,
+          "A1": 183,
+          "B0": 655,
+          "B1": 194
+        }
+      },
+      "signed_heads_and_remote_sentinels": {
+        "bouncer_bell": {
+          "erase": 1538,
+          "pump000": 1854,
+          "pump01": 694,
+          "pump1": 1030
+        },
+        "irregular": {
+          "A00": 2682,
+          "A01": 896,
+          "A1": 1538,
+          "sweep0": 4366,
+          "sweep11": 750
+        },
+        "sandwich": {
+          "A0": 3578,
+          "A1": 1538,
+          "B0": 3578,
+          "B1": 1538
+        }
+      }
+    },
+    "independent_event_stop": true,
+    "native_instructions": 599010,
+    "random_seed": 65065,
+    "total_cases": 156934
+  },
+  "pins": {
+    "dependencies": {
+      "THM-2183-order-join-is-an-exact-tournament-metric-product.md": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc",
+      "THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md": "60ddaa62c9d6e594b994e2e9c7ab2600edf9c763146c950d5ebf009ab025a006"
+    },
+    "producer": {
+      "REPORT.md": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+      "SOURCES.json": "f47ed0f64a976d8f42e1f25f78a9ca873857dbcaf7100dbcb6862e5af1ea3280",
+      "check.py": "ad88b82106aa9d517f7f2f4a56d50abf00b0086eacff80c4d0e64a6c3b6fd4b1",
+      "normal.json": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "optimized.json": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128"
+    }
+  },
+  "status": "PASS",
+  "total_cases_including_hostiles": 156934,
+  "total_native_instructions_including_hostiles": 599010,
+  "tournaments": {
+    "all_permutation_comparisons": 11545,
+    "decoded_labelings": 1022,
+    "decoded_words": 511,
+    "invariants": [
+      {
+        "H": 1,
+        "c3": 0,
+        "word": ""
+      },
+      {
+        "H": 1,
+        "c3": 0,
+        "word": "0"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "1"
+      },
+      {
+        "H": 1,
+        "c3": 0,
+        "word": "00"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "01"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "10"
+      },
+      {
+        "H": 9,
+        "c3": 2,
+        "word": "11"
+      }
+    ],
+    "max_order": 6,
+    "one_bit_write_checks": 3586,
+    "twins_00": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "twins_10": [
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "word_pairs": 21
+  }
+}

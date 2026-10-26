@@ -1,0 +1,142 @@
+{
+  "blank_orbit": {
+    "bouncer_bell": {
+      "head": 57,
+      "macro_calls": 3421,
+      "native_steps": 10001,
+      "ones": 72,
+      "state": "A",
+      "support_max": 124,
+      "support_min": -11
+    },
+    "irregular": {
+      "head": -52,
+      "macro_calls": 5036,
+      "native_steps": 10056,
+      "ones": 52,
+      "state": "A",
+      "support_max": 31,
+      "support_min": -54
+    },
+    "sandwich": {
+      "head": 15,
+      "macro_calls": 4201,
+      "native_steps": 10005,
+      "ones": 112,
+      "state": "A",
+      "support_max": 78,
+      "support_min": -96
+    }
+  },
+  "decoding": {
+    "all_words_through_length": 8,
+    "labels_reversed_before_decoding": true,
+    "literal_cross_boundary_twins_00_split_under_10": true,
+    "words": 511
+  },
+  "embedding": {
+    "all_permutations_checked_up_to": 6,
+    "invariants": [
+      {
+        "H": 1,
+        "c3": 0,
+        "word": ""
+      },
+      {
+        "H": 1,
+        "c3": 0,
+        "word": "0"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "1"
+      },
+      {
+        "H": 1,
+        "c3": 0,
+        "word": "00"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "01"
+      },
+      {
+        "H": 3,
+        "c3": 1,
+        "word": "10"
+      },
+      {
+        "H": 9,
+        "c3": 2,
+        "word": "11"
+      }
+    ],
+    "max_word_length": 2,
+    "word_pairs": 21
+  },
+  "hostiles": {
+    "drop_terminal_000_guard_rejected": true,
+    "missing_machine_state_rejected": true,
+    "same_H_and_c3": {
+      "H": 3,
+      "bouncer_bell_clocks": [
+        2,
+        1
+      ],
+      "bouncer_bell_heads_after_macro": [
+        0,
+        -1
+      ],
+      "c3": 1,
+      "distance": 2,
+      "words": [
+        "01",
+        "10"
+      ]
+    },
+    "unbounded_clock_distance_one": "C on 0(01)^k: 2k+1 steps, one changed bit"
+  },
+  "machines": {
+    "bouncer_bell": "1RB0LA_0RC1LA_1RD0RA_0LB1RB",
+    "irregular": "1RB0RC_1LC1RA_1RA1LD_0LC0LA",
+    "sandwich": "1RB1LC_1LA1RD_1RA0LC_1LB0RD"
+  },
+  "macros": {
+    "all_head_positions": "-1..n",
+    "branch_counts": {
+      "bouncer_bell": {
+        "erase": 9217,
+        "pump000": 5202,
+        "pump01": 2508,
+        "pump1": 5601
+      },
+      "irregular": {
+        "A00": 8191,
+        "A01": 5120,
+        "A1": 9217,
+        "sweep0": 17515,
+        "sweep11": 5013
+      },
+      "sandwich": {
+        "A0": 13311,
+        "A1": 9217,
+        "B0": 13311,
+        "B1": 9217
+      }
+    },
+    "cases": 113645,
+    "exhaustive_span_max": 10,
+    "exhaustive_states": {
+      "bouncer_bell": "A",
+      "irregular": "AC",
+      "sandwich": "AB"
+    },
+    "long_run_k_range": [
+      0,
+      200
+    ],
+    "max_steps_in_exhaustive_part": 14
+  }
+}

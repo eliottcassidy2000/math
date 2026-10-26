@@ -1,0 +1,12 @@
+{
+  "authorization": "Parent explicitly requested narrow producer prose clarification and checksum/input-pin refresh",
+  "date": "2026-10-26",
+  "new_sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+  "new_text": "repetitions, while alignment and subsumption preserve membership by one-way\ninclusion, not language equality.",
+  "old_sha256": "eb7df26f10721be72ebcbcdb4187a156c188e89f753314678a54351210f0bc44",
+  "old_text": "repetitions, while alignment and subsumption preserve matching languages.",
+  "producer_code_changed": false,
+  "producer_outputs_changed": false,
+  "producer_path": "session65-cryptids/REPORT.md",
+  "reason": "Coq subsumption proves matching-language inclusion, not equality"
+}

@@ -1,0 +1,713 @@
+{
+  "defect_distributions": [
+    {
+      "fixed": 0,
+      "histogram": {
+        "0": 1
+      },
+      "n": 0,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 1,
+      "histogram": {
+        "0": 1
+      },
+      "n": 1,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 2,
+      "histogram": {
+        "0": 2
+      },
+      "n": 2,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 0,
+      "histogram": {
+        "1": 2
+      },
+      "n": 2,
+      "pair_orbits": 0,
+      "pairs": 1
+    },
+    {
+      "fixed": 3,
+      "histogram": {
+        "0": 8
+      },
+      "n": 3,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 1,
+      "histogram": {
+        "1": 4,
+        "3": 4
+      },
+      "n": 3,
+      "pair_orbits": 1,
+      "pairs": 1
+    },
+    {
+      "fixed": 4,
+      "histogram": {
+        "0": 64
+      },
+      "n": 4,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 2,
+      "histogram": {
+        "1": 16,
+        "3": 32,
+        "5": 16
+      },
+      "n": 4,
+      "pair_orbits": 2,
+      "pairs": 1
+    },
+    {
+      "fixed": 0,
+      "histogram": {
+        "2": 16,
+        "4": 32,
+        "6": 16
+      },
+      "n": 4,
+      "pair_orbits": 2,
+      "pairs": 2
+    },
+    {
+      "fixed": 5,
+      "histogram": {
+        "0": 1024
+      },
+      "n": 5,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 3,
+      "histogram": {
+        "1": 128,
+        "3": 384,
+        "5": 384,
+        "7": 128
+      },
+      "n": 5,
+      "pair_orbits": 3,
+      "pairs": 1
+    },
+    {
+      "fixed": 1,
+      "histogram": {
+        "2": 64,
+        "4": 256,
+        "6": 384,
+        "8": 256,
+        "10": 64
+      },
+      "n": 5,
+      "pair_orbits": 4,
+      "pairs": 2
+    },
+    {
+      "fixed": 6,
+      "histogram": {
+        "0": 32768
+      },
+      "n": 6,
+      "pair_orbits": 0,
+      "pairs": 0
+    },
+    {
+      "fixed": 4,
+      "histogram": {
+        "1": 2048,
+        "3": 8192,
+        "5": 12288,
+        "7": 8192,
+        "9": 2048
+      },
+      "n": 6,
+      "pair_orbits": 4,
+      "pairs": 1
+    },
+    {
+      "fixed": 2,
+      "histogram": {
+        "2": 512,
+        "4": 3072,
+        "6": 7680,
+        "8": 10240,
+        "10": 7680,
+        "12": 3072,
+        "14": 512
+      },
+      "n": 6,
+      "pair_orbits": 6,
+      "pairs": 2
+    },
+    {
+      "fixed": 0,
+      "histogram": {
+        "3": 512,
+        "5": 3072,
+        "7": 7680,
+        "9": 10240,
+        "11": 7680,
+        "13": 3072,
+        "15": 512
+      },
+      "n": 6,
+      "pair_orbits": 6,
+      "pairs": 3
+    }
+  ],
+  "digit_avoidance_exponents_n_le_1000": {
+    "0": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      15
+    ],
+    "1": [
+      1,
+      3,
+      9
+    ],
+    "2": [
+      0,
+      2,
+      8
+    ]
+  },
+  "modular_lifts": [
+    {
+      "all_ones_tail_exponent": 0,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 1,
+      "period": 2,
+      "two_free_tails": 1,
+      "zero_free_tails": 2
+    },
+    {
+      "all_ones_tail_exponent": 2,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 2,
+      "period": 6,
+      "two_free_tails": 2,
+      "zero_free_tails": 4
+    },
+    {
+      "all_ones_tail_exponent": 8,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 3,
+      "period": 18,
+      "two_free_tails": 4,
+      "zero_free_tails": 8
+    },
+    {
+      "all_ones_tail_exponent": 26,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 4,
+      "period": 54,
+      "two_free_tails": 8,
+      "zero_free_tails": 16
+    },
+    {
+      "all_ones_tail_exponent": 80,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 5,
+      "period": 162,
+      "two_free_tails": 16,
+      "zero_free_tails": 32
+    },
+    {
+      "all_ones_tail_exponent": 242,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 6,
+      "period": 486,
+      "two_free_tails": 32,
+      "zero_free_tails": 64
+    },
+    {
+      "all_ones_tail_exponent": 728,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 7,
+      "period": 1458,
+      "two_free_tails": 64,
+      "zero_free_tails": 128
+    },
+    {
+      "all_ones_tail_exponent": 2186,
+      "arbitrarily_large_exponents": "n = exponent + t*period",
+      "k": 8,
+      "period": 4374,
+      "two_free_tails": 128,
+      "zero_free_tails": 256
+    }
+  ],
+  "p37": {
+    "D": 2,
+    "Hasse_roots": [
+      [
+        2,
+        12
+      ],
+      [
+        2,
+        25
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        35
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        4,
+        26
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        7,
+        36
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        31,
+        36
+      ],
+      [
+        34,
+        11
+      ],
+      [
+        34,
+        26
+      ],
+      [
+        35,
+        2
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        36,
+        12
+      ],
+      [
+        36,
+        25
+      ]
+    ],
+    "b": 1,
+    "field": "F_p[t]/(t^2-D)",
+    "frobenius_permutation": [
+      1,
+      0,
+      2
+    ],
+    "independent_trace_zero_j": [
+      8
+    ],
+    "j_invariants": [
+      [
+        3,
+        10
+      ],
+      [
+        3,
+        27
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "p": 37,
+    "rational_j": [
+      8
+    ]
+  },
+  "sieve_kernel_hostile": {
+    "cycle": [
+      1,
+      4,
+      7
+    ],
+    "words": [
+      "01",
+      "11",
+      "21"
+    ]
+  },
+  "signed_tournaments": [
+    {
+      "k": 1,
+      "q": 3,
+      "unordered_pairs_checked": 3
+    },
+    {
+      "k": 2,
+      "q": 9,
+      "unordered_pairs_checked": 36
+    },
+    {
+      "k": 3,
+      "q": 27,
+      "unordered_pairs_checked": 351
+    },
+    {
+      "k": 4,
+      "q": 81,
+      "unordered_pairs_checked": 3240
+    },
+    {
+      "k": 5,
+      "q": 243,
+      "unordered_pairs_checked": 29403
+    }
+  ],
+  "sloane_machine_syntax_only": {
+    "halting_instructions": 1,
+    "machine": "2RB2RB1RA3RA_0LC1RB3RB2RA_0LE1LD2LC3LC_0RB1LD2LD3LD_1RD2RD3RD0LF_1RE2RZ------",
+    "nonhalting_instructions": 21,
+    "states": 6,
+    "symbols": 4,
+    "undefined_entries": 2
+  },
+  "sloane_persistence_chain_decimal": [
+    14348906,
+    32768,
+    64,
+    0
+  ],
+  "sloane_persistence_chain_ternary": [
+    "222222222222222",
+    "1122221122",
+    "2101",
+    "0"
+  ],
+  "source_sha256": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+  "ss_class_number_formula_range": "all primes <=211; classical formulas imported, not proved by this census",
+  "ss_rows": [
+    {
+      "b": 0,
+      "p": 2,
+      "r": 1,
+      "s": 1
+    },
+    {
+      "b": 0,
+      "p": 3,
+      "r": 1,
+      "s": 1
+    },
+    {
+      "b": 0,
+      "p": 5,
+      "r": 1,
+      "s": 1
+    },
+    {
+      "b": 0,
+      "p": 7,
+      "r": 1,
+      "s": 1
+    },
+    {
+      "b": 0,
+      "p": 11,
+      "r": 2,
+      "s": 2
+    },
+    {
+      "b": 0,
+      "p": 13,
+      "r": 1,
+      "s": 1
+    },
+    {
+      "b": 0,
+      "p": 17,
+      "r": 2,
+      "s": 2
+    },
+    {
+      "b": 0,
+      "p": 19,
+      "r": 2,
+      "s": 2
+    },
+    {
+      "b": 0,
+      "p": 23,
+      "r": 3,
+      "s": 3
+    },
+    {
+      "b": 0,
+      "p": 29,
+      "r": 3,
+      "s": 3
+    },
+    {
+      "b": 0,
+      "p": 31,
+      "r": 3,
+      "s": 3
+    },
+    {
+      "b": 1,
+      "p": 37,
+      "r": 1,
+      "s": 3
+    },
+    {
+      "b": 0,
+      "p": 41,
+      "r": 4,
+      "s": 4
+    },
+    {
+      "b": 1,
+      "p": 43,
+      "r": 2,
+      "s": 4
+    },
+    {
+      "b": 0,
+      "p": 47,
+      "r": 5,
+      "s": 5
+    },
+    {
+      "b": 1,
+      "p": 53,
+      "r": 3,
+      "s": 5
+    },
+    {
+      "b": 0,
+      "p": 59,
+      "r": 6,
+      "s": 6
+    },
+    {
+      "b": 1,
+      "p": 61,
+      "r": 3,
+      "s": 5
+    },
+    {
+      "b": 2,
+      "p": 67,
+      "r": 2,
+      "s": 6
+    },
+    {
+      "b": 0,
+      "p": 71,
+      "r": 7,
+      "s": 7
+    },
+    {
+      "b": 2,
+      "p": 73,
+      "r": 2,
+      "s": 6
+    },
+    {
+      "b": 1,
+      "p": 79,
+      "r": 5,
+      "s": 7
+    },
+    {
+      "b": 1,
+      "p": 83,
+      "r": 6,
+      "s": 8
+    },
+    {
+      "b": 1,
+      "p": 89,
+      "r": 6,
+      "s": 8
+    },
+    {
+      "b": 3,
+      "p": 97,
+      "r": 2,
+      "s": 8
+    },
+    {
+      "b": 1,
+      "p": 101,
+      "r": 7,
+      "s": 9
+    },
+    {
+      "b": 2,
+      "p": 103,
+      "r": 5,
+      "s": 9
+    },
+    {
+      "b": 2,
+      "p": 107,
+      "r": 6,
+      "s": 10
+    },
+    {
+      "b": 3,
+      "p": 109,
+      "r": 3,
+      "s": 9
+    },
+    {
+      "b": 3,
+      "p": 113,
+      "r": 4,
+      "s": 10
+    },
+    {
+      "b": 3,
+      "p": 127,
+      "r": 5,
+      "s": 11
+    },
+    {
+      "b": 1,
+      "p": 131,
+      "r": 10,
+      "s": 12
+    },
+    {
+      "b": 4,
+      "p": 137,
+      "r": 4,
+      "s": 12
+    },
+    {
+      "b": 3,
+      "p": 139,
+      "r": 6,
+      "s": 12
+    },
+    {
+      "b": 3,
+      "p": 149,
+      "r": 7,
+      "s": 13
+    },
+    {
+      "b": 3,
+      "p": 151,
+      "r": 7,
+      "s": 13
+    },
+    {
+      "b": 5,
+      "p": 157,
+      "r": 3,
+      "s": 13
+    },
+    {
+      "b": 6,
+      "p": 163,
+      "r": 2,
+      "s": 14
+    },
+    {
+      "b": 2,
+      "p": 167,
+      "r": 11,
+      "s": 15
+    },
+    {
+      "b": 4,
+      "p": 173,
+      "r": 7,
+      "s": 15
+    },
+    {
+      "b": 3,
+      "p": 179,
+      "r": 10,
+      "s": 16
+    },
+    {
+      "b": 5,
+      "p": 181,
+      "r": 5,
+      "s": 15
+    },
+    {
+      "b": 2,
+      "p": 191,
+      "r": 13,
+      "s": 17
+    },
+    {
+      "b": 7,
+      "p": 193,
+      "r": 2,
+      "s": 16
+    },
+    {
+      "b": 6,
+      "p": 197,
+      "r": 5,
+      "s": 17
+    },
+    {
+      "b": 4,
+      "p": 199,
+      "r": 9,
+      "s": 17
+    },
+    {
+      "b": 6,
+      "p": 211,
+      "r": 6,
+      "s": 18
+    }
+  ],
+  "status": "FINITE-EXACT; no conjecture or machine-correctness proof"
+}

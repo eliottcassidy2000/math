@@ -1,0 +1,58 @@
+{
+  "access_resolution": "oldid URLs/web GitHub calls had cache/access errors; rendered wiki pages confirm same oldids; GitHub connector exact-pin read succeeded",
+  "date": "2026-10-26",
+  "external": [
+    {
+      "id": "zoology",
+      "inspected_url": "https://wiki.bbchallenge.org/wiki/Non-halting_Turing_machine",
+      "rendered_permalink_oldid": 8776,
+      "requested_url": "https://wiki.bbchallenge.org/w/index.php?title=Non-halting_Turing_machine&oldid=8776",
+      "verified": "all three exact literal transition strings and name labels"
+    },
+    {
+      "id": "cryptids",
+      "inspected_url": "https://wiki.bbchallenge.org/wiki/Cryptids",
+      "verified": "halting-hardness terminology, not three total-machine morphology"
+    },
+    {
+      "id": "bouncer",
+      "inspected_url": "https://wiki.bbchallenge.org/wiki/Bouncer",
+      "rendered_permalink_oldid": 8027,
+      "requested_url": "https://wiki.bbchallenge.org/w/index.php?title=Bouncer&oldid=8027",
+      "verified": "different two-state machine and inductive bounce proof"
+    },
+    {
+      "id": "bell",
+      "inspected_url": "https://wiki.bbchallenge.org/wiki/Bell",
+      "rendered_permalink_oldid": 6789,
+      "requested_url": "https://wiki.bbchallenge.org/w/index.php?title=Bell&oldid=6789",
+      "verified": "ordinary and cubic bell examples; not substituted for four-state machine"
+    },
+    {
+      "computation_rerun": false,
+      "id": "sandwich-primary",
+      "inspected_url": "https://groups.google.com/g/busy-beaver-discuss/c/lcr_6buFz_8/m/e2BiAob8AgAJ",
+      "verified": "Yongyi Chen 2024-10-21 bounded observations and explicitly tentative behavioral equivalence"
+    },
+    {
+      "axiom_audit": false,
+      "built": false,
+      "bytes": 20685,
+      "comparison_url": "https://github.com/meithecatte/busycoq/blob/master/verify/Bouncers.v",
+      "executed": false,
+      "id": "bouncer-coq",
+      "inspected_url": "https://github.com/meithecatte/busycoq/blob/1c23203761602c199a7ac5ea6f7947fb80851d93/verify/Bouncers.v",
+      "license_snapshot": "Bouncers.LICENSE.txt",
+      "license_url": "https://github.com/meithecatte/busycoq/blob/1c23203761602c199a7ac5ea6f7947fb80851d93/LICENSE",
+      "pin_equals_current": true,
+      "scope": "cited source theorem; no certificates for these three machines",
+      "sha256": "2a2455657fa4eabcbfeff11517307580e5fb656a1f6664baa12203d10dbf0d17",
+      "snapshot": "Bouncers.source.txt",
+      "via": "GitHub fetch connector"
+    }
+  ],
+  "pending_approvals": [],
+  "permission_denials": [],
+  "repo_base": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "repository_edits": false
+}

@@ -1,0 +1,12 @@
+{
+  "access_date": "2026-10-26",
+  "repo_base": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "external": [
+    {"id":"zoology", "url":"https://wiki.bbchallenge.org/w/index.php?title=Non-halting_Turing_machine&oldid=8776", "role":"Names, exact machine tables, qualitative classifications"},
+    {"id":"cryptids", "url":"https://wiki.bbchallenge.org/wiki/Cryptids", "role":"Terminological halting-hardness boundary; live page"},
+    {"id":"sandwich-primary", "url":"https://groups.google.com/g/busy-beaver-discuss/c/lcr_6buFz_8/m/e2BiAob8AgAJ", "role":"Yongyi Chen 2024-10-21 bounded recurrence observations; not rerun"},
+    {"id":"bouncer", "url":"https://wiki.bbchallenge.org/w/index.php?title=Bouncer&oldid=8027", "role":"Different positive-control machine's inductive bounce proof and primary source routes"},
+    {"id":"bell", "url":"https://wiki.bbchallenge.org/w/index.php?title=Bell&oldid=6789", "role":"Different positive-control machine's transcript; not the 4-state bouncer+bell"},
+    {"id":"bouncer-coq", "url":"https://github.com/meithecatte/busycoq/blob/1c23203761602c199a7ac5ea6f7947fb80851d93/verify/Bouncers.v", "role":"Primary correctness proof inspected, not built", "current_file_compared_equal_to_pin":true}
+  ]
+}

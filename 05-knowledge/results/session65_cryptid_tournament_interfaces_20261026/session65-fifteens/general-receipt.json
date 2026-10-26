@@ -1,0 +1,1052 @@
+{
+  "cases": 30,
+  "rows": [
+    {
+      "defect_distribution": {
+        "0": 1
+      },
+      "minimizers": 1,
+      "minimum": 0,
+      "unordered_pair_orbits": [],
+      "vertex_cycle_type": []
+    },
+    {
+      "defect_distribution": {
+        "0": 1
+      },
+      "minimizers": 1,
+      "minimum": 0,
+      "unordered_pair_orbits": [],
+      "vertex_cycle_type": [
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 2
+      },
+      "minimizers": 2,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 2
+      },
+      "minimizers": 2,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 8
+      },
+      "minimizers": 8,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 4,
+        "3": 4
+      },
+      "minimizers": 4,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 2,
+        "2": 6
+      },
+      "minimizers": 2,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 64
+      },
+      "minimizers": 64,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 16,
+        "3": 32,
+        "5": 16
+      },
+      "minimizers": 16,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 4,
+        "2": 24,
+        "4": 36
+      },
+      "minimizers": 4,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "2": 16,
+        "4": 32,
+        "6": 16
+      },
+      "minimizers": 16,
+      "minimum": 2,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        2,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 8,
+        "3": 48,
+        "5": 8
+      },
+      "minimizers": 8,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": -1,
+          "length": 2
+        }
+      ],
+      "vertex_cycle_type": [
+        4
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 1024
+      },
+      "minimizers": 1024,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 128,
+        "3": 384,
+        "5": 384,
+        "7": 128
+      },
+      "minimizers": 128,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 16,
+        "2": 144,
+        "4": 432,
+        "6": 432
+      },
+      "minimizers": 16,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "2": 64,
+        "4": 256,
+        "6": 384,
+        "8": 256,
+        "10": 64
+      },
+      "minimizers": 64,
+      "minimum": 2,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 16,
+        "3": 192,
+        "5": 608,
+        "7": 192,
+        "9": 16
+      },
+      "minimizers": 16,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": -1,
+          "length": 2
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        4
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 8,
+        "3": 144,
+        "5": 480,
+        "7": 368,
+        "9": 24
+      },
+      "minimizers": 8,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 6
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        2,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 4,
+        "2": 80,
+        "4": 440,
+        "6": 400,
+        "8": 100
+      },
+      "minimizers": 4,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 5
+        },
+        {
+          "epsilon": 1,
+          "length": 5
+        }
+      ],
+      "vertex_cycle_type": [
+        5
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 32768
+      },
+      "minimizers": 32768,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 2048,
+        "3": 8192,
+        "5": 12288,
+        "7": 8192,
+        "9": 2048
+      },
+      "minimizers": 2048,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 128,
+        "2": 1536,
+        "4": 6912,
+        "6": 13824,
+        "8": 10368
+      },
+      "minimizers": 128,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "2": 512,
+        "4": 3072,
+        "6": 7680,
+        "8": 10240,
+        "10": 7680,
+        "12": 3072,
+        "14": 512
+      },
+      "minimizers": 512,
+      "minimum": 2,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 64,
+        "3": 1152,
+        "5": 7104,
+        "7": 16128,
+        "9": 7104,
+        "11": 1152,
+        "13": 64
+      },
+      "minimizers": 64,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": -1,
+          "length": 2
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        1,
+        4
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 32,
+        "3": 704,
+        "5": 4320,
+        "7": 10880,
+        "9": 11744,
+        "11": 4800,
+        "13": 288
+      },
+      "minimizers": 32,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 6
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 8,
+        "2": 240,
+        "4": 2520,
+        "6": 10400,
+        "8": 12600,
+        "10": 6000,
+        "12": 1000
+      },
+      "minimizers": 8,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 5
+        },
+        {
+          "epsilon": 1,
+          "length": 5
+        },
+        {
+          "epsilon": 1,
+          "length": 5
+        }
+      ],
+      "vertex_cycle_type": [
+        1,
+        5
+      ]
+    },
+    {
+      "defect_distribution": {
+        "3": 512,
+        "5": 3072,
+        "7": 7680,
+        "9": 10240,
+        "11": 7680,
+        "13": 3072,
+        "15": 512
+      },
+      "minimizers": 512,
+      "minimum": 3,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": 1,
+          "length": 2
+        },
+        {
+          "epsilon": -1,
+          "length": 1
+        }
+      ],
+      "vertex_cycle_type": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "defect_distribution": {
+        "2": 64,
+        "4": 1152,
+        "6": 7104,
+        "8": 16128,
+        "10": 7104,
+        "12": 1152,
+        "14": 64
+      },
+      "minimizers": 64,
+      "minimum": 2,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": -1,
+          "length": 1
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": 1,
+          "length": 4
+        },
+        {
+          "epsilon": -1,
+          "length": 2
+        }
+      ],
+      "vertex_cycle_type": [
+        2,
+        4
+      ]
+    },
+    {
+      "defect_distribution": {
+        "0": 32,
+        "2": 480,
+        "4": 2880,
+        "6": 8640,
+        "8": 12960,
+        "10": 7776
+      },
+      "minimizers": 32,
+      "minimum": 0,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        },
+        {
+          "epsilon": 1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        3,
+        3
+      ]
+    },
+    {
+      "defect_distribution": {
+        "1": 24,
+        "3": 728,
+        "5": 6360,
+        "7": 12888,
+        "9": 9736,
+        "11": 2760,
+        "13": 264,
+        "15": 8
+      },
+      "minimizers": 24,
+      "minimum": 1,
+      "unordered_pair_orbits": [
+        {
+          "epsilon": 1,
+          "length": 6
+        },
+        {
+          "epsilon": 1,
+          "length": 6
+        },
+        {
+          "epsilon": -1,
+          "length": 3
+        }
+      ],
+      "vertex_cycle_type": [
+        6
+      ]
+    }
+  ],
+  "source_sha256": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+  "status": "FINITE-EXACT all vertex-permutation conjugacy types and all tournament orientations for n<=6",
+  "tournaments_tested_with_multiplicity": 367966
+}

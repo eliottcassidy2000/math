@@ -1,0 +1,27 @@
+[
+  {
+    "script": "session65-cryptids/check.py",
+    "stored_stdout": "session65-cryptids/normal.json",
+    "timeout": 600
+  },
+  {
+    "script": "session65-audit-cryptids/independent_check.py",
+    "stored_stdout": "session65-audit-cryptids/normal.json",
+    "timeout": 600
+  },
+  {
+    "script": "session65-fifteens/check.py",
+    "stored_stdout": "session65-fifteens/receipt.json",
+    "timeout": 600
+  },
+  {
+    "script": "session65-fifteens/check_general_permutation.py",
+    "stored_stdout": "session65-fifteens/general-receipt.json",
+    "timeout": 600
+  },
+  {
+    "script": "session65-audit-fifteens/independent_check.py",
+    "stored_stdout": "session65-audit-fifteens/receipt.json",
+    "timeout": 600
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "audit_sha256": {
+    "AUDIT.md": "b5673660fb9514e16321d659bb44412578b8b110f4637a7bba3f22e7f01b8781",
+    "general-lane-replay-optimized.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+    "general-lane-replay.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+    "independent_check.py": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091",
+    "lane-replay-optimized.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "lane-replay.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "receipt-optimized.json": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f",
+    "receipt.json": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f"
+  },
+  "audited_at_utc": "2026-10-26",
+  "frozen_lane_sha256": {
+    "GENERAL_PERMUTATION.md": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+    "REPORT.md": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+    "check.py": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+    "check_general_permutation.py": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+    "general-receipt-optimized.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+    "general-receipt.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+    "receipt-optimized.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "receipt.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "source-manifest.json": "7002874c382d210148cfeceefc738a5fd0340b06ffab8da52a99e5349cfcb040"
+  },
+  "gate_results": {
+    "general_normal_replay_matches": true,
+    "general_optimized_replay_matches": true,
+    "independent_normal_optimized_identical": true,
+    "lane_frozen_manifest_matches": true,
+    "lane_normal_replay_matches": true,
+    "lane_optimized_replay_matches": true
+  },
+  "lane_directory": "session65-fifteens",
+  "remaining_blockers": [],
+  "scope": "Independent Frobenius, signed pair-orbit, and ternary audit; no conjecture proof",
+  "status": "PASS"
+}

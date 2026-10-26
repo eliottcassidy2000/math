@@ -1,0 +1,104 @@
+{
+  "session65-fifteens/inputs/01-canon__theorems__THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md": {
+    "source_sha256": "a00c8b2485622c8716e417bb05739518a4844465a9ef71243438e840925fc6f7",
+    "repository_context": "01-canon/theorems/THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md": {
+    "source_sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+    "repository_context": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/01-canon__theorems__THM-640-the-paley-bridge.md": {
+    "source_sha256": "b35cf4f5c8c6dde60f35dfbb54b7984e4e47f00143c5922fc83c5796ce5a5ae4",
+    "repository_context": "01-canon/theorems/THM-640-the-paley-bridge.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md": {
+    "source_sha256": "2213d3fccf50983e1265fce2b5cb7986539eec0bce77117c6a89bd58136e8d12",
+    "repository_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md": {
+    "source_sha256": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48",
+    "repository_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__monster__MONSTER_BABY_PRIME_PARTITION.md": {
+    "source_sha256": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a",
+    "repository_context": "05-knowledge/results/session32_square_monster_20261023/monster/MONSTER_BABY_PRIME_PARTITION.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__paley__PALEY_MONSTER_BRIDGE.md": {
+    "source_sha256": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4",
+    "repository_context": "05-knowledge/results/session32_square_monster_20261023/paley/PALEY_MONSTER_BRIDGE.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md": {
+    "source_sha256": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07",
+    "repository_context": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/README.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__mrb-supersingular__RESEARCH.md": {
+    "source_sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+    "repository_context": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/mrb-supersingular/RESEARCH.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md": {
+    "source_sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079",
+    "repository_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md": {
+    "source_sha256": "df987ea2476c8dc1d0e0e11a3f0e8f648a8e61dd23aee64c536d0266eef2031d",
+    "repository_context": "01-canon/theorems/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md": {
+    "source_sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+    "repository_context": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md": {
+    "source_sha256": "aaf43790cf857d7d400bfe87f0438c5e617887fb953788b4d1ce7c72037aa0ab",
+    "repository_context": "01-canon/theorems/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/cardinality_bridges_20261018m.md": {
+    "source_sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+    "repository_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-fifteens/inputs/session63_cancellation_RESULT.md": {
+    "source_sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+    "repository_context": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Byte-identical inherited repository input"
+  },
+  "session65-repo/01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md": {
+    "source_sha256": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc",
+    "repository_context": "01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Frozen own-repository runtime dependency"
+  },
+  "session65-repo/01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md": {
+    "source_sha256": "60ddaa62c9d6e594b994e2e9c7ab2600edf9c763146c950d5ebf009ab025a006",
+    "repository_context": "01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md",
+    "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+    "kind": "Frozen own-repository runtime dependency"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "base_commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "checked_at_utc": "2026-10-26",
+  "inputs_sha256": {
+    "inputs/01-canon__theorems__THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md": "a00c8b2485622c8716e417bb05739518a4844465a9ef71243438e840925fc6f7",
+    "inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+    "inputs/01-canon__theorems__THM-640-the-paley-bridge.md": "b35cf4f5c8c6dde60f35dfbb54b7984e4e47f00143c5922fc83c5796ce5a5ae4",
+    "inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md": "2213d3fccf50983e1265fce2b5cb7986539eec0bce77117c6a89bd58136e8d12",
+    "inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48",
+    "inputs/05-knowledge__results__session32_square_monster_20261023__monster__MONSTER_BABY_PRIME_PARTITION.md": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a",
+    "inputs/05-knowledge__results__session32_square_monster_20261023__paley__PALEY_MONSTER_BRIDGE.md": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4",
+    "inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07",
+    "inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__mrb-supersingular__RESEARCH.md": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+    "inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079",
+    "inputs/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md": "df987ea2476c8dc1d0e0e11a3f0e8f648a8e61dd23aee64c536d0266eef2031d",
+    "inputs/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+    "inputs/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md": "aaf43790cf857d7d400bfe87f0438c5e617887fb953788b4d1ce7c72037aa0ab",
+    "inputs/cardinality_bridges_20261018m.md": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+    "inputs/session63_cancellation_RESULT.md": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+    "sloane1973p98.jpg": "2e2b51802a88dc7e3c785237f58605f06db5f7a8eb424bb465ed79f901071328"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1809.07421v2",
+      "claim": "Theorem1.1/3.1 exact genus difference; Ogg and higher level rationality",
+      "kind": "primary published research"
+    },
+    {
+      "url": "https://neilsloane.com/doc/persistence.2.jpg",
+      "claim": "original1973p98 conjecture and persistence motivation; image visually inspected; exact intermediate recomputed",
+      "kind": "primary original article"
+    },
+    {
+      "url": "https://oeis.org/A102483",
+      "claim": "Sloane own exponent list and open status",
+      "kind": "author-maintained sequence"
+    },
+    {
+      "url": "https://arxiv.org/abs/2202.13256v2",
+      "claim": "Saye2022 bounded verification2*3^45",
+      "kind": "primary research"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2202.13256v2",
+      "claim": "Lemma3.1 exact ternary exponent lift; PDF numbering controls over experimental HTML",
+      "kind": "primary research"
+    },
+    {
+      "url": "https://arxiv.org/abs/2107.12475v2",
+      "claim": "Theorems1/2 proved Erdos15,2 and5,4 machines",
+      "kind": "primary research"
+    },
+    {
+      "url": "https://docs.bbchallenge.org/other/powers_of_two_15_2.txt",
+      "claim": "explicit historical machine",
+      "kind": "author source artifact"
+    },
+    {
+      "url": "https://wiki.bbchallenge.org/wiki/Cryptids",
+      "claim": "dated current Sloane6,4 and Erdos14 records; both not independently verified",
+      "kind": "community registry, claims not promoted"
+    },
+    {
+      "url": "https://arxiv.org/html/2101.00917v2",
+      "claim": "Richelot kernel and weighted graph interpretation",
+      "kind": "primary research"
+    },
+    {
+      "url": "https://arxiv.org/abs/1708.00274",
+      "claim": "Rao15pentagon families exhaustive search",
+      "kind": "primary research"
+    },
+    {
+      "url": "https://arxiv.org/html/2301.12248v1",
+      "claim": "Straub15known sporadic Apery-like sequences",
+      "kind": "primary research"
+    }
+  ],
+  "frozen_artifacts_sha256": {
+    "REPORT.md": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+    "GENERAL_PERMUTATION.md": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+    "check.py": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+    "check_general_permutation.py": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+    "receipt.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "receipt-optimized.json": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+    "general-receipt.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+    "general-receipt-optimized.json": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f"
+  }
+}

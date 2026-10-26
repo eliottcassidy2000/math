@@ -1,0 +1,345 @@
+{
+  "format": "sha256-exact-file-set-v1",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "CONCEPT_BOARD.md",
+      "bytes": 1968,
+      "sha256": "8c4bd78a6cae5a10ffc0a76c89fdae08f0143dde8d3ee6283684541041866b89"
+    },
+    {
+      "path": "DEPENDENCY_PINS.json",
+      "bytes": 6922,
+      "sha256": "7e34d5228dc5a7aa05b58784b407fcd20d1537774257df815972d625bfafd016"
+    },
+    {
+      "path": "FIRST_BUNDLE_CHECK.json",
+      "bytes": 68290,
+      "sha256": "f37473d0d3c8eef69c65a8ef4db222f91265c5ca50d956d4252ce085cfb7baa4"
+    },
+    {
+      "path": "FIRST_DOCS_CHECK.txt",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "FIRST_FILESET_NEGATIVE_CONTROLS.json",
+      "bytes": 741,
+      "sha256": "b60763feeec6234347c8d6ce390cb9e6a59e6fbe87aea3292533161ea3470ad6"
+    },
+    {
+      "path": "FIRST_REPLAY_RECEIPT.json",
+      "bytes": 8663,
+      "sha256": "7996fb0f535b48fb9f1c102caceac9f96d41bb014b02c5702c0769cbe26d9bf1"
+    },
+    {
+      "path": "FIRST_SOURCE_VERIFICATION.json",
+      "bytes": 14991,
+      "sha256": "7b7a6aefe0da5501ca335974b9dbf6cef3a824bfd115569a08941fc3473cc8db"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 2302,
+      "sha256": "6e9a2245e3b78cc4f73773116a5d663b31bc59af841479eea91b27d48b390e9f"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.md",
+      "bytes": 736,
+      "sha256": "090912205aab4c7f1c03955bddcde54e924bfdab52e4f05c6a69011d67f689fc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4396,
+      "sha256": "7ff56204dba89a72861c4d42169565fe48ab9b2915a993526ac395c33cccb8f4"
+    },
+    {
+      "path": "REPLAY_TASKS.json",
+      "bytes": 722,
+      "sha256": "a881ec629022f038dde026c57ad00fce0ac7bdcd59e0a63f4765d25dbf7bd4ac"
+    },
+    {
+      "path": "SOURCE_LINK_CONTEXT.json",
+      "bytes": 7530,
+      "sha256": "a2ef8b65dea09db9ab9e7a8da83d3cf60f082d4c11166b64a272b354718b385b"
+    },
+    {
+      "path": "SOURCE_LINK_INDEX.md",
+      "bytes": 14057,
+      "sha256": "2c8ee611b759420e8bfc4292756cf0f68bcf371d0a555eb3d4f22ab95f7e0233"
+    },
+    {
+      "path": "replay_frozen.py",
+      "bytes": 3566,
+      "sha256": "85ff4cd9b7fff65bda0f0688a1734dcdf18865717ddb2312638f8d10124f97bf"
+    },
+    {
+      "path": "session65-audit-cryptids/AMENDMENT.json",
+      "bytes": 733,
+      "sha256": "23990b49cdf19b506c86933adf40bc4070058ef4dbfefb92b12bee7d24da9b5e"
+    },
+    {
+      "path": "session65-audit-cryptids/Bouncers.LICENSE.txt",
+      "bytes": 1060,
+      "sha256": "9f935f2deeaa52941c083a9a01ae2b836bf5a66ce5dd3df79b9d8be66baf12e6"
+    },
+    {
+      "path": "session65-audit-cryptids/Bouncers.source.txt",
+      "bytes": 20685,
+      "sha256": "2a2455657fa4eabcbfeff11517307580e5fb656a1f6664baa12203d10dbf0d17"
+    },
+    {
+      "path": "session65-audit-cryptids/REPORT.md",
+      "bytes": 17735,
+      "sha256": "07dd283a20a62d304c83057db266ed59d3de15446242c3ec8058a856a7e85e95"
+    },
+    {
+      "path": "session65-audit-cryptids/SHA256SUMS",
+      "bytes": 849,
+      "sha256": "6f61903f77733883a9e5ece01bbb37c315a5ed61a2f42f2dab3e074082a7220c"
+    },
+    {
+      "path": "session65-audit-cryptids/SOURCE_AUDIT.json",
+      "bytes": 2628,
+      "sha256": "7b505e259aca53daea35f08cbeca84478c3ef765473b9d8abc7d62a56410f9f6"
+    },
+    {
+      "path": "session65-audit-cryptids/independent_check.py",
+      "bytes": 18366,
+      "sha256": "ced3f2c592a97d04bba4bff10a6f7712d6ba39f5201e0662ce53cd83e04e672a"
+    },
+    {
+      "path": "session65-audit-cryptids/normal.json",
+      "bytes": 5649,
+      "sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2"
+    },
+    {
+      "path": "session65-audit-cryptids/optimized.json",
+      "bytes": 5649,
+      "sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2"
+    },
+    {
+      "path": "session65-audit-cryptids/producer-rerun-normal.json",
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128"
+    },
+    {
+      "path": "session65-audit-cryptids/producer-rerun-optimized.json",
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128"
+    },
+    {
+      "path": "session65-audit-fifteens/AUDIT.md",
+      "bytes": 10732,
+      "sha256": "b5673660fb9514e16321d659bb44412578b8b110f4637a7bba3f22e7f01b8781"
+    },
+    {
+      "path": "session65-audit-fifteens/audit-manifest.json",
+      "bytes": 2191,
+      "sha256": "897cc5800d07f72f9b112459440d06f42e903caa7fa773859c1d868d59d1a9d1"
+    },
+    {
+      "path": "session65-audit-fifteens/general-lane-replay-optimized.json",
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f"
+    },
+    {
+      "path": "session65-audit-fifteens/general-lane-replay.json",
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f"
+    },
+    {
+      "path": "session65-audit-fifteens/independent_check.py",
+      "bytes": 9343,
+      "sha256": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091"
+    },
+    {
+      "path": "session65-audit-fifteens/lane-replay-optimized.json",
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd"
+    },
+    {
+      "path": "session65-audit-fifteens/lane-replay.json",
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd"
+    },
+    {
+      "path": "session65-audit-fifteens/receipt-optimized.json",
+      "bytes": 6079,
+      "sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f"
+    },
+    {
+      "path": "session65-audit-fifteens/receipt.json",
+      "bytes": 6079,
+      "sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f"
+    },
+    {
+      "path": "session65-cryptids/REPORT.md",
+      "bytes": 13577,
+      "sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d"
+    },
+    {
+      "path": "session65-cryptids/SHA256SUMS",
+      "bytes": 389,
+      "sha256": "381cfaa1492f5f555533356d051befdd0f10ae11dcc7eeaa39dcfad7b20ee340"
+    },
+    {
+      "path": "session65-cryptids/SOURCES.json",
+      "bytes": 1236,
+      "sha256": "f47ed0f64a976d8f42e1f25f78a9ca873857dbcaf7100dbcb6862e5af1ea3280"
+    },
+    {
+      "path": "session65-cryptids/check.py",
+      "bytes": 8316,
+      "sha256": "ad88b82106aa9d517f7f2f4a56d50abf00b0086eacff80c4d0e64a6c3b6fd4b1"
+    },
+    {
+      "path": "session65-cryptids/normal.json",
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128"
+    },
+    {
+      "path": "session65-cryptids/optimized.json",
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128"
+    },
+    {
+      "path": "session65-fifteens/GENERAL_PERMUTATION.md",
+      "bytes": 4720,
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd"
+    },
+    {
+      "path": "session65-fifteens/REPORT.md",
+      "bytes": 20104,
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397"
+    },
+    {
+      "path": "session65-fifteens/check.py",
+      "bytes": 6624,
+      "sha256": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07"
+    },
+    {
+      "path": "session65-fifteens/check_general_permutation.py",
+      "bytes": 2506,
+      "sha256": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df"
+    },
+    {
+      "path": "session65-fifteens/general-receipt-optimized.json",
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f"
+    },
+    {
+      "path": "session65-fifteens/general-receipt.json",
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f"
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md",
+      "bytes": 18476,
+      "sha256": "a00c8b2485622c8716e417bb05739518a4844465a9ef71243438e840925fc6f7"
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "bytes": 16797,
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502"
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-640-the-paley-bridge.md",
+      "bytes": 7457,
+      "sha256": "b35cf4f5c8c6dde60f35dfbb54b7984e4e47f00143c5922fc83c5796ce5a5ae4"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "bytes": 12097,
+      "sha256": "2213d3fccf50983e1265fce2b5cb7986539eec0bce77117c6a89bd58136e8d12"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "bytes": 31913,
+      "sha256": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__monster__MONSTER_BABY_PRIME_PARTITION.md",
+      "bytes": 14220,
+      "sha256": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__paley__PALEY_MONSTER_BRIDGE.md",
+      "bytes": 10005,
+      "sha256": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "bytes": 13791,
+      "sha256": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__mrb-supersingular__RESEARCH.md",
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39"
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "bytes": 40319,
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079"
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md",
+      "bytes": 7203,
+      "sha256": "df987ea2476c8dc1d0e0e11a3f0e8f648a8e61dd23aee64c536d0266eef2031d"
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "bytes": 7053,
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+      "bytes": 7510,
+      "sha256": "aaf43790cf857d7d400bfe87f0438c5e617887fb953788b4d1ce7c72037aa0ab"
+    },
+    {
+      "path": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "bytes": 37719,
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    {
+      "path": "session65-fifteens/inputs/session63_cancellation_RESULT.md",
+      "bytes": 21869,
+      "sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237"
+    },
+    {
+      "path": "session65-fifteens/receipt-optimized.json",
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd"
+    },
+    {
+      "path": "session65-fifteens/receipt.json",
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd"
+    },
+    {
+      "path": "session65-fifteens/source-manifest.json",
+      "bytes": 5488,
+      "sha256": "7002874c382d210148cfeceefc738a5fd0340b06ffab8da52a99e5349cfcb040"
+    },
+    {
+      "path": "session65-repo/01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md",
+      "bytes": 7637,
+      "sha256": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc"
+    },
+    {
+      "path": "session65-repo/01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md",
+      "bytes": 21062,
+      "sha256": "60ddaa62c9d6e594b994e2e9c7ab2600edf9c763146c950d5ebf009ab025a006"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 1081,
+      "sha256": "0524144244eae43e07f9228c4de004c914771954118f87faed0d408fc7f3cb6c"
+    }
+  ]
+}

@@ -1,0 +1,1451 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "replay_frozen.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session65-fifteens/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session65-fifteens/check_general_permutation.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session65-audit-cryptids/independent_check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session65-audit-fifteens/independent_check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session65-cryptids/check.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "session65-audit-cryptids/REPORT.md",
+    "session65-audit-cryptids/AMENDMENT.json",
+    "session65-audit-cryptids/SOURCE_AUDIT.json",
+    "session65-audit-cryptids/Bouncers.source.txt",
+    "session65-audit-cryptids/Bouncers.LICENSE.txt",
+    "session65-audit-cryptids/independent_check.py",
+    "session65-audit-cryptids/normal.json",
+    "session65-audit-cryptids/optimized.json",
+    "session65-audit-cryptids/producer-rerun-normal.json",
+    "session65-audit-cryptids/producer-rerun-optimized.json",
+    "session65-cryptids/REPORT.md",
+    "session65-cryptids/SOURCES.json",
+    "session65-cryptids/check.py",
+    "session65-cryptids/normal.json",
+    "session65-cryptids/optimized.json"
+  ],
+  "local_links": [
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../converse_exception_classification_20261021/session24-structure/STRUCTURE.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../01-canon/theorems/THM-2477-rigid-strong-classification-through-sixty-two.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../center_transitivity_20261021c/README.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../center_transitivity_20261021c/VT15.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../center_transitivity_20261021c/ORDER35.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../nontransitive_fifteen_20261022/produce_q3.cpp",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../nontransitive_fifteen_20261022/pack_q3.py",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../nontransitive_fifteen_20261022/check.py",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_procgen_20260922_barrier_atlas.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_sticky_20260927_size_coupled_persistence.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_aliquot_lehmer_five_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_two_carries_typology_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../gilbreath_fermat_platonic_20260926.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/cardinality_bridges_20261018m.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/information_observers_collatz_20261014a.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../reference/CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../arithmetic_braids_20260917_divisors.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../predecessor_prime_shapes_20261014b.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../trijection_reset_20261020/arithmetic.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../procgen_tcpc_20261001_tournament_clock_prime_collatz.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../signature_axis_cat_map_rr_mrb_20261022.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../04-computation/experiments/cardinality_carriers_20261018m.py",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../cardinality_carriers_20261018m.json",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../constants_atlas_20260926_recurrent_numbers.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../natural_number_roles_20261004.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../procgen_tbij_20261001_natural_bijections.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927_audit.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../information_observers_collatz_20261014a.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../procgen_sources_20260923_interplay.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../constants_atlas_20260926_recurrent_numbers.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../01-canon/theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../collatz_coincidence_atlas_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ogg_triangular_chowla_20260927_audit.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../procgen_tbij_20261001_natural_bijections.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../natural_number_roles_20261004.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../trees5_tournaments4_converse_20261005.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../seven_twentyone_mersenne_openai_math_20261006.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../ramanujan_heegner7_trivial_cycle_20261006.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../information_observers_collatz_20261014a.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../one_twenty_eight_atlas_balance_gold_20261014.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../merge_18_19_11_22_collatz_hn_20261018.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../shade_difference_support_20261018b.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../carry_descent_transport_branches_20261018l.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../../../07-reflections/seventeen-vitali-atoms.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../shade_difference_support_20261018b.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../reanchoring_kernel_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../zagier_six_triples_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../reanchoring_kernel_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../coupled_support_branches_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "SOURCE_LINK_INDEX.md",
+      "to": "../coupled_fractional_geometry_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "PROVENANCE.md",
+      "to": "SOURCE_LINK_INDEX.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session65-cryptids/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session65-audit-cryptids/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session65-fifteens/GENERAL_PERMUTATION.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session65-audit-fifteens/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session65-fifteens/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PROVENANCE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "SOURCE_LINK_INDEX.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../04-computation/experiments/cardinality_carriers_20261018m.py",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "cardinality_carriers_20261018m.json",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "constants_atlas_20260926_recurrent_numbers.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "natural_number_roles_20261004.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_tbij_20261001_natural_bijections.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927_audit.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "information_observers_collatz_20261014a.md#3-the-outer-automorphism-preserves-the-group-not-its-point-action",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_sources_20260923_interplay.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "constants_atlas_20260926_recurrent_numbers.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../01-canon/theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "collatz_coincidence_atlas_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927_audit.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_tbij_20261001_natural_bijections.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "natural_number_roles_20261004.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "trees5_tournaments4_converse_20261005.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "seven_twentyone_mersenne_openai_math_20261006.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ramanujan_heegner7_trivial_cycle_20261006.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "information_observers_collatz_20261014a.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "one_twenty_eight_atlas_balance_gold_20261014.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "merge_18_19_11_22_collatz_hn_20261018.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "shade_difference_support_20261018b.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "carry_descent_transport_branches_20261018l.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/seventeen-vitali-atoms.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "shade_difference_support_20261018b.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "reanchoring_kernel_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "zagier_six_triples_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "reanchoring_kernel_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "coupled_support_branches_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "coupled_fractional_geometry_20261018c.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "../../05-knowledge/results/converse_exception_classification_20261021/session24-structure/STRUCTURE.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "THM-2477-rigid-strong-classification-through-sixty-two.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "THM-2454-pure-blue-alphabet-and-center-law.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_procgen_20260922_barrier_atlas.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_sticky_20260927_size_coupled_persistence.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_aliquot_lehmer_five_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_two_carries_typology_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "gilbreath_fermat_platonic_20260926.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/README.md#2-orbit-runs-upgrade-regularity-to-vertex-transitivity",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/VT15.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/ORDER35.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "produce_q3.cpp",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "pack_q3.py",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "check.py",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../reference/CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "arithmetic_braids_20260917_divisors.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "predecessor_prime_shapes_20261014b.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "trijection_reset_20261020/arithmetic.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "procgen_tcpc_20261001_tournament_clock_prime_collatz.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "signature_axis_cat_map_rr_mrb_20261022.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/cardinality_bridges_20261018m.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/information_observers_collatz_20261014a.md",
+      "exists": true
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [],
+  "historical_source_links": [
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../04-computation/experiments/cardinality_carriers_20261018m.py",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "04-computation/experiments/cardinality_carriers_20261018m.py",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "cardinality_carriers_20261018m.json",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/cardinality_carriers_20261018m.json",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "constants_atlas_20260926_recurrent_numbers.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "natural_number_roles_20261004.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/natural_number_roles_20261004.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_tbij_20261001_natural_bijections.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/procgen_tbij_20261001_natural_bijections.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927_audit.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927_audit.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "information_observers_collatz_20261014a.md#3-the-outer-automorphism-preserves-the-group-not-its-point-action",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/information_observers_collatz_20261014a.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-icosahedral-fifteen-s6.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/the-icosahedral-fifteen-s6.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/the-angle-defect-spine-five-solids-five-lattices-and-the-seventh-prime.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/tetrahedral-k4-representation-atlas-tournaments-xor-berggren-h1-codex-20260816.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_sources_20260923_interplay.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/procgen_sources_20260923_interplay.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "constants_atlas_20260926_recurrent_numbers.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../01-canon/theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "01-canon/theorems/THM-4487-dip-spectrum-entropy-curve-and-sharpness-of-thin-divergence.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "collatz_coincidence_atlas_20260927.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_coincidence_atlas_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ogg_triangular_chowla_20260927_audit.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927_audit.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "procgen_tbij_20261001_natural_bijections.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/procgen_tbij_20261001_natural_bijections.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "natural_number_roles_20261004.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/natural_number_roles_20261004.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "trees5_tournaments4_converse_20261005.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/trees5_tournaments4_converse_20261005.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "seven_twentyone_mersenne_openai_math_20261006.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/seven_twentyone_mersenne_openai_math_20261006.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "ramanujan_heegner7_trivial_cycle_20261006.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ramanujan_heegner7_trivial_cycle_20261006.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "information_observers_collatz_20261014a.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/information_observers_collatz_20261014a.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "one_twenty_eight_atlas_balance_gold_20261014.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/one_twenty_eight_atlas_balance_gold_20261014.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "merge_18_19_11_22_collatz_hn_20261018.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/merge_18_19_11_22_collatz_hn_20261018.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/pythagorean_form_conic_graphs_rp_margin_20261018.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "shade_difference_support_20261018b.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/shade_difference_support_20261018b.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "carry_descent_transport_branches_20261018l.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/carry_descent_transport_branches_20261018l.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "../../07-reflections/seventeen-vitali-atoms.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "07-reflections/seventeen-vitali-atoms.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "shade_difference_support_20261018b.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/shade_difference_support_20261018b.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "reanchoring_kernel_20261018c.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/reanchoring_kernel_20261018c.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "zagier_six_triples_20261018c.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/zagier_six_triples_20261018c.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "reanchoring_kernel_20261018c.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/reanchoring_kernel_20261018c.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "coupled_support_branches_20261018c.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/coupled_support_branches_20261018c.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "to": "coupled_fractional_geometry_20261018c.md",
+      "original_context": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/coupled_fractional_geometry_20261018c.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "../../05-knowledge/results/converse_exception_classification_20261021/session24-structure/STRUCTURE.md",
+      "original_context": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/converse_exception_classification_20261021/session24-structure/STRUCTURE.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "THM-2477-rigid-strong-classification-through-sixty-two.md",
+      "original_context": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "01-canon/theorems/THM-2477-rigid-strong-classification-through-sixty-two.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "../../05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md#3-rigid-strong-tournaments-are-completely-classified",
+      "original_context": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/merged_metagraph_finite_pure_atoms_20261020/FINITE_ATOMS_AND_RIGID_CLOSURE.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "to": "THM-2454-pure-blue-alphabet-and-center-law.md",
+      "original_context": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_procgen_20260922_barrier_atlas.md",
+      "original_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_procgen_20260922_barrier_atlas.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_sticky_20260927_size_coupled_persistence.md",
+      "original_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_sticky_20260927_size_coupled_persistence.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_aliquot_lehmer_five_20260927.md",
+      "original_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_aliquot_lehmer_five_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "collatz_two_carries_typology_20260927.md",
+      "original_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/collatz_two_carries_typology_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "to": "gilbreath_fermat_platonic_20260926.md",
+      "original_context": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/gilbreath_fermat_platonic_20260926.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/README.md#2-orbit-runs-upgrade-regularity-to-vertex-transitivity",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/center_transitivity_20261021c/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/deficit_six_centers_20261021b/COMBINED_CUTOFF.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/VT15.md",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/center_transitivity_20261021c/VT15.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "../center_transitivity_20261021c/ORDER35.md",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/center_transitivity_20261021c/ORDER35.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "produce_q3.cpp",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/nontransitive_fifteen_20261022/produce_q3.cpp",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "pack_q3.py",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/nontransitive_fifteen_20261022/pack_q3.py",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "to": "check.py",
+      "original_context": "05-knowledge/results/nontransitive_fifteen_20261022/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/nontransitive_fifteen_20261022/check.py",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../reference/CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/reference/CORE-PAPERS-INTAKE-2026-10-22-KLS-IDENTIFIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "arithmetic_braids_20260917_divisors.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/arithmetic_braids_20260917_divisors.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "predecessor_prime_shapes_20261014b.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/predecessor_prime_shapes_20261014b.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "trijection_reset_20261020/arithmetic.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "procgen_tcpc_20261001_tournament_clock_prime_collatz.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/procgen_tcpc_20261001_tournament_clock_prime_collatz.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "signature_axis_cat_map_rr_mrb_20261022.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/signature_axis_cat_map_rr_mrb_20261022.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "ogg_triangular_chowla_20260927.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "04-computation/experiments/supersingular_fus_qseries_20261022/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "to": "../../04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "original_context": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "04-computation/experiments/supersingular_fus_qseries_20261022/audit_ssj/REPORT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/cardinality_bridges_20261018m.md",
+      "original_context": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/cardinality_bridges_20261018m.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/information_observers_collatz_20261014a.md",
+      "original_context": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/information_observers_collatz_20261014a.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "to": "inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "original_context": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/README.md",
+      "commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+      "resolved_repository_path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/inputs/THM-4012-weighted-leading-face-good-elliptic-factor-observer.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    }
+  ],
+  "historical_unresolved_links": []
+}
