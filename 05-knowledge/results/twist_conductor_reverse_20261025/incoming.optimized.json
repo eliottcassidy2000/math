@@ -1,0 +1,93 @@
+{
+  "B_coefficient_valuations": [
+    0,
+    2,
+    1,
+    0,
+    1,
+    2,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    2,
+    0,
+    1,
+    0
+  ],
+  "F3_conic_points": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      2
+    ]
+  ],
+  "F3_open_lifts": [],
+  "basis_C": [
+    13,
+    10
+  ],
+  "basis_D": [
+    9,
+    15
+  ],
+  "corrections": "reverse ideal containment with reflexive hull; retain full character bank; restrict whole-conic criterion to infinite fields",
+  "failure_actual_required": [
+    2,
+    3
+  ],
+  "radicand_valuations": [
+    1,
+    2,
+    0,
+    0
+  ],
+  "single_root_tests": [
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      4,
+      2,
+      0
+    ],
+    [
+      8,
+      2,
+      2
+    ]
+  ],
+  "source_character": 4,
+  "source_coefficient_valuation": 2,
+  "status": "FINITE-EXACT PASS",
+  "unreduced_failing_character": 12
+}

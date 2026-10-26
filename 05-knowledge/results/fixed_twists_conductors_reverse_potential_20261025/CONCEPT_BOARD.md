@@ -8,7 +8,7 @@ production counting graph. **Wildcard** — Antihydra as a valuation barrier, wi
 |---|---|---|---|---|
 | Twisted root algebra | `R[u]/(u_i^2 - d_i L_i)`, normalize | characters, valuations | normality; keep `c_z` per character | `(uv/3)^2 = 35` over `Z[1/2]` |
 | Port classes | `c_z^{-1} u_z` over Dedekind `R` | Steinitz class per character | principal generators | `Z[√-21]`: `u√-21/3` integral, `u/3` not |
-| Compatibility bank | single-root tests, mixed-root tests | `B`-membership after every continuation | the carry (3) is additive, not monoidal | scalar `a` needs `15 | a` for `(15,21,55)` |
+| Compatibility bank | full normalized-character tests, including unreduced products | `B`-membership after every continuation | the carry (3) is additive, not monoidal | scalar `a` needs `15 | a` for `(15,21,55)` |
 | Fixed-twist lifts | squareclass vector at a base point | the three pair ports, the conic | interior points | Hilbert symbols vs brute force, 300 twists |
 | Reverse potential | suffix minima on the ordinary graph | every continuation, `B = floor(N/2)` | `v_2(a(N))` (carries) | naive initial subtraction has a negative edge |
 | Fixed precision | edges of reduced cost `< K` | `Z_terminal mod 2^K` | validity for larger `K` | `K=1`: 550 states at `N=100` |

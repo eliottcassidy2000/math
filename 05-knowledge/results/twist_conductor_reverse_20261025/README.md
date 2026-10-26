@@ -49,7 +49,7 @@ convergence, colouring, Jacobian, or unrestricted black-core theorem.
 ## Reproduction
 
 Run `python3 verify_packet.py --replay` from this directory. It checks the
-closed file inventory, source pins, six normal/optimized receipt pairs, and
+closed file inventory, source pins, seven normal/optimized receipt pairs, and
 reruns each standard-library checker in both modes. Z3 is used only for the
 optional witness searches; verification trusts none of its conclusions.
 See [AUDIT.md](AUDIT.md) for universes, proof boundaries, and corrected drafts.

@@ -29,11 +29,20 @@ conic
 
     C_d :  w^2 = d_1 d_5 d_3^2 s^2 + d_3 d_5 t^2.                                     (C)
 
-**Theorem.** `X_d(k)` has a point over the open central line iff (i) holds and `C_d(k) != ∅`
+**Theorem (k infinite).** `X_d(k)` has a point over the open central line iff (i) holds and `C_d(k) != ∅`
 (a conic with one rational point has infinitely many, and the finitely many degenerate ones with
 `st(d_1d_3 s^2 + t^2) = 0` can be avoided). Over `Q` this is decided by Legendre/Hilbert symbols of
 `(d_1 d_5 d_3^2, d_3 d_5)` at `2`, `oo` and the odd primes dividing the coefficients.
-Consequences:
+Over a finite field, require a conic point with
+`st(d_1 d_3 s^2+t^2) != 0`; nonemptiness of the whole conic is insufficient.
+For example over F_3 the Pythagorean twist satisfies (i), and
+`w^2=s^2+t^2` has four projective points, but each has s=0 or t=0.
+There is no open-central lift. The pointwise criterion in section1
+is unchanged; the conic has infinitely many rational points only when
+the ground field is infinite. This corrects the earlier unqualified
+field scope. [Exact finite control](../../twist_conductor_reverse_20261025/check_incoming.py).
+
+Consequences over Q:
 - untwisted `d = 1`: (i) fails (`-1` is not a square), recovering the central case of BOUNDARY 5a;
 - Pythagorean twist `d = (1,1,-1,1,-1,1,-1)`: `C_d` is the unit circle `w^2 = s^2 + t^2`, so the
   rational boundary lifts over `E = 0` are parametrized by Pythagorean triples; `(3,4,5)` gives the

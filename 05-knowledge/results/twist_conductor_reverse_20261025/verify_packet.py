@@ -17,8 +17,12 @@ def main():
         local=repo/path
         data=local.read_bytes() if local.exists() else subprocess.check_output(['git','show',f"{item['revision']}:{path}"],cwd=repo)
         need(digest(data)==item['sha256'],('source pin',path))
+    for path,item in manifest.get('repaired_incoming',{}).get('paths',{}).items():
+        local=repo/path
+        data=local.read_bytes() if local.exists() else subprocess.check_output(['git','show','HEAD:'+path],cwd=repo)
+        need(digest(data)==item['after_sha256'],('repaired incoming source',path))
     replayed=0
-    for stem in ('geometry','ideals','port_codes','golden_tilt','repairs','reverse'):
+    for stem in ('geometry','ideals','port_codes','golden_tilt','repairs','reverse','incoming'):
         normal=(here/f'{stem}.normal.json').read_bytes();optimized=(here/f'{stem}.optimized.json').read_bytes()
         need(normal==optimized,('normal/optimized receipt pair',stem))
         if args.replay:
@@ -26,6 +30,7 @@ def main():
                 output=subprocess.check_output([sys.executable,*flags,'-B',str(here/f'check_{stem}.py')],cwd=repo)
                 need(output==normal,('fresh replay',stem,flags));replayed+=1
     print(json.dumps({'status':'PASS','packet_files':len(actual),'source_pins':len(manifest['sources']),
-        'normal_optimized_pairs':6,'fresh_checker_runs':replayed,
+        'normal_optimized_pairs':7,'fresh_checker_runs':replayed,
+        'repaired_incoming_sources':len(manifest.get('repaired_incoming',{}).get('paths',{})),
         'scope':'closed inventory and exact controls; mathematical proofs internally reviewed, not formally verified'},sort_keys=True))
 if __name__=='__main__':main()

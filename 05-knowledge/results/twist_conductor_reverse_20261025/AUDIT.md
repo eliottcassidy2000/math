@@ -64,6 +64,7 @@ audits; those do not automatically audit this packet's new algebraic claims.
 | `check_golden_tilt.py` | independent Q and Q(sqrt(5)) horizon recursions, horizons 1..32 and all initial counters <= horizon: 528 comparisons |
 | `check_repairs.py` | complete blue loci of six failed affine cells: exactly 20 literal sources; directedness, blackness, XOR, exact labelled endpoint and converse transport |
 | `check_reverse.py` | N=0..60, K=1..8: 488 independent odd-partition comparisons; 73,557 structural edges; previous absolute engine for N=0..40 and N=50; order50 and invalid-type hostiles |
+| `check_incoming.py` | exact shared-valuation hostile; all projective F3 conic and central-line points; ideal containment direction |
 
 All load-bearing gates raise exceptions and remain active under `python -O`.
 Every normal and optimized receipt pair matches byte for byte. Optional SAT
@@ -80,6 +81,13 @@ in the receipt. The mathematical identity q^6=9-4sqrt(5) was unchanged.
 During internal review I2's two-packet hypothesis was made explicit to avoid
 an unintended generalization to multiple packets. The earlier proved
 multi-packet hostile remains live. No previously proved theorem is retracted.
+
+The subsequent incoming THM-4772/4773 review did require corrections to
+published implications: reversed ideal containment, an invalid unreduced
+single-root shortcut, and the infinite-field requirement for avoiding
+finitely many conic points. These are recorded in INCOMING.md and the
+mistakes ledger, with exact witnesses in `check_incoming.py`; the repaired
+source checksums are refreshed. No broader audit of those papers is claimed.
 
 The source search recovered THM-261 (A4 roots), THM-4701 (Clebsch/Petersen
 finite-circle graph), THM-2685 (divisor parity and class group), THM-3397

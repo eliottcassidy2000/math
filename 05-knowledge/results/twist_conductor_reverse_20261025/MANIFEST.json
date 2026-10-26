@@ -14,16 +14,17 @@
   "hash_semantics": "SHA256 after CRLF-to-LF normalization",
   "packet": {
     ".gitattributes": "f29df8e90a8a804ce145c296bb7a50bb385be94676334467d5d5fd13371299e0",
-    "AUDIT.md": "83f501f192726d0eb85ce1d47b8c939f689f3e24a93c9c8ffca5a8247bb7c181",
+    "AUDIT.md": "03df3b13fdaccdb88c24e1873ccb6ae3f2f9f24ca4c0a3da40d0fcfb105447b3",
     "CONDUCTOR_IDEALS.md": "13f0239997149167358d54eace74cd397b16dc8f845e54660a5c639f5a929986",
     "DYNAMICS_EXTENSION.md": "6191e7c5a2cafda4e4c42bb8305b1476ce3a930251b7645a16ce65c32ff3c86d",
     "FIXED_TWISTS.md": "30633a06c26226944997dfc8bd1a28082dd0acc2f6ce693dab02c5da6c40f32a",
-    "INCOMING.md": "fa70798724bbfacc67376f72d36ae59fef0f846bbe85a43450e5c1e442d67d95",
+    "INCOMING.md": "21e9c94c2328a9936c4fd0aab936657b0da8984bbea370075e8ffa5147743b16",
     "PORT_CODES.md": "aade53f2f91503551eeaa78000e114c98dc9085c85255aad2893dbbaa6009fd4",
-    "README.md": "53e7ffc5bc4a24bddfd949cebf2cca79152c2a98862cd6573617982b1d6221f1",
+    "README.md": "527369335815fb6f0dd9e9a672644844b73de637b17d8dc61e274f2f3fa82c36",
     "check_geometry.py": "c9568f8b4eb4b890c8ed5d536faf6e9f6e130da70ca4efeca5dd85ce1b6ae8d6",
     "check_golden_tilt.py": "7b3329ea480a0a4b2d2646d83ff00c8e2c4401e2bbc2cfe116fb91adf55d8075",
     "check_ideals.py": "84ba71ea184346126d023b4971b23c59e1438bf231a0b729239fbbbb3852b21a",
+    "check_incoming.py": "00528055dc1ed3128a1ef2f7b5892e1b043e77f79b3e4a84834865d2f6d9d666",
     "check_port_codes.py": "603e50fc787606ac45942750e4a8680253013325b4082b3c15b53c7085006758",
     "check_repairs.py": "acd539e7866fc4cdc5bb3ec0c062dbdbd8d0c5d36b447017323acff58a7b98ea",
     "check_reverse.py": "06e8911b353b189e6bf24316f725e648aa42ac71ae7fb60b43552e8fb75d2971",
@@ -33,6 +34,8 @@
     "golden_tilt.optimized.json": "c5bca30981f59e6c89ea602bebd664162db436e823ae8c0b40c8431f6ba84058",
     "ideals.normal.json": "cc9aeff3b085a312057353f5aa999922506d6d3f899acac1ad87c90536458c84",
     "ideals.optimized.json": "cc9aeff3b085a312057353f5aa999922506d6d3f899acac1ad87c90536458c84",
+    "incoming.normal.json": "cf9df2b3ba85659522c6214ab44ed0a70a3d46457aeb457026518a494b15549b",
+    "incoming.optimized.json": "cf9df2b3ba85659522c6214ab44ed0a70a3d46457aeb457026518a494b15549b",
     "port_codes.normal.json": "4c81c5cade3471ada5b4c4a9cd92a10609d9dfc61b3c83a391d3f44b71c2f87f",
     "port_codes.optimized.json": "4c81c5cade3471ada5b4c4a9cd92a10609d9dfc61b3c83a391d3f44b71c2f87f",
     "repairs.normal.json": "4e2aebcbc180249e1e9545d27bafc1641f1d6687f1856efa64590f917d4a6373",
@@ -49,7 +52,36 @@
     "search_repairs.json": "77b9d0df8f72cd5b677bd42c7059057ba83bdb38de61d98b83f1bbecb92ad93a",
     "search_repairs.py": "5ceb80a0c59685c600997121243000c1220b8119713bc6376669b906b8512bde",
     "search_repairs_four.json": "46fbf3e05cbf032f53ef8c46084b640332735ec1932ce065a63ed97f814b3662",
-    "verify_packet.py": "b8f3834610e53272d9d1623315c5850f5a1d801d4a95de8cdf8761de8a328ed7"
+    "verify_packet.py": "cf32dde871ec87a9cdf342f7577b5644a3959be98d8f1f0e8a0490baa0aa96ea"
+  },
+  "repaired_incoming": {
+    "paths": {
+      "01-canon/theorems/THM-4772-twisted-root-algebras-over-normal-bases-square-root-ideals-mixed-reduced-roots-port-classes-and-the-conductor-valuation-matrix.md": {
+        "after_sha256": "645acd536ea00f8e8aed9302a776ae51ed01b48ede8b8b1feeae50dd23c213a1",
+        "before_sha256": "7330877775dc57ff79bb9db4e8ad08c60747546e93884309b10dba277393ccbb"
+      },
+      "01-canon/theorems/THM-4773-fixed-twist-rational-lifts-on-the-hourglass-boundary-central-conic-outer-genus-five.md": {
+        "after_sha256": "e76595476ec34375cf1d4f818754b1194118a0d5aaf17135605dd7fd1f67f114",
+        "before_sha256": "5561a06c9de937b83dccf770e7146822ac671883591e2993f31692f7ed1bc03b"
+      },
+      "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/CONCEPT_BOARD.md": {
+        "after_sha256": "a3858945e5c2a716d8d2b5b7f47b900d24efd6b3b5da7830b384ec8cdaf72bc1",
+        "before_sha256": "42f9c6707d2841c000baf62a7958bd853dc83b70cffbd619acf1798fc0c42789"
+      },
+      "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/README.md": {
+        "after_sha256": "bf32ee27047958438f298a6d395797ba2a3b85a329f4213182d980dadb3e30c9",
+        "before_sha256": "c9c1c73f3a2217636089daa0bdcad85bd1b05fd80f96bf61c39c8c2fcf10df0a"
+      },
+      "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/conductors/DEDEKIND_CONDUCTORS.md": {
+        "after_sha256": "c1e6df3229601cedee96ba8e2cd4d6d86d3fd25d19276d43607d0ce461ebd735",
+        "before_sha256": "1669cfd5dcccab0c2805d7f8faf2ed68204c2dc7f946bc9f55624a79bf3837d5"
+      },
+      "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/twists/FIXED_TWIST_LIFTS.md": {
+        "after_sha256": "30db7d974d88bc36217317ce5f9d8bc1ffe3a94644f8a0d9d28c21c6f8ad055e",
+        "before_sha256": "48b8ba934f1ba97e68bc337beacf6399c2bb995eb9a4d04d7cde3dd0188e18b8"
+      }
+    },
+    "starting_revision": "9053ebfc58"
   },
   "sources": {
     "01-canon/theorems/THM-261-petersen-root-orthogonality.md": {

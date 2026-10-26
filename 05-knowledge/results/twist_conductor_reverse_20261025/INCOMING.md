@@ -29,6 +29,23 @@ congruence-only rank; our density argument supplies the separate quantitative
 cost of retaining a source through refinement. Neither proves failure on
 the marked blank-tape orbit or on a Collatz trajectory.
 
+**Third incoming checkpoint (07695d3952 / 9053ebfc58):** read
+[THM-4772's conductor source](../fixed_twists_conductors_reverse_potential_20261025/conductors/DEDEKIND_CONDUCTORS.md)
+and [THM-4773's lift source](../fixed_twists_conductors_reverse_potential_20261025/twists/FIXED_TWIST_LIFTS.md),
+plus their canonical statements. The normalization formula provides a stronger
+general description of the character ideals than our examples alone. It is
+consistent with I1 after inserting its normalized coefficient ideals.
+
+The audit found and repaired three precise issues in those incoming sources
+and their canon statements: N2's ideal inclusion needed reversal and a
+reflexive hull in higher dimension; shared valuations invalidate the claimed
+reduction of every unreduced product test to single-root tests; whole-conic
+nonemptiness implies open-central nonemptiness only over infinite fields.
+`check_incoming.py` supplies the exact four-root and F3 counterexamples.
+The full conductor bank, normalization formula and Q-conic application
+survive. These are targeted corrections, not a full independent audit of
+the incoming packet's Dedekind arithmetic or other claims.
+
 The following statements were read in their proofs and scope notes, rather
 than inferred from commit titles:
 

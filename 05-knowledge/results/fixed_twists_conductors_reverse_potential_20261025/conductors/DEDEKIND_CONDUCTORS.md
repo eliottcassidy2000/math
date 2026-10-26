@@ -42,7 +42,8 @@ For `z = 0` the component is `R`. QED.
 **Corollary N1 (recovery).** If the ideals `(b_i)` are squarefree and pairwise coprime, all `c_z = R`
 and `A` is normal: this is the hypothesis under which BOUNDARY B1 was proved.
 
-**Corollary N2 (mixed reduced roots).** `c_z contains prod_{i in z} c_{e_i}`, and
+**Corollary N2 (mixed reduced roots).** `c_z is contained in (prod_{i in z} c_{e_i})^(**)`,
+where ** is reflexive hull; over a Dedekind base the product is already invertible. The exact valuation identity is
 
     v_p(c_z) - sum_{i in z} v_p(c_{e_i}) = floor( #{i in z : v_p(b_i) odd} / 2 ).            (3)
 
@@ -97,13 +98,29 @@ CONTINUATION D2 says that for two complementary binary packets with squarefree c
 `(B : A) = K_1`: membership in `B` plus the `n` single-root tests `u_i x in B`. After a twist the
 object to test against is the normalization `A'`, and Theorem C gives the exact bank:
 
-**Theorem T.** `x in B` lies in `(B : A')` iff `x · c_{z'}^{-1} u_{z'} subset B` for every `z'`;
-the tests with `c_{z'} = R` are implied by the single-root tests (D2), and the remaining tests are
-indexed by the characters `z'` carrying a reduced root, with the **mixed** ones (two or more odd
-valuations at a common prime, Corollary N2) not implied by the single reduced-root tests.
+**Theorem T (corrected full bank).** `x in B` lies in `(B : A')` iff
+`x · c_{z'}^{-1} u_{z'} subset B` for **every** character `z'`.
+Do not drop unreduced characters solely because the original single-root
+tests pass: D2 assumes disjoint prime support and does not justify that
+reduction after arbitrary shared-prime twists. Mixed reduced roots also
+need their own tests. The complete bank is exact; no minimal bank is claimed.
 Equivalently, membership is the finite system of valuation inequalities (5), one per
 (character `z`, height-one prime `p`). Over a non-UFD base the test is an ideal condition, not an
 element condition, and its failure can be an ideal class rather than a missing factor.
+
+**Correction control (2026-10-25).** Use a DVR with uniformizer pi and four
+independent unit squareclasses a_i, radicands `(pi*a_1,pi^2*a_2,a_3,a_4)`.
+Let C have binary basis (13,10), D basis (9,15), bit0 the first root.
+They are complementary. For `x=pi^2*u_3`, x and all four `u_i*x` lie in B,
+but `u_3*u_4*x` does not. This product test has `c_1100=R`: its radicand
+is a unit. The coefficient valuation thresholds are 2 for the single-root
+bank and 3 for that product. This refutes the former claimed implication,
+not the full-bank theorem or normalization formula. See the separate
+[exact control](../../twist_conductor_reverse_20261025/check_incoming.py).
+The original N2 inclusion was also reversed: for b=(15,21), `c_11=(3)`
+is contained in R, not conversely. In higher dimension the reflexive hull
+is necessary; valuation comparisons alone do not prove containment in an
+ordinary nonreflexive product ideal.
 
 Illustration (receipt `matrix-normal.txt`, `b = (15,21,55)`): `x = u_1` passes all single-root tests
 and the mixed test against `u_1u_2/3`; a scalar `x = a` passes all single-root tests but lies in the

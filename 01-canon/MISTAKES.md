@@ -30,6 +30,30 @@ a historical synthesis or promoting computational evidence.
   certificate. Higher-layer connectivity remains separate from a local
   path decoder.
 
+## 2026-10-25 — shared valuations do not inherit D2's reduced test bank; an open conic needs its field guard
+
+- **THM-4772 corrected:** its source N2 said c_z contains the product of
+  single square-part ideals. The valuation inequality is in the opposite
+  direction: c_z is contained in that product's reflexive hull; over a
+  Dedekind ring no hull is needed. Already b=(15,21) gives (3) contained
+  in R. Height-one comparisons cannot discard the hull in higher dimension.
+- **Invalid compatibility implication:** D2's disjoint-support proof was
+  reused with shared valuations. In a DVR take b=(pi*a1,pi^2*a2,a3,a4),
+  independent unit classes ai, C=span(13,10), D=span(9,15). Then pi^2*u3
+  and all four single-root products lie in B, but its product with u3*u4
+  does not, although that character has no square part. Its required
+  coefficient valuation is3, versus the available2. The strongest survivor
+  is the complete normalized-character bank and exact conductor formula;
+  no minimal bank is claimed after this correction.
+- **THM-4773 field boundary:** over F3 the Pythagorean conic has four
+  projective points, all with s=0 or t=0. It is nonempty but gives no point
+  on the required open central line. The whole-conic equivalence is now
+  restricted to infinite fields; over finite fields retain the actual
+  nondegeneracy condition. The pointwise criterion and Q applications survive.
+- **Reproduction and lineage:** [incoming review and exact control](../05-knowledge/results/twist_conductor_reverse_20261025/INCOMING.md).
+  Canon, source statements and the source packet checksum were updated;
+  the new counterexample checks pass in normal and optimized Python.
+
 ## 2026-10-25 — normalization changes the operator bank; field coordinates need their basis
 
 - **Rejected extension, not a retracted theorem:** testing multiplication
