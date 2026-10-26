@@ -1,0 +1,35 @@
+n=3: classes=2 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=2
+   tournament classes per C3-class: {1: 2}
+   labelled C3-structures=2 (0.2500 of 2^m) ; E[log2 N]=2.1887 ; P(prime, labelled)=0.2500; prime classes=1 (self-converse 1)
+   fibre spectrum N(T)->#classes: {2: 1, 6: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 1, (1, 0): 1}
+n=4: classes=4 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=3
+   tournament classes per C3-class: {1: 2, 2: 1}
+   labelled C3-structures=11 (0.1719 of 2^m) ; E[log2 N]=2.9694 ; P(prime, labelled)=0.0000; prime classes=0 (self-converse 0)
+   fibre spectrum N(T)->#classes: {4: 3, 24: 1}
+   tree shapes (#linear,#prime)->#classes: {(1, 0): 1, (1, 1): 3}
+n=5: classes=12 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=9
+   tournament classes per C3-class: {1: 7, 2: 1, 3: 1}
+   labelled C3-structures=208 (0.2031 of 2^m) ; E[log2 N]=3.0403 ; P(prime, labelled)=0.2578; prime classes=3 (self-converse 3)
+   fibre spectrum N(T)->#classes: {2: 3, 4: 1, 8: 3, 12: 4, 120: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 3, (0, 2): 1, (1, 0): 1, (1, 1): 4, (2, 1): 3}
+n=6: classes=56 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=32
+   tournament classes per C3-class: {1: 11, 2: 19, 3: 1, 4: 1}
+   labelled C3-structures=8563 (0.2613 of 2^m) ; E[log2 N]=2.6020 ; P(prime, labelled)=0.3149; prime classes=15 (self-converse 3)
+   fibre spectrum N(T)->#classes: {2: 15, 4: 17, 8: 8, 16: 3, 24: 7, 48: 5, 720: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 15, (1, 0): 1, (1, 1): 22, (1, 2): 8, (2, 1): 7, (3, 1): 3}
+n=7: classes=456 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=247
+   tournament classes per C3-class: {1: 79, 2: 144, 3: 8, 4: 15, 5: 1}
+   labelled C3-structures=680426 (0.3245 of 2^m) ; E[log2 N]=2.0567 ; P(prime, labelled)=0.4643; prime classes=197 (self-converse 55)
+   fibre spectrum N(T)->#classes: {2: 197, 4: 130, 8: 46, 12: 20, 16: 22, 24: 12, 32: 2, 48: 8, 72: 4, 96: 8, 240: 6, 5040: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 197, (0, 2): 14, (0, 3): 2, (1, 0): 1, (1, 1): 142, (1, 2): 12, (2, 1): 56, (2, 2): 22, (3, 1): 8, (4, 1): 2}
+n=8: classes=6880 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=3328
+   tournament classes per C3-class: {1: 163, 2: 2987, 3: 10, 4: 148, 5: 1, 6: 18, 8: 1}
+   labelled C3-structures=101747483 (0.3790 of 2^m) ; E[log2 N]=1.6397 ; P(prime, labelled)=0.6008; prime classes=4008 (self-converse 72)
+   fibre spectrum N(T)->#classes: {2: 4008, 4: 1850, 8: 521, 12: 131, 16: 89, 24: 99, 32: 35, 48: 81, 96: 22, 144: 9, 192: 9, 288: 9, 480: 9, 1440: 7, 40320: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 4008, (0, 2): 101, (1, 0): 1, (1, 1): 1910, (1, 2): 151, (1, 3): 23, (2, 1): 504, (2, 2): 58, (3, 1): 84, (3, 2): 35, (4, 1): 5}
+n=9: classes=191536 THM1430=True C3-invariance violations(H,Aut,c3,SCC multiset)=0 C3-iso classes=93612
+   tournament classes per C3-class: {1: 2648, 2: 87654, 3: 91, 4: 3035, 5: 7, 6: 149, 7: 1, 8: 22, 9: 1, 10: 1, 12: 3}
+   labelled C3-structures=28904318404 (0.4206 of 2^m) ; E[log2 N]=1.3780 ; P(prime, labelled)=0.7213; prime classes=136655 (self-converse 2235)
+   fibre spectrum N(T)->#classes: {2: 136655, 4: 41617, 8: 7886, 12: 1946, 16: 1263, 24: 1034, 32: 161, 48: 402, 64: 39, 72: 55, 96: 239, 144: 37, 192: 74, 240: 26, 288: 5, 384: 6, 432: 4, 480: 23, 576: 20, 960: 10, 1152: 5, 1440: 10, 2880: 10, 10080: 8, 362880: 1}
+   tree shapes (#linear,#prime)->#classes: {(0, 1): 136655, (0, 2): 1585, (0, 3): 53, (0, 4): 5, (1, 0): 1, (1, 1): 42158, (1, 2): 1263, (1, 3): 36, (2, 1): 7817, (2, 2): 651, (2, 3): 106, (3, 1): 972, (3, 2): 129, (4, 1): 66, (4, 2): 39}

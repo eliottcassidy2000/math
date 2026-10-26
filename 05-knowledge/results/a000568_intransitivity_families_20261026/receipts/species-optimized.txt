@@ -1,0 +1,17 @@
+distinct primes by k: Counter({9: 136655, 8: 4008, 7: 197, 6: 15, 5: 3, 3: 1})
+n=2: strong=0 A000568=1
+n=3: strong=1 A000568=2
+n=4: strong=1 A000568=4
+n=5: strong=6 A000568=12
+n=6: strong=35 A000568=56
+n=7: strong=353 A000568=456
+n=8: strong=6008 A000568=6880
+n=9: strong=178133 A000568=191536
+n=2: strong C3-classes=0 C3-classes=1
+n=3: strong C3-classes=1 C3-classes=2
+n=4: strong C3-classes=1 C3-classes=3
+n=5: strong C3-classes=6 C3-classes=9
+n=6: strong C3-classes=22 C3-classes=32
+n=7: strong C3-classes=214 C3-classes=247
+n=8: strong C3-classes=3074 C3-classes=3328
+n=9: strong C3-classes=90255 C3-classes=93612

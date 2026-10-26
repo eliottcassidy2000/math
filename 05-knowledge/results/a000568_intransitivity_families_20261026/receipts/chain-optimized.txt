@@ -1,0 +1,5 @@
+n=5: chains=2 strong&c3=n-2: True; distinct: True; equal to all min-c3 strong classes: True; prime iff gaps<=2: True (primes 1)
+n=6: chains=4 strong&c3=n-2: True; distinct: True; equal to all min-c3 strong classes: True; prime iff gaps<=2: True (primes 1)
+n=7: chains=8 strong&c3=n-2: True; distinct: True; equal to all min-c3 strong classes: True; prime iff gaps<=2: True (primes 2)
+n=8: chains=16 strong&c3=n-2: True; distinct: True; equal to all min-c3 strong classes: True; prime iff gaps<=2: True (primes 3)
+n=9: chains=32 strong&c3=n-2: True; distinct: True; equal to all min-c3 strong classes: True; prime iff gaps<=2: True (primes 5)
