@@ -78,6 +78,15 @@ hourglass arrangement has extra triples at3, so specialization to that different
 carrier requires a new good-model proof. A common count of seven roots does
 not preserve the arithmetic ramification predicate.
 
+A final incoming pull supplies a positive arithmetic map rather than a matching
+integer: a chosen normal basis sends binary words to F_(2^m), intertwining
+rotation with Frobenius. Thus the necklace's least period becomes the generated
+field's degree and its rotation stabilizer becomes a relative Galois group.
+The [integration record](INTEGRATION.md) identifies the exact source and audit
+boundary. This adds a real link between classification and number theory while
+leaving geometric descent and an F1 model separate. The orbit quotient loses
+the selected element and does not inherit ordinary field multiplication.
+
 This applies the existing meta-patterns about controlled forgetting and
 rechecking certificates after changing carriers. It supplies no new universal
 method card and no asserted equivalence among the major open conjectures.

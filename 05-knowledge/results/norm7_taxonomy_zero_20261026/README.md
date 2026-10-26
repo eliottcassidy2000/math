@@ -25,6 +25,9 @@ more: the sharp threshold4p, uniqueness of the bad order12 fibre, full
 path-cover invariance, weighted necklace spectra and pointed growth. Their
 repairs are retained verbatim. See [INTEGRATION](INTEGRATION.md); our independent
 checks are confirmation, not another claimed discovery of those results.
+The final pull also supplies a literal number-theory bridge: choosing a normal
+basis identifies binary-word rotation with Frobenius, and word period with
+field degree. [INTEGRATION](INTEGRATION.md) records its source and scope.
 
 The support theorem concerns freely varying labelled configuration coordinates.
 It does not transfer to the norm-seven hourglass arrangement without a new

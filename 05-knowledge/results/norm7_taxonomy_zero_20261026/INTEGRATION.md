@@ -34,3 +34,21 @@ normalization and exceptional-conic equations; the second distinguishes
 degree2 and degree4 examples; this session gives the complete finite local
 decision rule for every nonzero rational (D,δ) on that specified fibre.
 The new rule does not settle global interior points or whole-surface F1.
+
+The final clean rebase also integrated `993de01394`, whose
+[THM-4804 source note](../module_shattering_lines_carousel_finite_field_20261026.md)
+gives an especially relevant finite-field map. With a chosen normal basis
+α,α²,...,α^(2^(m−1)), send a binary decoration w to
+`x_w = sum_i w_i α^(2^i)`. Squaring rotates the coordinates, so least period
+equals field degree and the surviving rotation stabilizer is
+`Gal(F_(2^m)/F_2(x_w))`. Root checked this displayed equivariance and the
+resulting orbit/stabilizer interpretation directly. The normal-basis existence
+theorem is a classical cited input. This is inherited work, not a new discovery
+in our packet.
+
+The incoming commit is labelled a pre-audit checkpoint and its audit section
+is unfilled; we do not import its entire note as independently audited. In
+particular no F1 surface, multiplication-preserving necklace quotient, or
+all-order metagraph connectivity claim is deduced from the normal-basis map.
+The chosen basis, the cyclic action and the distinction between a field element
+and its conjugacy orbit remain explicit.
