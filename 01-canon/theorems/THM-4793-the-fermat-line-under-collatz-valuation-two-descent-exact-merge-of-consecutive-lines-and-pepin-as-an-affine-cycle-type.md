@@ -14,6 +14,14 @@ source: 05-knowledge/results/fermat_five_pepin_collatz_20261025/PEPIN_COLLATZ.md
 scripts:
   - 05-knowledge/results/fermat_five_pepin_collatz_20261025/check_fermat_line.py (+ fermat-normal.json / fermat-optimized.json)
   - 05-knowledge/results/fermat_five_pepin_collatz_20261025/check_merge_points.py (+ merge-normal.json / merge-optimized.json)
+audit: >
+  Independently audited 2026-10-26 by kind-pasteur-2026-10-26-S5 (04-computation/experiments/fermat_landing_points_pepin_kps_20261026.py,
+  checks A1-A8, independent code): run law for all odd x < 20000 and l <= 12; Fermat line for n = 2..8; the floor((m-1)/2)
+  run count for m = 2..40; the merge landings, S(a) = 3^(L+1)+2, the even-L relations and the first-coincidence depths for
+  L = 2..12; the affine cycle type (1, F_n - 1) for n = 1..4 by enumeration; ord_{F_5}(3) = 11167360 = lcm(640, 558368).
+  All four statements CONFIRMED as stated. Addendum (same session, 05-knowledge/results/fermat_landing_points_pepin_20261026.md):
+  the landing point of F_m, L_m = (3^(2^(m-1))+1)/2, satisfies L_(m+1) = L_m^2 + (L_m-1)^2, and F_n is prime iff F_n | L_(2^n),
+  so the Fermat line does carry Pepin's content one tower level up (the "no primality content" remark holds only at equal index).
 related:
   - 01-canon/theorems/THM-4556-the-mersenne-line-is-a-chain-of-debt-states-odd-shift-distance-2-adic-periodicity.md
   - 01-canon/theorems/THM-4601-two-anchor-reduction-of-the-residual-first-reset-two-branch.md
