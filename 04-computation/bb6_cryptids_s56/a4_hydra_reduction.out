@@ -1,0 +1,5 @@
+visit map reproduces the rule system on the first 60 C(a,1) visits: True
+halting criterion "next step from C(a,1) halts iff a = 2^(m+2)-m-4" exact for a < 3000: True []
+3000 visits, halted: False; final a has 2285 bits; mean bits gained per visit 0.7609
+fraction of visits entering a Hydra run: 0.4997; run-length histogram (first 10): [(0, 1501), (1, 779), (2, 371), (3, 191), (4, 81), (5, 37), (6, 23), (7, 6), (8, 4), (9, 2)]
+heuristic residual halting probability after the first visit (sum 2^-bits over visits): 2.406e-01

@@ -1,0 +1,31 @@
+X=2^4: halting fraction 6.250e-02 (x X = 1.000); S(W)/W median 2.3810, E log ratio 0.8870
+X=2^5: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.7143, E log ratio 0.6704
+X=2^6: halting fraction 3.125e-02 (x X = 2.000); S(W)/W median 1.3871, E log ratio 0.3526
+X=2^7: halting fraction 7.812e-03 (x X = 1.000); S(W)/W median 1.2927, E log ratio 0.3002
+X=2^8: halting fraction 7.812e-03 (x X = 2.000); S(W)/W median 1.2000, E log ratio 0.3425
+X=2^9: halting fraction 1.953e-03 (x X = 1.000); S(W)/W median 1.0787, E log ratio 0.1399
+X=2^10: halting fraction 2.930e-03 (x X = 3.000); S(W)/W median 1.0398, E log ratio 0.0609
+X=2^11: halting fraction 9.766e-04 (x X = 2.000); S(W)/W median 1.0242, E log ratio 0.0530
+X=2^12: halting fraction 4.883e-04 (x X = 2.000); S(W)/W median 1.0157, E log ratio 0.1089
+X=2^13: halting fraction 1.221e-04 (x X = 1.000); S(W)/W median 1.0067, E log ratio 0.0988
+X=2^14: halting fraction 1.831e-04 (x X = 3.000); S(W)/W median 1.0033, E log ratio 0.0110
+X=2^15: halting fraction 3.052e-05 (x X = 1.000); S(W)/W median 1.0019, E log ratio 0.0295
+X=2^16: halting fraction 3.052e-05 (x X = 2.000); S(W)/W median 1.0012, E log ratio 0.0876
+X=2^17: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0005, E log ratio 0.0963
+X=2^18: halting fraction 1.667e-05 (x X = 4.369); S(W)/W median 1.0003, E log ratio 0.0067
+X=2^19: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0001, E log ratio 0.0046
+X=2^20: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0001, E log ratio 0.0086
+X=2^21: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0000, E log ratio 0.0018
+X=2^22: halting fraction 1.667e-05 (x X = 69.905); S(W)/W median 1.0000, E log ratio 0.0010
+X=2^23: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0000, E log ratio 0.0000
+X=2^24: halting fraction 0.000e+00 (x X = 0.000); S(W)/W median 1.0000, E log ratio 0.0002
+Traceback (most recent call last):
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-s56-odd-orbits\04-computation\bb6_cryptids_s56\a6_sweep_map_20261025.py", line 66, in <module>
+    r, _ = sweep(W)
+           ~~~~~^^^
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-s56-odd-orbits\04-computation\bb6_cryptids_s56\a6_sweep_map_20261025.py", line 19, in sweep
+    p = step('A6', (0, 0, W))
+  File "C:\Users\Eliott\AppData\Local\Temp\math-wt-s56-odd-orbits\04-computation\bb6_cryptids_s56\deepmind_cryptids_20261025.py", line 200, in step
+    return (v + 3, 0, w - 3)
+                      ~~^~~
+TypeError: unsupported operand type(s) for -: 'NoneType' and 'int'
