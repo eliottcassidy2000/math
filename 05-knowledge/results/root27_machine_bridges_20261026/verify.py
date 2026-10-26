@@ -16,6 +16,11 @@ INHERITED = [
     '05-knowledge/results/lca_ports_reverse_20261025/arithmetic/DENSITY.md',
     '05-knowledge/results/monster_levels_square_sum_7_21_20261022.md',
     '01-canon/theorems/THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md',
+    '05-knowledge/results/procgen_atlas_20260924_collatz_implication_atlas.md',
+    '01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md',
+    '05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-cryptids/REPORT.md',
+    '05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md',
+    '05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md',
 ]
 
 
@@ -62,7 +67,7 @@ def main():
             if '://' in url or url.startswith('#'):
                 continue
             target = url.split('#',1)[0].strip('<>')
-            need((path.parent/target).exists(), ('broken link', str(path), url))
+            need((path.parent/target).resolve().exists(), ('broken link', str(path), url))
             links += 1
     print(json.dumps({'status':'PASS','packet_files':len(files),
                       'inherited_files':len(INHERITED),'receipt_pairs':len(JOBS),

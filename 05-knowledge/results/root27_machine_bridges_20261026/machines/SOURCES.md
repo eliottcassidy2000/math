@@ -19,6 +19,7 @@ build was performed. Web descriptions and repository claims remain CITED.
 | [Aaronson, Busy Beaver Frontier](https://www.scottaaronson.com/papers/bb.pdf) | 2020 survey | Native clock convention and halting-oracle equivalence |
 | [Cook, Complexity of Theorem-Proving Procedures](https://www.cs.cmu.edu/~15455/resources/Cook1971-complx-thm-proof.pdf) | 1971; retyped primary paper | Uniform polynomial reductions versus bare simulation |
 | [Buss–Rosu hidden-algebra paper](https://mathweb.ucsd.edu/~sbuss/ResearchWeb/HiddenAlgebra/incomp.pdf) | Author-hosted primary PDF | Configuration semantics and the Pi^0_2 totality family; standard result, not a classification of fixed Collatz |
+| [Kurtz–Simon, generalized Collatz](https://link.springer.com/chapter/10.1007/978-3-540-72504-6_49) | TAMC 2007, LNCS4484 pp542–553; publisher abstract read | CITED Pi^0_2 completeness of their uniform generalization; author PDF fetch failed, so no new full proof audit claimed |
 
 The webpage's machine *tables* and our native interpreter are distinct from
 its unverified dynamical nomenclature. A table with no missing instruction

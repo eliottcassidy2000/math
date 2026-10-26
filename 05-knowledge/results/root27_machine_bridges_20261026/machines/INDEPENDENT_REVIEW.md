@@ -121,6 +121,22 @@ durations, absorbing halt, and halt reflection. A terminal predicate or
 clock can descend through a quotient only when it is constant on fibres.
 No missing precision coordinate is silently removed by this review.
 
+### Generalized-Collatz source addendum
+
+The later source paragraph was separately checked by `recurrence_actions`
+on 2026-10-26. The [publisher's primary abstract](https://link.springer.com/chapter/10.1007/978-3-540-72504-6_49)
+explicitly states Pi^0_2 completeness for Kurtz–Simon's generalized Collatz
+problem. The recovered September implication atlas, row 31, already records
+the family-level bridge. The added paragraph correctly keeps the compiled
+map and its all-input predicate, labels the theorem CITED, and draws no
+completeness or undecidability conclusion for the fixed classical 3n+1 map.
+Different encodings into one complete family do not make their designated
+instances equivalent or prove implications between named conjectures.
+This is an accepted source/scope addendum, not a new audit of the paper's
+full reduction proof: only the publisher abstract was independently opened
+here, and the author PDF retrieval had failed. No producer code, numerical
+claim or earlier executable receipt changed; no code rerun was needed.
+
 ## Reproduction and independent control
 
 Producer `check.py` was run normally and with `-O`. Both outputs equal

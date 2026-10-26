@@ -45,7 +45,7 @@ python -B verify.py
 python -O -B verify.py
 ```
 
-`replay.py` runs the following nine jobs in both normal and optimized
+`replay.py` runs the following ten jobs in both normal and optimized
 Python. It compares normalized JSON to saved receipts and checks normal
 equals optimized. Only its explicit `--refresh` mode changes receipts.
 All mathematical gates use exceptions, not removable `assert` statements.
@@ -61,10 +61,11 @@ All mathematical gates use exceptions, not removable `assert` statements.
 | machines/INDEPENDENT_REVIEW.md | Independent dense tape: 32 exponential blocks, 560 intermediate invariants and seven checkpoints through step 48,012 |
 | compiler/check.py | All 20,800 complete one-/two-state tables; all 40,320 frame relabellings; opposite-outcome one-bit pair; 262 padding trace controls |
 | compiler/INDEPENDENT_REVIEW.md | 4,040 field-edit commuting squares and 24 frame/complement controls |
+| check_incoming_s65.py | 102 independent irregular-bell sweeps; 63 relabelled strong-component word decodes; eight signed permutation types with 34,001 tournaments |
 
-`verify.py` pins packet files and six inherited mathematical sources with
+`verify.py` pins packet files and eleven inherited mathematical sources with
 SHA-256 after CRLF-to-LF normalization. It checks local Markdown links,
-Python parsing and all nine saved receipt pairs. Its explicit `--refresh`
+Python parsing and all ten saved receipt pairs. Its explicit `--refresh`
 mode writes the manifest. A digest confirms identity of the audited
 text or receipt; it is not a substitute for the mathematical proof.
 
@@ -73,6 +74,17 @@ text or receipt; it is not a substitute for the mathematical proof.
 The live shared branch was fetched during the research. These are precise
 connections to incoming work, not a claim that every new file was audited:
 
+* Commit `bcf9b658eb`,
+  [Session 65](../session65_cryptid_tournament_interfaces_20261026/README.md),
+  arrived after the first producer freeze. Its TT3/C3 word carrier gives
+  structural bit encoding, exact clone split/merge decoding, and an
+  isometric edit metric. Its native four-state bouncer-plus-bell is the
+  named combined example, distinct from our two-state bouncer and
+  three-state Bell controls. Its signed pair-orbit polynomial supplies
+  the quantitative Frobenius/genus defect bridge. The bounded independent
+  integration audit and additional controls are in [INCOMING_S65.md](INCOMING_S65.md).
+  We retain each incoming theorem's original scope and external arithmetic
+  dependencies; no independent replay of its entire large packet is claimed.
 * Commit `fcc112a69d`,
   [twist-conductor INCOMING](../twist_conductor_reverse_20261025/INCOMING.md),
   gives a guarded affine-ray criterion. A fixed native word may be pumped

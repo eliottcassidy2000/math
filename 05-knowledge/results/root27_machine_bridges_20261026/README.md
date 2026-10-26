@@ -118,6 +118,15 @@ Two exact tournament carriers answer different questions:
   Every uncoloured tournament has one Hamiltonian path, even for programs
   with opposite halting behaviour. These colours carry indispensable data.
 
+[Incoming Session 65](INCOMING_S65.md) supplies a complementary carrier
+that puts the bits into the orientation itself: ordered joins of TT3
+and C3. Strong-component order recovers the word, including the lengths
+of merged runs of zero blocks. Its isomorphism edit distance is exactly
+Hamming distance. Nevertheless `H=3^(number of ones)` loses order, and a
+single edited arc can accompany arbitrarily long native time. This gives
+an exact clone-merger interface while leaving the legal black/blue move
+and clock obligations intact.
+
 Padding either hostile program to 5, 15 or 25 states preserves every
 native execution from an old state. A state count alone therefore cannot
 classify the arithmetic problem encoded by a machine.
@@ -162,6 +171,14 @@ ternary-heap density, multiply-perfect valuation flows, and the older
 Lehmer seed 564. Numerical coincidences are retained as prompts with
 explicit negative controls, not converted into equivalences.
 
+Session 65 supplies an exact further connection: if Frobenius exchanges
+b pairs of supersingular j-values, the minimum number of orientation
+failures over all tournaments on that set is b. The cited arithmetic
+identity identifies b with `g(X_0^+(p))`. Thus the moonshine-prime condition
+is a zero-defect condition for this particular action. This is an
+optimization over orientations, not a preferred arithmetic tournament;
+it transports a precise predicate rather than only the number fifteen.
+
 [The reduction ledger](machines/REDUCTIONS.md) gives a usable alternative
 to calling all famous problems “the same NP-complete problem.” Goldbach
 and RH have Pi^0_1 formulations; classical Collatz has a Pi^0_2 totality
@@ -169,6 +186,12 @@ presentation. Those are presentations, not minimal complexity claims or
 mutual reductions. There is no uniform computable compiler from arbitrary
 program totality to a single blank-nonhalting instance. A special theorem
 about one fixed problem is not excluded by that uniform obstruction.
+
+The recovered September 24 implication atlas already contains a genuine
+common arithmetic family: Kurtz–Simon's generalized Collatz problem is
+Pi^0_2-complete. Its different compiled maps must remain part of the
+encoding. This known completeness theorem is useful unification, but
+does not transfer a proof to the one classical Collatz map.
 
 ## Next proof obligations selected by the failures
 

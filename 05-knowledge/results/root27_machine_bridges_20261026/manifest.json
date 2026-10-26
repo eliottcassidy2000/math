@@ -1,17 +1,23 @@
 {
   "hash_semantics": "SHA256 with CRLF normalized to LF",
   "inherited": {
+    "01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md": "00c34a935dc73191edbd7088e1bd9ce2029af23c9d89c9889e1af5b5425499bc",
     "01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md": "f0f959516195206da163744b81c0de6a3603331d2fbc0aa2222506aad8418b19",
     "01-canon/theorems/THM-3382-fibonacci-ray-dual-index-harmonic-bifurcation-and-ternary-heap-addresses.md": "bae74f2b5503a36c59996db3ad310c819c8597e0550c6cd9ef53719dcaa5926f",
     "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7",
     "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/DENSITY.md": "70821700910f6a8bbcda44fd79d336b270d5c0ffc7d20d38dd9c579eb5e0487a",
     "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19",
+    "05-knowledge/results/procgen_atlas_20260924_collatz_implication_atlas.md": "d7a3ab5c9e75a2d7aa4f6f9ebe9a133d89e7fd777701c7a48a2737606f04bbc8",
+    "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-cryptids/REPORT.md": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+    "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+    "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
     "05-knowledge/results/trees5_tournaments4_converse_20261005.md": "ac24c076a852acb9e00abd2cbc0e86ecec9963c71ad203d46e650edaa3e0dfa0"
   },
   "packet": {
     ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
-    "AUDIT.md": "7974ae8449a6f0973bf29fa5db50593d75eb6fc2e1b1e2936f5936d4f6e8dc83",
-    "README.md": "79f546350a471979cec58bb79d5bdff1f5ad9d89de377639148b961970450c35",
+    "AUDIT.md": "8584590b38abc5f7c0498782093f6bdaddf3e79b65059d081287ebbcf08b4c55",
+    "INCOMING_S65.md": "ba41b6470b42caf5fa35ff552d4c86aeff229b659a1962679d3f9d96f2584353",
+    "README.md": "cc80f1f52fe5ce40a1b95e222460a7861102a55ba46d96492c60e5b142592416",
     "anchor/INDEPENDENT_REVIEW.md": "fc7bfae4f0c8550df7ca085a340e3e641f8e5afb190b7a901b2c115b03c51ce3",
     "anchor/LEGENDRE_SIDECAR.md": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505",
     "anchor/README.md": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72",
@@ -31,6 +37,7 @@
     "atlas/optimized.json": "b8f538565d1a7c79d5ba8bf20d681c4c38b062800557cea62610366b4dabf86b",
     "atlas/review-normal.json": "ebb3dd8bf78a4276714089e453c2ae07b2d2e86605ba1fec0a90f7da151a6c71",
     "atlas/review-optimized.json": "ebb3dd8bf78a4276714089e453c2ae07b2d2e86605ba1fec0a90f7da151a6c71",
+    "check_incoming_s65.py": "4bb9b4c5abc78800fd1f606278fa6b381436b1a89e65a3b99d894088447949af",
     "compiler/INDEPENDENT_REVIEW.md": "9b05642230e74f157d04cb6a2e1d442a559d064d6db5af41188933355092d130",
     "compiler/README.md": "81c69bed1541c65fe2c7802bcc0bb791d41a7a219e376b35c1db9f4f47b8489b",
     "compiler/check.py": "3ce4d65401a042f33c16df0b9b4c6f129d53cc1ee1e0d1d3b8c8774b8cd3daaf",
@@ -38,16 +45,18 @@
     "compiler/optimized.json": "bf157646c42be0680cb7544123dc62f47e82204284a46b0f17da0bd688c40262",
     "compiler/review-normal.json": "b0e69f280b6b67518132e23a3997a7558f28053bdc9a213df045572dbb86438c",
     "compiler/review-optimized.json": "b0e69f280b6b67518132e23a3997a7558f28053bdc9a213df045572dbb86438c",
-    "machines/INDEPENDENT_REVIEW.md": "4830d86480e6ec15b43021d8a8f4cd542c6e6b9f7a0dd7d29a5ec5d6c5fd87d9",
+    "incoming-normal.json": "b17ddb38baf99b548380eb6f00ed1bda8a66ef1aa20cd157dd4da8a62f2c54d6",
+    "incoming-optimized.json": "b17ddb38baf99b548380eb6f00ed1bda8a66ef1aa20cd157dd4da8a62f2c54d6",
+    "machines/INDEPENDENT_REVIEW.md": "78fb27c466fd951d77574b0762dc2c09590b6b456532d4f2fc94381848814ea1",
     "machines/README.md": "94163e0add52e8fbccc9db5e7980f990fe4e2b4e97f8278e5cc4374aab04ab6e",
-    "machines/REDUCTIONS.md": "2e6aef5ba904dbb97f05cb19c13dc78d13b11ddc9aa185e33b0bded7728f1320",
-    "machines/SOURCES.md": "b86b71ae3cd9918de0e5a81cfd0c181a0c4b7f54dc03e113b0c5183fd0c940e3",
+    "machines/REDUCTIONS.md": "b00afe80a4053ab34cfb68a989e29c660e77b4560b95b97f3e116dc22a7c4822",
+    "machines/SOURCES.md": "6b93356151dfcbdb9e02d202c197037c245bc5851ecc0ffcc4bb6c1892a2ba5a",
     "machines/check.py": "83ed9fa1852c51551d259c45623316ce913a6125bf9dd3a7474e5ba0c4ff9bec",
     "machines/normal.json": "298cd6eb2c1bed8fba0194a2712413b0d0d130ec6318f442b64c8e090b8125bf",
     "machines/optimized.json": "298cd6eb2c1bed8fba0194a2712413b0d0d130ec6318f442b64c8e090b8125bf",
     "machines/review-normal.json": "933fab339ca8adb7081b669e9dc01972fa3f8858569ba10ea9fa0c186c51f4f3",
     "machines/review-optimized.json": "933fab339ca8adb7081b669e9dc01972fa3f8858569ba10ea9fa0c186c51f4f3",
-    "replay.py": "5c99db42f8d0f78141f61d8da38418ad4871c1d69328a2edf1aa512159fde1e6",
-    "verify.py": "818d9b9aff2c859ca47f9ddcbe8aa28f9439fb31e5c5b8035d8e37b37acd5242"
+    "replay.py": "9e88e4b5583b815d4e1cccad004052d52d390f64de4be978589a5e3f5831752d",
+    "verify.py": "09c6d69c2c952e4c3b70d54da55efd725a2b785b5bda3c895cdebf2408ae6fcb"
   }
 }

@@ -9,6 +9,7 @@ import sys
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 JOBS = [
+    ('check_incoming_s65.py', 'incoming-normal.json', 'incoming-optimized.json'),
     ('anchor/check.py', 'anchor/normal.json', 'anchor/optimized.json'),
     ('anchor/review_check.py', 'anchor/review-normal.json', 'anchor/review-optimized.json'),
     ('anchor/LEGENDRE_SIDECAR.md', 'anchor/legendre-normal.json', 'anchor/legendre-optimized.json'),

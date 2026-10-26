@@ -99,6 +99,18 @@ a theorem that a particular Collatz sentence lacks a special Pi^0_1
 reformulation. Such a reformulation would need a new mathematical argument.
 An outer loop cannot detect failure of an orbit merely by waiting longer.
 
+There is already a genuine arithmetic completeness theorem close to the
+proposed unification: [Kurtz and Simon (TAMC 2007)](https://link.springer.com/chapter/10.1007/978-3-540-72504-6_49)
+prove their **uniform generalized Collatz problem** Pi^0_2-complete. This
+is CITED from the primary publication, not a fresh proof audit here. The
+older [September 24 implication atlas, row 31](../../procgen_atlas_20260924_collatz_implication_atlas.md)
+already uses this bridge: assertions with the appropriate quantifier form
+can be represented by statements about different generalized maps. Retain
+the compiled map and its all-input predicate. This does not make the fixed
+classical `3n+1` map complete, identify the resulting maps with one another,
+or prove implications among the named conjectures. It is an actual common
+uniform target family, rather than a numerical resemblance.
+
 The same distinction explains why a Busy Beaver oracle settles the
 Goldbach machine's halting but a single numerical Busy Beaver value does
 not automatically discharge all inputs of a totality problem. The
