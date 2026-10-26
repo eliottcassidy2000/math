@@ -1,0 +1,277 @@
+{
+  "status": "VERIFIED_EXACT_GIT_BYTES_AND_REMOTE_ANCESTRY",
+  "files": [
+    {
+      "packaged": "session66-modular/inputs/01-signed_collatz_pair_lifts_20261014d.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/signed_collatz_pair_lifts_20261014d.md",
+      "sha256": "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec",
+      "git_blob": "a234193e3ae1a79e3cc9714a0b6cb825e11a9caf",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/02-arithmetic_braids_20260917_collatz.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "sha256": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0",
+      "git_blob": "74fec4a45f9a7e617389a09df264215eaab79273",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/03-collatz_mod6_20260917_row_braid_typing.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/collatz_mod6_20260917_row_braid_typing.md",
+      "sha256": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc",
+      "git_blob": "a1fac54757bbae592d8860b899ec083929ba2d2b",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/04-THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+      "git_blob": "60da26daf9f6d7fada6467b8f9f56921cec5248b",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/05-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/06-GENERAL_PERMUTATION.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "git_blob": "85fd48d022fc58388e14c1a26b0ece751512ca52",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-modular/inputs/07-REPORT.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "git_blob": "04926bc1f204182dcfcd24e5ecf6670f61ddd6cd",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/01-signed_collatz_pair_lifts_20261014d.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/signed_collatz_pair_lifts_20261014d.md",
+      "sha256": "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec",
+      "git_blob": "a234193e3ae1a79e3cc9714a0b6cb825e11a9caf",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/02-arithmetic_braids_20260917_collatz.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "sha256": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0",
+      "git_blob": "74fec4a45f9a7e617389a09df264215eaab79273",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/03-collatz_mod6_20260917_row_braid_typing.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/collatz_mod6_20260917_row_braid_typing.md",
+      "sha256": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc",
+      "git_blob": "a1fac54757bbae592d8860b899ec083929ba2d2b",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/04-THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+      "git_blob": "60da26daf9f6d7fada6467b8f9f56921cec5248b",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/05-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/06-GENERAL_PERMUTATION.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "git_blob": "85fd48d022fc58388e14c1a26b0ece751512ca52",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/input/inputs/07-REPORT.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "git_blob": "04926bc1f204182dcfcd24e5ecf6670f61ddd6cd",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/incoming/input/sheets_root27_rank_untouchables_20261025.md",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "05-knowledge/results/sheets_root27_rank_untouchables_20261025.md",
+      "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9",
+      "git_blob": "1acce85bbde00c8efd4f5493d227c965cc786a43",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/incoming/input/sheet_tables_mod_odd_kps_20261025.py",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/sheet_tables_mod_odd_kps_20261025.py",
+      "sha256": "ada4f06cac43ec9924c52170bed00780a05799b9530d20737563ca69f1f431ed",
+      "git_blob": "0b31e6a27151f01d08774ffafc3d4f2ce9d5ae51",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-audit-modular/incoming/input/sheet_tables_mod_odd_kps_20261025.out",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/sheet_tables_mod_odd_kps_20261025.out",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b",
+      "git_blob": "7ee3e8668ac68c869dc9115b7f4692e3034f6a86",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/00-AGENTS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/01-RESEARCH-PROTOCOL.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/02-ACTIVE-GUARDRAILS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/03-CORE-PAPERS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/04-THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/05-spectrum.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/06-THM-002-ocf.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e",
+      "git_blob": "74984a8a1ace0c570c7fd1c0beda5aae675eedaa",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/07-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/08-THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf",
+      "git_blob": "ab415482c9a32d0dbd3442135244c4eb7e22fd61",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/09-README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+      "sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03",
+      "git_blob": "c9d025205682b5113727f317f499f8daeea590a6",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/10-GENERAL_PERMUTATION.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "git_blob": "85fd48d022fc58388e14c1a26b0ece751512ca52",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-graph-pairs/inputs/11-CONNECTIONS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "repository_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/CONNECTIONS.md",
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df",
+      "git_blob": "e8d19ee4eba77d8ab3cfa06a3915bc36a6ae5199",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-incoming-review/snapshots/sheets_root27_rank_untouchables_20261025.md",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "05-knowledge/results/sheets_root27_rank_untouchables_20261025.md",
+      "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9",
+      "git_blob": "1acce85bbde00c8efd4f5493d227c965cc786a43",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-incoming-review/snapshots/antihydra_tree_rank_kps_20261025.py",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/antihydra_tree_rank_kps_20261025.py",
+      "sha256": "79ae69b9e5c0ad98017b212768a6be8dd172e78a32664011f0fff258a88ae243",
+      "git_blob": "69417f0db1d2eca0889ce2c70f840696bd41d809",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-incoming-review/snapshots/antihydra_tree_rank_kps_20261025.out",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/antihydra_tree_rank_kps_20261025.out",
+      "sha256": "530a4c210b829a950cc83693e32d8c7c60cf66546b5fecf7985b38535c5bd45d",
+      "git_blob": "2c3b6565138282f142fe6dd5323357c4323ebd60",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-incoming-review/snapshots/untouchable_census_goldbach_dependence_kps_20261025.py",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/untouchable_census_goldbach_dependence_kps_20261025.py",
+      "sha256": "1b7d68e603fd8f41a2f57d22840e70386f7d7f29f0b50810fea04253fba398b1",
+      "git_blob": "4c68e3f6bbe656eeb3bb3e0e6f08257c86acab25",
+      "remote_ancestor_verified": true
+    },
+    {
+      "packaged": "session66-incoming-review/snapshots/untouchable_census_goldbach_dependence_kps_20261025.out",
+      "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+      "repository_path": "04-computation/experiments/untouchable_census_goldbach_dependence_kps_20261025.out",
+      "sha256": "29084fd6b96628e53726aa6e934d9c7837da437736785b6c51713e68a66273d5",
+      "git_blob": "e0cd30859ddd9899bf6459c6c52bf648c3c0720c",
+      "remote_ancestor_verified": true
+    }
+  ]
+}

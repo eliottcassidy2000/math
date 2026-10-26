@@ -1,0 +1,30 @@
+{
+  "scope": "Isolated temporary tree with only two audit scripts and copied producer packet; no Git checkout or source repository. No network requested.",
+  "producer_packet_present": true,
+  "git_checkout_present": false,
+  "source_repository_present": false,
+  "S66_REPO_unset": true,
+  "S66_PRODUCER_unset": true,
+  "runs": [
+    {
+      "script": "audit.py",
+      "optimized": false,
+      "matches_frozen_receipt": true
+    },
+    {
+      "script": "audit.py",
+      "optimized": true,
+      "matches_frozen_receipt": true
+    },
+    {
+      "script": "additional.py",
+      "optimized": false,
+      "matches_frozen_receipt": true
+    },
+    {
+      "script": "additional.py",
+      "optimized": true,
+      "matches_frozen_receipt": true
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "PRIMARY_SOURCES.json",
+      "sha256": "92e889e15697b431b27b4f27a12ee89457e124a128e635ee90d0d5a4e0d3b47b"
+    },
+    {
+      "path": "PROPOSED_HISTORICAL_BANNER.md",
+      "sha256": "f18b72fb1948827e26df3134fab84bcbcb8bc96c17dfae52d3ef0297dd1bb1d1"
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "e7c8ada6114c2fc6a5837eb04d93ffb586a21c17f1050ba06a50131d20fcc877"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "sha256": "3caf3660180b354b65f35b7e0c6e313d8484ebaa46c00f4eea549703609fea6c"
+    },
+    {
+      "path": "check.py",
+      "sha256": "07738225436cad3873c589dbf6396a7e24ed8a17d2330976f678e3cde9147c08"
+    },
+    {
+      "path": "fft-normal.json",
+      "sha256": "4b8328d574fcfb2918b5c8b3ec4706066366dc9ebba1c7f0d81656004f08a921"
+    },
+    {
+      "path": "fft-optimized.json",
+      "sha256": "4b8328d574fcfb2918b5c8b3ec4706066366dc9ebba1c7f0d81656004f08a921"
+    },
+    {
+      "path": "fft_support_diagnostic.py",
+      "sha256": "124551be0cf8501820f6111da06d3a70c1145d9e5f0e05a00677149d2adc479c"
+    },
+    {
+      "path": "normal.json",
+      "sha256": "96dacf6989e46df9f33cefaa12e2fb4005f1e31a31edd6b8f95355ad59b9c797"
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "96dacf6989e46df9f33cefaa12e2fb4005f1e31a31edd6b8f95355ad59b9c797"
+    },
+    {
+      "path": "snapshots/antihydra_tree_rank_kps_20261025.out",
+      "sha256": "530a4c210b829a950cc83693e32d8c7c60cf66546b5fecf7985b38535c5bd45d"
+    },
+    {
+      "path": "snapshots/antihydra_tree_rank_kps_20261025.py",
+      "sha256": "79ae69b9e5c0ad98017b212768a6be8dd172e78a32664011f0fff258a88ae243"
+    },
+    {
+      "path": "snapshots/sheets_root27_rank_untouchables_20261025.md",
+      "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9"
+    },
+    {
+      "path": "snapshots/untouchable_census_goldbach_dependence_kps_20261025.out",
+      "sha256": "29084fd6b96628e53726aa6e934d9c7837da437736785b6c51713e68a66273d5"
+    },
+    {
+      "path": "snapshots/untouchable_census_goldbach_dependence_kps_20261025.py",
+      "sha256": "1b7d68e603fd8f41a2f57d22840e70386f7d7f29f0b50810fea04253fba398b1"
+    }
+  ],
+  "optional_replay": "fft_support_diagnostic.py requires NumPy; diagnostic only",
+  "required_dependencies": "Python3 standard library only",
+  "required_replay": "python3 -B check.py; python3 -B -O check.py",
+  "reviewed_commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08"
+}

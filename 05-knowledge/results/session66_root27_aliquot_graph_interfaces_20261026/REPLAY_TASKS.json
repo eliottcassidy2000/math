@@ -82,5 +82,93 @@
       "-B"
     ],
     "timeout": 900
+  },
+  {
+    "script": "session66-modular/check.py",
+    "stored_stdout": "session66-modular/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-modular/check.py",
+    "stored_stdout": "session66-audit-modular/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-modular/verify_constructor.py",
+    "stored_stdout": "session66-audit-modular/constructor-normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-modular/incoming/check.py",
+    "stored_stdout": "session66-audit-modular/incoming/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-graph-pairs/check.py",
+    "stored_stdout": "session66-graph-pairs/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-graph-pairs/audit.py",
+    "stored_stdout": "session66-audit-graph-pairs/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-graph-pairs/additional.py",
+    "stored_stdout": "session66-audit-graph-pairs/additional-normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-synthesis/check.py",
+    "stored_stdout": "session66-audit-synthesis/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-incoming-review/check.py",
+    "stored_stdout": "session66-incoming-review/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-tc-scope/check.py",
+    "stored_stdout": "session66-tc-scope/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
+  },
+  {
+    "script": "session66-audit-tc-scope/check.py",
+    "stored_stdout": "session66-audit-tc-scope/normal.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 1800
   }
 ]

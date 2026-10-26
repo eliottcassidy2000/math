@@ -1,0 +1,23 @@
+{
+  "session66-root/CONNECTIONS.md": "cb572b19b699f706b9f7c1925b5fb8844d841c2688e83c0bd498c770168d0d37",
+  "session66-root/DIVISOR_F1_BRIDGE.md": "ebc62f958bcb1fa2e92057f9538218ad50cc5cc7dc911b062fa02618308fe025",
+  "session66-root/SOURCES.json": "2c3423918f713bec0970c8cfda91c77a8400a4c5f997cb5816a8c2e69a6ff82f",
+  "session66-root/divisor_carrier.py": "70cd2c3e0c020f6f1106b04d6428e0da4b61f6d7b22853c4d1bca8d2d5925131",
+  "session66-root/divisor_normal.json": "174a851aa790f14abfe839d4d569700a02e860e2b15242252b5329fceedfe543",
+  "session66-root27/REPORT.md": "468dfdadcdb99161cb0a2cec411c26df4c2b5e3c458bc29b63104dc8c8cf50ee",
+  "session66-root27/SOURCE_PINS.json": "a5fee1c668aaa69949391e41626f0285b6dea977ffbebd1fc1fef0b719d2066c",
+  "session66-modular/REPORT.md": "30ab70d0dbdaaf0ac722008f5d99cce371fb872034173247e7c047cb884b8753",
+  "session66-modular/SOURCE_MANIFEST.json": "52d5464432176420d8bc36e483fe593ee0987bd409619a94aeb7d6e6499c2f6f",
+  "session66-aliquot/REPORT.md": "6c819ddbe023f67ccb32f2bd8791c4e3db16c3dab817785c21bddb6028c3b175",
+  "session66-aliquot/results/density_lower_bound.json": "243f152cdedb5a25c097942819200cda0e496b0eb8cade223ef67fc62a01b926",
+  "session66-graph-pairs/REPORT.md": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8",
+  "session66-graph-pairs/SOURCE_PINS.json": "48cbf29acb4c4a9ca674f66ddd23199cc8144ece0fab7abadaafb6db6b630e3e",
+  "session66-audit-root27/REPORT.md": "a58fc56f548305a55f195afccbe31d199e71f6b69a9363e79f2cf42987f1e8c3",
+  "session66-audit-root27/CENTER_BANK_APPENDIX.md": "cb4c0dabdd48f177a10c1fb44dc77c6c1b295eb5e24c8837f2591a57a062be2b",
+  "session66-audit-modular/REPORT.md": "3120f88a9072f7b83c077b5c59cb5842fa695d8a2ba83a50605268a4eb73310b",
+  "session66-audit-modular/incoming/APPENDIX.md": "2ca04661bfa353943d03751bbc5df6746548a2d2eab5b058f0520cdf587a50ac",
+  "session66-audit-aliquot/AUDIT.md": "d2844cfebe421e44590223aed4dde9a396ad7972ecb89797599cb64f46652ee3",
+  "session66-audit-aliquot/DENSITY_AUDIT.md": "11904938ddf687d8ca0e69a8ef5581b85e1189551bdf9ad8cbcb39ab7abec3dd",
+  "session66-audit-aliquot/DIVISOR_AUDIT.md": "d44ce1e8e6c338a72b2d5cd4787951f6803fd453ff2d8b9f64a03bfb132f4ce6",
+  "session66-audit-graph-pairs/REPORT.md": "303649507062e3966903ba2c269c96636332457c4b53059cb2fefbb823637cee"
+}

@@ -1,0 +1,64 @@
+{
+  "audit_date_utc": "2026-10-26",
+  "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "producer_packet": "session66-graph-pairs",
+  "producer_files": [
+    {
+      "path": "session66-graph-pairs/REPORT.md",
+      "sha256": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8"
+    },
+    {
+      "path": "session66-graph-pairs/check.py",
+      "sha256": "92e4f05295056910508f30f261994ecb0a51e8bd195ca41197a7ef9d27aa2f4f"
+    },
+    {
+      "path": "session66-graph-pairs/normal.json",
+      "sha256": "446d8361e99dafff0c1c9a0dc3885ebea78b5e83d4bc362e4356de7e3861e767"
+    },
+    {
+      "path": "session66-graph-pairs/optimized.json",
+      "sha256": "446d8361e99dafff0c1c9a0dc3885ebea78b5e83d4bc362e4356de7e3861e767"
+    },
+    {
+      "path": "session66-graph-pairs/SOURCE_PINS.json",
+      "sha256": "48cbf29acb4c4a9ca674f66ddd23199cc8144ece0fab7abadaafb6db6b630e3e"
+    },
+    {
+      "path": "session66-graph-pairs/SHA256SUMS",
+      "sha256": "82f5c6f0967490ad26ba28befb791730880459122c8f403d649a4a69283f4e58"
+    },
+    {
+      "path": "session66-graph-pairs/AUDIT_CLARIFICATION.json",
+      "sha256": "b8f8a8af25840c00945b6ab80f57e8351c6a880487a783aa17510d95f33b9da3"
+    }
+  ],
+  "verified_copied_dependency_files": 12,
+  "additional_source": {
+    "path": "01-canon/theorems/THM-209-independence-polynomial.md",
+    "pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "pin_blob": "983d8655b66627fbd39661c69a3a324f2fe261b6",
+    "pin_sha256": "b6bf2c296da08e6f16bee6a1e04a48bf0a38ee3b48c57054298172e3fc1bfd2f",
+    "inspected_HEAD": "97f0fde6f26d7ad732442b78593b598eb5484df4",
+    "HEAD_equals_pin": true,
+    "worktree_equals_HEAD": true,
+    "original_status_line": "**Status:** VERIFIED (exhaustive n=3..7, sampled n=8: 5K, n=9: 5K, n=10: 200), PROOF NEEDED",
+    "original_definition_line": "For a tournament T on n vertices, let OddCyc(T) denote the set of all directed odd cycles in T (as vertex sets). Define the **odd-cycle disjointness graph** G(T):"
+  },
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2412.10572v3",
+      "checked": "2026-10-26",
+      "scope": "Section 2.2 literal cycles and complement convention; Corollary 20"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+      "checked": "2026-10-26",
+      "scope": "Corollary 1 exact strong tournament minimum"
+    }
+  ],
+  "original_report_preserved": {
+    "path": "producer-report-original.md",
+    "sha256": "e073dda07857953759b6c09a4a023a23b619d83c77f0a20d3c6e3e4b4ff91e8a"
+  },
+  "producer_clarification_verified": "Exactly one agreed paragraph added; code and numerical receipts unchanged."
+}

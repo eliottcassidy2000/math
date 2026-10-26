@@ -1,0 +1,52 @@
+[
+  {
+    "codec": "joint",
+    "malformation": "append isolated vertex",
+    "vertices": 8,
+    "producer_result": [
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "codec": "joint",
+    "malformation": "remove mandatory port arc",
+    "vertices": 14,
+    "producer_result": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  {
+    "codec": "gamma",
+    "malformation": "append isolated vertex",
+    "vertices": 10,
+    "producer_result": [
+      [
+        0
+      ]
+    ]
+  },
+  {
+    "codec": "gamma",
+    "malformation": "remove mandatory port arc",
+    "vertices": 18,
+    "producer_result": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  }
+]

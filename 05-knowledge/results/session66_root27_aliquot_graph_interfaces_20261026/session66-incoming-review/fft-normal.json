@@ -1,0 +1,10 @@
+{
+  "N": 1000000,
+  "does_not_prove": "No general FFT error bound; no equality of all pair multiplicities; no replay of full incoming census.",
+  "exact_even_witnesses": 499997,
+  "exact_support_sha256": "5b9a323dbd09bda98177ddfdb2a1d10319392abf2728443db3b7c0478b17818d",
+  "proves": "This run of incoming FFT Boolean support agrees with independently exact support.",
+  "rounded_residual_max_diagnostic_only": 1.0913936421275139e-11,
+  "status": "PASS",
+  "support_mismatches": 0
+}

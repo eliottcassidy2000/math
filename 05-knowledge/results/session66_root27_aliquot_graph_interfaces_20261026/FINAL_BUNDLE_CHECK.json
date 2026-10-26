@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "source_files": 234,
+  "assertion_safe_scripts": 32,
+  "exact_historical_archive_exemptions": 2,
+  "native_checksum_entries": 231,
+  "resolved_local_links": 283,
+  "source_contexts": 49,
+  "proposal_contexts": 2,
+  "scope": "Approved packet only; historical citations use exact pinned source contexts, not stale current replacements."
+}

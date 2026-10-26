@@ -1,0 +1,144 @@
+{
+  "status": "ROOT_APPROVED_EXACT_RECOVERY",
+  "approval": "Parent approved original 15-file producer and 8-file audit; consolidated after original third upload terminated before tree/commit/ref",
+  "files": [
+    {
+      "source": "session66-tc-scope/REPORT.md",
+      "packaged": "session66-tc-scope/REPORT.md",
+      "bytes": 9897,
+      "sha256": "4b0e7acc63ee313ded19ada74e0ed3025ebcfbb49e2ce8d94b5baa238ae56c22"
+    },
+    {
+      "source": "session66-tc-scope/SOURCES.json",
+      "packaged": "session66-tc-scope/SOURCES.json",
+      "bytes": 3469,
+      "sha256": "07e8827460a0f792f0e2076d987b57c76b8dd9607a0cdf408252b699b87d9585"
+    },
+    {
+      "source": "session66-tc-scope/check.py",
+      "packaged": "session66-tc-scope/check.py",
+      "bytes": 8358,
+      "sha256": "c4c605ed0c10f0232c2974609d0c6099cf8dffad892f4dc73f1d46b9c8e402ce"
+    },
+    {
+      "source": "session66-tc-scope/normal.json",
+      "packaged": "session66-tc-scope/normal.json",
+      "bytes": 7670,
+      "sha256": "12a799dbd3693b2ea576f3ead6a7c7ace0be71810492f579d3e7d82345e58320"
+    },
+    {
+      "source": "session66-tc-scope/optimized.json",
+      "packaged": "session66-tc-scope/optimized.json",
+      "bytes": 7670,
+      "sha256": "12a799dbd3693b2ea576f3ead6a7c7ace0be71810492f579d3e7d82345e58320"
+    },
+    {
+      "source": "session66-tc-scope/sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md",
+      "packaged": "session66-tc-scope/sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md",
+      "bytes": 7928,
+      "sha256": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b"
+    },
+    {
+      "source": "session66-tc-scope/sources/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "packaged": "session66-tc-scope/sources/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "bytes": 5460,
+      "sha256": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8"
+    },
+    {
+      "source": "session66-tc-scope/sources/PREREGISTRATION.md",
+      "packaged": "session66-tc-scope/sources/PREREGISTRATION.md",
+      "bytes": 1568,
+      "sha256": "659d6fe13a786dae566d1eb29801b868b48483e09943ec6078ac3caf98388f36"
+    },
+    {
+      "source": "session66-tc-scope/sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md",
+      "packaged": "session66-tc-scope/sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md",
+      "bytes": 13537,
+      "sha256": "f40f5b4300143a965e174824bad20e8d5a0059d18f6f5a1a1b5d259f0d9337da"
+    },
+    {
+      "source": "session66-tc-scope/sources/graph-pairs-REPORT.md",
+      "packaged": "session66-tc-scope/sources/graph-pairs-REPORT.md",
+      "bytes": 20936,
+      "sha256": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8"
+    },
+    {
+      "source": "session66-tc-scope/sources/graph-pairs-SOURCE_PINS.json",
+      "packaged": "session66-tc-scope/sources/graph-pairs-SOURCE_PINS.json",
+      "bytes": 5037,
+      "sha256": "48cbf29acb4c4a9ca674f66ddd23199cc8144ece0fab7abadaafb6db6b630e3e"
+    },
+    {
+      "source": "session66-tc-scope/sources/tc_fibres_n10.json",
+      "packaged": "session66-tc-scope/sources/tc_fibres_n10.json",
+      "bytes": 804,
+      "sha256": "31fe9d9ffd974fa29843434df2dfa0a6196443b6e8571ad1779e6e88d56d0aa7"
+    },
+    {
+      "source": "session66-tc-scope/sources/tc_fibres_n10_20261026.py",
+      "packaged": "session66-tc-scope/sources/tc_fibres_n10_20261026.py",
+      "bytes": 6034,
+      "sha256": "f7f7e0efaa0b72dc434c86b97e5b34e04fa46031cf0b56bcce3f7cd83db12173"
+    },
+    {
+      "source": "session66-tc-scope/ALLOWLIST.txt",
+      "packaged": "session66-tc-scope/ALLOWLIST.txt",
+      "bytes": 532,
+      "sha256": "210ada645115fbe8d7bd759421722fd088f3de85515a020d938a0a01bf3fb934"
+    },
+    {
+      "source": "session66-tc-scope/SHA256SUMS",
+      "packaged": "session66-tc-scope/SHA256SUMS",
+      "bytes": 1445,
+      "sha256": "07974f14494333a111452ea6f8ac92f60c044bd729f69514db24cceaba237840"
+    },
+    {
+      "source": "session66-audit-tc-scope/REPORT.md",
+      "packaged": "session66-audit-tc-scope/REPORT.md",
+      "bytes": 6497,
+      "sha256": "84f3585446080a5fee68de59702b6777ddfa352951b340422859c52b0a53d146"
+    },
+    {
+      "source": "session66-audit-tc-scope/SOURCE_REVIEW.json",
+      "packaged": "session66-audit-tc-scope/SOURCE_REVIEW.json",
+      "bytes": 5626,
+      "sha256": "839701b341fce2ef18c1409067ad653addfd67db119eb1eaca0c33039eb1e144"
+    },
+    {
+      "source": "session66-audit-tc-scope/check.py",
+      "packaged": "session66-audit-tc-scope/check.py",
+      "bytes": 8105,
+      "sha256": "dba529bc5ac42e3160569f9a1eab4a1c763c1d5410281a4761a4129952847127"
+    },
+    {
+      "source": "session66-audit-tc-scope/normal.json",
+      "packaged": "session66-audit-tc-scope/normal.json",
+      "bytes": 1562,
+      "sha256": "27c8e79e7e333ad0d5d209773b278f25cad3e7da403b78a2748ba35d8f2d55da"
+    },
+    {
+      "source": "session66-audit-tc-scope/optimized.json",
+      "packaged": "session66-audit-tc-scope/optimized.json",
+      "bytes": 1562,
+      "sha256": "27c8e79e7e333ad0d5d209773b278f25cad3e7da403b78a2748ba35d8f2d55da"
+    },
+    {
+      "source": "session66-audit-tc-scope/NEGATIVE_CONTROL.json",
+      "packaged": "session66-audit-tc-scope/NEGATIVE_CONTROL.json",
+      "bytes": 391,
+      "sha256": "3aa6cac71eca296f0e6770b2eb22649c28af0fd1f97dfb2492d08ad8eea4e5cf"
+    },
+    {
+      "source": "session66-audit-tc-scope/ALLOWLIST.txt",
+      "packaged": "session66-audit-tc-scope/ALLOWLIST.txt",
+      "bytes": 112,
+      "sha256": "cda741ec86eb73fe595d0cf8a73b38268b5c60cd54e7d7900c6ed6b0da997c0f"
+    },
+    {
+      "source": "session66-audit-tc-scope/SHA256SUMS",
+      "packaged": "session66-audit-tc-scope/SHA256SUMS",
+      "bytes": 563,
+      "sha256": "3e31e6c5cdf99e9f03a9cd83bb45255285e60e9036a53abb10310c75e2e85982"
+    }
+  ]
+}

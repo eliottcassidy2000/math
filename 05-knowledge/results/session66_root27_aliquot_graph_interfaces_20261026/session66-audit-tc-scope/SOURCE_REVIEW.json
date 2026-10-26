@@ -1,0 +1,92 @@
+{
+  "authenticity_boundary": "git show is an audit-time comparison against locally available pinned repository objects, not an independent remote authenticity assertion. Portable check.py has no Git or source-file dependency. No n=10 script was executed.",
+  "producer_allowlist_sha256": "210ada645115fbe8d7bd759421722fd088f3de85515a020d938a0a01bf3fb934",
+  "producer_directory": "session66-tc-scope",
+  "producer_files": {
+    "ALLOWLIST.txt": "210ada645115fbe8d7bd759421722fd088f3de85515a020d938a0a01bf3fb934",
+    "REPORT.md": "4b0e7acc63ee313ded19ada74e0ed3025ebcfbb49e2ce8d94b5baa238ae56c22",
+    "SHA256SUMS": "07974f14494333a111452ea6f8ac92f60c044bd729f69514db24cceaba237840",
+    "SOURCES.json": "07e8827460a0f792f0e2076d987b57c76b8dd9607a0cdf408252b699b87d9585",
+    "check.py": "c4c605ed0c10f0232c2974609d0c6099cf8dffad892f4dc73f1d46b9c8e402ce",
+    "normal.json": "12a799dbd3693b2ea576f3ead6a7c7ace0be71810492f579d3e7d82345e58320",
+    "optimized.json": "12a799dbd3693b2ea576f3ead6a7c7ace0be71810492f579d3e7d82345e58320",
+    "sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b",
+    "sources/LEM-003-aut-acts-freely-on-ham-paths.md": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8",
+    "sources/PREREGISTRATION.md": "659d6fe13a786dae566d1eb29801b868b48483e09943ec6078ac3caf98388f36",
+    "sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md": "f40f5b4300143a965e174824bad20e8d5a0059d18f6f5a1a1b5d259f0d9337da",
+    "sources/graph-pairs-REPORT.md": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8",
+    "sources/graph-pairs-SOURCE_PINS.json": "48cbf29acb4c4a9ca674f66ddd23199cc8144ece0fab7abadaafb6db6b630e3e",
+    "sources/tc_fibres_n10.json": "31fe9d9ffd974fa29843434df2dfa0a6196443b6e8571ad1779e6e88d56d0aa7",
+    "sources/tc_fibres_n10_20261026.py": "f7f7e0efaa0b72dc434c86b97e5b34e04fa46031cf0b56bcce3f7cd83db12173"
+  },
+  "producer_replay": {
+    "normal_vs_optimized": "byte-identical",
+    "sha256": "12a799dbd3693b2ea576f3ead6a7c7ace0be71810492f579d3e7d82345e58320",
+    "vs_sealed_results": "byte-identical"
+  },
+  "source_checks": [
+    {
+      "git_blob": "aaf78256b06c7618fb8fff6cf330e0aa1ff27993",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/tc_fibres_n10.json",
+      "sha256": "31fe9d9ffd974fa29843434df2dfa0a6196443b6e8571ad1779e6e88d56d0aa7",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "04-computation/untouchables_s57/tc_fibres_n10.json"
+    },
+    {
+      "git_blob": "069f08fd369b38b76d23cd2debbf2dd3b4757b32",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/tc_fibres_n10_20261026.py",
+      "sha256": "f7f7e0efaa0b72dc434c86b97e5b34e04fa46031cf0b56bcce3f7cd83db12173",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "04-computation/untouchables_s57/tc_fibres_n10_20261026.py"
+    },
+    {
+      "git_blob": "423e131f2d4b0cc20e2d7b154f23d90264858212",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/PREREGISTRATION.md",
+      "sha256": "659d6fe13a786dae566d1eb29801b868b48483e09943ec6078ac3caf98388f36",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "05-knowledge/results/s57_untouchables_root27_20261026/PREREGISTRATION.md"
+    },
+    {
+      "git_blob": "59c2b9708274a029042ac9a9adde642c1a78e96e",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "sha256": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md"
+    },
+    {
+      "git_blob": "3dfc47aabd5cdfd6d00368dc84301087a97071d4",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md",
+      "sha256": "f40f5b4300143a965e174824bad20e8d5a0059d18f6f5a1a1b5d259f0d9337da",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "01-canon/theorems/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md"
+    },
+    {
+      "git_blob": "0a17ac7d2208f237b3bc15021dc10d28b0703f5f",
+      "git_show_exact_bytes": true,
+      "local_path": "sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md",
+      "sha256": "b4916e450d71af5842a8f56b6d4453a5b5df0044d0f1415ee86e8f78caa9435b",
+      "source_commit": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+      "source_path": "05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md"
+    },
+    {
+      "local_path": "sources/graph-pairs-REPORT.md",
+      "sealed_packet_exact_bytes": true,
+      "sha256": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8",
+      "source_packet": "session66-graph-pairs",
+      "source_path": "REPORT.md"
+    },
+    {
+      "local_path": "sources/graph-pairs-SOURCE_PINS.json",
+      "sealed_packet_exact_bytes": true,
+      "sha256": "48cbf29acb4c4a9ca674f66ddd23199cc8144ece0fab7abadaafb6db6b630e3e",
+      "source_packet": "session66-graph-pairs",
+      "source_path": "SOURCE_PINS.json"
+    }
+  ],
+  "status": "PASS"
+}

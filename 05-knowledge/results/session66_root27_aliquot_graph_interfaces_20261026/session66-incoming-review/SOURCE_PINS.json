@@ -1,0 +1,37 @@
+[
+  {
+    "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+    "path": "05-knowledge/results/sheets_root27_rank_untouchables_20261025.md",
+    "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9",
+    "git_blob": "1acce85bbde00c8efd4f5493d227c965cc786a43",
+    "snapshot": "snapshots/sheets_root27_rank_untouchables_20261025.md"
+  },
+  {
+    "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+    "path": "04-computation/experiments/antihydra_tree_rank_kps_20261025.py",
+    "sha256": "79ae69b9e5c0ad98017b212768a6be8dd172e78a32664011f0fff258a88ae243",
+    "git_blob": "69417f0db1d2eca0889ce2c70f840696bd41d809",
+    "snapshot": "snapshots/antihydra_tree_rank_kps_20261025.py"
+  },
+  {
+    "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+    "path": "04-computation/experiments/antihydra_tree_rank_kps_20261025.out",
+    "sha256": "530a4c210b829a950cc83693e32d8c7c60cf66546b5fecf7985b38535c5bd45d",
+    "git_blob": "2c3b6565138282f142fe6dd5323357c4323ebd60",
+    "snapshot": "snapshots/antihydra_tree_rank_kps_20261025.out"
+  },
+  {
+    "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+    "path": "04-computation/experiments/untouchable_census_goldbach_dependence_kps_20261025.py",
+    "sha256": "1b7d68e603fd8f41a2f57d22840e70386f7d7f29f0b50810fea04253fba398b1",
+    "git_blob": "4c68e3f6bbe656eeb3bb3e0e6f08257c86acab25",
+    "snapshot": "snapshots/untouchable_census_goldbach_dependence_kps_20261025.py"
+  },
+  {
+    "commit": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+    "path": "04-computation/experiments/untouchable_census_goldbach_dependence_kps_20261025.out",
+    "sha256": "29084fd6b96628e53726aa6e934d9c7837da437736785b6c51713e68a66273d5",
+    "git_blob": "e0cd30859ddd9899bf6459c6c52bf648c3c0720c",
+    "snapshot": "snapshots/untouchable_census_goldbach_dependence_kps_20261025.out"
+  }
+]

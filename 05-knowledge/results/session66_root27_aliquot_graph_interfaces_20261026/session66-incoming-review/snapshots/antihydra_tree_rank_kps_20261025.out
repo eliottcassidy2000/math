@@ -1,0 +1,61 @@
+PASS K1 z=7: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=27: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=5: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=1: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=3: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=11: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+PASS K1 z=39: the orbit carry bits satisfy the fixed-source congruences for every n <= 40 and j <= n
+kappa(7)[:40] = 1110111010100011100101010110010011100000
+kappa(27)[:40] = 1101001101010011010010100000110100000001
+PASS R0 tree-word counts (1/(2k+1))C(3k,k) for k = 0..7  [[1, 1, 3, 12, 55, 273, 1428, 7752]]
+PASS R1 z=7: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=7: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R1 z=27: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=27: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R1 z=5: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=5: words that are prefixes of kappa(z) have v_2 >= |w| (count 1)  [1]
+PASS R1 z=1: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=1: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R1 z=3: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=3: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R1 z=11: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=11: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R1 z=39: v_2(Q_z(w)) = LCP(w, kappa(z)) for all 9525 tree words with LCP < |w|
+PASS R2 z=39: words that are prefixes of kappa(z) have v_2 >= |w| (count 0)  [0]
+PASS R3 the LCP law holds on 20000 random binary words (not necessarily tree words), several sources
+PASS E1 inherited leaf-expansion identity Q(u1000v) = 27 Q(u0v) + 2^p (3^(s+3) - 38 C_v) on all expansions, |w| <= 16
+PASS E2 rank law: expanding at p != h gives precision min(p,h); at p = h precision rises (so rank changes by +3 - delta only there)
+frontier of source 7: (symbols read, bit, credit q, |w|, precision, rank) for the first 20 symbols:
+    (1, '1', 3, 4, 1, 3)
+    (2, '1', 5, 7, 2, 5)
+    (3, '1', 7, 10, 4, 6)
+    (4, '0', 6, 10, 4, 6)
+    (5, '1', 8, 13, 5, 8)
+    (6, '1', 10, 16, 6, 10)
+    (7, '1', 12, 19, 8, 11)
+    (8, '0', 11, 19, 8, 11)
+    (9, '1', 13, 22, 10, 12)
+    (10, '0', 12, 22, 10, 12)
+    (11, '1', 14, 25, 14, 11)
+    (12, '0', 13, 25, 14, 11)
+    (13, '0', 12, 25, 14, 11)
+    (14, '0', 11, 25, 14, 11)
+    (15, '1', 13, 28, 15, 13)
+    (16, '1', 15, 31, 16, 15)
+    (17, '1', 17, 34, 19, 15)
+    (18, '0', 16, 34, 19, 15)
+    (19, '0', 15, 34, 19, 15)
+    (20, '1', 17, 37, 21, 16)
+PASS F1 along the frontier the rank |w| - v_2(Q_7(w)) stays >= 1 for 60 symbols (q never hits 0)
+PASS F2 frontier rank equals q - LCP(0^q, kappa after the prefix) at every step
+odd sources z <= 4001 whose credit walk returns to 0 within 20000 symbols: 465 of 2001
+first halting sources and halting lengths: [(5, 4), (9, 7), (13, 19), (15, 22), (19, 19), (21, 4), (23, 13), (29, 10), (35, 10), (37, 4), (45, 16), (53, 4), (69, 4), (73, 10), (77, 7)]
+PASS H1 for halting sources the kappa prefix is a complete tree word violating the inequality (positive control, 200 sources)
+PASS H2 the blank source 7 and 27 do not halt within the cap
+odd sources z <= 40001 halting within 500 symbols: 4709 of 20001 = 0.2354; model phi^-3 = 0.2361; phi^-6 = 0.0557
+halting-length distribution (length: count), first 12 lengths: [(4, 2500), (7, 937), (10, 470), (13, 268), (16, 162), (19, 110), (22, 68), (25, 50), (28, 36), (31, 26), (34, 22), (37, 12)]
+PASS H3 the halting share of odd sources <= 40001 lies within 0.01 of phi^-3 (model comparison, FINITE-EXACT share)  [0.2354]
+source 7: credit after 200000 symbols = 100112, minimum credit seen = 3
+source 27: credit after 200000 symbols = 99623, minimum credit seen = 3
+30 checks, 0 failed
+ALL CHECKS PASSED

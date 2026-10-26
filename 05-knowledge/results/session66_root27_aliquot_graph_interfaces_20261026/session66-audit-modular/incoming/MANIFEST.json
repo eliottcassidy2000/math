@@ -1,0 +1,75 @@
+{
+  "checks": 31167,
+  "files": [
+    {
+      "bytes": 7553,
+      "path": "APPENDIX.md",
+      "sha256": "2ca04661bfa353943d03751bbc5df6746548a2d2eab5b058f0520cdf587a50ac"
+    },
+    {
+      "bytes": 1187,
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "becf5388da3afe7a5eb5212b79efc6c673bae603a403f6b3679d7ec21f09fc2e"
+    },
+    {
+      "bytes": 4694,
+      "path": "check.py",
+      "sha256": "1f338410897202bd37845ad3c432f079104342076c0c4c06a6168c9d7f03cc6f"
+    },
+    {
+      "bytes": 7010,
+      "path": "frozen-normal.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 7010,
+      "path": "frozen-optimized.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 1041,
+      "path": "input/sheet_tables_mod_odd_kps_20261025.out",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    },
+    {
+      "bytes": 5326,
+      "path": "input/sheet_tables_mod_odd_kps_20261025.py",
+      "sha256": "ada4f06cac43ec9924c52170bed00780a05799b9530d20737563ca69f1f431ed"
+    },
+    {
+      "bytes": 19730,
+      "path": "input/sheets_root27_rank_untouchables_20261025.md",
+      "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9"
+    },
+    {
+      "bytes": 7010,
+      "path": "normal.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 7010,
+      "path": "optimized.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 1041,
+      "path": "producer-normal.txt",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    },
+    {
+      "bytes": 1041,
+      "path": "producer-optimized.txt",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    }
+  ],
+  "modes": "normal and -O byte-identical; frozen offline replay also byte-identical",
+  "producer_edits": false,
+  "required_qualifications": [
+    "m>=3; m=1 separate trivial boundary",
+    "necessity uses constant term at source residue zero",
+    "T1b numerical passing witness tests shift two, not unit translation"
+  ],
+  "scope": "Incoming KP-S4 Theorem A and common positive 2-adic order-part classification only",
+  "source_pin": "44abcaf22b78125a11e039054f0d0ba9e4978f08",
+  "status": "PASS with proof repair and checker-label qualification"
+}

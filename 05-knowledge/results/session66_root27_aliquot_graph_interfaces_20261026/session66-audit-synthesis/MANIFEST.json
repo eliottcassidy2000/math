@@ -1,0 +1,65 @@
+{
+  "allowlist": "ALLOWLIST.txt",
+  "approved_root_files": {
+    "session66-root/CONNECTIONS.md": "cb572b19b699f706b9f7c1925b5fb8844d841c2688e83c0bd498c770168d0d37",
+    "session66-root/DIVISOR_F1_BRIDGE.md": "ebc62f958bcb1fa2e92057f9538218ad50cc5cc7dc911b062fa02618308fe025"
+  },
+  "audited_inputs": "INPUT_HASHES.json",
+  "author": "/root/audit_session66_synthesis",
+  "authority": "Independent audit only; no producer/root/Git writes; parent-designated publisher owns publication.",
+  "blockers": [],
+  "date": "2026-10-26",
+  "explicit_checks_offline": 11302,
+  "explicit_checks_with_git": 11339,
+  "files": {
+    "ALLOWLIST.txt": {
+      "bytes": 177,
+      "sha256": "b7791daa65400105a949ef4d6363350502ad90e12136186a3e8462f009a456ee"
+    },
+    "INITIAL_INPUT_HASHES.json": {
+      "bytes": 327,
+      "sha256": "ef8ef8fcd9f65d3c46cb80c0ca09cb3b916fe091659b25a3f95e077bd1bb2991"
+    },
+    "INPUT_HASHES.json": {
+      "bytes": 2289,
+      "sha256": "aeb10ee9ec90db24f136f3c5cd8bbd5687b67b8b40b3f899cdbce98cc3ab0e2b"
+    },
+    "PORTABILITY.json": {
+      "bytes": 621,
+      "sha256": "dcc7f2c506ace46391405f0ccd8de4a29856b70678e87a36ad27affe8476cdfc"
+    },
+    "REPORT.md": {
+      "bytes": 17991,
+      "sha256": "cf4b385c3f610d64e9f9775bf67a6ea0c1c3559cdacd75e12748a69979938679"
+    },
+    "SOURCES.json": {
+      "bytes": 1650,
+      "sha256": "a334b6d89a4a58137ef55a7125011d63e8f7311f26452921af1d8d22945ee887"
+    },
+    "check.py": {
+      "bytes": 9387,
+      "sha256": "90d36dad898d0a10b6352853013b451b609ccc77bd285f11862f7a389f0b6f9b"
+    },
+    "git-verified.json": {
+      "bytes": 8334,
+      "sha256": "f6e4daa71f98997d3afa3d740de9642f982d9a6a86ba8a5e691053cd6190f5f6"
+    },
+    "normal.json": {
+      "bytes": 7493,
+      "sha256": "09494c0073b460c301060310c6c80a2e1c679a9de0daf8528547073233421b90"
+    },
+    "optimized.json": {
+      "bytes": 7493,
+      "sha256": "09494c0073b460c301060310c6c80a2e1c679a9de0daf8528547073233421b90"
+    }
+  },
+  "future_scope": "Approval attaches to exactly the listed input hashes, not unseen substantive changes. Incoming KP-S4 broader correction overlay is separately owned.",
+  "normal_optimized_byte_identical": true,
+  "offline_reproduction": [
+    "python3 -B check.py > normal.json",
+    "python3 -B -O check.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "optional_original_git_check": "python3 -B check.py --repo ../session66-repo; historical executed result in git-verified.json",
+  "status": "PASS"
+}

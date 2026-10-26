@@ -1,0 +1,11 @@
+{
+  "blocks": 105,
+  "constructor_sha256": "20a795a6f4ec840f864dddbdcc5a06ea2c0def18a4fba8961e7a0ad30d57db67",
+  "direct_module_defect": 77,
+  "direct_quotient_defect": 14,
+  "direct_unrestricted_defect": 21,
+  "external_failures": 56,
+  "internal_failures": 21,
+  "status": "PASS",
+  "vertices": 210
+}

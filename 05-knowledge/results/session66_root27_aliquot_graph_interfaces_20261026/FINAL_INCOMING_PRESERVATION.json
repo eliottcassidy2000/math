@@ -1,0 +1,16 @@
+{
+  "status": "PASS_INCOMING_PRESERVED",
+  "base": "879c6bcab3f8b9413d30817eab1c9b35e938d66b",
+  "original_draft_base": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+  "intersecting_paths": [
+    "01-canon/MISTAKES.md"
+  ],
+  "mistakes_old_base_sha256": "cf35dab1359c976e4ff5ee290a82540dc6fef96c3064aac4ef72610024f543b6",
+  "mistakes_current_base_sha256": "0692b63722b0175a7b770ccdcedc0e37e33cb89c7cfdabafc60ca96acf84a509",
+  "mistakes_final_sha256": "57500dad8d8103fe24712930fcb3f69fa0da70b66f09560f93044031f9e40e27",
+  "method": "Exact historical insertion after unchanged purpose prefix; removing insertion reproduces current base bytes exactly",
+  "all_other_old_changed_paths_unchanged_since_old_base": true,
+  "earlier_verified_base": "9e08c8cd3b4a9d7bf75a73d27563a818f83e88ea",
+  "additional_incoming_paths_intersection": [],
+  "additional_incoming_preservation": "All later incoming paths are disjoint from the explicit publication allowlist; local rebase preserved them."
+}

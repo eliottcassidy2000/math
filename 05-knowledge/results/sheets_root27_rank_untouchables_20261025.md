@@ -1,5 +1,8 @@
 # Two sheets modulo odd m, the shape-free rank on the root-27 ray, and the untouchable share: what is exact, what is Goldbach, what is golden
 
+> **Correction/status overlay — 2026-10-26.** This KP-S4 note is preserved as historical provenance; use the [independent audit and exact certificates](session66_root27_aliquot_graph_interfaces_20261026/session66-incoming-review/REPORT.md) for the endorsed scope. Theorem B's mismatch formula needs a full-match residual-valuation branch; completed frontiers are already trees, and only **fixed-size** frontier optimality is proved, not a decreasing global rank. The finite Goldbach-dependence share does **not** exclude coverage of distinct-Goldbach exceptions by other sources. The `150232` census and residue tables are independently integer-certified; the source-dependence counts remain unreplayed historical outputs. Theorem A needs `m>=3`, a constant-term necessity proof, and a corrected translation-test description; see the companion modular appendix. Root-27 survival, a second odd untouchable, and the untouchable density remain **OPEN**.
+> [Companion modular qualification audit](session66_root27_aliquot_graph_interfaces_20261026/session66-audit-modular/incoming/APPENDIX.md).
+
 **kind-pasteur-2026-10-25-S4.** Owner dispatch: merge the prior work on modular tables mod odd `n` alternating
 between the `3n-1` and `3n+1` graphs; pursue a source-preserving rank for arbitrarily changing tree shapes on the
 root-27 orbit, with exact carries and guards and hostile tests; use the Frobenius-defect and clone-merger machinery

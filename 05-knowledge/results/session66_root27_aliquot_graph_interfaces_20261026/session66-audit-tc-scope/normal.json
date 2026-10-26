@@ -1,0 +1,91 @@
+{
+  "all_order_tc_exclusion": "OPEN",
+  "cycle_caveat": "C3 has one rotation-quotiented cycle fixed by all 3 automorphisms",
+  "explicit_word_orbits": 172,
+  "frame_brute_order": 1,
+  "gamma_controls": [
+    {
+      "AutGamma": 1,
+      "AutT": 1,
+      "H": 1,
+      "kernel": 1,
+      "n": 0,
+      "naive": "1",
+      "name": "empty",
+      "tc": 1
+    },
+    {
+      "AutGamma": 12,
+      "AutT": 1,
+      "H": 1,
+      "kernel": 12,
+      "n": 1,
+      "naive": "1/12",
+      "name": "singleton",
+      "tc": 1
+    },
+    {
+      "AutGamma": 144,
+      "AutT": 1,
+      "H": 1,
+      "kernel": 144,
+      "n": 2,
+      "naive": "1/144",
+      "name": "transitive_two",
+      "tc": 1
+    },
+    {
+      "AutGamma": 5184,
+      "AutT": 3,
+      "H": 3,
+      "kernel": 1728,
+      "n": 3,
+      "naive": "1/1728",
+      "name": "C3",
+      "tc": 1
+    }
+  ],
+  "graph_controls": 76,
+  "lifted_permutations": 1590,
+  "n10": "NOT RUN OR CERTIFIED",
+  "scope": "all 76 labelled tournaments, n=0..4",
+  "small_orders": [
+    {
+      "labelled_tournaments": 1,
+      "n": 0,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "labelled_tournaments": 1,
+      "n": 1,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "labelled_tournaments": 2,
+      "n": 2,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "labelled_tournaments": 8,
+      "n": 3,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "labelled_tournaments": 64,
+      "n": 4,
+      "tc_spectrum": [
+        1,
+        5
+      ]
+    }
+  ],
+  "status": "PASS"
+}

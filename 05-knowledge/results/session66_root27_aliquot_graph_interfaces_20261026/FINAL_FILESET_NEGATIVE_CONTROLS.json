@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "negative_controls": [
+    {
+      "mode": "normal",
+      "mutant": "modified",
+      "rejected": true,
+      "exit_code": 1
+    },
+    {
+      "mode": "normal",
+      "mutant": "extra",
+      "rejected": true,
+      "exit_code": 1
+    },
+    {
+      "mode": "normal",
+      "mutant": "symlink",
+      "rejected": true,
+      "exit_code": 1
+    },
+    {
+      "mode": "optimized",
+      "mutant": "modified",
+      "rejected": true,
+      "exit_code": 1
+    },
+    {
+      "mode": "optimized",
+      "mutant": "extra",
+      "rejected": true,
+      "exit_code": 1
+    },
+    {
+      "mode": "optimized",
+      "mutant": "symlink",
+      "rejected": true,
+      "exit_code": 1
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+REPORT.md: OK
+SOURCE_PINS.json: OK
+check.py: OK
+inputs/00-AGENTS.md: OK
+inputs/01-RESEARCH-PROTOCOL.md: OK
+inputs/02-ACTIVE-GUARDRAILS.md: OK
+inputs/03-CORE-PAPERS.md: OK
+inputs/04-THM-1370-h-spectrum-omits-7-21-all-n.md: OK
+inputs/05-spectrum.md: OK
+inputs/06-THM-002-ocf.md: OK
+inputs/07-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md: OK
+inputs/08-THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md: OK
+inputs/09-README.md: OK
+inputs/10-GENERAL_PERMUTATION.md: OK
+inputs/11-CONNECTIONS.md: OK
+normal.json: OK
+optimized.json: OK

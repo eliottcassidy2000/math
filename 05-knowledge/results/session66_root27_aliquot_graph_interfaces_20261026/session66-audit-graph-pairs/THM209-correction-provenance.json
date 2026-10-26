@@ -1,0 +1,11 @@
+{
+  "path": "01-canon/theorems/THM-209-independence-polynomial.md",
+  "pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "pin_blob": "983d8655b66627fbd39661c69a3a324f2fe261b6",
+  "pin_sha256": "b6bf2c296da08e6f16bee6a1e04a48bf0a38ee3b48c57054298172e3fc1bfd2f",
+  "inspected_HEAD": "97f0fde6f26d7ad732442b78593b598eb5484df4",
+  "HEAD_equals_pin": true,
+  "worktree_equals_HEAD": true,
+  "original_status_line": "**Status:** VERIFIED (exhaustive n=3..7, sampled n=8: 5K, n=9: 5K, n=10: 200), PROOF NEEDED",
+  "original_definition_line": "For a tournament T on n vertices, let OddCyc(T) denote the set of all directed odd cycles in T (as vertex sets). Define the **odd-cycle disjointness graph** G(T):"
+}

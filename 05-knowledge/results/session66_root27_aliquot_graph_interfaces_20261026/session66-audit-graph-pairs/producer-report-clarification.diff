@@ -1,0 +1,11 @@
+--- producer-report-original.md
++++ session66-graph-pairs/REPORT.md
+@@ -201,6 +201,8 @@
+ cmp normal.json optimized.json
+ ```
+ 
++The supplied `decode_joint` and `decode_graph` routines are valid-image decoders, not image-membership validators: their contract assumes input was produced by the corresponding codec (up to relabelling). Malformed inputs require separate validation and need not be rejected by these routines. The independent audit supplies strict recognizers and malformed-input controls.
++
+ All conditions are explicit exceptions, not removable assertions. The checker performs:
+ 
+ - every labelled tournament on orders0–5 (1,100 total): both codec round trips, weighted clone reconstruction, independent comparison of Hamiltonian-path permutation count, subset DP, and cycle-conflict independence recursion;

@@ -1,0 +1,53 @@
+{
+  "PATH_during_replays": "/nonexistent",
+  "frozen_directory": "/tmp/session66-modular-offline-0EDVFK",
+  "git_not_available_on_PATH": true,
+  "network_not_used": true,
+  "no_sibling_repository": true,
+  "python_executable_supplied_by_absolute_path": true,
+  "replays": [
+    {
+      "byte_identical": true,
+      "output": "frozen-normal.json",
+      "reference": "normal.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "byte_identical": true,
+      "output": "frozen-optimized.json",
+      "reference": "optimized.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "byte_identical": true,
+      "output": "frozen-constructor.json",
+      "reference": "constructor-normal.json",
+      "sha256": "2b2cd05fa355dbd47f981d016df14bbb03c675054c9ea3ece002cc7c94ba9401"
+    },
+    {
+      "byte_identical": true,
+      "output": "frozen-producer-normal.json",
+      "reference": "input/normal.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "byte_identical": true,
+      "output": "frozen-producer-optimized.json",
+      "reference": "input/optimized.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "byte_identical": true,
+      "output": "incoming/frozen-normal.json",
+      "reference": "incoming/normal.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "byte_identical": true,
+      "output": "incoming/frozen-optimized.json",
+      "reference": "incoming/optimized.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    }
+  ],
+  "status": "PASS"
+}

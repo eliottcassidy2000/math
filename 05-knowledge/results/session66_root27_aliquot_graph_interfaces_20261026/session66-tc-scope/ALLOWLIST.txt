@@ -1,0 +1,15 @@
+REPORT.md
+SOURCES.json
+check.py
+normal.json
+optimized.json
+sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md
+sources/LEM-003-aut-acts-freely-on-ham-paths.md
+sources/PREREGISTRATION.md
+sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md
+sources/graph-pairs-REPORT.md
+sources/graph-pairs-SOURCE_PINS.json
+sources/tc_fibres_n10.json
+sources/tc_fibres_n10_20261026.py
+ALLOWLIST.txt
+SHA256SUMS

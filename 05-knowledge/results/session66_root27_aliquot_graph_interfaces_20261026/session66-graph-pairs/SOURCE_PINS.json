@@ -1,0 +1,103 @@
+{
+  "repo": "eliottcassidy2000/math",
+  "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "read_only_source": true,
+  "files": [
+    {
+      "source_path": "AGENTS.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "local_path": "inputs/00-AGENTS.md"
+    },
+    {
+      "source_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "local_path": "inputs/01-RESEARCH-PROTOCOL.md"
+    },
+    {
+      "source_path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "local_path": "inputs/02-ACTIVE-GUARDRAILS.md"
+    },
+    {
+      "source_path": "05-knowledge/reference/CORE-PAPERS.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "local_path": "inputs/03-CORE-PAPERS.md"
+    },
+    {
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "local_path": "inputs/04-THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "local_path": "inputs/05-spectrum.md"
+    },
+    {
+      "source_path": "01-canon/theorems/THM-002-ocf.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "74984a8a1ace0c570c7fd1c0beda5aae675eedaa",
+      "sha256": "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e",
+      "local_path": "inputs/06-THM-002-ocf.md"
+    },
+    {
+      "source_path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "local_path": "inputs/07-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md"
+    },
+    {
+      "source_path": "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "ab415482c9a32d0dbd3442135244c4eb7e22fd61",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf",
+      "local_path": "inputs/08-THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md"
+    },
+    {
+      "source_path": "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "c9d025205682b5113727f317f499f8daeea590a6",
+      "sha256": "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03",
+      "local_path": "inputs/09-README.md"
+    },
+    {
+      "source_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "85fd48d022fc58388e14c1a26b0ece751512ca52",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "local_path": "inputs/10-GENERAL_PERMUTATION.md"
+    },
+    {
+      "source_path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/CONNECTIONS.md",
+      "source_commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "e8d19ee4eba77d8ab3cfa06a3915bc36a6ae5199",
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df",
+      "local_path": "inputs/11-CONNECTIONS.md"
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://arxiv.org/html/2412.10572v3",
+      "role": "Irving-Omar Corollary20, cites Grinberg-Stanley; cycle definition modulo rotation",
+      "retrieved": "2026-10-26"
+    },
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+      "role": "Busch2006 exact strong minimum, inherited full corollary; primary page checked",
+      "retrieved": "2026-10-26"
+    }
+  ]
+}

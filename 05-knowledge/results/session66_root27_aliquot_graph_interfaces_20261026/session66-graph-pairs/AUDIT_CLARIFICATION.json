@@ -1,0 +1,5 @@
+{
+  "old_report_sha256": "e073dda07857953759b6c09a4a023a23b619d83c77f0a20d3c6e3e4b4ff91e8a",
+  "new_report_sha256": "b58d578afb6e8e3254eb02b7a398b67785d5a9f1f2dbd2f27d1dec71dd0ee7d8",
+  "scope": "Documentation-only valid-image decoder contract; independent audit supplies strict image recognizers. Algorithms and output receipts unchanged."
+}

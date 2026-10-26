@@ -1,0 +1,9 @@
+{
+  "checked_utc_date": "2026-10-26",
+  "sources": [
+    {"title": "Finite connected components of the aliquot graph", "author": "Andrew R. Booker", "version": "arXiv:1610.07471v2, 15 June 2017", "url": "https://arxiv.org/pdf/1610.07471v2", "pin": "PDF page 2, footnote 2", "supports": "Ordinary-versus-distinct Goldbach boundary; p<=9781 through4e18; remaining small distinctness test."},
+    {"title": "Goldbach conjecture verification", "author": "Tomas Oliveira e Silva", "url": "https://sweet.ua.pt/tos/goldbach.html", "pin": "Introduction definition p(n), News January16 and April4 2012, Computational results", "supports": "Minimal first-prime computation, record9781 and completed4e18 range."},
+    {"title": "On untouchable numbers and related problems", "authors": "Carl Pomerance and Hee-Sung Yang", "version": "14 June 2012 manuscript", "url": "https://math.dartmouth.edu/~carlp/uupaper3.pdf", "pin": "Section5, PDF page8 (parity and composite-square-root bound); page9 census table", "supports": "Prior near-linear prefix enumeration; odd square source reduction and root cutoffN^(2/3); count150232 through1e6."}
+  ],
+  "boundary": "Large cited Goldbach computation was not rerun. This audit independently checks the distinctness bridge8..19562 and exact finite target census through1e6. Historical paper statements about upper density are not imported."
+}

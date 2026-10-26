@@ -1,0 +1,11 @@
+PASS T1 affine step: x->3x-1 equals (x->x+1) o (x->3x+1) o (x->x-1) over Z/m for all m <= 60
+PASS T1b the unit translation is not a conjugacy of the Syracuse maps (counterexamples exist among odd x < 2000)  [500]
+PASS T2 E_k^-(m) = negation of E_k^+(m) in both coordinates, all odd m <= 101, k = 1..6
+PASS T3 E_{k+t}^-(m) = E_k^+(m) with the source negated and the target kept, for every odd m <= 101 with 2^t = -1
+odd m <= 101 with -1 in <2> and the shift t: {3: 1, 5: 2, 9: 3, 11: 5, 13: 6, 17: 4, 19: 9, 25: 10, 27: 9, 29: 14, 33: 5, 37: 18, 41: 10, 43: 7, 53: 26, 57: 9, 59: 29, 61: 30, 65: 6, 67: 33, 81: 27, 83: 41, 97: 24, 99: 15, 101: 50}
+PASS T3b m = 3, 5, 9, 27 have t = 1, 2, 3, 9
+PASS T3c mod 3 the plus table with k halvings lands in residue 2 for odd k and 1 for even k, the minus table the reverse
+PASS T4 hostiles m = 7, 15, 21, 23, 31, 45, 63: no halving shift makes the minus table the (source-negated) plus table
+ord_m(2) for m = 3,5,7,9,15,27: {3: 2, 5: 4, 7: 3, 9: 6, 15: 4, 27: 18}
+7 checks, 0 failed
+ALL CHECKS PASSED

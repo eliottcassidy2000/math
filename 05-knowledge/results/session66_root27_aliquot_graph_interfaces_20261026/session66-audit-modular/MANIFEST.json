@@ -1,0 +1,247 @@
+{
+  "audit": "independent modular/clone-defect audit",
+  "files": [
+    {
+      "bytes": 1786,
+      "path": "PORTABILITY.json",
+      "sha256": "c2ade7177f9ea992d3a606b2894f5879a7c096c08d3be01b28c6b814ea6420f5"
+    },
+    {
+      "bytes": 15364,
+      "path": "REPORT.md",
+      "sha256": "3120f88a9072f7b83c077b5c59cb5842fa695d8a2ba83a50605268a4eb73310b"
+    },
+    {
+      "bytes": 14979,
+      "path": "check.py",
+      "sha256": "a42cdee7f7a8c291b78080f33cb7da7aa456c6fbb760821426a63d4db7ba7f7c"
+    },
+    {
+      "bytes": 62558,
+      "path": "constructor-210.json",
+      "sha256": "20a795a6f4ec840f864dddbdcc5a06ea2c0def18a4fba8961e7a0ad30d57db67"
+    },
+    {
+      "bytes": 303,
+      "path": "constructor-normal.json",
+      "sha256": "2b2cd05fa355dbd47f981d016df14bbb03c675054c9ea3ece002cc7c94ba9401"
+    },
+    {
+      "bytes": 303,
+      "path": "constructor-optimized.json",
+      "sha256": "2b2cd05fa355dbd47f981d016df14bbb03c675054c9ea3ece002cc7c94ba9401"
+    },
+    {
+      "bytes": 303,
+      "path": "frozen-constructor.json",
+      "sha256": "2b2cd05fa355dbd47f981d016df14bbb03c675054c9ea3ece002cc7c94ba9401"
+    },
+    {
+      "bytes": 6849,
+      "path": "frozen-normal.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "bytes": 6849,
+      "path": "frozen-optimized.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "bytes": 3392,
+      "path": "frozen-producer-normal.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 3392,
+      "path": "frozen-producer-optimized.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 6895,
+      "path": "git-verified-final.json",
+      "sha256": "4e671e53e5e89fab6495bd4e95b14a69e9690a208b14bef6e0ae0df8f04692ac"
+    },
+    {
+      "bytes": 7553,
+      "path": "incoming/APPENDIX.md",
+      "sha256": "2ca04661bfa353943d03751bbc5df6746548a2d2eab5b058f0520cdf587a50ac"
+    },
+    {
+      "bytes": 2490,
+      "path": "incoming/MANIFEST.json",
+      "sha256": "935327e53cfa2791315204ea6bc14d93988f19117b8f99b4965353487964bf02"
+    },
+    {
+      "bytes": 1162,
+      "path": "incoming/SHA256SUMS",
+      "sha256": "87c5248deec457575e30990a98f1de26980af066a838acebbfd933d390ae32d8"
+    },
+    {
+      "bytes": 1187,
+      "path": "incoming/SOURCE_MANIFEST.json",
+      "sha256": "becf5388da3afe7a5eb5212b79efc6c673bae603a403f6b3679d7ec21f09fc2e"
+    },
+    {
+      "bytes": 4694,
+      "path": "incoming/check.py",
+      "sha256": "1f338410897202bd37845ad3c432f079104342076c0c4c06a6168c9d7f03cc6f"
+    },
+    {
+      "bytes": 7010,
+      "path": "incoming/frozen-normal.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 7010,
+      "path": "incoming/frozen-optimized.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 1041,
+      "path": "incoming/input/sheet_tables_mod_odd_kps_20261025.out",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    },
+    {
+      "bytes": 5326,
+      "path": "incoming/input/sheet_tables_mod_odd_kps_20261025.py",
+      "sha256": "ada4f06cac43ec9924c52170bed00780a05799b9530d20737563ca69f1f431ed"
+    },
+    {
+      "bytes": 19730,
+      "path": "incoming/input/sheets_root27_rank_untouchables_20261025.md",
+      "sha256": "8055bcc2d653bc9f313769279c84e4eda673297236bb4301c804042a75db36d9"
+    },
+    {
+      "bytes": 7010,
+      "path": "incoming/normal.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 7010,
+      "path": "incoming/optimized.json",
+      "sha256": "225cde6f0fa99e9231b0813a09802ea66948d3be846e1f20e9a1bce391068fa4"
+    },
+    {
+      "bytes": 1041,
+      "path": "incoming/producer-normal.txt",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    },
+    {
+      "bytes": 1041,
+      "path": "incoming/producer-optimized.txt",
+      "sha256": "f2f051dfb30e7c630c2079e56d41126afff0a3f6d2683ac19e0bd3466653fb4b"
+    },
+    {
+      "bytes": 6842,
+      "path": "initial-git-verified.json",
+      "sha256": "6261803b42bea7478952a90c63d9cbc1f6903ff71e40daa29bbc110cd87eeda6"
+    },
+    {
+      "bytes": 2232,
+      "path": "input/MANIFEST.json",
+      "sha256": "942ef6e3e32ff2698b876edfbd1ea2f4a57b2dc8fee10b83c5f7d1d2eabda960"
+    },
+    {
+      "bytes": 18392,
+      "path": "input/REPORT.md",
+      "sha256": "30ab70d0dbdaaf0ac722008f5d99cce371fb872034173247e7c047cb884b8753"
+    },
+    {
+      "bytes": 2521,
+      "path": "input/SOURCE_MANIFEST.json",
+      "sha256": "52d5464432176420d8bc36e483fe593ee0987bd409619a94aeb7d6e6499c2f6f"
+    },
+    {
+      "bytes": 7170,
+      "path": "input/check.py",
+      "sha256": "d0dd6d29b12ac645cd540d011db7dd012939852d613e7321ef6022b884fa029e"
+    },
+    {
+      "bytes": 11049,
+      "path": "input/inputs/01-signed_collatz_pair_lifts_20261014d.md",
+      "sha256": "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec"
+    },
+    {
+      "bytes": 12101,
+      "path": "input/inputs/02-arithmetic_braids_20260917_collatz.md",
+      "sha256": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0"
+    },
+    {
+      "bytes": 34223,
+      "path": "input/inputs/03-collatz_mod6_20260917_row_braid_typing.md",
+      "sha256": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc"
+    },
+    {
+      "bytes": 7053,
+      "path": "input/inputs/04-THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+    },
+    {
+      "bytes": 21162,
+      "path": "input/inputs/05-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    },
+    {
+      "bytes": 4720,
+      "path": "input/inputs/06-GENERAL_PERMUTATION.md",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd"
+    },
+    {
+      "bytes": 20104,
+      "path": "input/inputs/07-REPORT.md",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397"
+    },
+    {
+      "bytes": 3392,
+      "path": "input/normal.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 3392,
+      "path": "input/optimized.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 6849,
+      "path": "normal.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "bytes": 6849,
+      "path": "optimized.json",
+      "sha256": "db075ba7dd3ea757f1c140c05fc59f733ddabe84abc2db05661a35f80c037bc2"
+    },
+    {
+      "bytes": 3392,
+      "path": "producer-replay-normal.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 3392,
+      "path": "producer-replay-optimized.json",
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "bytes": 9535,
+      "path": "startup.txt",
+      "sha256": "6c556198314a064887ec0e70c6eae68b4c4298723a52ea4ad5c0a342630ee46e"
+    },
+    {
+      "bytes": 2936,
+      "path": "verify_constructor.py",
+      "sha256": "0a308aa9f872cde1e8f2a564092f3d6bb389256e5b0340d4879779a95f1dfe61"
+    }
+  ],
+  "incoming_appendix": "incoming/APPENDIX.md separately scopes corrections to the incoming Theorem A",
+  "replays": {
+    "constructor_verifier": "byte-identical normal and -O",
+    "independent_checks": 595164,
+    "independent_modes": "byte-identical normal and -O",
+    "portability": "frozen unrelated directory, PATH=/nonexistent, all seven replays byte-identical",
+    "producer": "exact match to sealed outputs in both modes"
+  },
+  "required_original_packet_corrections": [],
+  "scope": "No producer edits or repository publication",
+  "source_pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "status": "PASS"
+}

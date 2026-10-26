@@ -1,0 +1,120 @@
+{
+  "all_isolate_rejections": 10,
+  "boundaries": [
+    {
+      "automorphisms": 1,
+      "edges_by_color": {},
+      "kind": "joint",
+      "n": 0,
+      "vertices": 0,
+      "word": 0
+    },
+    {
+      "automorphisms": 1,
+      "edges_by_color": {},
+      "kind": "gamma",
+      "n": 0,
+      "vertices": 0,
+      "word": 0
+    },
+    {
+      "automorphisms": 1,
+      "edges_by_color": {
+        "1": 6
+      },
+      "kind": "joint",
+      "n": 1,
+      "vertices": 7,
+      "word": 0
+    },
+    {
+      "automorphisms": 12,
+      "edges_by_color": {
+        "1": 8
+      },
+      "kind": "gamma",
+      "n": 1,
+      "vertices": 9,
+      "word": 0
+    },
+    {
+      "automorphisms": 1,
+      "edges_by_color": {
+        "1": 12,
+        "2": 1
+      },
+      "kind": "joint",
+      "n": 2,
+      "vertices": 14,
+      "word": 0
+    },
+    {
+      "automorphisms": 144,
+      "edges_by_color": {
+        "1": 17
+      },
+      "kind": "gamma",
+      "n": 2,
+      "vertices": 18,
+      "word": 0
+    },
+    {
+      "automorphisms": 1,
+      "edges_by_color": {
+        "1": 12,
+        "2": 1
+      },
+      "kind": "joint",
+      "n": 2,
+      "vertices": 14,
+      "word": 1
+    },
+    {
+      "automorphisms": 144,
+      "edges_by_color": {
+        "1": 17
+      },
+      "kind": "gamma",
+      "n": 2,
+      "vertices": 18,
+      "word": 1
+    }
+  ],
+  "generic_iso_brute_controls": {
+    "all_automorphism_counts": 140,
+    "all_graph_pair_comparisons": 4201,
+    "universe": "all simple graphs through n=4; all four-state symmetric relations on n=3"
+  },
+  "independent_all_labelled_spectra": {
+    "strong_spectra": {
+      "3": [
+        3
+      ],
+      "4": [
+        5
+      ],
+      "5": [
+        9,
+        11,
+        13,
+        15
+      ],
+      "6": [
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        37,
+        41,
+        43,
+        45
+      ]
+    },
+    "tournaments_orders_3_through_6": 33864
+  }
+}

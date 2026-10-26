@@ -1,0 +1,18 @@
+{
+  "mutation": "wrong expected singleton naive quotient 1/13 rather than 1/12",
+  "results": [
+    {
+      "expected_failure": "RuntimeError: minimal denominator hostile",
+      "flags": [],
+      "returncode": 1
+    },
+    {
+      "expected_failure": "RuntimeError: minimal denominator hostile",
+      "flags": [
+        "-O"
+      ],
+      "returncode": 1
+    }
+  ],
+  "status": "PASS"
+}

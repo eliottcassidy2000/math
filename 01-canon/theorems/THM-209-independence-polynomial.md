@@ -1,5 +1,16 @@
 # THM-209: H = Independence Polynomial of Odd-Cycle Disjointness Graph at x=2
 
+> **CURRENT CORRECTION (2026-10-26).** The correctly defined odd-cycle
+> collection formula is **PROVED for all tournament orders**; see
+> [THM-002 / OCF](THM-002-ocf.md), external proof 1. Conflict-graph vertices
+> are literal directed odd cycles modulo cyclic rotation, not their vertex
+> supports: different cycles on one support remain distinct vertices. The
+> historical “PROOF NEEDED” status and “as vertex sets” wording below are
+> superseded. A five-vertex witness has four directed triangles and three
+> directed 5-cycles: its literal conflict graph is `K7` and `H=15`, whereas
+> collapsing equal supports gives `K5` and `I(K5,2)=11`. The body below is
+> preserved as historical provenance. See the [independent witness and audit](../../05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-audit-graph-pairs/REPORT.md).
+
 **Status:** VERIFIED (exhaustive n=3..7, sampled n=8: 5K, n=9: 5K, n=10: 200), PROOF NEEDED
 **Found by:** opus-2026-03-14-S89b
 **Verified in:** `04-computation/crown_jewel_verify_89b.py`, `04-computation/ip_verify_n7n8.c`, `04-computation/ip_sample_n9_large_89b.py`, `04-computation/ip_sample_n10_fixed_89b.py`

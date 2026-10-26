@@ -4,6 +4,36 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+
+## 2026-10-26 — Session66: retain literal cycles, endpoint conventions, and the exact rank branch
+
+- **Cycle/support failure:** [THM-209](theorems/THM-209-independence-polynomial.md)
+  collapsed directed odd cycles to vertex supports and retained a stale
+  “PROOF NEEDED” label. On the five-vertex witness there are four triangles
+  and three distinct directed5-cycles: literal conflict graph K7 gives H15,
+  while support collapse gives K5 and11. Keep cycles modulo rotation as
+  vertices. [THM-002](theorems/THM-002-ocf.md) external proof supplies the
+  all-order formula; this repair claims no new theorem.
+- **Complement convention:** Irving–Omar's digraph complement includes
+  diagonal loops; only its loop-deleted graph equals the converse.
+  Hamiltonian paths use distinct vertices, so the counts agree unchanged.
+- **Incoming rank and quantifier failures:** the [KP-S4 historical note](../05-knowledge/results/sheets_root27_rank_untouchables_20261025.md)
+  needs a full-match residual-valuation branch (z21, word1000 has rank−2,
+  not the length-minus-LCP value0). A completed frontier is already a tree;
+  the audited optimum is fixed-size, not a globally decreasing rank.
+  Finite semiprime-dependent targets are not Goldbach exceptions, so their
+  census does not forbid non-semiprime coverage of actual exceptions.
+- **Exact evidence boundary:** float FFT plus rounding alone does not certify
+  its support. The independent integer audit certifies the150232 census
+  through10^6 and its residue tables, not the unreplayed source-dependence
+  counts443731/56267 or composite-pair count2509482. Odd-modulus table
+  necessity uses the constant term at source residue0; m1 is a separate
+  trivial boundary, and the inherited translation-test description is repaired.
+- **Survivors / next test:** literal-cycle OCF, qualified fixed-size rank
+  identities, modular shift classification and certified finite census remain.
+  Root27 survival/global rank, odd-untouchable uniqueness and actual density
+  existence/value stay open. [Independent audit and certificates](../05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/README.md).
+
 ## 2026-10-26 — sum output valuations from the first returned value, not the source
 
 - **Affected incoming statement:** the 3-adic form in

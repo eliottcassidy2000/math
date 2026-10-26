@@ -1,0 +1,67 @@
+{
+  "source_pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 18392,
+      "sha256": "30ab70d0dbdaaf0ac722008f5d99cce371fb872034173247e7c047cb884b8753"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 2521,
+      "sha256": "52d5464432176420d8bc36e483fe593ee0987bd409619a94aeb7d6e6499c2f6f"
+    },
+    {
+      "path": "check.py",
+      "bytes": 7170,
+      "sha256": "d0dd6d29b12ac645cd540d011db7dd012939852d613e7321ef6022b884fa029e"
+    },
+    {
+      "path": "inputs/01-signed_collatz_pair_lifts_20261014d.md",
+      "bytes": 11049,
+      "sha256": "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec"
+    },
+    {
+      "path": "inputs/02-arithmetic_braids_20260917_collatz.md",
+      "bytes": 12101,
+      "sha256": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0"
+    },
+    {
+      "path": "inputs/03-collatz_mod6_20260917_row_braid_typing.md",
+      "bytes": 34223,
+      "sha256": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc"
+    },
+    {
+      "path": "inputs/04-THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "bytes": 7053,
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+    },
+    {
+      "path": "inputs/05-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "bytes": 21162,
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    },
+    {
+      "path": "inputs/06-GENERAL_PERMUTATION.md",
+      "bytes": 4720,
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd"
+    },
+    {
+      "path": "inputs/07-REPORT.md",
+      "bytes": 20104,
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 3392,
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 3392,
+      "sha256": "9916ece930f56875bcc1f266a9449dff7a0f179421ae6fb55c408ddd7c6a02c3"
+    }
+  ],
+  "tests": "normal.json equals optimized.json; 261902 exact checks",
+  "independent_audit": "pending"
+}

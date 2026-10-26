@@ -1,0 +1,235 @@
+{
+  "checks": {
+    "actual_macro86": 1,
+    "actual_refill_5_2_9": 1,
+    "arbitrary_graph_K3_value7": 1,
+    "arbitrary_graph_P4_value21": 1,
+    "archived_source_git_blob": 29,
+    "archived_source_sha256": 29,
+    "blocked_symbol_rejected": 1,
+    "clone_quotient_cycles": 1,
+    "clone_weighted_defect_77": 1,
+    "closest_unique": 1,
+    "cocycle": 1,
+    "committed_source_bytes": 29,
+    "distinct_goldbach_small_completion": 9778,
+    "divisor_actual_increasing_defect_91": 1,
+    "divisor_carrier_sizes": 1,
+    "divisor_minimum_defect_7": 1,
+    "divisor_weighted_evaluation": 1,
+    "fiber_not_monoid_congruence": 1,
+    "finite_bank_hostile_two_centers": 1,
+    "graph_difference_twice_tournament_defect": 1,
+    "inclusive_fiber_boundary": 1,
+    "mod3_mod5_not_mod15": 1,
+    "odd_table_shift_classification": 499,
+    "permutation_cycles": 63,
+    "port_doubling_conjugacy": 1,
+    "port_phi_bijection": 1,
+    "prime_relabelling_loses_weights": 1,
+    "proper_divisor_boundary_not_stable": 1,
+    "q2_center_bank_hostile": 1,
+    "q2_not_q1_lifetime": 1,
+    "real_contraction": 1,
+    "root_repository_source_git_blob": 4,
+    "root_repository_source_sha256": 4,
+    "root_sections": 1,
+    "signed_defect": 1,
+    "signed_port_cycle_census": 1,
+    "signed_port_minimum_defect": 1,
+    "unique_closest_pair": 1,
+    "valuation_nonzero": 874
+  },
+  "clone_quotient_cycle_type": {
+    "3": 7,
+    "6": 14
+  },
+  "different_defect_observables": {
+    "divisor_increasing_orientation": 91,
+    "divisor_interior_unrestricted": 7,
+    "signed_ports_antipodal_modules": 77,
+    "signed_ports_unrestricted": 21
+  },
+  "git_commit_bytes_checked": true,
+  "goldbach_small_completion": {
+    "count": 9778,
+    "even_range": [
+      8,
+      19562
+    ],
+    "witness_sha256": "11dde2e62c4d6390c01c645cbd417e9993fcfcbe3f6b6770dbc9c2bc6c1e7c5f"
+  },
+  "scope": "Small independently implemented cross-carrier and boundary controls; universal claims require the audited proofs.",
+  "signed_port_cycle_type": {
+    "6": 7,
+    "12": 14
+  },
+  "source_records": [
+    [
+      "session66-root27",
+      "00-navigation/START-HERE.md",
+      "8f80249e7b1b42064e298c8e7b38ac6f971562b8ce71c43fd58fcd5ae969d0fd"
+    ],
+    [
+      "session66-root27",
+      "01-canon/ACTIVE-GUARDRAILS.md",
+      "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    ],
+    [
+      "session66-root27",
+      "00-navigation/RESEARCH-PROTOCOL.md",
+      "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "b13ef3e5d1b6a82f1ea9cd08295743497131a26586ffc82c20eb2c9d62efbed9"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/root27_machine_bridges_20261026/anchor/check.py",
+      "d8b54dc0e1537701dd7cc4ed8ea63c2fbacd33d5f7f16b24cd0371f728c27c9f"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/root27_machine_bridges_20261026/anchor/INDEPENDENT_REVIEW.md",
+      "fc7bfae4f0c8550df7ca085a340e3e641f8e5afb190b7a901b2c115b03c51ce3"
+    ],
+    [
+      "session66-root27",
+      "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7"
+    ],
+    [
+      "session66-root27",
+      "01-canon/theorems/THM-4771-odd-orbit-and-countdown-forms-of-bb6-cryptids-antihydra-a4-a11-a2-a5-a10.md",
+      "58d54ba28a5114dced72c03a35375f2a111009c69c4c73c2ea08073b4b7c3023"
+    ],
+    [
+      "session66-modular",
+      "05-knowledge/results/signed_collatz_pair_lifts_20261014d.md",
+      "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec"
+    ],
+    [
+      "session66-modular",
+      "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0"
+    ],
+    [
+      "session66-modular",
+      "05-knowledge/results/collatz_mod6_20260917_row_braid_typing.md",
+      "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc"
+    ],
+    [
+      "session66-modular",
+      "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1"
+    ],
+    [
+      "session66-modular",
+      "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    ],
+    [
+      "session66-modular",
+      "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd"
+    ],
+    [
+      "session66-modular",
+      "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397"
+    ],
+    [
+      "session66-graph-pairs",
+      "AGENTS.md",
+      "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    ],
+    [
+      "session66-graph-pairs",
+      "00-navigation/RESEARCH-PROTOCOL.md",
+      "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    ],
+    [
+      "session66-graph-pairs",
+      "01-canon/ACTIVE-GUARDRAILS.md",
+      "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    ],
+    [
+      "session66-graph-pairs",
+      "05-knowledge/reference/CORE-PAPERS.md",
+      "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+    ],
+    [
+      "session66-graph-pairs",
+      "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    ],
+    [
+      "session66-graph-pairs",
+      "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    ],
+    [
+      "session66-graph-pairs",
+      "01-canon/theorems/THM-002-ocf.md",
+      "3691f3d673e84a8c79ce01bb2cc778cdf7ddf8c483b0148e771feeb28fbea83e"
+    ],
+    [
+      "session66-graph-pairs",
+      "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    ],
+    [
+      "session66-graph-pairs",
+      "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf"
+    ],
+    [
+      "session66-graph-pairs",
+      "05-knowledge/results/session62_agent_theme_bridges_20261025/clone/README.md",
+      "7d3f790dd7f0196cb82f909929fd1234668b6445bd0262bd13f78d5e6010de03"
+    ],
+    [
+      "session66-graph-pairs",
+      "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd"
+    ],
+    [
+      "session66-graph-pairs",
+      "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/CONNECTIONS.md",
+      "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df"
+    ],
+    [
+      "session66-root",
+      "05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md",
+      "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb"
+    ],
+    [
+      "session66-root",
+      "05-knowledge/results/normseven_f1_20261025/TWIST_AVERAGE.md",
+      "58171d88a66f9016feae0a1b97f483d469901643090a1ba8840811a506351262"
+    ],
+    [
+      "session66-root",
+      "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397"
+    ],
+    [
+      "session66-root",
+      "00-navigation/META-PATTERNS.md",
+      "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    ]
+  ],
+  "status": "PASS"
+}

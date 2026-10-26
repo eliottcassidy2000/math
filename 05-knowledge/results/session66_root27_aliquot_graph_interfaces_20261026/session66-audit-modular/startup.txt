@@ -1,0 +1,81 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: codex/session66-root27-aliquot
+HEAD:   d1635ee0a101
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: clean
+
+== Recent commits (3) ==
+d1635ee0a10 (HEAD -> codex/session66-root27-aliquot, origin/main, origin/HEAD) opus-2026-10-26-S57: reserve THM-4790..4792, HYP-9400..9402 (untouchables, root-27 source-preserving rank, 3n+-1 tables, tournament graph pairs)
+e787a904b36 mac-mini-2026-10-25-pyth: apply independent audit (MISTAKE-670) - THM-4780 credits fixed (elimination calculus from wheel_run_interface_20261014h / paley_next_cores_20261014i; PGL(2) invariance classical, counting lemma new), part 2/4 wording, TT4 lemma cited as the classical 4-cycle bound; HYP-9390 Sym^2 sign corrected (|b(q)|^2 = q^2 - S_q), Remark 1 ring corrected; note section 2/3/5/7 fixes; seven-vertex census: TT7 at 72 q outside 97 GL(2) newform orbits of 2-power level, genuine part g(q) isolated with the audit's exact reduced form (tt7/); audit report, scripts and required_edits.json
+2807ee83497 opus-2026-10-25-S56: close - session letter, reply to klein (Antihydra note absorbed with credit; A11 = Hydra)
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: signed modular inverse fibre exact valuation antipodal clone defect
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
+- MISTAKE-613 (2026-10-14, opus-2026-10-14-S35 paley_least_resistance_runs_one_modular_form_20261014.md, one_twenty_eight_atlas_balance_gold_20261014.md, HYP-9275, HYP-9277, HYP-9278 and their scripts; found by the session's independent adversarial audit before the close-out push) -- classical results typed as new, a mechanism repeated that THM-438 had already refuted, ranges that rested on a perfect-square test, a conjecture called a theorem, and a coincidence filed as a cycle denominator
+- MISTAKE-436 (2026-08-21, THM-3670 audit) -- a raw boundary jump was substituted for a signed successor-mass defect
+- MISTAKE-545 (2026-09-06, empty-core research probe) -- three live directions do not force an additive circuit
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: signed modular inverse fibre exact valuation antipodal clone defect ==
+rank terms: signed modular inverse fibre valuation antipodal clone defect, signed, modular, inverse, fibre, valuation, antipodal, clone
+Current-route matches (ranked):
+  00-navigation/LRC14-PROOF-MAP.md:52: Independently audited THM-2449 says any rational lawful anchored continuation either fires all `72` mixed source-target colours after one rectangle defect or is exactly delta plus six replicas. THM-2456 identifies that failure as a uniform owner-minus-replica root-density offset: it is trivial on one Boolean chart, but...
+  00-navigation/LRC14-PROOF-MAP.md:70: | Rank code / target landing | THM-2295/2298 force ranks five/six; THM-2307 gives the `77/7/1` dual ambiguity. THM-2323/2326/2327 force strict-row `91`-unit edges; THM-2349 extends the marked triangle and inverse boundary to all `165` rows at finite delayed clocks. THM-2331/2334/2337 retain target fibres, word twists, ...
+  00-navigation/META-PATTERNS.md:42: **Action:** if fixed scales lose cancellation, retain the face; at a zero evaluate a target-bearing transverse layer for valuation, carry, or Gram defect. Require a seed and labels: THM-3058 has no bounded jet on an arbitrary zero face, while THM-3066 erases the pointed Keller ratio. **Evidence:** THM-2022/2159/2165/2193...
+  ... 13 more qualifying route matches
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [PROVED] 01-canon/theorems/THM-2509-antipodal-radon-cospan-and-lossless-septimal-chart.md
+    ... 1631 more; refine the query
+  Unproved candidates (not results):
+    [RESERVED] 01-canon/theorems/THM-3284-modular-parity-fibre-product-and-projective-decoupling.md
+  Hypotheses:
+    [LEDGER] 05-knowledge/hypotheses/INDEX.md
+  Historical reflections:
+    [HISTORY] 07-reflections/the-dvdk-residual-is-one-unramified-hensel-small-root-product-a-formalization-map-for-thm-2067-deathstar-S106.md
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-repo/05-knowledge/results/port_residual_integral_20261025/counting/MODULAR.md
+  ... 1974 more; refine the query
+
+== Coordination ==
+No .machine-id: use a temporary session name; do not invent registration.
+Legacy IDs collide: cite every theorem as ID + slug/path.

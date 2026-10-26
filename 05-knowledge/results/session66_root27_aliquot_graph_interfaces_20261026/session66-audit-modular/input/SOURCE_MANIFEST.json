@@ -1,0 +1,54 @@
+{
+  "pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "sources": [
+    {
+      "path": "05-knowledge/results/signed_collatz_pair_lifts_20261014d.md",
+      "local": "inputs/01-signed_collatz_pair_lifts_20261014d.md",
+      "git_blob": "a234193e3ae1a79e3cc9714a0b6cb825e11a9caf",
+      "sha256": "d3c6091c426b46421ecae0ee60568f2569944886a47cac12b6cdbf9e914d63ec",
+      "bytes": 11049
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_collatz.md",
+      "local": "inputs/02-arithmetic_braids_20260917_collatz.md",
+      "git_blob": "74fec4a45f9a7e617389a09df264215eaab79273",
+      "sha256": "2a4d7a23e3b8e191ce2c68fe052b738bf10a05f483223bc52973ba753cec85b0",
+      "bytes": 12101
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_row_braid_typing.md",
+      "local": "inputs/03-collatz_mod6_20260917_row_braid_typing.md",
+      "git_blob": "a1fac54757bbae592d8860b899ec083929ba2d2b",
+      "sha256": "08c0d5110eb4c438832dfeec1ae60be58d460be33b740f29a85fedd2f8bb1ddc",
+      "bytes": 34223
+    },
+    {
+      "path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "local": "inputs/04-THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "git_blob": "60da26daf9f6d7fada6467b8f9f56921cec5248b",
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+      "bytes": 7053
+    },
+    {
+      "path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "local": "inputs/05-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "bytes": 21162
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/GENERAL_PERMUTATION.md",
+      "local": "inputs/06-GENERAL_PERMUTATION.md",
+      "git_blob": "85fd48d022fc58388e14c1a26b0ece751512ca52",
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "bytes": 4720
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "local": "inputs/07-REPORT.md",
+      "git_blob": "04926bc1f204182dcfcd24e5ecf6670f61ddd6cd",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "bytes": 20104
+    }
+  ]
+}

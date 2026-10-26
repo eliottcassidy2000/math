@@ -1,0 +1,485 @@
+{
+  "graph_codec_checks": [
+    {
+      "AutGamma": 1,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [],
+      "n": 0,
+      "tc": 1
+    },
+    {
+      "AutGamma": 12,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [],
+      "n": 1,
+      "tc": 1
+    },
+    {
+      "AutGamma": 144,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [
+        0
+      ],
+      "n": 2,
+      "tc": 1
+    },
+    {
+      "AutGamma": 1728,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [
+        0,
+        0,
+        0
+      ],
+      "n": 3,
+      "tc": 1
+    },
+    {
+      "AutGamma": 5184,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        1,
+        0
+      ],
+      "n": 3,
+      "tc": 1
+    },
+    {
+      "AutGamma": 20736,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 4,
+      "tc": 1
+    },
+    {
+      "AutGamma": 62208,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "n": 4,
+      "tc": 1
+    },
+    {
+      "AutGamma": 20736,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 5,
+      "key": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "n": 4,
+      "tc": 5
+    },
+    {
+      "AutGamma": 62208,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "n": 4,
+      "tc": 1
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 1,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 1
+    },
+    {
+      "AutGamma": 746496,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "n": 5,
+      "tc": 1
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 5,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "n": 5,
+      "tc": 5
+    },
+    {
+      "AutGamma": 746496,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "n": 5,
+      "tc": 1
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 9,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 9
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 5,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 5
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 9,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "n": 5,
+      "tc": 9
+    },
+    {
+      "AutGamma": 746496,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 3,
+      "key": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "n": 5,
+      "tc": 1
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 11,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 11
+    },
+    {
+      "AutGamma": 746496,
+      "AutJoint": 3,
+      "AutT": 3,
+      "H": 15,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 5
+    },
+    {
+      "AutGamma": 248832,
+      "AutJoint": 1,
+      "AutT": 1,
+      "H": 13,
+      "key": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "n": 5,
+      "tc": 13
+    },
+    {
+      "AutGamma": 1244160,
+      "AutJoint": 5,
+      "AutT": 5,
+      "H": 15,
+      "key": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "n": 5,
+      "tc": 3
+    }
+  ],
+  "incoming_n10_status": "REPORTED ONLY; source bytes pinned; no replay or certification of reduction/coverage",
+  "incoming_n10_stored_output": {
+    "(3)(3)(3)+1": {
+      "candidates_checked": 8784,
+      "reported_hits": 0,
+      "strong": 23520,
+      "tournaments": 32768
+    },
+    "(3)(3)+4": {
+      "candidates_checked": 101568,
+      "reported_hits": 0,
+      "strong": 391104,
+      "tournaments": 524288
+    },
+    "(5)(5)": {
+      "candidates_checked": 40,
+      "reported_hits": 0,
+      "strong": 480,
+      "tournaments": 512
+    },
+    "(5)+5": {
+      "candidates_checked": 28800,
+      "reported_hits": 0,
+      "strong": 89280,
+      "tournaments": 131072
+    },
+    "(7)+3": {
+      "candidates_checked": 240,
+      "reported_hits": 0,
+      "strong": 192,
+      "tournaments": 512
+    },
+    "(9)+1": {
+      "candidates_checked": 0,
+      "reported_hits": 0,
+      "strong": 0,
+      "tournaments": 32
+    }
+  },
+  "independent_scope": "all 1100 labelled tournaments on orders 0..5, and generic graph automorphism counts on all 21 isomorphism classes at those orders; no n=10 execution",
+  "path_orbits_explicitly_checked": 6924,
+  "small_orders": [
+    {
+      "isomorphism_classes": 1,
+      "labelled_tournaments": 1,
+      "n": 0,
+      "nontrivial_automorphism_cases": 0,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "isomorphism_classes": 1,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "nontrivial_automorphism_cases": 0,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "isomorphism_classes": 1,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "nontrivial_automorphism_cases": 0,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "isomorphism_classes": 2,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "nontrivial_automorphism_cases": 2,
+      "tc_spectrum": [
+        1
+      ]
+    },
+    {
+      "isomorphism_classes": 4,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "nontrivial_automorphism_cases": 16,
+      "tc_spectrum": [
+        1,
+        5
+      ]
+    },
+    {
+      "isomorphism_classes": 12,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "nontrivial_automorphism_cases": 184,
+      "tc_spectrum": [
+        1,
+        3,
+        5,
+        9,
+        11,
+        13
+      ]
+    }
+  ],
+  "sources_verified": [
+    "sources/tc_fibres_n10.json",
+    "sources/tc_fibres_n10_20261026.py",
+    "sources/PREREGISTRATION.md",
+    "sources/LEM-003-aut-acts-freely-on-ham-paths.md",
+    "sources/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md",
+    "sources/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md",
+    "sources/graph-pairs-REPORT.md",
+    "sources/graph-pairs-SOURCE_PINS.json"
+  ],
+  "status": "PASS",
+  "wrong_denominator_hostile": {
+    "AutGamma": 5184,
+    "AutT": 3,
+    "H": 3,
+    "naive_H_over_AutGamma": "1/1728",
+    "tc": 1,
+    "tournament": "C3"
+  }
+}

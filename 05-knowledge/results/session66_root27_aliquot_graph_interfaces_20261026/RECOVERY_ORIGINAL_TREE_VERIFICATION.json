@@ -1,0 +1,12 @@
+{
+  "status": "PASS_EXACT_ORIGINAL_THIRD_RECOVERY",
+  "preloss_local_commit": "2bbadc1e819d4442084695961fe6badb65972c90",
+  "recovered_local_commit": "bd0c20d772a0de029c360d5a853ce88a3ce423c2",
+  "parent": "67e6ca529b9ca594a7ddc042abe9800a6fdb0276",
+  "tree": "3c74120e68b04e3376cc7aeab918b2ac32c9545a",
+  "expected_tree": "3c74120e68b04e3376cc7aeab918b2ac32c9545a",
+  "verified_changed_paths": 152,
+  "full_packet_manifest_sha256": "cd760f7894077be9bfee84a67d995af42b53717dd5f065ccc5ef9109a7b012b0",
+  "method": "Verified remote orphan bytes plus exact authored reconstruction; no changed source hash or mathematical scope",
+  "published": false
+}

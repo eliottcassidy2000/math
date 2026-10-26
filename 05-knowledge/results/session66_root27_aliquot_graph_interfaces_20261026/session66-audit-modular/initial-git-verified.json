@@ -1,0 +1,432 @@
+{
+  "actual_210": {
+    "blocks": 105,
+    "certificate_sha256": "20a795a6f4ec840f864dddbdcc5a06ea2c0def18a4fba8961e7a0ad30d57db67",
+    "cycle_type": {
+      "12": 14,
+      "6": 7
+    },
+    "internal": 21,
+    "module": 77,
+    "unrestricted": 21,
+    "weighted_quotient": 56
+  },
+  "checks": {
+    "CRT_map_commutes": 210,
+    "actual_homogeneous_modules": 21840,
+    "actual_quotient_cycle_type": 1,
+    "actual_restricted_210": 1,
+    "actual_unrestricted_210": 1,
+    "common_sheet_CRT": 210,
+    "construct_minimum": 32,
+    "counterfeit_gluing_rejected": 210,
+    "counterfeit_mismatch_persists": 210,
+    "cycle_closure": 3236,
+    "direct_small_defect": 350,
+    "even_cycle_domain": 13,
+    "factor_cycle_type": 2,
+    "false_sheet_continuation": 1,
+    "fibre_product_sizes": 1,
+    "five_cycle_gate": 21,
+    "full_cycle_type": 1,
+    "full_defect_enumerator": 30,
+    "guard_iff_all_heights": 325584,
+    "internal_holonomy_parity": 5331,
+    "invariant_partition": 13,
+    "missing_top_bit_hostile": 7752,
+    "module_minimum": 12,
+    "module_weighted_identity": 5331,
+    "native_ternary_anti_action": 132496,
+    "negation_forward_conjugacy": 10004,
+    "negative_carry_coverage": 1,
+    "negative_orbit_classification": 30,
+    "one_211_hostile": 1,
+    "ordered_integer_carry": 60024,
+    "packet_hash": 12,
+    "permutation_type": 85,
+    "phi_bijection": 1,
+    "phi_intertwines": 210,
+    "phi_inverse": 210,
+    "pinned_source_identity": 7,
+    "producer_sealed_modes_equal": 1,
+    "residue_cycle_is_not_integer_cycle": 21,
+    "signed_boundary": 10004,
+    "signed_carry_integer": 3876,
+    "signed_height_identity": 7752,
+    "ternary_single_cycle": 6,
+    "unrestricted_minimum": 30
+  },
+  "counterfeit_glue": {
+    "matching_sheets": 210,
+    "mismatched_sheets": 210,
+    "witness": {
+      "mod14_port": [
+        1,
+        1
+      ],
+      "mod15_port": [
+        1,
+        -1
+      ]
+    }
+  },
+  "module_cases": [
+    {
+      "cycles": [],
+      "minimum": 0,
+      "orientations": 1
+    },
+    {
+      "cycles": [
+        2
+      ],
+      "minimum": 1,
+      "orientations": 2
+    },
+    {
+      "cycles": [
+        2,
+        2
+      ],
+      "minimum": 2,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        4
+      ],
+      "minimum": 5,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        2,
+        2,
+        2
+      ],
+      "minimum": 3,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        2,
+        4
+      ],
+      "minimum": 6,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        6
+      ],
+      "minimum": 1,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "minimum": 4,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        2,
+        2,
+        4
+      ],
+      "minimum": 7,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        2,
+        6
+      ],
+      "minimum": 2,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        4,
+        4
+      ],
+      "minimum": 10,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        8
+      ],
+      "minimum": 5,
+      "orientations": 1024
+    }
+  ],
+  "module_orientations": 5331,
+  "negative_carries": 2703,
+  "source_pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "status": "PASS",
+  "total_checks": 595164,
+  "unrestricted_cases": [
+    {
+      "cycles": [],
+      "minimum": 0,
+      "orientations": 1
+    },
+    {
+      "cycles": [
+        1
+      ],
+      "minimum": 0,
+      "orientations": 1
+    },
+    {
+      "cycles": [
+        1,
+        1
+      ],
+      "minimum": 0,
+      "orientations": 2
+    },
+    {
+      "cycles": [
+        2
+      ],
+      "minimum": 1,
+      "orientations": 2
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1
+      ],
+      "minimum": 0,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        1,
+        2
+      ],
+      "minimum": 1,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        3
+      ],
+      "minimum": 0,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "minimum": 0,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        2
+      ],
+      "minimum": 1,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        1,
+        3
+      ],
+      "minimum": 0,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        2,
+        2
+      ],
+      "minimum": 2,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        4
+      ],
+      "minimum": 1,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "minimum": 0,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "minimum": 1,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        3
+      ],
+      "minimum": 0,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        1,
+        2,
+        2
+      ],
+      "minimum": 2,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        1,
+        4
+      ],
+      "minimum": 1,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        2,
+        3
+      ],
+      "minimum": 1,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        5
+      ],
+      "minimum": 0,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "minimum": 0,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "minimum": 1,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "minimum": 0,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "minimum": 2,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        1,
+        4
+      ],
+      "minimum": 1,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        2,
+        3
+      ],
+      "minimum": 1,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        1,
+        5
+      ],
+      "minimum": 0,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        2,
+        2,
+        2
+      ],
+      "minimum": 3,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        2,
+        4
+      ],
+      "minimum": 2,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        3,
+        3
+      ],
+      "minimum": 0,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        6
+      ],
+      "minimum": 1,
+      "orientations": 32768
+    }
+  ],
+  "unrestricted_orientations": 367966
+}

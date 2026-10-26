@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "frozen_directory": "/tmp/session66-synthesis-offline-he19a2p5",
+  "no_git_checkout": true,
+  "PATH": "/nonexistent",
+  "network_used": false,
+  "checker_sha256": "90d36dad898d0a10b6352853013b451b609ccc77bd285f11862f7a389f0b6f9b",
+  "replays": [
+    {
+      "optimized": false,
+      "byte_identical": true,
+      "sha256": "09494c0073b460c301060310c6c80a2e1c679a9de0daf8528547073233421b90"
+    },
+    {
+      "optimized": true,
+      "byte_identical": true,
+      "sha256": "09494c0073b460c301060310c6c80a2e1c679a9de0daf8528547073233421b90"
+    }
+  ],
+  "final_header_only_delta_verified": true
+}

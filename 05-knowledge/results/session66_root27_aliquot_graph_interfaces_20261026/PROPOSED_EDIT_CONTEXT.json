@@ -1,0 +1,12 @@
+{
+  "session66-audit-graph-pairs/PROPOSED_CORRECTIONS.md": {
+    "source_sha256": "8381fe645078816c192158f1a805bd2ddfaebe12f9f16ad71a087470809f588c",
+    "target_repository_path": "01-canon/theorems/THM-209-independence-polynomial.md",
+    "role": "Unmodified proposed edit fragment; relative links interpreted at intended canonical target, not nested archive"
+  },
+  "session66-incoming-review/PROPOSED_HISTORICAL_BANNER.md": {
+    "source_sha256": "f18b72fb1948827e26df3134fab84bcbcb8bc96c17dfae52d3ef0297dd1bb1d1",
+    "target_repository_path": "05-knowledge/results/sheets_root27_rank_untouchables_20261025.md",
+    "role": "Unmodified proposed edit fragment; relative links interpreted at intended canonical target, not nested archive"
+  }
+}

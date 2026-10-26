@@ -1,0 +1,40 @@
+{
+  "directly_checked_primary_sources": [
+    {
+      "author": "Anton Deitmar",
+      "title": "Schemes over F1",
+      "url": "https://arxiv.org/html/math/0404185v7",
+      "version": "v7",
+      "scope": "Section1/Theorem1.1 only: monoid and monoid-ring base extension",
+      "accessed": "2026-10-26",
+      "bundled_external_content": false
+    },
+    {
+      "authors": "Yong-Gao Chen; Qing-Qing Zhao",
+      "title": "Nonaliquot numbers",
+      "url": "https://publi.math.unideb.hu/paper/1551/download/10_5486_PMD_2011_4820.pdf",
+      "publication": "Publ. Math. Debrecen78/2(2011),439\u2013442",
+      "scope": "Theorem1, fixed M, all-integer normalization; not density existence",
+      "accessed": "2026-10-26",
+      "bundled_external_content": false
+    },
+    {
+      "author": "Andrew R. Booker",
+      "title": "Finite connected components of the aliquot graph",
+      "url": "https://arxiv.org/pdf/1610.07471",
+      "version": "v2,15June2017",
+      "scope": "Footnote2 distinct-Goldbach completion from primes at most9781; no global Goldbach theorem",
+      "accessed": "2026-10-26",
+      "bundled_external_content": false
+    },
+    {
+      "author": "Tomas Oliveira e Silva",
+      "title": "Goldbach conjecture verification",
+      "url": "https://sweet.ua.pt/tos/goldbach.html",
+      "scope": "Original computation definitions, completed4e18 limit, maximal recorded minimal prime9781; computation not rerun",
+      "accessed": "2026-10-26",
+      "bundled_external_content": false
+    }
+  ],
+  "other_primary_theorems": "Controlled by the separately authored lane audits; synthesis makes no new literature-priority claim."
+}

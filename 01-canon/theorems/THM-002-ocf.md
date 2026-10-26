@@ -31,7 +31,7 @@ where Ω(T) is the conflict graph on directed odd cycles of T (vertices = odd cy
 
 where S(D) = permutations whose nontrivial cycles are directed cycles of D, ψ(σ) = number of nontrivial cycles, and D̄ is the complement digraph.
 
-**For tournaments, D̄ = D^op (converse):** Since exactly one of (u,v), (v,u) is in D, the complement has (u,v) iff (v,u) ∈ D.
+**For tournaments, D̄ with its loops removed equals D^op (converse):** For distinct u,v, exactly one of (u,v), (v,u) is in D. Diagonal loops do not enter Hamiltonian paths, so ham(D̄)=ham(D^op)=ham(D).
 
 **ham(D^op) = ham(D):** Path reversal bijection (v_1,...,v_n) ↔ (v_n,...,v_1).
 

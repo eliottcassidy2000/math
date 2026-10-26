@@ -1,0 +1,12 @@
+REPORT.md
+check.py
+normal.json
+optimized.json
+git-verified.json
+PORTABILITY.json
+SOURCES.json
+INPUT_HASHES.json
+INITIAL_INPUT_HASHES.json
+ALLOWLIST.txt
+MANIFEST.json
+SHA256SUMS

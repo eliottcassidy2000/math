@@ -1,0 +1,712 @@
+{
+  "all_labelled_0_to_5": {
+    "OCF_DFS_vs_path_recursion": 1100,
+    "class_counts": [
+      1,
+      1,
+      1,
+      2,
+      4,
+      12
+    ],
+    "clones_against_all_transitive_modules": 1100,
+    "strict_roundtrip_checks": 4400,
+    "tournaments": 1100
+  },
+  "defects": {
+    "full_permutation_minimum_cases": 34,
+    "lifted_metric_cases": 3180
+  },
+  "generic_graph_iso": {
+    "automorphism_cases": 42,
+    "class_pairs": 188,
+    "counts": [
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 0,
+        "tournament_key": []
+      },
+      {
+        "count": 1,
+        "kind": "gamma",
+        "n": 0,
+        "tournament_key": []
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 1,
+        "tournament_key": []
+      },
+      {
+        "count": 12,
+        "kind": "gamma",
+        "n": 1,
+        "tournament_key": []
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 2,
+        "tournament_key": [
+          0
+        ]
+      },
+      {
+        "count": 144,
+        "kind": "gamma",
+        "n": 2,
+        "tournament_key": [
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 3,
+        "tournament_key": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 3,
+        "tournament_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 1728,
+        "kind": "gamma",
+        "n": 3,
+        "tournament_key": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 5184,
+        "kind": "gamma",
+        "n": 3,
+        "tournament_key": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 20736,
+        "kind": "gamma",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 62208,
+        "kind": "gamma",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 20736,
+        "kind": "gamma",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 62208,
+        "kind": "gamma",
+        "n": 4,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 3,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 1,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 5,
+        "kind": "joint",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 746496,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 746496,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 746496,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 746496,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 248832,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 1244160,
+        "kind": "gamma",
+        "n": 5,
+        "tournament_key": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "scrambled_positive_cases": 42
+  },
+  "genuine_clone_gap_control": {
+    "automorphisms": 3,
+    "legal_fixed_toggle_masks": [
+      0,
+      7
+    ],
+    "module_sizes": [
+      2,
+      2,
+      2
+    ],
+    "subset_orbit_polynomial": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "vertices": 6
+  },
+  "hostiles": {
+    "C3_invariant_graph_masks": [
+      0,
+      7
+    ],
+    "I_K3_2": 7,
+    "I_P4_2": 21,
+    "lost_alignment_n": 4,
+    "lost_order_n": 3
+  },
+  "literal_cycle_support_hostile": {
+    "H": 15,
+    "bits": 40,
+    "cycles": [
+      [
+        0,
+        4,
+        1
+      ],
+      [
+        0,
+        4,
+        1,
+        3,
+        2
+      ],
+      [
+        0,
+        4,
+        2
+      ],
+      [
+        0,
+        4,
+        2,
+        1,
+        3
+      ],
+      [
+        0,
+        4,
+        3
+      ],
+      [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      [
+        1,
+        3,
+        2
+      ]
+    ],
+    "n": 5,
+    "support_multiplicities": [
+      1,
+      1,
+      1,
+      1,
+      3
+    ],
+    "support_only_I2": 11
+  },
+  "malformed_rejections": {
+    "gamma": 191,
+    "joint": 226,
+    "valid_two_edge_arc_reversal_controls": 2
+  },
+  "scope": "Independent finite exact tests plus separately recorded all-order proof audit; no producer code imported.",
+  "source_pins_verified": 12,
+  "weighted_quotient_automorphism_cases": 21
+}

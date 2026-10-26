@@ -1,0 +1,14 @@
+{
+  "session66-incoming-review/snapshots/antihydra_tree_rank_kps_20261025.py": {
+    "source_sha256": "79ae69b9e5c0ad98017b212768a6be8dd172e78a32664011f0fff258a88ae243",
+    "execution_role": "ARCHIVED_NOT_EXECUTED",
+    "bare_assertions": 1,
+    "reason": "Unchanged historical incoming source retained for correction lineage; independent explicit-check audit supplies current evidence. Not a required replay entry."
+  },
+  "session66-audit-modular/incoming/input/sheet_tables_mod_odd_kps_20261025.py": {
+    "source_sha256": "ada4f06cac43ec9924c52170bed00780a05799b9530d20737563ca69f1f431ed",
+    "execution_role": "ARCHIVED_NOT_EXECUTED",
+    "bare_assertions": 1,
+    "reason": "Unchanged historical incoming source retained for correction lineage; independent explicit-check audit supplies current evidence. Not a required replay entry."
+  }
+}

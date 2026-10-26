@@ -1,0 +1,183 @@
+{
+  "checks": {
+    "clone_minimum_formula": 8,
+    "clone_weighted_split": 35978,
+    "crt_common_sheet": 1,
+    "crt_exact_guard": 41600,
+    "crt_reconstruction": 210,
+    "cycle_closure": 53,
+    "doubling_intertwiner": 210,
+    "factor_cycle_census": 3,
+    "five_period_gate": 21,
+    "guard_carry_iff": 41600,
+    "height_lift": 41600,
+    "hostile_crt_guard": 1,
+    "hostile_independent_sheets": 1,
+    "hostile_missing_guard_bit": 41600,
+    "hostile_sheet_seam": 1,
+    "inverse_fibre": 1360,
+    "odd_modulus_nondescending": 100,
+    "permutation": 9,
+    "sheet_alternation": 1292,
+    "signed_carry": 41600,
+    "source_integrity": 7,
+    "ternary_anti_action": 14641,
+    "ternary_full_clock": 5,
+    "three_lift_bijection": 1
+  },
+  "clone_controls": [
+    {
+      "cycles": [
+        2
+      ],
+      "minimum": 1,
+      "orientations": 2
+    },
+    {
+      "cycles": [
+        4
+      ],
+      "minimum": 5,
+      "orientations": 8
+    },
+    {
+      "cycles": [
+        6
+      ],
+      "minimum": 1,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        8
+      ],
+      "minimum": 5,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        10
+      ],
+      "minimum": 1,
+      "orientations": 32768
+    },
+    {
+      "cycles": [
+        4,
+        2
+      ],
+      "minimum": 6,
+      "orientations": 64
+    },
+    {
+      "cycles": [
+        4,
+        4
+      ],
+      "minimum": 10,
+      "orientations": 1024
+    },
+    {
+      "cycles": [
+        6,
+        2
+      ],
+      "minimum": 2,
+      "orientations": 1024
+    }
+  ],
+  "hostiles": {
+    "clone_210": {
+      "antipodal_clone_minimum": 77,
+      "quotient_even_cycles": 14,
+      "unrestricted_minimum": 21,
+      "weighted_quotient_tax": 56
+    },
+    "clone_4_cycle": {
+      "antipodal_clone_minimum": 5,
+      "unrestricted_minimum": 1
+    },
+    "crt_does_not_fix_valuation": [
+      {
+        "endpoint": 1,
+        "mod14": 1,
+        "mod15": 1,
+        "n": 1,
+        "sheet": 1,
+        "valuation": 2
+      },
+      {
+        "endpoint": 317,
+        "mod14": 1,
+        "mod15": 1,
+        "n": 211,
+        "sheet": 1,
+        "valuation": 1
+      }
+    ],
+    "same_endpoint_wrong_sheet": {
+      "endpoint": 5,
+      "minus_continuation": 7,
+      "minus_source": 7,
+      "plus_continuation": 1,
+      "plus_source": 3
+    }
+  },
+  "status": "PASS",
+  "tables": {
+    "14": {
+      "cycle_histogram": {
+        "2": 1,
+        "6": 2
+      },
+      "states": 14
+    },
+    "15": {
+      "cycle_histogram": {
+        "6": 1,
+        "12": 2
+      },
+      "states": 30
+    },
+    "210": {
+      "cycle_histogram": {
+        "6": 7,
+        "12": 14
+      },
+      "states": 210
+    }
+  },
+  "ternary": [
+    {
+      "k": 0,
+      "minimum_unrestricted_defect": 1,
+      "native_sierpinski_defect": 1,
+      "vertices": 2
+    },
+    {
+      "k": 1,
+      "minimum_unrestricted_defect": 1,
+      "native_sierpinski_defect": 15,
+      "vertices": 6
+    },
+    {
+      "k": 2,
+      "minimum_unrestricted_defect": 1,
+      "native_sierpinski_defect": 153,
+      "vertices": 18
+    },
+    {
+      "k": 3,
+      "minimum_unrestricted_defect": 1,
+      "native_sierpinski_defect": 1431,
+      "vertices": 54
+    },
+    {
+      "k": 4,
+      "minimum_unrestricted_defect": 1,
+      "native_sierpinski_defect": 13041,
+      "vertices": 162
+    }
+  ],
+  "total_checks": 261902
+}
