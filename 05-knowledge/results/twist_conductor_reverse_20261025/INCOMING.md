@@ -103,6 +103,68 @@ conditional law and quantifies source-concentration cost. This avoids spending
 the remaining session re-proving the stronger coding, order11 or contraction
 results already present on the shared surface.
 
+## Fourth incoming checkpoint: integer roots and guarded affine rays
+
+Read commits `6a8ad5d3bf`, `f9738023f6` and `10695de67d`, especially
+the complete [integer ancestry proof](../lca_ports_reverse_20261025/arithmetic/ANCESTRY.md),
+[inverse-depth density proof](../lca_ports_reverse_20261025/arithmetic/DENSITY.md),
+and [late integration](../lca_ports_reverse_20261025/LATE_INTEGRATION.md).
+These provide a stronger source-specific coordinate than a valuation prefix:
+for the twisted integer map, the terminating inverse algorithm gives
+`y -> (root(y), chronological word from that root)` exactly. The source27
+condition is `root(y)=27`; the word then supplies the integer credit.
+Neither coordinate can be dropped. This is an unbranched-ray decomposition
+of that expanding integer map, not a claim about the ordinary Collatz graph.
+
+There are now three rigorously different tails to keep separate:
+
+| Quantity | Measure / varied parameter | Exact formula or bound |
+|---|---|---|
+| Eventual barrier ruin from credit a | Haar-distributed valuation itinerary | q^a |
+| At least j inverse ancestors of X(t)=(128*64^t+7)/9 | Natural density in t | 2^(-j) |
+| Length-m cylinder of one fixed itinerary | Haar measure on starting points | 2^(-S_m) |
+
+The density proof transports finite ternary congruences using the isometry
+`v3(X(t)-X(s))=v3(t-s)`, then bounds the omitted large-valuation tail by
+`2*3^(-M)`. It does not interchange an uncontrolled infinite union and
+natural density. Each fixed integer root receives a density-zero set of
+reset parameters. Thus it separates typical reset examples from the marked
+ray while leaving possible exceptional intersections, and the chronological
+credit inequality on that ray, OPEN. This sharpens the role of the source
+concentration cost in DYNAMICS_EXTENSION rather than overcoming it.
+
+The new A6 [accelerator source](../../../04-computation/bb6_cryptids_s56/a6_accel_20261025.py)
+suggests a useful algebraic control that can be stated independently of its
+large simulation. Let one **fixed native word**, with every branch and port
+guard retained, have domain
+
+    D={x in Z^d : A x <= b} intersect (c+Lambda)
+
+and affine return F(x)=M x+e. Suppose x0,x0+v belong to D and
+F(x0)=x0+v, F(x0+v)=x0+2v. Then Mv=v and v belongs to Lambda.
+For any integer K>=1 with x0+Kv in D, every x0+kv, 0<=k<=K,
+is in D and returns to x0+(k+1)v. The proof is affine linearity,
+convexity of each inequality, and closure of the lattice under integer
+multiples. The entire infinite ray is certified **iff A v <= 0**,
+given the two starting conditions. Necessity follows from any positive
+row slope eventually violating its finite bound. This elementary lemma
+is PROVED; applicability to a proposed native-word domain must be proved
+separately. Strict rational inequalities on integer points can first be
+scaled and converted to weak integer inequalities.
+
+The failure boundary matters: three samples in a union of branch cells
+do not establish convexity, and even a very large finite K does not replace
+the slope test. We read the accelerator's jump logic but do not certify its
+infinite-capture cutoff or reproduce its deep orbit. If native step counts
+are needed, sum the actual clock function along the retained word; a phase
+count is not that clock. For a finite Boolean port cube a nonzero integer
+ray cannot stay inside forever. An unbounded application must therefore
+retain the ports while moving genuine size/debt coordinates, and justify
+that its clone mergers preserve the same guarded domain. Likewise, fixed
+valuation inequalities do not certify unit squareclasses or nonreflexive
+coefficient ideals. These are the precise conditions for reusing the ray
+mechanism across the three lanes, not a claimed universal construction.
+
 ## Remaining targets
 
 A later targeted Humbert search also recovered the already stronger

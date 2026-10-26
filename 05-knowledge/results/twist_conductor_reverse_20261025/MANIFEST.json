@@ -18,7 +18,7 @@
     "CONDUCTOR_IDEALS.md": "13f0239997149167358d54eace74cd397b16dc8f845e54660a5c639f5a929986",
     "DYNAMICS_EXTENSION.md": "6191e7c5a2cafda4e4c42bb8305b1476ce3a930251b7645a16ce65c32ff3c86d",
     "FIXED_TWISTS.md": "30633a06c26226944997dfc8bd1a28082dd0acc2f6ce693dab02c5da6c40f32a",
-    "INCOMING.md": "21e9c94c2328a9936c4fd0aab936657b0da8984bbea370075e8ffa5147743b16",
+    "INCOMING.md": "bc33b57aea48bec5415fc05c1fdb8b96a87493756439c78c82e2bedea99626bc",
     "PORT_CODES.md": "aade53f2f91503551eeaa78000e114c98dc9085c85255aad2893dbbaa6009fd4",
     "README.md": "527369335815fb6f0dd9e9a672644844b73de637b17d8dc61e274f2f3fa82c36",
     "check_geometry.py": "c9568f8b4eb4b890c8ed5d536faf6e9f6e130da70ca4efeca5dd85ce1b6ae8d6",
@@ -100,6 +100,10 @@
       "revision": "1b4e6dcc0f25",
       "sha256": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a"
     },
+    "04-computation/bb6_cryptids_s56/a6_accel_20261025.py": {
+      "revision": "10695de67d",
+      "sha256": "8e8e7cfc750835aacf53ec35acc1ec5ff989d4cf4789849ccf3b06b9ddfa4bc7"
+    },
     "05-knowledge/results/endpoint_four_repairs_20261021/audit/audit_core.py": {
       "revision": "1b4e6dcc0f25",
       "sha256": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4"
@@ -107,6 +111,18 @@
     "05-knowledge/results/endpoint_four_repairs_20261021/audit/independent_audit.py": {
       "revision": "1b4e6dcc0f25",
       "sha256": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0"
+    },
+    "05-knowledge/results/lca_ports_reverse_20261025/LATE_INTEGRATION.md": {
+      "revision": "10695de67d",
+      "sha256": "89a3b463d3f13bf78b66f893e62e5a7e501f863a6cd060881561689b9b801ed7"
+    },
+    "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md": {
+      "revision": "10695de67d",
+      "sha256": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7"
+    },
+    "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/DENSITY.md": {
+      "revision": "10695de67d",
+      "sha256": "70821700910f6a8bbcda44fd79d336b270d5c0ffc7d20d38dd9c579eb5e0487a"
     },
     "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/README.md": {
       "revision": "f265adc2b8",
