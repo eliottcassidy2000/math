@@ -196,9 +196,9 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ## Tournaments
 
 ### Reliable structural toolkit
-- [S62](START-HERE.md); [S63](S63.md); [charts](../05-knowledge/results/normseven_boundary_20261025/README.md).
+- [S62](START-HERE.md); [S63](S63.md); [S64](S64.md); [charts](../05-knowledge/results/normseven_boundary_20261025/README.md).
 - [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [six/seven](../05-knowledge/results/six_seven_geometry_20261025/README.md); [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md); [HN6/7/8](S61.md). Integer squares OPEN.
-- [Ports and integral moments](../05-knowledge/results/port_residual_integral_20261025/README.md): closed endpoint-four detours at13 and n>=15; integral clone recurrence and fixed-precision compression. Full black-core connectivity OPEN. [Owners](../05-knowledge/results/ports_owners_f1_20261025/README.md).
+- [Ports and integral moments](../05-knowledge/results/port_residual_integral_20261025/README.md): closed endpoint-four n>=12 ([repair](S64.md)); integral clone recurrence and fixed-precision compression. Full black-core connectivity OPEN. [Owners](../05-knowledge/results/ports_owners_f1_20261025/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.

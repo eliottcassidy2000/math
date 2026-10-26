@@ -1,0 +1,126 @@
+{
+  "status": "VERIFIED",
+  "scope": "Exact-byte approved copies; source-directory references remain historical locators, mapped by README",
+  "files": [
+    {
+      "source": "session64-repairs/README.md",
+      "packaged": "session64-repairs/README.md",
+      "bytes": 8548,
+      "source_sha256": "cefb67a943d293ac60ead18a6be7aedf905164958ffad1f6525e068ee9529f1b",
+      "packaged_sha256": "cefb67a943d293ac60ead18a6be7aedf905164958ffad1f6525e068ee9529f1b",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/check.py",
+      "packaged": "session64-repairs/check.py",
+      "bytes": 13567,
+      "source_sha256": "2004c55c07a00b60eda8db0a91d5f31d6f09ee43adcc7ed7f96d2ee120011641",
+      "packaged_sha256": "2004c55c07a00b60eda8db0a91d5f31d6f09ee43adcc7ed7f96d2ee120011641",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/found.json",
+      "packaged": "session64-repairs/found.json",
+      "bytes": 14893,
+      "source_sha256": "ce09197bb4a18cb5240097c5e209340df9582465f53db3e9bc492a6ad80e79ed",
+      "packaged_sha256": "ce09197bb4a18cb5240097c5e209340df9582465f53db3e9bc492a6ad80e79ed",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/normal.json",
+      "packaged": "session64-repairs/normal.json",
+      "bytes": 713063,
+      "source_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "packaged_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/optimized.json",
+      "packaged": "session64-repairs/optimized.json",
+      "bytes": 713063,
+      "source_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "packaged_sha256": "5569e9f79045c78f6474dcd2bd33371771c21ffe0cd4b49c4939ce5d6eb3727d",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/inherited/audit_core.py",
+      "packaged": "session64-repairs/inherited/audit_core.py",
+      "bytes": 3761,
+      "source_sha256": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4",
+      "packaged_sha256": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/inherited/independent_audit.py",
+      "packaged": "session64-repairs/inherited/independent_audit.py",
+      "bytes": 8471,
+      "source_sha256": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0",
+      "packaged_sha256": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-repairs/MANIFEST.json",
+      "packaged": "session64-repairs/MANIFEST.json",
+      "bytes": 626,
+      "source_sha256": "01250f975c62f5f405541ece082aea653714f2e8d3db11ee38c870dec1539c28",
+      "packaged_sha256": "01250f975c62f5f405541ece082aea653714f2e8d3db11ee38c870dec1539c28",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/AUDIT.md",
+      "packaged": "session64-audit-repairs/AUDIT.md",
+      "bytes": 9695,
+      "source_sha256": "a6527eb8157311d10f20d79d038794277314b9f337acec4e15f377e658b23d59",
+      "packaged_sha256": "a6527eb8157311d10f20d79d038794277314b9f337acec4e15f377e658b23d59",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/check.py",
+      "packaged": "session64-audit-repairs/check.py",
+      "bytes": 18518,
+      "source_sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761",
+      "packaged_sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/found.json",
+      "packaged": "session64-audit-repairs/found.json",
+      "bytes": 14893,
+      "source_sha256": "ce09197bb4a18cb5240097c5e209340df9582465f53db3e9bc492a6ad80e79ed",
+      "packaged_sha256": "ce09197bb4a18cb5240097c5e209340df9582465f53db3e9bc492a6ad80e79ed",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/normal.json",
+      "packaged": "session64-audit-repairs/normal.json",
+      "bytes": 186944,
+      "source_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "packaged_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/optimized.json",
+      "packaged": "session64-audit-repairs/optimized.json",
+      "bytes": 186944,
+      "source_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "packaged_sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-audit-repairs/MANIFEST.json",
+      "packaged": "session64-audit-repairs/MANIFEST.json",
+      "bytes": 1379,
+      "source_sha256": "02f19be02053ac16736ce758d3df07104e3ccaa0ca039e182f2417cca2896763",
+      "packaged_sha256": "02f19be02053ac16736ce758d3df07104e3ccaa0ca039e182f2417cca2896763",
+      "packaging_changes": null
+    },
+    {
+      "source": "session64-publication/verify_packet.py",
+      "packaged": "verify_packet.py",
+      "bytes": 966,
+      "source_sha256": "a0aa3f5b67c84e9dff9d85880d62d90faf948e2a6a4e5080a8e82bb2997ab388",
+      "packaged_sha256": "a0aa3f5b67c84e9dff9d85880d62d90faf948e2a6a4e5080a8e82bb2997ab388",
+      "packaging_changes": null
+    }
+  ]
+}

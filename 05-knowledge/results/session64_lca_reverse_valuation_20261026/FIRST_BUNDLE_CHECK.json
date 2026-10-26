@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-audit-repairs/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/inherited/audit_core.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session64-repairs/inherited/independent_audit.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "session64-audit-repairs/AUDIT.md",
+    "session64-audit-repairs/check.py",
+    "session64-audit-repairs/found.json",
+    "session64-audit-repairs/normal.json",
+    "session64-audit-repairs/optimized.json",
+    "session64-repairs/README.md",
+    "session64-repairs/check.py",
+    "session64-repairs/found.json",
+    "session64-repairs/normal.json",
+    "session64-repairs/optimized.json",
+    "session64-repairs/inherited/audit_core.py",
+    "session64-repairs/inherited/independent_audit.py"
+  ],
+  "local_links": [
+    {
+      "from": "README.md",
+      "to": "session64-repairs/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-repairs/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/found.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-repairs/normal.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session64-audit-repairs/normal.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "../port_residual_integral_20261025/PORT_FRONTIER.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "CONCEPT_BOARD.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "MANIFEST.json",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [],
+  "historical_source_links": [],
+  "historical_unresolved_links": []
+}

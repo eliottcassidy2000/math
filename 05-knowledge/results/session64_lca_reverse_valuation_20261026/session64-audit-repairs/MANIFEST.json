@@ -1,0 +1,34 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes": 9695,
+      "sha256": "a6527eb8157311d10f20d79d038794277314b9f337acec4e15f377e658b23d59"
+    },
+    "check.py": {
+      "bytes": 18518,
+      "sha256": "8d8d31c7e78e379b2c62848ee42d3ce53985795bccb8245026397711d1c7f761"
+    },
+    "found.json": {
+      "bytes": 14893,
+      "sha256": "ce09197bb4a18cb5240097c5e209340df9582465f53db3e9bc492a6ad80e79ed"
+    },
+    "normal.json": {
+      "bytes": 186944,
+      "sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def"
+    },
+    "optimized.json": {
+      "bytes": 186944,
+      "sha256": "711c8d5c37573f4d2a581fb6e37add6cd244f2df1a41c0e2a186cfe94a1d0def"
+    }
+  },
+  "independence": "No producer algorithm imports. Raw forward-pair Gaussian source/blue systems, complete conditioned source enumeration, independent literal arc replay, full closed-endpair leaf exhaustion.",
+  "normal_optimized_identical": true,
+  "producer_manifest_sha256": "01250f975c62f5f405541ece082aea653714f2e8d3db11ee38c870dec1539c28",
+  "reproduction": [
+    "python3 check.py > normal.json",
+    "python3 -O check.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "scope": "Complete finite closed marked endpoint-four closure at orders 12, 13, 14; n>=12 after inherited n>=15 theorem; order11 and whole black-core connectivity outside scope",
+  "status": "SEALED PASS"
+}
