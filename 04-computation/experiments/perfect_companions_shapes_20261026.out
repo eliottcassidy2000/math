@@ -1,0 +1,77 @@
+==== p = 2, N = 6 ====
+  a = 1 (a | p-1): q_a = 3 -> odd prime: source 2^a q = 
+      m = 6 (N itself)
+  even sources found (shapes up to the stated bounds): 1
+    m = 6  shape 2^a q  (N itself)
+==== p = 3, N = 28 ====
+  a = 1 (a | p-1): q_a = 25 -> not an odd prime
+  a = 2 (a | p-1): q_a = 7 -> odd prime: source 2^a q = 
+      m = 28 (N itself)
+  even sources found (shapes up to the stated bounds): 1
+    m = 28  shape 2^a q  (N itself)
+==== p = 5, N = 496 ====
+  a = 1 (a | p-1): q_a = 493 -> not an odd prime
+  a = 2 (a | p-1): q_a = 163 -> odd prime: source 2^a q = 
+      m = 652 (COMPANION)
+  a = 4 (a | p-1): q_a = 31 -> odd prime: source 2^a q = 
+      m = 496 (N itself)
+  even sources found (shapes up to the stated bounds): 2
+    m = 496  shape 2^a q  (N itself)
+    m = 652  shape 2^a q
+==== p = 7, N = 8128 ====
+  a = 1 (a | p-1): q_a = 8125 -> not an odd prime
+  a = 2 (a | p-1): q_a = 2707 -> odd prime: source 2^a q = 
+      m = 10828 (COMPANION)
+  a = 3 (a | p-1): q_a = 1159 -> not an odd prime
+  a = 6 (a | p-1): q_a = 127 -> odd prime: source 2^a q = 
+      m = 8128 (N itself)
+  even sources found (shapes up to the stated bounds): 3
+    m = 8128  shape 2^a q  (N itself)
+    m = 10682  shape 2^a q^2 r
+    m = 10828  shape 2^a q
+==== p = 13, N = 33550336 ====
+  a = 1 (a | p-1): q_a = 33550333 -> not an odd prime
+  a = 2 (a | p-1): q_a = 11183443 -> not an odd prime
+  a = 3 (a | p-1): q_a = 4792903 -> not an odd prime
+  a = 4 (a | p-1): q_a = 2236687 -> not an odd prime
+  a = 6 (a | p-1): q_a = 532543 -> not an odd prime
+  a = 12 (a | p-1): q_a = 8191 -> odd prime: source 2^a q = 
+      m = 33550336 (N itself)
+  even sources found (shapes up to the stated bounds): 2
+    m = 33550336  shape 2^a q  (N itself)
+    m = 44655764  shape 2^a q r
+==== p = 17, N = 8589869056 ====
+  a = 1 (a | p-1): q_a = 8589869053 -> not an odd prime
+  a = 2 (a | p-1): q_a = 2863289683 -> not an odd prime
+  a = 4 (a | p-1): q_a = 572657935 -> not an odd prime
+  a = 8 (a | p-1): q_a = 33685759 -> odd prime: source 2^a q = 
+      m = 8623554304 (COMPANION)
+  a = 16 (a | p-1): q_a = 131071 -> odd prime: source 2^a q = 
+      m = 8589869056 (N itself)
+  even sources found (shapes up to the stated bounds): 2
+    m = 8589869056  shape 2^a q  (N itself)
+    m = 8623554304  shape 2^a q
+==== p = 19, N = 137438691328 ====
+  a = 1 (a | p-1): q_a = 137438691325 -> not an odd prime
+  a = 2 (a | p-1): q_a = 45812897107 -> not an odd prime
+  a = 3 (a | p-1): q_a = 19634098759 -> not an odd prime
+  a = 6 (a | p-1): q_a = 2181566527 -> not an odd prime
+  a = 9 (a | p-1): q_a = 268960255 -> not an odd prime
+  a = 18 (a | p-1): q_a = 524287 -> odd prime: source 2^a q = 
+      m = 137438691328 (N itself)
+  even sources found (shapes up to the stated bounds): 1
+    m = 137438691328  shape 2^a q  (N itself)
+==== p = 31, N = 2305843008139952128 ====
+  a = 1 (a | p-1): q_a = 2305843008139952125 -> not an odd prime
+  a = 2 (a | p-1): q_a = 768614336046650707 -> not an odd prime
+  a = 3 (a | p-1): q_a = 329406144019993159 -> not an odd prime
+  a = 5 (a | p-1): q_a = 74382032520643615 -> not an odd prime
+  a = 6 (a | p-1): q_a = 36600682668888127 -> odd prime: source 2^a q = 
+      m = 2342443690808840128 (COMPANION)
+  a = 10 (a | p-1): q_a = 2254000985474047 -> not an odd prime
+  a = 15 (a | p-1): q_a = 70370891694079 -> not an odd prime
+  a = 30 (a | p-1): q_a = 2147483647 -> odd prime: source 2^a q = 
+      m = 2305843008139952128 (N itself)
+  even sources found (shapes up to the stated bounds): 2
+    m = 2305843008139952128  shape 2^a q  (N itself)
+    m = 2342443690808840128  shape 2^a q

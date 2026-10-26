@@ -1,0 +1,19 @@
+---
+id: HYP-9417
+title: "After THM-4806: (1) the named legality language T -> L(T) is injective for every order (exact through 8; equivalent to injectivity on strong tournaments), so the smallest closed carrier of the full named guard family is the tournament itself; (2) the Goldbach-dependent share of the odd values in the decade [10^d, 10^(d+1)) is c / ln(5 x 10^d) with c in [1.3, 1.6] (pre-registered 0.0812 at d = 7 CONFIRMED), so almost all odd values have a non-semiprime source (density-zero dependence); next decade predicted in [0.070, 0.078], the 2 x pq pattern share in [0.185, 0.200], the 2 x prime class share in [0.112, 0.125]; (3) the seventh even perfect number 137438691328 is not a hermit: a companion with at least five odd prime factors exists; (4) the PSD leakage rank of boundary_support, recomputed with named guard operators, reproduces 2^k - d_t on the session70 fibre."
+status: "NUMERICAL / OPEN: (1) FINITE-EXACT through order 8 (zero collisions), conjectured beyond; (2) four of five pre-registered 10^8 predictions confirmed (decade share 0.0812 in [0.074, 0.083]; count = S57 + 1; 2 x prime class 0.1278 in [0.125, 0.145]; enrichment 1.55 in [1.45, 1.75]) and one refuted (2 x pq pattern share 0.1990 against [0.200, 0.240]); the 10^9 predictions are untested; (3) OPEN (no companion with at most four odd prime factors within the enumerated bounds); (4) untested."
+session: opus-2026-10-26-S61
+source: 05-knowledge/results/legality_language_goldbach_free_perfect_companions_20261026.md
+related:
+  - 01-canon/theorems/THM-4806-named-legality-language-single-pair-lemma-goldbach-free-shapes-and-row-companions-of-even-perfect-numbers.md
+  - 05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md
+  - 05-knowledge/hypotheses/HYP-9415-aliquot-table-predictions-twin-value-sources-self-only-perfect-numbers-mersenne-abc-hits.md
+  - 05-knowledge/results/session70_attachment_guard_alignment_20261026/README.md
+---
+
+# HYP-9417: after THM-4806
+
+1. **All-order injectivity.** Two tournaments on the same labelled vertex set with the same set of Hamiltonian paths are equal. THM-4806 R proves it for every single-arc difference and for all orders `<= 8`, and reduces the general case to strong tournaments. Falsified by two strong tournaments differing on at least two pairs, every differing pair dark in both. If true, the full named guard family admits no closed compression at any order (session70's anchor).
+2. **Goldbach-free coverage in density.** The dependent share of the decade `[10^d, 10^(d+1))` is `c / ln(5 x 10^d)` with `c` tending to a constant in `[1.3, 1.6]` (`1.40, 1.39, 1.44` for `d = 5, 6, 7`), so the Goldbach-dependent odd values have density zero: for almost every odd `v`, coverage does not depend on the Goldbach antecedent. Pre-registered for `10^9` (untested): decade share in `[0.070, 0.078]`; the `2 x pq` share of the dependent set in `[0.185, 0.200]`; the dependent share within `v - 1 = 2 x prime` in `[0.112, 0.125]`.
+3. **The seventh perfect number.** `137438691328 = 2^18 (2^19 - 1)` has no row companion (`q_a` composite for every proper divisor `a` of 18) and no companion with at most four odd prime factors within the enumerated bounds; conjecture: a companion with five or more odd prime factors exists, so 28 remains the only perfect hermit (HYP-9415 (4)).
+4. **Leakage rank.** The PSD leakage identity of the strong-atom HISTORY (`I - K^2 = [(I - E)UE]^*[(I - E)UE]`) and the boundary_support Prop. 0 rank, evaluated with the session70 guard operators instead of the complement, give the missing rank `2^k - d_t`.

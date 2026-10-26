@@ -1,0 +1,10 @@
+(1) two-ray address formula A(x) = v2(x) + tau(g) checked against brute force for 2 <= x <= 10000: mismatches 0
+    two-ray count versus aliquot124's combined-table count, where they differ (x <= 100 and selected): {2: (2, 1), 4: (4, 3), 16: (7, 8), 18: (2, 3), 32: (7, 10), 36: (4, 5), 50: (2, 3), 54: (2, 3), 64: (10, 14), 72: (4, 6), 98: (2, 3), 100: (4, 5), 216: (5, 6), 400: (6, 8), 1024: (14, 27), 1296: (7, 10), 4096: (18, 35)}
+    example 36: two-ray 4 (36, 2*18, 4*9 on rows; 6^2 on a column), combined 5 (adds the mixed cell 4*3^2)
+(2) aliquot F_N: first non-planar N = None, Kuratowski witness None, branch vertices None
+(2) aliquot + doubling: first non-planar N = 21, Kuratowski witness K_(3,3), branch vertices [3, 4, 8, 9, 11, 16]
+(2) aliquot + squaring: first non-planar N = 259, Kuratowski witness K_(3,3), branch vertices [1, 9, 12, 15, 16, 63]
+(2) doubling + squaring (two-ray graph): first non-planar N = None, Kuratowski witness None, branch vertices None
+(2) aliquot + doubling + squaring: first non-planar N = 21, Kuratowski witness K_(3,3), branch vertices [3, 6, 8, 9, 16, 18]
+(2) square-sum Q_N: first non-planar N = 25, Kuratowski witness K_(3,3), branch vertices [3, 4, 5, 11, 12, 13]
+(2) square-sum + doubling: first non-planar N = 16, Kuratowski witness K_(3,3), branch vertices [1, 2, 4, 8, 10, 14]

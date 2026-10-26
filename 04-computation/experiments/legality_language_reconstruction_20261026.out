@@ -1,0 +1,6 @@
+n = 3: 8 tournaments (2 strong); with a dark arc 6 (strong ones 0); dark arcs total 6, max per tournament 1; pair-theorem violations 0; language-hash collisions 0
+n = 4: 64 tournaments (24 strong); with a dark arc 24 (strong ones 0); dark arcs total 72, max per tournament 3; pair-theorem violations 0; language-hash collisions 0
+n = 5: 1024 tournaments (544 strong); with a dark arc 360 (strong ones 120); dark arcs total 1120, max per tournament 6; pair-theorem violations 0; language-hash collisions 0
+n = 6: 32768 tournaments (22320 strong); with a dark arc 6720 (strong ones 1440); dark arcs total 22320, max per tournament 10; pair-theorem violations 0; language-hash collisions 0
+n = 7: 2097152 tournaments (1677488 strong); with a dark arc 162624 (strong ones 38640); dark arcs total 661248, max per tournament 15; pair-theorem violations 0; language-hash collisions 0
+X_8: 2097152 tournaments containing the standard path (2032504 strong); with a dark arc 5426 (strong 1925); dark arcs total 17199; language-hash collisions 0
