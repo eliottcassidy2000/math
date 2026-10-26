@@ -800,6 +800,14 @@ all heights (THM-1289, published), δ ineffective.
   the full class-level line multigraph at n = 8 (911,027 joined pairs; connected; blue spine connected; black graph = 1 + pure-blue components). NUMERICAL (HYP-9346): connectivity for
   all n (HYP-9345 (b), re-observed, with the black-component refinement), near-regular concentration of self-lines; next tests n = 12 (compiled solver) and n = 9 (class-level census).
 
+- **Module shattering and the carousel finite-field dictionary (opus, 2026-10-26-S59; [note](../05-knowledge/results/module_shattering_lines_carousel_finite_field_20261026.md), THM-4804, HYP-9414).**
+  Owner directive: the normal-basis/Frobenius reading of the carousel decorations, the proof that composition families are not closed under complement lines, LCA and
+  the field with one element. PROVED: every complement line shatters every proper non-singleton module (the two ends of a line share no module; strong-module trees
+  share no internal node; the LCA interface is rebuilt; no substitution fibre or stack is closed under lines); the carousel classes are the Frobenius orbits of
+  F_(2^m) (least period = field degree, Aut/C_3^m = the Galois group over the decoration field, Gauss's counts, tc(T_w) = H_m d/(m 3^m)); q-ary and F_(1^m)
+  versions. FINITE-EXACT at n = 12: no old module survives in any of the 1,851,660 partners, 98.6% prime, the rest with a pair module, all presentations black,
+  distinct tilings give distinct partner classes (45,424 partner classes, 296 shared). Next: injectivity for every odd m, the pair-module partners, the orbit-size law
+  for every decorated fibre (HYP-9414).
 - **Presentation counts of metagraph nodes (opus, 2026-10-20-S48; [note](../05-knowledge/results/presentation_counts_single_view_classes_rotation_inequality_20261020.md), THM-4741, HYP-9352).**
   Owner directive: next obligations toward a complete classification of tournament metagraph structure, in the language of intransitivity of information or
   electrical networks; lane split with mac-mini-2026-10-21-electric (Kirchhoff/Hodge laws, consecutive ports: THM-4739/4740, HYP-9351). PROVED: the rotation inequality tc >= n/|Z_C| for

@@ -1,0 +1,7 @@
+# carousel fibre m = 3 (n = 12): 8 words, 4 classes: w=0(|Aut|=81) w=1(|Aut|=27) w=3(|Aut|=27) w=7(|Aut|=81)
+w=0: H=462915 blue=0 black=462915; partners prime=456435 nonprime=6480 (smallest-module sizes: 2:6480); old modules surviving=0; partners in the fibre=0; distinct partner classes=5715
+w=1: H=462915 blue=0 black=462915; partners prime=456462 nonprime=6453 (smallest-module sizes: 2:6453); old modules surviving=0; partners in the fibre=0; distinct partner classes=17145
+w=3: H=462915 blue=0 black=462915; partners prime=456462 nonprime=6453 (smallest-module sizes: 2:6453); old modules surviving=0; partners in the fibre=0; distinct partner classes=17145
+w=7: H=462915 blue=0 black=462915; partners prime=456435 nonprime=6480 (smallest-module sizes: 2:6480); old modules surviving=0; partners in the fibre=0; distinct partner classes=5715
+all representatives: distinct partner classes 45424 (prime 44790); multiplicity histogram (presentations per class: classes): 27:33846 54:148 81:11282 108:148
+done in 14 s
