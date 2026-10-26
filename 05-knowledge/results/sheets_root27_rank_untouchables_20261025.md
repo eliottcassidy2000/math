@@ -49,7 +49,11 @@ untouchable number, or find the exact share of untouchable numbers.
   non-semiprime source / residue class.
 - Concurrent work: the root-27 packet (2026-10-26) already contains (C3) and (L2); Theorem B restates them as a
   single rank law, adds the exhaustive all-shape controls, and adds the halting-share theorem. Nothing in Theorem B's
-  first half is claimed as new.
+  first half is claimed as new. The same owner dispatch is running in opus-2026-10-26-S57, which reserved
+  THM-4790..4792 and HYP-9400..9402 (commit d1635ee0a1) for untouchables, the root-27 source-preserving rank, the
+  `3n+-1` tables and tournament graph pairs; those are **RESERVED** stubs, not dependencies, and this note takes no
+  ID. Theorems A–C and the census are offered to that session for integration; if it proves the same statements,
+  its IDs carry them and this note stays as the independent computation record.
 
 ## 1. Theorem A: the two sheets modulo an odd modulus
 
