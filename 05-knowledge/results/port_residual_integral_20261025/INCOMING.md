@@ -62,3 +62,21 @@ These connections support three distinct checks: an integral carrier,
 a specified operation bank, and a positivity or realizability criterion.
 The [C5 quotient hostile](parity/README.md) shows why satisfying the first
 and obtaining nonnegative coefficients do not supply the second.
+
+## Final merge correction
+
+Commit6ee004ad3b repaired the mixed-order proof in the THM-4764 source:
+the general binomial valuation is a lower bound, not an equality, and
+the normalized coefficient needs a minus one. The example
+v_3(binom(15,7))=2>1 detects the first error. The theorem's candidate
+lower bound survives, and its equality question remains open. We read
+that correction before the final rebase; none of this packet's proofs
+depends on the repaired mixed-order extension.
+
+Commit6f34cc9e5c extended the norm-seven README with root-object gluing
+and its missing-sheet decoder. Its current README pin is refreshed
+explicitly after reading that change; it remains a conceptual input,
+not a premise of our recurrence. The later S63 framework publication
+retains the earlier parity/precision statements and their source lineage.
+Incoming reserved Busy-Beaver theorem slots are not proved dependencies
+and are not imported into this packet.
