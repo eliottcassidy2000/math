@@ -1,6 +1,6 @@
 ---
 id: THM-4800
-title: "Pepin's test as the valuation-two Collatz branch. Let A(x) = (3x+1)/4, the Syracuse step on x = 1 (mod 8); A fixes 1 (the trivial cycle) and is conjugate to y -> (3/4)y, y = x - 1. (1) On integers the Fermat line of THM-4793 is the A-orbit of F_m: S^k(F_m) = A^k(F_m) = 3^k 2^(2^m - 2k) + 1 for k < 2^(m-1). (2) For m >= 1, F_m is prime iff A has exactly two cycles on Z/F_m, the trivial fixed point 1 and one cycle of length 2^(2^m) through 0 = F_m, iff the half-period iterate A^((F_m - 1)/2) is the reflection x -> 2 - x about the trivial cycle; the integer Fermat line is the initial arc of that cycle. (3) The reflection x -> 2 - x commutes with A on Z and sends F_m to 1 - 2^(2^m), whose valuation-two run is the mirror image of the Fermat line. (4) For prime F_m, A is a cyclic self-complementing permutation of the Paley graph P(F_m) fixing 1. (5) Mersenne counterpart: B(x) = (3x+1)/2 fixes -1 (the negative trivial cycle) and carries the Mersenne line of THM-4556; modulo a Mersenne prime, B^((M_p - 1)/2) is the reflection about -1, which is necessary but not sufficient for primality (3/2 is a primitive root for 7 of the 11 Mersenne primes with p <= 127)."
+title: "Pepin's test as the valuation-two Collatz branch. Let A(x) = (3x+1)/4, the Syracuse step on x = 1 (mod 8); A fixes 1 (the trivial cycle) and is conjugate to y -> (3/4)y, y = x - 1. (1) On integers the Fermat line of THM-4793 is the A-orbit of F_m: S^k(F_m) = A^k(F_m) = 3^k 2^(2^m - 2k) + 1 for k < 2^(m-1). (2) For m >= 1, F_m is prime iff A has exactly two cycles on Z/F_m, the trivial fixed point 1 and one cycle of length 2^(2^m) through 0 = F_m, iff the half-period iterate A^((F_m - 1)/2) is the reflection x -> 2 - x about the trivial cycle; the integer Fermat line is the initial arc of that cycle. (3) The reflection x -> 2 - x commutes with A on Z and sends F_m to 1 - 2^(2^m), whose valuation-two run is the mirror image of the Fermat line. (4) For prime F_m, A is a cyclic self-complementing permutation of the Paley graph P(F_m) fixing 1. (5) Mersenne counterpart: B(x) = (3x+1)/2 fixes -1 (the negative trivial cycle) and carries the Mersenne line of THM-4556; modulo a Mersenne prime, B^((M_p - 1)/2) is the reflection about -1, which is necessary but not sufficient for primality (3/2 is a primitive root for 7 of the 11 Mersenne primes with p <= 127). (6) The Fermat lines of F_n and of F_(2^n) reduce mod F_n to antipodal arcs of the same A-cycle (F_(2^n) = 2 mod F_n). This is the dynamical form of kind-pasteur's concurrent landing-point test F_n | L_(2^n)."
 status: >
   PROVED (elementary; proofs below). Builds on klein's THM-4793, which gives the odd-branch form x -> 3x+1 of Pepin's
   test and the Fermat line. The new parts are:
@@ -8,7 +8,8 @@ status: >
   - the identification of the integer Fermat line with the initial arc of the Pepin cycle, which places THM-4793's
     prime-blind line inside the prime-sensitive cycle;
   - the half-turn form and the mirror line;
-  - the Paley reading and the Mersenne counterpart.
+  - the Paley reading and the Mersenne counterpart;
+  - (6), the antipodal-arc explanation of kind-pasteur-S5's concurrent Theorem L (CITED; landing-point divisibility).
   FINITE-EXACT: collatz_pepin_valuation_two_20261026.py.
   - The line and mirror identities for m = 2..11.
   - The two-cycle structure and the half-turn for F_1..F_4.
@@ -86,5 +87,22 @@ cycles of length divisible by 4 (Sachs, Ringel). Pépin says this one is **cycli
   (valuation one, expansion `3/2`) sits in the split group `F_(M_p)^*`, which is not a 2-group. That asymmetry is why
   only the Fermat half-turn is a primality test.
 
+**(6) The two lines are antipodal arcs of one cycle.** Concurrently, kind-pasteur-2026-10-26-S5 proved (Theorem L in
+`05-knowledge/results/fermat_landing_points_pepin_20261026.md`) that `F_n` is prime iff `F_n` divides the Syracuse
+landing point `L_(2^n) = (3^M + 1)/2` of the Fermat line of `F_(2^n)`, where `M = (F_n - 1)/2`. The present carrier
+explains this dynamically.
+- `F_(2^n) = 4^M + 1`, and `4^M = 2^(F_n - 1) = 1 (mod F_n)` because `ord_(F_n)(2) = 2^(n+1)` divides `F_n - 1`. So
+  `F_(2^n) = 2 (mod F_n)`, which is the mirror image of `F_n = 0` under the half-turn of (2).
+- The Fermat line of `F_(2^n)` is `A^j(4^M + 1) = 3^j 4^(M-j) + 1`, which is `2 - A^j(F_n) (mod F_n)`. It is the
+  **antipodal arc** of the cycle that the line of `F_n` begins.
+- Its landing value before the final halving is `A^M(4^M + 1) = 3^M + 1`, and `F_n | 3^M + 1` iff
+  `A^M(2) = 0 (mod F_n)` iff `(3/4)^M = -1`. That is the half-turn, and so the closing of a single cycle.
+- So Theorem L and the cycle type of (2) are one fact: the Fermat lines of `F_n` and of `F_(2^n)` are the two halves
+  of the Pépin cycle of `A` modulo `F_n`.
+- Checked for `n = 1..5`: the arcs are antipodal in every case, and the landing divisibility holds for `n <= 4` and
+  fails at `n = 5`.
+
 **Scope.** Everything here is elementary. The content is the identification of the carrier, not a new primality
 test: (2) is equivalent to Pépin's congruence. Nothing is claimed about the existence of further Fermat primes.
+kind-pasteur-S5 also independently audited THM-4793 (confirmed) and states, concurrently with the S58 note, the
+algebraic and Aurifeuillean no-go for Fermat numbers.

@@ -73,6 +73,33 @@
    "pepin_deficit_log2": 9.0
   }
  },
+ "antipodal_arcs": {
+  "1": {
+   "F_(2^n) mod F_n": 2,
+   "antipodal_arcs": true,
+   "F_n | 3^M + 1": true
+  },
+  "2": {
+   "F_(2^n) mod F_n": 2,
+   "antipodal_arcs": true,
+   "F_n | 3^M + 1": true
+  },
+  "3": {
+   "F_(2^n) mod F_n": 2,
+   "antipodal_arcs": true,
+   "F_n | 3^M + 1": true
+  },
+  "4": {
+   "F_(2^n) mod F_n": 2,
+   "antipodal_arcs": true,
+   "F_n | 3^M + 1": true
+  },
+  "5": {
+   "F_(2^n) mod F_n": 2,
+   "antipodal_arcs": true,
+   "F_n | 3^M + 1": false
+  }
+ },
  "B_mod_M_p": {
   "3": {
    "half_period_iterate_is_x->-2-x": true,

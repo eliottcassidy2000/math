@@ -33,6 +33,17 @@
     primes;
   - THM-871 and THM-4644 (rigid circulants at Fermat primes);
   - THM-4749 (the Fermat products).
+- **Concurrent, same dispatch, read before final drafting:** kind-pasteur-2026-10-26-S5,
+  [fermat_landing_points_pepin_20261026](../fermat_landing_points_pepin_20261026.md). It contains:
+  - Theorem L: `F_n` is prime iff `F_n | L_(2^n)`, the landing point of the Fermat line of `F_(2^n)`, with
+    `L' = L^2 + (L-1)^2`;
+  - an independent audit confirming THM-4793;
+  - further floors of the ladder;
+  - `omega(Paley(257)) = 7`;
+  - the same algebraic and Aurifeuillean no-go as 1.2.
+
+  THM-4800 (6) shows that Theorem L and the Pépin cycle are one fact (antipodal arcs). klein's later Theorem M* (merges
+  at `L = 1 (mod 4)`) does not touch this note.
 
 ![Pépin on the 17-gon and the squaring tree of F_17^*](pepin_collatz_17gon.svg)
 
@@ -58,8 +69,8 @@ Infinite families have been proved composite only by three uniform mechanisms. N
 - **Aurifeuillean factorisation.** The identity `4u^4 + 1 = (2u^2 + 2u + 1)(2u^2 - 2u + 1)` splits `2^(4k+2) + 1`,
   but Fermat exponents `2^m` are `0 (mod 4)` for `m >= 2`.
 
-A proof of completeness therefore needs a mechanism not yet known. The calibration of section 4 shows the contrast is
-real. Collatz's neighbours of `F_m`, the numbers `3^j 2^b +- 1`, *do* carry algebraic and Aurifeuillean
+A proof of completeness therefore needs a mechanism not yet known. kind-pasteur-S5 states the algebraic and
+Aurifeuillean parts concurrently. The calibration of section 4 shows the contrast is real. Collatz's neighbours of `F_m`, the numbers `3^j 2^b +- 1`, *do* carry algebraic and Aurifeuillean
 factorisations, and these shift their prime counts measurably (3–6%). The genuine Fermat line and `F_m` carry none.
 
 ### 1.3 Structures that are finite for free, and structures that carry the problem (THM-4801 (2))
@@ -131,6 +142,11 @@ klein's THM-4793 reads Pépin through the odd branch `x -> 3x+1` mod `F_m` and f
 - **The mirror.** `A(2 - x) = 2 - A(x)`. The mirror image of `F_m` is `2 - F_m = 1 - 2^(2^m)`, the negated
   Mersenne-type number, whose valuation-two run is the Fermat line reflected through 1. Modulo `F_m`, Pépin's
   half-turn sends `F_m` to this mirror point.
+- **The antipodal line** (THM-4800 (6)).
+  - The integer `F_(2^m) = 4^M + 1`, with `M = (F_m - 1)/2`, is `2 (mod F_m)`, the mirror point.
+  - Its Fermat line is the antipodal half of the same `A`-cycle.
+  - So kind-pasteur's Theorem L (`F_m` is prime iff `F_m` divides the landing point `(3^M + 1)/2` of that line) is
+    the cycle closing at 0. The two Fermat lines of `F_m` and `F_(2^m)` are the two halves of Pépin's cycle.
 - **Adelic reading.** The multiplier `3/4` has `|3/4|_inf = 3/4`, `|3/4|_2 = 4` and `|3/4|_3 = 1/3` (product formula).
   - In the reals the line descends toward 1.
   - In `Z_2` it is repelled from 1. It starts `2^(-2^m)`-close to 1, so it escapes after `2^(m-1)` steps; that is the

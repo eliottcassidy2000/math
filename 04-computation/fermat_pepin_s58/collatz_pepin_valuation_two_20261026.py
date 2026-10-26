@@ -139,6 +139,22 @@ if __name__ == '__main__':
         print(f'm={m}: F_m prime {prime}; half-period iterate of A is x -> 2-x: {half_is_reflection}; '
               f'{ {k: v for k, v in row.items() if k not in ("F_m_prime",)} }', flush=True)
     out['A_mod_F_m'] = res
+    # (vi) antipodal arcs: F_(2^n) = 4^M + 1 = 2 (mod F_n), its line is 2 - (line of F_n) mod F_n, and
+    #      kind-pasteur's Theorem L (F_n | 3^M + 1) is the half-turn
+    anti = {}
+    for n in range(1, 6):
+        F = 2 ** (2 ** n) + 1
+        M = (F - 1) // 2
+        b2 = (pow(4, M, F) + 1) % F
+        inv4 = pow(4, -1, F)
+        a = 3 * inv4 % F
+        x0, x2, ok = 0, b2, True
+        for j in range(min(M, 4000)):
+            ok &= (x0 + x2) % F == 2
+            x0, x2 = (a * x0 + inv4) % F, (a * x2 + inv4) % F
+        anti[n] = {'F_(2^n) mod F_n': b2, 'antipodal_arcs': ok, 'F_n | 3^M + 1': (pow(3, M, F) + 1) % F == 0}
+        print(f'antipodal n={n}: {anti[n]}', flush=True)
+    out['antipodal_arcs'] = anti
     # Mersenne counterpart: B(x) = (3x+1)/2 mod M_p, fixed point -1
     mer = {}
     for p in [3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127]:
