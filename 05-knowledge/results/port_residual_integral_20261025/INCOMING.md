@@ -80,3 +80,9 @@ not a premise of our recurrence. The later S63 framework publication
 retains the earlier parity/precision statements and their source lineage.
 Incoming reserved Busy-Beaver theorem slots are not proved dependencies
 and are not imported into this packet.
+
+Commit59723ca6e5 adds finite-depth root-continuation queries to the same
+boundary README. That update was read and its conceptual source pin
+refreshed; no continuation-depth theorem from that algebra is used to
+justify our moment compression. The respective operation banks remain
+part of each statement.
