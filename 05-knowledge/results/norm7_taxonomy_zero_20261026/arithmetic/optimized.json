@@ -1,0 +1,246 @@
+{
+  "atlas_degree_census": [
+    {
+      "D_square": false,
+      "cases": 3105,
+      "minimum_degree": 2
+    },
+    {
+      "D_square": false,
+      "cases": 3187,
+      "minimum_degree": 4
+    },
+    {
+      "D_square": true,
+      "cases": 10,
+      "minimum_degree": 1
+    },
+    {
+      "D_square": true,
+      "cases": 42,
+      "minimum_degree": 2
+    }
+  ],
+  "consequence_controls": [
+    {
+      "D": 2,
+      "delta": 3,
+      "minimum_point_field_degree": 2,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": []
+    },
+    {
+      "D": 3,
+      "delta": 3,
+      "minimum_point_field_degree": 2,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": []
+    },
+    {
+      "D": 5,
+      "delta": 3,
+      "minimum_point_field_degree": 2,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": []
+    },
+    {
+      "D": 13,
+      "delta": 3,
+      "minimum_point_field_degree": 4,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": [
+        3
+      ]
+    },
+    {
+      "D": 17,
+      "delta": 3,
+      "minimum_point_field_degree": 4,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": [
+        2
+      ]
+    },
+    {
+      "D": 73,
+      "delta": 3,
+      "minimum_point_field_degree": 4,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": [
+        2,
+        3
+      ]
+    },
+    {
+      "D": -1,
+      "delta": 3,
+      "minimum_point_field_degree": 2,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": []
+    },
+    {
+      "D": -7,
+      "delta": 3,
+      "minimum_point_field_degree": 4,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": [
+        2
+      ]
+    },
+    {
+      "D": 2,
+      "delta": -1,
+      "minimum_point_field_degree": 4,
+      "ramified_places": [
+        2,
+        "infinity"
+      ],
+      "remaining_obstruction_places": [
+        "infinity"
+      ]
+    },
+    {
+      "D": 1,
+      "delta": 3,
+      "minimum_point_field_degree": 2,
+      "ramified_places": [
+        2,
+        3
+      ],
+      "remaining_obstruction_places": [
+        2,
+        3
+      ]
+    },
+    {
+      "D": 1,
+      "delta": 2,
+      "minimum_point_field_degree": 1,
+      "ramified_places": [],
+      "remaining_obstruction_places": []
+    }
+  ],
+  "delta_three_pass_D": [
+    -97,
+    -94,
+    -93,
+    -91,
+    -85,
+    -82,
+    -78,
+    -73,
+    -70,
+    -69,
+    -67,
+    -66,
+    -61,
+    -58,
+    -57,
+    -51,
+    -46,
+    -43,
+    -42,
+    -37,
+    -34,
+    -33,
+    -30,
+    -22,
+    -21,
+    -19,
+    -13,
+    -10,
+    -6,
+    -3,
+    -1,
+    2,
+    3,
+    5,
+    6,
+    11,
+    14,
+    15,
+    21,
+    23,
+    26,
+    29,
+    30,
+    35,
+    38,
+    39,
+    42,
+    47,
+    51,
+    53,
+    59,
+    62,
+    66,
+    69,
+    71,
+    74,
+    77,
+    78,
+    83,
+    86,
+    87,
+    93,
+    95
+  ],
+  "gates": 16773,
+  "passed": true,
+  "primitive_local_cases": 260,
+  "primitive_local_rejections": {
+    "2": 26,
+    "3": 14,
+    "7": 8,
+    "11": 6
+  },
+  "rational_squareclass_cases": 900,
+  "scope": "Specified complete reduced resolved fibre only. Classical global splitting theorem is cited, not proved computationally. No whole-surface rational-point or F1 claim.",
+  "status": "FINITE-EXACT controls for proved quadratic-field atlas",
+  "universe": {
+    "local_conic_primes": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "quadratic_root_primes": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      19,
+      23,
+      31
+    ],
+    "rational_delta": "numerator -30..30 nonzero; denominator1..15",
+    "squarefree_D": "-100..100 nonzero",
+    "squarefree_delta": "-40..40 nonzero"
+  }
+}

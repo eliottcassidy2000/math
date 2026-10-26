@@ -1,0 +1,294 @@
+{
+  "Euler_blindness": {
+    "elliptic_rational_2torsion_sizes": [
+      4,
+      2
+    ],
+    "integral_C2_mod2_actions": "identity versus nonidentity unipotent",
+    "procyclic_invariant_dimensions": [
+      1,
+      2
+    ]
+  },
+  "checks": 1494,
+  "elliptic_finite_checks": [
+    [
+      3,
+      4,
+      4
+    ],
+    [
+      5,
+      8,
+      8
+    ],
+    [
+      7,
+      8,
+      8
+    ],
+    [
+      11,
+      12,
+      12
+    ],
+    [
+      13,
+      8,
+      8
+    ],
+    [
+      17,
+      16,
+      16
+    ],
+    [
+      19,
+      20,
+      20
+    ],
+    [
+      23,
+      24,
+      24
+    ],
+    [
+      29,
+      40,
+      40
+    ],
+    [
+      31,
+      32,
+      32
+    ],
+    [
+      37,
+      40,
+      40
+    ],
+    [
+      41,
+      32,
+      32
+    ],
+    [
+      43,
+      44,
+      44
+    ],
+    [
+      47,
+      48,
+      48
+    ],
+    [
+      53,
+      40,
+      40
+    ],
+    [
+      59,
+      60,
+      60
+    ],
+    [
+      61,
+      72,
+      72
+    ],
+    [
+      67,
+      68,
+      68
+    ],
+    [
+      71,
+      72,
+      72
+    ],
+    [
+      73,
+      80,
+      80
+    ],
+    [
+      79,
+      80,
+      80
+    ],
+    [
+      83,
+      84,
+      84
+    ],
+    [
+      89,
+      80,
+      80
+    ],
+    [
+      97,
+      80,
+      80
+    ]
+  ],
+  "finite_bank_hostile": {
+    "difference_from_Y02": 1,
+    "prime": 107
+  },
+  "noncubic_rank8_hostile": {
+    "actual_prime_bank": [
+      71,
+      61,
+      11,
+      41,
+      31,
+      29,
+      19,
+      73,
+      23,
+      13,
+      83,
+      17,
+      7,
+      53
+    ],
+    "binary_evaluation_rank": 14,
+    "missed_prime": 43,
+    "missed_witness": 15,
+    "quadratic_generators": [
+      -1,
+      2,
+      3,
+      5
+    ],
+    "test_set": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "trace_rows": [
+      [
+        0,
+        8,
+        8
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        6,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0
+      ],
+      [
+        9,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        0
+      ],
+      [
+        11,
+        0,
+        0
+      ],
+      [
+        12,
+        0,
+        0
+      ],
+      [
+        13,
+        0,
+        0
+      ],
+      [
+        14,
+        0,
+        0
+      ],
+      [
+        15,
+        8,
+        -8
+      ]
+    ]
+  },
+  "rank13": {
+    "determinant": 295608050652838265614106593306487371138496200704,
+    "determinant_mod": {
+      "101": 36,
+      "65521": 9133,
+      "1000003": 629424
+    },
+    "primes": [
+      7,
+      11,
+      19,
+      23,
+      31,
+      43,
+      47,
+      59,
+      67,
+      71,
+      79,
+      83,
+      103
+    ],
+    "scope": "Four rawY function directions independent modulo the nine defined inherited functions; no irreducibility/rank4/purity claim"
+  },
+  "small_noncubic_controls": {
+    "1": 1,
+    "2": 1
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,39 @@
+{
+  "audit_amendments": [
+    "C1 late perturbation requires two computably specified distinct codomain values",
+    "Collatz positive input encoded by n+1",
+    "q*a84 column separately checked"
+  ],
+  "base_commit": "fc3768ac5fcd",
+  "checks": 1494,
+  "date": "2026-10-26",
+  "files": {
+    "AUDIT_CONDUCTOR_SUPPORT.md": "a4ef9957f21470ddc89e85d77dc61e5b5a3335c7bda3894712a433073e12f6c2",
+    "AUDIT_QUADRATIC_FIBRE_ATLAS.md": "317685cb98c04c803059e4a95698be8dc435031ce92fe9b7c8bf1391259ea75d",
+    "GALOIS_COMPARISON_GATES.md": "5249204df093a866bbf6df75160b1c5a268e4bb9e937b043bfc98f46c604af09",
+    "README.md": "3fa8f8c0e010eb6193a82c846e6b1495c57600c7144640e240c6a9ad8995ee46",
+    "SOURCE_RECEIPTS.json": "2844c05190ad37ea469daa5af9de43b1a368e0e896aafb04b11f837a133892c8",
+    "ZERO_AND_FINITE_CERTIFICATES.md": "707654e8f7202cfe7feec2c48fada85c701e51276d1c3f0d3d84703c2ef14a8f",
+    "audit_quadratic_atlas.py": "81b7f627689655b7b725fe95380acf3788cb65618deb2bfafbc7482ebf7bfb71",
+    "check_certificates.py": "4e377f86cadc1df2000b30bdb6e8ced3de71dfdb750c3e7cd3ba13034f283f19",
+    "modular_rows.out": "175b5f68e3042453168786064b27a4653b2a9bddf9e6cdcec5bc21b77a99376b",
+    "quadratic_audit.normal.json": "8a0c0d2542b8a2a61ee920e7ee38ab61eaadb9fa658b413fae3746b0f65ead45",
+    "quadratic_audit.optimized.json": "8a0c0d2542b8a2a61ee920e7ee38ab61eaadb9fa658b413fae3746b0f65ead45",
+    "replay_modular_rows.gp": "dfdeb47aa43b6b159888b4093bf9d4d5b50f573b3a0cc8b4cd5fbb31ea524fac",
+    "results.json": "e35d5a5b0c0e0ba3aac8b842858c6df82988f110832ec028a8b3c89bf289fb13",
+    "results.optimized.json": "e35d5a5b0c0e0ba3aac8b842858c6df82988f110832ec028a8b3c89bf289fb13",
+    "tt7_rank13_input.json": "da9d5262dde64ae62a5eaaeef2cdbb6e7e20ff1e92d5de32e682faea57fdbab6"
+  },
+  "independent_audit": {
+    "path": "../taxonomy/AUDIT_CERTIFICATES.md",
+    "pre_promotion_README_sha256": "1af84a3cdbde514527d994bc07fa6ca790af2c414a4db442c972ae67f0205147",
+    "sha256": "7a93ead872db74b395bcb1058c5ff02765a9e81cddd6cced895b72084c5e6ba0"
+  },
+  "normal_optimized_identical": true,
+  "outgoing_audits": {
+    "arithmetic/CONDUCTOR_SUPPORT.md": "PASS",
+    "arithmetic/QUADRATIC_FIBRE_ATLAS.md": "PASS"
+  },
+  "quadratic_atlas_independent_audit_checks": 117,
+  "status": "INDEPENDENT_AUDIT_PASS_AFTER_THREE_BOUNDED_REPAIRS"
+}

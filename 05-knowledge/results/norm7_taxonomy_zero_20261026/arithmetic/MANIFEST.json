@@ -1,0 +1,41 @@
+{
+  "atlas_independent_audit": {
+    "path": "05-knowledge/results/norm7_taxonomy_zero_20261026/certificates/AUDIT_QUADRATIC_FIBRE_ATLAS.md",
+    "promotion_change": "status and audit link only",
+    "reviewed_pre_promotion_proof_sha256": "bee684647eb9476bdc90d920272106b35ab550e35315ce456a0e8870fba802fe",
+    "sha256": "317685cb98c04c803059e4a95698be8dc435031ce92fe9b7c8bf1391259ea75d"
+  },
+  "conductor_independent_audit": {
+    "additional_root_review": "PASS reported by parent after independent primary-source and proof read",
+    "path": "05-knowledge/results/norm7_taxonomy_zero_20261026/certificates/AUDIT_CONDUCTOR_SUPPORT.md",
+    "promotion_change": "status and audit link only",
+    "reviewed_pre_promotion_proof_sha256": "e1f6ef43a434a72560078dc66f3851f56b7b6edccbc1288dff93c8e09e440bb3",
+    "sha256": "a4ef9957f21470ddc89e85d77dc61e5b5a3335c7bda3894712a433073e12f6c2"
+  },
+  "conductor_primary_pdf": {
+    "pdf_page_index": 57,
+    "printed_page": 179,
+    "read": "Theorem2.7 and proof visually read from local render; PDF not committed",
+    "sha256": "56bb67830d2d16a1c3c6e6b9ccd35e406d374f2e36669b938c10f78d45b0b0f2",
+    "url": "https://www.dam.brown.edu/people/mumford/alg_geom/papers/1976b--DetDiv%2BKnudsenSequel-GT.pdf"
+  },
+  "files": {
+    "AUDIT_EXTENSIONS.md": "1884ceef8527ecd65ec4c94daf131acc4ffe72ef8d64ff6683dd5c713462d6ea",
+    "CONDUCTOR_SUPPORT.md": "ddaf3d092198ad0c982d895892e3ae009cd6fc540398816210d76529629561b0",
+    "QUADRATIC_FIBRE_ATLAS.md": "765c1ed2018c2e6e8e0831005c5bffb73356cea9d834e92077131c4090317e90",
+    "SOURCES.md": "9069b57ef2fd638f8b68dda04a26e4fcd34fc74367b3cb152ca0e2b2764443b3",
+    "audit_extension_independent.py": "49b232f04c8e5f0e4d03078fc7089730d0e3b3f605d42e33b23b132b46f68b53",
+    "check_quadratic_atlas.py": "4647c9759940aed132a9cb375310213f717ed0bf4fa17c4109091c0e07b24d28",
+    "extension_audit.normal.json": "e9cae70c6cfcaf98ab32cc123b3f8a758e11216929b27656432805b2f43e52ce",
+    "extension_audit.optimized.json": "e9cae70c6cfcaf98ab32cc123b3f8a758e11216929b27656432805b2f43e52ce",
+    "normal.json": "296406290b1003a43bc4feae0a6e927f63121dc967a2e3620338ddd526e9c5ec",
+    "optimized.json": "296406290b1003a43bc4feae0a6e927f63121dc967a2e3620338ddd526e9c5ec"
+  },
+  "inherited": {
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md": "8c9c2c5aecf1cd076649b3485b52490ec342fc4007c70a1b8ff9049891afc1af",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/gale/RESULT.md": "da73464388f1a5159f53662fe503fa39b58bfa586935ca4a39e8383c0267bee4",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/reduction/RESULT.md": "3edc0e5d83f6a357ed73cd87076369f62f74e48aab1d61588cbe7cd9b9281fe5",
+    "05-knowledge/results/normseven_descent_moments_20261026/RESOLVED_FIBRES.md": "bed3077279fc2ddb765d39147fe0bfca8d6321d005a0e1f5e134470efee72a32"
+  },
+  "status": "quadratic atlas independently audited PASS; extension audit PASS; conductor support deduction independently audited PASS"
+}

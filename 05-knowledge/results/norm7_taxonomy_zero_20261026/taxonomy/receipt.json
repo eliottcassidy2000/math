@@ -1,0 +1,574 @@
+{
+  "block_A_rows": [
+    10,
+    12,
+    9,
+    0
+  ],
+  "block_Aop_rows": [
+    4,
+    1,
+    2,
+    7
+  ],
+  "carousel_module_counts": {
+    "3": 4,
+    "5": 6,
+    "7": 8,
+    "9": 10,
+    "11": 12,
+    "13": 14
+  },
+  "counterexample": {
+    "automorphism_orders": [
+      81,
+      27
+    ],
+    "c3_count": 67,
+    "hamilton_paths": [
+      462915,
+      462915
+    ],
+    "identical_labelled_cyclic_triples": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        4,
+        8
+      ],
+      [
+        0,
+        4,
+        9
+      ],
+      [
+        0,
+        4,
+        10
+      ],
+      [
+        0,
+        4,
+        11
+      ],
+      [
+        0,
+        5,
+        8
+      ],
+      [
+        0,
+        5,
+        9
+      ],
+      [
+        0,
+        5,
+        10
+      ],
+      [
+        0,
+        5,
+        11
+      ],
+      [
+        0,
+        6,
+        8
+      ],
+      [
+        0,
+        6,
+        9
+      ],
+      [
+        0,
+        6,
+        10
+      ],
+      [
+        0,
+        6,
+        11
+      ],
+      [
+        0,
+        7,
+        8
+      ],
+      [
+        0,
+        7,
+        9
+      ],
+      [
+        0,
+        7,
+        10
+      ],
+      [
+        0,
+        7,
+        11
+      ],
+      [
+        1,
+        4,
+        8
+      ],
+      [
+        1,
+        4,
+        9
+      ],
+      [
+        1,
+        4,
+        10
+      ],
+      [
+        1,
+        4,
+        11
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        1,
+        5,
+        9
+      ],
+      [
+        1,
+        5,
+        10
+      ],
+      [
+        1,
+        5,
+        11
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        1,
+        6,
+        9
+      ],
+      [
+        1,
+        6,
+        10
+      ],
+      [
+        1,
+        6,
+        11
+      ],
+      [
+        1,
+        7,
+        8
+      ],
+      [
+        1,
+        7,
+        9
+      ],
+      [
+        1,
+        7,
+        10
+      ],
+      [
+        1,
+        7,
+        11
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        2,
+        4,
+        9
+      ],
+      [
+        2,
+        4,
+        10
+      ],
+      [
+        2,
+        4,
+        11
+      ],
+      [
+        2,
+        5,
+        8
+      ],
+      [
+        2,
+        5,
+        9
+      ],
+      [
+        2,
+        5,
+        10
+      ],
+      [
+        2,
+        5,
+        11
+      ],
+      [
+        2,
+        6,
+        8
+      ],
+      [
+        2,
+        6,
+        9
+      ],
+      [
+        2,
+        6,
+        10
+      ],
+      [
+        2,
+        6,
+        11
+      ],
+      [
+        2,
+        7,
+        8
+      ],
+      [
+        2,
+        7,
+        9
+      ],
+      [
+        2,
+        7,
+        10
+      ],
+      [
+        2,
+        7,
+        11
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        3,
+        4,
+        9
+      ],
+      [
+        3,
+        4,
+        10
+      ],
+      [
+        3,
+        4,
+        11
+      ],
+      [
+        3,
+        5,
+        8
+      ],
+      [
+        3,
+        5,
+        9
+      ],
+      [
+        3,
+        5,
+        10
+      ],
+      [
+        3,
+        5,
+        11
+      ],
+      [
+        3,
+        6,
+        8
+      ],
+      [
+        3,
+        6,
+        9
+      ],
+      [
+        3,
+        6,
+        10
+      ],
+      [
+        3,
+        6,
+        11
+      ],
+      [
+        3,
+        7,
+        8
+      ],
+      [
+        3,
+        7,
+        9
+      ],
+      [
+        3,
+        7,
+        10
+      ],
+      [
+        3,
+        7,
+        11
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        8,
+        9,
+        10
+      ]
+    ],
+    "maximal_proper_module_masks": [
+      15,
+      240,
+      3840
+    ],
+    "mixed_rows": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      1039,
+      271,
+      527,
+      1807
+    ],
+    "order": 12,
+    "uniform_rows": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ]
+  },
+  "full_graph_oracle": [
+    {
+      "all_unordered_pairs_with_diagonal": 36,
+      "automorphism_histogram_on_words": {
+        "27": 6,
+        "81": 2
+      },
+      "base_order": 3,
+      "expanded_order": 12,
+      "necklace_classes": 4,
+      "words": 8
+    },
+    {
+      "all_unordered_pairs_with_diagonal": 528,
+      "automorphism_histogram_on_words": {
+        "243": 30,
+        "1215": 2
+      },
+      "base_order": 5,
+      "expanded_order": 20,
+      "necklace_classes": 8,
+      "words": 32
+    }
+  ],
+  "full_strong_module_tree_oracle": [
+    {
+      "all_labelled_tournaments": 1,
+      "full_permutation_classes": 1,
+      "order": 1,
+      "tree_classes": 1
+    },
+    {
+      "all_labelled_tournaments": 2,
+      "full_permutation_classes": 1,
+      "order": 2,
+      "tree_classes": 1
+    },
+    {
+      "all_labelled_tournaments": 8,
+      "full_permutation_classes": 2,
+      "order": 3,
+      "tree_classes": 2
+    },
+    {
+      "all_labelled_tournaments": 64,
+      "full_permutation_classes": 4,
+      "order": 4,
+      "tree_classes": 4
+    },
+    {
+      "all_labelled_tournaments": 1024,
+      "full_permutation_classes": 12,
+      "order": 5,
+      "tree_classes": 12
+    }
+  ],
+  "gates": 2885,
+  "hostiles": {
+    "Paley7_automorphisms": 21,
+    "Paley_nonrotation_words": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "arbitrary_linear_block_sizes": [
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ]
+    ],
+    "nonselfconverse_strong6_rows": [
+      26,
+      28,
+      25,
+      16,
+      32,
+      15
+    ],
+    "self_converse_block_all_eight_words_isomorphic": true
+  },
+  "period_census": [
+    {
+      "classes": 4,
+      "converse_merged_classes": 2,
+      "least_period_counts": {
+        "1": 2,
+        "3": 2
+      },
+      "n": 3
+    },
+    {
+      "classes": 8,
+      "converse_merged_classes": 4,
+      "least_period_counts": {
+        "1": 2,
+        "5": 6
+      },
+      "n": 5
+    },
+    {
+      "classes": 20,
+      "converse_merged_classes": 10,
+      "least_period_counts": {
+        "1": 2,
+        "7": 18
+      },
+      "n": 7
+    },
+    {
+      "classes": 60,
+      "converse_merged_classes": 30,
+      "least_period_counts": {
+        "1": 2,
+        "3": 2,
+        "9": 56
+      },
+      "n": 9
+    },
+    {
+      "classes": 188,
+      "converse_merged_classes": 94,
+      "least_period_counts": {
+        "1": 2,
+        "11": 186
+      },
+      "n": 11
+    },
+    {
+      "classes": 632,
+      "converse_merged_classes": 316,
+      "least_period_counts": {
+        "1": 2,
+        "13": 630
+      },
+      "n": 13
+    },
+    {
+      "classes": 2192,
+      "converse_merged_classes": 1096,
+      "least_period_counts": {
+        "1": 2,
+        "3": 2,
+        "5": 6,
+        "15": 2182
+      },
+      "n": 15
+    }
+  ],
+  "status": "FINITE-EXACT controls for all-order proved taxonomy"
+}

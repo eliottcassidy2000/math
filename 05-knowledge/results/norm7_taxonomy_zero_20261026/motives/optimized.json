@@ -1,0 +1,671 @@
+{
+  "gates": 359,
+  "rows": [
+    {
+      "TT6": {
+        "count": 0,
+        "defined": true
+      },
+      "chi_minus_one": -1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 3,
+      "q": 3
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        16,
+        16,
+        -16,
+        -16,
+        -16,
+        16
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        -16,
+        16,
+        -16,
+        16
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 5,
+      "q": 5
+    },
+    {
+      "TT6": {
+        "count": 0,
+        "defined": true
+      },
+      "chi_minus_one": -1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        -128,
+        128,
+        128,
+        128,
+        0,
+        0
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        -128,
+        128,
+        0,
+        0
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 7,
+      "q": 7
+    },
+    {
+      "TT6": {
+        "count": 0,
+        "defined": true
+      },
+      "chi_minus_one": -1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        -128,
+        128,
+        -384,
+        -384,
+        -256,
+        -384
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        -128,
+        -384,
+        -256,
+        -384
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 11,
+      "q": 11
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        336,
+        336,
+        -16,
+        -16,
+        432,
+        272
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        -336,
+        16,
+        432,
+        272
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 13,
+      "q": 13
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        112,
+        112,
+        -784,
+        -784,
+        496,
+        -1296
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        -112,
+        784,
+        496,
+        -1296
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 17,
+      "q": 17
+    },
+    {
+      "TT6": {
+        "count": 0,
+        "defined": true
+      },
+      "chi_minus_one": -1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        2304,
+        -2304,
+        -1280,
+        -1280,
+        1536,
+        1280
+      ],
+      "degree": 1,
+      "fixed_formula_values": [
+        2304,
+        -1280,
+        1536,
+        1280
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 19,
+      "q": 19
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        -208,
+        -208,
+        -16,
+        -16,
+        48,
+        -16
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        208,
+        16,
+        48,
+        -16
+      ],
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "p": 3,
+      "q": 9
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        -3152,
+        -3152,
+        5360,
+        5360,
+        3120,
+        240
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        3152,
+        -5360,
+        3120,
+        240
+      ],
+      "modulus": [
+        3,
+        0,
+        1
+      ],
+      "p": 5,
+      "q": 25
+    },
+    {
+      "TT6": {
+        "count": null,
+        "defined": false,
+        "reason": "quadratic character is symmetric"
+      },
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        2928,
+        2928,
+        11760,
+        11760,
+        1904,
+        -2320
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        -2928,
+        -11760,
+        1904,
+        -2320
+      ],
+      "modulus": [
+        4,
+        0,
+        1
+      ],
+      "p": 7,
+      "q": 49
+    },
+    {
+      "TT6": null,
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        15536,
+        15536,
+        610800,
+        610800,
+        -10832,
+        99568
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        -15536,
+        -610800,
+        -10832,
+        99568
+      ],
+      "modulus": [
+        9,
+        0,
+        1
+      ],
+      "p": 11,
+      "q": 121
+    },
+    {
+      "TT6": null,
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        443952,
+        443952,
+        1950448,
+        1950448,
+        470704,
+        1283056
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        -443952,
+        -1950448,
+        470704,
+        1283056
+      ],
+      "modulus": [
+        11,
+        0,
+        1
+      ],
+      "p": 13,
+      "q": 169
+    },
+    {
+      "TT6": null,
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        4263152,
+        4263152,
+        3471344,
+        3471344,
+        590576,
+        384496
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        -4263152,
+        -3471344,
+        590576,
+        384496
+      ],
+      "modulus": [
+        14,
+        0,
+        1
+      ],
+      "p": 17,
+      "q": 289
+    },
+    {
+      "TT6": null,
+      "chi_minus_one": 1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        3452464,
+        3452464,
+        10386416,
+        10386416,
+        403248,
+        2487792
+      ],
+      "degree": 2,
+      "fixed_formula_values": [
+        -3452464,
+        -10386416,
+        403248,
+        2487792
+      ],
+      "modulus": [
+        17,
+        0,
+        1
+      ],
+      "p": 19,
+      "q": 361
+    },
+    {
+      "TT6": {
+        "count": 0,
+        "defined": true
+      },
+      "chi_minus_one": -1,
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "cone_sign_exponents": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cone_sums": [
+        -8064,
+        8064,
+        12672,
+        12672,
+        11520,
+        4992
+      ],
+      "degree": 3,
+      "fixed_formula_values": [
+        -8064,
+        12672,
+        11520,
+        4992
+      ],
+      "modulus": [
+        2,
+        2,
+        0,
+        1
+      ],
+      "p": 3,
+      "q": 27
+    }
+  ],
+  "source_sha256": "3036a2093792548afd6113344b46b46f515f5a823cfcf531284bf7d69d58dab9",
+  "status": "FINITE-EXACT raw cone transport; motives and conductor OPEN",
+  "universe": "six graphs; seven prime fields, their quadratic extensions, F27"
+}

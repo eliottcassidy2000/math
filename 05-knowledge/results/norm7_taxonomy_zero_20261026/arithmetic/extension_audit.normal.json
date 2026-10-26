@@ -1,0 +1,136 @@
+{
+  "checks": 363,
+  "method": "literal cubic products; distinct extension moduli; independent A/B transforms",
+  "rows": [
+    {
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "epsilon": 1,
+      "literal_sums": [
+        16,
+        16,
+        -16,
+        -16,
+        -16,
+        16
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 5,
+      "q": 5
+    },
+    {
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "epsilon": -1,
+      "literal_sums": [
+        -128,
+        128,
+        128,
+        128,
+        0,
+        0
+      ],
+      "modulus": [
+        0,
+        1
+      ],
+      "p": 7,
+      "q": 7
+    },
+    {
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "epsilon": 1,
+      "literal_sums": [
+        -208,
+        -208,
+        -16,
+        -16,
+        48,
+        -16
+      ],
+      "modulus": [
+        2,
+        1,
+        1
+      ],
+      "p": 3,
+      "q": 9
+    },
+    {
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "epsilon": -1,
+      "literal_sums": [
+        -8064,
+        8064,
+        12672,
+        12672,
+        11520,
+        4992
+      ],
+      "modulus": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "p": 3,
+      "q": 27
+    },
+    {
+      "cone_ids": [
+        2,
+        4,
+        5,
+        6,
+        9,
+        18
+      ],
+      "epsilon": 1,
+      "literal_sums": [
+        2928,
+        2928,
+        11760,
+        11760,
+        1904,
+        -2320
+      ],
+      "modulus": [
+        3,
+        1,
+        1
+      ],
+      "p": 7,
+      "q": 49
+    }
+  ],
+  "status": "PASS"
+}

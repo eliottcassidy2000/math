@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-26",
+  "sources": [
+    {
+      "pin": "Version March9,2023, Theorems8.4 and8.5, printedpp36\u201337",
+      "title": "Alex Simpson, Computability notes",
+      "url": "https://alexksimpson.github.io/Teaching/tinotes.pdf",
+      "used_for": "Rice arbitrary witness and finite positive-information condition; own hierarchy reductions explicit"
+    },
+    {
+      "pin": "Proposition9.4.5; Corollary9.4.6",
+      "title": "Kedlaya, Weil cohomology chapter9",
+      "url": "https://kskedlaya.org/weil-cohom/chapter-9.html",
+      "used_for": "Chebotarev/Brauer\u2013Nesbitt semisimplification; abelian isogeny upgrade"
+    },
+    {
+      "excluded": "Abbreviated Theorem10.2.4 not imported in arbitrary rank; Remark10.2.5 false under its displayed noncubic definition",
+      "pin": "Remark10.1.3 and Section10.2",
+      "title": "Kedlaya, Weil cohomology chapter10",
+      "url": "https://kskedlaya.org/weil-cohom/chapter-10.html",
+      "used_for": "Representation existence and controlled ramification required"
+    },
+    {
+      "pin": "arXiv0804.2302v2,5Nov2008, Theorem4.1 printedp8, definitionprintedp4",
+      "title": "Dieulefait\u2013Guerberoff\u2013Pacetti",
+      "url": "https://arxiv.org/pdf/0804.2302",
+      "used_for": "Precise rank2 Livne criterion overimaginaryquadraticK, parity/determinant/noncubic hypotheses, semisimplification conclusion"
+    }
+  ]
+}
