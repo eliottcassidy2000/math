@@ -1,0 +1,241 @@
+{
+  "81_27": [
+    {
+      "Aut": 81,
+      "H": 462915,
+      "entrance_phase_mass": [
+        154305,
+        154305,
+        154305
+      ],
+      "joint_phase_mass": [
+        [
+          42930,
+          45036,
+          66339
+        ],
+        [
+          66339,
+          42930,
+          45036
+        ],
+        [
+          45036,
+          66339,
+          42930
+        ]
+      ],
+      "phase_target_sizes": null,
+      "presentations": 5715,
+      "target_classes": 5715,
+      "word": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Aut": 27,
+      "H": 462915,
+      "entrance_phase_mass": [
+        154305,
+        154305,
+        154305
+      ],
+      "joint_phase_mass": [
+        [
+          42930,
+          45036,
+          66339
+        ],
+        [
+          66339,
+          42930,
+          45036
+        ],
+        [
+          45036,
+          66339,
+          42930
+        ]
+      ],
+      "phase_target_sizes": [
+        5715,
+        5715,
+        5715
+      ],
+      "presentations": 17145,
+      "target_classes": 17145,
+      "word": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "F8": {
+    "Paley_Aut": 21,
+    "Paley_H": 189,
+    "normal_basis": [
+      3,
+      5,
+      7
+    ],
+    "phase_cocycle_checks": 72
+  },
+  "cyclic_triples": 67,
+  "cyclotomic_chirality": [
+    {
+      "degree": 2,
+      "doubling_orbit": [
+        1,
+        2
+      ],
+      "inverse_selector_possible": false,
+      "p": 3,
+      "selectors": 0
+    },
+    {
+      "degree": 4,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        3
+      ],
+      "inverse_selector_possible": false,
+      "p": 5,
+      "selectors": 0
+    },
+    {
+      "degree": 3,
+      "doubling_orbit": [
+        1,
+        2,
+        4
+      ],
+      "inverse_selector_possible": true,
+      "p": 7,
+      "selectors": 2
+    },
+    {
+      "degree": 10,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        5,
+        10,
+        9,
+        7,
+        3,
+        6
+      ],
+      "inverse_selector_possible": false,
+      "p": 11,
+      "selectors": 0
+    },
+    {
+      "degree": 12,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        3,
+        6,
+        12,
+        11,
+        9,
+        5,
+        10,
+        7
+      ],
+      "inverse_selector_possible": false,
+      "p": 13,
+      "selectors": 0
+    },
+    {
+      "degree": 8,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        15,
+        13,
+        9
+      ],
+      "inverse_selector_possible": false,
+      "p": 17,
+      "selectors": 0
+    },
+    {
+      "degree": 18,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        13,
+        7,
+        14,
+        9,
+        18,
+        17,
+        15,
+        11,
+        3,
+        6,
+        12,
+        5,
+        10
+      ],
+      "inverse_selector_possible": false,
+      "p": 19,
+      "selectors": 0
+    },
+    {
+      "degree": 11,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        9,
+        18,
+        13,
+        3,
+        6,
+        12
+      ],
+      "inverse_selector_possible": true,
+      "p": 23,
+      "selectors": 2
+    },
+    {
+      "degree": 5,
+      "doubling_orbit": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "inverse_selector_possible": true,
+      "p": 31,
+      "selectors": 8
+    }
+  ],
+  "shared_by_minus_phase": [
+    74,
+    0,
+    0
+  ],
+  "shared_targets": 74,
+  "unnamed_target_law_total_variation": "17071/17145"
+}

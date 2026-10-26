@@ -59,6 +59,20 @@ and all still have distinct histograms after correctly summing multiplicities
 over forgotten ports. There are 2,032,504 strong presentations and 269,860
 joint target classes. This is finite evidence, not an all-order proof.
 
+Even the unweighted set of ordinary partner classes distinguishes all 6,008
+strong atoms. The corresponding joint support also distinguishes them.
+Thus multiplicity and joint ports are necessary for composition in general,
+but this census does not show that either is necessary merely to identify
+a strong source. The two classification problems must stay distinct.
+
+The legacy `atom_responses.py` producer still used a dictionary overwrite
+when forgetting ports. It now sums coefficients. The smallest mass-loss
+witness is the sole strong four-vertex class: true mass five became four.
+This repairs the producer, not the independently audited HYP-9416 counts,
+which already used the correct pushforward. Larger erroneous loss amounts
+depend on the arbitrary order of overwritten keys; the C++ and Python
+diagnostics need not agree on that discarded quantity.
+
 The separate Python checker verifies the sandwich decoder on every root
 pair of the complete through-seven strong atlas, checks randomized relabelled
 larger controls, and computes unnamed multiset and normalized probability
@@ -136,3 +150,44 @@ successor rows remain distinguished as failure. The normalization distinction
 is real, although both protocols have the same pair answer in U2's reset
 setting. Bisimulation/lumpability is not silently identified with every
 possible weaker trace-distribution equivalence.
+
+## Phase, arithmetic connections and reproducibility
+
+[CONNECTIONS.md](CONNECTIONS.md) develops the typed response-calculus proposal,
+the 81/27 hostile law, Frobenius versus determinant parity, the literal
+F8 x F8 / F16 cyclotomic bridge, and the limits of a Fermat/Dudeney analogy.
+It connects the recovered Vitali, square-sum, graceful, Petersen, Gaussian
+and Penrose mechanisms without asserting an unproved isomorphism.
+
+**Universe and controls.** `census.cpp` exhausts every fixed-path bit string
+through eight, canonicalizing by all degree-compatible permutations.
+`audit.py` uses a separately implemented Python canonicalizer and DFS,
+checks the complete inherited strong atlas through seven, all its ordered
+root pairs, the corrected aggregation helper, both versions of the V1
+closure, and 160 seeded larger sandwich controls. `literal.py` independently
+refines the literal reset/complement partitions through seven and checks
+the blue-join hostile. `phase.py` enumerates both 12-vertex path sets and
+all their complement partners, using the pinned independent audit's
+canonical labeller. That last dependency is explicit, not an independent
+second canonicalization of the 12-vertex census. The eight-vertex exhaustive
+extension has one implementation; the through-seven overlap has two.
+
+Run from the repository root:
+
+```text
+python -B 05-knowledge/results/unnamed_carrier_dissection_20261026/verify.py
+python -B 05-knowledge/results/unnamed_carrier_dissection_20261026/verify.py --replay
+python -B 05-knowledge/results/unnamed_carrier_dissection_20261026/verify.py --full
+python agents/check_docs.py
+```
+
+Default verification checks seals, pinned executable inputs, receipt agreement,
+and independent overlapping results. `--replay` also reruns all Python
+calculations normally and under `-O`; `--full` additionally compiles the C++
+census with g++ and repeats order eight. These commands use only local inputs
+and standard Python/C++ libraries. Receipts record deterministic mathematical
+outputs, not timings. The manifest covers the packet except itself, with LF
+normalization stated explicitly. Literature and recovery provenance are in
+`SOURCES.json`; historical source hashes are not assertions that those
+living files can never change. The proofs have a local mathematical audit
+and computational controls, not a new independent-agent review.

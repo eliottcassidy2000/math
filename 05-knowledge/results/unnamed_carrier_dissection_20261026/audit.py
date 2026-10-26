@@ -1,5 +1,6 @@
 """Independent Python checks: rooted recovery, actual multiset/probability closure,
-and corrected atom pushforwards. No imports from census.cpp or the old producer.
+and corrected atom pushforwards. Canonicalization/DFS do not import the old
+producer; its repaired aggregation helper alone is extracted for a regression check.
 The frozen atlas supplies the complete strong-class universe through seven only.
 """
 from collections import Counter,defaultdict
@@ -7,7 +8,7 @@ from functools import lru_cache,reduce
 from itertools import permutations,product,chain
 from pathlib import Path
 from math import gcd,isqrt
-import json,random
+import json,random,ast
 ROOT=Path(__file__).resolve().parents[3]
 def need(v,s):
     if not v:raise RuntimeError(s)
@@ -83,6 +84,10 @@ def refine(states,succ,init,prob=False):
         if len(set(new.values()))==len(set(cell.values())):return new,rounds
         rounds+=1;cell=new
 def main():
+    legacy=ROOT/'04-computation/experiments/joint_port_bisimulation_20261026/atom_responses.py'
+    node=next(x for x in ast.parse(legacy.read_text()).body if isinstance(x,ast.FunctionDef) and x.name=='forget_ports')
+    scope={'Counter':Counter};exec(compile(ast.Module(body=[node],type_ignores=[]),str(legacy),'exec'),scope)
+    need(scope['forget_ports']([('a',2),('b',3)],{'a':'c','b':'c'})==Counter({'c':5}),'repaired aggregation hostile')
     atlas=json.loads((ROOT/'05-knowledge/results/strong_atom_continuation_vitali_20261026/strong-atlas.json').read_text())
     result={'sandwich':[],'atom_pushforward':[],'closure':[]}
     for n in range(3,8):
@@ -94,10 +99,12 @@ def main():
                     if s==e:continue
                     states.add(canon(t,(s,e)))
                     u=sandwich(t,s,e);need(decoders(u)==[(n,n+1,s,e)],'unique strong-core sandwich decoder')
-            c=Counter();j=Counter();wrong={}
+            c=Counter();j=Counter();wrong={};legacy_response=[];legacy_fc={}
             for h in a['response']:
                 v=canon(tuple(h['rows']));c[v]+=h['total'];j[canon(tuple(h['rows']),tuple(h['roots']))]+=h['total'];wrong[v]=h['total']
+                key=canon(tuple(h['rows']),tuple(h['roots']));legacy_response.append((key,h['total']));legacy_fc[key]=v
             need(sum(c.values())==a['presentations'],'pushforward mass')
+            need(scope['forget_ports'](legacy_response,legacy_fc)==c,'repaired legacy pushforward matches independent sum')
             fs.append(tuple(sorted(c.items())));js.append(tuple(sorted(j.items())));lost.append(a['presentations']-sum(wrong.values()))
         need(len(set(fs))==len(atoms),'free signatures classify finite strong atlas')
         need(len(set(js))==len(atoms),'joint signatures classify finite strong atlas')

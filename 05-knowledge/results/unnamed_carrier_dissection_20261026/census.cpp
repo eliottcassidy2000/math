@@ -33,13 +33,14 @@ int main(int argc,char**argv){int top=argc>1?std::stoi(argv[1]):8;need(top>=3&&t
  std::map<U,Record> rec;std::set<U> target;unsigned total=0,maxf=0,blueatoms=0;
  for(unsigned m=0;m<N;m++){T t=presentation(m);if(!strong(t))continue;auto&r=rec[fc[m]];U h=gc[m^(N-1)];
  r.joint[h]++;r.free[fc[m^(N-1)]]++;r.mass++;if(blue(t))r.bl[h]++;target.insert(h);total++;}
- std::set<std::map<U,unsigned>> js,fs,bs;unsigned maxcollapse=0;U witness=0;
+ std::set<std::map<U,unsigned>> js,fs,bs;std::set<std::vector<U>> jsupport,fsupport;unsigned maxcollapse=0;U witness=0;
  for(auto&[a,r]:rec){js.insert(r.joint);fs.insert(r.free);if(!r.bl.empty())blueatoms++;
+ std::vector<U> jkeys,fkeys;for(auto[h,c]:r.joint)jkeys.push_back(h);for(auto[h,c]:r.free)fkeys.push_back(h);jsupport.insert(jkeys);fsupport.insert(fkeys);
  unsigned mass=0;for(auto[h,c]:r.free)mass+=c;need(mass==r.mass,"free pushforward conserves mass");
  for(auto[h,c]:r.joint)maxf=std::max(maxf,c);
  // Compare actual pushforward with the old dictionary-overwrite bug.
  std::map<U,unsigned> wrong;for(auto[h,c]:r.joint){T t{};for(int i=0;i<n;i++)t[i]=(h>>(8*i))&255;wrong[canonical(t)]=c;}
  unsigned wm=0;for(auto[h,c]:wrong)wm+=c;if(r.mass-wm>maxcollapse){maxcollapse=r.mass-wm;witness=a;}}
- std::cout<<"{\"n\":"<<n<<",\"presentations\":"<<N<<",\"classes\":"<<all.size()<<",\"strong_classes\":"<<rec.size()<<",\"strong_presentations\":"<<total<<",\"joint_targets\":"<<target.size()<<",\"joint_signatures\":"<<js.size()<<",\"free_signatures\":"<<fs.size()<<",\"blue_atoms\":"<<blueatoms<<",\"max_joint_fibre\":"<<maxf<<",\"old_overwrite_max_mass_loss\":"<<maxcollapse<<",\"mass_loss_source_code\":"<<witness<<",\"free_pair_cells\":"<<fp.size()<<",\"rooted_pair_cells\":"<<gp.size()<<",\"free_pair_colour_cells\":"<<fpc.size()<<",\"rooted_pair_colour_cells\":"<<gpc.size()<<"}"<<(n<top?",\n":"\n");std::cout.flush();
+ std::cout<<"{\"n\":"<<n<<",\"presentations\":"<<N<<",\"classes\":"<<all.size()<<",\"strong_classes\":"<<rec.size()<<",\"strong_presentations\":"<<total<<",\"joint_targets\":"<<target.size()<<",\"joint_signatures\":"<<js.size()<<",\"free_signatures\":"<<fs.size()<<",\"joint_support_signatures\":"<<jsupport.size()<<",\"free_support_signatures\":"<<fsupport.size()<<",\"blue_atoms\":"<<blueatoms<<",\"max_joint_fibre\":"<<maxf<<",\"old_overwrite_max_mass_loss\":"<<maxcollapse<<",\"mass_loss_source_code\":"<<witness<<",\"free_pair_cells\":"<<fp.size()<<",\"rooted_pair_cells\":"<<gp.size()<<",\"free_pair_colour_cells\":"<<fpc.size()<<",\"rooted_pair_colour_cells\":"<<gpc.size()<<"}"<<(n<top?",\n":"\n");std::cout.flush();
  }std::cout<<"]\n";
 }

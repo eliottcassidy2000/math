@@ -6,6 +6,18 @@
 # F_A(rho h), rho[C;s,t] = [C^op;t,s]) and the self-converse atoms.  Usage: atom_responses.py n.
 import sys, time
 from collections import Counter, defaultdict
+
+def forget_ports(response, free_classes):
+    """Push forward multiplicities; different rooted keys can share a free key.
+
+    Corrected 2026-10-26: a dict comprehension overwrote these contributions.
+    The independent HYP-9416 audit's corrected classification counts survive.
+    """
+    out = Counter()
+    for h, count in response:
+        out[free_classes[h]] += count
+    return out
+
 from rooted import tournaments, canon_rooted, ham_paths, partner, is_strong, relabel
 from canon_nauty import canon_batch
 n = int(sys.argv[1]); t0 = time.time()
@@ -47,7 +59,7 @@ groups = defaultdict(list)
 for a in classes: groups[resp[a]].append(a)
 print(f"  distinct joint response histograms F_A: {len(groups)} (atoms sharing a histogram: {[len(g) for g in groups.values() if len(g) > 1]})")
 coarse = defaultdict(list)
-for a in classes: coarse[frozenset(Counter({fc[h]: c for h, c in resp[a]}).items())].append(a)
+for a in classes: coarse[frozenset(forget_ports(resp[a], fc).items())].append(a)
 print(f"  after forgetting ports (target free classes with multiplicity): {len(coarse)} distinct")
 withblue = defaultdict(list)
 for a in classes: withblue[(resp[a], blue[a])].append(a)

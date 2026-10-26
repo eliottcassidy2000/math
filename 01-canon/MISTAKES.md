@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — forgetting ports must sum multiplicities
+
+- **Source / failed implication:** `04-computation/experiments/joint_port_bisimulation_20261026/atom_responses.py` constructed `Counter({fc[h]: c for h,c in resp[a]})`. Distinct rooted targets can have the same free class, so the dictionary overwrites coefficients before Counter sees them. This is not a histogram pushforward.
+- **Minimal witness:** the sole strong four-vertex class has five presentations; this expression gives total mass four. At order three the single response has no collision. Larger wrong totals depend on iteration order and are not invariant statistics.
+- **Repair / strongest survivor:** `forget_ports` now adds each coefficient into its free-class fibre. The independent HYP-9416 audit already used the correct sum, so its classification conclusion survives. A separate exhaustive C++ census extends distinct free and joint histograms, and even their supports, to all 6,008 strong eight-vertex classes. All-size classification remains OPEN.
+- **Lineage / missing coordinate:** MISTAKE-676 distinguishes individual states, response histograms and normalized laws. This producer repair enforces the histogram's missing multiplicities. [Exact replay and aggregation checks](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md) compare every inherited through-seven coefficient and a direct two-keys-to-one hostile. No uncomputed fixed-port closure at order eight is claimed.
+
 ## 2026-10-26 — citation provenance does not discharge a quantifier
 
 - **Regression:** incoming `2c85cab14a` preserved the earlier scoped proof in THM-4805 but restored an unqualified all-k Mersenne singleton headline, duplicated A'(ii), and weakened the scopes in its source and navigation mirrors. Relabelling a result CITED answers where it came from, not whether its hypotheses hold.
