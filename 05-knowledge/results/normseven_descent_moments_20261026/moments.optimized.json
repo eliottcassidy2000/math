@@ -1,0 +1,1082 @@
+{
+  "fields": [
+    {
+      "base_points": 13,
+      "degree": 1,
+      "p": 3,
+      "pairs": [
+        {
+          "coarse_second": 111,
+          "energy": 121,
+          "mixed": 111,
+          "source_second": 232,
+          "strata": {
+            "r0_e0": 1,
+            "r1_e1": 1,
+            "r2_e2": 6,
+            "r3_e2": 2,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 2,
+              "k_intersection": 1,
+              "lines": [
+                1,
+                3,
+                6
+              ],
+              "missing_bits": 2
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 2,
+              "lines": [
+                2,
+                4,
+                5
+              ],
+              "missing_bits": 2
+            }
+          ]
+        },
+        {
+          "coarse_second": 111,
+          "energy": 121,
+          "mixed": 111,
+          "source_second": 232,
+          "strata": {
+            "r0_e0": 1,
+            "r1_e1": 1,
+            "r2_e2": 6,
+            "r3_e2": 2,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 2,
+              "lines": [
+                1,
+                3,
+                6
+              ],
+              "missing_bits": 2
+            },
+            {
+              "h_intersection": 2,
+              "k_intersection": 1,
+              "lines": [
+                2,
+                4,
+                5
+              ],
+              "missing_bits": 2
+            }
+          ]
+        }
+      ],
+      "q": 3,
+      "twists": 64
+    },
+    {
+      "base_points": 31,
+      "degree": 1,
+      "p": 5,
+      "pairs": [
+        {
+          "coarse_second": 643,
+          "energy": 309,
+          "mixed": 643,
+          "source_second": 952,
+          "strata": {
+            "r0_e0": 7,
+            "r1_e1": 9,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        },
+        {
+          "coarse_second": 643,
+          "energy": 309,
+          "mixed": 643,
+          "source_second": 952,
+          "strata": {
+            "r0_e0": 7,
+            "r1_e1": 9,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        }
+      ],
+      "q": 5,
+      "twists": 64
+    },
+    {
+      "base_points": 57,
+      "degree": 1,
+      "p": 7,
+      "pairs": [
+        {
+          "coarse_second": 1635,
+          "energy": 533,
+          "mixed": 1635,
+          "source_second": 2168,
+          "strata": {
+            "r0_e0": 19,
+            "r1_e1": 23,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        },
+        {
+          "coarse_second": 1635,
+          "energy": 533,
+          "mixed": 1635,
+          "source_second": 2168,
+          "strata": {
+            "r0_e0": 19,
+            "r1_e1": 23,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        }
+      ],
+      "q": 7,
+      "twists": 64
+    },
+    {
+      "base_points": 133,
+      "degree": 1,
+      "p": 11,
+      "pairs": [
+        {
+          "coarse_second": 5155,
+          "energy": 981,
+          "mixed": 5155,
+          "source_second": 6136,
+          "strata": {
+            "r0_e0": 67,
+            "r1_e1": 51,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        },
+        {
+          "coarse_second": 5155,
+          "energy": 981,
+          "mixed": 5155,
+          "source_second": 6136,
+          "strata": {
+            "r0_e0": 67,
+            "r1_e1": 51,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        }
+      ],
+      "q": 11,
+      "twists": 64
+    },
+    {
+      "base_points": 183,
+      "degree": 1,
+      "p": 13,
+      "pairs": [
+        {
+          "coarse_second": 7683,
+          "energy": 1205,
+          "mixed": 7683,
+          "source_second": 8888,
+          "strata": {
+            "r0_e0": 103,
+            "r1_e1": 65,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        },
+        {
+          "coarse_second": 7683,
+          "energy": 1205,
+          "mixed": 7683,
+          "source_second": 8888,
+          "strata": {
+            "r0_e0": 103,
+            "r1_e1": 65,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        }
+      ],
+      "q": 13,
+      "twists": 64
+    },
+    {
+      "base_points": 91,
+      "degree": 2,
+      "p": 3,
+      "pairs": [
+        {
+          "coarse_second": 3087,
+          "energy": 793,
+          "mixed": 3087,
+          "source_second": 3880,
+          "strata": {
+            "r0_e0": 37,
+            "r1_e1": 43,
+            "r2_e2": 6,
+            "r3_e2": 2,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 2,
+              "k_intersection": 1,
+              "lines": [
+                1,
+                3,
+                6
+              ],
+              "missing_bits": 2
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 2,
+              "lines": [
+                2,
+                4,
+                5
+              ],
+              "missing_bits": 2
+            }
+          ]
+        },
+        {
+          "coarse_second": 3087,
+          "energy": 793,
+          "mixed": 3087,
+          "source_second": 3880,
+          "strata": {
+            "r0_e0": 37,
+            "r1_e1": 43,
+            "r2_e2": 6,
+            "r3_e2": 2,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 2,
+              "lines": [
+                1,
+                3,
+                6
+              ],
+              "missing_bits": 2
+            },
+            {
+              "h_intersection": 2,
+              "k_intersection": 1,
+              "lines": [
+                2,
+                4,
+                5
+              ],
+              "missing_bits": 2
+            }
+          ]
+        }
+      ],
+      "q": 9,
+      "twists": 64
+    },
+    {
+      "base_points": 651,
+      "degree": 2,
+      "p": 5,
+      "pairs": [
+        {
+          "coarse_second": 33603,
+          "energy": 2549,
+          "mixed": 33603,
+          "source_second": 36152,
+          "strata": {
+            "r0_e0": 487,
+            "r1_e1": 149,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        },
+        {
+          "coarse_second": 33603,
+          "energy": 2549,
+          "mixed": 33603,
+          "source_second": 36152,
+          "strata": {
+            "r0_e0": 487,
+            "r1_e1": 149,
+            "r2_e2": 12,
+            "r3_e3": 3
+          },
+          "triples": [
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                1,
+                2
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                3,
+                4
+              ],
+              "missing_bits": 3
+            },
+            {
+              "h_intersection": 1,
+              "k_intersection": 1,
+              "lines": [
+                0,
+                5,
+                6
+              ],
+              "missing_bits": 3
+            }
+          ]
+        }
+      ],
+      "q": 25,
+      "twists": 64
+    }
+  ],
+  "finite_orbits": {
+    "dimensions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "inertia_translation_split_cases": 5940,
+    "scope": "all inertia subspaces and translations; coordinate complements in every split"
+  },
+  "rational_hostile": {
+    "excluded_primes": [
+      2,
+      3,
+      5
+    ],
+    "range": "7 <= p <= 300",
+    "rows": [
+      [
+        7,
+        0,
+        16
+      ],
+      [
+        11,
+        32,
+        16
+      ],
+      [
+        13,
+        0,
+        16
+      ],
+      [
+        17,
+        0,
+        16
+      ],
+      [
+        19,
+        32,
+        16
+      ],
+      [
+        23,
+        0,
+        16
+      ],
+      [
+        29,
+        32,
+        16
+      ],
+      [
+        31,
+        32,
+        16
+      ],
+      [
+        37,
+        0,
+        16
+      ],
+      [
+        41,
+        32,
+        16
+      ],
+      [
+        43,
+        0,
+        16
+      ],
+      [
+        47,
+        0,
+        16
+      ],
+      [
+        53,
+        0,
+        16
+      ],
+      [
+        59,
+        32,
+        16
+      ],
+      [
+        61,
+        32,
+        16
+      ],
+      [
+        67,
+        0,
+        16
+      ],
+      [
+        71,
+        32,
+        16
+      ],
+      [
+        73,
+        0,
+        16
+      ],
+      [
+        79,
+        32,
+        16
+      ],
+      [
+        83,
+        0,
+        16
+      ],
+      [
+        89,
+        32,
+        16
+      ],
+      [
+        97,
+        0,
+        16
+      ],
+      [
+        101,
+        32,
+        16
+      ],
+      [
+        103,
+        0,
+        16
+      ],
+      [
+        107,
+        0,
+        16
+      ],
+      [
+        109,
+        32,
+        16
+      ],
+      [
+        113,
+        0,
+        16
+      ],
+      [
+        127,
+        0,
+        16
+      ],
+      [
+        131,
+        32,
+        16
+      ],
+      [
+        137,
+        0,
+        16
+      ],
+      [
+        139,
+        32,
+        16
+      ],
+      [
+        149,
+        32,
+        16
+      ],
+      [
+        151,
+        32,
+        16
+      ],
+      [
+        157,
+        0,
+        16
+      ],
+      [
+        163,
+        0,
+        16
+      ],
+      [
+        167,
+        0,
+        16
+      ],
+      [
+        173,
+        0,
+        16
+      ],
+      [
+        179,
+        32,
+        16
+      ],
+      [
+        181,
+        32,
+        16
+      ],
+      [
+        191,
+        32,
+        16
+      ],
+      [
+        193,
+        0,
+        16
+      ],
+      [
+        197,
+        0,
+        16
+      ],
+      [
+        199,
+        32,
+        16
+      ],
+      [
+        211,
+        32,
+        16
+      ],
+      [
+        223,
+        0,
+        16
+      ],
+      [
+        227,
+        0,
+        16
+      ],
+      [
+        229,
+        32,
+        16
+      ],
+      [
+        233,
+        0,
+        16
+      ],
+      [
+        239,
+        32,
+        16
+      ],
+      [
+        241,
+        32,
+        16
+      ],
+      [
+        251,
+        32,
+        16
+      ],
+      [
+        257,
+        0,
+        16
+      ],
+      [
+        263,
+        0,
+        16
+      ],
+      [
+        269,
+        32,
+        16
+      ],
+      [
+        271,
+        32,
+        16
+      ],
+      [
+        277,
+        0,
+        16
+      ],
+      [
+        281,
+        32,
+        16
+      ],
+      [
+        283,
+        0,
+        16
+      ],
+      [
+        293,
+        0,
+        16
+      ]
+    ]
+  }
+}

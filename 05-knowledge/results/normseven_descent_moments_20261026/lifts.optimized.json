@@ -1,0 +1,156 @@
+{
+  "cyclic_unit_group_orders": [
+    1,
+    42
+  ],
+  "marked_fibre_cases": 903,
+  "matrix_census": [
+    {
+      "invertible_2_by_2": 6,
+      "m": 2,
+      "necessary_one_coordinate_repairs": 0,
+      "same_rank_lifts": 6
+    },
+    {
+      "invertible_2_by_2": 48,
+      "m": 3,
+      "necessary_one_coordinate_repairs": 0,
+      "same_rank_lifts": 48
+    },
+    {
+      "invertible_2_by_2": 96,
+      "m": 4,
+      "necessary_one_coordinate_repairs": 0,
+      "same_rank_lifts": 96
+    },
+    {
+      "invertible_2_by_2": 480,
+      "m": 5,
+      "necessary_one_coordinate_repairs": 240,
+      "same_rank_lifts": 240
+    },
+    {
+      "invertible_2_by_2": 288,
+      "m": 6,
+      "necessary_one_coordinate_repairs": 0,
+      "same_rank_lifts": 288
+    },
+    {
+      "invertible_2_by_2": 2016,
+      "m": 7,
+      "necessary_one_coordinate_repairs": 1344,
+      "same_rank_lifts": 672
+    },
+    {
+      "invertible_2_by_2": 1536,
+      "m": 8,
+      "necessary_one_coordinate_repairs": 768,
+      "same_rank_lifts": 768
+    },
+    {
+      "invertible_2_by_2": 3888,
+      "m": 9,
+      "necessary_one_coordinate_repairs": 2592,
+      "same_rank_lifts": 1296
+    },
+    {
+      "invertible_2_by_2": 2880,
+      "m": 10,
+      "necessary_one_coordinate_repairs": 1440,
+      "same_rank_lifts": 1440
+    },
+    {
+      "invertible_2_by_2": 13200,
+      "m": 11,
+      "necessary_one_coordinate_repairs": 10560,
+      "same_rank_lifts": 2640
+    },
+    {
+      "invertible_2_by_2": 4608,
+      "m": 12,
+      "necessary_one_coordinate_repairs": 2304,
+      "same_rank_lifts": 2304
+    }
+  ],
+  "six_to_seven_mod7_lift": [
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -7
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      7,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -24
+    ]
+  ],
+  "two_coordinate_mod7_lift": [
+    [
+      2,
+      7
+    ],
+    [
+      7,
+      25
+    ]
+  ],
+  "universal_unit_sign_moduli_through100": [
+    2,
+    3,
+    4,
+    6
+  ]
+}
