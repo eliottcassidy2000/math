@@ -1,0 +1,33 @@
+ALL-ORDER NECESSITY OF THE LOCAL FOREST CERTIFICATE
+2026-10-20
+
+This is an additive strengthening of Section 6 of:
+ 05-knowledge/results/merged_metagraph_realizability_20261020/REALIZABILITY.txt
+SHA-256 of the referenced version:
+ d187d2e51d7763203038b5f09749fe9fa24eca32338060f6685275cf8a5be9ed
+
+That version proves all-order sufficiency and reports finite necessity through n=8 on normalized tilings. Its historical claims are retained unchanged. THEOREM.txt now establishes the missing all-order connectivity premise, on the stronger labelled state space.
+
+Definitions. Fix n>=3, m=(n-1)(n-2)/2, N=2^m, and the fixed-path cube X={0,1}^m of THEOREM.txt. Let Cx be bitwise complement of the nonpath coordinates, and let sigma be coordinate reflection. Let q:X->U_true send a tiling to its tournament isomorphism class modulo converse, and let K_n=|U_true|. The exact partition-sum computation of K_n is given in Section 3 of the referenced result.
+
+An expanded candidate consists of N half-edges H, a fixed-point-free pairing c:H->H, a surjection pi:H->U onto nonempty candidate nodes, and one blue/black colour on each c-pair. Loops consume two half-edges; parallel lines remain distinct.
+
+THEOREM. Such a candidate is the complete converse-merged fixed-path tournament metagraph if and only if all the following data exist:
+
+(a) |U|=K_n.
+
+(b) A bijection x:H->X satisfying x(c(h))=C(x(h)), with the colour of h blue if and only if sigma(x(h))=x(h).
+
+(c) For each u in U, a spanning tree on the coordinate set x(pi^(-1)(u)) whose edges are legal single-vertex relocations or reflection.
+
+A singleton coordinate set has the empty spanning tree. The moves in (c) are undirected auxiliary transport edges, not the literal lines paired by c.
+
+Proof of sufficiency. Each legal relocation re-marks the same tournament, and reflection changes it only by converse. Therefore every candidate fibre lies in one true merged fibre. This defines a map alpha:U->U_true with alpha(pi(h))=q(x(h)). Every tournament has a Hamilton word by the insertion lemma, so q is onto. Since x is a bijection, alpha is onto. Condition (a) makes this finite surjection a bijection, so the candidate fibres are exactly the true fibres. Condition (b) identifies the literal complement pairing and its colour. Hence the coloured spans are isomorphic.
+
+Proof of necessity. For an actual metagraph, use its actual coordinate assignment, pairing, colours and merged nodes, so (a) and (b) hold. By THEOREM.txt each ordinary tiling fibre is connected under legal relocation, and adding reflection connects exactly each converse-merged fibre. Every finite connected graph admits a spanning tree. Choose one in each fibre to obtain (c).
+
+Thus the forest certificate is necessary and sufficient at all orders. No arbitrary vertex-isomorphism witnesses are required for its edges. The retained node-count, full coordinate coverage, complement, and colour conditions are essential parts of the statement; connectivity alone does not imply realizability from scalar data.
+
+Move convention. A rightward relocation of position a to just after position b has a+2<=b. It is legal exactly when the new arcs b->a, a-1->a+1 (if a>0), and a->b+1 (if b<n-1) hold in the marked tournament. Leftward moves are inverses. Adjacent transpositions cannot be legal in a tournament, since they reverse the arc between the swapped pair. Thus these are exactly the legal nontrivial relocations covered by THEOREM.txt.
+
+No bound on the length of a produced reconfiguration, the time to find these trees, or the diameter of a component is established here.

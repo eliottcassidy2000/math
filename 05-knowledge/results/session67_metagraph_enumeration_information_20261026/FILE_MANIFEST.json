@@ -1,0 +1,255 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "path": "FIRST_DOCS_CHECK.txt",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "FIRST_FILESET_NEGATIVE_CONTROLS.json",
+      "bytes": 601,
+      "sha256": "f8708ebceaa4611e28ff96e5c67fed826af1eddf34f275c0078803144750c041"
+    },
+    {
+      "path": "FIRST_REPLAY_RECEIPT.json",
+      "bytes": 10686,
+      "sha256": "be0241323ca32aca8a5eda71b6583eab51b7a150067af478c9bd8f204249d824"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 1296,
+      "sha256": "3e87a6dbf7bde1e0ddd52958f22342f0086a44d2b63809e6b1f18ee1b370c825"
+    },
+    {
+      "path": "PUBLICATION_CHECKS.md",
+      "bytes": 1837,
+      "sha256": "e7372dee21d27cac64c64abbc80af01219c27c58b77a91aa146f83286e79100d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2894,
+      "sha256": "3252e538292db80162502cc4621403dfbf117a9d5d25384fa6d59ec1dca61040"
+    },
+    {
+      "path": "session67-local-audit/AUDIT.md",
+      "bytes": 9197,
+      "sha256": "6e0f673d2d0c387ff5af9ab4618118d4d4ed12fda107ca13ea2c4cf484790248"
+    },
+    {
+      "path": "session67-local-audit/DELIVERABLES.json",
+      "bytes": 2526,
+      "sha256": "198e9bd581161c32a216cb43295cd224310254a9875a5e7d2ac6786b5905fc6a"
+    },
+    {
+      "path": "session67-local-audit/binary_laplacian_hostile.json",
+      "bytes": 2745,
+      "sha256": "9e67ff6e915f0f2544f39cafccd6ee40ba8d20770e1df2b24b554b17bfb34901"
+    },
+    {
+      "path": "session67-local-audit/binary_laplacian_hostile.py",
+      "bytes": 2482,
+      "sha256": "254efdf417729cc4d4d38dc869cc57ac295db22abfce50aea84e7a5fff9263b3"
+    },
+    {
+      "path": "session67-local-audit/compare_outputs.py",
+      "bytes": 3084,
+      "sha256": "96fcfb85266ea857bf839ee013560f42fcebede63f0070ec586ec3e1dfe356f6"
+    },
+    {
+      "path": "session67-local-audit/independent_check.out",
+      "bytes": 4722,
+      "sha256": "235d11a1e2da3fd25c5f61c605178c89b516697a196b433f4ea279954d557a48"
+    },
+    {
+      "path": "session67-local-audit/independent_check.py",
+      "bytes": 9256,
+      "sha256": "6a4c88767bd2aaffc1089ba49c96985abdfa1caee21e1359181bc2cf3279e513"
+    },
+    {
+      "path": "session67-local-audit/independent_results.json",
+      "bytes": 6466,
+      "sha256": "fcf80f82cf7e3b1feaeed2831641642322e3cbd23aa5c473bf1755b782c81c70"
+    },
+    {
+      "path": "session67-local-audit/optimization_negative_controls.json",
+      "bytes": 442,
+      "sha256": "8d4ee352386f0f7c66ef92ea5269140cf62426da7acb8f9822c049031a690376"
+    },
+    {
+      "path": "session67-local-audit/optimization_negative_controls.py",
+      "bytes": 1658,
+      "sha256": "8015e658f9300fb16dc23abf6cfff0b2a3a7a74bccc0d59ac9e0e6601a35fd69"
+    },
+    {
+      "path": "session67-local-audit/production_comparison.json",
+      "bytes": 468,
+      "sha256": "2174ea0df765511495878a82b4b5c29dfb53140d61718456a14fe8ad2920788b"
+    },
+    {
+      "path": "session67-local-audit/production_direct_audit.cpp",
+      "bytes": 4761,
+      "sha256": "1c616c73f06715430bbcd563fb41206a226530ad3de93750fab75665a4f5e291"
+    },
+    {
+      "path": "session67-local-audit/production_direct_audit.json",
+      "bytes": 5254,
+      "sha256": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+    },
+    {
+      "path": "session67-local-audit/production_source.json",
+      "bytes": 320,
+      "sha256": "0b259a8886924c91dc2cf11b8db40a93d47d7e97668badf32d54272052fd4922"
+    },
+    {
+      "path": "session67-local-audit/recognition_hostiles.json",
+      "bytes": 1090,
+      "sha256": "2942589c0c9b4fb59c7637ff1846a1b249214a4f870273f49bdf29498835d47b"
+    },
+    {
+      "path": "session67-local-audit/recognition_hostiles.py",
+      "bytes": 2210,
+      "sha256": "1f721b528ce5aeecfff815f0a0db1c66cfb66d0d163b647ffdfd343b1797c7a0"
+    },
+    {
+      "path": "session67-root/COUNT_FREE_ENUMERATION.md",
+      "bytes": 8217,
+      "sha256": "4d1ce0b7022ed3d3a9c25cd124ec0e30ec7e65a9a4ddc454a1d2bd7f71d9aa7e"
+    },
+    {
+      "path": "session67-root/REPRODUCE.md",
+      "bytes": 1668,
+      "sha256": "c5fde8a32b4e2a1b2815b6491124c5078ea8a9161476d80bfd43edb9888d6e23"
+    },
+    {
+      "path": "session67-root/enumerate.cpp",
+      "bytes": 4115,
+      "sha256": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3"
+    },
+    {
+      "path": "session67-root/export_check.json",
+      "bytes": 168,
+      "sha256": "573061f04f0f4748fab9eb26ac9426d3c7ec117f80f9ccc010b63f092c482d0d"
+    },
+    {
+      "path": "session67-root/export_check.optimized.json",
+      "bytes": 168,
+      "sha256": "573061f04f0f4748fab9eb26ac9426d3c7ec117f80f9ccc010b63f092c482d0d"
+    },
+    {
+      "path": "session67-root/inputs/LOCAL_FOREST_ADDENDUM.txt",
+      "bytes": 3594,
+      "sha256": "50be093f2734fffda98287f4301a0040e114ee18ecf5aecd4b6ea336dddc681c"
+    },
+    {
+      "path": "session67-root/inputs/THEOREM.txt",
+      "bytes": 7589,
+      "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee"
+    },
+    {
+      "path": "session67-root/output/census.json",
+      "bytes": 5254,
+      "sha256": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+    },
+    {
+      "path": "session67-root/output/census.optimized.json",
+      "bytes": 5254,
+      "sha256": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+    },
+    {
+      "path": "session67-root/output/lines_1.tsv",
+      "bytes": 22,
+      "sha256": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+    },
+    {
+      "path": "session67-root/output/lines_2.tsv",
+      "bytes": 22,
+      "sha256": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+    },
+    {
+      "path": "session67-root/output/lines_3.tsv",
+      "bytes": 30,
+      "sha256": "6a8c4a5bffdaa1666aa40fb1cb13b09fc566df79ecea6b48a3f5814b0b40fe60"
+    },
+    {
+      "path": "session67-root/output/lines_4.tsv",
+      "bytes": 46,
+      "sha256": "8b37470d5cf86c00ae42baa18b4796d7da7314db7c400038cc9d95e3396a0fec"
+    },
+    {
+      "path": "session67-root/output/lines_5.tsv",
+      "bytes": 191,
+      "sha256": "ee44e87e99dc26f6bcdd8bec33eadf3e724cb7ec89b2ca3e1943c35fb561c745"
+    },
+    {
+      "path": "session67-root/output/lines_6.tsv",
+      "bytes": 1840,
+      "sha256": "40dbe59ae45982d2247882b9a06f2db508710704d5a578cb457669cb10cbe459"
+    },
+    {
+      "path": "session67-root/output/lines_7.tsv",
+      "bytes": 72026,
+      "sha256": "a82cd534a71681265bacd13dc25bc8f72fe8586eb6c733abfbf63a4f8a3ec71b"
+    },
+    {
+      "path": "session67-root/output/lines_8.tsv.gz",
+      "bytes": 1352544,
+      "sha256": "bf6bc69279a75ec0a390d99999b0ddc17c24346d34a1ec1e33ea682e089c4266"
+    },
+    {
+      "path": "session67-root/output/nodes_1.tsv",
+      "bytes": 79,
+      "sha256": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+    },
+    {
+      "path": "session67-root/output/nodes_2.tsv",
+      "bytes": 79,
+      "sha256": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+    },
+    {
+      "path": "session67-root/output/nodes_3.tsv",
+      "bytes": 87,
+      "sha256": "480a3fe87e9e620201862c5bde86056428938334327c931117413d8376c90191"
+    },
+    {
+      "path": "session67-root/output/nodes_4.tsv",
+      "bytes": 103,
+      "sha256": "ac5ae24a2aee2dfe10533b90e560eb15ed306be3dd880b87084b82f1d8e5361c"
+    },
+    {
+      "path": "session67-root/output/nodes_5.tsv",
+      "bytes": 182,
+      "sha256": "f4d5c65af179d862eb0f0debdf1add0306582b9a697637f59c05cf79935c80ff"
+    },
+    {
+      "path": "session67-root/output/nodes_6.tsv",
+      "bytes": 690,
+      "sha256": "80de6dc41d23ad72d974577bf09962b3a780328012f0ecae6c6227274c834f46"
+    },
+    {
+      "path": "session67-root/output/nodes_7.tsv",
+      "bytes": 6172,
+      "sha256": "0137ed1dc0f13fefb2db721d8ed5335b85cd5c63ddfd57271b2278b8614fdb97"
+    },
+    {
+      "path": "session67-root/output/nodes_8.tsv",
+      "bytes": 113361,
+      "sha256": "fb3b2d0b84113e48539a085e34b7dfcb12665500685573e4134c1b238e995802"
+    },
+    {
+      "path": "session67-root/verify_exports.py",
+      "bytes": 1818,
+      "sha256": "1e54f4851b78fe9b36ea7ee3bbb3c75543bd59068a88cdd1dd7c06113877a764"
+    },
+    {
+      "path": "verify_mutations.py",
+      "bytes": 1269,
+      "sha256": "ff71e3638ffa0823892a39733ad51807fa60c51cc492b12f0d23729eab4ce56c"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 1897,
+      "sha256": "7c2269501ea5860caa483cc9165fc9c23e019f0b53defd07196a8b1a39bf0aa5"
+    }
+  ]
+}

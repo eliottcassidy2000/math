@@ -196,7 +196,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ## Tournaments
 
 ### Reliable structural toolkit
-- [Sessions](START-HERE.md); [HN/A000568](HN.md): boundary gates, census through9, full responses. [Charts/twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md).
+- [Sessions](START-HERE.md); [S67](S67.md); [HN/A000568](HN.md): boundary gates, census through9, full responses. [Charts/twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.
 - [Ranks/charts](../05-knowledge/results/rank_geometry_metagraph_20261026/README.md): observers, planar frames, A000568 through8; root27, smaller recurrence, connectivity OPEN. [Ports](../05-knowledge/results/lca_ports_reverse_20261025/README.md).
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.

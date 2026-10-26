@@ -1,0 +1,5 @@
+{
+  "path": "/workspace/scratch/07d5532f2fce/session67-root/enumerate.cpp",
+  "sha256": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3",
+  "instrumentation": "Store each move permutation and verify full directed path, full pair re-encoding, and converse/reversal against actual LUT on every input."
+}

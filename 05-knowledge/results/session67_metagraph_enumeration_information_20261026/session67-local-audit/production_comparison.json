@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "direct_arc_LUT_and_legality_audit_through_n": 8,
+  "direct_audit_summary_matches_production": true,
+  "independent_complete_node_and_line_table_match_through_n": 7,
+  "n8_node_line_accounting": {
+    "ordinary_nodes": 6880,
+    "merged_nodes": 3528,
+    "half_edges": 2097152,
+    "blue_lines": 2048,
+    "black_lines": 1046528,
+    "loops": 622,
+    "coloured_endpoint_rows": 438374,
+    "each_node_degree_equals_cube_fibre_mass": true
+  }
+}

@@ -1,0 +1,193 @@
+[
+  {
+    "n": 1,
+    "N": 1,
+    "simple_edges": 0,
+    "incidence_rank_F2": 0,
+    "class_count": 1,
+    "laplacian_rank_F2": 0,
+    "laplacian_nullity_F2": 1
+  },
+  {
+    "n": 2,
+    "N": 1,
+    "simple_edges": 0,
+    "incidence_rank_F2": 0,
+    "class_count": 1,
+    "laplacian_rank_F2": 0,
+    "laplacian_nullity_F2": 1
+  },
+  {
+    "n": 3,
+    "N": 2,
+    "simple_edges": 0,
+    "incidence_rank_F2": 0,
+    "class_count": 2,
+    "laplacian_rank_F2": 0,
+    "laplacian_nullity_F2": 2
+  },
+  {
+    "n": 4,
+    "N": 8,
+    "simple_edges": 6,
+    "incidence_rank_F2": 4,
+    "class_count": 4,
+    "laplacian_rank_F2": 2,
+    "laplacian_nullity_F2": 6,
+    "hostile": {
+      "component": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "laplacian_kernel_nonconstant_support": [
+        0,
+        2
+      ],
+      "component_laplacian_rows": [
+        10,
+        23,
+        10,
+        29,
+        10
+      ]
+    }
+  },
+  {
+    "n": 5,
+    "N": 64,
+    "simple_edges": 91,
+    "incidence_rank_F2": 52,
+    "class_count": 12,
+    "laplacian_rank_F2": 39,
+    "laplacian_nullity_F2": 25,
+    "hostile": {
+      "component": [
+        0,
+        3,
+        27,
+        29,
+        30,
+        37,
+        46,
+        48,
+        58
+      ],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          48
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          3,
+          37
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          27,
+          30
+        ],
+        [
+          27,
+          58
+        ],
+        [
+          29,
+          30
+        ],
+        [
+          29,
+          37
+        ],
+        [
+          30,
+          46
+        ],
+        [
+          30,
+          58
+        ],
+        [
+          37,
+          46
+        ],
+        [
+          37,
+          48
+        ],
+        [
+          46,
+          58
+        ],
+        [
+          48,
+          58
+        ]
+      ],
+      "laplacian_kernel_nonconstant_support": [
+        29,
+        30,
+        46
+      ],
+      "component_laplacian_rows": [
+        130,
+        39,
+        282,
+        60,
+        332,
+        202,
+        368,
+        417,
+        212
+      ]
+    }
+  },
+  {
+    "n": 6,
+    "N": 1024,
+    "simple_edges": 2350,
+    "incidence_rank_F2": 968,
+    "class_count": 56,
+    "laplacian_rank_F2": 866,
+    "laplacian_nullity_F2": 158
+  }
+]

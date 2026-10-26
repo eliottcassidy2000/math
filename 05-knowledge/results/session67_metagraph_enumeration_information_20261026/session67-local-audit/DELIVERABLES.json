@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "production_source_sha256": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "6e0f673d2d0c387ff5af9ab4618118d4d4ed12fda107ca13ea2c4cf484790248",
+      "bytes": 9197
+    },
+    {
+      "path": "independent_check.py",
+      "sha256": "6a4c88767bd2aaffc1089ba49c96985abdfa1caee21e1359181bc2cf3279e513",
+      "bytes": 9256
+    },
+    {
+      "path": "independent_check.out",
+      "sha256": "235d11a1e2da3fd25c5f61c605178c89b516697a196b433f4ea279954d557a48",
+      "bytes": 4722
+    },
+    {
+      "path": "independent_results.json",
+      "sha256": "fcf80f82cf7e3b1feaeed2831641642322e3cbd23aa5c473bf1755b782c81c70",
+      "bytes": 6466
+    },
+    {
+      "path": "production_direct_audit.cpp",
+      "sha256": "1c616c73f06715430bbcd563fb41206a226530ad3de93750fab75665a4f5e291",
+      "bytes": 4761
+    },
+    {
+      "path": "production_direct_audit.json",
+      "sha256": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082",
+      "bytes": 5254
+    },
+    {
+      "path": "production_source.json",
+      "sha256": "0b259a8886924c91dc2cf11b8db40a93d47d7e97668badf32d54272052fd4922",
+      "bytes": 320
+    },
+    {
+      "path": "production_comparison.json",
+      "sha256": "2174ea0df765511495878a82b4b5c29dfb53140d61718456a14fe8ad2920788b",
+      "bytes": 468
+    },
+    {
+      "path": "compare_outputs.py",
+      "sha256": "96fcfb85266ea857bf839ee013560f42fcebede63f0070ec586ec3e1dfe356f6",
+      "bytes": 3084
+    },
+    {
+      "path": "recognition_hostiles.py",
+      "sha256": "1f721b528ce5aeecfff815f0a0db1c66cfb66d0d163b647ffdfd343b1797c7a0",
+      "bytes": 2210
+    },
+    {
+      "path": "recognition_hostiles.json",
+      "sha256": "2942589c0c9b4fb59c7637ff1846a1b249214a4f870273f49bdf29498835d47b",
+      "bytes": 1090
+    },
+    {
+      "path": "binary_laplacian_hostile.py",
+      "sha256": "254efdf417729cc4d4d38dc869cc57ac295db22abfce50aea84e7a5fff9263b3",
+      "bytes": 2482
+    },
+    {
+      "path": "binary_laplacian_hostile.json",
+      "sha256": "9e67ff6e915f0f2544f39cafccd6ee40ba8d20770e1df2b24b554b17bfb34901",
+      "bytes": 2745
+    },
+    {
+      "path": "optimization_negative_controls.py",
+      "sha256": "8015e658f9300fb16dc23abf6cfff0b2a3a7a74bccc0d59ac9e0e6601a35fd69",
+      "bytes": 1658
+    },
+    {
+      "path": "optimization_negative_controls.json",
+      "sha256": "8d4ee352386f0f7c66ef92ea5269140cf62426da7acb8f9822c049031a690376",
+      "bytes": 442
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "session": "67",
+  "date": "2026-10-26",
+  "producer_base_commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+  "integration_base_commit": "983768efde8483643fc3c6ba488eee04622ebd2d",
+  "inherited_inputs": [
+    {
+      "local_path": "session67-root/inputs/THEOREM.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt",
+      "sha256": "9365e8472a229a625eb6c09a9a43c707d0a6d9b967f0fe4a11e84c55b3d35fee"
+    },
+    {
+      "local_path": "session67-root/inputs/LOCAL_FOREST_ADDENDUM.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/LOCAL_FOREST_ADDENDUM.txt",
+      "sha256": "50be093f2734fffda98287f4301a0040e114ee18ecf5aecd4b6ea336dddc681c"
+    }
+  ],
+  "production_source_sha256": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3",
+  "notes": [
+    "Frozen historical inputs, not live startup authorities.",
+    "Current corrections take precedence over historical snapshots.",
+    "Literal lines are complement pairs; relocation edges are auxiliary class witnesses."
+  ]
+}

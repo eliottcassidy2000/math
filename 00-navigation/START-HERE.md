@@ -12,7 +12,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [Lifts of degree 2/4](../05-knowledge/results/normseven_descent_moments_20261026/README.md).
 
-[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md).
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md).
 
 ## Orientation
 
@@ -96,7 +96,7 @@ python3 agents/start_session.py --topic "<target statement or object>"
     LRC entry and close endpoint33 returns/mixed(2,2,1). The LRC route keeps
     the universal local-network proof; general entry, synchronization and LRC(14) OPEN.
 
-## Where to go by topic
+## Topic routes
 
 | Topic | Read first | Then use |
 |---|---|---|

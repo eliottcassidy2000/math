@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "corruption": "node_mass",
+      "python_optimized": true,
+      "return_code": 1,
+      "rejected": true,
+      "last_error_line": "RuntimeError: verification failed"
+    },
+    {
+      "corruption": "line_multiplicity",
+      "python_optimized": true,
+      "return_code": 1,
+      "rejected": true,
+      "last_error_line": "RuntimeError: (4, 'complete line tables mismatch')"
+    }
+  ]
+}

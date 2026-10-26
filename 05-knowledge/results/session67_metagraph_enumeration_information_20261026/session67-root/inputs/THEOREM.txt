@@ -1,0 +1,54 @@
+CONNECTIVITY OF LABELLED TOURNAMENT HAMILTON WORDS
+Mathematical status: PROVED for every finite nonempty tournament.
+Date: 2026-10-20.
+No novelty or publication claim.
+
+Definition. Let T be a finite nonempty tournament. HP(T) consists of the ordered lists P=(p_1,...,p_n) of all its vertices such that p_i -> p_(i+1) for 1<=i<n. Let L(T) be the simple undirected graph on HP(T) in which distinct P,Q are adjacent if deleting some common vertex u from both lists gives the same list. This is precisely legal single-vertex relocation. Every graph in this proof is on labelled words unless stated otherwise.
+
+THEOREM. L(T) is connected for every finite nonempty tournament T.
+
+Lemma A (insertion). Given a directed word R on a subset of a tournament and a vertex v not in R, there is a gap in R into which v can be inserted to make another directed word.
+
+Proof. If R is empty, insert v. Otherwise insert v immediately before the first vertex r_i for which v->r_i. If i>1, minimality implies r_(i-1)->v. If there is no such r_i, append v. All new consecutive arcs are forward.
+
+Lemma B (common deletion). If distinct P,Q in HP(T) differ by relocating u, their common deletion word R=P-u=Q-u is directed.
+
+Proof. If u is at an endpoint of P, R retains only consecutive arcs of P. If u is internal with predecessor a and successor b, all consecutive arcs of R other than a,b are arcs of P. The u-insertion gaps of P and Q in R are different, since P!=Q. Therefore a and b are consecutive in Q, so a->b. This proves the remaining arc.
+
+Lemma C (edge lifting). Fix v in T. Each vertex P of L(T-v) has a nonempty clique of lifts obtained by inserting v. Every edge P-Q of L(T-v) has an edge between these two lift cliques in L(T).
+
+Proof. Lemma A gives at least one lift; any two distinct lifts differ by relocating v, so the fibre is a clique.
+
+For an edge P-Q, let u be its moved vertex. Lemma B says R=P-u=Q-u is directed. Let g_P and g_Q be the distinct gaps of R at which u reconstructs P and Q. Choose a valid insertion gap g_v for v in R using Lemma A.
+
+For each g in {g_P,g_Q}, insert u at g and v at g_v. If g differs from g_v, their insertions use separate gaps. If g=g_v, place u and v in their arc order within that gap. In an interior gap (a,b), both u and v individually satisfy a->u,a->v and u->b,v->b, so the arc-ordered pair also fits. At an endpoint, omit the nonexistent outer constraint. Thus both resulting words P',Q' are directed.
+
+Deleting v gives P,Q respectively. Deleting u from either gives the same word R with v inserted at g_v. Therefore P' and Q' are distinct adjacent lifts.
+
+Lemma D (front promotion). Let T be strong and have at least three vertices. Starting from any P in HP(T), repeatedly remove its first vertex and insert it immediately after its last in-neighbour in the current word. Every step is legal, and every vertex occurs first infinitely often.
+
+Proof. Write P=(p_1,...,p_n). Strong connectivity gives an in-neighbour of p_1. If j is the largest index with p_j->p_1, then j>=3 because p_1->p_2. Remove p_1 and put it after p_j. The suffix with p_1 removed was already directed. The new incoming arc is p_j->p_1. If j<n, maximality implies p_1->p_(j+1), supplying the new outgoing arc. Thus the move is legal and the new first vertex is p_2. The same construction remains available forever.
+
+Let S be the vertices which appear first infinitely often. S is nonempty because the vertex set is finite. Suppose w is not in S. After a time beyond its last appearance first, each move removes a vertex before w and reinserts it somewhere. The position of w is unchanged if reinsertion precedes w and decreases by one if reinsertion follows w. Its positive integer position is therefore eventually constant.
+
+If w->u for some u in S, choose a step with u first after w's position has stabilized. The last in-neighbour of u lies at or after w, so u is reinserted after w. This strictly decreases w's position, a contradiction. Therefore every u in S dominates every w outside S. If S were proper, there would be no directed path from its complement into S, contradicting strong connectivity. Consequently S is the full vertex set.
+
+Lemma E (access to a removable vertex). Let C be the initial strong component of an arbitrary tournament T, and choose v in C. Every Hamilton word of T is connected in L(T) to a word beginning with v.
+
+Proof. The strong components of a tournament are linearly ordered, with all arcs directed from an earlier to a later component. A directed Hamilton word visits each component as a contiguous block, in this order. If C={v}, every word already begins with v. Otherwise C is strong with at least three vertices. Apply Lemma D to its initial block. Moves inside this block retain the forward join to every later component. Eventually v is first.
+
+Proof of the theorem. Induct on n=|T|. For n=1 there is a single word. For n>1 choose v in the initial strong component. By induction L(T-v) is connected. By Lemma C its lift fibres are nonempty connected cliques and each base edge has a lift. Hence the set U_v of all words whose deletion of v is directed forms a connected subgraph of L(T): connect arbitrary lifts by following a base path and using clique edges whenever the next lifted edge requires a different lift.
+
+Lemma E connects each word to a word beginning with v, which belongs to U_v. Therefore L(T) is connected.
+
+FIXED-PATH COORDINATES. For n>=3 put m=(n-1)(n-2)/2 and X={0,1}^m. Each x in X specifies a tournament T(x) on positions 0,...,n-1: the arcs i->i+1 are fixed, and for every i+2<=j the coordinate x_(i,j) is 1 exactly when i->j. For a labelled Hamilton word of a tournament T, relabel its vertices by their positions to obtain its normalized tiling in X. Reflection sigma sends coordinate (i,j) to (n-1-j,n-1-i), without changing its bit. This is the effect of reversing the marked word and taking the converse of T.
+
+COROLLARY (ordinary normalized tilings). In the fixed-path coordinate cube, the connected components generated by legal vertex relocations are precisely the ordinary tournament-class fibres.
+
+Proof. The fibre for an ordinary tournament T is HP(T)/Aut(T): two marked words induce the same normalized tournament exactly when their position-wise vertex bijection is an automorphism of T. Automorphisms preserve relocation and act freely on complete ordered words. The quotient image of connected L(T) is connected, even when some edges collapse to loops. Conversely, each legal relocation re-marks the same tournament and cannot leave the ordinary fibre.
+
+COROLLARY (converse-merged tilings). Add coordinate reflection, understood as reversing the marked word and taking the converse tournament. The auxiliary move components are precisely the converse-merged tournament fibres. Consequently the existing local relocation/reflection spanning-forest certificate is necessary at every order, as well as sufficient under its previously stated hypotheses.
+
+Proof. Reflection exchanges the ordinary fibres of T and T^op. Each ordinary fibre is connected by the previous corollary, so each converse-merged fibre is connected. All moves preserve that merged fibre. A finite connected auxiliary graph has a spanning tree, giving the necessary forest; the pre-existing sufficiency proof is unchanged.
+
+Scope. The auxiliary relocation/reflection edges are transport witnesses within fibres, not edges of the complement-line metagraph. Connectivity supplies no claimed polynomial hitting-time or distance bound. A single-vertex quotient fibre needs an empty tree, not a nontrivial relocation edge.

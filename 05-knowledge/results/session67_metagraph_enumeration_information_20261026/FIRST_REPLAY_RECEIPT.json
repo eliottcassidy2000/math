@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "root_cpp_export_runs": [
+    {
+      "compiler_flags": "-std=c++17 -O0 -Wall -Wextra -pedantic",
+      "status": "PASS",
+      "n": 8,
+      "all_export_files": [
+        {
+          "file": "census.json",
+          "bytes": 5254,
+          "sha256_uncompressed": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+        },
+        {
+          "file": "lines_1.tsv",
+          "bytes": 22,
+          "sha256_uncompressed": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+        },
+        {
+          "file": "lines_2.tsv",
+          "bytes": 22,
+          "sha256_uncompressed": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+        },
+        {
+          "file": "lines_3.tsv",
+          "bytes": 30,
+          "sha256_uncompressed": "6a8c4a5bffdaa1666aa40fb1cb13b09fc566df79ecea6b48a3f5814b0b40fe60"
+        },
+        {
+          "file": "lines_4.tsv",
+          "bytes": 46,
+          "sha256_uncompressed": "8b37470d5cf86c00ae42baa18b4796d7da7314db7c400038cc9d95e3396a0fec"
+        },
+        {
+          "file": "lines_5.tsv",
+          "bytes": 191,
+          "sha256_uncompressed": "ee44e87e99dc26f6bcdd8bec33eadf3e724cb7ec89b2ca3e1943c35fb561c745"
+        },
+        {
+          "file": "lines_6.tsv",
+          "bytes": 1840,
+          "sha256_uncompressed": "40dbe59ae45982d2247882b9a06f2db508710704d5a578cb457669cb10cbe459"
+        },
+        {
+          "file": "lines_7.tsv",
+          "bytes": 72026,
+          "sha256_uncompressed": "a82cd534a71681265bacd13dc25bc8f72fe8586eb6c733abfbf63a4f8a3ec71b"
+        },
+        {
+          "file": "lines_8.tsv.gz",
+          "bytes": 6314307,
+          "sha256_uncompressed": "98ed1182b316506dd832f24ef269fa8e17c4a4d5b681701bd83e4dca0f2405e3"
+        },
+        {
+          "file": "nodes_1.tsv",
+          "bytes": 79,
+          "sha256_uncompressed": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+        },
+        {
+          "file": "nodes_2.tsv",
+          "bytes": 79,
+          "sha256_uncompressed": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+        },
+        {
+          "file": "nodes_3.tsv",
+          "bytes": 87,
+          "sha256_uncompressed": "480a3fe87e9e620201862c5bde86056428938334327c931117413d8376c90191"
+        },
+        {
+          "file": "nodes_4.tsv",
+          "bytes": 103,
+          "sha256_uncompressed": "ac5ae24a2aee2dfe10533b90e560eb15ed306be3dd880b87084b82f1d8e5361c"
+        },
+        {
+          "file": "nodes_5.tsv",
+          "bytes": 182,
+          "sha256_uncompressed": "f4d5c65af179d862eb0f0debdf1add0306582b9a697637f59c05cf79935c80ff"
+        },
+        {
+          "file": "nodes_6.tsv",
+          "bytes": 690,
+          "sha256_uncompressed": "80de6dc41d23ad72d974577bf09962b3a780328012f0ecae6c6227274c834f46"
+        },
+        {
+          "file": "nodes_7.tsv",
+          "bytes": 6172,
+          "sha256_uncompressed": "0137ed1dc0f13fefb2db721d8ed5335b85cd5c63ddfd57271b2278b8614fdb97"
+        },
+        {
+          "file": "nodes_8.tsv",
+          "bytes": 113361,
+          "sha256_uncompressed": "fb3b2d0b84113e48539a085e34b7dfcb12665500685573e4134c1b238e995802"
+        }
+      ]
+    },
+    {
+      "compiler_flags": "-std=c++17 -O3 -DNDEBUG -Wall -Wextra -pedantic",
+      "status": "PASS",
+      "n": 8,
+      "all_export_files": [
+        {
+          "file": "census.json",
+          "bytes": 5254,
+          "sha256_uncompressed": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+        },
+        {
+          "file": "lines_1.tsv",
+          "bytes": 22,
+          "sha256_uncompressed": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+        },
+        {
+          "file": "lines_2.tsv",
+          "bytes": 22,
+          "sha256_uncompressed": "f62d8efa6a03e77950cba6b6e6323fb0ed02fd77fb9e24f6261d565a8155767c"
+        },
+        {
+          "file": "lines_3.tsv",
+          "bytes": 30,
+          "sha256_uncompressed": "6a8c4a5bffdaa1666aa40fb1cb13b09fc566df79ecea6b48a3f5814b0b40fe60"
+        },
+        {
+          "file": "lines_4.tsv",
+          "bytes": 46,
+          "sha256_uncompressed": "8b37470d5cf86c00ae42baa18b4796d7da7314db7c400038cc9d95e3396a0fec"
+        },
+        {
+          "file": "lines_5.tsv",
+          "bytes": 191,
+          "sha256_uncompressed": "ee44e87e99dc26f6bcdd8bec33eadf3e724cb7ec89b2ca3e1943c35fb561c745"
+        },
+        {
+          "file": "lines_6.tsv",
+          "bytes": 1840,
+          "sha256_uncompressed": "40dbe59ae45982d2247882b9a06f2db508710704d5a578cb457669cb10cbe459"
+        },
+        {
+          "file": "lines_7.tsv",
+          "bytes": 72026,
+          "sha256_uncompressed": "a82cd534a71681265bacd13dc25bc8f72fe8586eb6c733abfbf63a4f8a3ec71b"
+        },
+        {
+          "file": "lines_8.tsv.gz",
+          "bytes": 6314307,
+          "sha256_uncompressed": "98ed1182b316506dd832f24ef269fa8e17c4a4d5b681701bd83e4dca0f2405e3"
+        },
+        {
+          "file": "nodes_1.tsv",
+          "bytes": 79,
+          "sha256_uncompressed": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+        },
+        {
+          "file": "nodes_2.tsv",
+          "bytes": 79,
+          "sha256_uncompressed": "35540ea1e6a11e98b460b21ceffd2a0b8931d5f383eb2716581facb82ebd1835"
+        },
+        {
+          "file": "nodes_3.tsv",
+          "bytes": 87,
+          "sha256_uncompressed": "480a3fe87e9e620201862c5bde86056428938334327c931117413d8376c90191"
+        },
+        {
+          "file": "nodes_4.tsv",
+          "bytes": 103,
+          "sha256_uncompressed": "ac5ae24a2aee2dfe10533b90e560eb15ed306be3dd880b87084b82f1d8e5361c"
+        },
+        {
+          "file": "nodes_5.tsv",
+          "bytes": 182,
+          "sha256_uncompressed": "f4d5c65af179d862eb0f0debdf1add0306582b9a697637f59c05cf79935c80ff"
+        },
+        {
+          "file": "nodes_6.tsv",
+          "bytes": 690,
+          "sha256_uncompressed": "80de6dc41d23ad72d974577bf09962b3a780328012f0ecae6c6227274c834f46"
+        },
+        {
+          "file": "nodes_7.tsv",
+          "bytes": 6172,
+          "sha256_uncompressed": "0137ed1dc0f13fefb2db721d8ed5335b85cd5c63ddfd57271b2278b8614fdb97"
+        },
+        {
+          "file": "nodes_8.tsv",
+          "bytes": 113361,
+          "sha256_uncompressed": "fb3b2d0b84113e48539a085e34b7dfcb12665500685573e4134c1b238e995802"
+        }
+      ]
+    }
+  ],
+  "independent_audit_runs": [
+    {
+      "mode": "normal",
+      "script": "independent_check.py",
+      "status": "PASS",
+      "compared_result": "independent_results.json",
+      "comparison": "JSON exact after excluding elapsed seconds only",
+      "source_sha256": "6a4c88767bd2aaffc1089ba49c96985abdfa1caee21e1359181bc2cf3279e513"
+    },
+    {
+      "mode": "normal",
+      "script": "recognition_hostiles.py",
+      "status": "PASS",
+      "compared_result": "recognition_hostiles.json",
+      "comparison": "JSON exact",
+      "source_sha256": "1f721b528ce5aeecfff815f0a0db1c66cfb66d0d163b647ffdfd343b1797c7a0"
+    },
+    {
+      "mode": "normal",
+      "script": "binary_laplacian_hostile.py",
+      "status": "PASS",
+      "compared_result": "binary_laplacian_hostile.json",
+      "comparison": "JSON exact",
+      "source_sha256": "254efdf417729cc4d4d38dc869cc57ac295db22abfce50aea84e7a5fff9263b3"
+    },
+    {
+      "mode": "normal",
+      "script": "compare_outputs.py",
+      "status": "PASS",
+      "compared_result": "production_comparison.json",
+      "comparison": "JSON exact",
+      "source_sha256": "96fcfb85266ea857bf839ee013560f42fcebede63f0070ec586ec3e1dfe356f6"
+    },
+    {
+      "mode": "normal",
+      "script": "optimization_negative_controls.py",
+      "status": "PASS",
+      "compared_result": "optimization_negative_controls.json",
+      "comparison": "JSON exact",
+      "source_sha256": "8015e658f9300fb16dc23abf6cfff0b2a3a7a74bccc0d59ac9e0e6601a35fd69"
+    },
+    {
+      "mode": "optimized",
+      "script": "independent_check.py",
+      "status": "PASS",
+      "compared_result": "independent_results.json",
+      "comparison": "JSON exact after excluding elapsed seconds only",
+      "source_sha256": "6a4c88767bd2aaffc1089ba49c96985abdfa1caee21e1359181bc2cf3279e513"
+    },
+    {
+      "mode": "optimized",
+      "script": "recognition_hostiles.py",
+      "status": "PASS",
+      "compared_result": "recognition_hostiles.json",
+      "comparison": "JSON exact",
+      "source_sha256": "1f721b528ce5aeecfff815f0a0db1c66cfb66d0d163b647ffdfd343b1797c7a0"
+    },
+    {
+      "mode": "optimized",
+      "script": "binary_laplacian_hostile.py",
+      "status": "PASS",
+      "compared_result": "binary_laplacian_hostile.json",
+      "comparison": "JSON exact",
+      "source_sha256": "254efdf417729cc4d4d38dc869cc57ac295db22abfce50aea84e7a5fff9263b3"
+    },
+    {
+      "mode": "optimized",
+      "script": "compare_outputs.py",
+      "status": "PASS",
+      "compared_result": "production_comparison.json",
+      "comparison": "JSON exact",
+      "source_sha256": "96fcfb85266ea857bf839ee013560f42fcebede63f0070ec586ec3e1dfe356f6"
+    },
+    {
+      "mode": "optimized",
+      "script": "optimization_negative_controls.py",
+      "status": "PASS",
+      "compared_result": "optimization_negative_controls.json",
+      "comparison": "JSON exact",
+      "source_sha256": "8015e658f9300fb16dc23abf6cfff0b2a3a7a74bccc0d59ac9e0e6601a35fd69"
+    },
+    {
+      "mode": "normal",
+      "script": "production_direct_audit.cpp",
+      "status": "PASS",
+      "compiler_flags": [
+        "-O0"
+      ],
+      "all_n8_luts_and_guards_audited": true,
+      "result_bytes_equal": true
+    },
+    {
+      "mode": "optimized",
+      "script": "production_direct_audit.cpp",
+      "status": "PASS",
+      "compiler_flags": [
+        "-O3",
+        "-DNDEBUG"
+      ],
+      "all_n8_luts_and_guards_audited": true,
+      "result_bytes_equal": true
+    }
+  ],
+  "root_python_export_runs": [
+    {
+      "optimized": false,
+      "status": "PASS",
+      "receipt": {
+        "line_rows": 444711,
+        "n8_line_gzip_sha256": "bf6bc69279a75ec0a390d99999b0ddc17c24346d34a1ec1e33ea682e089c4266",
+        "orders": 8,
+        "ordinary_nodes": 7412,
+        "status": "PASS"
+      }
+    },
+    {
+      "optimized": true,
+      "status": "PASS",
+      "receipt": {
+        "line_rows": 444711,
+        "n8_line_gzip_sha256": "bf6bc69279a75ec0a390d99999b0ddc17c24346d34a1ec1e33ea682e089c4266",
+        "orders": 8,
+        "ordinary_nodes": 7412,
+        "status": "PASS"
+      }
+    }
+  ],
+  "nonsemantic_comparison_exclusion": "Only the independent Python oracle elapsed-seconds field is excluded; all mathematical fields are equal."
+}
