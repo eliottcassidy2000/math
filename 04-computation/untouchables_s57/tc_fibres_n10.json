@@ -1,0 +1,44 @@
+{
+ "(3)(3)+4": {
+  "pair_orbits": 19,
+  "tournaments": 524288,
+  "strong": 391104,
+  "candidates_checked": 101568,
+  "tc_7_or_21_found": []
+ },
+ "(3)(3)(3)+1": {
+  "pair_orbits": 15,
+  "tournaments": 32768,
+  "strong": 23520,
+  "candidates_checked": 8784,
+  "tc_7_or_21_found": []
+ },
+ "(5)+5": {
+  "pair_orbits": 17,
+  "tournaments": 131072,
+  "strong": 89280,
+  "candidates_checked": 28800,
+  "tc_7_or_21_found": []
+ },
+ "(5)(5)": {
+  "pair_orbits": 9,
+  "tournaments": 512,
+  "strong": 480,
+  "candidates_checked": 40,
+  "tc_7_or_21_found": []
+ },
+ "(7)+3": {
+  "pair_orbits": 9,
+  "tournaments": 512,
+  "strong": 192,
+  "candidates_checked": 240,
+  "tc_7_or_21_found": []
+ },
+ "(9)+1": {
+  "pair_orbits": 5,
+  "tournaments": 32,
+  "strong": 0,
+  "candidates_checked": 0,
+  "tc_7_or_21_found": []
+ }
+}
