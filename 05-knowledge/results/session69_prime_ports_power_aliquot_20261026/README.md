@@ -264,6 +264,13 @@ restore S57's distinct-Goldbach antecedent and THM-4748's minimum-over-a-fibre
 quantifier. Those repairs are preserved; this packet never imports the
 stronger discarded assertions. Its computations were not replayed here.
 
+The same concurrent packet gives the Euler-perfect diagram: for
+`N=2^(r-1)M`, `M=2^r-1` prime, `N^2=2^(2r-2)M^2` with `M^2>N`, and
+`s` follows `M^2 -> 2^r -> M -> 1 -> 0`.
+At `N=28` this includes `49 -> 8 -> 7`, with `s(8)=1+2+4=7`;
+the square-row root `M^2` is not a prime-square preimage of N, which would
+instead have to be `(N-1)^2` and exists only for `N=6`.
+
 **Closed here:** sufficient full multi-rooted ordinary, uncoloured response
 composition, recursively from canonical children with their quotient data.
 **Still unestablished here:** an unrestricted structural prime atlas,
