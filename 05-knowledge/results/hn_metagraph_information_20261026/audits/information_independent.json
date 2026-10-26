@@ -1,0 +1,61 @@
+{
+  "historical_counterexamples": {
+    "Fisher_derivative_at_beta_zero": "165/32",
+    "OCR": "129/133",
+    "degree_two_Walsh_energy": "135/8",
+    "degree_two_fraction": "18/19",
+    "mean_H": "15/2",
+    "n": 5,
+    "score_conditional_variance": "1935/112",
+    "variance_H": "285/16"
+  },
+  "method": "Hamiltonian path subcube accumulation + integer FWHT",
+  "response_controls": [
+    {
+      "adjacent_arc_pairs": 0,
+      "labelled_tournaments": 2,
+      "literal_response_classes": 1,
+      "n": 2,
+      "quadratic_coefficient_magnitude": "1",
+      "response_classes": 1,
+      "tree_correlations": 0
+    },
+    {
+      "adjacent_arc_pairs": 3,
+      "labelled_tournaments": 8,
+      "literal_response_classes": 4,
+      "n": 3,
+      "quadratic_coefficient_magnitude": "1/2",
+      "response_classes": 4,
+      "tree_correlations": 2
+    },
+    {
+      "adjacent_arc_pairs": 12,
+      "labelled_tournaments": 64,
+      "literal_response_classes": 32,
+      "n": 4,
+      "quadratic_coefficient_magnitude": "1/2",
+      "response_classes": 32,
+      "tree_correlations": 5
+    },
+    {
+      "adjacent_arc_pairs": 30,
+      "labelled_tournaments": 1024,
+      "literal_response_classes": null,
+      "n": 5,
+      "quadratic_coefficient_magnitude": "3/4",
+      "response_classes": 512,
+      "tree_correlations": 9
+    },
+    {
+      "adjacent_arc_pairs": 60,
+      "labelled_tournaments": 32768,
+      "literal_response_classes": null,
+      "n": 6,
+      "quadratic_coefficient_magnitude": "3/2",
+      "response_classes": 16384,
+      "tree_correlations": 14
+    }
+  ],
+  "status": "PASS"
+}

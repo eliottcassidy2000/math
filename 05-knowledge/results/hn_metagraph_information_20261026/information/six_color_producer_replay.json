@@ -1,0 +1,182 @@
+{
+  "abstract_sharp_controls": {
+    "K4_Gram_determinant": "1/2",
+    "chi5_weights": [
+      120,
+      24,
+      24,
+      24,
+      0
+    ],
+    "chi6_NAE_weights": [
+      0,
+      48,
+      48,
+      48,
+      12
+    ],
+    "unit_realizable": false
+  },
+  "checks": 6728,
+  "constructive_recolor_cases": 2205,
+  "frame_symmetry": {
+    "S4_permutations_tested": 24,
+    "equivariant_permutations": 4,
+    "four_state_relations_tested": 65536,
+    "injective_triple_orbit": 120,
+    "palette_permutations": 720,
+    "translation_invariant_relations": 16,
+    "two_frame_orbits": 8
+  },
+  "metric_holonomy_hostile": {
+    "component_histogram": {
+      "5": 972,
+      "6": 648,
+      "7": 108
+    },
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "frame_CSP_solutions": 0,
+    "gain_bits": [
+      1,
+      1,
+      0
+    ],
+    "points_in_1_alpha_basis": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "10",
+        "0"
+      ],
+      [
+        "11",
+        "0"
+      ],
+      [
+        "10",
+        "1"
+      ],
+      [
+        "100",
+        "0"
+      ]
+    ],
+    "six_colorings": 86400,
+    "ternary_maps_successful": 1728,
+    "ternary_maps_tested": 2187,
+    "three_coloring": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2,
+      0
+    ],
+    "three_port_weights": [
+      400,
+      400,
+      400,
+      400,
+      400
+    ]
+  },
+  "partitions": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "source_sha256": "04e865fc9972d292fe109efe5ada8e5fcc14ed90534906661d2ca8bd6dac10da",
+  "status": "FINITE-EXACT",
+  "unpin_previous_gadgets": {
+    "F": {
+      "edges": 31,
+      "unprescribed_leaves": 25,
+      "vertices": 32,
+      "weights_by_partition": [
+        107288360595703125000,
+        121593475341796875000,
+        121593475341796875000,
+        121593475341796875000,
+        126957893371582031250
+      ]
+    },
+    "G": {
+      "edges": 15,
+      "unprescribed_leaves": 15,
+      "vertices": 19,
+      "weights_by_partition": [
+        183105468750,
+        183105468750,
+        183105468750,
+        183105468750,
+        183105468750
+      ]
+    },
+    "base_weights": [
+      60,
+      68,
+      68,
+      68,
+      71
+    ],
+    "input_receipt_sha256": "d1466e13889376f02461cfe81395ee73ef783000cfddefe47eaabdab64c9f515"
+  }
+}

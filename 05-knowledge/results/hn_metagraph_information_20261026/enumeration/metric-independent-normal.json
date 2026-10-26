@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "metric_transport_tests": 9216,
+  "two_vertex_two_cycle_networks": 27648,
+  "full_section_histogram": {
+    "0": 20736,
+    "2": 4992,
+    "4": 1728,
+    "8": 192
+  },
+  "three_dimensional_counterexample": "both incompatible parity-zero loops are unit-frame isometries of the coordinate octahedron",
+  "producer_sha256": "22a883a40caa3d7301583928b6fd6bed49fc90f724a86a69ead9d526c6bf865e",
+  "proof_sha256": "e358ea6713b75d59bf503ca718e944dad4f5744ed6dfd0b09890c293de5e80e6",
+  "checker_sha256": "ff211df86840c56b05ae4a4eb3f33b00c2ff9a6758af49d066ed5e5a274c8ceb"
+}

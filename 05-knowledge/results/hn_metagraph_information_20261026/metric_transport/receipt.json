@@ -1,0 +1,61 @@
+{
+  "arithmetic": "exact Fraction",
+  "controls": {
+    "generic": {
+      "W_tests": 3072,
+      "accepted_transports": 128,
+      "balanced_frames": [
+        2,
+        5
+      ],
+      "ordered_marking_pairs": 64,
+      "self_isometries": 2,
+      "signed_markings": 8,
+      "subset_sum_images": 8
+    },
+    "reflection": {
+      "W_tests": 3072,
+      "accepted_transports": 256,
+      "balanced_frames": [
+        1,
+        6
+      ],
+      "ordered_marking_pairs": 64,
+      "self_isometries": 4,
+      "signed_markings": 8,
+      "subset_sum_images": 8
+    },
+    "regular": {
+      "W_tests": 3072,
+      "accepted_transports": 768,
+      "balanced_frames": [
+        0,
+        7
+      ],
+      "ordered_marking_pairs": 64,
+      "self_isometries": 12,
+      "signed_markings": 8,
+      "subset_sum_images": 7
+    }
+  },
+  "hostile": {
+    "common_realizations": [],
+    "holonomy_0_fixed": [
+      0,
+      7
+    ],
+    "holonomy_5_fixed": [
+      3,
+      4
+    ]
+  },
+  "scope": "isometric transport of all six paired spokes; not arbitrary unit-distance gadgets",
+  "status": "PASS",
+  "triangle_full_section_histogram": {
+    "0": 55296,
+    "2": 18432,
+    "4": 27648,
+    "8": 9216
+  },
+  "triangle_systems": 110592
+}

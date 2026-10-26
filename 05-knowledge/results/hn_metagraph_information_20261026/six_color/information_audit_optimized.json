@@ -1,0 +1,112 @@
+{
+  "checks": 1877,
+  "coefficient_controls": [
+    {
+      "adjacent_pair_coefficients": 3,
+      "n": 3,
+      "normalized_magnitude": "1/2",
+      "words": 6
+    },
+    {
+      "adjacent_pair_coefficients": 12,
+      "n": 4,
+      "normalized_magnitude": "1/2",
+      "words": 24
+    },
+    {
+      "adjacent_pair_coefficients": 30,
+      "n": 5,
+      "normalized_magnitude": "3/4",
+      "words": 120
+    },
+    {
+      "adjacent_pair_coefficients": 60,
+      "n": 6,
+      "normalized_magnitude": "3/2",
+      "words": 720
+    },
+    {
+      "adjacent_pair_coefficients": 105,
+      "n": 7,
+      "normalized_magnitude": "15/4",
+      "words": 5040
+    },
+    {
+      "adjacent_pair_coefficients": 168,
+      "n": 8,
+      "normalized_magnitude": "45/4",
+      "words": 40320
+    }
+  ],
+  "curl_plus_one_arc_hostile": {
+    "common_arc_bit": 0,
+    "full_curl": [
+      1
+    ],
+    "known_arc": [
+      0,
+      1
+    ],
+    "masks": [
+      0,
+      6
+    ],
+    "n": 3
+  },
+  "literal_response_controls": [
+    {
+      "aligned_fibres": 1,
+      "aligned_isotypes": 1,
+      "full_curl_fibres": 1,
+      "literal_response_fibres": 1,
+      "n": 1,
+      "separate_isotypes": 1,
+      "tournament_isotypes": 1,
+      "tournaments": 1,
+      "valid_start_keys": 1
+    },
+    {
+      "aligned_fibres": 1,
+      "aligned_isotypes": 1,
+      "full_curl_fibres": 1,
+      "literal_response_fibres": 1,
+      "n": 2,
+      "separate_isotypes": 1,
+      "tournament_isotypes": 1,
+      "tournaments": 2,
+      "valid_start_keys": 2
+    },
+    {
+      "aligned_fibres": 8,
+      "aligned_isotypes": 2,
+      "full_curl_fibres": 4,
+      "literal_response_fibres": 4,
+      "n": 3,
+      "separate_isotypes": 2,
+      "tournament_isotypes": 2,
+      "tournaments": 8,
+      "valid_start_keys": 12
+    },
+    {
+      "aligned_fibres": 64,
+      "aligned_isotypes": 4,
+      "full_curl_fibres": 38,
+      "literal_response_fibres": 32,
+      "n": 4,
+      "separate_isotypes": 3,
+      "tournament_isotypes": 4,
+      "tournaments": 64,
+      "valid_start_keys": 152
+    },
+    {
+      "aligned_fibres": 1024,
+      "full_curl_fibres": 728,
+      "literal_response_fibres": 512,
+      "n": 5,
+      "tournaments": 1024,
+      "valid_start_keys": 3640
+    }
+  ],
+  "source_sha256": "65351db933e96ce9e6146bc3bf7943cd31c46f010a8ac31f4160e155a225fc6d",
+  "status": "PASS"
+}

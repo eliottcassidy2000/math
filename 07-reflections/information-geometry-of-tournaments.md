@@ -1,3 +1,13 @@
+> **HISTORICAL / CORRECTED 2026-10-26.** The original March reflection below
+> preserves provenance, not current theorem status. Its uniform-Fisher maximum
+> and identification of score-conditional variance with degree-two Walsh energy
+> are **REFUTED**, already at order five: `I'(0)=165/32>0`, while the two
+> variances are `1935/112` and `135/8`. Its inference from connectedness to
+> simple connectedness or absence of higher persistent homology is invalid.
+> A filled hypercube has Euler characteristic one; its graph has
+> `2^m-m*2^(m-1)`, not zero for every positive m. The even-Walsh claim does
+> survive by converse symmetry. See the [exact correction and response audit](../05-knowledge/results/hn_metagraph_information_20261026/audits/INFORMATION_AUDIT.md).
+
 # Information Geometry of Tournament Space
 
 **Session**: kind-pasteur-2026-03-22-S20y

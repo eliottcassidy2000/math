@@ -4,6 +4,42 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — Tournament information: conditional projection is not Fourier truncation
+
+- **Source and failed claims:** the March22
+  [information-geometry reflection](../07-reflections/information-geometry-of-tournaments.md)
+  called beta zero a Fisher-information maximum and identified the variance
+  explained by the score vector with the degree-two Walsh energy. It also
+  inferred simple connectedness from a connected sublevel graph and assigned
+  Euler characteristic zero to every positive-dimensional hypercube.
+- **Exact hostile:** on all1024 labelled order-five tournaments,
+  `E H=15/2`, `Var H=285/16`, and `E[(H-E H)^3]=165/32`.
+  This third moment equals the derivative at zero of
+  `I(beta)=Var_beta(H)`, so zero is not a local maximum.
+  `Var(E[H|score])=1935/112`, whereas the degree-two Fourier energy is
+  `135/8`; their explained fractions are `129/133` and `18/19`.
+- **Mechanism and survivor:** conditional expectation onto score fibres is a
+  different projection from Walsh degree truncation. Converse symmetry still
+  kills every odd Fourier coefficient. Betti-zero alone says nothing about
+  higher homology or the fundamental group. A filled cube has Euler
+  characteristic one; the cube graph has `2^m-m*2^(m-1)`.
+- **Repair and new question:** preserve the old prose below a correction
+  banner; use full labelled operation responses when claiming information
+  retention. The independent path-subcube census and exact integer Fourier
+  audit are [here](../05-knowledge/results/hn_metagraph_information_20261026/audits/INFORMATION_AUDIT.md).
+  No statistical smoothness, optimization rate, or all-order topology follows
+  from the old finite summaries.
+
+- **Same-session computation provenance repair:** an interrupted order-nine
+  enumerator survived its wrapper and later overwrote a newer bank with its
+  older canonical encoding. End-of-run source hashing then attached the newer
+  file hash to the older running code. Bank-byte comparison caught the race;
+  class counts agreed, but the receipt was not an authentic source pin.
+  The repaired producer captures its source hash at startup, rejects source
+  changes before publication, and runs sequentially into separate normal and
+  optimized outputs. Expected artifacts are frozen before replay. See the
+  [publication audit](../05-knowledge/results/hn_metagraph_information_20261026/AUDIT.md).
+
 
 ## 2026-10-26 — an open-central dichotomy misses eight rational nodes
 

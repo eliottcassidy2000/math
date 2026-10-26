@@ -1,0 +1,144 @@
+{
+  "checks": 667959,
+  "historical_controls": {
+    "3": {
+      "Fisher_derivative_at_zero": "3/4",
+      "H_distribution": {
+        "1": 6,
+        "3": 2
+      },
+      "OCR": "1",
+      "mean": "3/2",
+      "quadratic_Walsh_energy": "3/4",
+      "quadratic_fraction": "1",
+      "variance": "3/4",
+      "variance_of_score_conditional_mean": "3/4"
+    },
+    "5": {
+      "Fisher_derivative_at_zero": "165/32",
+      "H_distribution": {
+        "1": 120,
+        "3": 120,
+        "5": 240,
+        "9": 240,
+        "11": 120,
+        "13": 120,
+        "15": 64
+      },
+      "OCR": "129/133",
+      "mean": "15/2",
+      "quadratic_Walsh_energy": "135/8",
+      "quadratic_fraction": "18/19",
+      "variance": "285/16",
+      "variance_of_score_conditional_mean": "1935/112"
+    }
+  },
+  "records": [
+    {
+      "aligned_joint_fibres": 1,
+      "aligned_joint_isotypes": 1,
+      "binary_features": 0,
+      "curl_fibres": 1,
+      "curl_isotypes": 1,
+      "curl_plus_single_flip_collision_fibres": 0,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "response_converse_fibres": 1,
+      "self_converse_isotypes": 1,
+      "separate_quotient_pairs": 1,
+      "tournament_isotypes": 1
+    },
+    {
+      "aligned_joint_fibres": 1,
+      "aligned_joint_isotypes": 1,
+      "binary_features": 0,
+      "curl_fibres": 1,
+      "curl_isotypes": 1,
+      "curl_plus_single_flip_collision_fibres": 1,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "response_converse_fibres": 1,
+      "self_converse_isotypes": 1,
+      "separate_quotient_pairs": 1,
+      "tournament_isotypes": 1
+    },
+    {
+      "aligned_joint_fibres": 8,
+      "aligned_joint_isotypes": 2,
+      "binary_features": 2,
+      "curl_fibres": 4,
+      "curl_isotypes": 2,
+      "curl_plus_single_flip_collision_fibres": 0,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "response_converse_fibres": 4,
+      "self_converse_isotypes": 2,
+      "separate_quotient_pairs": 2,
+      "tournament_isotypes": 2
+    },
+    {
+      "aligned_joint_fibres": 64,
+      "aligned_joint_isotypes": 4,
+      "binary_features": 5,
+      "curl_fibres": 38,
+      "curl_isotypes": 3,
+      "curl_plus_single_flip_collision_fibres": 8,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "response_converse_fibres": 32,
+      "self_converse_isotypes": 2,
+      "separate_quotient_pairs": 3,
+      "tournament_isotypes": 4
+    },
+    {
+      "aligned_joint_fibres": 1024,
+      "aligned_joint_isotypes": 12,
+      "binary_features": 9,
+      "curl_fibres": 728,
+      "curl_isotypes": 9,
+      "curl_plus_single_flip_collision_fibres": 0,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "response_converse_fibres": 512,
+      "self_converse_isotypes": 8,
+      "separate_quotient_pairs": 10,
+      "tournament_isotypes": 12
+    },
+    {
+      "aligned_joint_fibres": 32768,
+      "binary_features": 14,
+      "curl_fibres": 26704,
+      "curl_plus_single_flip_collision_fibres": 184,
+      "labelled_tournaments": 32768,
+      "n": 6,
+      "response_converse_fibres": 16384
+    }
+  ],
+  "small_hostiles": {
+    "H1_sublevel_n3": {
+      "betti0": 1,
+      "betti1": 1,
+      "edges": 6,
+      "squares": 0,
+      "vertices": 6
+    },
+    "flip_edge": [
+      0,
+      1
+    ],
+    "flipped_H": [
+      1,
+      3
+    ],
+    "same_curl_masks_n3": [
+      0,
+      3
+    ],
+    "separate_quotient_masks_n4": [
+      2,
+      54
+    ]
+  },
+  "status": "PASS",
+  "universe": "Every labelled tournament n=1..6; no filters; isomorphism census n<=5"
+}

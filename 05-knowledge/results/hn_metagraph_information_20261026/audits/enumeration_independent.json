@@ -1,0 +1,49 @@
+{
+  "method": "adjacent-vertex-transposition orbit BFS and all-subset transitive modules",
+  "rows": [
+    {
+      "classes": 1,
+      "labelled_universe": 1,
+      "module_subsets_checked_per_representative": 0,
+      "n": 0
+    },
+    {
+      "classes": 1,
+      "labelled_universe": 1,
+      "module_subsets_checked_per_representative": 1,
+      "n": 1
+    },
+    {
+      "classes": 1,
+      "labelled_universe": 2,
+      "module_subsets_checked_per_representative": 3,
+      "n": 2
+    },
+    {
+      "classes": 2,
+      "labelled_universe": 8,
+      "module_subsets_checked_per_representative": 7,
+      "n": 3
+    },
+    {
+      "classes": 4,
+      "labelled_universe": 64,
+      "module_subsets_checked_per_representative": 15,
+      "n": 4
+    },
+    {
+      "classes": 12,
+      "labelled_universe": 1024,
+      "module_subsets_checked_per_representative": 31,
+      "n": 5
+    },
+    {
+      "classes": 56,
+      "labelled_universe": 32768,
+      "module_subsets_checked_per_representative": 63,
+      "n": 6
+    }
+  ],
+  "scope": "complete independent literal class and core audit through order six",
+  "status": "PASS"
+}

@@ -1,0 +1,28 @@
+{
+  "base_boundary_weights": [
+    60,
+    68,
+    68,
+    68,
+    71
+  ],
+  "chi5_boundary_weights": [
+    120,
+    24,
+    24,
+    24,
+    0
+  ],
+  "chi6_NAE_boundary_weights": [
+    0,
+    48,
+    48,
+    48,
+    12
+  ],
+  "deterministic_four_state_kernels": 4,
+  "method": "independent-subset colour-class recurrence + quotient ports",
+  "ordinary_six_colorings": 86400,
+  "status": "PASS",
+  "successful_ternary_maps": 1728
+}
