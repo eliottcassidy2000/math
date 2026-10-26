@@ -38,7 +38,7 @@ construction class and require actual six-colouring extension tables.
 Final comparison: the boundary lane proves that global S6 already identifies
 all eight single-frame inputs; two-frame tables retain cross-equality as a
 difference kernel. The metric lane supplies a canonical four-state point,
-so rigid seams cannot evade that symmetry loss. The information lane proves
+so rigid antipodal seams cannot evade that loss. The information lane proves
 an operation response faithful up to converse, then uses aligned curl to
 restore the lost orientation. Separate quotients fail on four vertices. The
 enumeration lane retains actual core arcs, stabilizer actions, and path
@@ -47,3 +47,10 @@ coverage bound explains why new cores, rather than another scalar invariant,
 are necessary for structural completeness. The norm-seven arithmetic session
 likewise retains the residual torsor and exceptional inertia. These are exact
 operation-specific maps and losses, not identifications by matching numbers.
+
+Final incoming update: changing to the hexagon's4,3,3 pairing produces a
+fixed-free even translation that passes both necessary gates. A forced colour
+relation is still missing. The prime-family cycle-index data now reproduce
+counts through10, while our literal clone-family bank ends at9. Unsigned
+cyclic triples are a further quotient of signed curl and cannot break the
+response's converse ambiguity. See [INCOMING.md](INCOMING.md).

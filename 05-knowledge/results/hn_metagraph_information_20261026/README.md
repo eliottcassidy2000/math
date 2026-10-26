@@ -10,6 +10,8 @@ finite exact censuses, recovered results, and the remaining open target.
 | A000568 families | Complete all-order construction with invariant owners, literal representatives and metagraph incidence; finite census and coverage bounds | [Enumeration result](enumeration/RESULT.md) |
 | Tournaments as information | Complete labelled flip responses determine the relation up to converse; aligned curl restores it; separate quotienting fails at four vertices | [Information result](information/RESULT.md) |
 
+The [final incoming integration](INCOMING.md) adds a viable non-antipodal metric
+carrier and independently evaluates the supplied prime-family census through10.
 The separately requested [norm-seven arithmetic/F1 session](../normseven_arithmetic_f1_20261026/README.md)
 is integrated as a distinct arithmetic packet. No six-colour obstruction or
 LRC(14) solution is claimed. No new theorem IDs were reserved.

@@ -4,7 +4,10 @@
   "integrated_commits": [
     "2daf5e00afdcd964622f2270c4200b4fd71c2ad5",
     "830271623edf30b565a7a02b6b414cd801e65597",
-    "a3b68054875a7b31192cb6972876d8b148ed14a3"
+    "a3b68054875a7b31192cb6972876d8b148ed14a3",
+    "075c9f922c5b69b54ec50664d81a39b2aca95d02",
+    "15825436d28bb08336c50266a4215523f3e635a8",
+    "62430ddb33e685494ae50f00d05e24c837bb3e02"
   ],
   "local_sources": [
     {
@@ -78,6 +81,18 @@
     {
       "path": "07-reflections/information-geometry-of-tournaments.md",
       "sha256": "5824b3da2dca62e1d99fc92b8db187706c3584c11afc241a0930eee55841cd5c"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/prime_cycle_types_n9.tsv",
+      "sha256": "675c6064d625149c3a97766912dd6734eb4b9bce14bea3c3dd3c963ab51fd5df"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/census_n10_summary.txt",
+      "sha256": "877bb5cafd7c3c2d97e09dd9284d5be98c4d53c718d2014d6656cf1216c2b3af"
+    },
+    {
+      "path": "05-knowledge/results/rank_geometry_metagraph_20261026/unit_distance/RESULT.md",
+      "sha256": "9af242cf6d6c2a9cdd40600123ff6d40da68baa68f228b90faa5b6d962557365"
     }
   ],
   "external_sources": [

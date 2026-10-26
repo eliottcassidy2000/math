@@ -55,7 +55,8 @@ def main():
         ('information/check_six_color_audit.py', 'information/six_color_audit_receipt.json'),
         ('audits/check_information_independent.py', 'audits/information_independent.json'),
         ('audits/check_six_color_independent.py', 'audits/six_color_independent.json'),
-        ('audits/check_enumeration_independent.py', 'audits/enumeration_independent.json')]
+        ('audits/check_enumeration_independent.py', 'audits/enumeration_independent.json'),
+        ('audits/check_incoming.py', 'audits/incoming.json')]
     with tempfile.TemporaryDirectory(prefix='hn-metagraph-replay-') as folder:
         temp = Path(folder)
         for mode in (False, True):

@@ -84,6 +84,13 @@ expected result first. `--replay` repeats bounded checks in both Python modes;
 `--full` also regenerates the complete order-nine bank in both modes. Source
 pins identify inherited inputs.
 
+The full normal/optimized replay, including order9, passed before the last
+incoming sync. The later [integration checker](audits/check_incoming.py) passed
+both modes and independently recomputes the supplied prime-cycle-index species
+evaluation, the non-antipodal reflection/wheel boundary, and the unsigned-C3
+converse hostile. It does not rerun the external nauty census. Existing inputs
+are checked unchanged by their pins; no earlier producer or bank was modified.
+
 The separately published norm-seven arithmetic/F1 commit is integrated before
 the final navigation check. Documentation checks, local link checks, a clean
 worktree and fetch/push target verification complete publication.

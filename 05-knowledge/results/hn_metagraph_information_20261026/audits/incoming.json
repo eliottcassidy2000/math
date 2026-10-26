@@ -1,0 +1,61 @@
+{
+  "A000568_through10": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056
+  ],
+  "mirror_gain": 6,
+  "mirror_pair_squared_lengths": [
+    4,
+    3,
+    3
+  ],
+  "order9_pair_free_cores": 147095,
+  "order9_prime_cores": 136655,
+  "prime_cycle_index_rows": 23,
+  "scope": "independent aggregation of incoming census inputs; no nauty replay",
+  "status": "PASS",
+  "strong_through10": [
+    0,
+    1,
+    0,
+    1,
+    1,
+    6,
+    35,
+    353,
+    6008,
+    178133,
+    9355949
+  ],
+  "unsigned_C3_response_hostile": {
+    "masks": [
+      61,
+      2
+    ],
+    "scores": [
+      [
+        0,
+        2,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        3
+      ]
+    ]
+  },
+  "wheel_boundary_support": 14910,
+  "wheel_six_colorings": 24600
+}

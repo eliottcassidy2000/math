@@ -68,6 +68,12 @@ complete six-colouring extension tables must establish the operation, rather
 than identifying a colour permutation with a rigid isometry. See
 [metric_transport/RESULT.md](metric_transport/RESULT.md).
 
+The final incoming planar packet supplies a positive escape: re-pair the same
+hexagon with pair squared lengths4,3,3. Reflection then acts as a fixed-free
+even translation, passing both the planar and S6 necessary tests. Its wheel
+still has24,600 six-colourings; forcing the full seam relation is the remaining
+step. The construction and independent replay are in [INCOMING.md](INCOMING.md).
+
 ## 3. A000568 has a complete structural generator, with an unavoidable new-core step
 
 The recovered weighted-core classification, alternating attachments and
@@ -114,6 +120,14 @@ cores by `2^-85` and `2^-113`, respectively. This is an obstruction to stopping
 core generation, not an obstruction to arithmetic counting. Recent integral
 and reverse-valuation engines are recovered and checked through128; their
 odd-partition cores are different objects from literal tournament cores.
+
+The incoming prime-family census extends structural totals through10. We
+independently reevaluate its23 cycle-index types and supplied order10 prime
+count to recover9,733,056 tournament classes. Those are incoming census inputs,
+not an additional saved representative bank: our complete bank ends at9.
+Prime modular quotients and pair-free clone cores are distinguished in the
+[integration note](INCOMING.md), which also shows why unsigned cyclic triples
+cannot replace signed curl in the aligned reconstruction theorem.
 
 ## 4. Binary intransitivity is in the relation; information depends on the operation
 
