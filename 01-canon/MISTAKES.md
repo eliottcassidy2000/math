@@ -4,6 +4,30 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — compactness needs limit identification; a root cover is not its sign bundle
+
+- **Source:** the [analogy atlas](../05-knowledge/results/analogy_reduction_atlas_20261025/ATLAS.md)
+  said that uniqueness of a normalized-convolution fixed point turns cluster
+  points into a limit. A continuous map on {0,1,2} with 0 fixed and 1,2
+  exchanged refutes that general implication. The Gaussian uniqueness claim
+  also needs a fixed variance, not merely finite variance.
+- **Repair:** keep tightness and distribution-function reconstruction, then
+  identify the normalized-sum limit by the characteristic-function expansion.
+  The ordinary iid finite-variance CLT remains intact.
+- **Type correction:** the square-root cover over a loop with odd winding
+  is a circle, not a Möbius band. The associated real sign line bundle has
+  the Möbius gluing. Complex covering surfaces remain orientable. Arithmetic
+  rational lifting additionally requires the actual squareclasses.
+- **Unsupported characterization removed:** nontrivial multiplicative
+  universal covering was asserted to characterize fields admitting an
+  argument-principle proof. No such equivalence was proved. The valid complex
+  winding proof and ordinary real FTC now retain their actual hypotheses;
+  polynomial IVP in a real-closed field is not substituted for completeness.
+- **Strongest survivor and new probe:** integer winding maps to root
+  monodromy modulo m. Rule30's affine return includes noninvertible resets,
+  so covering-group data alone are insufficient. The [continuation](../05-knowledge/results/orientation_monodromy_rule30_20261026/README.md)
+  gives precise maps, an all-size signed subset algebra, and exact controls.
+
 ## 2026-10-26 — Tournament information: conditional projection is not Fourier truncation
 
 - **Source and failed claims:** the March22

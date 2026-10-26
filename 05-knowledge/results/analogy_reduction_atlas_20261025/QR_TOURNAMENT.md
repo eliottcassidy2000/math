@@ -22,8 +22,8 @@ with a prime `≡ 1 (mod 4)` the relation is symmetric and is a graph, not a tou
 | first 20,000 primes (300,000 sampled 4-sets) | 0.2497 | 0.3764 | 0.1254 | 0.1243 | 0.3739 |
 
 All four isomorphism classes of 4-vertex tournaments occur; scores on the first 120 primes range
-from 47 to 68 (mean 59.5), so `L` is not regular (unlike Paley tournaments). The sampled frequencies
-are within sampling error (`±0.001`) of the random values.
+from 47 to 68 (mean 59.5), so `L` is not regular (unlike Paley tournaments). The displayed sampled frequencies
+are within0.002 of the random values; this is not a certified confidence interval.
 
 ## What quadratic reciprocity does and does not say
 
@@ -32,6 +32,15 @@ remaining pairs is a graph. It does not say anything about `A000568(4) = 4`; the
 "reciprocity describes that a 4-vertex tournament has four isomorphism classes" is a numeral
 coincidence (four residue cases versus four orbit classes), recorded here so that it is not
 re-promoted. The exact content salvaged is the census above.
+
+## Recovered stronger structural theorem
+
+The [known CRT/Dirichlet extension theorem](../root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md)
+shows that L is the countable random tournament, hence contains every finite
+tournament. This goes beyond the finite census but does not settle its
+increasing-prime-prefix frequencies. The [2026-10-26 continuation](../orientation_monodromy_rule30_20261026/README.md)
+gives a graded exchange algebra and a four-object converse-equivariant
+bijection, explicitly retaining their losses and scope.
 
 ## HYP-9375 (OPEN)
 

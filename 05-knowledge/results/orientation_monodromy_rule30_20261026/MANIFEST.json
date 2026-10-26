@@ -1,0 +1,51 @@
+{
+  "external": [
+    {
+      "url": "https://arxiv.org/html/1912.02709v1#S6",
+      "used": "section6 remark4, known random prime tournament"
+    },
+    {
+      "url": "https://www.math.uni-bielefeld.de/~rehmann/ECM/cdrom/3ecm/pdfs/pant3/camer.pdf",
+      "used": "p3 known prime tournament and p1 CRT/Dirichlet graph construction"
+    },
+    {
+      "url": "https://rule30prize.org/",
+      "used": "three single-seed questions; no prize closure claimed"
+    }
+  ],
+  "hash_semantics": "SHA256 with CRLF normalized to LF",
+  "packet": {
+    "README.md": "94ffbc18929332c98481b2134506d28532bfa9a06eaf51484538a7715dfad11f",
+    "check.py": "b356f2b16d2dd6c8f3bcedcab73fdcb1a68517f7a18c220276f6a2328d48d291",
+    "normal.json": "cb63be324a83bc19d2fc23199dfb76bbb34a2e108158c1d179397eb30d8b39dd",
+    "optimized.json": "cb63be324a83bc19d2fc23199dfb76bbb34a2e108158c1d179397eb30d8b39dd",
+    "verify.py": "e38f81fb5812d58b6ec556174df28e924efbf14177a0c4bbee33e8f702b4c6af"
+  },
+  "sources": {
+    "01-canon/theorems/THM-3456-left-permutive-trace-bijection-and-rule30-seed-boundary.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "69a57000e8a4f40707f36713e244d8ea8a4746461b9b59e31ca6965f086e25c7"
+    },
+    "01-canon/theorems/THM-4047-rule30-left-front-affine-monodromy-clock.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "835555670d03795f64aa56d84f7a463848ff77d2d67d9f915a0720c949d5c0f9"
+    },
+    "05-knowledge/results/analogy_reduction_atlas_20261025/ATLAS.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "74ce4498346a2810dcc5d465385302ee0a3b80f43c3efbc4df602d937f5d5a95"
+    },
+    "05-knowledge/results/analogy_reduction_atlas_20261025/QR_TOURNAMENT.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "68c7ee8b5a74bdf2f052a72e1be6b41acaa6d63a48011812aca7a8661a745d09"
+    },
+    "05-knowledge/results/pythagorean_hourglass_census_tower_20261025.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "d28df1969331cd069581d78654d05ff407153bfc3a4603e7d8a5222baea4acbe"
+    },
+    "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md": {
+      "revision": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+      "sha256": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505"
+    }
+  },
+  "status": "elementary proofs internally reviewed; classical inputs attributed; finite checks do not prove applications"
+}

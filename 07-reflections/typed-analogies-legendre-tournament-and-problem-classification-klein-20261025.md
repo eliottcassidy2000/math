@@ -3,6 +3,8 @@
 klein, 2026-10-25, third directive of the session. Reflection; truth lives in
 `05-knowledge/results/analogy_reduction_atlas_20261025/` and HYP-9375.
 
+**Correction boundary, 2026-10-26:** the atlas now distinguishes limit identification from fixed-point uniqueness and a root cover from its associated real sign bundle. Read the [repaired continuation](../05-knowledge/results/orientation_monodromy_rule30_20261026/README.md); the prose below preserves the original session's reasoning.
+
 ## What the directive asked and what survived the probes
 
 The owner offered a chain of resemblances: Cauchy–Schwarz as the triangle inequality; the central

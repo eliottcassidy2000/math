@@ -1,0 +1,198 @@
+{
+  "affine_returns": {
+    "cycle_words": 64,
+    "fixed_point_hostile": [
+      0,
+      2,
+      1
+    ],
+    "return_histogram": {
+      "0,0": 2667,
+      "0,1": 2667,
+      "1,0": 63,
+      "1,1": 63
+    },
+    "words": 5460
+  },
+  "algebras": {
+    "associativity_triples": 4194304,
+    "nonzero_gauge_pairs": 82944,
+    "systems": 1024
+  },
+  "scope": "finite controls for the stated elementary proofs; no fixed-seed asymptotic conclusion",
+  "status": "FINITE-EXACT PASS",
+  "tournaments": {
+    "classes": 4,
+    "labelled_counts": {
+      "TT4": 24,
+      "source_triangle": 8,
+      "strong": 24,
+      "triangle_sink": 8
+    },
+    "least_mask_witnesses": {
+      "TT4": 0,
+      "source_triangle": 2,
+      "strong": 4,
+      "triangle_sink": 5
+    }
+  },
+  "trace_cones": {
+    "cases": [
+      {
+        "depth": 1,
+        "fibre_size": 2,
+        "initial_blocks": 8,
+        "rule": 30,
+        "trace_words": 4
+      },
+      {
+        "depth": 2,
+        "fibre_size": 4,
+        "initial_blocks": 32,
+        "rule": 30,
+        "trace_words": 8
+      },
+      {
+        "depth": 3,
+        "fibre_size": 8,
+        "initial_blocks": 128,
+        "rule": 30,
+        "trace_words": 16
+      },
+      {
+        "depth": 4,
+        "fibre_size": 16,
+        "initial_blocks": 512,
+        "rule": 30,
+        "trace_words": 32
+      },
+      {
+        "depth": 5,
+        "fibre_size": 32,
+        "initial_blocks": 2048,
+        "rule": 30,
+        "trace_words": 64
+      },
+      {
+        "depth": 6,
+        "fibre_size": 64,
+        "initial_blocks": 8192,
+        "rule": 30,
+        "trace_words": 128
+      },
+      {
+        "depth": 1,
+        "fibre_size": 2,
+        "initial_blocks": 8,
+        "rule": 60,
+        "trace_words": 4
+      },
+      {
+        "depth": 2,
+        "fibre_size": 4,
+        "initial_blocks": 32,
+        "rule": 60,
+        "trace_words": 8
+      },
+      {
+        "depth": 3,
+        "fibre_size": 8,
+        "initial_blocks": 128,
+        "rule": 60,
+        "trace_words": 16
+      },
+      {
+        "depth": 4,
+        "fibre_size": 16,
+        "initial_blocks": 512,
+        "rule": 60,
+        "trace_words": 32
+      },
+      {
+        "depth": 5,
+        "fibre_size": 32,
+        "initial_blocks": 2048,
+        "rule": 60,
+        "trace_words": 64
+      },
+      {
+        "depth": 6,
+        "fibre_size": 64,
+        "initial_blocks": 8192,
+        "rule": 60,
+        "trace_words": 128
+      }
+    ],
+    "initial_blocks": 21840,
+    "single_seed_rule30_prefix": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "single_seed_rule60_prefix": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  }
+}
