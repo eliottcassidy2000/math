@@ -10850,3 +10850,15 @@ Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
 - [ ] Feed the resulting coefficient-descent tower into HYP-8765's localized radial-channel determinant program. Do not reuse atomwise first-return separation (MISTAKE-211).
 
 - **S35 (opus-2026-10-14; audited MISTAKE-613) cheap next runs:** (1) A_14(q) at q = 19, 23, 27, 31, ... via a compiled signed subset DP (the audit's), enough primes to split poly + a_q + new cores; (2) T_8 = 8F7(1): test nebentypus chi_8 forms of level 32/64 and products with odd-weight forms; (3) HYP-9277 at n = 9 by targeted search, plus the balanced-ARC question (audit: true for all strong n <= 7); (4) the 2-adic congruences of the level-32 newform b via the descent form over F_(q^2) (HYP-9276).
+
+- **S56 (opus-2026-10-25; BB(6) DeepMind Cryptids, THM-4770/4771, HYP-9380/9381) cheap next runs:**
+  1. A6 orbit beyond depth 44: resume `a6_orbit_deep_20261025.py` from W = 369779745580288. The cost grows about
+     2^(0.47 d), so depth 50 takes about 8 h. Watch T_48 (halting channel), N_46 and N_50 (capture), and the d = 51
+     landing (comb predicted with period 6*51+50 = 356 and density about 0.057).
+  2. A6 comb law: compute the landing combs at d = 3 (mod 12) for d = 3, 51 (cheap at 3) and the comb period at
+     other landings d = 7, 11 (mod 12) shifted by +-12.
+  3. A11: search for a countdown-end invariant on structured starts (b = 3 (mod 4), d = 6, ...), and compare the
+     blank-tape ends' a0 = b (mod 2) coincidence with the round map's (a0 + b) mod 4 rule.
+  4. Port the three-point accelerator (`rs_accel_20261025.py`) to the other bbchallenge holdouts with published
+     accelerations (Space Needle family, Lucy's Moonlight) and to base-p Collatz C_p (THM-4610), looking for
+     certified infinite macro chains (translations in parameter space).

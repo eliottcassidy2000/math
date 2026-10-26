@@ -6680,6 +6680,33 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-25, opus-2026-10-25-S56; independently audited, MISTAKE-669, [AUDIT](../05-knowledge/results/bb6_cryptids_odd_orbits_20261025/AUDIT.md)): the eleven DeepMind BB(6) Cryptids through odd orbits (THM-4770, THM-4771, HYP-9380, HYP-9381)
+
+Open after S56. Note: [bb6_cryptids_odd_orbits_20261025](../05-knowledge/results/bb6_cryptids_odd_orbits_20261025/README.md).
+
+- **A11 (probviously halting, HYP-9380).**
+  - Its countdowns are exactly Hydra orbits x -> floor(3x/2), with x = a0 + b + 18 (audit). The halting question is
+    about Hydra parities at tetrational indices.
+  - Is there a structural invariant of A11's countdown ends (THM-4771(c)) that forces a0 = 1 or the wrong parity of
+    b? Random starts give halting fractions 0.25-0.27 directly on the rule system.
+  - The blank-tape orbit's four ends all had a0 = b (mod 2). The round map shows this is not invariant: it depends on
+    (a0 + b) mod 4.
+  - A proof that the 5th end (after about 2^336 rounds) halts is out of reach. A proof of an invariant would make
+    A11 non-halting.
+- **A6 (probviously decidable, HYP-9381).**
+  - Can the window dynamics be renormalised in the depth d? The capture combs at landings d = 3 (mod 12) have density
+    about 0.057, with period 140 at d = 15 and consistent with 212 at d = 27. The 6d + 50 law is a two-point fit.
+  - The exposed targets alternate: T_d at d = 0 (mod 4), N_d at d = 2 (mod 4); bracketing gap sums are about 7-15 d.
+  - A d-uniform description would decide A6, by capture or by halting.
+    - Capture means the certified infinite macro chain of THM-4770(c) (v0 even >= 4, odd >= 5). It is not a TM
+      translated cycler.
+    - The exact orbit is known into depth 44 (resume from W = 369779745580288).
+- **A2, A5, A10.** Is there a rigorous version of "0.2-0.5 dangerous parity episodes per doubling of scale"
+  (THM-4771(d))? It would bound the halting density over starting configurations.
+- **Antihydra.** See klein's ANTIHYDRA.md (barrier Σ v_i <= (3k-6)/2, model probability phi^-6).
+- **Tool.** The three-point lemma (THM-4770(e)) certifies translated cycles in any piecewise-affine rule system.
+  Open: apply it to the other BB(6) holdouts with published accelerations, and to the repo's base-p Collatz maps.
+
 ### UPDATE (2026-10-17, opus-2026-10-17-S41; audited, MISTAKE-627; Run C of S38 evaluated: R1-R5 all PASSED): uniform depth control of the ROOT transport as an energy process
 - THM-4667 (PROVED, elementary): the energy ledger of clock_duality_oct15's signed odd transport. It contains:
   - the energy is the sum of squared partial currents, it changes only at merges, and it ends at R(N)^2;

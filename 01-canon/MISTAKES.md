@@ -20289,3 +20289,57 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Distinguish a subgroup index from an order quotient when a group is a quotient of a cover.
   - Test the "no event" sentence against the inherited event table.
   - Ask whether a nesting already follows from monotonicity before calling it structure.
+
+## MISTAKE-669 (2026-10-25, THM-4770 / THM-4771 / HYP-9380 / HYP-9381 and the note `05-knowledge/results/bb6_cryptids_odd_orbits_20261025/README.md` (opus-2026-10-25-S56, pre-audit commits fbf5d1ec17 and 61535312dd); found partly by the session and partly by the independent audit `05-knowledge/results/bb6_cryptids_odd_orbits_20261025/AUDIT.md`) -- near misses are not hazards, coalesced samples are one sample, a family must close at its lower edge
+
+- **Claims.**
+  - THM-4770(c): the capture family is P(v0, 4v0+29) for v0 even >= 2 together with P(v0, 4v0+33) for v0 odd >= 5. It
+    was also called a "translated cycler".
+  - THM-4771(a): the Antihydra counter equals 6 + sum_{l<=i}(2 v_3(o_l) - 1).
+  - Session drafts on A6:
+    - first, "probviously halting", since the orbit passes within O(d) of a halting top at every depth;
+    - then "probviously non-halting, capture 0.97", since 400 natural entries never halted at d = 8..30;
+    - then "capture windows only at landings d = 3 (mod 12)", and odds 0.75-0.9 / 0.1-0.25.
+  - P5 (pre-registered): "the nearest approaches at odd depths are eps = 0 sweeps".
+  - README §1: "no analysis of A1-A11 found".
+- **First failed implications.**
+  - **Lower edge.** The even step at v0 = 2 lands at P(3,45), outside the odd family (u = 2, return J(0,0,62)). A
+    family must be checked to close, not just its step maps.
+  - **Index.** v_3(o_{l+1}) = v_l - 1 shifts the sum: the counter at o_i is 6 + sum_{l=1}^{i}. For example 11 at
+    o_1 = 135, not 16. The root27-machine session found and repaired the same error independently (2026-10-26 entry
+    above, commit 02065cd2cc).
+  - **Distance is not hazard.** At odd depths every near miss lies in the eps = 0 class, which can never equal a
+    target, so near-miss distances carry no hazard there.
+  - **Coalesced samples.** The window dynamics coalesces: 400 entries share one exit. So "zero halts from 400 entries"
+    is one sample per depth, and the halting channel (exposed T_d at d = 0 mod 4) stays open.
+  - **Missing channel.** N_d itself is passed in the dangerous class at every d = 2 (mod 4).
+  - **Unstated mixture.** The headline odds silently assumed a probability that the combs persist. Stated per scenario
+    they are: capture 0.90-0.95 with combs, roughly even (halting slightly ahead) without.
+  - **Gap-parity shortcut.** P5 was checked by gap parity. That shortcut flips across a depth boundary, and the first
+    start past T_d is eps = 1 in depth d+1.
+  - **Macro translation is not a TM cycler.** On the tape the family's period grows quadratically (audit), so it is not
+    a bbchallenge translated cycler.
+  - **Prior-art search.** bbchallenge wiki pages for all eleven machines (Category: Potential Cryptids) and
+    Enan456/bbchallenge-proofs (conditional Lean closures for A3, A9, A11) exist. A search-engine query on machine
+    strings missed both.
+  - **Capped quantities.** `halting_opportunities_20261025.py` capped its deciding quantities (min(q, 9), ...). This
+    manufactured residue "invariants" (A7 c = 3 mod 4, A10 c even), superseded by `uncapped_residues_20261025.py`.
+  - **Tooling.** A `git pull --rebase --autostash` during background runs replaced their output files. The final
+    stdout lines of four runs were lost and had to be reconstructed from their JSON files.
+- **Strongest survivor.**
+  - THM-4770(a), (b), (d) and THM-4771(b), (d) were confirmed by the audit's own code: 30,000 random phases, T_d and N_d
+    for d <= 69, a TM-level transcription check of every rule system, and the deep orbit's depth entries for d <= 31.
+  - The capture family closes for v0 even >= 4 and v0 odd >= 5.
+  - Q = 2v0 + w0 is monotone, which proves S(W) > W.
+  - A11's countdown is exactly the Hydra map (audit). Its 1/4 check rate holds on the rule system and on the actual
+    seed orbits.
+  - A6 stands as "probviously decidable", with odds stated per scenario.
+- **Missing coordinates.**
+  - Close a claimed invariant family at its lower edge.
+  - Index a valuation identity by checking its first term.
+  - In coalescing dynamics, count independent samples by distinct trajectories, not by entries.
+  - Compute the class of a near miss in its own depth before calling it safe.
+  - Give odds per scenario and name the mixing probability.
+  - Search the bbchallenge wiki (Special:Search, Category: Potential Cryptids) and GitHub by machine string before
+    claiming "no analysis".
+  - Never stash (including `--autostash`) while jobs write into the worktree.

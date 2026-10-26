@@ -224,7 +224,8 @@ class Engine:
                 Kmax = max_valid(valid, E)
                 if Kmax is None:
                     raise Capture({'base': b, 'D': D, 'labels': cyc, 'E': E})
-                # the chain from b may pass an anchor state: stop at the first anchor inside the jump range
+                # NOTE: the chain from b may pass anchor states; they are not split out (segments just get longer;
+                # correctness is unaffected, and no anchors were skipped in the first 50 A1 segments - audit).
                 m = Kmax + 1
                 new = vadd(b, D, m)
                 self.stats['l1_jumps'] += 1

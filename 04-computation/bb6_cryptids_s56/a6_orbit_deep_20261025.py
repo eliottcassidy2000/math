@@ -150,6 +150,7 @@ def run(seconds, max_depth):
             tr.progression(b, D, offs, 2, m - 1, nsw)
             new = b + m * D
             tr.point(new, nsw + m * p - 2 * p)
+            acc.STATS['l2_jumps'] += 1   # (added after S56: the progress lines printed 0 before)
             nsw += m * p - 2 * p
             del Ws[n - 2 * p + 1:]
             del toks[n - 2 * p:]

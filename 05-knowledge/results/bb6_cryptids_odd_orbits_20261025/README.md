@@ -13,15 +13,17 @@ Everything below is a statement about those rule systems.
 ## 0. Summary
 
 1. **Certified translated-cycle acceleration (PROVED, §3).** Each labelled branch of these rule systems is an affine map
-   on (polyhedron) ∩ (lattice coset). Hence three exact evaluations certify a translated cycle for a whole range, and a
+   on (polyhedron) ∩ (lattice coset). Hence three exact evaluations certify a translation chain in parameter space for a whole range, and a
    fourth evaluation at k = 2^E certifies an *infinite* one, which is a proof of non-halting. Two engines:
    `a6_accel_20261025.py` (A6 phase level and sweep level) and `rs_accel_20261025.py` (A1, A2, A5, A10).
    Both reproduce plain simulation exactly where plain simulation can reach.
 2. **A6 (1RB0LF_1RC1RA_0RD0RB_1LE---_0LA1LE_1RD1LA), PROVED structure (§4.1–4.3):**
    - a closed-form phase map;
    - the halting sweep starts are exactly the "tops" T_d = 24·2^d − 3d − 16 (one per depth) plus O(1) sporadic ones;
-   - a **capture family**: the depth-1 translated cycler P(v0, 4v0+29) ↔ P(v0, 4v0+33). Every configuration in it runs
-     forever, and every sweep start N_d = 18·2^d − 3d − 4 (d ≥ 2) enters it.
+   - a **capture family** {P(v0, 4v0+29) : v0 even ≥ 4} ∪ {P(v0, 4v0+33) : v0 odd ≥ 5}. It is a depth-1 chain that
+     translates by (4, 16) in macro parameters every two phases, so every configuration in it runs forever. On the
+     tape its period grows quadratically (audit), so it is a macro-level translation, not a bbchallenge translated
+     cycler. Every sweep start N_d = 18·2^d − 3d − 4 (d ≥ 2) enters it.
    - Every capture found anywhere (exhaustively for W < 2^18, and in about 10^4 window experiments) is this family.
 3. **A6 blank-tape orbit, FINITE-EXACT (§4.4).** Computed exactly into depth 44: 1.33·10^12 sweeps, sweep starts
    up to 2^49. Every sweep returned to J(0,0,·): no halt, no capture, no uncertified long sweep.
@@ -30,27 +32,34 @@ Everything below is a statement about those rule systems.
    - At even depths exactly one target is exposed: the halting top T_d at d ≡ 0 (mod 4), the capture point N_d at
      d ≡ 2 (mod 4).
 4. **A6 funnels and verdict (OBSERVATION/HEURISTIC, §4.5–4.6).**
-   - Each depth window (size 12·2^d) funnels into ~25–45 exits. From the natural entries there is a single exit at
+   - Each depth window (size 12·2^d) funnels into 19–45 exits (d ≤ 17). From the natural entries there is a single exit at
      d ≡ 0, 2 (mod 4) for 18 ≤ d ≤ 30, so those 400 entries are effectively one sample per depth.
-   - Capture combs (residues mod 6d + 50, density ≈ 0.057) surround the long-jump landings at d = 15, 27 and 39. They
-     are absent at d = 19, 23, 31. This period-12 law was pre-registered as P7/P8 and both passed.
+   - Capture combs (density ≈ 0.057; 8 residues mod 140 at d = 15, 12 residues consistent with period 212 at d = 27;
+     a two-point fit gives period 6d + 50) surround the long-jump landings at d = 15, 27 and 39. They are absent at
+     d = 19, 23, 31. This period-12 law was pre-registered as P7/P8 and both passed.
    - Heuristic verdict: **probviously decidable, not probviously non-halting.** Three channels (halting at T_d,
-     capture at N_d, capture at the combs) carry a divergent total hazard. A translated cycler is favoured,
-     P ≈ 0.75–0.9 against P(halt) ≈ 0.1–0.25. The decision comes around depth 10^2–10^3, far out of reach.
+     capture at N_d, capture at the combs) carry a divergent total hazard.
+     - If the combs persist: capture ≈ 0.90–0.95, halting ≈ 0.05–0.10.
+     - If not: roughly even odds, halting slightly ahead, median decision depth ≈ 10^5.
+     - The probability that the combs persist is not estimated.
 5. **A11 is probviously HALTING, at tetrational times (§6, HEURISTIC; structure PROVED).**
-   - Its orbit is a sequence of countdowns, each a Hydra-type map b ↦ 3 + 3⌊(b+a0+4)/2⌋ iterated c/2 times.
+   - Its orbit is a sequence of countdowns. With x = a0 + b + 18, each countdown is exactly the Hydra map
+     x ↦ ⌊3x/2⌋ (with a0' = x mod 2) iterated ⌊c/2⌋ times from a seed in {18, 19, 27, 30}. This identification is
+     the audit's.
    - At each countdown end a parity check halts with probability 1/4. End parities were measured uniform over random
      countdowns (0.262, 0.233), and directly on the rule system (0.253–0.272 for every (c mod 2, d)).
-   - The blank-tape orbit has survived 4 checks. The 5th comes after about 2^336 rounds.
+   - The blank-tape orbit has survived 4 checks, the first at the start configuration. The 5th asks for two Hydra
+     parities near index K ≈ 2^336.
 6. **A2, A5, A10 are doubly parity-protected (PROVED lemma, measured rates, §5).**
    - Halting needs a rare parity-flipping end case and then an exact hit inside that one episode.
-   - Measured: about one dangerous episode per doubling of scale. Heuristic residual ≈ c/L ≈ 10^-7 at the current
-     L ≈ 2^26.
+   - Measured: 0.2–0.5 dangerous episodes per doubling of scale. The heuristic residual is of order c/L, with c not
+     estimated; that is about 10^-7 for c ≈ 1 at the current L ≈ 2^26.
    - A1, A3, A4, A7, A8, A9 have exponentially growing parameters with exact-coincidence halting conditions, so their
      residual halting probability is ≲ 2^-(current bits), between 2^-2000 and 2^-276000.
 7. **Odd orbits (PROVED, §2).**
    - Antihydra's odd orbit is the *twisted Syracuse map* y ↦ 3^(v−1)(3y+1)/2^v on y = −o < 0. Its counter is the
-     valuation walk 6 + sum_(0<=l<i)(2v_l-3), equivalently 6 + sum_(1<=l<=i)(2 v_3(o_l)-1).
+     valuation walk 6 + Σ_{l<i}(2v_l − 3), equivalently 6 + Σ_{l=1}^{i}(2 v_3(o_l) − 1) at o_i. klein's ANTIHYDRA.md
+     (same day, committed first) is the fuller reference.
    - A4's visit map contains exactly Antihydra's parity dynamics (f(a) = ⌊3a/2⌋ + 2, conjugate to ⌊3n/2⌋ by n = a+4),
      inside a doubling cascade. It halts iff a visit equals 2^(m+2) − m − 4.
 
@@ -75,9 +84,21 @@ Everything below is a statement about those rule systems.
   - Classification vocabulary: probviously halting / non-halting / decidable.
   - Racheline's tetrational Cryptid 1RB1LE_0LC0LB_1RD1LC_1RD1RA_1RF0LA_---1RE, rated "3/5 translated cycler, 2/5 halting",
     is the precedent for §4.6 and §6.
-  - None of A1–A11 appears on the wiki's Cryptid list. No analysis of them was found (web search for the machine
-    strings; wiki Cryptid and Space Needle pages). A11 shares its first three states with Space Needle but differs in
-    D, E, F.
+  - A1–A11 are not on the wiki's Cryptid list. Each has its own page under **Category: Potential Cryptids** (edited
+    2026-10-21). Those pages reproduce the paper's rules and state that the machines' probvious behaviour has not been
+    analysed. The session's first web search missed them; the audit found them (MISTAKE-669).
+  - A11 shares its first three states with Space Needle but differs in D, E, F.
+  - The wiki's Antihydra page writes the map as f(n) = ⌊3n/2⌋ + 2, exactly A4's f.
+- **google-deepmind/cryptids (CITED).** BB6/README lists A1–A11 as Holdout with their Lean files. This is the source
+  of "Lean-verified".
+- **Enan456/bbchallenge-proofs (CITED; GitHub, private from 2026-08-03, public from 2026-10-22).**
+  - Kernel-checked conditional closures Safe_X → ¬Halts for 115 holdouts, including A9 (dossier-2 "Piasa"),
+    A3 (dossier-3 "Grafton Piasa") and A11 (dossier-7 "Kaskaskia", described as a unary ladder drained and reloaded
+    at growth ~3/2).
+  - A 2·10^7-step cross-verification of their orbits against the DeepMind rules for those machines.
+  - Every Safe_X is open there, and no machine is decided.
+  - Our A11 verdict (§6) says Safe_Kaskaskia eventually fails. Their Lean statement is conditional, so there is no
+    contradiction.
 
 ## 2. Odd-orbit forms
 
@@ -93,11 +114,10 @@ a Syracuse step twisted by the unit 3^(v−1). The counter changes by 2(v − 1)
 18 → 27 the first odd value is o_0 = 27 with counter 6. So **Antihydra halts iff 6 + Σ_{l<i} (2v_l − 3) = 0 for some
 i**. This was checked against the direct iteration for 2466 odd steps.
 
-Since (3o − 1)/2^v ≢ 0 (mod 3), v_3(o_(l+1)) = v_l − 1, and the counter equals
-`a_i = 6 + sum_(1<=l<=i)(2 v_3(o_l)-1)`. The lower limit 1 is essential:
-o_0=27 is the source, not a returned value. At i=0 the sum is empty and the counter is 6,
-whereas including o_0 would incorrectly give 11. This is the 2026-10-26 indexing repair
-recorded in `01-canon/MISTAKES.md`. In words,
+Since (3o − 1)/2^v ≢ 0 (mod 3), v_3(o_(l+1)) = v_l − 1. So the counter at o_i equals 6 + Σ_{l=1}^{i}(2 v_3(o_l) − 1);
+the first draft summed from l = 0. That off-by-one was caught independently by the audit and by the root27-machine
+session (MISTAKES 2026-10-26 entry, commit 02065cd2cc). Positivity at return i is exactly Σ_{1≤l≤i} v_3(o_l) ≥ (i − 5)/2. For example, at o_1 = 135 the counter is
+6 + (2·3 − 1) = 11. In words,
 the odd terms must carry on average at least half a factor of 3. A random integer carries exactly 1/2 (Σ 3^(−k)).
 Under the 2-adic Haar heuristic Antihydra's odd terms carry 1, since P(v_3 ≥ k) = 2^(−k). The drift +1 per odd
 step is this difference.
@@ -135,9 +155,21 @@ Then b + kD ∈ D_L and G_L(b + kD) = b + (k+1)D for every 0 ≤ k ≤ K.
 3. G_L(x) = Mx + g, and MD = G_L(b+D) − G_L(b) = D. Hence G_L(b + kD) = b + D + kD. ∎
 
 **Infinite chains.** Along the chain, every intermediate state is integer-affine in k: x_i(k) = x_i(0) + k·δ_i with
-δ_i ∈ Z^n. Every constraint value is therefore an integer-affine function of k, with |value at k = 0| < 2^(2·maxbits+O(1)).
-If the chain also holds at K = 2^E with E ≥ 3·maxbits + 300 (and E ≥ 1000), no constraint can decrease along the ray.
-So the chain holds for all k ≥ 0. When no label of L is HALT or a return, this is a **certificate of non-halting**.
+δ_i ∈ Z^n. Every constraint value is therefore an integer-affine function of k, with |value at k = 0| < 2^(2·maxbits+O(1)),
+where maxbits ranges over *all* states at k = 0. If the chain also holds at K = 2^E with E ≥ 3·maxbits + 300 (and
+E ≥ 1000), no constraint can decrease along the ray. So the chain holds for all k ≥ 0. When no label of L is HALT or a
+return, this is a **certificate of non-halting**.
+
+- *Level 1.* The window contains all states, so the bound is immediate.
+- *Level 2, A6.* Q = 2v0 + w0 rises by 3 per cascade level and by 7–20 in each of the 13 end cases (the audit's
+  observation, checked case by case in THM-4770(e)). So every intermediate state of a sweep is below its end W'. That
+  bounds maxbits by the sweep starts, and it also **proves S(W) > W**.
+- *Level 2, generic engine.* No bound is proved; no such certificate was ever issued.
+- The search returns a verified, not necessarily maximal, K.
+
+**Prior art for the method.** Detecting a macro-level progression from the history and proving it inductively is
+standard in BB simulators: Ligocki's Quick_Sim inductive rules, Barsdell's proof machine. The three-point formulation
+on affine label domains is a convenient, self-contained version of that idea.
 
 **Jumps.**
 - The maximal K is found by exponential plus binary search, using only verified evaluations.
@@ -148,8 +180,9 @@ So the chain holds for all k ≥ 0. When no label of L is HALT or a return, this
 **Checks (VERIFIED).**
 - *A6 engine.*
   - It equals the phase map for every W < 20000 (the phase map in turn equals the rule system there).
-  - Its accelerated orbit equals the plain orbit at sweep 3·10^6 (W = 449995092). It computed 234,034 phases and
-    took 1,156 level-2 jumps.
+  - Its accelerated orbit equals the plain orbit at sweeps 3·10^6 (W = 449995092) and 2·10^7 (W = 3481675260).
+    Self-test output: `a6_accel_selftest.out`; cross-check: `a6_accel_crosscheck_2e7.out`.
+  - The audit independently reproduced both values and matched the depth entries of the deep run for d = 1..31.
 - *Generic engine.*
   - Labelled steps equal the rule systems for 2·10^5 macro steps.
   - A2, A5 and A10 match plain stepping.
@@ -189,7 +222,7 @@ which is the largest W of depth j.
 
 ### 4.2 The capture family (PROVED)
 
-For v0 even ≥ 2 and v0 odd ≥ 5:
+For v0 even ≥ 4 and v0 odd ≥ 5:
 
   P(v0, 4v0 + 29) → P(v0 + 1, 4v0 + 37) = P(v0+1, 4(v0+1) + 33),
   P(v0, 4v0 + 33) → P(v0 + 3, 4v0 + 41) = P(v0+3, 4(v0+3) + 29).
@@ -203,8 +236,14 @@ For v0 even ≥ 2 and v0 odd ≥ 5:
   - Depth 1 holds for A ≥ 9.
   - Then w = 2A + 12, so t = A + 4, eps = 1, and u = A − 7 is even and ≥ 4 when v0 ≥ 5.
   - Output P(u + 4, 4t + 1) = P(A − 3, 4A + 17).
-- The family recurs with v0 increasing by 4 every two phases. Neither label is HALT or a return, so the machine runs
-  forever from any configuration in the family. ∎
+- The family {P(v0, 4v0+29) : v0 even ≥ 4} ∪ {P(v0, 4v0+33) : v0 odd ≥ 5} is closed: from v0 even ≥ 4 the image
+  v0 + 1 ≥ 5 is odd. v0 increases by 4 every two phases. Neither label is HALT or a return, so the machine runs forever
+  from any configuration in the family. ∎
+- The even step is valid for v0 = 2, but its image P(3, 45) has u = 2 and returns J(0,0,62), so v0 = 2 is not in the
+  family. The first draft said "v0 even ≥ 2"; the audit found the counterexample.
+- On the tape the chain is not a bbchallenge translated cycler. The audit ran the TM from J(0,4,45): the return periods
+  3052, 5028, 7516, 10516, 14028, … grow quadratically (second difference 512), and the tape grows 24 cells per
+  period. The non-halting proof is at the level of the paper's Lean-verified rules.
 
 **Main capture chain.** For d ≥ 2 the first phase of the sweep from J(0,0,N_d), N_d = 18·2^d − 3d − 4, has depth d. It
 ends with w = 6·2^d + 8 and u = 3·2^d − 5 (odd, eps = 1), so it passes to P(3·2^d − 5, 12·2^d + 13). That is the odd
@@ -224,7 +263,8 @@ member of the family.
 | 12 | −19698, −52 | −40 |
 | other d ≤ 13 | −3d − 16 only | −3d − 4 only |
 
-- Every halting set contains the top (−3d − 16), and every capture set contains N_d (−3d − 4).
+- Every halting set contains the top (−3d − 16). For d ≥ 2 every capture set contains N_d (−3d − 4); N_1 = T_1 = 29
+  halts. The "tops plus O(1) sporadic starts" description is established for these depths (d ≤ 13) only.
 - Every capture certificate found (here and in all later experiments) is the §4.2 family:
   period 2, translation (4, 16), labels (1, e1uodd), (1, e1ueven).
 
@@ -253,12 +293,21 @@ member of the family.
 - For odd d the step 3d + 13 is even, so eps = 0 sweeps with u odd return W + 3d + 13 in the same class.
 - For d ≡ 1 (mod 4), u also keeps its parity: the run W → W + 3d + 13 crosses the whole window, and no point of it is
   a target.
-- Observed: at every odd depth 29–43 all four nearest-approach gaps are odd. This was pre-registered as P5.
+- Observed at every odd depth 29–43, using the pre-registered P5 check:
+  - Three of the four nearest approaches (both sides of N_d, and the last start below T_d) are eps = 0 starts of
+    depth d.
+  - The fourth, the first start past T_d, belongs to depth d + 1 and is eps = 1 there (audit). It cannot equal T_d
+    either.
+  - So P5 holds in substance but fails as literally stated. The session had checked gap parities, which is valid only
+    within one depth, instead of recomputing eps.
 
 **Coalescence (FINITE-EXACT, `a6_basins_20261025.py`).** Fates of all W of the window, for 4 ≤ d ≤ 17:
-- S(W) > W always holds inside a window.
-- The whole window, 12·2^d − 3 starting points, funnels into 24–45 distinct exits.
-- Halting basins: 1 element (the top) at d ≡ 1, 2 (mod 4). At d ≡ 0 (mod 4): 109 (d = 8), 4700 (d = 12), 45 (d = 16).
+- S(W) > W holds for every returning sweep. This is proved by Q-monotonicity (§3, THM-4770(e)).
+- The whole window, 12·2^d − 3 starting points, funnels into 19–45 distinct exits.
+- Halting basins:
+  - 1 element (the top) at d ≡ 1, 2 (mod 4);
+  - at d ≡ 0 (mod 4): 109 (d = 8), 4700 (d = 12), 45 (d = 16);
+  - at d ≡ 3 (mod 4): 13 (d = 7), 5 (d = 11), 541 (d = 15, at offsets 58421–65474).
 - Capture basins: 1–8 elements, except 396 at d = 8 and 2454 at d = 15.
 
 **Transfer maps from the natural entries (FINITE-EXACT, `a6_transfer_6_30_400.out`).** Entries T_{d−1} + o,
@@ -277,15 +326,18 @@ o = 1..400:
 
 | d | d mod 12 | captures /301 | halts | actual landing |
 |---|---|---|---|---|
-| 15 | 3 | 17: residues {1,12,43,50,87,94,97,108} mod 140 = 6d+50 (8/140) | 0 | exit 65 (δ = 1 is captured) |
+| 15 | 3 | 17: residues {1,12,43,50,87,94,97,108} mod 140 (8/140) | 0 | exit 65 (δ = 1 is captured) |
 | 19 | 7 | 0 | 0 | exit 129 |
 | 23 | 11 | 0 | 0 | exit 137 |
-| 27 | 3 | 17: 12 residues mod 212 = 6d+50 (12/212) | 0 | exit 189 |
+| 27 | 3 | 17: 12 residues, consistent with period 212 (12/212) | 0 | exit 189 |
 | 31 | 7 | 0 (pre-registered P7: passed) | 0 | exit 121 |
 | 39 | 3 | 2/81 for |δ| ≤ 40, at δ = −39, −28 (pre-registered P8 ≥ 2%: passed) | 0 | exit 49 |
 
-The d = 39 row comes from `a6_landing_hazard_d39_R40.json`. Both combs are exactly periodic with period 6d + 50 and
-density ≈ 0.057, and their gaps alternate 7/11.
+The d = 39 row comes from `a6_landing_hazard_d39_R40.json`.
+- At d = 15 the comb is periodic with period 140 and 8 residues, whose gaps are 11, 31, 7, 37, 7, 3, 11, 33.
+- At d = 27 the data fit period 212 with 12 residues.
+- 140 and 212 suggest period 6d + 50, but that is a two-point fit: the windows cover only 2.15 and 1.42 periods.
+- The density is ≈ 0.057 at both depths.
 
 ### 4.6 Hazard and verdict (HEURISTIC)
 
@@ -319,13 +371,18 @@ None of these events was observed, which is consistent with the totals.
 
 **Verdict: probviously decidable** (not probviously non-halting). Outcome odds:
 
-| scenario | P(translated cycler) | P(halt) | when decided |
+| scenario | P(capture) | P(halt) | when decided |
 |---|---|---|---|
-| Combs persist | ≈ 0.9 | ≈ 0.1 | typically by depth a few hundred |
-| Combs do not persist | ≈ 0.5–0.75 | ≈ 0.25–0.5 | depth ~10^3–10^6 |
+| Combs persist | ≈ 0.90–0.95 | ≈ 0.05–0.10 | typically by depth a few hundred |
+| Combs do not persist | roughly even | slightly ahead (≈ 0.55 of decided) | median ≈ 10^5; 10% undecided beyond ≈ 10^13 |
 
-All of this is far beyond exact simulation, whose cost grows like 2^(0.47d). The translated cycler, if it comes, is
-already certified by THM-4770(c).
+- The audit simulated this model with gap slopes κ_T = 11 and κ_N = 12. Without combs it gives halt 0.27, capture 0.25,
+  and 0.48 still undecided at depth 2·10^5.
+- The first draft's single headline, 0.75–0.9 against 0.1–0.25, matched neither scenario: it silently assumed a comb
+  persistence probability. That probability is not estimated here.
+- Everything is far beyond exact simulation, whose cost grows like 2^(0.47d).
+- "Capture" means entering the THM-4770(c) family: a certified infinite macro chain, provably non-halting. It is not a
+  bbchallenge translated cycler.
 
 ## 5. A2, A5, A10 (double parity protection) and A1
 
@@ -347,10 +404,10 @@ already certified by THM-4770(c).
 | A5 | 5 | 5, 9, 10, 12, 18 | 0.019 |
 | A10 | 10 (all from b0_small) | 3, 8, 11, 12, 13, 13, 15, 15, 18, 23 | 0.128 |
 
-- That is about one episode per doubling of scale.
+- That is 0.2–0.5 episodes per doubling of scale (11/22, 5/26, 10/23).
 - Inside episodes the smallest halting margins are 2 (at L = 9), then values of order L/8.
-- With P(halt | episode) ≈ c/L, the residual is ≈ 2c/L ≈ 10^-7 at the current L ≈ 2^25.5–2^26.3: probviously
-  non-halting.
+- With P(halt | episode) ≈ c/L, the residual is of order c/L. The constant c is not estimated; for c ≈ 1 this is
+  ≈ 10^-7 at the current L ≈ 2^25.5–2^26.3. Verdict: probviously non-halting.
 - The generic engine gives these machines no speed-up, because their sweeps are chaotic: 2a + w is nearly conserved
   and the position on that circle follows an expanding map.
 
@@ -359,7 +416,7 @@ already certified by THM-4770(c).
   doubling cascade (db5, loop_a0).
 - The certified engine reaches 6,711 bits after 17,241 segments in 2400 s (`rs_deep_A1.json`), against 2^28 for plain simulation
   in 60 s. Neither HALT nor CAPTURE occurs.
-- Halting needs d = b + 2 exactly at a cascade end, a range of about 1.5b. Residual ≲ 2^(−4000): probviously
+- Halting needs d = b + 2 exactly at a cascade end, a range of about 1.5b. Residual ≲ 2^(−6000): probviously
   non-halting.
 
 ## 6. A11 is probviously halting (structure PROVED, verdict HEURISTIC)
@@ -367,43 +424,57 @@ already certified by THM-4770(c).
 **Structure (from the rules).**
 - After its a-loop, C(a,b,c,d) becomes C(a mod 2, b + 3⌊a/2⌋, c, d).
 - With a0 = a mod 2 ≤ 1 and c ≥ 2, one round is C(a0, b, c+2, d) → C(a0+b+4, 3, c, d). So the countdown iterates
-  (a0, b) ↦ ((a0+b) mod 2, 3 + 3⌊(a0+b+4)/2⌋) exactly c/2 times. That is a Hydra-type map, b ×1.5 per round.
-- At the end (c ∈ {0,1}, d = 3), HALT occurs iff a0 = 0 and (c = 0 and b odd, or c = 1 and b even).
-- Every other end case restarts a countdown with c ≈ b/2: C(a,2k,0,3) → C(a,0,k+3,3), C(1,2k+1,0,3) → C(6,3,k,3), and
-  so on. The d = 6 ends reach a d = 3 check within one round.
+  (a0, b) ↦ ((a0+b) mod 2, 3 + 3⌊(a0+b+4)/2⌋) exactly ⌊c/2⌋ times.
+- **Hydra form (audit).** With x = a0 + b + 18 a round is exactly x ↦ ⌊3x/2⌋, and a0' = x mod 2. Checked on 10^5
+  random states, both by the audit and by the session.
+  - The restart seeds are x0 ∈ {18, 19, 27, 30}. Seed 18 lies on Antihydra's own sequence 8, 12, 18, 27, ….
+- At a d = 3 end (c ∈ {0,1}), HALT occurs iff a0 = 0 and (c = 0 and b odd, or c = 1 and b even). In Hydra terms, after
+  K rounds this is: x_{K−1} even and x_K ≡ 1 − (c mod 2) (mod 2).
+- At d = 6 ends the check uses b + 3 (c = 0), or comes after one round with c = 3 (c = 1).
+- Every non-halting d = 3 end restarts a countdown with c = ⌊b/2⌋ + O(1): C(a,2k,0,3) → C(a,0,k+3,3),
+  C(1,2k+1,0,3) → C(6,3,k,3), and so on.
 - So the countdown lengths grow tetrationally.
 
 **Measured.**
-- End parities are uniform. Over random starts (`a11_countdown_20261025.py`) the halting fraction is 0.257/0.243
-  (seed 5) and 0.262/0.233 (seed 77, c/2 ∈ [400, 1200); pre-registered P9).
+- End parities are uniform. Over random starts (`a11_countdown_20261025.py`) the halting fraction is 0.262/0.233
+  (seed 77, c/2 ∈ [400, 1200), pre-registered P9) and 0.2565/0.2430 (seed 5, c/2 ∈ [50, 400),
+  `a11_countdown_seed5.out`).
+- The audit found joint frequencies 0.248–0.251 of consecutive Hydra parities on the actual seed orbits
+  (K ≤ 4·10^5, also split by K mod 4).
 - Directly on the rule system (`a11_rule_check_20261025.py`), from 6000 random configurations C(a0, b, c, d) with
   c/2 ∈ [100, 400): the first countdown end halts with frequency 0.253, 0.272, 0.268, 0.256 for (c mod 2, d) =
   (0,3), (0,6), (1,3), (1,6).
 - The blank-tape orbit's ends (macro step, a0, b mod 2, c) are (1,0,0,0), (8,0,0,0), (33,1,1,0) and (1173,1,1,0).
+  The first is the start configuration. None halts; each later check had probability 3/4 of not halting.
 - All four ends have a0 ≡ b (mod 2). This is not an invariant: the round map gives a0' ≡ b' exactly when
   a0 + b ≡ 1, 2 (mod 4).
-  None halts; each had probability 3/4 of not halting.
 - The current countdown has c ≈ 2^337. Its end, the 5th check, comes after about 2^336 rounds.
 
-**Verdict.** A11 halts with heuristic probability 1, at the first check that fails. That happens at a time around a
-tower of height ~5. This is far below the BB(6) champion but forever out of reach of direct simulation. The precedent
-is Racheline's tetrational Cryptid.
+**Verdict.** A11 halts with heuristic probability 1, at the first check that fails. Each failed check adds one level
+to the tower of times, so the expected halting time is a tower of height about 5. That is far below the BB(6)
+champion but forever out of reach of direct simulation. The heuristic is the same coin-flip model of Hydra parities
+that makes Antihydra probviously non-halting. The precedent is Racheline's tetrational Cryptid.
+
+**Prior art.**
+- Enan456/bbchallenge-proofs, dossier-7 "Kaskaskia", has a kernel-checked conditional closure Safe → ¬Halts for A11.
+  Safe is open there, and its description is a unary ladder drained and reloaded at growth ~3/2.
+- The countdown/Hydra form and the 1/4 parity check are this session's and the audit's.
 
 ## 7. Classification of the eleven (HEURISTIC; see HYP-9380)
 
 | machine | growth (60 s plain; certified engine) | halting condition | residual / verdict |
 |---|---|---|---|
 | A1 | exponential per segment (6,711 bits) | d = b + 2 at cascade end | ≲ 2^-6000; non-halting |
-| A2 | slow, L ≈ 2^25.5 | double parity | ≈ 10^-7; non-halting |
+| A2 | slow, L ≈ 2^25.5 | double parity | order c/L (≈ 10^-7 for c ≈ 1); non-halting |
 | A3 | exponential (2^199945) | K = M, small (K, M) | ≲ 2^-199945; non-halting |
 | A4 | exponential, 0.76 bits/visit | a = 2^(m+2) − m − 4 | ≲ 2^-2000; non-halting |
-| A5 | slow, L ≈ 2^26.3 | double parity | ≈ 10^-7; non-halting |
-| A6 | slow, W ≈ 2^49 at depth 44 | exact tops T_d; capture family | probviously decidable: translated cycler ≈ 0.75–0.9, halt ≈ 0.1–0.25 |
+| A5 | slow, L ≈ 2^26.3 | double parity | order c/L; non-halting |
+| A6 | slow, W ≈ 2^49 into depth 44 | exact tops T_d; capture family | probviously decidable: capture 0.90–0.95 if the combs persist, else roughly even |
 | A7 | exponential (2^186527) | coincidence, then a parity | ≲ 2^-186000; non-halting |
 | A8 | exponential (2^276185) | a − k ∈ {0,1}, k − a ∈ {4,5} | ≲ 2^-276000; non-halting |
 | A9 | exponential (2^272084) | b − c ∈ {0,1} | ≲ 2^-272000; non-halting |
-| A10 | slow, L ≈ 2^25.8 | double parity | ≈ 10^-7; non-halting |
-| A11 | tetrational countdowns | parity check, P = 1/4 per countdown end | **halting**, tetrational time |
+| A10 | slow, L ≈ 2^25.8 | double parity | order c/L; non-halting |
+| A11 | tetrational countdowns, each a Hydra orbit | two Hydra parities, P = 1/4 per countdown end | **halting**, tetrational time |
 
 Every "non-halting" in this table means probviously non-halting.
 
@@ -423,28 +494,42 @@ Every "non-halting" in this table means probviously non-halting.
      because a near miss in the wrong parity class carries zero risk.
 3. **Certified acceleration is cheap and general.**
    - The three-point lemma turns any piecewise-affine rule system with linear branch conditions into one with
-     certified jumps and certified translated cyclers.
+     certified jumps and certified infinite macro chains.
+   - The idea of inductive macro proofs is standard in BB simulators (Ligocki's Quick_Sim, Barsdell's proof machine);
+     the affine-domain formulation makes it self-checking.
    - It applies verbatim to the repo's base-p Collatz maps, 5x+1-type maps, and the Erdős ternary-type Cryptids, wherever
-     a translated cycle is the mechanism.
+     a translation in parameter space is the mechanism.
 4. **Classify by mechanism, not by "Collatz-like".**
    - Exact coincidences of exponentially growing parameters are safe.
    - Parity-protected slow growth is polynomially safe.
    - Funnels with exposed targets of both kinds are probviously decidable.
    - A constant-probability check at tetrational times is probviously halting.
    - Only the last two can ever change the BB(6) picture.
+5. **The Hydra map reappears.**
+   - It is Antihydra's core and A4's runs.
+   - A11's countdowns are exactly Hydra orbits, with the halting question asked at tetrationally sparse times.
+   - So the odd-orbit/parity statistics of ⌊3n/2⌋ that the repo already studies (Mahler 3/2, THM-2228; klein's
+     ANTIHYDRA.md) govern three of the BB(6) Cryptids at once, in three different ways:
+     - Antihydra: a running counter;
+     - A4: exact coincidences inside a cascade;
+     - A11: sparse parity samples.
 
 ## 9. Pre-registration outcomes (PREREGISTRATION.md)
 
 - P1: no halts in the A1/A2/A5/A10 runs. Holds; A2/A5/A10 were stopped at 540 s because the engine gave them no
   speed-up.
-- P2: A6 depth ≥ 43 within 3000 s, no halt or capture. Holds: depth 44.
+- P2: A6 depth ≥ 43 within 3000 s, no halt or capture. Holds: into depth 44.
 - P3: d = 28 and d = 30 have 1 exit, d = 29 has 25 exits. Holds.
 - P4: no halts at d = 28–30. Holds.
-- P5: parity protection at odd depths 29–43. Holds.
+- P5: parity protection at odd depths 29–43. **Fails as literally stated, for 1 of 4 approaches.** At each odd depth
+  three of the four nearest approaches are eps = 0 starts of depth d. The first start past T_d lies in depth d + 1 and
+  is eps = 1 there (audit). That point cannot equal T_d, so there is no hazard consequence.
 - P6: every capture is the §4.2 family. Holds.
 - P7: holds. d = 31 has 0/301 captures and 0 halts.
 - P8: holds, narrowly. d = 39 has 2/81 captures (2.5%, threshold 2%) and 0 halts.
 - P9: holds (0.262, 0.233).
+- Audit: `AUDIT.md`, with scripts in `04-computation/bb6_cryptids_s56/audit_s56/`. Its corrections are applied
+  throughout this note and the canon files; the lessons are in MISTAKE-669.
 
 ## 10. Files
 
@@ -454,6 +539,11 @@ All scripts are in `04-computation/bb6_cryptids_s56/`, with an `.out`/`.json` ne
 - **A6:** `a6_phase_map`, `a6_fast`, `a6_accel` (engine), `a6_orbit_deep`, `a6_target_sets`, `a6_basins`, `a6_transfer`,
   `a6_basin_sample`, `a6_landing_hazard`, `a6_window_hazard`, `a6_sweep_map`.
 - **Generic engine:** `rs_accel`, `rs_deep`.
-- **Other machines:** `parity_episodes`, `a11_countdown`, `a4_hydra_reduction`, `uncapped_residues` (an earlier capped
-  version, `halting_opportunities`, had capped channels whose residue claims are void), `slow_machines_sweeps`,
-  `long_run`.
+- **Other machines:** `parity_episodes`, `a11_countdown`, `a11_rule_check`, `a4_hydra_reduction`, `uncapped_residues`
+  (an earlier capped version, `halting_opportunities`, had capped channels whose residue claims are void),
+  `slow_machines_sweeps`, `long_run`.
+- **Independent referee:** `audit_s56/` (tm_rules_check, a6_phase_check, a6_family_check, a6_entries, a6_capture_tm,
+  a11_seed_parities, antihydra_a4_check, ...).
+- **Reconstructed outputs:** the last stdout lines of `a6_orbit_deep_3000s.out`, `rs_deep_A1.out`,
+  `a6_basin_sample_12_26.out` and `a6_landing_hazard_d39_R40.out` were lost when a `git pull --autostash` replaced the
+  files mid-run. Each is reconstructed from its JSON and marked as such.

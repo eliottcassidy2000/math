@@ -1,0 +1,4 @@
+my_phase vs raw rules, 5000 random: OK
+plain orbit (referee phase map): after 3000000 sweeps W = 449995092 (12s); Q-bound violations 0
+plain orbit (referee phase map): after 20000000 sweeps W = 3481675260 (61s); Q-bound violations 0
+done 20000000 3481675260
