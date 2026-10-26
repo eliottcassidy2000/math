@@ -5,6 +5,12 @@ the earlier quadratic Laurent-lift observation to general m and identifies
 its minimal stabilization. The linear-algebra ingredients are classical;
 the point here is the marked root/torus/section contract, not historical novelty.
 
+**Concurrent integration:** incoming `2daf5e00af`,
+[F1 L1-L4](../normseven_arithmetic_f1_20261026/f1/RESULT.md), proves the same
+criterion, minimal compensation and explicit 2-by-2 block. These are shared
+results. This packet adds an explicit v=1 section equation and independent
+controls over noncyclic unit groups; it does not claim a second new theorem.
+
 ## L1. Fixed-rank criterion
 
 Let m>=2, n>=1 and C an integer n-by-n matrix invertible modulo m. As in

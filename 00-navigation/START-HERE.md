@@ -10,6 +10,8 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
 [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors. [HN6/7/8](S61.md): metric and boundary.
 
+[Lifts of degree 2/4](../05-knowledge/results/normseven_descent_moments_20261026/README.md).
+
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md).
 
 ## Orientation

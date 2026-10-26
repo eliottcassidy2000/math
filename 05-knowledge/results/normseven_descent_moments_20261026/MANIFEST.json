@@ -1,0 +1,24 @@
+{
+  "files": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "a9fde65badfc28a6ea8b8a5cbcccd43738f4c4513ea9d3e1431d14d838b7b1a7",
+    "MOMENTS.md": "e30eb6fc12788274754903f93c16197aa986c844fdcbb97ed8c4b5878bbc5806",
+    "README.md": "8b723998a4bbfcb0d79f8ce585fc602f88da4893b702cf67dd319f9ae581a337",
+    "RESOLVED_FIBRES.md": "bed3077279fc2ddb765d39147fe0bfca8d6321d005a0e1f5e134470efee72a32",
+    "SOURCES.json": "51e85f9d3c35b70fea7c0162cf8324972dfe777a7c3a2b94f17f978ef61bb38e",
+    "STABLE_LIFTS.md": "79df0a98d9c10f59151ba10890561294edccd423b343f9f6cecc3000ce8bce9c",
+    "audit.normal.json": "6c973a36f98c149576a2ad7679818719669deedf45609d5de8bff0a0c200ab5d",
+    "audit.optimized.json": "6c973a36f98c149576a2ad7679818719669deedf45609d5de8bff0a0c200ab5d",
+    "audit_independent.py": "c3cc6d5f0d840618019c82792131c9893e13675e5187b5fefcd4c78768e9a984",
+    "check_lifts.py": "59adcc8837fc3a62e554d0d12648e661110ef5377831d6dc972109b087e41f4c",
+    "check_moments.py": "65cf3f7bf2db8daf4cb3b4b9bf7662d8ca355518c7f592a5d1f5d48f9022d177",
+    "check_resolved.py": "c72e0364d8c78e34c7f7439aac7dafa70084a69728c94660adcf0d8a821535fa",
+    "lifts.normal.json": "e91f78cddec224a1d9ded18c35ef124ece2834ad8f4565344b0cf0570a012e34",
+    "lifts.optimized.json": "e91f78cddec224a1d9ded18c35ef124ece2834ad8f4565344b0cf0570a012e34",
+    "moments.normal.json": "c97c67bf44411debfa97ecfdf691b469f7426e2d2fb6e111b51a72002634cc94",
+    "moments.optimized.json": "c97c67bf44411debfa97ecfdf691b469f7426e2d2fb6e111b51a72002634cc94",
+    "resolved.normal.json": "bcd5a89d386324836b7fc58c07134c85cb41a9934e1f762827b79d3f3d653d23",
+    "resolved.optimized.json": "bcd5a89d386324836b7fc58c07134c85cb41a9934e1f762827b79d3f3d653d23",
+    "verify_packet.py": "312f4cfc3debec43d1bb52b304fccd8e11d97a2c1db4e698d0bd30f7a2ca966f"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "external_conventions_checked_2026_10_26": [
+    "https://stacks.math.columbia.edu/tag/04UV",
+    "https://arxiv.org/html/math/0404185v7"
+  ],
+  "files": {
+    "01-canon/theorems/THM-4765-quadratic-twists-of-a-square-root-cover-average-to-the-branch-complement.md": "85b22b816516adae3b890f98720fb4d0b95818ba475cd939637a872854c72e78",
+    "01-canon/theorems/THM-4773-fixed-twist-rational-lifts-on-the-hourglass-boundary-central-conic-outer-genus-five.md": "22858e55f48fab11e2b620aff5ba084146ab3c07f56b091c7a7ecfdd3e4184f5",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/README.md": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/boundary/RESULT.md": "8c9c2c5aecf1cd076649b3485b52490ec342fc4007c70a1b8ff9049891afc1af",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/f1/RESULT.md": "a6d9111f0bc5997224e01f17075424a0d332ec3a969e570912f7b60cf8b9c15b",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/gale/RESULT.md": "da73464388f1a5159f53662fe503fa39b58bfa586935ca4a39e8383c0267bee4",
+    "05-knowledge/results/normseven_arithmetic_f1_20261026/reduction/RESULT.md": "3edc0e5d83f6a357ed73cd87076369f62f74e48aab1d61588cbe7cd9b9281fe5",
+    "05-knowledge/results/normseven_boundary_20261025/BOUNDARY.md": "1ee9524bbe8938fcf38ab11b3df86e7799ca7a34e70491ef072da1d6803d7eab",
+    "05-knowledge/results/normseven_boundary_20261025/STACK_GLUE.md": "5e7075ba6326aab35ab2fcab60b3b4313e4bc1fd0aa2d03f11a692e9ee2e2d92",
+    "05-knowledge/results/normseven_f1_20261025/INTEGRAL_WRAP.md": "c2ebf70eb6a1e2a61bf92393b61941205545f40c82d04cf18d62690a5f0cad50",
+    "05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md": "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb",
+    "05-knowledge/results/normseven_f1_20261025/PORTS_AND_CHARACTERS.md": "88f24ff9d3e6f9a5358291ba8993b3c0872a98d6657306d9c262a8b36416bfff",
+    "05-knowledge/results/normseven_f1_20261025/README.md": "b8ea6b8bdbd98f30cc8ad97ed095f4c4c51926b8d1dd91c022b77f19a3bfa6be",
+    "05-knowledge/results/normseven_f1_20261025/TWIST_AVERAGE.md": "58171d88a66f9016feae0a1b97f483d469901643090a1ba8840811a506351262",
+    "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/RESULT.md": "935b9f89b32732cc90534c8c54f49ae2c0e024a918532331d174d2f7607f6f02",
+    "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/twists/ZETA_AND_EFFECTIVITY.md": "ffb955241ee2f19303e70a770ac59db96ceea8ed0399ef39462d84ffb1875fd3",
+    "05-knowledge/results/six_seven_gale_cube_20261025/README.md": "507a2e04fca98fc408ad58c2a5eb2cc1cd4c6396f46cf1160d3030bf5bae8fbc",
+    "05-knowledge/results/six_seven_geometry_20261025/README.md": "cff1416666cc4486907842460d77701c39d6b06109722918f7fccdc3822a2413",
+    "05-knowledge/results/twist_conductor_reverse_20261025/FIXED_TWISTS.md": "30633a06c26226944997dfc8bd1a28082dd0acc2f6ce693dab02c5da6c40f32a"
+  },
+  "incoming_revision": "2daf5e00af",
+  "initial_revision": "983768efde8483643fc3c6ba488eee04622ebd2d"
+}

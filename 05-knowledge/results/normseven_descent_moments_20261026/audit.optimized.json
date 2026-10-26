@@ -1,0 +1,109 @@
+{
+  "char3_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      5,
+      6
+    ],
+    [
+      1,
+      3,
+      6
+    ],
+    [
+      2,
+      4,
+      5
+    ]
+  ],
+  "group_census": [
+    {
+      "all_invertible": 6,
+      "generated": 6,
+      "m": 2
+    },
+    {
+      "all_invertible": 48,
+      "generated": 48,
+      "m": 3
+    },
+    {
+      "all_invertible": 96,
+      "generated": 96,
+      "m": 4
+    },
+    {
+      "all_invertible": 480,
+      "generated": 240,
+      "m": 5
+    },
+    {
+      "all_invertible": 288,
+      "generated": 288,
+      "m": 6
+    },
+    {
+      "all_invertible": 2016,
+      "generated": 672,
+      "m": 7
+    },
+    {
+      "all_invertible": 1536,
+      "generated": 768,
+      "m": 8
+    },
+    {
+      "all_invertible": 3888,
+      "generated": 1296,
+      "m": 9
+    },
+    {
+      "all_invertible": 2880,
+      "generated": 1440,
+      "m": 10
+    },
+    {
+      "all_invertible": 13200,
+      "generated": 2640,
+      "m": 11
+    },
+    {
+      "all_invertible": 4608,
+      "generated": 2304,
+      "m": 12
+    }
+  ],
+  "normal_triples": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      3,
+      4
+    ],
+    [
+      0,
+      5,
+      6
+    ]
+  ],
+  "ring_moduli": [
+    2,
+    42
+  ],
+  "seven_rank_lift_determinant": 1,
+  "unit_ring_cases": 541
+}

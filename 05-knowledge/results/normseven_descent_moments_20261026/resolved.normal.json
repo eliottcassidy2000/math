@@ -1,0 +1,204 @@
+{
+  "exact": {
+    "exact_quadratic_witnesses": [
+      {
+        "A": [
+          "1",
+          "0"
+        ],
+        "B": [
+          "0",
+          "1"
+        ],
+        "D": 2,
+        "delta": 3
+      },
+      {
+        "A": [
+          "1/2",
+          "1/2"
+        ],
+        "B": [
+          "1/2",
+          "-1/2"
+        ],
+        "D": 5,
+        "delta": 3
+      },
+      {
+        "A": [
+          "1",
+          "0"
+        ],
+        "B": [
+          "1",
+          "0"
+        ],
+        "D": 13,
+        "delta": 2
+      }
+    ],
+    "hensel_roots_13": [
+      {
+        "exponent": 1,
+        "modulus": 3,
+        "roots": [
+          1,
+          2
+        ]
+      },
+      {
+        "exponent": 2,
+        "modulus": 9,
+        "roots": [
+          7,
+          2
+        ]
+      },
+      {
+        "exponent": 3,
+        "modulus": 27,
+        "roots": [
+          16,
+          11
+        ]
+      },
+      {
+        "exponent": 4,
+        "modulus": 81,
+        "roots": [
+          16,
+          65
+        ]
+      },
+      {
+        "exponent": 5,
+        "modulus": 243,
+        "roots": [
+          16,
+          227
+        ]
+      },
+      {
+        "exponent": 6,
+        "modulus": 729,
+        "roots": [
+          259,
+          470
+        ]
+      },
+      {
+        "exponent": 7,
+        "modulus": 2187,
+        "roots": [
+          1717,
+          470
+        ]
+      },
+      {
+        "exponent": 8,
+        "modulus": 6561,
+        "roots": [
+          3904,
+          2657
+        ]
+      },
+      {
+        "exponent": 9,
+        "modulus": 19683,
+        "roots": [
+          10465,
+          9218
+        ]
+      }
+    ],
+    "primitive_mod9_conic3_solutions": 0,
+    "surface_nodes_checked": 32
+  },
+  "fields": [
+    {
+      "D13_node_count": 0,
+      "D13_resolved_counts": {
+        "2": 0,
+        "3": 0
+      },
+      "all_conic_counts": 6,
+      "all_nonzero_D_delta_cases": 16,
+      "degree": 1,
+      "p": 5,
+      "q": 5
+    },
+    {
+      "D13_node_count": 0,
+      "D13_resolved_counts": {
+        "2": 0,
+        "3": 0
+      },
+      "all_conic_counts": 8,
+      "all_nonzero_D_delta_cases": 36,
+      "degree": 1,
+      "p": 7,
+      "q": 7
+    },
+    {
+      "D13_node_count": 0,
+      "D13_resolved_counts": {
+        "2": 0,
+        "3": 0
+      },
+      "all_conic_counts": 12,
+      "all_nonzero_D_delta_cases": 100,
+      "degree": 1,
+      "p": 11,
+      "q": 11
+    },
+    {
+      "D13_node_count": 8,
+      "D13_resolved_counts": {
+        "2": 144,
+        "3": 144
+      },
+      "all_conic_counts": 18,
+      "all_nonzero_D_delta_cases": 256,
+      "degree": 1,
+      "p": 17,
+      "q": 17
+    },
+    {
+      "D13_node_count": 0,
+      "D13_resolved_counts": {
+        "2": 0,
+        "3": 0
+      },
+      "all_conic_counts": 20,
+      "all_nonzero_D_delta_cases": 324,
+      "degree": 1,
+      "p": 19,
+      "q": 19
+    },
+    {
+      "D13_node_count": 8,
+      "D13_resolved_counts": {
+        "2": 208,
+        "3": 208
+      },
+      "all_conic_counts": 26,
+      "all_nonzero_D_delta_cases": 576,
+      "degree": 2,
+      "p": 5,
+      "q": 25
+    },
+    {
+      "D13_node_count": 8,
+      "D13_resolved_counts": {
+        "2": 400,
+        "3": 400
+      },
+      "all_conic_counts": 50,
+      "all_nonzero_D_delta_cases": 2304,
+      "degree": 2,
+      "p": 7,
+      "q": 49
+    }
+  ]
+}

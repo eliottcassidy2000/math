@@ -6,6 +6,12 @@ used, without a novelty claim. This is about the original finite root models,
 not their smooth resolutions, and moments are taken **before summing over
 base points**. Global count variance is a different statistic.
 
+**Concurrent integration:** incoming `2daf5e00af`,
+[reduction R1-R3](../normseven_arithmetic_f1_20261026/reduction/RESULT.md),
+already proves M1-M3 including the two polynomial energies. This derivation
+and its extension-field checks are independent confirmation. The continuation
+in [RESOLVED_FIBRES](RESOLVED_FIBRES.md) goes beyond those shared results.
+
 ## M1. The actual stabilizer of the coarse product
 
 Let G be a finite constant abelian group over F_q and G=H direct_sum K.
