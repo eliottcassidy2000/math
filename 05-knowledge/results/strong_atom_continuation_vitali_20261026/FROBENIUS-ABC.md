@@ -51,6 +51,25 @@ gives gcd(d,e) joint phases of period lcm(d,e). A marked block is its e=m
 case. This is the cyclic instance of the relative-frame double cosets in
 README C1, not a replacement for their noncyclic alignment information.
 
+**Incoming noncyclic extension (INHERITED PROVED).** The final
+[Session69 field classifier, sections2-3](../session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md)
+uses the full Paley7 action `GammaL1(8)=C7 semidirect C3`. Write its binary
+decoration as `w(x)=a+Tr(bx+cx^3)`. For b nonzero the ordinary invariant is
+`c/b^3` modulo Frobenius, with the b=0 cases treated separately. This gives
+12 ordinary types; quotienting by rotations alone gives20 and loses the
+larger symmetry. Marking slot z gives `(a,B,C)=(a,bz,cz^3)` modulo simultaneous
+Frobenius, with point stabilizer order `3/[F2(B,C):F2]`. Thus **joint** field
+degree, rather than the degree of either marginal alone, controls the
+remaining symmetry. There are48 block-pointed types and96 vertex-rooted
+types. These counts are inherited from the separately audited incoming
+packet, not rerun by our checker.
+
+Its marked modular flip `(a,B,C)->(a+1,B+1,C+1)` is a closed field-coordinate
+operation; it is not actual path complement. The same packet also gives
+two distinct Paley28 classes with equal H, full automorphism order and
+complete raw flux histogram. This strengthens the 81/27 hostile: correcting
+the normalization still does not recover the tournament or its line data.
+
 ## 2. The 81/27 witness and sharp 4p threshold
 
 The controls construct `C3[A+,A+,A+]` and `C3[A-,A+,A+]`, where

@@ -23,6 +23,14 @@ Canonical hostile: the same labelled cyclic triples with automorphism orders
 forgets their common vertex alignment. Least-used sidecars: the relative-frame
 double coset and the legal-operation guard, recovered in [HISTORY.md](HISTORY.md).
 
+The final integration also inherits [Session69 P2-P3](../session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md):
+all-arity multi-rooted response multiplicities recursively compose ordinary,
+uncoloured target incidence along ordered quotient-walk tuples. This is a
+genuine aggregation theorem. Our continuation question additionally retains
+individual choices, colour and named re-marking guards. C1 classifies the
+individual alignment orbits inside those aggregate response coefficients;
+C3-C5 measure what is lost when only their endpoint types are retained.
+
 An **ordered-join atom** means a strongly connected tournament (with the
 singleton as a formal unit). A **modular prime** has no proper non-singleton
 module. These are different: the unique strong four-vertex tournament is

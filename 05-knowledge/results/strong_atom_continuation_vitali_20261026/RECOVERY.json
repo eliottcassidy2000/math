@@ -1287,5 +1287,19 @@
       "scope": "targeted passages; not a whole-file proof audit",
       "sha256": "8e3c16bc3cc351a7faae9a11fb7b3355fda9025dcb392588ec0c9bf7bbb1d7e8"
     }
-  ]
+  ],
+  "final_integration_base": "54617edb71",
+  "later_reading_pins": [
+    {
+      "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+      "scope": "targeted passages; inherited results, not independently rerun here",
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    {
+      "path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/README.md",
+      "scope": "targeted passages; inherited results, not independently rerun here",
+      "sha256": "23563d133cacfd0d4e7116221ec3193e18b83ac19c9db0d6634dee6c5b605a3a"
+    }
+  ],
+  "distinct_reading_sources": 30
 }

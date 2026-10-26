@@ -61,6 +61,16 @@ alignment formula then made path words recoverable rather than an extra
 independent field. The incoming arithmetic map changed the wildcard from
 a candidate interpretation to a precisely credited bijection.
 
+The final incoming prime-port report adds two further connections. Its
+[P3 recursion](../session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md)
+closes ordinary target-incidence aggregation under substitution at every
+cover arity; C1 below that aggregation retains the individual alignment
+orbits needed for named continuation. Its Paley7 classifier replaces a
+single necklace degree by a joint field degree after pointing, while its
+Paley28 same-group-order hostile defeats even H plus the whole flux law.
+These are inherited developments, credited separately from our finite
+atlas and all-order alignment obstruction.
+
 ## 3. A map of mechanisms across the months
 
 | Recovered lane | Surviving mechanism | Exact connection here; what does not transfer |
