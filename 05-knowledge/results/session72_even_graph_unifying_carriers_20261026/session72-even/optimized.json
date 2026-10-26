@@ -1,0 +1,514 @@
+{
+  "checks": {
+    "arc_spectrum": 25,
+    "boolean_noncommutation_detected": 1,
+    "coarsening_pushed_kernel": 71595,
+    "coarsening_scope": 18,
+    "coarsening_signed_mode_selection": 346,
+    "detailed_balance": 7584,
+    "distinct_kernels_equal_on_affine_invariants": 1,
+    "dual_quotient_cardinality": 25,
+    "full_diagonal_algebra": 25,
+    "full_kernel_diagonalization": 119,
+    "independent_all_permutations_sign": 53,
+    "multiplicity_row_sum": 119,
+    "no_asserts": 1,
+    "no_floats": 1,
+    "omitted_cocycle_hostile": 1,
+    "orbit_equinumerosity": 25,
+    "radial_commutation": 21,
+    "sign_even_vs_degree_even": 1,
+    "signed_basis_full_rank": 25,
+    "source_dependent_translation_failure": 1,
+    "submodule": 1180,
+    "switching_gap_eight_simple": 3,
+    "switching_positive_spectrum": 3,
+    "switching_small_boundary": 4
+  },
+  "hostiles": {
+    "boolean_noncommutation": {
+      "B_i": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "B_j": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "layers": [
+        1,
+        2
+      ],
+      "n": 4,
+      "type_representatives": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "witness_row_col_products": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    "kernel_invisibility_n3": {
+      "one_edge": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "two_edge": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "source_dependent_guard": {
+      "F(0)^2": 2,
+      "F(0^2)": 5,
+      "translation": 2,
+      "warning": "On the two isomorphism types this particular map is identity; hostile is explicitly LABELLED."
+    }
+  },
+  "models": [
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 0,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 0,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 0,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 0,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 1,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 1,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 1,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 1,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 2,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 2,
+      "labelled_quotient_size": 2,
+      "n": 2,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 2,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 2,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 2,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 2,
+      "affine_types": 2,
+      "all_dual_types": 4,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1
+      },
+      "difference_kernel_types": 4,
+      "labelled_quotient_size": 8,
+      "n": 3,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 2,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 2,
+      "labelled_quotient_size": 2,
+      "n": 3,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 2,
+      "affine_types": 2,
+      "all_dual_types": 2,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1
+      },
+      "difference_kernel_types": 2,
+      "labelled_quotient_size": 4,
+      "n": 3,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 3,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 4,
+      "affine_types": 4,
+      "all_dual_types": 11,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1,
+        "6": 1,
+        "8": 1
+      },
+      "difference_kernel_types": 11,
+      "labelled_quotient_size": 64,
+      "n": 4,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 2,
+      "affine_types": 2,
+      "all_dual_types": 3,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "8": 1
+      },
+      "difference_kernel_types": 3,
+      "labelled_quotient_size": 8,
+      "n": 4,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 3,
+      "affine_types": 3,
+      "all_dual_types": 6,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1,
+        "8": 1
+      },
+      "difference_kernel_types": 6,
+      "labelled_quotient_size": 32,
+      "n": 4,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 4,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 12,
+      "affine_types": 12,
+      "all_dual_types": 34,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1,
+        "6": 1,
+        "8": 4,
+        "10": 1,
+        "12": 3,
+        "16": 1
+      },
+      "difference_kernel_types": 34,
+      "labelled_quotient_size": 1024,
+      "n": 5,
+      "subspace": "zero"
+    },
+    {
+      "admissible_dual_types": 2,
+      "affine_types": 2,
+      "all_dual_types": 7,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "8": 1
+      },
+      "difference_kernel_types": 7,
+      "labelled_quotient_size": 64,
+      "n": 5,
+      "subspace": "cut"
+    },
+    {
+      "admissible_dual_types": 10,
+      "affine_types": 10,
+      "all_dual_types": 18,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "4": 1,
+        "8": 4,
+        "12": 3,
+        "16": 1
+      },
+      "difference_kernel_types": 18,
+      "labelled_quotient_size": 512,
+      "n": 5,
+      "subspace": "reversal"
+    },
+    {
+      "admissible_dual_types": 1,
+      "affine_types": 1,
+      "all_dual_types": 1,
+      "arc_laplacian_multiplicities": {
+        "0": 1
+      },
+      "difference_kernel_types": 1,
+      "labelled_quotient_size": 1,
+      "n": 5,
+      "subspace": "full"
+    },
+    {
+      "admissible_dual_types": 6,
+      "affine_types": 6,
+      "all_dual_types": 16,
+      "arc_laplacian_multiplicities": {
+        "0": 1,
+        "8": 1,
+        "12": 1,
+        "16": 2,
+        "24": 1
+      },
+      "difference_kernel_types": 16,
+      "labelled_quotient_size": 1024,
+      "n": 6,
+      "subspace": "cut",
+      "type_representatives": [
+        0,
+        2,
+        4,
+        10,
+        72,
+        73
+      ],
+      "weighted_arc_operator": [
+        [
+          6,
+          6,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          6,
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          4,
+          6,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          5,
+          5,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          0,
+          6,
+          6,
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  "status": "PASS",
+  "total_checks": 81177
+}

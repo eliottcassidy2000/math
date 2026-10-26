@@ -1,0 +1,36 @@
+{
+  "files": {
+    "WALSH_REALIZABILITY.md": "8685f8db8b91de6ab5e913943ac9b987682c7a42ca229dbd792cd3dde025626f",
+    "check_walsh_cone.py": "2496d190698bc91dfe97d581a7b29c4b9610634eca5c3647f68353c80c79326a",
+    "walsh.normal.json": "da4d181068a0615b525bfe2de42f195811843c409b5c19b5794fdcb8cef2e9da"
+  },
+  "independently_reconstructed_matrix": [
+    [
+      1,
+      4,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      4,
+      -3
+    ],
+    [
+      1,
+      -4,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      -4,
+      -3
+    ]
+  ],
+  "normal_optimized_supplied_match": true,
+  "scope": "Root Walsh cone note, explicit matrix, exact inverse, sign convention, converse negative coordinate and sign gauges; no audit of separate U2 proofs",
+  "status": "PASS"
+}

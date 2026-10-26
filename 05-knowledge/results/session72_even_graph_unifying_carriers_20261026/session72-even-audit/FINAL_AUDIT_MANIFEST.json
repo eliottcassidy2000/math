@@ -1,0 +1,93 @@
+{
+  "files": [
+    {
+      "path": "audit_even.py",
+      "sha256": "97e1fa8837e8dd10e6dcd62397494543c78cd531716f93d143747ff97299e967",
+      "size_bytes": 9530
+    },
+    {
+      "path": "normal.json",
+      "sha256": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+      "size_bytes": 5278
+    },
+    {
+      "path": "optimized.json",
+      "sha256": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+      "size_bytes": 5278
+    },
+    {
+      "path": "audit_switching.py",
+      "sha256": "8acdfb9a9ce07db74d3edcccdf961acbaaaef0b787d6161a6be07cc993f4b043",
+      "size_bytes": 7353
+    },
+    {
+      "path": "switching-normal.json",
+      "sha256": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b",
+      "size_bytes": 3230
+    },
+    {
+      "path": "switching-optimized.json",
+      "sha256": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b",
+      "size_bytes": 3230
+    },
+    {
+      "path": "audit_abstract.py",
+      "sha256": "9373c7989867afdb9f19909311abff186dc21574582489aaaabb994e6c9c41f8",
+      "size_bytes": 5432
+    },
+    {
+      "path": "abstract-normal.json",
+      "sha256": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+      "size_bytes": 5735
+    },
+    {
+      "path": "abstract-optimized.json",
+      "sha256": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+      "size_bytes": 5735
+    },
+    {
+      "path": "audit_scoreparity.py",
+      "sha256": "62dbe34801a9788f45475938be321b0a5e2655d3935d262b726eddd7d5f62264",
+      "size_bytes": 3773
+    },
+    {
+      "path": "scoreparity-normal.json",
+      "sha256": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+      "size_bytes": 15210
+    },
+    {
+      "path": "scoreparity-optimized.json",
+      "sha256": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+      "size_bytes": 15210
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "0c68e86d480288ac472d5ede4eb3aa42bd2a8b3953902cedefc5936099a48101",
+      "size_bytes": 21261
+    },
+    {
+      "path": "ROOT_WALSH_AUDIT.json",
+      "sha256": "196b2a13ae43523b2b80cd25f225ac05912a3abd4adbd760d02290c1ff99ded9",
+      "size_bytes": 773
+    },
+    {
+      "path": "AUDIT_RECEIPT.json",
+      "sha256": "1a145ccf1ece828a19bb16f0bc8eee59a7b11f4f15bc6a081b7657cc48cf96d9",
+      "size_bytes": 2502
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "sha256": "b8b1a4b41ba1735095d3671b3bd4a8779f0d96d6bc1acaeb720f4e418877cee2",
+      "size_bytes": 1283
+    },
+    {
+      "path": "CHECKPOINT1_REVIEW.json",
+      "sha256": "7153774d70a7d5235cf9d0ccdded7e2367f11f3b957a134e71ef4bd2e117a9f2",
+      "size_bytes": 1225
+    }
+  ],
+  "include_manifest_itself": true,
+  "manifest_self_hash": "Provided separately to publisher; no recursive self-hash",
+  "scope": "Explicit publication allowlist; excludes __pycache and duplicate producer/root replay outputs",
+  "status": "FROZEN"
+}

@@ -1,0 +1,48 @@
+{
+  "base_commit": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "blockers": [
+    {
+      "action": "python3 agents/processor.py --status --peek --limit 8",
+      "impact": "No mathematical or computation blocker",
+      "reason": ".machine-id absent; no fabricated registration attempted",
+      "status": "completed_error",
+      "target": "session72-repo targeted agent/human messages"
+    }
+  ],
+  "files": {
+    "REPORT.md": "0c68e86d480288ac472d5ede4eb3aa42bd2a8b3953902cedefc5936099a48101",
+    "ROOT_WALSH_AUDIT.json": "196b2a13ae43523b2b80cd25f225ac05912a3abd4adbd760d02290c1ff99ded9",
+    "abstract-normal.json": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+    "abstract-optimized.json": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+    "audit_abstract.py": "9373c7989867afdb9f19909311abff186dc21574582489aaaabb994e6c9c41f8",
+    "audit_even.py": "97e1fa8837e8dd10e6dcd62397494543c78cd531716f93d143747ff97299e967",
+    "audit_scoreparity.py": "62dbe34801a9788f45475938be321b0a5e2655d3935d262b726eddd7d5f62264",
+    "audit_switching.py": "8acdfb9a9ce07db74d3edcccdf961acbaaaef0b787d6161a6be07cc993f4b043",
+    "normal.json": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+    "optimized.json": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+    "scoreparity-normal.json": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+    "scoreparity-optimized.json": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+    "switching-normal.json": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b",
+    "switching-optimized.json": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b"
+  },
+  "gate_breakdown": {
+    "all_AGL2_subgroups": 1306,
+    "graph_tournament": 28663,
+    "score_parity": 16406,
+    "switching_quartic": 19530
+  },
+  "independent_gates": 65905,
+  "normal_optimized_pairs_byte_identical": true,
+  "producer_operation_note_sha256": "b7c345c3bc4ed239fb1cef644832d17ec49d28c13fed10faf313d7bb44a071c1",
+  "producer_reproduced_gate_counts": [
+    81177,
+    116047
+  ],
+  "producer_score_note_sha256": "94ce8274fbd5784a6af52e1ec23edf336bea05bf72b84ede69a1d9e2c88a00f8",
+  "producer_source_pins_exact_git_blob_matches": 15,
+  "publication_attempted": false,
+  "repository_edits": false,
+  "required_corrections": [],
+  "root_walsh_note_sha256": "8685f8db8b91de6ab5e913943ac9b987682c7a42ca229dbd792cd3dde025626f",
+  "status": "PASS"
+}

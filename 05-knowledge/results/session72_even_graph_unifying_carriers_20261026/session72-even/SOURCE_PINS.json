@@ -1,0 +1,90 @@
+{
+  "base_commit": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "sources": [
+    {
+      "repository_path": "01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "snapshot_path": "sources/01-THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "sha256": "aec06c7678167ca0b0d684cca83e90ce0064dcf18be4a4434489fd91f87fd12b"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "snapshot_path": "sources/02-THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md",
+      "snapshot_path": "sources/03-THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md",
+      "sha256": "8095bbb37f7e637119ab327d5ff91dc060c014dbe6eb655dc50721de0f502377"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md",
+      "snapshot_path": "sources/04-THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md",
+      "sha256": "8222fdfa9c35e3326a9542d15e104dfcb6e7d971973f70892e739fa286a0b6bd"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4069-even-graph-basis-dependence-and-canonical-cycle-envelope.md",
+      "snapshot_path": "sources/05-THM-4069-even-graph-basis-dependence-and-canonical-cycle-envelope.md",
+      "sha256": "447c0a5dba3660c557f9453291417693a8d676934a64a8be49e8d250b3627b88"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-4078-even-graph-triangle-quotient-spectrum-and-boolean-noncommutation.md",
+      "snapshot_path": "sources/06-THM-4078-even-graph-triangle-quotient-spectrum-and-boolean-noncommutation.md",
+      "sha256": "de551240563f18ef718b15d9dd7e1adbd260a263c0927ae4376b51d4616c1c07"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-584-complement-is-antipodal-map-level-parity-spectrum.md",
+      "snapshot_path": "sources/07-THM-584-complement-is-antipodal-map-level-parity-spectrum.md",
+      "sha256": "6437f36ccf267355542c0a7900c115e154a2507713a78d73e0c00f389ef3e1ad"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "snapshot_path": "sources/08-THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "sha256": "028653354ae590b99ba468f517f022ff13ef9a1854609bfdc2bd8c9287c8206f"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "snapshot_path": "sources/09-THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "sha256": "eed2972de9f122b8d9eae1e182eaf47d11ca3e9442b343f73be1d3e9c2116338"
+    },
+    {
+      "repository_path": "05-knowledge/results/tournament_even_bijection_20261011c.md",
+      "snapshot_path": "sources/10-tournament_even_bijection_20261011c.md",
+      "sha256": "7626d4e7e44752109ae8db7fc289c4b31e0db7104b3705cda4ea51837e41de95"
+    },
+    {
+      "repository_path": "05-knowledge/results/tournament_converse_context_20261011d.md",
+      "snapshot_path": "sources/11-tournament_converse_context_20261011d.md",
+      "sha256": "f8adbd21c148f8644f527a07cf3f6cb649cdfe103253c207ade2e6012c6c828d"
+    },
+    {
+      "repository_path": "05-knowledge/results/circulant_necklace_bijection_20261020/CIRCULANT_NECKLACE_BIJECTION.md",
+      "snapshot_path": "sources/12-CIRCULANT_NECKLACE_BIJECTION.md",
+      "sha256": "04934063ff00f007cff66dd1e65dea4536c900a28906bccd70fa9ad0ae5f4903"
+    },
+    {
+      "repository_path": "05-knowledge/results/prime_local_walsh_bijection_20261020/SYLOW_ACTION_ADDENDUM.md",
+      "snapshot_path": "sources/13-SYLOW_ACTION_ADDENDUM.md",
+      "sha256": "17431560b037d5dc12b027d8a55a99edbac7ac5b5772243f6f0ec30d49a9b6ec"
+    },
+    {
+      "repository_path": "05-knowledge/results/c15_symmetry_counterexample_20261020/C15_ORDER_TEN_COUNTEREXAMPLE.md",
+      "snapshot_path": "sources/14-C15_ORDER_TEN_COUNTEREXAMPLE.md",
+      "sha256": "23901ff5b310b90fca3970d7ab3f361e6e1832c50f984cad0789b655817bd14b"
+    },
+    {
+      "repository_path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/observer-profile-algebra/THEOREM.md",
+      "snapshot_path": "sources/15-THEOREM.md",
+      "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-1470-even-tournaments-are-the-tournament-two-graph-theorem.md",
+      "snapshot_path": "sources/16-THM-1470-even-tournaments-are-the-tournament-two-graph-theorem.md",
+      "sha256": "6042745155d9517628e0a91fee43d5479a538958198e251a014061a3ee8595b0"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-2501-switching-fourth-moment-signed-c4-and-gram-energy.md",
+      "snapshot_path": "sources/17-THM-2501-switching-fourth-moment-signed-c4-and-gram-energy.md",
+      "sha256": "c013bb71f909e3f5fbabfe5a076120c9d5d948239c5750e0cf645f5b8bb83d96"
+    }
+  ]
+}

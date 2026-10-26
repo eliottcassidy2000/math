@@ -1,0 +1,190 @@
+{
+  "checks": 19530,
+  "rows": [
+    {
+      "adjacency": [
+        [
+          0
+        ]
+      ],
+      "labelled_switching_classes": 1,
+      "laplacian_eigenvalues": [
+        0
+      ],
+      "n": 1,
+      "ordinary_eulerian_type_count": 1,
+      "quartic_by_type": [
+        0
+      ],
+      "sign_even_eulerian_type_count": 1,
+      "source_type_count": 1,
+      "weighted_rowsums": 0
+    },
+    {
+      "adjacency": [
+        [
+          1
+        ]
+      ],
+      "labelled_switching_classes": 1,
+      "laplacian_eigenvalues": [
+        0
+      ],
+      "n": 2,
+      "ordinary_eulerian_type_count": 1,
+      "quartic_by_type": [
+        0
+      ],
+      "sign_even_eulerian_type_count": 1,
+      "source_type_count": 1,
+      "weighted_rowsums": 1
+    },
+    {
+      "adjacency": [
+        [
+          3
+        ]
+      ],
+      "labelled_switching_classes": 2,
+      "laplacian_eigenvalues": [
+        0
+      ],
+      "n": 3,
+      "ordinary_eulerian_type_count": 2,
+      "quartic_by_type": [
+        0
+      ],
+      "sign_even_eulerian_type_count": 1,
+      "source_type_count": 1,
+      "weighted_rowsums": 3
+    },
+    {
+      "adjacency": [
+        [
+          4,
+          2
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "labelled_switching_classes": 8,
+      "laplacian_eigenvalues": [
+        0,
+        8
+      ],
+      "n": 4,
+      "ordinary_eulerian_type_count": 3,
+      "quartic_by_type": [
+        8,
+        -24
+      ],
+      "sign_even_eulerian_type_count": 2,
+      "source_type_count": 2,
+      "weighted_rowsums": 6
+    },
+    {
+      "adjacency": [
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "labelled_switching_classes": 64,
+      "laplacian_eigenvalues": [
+        0,
+        8
+      ],
+      "n": 5,
+      "ordinary_eulerian_type_count": 7,
+      "quartic_by_type": [
+        40,
+        -24
+      ],
+      "sign_even_eulerian_type_count": 2,
+      "source_type_count": 2,
+      "weighted_rowsums": 10
+    },
+    {
+      "adjacency": [
+        [
+          6,
+          6,
+          3,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          6,
+          3,
+          1,
+          0
+        ],
+        [
+          1,
+          4,
+          6,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          5,
+          5,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          6,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          0,
+          6,
+          6,
+          3,
+          0
+        ]
+      ],
+      "labelled_switching_classes": 1024,
+      "laplacian_eigenvalues": [
+        0,
+        8,
+        16,
+        16,
+        12,
+        24
+      ],
+      "n": 6,
+      "ordinary_eulerian_type_count": 16,
+      "quartic_by_type": [
+        120,
+        24,
+        -8,
+        -40,
+        -72,
+        -72
+      ],
+      "sign_even_eulerian_type_count": 6,
+      "source_type_count": 6,
+      "weighted_rowsums": 15
+    }
+  ],
+  "status": "PASS",
+  "universe": "Every labelled switching class and Eulerian graph n=1..6; all vertex permutations; root gauge exact"
+}

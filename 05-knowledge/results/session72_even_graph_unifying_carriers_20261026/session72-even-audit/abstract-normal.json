@@ -1,0 +1,227 @@
+{
+  "V4_equal_element_marks": [
+    6,
+    2,
+    2,
+    2
+  ],
+  "V4_global_marks": [
+    2,
+    0
+  ],
+  "checks": 1306,
+  "rows": [
+    {
+      "admissible_dual_orbits": 4,
+      "affine_orbits": 4,
+      "equivariant_bijections_to_linear_module": 24,
+      "global_fixed_points": 4,
+      "group_order": 1
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 3,
+      "affine_orbits": 3,
+      "equivariant_bijections_to_linear_module": 4,
+      "global_fixed_points": 2,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 2
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 3,
+      "global_fixed_points": 1,
+      "group_order": 3
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 3,
+      "global_fixed_points": 1,
+      "group_order": 3
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 3,
+      "global_fixed_points": 1,
+      "group_order": 3
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 3,
+      "global_fixed_points": 1,
+      "group_order": 3
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 4
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 1,
+      "global_fixed_points": 1,
+      "group_order": 6
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 1,
+      "global_fixed_points": 1,
+      "group_order": 6
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 1,
+      "global_fixed_points": 1,
+      "group_order": 6
+    },
+    {
+      "admissible_dual_orbits": 2,
+      "affine_orbits": 2,
+      "equivariant_bijections_to_linear_module": 1,
+      "global_fixed_points": 1,
+      "group_order": 6
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 8
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 8
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 8
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 12
+    },
+    {
+      "admissible_dual_orbits": 1,
+      "affine_orbits": 1,
+      "equivariant_bijections_to_linear_module": 0,
+      "global_fixed_points": 0,
+      "group_order": 24
+    }
+  ],
+  "status": "PASS",
+  "universe": "All30 subgroups of AGL(2,2); every linear-orbit kernel; every candidate set bijection; all generator subsets in linear cases"
+}

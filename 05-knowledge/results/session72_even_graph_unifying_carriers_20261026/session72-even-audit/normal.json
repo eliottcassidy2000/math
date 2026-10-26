@@ -1,0 +1,265 @@
+{
+  "checks": 28663,
+  "rows": [
+    {
+      "eulerian_types": 1,
+      "hall_hostile": null,
+      "hall_maximum_matching": 1,
+      "labelled_eulerian_graphs": 1,
+      "labelled_sign_even_graphs": 1,
+      "labelled_tournaments": 1,
+      "n": 0,
+      "native_flip_eigenvalues": [
+        0
+      ],
+      "odd_cyclic_fixed_tournaments": null,
+      "sign_even_edges_polynomial": [
+        1
+      ],
+      "sign_even_eulerian_types": 1,
+      "sign_even_graph_types": 1,
+      "tournament_types": 1,
+      "walsh_determinant": 1,
+      "xor_closure_hostile": null
+    },
+    {
+      "eulerian_types": 1,
+      "hall_hostile": null,
+      "hall_maximum_matching": 1,
+      "labelled_eulerian_graphs": 1,
+      "labelled_sign_even_graphs": 1,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "native_flip_eigenvalues": [
+        0
+      ],
+      "odd_cyclic_fixed_tournaments": 1,
+      "sign_even_edges_polynomial": [
+        1
+      ],
+      "sign_even_eulerian_types": 1,
+      "sign_even_graph_types": 1,
+      "tournament_types": 1,
+      "walsh_determinant": 1,
+      "xor_closure_hostile": null
+    },
+    {
+      "eulerian_types": 1,
+      "hall_hostile": null,
+      "hall_maximum_matching": 1,
+      "labelled_eulerian_graphs": 1,
+      "labelled_sign_even_graphs": 1,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "native_flip_eigenvalues": [
+        1
+      ],
+      "odd_cyclic_fixed_tournaments": null,
+      "sign_even_edges_polynomial": [
+        1,
+        0
+      ],
+      "sign_even_eulerian_types": 1,
+      "sign_even_graph_types": 1,
+      "tournament_types": 1,
+      "walsh_determinant": 1,
+      "xor_closure_hostile": null
+    },
+    {
+      "eulerian_types": 2,
+      "hall_hostile": null,
+      "hall_maximum_matching": 2,
+      "labelled_eulerian_graphs": 2,
+      "labelled_sign_even_graphs": 4,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "native_flip_eigenvalues": [
+        3,
+        -1
+      ],
+      "odd_cyclic_fixed_tournaments": 2,
+      "sign_even_edges_polynomial": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "sign_even_eulerian_types": 1,
+      "sign_even_graph_types": 2,
+      "tournament_types": 2,
+      "walsh_determinant": -4,
+      "xor_closure_hostile": null
+    },
+    {
+      "eulerian_types": 3,
+      "hall_hostile": null,
+      "hall_maximum_matching": 4,
+      "labelled_eulerian_graphs": 8,
+      "labelled_sign_even_graphs": 20,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "native_flip_eigenvalues": [
+        6,
+        2,
+        0,
+        -2
+      ],
+      "odd_cyclic_fixed_tournaments": null,
+      "sign_even_edges_polynomial": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "sign_even_eulerian_types": 2,
+      "sign_even_graph_types": 4,
+      "tournament_types": 4,
+      "walsh_determinant": 256,
+      "xor_closure_hostile": {
+        "edge_sets": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          [
+            [
+              0,
+              3
+            ]
+          ]
+        ],
+        "x": 3,
+        "xor": 4,
+        "y": 7
+      }
+    },
+    {
+      "eulerian_types": 7,
+      "hall_hostile": {
+        "sizes": [
+          5,
+          4
+        ],
+        "source_automorphism_orders": [
+          3,
+          3,
+          3,
+          3,
+          5
+        ],
+        "source_representatives": [
+          2,
+          5,
+          11,
+          40,
+          76
+        ],
+        "target_representatives": [
+          0,
+          7,
+          15,
+          126
+        ]
+      },
+      "hall_maximum_matching": 11,
+      "labelled_eulerian_graphs": 64,
+      "labelled_sign_even_graphs": 396,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "native_flip_eigenvalues": [
+        10,
+        6,
+        4,
+        2,
+        2,
+        2,
+        2,
+        0,
+        -2,
+        -2,
+        -2,
+        -6
+      ],
+      "odd_cyclic_fixed_tournaments": 4,
+      "sign_even_edges_polynomial": [
+        1,
+        0,
+        1,
+        1,
+        4,
+        1,
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      "sign_even_eulerian_types": 2,
+      "sign_even_graph_types": 12,
+      "tournament_types": 12,
+      "walsh_determinant": 562949953421312,
+      "xor_closure_hostile": {
+        "edge_sets": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ]
+          ],
+          [
+            [
+              0,
+              3
+            ]
+          ]
+        ],
+        "x": 3,
+        "xor": 4,
+        "y": 7
+      }
+    }
+  ],
+  "status": "PASS",
+  "universe": "All labelled tournaments and graphs on n=0..5, all vertex permutations; no filters"
+}

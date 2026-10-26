@@ -1,0 +1,422 @@
+{
+  "schema": "session72-native-preserving-curation-v1",
+  "scope": "Explicit curated files; native files and native manifests preserved byte-for-byte.",
+  "files": [
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "AUDIT_RECEIPT.json",
+      "packet_path": "session72-even-audit/AUDIT_RECEIPT.json",
+      "bytes": 2502,
+      "sha256": "1a145ccf1ece828a19bb16f0bc8eee59a7b11f4f15bc6a081b7657cc48cf96d9",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "CHECKPOINT1_REVIEW.json",
+      "packet_path": "session72-even-audit/CHECKPOINT1_REVIEW.json",
+      "bytes": 1225,
+      "sha256": "7153774d70a7d5235cf9d0ccdded7e2367f11f3b957a134e71ef4bd2e117a9f2",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "FINAL_AUDIT_MANIFEST.json",
+      "packet_path": "session72-even-audit/FINAL_AUDIT_MANIFEST.json",
+      "bytes": 2966,
+      "sha256": "fa99eb72a8f29d298236698e85f3bc8fc7b8a4a67a67b402d533824d5b3e5edd",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "REPORT.md",
+      "packet_path": "session72-even-audit/REPORT.md",
+      "bytes": 21261,
+      "sha256": "0c68e86d480288ac472d5ede4eb3aa42bd2a8b3953902cedefc5936099a48101",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "ROOT_WALSH_AUDIT.json",
+      "packet_path": "session72-even-audit/ROOT_WALSH_AUDIT.json",
+      "bytes": 773,
+      "sha256": "196b2a13ae43523b2b80cd25f225ac05912a3abd4adbd760d02290c1ff99ded9",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "SHA256SUMS.txt",
+      "packet_path": "session72-even-audit/SHA256SUMS.txt",
+      "bytes": 1283,
+      "sha256": "b8b1a4b41ba1735095d3671b3bd4a8779f0d96d6bc1acaeb720f4e418877cee2",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "abstract-normal.json",
+      "packet_path": "session72-even-audit/abstract-normal.json",
+      "bytes": 5735,
+      "sha256": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "abstract-optimized.json",
+      "packet_path": "session72-even-audit/abstract-optimized.json",
+      "bytes": 5735,
+      "sha256": "39e6f1fe8b2cc029d4e144cd24977b618393f6c464741936dd77cd0dde18a2ab",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "audit_abstract.py",
+      "packet_path": "session72-even-audit/audit_abstract.py",
+      "bytes": 5432,
+      "sha256": "9373c7989867afdb9f19909311abff186dc21574582489aaaabb994e6c9c41f8",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "audit_even.py",
+      "packet_path": "session72-even-audit/audit_even.py",
+      "bytes": 9530,
+      "sha256": "97e1fa8837e8dd10e6dcd62397494543c78cd531716f93d143747ff97299e967",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "audit_scoreparity.py",
+      "packet_path": "session72-even-audit/audit_scoreparity.py",
+      "bytes": 3773,
+      "sha256": "62dbe34801a9788f45475938be321b0a5e2655d3935d262b726eddd7d5f62264",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "audit_switching.py",
+      "packet_path": "session72-even-audit/audit_switching.py",
+      "bytes": 7353,
+      "sha256": "8acdfb9a9ce07db74d3edcccdf961acbaaaef0b787d6161a6be07cc993f4b043",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "normal.json",
+      "packet_path": "session72-even-audit/normal.json",
+      "bytes": 5278,
+      "sha256": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "optimized.json",
+      "packet_path": "session72-even-audit/optimized.json",
+      "bytes": 5278,
+      "sha256": "cc37ef01079f1d31b3bc298921f689e629d94326c8c69afc798262110a9cbc7c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "scoreparity-normal.json",
+      "packet_path": "session72-even-audit/scoreparity-normal.json",
+      "bytes": 15210,
+      "sha256": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "scoreparity-optimized.json",
+      "packet_path": "session72-even-audit/scoreparity-optimized.json",
+      "bytes": 15210,
+      "sha256": "f49bd5439fe3edc427b10b5c07d52748d845a508a46cac2a46f27deba3234154",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "switching-normal.json",
+      "packet_path": "session72-even-audit/switching-normal.json",
+      "bytes": 3230,
+      "sha256": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even-audit",
+      "native_path": "switching-optimized.json",
+      "packet_path": "session72-even-audit/switching-optimized.json",
+      "bytes": 3230,
+      "sha256": "0bfb26315416c3f28a8b9047ed7192848031d0a19ae54e1247a8896c78b3e91b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "EVEN_GRAPH_OPERATION_ENVELOPE.md",
+      "packet_path": "session72-even/EVEN_GRAPH_OPERATION_ENVELOPE.md",
+      "bytes": 22180,
+      "sha256": "b7c345c3bc4ed239fb1cef644832d17ec49d28c13fed10faf313d7bb44a071c1",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "FINAL_MANIFEST.json",
+      "packet_path": "session72-even/FINAL_MANIFEST.json",
+      "bytes": 5953,
+      "sha256": "05df65e07ba176ab2eb295d7bb123a5d4bc513ce648fa8849d52f422e476a3e5",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "SCORE_PARITY_QUOTIENT.md",
+      "packet_path": "session72-even/SCORE_PARITY_QUOTIENT.md",
+      "bytes": 7539,
+      "sha256": "94ce8274fbd5784a6af52e1ec23edf336bea05bf72b84ede69a1d9e2c88a00f8",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "SCORE_SHA256SUMS.txt",
+      "packet_path": "session72-even/SCORE_SHA256SUMS.txt",
+      "bytes": 260,
+      "sha256": "1af9f0d4f6859e45913394fa1135b8b95700492b8d65128ae02d2f58a6fbfeba",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "SHA256SUMS.txt",
+      "packet_path": "session72-even/SHA256SUMS.txt",
+      "bytes": 250,
+      "sha256": "c3f3dda5be3531c1f0e544b2cf31f20f0c9b79b4074fe5468f46a59b4acd04d3",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "SOURCE_PINS.json",
+      "packet_path": "session72-even/SOURCE_PINS.json",
+      "bytes": 5544,
+      "sha256": "14ec9c287b2d4f76c8012963baa42d548ec7a62b36a5a75fbd3e86194cc2961c",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "normal.json",
+      "packet_path": "session72-even/normal.json",
+      "bytes": 10305,
+      "sha256": "2edde6c701786695aee52d618bb656c829490e5f7c1285962dc0c99d55fa112d",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "optimized.json",
+      "packet_path": "session72-even/optimized.json",
+      "bytes": 10305,
+      "sha256": "2edde6c701786695aee52d618bb656c829490e5f7c1285962dc0c99d55fa112d",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "score-normal.json",
+      "packet_path": "session72-even/score-normal.json",
+      "bytes": 49043,
+      "sha256": "02ee681acb5616439d142199ee915ad6190e935f187a94e80bf0fb444ff620b6",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "score-optimized.json",
+      "packet_path": "session72-even/score-optimized.json",
+      "bytes": 49043,
+      "sha256": "02ee681acb5616439d142199ee915ad6190e935f187a94e80bf0fb444ff620b6",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/01-THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "packet_path": "session72-even/sources/01-THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "bytes": 10100,
+      "sha256": "aec06c7678167ca0b0d684cca83e90ce0064dcf18be4a4434489fd91f87fd12b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/02-THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "packet_path": "session72-even/sources/02-THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "bytes": 22906,
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/03-THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md",
+      "packet_path": "session72-even/sources/03-THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md",
+      "bytes": 10289,
+      "sha256": "8095bbb37f7e637119ab327d5ff91dc060c014dbe6eb655dc50721de0f502377",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/04-THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md",
+      "packet_path": "session72-even/sources/04-THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md",
+      "bytes": 23497,
+      "sha256": "8222fdfa9c35e3326a9542d15e104dfcb6e7d971973f70892e739fa286a0b6bd",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/05-THM-4069-even-graph-basis-dependence-and-canonical-cycle-envelope.md",
+      "packet_path": "session72-even/sources/05-THM-4069-even-graph-basis-dependence-and-canonical-cycle-envelope.md",
+      "bytes": 12945,
+      "sha256": "447c0a5dba3660c557f9453291417693a8d676934a64a8be49e8d250b3627b88",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/06-THM-4078-even-graph-triangle-quotient-spectrum-and-boolean-noncommutation.md",
+      "packet_path": "session72-even/sources/06-THM-4078-even-graph-triangle-quotient-spectrum-and-boolean-noncommutation.md",
+      "bytes": 12068,
+      "sha256": "de551240563f18ef718b15d9dd7e1adbd260a263c0927ae4376b51d4616c1c07",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/07-THM-584-complement-is-antipodal-map-level-parity-spectrum.md",
+      "packet_path": "session72-even/sources/07-THM-584-complement-is-antipodal-map-level-parity-spectrum.md",
+      "bytes": 8494,
+      "sha256": "6437f36ccf267355542c0a7900c115e154a2507713a78d73e0c00f389ef3e1ad",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/08-THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "packet_path": "session72-even/sources/08-THM-587-per-level-signed-cycle-index-antipodal-euler-number.md",
+      "bytes": 7211,
+      "sha256": "028653354ae590b99ba468f517f022ff13ef9a1854609bfdc2bd8c9287c8206f",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/09-THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "packet_path": "session72-even/sources/09-THM-588-metagraph-laplacian-algebraic-connectivity-four.md",
+      "bytes": 6167,
+      "sha256": "eed2972de9f122b8d9eae1e182eaf47d11ca3e9442b343f73be1d3e9c2116338",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/10-tournament_even_bijection_20261011c.md",
+      "packet_path": "session72-even/sources/10-tournament_even_bijection_20261011c.md",
+      "bytes": 15979,
+      "sha256": "7626d4e7e44752109ae8db7fc289c4b31e0db7104b3705cda4ea51837e41de95",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/11-tournament_converse_context_20261011d.md",
+      "packet_path": "session72-even/sources/11-tournament_converse_context_20261011d.md",
+      "bytes": 13710,
+      "sha256": "f8adbd21c148f8644f527a07cf3f6cb649cdfe103253c207ade2e6012c6c828d",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/12-CIRCULANT_NECKLACE_BIJECTION.md",
+      "packet_path": "session72-even/sources/12-CIRCULANT_NECKLACE_BIJECTION.md",
+      "bytes": 18258,
+      "sha256": "04934063ff00f007cff66dd1e65dea4536c900a28906bccd70fa9ad0ae5f4903",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/13-SYLOW_ACTION_ADDENDUM.md",
+      "packet_path": "session72-even/sources/13-SYLOW_ACTION_ADDENDUM.md",
+      "bytes": 8431,
+      "sha256": "17431560b037d5dc12b027d8a55a99edbac7ac5b5772243f6f0ec30d49a9b6ec",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/14-C15_ORDER_TEN_COUNTEREXAMPLE.md",
+      "packet_path": "session72-even/sources/14-C15_ORDER_TEN_COUNTEREXAMPLE.md",
+      "bytes": 13079,
+      "sha256": "23901ff5b310b90fca3970d7ab3f361e6e1832c50f984cad0789b655817bd14b",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/15-THEOREM.md",
+      "packet_path": "session72-even/sources/15-THEOREM.md",
+      "bytes": 15460,
+      "sha256": "a9af224d50905700ff800182087989546377842b47c0a3c7cd4dcebbe38bc3a4",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/16-THM-1470-even-tournaments-are-the-tournament-two-graph-theorem.md",
+      "packet_path": "session72-even/sources/16-THM-1470-even-tournaments-are-the-tournament-two-graph-theorem.md",
+      "bytes": 10148,
+      "sha256": "6042745155d9517628e0a91fee43d5479a538958198e251a014061a3ee8595b0",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "sources/17-THM-2501-switching-fourth-moment-signed-c4-and-gram-energy.md",
+      "packet_path": "session72-even/sources/17-THM-2501-switching-fourth-moment-signed-c4-and-gram-energy.md",
+      "bytes": 6740,
+      "sha256": "c013bb71f909e3f5fbabfe5a076120c9d5d948239c5750e0cf645f5b8bb83d96",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "verify_affine_fourier.py",
+      "packet_path": "session72-even/verify_affine_fourier.py",
+      "bytes": 11365,
+      "sha256": "1bccf7bf39b9025befa957d85c71cf73bfa85562a0ac1a98c2304644b333e652",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-even",
+      "native_path": "verify_score_parity.py",
+      "packet_path": "session72-even/verify_score_parity.py",
+      "bytes": 3953,
+      "sha256": "09f62b5f97bbb2b2ad1725446dc933765ec8d4bb0d50e2ce472f15202ee7e1d7",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-root",
+      "native_path": "README.checkpoint1.md",
+      "packet_path": "session72-root/README.checkpoint1.md",
+      "bytes": 4284,
+      "sha256": "9f8bc48be8d31db62c324ca0c43ac212ba006e423f8648b6319c7063f2d32839",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-root",
+      "native_path": "WALSH_REALIZABILITY.md",
+      "packet_path": "session72-root/WALSH_REALIZABILITY.md",
+      "bytes": 4724,
+      "sha256": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-root",
+      "native_path": "check_walsh_cone.py",
+      "packet_path": "session72-root/check_walsh_cone.py",
+      "bytes": 3599,
+      "sha256": "2496d190698bc91dfe97d581a7b29c4b9610634eca5c3647f68353c80c79326a",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-root",
+      "native_path": "walsh.normal.json",
+      "packet_path": "session72-root/walsh.normal.json",
+      "bytes": 1964,
+      "sha256": "da4d181068a0615b525bfe2de42f195811843c409b5c19b5794fdcb8cef2e9da",
+      "mode": 420
+    },
+    {
+      "native_lane": "session72-root",
+      "native_path": "walsh.optimized.json",
+      "packet_path": "session72-root/walsh.optimized.json",
+      "bytes": 1964,
+      "sha256": "da4d181068a0615b525bfe2de42f195811843c409b5c19b5794fdcb8cef2e9da",
+      "mode": 420
+    }
+  ]
+}

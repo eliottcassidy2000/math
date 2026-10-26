@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "converse_fourier_diagonal": [
+        1
+      ],
+      "converse_permutation": [
+        0
+      ],
+      "n": 1,
+      "sign_even_representatives": [
+        0
+      ],
+      "tournament_representatives": [
+        0
+      ],
+      "walsh_rows": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "converse_fourier_diagonal": [
+        1
+      ],
+      "converse_permutation": [
+        0
+      ],
+      "n": 2,
+      "sign_even_representatives": [
+        0
+      ],
+      "tournament_representatives": [
+        0
+      ],
+      "walsh_rows": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "converse_fourier_diagonal": [
+        1,
+        1
+      ],
+      "converse_permutation": [
+        0,
+        1
+      ],
+      "n": 3,
+      "sign_even_representatives": [
+        0,
+        3
+      ],
+      "tournament_representatives": [
+        0,
+        2
+      ],
+      "walsh_rows": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -3
+        ]
+      ]
+    },
+    {
+      "converse_fourier_diagonal": [
+        1,
+        1,
+        -1,
+        1
+      ],
+      "converse_permutation": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "n": 4,
+      "sign_even_representatives": [
+        0,
+        3,
+        7,
+        30
+      ],
+      "tournament_representatives": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "walsh_rows": [
+        [
+          1,
+          4,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          4,
+          -3
+        ],
+        [
+          1,
+          -4,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          -4,
+          -3
+        ]
+      ]
+    }
+  ],
+  "convention": "lex edge bits1=up; canonical ordinary type minima; Phi orbit signs via edge inversion",
+  "negative_diagonal_first_order": 4,
+  "sign_gauges_checked": 16,
+  "star_edges": 3,
+  "status": "PASS"
+}

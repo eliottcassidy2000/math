@@ -1,0 +1,19 @@
+{
+  "added_verified_source_paths": [
+    "01-canon/theorems/THM-1470-even-tournaments-are-the-tournament-two-graph-theorem.md",
+    "01-canon/theorems/THM-2501-switching-fourth-moment-signed-c4-and-gram-energy.md"
+  ],
+  "checkpoint1_readme_scope_audit": "PASS: same-n sign-even vs Eulerian counts; three correctly typed weighted gaps; correct positivity cone and nonnested quotient boundaries; other programmes marked future rather than proved here",
+  "checkpoint1_readme_sha256": "9f8bc48be8d31db62c324ca0c43ac212ba006e423f8648b6319c7063f2d32839",
+  "frozen": true,
+  "prior_receipt_retained_unchanged": true,
+  "prior_receipt_source_pin_count": 15,
+  "producer_source_pins_exact_git_blob_matches_now": 17,
+  "required_corrections": [],
+  "review_scope": "Checkpoint1 root clarification, README scope, and two additional producer source pins; no new research",
+  "root_code_and_receipts_unchanged": true,
+  "root_walsh_change_verified_exactly": "Only inserted column-acting before state-law matrix P",
+  "root_walsh_current_sha256": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df",
+  "root_walsh_previous_sha256": "8685f8db8b91de6ab5e913943ac9b987682c7a42ca229dbd792cd3dde025626f",
+  "status": "PASS"
+}
