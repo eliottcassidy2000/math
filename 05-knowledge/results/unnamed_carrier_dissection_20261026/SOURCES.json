@@ -1,0 +1,153 @@
+{
+  "checkpoint": "ba58440fdeac92d73e7da2c7539ba86d20b0fa36",
+  "date": "2026-10-26",
+  "executable_inputs": [
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/strong-atlas.json",
+      "sha256_lf": "f140ee49cec729f9ab172970a7ad282214ff1e0dbbc76b6bca767fbde1d7e457",
+      "use": "Complete strong source universe and response coefficients through seven; independently re-aggregated."
+    },
+    {
+      "path": "04-computation/experiments/joint_port_bisimulation_20261026/audit_hyp9416/tcanon.py",
+      "sha256_lf": "299bb8cbad6d4123d7bbb3186cab73a0cfea8345583a80d12aa2476613660e17",
+      "use": "Imported only by phase.py for the 12-vertex canonical labels and automorphism counts."
+    },
+    {
+      "path": "04-computation/experiments/joint_port_bisimulation_20261026/atom_responses.py",
+      "sha256_lf": "d897c97745b0d7617bc62de904c2db57e8c6aeb7351e6a4604d2c53582100573",
+      "use": "Only the repaired forget_ports function is AST-extracted for regression checks."
+    }
+  ],
+  "external_sources": [
+    {
+      "scope": "Requested version: no-flip theorem, matching definitions/lemmas and relevant case-inventory sections read. No independent exhaustive case proof claimed.",
+      "url": "https://arxiv.org/html/2412.03865v3"
+    },
+    {
+      "scope": "Official notice inspected: v3 compiled an outdated file. Do not infer the exact served-artifact delta from this notice alone.",
+      "url": "https://arxiv.org/abs/2412.03865v4"
+    },
+    {
+      "scope": "Corrected-version route; bounded inspection, no full independent geometric audit.",
+      "url": "https://arxiv.org/html/2412.03865v4"
+    },
+    {
+      "scope": "Current primary publication, authors/date/abstract inspected; detailed proof audit inherited from Session71.",
+      "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITCS.2026.47"
+    },
+    {
+      "scope": "Primary Gaussian-integer and sum-of-two-squares reference; exact power-ray arithmetic rechecked locally.",
+      "url": "https://kconrad.math.uconn.edu/blurbs/ugradnumthy/Zinotes.pdf"
+    },
+    {
+      "scope": "Primary institutional bibliographic record; scanned theorem pages not audited or used as proof dependencies.",
+      "url": "https://research.tue.nl/en/publications/algebraic-theory-of-penroses-non-periodic-tilings-of-the-plane-i-/"
+    },
+    {
+      "scope": "Downloaded scanned de Bruijn paper; no theorem page audit. No document copy republished.",
+      "sha256_download": "02051f93409e11c331c983789600cdf33154cc96c331b0cb78bf7b3681cf4e3e",
+      "url": "https://pure.tue.nl/ws/files/4344195/597566.pdf"
+    }
+  ],
+  "inheritance_commits": {
+    "1b61c5c884": "Growing sieve/path packet: cut reconstruction, 16-state Paley cover and abc hostiles.",
+    "9f2a9722ef": "HYP-9416 audit: all-order strong sandwich reconstruction, probability/multiset distinction and corrected response counts.",
+    "adaf90a112": "Norm/dissection checkpoint and bounded golden norm audit.",
+    "e219c26c87": "Completed two-involution matching, native marked Penrose guards, independent audit and publication correction."
+  },
+  "limitations": [
+    "All-order strong atom support/histogram injectivity remains OPEN.",
+    "Order eight has one independent C++ implementation; Python overlap is exhaustive through seven.",
+    "The 12-vertex canonical labeller is inherited, not independently reimplemented.",
+    "New U2 proof and synthesis had a local audit, not a new independent-agent review.",
+    "No claim of a universal geometric classifier or infinite Penrose extendibility."
+  ],
+  "normalization": "SHA256 of bytes with CRLF replaced by LF. Historical pins are provenance; only executable_inputs are required to stay exact for replay.",
+  "recovered_sources": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8"
+    },
+    {
+      "path": "04-computation/experiments/joint_port_bisimulation_20261026/audit_hyp9416/REPORT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "28037017257848efaf3a6ea2a7e3b02e4ee87e40020b34f783278d148da5c5ae"
+    },
+    {
+      "path": "05-knowledge/results/growing_sieve_path_20261026/README.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "0f813024f71105cf2e11b9e3878ad3860aacb7d0737bda4e2ad89eb3f51effb2"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/README.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "0afea41121f802948584f64c3fa3fce7e7b72263835d1fc118459cab513cffa2"
+    },
+    {
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1"
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5"
+    },
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "499f703c003504d31c1bc393b1788677ddbc505d64c6f37d95af70879998a552"
+    },
+    {
+      "path": "05-knowledge/results/fivefold_boundary_20261018g.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "c56aa493928e053fc7fe2002a5c6900aab7018ac74f0934fdd3aad0854c6fd14"
+    },
+    {
+      "path": "05-knowledge/results/growing_sieve_path_20261026/field/README.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-norms/REPORT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "a1a83aba7162a076a169320d79a28d14f41dd4cbe09171c3d223f36ab2ed5efd"
+    },
+    {
+      "path": "05-knowledge/results/prime_shells_20260921_dissections.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "2bf31eaf88464607c41f22b48addca73acd3934efbe0c29c7141afb2da16c6bd"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-norm-audit/PENROSE_P5_REVIEW.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "4fb4947d62656ed1854ec4de82fd86c2c163ac1bdd938a988e27e729e08a0961"
+    },
+    {
+      "path": "01-canon/theorems/THM-3334-berggren-parabolic-spine-gaussian-collision-torsor.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "c4326fc09841f79adf685c321d32410354d9cd43b1810a197ade3c1e2d832e70"
+    },
+    {
+      "path": "05-knowledge/results/guard_reconstruction_20261026/CONNECTIONS.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "fb67c41d40ba3bc95eb0a2f8a310493b426f47960b463385827ddff71993a183"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-penrose/REPORT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "59d822bd4b341326a22a1790fa835c561e474f1322d2465b62c02620423d31a2"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-matching-audit/AUDIT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "1663f599efab88d33054eb94434a29ee4d4fd68f039392fe785e602738c6e351"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-dudeney/REPORT.md",
+      "scope": "Historical/incoming mechanism linked in report; only relevant sections read, not a full-source audit.",
+      "sha256_lf": "5c2bbf33a385c1489e972013428dca48a0bf321821ecd288b6c518dc1f98b5aa"
+    }
+  ]
+}
