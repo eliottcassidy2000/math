@@ -1,0 +1,1151 @@
+{
+  "field_and_ports": {
+    "C3_count": 14,
+    "F32_inverse_trace_hostile": [
+      2,
+      18,
+      0
+    ],
+    "Paley_H": 189,
+    "Paley_distinct_target_classes": 7,
+    "Paley_literal_ports": [
+      {
+        "path": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "target_Aut": 1,
+        "target_H": 151,
+        "target_canonical_code": 1592,
+        "target_proper_nontrivial_modules": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "path": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          3
+        ],
+        "target_Aut": 1,
+        "target_H": 151,
+        "target_canonical_code": 5682,
+        "target_proper_nontrivial_modules": [
+          [
+            5,
+            6
+          ]
+        ]
+      },
+      {
+        "path": [
+          0,
+          1,
+          2,
+          4,
+          6,
+          3,
+          5
+        ],
+        "target_Aut": 1,
+        "target_H": 153,
+        "target_canonical_code": 9400,
+        "target_proper_nontrivial_modules": []
+      },
+      {
+        "path": [
+          0,
+          1,
+          2,
+          6,
+          3,
+          4,
+          5
+        ],
+        "target_Aut": 1,
+        "target_H": 153,
+        "target_canonical_code": 9528,
+        "target_proper_nontrivial_modules": []
+      },
+      {
+        "path": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          2,
+          6
+        ],
+        "target_Aut": 1,
+        "target_H": 153,
+        "target_canonical_code": 9585,
+        "target_proper_nontrivial_modules": []
+      },
+      {
+        "path": [
+          0,
+          1,
+          3,
+          5,
+          2,
+          4,
+          6
+        ],
+        "target_Aut": 1,
+        "target_H": 151,
+        "target_canonical_code": 9649,
+        "target_proper_nontrivial_modules": [
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "path": [
+          0,
+          1,
+          5,
+          2,
+          3,
+          4,
+          6
+        ],
+        "target_Aut": 1,
+        "target_H": 153,
+        "target_canonical_code": 9400,
+        "target_proper_nontrivial_modules": []
+      },
+      {
+        "path": [
+          0,
+          1,
+          5,
+          2,
+          4,
+          6,
+          3
+        ],
+        "target_Aut": 1,
+        "target_H": 153,
+        "target_canonical_code": 9585,
+        "target_proper_nontrivial_modules": []
+      },
+      {
+        "path": [
+          0,
+          1,
+          5,
+          2,
+          6,
+          3,
+          4
+        ],
+        "target_Aut": 1,
+        "target_H": 155,
+        "target_canonical_code": 9272,
+        "target_proper_nontrivial_modules": []
+      }
+    ],
+    "Paley_target_merger_witnesses": [
+      {
+        "source_paths": [
+          [
+            0,
+            1,
+            2,
+            4,
+            6,
+            3,
+            5
+          ],
+          [
+            0,
+            1,
+            5,
+            2,
+            3,
+            4,
+            6
+          ]
+        ],
+        "target_code": 9400,
+        "target_isomorphism": [
+          0,
+          5,
+          4,
+          1,
+          2,
+          6,
+          3
+        ]
+      },
+      {
+        "source_paths": [
+          [
+            0,
+            1,
+            3,
+            4,
+            5,
+            2,
+            6
+          ],
+          [
+            0,
+            1,
+            5,
+            2,
+            4,
+            6,
+            3
+          ]
+        ],
+        "target_code": 9585,
+        "target_isomorphism": [
+          0,
+          6,
+          4,
+          5,
+          2,
+          1,
+          3
+        ]
+      }
+    ],
+    "Paley_tc": 9,
+    "coefficient_scale_checks": 896,
+    "field_elements_alpha_powers": [
+      1,
+      2,
+      4,
+      3,
+      6,
+      7,
+      5
+    ],
+    "modular_flip_unoriented_ports": 24,
+    "ordinary_classes": [
+      {
+        "parameters": [
+          0,
+          0,
+          0
+        ],
+        "root_stabilizer": 21,
+        "weight": 0,
+        "word": "0000000"
+      },
+      {
+        "parameters": [
+          1,
+          2,
+          3
+        ],
+        "root_stabilizer": 3,
+        "weight": 1,
+        "word": "0000001"
+      },
+      {
+        "parameters": [
+          0,
+          6,
+          6
+        ],
+        "root_stabilizer": 1,
+        "weight": 2,
+        "word": "0000011"
+      },
+      {
+        "parameters": [
+          1,
+          5,
+          2
+        ],
+        "root_stabilizer": 1,
+        "weight": 3,
+        "word": "0000111"
+      },
+      {
+        "parameters": [
+          1,
+          0,
+          1
+        ],
+        "root_stabilizer": 3,
+        "weight": 3,
+        "word": "0001011"
+      },
+      {
+        "parameters": [
+          1,
+          7,
+          0
+        ],
+        "root_stabilizer": 3,
+        "weight": 3,
+        "word": "0001101"
+      },
+      {
+        "parameters": [
+          0,
+          3,
+          5
+        ],
+        "root_stabilizer": 1,
+        "weight": 4,
+        "word": "0001111"
+      },
+      {
+        "parameters": [
+          0,
+          2,
+          0
+        ],
+        "root_stabilizer": 3,
+        "weight": 4,
+        "word": "0010111"
+      },
+      {
+        "parameters": [
+          0,
+          0,
+          2
+        ],
+        "root_stabilizer": 3,
+        "weight": 4,
+        "word": "0011101"
+      },
+      {
+        "parameters": [
+          1,
+          4,
+          7
+        ],
+        "root_stabilizer": 1,
+        "weight": 5,
+        "word": "0011111"
+      },
+      {
+        "parameters": [
+          0,
+          1,
+          1
+        ],
+        "root_stabilizer": 3,
+        "weight": 6,
+        "word": "0111111"
+      },
+      {
+        "parameters": [
+          1,
+          0,
+          0
+        ],
+        "root_stabilizer": 21,
+        "weight": 7,
+        "word": "1111111"
+      }
+    ],
+    "pointed_classes": 48,
+    "pointed_flip_checks": 896,
+    "root_Aut": 21,
+    "trace_zero_exponents": [
+      1,
+      2,
+      4
+    ]
+  },
+  "literal_compiler": {
+    "cases": [
+      {
+        "Aut": 1,
+        "H": 1,
+        "child_types": [
+          0,
+          0
+        ],
+        "n": 2,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 1,
+        "H": 1,
+        "child_types": [
+          0,
+          1
+        ],
+        "n": 3,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "child_types": [
+          0,
+          2
+        ],
+        "n": 4,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 1,
+        "H": 1,
+        "child_types": [
+          1,
+          0
+        ],
+        "n": 3,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 1,
+        "H": 1,
+        "child_types": [
+          1,
+          1
+        ],
+        "n": 4,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "child_types": [
+          1,
+          2
+        ],
+        "n": 5,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "child_types": [
+          2,
+          0
+        ],
+        "n": 4,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "child_types": [
+          2,
+          1
+        ],
+        "n": 5,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 9,
+        "H": 9,
+        "child_types": [
+          2,
+          2
+        ],
+        "n": 6,
+        "quotient_order": 2,
+        "target_classes": 1
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "child_types": [
+          0,
+          0,
+          0
+        ],
+        "n": 3,
+        "quotient_order": 3,
+        "target_classes": 1
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "child_types": [
+          0,
+          0,
+          1
+        ],
+        "n": 4,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "child_types": [
+          0,
+          0,
+          2
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "child_types": [
+          0,
+          1,
+          0
+        ],
+        "n": 4,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "child_types": [
+          0,
+          1,
+          1
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 7
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          0,
+          1,
+          2
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "child_types": [
+          0,
+          2,
+          0
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          0,
+          2,
+          1
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 9,
+        "H": 99,
+        "child_types": [
+          0,
+          2,
+          2
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "child_types": [
+          1,
+          0,
+          0
+        ],
+        "n": 4,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "child_types": [
+          1,
+          0,
+          1
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 7
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          1,
+          0,
+          2
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "child_types": [
+          1,
+          1,
+          0
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 7
+      },
+      {
+        "Aut": 3,
+        "H": 45,
+        "child_types": [
+          1,
+          1,
+          1
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 12
+      },
+      {
+        "Aut": 3,
+        "H": 159,
+        "child_types": [
+          1,
+          1,
+          2
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          1,
+          2,
+          0
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 3,
+        "H": 159,
+        "child_types": [
+          1,
+          2,
+          1
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 9,
+        "H": 621,
+        "child_types": [
+          1,
+          2,
+          2
+        ],
+        "n": 8,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "child_types": [
+          2,
+          0,
+          0
+        ],
+        "n": 5,
+        "quotient_order": 3,
+        "target_classes": 4
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          2,
+          0,
+          1
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 9,
+        "H": 99,
+        "child_types": [
+          2,
+          0,
+          2
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "child_types": [
+          2,
+          1,
+          0
+        ],
+        "n": 6,
+        "quotient_order": 3,
+        "target_classes": 9
+      },
+      {
+        "Aut": 3,
+        "H": 159,
+        "child_types": [
+          2,
+          1,
+          1
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 9,
+        "H": 621,
+        "child_types": [
+          2,
+          1,
+          2
+        ],
+        "n": 8,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 9,
+        "H": 99,
+        "child_types": [
+          2,
+          2,
+          0
+        ],
+        "n": 7,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 9,
+        "H": 621,
+        "child_types": [
+          2,
+          2,
+          1
+        ],
+        "n": 8,
+        "quotient_order": 3,
+        "target_classes": null
+      },
+      {
+        "Aut": 81,
+        "H": 3159,
+        "child_types": [
+          2,
+          2,
+          2
+        ],
+        "n": 9,
+        "quotient_order": 3,
+        "target_classes": null
+      }
+    ],
+    "full_compressed_target_convolutions": 26,
+    "labelled_paths_compiled": 6160,
+    "substitutions": 36
+  },
+  "paley28_endpoint_transfer": {
+    "H_by_weight": {
+      "0": 5307704039306577787515,
+      "1": 5307704039306577787515,
+      "2": 5307704039306577787515,
+      "3": 5307704039306577787515,
+      "4": 5307704039306577787515,
+      "5": 5307704039306577787515,
+      "6": 5307704039306577787515,
+      "7": 5307704039306577787515
+    },
+    "cross": {
+      "1,0,0": {
+        "-1": 64408919971762613178,
+        "-3": 16906811250200721903,
+        "1": 22248984183668957934
+      },
+      "1,0,1": {
+        "-2": 54068904778999809573,
+        "0": 41517333794022447816,
+        "2": 7978476832610035626
+      },
+      "1,1,0": {
+        "-2": 36214852095826707348,
+        "-4": 5287544748239669829,
+        "0": 62062318561565915838
+      },
+      "1,1,1": {
+        "-1": 64408919971762613178,
+        "-3": 16906811250200721903,
+        "1": 22248984183668957934
+      },
+      "3,0,0": {
+        "-1": 74742600595165373448,
+        "-3": 19397974821381380268,
+        "1": 26143647865301500164
+      },
+      "3,0,1": {
+        "-2": 62354530493858745036,
+        "0": 48492555758037196668,
+        "2": 9437137029952312176
+      },
+      "3,1,0": {
+        "-2": 41804377920874434276,
+        "-4": 6035552904613573476,
+        "0": 72444292456360246128
+      },
+      "3,1,1": {
+        "-1": 74742600595165373448,
+        "-3": 19397974821381380268,
+        "1": 26143647865301500164
+      }
+    },
+    "diagonal": [
+      {
+        "-1": 43250990152102126308,
+        "-3": 20237019131760359688,
+        "1": 23208608840349842964
+      },
+      {
+        "-1": 43250990152102126308,
+        "-3": 20237019131760359688,
+        "1": 23208608840349842964
+      }
+    ],
+    "histograms": {
+      "0": {
+        "-3": 904059641425546663407,
+        "-1": 3224938862970202603302,
+        "1": 1178705534910828520806
+      },
+      "1": {
+        "-4": 33969292958559729915,
+        "-3": 686230924996054050381,
+        "-2": 583327995868679088699,
+        "-1": 2390029739568634683546,
+        "0": 673549501709957419350,
+        "1": 888349742617005772218,
+        "2": 52246841587687043406
+      },
+      "2": {
+        "-4": 56615488264266216525,
+        "-3": 541011780709725641697,
+        "-2": 972213326447798481165,
+        "-1": 1833423657300922737042,
+        "0": 1122582502849929032250,
+        "1": 694779214421123939826,
+        "2": 87078069312811739010
+      },
+      "3": {
+        "-4": 67938585917119459830,
+        "-3": 468402208566561437355,
+        "-2": 1166655991737358177398,
+        "-1": 1555120616167066763790,
+        "0": 1347099003419914838700,
+        "1": 597993950323183023630,
+        "2": 104493683175374086812
+      },
+      "4": {
+        "-4": 67938585917119459830,
+        "-3": 468402208566561437355,
+        "-2": 1166655991737358177398,
+        "-1": 1555120616167066763790,
+        "0": 1347099003419914838700,
+        "1": 597993950323183023630,
+        "2": 104493683175374086812
+      },
+      "5": {
+        "-4": 56615488264266216525,
+        "-3": 541011780709725641697,
+        "-2": 972213326447798481165,
+        "-1": 1833423657300922737042,
+        "0": 1122582502849929032250,
+        "1": 694779214421123939826,
+        "2": 87078069312811739010
+      },
+      "6": {
+        "-4": 33969292958559729915,
+        "-3": 686230924996054050381,
+        "-2": 583327995868679088699,
+        "-1": 2390029739568634683546,
+        "0": 673549501709957419350,
+        "1": 888349742617005772218,
+        "2": 52246841587687043406
+      },
+      "7": {
+        "-3": 904059641425546663407,
+        "-1": 3224938862970202603302,
+        "1": 1178705534910828520806
+      }
+    },
+    "profile": [
+      0,
+      3,
+      18,
+      36,
+      24
+    ]
+  },
+  "paley28_tc": {
+    "1": 2426933717104059345,
+    "3": 808977905701353115,
+    "21": 115568272243050445
+  },
+  "port_state_hostiles": {
+    "lost_response_multiplicities": {
+      "child_Aut": 1,
+      "child_code": 10,
+      "nonunit_responses": [
+        {
+          "R": 2,
+          "c": 1,
+          "local_target_code": 278,
+          "marks": [
+            0,
+            1
+          ]
+        },
+        {
+          "R": 2,
+          "c": 2,
+          "local_target_code": 393,
+          "marks": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "R": 2,
+          "c": 2,
+          "local_target_code": 447,
+          "marks": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "parent_H": 93,
+      "wrong_unweighted_total": 88
+    },
+    "missing_intermediate_marks": {
+      "child_code": 7,
+      "common_outer_rooted_response": [
+        [
+          0,
+          1
+        ],
+        4
+      ],
+      "covers": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            3
+          ]
+        ]
+      ],
+      "distinct_target_codes": [
+        81,
+        83
+      ],
+      "quotient_walk": [
+        0,
+        1,
+        2,
+        0
+      ]
+    }
+  },
+  "recursive_all_cover_response": {
+    "cases": [
+      {
+        "Aut": 3,
+        "child_types": [
+          2,
+          0
+        ],
+        "cover_orbits_by_d": {
+          "1": 1,
+          "2": 6,
+          "3": 12,
+          "4": 8
+        },
+        "n": 4,
+        "quotient_order": 2,
+        "response_types_by_d": {
+          "1": 1,
+          "2": 6,
+          "3": 12,
+          "4": 8
+        }
+      },
+      {
+        "Aut": 3,
+        "child_types": [
+          0,
+          0,
+          0
+        ],
+        "cover_orbits_by_d": {
+          "1": 1,
+          "2": 2,
+          "3": 2
+        },
+        "n": 3,
+        "quotient_order": 3,
+        "response_types_by_d": {
+          "1": 1,
+          "2": 2,
+          "3": 2
+        }
+      },
+      {
+        "Aut": 1,
+        "child_types": [
+          1,
+          0,
+          0
+        ],
+        "cover_orbits_by_d": {
+          "1": 5,
+          "2": 22,
+          "3": 36,
+          "4": 24
+        },
+        "n": 4,
+        "quotient_order": 3,
+        "response_types_by_d": {
+          "1": 5,
+          "2": 22,
+          "3": 36,
+          "4": 24
+        }
+      },
+      {
+        "Aut": 3,
+        "child_types": [
+          2,
+          0,
+          0
+        ],
+        "cover_orbits_by_d": {
+          "1": 5,
+          "2": 26,
+          "3": 66,
+          "4": 80,
+          "5": 40
+        },
+        "n": 5,
+        "quotient_order": 3,
+        "response_types_by_d": {
+          "1": 5,
+          "2": 26,
+          "3": 66,
+          "4": 80,
+          "5": 40
+        }
+      },
+      {
+        "Aut": 1,
+        "child_types": [
+          1,
+          1,
+          0
+        ],
+        "cover_orbits_by_d": {
+          "1": 11,
+          "2": 78,
+          "3": 198,
+          "4": 240,
+          "5": 120
+        },
+        "n": 5,
+        "quotient_order": 3,
+        "response_types_by_d": {
+          "1": 11,
+          "2": 78,
+          "3": 198,
+          "4": 240,
+          "5": 120
+        }
+      }
+    ],
+    "ordered_cover_orbits": 983,
+    "response_channels": 983
+  },
+  "status": "FINITE-EXACT producer checks; proof audit separate"
+}

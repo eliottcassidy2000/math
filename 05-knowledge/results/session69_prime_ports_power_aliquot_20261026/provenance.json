@@ -1,0 +1,8 @@
+{
+  "active_checks": 334,
+  "inert_source_snapshots": 9,
+  "native_manifests_and_reviewed_inputs": "MATCH",
+  "research_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "snapshot_programs_executed": false,
+  "status": "PASS"
+}

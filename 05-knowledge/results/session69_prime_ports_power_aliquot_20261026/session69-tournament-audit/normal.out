@@ -1,0 +1,1471 @@
+{
+  "checks": 4464,
+  "compiler": {
+    "case_count": 31,
+    "cases": [
+      {
+        "Aut": 3,
+        "H": 3,
+        "K": 3,
+        "id": [
+          0,
+          0,
+          0
+        ],
+        "order": 3,
+        "ordinary_ports": 1,
+        "ordinary_target_incidence": {
+          "0": 1
+        },
+        "unweighted_response_count": 3,
+        "weighted_response_count": 3
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "K": 1,
+        "id": [
+          0,
+          0,
+          1
+        ],
+        "order": 4,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "0": 1,
+          "2": 1,
+          "4": 2,
+          "5": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "K": 1,
+        "id": [
+          0,
+          0,
+          2
+        ],
+        "order": 5,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "9": 1,
+          "10": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          0,
+          0,
+          3
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "8": 1,
+          "19": 1,
+          "22": 1,
+          "83": 1,
+          "145": 1,
+          "149": 1,
+          "154": 1,
+          "179": 1,
+          "281": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          0,
+          0,
+          4
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "17": 1,
+          "18": 1,
+          "73": 1,
+          "83": 1,
+          "145": 1,
+          "146": 1,
+          "152": 1,
+          "154": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "K": 1,
+        "id": [
+          0,
+          1,
+          0
+        ],
+        "order": 4,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "0": 1,
+          "2": 1,
+          "4": 2,
+          "5": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "K": 1,
+        "id": [
+          0,
+          1,
+          1
+        ],
+        "order": 5,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "12": 4,
+          "41": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          0,
+          1,
+          2
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "24": 1,
+          "26": 1,
+          "150": 1,
+          "154": 1,
+          "280": 1,
+          "282": 2,
+          "313": 1,
+          "314": 1,
+          "344": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "K": 1,
+        "id": [
+          0,
+          2,
+          0
+        ],
+        "order": 5,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "9": 1,
+          "10": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          0,
+          2,
+          1
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "20": 1,
+          "28": 1,
+          "89": 1,
+          "140": 1,
+          "148": 1,
+          "154": 1,
+          "156": 2,
+          "280": 1,
+          "345": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          0,
+          3,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "8": 1,
+          "19": 1,
+          "22": 1,
+          "83": 1,
+          "145": 1,
+          "149": 1,
+          "154": 1,
+          "179": 1,
+          "281": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          0,
+          4,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "17": 1,
+          "18": 1,
+          "73": 1,
+          "83": 1,
+          "145": 1,
+          "146": 1,
+          "152": 1,
+          "154": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "K": 1,
+        "id": [
+          1,
+          0,
+          0
+        ],
+        "order": 4,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "0": 1,
+          "2": 1,
+          "4": 2,
+          "5": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "K": 1,
+        "id": [
+          1,
+          0,
+          1
+        ],
+        "order": 5,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "12": 4,
+          "41": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          1,
+          0,
+          2
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "20": 1,
+          "28": 1,
+          "89": 1,
+          "140": 1,
+          "148": 1,
+          "154": 1,
+          "156": 2,
+          "280": 1,
+          "345": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "K": 1,
+        "id": [
+          1,
+          1,
+          0
+        ],
+        "order": 5,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "12": 4,
+          "41": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 45,
+        "K": 3,
+        "id": [
+          1,
+          1,
+          1
+        ],
+        "order": 6,
+        "ordinary_ports": 15,
+        "ordinary_target_incidence": {
+          "144": 1,
+          "145": 1,
+          "148": 1,
+          "152": 1,
+          "153": 2,
+          "156": 1,
+          "280": 2,
+          "281": 1,
+          "282": 1,
+          "313": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 45,
+        "weighted_response_count": 45
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          1,
+          2,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "24": 1,
+          "26": 1,
+          "150": 1,
+          "154": 1,
+          "280": 1,
+          "282": 2,
+          "313": 1,
+          "314": 1,
+          "344": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "K": 1,
+        "id": [
+          2,
+          0,
+          0
+        ],
+        "order": 5,
+        "ordinary_ports": 5,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "9": 1,
+          "10": 2,
+          "76": 1
+        },
+        "unweighted_response_count": 5,
+        "weighted_response_count": 5
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          2,
+          0,
+          1
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "24": 1,
+          "26": 1,
+          "150": 1,
+          "154": 1,
+          "280": 1,
+          "282": 2,
+          "313": 1,
+          "314": 1,
+          "344": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 33,
+        "K": 1,
+        "id": [
+          2,
+          1,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 11,
+        "ordinary_target_incidence": {
+          "20": 1,
+          "28": 1,
+          "89": 1,
+          "140": 1,
+          "148": 1,
+          "154": 1,
+          "156": 2,
+          "280": 1,
+          "345": 2
+        },
+        "unweighted_response_count": 11,
+        "weighted_response_count": 11
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          3,
+          0,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "8": 1,
+          "19": 1,
+          "22": 1,
+          "83": 1,
+          "145": 1,
+          "149": 1,
+          "154": 1,
+          "179": 1,
+          "281": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          4,
+          0,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "17": 1,
+          "18": 1,
+          "73": 1,
+          "83": 1,
+          "145": 1,
+          "146": 1,
+          "152": 1,
+          "154": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      {
+        "Aut": 1,
+        "H": 41,
+        "K": 1,
+        "id": [
+          "prime5",
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 41,
+        "ordinary_target_incidence": {
+          "88": 1,
+          "89": 1,
+          "144": 1,
+          "146": 1,
+          "148": 2,
+          "149": 1,
+          "150": 1,
+          "152": 4,
+          "153": 1,
+          "154": 2,
+          "156": 1,
+          "280": 2,
+          "281": 4,
+          "282": 1,
+          "313": 2,
+          "344": 6,
+          "345": 6,
+          "377": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 41,
+        "weighted_response_count": 41
+      },
+      {
+        "Aut": 1,
+        "H": 41,
+        "K": 1,
+        "id": [
+          "prime5",
+          1
+        ],
+        "order": 6,
+        "ordinary_ports": 41,
+        "ordinary_target_incidence": {
+          "88": 1,
+          "89": 1,
+          "144": 1,
+          "146": 1,
+          "148": 2,
+          "149": 1,
+          "150": 1,
+          "152": 4,
+          "153": 1,
+          "154": 2,
+          "156": 1,
+          "280": 2,
+          "281": 4,
+          "282": 1,
+          "313": 2,
+          "344": 6,
+          "345": 6,
+          "377": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 41,
+        "weighted_response_count": 41
+      },
+      {
+        "Aut": 1,
+        "H": 41,
+        "K": 1,
+        "id": [
+          "prime5",
+          2
+        ],
+        "order": 6,
+        "ordinary_ports": 41,
+        "ordinary_target_incidence": {
+          "88": 1,
+          "89": 1,
+          "144": 1,
+          "146": 1,
+          "148": 2,
+          "149": 1,
+          "150": 1,
+          "152": 4,
+          "153": 1,
+          "154": 2,
+          "156": 1,
+          "280": 2,
+          "281": 4,
+          "282": 1,
+          "313": 2,
+          "344": 6,
+          "345": 6,
+          "377": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 41,
+        "weighted_response_count": 41
+      },
+      {
+        "Aut": 1,
+        "H": 41,
+        "K": 1,
+        "id": [
+          "prime5",
+          3
+        ],
+        "order": 6,
+        "ordinary_ports": 41,
+        "ordinary_target_incidence": {
+          "88": 1,
+          "89": 1,
+          "144": 1,
+          "146": 1,
+          "148": 2,
+          "149": 1,
+          "150": 1,
+          "152": 4,
+          "153": 1,
+          "154": 2,
+          "156": 1,
+          "280": 2,
+          "281": 4,
+          "282": 1,
+          "313": 2,
+          "344": 6,
+          "345": 6,
+          "377": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 41,
+        "weighted_response_count": 41
+      },
+      {
+        "Aut": 1,
+        "H": 41,
+        "K": 1,
+        "id": [
+          "prime5",
+          4
+        ],
+        "order": 6,
+        "ordinary_ports": 41,
+        "ordinary_target_incidence": {
+          "88": 1,
+          "89": 1,
+          "144": 1,
+          "146": 1,
+          "148": 2,
+          "149": 1,
+          "150": 1,
+          "152": 4,
+          "153": 1,
+          "154": 2,
+          "156": 1,
+          "280": 2,
+          "281": 4,
+          "282": 1,
+          "313": 2,
+          "344": 6,
+          "345": 6,
+          "377": 1,
+          "408": 2,
+          "1332": 1
+        },
+        "unweighted_response_count": 41,
+        "weighted_response_count": 41
+      },
+      {
+        "Aut": 5,
+        "H": 15,
+        "K": 5,
+        "id": [
+          "prime5",
+          "singleton"
+        ],
+        "order": 5,
+        "ordinary_ports": 3,
+        "ordinary_target_incidence": {
+          "12": 1,
+          "40": 1,
+          "41": 1
+        },
+        "unweighted_response_count": 15,
+        "weighted_response_count": 15
+      },
+      {
+        "Aut": 21,
+        "H": 189,
+        "K": 21,
+        "id": [
+          "Paley7",
+          "singleton"
+        ],
+        "order": 7,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "1592": 1,
+          "5682": 1,
+          "9272": 1,
+          "9400": 2,
+          "9528": 1,
+          "9585": 2,
+          "9649": 1
+        },
+        "unweighted_response_count": 189,
+        "weighted_response_count": 189
+      },
+      {
+        "Aut": 1,
+        "H": 93,
+        "K": 1,
+        "id": [
+          "multiplicity5",
+          10
+        ],
+        "order": 7,
+        "ordinary_ports": 93,
+        "ordinary_target_incidence": {
+          "16": 1,
+          "18": 1,
+          "33": 1,
+          "34": 1,
+          "45": 1,
+          "46": 1,
+          "145": 1,
+          "153": 1,
+          "163": 1,
+          "169": 1,
+          "171": 2,
+          "272": 1,
+          "273": 1,
+          "274": 2,
+          "289": 1,
+          "290": 1,
+          "293": 1,
+          "295": 1,
+          "297": 1,
+          "298": 2,
+          "299": 2,
+          "301": 2,
+          "309": 1,
+          "313": 1,
+          "337": 1,
+          "357": 1,
+          "545": 2,
+          "546": 1,
+          "547": 1,
+          "550": 1,
+          "553": 1,
+          "554": 2,
+          "555": 1,
+          "557": 1,
+          "562": 1,
+          "563": 1,
+          "565": 1,
+          "569": 1,
+          "610": 1,
+          "611": 1,
+          "615": 1,
+          "619": 2,
+          "622": 1,
+          "675": 1,
+          "678": 1,
+          "679": 2,
+          "685": 2,
+          "686": 1,
+          "691": 2,
+          "692": 1,
+          "694": 2,
+          "698": 2,
+          "741": 1,
+          "747": 1,
+          "802": 1,
+          "803": 1,
+          "807": 1,
+          "811": 2,
+          "826": 1,
+          "1072": 1,
+          "1196": 2,
+          "1209": 1,
+          "1322": 1,
+          "1456": 1,
+          "4641": 2,
+          "4643": 1,
+          "4659": 1,
+          "4706": 1,
+          "4707": 2,
+          "4714": 1,
+          "5241": 1,
+          "5368": 1,
+          "9333": 1,
+          "9395": 2,
+          "11371": 1
+        },
+        "unweighted_response_count": 88,
+        "weighted_response_count": 93
+      }
+    ],
+    "literal_flux_path_checks": 1003,
+    "multiplicity_hostile": {
+      "Aut": 1,
+      "H": 93,
+      "K": 1,
+      "id": [
+        "multiplicity5",
+        10
+      ],
+      "order": 7,
+      "ordinary_ports": 93,
+      "ordinary_target_incidence": {
+        "16": 1,
+        "18": 1,
+        "33": 1,
+        "34": 1,
+        "45": 1,
+        "46": 1,
+        "145": 1,
+        "153": 1,
+        "163": 1,
+        "169": 1,
+        "171": 2,
+        "272": 1,
+        "273": 1,
+        "274": 2,
+        "289": 1,
+        "290": 1,
+        "293": 1,
+        "295": 1,
+        "297": 1,
+        "298": 2,
+        "299": 2,
+        "301": 2,
+        "309": 1,
+        "313": 1,
+        "337": 1,
+        "357": 1,
+        "545": 2,
+        "546": 1,
+        "547": 1,
+        "550": 1,
+        "553": 1,
+        "554": 2,
+        "555": 1,
+        "557": 1,
+        "562": 1,
+        "563": 1,
+        "565": 1,
+        "569": 1,
+        "610": 1,
+        "611": 1,
+        "615": 1,
+        "619": 2,
+        "622": 1,
+        "675": 1,
+        "678": 1,
+        "679": 2,
+        "685": 2,
+        "686": 1,
+        "691": 2,
+        "692": 1,
+        "694": 2,
+        "698": 2,
+        "741": 1,
+        "747": 1,
+        "802": 1,
+        "803": 1,
+        "807": 1,
+        "811": 2,
+        "826": 1,
+        "1072": 1,
+        "1196": 2,
+        "1209": 1,
+        "1322": 1,
+        "1456": 1,
+        "4641": 2,
+        "4643": 1,
+        "4659": 1,
+        "4706": 1,
+        "4707": 2,
+        "4714": 1,
+        "5241": 1,
+        "5368": 1,
+        "9333": 1,
+        "9395": 2,
+        "11371": 1
+      },
+      "unweighted_response_count": 88,
+      "weighted_response_count": 93
+    },
+    "scalar_hostile": {
+      "left": {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          3,
+          0,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "8": 1,
+          "19": 1,
+          "22": 1,
+          "83": 1,
+          "145": 1,
+          "149": 1,
+          "154": 1,
+          "179": 1,
+          "281": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      },
+      "right": {
+        "Aut": 3,
+        "H": 27,
+        "K": 1,
+        "id": [
+          4,
+          0,
+          0
+        ],
+        "order": 6,
+        "ordinary_ports": 9,
+        "ordinary_target_incidence": {
+          "4": 1,
+          "17": 1,
+          "18": 1,
+          "73": 1,
+          "83": 1,
+          "145": 1,
+          "146": 1,
+          "152": 1,
+          "154": 1
+        },
+        "unweighted_response_count": 9,
+        "weighted_response_count": 9
+      }
+    }
+  },
+  "endpoint": {
+    "H": 5307704039306577787515,
+    "denominator": {
+      "0": 1,
+      "11": -1,
+      "13": -1,
+      "15": -1,
+      "22": -1,
+      "26": -1,
+      "27": -1,
+      "30": -1,
+      "31": -2,
+      "35": -1,
+      "43": -1,
+      "44": -1,
+      "45": -1,
+      "47": -2,
+      "49": -1,
+      "51": -1,
+      "52": -1,
+      "53": -1,
+      "54": -1,
+      "55": -2,
+      "59": -2,
+      "60": -1,
+      "61": -2,
+      "62": -2,
+      "63": -4,
+      "69": -1,
+      "70": -1,
+      "71": -1,
+      "77": -1,
+      "79": -2,
+      "81": -1,
+      "85": -1,
+      "86": -1,
+      "87": -2,
+      "88": -1,
+      "89": -1,
+      "90": -1,
+      "91": -2,
+      "93": -2,
+      "94": -2,
+      "95": -4,
+      "98": -1,
+      "99": -1,
+      "102": -1,
+      "103": -2,
+      "104": -1,
+      "106": -1,
+      "107": -2,
+      "108": -1,
+      "109": -2,
+      "110": -2,
+      "111": -4,
+      "113": -1,
+      "115": -2,
+      "117": -2,
+      "118": -2,
+      "119": -4,
+      "120": -1,
+      "121": -2,
+      "122": -2,
+      "123": -4,
+      "124": -2,
+      "125": -4,
+      "126": -4,
+      "127": -24
+    },
+    "denominator_monomials": 65,
+    "histograms": {
+      "0": {
+        "-3": 904059641425546663407,
+        "-1": 3224938862970202603302,
+        "1": 1178705534910828520806
+      },
+      "1": {
+        "-4": 33969292958559729915,
+        "-3": 686230924996054050381,
+        "-2": 583327995868679088699,
+        "-1": 2390029739568634683546,
+        "0": 673549501709957419350,
+        "1": 888349742617005772218,
+        "2": 52246841587687043406
+      },
+      "2": {
+        "-4": 56615488264266216525,
+        "-3": 541011780709725641697,
+        "-2": 972213326447798481165,
+        "-1": 1833423657300922737042,
+        "0": 1122582502849929032250,
+        "1": 694779214421123939826,
+        "2": 87078069312811739010
+      },
+      "3": {
+        "-4": 67938585917119459830,
+        "-3": 468402208566561437355,
+        "-2": 1166655991737358177398,
+        "-1": 1555120616167066763790,
+        "0": 1347099003419914838700,
+        "1": 597993950323183023630,
+        "2": 104493683175374086812
+      },
+      "4": {
+        "-4": 67938585917119459830,
+        "-3": 468402208566561437355,
+        "-2": 1166655991737358177398,
+        "-1": 1555120616167066763790,
+        "0": 1347099003419914838700,
+        "1": 597993950323183023630,
+        "2": 104493683175374086812
+      },
+      "5": {
+        "-4": 56615488264266216525,
+        "-3": 541011780709725641697,
+        "-2": 972213326447798481165,
+        "-1": 1833423657300922737042,
+        "0": 1122582502849929032250,
+        "1": 694779214421123939826,
+        "2": 87078069312811739010
+      },
+      "6": {
+        "-4": 33969292958559729915,
+        "-3": 686230924996054050381,
+        "-2": 583327995868679088699,
+        "-1": 2390029739568634683546,
+        "0": 673549501709957419350,
+        "1": 888349742617005772218,
+        "2": 52246841587687043406
+      },
+      "7": {
+        "-3": 904059641425546663407,
+        "-1": 3224938862970202603302,
+        "1": 1178705534910828520806
+      }
+    },
+    "local_profiles": [
+      {
+        "1": 3,
+        "2": 18,
+        "3": 36,
+        "4": 24
+      },
+      {
+        "1": 3,
+        "2": 18,
+        "3": 36,
+        "4": 24
+      }
+    ],
+    "method": "Cramer determinant/cofactor reciprocal polynomial, independent of last-slot DP"
+  },
+  "field": {
+    "H": 189,
+    "classes": [
+      {
+        "canonical_word": "0000000",
+        "parameter": [
+          0,
+          0,
+          0
+        ],
+        "stabilizer": 21,
+        "weight": 0
+      },
+      {
+        "canonical_word": "0011101",
+        "parameter": [
+          0,
+          0,
+          1
+        ],
+        "stabilizer": 3,
+        "weight": 4
+      },
+      {
+        "canonical_word": "0010111",
+        "parameter": [
+          0,
+          1,
+          0
+        ],
+        "stabilizer": 3,
+        "weight": 4
+      },
+      {
+        "canonical_word": "0111111",
+        "parameter": [
+          0,
+          1,
+          1
+        ],
+        "stabilizer": 3,
+        "weight": 6
+      },
+      {
+        "canonical_word": "0001111",
+        "parameter": [
+          0,
+          1,
+          2
+        ],
+        "stabilizer": 1,
+        "weight": 4
+      },
+      {
+        "canonical_word": "0000011",
+        "parameter": [
+          0,
+          1,
+          3
+        ],
+        "stabilizer": 1,
+        "weight": 2
+      },
+      {
+        "canonical_word": "1111111",
+        "parameter": [
+          1,
+          0,
+          0
+        ],
+        "stabilizer": 21,
+        "weight": 7
+      },
+      {
+        "canonical_word": "0001011",
+        "parameter": [
+          1,
+          0,
+          1
+        ],
+        "stabilizer": 3,
+        "weight": 3
+      },
+      {
+        "canonical_word": "0001101",
+        "parameter": [
+          1,
+          1,
+          0
+        ],
+        "stabilizer": 3,
+        "weight": 3
+      },
+      {
+        "canonical_word": "0000001",
+        "parameter": [
+          1,
+          1,
+          1
+        ],
+        "stabilizer": 3,
+        "weight": 1
+      },
+      {
+        "canonical_word": "0000111",
+        "parameter": [
+          1,
+          1,
+          2
+        ],
+        "stabilizer": 1,
+        "weight": 3
+      },
+      {
+        "canonical_word": "0011111",
+        "parameter": [
+          1,
+          1,
+          3
+        ],
+        "stabilizer": 1,
+        "weight": 5
+      }
+    ],
+    "cyclic_triangles": 14,
+    "group": 21,
+    "hypergraph_group": 42,
+    "point_stabilizers": {
+      "1": 40,
+      "3": 8
+    },
+    "pointed_classes": 48,
+    "same_stabilizer_weight3_words": [
+      "0001101",
+      "0001011"
+    ]
+  },
+  "input_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "loss_hostiles": {
+    "bare_marginal": {
+      "K": 3,
+      "child_response_tuples": 1,
+      "ordinary_ports": 1,
+      "quotient_walks": 3
+    },
+    "port_loss": {
+      "child_code": 7,
+      "child_order": 4,
+      "common_outer_response": [
+        [
+          0,
+          1
+        ],
+        4
+      ],
+      "covers": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            3
+          ]
+        ]
+      ],
+      "glued_target_codes": [
+        81,
+        83
+      ],
+      "walk": [
+        0,
+        1,
+        2,
+        0
+      ]
+    }
+  },
+  "recursive_response": {
+    "all_ordered_covers": 7523,
+    "all_response_classes": 3044,
+    "cases": [
+      {
+        "Aut": 3,
+        "K": 3,
+        "all_ordered_covers": 15,
+        "by_d": {
+          "1": 1,
+          "2": 2,
+          "3": 2
+        },
+        "child_sizes": [
+          1,
+          1,
+          1
+        ],
+        "order": 3,
+        "quotient_order": 3,
+        "response_classes": 5
+      },
+      {
+        "Aut": 1,
+        "K": 1,
+        "all_ordered_covers": 87,
+        "by_d": {
+          "1": 5,
+          "2": 22,
+          "3": 36,
+          "4": 24
+        },
+        "child_sizes": [
+          2,
+          1,
+          1
+        ],
+        "order": 4,
+        "quotient_order": 3,
+        "response_classes": 87
+      },
+      {
+        "Aut": 3,
+        "K": 1,
+        "all_ordered_covers": 651,
+        "by_d": {
+          "1": 5,
+          "2": 26,
+          "3": 66,
+          "4": 80,
+          "5": 40
+        },
+        "child_sizes": [
+          3,
+          1,
+          1
+        ],
+        "order": 5,
+        "quotient_order": 3,
+        "response_classes": 217
+      },
+      {
+        "Aut": 1,
+        "K": 1,
+        "all_ordered_covers": 647,
+        "by_d": {
+          "1": 11,
+          "2": 78,
+          "3": 198,
+          "4": 240,
+          "5": 120
+        },
+        "child_sizes": [
+          2,
+          2,
+          1
+        ],
+        "order": 5,
+        "quotient_order": 3,
+        "response_classes": 647
+      },
+      {
+        "Aut": 3,
+        "K": 3,
+        "all_ordered_covers": 5967,
+        "by_d": {
+          "1": 15,
+          "2": 114,
+          "3": 372,
+          "4": 648,
+          "5": 600,
+          "6": 240
+        },
+        "child_sizes": [
+          2,
+          2,
+          2
+        ],
+        "order": 6,
+        "quotient_order": 3,
+        "response_classes": 1986
+      },
+      {
+        "Aut": 3,
+        "K": 1,
+        "all_ordered_covers": 81,
+        "by_d": {
+          "1": 1,
+          "2": 6,
+          "3": 12,
+          "4": 8
+        },
+        "child_sizes": [
+          3,
+          1
+        ],
+        "order": 4,
+        "quotient_order": 2,
+        "response_classes": 27
+      },
+      {
+        "Aut": 1,
+        "K": 1,
+        "all_ordered_covers": 75,
+        "by_d": {
+          "1": 1,
+          "2": 14,
+          "3": 36,
+          "4": 24
+        },
+        "child_sizes": [
+          2,
+          2
+        ],
+        "order": 4,
+        "quotient_order": 2,
+        "response_classes": 75
+      }
+    ]
+  }
+}

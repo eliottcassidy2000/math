@@ -1,0 +1,15 @@
+ROOT_ADDENDUM.md
+ROOT_REVIEW.json
+check.py
+firewalls.normal.json
+firewalls.optimized.json
+negative.normal.stderr
+negative.normal.stdout
+negative.optimized.stderr
+negative.optimized.stdout
+normal.json
+optimized.json
+root.normal.json
+root.optimized.json
+ALLOWLIST.txt
+SHA256SUMS

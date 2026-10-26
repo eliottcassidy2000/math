@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "bytes": 23523,
+      "path": "REPORT.md",
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    {
+      "bytes": 19231,
+      "path": "check.py",
+      "sha256": "a70382704e415ab9669d9574e7d6ccbf9b1037c7add061c66691169d67005d73"
+    },
+    {
+      "bytes": 20814,
+      "path": "receipt.json",
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "bytes": 20814,
+      "path": "receipt.optimized.json",
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "bytes": 2418,
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "537570e4d1834f606b33fbdc0e4c8c47ecb9821d8be3798f49c1c1ae22fce72d"
+    }
+  ],
+  "reproduction": [
+    "python3 -I -B check.py",
+    "python3 -I -B -O check.py"
+  ],
+  "scope": "Selected delivery files only; probe.py, endpoint_probe.py/out and __pycache__ are exploratory scratch, not dependencies or delivery inputs.",
+  "status": "Normal and optimized producer receipts identical; independent proof and computational audit packaged separately."
+}

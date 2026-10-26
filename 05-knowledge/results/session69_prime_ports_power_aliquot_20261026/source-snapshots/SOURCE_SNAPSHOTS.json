@@ -1,0 +1,60 @@
+{
+  "input_commit": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "files": [
+    {
+      "bytes": 6823,
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41"
+    },
+    {
+      "bytes": 23418,
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3"
+    },
+    {
+      "bytes": 9804,
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda"
+    },
+    {
+      "bytes": 5667,
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8"
+    },
+    {
+      "bytes": 7855,
+      "path": "01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "sha256": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e",
+      "git_blob": "e7af568d8c78ffd550d7d68dde67f6b4763c0d60"
+    },
+    {
+      "bytes": 20835,
+      "path": "05-knowledge/results/cyclictriple_composition_20261026/README.md",
+      "sha256": "a0e6faed7d6e454699b3eaa0a5da2bbc1d613288665eb4a205d8ee69f04caa4e",
+      "git_blob": "c08eb4a2ebe0d1dded00d54c173ba887bb7aadfb"
+    },
+    {
+      "bytes": 8936,
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6",
+      "git_blob": "63ead76e66bf475ee7c5a09ffecba4aab45298c4"
+    },
+    {
+      "bytes": 13580,
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/metagraph/RESULT.md",
+      "sha256": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd",
+      "git_blob": "5ca8bf4d3ac5edd96daa70834962935873bf0643"
+    },
+    {
+      "bytes": 4620,
+      "path": "05-knowledge/hypotheses/HYP-9414-module-shattering-consequences-injective-fibres-pair-module-partners-and-the-orbit-size-law.md",
+      "sha256": "ee1f6b2ce4906acd8bac92ca88aca52eb8cc8a7c1bad1a4201338abff489bda0",
+      "git_blob": "8f3909d6d7871060d20e747b1922600955c25d36"
+    }
+  ],
+  "scope": "Exact inherited source bytes only; historical statements are not blanket-audited and no snapshot program is executed."
+}

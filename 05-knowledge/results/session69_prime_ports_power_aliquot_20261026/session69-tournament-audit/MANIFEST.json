@@ -1,0 +1,82 @@
+{
+  "active_checks": 4464,
+  "allowlist": [
+    "AUDIT.md",
+    "audit.py",
+    "audit_results.json",
+    "normal.out",
+    "optimized.out",
+    "producer.replay.normal.json",
+    "producer.replay.optimized.json",
+    "inputs/producer_endpoint_reference.json",
+    "MANIFEST.json"
+  ],
+  "auditor_changes_repository": false,
+  "endpoint_reference_origin": {
+    "extraction": "First JSON object, excluding F-profile and timing prose; canonical sorted indentation.",
+    "source": "session69-tournament/endpoint_probe.out",
+    "source_sha256": "5d7232399e0001922dcdaa15557d979d6c9acde8965b742d84727ceaf83fd1ad"
+  },
+  "files": {
+    "AUDIT.md": {
+      "bytes": 10899,
+      "sha256": "a5d37dbf48fcfd75852b8bbc0c41fe896fe5cc650965ae0aa90f1ec5a360ec87"
+    },
+    "audit.py": {
+      "bytes": 19891,
+      "sha256": "c07f0d8e3ee7cfb85978ff6c989c9443a0e60657032292729492aa6a00f7d7b7"
+    },
+    "audit_results.json": {
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    "inputs/producer_endpoint_reference.json": {
+      "bytes": 3404,
+      "sha256": "abe371d6d18d5003dc20cec10cc040d290fda15c7968ca5c4a0e363ce6442bbe"
+    },
+    "normal.out": {
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    "optimized.out": {
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    "producer.replay.normal.json": {
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    "producer.replay.optimized.json": {
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    }
+  },
+  "input_repository_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "normal_optimized_identical": true,
+  "producer_normal_optimized_identical": true,
+  "producer_replay_matches_frozen_receipt": true,
+  "relocation": "Self-contained audit.py uses only pathlib(__file__).parent and sibling inputs/producer_endpoint_reference.json; no repository or network needed.",
+  "reviewed_producer_files": {
+    "REPORT.md": {
+      "bytes": 23523,
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    "SOURCE_MANIFEST.json": {
+      "bytes": 2418,
+      "sha256": "537570e4d1834f606b33fbdc0e4c8c47ecb9821d8be3798f49c1c1ae22fce72d"
+    },
+    "check.py": {
+      "bytes": 19231,
+      "sha256": "a70382704e415ab9669d9574e7d6ccbf9b1037c7add061c66691169d67005d73"
+    },
+    "receipt.json": {
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    "receipt.optimized.json": {
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    }
+  },
+  "status": "ACCEPTED: proof audit plus independent exact checks; no formal verification"
+}

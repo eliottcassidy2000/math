@@ -1,9 +1,114 @@
-# Session69 — distinct first sixes, exact occurrences, and guarded bridges
+# Session69 — prime actions in field coordinates and exact literal-target composition
 
-**Status:** independently audited elementary proofs and separately scoped
-**FINITE-EXACT** checks. This checkpoint recovers the arithmetic interfaces
-needed by the continuing prime-action and literal-metagraph investigation;
-it does not claim an unrestricted prime atlas or full metagraph closure.
+**Status:** independently audited elementary proofs relative to explicitly
+**CITED** canonical decomposition/realization inputs, with separately scoped
+**FINITE-EXACT** controls. No formal-assistant verification, unrestricted prime
+census, or small-state/efficient general metagraph algorithm is claimed.
+
+Two concrete advances go beyond matching the small numbers. The full Paley7
+action now has a complete field-coordinate classifier and marked move law.
+More generally, ordered multi-rooted complemented-path-cover responses form
+an **exact recursively closed ordinary, uncoloured target-incidence carrier**
+under canonical tournament substitution. The full response state is large;
+the theorem is closure, not an economical classification of all prime inputs.
+
+## The prime-action atlas obtained
+
+[Native theorem/proof report](session69-tournament/REPORT.md), F1–F5, uses
+`F=F2[alpha]/(alpha^3+alpha+1)` and the actual arc predicate on `F*`:
+
+    x -> y  iff  Tr(y/x)=0,       x != y.
+
+This is Paley7 in exponent coordinates. The full group is
+`GammaL1(8)=C7 ⋊ C3`, not merely the cyclic subgroup. Every binary decoration
+is uniquely
+
+    w(x)=a+Tr(bx+c x^3),       a in F2, b,c in F8.
+
+For `b!=0`, its normalized parameter is `r=c/b^3` modulo Frobenius. Together
+with the two `b=0` cases this gives six types per parity, hence **12 ordinary
+classes**, with root stabilizer strata `2,6,4` of orders `21,3,1`. The 12-class
+census is recovered prior work; the full field classifier and marked law are
+the continuation. The cyclic-only necklace quotient has 20 classes and loses
+the extra action.
+
+For `T_w=Paley7[A_(w_i)]`, `A0=1->C3`, `A1=A0^op`, the complete ordinary
+cyclic-triple-realization fibre has those 12 types. The full labelled fibre
+has `2^15` members; standard palette words and labelled realizations differ.
+The group is `C3^7 ⋊ Stab(w)` with its actual slot action retained. These
+fibre assertions use the explicitly cited reconstruction theorem.
+
+Marking a quotient slot z gives `(a,B,C)=(a,bz,cz^3)` modulo simultaneous
+Frobenius. A modular block flip is exactly
+
+    (a,B,C) -> (a+1,B+1,C+1).
+
+There are **48 block-pointed classes**, 24 unoriented flip-port orbits, and
+96 actual-vertex-pointed types. This modular flip is not a literal
+Hamilton-path-complement line. The function-module dimensions are **1+3+3**;
+the exponent orbit `{1,2,4}` is not a representation-theoretic 1+2+4 split.
+The trace rule also fails as a universal binary-field recipe: the report's
+F32 inverse-pair hostile would orient a pair both ways.
+
+## An exact, recursively closed literal-target interface
+
+For an ordered spanning c-path cover C of a child S, retain
+
+    rho(C) = [ S^op xor E(C) ;
+               (first(P1),last(P1)),...,(first(Pc),last(Pc)) ].
+
+The brackets mean the full multi-rooted ordinary target type. Endpoint
+coincidences from singleton paths and the number of source-cover orbits
+giving each response are retained. They cannot be replaced by scalar counts.
+
+**P2:** a Hamilton word in `Q[S1,...,Sq]` splits uniquely into maximal block
+runs. Its quotient walk orders the child-cover occurrences. Start with all
+cross arcs reversed, then restore precisely the inter-run endpoint hinges.
+Multiplying child response weights and dividing the invariant aggregate by
+the actual child-type stabilizer `|K|` computes each ordinary target-class
+incidence, not only H or triangle flux. The retained walk is the free carrier;
+a bare response marginal cannot simply be assumed to carry a free `|K|`
+action.
+
+**P3:** use an ordered d-tuple of quotient walks and keep the ordered outer
+endpoint pair of each global path. Hinges occur only inside each walk.
+There is no `d!`. The same construction computes every parent cover response
+from child responses, with singleton bases and the analogous ordered linear
+node rule. Thus it is recursively closed on the canonical strong-module tree
+given the prime/linear quotient relations and their actions. It does not
+assume that source modules survive in the literal target.
+
+Two exact state-loss controls make this closure substantive:
+
+- In `C3[S4,1,1]`, two covers with the same local target and same two outer
+  endpoints produce distinct literal target codes **81 and 83**. Two outer endpoints alone fail;
+  retaining all ordered component marks repairs this witness.
+- In `C3[S5,1,1]`, replacing positive response weights by one changes the
+  correct **93** ordinary source ports to **88**. Equal responses genuinely
+  aggregate multiple covers; their multiplicity is not disposable.
+
+## What even the full flux observer loses
+
+All 128 Paley28 decorations have
+`H=5307704039306577787515` and 903 cyclic triples. The complete raw literal
+partner flux histogram depends only on `k(7-k)`, where k is the number of
+reversed blocks. In particular, two different weight-three Fano classes have
+the same H, full automorphism order **6561**, and entire raw flux histogram,
+yet are not isomorphic or converses. This is a same-group-order hostile, not
+merely a collision of scalar H.
+
+For the prime source Paley7 itself, **nine ordinary source ports reach seven
+ordinary target classes**. Two prime target classes are reached twice, while
+some other targets are nonprime. This does not refute a conjecture restricted
+to sources whose every partner is prime, nor the distinct carousel conjecture.
+The complete target codes and paths are in the native report and receipt.
+
+[Independent tournament audit](session69-tournament-audit/AUDIT.md) accepts
+F1–F5 and P2–P3: **4,464 active checks**, 31 literal-target substitution
+controls, and seven all-d cases totaling **7,523 ordered covers / 3,044
+response categories**. It imports no producer code. Its Paley28 endpoint
+calculation uses determinant/cofactor rational-walk expansion, independently
+of the producer's bounded-content dynamic program.
 
 ## What the small numbers actually say
 
@@ -37,6 +142,21 @@ The collision family is exact: for odd twin primes `p,p+2`,
 `s(2p)=s((p+2)^2)=p+3`. Only `p=3` gives a self-preimage in this family.
 This supplies witnesses, not every source of every such target, and assumes
 no infinitude of twin primes.
+
+**A stronger global uniqueness theorem now explains the rare conjunction:**
+for positive N and prime p,
+
+    s(N)=N and s(p^2)=N  iff  (N,p)=(6,5).
+
+Thus six is the **unique perfect target with a prime-square preimage**,
+not just the first such target or a special case within the twin-prime family.
+[Elementary proof](session69-root/RARE_SIX.md) uses the even-perfect-number
+structure and a modulo-three obstruction; it assumes nothing about odd
+perfect numbers or the infinitude of Mersenne primes.
+[Separate independent addendum](session69-arithmetic-corollary-audit/ROOT_ADDENDUM.md)
+accepts the proof and repaired [connection firewalls](session69-root/CONNECTIONS.md),
+with a different sigma sieve through one million and 196 active checks.
+The separate square-later predicate still has density one half.
 
 ## Exact arithmetic classifiers
 
@@ -89,7 +209,7 @@ Keep the three image questions separate:
 No target-preserving map identifying these missing-fibre predicates is given.
 The useful common method is certified image analysis with its sidecars kept.
 
-## Independent audit and reproduction
+## Arithmetic audit and reproduction
 
 [Independent proof and scope audit](session69-arithmetic-audit/REPORT.md)
 accepts these statements without a requested mathematical correction.
@@ -115,14 +235,43 @@ Native source reports, scripts, snapshots and receipts remain byte-for-byte
 unchanged. Their research pin is `61d7cca5d8df80169f939268269239c2f67ea724`;
 this is not the publication-parent pin.
 
-Concurrent mainline reservation `fa62e88c5f36159c4c5c2c5c9d9f78600afe3ffc`
-contains empty **RESERVED / UNPROVED** THM-4805/HYP-9415 stubs for overlapping
-questions. It is preserved and is not a proved dependency of this packet.
-The inheritance/audit reports credit prior work by full slug, with source
-snapshots and pins; no global novelty or priority claim is made.
+## Provenance, concurrent work, and the remaining boundary
 
-**Still unestablished:** unrestricted prime-tournament classification, an economical closed
-general metagraph grammar, prime-untouchable completeness, uniform ABC, or any
-LRC(14) consequence. The continuing tournament lane must retain the full
-prime permutation action and literal path/port targets rather than infer them
-from arithmetic seeds, scalar counts, or shared small labels.
+The research pin is `61d7cca5d8df80169f939268269239c2f67ea724`, not the
+publication parent. Native producer and independent-audit files are frozen
+byte-for-byte; [source snapshots](source-snapshots/SOURCE_SNAPSHOTS.json)
+identify the exact inherited inputs.
+No source snapshot is a blanket endorsement of its historical claims.
+
+Concurrent reservation `fa62e88c5f36159c4c5c2c5c9d9f78600afe3ffc` contains
+empty **RESERVED / UNPROVED** THM-4805/HYP-9415 stubs, not proved dependencies.
+Concurrent `563022f89374a78270832c30fa8b165d340911da` supplies the separately
+published [joint-port/reflection-fold and run-forest packet](../rooted_lines_frobenius_sheets_20261026/README.md).
+The [incoming scope addendum](session69-tournament-audit/INCOMING_SCOPE.md)
+accepts its R1 joint-port ordered-sum rule, R2 canonical-SCC blue folding,
+and R4 full explicit run-data reconstruction of arbitrary-substitution colour
+and legal re-marking. Incoming code and finite witnesses, including H=289/253,
+were **not replayed here**. This is scoped proof review and explicit credit,
+not a blanket computational endorsement.
+
+Concurrent `52fde1af0df4543960465978c7788726304d4208` publishes the
+[aliquot/power/1–2–4 packet](../aliquot_power_124_20261026/README.md), including
+an independent proof of the **same unique perfect prime-square target** and
+the compatible distinctions between first occurrences at 3, 4 and 6. We retain
+our own frozen proof/audit and explicitly credit the overlapping result; no
+priority claim is made. Its [scope repairs](../aliquot_power_124_20261026/CORRECTIONS.md)
+restore S57's distinct-Goldbach antecedent and THM-4748's minimum-over-a-fibre
+quantifier. Those repairs are preserved; this packet never imports the
+stronger discarded assertions. Its computations were not replayed here.
+
+**Closed here:** sufficient full multi-rooted ordinary, uncoloured response
+composition, recursively from canonical children with their quotient data.
+**Still unestablished here:** an unrestricted structural prime atlas,
+minimal/economical state compression, efficient full metagraph generation,
+an economical universal colour-aware, complement/re-marking-compatible
+aggregate algebra,
+prime-untouchable completeness, uniform ABC, or any LRC(14) consequence.
+The separate coloured ordered-join rule and lossless full-run reconstruction
+must not be erased by an overly broad claim that all colour handling is open.
+P3 itself proves ordinary uncoloured aggregation; no target-only colour-
+sufficiency probe or small universal closure theorem is claimed.

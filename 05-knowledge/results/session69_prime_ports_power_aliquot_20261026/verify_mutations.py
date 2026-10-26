@@ -23,12 +23,17 @@ def main():
     script = next(row['path'] for row in manifest['files']
                   if row['path'].endswith('.py') and row['path'] != 'verify_packet.py')
     receipt = manifest['replays'][0]['normal']
-    cases = ('source-byte', 'receipt-byte', 'missing-file', 'extra-file',
-             'symlink-file', 'unsafe-manifest-path')
+    cases = ['source-byte', 'receipt-byte', 'missing-file', 'extra-file',
+             'symlink-file', 'unsafe-manifest-path']
+    # Exercise every replay lane, not just the first producer's source/receipt.
+    lane_sources = sorted({job['script'] for job in manifest['replays']})
+    lane_receipts = sorted({job['normal'] for job in manifest['replays']})
+    cases += ['lane-source:' + name for name in lane_sources]
+    cases += ['lane-receipt:' + name for name in lane_receipts]
     results = []
     with tempfile.TemporaryDirectory(prefix='session69-mutations-') as temp:
         for case in ('unchanged', *cases):
-            packet = Path(temp) / case
+            packet = Path(temp) / str(len(results))
             shutil.copytree(ROOT, packet, ignore=shutil.ignore_patterns('__pycache__'))
             if case == 'source-byte':
                 p = packet / script
@@ -50,6 +55,9 @@ def main():
                 altered['files'][0]['path'] = '../OUTSIDE_CONTROL'
                 altered['files'].sort(key=lambda row: row['path'])
                 (packet / 'FILE_MANIFEST.json').write_text(json.dumps(altered))
+            elif case.startswith(('lane-source:', 'lane-receipt:')):
+                p = packet / case.split(':', 1)[1]
+                p.write_bytes(p.read_bytes() + b'\n# lane corruption control\n')
             for optimized in (False, True):
                 cmd = [sys.executable, '-I', '-B'] + (['-O'] if optimized else [])
                 proc = subprocess.run(cmd + [str(packet / 'verify_packet.py')],

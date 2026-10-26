@@ -1,0 +1,61 @@
+{
+  "status": "ACCEPT",
+  "source_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "root_payload_files": [
+    {
+      "path": "CONNECTIONS.md",
+      "sha256": "dde64747557b25bf16b460deb05d74fc2e40217f02108adfb5604d66929dfa7d",
+      "bytes": 5721
+    },
+    {
+      "path": "check_firewalls.py",
+      "sha256": "32f0ee2b7e64374638503849f590c349307201502ba4d53c18980f07a7eda549",
+      "bytes": 1058
+    },
+    {
+      "path": "firewalls.json",
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67",
+      "bytes": 247
+    },
+    {
+      "path": "firewalls.optimized.json",
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67",
+      "bytes": 247
+    },
+    {
+      "path": "RARE_SIX.md",
+      "sha256": "e969b3a0da22a83944bf1ed7b34c4ba631ad72f0a87b1ead952e1e4c852a29b0",
+      "bytes": 2691
+    },
+    {
+      "path": "check_rare_six.py",
+      "sha256": "c52973703e18f88e15df3b12889a32eed72a240c41c651bbb33c1fd1cd5db853",
+      "bytes": 1073
+    },
+    {
+      "path": "rare_six.json",
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c",
+      "bytes": 872
+    },
+    {
+      "path": "rare_six.optimized.json",
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c",
+      "bytes": 872
+    }
+  ],
+  "root_manifest_sha256": "e18f3a2f370b7a1316c75b9e2fbd89f7ea9d6a9281e337cf208e5b3f330ae466",
+  "repairs": {
+    "positive_unit_loop_handled": true,
+    "value36_not_infinite_row": true,
+    "recursive_sufficient_carrier_not_reopened": true
+  },
+  "original_arithmetic_audit_unchanged": true,
+  "root_normal_optimized_receipts_match": true,
+  "independent_normal_optimized_receipts_match": true,
+  "independent_checks": 196,
+  "negative_exit_codes": {
+    "normal": 1,
+    "optimized": 1
+  },
+  "scope": "elementary uniqueness theorem and repaired root connection firewalls; no independent full rerun of tournament P2/P3 tables"
+}

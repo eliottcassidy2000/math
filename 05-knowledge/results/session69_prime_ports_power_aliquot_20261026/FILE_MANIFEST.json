@@ -4,8 +4,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 6405,
-      "sha256": "8820c0b2e4a4997675f6469783cbfc4728217b452e856d47af465a155d54b322"
+      "bytes": 14637,
+      "sha256": "1a9d61d46454c7955d01dd297104dd00dd0b7e5d098de7f92d2e7a1f23e8e857"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 230,
+      "sha256": "b613d351b5d53a29fac0e0e95a4b4a922f3a0ceb47ec82f186bd697dbd86ca4e"
     },
     {
       "path": "session69-aliquot/ALLOWLIST.txt",
@@ -193,6 +198,81 @@
       "sha256": "fb2947f40e202179245524f903d4818643a7d9c2e83c8355ddd5bc1c1f22ba8f"
     },
     {
+      "path": "session69-arithmetic-corollary-audit/ALLOWLIST.txt",
+      "bytes": 277,
+      "sha256": "5fdf9ce64d04e7cc0fd69bb4ce8c2cdcad9b3f82e0d253dc96b9d7ce448a785b"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/ROOT_ADDENDUM.md",
+      "bytes": 6444,
+      "sha256": "226e2b3895471edbb6a5fe209d5531484074a6317ee5b4c861adccf54a01655c"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/ROOT_REVIEW.json",
+      "bytes": 1955,
+      "sha256": "631de4f7451da6c399c106ef5532802666af537a8845be323a90404bf426de0a"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/SHA256SUMS",
+      "bytes": 1190,
+      "sha256": "6cf6841887382e30f38133d4735c87e084d7c8b77e2f011fdfd0f347d7b6c719"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/check.py",
+      "bytes": 2618,
+      "sha256": "1c4d832cc899badde35b6c9f647e65b23f8282385d0a2674c1a7e4d21d9d978e"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/firewalls.normal.json",
+      "bytes": 247,
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/firewalls.optimized.json",
+      "bytes": 247,
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/negative.normal.stderr",
+      "bytes": 520,
+      "sha256": "568a1ed150b91251d4ce11e40de8eae15050454a228779c4d8d8d37ab1c46995"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/negative.normal.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/negative.optimized.stderr",
+      "bytes": 520,
+      "sha256": "568a1ed150b91251d4ce11e40de8eae15050454a228779c4d8d8d37ab1c46995"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/negative.optimized.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/normal.json",
+      "bytes": 329,
+      "sha256": "2da4715ae01263115f583a5f020722b8babe6841f6f88212447ef0a05d908692"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/optimized.json",
+      "bytes": 329,
+      "sha256": "2da4715ae01263115f583a5f020722b8babe6841f6f88212447ef0a05d908692"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/root.normal.json",
+      "bytes": 872,
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    },
+    {
+      "path": "session69-arithmetic-corollary-audit/root.optimized.json",
+      "bytes": 872,
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    },
+    {
       "path": "session69-power/MANIFEST.json",
       "bytes": 1643,
       "sha256": "7764d77d870a3604f09a69aed5cf54c1cde5dc1fcd2191197e990cdfd6527217"
@@ -243,14 +323,209 @@
       "sha256": "6bac8931f36da09108fe2de7dc42789656a50a8c75a53ae03311c6e0be699624"
     },
     {
+      "path": "session69-root/CONNECTIONS.md",
+      "bytes": 5721,
+      "sha256": "dde64747557b25bf16b460deb05d74fc2e40217f02108adfb5604d66929dfa7d"
+    },
+    {
+      "path": "session69-root/MANIFEST.json",
+      "bytes": 1126,
+      "sha256": "e18f3a2f370b7a1316c75b9e2fbd89f7ea9d6a9281e337cf208e5b3f330ae466"
+    },
+    {
+      "path": "session69-root/RARE_SIX.md",
+      "bytes": 2691,
+      "sha256": "e969b3a0da22a83944bf1ed7b34c4ba631ad72f0a87b1ead952e1e4c852a29b0"
+    },
+    {
+      "path": "session69-root/check_firewalls.py",
+      "bytes": 1058,
+      "sha256": "32f0ee2b7e64374638503849f590c349307201502ba4d53c18980f07a7eda549"
+    },
+    {
+      "path": "session69-root/check_rare_six.py",
+      "bytes": 1073,
+      "sha256": "c52973703e18f88e15df3b12889a32eed72a240c41c651bbb33c1fd1cd5db853"
+    },
+    {
+      "path": "session69-root/firewalls.json",
+      "bytes": 247,
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "session69-root/firewalls.optimized.json",
+      "bytes": 247,
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "session69-root/rare_six.json",
+      "bytes": 872,
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    },
+    {
+      "path": "session69-root/rare_six.optimized.json",
+      "bytes": 872,
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    },
+    {
+      "path": "session69-tournament-audit/AUDIT.md",
+      "bytes": 10899,
+      "sha256": "a5d37dbf48fcfd75852b8bbc0c41fe896fe5cc650965ae0aa90f1ec5a360ec87"
+    },
+    {
+      "path": "session69-tournament-audit/INCOMING_SCOPE.md",
+      "bytes": 4012,
+      "sha256": "d3c986d3cd893e450cfc6d0695cf91257f6a38715149469e4f939830d40a276b"
+    },
+    {
+      "path": "session69-tournament-audit/INCOMING_SCOPE_MANIFEST.json",
+      "bytes": 1301,
+      "sha256": "33adc88a1c0350105ed036dfb9229d5da9ec48f60454ff15e78b9949b9381b19"
+    },
+    {
+      "path": "session69-tournament-audit/MANIFEST.json",
+      "bytes": 2937,
+      "sha256": "5de48fc326593b9d7ec8a70f227d2ca913b589a4e301883e9304b444443e30b1"
+    },
+    {
+      "path": "session69-tournament-audit/audit.py",
+      "bytes": 19891,
+      "sha256": "c07f0d8e3ee7cfb85978ff6c989c9443a0e60657032292729492aa6a00f7d7b7"
+    },
+    {
+      "path": "session69-tournament-audit/audit_results.json",
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    {
+      "path": "session69-tournament-audit/inputs/incoming_563022f_metagraph_RESULT.md",
+      "bytes": 13580,
+      "sha256": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd"
+    },
+    {
+      "path": "session69-tournament-audit/inputs/incoming_563022f_rooted_lines_README.md",
+      "bytes": 15745,
+      "sha256": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+    },
+    {
+      "path": "session69-tournament-audit/inputs/producer_endpoint_reference.json",
+      "bytes": 3404,
+      "sha256": "abe371d6d18d5003dc20cec10cc040d290fda15c7968ca5c4a0e363ce6442bbe"
+    },
+    {
+      "path": "session69-tournament-audit/normal.out",
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    {
+      "path": "session69-tournament-audit/optimized.out",
+      "bytes": 28415,
+      "sha256": "e44b5f3a6a0731d55b67735ac99ede86b61ff96a03706209b789798aa6226d59"
+    },
+    {
+      "path": "session69-tournament-audit/producer.replay.normal.json",
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "path": "session69-tournament-audit/producer.replay.optimized.json",
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "path": "session69-tournament/FILE_MANIFEST.json",
+      "bytes": 1139,
+      "sha256": "bdc223b0933dae04ad357bb5736abb9db5c3b8da4d6cbacab8c8dcc221138e7f"
+    },
+    {
+      "path": "session69-tournament/REPORT.md",
+      "bytes": 23523,
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    {
+      "path": "session69-tournament/SOURCE_MANIFEST.json",
+      "bytes": 2418,
+      "sha256": "537570e4d1834f606b33fbdc0e4c8c47ecb9821d8be3798f49c1c1ae22fce72d"
+    },
+    {
+      "path": "session69-tournament/check.py",
+      "bytes": 19231,
+      "sha256": "a70382704e415ab9669d9574e7d6ccbf9b1037c7add061c66691169d67005d73"
+    },
+    {
+      "path": "session69-tournament/receipt.json",
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "path": "session69-tournament/receipt.optimized.json",
+      "bytes": 20814,
+      "sha256": "11bce9030c71dcb00386c68658f77b5a6c9b1ace9b9fb8ae5255824cce267182"
+    },
+    {
+      "path": "source-snapshots/01-canon/ACTIVE-GUARDRAILS.md",
+      "bytes": 23418,
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "path": "source-snapshots/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "bytes": 5667,
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "source-snapshots/01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "bytes": 9804,
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "source-snapshots/01-canon/theorems/THM-4553-the-point-stripping-ladder-psl27-borel-torus-and-the-collatz-frobenius.md",
+      "bytes": 7855,
+      "sha256": "d3fae498f89b5e811921b58a63cc7804f1186a804d8e0ae5c5b602010e87990e"
+    },
+    {
+      "path": "source-snapshots/05-knowledge/hypotheses/HYP-9414-module-shattering-consequences-injective-fibres-pair-module-partners-and-the-orbit-size-law.md",
+      "bytes": 4620,
+      "sha256": "ee1f6b2ce4906acd8bac92ca88aca52eb8cc8a7c1bad1a4201338abff489bda0"
+    },
+    {
+      "path": "source-snapshots/05-knowledge/results/cyclictriple_composition_20261026/README.md",
+      "bytes": 20835,
+      "sha256": "a0e6faed7d6e454699b3eaa0a5da2bbc1d613288665eb4a205d8ee69f04caa4e"
+    },
+    {
+      "path": "source-snapshots/05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "bytes": 8936,
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "path": "source-snapshots/05-knowledge/results/tournament_composition_classification_20261026/metagraph/RESULT.md",
+      "bytes": 13580,
+      "sha256": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd"
+    },
+    {
+      "path": "source-snapshots/AGENTS.md",
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "source-snapshots/SOURCE_SNAPSHOTS.json",
+      "bytes": 2621,
+      "sha256": "a70df909b2f8e638007f72053a7d1a9a5d5194644ce7f25d1b84606cf0acb8bd"
+    },
+    {
       "path": "verify_mutations.py",
-      "bytes": 2941,
-      "sha256": "d1700e53440a689d7566ecb4d9cb8417f23ab1f67ddf834c195956552b88c57b"
+      "bytes": 3510,
+      "sha256": "c8b485a6e93e55fe53df8d043555846fe8a98486fb4fce80ea3c1a0ec42fd33a"
     },
     {
       "path": "verify_packet.py",
       "bytes": 4876,
       "sha256": "e98edb4fa4c2a3c0b18f901a2ef9501b1231f741ca5c630f20085f0cac988895"
+    },
+    {
+      "path": "verify_provenance.py",
+      "bytes": 4436,
+      "sha256": "a057f787dd6fb4555d51e37379a912af02c199d1c45410cfc1eee147e42aed76"
     }
   ],
   "replays": [
@@ -279,6 +554,36 @@
         "--aliquot",
         "session69-aliquot"
       ]
+    },
+    {
+      "script": "session69-tournament/check.py",
+      "normal": "session69-tournament/receipt.json",
+      "optimized": "session69-tournament/receipt.optimized.json"
+    },
+    {
+      "script": "session69-tournament-audit/audit.py",
+      "normal": "session69-tournament-audit/normal.out",
+      "optimized": "session69-tournament-audit/optimized.out"
+    },
+    {
+      "script": "session69-root/check_firewalls.py",
+      "normal": "session69-root/firewalls.json",
+      "optimized": "session69-root/firewalls.optimized.json"
+    },
+    {
+      "script": "session69-root/check_rare_six.py",
+      "normal": "session69-root/rare_six.json",
+      "optimized": "session69-root/rare_six.optimized.json"
+    },
+    {
+      "script": "session69-arithmetic-corollary-audit/check.py",
+      "normal": "session69-arithmetic-corollary-audit/normal.json",
+      "optimized": "session69-arithmetic-corollary-audit/optimized.json"
+    },
+    {
+      "script": "verify_provenance.py",
+      "normal": "provenance.json",
+      "optimized": "provenance.json"
     }
   ],
   "negative_controls": [
@@ -297,6 +602,14 @@
       ],
       "exit_code": 1,
       "stderr_contains": "negative-control canonical first-six"
+    },
+    {
+      "script": "session69-arithmetic-corollary-audit/check.py",
+      "args": [
+        "--negative-control"
+      ],
+      "exit_code": 1,
+      "stderr_contains": "negative-control unique perfect prime-square target"
     }
   ]
 }

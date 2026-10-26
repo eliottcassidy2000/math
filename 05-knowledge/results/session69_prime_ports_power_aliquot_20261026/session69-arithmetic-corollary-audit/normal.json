@@ -1,0 +1,20 @@
+{
+  "checks": 196,
+  "direct_prime_square_source_count": 168,
+  "negative_control_gate_always_active": true,
+  "perfect_targets": [
+    6,
+    28,
+    496,
+    8128
+  ],
+  "prime_source_bound": 100000,
+  "prime_square_perfect_pairs_N_p": [
+    [
+      6,
+      5
+    ]
+  ],
+  "status": "PASS",
+  "target_census_bound": 1000000
+}

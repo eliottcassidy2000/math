@@ -1,0 +1,37 @@
+{
+  "source_pin": "61d7cca5d8df80169f939268269239c2f67ea724",
+  "files": [
+    {
+      "path": "CONNECTIONS.md",
+      "sha256": "dde64747557b25bf16b460deb05d74fc2e40217f02108adfb5604d66929dfa7d"
+    },
+    {
+      "path": "check_firewalls.py",
+      "sha256": "32f0ee2b7e64374638503849f590c349307201502ba4d53c18980f07a7eda549"
+    },
+    {
+      "path": "firewalls.json",
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "firewalls.optimized.json",
+      "sha256": "abab2cd811228cfdcf8626fdd2eadc8039e327770651a6b611369229e39a3f67"
+    },
+    {
+      "path": "RARE_SIX.md",
+      "sha256": "e969b3a0da22a83944bf1ed7b34c4ba631ad72f0a87b1ead952e1e4c852a29b0"
+    },
+    {
+      "path": "check_rare_six.py",
+      "sha256": "c52973703e18f88e15df3b12889a32eed72a240c41c651bbb33c1fd1cd5db853"
+    },
+    {
+      "path": "rare_six.json",
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    },
+    {
+      "path": "rare_six.optimized.json",
+      "sha256": "678ded7a8d270f0a38fa24608d1bd6d1889b2c3eea9babb0ca9129457fda861c"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/07d5532f2fce/session69-arithmetic-corollary-audit/check.py", line 25, in <module>
+    need(prime_square_targets==([(28,27)] if args.negative_control else [(6,5)]),'negative-control unique perfect prime-square target')
+  File "/workspace/scratch/07d5532f2fce/session69-arithmetic-corollary-audit/check.py", line 9, in need
+    if not c:raise RuntimeError(m)
+             ^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: negative-control unique perfect prime-square target

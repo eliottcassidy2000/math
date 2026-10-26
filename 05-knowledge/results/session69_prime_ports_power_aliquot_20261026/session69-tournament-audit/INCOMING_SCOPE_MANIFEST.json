@@ -1,0 +1,35 @@
+{
+  "allowlist": [
+    "INCOMING_SCOPE.md",
+    "inputs/incoming_563022f_rooted_lines_README.md",
+    "inputs/incoming_563022f_metagraph_RESULT.md",
+    "INCOMING_SCOPE_MANIFEST.json"
+  ],
+  "base_freeze_unchanged": true,
+  "base_manifest": {
+    "bytes": 2937,
+    "sha256": "5de48fc326593b9d7ec8a70f227d2ca913b589a4e301883e9304b444443e30b1"
+  },
+  "files": {
+    "INCOMING_SCOPE.md": {
+      "bytes": 4012,
+      "sha256": "d3c986d3cd893e450cfc6d0695cf91257f6a38715149469e4f939830d40a276b"
+    },
+    "inputs/incoming_563022f_metagraph_RESULT.md": {
+      "bytes": 13580,
+      "sha256": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd"
+    },
+    "inputs/incoming_563022f_rooted_lines_README.md": {
+      "bytes": 15745,
+      "sha256": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+    }
+  },
+  "incoming_commit": "563022f89374a78270832c30fa8b165d340911da",
+  "optional_target_only_colour_probe_performed": false,
+  "repository_edited": false,
+  "source_git_blobs": {
+    "inputs/incoming_563022f_metagraph_RESULT.md": "5ca8bf4d3ac5edd96daa70834962935873bf0643",
+    "inputs/incoming_563022f_rooted_lines_README.md": "9a5e1e7f18b28e90776a7423aa41ba3c20764a8d"
+  },
+  "status": "Proof-scope review accepted; incoming code and finite witnesses NOT replayed"
+}

@@ -1,0 +1,55 @@
+{
+  "Mersenne_controls": [
+    {
+      "N": 6,
+      "N_minus_1_prime": true,
+      "exponent": 2
+    },
+    {
+      "N": 28,
+      "N_minus_1_prime": false,
+      "exponent": 3
+    },
+    {
+      "N": 496,
+      "N_minus_1_prime": false,
+      "exponent": 5
+    },
+    {
+      "N": 8128,
+      "N_minus_1_prime": false,
+      "exponent": 7
+    },
+    {
+      "N": 33550336,
+      "N_minus_1_prime": false,
+      "exponent": 13
+    },
+    {
+      "N": 8589869056,
+      "N_minus_1_prime": false,
+      "exponent": 17
+    },
+    {
+      "N": 137438691328,
+      "N_minus_1_prime": false,
+      "exponent": 19
+    },
+    {
+      "N": 2305843008139952128,
+      "N_minus_1_prime": false,
+      "exponent": 31
+    }
+  ],
+  "perfect_targets": [
+    6,
+    28,
+    496,
+    8128
+  ],
+  "prime_square_companion_targets": [
+    6
+  ],
+  "sieve_bound": 10000,
+  "status": "PASS"
+}
