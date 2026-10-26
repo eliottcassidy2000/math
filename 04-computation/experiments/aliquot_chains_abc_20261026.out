@@ -1,0 +1,142 @@
+1. aliquot preimages s^{-1}(v), v = 0..60 (exact; n < v^2 for composite n):
+    0 <- [1]
+    1 <- primes
+    2 <- NONE (untouchable)
+    3 <- [4]
+    4 <- [9]
+    5 <- NONE (untouchable)
+    6 <- [6, 25]
+    7 <- [8]
+    8 <- [10, 49]
+    9 <- [15]
+   10 <- [14]
+   11 <- [21]
+   12 <- [121]
+   13 <- [27, 35]
+   14 <- [22, 169]
+   15 <- [16, 33]
+   16 <- [12, 26]
+   17 <- [39, 55]
+   18 <- [289]
+   19 <- [65, 77]
+   20 <- [34, 361]
+   21 <- [18, 51, 91]
+   22 <- [20, 38]
+   23 <- [57, 85]
+   24 <- [529]
+   25 <- [95, 119, 143]
+   26 <- [46]
+   27 <- [69, 133]
+   28 <- [28]
+   29 <- [115, 187]
+   30 <- [841]
+   31 <- [32, 125, 161, 209, 221]
+   32 <- [58, 961]
+   33 <- [45, 87, 247]
+   34 <- [62]
+   35 <- [93, 145, 253]
+   36 <- [24]
+   37 <- [155, 203, 299, 323]
+   38 <- [1369]
+   39 <- [217]
+   40 <- [44, 74, 81]
+   41 <- [63, 111, 319, 391]
+   42 <- [30, 1681]
+   43 <- [50, 185, 341, 377, 437]
+   44 <- [82, 1849]
+   45 <- [123, 259, 403]
+   46 <- [52, 86]
+   47 <- [129, 205, 493]
+   48 <- [2209]
+   49 <- [75, 215, 287, 407, 527, 551]
+   50 <- [40, 94]
+   51 <- [141, 301, 481, 589]
+   52 <- NONE (untouchable)
+   53 <- [235, 451, 667]
+   54 <- [42, 2809]
+   55 <- [36, 329, 473, 533, 629, 713]
+   56 <- [106]
+   57 <- [99, 159, 343, 559, 703]
+   58 <- [68]
+   59 <- [265, 517, 697]
+   60 <- [3481]
+   odd values below 200 with exactly one source (n < 200^2): [3, 7, 9, 11, 39]
+   values <= 60 with >= 2 sources: {6: [6, 25], 8: [10, 49], 13: [27, 35], 14: [22, 169], 15: [16, 33], 16: [12, 26], 17: [39, 55], 19: [65, 77], 20: [34, 361], 21: [18, 51, 91], 22: [20, 38], 23: [57, 85], 25: [95, 119, 143], 27: [69, 133], 29: [115, 187], 31: [32, 125, 161, 209, 221], 32: [58, 961], 33: [45, 87, 247], 35: [93, 145, 253], 37: [155, 203, 299, 323], 40: [44, 74, 81], 41: [63, 111, 319, 391], 42: [30, 1681], 43: [50, 185, 341, 377, 437], 44: [82, 1849], 45: [123, 259, 403], 46: [52, 86], 47: [129, 205, 493], 49: [75, 215, 287, 407, 527, 551], 50: [40, 94], 51: [141, 301, 481, 589], 53: [235, 451, 667], 54: [42, 2809], 55: [36, 329, 473, 533, 629, 713], 57: [99, 159, 343, 559, 703], 59: [265, 517, 697]}
+   source counts for v = 2..60: [0, 1, 1, 0, 2, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 2, 2, 3, 2, 2, 1, 3, 1, 2, 1, 2, 1, 5, 2, 3, 1, 3, 1, 4, 1, 1, 3, 4, 2, 5, 2, 3, 2, 3, 1, 6, 2, 4, 0, 3, 2, 6, 1, 5, 1, 3, 1]
+2. untouchable values <= 1000 (exact, all n < 10^6 scanned): count 89; list [2, 5, 52, 88, 96, 120, 124, 146, 162, 188, 206, 210, 216, 238, 246, 248, 262, 268, 276, 288, 290, 292, 304, 306, 322, 324, 326, 336, 342, 372, 406, 408, 426, 430, 448, 472, 474, 498, 516, 518, 520, 530, 540, 552, 556, 562, 576, 584, 612, 624, 626, 628, 658, 668, 670, 708, 714, 718, 726, 732, 738, 748, 750, 756, 766, 768, 782, 784, 792, 802, 804, 818, 836, 848, 852, 872, 892, 894, 896, 898, 902, 926, 934, 936, 964, 966, 976, 982, 996]; primes among them [2, 5]; odd ones [5]
+3. closed forms (Mersenne, repunit, affine rows, pq): all verified; twin collision s(p^2) = s(2(p-2)) = p+1: verified on 35 twin pairs with p^2 <= 10^6; values p+1 for the first pairs: [6, 8, 14, 20, 32, 44, 62, 74, 104, 110]
+   fixed points of s below 10^4 (perfect numbers): [6, 28, 496, 8128]; s(2q) = 2q for an odd prime q iff q + 3 = 2q iff q = 3; so the twin collision value p+1 equals the doubling source 2(p-2) iff p = 5 (6 = s(6) = s(25))
+4. s^-1(3) = [4]  (exact, n < v^2)
+4. s^-1(7) = [8]  (exact, n < v^2)
+4. s^-1(15) = [16, 33]  (exact, n < v^2)
+4. s^-1(21) = [18, 51, 91]  (exact, n < v^2)
+4. s^-1(28) = [28]  (exact, n < v^2)
+4. s^-1(31) = [32, 125, 161, 209, 221]  (exact, n < v^2)
+4. s^-1(63) = [64, 177, 817]  (exact, n < v^2)
+4. s^-1(127) = [128, 1469, 1853, 2033, 2369, 2813, 3293, 3569, 3713, 3869, 3953]  (exact, n < v^2)
+4. s^-1(496) = [496, 652]  (exact, n < v^2)
+   7 = 1 + 2 + 4 = s(8) (the proper divisors of 2^3); 21 = s(18) = s(51) = s(91); 21 = 1 + 4 + 16 = (4^3 - 1)/3 is the square-divisor part of s(64) = 63 (the non-square part is 2 + 8 + 32 = 42)
+5. chain structure, n = 1..40 (n = 2^a r): n already present | n^2 already present | n^2 a later doubling (a>=1, r>2^a) | n^3 present | n^3 later | odd n whose row hits an earlier column:
+    1 = 2^0* 1: n NEW | n^2 new | n^3 new
+    2 = 2^1* 1: n old | n^2 old | n^3 old
+    3 = 2^0* 3: n NEW | n^2 new | n^3 new
+    4 = 2^2* 1: n old | n^2 old | n^3 old
+    5 = 2^0* 5: n NEW | n^2 new | n^3 new
+    6 = 2^1* 3: n old | n^2 new LATER | n^3 new LATER
+    7 = 2^0* 7: n NEW | n^2 new | n^3 new
+    8 = 2^3* 1: n old | n^2 old | n^3 old
+    9 = 2^0* 9: n old | n^2 old | n^3 old | row hits [36]
+   10 = 2^1* 5: n old | n^2 new LATER | n^3 new LATER
+   11 = 2^0*11: n NEW | n^2 new | n^3 new
+   12 = 2^2* 3: n old | n^2 old | n^3 new LATER
+   13 = 2^0*13: n NEW | n^2 new | n^3 new
+   14 = 2^1* 7: n old | n^2 new LATER | n^3 new LATER
+   15 = 2^0*15: n NEW | n^2 new | n^3 new
+   16 = 2^4* 1: n old | n^2 old | n^3 old
+   17 = 2^0*17: n NEW | n^2 new | n^3 new
+   18 = 2^1* 9: n old | n^2 new LATER | n^3 new LATER
+   19 = 2^0*19: n NEW | n^2 new | n^3 new
+   20 = 2^2* 5: n old | n^2 new LATER | n^3 new LATER
+   21 = 2^0*21: n NEW | n^2 new | n^3 new
+   22 = 2^1*11: n old | n^2 new LATER | n^3 new LATER
+   23 = 2^0*23: n NEW | n^2 new | n^3 new
+   24 = 2^3* 3: n old | n^2 old | n^3 new LATER
+   25 = 2^0*25: n old | n^2 old | n^3 old | row hits [100, 400]
+   26 = 2^1*13: n old | n^2 new LATER | n^3 new LATER
+   27 = 2^0*27: n old | n^2 old | n^3 old | row hits [216, 1728, 13824]
+   28 = 2^2* 7: n old | n^2 new LATER | n^3 new LATER
+   29 = 2^0*29: n NEW | n^2 new | n^3 new
+   30 = 2^1*15: n old | n^2 new LATER | n^3 new LATER
+   31 = 2^0*31: n NEW | n^2 new | n^3 new
+   32 = 2^5* 1: n old | n^2 old | n^3 old
+   33 = 2^0*33: n NEW | n^2 new | n^3 new
+   34 = 2^1*17: n old | n^2 new LATER | n^3 new LATER
+   35 = 2^0*35: n NEW | n^2 new | n^3 new
+   36 = 2^2* 9: n old | n^2 old LATER | n^3 old LATER
+   37 = 2^0*37: n NEW | n^2 new | n^3 new
+   38 = 2^1*19: n old | n^2 new LATER | n^3 new LATER
+   39 = 2^0*39: n NEW | n^2 new | n^3 new
+   40 = 2^3* 5: n old | n^2 old | n^3 new LATER
+   NEW numbers <= 40: [1, 3, 5, 7, 11, 13, 15, 17, 19, 21, 23, 29, 31, 33, 35, 37, 39]; first n with n^2 a later doubling: 6; first n with n^3 a later doubling: 6; claim 'NEW iff odd non-perfect-power' holds for n <= 40: True
+6. abc hits (rad(abc) < c), c <= 10000: 121; top 12 by quality (c, a, b, q, type a/b/c): [(4375, 1, 4374, 1.568, 'new', 'old', 'new'), (2401, 1, 2400, 1.456, 'new', 'old', 'old'), (128, 3, 125, 1.427, 'new', 'old', 'old'), (2673, 625, 2048, 1.361, 'old', 'old', 'new'), (6561, 289, 6272, 1.338, 'old', 'old', 'old'), (5832, 1, 5831, 1.32, 'new', 'new', 'old'), (513, 1, 512, 1.318, 'new', 'old', 'new'), (243, 1, 242, 1.311, 'new', 'old', 'old'), (1029, 5, 1024, 1.297, 'new', 'old', 'new'), (81, 1, 80, 1.292, 'new', 'old', 'old'), (2197, 10, 2187, 1.29, 'old', 'old', 'old'), (256, 13, 243, 1.273, 'new', 'old', 'old')]
+   hits with c old: 97; with b old: 89; with a old: 62; with a = 1: 30; with all three old: 33; with no old term: 0
+   all hits with c <= 130: [(128, 3, 125, 1.427, 'new', 'old', 'old'), (81, 1, 80, 1.292, 'new', 'old', 'old'), (9, 1, 8, 1.226, 'new', 'old', 'old'), (81, 32, 49, 1.176, 'old', 'old', 'old'), (64, 1, 63, 1.113, 'new', 'new', 'old'), (49, 1, 48, 1.041, 'new', 'old', 'old'), (125, 4, 121, 1.027, 'old', 'old', 'old'), (32, 5, 27, 1.019, 'new', 'old', 'old')]
+7. odd v < 2000 with v - 1 NOT a sum of two distinct primes (no source of the form pq): [3, 5, 7]; their sources of other forms: [(3, [4]), (5, []), (7, [8])]
+8. H(P_3) = 3
+8. H(P_7) = 189
+8. H(P_11) = 95095
+   H of the strong 4-tournament 0>1>2>3>0, 0>2, 1>3: 5; H(C3) = 3; stack products 3*3 = 9, 3*5 = 15, 5*5 = 25; 7 and 21 are not products of attainable strong values (THM-1370)
+9. perfect N = 6: s^-1(6) = [6, 25]; (N-7)/3 = None prime: -; N - 3 prime: True
+9. perfect N = 28: s^-1(28) = [28]; (N-7)/3 = 7 prime: True; N - 3 prime: False
+9. perfect N = 496: s^-1(496) = [496, 652]; (N-7)/3 = 163 prime: True; N - 3 prime: False
+9. perfect N = 8128: s^-1(8128) = [8128, 10682, 10828]; (N-7)/3 = 2707 prime: True; N - 3 prime: False
+   perfect 2^12(2^13-1) = 33550336: (N-7)/3 = 11183443 prime: False (so 4q is a source iff prime); N - 3 prime: False
+   perfect 2^16(2^17-1) = 8589869056: (N-7)/3 = 2863289683 prime: False (so 4q is a source iff prime); N - 3 prime: False
+   perfect 2^18(2^19-1) = 137438691328: (N-7)/3 = 45812897107 prime: False (so 4q is a source iff prime); N - 3 prime: False
+   perfect 2^30(2^31-1) = 2305843008139952128: (N-7)/3 = 768614336046650707 prime: False (so 4q is a source iff prime); N - 3 prime: False
+   row sources 2^a q of an even perfect number N = 2^e M: (2^a - 1) q = N + 2 - 2^(a+1); a = 2 gives q = (N - 7)/3, an integer for every even perfect N > 6 since N = 1 mod 3; a = e gives q = M, the number itself
+   twin-collision values p+1 <= 10^4: 205; with exactly the two twin sources: 115 = [6, 8, 14, 20, 32, 44, 62, 104, 110, 152, 182, 200, 230, 242, 272, 350, 422, 464, 572, 644, 662, 812, 830, 860, 884, 1022, 1052, 1064, 1232, 1280, 1304, 1430, 1454, 1670, 1700, 1790, 1874, 1880, 1952, 2084, 2090, 2132, 2144, 2270, 2312, 2342, 2384, 2552, 2660, 2690, 2732, 2792, 2804, 2972, 3254, 3332, 3362, 3464, 3470, 3542, 3560, 3824, 3932, 4004, 4022, 4052, 4130, 4160, 4220, 4232, 4340, 4484, 4640, 4724, 5012, 5024, 5282, 5444, 5480, 5504, 5522, 5642, 5660, 5744, 5852, 6134, 6200, 6272, 6302, 6362, 6452, 6662, 6704, 6782, 6830, 6962, 7310, 7334, 7460, 7490, 7550, 7592, 7880, 8390, 8540, 8822, 8840, 8972, 9284, 9344, 9440, 9464, 9632, 9680, 9860]; source counts of the first 14: [(6, 2, [6, 25]), (8, 2, [10, 49]), (14, 2, [22, 169]), (20, 2, [34, 361]), (32, 2, [58, 961]), (44, 2, [82, 1849]), (62, 2, [118, 3721]), (74, 3, [70, 142, 5329]), (104, 2, [202, 10609]), (110, 2, [214, 11881]), (140, 3, [84, 274, 19321]), (152, 2, [298, 22801]), (182, 2, [358, 32761]), (194, 3, [238, 382, 37249])]
+   source counts for twin values in (10^3, 10^4]: min 2, max 6, mean 2.68 over 170 values
+   Mersenne abc hits (1, 2^k - 1, 2^k) with k <= 64 (hit iff rad(2^k - 1) < 2^(k-1)): [(6, 1.113, {3: 2}), (12, 1.051, {3: 2}), (18, 1.137, {3: 3}), (20, 1.071, {5: 2}), (21, 1.094, {7: 2}), (24, 1.025, {3: 2}), (30, 1.02, {3: 2}), (36, 1.064, {3: 3}), (40, 1.034, {5: 2}), (42, 1.088, {3: 2, 7: 2}), (48, 1.012, {3: 2}), (54, 1.075, {3: 4}), (60, 1.051, {3: 2, 5: 2}), (63, 1.03, {7: 2})]
+   (1, s(n), n) is a coprime additive triple iff sigma(n) = 2n - 1 (almost perfect; the powers of 2 are the only known ones): the row of 1 is where the aliquot function itself produces abc triples
+   abc refined tallies (c <= 10000): exactly one term is even in every hit (parity); hits with an odd perfect power among the terms: 94 of 121; hits whose even term is a power of 2: 48; hits with 1 as a term: 30
