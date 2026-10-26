@@ -41,3 +41,20 @@ the primes 1000 < q < 4000 (`berggren_ramanujan_scan.py` with a lower bound), no
 - the largest ratio max|mu|/(2 sqrt 3) over the range is below 1.03;
 - every G_q in the range has max nontrivial |mu| <= 3.8 (a uniform spectral gap, as Selberg's theorem guarantees in
   some form).
+
+## Erratum (added after the runs; the predictions above are unchanged)
+
+The independent audit (audit_thm4808/REPORT.md §6) confirmed the timing:
+- entries (3) and (4) were committed at `2fe36c8088`, before the producing binaries were compiled;
+- entry (5) was committed at `a0a2bbd805`, before its output existed.
+
+It also found two labelling slips:
+- **Section numbering.** Entries (3), (4) and (5) here correspond to HYP-9418 (3), (2) and (4), not to "(3)-(4)" as
+  the header says.
+- **Prime count.** "5 of 165 primes" in entry (5) should read 166 primes (`5 <= q < 1000`).
+
+Two caveats on scope:
+- Entry (3) predicts quantities already fixed by published data (OEIS A007508) together with an elementary product,
+  so it checks arithmetic rather than a model.
+- Entry (4)'s `+-0.21` band was drawn from sampled heights. The full-resolution maximum of `|E|/sqrt X` up to
+  `10^9` is 0.368.

@@ -1,0 +1,1 @@
+gp -q -s 4G spectra_exact_spot.gp < /dev/null > spectra_exact_spot.out 2>&1  411.54s user 2.36s system 618% cpu 1:06.88 total

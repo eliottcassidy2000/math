@@ -1,0 +1,13 @@
+primes 5 <= q < 1000: 166 primes; max symmetrisation error 2.2e-16
+G_q (A): non-Ramanujan at 5 primes, fraction 0.0301
+   [q, lowest nontrivial mu, highest nontrivial mu, edge]:
+   331 -3.475508 3.293268 low (mu < -2 sqrt3)
+   569 -3.465441 3.373119 low (mu < -2 sqrt3)
+   719 -3.380386 3.510074 high (mu > 2 sqrt3)
+   809 -3.475155 3.367460 low (mu < -2 sqrt3)
+   887 -3.428616 3.468820 high (mu > 2 sqrt3)
+   worst ratio max|mu|/(2 sqrt 3) = 1.01327 at q = 719; largest |mu| = 3.5101
+B_chi (A_chi): non-Ramanujan at 4 primes, fraction 0.0241: 251 (-3.49998, 3.35856), 479 (-3.41517, 3.48411), 863 (-3.41938, 3.47744), 947 (-3.46489, 3.36730)
+   worst ratio = 1.01036 at q = 251
+borderline (within 1e-8 of 2 sqrt 3, need exact check): []
+elapsed 0.4 s

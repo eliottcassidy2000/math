@@ -1,0 +1,15 @@
+Euclid pairs with m <= 1500: 456137
+(a) chi = alpha n - gamma m = det M_w: 456137/456137; box 0<=alpha<=m, 0<=gamma<=n: 456137/456137; cone lemma alpha>=gamma>=0, m-alpha>=n-gamma>=0: 456137/456137
+(b) THM automaton = #A: 456137/456137; closed form chi = (-1)^(L + [first letter U]): 456137/456137
+(b'') CLOSED FORM chi = (-1)^(m + c_0 + c_1 + ... + c_L): 456137/456137; lemmas m = #U + #A (mod 2) and sum c_i = 2 + #U + 2#A + 2#D: 456137/456137
+(d) sign(a-b) = (-1)^(trailing A-run) * (+1 after D, -1 after U or empty): 456137/456137
+(d) Q(A.) = -Q, Q(D.) = P, Q(U.) = -P, Q(2,1) = -1, Q = (m-n)^2 - 2n^2: (True, True, True, True, True)
+(d) A-ray k = 0..39: |a-b| = 1 and chi = -(a-b): True
+(c) M = 1..5000 failures: 0; R = D U D^-1 A = [[-1, 4], [0, 1]], R(2,1) = [2, 1], det R = -1
+(e) sum chi x^#D y^#U over |w| = k equals (x+y-1)^k for k = 0..7: True
+(f) X = 1000: nodes 158, S = 30, 1 + N_U + N_D + E = 30 (N_U = 20, N_D = 14, E = -5), identity True; delta outside {0,1}: 0; interleaving violations (j<6, X=1e3 nodes): 0; classes {'root': 1, 'A-child': 28, 'Dray-interior': 63, 'Uray-interior': 66}
+(f) X = 10000: nodes 1593, S = 111, 1 + N_U + N_D + E = 111 (N_U = 69, N_D = 48, E = -7), identity True; delta outside {0,1}: 0; interleaving violations (j<6, X=1e3 nodes): 0; classes {'root': 1, 'A-child': 288, 'Dray-interior': 650, 'Uray-interior': 654}
+(f) X = 100000: nodes 15919, S = 409, 1 + N_U + N_D + E = 409 (N_U = 222, N_D = 157, E = 29), identity True; delta outside {0,1}: 0; interleaving violations (j<6, X=1e3 nodes): 0; classes {'root': 1, 'A-child': 2877, 'Dray-interior': 6517, 'Uray-interior': 6524}
+(f) X = 1000000: nodes 159139, S = 995, 1 + N_U + N_D + E = 995 (N_U = 705, N_D = 498, E = -209), identity True; delta outside {0,1}: 0; interleaving violations (j<6, X=1e3 nodes): 0; classes {'root': 1, 'A-child': 28750, 'Dray-interior': 65193, 'Uray-interior': 65195}
+(f) X = 10000000: nodes 1591579, S = 3817, 1 + N_U + N_D + E = 3817 (N_U = 2234, N_D = 1580, E = 2), identity True; delta outside {0,1}: 0; interleaving violations (j<6, X=1e3 nodes): 0; classes {'root': 1, 'A-child': 287548, 'Dray-interior': 652012, 'Uray-interior': 652018}
+(f) max |N_U + N_D - (1/2 + 1/sqrt2) sqrt X| over X = 10^2..10^24 (1-5 grid): 4.408

@@ -1,0 +1,1 @@
+depth <= 8: darts 9841 (= (3^9-1)/2: True); (i) NB continuations = U,A,D: True; (ii) generic head orbits: True; (iii) repeated triangles: 0; (iv) degenerate out-multiset D(V.0) = [2, 2, 'inf', 'inf'], tau(2) = 0 (the root's reverse dart points to (1,0,1))

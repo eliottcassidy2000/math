@@ -1,0 +1,1 @@
+gp -q -s 2G spectra_exact_run.gp < /dev/null > spectra_exact.out 2>&1  48.21s user 0.31s system 304% cpu 15.929 total

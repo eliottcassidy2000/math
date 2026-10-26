@@ -1,0 +1,5 @@
+window [1, 250000000] done
+window [250000001, 500000000] done
+window [500000001, 750000000] done
+window [750000001, 1000000000] done
+$B/height_sum 2 1e9 2.5e8 > height_sum_mode2_1e9.out  11.80s user 0.04s system 99% cpu 11.880 total

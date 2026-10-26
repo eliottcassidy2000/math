@@ -1,0 +1,36 @@
+sample X=100 S=6 E=-3 E/sqrtX=-0.30000
+sample X=200 S=16 E=1 E/sqrtX=0.07071
+sample X=500 S=22 E=-3 E/sqrtX=-0.13416
+sample X=1000 S=30 E=-5 E/sqrtX=-0.15811
+sample X=2000 S=49 E=-3 E/sqrtX=-0.06708
+sample X=5000 S=78 E=-5 E/sqrtX=-0.07071
+sample X=10000 S=111 E=-7 E/sqrtX=-0.07000
+sample X=20000 S=174 E=6 E/sqrtX=0.04243
+sample X=50000 S=250 E=-17 E/sqrtX=-0.07603
+sample X=100000 S=409 E=29 E/sqrtX=0.09171
+sample X=200000 S=541 E=4 E/sqrtX=0.00894
+sample X=500000 S=784 E=-67 E/sqrtX=-0.09475
+sample X=1000000 S=995 E=-209 E/sqrtX=-0.20900
+sample X=2000000 S=1922 E=217 E/sqrtX=0.15344
+sample X=5000000 S=2955 E=258 E/sqrtX=0.11538
+sample X=10000000 S=3817 E=2 E/sqrtX=0.00063
+sample X=20000000 S=6168 E=772 E/sqrtX=0.17262
+sample X=50000000 S=7275 E=-1258 E/sqrtX=-0.17791
+sample X=100000000 S=12158 E=90 E/sqrtX=0.00900
+sample X=200000000 S=18270 E=1201 E/sqrtX=0.08492
+sample X=500000000 S=26750 E=-239 E/sqrtX=-0.01069
+sample X=1000000000 S=36468 E=-1702 E/sqrtX=-0.05382
+sup_{100 <= X <= 1000000000} |E(X)|/sqrt X = 0.36789 at X = 4222837
+sup_{1000 <= X <= 1000000000} |E(X)|/sqrt X = 0.36789 at X = 4222837
+sup_{10000 <= X <= 1000000000} |E(X)|/sqrt X = 0.36789 at X = 4222837
+decade [1e2, 1e3): sup |E|/sqrtX = 0.31935 at X = 353
+decade [1e3, 1e4): sup |E|/sqrtX = 0.29012 at X = 4289
+decade [1e4, 1e5): sup |E|/sqrtX = 0.33854 at X = 11945
+decade [1e5, 1e6): sup |E|/sqrtX = 0.32875 at X = 355457
+decade [1e6, 1e7): sup |E|/sqrtX = 0.36789 at X = 4222837
+decade [1e7, 1e8): sup |E|/sqrtX = 0.28425 at X = 21760625
+decade [1e8, 1e9): sup |E|/sqrtX = 0.30131 at X = 130800317
+decade [1e9, 1e10): sup |E|/sqrtX = 0.05382 at X = 1000000000
+sign changes of E(X) over integers 100 <= X <= 1000000000 (zeros skipped): 13538
+log-mean of E/sqrtX on [5, 1000000000]: -0.02482 ; log-mean of S/sqrtX: 1.06603  (1/2 + 1/sqrt2 = 1.20711)
+[X0 = 1e4] log-mean of E/sqrtX on [10000, 1000000000]: -0.00769 ; log-mean of S/sqrtX: 1.19508  (1/2 + 1/sqrt2 = 1.20711)

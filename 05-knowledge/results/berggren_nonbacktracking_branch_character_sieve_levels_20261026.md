@@ -7,7 +7,8 @@
 - **CITED:** classical sieve theory and the concurrent proofs, identified in each section.
 - **FINITE-EXACT and NUMERICAL:** HYP-9418. Nine pre-registered predictions (4 sieve ratios, 2 height sums,
   3 spectral statistics), all CONFIRMED.
-- THM-4807 is independently audited, with corrections applied. The THM-4808 audit is reported in §6.
+- THM-4807 and THM-4808 are both independently audited, with all corrections applied. The THM-4808 corrections
+  came after a pre-audit push and are logged as MISTAKE-678.
 
 No statement here proves twin-prime infinitude, abc, or new Hamilton-spectrum gaps.
 
@@ -79,22 +80,29 @@ form these are `D∘S`, `D∘S∘ι` and `D`. Let `V = {t, −t, 1/t, −1/t}` a
 - the multiset `[Ut, At, Dt, τt]` is `D(V·t)`;
 - `B = P_U + P_A + P_D` is exactly the Hashimoto non-backtracking operator of the graph on `V`-orbits.
 
-**Over Q.** The graph is a 4-regular tree:
+**Over Q.** The graph has two components, exchanged by `C(t) = (t+1)/(t−1)` (THM-3357's intertwiner). The Euclid
+component (slopes with `m + n` odd) is an edge-indexed tree whose covering tree is 4-regular:
 - its vertices are the unsigned primitive triangles, plus the degenerate triangle `(1,0,1)`;
-- its edges are the Berggren parent–child pairs;
+- its edges are the Berggren parent–child pairs, the edge `(1,0,1)–(3,4,5)`, and a half-edge at `(1,0,1)`;
 - `(1,0,1)` is the root's fourth neighbour, and it is the pole `t = ∞` of the F8 marking.
 
 Each primitive triple has three children and one parent. That ternary branching is exactly non-backtracking
-continuation on this tree.
+continuation. Over Q this is, in other coordinates, Alperin's enumeration by reduced words in `Γ(2)` (Amer. Math.
+Monthly 112 (2005)). The Berggren word is the even continued fraction of `m/n` (Kraaikamp–Lopes; Romik). What this
+lane adds is the mod-`q` Hashimoto form and its spectra (audit: not found in the literature).
 
 **Mod q.** The quotient graph `G_q` has about `q/4` vertices.
 - **Ihara–Bass:** every eigenvalue `λ ≠ ±1` of `B` satisfies `λ² − μλ + 3 = 0`, with `μ` an adjacency eigenvalue.
-- **Exact factorisation, `q ≤ 211`:** every eigenvalue other than `3` and `±1` has modulus `√3`.
+- **Exact, all primes `q < 331`** (Sturm counts in the audit): every eigenvalue other than `3` and `±1` has
+  modulus `√3`. The Ihara–Bass identity itself is PROVED: `BL = LA − T` and `BT = 3L`.
 - **Ramanujan up to 1000:** `G_q` is Ramanujan except at `q = 331, 569, 719, 809, 887`.
 - **Pre-registered range `1000 < q < 4000`:** 42 of 382 primes are exceptions (0.110), the worst ratio is 1.0105, and
   the largest nontrivial `|μ|` is 3.50. All three predictions were confirmed.
-- **Uniform expansion** is CITED (Selberg's 3/16 theorem and Lubotzky's transfer). The Ramanujan property is only
-  nearly true; the exceptions behave like random-graph Tracy–Widom excursions (HYP-9418 (4)).
+- **Uniform expansion** is CITED: Selberg's 3/16 theorem with the Brooks–Burger transfer (Lubotzky 1994, Ch. 4),
+  passed to `G_q` by a Dirichlet-form comparison. The Ramanujan property is only nearly true. The exceptional shares
+  (3% and 11%) lie far below the random-regular-graph limit of about 31% (Huang–McKenzie–Yau), so the statistics of
+  `G_q` are open (HYP-9418 (4)).
+- **The signed operator `B_χ`** has exact exceptions 251, 479, 863 and 947 below 1000 (audit).
 
 **What this explains.** A sieve on the tree sees the tree through these quotients.
 - **Fixed modulus.** Strong approximation and CRT make every finite quotient surjective. A fixed modulus therefore
@@ -150,32 +158,40 @@ THM-4808 parts (a)–(f), all PROVED:
 
 - **(a) Pole frame.** `χ = αn − γm`, where `(α, γ)` is the image of the pole `(1, 0)`. The bit is the orientation of the
   frame formed by the transported degenerate triangle and the transported root.
-- **(b) Automaton.** `#A` counts the even heads of a digit automaton on the regular continued fraction of `m/n`. No
-  character formula exists: an exhaustive XOR search over 18 features found none.
+- **(b) Automaton and closed form.** `#A` counts the even heads of a digit automaton on the regular continued
+  fraction of `m/n`. In closed form, `χ = (−1)^(m + c₀ + ⋯ + c_L)` (audit, via THM-4057's Stern–Brocot depth
+  cocycle). No residue character works, by (c).
 - **(c) Every modulus.** `(16M+2, 4M+1) ≡ (2, 1) (mod M)` has word `A D^(M−1) U D` and `χ = −1`. So no residue datum,
   and no Dirichlet or Hecke character of finite conductor, determines `χ`. This extends the packet's mod-7 hostile to
   every modulus and fixes the Euclid vector itself, not just the conic point.
-- **(d) Sign law.** `sign(a − b)` sees only the trailing `A`-run. On the middle ray, `χ = −(a − b)`, the Pell norm sign
-  in `Z[√2]`.
-- **(e) Level identity.** `Σ_{|w|=k} χ x^#D y^#U = (x + y − 1)^k`. At every depth there is exactly one more even triple
-  than odd.
+- **(d) Sign law, CITED: THM-3357 (19)–(20) and THM-3341 (24).** `sign(a − b)` sees only the trailing `A`-run. On the
+  middle ray, `χ = −(a − b)`, the Pell norm sign in `Z[√2]`.
+- **(e) Level identity, CITED: the scalar form of THM-3357 (37)/(40), via `U − A + D = I`.**
+  `Σ_{|w|=k} χ x^#D y^#U = (x + y − 1)^k`. At every depth there is exactly one more even triple than odd. `χ` is
+  THM-3357's `(−1)^#M` Walsh character.
 - **(f) Cusp pairing.** Every non-root parabolic ray pairs with another of opposite character, with interleaved
   heights. Hence `Σ_{c≤X} χ = 1 + N_U + N_D + E(X)`, where `N_U + N_D = (1/2 + 1/√2)√X + O(1)` counts the two root
   cusps. `E(X)` oscillates:
   - `S/√X = 1.2421` at `2·10⁹` and `1.2194` at `5·10⁹`, both pre-registered and confirmed;
   - `1.2941` at `10¹⁰`;
-  - the conjectured logarithmic mean is `1.2071` (HYP-9418 (2)).
+  - the conjectured logarithmic mean is `1.2071` (HYP-9418 (2));
+  - at 700 log-spaced heights in `[10⁴, 10¹¹]`, the remainder `E/√X` has logarithmic mean `−0.0043`. It is
+    positive at 353 heights and negative at 345, changes sign 112 times, and has `max |E|/√X = 0.346`
+    (`parity_height_logmean.c`, not pre-registered).
 
-The parity bias of the whole tree sits on the two root rays. These are the D ray, carrying the twin images and the
-centre identity, and the U ray, carrying the prime legs and the classical abc family `P(3^(2^j))`. The rays the
-isomorphism `L(H) ≅ J` was built on are exactly the uncancelled cusps.
+The main term `(1/2 + 1/√2)√X` of the parity bias comes from the two root rays. These are the D ray, carrying the
+twin images and the centre identity, and the U ray, carrying the prime legs and the classical abc family
+`P(3^(2^j))`. The rays the isomorphism `L(H) ≅ J` was built on are exactly the uncancelled cusps.
+
+That the paired remainder `E(X)` contributes nothing on average is HYP-9418 (2), not a theorem. At full resolution
+(audit, every `X ≤ 10⁹`): `max |E|/√X = 0.368`, and `E` changes sign 13,538 times.
 
 **Verdicts on the requested connections.**
 
 | Target | Exact content | Typed verdict |
 |---|---|---|
 | 7/21 gaps | Mod 7 with the pole fixed, `χ` is the converse bit of Paley 7 (order-21 group; finite_field §5, growing_sieve_path field). `H(Tᵒᵖ) = H(T)`, so no H-count statement, THM-1370 included, sees `χ`. | Exact non-connection; anything further is NUMEROLOGY |
-| abc | The tree's abc carriers (twin centre identity, `9^(2^j)` family) lie on the `χ = +1` root rays. growing_sieve_path shows that `χ` does not determine abc-hit status and that the radical does not determine `χ`. | Exact loss in both directions |
+| abc | Two abc families (the twin centre identity and the `9^(2^j)` family) lie on the `χ = +1` root rays, but they are not the only carriers. For the squared packet, `ADU = (16, 9)` gives `(175, 288, 337)`, with `c² = 113569 > rad = 70770` and `χ = −1` (audit; growing_sieve_path field §4 realises all four `(χ, hit)` combinations). `χ` does not determine abc-hit status, and neither does the radical determine `χ`. | Exact loss in both directions (this lane's pre-audit "χ = +1 on the abc carriers" was false; MISTAKE-678) |
 | F1 | `χ` is the monoid evaluation at `(1, −1, 1)` (growing_sieve_path field §5). (c) shows that no fixed-level residue datum, so no finite-conductor multiplicative evaluation, sees it. | Exact loss: two free monoids, incompatible gradings |
 | Twin primes | The twin images live on a `χ = +1` cusp, and the twin predicate needs the growing level `√x`. Both are invisible to every fixed modulus. `χ` is invisible at every level below the integer itself. | Shared obstruction type, different growth needs |
 
@@ -209,5 +225,12 @@ a trivial complete invariant.
 **Audits:**
 - **THM-4807:** independent audit, confirmed at every order. One major and twelve minor corrections were applied
   before the first push; see `audit_thm4807/REPORT.md`.
-- **THM-4808:** independent audit at `berggren_sieve_parity_20261026/audit_thm4808/`. Its outcome is recorded in the
-  theorem's status line.
+- **THM-4808:** independent audit at `berggren_sieve_parity_20261026/audit_thm4808/REPORT.md`. Every proved part was
+  confirmed, with 34 edits applied:
+  - the graph over Q has two components, and the Euclid one is an edge-indexed tree;
+  - prior art is now cited: THM-3357, THM-3341, Alperin, the even continued fraction;
+  - the abc row is corrected;
+  - the bias sentence is scoped;
+  - Ihara–Bass and the box are now PROVED;
+  - the closed form `χ = (−1)^(m + Σcᵢ)` is added.
+  These are logged as MISTAKE-678.

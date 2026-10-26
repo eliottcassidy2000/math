@@ -20806,3 +20806,41 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair:** THM-4806 R (iv) and Theorem R' retyped PROVED as a second proof, with session70 and THM-4807 cited as the first; HYP-9417 (1) removed and the hypothesis renumbered; the scope of the shape census stated per `p`; the inheritance section and the ledger rewritten; thirteen minors from the audit applied.
 - **How it was caught:** session71's `INCOMING_RECONCILIATION.md` (16:12) flagged the stale label; the independent audit found it, the uncited packet, the strong-form proof and the scope overstatement.
 - **Lesson:** a concurrent packet that names the exact question must be re-read (its README, not its commit titles) at drafting time and before every checkpoint; a rebase that carries the closure into the tree does not read it. Same family as MISTAKE-644 and MISTAKE-647.
+
+## MISTAKE-678 (2026-10-26, mac-mini-2026-10-25-pyth, THM-4808 / HYP-9418 and the note `05-knowledge/results/berggren_nonbacktracking_branch_character_sieve_levels_20261026.md` (pre-audit commit 4950589d05); found by the independent audit `04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/REPORT.md`) -- a repo-internal prior result re-derived as part of a new theorem, a two-component graph called one tree, a non-connection asserted beyond its evidence, and a misread spectral root
+
+- **What was claimed:**
+  - (G): "over Q this graph is a 4-regular tree with one orbifold point", for the Hashimoto graph of the Berggren branches on Klein orbits of slopes.
+  - (d), the sign law and the Pell sign on the middle ray, and (e), the level identity `Σ χ x^#D y^#U = (x+y−1)^k`, presented as this theorem's results, without citation.
+  - "No source found" for the non-backtracking reading over Q.
+  - The abc non-connection: "the abc carriers on the tree … lie on the root rays, so `χ = +1` throughout, and abc data cannot see `χ` there".
+  - "The parity bias of the whole tree is located on these two rays and on no others".
+  - HYP-9418 (5): at `q = 251` the signed operator has "real root 2".
+- **Why it was wrong:**
+  - **(G).** On all of `P¹(Q)` the branches preserve the parity type of `m/n`, so there are two components, exchanged by `C(t) = (t+1)/(t−1)` (THM-3357's intertwiner). The Euclid component is an edge-indexed tree: index 2 at `(1,0,1)`, with a half-edge. Only its covering tree is 4-regular.
+  - **(d), (e).** These are THM-3357 (19)–(20) and the scalar form of THM-3357 (37)/(40), with THM-3341 (24) for the middle ray. `χ` is THM-3357's `(−1)^#M` Walsh character.
+  - **The reading over Q** is Alperin, Amer. Math. Monthly 112 (2005): reduced words in `Γ(2)`. The word is the even continued fraction (Kraaikamp–Lopes 1996; Romik 2008), and (a) is the classical convergent determinant identity.
+  - **abc.** Two abc families lie on the root rays, but they are not the only carriers. `ADU = (16, 9)` gives `(175, 288, 337)`, an abc hit of the squared packet with `χ = −1`, and growing_sieve_path field §4 had already realised all four `(χ, hit)` combinations.
+  - **The bias.** Only the main term `(1/2 + 1/√2)√X` comes from the root rays. That the remainder `E(X)` contributes nothing on average is HYP-9418 (2), not proved. At full resolution `|E|/√X` reaches 0.368.
+  - **The root at 251.** The real roots are `−1.99990` and `−1.50007`, irrational. The value 2 came from `|λ|/3 = 0.6666` with the sign dropped. Further exceptions occur at 479, 863 and 947.
+- **Repair:** the audit's 34 edits were applied to THM-4808 and HYP-9418. They:
+  - restate (G) with the two components, the edge indices and Alperin's reading;
+  - mark (d) and (e) CITED to THM-3357 and THM-3341;
+  - correct the abc paragraph and scope the bias sentence;
+  - fix the 251 roots and the `B_χ` exception list;
+  - upgrade Ihara–Bass (`BL = LA − T`, `BT = 3L`) and the box of (a) to PROVED, with exact Sturm counts;
+  - add the closed form `χ = (−1)^(m + c₀ + ⋯ + c_L)` from THM-4057's depth cocycle;
+  - name the transfer as Brooks–Burger and fix the 166 prime count.
+
+  The results note, the reflection, both INDEX rows and a PREREGISTRATION erratum were corrected to match. The pre-registered predictions themselves and their outcomes are unchanged; the timing was audited as honest.
+- **How it was caught:** the independent audit:
+  - recomputed everything with its own code (exact Sturm censuses, a full-resolution `E(X)` to `10⁹`, an independent twin sieve);
+  - grepped `01-canon/theorems` for Berggren and Walsh results, which surfaced THM-3357, THM-3341 and THM-4057;
+  - read the concurrent field packet's §4 table;
+  - searched the literature (Alperin; Kraaikamp–Lopes; Romik).
+- **Lesson:**
+  - Before typing a statement about the Berggren tree as new, grep the canon for `Berggren`, `Walsh`, `middle branch` and `Stern-Brocot` (THM-3341, THM-3357, THM-4057, THM-4059). Note that their branch letters differ from ours (their `A` is our `U`).
+  - Before calling a graph "a tree" over a field or over `Q`, check connectivity on every parity or type class.
+  - Before writing a non-connection ("X cannot see Y"), test it on the concurrent packet's own counterexample table.
+  - Read off real spectral roots with their signs, from exact factors.
+  - This is the same prior-art pattern as MISTAKE-647 and MISTAKE-675.

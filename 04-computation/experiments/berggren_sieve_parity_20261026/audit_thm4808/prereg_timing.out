@@ -1,0 +1,34 @@
+# Pre-registration timing evidence (collected by the THM-4808 audit, 2026-10-26)
+## commits touching PREREGISTRATION.md
+a0a2bbd805 2026-10-26 16:24:16 -0600 mac-mini-2026-10-25-pyth: pre-registration (before the run) - Ramanujan exceptions of the Berggren non-
+2fe36c8088 2026-10-26 16:07:04 -0600 mac-mini-2026-10-25-pyth: pre-registration (before the runs) - twin-sieve Mertens ratio at 10^8, 10^9, 
+## commit that first added the .out files
+4950589d05 2026-10-26 16:30:52 -0600 mac-mini-2026-10-25-pyth: THM-4807 (audited), THM-4808 (pre-audit), HYP-9418, results note, unifying re
+## mtimes in the experiment directory (working tree)
+2026-10-26 16:24:15 PREREGISTRATION.md
+2026-10-26 16:30:52 berggren_ramanujan_scan.py
+2026-10-26 16:30:52 berggren_ramanujan_scan_1000_4000.out
+2026-10-26 16:30:52 parity_height_big.out
+2026-10-26 16:30:52 twin_sieve_ratio.out
+2026-10-26 16:30:52 parity_height_sum.out
+## compile times of the lane's C binaries in the shared session scratchpad
+2026-10-26 15:54:19 parity_height_sum
+2026-10-26 16:04:03 parity_height_remainder
+2026-10-26 16:07:50 twin_sieve_ratio
+2026-10-26 16:08:25 parity_height_big
+## re-run of the lane's own scan for 1000 <= q < 4000 on this machine (output byte-identical to the stored .out)
+python3 -B  4000 1000 > lane_scan_timing.out  42.25s user 1.48s system 100% cpu 43.436 total
+cmp: identical
+## mtimes observed by the audit at its start, BEFORE the lane's commit 4950589d05 rewrote the working-tree files
+2026-10-26 16:21:58  all .py/.c/.gp/.out files of the experiment except the two below (uniform copy time)
+2026-10-26 16:24:15  PREREGISTRATION.md and berggren_ramanujan_scan.py (lower-bound argument added)
+2026-10-26 16:25:05  berggren_ramanujan_scan_1000_4000.out
+## reading
+- Entry (5): the scan script that produced the 1000-4000 output was saved at 16:24:15, the pre-registration was
+  committed at 16:24:16, the output was written at 16:25:05, and the run takes 43.4 s here. So the run started at
+  about 16:24:21, after the commit.
+- Entries (3) and (4): the binaries that produce the predicted quantities were compiled at 16:07:50 (twin sieve) and
+  16:08:25 (2e9 and 5e9 height sums), after the commit at 16:07:04. The earlier binaries stop at 1e9 and contain no
+  twin data.
+- Caveat: the uniform 16:21:58 mtimes are copy times, not run times; the binary compile times are the binding
+  evidence.

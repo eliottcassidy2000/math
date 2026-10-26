@@ -144,12 +144,15 @@ They work because deep uniform bounds (Weil, Deligne, Selberg) hold exactly at t
 computation is possible.
 
 **THM-4808 (G) brings the Pythagorean tree into this family.**
-- The three Berggren branches are the non-backtracking operator of a 4-regular tree.
+- The three Berggren branches are the non-backtracking operator of an edge-indexed tree whose covering tree is
+  4-regular. Over Q this is, in other coordinates, Alperin's 2005 reduced-word enumeration; the mod-`q` form is the
+  new part.
 - That tree's vertices are the unsigned triangles together with the degenerate triangle `(1,0,1)`, which is the F8
-  pole.
+  pole. Over Q there is a second, isomorphic component on odd/odd slopes.
 - Modulo `q`, Ihara–Bass gives `λ² − μλ + 3 = 0`.
-- Exactly, every nontrivial eigenvalue has modulus `√3` for `q ≤ 211`. The graphs are Ramanujan for most primes; the
-  exceptions occur at a rising rate (3% below 1000, 11% for `1000 < q < 4000`).
+- Exactly, every nontrivial eigenvalue has modulus `√3` for all primes `q < 331`. The graphs are Ramanujan for most
+  primes. The exceptions (3% below 1000, 11% for `1000 < q < 4000`) lie far below the random-regular-graph limit of
+  about 31%.
 - Expansion is uniform (Selberg).
 
 This one fact explains all three regimes of §1 on the tree:
@@ -162,7 +165,8 @@ This one fact explains all three regimes of §1 on the tree:
 Several of the repository's generators are non-backtracking walks on regular trees, or close to them. The typing
 matters.
 
-- **Berggren tree.** PROVED, THM-4808 (G). A 4-regular tree with ternary non-backtracking continuation.
+- **Berggren tree.** PROVED, THM-4808 (G). Ternary non-backtracking continuation on an edge-indexed tree covered by
+  the 4-regular tree (Alperin 2005 over Q).
 - **Farey / continued fractions.** CLASSICAL. The Stern–Brocot and Farey trees are orbits of `PSL2(Z)` on the
   Bass–Serre tree of `Z/2 * Z/3`. kind-pasteur's LRC presentation reads an address as an `S, T` word, and THM-4808 (b)
   is such a word for the theta group.
@@ -201,7 +205,9 @@ The practices that fix these failures are also the practices that produced the a
 - hostiles constructed before generalising;
 - pre-registered predictions at untested sizes. The first-untested-point law (kps S135) says that fitted interpolants
   die there and mechanisms survive. Today's nine pre-registered predictions survived because they came from
-  mechanisms: Hardy–Littlewood–Mertens, cusp pairing, and the random-graph spectrum.
+  mechanisms: Hardy–Littlewood–Mertens, cusp pairing, and a deliberately wide spectral range. The audit adds a
+  warning. The random-graph model behind that range predicts about 31% exceptions asymptotically, far above the 11%
+  observed, so passing a wide pre-registered range is not evidence for the model.
 - independent audits. Today's THM-4807 audit caught one false sentence before it reached `main`; the HYP-9416 audit
   turned an "OPEN minimality" into a trivial theorem.
 - typed bridges with loss ledgers.

@@ -1,0 +1,324 @@
+#!/usr/bin/env python3
+"""Builds required_edits.json for THM-4808 and HYP-9418 against the CURRENT file text, and validates it:
+every 'old' occurs exactly once in the current file, the edits do not overlap (each still occurs exactly once
+after the others are applied), and the patched YAML frontmatter still parses.  Patched previews are written to
+the scratch directory given as argv[1] (not to the repository)."""
+import json, os, sys
+import yaml
+
+ROOT = '/Users/e/Documents/GitHub/math-wt-pyth-cuboids/'
+THM = '01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md'
+HYP = '05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md'
+AUD = '04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808'
+
+E = []
+
+
+def edit(f, old, new):
+    E.append({'file': f, 'old': old, 'new': new})
+
+
+# ---------------------------------------------------------------- THM-4808
+edit(THM,
+     "Over Q this graph is a 4-regular tree with one orbifold point: its vertices are the primitive Pythagorean triangles up to leg swap and sign, plus the degenerate triangle (1, 0, 1), and its edges are the Berggren parent-child pairs.",
+     "Over Q this graph has two isomorphic components, exchanged by C(t) = (t+1)/(t-1). The component of Euclid slopes (m + n odd) is an edge-indexed tree whose covering tree is 4-regular, with one orbifold point: its vertices are the unsigned primitive triangles plus the degenerate triangle (1, 0, 1), and its edges are the Berggren parent-child pairs, the edge (1,0,1)-(3,4,5) and a half-edge at (1,0,1).")
+edit(THM,
+     "(b) #A is computed by an automaton on the regular continued fraction of m/n (it counts the even heads);",
+     "(b) #A is computed by an automaton on the regular continued fraction m/n = [c_0; c_1, ..., c_L] (it counts the even heads), and chi = (-1)^(m + c_0 + c_1 + ... + c_L);")
+edit(THM,
+     "  PROVED, elementary: (G), (a)-(f). The tree enumeration of primitive triples is classical (Berggren 1934, Barning\n"
+     "  1963, Hall 1970) and CITED; its theta-group form (U = D S, D = T^2) is classical as well. No priority is claimed for\n"
+     "  the non-backtracking reading. A literature check found no source for it, but the check was not exhaustive.",
+     "  PROVED, elementary: (G), (a)-(f), as corrected by the independent audit\n"
+     "  (04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/REPORT.md). The tree enumeration of\n"
+     "  primitive triples is classical (Berggren 1934, Barning 1963, Hall 1970) and CITED. Its theta-group and Gamma(2)\n"
+     "  forms are classical as well: Alperin, Amer. Math. Monthly 112 (2005) 807-816; Romik, Trans. Amer. Math. Soc. 360\n"
+     "  (2008) 6045-6064; and, for the even continued fraction, Kraaikamp-Lopes, Geom. Dedicata 59 (1996) 293-333.\n"
+     "  No priority is claimed for the non-backtracking reading. Over Q it is, in other coordinates, Alperin's\n"
+     "  enumeration of the tree by reduced words in the free group Gamma(2) = <U^2, L^2>, modulo the cusp stabiliser\n"
+     "  <U^2> and his involution delta (iota here). The mod-q form (B as the Hashimoto operator of G_q, Ihara-Bass, the\n"
+     "  spectral census) was not found in the literature.\n"
+     "  Repo prior art, CITED: (d) is THM-3357 (19)-(20), with THM-3341's middle ray. (e) is the scalar shadow of\n"
+     "  THM-3357 (37) and (40), where chi is THM-3357's (-1)^#M Walsh character. The closed form of (b) follows from the\n"
+     "  Stern-Brocot depth cocycle of THM-4057 Theorem 4.1.")
+edit(THM,
+     "  (G) the operator identity B = NB(G_q) for every prime 5 <= q < 120. The Ihara-Bass correspondence lambda^2 - mu\n"
+     "  lambda + 3 = 0 was checked numerically; exact factorisation in PARI/GP shows that every eigenvalue other than 3 and\n"
+     "  +-1 has modulus exactly sqrt 3 for all primes q <= 211. G_q is Ramanujan (max nontrivial |mu| <= 2 sqrt 3) for every\n"
+     "  prime 5 <= q < 1000 except q = 331, 569, 719, 809, 887, where the excess is at most 1.33% (q = 719). The 331\n"
+     "  exception is confirmed exactly: a degree-82 factor has a root off the circle.",
+     "  (G) the operator identity B = NB(G_q) for every prime 5 <= q < 120 (audit: every prime q <= 401 and twelve odd\n"
+     "  composite moduli). The Ihara-Bass correspondence lambda^2 - mu lambda + 3 = 0 is PROVED (audit: B L = L A - T and\n"
+     "  B T = 3 L). The exact identity charpoly(B)(x) (x - 1) = (x - 1)^alpha (x + 1)^beta x^nV F_A(x + 3/x) holds for\n"
+     "  every prime q <= 401 (audit). Every eigenvalue other than 3 and +-1 has modulus exactly sqrt 3 for all primes\n"
+     "  q <= 211 (audit: all primes q < 331, by exact Sturm counts). G_q is Ramanujan (max nontrivial |mu| <= 2 sqrt 3)\n"
+     "  for every prime 5 <= q < 1000 except q = 331, 569, 719, 809, 887 (audit: exact Sturm census), where the excess is\n"
+     "  at most 1.33% (q = 719). At 331 a degree-82 irreducible factor of charpoly(B) has the real roots -1.87843 and\n"
+     "  -1.59708 (adjacency eigenvalue mu = -3.47551).")
+edit(THM,
+     "  (a), (b), (d) on all 456,137 primitive triples with m <= 1500; (c) for M = 1..2000; (f) the exact identity at\n"
+     "  X = 10^3, 10^5, 10^6, 10^7, and S(X) to 10^10.",
+     "  (a), (b), (d) on all 456,137 primitive triples with m <= 1500 (audit: the box of (a) and the closed form of (b) are\n"
+     "  PROVED); (c) for M = 1..2000 (audit: 1..5000); (f) the exact identity at X = 10^3, 10^5, 10^6, 10^7 (audit: also\n"
+     "  10^4, with independent code), and S(X) to 10^10 (audit: reproduced by tree traversal).")
+edit(THM,
+     "  CITED: uniform expansion of the quotients G_q follows from Selberg's 3/16 theorem for congruence subgroups (Lubotzky,\n"
+     "  Discrete Groups, Expanding Graphs and Invariant Measures, 1994), since <U, A, D> generates the extended theta group,\n"
+     "  of index 3 in PGL2(Z).",
+     "  CITED: uniform expansion of the quotients G_q follows from Selberg's 3/16 theorem for congruence subgroups and the\n"
+     "  Brooks-Burger transfer (both in Lubotzky, Discrete Groups, Expanding Graphs and Invariant Measures, 1994, Ch. 4),\n"
+     "  applied to the Schreier graphs of the theta group <D, S> on P1(F_q). <U, A, D> generates the extended theta group,\n"
+     "  of index 3 in PGL2(Z). On V-invariant functions the Dirichlet form of A dominates half that of the theta-group\n"
+     "  Schreier graph (audit).")
+edit(THM,
+     "  - 05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md\n---",
+     "  - 05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md\n"
+     "  - 01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md   # (d), (e); outer intertwiner H = C\n"
+     "  - 01-canon/theorems/THM-3341-u-spine-square-hypotenuse-transplant-and-triangular-plane-torsors.md   # the middle ray |a - b| = 1\n"
+     "  - 01-canon/theorems/THM-4057-stern-brocot-depth-pullback-and-rational-edge-tournament-gauge.md   # depth cocycle: closed form of (b)\n"
+     "  - 04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/REPORT.md   # independent audit\n---")
+edit(THM,
+     "- vertex `O` has outgoing darts `D(O)`;",
+     "- vertex `O` has outgoing darts `D(O)`, each with index `4/|O|` (an edge-indexed graph in the sense of Bass–Kulkarni;\n"
+     "  the index is 2 exactly at the small orbits `{0, ∞}`, `{±1}` and, when `−1` is a square, `{±i}`);")
+edit(THM,
+     "So the Berggren tree is the non-backtracking walk, from the dart `(1,0,1) → (3,4,5)`, on a 4-regular tree. That tree's\n"
+     "vertices are the unsigned primitive triangles plus `(1,0,1)`, which is an orbifold vertex carrying a doubled edge and a\n"
+     "doubled loop. The **pole** `t = ∞` of the F8 marking is that degenerate vertex.",
+     "So the Berggren tree is the non-backtracking walk, from the dart `(1,0,1) → (3,4,5)`, on the **Euclid component** of\n"
+     "`G` (slopes `m/n` with `m + n` odd). That component is an edge-indexed tree whose covering tree is 4-regular.\n"
+     "- Its vertices are the unsigned primitive triangles (odd leg first) plus `(1,0,1) = {0, ∞}`.\n"
+     "- Its edges are the Berggren parent–child pairs and the edge `(1,0,1)–(3,4,5)`.\n"
+     "- The dart `∞` is self-reverse (`τ∞ = ∞`): a half-edge at `(1,0,1)`. Both darts out of `(1,0,1)` carry index 2.\n"
+     "\n"
+     "The **pole** `t = ∞` of the F8 marking is that degenerate vertex.\n"
+     "\n"
+     "The graph on all of `P¹(Q)` is **not** connected. `U, A, D, τ, ι, S` preserve the parity type of `m/n`, so the\n"
+     "odd/odd slopes form a second component. Its orbifold vertex is `{±1}` (the degenerate `(0,1,1)`), and its other\n"
+     "vertices are the leg-swapped triangles. The involution `C(t) = (t+1)/(t−1)` exchanges the two components and\n"
+     "satisfies `CDC = U`, `CAC = A`, `CτC = τ`, `CιC = Sι` and `CSC = S`; it is THM-3357's outer intertwiner `H`. Mod `q`\n"
+     "it is an automorphism of `G_q` commuting with `B` and `B_χ`. (Audit: q_structure.py.) Over `Q` the Euclid component\n"
+     "is, in other coordinates, Alperin's Schreier graph of the free group `Γ(2) = ⟨U², L²⟩` on the cusp of `∞`, folded by\n"
+     "his involution `δ` (here `ι`).")
+edit(THM,
+     "- **Ihara–Bass.** Every eigenvalue `λ ≠ ±1` of `B` satisfies `λ² − μλ + 3 = 0` for an eigenvalue `μ` of the\n"
+     "  adjacency of `G_q`.",
+     "- **Ihara–Bass.** Every eigenvalue `λ ≠ ±1` of `B` satisfies `λ² − μλ + 3 = 0` for an eigenvalue `μ` of the\n"
+     "  adjacency of `G_q`. That adjacency is `A[O, O′] = #{v ∈ V : D v s_O ∈ O′}`: row sums 4, self-adjoint for the\n"
+     "  weights `|O|`, so `μ` is real.\n"
+     "  - PROVED (audit). With `Lg(e) = g(head e)` and `Tg(e) = g(tail e)`, one has `BL = LA − T` and `BT = 3L`. If\n"
+     "    `Bφ = λφ` with `λ² ≠ 1`, then `φ` lies in the span of the images of `L` and `T`.\n"
+     "  - Exactly, `charpoly(B)(x)·(x − 1) = (x − 1)^α (x + 1)^β · x^{n_V} F_A(x + 3/x)`, with `α = (q−3)/4`,\n"
+     "    `β = (q+1)/4` for `q ≡ 3 (mod 4)` and `α = (q−5)/4`, `β = (q−1)/4` for `q ≡ 1 (mod 4)`. Checked for every\n"
+     "    prime `q ≤ 401`.")
+edit(THM,
+     "- **Exact spectra, q ≤ 211.** Every eigenvalue other than `3` and `±1` has modulus exactly `√3`. Equivalently,\n"
+     "  `|μ| ≤ 2√3` for `μ ≠ 4`, which is the Ramanujan property.\n"
+     "- **Primes below 1000.** `G_q` is Ramanujan except at `q = 331, 569, 719, 809, 887`, with a largest ratio of 1.0133.",
+     "- **Exact spectra, q ≤ 211** (audit: all primes `q < 331`, by exact Sturm counts on `charpoly(A)`). Every eigenvalue\n"
+     "  other than `3` and `±1` has modulus exactly `√3`. Equivalently, `|μ| ≤ 2√3` for `μ ≠ 4`, which is the Ramanujan\n"
+     "  property. Here the eigenvalue 4 is simple, and `−4` does not occur because `{0, ∞}` carries a loop.\n"
+     "- **Primes below 1000** (exact, audit). `G_q` is Ramanujan except at `q = 331, 569, 719, 809, 887`, with a largest\n"
+     "  ratio of 1.0133. The violating eigenvalue is negative at 331, 569 and 809, and positive at 719 and 887.")
+edit(THM,
+     "- **Uniform expansion in `q`** is CITED: Selberg's 3/16 theorem plus Lubotzky's transfer, for a finite generating set\n"
+     "  of a finite-index subgroup of `PGL₂(Z)`.",
+     "- **Uniform expansion in `q`** is CITED. Selberg's 3/16 theorem and the Brooks–Burger transfer (Lubotzky 1994,\n"
+     "  Ch. 4) give a uniform spectral gap for the Schreier graphs of the theta group `⟨D, S⟩` on `P¹(F_q)`. On\n"
+     "  `V`-invariant functions the Dirichlet form of `A` dominates half of theirs (take `v = 1` in\n"
+     "  `Σ_v (f(x) − f(Dvx))²`), so the gap passes to `G_q`.")
+edit(THM,
+     "Both candidates `α ≡ ±n⁻¹ (mod m)` lie in `(0, m)`. The bit is which side of `m/n` the pole image `α/γ` lies on: the\n"
+     "penultimate convergent of the theta-group expansion. FINITE-EXACT, `m ≤ 1500`: `0 ≤ α ≤ m` and `0 ≤ γ ≤ n` always.",
+     "Both candidates `α ≡ ±n⁻¹ (mod m)` lie in `(0, m)`. The bit is which side of `m/n` the pole image `α/γ` lies on: the\n"
+     "penultimate convergent of the theta-group (even) continued fraction. So (a) is the classical determinant identity\n"
+     "for consecutive convergents.\n"
+     "\n"
+     "PROVED (audit): `0 ≤ γ ≤ α` and `0 ≤ n − γ ≤ m − α`. Indeed `U, A, D` map the cone `{x ≥ y ≥ 0}` into itself, the\n"
+     "cone contains `(1, 0)` and `(1, 1)`, and `(α, γ) = M_w(1, 0)ᵀ`, `(m − α, n − γ) = M_w(1, 1)ᵀ`. Hence\n"
+     "`1 ≤ α ≤ m − 1` and `0 ≤ γ ≤ n`.")
+edit(THM,
+     "Exact on all 456,137 triples with `m ≤ 1500`.",
+     "Exact on all 456,137 triples with `m ≤ 1500`.\n"
+     "\n"
+     "**Closed form (audit).** `χ = (−1)^(m + c₀ + c₁ + ⋯ + c_L)`.\n"
+     "\n"
+     "*Proof.* `U` and `A` swap the parities of `(m, n)` and `D` keeps them, so `m ≡ #U + #A (mod 2)`, since the root has\n"
+     "`m = 2`. Each branch raises the digit sum `c₀ + ⋯ + c_L`: `D` and `A` by 2, `U` by 1. This is THM-4057 Theorem 4.1,\n"
+     "whose `A` is the `U` here. So `c₀ + ⋯ + c_L ≡ #U (mod 2)`. ∎\n"
+     "\n"
+     "Checked on all 456,137 pairs with `m ≤ 1500`. Equivalently, `χ = (−1)^(L + [w starts with U])`. Thus `χ` is the\n"
+     "product of `(−1)^m` and `(−1)^(c₀ + ⋯ + c_L) = −(−1)^{D(m/n)}`, THM-4057's Stern–Brocot checkerboard character.")
+edit(THM,
+     "**Not a character.** No XOR combination of up to five of 18 arithmetic features matches the parity on `m ≤ 120`. The\n"
+     "features were Jacobi symbols of `(m, n, m ± n, c)`, classes of `a, b, c` modulo 16, sign of `a − b`, and inverses\n"
+     "modulo `m` or `n`. The best two-feature agreement is 0.61. Part (c) turns the residue case into a theorem.",
+     "**Not a residue character.** No XOR combination of up to five of 18 features matches the parity on `m ≤ 120`.\n"
+     "- The features were Jacobi symbols built from `m, n, m ± n`, `2` and `−1`; the parity of `m` and two bits of the\n"
+     "  even parameter; the sign of `a − b`; the last-letter tests `m > 2n` and `m > 3n`; and whether `n⁻¹ mod m` and\n"
+     "  `m⁻¹ mod n` lie in the lower half.\n"
+     "- The best two-feature agreement is 0.61.\n"
+     "- The list omitted the Stern–Brocot depth parity. With it, the closed form above writes `χ` as an XOR of two\n"
+     "  features.\n"
+     "\n"
+     "Part (c) shows that no feature that is a function of residues can do this.")
+edit(THM,
+     "particular it is not a finite product of Dirichlet or Hecke characters of finite conductor evaluated at `m + ni`, the\n"
+     "sides, or the slope.",
+     "particular it is not a finite product of Dirichlet or Hecke characters of finite conductor evaluated at `m + ni`, the\n"
+     "sides, or the slope. Hecke characters of infinite order need one more step. On Euclid `α = m + ni ≡ 1` modulo the\n"
+     "conductor such a product is `(α/|α|)^k`, and since the arguments of these `α` are dense, being `±1`-valued forces\n"
+     "`k = 0`.")
+edit(THM,
+     "the sign records only the trailing `A`-run, while `χ` records every `A`.",
+     "the sign records only the trailing `A`-run, while `χ` records every `A`. This is THM-3357 (19)–(20), whose\n"
+     "`L, M, R` are `U, A, D` here, with the middle ray of THM-3341 (24). CITED.")
+edit(THM,
+     "In particular, at every depth exactly one more triple has even than odd branch parity.",
+     "In particular, at every depth exactly one more triple has even than odd branch parity. This is the scalar shadow of\n"
+     "THM-3357 (37) and (40). There `χ` is the `(−1)^#M` Walsh character, and `Σ_{|w|=k} χ(w) M_w u = u`. CITED.")
+edit(THM,
+     "The paired rays carry opposite characters. These rays are exactly the rays based at nodes ending in `U`, `D` or `A`.\n"
+     "So every parabolic ray except the root's two is paired.",
+     "The paired rays carry opposite characters.\n"
+     "- A maximal `D`-ray is based at a node not ending in `D`: the root, `wU` or `wA`.\n"
+     "- A maximal `U`-ray is based at a node not ending in `U`: the root, `wD` or `wA`.\n"
+     "- The pairings `wU ↔ wA` and `wD ↔ wA` match every non-root ray exactly once.\n"
+     "\n"
+     "So every parabolic ray except the root's two is paired.")
+edit(THM,
+     "    S(X) := Σ_{c ≤ X} χ = 1 + N_U(X) + N_D(X) + E(X),",
+     "    S(X) := Σ_{c ≤ X} χ = 1 + N_U(X) + N_D(X) + E(X)     (X ≥ 5),")
+edit(THM,
+     "- `E(X)/√X` changes sign repeatedly (10 sign changes over 22 sampled heights from 100 to `10⁹`), with\n"
+     "  `|E| ≤ 0.21√X` at every sampled height from `10³` to `10¹⁰` (0.30 at `X = 100`).",
+     "- `E(X)/√X` changes sign repeatedly (10 sign changes over 22 sampled heights from 100 to `10⁹`), with\n"
+     "  `|E| ≤ 0.21√X` at every sampled height from `10³` to `10¹⁰` (0.30 at `X = 100`);\n"
+     "- at full resolution (every integer `X ≤ 10⁹`, audit), `E` changes sign 13,538 times on `[100, 10⁹]`, and\n"
+     "  `max |E(X)|/√X = 0.368`, attained at `X = 4,222,837` (`E = −756`). The decade maxima from `10²` to `10⁹` are\n"
+     "  0.319, 0.290, 0.339, 0.329, 0.368, 0.284, 0.301.")
+edit(THM,
+     "The parity bias\n"
+     "of the whole tree is located on these two rays and on no others.",
+     "The main term\n"
+     "`(1/2 + 1/√2)√X` of the parity bias comes from these two rays. That the paired remainder `E(X)` contributes nothing\n"
+     "on average is HYP-9418 (2). It is not proved here, and `E(X)` is of the same order as the fluctuations of `S(X)`.")
+edit(THM,
+     "THM-1370's exclusion of 7 and 21",
+     "the exclusion of 7 and 21 in THM-1370 (`THM-1370-h-spectrum-omits-7-21-all-n.md`; another file shares that ID)")
+edit(THM,
+     "- **abc.** The abc carriers on the tree are the twin centre identity and the classical `9^(2^j)` family. Both lie on\n"
+     "  the root rays, so `χ = +1` throughout, and abc data cannot see `χ` there. Off the rays, (c) rules out every\n"
+     "  residue-level arithmetic proxy.",
+     "- **abc.** The two abc families singled out here, the twin centre identity and the classical `9^(2^j)` family, lie\n"
+     "  on the root rays, so `χ = +1` on them. They are not the only abc carriers on the tree. For the squared packet\n"
+     "  `(a², b², c²)` of growing_sieve_path field §4, `ADU = (16, 9)`, with `Φ = (175, 288, 337)`, has\n"
+     "  `c² = 113569 > rad = 70770` and `χ = −1`, while `UU` is a hit with `χ = +1`. So `χ` does not determine abc-hit\n"
+     "  status, and abc-hit status does not determine `χ` (field §4). Off the rays, (c) rules out every residue-level\n"
+     "  arithmetic proxy.")
+edit(THM,
+     "are growing_sieve_path field §5.",
+     "are growing_sieve_path field §§4–5 (the radical witness is in §4, the monoid no-go in §5).")
+
+# ---------------------------------------------------------------- HYP-9418
+edit(HYP,
+     "  (4) FINITE-EXACT for primes q < 1000; for 1000 < q < 4000 all three pre-registered predictions are CONFIRMED\n"
+     "  (non-Ramanujan fraction 0.1099, worst ratio 1.0105, max |mu| 3.5004).\n"
+     "  (5) FINITE-EXACT for q <= 211; one exception at q = 251.",
+     "  (4) FINITE-EXACT for primes q < 1000 (exact Sturm census in the audit, audit_thm4808/spectra_exact.out). For\n"
+     "  1000 < q < 4000 all three pre-registered predictions are CONFIRMED (non-Ramanujan fraction 0.1099, worst ratio\n"
+     "  1.0105, max |mu| 3.5004), and the audit reproduced them with independent code.\n"
+     "  (5) FINITE-EXACT (audit, exact Sturm census): B_chi is Ramanujan for every prime q < 1000 except q = 251, 479, 863\n"
+     "  and 947. NUMERICAL: 42 exceptions among the 382 primes 1000 < q < 4000.")
+edit(HYP,
+     "  - 04-computation/experiments/hamilton_path_recovery_20261026/audit_thm4807/audit_census_c_n10strong.out",
+     "  - 04-computation/experiments/hamilton_path_recovery_20261026/audit_thm4807/audit_census_c_n10strong.out\n"
+     "  - 04-computation/experiments/berggren_sieve_parity_20261026/audit_thm4808/   # REPORT.md; exact spectral census, full-resolution E(X), independent sieve")
+edit(HYP,
+     "the fluctuation, and located on the two root cusps.",
+     "the fluctuation, and located on the two root cusps. By analogy with Chebyshev's bias for primes (Rubinstein–Sarnak),\n"
+     "the natural form is that `E(X)/√X` has a limiting logarithmic distribution with mean 0. The uniform bound `O(√X)` is\n"
+     "the strongest item, and the data cannot separate it from `O(√X log log X)`.")
+edit(HYP,
+     "At every sampled height, `|E|/√X ≤ 0.30`; from `X = 10³` on, `|E|/√X ≤ 0.21`. The sign changes 10 times among the 22 sampled heights from 100 to `10⁹`.",
+     "At every sampled height, `|E|/√X ≤ 0.30`; from `X = 10³` on, `|E|/√X ≤ 0.21`. The sign changes 10 times among the 22 sampled heights from 100 to `10⁹`.\n"
+     "\n"
+     "At full resolution (every integer `X ≤ 10⁹`, audit) the bound is larger.\n"
+     "- `max |E|/√X = 0.368`, at `X = 4,222,837`.\n"
+     "- The decade maxima lie between 0.28 and 0.37, with no upward trend.\n"
+     "- `E` changes sign 13,538 times on `[100, 10⁹]`.\n"
+     "- The logarithmic mean of `E/√X` is −0.025 over `[5, 10⁹]` and −0.008 over `[10⁴, 10⁹]`.")
+edit(HYP,
+     "The `π₂` values agree with OEIS A007508.",
+     "The `π₂` values agree with OEIS A007508, and the audit reproduced them with an independent segmented sieve. These\n"
+     "predictions concern quantities already fixed by published data, so they check the arithmetic, not the model.")
+edit(HYP,
+     "**Evidence.** Below 1000 there are 5 exceptions (331, 569, 719, 809, 887) among 165 primes, with worst ratio 1.0133.\n"
+     "The 331 exception was checked exactly.",
+     "**Evidence.** Below 1000 there are 5 exceptions (331, 569, 719, 809, 887) among the 166 primes `5 ≤ q < 1000`, with\n"
+     "worst ratio 1.0133. The census is exact (audit: Sturm counts on `charpoly(A)` for every prime `q < 1000`). The\n"
+     "violating eigenvalue is negative at 331, 569 and 809 and positive at 719 and 887, so both edges matter.")
+edit(HYP,
+     "The exceptional fraction rose from 0.03 below 1000 to 0.11, as the random-graph Tracy–Widom picture predicts.\n"
+     "The exceptional primes need not stay exceptional.",
+     "The exceptional fraction rose from 0.03 below 1000 to 0.11.\n"
+     "- For random 4-regular graphs, Huang–McKenzie–Yau (arXiv:2412.20263) give a limiting Ramanujan probability of\n"
+     "  about 0.69, so a non-Ramanujan fraction near 0.31. Both observed fractions are well below that.\n"
+     "- A slow approach to 0.31 is possible, but the Tracy–Widom picture does not predict the rise. Whether `G_q` follows\n"
+     "  random-graph statistics is open.\n"
+     "- In `1000 < q < 4000` the worst case (`q = 3539`) is on the negative edge.")
+edit(HYP,
+     "`B_χ = P_U − P_A + P_D` is the branch-signed operator on `P¹(F_q)`. Exactly, for all primes `q ≤ 211`:\n"
+     "- its eigenvalues are `±1`, with multiplicities about `q/4 + 3` and `q/4 + 1`, together with conjugate pairs of\n"
+     "  modulus exactly `√3`;\n"
+     "- at `q = 251`, a degree-62 factor has a root off the circle (real root 2).",
+     "`B_χ = P_U − P_A + P_D` is the branch-signed operator on `P¹(F_q)`. It satisfies a twisted Ihara–Bass identity\n"
+     "(audit, exact for every prime `q ≤ 401`):\n"
+     "\n"
+     "    charpoly(B_χ)(x) = (x − 1)^α (x + 1)^β · x^n F_{A_χ}(x + 3/x).\n"
+     "\n"
+     "Here `A_χ` is the adjacency twisted by `χ(ι) = χ(Sι) = −1`, `χ(S) = 1`, acting on the `χ`-equivariant functions;\n"
+     "the orbits `{0, ∞}` and `{±1}` drop out. Exactly, for all primes `q ≤ 211` (audit: all primes `q < 251`):\n"
+     "- its eigenvalues are `±1`, together with conjugate pairs of modulus exactly `√3`. The multiplicities of `±1` are\n"
+     "  `(q+9)/4` and `(q+1)/4` for `q ≡ 3 (mod 4)`, and `(q+7)/4` and `(q−1)/4` for `q ≡ 1 (mod 4)`;\n"
+     "- at `q = 251`, a degree-62 irreducible factor has two real roots off the circle, `−1.99990` and `−1.50007`. Their\n"
+     "  product is 3, and the twisted-adjacency eigenvalue is `μ = −3.49998`. The roots are irrational; neither is 2;\n"
+     "- below 1000 the exceptions are exactly `q = 251, 479, 863, 947` (audit, exact). Among the 382 primes\n"
+     "  `1000 < q < 4000` there are 42 (numerical, audit), with worst ratio 1.0098 at `q = 1567`.")
+
+edit(HYP,
+     "- Uniform expansion is a theorem (Selberg plus Lubotzky); the Ramanujan property is not expected for all `q`.",
+     "- Uniform expansion is a theorem (Selberg plus the Brooks–Burger transfer, Lubotzky 1994 Ch. 4; see THM-4808 (G));\n"
+     "  the Ramanujan property is not expected for all `q`.")
+
+if __name__ == '__main__':
+    preview_dir = sys.argv[1] if len(sys.argv) > 1 else None
+    texts = {f: open(ROOT + f, encoding='utf-8').read() for f in (THM, HYP)}
+    ok = True
+    for e in E:
+        c = texts[e['file']].count(e['old'])
+        if c != 1:
+            ok = False
+            print(f"NOT UNIQUE ({c}) in {os.path.basename(e['file'])[:12]}: {e['old'][:80]!r}")
+    patched = dict(texts)
+    for e in E:
+        c = patched[e['file']].count(e['old'])
+        if c != 1:
+            ok = False
+            print(f"OVERLAP: after earlier edits, count {c}: {e['old'][:80]!r}")
+            continue
+        patched[e['file']] = patched[e['file']].replace(e['old'], e['new'])
+    for f, t in patched.items():
+        fm = t.split('---\n')[1]
+        try:
+            y = yaml.safe_load(fm)
+            print(f"{os.path.basename(f)[:12]}: frontmatter parses; keys {sorted(y)}")
+        except Exception as ex:
+            ok = False
+            print(f"{f}: YAML ERROR {ex}")
+        if preview_dir:
+            open(os.path.join(preview_dir, os.path.basename(f)), 'w', encoding='utf-8').write(t)
+    print(f"{len(E)} edits ({sum(e['file'] == THM for e in E)} THM, {sum(e['file'] == HYP for e in E)} HYP); valid: {ok}")
+    if ok:
+        json.dump(E, open(ROOT + AUD + '/required_edits.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        print('wrote required_edits.json')

@@ -1,0 +1,6 @@
+chi odd == XOR of ('sum odd', 'm odd') 
+chi odd == XOR of ('m odd', '#odd digits odd') 
+firstU == XOR of ('sum odd', 'L odd', 'm odd') 
+firstU == XOR of ('L odd', 'm odd', '#odd digits odd') 
+chi odd == XOR of ('m odd', 'sum even-index digits odd', 'sum odd-index digits odd') 
+32334
