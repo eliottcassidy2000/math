@@ -73,3 +73,39 @@ checker normally and with optimization against frozen receipts. It never
 overwrites a receipt. The manifest is an integrity record, not an independent
 mathematical proof. PNG is explicitly binary in `.gitattributes`; text
 artifacts retain LF bytes across checkouts.
+
+## Late incoming S60 integration
+
+After the core proof and integration freeze, commits e68e0ea0e7,
+41713d3aa2 and54617edb71 arrived. The README's reference to an S60
+reservation describes the earlier research state; that file is preserved
+at its independently reviewed hash. S60 now has a named theorem whose
+broader audit is pending. It is not imported wholesale as a proved dependency.
+
+The [bounded incoming review](INCOMING_S60.md) repairs four domain and
+quantifier errors in THM-4805 and its maintained summaries. The
+[exact correction lineage](LATE_CORRECTIONS.json) records original bytes
+at54617edb71 and every replacement; the packet verifier reconstructs the
+final files from those replacements. The independent late review is recorded
+under `late_audit/`. This is a review of the stated corrections, not an audit
+of S60's source census or of the whole theorem.
+
+The old mistakes ledger remains bound to its exact research-base bytes in
+`historical_sources`; the new ledger entry is separately bound by correction
+replay. No previously frozen source pin or mathematical review was silently
+retargeted. Current pins for the remaining sources still require exact bytes.
+
+The new synthesis identifies `1+63=64` with the already tested geometric
+hostile `(63,16,65)`, whose radii are7 and9. The divisibility-by-three proof
+shows that4 is the only power-of-two centre with twin radii. Thus the two
+abc carriers meet the same construction while their prime-selected domains
+remain different; no equivalence of the open conjectures is asserted.
+
+The final clean rebase also retained e423946b4d,573019f2c2 andfb87227212,
+the incoming [strong-atom continuation packet](../strong_atom_continuation_vitali_20261026/README.md).
+Its relative-alignment obstruction and joint-field-degree interface are a
+targeted continuation lead, not new proved dependencies of this packet;
+its atlas was not replayed here. The concrete comparison is between what
+each observer must retain: our one-bit state repairs which conic design is
+carried, and does not recover primality or arbitrary tournament alignment.
+These are different quotients, so their required extra data need not agree.

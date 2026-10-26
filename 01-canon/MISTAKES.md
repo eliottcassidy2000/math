@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — small-source endpoints, conditional Mersenne coverage, and ray units
+
+- **Source / bounded review:** [THM-4805 / aliquot-sources-of-2-5-7-21](theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md) and its [S60 source note](../05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md), incoming revision `54617edb71`. This repairs four demonstrated domain/quantifier defects; the remaining theorem and computational claims are not fully audited by this review.
+- **Minimal endpoint witnesses:** the source-shape claim for every target v<=14 omitted `s(1)=0` and all primes mapping to1. Its survivor is targets2..14 with at most three proper divisors, `t=tau-1<=3`; `6` has tau4, so the old tau<=3 label was also wrong. The separate fibres are `F(0)={1}` and `F(1)=primes`. Likewise n1 satisfies `sigma(n)=2n-1` but gives `(1,0,1)`, outside positive abc; retain n>=2 and positive Mersenne exponent k>=1.
+- **First failed global implication:** the Mersenne single-source iff k2,3 was presented unconditionally while its proof used distinct-prime Goldbach beyond finite data. The repair states CITED FINITE-EXACT for1<=k<=26 from S57, not recomputed here, and CONDITIONAL for all k>=1. For k>=4 a distinct-prime partition of `2^k-2` gives a second, odd semiprime source. No counterexample to the global conjecture is asserted.
+- **Missing unit / exact repair:** with doubling exponent j>=0 and power exponent k>=1, `D(1)={1} union P(2)`, not `P(2)`. Among unrestricted positive bases the unique exact row-column equality is `D(2)=P(2)`: equal least elements force n=m and equal second elements force `2n=m^2`, hence n=m=2. The segment1,2,4 and its sum7 survive. Only2 is prime on D(1), not on every row.
+- **Lineage and next question:** [bounded correction record](../05-knowledge/results/twin_pythagorean_124_20261026/INCOMING_S60.md) and `LATE_CORRECTIONS.json` retain exact replacements and source hashes. Remaining questions are unconditional all-k Mersenne coverage and the unreviewed portions of the incoming theorem; neither a parenthetical condition nor an unrecorded exponent-zero convention supplies a proof.
+
 ## 2026-10-26 — conditional coverage and minima over fibres retain their quantifiers
 
 - **Source / first failed implication:** the [S57 aliquot report](../05-knowledge/results/s57_untouchables_root27_20261026/README.md), section3, stated globally that only odd targets3,5,7 lack a distinct-prime partition of their predecessor. For targets at least9 this imports the OPEN distinct-prime Goldbach antecedent. The surrounding finite evidence did not supply that theorem.

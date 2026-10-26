@@ -16,6 +16,10 @@ def require(test, message):
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
+def historical_bytes(revision, name):
+    return subprocess.run(['git', 'show', revision + ':' + name], cwd=ROOT,
+                          capture_output=True, check=True).stdout
+
 def main():
     manifest = json.loads((HERE / 'MANIFEST.json').read_text())
     actual = {str(p.relative_to(HERE)) for p in HERE.rglob('*') if p.is_file()}
@@ -25,6 +29,26 @@ def main():
         require(sha(HERE / name) == digest, 'packet hash: ' + name)
     for name, digest in manifest['sources'].items():
         require(sha(ROOT / name) == digest, 'source hash: ' + name)
+    for source in manifest.get('historical_sources', []):
+        blob = historical_bytes(source['revision'], source['path'])
+        require(hashlib.sha256(blob).hexdigest() == source['sha256'],
+                'historical source hash: ' + source['path'])
+    if 'late_corrections' in manifest:
+        corrections = json.loads((HERE / manifest['late_corrections']).read_text())
+        for correction in corrections['files']:
+            name = correction['path']
+            original = historical_bytes(corrections['source_revision'], name)
+            require(hashlib.sha256(original).hexdigest() == correction['before_sha256'],
+                    'correction original hash: ' + name)
+            reconstructed = original.decode()
+            for replacement in correction['replacements']:
+                require(reconstructed.count(replacement['old']) == 1,
+                        'unique correction anchor: ' + name)
+                reconstructed = reconstructed.replace(replacement['old'], replacement['new'], 1)
+            require(reconstructed.encode() == (ROOT / name).read_bytes(),
+                    'exact correction replay: ' + name)
+            require(sha(ROOT / name) == correction['after_sha256'],
+                    'correction final hash: ' + name)
     for name, digest in manifest['reviewed_files'].items():
         require(sha(HERE / name) == digest, 'independent review binding: ' + name)
     for folder, filename in manifest['child_manifests']:
@@ -51,7 +75,9 @@ def main():
             require(run.stdout == frozen, script + ': replay differs from frozen receipt')
         result.append({'script': script, 'normal_and_optimized': 'identical to frozen'})
     print(json.dumps({'status': 'PASS', 'files': len(manifest['files']),
-        'sources': len(manifest['sources']), 'review_bindings': len(manifest['reviewed_files']),
+        'sources': len(manifest['sources']),
+        'historical_sources': len(manifest.get('historical_sources', [])),
+        'review_bindings': len(manifest['reviewed_files']),
         'producer_gates': manifest['producer_gates'],
         'independent_executable_gates': manifest['independent_executable_gates'],
         'replays': result}, indent=2, sort_keys=True))

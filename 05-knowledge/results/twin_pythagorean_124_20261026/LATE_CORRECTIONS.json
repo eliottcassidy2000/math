@@ -1,0 +1,160 @@
+{
+  "files": [
+    {
+      "after_sha256": "94f853fea0ad204d010839afd1f64a948e43e64f3c1af20ca9ad750bc880de94",
+      "before_sha256": "0c2a4f22368dea54475e1f31addbb1bc959fa8f6a6afa42b97f7289b3d689e0f",
+      "path": "01-canon/theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md",
+      "replacements": [
+        {
+          "new": "title: \"The aliquot table after session69 and aliquot124. (A') Every value 2 <= v <= 14 of s(n) = sigma(n) - n has only sources of the shapes p^2, pq, p^3 (the t = tau - 1 <= 3 regime; the first four-proper-divisor source is 15 = s(16), the first five-divisor source 16 = s(12)); CITED FINITE-EXACT for 1 <= k <= 26, and CONDITIONAL on distinct-prime Goldbach for every k >= 1: the Mersenne value 2^k - 1 = s(2^k) has the single source 2^k exactly for k = 2, 3 (3 <- {4}, 7 <- {8}; 15 <- {16, 33}, 31 and 63 have five and three sources). (B') For a prime P the sources of P + 1 of the row form 2^a q (q an odd prime) are exactly the twin source 2(P - 2); FINITE-EXACT: s^-1(28) = {28} (28 is its own only source), s^-1(496) = {496, 652}, s^-1(8128) = {8128, 10682, 10828}, s^-1(33550336) = {33550336, 44655764}. (C') In the two-ray carrier (rows 2^j n, columns n^k): old = even or perfect power, the column of 2^a r is the shifted column of r, the row of an odd n meets an earlier column iff n is a perfect power, and for j >= 0 and k >= 1, D(1) = {1} union P(2), while D(2) = P(2) is the only exact row-column equality (the segment 1, 2, 4 of D(1) is the 1-2-4 decomposition of 7 = s(8)). (D') For n >= 2, (1, s(n), n) is a positive coprime additive triple iff n is almost perfect; for k >= 1, (1, 2^k - 1, 2^k) is an abc hit iff 2^k - 1 is not squarefree, iff ord_(p^2)(2) | k for some odd prime p; the hits with k <= 64 are k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63.\"",
+          "old": "title: \"The aliquot table after session69 and aliquot124. (A') Every value v <= 14 of s(n) = sigma(n) - n has only sources of the shapes p^2, pq, p^3 (the tau <= 3 regime; the first four-proper-divisor source is 15 = s(16), the first five-divisor source 16 = s(12)); the Mersenne value 2^k - 1 = s(2^k) has the single source 2^k exactly for k = 2, 3 (3 <- {4}, 7 <- {8}; 15 <- {16, 33}, 31 and 63 have five and three sources). (B') For a prime P the sources of P + 1 of the row form 2^a q (q an odd prime) are exactly the twin source 2(P - 2); FINITE-EXACT: s^-1(28) = {28} (28 is its own only source), s^-1(496) = {496, 652}, s^-1(8128) = {8128, 10682, 10828}, s^-1(33550336) = {33550336, 44655764}. (C') In the two-ray carrier (rows 2^j n, columns n^k): old = even or perfect power, the column of 2^a r is the shifted column of r, the row of an odd n meets an earlier column iff n is a perfect power, and the row of 1 is the only row that is a column (its segment 1, 2, 4 is the 1-2-4 decomposition of 7 = s(8)). (D') (1, s(n), n) is a coprime additive triple iff n is almost perfect; (1, 2^k - 1, 2^k) is an abc hit iff 2^k - 1 is not squarefree, iff ord_(p^2)(2) | k for some odd prime p; the hits with k <= 64 are k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63.\""
+        },
+        {
+          "new": "  PROVED: (A') (i), for 2 <= v <= 14, from Lemma 1 (shapes by the number of proper divisors); the unit and prime fibres are separate; (B') (i) from the guarded",
+          "old": "  PROVED: (A') Lemma 1 (shapes by the number of proper divisors) and the exact table; (B') (i) from the guarded"
+        },
+        {
+          "new": "  CITED FINITE-EXACT: (A') (ii) for 1 <= k <= 26, from S57's odd single-source list below 10^8; not independently recomputed in this bounded repair.\n  CONDITIONAL: the all-k assertion in (A') (ii), assuming every even integer at least 8 is a sum of two distinct primes.\n  Unconditionally, that global single-source classification is unproved here.\n  FINITE-EXACT: aliquot_chains_abc_20261026.py",
+          "old": "  FINITE-EXACT: aliquot_chains_abc_20261026.py"
+        },
+        {
+          "new": "  AUDITED: full theorem audit remains pending (note, section 7). A bounded domain/quantifier repair is recorded in twin_pythagorean_124_20261026/INCOMING_S60.md; it does not certify unrelated claims.",
+          "old": "  AUDITED: pending (note, section 7)."
+        },
+        {
+          "new": "`s(n) = sigma(n) - n`, `t(n) = tau(n) - 1`. A composite `n` has `s(n) >= 1 + sqrt n`, so every source of a target v > 1 satisfies n < v^2. The fibres at 0 and 1 are handled separately.",
+          "old": "`s(n) = sigma(n) - n`, `t(n) = tau(n) - 1`. A composite `n` has `s(n) >= 1 + sqrt n`, so all source sets below are exact."
+        },
+        {
+          "new": "## Theorem A' (the t = tau - 1 <= 3 regime; Mersenne single sources)",
+          "old": "## Theorem A' (the tau <= 3 regime; Mersenne single sources)"
+        },
+        {
+          "new": "(i) Every value `2 <= v <= 14` has only sources of the shapes `p^2`, `pq` (distinct primes), `p^3`; the first four- and five-proper-divisor sources are `16 -> 15` and `12 -> 16`. Separately, `s^-1(0)={1}` and `s^-1(1)` is the set of all primes.\n\n(ii) **CITED FINITE-EXACT:** for `1 <= k <= 26`, the Mersenne value `2^k - 1 = s(2^k)` has the single source `2^k` exactly for `k = 2, 3`, by S57's odd single-source list below `10^8`. This cited range was not independently recomputed in the bounded repair. At `k=1` the target1 has infinitely many prime sources. The small fibres include `3 <- {4}`, `7 <- {8}`, `15 <- {16, 33}`, `31 <- {32, 125, 161, 209, 221}`, `63 <- {64, 177, 817}`; 127 has eleven sources. **CONDITIONAL:** if every even integer at least8 is a sum of two distinct primes, the same iff holds for every `k>=1`. Unconditionally, the all-k classification is unproved here.",
+          "old": "(i) Every value `v <= 14` has only sources of the shapes `p^2`, `pq`, `p^3`; the first four- and five-proper-divisor sources are `16 -> 15` and `12 -> 16`. (ii) `2^k - 1 = s(2^k)` has the single source `2^k` exactly for `k = 2, 3`; `15 <- {16, 33}`, `31 <- {32, 125, 161, 209, 221}`, `63 <- {64, 177, 817}`, 127 has eleven sources; for `k >= 4` a distinct-prime partition of `2^k - 2` gives a semiprime source (verified to `k = 26` through S57's single-source list; conditional on distinct Goldbach beyond)."
+        },
+        {
+          "new": "*Proof.* (i) Lemma 1 applies once targets0 and1 are separated. The only source of0 is1; precisely the primes have aliquot sum1. (ii) The finite statement is cited from S57. Under distinct-prime Goldbach, for each `k>=4` write `2^k-2=p+q` with distinct primes. They are odd, so `pq` differs from `2^k`, and `s(pq)=1+p+q=2^k-1` supplies a second source. The exact fibres at k2,3 and the infinite fibre at k1 finish the conditional statement. QED",
+          "old": "*Proof.* (i) Lemma 1. (ii) The exact table and S57. QED"
+        },
+        {
+          "new": "Rows `D(n) = {2^j n : j>=0}`, columns `P(n) = {n^k : k>=1}`, with positive bases n (so `P(1)={1}`); `n = 2^a r`, `r` odd. (1) `n` is old iff even or a perfect power; the rays of an odd non-perfect-power meet no ray of a smaller number. (2) `n^2` lies on `D(r^2)`, already occurs iff `r^2 < n` or `n` is a perfect power, and is a later doubling iff `a >= 1`, `r > 2^a` (session69's predicate; first instance 6). (3) `(2^a r)^k = 2^(ak) r^k`: the column of an even number is its odd part's column shifted along the rows. (4) The row of an odd `n` meets an earlier column iff `n` is a perfect power. (5) `D(1)={1} union P(2)`, while `D(2)=P(2)` is the unique exact equality between an unrestricted doubling row and a positive-exponent power column. The segment `1,2,4` of `D(1)` is the 1-2-4 decomposition of `7=s(8)`; 2 is the only prime on `D(1)`.",
+          "old": "Rows `D(n) = {2^j n}`, columns `P(n) = {n^k}`; `n = 2^a r`, `r` odd. (1) `n` is old iff even or a perfect power; the rays of an odd non-perfect-power meet no ray of a smaller number. (2) `n^2` lies on `D(r^2)`, already occurs iff `r^2 < n` or `n` is a perfect power, and is a later doubling iff `a >= 1`, `r > 2^a` (session69's predicate; first instance 6). (3) `(2^a r)^k = 2^(ak) r^k`: the column of an even number is its odd part's column shifted along the rows. (4) The row of an odd `n` meets an earlier column iff `n` is a perfect power. (5) `D(1) = P(2)` is the only row that is a column; its segment `1, 2, 4` is the 1-2-4 decomposition of `7 = s(8)`."
+        },
+        {
+          "new": "*Proof.* Unique factorisation, as in session69's row-intersection law and aliquot124's P1-P2; (4): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`. (5) If `D(n)=P(m)`, then `m>=2`, since `P(1)` is finite. Comparing least elements gives `n=m`, and comparing second elements gives `2n=m^2`, hence `m=n=2`. Conversely `D(2)=P(2)`, and adjoining1 gives `D(1)`. QED",
+          "old": "*Proof.* Unique factorisation, as in session69's row-intersection law and aliquot124's P1-P2; (4): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`. QED"
+        },
+        {
+          "new": "(i) For `n>=2`, `(1,s(n),n)` is a positive pairwise-coprime additive triple iff `sigma(n) = 2n - 1`. At n1, `sigma(1)=1=2*1-1` but the triple `(1,0,1)` is not positive and is excluded. (ii) For `k>=1`, `(1, 2^k - 1, 2^k)` has `rad(abc) < c` iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p`; for `k <= 64` exactly `k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63`. (iii) 121 abc hits with `c <= 10^4` (94 with an odd perfect power, 48 with a power-of-two even term, 30 with `a = 1`), 419 with `c <= 10^5` (323, 119, 63).",
+          "old": "(i) `(1, s(n), n)` is a pairwise coprime additive triple iff `sigma(n) = 2n - 1`. (ii) `(1, 2^k - 1, 2^k)` has `rad(abc) < c` iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p`; for `k <= 64` exactly `k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63`. (iii) 121 abc hits with `c <= 10^4` (94 with an odd perfect power, 48 with a power-of-two even term, 30 with `a = 1`), 419 with `c <= 10^5` (323, 119, 63)."
+        }
+      ]
+    },
+    {
+      "after_sha256": "872e7cf8fa6377ee73f99e3738342402d621ee166d9e1c675b985922d8160010",
+      "before_sha256": "2bb8e01d22c3905200b324a5f0e78105a3d87cac7665b21882acdb765a22912c",
+      "path": "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md",
+      "replacements": [
+        {
+          "new": "# The aliquot table and the chain structure after session69 and aliquot124: the t = tau - 1 <= 3 regime, finite and conditional Mersenne single sources, row-source uniqueness of the twin collision, the self-only perfect number 28, and abc hits on the row of 1",
+          "old": "# The aliquot table and the chain structure after session69 and aliquot124: the tau <= 3 regime, Mersenne single sources, row-source uniqueness of the twin collision, the self-only perfect number 28, and abc hits on the row of 1"
+        },
+        {
+          "new": "**Status: a merge note. Most of the owner's directive was executed, audited and pushed the same day by two concurrent lanes ([session69](session69_prime_ports_power_aliquot_20261026/README.md), commits 2f483a9201 and 365ab05300; [aliquot124](aliquot_power_124_20261026/README.md), commit 52fde1af0d), which landed after this session's worktree was cut and were found by a pre-publication sweep. Section 1 maps every clause of the directive to where it is settled. Section 2 adds what was not in those packets: PROVED (THM-4805: the t = tau - 1 <= 3 regime for 2 <= v <= 14, row-source uniqueness of the twin collision, the two-ray corollaries, abc hits on the row of 1 = non-squarefree Mersenne numbers) / CITED FINITE-EXACT (Mersenne single-source classification for 1 <= k <= 26, from S57, not independently recomputed in the bounded repair) / CONDITIONAL (the all-k Mersenne classification under distinct-prime Goldbach) / FINITE-EXACT (28 is its own only source; the companions of 496, 8128, 33550336; twin-value source counts to 10^5; abc census to 10^5) / pre-registered tests with one failed range (HYP-9415) / ANALOGY and NUMEROLOGY typed in section 3. Session opus-2026-10-26-S60. Full theorem audit remains pending; the later domain/quantifier repair is bounded as recorded in section7.**",
+          "old": "**Status: a merge note. Most of the owner's directive was executed, audited and pushed the same day by two concurrent lanes ([session69](session69_prime_ports_power_aliquot_20261026/README.md), commits 2f483a9201 and 365ab05300; [aliquot124](aliquot_power_124_20261026/README.md), commit 52fde1af0d), which landed after this session's worktree was cut and were found by a pre-publication sweep. Section 1 maps every clause of the directive to where it is settled. Section 2 adds what was not in those packets: PROVED (THM-4805: the tau <= 3 regime, the Mersenne single sources, row-source uniqueness of the twin collision, the two-ray corollaries, abc hits on the row of 1 = non-squarefree Mersenne numbers) / FINITE-EXACT (28 is its own only source; the companions of 496, 8128, 33550336; twin-value source counts to 10^5; abc census to 10^5) / pre-registered tests with one failed range (HYP-9415) / ANALOGY and NUMEROLOGY typed in section 3. Session opus-2026-10-26-S60.**"
+        },
+        {
+          "new": "| abc comparison | every source n>=2 gives the positive primitive triple `(n, s(n), sigma(n))/g`, perfect numbers all give `1 + 1 = 2`; the fixed-core bound `C <= (U + V) rad(ABC)` (session69 aliquot, sec. 5); the square-later integers biject with primitive triples `(u - 2^a) + 2^a = u`, first radical excess at `n = 72` from `1 + 8 = 9` (session69 power, sec. 6a); `6^2 = 4 x 9` is multiplicative, not a triple; THM-3833 | PROVED / CONDITIONAL |",
+          "old": "| abc comparison | every source gives the primitive triple `(n, s(n), sigma(n))/g`, perfect numbers all give `1 + 1 = 2`; the fixed-core bound `C <= (U + V) rad(ABC)` (session69 aliquot, sec. 5); the square-later integers biject with primitive triples `(u - 2^a) + 2^a = u`, first radical excess at `n = 72` from `1 + 8 = 9` (session69 power, sec. 6a); `6^2 = 4 x 9` is multiplicative, not a triple; THM-3833 | PROVED / CONDITIONAL |"
+        },
+        {
+          "new": "Write `t(n) = tau(n) - 1`. A composite `n` has `s(n) >= 1 + sqrt n` (the proper divisor `n/p`), so sources of `v>1` lie below `v^2`; targets0 and1 require their separate fibres.",
+          "old": "Write `t(n) = tau(n) - 1`. A composite `n` has `s(n) >= 1 + sqrt n` (the proper divisor `n/p`), so sources of `v` lie below `v^2` and every source set below is exact."
+        },
+        {
+          "new": "**Theorem A' (the t = tau - 1 <= 3 regime and the Mersenne sources).** (i) Every value `2 <= v <= 14` has only sources of the three shapes `p^2`, `pq` (distinct primes), `p^3`; the first value with a four-proper-divisor source is `15 = s(16)` (the row of 1) and the first with five is `16 = s(12)` (the row of 3). Separately, `s^-1(0)={1}` and `s^-1(1)` is the set of all primes. After separating these two fibres, targets2..5 have only the square sources4 and9, from the columns of2 and3. The second handful brings the first row source `6=2*3`, the row-column coincidence8, and the first off-grid source `15=3*5`.\n\n(ii) **CITED FINITE-EXACT:** for `1<=k<=26`, the Mersenne value `2^k-1=s(2^k)` has the single source `2^k` exactly for k2,3. This follows from S57's five single-source odd values below `10^8`; that cited range was not independently recomputed in this bounded repair. At k1 the target1 has infinitely many prime sources. The small fibres are `3 <- {4}`, `7 <- {8}`, `15 <- {16,33}`, `31 <- {32,125,161,209,221}`, `63 <- {64,177,817}`; 127 has eleven sources. **CONDITIONAL:** assuming every even integer at least8 is a sum of two distinct primes, the same iff holds for every `k>=1`. Unconditionally, the all-k classification is unproved here. Thus the claimed uniqueness of the 1-2-4 decomposition beyond `3=1+2` has precisely this finite or conditional scope.",
+          "old": "**Theorem A' (the tau <= 3 regime and the Mersenne sources).** (i) Every value `v <= 14` has only sources of the three shapes `p^2`, `pq`, `p^3`; the first value with a four-proper-divisor source is `15 = s(16)` (the row of 1) and the first with five is `16 = s(12)` (the row of 3). So the owner's two handfuls are exactly the regime where Lemma 1's first two lines decide everything: the first handful (values 0-5) uses only the columns of 2 and 3 (`4`, `9`), the second brings the first row source `6 = 2 x 3`, the row-column coincidence `8`, and the first off-grid source `15 = 3 x 5`. (ii) The Mersenne value `2^k - 1 = s(2^k)` has the single source `2^k` exactly for `k = 2, 3`: `3 <- {4}`, `7 <- {8}`, `15 <- {16, 33}`, `31 <- {32, 125, 161, 209, 221}`, `63 <- {64, 177, 817}`, `127` has eleven sources; for `k >= 4` a distinct-prime partition of `2^k - 2` supplies a semiprime source (verified through `k = 26` by S57's five single-source odd values below `10^8`, conditional on distinct Goldbach beyond). In particular the 1-2-4 decomposition is the only Mersenne number whose row-of-1 source is forced beyond `3 = 1 + 2`."
+        },
+        {
+          "new": "*Proof.* (i) Lemma 1 with the two minimal sources, after separating the unit and prime fibres. (ii) The finite statement is cited from S57's list. Under distinct-prime Goldbach, for each `k>=4` a distinct-prime partition `2^k-2=p+q` supplies the odd semiprime source `pq`, different from `2^k`, with `s(pq)=2^k-1`. The exact fibres at k2,3 and the infinite prime fibre at k1 give the conditional iff. QED",
+          "old": "*Proof.* (i) Lemma 1 with the two minimal sources. (ii) The table (exact, `n < v^2`) and S57's list. QED"
+        },
+        {
+          "new": "**Theorem C' (the two-ray carrier).** Take the rows `D(n) = {2^j n : j>=0}` and the columns `P(n) = {n^k : k>=1}` for positive bases n, including the degenerate `P(1)={1}`, as separate rays (the owner's picture; session69 keeps the carriers apart and this is the one with the two owner's \"chains\"). Then, as corollaries of session69's earliest-seed and row-intersection theorems and aliquot124's P1-P2: (1) a number is old (on a ray of a smaller number) iff it is even or a perfect power, and the two rays of an odd non-perfect-power meet no ray of a smaller number; (2) for `n = 2^a r`, `r` odd, `n^2` lies on `D(r^2)`, already occurs iff `r^2 < n` or `n` is a perfect power, and is a later doubling iff `a >= 1`, `r > 2^a` (session69's predicate); (3) the whole column of `2^a r` is the column of `r` shifted along the rows, `(2^a r)^k = 2^(ak) r^k`, the diagonal of the grid spanned by the row of 1 and the column of `r`: this is the microcosm/macrocosm, the single coincidence `36 = 6^2 = 4 x 9` repeated for every even number; (4) the row of an odd `n` meets an earlier column iff `n` is a perfect power (`9 -> 36 = 6^2`; `25 -> 100, 400`; `27 -> 216, 1728, 13824`): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`; (5) `D(1)={1} union P(2)`, while `D(2)=P(2)` is the unique exact equality between an unrestricted doubling row and a positive-exponent power column. The segment `1,2,4` of `D(1)` below8 is the 1-2-4 decomposition of `7=s(8)`, and2 is the only prime on `D(1)`.\n\n*Proof of (5).* If `D(n)=P(m)`, the power column must be infinite, hence `m>=2`. Its least and second elements give `n=m` and `2n=m^2`, forcing `m=n=2`. Conversely `D(2)=P(2)` directly, and adding the missing unit gives `D(1)`. This retains the positive-exponent convention used by the cited address theorems and the producer.",
+          "old": "**Theorem C' (the two-ray carrier).** Take the rows `D(n) = {2^j n}` and the columns `P(n) = {n^k}` as separate rays (the owner's picture; session69 keeps the carriers apart and this is the one with the two owner's \"chains\"). Then, as corollaries of session69's earliest-seed and row-intersection theorems and aliquot124's P1-P2: (1) a number is old (on a ray of a smaller number) iff it is even or a perfect power, and the two rays of an odd non-perfect-power meet no ray of a smaller number; (2) for `n = 2^a r`, `r` odd, `n^2` lies on `D(r^2)`, already occurs iff `r^2 < n` or `n` is a perfect power, and is a later doubling iff `a >= 1`, `r > 2^a` (session69's predicate); (3) the whole column of `2^a r` is the column of `r` shifted along the rows, `(2^a r)^k = 2^(ak) r^k`, the diagonal of the grid spanned by the row of 1 and the column of `r`: this is the microcosm/macrocosm, the single coincidence `36 = 6^2 = 4 x 9` repeated for every even number; (4) the row of an odd `n` meets an earlier column iff `n` is a perfect power (`9 -> 36 = 6^2`; `25 -> 100, 400`; `27 -> 216, 1728, 13824`): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`; (5) the row of 1 is the only row that is also a column (`D(1) = P(2)`; 2 is the only prime on a row), and its segment `1, 2, 4` below 8 is the 1-2-4 decomposition of `7 = s(8)`."
+        },
+        {
+          "new": "**Theorem D' (abc on the row of 1).** (i) For `n>=2`, `(1,s(n),n)` is a positive pairwise-coprime additive triple iff `sigma(n) = 2n - 1` (`n` almost perfect; the powers of 2 are the only known ones). The excluded n1 has `sigma(1)=1=2*1-1` but gives `(1,0,1)`, not a positive abc triple. (ii) For `k>=1`, `(1, 2^k - 1, 2^k)` is an abc hit (`rad(abc) < c`) iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p` (`6, 20, 21, 110, 156, 253, ...` for `p = 3, 5, 7, 11, 13, 23`): if squarefree, `rad = 2(2^k - 1) >= 2^k`; otherwise `rad(2^k - 1) <= (2^k - 1)/3 < 2^(k-1)`. The hits with `k <= 64` are `6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63` (sympy factorisation; exactly the multiples of 6, 20, 21 below 64). The first is `1 + 63 = 64`; session69's square-later carrier has its first excess at the same triple `1 + 8 = 9` read from `n = 72`, and the row of 1 reaches that triple only through `s(8) = 7`, `7 + 1 = 8`, `8 + 1 = 9`. (iii) Census: 121 abc hits with `c <= 10^4` (94 containing an odd perfect power, 48 with a power of two as the even term, 30 with `a = 1`; exactly one term of every hit is even), 419 with `c <= 10^5` (323, 119, 63; best quality 1.5679 at `1 + 4374 = 4375`).",
+          "old": "**Theorem D' (abc on the row of 1).** (i) `(1, s(n), n)` is a pairwise coprime additive triple iff `sigma(n) = 2n - 1` (`n` almost perfect; the powers of 2 are the only known ones). (ii) `(1, 2^k - 1, 2^k)` is an abc hit (`rad(abc) < c`) iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p` (`6, 20, 21, 110, 156, 253, ...` for `p = 3, 5, 7, 11, 13, 23`): if squarefree, `rad = 2(2^k - 1) >= 2^k`; otherwise `rad(2^k - 1) <= (2^k - 1)/3 < 2^(k-1)`. The hits with `k <= 64` are `6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63` (sympy factorisation; exactly the multiples of 6, 20, 21 below 64). The first is `1 + 63 = 64`; session69's square-later carrier has its first excess at the same triple `1 + 8 = 9` read from `n = 72`, and the row of 1 reaches that triple only through `s(8) = 7`, `7 + 1 = 8`, `8 + 1 = 9`. (iii) Census: 121 abc hits with `c <= 10^4` (94 containing an odd perfect power, 48 with a power of two as the even term, 30 with `a = 1`; exactly one term of every hit is even), 419 with `c <= 10^5` (323, 119, 63; best quality 1.5679 at `1 + 4374 = 4375`)."
+        },
+        {
+          "new": "| the `t=tau-1<=3` regime for targets2..14 | PROVED (A'(i)); unit and prime fibres stated separately |\n| Mersenne single sources exactly3,7 for positive exponents | CITED FINITE-EXACT for1<=k<=26, not independently recomputed in this bounded repair; CONDITIONAL for all k>=1 under distinct-prime Goldbach; unconditionally unproved here |",
+          "old": "| the `tau <= 3` regime below 15; Mersenne single sources exactly `3, 7` | PROVED (A'); the `k >= 4` clause FINITE-EXACT to `k = 26`, conditional beyond |"
+        },
+        {
+          "new": "| two-ray corollaries (old = even or perfect power; shifted columns; odd rows meet earlier columns iff perfect powers; D(1)={1} union P(2) and D(2)=P(2) is the unique exact row-column equality) | PROVED as corollaries of CITED session69 / aliquot124 theorems |",
+          "old": "| two-ray corollaries (old = even or perfect power; shifted columns; odd rows meet earlier columns iff perfect powers; the row of 1 is the only row-column) | PROVED as corollaries of CITED session69 / aliquot124 theorems |"
+        },
+        {
+          "new": "| For k>=1, Mersenne abc hits = non-squarefree Mersenne numbers; the list to 64 | PROVED (D') + FINITE-EXACT |",
+          "old": "| Mersenne abc hits = non-squarefree Mersenne numbers; the list to 64 | PROVED (D') + FINITE-EXACT |"
+        },
+        {
+          "new": "Pending at filing; the independent audit and its outcome are recorded below when complete.\n\nA later **bounded incoming-source review**, against revision `54617edb71`, repaired only four domain/quantifier issues: A'(i) excludes targets0,1 and counts proper divisors; A'(ii) separates cited finite evidence from its Goldbach-conditional extension; C'(5) retains the missing unit and positive power exponents; D' uses positive abc domains. See [the exact before/after lineage](twin_pythagorean_124_20261026/INCOMING_S60.md). This is not a full audit of THM-4805, its computations, or the remaining two-ray claims; those retain their prior pending-audit status.",
+          "old": "Pending at filing; the independent audit and its outcome are recorded below when complete."
+        }
+      ]
+    },
+    {
+      "after_sha256": "f79d694f3a3b2d746e5cab35de6c18e4e97b220b9e3e8a78852034dfb88529c4",
+      "before_sha256": "d6b9d9569e6e1c7e5e61f957f6ea355ea9c9c9f28936da84d066967cd9568af1",
+      "path": "01-canon/MISTAKES.md",
+      "replacements": [
+        {
+          "new": "# Mistakes Log\n\n**Purpose:** preserve failed implications, minimal witnesses, and repaired\nstatements so future agents do not repeat them. Search this ledger before using\na historical synthesis or promoting computational evidence.\n\n## 2026-10-26 \u2014 small-source endpoints, conditional Mersenne coverage, and ray units\n\n- **Source / bounded review:** [THM-4805 / aliquot-sources-of-2-5-7-21](theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md) and its [S60 source note](../05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md), incoming revision `54617edb71`. This repairs four demonstrated domain/quantifier defects; the remaining theorem and computational claims are not fully audited by this review.\n- **Minimal endpoint witnesses:** the source-shape claim for every target v<=14 omitted `s(1)=0` and all primes mapping to1. Its survivor is targets2..14 with at most three proper divisors, `t=tau-1<=3`; `6` has tau4, so the old tau<=3 label was also wrong. The separate fibres are `F(0)={1}` and `F(1)=primes`. Likewise n1 satisfies `sigma(n)=2n-1` but gives `(1,0,1)`, outside positive abc; retain n>=2 and positive Mersenne exponent k>=1.\n- **First failed global implication:** the Mersenne single-source iff k2,3 was presented unconditionally while its proof used distinct-prime Goldbach beyond finite data. The repair states CITED FINITE-EXACT for1<=k<=26 from S57, not recomputed here, and CONDITIONAL for all k>=1. For k>=4 a distinct-prime partition of `2^k-2` gives a second, odd semiprime source. No counterexample to the global conjecture is asserted.\n- **Missing unit / exact repair:** with doubling exponent j>=0 and power exponent k>=1, `D(1)={1} union P(2)`, not `P(2)`. Among unrestricted positive bases the unique exact row-column equality is `D(2)=P(2)`: equal least elements force n=m and equal second elements force `2n=m^2`, hence n=m=2. The segment1,2,4 and its sum7 survive. Only2 is prime on D(1), not on every row.\n- **Lineage and next question:** [bounded correction record](../05-knowledge/results/twin_pythagorean_124_20261026/INCOMING_S60.md) and `LATE_CORRECTIONS.json` retain exact replacements and source hashes. Remaining questions are unconditional all-k Mersenne coverage and the unreviewed portions of the incoming theorem; neither a parenthetical condition nor an unrecorded exponent-zero convention supplies a proof.\n\n",
+          "old": "# Mistakes Log\n\n**Purpose:** preserve failed implications, minimal witnesses, and repaired\nstatements so future agents do not repeat them. Search this ledger before using\na historical synthesis or promoting computational evidence.\n\n"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4adf53da0297549afb67cca93ad2c2049517965ca7a87206e4014fb128bc26e5",
+      "before_sha256": "09c33a0d568f5426bc21ef0e07a37ca6bb46df08069b659071cac1cd0cf72298",
+      "path": "00-navigation/PROBLEM-LEDGER.md",
+      "replacements": [
+        {
+          "new": "Added: the t = tau - 1 <= 3 proper-divisor regime for 2 <= v <= 14 (targets 0 and 1 treated separately); 3 and 7 the only single-source Mersenne values among 1 <= k <= 26 (CITED FINITE-EXACT, not independently recomputed in the bounded repair), and for every k >= 1 only CONDITIONALLY on distinct-prime Goldbach;",
+          "old": "Added: the tau <= 3 regime below 15; 3 and 7 the only single-source Mersenne values;"
+        },
+        {
+          "new": "33550336 have companions); two-ray corollaries with D(2) = P(2) the unique exact row-column equality and D(1) = {1} union P(2) for j >= 0, k >= 1; abc hits on the row of 1 = non-squarefree Mersenne numbers for k >= 1;",
+          "old": "33550336 have companions); two-ray corollaries; abc hits on the row of 1 = non-squarefree Mersenne numbers;"
+        },
+        {
+          "new": "Open: HYP-9415 (28 the only self-only value; squarefree Mersenne numbers; the 10^6 shares). The domain/quantifier repair is a bounded review; the full THM-4805 audit remains pending.",
+          "old": "Open: HYP-9415 (28 the only self-only value; squarefree Mersenne numbers; the 10^6 shares)."
+        }
+      ]
+    },
+    {
+      "after_sha256": "59e8d09f2446771f13a8266a027fb4f4655010125ac923cc74276229574507d6",
+      "before_sha256": "9d3e64ef58cb45c9b8dbee6c7d7e85e208c7f6a003349b6b77e7d26aff24c51a",
+      "path": "05-knowledge/hypotheses/INDEX.md",
+      "replacements": [
+        {
+          "new": "PROVED here, subject to the existing full-audit boundary: (A') every value 2 <= v <= 14 has only p^2, pq, p^3 sources (the t = tau - 1 <= 3 proper-divisor regime; targets 0 and 1 treated separately; first four-proper-divisor source 15 = s(16)); the Mersenne single-source classification is separately scoped below;",
+          "old": "PROVED here: (A') every value <= 14 has only p^2, pq, p^3 sources (first four-divisor source 15 = s(16)), the Mersenne value 2^k - 1 has the single source 2^k exactly for k = 2, 3;"
+        },
+        {
+          "new": "for j >= 0 and k >= 1, D(2) = P(2) is the unique exact row-column equality, while D(1) = {1} union P(2)); (D') for k >= 1, (1, 2^k - 1, 2^k) is an abc hit iff",
+          "old": "the row of 1 is the only row-column); (D') (1, 2^k - 1, 2^k) is an abc hit iff"
+        },
+        {
+          "new": "below 64). CITED FINITE-EXACT for 1 <= k <= 26 (not independently recomputed in the bounded repair): 2^k - 1 has the single source 2^k exactly for k = 2, 3; the same iff for every k >= 1 is CONDITIONAL on distinct-prime Goldbach. This domain/quantifier repair is bounded; the full THM-4805 audit remains pending. FINITE-EXACT: 28 is its own only source;",
+          "old": "below 64). FINITE-EXACT: 28 is its own only source;"
+        }
+      ]
+    }
+  ],
+  "source_revision": "54617edb71"
+}

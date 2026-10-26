@@ -1,0 +1,24 @@
+{
+  "exact_replay": {
+    "files": 5,
+    "outcome": "all current bytes and before/after hashes agree",
+    "source_revision": "54617edb71",
+    "unique_replacements": 30
+  },
+  "excluded": "Full THM-4805 audit and all unrelated claims/censuses remain pending or at inherited scope.",
+  "files": {
+    "AUDIT.md": "8a32a5155c9f8d1b884ed2b6fb731b2157d6f87e95e2f8dd4d9ebbdee3eb9c65"
+  },
+  "reviewed_packet_files": {
+    "INCOMING_S60.md": "fad3849c736a5a5090891b8a5275cb64a7d92b1d4cfd1c2a2ee31790323e5325",
+    "LATE_CORRECTIONS.json": "126cee7c0e2dc9c74cee98137d74c2380bc758ee4b23ceada6e5e890dc13737f"
+  },
+  "reviewed_sources": {
+    "00-navigation/PROBLEM-LEDGER.md": "4adf53da0297549afb67cca93ad2c2049517965ca7a87206e4014fb128bc26e5",
+    "01-canon/MISTAKES.md": "f79d694f3a3b2d746e5cab35de6c18e4e97b220b9e3e8a78852034dfb88529c4",
+    "01-canon/theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md": "94f853fea0ad204d010839afd1f64a948e43e64f3c1af20ca9ad750bc880de94",
+    "05-knowledge/hypotheses/INDEX.md": "59e8d09f2446771f13a8266a027fb4f4655010125ac923cc74276229574507d6",
+    "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md": "872e7cf8fa6377ee73f99e3738342402d621ee166d9e1c675b985922d8160010"
+  },
+  "status": "PASS: bounded four corrections and power-of-two-center synthesis only"
+}
