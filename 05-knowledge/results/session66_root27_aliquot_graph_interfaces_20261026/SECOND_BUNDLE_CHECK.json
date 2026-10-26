@@ -1,0 +1,1109 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-root/divisor_carrier.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-root27/check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit_divisor.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit_density.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-root27/independent_check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-root27/source/06-check.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/density_lower_bound.initial.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/divisor_carrier.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/density_lower_bound.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/aliquot_fibers.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/density_lower_bound.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/aliquot_fibers.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/verify_density_monotonicity.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "session66-root27/REPORT.md",
+    "session66-root27/check.py",
+    "session66-root27/normal.json",
+    "session66-root27/optimized.json",
+    "session66-root27/SOURCE_PINS.json",
+    "session66-root27/source/00-START-HERE.md",
+    "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+    "session66-root27/source/02-RESEARCH-PROTOCOL.md",
+    "session66-root27/source/03-README.md",
+    "session66-root27/source/04-README.md",
+    "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+    "session66-root27/source/06-check.py",
+    "session66-root27/source/07-INDEPENDENT_REVIEW.md",
+    "session66-root27/source/08-ANCESTRY.md",
+    "session66-root27/source/09-THM-4771-repaired.md",
+    "session66-root27/AUDIT_REPAIR.json",
+    "session66-audit-aliquot/AUDIT.md",
+    "session66-audit-aliquot/DENSITY_AUDIT.md",
+    "session66-audit-aliquot/DIVISOR_AUDIT.md",
+    "session66-audit-aliquot/audit.py",
+    "session66-audit-aliquot/audit_density.py",
+    "session66-audit-aliquot/audit_divisor.py",
+    "session66-audit-aliquot/density-normal.json",
+    "session66-audit-aliquot/density-optimized.json",
+    "session66-audit-aliquot/divisor-normal.json",
+    "session66-audit-aliquot/divisor-optimized.json",
+    "session66-audit-aliquot/final-producer-input-sha256.txt",
+    "session66-audit-aliquot/messages.txt",
+    "session66-audit-aliquot/normal.json",
+    "session66-audit-aliquot/optimized.json",
+    "session66-audit-aliquot/producer-input-sha256.txt",
+    "session66-audit-aliquot/source-snapshot/DIVISOR_F1_BRIDGE.final.md",
+    "session66-audit-aliquot/source-snapshot/DIVISOR_F1_BRIDGE.md",
+    "session66-audit-aliquot/source-snapshot/REPORT.final.md",
+    "session66-audit-aliquot/source-snapshot/REPORT.md",
+    "session66-audit-aliquot/source-snapshot/aliquot_fibers.py",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.initial.py",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.json",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.py",
+    "session66-audit-aliquot/source-snapshot/divisor_carrier.py",
+    "session66-audit-aliquot/source-snapshot/verify.py",
+    "session66-audit-aliquot/startup.txt",
+    "session66-aliquot/ALLOWLIST.txt",
+    "session66-aliquot/README.md",
+    "session66-aliquot/REPORT.md",
+    "session66-aliquot/results/density_lower_bound.json",
+    "session66-aliquot/results/density_monotonicity.json",
+    "session66-aliquot/results/density_optimized_stdout.json",
+    "session66-aliquot/results/density_run_stdout.json",
+    "session66-aliquot/results/run_optimized_stdout.json",
+    "session66-aliquot/results/run_stdout.json",
+    "session66-aliquot/results/small_fibers.json",
+    "session66-aliquot/results/untouchables_100000.json",
+    "session66-aliquot/results/verification.json",
+    "session66-aliquot/scripts/aliquot_fibers.py",
+    "session66-aliquot/scripts/density_lower_bound.py",
+    "session66-aliquot/scripts/verify.py",
+    "session66-aliquot/scripts/verify_density_monotonicity.py",
+    "session66-aliquot/sources/PRIMARY_SOURCES.json",
+    "session66-aliquot/ALLOWLIST.txt",
+    "session66-aliquot/README.md",
+    "session66-aliquot/REPORT.md",
+    "session66-aliquot/results/density_lower_bound.json",
+    "session66-aliquot/results/density_monotonicity.json",
+    "session66-aliquot/results/density_optimized_stdout.json",
+    "session66-aliquot/results/density_run_stdout.json",
+    "session66-aliquot/results/run_optimized_stdout.json",
+    "session66-aliquot/results/run_stdout.json",
+    "session66-aliquot/results/small_fibers.json",
+    "session66-aliquot/results/untouchables_100000.json",
+    "session66-aliquot/results/verification.json",
+    "session66-aliquot/scripts/aliquot_fibers.py",
+    "session66-aliquot/scripts/density_lower_bound.py",
+    "session66-aliquot/scripts/verify.py",
+    "session66-aliquot/scripts/verify_density_monotonicity.py",
+    "session66-aliquot/sources/PRIMARY_SOURCES.json",
+    "session66-audit-root27/REPORT.md",
+    "session66-audit-root27/CENTER_BANK_APPENDIX.md",
+    "session66-audit-root27/independent_check.py",
+    "session66-audit-root27/independent-normal.json",
+    "session66-audit-root27/independent-optimized.json",
+    "session66-audit-root27/HISTORICAL_GIT_PIN_VERIFICATION.json",
+    "session66-audit-root27/OFFLINE_PIN_VERIFICATION.json",
+    "session66-audit-root27/REPORT.md",
+    "session66-audit-root27/CENTER_BANK_APPENDIX.md",
+    "session66-audit-root27/independent_check.py",
+    "session66-audit-root27/independent-normal.json",
+    "session66-audit-root27/independent-optimized.json",
+    "session66-audit-root27/HISTORICAL_GIT_PIN_VERIFICATION.json",
+    "session66-audit-root27/OFFLINE_PIN_VERIFICATION.json",
+    "session66-audit-root27/MANIFEST.json"
+  ],
+  "local_links": [
+    {
+      "from": "README.md",
+      "to": "session66-aliquot/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/DENSITY_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-root/DIVISOR_F1_BRIDGE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/DIVISOR_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "REPLAY_TASKS.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "verify_packet.py",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PROVENANCE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-root27/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-root27/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-root27/CENTER_BANK_APPENDIX.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/REPORT.md",
+      "to": "source/04-README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "sources/PRIMARY_SOURCES.json",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "results/verification.json",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "results/density_lower_bound.json",
+      "exists": true
+    },
+    {
+      "from": "session66-audit-root27/REPORT.md",
+      "to": "CENTER_BANK_APPENDIX.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../lca_ports_reverse_20261025/arithmetic/DENSITY.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../../../01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../trees5_tournaments4_converse_20261005.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/08-ANCESTRY.md",
+      "to": "../../session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/08-ANCESTRY.md",
+      "to": "README.md#4-a-marked-lca-barrier-and-an-explicit-precision-reset-family",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "MISTAKES.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "../05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "to": "../../analogy_reduction_atlas_20261025/QR_TOURNAMENT.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "to": "../../session26_random_bridges_20261022/SYNTHESIS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/prime_power_bijections_session_20261020/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/shape_ports_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/six_seven_geometry_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/six_seven_gale_cube_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S61.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S63.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S64.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S65.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/planar_jc48_sep06_board.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/second_20260906_overview.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#lrc14",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "LRC14-PROOF-MAP.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "LRC-TECHNIQUE-INDEX.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#nc2-and-gaussian-moments",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#other-active-portfolio",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#tournaments",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "THE-ZOO.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#integer-sequences",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#abc-iut",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "PROBLEM-LEDGER.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "PROBLEM-ATLAS-2026-07-20.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "RESEARCH-PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "META-PATTERNS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../agents/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CONCURRENT-SESSIONS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../01-canon/ACTIVE-GUARDRAILS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "anchor/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "INCOMING_S65.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "atlas/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "compiler/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "INCOMING_S65.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "anchor/LEGENDRE_SIDECAR.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../../../01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../trees5_tournaments4_converse_20261005.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../lca_ports_reverse_20261025/README.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "atlas/HISTORY_ATLAS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/REDUCTIONS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "AUDIT.md",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [],
+  "historical_source_links": [
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../lca_ports_reverse_20261025/arithmetic/DENSITY.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/DENSITY.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../../../01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/04-README.md",
+      "to": "../../trees5_tournaments4_converse_20261005.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/trees5_tournaments4_converse_20261005.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/08-ANCESTRY.md",
+      "to": "../../session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md",
+      "original_context": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/08-ANCESTRY.md",
+      "to": "README.md#4-a-marked-lca-barrier-and-an-explicit-precision-reset-family",
+      "original_context": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "MISTAKES.md",
+      "original_context": "01-canon/ACTIVE-GUARDRAILS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "01-canon/MISTAKES.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "../05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "original_context": "01-canon/ACTIVE-GUARDRAILS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md",
+      "original_context": "01-canon/ACTIVE-GUARDRAILS.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/reference/CORE-PAPERS-PLANAR-JC.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "to": "../../analogy_reduction_atlas_20261025/QR_TOURNAMENT.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/analogy_reduction_atlas_20261025/QR_TOURNAMENT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "to": "../../session26_random_bridges_20261022/SYNTHESIS.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/session26_random_bridges_20261022/SYNTHESIS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/overnight_prime_arithmetic_20261020/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/prime_power_bijections_session_20261020/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/prime_power_bijections_session_20261020/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/shape_ports_20261025/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/shape_ports_20261025/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/six_seven_geometry_20261025/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/six_seven_geometry_20261025/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/six_seven_gale_cube_20261025/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/six_seven_gale_cube_20261025/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S61.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/S61.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/session62_agent_theme_bridges_20261025/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S63.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/S63.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S64.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/S64.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "S65.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/S65.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/planar_jc48_sep06_board.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/planar_jc48_sep06_board.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/results/second_20260906_overview.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/second_20260906_overview.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#lrc14",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "LRC14-PROOF-MAP.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/LRC14-PROOF-MAP.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/reference/CORE-PAPERS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "LRC-TECHNIQUE-INDEX.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/LRC-TECHNIQUE-INDEX.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#nc2-and-gaussian-moments",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#other-active-portfolio",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/reference/CORE-PAPERS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#tournaments",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "THE-ZOO.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/THE-ZOO.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#integer-sequences",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CURRENT-FRONTIER.md#abc-iut",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CURRENT-FRONTIER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/reference/CORE-PAPERS-ABC-IUT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "PROBLEM-LEDGER.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/PROBLEM-LEDGER.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "PROBLEM-ATLAS-2026-07-20.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/PROBLEM-ATLAS-2026-07-20.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "RESEARCH-PROTOCOL.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "META-PATTERNS.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/META-PATTERNS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../agents/README.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "agents/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "CONCURRENT-SESSIONS.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "00-navigation/CONCURRENT-SESSIONS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/00-START-HERE.md",
+      "to": "../01-canon/ACTIVE-GUARDRAILS.md",
+      "original_context": "00-navigation/START-HERE.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "anchor/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "INCOMING_S65.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/INCOMING_S65.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "atlas/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/atlas/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/machines/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "compiler/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/compiler/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/machines/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "INCOMING_S65.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/INCOMING_S65.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "anchor/LEGENDRE_SIDECAR.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../../../01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "01-canon/theorems/THM-2228-mahler-three-halves-carry-tail-and-integral-stabilization.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../trees5_tournaments4_converse_20261005.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/trees5_tournaments4_converse_20261005.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "../lca_ports_reverse_20261025/README.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/lca_ports_reverse_20261025/README.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "atlas/HISTORY_ATLAS.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/atlas/HISTORY_ATLAS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "machines/REDUCTIONS.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/machines/REDUCTIONS.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    },
+    {
+      "from": "session66-root27/source/03-README.md",
+      "to": "AUDIT.md",
+      "original_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "resolved_repository_path": "05-knowledge/results/root27_machine_bridges_20261026/AUDIT.md",
+      "exists_at_context_commit": true,
+      "scope": "Original-context resolution; source links are not represented as current nested navigation"
+    }
+  ],
+  "historical_unresolved_links": [],
+  "explicit_encoding_pins": {}
+}

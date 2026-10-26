@@ -1,0 +1,89 @@
+{
+  "common_center_pairs_five_internal_vertices": 368,
+  "counts": {
+    "all_residue_word_controls": 8191,
+    "balanced_ordered_pairs": 118336,
+    "blocked_leaf_rejections": 9,
+    "family_native_macros": 837,
+    "halting_seed_lifetime_controls": 163,
+    "legal_prefix_balanced_completions": 7740,
+    "marked_prefix_center_controls": 38184,
+    "not_halted_by_prefix80_seeds": 93,
+    "pair_pullback_separations": 353904,
+    "rational_periodic_center_controls": 344,
+    "source_pins_verified": 10
+  },
+  "lemmas_A_B": "PROVED symbolically in CENTER_BANK_APPENDIX.md; checks are finite controls only",
+  "open": "Root27 all-prefix survival and a global source-specific rank remain open.",
+  "refill_family": [
+    {
+      "blocked_state": "65718",
+      "credit": 1,
+      "executed": 9,
+      "m": 1,
+      "seed": "1709"
+    },
+    {
+      "blocked_state": "47606724",
+      "credit": 1,
+      "executed": 15,
+      "m": 2,
+      "seed": "108717"
+    },
+    {
+      "blocked_state": "23914622034",
+      "credit": 1,
+      "executed": 21,
+      "m": 3,
+      "seed": "4794541"
+    },
+    {
+      "blocked_state": "28510943178204",
+      "credit": 1,
+      "executed": 27,
+      "m": 4,
+      "seed": "501819565"
+    },
+    {
+      "blocked_state": "16220196269633934",
+      "credit": 1,
+      "executed": 33,
+      "m": 5,
+      "seed": "25063663789"
+    },
+    {
+      "blocked_state": "7145513955687777872286132",
+      "credit": 1,
+      "executed": 51,
+      "m": 8,
+      "seed": "7471009005906093"
+    },
+    {
+      "blocked_state": "642305919321649543559058240087179460832918965180",
+      "credit": 1,
+      "executed": 99,
+      "m": 16,
+      "seed": "2369775896516882983900729125037"
+    },
+    {
+      "blocked_state": "3626554023679394160820556680909733902622185552590979854689628746250509395455138152458991765364",
+      "credit": 1,
+      "executed": 195,
+      "m": 32,
+      "seed": "166609068216639358299064020820898422087945827315919576705197"
+    },
+    {
+      "blocked_state": "165448671261771190856831766413240582304665177527054718704019887882325903702732244902184474230972301707544260135091549066760390603932486299747915939199912311103029104385964417449299655484",
+      "credit": 1,
+      "executed": 387,
+      "m": 64,
+      "seed": "1178544618421679881481260591907653996479557995863265229859554167427644465939238872984617591960647962966522859868465325"
+    }
+  ],
+  "status": "PASS",
+  "valuation_regimes": {
+    "equal": 17420,
+    "unequal": 100548,
+    "zero": 368
+  }
+}

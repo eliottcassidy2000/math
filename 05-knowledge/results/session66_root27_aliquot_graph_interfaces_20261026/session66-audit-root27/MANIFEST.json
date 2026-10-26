@@ -1,0 +1,98 @@
+{
+  "blockers": [],
+  "files": [
+    {
+      "bytes": 10288,
+      "path": "REPORT.md",
+      "sha256": "a58fc56f548305a55f195afccbe31d199e71f6b69a9363e79f2cf42987f1e8c3"
+    },
+    {
+      "bytes": 6758,
+      "path": "CENTER_BANK_APPENDIX.md",
+      "sha256": "cb4c0dabdd48f177a10c1fb44dc77c6c1b295eb5e24c8837f2591a57a062be2b"
+    },
+    {
+      "bytes": 11858,
+      "path": "independent_check.py",
+      "sha256": "d209ad9f5f0e54801f586214bb38dc57c402391a063676607c54f868f83db7d6"
+    },
+    {
+      "bytes": 2513,
+      "path": "independent-normal.json",
+      "sha256": "83ed7ad8599ceb898783893f331e2e3823f6abc55d35ddfc4d050e7bb0d4c55a"
+    },
+    {
+      "bytes": 2513,
+      "path": "independent-optimized.json",
+      "sha256": "83ed7ad8599ceb898783893f331e2e3823f6abc55d35ddfc4d050e7bb0d4c55a"
+    },
+    {
+      "bytes": 3718,
+      "path": "HISTORICAL_GIT_PIN_VERIFICATION.json",
+      "sha256": "857b599d4597c7e5e1294c5e0e9e85ba4c9588abe240e73de5fd38ca2f7f0c39"
+    },
+    {
+      "bytes": 3733,
+      "path": "OFFLINE_PIN_VERIFICATION.json",
+      "sha256": "3a7d732c23cfc25d06a6b51b237d5ac980f4dc6dab77a8244f3cd991bf479d07"
+    }
+  ],
+  "portability": "Default and --offline runs verify source SHA256 and computed Git blob hashes, without any Git invocation or repository requirement. Historical committed-tree verification is separately receipted.",
+  "publication_allowlist": [
+    "REPORT.md",
+    "CENTER_BANK_APPENDIX.md",
+    "independent_check.py",
+    "independent-normal.json",
+    "independent-optimized.json",
+    "HISTORICAL_GIT_PIN_VERIFICATION.json",
+    "OFFLINE_PIN_VERIFICATION.json",
+    "MANIFEST.json",
+    "SHA256SUMS"
+  ],
+  "publication_excludes": "original-producer/, proposed-repair/, patches, duplicate producer receipts, and incoming-control files are local working lineage or delegated incoming work, not required in the core publication.",
+  "reproduction": {
+    "offline_normal": "python3 -B independent_check.py --offline --producer PRODUCER_DIR > independent-normal.json",
+    "offline_optimized": "python3 -O -B independent_check.py --offline --producer PRODUCER_DIR > independent-optimized.json",
+    "offline_pins": "python3 -B independent_check.py --offline --pin-check-only --producer PRODUCER_DIR",
+    "optional_historical_pins": "python3 -B independent_check.py --verify-git-pins --pin-check-only --producer PRODUCER_DIR --repo HISTORICAL_CHECKOUT"
+  },
+  "reviewed_producer_files": [
+    {
+      "bytes": 15441,
+      "path": "REPORT.md",
+      "sha256": "468dfdadcdb99161cb0a2cec411c26df4c2b5e3c458bc29b63104dc8c8cf50ee"
+    },
+    {
+      "bytes": 8355,
+      "path": "check.py",
+      "sha256": "e3e193c9a869ab4707604ea69b78fe9d20736003ad5bec99d58e6fbd0b7f4d9b"
+    },
+    {
+      "bytes": 2545,
+      "path": "normal.json",
+      "sha256": "7c405b49acdcbbf895d4db2f8a6b8bd1ff1d96a03a89bcbb8027db3f80ad3c92"
+    },
+    {
+      "bytes": 2545,
+      "path": "optimized.json",
+      "sha256": "7c405b49acdcbbf895d4db2f8a6b8bd1ff1d96a03a89bcbb8027db3f80ad3c92"
+    },
+    {
+      "bytes": 3631,
+      "path": "SOURCE_PINS.json",
+      "sha256": "a5fee1c668aaa69949391e41626f0285b6dea977ffbebd1fc1fef0b719d2066c"
+    },
+    {
+      "bytes": 1397,
+      "path": "SHA256SUMS",
+      "sha256": "a7a3b5e1b16d427051a792eeb8f6eb91025702b693d9f166eb0ac7133dc3278e"
+    },
+    {
+      "bytes": 604,
+      "path": "AUDIT_REPAIR.json",
+      "sha256": "b9642ceb21f2714295097e8baff8102e06b35e5cc22a51bab2eeac7c6cb5480d"
+    }
+  ],
+  "scope": "Independent source-fixed switch-rank audit plus separate center-bank lemmas A and B; root27 survival and global rank remain open.",
+  "status": "SEALED_PASS_AFTER_REPAIR"
+}

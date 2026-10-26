@@ -58,5 +58,29 @@
       "-B"
     ],
     "timeout": 900
+  },
+  {
+    "script": "session66-root27/check.py",
+    "stored_stdout": "session66-root27/normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-audit-root27/independent_check.py",
+    "cwd": "session66-audit-root27",
+    "args": [
+      "--offline",
+      "--producer",
+      "../session66-root27"
+    ],
+    "stored_stdout": "session66-audit-root27/independent-normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
   }
 ]

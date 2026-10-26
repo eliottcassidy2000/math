@@ -1,6 +1,6 @@
 # Session66: exact interfaces without lost guards
 
-2026-10-26. First checkpoint: inverse aliquot fibers and a weighted divisor carrier.
+2026-10-26. First two checkpoints: inverse aliquot fibers, weighted divisors, and source-fixed tree interfaces.
 Proofs and finite checks remain scoped; no theorem IDs are reserved or promoted.
 
 ## Results and limits
@@ -33,7 +33,7 @@ nonhalting, Collatz, LRC(14), or any relation merely from recurring14/15 numeral
 
 ## Reproduction and provenance
 
-[Reproduction tasks](REPLAY_TASKS.json) declare seven portable stdlib checks,
+[Reproduction tasks](REPLAY_TASKS.json) declare nine portable stdlib checks,
 run independently in frozen copies in both normal and optimized Python.
 [Exact file-set verification](verify_packet.py) protects the packaged bytes;
 run `python3 verify_packet.py` and `python3 -O verify_packet.py` here.
@@ -44,3 +44,16 @@ no paper PDFs or unlicensed external source copies are bundled.
 
 [Publication checks](PUBLICATION_CHECKS.md) record verification gates.
 No absent CI check is represented as a passing CI check.
+
+## Root27 guarded tree-shape interface
+
+[Repaired producer report](session66-root27/REPORT.md),
+[independent audit](session66-audit-root27/REPORT.md), and
+[center-bank appendix](session66-audit-root27/CENTER_BANK_APPENDIX.md)
+prove a source-fixed leaf-switch cost law with explicit native guards.
+Independent finite checks cover118336 block pairs and353904 equation checks.
+The repair rejects forbidden first-digit/nonintegral examples before executing
+an algebraic transition. Local leaf moves do not create a global descending
+rank, bound the actual root27 carry word, or prove nonhalting. The center-bank
+compactness/nested-cylinder lemmas identify what an infinite certificate
+would require; they do not supply one for the specified source.

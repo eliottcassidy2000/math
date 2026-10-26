@@ -1,0 +1,80 @@
+{
+  "anchor_and_ancestry_unchanged_63f52936_to_2807ee83": true,
+  "counts": {
+    "source_pins_verified": 10
+  },
+  "sources": [
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "ae3c1d117201b39a42daace0d6abec0ba9b1fa54",
+      "repo_path": "00-navigation/START-HERE.md",
+      "sha256": "8f80249e7b1b42064e298c8e7b38ac6f971562b8ce71c43fd58fcd5ae969d0fd",
+      "snapshot": "source/00-START-HERE.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "repo_path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "snapshot": "source/01-ACTIVE-GUARDRAILS.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "repo_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "snapshot": "source/02-RESEARCH-PROTOCOL.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "5e1d4c59303c2d973c595ab126d9880eabf6ce01",
+      "repo_path": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+      "sha256": "b13ef3e5d1b6a82f1ea9cd08295743497131a26586ffc82c20eb2c9d62efbed9",
+      "snapshot": "source/03-README.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "4d27266b64573776dd273747c25f500cb898c35f",
+      "repo_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+      "sha256": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72",
+      "snapshot": "source/04-README.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "bb7d575d3404411a79244e50eae5988721b95078",
+      "repo_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "sha256": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505",
+      "snapshot": "source/05-LEGENDRE_SIDECAR.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "1f6d2b11f62c0290d589a09b8502c1823b927de8",
+      "repo_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/check.py",
+      "sha256": "d8b54dc0e1537701dd7cc4ed8ea63c2fbacd33d5f7f16b24cd0371f728c27c9f",
+      "snapshot": "source/06-check.py"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "56370141b18bc203a85d3bb462ccf1a0d5747ddb",
+      "repo_path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/INDEPENDENT_REVIEW.md",
+      "sha256": "fc7bfae4f0c8550df7ca085a340e3e641f8e5afb190b7a901b2c115b03c51ce3",
+      "snapshot": "source/07-INDEPENDENT_REVIEW.md"
+    },
+    {
+      "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+      "git_blob": "757f68609406671840e32967e1c664a82f1a63f3",
+      "repo_path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+      "sha256": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7",
+      "snapshot": "source/08-ANCESTRY.md"
+    },
+    {
+      "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+      "git_blob": "81e15f527638ba2bae04d59ef0ad8afb461bef0d",
+      "repo_path": "01-canon/theorems/THM-4771-odd-orbit-and-countdown-forms-of-bb6-cryptids-antihydra-a4-a11-a2-a5-a10.md",
+      "sha256": "58d54ba28a5114dced72c03a35375f2a111009c69c4c73c2ea08073b4b7c3023",
+      "snapshot": "source/09-THM-4771-repaired.md"
+    }
+  ],
+  "status": "PASS",
+  "verification_mode": "HISTORICAL_GIT_TREE_AND_SEALED_BYTES"
+}

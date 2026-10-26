@@ -1,0 +1,62 @@
+{
+  "session66-root27/source/00-START-HERE.md": {
+    "source_sha256": "8f80249e7b1b42064e298c8e7b38ac6f971562b8ce71c43fd58fcd5ae969d0fd",
+    "repository_context": "00-navigation/START-HERE.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/01-ACTIVE-GUARDRAILS.md": {
+    "source_sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "repository_context": "01-canon/ACTIVE-GUARDRAILS.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/02-RESEARCH-PROTOCOL.md": {
+    "source_sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "repository_context": "00-navigation/RESEARCH-PROTOCOL.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/03-README.md": {
+    "source_sha256": "b13ef3e5d1b6a82f1ea9cd08295743497131a26586ffc82c20eb2c9d62efbed9",
+    "repository_context": "05-knowledge/results/root27_machine_bridges_20261026/README.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/04-README.md": {
+    "source_sha256": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72",
+    "repository_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/05-LEGENDRE_SIDECAR.md": {
+    "source_sha256": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505",
+    "repository_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/06-check.py": {
+    "source_sha256": "d8b54dc0e1537701dd7cc4ed8ea63c2fbacd33d5f7f16b24cd0371f728c27c9f",
+    "repository_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/check.py",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/07-INDEPENDENT_REVIEW.md": {
+    "source_sha256": "fc7bfae4f0c8550df7ca085a340e3e641f8e5afb190b7a901b2c115b03c51ce3",
+    "repository_context": "05-knowledge/results/root27_machine_bridges_20261026/anchor/INDEPENDENT_REVIEW.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/08-ANCESTRY.md": {
+    "source_sha256": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7",
+    "repository_context": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/ANCESTRY.md",
+    "commit": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+    "kind": "Byte-identical historical repository source"
+  },
+  "session66-root27/source/09-THM-4771-repaired.md": {
+    "source_sha256": "58d54ba28a5114dced72c03a35375f2a111009c69c4c73c2ea08073b4b7c3023",
+    "repository_context": "01-canon/theorems/THM-4771-odd-orbit-and-countdown-forms-of-bb6-cryptids-antihydra-a4-a11-a2-a5-a10.md",
+    "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+    "kind": "Byte-identical historical repository source"
+  }
+}

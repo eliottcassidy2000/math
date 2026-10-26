@@ -1,0 +1,126 @@
+# Start Here
+
+**Current truth:** [Frontier](CURRENT-FRONTIER.md).
+
+**Oct20:** [Overnight](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
+
+**Oct 25:** [Shape/port/anchor](../05-knowledge/results/shape_ports_20261025/README.md):
+Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-blue boundary.
+
+**Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
+K3 cubes, free codes, reflection. [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors. [HN6/7/8](S61.md): metric fold and boundary modes.
+
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic kernels; twisted transport. [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md).
+
+## Orientation
+
+1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
+2. **Old shortcuts:** no uniform good period `q <= 25`; twelve-speed sporadic emptiness remains **OPEN**.
+3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
+4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
+5. **Research posture:** Anchor / Niche / Wildcard; require mechanisms, hostiles, and preserved/lost coordinates.
+
+Start with:
+
+```bash
+python3 agents/start_session.py --topic "<target statement or object>"
+```
+
+## Key facts
+
+1. **Repo LRC(14) remains OPEN.** THM-4347 closes height `40`;
+   THM-4441/4444/4445 classify tails, THM-4442/4446 close bounded rays,
+   THM-4447 leaves clocks `2,3,4`; THM-4448 closes cofinal two-shore cones;
+   THM-4449--4453 and the inert-profile envelope sharpen dyadic mass/width gates;
+   body entry and `2+12` remain open.
+2. **The `q <= 25` period claim is refuted.** THM-762/764 exhibit `26*{1,...,12} union {339}`, whose first good period is `27`.
+3. **Good-period existence is a maximum statement.** The tight resonant AP
+   defeats average/count arguments; see MISTAKE-127/129/130.
+4. **The tight/sporadic locus is finite but unclassified.** THM-763 bounds
+   height; THM-1171/1284 close AP and first-gap single-far strata.
+5. **Exact LRC(14) computation is sound through height 55.** THM-1290, rerun
+   after MISTAKE-194, also empties `(1/14,3/41)` through height 64.
+6. **The 13-speed floor is isolated from above.** THM-1289 imports the
+   ineffective one-sided gap; it does not make the first window finite.
+7. **NC2 and GMC(2) are proved.** THM-2022 combines torus descent, a lowest
+   balanced face, THM-2111's seed, and whole-face good-prime amplification.
+   Root theorem `GMC2Main.gmc2` is unconditional through
+   `GMC2DvdKOmegaWiring.singlePolyCrux_holds`; THM-2101 retains partial
+   wrappers. THM-2801 is not `JC(2)`.
+8. **Support return is not coefficient noncancellation.** THM-2070 has
+   infinitely many zero odd constants. HYP-8930 survives; HYP-8931 is vacuous
+   (`lambda=0, delta=-1, F=empty`), and `98/116` is only a census (MISTAKE-240).
+9. **Whole-packet Frobenius is not an LRC proof.** THM-3255/3267 give
+   rank/phase; THM-3285's FINITE-EXACT `13`-label `R-M-R` horn has two middle
+   completions but no outer co-support. Atom, current and LRC remain open.
+10. **Order-eleven asymmetric bank is OPEN.** THM-4144/62/63/68 close
+    nonprimes and symmetric primes; THM-4169 is presentation-only. THM-4212--25
+    give threshold/owner hierarchies. THM-4224 makes `+min` first fail at ten
+    and verifies 97 fixed-gauge order-eleven presentations—not a class census.
+    Five-copy and general `(OS+)` remain open.
+11. **Support is not multiplicity.** THM-2000/2005/2352/3359/3362/3382
+    separate collision, phase and address; THM-3425 needs period plus parity.
+    Composite rank seven and FC(3) remain open.
+12. **JC fails from dimension three; JC(2), DC(2) are open.** THM-2084/4248/
+    4226 close named `M=10/11/13` cases; THM-4290--4356 stage `M=12`.
+    THM-4380/4388 close fixed weights 12/13 by row 12; THM-4385/4389 give the
+    elliptic carrier/pencil. THM-4390/4395 reach weight-14 rows 9/10.
+    THM-4399/4403/4410 reach selected row13 (`A^4` source,
+    `A^9` terminal); THM-4426/4438 reach row15. [Weight22 transport](../05-knowledge/results/planar_jc48_sep06_board.md)
+    changes the prefix; complete weights15--22, termination and entry are open.
+    THM-4397/4401 give Long's gauge/punctured shadows. THM-4404/4411 make the
+    fixed-`x` seminormal miss the collision period; THM-4412 needs a
+    non-descended suspension.
+13. **Complete period-14 coordinates can be globally blind.** THM-2058 keeps
+    every fixed-depth packet coordinate but exits at `47/113`; THM-2043/2047/
+    2050 separate local completeness from global maxima.
+14. **The peel obstruction is quantized.** THM-2048 adds an exact integer
+    fiber-occupancy variance tax to `6mu^2`; it is not a universal proof.
+15. **Every counterexample is in a finite labelled atlas.** THM-2051--2059
+    bound support; THM-2081--2087 and THM-2088--2093 retain owner data.
+    MISTAKE-260/MISTAKE-261 expose the `28,393`-kernel; THM-2363/THM-2368 and
+    THM-2371/THM-2376 are typed sidecars, not arrival.
+16. **Use the native operation carrier, not shared syntax.** THM-2176/2191
+    expose knot continuation; MISTAKE-230--235 forbid syntax-only bridges.
+    THM-4065/4085/4204/4206/4210 do not solve a prize.
+17. **Sun 2-4-6-8 is refuted:** THM-4026; later results are scoped.
+18. **All cumulative even-graph gaps are closed.** THM-4427 adds every
+    D>=7; THM-4433 gives every cycle layer's exact second minimum at n>=16,
+    with an adjacent/disjoint equality transition. Keep mixed-parity sidecars.
+19. **New continuations.** THM-4417/4430: width-two return/genus obstruction.
+    THM-4432/4436: two-channel detection/negative phase wall. THM-4429/4435:
+    three-node Smith/all-node precision; four-node metric hostile.
+    [New proofs](../05-knowledge/results/second_20260906_overview.md) extend nonunit
+    LRC entry and close endpoint33 returns/mixed(2,2,1). The LRC route keeps
+    the universal local-network proof; general entry, synchronization and LRC(14) OPEN.
+
+## Where to go by topic
+
+| Topic | Read first | Then use |
+|---|---|---|
+| LRC(14) proof | [Frontier](CURRENT-FRONTIER.md#lrc14) | [Proof map](LRC14-PROOF-MAP.md); preserve owner/tie, origin, current, continuation, equality |
+| LRC / Frobenius wildcard | [HYP-8800](../05-knowledge/hypotheses/HYP-8800-lrc14-face-carry-frobenius-transfer.md) | THM-2041 packets; keep seed and pointwise exit explicit |
+| LRC literature | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [Techniques](LRC-TECHNIQUE-INDEX.md), source paper |
+| NC2 / GMC | [Frontier](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
+| Jacobian / Dixmier / Poisson | [Frontier](CURRENT-FRONTIER.md#other-active-portfolio) | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
+| Tournaments | [Frontier](CURRENT-FRONTIER.md#tournaments) | [Invariant atlas](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [Zoo](THE-ZOO.md) with its freshness banner |
+| Integer sequences / additive bases | [Frontier](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
+| Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content, branch order, ancestry, chamber, consumers |
+| ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
+| Broad portfolio | [`PROBLEM-LEDGER.md`](PROBLEM-LEDGER.md) | THM-2176/2177/2191; [`PROBLEM-ATLAS-2026-07-20.md`](PROBLEM-ATLAS-2026-07-20.md) only as historical provenance |
+| Formalization | relevant theorem's `formalization` field | `00-navigation/*FORMALIZATION*`, then a clean build/axiom audit |
+| Research method | [`RESEARCH-PROTOCOL.md`](RESEARCH-PROTOCOL.md) | [`META-PATTERNS.md`](META-PATTERNS.md), relevant reflections |
+| Agent process | [`../agents/README.md`](../agents/README.md) | [`CONCURRENT-SESSIONS.md`](CONCURRENT-SESSIONS.md) |
+
+## Promotion checks
+
+- Read [guardrails](../01-canon/ACTIVE-GUARDRAILS.md); search claims and corrections.
+- State scope, quantifiers, direction, mechanism, boundaries and dependencies.
+- Give maps, preserved predicates, losses, sidecars and decisive tests.
+- Fix computation universe, filters, controls, commands, outputs and hashes.
+- Check IDs in files/frontmatter/indexes/remote history; cite ID plus slug.
+
+## Maintaining this brief
+
+Keep current facts here and in `CURRENT-FRONTIER.md`; superseded arguments
+belong in history.

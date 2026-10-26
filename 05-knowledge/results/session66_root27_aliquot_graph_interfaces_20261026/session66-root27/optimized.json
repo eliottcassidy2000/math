@@ -1,0 +1,109 @@
+{
+  "actual_marked_source_refill": {
+    "P": "100",
+    "Q": "101000",
+    "center_separation": 2,
+    "endpoint_after_P": 36963692617313097,
+    "hP_after": 2,
+    "hP_before": 5,
+    "hQ_after": 9,
+    "macro_index": 86,
+    "pending_slots": 47,
+    "z": 10952205219944621
+  },
+  "common_center_ordered_pairs": 87,
+  "counts": {
+    "binary_words": 1023,
+    "block_pairs": 5041,
+    "blocked_leaf_rejections": 9,
+    "marked_pullback_centers": 7881,
+    "pair_source_cocycles": 10082,
+    "refill_family_executed_native_macros": 837
+  },
+  "old_root27_charge_hostile": {
+    "a": 21,
+    "charge_after": 22,
+    "charge_before": 25,
+    "index": 19,
+    "k": 2,
+    "v3_x_minus_1": 4,
+    "x": 57971215
+  },
+  "open": "All-prefix root27 survival and arbitrary-shape global rank remain unproved",
+  "scope": "PROVED_ELEMENTARY_COCYCLE_WITH_FINITE_EXACT_CONTROLS",
+  "status": "PASS",
+  "unbounded_family_controls": [
+    {
+      "executed_native_macros": 9,
+      "hP": 5,
+      "hQ_after_P": 6,
+      "repeats": 1,
+      "seed": "1709",
+      "tree_length": 10
+    },
+    {
+      "executed_native_macros": 15,
+      "hP": 5,
+      "hQ_after_P": 12,
+      "repeats": 2,
+      "seed": "108717",
+      "tree_length": 16
+    },
+    {
+      "executed_native_macros": 21,
+      "hP": 5,
+      "hQ_after_P": 18,
+      "repeats": 3,
+      "seed": "4794541",
+      "tree_length": 22
+    },
+    {
+      "executed_native_macros": 27,
+      "hP": 5,
+      "hQ_after_P": 24,
+      "repeats": 4,
+      "seed": "501819565",
+      "tree_length": 28
+    },
+    {
+      "executed_native_macros": 33,
+      "hP": 5,
+      "hQ_after_P": 30,
+      "repeats": 5,
+      "seed": "25063663789",
+      "tree_length": 34
+    },
+    {
+      "executed_native_macros": 51,
+      "hP": 5,
+      "hQ_after_P": 48,
+      "repeats": 8,
+      "seed": "7471009005906093",
+      "tree_length": 52
+    },
+    {
+      "executed_native_macros": 99,
+      "hP": 5,
+      "hQ_after_P": 96,
+      "repeats": 16,
+      "seed": "2369775896516882983900729125037",
+      "tree_length": 100
+    },
+    {
+      "executed_native_macros": 195,
+      "hP": 5,
+      "hQ_after_P": 192,
+      "repeats": 32,
+      "seed": "166609068216639358299064020820898422087945827315919576705197",
+      "tree_length": 196
+    },
+    {
+      "executed_native_macros": 387,
+      "hP": 5,
+      "hQ_after_P": 384,
+      "repeats": 64,
+      "seed": "1178544618421679881481260591907653996479557995863265229859554167427644465939238872984617591960647962966522859868465325",
+      "tree_length": 388
+    }
+  ]
+}

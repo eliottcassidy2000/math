@@ -1,0 +1,164 @@
+{
+  "status": "ROOT_APPROVED_AND_INDEPENDENTLY_SOURCE_SEALED",
+  "approval": "Root secondcheckpoint approval2026-10-26T04:13UTC",
+  "integration_context": "80dd70de5d03a192bddedbd0f8adb779616d11db",
+  "files": [
+    {
+      "source": "session66-root27/REPORT.md",
+      "packaged": "session66-root27/REPORT.md",
+      "bytes": 15441,
+      "sha256": "468dfdadcdb99161cb0a2cec411c26df4c2b5e3c458bc29b63104dc8c8cf50ee"
+    },
+    {
+      "source": "session66-root27/check.py",
+      "packaged": "session66-root27/check.py",
+      "bytes": 8355,
+      "sha256": "e3e193c9a869ab4707604ea69b78fe9d20736003ad5bec99d58e6fbd0b7f4d9b"
+    },
+    {
+      "source": "session66-root27/normal.json",
+      "packaged": "session66-root27/normal.json",
+      "bytes": 2545,
+      "sha256": "7c405b49acdcbbf895d4db2f8a6b8bd1ff1d96a03a89bcbb8027db3f80ad3c92"
+    },
+    {
+      "source": "session66-root27/optimized.json",
+      "packaged": "session66-root27/optimized.json",
+      "bytes": 2545,
+      "sha256": "7c405b49acdcbbf895d4db2f8a6b8bd1ff1d96a03a89bcbb8027db3f80ad3c92"
+    },
+    {
+      "source": "session66-root27/SOURCE_PINS.json",
+      "packaged": "session66-root27/SOURCE_PINS.json",
+      "bytes": 3631,
+      "sha256": "a5fee1c668aaa69949391e41626f0285b6dea977ffbebd1fc1fef0b719d2066c"
+    },
+    {
+      "source": "session66-root27/source/00-START-HERE.md",
+      "packaged": "session66-root27/source/00-START-HERE.md",
+      "bytes": 9251,
+      "sha256": "8f80249e7b1b42064e298c8e7b38ac6f971562b8ce71c43fd58fcd5ae969d0fd"
+    },
+    {
+      "source": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "packaged": "session66-root27/source/01-ACTIVE-GUARDRAILS.md",
+      "bytes": 23418,
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "source": "session66-root27/source/02-RESEARCH-PROTOCOL.md",
+      "packaged": "session66-root27/source/02-RESEARCH-PROTOCOL.md",
+      "bytes": 10465,
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "source": "session66-root27/source/03-README.md",
+      "packaged": "session66-root27/source/03-README.md",
+      "bytes": 12719,
+      "sha256": "b13ef3e5d1b6a82f1ea9cd08295743497131a26586ffc82c20eb2c9d62efbed9"
+    },
+    {
+      "source": "session66-root27/source/04-README.md",
+      "packaged": "session66-root27/source/04-README.md",
+      "bytes": 15464,
+      "sha256": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72"
+    },
+    {
+      "source": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "packaged": "session66-root27/source/05-LEGENDRE_SIDECAR.md",
+      "bytes": 8274,
+      "sha256": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505"
+    },
+    {
+      "source": "session66-root27/source/06-check.py",
+      "packaged": "session66-root27/source/06-check.py",
+      "bytes": 11646,
+      "sha256": "d8b54dc0e1537701dd7cc4ed8ea63c2fbacd33d5f7f16b24cd0371f728c27c9f"
+    },
+    {
+      "source": "session66-root27/source/07-INDEPENDENT_REVIEW.md",
+      "packaged": "session66-root27/source/07-INDEPENDENT_REVIEW.md",
+      "bytes": 7252,
+      "sha256": "fc7bfae4f0c8550df7ca085a340e3e641f8e5afb190b7a901b2c115b03c51ce3"
+    },
+    {
+      "source": "session66-root27/source/08-ANCESTRY.md",
+      "packaged": "session66-root27/source/08-ANCESTRY.md",
+      "bytes": 20438,
+      "sha256": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7"
+    },
+    {
+      "source": "session66-root27/source/09-THM-4771-repaired.md",
+      "packaged": "session66-root27/source/09-THM-4771-repaired.md",
+      "bytes": 9511,
+      "sha256": "58d54ba28a5114dced72c03a35375f2a111009c69c4c73c2ea08073b4b7c3023"
+    },
+    {
+      "source": "session66-root27/AUDIT_REPAIR.json",
+      "packaged": "session66-root27/AUDIT_REPAIR.json",
+      "bytes": 604,
+      "sha256": "b9642ceb21f2714295097e8baff8102e06b35e5cc22a51bab2eeac7c6cb5480d"
+    },
+    {
+      "source": "session66-root27/SHA256SUMS",
+      "packaged": "session66-root27/SHA256SUMS",
+      "bytes": 1397,
+      "sha256": "a7a3b5e1b16d427051a792eeb8f6eb91025702b693d9f166eb0ac7133dc3278e"
+    },
+    {
+      "source": "session66-audit-root27/REPORT.md",
+      "packaged": "session66-audit-root27/REPORT.md",
+      "bytes": 10288,
+      "sha256": "a58fc56f548305a55f195afccbe31d199e71f6b69a9363e79f2cf42987f1e8c3"
+    },
+    {
+      "source": "session66-audit-root27/CENTER_BANK_APPENDIX.md",
+      "packaged": "session66-audit-root27/CENTER_BANK_APPENDIX.md",
+      "bytes": 6758,
+      "sha256": "cb4c0dabdd48f177a10c1fb44dc77c6c1b295eb5e24c8837f2591a57a062be2b"
+    },
+    {
+      "source": "session66-audit-root27/independent_check.py",
+      "packaged": "session66-audit-root27/independent_check.py",
+      "bytes": 11858,
+      "sha256": "d209ad9f5f0e54801f586214bb38dc57c402391a063676607c54f868f83db7d6"
+    },
+    {
+      "source": "session66-audit-root27/independent-normal.json",
+      "packaged": "session66-audit-root27/independent-normal.json",
+      "bytes": 2513,
+      "sha256": "83ed7ad8599ceb898783893f331e2e3823f6abc55d35ddfc4d050e7bb0d4c55a"
+    },
+    {
+      "source": "session66-audit-root27/independent-optimized.json",
+      "packaged": "session66-audit-root27/independent-optimized.json",
+      "bytes": 2513,
+      "sha256": "83ed7ad8599ceb898783893f331e2e3823f6abc55d35ddfc4d050e7bb0d4c55a"
+    },
+    {
+      "source": "session66-audit-root27/HISTORICAL_GIT_PIN_VERIFICATION.json",
+      "packaged": "session66-audit-root27/HISTORICAL_GIT_PIN_VERIFICATION.json",
+      "bytes": 3718,
+      "sha256": "857b599d4597c7e5e1294c5e0e9e85ba4c9588abe240e73de5fd38ca2f7f0c39"
+    },
+    {
+      "source": "session66-audit-root27/OFFLINE_PIN_VERIFICATION.json",
+      "packaged": "session66-audit-root27/OFFLINE_PIN_VERIFICATION.json",
+      "bytes": 3733,
+      "sha256": "3a7d732c23cfc25d06a6b51b237d5ac980f4dc6dab77a8244f3cd991bf479d07"
+    },
+    {
+      "source": "session66-audit-root27/MANIFEST.json",
+      "packaged": "session66-audit-root27/MANIFEST.json",
+      "bytes": 3660,
+      "sha256": "153f5a1ded63aff66dd0de77f05831e015d4d6241704fc68c45db34d1da3e2ca"
+    },
+    {
+      "source": "session66-audit-root27/SHA256SUMS",
+      "packaged": "session66-audit-root27/SHA256SUMS",
+      "bytes": 715,
+      "sha256": "81e0911c7f3f6ee2817f3e119f3227a76337fcd48a69b63ae1c7d8e23d0e6f6f"
+    }
+  ],
+  "scope": "Repaired root27 guarded switch-cost law and independent center-bank lemmas; no global rank/nonhalting claim"
+}

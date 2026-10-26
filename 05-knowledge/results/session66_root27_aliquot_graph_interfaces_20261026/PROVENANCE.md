@@ -22,3 +22,9 @@ that never restores older bytes onto the repository's current truth surface.
 Included audit startup/mailbox text records a missing `.machine-id` and does
 not invent agent registration. Python caches and unlisted files are excluded.
 The unapproved root `CONNECTIONS.md` working draft is not included.
+
+Root27 sources retain their original committed source contexts and links in
+SOURCE_LINK_CONTEXT.json. Historical/source snapshots are not current nested
+navigation. AUDIT_REPAIR.json records the missing native guard repair; the
+current producer and independent offline checker are the executable authorities.
+Historical Git verification is a separate receipt, never a runtime dependency.
