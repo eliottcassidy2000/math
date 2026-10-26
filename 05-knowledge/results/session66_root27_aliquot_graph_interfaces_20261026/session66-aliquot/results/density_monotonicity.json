@@ -1,0 +1,27 @@
+{
+  "prime_addition_identity": {
+    "M": [
+      1,
+      100
+    ],
+    "new_primes": [
+      3,
+      5,
+      7,
+      11,
+      13
+    ],
+    "cases": 417,
+    "strict_gains": 305,
+    "arithmetic": "exact rational, separate direct divisor enumeration"
+  },
+  "Booker_distinctness_boundary": {
+    "prime_p_range": [
+      5,
+      9781
+    ],
+    "checked_primes": 1204,
+    "failures": 0,
+    "scope": "Only small supplemental check; large4e18 Goldbach computation cited, not rerun"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED_EXACT_GIT_BYTES",
+  "scope": "Referenced repository sources; no source snapshots bundled or claims newly promoted",
+  "files": [
+    {
+      "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+      "path": "05-knowledge/results/normseven_f1_20261025/KUMMER_AND_F1.md",
+      "sha256": "d4ad5fcb3958281717fd141a591855094b509f8608e8c925665b13e5774781eb",
+      "git_blob": "9cb9e9520b2114208de7be69add56ae36920013b"
+    },
+    {
+      "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+      "path": "05-knowledge/results/normseven_f1_20261025/TWIST_AVERAGE.md",
+      "sha256": "58171d88a66f9016feae0a1b97f483d469901643090a1ba8840811a506351262",
+      "git_blob": "f215bdb5ef4e9de41d788366da9a47d28c710541"
+    },
+    {
+      "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-fifteens/REPORT.md",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "git_blob": "04926bc1f204182dcfcd24e5ecf6670f61ddd6cd"
+    },
+    {
+      "commit": "2807ee83497f47e06311463c9e4fc5dc9dcf752e",
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+      "git_blob": "346991110594940fc0aa36138b984f61be1dfe04"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "checked_utc_date": "2026-10-26",
+  "repo_pin": "63f52936f8dd8592d4f2fee869748baad2e1997e",
+  "sources": [
+    {"authors":"Pomerance and Yang", "title":"On untouchable numbers and related problems (2012 manuscript; published as Variant of a theorem of Erdos on the sum-of-proper-divisors function,2014)", "url":"https://math.dartmouth.edu/~carlp/uupaper3.pdf", "locations":"Section5, pp8-9", "supports":"Parity split, composite square-root bound X^(2/3), near-linear prefix census. Intro strict-upper-bound uncertainty superseded2015."},
+    {"authors":"Chen and Zhao", "title":"Nonaliquot numbers", "year":2011, "url":"https://publi.math.unideb.hu/paper/1551/download/10_5486_PMD_2011_4820.pdf", "locations":"Theorem1,p440", "supports":"Explicit g_M lower-density formula; displayed M gives g_M>0.0602757."},
+    {"authors":"Luca and Pomerance", "title":"The range of the sum-of-proper-divisors function", "year":2015, "url":"https://math.dartmouth.edu/~carlp/LucaPomeranceAA.pdf", "locations":"Main theorem", "supports":"Positive lower proportion of even targets in the image, hence strict upper-density bound for untouchables."},
+    {"authors":"Pollack and Pomerance", "title":"Some problems of Erdos on the sum-of-divisors function", "year":2016, "url":"https://math.dartmouth.edu/~carlp/btran10.pdf", "locations":"Conjecture1.4 and Section3", "supports":"Existence of model Delta; equality with actual density conjectural, near0.17 heuristic."},
+    {"authors":"Pollack and Pomerance", "title":"Errata to Some problems of Erdos on the sum-of-divisors function", "url":"https://www.pollack-math.net/reversal-errata.pdf", "supports":"Corrections concern Proposition2.2 and Conjecture2.4, not Section3 model-density distinction."},
+    {"authors":"Booker", "title":"Finite connected components of the aliquot graph", "year":2018, "url":"https://arxiv.org/pdf/1610.07471", "locations":"Section2, Theorem2.2; footnote2", "supports":"Even-target inverse algorithm O_epsilon(m^(1/2+epsilon)); prior hyperbola trick; precise distinctness boundary for Goldbach verification."},
+    {"authors":"Chum, Guy, Jacobson and Mosunov", "title":"Numerical and Statistical Analysis of Aliquot Sequences", "year":2021, "url":"https://arxiv.org/html/2110.14136", "locations":"Section3", "supports":"Published untouchable census to2^40; density model remains a heuristic."}
+  ],
+  "source_failures": [
+    {"url":"https://research-information.bris.ac.uk/files/117269812/aliquot.pdf", "status":"web403; no repeat", "alternative":"author paper on arxiv accessed successfully"}
+  ],
+  "novelty_boundary":"Simple all-parity prime-core/squarefull certificate organization and local controls are session work; no priority claimed. Prefix reduction and hyperbola trick explicitly credited to prior literature."
+}

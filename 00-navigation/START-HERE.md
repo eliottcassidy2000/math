@@ -10,7 +10,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 **Oct 25:** [Six/seven geometry](../05-knowledge/results/six_seven_geometry_20261025/README.md):
 K3 cubes, free codes, reflection. [Gale](../05-knowledge/results/six_seven_gale_cube_20261025/README.md): twists and elliptic factors. [HN6/7/8](S61.md): metric fold and boundary modes.
 
-[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md): cyclic kernels; twisted transport. [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md).
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md).
 
 ## Orientation
 

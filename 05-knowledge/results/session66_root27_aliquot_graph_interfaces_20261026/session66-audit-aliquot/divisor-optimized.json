@@ -1,0 +1,169 @@
+{
+  "N210": {
+    "aliquot": 366,
+    "interior_count": 14,
+    "minimum_defect": 7,
+    "numeric_defect": 91,
+    "proper_count": 15
+  },
+  "carrier_range": [
+    1,
+    600
+  ],
+  "exhaustive_orientations": 134358,
+  "explicit_checks": 9437,
+  "frozen_producer_sha256": "70cd2c3e0c020f6f1106b04d6428e0da4b61f6d7b22853c4d1bca8d2d5925131",
+  "involution_distributions": [
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 1
+      },
+      "f": 0
+    },
+    {
+      "b": 1,
+      "coefficients": {
+        "1": 2
+      },
+      "f": 0
+    },
+    {
+      "b": 2,
+      "coefficients": {
+        "2": 16,
+        "4": 32,
+        "6": 16
+      },
+      "f": 0
+    },
+    {
+      "b": 3,
+      "coefficients": {
+        "3": 512,
+        "5": 3072,
+        "7": 7680,
+        "9": 10240,
+        "11": 7680,
+        "13": 3072,
+        "15": 512
+      },
+      "f": 0
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 1
+      },
+      "f": 1
+    },
+    {
+      "b": 1,
+      "coefficients": {
+        "1": 4,
+        "3": 4
+      },
+      "f": 1
+    },
+    {
+      "b": 2,
+      "coefficients": {
+        "2": 64,
+        "4": 256,
+        "6": 384,
+        "8": 256,
+        "10": 64
+      },
+      "f": 1
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 2
+      },
+      "f": 2
+    },
+    {
+      "b": 1,
+      "coefficients": {
+        "1": 16,
+        "3": 32,
+        "5": 16
+      },
+      "f": 2
+    },
+    {
+      "b": 2,
+      "coefficients": {
+        "2": 512,
+        "4": 3072,
+        "6": 7680,
+        "8": 10240,
+        "10": 7680,
+        "12": 3072,
+        "14": 512
+      },
+      "f": 2
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 8
+      },
+      "f": 3
+    },
+    {
+      "b": 1,
+      "coefficients": {
+        "1": 128,
+        "3": 384,
+        "5": 384,
+        "7": 128
+      },
+      "f": 3
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 64
+      },
+      "f": 4
+    },
+    {
+      "b": 1,
+      "coefficients": {
+        "1": 2048,
+        "3": 8192,
+        "5": 12288,
+        "7": 8192,
+        "9": 2048
+      },
+      "f": 4
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 1024
+      },
+      "f": 5
+    },
+    {
+      "b": 0,
+      "coefficients": {
+        "0": 32768
+      },
+      "f": 6
+    }
+  ],
+  "producer_normal_optimized_equal": true,
+  "root_replay_output_sha256": "174a851aa790f14abfe839d4d569700a02e860e2b15242252b5329fceedfe543",
+  "status": "PASS",
+  "strict_divisibility_k": [
+    2,
+    30
+  ],
+  "strict_divisibility_n": [
+    1,
+    100
+  ]
+}

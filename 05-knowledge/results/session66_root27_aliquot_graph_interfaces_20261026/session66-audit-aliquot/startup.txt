@@ -1,0 +1,86 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: codex/session66-root27-aliquot
+HEAD:   d1635ee0a101
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: clean
+
+== Recent commits (8) ==
+d1635ee0a10 (HEAD -> codex/session66-root27-aliquot, origin/main, origin/HEAD) opus-2026-10-26-S57: reserve THM-4790..4792, HYP-9400..9402 (untouchables, root-27 source-preserving rank, 3n+-1 tables, tournament graph pairs)
+e787a904b36 mac-mini-2026-10-25-pyth: apply independent audit (MISTAKE-670) - THM-4780 credits fixed (elimination calculus from wheel_run_interface_20261014h / paley_next_cores_20261014i; PGL(2) invariance classical, counting lemma new), part 2/4 wording, TT4 lemma cited as the classical 4-cycle bound; HYP-9390 Sym^2 sign corrected (|b(q)|^2 = q^2 - S_q), Remark 1 ring corrected; note section 2/3/5/7 fixes; seven-vertex census: TT7 at 72 q outside 97 GL(2) newform orbits of 2-power level, genuine part g(q) isolated with the audit's exact reduced form (tt7/); audit report, scripts and required_edits.json
+2807ee83497 opus-2026-10-25-S56: close - session letter, reply to klein (Antihydra note absorbed with credit; A11 = Hydra)
+ce4217df30b opus-2026-10-25-S56: apply independent audit (MISTAKE-669) - capture family v0 even >= 4 (P(2,37) counterexample), macro-level translation not a TM translated cycler (tape period quadratic); Q = 2v0+w0 monotone (S(W) > W proved, level-2 certificate bound); v_3 counter sum from l=1; A11 countdown = Hydra map x -> floor(3x/2), x = a0+b+18 (audit); A6 odds per scenario (combs: capture 0.90-0.95; none: ~even, median depth 1e5); P5 fails literally for 1 of 4 approaches; prior art cited (wiki Potential Cryptids pages, Enan456/bbchallenge-proofs A3/A9/A11 conditional closures, google-deepmind/cryptids, Ligocki/Barsdell inductive provers); referee scripts in audit_s56/; OPEN-QUESTIONS and BACKLOG entries
+63f52936f8d (codex/session65-cryptid-tournament-interfaces) [session65-native-gates]: synthesize typed interfaces, fifteen kernels and native K obstructions
+ba3894f914d [session65-typed-bridges]: certify MB repeller, Goldbach lineage and offline reduction audits
+5df2594f127 mac-mini-2026-10-25-pyth: checkpoint (pre-audit) - THM-4780 Paley census tower to six vertices: after THM-4652's calculus only dense sums without odd-reversal automorphisms survive (wheel W4; octahedron, K6-P6); PGL(2) lemma gives octahedron = (q-5) wheels, proving HYP-9275's octahedron identity at every odd prime; TT5(P_q) = q(q-1)[(q-3)(q^2-21q+105) + S_W4]/2^10 and TT6(P_q) = q(q-1)[(q-3)(q^3-46q^2+682q-3239) + 7(q-15)S_W4 - 8S_(K6-P6)]/2^15 by exact interpolation with a priori degree bounds (signed multiplicities +1, -8 = Desarmenien-Foata); TT5(P_p) = p(p-1)(p^3-24p^2+168p-319-a_p)/2^10 with the Apery form; TT4 minimal = doubly regular = Gauss identity. HYP-9390: TT6 = level-32 adjoint |b(q)|^2 (conditional on HYP-9276), FINITE-EXACT at 75 q incl. prime powers 27..2187; seven-vertex survivor census (37 genuine). Independent check of THM-4773 (all parts); Berggren vs Collatz depth statistics; four-prime Selmer split by Legendre-tournament class; results note; HYP-9391 released
+02065cd2cc5 [root27-machine]: repair returned-valuation index and pin source-preserving budget
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: untouchable aliquot inverse fibers
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-547 (2026-09-06, higher-jet hostile probe) -- changing the observer changes its cancellation budget
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: untouchable aliquot inverse fibers ==
+rank terms: untouchable aliquot inverse fibers, untouchable, aliquot, inverse, fibers
+Current-route matches (ranked):
+  (none; try exact constants, theorem IDs, quantifiers, or synonyms)
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [VERIFIED] 01-canon/theorems/THM-1345-plane-family-section-radical-inverse-trace-module.md
+    [PROVED] 01-canon/theorems/THM-1226-gcd-period-projective-charge-obstruction.md
+    [VERIFIED] 01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md
+    ... 14 more; refine the query
+  Unproved candidates (not results):
+    (none)
+  Hypotheses:
+    [LEDGER] 05-knowledge/hypotheses/INDEX.md
+  Historical reflections:
+    (none)
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/INDEX.md
+  05-knowledge/results/collatz_aliquot_lehmer_five_20260927.md
+  05-knowledge/results/collatz_procgen_20260922_synthesis.md
+  05-knowledge/results/collatz_sticky_20260927_size_coupled_persistence.md
+  05-knowledge/results/collatz_two_carries_typology_20260927.md
+  05-knowledge/results/aliquot_dyadic_frontier_20261014e.md
+  ... 60 more; refine the query
+
+== Coordination ==
+No .machine-id: use a temporary session name; do not invent registration.
+Legacy IDs collide: cite every theorem as ID + slug/path.

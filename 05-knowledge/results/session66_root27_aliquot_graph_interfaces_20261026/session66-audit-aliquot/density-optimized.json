@@ -1,0 +1,72 @@
+{
+  "derived_bound": "liminf U(X)/X > 0.060452936134095",
+  "divisibility_refinements": 1363,
+  "explicit_checks": 1647,
+  "gcd_expectation_M": [
+    1,
+    240
+  ],
+  "intervals": {
+    "base": {
+      "M": 53133049021337845560000,
+      "common_denominator": 1000000000000000000000000,
+      "divisor_count": 645120,
+      "lower_numerator": 60275780518518619919468,
+      "positive_terms": 644034,
+      "strict_upper_numerator": 60275780518518620563502
+    },
+    "enlarged": {
+      "M": 2284721107917527359080000,
+      "common_denominator": 1000000000000000000000000,
+      "divisor_count": 1290240,
+      "lower_numerator": 60452936134095005620815,
+      "positive_terms": 1288370,
+      "strict_upper_numerator": 60452936134095006909185
+    }
+  },
+  "method": "streaming complement-totient / fixed denominator 2M; integer floors at 10^24",
+  "scope": "CITED Chen-Zhao theorem plus independently certified instantiation; no density existence or numerical record claim",
+  "small_exact_checks": [
+    {
+      "M": 1,
+      "exact_g_M": "0",
+      "positive_terms": 0
+    },
+    {
+      "M": 2,
+      "exact_g_M": "0",
+      "positive_terms": 0
+    },
+    {
+      "M": 3,
+      "exact_g_M": "0",
+      "positive_terms": 0
+    },
+    {
+      "M": 9,
+      "exact_g_M": "1/126",
+      "positive_terms": 1
+    },
+    {
+      "M": 12,
+      "exact_g_M": "7/288",
+      "positive_terms": 2
+    },
+    {
+      "M": 72,
+      "exact_g_M": "150623029/4793841360",
+      "positive_terms": 7
+    },
+    {
+      "M": 30,
+      "exact_g_M": "265/8316",
+      "positive_terms": 4
+    },
+    {
+      "M": 45,
+      "exact_g_M": "17/1008",
+      "positive_terms": 3
+    }
+  ],
+  "status": "PASS"
+}

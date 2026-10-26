@@ -1,0 +1,137 @@
+{
+  "method": "Chen-Zhao2011 Theorem1, directed integer rounding of each rational term",
+  "base": {
+    "M_factorization": [
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        17,
+        1
+      ],
+      [
+        19,
+        1
+      ],
+      [
+        23,
+        1
+      ],
+      [
+        29,
+        1
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        37,
+        1
+      ],
+      [
+        41,
+        1
+      ]
+    ],
+    "M": 53133049021337845560000,
+    "divisor_count": 645120,
+    "positive_terms": 644034,
+    "common_denominator": 1000000000000000000000000,
+    "lower_numerator": 60275780518518619919468,
+    "strict_upper_numerator": 60275780518518620563502,
+    "lower_decimal": "0.060275780518518619919468",
+    "strict_upper_decimal": "0.060275780518518620563502",
+    "claim": "liminf U(X)/X >= g_M >= lower_numerator/common_denominator"
+  },
+  "enlarged": {
+    "M_factorization": [
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        13,
+        1
+      ],
+      [
+        17,
+        1
+      ],
+      [
+        19,
+        1
+      ],
+      [
+        23,
+        1
+      ],
+      [
+        29,
+        1
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        37,
+        1
+      ],
+      [
+        41,
+        1
+      ],
+      [
+        43,
+        1
+      ]
+    ],
+    "M": 2284721107917527359080000,
+    "divisor_count": 1290240,
+    "positive_terms": 1288370,
+    "common_denominator": 1000000000000000000000000,
+    "lower_numerator": 60452936134095005620815,
+    "strict_upper_numerator": 60452936134095006909185,
+    "lower_decimal": "0.060452936134095005620815",
+    "strict_upper_decimal": "0.060452936134095006909185",
+    "claim": "liminf U(X)/X >= g_M >= lower_numerator/common_denominator"
+  }
+}

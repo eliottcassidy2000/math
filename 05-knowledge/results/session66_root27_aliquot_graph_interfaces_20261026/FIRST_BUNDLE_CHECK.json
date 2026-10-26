@@ -1,0 +1,200 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "python_scripts": [
+    {
+      "path": "verify_packet.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-root/divisor_carrier.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit_divisor.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/audit_density.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/density_lower_bound.initial.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/divisor_carrier.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/density_lower_bound.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/aliquot_fibers.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-audit-aliquot/source-snapshot/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/density_lower_bound.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/aliquot_fibers.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/verify.py",
+      "bare_assertions": 0
+    },
+    {
+      "path": "session66-aliquot/scripts/verify_density_monotonicity.py",
+      "bare_assertions": 0
+    }
+  ],
+  "native_checksum_files": [
+    "session66-audit-aliquot/AUDIT.md",
+    "session66-audit-aliquot/DENSITY_AUDIT.md",
+    "session66-audit-aliquot/DIVISOR_AUDIT.md",
+    "session66-audit-aliquot/audit.py",
+    "session66-audit-aliquot/audit_density.py",
+    "session66-audit-aliquot/audit_divisor.py",
+    "session66-audit-aliquot/density-normal.json",
+    "session66-audit-aliquot/density-optimized.json",
+    "session66-audit-aliquot/divisor-normal.json",
+    "session66-audit-aliquot/divisor-optimized.json",
+    "session66-audit-aliquot/final-producer-input-sha256.txt",
+    "session66-audit-aliquot/messages.txt",
+    "session66-audit-aliquot/normal.json",
+    "session66-audit-aliquot/optimized.json",
+    "session66-audit-aliquot/producer-input-sha256.txt",
+    "session66-audit-aliquot/source-snapshot/DIVISOR_F1_BRIDGE.final.md",
+    "session66-audit-aliquot/source-snapshot/DIVISOR_F1_BRIDGE.md",
+    "session66-audit-aliquot/source-snapshot/REPORT.final.md",
+    "session66-audit-aliquot/source-snapshot/REPORT.md",
+    "session66-audit-aliquot/source-snapshot/aliquot_fibers.py",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.initial.py",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.json",
+    "session66-audit-aliquot/source-snapshot/density_lower_bound.py",
+    "session66-audit-aliquot/source-snapshot/divisor_carrier.py",
+    "session66-audit-aliquot/source-snapshot/verify.py",
+    "session66-audit-aliquot/startup.txt",
+    "session66-aliquot/ALLOWLIST.txt",
+    "session66-aliquot/README.md",
+    "session66-aliquot/REPORT.md",
+    "session66-aliquot/results/density_lower_bound.json",
+    "session66-aliquot/results/density_monotonicity.json",
+    "session66-aliquot/results/density_optimized_stdout.json",
+    "session66-aliquot/results/density_run_stdout.json",
+    "session66-aliquot/results/run_optimized_stdout.json",
+    "session66-aliquot/results/run_stdout.json",
+    "session66-aliquot/results/small_fibers.json",
+    "session66-aliquot/results/untouchables_100000.json",
+    "session66-aliquot/results/verification.json",
+    "session66-aliquot/scripts/aliquot_fibers.py",
+    "session66-aliquot/scripts/density_lower_bound.py",
+    "session66-aliquot/scripts/verify.py",
+    "session66-aliquot/scripts/verify_density_monotonicity.py",
+    "session66-aliquot/sources/PRIMARY_SOURCES.json",
+    "session66-aliquot/ALLOWLIST.txt",
+    "session66-aliquot/README.md",
+    "session66-aliquot/REPORT.md",
+    "session66-aliquot/results/density_lower_bound.json",
+    "session66-aliquot/results/density_monotonicity.json",
+    "session66-aliquot/results/density_optimized_stdout.json",
+    "session66-aliquot/results/density_run_stdout.json",
+    "session66-aliquot/results/run_optimized_stdout.json",
+    "session66-aliquot/results/run_stdout.json",
+    "session66-aliquot/results/small_fibers.json",
+    "session66-aliquot/results/untouchables_100000.json",
+    "session66-aliquot/results/verification.json",
+    "session66-aliquot/scripts/aliquot_fibers.py",
+    "session66-aliquot/scripts/density_lower_bound.py",
+    "session66-aliquot/scripts/verify.py",
+    "session66-aliquot/scripts/verify_density_monotonicity.py",
+    "session66-aliquot/sources/PRIMARY_SOURCES.json"
+  ],
+  "local_links": [
+    {
+      "from": "README.md",
+      "to": "session66-aliquot/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/DENSITY_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-root/DIVISOR_F1_BRIDGE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "session66-audit-aliquot/DIVISOR_AUDIT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "REPLAY_TASKS.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "verify_packet.py",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "FIRST_SOURCE_VERIFICATION.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PROVENANCE.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "to": "PUBLICATION_CHECKS.md",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "sources/PRIMARY_SOURCES.json",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "results/verification.json",
+      "exists": true
+    },
+    {
+      "from": "session66-aliquot/README.md",
+      "to": "results/density_lower_bound.json",
+      "exists": true
+    }
+  ],
+  "literal_mathematical_notation": [],
+  "historical_source_links": [],
+  "historical_unresolved_links": [],
+  "explicit_encoding_pins": {}
+}

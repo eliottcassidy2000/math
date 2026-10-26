@@ -1,0 +1,62 @@
+[
+  {
+    "script": "session66-aliquot/scripts/verify.py",
+    "stored_stdout": "session66-aliquot/results/verification.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-aliquot/scripts/density_lower_bound.py",
+    "stored_stdout": "session66-aliquot/results/density_lower_bound.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-aliquot/scripts/verify_density_monotonicity.py",
+    "stored_stdout": "session66-aliquot/results/density_monotonicity.json",
+    "python_flags": [
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-audit-aliquot/audit.py",
+    "stored_stdout": "session66-audit-aliquot/normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-audit-aliquot/audit_density.py",
+    "stored_stdout": "session66-audit-aliquot/density-normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-audit-aliquot/audit_divisor.py",
+    "stored_stdout": "session66-audit-aliquot/divisor-normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
+  },
+  {
+    "script": "session66-root/divisor_carrier.py",
+    "stored_stdout": "session66-root/divisor_normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 900
+  }
+]
