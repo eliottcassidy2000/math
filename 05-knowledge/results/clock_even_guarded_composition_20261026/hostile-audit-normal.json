@@ -1,0 +1,7 @@
+{
+  "L2_one_difference": 29097684,
+  "independent_partner_checks": 12,
+  "independent_source_checks": 2,
+  "mean_partner_H_difference": "1077692/17145",
+  "scope": "Full sums: C++ only; sources and twelve partner values: independent Python recursion."
+}

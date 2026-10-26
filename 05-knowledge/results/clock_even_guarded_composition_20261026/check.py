@@ -203,5 +203,11 @@ def tape_controls():
     return {'native_stack_checks':cases,'scanner':finite,'hidden_bit_hostile':{'k':6,'same_residue_mod64':[0,64],'different_read_at_step':6}}
 
 def main():
-    print(json.dumps({'tournaments':tournament_controls(),'clocks':clock_controls(),'tapes':tape_controls()},sort_keys=True,indent=2))
+    a=Atlas(3)
+    scores={tuple(sum(a.forward(t,i,j) for j in range(3) if i!=j) for i in range(3)) for t in range(a.N)}
+    need(len(scores)==7>4,'score is not the cut bit vector')
+    a4=Atlas(4);cut=sum(1<<k for k,(i,j) in enumerate(a4.edges) if (i<2)!=(j<2))
+    need(cut!=0 and all(sum(bool(cut>>k&1) for k,e in enumerate(a4.edges) if i in e)%2==0 for i in range(4)),'even-order cut/cycle intersection')
+    print(json.dumps({'tournaments':tournament_controls(),'clocks':clock_controls(),'tapes':tape_controls(),
+                      'historical_score_cut_hostile':{'n3_labelled_score_vectors':len(scores),'n3_cut_vectors':4,'n4_nonzero_cut_and_cycle_mask':cut}},sort_keys=True,indent=2))
 if __name__=='__main__':main()

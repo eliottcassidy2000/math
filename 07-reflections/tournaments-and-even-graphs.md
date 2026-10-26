@@ -1,3 +1,15 @@
+> **HISTORICAL / CORRECTED 2026-10-26.** The score/cut identification and
+> all-order direct-sum claims below are false. At n3 there are seven labelled
+> score vectors but only four cut vectors. At n4 the nonzero cut of {0,1}
+> is the degree-even C4, so cut and cycle spaces intersect. For K_n with n>=3,
+> their orthogonal direct-sum decomposition over F2 holds only at odd n; even there
+> the cut coordinate is not the full score vector. The Royle equinumerosity
+> concerns automorphism-sign-even graphs, not degree-even graphs. The July
+> correction below fixed that latter distinction but not the earlier claims.
+> Numerical OCR percentages and the interpretations derived from the false
+> score/cut identification are not inherited as evidence. Current mechanism:
+> [signed responses, guards and exact hostile controls](../05-knowledge/results/clock_even_guarded_composition_20261026/README.md).
+
 # Tournaments and Even Graphs: The Cut/Cycle Decomposition
 
 **Session**: kind-pasteur-2026-03-22-S20ae

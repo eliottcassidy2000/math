@@ -84,6 +84,11 @@
       }
     ]
   },
+  "historical_score_cut_hostile": {
+    "n3_cut_vectors": 4,
+    "n3_labelled_score_vectors": 7,
+    "n4_nonzero_cut_and_cycle_mask": 30
+  },
   "tapes": {
     "hidden_bit_hostile": {
       "different_read_at_step": 6,
