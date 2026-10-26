@@ -1,0 +1,5 @@
+(a) twin values p+1 in (10^4, 10^5]: 1019 values; exactly two sources: 494 (share 0.4848); mean sources 2.816; max 11
+    twin values p+1 <= 10^5: 1224; exactly two: 609 (share 0.4975); mean 2.786
+    even untouchables <= 10^5 (parity lemma, exact): 2 52 88 96 120 124 146 162 188 206 210 216 ... count 13862 (A057978: 1 untouchable even below 10 is 2; the odd 5 is not in this even table)
+(b) s^-1(33550336) = {33550336, 44655764} (2 sources; self-only = NO)
+(c) abc hits c <= 10^5: 419; with an odd perfect power: 323 (share 0.7709); even term a power of two: 119 (share 0.2840); a = 1: 63 (share 0.1504); best quality 1.5679 at (1, 4374, 4375)
