@@ -14,9 +14,10 @@
   - THM-4801: Collatz meets the constructible polygons. The trunk five; the initial-segment principle; the
     Collatz-closed family `2^a {1, 3, 5, 85, 21845, 1431655765}`.
   - The no-go facts of section 1.2 are classical.
-- **HEURISTIC, tested:** HYP-9410. The random model behind "no sixth Fermat prime" was calibrated on Collatz's own
-  neighbours of `F_m` and `M_p`. One pre-registered test failed; the post-hoc explanation (algebraic factorisations)
-  then passed two out-of-sample tests.
+- **HEURISTIC, tested:** HYP-9410. The sieve-plus-Mertens prime model was calibrated on Collatz's own neighbours of
+  `F_m` and `M_p`. One pre-registered test failed. The post-hoc explanation (algebraic factorisations) is consistent
+  out of sample, though those tests do not discriminate between the models.
+- **Audit:** independently audited ([AUDIT](AUDIT.md), MISTAKE-673, corrections applied).
 - **KNOWN, cited and used:**
   - Somer–Křížek 2004: the squaring map on units mod `n` has no cycle longer than 1 iff `n` is constructible; `F_m`
     is composite iff the squaring digraph mod `F_m` has a longer cycle; the depth formula.
@@ -42,8 +43,9 @@
   - `omega(Paley(257)) = 7`;
   - the same algebraic and Aurifeuillean no-go as 1.2.
 
-  THM-4800 (6) shows that Theorem L and the Pépin cycle are one fact (antipodal arcs). klein's later Theorem M* (merges
-  at `L = 1 (mod 4)`) does not touch this note.
+  THM-4800 (6) shows that for prime `F_n` Theorem L and the Pépin cycle are one fact: the two Fermat lines are
+  antipodal arcs, and the landing divisibility is the cycle closing at 0. For composite `F_n` the lines remain mirror
+  images but lie on different cycles. klein's later Theorem M* (merges at `L = 1 (mod 4)`) does not touch this note.
 
 ![Pépin on the 17-gon and the squaring tree of F_17^*](pepin_collatz_17gon.svg)
 
@@ -61,7 +63,9 @@
 
 ### 1.2 Why every uniform compositeness mechanism misses the Fermat numbers (PROVED; classical facts, assembled)
 
-Infinite families have been proved composite only by three uniform mechanisms. None applies to Fermat numbers.
+None of the known uniform compositeness mechanisms applies to Fermat numbers. Other uniform routes exist elsewhere,
+for instance Cullen's `p | C_(p-1)` from Fermat's little theorem and Hooley-type averaging; they do not apply here
+either.
 - **Covering congruences**, the Sierpiński mechanism for `k 2^n + 1`. A prime `q` divides `F_m` iff
   `ord_q(2) = 2^(m+1)`, so **each prime divides at most one Fermat number**, which is Goldbach's coprimality. A
   covering set of `N` primes therefore covers at most `N` indices; no finite (or density) covering exists.
@@ -70,8 +74,9 @@ Infinite families have been proved composite only by three uniform mechanisms. N
   but Fermat exponents `2^m` are `0 (mod 4)` for `m >= 2`.
 
 A proof of completeness therefore needs a mechanism not yet known. kind-pasteur-S5 states the algebraic and
-Aurifeuillean parts concurrently. The calibration of section 4 shows the contrast is real. Collatz's neighbours of `F_m`, the numbers `3^j 2^b +- 1`, *do* carry algebraic and Aurifeuillean
-factorisations, and these shift their prime counts measurably (3–6%). The genuine Fermat line and `F_m` carry none.
+Aurifeuillean parts concurrently. The calibration of section 4 shows the contrast is real. Collatz's neighbours of
+`F_m`, the numbers `3^j 2^b +- 1`, *do* carry algebraic and Aurifeuillean factorisations, and these shift their prime
+counts measurably (3–7%). The genuine Fermat line and `F_m` carry none.
 
 ### 1.3 Structures that are finite for free, and structures that carry the problem (THM-4801 (2))
 
@@ -119,9 +124,17 @@ No proof, and none is in reach. What is exact:
 - the split of 1.3 into unconditional finiteness versus the open problem;
 - the new reformulations of 1.4.
 
-The quantitative argument, the random model, gives fewer than `10^-9` further Fermat primes expected. It is
-validated, after the algebraic correction it needs only for two-parameter numbers, on Collatz's own Fermat and
-Mersenne lines: 2 of 3 pre-registered tests passed, plus 2 of 2 out-of-sample tests of the correction.
+The quantitative argument is heuristic, and two model classes give it:
+- **Sieve plus Mertens.** This class is what S58 tested on Collatz's own Fermat and Mersenne lines. It needs an
+  algebraic correction only for two-parameter numbers, which `F_m` does not need. Applied to `F_m`, it predicts
+  about `7e-9` further Fermat primes, or `1.5e-8` with the Euler–Lucas sieve.
+- **Boklan–Conway's progression-ratio model.** It gives fewer than `2^-30`. The line test cannot validate that value.
+
+Both say far fewer than one. The calibration record:
+- 2 of 3 pre-registered tests passed;
+- L-P1 failed and was explained post hoc by algebraic factorisations;
+- the explanation is consistent with 2 out-of-sample tests, which by themselves do not discriminate (likelihood ratio
+  about 3.4).
 
 ## 2. Pépin reworked about Collatz (THM-4800)
 
@@ -144,9 +157,13 @@ klein's THM-4793 reads Pépin through the odd branch `x -> 3x+1` mod `F_m` and f
   half-turn sends `F_m` to this mirror point.
 - **The antipodal line** (THM-4800 (6)).
   - The integer `F_(2^m) = 4^M + 1`, with `M = (F_m - 1)/2`, is `2 (mod F_m)`, the mirror point.
-  - Its Fermat line is the antipodal half of the same `A`-cycle.
-  - So kind-pasteur's Theorem L (`F_m` is prime iff `F_m` divides the landing point `(3^M + 1)/2` of that line) is
-    the cycle closing at 0. The two Fermat lines of `F_m` and `F_(2^m)` are the two halves of Pépin's cycle.
+  - Its Fermat line is always the mirror image of the line of `F_m`.
+  - When `F_m` is prime, it is exactly the second half of the Pépin cycle, while the line of `F_m` covers the first
+    `2^(m-1)` points of the first half. Then kind-pasteur's Theorem L (`F_m` is prime iff `F_m` divides the landing
+    point `(3^M + 1)/2` of that line) is the cycle closing at 0.
+  - For composite `F_5`, `F_6` and `F_7` the two mirror lines lie on *different* cycles. `-1` is not a power of
+    `3/4`, since the 2-adic valuations of the orders over the two prime factors are `(7, 4)`, `(6, 8)` and `(9, 7)`.
+    So the landing divisibility fails.
 - **Adelic reading.** The multiplier `3/4` has `|3/4|_inf = 3/4`, `|3/4|_2 = 4` and `|3/4|_3 = 1/3` (product formula).
   - In the reals the line descends toward 1.
   - In `Z_2` it is repelled from 1. It starts `2^(-2^m)`-close to 1, so it escapes after `2^(m-1)` steps; that is the
@@ -163,12 +180,14 @@ klein's THM-4793 reads Pépin through the odd branch `x -> 3x+1` mod `F_m` and f
     Mersenne line.
   - Modulo a Mersenne prime, `B^((M_p - 1)/2)` is the reflection about `-1`. This follows from Euler's criterion,
     since `3/2` is a non-residue (`M_p = 7 (mod 24)`).
-  - The half-turn is necessary, not sufficient. `3/2` is a primitive root for 7 of the 11 Mersenne primes with
-    `p <= 127`, and `B` has 10, 4, 10 and 4 cycles at `p = 13, 31, 61, 127`.
+  - The half-turn amounts to `3^((M_p - 1)/2) = -1`. It is necessary and *not known to be sufficient*; no composite
+    `M_p` with `p < 1400` (207 cases) passes it.
+  - `3/2` is a primitive root for 7 of the 11 Mersenne primes with `3 <= p <= 127`, and `B` has 10, 4, 10 and 4 cycles
+    at `p = 13, 31, 61, 127`.
   - Lucas–Lehmer lives instead in the norm-one torus of order `M_p + 1 = 2^p`, the non-split twin of
     `F_(F_m)^*` (order `2^(2^m)`).
-  - So the Fermat line (valuation two, contraction `3/4`) sees a split 2-power torus, and only it gives a primality
-    test.
+  - So the Fermat line (valuation two, contraction `3/4`) sees a split 2-power torus, and only its half-turn is a
+    *proved* primality test.
 - **Squaring-Collatz** (KNOWN, Somer–Křížek 2004).
   - The squaring map on units mod `n` has no cycle except `{1}` iff `phi(n)` is a power of 2, i.e. iff the
     `n`-gon is constructible (their Thm 4.1, which they connect to Gauss).
@@ -181,8 +200,9 @@ klein's THM-4793 reads Pépin through the odd branch `x -> 3x+1` mod `F_m` and f
 
 The owner's list `3, 4, 5, 6, 8, 10, 12, 15, 16, 17, 20, 24, 30, 32, 34, ...` is the set of constructible orders
 (`phi(n)` a power of 2; OEIS A003401).
-- **Halving preserves constructibility; tripling-plus-one rarely does.** The odd constructible `n` with `3n + 1`
-  constructible are exactly `1, 3, 5, 85, 21845, 1431655765`, and their whole orbits stay constructible:
+- **Halving preserves constructibility; tripling-plus-one rarely does.** Below `2^(2^33)` (everywhere, if the five
+  are complete) the odd constructible `n` with `3n + 1` constructible are exactly `1, 3, 5, 85, 21845, 1431655765`,
+  and their whole orbits stay constructible:
   - `3 -> 10 -> 5 -> 16 -> ... -> 1`;
   - `t -> 2^(2^j) -> ... -> 1` for the trunk numbers.
 - **The trunk five** `1, 5, 85, 21845, 1431655765` are `F_1 ... F_(j-1)`. On them the Collatz step is Goldbach's
@@ -213,10 +233,18 @@ All came in low.
 - **Corrected z-scores:** -1.47, +0.51 and -1.33. The genuine Fermat lines are untouched: they have no such values,
   by the gcd argument.
 - **Out of sample** ([PREREGISTRATION-2.md](PREREGISTRATION-2.md)):
-  - L-P4, `m = 1201..1500`: 677 observed against 671.98 ± 25.61; pass (the uncorrected model gave 697.27);
-  - L-P5, `p = 401..520`: 323 against 324.06 ± 17.55; pass (the uncorrected model gave 348.07).
-- **Reading.** The model that says "no sixth Fermat prime" needs an algebraic correction only on numbers that have
-  algebraic factorisations, and Fermat numbers have none.
+  - L-P4, `m = 1201..1500`: 677 observed against 671.98 ± 25.61; pass (the uncorrected model gave 697.27,
+    z = -0.78);
+  - L-P5, `p = 401..520`: 323 against 324.06 ± 17.55; pass (the uncorrected model gave 348.07, z = -1.38).
+
+  Both models pass these tests, so they are consistent with the correction rather than a discrimination of it.
+- **Caveats.**
+  - Expectations used `bit_length * ln 2` for `ln x`, biased low by 0.2–0.3%. With exact logs L-P1 has z = -3.30
+    uncorrected and -1.56 corrected.
+  - L-P3 overlaps L-P1.
+- **Reading.** The sieve-plus-Mertens model needs an algebraic correction only on numbers that have algebraic
+  factorisations, and Fermat numbers have none. This tests the model class, not Boklan–Conway's sharper value
+  (section 1.6).
 - **Exact by-product.** No point of a genuine Fermat line, nor `F_e` itself, is divisible by 7. The reason:
   `3/4 = -1 (mod 7)`.
 
@@ -236,8 +264,9 @@ This session adds the following readings of the owner's sets.
     Fermat prime. **Shared 2-power indexing; no mechanism ties division-algebra properties to primality.**
 - **`{0, 1, 2, 3, 4}`:**
   - `Z/5`, the discrete logarithm of `<2> = {1, 2, 4, 8, 16}` in `F_31^*` (klein);
-  - the five squaring steps `2 -> 4 -> 16 -> 256 -> 65536 = -1` of 2 modulo the largest Fermat prime, which list
-    `F_0 - 1, ..., F_4 - 1`. The depth of 2 in the squaring tree mod `F_m` is `m + 1`, so it is 5 at `F_4`.
+  - the squaring chain `2 -> 4 -> 16 -> 256 -> 65536 = -1 -> 1` of 2 modulo the largest Fermat prime. Its first five
+    terms list `F_0 - 1, ..., F_4 - 1`, and it takes five squarings to reach 1. The depth of 2 in the squaring tree
+    mod `F_m` is `m + 1`, so it is 5 at `F_4`.
 
 **New fives from Collatz:**
 - the trunk five `{1, 5, 85, 21845, 1431655765}`, unconditional;

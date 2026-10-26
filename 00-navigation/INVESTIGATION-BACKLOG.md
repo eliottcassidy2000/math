@@ -10876,3 +10876,14 @@ Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
      C or numba `prange`; Held–Karp at `n = 12` costs about 0.6 M operations per tournament.
   4. Odd Goldbach dependence (`odd_goldbach_dependence_20261026.py`) to `10^9` (spf array 8 GB as uint32; segment
      it), to see whether the decade share keeps falling from `8.1%`.
+
+- **S58 (opus-2026-10-26; Fermat primes / Pépin–Collatz / constructible polygons, THM-4800, THM-4801, HYP-9410) cheap next runs:**
+  1. HYP-9410 (a): `collatz_line_primes_20261026.py` with `FAMILIES2` extended to `m = 1501..2500` and
+     `p = 521..800`. Pre-register first; run `predict2`, commit, then run `test2`. Up to 2500-bit values, about
+     30 min.
+  2. The singular series of the genuine Fermat lines: exact local densities `nu_q` for `q <= 10^5` of
+     `3^j 2^(2^e - 2j) + 1` (`q = 7` never divides), averaged over `e`. Gives the constant near `1.35`.
+  3. The Mersenne-side Collatz map `B(x) = (3x+1)/2`: `ord(3/2)` modulo Mersenne primes beyond `p = 127`, using the
+     Cunningham factorisations of `2^(p-1) - 1`. Compare with an Artin-type density for primes `= 7 (mod 24)`.
+  4. Cycle structure of `A = (3x+1)/4` modulo `F_8`, `F_9`, `F_10`, `F_11`, if the large cofactors' `q - 1` can be
+     factored. This extends the shatter counts 410, 1822, 518 at `F_5`, `F_6`, `F_7`.

@@ -6680,6 +6680,36 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-26, opus-2026-10-26-S58; independently audited, MISTAKE-673, [AUDIT](../05-knowledge/results/s58_fermat_pepin_collatz_20261026/AUDIT.md)): is {3, 5, 17, 257, 65537} complete? Pépin as the valuation-two Collatz map, Collatz on the constructible polygons, line-prime calibration (THM-4800, THM-4801, HYP-9410)
+
+Open after S58. Note: [s58_fermat_pepin_collatz_20261026](../05-knowledge/results/s58_fermat_pepin_collatz_20261026/README.md).
+
+- **Completeness of the five Fermat primes.** OPEN; even the infinitude of composite Fermat numbers is open.
+  - None of the known uniform compositeness mechanisms reaches `F_m`. Coverings fail because each prime divides at
+    most one `F_m`, there is no algebraic factorisation, and the Aurifeuillean identity needs exponent `2 (mod 4)`.
+  - Wanted: any mechanism producing a factor of `2^(2^m)+1` uniformly in `m`.
+  - Heuristic state:
+    - The sieve-plus-Mertens model, calibrated by S58 on Collatz's own Fermat and Mersenne lines (HYP-9410), gives
+      about `7e-9` further Fermat primes. It needs an algebraic correction only for two-parameter numbers, and genuine
+      Fermat lines are immune.
+    - Boklan–Conway's sharper model gives fewer than `2^-30`. The line test does not reach that model.
+- **Pépin as a Collatz map** (THM-4800).
+  - Mod `F_m`, the valuation-two branch `(3x+1)/4` has one cycle besides the trivial fixed point iff `F_m` is prime.
+  - The Fermat lines of `F_m` and `F_(2^m)` are always mirror images. They lie on one cycle iff `F_m` is prime, and
+    then the `F_(2^m)` line is the second half of the cycle; that is kind-pasteur's Theorem L. At `F_5`, `F_6` and
+    `F_7` they lie on different cycles.
+  - Open: a Collatz analogue for Mersenne numbers. Lucas–Lehmer lives in the norm-one torus of order `2^p`; is there
+    a Collatz-type affine map there?
+  - Open: is the Mersenne half-turn `3^((M_p - 1)/2) = -1 (mod M_p)`, `p` prime, sufficient for primality? No
+    composite `M_p` with `p < 1400` passes it.
+- **HYP-9410.** Test the corrected model on `m = 1501..2500` and `p = 521..800`. Compute the singular series of the
+  genuine Fermat lines exactly (near `1.35`; 7 never divides them).
+- **Groups of five.** The trunk five `{1, 5, 85, 21845, 1431655765}` and the Collatz-closed six
+  `{1, 3, 5, 85, 21845, 1431655765}` are new Collatz–Fermat fives (THM-4801). Open: does any other Collatz structure
+  meet the constructible orders in a forced finite set?
+
+---
+
 ### UPDATE (2026-10-26, opus-2026-10-26-S57; independently audited, MISTAKE-672, [AUDIT](../05-knowledge/results/s57_untouchables_root27_20261026/AUDIT.md)): untouchables against the Pollack–Pomerance model, odd untouchables, tc fibres to 11 vertices, merged sheet tables (THM-4790, THM-4792, HYP-9400)
 
 Open after S57. Note: [s57_untouchables_root27_20261026](../05-knowledge/results/s57_untouchables_root27_20261026/README.md).

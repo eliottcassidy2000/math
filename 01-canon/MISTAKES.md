@@ -20468,3 +20468,64 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     divisibility of `a^k + b^k` see Moree 1997.
   - Read the *next* section of a cited paper: PP sec. 3.2 answered the framing question.
   - Brute-force the smallest cases of every "only" statement.
+
+## MISTAKE-673 (2026-10-26, opus-2026-10-26-S58, THM-4800 / THM-4801 / HYP-9410 and the note `05-knowledge/results/s58_fermat_pepin_collatz_20261026/README.md` (pre-audit commits d738adf08e and b4234f728c); found by the independent audit `05-knowledge/results/s58_fermat_pepin_collatz_20261026/AUDIT.md`) -- a dynamical claim "checked" by an identity that holds for every modulus, a tested heuristic model conflated with the models behind the cited figures, and an open hypothesis used in a proof
+
+- **Claims.**
+  - THM-4800 (6), title and README sec. 2: the Fermat lines of `F_n` and `F_(2^n)` (`F_(2^n) = 2 (mod F_n)`) are
+    "antipodal arcs of the same `A`-cycle" mod `F_n`, with no primality condition. Also: "the two Fermat lines are the
+    two halves of Pépin's cycle". Also: "checked for `n = 1..5`: antipodal in every case".
+  - HYP-9410 and README sec. 1.6: the random model behind "fewer than `10^-9`" (`2/ln F_n`, `6.7e-10`) and
+    Boklan–Conway's `2^-30` is "validated" on Collatz's own lines, by "2 of 2 out-of-sample tests of the correction".
+  - THM-4801 (1): the product `F_1 ... F_(j-1)` "is squarefree", used to decide constructibility.
+  - THM-4801 (2): Zsigmondy for `2^(2k) - 1`, with its exception unexamined.
+  - THM-4800 (5): the Mersenne half-turn is "necessary, not sufficient".
+- **First failed implications.**
+  - **Mirror is not same-cycle.** The script's `antipodal_arcs` tested `x0 + x2 = 2 (mod F_n)` along the orbits. That
+    follows from `A(2 - x) = 2 - A(x)` for every modulus, so it tests nothing about cycles.
+    - The lines start at `y = -1` and `y = +1` (`y = x - 1`). They share a cycle iff `-1` is a power of `3/4` mod
+      `F_n`, which needs equal `v_2(ord_q(3/4))` over the prime factors.
+    - Those valuations are `(7, 4)`, `(6, 8)` and `(9, 7)` at `F_5`, `F_6` and `F_7`, so there the lines lie on
+      different cycles.
+    - Even for prime `F_n` only the `F_(2^n)` line is a half; the `F_n` line is `2^(n-1)` of the `2^(2^n - 1)` points
+      of the other half.
+  - **Model conflation.** The tested model is an exact sieve to `2^16` followed by `prod (1 - 1/q)^-1 / ln x`.
+    - Applied to `F_m`, which survive the sieve for `m >= 14`, it gives `6.6e-9`, or `1.5e-8` with the Euler–Lucas
+      bound `2^(m+2)`. That is above "fewer than `10^-9`".
+    - Boklan–Conway call this estimate "simple (but loose)". Their `4/2^n` rests on the `2^(n+2)`-full restriction on
+      the factors of `F_n`, which line values do not have.
+    - The uncorrected model also passes both out-of-sample tests (z = -0.78, -1.38; likelihood ratio about 3.4). The
+      tests are consistent with the correction but do not discriminate.
+  - **Open hypothesis in a proof.** Whether Fermat numbers are squarefree is open beyond `F_11`. Pairwise coprimality
+    suffices: a composite `F_i` has no Fermat-prime factor.
+  - **Unexamined exception.** Zsigmondy fails at `2^6 - 1`, the case `k = 3`. The conclusion survives because
+    `2^3 + 1 = 9 = 3^2`. In (1) Zsigmondy is unnecessary: the order argument for `2^r - 1`, `r` prime, suffices.
+  - **Overclaim.** The Mersenne half-turn is `3^((M_p - 1)/2) = -1`. Its sufficiency is unknown, not refuted. No
+    composite `M_p` with `p < 1400` (207 cases) passes.
+  - **Minor slips.**
+    - "3–6%" should be 3.2–6.9% of E.
+    - `bit_length * ln 2` stood in for `ln x` (E low by 0.2–0.3%; L-P1 exact-log z = -3.30 / -1.56).
+    - The "below `2^(2^33)`" scope was dropped in README sec. 3.
+    - "Only three uniform mechanisms" overlooked Cullen's `p | C_(p-1)` and Hooley-type averaging.
+    - L-P3 is not independent of L-P1.
+    - The squaring chain shown had four squarings, not five.
+    - "11 Mersenne primes with `p <= 127`" should read `3 <= p <= 127`.
+- **Strongest survivor.**
+  - THM-4800 (1)–(5): Pépin as the valuation-two branch `(3x+1)/4`, with two cycles iff prime and the half-turn about
+    the trivial cycle. Every number was recomputed: 410 / 1822 / 518 cycles; 8.587 / 10.807 / 9.000-bit deficits.
+  - (6) corrected: the mirror always; one cycle iff `F_n` is prime, and then the `F_(2^n)` line is the second half of
+    the Pépin cycle.
+  - THM-4801 in full: the trunk five, the initial-segment principle, the Collatz-closed six, all by the totient test.
+  - HYP-9410's five families replicated exactly. The algebraic criteria are complete (Capelli plus Sophie Germain).
+    The pre-registration order and the immunity proofs held.
+  - No prior art found (Lagarias bibliographies, Křížek–Luca–Somer, OEIS).
+- **Missing coordinates.**
+  - Before calling a dynamical property "checked", ask whether the check could fail. An identity that holds for every
+    modulus (a conjugating symmetry such as `x -> 2 - x`) cannot certify a same-cycle claim; test orbit membership
+    directly, or through orders.
+  - When a test calibrates a heuristic, name the exact model tested and recompute the cited headline figure *under
+    that model* before saying it is validated.
+  - Before an out-of-sample test, compute the competing model's z-scores too, and report the likelihood ratio.
+  - Grep every "is squarefree", "is prime" or "by Zsigmondy" step in a proof: is it open, and is its exception case
+    inside the range?
+  - "Not sufficient" needs a counterexample; otherwise write "not known to be sufficient".

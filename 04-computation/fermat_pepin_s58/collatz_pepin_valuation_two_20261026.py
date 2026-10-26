@@ -9,9 +9,12 @@ branch A(x) = (3x+1)/4, the Syracuse step on x = 1 (mod 8):
         through 0 = F_m; equivalently A^((F_m-1)/2) is the reflection x -> 2 - x (half-turn about the trivial cycle);
   (iv)  the integer Fermat line is the initial arc of that cycle (A^k(F_m) = A^k(0) mod F_m);
   (v)   reflection x -> 2 - x commutes with A; it sends F_m to 1 - 2^(2^m) and the run of 1 - 2^K mirrors the line.
+  (vi)  F_(2^n) = 2 (mod F_n): the lines of F_n and F_(2^n) are mirror images mod F_n for every n; they lie on one
+        A-cycle iff -1 is a power of 3/4 mod F_n (true for prime F_n, where the F_(2^n) line is the second half of the
+        Pepin cycle; false for F_5, F_6, F_7). Theorem L of kind-pasteur-S5 (F_n | 3^M + 1) is the half-turn.
 Mersenne counterpart: B(x) = (3x+1)/2 (valuation one) fixes -1 (the negative trivial cycle), the Mersenne line of
 M_p = 2^p - 1 (THM-4556) is the B-orbit of M_p, and mod a Mersenne prime B^((M_p-1)/2) is the reflection about -1
-(Euler's criterion, 3/2 a non-residue) -- necessary, not sufficient; the cycle type of B is computed.
+(Euler's criterion, 3/2 a non-residue) -- necessary, not known to be sufficient; the cycle type of B is computed.
 Usage: python collatz_pepin_valuation_two_20261026.py
 """
 import json, os, sys, math, time
@@ -139,22 +142,43 @@ if __name__ == '__main__':
         print(f'm={m}: F_m prime {prime}; half-period iterate of A is x -> 2-x: {half_is_reflection}; '
               f'{ {k: v for k, v in row.items() if k not in ("F_m_prime",)} }', flush=True)
     out['A_mod_F_m'] = res
-    # (vi) antipodal arcs: F_(2^n) = 4^M + 1 = 2 (mod F_n), its line is 2 - (line of F_n) mod F_n, and
-    #      kind-pasteur's Theorem L (F_n | 3^M + 1) is the half-turn
-    anti = {}
-    for n in range(1, 6):
+    # (vi) the two Fermat lines. F_(2^n) = 4^M + 1 = 2 (mod F_n), so its line is 2 - (line of F_n) mod F_n: the mirror,
+    #      which holds for every modulus and so says nothing about cycles. In y = x - 1 the lines start at y = -1 and
+    #      y = +1; they share an A-cycle iff -1 is a power of 3/4 mod F_n, i.e. (F_n squarefree here) iff every prime
+    #      factor q gives ord_q(3/4) the same 2-adic valuation >= 1. Theorem L (F_n | 3^M + 1) is A^M(0) = 2, the
+    #      half-turn. For n <= 5 the cycle through 0 is also walked in full as a direct check.
+    two_lines = {}
+    for n in range(1, 8):
         F = 2 ** (2 ** n) + 1
         M = (F - 1) // 2
         b2 = (pow(4, M, F) + 1) % F
         inv4 = pow(4, -1, F)
         a = 3 * inv4 % F
-        x0, x2, ok = 0, b2, True
+        x0, x2, mirror_ok = 0, b2, True
         for j in range(min(M, 4000)):
-            ok &= (x0 + x2) % F == 2
+            mirror_ok &= (x0 + x2) % F == 2
             x0, x2 = (a * x0 + inv4) % F, (a * x2 + inv4) % F
-        anti[n] = {'F_(2^n) mod F_n': b2, 'antipodal_arcs': ok, 'F_n | 3^M + 1': (pow(3, M, F) + 1) % F == 0}
-        print(f'antipodal n={n}: {anti[n]}', flush=True)
-    out['antipodal_arcs'] = anti
+        ords = [res[n]['ord_3/4']] if res[n]['F_m_prime'] else res[n]['factor_orders_of_3/4']
+        v2s = [(o & -o).bit_length() - 1 for o in ords]
+        same_cycle = min(v2s) >= 1 and len(set(v2s)) == 1
+        ha, hb = affine_power(a, inv4, M, F)
+        row = {'F_(2^n) mod F_n': b2, 'mirror_identity_steps_checked': min(M, 4000), 'mirror_ok': mirror_ok,
+               'v2_ord_q(3/4)_per_prime_factor': v2s, 'one_cycle_(-1_in_<3/4>)': same_cycle,
+               'A^M(0) == 2 (F_(2^n) line = second half)': hb == 2, 'F_n | 3^M + 1': (pow(3, M, F) + 1) % F == 0}
+        if n <= 5:                                     # direct walk of the cycle through 0 (length 2^23.4 at n = 5)
+            z, steps, pos2 = inv4, 1, None
+            while z:
+                if z == 2:
+                    pos2 = steps
+                z = (a * z + inv4) % F
+                steps += 1
+            row['walk_cycle_through_0_length'] = steps
+            row['walk_position_of_2'] = pos2
+            assert (pos2 is not None) == same_cycle and (pos2 == M) == (hb == 2)
+        assert mirror_ok and same_cycle == res[n]['F_m_prime'] == row['F_n | 3^M + 1']
+        two_lines[n] = row
+        print(f'two lines n={n}: {row}', flush=True)
+    out['two_fermat_lines_mirror_and_cycle'] = two_lines
     # Mersenne counterpart: B(x) = (3x+1)/2 mod M_p, fixed point -1
     mer = {}
     for p in [3, 5, 7, 13, 17, 19, 31, 61, 89, 107, 127]:

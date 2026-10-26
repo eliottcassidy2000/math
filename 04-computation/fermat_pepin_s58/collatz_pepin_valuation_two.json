@@ -73,30 +73,95 @@
    "pepin_deficit_log2": 9.0
   }
  },
- "antipodal_arcs": {
+ "two_fermat_lines_mirror_and_cycle": {
   "1": {
    "F_(2^n) mod F_n": 2,
-   "antipodal_arcs": true,
-   "F_n | 3^M + 1": true
+   "mirror_identity_steps_checked": 2,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    2
+   ],
+   "one_cycle_(-1_in_<3/4>)": true,
+   "A^M(0) == 2 (F_(2^n) line = second half)": true,
+   "F_n | 3^M + 1": true,
+   "walk_cycle_through_0_length": 4,
+   "walk_position_of_2": 2
   },
   "2": {
    "F_(2^n) mod F_n": 2,
-   "antipodal_arcs": true,
-   "F_n | 3^M + 1": true
+   "mirror_identity_steps_checked": 8,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    4
+   ],
+   "one_cycle_(-1_in_<3/4>)": true,
+   "A^M(0) == 2 (F_(2^n) line = second half)": true,
+   "F_n | 3^M + 1": true,
+   "walk_cycle_through_0_length": 16,
+   "walk_position_of_2": 8
   },
   "3": {
    "F_(2^n) mod F_n": 2,
-   "antipodal_arcs": true,
-   "F_n | 3^M + 1": true
+   "mirror_identity_steps_checked": 128,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    8
+   ],
+   "one_cycle_(-1_in_<3/4>)": true,
+   "A^M(0) == 2 (F_(2^n) line = second half)": true,
+   "F_n | 3^M + 1": true,
+   "walk_cycle_through_0_length": 256,
+   "walk_position_of_2": 128
   },
   "4": {
    "F_(2^n) mod F_n": 2,
-   "antipodal_arcs": true,
-   "F_n | 3^M + 1": true
+   "mirror_identity_steps_checked": 4000,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    16
+   ],
+   "one_cycle_(-1_in_<3/4>)": true,
+   "A^M(0) == 2 (F_(2^n) line = second half)": true,
+   "F_n | 3^M + 1": true,
+   "walk_cycle_through_0_length": 65536,
+   "walk_position_of_2": 32768
   },
   "5": {
    "F_(2^n) mod F_n": 2,
-   "antipodal_arcs": true,
+   "mirror_identity_steps_checked": 4000,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    7,
+    4
+   ],
+   "one_cycle_(-1_in_<3/4>)": false,
+   "A^M(0) == 2 (F_(2^n) line = second half)": false,
+   "F_n | 3^M + 1": false,
+   "walk_cycle_through_0_length": 11167360,
+   "walk_position_of_2": null
+  },
+  "6": {
+   "F_(2^n) mod F_n": 2,
+   "mirror_identity_steps_checked": 4000,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    6,
+    8
+   ],
+   "one_cycle_(-1_in_<3/4>)": false,
+   "A^M(0) == 2 (F_(2^n) line = second half)": false,
+   "F_n | 3^M + 1": false
+  },
+  "7": {
+   "F_(2^n) mod F_n": 2,
+   "mirror_identity_steps_checked": 4000,
+   "mirror_ok": true,
+   "v2_ord_q(3/4)_per_prime_factor": [
+    9,
+    7
+   ],
+   "one_cycle_(-1_in_<3/4>)": false,
+   "A^M(0) == 2 (F_(2^n) line = second half)": false,
    "F_n | 3^M + 1": false
   }
  },
