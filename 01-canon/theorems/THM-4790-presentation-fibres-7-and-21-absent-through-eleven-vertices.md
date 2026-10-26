@@ -1,13 +1,22 @@
 ---
 id: THM-4790
-title: "Presentation-count fibres 7 and 21 are absent for every tournament on at most 11 vertices. (a) Reduction, all n: a tournament with tc = H/|Aut| in {7, 21} has a strong component S with tc(S) in {7, 21}, and then |Aut(S)| >= max(3, f(m)/21), where f(m) is the minimum number of Hamiltonian paths of a strong m-tournament (Moon 1972, Busch 2006). (b) Automorphism-type lemma, n <= 11: an odd-order subgroup of S_n of order at least L_n (L_7 = L_8 = 3, L_9 = 5, L_10 = 7, L_11 = 11) contains an element of one of the listed cycle types. (c) Every tournament on n <= 6 vertices, and every tournament on 7 <= n <= 11 vertices invariant under a representative of each listed type, was checked: none has tc in {7, 21}. Hence HYP-9352 (2) holds through n = 11 (the THM-4741 census had n <= 9). In the graph chart, tc(T) is the number of labelled graphs G on [n-1] whose path tournament T_G is isomorphic to T, so the path-presentation map from graphs on [n-1] to tournament classes has no fibre of size 7 or 21 for n <= 11."
+title: "Presentation-count fibres 7 and 21 are absent for every tournament on at most 11 vertices. (a) Reduction, all n: a tournament with tc = H/|Aut| in {7, 21} has a strong component S with tc(S) in {7, 21}, and then |Aut(S)| >= max(3, f(m)/21), where f(m) is the minimum number of Hamiltonian paths of a strong m-tournament (Moon 1972, Busch 2006). (b) Automorphism-type lemma, n <= 11: an odd-order subgroup of S_n of order at least L_n (L_7 = L_8 = 3, L_9 = 5, L_10 = 7, L_11 = 11) contains an element of one of the listed cycle types. (c) Every tournament on n <= 6 vertices, and every strong tournament on 7 <= n <= 11 vertices invariant under a representative of each listed type, was checked (non-strong ones follow from (a)): none has tc in {7, 21}. Hence HYP-9352 (2) holds through n = 11 (the THM-4741 census had n <= 9). In the graph chart, tc(T) is the number of labelled graphs G on [n-1] whose path tournament T_G is isomorphic to T, so the path-presentation map from graphs on [n-1] to tournament classes has no fibre of size 7 or 21 for n <= 11."
 status: >
   PROVED: (a) from THM-2450 sec. 2 (stack multiplicativity), LEM-003 (Aut acts freely on Hamiltonian paths, so tc is an
   odd integer) and the strong minimum f(m) (KNOWN, Moon 1972; Busch 2006; written out in THM-4744); (b) Cauchy, the
-  structure of groups of order 9 and 25, the Sylow 3-subgroup of S_11, and Jordan's theorem (proof below).
+  structure of groups of order 9 and 25, the Sylow 3-subgroup of S_11, Sylow's counting theorem and Jordan's theorem
+  (proof below).
   FINITE-EXACT: (c), tc_fibres_upto11_20261026.py (numba; self-tests against C3, T5, P7 and brute force on 60 random
   tournaments; Moon/Busch minimum reproduced exhaustively for n <= 6; 256 s).
-  CITED: THM-1370 (the same reduction for H, with the insertion lemma; H never 7 or 21 for any n).
+  INDEPENDENTLY AUDITED (05-knowledge/results/s57_untouchables_root27_20261026/AUDIT.md, MISTAKE-672; no error):
+  - every case of (b) re-checked, including the full subgroup lattice of Z_3 wr Z_3;
+  - an independent re-implementation (different conjugates, pull Held-Karp, refined-invariant automorphism counter,
+    no candidate filter) reproduced every count in (c), and the two codes agree on 25,674 strong invariant
+    tournaments with nontrivial Aut;
+  - runs bypassing (b) found no hit: n = 9 type (3) (2^22), and n = 11 types (5) (2^23) and (3)(3) (2^25). So
+    n <= 11 also holds using only Cauchy and the order-9 argument.
+  CITED: THM-1370 (the same reduction for H, with the insertion lemma; H never 7 or 21 for any n), MathOverflow
+  232751 and Grinberg's notes (the H version).
   OPEN: n >= 12 (the 3-group case needs the type (3)(3)(3) on 12 points, 2^24 invariant tournaments); HYP-9352 (2) in general.
 session: opus-2026-10-26-S57
 source: 05-knowledge/results/s57_untouchables_root27_20261026/README.md

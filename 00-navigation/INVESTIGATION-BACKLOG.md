@@ -10862,3 +10862,17 @@ Surfaced by the citation-graph tool (corpus_archaeology_kps_S128c136.py); see
   4. Port the three-point accelerator (`rs_accel_20261025.py`) to the other bbchallenge holdouts with published
      accelerations (Space Needle family, Lucy's Moonlight) and to base-p Collatz C_p (THM-4610), looking for
      certified infinite macro chains (translations in parameter space).
+
+- **S57 (opus-2026-10-26; untouchables / tc fibres / sheets, THM-4790, THM-4792, HYP-9400) cheap next runs:**
+  1. Untouchable census to `2^36`-`2^40` with residue (mod 3..13) and abundancy-bin tallies.
+     - `untouchable_sieve_20261026.py` needs `N/2` bytes, so `2^36` needs 34 GB. A 2-bit packing as in CGJM halves
+       that, and a segmented target window avoids it.
+     - Tests HYP-9400 (4a, b, d).
+  2. Core decomposition (`core_decomposition_20261026.py`) at `10^9` and `10^10`, split by core size relative to `k`
+     (`a <= k^(1/3)`, `k^(1/3) < a <= k^(1/2)`, `a > k^(1/2)`). This separates the small-core `1/log k` part of the
+     residue spreads from the thin-core `(log k)^(-1/(l-1))` part.
+  3. HYP-9352 (2) at `n = 12`: enumerate the subgroups of order 27 of the Sylow 3-subgroup of `S_12` up to
+     conjugacy, then their invariant tournaments, plus the element types listed in the S57 OPEN-QUESTIONS update. Use
+     C or numba `prange`; Held–Karp at `n = 12` costs about 0.6 M operations per tournament.
+  4. Odd Goldbach dependence (`odd_goldbach_dependence_20261026.py`) to `10^9` (spf array 8 GB as uint32; segment
+     it), to see whether the decade share keeps falling from `8.1%`.

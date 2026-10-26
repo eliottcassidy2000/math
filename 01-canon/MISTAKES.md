@@ -20396,3 +20396,45 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before quoting an error bound for a fitted projection, compute the coefficient standard errors.
   - Search Frechette-Ono-Papanikolas / Ahlgren / Ahlgren-Ono before filing any Legendre-moment identity.
   - Freeze the data file before computing statistics that a running job is still extending.
+
+## MISTAKE-672 (2026-10-26, opus-2026-10-26-S57, THM-4790 / THM-4792 / HYP-9400 and the note `05-knowledge/results/s57_untouchables_root27_20261026/README.md` (pre-audit commit c13c51552a); found partly by the session and partly by the independent audit `05-knowledge/results/s57_untouchables_root27_20261026/AUDIT.md`) -- a sufficient proxy tested in place of an assumption, asymptotic exponents attached to pre-asymptotic data, and two classical results presented as new
+
+- **Claims.**
+  - Note sec. 2.4 and the HYP-9400 title: PP's key assumption ("s maps T_a to T_a") "fails at the prime 5 for half of
+    all inputs, and at 13 for four fifths". For the failure at 13 to fall below 10%, `log X` must exceed about `10^12`.
+  - HYP-9400 (4)(a): the nonzero-residue spreads "decrease monotonically" and tend to 1 "only like
+    `(log k)^(-1/(l-1))`", so the mod-13 spread "stays above 1.10 for `k < 10^30`".
+  - THM-4792 (c): the classification of moduli with `-1` in `<2>` was "the open exercise of kind-pasteur Theorem A,
+    proved here".
+  - The kill/serve rule was "PROVED, elementary", with no mention that it is classical.
+  - Note sec. 3: "only 9, 11 and 39 have exactly one source of any kind below `10^8`".
+- **First failed implications.**
+  - **Proxy for the assumption.** `l` dividing `sigma(m)` is sufficient for `s(n)` to stay in `T_a`, not necessary.
+    For `l` not dividing `n`, the class changes only when `sigma(n) = n (mod l)`, about a `1/(l-1)` fraction of the
+    proxy set. The literal per-prime failure is `0.24` at `l = 5` and `0.12` at `l = 13`. The joint failure over all
+    `l <= y` is `62%` (`y = 13`) and `82%` (`y = 53`). The proxy measures a different departure, residue neutrality.
+  - **Exponents not fitted.** `(spread - 1)` over `W_24..W_33` decays like `(log k)^(-0.71..-1.09)`. The thin-core
+    exponent `-1/(l-1)` came from a heuristic and was never fitted. Mod 3 is not even monotone: it bottoms at `W_18`,
+    where the argmax flips.
+  - **Classical results.** Moree, Acta Arith. 80 (1997), Thm. 1, is exactly the classification (OEIS A014657). The
+    residue exclusion is PP 2016 sec. 2 and Pomerance–Yang 2014 Prop. 2.3. PP sec. 3.2 already says their printed
+    numbers are intermediate values and that `Delta` is computable.
+  - **Small cases.** `3 = s(4)` and `7 = s(8)` also have exactly one source. The complete list is `3, 7, 9, 11, 39`.
+    Found by the session.
+  - **Session-caught before any claim.** The non-semiprime source enumerator broke its prime loop at the first
+    `k > N`. That is wrong at `p = spf(m)`: `n = 7^2 * 229 -> 1889`. Brute force to 6000 caught it.
+- **Strongest survivor.**
+  - `Delta = 0.17865689`. It was confirmed by the audit's deterministic convolution (`0.17865689139`). It reproduces
+    every printed partial sum of PP and CGJM to 6 digits, and it is not stated in the literature searched.
+  - The exact census to `10^10`, and all 13 pre-registered checks, reproduced by the audit at `2^33`.
+  - The nonzero-residue structure and the kill/serve decomposition (no violation in `[1e5, 1e6]`).
+  - THM-4790 with no error, independently re-implemented. Lemma-free runs at `n = 9, 11` found no hit.
+  - THM-4792 (a), (b) and the reproduced (c).
+- **Missing coordinates.**
+  - When testing a model's assumption, compute the assumption itself (here `gcd(s(n), A_y)` against `gcd(n, A_y)`),
+    not a condition that implies it.
+  - Before attaching an asymptotic exponent to a drift, fit the exponent over the available windows and report it.
+  - Search OEIS for every "classification" of integers by a residue property, even an exercise-level one; for
+    divisibility of `a^k + b^k` see Moree 1997.
+  - Read the *next* section of a cited paper: PP sec. 3.2 answered the framing question.
+  - Brute-force the smallest cases of every "only" statement.

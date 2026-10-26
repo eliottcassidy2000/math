@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Merged sheet statement: centre of the odd multiplication table, reflection centres of the one-step maps, the
 unit-shift conjugacy of the root-27 section change, and the classification of the halving-shift alternation
-(opus-2026-10-26-S57; completes the exercise left open in kind-pasteur-2026-10-25-S4 Theorem A).
+(opus-2026-10-26-S57). The classification answering the exercise in kind-pasteur-2026-10-25-S4 Theorem A is
+KNOWN: Moree, Acta Arith. 80 (1997), Thm. 1 (OEIS A014657); these are controls only.
 
 Checks:
  (R) floor(3x/2) commutes with x -> 1 - x, ceil(3x/2) with x -> -1 - x; negation swaps floor and ceil; the unit
-     translation conjugates floor(3x/2) into ceil(3z/2) (z = x - 1) but not the full-halving Syracuse maps.
+     translation conjugates floor(3x/2) into ceil(3z/2) (z = x - 1); it changes parity, so it cannot conjugate the
+     odd-section Syracuse maps (no check needed).
  (C) for odd m = 2k+1: k = -1/2, k+1 = 1/2 (mod m) are the centre labels, k^2 = (k+1)^2 = 1/4, k(k+1) = -1/4
      (2026-10-05 Prop. 1), and 3(1/4) - 1 = -1/4, 3(-1/4) + 1 = 1/4.
  (K) -1 in <2> mod m  <=>  every prime p | m has ord_p(2) even with the same 2-adic valuation  <=>  the two centre
@@ -75,9 +77,9 @@ if __name__ == '__main__':
     assert all(ce(-1 - x) == -1 - ce(x) for x in X)
     assert all(-fl(-x) == ce(x) for x in X)
     assert all(ce(x - 1) == fl(x) - 1 for x in X)          # T_+(z) = T_-(z + 1) - 1 with z = x - 1
-    bad = [x for x in range(1, 2001, 2) if syr(x - 1, 1) != syr(x, -1) - 1 and x - 1 != 0]
-    res['R'] = {'reflection_and_shift_identities_checked_on': '|x| <= 1e5',
-                'syracuse_not_conjugated_by_unit_shift_counterexamples_below_2000': len(bad), 'first': bad[:5]}
+    # (The unit shift changes parity, so it cannot conjugate the odd-section Syracuse maps; the pre-audit version
+    #  counted "counterexamples" to that, a vacuous check removed after the audit.)
+    res['R'] = {'reflection_and_shift_identities_checked_on': '|x| <= 1e5'}
     # (C) and (K)
     rows = []
     mism = 0

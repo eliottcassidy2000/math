@@ -6680,6 +6680,36 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-10-26, opus-2026-10-26-S57; independently audited, MISTAKE-672, [AUDIT](../05-knowledge/results/s57_untouchables_root27_20261026/AUDIT.md)): untouchables against the Pollack–Pomerance model, odd untouchables, tc fibres to 11 vertices, merged sheet tables (THM-4790, THM-4792, HYP-9400)
+
+Open after S57. Note: [s57_untouchables_root27_20261026](../05-knowledge/results/s57_untouchables_root27_20261026/README.md).
+
+- **Untouchable density (HYP-9400).**
+  - PP's model constant evaluates to `Delta = 0.17865689`. The quoted `0.17` / `0.171822` are intermediate values,
+    with `S(y)/log y = Delta - 0.1621075/log y`.
+  - The data reach `0.1713` at `10^12`, rising.
+  - Does the density exist and equal `Delta`? At computable sizes the model's class assumption
+    `gcd(s(n), A_y) = gcd(n, A_y)` fails jointly for 62% (`y = 13`) to 82% (`y = 53`) of inputs. Its residue
+    neutrality fails at each prime `l` for a share `~(log X)^(-1/(l-1))`.
+  - Wanted: a target-side heuristic built on the classical kill/serve rule `s(aP) = s(a)P + sigma(a)`, keeping core
+    residues. It should predict the nonzero-residue share spreads (`1.45 / 1.29 / 1.28 / 1.20` mod 5/7/11/13 at
+    `2^33`, decaying like `(log k)^(-0.75)`).
+  - Unexplained: the flat deficient-end share (`0.22` for `k/s(k) >= 1.4`, against PP's `e^(-x)`).
+  - Cheapest decisive data: a `2^40` census with residue and abundancy tallies (HYP-9400 (4)).
+- **Odd untouchables.**
+  - The Goldbach-dependent share of odd touchables (only semiprime sources) is `11.25% -> 9.26% -> 8.24%` at
+    `10^6 -> 10^8`. Is its limit zero or positive?
+  - Below `10^8` the odd numbers with exactly one source are `3, 7, 9, 11, 39`.
+  - No covering argument replaces Goldbach.
+- **HYP-9352 (2) beyond `n = 11`.** At `n = 12` the 3-group case needs tournaments invariant under a subgroup of order
+  27 of `(Z_3 wr Z_3) x Z_3`, or the element types `(3)(3)(3)+3` (`2^24`) and `(3)(3)(3)(3)` (`2^22`). The 5-, 7- and
+  11-cases reduce to the element types `(5)(5)`, `(5)(3)`, `(5)(3)(3)`, `(7)` and `(11)`, by the Sylow/Jordan argument
+  of THM-4790.
+- **Sheet tables.** THM-4792 (c) is Moree's theorem (1997). Open: is there an analogue of the stitched centre for even
+  moduli `2k`, `k` odd, where `4` is not invertible (2026-10-05 note)?
+
+---
+
 ### UPDATE (2026-10-25, opus-2026-10-25-S56; independently audited, MISTAKE-669, [AUDIT](../05-knowledge/results/bb6_cryptids_odd_orbits_20261025/AUDIT.md)): the eleven DeepMind BB(6) Cryptids through odd orbits (THM-4770, THM-4771, HYP-9380, HYP-9381)
 
 Open after S56. Note: [bb6_cryptids_odd_orbits_20261025](../05-knowledge/results/bb6_cryptids_odd_orbits_20261025/README.md).
