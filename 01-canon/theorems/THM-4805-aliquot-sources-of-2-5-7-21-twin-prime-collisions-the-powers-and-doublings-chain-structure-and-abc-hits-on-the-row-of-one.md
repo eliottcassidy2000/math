@@ -26,7 +26,9 @@ status: >
   ANALOGY (not a theorem): the crevasse dictionary between untouchables and forbidden path counts.
   NUMEROLOGY: 7 = 2 + 5, 21 = 4 x 5 + 1, 63 = 7 x 9 = 21 x 3.
   AUDITED: PASS WITH CORRECTIONS (independent recomputation of every number, pre-registration checked against the
-  commit history; two typing majors M1/M2 and fifteen minors applied; report beside the note).
+  commit history; two typing majors M1/M2 and fifteen minors applied; report beside the note). A bounded domain/quantifier
+  repair by the twin-pythagorean lane (twin_pythagorean_124_20261026/INCOMING_S60.md, against 54617edb71) found four of
+  the minors independently; the versions were merged keeping the audited text and that lane's proof of C' (5).
   OPEN: HYP-9415.
 session: opus-2026-10-26-S60
 source: 05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md
@@ -68,11 +70,11 @@ related:
 
 Rows `D(n) = {2^j n : j >= 0}`, columns `P(n) = {n^k : k >= 1}` (so `P(1) = {1}`); `n = 2^a r`, `r` odd. (1) `n` is old iff even or a perfect power; the rays of an odd non-perfect-power meet no ray of a smaller number. (2) `n^2` lies on `D(r^2)`, already occurs iff `r^2 < n` or `n` is a perfect power, and is a later doubling iff `a >= 1`, `r > 2^a` (session69's predicate; first instance 6). (3) `(2^a r)^k = 2^(ak) r^k`: the column of an even number is its odd part's column shifted along the rows. (4) The row of an odd `n` meets an earlier column iff `n` is a perfect power. (5) `D(2) = P(2)`, the row of 1 without its root, is the only row that is a column; the segment `1, 2, 4` of the row of 1 is the 1-2-4 decomposition of `7 = s(8)`.
 
-*Proof.* Unique factorisation, as in session69's row-intersection law and aliquot124's P1-P2; (4): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`. (5) If `D(n)=P(m)`, then `m>=2`, since `P(1)` is finite. Comparing least elements gives `n=m`, and comparing second elements gives `2n=m^2`, hence `m=n=2`. Conversely `D(2)=P(2)`, and adjoining1 gives `D(1)`. QED
+*Proof.* Unique factorisation, as in session69's row-intersection law and aliquot124's P1-P2; (4): `2^j n = m^k` with `n` odd forces `n` to be a `k`-th power, and `n = b^k` gives `(2b)^k`. (5) If `D(n)=P(m)`, then `m>=2`, since `P(1)` is finite. Comparing least elements gives `n=m`, and comparing second elements gives `2n=m^2`, hence `m=n=2`. Conversely `D(2)=P(2)`, and adjoining 1 gives `D(1)` (argument of the twin-pythagorean lane's bounded review, merged). QED
 
 ## Theorem D' (abc on the row of 1; (ii) is classical)
 
-(i) `(1, s(n), n)` is a pairwise coprime additive triple iff `sigma(n) = 2n - 1`. (ii) (CLASSICAL, the textbook family `1 + (2^(6n) - 1) = 2^(6n)`.) `(1, 2^k - 1, 2^k)` has `rad(abc) < c` iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p`; for `k <= 64` exactly `k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63`. (iii) 121 abc hits with `c <= 10^4` (94 with an odd perfect power, 48 with a power-of-two even term, 30 with `a = 1`), 419 with `c <= 10^5` (323, 119, 63); with `c < 10^n` the counts are 120 and 418 (A216370).
+(i) For `n >= 2`, `(1, s(n), n)` is a positive pairwise coprime additive triple iff `sigma(n) = 2n - 1` (`n = 1` gives `(1, 0, 1)`). (ii) (CLASSICAL, the textbook family `1 + (2^(6n) - 1) = 2^(6n)`.) `(1, 2^k - 1, 2^k)` has `rad(abc) < c` iff `2^k - 1` is not squarefree, iff `ord_(p^2)(2) | k` for some odd prime `p`; for `k <= 64` exactly `k = 6, 12, 18, 20, 21, 24, 30, 36, 40, 42, 48, 54, 60, 63`. (iii) 121 abc hits with `c <= 10^4` (94 with an odd perfect power, 48 with a power-of-two even term, 30 with `a = 1`), 419 with `c <= 10^5` (323, 119, 63); with `c < 10^n` the counts are 120 and 418 (A216370).
 
 *Proof.* (ii) If `2^k - 1` is squarefree, `rad = 2(2^k - 1) >= 2^k`; otherwise `rad(2^k - 1) <= (2^k - 1)/3`. QED
 
