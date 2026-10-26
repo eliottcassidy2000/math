@@ -1,6 +1,6 @@
 ---
 id: THM-4771
-title: "Odd-orbit and countdown forms of BB(6) Cryptids. (a) Antihydra: the odd first-return map is the twisted Syracuse map y -> 3^(v-1)(3y+1)/2^v on y = -o < 0 (v = v_2(3y+1)), and the machine halts iff 6 + sum_{l<i}(2v_l - 3) = 0 for some i along the odd orbit of 27; equivalently 6 + sum (2 v_3(o_l) - 1) reaches 0 (independently, and more fully, klein's ANTIHYDRA.md of 2026-10-25). (b) A4 (1RB0LF_1LC1RA_0RE0RD_---1LE_1LF1RC_1LC1LA): C(a,3) -> C(floor(3a/2)+2, 1 or 3 as a is even or odd), i.e. Antihydra's map floor(3n/2) at n = a+4, run while a is odd, inside a doubling cascade a_i = 2^(i+2) - 2; the machine halts iff some visit C(a,1) has a = 2^(m+2) - m - 4. (c) A11 (1RB1LA_1LC0RE_1LF1LD_1RE0LC_1LB1RA_---0LA): the orbit is a chain of countdowns; one countdown iterates the Hydra-type map (a0, b) -> ((a0+b) mod 2, 3 + 3 floor((a0+b+4)/2)) exactly floor(c/2) times, and at its end the machine halts iff a0 = 0 and (c = 0 and b odd, or c = 1 and b even); every other end restarts a countdown with c >= b/2 - O(1), so countdown lengths grow tetrationally. (d) A2, A5, A10: every non-end rule preserves the parity of the fuel (w for A2/A5, c for A10); halting needs the dangerous parity (w even, c odd), which only the end case o_small creates for A2/A5, and only b0_small and the c = 0 rules c0_a, c0_b (b = 0) create for A10 (the latter output c = 1 and reach b0_small when b = 0); each dangerous episode ends at the next cascade end of the other kind."
+title: "Odd-orbit and countdown forms of BB(6) Cryptids. (a) Antihydra: the odd first-return map is the twisted Syracuse map y -> 3^(v-1)(3y+1)/2^v on y = -o < 0 (v = v_2(3y+1)), and the machine halts iff 6 + sum_{l<i}(2v_l - 3) = 0 for some i along the odd orbit of 27; equivalently 6 + sum_{1<=l<=i} (2 v_3(o_l) - 1) reaches 0 (independently, and more fully, klein's ANTIHYDRA.md of 2026-10-25). (b) A4 (1RB0LF_1LC1RA_0RE0RD_---1LE_1LF1RC_1LC1LA): C(a,3) -> C(floor(3a/2)+2, 1 or 3 as a is even or odd), i.e. Antihydra's map floor(3n/2) at n = a+4, run while a is odd, inside a doubling cascade a_i = 2^(i+2) - 2; the machine halts iff some visit C(a,1) has a = 2^(m+2) - m - 4. (c) A11 (1RB1LA_1LC0RE_1LF1LD_1RE0LC_1LB1RA_---0LA): the orbit is a chain of countdowns; one countdown iterates the Hydra-type map (a0, b) -> ((a0+b) mod 2, 3 + 3 floor((a0+b+4)/2)) exactly floor(c/2) times, and at its end the machine halts iff a0 = 0 and (c = 0 and b odd, or c = 1 and b even); every other end restarts a countdown with c >= b/2 - O(1), so countdown lengths grow tetrationally. (d) A2, A5, A10: every non-end rule preserves the parity of the fuel (w for A2/A5, c for A10); halting needs the dangerous parity (w even, c odd), which only the end case o_small creates for A2/A5, and only b0_small and the c = 0 rules c0_a, c0_b (b = 0) create for A10 (the latter output c = 1 and reach b0_small when b = 0); each dangerous episode ends at the next cascade end of the other kind."
 status: >
   PROVED from the rule systems: (b)-(d) from Dos Santos et al. A.4, A.11, A.2, A.5, A.10 (simplified forms;
   Lean-verified per the paper, CITED; re-validated against TM simulation in validate.out); (a) from the public
@@ -45,8 +45,13 @@ counter 0.
   6 + Σ_{l<i}(2v_l − 3) = 0 for some i.
 
 **3-adic form.** (3o − 1)/2^v is prime to 3, so v_3(o_{l+1}) = v_l − 1. The counter then reads
-6 + Σ_{l≤i}(2 v_3(o_l) − 1): the odd terms must carry on average at least half a factor of 3 (a random integer carries
-exactly 1/2).
+`a_i = 6 + sum_(0<=l<i)(2v_l-3) = 6 + sum_(1<=l<=i)(2 v_3(o_l)-1)`.
+The second sum starts at the first **returned** odd value o_1, not o_0=27.
+At i=0 both sums are empty and give a_0=6; including o_0 would incorrectly give 11.
+Thus positivity at return i is exactly `sum_(1<=l<=i) v_3(o_l) >= (i-5)/2`.
+Survival requires this at every i, not just an asymptotic average.
+This indexing correction (2026-10-26) preserves the valuation identity and is recorded in
+`01-canon/MISTAKES.md`; it does not audit the other parts of this theorem.
 
 **klein's results.** klein's note proves much more: shift conjugacy via THM-2228, cylinders, the barrier
 Σ v_i ≤ (3k − 6)/2, and P(halt | i.i.d. model) = φ^(−6).

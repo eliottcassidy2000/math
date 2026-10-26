@@ -50,7 +50,7 @@ Everything below is a statement about those rule systems.
      residual halting probability is ≲ 2^-(current bits), between 2^-2000 and 2^-276000.
 7. **Odd orbits (PROVED, §2).**
    - Antihydra's odd orbit is the *twisted Syracuse map* y ↦ 3^(v−1)(3y+1)/2^v on y = −o < 0. Its counter is the
-     valuation walk 6 + Σ(2v_l − 3), equivalently 6 + Σ(2 v_3(o_l) − 1).
+     valuation walk 6 + sum_(0<=l<i)(2v_l-3), equivalently 6 + sum_(1<=l<=i)(2 v_3(o_l)-1).
    - A4's visit map contains exactly Antihydra's parity dynamics (f(a) = ⌊3a/2⌋ + 2, conjugate to ⌊3n/2⌋ by n = a+4),
      inside a doubling cascade. It halts iff a visit equals 2^(m+2) − m − 4.
 
@@ -93,7 +93,11 @@ a Syracuse step twisted by the unit 3^(v−1). The counter changes by 2(v − 1)
 18 → 27 the first odd value is o_0 = 27 with counter 6. So **Antihydra halts iff 6 + Σ_{l<i} (2v_l − 3) = 0 for some
 i**. This was checked against the direct iteration for 2466 odd steps.
 
-Since (3o − 1)/2^v ≢ 0 (mod 3), v_3(o_(l+1)) = v_l − 1, and the counter equals 6 + Σ_{l≤i}(2 v_3(o_l) − 1). In words,
+Since (3o − 1)/2^v ≢ 0 (mod 3), v_3(o_(l+1)) = v_l − 1, and the counter equals
+`a_i = 6 + sum_(1<=l<=i)(2 v_3(o_l)-1)`. The lower limit 1 is essential:
+o_0=27 is the source, not a returned value. At i=0 the sum is empty and the counter is 6,
+whereas including o_0 would incorrectly give 11. This is the 2026-10-26 indexing repair
+recorded in `01-canon/MISTAKES.md`. In words,
 the odd terms must carry on average at least half a factor of 3. A random integer carries exactly 1/2 (Σ 3^(−k)).
 Under the 2-adic Haar heuristic Antihydra's odd terms carry 1, since P(v_3 ≥ k) = 2^(−k). The drift +1 per odd
 step is this difference.

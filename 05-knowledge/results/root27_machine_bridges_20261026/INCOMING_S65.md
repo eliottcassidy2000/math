@@ -184,3 +184,47 @@ the proofs above. Reproduce from the repository root:
 Both modes pass with identical output. No new large census, morphology
 classification, blank-orbit reachability theorem, formal-system build,
 Collatz proof, or unrestricted black-core connectivity proof is claimed.
+
+## 5. Later incoming Antihydra index repair: local audit only
+
+Incoming commit `75cf5ea5d8` added
+[THM-4771](../../../01-canon/theorems/THM-4771-odd-orbit-and-countdown-forms-of-bb6-cryptids-antihydra-a4-a11-a2-a5-a10.md)
+and its [BB6 source packet](../bb6_cryptids_odd_orbits_20261025/README.md).
+The parent repaired an index error in part (a), in both locations, and
+recorded it in `01-canon/MISTAKES.md`. This is an independent check of
+that local algebraic repair, **not an audit of parts (b)–(d), the other
+BB6 packet claims, external formal verification, or probabilistic claims**.
+
+With `o_0=27`, `a_0=6`, and `v_l=v_2(3o_l-1)`, the odd return is
+
+    o_(l+1) = 3^(v_l-1) (3o_l-1) / 2^v_l,
+    a_(l+1)-a_l = 2v_l-3.
+
+The quotient `(3o_l-1)/2^v_l` is prime to three, so
+`v_3(o_(l+1))=v_l-1`. Substitution shifts the summation index by one:
+
+    a_i = 6 + sum_(0<=l<i)(2v_l-3)
+        = 6 + sum_(1<=l<=i)(2v_3(o_l)-1)
+        = 6 + 2S_i - i,     S_i=sum_(1<=l<=i)v_3(o_l).
+
+At i=0 both correct sums are empty. Including the source o_0 adds
+`2v_3(27)-1=5`, incorrectly giving 11 instead of 6. The first literal
+returns `[i,o_i,a_i]` are `[0,27,6], [1,135,11], [2,303,12],
+[3,681,13], [4,1021,12]`, directly confirming the shifted valuation.
+
+Since a_i is an integer, positivity is equivalent to
+
+    a_i > 0  iff  6+2S_i-i >= 1  iff  S_i >= (i-5)/2.
+
+The bound is therefore correct, including its constant five. Replacing
+positivity by nonnegativity would incorrectly admit the zero-counter
+halting checkpoint. Every return increment is at least -1 because
+v_l>=1, so a walk starting at six cannot become negative without first
+hitting zero. Survival requires the displayed positivity condition at
+every return, not just a limiting average. This is a reformulation of
+the source's exact counter obligation, not a proof that it always holds.
+
+The parent added 257 index controls and the initial-source hostile to
+`check_incoming_s65.py`; their logic was read independently here. The
+paired replay is handled by the parent. No additional producer or
+canonical file was changed by this local review.

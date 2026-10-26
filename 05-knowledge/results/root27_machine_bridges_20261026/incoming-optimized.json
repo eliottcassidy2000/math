@@ -1,6 +1,34 @@
 {
   "SCC_word_decodes": 63,
   "clone_split_control": "00 -> 01 splits pair {2,3}",
+  "counter_index_controls": 257,
+  "first_odd_index_value_credit": [
+    [
+      0,
+      27,
+      6
+    ],
+    [
+      1,
+      135,
+      11
+    ],
+    [
+      2,
+      303,
+      12
+    ],
+    [
+      3,
+      681,
+      13
+    ],
+    [
+      4,
+      1021,
+      12
+    ]
+  ],
   "histograms": {
     "()": {
       "0": 1

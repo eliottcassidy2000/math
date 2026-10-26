@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — sum output valuations from the first returned value, not the source
+
+- **Affected incoming statement:** the 3-adic form in
+  [THM-4771, odd-orbit/countdown forms](theorems/THM-4771-odd-orbit-and-countdown-forms-of-bb6-cryptids-antihydra-a4-a11-a2-a5-a10.md)
+  and its [source section 2.1](../05-knowledge/results/bb6_cryptids_odd_orbits_20261025/README.md)
+  used a sum over l<=i while defining o_0=27 and initial counter 6.
+- **Minimal witness:** i=0 should give the empty sum and counter 6.
+  Including o_0 contributes `2*v_3(27)-1=5`, incorrectly giving 11.
+- **Mechanism and repair:** since `v_3(o_(l+1))=v_l-1`, the correct
+  identity is `a_i=6+sum_(0<=l<i)(2v_l-3)
+  =6+sum_(1<=l<=i)(2v_3(o_l)-1)`. Source and output valuations have
+  different indices. The text and title now retain the shifted limits.
+- **Strongest survivor / next question:** the valuation identity and
+  exact guarded counter survive. Survival requires the resulting
+  inequality at every return; an asymptotic average does not replace
+  those guards. [Independent control](../05-knowledge/results/root27_machine_bridges_20261026/check_incoming_s65.py)
+  includes time zero and 256 returns. This local repair does not audit
+  the incoming theorem's other machine sections or deep-run claims.
+
 ## 2026-10-26 — retain the native read symbol and configuration parameter in an exponential bell
 
 - **Affected source:** the exponential-bell example in

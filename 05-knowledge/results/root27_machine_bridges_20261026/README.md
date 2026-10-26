@@ -30,6 +30,20 @@ is now the pending-slot count `q_j=1+3j-K_j`. The proof retains the guard
 within each return; it never treats an unexecutable formal endpoint as a
 reached machine state.
 
+The [repaired incoming counter identity](INCOMING_S65.md) also gives an
+exact budget in the **original** odd section. If x_0=27 and x_i are its
+successive odd returns, the requested inequality becomes
+
+\[
+v_2(x_j-1)+j\le6+2\sum_{i=1}^j v_3(x_i).
+\]
+
+This compares present 2-adic precision with accumulated 3-adic valuations.
+It is an equivalent open target, not a new bound. The sum starts at the
+first return; including 27 adds an erroneous five to the counter.
+These valuations of x_i differ from the failed local charge involving
+`v_3(x_i-1)` below.
+
 A halt certificate is precisely a finite full ternary-tree word
 `Tree = 0 | 1 Tree Tree Tree` satisfying the fixed-source carry congruence.
 For a word w of length n, write

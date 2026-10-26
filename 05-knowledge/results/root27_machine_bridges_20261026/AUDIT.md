@@ -61,7 +61,7 @@ All mathematical gates use exceptions, not removable `assert` statements.
 | machines/INDEPENDENT_REVIEW.md | Independent dense tape: 32 exponential blocks, 560 intermediate invariants and seven checkpoints through step 48,012 |
 | compiler/check.py | All 20,800 complete one-/two-state tables; all 40,320 frame relabellings; opposite-outcome one-bit pair; 262 padding trace controls |
 | compiler/INDEPENDENT_REVIEW.md | 4,040 field-edit commuting squares and 24 frame/complement controls |
-| check_incoming_s65.py | 102 independent irregular-bell sweeps; 63 relabelled strong-component word decodes; eight signed permutation types with 34,001 tournaments |
+| check_incoming_s65.py | 102 independent irregular-bell sweeps; 63 relabelled strong-component word decodes; eight signed permutation types with 34,001 tournaments; time-zero plus 256 odd returns checking the repaired counter index |
 
 `verify.py` pins packet files and eleven inherited mathematical sources with
 SHA-256 after CRLF-to-LF normalization. It checks local Markdown links,
@@ -110,6 +110,15 @@ rather than their historical prose, control all claims. The supersingular
 4+5+6 lists and Fibonacci/heap indexing were checked directly against
 their maintained sources. All thirty atlas document links resolved in
 the bounded source audit.
+
+Final incoming commit `75cf5ea5d8` supplies additional pre-audit S56 work.
+The displayed 3-adic counter in THM-4771 had an index error: its initial
+odd value o_0=27 was included again. At i=0 it therefore gave 11 rather
+than 6. The corrected sum runs from 1 through i. The theorem, its source
+note and MISTAKES now record that local repair; the incoming control checks
+the initial state and 256 returns. Its other machine and deep-run claims
+were not promoted or independently audited by this packet. The repaired
+identity is an exact restatement of the counter, not its required bound.
 
 ## What remains unresolved
 

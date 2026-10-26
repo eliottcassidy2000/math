@@ -205,7 +205,32 @@ def main():
         histograms[str(cycle_type)] = actual
     need(histograms[str((1,2))] == {1: 4, 3: 4}, 'conditional p37 pair action')
     need(histograms[str((2,2))] == {2: 16, 4: 32, 6: 16}, 'even permutation hostile')
+    def valuation(n, p):
+        need(n > 0, 'positive valuation input')
+        count = 0
+        while n % p == 0:
+            count += 1
+            n //= p
+        return count
+    odd, credit, returned_sum = 27, 6, 0
+    initial_wrong = 6 + 2*valuation(odd,3)-1
+    need(initial_wrong == 11 and credit == 6, 'incoming source-index hostile')
+    first_returns = []
+    for index in range(257):
+        need(credit == 6+returned_sum, 'sum starts at first returned odd value')
+        need(credit != initial_wrong+returned_sum, 'including initial source adds five')
+        if index < 5:
+            first_returns.append([index, odd, credit])
+        if index == 256:
+            break
+        k = valuation(3*odd-1,2)
+        odd = 3**(k-1)*(3*odd-1)//2**k
+        need(valuation(odd,3) == k-1, 'output valuation shifts the index')
+        credit += 2*k-3
+        returned_sum += 2*valuation(odd,3)-1
     print(json.dumps({'status': 'PASS', 'irregular_sweeps': sweeps,
+                      'counter_index_controls': 257,
+                      'first_odd_index_value_credit': first_returns,
                       'SCC_word_decodes': words, 'permutation_types': len(types),
                       'scalar_hostile': {'H': paths, 'distance': distance,
                                           'next_tape_head_time': scalar_outputs},
