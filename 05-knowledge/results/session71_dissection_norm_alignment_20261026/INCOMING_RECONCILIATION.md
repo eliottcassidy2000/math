@@ -54,3 +54,27 @@ was **not independently replayed by Session71**. It extends the incoming finite
 frontier without changing the pinned 5/44 counts or identifying their objects
 with the paper's cut patterns. No assertion about infinite Penrose extension,
 full geometric realization, or Dudeney piece-count optimality transfers from U2.
+
+## Named-legality status in the later incoming theorem packet
+
+Commit `52e3aa76e2accef9c2d53153fc42fcbdf6869a28` introduces:
+
+- `01-canon/theorems/THM-4806-named-legality-language-single-pair-lemma-goldbach-free-shapes-and-row-companions-of-even-perfect-numbers.md`;
+- `05-knowledge/hypotheses/HYP-9417-legality-language-injectivity-goldbach-dependent-decay-and-perfect-hermits.md`.
+
+Their global **OPEN** wording for injectivity of the full named Hamilton-path
+legality language is stale relative to the independently audited Session70
+all-order reconstruction theorem. Its pinned
+[proof](https://github.com/eliottcassidy2000/math/blob/c2039c32f9726b09ed0e09d5f5c126fc72975897/05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md)
+and [independent audit](https://github.com/eliottcassidy2000/math/blob/c2039c32f9726b09ed0e09d5f5c126fc72975897/05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guard-audit/REPORT.md)
+recover a labelled tournament from that language in every finite order, with
+explicitly cited classical structural inputs. The later packet's single-pair
+lemma and bounded census do not refute or reopen that theorem.
+
+The incoming packet also marks **its own audit pending**. That is a local audit
+status, not a reason to demote an already audited result on the identical named
+language. Its theorem, hypothesis and other mathematical text are preserved
+unchanged in ancestry. This note reconciles only the named-language status;
+it neither audits nor promotes the incoming arithmetic or unrelated claims.
+Fresh unnamed/reset protocols still require their separately specified carrier
+and operations, as described above.
