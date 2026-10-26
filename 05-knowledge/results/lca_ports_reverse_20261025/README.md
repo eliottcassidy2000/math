@@ -128,6 +128,12 @@ question until a computable boundary or invariant is supplied. This
 distinction is the useful cross-thread connection, not a transfer of
 a termination conclusion.
 
+The [last incoming integration](LATE_INTEGRATION.md) adds the independent
+sharp-head proof, signed Newton coordinates whose valuation losses are
+sums of labelled LCA depths, and the Petersen compatibility/crossing
+duality. Absolute precision, normalized precision and integer ancestry
+remain separate carriers with their own preserved operations.
+
 ## Reproduction and remaining targets
 
 [AUDIT.md](AUDIT.md) records the declared universes and independent paths.

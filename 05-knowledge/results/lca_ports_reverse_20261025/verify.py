@@ -53,6 +53,10 @@ INHERITED = [
     '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-counting/CONTRACTION_AUDIT.md',
     '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md',
     '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-dynamics/REPORT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/NEWTON_QUOTIENT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-newton/REPORT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-root/newton-lca/REPORT.md',
+    '05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/lca/LCA_AND_PETERSEN_MERGES.md',
 ]
 
 

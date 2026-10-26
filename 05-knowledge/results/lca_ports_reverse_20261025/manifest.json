@@ -13,6 +13,7 @@
     "05-knowledge/results/endpoint_four_repairs_20261021/audit/AUDIT.md": "d72a00184b9eb83475f03070430fb7d156a80ddb2f4ed11a48b7dc7ee7421e21",
     "05-knowledge/results/endpoint_four_repairs_20261021/audit/audit_core.py": "9e0f86d30773b46dad359c04ead55dc07e606cad54156fb4eb0025b42a7339a4",
     "05-knowledge/results/endpoint_four_repairs_20261021/audit/independent_audit.py": "376782e9c9eab3f3dae563a22735271d064fe73f4ef0361de044beb56cdc85b0",
+    "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/lca/LCA_AND_PETERSEN_MERGES.md": "f97d6a3cfca74a4b524e03ade66d186d16be351543484cb466b56ae148995c28",
     "05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md": "9e797c176453f85541a7877fa7ab6beb04f08fa693ff35665b1fbd6f3e9fb6b8",
     "05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS.md": "f0f1fdd86ff08db5f22b90207e4f496229285992bf752cd2bedd21ddfe1516fa",
     "05-knowledge/results/port_residual_integral_20261025/LOW_ORDERS_REVIEW.md": "cd604b1798660eafc2576960325c8ad4a969f46b84fe44cb94990fe6860848e7",
@@ -35,12 +36,15 @@
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-counting/REVERSE_AUDIT.md": "d13b1a9f477d43bd029ee9db605aff73a9c13d5eaf39699d7a60a3bc0df92f1a",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-dynamics/REPORT.md": "0b0a11ceb39ad5d0e5c9f875866024e316ea33759cb8d749c280fe5b48abc3b3",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-eleven/AUDIT.md": "f32004362e52edccae974255fc49b7fafc844b913b7e66a7f0952174e49c9b6a",
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-newton/REPORT.md": "1f9799e48677b1e319cd76e08db4d5b6a7f580ef333c137a4a9d81762ca590a5",
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/NEWTON_QUOTIENT.md": "dd9bd9c2ca86404bf53b047111288ba1734e0ae20c7e2a6db136664cdcf3b154",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/REVERSE_IMPLEMENTATION.md": "b1b689eda6aa50774830b69527f0cd103757130e31c5e1080c508b6cc284063a",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/SKIP_CONTRACTION.md": "13914664e447420e15a9f39dbaaf0f1043e68fa79765d7628bcb0f8fa7c4d719",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/contracted_ordinary.py": "63b45349cacb5eb9312c6f98a02e0e459a4e478b6319e6f87005b4c6211fd37a",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/reverse_ordinary.py": "04d8ac415d8bfec7dd818702e4cee8e718c528248f4f3da2cd100d89e7496312",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-repairs/next11/README.md": "be5170df20e34e72011760a78c8cf312d0158fec68abc12250c3bf3df3c8bb2d",
     "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-root/newton-lca/REPORT.md": "682a3f448407963b3673a603dabd625ae313a5ff8ce38438b6b0379569d3dbb5",
     "05-knowledge/results/unprotected_ports_cancellation_20261025/ports/ENDCAP_NEXT.md": "4af13a9cd6daf7f2acc7809c1a1869498f79d5a75029eec404b99ef6b15fa8e3",
     "05-knowledge/results/unprotected_ports_cancellation_20261025/ports/INDEPENDENT_REVIEW.md": "9826938fafd9caca2c9efc452d95dc206920188f349031ff0227c224bd094d4b",
     "05-knowledge/results/unprotected_ports_cancellation_20261025/ports/README.md": "9a54582baf20d23407c998a52b3e0cea2b5484e25b44712332cbb8b029ba6cc3"
@@ -49,9 +53,10 @@
     ".gitattributes": "f44f762b6570c287029f4e804d293ac19ab5e3a13c01b6dc01a4e5226e84f015",
     "AUDIT.md": "387de4527a878ce6208c6caa8b9d8b2dfdd6c5c5878251bdac76f17d5f4245c0",
     "HEAD_ASSEMBLY.md": "723889710bb525f096d074f42b52d16a0aac0798acb21d892cbcdabefe16bb4b",
+    "LATE_INTEGRATION.md": "89a3b463d3f13bf78b66f893e62e5a7e501f863a6cd060881561689b9b801ed7",
     "PORT_FRONTIER.md": "2cf307b74b925e747b684e005d34970224b2f82008ac46ebae7a870dbbba549e",
     "PORT_FRONTIER_REVIEW.md": "e7c5279a4b47596ed3fe7c73f00dcf8f263814953278cf71ac4f24500e398169",
-    "README.md": "dae378c3704eadaede9399b852225a5909fb4af952f474295514a455e53fef86",
+    "README.md": "e76b61c56f7df8c6abdbe634e5ba560e856cadb8790069f33b66bb07aafd01d9",
     "arithmetic/ANCESTRY.md": "326c8724f009409a3b6e39a441042175f96cde73b1cd9a057ce8fa8a826dcae7",
     "arithmetic/CONGRUENCE_REVIEW.md": "32643884012bd7b3711a8a2e837ee6bdd5266f2cd434c5b210b99caaef69ea34",
     "arithmetic/DENSITY.md": "70821700910f6a8bbcda44fd79d336b270d5c0ffc7d20d38dd9c579eb5e0487a",
@@ -106,6 +111,6 @@
     "order14/review-normal.json": "5f17c9c3fd829890b1711187c295dabb984cb1f2c2cc9455288f199216767e85",
     "order14/review-optimized.json": "5f17c9c3fd829890b1711187c295dabb984cb1f2c2cc9455288f199216767e85",
     "replay.py": "de3371425ab48f88b8c74b9eadaf65a42992c6acf59a759de012a7857ba8d096",
-    "verify.py": "2580cfaf7227e136f17f2629e6a522e06cb5f7b4a216032d80bf53c65bb37752"
+    "verify.py": "fd2faeeb0c044ce90d9974af1760dc619d9f47b17110f0e93b444f3e96dd238a"
   }
 }
