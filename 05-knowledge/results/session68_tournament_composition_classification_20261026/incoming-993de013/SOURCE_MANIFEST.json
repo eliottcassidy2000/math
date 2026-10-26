@@ -1,0 +1,14 @@
+{
+  "status": "CONCURRENT PRE-AUDIT SOURCE SNAPSHOT",
+  "boundary": "The normal-basis dictionary is independently reviewed in Session68. Other source claims, including F1, module-shattering corollaries and line census, are not promoted or independently certified by copying. No source code is executed.",
+  "files": [
+    {
+      "path": "module_shattering_lines_carousel_finite_field_20261026.md",
+      "source_path": "05-knowledge/results/module_shattering_lines_carousel_finite_field_20261026.md",
+      "source_pin": "993de01394dea261c50d4bd9c992f8bfd1325ecc",
+      "bytes": 16919,
+      "sha256": "ab1f9a619365089158d1c0490758c35562d2037cd7ef1e5a263c0e512f96c5cd",
+      "git_blob": "2a9bbcb4257fad083aed3680f31208e55571a618"
+    }
+  ]
+}

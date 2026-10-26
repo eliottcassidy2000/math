@@ -1,0 +1,174 @@
+{
+  "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "files": [
+    {
+      "path": "01-THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md",
+      "source_path": "01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md",
+      "bytes": 7382,
+      "sha256": "0fa006f927d176a717b80e7a2d659d9d1885d99930a0c2381324c1b6fa98a7db",
+      "git_blob": "bacbb6a90700c28f3c7fd0ddc3c3ee3b3d62f3fb"
+    },
+    {
+      "path": "02-THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md",
+      "source_path": "01-canon/theorems/THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md",
+      "bytes": 13099,
+      "sha256": "b7855e6dcebf5eeaf7cc573913b2e250e086cfb94f5acb3aff238ab116682336",
+      "git_blob": "aa16da3034f1b0b2e3d065855a11a4715bd16e1a"
+    },
+    {
+      "path": "03-THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md",
+      "source_path": "01-canon/theorems/THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md",
+      "bytes": 19698,
+      "sha256": "7f7b62203f21f6ec760543b709c40b0aa75edc0c16cabdef5081d61a399803e7",
+      "git_blob": "baf6c6d4bf17e327d02920ff7b95ea66e8e55987"
+    },
+    {
+      "path": "04-THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md",
+      "source_path": "01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md",
+      "bytes": 7510,
+      "sha256": "1e6047fbb3c101c878ab30dda962eb6fdb653e47db9eec4b92090c6164fc271f",
+      "git_blob": "8792e0c4d107aaed166492b7e3669d865b1fd458"
+    },
+    {
+      "path": "05-THM-896-kendall-wei-perron-atlas.md",
+      "source_path": "01-canon/theorems/THM-896-kendall-wei-perron-atlas.md",
+      "bytes": 6783,
+      "sha256": "03ebef6a09fea6c8a3c4bcd44a71fd0152a5815967574a12f1cdbbc54b3590f8",
+      "git_blob": "dab5aec38d8d3cbf4d5cf9742e107ba07b065816"
+    },
+    {
+      "path": "06-THM-819-primitive-harmonic-law-for-interval-cores.md",
+      "source_path": "01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md",
+      "bytes": 5827,
+      "sha256": "1e6c86fb2a47c39b824354926886984ada8221dc579832f63ca77e327bfeb678",
+      "git_blob": "698302f382ad48a6f339aa9d9fa55378dca914e4"
+    },
+    {
+      "path": "07-polynomial-agent.md",
+      "source_path": "07-reflections/polynomial-agent.md",
+      "bytes": 7885,
+      "sha256": "4d57428d8a9eb226399d05f395c66a850ac59d156f05efc53e3c7a76b2eb1645",
+      "git_blob": "77ecde520a02ef890934bef8d2817541996eeeb4"
+    },
+    {
+      "path": "08-lrc14-haar-product-tile-discrepancy-codex-s165.md",
+      "source_path": "07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md",
+      "bytes": 3186,
+      "sha256": "beea1d4247866062c3ac3f7b0a0776fda52050e24a339479c42b8ee420e41aa9",
+      "git_blob": "35d400d985949e1d9006f60ddb30cd326c9c0f68"
+    },
+    {
+      "path": "09-the-floor-binds-on-the-dual-side.md",
+      "source_path": "07-reflections/the-floor-binds-on-the-dual-side.md",
+      "bytes": 5867,
+      "sha256": "bc8d7171161e5ee98c27027b893fb2a8b70ee010b212dce7cca1b753272b0277",
+      "git_blob": "59adbdc89fb465d1bcbb18d700fde6cd0e53cc10"
+    },
+    {
+      "path": "10-the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md",
+      "source_path": "07-reflections/the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md",
+      "bytes": 6358,
+      "sha256": "a5b0d341eda7811e7fbc2789b121362c16286525f9f78513d8339120a3a1c42c",
+      "git_blob": "5d9f395d0f8055cc24d099690a21b2b298c81ddf"
+    },
+    {
+      "path": "11-pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md",
+      "source_path": "07-reflections/pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md",
+      "bytes": 5888,
+      "sha256": "72659f17c37eaa6c667e9a7afbe3aeb1fde615d5a6e779bc1028552d64ea8679",
+      "git_blob": "80a5d85896cd4f4142f1b4d85490554bc30adb67"
+    },
+    {
+      "path": "12-lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md",
+      "source_path": "07-reflections/lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md",
+      "bytes": 7374,
+      "sha256": "d555c4a0d32d8b2ec25579906f2bf9f5d01ecd31fcb55de40412b53bb4f58b38",
+      "git_blob": "b9214cad6d3b8d5d8a5e7f864dcd588f95f86c32"
+    },
+    {
+      "path": "13-ternary_digits_20260925.md",
+      "source_path": "05-knowledge/results/ternary_digits_20260925.md",
+      "bytes": 14543,
+      "sha256": "009041f705619ca90448f30f99545488267c51049de9a8a2b83e6e1a56397f89",
+      "git_blob": "1dcf293371d65ec856ba37223bf8e8956a3e0d6c"
+    },
+    {
+      "path": "14-long_frontier_sep06_endpoint39.md",
+      "source_path": "05-knowledge/results/long_frontier_sep06_endpoint39.md",
+      "bytes": 11598,
+      "sha256": "1bdc1fc79b4bafc12293c092c6ec2af2c576d961f9383b0619ad8e69e7d1d935",
+      "git_blob": "c90d2eb5bcea8449cf38b2e8e23e5f4522b6c7d1"
+    },
+    {
+      "path": "15-README.md",
+      "source_path": "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/README.md",
+      "bytes": 1204,
+      "sha256": "4cbd3f9f8002eca9be50331b053c03756762420468ab6a88aedec52e75c62b46",
+      "git_blob": "278dd6ac7f853c85a357994cb238ed6b3cfe20d3"
+    },
+    {
+      "path": "16-collatz_mod6_20260922_lead_reflection2.md",
+      "source_path": "05-knowledge/results/collatz_mod6_20260922_lead_reflection2.md",
+      "bytes": 6781,
+      "sha256": "7ddb0afd9f9bd0f864f7a004a14d6b5be7ca36644a84dd8fbeb750621c006084",
+      "git_blob": "c79948c0ab97cf1728b7d67970da29e96c8e991e"
+    },
+    {
+      "path": "17-REVIEW.md",
+      "source_path": "05-knowledge/results/higher_order_bottleneck_clocks_20261019/independent-review/REVIEW.md",
+      "bytes": 5828,
+      "sha256": "0d7b1d5a1b50485a7551778465daac5edec0b5b6ee0d7d5fc635266f5e934eb0",
+      "git_blob": "c059dc2f963964317cb97d9caf68fa60d5ff004a"
+    },
+    {
+      "path": "18-README.md",
+      "source_path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md",
+      "bytes": 2780,
+      "sha256": "38d45eea121e5dea792d906ed4e7fd6eec9076d358bf3b4952bf6025f03b0b41",
+      "git_blob": "ca1a6aeabd25bfc48e6c925f0597b992d0ac313d"
+    },
+    {
+      "path": "19-path_homology_tournament.py",
+      "source_path": "04-computation/path_homology_tournament.py",
+      "bytes": 10818,
+      "sha256": "34c32c61fe702ba888e2d4cdada81666edcc93ae93680275b8bc54c4f3c1fbfa",
+      "git_blob": "0cd19578ef75e22a42f1aaf566ba607ea0e467b5"
+    },
+    {
+      "path": "20-even_betti_quick.py",
+      "source_path": "04-computation/even_betti_quick.py",
+      "bytes": 7075,
+      "sha256": "b19c3b5da83c715929928e117de9562b20768b97342bfcfcdcf2c1886ec0cd58",
+      "git_blob": "5ebbe565722c2ca534602d945562838038c8af5d"
+    },
+    {
+      "path": "21-lrc14_depth_one_private_joint_two_step_cap_thm2246.py",
+      "source_path": "04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py",
+      "bytes": 7281,
+      "sha256": "938e175990f22feb72b5dbd00ad147279593358b705d0b99af7a157944def791",
+      "git_blob": "d5f397485046843296018b3826f4839b8ee3e773"
+    },
+    {
+      "path": "22-new_frontiers_s3b.py",
+      "source_path": "04-computation/new_frontiers_s3b.py",
+      "bytes": 17749,
+      "sha256": "561f53b97beebbf726b25566959d26768ce444f361ce02b8fb9c8ae15ade5999",
+      "git_blob": "e21e8cea063cd8da90831deba85d59548f31c5dd"
+    },
+    {
+      "path": "23-lrc14_regularized_naturals_zoo_kps.py",
+      "source_path": "04-computation/lrc14_regularized_naturals_zoo_kps.py",
+      "bytes": 7285,
+      "sha256": "a070a76cf9d88b3541af23b0bfb48d54153fc360c52f78811e57b420b9e7478f",
+      "git_blob": "1ba4f279d2264171fd8b0f9480fdca8ebe8c6e15"
+    },
+    {
+      "path": "24-paley_eigenvector_theorem.py",
+      "source_path": "04-computation/paley_eigenvector_theorem.py",
+      "bytes": 18902,
+      "sha256": "50c7d6fc416ace81a5f13e8fa09ddc4be8d22b1c4d800bdef3194dd6e67fba83",
+      "git_blob": "2ce57aac307bd6f4662e3e41c390807a01659acf"
+    }
+  ],
+  "source_status": "Historical provenance only; status must be resolved against current corrected canon before mathematical use. Sampled scripts are not executed."
+}

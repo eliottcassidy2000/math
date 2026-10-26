@@ -1,0 +1,58 @@
+{
+  "excerpt_rule": "first 140 lines of each frozen source, preserving line endings",
+  "historical_code_executed": false,
+  "sampled_files": 24,
+  "seed": 2026102668,
+  "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "status": "PASS",
+  "strata": [
+    {
+      "draws": [
+        "01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md",
+        "01-canon/theorems/THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md",
+        "01-canon/theorems/THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md",
+        "01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md",
+        "01-canon/theorems/THM-896-kendall-wei-perron-atlas.md",
+        "01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md"
+      ],
+      "stratum": "theorems",
+      "universe_size": 3976
+    },
+    {
+      "draws": [
+        "07-reflections/polynomial-agent.md",
+        "07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md",
+        "07-reflections/the-floor-binds-on-the-dual-side.md",
+        "07-reflections/the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md",
+        "07-reflections/pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md",
+        "07-reflections/lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md"
+      ],
+      "stratum": "reflections",
+      "universe_size": 3337
+    },
+    {
+      "draws": [
+        "05-knowledge/results/ternary_digits_20260925.md",
+        "05-knowledge/results/long_frontier_sep06_endpoint39.md",
+        "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/README.md",
+        "05-knowledge/results/collatz_mod6_20260922_lead_reflection2.md",
+        "05-knowledge/results/higher_order_bottleneck_clocks_20261019/independent-review/REVIEW.md",
+        "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md"
+      ],
+      "stratum": "results",
+      "universe_size": 5580
+    },
+    {
+      "draws": [
+        "04-computation/path_homology_tournament.py",
+        "04-computation/even_betti_quick.py",
+        "04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py",
+        "04-computation/new_frontiers_s3b.py",
+        "04-computation/lrc14_regularized_naturals_zoo_kps.py",
+        "04-computation/paley_eigenvector_theorem.py"
+      ],
+      "stratum": "sources",
+      "universe_size": 18224
+    }
+  ]
+}

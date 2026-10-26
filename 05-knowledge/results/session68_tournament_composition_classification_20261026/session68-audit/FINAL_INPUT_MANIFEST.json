@@ -1,0 +1,119 @@
+{
+  "additional_concurrent_prior": "c9a8823436e",
+  "concurrent_prior": "d761e4cf0ff92264b043586a6160b274dae0b29c",
+  "final_prose_acceptance_addendum": "FINAL_ROOT_PROSE_ADDENDUM.md",
+  "reviewed_inputs": [
+    {
+      "bytes": 22748,
+      "path": "session68-classification/CLASSIFICATION.md",
+      "sha256": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f"
+    },
+    {
+      "bytes": 16581,
+      "path": "session68-classification/check_classification.py",
+      "sha256": "7c4575f5fad738cced9b5320ea2a8e668ef50c0bc88db50e9013122fd615b105"
+    },
+    {
+      "bytes": 9212,
+      "path": "session68-classification/receipt.normal.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "bytes": 9212,
+      "path": "session68-classification/receipt.optimized.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "bytes": 6635,
+      "path": "session68-root/METAGRAPH_BOUNDARY.md",
+      "sha256": "a6d0828715696cc0cc5a82e96c0a3a0dd4f846f32feb55fb90a5a6556c69b177"
+    },
+    {
+      "bytes": 2654,
+      "path": "session68-root/check_line_boundary.py",
+      "sha256": "aaad646fd54596b5f773db8f638c4fc04419a1ca28f974090d64e7a96f677a32"
+    },
+    {
+      "bytes": 6380,
+      "path": "session68-root/line_boundary.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "bytes": 6380,
+      "path": "session68-root/line_boundary.optimized.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "bytes": 3740,
+      "path": "session68-root/check_field_bridge.py",
+      "sha256": "68970b8af2babd35b84cdbe077dc0680de22a53536fe41996310ae8ec63fb568"
+    },
+    {
+      "bytes": 1101,
+      "path": "session68-root/field_bridge.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "bytes": 1101,
+      "path": "session68-root/field_bridge.optimized.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "bytes": 20251,
+      "path": "session68-arithmetic/REPORT.md",
+      "sha256": "d5883d398c362ce0e406a6055afc655e0a01e566546ee00074892c31f0f4c11f"
+    },
+    {
+      "bytes": 9573,
+      "path": "session68-arithmetic/check.py",
+      "sha256": "f3c6a9168a9d96424bf96800d596955157f99cec3a1d49e1426e4b6469374d5d"
+    },
+    {
+      "bytes": 11337,
+      "path": "session68-arithmetic/receipt.json",
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "bytes": 11337,
+      "path": "session68-arithmetic/receipt.optimized.json",
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "bytes": 6853,
+      "path": "session68-arithmetic/random_manifest.json",
+      "sha256": "c2d6eb5dd3ba9785b6f782ab652209f6957b61553b4e80a4b5cfb4b196a5817c"
+    },
+    {
+      "bytes": 1054,
+      "path": "session68-arithmetic/replay_random.py",
+      "sha256": "adcffd0c7caeb9d8c325a33875dc1ee2615350af739046ae7f5738fcbfe2deb4"
+    },
+    {
+      "bytes": 4419,
+      "path": "session68-arithmetic/sample_dispositions.md",
+      "sha256": "0002defae1698446636f09a1aea932bbb478b5d51e4eef3f87035337279129e0"
+    },
+    {
+      "bytes": 5685,
+      "path": "session68-root/FIBRE_COMPLETION.md",
+      "sha256": "6dc283434e704908f839ff013a9b939c55a4575919f174d7797988eed2d347bd"
+    },
+    {
+      "bytes": 3184,
+      "path": "session68-root/FIELD_CONTROLS.md",
+      "sha256": "19269fd81de8ca23971b64eecd0d65b1ed8a6af35705b8f7568bd67c6bcfedd8"
+    },
+    {
+      "bytes": 257,
+      "path": "session68-root/FIBRE_MANIFEST.json",
+      "sha256": "d76cd28cca6cf7bc77d06ec329a902164f3e852d983293a7bd395e64dfc1b59e"
+    },
+    {
+      "bytes": 586,
+      "path": "session68-root/FIELD_MANIFEST.json",
+      "sha256": "c57e9e2d87bb76cbf02efce817a1d5653a58072d41f4932876693b08dafc8a06"
+    }
+  ],
+  "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "status": "ACCEPTED"
+}

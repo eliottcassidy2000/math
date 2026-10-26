@@ -1,13 +1,151 @@
 {
   "schema": "session68-native-preservation-v1",
   "source_pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
-  "review": "session68-audit/CHECKPOINT1_AUDIT.md",
+  "review": "session68-audit/FINAL_INPUT_MANIFEST.json",
   "files": [
+    {
+      "path": "session68-arithmetic/REPORT.md",
+      "source_path": "session68-arithmetic/REPORT.md",
+      "bytes": 20251,
+      "sha256": "d5883d398c362ce0e406a6055afc655e0a01e566546ee00074892c31f0f4c11f"
+    },
+    {
+      "path": "session68-arithmetic/SHA256SUMS",
+      "source_path": "session68-arithmetic/SHA256SUMS",
+      "bytes": 1015,
+      "sha256": "23b56b0ec5327e760a0b671627c2d988782bbbf58a3921e4477f4eaf90712c0a"
+    },
+    {
+      "path": "session68-arithmetic/check.py",
+      "source_path": "session68-arithmetic/check.py",
+      "bytes": 9573,
+      "sha256": "f3c6a9168a9d96424bf96800d596955157f99cec3a1d49e1426e4b6469374d5d"
+    },
+    {
+      "path": "session68-arithmetic/draw_excerpts.txt",
+      "source_path": "session68-arithmetic/draw_excerpts.txt",
+      "bytes": 131560,
+      "sha256": "766e0f469802d9ffc480dcf03fceca8f0d4a390674eacc6d01e322b342901fdf"
+    },
+    {
+      "path": "session68-arithmetic/random_manifest.json",
+      "source_path": "session68-arithmetic/random_manifest.json",
+      "bytes": 6853,
+      "sha256": "c2d6eb5dd3ba9785b6f782ab652209f6957b61553b4e80a4b5cfb4b196a5817c"
+    },
+    {
+      "path": "session68-arithmetic/receipt.json",
+      "source_path": "session68-arithmetic/receipt.json",
+      "bytes": 11337,
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "session68-arithmetic/receipt.optimized.json",
+      "source_path": "session68-arithmetic/receipt.optimized.json",
+      "bytes": 11337,
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "session68-arithmetic/reflections_universe.txt",
+      "source_path": "session68-arithmetic/reflections_universe.txt",
+      "bytes": 258753,
+      "sha256": "8f151cbbda68c9fe4501bea912145cb31c96a275de57b862ff7198fbf0da0c3d"
+    },
+    {
+      "path": "session68-arithmetic/replay_random.py",
+      "source_path": "session68-arithmetic/replay_random.py",
+      "bytes": 1054,
+      "sha256": "adcffd0c7caeb9d8c325a33875dc1ee2615350af739046ae7f5738fcbfe2deb4"
+    },
+    {
+      "path": "session68-arithmetic/results_universe.txt",
+      "source_path": "session68-arithmetic/results_universe.txt",
+      "bytes": 467613,
+      "sha256": "9e4fdb72e7e145200a40ebd56b71bd8c72c3c17dc3bfde9495796741f3a76a1f"
+    },
+    {
+      "path": "session68-arithmetic/sample_dispositions.md",
+      "source_path": "session68-arithmetic/sample_dispositions.md",
+      "bytes": 4419,
+      "sha256": "0002defae1698446636f09a1aea932bbb478b5d51e4eef3f87035337279129e0"
+    },
+    {
+      "path": "session68-arithmetic/sources_universe.txt",
+      "source_path": "session68-arithmetic/sources_universe.txt",
+      "bytes": 1038079,
+      "sha256": "121fbf87ba656e52586a9cdf5e25e8a42ef812076861b77d1754994a0f286e1b"
+    },
+    {
+      "path": "session68-arithmetic/theorems_universe.txt",
+      "source_path": "session68-arithmetic/theorems_universe.txt",
+      "bytes": 316008,
+      "sha256": "13769abf76430f21dd51b9532e7f5fe28b4d3f20370f1c9be25edacf24016d15"
+    },
+    {
+      "path": "session68-audit/AUDIT.md",
+      "source_path": "session68-audit/AUDIT.md",
+      "bytes": 12020,
+      "sha256": "d8172e4ac86c175b2720de6a9131f0ac356e9a8a37d0a70e67ed0127494c9e1f"
+    },
     {
       "path": "session68-audit/CHECKPOINT1_AUDIT.md",
       "source_path": "session68-audit/CHECKPOINT1_AUDIT.md",
       "bytes": 3643,
       "sha256": "212b2a50db850706dfc1f520b88f7931c50556ba98f1bf4d2339b7a1af16be16"
+    },
+    {
+      "path": "session68-audit/FINAL_INPUT_MANIFEST.json",
+      "source_path": "session68-audit/FINAL_INPUT_MANIFEST.json",
+      "bytes": 4100,
+      "sha256": "8c4ac96f276a878e92fa7dd972fa3090d081ef44df52472d56918407a93dd913"
+    },
+    {
+      "path": "session68-audit/FINAL_ROOT_PROSE_ADDENDUM.md",
+      "source_path": "session68-audit/FINAL_ROOT_PROSE_ADDENDUM.md",
+      "bytes": 3015,
+      "sha256": "02a6437c68a43a62da04c159cfdfd3596bc8e3c543ffb8c85226eb17584ca950"
+    },
+    {
+      "path": "session68-audit/PUBLICATION_MANIFEST.json",
+      "source_path": "session68-audit/PUBLICATION_MANIFEST.json",
+      "bytes": 2216,
+      "sha256": "6a9de078f91765f0bebe791f3d284df809c411813f7265563134e49faa53cd0d"
+    },
+    {
+      "path": "session68-audit/arithmetic.optimized.replay.json",
+      "source_path": "session68-audit/arithmetic.optimized.replay.json",
+      "bytes": 11337,
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "session68-audit/arithmetic.replay.json",
+      "source_path": "session68-audit/arithmetic.replay.json",
+      "bytes": 11337,
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "session68-audit/classification.optimized.replay.json",
+      "source_path": "session68-audit/classification.optimized.replay.json",
+      "bytes": 9212,
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "session68-audit/classification.replay.json",
+      "source_path": "session68-audit/classification.replay.json",
+      "bytes": 9212,
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "session68-audit/field.optimized.replay.json",
+      "source_path": "session68-audit/field.optimized.replay.json",
+      "bytes": 1101,
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "path": "session68-audit/field.replay.json",
+      "source_path": "session68-audit/field.replay.json",
+      "bytes": 1101,
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
     },
     {
       "path": "session68-audit/independent.normal.json",
@@ -26,6 +164,24 @@
       "source_path": "session68-audit/independent_controls.py",
       "bytes": 5662,
       "sha256": "6eef2fdbc7592f0b15df1bb2dc15f02694cc26c34e37a5aa1af2069e224ce480"
+    },
+    {
+      "path": "session68-audit/line.optimized.replay.json",
+      "source_path": "session68-audit/line.optimized.replay.json",
+      "bytes": 6380,
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "session68-audit/line.replay.json",
+      "source_path": "session68-audit/line.replay.json",
+      "bytes": 6380,
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "session68-audit/random.replay.txt",
+      "source_path": "session68-audit/random.replay.txt",
+      "bytes": 95,
+      "sha256": "edec8e264d42e4597a8d65a3ff384ac71a4b7a062e4d6612ba87d7730cdbd8d0"
     },
     {
       "path": "session68-classification/CLASSIFICATION.md",
@@ -118,6 +274,30 @@
       "sha256": "a41aa8b46601908da13abac6fd1e9566655e19e1dccc64ebd9f6cfba8d7c773c"
     },
     {
+      "path": "session68-root/FIBRE_COMPLETION.md",
+      "source_path": "session68-root/FIBRE_COMPLETION.md",
+      "bytes": 5685,
+      "sha256": "6dc283434e704908f839ff013a9b939c55a4575919f174d7797988eed2d347bd"
+    },
+    {
+      "path": "session68-root/FIBRE_MANIFEST.json",
+      "source_path": "session68-root/FIBRE_MANIFEST.json",
+      "bytes": 257,
+      "sha256": "d76cd28cca6cf7bc77d06ec329a902164f3e852d983293a7bd395e64dfc1b59e"
+    },
+    {
+      "path": "session68-root/FIELD_CONTROLS.md",
+      "source_path": "session68-root/FIELD_CONTROLS.md",
+      "bytes": 3184,
+      "sha256": "19269fd81de8ca23971b64eecd0d65b1ed8a6af35705b8f7568bd67c6bcfedd8"
+    },
+    {
+      "path": "session68-root/FIELD_MANIFEST.json",
+      "source_path": "session68-root/FIELD_MANIFEST.json",
+      "bytes": 586,
+      "sha256": "c57e9e2d87bb76cbf02efce817a1d5653a58072d41f4932876693b08dafc8a06"
+    },
+    {
       "path": "session68-root/MANIFEST.json",
       "source_path": "session68-root/MANIFEST.json",
       "bytes": 973,
@@ -130,10 +310,28 @@
       "sha256": "a6d0828715696cc0cc5a82e96c0a3a0dd4f846f32feb55fb90a5a6556c69b177"
     },
     {
+      "path": "session68-root/check_field_bridge.py",
+      "source_path": "session68-root/check_field_bridge.py",
+      "bytes": 3740,
+      "sha256": "68970b8af2babd35b84cdbe077dc0680de22a53536fe41996310ae8ec63fb568"
+    },
+    {
       "path": "session68-root/check_line_boundary.py",
       "source_path": "session68-root/check_line_boundary.py",
       "bytes": 2654,
       "sha256": "aaad646fd54596b5f773db8f638c4fc04419a1ca28f974090d64e7a96f677a32"
+    },
+    {
+      "path": "session68-root/field_bridge.json",
+      "source_path": "session68-root/field_bridge.json",
+      "bytes": 1101,
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "path": "session68-root/field_bridge.optimized.json",
+      "source_path": "session68-root/field_bridge.optimized.json",
+      "bytes": 1101,
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
     },
     {
       "path": "session68-root/inputs/THM-646-line-metagraph-score-complement-skeleton.md",
@@ -160,5 +358,5 @@
       "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
     }
   ],
-  "boundary": "Native authorship bytes preserved unchanged; snapshots/receipt integrity is separate from mathematical correctness."
+  "boundary": "Native author bytes are unchanged. Source integrity and source correctness remain separate evidence."
 }

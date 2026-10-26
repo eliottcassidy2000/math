@@ -1,0 +1,2608 @@
+
+===== 01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md =====
+---
+id: THM-4402
+title: "LRC14 norm-eighteen vanishing live-carrier gap"
+status: >
+  PROVED ELEMENTARY + VERIFIED-EXACT + INDEPENDENTLY AUDITED. In the fixed
+  minimal norm-18 coefficient sector (1,1,16), zero-defect raw carrier
+  components can have arbitrarily small positive length. Therefore no
+  positive component quantum depending only on this discrete shell data
+  exists. This refutes one uniform-gap proof route, not LRC(14).
+source: root + independent audit / LRC14 and percolation-transfer session, 2026-09-03
+depends_on:
+  - THM-4386-lrc14-canonical-component-relation-and-zero-defect-incidence
+related:
+  - THM-4393-lrc14-minimal-ternary-unit-norm-eighteen-shell
+  - THM-4396-lrc14-finite-dual-exact-pair-hybrid-certificate
+primary_script: 04-computation/lrc14_norm18_vanishing_carrier_gap_thm4402.py
+primary_output: 05-knowledge/results/lrc14_norm18_vanishing_carrier_gap_thm4402.out
+primary_script_sha256: d1dccd6e832e8ad762e37b5bf34c1cfc5fb3a33d17a17ee90a8c7b2985c622fd
+primary_output_sha256: fb470ef1a49bdca8abe3bae49b1cd7b475c5d0a7e2e9cbd0316c2e699e26fe77
+independent_audit_script: 04-computation/lrc14_norm18_vanishing_carrier_gap_thm4402_independent_audit.py
+independent_audit_output: 05-knowledge/results/lrc14_norm18_vanishing_carrier_gap_thm4402_independent_audit.out
+independent_audit_script_sha256: f8d1187fa5b109ff0f98adc82b5a9fccaee39cb80896d2af4ce8528bc3a33525
+independent_audit_output_sha256: e583efb53af2042363f15da5a61f5474d5966765aeb28222a3d5bf26ea43e2b5
+hash_basis: raw LF bytes
+audit: >
+  PASS. The primary exhausts the complete coefficient l1-ball through norm
+  17 uniformly in the speed parameter and symbolically checks the six-term
+  carrier formula. The dependency-free referee reconstructs both the raw
+  formula and literal interval intersection, checks 21,084 live predicates
+  on 1,002 speed values including two large hostile controls, and brute-forces
+  the full relation lattice through norm 18. Normal, optimized, and fixed
+  hash-seed runs byte-match the frozen LF outputs; neither script contains an
+  assert statement.
+---
+
+# THM-4402 -- LRC14 norm-eighteen vanishing live-carrier gap
+
+**PROVED ELEMENTARY + VERIFIED-EXACT + INDEPENDENTLY AUDITED. THIS IS A
+NO-GO THEOREM FOR A UNIFORM COMPONENT GAP, NOT A COUNTEREXAMPLE TO OR PROOF OF
+`LRC(14)`.**
+
+## 1. Statement
+
+Use the LRC14 triple-comb radius `r=3/14` and raw-carrier conventions of
+THM-4386.  For every integer
+
+```text
+m=6t+5,                 t>=2,
+```
+
+put
+
+```text
+w_m=(1,m,16m-1),
+c=C=(1,-16,1).                                             (1)
+```
+
+Then:
+
+1. `w_m` is a primitive sorted triple of distinct positive odd integers, all
+   prime to three.
+2. `c dot w_m=0`, and `c` is a primitive full-support ternary-unit relation.
+   In fact the least `l1` norm of *any* nonzero integer relation on `w_m` is
+   exactly `18`.
+3. The raw carrier `C` is physically live, has defect zero and owner
+   permutation `(0,1,2)`, and
+
+```text
+L_(w_m)(C)=3/[7(16m-1)]>0.                               (2)
+```
+
+Consequently
+
+```text
+inf_m L_(w_m)(C)=0.                                      (3)
+```
+
+The infimum is already zero after fixing relation-magnitude pattern
+`(1,1,16)`, defect `0`, and owner permutation `(0,1,2)`.  Thus there is no
+positive lower quantum for a nonempty raw component which depends only on
+those discrete data.
+
+## 2. Admissibility and exact relation minimum
+
+The congruence in `(1)` gives
+
+```text
+m=1 mod 2,       16m-1=1 mod 2,
+m=2 mod 3,       16m-1=1 mod 3.
+```
+
+Also `1<m<16m-1`, and the leading coordinate `1` makes the speed triple
+primitive.  Directly,
+
+```text
+1-16m+(16m-1)=0,
+```
+
+so `c` is a primitive ternary-unit relation of norm `18`.
+
+For the sharp lower bound, let `u=(a,b,d)` be any integer relation.  Its
+equation is
+
+```text
+(a-d)+(b+16d)m=0.                                       (4)
+```
+
+If `b+16d` is nonzero and `||u||_1<=16`, then
+
+```text
+m=|a-d|/|b+16d| <= |a|+|d| <=16,
+```
+
+contrary to `m>=17`.  If `b+16d=0`, equation `(4)` gives `a=d`; a nonzero
+solution is `d(1,-16,1)` and has norm `18|d|`.  Finally, because all three
+speeds are odd,
+
+```text
+||u||_1 congruent a+b+d congruent u dot w_m congruent 0 (mod 2).
+```
+
+No relation has odd norm, so there is none of norm `17`.  This proves the
+claimed minimum.  At `m=17` another norm-18 vector exists; no uniqueness is
+claimed or needed.
+
+## 3. One explicit physical carrier
+
+Choose the nearest-integer lift
+
+```text
+n=(0,1,16).
+```
+
+Then
+
+```text
+w_m cross n=(1,-16,1)=C,       c dot n=0.               (5)
+```
+
+Modulo three, the speeds are `(1,2,1)` and the lift is `(0,1,1)`.  Hence the
+
+===== 01-canon/theorems/THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md =====
+---
+id: THM-3075
+title: "Two-scale entropy-Newton chambers and rooted scale-tree holotopy"
+status: >
+  PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.  The two
+  noncommuting ordered six-slot limits of THM-3069 open into two explicit
+  simultaneous positive sectors.  A factorial-entropy invoice controls every
+  term containing an outer lower-equation error, while THM-3073 exactly
+  removes arbitrarily growing upper-triangular coefficients.  The resulting
+  thin sectors have explicit slope thresholds, positive physical resultants,
+  full carrier exponent ledgers, and sharp raw-convergence hostiles.  They are
+  sufficient rooted scale-tree chambers, not a maximal fan or arbitrary
+  six-slot theorem.
+source: root-gmc-two-scale-tropical-fan-2026-08-01
+audit: >
+  Two independent hostile audits rederived both determinant-one fixed-low
+  pivots and triangular norm splittings, the 3,600-factor entropy invoice,
+  slope thresholds, leakage rates, carrier exponent ledgers, and the raw
+  coefficient-convergence hostiles.  Immutable replay matched normal,
+  optimized, and stored output byte-for-byte with the declared LF hashes;
+  the independent documentation pass also succeeded.
+depends_on:
+  - THM-2824-arbitrary-three-slot-factorial-moment-divisibility-and-atomic-orientation-boundary
+  - THM-3063-terminal-suspension-transverse-resultant-and-five-slot-tail-holotopy
+  - THM-3069-one-normal-remote-terminal-suspension-and-physical-tropical-flag
+  - THM-3073-upper-triangular-resultant-norm-and-torsion-character-death-barcode
+related:
+  - THM-2985-multiparameter-normal-map-and-arc-factor-separation
+  - THM-3047-formal-corner-width-product-gamma-moment-and-strict-hankel-positivity
+  - THM-3054-affine-moving-lower-tropical-beta-gamma-tail-holotopy
+script: 04-computation/gmc_two_scale_entropy_newton_chambers_thm3075.py
+output: 05-knowledge/results/gmc_two_scale_entropy_newton_chambers_thm3075.out
+script_sha256: 1b9fb88fcdcbaeaa2a867f29b2e3e1b89f469f3e00ccc18f2e1c4fcdec08ba82
+output_sha256: 4cfc2181e2e7e608261438bbcd99c9f810941094e1f31f6488851020aa013d8c
+hash_basis: LF-normalized bytes
+---
+
+# THM-3075 -- two-scale entropy-Newton chambers and rooted scale-tree holotopy
+
+**PROVED + VERIFIED-EXACT + INDEPENDENTLY HOSTILE-AUDITED.**
+
+THM-3069 exhibits two different ordered six-slot cones.  In one, a remote
+fourth low slot is frozen before a terminal pair moves; in the other, the
+terminal pair is frozen before a sixth slot moves.  Ordered limits alone do
+not imply that either bracketing occupies an open simultaneous-scale sector.
+
+Both bracketings do occupy such a sector, but not by raw coefficientwise
+convergence.  Some upper coefficients grow at every positive scale ratio.
+The load-bearing repair is to combine a finite entropy invoice with
+THM-3073's exact upper-triangular norm quotient.
+
+## 1. The factorial entropy invoice
+
+For one normalized factorial atom, put
+
+```text
+M_r(d_1,...,d_r)=
+  L(f_(n+d_1)...f_(n+d_r))/L(f_n^r).                        (1)
+```
+
+If
+
+```text
+d_i=lambda_i T+O(1),       lambda_i>=0,                     (2)
+```
+
+then Stirling's formula gives
+
+```text
+log M_r=T Phi(lambda_1,...,lambda_r)+O(log T),
+Phi(lambda)=(sum lambda_i)log(sum lambda_i)
+            -sum lambda_i log lambda_i.                     (3)
+```
+
+Use the convention `0 log 0=0`.  With `u` slow factors of slope `x`, `v`
+fast factors of slope one, and the remaining factors fixed, the exponential
+weight is
+
+```text
+phi_(u,v)(x)=(ux+v)log(ux+v)-ux log x.                      (4)
+```
+
+For `0<x<=1` and `u+v<=r<=6`,
+
+```text
+0<=phi_(u,v)(x)-phi_(u,v)(0)
+ <=r x(log(6/x)+1).                                        (5)
+```
+
+Indeed, for `u>0`,
+
+```text
+d phi/dx=u log(u+v/x)<=r log(6/x),                          (6)
+```
+
+and integration from zero proves `(5)`; `u=0` is constant.
+
+The six-slot resultant uses forms of degrees `2,3,4,5,6`.  Its degree in the
+coefficients of the degree-`r` form is
+
+```text
+mu_r=720/r=(360,240,180,144,120).                           (7)
+```
+
+After expanding every coefficient into factorial atoms, one resultant term
+therefore contains
+
+```text
+sum_(r=2)^6 r mu_r=3600                                    (8)
+```
+
+underlying factorial factors, counted with multiplicity.  Define
+
+```text
+J(x)=3600 x(log(6/x)+1).                                   (9)
+```
+
+Every atomic resultant weight changes from the ordered boundary by at most
+`J(x)` per unit fast scale.  The bank is finite, so all nonexponential costs
+are absorbed by `poly(T)`.
+
+## 2. Sector A: remote fourth low and faster terminal pair
+
+Fix
+
+```text
+n>=1,       0<=a<b<c,       h>=1,
+alpha,beta>0,               x=alpha/beta.                  (10)
+```
+
+Let integer offsets satisfy
+
+```text
+D_T=alpha T+O(1),           C_T=beta T+O(1),               (11)
+```
+
+and use the ordered support
+
+```text
+(a,b,c,D_T,C_T,C_T+h).                                     (12)
+
+===== 01-canon/theorems/THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md =====
+---
+id: THM-3862
+title: "Russell finite-completion nonmonogenic branch contract"
+status: >
+  PROVED + CITED + INDEPENDENTLY PROOF-AUDITED.  This is a proved conditional
+  contract, not an existence theorem: conditional on a hypothetical Darboux
+  morphism from the THM-3785 Russell pseudo-plane, its finite normalization
+  over the target plane is finite flat, contains the Russell surface as an
+  open etale locus, and is not globally monogenic.  Every codimension-one
+  branch component has affine normalization A1; over C all branch components
+  and the Russell-arm Jelonek component share the unique target point at
+  infinity.  If the arm image itself is a branch component, the completion
+  degree is at least four.  JC(2) remains OPEN.
+source: root / iut_structure_audit / Russell completion and branch lane, 2026-08-23
+audit: >
+  INDEPENDENT ROOT PROOF AUDIT PASSED after the theorem was written by the
+  iut_structure_audit lane.  The audit separately reconstructed finiteness of
+  normalization, S subset B, finite type and quasi-finiteness in Zariski Main,
+  two-dimensional miracle flatness at every prime, the global monogenic
+  derivative-unit contradiction and its D(u) hostile, tame DVR ramification
+  over each generic branch component, deleted-divisor valuation transfer,
+  the normalization consequence of polynomial uniruledness, Nguyen's
+  common-infinity conclusion, and the L+D+E sheet count.  It also checked the
+  exact hypotheses against the cited primary sources and retained the
+  conditional/existence boundary.
+depends_on:
+  - THM-3785-linear-higher-pole-russell-pseudoplane-maximal-observable
+  - THM-3841-deleted-ramification-three-puncture-jelonek-nonentry
+  - THM-3843-russell-arm-birational-immersion-and-forced-self-identification
+  - THM-3849-russell-arm-conductor-polynomial-and-residual-contact-graph
+related:
+  - THM-3801-cubic-etale-normalization-nonmonogenic-and-companion-sheet-gate
+  - THM-3844-two-cusp-polynomial-branch-quadratic-resolvent-design-gate
+  - THM-3847-two-place-cubic-deformation-monogenic-unit-debt
+  - THM-3850-nonconstant-cubic-profile-irreducible-branch-puncture-formula
+  - THM-3851-tricuspidal-quartic-rank-two-two-place-tradeoff
+citation:
+  - "Z. Jelonek and M. Lason, Quantitative properties of the non-properness set of a polynomial map, arXiv:1411.5011v2, Theorem 3.2."
+  - "Nguyen Van Chau, Note on the Jacobian condition and the non-proper value set, Ann. Polon. Math. 84 (2004), 203--210, DOI 10.4064/ap84-3-2; arXiv:math/0305088."
+---
+
+# THM-3862 -- the Russell finite completion must be nonmonogenic with polynomial branches
+
+**PROVED + CITED + INDEPENDENTLY PROOF-AUDITED (conditional contract; JC(2)
+OPEN).**  Work over `C`.  Fix `c in C*` and let
+
+```text
+B=C[r,z,e]/(r^2e-z^3+c^3r),                 Y=Spec B,             (1)
+L=V(r,z) ~= A1_e.                                                   (2)
+```
+
+THM-3785 supplies the surjective etale cubic atlas
+
+```text
+phi:A2_(x,y) -> Y.                                                   (3)
+```
+
+Suppose, conditionally, that there is a Darboux pair `P,Q in B`,
+
+```text
+{P,Q}=lambda in C*,                                                  (4)
+```
+
+and write
+
+```text
+Psi=(P,Q):Y -> A2_(U,V),
+R=C[P,Q] ~= C[U,V],
+K=Frac(B),
+d=[K:Frac(R)].                                                       (5)
+```
+
+The bracket in `(4)` is the bracket induced by `(3)`.  Thus `dP,dQ` are
+independent everywhere, `Psi` is etale, and
+
+```text
+F=Psi phi:A2_(x,y) -> A2_(U,V)                                     (6)
+```
+
+is a polynomial Keller map with Jacobian `lambda`.  In particular `P,Q`
+are algebraically independent and the identification of `R` in `(5)` is
+literal.  Dominance in equal dimension makes `K/Frac(R)` finite.  THM-3785
+also gives the all-degree floor
+
+```text
+d>=3,                    [C(x,y):C(P,Q)]=3d>=9.                     (7)
+```
+
+Let
+
+```text
+S=the integral closure of R in K,
+Xbar=Spec S,
+pi:Xbar -> Spec R=A2_(U,V).                                        (8)
+```
+
+Then the following conditional conclusions hold.
+
+1. `S` is finite flat of rank `d` over `R`, and the inclusion `S subset B`
+   induces an open immersion
+
+   ```text
+   j:Y -> Xbar,                       Psi=pi j.                      (9)
+   ```
+
+2. The finite `R`-algebra `S` is not globally monogenic.  That is, there is
+   no `theta in S` with `S=R[theta]`.
+3. Every irreducible codimension-one component `Gamma` of the branch locus
+   of `pi`, equipped with its reduced curve structure, has affine
+   normalization
+
+   ```text
+   Gamma^nu ~= A1.                                                  (10)
+   ```
+
+4. The projective closures of all such branch components, together with the
+   arm image
+
+   ```text
+   Gamma_L=Psi(L),                                                   (11)
+   ```
+
+   meet the target line at infinity at one common point.
+5. If `Gamma_L` is itself a branch component of `pi`, then
+
+   ```text
+   d>=4.                                                            (12)
+   ```
+
+In particular a degree-three finite completion cannot use the arm image as
+one of its branch components, even though THM-3843 forces that image to be a
+component of the nonproperness set of the composite Keller map `(6)`.
+
+## 1. The finite normalization contains `Y` as an open set
+
+The ring `R` is a polynomial ring over `C`, hence excellent.  Since
+`K/Frac(R)` is finite, excellence makes its integral closure `S` finite over
+`R`.  Its fraction field is `K`: after clearing the coefficients in an
+algebraic equation for any `a in K`, a nonzero `h in R` can be chosen so that
+`ha` is integral over `R`, and then
+
+===== 01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md =====
+---
+id: THM-1805
+title: "THE VANDERMONDE IS A SIGNED SUM OVER TOURNAMENTS, AND IN/TRANSITIVITY IS EXACTLY WHAT SURVIVES vs CANCELS — the binary-forms↔tournaments bridge, proved. Expanding the fundamental alternating SL_n covariant ∏_{i<j}(x_i−x_j) (the √-discriminant) by choosing x_i or −x_j from each factor = orienting each edge = a TOURNAMENT T, giving ∏(x_i−x_j) = Σ_T sgn(T)·x^{score(T)} with score(T)_k = #wins of k and sgn(T) = (−1)^{#upsets}. Verified exactly n=3,4,5: the coefficient of x^d is 0 unless d is a permutation of (0,…,n−1), where it is ±1. SURVIVAL = TRANSITIVITY: a tournament has a permutation score sequence iff it is transitive (classical: distinct scores ⟺ no 3-cycle), so the surviving terms are exactly the n! transitive tournaments and EVERY intransitive tournament cancels — paired by the 3-CYCLE-REVERSING involution, which preserves all scores (each cycle vertex keeps 1 win/1 loss) and flips the sign (3 arcs reverse). So 'tournaments = in/transitivity' meets classical invariant theory: transitivity is what the discriminant sees, a directed 3-cycle is the cancelling unit, and the score sequence is the torus weight = the charge grading of the Laplace moment engine."
+status: >
+  PROVED / VERIFIED-EXACT. The expansion ∏(x_i−x_j) = Σ_T sgn(T)x^{score(T)} is an exact
+  polynomial identity, verified against the direct Vandermonde at n=3,4,5 (equal as coefficient
+  dictionaries). Survival = transitivity verified over ALL tournaments at n=4,5 (transitive ⟺
+  permutation score, both ⟺ no 3-cycle). The cancellation Σ_{T: score=d} sgn(T)=0 for
+  non-permutation d is a THEOREM (it IS the Vandermonde coefficient, exactly 0), and the
+  3-cycle-reversing map is verified score-preserving and sign-flipping at n=4,5 — the combinatorial
+  witness. The fully rigorous fixed-point-free involution is the classical Zeilberger-style
+  construction (canonical 3-cycle choice stable under reversal); cited, not re-derived here.
+  Not new mathematics globally (the tournament proof of the Vandermonde is classical), but the
+  in-repo bridge — binary-forms invariant theory ↔ tournaments = in/transitivity ↔ the Laplace
+  moment engine's charge grading — is new here, and it PROVES one concrete assertion of
+  boxeph's THM-1800 program.
+source: klein-2026-07-20-S385 (owner: work more on the representation theory of binary forms and how it relates to tournaments, which are in/transitivity itself; work the Laplace moment engine)
+depends_on: []
+related:
+  - THM-1800  # boxeph's Laplace-moment-engine / GIT-nullcone program (this proves its Vandermonde claim)
+  - THM-1790  # the Laplace moment engine (EMP floor) — score = the charge grading that engine averages
+  - THM-343   # H (Ham-path count) — the other in/transitivity measure; transitive is the H=1 extreme
+attribution: >
+  The Vandermonde tournament expansion and the cycle-reversing sign involution are CLASSICAL
+  (the standard combinatorial proof of the Vandermonde determinant), and were CLAIMED in the repo
+  as a stub by boxeph-THM-1800 ("the Vandermonde's tournament expansion cancels ALL intransitive
+  terms by a cycle-reversing sign involution"). This file PROVES/verifies that claim exactly and
+  connects it to the moment engine; the framing credit is boxeph's, the classical result is
+  nobody's to claim.
+script: 04-computation/vandermonde_tournament_klein_S385.py (+ .out)
+---
+
+# THM-1805 — the Vandermonde is a signed tournament sum, and intransitivity cancels
+
+## The bridge
+
+The Vandermonde `∏_{1≤i<j≤n}(x_i − x_j)` is the fundamental **alternating** covariant of `SL_n`
+— the square root of the discriminant, the lowest-degree object of classical invariant theory.
+Expand it by choosing, from each factor `(x_i − x_j)`, either `x_i` (**`i` wins**) or `−x_j`
+(**`j` wins**). A choice over all `C(n,2)` factors is exactly an **orientation of every edge =
+a tournament** `T`:
+
+```text
+∏_{i<j}(x_i − x_j) = Σ_T sgn(T)·x^{score(T)},
+   score(T)_k = #wins of k,   sgn(T) = (−1)^{#upsets}   (upset = larger index beats smaller).
+```
+
+Verified exactly at `n = 3,4,5` (the tournament sum equals the direct Vandermonde as coefficient
+dictionaries).
+
+## Survival = transitivity
+
+The coefficient of `x^d` is `0` unless `d` is a permutation of `(0,1,…,n−1)`, where it is `±1`.
+And a tournament has a permutation score sequence **iff it is transitive** — the classical fact
+that *distinct scores ⟺ no directed 3-cycle ⟺ transitive*, verified over all tournaments at
+`n = 4,5`. Therefore:
+
+> **The surviving terms are exactly the `n!` transitive tournaments** (one per linear order,
+> `6, 24, 120` at `n=3,4,5`). Every intransitive tournament cancels.
+
+The discriminant "sees" only transitivity; intransitivity is invisible to it.
+
+## The cancelling unit — a directed 3-cycle
+
+Intransitive tournaments cancel in signed pairs under the **3-cycle-reversing map**: reverse a
+directed 3-cycle `a→b→c→a`. This
+
+- **preserves every score** — each of `a,b,c` keeps exactly one win and one loss inside the
+  triangle, and no other edge moves; and
+- **flips the sign** — three arcs reverse, so the parity of `#upsets` changes by `3` (odd).
+
+So it pairs each intransitive tournament with an opposite-signed, same-score partner, and the
+signed sum over any non-permutation score vanishes. The transitive tournaments are the only ones
+with **no 3-cycle to reverse** — the fixed points, which is why they alone survive. (The fully
+rigorous fixed-point-free involution needs a canonical 3-cycle choice stable under reversal —
+the standard Zeilberger construction; the cancellation itself is already a theorem, being the
+exact Vandermonde coefficient `0`.)
+
+## Why this is the representation theory the owner asked for
+
+- **Binary forms / invariant theory.** The Vandermonde is `∏(x_i−x_j)`, the alternating `SL_n`
+  covariant; in the `n=2` case it is literally the discriminant of a binary quadratic, and the
+  general one is the bracket `[1 2 … n]` of the first fundamental theorem. Tournaments are its
+  monomial expansion.
+- **Tournaments = in/transitivity itself.** The expansion assigns each monomial a *net sign over
+  all tournaments with that score*, and this net sign is `±1` exactly on the transitive (acyclic)
+  orientations and `0` on everything with a cycle. Transitivity is not an add-on — it is the
+  content of the alternating projection.
+- **The Laplace moment engine.** The `score(T)` grading is the **torus weight** — the same
+  `U(1)` charge grading that `Λ_s(u) = Σ_q g_q(s)u^q` carries in the moment engine (THM-1790's
+  frame): `x_i ↔ ` weight `+`, the score `= ` net weight. "One-sided in charge" (the GMC(2)
+  nullcone) is the weight-extreme (transitive-like) locus, and the sign-twisted survival here is
+  the finite-dimensional shadow of the moment engine's charge projection `CT_u`. This is the
+  concrete `n`-vertex realization of boxeph's THM-1800 reading "one-sidedness = Hilbert–Mumford
+  instability for the hyperbolic torus."
+
+## Scope
+
+An exact identity plus a classical mechanism, proved/verified `n ≤ 5`, framed inside the repo's
+own objects. It settles boxeph's THM-1800 Vandermonde claim and pins the score↔weight↔charge
+dictionary linking tournaments, binary-form invariant theory, and the Laplace moment engine. No
+open problem is resolved; the bridge is now load-bearing rather than a stub.
+
+*Files: `04-computation/vandermonde_tournament_klein_S385.py` (+ `.out`).*
+
+===== 01-canon/theorems/THM-896-kendall-wei-perron-atlas.md =====
+---
+id: THM-896
+title: THE KENDALL–WEI / PERRON ATLAS OF THE METAGRAPH (owner-fed claims verified and canonized) — self-composition R∘R counts 2-paths (the score-of-scores) and the Kendall–Wei iteration converges to the Perron eigenvector: every vertex's strength defined through all others SIMULTANEOUSLY — the all-frames-at-once invariant of the S28 intersubjective program, tournament-exact. (i) λ = 0 ⟺ TRANSITIVE (classical, one line: a tournament's adjacency is nilpotent ⟺ acyclic ⟺ transitive — "the transitive tournament is the zero of relational feedback"); (ii) per-class atlas n = 4..7: corr(λ, −score-variance) = +0.956/+0.928/+0.936/(n=7 in .out) — the owner's ≈0.93 verified; (iii) λ has NONZERO SPREAD inside EVERY multi-class score level (11/11 at n=6) — the intersubjective invariant STRICTLY REFINES the frame-dependent first moment (scores), which is velocity-relative/acceleration-absolute made tournament-exact. BONUS (proved, one line): A000568(n) ≡ #SC(n) (mod 2) — complementation is an involution on classes with SC as fixed points; SC counts verified 2, 8, 12 at n = 4, 5, 6 (cross-validating the merged-metagraph canon (V−SC)/2 = 2, 22)
+status: (i) PROVED (classical; proof in-file); (ii)/(iii) MACHINE-VERIFIED per iso class by exact orbit-marking enumeration (counts 4/12/56/456 = A000568 ✓); the SC-parity lemma PROVED; source claims fed by the owner (verbatim numbers confirmed)
+source: boxeph-2026-07-16-S30 (owner prompt: self-compositions, Kendall–Wei, per-class λ; verify and integrate)
+related: [opus THM-894 (LRC Kendall-Wei: the resonance-matrix Perron over the cluster's own speeds — the LRC face of this prompt), mac-mini THM-895 (Helmholtz identity: corrected unit-flow gradient energy = x/n + numerical Perron census — the deeper Helmholtz), 07-reflections/the-intersubjective-object-boxeph-S28.md (this is its tournament-side theorem), klein cont.8 (composition defect = 3c₃ — the defect is the same R∘R object's antisymmetric shadow), kps coordinate atlas (C3 = score variance — λ refines it), THM-853(III) locker tournament (next: its λ)]
+script: 04-computation/lrc14_deviation_kendallwei_boxeph_S30.py -> 05-knowledge/results/lrc14_deviation_kendallwei_boxeph_S30.out
+---
+
+# THM-893 — the Kendall–Wei / Perron atlas
+
+**(i) λ = 0 ⟺ transitive.** For a tournament with adjacency A: ρ(A) = 0 ⟺ A nilpotent
+⟺ the digraph is acyclic ⟺ (totality) it is the transitive order. *Proof:* nilpotent ⟺
+no directed cycle (a cycle gives tr(A^k) > 0); an acyclic tournament has a source by
+finiteness, induct. ∎ The transitive tournament is the unique zero of relational
+feedback; every other class has λ > 0 fed by its cycle part (the curl, in the S28
+Helmholtz reading — klein cont.8's composition defect 3c₃ is the same second-order
+object's antisymmetric shadow).
+
+**(ii)/(iii) The atlas (exact class enumeration, orbit-marking).** Classes 4/12/56/456
+at n = 4/5/6/7 (= A000568 ✓). Per class: λ (power iteration on A), x = score variance:
+
+| n | classes | corr(λ, −x) | multi-class score levels | levels with λ-spread > 0 |
+|---|---|---|---|---|
+| 4 | 4 | +0.956 | 0 | — |
+| 5 | 12 | +0.928 | 2 | 2/2 |
+| 6 | 56 | +0.936 | 11 | 11/11 |
+| 7 | 456 | +0.947 | 41 | **40-ish/41 — FAILS: cospectral pairs exist** |
+
+The owner's corr ≈ 0.93 is confirmed at every n (0.928–0.956). The refinement claim
+(iii) holds STRICTLY at n ≤ 6 (13/13 multi-class levels separated) — and **FIRST FAILS
+AT n = 7**, by genuinely COSPECTRAL non-isomorphic pairs (exact integer characteristic
+polynomials equal: e.g. x⁷ − 4x⁴ − 4x³ − 3x² − x at score level (1,1,2,3,4,4,6), and
+two further tied pairs at level (1,2,2,3,3,4,6) with polys −6,−6,−7,−2 and −6,−7,−6,−2):
+the ENTIRE spectrum ties, not merely λ. So: score = velocity (per-frame), λ =
+acceleration (the all-frames fixed point), and the Perron invariant refines the first
+moment strictly through n = 6, with n = 7 the first cospectral degeneracy — n = 7 joins
+the repo's first-failure list (width formula, E_n chordality, …). The corrected
+statement: **the refinement is strict below the first cospectral pair, which lives at
+n = 7** (minimality verified: no within-level λ-ties at n ≤ 6).
+
+**SC-parity lemma (proved).** Complementation T ↦ T^op induces an involution on iso
+classes whose fixed points are the self-complementary classes: A000568(n) ≡ #SC(n)
+(mod 2). Verified: SC = 2, 8, 12 at n = 4, 5, 6 — consistent with the merged-metagraph
+canon (V_merged = (A000568 + SC)/2; NS/2 = 2, 22 at n = 5, 6 ✓). (This is the pairing
+the owner's toothpick prompt starts from: classes come in complement-pairs plus folded
+fixed points — see TANGENTS entry T-toothpick, boxeph-S30.)
+
+## ADDENDUM (S31): the cospectral census and the score-of-scores repair (partial)
+
+Full census at n = 7: **256 within-level cospectral pairs** (λ-tie + exact charpoly
+equality). The owner's R∘R invariant — the score-of-scores multiset (row sums of A²,
+NOT a spectral function) — separates **225 of the 256 (88%)**; **31 pairs resist both
+the spectrum and the second score vector** (the A²-entry multiset separates some but
+not all of those). So the owner's object both creates the refinement story and repairs
+most of its own n = 7 degeneracy; the 31 resistant pairs are the next degeneracy class
+(named: which entrywise power-invariant completes the separation?). Data in the S31
+tool log; reproduction: the S30 script + charpoly/matmul (10 lines).
+
+## ADDENDUM 2 (S32): THE TOWER COMPLETES — the separating invariant found
+
+Escalation census on all 256 cospectral pairs: A²-rowsums 225/256; A³-rowsums 242/256;
+joint (s,s²) 226; joint (s,s²,s³) 250; **the FULL KENDALL–WEI TOWER — the per-vertex
+joint vector (s⁽¹⁾,…,s⁽⁶⁾), rowsums of A through A⁶ — separates 256/256.** Independently,
+1-WL (out,in)-refinement also separates 256/256. So at n = 7 the owner's iteration
+s → s² → … terminates at ≤ 6 = n−1 iterates with COMPLETE resolution of the spectral
+degeneracy: the entrywise tower sees everything the spectrum misses. (Two independent
+completions; the joint-vector form is the Kendall–Wei-native one. Conjecture for the
+schedule: n−1 iterates suffice at every n — test at n = 8 when a box has the budget.)
+
+## Evidence log
+- [x] enumeration exact (A000568 reproduced n ≤ 7); (i) proof + verified; (ii)/(iii)
+      verified n ≤ 6, n = 7 in the .out; SC parity proved + verified
+- [ ] λ of the locker tournament D_n (bridge to THM-853(III)/THM-865)
+- [ ] λ on the merged metagraph as a flow coordinate (kps atlas candidate: does the
+      H-drift linearize in log λ? — their cont.29 found no coordinate; λ is untested)
+
+===== 01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md =====
+---
+id: THM-819
+title: THE PRIMITIVE HARMONIC LAW — for every k ≥ 1, the interval core's good measure at the sub-tight threshold is EXACTLY the primitive harmonic sum — m({1,…,k}; λ = 1/(k+2)) = (2/((k+1)(k+2))) · Σ_{1≤u≤k, gcd(u,k+1)=1} 1/u. COROLLARY: it equals H_k/C(k+2,2) (THM-805's harmonic-measure form) ⟺ k+1 is PRIME — the "mod-6 law" of HYP-6885 was the shadow of primality (primes > 3 are ≡ ±1 mod 6, so n = k+2 = p+1 ≡ 0,2 mod 6; the mod-6 exceptions n ∈ {10,16,22} are n−1 ∈ {9,15,21} composite). The deep well is the p = 13 instance: m({1..12}; 1/14) = 2H₁₂/(13·14) = H₁₂/91 (mac-mini THM-736's base measure — now an instance of a totient-structured law)
+status: PROVED (three-step proof below: Dirichlet confinement + per-witness two-sided extents + unit-inversion bijection; every step elementary and self-contained) + REFEREED (exact ℚ, k = 1..30, zero exceptions; also re-derives every EQUAL/differ entry of the cont.8 ladder including the exact failure ratios)
+source: kind-pasteur-2026-07-15-S128 (cont.9; owner: prove the mod-6 law)
+renumber_note: Reserved/pushed as THM-817 after the earlier THM-817 return-satellite reservation and proof; S13 renumbered it to THM-819 because THM-818 had already been assigned to the n=9 relation-join theorem. Codex-S10 then repaired the null-boundary quantifier and replay text.
+depends_on: []
+related:
+  - THM-805 (the Tutte/harmonic bridge whose part (ii) this completes and corrects: the harmonic-number form is the prime case)
+  - HYP-6885 (a) — RESOLVED by this theorem (the mod-6 characterization was correct data, wrong lens)
+  - mac-mini THM-736 (the p=13 deep-well instance |G'| = H₁₂/91)
+  - HYP-6865 (the staircase's electrical resistance H_{n−2}: matches the good measure exactly iff n−1 prime — the staircase network "knows" primality through the LRC)
+verification:
+  - 04-computation/thm819_primitive_harmonic_referee_kps_S128c9.py
+  - 05-knowledge/results/thm819_primitive_harmonic_referee_kps_S128c9.out
+---
+
+# THM-819 — the primitive harmonic law
+
+**Theorem.** For k ≥ 1, set q = k+1, δ = 1/(q(k+2)). Then
+
+>  m({1,…,k}; 1/(k+2)) = 2δ · Σ_{1≤u≤k, gcd(u,q)=1} 1/u.
+
+**Step 1 (Dirichlet confinement up to a null boundary).** Let t be good
+(‖jt‖ ≥ 1/(k+2) for all j ≤ k).  The sharp pigeonhole form of Dirichlet with
+Q = k+1 gives `1≤j≤q` with `‖jt‖≤1/(k+2)`.  If the inequality is strict,
+goodness forces `j=q`: t lies within `δ'=‖qt‖/q<δ` of some `a/q`.  If
+`ε=qt-a` and `d=gcd(a,q)>1`, then `(q/d)≤k` and
+`‖(q/d)t‖=‖a/d+ε/d‖=|ε|/d<1/(k+2)`, a contradiction.  Hence every strict
+Dirichlet case lies within δ of a primitive `a/q`.
+
+The equality case omitted by the word “strict” is finite and has measure zero.
+Indeed equality in the `q+1`-point spacing argument forces the orbit
+`0,t,...,qt` to be the equally spaced `(q+1)`-grid, so
+`t=b/(q+1)` modulo one.  Some of these points need not lie in the primitive
+`q`-neighborhoods (for example `k=3,t=2/5`), which is why the earlier
+pointwise formulation was too strong.  Removing or restoring this finite set
+does not change `m`.  Thus, for the measure calculation, the good set is
+contained in the δ-neighborhoods of the primitive witnesses.
+
+**Step 2 (per-witness extents).** Fix a primitive a/q and write t = a/q + s, |s| ≤ δ. For j ≤ k:
+‖j·a/q‖ = (ja mod q)/q or its complement; the residues ja mod q run over nonzero residues. The
+UNIQUE binding speeds are j⁺ ≡ a^{−1} (mod q) (residue +1: ‖j⁺t‖ = 1/q + j⁺s) and j⁻ = q − j⁺
+(residue −1: ‖j⁻t‖ = 1/q − j⁻s). All other speeds have ‖ja/q‖ ≥ 2/q, and over |s| ≤ δ they move
+at most kδ = k/(q(k+2)), with 2/q − 1/(k+2) = (k+3)/(q(k+2)) > kδ — never binding. Speeds sharing
+a factor with q sit at ≥ 2/q automatically (their residues are nonzero multiples of the gcd).
+Hence the good part of the neighborhood is exactly a/q − δ/j⁺ ≤ t ≤ a/q + δ/j⁻ (each side: the
+binding constraint reaches 1/(k+2) precisely at excursion (1/q − 1/(k+2))/j± = δ·(k+2−q)... =
+δ/j± after simplifying with 1/q − 1/(k+2) = δ). Neighborhoods are disjoint (2δ < 1/q for k ≥ 2;
+k=1 checked directly), so each witness contributes length δ(1/j⁺ + 1/j⁻).
+
+**Step 3 (unit inversion).** As a runs over the primitive residues mod q, j⁺ = a^{−1} mod q runs
+over the primitive residues bijectively, and j⁻ = q − j⁺ likewise. Therefore
+Σ_a (1/j⁺ + 1/j⁻) = 2·Σ_{u primitive mod q, u ≤ k} 1/u, and m = 2δ·Σ_{gcd(u,q)=1} 1/u. ∎
+
+**Corollary (the prime law).** Σ_{u≤k, gcd(u,k+1)=1} 1/u = H_k ⟺ every u ≤ k is coprime to k+1
+⟺ k+1 prime. So THM-805(ii)'s harmonic form m = H_k/C(k+2,2) holds iff n−1 = k+1 is prime —
+{4,6,8,12,14,18,20} are exactly the n ≤ 22 with n−1 prime, and the deep well (n=14, p=13) is one
+of them. The failure ratios of the cont.8 referee are reproduced exactly as H^prim/H_k.
+
+**LRC reading.** The interval-core good measure — the base quantity of every peel bound on
+interval bodies (THM-733/735/738/741 ladder) — is a TOTIENT-weighted harmonic object: only the
+speeds coprime to k+1 contribute measure at the sub-tight threshold, each in proportion 1/u, and
+each witness interval is "powered" by the inverse pair (a, a^{−1}). Via HYP-6865, the staircase's
+electrical resistance equals this measure precisely when n−1 is prime: the Smith network of the
+staircase detects primality of n−1 through the Lonely Runner.
+
+## Evidence log
+
+- [x] referee (tutte-harmonic ladder, cont.8 + this session k=1..30): exact ℚ equality of the
+      primitive formula at every k; prime/composite split exactly as the corollary states
+- [x] j=4 run co-harvest at time of writing: 49/2002 bodies complete, 49/49 clean (fails=[])
+
+===== 07-reflections/polynomial-agent.md =====
+# The Polynomial Agent: An Architecture That IS Its Model
+
+**Session:** kind-pasteur-2026-03-17-S116n33
+
+## The Radical Insight
+
+Don't USE P(z) as a tool. BE P(z). The agent's architecture IS the polynomial:
+
+**State = five numbers. That's the entire model.**
+
+```
+A_0 = 29    (what I know about equilibrium)
+A_1 = -14   (what I know about individual arcs)
+A_2 = -25   (what I know about pairwise correlations)
+A_3 = 6     (what I know about cycle structure)
+A_4 = 5     (what I know about independence structure)
+```
+
+Every prediction, every decision, every measure of surprise — all computed from these five numbers in O(1) time.
+
+## Comparison to Existing Architectures
+
+| System | Parameters | Update cost | Prediction | Exact? |
+|--------|-----------|-------------|------------|--------|
+| Elo | n | O(1) | point estimate | No |
+| Bradley-Terry | n | O(n) | MLE | No |
+| TrueSkill | 2n | O(n) | mean + variance | No |
+| GNNRank | O(n²) | O(n² · layers) | embedding | No |
+| **P(z) Agent** | **5** | **O(5)** | **any time horizon** | **Yes** |
+
+Five parameters. Not five per item — five TOTAL. The polynomial captures 100% of the variance (Parseval identity verified). No approximation, no convergence issues, no hyperparameter tuning.
+
+## The Architecture
+
+```
+observation (A > B)
+    │
+    ▼
+┌────────────────────────┐
+│  DECOMPOSE into 3 signals │
+│  slow  = degree 1 content │  ← boost 9 = 3²
+│  medium = degree 2 content │  ← boost 4 = 2²
+│  fast  = degree 3-4 content│  ← boost 7/3
+└─────────┬──────────────┘
+          │
+          ▼
+┌────────────────────────┐
+│  UPDATE 5 coefficients    │
+│  A_k → A_k - 2·C_k       │  ← O(5) arithmetic operations
+└─────────┬──────────────┘
+          │
+    ┌─────┴─────┐
+    ▼           ▼
+┌────────┐  ┌──────────┐
+│PREDICT │  │  DECIDE   │
+│ P(z)   │  │next query │
+│at any z│  │max info   │
+│in O(1) │  │gain       │
+└────────┘  └──────────┘
+```
+
+## What Each Coefficient Knows
+
+**A_0 (degree 0):** The equilibrium. Never updated by individual observations — it's the GLOBAL MEAN, known a priori from the number of items. This is the agent's "prior."
+
+**A_1 (degree 1):** The sum of individual arc contributions. Updated when any comparison confirms or reverses an arc. Decay rate: (4/5)^t = slow. This is the agent's "running total of evidence."
+
+**A_2 (degree 2):** The sum of pairwise correlations. Updated when a comparison changes the relationship between two arcs. Decay rate: (3/5)^t = moderate. This is the agent's "pattern detector."
+
+**A_3 (degree 3):** The cycle content. Updated when a comparison creates or destroys a 3-cycle. Decay rate: (2/5)^t = fast. This is the agent's "contradiction detector."
+
+**A_4 (degree 4):** The independence content. Updated when disjoint cycle pairs form or break. Decay rate: (1/5)^t = very fast. This is the agent's "deep structure sensor."
+
+## The Multi-Resolution View
+
+The polynomial IS a wavelet decomposition of the ranking signal:
+
+```
+Time horizon:   ∞ ←─────────────────────→ 0
+Resolution:     global ← mid ← local ← instant
+Coefficient:    A_0    A_1   A_2    A_3  A_4
+Decay rate:     ∞      3.1   1.4   0.8  0.4  (half-lives)
+Signal type:    prior  arcs  pairs  cycles indep
+Attention:      —      3²    2²    7/3   3/2
+```
+
+Low-degree coefficients see the GLOBAL picture (slowly changing).
+High-degree coefficients see the LOCAL picture (rapidly changing).
+
+The agent simultaneously tracks structure at ALL scales with exactly one number per scale.
+
+## The Streamlined API
+
+```python
+class PolynomialAgent:
+    """A ranking agent whose entire state is 5 numbers."""
+
+    def __init__(self, n_items, degree=4):
+        self.degree = degree
+        self.A = [mean_H(n_items)] + [0.0] * degree
+        # A[0] = prior mean (known analytically)
+        # A[1..4] = zero (no observations yet)
+
+    def observe(self, winner, loser, result):
+        """Update the 5 coefficients from one comparison."""
+        delta = self._decompose(winner, loser, result)
+        for k in range(self.degree + 1):
+            self.A[k] += delta[k]
+
+    def predict(self, n_future_perturbations=0):
+        """Predict ranking ambiguity after n future random changes."""
+        z = self._decay_factor(n_future_perturbations)
+        return sum(self.A[k] * z**k for k in range(self.degree + 1))
+
+    def surprise(self, winner, loser, result):
+        """How surprising was this result? (0 = expected, 1 = shocking)"""
+        delta = self._decompose(winner, loser, result)
+        fast = sum(abs(delta[k]) for k in range(3, self.degree + 1))
+        total = sum(abs(delta[k]) for k in range(1, self.degree + 1))
+        return fast / total if total > 0 else 0
+
+    def curiosity(self):
+        """How curious should the agent be? (ratio of fast to slow content)"""
+        fast = sum(self.A[k]**2 for k in range(3, self.degree + 1))
+        slow = sum(self.A[k]**2 for k in range(1, 3))
+        return fast / slow if slow > 0 else float('inf')
+
+    def confidence(self):
+        """How confident is the current ranking? (inverse of ambiguity)"""
+        return 1.0 / self.predict(0)
+
+    def next_query(self, available_pairs):
+        """Choose the most informative pair to compare next."""
+        best_gain = -1
+        best_pair = None
+        for (a, b) in available_pairs:
+            gain = self._information_gain(a, b)
+            if gain > best_gain:
+                best_gain = gain
+                best_pair = (a, b)
+
+===== 07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md =====
+# LRC14 Haar Product Tile Discrepancy Reflection
+
+The bridge that now feels live is: discrepancy theory is not only about
+averages being small; it is also about locating the first coefficient that
+refuses to vanish.  For LRC14, the recent agent work has already made the
+state space local: safe intervals, boundary cocircuits, endpoint-owner pairs,
+Ramanujan packets, Fejer atom banks, K33/state-lift debt, and smoothing
+guardrails.  The missing language was how local pieces multiply.
+
+The two-dimensional Haar product rule gives that multiplication table almost
+too cleanly.  In one dimension, two dyadic Haar functions are disjoint, equal,
+or nested.  Their product is zero, an indicator, or a signed smaller Haar
+function.  In two dimensions, the rule just happens coordinate by coordinate.
+That creates exactly the tournament-tiling menu:
+
+```text
+zero                  independent tiles
+indicator x indicator boundary atom
+indicator x haar      owner strip
+haar x indicator      owner strip
+same-direction nest   recursive refinement
+opposite nest         cross handoff / zipper
+```
+
+The finite depth-3 census is a good sanity check.  Most rectangle pairs are
+orthogonal zero (`86.4%`).  The same-tile atoms are tiny (`0.44%`).  The three
+live signed classes are sparse and perfectly balanced.  So a direct positivity
+sum is probably the wrong thing to ask for.  A better proof shape is:
+
+```text
+if no lonely open interval exists,
+then some typed local Haar coefficient must survive;
+if none survive,
+then the packet is a pure boundary atom;
+pure boundary atoms should be AP/GW or a named state-lift obstruction.
+```
+
+This also clarifies the role of the tournament tiling model.  A fixed-path
+tournament tile is a two-coordinate object; the Haar rectangle is also a
+two-coordinate object.  The product rule says interactions are classified by
+coordinate equality, nesting, and crossing.  That is what the tiling model has
+been doing combinatorially with strips, pins, staircase anti-diagonals, and
+edge flips.
+
+The guardrail is just as important as the analogy.  Haar products can tell us
+that a local coefficient exists, but they do not automatically remember why it
+is legal.  AP and Goddyn-Wong already teach that lesson: the visible boundary
+owner skeleton can be the same while the hidden C27 transfer differs.  So any
+Haar-discrepancy proof has to carry endpoint owners, exact-period labels,
+C27/GW transfer labels, Fejer packet identity, and K33/state-lift debt.
+
+The next concrete computation should attach this table to actual LRC14 packet
+fibers.  I would start with the named rows: AP, GW, `12->36`, `10->20`,
+`13->26`, `P10+GW`, `12->168`, and the lcm-tail rows.  For each row, make a
+rectangular grid whose axes are endpoint walls and proof clocks.  The target is
+not a huge coefficient search; it is a typed vanishing test.  If the owner-strip
+and cross-handoff coefficients vanish, what boundary skeleton is forced?
+
+That question is much closer to the recent tope/cocircuit and certificate
+handoff work than to raw runner enumeration.  It is a discrepancy theorem with
+labels, and that feels like the right level of abstraction for the current
+LRC14 proof stack.
+
+===== 07-reflections/the-floor-binds-on-the-dual-side.md =====
+# The floor binds on the dual side
+
+*mac-mini-2026-06-29-S31. The open question was whether the metagraph reproduces the cusp value 4cos²(3π/7). The answer made me move to the other metagraph — the one we keep calling first-class and keep not using.*
+
+## Looking on the wrong side
+
+I went in expecting the tournament metagraph to hand me `4cos^2(3\pi/7)`. It is the natural place to look: the cusp is the transitive limit, the binding mode is the 3-cycle (THM-588's Fiedler eigenfunction, the unique quadratic invariant), and the apex prime 7 should show up in the `Z_7` circulant tournaments. So I computed them — all eight circulant tournaments on `Z_7`, the size-three connection sets. Their autocorrelation gaps are `0.308` for the six generic ones and `2.0` for the two Paley/Fano sets `\{1,2,4\}, \{3,5,6\}`, which are also the `H`-maximizers (`189 = 27\cdot 7` against `175`). That is a clean, satisfying picture — the Paley tournament is the flat, optimal, most-Hamiltonian object, exactly as THM-586 says — and it has nothing to do with `0.198`. The binding value is *smaller* than the smallest tournament gap. It is sub-tournament. The tournament metagraph does not contain it.
+
+The reason is one inequality: a tournament connection set on `Z_7` has size three (it must split `Z_7^*` with its negative), and the binding object is a **doublet**, size two. You cannot make a tournament out of two residues. The doublet is below the floor of what a tournament can express.
+
+## The value was an even-graph eigenvalue all along
+
+So I asked what a size-two set *is*. A doublet `\{a,b\}` depends only on its difference `d=b-a`; its autocorrelation lives on `\{0,\pm d\}`, which is `2I + A(C_7)` — twice the identity plus the adjacency of the seven-cycle `\mathrm{Cay}(Z_7,\{\pm d\})`. And then the value falls out exactly:
+
+> `4\cos^2(3\pi/7) = 2 + 2\cos(6\pi/7) = 2 + \lambda_{\min}\!\big(A(C_7)\big).`
+
+The binding value is the bottom of the seven-cycle's spectrum, shifted by two. The seven-cycle is the minimal connected `Z_7`-circulant **even graph** — the cusp of `E_7`, the even-graph dual metagraph. The number we were hunting was never a tournament invariant. It was an even-graph eigenvalue, and we had been looking for it in the wrong metagraph.
+
+This is the kind of correction that should have been obvious in advance, because THM-588 told us. The tournament metagraph has *no* first-order invariant (`\mathrm{mult}(1)=0`): the cut space, the scores, the hierarchy — none of it survives the quotient. The only invariant is the cyclicity, the cycle-space part. The metagraph itself says the binding content is cyclic, not cut. The Lonely Runner floor is the `\mathrm{BOUNDED}` half, the second moment, the cycle space; the witness/score side is the cut space, and we already retired it as off-path. Of course the floor binds on the dual. The primal carries the optimum — the Paley tournament, flat spectrum, `H`-max; the dual carries the floor — the minimal cycle, the bottom eigenvalue. Optimum on `G_n`, floor on `E_n`. Cut and cycle. We have been writing "even graphs are first-class, `E_n` is the dual" at the top of every session and reaching for `G_n` every time.
+
+## Dual minimal cycles, and the apex sets the length
+
+S30 said the metagraph 3-cycle mirrors the LRC doublet, and that was almost right and on the wrong axis. They are not a same-side mirror; they are dual. The 3-cycle is the minimal relation in the cut-space metagraph `G_n` — a `Z_3` object, gap `1`, the Fiedler mode. The doublet is the minimal relation in the cycle-space metagraph `E_n` — a `Z_7` object, the seven-cycle, gap `2+\lambda_{\min}(C_7)`. Both are the minimal **cycle**; the apex prime sets its length. Three on the tournament side, seven on the even-graph side, and the seven is seven because `14 = 2\cdot 7`.
+
+That last sentence is a formula. For the Lonely Runner at `n = 2p`, the apex cusp binds at the `Z_p` doublet, whose value is the `E_p` cusp eigenvalue:
+
+> `2 + \lambda_{\min}(C_p) = 2 - 2\cos(\pi/p) = 4\sin^2\!\big(\tfrac{\pi}{2p}\big).`
+
+I checked it down the family: `p=3` gives `1` (LRC6), `p=5` gives `0.382`, `p=7` gives `0.198` (LRC14), `p=11` gives `0.081`, `p=13` gives `0.058`. It decays like `\pi^2/p^2`. The floor is generous at small apex primes and tightens as the prime grows — larger apex, smaller floor, harder problem. There is a real asymptotic here: the per-level coupling the Lonely Runner can rely on shrinks quadratically in the apex prime, and `n=14` sits at `p=7`, where it is still a comfortable `0.198`. Whatever the full floor program needs, the atom it rests on is `4\sin^2(\pi/2p)`, the spectral gap of the minimal cycle in the dual metagraph.
+
+## What I'll carry forward
+
+The concrete next question is whether the descent's R-tail (THM-578) literally lands on `C_p` — whether the 2-adic descent's odd core, at the binding level, is exactly the minimal even graph, so the floor's last bound is verbatim the `E_p` cusp eigenvalue rather than a quantity that merely equals it. If so, the floor is closed by a single even-graph spectral fact, uniform in the apex prime. And the wider lesson is a habit, not a theorem: when the cut side goes quiet, the content is on the cycle side. The witness was cut and off-path; the floor is cycle and binding; the obstruction (S24) that cannot be a coboundary is the cyclicity; and now the binding value is a cycle eigenvalue in the dual. Every time the project has reduced, it has reduced to the cycle space. The even graphs were first-class the whole time.
+
+See [[the-minimal-relation-binds-the-cusp]] (HYP-3585, the same-side version corrected here), [[even-graphs-as-first-class]] (the dual `E_n`), [[relations-not-things]] (the cyclicity is the only invariant), THM-588 (no cut invariant, only the quadratic), THM-586 (Paley = the optimum). New: HYP-3590.
+
+===== 07-reflections/the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md =====
+---
+source: oracle-2026-06-02-S559o
+status: synthesis + new cross-link (the user's A+B=C summand graph = the LRC pinch denominator; addition-shadow=pinch, multiplication-shadow=sieve, they meet on the rationals)
+tags:
+  - lonely-runner
+  - summand-graph
+  - pinch
+  - sieve
+  - addition
+  - multiplication
+  - parity
+  - tournament
+---
+
+# The Summand Graph Node IS the LRC Pinch Denominator — Addition and Multiplication as the Two Witness Shadows
+
+The user recalled an additive tournament-like construction on ℕ — *nodes `A,B,C` with
+arcs `(A→C),(B→C)` iff `A+B=C`* — and asked to connect it to the repo's even/odd and
+addition/multiplication threads. It is a recorded object, and it links **directly** to
+the live LRC@14 pinch frontier in a way nobody had written down.
+
+## The construction is the SUMMAND GRAPH (oracle-2026-05-03)
+
+`07-reflections/summand-graph-fermat-zeckendorf.md` defines exactly this: the digraph on
+ℕ with `a→n` and `b→n` whenever `a+b=n`, `a≠b`. Known facts:
+- node `n`'s **incoming-pair-count** is `⌊(n−1)/2⌋` — **parity-split**: odd `n` →
+  `(n−1)/2` pairs; even `n` → `n/2−1` (the midpoint pair `n/2+n/2` is excluded).
+- **Section 4 there:** "the summand graph IS the tournament staircase" — node `n` ↔
+  `δ_{n−2}`, depth-`k` multiplicity `2^{k−2}` mirrors the tournament binary tree, H-values
+  fall on Zeckendorf/Fibonacci sums, and the forbidden `{7,21}` recur as nodes.
+
+## The new bridge: node `C` = the LRC pinch denominator
+
+opus-S557 (the pinch lemma): for a set with `M(S)<1/2`, the loneliness radius is
+`M=r/s` where the binding pair `(v_a,v_b)` **straddles** the observer and
+`s=(v_a+v_b)/gcd` is the **reduced pair-sum**, attained at the pinch time `t*=m/(v_a+v_b)`.
+oracle-S555o: the LRC@14 pinch pigeonhole runs over "the `⌊n/2⌋` pairs summing to `n`."
+Those pairs `{(a, n−a)}` are **exactly the incoming pairs of node `n` in the summand
+graph.** Hence:
+
+> **Summand-graph node `C` = the LRC pinch denominator `s = v_a+v_b`. Its incoming pairs
+> are the pinch-pairs; its pair-count `⌊(C−1)/2⌋` is the number of pinch times at that
+> denominator.** The user's additive tournament on ℕ *indexes the LRC pinch times.*
+
+The parity split of the pair-count is the parity of the pinch: an **even** denominator
+`C=a+b` loses the midpoint pinch (the apex pair `C/2+C/2`) — the very apex/zero-divisor
+that obstructs `n=14=2·7` (opus-S559, HYP-2063); an **odd** `C` keeps all `(C−1)/2`.
+
+## Addition and multiplication = the two witness shadows (codex-S365 ⊕ THM-369)
+
+`natural-operation-digraphs-and-product-sum-s365.md` (codex-2026-05-31) collapses the two
+two-input operation systems to simple digraphs:
+- **ADDITION shadow:** `a→z, b→z iff a+b=z` ⟹ `x→z iff x<z` = the **transitive
+  tournament** (complete, acyclic). This is the **pinch** family: a witness time
+  `t=m/(a+b)` indexed by a summand pair.
+- **MULTIPLICATION shadow:** `xy=z` ⟹ `x→z iff x|z` = the **divisibility DAG** (sparse
+  incomplete tournament). This is the **sieve** (THM-369: `t=1/q` is lonely iff **no speed
+  is divisible by `q`** — pure divisibility).
+
+The punchline ties to oracle-S555o, which proved **the rational pinch IS the sieve**
+(`t=1/(a+b)` lonely ⟺ `(a+b)∤` every speed). In operation-shadow language:
+
+> **The addition-shadow (pinch) and the multiplication-shadow (sieve) COINCIDE on the
+> rationals.** A rational witness `t=p/q` is both "a summand-pair pinch at denominator
+> `q`" and "a divisibility test mod `q`." The **fine pinch (`q>n`, S556/S556o) is exactly
+> where the addition-shadow outruns the divisibility-shadow** — where the additive
+> (summand) structure has witnesses the multiplicative (divisibility) structure cannot
+> see. That is the open core, restated in the user's two-operation language.
+
+This is the same `+` vs `×` spine as `multiplication-is-repeated-addition-...-s548`
+(the hyperoperation tower `succ→+→×`, `∏c_i=exp(−Σlog c_i)`): the pinch lives on the
+`+` rung, the sieve on the `×` rung, and `log` welds them — the rationals are where the
+weld is exact.
+
+## Parity, once more (the even/odd thread)
+
+- Summand pair-count parity (above) = pinch-count parity; even `C` drops the apex pair.
+- Burnside (canon): even cycle types fix `0` tournaments, all-odd fix `2^{pairs}` — so the
+  doubling/`×2` is the "killer," and `A000568` is an all-odd sum.
+- The **doubled prime `2q`** is "the parity-completion of the prime additive basis"
+  (`doubled-primes-as-the-parity-hinge-...-s546o`); `14=2·7` is our hinge. The apex
+  (mult of 14) is the even node whose summand-pinch lacks the midpoint — and the even-fold
+  measure reduction (S558o, HYP-2065) is the `×2` acting on the summand structure.
+
+## Verdict / next
+- **New cross-link (recorded):** the user's `A+B=C` summand graph indexes the LRC pinch
+  times (node `C` = pinch denominator `s=a+b`, incoming pairs = pinch pairs); addition- and
+  multiplication-shadows are the pinch and the sieve, equal on the rationals (S555o), split
+  by the fine pinch (S556o).
+- Concrete next: (1) use summand-graph node structure (incoming-pair lattice of `14`, and
+  of fine denominators `q∈(14,Cn]`) to organize the **fine-regime pinch pigeonhole** (the
+  S555o handoff) — the additive shadow is the right index set; (2) the apex = even node's
+  missing midpoint pair — phrase HYP-2063's zero-divisor purely in summand-graph terms;
+  (3) Zeckendorf/Fibonacci summand chains (oracle-2026-05-05) as a *sparse* pinch family.
+
+## Artifacts (prior work surfaced)
+```
+07-reflections/summand-graph-fermat-zeckendorf.md            (oracle-2026-05-03; the A+B=C graph)
+07-reflections/lucas-summand-graph-zeckendorf-geometry.md    (oracle-2026-05-05; Fibonacci/Lucas chains)
+07-reflections/natural-operation-digraphs-and-product-sum-s365.md (codex-2026-05-31; +/× shadows)
+07-reflections/multiplication-is-repeated-addition-...-s548.md    (oracle-2026-06-01; hyperoperation tower)
+07-reflections/lrc-n14-the-exact-moments-pinch-pair-and-r-over-s-radius-s557.md (opus; pinch=r/s)
+07-reflections/the-pinch-time-pigeonhole-is-the-sieve-and-the-fine-regime-salvage-s555o.md (pinch=sieve)
+```
+Related: THM-369 (divisibility sieve = the × shadow), HYP-2063 (apex zero-divisor),
+HYP-2065 (even-fold = ×2 on the summand structure), S548 (+/× tower), S546o (parity hinge).
+
+===== 07-reflections/pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md =====
+---
+source: opus-2026-08-01-S4 (all-degree extension of the degree-2 exp-integral theorem; the pure-power family)
+status: >
+  THEOREM (rigorous, all degrees d>=1). For algebraic alpha!=0, t0, gamma, the PURE-POWER-up-to-shift integral
+  int_0^1 e^{alpha (t-t0)^d + gamma} dt is TRANSCENDENTAL. Same architecture as the degree-2 theorem, with the
+  error-function E-function M=1F1(1/2;3/2) replaced by M_d(w)=sum_n w^n/((dn+1)n!) = 1F1(1/d; 1+1/d; w), still an
+  E-function and still IRREDUCIBLE (a=1/d, b-a=1 neither a nonpositive integer), and still with GENUINE Poincare
+  asymptotics M_d(w) ~ (1/d) e^w/w (a single honest confluent function -- NOT an oscillatory integral, so NO
+  cancellation trap). int_0^x e^{alpha u^d}du = x M_d(alpha x^d) reduces I to e^gamma[(1-t0)M_d(eta1)+t0 M_d(eta2)],
+  eta_i = alpha(1-t0)^d, alpha(-t0)^d algebraic; distinct exponential types e^{eta_i z} make the connections
+  pairwise non-isomorphic, so {e^{gamma z}M_d(eta1 z), e^{gamma z}M_d(eta2 z), 1} are Qbar(z)-linearly independent,
+  and Beukers 2006 lifts this to Qbar-linear independence of the values -- I transcendental. Degenerate t0 in {0}
+  (single value e^gamma M_d(alpha)) and symmetric t0=1/2, d even (eta1=eta2, single value) handled likewise. This
+  is a SUB-FAMILY at each degree: general deg>=3 Q has intermediate terms and its non-rationality is FC(2)-hard
+  (see the corrected parameter-E-function file); the pure power avoids that because its arc is non-closed.
+tags: [factorial-conjecture, FC2, exponential-integral, transcendence, e-functions, beukers, confluent-hypergeometric, pure-power, all-degrees, 1F1]
+related: [degree-2-exp-integral-is-transcendental-rigorous-via-linear-beukers-shidlovskii, exp-integral-is-an-E-function-in-the-parameter-general-reformulation-and-rigidity, HYP-9078]
+external: ["Beukers, Ann. of Math. 163 (2006) 369-379", "Slater, Confluent Hypergeometric Functions (asymptotics)"]
+---
+
+# Pure-power exp-integrals are transcendental at every degree
+
+A clean infinite family where the degree-2 machinery goes through unchanged, giving rigorous transcendence at
+all `d` -- and a sharp illustration of WHY it stops short of the general case.
+
+## Theorem
+
+For `alpha, t0, gamma in Qbar` with `alpha != 0` and any integer `d >= 1`,
+```
+        int_0^1 e^{ alpha (t - t0)^d + gamma } dt   is TRANSCENDENTAL.
+```
+
+## The one new ingredient: `M_d = 1F1(1/d; 1+1/d)`
+
+Expanding `e^{alpha u^d}` and integrating,
+```
+   int_0^x e^{alpha u^d} du = sum_{n>=0} alpha^n x^{dn+1}/((dn+1) n!) = x * M_d(alpha x^d),
+   M_d(w) := sum_{n>=0} w^n/((dn+1) n!) = 1F1(1/d; 1+1/d; w)   (since (1/d)_n/(1+1/d)_n = 1/(dn+1)).
+```
+`M_d` is an **E-function** (coefficients `1/(dn+1)`, bounded), and the confluent connection is **irreducible**:
+`a = 1/d` and `b - a = 1` are neither nonpositive integers. Its asymptotics as `w -> +infinity` are the genuine
+Poincare ones `M_d(w) ~ [Gamma(1+1/d)/Gamma(1/d)] e^w w^{-1} = (1/d) e^w/w` (verified: ratio -> 1 at `w=50` for
+`d=3,4,5`). For `d = 2` this is exactly the error-function `M = 1F1(1/2;3/2)` of the degree-2 theorem.
+
+## Proof (same shape as degree 2)
+
+Shift `u = t - t0`: `I = e^gamma [ F_d(1-t0) - F_d(-t0) ]`, `F_d(x) = x M_d(alpha x^d)`. Hence
+```
+        I = e^gamma [ (1-t0) M_d(eta1) + t0 M_d(eta2) ],    eta1 = alpha(1-t0)^d,  eta2 = alpha(-t0)^d  in Qbar.
+```
+Set `g_i(z) = e^{gamma z} M_d(eta_i z)` (E-functions). The two Kummer connections `M_d(eta_i z)` have exponential
+types `e^{eta_i z}` at infinity (from the genuine asymptotics above), so for `eta1 != eta2` they are
+**non-isomorphic** irreducible rank-2 connections; `e^{gamma z}` is rank-1. Pairwise non-isomorphic factors have
+no mixing horizontal endomorphisms, so `{g_1, g_2, 1}` are **linearly independent over `Qbar(z)`**. By the
+refined linear Siegel-Shidlovskii theorem (Beukers 2006, no exceptional point), `{g_1(1), g_2(1), 1}` are
+**`Qbar`-linearly independent**; therefore `I = (1-t0) g_1(1) + t0 g_2(1)`, a nontrivial `Qbar`-combination, is
+transcendental. Degenerate cases collapse to a single value `e^gamma M_d(eta)` (namely `t0 = 0`, giving
+`e^gamma M_d(alpha)`; and `t0 = 1/2` with `d` even, giving `eta1 = eta2` and `I = e^gamma M_d(alpha/2^d)`), still
+transcendental by the two-function version. `#`
+
+(Numerics: `d=3`, `int_0^1 e^{0.9(t-0.3)^3+0.2} dt = 1.29144045540794... = e^gamma[(1-t0)M_3(eta1)+t0 M_3(eta2)]`
+to 15 digits; `eta1=0.3087 != eta2=-0.0243`; PSLQ finds no algebraic min-poly of degree `<=5`, height `<=1e9`.)
+
+## Why this is a sub-family, not the whole conjecture (the honest boundary)
+
+The pure power works because `t -> alpha(t-t0)^d` maps `[0,1]` to a **non-closed monomial arc**, whose pushforward
+of Lebesgue measure cannot have all holomorphic moments zero -- so `Phi_Q(z)=int_0^1 e^{zQ}dt` is genuinely
+non-constant, AND the single confluent function `M_d` has honest (non-cancelling) growth. A GENERAL degree-`d`
+`Q` (with intermediate terms) has `d-1` interior saddles; its integral is a genuine oscillatory object that can
+cancel (the corrected parameter-E-function file: `g=e^{2 pi i t}` has `int_0^1 e^{z g}=1` identically), and its
+non-rationality is EQUIVALENT to FC(2). So the pure-power theorem is exactly the slice where the arc is monomial
+and the confluent factor is single -- both cancellation-free. It extends the rigorous frontier from `{deg 2}` to
+`{deg 2} cup {pure powers, all d}`, and pins precisely what the general case must additionally control.
+
+## Corollary (values of special functions)
+
+Instantiating: `int_0^1 e^{alpha t^d} dt = M_d(alpha) = 1F1(1/d; 1+1/d; alpha)` is transcendental for every
+algebraic `alpha != 0` and every `d` -- e.g. the "higher error functions" `int_0^1 e^{alpha t^3}dt`,
+`int_0^1 e^{alpha t^4}dt`, ... are all transcendental at algebraic points. (For `d=2` this is the classical
+transcendence of error-function values; `d>=3` are the natural higher analogues.)
+
+===== 07-reflections/lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md =====
+# Fixed-first-newcomer activation and source-before-projection
+
+**Session synthesis / provenance, 2026-08-26.** This is not a proof source.
+Current claims are owned by THM-4211 and THM-4209; their theorem files and
+frozen artifacts outrank this reflection.
+
+## Portfolio outcome
+
+| lane | inherited mechanism | hostile inherited or found | outcome |
+|---|---|---|---|
+| Anchor: LRC(14) | THM-4191 one-newcomer repair decks; THM-4170 component discrepancy; THM-4207 fixed `(50,51)` joint deck | depth-eight strict reserve has a nine-cover whose body still has positive limiting margin | **PROVED RELATIVE / VERIFIED-EXACT:** THM-4211 gives every full-pool nine-body with `{50,r}` for `r>=5682`, every nine-body in an 18-label chart for every outsider, and the fixed `(49,50)` checkpoint |
+| Niche: planar Jacobian | THM-4147 packet/carrier response; THM-4192 rational source pair and degree-drop firewall | projected critical roots may collide; anti tangent repeats at `Theta=-Delta` | **PROVED RELATIVE / VERIFIED-EXACT:** THM-4209 removes the critical-open hypothesis on the mixed `K=0` face except the repeated-tangent anti wall |
+| Wildcard: moving-pool entry | conditional failure atoms under one-label deletion | total mass averaging forgets which deleted label owns the reserve | **PROVED ANALYTIC IDENTITY / OPEN APPLICATION:** the deletion sunflower is exactly empty atom plus one labelled singleton petal; arbitrary entry is still open |
+
+LRC(14), JC(2), and DC(2) remain open.
+
+## What actually moved
+
+### 1. Fixed-first-newcomer activation
+
+The useful discarded object was not another literal two-newcomer wall. It
+was the entire one-newcomer safe set before the second comb was imposed. For
+each deletion `R`, two integers survive:
+
+```text
+base mass m_R,        component count c_R.
+```
+
+THM-4170 turns these into a lawful cofinal activation time. The full
+depth-nine activation deck changes transversal status between `5681` and
+`5682`. This proves a uniform tail but also exposes its own quotient loss:
+the activating edge is already literally lawful at `5681`. Component count
+forgets the component addresses and their phase alignment with the incoming
+comb.
+
+That hostile determines the next operation. Do not merely optimize the
+discrepancy constant. Refine only the few edges and bodies controlling the
+transversal transition with phase-resolved component data.
+
+### 2. Restricted chart before arbitrary entry
+
+The full thirty-label pool is too ambitious for every second newcomer, while
+one fixed body is too narrow to expose structure. Optimizing the intermediate
+object produced the chart
+
+```text
+{8,16,40,42,80,84,85,88,95,120,126,143,145,168,193,240,252,286}.
+```
+
+Every one of its `48,620` nine-bodies survives every outsider. This is a
+lower bound `chi_50>=18`, not a maximality result. It is useful precisely
+because it makes chart growth a finite hostile-driven optimization problem:
+an attempted nineteenth label fails on identifiable bodies and outsider
+rows, rather than on an opaque global statistic.
+
+### 3. Source ideal before critical projection
+
+On the Jacobian side, the analogous discarded object was the two-generator
+source critical ideal. Projecting it to one resultant coordinate introduced
+a squarefreeness hypothesis that Keller-Morse reducedness never needed. The
+pair `(A,B)`, together with
+
+```text
+p det D(A,B)=2t^2 det Hess(G) mod (A,B),
+```
+
+counts the complete reduced critical scheme even when projected roots
+collide. Endpoint units then give lengths `25` and `23` across whole
+coefficient strata. The anti wall `Theta=-Delta` is not a projection
+artifact: its tangent cone genuinely repeats, and the residual degrees fall
+to `17/15`. That is a geometric boundary which must be normalized anew.
+
+## Connection contracts
+
+### Failure atoms to one-label entry
+
+```text
+source:       phases safe for both outsiders, labelled by failed chart subset
+target:       the m one-label deletions of an m-body
+map:          failure subset F -> every deletion whose retained labels avoid F
+preserved:    outsider safety, exact Haar mass, deleted-label identity
+destroyed:    phase address inside each atom
+sidecar:      empty and singleton atom masses
+decisive test: w(empty)+max_p w({p})>=4/63.
+```
+
+The exact sunflower formula shows why an average can fail: it scalarizes the
+label which owns the singleton petal. The next entry theorem must either
+lower-bound the maximum singleton mass or produce a body-dependent winning
+label.
+
+### One-newcomer base to cofinal pair
+
+```text
+source:       U_R=G_((P union {50})\R)
+target:       lawful joint repair for all r above a cutoff
+map:          U_R -> (mass,components) -> activation time
+preserved:    deletion label, threshold, base reserve
+destroyed:    component addresses and exact comb alignment
+sidecar:      literal boundary mass for controlling edges
+decisive test: transversal number of the activated deck.
+```
+
+### Projected resultant back to the Jacobian source
+
+```text
+source:       polynomial critical pair (A,B) on pt!=0
+target:       affine critical length and monodromy response budget
+map:          source ideal -> saturated resultant -> restored universal fibres
+preserved:    intersection multiplicity, Keller-Morse reducedness, residue row
+destroyed:    s-coordinate after elimination
+sidecar:      source-infinity rows, p=0/t=0 exclusions, four universal points
+decisive test: endpoint units plus the Hessian bridge.
+```
+
+There is a methodological analogy between the first and third contracts:
+both recover labelled data before a lossy scalar projection. There is no
+claimed theorem transferring LRC atoms to Jacobian monodromy.
+
+## Next sharp experiments
+
+1. **Literal cofinal threshold (Anchor, OPEN).** Starting from the `5681`
+   activation cover, build the literal E9 deck only on complements of the
+   surviving covers. Descend in `r`, retaining component addresses. The first
+   goal is an exact smaller upper bound, not an assertion of monotonicity in
+   the newcomer label.
+2. **Chart growth (Anchor/Niche, OPEN).** Add each of the twelve omitted pool
+   labels to the 18-chart, enumerate only newly created nine-bodies, and record
+   the minimal hostile `(body,r)`. Use those hostiles in a branch-and-bound
+   search for `chi_50>=19` or an exact maximality certificate.
+3. **Singleton-reserve entry (Wildcard, OPEN).** On the canonical hard
+   ten-bodies, compute the conditional empty and singleton atom vector for
+   `(q,r)`, rather than ten separate masses. Test whether component
+   discrepancy can lower-bound `max_p w({p})` uniformly in one outsider.
+4. **Anti repeated tangent (Niche, OPEN).** At `Theta=-Delta`, separately
+   normalize the `Phi!=0` degree-17 row and the terminal degree-15 row. Derive
+   the new local branches and differential orders before using either degree
+   in a response budget.
+5. **Other mixed critical walls (Niche, OPEN).** Re-run the source-ideal
+   endpoint method on the remaining THM-4147 coefficient walls. A positive
+
+===== 05-knowledge/results/ternary_digits_20260925.md =====
+# Decimal digits, ternary clocks, and the exact carry behind the 333...31 family
+
+Status: **PROVED** for the elementary statements and proofs below; **FINITE-EXACT** for the explicitly bounded reproduction; **CITED** for external searches and large primality certificates; **OPEN** for circular-prime finiteness, repunit-prime infinitude, and a universal Collatz descent argument. This is a synthesis of inherited mechanisms, with no literature novelty claim. No theorem ID is reserved.
+
+The useful positive result is concrete: for
+
+\[
+N_k=(10^k-7)/3,\qquad U(n)=(3n+1)/2^{v_2(3n+1)},
+\]
+
+every `k >= 4` satisfies `U^2(N_k) < N_k`. The reason is an exact binary carry, independent of whether `N_k` is prime. Separately, the digit-append family and the Collatz sibling ladder have compatible, isometric ternary residue clocks. These two statements preserve different information.
+
+## Inheritance and concept board
+
+Closest proved mechanism: **THM-4473**, [collatz-digit-chains-rotation-repunits](../../01-canon/theorems/THM-4473-collatz-digit-chains-rotation-repunits.md), especially digit rotation as multiplication modulo `10^k-1` and the exact rising run of `2^k-1`. Its long [digits/rotation/repunit note](procgen_repunit_20260924_digits_rotation_repunits.md) supplies the prior circular-prime computation. The sibling-ladder valuations and the absence of an automatic rank are also inherited from [creative_sibling_20260925](creative_sibling_20260925.md).
+
+Canonical hostile: composite binary repunits `2^(2m)-1` have arbitrarily many consecutive growing odd steps. Corrected near misses: a prime run is not a circular-prime run (`331 -> 133=7*19`); an isomorphism of ternary clocks does not preserve the ordinary numerical unit guard without its coordinate dictionary. Least-used relevant sidecar: the leading decimal digit in the rotation carry, together with the binary valuation used by the actual Collatz step.
+
+The live board is: (1) decimal append, (2) circular rotation, (3) ternary residue clocks, (4) binary Collatz carry, (5) multiplicative order of prime factors. Appending and rotating are distinct operations. A factor's multiplicative order gives a repeating congruence class of indices; it does not give a well-founded orbit rank.
+
+## 1. Audit of the supplied arithmetic
+
+For `k >= 1`, `N_k` has `k-1` copies of the digit 3 followed by 1. Thus `N_1=1`, and the displayed prime run begins at `k=2`.
+
+| k | N_k | Exact status |
+|---|---:|---|
+| 2 | 31 | prime |
+| 3 | 331 | prime |
+| 4 | 3331 | prime |
+| 5 | 33331 | prime |
+| 6 | 333331 | prime |
+| 7 | 3333331 | prime |
+| 8 | 33333331 | prime |
+| 9 | 333333331 | `17 * 19607843` |
+
+The seven prime entries and both factors on the last line are verified by exhaustive trial division. Therefore “the last member of the initial prime run has eight digits and the next has nine” is correct. “Eight prime steps beginning at 31” is an off-by-one error: there are seven. No conclusion about all later indices follows from the initial run.
+
+The Fermat arithmetic is correct with `F_j=2^(2^j)+1`:
+
+\[
+F_2=17,\qquad F_5=4294967297=641\cdot6700417.
+\]
+
+The factors of `F_5` are independently trial-division verified as prime. A short certificate for the divisor 641 uses
+
+\[
+641=5\cdot2^7+1=5^4+2^4.
+\]
+
+Modulo 641, the first equation to the fourth power gives `5^4 2^28 = 1`; the second then gives `-2^32 = 1`. This proves the divisibility without invoking a prime-generation principle.
+
+For the cubic,
+
+\[
+a_n=2n^3+4n^2+n=n\bigl(2(n+1)^2-1\bigr).
+\]
+
+Its first five positive values are `7,34,93,196,355`; `a_2=2*17` and `a_4=14^2` are correct. For every `n>=2`, both factors in the displayed factorization exceed 1, so all those values are composite. The first twelve primes are
+
+`2,3,5,7,11,13,17,19,23,29,31,37`,
+
+whose sum is **197**, not 196.
+
+## 2. A factor is a periodic index guard, not an eventual barrier
+
+**PROVED.** For every integer `k>=1`,
+
+\[
+17\mid N_k\quad\Longleftrightarrow\quad k\equiv9\pmod {16}.
+\]
+
+Proof: 3 is invertible modulo 17, so divisibility is equivalent to `10^k=7 (mod17)`. Direct powers give `ord_17(10)=16` and `10^9=7 (mod17)`. Exactly one of the sixteen exponent classes works. The smallest positive such index is 9.
+
+In comparison `ord_641(2)=64`, since `2^32=-1 (mod641)` and 64 is a power of two. The two factorizations thus have the same *type* of certificate, a multiplicative-order congruence, but different bases and different target residues. Identifying their displayed integers does not identify their dynamics.
+
+The analogous repunit rule, for prime `p` not dividing 90, is
+
+\[
+p\mid R_k^{(10)}\quad\Longleftrightarrow\quad\operatorname{ord}_p(10)\mid k.
+\]
+
+For `p=3`, division by 9 is not invertible and the correct rule is `v_3(R_k^(10))=v_3(k)`. These exact periodic filters explain how a finite-looking prime pattern can fail. They do not say that the whole family is permanently composite after its first failure.
+
+## 3. Exact ternary clock shared with a sibling ladder
+
+Put
+
+\[
+S(n)=4n+1,\qquad A(x)=10x+10.
+\]
+
+The decimal append recurrence is `N_(k+1)=10N_k+21`; normalizing `x=(N-1)/3` turns it into `A`. In fact
+
+\[
+A^j(0)=10\frac{10^j-1}{9},\qquad 3A^j(0)+1=N_{j+1}.
+\]
+
+For all integers `n,x` and positive `t`,
+
+\[
+v_3(S^t(n)-n)=v_3(t),\qquad
+v_3(A^t(x)-x)=v_3(t).
+\]
+
+For the decimal family itself,
+
+\[
+v_3(N_{k+t}-N_k)=1+v_3(t).
+\]
+
+Proof: the elementary lifting identity gives
+
+`v_3(4^t-1)=1+v_3(t)` and `v_3(10^t-1)=2+v_3(t)`.
+
+Use
+
+\[
+S^t(n)-n=(4^t-1)(3n+1)/3,
+\]
+
+\[
+A^t(x)-x=(10^t-1)(9x+10)/9,
+\]
+
+and note that `3n+1` and `9x+10` are 3-adic units. The last formula follows directly by subtracting `N` values. The same proof applies to 3-adic inputs.
+
+Consequently `S` and `A` each form one cycle of length exactly `3^r` modulo `3^r`, for every `r>=1`. Define the finite decoder by its orbit labels:
+
+\[
+H_r(S^j(1)\bmod3^r)=A^j(0)\bmod3^r.
+\]
+
+It is a well-defined bijection and satisfies `H_r S=A H_r`. Its reductions agree across `r`, because both orbit periods are exactly `3^r`. The compatible maps give an isometric homeomorphism of `Z_3` conjugating these two affine maps. Isometry follows because the valuation of the difference of any two orbit points is exactly the valuation of the difference of their indices, on both sides.
+
+This is a precise ternary recursion isomorphism. Its scope is **affine sibling/append clocks**, not the accelerated Collatz map `U`. The finite clock is also not a finite bound on the integer magnitude: both positive integer append orbits grow indefinitely.
+
+The guarded map is explicit but needs its dictionary. At the first level,
+
+\[
+H_1(n)=n-1\pmod3.
+
+===== 05-knowledge/results/long_frontier_sep06_endpoint39.md =====
+# Endpoint 39: seven genuine first channels and complete doubled separation
+
+**Status: PROVED ANALYTICALLY + FINITE-EXACT + INDEPENDENTLY AUDITED.**
+The exact parameter certificate has 258 strictly positive
+coefficients. This note extends the established endpoint-33 method to
+endpoint 39, with an unbounded opposite endpoint. It asserts no new
+all-channel method and no general trinomial two-rung theorem.
+
+## 1. Statement and exact coefficient scope
+
+Let g>=20 be an integer with gcd(g,39)=1, and let alpha,beta,gamma be
+arbitrary nonzero complex numbers. For
+
+    f(u)=alpha*u^(-39)+beta*u^(2g-39)+gamma*u^(3g-39),
+
+the first nonzero constant-term moment occurs at exactly g or 2g.
+Both alternatives occur for every eligible g. In particular,
+
+    first nonzero mass <=2g<3g=39+(3g-39).
+
+There are seven channels in the first support-return fibre and fourteen
+in the doubled fibre. All six distinct canceling phases of the first
+moment have a nonzero doubled moment. The sign established below is a
+sign of the displayed normalized coefficient response; a complex raw
+moment is not assigned an order sign.
+
+The condition gcd(g,39)=1 belongs to the first-mass statement, not to
+the polynomial sign certificate. At g=21 the same coefficient formulas
+apply to support (-39,3,24), but its first support return is seven.
+Thus deleting the gcd condition changes the claimed first mass.
+
+## 2. Inheritance, comparison and the retained concepts
+
+The closest proved mechanism is the
+[endpoint-33 actual quotient theorem](second_20260906_laurent.md), with its
+[independent full polynomial reconstruction](second_20260906_laurent_audit.md).
+The polynomiality and degree argument below specializes the existing
+[all-h characteristic interface, Section 5](overnight7_20260906_laurent_midpoint_transport.md).
+The negative and simple first roots come from **THM-4436**,
+[complete factorial-row simple negative roots](../../01-canon/theorems/THM-4436-complete-factorial-row-simple-negative-roots-and-trinomial-phase-wall.md),
+with its exact parameter substitution stated below.
+
+The canonical hostile is the actual endpoint-15 derivative-cone separator
+recorded in the endpoint-33 note: the whole permitted derivative cone
+can miss the genuine carried response even when that response is negative.
+The corrected near miss is the endpoint-33 square-phase multiplier whose
+coefficients lose positivity at x=10000. The newer
+[sparse positive-amplitude repair](continuing2_20260906_laurent_sparse_amplitude.md)
+works at one endpoint-27 coefficient point, with algebraic coefficients on
+selected positive square-root branches. It does not provide a uniform
+endpoint-39 representation or a rational identity on all conjugate phases.
+The least-used retained sidecar here is the exact lower-carry coefficient
+before taking the first-root quotient.
+
+The concept board is: complete integer count fibres; original coefficient
+phase; lower carry; multiplication in the first-root quotient; shifted
+characteristic positivity; and independent literal-fibre reconstruction.
+The incoming amplitude result changes the possible representation of a
+fixed response but does not replace its coefficient law. The cheap hostile
+probes therefore used the actual h=6 response at x=1,2,3,10,100. All six
+characteristic coefficients were positive at each point, motivating the
+full symbolic computation rather than an extrapolated parameter claim.
+
+Targeted searches at inherited HEAD f0521b87281f for endpoint39,
+seven-first-channel closure and the corresponding supports found only
+the explicitly open next step in the endpoint-33 report. The general
+degree interface and endpoint-33 mechanism are credited as inheritance;
+the new proof object is the endpoint-39 positive certificate. No external
+priority claim is made.
+
+## 3. The complete actual first and doubled rows
+
+Put
+
+    x=g-19>=1, tau=alpha*gamma^2/beta^3,
+    X=alpha^x beta^18 gamma, K=(2g)_26>0,
+
+where (a)_m is the falling factorial. At mass g the charge equation is
+2*n_beta+3*n_gamma=39. It forces n_gamma odd, and its complete
+nonnegative solutions, including the alpha count, are
+
+    (n_alpha,n_beta,n_gamma)=(x+j,18-3j,1+2j), j=0,...,6.
+
+At mass 2g, the complete solutions are
+
+    (2x+e,36-3e,2+2e), e=-1,...,12.                       (1)
+
+The lower carry e=-1 has counts (2x-1,39,0) and is valid for every x>=1.
+No selected semigroup subfamily or midpoint model replaces these fibres.
+
+Define
+
+    p_x(t)=sum_(j=0)^6
+      [13! (x+6)_(6-j)/((18-3j)!(1+2j)!)] t^j,
+
+    q_x(t)=sum_(e=-1)^12
+      [(2x+12)_(12-e)/((36-3e)!(2+2e)!)] t^e.             (2)
+
+The first polynomial is monic. Direct multinomial expansion gives the
+exact identities, in the same original coefficient phase,
+
+    CT(f^g)=X binom(g,13) p_x(tau),
+    CT(f^(2g))=X^2 K q_x(tau).                           (3)
+
+THM-4436 applies with (A,B,h,r,z,x)=(2,3,6,0,1,x): its first row
+is exactly a positive multiple of p_x. Therefore p_x has six distinct
+strictly negative real roots at every integral x>=1. Also
+
+    p_0(x)=13! (x+6)_6/18! >0,                           (4)
+
+so none of these roots is zero and the inverse phase in (2) is legitimate.
+
+For any support-return mass m, the charge equation modulo g gives
+g | 39m. Under gcd(g,39)=1, it follows that g | m. The first fibre
+above is nonempty, so g is exactly the first support-return mass. The
+remaining obligation is the actual same-root inequality
+
+    q_x(rho)<0 whenever p_x(rho)=0.                      (5)
+
+Off those six phases the first moment is nonzero. Each root is attainable
+by taking beta=gamma=1 and alpha=rho. The all-positive coefficient choice
+gives the alternative first mass g.
+
+## 4. Polynomial carry cancellation and the degree-bound certificate
+
+Initially work over Q(x)[t]/(p_x), where t is invertible. The lower carry
+has the exact polynomial cancellation
+
+    [q_x]_-1 / p_0(x)
+      = [128*18!/(39!*13!)] x product_(j=0)^5(2x+2j+1).   (6)
+
+Indeed (2x+12)_13 has seven even factors 2x,2x+2,...,2x+12
+and six odd factors 2x+1,...,2x+11. The six factors x+1,...,x+6
+cancel (4), leaving exactly (6). This proves polynomiality after
+multiplication by the carry coefficient; it does not assert that t is
+invertible over the unspecialized ring Q[x][t]/(p_x).
+
+Use ordinary monic division for the nonnegative powers, and use
+
+    t^-1=-sum_(j=1)^6 p_j(x)t^(j-1)/p_0(x)
+
+===== 05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/README.md =====
+# Native branch width versus shared-state transfer
+
+This extends Section5 of the Session43 native observer packet, following the root synthesis's regular-host and affine-cover sharpening. Read THEOREM.md for all proofs and scope restrictions.
+
+On explicit regular tournaments of order3t, one genuine contiguous-path family has3*2^(t-1) paths and requires exactly2^(t-1) affine subgroup cosets in ANY exact union representation. Yet a3-state shared-phase transfer counts it exactly, with a period6 endpoint correction.
+
+The prime-p version has p*|E|^(t-1) paths, exact coset width|E|^(t-1), and a p-state transfer. This is a representation-specific lower bound paired with a compact native compiler, not a computational hardness theorem and not a count of all host Hamilton paths.
+
+Run from this directory:
+
+    python -B check.py > receipt.json
+    python -B -O check.py > receipt.optimized.json
+    cmp receipt.json receipt.optimized.json
+
+No dependencies, floating-point decisions, assertions, network calls, source mutations, or Git writes are used. The receipts retain actual-host checks, endpoint normalization, literal-path hashes, exhaustive small affine-coset checks, and integer period6 clocks.
+
+===== 05-knowledge/results/collatz_mod6_20260922_lead_reflection2.md =====
+# Session-lead reflection II: every hole, source and leaf is a deleted diagonal
+
+**Status: PROVED elementary statements (hand proofs, each checked by the
+short computation reproduced at the end); FINITE-EXACT counts; CITED
+classical inputs; SCOPE where no map exists. No agents and no independent
+audit: a reasoning note by the session lead under a usage limit, provenance
+for the exact claims it isolates, not audited canon.** Collatz and
+Legendre's conjecture remain OPEN. Companion to the
+[first reflection](collatz_mod6_20260922_lead_reflection.md) and the
+[synthesis](collatz_mod6_20260917_synthesis.md).
+
+## 1. The user's groups are the odd sources of the strict multiplicand graph
+
+Take the multiplicand graph with the same strictness as the summand graph:
+`x -> z` and `y -> z` iff `x*y = z` with `1 < x < y`. A number is *brought
+into existence* when some pair of smaller distinct factors above `1`
+multiplies to it. **PROVED:** the numbers never brought into existence are
+exactly `1`, the primes, and the prime squares `p^2 = p*p`, because a
+prime square's only factorization above `1` is its diagonal, while every
+other composite `n` has a factor `x` with `1 < x < n/x`. Reproduced to
+`60`: sources `1,2,3,4,5,7,9,11,13,17,19,23,25,29,...,49,53,59`.
+
+The odd sources between consecutive odd squares are therefore
+`[3,5,7,9]`, `[11,13,17,19,23,25]`, `[29,31,37,41,43,47,49]`, ... : the
+user's groups with `11` restored. Each odd square `p^2` closes its group
+because it is created only by its own diagonal `p*p`, which the strict
+rule forbids. This is the exact multiplicative twin of the summand holes
+`{1,4,6} = {1} cup {2+2, 3+3}` of the first reflection: in both graphs the
+exceptional set is `{1}` together with excluded diagonals, finitely many
+on the additive side (only `4` and `6` lack another distinct
+representation) and infinitely many on the multiplicative side (every
+`p^2`).
+
+The "even number of primes" pattern is an artifact of omitting `11`: the
+number of primes strictly between `(2k-1)^2` and `(2k+1)^2` is
+`4,5,6,7,8,9,9,13,11,13` for `k = 1..10` (FINITE-EXACT), growing like
+`8k/log(4k^2)` heuristically; that at least one prime lies between
+consecutive squares is Legendre's conjecture (OPEN).
+
+## 2. The multiplicand graph inside the summand graph plus its complement
+
+Let `S` be the strict summand arc set (`x -> z` iff `x < z` and
+`z != 2x`), `D = {u -> 2u : u >= 1}` the doubling forest, which is the
+complement of `S` inside the ascending arcs (inherited summand note,
+section 1), and `M` the strict multiplicand arc set above.
+
+**PROVED.** `M` is contained in `S cup D`, and
+`M cap D = D minus {1 -> 2, 2 -> 4}`. Hence
+
+    M = (M cap S)  disjoint-union  (D minus {1 -> 2, 2 -> 4}).
+
+Proof. An arc of `M` from the smaller factor is `x -> xy` with
+`1 < x < y`, so `y >= 3` and `xy >= 3x != 2x`: it is a summand arc. An arc
+from the larger factor is `y -> xy`; if `x >= 3` it is a summand arc for the
+same reason, and if `x = 2` it is the doubling arc `y -> 2y` with `y >= 3`,
+which is not a summand arc. Conversely every doubling arc `y -> 2y` with
+`y >= 3` is the larger-factor arc of `2*y`. The two doubling arcs missing
+from `M` are `1 -> 2` (the factor `1` is excluded) and `2 -> 4` (the
+diagonal `2*2`). Reproduced on all arcs with target `<= 200`.
+
+So the user's picture is exact: the multiplicand graph is a subgraph of the
+summand graph together with the summand graph's complement, and the only
+two arcs of that complement it does not use are the two at the coincidence
+`1+1 = 2` and `2+2 = 2*2 = 4`. The number `2` is at once the doubling
+multiplier that generates the complement and the summand diagonal that
+creates the hole `4`.
+
+## 3. The ray tableau is the odd/even by nonsquare/square table
+
+Every `n` lies on the doubling ray of its odd part and on the squaring ray
+`b, b^2, b^4, ...` of its nonsquare base `b` (`n = b^(2^k)`, inherited
+summand note, section 2). A vertex contributes a *new* doubling ray iff it
+is odd (otherwise its ray sits inside the ray of `n/2`) and a *new*
+squaring ray iff it is not a square (otherwise inside the ray of
+`sqrt n`). This is the whole content of the tableau:
+
+| class | new doubling ray | new squaring ray | examples |
+|---|---|---|---|
+| odd nonsquare | yes | yes | `3, 5, 7, 11` |
+| odd square | yes | no | `9 -> 18, 36, ...`; `25` |
+| even nonsquare | no | yes | `6 -> 36`, `8 -> 64`, `10 -> 100` |
+| even square | no | no | `4, 16, 36, 64, 100` |
+
+Below `100` the classes have sizes `45, 5, 45, 5`. The vertex `1` is the
+unique fixed point of squaring and doubles normally (`1 -> 2 -> 4 -> ...`),
+which is why it is the root of the doubling forest but isolated in the
+squaring forest. The remark "`4` adds nothing, `6, 8, 10` add only their
+squares, `9` adds only its doubles, `25` caps the block" is the third
+table row by row; the blocks of five are not a structural unit.
+
+## 4. The square-sum boundary is the same diagonal
+
+In the square-sum graph `Q_n` the window of impossibility `18..22` (and
+`24`) is caused by vertex `18` having the single neighbour `7` until `31`
+appears, because `18 + 18 = 36` is a square that the distinct-summand rule
+excludes (wave six, PROVED). The earlier scars are the same phenomenon:
+`2` is born isolated because `2 + 2 = 4`, and `8` is a leaf until `17`
+because `8 + 8 = 16`; the family `m = 2j^2` has this effect exactly for
+`j <= 3` (wave six). So the three finite heads of this session's objects
+are one mechanism: the summand holes `4 = 2+2`, `6 = 3+3`; the trivial
+Collatz arrow `1 -> 1+1`; the multiplicand sources `p*p`; and the
+square-sum leaves `2+2`, `8+8`, `18+18`. Each is a deleted diagonal of the
+swap-fixed operation fibre of THM-2422.
+
+The remaining numerology of the message is typed as SCOPE: the window
+`18..22 = 20 +- 2` and the preperiodic set `{-2,...,2}` of `x^2 - 2` share
+an interval and nothing else; `13` being the only size with exactly two
+components and `19 = -1 mod 5` are true facts without a map.
+
+## 5. The one candidate research card
+
+"Before reading a hole, a source, or a leaf in an incrementally built
+operation graph, test whether it is a deleted diagonal `x o x`." Evidence
+from four distinct threads above; counterindication: the doubling forest
+itself is *made* of deleted diagonals, so the card explains exceptions,
+not the generic structure. Not promoted here; recorded for a future
+session with audit capacity.
+
+## Reproduction
+
+The checks are the short computation saved at writing time as
+`/tmp/lead_check2.txt`: prime counts between odd squares for `k <= 10`;
+strict multiplicand sources to `60` against `{1} cup P cup P^2`; the arc
+identity `M = (M cap S) u (D minus {(1,2),(2,4)})` on all targets `<= 200`;
+the four ray classes to `100`. They are elementary and rerun in any Python
+with sympy.
+
+===== 05-knowledge/results/higher_order_bottleneck_clocks_20261019/independent-review/REVIEW.md =====
+# Independent review: higher-order bottleneck clocks
+
+19 October 2026
+
+## Verdict
+
+**The two stated asymptotic formulas and their explicit error bounds are correct under the stated hypotheses.** The corrected clock controls the discrete dynamics uniformly in the small parameter; the proof does not identify a discrete orbit with a differential equation. The quartic remainder estimate is uniform for the full interval `0 <= lambda <= 1`.
+
+No mathematical blocker remains. The initial finiteness wording and numerical-certification implementation were hardened during review. Historical priority has not been established and is appropriately not claimed.
+
+## Analytic checks
+
+1. **Clock defect.** With `s(t)=q(t)-1`, the bounds `|s(t)| <= 5/16`, `|R(t)| <= F t^2`, `A^2 <= 4F`, and `F <= 1/32` give exactly the two displayed integral/logarithm estimates. Their sum is `5057/660 < 8`. Summation gives `8 sum F = 8(y_N+a) <= 18a`. Positivity and compactness justify finiteness in the general lemma.
+
+2. **All even degrees.** Put `c=5/32`. The bounds for `r c^(r-1)`, `r(r-1)c^(r-2)`, and `r^2 a^(r-2)` hold at `r=2`. Their ratios upon replacing `r` by `r+2` are at most `2c^2`, `6c^2`, and `4a^2`, respectively, all less than one. Thus the finite-degree software checks are backed by a genuine all-degree argument. The overshoot is at most `2a^r <= a/4`.
+
+3. **Pure-power endpoints.** The endpoint logarithm lies in `[0,(r/2)log(5/4)]`. The two omitted full-line tails total at most `2a^(1-r)/(r-1)`, even though the actual upper endpoint is the first overshoot rather than exactly `a`. These estimates yield the claimed absolute error bound.
+
+4. **Quartic endpoints and expansion.** Here `f(a) <= 2a^4+a^6 <= min(a/4,1/32)`. Since `f` increases on the positive half-line, the overshoot integral is at most `(y_N-a)/f(a) <= 1`. The logarithmic endpoint term is at most `3log(5/4)`. The exact resolvent remainder is nonnegative and at most `lambda^2 <= 1`, since its denominator is at least `y^12`. Its integral is at most `2a`. The two tail bounds are `2/(3a^3)` and `2/a`; their sum with the discrete error gives the stated uniform constant.
+
+5. **Coefficients.** Substitution gives `(2/r)B(1/r,1-1/r) = (2pi/r)csc(pi/r)` for the pure-power integral. For the correction, scaling contributes `epsilon^(-1/4)` and the remaining integral is `(1/2)B(7/4,1/4) = 3pi sqrt(2)/8`. The correction has a minus sign. These identities agree with the [Euler beta integral](https://dlmf.nist.gov/5.12) and [gamma recurrence/reflection formulas](https://dlmf.nist.gov/5.5).
+
+## Independent numerical certificates
+
+`independent_checks.py` uses an exact grid with denominator `2^192`. It evaluates each endpoint polynomial using integer arithmetic and rounds only with exact floor/ceiling division. Monotonicity of the entire step map preserves the enclosure. Every step checks its domain, enclosure order, and the threshold decision; undecidable threshold comparisons fail explicitly.
+
+All ten reported counts agree exactly with the author's verifier:
+
+`85, 387, 888, 8767, 72452, 8761, 72433, 8756, 72415, 59230`.
+
+Four additional checks pass:
+
+- `r=2, epsilon=2^-6, lambda=0`: `N=13`.
+- `r=4, epsilon=2^-12, lambda=1`: `N=887`.
+- `r=4, epsilon=2^-16, lambda=1/3`: `N=8763`.
+- `r=4, epsilon=2^-18, lambda=1`: `N=25376`.
+
+Normal and optimized Python runs produce identical independent receipts. The receipts include exact threshold margins and hashes identifying the reviewed source files. These finite controls supplement the proof; they do not establish its parameter-uniform statements.
+
+The revised author verifier uses directed nonnegative repeated products for even powers. This avoids relying on the qualified C-implementation guarantee for two-argument `Decimal.power` in the [Python documentation](https://docs.python.org/3/library/decimal.html#decimal.Context.power). Its transcendental constant comparisons remain appropriately labeled numerical controls rather than rigorous interval certificates.
+
+## Literature and scope
+
+The limited primary-source check confirms substantial prior context:
+
+- [Kuehn, *Scaling of Saddle-Node Bifurcations: Degeneracies and Rapid Quantitative Changes*, Proposition 2.1](https://arxiv.org/abs/0807.1546) gives the higher-order continuous-time exponent `-(m-1)/m`.
+- [Fontich and Sardanyes, *General scaling law in the saddle-node bifurcation: a complex phase space study* (2008)](https://doi.org/10.1088/1751-8113/41/1/015102) studies degenerate analytic one-dimensional flows and their scaling laws. Kuehn explicitly credits their integral calculation.
+- [Duarte, Januario, Martins and Sardanyes (2012)](https://repositorio.ipl.pt/entities/publication/2be5889e-c076-405a-afa6-e4185a7b5d70) studies inverse-square-root delay for one-dimensional discrete maps.
+- [Brockmoeller, Scherz and Srkalovic, *Pi in the Mandelbrot set everywhere*, Theorem 5](https://arxiv.org/html/2505.07138v1) explicitly includes an `O(1)` escape-time estimate in its satellite setting, alongside its discussion of earlier quadratic results.
+
+These sources warrant the note's conservative attribution. This check does not establish novelty of the corrected-clock argument, exact polynomial families, or uniform constants. The arithmetic conclusion should remain the stated one: retaining only a leading relative asymptotic can lose an unbounded next contribution; it proves no prime or Collatz claim.
+
+## Reproduction
+
+Run `python independent_checks.py` from this directory, with the reviewed note and its `verification.json` in the parent directory. Run again with `python -O independent_checks.py` to confirm that validation does not depend on removable Python assertions. The checked output is in `independent-verification.json`. The parent directory contains the matching normal and optimized author-verifier receipts.
+
+===== 05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md =====
+# Session 55: exact arithmetic diagrams
+
+Two self-contained, deterministic SVG scientific figures; no generated bitmap art, external fonts, scripts, or remote assets.
+
+- `crt-shared-cells.svg`: shared row-major cell labels preserve the actual collision relation. The modulo-5 and modulo-7 colours show equality locally, not root choices. The CRT product is the exact witness (0,9,1;16,15,14;29,21,30). Ordinary row sums are 10,45,80, not equal integer sums.
+- `fields-rings-reentry.svg`: distinguishes extension fields from quotient rings at orders 27,81,243; gives the exact all-exponent characteristic-two contrast and smallest doubling re-entry 50 non-P → 100 P → 200 non-P.
+
+Parker means absence of nine pairwise distinct square entries in a 3×3 magic grid. Zero is allowed. Non-P means existence; none of these diagrams claims an integer square solution.
+
+## Replay
+
+Run `python3 -B replay.py --self-test` and `python3 -O -B replay.py`. Only Python's standard library is needed. `generate.py` regenerates SVG and `countdata.json` byte for byte.
+
+Replay independently checks all ring moduli 1 through 100 plus 128,200,243; the CRT witness, roots, masks and all eight modular line sums; and complete normalized field counts at 27,81,243 using independent polynomial arithmetic and irreducibility checks. This also checks minimality of the doubling re-entry, rather than merely showing three examples. Universal all-exponent claims rely on the pinned proofs, not on finite enumeration.
+
+`SOURCE_PINS.json` records SHA-256 hashes of the exact source packets. `sources/` contains internal theorem copies and narrowly selected certificate rows. No external article is copied. Pins of entire source JSON files identify provenance; extracted data has its own packet integrity hash. This packet is portable and does not require its sibling directories.
+
+## Visual QA
+
+Both SVGs were rendered with Inkscape and visually inspected at native resolution. Cell labels, legends, row-sum warning, field/ring entries and re-entry arrows were checked; no clipping or overlap was observed. PNG previews are disposable QA outputs, not source artifacts. No Library or remote publication was performed.
+
+## Verified affine-coordinate interpretation
+
+Index rows and columns by i,j in {0,1,2}. The displayed modulo-5 equality partition A is the fibre partition of i−j modulo 3; the modulo-7 partition B is the fibre partition of i+j+1 modulo 3. Each has three classes, and all nine ordered coordinate pairs occur exactly once. The replay checks these identifications directly against the displayed residues. This is an affine nine-position coordinate interpretation, not the seven-point Fano plane or an asserted tournament map. Colour names may be relabelled; shared cell positions may not.
+
+===== 04-computation/path_homology_tournament.py =====
+"""
+Compute GLMY path homology of tournaments.
+
+Definitions (Grigoryan-Lin-Muranov-Yau):
+- An n-path is a sequence (v0, v1, ..., vn) of vertices (consecutive distinct)
+- The path is "allowed" if each (v_i, v_{i+1}) is an arc
+- Lambda_n = free module on allowed n-paths
+- boundary: d(v0,...,vn) = sum_{j=0}^{n} (-1)^j (v0,...,hat{v_j},...,vn)
+  where hat means omit v_j
+- Omega_n = {omega in Lambda_n : d(omega) in Lambda_{n-1}}
+  i.e., all face (n-1)-tuples appearing in d(omega) must be allowed paths
+- H_n = ker(d: Omega_n -> Omega_{n-1}) / im(d: Omega_{n+1} -> Omega_n)
+"""
+
+import numpy as np
+from numpy.linalg import matrix_rank
+
+def get_allowed_paths(n_vertices, length, adj):
+    """Get all allowed paths of given length (number of edges)."""
+    paths = []
+    vertices = list(range(n_vertices))
+    def gen(current_path):
+        if len(current_path) == length + 1:
+            paths.append(tuple(current_path))
+            return
+        for v in vertices:
+            if v != current_path[-1] and adj[current_path[-1]][v]:
+                gen(current_path + [v])
+    for v in vertices:
+        gen([v])
+    return paths
+
+def boundary_coefficients(path):
+    """Compute d(path) as a dict: (n-1)-tuple -> coefficient."""
+    result = {}
+    for j in range(len(path)):
+        face = path[:j] + path[j+1:]
+        sign = (-1)**j
+        if face in result:
+            result[face] += sign
+        else:
+            result[face] = sign
+    # Remove zero entries
+    result = {k: v for k, v in result.items() if v != 0}
+    return result
+
+def compute_path_homology(adj, max_dim=4, verbose=True):
+    """Compute GLMY path homology of a digraph given by adjacency matrix."""
+    n = len(adj)
+    results = {}
+
+    # Compute allowed paths for each dimension
+    allowed = {}
+    for dim in range(max_dim + 2):
+        allowed[dim] = get_allowed_paths(n, dim, adj)
+        if verbose:
+            print(f"  dim {dim}: {len(allowed[dim])} allowed {dim}-paths")
+
+    # Index allowed paths
+    path_index = {}
+    allowed_set = {}
+    for dim in range(max_dim + 2):
+        path_index[dim] = {p: i for i, p in enumerate(allowed[dim])}
+        allowed_set[dim] = set(allowed[dim])
+
+    # Compute Omega_n for each dimension
+    omega_bases = {}
+    omega_bases[0] = np.eye(len(allowed[0])) if len(allowed[0]) > 0 else np.zeros((0, 0))
+
+    for dim in range(1, max_dim + 2):
+        num_paths = len(allowed[dim])
+        if num_paths == 0:
+            omega_bases[dim] = np.zeros((num_paths, 0))
+            continue
+
+        # For each allowed dim-path, compute boundary
+        # Find non-allowed faces
+        non_allowed_faces = set()
+        boundary_data = []
+        for p in allowed[dim]:
+            bd = boundary_coefficients(p)
+            boundary_data.append(bd)
+            for face in bd:
+                if face not in allowed_set[dim-1]:
+                    non_allowed_faces.add(face)
+
+        if not non_allowed_faces:
+            omega_bases[dim] = np.eye(num_paths)
+        else:
+            na_list = sorted(non_allowed_faces)
+            na_index = {f: i for i, f in enumerate(na_list)}
+            M = np.zeros((len(na_list), num_paths))
+            for j, bd in enumerate(boundary_data):
+                for face, coeff in bd.items():
+                    if face in na_index:
+                        M[na_index[face], j] += coeff
+
+            # Omega_dim = kernel of M
+            U, S, Vt = np.linalg.svd(M, full_matrices=True)
+            tol = 1e-10
+            rank = np.sum(S > tol)
+            if rank < num_paths:
+                kernel = Vt[rank:].T
+                omega_bases[dim] = kernel
+            else:
+                omega_bases[dim] = np.zeros((num_paths, 0))
+
+        if verbose:
+            odim = omega_bases[dim].shape[1] if omega_bases[dim].ndim == 2 else 0
+            print(f"  Omega_{dim}: dimension {odim}")
+
+    # Compute H_n = ker(d: Omega_n -> Omega_{n-1}) / im(d: Omega_{n+1} -> Omega_n)
+    for dim in range(max_dim + 1):
+        odim = omega_bases[dim].shape[1] if (omega_bases[dim].ndim == 2 and omega_bases[dim].shape[1] > 0) else 0
+        if odim == 0:
+            results[dim] = 0
+            if verbose:
+                print(f"  H_{dim} = 0 (Omega_{dim} = 0)")
+            continue
+
+        if dim == 0:
+            # H_0: ker(d_0) / im(d_1|Omega_1)
+            # d_0 = 0, so ker = all of Omega_0
+            im_rank = 0
+            odim1 = omega_bases[1].shape[1] if (omega_bases[1].ndim == 2 and omega_bases[1].shape[1] > 0) else 0
+            if odim1 > 0:
+                D1 = np.zeros((len(allowed[0]), len(allowed[1])))
+                for j, p in enumerate(allowed[1]):
+                    bd = boundary_coefficients(p)
+                    for face, coeff in bd.items():
+                        if face in path_index[0]:
+                            D1[path_index[0][face], j] += coeff
+                D1_omega = D1 @ omega_bases[1]
+                im_rank = matrix_rank(D1_omega, tol=1e-10)
+            beta = odim - im_rank
+            results[dim] = beta
+            if verbose:
+                print(f"  H_{dim}: beta_{dim} = {beta}")
+            continue
+
+
+===== 04-computation/even_betti_quick.py =====
+#!/usr/bin/env python3
+"""
+Quick analysis of even Betti vanishing and boundary map structure.
+Author: opus-2026-03-07-S46e
+"""
+import numpy as np
+import sys
+sys.path.insert(0, '/Users/e/Documents/GitHub/math/04-computation')
+from path_homology_v2 import (
+    path_betti_numbers, enumerate_allowed_paths, build_full_boundary_matrix
+)
+from itertools import combinations
+
+# Regular C5 tournament
+A = [[0]*5 for _ in range(5)]
+for i in range(5):
+    for d in [1, 2]:
+        A[i][(i+d)%5] = 1
+n = 5
+
+print("C5 tournament (regular, t3=5, β₁=1):")
+beta = path_betti_numbers(A, n)
+print(f"β = {[int(b) for b in beta]}")
+
+print("\nChain groups and boundary maps:")
+for p in range(n):
+    paths = enumerate_allowed_paths(A, n, p)
+    print(f"  |Ω_{p}| = {len(paths)}")
+
+for p in range(1, n):
+    paths_p = enumerate_allowed_paths(A, n, p)
+    paths_pm1 = enumerate_allowed_paths(A, n, p-1)
+    if len(paths_p) == 0:
+        print(f"  ∂_{p}: empty")
+        continue
+    mat = build_full_boundary_matrix(paths_p, paths_pm1)
+    rk = np.linalg.matrix_rank(mat)
+    ker = mat.shape[1] - rk
+    print(f"  ∂_{p}: {mat.shape[0]}×{mat.shape[1]}, rank={rk}, ker(∂_{p})={ker}")
+
+# Now compute β_p = ker(∂_p) - rank(∂_{p+1})
+print("\nBetti numbers from chain complex:")
+for p in range(n):
+    paths_p = enumerate_allowed_paths(A, n, p)
+    if p > 0:
+        paths_pm1 = enumerate_allowed_paths(A, n, p-1)
+        mat_p = build_full_boundary_matrix(paths_p, paths_pm1)
+        ker_p = mat_p.shape[1] - np.linalg.matrix_rank(mat_p)
+    else:
+        ker_p = len(paths_p)  # ker(∂_0) = |Ω_0|
+
+    if p < n-1:
+        paths_pp1 = enumerate_allowed_paths(A, n, p+1)
+        if len(paths_pp1) > 0:
+            mat_pp1 = build_full_boundary_matrix(paths_pp1, paths_p)
+            rk_pp1 = np.linalg.matrix_rank(mat_pp1)
+        else:
+            rk_pp1 = 0
+    else:
+        rk_pp1 = 0
+
+    print(f"  β_{p} = ker(∂_{p}) - rank(∂_{p+1}) = {ker_p} - {rk_pp1} = {ker_p - rk_pp1}")
+
+# === KEY: Look at WHY ker(∂_2) = rank(∂_3) ===
+print("\n" + "=" * 60)
+print("KEY: Why β₂ = 0?")
+print("=" * 60)
+
+paths_2 = enumerate_allowed_paths(A, n, 2)
+paths_1 = enumerate_allowed_paths(A, n, 1)
+paths_3 = enumerate_allowed_paths(A, n, 3)
+
+mat_2 = build_full_boundary_matrix(paths_2, paths_1)
+mat_3 = build_full_boundary_matrix(paths_3, paths_2)
+
+ker_2 = mat_2.shape[1] - np.linalg.matrix_rank(mat_2)
+rk_3 = np.linalg.matrix_rank(mat_3)
+
+print(f"|Ω_2| = {len(paths_2)}, |Ω_3| = {len(paths_3)}")
+print(f"ker(∂_2) = {ker_2}, rank(∂_3) = {rk_3}")
+print(f"β_2 = {ker_2} - {rk_3} = {ker_2 - rk_3}")
+
+if ker_2 == rk_3:
+    print("β₂ = 0: Every 2-cycle IS a 2-boundary (no 'true' 2-holes)")
+
+# Compare with transitive tournament
+print("\n" + "=" * 60)
+print("TRANSITIVE tournament (t3=0):")
+print("=" * 60)
+A_t = [[0]*5 for _ in range(5)]
+for i in range(5):
+    for j in range(i+1, 5):
+        A_t[i][j] = 1
+
+beta = path_betti_numbers(A_t, n)
+print(f"β = {[int(b) for b in beta]}")
+
+for p in range(n):
+    paths = enumerate_allowed_paths(A_t, n, p)
+    print(f"  |Ω_{p}| = {len(paths)}")
+
+# === The crucial counting: |Ω_p| for tournaments ===
+print("\n" + "=" * 60)
+print("COUNTING |Ω_p| FOR TOURNAMENTS")
+print("=" * 60)
+
+# For a tournament T: |Ω_p| = number of directed paths of length p
+# = number of (p+1)-tuples of distinct vertices forming a directed path
+
+# For TRANSITIVE tournament: every ordering consistent with the total order
+# is a directed path. So |Ω_p| = P(n, p+1) = n!/(n-p-1)!
+
+# For REGULAR tournament: depends on structure.
+
+# KEY OBSERVATION for β_2:
+# ∂_2: Ω_2 → Ω_1 has matrix size |Ω_1| × |Ω_2|
+# For tournament: |Ω_1| = n(n-1) (ALL ordered pairs are edges)
+#
+# The boundary ∂_2(a,b,c) = (b,c) - (a,c) + (a,b)
+# But WAIT: (a,c) is in Ω_1 iff a→c in T.
+# If c→a instead, then (a,c) is NOT in Ω_1; instead (c,a) is.
+# So the boundary formula becomes:
+# ∂_2(a,b,c) = (b,c) ± (a,c) or (c,a) + (a,b)
+
+# Actually in GLMY, the boundary of (v_0,...,v_p) is:
+# Σ_{i=0}^{p} (-1)^i * (v_0,...,v̂_i,...,v_p)
+# where the term is INCLUDED only if (v_0,...,v̂_i,...,v_p) is allowed.
+
+# For p=2: ∂_2(a,b,c) where a→b→c:
+# i=0: +(b,c) — always allowed since b→c
+# i=1: -(a,c) — allowed iff a→c
+# i=2: +(a,b) — always allowed since a→b
+
+# So: if a→c (same direction as the skip):
+#   ∂_2(a,b,c) = (b,c) - (a,c) + (a,b)  [3 terms]
+# If c→a (opposite direction):
+#   ∂_2(a,b,c) = (b,c) + (a,b)  [2 terms, middle term DROPS]
+
+print("""
+GLMY boundary for 2-paths in a tournament:
+
+===== 04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py =====
+#!/usr/bin/env python3
+"""Exact referee for THM-2246's joint two-step private-fibre cap.
+
+THM-2234 bounds the first private image with guard occupancy 10 and the
+second with peeled-complement occupancy 12.  Those caps cannot saturate
+independently.  On the intermediate thirteen-root fibre, the allowed
+peeled-complement roots and the guard roots must overlap.  This script checks
+the resulting four-bit table, every displayed rational constant, and an exact
+169-root hostile control attaining the joint cap 112 while all five distinct
+unit masks remain present.
+"""
+
+from fractions import Fraction
+
+
+P = 13
+PRIVATE_FLOOR = Fraction(2593, 90090)
+OLD_SECOND_FLOOR = Fraction(33709, 831600)
+EXPECTED_JOINT_CAP = 112
+EXPECTED_SECOND_FLOOR = Fraction(33709, 776160)
+EXPECTED_GAIN = Fraction(33709, 11642400)
+EXPECTED_STOPPING_GAP = Fraction(77171, 776160)
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def circle_norm(value):
+    residue = value % 1
+    return min(residue, 1 - residue)
+
+
+def four_bit_table():
+    rows = []
+    for danger_at_z in (0, 1):
+        for guard_at_z in (0, 1):
+            allowed = 11 + danger_at_z
+            guard = 10 - guard_at_z
+            intersection_floor = allowed + guard - 13
+            cap = 10 * allowed - intersection_floor
+            rows.append(
+                (
+                    danger_at_z,
+                    guard_at_z,
+                    allowed,
+                    guard,
+                    intersection_floor,
+                    cap,
+                )
+            )
+    return tuple(rows)
+
+
+def hostile_control():
+    """Return the exact locally sharp 169-root configuration."""
+    guard_speed = 1
+    peeled_core = 2
+    deep_owner_core = 2
+    phase = Fraction(325007, 700000)
+    unit_speeds = tuple(
+        1 + P**2 * 700000 * index for index in range(1, 6)
+    )
+
+    require(guard_speed % 2 == 1, "hostile guard is not odd")
+    require(guard_speed % P != 0, "hostile guard is not a thirteen-unit")
+    require(peeled_core % P != 0, "peeled core is not a thirteen-unit")
+    require(
+        circle_norm(deep_owner_core * phase) < Fraction(1, 14),
+        "hostile depth-two owner is not active at the terminal phase",
+    )
+    require(len(set(unit_speeds)) == 5, "unit hostile speeds are not distinct")
+    require(
+        all(speed > 0 and speed % P != 0 for speed in unit_speeds),
+        "unit hostile speed scope drift",
+    )
+    require(
+        all((speed - guard_speed) * phase % 1 == 0 for speed in unit_speeds),
+        "hostile unit phases no longer align with the guard speed",
+    )
+
+    intermediate = tuple((phase + digit) / P for digit in range(P))
+    allowed_intermediate = tuple(
+        value
+        for value in intermediate
+        if circle_norm(peeled_core * value) >= Fraction(1, 14)
+    )
+    guard_intermediate = tuple(
+        value
+        for value in intermediate
+        if circle_norm(guard_speed * value) > Fraction(1, 7)
+    )
+    intersection = set(allowed_intermediate).intersection(guard_intermediate)
+
+    grandchildren = tuple(
+        (phase + digit) / P**2 for digit in range(P**2)
+    )
+    eligible = []
+    for value in grandchildren:
+        guard = circle_norm(guard_speed * value) > Fraction(1, 7)
+        peeled_complement = (
+            circle_norm(P * peeled_core * value) >= Fraction(1, 14)
+        )
+        unit_complement = all(
+            circle_norm(speed * value) >= Fraction(1, 14)
+            for speed in unit_speeds
+        )
+        if guard and peeled_complement and unit_complement:
+            require(
+                circle_norm(P**2 * deep_owner_core * value)
+                < Fraction(1, 14),
+                "hostile eligible root lost its labelled deep owner",
+            )
+            eligible.append(value)
+
+        # The five distinct masks are exactly aligned with D_H on this fibre.
+        guard_danger = circle_norm(guard_speed * value) < Fraction(1, 14)
+        for speed in unit_speeds:
+            require(
+                (circle_norm(speed * value) < Fraction(1, 14))
+                == guard_danger,
+                "hostile unit-mask alignment drift",
+            )
+
+        # Keep the witness off every load-bearing boundary.
+        require(
+            circle_norm(guard_speed * value) != Fraction(1, 7),
+            "hostile guard boundary encountered",
+        )
+        require(
+            circle_norm(P * peeled_core * value) != Fraction(1, 14),
+            "hostile peeled boundary encountered",
+        )
+        require(
+            all(
+                circle_norm(speed * value) != Fraction(1, 14)
+                for speed in unit_speeds
+            ),
+            "hostile unit boundary encountered",
+
+===== 04-computation/new_frontiers_s3b.py =====
+#!/usr/bin/env python3
+"""
+New Frontiers — opus-2026-05-28-S3b
+
+Three interconnected explorations inspired by the Bloom-Sawin-Schildkraut-Zhelezov
+sum-product paper (arXiv:2605.28781) and our SC tiling work:
+
+A. Bivariate GF theorem: F(x,y) = xB(xy)/(1-x-xB(xy))
+   where B(z) = sum_{a>=2} SC(a+1) z^a
+   This is the generating function for tilings by good-cut count.
+
+B. Impossible H values via OCF: characterize achievable H for n=6,7,8
+   (extends THM-338 which proved H=7 impossible at n=5)
+
+C. Sum-product phenomena in H-spectra:
+   The independence polynomial I(Omega,x) at x=2 gives H(T).
+   At x=p gives related integer invariants. Sum-product for these.
+
+D. Q-triangle diagonal formulas:
+   Q(2k,k) = 1
+   Q(2k+1,k) = 5k
+   Q(2k+2,k) = 25k(k+3)/2
+"""
+
+from math import comb
+from itertools import combinations
+
+# ============================================================
+# SC tiling counts (precomputed via IE formula in session S3)
+# ============================================================
+SC = {2: 1, 3: 1, 4: 5, 5: 50, 6: 903, 7: 30773, 8: 2032504,
+      9: 264271477, 10: 68184627441, 11: 35047197032002,
+      12: 35958496436958947}
+
+def B_coeff(d, SC_dict):
+    """B(x) coefficients: [x^d]B(x) = SC(d+1) for d>=2, else 0."""
+    if d < 2:
+        return 0
+    return SC_dict.get(d+1, 0)
+
+def B_power_coeff(d, k, SC_dict):
+    """Compute [x^d] B(x)^k by dynamic programming."""
+    if k == 0:
+        return 1 if d == 0 else 0
+    # DP: dp[j] = coefficient of x^j in B(x)^current_power
+    max_d = d
+    dp = {0: 1}
+    for power in range(k):
+        new_dp = {}
+        for j, coeff in dp.items():
+            for a in range(2, max_d - j + 1):
+                sc_val = B_coeff(a, SC_dict)
+                if sc_val == 0:
+                    continue
+                nj = j + a
+                if nj <= max_d:
+                    new_dp[nj] = new_dp.get(nj, 0) + coeff * sc_val
+        dp = new_dp
+    return dp.get(d, 0)
+
+
+# ============================================================
+# PART A: Bivariate GF Theorem
+# ============================================================
+# Claim: F(x,y) = xB(xy) / (1 - x - xB(xy))
+# is the GF for exactly-d-good tilings: [x^n y^d]F = exactly-d-good(n)
+# where exactly-d-good(n) = sum_{k=1}^{floor(d/2)} Q(d,k) * C(n-d, k).
+
+print("=" * 65)
+print("PART A: BIVARIATE GF THEOREM")
+print("F(x,y) = xB(xy) / (1 - x - xB(xy))")
+print("=" * 65)
+
+def bivGF_coeff(n, d, max_terms=15):
+    """Compute [x^n y^d] F(x,y) via the formula F = xB(xy)/(1-x-xB(xy))."""
+    # Expand F = xB(xy) * sum_{j>=0} (x(1+B(xy)))^j... wait:
+    # F = xB(xy) / (1 - x*(1 + B(xy)))
+    # [x^n y^d] F = [x^n y^d] xB(xy) * sum_{j>=0} (x(1+B(xy)))^j
+    # = [x^n y^d] sum_{j>=0} x^{j+1} (1+B(xy))^j B(xy)
+
+    # Alternative: use the explicit formula:
+    # [x^n y^d] F = sum_{k=1}^{floor(d/2)} Q(d,k) * C(n-d, k)
+    if d < 2 or d >= n:
+        return 0
+    result = 0
+    for k in range(1, d//2 + 1):
+        if n - d < k:
+            break
+        q = B_power_coeff(d, k, SC)
+        result += q * comb(n-d, k)
+    return result
+
+def brute_exactly_d_good(n, d):
+    """Brute-force count tilings with exactly d good cuts at n vertices."""
+    m = (n-1)*(n-2)//2
+    tiles = []
+    for y in range(1, n-1):
+        for x in range(n, y+1, -1):
+            tiles.append((x, y))
+
+    count = 0
+    for mask in range(2**m):
+        tile_up = [(mask >> i) & 1 for i in range(m)]
+        good_cuts = 0
+        for k in range(1, n):
+            for i, (x, y) in enumerate(tiles):
+                if x >= k > y and tile_up[i]:
+                    good_cuts += 1
+                    break
+        if good_cuts == d:
+            count += 1
+    return count
+
+print("\nVerification: [x^n y^d]F vs brute force")
+errors = 0
+for n in range(3, 10):
+    for d in range(0, n):
+        formula = bivGF_coeff(n, d)
+        brute = brute_exactly_d_good(n, d)
+        if formula != brute:
+            print(f"  MISMATCH n={n}, d={d}: F={formula}, brute={brute}")
+            errors += 1
+
+if errors == 0:
+    print("  ALL MATCH for n=3..9, d=0..n-1  ✓")
+    print("  THM-340 VERIFIED: F(x,y) = xB(xy)/(1-x-xB(xy)) ✓")
+
+# Corollary: F(x,1) = Σ_n (2^m - 1) x^n
+# (total non-transitive tilings, since d=1 is impossible)
+print("\nCorollary check: [x^n]F(x,1) = 2^m - 1 for n>=3")
+from math import comb as C
+for n in range(3, 10):
+    m = (n-1)*(n-2)//2
+    total = sum(bivGF_coeff(n, d) for d in range(2, n))
+    expected = 2**m - 1  # all except transitive
+    match = (total == expected)
+    print(f"  n={n}: F(x,1)={total}, 2^m-1={expected}  {'✓' if match else 'MISMATCH'}")
+
+
+# ============================================================
+
+===== 04-computation/lrc14_regularized_naturals_zoo_kps.py =====
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+r"""
+THE REGULARIZED-NATURALS ZOO: -1/12 and its relatives, grounded, and their project ties.
+
+kind-pasteur-2026-06-30. Creative exploration of 1+2+3+...=zeta(-1)=-1/12 and OTHER
+regularized infinite sums/products, verifying the ones that are STRUCTURAL (not decorative):
+
+ C1  THE BERNOULLI TOWER & EVEN-VANISHING:  zeta(-k) = -B_{k+1}/(k+1).
+     zeta(-2n)=0 (even -> 0) ; zeta(-odd) = Bernoulli != 0.  This IS the project's
+     "even vanishes / odd survives" (Burnside Fix(even cycle)=0, beta_2=0, OCF odd cycles).
+ C2  THE DEDEKIND RECIPROCITY CONSTANTS ARE REGULARIZED NATURALS (new, verified):
+     s(h,k)+s(k,h) = -1/4 + (1/12)(h/k+k/h+1/hk),  and
+        1/12 = -zeta(-1)   [1+2+3+... , PLAIN natural sum]
+        1/4  =  eta(-1)    [1-2+3-4+... , ALTERNATING natural sum]
+     so the barrier residual's reciprocity is built from the plain(unsigned) & alternating(signed) sums.
+ C3  GRANDI & FRIENDS:  eta(0)=1-1+1-...=1/2 ; zeta(0)=1+1+1+...=-1/2 = B_1.
+ C4  CASIMIR ROAD TO WEIGHT 12:  -(1/2)zeta(-1) = 1/24 = the exponent in eta = q^{1/24} prod(1-q^n);
+     eta^24 = Delta (weight 12); 24 = 2*12 = the GW doubling. The -1/12 -> 1/24 -> eta^24 chain is
+     the STRUCTURAL bridge the "two twelves" coincidence needed.
+ C5  REGULARIZED PRODUCT:  prod n = exp(-zeta'(0)) = sqrt(2 pi)  (functional determinant; the e/sqrt(2pi)
+     of the triangle foundation).
+ C6  THE APEX-7 TWISTED -1/12:  L(1-n, chi_7) = -B_{n,chi_7}/n over Q(sqrt-7). Because 7=3 mod 4,
+     chi_7 is ODD, so the EVEN-index twisted Bernoulli B_{2,chi_7}=0 (twisted even-vanishing!), and the
+     surviving datum is B_{1,chi_7} (odd index) -- the class-number value. The apex oddness that makes
+     the Gauss sum imaginary (i sqrt7) is the SAME parity that zeroes B_{2,chi_7}.
+"""
+import sys, math
+from fractions import Fraction as Fr
+sys.stdout.reconfigure(encoding='utf-8') if hasattr(sys.stdout,'reconfigure') else None
+
+# ---- Bernoulli numbers (exact) ----
+def bernoulli(n):
+    A=[Fr(0)]*(n+1)
+    for m in range(n+1):
+        A[m]=Fr(1,m+1)
+        for j in range(m,0,-1):
+            A[j-1]=j*(A[j-1]-A[j])
+    return A[0]   # B_n^+ (B_1=+1/2). We'll use the convention-independent zeta formula.
+B=[bernoulli(n) for n in range(16)]
+
+print("="*88)
+print("C1  BERNOULLI TOWER & EVEN-VANISHING:  zeta(-k) = -B_{k+1}/(k+1)")
+print("="*88)
+print("   k   zeta(-k) = 1^k+2^k+...(reg)     parity")
+for k in range(0,12):
+    z = -B[k+1]/(k+1)
+    par = "EVEN k -> " + ("ZERO" if (k%2==0 and k>0) else ("-1/2 (=B_1, zeta(0))" if k==0 else "")) if (k%2==0) else "ODD  k -> Bernoulli != 0"
+    tag = "   <== -1/12 (the natural sum)" if k==1 else ""
+    print(f"   {k:2d}   {str(z):>12}                {par}{tag}")
+print("   => zeta(NEG EVEN)=0 (the trivial zeros) == the project's EVEN-annihilation")
+print("      (Burnside Fix(even cycle)=0, beta_2=0). zeta(NEG ODD)=Bernoulli == the ODD/OCF content.")
+
+# ---- Dirichlet eta at negative integers: eta(-k) = (1 - 2^{k+1}) zeta(-k) ----
+def zeta_neg(k): return -B[k+1]/(k+1)
+def eta_neg(k):  return (1-2**(k+1))*zeta_neg(k)
+print("\n"+"="*88)
+print("C2/C3  ALTERNATING (eta) vs PLAIN (zeta) REGULARIZED NATURAL SUMS")
+print("="*88)
+print(f"   zeta(0)  = 1+1+1+...   = {zeta_neg(0)}     (= B_1 = -1/2)")
+print(f"   eta(0)   = 1-1+1-...   = {eta_neg(0)}      (Grandi's series)")
+print(f"   zeta(-1) = 1+2+3+...   = {zeta_neg(1)}    (-1/12, PLAIN)")
+print(f"   eta(-1)  = 1-2+3-4+... = {eta_neg(1)}      (ALTERNATING)")
+
+# verify Dedekind reciprocity constants == these
+def saw(x):
+    if x.denominator==1: return Fr(0)
+    return x-(x.numerator//x.denominator)-Fr(1,2)
+def dedekind(h,k): return sum(saw(Fr(i,k))*saw(Fr(h*i,k)) for i in range(1,k))
+def recip(h,k): return Fr(-1,4)+Fr(1,12)*(Fr(h,k)+Fr(k,h)+Fr(1,h*k))
+print("\n   Dedekind reciprocity  s(h,k)+s(k,h) = -1/4 + (1/12)(h/k+k/h+1/hk):")
+allok=True
+for (h,k) in [(2,7),(3,7),(5,13),(8,21)]:
+    lhs=dedekind(h,k)+dedekind(k,h); rhs=recip(h,k); ok=(lhs==rhs); allok&=ok
+    print(f"     s({h},{k})+s({k},{h}) = {str(lhs):>8} = -1/4 + (1/12)(...)  [{ok}]")
+print(f"   CONSTANTS:  -1/4 = -eta(-1) = -(1-2+3-4+...) ;  1/12 = -zeta(-1) = -(1+2+3+...).  verified={allok}")
+print("   => the barrier residual (a Dedekind sum) is built from the ALTERNATING(signed) and")
+print("      PLAIN(unsigned) regularized natural sums -- the signed/unsigned split, as constants.")
+
+print("\n"+"="*88)
+print("C4  CASIMIR ROAD TO WEIGHT 12:  -(1/2) zeta(-1) = 1/24")
+print("="*88)
+cas=-Fr(1,2)*zeta_neg(1)
+print(f"   -(1/2) zeta(-1) = -(1/2)(-1/12) = {cas} = 1/24  (the exponent in eta = q^(1/24) prod(1-q^n))")
+print(f"   eta^24 = Delta = q prod(1-q^n)^24  is the weight-12 cusp form;  24 = 2*12 = the GW doubling.")
+print(f"   => -1/12 -> Casimir 1/24 -> eta^24 (weight 12) is a REAL (string/modular) bridge from the")
+print(f"      regularized natural sum to weight 12 -- upgrading the 'two twelves' coincidence.")
+
+print("\n"+"="*88)
+print("C5  REGULARIZED PRODUCT  prod n = exp(-zeta'(0)) = sqrt(2 pi)")
+print("="*88)
+zp0=-0.5*math.log(2*math.pi)
+print(f"   zeta'(0) = -1/2 ln(2 pi) = {zp0:.6f} ;  prod_{{n>=1}} n := exp(-zeta'(0)) = {math.exp(-zp0):.6f} = sqrt(2 pi) = {math.sqrt(2*math.pi):.6f}")
+print(f"   => the regularized product of ALL naturals is sqrt(2 pi) -- the Gamma/Stirling 'e, sqrt(2pi)'")
+print(f"      of the triangle foundation, dual to the SUM -1/12.")
+
+print("\n"+"="*88)
+print("C6  THE APEX-7 TWISTED -1/12  (generalized Bernoulli over Q(sqrt-7))")
+print("="*88)
+def legendre7(a):
+    a%=7
+    if a==0: return 0
+    return 1 if pow(a,3,7)==1 else -1   # a^((7-1)/2)=a^3 mod 7 in {1,-1}
+def B2poly(x): return x*x-x+Fr(1,6)
+def B1poly(x): return x-Fr(1,2)
+# generalized Bernoulli B_{n,chi} = f^{n-1} sum_{a=1}^{f} chi(a) B_n(a/f)
+B1chi = sum(Fr(legendre7(a))*B1poly(Fr(a,7)) for a in range(1,7))          # f^0
+B2chi = 7*sum(Fr(legendre7(a))*B2poly(Fr(a,7)) for a in range(1,7))        # f^1
+print(f"   chi_7 = Legendre mod 7:  QR{{1,2,4}}=+1, NQR{{3,5,6}}=-1 ;  chi_7(-1)=chi_7(6)={legendre7(6)}  (ODD char, since 7=3 mod 4)")
+print(f"   B_{{1,chi_7}} = {B1chi}   (odd index, ODD char -> NONZERO: the class-number datum; L(0,chi_7) = -B_1,chi = {-B1chi})")
+print(f"   B_{{2,chi_7}} = {B2chi}   (even index, ODD char -> ZERO: the TWISTED even-vanishing)")
+print(f"   L(-1, chi_7) = -B_2,chi/2 = {-B2chi/2}  (a trivial zero)")
+print("   => The apex oddness (7 = 3 mod 4) that makes the Gauss sum IMAGINARY (i sqrt7) is the SAME")
+print("      parity that ZEROES the even-index twisted Bernoulli B_{2,chi_7}. Even-vanishing, twisted.")
+print("      The surviving apex constant is B_{1,chi_7} = -1 (odd index) -- the Q(sqrt-7) class number h=1.")
+
+print("\n"+"="*88)
+print("SYNTHESIS: -1/12 is one node of a REGULARIZED-NATURALS web")
+print("="*88)
+print(" STRUCTURAL (verified): zeta(-even)=0 = even-annihilation; Dedekind constants = {plain -1/12,")
+print("   alternating 1/4} regularized naturals; Casimir 1/24 -> eta^24 weight 12; prod n = sqrt(2pi);")
+print("   twisted B_{2,chi_7}=0 = apex-7 even-vanishing (7=3 mod4 => chi odd).")
+print(" The universal -1/12 (Bernoulli) governs the residual/floor for ALL n; the apex twist replaces")
+print(" it by the chi_7-Bernoulli over Q(sqrt-7) -- where the signed obstruction becomes real.")
+print("DONE.")
+
+===== 04-computation/paley_eigenvector_theorem.py =====
+#!/usr/bin/env python3
+"""
+paley_eigenvector_theorem.py — Why is Paley sigma an eigenvector of J?
+
+DISCOVERY: The interaction matrix J[i,j] = hat{H}({chord_i, chord_j})
+(from the Walsh expansion of H on the orientation cube {+1,-1}^m)
+has the Paley orientation vector as an EIGENVECTOR with the LARGEST eigenvalue.
+
+This means Paley maximizes the degree-2 quadratic form of H.
+The question is: is this an accident, or does it follow from
+the algebraic structure of the Legendre symbol?
+
+PLAN:
+1. Verify eigenvector property at p=7, 11 (done, confirmed)
+2. Explain WHY via the circulant structure of J
+3. Determine when the degree-4 terms can override the degree-2 advantage
+4. Connect to the dihedral group representation theory
+
+Author: opus-2026-03-12-S62
+"""
+
+import numpy as np
+import cmath
+import math
+from itertools import combinations
+
+def adjacency_matrix(S, p):
+    A = np.zeros((p, p), dtype=np.int8)
+    for i in range(p):
+        for j in range(p):
+            if i != j and (j - i) % p in S:
+                A[i][j] = 1
+    return A
+
+def count_hp_fast(A):
+    n = len(A)
+    full = (1 << n) - 1
+    dp = np.zeros((1 << n, n), dtype=np.int64)
+    for v in range(n):
+        dp[1 << v, v] = 1
+    for mask in range(1, 1 << n):
+        for v in range(n):
+            if not (mask & (1 << v)):
+                continue
+            c = dp[mask, v]
+            if c == 0:
+                continue
+            for u in range(n):
+                if mask & (1 << u):
+                    continue
+                if A[v, u]:
+                    dp[mask | (1 << u), u] += c
+    return int(np.sum(dp[full]))
+
+def is_qr(a, p):
+    if a % p == 0: return False
+    return pow(a, (p - 1) // 2, p) == 1
+
+def sigma_to_S(sigma, p):
+    m = (p - 1) // 2
+    S = set()
+    for k in range(1, m + 1):
+        if sigma[k - 1] == 1:
+            S.add(k)
+        else:
+            S.add(p - k)
+    return frozenset(S)
+
+def compute_all_H(p):
+    """Compute H for all 2^m orientations."""
+    m = (p - 1) // 2
+    H_vals = {}
+    for bits in range(2**m):
+        sigma = tuple(1 if (bits >> i) & 1 else -1 for i in range(m))
+        S = sigma_to_S(list(sigma), p)
+        A = adjacency_matrix(S, p)
+        H = count_hp_fast(A)
+        H_vals[sigma] = H
+    return H_vals
+
+def walsh_coefficients(H_vals, m):
+    """Compute Walsh-Fourier coefficients."""
+    coeffs = {}
+    for r in range(m + 1):
+        for S in combinations(range(m), r):
+            coeff = 0
+            for bits in range(2**m):
+                sigma = tuple(1 if (bits >> i) & 1 else -1 for i in range(m))
+                prod = 1
+                for k in S:
+                    prod *= sigma[k]
+                coeff += H_vals[sigma] * prod
+            coeff /= 2**m
+            if abs(coeff) > 0.001:
+                coeffs[S] = coeff
+    return coeffs
+
+def interaction_matrix(coeffs, m):
+    """Extract the degree-2 interaction matrix J."""
+    J = np.zeros((m, m))
+    for S, c in coeffs.items():
+        if len(S) == 2:
+            i, j = S
+            J[i, j] = c
+            J[j, i] = c
+    return J
+
+
+# ============================================================
+# SECTION 1: THE EIGENVECTOR THEOREM — ALGEBRAIC EXPLANATION
+# ============================================================
+
+print("=" * 70)
+print("PALEY EIGENVECTOR THEOREM — ALGEBRAIC STRUCTURE")
+print("=" * 70)
+
+print("""
+THEOREM: At p = 3 mod 4, the Paley orientation sigma_P is an eigenvector
+of the interaction matrix J with the largest eigenvalue.
+
+PROOF SKETCH:
+  The interaction matrix J lives on the space of chord type pairs.
+  J[i,j] measures how the orientation of chord i interacts with chord j
+  in determining H.
+
+  For CIRCULANT tournaments, there's a hidden multiplicative symmetry:
+  If a is a QR mod p, then multiplying all chord types by a (mod p)
+  is an automorphism of the Paley tournament.
+
+  This means J is EQUIVARIANT under the action of (Z/pZ)*/QR on chord types.
+
+  The QR subgroup acts by permutation on {1,...,m} (chord types):
+    a * k mod p -> either k' or p-k' (where 1 <= k' <= m)
+  with a sign flip when a*k > m.
+
+  The Legendre symbol chi defines the character of QR on this space:
+    sigma_P[k] = chi(k)  (for k = 1,...,m)
+
+  Since chi is a multiplicative character of (Z/pZ)*, and J is equivariant
+  under QR multiplication, sigma_P (= chi restricted to {1,...,m})

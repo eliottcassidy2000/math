@@ -1,0 +1,74 @@
+{
+  "CRT": [
+    {
+      "joint_orbit_size": 3,
+      "m": 3,
+      "periods": [
+        3,
+        3
+      ],
+      "relative_phase_orbits": 3
+    },
+    {
+      "joint_orbit_size": 15,
+      "m": 15,
+      "periods": [
+        3,
+        5
+      ],
+      "relative_phase_orbits": 1
+    }
+  ],
+  "F512_modulus_bits": 515,
+  "F8_map": {
+    "0": 0,
+    "1": 3,
+    "2": 5,
+    "3": 6,
+    "4": 7,
+    "5": 4,
+    "6": 2,
+    "7": 1
+  },
+  "F8_modulus_bits": 11,
+  "hierarchy_witness": [
+    {
+      "W2_stabilizer": 9,
+      "colors_in_index_order": "000000001",
+      "field_degree": 9,
+      "field_element": 35,
+      "normal_basis_word": 256
+    },
+    {
+      "W2_stabilizer": 1,
+      "colors_in_index_order": "001001011",
+      "field_degree": 9,
+      "field_element": 150,
+      "normal_basis_word": 480
+    }
+  ],
+  "normal_basis_F512": [
+    3,
+    5,
+    17,
+    257,
+    385,
+    481,
+    511,
+    171,
+    35
+  ],
+  "normal_basis_F8": [
+    3,
+    5,
+    7
+  ],
+  "normal_element_F512": 3,
+  "reflection_nonmultiplicative_witness": [
+    2,
+    2,
+    6,
+    4
+  ],
+  "status": "PASS"
+}

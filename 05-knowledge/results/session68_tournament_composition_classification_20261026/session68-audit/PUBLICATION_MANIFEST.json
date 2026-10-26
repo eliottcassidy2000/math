@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "d8172e4ac86c175b2720de6a9131f0ac356e9a8a37d0a70e67ed0127494c9e1f"
+    },
+    {
+      "path": "CHECKPOINT1_AUDIT.md",
+      "sha256": "212b2a50db850706dfc1f520b88f7931c50556ba98f1bf4d2339b7a1af16be16"
+    },
+    {
+      "path": "FINAL_INPUT_MANIFEST.json",
+      "sha256": "8c4ac96f276a878e92fa7dd972fa3090d081ef44df52472d56918407a93dd913"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "6eef2fdbc7592f0b15df1bb2dc15f02694cc26c34e37a5aa1af2069e224ce480"
+    },
+    {
+      "path": "independent.normal.json",
+      "sha256": "c5caba58bb91965aa952235f58b69cf8ed95f083899da1aeae4eac285d9c3415"
+    },
+    {
+      "path": "independent.optimized.json",
+      "sha256": "c5caba58bb91965aa952235f58b69cf8ed95f083899da1aeae4eac285d9c3415"
+    },
+    {
+      "path": "classification.replay.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "classification.optimized.replay.json",
+      "sha256": "6e8b14a4d1b0777f64b8499e41a6c87196e3cfd3b4a156544e08694d9bc8b108"
+    },
+    {
+      "path": "line.replay.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "line.optimized.replay.json",
+      "sha256": "3bebaca54cba15dff92c84fad037c3407335f61c0562c0b1cba9428371074647"
+    },
+    {
+      "path": "field.replay.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "path": "field.optimized.replay.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "path": "arithmetic.replay.json",
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "arithmetic.optimized.replay.json",
+      "sha256": "377b31bbe267f298a7d518df5dda571e525d4bf4b8983f5a5fcd000c43bbc981"
+    },
+    {
+      "path": "random.replay.txt",
+      "sha256": "edec8e264d42e4597a8d65a3ff384ac71a4b7a062e4d6612ba87d7730cdbd8d0"
+    },
+    {
+      "path": "FINAL_ROOT_PROSE_ADDENDUM.md",
+      "sha256": "02a6437c68a43a62da04c159cfdfd3596bc8e3c543ffb8c85226eb17584ca950"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "pin": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "seed": 2026102668,
+  "algorithm": "Python random.Random(seed), sequential sample(sorted stratum), k=6 each; no replacement per stratum; strata order as below",
+  "strata": [
+    {
+      "name": "theorems",
+      "prefix": "01-canon/theorems/",
+      "suffix": ".md",
+      "count": 3976,
+      "universe_sha256": "13769abf76430f21dd51b9532e7f5fe28b4d3f20370f1c9be25edacf24016d15",
+      "draws": [
+        "01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md",
+        "01-canon/theorems/THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md",
+        "01-canon/theorems/THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md",
+        "01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md",
+        "01-canon/theorems/THM-896-kendall-wei-perron-atlas.md",
+        "01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md"
+      ],
+      "draw_blob_sha256": {
+        "01-canon/theorems/THM-4402-lrc14-norm-eighteen-vanishing-live-carrier-gap.md": "0fa006f927d176a717b80e7a2d659d9d1885d99930a0c2381324c1b6fa98a7db",
+        "01-canon/theorems/THM-3075-two-scale-entropy-newton-chambers-and-rooted-scale-tree-holotopy.md": "b7855e6dcebf5eeaf7cc573913b2e250e086cfb94f5acb3aff238ab116682336",
+        "01-canon/theorems/THM-3862-russell-finite-completion-nonmonogenic-branch-contract.md": "7f7b62203f21f6ec760543b709c40b0aa75edc0c16cabdef5081d61a399803e7",
+        "01-canon/theorems/THM-1805-the-vandermonde-is-a-signed-tournament-sum-intransitivity-cancels.md": "1e6047fbb3c101c878ab30dda962eb6fdb653e47db9eec4b92090c6164fc271f",
+        "01-canon/theorems/THM-896-kendall-wei-perron-atlas.md": "03ebef6a09fea6c8a3c4bcd44a71fd0152a5815967574a12f1cdbbc54b3590f8",
+        "01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md": "1e6c86fb2a47c39b824354926886984ada8221dc579832f63ca77e327bfeb678"
+      }
+    },
+    {
+      "name": "reflections",
+      "prefix": "07-reflections/",
+      "suffix": ".md",
+      "count": 3337,
+      "universe_sha256": "8f151cbbda68c9fe4501bea912145cb31c96a275de57b862ff7198fbf0da0c3d",
+      "draws": [
+        "07-reflections/polynomial-agent.md",
+        "07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md",
+        "07-reflections/the-floor-binds-on-the-dual-side.md",
+        "07-reflections/the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md",
+        "07-reflections/pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md",
+        "07-reflections/lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md"
+      ],
+      "draw_blob_sha256": {
+        "07-reflections/polynomial-agent.md": "4d57428d8a9eb226399d05f395c66a850ac59d156f05efc53e3c7a76b2eb1645",
+        "07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md": "beea1d4247866062c3ac3f7b0a0776fda52050e24a339479c42b8ee420e41aa9",
+        "07-reflections/the-floor-binds-on-the-dual-side.md": "bc8d7171161e5ee98c27027b893fb2a8b70ee010b212dce7cca1b753272b0277",
+        "07-reflections/the-summand-graph-node-is-the-lrc-pinch-denominator-addition-and-multiplication-shadows-s559o.md": "a5b0d341eda7811e7fbc2789b121362c16286525f9f78513d8339120a3a1c42c",
+        "07-reflections/pure-power-exp-integral-transcendental-all-degrees-via-1F1-one-over-d-opus-S4.md": "72659f17c37eaa6c667e9a7afbe3aeb1fde615d5a6e779bc1028552d64ea8679",
+        "07-reflections/lrc14-fixed50-activation-and-jc-k0-source-recomputation-codex-20260826.md": "d555c4a0d32d8b2ec25579906f2bf9f5d01ecd31fcb55de40412b53bb4f58b38"
+      }
+    },
+    {
+      "name": "results",
+      "prefix": "05-knowledge/results/",
+      "suffix": ".md",
+      "count": 5580,
+      "universe_sha256": "9e4fdb72e7e145200a40ebd56b71bd8c72c3c17dc3bfde9495796741f3a76a1f",
+      "draws": [
+        "05-knowledge/results/ternary_digits_20260925.md",
+        "05-knowledge/results/long_frontier_sep06_endpoint39.md",
+        "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/README.md",
+        "05-knowledge/results/collatz_mod6_20260922_lead_reflection2.md",
+        "05-knowledge/results/higher_order_bottleneck_clocks_20261019/independent-review/REVIEW.md",
+        "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md"
+      ],
+      "draw_blob_sha256": {
+        "05-knowledge/results/ternary_digits_20260925.md": "009041f705619ca90448f30f99545488267c51049de9a8a2b83e6e1a56397f89",
+        "05-knowledge/results/long_frontier_sep06_endpoint39.md": "1bdc1fc79b4bafc12293c092c6ec2af2c576d961f9383b0619ad8e69e7d1d935",
+        "05-knowledge/results/session43_observers_phase_guards_20261023/native-branch-width/README.md": "4cbd3f9f8002eca9be50331b053c03756762420468ab6a88aedec52e75c62b46",
+        "05-knowledge/results/collatz_mod6_20260922_lead_reflection2.md": "7ddb0afd9f9bd0f864f7a004a14d6b5be7ca36644a84dd8fbeb750621c006084",
+        "05-knowledge/results/higher_order_bottleneck_clocks_20261019/independent-review/REVIEW.md": "0d7b1d5a1b50485a7551778465daac5edec0b5b6ee0d7d5fc635266f5e934eb0",
+        "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/diagrams/README.md": "38d45eea121e5dea792d906ed4e7fd6eec9076d358bf3b4952bf6025f03b0b41"
+      }
+    },
+    {
+      "name": "sources",
+      "prefix": "04-computation/",
+      "suffix": ".py",
+      "count": 18224,
+      "universe_sha256": "121fbf87ba656e52586a9cdf5e25e8a42ef812076861b77d1754994a0f286e1b",
+      "draws": [
+        "04-computation/path_homology_tournament.py",
+        "04-computation/even_betti_quick.py",
+        "04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py",
+        "04-computation/new_frontiers_s3b.py",
+        "04-computation/lrc14_regularized_naturals_zoo_kps.py",
+        "04-computation/paley_eigenvector_theorem.py"
+      ],
+      "draw_blob_sha256": {
+        "04-computation/path_homology_tournament.py": "34c32c61fe702ba888e2d4cdada81666edcc93ae93680275b8bc54c4f3c1fbfa",
+        "04-computation/even_betti_quick.py": "b19c3b5da83c715929928e117de9562b20768b97342bfcfcdcf2c1886ec0cd58",
+        "04-computation/lrc14_depth_one_private_joint_two_step_cap_thm2246.py": "938e175990f22feb72b5dbd00ad147279593358b705d0b99af7a157944def791",
+        "04-computation/new_frontiers_s3b.py": "561f53b97beebbf726b25566959d26768ce444f361ce02b8fb9c8ae15ade5999",
+        "04-computation/lrc14_regularized_naturals_zoo_kps.py": "a070a76cf9d88b3541af23b0bfb48d54153fc360c52f78811e57b420b9e7478f",
+        "04-computation/paley_eigenvector_theorem.py": "50c7d6fc416ace81a5f13e8fa09ddc4be8d22b1c4d800bdef3194dd6e67fba83"
+      }
+    }
+  ],
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

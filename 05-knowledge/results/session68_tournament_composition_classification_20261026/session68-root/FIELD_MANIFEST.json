@@ -1,0 +1,21 @@
+{
+  "status": "FINITE-EXACT",
+  "files": [
+    {
+      "path": "FIELD_CONTROLS.md",
+      "sha256": "19269fd81de8ca23971b64eecd0d65b1ed8a6af35705b8f7568bd67c6bcfedd8"
+    },
+    {
+      "path": "check_field_bridge.py",
+      "sha256": "68970b8af2babd35b84cdbe077dc0680de22a53536fe41996310ae8ec63fb568"
+    },
+    {
+      "path": "field_bridge.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    },
+    {
+      "path": "field_bridge.optimized.json",
+      "sha256": "81c4690f232502393791e63c69339cfab47d560f9d0bda28b9fa3ce2af241535"
+    }
+  ]
+}
