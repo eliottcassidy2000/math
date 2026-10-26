@@ -1,0 +1,148 @@
+{
+  "collatz": {
+    "address_bijections_moduli": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "integer_sources": 12480,
+    "valuation_words_length_1_to_4_exponents_1_to_5": 780
+  },
+  "compiler": {
+    "prefix_states_checked": 291272,
+    "sources_per_word": 2,
+    "words_including_empty": 21845
+  },
+  "cyclic_sections": {
+    "all_four_letter_words_length_1_to_6": 5460,
+    "cut_hostile": [
+      "C0 F = C1",
+      "F C0 = C0"
+    ]
+  },
+  "difference": {
+    "all_pairs_through_n": 5,
+    "common_legal_relocations": 1012
+  },
+  "grammar": {
+    "counts": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 6,
+      "5": 20,
+      "6": 70,
+      "7": 254,
+      "8": 948,
+      "9": 3618,
+      "10": 14058
+    },
+    "permutation_cross_check_through_n": 7,
+    "relocation_escape": {
+      "input": 1,
+      "output": 2,
+      "path": [
+        0,
+        2,
+        3,
+        1
+      ]
+    }
+  },
+  "normal_basis": [
+    {
+      "irreducible_polynomial_bits": 7,
+      "m": 2,
+      "multiplication_rank": 2,
+      "normal_generator": 2,
+      "selector_rank": 1,
+      "words": 4
+    },
+    {
+      "irreducible_polynomial_bits": 11,
+      "m": 3,
+      "multiplication_rank": 3,
+      "normal_generator": 3,
+      "selector_rank": 1,
+      "words": 8
+    },
+    {
+      "irreducible_polynomial_bits": 19,
+      "m": 4,
+      "multiplication_rank": 4,
+      "normal_generator": 8,
+      "selector_rank": 1,
+      "words": 16
+    },
+    {
+      "irreducible_polynomial_bits": 37,
+      "m": 5,
+      "multiplication_rank": 5,
+      "normal_generator": 3,
+      "selector_rank": 1,
+      "words": 32
+    },
+    {
+      "irreducible_polynomial_bits": 67,
+      "m": 6,
+      "multiplication_rank": 6,
+      "normal_generator": 32,
+      "selector_rank": 1,
+      "words": 64
+    },
+    {
+      "irreducible_polynomial_bits": 131,
+      "m": 7,
+      "multiplication_rank": 7,
+      "normal_generator": 9,
+      "selector_rank": 1,
+      "words": 128
+    },
+    {
+      "irreducible_polynomial_bits": 283,
+      "m": 8,
+      "multiplication_rank": 8,
+      "normal_generator": 32,
+      "selector_rank": 1,
+      "words": 256
+    },
+    {
+      "irreducible_polynomial_bits": 515,
+      "m": 9,
+      "multiplication_rank": 9,
+      "normal_generator": 3,
+      "selector_rank": 1,
+      "words": 512
+    }
+  ],
+  "reset_inverse": {
+    "Gram_polynomials": {
+      "2": [
+        1,
+        -3,
+        1
+      ],
+      "3": [
+        -1,
+        5,
+        -6,
+        1
+      ]
+    },
+    "all_reset_masks_length_1_to_9": 1013,
+    "coefficient_order": "ascending",
+    "discount": "1/2",
+    "integer_clock_discount_tests": 1093,
+    "norm_infinity": "largest cyclic reset spacing"
+  },
+  "rule30": {
+    "fixed_left_front_depths": 17,
+    "integer_updates": 64,
+    "native_lifts": 1088
+  },
+  "script_sha256": "e75101769a82b27b8add26663fbebe0236b57182f10cf0715d5453ac96e412b3",
+  "status": "FINITE-EXACT PASS"
+}
