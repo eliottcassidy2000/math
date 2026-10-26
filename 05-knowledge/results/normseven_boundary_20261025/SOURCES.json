@@ -111,6 +111,31 @@
       "commit": "2b69da9a76ef90806d924ab829c0080c0491dcfe",
       "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md",
       "sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237"
+    },
+    {
+      "commit": "494bfbb5993b88f0d0f29dc079681dd8d661d56c",
+      "path": "05-knowledge/results/session63_integral_observers_root_arrangements_20261025/PROPOSED_UNIFYING_THEORY.md",
+      "sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441"
+    },
+    {
+      "commit": "494bfbb5993b88f0d0f29dc079681dd8d661d56c",
+      "path": "05-knowledge/results/port_residual_integral_20261025/README.md",
+      "sha256": "fef54effa19554655126d93599a7b37d9cef8e6ad5af473031ead33efaffc12d"
+    },
+    {
+      "commit": "494bfbb5993b88f0d0f29dc079681dd8d661d56c",
+      "path": "05-knowledge/results/port_residual_integral_20261025/PORT_FRONTIER.md",
+      "sha256": "2d444ee706594213b55497cda583a340bf159ed8f4ee780d1e8c4aa6ccc9c89e"
+    },
+    {
+      "commit": "494bfbb5993b88f0d0f29dc079681dd8d661d56c",
+      "path": "04-computation/bb6_cryptids_s56/deepmind_cryptids_20261025.py",
+      "sha256": "1aa608906be2891c147feef67b91783e71bfd8f1c67361a34f66b2559a0defd5"
+    },
+    {
+      "commit": "a971f9b4fbdf409c31ba61ad9e8b3b00648536cf",
+      "path": "05-knowledge/results/session59_f1_geometry_and_information_20261025/positive-audit/AUDIT.md",
+      "sha256": "74673d24acad19d0be6a054bf7e4be916fd9713c920426ee9376729447a61ce7"
     }
   ]
 }

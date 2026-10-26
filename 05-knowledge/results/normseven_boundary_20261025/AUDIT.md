@@ -33,7 +33,7 @@ No independent human/agent audit; no formal theorem-prover build.
 
 ## Exact computation
 
-All seven scripts use explicit exception gates, which remain active with
+All eight scripts use explicit exception gates, which remain active with
 `python -O`. Each normal/optimized receipt pair is byte-identical.
 
 | Script | Explicit universe / result | Gates |
@@ -45,6 +45,7 @@ All seven scripts use explicit exception gates, which remain active with
 | check_histogram.py | 2,672 inverse histories, sources 1,5,13, depths 1..6, valuations 1..8, moduli 3,9,27,81 | 31,963 |
 | check_stack.py | 972 complete low-dimensional complement/inertia cases; 23 norm-seven strata including the open; literal source decoder | 2,313,956 |
 | check_valuation_repair.py | p=3,5,7, every odd M=1..99 and mu=1..M; binomial inequality and normalized linear/higher terms | 15,000 |
+| check_continuation.py | All 2,920 unordered decompositions of F_2^4 into 2,3,4 nonzero packets; 840 Fano-pair charts; sharp star family n=2..12 | 124,033 |
 
 The monoid audit imports no producer code and generates reachable exponent
 vectors by addition before comparing with the predicted residue ideals.
@@ -70,11 +71,12 @@ python3 -B 05-knowledge/results/normseven_boundary_20261025/check_native.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_histogram.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_stack.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/check_valuation_repair.py
+python3 -B 05-knowledge/results/normseven_boundary_20261025/check_continuation.py
 python3 -B 05-knowledge/results/normseven_boundary_20261025/verify.py
 python3 agents/check_docs.py
 ```
 
-Repeat the first seven commands with `-O` to reproduce their optimized
+Repeat the first eight commands with `-O` to reproduce their optimized
 receipts. The packet verifier checks source hashes at pinned Git revisions,
 receipt/script consistency, both replay modes, and the manifest. Attached
 PDF hashes are recorded; absence of a user's local Download files on
@@ -103,6 +105,31 @@ The proof, its source checksum, and MISTAKES.md were repaired together.
 The new checker verifies those two steps directly with integer binomial
 coefficients and rational normalization. This does not constitute an
 independent audit of the entire incoming packet.
+
+The subsequent sync through 494bfbb599 included the S63 proposed observer
+framework, the port-residual packet, and the S56 native-machine script.
+The full proposed framework and its source-reconciliation notes were read.
+The port packet's overview and closed endpoint-four synthesis were read
+for their exact preservation predicates; their new subproofs were not
+independently replayed here. The native script was inspected, particularly
+its A.11 zero-block normalization. These are pinned contextual sources,
+not new audited dependencies. The observer framework prompted D1–D3:
+a general finite continuation bank, a one-step theorem for two binary
+packets, and a sharp family of delayed failures with many packets.
+The proof separates the bounded context bank from a termination claim.
+The independent residue enumeration checks D2 against all words in
+dimension four and against B1's proven conductor on every Fano chart;
+it finds zero one-step failures with two packets but explicit failures
+with three and four. The star control verifies both failure and a
+conductor-generator positive control without discarding the source.
+
+A targeted return to the Session59 positive-form audit recovered its
+nonsplit central-boundary mechanism. BOUNDARY 5a proves directly that
+the untwisted rational seven-root boundary is empty, using -1 and 2 as
+nonsquare obstructions in opposite pairs. The twisted necessary tests
+are deliberately not sufficient: the existing r=1 residual-class hostile
+passes the immediate opposite-pair test. This is an elementary proof,
+not an inference from a bounded rational-point search.
 
 ## Remaining limitations
 

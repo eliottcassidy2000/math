@@ -261,6 +261,36 @@ the normalization above it has residue field Q(sqrt(2),sqrt(3),sqrt(5)),
 of degree eight by the three independent prime valuations. Over Qbar it
 splits into the eight points in (10).
 
+### 5a. A cheap fixed-twist arithmetic boundary gate
+
+The earlier [positive-form audit, section 1](../session59_f1_geometry_and_information_20261025/positive-audit/AUDIT.md)
+already uses the nonsplit form a^2+b^2=2c^2 to exclude its central
+boundary. The same elementary mechanism supplies the following useful
+specialization here; no historical novelty is claimed.
+
+**Corollary.** The untwisted seven-root surface has no Q-rational point
+on any of its seven vanishing-root divisors.
+
+**Proof.** Its coordinates satisfy
+s_1^2+s_2^2=s_3^2+s_4^2=s_5^2+s_6^2=2s_0^2.
+If s_0=0, every pair is zero over Q, giving no projective point. If an
+outer s_j is zero and s_0!=0, its paired coordinate has square 2s_0^2.
+This would make 2 a rational square. Both cases are impossible. QED.
+
+For fixed nonzero rational twists, the corresponding necessary tests
+retain their actual classes. If E=0 and the base point is nonzero, at
+least one opposite pair (a,b)=(1,2),(3,4),(5,6) has nonzero roots;
+then -d_b/d_a must be a square. If an outer branch L_j vanishes and
+E!=0, its opposite index k has L_k=2E, so 2d_k/d_0 must be a square.
+These are exclusion tests, not sufficient existence tests. The r=1
+hostile above passes the latter test because d_2=1/2 and d_0=1, but
+the independent residual class 2 still prevents a rational lift.
+
+Thus the untwisted rational boundary is already empty, while twisted
+boundary reconstruction still needs the full residual torsor. The
+geometric conductor and missing-sheet formulas remain meaningful in
+both cases and must not be confused with a rational-point existence claim.
+
 ## 6. A literal monoid/F1 model, and its exact stopping boundary
 
 Before imposing the additive branch equations, replace the six radicands

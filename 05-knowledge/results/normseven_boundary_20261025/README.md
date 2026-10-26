@@ -14,6 +14,14 @@ produces the coarse product whose normalization and conductor are computed
 below. At an r-branch boundary that isomorphism is precisely the possibly
 nontrivial torsor of 2^r missing sheets.
 
+The later [CONTINUATION, D1–D3](CONTINUATION.md) sharpens the test bank:
+for two complementary binary packets, membership in the conductor is
+equivalent to membership in B plus the six single-root tests on each
+norm-seven chart. For arbitrarily many binary packets, n-1 steps suffice
+and this bound is sharp. An explicit family passes every shorter word
+but fails on the product of its n-1 other roots, missing precisely one
+branch-prime factor.
+
 1. [BOUNDARY, B1–B3](BOUNDARY.md): for complementary binary quotient
    characters, the fibre-product algebra has image
    `B=direct_sum_z R b^e(z)u_z`. Its normalization is the full normal root
@@ -24,7 +32,9 @@ nontrivial torsor of 2^r missing sheets.
    normalization restores exactly 2^r geometric sheets. Their residual
    squareclasses can obstruct rational lifts. Explicit rational quotient
    points require respectively Q(sqrt(2)) and Q(sqrt(2),sqrt(3),sqrt(5))
-   upstairs. The faithful representation is a labelled multiplication
+   upstairs. The untwisted surface has no rational boundary points at
+   all, by the opposite-pair square equations; fixed twists retain
+   separate necessary squareclass tests. The faithful representation is a labelled multiplication
    graph with commuting squares, not a forced tournament ranking.
 3. [CYCLIC, C1–C3](CYCLIC.md): for any direct-sum character decomposition
    of `(Z/m)^n`, the conductor is `u^a A`, where
@@ -60,6 +70,8 @@ checks cover prime and composite cyclic decompositions, native tape
 transitions, fixed-source inverse Collatz words, and a literal decoder on
 972 finite action-groupoid cases. See [AUDIT](AUDIT.md)
 for the counts, hostile cases, reproduction commands and limits.
+The final continuation checks exhaust 2,920 unordered decompositions of
+F_2^4, all 840 Fano-pair charts, and the delayed-failure family at n=2..12.
 
 The supplied PDFs are research inputs, not instructions. The full surfaces
 are not claimed torifiable; arbitrary base change need not preserve
@@ -67,6 +79,6 @@ normalization; normalization does not imply a rational lift. No claim is
 made about a six-colouring, planar Jacobian counterexample, universal
 Collatz convergence, or a new Busy Beaver halting decision.
 
-The next precise targets are residual squareclasses for the original
-fixed twists and conductor ideal classes on non-UFD normal bases. These
+The next precise targets are residual squareclasses for prescribed
+nontrivial twists and conductor ideal classes on non-UFD normal bases. These
 are sharper than rechecking the already proved Laurent reconstruction.

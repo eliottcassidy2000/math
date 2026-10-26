@@ -1,0 +1,161 @@
+{
+  "characters_with_one_step_strictly_weaker": {
+    "2": 0,
+    "3": 2146,
+    "4": 2130
+  },
+  "dimension_four_unordered_decompositions": {
+    "2": 400,
+    "3": 1680,
+    "4": 840
+  },
+  "fano_pair_charts": 840,
+  "gates": 124033,
+  "script_sha256": "6997f91f25785390ec28218a47cd316892a34d518bf71ee31c0965573a45daff",
+  "sharp_star_hostiles": [
+    {
+      "coordinates": 2,
+      "distinguishing_root_labels": [
+        1
+      ],
+      "first_failure_depth": 1,
+      "source_root0_exponent": 0
+    },
+    {
+      "coordinates": 3,
+      "distinguishing_root_labels": [
+        1,
+        2
+      ],
+      "first_failure_depth": 2,
+      "source_root0_exponent": 1
+    },
+    {
+      "coordinates": 4,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3
+      ],
+      "first_failure_depth": 3,
+      "source_root0_exponent": 2
+    },
+    {
+      "coordinates": 5,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_failure_depth": 4,
+      "source_root0_exponent": 3
+    },
+    {
+      "coordinates": 6,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "first_failure_depth": 5,
+      "source_root0_exponent": 4
+    },
+    {
+      "coordinates": 7,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_failure_depth": 6,
+      "source_root0_exponent": 5
+    },
+    {
+      "coordinates": 8,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "first_failure_depth": 7,
+      "source_root0_exponent": 6
+    },
+    {
+      "coordinates": 9,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "first_failure_depth": 8,
+      "source_root0_exponent": 7
+    },
+    {
+      "coordinates": 10,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "first_failure_depth": 9,
+      "source_root0_exponent": 8
+    },
+    {
+      "coordinates": 11,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "first_failure_depth": 10,
+      "source_root0_exponent": 9
+    },
+    {
+      "coordinates": 12,
+      "distinguishing_root_labels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "first_failure_depth": 11,
+      "source_root0_exponent": 10
+    }
+  ],
+  "status": "FINITE-EXACT"
+}

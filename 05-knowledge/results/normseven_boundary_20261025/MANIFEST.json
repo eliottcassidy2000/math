@@ -1,21 +1,25 @@
 {
   "files": {
-    "AUDIT.md": "f96671ff20a54a06f8352bda783a7aecbc2f0f35745e5dee4b6b54741a489194",
-    "BOUNDARY.md": "cde362e113d225f85db236b1dc66d42c7d3a319a7aceba25cc79bd69e244bad3",
+    "AUDIT.md": "928305c1cf3052e42f706ace99b88d166e055aa0d306ff8a30971c57d81bcd18",
+    "BOUNDARY.md": "1ee9524bbe8938fcf38ab11b3df86e7799ca7a34e70491ef072da1d6803d7eab",
+    "CONTINUATION.md": "06d98e88aa66a0fc2e45364ea0ee87bed84defeb47ff3f0bfe7a6905fedfadc8",
     "CYCLIC.md": "34864ef91ab80dd7b41e3c9e804b86cd6cd7310a251591ee40eb534ff5d8faa1",
     "PAPERS_AND_TRANSPORT.md": "9e797c176453f85541a7877fa7ab6beb04f08fa693ff35665b1fbd6f3e9fb6b8",
-    "README.md": "e9a17735a1f81acf6eb73faf0a3ba658aeeb8e3fed6cdcb9afd3e5c5647c436c",
-    "SOURCES.json": "1b94b57521e9383de1d9eeeab4c6aae51eeeda00127d913665855aee5fd3667f",
+    "README.md": "938087d880483d0aaf8e0adc00d6d2b114b5b2a459dc5cd111df6eac7d1ff4b4",
+    "SOURCES.json": "c64f1f21a835f9e4d58b94a4be051a42aa16343a33061c0e5912d6eac321a958",
     "STACK_GLUE.md": "5e7075ba6326aab35ab2fcab60b3b4313e4bc1fd0aa2d03f11a692e9ee2e2d92",
     "audit_monoid.py": "86f9a95a38980afd06339f6e359bf23ccf14044c315f3076f1281b0196edc59b",
     "check.json": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507",
     "check.optimized.json": "508c4899660169920db3196c0b17f6f25061a00a8b04cb5bf602e65c30cd3507",
     "check.py": "abf2cf3181819b6f989ca0307d6be98529eb2d1b2b02f1ffc48bcb89c886e3cd",
+    "check_continuation.py": "6997f91f25785390ec28218a47cd316892a34d518bf71ee31c0965573a45daff",
     "check_histogram.py": "3c29ce17bcc7d118f80f1aeb991d68401692136d46c7a150e65329686dace829",
     "check_native.py": "27869635d0870ab0fa2f9cbd8f487af7646b7d6cc11a2bf658cfebae4cfd2f40",
     "check_prime.py": "fcc9ae2e1f86edab124620951abbde8b7064a35a49b28b7cd413ca9a5d49a96b",
     "check_stack.py": "c8dcf9f08a386b8d9676fd42a0dae74edf280a050dfde9d80f97620c6ccf380c",
     "check_valuation_repair.py": "c803c64969230c82b5365059570f36f265467f2b9a6d24f58dc63f53d2ee6e9f",
+    "continuation.json": "f4d8c5ac1bd8dc58073da1b654fcbf03420de841d40ada6306d2dad96b499e95",
+    "continuation.optimized.json": "f4d8c5ac1bd8dc58073da1b654fcbf03420de841d40ada6306d2dad96b499e95",
     "histogram.json": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9",
     "histogram.optimized.json": "e2b5f7c88a0e2d6fd459b774adbb4d4727a34e37695d15c9cd1542fcb6afc6b9",
     "monoid.json": "1759b3440a1138b16198b374f7abd60ae202efa87869cd4e204d88cdb8b6185f",
@@ -28,7 +32,7 @@
     "stack.optimized.json": "7c3cc55d37f9faa3eb9bc0d521b38bbb0b2cf910d468b3169976c804aa76c300",
     "valuation_repair.json": "4d1408c81ff7dc5c74c5b35c9d7709cd52924b7002d915b6c49fa3844afee68c",
     "valuation_repair.optimized.json": "4d1408c81ff7dc5c74c5b35c9d7709cd52924b7002d915b6c49fa3844afee68c",
-    "verify.py": "572e9aab9174190f20e11daa9dc6d071772665798cc4babd9acaad598264febd"
+    "verify.py": "d1bc7860b8cfdc9122f390facee293b4a870f467060fd5a78d1cbf5a80b8aa99"
   },
   "scope": "Packet byte hashes; pinned repo dependencies are in SOURCES.json."
 }
