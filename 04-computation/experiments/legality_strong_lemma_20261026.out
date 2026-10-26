@@ -1,0 +1,8 @@
+n = 3 (all labelled): tournaments 8, with dark arcs 6, dark arcs 6, violations 0; strong 2 with 0 dark arcs, violations among strong 0
+n = 4 (all labelled): tournaments 64, with dark arcs 24, dark arcs 72, violations 48; strong 24 with 0 dark arcs, violations among strong 0
+n = 5 (all labelled): tournaments 1024, with dark arcs 360, dark arcs 1120, violations 600; strong 544 with 120 dark arcs, violations among strong 0
+n = 6 (all labelled): tournaments 32768, with dark arcs 6720, dark arcs 22320, violations 8880; strong 22320 with 1440 dark arcs, violations among strong 0
+n = 7 (all labelled): tournaments 2097152, with dark arcs 162624, dark arcs 661248, violations 186480; strong 1677488 with 48720 dark arcs, violations among strong 0
+X_8 (exhaustive): tournaments 2097152, with dark arcs 5426, dark arcs 17199, violations 1001; strong 2032504 with 2195 dark arcs, violations among strong 0
+X_9 (random 30000): tournaments 30000, with dark arcs 15, dark arcs 57, violations 0; strong 29554 with 6 dark arcs, violations among strong 0
+X_10 (random 3000): tournaments 3000, with dark arcs 1, dark arcs 8, violations 0; strong 2976 with 0 dark arcs, violations among strong 0
