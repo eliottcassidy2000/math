@@ -1,0 +1,47 @@
+K7 - C7 (complement cycle 0-1-...-6-0): an even in-degree orientation flips the order arcs [(2, 4)]
+(1) q = 7 (mod 4 = 3) octahedron, order orientation: 20160 configurations (all), non-invariant: {'x+1': 0, '3x': 0, '-1/x': 0, 'random': 0}
+    control (one arc flipped, odd in-degrees): non-invariant: {'x+1': 0, '3x': 0, '-1/x': 8640, 'random': 8640}
+    K7 - C7, even in-degree orientation: 40320 configurations, non-invariant: {'x+1': 0, '3x': 0, '-1/x': 0, 'random': 0}
+(1) q = 5 (mod 4 = 1) octahedron, order orientation: 720 configurations (all), non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+    control (one arc flipped, odd in-degrees): non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+    K7 - C7, even in-degree orientation: 0 configurations, non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+(1) q = 11 (mod 4 = 3) octahedron, order orientation: 20000 configurations (random), non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+    control (one arc flipped, odd in-degrees): non-invariant: {'x+1': 0, '2x': 0, '-1/x': 5955, 'random': 5985}
+    K7 - C7, even in-degree orientation: 20000 configurations, non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+(1) q = 13 (mod 4 = 1) octahedron, order orientation: 20000 configurations (random), non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+    control (one arc flipped, odd in-degrees): non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+    K7 - C7, even in-degree orientation: 20000 configurations, non-invariant: {'x+1': 0, '2x': 0, '-1/x': 0, 'random': 0}
+(2) q = 5: S_K5 = -6, (q-4) S_K4 = -6: OK
+(2) q = 13: S_K5 = 90, (q-4) S_K4 = 90: OK
+(2) q = 17: S_K5 = -390, (q-4) S_K4 = -390: OK
+(2) q = 29: S_K5 = 1050, (q-4) S_K4 = 1050: OK
+(2) q = 37: S_K5 = -2310, (q-4) S_K4 = -2310: OK
+(2) q = 41: S_K5 = 666, (q-4) S_K4 = 666: OK
+(2) q = 7: T_C4 (two sources, two sinks) = -168 = -q(q-1)(q-3)? True; (q-3) T_P3 = -168: OK
+(2) q = 11: T_C4 (two sources, two sinks) = -880 = -q(q-1)(q-3)? True; (q-3) T_P3 = -880: OK
+(2) q = 13: T_C4 (two sources, two sinks) = -1560 = -q(q-1)(q-3)? True; (q-3) T_P3 = -1560: OK
+(2) q = 17: T_C4 (two sources, two sinks) = -3808 = -q(q-1)(q-3)? True; (q-3) T_P3 = -3808: OK
+(2) K7-C7 q = 7 (mod 4 = 3): S_G = 8; u=6: eps(q-6)S_(G-u) = 8 [OK]
+(2) K7-C7 q = 11 (mod 4 = 3): S_G = -560; u=6: eps(q-6)S_(G-u) = -560 [OK]
+(2) K7-C7 q = 19 (mod 4 = 3): S_G = -2912; u=6: eps(q-6)S_(G-u) = -2912 [OK]
+(2) K7-C7 q = 23 (mod 4 = 3): S_G = 18088; u=6: eps(q-6)S_(G-u) = 18088 [OK]
+(2) K7-C7 q = 13 (mod 4 = 1): S_G = 336; u=6: eps(q-6)S_(G-u) = 336 [OK]
+(2) K7-C7 q = 17 (mod 4 = 1): S_G = 616; u=6: eps(q-6)S_(G-u) = 616 [OK]
+(2) K7-K3 q = 7 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-K3 q = 11 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-K3 q = 19 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-K3 q = 23 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-K3 q = 13 (mod 4 = 1): S_G = 2352; u=0: eps(q-6)S_(G-u) = 2352 [OK]; u=6: eps(q-6)S_(G-u) = 2352 [OK]
+(2) K7-K3 q = 17 (mod 4 = 1): S_G = -792; u=0: eps(q-6)S_(G-u) = -792 [OK]; u=6: eps(q-6)S_(G-u) = -792 [OK]
+(2) K7-(C3+C4) q = 7 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-(C3+C4) q = 11 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-(C3+C4) q = 19 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-(C3+C4) q = 23 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-(C3+C4) q = 13 (mod 4 = 1): S_G = -1680; u=0: eps(q-6)S_(G-u) = -1680 [OK]; u=6: eps(q-6)S_(G-u) = -1680 [OK]
+(2) K7-(C3+C4) q = 17 (mod 4 = 1): S_G = 3432; u=0: eps(q-6)S_(G-u) = 3432 [OK]; u=6: eps(q-6)S_(G-u) = 3432 [OK]
+(2) K7-C5 q = 7 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-C5 q = 11 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-C5 q = 19 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-C5 q = 23 (mod 4 = 3): S_G = 0; u=0: eps(q-6)S_(G-u) = 0 [OK]; u=6: eps(q-6)S_(G-u) = 0 [OK]
+(2) K7-C5 q = 13 (mod 4 = 1): S_G = -1680; u=0: eps(q-6)S_(G-u) = -1680 [OK]; u=6: eps(q-6)S_(G-u) = -1680 [OK]
+(2) K7-C5 q = 17 (mod 4 = 1): S_G = -2200; u=0: eps(q-6)S_(G-u) = -2200 [OK]; u=6: eps(q-6)S_(G-u) = -2200 [OK]

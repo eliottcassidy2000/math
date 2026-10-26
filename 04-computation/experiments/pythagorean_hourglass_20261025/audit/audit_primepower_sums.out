@@ -1,0 +1,3 @@
+q = 3^3 = 27: S_W4 (brute force) = -264; THM-4780 (5) TT5: True; S_W4 = -4 - A_q (Frobenius, A_q = 260): True; S_(K6-P6) (brute force) = 1200; THM-4780 (5) TT6: True; S_(K6-P6) = h_r^2 - q^2 - 7: True  [0s]
+q = 3^5 = 243: S_W4 (brute force) = 6960; THM-4780 (5) TT5: True; S_W4 = -4 - A_q (Frobenius, A_q = -6964): True; S_(K6-P6) (brute force) = -3360; THM-4780 (5) TT6: True; S_(K6-P6) = h_r^2 - q^2 - 7: True  [29s]
+q = 7^3 = 343: S_W4 (brute force) = 10868; THM-4780 (5) TT5: True; S_W4 = -4 - A_q (Frobenius, A_q = -10872): True  [29s]

@@ -20343,3 +20343,27 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Search the bbchallenge wiki (Special:Search, Category: Potential Cryptids) and GitHub by machine string before
     claiming "no analysis".
   - Never stash (including `--autostash`) while jobs write into the worktree.
+
+## MISTAKE-670 (2026-10-25, mac-mini-2026-10-25-pyth, THM-4780 / HYP-9390 / the Pythagorean-hourglass census note (pre-audit commit 5df2594f12); found by the independent audit `04-computation/experiments/pythagorean_hourglass_20261025/audit/REPORT.md`) -- a sign slip in a Sym^2 reading, a wrong coefficient ring, a mis-credited calculus and a classical invariance claimed as new
+
+- **Claims.**
+  - HYP-9390: "|b(q)|^2 is the Sym^2 Frobenius trace minus q^2", and "-b(q^2) is the Sym^2 trace minus q^2".
+  - HYP-9390 Remark 1: every 5- and 6-vertex class count of P_q lies in Z[1/2][q] + Z[1/2][q] S_W4 (+ Z[1/2] S_(K6-P6)).
+  - THM-4780: the degree-at-most-two elimination is "THM-4652's reduction calculus".
+  - THM-4780: "New here: the PGL(2) lemma".
+  - Minor: U(W4) attributed to HYP-9274 (B); "the 37 seven-vertex sums cancel"; a Q(sqrt-3) negative result; three section-2 sentences of the note (c "Lorentz-invariant", a Yao-Knuth "tracking", "Collatz preserves no quadratic form").
+- **First failed implications.**
+  - **Sign.** At q = 27 the Sym^2 trace is -1207 while |b(27)|^2 = 1936 = 27^2 + 1207. The identity is |b(q)|^2 = q^2 - S_q. The formulas used h_r^2 and were right; only the prose reading was inverted.
+  - **Ring.** Class counts divide labelled counts by |Aut| (odd, often 3 or 5): the 3-cycle count is q(q^2-1)/24, and the regular 5-tournament count has denominator 5*2^10.
+  - **Credit.** THM-4652 holds the vanishing laws and series-parallel polynomiality. The vertex elimination with subtraction of occupied values is codex-tiling's `wheel_run_interface_20261014h.md`, and the ten-edge terminal classification is `paley_next_cores_20261014i.md`.
+  - **Novelty.** With an even in-degree orientation the summand is chi of a product of 2x2 determinants, which is classical Moebius invariance (oriented Paley two-graph). Only the counting consequence and the octahedron application are new.
+- **Strongest survivor.**
+  - Every theorem and number stands.
+  - The audit re-derived THM-4780 (5) by an interpolation-free symbolic elimination, recomputed TT5, TT6 and all graph sums by different algorithms, and tested the PGL(2) lemma exhaustively on P^1(F_7).
+  - HYP-9275's octahedron identity is proved at every odd prime.
+  - The audit's exact reduced form of 2^21 TT7 then isolated the genuine seven-vertex part.
+- **Missing coordinates.**
+  - Before writing a Sym^2 or adjoint reading in prose, evaluate it at one prime power.
+  - Before claiming a ring, test one class count with a nontrivial automorphism group.
+  - Grep the 2026-10-14 run packets (wheel_run_interface, paley_next_cores, wheel_apery_extension) before crediting any Paley pattern-sum calculus.
+  - Ask whether an invariance is classical in homogeneous coordinates before calling it new.

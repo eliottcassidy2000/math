@@ -1,0 +1,24 @@
+g(q) = G/(q(q-1)) at the first values: [(3, 0), (7, 608), (11, -23616), (19, 100224), (23, -394272), (31, 926368), (43, 809664), (47, 4906016)]
+audit check G(7) = 25536, G(31) = 861522240: True True
+g(q)/q^(5/2): [0.0, 4.69, -58.847, 63.692, -155.409, 173.133, 66.778, 323.955, 67.272, -279.2, -1.396, 215.978, -111.414, 270.394, -111.573, -38.202, -57.884, 359.78, 238.297, 131.941, 163.827, 84.94, 315.355, 148.455, 192.92, 17.944, 137.034, -132.278, -306.724, -152.63, 386.44, 636.263, 279.774, -14.835, 93.281, -130.503, 337.445, -18.018, -244.481, -148.343]
+  g = 0 mod 2 at 72/72 q
+  g = 0 mod 4 at 72/72 q
+  g = 0 mod 8 at 72/72 q
+  g = 0 mod 16 at 72/72 q
+  g = 0 mod 32 at 72/72 q
+  g = 0 mod 64 at 38/72 q
+  g = 0 mod 3 at 27/72 q
+  g = 0 mod 5 at 11/72 q
+  g = 0 mod 7 at 10/72 q
+g in span(poly deg<=3, a, qa, |b|^2): NOT
+single-orbit hits: 0
+weights (6,) jointly (35 columns): NOT
+weights (5,) jointly (20 columns): NOT
+weights (4,): 77 columns, too many
+weights (3,) jointly (34 columns): NOT
+weights (2,) jointly (67 columns): NOT
+weights (5, 6) jointly (48 columns): NOT
+weights (4, 6): 105 columns, too many
+weights (3, 6) jointly (62 columns): NOT
+weights (3, 5) jointly (47 columns): NOT
+weights (2, 6): 95 columns, too many

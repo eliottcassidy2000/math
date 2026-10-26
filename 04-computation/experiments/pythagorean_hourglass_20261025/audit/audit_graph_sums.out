@@ -1,0 +1,33 @@
+(i) q=7 W4: T (full enumeration) = -1176, q(q-1) S = -1176: OK
+(i) q=7 K6-P6: T (full enumeration) = 336, q(q-1) S = 336: OK
+(i) q=7 K6-3K2: T (full enumeration) = -2352, q(q-1) S = -2352: OK
+(i) q=11 W4: T (full enumeration) = 4400, q(q-1) S = 4400: OK
+(i) q=11 K6-P6: T (full enumeration) = -12320, q(q-1) S = -12320: OK
+(i) q=11 K6-3K2: T (full enumeration) = 26400, q(q-1) S = 26400: OK
+(i) q=19 W4: T = -16416, q(q-1)S = -16416: OK
+(ii) S_W4 at 44 odd primes 5..199: disagreements with paley_graph_sums.out: []
+(ii) S_W4 = -4 - a_p(8.4.a.a, PARI) at all 44 primes 5..199 (both classes): failures []
+(iii) q=7 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=-56 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=8   lane: AGREE
+(iii) q=11 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=240 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=-112   lane: AGREE
+(iii) q=19 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=-672 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=-224   lane: AGREE
+(iii) q=23 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=936 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=1064   lane: AGREE
+(iii) q=31 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=4056 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=56   lane: AGREE
+(iii) q=43 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=-2128 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=-1072   lane: AGREE
+(iii) q=47 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=-22344 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=-1960   lane: AGREE
+(iii) q=59 (mod 4 = 3): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=35856 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=-784   lane: AGREE
+(iii) q=5 (mod 4 = 1): K6-e=0 K6-K3=0 K6-P4=0 K6-(P3+K2)=0 K6-3K2=0 K6-(C5+K1)=0 K6-(C4+K2)=0 K6-(C3+P3)=0 K6-P6=0
+(iii) q=13 (mod 4 = 1): K6-e=336 K6-K3=336 K6-P4=-240 K6-(P3+K2)=80 K6-3K2=-208 K6-(C5+K1)=-240 K6-(C4+K2)=-240 K6-(C3+P3)=-240 K6-P6=48
+(iii) q=17 (mod 4 = 1): K6-e=-72 K6-K3=-72 K6-P4=-200 K6-(P3+K2)=56 K6-3K2=-648 K6-(C5+K1)=-200 K6-(C4+K2)=312 K6-(C3+P3)=312 K6-P6=56
+(iii) q=29 (mod 4 = 1): K6-e=-3600 K6-K3=-3600 K6-P4=560 K6-(P3+K2)=496 K6-3K2=-4848 K6-(C5+K1)=560 K6-(C4+K2)=48 K6-(C3+P3)=48 K6-P6=-624
+      q=7: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=11: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=19: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=23: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=31: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=43: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=47: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=59: S_(K6-P6) = |b|^2 - q^2 - 7 ? True;  S_oct = (q-5) S_W4 ? True
+      q=5: S_(K6-P6) = |b|^2 - q^2 + 21 (HYP-9276, q = 1 mod 4) ? True;  S_oct = (q-5) S_W4 ? True
+      q=13: S_(K6-P6) = |b|^2 - q^2 + 21 (HYP-9276, q = 1 mod 4) ? True;  S_oct = (q-5) S_W4 ? True
+      q=17: S_(K6-P6) = |b|^2 - q^2 + 21 (HYP-9276, q = 1 mod 4) ? True;  S_oct = (q-5) S_W4 ? True
+      q=29: S_(K6-P6) = |b|^2 - q^2 + 21 (HYP-9276, q = 1 mod 4) ? True;  S_oct = (q-5) S_W4 ? True

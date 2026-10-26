@@ -1,0 +1,12 @@
+twist (2/q): NOT in span
+twist (3/q): NOT in span
+twist (-3/q): NOT in span
+twist (5/q): NOT in span
+twist (7/q): NOT in span
+twist (-7/q): NOT in span
+twist (6/q): NOT in span
+twist (-6/q): NOT in span
+all twists together (28 columns): NOT in span
+twists + weight 3 orbits (55 columns): NOT in span
+twists + weight 5 orbits (41 columns): NOT in span
+twists + weight 6 orbits (56 columns): NOT in span

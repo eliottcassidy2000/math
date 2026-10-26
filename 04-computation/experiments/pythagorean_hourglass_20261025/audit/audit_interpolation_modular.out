@@ -1,0 +1,14 @@
+D. TT5: 24 equations, 7 unknowns, rank 7; solution [0, 315, -483, 192, -25, 1, 1]
+D. TT6: 14 equations, 10 unknowns, rank 10; solution [0, -9717, 15002, -6105, 869, -50, 1, -105, 7, -8]
+   rank without the q = 3 row: 10
+THM-4780 (5) with the audit S values: TT5 at 24 q: True; TT6 at 14 q: True
+G. THM-4780 (6) TT5(P_p) = p(p-1)(p^3-24p^2+168p-319-a_p)/2^10 with PARI a_p: tested at 122 primes (3..1499, p = 3 mod 4), failures []
+G. HYP-9390 (a) with PARI a_p and |b(p)|^2: tested at 70 primes (3..751), failures []
+G. algebra THM-4780 (5) -> HYP-9390 (a): True
+   algebra THM-4780 (5) -> (6): True
+   M_q form (q-3)(q^3-46q^2+682q-3255) + 7(q-15)S_W4 - 8M_q: True
+G. q = 3^3 = 27: A_q = 260, |b(q)|^2 := h_r^2 = 1936; TT5 formula True, TT6 formula True; Sym^2 trace S_q = -1207, q^2 - S_q = 1936, S_q - q^2 = -1936
+G. q = 3^5 = 243: A_q = -6964, |b(q)|^2 := h_r^2 = 55696; TT5 formula True, TT6 formula True; Sym^2 trace S_q = 3353, q^2 - S_q = 55696, S_q - q^2 = -55696
+G. q = 7^3 = 343: A_q = -10872, |b(q)|^2 := h_r^2 = 440896; TT5 formula True, TT6 formula True; Sym^2 trace S_q = -323247, q^2 - S_q = 440896, S_q - q^2 = -440896
+G. q = 11^3 = 1331: A_q = 90508, |b(q)|^2 := h_r^2 = 1926544; TT5 formula True, TT6 formula True; Sym^2 trace S_q = -154983, q^2 - S_q = 1926544, S_q - q^2 = -1926544
+G. q = 3^7 = 2187: A_q = 75092, |b(q)|^2 := h_r^2 = 16289296; TT5 formula True, TT6 formula True; Sym^2 trace S_q = -11506327, q^2 - S_q = 16289296, S_q - q^2 = -16289296

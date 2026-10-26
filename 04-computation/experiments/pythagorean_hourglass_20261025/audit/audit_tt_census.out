@@ -1,0 +1,25 @@
+(1) source-sink formula vs the lane (primes)
+  TT5: compared at 119 primes (lane file has 119), mismatches 0
+  TT6: compared at 67 primes (lane file has 67), mismatches 0
+  small q (not in the lane data files, inserted there as zeros): {3: (0, 0), 7: (0, 0), 11: (0, 0)}
+  zeros of TT6 among primes <= 751: [3, 7, 11, 19, 23]
+  zeros of TT5 among primes < 1500: [3, 7, 11]
+(1b) prime powers (audit GF(p^r)) vs paley_prime_powers.out
+  q = 3^3 = 27: TT5 = 4212, TT6 = 0; lane (4212, 0); AGREE  (f = [2, 2, 2, 1])
+  q = 3^5 = 243: TT5 = 745366050, TT6 = 5100244380; lane (745366050, 5100244380); AGREE  (f = [2, 2, 2, 1, 2, 1])
+  q = 7^3 = 343: TT5 = 4307124402, TT6 = 42890710086; lane (4307124402, 42890710086); AGREE  (f = [6, 6, 5, 1])
+  q = 11^3 = 1331: TT5 = 4003006937160, TT6 = 163338916753320; lane (4003006937160, 163338916753320); AGREE  (f = [10, 10, 9, 1])
+  q = 3^7 = 2187: TT5 = 48302023777686, TT6 = 3263285200291578; lane (48302023777686, 3263285200291578); AGREE  (f = [2, 2, 2, 2, 2, 1, 1, 1])
+(2) depth-first enumeration of transitive chains (no symmetry) vs (1)
+  q = 7: DFS TT5 = 0, TT6 = 0; source-sink (0, 0); AGREE
+  q = 11: DFS TT5 = 0, TT6 = 0; source-sink (0, 0); AGREE
+  q = 19: DFS TT5 = 342, TT6 = 0; source-sink (342, 0); AGREE
+  q = 23: DFS TT5 = 1518, TT6 = 0; source-sink (1518, 0); AGREE
+  q = 27: DFS TT5 = 4212, TT6 = 0; source-sink (4212, 0); AGREE
+  q = 31: DFS TT5 = 10695, TT6 = 3255; source-sink (10695, 3255); AGREE
+  q = 43: DFS TT5 = 74046, TT6 = 45150; source-sink (74046, 45150); AGREE
+  q = 47: DFS TT5 = 122153, TT6 = 83237; source-sink (122153, 83237); AGREE
+  q = 59: DFS TT5 = 441438, TT6 = 503034; source-sink (441438, 503034); AGREE
+  q = 67: DFS TT5 = 879978, TT6 = 1176252; source-sink (879978, 1176252); AGREE
+  q = 71: DFS TT5 = 1202740, TT6 = 1724590; source-sink (1202740, 1724590); AGREE
+time (see run)

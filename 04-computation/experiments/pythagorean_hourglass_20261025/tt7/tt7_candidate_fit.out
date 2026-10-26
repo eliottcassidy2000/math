@@ -1,0 +1,8 @@
+72 values of q, max 811; 97 candidate orbits
+base span alone: NOT in span
+single-orbit hits: 0
+weight 2: 73 columns, too many for 72 values
+weight 3 all orbits (40 columns): NOT in span
+weight 4: 83 columns, too many for 72 values
+weight 5 all orbits (26 columns): NOT in span
+weight 6 all orbits (41 columns): NOT in span

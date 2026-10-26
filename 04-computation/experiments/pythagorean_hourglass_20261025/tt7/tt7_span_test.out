@@ -1,0 +1,8 @@
+34 values of q (max 311); base span: 13 columns, rank 13: NOT in span
+  + q(q-1) c6: NOT in span
+  + q(q-1) eta(2z)^12: NOT in span
+  + q(q-1) a^2: NOT in span
+  + q(q-1) cm3(-2)^2: NOT in span
+  + q(q-1) q cm3(-2): NOT in span
+  + q(q-1) a |b|^2/q: NOT in span
+  + all extras (19 columns): NOT in span

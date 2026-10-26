@@ -1,6 +1,6 @@
 ---
 id: THM-4780
-title: "The Paley census to six vertices. Write T_G for the injective character sum of an oriented graph G over F_q, q = 3 (mod 4). After THM-4652's reduction calculus, the only dense graph sums (minimum degree >= 3) that survive in the transitive k-census of the Paley tournament P_q, k <= 6, are those without an odd-reversal automorphism: the wheel W4 = K5 - 2K2 (five vertices), and the octahedron K_(2,2,2) and the Hamiltonian-path complement K6 - P6 (six vertices). The octahedron is (q - 5) wheels by PGL(2) invariance, which proves HYP-9275's octahedron identity at every odd prime. With signed multiplicities +1 (wheel) and -8 = (1/2) sum_(S6) sgn(s)(-1)^des(s) (K6 - P6), for every prime power q = 3 (mod 4): TT5(P_q) = q(q-1)[(q-3)(q^2-21q+105) + S_W4(q)]/2^10 and TT6(P_q) = q(q-1)[(q-3)(q^3-46q^2+682q-3239) + 7(q-15)S_W4(q) - 8 S_(K6-P6)(q)]/2^15, where S = T/(q(q-1)). With the wheel identity (HYP-9274 (B)), TT5(P_p) = p(p-1)(p^3-24p^2+168p-319-a_p)/2^10 for primes p = 3 (mod 4), a_p the coefficient of eta(2z)^4 eta(4z)^4. The four-vertex level: a regular tournament has TT4 >= n(n-1)(n-3)(n-7)/64, with equality iff it is doubly regular, which for P_q is the Gauss identity g^2 = -q."
+title: "The Paley census to six vertices. Write T_G for the injective character sum of an oriented graph G over F_q, q = 3 (mod 4). After the degree-at-most-two elimination calculus of the 2026-10-14 run packets and THM-4652's vanishing laws, the only dense graph sums (minimum degree >= 3) that survive in the transitive k-census of the Paley tournament P_q, k <= 6, are those without an odd-reversal automorphism: the wheel W4 = K5 - 2K2 (five vertices), and the octahedron K_(2,2,2) and the Hamiltonian-path complement K6 - P6 (six vertices). The octahedron is (q - 5) wheels by PGL(2) invariance, which proves HYP-9275's octahedron identity at every odd prime. With signed multiplicities +1 (wheel) and -8 = (1/2) sum_(S6) sgn(s)(-1)^des(s) (K6 - P6), for every prime power q = 3 (mod 4): TT5(P_q) = q(q-1)[(q-3)(q^2-21q+105) + S_W4(q)]/2^10 and TT6(P_q) = q(q-1)[(q-3)(q^3-46q^2+682q-3239) + 7(q-15)S_W4(q) - 8 S_(K6-P6)(q)]/2^15, where S = T/(q(q-1)). With the wheel identity (HYP-9274 (B)), TT5(P_p) = p(p-1)(p^3-24p^2+168p-319-a_p)/2^10 for primes p = 3 (mod 4), a_p the coefficient of eta(2z)^4 eta(4z)^4. The four-vertex level: a regular tournament has TT4 >= n(n-1)(n-3)(n-7)/64, with equality iff it is doubly regular, which for P_q is the Gauss identity g^2 = -q."
 status: >
   PROVED. Parts 1-4 and 7 are elementary. Part 5 is the reduction calculus with a priori degree bounds, plus exact
   interpolation from finitely many computed values: the linear systems have full column rank, so their unique solution
@@ -10,11 +10,15 @@ status: >
   TT6 at 75 values of q (3, 7, 11 and the 67 primes 19..751). Both counts include the prime powers 27, 243, 343, 1331, 2187,
   computed by direct census;
   the octahedron identity at all 27 odd primes 5..109, in both classes mod 4.
-  Not yet independently audited.
+  Audited 2026-10-25 (04-computation/experiments/pythagorean_hourglass_20261025/audit/REPORT.md): CORRECT WITH FIXES
+  (attributions and wording only; MISTAKE-670). Part 5 re-derived by exact symbolic elimination, with no interpolation; TT5, TT6 and the
+  graph sums recomputed by different algorithms; part 4 tested exhaustively on P^1(F_7) and on further even-degree graphs.
 session: mac-mini-2026-10-25-pyth
 source: 05-knowledge/results/pythagorean_hourglass_census_tower_20261025.md
 depends_on:
-  - THM-4652   # reversal signs, odd and isolated-edge vanishing, odd-reversal symmetry, reduction calculus
+  - THM-4652   # reversal signs, odd and isolated-edge vanishing, odd-reversal symmetry
+  # degree <= 2 elimination calculus: 05-knowledge/results/wheel_run_interface_20261014h.md (codex-tiling) and
+  # 05-knowledge/results/paley_next_cores_20261014i.md (tiling-modular-atoms)
   - THM-4653   # K6 - P6 terminal = Legendre bilinear form M_q (used in the M_q form of part 5)
   - HYP-9274   # (B) wheel W4 = Apery form at odd primes: PROVED + CITED (Ahlgren-Ono 2000); used in part 6 only
 scripts:
@@ -51,9 +55,9 @@ related:
 ## Statement
 
 1. **Expansion.** `2^{C(k,2)} TT_k(P_q) = Σ_{G ⊆ E(K_k)} T_G(q)`, with the order orientation.
-2. **Reduction (THM-4652's calculus, with degree bounds).**
+2. **Reduction (the degree-≤2 elimination calculus of `wheel_run_interface_20261014h.md`, with degree bounds).**
    - Every `T_G` is a combination `Σ_H c_{G,H}(q) T_H(q)`.
-   - `H` runs over dense oriented graphs on fewer vertices, together with the empty graph on no vertices (`T = 1`).
+   - For `G` not dense, `H` runs over dense oriented graphs on fewer vertices, together with the empty graph on no vertices (`T = 1`); a dense `G` is its own reduction.
    - Each `c_{G,H}` is in `Z[q]`, of degree `≤ |V(G)| − |V(H)|`, and the same polynomial for every `q ≡ 3 (mod 4)`.
 3. **Survivors.** `T_G = 0` if `|E(G)|` is odd, or if the underlying graph has an automorphism that reverses an odd number of arcs. Among dense graphs with an even number of edges:
 
@@ -101,7 +105,7 @@ related:
 
 **Part 2, reduction.** Let `v` have degree `d ≤ 2`, and let `X` be the set of the other `k − 1` values.
 - `d = 0`: the sum over `x_v ∉ X` gives `(q − k + 1)·T_{G−v}`.
-- `d = 1`, neighbour `u`: `Σ_{t∉X} χ(t − x_u) = −Σ_{z≠u,v} χ(x_z − x_u)`. Each term is `T` of `G − v` with the edge `{z,u}` toggled; a doubled edge gives `χ² = 1` on injective maps. The coefficient is `±1`.
+- `d = 1`, neighbour `u`: `Σ_{t∉X} χ(t − x_u) = −Σ_{z≠u,v} χ(x_z − x_u)`. Each term is `T` of `G − v` with the edge `{z,u}` toggled; a doubled edge gives `χ² = 1` on injective maps, or `χ(−1) = −1` when the two factors are oppositely oriented. The coefficient is `±1`.
 - `d = 2`, neighbours `u, w`: by the Jacobi sum `Σ_t χ(t − a)χ(t − b) = −1` (`a ≠ b`), `Σ_{t∉X} χ(t − x_u)χ(t − x_w) = −1 − Σ_{z≠u,w,v} χ(x_z − x_u)χ(x_z − x_w)`. This gives `T_{G−v}` and the toggled graphs, with coefficients `±1`.
 - The signs depend only on the orientations and on `χ(−1)`.
 - Each step removes one vertex and multiplies by a polynomial of degree `≤ 1`. Iterating gives the degree bound.
@@ -112,10 +116,10 @@ related:
 - Choose an orientation with every in-degree even. A connected graph with `|E|` even has one, by the parity-orientation lemma; reorienting changes `T_G` by a sign.
 - Affine maps `x ↦ ax + b` multiply `F` by `χ(a)^{|E'|}`, where `E'` is the set of arcs not at `∞`. Then `|E'| = |E|` or `|E| − deg(u)`, which is even in both cases.
 - For the inversion `ι(x) = −1/x`, the identity `−1/x_j + 1/x_i = (x_j − x_i)/(x_i x_j)` gives `F(ιx) = F(x)·∏_v χ(x_v)^{deg v} = F(x)` when no vertex sits at `0` or `∞`.
-- When a vertex `u` sits at `0`, the factors at `u` contribute `(−1)^{in(u)}`. When vertices `u` and `w` sit at `0` and `∞`, they contribute `(−1)^{deg'(w) + in'(w) + in'(u)}`. Every one of these exponents is even, so `F` is `PGL(2)`-invariant.
+- When a vertex `u` sits at `0`, the factors at `u` contribute `(−1)^{in(u)}`. When vertices `u` and `w` sit at `0` and `∞`, they contribute `(−1)^{deg'(w) + in'(w) + in'(u)}`, primes denoting degrees into the other `k − 2` vertices. Both exponents are even: if `u ~ w`, then `deg'(w)` and exactly one of `in'(u)`, `in'(w)` drop by one, so the second exponent has the parity of `deg(w) + in(w) + in(u)`. So `F` is `PGL(2)`-invariant.
 - `PGL(2)` is transitive on `P¹`. So, for each vertex `u`, the configurations with `x_u = P` have the same total for every `P ∈ P¹`. At `P = ∞` that total is `T_{G−u}`.
 - Hence the full `P¹` sum is `(q+1)·T_{G−u}` for every `u`. Subtracting the `k` classes with a vertex at `∞` gives `T_G = (q + 1 − k)·T_{G−u}`.
-- The octahedron in order orientation has in-degrees `0, 0, 2, 2, 4, 4`, so `ε = +1`. Its vertex-deleted graph is `W4`; relabelling the hub from the largest to the smallest label reverses 4 arcs, so the sign stays `+1`.
+- The octahedron in order orientation has in-degrees `0, 0, 2, 2, 4, 4`, so `ε = +1`. Deleting `u = 6` leaves `W4` with hub `5`; relabelling the hub from the largest to the smallest label reverses 4 arcs, so the sign stays `+1`.
 - For `q ≡ 1 (mod 4)` the in-degree condition is not needed.
 - Check: `S_oct = (q − 5)·S_W4` at all 27 odd primes `5 ≤ q < 110` (13 in the class 1 mod 4, 14 in the class 3 mod 4).
 
@@ -124,7 +128,7 @@ related:
 - For the octahedron, merged antipodal pairs carry same-direction double arcs. This gives `U(K_{2,2,2}) = T_oct + 3(q−4)T_{C4} + 3(q)_4 + (q)_3`.
 - Here `T_{C4} = q(q−1)(1 − (q−2)) = −q(q−1)(q−3)` for the 4-cycle with two sources and two sinks.
 - For the wheel the same decomposition gives `U(W4) = T_W4 − q(q−1)(q−4)`.
-- HYP-9274 (B) states `U(W4) = −q(q−1)(q + a_q)`. Together with `T_oct = (q−5)T_W4`, this yields exactly `U(K_{2,2,2}) = q(q−1)((5−q)a_q + 3q)`.
+- HYP-9274 (B) states the injective identity `T_W4 = −q(q−1)(a_q + 4)`; with the line above it is `U(W4) = −q(q−1)(q + a_q)` (as recorded in HYP-9275 (A); `U(W4)` is `q(q−1)` times Ahlgren–Ono's moment). Together with `T_oct = (q−5)T_W4`, this yields exactly `U(K_{2,2,2}) = q(q−1)((5−q)a_q + 3q)`.
 - `octahedron_pgl2_check.py` confirms every identity of this paragraph by brute force at `q = 5, 7, 11` (and the wheel ones at `q = 13`).
 
 **Part 5.**
@@ -140,8 +144,7 @@ related:
 - The `M_q` form follows from THM-4653: `V_q = q(q−1)(−εM_q + 7 + 13ε − 2εq)` with `ε = −1`.
 
 **Part 6.**
-- HYP-9274 (B) gives `U(W4) = −q(q−1)(q + a_q)` at odd primes. It is Ahlgren–Ono's moment `Σ_b χ(b)(Σ_c χ(c(c−1)(c−b)))² = −a_p − p` plus a collision correction.
-- By the decomposition above, `S_W4 = −4 − a_p`.
+- HYP-9274 (B) states `S_W4 = −4 − a_p` at odd primes. Its proof: `U(W4) = q(q−1)·Σ_b χ(b)(Σ_c χ(c(c−1)(c−b)))²` exactly, Ahlgren–Ono evaluate the moment as `−a_p − p`, and the collision correction `U(W4) = T_W4 − q(q−1)(q−4)` converts this to the injective sum.
 - Equivalently, `S_W4(q) = Σ_{x≠0,1} χ(x)a_x² + (q − 3)`, where `a_x = −Σ_y χ(y(y−1)(y−x))` is the Legendre-family trace.
   With the hub at `0`, one rim vertex at `1` and its non-neighbour at `x`, the two remaining rim vertices each contribute `χ(y(y−1)(y−x))`.
   Their distinct-pair sum is `a_x² − (q − 3)`, and `Σ_{x≠0,1} χ(x) = −1`. This is checked numerically in `census_interpolation.py`.
@@ -160,15 +163,15 @@ related:
   - `TT5(P_q) = 0` at `q = 3, 7, 11`.
   - `TT6(P_q) = 0` at `q = 3, 7, 11, 19, 23, 27`. `P_27` is ST27, the unique largest `TT6`-free tournament (Sanchez-Flores; Neiman–Mackey–Heule).
   - In part 5 these zeros are arithmetic identities. For example, `TT5(P_7) = 0` ⟺ `S_W4(7) = −28` ⟺ `a_7 = 24`. Similarly `TT5(P_11) = 0` ⟺ `a_11 = −44`.
-- **Prime powers.** With `a_q` read as the Frobenius trace `α^r + β^r`, the formula of part 6 holds at `q = 27, 243, 343, 1331, 2187` (`paley_prime_powers.out`). There the wheel identity itself is FINITE-EXACT, not cited.
+- **Prime powers.** With `a_q` read as the Frobenius trace `α^r + β^r`, the formula of part 6 holds at `q = 27, 243, 343, 1331, 2187` (`paley_prime_powers.out`). There the wheel identity itself is FINITE-EXACT, not cited; in this Frobenius form it was already FINITE-EXACT, by direct evaluation, at 9, 25, 27, 49, 81, 121, 125, 169 (`wheel_apery_extension_20261014h.md` §4).
 - **Two-step reading.** Every surviving dense sum lacks an odd-reversal symmetry. The five-vertex survivor is the `₄F₃(1)` wheel. The six-vertex level adds exactly one new sum, the `₂F₁·₃F₂` terminal of THM-4653. This is the run-expansion ladder of the 2026-10-14 notes, seen through subtournament counts.
 
 ## Prior art and credits
 
-- **TT3 and TT4.** `TT3(P_q) = q(q−1)(q−3)/8` and `TT4(P_q) = q(q−1)(q−3)(q−7)/64` are McCarthy–Springfield, arXiv:2311.02135, Cor. 2.7 and 2.3. They count orders 3 and 4 in `k`-th power Paley digraphs. We found no published order-5 or order-6 count.
-- **Earlier repo work (2026-10-14).** The vanishing and reduction calculus is THM-4652 (opus-2026-10-14-S34). The wheel and octahedron are cores of the Paley run expansion: HYP-9274 (B), PROVED + CITED, and HYP-9275 (opus-2026-10-14-S35), where the octahedron identity was FINITE-EXACT and open. The `K6 − P6` reduction is THM-4653 and HYP-9276 (mac-mini-2026-10-14-wilson).
+- **TT3 and TT4.** `TT3(P_q) = q(q−1)(q−3)/8` and `TT4(P_q) = q(q−1)(q−3)(q−7)/64` are McCarthy–Springfield, arXiv:2311.02135, Cor. 2.7 and 2.3. They count orders 3 and 4 in `k`-th power Paley digraphs. Both values are older facts for the classes containing `P_q`: `TT3 = n(n−1)(n−3)/8` holds for every regular tournament, and the `TT4` value for every doubly regular one (part 7). We found no published order-5 or order-6 count.
+- **Earlier repo work (2026-10-14).** The vanishing laws are THM-4652 (opus-2026-10-14-S34). The degree-≤2 injective elimination calculus is codex-tiling's `wheel_run_interface_20261014h.md`; the ten-edge terminal classification, including the survival of `K6 − P6` and the vanishing of the other ten-edge six-vertex terminals, is tiling-modular-atoms' `paley_next_cores_20261014i.md`. The wheel and octahedron are cores of the Paley run expansion: HYP-9274 (B), PROVED + CITED, and HYP-9275 (opus-2026-10-14-S35), where the octahedron identity was FINITE-EXACT and open. The `K6 − P6` reduction is THM-4653 and HYP-9276 (mac-mini-2026-10-14-wilson).
 - **New here.**
-  - The PGL(2) lemma and the resulting proof of HYP-9275's octahedron identity.
+  - The PGL(2) counting lemma and the resulting proof of HYP-9275's octahedron identity. The invariance behind it is classical: with an even in-degree orientation, `F(x) = χ(∏_{(i→j)} det(x_i, x_j))` in homogeneous coordinates, which is well defined on `P¹(F_q)` because every degree is even and `GL(2)`-invariant because `|E|` is even (the triangle case is the oriented Paley two-graph on `P¹(F_q)`; see e.g. Gunderson–Semeraro, arXiv:2204.10775, and Babai–Cameron on switching classes of tournaments).
   - The census formulas of part 5, with the signed multiplicities and the Désarménien–Foata value `−8`.
   - The survivor census for `k = 7`.
-- **Part 7.** It is elementary. The class-count relations are standard for regular tournaments.
+- **Part 7.** It is elementary and classical in substance: for regular `T`, `TT4 = n·C(k,3) − Σ_v c3(N⁺(v))` and `c4 = n(n²−1)(n−3)/48 − Σ_v c3(N⁺(v))`, so the bound is the known lower bound `c4(T) ≥ c4(DR_n)` on 4-cycles of regular tournaments, with the same equality case (see Savchenko, arXiv:2403.07629, §1, and the references there). The class-count relations are standard for regular tournaments.

@@ -1,0 +1,9 @@
+C3: |Aut| = 3; count = sum_i c_i q^i + d T_W4 with c = ['0', '-1/24', '0', '1/24'], d = ['0']; denominators [1, 24]
+    q = 19: formula 285, direct count 285
+    q = 23: formula 506, direct count 506
+R5 (regular 5-tournament): |Aut| = 5; count = sum_i c_i q^i + d T_W4 with c = ['0', '-21/5120', '5/1024', '0', '-1/1024', '1/5120'], d = ['1/1024']; denominators [1, 1024, 5120]
+    q = 19: formula 342, direct count 342
+    q = 23: formula 1012, direct count 1012
+TT5: |Aut| = 1; count = sum_i c_i q^i + d T_W4 with c = ['0', '315/1024', '-483/1024', '3/16', '-25/1024', '1/1024'], d = ['1/1024']; denominators [1, 16, 1024]
+    q = 19: formula 342, direct count 342
+    q = 23: formula 1518, direct count 1518

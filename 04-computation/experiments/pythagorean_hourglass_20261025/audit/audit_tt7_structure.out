@@ -1,0 +1,6 @@
+2^21 TT7 reduced form: 42 terms (1 polynomial, W4, octahedron, K6-P6 and the seven-vertex survivors)
+q = 7: 2^21 TT7 = 0; reduced form = 0; AGREE  [2s]
+q = 11: 2^21 TT7 = 0; reduced form = 0; AGREE  [2s]
+q = 19: 2^21 TT7 = 0; reduced form = 0; AGREE  [6s]
+q = 23: 2^21 TT7 = 0; reduced form = 0; AGREE  [16s]
+q = 31: 2^21 TT7 = 975175680; reduced form = 975175680; AGREE  [50s]

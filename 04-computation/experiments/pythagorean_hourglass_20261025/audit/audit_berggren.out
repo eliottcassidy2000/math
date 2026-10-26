@@ -1,0 +1,10 @@
+31819 primitive triples with c <= 200000
+c in [1000, 2000): 161 triples, mean depth 7.95 = 1.087 log(1.5 lo), (6/pi^2)(log sqrt c)^2 at c = 1.5 lo: 8.13, ratio 0.978
+c in [10000, 20000): 1593 triples, mean depth 12.91 = 1.343 log(1.5 lo), (6/pi^2)(log sqrt c)^2 at c = 1.5 lo: 14.05, ratio 0.919
+c in [100000, 200000): 15900 triples, mean depth 19.06 = 1.599 log(1.5 lo), (6/pi^2)(log sqrt c)^2 at c = 1.5 lo: 21.59, ratio 0.883
+Collatz n in [1000, 2000): mean T-stopping time 49.87
+Collatz n in [10000, 20000): mean T-stopping time 65.83
+Collatz n in [100000, 200000): mean T-stopping time 81.44
+sampled c in [1e+06, 2e+06): 40000 triples, mean depth 26.56; (6/pi^2)(log sqrt c)^2 = 30.74; ratio 0.864; mean/log c = 1.868; mean/(log c)^2 = 0.1313
+sampled c in [1e+08, 2e+08): 40000 triples, mean depth 43.94; (6/pi^2)(log sqrt c)^2 = 53.87; ratio 0.816; mean/log c = 2.334; mean/(log c)^2 = 0.1240
+sampled c in [1e+10, 2e+10): 40000 triples, mean depth 66.98; (6/pi^2)(log sqrt c)^2 = 83.44; ratio 0.803; mean/log c = 2.858; mean/(log c)^2 = 0.1220

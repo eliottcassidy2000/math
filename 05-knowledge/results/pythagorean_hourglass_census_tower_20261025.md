@@ -14,7 +14,7 @@ Canon produced:
 - [HYP-9390](../hypotheses/HYP-9390-the-six-vertex-paley-census-is-the-level-32-adjoint.md) (OPEN, conditional on HYP-9276).
 - HYP-9391 was reserved and is released unused.
 
-Scripts are in `04-computation/experiments/pythagorean_hourglass_20261025/`. Every `.py` there has its `.out` beside it.
+Scripts are in `04-computation/experiments/pythagorean_hourglass_20261025/`. Every `.py` there has an output file beside it except the TT5 search-history scripts `tt5_exact_poly.py`, `tt5_residual_fit.py`, `tt5_scaling.py` and `tt5_modular_search.py` (the last one's output is the first line of `tt5_exact_f8.out`, which imports it); `paley_tt5_arith.py` and `paley_tt6.py` write `paley_tt5_data.out` and `paley_tt6_data.out`.
 
 ## 0. Answers in brief
 
@@ -23,7 +23,7 @@ Scripts are in `04-computation/experiments/pythagorean_hourglass_20261025/`. Eve
 | THM-4773 (hourglass lifts) | **Verified independently**, every part | §1 |
 | Pythagorean triples vs busy beaver / Collatz | A **contrast**, not an analogy: Berggren descent halts by a Lorentzian potential; Collatz has no invariant form | §2 |
 | QR "is" the four 4-vertex classes | The numeral four is a coincidence (klein's verdict stands). The four classes nevertheless carry reciprocity-level arithmetic in three exact ways | §3 |
-| (new) the transitive census of Paley tournaments | `TT4` = the Gauss identity, `TT5` = the Apéry form, `TT6` = the level-32 adjoint; **THM-4780**, **HYP-9390** | §4 |
+| (new) the transitive census of Paley tournaments | `TT4` = the Gauss identity, `TT5` = the Apéry form, `TT6` = the level-32 adjoint (conditional on HYP-9276); **THM-4780**, **HYP-9390** | §4 |
 | Möbius band, FTC/FTA spiral, CS/triangle, CLT/Tychonoff, Rule 30 | Mostly covered by klein's atlas. New: the square-root band is the hourglass's lifting monodromy, the χ(−1) face flip is the census vanishing law, and FTA = FTC for `log p` on the spiral | §5 |
 
 ## 1. THM-4773 checked independently
@@ -57,8 +57,8 @@ So the lifted central points are the primitive Pythagorean triples. `(3,4,5) ↦
 
 1. **Berggren descent provably halts.**
    - The parent map lowers the hypotenuse strictly. All 31,819 primitive triples with `c ≤ 200,000` reach `(3,4,5)`.
-   - The potential `c` is the Lorentz-invariant height: the descent is a walk in `O(2,1; Z)` with a positive potential.
-   - Collatz has no such potential: no quadratic form is preserved, which is the separation of `ternary_berggren_20260925.md`.
+   - The potential `c` is the time coordinate for the Lorentz form `a² + b² − c²` that the Berggren matrices preserve (the form is invariant, `c` is not): the descent is a walk in `O(2,1; Z)` with a positive potential.
+   - Collatz has no such potential. The proved separation in `ternary_berggren_20260925.md` §6 is narrower: `J = tr²/det` is an integer on Berggren words and never on accelerated Collatz words, so no fixed projective conjugacy identifies them; that note says explicitly that it does not distinguish convergence behaviour.
 2. **The two depth laws differ in kind.**
 
    | range | Berggren depth: mean, sd²/log | Collatz stopping time: mean, sd²/log |
@@ -68,7 +68,7 @@ So the lifted central points are the primitive Pythagorean triples. `(3,4,5) ↦
    | `[10⁵, 2·10⁵)` | `1.60 log c`, 60.1 | `6.83 log n`, 90.7 |
 
    - Collatz stopping times are Gaussian-like at the drift `log n / log(2/√3) = 6.95 log n`.
-   - Berggren depths are heavy-tailed and grow like `(log c)²`. The mean tracks `(6/π²)(log √c)²`, the Yao–Knuth law for sums of partial quotients.
+   - Berggren depths are heavy-tailed and grow like `(log c)²`. The mean is close to `(6/π²)(log √c)²` (the Yao–Knuth leading term for sums of partial quotients) only at small `c`: the ratio is 0.98, 0.92, 0.88 in the three windows and about 0.86, 0.82, 0.80 near `c = 1.5·10⁶, 1.5·10⁸, 1.5·10¹⁰` (audit, `audit_berggren.out`). The leading constant is not identified.
    - Depth correlates 0.92 with the partial-quotient sum `S(m/n)` of the generator ratio.
    - The Pythagorean tree is a continued-fraction (Euclid/Stern–Brocot) object. Collatz is a random walk with drift.
 3. **The hourglass link is exactly this tree.**
@@ -82,7 +82,7 @@ So the lifted central points are the primitive Pythagorean triples. `(3,4,5) ↦
 klein's atlas (`analogy_reduction_atlas_20261025/QR_TOURNAMENT.md`, HYP-9375) is right that the numeral four is a coincidence: `A000568(4) = 4` and the four cases `(p, q) mod 4` have no common source. Three exact statements make the classes arithmetic anyway.
 
 1. **Paley level (THM-4780 (7)).**
-   - In a regular tournament, `TT4 ≥ n(n−1)(n−3)(n−7)/64`, with equality iff the tournament is doubly regular.
+   - In a regular tournament, `TT4 ≥ n(n−1)(n−3)(n−7)/64`, with equality iff the tournament is doubly regular. This is the classical lower bound on 4-cycles of regular tournaments in another form (`c4 = n(n²−1)(n−3)/48 − Σ_v c3(N⁺(v))`; Savchenko, arXiv:2403.07629, §1).
    - `TT4` fixes all four class counts.
    - For `P_q`, equality is `S² = J − qI`, i.e. the Gauss identity `g² = −q`. So the four class frequencies of `P_q` are the Gauss identity.
    - Checks: exhaustive over the regular classes at `n = 7, 11` (3 and 1223 classes); random regular tournaments at 15, 19, 23; `P_q` for `q ≤ 43` (`qr_four_census.out`).
@@ -92,7 +92,7 @@ klein's atlas (`analogy_reduction_atlas_20261025/QR_TOURNAMENT.md`, HYP-9375) is
    - So "`χ(−1) = −1`", "Paley is a tournament" and "the `Q(i)` form vanishes" are one fact.
    - On the graph side, `K4(G_q) = q(q−1)(q² − 20q + 81 + a_q(η(4z)⁶))/1536`. This is FINITE-EXACT at 59 primes (`paley_graph_k4.out`) and equivalent to Evans–Pulham–Sheehan's `q(q−1)((q−9)² − 4y²)/1536` with `q = x² + y²`, `y` even.
 3. **Four primes ≡ 3 (mod 8).**
-   - Put `p_i → p_j` iff `(p_j/p_i) = 1`. This is a tournament by reciprocity.
+   - Put `p_i → p_j` iff `(p_j/p_i) = 1`. This is a tournament by reciprocity. It is the converse of the orientation in `bsd_selmer_growth_20261013a.md` §3 (there `i → j` means `[p_j/p_i] = 1`); the values below are invariant under reversal, but the labels source + C3 and sink + C3 of the two middle witnesses swap.
    - The pure 2-Selmer dimension of `y² = x³ − n²x`, `n = p1p2p3p4`, is the Monsky nullity `dim_F2 ker(A² + A + I)` (`bsd_selmer_growth_20261013a.md` §§2–3).
    - It depends only on the isomorphism class: TT4 gives 0, source + C3 gives 2, sink + C3 gives 2, strong C4 gives 0. This is exhaustive over the 64 labelled tournaments.
    - All four classes occur, with the full Monsky matrix as an independent check:
@@ -105,8 +105,8 @@ klein's atlas (`analogy_reduction_atlas_20261025/QR_TOURNAMENT.md`, HYP-9375) is
 ## 4. The Paley census tower (THM-4780, HYP-9390)
 
 **Method.** Expand the indicator of a transitive `k`-set into `2^{C(k,2)}` character sums `T_G` over subgraphs of `K_k`.
-- THM-4652's calculus eliminates vertices of degree `≤ 2`. Its vanishing laws then kill every dense graph with an odd number of edges, or with an automorphism that reverses an odd number of arcs, since `χ(−1) = −1`.
-- A new PGL(2) lemma reduces the dense graphs whose degrees are all even.
+- The 2026-10-14 elimination calculus (`wheel_run_interface_20261014h.md`, `paley_next_cores_20261014i.md`) removes vertices of degree `≤ 2`. THM-4652's vanishing laws then kill every dense graph with an odd number of edges, or with an automorphism that reverses an odd number of arcs, since `χ(−1) = −1`.
+- A PGL(2) counting lemma reduces the dense graphs whose degrees are all even. Its invariance is the classical Möbius invariance of `χ(∏ det(x_i, x_j))` over even-degree graphs on `P¹(F_q)`.
 - What survives:
 
 | `k` | `TT_k(P_q)` (times `2^{C(k,2)}/(q(q−1))`) | surviving dense sums | arithmetic |
@@ -114,8 +114,8 @@ klein's atlas (`analogy_reduction_atlas_20261025/QR_TOURNAMENT.md`, HYP-9375) is
 | 3 | `q − 3` | none | none |
 | 4 | `(q−3)(q−7)` | none (`K4` killed) | the Gauss identity (doubly regular) |
 | 5 | `(q−3)(q²−21q+105) + S_W4` | the wheel `W4` (multiplicity +1) | `S_W4 = −4 − a_q`, Apéry form `η(2z)⁴η(4z)⁴` (`₄F₃(1)`, Ahlgren–Ono) |
-| 6 | `(q−3)(q³−46q²+682q−3239) + 7(q−15)S_W4 − 8S_{K6−P6}` | `K6 − P6` (−8); the octahedron (+1), which reduces to `(q−5)W4` | `S_{K6−P6} = |b(q)|² − q² − 7`, the adjoint of `32.3.c.a` (THM-4653 + HYP-9276) |
-| 7 | open | 37 genuine + 1 reducible (HYP-9390 (c)) | open |
+| 6 | `(q−3)(q³−46q²+682q−3239) + 7(q−15)S_W4 − 8S_{K6−P6}` | `K6 − P6` (−8); the octahedron (+1), which reduces to `(q−5)W4` | `S_{K6−P6} = |b(q)|² − q² − 7`, the adjoint of `32.3.c.a` (THM-4653 + HYP-9276; conditional, HYP-9276 is OPEN) |
+| 7 | `A7 + B7·S_W4 + C7·S_{K6−P6} + g(q)` (audit's exact reduced form) | 37 genuine + `K7 − C7 = ±(q−6)(K6 − P6)` | **new**: `g(q)` fits no GL(2) candidate tried (HYP-9390 (c)) |
 
 **The formulas.** In closed modular form, for primes `p ≡ 3 (mod 4)` (`TT6` conditional on HYP-9276):
 ```
@@ -146,18 +146,18 @@ TT6(P_p) = p(p−1)(p⁴ − 49p³ + 828p² − 5313p + 10193 − 7(p−15)a_p �
 
 **The ladder.** The 2026-10-14 notes found the same hierarchy in the Paley run expansion of Hamiltonian paths: `₂F₁` inside every terminal, then `₄F₃(1)` for the wheel, then `₂F₁·₃F₂` for `K6 − P6` (`paley_k6p6_adjoint_weight3_level32_20261014.md`). The census tower is that ladder seen through transitive subtournaments.
 - The adjoint first appears at six vertices, through the Hamiltonian-path complement, as in the runs.
-- **Consequence for the loop expansion.** For `P_q`, every five-vertex class count is affine in `a_q`, and every six-vertex class count is affine in `(a_q, |b(q)|²)`. So the four-loop term of HYP-9371 is a rational function of `q` plus a rational function times `a_q`, and the five-loop term adds `|b(q)|²`.
+- **Consequence for the loop expansion.** For `P_q`, every five-vertex class count is affine in `a_q`, and every six-vertex class count is affine in `(a_q, S_{K6−P6})`, hence in `(a_q, |b(q)|²)` if HYP-9276 holds. So the four-loop term of HYP-9371 is a rational function of `q` plus a rational function times `a_q`, and the five-loop term adds `S_{K6−P6}` (conditionally `|b(q)|²`).
 
 **Negative results (receipts kept).**
 - `A(p) + B(p)a_p` alone does not fit `TT6`.
-- The weight-6 level-8 newform `8.6.a.a` (`q + 20q³ − 74q⁵ − 24q⁷ + …`), the CM forms of `Q(√−2)`, `Q(√−3)`, `Q(√−7)` (weights 3 and 5), `(2/p)` twists and `a_p²` all have coefficient 0 or fail (`tt6_adjoint_search.out`, `tt6_search.out`).
+- The weight-6 level-8 newform `8.6.a.a` (`q + 20q³ − 74q⁵ − 24q⁷ + …`), the CM forms of `Q(√−2)`, `Q(√−7)` (weights 3 and 5; the `Q(√−3)` columns of `tt6_search.py` ignore the unit ambiguity of `4p = a² + 3b²` and are not the CM newforms, e.g. `−37` instead of `26` at `p = 19` in weight 3, so that case is untested), `(2/p)` twists and `a_p²` all have coefficient 0 or fail (`tt6_adjoint_search.out`, `tt6_search.out`).
 
 ## 5. The remaining clauses
 
 **Cauchy–Schwarz and the triangle inequality.** For a norm that comes from an inner product they are equivalent:
 - CS gives `‖x+y‖² ≤ (‖x‖+‖y‖)²`;
 - conversely, expanding `‖x + ty‖ ≤ ‖x‖ + |t|‖y‖` for small `t` gives CS.
-- The `ℓ¹` norm is the hostile example: triangle inequality without CS.
+- The `ℓ¹` norm is the hostile example: it satisfies the triangle inequality but comes from no inner product (it fails the parallelogram law), so the equivalence has no content there. With the dot product, `|x·y| ≤ ‖x‖₁‖y‖₁` does hold.
 - See klein's atlas. Nothing is added here.
 
 **CLT and Tychonoff.** The shared content is compactness plus a fixed point:
@@ -167,7 +167,7 @@ TT6(P_p) = p(p−1)(p⁴ − 49p³ + 828p² − 5313p + 10193 − 7(p−15)a_p �
 
 **The band that flips its face.**
 - As stated, the region under a graph is an orientable strip, and the face flip is just the sign of `f`.
-- A genuine Möbius band appears for **square roots**. Around a sign change of `L`, the two branches of `√L` are exchanged, and the double cover is a Möbius band over a loop.
+- A genuine Möbius band appears for **square roots**. Around a simple zero of `L` (a loop in the complex `t`-plane; on the real line the two real branches meet at the zero instead), the two branches of `√L` are exchanged, and the associated real line bundle over the loop is a Möbius band.
 - That is literally the hourglass. A base point lifts through `s_i² = d_iL_i` iff the seven Möbius covers can be trivialised simultaneously, i.e. the nonzero `d_iL_i` share one squareclass (THM-4773 (1)).
 - In the census the face flip is the factor `χ(−1) = −1` acquired by reversing an arc:
   - a graph with an odd automorphism (an odd number of forced flips) cannot be untwisted, and its sum vanishes;
@@ -185,7 +185,7 @@ TT6(P_p) = p(p−1)(p⁴ − 49p³ + 828p² − 5313p + 10193 − 7(p−15)a_p �
 
 ## 6. Open problems
 
-1. **Seven vertices** (HYP-9390 (c)). Compute `TT7(P_q)` for `q ≤ 250` and test the span of `{q^i, q^i a_q, q^i |b(q)|²}`. The 37 genuine sums either cancel or bring new arithmetic.
+1. **Seven vertices** (HYP-9390 (c)). `TT7(P_q)` is computed at 72 values. It is not in the span of the six-vertex motives or of 97 newform orbits of 2-power level, singly or by weight. The genuine part `g(q) = Σ m_H S_H` is isolated exactly (`tt7/tt7_genuine_part.out`). The next step is to compute the 37 genuine five-variable sums one by one and identify their motives. Twelve have a cone vertex, which gives genus-2 curves `y² = ∏(x − x_i)`; Siegel-type motives are the natural guess.
 2. **HYP-9276** (`M_q = −b(q²) − 2q − 1`). Proving it makes `TT6` unconditional. The routes are listed in the 2026-10-14 note: Hijikata trace, Katz middle convolution, an elliptic K3 pullback.
 3. **The wheel identity at prime powers.** It is FINITE-EXACT at five prime powers. Extend Ahlgren–Ono's threefold count to `F_q`.
 4. **The McCarthy–Springfield cross-link.** Is their weight-3 level-32 non-CM form the same `32.3.c.a`? If so, it is linear in the 4-vertex count of the fourth-power Paley digraph and adjoint in the 6-vertex count of the Paley tournament.
@@ -220,4 +220,4 @@ Sources:
 - Ahlgren–Ono (2000), `₄F₃(1)`.
 - Evans–Pulham–Sheehan (1981), `K4` in Paley graphs.
 - Désarménien–Foata (1992), signed Eulerian numbers.
-- Sanchez-Flores (Graphs Combin. 1996) and Neiman–Mackey–Heule (arXiv:2011.00683), ST27.
+- Sanchez-Flores, Graphs Combin. 10 (1994) 367–376 (`v(6) = 28`, ST27) and 14 (1998) 181–200 (uniqueness), and Neiman–Mackey–Heule (arXiv:2011.00683), ST27.

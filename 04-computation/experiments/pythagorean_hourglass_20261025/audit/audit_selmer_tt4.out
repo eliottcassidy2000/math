@@ -1,0 +1,19 @@
+(a) Monsky nullity parity = root-number parity (odd iff n = 5, 7 mod 8) for all 1214 odd squarefree n < 3000: failures 0
+(b) (3, 11, 59, 83): class (p_i -> p_j iff (p_j/p_i) = 1) = TT4; converse convention = TT4; Monsky nullity = 0
+(b) (3, 11, 19, 107): class (p_i -> p_j iff (p_j/p_i) = 1) = source+C3; converse convention = sink+C3; Monsky nullity = 2
+(b) (3, 11, 19, 163): class (p_i -> p_j iff (p_j/p_i) = 1) = sink+C3; converse convention = source+C3; Monsky nullity = 2
+(b) (3, 11, 19, 43): class (p_i -> p_j iff (p_j/p_i) = 1) = strong; converse convention = strong; Monsky nullity = 0
+(b) class -> {(nullity M, nullity(A^2+A+I), |Pf|)}, A from (p_j/p_i) as in the note: {'TT4': [(0, 0, 1)], 'sink+C3': [(2, 2, 3)], 'strong': [(0, 0, 1)], 'source+C3': [(2, 2, 3)]}
+    same with the converse orientation (bsd_selmer_growth_20261013a.md section 3 convention): {'TT4': [(0, 0, 1)], 'sink+C3': [(2, 2, 3)], 'strong': [(0, 0, 1)], 'source+C3': [(2, 2, 3)]}
+(b) PARI ellrank [r, R, s] on E_n for the witnesses n = 161601 [0, 0, 0]; 67089 [0, 0, 2]; 102201 [2, 2, 0]; 26961 [0, 0, 0]
+(c) n = 7: 3 regular tournaments; bound 0.0; TT4 in [0, 7]; below bound 0; equality != doubly regular 0; class-count relation failures 0
+(c) n = 9: 15 regular tournaments; bound 13.5; TT4 in [18, 36]; below bound 0; equality != doubly regular 0; class-count relation failures 0
+(c) n = 11: 1223 regular tournaments; bound 55.0; TT4 in [55, 110]; below bound 0; equality != doubly regular 0; class-count relation failures 0
+(c) P_7: classes {'TT4': 0, 'source+C3': 7, 'sink+C3': 7, 'strong': 21}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 7
+(c) P_11: classes {'TT4': 55, 'source+C3': 55, 'sink+C3': 55, 'strong': 165}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 55
+(c) P_19: classes {'TT4': 1026, 'source+C3': 570, 'sink+C3': 570, 'strong': 1710}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 570
+(c) P_23: classes {'TT4': 2530, 'source+C3': 1265, 'sink+C3': 1265, 'strong': 3795}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 1265
+(c) P_31: classes {'TT4': 9765, 'source+C3': 4340, 'sink+C3': 4340, 'strong': 13020}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 4340
+(c) P_43: classes {'TT4': 40635, 'source+C3': 16555, 'sink+C3': 16555, 'strong': 49665}; TT4 = bound True; source+C3 = sink+C3 = q C(k,3) - TT4 = 16555
+(d) Paley graph K4 counts (brute force) at the 21 primes p = 1 mod 4, 5 <= p <= 200: q(q-1)(q^2-20q+81+a_q(eta(4z)^6, PARI))/1536 failures 0; EPS q(q-1)((q-9)^2-4y^2)/1536 failures 0
+(e) S_K4 (x0 = 0, x1 = 1, order orientation) = a_q(eta(4z)^6, PARI 16.3.c.a) at all primes q = 1 mod 4 below 200: failures []; S_K4 = 0 at all q = 3 mod 4 in 7..199: failures []

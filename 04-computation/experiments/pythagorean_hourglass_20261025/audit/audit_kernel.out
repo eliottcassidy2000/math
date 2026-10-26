@@ -1,0 +1,15 @@
+q = 5 (mod 4 = 1), a_q = -2: U(W4) = -60; T_W4 - q(q-1)(q-4) = -60 [OK]; -q(q-1)(q+a_q) = -60 [OK]
+      U(oct) = 300; T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3 = 300 [OK]; q(q-1)((5-q)a_q + 3q) = 300 [OK]; T_oct = (q-5) T_W4: True
+q = 7 (mod 4 = 3), a_q = 24: U(W4) = -1302; T_W4 - q(q-1)(q-4) = -1302 [OK]; -q(q-1)(q+a_q) = -1302 [OK]
+      U(oct) = -1134; T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3 = -1134 [OK]; q(q-1)((5-q)a_q + 3q) = -1134 [OK]; T_oct = (q-5) T_W4: True
+q = 11 (mod 4 = 3), a_q = -44: U(W4) = 3630; T_W4 - q(q-1)(q-4) = 3630 [OK]; -q(q-1)(q+a_q) = 3630 [OK]
+      U(oct) = 32670; T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3 = 32670 [OK]; q(q-1)((5-q)a_q + 3q) = 32670 [OK]; T_oct = (q-5) T_W4: True
+q = 13 (mod 4 = 1), a_q = 22: U(W4) = -5460; T_W4 - q(q-1)(q-4) = -5460 [OK]; -q(q-1)(q+a_q) = -5460 [OK]
+      U(oct) = -21372; T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3 = -21372 [OK]; q(q-1)((5-q)a_q + 3q) = -21372 [OK]; T_oct = (q-5) T_W4: True
+q = 17 (mod 4 = 1), a_q = 50: U(W4) = -18224; T_W4 - q(q-1)(q-4) = -18224 [OK]; -q(q-1)(q+a_q) = -18224 [OK]
+      U(oct) = -149328; T_oct + 3(q-4)T_C4 + 3(q)_4 + (q)_3 = -149328 [OK]; q(q-1)((5-q)a_q + 3q) = -149328 [OK]; T_oct = (q-5) T_W4: True
+Ahlgren-Ono moment sum_b chi(b) t(b)^2 = -a_p - p at all odd primes 3..199: failures []
+Legendre form S_W4 = sum_(x != 0,1) chi(x) a_x^2 + (q-3) at all primes 5..199: failures []
+q = 5: U(W4) = -60, q(q-1) * moment = -60
+q = 7: U(W4) = -1302, q(q-1) * moment = -1302
+q = 11: U(W4) = 3630, q(q-1) * moment = 3630

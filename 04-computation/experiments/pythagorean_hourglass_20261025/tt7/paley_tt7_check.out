@@ -1,0 +1,6 @@
+p=7: chain TT7 = 0, brute force = 0, OK
+p=11: chain TT7 = 0, brute force = 0, OK
+p=19: chain TT7 = 0, brute force = 0, OK
+p=23: chain TT7 = 0, brute force = 0, OK
+p=31: chain TT7 = 465, brute force = 465, OK
+p=43: chain TT7 = 7224, brute force = 7224, OK

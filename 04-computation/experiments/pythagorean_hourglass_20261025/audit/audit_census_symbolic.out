@@ -1,0 +1,65 @@
+k = 4: 11 isomorphism classes, orbit sizes sum to 64 = 2^6: True; dense (min deg >= 3): 1; even |E|: 1; killed by an odd-reversal automorphism: 1; survivors: 0
+k = 5: 34 isomorphism classes, orbit sizes sum to 1024 = 2^10: True; dense (min deg >= 3): 3; even |E|: 2; killed by an odd-reversal automorphism: 1; survivors: 1
+    |E| =  8 degrees [3, 3, 3, 3, 4] |Aut| =    8 m (sum of signs over labelled copies, canonical labelling) = +1  complement [(1, 2), (3, 4)]
+k = 6: 156 isomorphism classes, orbit sizes sum to 32768 = 2^15: True; dense (min deg >= 3): 19; even |E|: 9; killed by an odd-reversal automorphism: 7; survivors: 2
+    |E| = 10 degrees [3, 3, 3, 3, 4, 4] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(0, 2), (1, 3), (2, 4), (3, 5), (4, 5)]
+    |E| = 12 degrees [4, 4, 4, 4, 4, 4] |Aut| =   48 m (sum of signs over labelled copies, canonical labelling) = +1  [all degrees even]  complement [(0, 1), (2, 3), (4, 5)]
+k = 7: 1044 isomorphism classes, orbit sizes sum to 2097152 = 2^21: True; dense (min deg >= 3): 150; even |E|: 75; killed by an odd-reversal automorphism: 37; survivors: 38
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =  144 m (sum of signs over labelled copies, canonical labelling) = +3  complement [(0, 1), (0, 2), (1, 2), (3, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 3, 5, 5, 6] |Aut| =   48 m (sum of signs over labelled copies, canonical labelling) = +3  complement [(1, 2), (3, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 3, 4, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -16  complement [(0, 2), (1, 2), (1, 3), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = +4  complement [(0, 1), (0, 2), (1, 3), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 4, 4, 5, 6] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(1, 2), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 3, 5, 5, 6] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = -12  complement [(1, 3), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 4, 5, 5, 5] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = -12  complement [(0, 1), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 3, 3, 6] |Aut| =   12 m (sum of signs over labelled copies, canonical labelling) = +8  complement [(1, 2), (1, 3), (1, 4), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 3, 4, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(0, 2), (0, 3), (1, 4), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 3, 4, 5] |Aut| =    1 m (sum of signs over labelled copies, canonical labelling) = -16  complement [(0, 2), (1, 3), (1, 4), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 4, 4, 5, 6] |Aut| =    1 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(1, 3), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 4, 4, 5, 6] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(1, 4), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = +24  complement [(0, 1), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = +4  complement [(0, 1), (0, 2), (1, 2), (2, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 4, 6] |Aut| =    8 m (sum of signs over labelled copies, canonical labelling) = +6  complement [(1, 2), (1, 3), (2, 3), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 4, 4, 4, 4, 4, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -40  complement [(0, 1), (1, 2), (2, 3), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(0, 2), (1, 3), (2, 3), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -24  complement [(0, 1), (0, 3), (1, 2), (1, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    1 m (sum of signs over labelled copies, canonical labelling) = +48  complement [(0, 1), (0, 3), (1, 4), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    1 m (sum of signs over labelled copies, canonical labelling) = +32  complement [(0, 1), (1, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(0, 2), (1, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 16 degrees [3, 4, 4, 5, 5, 5, 6] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = +12  complement [(1, 2), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 4, 4, 4, 4, 4, 5] |Aut| =   12 m (sum of signs over labelled copies, canonical labelling) = +12  complement [(0, 1), (0, 2), (1, 2), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 16 degrees [4, 4, 4, 5, 5, 5, 5] |Aut| =   48 m (sum of signs over labelled copies, canonical labelling) = +3  complement [(0, 1), (2, 3), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +24  complement [(0, 1), (0, 2), (1, 3), (2, 3), (2, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    6 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(0, 3), (0, 4), (1, 3), (1, 5), (2, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 4, 6] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = -4  complement [(1, 3), (1, 5), (2, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 12 degrees [3, 3, 3, 3, 4, 4, 4] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(0, 1), (0, 4), (1, 3), (1, 5), (2, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    1 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(0, 3), (1, 5), (2, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 3, 4, 5, 5, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(0, 4), (1, 5), (2, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +16  complement [(0, 2), (0, 4), (1, 5), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 3, 4, 4, 4, 5, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = +8  complement [(0, 2), (1, 2), (1, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [3, 4, 4, 4, 4, 4, 5] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -24  complement [(0, 1), (0, 2), (1, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 14 degrees [4, 4, 4, 4, 4, 4, 4] |Aut| =   14 m (sum of signs over labelled copies, canonical labelling) = -8  [all degrees even]  complement [(0, 1), (0, 2), (1, 3), (2, 4), (3, 5), (4, 6), (5, 6)]
+    |E| = 16 degrees [4, 4, 4, 4, 5, 5, 6] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(1, 3), (2, 4), (3, 5), (4, 6), (5, 6)]
+    |E| = 16 degrees [3, 4, 4, 5, 5, 5, 6] |Aut| =    2 m (sum of signs over labelled copies, canonical labelling) = -8  complement [(1, 4), (2, 5), (3, 6), (4, 6), (5, 6)]
+    |E| = 16 degrees [4, 4, 4, 5, 5, 5, 5] |Aut| =    4 m (sum of signs over labelled copies, canonical labelling) = -12  complement [(0, 1), (2, 4), (3, 5), (4, 6), (5, 6)]
+    |E| = 18 degrees [5, 5, 5, 5, 5, 5, 6] |Aut| =   48 m (sum of signs over labelled copies, canonical labelling) = +1  complement [(1, 2), (3, 4), (5, 6)]
+    k = 7: |m| values [1, 3, 4, 6, 8, 12, 16, 24, 32, 40, 48]; signed values (canonical labelling) [-40, -24, -16, -12, -8, -4, 1, 3, 4, 6, 8, 12, 16, 24, 32, 48]
+[time 2s]
+signed multiplicity of W4 (hub 0, non-edges {1,2},{3,4}) in K5 with that labelling: +1 (15 labelled copies)
+signed multiplicity of octahedron (antipodal {1,2},{3,4},{5,6}) in K6 with that labelling: +1 (15 labelled copies)
+signed multiplicity of K6-P6 (path 1-2-...-6) in K6 with that labelling: -8 (360 labelled copies)
+Desarmenien-Foata sum_(S_n) sgn t^des = (1-t)^floor(n/2) A_ceil(n/2)(t) for n = 1..9: True; at n = 6, t = -1: -16 (half = -8)
+rev_(K6-P6)(sigma) = inv(sigma) - des(sigma) for all 720 sigma: True
+2^1 TT2 = (-1*q^1 + 1*q^2)*1
+2^3 TT3 = (3*q^1 + -4*q^2 + 1*q^3)*1
+2^6 TT4 = (-21*q^1 + 31*q^2 + -11*q^3 + 1*q^4)*1
+2^10 TT5 = (315*q^1 + -483*q^2 + 192*q^3 + -25*q^4 + 1*q^5)*1 + (1*q^0)*T_W4
+   A5 = q(q-1)(q-3)(q^2-21q+105): True;  coefficient of T_W4 = (1,)
+2^15 TT6 = (-9717*q^1 + 15002*q^2 + -6105*q^3 + 869*q^4 + -50*q^5 + 1*q^6)*1 + (-100*q^0 + 6*q^1)*T_W4 + (-8*q^0)*T_K6-P6 + (1*q^0)*T_oct
+   A6 = q(q-1)(q-3)(q^3-46q^2+682q-3239): True
+   coefficient of T_W4 from non-dense graphs: -100*q^0 + 6*q^1; of T_oct: 1*q^0; total with T_oct = (q-5)T_W4: -105*q^0 + 7*q^1 (= 7(q-15)? True); coefficient of T_K6-P6: -8*q^0
+[time 0s]
+2^21 TT7: A7 = 596526*q^1 + -911849*q^2 + 362505*q^3 + -50228*q^4 + 3136*q^5 + -91*q^6 + 1*q^7 (degree 7)
+   coefficient of T_W4: 12153*q^0 + -1036*q^1 + 21*q^2 (degree 2); of T_K6-P6: 1864*q^0 + -56*q^1; of T_oct: -217*q^0 + 7*q^1
+   seven-vertex dense survivors with nonzero coefficient: 38; all coefficients constant: True
+[time 0s]
