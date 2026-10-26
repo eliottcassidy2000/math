@@ -12,8 +12,25 @@ is classified exactly and excluded from the random part.  For a survivor x >= 2^
 P(x) = prod_{q <= Q} (1 - 1/q)^(-1) / ln x  (the same model that gives P(F_n prime) ~ 2/ln F_n before sieving).
 Expected count E = sum P, variance V = sum P(1-P); pre-registered window E +- 2.5 sqrt(V).
 Mode 'test': count probable primes (sympy.isprime = BPSW) among the survivors >= 2^32.
-Usage: python collatz_line_primes_20261026.py predict|test
+Post-audit of the pre-registration (L-P1 failed low): modes 'predict2'/'test2' add the algebraic factorisations that
+the small-prime sieve cannot see -- 3^j 2^b + 1 = w^r + 1 when an odd r divides gcd(j, b), 4u^4 + 1 (Aurifeuille)
+when j = 0 mod 4 and b = 2 mod 4, and 3^k 2^c - 1 = w^r - 1 when r = gcd(k, c) > 1 -- and are run on NEW ranges
+(out of sample), predicted and committed before testing.
+Usage: python collatz_line_primes_20261026.py predict|test|posthoc|predict2|test2
 """
+import math as _m
+
+
+def algebraic_composite(kind, n, j):
+    """True if the line value has an algebraic (or Aurifeuillean) factorisation with both factors > 1."""
+    if kind == 'F':
+        g = _m.gcd(j, n)                   # gcd(j, n - 2j) = gcd(j, n)
+        while g % 2 == 0:
+            g //= 2
+        if g > 1:
+            return True                    # w^r + 1, r odd
+        return j % 4 == 0 and n % 4 == 2   # 4u^4 + 1
+    return _m.gcd(j, n) > 1                # w^r - 1
 import sys, os, json, math, time
 import numpy as np
 from sympy import primerange, isprime
@@ -65,6 +82,30 @@ def sieve_family(kind, ns, primes):
     return killed
 
 
+FAMILIES2 = {
+    'fermat_type_m1201_1500': ('F', list(range(1201, 1501))),
+    'mersenne_type_p401_520': ('M', list(range(401, 521))),
+}
+
+
+def predict_family(kind, ns, primes, mertens, algebraic):
+    killed = sieve_family(kind, ns, primes)
+    E = V = 0.0
+    surv = alg = 0
+    for n in ns:
+        for j, x in line_values(kind, n):
+            if x < SMALL or j in killed[n]:
+                continue
+            if algebraic and algebraic_composite(kind, n, j):
+                alg += 1
+                continue
+            surv += 1
+            p = mertens / (x.bit_length() * math.log(2))
+            E += p
+            V += p * (1 - p)
+    return E, math.sqrt(V), surv, alg, killed
+
+
 if __name__ == '__main__':
     mode = sys.argv[1]
     primes = list(primerange(2, Q + 1))
@@ -72,6 +113,49 @@ if __name__ == '__main__':
     for q in primes:
         mertens *= 1 / (1 - 1 / q)
     pred_path = os.path.join(HERE, 'collatz_line_primes_prediction.json')
+    if mode in ('posthoc', 'predict2', 'test2'):
+        if mode == 'posthoc':
+            res = json.load(open(os.path.join(HERE, 'collatz_line_primes_result.json')))
+            out = {}
+            for name, (kind, ns) in FAMILIES.items():
+                E, sd, surv, alg, _ = predict_family(kind, ns, primes, mertens, True)
+                obs = res[name]['observed']
+                out[name] = {'E_corrected': E, 'sd': sd, 'observed': obs, 'z': (obs - E) / sd,
+                             'survivors_removed_as_algebraic': alg}
+                print(f'POST-HOC {name}: corrected E = {E:.2f} (sd {sd:.2f}); observed {obs}; z = {(obs - E) / sd:+.2f}; '
+                      f'{alg} sieve survivors removed as algebraic composites', flush=True)
+            json.dump(out, open(os.path.join(HERE, 'collatz_line_primes_posthoc.json'), 'w'), indent=1)
+        elif mode == 'predict2':
+            out = {}
+            for name, (kind, ns) in FAMILIES2.items():
+                E, sd, surv, alg, _ = predict_family(kind, ns, primes, mertens, True)
+                E0, sd0, _, _, _ = predict_family(kind, ns, primes, mertens, False)
+                out[name] = {'E_corrected': E, 'sd': sd, 'window': [E - 2.5 * sd, E + 2.5 * sd],
+                             'E_uncorrected': E0, 'survivors': surv, 'algebraic_removed': alg}
+                print(f'{name}: corrected E = {E:.2f} (sd {sd:.2f}), window [{E - 2.5 * sd:.1f}, {E + 2.5 * sd:.1f}]; '
+                      f'uncorrected {E0:.2f}', flush=True)
+            json.dump(out, open(os.path.join(HERE, 'collatz_line_primes_prediction2.json'), 'w'), indent=1)
+        else:
+            pred = json.load(open(os.path.join(HERE, 'collatz_line_primes_prediction2.json')))
+            out = {}
+            for name, (kind, ns) in FAMILIES2.items():
+                killed = sieve_family(kind, ns, primes)
+                cnt = 0
+                for n in ns:
+                    for j, x in line_values(kind, n):
+                        if x < SMALL or j in killed[n]:
+                            continue
+                        if isprime(x):
+                            assert not algebraic_composite(kind, n, j)
+                            cnt += 1
+                f = pred[name]
+                ok = f['window'][0] <= cnt <= f['window'][1]
+                out[name] = {'observed': cnt, **f, 'pass': ok}
+                print(f'{name}: observed {cnt}; corrected prediction {f["E_corrected"]:.2f}, window '
+                      f'[{f["window"][0]:.1f}, {f["window"][1]:.1f}] -> {"PASS" if ok else "FAIL"}; uncorrected '
+                      f'{f["E_uncorrected"]:.2f}', flush=True)
+            json.dump(out, open(os.path.join(HERE, 'collatz_line_primes_result2.json'), 'w'), indent=1)
+        sys.exit(0)
     if mode == 'predict':
         out = {'Q': Q, 'mertens_factor': mertens, 'families': {}}
         t0 = time.time()

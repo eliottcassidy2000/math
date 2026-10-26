@@ -1,0 +1,23 @@
+{
+ "fermat_type_m8_1200": {
+  "E_corrected": 2619.6664562453557,
+  "sd": 48.68504557732897,
+  "observed": 2548,
+  "z": -1.4720425008440043,
+  "survivors_removed_as_algebraic": 1871
+ },
+ "mersenne_type_p8_400": {
+  "E_corrected": 1019.2196396415824,
+  "sd": 29.15790222364471,
+  "observed": 1034,
+  "z": 0.5069075355644735,
+  "survivors_removed_as_algebraic": 653
+ },
+ "genuine_fermat_e3_12": {
+  "E_corrected": 22.907886679602115,
+  "sd": 4.431750794359902,
+  "observed": 17,
+  "z": -1.3330818797665307,
+  "survivors_removed_as_algebraic": 0
+ }
+}
