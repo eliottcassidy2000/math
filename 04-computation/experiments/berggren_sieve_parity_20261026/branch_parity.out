@@ -1,0 +1,6 @@
+(P1) companion determinant = (-1)^#A on 456137/456137 primitive triples with m <= 1500; companion in box: True
+(P1') continued-fraction automaton = #A on 456137/456137
+(P3) sign(a - b) = (-1)^(trailing A-run) * (+1 after D, -1 after U or at the root) on 456137/456137
+(P2) M = 1..2000: (16M+2, 4M+1) == (2,1) mod M, word A D^(M-1) U D, one middle step, triple == (3,4,5) mod M; failures 0
+    M = 7 example: (114, 29) [12155, 6612, 13837]
+(P3) A ray (m, n, a - b, (-1)^#A): [(2, 1, -1, 1), (5, 2, 1, -1), (12, 5, -1, 1), (29, 12, 1, -1), (70, 29, -1, 1), (169, 70, 1, -1), (408, 169, -1, 1), (985, 408, 1, -1)]

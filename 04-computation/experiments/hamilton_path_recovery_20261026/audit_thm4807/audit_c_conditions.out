@@ -1,0 +1,13 @@
+n = 3: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 3}; mismatches 0
+    arcs with cond1: 0; cond1 & cond3 but not cond2: 0; cond1 & cond2 but not cond3: 0
+n = 4: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 6}; mismatches 0
+    arcs with cond1: 0; cond1 & cond3 but not cond2: 0; cond1 & cond2 but not cond3: 0
+n = 5: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 57, '(True, True, False, False)': 2, '(True, True, True, True)': 1}; mismatches 0
+    arcs with cond1: 3; cond1 & cond3 but not cond2: 0; cond1 & cond2 but not cond3: 2
+n = 6: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 491, '(True, False, False, False)': 2, '(True, False, True, False)': 1, '(True, True, False, False)': 29, '(True, True, True, True)': 2}; mismatches 0
+    arcs with cond1: 34; cond1 & cond3 but not cond2: 1; cond1 & cond2 but not cond3: 29
+n = 7: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 6986, '(True, False, False, False)': 35, '(True, False, True, False)': 5, '(True, True, False, False)': 376, '(True, True, True, True)': 11}; mismatches 0
+    arcs with cond1: 427; cond1 & cond3 but not cond2: 5; cond1 & cond2 but not cond3: 376
+n = 8: (cond1, cond2, cond3, untraced) -> arcs: {'(False, None, None, False)': 161343, '(True, False, False, False)': 499, '(True, False, True, False)': 35, '(True, True, False, False)': 6308, '(True, True, True, True)': 39}; mismatches 0
+    arcs with cond1: 6881; cond1 & cond3 but not cond2: 35; cond1 & cond2 but not cond3: 6308
+python3 -B audit_c_conditions.py  3.23s user 0.02s system 98% cpu 3.295 total

@@ -1,0 +1,39 @@
+(W1) traced core D(T) versus HP(T), all labelled tournaments
+    n = 1: 1 tournaments, 1 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+    n = 2: 2 tournaments, 2 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+    n = 3: 8 tournaments, 8 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+    n = 4: 64 tournaments, 64 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+    n = 5: 1024 tournaments, 1024 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+    n = 6: 32768 tournaments, 32768 distinct trace supports D(T), colliding supports 0, HP(D(T)) != HP(T) in 0 cases
+(W2) new cycles created by reversing an untraced arc u->v (classes n = 5..8)
+    n = 5: (new Hamiltonian cycles, new 3-cycles) over untraced arcs of strong classes: {(1, 2): 1}
+    n = 6: (new Hamiltonian cycles, new 3-cycles) over untraced arcs of strong classes: {(1, 3): 2}
+    example n = 7: gentourng string 110111110011111111110, untraced arc 3->5: reversing it creates 3 new Hamiltonian cycles and 3 new 3-cycles
+    example n = 7: gentourng string 111101101111111111101, untraced arc 0->4: reversing it creates 3 new Hamiltonian cycles and 4 new 3-cycles
+    n = 7: (new Hamiltonian cycles, new 3-cycles) over untraced arcs of strong classes: {(1, 3): 2, (1, 4): 3, (3, 3): 3, (3, 4): 3}
+    n = 8: (new Hamiltonian cycles, new 3-cycles) over untraced arcs of strong classes: {(1, 3): 4, (1, 4): 6, (1, 5): 4, (2, 4): 2, (3, 4): 6, (3, 5): 8, (5, 4): 3, (5, 5): 6}
+(W3) strong classes that have a cut vertex but no untraced arc
+    n = 3: strong classes with a cut vertex 1, of which without an untraced arc 1
+    n = 4: strong classes with a cut vertex 1, of which without an untraced arc 1
+    n = 5: strong classes with a cut vertex 5, of which without an untraced arc 4
+    n = 6: strong classes with a cut vertex 30, of which without an untraced arc 28
+    n = 7: strong classes with a cut vertex 267, of which without an untraced arc 258
+    n = 8: strong classes with a cut vertex 3633, of which without an untraced arc 3600
+(W4) case gamma at n = 3: T transitive 0->1->2 (and 0->2), T' = T with 0->2 reversed
+    components [[0], [1], [2]]; i = 1, j = 3 = k; word Q_2 [Q_3 ending at 2] [Q_1 starting at 0] = (1, 2, 0): legal in T' True, legal in T False; skipping arcs used: none
+(W5) arcs of strong classes
+    n = 1: strong classes 1, arcs 0, cumulative 0
+    n = 2: strong classes 0, arcs 0, cumulative 0
+    n = 3: strong classes 1, arcs 3, cumulative 3
+    n = 4: strong classes 1, arcs 6, cumulative 9
+    n = 5: strong classes 6, arcs 60, cumulative 69
+    n = 6: strong classes 35, arcs 525, cumulative 594
+    n = 7: strong classes 353, arcs 7413, cumulative 8007
+    n = 8: strong classes 6008, arcs 168224, cumulative 176231
+    n = 9: strong classes 178133, arcs 6412788, cumulative 6589019
+(W6) the n = 5 strong class with an untraced arc
+    gentourng string 1101111101; out-neighbourhoods [[1, 2, 4], [2, 3, 4], [3], [0, 4], [2]]; H = 9
+    untraced arc 0->2; T-u components [[1], [2, 3, 4]]; T-v components [[0, 1, 3], [4]]
+    Hamilton words from 0 to 2: [(0, 1, 3, 4, 2)]; from 2 to 0: []
+    all Hamilton words: [(0, 1, 2, 3, 4), (0, 1, 3, 4, 2), (0, 1, 4, 2, 3), (1, 2, 3, 0, 4), (1, 3, 0, 4, 2), (1, 4, 2, 3, 0), (2, 3, 0, 1, 4), (3, 0, 1, 4, 2), (4, 2, 3, 0, 1)]
+python3 -B audit_examples.py  9.03s user 0.06s system 98% cpu 9.225 total

@@ -1,0 +1,46 @@
+q=3  B: mult(x-1)=0 mult(x+1)=1 mult(x-3)=1 other-degree=1 maxdev=0.e-38 | B_chi: mult(x-1)=3 mult(x+1)=1 other-degree=0 maxdev=0.e-38
+q=5  B: mult(x-1)=0 mult(x+1)=1 mult(x-3)=1 other-degree=2 maxdev=0.e-38 | B_chi: mult(x-1)=3 mult(x+1)=1 other-degree=1 maxdev=0.e-38
+q=7  B: mult(x-1)=1 mult(x+1)=2 mult(x-3)=1 other-degree=2 maxdev=0.e-38 | B_chi: mult(x-1)=4 mult(x+1)=2 other-degree=1 maxdev=0.e-38
+q=11  B: mult(x-1)=2 mult(x+1)=3 mult(x-3)=1 other-degree=2 maxdev=0.e-38 | B_chi: mult(x-1)=5 mult(x+1)=3 other-degree=2 maxdev=0.e-38
+q=13  B: mult(x-1)=2 mult(x+1)=3 mult(x-3)=1 other-degree=2 maxdev=0.e-38 | B_chi: mult(x-1)=5 mult(x+1)=3 other-degree=2 maxdev=0.e-38
+q=17  B: mult(x-1)=3 mult(x+1)=4 mult(x-3)=1 other-degree=4 maxdev=5.88 e-39 | B_chi: mult(x-1)=6 mult(x+1)=4 other-degree=3 maxdev=5.88 e-39
+q=19  B: mult(x-1)=4 mult(x+1)=5 mult(x-3)=1 other-degree=3 maxdev=5.88 e-39 | B_chi: mult(x-1)=7 mult(x+1)=5 other-degree=2 maxdev=0.e-38
+q=23  B: mult(x-1)=5 mult(x+1)=6 mult(x-3)=1 other-degree=5 maxdev=5.88 e-39 | B_chi: mult(x-1)=8 mult(x+1)=6 other-degree=3 maxdev=5.88 e-39
+q=29  B: mult(x-1)=6 mult(x+1)=7 mult(x-3)=1 other-degree=5 maxdev=5.88 e-39 | B_chi: mult(x-1)=9 mult(x+1)=7 other-degree=5 maxdev=5.88 e-39
+q=31  B: mult(x-1)=7 mult(x+1)=8 mult(x-3)=1 other-degree=4 maxdev=5.88 e-39 | B_chi: mult(x-1)=10 mult(x+1)=8 other-degree=4 maxdev=5.88 e-39
+q=37  B: mult(x-1)=8 mult(x+1)=9 mult(x-3)=1 other-degree=3 maxdev=5.88 e-39 | B_chi: mult(x-1)=11 mult(x+1)=9 other-degree=2 maxdev=5.88 e-39
+q=41  B: mult(x-1)=9 mult(x+1)=10 mult(x-3)=1 other-degree=5 maxdev=5.88 e-39 | B_chi: mult(x-1)=12 mult(x+1)=10 other-degree=5 maxdev=5.88 e-39
+q=43  B: mult(x-1)=10 mult(x+1)=11 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=13 mult(x+1)=11 other-degree=2 maxdev=5.88 e-39
+q=47  B: mult(x-1)=11 mult(x+1)=12 mult(x-3)=1 other-degree=5 maxdev=5.88 e-39 | B_chi: mult(x-1)=14 mult(x+1)=12 other-degree=2 maxdev=5.88 e-39
+q=53  B: mult(x-1)=12 mult(x+1)=13 mult(x-3)=1 other-degree=3 maxdev=5.88 e-39 | B_chi: mult(x-1)=15 mult(x+1)=13 other-degree=3 maxdev=1.18 e-38
+q=59  B: mult(x-1)=14 mult(x+1)=15 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=17 mult(x+1)=15 other-degree=5 maxdev=5.88 e-39
+q=61  B: mult(x-1)=14 mult(x+1)=15 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=17 mult(x+1)=15 other-degree=4 maxdev=5.88 e-39
+q=67  B: mult(x-1)=16 mult(x+1)=17 mult(x-3)=1 other-degree=3 maxdev=5.88 e-39 | B_chi: mult(x-1)=19 mult(x+1)=17 other-degree=2 maxdev=5.88 e-39
+q=71  B: mult(x-1)=17 mult(x+1)=18 mult(x-3)=1 other-degree=3 maxdev=5.88 e-39 | B_chi: mult(x-1)=20 mult(x+1)=18 other-degree=2 maxdev=5.88 e-39
+q=73  B: mult(x-1)=17 mult(x+1)=18 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=20 mult(x+1)=18 other-degree=2 maxdev=1.18 e-38
+q=79  B: mult(x-1)=19 mult(x+1)=20 mult(x-3)=1 other-degree=4 maxdev=5.88 e-39 | B_chi: mult(x-1)=22 mult(x+1)=20 other-degree=5 maxdev=5.88 e-39
+q=83  B: mult(x-1)=20 mult(x+1)=21 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=23 mult(x+1)=21 other-degree=3 maxdev=5.88 e-39
+q=89  B: mult(x-1)=21 mult(x+1)=22 mult(x-3)=1 other-degree=3 maxdev=1.18 e-38 | B_chi: mult(x-1)=24 mult(x+1)=22 other-degree=3 maxdev=5.88 e-39
+q=97  B: mult(x-1)=23 mult(x+1)=24 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=26 mult(x+1)=24 other-degree=2 maxdev=1.18 e-38
+q=101  B: mult(x-1)=24 mult(x+1)=25 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=27 mult(x+1)=25 other-degree=2 maxdev=5.88 e-39
+q=103  B: mult(x-1)=25 mult(x+1)=26 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=28 mult(x+1)=26 other-degree=4 maxdev=5.88 e-39
+q=107  B: mult(x-1)=26 mult(x+1)=27 mult(x-3)=1 other-degree=3 maxdev=1.18 e-38 | B_chi: mult(x-1)=29 mult(x+1)=27 other-degree=2 maxdev=5.88 e-39
+q=109  B: mult(x-1)=26 mult(x+1)=27 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=29 mult(x+1)=27 other-degree=2 maxdev=5.88 e-39
+q=113  B: mult(x-1)=27 mult(x+1)=28 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=30 mult(x+1)=28 other-degree=2 maxdev=1.18 e-38
+q=127  B: mult(x-1)=31 mult(x+1)=32 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=34 mult(x+1)=32 other-degree=2 maxdev=5.88 e-39
+q=131  B: mult(x-1)=32 mult(x+1)=33 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=35 mult(x+1)=33 other-degree=2 maxdev=1.18 e-38
+q=137  B: mult(x-1)=33 mult(x+1)=34 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=36 mult(x+1)=34 other-degree=2 maxdev=5.88 e-39
+q=139  B: mult(x-1)=34 mult(x+1)=35 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=37 mult(x+1)=35 other-degree=3 maxdev=1.18 e-38
+q=149  B: mult(x-1)=36 mult(x+1)=37 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=39 mult(x+1)=37 other-degree=3 maxdev=1.18 e-38
+q=151  B: mult(x-1)=37 mult(x+1)=38 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=40 mult(x+1)=38 other-degree=2 maxdev=1.18 e-38
+q=157  B: mult(x-1)=38 mult(x+1)=39 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=41 mult(x+1)=39 other-degree=2 maxdev=1.18 e-38
+q=163  B: mult(x-1)=40 mult(x+1)=41 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=43 mult(x+1)=41 other-degree=3 maxdev=1.18 e-38
+q=167  B: mult(x-1)=41 mult(x+1)=42 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=44 mult(x+1)=42 other-degree=2 maxdev=5.88 e-39
+q=173  B: mult(x-1)=42 mult(x+1)=43 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=45 mult(x+1)=43 other-degree=2 maxdev=5.88 e-39
+q=179  B: mult(x-1)=44 mult(x+1)=45 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=47 mult(x+1)=45 other-degree=2 maxdev=5.88 e-39
+q=181  B: mult(x-1)=44 mult(x+1)=45 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=47 mult(x+1)=45 other-degree=2 maxdev=5.88 e-39
+q=191  B: mult(x-1)=47 mult(x+1)=48 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=50 mult(x+1)=48 other-degree=2 maxdev=5.88 e-39
+q=193  B: mult(x-1)=47 mult(x+1)=48 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=50 mult(x+1)=48 other-degree=2 maxdev=5.88 e-39
+q=197  B: mult(x-1)=48 mult(x+1)=49 mult(x-3)=1 other-degree=2 maxdev=5.88 e-39 | B_chi: mult(x-1)=51 mult(x+1)=49 other-degree=2 maxdev=5.88 e-39
+q=199  B: mult(x-1)=49 mult(x+1)=50 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=52 mult(x+1)=50 other-degree=2 maxdev=5.88 e-39
+q=211  B: mult(x-1)=52 mult(x+1)=53 mult(x-3)=1 other-degree=2 maxdev=1.18 e-38 | B_chi: mult(x-1)=55 mult(x+1)=53 other-degree=2 maxdev=1.18 e-38

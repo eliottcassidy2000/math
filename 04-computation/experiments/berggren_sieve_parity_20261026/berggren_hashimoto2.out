@@ -1,0 +1,11 @@
+q=5: vertices 3, A symmetric True, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.0000 (2 sqrt3 = 3.4641)
+q=7: vertices 3, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.0000 (2 sqrt3 = 3.4641)
+q=11: vertices 4, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 3.3723 (2 sqrt3 = 3.4641)
+q=13: vertices 5, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.4495 (2 sqrt3 = 3.4641)
+q=17: vertices 6, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.5616 (2 sqrt3 = 3.4641)
+q=19: vertices 6, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.7913 (2 sqrt3 = 3.4641)
+q=23: vertices 7, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.7321 (2 sqrt3 = 3.4641)
+q=29: vertices 9, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 3.0000 (2 sqrt3 = 3.4641)
+q=31: vertices 9, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 2.8951 (2 sqrt3 = 3.4641)
+q=37: vertices 11, A symmetric False, (K1) True, (K2) B == NB True, (K3) Ihara roots found True, max nontrivial |mu| = 3.1405 (2 sqrt3 = 3.4641)
+all primes 5 <= q < 120: K1, K2 and Ramanujan hold: True; worst max|mu| / 2sqrt3 = 0.9976

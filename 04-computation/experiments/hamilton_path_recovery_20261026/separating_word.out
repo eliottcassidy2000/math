@@ -1,0 +1,8 @@
+labelled n = 2: 2 ordered pairs, cases {'alpha': 2}, failures 0
+labelled n = 3: 56 ordered pairs, cases {'alpha': 50, 'gamma': 6}, failures 0
+labelled n = 4: 4032 ordered pairs, cases {'alpha': 3864, 'gamma': 168}, failures 0
+labelled n = 5: 1047552 ordered pairs, cases {'alpha': 1039272, 'gamma': 8160, 'beta': 120}, failures 0
+random n = 6: 3000 pairs, cases {'alpha': 1478, 'gamma': 1270, 'beta': 252}, failures 0
+random n = 7: 3000 pairs, cases {'gamma': 1046, 'alpha': 1723, 'beta': 231}, failures 0
+random n = 8: 800 pairs, cases {'alpha': 554, 'gamma': 207, 'beta': 39}, failures 0
+random n = 9: 800 pairs, cases {'gamma': 175, 'alpha': 593, 'beta': 32}, failures 0

@@ -1,0 +1,14 @@
+n = 9: tournaments read 191536, strong 178133, untraced arcs in strong 200 (in 167 strong)
+    cut positions = component boundaries: 191536/191536
+    decoders exact: endpoint 191536, two-step G1 191536, deleted-reachability G4 191536, all agree 191536
+    (c) exact on 6412788/6412788 arcs of strong tournaments; (b) flip sets 512; untraced intra-block pairs 336
+    two-step (true,false): (2,1):30 (3,0):5 (3,1):50 (4,0):9 (4,1):73 (5,0):12 (5,1):84 (6,1):73
+    G4 eligible separators per pair: 1:310 2:25 3:1
+    k=#comp(T-u): 2:122 3:40 4:26 5:4 6:8
+    |C_k|: 3:42 4:9 5:21 6:20 7:108
+    |C'_1|: 3:42 4:9 5:21 6:20 7:108
+    #Hamilton paths u->v: 1:40 2:14 3:52 4:6 5:20 9:40 11:7 13:10 15:11
+    d+(u)-d+(v): 3:14 4:36 5:64 6:86
+    strong classes by number of untraced arcs: 0:177966 1:152 3:14 6:1  (Busch Thm 4.26 bound floor((n^2-4n+3)/8) = 6)
+    FAILURES: 0
+( gentourng -q 9 | $BIN 9; )  1.10s user 0.01s system 102% cpu 1.074 total

@@ -1,0 +1,14 @@
+n = 9: cases 1000, untraced arcs 243, untraced pairs 243, (c) arcs 13456, flip sets 1599; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 334/334
+    two-step (true,false): {(2, 1): 97, (3, 0): 26, (3, 1): 15, (4, 0): 10, (4, 1): 55, (5, 0): 19, (5, 1): 11, (6, 1): 10}
+n = 10: cases 1000, untraced arcs 401, untraced pairs 401, (c) arcs 16557, flip sets 2663; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 334/334
+    two-step (true,false): {(2, 1): 152, (3, 0): 28, (3, 1): 31, (4, 0): 23, (4, 1): 51, (5, 0): 27, (5, 1): 41, (6, 0): 23, (6, 1): 13, (7, 1): 12}
+n = 11: cases 1000, untraced arcs 505, untraced pairs 505, (c) arcs 20483, flip sets 2815; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 334/334
+    two-step (true,false): {(2, 1): 140, (3, 0): 25, (3, 1): 36, (4, 0): 13, (4, 1): 70, (5, 0): 34, (5, 1): 70, (6, 0): 34, (6, 1): 39, (7, 0): 14, (7, 1): 21, (8, 1): 9}
+n = 12: cases 1000, untraced arcs 758, untraced pairs 758, (c) arcs 25222, flip sets 6683; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 0/0
+    two-step (true,false): {(2, 1): 162, (3, 0): 21, (3, 1): 55, (4, 0): 17, (4, 1): 102, (5, 0): 63, (5, 1): 109, (6, 0): 68, (6, 1): 48, (7, 0): 39, (7, 1): 45, (8, 0): 13, (8, 1): 12, (9, 1): 4}
+n = 13: cases 1000, untraced arcs 924, untraced pairs 924, (c) arcs 30377, flip sets 7932; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 0/0
+    two-step (true,false): {(2, 1): 186, (3, 0): 25, (3, 1): 46, (4, 0): 20, (4, 1): 117, (5, 0): 48, (5, 1): 128, (6, 0): 72, (6, 1): 75, (7, 0): 57, (7, 1): 47, (8, 0): 34, (8, 1): 36, (9, 0): 17, (9, 1): 14, (10, 1): 2}
+n = 14: cases 1000, untraced arcs 1260, untraced pairs 1260, (c) arcs 37796, flip sets 11880; decoders exact: endpoint(DP) 1000, G1 1000, G4 1000, endpoint(words) 0/0
+    two-step (true,false): {(2, 1): 193, (3, 0): 35, (3, 1): 60, (4, 0): 19, (4, 1): 162, (5, 0): 51, (5, 1): 163, (6, 0): 84, (6, 1): 109, (7, 0): 72, (7, 1): 82, (8, 0): 88, (8, 1): 54, (9, 0): 41, (9, 1): 25, (10, 0): 11, (10, 1): 9, (11, 1): 2}
+FAILURES: none
+python3 -B audit_stress.py 1000 20261026  86.81s user 0.14s system 99% cpu 1:27.28 total

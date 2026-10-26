@@ -1,0 +1,22 @@
+labelled n = 1: 0 ordered pairs, cases {}, failures 0
+    gamma alternatives: smallest head index fails 0/0, largest tail index fails 0/0
+labelled n = 2: 2 ordered pairs, cases {'alpha': 2}, failures 0
+    gamma alternatives: smallest head index fails 0/0, largest tail index fails 0/0
+labelled n = 3: 56 ordered pairs, cases {'alpha': 50, 'gamma': 6}, failures 0
+    gamma alternatives: smallest head index fails 0/6, largest tail index fails 0/6
+labelled n = 4: 4032 ordered pairs, cases {'alpha': 3864, 'gamma': 168}, failures 0
+    gamma alternatives: smallest head index fails 48/168, largest tail index fails 48/168
+    first smallest_head_example: (4, [0, 1, 3, 7], [8, 9, 3, 4], [2, 1, 3, 0])
+    first largest_tail_example: (4, [0, 1, 3, 7], [4, 9, 2, 5], [3, 1, 0, 2])
+labelled n = 5: 1047552 ordered pairs, cases {'alpha': 1039272, 'beta': 120, 'gamma': 8160}, failures 0
+    gamma alternatives: smallest head index fails 3120/8160, largest tail index fails 3360/8160
+    first smallest_head_example: (5, [0, 1, 3, 7, 15], [8, 9, 3, 4, 15], [4, 2, 1, 3, 0])
+    first largest_tail_example: (5, [0, 1, 3, 7, 15], [4, 9, 2, 5, 15], [4, 3, 1, 0, 2])
+random n = 6: 1500 pairs, cases {'alpha': 597, 'beta': 597, 'gamma': 306}, failures 0; gamma alternatives: smallest head fails 65/306, largest tail fails 51/306
+random n = 7: 1500 pairs, cases {'alpha': 541, 'beta': 554, 'gamma': 405}, failures 0; gamma alternatives: smallest head fails 62/405, largest tail fails 55/405
+random n = 8: 1500 pairs, cases {'alpha': 600, 'beta': 541, 'gamma': 359}, failures 0; gamma alternatives: smallest head fails 104/359, largest tail fails 74/359
+random n = 9: 1500 pairs, cases {'alpha': 565, 'beta': 531, 'gamma': 404}, failures 0; gamma alternatives: smallest head fails 84/404, largest tail fails 85/404
+random n = 10: 1500 pairs, cases {'alpha': 555, 'beta': 513, 'gamma': 432}, failures 0; gamma alternatives: smallest head fails 99/432, largest tail fails 107/432
+random n = 11: 500 pairs, cases {'alpha': 175, 'beta': 149, 'gamma': 176}, failures 0; gamma alternatives: smallest head fails 34/176, largest tail fails 40/176
+random n = 12: 500 pairs, cases {'alpha': 187, 'beta': 144, 'gamma': 169}, failures 0; gamma alternatives: smallest head fails 43/169, largest tail fails 43/169
+python3 -B audit_sepword.py 5 1500 4807  33.32s user 0.56s system 95% cpu 35.563 total

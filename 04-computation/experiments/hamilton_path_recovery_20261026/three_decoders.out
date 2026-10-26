@@ -1,0 +1,12 @@
+n = 3: classes 2; decoded exactly E 2, C 2, R 2; ambiguous 0
+    untraced pairs: (max, min) two-step counts {}; eligible separators z per pair {}
+n = 4: classes 4; decoded exactly E 4, C 4, R 4; ambiguous 0
+    untraced pairs: (max, min) two-step counts {}; eligible separators z per pair {}
+n = 5: classes 12; decoded exactly E 12, C 12, R 12; ambiguous 0
+    untraced pairs: (max, min) two-step counts {(2, 1): 1}; eligible separators z per pair {1: 1}
+n = 6: classes 56; decoded exactly E 56, C 56, R 56; ambiguous 0
+    untraced pairs: (max, min) two-step counts {(2, 1): 2, (3, 1): 2}; eligible separators z per pair {1: 4}
+n = 7: classes 456; decoded exactly E 456, C 456, R 456; ambiguous 0
+    untraced pairs: (max, min) two-step counts {(2, 1): 5, (3, 0): 1, (3, 1): 6, (4, 1): 6}; eligible separators z per pair {1: 17, 2: 1}
+n = 8: classes 6880; decoded exactly E 6880, C 6880, R 6880; ambiguous 0
+    untraced pairs: (max, min) two-step counts {(2, 1): 12, (3, 0): 2, (3, 1): 16, (4, 0): 3, (4, 1): 22, (5, 1): 18}; eligible separators z per pair {1: 68, 2: 5}

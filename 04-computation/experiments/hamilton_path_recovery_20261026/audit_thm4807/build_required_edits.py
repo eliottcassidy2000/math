@@ -1,0 +1,185 @@
+"""Builds required_edits.json (exact-string replacements for THM-4807) and validates it:
+every "old" occurs exactly once in the current file, the olds do not overlap, and applying
+all edits in order succeeds.  The patched text is written to the path given as argv[1]
+(default: no output) for review; the theorem file itself is never modified.
+"""
+
+import json
+import os
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, "..", "..", "..", ".."))
+REL = ("01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-"
+       "reconstruction-endpoint-decoder-one-guard-separation.md")
+PATH = os.path.join(ROOT, REL)
+
+EDITS = [
+    # ---- MAJOR: the traced core does determine T --------------------------------------------
+    (
+        "The decoder reads three things, all from `𝓗`: the traced arcs, the cut positions, and the block endpoint pairs. Neither\n"
+        "half suffices alone:\n"
+        "- the traced core forgets the orientation of untraced pairs;\n"
+        "- the endpoint relation alone collides from `n = 4`. There are 44 distinct endpoint relations among 64 labelled\n"
+        "  4-tournaments, and 15,343 among 32,768 at `n = 6`.",
+        "The decoder reads three things, all from `𝓗`: the traced arcs, the cut positions, and the block endpoint pairs. The\n"
+        "two halves differ:\n"
+        "- the traced core `D` (the set of traced arcs) does not display the orientation of an untraced pair, but it loses no\n"
+        "  information: `D ⊆ T` and every word of `𝓗` uses only traced arcs, so `HP(D) = HP(T)` (Session70 G1). By (d), the\n"
+        "  traced core alone therefore determines `T`. Reading the untraced orientations off `D` needs a non-local rule: this\n"
+        "  decoder applied to `HP(D)`, the two-step count of G1, or the deleted-vertex reachability of Session70 G4;\n"
+        "- the endpoint relation `{(first letter, last letter)}` alone does not determine `T`: it collides from `n = 4`, and\n"
+        "  never for `n ≤ 3`. There are 44 distinct endpoint relations among 64 labelled 4-tournaments, 614 among 1,024 at\n"
+        "  `n = 5`, and 15,343 among 32,768 at `n = 6`.",
+    ),
+    # ---- minor: "exactly one new cycle" is false ------------------------------------------------
+    (
+        "**Mechanism.** The arc hidden from every legal word is the shortcut of a legal word from its tail to its head. Reversing\n"
+        "it creates exactly one new cycle, through every vertex.",
+        "**Mechanism.** The arc hidden from every legal word is the shortcut of a legal word from its tail to its head. Reversing\n"
+        "`u → v` alone turns every Hamilton path of `T` from `u` to `v` into a new Hamiltonian cycle through `v → u`. These are\n"
+        "all the new Hamiltonian cycles, and there can be several: 1, 2, 3 or 5 of them for `n ≤ 8`, and up to 45 at `n = 10`.\n"
+        "Shorter new cycles appear too, for instance a 3-cycle `v → u → w → v` for every `w` with `u → w → v` (2 to 5 of them\n"
+        "for `n ≤ 8`).",
+    ),
+    # ---- minor: expository gap in the sufficiency proof of (c) ----------------------------------
+    (
+        "That last vertex lies either in `C_(k−1)`, which `u` dominates, or in `C_k`. In the second case the part of `A` inside\n"
+        "`C_k` and the path `vB` form a forbidden partition. ∎",
+        "Because `A` is a path of `T − u` and every arc between components points forward, `A` meets the components in\n"
+        "nondecreasing order. So that last vertex lies in the last component `A` meets, which is `C_(k−1)` (dominated by `u`)\n"
+        "or `C_k`. In the second case the part of `A` inside `C_k` is a final segment of `A`: a nonempty path ending at an\n"
+        "in-neighbour of `u`. With `vB` it forms a forbidden partition. ∎",
+    ),
+    # ---- minor: the 6,412,788 count is n = 9 alone; Lemma 4.13 wording --------------------------
+    (
+        "This characterisation is exact on all 6,412,788 arcs of strong classes with `n ≤ 9`. Busch's Lemma 4.13 states the same\n"
+        "type of condition for the separating vertex `z` of his Theorem 4.12, whose components carry four or more blocks. Here\n"
+        "the deleted vertex is the tail itself.",
+        "This characterisation is exact on every arc of every strong class with `n ≤ 9`: 6,412,788 arcs at `n = 9` alone\n"
+        "(178,133 classes, 36 arcs each), and 6,589,019 arcs for `n ≤ 9` in total. The independent audit re-checked it on all\n"
+        "421,017,705 arcs of the strong classes at `n = 10`. None of the three conditions is redundant: at `n = 8`, 35 arcs\n"
+        "fail only the second and 6,308 fail only the third. Busch's Lemma 4.13 states the same type of condition for the\n"
+        "separating vertex `z` of his Theorem 4.12, for which `T − z` has four or more strong components. Here the deleted\n"
+        "vertex is the tail itself.",
+    ),
+    # ---- minor: at most two skipping arcs; both extremal choices are needed ---------------------
+    (
+        "  - It uses `v → u` together with exactly two possibly-skipping arcs:",
+        "  - It uses `v → u` together with at most two possibly-skipping arcs (the first is absent when `i = 1`, the second\n"
+        "    when `j = k`):",
+    ),
+    (
+        "  - So the word is legal in `T'` and illegal in `T`.\n",
+        "  - So the word is legal in `T'` and illegal in `T`.\n"
+        "  - Both extremal choices are needed. Taking the smallest head index instead fails for 3,120 of the 8,160 case-(γ)\n"
+        "    ordered pairs at `n = 5`, and taking the largest tail index fails for 3,360.\n",
+    ),
+    # ---- minor: C5 count convention ---------------------------------------------------------------
+    (
+        "protocol has `2^((n−1)(n−2)/2)` states, at every `n`. ∎",
+        "protocol has `2^((n−1)(n−2)/2)` states, at every `n`. These are valid presentation states, as in C5; an absorbing\n"
+        "failure state, if counted, adds one (guard_reconstruction G2). ∎",
+    ),
+    # ---- minor: min <= 1 is true but rests on Busch Thm 4.7 / BJR, not on (a)-(e) ----------------
+    (
+        "through `n = 8`. The minimum is never above 1: `v` reaches `u` only through a cut vertex.",
+        "through `n = 8`, and the maximum is always the true direction. The minimum is never above 1, at every order, but\n"
+        "this needs more than (a)–(e). Two routes `v → w → u` would be two internally disjoint paths from `v` to `u`, and\n"
+        "Busch's Theorem 4.7 would then put `u → v` on a Hamilton path. Equivalently, BJR's separator `z` lies on every path\n"
+        "from `v` to `u`; this is G1's argument. The audit found the minimum at most 1 on every untraced pair of every class\n"
+        "with `n ≤ 9`, and of every strong class with `n = 10`.",
+    ),
+    # ---- minor: attribution of the concurrent proofs (third route; single-guard remark) ---------
+    (
+        "- **Concurrent proofs.** The reconstruction (d) itself is proved concurrently, relative to the Busch–Jacobson–Reid\n"
+        "  four-block structure theorem, in guard_reconstruction_20261026 G1 and in Session70's guard report G4/G5.",
+        "- **Concurrent proofs.** The reconstruction (d) itself is proved concurrently, relative to the Busch–Jacobson–Reid\n"
+        "  four-block structure theorem (Busch's thesis Theorem 4.12), in three places: guard_reconstruction_20261026 G1,\n"
+        "  Session70's guard report G4/G5, and growing_sieve_path_20261026 paths P1–P4, integrated with the other two in\n"
+        "  sieve_path_merge_20261026. All three recover `T` from the traced core alone. Each already notes that one named\n"
+        "  guard separates two distinct states, which is immediate from injectivity. What is new here is the explicit\n"
+        "  construction of that guard.",
+    ),
+    (
+        "  guard_reconstruction_20261026 (G1-G3, two-step-count decoder) and by Session70 (session70-guards G1-G5,\n"
+        "  deleted-vertex reachability decoder). This theorem removes that dependency and adds (b), (c), (e) and the explicit\n"
+        "  separating word.",
+        "  guard_reconstruction_20261026 (G1-G3, two-step-count decoder), by Session70 (session70-guards G1-G5,\n"
+        "  deleted-vertex reachability decoder) and by growing_sieve_path_20261026 (paths P1-P4, deleted-vertex reachability\n"
+        "  on the used-arc union; merged in sieve_path_merge_20261026). This theorem removes that dependency and adds (b),\n"
+        "  (c), (e) and the explicit separating word.",
+    ),
+    (
+        "  - 05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md            # C5: the question\n",
+        "  - 05-knowledge/results/growing_sieve_path_20261026/paths/RESULT.md                   # P1-P4, concurrent, relative to Busch Thm 4.12\n"
+        "  - 05-knowledge/results/sieve_path_merge_20261026/README.md                           # integrates the three concurrent proofs\n"
+        "  - 05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md            # C5: the question\n",
+    ),
+    # ---- minor: the 7/21 connection; "exactly the places" overstates ------------------------------
+    (
+        "- **Connection to 7 and 21.** The same ordered-join factorisation is the multiplicativity `H(T) = ∏ H(C_i)` that drives\n"
+        "  THM-1370 (H never equals 7 or 21). Reconstruction reads the factorisation off the cut positions. The untraced arcs are\n"
+        "  exactly the places where a strong block is \"one vertex away\" from such a factorisation. HYP-9418 (1) records the\n"
+        "  quantitative version that remains open.",
+        "- **Connection to 7 and 21.** The same ordered-join factorisation gives the multiplicativity `H(T) = ∏ H(C_i)`, which\n"
+        "  is step (1) of THM-1370 (H never equals 7 or 21). That step reduces 7 and 21 to strong components; the exclusion\n"
+        "  itself comes from the strong floor (Moon's theorem and the exhaustive small spectra). Reconstruction reads the\n"
+        "  factorisation off the cut positions. Untraced arcs occur only where a strong block is \"one vertex away\" from such\n"
+        "  a factorisation: by (a), both ends are cut vertices. The converse fails. The strong 4-tournament has cut vertices\n"
+        "  but no untraced arc, and 3,600 of the 3,633 strong 8-classes with a cut vertex have no untraced arc. HYP-9418 (1)\n"
+        "  records the quantitative version that remains open.",
+    ),
+    # ---- minor: conventions made self-contained --------------------------------------------------
+    (
+        "  `T[C]`. For a singleton this is trivial. Otherwise, cut the Hamiltonian cycle.",
+        "  `T[C]`. For a singleton this is trivial. Otherwise `|C| ≥ 3`, since no 2-vertex tournament is strong, so `T[C]` has\n"
+        "  a Hamiltonian cycle; cut it.",
+    ),
+    (
+        "  `Q_i` of the components, and every such concatenation is a Hamilton path. Hence:",
+        "  `Q_i` of the components, and every such concatenation is a Hamilton path. A path never returns to a component it\n"
+        "  has left, since every cross arc points forward, so to cover every vertex it runs through `C_1, …, C_k` contiguously\n"
+        "  and in order. Conversely, the last vertex of `Q_i` beats the first vertex of `Q_(i+1)`. Hence:",
+    ),
+    # ---- minor: the extremal count of untraced arcs is known (Busch Thm 4.26) ----------------
+    (
+        "- the number of untraced arcs (`1, 2, 11, 39, 200` in strong classes, `n = 5..9`);",
+        "- the number of untraced arcs (`1, 2, 11, 39, 200` in strong classes, `n = 5..9`; `1,207` at `n = 10`, audit). The\n"
+        "  maximum per strong `n`-tournament is already known: at most `(n² − 4n + 3)/8`, attained at odd `n` by Busch's\n"
+        "  `T_max` (Busch's thesis, Theorem 4.26; Busch–Jacobson, JCMCC 63 (2007)). The census maxima are 1, 1, 3, 3, 6, 6\n"
+        "  for `n = 5..10`;",
+    ),
+]
+
+
+def main():
+    text = open(PATH, encoding="utf-8").read()
+    spans = []
+    for old, new in EDITS:
+        c = text.count(old)
+        if c != 1:
+            raise SystemExit(f"old string occurs {c} times: {old[:80]!r}")
+        i = text.index(old)
+        spans.append((i, i + len(old)))
+    spans.sort()
+    for (a, b), (c, d) in zip(spans, spans[1:]):
+        if c < b:
+            raise SystemExit("overlapping edits")
+    patched = text
+    for old, new in EDITS:
+        if patched.count(old) != 1:
+            raise SystemExit("edit no longer unique after earlier edits")
+        patched = patched.replace(old, new, 1)
+    data = [{"file": REL, "old": old, "new": new} for old, new in EDITS]
+    with open(os.path.join(HERE, "required_edits.json"), "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    if len(sys.argv) > 1:
+        with open(sys.argv[1], "w", encoding="utf-8") as f:
+            f.write(patched)
+    print(f"{len(EDITS)} edits validated against {REL} ({len(text)} chars -> {len(patched)} chars)")
+
+
+if __name__ == "__main__":
+    main()

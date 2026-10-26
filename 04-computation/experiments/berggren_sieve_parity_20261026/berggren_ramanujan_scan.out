@@ -1,0 +1,2 @@
+primes 5 <= q < 1000: Ramanujan bound 2 sqrt 3 exceeded at 5 primes: [(331, 3.4755), (569, 3.4654), (719, 3.5101), (809, 3.4752), (887, 3.4688)]
+largest ratio max|mu| / (2 sqrt 3) = 1.01327 at q = 719

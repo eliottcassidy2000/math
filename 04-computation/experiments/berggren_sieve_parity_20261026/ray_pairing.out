@@ -1,0 +1,4 @@
+X = 1000: S = 30, 1 + N_U + N_D + E = 30 (N_U = 20, N_D = 14, E = -5); identity holds: True; interleaving violations: 0
+X = 100000: S = 409, 1 + N_U + N_D + E = 409 (N_U = 222, N_D = 157, E = 29); identity holds: True; interleaving violations: 0
+X = 1000000: S = 995, 1 + N_U + N_D + E = 995 (N_U = 705, N_D = 498, E = -209); identity holds: True; interleaving violations: 0
+X = 10000000: S = 3817, 1 + N_U + N_D + E = 3817 (N_U = 2234, N_D = 1580, E = 2); identity holds: True; interleaving violations: 0
