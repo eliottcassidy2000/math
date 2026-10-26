@@ -1,0 +1,133 @@
+{
+ "n": 4,
+ "states": 32,
+ "strong": 12,
+ "static": {
+  "free": [
+   4,
+   1
+  ],
+  "sand": [
+   12,
+   6
+  ],
+  "glue1": [
+   30,
+   12
+  ],
+  "glue_e": [
+   29,
+   12
+  ],
+  "side": [
+   30,
+   12
+  ],
+  "hst": [
+   2,
+   2
+  ],
+  "free+hst": [
+   8,
+   2
+  ],
+  "glue2": [
+   32,
+   12
+  ]
+ },
+ "V1": {
+  "free": [
+   11,
+   5,
+   2
+  ],
+  "sand": [
+   14,
+   7,
+   2
+  ],
+  "glue1": [
+   30,
+   12,
+   1
+  ],
+  "glue_e": [
+   30,
+   12,
+   2
+  ],
+  "side": [
+   30,
+   12,
+   1
+  ]
+ },
+ "V2": {
+  "free": [
+   4,
+   1,
+   1
+  ],
+  "sand": [
+   18,
+   6,
+   2
+  ],
+  "glue1": [
+   30,
+   12,
+   1
+  ]
+ },
+ "V1dist": {
+  "free": [
+   11,
+   5,
+   2
+  ],
+  "sand": [
+   14,
+   7,
+   2
+  ],
+  "glue1": [
+   30,
+   12,
+   1
+  ],
+  "glue_e": [
+   30,
+   12,
+   2
+  ],
+  "side": [
+   30,
+   12,
+   1
+  ]
+ },
+ "collisions": {
+  "fibres": 0,
+  "pairs": 0,
+  "fibre_sizes": [],
+  "glue1_static": 0,
+  "glue_e_static": 0,
+  "free_static": 0,
+  "glue2_static": 0,
+  "sand_static": 0,
+  "hst_static": 0,
+  "sand_or_hst_static": 0,
+  "V1_glue1": 0,
+  "V1_free": 0,
+  "V1_glue_e": 0,
+  "V1_side": 0,
+  "V1dist_glue1": 0,
+  "V1dist_side": 0,
+  "V1dist_free": 0,
+  "V2_glue1": 0
+ },
+ "glue1_onesided": true,
+ "strong_dead": 7,
+ "strong_succ_nonstrong": 3
+}

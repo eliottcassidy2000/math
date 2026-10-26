@@ -1,0 +1,93 @@
+n = 3: 2 classes, 8 rooted two-port states (2 strong); 4 labelled Hamilton paths over class representatives; V1 transitions 2, V2 transitions 12  [0s]
+  observations computed  [0s]
+  static observation: cells (all states, strong states)
+    free      (2, 1)
+    sand      (4, 1)
+    glue1     (7, 1)
+    glue_e    (6, 1)
+    side      (7, 1)
+    hst       (2, 2)
+    free+hst  (4, 2)
+    glue2     (8, 2)
+  V1 quotient: (cells all, cells strong, refinement rounds)
+    free      (4, 2, 2)
+    sand      (5, 2, 2)
+    glue1     (8, 2, 2)
+    glue_e    (7, 2, 2)
+    side      (8, 2, 2)
+  V2 quotient: (cells all, cells strong, refinement rounds)
+    free      (2, 1, 1)
+    sand      (5, 1, 2)
+    glue1     (7, 1, 1)
+  V1dist quotient: (cells all, cells strong, refinement rounds)
+    free      (4, 2, 2)
+    sand      (5, 2, 2)
+    glue1     (8, 2, 2)
+    glue_e    (7, 2, 2)
+    side      (8, 2, 2)
+  one-sided collisions among strong states: {'fibres': 1, 'pairs': 1, 'fibre_sizes': [(2, 1)], 'glue1_static': 0, 'glue_e_static': 0, 'free_static': 0, 'glue2_static': 1, 'sand_static': 0, 'hst_static': 1, 'sand_or_hst_static': 1, 'V1_glue1': 1, 'V1_free': 1, 'V1_glue_e': 1, 'V1_side': 1, 'V1dist_glue1': 1, 'V1dist_side': 1, 'V1dist_free': 1, 'V2_glue1': 0}
+  check C: h*k depends only on the exit-rooted class and k*h only on the entrance-rooted class, all states: True
+  strong states with no s->t Hamilton path: 1; V1 arcs from strong to nonstrong states: 1
+  [0s]
+n = 4: 4 classes, 32 rooted two-port states (12 strong); 12 labelled Hamilton paths over class representatives; V1 transitions 8, V2 transitions 96  [0s]
+  observations computed  [0s]
+  static observation: cells (all states, strong states)
+    free      (4, 1)
+    sand      (12, 6)
+    glue1     (30, 12)
+    glue_e    (29, 12)
+    side      (30, 12)
+    hst       (2, 2)
+    free+hst  (8, 2)
+    glue2     (32, 12)
+  V1 quotient: (cells all, cells strong, refinement rounds)
+    free      (11, 5, 2)
+    sand      (14, 7, 2)
+    glue1     (30, 12, 1)
+    glue_e    (30, 12, 2)
+    side      (30, 12, 1)
+  V2 quotient: (cells all, cells strong, refinement rounds)
+    free      (4, 1, 1)
+    sand      (18, 6, 2)
+    glue1     (30, 12, 1)
+  V1dist quotient: (cells all, cells strong, refinement rounds)
+    free      (11, 5, 2)
+    sand      (14, 7, 2)
+    glue1     (30, 12, 1)
+    glue_e    (30, 12, 2)
+    side      (30, 12, 1)
+  one-sided collisions among strong states: {'fibres': 0, 'pairs': 0, 'fibre_sizes': [], 'glue1_static': 0, 'glue_e_static': 0, 'free_static': 0, 'glue2_static': 0, 'sand_static': 0, 'hst_static': 0, 'sand_or_hst_static': 0, 'V1_glue1': 0, 'V1_free': 0, 'V1_glue_e': 0, 'V1_side': 0, 'V1dist_glue1': 0, 'V1dist_side': 0, 'V1dist_free': 0, 'V2_glue1': 0}
+  check C: h*k depends only on the exit-rooted class and k*h only on the entrance-rooted class, all states: True
+  strong states with no s->t Hamilton path: 7; V1 arcs from strong to nonstrong states: 3
+  [0s]
+n = 5: 12 classes, 176 rooted two-port states (92 strong); 92 labelled Hamilton paths over class representatives; V1 transitions 68, V2 transitions 1312  [0s]
+  observations computed  [0s]
+  static observation: cells (all states, strong states)
+    free      (12, 6)
+    sand      (39, 30)
+    glue1     (169, 88)
+    glue_e    (167, 88)
+    side      (169, 88)
+    hst       (4, 4)
+    free+hst  (30, 16)
+    glue2     (176, 92)
+  V1 quotient: (cells all, cells strong, refinement rounds)
+    free      (60, 42, 2)
+    sand      (64, 50, 2)
+    glue1     (173, 92, 2)
+    glue_e    (173, 92, 2)
+    side      (173, 92, 2)
+  V2 quotient: (cells all, cells strong, refinement rounds)
+    free      (12, 6, 1)
+    sand      (93, 54, 2)
+    glue1     (169, 88, 1)
+  V1dist quotient: (cells all, cells strong, refinement rounds)
+    free      (60, 42, 2)
+    sand      (64, 50, 2)
+    glue1     (173, 92, 2)
+    glue_e    (173, 92, 2)
+    side      (173, 92, 2)
+  one-sided collisions among strong states: {'fibres': 2, 'pairs': 7, 'fibre_sizes': [(2, 1), (4, 1)], 'glue1_static': 0, 'glue_e_static': 0, 'free_static': 0, 'glue2_static': 7, 'sand_static': 6, 'hst_static': 4, 'sand_or_hst_static': 7, 'V1_glue1': 7, 'V1_free': 7, 'V1_glue_e': 7, 'V1_side': 7, 'V1dist_glue1': 7, 'V1dist_side': 7, 'V1dist_free': 7, 'V2_glue1': 0}
+  check C: h*k depends only on the exit-rooted class and k*h only on the entrance-rooted class, all states: True
+  strong states with no s->t Hamilton path: 46; V1 arcs from strong to nonstrong states: 14
+  [0s]

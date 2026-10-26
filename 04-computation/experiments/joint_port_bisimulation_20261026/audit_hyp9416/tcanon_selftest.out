@@ -1,0 +1,9 @@
+n = 1: 1 classes from all 1 labelled tournaments; sum n!/|Aut| = 1  [0.0s]
+n = 2: 1 classes from all 2 labelled tournaments; sum n!/|Aut| = 2  [0.0s]
+n = 3: 2 classes from all 8 labelled tournaments; sum n!/|Aut| = 8  [0.0s]
+n = 4: 4 classes from all 64 labelled tournaments; sum n!/|Aut| = 64  [0.0s]
+n = 5: 12 classes from all 1024 labelled tournaments; sum n!/|Aut| = 1024  [0.0s]
+n = 6: 56 classes from all 32768 labelled tournaments; sum n!/|Aut| = 32768  [0.8s]
+rooted canonical partition equals the brute-force partition on 6000 rooted labelled tournaments (n = 5; 176 classes): True
+n = 7: 456 gentourng classes pairwise distinct; sum 7!/|Aut| = 2^21: ok
+relabelling invariance at n = 9, 10, 12 (random coloured tournaments): ok

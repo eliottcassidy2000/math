@@ -1,0 +1,32 @@
+n = 7: 456 classes, 17824 rooted two-port states (14162 strong); 35180 labelled Hamilton paths over class representatives; V1 transitions 33304, V2 transitions 1394208  [1s]
+  observations computed  [25s]
+  static observation: cells (all states, strong states)
+    free      (456, 353)
+    sand      (655, 605)
+    glue1     (17716, 14111)
+    glue_e    (17704, 14111)
+    side      (17716, 14111)
+    hst       (15, 15)
+    free+hst  (2989, 2575)
+    glue2     (17824, 14162)
+  V1 quotient: (cells all, cells strong, refinement rounds)
+    free      (11605, 11033, 4)
+    sand      (6165, 5889, 3)
+    glue1     (17767, 14162, 2)
+    glue_e    (17767, 14162, 2)
+    side      (17767, 14162, 2)
+  V2 quotient: (cells all, cells strong, refinement rounds)
+    free      (456, 353, 1)
+    sand      (8685, 6963, 3)
+    glue1     (17716, 14111, 1)
+  V1dist quotient: (cells all, cells strong, refinement rounds)
+    free      (11603, 11031, 4)
+    sand      (6164, 5888, 3)
+    glue1     (17767, 14162, 2)
+    glue_e    (17767, 14162, 2)
+    side      (17767, 14162, 2)
+  one-sided collisions among strong states: {'fibres': 39, 'pairs': 70, 'fibre_sizes': [(2, 31), (3, 6), (4, 1), (6, 1)], 'glue1_static': 0, 'glue_e_static': 0, 'free_static': 0, 'glue2_static': 70, 'sand_static': 64, 'hst_static': 65, 'sand_or_hst_static': 68, 'V1_glue1': 70, 'V1_free': 70, 'V1_glue_e': 70, 'V1_side': 70, 'V1dist_glue1': 70, 'V1dist_side': 70, 'V1dist_free': 70, 'V2_glue1': 0}
+  check C: h*k depends only on the exit-rooted class and k*h only on the entrance-rooted class, all states: True
+  strong states with no s->t Hamilton path: 3381; V1 arcs from strong to nonstrong states: 2055
+  [29s]
+python3 -I -B quotients.py 7  28.65s user 0.25s system 99% cpu 28.999 total

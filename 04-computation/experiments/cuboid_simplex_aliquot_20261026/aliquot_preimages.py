@@ -28,7 +28,7 @@ dh = [v for v in range(2, V + 1) if any(int(round(m ** 0.5)) ** 2 == m and ispri
       and any(m % 2 == 0 and isprime(m // 2) for m in pre[v])]
 pred = [p + 1 for p in range(5, V) if isprime(p) and isprime(p - 2)]
 print(f"values with both a p^2 and a 2q preimage: {dh}")
-print(f"  equals {{p + 1 : (p-2, p) twin primes}}: {dh == [x for x in pred if x <= V]}")
+print(f"  for v > 3 equals {{p + 1 : (p-2, p) twin primes}}: {[v for v in dh if v > 3] == [x for x in pred if x <= V]} (v = 3 also qualifies: 4 = 2^2 = 2*2)")
 print(f"  self-hits (v = 2q in s^-1(v)): {[v for v in dh if v in pre[v]]}")
 perfect = [n for n in range(2, N + 1) if s[n] == n]
 print(f"perfect numbers <= {N}: {perfect}")

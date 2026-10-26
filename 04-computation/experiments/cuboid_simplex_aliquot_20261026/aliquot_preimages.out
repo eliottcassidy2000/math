@@ -43,6 +43,6 @@ v : composite preimages of v under s (v = 1 also has every prime)
 untouchables <= 300: [2, 5, 52, 88, 96, 120, 124, 146, 162, 188, 206, 210, 216, 238, 246, 248, 262, 268, 276, 288, 290, 292]
 odd untouchables <= 300: [5];  prime untouchables: [2, 5]
 values with both a p^2 and a 2q preimage: [3, 6, 8, 14, 20, 32, 44, 62, 74, 104, 110, 140, 152, 182, 194, 200, 230, 242, 272, 284]
-  equals {p + 1 : (p-2, p) twin primes}: False
+  for v > 3 equals {p + 1 : (p-2, p) twin primes}: True (v = 3 also qualifies: 4 = 2^2 = 2*2)
   self-hits (v = 2q in s^-1(v)): [6]
 perfect numbers <= 89402: [6, 28, 496, 8128]

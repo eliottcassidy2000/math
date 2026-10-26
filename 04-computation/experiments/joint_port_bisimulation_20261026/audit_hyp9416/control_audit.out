@@ -1,0 +1,10 @@
+81: H = 462915 (DP; enumeration agrees), |Aut| = 81, tc = 5715, cyclic triples = 67, distinct partner classes = 5715  [4s]
+27: H = 462915 (DP; enumeration agrees), |Aut| = 27, tc = 17145, cyclic triples = 67, distinct partner classes = 17145  [9s]
+injective partner map: 81 -> True, 27 -> True; shared partner classes 74
+T- entrance-phase path masses {0: 154305, 1: 154305, 2: 154305}; phase families: sizes {0: 5715, 1: 5715, 2: 5715}, pairwise disjoint: True
+shared partner classes by T- entrance phase: {0: 74, 1: 0, 2: 0}
+T- joint (entrance, exit) phase masses: {(0, 0): 42930, (0, 1): 45036, (0, 2): 66339, (1, 0): 66339, (1, 1): 42930, (1, 2): 45036, (2, 0): 45036, (2, 1): 66339, (2, 2): 42930}
+T+ entrance-block masses: {0: 154305, 1: 154305, 2: 154305}
+Delta c3 flux (labelled paths): 81 {-3: 73710, -1: 267624, 1: 121581}; 27 {-4: 4293, -3: 44064, -2: 86535, -1: 132084, 0: 120258, 1: 64017, 2: 11664}
+[10s]
+python3 -I -B control_audit.py  9.52s user 0.08s system 99% cpu 9.655 total

@@ -1,0 +1,8 @@
+C: strong True, H(e*h*e) = 289, Hamilton paths 0 -> 5: 4
+D: strong True, H(e*h*e) = 253, Hamilton paths 0 -> 5: 2
+entrance-rooted equal: True ; exit-rooted equal: True ; joint equal: False ; free equal: True
+n = 3: 1 one-sided collision pairs; separated by hst = #(s->t Hamilton paths) alone: 1; V1 refinement round of the bare class observation at which the pair splits: {1: 1}; pairs with 0/1/2 dead members: {1: 1}
+n = 4: 0 one-sided collision pairs; separated by hst = #(s->t Hamilton paths) alone: 0; V1 refinement round of the bare class observation at which the pair splits: {}; pairs with 0/1/2 dead members: {}
+n = 5: 7 one-sided collision pairs; separated by hst = #(s->t Hamilton paths) alone: 4; V1 refinement round of the bare class observation at which the pair splits: {1: 7}; pairs with 0/1/2 dead members: {0: 3, 1: 4}
+n = 6: 20 one-sided collision pairs; separated by hst = #(s->t Hamilton paths) alone: 16; V1 refinement round of the bare class observation at which the pair splits: {1: 20}; pairs with 0/1/2 dead members: {0: 14, 1: 6}
+n = 7: 70 one-sided collision pairs; separated by hst = #(s->t Hamilton paths) alone: 65; V1 refinement round of the bare class observation at which the pair splits: {1: 70}; pairs with 0/1/2 dead members: {0: 51, 1: 19}

@@ -1,0 +1,12 @@
+n = 2: 1 classes; arcs on no Hamilton path 0 (all skip a component: True); strong tournaments with an arc on no Hamilton path: 0; cut detection exact: True; reconstruction from HP exact: True (unknown pairs 0)
+n = 3: 2 classes; arcs on no Hamilton path 1 (all skip a component: True); strong tournaments with an arc on no Hamilton path: 0; cut detection exact: True; reconstruction from HP exact: True (unknown pairs 0)
+n = 4: 4 classes; arcs on no Hamilton path 3 (all skip a component: True); strong tournaments with an arc on no Hamilton path: 0; cut detection exact: True; reconstruction from HP exact: True (unknown pairs 0)
+n = 5: 12 classes; arcs on no Hamilton path 14 (all skip a component: False); strong tournaments with an arc on no Hamilton path: 1; cut detection exact: True; reconstruction from HP exact: False (unknown pairs 1)
+n = 6: 56 classes; arcs on no Hamilton path 47 (all skip a component: False); strong tournaments with an arc on no Hamilton path: 2; cut detection exact: True; reconstruction from HP exact: False (unknown pairs 4)
+n = 7: 456 classes; arcs on no Hamilton path 198 (all skip a component: False); strong tournaments with an arc on no Hamilton path: 9; cut detection exact: True; reconstruction from HP exact: False (unknown pairs 18)
+n = 8: 6880 classes; arcs on no Hamilton path 1035 (all skip a component: False); strong tournaments with an arc on no Hamilton path: 33; cut detection exact: True; reconstruction from HP exact: False (unknown pairs 73)
+labelled n = 2: 2 tournaments, 2 distinct Hamilton-path sets, collisions 0
+labelled n = 3: 8 tournaments, 8 distinct Hamilton-path sets, collisions 0
+labelled n = 4: 64 tournaments, 64 distinct Hamilton-path sets, collisions 0
+labelled n = 5: 1024 tournaments, 1024 distinct Hamilton-path sets, collisions 0
+labelled n = 6: 32768 tournaments, 32768 distinct Hamilton-path sets, collisions 0

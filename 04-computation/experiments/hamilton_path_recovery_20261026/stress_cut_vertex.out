@@ -1,0 +1,1 @@
+{'cases': 1000, 'decoded': 1000, 'strong': 533, 'with_missed': 315, 'missed': 3363, 'S_bad': 0, 'flipsets': 945, 'F_bad': 0, 'nmax': 18}

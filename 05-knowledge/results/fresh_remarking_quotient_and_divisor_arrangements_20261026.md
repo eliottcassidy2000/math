@@ -1,6 +1,6 @@
 # Fresh re-marking two-port quotients, strong-atom line responses, and divisor arrangements
 
-2026-10-26, mac-mini-2026-10-25-pyth. Canon produced: [HYP-9416](../hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md) (OPEN; FINITE-EXACT for n ≤ 7). Not yet independently audited.
+2026-10-26, mac-mini-2026-10-25-pyth. Canon produced: [HYP-9416](../hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md) (item (1) PROVED by the audit's reconstruction lemma; the rest FINITE-EXACT for n ≤ 7, all-order OPEN). Independently audited: `04-computation/experiments/joint_port_bisimulation_20261026/audit_hyp9416/`.
 
 **Owner prompt.**
 - **User's own text.** Cuboids, spheroids and simplices in each dimension, and their vertices, points and intersections; the triangle/circle instance s(30) = 42.
@@ -25,7 +25,7 @@ Scripts are in `04-computation/experiments/joint_port_bisimulation_20261026/` an
 
 ## 1. The fresh re-marking quotient (HYP-9416)
 
-**The open question.** vitali-response C5 answers the minimal-continuation question for **named** guarded re-marking: its guard signatures separate every presentation through order 7. It notes that "if the observation keeps only distributions under fresh uniform re-marking, a smaller stochastic quotient may exist". This section computes that quotient exhaustively for n ≤ 7.
+**The open question.** vitali-response C5 answers the minimal-continuation question for **named** guarded re-marking: its guard signatures separate every presentation through order 7. It notes that "if the observation keeps only distributions under fresh uniform re-marking, a smaller stochastic quotient may exist". This section computes a related construction exhaustively for n ≤ 7: counted multisets (not distributions), on two-port classes of all tournaments rather than on the presentations X_n, with V1 restricted to the current ports. It is not literally the quotient C5 mentions; the normalized-distribution version is slightly coarser (11031 instead of 11033 strong cells for the class observable at n = 7).
 
 **Setup.**
 - **States:** two-port classes `[C; s, t]`.
@@ -34,22 +34,22 @@ Scripts are in `04-computation/experiments/joint_port_bisimulation_20261026/` an
 - **Validation:** the gluing code reproduces the published 289/253 hostile (`validate_289_253.out`).
 
 **Findings (table in HYP-9416).**
-- **Two-sided attachments admit no compression on strong states.** Nine two-sided gluings `k*h*k'`, with contexts of order at most 2, already separate all 92, 946 and 14162 strong joint classes at n = 5, 6, 7.
-- **Closure turns one-sided observers into joint ones.**
-  - A one-sided gluing `h*k` or `k*h` depends only on the exit-rooted or entrance-rooted class of h. So no one-sided observation separates the 7, 20, 70 one-sided collision pairs.
-  - Closing under V1, i.e. repeated fresh re-marking and complement, separates every one of them.
-  - This is a dynamic version of 289/253: the joint orbit is invisible to every one-sided observer, but it propagates through the dynamics into one-sided observations.
+- **The two-sided gluing observer admits no compression on strong states, trivially.** The nine two-sided gluings `k*h*k'`, with contexts of order at most 2, separate all 2, 12, 92, 946 and 14162 strong joint classes at n = 3..7, and so does each of them alone. For `e*h*e` this holds in every order n ≥ 3: the added vertices are the out-degree-1 vertex `a` and the in-degree-1 vertex `b`; the only other candidates, `s` and `t`, satisfy `a → s` and `t → b` and are told apart by the degree of their neighbour, so `s`, `t` and `C` are read off (audit). A scalar two-sided observer such as `H(e*h*e)` does compress.
+- **Fixed-port re-marking sees the joint ports directly.**
+  - A one-sided gluing `h*k` or `k*h` depends only on the exit-rooted or entrance-rooted class of h (an isomorphism of the rooted part extends by the identity). So no one-sided observation separates the 1, 0, 7, 20, 70 one-sided collision pairs at n = 3..7.
+  - Closing under V1 separates every one of them, but no closure depth or attachment data is needed: a single V1 step from the bare class observation does it, because the V1 successor multiset is formed from the Hamilton paths from s to t and is a joint-port statistic by definition. The number of such paths alone separates 4, 16, 65 of the 7, 20, 70 pairs. Closing under V2 separates none.
+  - So this is not a propagation phenomenon: the joint orbit is invisible to every one-sided observer and visible to any statistic built from s → t paths. The R3 pair itself has 4 and 2 Hamilton paths from entrance to exit.
 - **The bare class observable compresses.**
   - Under V1, tracking only the unrooted class at every step needs 42, 607, 11033 cells for the 92, 946, 14162 strong states.
-  - So the "smaller stochastic quotient" exists for this observable, and only for observables that ignore attachment.
+  - So a smaller fresh quotient exists for this observable. It also exists for attachment observables that do not determine both one-sided classes: at n = 7, V1 refining `H(e*h*e)` has 5889 strong cells and V1 refining the free class of `h*e` alone has 12371; under V2, `glue1` stays at 14111.
   - Under V2 the class partition is already closed.
 
 **Answer to "the smallest attachment data closed under repeated complement and re-marking".**
 - **Strong atoms, n ≤ 7:**
   - with named operations, it is the full presentation (vitali-response C5);
-  - with fresh re-marking and any two-sided attachment observer, it is the joint two-port class, with no further compression;
-  - with only one-sided attachment observers, closure forces the joint class anyway.
-- **Beyond one run:** vitali-response C4 shows that no constant number of extra bits suffices for multi-run alignments.
+  - with fixed-port fresh re-marking (V1) and the observer `glue2` (indeed `e*h*e` alone), it is the joint two-port class, trivially, since that observer is a complete invariant of strong two-port states; weaker two-sided observers such as `H(e*h*e)` compress;
+  - with one-sided attachment observers that determine both one-sided classes (`glue1`, or just `h*e` and `e*h`), the V1 closure is again the joint class (FINITE-EXACT, n ≤ 7); with one side only, or under V2, it is not.
+- **Alignment memory:** vitali-response C4 shows that no constant number of extra bits repairs the paired-rooted observer for named guarded re-marking. Its family already uses a single global Hamilton path through k blocks (Session70), so it is not a statement about multi-run attachments only.
 
 ## 2. Strong-atom line responses (HYP-9416 (3))
 
@@ -63,7 +63,7 @@ Scripts are in `04-computation/experiments/joint_port_bisimulation_20261026/` an
 | 6 | 35 | 547 | 484 | 9 |
 | 7 | 353 | 9985 | 9516 | 79 |
 
-**Classification.** In every order the histograms `F_A` are pairwise distinct. They stay distinct after forgetting the ports, that is, keeping only the multiset of target free classes. So the line response determines the strong atom through order 7. The joint data of vitali-response's `strong-atlas.json` is the same object, recomputed here independently. Its totals agree with their table: 1, 5, 50, 903, 30773 strong presentations, and largest joint target fibres 1, 1, 2, 3, 8 (`crosscheck_atlas.out`).
+**Classification.** In every order the histograms `F_A` are pairwise distinct. They stay distinct after forgetting the ports, that is, keeping only the multiset of target free classes. So the line response determines the strong atom through order 7. Much less suffices: the set of partner free classes, without multiplicities, already separates all 1, 1, 6, 35, 353 atoms, and the multiset of partner score sequences gives 351 classes for the 353 atoms at order 7 (audit). The joint data of vitali-response's `strong-atlas.json` is the same object, recomputed here independently. Its totals agree with their table: 1, 5, 50, 903, 30773 strong presentations, and largest joint target fibres 1, 1, 2, 3, 8 (`crosscheck_atlas.out`).
 
 ## 3. The 81/27 control and the Frobenius phase
 
@@ -76,11 +76,11 @@ The pair is `T₊ = C3[A₊,A₊,A₊]` and `T₋ = C3[A₊,A₊,A₋]`, with `A
 **What differs:**
 - `|Aut|` is 81 and 27, so `tc` is 5715 and 17145.
 - In both tournaments every presentation has its own partner class; the partner map is injective, confirming HYP-9414 (1) at m = 3.
-- Only 74 partner classes are shared.
+- Only 74 partner classes are shared, as already recorded in HYP-9414 (3); all 74 come from the phase-0 family below.
 
-**The Frobenius phase.** For the period-3 decoration, the entrance block relative to the odd child splits T₋'s 462915 paths equally, 154305 per phase. Each phase family contains 5715 partner classes. Injectivity makes the three families disjoint.
+**The Frobenius phase.** For the period-3 decoration, the entrance block relative to the odd child splits T₋'s 462915 paths equally, 154305 per phase. Each phase family contains 5715 partner classes. Injectivity makes the three families disjoint. The equal masses are forced: A- = A+^op has the same ordered path-cover counts as A+, so every block-phase path count of T- equals that of T+ (fibre F4 of the tournament-composition packet); the T+ blocks also carry 154305 each, and the joint (entrance, exit) phase masses depend only on the phase difference (42930, 45036, 66339). The phase is invisible to path mass and visible only in the partner classes.
 
-**Why this pair is the right control.** Any child datum that keeps only cyclic triples, or child types up to converse, sees the two decorations as the same. It therefore cannot predict a single partner. The datum must keep:
+**Why this pair is the right control.** Any child datum that keeps only cyclic triples, or child types up to converse, sees the two decorations as the same. It therefore cannot distinguish the two partner sets, which share only 74 classes. The data that suffice here (necessity is not proved) are:
 - the child type;
 - its stabilizer in the quotient, i.e. the Frobenius period;
 - the port's phase.
@@ -89,12 +89,12 @@ This agrees with vitali-response F1 and with Session68's gcd/lcm phase count.
 
 ## 4. The Vitali weave, in one statement
 
-vitali-response's HISTORY.md already threads the Vitali atom from March to October:
-- **THM-169 / THM-170:** the ±2 lambda switch, and the witness masks 82468 / 84707 with H = 141 vs 143;
-- **the recovery principle:** "a target descends through an observation exactly when it is constant on each observation fibre";
-- **the endpoint, half-edge, joint-root, reflection, stabilizer and phase hostiles:** 15/11, 11/13, 289/253, 9/11, 81/27 and gcd(d,e).
+vitali-response's HISTORY.md, with the October 11 Vitali recovery note it starts from, threads the Vitali atom from March to October:
+- **THM-168 / THM-169 / THM-170:** the ±2 lambda switch; the labelled-lambda witness masks 82468 / 84707 with H = 141 vs 143 are in THM-168 and `collatz_effective_prefix_mass_20261005.md` §9 (HISTORY.md instead rechecks the twins 1354195 / 1351956 with H = 109 vs 111);
+- **the recovery principle** (`vitali_atom_recovery_20261011.md`): "a target descends through an observation exactly when it is constant on each observation fibre";
+- **the endpoint, half-edge, joint-root, reflection, stabilizer and phase hostiles:** 15/23 (vitali C2; the value 15/11 could not be traced in the cited packets), 11/13, 289/253, 9/11, 81/27 and gcd(d,e).
 
-The one formal object behind all of these is the **operation-stable quotient** of an observation: the coarsest refinement through which every continuation descends. That is C5 for named operations and HYP-9416 for fresh ones. Each hostile is a pair inside one fibre of a too-coarse observation.
+A common formal reading of all of these (HISTORY.md itself cautions that the historical uses of "Vitali atom" do not name one object) is the **operation-stable quotient** of an observation: the coarsest refinement through which every continuation descends. That is C5 for named operations and HYP-9416 for fresh ones. Each hostile is a pair inside one fibre of a too-coarse observation.
 
 The arithmetic threads below are the same pattern, one level down:
 - the divisor shape forgets the prime weights;
@@ -109,7 +109,7 @@ aliquot124's CONNECTION_BOARD already makes the basic reading precise:
 - what remains is a simplex boundary, a sphere;
 - for 30 this is a circle, weighted to 42.
 
-The new piece here is the **arrangement count dictionary** (`divisor_shapes.out`). It realises "vertices, points, intersections" in every dimension, for a squarefree n with k primes:
+The added piece here is the elementary **arrangement count dictionary** (classical region counts of generic affine and central arrangements, relabelled by divisors) (`divisor_shapes.out`). It realises "vertices, points, intersections" in every dimension, for a squarefree n with k primes:
 
 | geometric object (dimension k−1) | count | arithmetic meaning | with weight d | with weight μ(d) |
 |---|---|---|---|---|
@@ -128,30 +128,30 @@ The region counts are realised exactly by an explicit construction for k ≤ 8. 
 ## 6. The arithmetic threads, against prior work
 
 - **1-2-4, {2, 5}, {7, 21}: nothing new beyond prior verdicts.**
-  - THM-1370: H ≠ 7, 21 at every order.
+  - THM-1370 (`THM-1370-h-spectrum-omits-7-21-all-n.md`; the number is also used by an unrelated Jacobian theorem): H ≠ 7, 21 at every order.
   - HYP-9362 (d): PG(2,2) and PG(2,4) are labelled numerology. The next value, 73 = |PG(2,8)|, is attained (THM-4744; HYP-2516's falsification of the base-2^k pattern).
   - aliquot124 and Session69 reject a map between untouchables and the H-gaps: 7 = s(8) and 21 = s(18) are touchable, while H = 5 occurs.
   - {2, 5} as the only untouchable primes is conditional on the distinct-prime Goldbach statement, which is CITED as verified to 4·10¹⁸.
   - 7 = 2 + 5 is noted as numerology only.
 - **Your table** is s⁻¹ (with the correction s(9) = 4). Complete fibres are in Session66 `small_fibers.json` and `aliquot_preimages.out`.
 - **Twin primes (confirming Session69).** For v > 3, v has both a prime-square and a 2q preimage iff (v−3, v−1) are twin primes. The only self-hit is v = 6 (aliquot124 Theorem A).
-- **A second microcosm/macrocosm (new here).**
-  - 31 = σ(2⁴) = σ(5²) is the only value 1 + p + … + p^(a−1), with a ≥ 3, shared by two prime bases below 10¹² (p < 2000). This is Goormaghtigh's 31, so s⁻¹(31) contains 32 and 125.
+- **A second microcosm/macrocosm (Goormaghtigh's 31 already appears in HYP-9362 and the Leech deep-hole note; new here is only its aliquot reading).**
+  - 31 = σ(2⁴) = σ(5²) is the only value 1 + p + … + p^(a−1), with a ≥ 3, shared by two prime bases below 10¹² (complete: the audit checked every prime base p < 10⁶; the lane script only p < 2000). This is the classical Ratat–Goormaghtigh 31; Goormaghtigh's conjecture that 31 and 8191 are the only numbers that are repunits with at least three digits in two different bases is open, Bateman and Stemmler (with Horn) found 31 the only case below 1.275·10¹⁰ with both bases and the value prime, and Grantham (2024) found no new Goormaghtigh primes below 10⁷⁰⁰. So s⁻¹(31) contains 32 and 125.
   - It is the macrocosm of 7 = 1+2+4 = s(8), which has a unique preimage.
-- **The two sixes and abc (new remark).**
+- **The two sixes and abc (prior art: the equal-radical fibre 1+2=3, 1+8=9 with radical 6 is in THM-3833 (30), CORE-PAPERS-ABC-IUT (2) and abc_difference_families_20261011c; the Gersonides adjacencies {2, 4, 8} are in THM-4640).**
   - The power chain of 3 and the doubling chain of 1 come within 1 of each other only at the Gersonides pairs (2,3), (3,4), (8,9).
   - The resulting triples 1+2=3, 1+3=4 and 1+8=9 all have radical 6. The last is the first abc hit, with quality 1.2263.
   - The remaining contact 1+1=2 (radical 2) is the perfect-number normalisation σ(n)/n = 2.
   - So the "two sixes" are rad = 6 of the 2–3 contacts and the first perfect number. Session69's binary bijection (6 ↦ 1+2=3, 72 ↦ 1+8=9) is the doubling-row form of the first and last of these.
 - **Power/doubling.**
   - Each odd non-power b₀ gives a grid {2ⁱ b₀ʲ}.
-  - 6 is the first n whose square lies in a later doubling row: 36 = 9·4.
-  - The general condition is n = 2ᵃu with u^(k−1) > 2ᵃ.
-  - All of this is PROVED in aliquot124 chains §2 and Session69-power; `power_doubling.out` reproduces it.
+  - 6 is the first even n whose square lies in a later doubling row: 36 = 9·4. If odd n are allowed, 3 is first (9 is the leader of a doubling row after 3); aliquot124 chains §3 says exactly this.
+  - The general condition is n = 2ᵃu, u odd, with u^(k−1) > 2ᵃ (a ≥ 1 in the even case; Session69's map requires a ≥ 1).
+  - All of this is PROVED in aliquot124 chains §§2–3 and Session69-power; `power_doubling.out` reproduces it.
 
 ## 7. Open problems
 
-1. All-order proofs of HYP-9416 (1)–(3), and a structural reason why contexts of order 2 suffice.
+1. All-order proofs of HYP-9416 (2) and (3). Item (1) is proved by the audit's reconstruction lemma, which also explains why small contexts suffice: order 1 already does.
 2. The fresh-re-marking quotient for multi-run attachments (k > 1), and whether some compression survives there that is invisible to C4's guards.
 3. Whether the class-observable compression ratio tends to 1.
 

@@ -1,0 +1,6 @@
+n = 3: classes with unused intra-block arcs; max per class 0, classes with several 0; flip sets checked 0, sets that leave HP unchanged 0
+n = 4: classes with unused intra-block arcs; max per class 0, classes with several 0; flip sets checked 0, sets that leave HP unchanged 0
+n = 5: classes with unused intra-block arcs; max per class 1, classes with several 0; flip sets checked 1, sets that leave HP unchanged 0
+n = 6: classes with unused intra-block arcs; max per class 1, classes with several 0; flip sets checked 4, sets that leave HP unchanged 0
+n = 7: classes with unused intra-block arcs; max per class 3, classes with several 1; flip sets checked 22, sets that leave HP unchanged 0
+n = 8: classes with unused intra-block arcs; max per class 3, classes with several 5; flip sets checked 93, sets that leave HP unchanged 0

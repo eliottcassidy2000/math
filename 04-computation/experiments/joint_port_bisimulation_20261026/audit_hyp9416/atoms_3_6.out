@@ -1,0 +1,8 @@
+n = 3: {"atoms": 1, "presentations": 1, "largest_fibre": 1, "distinct_joint_targets": 1, "strong_targets": 0, "atoms_with_blue": 1, "F_distinct": [1, []], "F_portsforgotten_distinct": [1, []], "F_onesided_distinct": [1, []], "support_free_set_distinct": [1, []], "target_score_multiset_distinct": [1, []], "H_tc_Aut_score_distinct": [1, []]}  [0s]
+  atlas: 1 sources, 1 with identical (Aut, H, tc, F_A, B_A), 0 mismatches
+n = 4: {"atoms": 1, "presentations": 5, "largest_fibre": 1, "distinct_joint_targets": 5, "strong_targets": 2, "atoms_with_blue": 1, "F_distinct": [1, []], "F_portsforgotten_distinct": [1, []], "F_onesided_distinct": [1, []], "support_free_set_distinct": [1, []], "target_score_multiset_distinct": [1, []], "H_tc_Aut_score_distinct": [1, []]}  [0s]
+  atlas: 1 sources, 1 with identical (Aut, H, tc, F_A, B_A), 0 mismatches
+n = 5: {"atoms": 6, "presentations": 50, "largest_fibre": 2, "distinct_joint_targets": 44, "strong_targets": 32, "atoms_with_blue": 6, "F_distinct": [6, []], "F_portsforgotten_distinct": [6, []], "F_onesided_distinct": [6, []], "support_free_set_distinct": [6, []], "target_score_multiset_distinct": [6, []], "H_tc_Aut_score_distinct": [5, [2]]}  [0s]
+  atlas: 6 sources, 6 with identical (Aut, H, tc, F_A, B_A), 0 mismatches
+n = 6: {"atoms": 35, "presentations": 903, "largest_fibre": 3, "distinct_joint_targets": 547, "strong_targets": 484, "atoms_with_blue": 9, "F_distinct": [35, []], "F_portsforgotten_distinct": [35, []], "F_onesided_distinct": [35, []], "support_free_set_distinct": [35, []], "target_score_multiset_distinct": [35, []], "H_tc_Aut_score_distinct": [23, [2, 2, 2, 2, 2, 2, 2, 2, 2, 4]]}  [1s]
+  atlas: 35 sources, 35 with identical (Aut, H, tc, F_A, B_A), 0 mismatches

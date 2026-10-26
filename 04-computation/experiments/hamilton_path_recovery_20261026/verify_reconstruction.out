@@ -1,0 +1,11 @@
+n = 3: classes 2, strong 1; missed arcs in strong classes 0; (S) 0/0; (W) 0/0; (X) exact on 3/3 arcs; (R) decoded exactly 2/2 class representatives
+n = 4: classes 4, strong 1; missed arcs in strong classes 0; (S) 0/0; (W) 0/0; (X) exact on 6/6 arcs; (R) decoded exactly 4/4 class representatives
+n = 5: classes 12, strong 6; missed arcs in strong classes 1; (S) 1/1; (W) 1/1; (X) exact on 60/60 arcs; (R) decoded exactly 12/12 class representatives
+n = 6: classes 56, strong 35; missed arcs in strong classes 2; (S) 2/2; (W) 2/2; (X) exact on 525/525 arcs; (R) decoded exactly 56/56 class representatives
+n = 7: classes 456, strong 353; missed arcs in strong classes 11; (S) 11/11; (W) 11/11; (X) exact on 7413/7413 arcs; (R) decoded exactly 456/456 class representatives
+n = 8: classes 6880, strong 6008; missed arcs in strong classes 39; (S) 39/39; (W) 39/39; (X) exact on 168224/168224 arcs; (R) decoded exactly 6880/6880 class representatives
+labelled n = 2: decode(HP(T)) == T for 2/2
+labelled n = 3: decode(HP(T)) == T for 8/8
+labelled n = 4: decode(HP(T)) == T for 64/64
+labelled n = 5: decode(HP(T)) == T for 1024/1024
+labelled n = 6: decode(HP(T)) == T for 32768/32768
