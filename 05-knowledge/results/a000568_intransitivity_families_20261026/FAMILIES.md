@@ -99,8 +99,8 @@ Level widths (classes per `c3`), extending the atlas (`n <= 7`) and opus-S316 (`
 - `n = 9`: 1, 7, 16, 23, 46, 83, 149, 234, 405, 569, 1042, 1307, 2200, 2993, 4339, 5380, 8169, 8679, 12526, 13801, 16868, 17119, 21413, 17482, 19089, 15181, 11988, 6645, 3310, 457, 15 (`c3 = 0..30`).
 - `n = 10`: 1, 8, 22, 36, 71, 140, 262, 440, 793, 1240, 2264, 3220, 5672, 8080, 13416, 18232, 30218, 38020, 61172, 76420, 116350, 137784, 206344, 230868, 333066, 370112, 490744, 520012, 690172, 665864, 837084, 785312, 874245, 757500, 794222, 582472, 507631, 306180, 190310, 63724, 13333 (`c3 = 0..40`; peak 874245 at `c3 = 32`).
 
-Mean `log₂ N(T)` per level and fraction of prime classes per level (`n = 9`): the mean falls
-monotonically `18.5, 13.3, 9.9, 8.2, 7.4, 5.9, 5.3, 4.4, 3.9, 3.3, 3.0, 2.6, 2.4, 2.1, 2.0, 1.8,
+Mean `log₂ N(T)` per level and fraction of prime classes per level (`n = 9`):
+the mean broadly decreases, but is not monotone: `18.5, 13.3, 9.9, 8.2, 7.4, 5.9, 5.3, 4.4, 3.9, 3.3, 3.0, 2.6, 2.4, 2.1, 2.0, 1.8,
 1.7, 1.5, 1.5, 1.35, 1.31, 1.26, 1.26, 1.21, 1.23, 1.19, 1.19, 1.18, 1.19, 1.14, 1.20`; the prime
 fraction is `0` for `c3 <= 6` and then `.02, .04, .08, .09, .18, .21, .30, .33, .44, .48, .59,
 .63, .72, .75, .79, .79, .82, .81, .84, .84, .85, .84, .88, .93`. Primes need `c3 >= n - 2`
@@ -142,3 +142,12 @@ cycle-index census, (C) tree shapes, (D) intransitivity fibres, (E) levels, (F) 
 equations, and it does not reduce the Burnside count (THM-514/516, the `04-computation` engines
 to `n = 200`), which remains the only way to reach large `n`. The prime cycle-index census at
 `n = 10` (needed for `n = 11` predictions) was not collected; `run.sh` documents how.
+
+
+## Session67 level-trend correction (2026-10-26)
+
+The unchanged n=9 table itself gives mean loss 1.21 -> 1.23 at c3=23 ->24
+and 1.14 ->1.20 at 29 ->30; prime fraction .82 ->.81 at 23 ->24.
+These are broad tendencies, not monotonicity laws. The source census remains
+credited to klein; Session67 replays supplied cycle-index arithmetic, not the
+underlying large prime census. See the [incoming review](../session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md).

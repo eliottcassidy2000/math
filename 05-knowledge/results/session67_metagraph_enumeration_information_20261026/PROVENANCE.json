@@ -2,7 +2,7 @@
   "session": "67",
   "date": "2026-10-26",
   "producer_base_commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
-  "integration_base_commit": "983768efde8483643fc3c6ba488eee04622ebd2d",
+  "integration_base_commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
   "inherited_inputs": [
     {
       "local_path": "session67-root/inputs/THEOREM.txt",
@@ -17,6 +17,574 @@
       "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
       "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/LOCAL_FOREST_ADDENDUM.txt",
       "sha256": "50be093f2734fffda98287f4301a0040e114ee18ecf5aecd4b6ea336dddc681c"
+    },
+    {
+      "local_path": "session67-metagraph/sources/01-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61"
+    },
+    {
+      "local_path": "session67-metagraph/sources/02-enumeration.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/metagraph_growth_20261020/enumeration.md",
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+      "git_blob": "7a08c50030604499b74357ae8ca545c4112acf33"
+    },
+    {
+      "local_path": "session67-metagraph/sources/03-growth.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/metagraph_growth_20261020/growth.md",
+      "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+      "git_blob": "95b97eeb92c7bc813ac69ebd4745086d63c60416"
+    },
+    {
+      "local_path": "session67-metagraph/sources/04-core_count.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/weighted_core_transport_20261020/core_count.md",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
+      "git_blob": "274b45437d7febba4453dab5ad64a9cec0c0782b"
+    },
+    {
+      "local_path": "session67-metagraph/sources/05-README.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/weighted_core_transport_20261020/README.md",
+      "sha256": "07ce8fbdf4c7bbb69329fe4eefd925e789c3ed7405f06953b71ccd8261d67fe2",
+      "git_blob": "1ba693ed9bae557d9d80a160db40dda2e387cbd5"
+    },
+    {
+      "local_path": "session67-metagraph/sources/06-boundary.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/defect_boundary_20261020/boundary.md",
+      "sha256": "c359a51a188d2746e6abf19a547962ebe7c59aa32840e4cce93e221a5eccc7f3",
+      "git_blob": "19162c82ce60cbc63292ef948c0b93d3b5a18f62"
+    },
+    {
+      "local_path": "session67-metagraph/sources/07-README.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/tournament_future_boundary_20261020/README.md",
+      "sha256": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+      "git_blob": "2106f0f14eece67d67ade1e7555ee1d6d5dfd9c9"
+    },
+    {
+      "local_path": "session67-information/sources/01-information_theory_deep.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "04-computation/information_theory_deep.py",
+      "sha256": "144513d4bc10f62ab8203e4666805d0100533e7f886696dc6cf497c731ef7f7d",
+      "git_blob": "49d118b366dd4fbc0da709f6ed6697b36b0513d1"
+    },
+    {
+      "local_path": "session67-information/sources/02-information_theory_deep.out",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/information_theory_deep.out",
+      "sha256": "e7db503deb30b3ce537dbc312276087576d16286fe7ccb4bf80cae02de341a96",
+      "git_blob": "c94de2106516d62edb1defa9c8789e25bdd83166"
+    },
+    {
+      "local_path": "session67-information/sources/03-ocf_information_theory.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "04-computation/ocf_information_theory.py",
+      "sha256": "9da8fef432ad5767c732731553d547310ecc5098e470957ec09e1e4d015346ee",
+      "git_blob": "2cca3f7d46dba76faca26d6717c6a23108e4f305"
+    },
+    {
+      "local_path": "session67-information/sources/04-ocf_information_theory.out",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/ocf_information_theory.out",
+      "sha256": "9c219de2102c717aca83ddfb7732c6f4933ed76abfec15f0547c02c99a62dfcd",
+      "git_blob": "773f802f0eeb825a3402e2e6d18c8f32257cc420"
+    },
+    {
+      "local_path": "session67-information/sources/05-HYP-3564-relations-not-things-the-relational-reframe.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/hypotheses/HYP-3564-relations-not-things-the-relational-reframe.md",
+      "sha256": "c46944c8b313bf227ed4fa2a1b3bd104017539eebf7a54d5acc8c69a789203c0",
+      "git_blob": "6bfe5452281723da02265777a8b1cbfd068d7e80"
+    },
+    {
+      "local_path": "session67-information/sources/06-HYP-3595-rib-sc-side-even-and-silent-flip-eulerian.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/hypotheses/HYP-3595-rib-sc-side-even-and-silent-flip-eulerian.md",
+      "sha256": "2a14bfa8e42e74a54b52659db440666fa025a995d1c980ff540e053e38afd8cf",
+      "git_blob": "3516f7600b8453c12dd55a25b3bf50afd7f5033b"
+    },
+    {
+      "local_path": "session67-information/sources/07-HYP-3602-tournaments-are-intransitivity-among-n-things.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/hypotheses/HYP-3602-tournaments-are-intransitivity-among-n-things.md",
+      "sha256": "e0be287c02d7f93b93f9c8d10b4592576094ca7fed88066f5e9dae9794d8ebc9",
+      "git_blob": "c3a740953e8a4196e28b9af5c3844089d4a78694"
+    },
+    {
+      "local_path": "session67-information/sources/08-THM-1382-map-graph-star-flips-nested-cut-cycle.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "01-canon/theorems/THM-1382-map-graph-star-flips-nested-cut-cycle.md",
+      "sha256": "b617977c85c61f4021374cfe37eff4d27b423ae9774420c54e08379de53979dd",
+      "git_blob": "20e8bc1135b27596f688dcac3812f1ea81962e9e"
+    },
+    {
+      "local_path": "session67-information/sources/09-THM-1979-tournament-space-is-a-spectrum-single-point-to-continuum.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "01-canon/theorems/THM-1979-tournament-space-is-a-spectrum-single-point-to-continuum.md",
+      "sha256": "37181847e6cd4f7556b82460eccb11eee3033614b1dfd191a5ab0343bc0f2ec5",
+      "git_blob": "15893d7e8c8337807a44d11af0cf238dce2a22ce"
+    },
+    {
+      "local_path": "session67-information/sources/10-THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "01-canon/theorems/THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md",
+      "sha256": "cac20c9b48bef294e670ee629f885113d1a0c4b8e1a6031b6e53851712e0022a",
+      "git_blob": "c1d364eb603163a4bc7e22fdbb1ce373c07d04e9"
+    },
+    {
+      "local_path": "session67-information/sources/11-CURL-AND-CLAN-COMPLETION.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/context/CURL-AND-CLAN-COMPLETION.md",
+      "sha256": "6273731f92069b955ee574d0dc16006e128ce99f6eeac06e8cd828e5c81ef7d5",
+      "git_blob": "640f4bdee55481e9f9fc9ee4a19e7c6a0ef36a58"
+    },
+    {
+      "local_path": "session67-information/sources/12-REALIZATION_PHASES.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/context/REALIZATION_PHASES.md",
+      "sha256": "815d1415b6d20d81b15b920e19e6cd378075d95aaf4c530eb2e41eea9027ab70",
+      "git_blob": "d82fd9eee06cf8a8f2744301332aa7b7f7669b17"
+    },
+    {
+      "local_path": "session67-information/sources/13-METRIC_CURL_RECOVERY.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md",
+      "sha256": "fab727785c18911d2cc3f14570acd16f92c9824990e6b964f9a336f00eff6aff",
+      "git_blob": "cbb54e17f40071a90893f48df0c348b3b925480b"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/CONCEPT_BOARD.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/CONCEPT_BOARD.md",
+      "sha256": "bce6b5614ae4563ea08fb0c85b092ad913d621e5cafb01d2e3c6443e1b1a5de2",
+      "git_blob": "a3cead5f52c309f64c424f4bffc4d18afab79b7b"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/FAMILIES.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/FAMILIES.md",
+      "sha256": "b5cbb76d771af8c42138fec089601f057739d3fc2f0958074c77b32fea94991a",
+      "git_blob": "c1d36b8993e0b9cf3e3a36dfc25e17fbf1645505"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/INFORMATION.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/INFORMATION.md",
+      "sha256": "2f71ce0ce8d9a29d951212611a4996972f7428074b7c0c6e160eb4eee5297fde",
+      "git_blob": "b5cbca636182dd5d0c0e44f5b2ae69e1935657c2"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/INTRANSITIVITY.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/INTRANSITIVITY.md",
+      "sha256": "05d4cc51cf5e9520854d8003158173c104a89bf0092857009e5f138cca99a1ca",
+      "git_blob": "3f687b3817a67b4f5ae080ce203ad662d3034184"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/README.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/README.md",
+      "sha256": "9fbe8b5609a8b3e7218139c504bc6ad0712e7c7e73bc35527914cc4c04a1b378",
+      "git_blob": "2fc91ec5a8247e54aaf9f851ab86824d0b45d3cc"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/SHA256SUMS",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/SHA256SUMS",
+      "sha256": "22021a10cd1a8512ce582574839efb5e19e3d8d8f55c426165dec1d6f36309ff",
+      "git_blob": "218528fe01ce9980044a45d7d95c3f372b411749"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3class_sizes_n3.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3class_sizes_n3.txt",
+      "sha256": "c183b04383e61541b8cc3dc4f6fe0213ae63aa8c446eb331754f00204be44d6a",
+      "git_blob": "968fbbf9792e4c93254c5e07a25c34585a2f87b0"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3class_sizes_n4.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3class_sizes_n4.txt",
+      "sha256": "6a00d5067589a8dcc231283543f6f4088ea2f122fc504192931186b4f0485633",
+      "git_blob": "5faca0b4a6470caa6eae82afa6d850ea91979f60"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3class_sizes_n5.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3class_sizes_n5.txt",
+      "sha256": "c7d6f1e72903c3d1694bc9b3aa4de4e0509065821a66dc052c6ca7152fffcdfd",
+      "git_blob": "5ae6e276c919b211ba47e1a9b016460c01b05840"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3class_sizes_n6.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3class_sizes_n6.txt",
+      "sha256": "3fc6667373694ca6154b368fda421eae7bb345fc2a6c0d825b68eab22b61e102",
+      "git_blob": "5d7c9343f88cc439da28ba9895ea198f1ebd8dd4"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3class_sizes_n7.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3class_sizes_n7.txt",
+      "sha256": "13c9882ae20eb1181641bc23803bc68011e3f6dc2ff5d30d535c0d63cb653411",
+      "git_blob": "b2167cb840607b1a4418d3bf662bf380dda841bb"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3score_exceptions_n3.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3score_exceptions_n3.txt",
+      "sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "git_blob": "0cfbf08886fca9a91cb753ec8734c84fcbe52c9f"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3score_exceptions_n4.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3score_exceptions_n4.txt",
+      "sha256": "fcb9cc30b0f3e4715d032f3a0ce158e4d6bea8c618bda0f5d1f167300a087b8a",
+      "git_blob": "4792e70f333077a81456ca2bc74e492ab8bb58c3"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3score_exceptions_n5.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3score_exceptions_n5.txt",
+      "sha256": "b49c053f35086fa624f4b2141909e438c8ea08c6bc944ec4caf1560cf883b0bb",
+      "git_blob": "de1b01dffa47596cdd33fd9df3a687b8bb15d63f"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3score_exceptions_n6.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3score_exceptions_n6.txt",
+      "sha256": "32bb445981c331a010e7ea34e9f5490b6878aa8f74fc8c2f518e892765320737",
+      "git_blob": "238fcabed0fae0350ead3cbc8529a4ca4bf5c308"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/c3score_exceptions_n7.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/c3score_exceptions_n7.txt",
+      "sha256": "88ce331fcfad9915206df291f09ed2e604a11ac415e63c2e90a5241f066fad47",
+      "git_blob": "957370d17ed6b804d3def154745f48768f585cd9"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/census_n10_summary.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/census_n10_summary.txt",
+      "sha256": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "git_blob": "11b38804a53d041cfd2fb7a01d7ca3aca7c7273d"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/census_n8_n9_summary.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/census_n8_n9_summary.txt",
+      "sha256": "60ef8d1ae7499445e6ec5d58bc1f67d164401973af22f805f6bc710431ce85ec",
+      "git_blob": "61a8c4b711c8b422e51b01873ce29ab0310f9da3"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/classes_n7.tsv",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/classes_n7.tsv",
+      "sha256": "edbc49a9c7e4e7eeab86704f34e99adcf89a9eb7c1d15855b7b31cacae83b693",
+      "git_blob": "b962fa1e7e22e548daeb9195aedc61e13335dfd2"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/classes_n8.tsv",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/classes_n8.tsv",
+      "sha256": "28b8423f847de9644ef7e4c9926c1a95740d02e0fb6fdfe67b3864c8a81f9019",
+      "git_blob": "4bb52c7ab6643a0be092d59a91c0a07822b1b889"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/prime_cycle_types_n9.tsv",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/prime_cycle_types_n9.tsv",
+      "sha256": "675c6064d625149c3a97766912dd6734eb4b9bce14bea3c3dd3c963ab51fd5df",
+      "git_blob": "8dd85953c5c583d43b51c0f1f3225cb3d9226aa5"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/primes_n7.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/primes_n7.txt",
+      "sha256": "f818618a09e2f0d73e6ed498bde3af16150d9dad8eaed2283488184c15e72f8e",
+      "git_blob": "da12931df89e44aadd41dc51c995e01d33ef77d5"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/data/primes_n8.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/data/primes_n8.txt",
+      "sha256": "5a4717580269aeb682c933e4c6ee2d7a6e97f25296f0f2729c946d8853fc4b30",
+      "git_blob": "8de83c08d2aa9b1a6ff76f61f88a7691dfddc76b"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/analyze-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/analyze-normal.txt",
+      "sha256": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "git_blob": "05cd7cd102c9dc4371a846944d125be895596185"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/analyze-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/analyze-optimized.txt",
+      "sha256": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "git_blob": "05cd7cd102c9dc4371a846944d125be895596185"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/balanced-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/balanced-normal.txt",
+      "sha256": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "git_blob": "1c97dd5ac6e9b9c02e5ac2b16dc9a7158ce18860"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/balanced-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/balanced-optimized.txt",
+      "sha256": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "git_blob": "1c97dd5ac6e9b9c02e5ac2b16dc9a7158ce18860"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/c3class-check.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/c3class-check.txt",
+      "sha256": "ceaa9829920e4a51f90af351508635544aba90924fb6398bbc240c86a65a9995",
+      "git_blob": "ab0ef43d4886b3f93b078a0bedd811fa1bd02098"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/c3score-n3-n7.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/c3score-n3-n7.txt",
+      "sha256": "7a2d94cc73e9ef895c145af65793a00bb933b87bdd06a3d7aec4dd74394f77bb",
+      "git_blob": "fc1a84b059a45b402df098f7b1106e2d855b50c6"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/census-n10.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/census-n10.txt",
+      "sha256": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "git_blob": "11b38804a53d041cfd2fb7a01d7ca3aca7c7273d"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/census-n3-n9.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/census-n3-n9.txt",
+      "sha256": "b3c55b014e5b32a15a15ec509a3917675164d2793b2a0c42da17888af8f1bf71",
+      "git_blob": "c003df1b621c091d7f83ffe9df8ee4c672495483"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/chain-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/chain-normal.txt",
+      "sha256": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "git_blob": "1fb05d90e18dcb1707b5de1c2ca807720608ca4a"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/chain-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/chain-optimized.txt",
+      "sha256": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "git_blob": "1fb05d90e18dcb1707b5de1c2ca807720608ca4a"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/conn-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/conn-normal.txt",
+      "sha256": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "git_blob": "bdcfd3f129ed115d1eab1d8fef9e5de6decf0256"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/conn-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/conn-optimized.txt",
+      "sha256": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "git_blob": "bdcfd3f129ed115d1eab1d8fef9e5de6decf0256"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/species-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/species-normal.txt",
+      "sha256": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "git_blob": "14b598ee51c3463f0f46dcdd5f1a4e60259af17c"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/species-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/species-optimized.txt",
+      "sha256": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "git_blob": "14b598ee51c3463f0f46dcdd5f1a4e60259af17c"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/species10-normal.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/species10-normal.txt",
+      "sha256": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "git_blob": "7781bc4af581d8e66ac86df622c9639652eb5e15"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/receipts/species10-optimized.txt",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/receipts/species10-optimized.txt",
+      "sha256": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "git_blob": "7781bc4af581d8e66ac86df622c9639652eb5e15"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/analyze.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/analyze.py",
+      "sha256": "3e4efdb41d8abc9dd5f8ca29372dcfe79373fa9a215fa936476a6e0bd6967f95",
+      "git_blob": "1f296938d340a70c52ea0f67634da2f5d5ea86f6"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/balanced_check.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/balanced_check.py",
+      "sha256": "802f7a1456f136c1c4b9244f2bf4a8297ed1adfed36a3210e0e99e943decd314",
+      "git_blob": "fc1d7d3c6d78f81ce209fad456bcee9af0c67486"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/c3class.c",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/c3class.c",
+      "sha256": "dee0feedabd2c04e076b24eefc569dc89d4de3c67c382029cf90f51cc7ec7bbf",
+      "git_blob": "dc1d0481598f0db1a83a7040f3852301f6c7d32d"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/c3score.c",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/c3score.c",
+      "sha256": "3d0791b8ab08bfdffe5503a4b46f62d1683a5bacb129e2ad6e28460e1968e603",
+      "git_blob": "fb97ec4c3e6906a0fb92c9bdbd1fce865663ade6"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/chain_family.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/chain_family.py",
+      "sha256": "fc7b0b78fea16631be3d55596f73d32591fcb1ea039e4fbeb051a822b3bb0295",
+      "git_blob": "830cd907ece837e514282748f49e4f3fdab26ac7"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/conn_check.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/conn_check.py",
+      "sha256": "e1aa63c48a0c9c0995ed45116b7bb9248fc6c4578ea4a05d0648e54ae67bdb0e",
+      "git_blob": "66cab8571f09cdee9d5072a1fa3429087db6e5bf"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/run.sh",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/run.sh",
+      "sha256": "8340ab2db7255dbce8980107b666edfe6a5e478c6e0811d594c03a81e029b304",
+      "git_blob": "69fe2d0c7529218cba90f0dac8d18f1561143ed8"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/species.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/species.py",
+      "sha256": "0a8c06c7b2ce04d37a9ab0d97f0e3f4bcbdf931545d730e38d5a9261b63120c7",
+      "git_blob": "a9e1d1f87c3b65fdd3cc6529c3c921c8ff7a6b2d"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/species10.py",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/species10.py",
+      "sha256": "17f952e7395298aa26463902f05063949d6bf7b314881eb21f27a5498e25511b",
+      "git_blob": "9288d10f3c7f248c644b7187410269f0f77a6ec9"
+    },
+    {
+      "local_path": "session67-incoming/klein-packet/scripts/tourn_enum.c",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/scripts/tourn_enum.c",
+      "sha256": "f02b0137007e512c99cb182c0694a4f95329a3dd7f822527f36a58a61dbad55d",
+      "git_blob": "78718e3f4f65965d84269ae528000ee03e824090"
+    },
+    {
+      "local_path": "session67-incoming/source-canonical/HYP-9413-minimum-intransitivity-chain-family-fibonacci-primes-and-the-intransitivity-count-asymptotics.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "05-knowledge/hypotheses/HYP-9413-minimum-intransitivity-chain-family-fibonacci-primes-and-the-intransitivity-count-asymptotics.md",
+      "sha256": "92e1640941d3d47e1483409693980909a0f7fb712d4e325bafbd8fa5e3373e2b",
+      "git_blob": "daef44abb3578d591c466762ef3fa0a612f253a4"
+    },
+    {
+      "local_path": "session67-incoming/source-canonical/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md",
+      "repository": "eliottcassidy2000/math",
+      "commit": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+      "path": "01-canon/theorems/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md",
+      "sha256": "fbf58f1d9702f625039643aad917ca4e423aed588afef4835722304c547495b5",
+      "git_blob": "241f554fc923b4a377243fe58ecfff6e12dd72d3"
     }
   ],
   "production_source_sha256": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3",
@@ -24,5 +592,10 @@
     "Frozen historical inputs, not live startup authorities.",
     "Current corrections take precedence over historical snapshots.",
     "Literal lines are complement pairs; relocation edges are auxiliary class witnesses."
-  ]
+  ],
+  "first_published_checkpoint": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "final_integration_base_commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "incoming_producer_commit": "62430ddb33e685494ae50f00d05e24c837bb3e02",
+  "incoming_review_pin": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+  "initial_local_integration_base_commit": "983768efde8483643fc3c6ba488eee04622ebd2d"
 }

@@ -1,0 +1,20 @@
+{
+  "status": "Sibling working artifacts inspected before publication; hashes pin the exact version used, not a remote commit",
+  "sources": [
+    {
+      "path": "session67-recursion/REPORT.md",
+      "sha256": "356cad6322edb0541ce29a692a5cfa9b52eb076589d43af8950cb33b722639c2",
+      "used_for": "same-core future-symmetry obstruction and definition of K"
+    },
+    {
+      "path": "session67-recursion/hostile-receipt.json",
+      "sha256": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8",
+      "used_for": "same-core future-symmetry obstruction and definition of K"
+    },
+    {
+      "path": "session67-recursion/audit_hostile.py",
+      "sha256": "c2a2f881d93a20b92523139f19ee1ec69a2a3bf013b08a1717459410b6dfba21",
+      "used_for": "same-core future-symmetry obstruction and definition of K"
+    }
+  ]
+}

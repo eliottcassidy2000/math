@@ -1,0 +1,79 @@
+{
+  "status": "pass",
+  "scope": "All labelled tournaments n=1..5; four explicit generated modular-tree fibres, not all order6/9/12 tournaments",
+  "census": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "C3_score_fibres": 1,
+      "mismatches": 0,
+      "max_b": 0
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "C3_score_fibres": 2,
+      "mismatches": 0,
+      "max_b": 0
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "C3_score_fibres": 7,
+      "mismatches": 0,
+      "max_b": 1
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "C3_score_fibres": 56,
+      "mismatches": 0,
+      "max_b": 1
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "C3_score_fibres": 932,
+      "mismatches": 0,
+      "max_b": 1
+    }
+  ],
+  "controls": {
+    "weighted_balanced_222": {
+      "n": 6,
+      "b": 1,
+      "predicted_score_fibre": 2,
+      "enumerated_score_fibre": 2,
+      "predicted_C3_fibre": 16,
+      "enumerated_C3_fibre": 16,
+      "all_same_C3": true
+    },
+    "weighted_unbalanced_123": {
+      "n": 6,
+      "b": 0,
+      "predicted_score_fibre": 1,
+      "enumerated_score_fibre": 1,
+      "predicted_C3_fibre": 24,
+      "enumerated_C3_fibre": 24,
+      "all_same_C3": true
+    },
+    "nested_balanced": {
+      "n": 9,
+      "b": 4,
+      "predicted_score_fibre": 16,
+      "enumerated_score_fibre": 16,
+      "predicted_C3_fibre": 16,
+      "enumerated_C3_fibre": 16,
+      "all_same_C3": true
+    },
+    "aut_counterexample_T": {
+      "n": 12,
+      "b": 4,
+      "predicted_score_fibre": 16,
+      "enumerated_score_fibre": 16,
+      "predicted_C3_fibre": 128,
+      "enumerated_C3_fibre": 128,
+      "all_same_C3": true
+    }
+  }
+}

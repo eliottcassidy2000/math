@@ -1,3 +1,10 @@
+> **SESSION67 CURRENT-SCOPE CORRECTION — 2026-10-26.** Identity-observer loss,
+> the dualization/parity distinction, |Aut| inheritance, Hamiltonian-path
+> interpretation and signed-versus-unsigned curl are corrected below. The
+> [incoming review](../session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md)
+> preserves original source bytes and supplies independent witnesses; larger
+> census and wild-pair completeness are not independently re-established here.
+
 # Tournaments as information: merging the earlier work with the intransitivity observable
 
 klein, 2026-10-26. The directive asked to merge the repo's "tournaments as information" work
@@ -11,7 +18,7 @@ probability law: `H₀(X | L) = log₂ |{X' : L(X') = L(X)}|` after fixing the a
 equivalence and the observable `L`. Everything below uses `U_n` = tournaments on `[n]` (or the
 isomorphism classes when stated), equality, and one of the observables
 
-- `L = id`: `C(n,2)` bits, the relation itself;
+- `L = id`: fibre loss `H0(T|id)=0`; `C(n,2)` bits is ambient labelled capacity;
 - `L = C3` (intransitivity structure): fibre `N(T) = 2^{p} ∏ k_N!` (Theorem I);
 - `L = scores`: fibre = number of labelled tournaments with that score function (MISTAKE-231's
   own example; not a tree quantity);
@@ -35,7 +42,8 @@ and `1.22` bits on average at `n = 10` (tending to 1).
 - `05-knowledge/results/information_theory_deep.out` (ranking entropy `S = log₂ H`, the
   comparison channel, MDL of `H`): `H` is a `C3`-invariant (INTRANSITIVITY.md §3), so the ranking
   entropy is a function of the intransitivity structure alone; two relations with the same cyclic
-  triples have the same number of consistent rankings. The MDL question "how many bits to specify
+  triples have the same number of directed Hamiltonian paths (not rankings
+  satisfying all pairwise comparisons). The MDL question "how many bits to specify
   `H`" is bounded by `log₂ c(n)` rather than `log₂ A000568(n)`.
 - `07-reflections/information-geometry-of-tournaments.md` (S20y: Walsh–Fourier of `H` has only
   even orders because `H(T) = H(T*)`): the even-order statement is the Fourier shadow of
@@ -52,8 +60,11 @@ and `1.22` bits on average at `n = 10` (tending to 1).
   is unsupported by this implication and is not a necessary-condition theorem.
 - THM-4739 / HYP-9351: the **support** of cyclic triples differs from an
   oriented triangle 2-form. The C3-support fibre theorem must not be substituted
-  for a theorem about signed curl. The score-function refinement is exact only
-  in the stated finite range here. For labelled full responses and the need to
+  for a theorem about signed curl. The unsigned C3 support together with the vertex-addressed score function
+  has exact labelled fibre `2^b` at every order, by the Session67 module-sum proof
+  linked above. This differs from the full signed addressed curl field: scores
+  plus that signed field recover the relation exactly. The metagraph port
+  transportation question remains open. For labelled full responses and the need to
   align labels, use the [current information result](../hn_metagraph_information_20261026/information/RESULT.md).
 - HYP-3602 and `relations-not-things.md` ("order ⊕ intransitivity = cut ⊕ cycle"; 3-cycles
   generate all intransitivity, Moon): Theorem I is the quantitative form — the cycle part

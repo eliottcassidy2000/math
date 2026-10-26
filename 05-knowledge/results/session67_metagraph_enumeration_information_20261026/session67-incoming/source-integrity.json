@@ -1,0 +1,296 @@
+{
+  "integration_pin": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+  "producer_pin": "62430ddb33e685494ae50f00d05e24c837bb3e02",
+  "sha256_manifest_pass": true,
+  "file_count": 48,
+  "checks": [
+    {
+      "path": "./CONCEPT_BOARD.md",
+      "expected": "bce6b5614ae4563ea08fb0c85b092ad913d621e5cafb01d2e3c6443e1b1a5de2",
+      "actual": "bce6b5614ae4563ea08fb0c85b092ad913d621e5cafb01d2e3c6443e1b1a5de2",
+      "pass": true
+    },
+    {
+      "path": "./FAMILIES.md",
+      "expected": "b5cbb76d771af8c42138fec089601f057739d3fc2f0958074c77b32fea94991a",
+      "actual": "b5cbb76d771af8c42138fec089601f057739d3fc2f0958074c77b32fea94991a",
+      "pass": true
+    },
+    {
+      "path": "./INFORMATION.md",
+      "expected": "2f71ce0ce8d9a29d951212611a4996972f7428074b7c0c6e160eb4eee5297fde",
+      "actual": "2f71ce0ce8d9a29d951212611a4996972f7428074b7c0c6e160eb4eee5297fde",
+      "pass": true
+    },
+    {
+      "path": "./INTRANSITIVITY.md",
+      "expected": "05d4cc51cf5e9520854d8003158173c104a89bf0092857009e5f138cca99a1ca",
+      "actual": "05d4cc51cf5e9520854d8003158173c104a89bf0092857009e5f138cca99a1ca",
+      "pass": true
+    },
+    {
+      "path": "./README.md",
+      "expected": "9fbe8b5609a8b3e7218139c504bc6ad0712e7c7e73bc35527914cc4c04a1b378",
+      "actual": "9fbe8b5609a8b3e7218139c504bc6ad0712e7c7e73bc35527914cc4c04a1b378",
+      "pass": true
+    },
+    {
+      "path": "./data/c3class_sizes_n3.txt",
+      "expected": "c183b04383e61541b8cc3dc4f6fe0213ae63aa8c446eb331754f00204be44d6a",
+      "actual": "c183b04383e61541b8cc3dc4f6fe0213ae63aa8c446eb331754f00204be44d6a",
+      "pass": true
+    },
+    {
+      "path": "./data/c3class_sizes_n4.txt",
+      "expected": "6a00d5067589a8dcc231283543f6f4088ea2f122fc504192931186b4f0485633",
+      "actual": "6a00d5067589a8dcc231283543f6f4088ea2f122fc504192931186b4f0485633",
+      "pass": true
+    },
+    {
+      "path": "./data/c3class_sizes_n5.txt",
+      "expected": "c7d6f1e72903c3d1694bc9b3aa4de4e0509065821a66dc052c6ca7152fffcdfd",
+      "actual": "c7d6f1e72903c3d1694bc9b3aa4de4e0509065821a66dc052c6ca7152fffcdfd",
+      "pass": true
+    },
+    {
+      "path": "./data/c3class_sizes_n6.txt",
+      "expected": "3fc6667373694ca6154b368fda421eae7bb345fc2a6c0d825b68eab22b61e102",
+      "actual": "3fc6667373694ca6154b368fda421eae7bb345fc2a6c0d825b68eab22b61e102",
+      "pass": true
+    },
+    {
+      "path": "./data/c3class_sizes_n7.txt",
+      "expected": "13c9882ae20eb1181641bc23803bc68011e3f6dc2ff5d30d535c0d63cb653411",
+      "actual": "13c9882ae20eb1181641bc23803bc68011e3f6dc2ff5d30d535c0d63cb653411",
+      "pass": true
+    },
+    {
+      "path": "./data/c3score_exceptions_n3.txt",
+      "expected": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "actual": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+      "pass": true
+    },
+    {
+      "path": "./data/c3score_exceptions_n4.txt",
+      "expected": "fcb9cc30b0f3e4715d032f3a0ce158e4d6bea8c618bda0f5d1f167300a087b8a",
+      "actual": "fcb9cc30b0f3e4715d032f3a0ce158e4d6bea8c618bda0f5d1f167300a087b8a",
+      "pass": true
+    },
+    {
+      "path": "./data/c3score_exceptions_n5.txt",
+      "expected": "b49c053f35086fa624f4b2141909e438c8ea08c6bc944ec4caf1560cf883b0bb",
+      "actual": "b49c053f35086fa624f4b2141909e438c8ea08c6bc944ec4caf1560cf883b0bb",
+      "pass": true
+    },
+    {
+      "path": "./data/c3score_exceptions_n6.txt",
+      "expected": "32bb445981c331a010e7ea34e9f5490b6878aa8f74fc8c2f518e892765320737",
+      "actual": "32bb445981c331a010e7ea34e9f5490b6878aa8f74fc8c2f518e892765320737",
+      "pass": true
+    },
+    {
+      "path": "./data/c3score_exceptions_n7.txt",
+      "expected": "88ce331fcfad9915206df291f09ed2e604a11ac415e63c2e90a5241f066fad47",
+      "actual": "88ce331fcfad9915206df291f09ed2e604a11ac415e63c2e90a5241f066fad47",
+      "pass": true
+    },
+    {
+      "path": "./data/census_n10_summary.txt",
+      "expected": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "actual": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "pass": true
+    },
+    {
+      "path": "./data/census_n8_n9_summary.txt",
+      "expected": "60ef8d1ae7499445e6ec5d58bc1f67d164401973af22f805f6bc710431ce85ec",
+      "actual": "60ef8d1ae7499445e6ec5d58bc1f67d164401973af22f805f6bc710431ce85ec",
+      "pass": true
+    },
+    {
+      "path": "./data/classes_n7.tsv",
+      "expected": "edbc49a9c7e4e7eeab86704f34e99adcf89a9eb7c1d15855b7b31cacae83b693",
+      "actual": "edbc49a9c7e4e7eeab86704f34e99adcf89a9eb7c1d15855b7b31cacae83b693",
+      "pass": true
+    },
+    {
+      "path": "./data/classes_n8.tsv",
+      "expected": "28b8423f847de9644ef7e4c9926c1a95740d02e0fb6fdfe67b3864c8a81f9019",
+      "actual": "28b8423f847de9644ef7e4c9926c1a95740d02e0fb6fdfe67b3864c8a81f9019",
+      "pass": true
+    },
+    {
+      "path": "./data/prime_cycle_types_n9.tsv",
+      "expected": "675c6064d625149c3a97766912dd6734eb4b9bce14bea3c3dd3c963ab51fd5df",
+      "actual": "675c6064d625149c3a97766912dd6734eb4b9bce14bea3c3dd3c963ab51fd5df",
+      "pass": true
+    },
+    {
+      "path": "./data/primes_n7.txt",
+      "expected": "f818618a09e2f0d73e6ed498bde3af16150d9dad8eaed2283488184c15e72f8e",
+      "actual": "f818618a09e2f0d73e6ed498bde3af16150d9dad8eaed2283488184c15e72f8e",
+      "pass": true
+    },
+    {
+      "path": "./data/primes_n8.txt",
+      "expected": "5a4717580269aeb682c933e4c6ee2d7a6e97f25296f0f2729c946d8853fc4b30",
+      "actual": "5a4717580269aeb682c933e4c6ee2d7a6e97f25296f0f2729c946d8853fc4b30",
+      "pass": true
+    },
+    {
+      "path": "./receipts/analyze-normal.txt",
+      "expected": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "actual": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "pass": true
+    },
+    {
+      "path": "./receipts/analyze-optimized.txt",
+      "expected": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "actual": "b138236059b2eb4c375f959ff698fdfd39d9a2dcb4c34aa9179d9e0c5099f86b",
+      "pass": true
+    },
+    {
+      "path": "./receipts/balanced-normal.txt",
+      "expected": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "actual": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "pass": true
+    },
+    {
+      "path": "./receipts/balanced-optimized.txt",
+      "expected": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "actual": "177050127859b07bad79a42512738f254baecc5e439c0af4363efae6fa0d6bba",
+      "pass": true
+    },
+    {
+      "path": "./receipts/c3class-check.txt",
+      "expected": "ceaa9829920e4a51f90af351508635544aba90924fb6398bbc240c86a65a9995",
+      "actual": "ceaa9829920e4a51f90af351508635544aba90924fb6398bbc240c86a65a9995",
+      "pass": true
+    },
+    {
+      "path": "./receipts/c3score-n3-n7.txt",
+      "expected": "7a2d94cc73e9ef895c145af65793a00bb933b87bdd06a3d7aec4dd74394f77bb",
+      "actual": "7a2d94cc73e9ef895c145af65793a00bb933b87bdd06a3d7aec4dd74394f77bb",
+      "pass": true
+    },
+    {
+      "path": "./receipts/census-n10.txt",
+      "expected": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "actual": "3ee91ae61bdb224a182f3d74d9861f06ae3723447f7e95ac6d30d2fefd38ba4b",
+      "pass": true
+    },
+    {
+      "path": "./receipts/census-n3-n9.txt",
+      "expected": "b3c55b014e5b32a15a15ec509a3917675164d2793b2a0c42da17888af8f1bf71",
+      "actual": "b3c55b014e5b32a15a15ec509a3917675164d2793b2a0c42da17888af8f1bf71",
+      "pass": true
+    },
+    {
+      "path": "./receipts/chain-normal.txt",
+      "expected": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "actual": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "pass": true
+    },
+    {
+      "path": "./receipts/chain-optimized.txt",
+      "expected": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "actual": "da4101795b373b21ce6b2f25aadfdb9ab6344fc0eb1223cc651065cf7087da25",
+      "pass": true
+    },
+    {
+      "path": "./receipts/conn-normal.txt",
+      "expected": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "actual": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "pass": true
+    },
+    {
+      "path": "./receipts/conn-optimized.txt",
+      "expected": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "actual": "b5e4572d9d1c9728408a921ab8435b2ff30b6c58502313c8b1249127358ab2e2",
+      "pass": true
+    },
+    {
+      "path": "./receipts/species-normal.txt",
+      "expected": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "actual": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "pass": true
+    },
+    {
+      "path": "./receipts/species-optimized.txt",
+      "expected": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "actual": "65227b1c521c8fc6ef1a2af7b8f146f3aed1f3390a2764bfcfb882329a938902",
+      "pass": true
+    },
+    {
+      "path": "./receipts/species10-normal.txt",
+      "expected": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "actual": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "pass": true
+    },
+    {
+      "path": "./receipts/species10-optimized.txt",
+      "expected": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "actual": "790739f1c103c62020e49ec14ae076d7bfac1f8984cf504a80bdf5f02c8745ca",
+      "pass": true
+    },
+    {
+      "path": "./scripts/analyze.py",
+      "expected": "3e4efdb41d8abc9dd5f8ca29372dcfe79373fa9a215fa936476a6e0bd6967f95",
+      "actual": "3e4efdb41d8abc9dd5f8ca29372dcfe79373fa9a215fa936476a6e0bd6967f95",
+      "pass": true
+    },
+    {
+      "path": "./scripts/balanced_check.py",
+      "expected": "802f7a1456f136c1c4b9244f2bf4a8297ed1adfed36a3210e0e99e943decd314",
+      "actual": "802f7a1456f136c1c4b9244f2bf4a8297ed1adfed36a3210e0e99e943decd314",
+      "pass": true
+    },
+    {
+      "path": "./scripts/c3class.c",
+      "expected": "dee0feedabd2c04e076b24eefc569dc89d4de3c67c382029cf90f51cc7ec7bbf",
+      "actual": "dee0feedabd2c04e076b24eefc569dc89d4de3c67c382029cf90f51cc7ec7bbf",
+      "pass": true
+    },
+    {
+      "path": "./scripts/c3score.c",
+      "expected": "3d0791b8ab08bfdffe5503a4b46f62d1683a5bacb129e2ad6e28460e1968e603",
+      "actual": "3d0791b8ab08bfdffe5503a4b46f62d1683a5bacb129e2ad6e28460e1968e603",
+      "pass": true
+    },
+    {
+      "path": "./scripts/chain_family.py",
+      "expected": "fc7b0b78fea16631be3d55596f73d32591fcb1ea039e4fbeb051a822b3bb0295",
+      "actual": "fc7b0b78fea16631be3d55596f73d32591fcb1ea039e4fbeb051a822b3bb0295",
+      "pass": true
+    },
+    {
+      "path": "./scripts/conn_check.py",
+      "expected": "e1aa63c48a0c9c0995ed45116b7bb9248fc6c4578ea4a05d0648e54ae67bdb0e",
+      "actual": "e1aa63c48a0c9c0995ed45116b7bb9248fc6c4578ea4a05d0648e54ae67bdb0e",
+      "pass": true
+    },
+    {
+      "path": "./scripts/run.sh",
+      "expected": "8340ab2db7255dbce8980107b666edfe6a5e478c6e0811d594c03a81e029b304",
+      "actual": "8340ab2db7255dbce8980107b666edfe6a5e478c6e0811d594c03a81e029b304",
+      "pass": true
+    },
+    {
+      "path": "./scripts/species.py",
+      "expected": "0a8c06c7b2ce04d37a9ab0d97f0e3f4bcbdf931545d730e38d5a9261b63120c7",
+      "actual": "0a8c06c7b2ce04d37a9ab0d97f0e3f4bcbdf931545d730e38d5a9261b63120c7",
+      "pass": true
+    },
+    {
+      "path": "./scripts/species10.py",
+      "expected": "17f952e7395298aa26463902f05063949d6bf7b314881eb21f27a5498e25511b",
+      "actual": "17f952e7395298aa26463902f05063949d6bf7b314881eb21f27a5498e25511b",
+      "pass": true
+    },
+    {
+      "path": "./scripts/tourn_enum.c",
+      "expected": "f02b0137007e512c99cb182c0694a4f95329a3dd7f822527f36a58a61dbad55d",
+      "actual": "f02b0137007e512c99cb182c0694a4f95329a3dd7f822527f36a58a61dbad55d",
+      "pass": true
+    }
+  ]
+}

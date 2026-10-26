@@ -1,7 +1,12 @@
 ---
 id: HYP-3602
 title: REFRAME (expanding the odd cycle) -- a tournament is NOT a graph among n nodes but the INTRANSITIVITY among n things (a preference/dominance relation, its deviation from a total order). The transitive tournament = the unique orderable/rankable point = a COBOUNDARY (a ranking potential f, a->b iff f(a)>f(b)); intransitivity = the cohomology class H^1 = the cycle space; the ODD 3-CYCLE = the irreducible atom = the Condorcet paradox (Moon: it generates). Order (+) Intransitivity = Cut (+) Cycle: order dim n-1, intransitivity dim C(n-1,2) (dominates). Orderability VANISHES (P(transitive)=n!/2^C(n,2), P(Condorcet-winner)=n/2^(n-1), both ->0) so INTRANSITIVITY IS GENERIC. # of intransitivity SHAPES (cycle-space iso) = even graphs A002854=2,3,7,16,54; tournaments A000568 = order x shape. LRC reading: the danger relation among RUNNERS is intransitivity among n things; disproof=ORDERABLE (separable/factored, covers); proof=irreducibly INTRANSITIVE (the apex odd cycle C_p, length=apex prime=7, genus=#independent global cycles=1 at N=14); EXISTENCE of the odd cycle (sigma-odd/counting/topological, finite via THM-590 4cos^2(3pi/7)>0), NOT the lonely MEASURE (inf=0 over the infinite family, klein-S16), is load-bearing. ENGINEERING: this is HodgeRank/social-choice -- cyclicity c(T) = an irrationality/inconsistency index for pairwise-comparison data
-status: REFRAME + VERIFIED grounding (cyclicity spectrum, orderability->0, dim split, intransitivity-shape count n=3..6/7). Not a new proof; an ontology that unifies the odd-cycle truth (HYP-3594), the cut/cycle equinumerosity (HYP-3595), and the LRC existence-not-measure correction (klein-S16) -- and opens the social-choice application.
+status: >
+  HISTORICAL REFRAME / PARTIALLY CORRECTED (Session67, 2026-10-26).
+  Relation-first interpretation and the triangle obstruction to transitivity survive.
+  Literal zero-curl/cohomology and unlabelled order-times-shape identifications do not.
+  See the current-scope correction immediately below the frontmatter.
+  No LRC theorem or reduction is established by this historical reframe.
 source: mac-mini-2026-06-30-S34
 related:
   - HYP-3594  # the truth = a single odd cycle (this gives its MEANING: the atom of intransitivity)
@@ -14,6 +19,25 @@ results:
   - 04-computation/intransitivity_among_n_things_macmini_20260630.py
   - 05-knowledge/results/intransitivity_among_n_things_macmini_20260630.out
 ---
+
+> **CURRENT-SCOPE CORRECTION — Session67, 2026-10-26.** This is historical
+> idea provenance, not a complete invariant or an LRC proof. Binary
+> transitivity means `S_ij=sign(p_i-p_j)` for an injective ranking, not
+> `S_ij=p_i-p_j`: a transitive triple already has signed curl `+1` or `-1`.
+> The exact cyclic-triple indicator is `(c_ijk^2-1)/8`; zero real curl and
+> binary transitivity must not be identified. The full clique complex has
+> zero first cohomology, and GF(2) switching/cycle coordinates are a different
+> quotient (switching can turn a transitive triple into a cyclic one).
+> The labelled count identity `2^binom(n,2)=2^(n-1)2^binom(n-1,2)` does not
+> factor A000568 into unlabelled order and shape counts; HYP-3595 already
+> warned that stabilizers couple the factors. The repaired lossless family
+> datum is a pair-free tournament core with positive transitive-module sizes,
+> modulo its automorphism group. Alternatively, a cyclic-triple hypergraph
+> needs its full realization orbit under its own automorphism group.
+> “Only quadratic invariant” is not “only invariant of any degree.”
+> The danger-relation and odd-cycle language below establishes no LRC
+> implication; LRC(14) remains open. See the [Session67 information recovery](../results/session67_metagraph_enumeration_information_20261026/session67-information/INFORMATION_INTRANSITIVITY_RECOVERY.md), §§2, 4–6,
+> including its pinned Session36 curl-realization sources.
 
 # HYP-3602 -- tournaments are intransitivity among n things
 

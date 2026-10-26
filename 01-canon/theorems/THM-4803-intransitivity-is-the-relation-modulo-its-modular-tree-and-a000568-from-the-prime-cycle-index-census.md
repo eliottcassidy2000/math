@@ -1,8 +1,8 @@
 ---
 id: THM-4803
-title: "Cyclic-triple realization fibres and prime-cycle-index census; corrected: path-cover counts survive, automorphism order first fails at twelve"
+title: "Cyclic-triple realization fibres and prime-cycle-index census; corrected: path-cover counts survive, automorphism boundary and exact addressed-score fibres"
 status: >
-  CITED + PROVED + FINITE-EXACT (klein, 2026-10-26; original census not independently re-audited here). CORRECTED 2026-10-26: the all-order Aut-order and strong-component-isotype invariance claims are REFUTED; use the audited sharp-4p repair linked below. The fibre description and formula are
+  CITED + PROVED + FINITE-EXACT (klein, 2026-10-26; original census not independently re-audited here; Session67 partially reviews supplied-data arithmetic). CORRECTED 2026-10-26: the all-order Aut-order and strong-component-isotype invariance claims are REFUTED; use the audited sharp-4p repair linked below. The fibre description and formula are
   the published theorems of Boussaïri–Ille–Lopez–Thomassé (Discrete Math. 277 (2004) 29–43: a prime tournament is
   determined up to duality by its 3-cycles) and Boussaïri–Chergui–Ille–Zaidi (arXiv:1805.04607, Corollary 57: the number
   of realizations of a realizable 3-uniform hypergraph is 2^{#prime nodes} times the product of the factorials of the
@@ -46,6 +46,17 @@ related:
 > The [companion necklace classification](../../05-knowledge/results/cyclictriple_composition_20261026/README.md)
 > gives complete carousel fibres, weighted flip spectra and pointed growth.
 
+> **CURRENT-SCOPE CORRECTION — Session67, 2026-10-26.** The original all-order
+> automorphism and ordinary component-type assertions are false; the recorded finite
+> automorphism-order and component-SIZE tests remain valid in their ranges.
+> They did not test ordinary component isotypes, which can already differ at six. The cited fibre
+> theorem and credited species/census work are not retracted. The sharp order-12
+> counterexample and exact `2^b` addressed-score fibre theorem, their proofs,
+> corrected parity/information distinctions and bounded independent checks are
+> in the [incoming review](../../05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md).
+> Original theorem and packet snapshots are retained there. Order-10 arithmetic
+> treats the producer's prime totals as inputs, not a newly audited census.
+
 Let `T` be a tournament on `V`, `|V| = n`, and `C3(T)` the 3-uniform hypergraph of its cyclic
 triples (its intransitivity structure). Let `𝒯(T)` be the modular decomposition tree (Gallai):
 linear nodes with `k_N` children (strong components of the node's quotient), prime nodes with a
@@ -63,8 +74,11 @@ prime quotient; `p(T)` = number of prime nodes.
    order 11; its p-part is invariant below 4p, sharply for every odd prime p.
    The exact local formula retains the child-isotype stabilizer inside
    `Aut(Q)`. Global converse preserves automorphism order, but independent
-   changes in child types can change this stabilizer. The score-function
-   refinement to balanced-prime choices is FINITE-EXACT for `n <= 7` here.
+   changes in child types can change this stabilizer.
+   With the vertex-addressed score function included, the labelled fibre is
+   exactly `2^b`, where b counts size-balanced prime nodes. Module score sums
+   isolate every quotient contribution, so changes at different levels cannot
+   cancel. See the Session67 correction linked above for proofs and independent controls.
 4. **Counts (FINITE-EXACT, species PROVED).** With `c_s` the strong intransitivity classes,
    `c = MSET_{>=1}(c_s)` and `c_s = X + Σ_{[Q]_± prime/duality} Z_{Aut±(Q)}[c]`; evaluated from the
    prime cycle-index census and matching nauty canonical forms for `n <= 10`:
@@ -81,8 +95,12 @@ prime quotient; `p(T)` = number of prime nodes.
    observable loses `log₂ N(T) ∈ [1, log₂ n!]` bits; under the uniform law `E[log₂ N] = 2.19, 2.97,
    3.04, 2.60, 2.06, 1.64, 1.38, 1.22` for `n = 3..10` and `-> 1`, since the expected number of
    non-trivial modules `Σ_m C(n,m) 2^{-(m-1)(n-m)}` times `n log₂ n` tends to 0; the prime
-   fraction is `0.815` at `n = 10`. Per `c3` level the mean loss decreases monotonically and the
-   prime fraction increases; primes need `c3 >= n - 2` (Moon) and attain it for `5 <= n <= 10`.
+   fraction is `0.815` at `n = 10`. Per `c3` level the mean loss broadly decreases and the
+   prime fraction broadly increases, but neither trend is monotone; primes need `c3 >= n - 2` (Moon) and attain it for `5 <= n <= 10`.
 
-Proofs, tables and receipts: the source packet. The hard direction of (1) is cited, not re-proved;
-other scopes are as stated, subject to the correction above. The original finite census is preserved; the new proof and controls audit the repaired structural claims.
+Proofs, tables and original census receipts: the credited source packet. The hard
+structural direction is cited, not re-proved. Session67 independently replays
+supplied-data arithmetic through 10 and the stated bounded counterexample/fibre
+checks; it does not independently regenerate the prime census, nauty runs, OEIS
+claims, or wild-pair completeness.
+The concurrent sharp-4p, full path-cover and necklace repairs linked above are preserved.

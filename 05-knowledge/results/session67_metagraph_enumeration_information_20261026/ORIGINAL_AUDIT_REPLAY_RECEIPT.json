@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "audit_core_triangle.py",
+      "optimized": false,
+      "source_sha256": "676b704e028f97a05fb1641a4550564206b9cffa37af783a2b3cfc84be52550d",
+      "stdout_sha256": "1ebd7d541a69c67fd74772ed4add78aefa89f9af929f5a9fc41549adfed8a757",
+      "status": "PASS",
+      "execution_scope": "Original producer workspace layout, not portable standalone mode."
+    },
+    {
+      "script": "audit_core_triangle.py",
+      "optimized": true,
+      "source_sha256": "676b704e028f97a05fb1641a4550564206b9cffa37af783a2b3cfc84be52550d",
+      "stdout_sha256": "1ebd7d541a69c67fd74772ed4add78aefa89f9af929f5a9fc41549adfed8a757",
+      "status": "PASS",
+      "execution_scope": "Original producer workspace layout, not portable standalone mode."
+    },
+    {
+      "script": "audit_recurrence_cross.py",
+      "optimized": false,
+      "source_sha256": "84ee2a8c0eabc9655fae98230a7967240415a23750a99694ce8327138c2ea613",
+      "stdout_sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd",
+      "status": "PASS",
+      "execution_scope": "Original producer workspace layout, not portable standalone mode."
+    },
+    {
+      "script": "audit_recurrence_cross.py",
+      "optimized": true,
+      "source_sha256": "84ee2a8c0eabc9655fae98230a7967240415a23750a99694ce8327138c2ea613",
+      "stdout_sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd",
+      "status": "PASS",
+      "execution_scope": "Original producer workspace layout, not portable standalone mode."
+    }
+  ]
+}

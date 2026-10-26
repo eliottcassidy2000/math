@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "base_commit": "fc3768ac5fcd87022fde9e6d7e3f06c0e5bc22e8",
+  "corrections": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-3602-tournaments-are-intransitivity-among-n-things.md",
+      "before_sha256": "e0be287c02d7f93b93f9c8d10b4592576094ca7fed88066f5e9dae9794d8ebc9",
+      "after_sha256": "94869b106055e97721954a6fe59d7b79cd91808c137787ce4e3d79b5e8c50d33",
+      "preservation": "Original body unchanged; status and additive current-scope banner only."
+    },
+    {
+      "path": "04-computation/information_theory_deep.py",
+      "before_sha256": "144513d4bc10f62ab8203e4666805d0100533e7f886696dc6cf497c731ef7f7d",
+      "after_sha256": "2320306ed2e89cc626db39db85beae97791e160a54b468d3235d969f7502336f",
+      "preservation": "Original source exactly recoverable by removing two additive warnings; AST syntax passed."
+    },
+    {
+      "path": "05-knowledge/results/information_theory_deep.out",
+      "before_sha256": "e7db503deb30b3ce537dbc312276087576d16286fe7ccb4bf80cae02de341a96",
+      "after_sha256": "d4616ab3e355ce7734ee338b22a286097887c7896bc291e68a131c39546797ef",
+      "preservation": "Original stored output unchanged byte-for-byte after additive warning; not rerun."
+    }
+  ]
+}

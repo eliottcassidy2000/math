@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "lane": "session67-information",
+      "script": "verify_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "bd9418035fd7b30c58e274a9a015958aa1f5a1b0eeeaee6616d387389d3bc8c6",
+      "source_sha256": "b9821849384e2f1c22e79d9fb6691e39e63edeff3101fb8393c7a53cff808f06",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_core_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "5f43056f4f7c4b1a7cef675899ae06449986382e7ce79fd69eadf70b133aafcd",
+      "source_sha256": "b014b57e20a83806bc25880b6dc90faac63b8fd62a3cd049fb7392f761d7f27e",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_growth_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "2fbb09f671f3ad93c61e99ac46c010a20a297dffa0f1da60fdda2c95e35bc5ff",
+      "source_sha256": "a8482dff99e943b8b5157bb6cd0f7dc131b3337d959c2f0b645a2ca3cc9dcc39",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-metagraph",
+      "script": "verify_core_families.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e",
+      "source_sha256": "731d4322c537ff57ed4361fcddfd50ae51014fe4d65f636616e993c261d4b805",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "verify_recursion.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "3405fec6b4ffc2c82bc17ae621c3ab29919cbeeebb118509f9bcbdaa0ea473d3",
+      "source_sha256": "87d100964c6836de631e79524c7540f7926c788ec8b3daeca6a0d4b3ae070ab6",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "audit_hostile.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8",
+      "source_sha256": "c2a2f881d93a20b92523139f19ee1ec69a2a3bf013b08a1717459410b6dfba21",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "verify.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c",
+      "source_sha256": "1e31e7b92a44eb25aeb63dfb4fb00a4c0f67db397cc9d68c207939914686aab4",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_core_triangle_portable.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "0b1a7f83fa9f9797c5f571984d3050b8b0b4e0e3851c4820c121e8c19c9e05f0",
+      "source_sha256": "163ce5545a362cd74b148557f845d54c6bc26a35b1dda168ac937fa00a37ec1a",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_recurrence_cross_portable.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "be0a058fba318f85817e3f8f28cdf031ac557a5e69a1b32015d9d108b2caea34",
+      "source_sha256": "dbfd5a1ef7705af56998081fff8d8b1e4602cae6a66cb31c2778d94b8106fa9c",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-root",
+      "script": "verify_exports.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "573061f04f0f4748fab9eb26ac9426d3c7ec117f80f9ccc010b63f092c482d0d",
+      "source_sha256": "1e54f4851b78fe9b36ea7ee3bbb3c75543bd59068a88cdd1dd7c06113877a764",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming",
+      "script": "independent_review.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "3e32db2446f68a8afd4ee5bb01b7fa43c5a383cb4b31e75576ae45c08b7ae488",
+      "source_sha256": "9e379e097d12591873b42e008db8410f53fd77d930fcbd0eac7a4a1a14c34994",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming",
+      "script": "score_fibre_check.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "b0375e33e86a091dfdddec11c3f66094694d80a8d391c1cab8880a448607e041",
+      "source_sha256": "82778d63a5503d00d6e14a2e37719c9e76223362d955425c398a2e1cfe72d5eb",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming-root",
+      "script": "check_dual_modules.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "238036fc7f4ac42f1568e5b257925aeec3b1544391a03d24c11b18d6da71e2b3",
+      "source_sha256": "dbf3e6f03999394ac6abbeb7254339f86ccde78fc4f80f97fa0174d5cb4bba0f",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_core_triangle_portable.py",
+      "optimized": false,
+      "status": "PASS",
+      "named_commit_verified": true,
+      "stdout_sha256": "a03527a79ddc2b050dab3e4171ef4a0e7314d9c161a98367e4ec6373ac230c16"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "bd9418035fd7b30c58e274a9a015958aa1f5a1b0eeeaee6616d387389d3bc8c6",
+      "source_sha256": "b9821849384e2f1c22e79d9fb6691e39e63edeff3101fb8393c7a53cff808f06",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_core_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "5f43056f4f7c4b1a7cef675899ae06449986382e7ce79fd69eadf70b133aafcd",
+      "source_sha256": "b014b57e20a83806bc25880b6dc90faac63b8fd62a3cd049fb7392f761d7f27e",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_growth_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "2fbb09f671f3ad93c61e99ac46c010a20a297dffa0f1da60fdda2c95e35bc5ff",
+      "source_sha256": "a8482dff99e943b8b5157bb6cd0f7dc131b3337d959c2f0b645a2ca3cc9dcc39",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-metagraph",
+      "script": "verify_core_families.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e",
+      "source_sha256": "731d4322c537ff57ed4361fcddfd50ae51014fe4d65f636616e993c261d4b805",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "verify_recursion.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "3405fec6b4ffc2c82bc17ae621c3ab29919cbeeebb118509f9bcbdaa0ea473d3",
+      "source_sha256": "87d100964c6836de631e79524c7540f7926c788ec8b3daeca6a0d4b3ae070ab6",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "audit_hostile.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8",
+      "source_sha256": "c2a2f881d93a20b92523139f19ee1ec69a2a3bf013b08a1717459410b6dfba21",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "verify.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c",
+      "source_sha256": "1e31e7b92a44eb25aeb63dfb4fb00a4c0f67db397cc9d68c207939914686aab4",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_core_triangle_portable.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "0b1a7f83fa9f9797c5f571984d3050b8b0b4e0e3851c4820c121e8c19c9e05f0",
+      "source_sha256": "163ce5545a362cd74b148557f845d54c6bc26a35b1dda168ac937fa00a37ec1a",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_recurrence_cross_portable.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "be0a058fba318f85817e3f8f28cdf031ac557a5e69a1b32015d9d108b2caea34",
+      "source_sha256": "dbfd5a1ef7705af56998081fff8d8b1e4602cae6a66cb31c2778d94b8106fa9c",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-root",
+      "script": "verify_exports.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "573061f04f0f4748fab9eb26ac9426d3c7ec117f80f9ccc010b63f092c482d0d",
+      "source_sha256": "1e54f4851b78fe9b36ea7ee3bbb3c75543bd59068a88cdd1dd7c06113877a764",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming",
+      "script": "independent_review.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "3e32db2446f68a8afd4ee5bb01b7fa43c5a383cb4b31e75576ae45c08b7ae488",
+      "source_sha256": "9e379e097d12591873b42e008db8410f53fd77d930fcbd0eac7a4a1a14c34994",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming",
+      "script": "score_fibre_check.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "b0375e33e86a091dfdddec11c3f66094694d80a8d391c1cab8880a448607e041",
+      "source_sha256": "82778d63a5503d00d6e14a2e37719c9e76223362d955425c398a2e1cfe72d5eb",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-incoming-root",
+      "script": "check_dual_modules.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "238036fc7f4ac42f1568e5b257925aeec3b1544391a03d24c11b18d6da71e2b3",
+      "source_sha256": "dbf3e6f03999394ac6abbeb7254339f86ccde78fc4f80f97fa0174d5cb4bba0f",
+      "PATH": "/nonexistent"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_core_triangle_portable.py",
+      "optimized": true,
+      "status": "PASS",
+      "named_commit_verified": true,
+      "stdout_sha256": "a03527a79ddc2b050dab3e4171ef4a0e7314d9c161a98367e4ec6373ac230c16"
+    }
+  ],
+  "all_stdout_exact": true,
+  "inputs_written_only_in_temporary_copies": true
+}

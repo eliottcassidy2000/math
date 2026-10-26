@@ -1,0 +1,414 @@
+{
+  "census": [
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 0,
+      "fibre_counts": [
+        {
+          "aut_h_order": 1,
+          "fixed_point_sum": 1,
+          "hypergraph_code": 0,
+          "labelled_realizations": 1,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 1,
+      "n": 0,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 0,
+      "fibre_counts": [
+        {
+          "aut_h_order": 1,
+          "fixed_point_sum": 1,
+          "hypergraph_code": 0,
+          "labelled_realizations": 1,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 1,
+      "n": 1,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 2,
+      "fibre_counts": [
+        {
+          "aut_h_order": 2,
+          "fixed_point_sum": 2,
+          "hypergraph_code": 0,
+          "labelled_realizations": 2,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 2,
+      "n": 2,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 2,
+      "all_C3_inputs_checked": 2,
+      "class_entropy_formula": 0.8112781244591329,
+      "class_entropy_uniform_labelled": 0.8112781244591328,
+      "curl_edge_reconstruction_checks": 24,
+      "fibre_counts": [
+        {
+          "aut_h_order": 6,
+          "fixed_point_sum": 6,
+          "hypergraph_code": 0,
+          "labelled_realizations": 6,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 6,
+          "fixed_point_sum": 6,
+          "hypergraph_code": 1,
+          "labelled_realizations": 2,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 8,
+      "n": 3,
+      "positive_consistent_inputs": 2,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 1.0,
+      "unlabelled_realizable_C3_hypergraphs": 2
+    },
+    {
+      "A000568": 4,
+      "all_C3_inputs_checked": 16,
+      "class_entropy_formula": 1.811278124459133,
+      "class_entropy_uniform_labelled": 1.811278124459133,
+      "curl_edge_reconstruction_checks": 384,
+      "fibre_counts": [
+        {
+          "aut_h_order": 24,
+          "fixed_point_sum": 24,
+          "hypergraph_code": 0,
+          "labelled_realizations": 24,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 6,
+          "fixed_point_sum": 12,
+          "hypergraph_code": 1,
+          "labelled_realizations": 4,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "unlabelled_tournament_fibre": 2
+        },
+        {
+          "aut_h_order": 4,
+          "fixed_point_sum": 4,
+          "hypergraph_code": 3,
+          "labelled_realizations": 4,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 64,
+      "n": 4,
+      "positive_consistent_inputs": 11,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 2.0,
+      "unlabelled_realizable_C3_hypergraphs": 3
+    },
+    {
+      "A000568": 12,
+      "all_C3_inputs_checked": 1024,
+      "class_entropy_formula": 3.3951799848530846,
+      "class_entropy_uniform_labelled": 3.395179984853084,
+      "curl_edge_reconstruction_checks": 10240,
+      "fibre_counts": [
+        {
+          "aut_h_order": 120,
+          "fixed_point_sum": 120,
+          "hypergraph_code": 0,
+          "labelled_realizations": 120,
+          "positive_triples": [],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 12,
+          "fixed_point_sum": 36,
+          "hypergraph_code": 1,
+          "labelled_realizations": 12,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "unlabelled_tournament_fibre": 3
+        },
+        {
+          "aut_h_order": 4,
+          "fixed_point_sum": 8,
+          "hypergraph_code": 3,
+          "labelled_realizations": 8,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "unlabelled_tournament_fibre": 2
+        },
+        {
+          "aut_h_order": 12,
+          "fixed_point_sum": 12,
+          "hypergraph_code": 7,
+          "labelled_realizations": 12,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              4
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 2,
+          "fixed_point_sum": 2,
+          "hypergraph_code": 13,
+          "labelled_realizations": 2,
+          "positive_triples": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 8,
+          "fixed_point_sum": 8,
+          "hypergraph_code": 30,
+          "labelled_realizations": 8,
+          "positive_triples": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              2,
+              4
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 2,
+          "fixed_point_sum": 2,
+          "hypergraph_code": 86,
+          "labelled_realizations": 2,
+          "positive_triples": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 12,
+          "fixed_point_sum": 12,
+          "hypergraph_code": 116,
+          "labelled_realizations": 4,
+          "positive_triples": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        },
+        {
+          "aut_h_order": 10,
+          "fixed_point_sum": 10,
+          "hypergraph_code": 236,
+          "labelled_realizations": 2,
+          "positive_triples": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              0,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              4
+            ]
+          ],
+          "unlabelled_tournament_fibre": 1
+        }
+      ],
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "positive_consistent_inputs": 253,
+      "positive_consistent_unrealizable_inputs": 45,
+      "uniform_unlabelled_entropy": 3.584962500721156,
+      "unlabelled_realizable_C3_hypergraphs": 9
+    }
+  ],
+  "hostiles": {
+    "NAE_hostile_hypergraph": [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "NAE_hostile_phase_count": 6,
+    "common_GF2_triangle_parity": 1,
+    "cut_switched_cyclic_bits": 2,
+    "independent_noisy_channel_true_mutual_information_bits": 0,
+    "old_path_entropy_mutual_information_surrogate_n3": 2.188721875540867,
+    "transitive_bits": 7
+  },
+  "implementation": "stdlib-only direct permutation oracle + independent parity graph solver; require checks survive python -O",
+  "scope": "All labelled tournaments and every possible C3-hypergraph input for each n=0,...,5; no random cases. No claim above n=5 from finite tests.",
+  "status": "PASS"
+}

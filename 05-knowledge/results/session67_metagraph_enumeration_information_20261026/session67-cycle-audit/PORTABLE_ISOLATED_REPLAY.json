@@ -1,0 +1,18 @@
+{
+  "default_peer_paths_used": true,
+  "git_available_in_PATH": false,
+  "results": [
+    {
+      "byte_identical_to": "CORE_TRIANGLE_PORTABLE_RECEIPT.json",
+      "script": "audit_core_triangle_portable.py",
+      "sha256": "0b1a7f83fa9f9797c5f571984d3050b8b0b4e0e3851c4820c121e8c19c9e05f0"
+    },
+    {
+      "byte_identical_to": "RECURRENCE_CROSS_PORTABLE_RECEIPT.json",
+      "script": "audit_recurrence_cross_portable.py",
+      "sha256": "be0a058fba318f85817e3f8f28cdf031ac557a5e69a1b32015d9d108b2caea34"
+    }
+  ],
+  "sibling_repository_present": false,
+  "status": "PASS"
+}

@@ -8,6 +8,14 @@
 > The [companion necklace packet](../cyclictriple_composition_20261026/README.md)
 > classifies full carousel fibres and their weighted modular-flip spectra.
 
+> **SESSION67 CORRECTION — 2026-10-26.** The cited modular-fibre theorem and
+> original finite census are retained. All-order |Aut|-invariance fails first
+> at 12 (81 versus 27); component ordinary types, parity-bit identification and
+> monotone-level claims are corrected below. The exact addressed-score fibre
+> is now proved `2^b` using cited structural inputs. See the
+> [audited incoming review](../session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md);
+> original bytes are pinned there. Supplied-data arithmetic is not a new census.
+
 klein, 2026-10-26. The object is a tournament `T` on a finite set `V`, i.e. a complete
 antisymmetric binary relation, and its **intransitivity structure**: the 3-uniform hypergraph
 `C3(T)` whose edges are the cyclic triples `{a,b,c}` with `a -> b -> c -> a` (the literature's
@@ -143,9 +151,12 @@ dualization at a prime node whose quotient is balanced with respect to the block
 equal-size blocks). Exhaustively, the classes on which `(C3, score function)` does **not** determine `T` are
 **exactly** the classes with a size-balanced prime node — `1, 2, 5, 14, 53` classes for `n = 3..7`
 (`scripts/c3score.c`, `scripts/balanced_check.py`, receipts `c3score-n3-n7.txt`,
-`balanced-normal.txt`); `C_3` itself is the first. So the only cancellation-free statement that
-is finite-exact here is: scores kill every reordering and every unbalanced dualization, and
-moves at different nodes never cancel in the score function (`n <= 7`).
+`balanced-normal.txt`); `C_3` itself is the first. This refinement was
+originally finite-exact here. Session67 now proves it at every order: for
+a shared module M, `D(M)=(sum_(v in M) d(v)-binom(|M|,2))/|M|` isolates
+external outdegree; child-minus-parent D recovers each weighted quotient
+outdegree separately. Thus the exact labelled (C3,addressed-score) fibre is
+`2^b`, b the number of size-balanced prime nodes. See the linked proof.
 
 ## 4. Counting intransitivity structures
 
@@ -209,9 +220,9 @@ So a typical binary relation of this kind is determined by its intransitivity st
 bit; at the class level, `c(n)/A000568(n) = 0.4906` at `n = 10` and tends to `1/2` for the same
 reason (almost all classes are prime and not self-converse, and the crude bound
 `#non-prime classes <= #non-prime labelled / (n!/3^{(n-1)/2})` suffices since `(√3/2)^n n² -> 0`).
-Level-resolved (by `c3`): the mean of `log₂ N` falls monotonically from `log₂ n!` at level 0 to
-about 1.2 at the top levels, and the fraction of prime classes rises from 0 (levels `< n - 2`) to
-above 0.8 (`receipts/analyze-normal.txt`; FAMILIES.md §E). Minimum number of cyclic triples of
+Level-resolved (by `c3`): the mean of `log₂ N` has an overall decreasing,
+nonmonotone trend from `log₂ n!` at level 0 to about 1.2 at the top levels;
+the prime fraction has an overall increasing, also nonmonotone trend from 0 to above 0.8 (`receipts/analyze-normal.txt`; FAMILIES.md §E). Minimum number of cyclic triples of
 a prime tournament: `1, 3, 4, 5, 6, 7, 8` for `n = 3, 5, 6, 7, 8, 9, 10`, i.e. Moon's bound
 `n - 2` for strong tournaments is attained by primes from `n = 5` on; the extremal strong
 tournaments are the `2^{n-4}` chain-reversed transitive tournaments and the extremal primes the

@@ -1,0 +1,180 @@
+======================================================================
+1. RANKING ENTROPY: S(T) = log₂(H(T))
+======================================================================
+  H(T)/n! = fraction of total orderings consistent with T
+  S(T) = log₂(H(T)) = 'ranking entropy' in bits
+  Maximum: S_max = log₂(n!) for transitive (all orderings work) — WRONG
+  Actually: H(transitive) = 1, so S_min = 0
+  H(regular) = max → S_max = log₂(H_max)
+
+  n=3:
+    S_min = log₂(1) = 0.0000 bits
+    S_max = log₂(3) = 1.5850 bits
+    S_mean = log₂(E[H]) = log₂(1.50) = 0.5850 bits
+    S_max/log₂(n!) = 0.6131
+    Shannon entropy of H-value distribution: 0.8113 bits
+    Max possible (log₂ of distinct H values): 1.0000
+
+  n=4:
+    S_min = log₂(1) = 0.0000 bits
+    S_max = log₂(5) = 2.3219 bits
+    S_mean = log₂(E[H]) = log₂(3.00) = 1.5850 bits
+    S_max/log₂(n!) = 0.5064
+    Shannon entropy of H-value distribution: 1.5613 bits
+    Max possible (log₂ of distinct H values): 1.5850
+
+  n=5:
+    S_min = log₂(1) = 0.0000 bits
+    S_max = log₂(15) = 3.9069 bits
+    S_mean = log₂(E[H]) = log₂(7.50) = 2.9069 bits
+    S_max/log₂(n!) = 0.5657
+    Shannon entropy of H-value distribution: 2.6810 bits
+    Max possible (log₂ of distinct H values): 2.8074
+
+======================================================================
+2. NOISY CHANNEL: TOURNAMENT AS PAIRWISE COMPARISON CHANNEL
+======================================================================
+  Model: n items have a true ranking π ∈ S_n
+  Channel: each pair (i,j) compared independently
+    Correct comparison w.p. p > 1/2, error w.p. 1-p
+  Output: tournament T
+  H(T) = # rankings consistent with T
+  Channel capacity: how many bits of ranking info per comparison?
+  p=0.51: E[H]=7.50, I(π;T)=4.3516 bits, efficiency=0.4352 bits/comparison
+  p=0.60: E[H]=7.20, I(π;T)=4.4334 bits, efficiency=0.4433 bits/comparison
+  p=0.70: E[H]=6.33, I(π;T)=4.6900 bits, efficiency=0.4690 bits/comparison
+  p=0.80: E[H]=4.93, I(π;T)=5.1479 bits, efficiency=0.5148 bits/comparison
+  p=0.90: E[H]=3.11, I(π;T)=5.8585 bits, efficiency=0.5858 bits/comparison
+  p=0.95: E[H]=2.08, I(π;T)=6.3335 bits, efficiency=0.6333 bits/comparison
+  p=1.00: E[H]=1.00, I(π;T)=6.9069 bits, efficiency=0.6907 bits/comparison
+
+  Maximum I(π;T) = log₂(5!) = 6.9069 bits
+  With 10 comparisons → max 0.6907 bits/comparison
+
+======================================================================
+3. MINIMUM DESCRIPTION LENGTH FOR H(T)
+======================================================================
+
+  n=3, m=3:
+    Full tournament: 3 bits
+    Score sequences: 2 (1.00 bits)
+    H distinct values: 2 (1.00 bits)
+    H(H_value | score): 0.0000 bits
+    MDL for H: score (1.00) + residual (0.0000) = 1.0000 bits
+    Compression ratio: 0.3333
+    Score sufficiency: 1.0000
+
+  n=4, m=6:
+    Full tournament: 6 bits
+    Score sequences: 4 (2.00 bits)
+    H distinct values: 3 (1.58 bits)
+    H(H_value | score): 0.0000 bits
+    MDL for H: score (2.00) + residual (0.0000) = 2.0000 bits
+    Compression ratio: 0.3333
+    Score sufficiency: 1.0000
+
+  n=5, m=10:
+    Full tournament: 10 bits
+    Score sequences: 9 (3.17 bits)
+    H distinct values: 7 (2.81 bits)
+    H(H_value | score): 0.3962 bits
+    MDL for H: score (3.17) + residual (0.3962) = 3.5661 bits
+    Compression ratio: 0.3566
+    Score sufficiency: 0.8589
+
+======================================================================
+4. CAUSAL ENTROPY: UNCERTAINTY IN OPTIMIZATION TRAJECTORIES
+======================================================================
+  Inspired by Bajaj 2024 (arXiv:2409.01006): events have causal structure
+  In our setting: each arc reversal is an 'event'
+  Greedy ascent = sequence of events with causal dependencies
+  Causal entropy = log(# distinct greedy paths to optimum)
+
+  n=4, m=6:
+    Final H=5: 64 starts, avg_paths=1.5, max_paths=3, causal_entropy=0.396 bits, avg_steps=0.6
+
+  n=5, m=10:
+    Final H=15: 1024 starts, avg_paths=4.7, max_paths=27, causal_entropy=1.300 bits, avg_steps=1.6
+
+======================================================================
+5. DIRECTED INFORMATION FLOW IN TOURNAMENTS
+======================================================================
+  Each arc i→j represents 'i beats j' = information flows from i to j
+  The REACHABILITY MATRIX R[i][j] = 1 iff there's a directed path from i to j
+  For tournaments: R[i][j] = 1 for all i≠j (Redei's theorem: HP exists)
+  So tournaments are 'maximally connected' information networks
+
+  More refined: TRANSFER ENTROPY T(i→j) = mutual info beyond j's past
+  In tournaments: vertex j's 'past' = {k : k→j}, 'future' = {k : j→k}
+  Transfer entropy captures indirect influence beyond pairwise comparison
+
+  n=5: vertex influence analysis
+    T(bits=0): H=1, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), influences=[0, 8, 10, 8, 0], corr(s,inf)=0.000
+    T(bits=1): H=1, scores=(np.int64(1), np.int64(0), np.int64(2), np.int64(3), np.int64(4)), influences=[8, 0, 10, 8, 0], corr(s,inf)=0.000
+    T(bits=2): H=3, scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)), influences=[2, 2, 2, 12, 0], corr(s,inf)=0.222
+    T(bits=3): H=1, scores=(np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(4)), influences=[10, 0, 8, 8, 0], corr(s,inf)=0.000
+    T(bits=4): H=5, scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)), influences=[2, 4, 8, 0, 0], corr(s,inf)=-0.366
+
+======================================================================
+6. SOURCE CODING: ENTROPY vs TEMPERATURE
+======================================================================
+  n=5: Tournament source at temperature T = 1/β
+  P(T) ∝ exp(β·H(T))
+  Source entropy S(β) = -Σ P(T) log₂ P(T)
+  β=  0.001: S= 10.00 bits, <H>=  7.52, n_eff=  1024.0, S/m=1.0000
+  β=  0.010: S= 10.00 bits, <H>=  7.68, n_eff=  1023.1, S/m=0.9999
+  β=  0.100: S=  9.88 bits, <H>=  9.25, n_eff=   939.3, S/m=0.9875
+  β=  0.500: S=  8.40 bits, <H>= 13.22, n_eff=   336.8, S/m=0.8396
+  β=  1.000: S=  7.16 bits, <H>= 14.46, n_eff=   142.7, S/m=0.7157
+  β=  2.000: S=  6.25 bits, <H>= 14.93, n_eff=    76.0, S/m=0.6249
+  β=  5.000: S=  6.00 bits, <H>= 15.00, n_eff=    64.1, S/m=0.6001
+  β= 10.000: S=  6.00 bits, <H>= 15.00, n_eff=    64.0, S/m=0.6000
+  β= 50.000: S=  6.00 bits, <H>= 15.00, n_eff=    64.0, S/m=0.6000
+
+  Phase transition analysis:
+    Steepest entropy drop at β_c ≈ 0.311 (T_c ≈ 3.216)
+
+======================================================================
+7. KOLMOGOROV COMPLEXITY vs RANKING AMBIGUITY
+======================================================================
+  Conjecture: K(T) and H(T) are ANTI-correlated
+  Simple tournaments (low K) tend to have extreme H
+  Complex tournaments (high K) tend to have middling H
+  bits=   0: H=  1, runs=1, RLE=5, SC=False, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), Var=2.00
+  bits=   1: H=  1, runs=2, RLE=10, SC=False, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), Var=2.00
+  bits=   2: H=  3, runs=3, RLE=15, SC=False, scores=(np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(4)), Var=1.60
+  bits=   3: H=  1, runs=2, RLE=10, SC=False, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), Var=2.00
+  bits=   4: H=  5, runs=3, RLE=15, SC=False, scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)), Var=1.20
+  bits=   5: H=  3, runs=4, RLE=20, SC=False, scores=(np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(4)), Var=1.60
+  bits=   6: H=  5, runs=3, RLE=15, SC=False, scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(4)), Var=1.20
+  bits=   7: H=  1, runs=2, RLE=10, SC=False, scores=(np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4)), Var=2.00
+  bits=   8: H=  9, runs=3, RLE=15, SC=False, scores=(np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3)), Var=0.80
+  bits=   9: H=  5, runs=4, RLE=20, SC=False, scores=(np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3)), Var=1.20
+
+======================================================================
+8. FISHER INFORMATION: SCORE AS SUFFICIENT STATISTIC
+======================================================================
+  Score sequence s = (s_1,...,s_n) is a statistic of T
+  By THM-163: H_2 = c_2 · n · (m - 2·Var(s))
+  Score is 'almost sufficient' for H (85-100% info captured)
+
+  Fisher information I_F(θ) = Var(∂logP/∂θ) measures info content
+  For exponential family P(T) ∝ exp(β·H(T)):
+    I_F(β) = Var_β[H(T)] = <H²> - <H>²
+
+  n=5: Fisher information I_F(β) = Var_β[H]
+  β=0.01: <H>=7.68, Var[H]=17.8459, I_F=0.0018
+        Var[score_var]=0.2967, Fisher ratio: 0.0166 (=1 if score sufficient)
+  β=0.10: <H>=9.25, Var[H]=16.6019, I_F=0.1660
+        Var[score_var]=0.2463, Fisher ratio: 0.0148 (=1 if score sufficient)
+  β=0.50: <H>=13.22, Var[H]=4.7299, I_F=1.1825
+        Var[score_var]=0.0537, Fisher ratio: 0.0114 (=1 if score sufficient)
+  β=1.00: <H>=14.46, Var[H]=1.1851, I_F=1.1851
+        Var[score_var]=0.0348, Fisher ratio: 0.0294 (=1 if score sufficient)
+  β=2.00: <H>=14.93, Var[H]=0.1385, I_F=0.5540
+        Var[score_var]=0.0370, Fisher ratio: 0.2670 (=1 if score sufficient)
+  β=5.00: <H>=15.00, Var[H]=0.0003, I_F=0.0085
+        Var[score_var]=0.0375, Fisher ratio: 110.1273 (=1 if score sufficient)
+
+
+DONE — information_theory_deep.py complete

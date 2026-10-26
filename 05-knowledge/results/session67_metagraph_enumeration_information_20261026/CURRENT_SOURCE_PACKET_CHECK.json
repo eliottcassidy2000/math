@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "current_producer_packet": "05-knowledge/results/a000568_intransitivity_families_20261026",
+  "native_checksums_verified": 48,
+  "original_manifest_preserved": "session67-incoming/klein-packet/SHA256SUMS",
+  "source_identity": "klein, 2026-10-26; concurrent sharp-4p/path-cover/necklace repairs preserved; Session67 additions separately attributed",
+  "concurrent_merge_base": "18866090755d6b1cc6047caffcff8ff358ffcf3f"
+}

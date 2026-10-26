@@ -1,0 +1,54 @@
+{
+  "REPORT.md": {
+    "bytes": 14175,
+    "sha256": "41aa33c42378135566e15c9f3025146470141ff0f0fd3179cc9f8d03ad7138ef"
+  },
+  "VALIDATION.md": {
+    "bytes": 2510,
+    "sha256": "69806307fdd0a869932bb97a5c83e37625d8ddcfc98c6cde95372db06ba98305"
+  },
+  "receipt-optimized.json": {
+    "bytes": 51726,
+    "sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e"
+  },
+  "receipt.json": {
+    "bytes": 51726,
+    "sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e"
+  },
+  "source_manifest.json": {
+    "bytes": 2257,
+    "sha256": "0d413920098819fab4cb84bd780f8dfed99bbb73a4c5cb2e901cb4df1bfe8631"
+  },
+  "sources/01-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md": {
+    "bytes": 21162,
+    "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+  },
+  "sources/02-enumeration.md": {
+    "bytes": 9481,
+    "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe"
+  },
+  "sources/03-growth.md": {
+    "bytes": 15157,
+    "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c"
+  },
+  "sources/04-core_count.md": {
+    "bytes": 15825,
+    "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9"
+  },
+  "sources/05-README.md": {
+    "bytes": 16101,
+    "sha256": "07ce8fbdf4c7bbb69329fe4eefd925e789c3ed7405f06953b71ccd8261d67fe2"
+  },
+  "sources/06-boundary.md": {
+    "bytes": 14258,
+    "sha256": "c359a51a188d2746e6abf19a547962ebe7c59aa32840e4cce93e221a5eccc7f3"
+  },
+  "sources/07-README.md": {
+    "bytes": 27382,
+    "sha256": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685"
+  },
+  "verify_core_families.py": {
+    "bytes": 14579,
+    "sha256": "731d4322c537ff57ed4361fcddfd50ae51014fe4d65f636616e993c261d4b805"
+  }
+}

@@ -1,0 +1,4 @@
+A000568 from species (n=1..10): [1, Fraction(1, 1), Fraction(2, 1), Fraction(4, 1), Fraction(12, 1), Fraction(56, 1), Fraction(456, 1), Fraction(6880, 1), Fraction(191536, 1), Fraction(9733056, 1)]
+strong (n=1..10): [1, 0, Fraction(1, 1), Fraction(1, 1), Fraction(6, 1), Fraction(35, 1), Fraction(353, 1), Fraction(6008, 1), Fraction(178133, 1), Fraction(9355949, 1)]
+C3-structure classes c(n), n=1..10: [1, Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(9, 1), Fraction(32, 1), Fraction(247, 1), Fraction(3328, 1), Fraction(93612, 1), Fraction(4774417, 1)]
+strong C3-structure classes, n=1..10: [1, Fraction(0, 1), Fraction(1, 1), Fraction(1, 1), Fraction(6, 1), Fraction(22, 1), Fraction(214, 1), Fraction(3074, 1), Fraction(90255, 1), Fraction(4680547, 1)]

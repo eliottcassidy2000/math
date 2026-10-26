@@ -1,0 +1,418 @@
+{
+  "checks": {
+    "all masks core3 iff literal clones": 6,
+    "backtracking automorphisms full orbit mass": 76,
+    "both parents rigid": 22,
+    "each literal clone mask keeps core3": 506,
+    "full attachment and clone-only mass agree": 6,
+    "infinite formula exact at sampled k": 22,
+    "infinite hostile gap two thirds": 11,
+    "literal clone mask count": 22,
+    "minimal card and divide-order boundaries": 1,
+    "parents exact canonical weights": 22,
+    "rooted code equality iff exact rooted isomorphism": 2403,
+    "selected roots exactly one actual automorphism orbit": 76,
+    "uniform child exact 0 versus1 transition": 22
+  },
+  "exact_rooted_census": [
+    {
+      "classes": 1,
+      "n": 1,
+      "rooted_classes": 1
+    },
+    {
+      "classes": 1,
+      "n": 2,
+      "rooted_classes": 2
+    },
+    {
+      "classes": 2,
+      "n": 3,
+      "rooted_classes": 4
+    },
+    {
+      "classes": 4,
+      "n": 4,
+      "rooted_classes": 12
+    },
+    {
+      "classes": 12,
+      "n": 5,
+      "rooted_classes": 48
+    },
+    {
+      "classes": 56,
+      "n": 6,
+      "rooted_classes": 296
+    }
+  ],
+  "peer_report_sha256": "356cad6322edb0541ce29a692a5cfa9b52eb076589d43af8950cb33b722639c2",
+  "peer_script_sha256": "87d100964c6836de631e79524c7540f7926c788ec8b3daeca6a0d4b3ae070ab6",
+  "sampled_k": [
+    {
+      "all_child_aut_histogram": {
+        "1": 30,
+        "3": 2
+      },
+      "clone_aut_histogram": {
+        "1": 8
+      },
+      "core3_mass": "4/3",
+      "k": 2,
+      "n": 5,
+      "name": "A",
+      "raw_histogram": {
+        "3": 8,
+        "4": 2,
+        "5": 14,
+        "6": 8
+      },
+      "uniform_child_mass": "0",
+      "weighted_histogram": {
+        "3": "4/3",
+        "4": "1/3",
+        "5": "7/3",
+        "6": "2"
+      }
+    },
+    {
+      "all_child_aut_histogram": {
+        "1": 28,
+        "3": 4
+      },
+      "clone_aut_histogram": {
+        "1": 6,
+        "3": 2
+      },
+      "core3_mass": "2",
+      "k": 2,
+      "n": 5,
+      "name": "B",
+      "raw_histogram": {
+        "3": 8,
+        "4": 2,
+        "5": 14,
+        "6": 8
+      },
+      "uniform_child_mass": "1",
+      "weighted_histogram": {
+        "3": "2",
+        "4": "1/3",
+        "5": "3",
+        "6": "4/3"
+      }
+    },
+    {
+      "all_child_aut_histogram": {
+        "1": 251,
+        "3": 5
+      },
+      "clone_aut_histogram": {
+        "1": 11
+      },
+      "core3_mass": "11/9",
+      "k": 3,
+      "n": 8,
+      "name": "A",
+      "raw_histogram": {
+        "3": 11,
+        "4": 2,
+        "5": 35,
+        "6": 80,
+        "7": 80,
+        "8": 40,
+        "9": 8
+      },
+      "uniform_child_mass": "0",
+      "weighted_histogram": {
+        "3": "11/9",
+        "4": "2/9",
+        "5": "35/9",
+        "6": "28/3",
+        "7": "86/9",
+        "8": "40/9",
+        "9": "8/9"
+      }
+    },
+    {
+      "all_child_aut_histogram": {
+        "1": 248,
+        "3": 8
+      },
+      "clone_aut_histogram": {
+        "1": 8,
+        "3": 3
+      },
+      "core3_mass": "17/9",
+      "k": 3,
+      "n": 8,
+      "name": "B",
+      "raw_histogram": {
+        "3": 11,
+        "4": 2,
+        "5": 35,
+        "6": 80,
+        "7": 80,
+        "8": 40,
+        "9": 8
+      },
+      "uniform_child_mass": "1",
+      "weighted_histogram": {
+        "3": "17/9",
+        "4": "2/9",
+        "5": "37/9",
+        "6": "88/9",
+        "7": "80/9",
+        "8": "40/9",
+        "9": "8/9"
+      }
+    },
+    {
+      "all_child_aut_histogram": {
+        "1": 2040,
+        "3": 8
+      },
+      "clone_aut_histogram": {
+        "1": 14
+      },
+      "core3_mass": "7/6",
+      "k": 4,
+      "n": 11,
+      "name": "A",
+      "raw_histogram": {
+        "3": 14,
+        "4": 2,
+        "5": 56,
+        "6": 224,
+        "7": 448,
+        "8": 560,
+        "9": 448,
+        "10": 224,
+        "11": 64,
+        "12": 8
+      },
+      "uniform_child_mass": "0",
+      "weighted_histogram": {
+        "3": "7/6",
+        "4": "1/6",
+        "5": "14/3",
+        "6": "19",
+        "7": "115/3",
+        "8": "140/3",
+        "9": "112/3",
+        "10": "56/3",
+        "11": "16/3",
+        "12": "2/3"
+      }
+    },
+    {
+      "all_child_aut_histogram": {
+        "1": 2036,
+        "3": 12
+      },
+      "clone_aut_histogram": {
+        "1": 10,
+        "3": 4
+      },
+      "core3_mass": "11/6",
+      "k": 4,
+      "n": 11,
+      "name": "B",
+      "raw_histogram": {
+        "3": 14,
+        "4": 2,
+        "5": 56,
+        "6": 224,
+        "7": 448,
+        "8": 560,
+        "9": 448,
+        "10": 224,
+        "11": 64,
+        "12": 8
+      },
+      "uniform_child_mass": "1",
+      "weighted_histogram": {
+        "3": "11/6",
+        "4": "1/6",
+        "5": "14/3",
+        "6": "59/3",
+        "7": "113/3",
+        "8": "140/3",
+        "9": "112/3",
+        "10": "56/3",
+        "11": "16/3",
+        "12": "2/3"
+      }
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 17
+      },
+      "core3_mass": "17/15",
+      "k": 5,
+      "n": 14,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 12,
+        "3": 5
+      },
+      "core3_mass": "9/5",
+      "k": 5,
+      "n": 14,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 20
+      },
+      "core3_mass": "10/9",
+      "k": 6,
+      "n": 17,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 14,
+        "3": 6
+      },
+      "core3_mass": "16/9",
+      "k": 6,
+      "n": 17,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 23
+      },
+      "core3_mass": "23/21",
+      "k": 7,
+      "n": 20,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 16,
+        "3": 7
+      },
+      "core3_mass": "37/21",
+      "k": 7,
+      "n": 20,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 26
+      },
+      "core3_mass": "13/12",
+      "k": 8,
+      "n": 23,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 18,
+        "3": 8
+      },
+      "core3_mass": "7/4",
+      "k": 8,
+      "n": 23,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 29
+      },
+      "core3_mass": "29/27",
+      "k": 9,
+      "n": 26,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 20,
+        "3": 9
+      },
+      "core3_mass": "47/27",
+      "k": 9,
+      "n": 26,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 32
+      },
+      "core3_mass": "16/15",
+      "k": 10,
+      "n": 29,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 22,
+        "3": 10
+      },
+      "core3_mass": "26/15",
+      "k": 10,
+      "n": 29,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 35
+      },
+      "core3_mass": "35/33",
+      "k": 11,
+      "n": 32,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 24,
+        "3": 11
+      },
+      "core3_mass": "19/11",
+      "k": 11,
+      "n": 32,
+      "name": "B",
+      "uniform_child_mass": "1"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 38
+      },
+      "core3_mass": "19/18",
+      "k": 12,
+      "n": 35,
+      "name": "A",
+      "uniform_child_mass": "0"
+    },
+    {
+      "clone_aut_histogram": {
+        "1": 26,
+        "3": 12
+      },
+      "core3_mass": "31/18",
+      "k": 12,
+      "n": 35,
+      "name": "B",
+      "uniform_child_mass": "1"
+    }
+  ],
+  "status": "PASS",
+  "total_checks": 3195
+}

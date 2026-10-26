@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "FINITE-EXACT n=0..5; does not replace all-order maximal-module theorem",
+  "rows": [
+    {
+      "n": 0,
+      "labelled_tournaments": 1,
+      "weighted_core_orbits": 1,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "0": 1
+      }
+    },
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "weighted_core_orbits": 1,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "weighted_core_orbits": 1,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "1": 1
+      }
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "weighted_core_orbits": 2,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "1": 1,
+        "3": 1
+      }
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "weighted_core_orbits": 4,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "1": 1,
+        "3": 1,
+        "4": 2
+      }
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "weighted_core_orbits": 12,
+      "conditional_class_entropy_given_weighted_core_exact": 0,
+      "classes_by_core_order": {
+        "1": 1,
+        "3": 2,
+        "4": 4,
+        "5": 5
+      }
+    }
+  ]
+}

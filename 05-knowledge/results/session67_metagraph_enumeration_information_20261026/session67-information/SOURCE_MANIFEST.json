@@ -1,0 +1,149 @@
+{
+  "source_pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+  "source_repo_read_only": "/workspace/scratch/07d5532f2fce/session67-repo",
+  "sources": [
+    {
+      "id": 1,
+      "path": "04-computation/information_theory_deep.py",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "49d118b366dd4fbc0da709f6ed6697b36b0513d1",
+      "sha256": "144513d4bc10f62ab8203e4666805d0100533e7f886696dc6cf497c731ef7f7d",
+      "bytes": 18121,
+      "local_copy": "sources/01-information_theory_deep.py",
+      "last_change": "2476ce4fbe27a5d5ff644c860ba11a48734f881d 2026-06-12T21:10:34-05:00 manually commiting in hopes of fixng git issues for codex becasue codex is a baby and cant fix it on its own",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/04-computation/information_theory_deep.py"
+    },
+    {
+      "id": 2,
+      "path": "05-knowledge/results/information_theory_deep.out",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "c94de2106516d62edb1defa9c8789e25bdd83166",
+      "sha256": "e7db503deb30b3ce537dbc312276087576d16286fe7ccb4bf80cae02de341a96",
+      "bytes": 9509,
+      "local_copy": "sources/02-information_theory_deep.out",
+      "last_change": "2476ce4fbe27a5d5ff644c860ba11a48734f881d 2026-06-12T21:10:34-05:00 manually commiting in hopes of fixng git issues for codex becasue codex is a baby and cant fix it on its own",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/results/information_theory_deep.out"
+    },
+    {
+      "id": 3,
+      "path": "04-computation/ocf_information_theory.py",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "2cca3f7d46dba76faca26d6717c6a23108e4f305",
+      "sha256": "9da8fef432ad5767c732731553d547310ecc5098e470957ec09e1e4d015346ee",
+      "bytes": 11348,
+      "local_copy": "sources/03-ocf_information_theory.py",
+      "last_change": "2476ce4fbe27a5d5ff644c860ba11a48734f881d 2026-06-12T21:10:34-05:00 manually commiting in hopes of fixng git issues for codex becasue codex is a baby and cant fix it on its own",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/04-computation/ocf_information_theory.py"
+    },
+    {
+      "id": 4,
+      "path": "05-knowledge/results/ocf_information_theory.out",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "773f802f0eeb825a3402e2e6d18c8f32257cc420",
+      "sha256": "9c219de2102c717aca83ddfb7732c6f4933ed76abfec15f0547c02c99a62dfcd",
+      "bytes": 10960,
+      "local_copy": "sources/04-ocf_information_theory.out",
+      "last_change": "2476ce4fbe27a5d5ff644c860ba11a48734f881d 2026-06-12T21:10:34-05:00 manually commiting in hopes of fixng git issues for codex becasue codex is a baby and cant fix it on its own",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/results/ocf_information_theory.out"
+    },
+    {
+      "id": 5,
+      "path": "05-knowledge/hypotheses/HYP-3564-relations-not-things-the-relational-reframe.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "6bfe5452281723da02265777a8b1cbfd068d7e80",
+      "sha256": "c46944c8b313bf227ed4fa2a1b3bd104017539eebf7a54d5acc8c69a789203c0",
+      "bytes": 6454,
+      "local_copy": "sources/05-HYP-3564-relations-not-things-the-relational-reframe.md",
+      "last_change": "05df17e60a66c95187cbf06538c41bff8ef57237 2026-06-29T19:32:55-06:00 mac-mini-S25: cede HYP-3563 to klein-S6 (b_1^- of metagraph), renumber my relations-not-things to HYP-3564",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/hypotheses/HYP-3564-relations-not-things-the-relational-reframe.md"
+    },
+    {
+      "id": 6,
+      "path": "05-knowledge/hypotheses/HYP-3595-rib-sc-side-even-and-silent-flip-eulerian.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "3516f7600b8453c12dd55a25b3bf50afd7f5033b",
+      "sha256": "2a14bfa8e42e74a54b52659db440666fa025a995d1c980ff540e053e38afd8cf",
+      "bytes": 6922,
+      "local_copy": "sources/06-HYP-3595-rib-sc-side-even-and-silent-flip-eulerian.md",
+      "last_change": "b9d29da1ba69a9e1a4cdd9a1b61674146c035ed6 2026-06-29T22:45:28-06:00 mac-mini-2026-06-29-S33: HYP-3594 -- THE TRUTH across all ~17 frames = a single ODD CYCLE (apex p-cycle C_p; value 4cos^2(3pi/7)=2+lambda_min(C_7), identity=odd cycle in R-odd cycle space, multiplicity=genus 0,0,1,2,2 -> LRC14=ONE, full circle from OCF=odd-cycle-collection); ESSENTIALxBOUNDED = odd cycle EXISTS + spectrum positive; complements klein-S14's value reading. T1 rib SC-side-even PROVED general (R involution-automorphism). T2 NS-break(0,0,0,6 by n) != genus(0,0,1,2,2 by p), honest non-connection. Ceded HYP-3592->3593->3595; restored klein S13/S14 log nums",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/hypotheses/HYP-3595-rib-sc-side-even-and-silent-flip-eulerian.md"
+    },
+    {
+      "id": 7,
+      "path": "05-knowledge/hypotheses/HYP-3602-tournaments-are-intransitivity-among-n-things.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "c3a740953e8a4196e28b9af5c3844089d4a78694",
+      "sha256": "e0be287c02d7f93b93f9c8d10b4592576094ca7fed88066f5e9dae9794d8ebc9",
+      "bytes": 6822,
+      "local_copy": "sources/07-HYP-3602-tournaments-are-intransitivity-among-n-things.md",
+      "last_change": "ea7a9474cd4e4a791b448bccc0f6131728de54bc 2026-06-30T00:50:26-06:00 mac-mini-S37: checkpoint - resolve double collision (klein-S18 took 3599+3600); my intransitivity->3602, condensation->3603; INDEX deduped (3598 removed)",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/hypotheses/HYP-3602-tournaments-are-intransitivity-among-n-things.md"
+    },
+    {
+      "id": 8,
+      "path": "01-canon/theorems/THM-1382-map-graph-star-flips-nested-cut-cycle.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "20e8bc1135b27596f688dcac3812f1ea81962e9e",
+      "sha256": "b617977c85c61f4021374cfe37eff4d27b423ae9774420c54e08379de53979dd",
+      "bytes": 7456,
+      "local_copy": "sources/08-THM-1382-map-graph-star-flips-nested-cut-cycle.md",
+      "last_change": "107cb4957769c83699d0b308aec13530fd99525e 2026-07-20T07:41:00-06:00 klein-2026-07-20-S334: THM-1382's two open questions ANSWERED, both NEGATIVE, both witness-effectively. (i) The cycle invariants DO NOT descend to iso classes \u2014 they are TILING functions, not tournament functions. Explicit witness at n=5: one iso class holds 5 tilings spread over 4 star orbits, e.g. (0,0,0,0,1,0) and (0,0,0,1,1,0) isomorphic with orbit reps (0,0,0,0,1,0) vs (0,0,0,0,0,0); a second iso class spreads 9 tilings over 3 orbits. (ii) The star quotient is UNRELATED to the merged metagraph \u2014 neither partition refines the other at n=5,6 (12 iso vs 4 orbits; 56 iso vs 32 orbits); they are transverse. WHY: cycle(H) is defined FROM the base path, so relabelling moves P, moves H, moves the invariants \u2014 the construction was never S_n-equivariant. A sharp instance of CLAUDE.md's 'tiling model has lower symmetry than the arc model'. THM-1382's algebra stays exact and complete, but complete for the TILING model = tournament plus a distinguished Hamiltonian path.",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/01-canon/theorems/THM-1382-map-graph-star-flips-nested-cut-cycle.md"
+    },
+    {
+      "id": 9,
+      "path": "01-canon/theorems/THM-1979-tournament-space-is-a-spectrum-single-point-to-continuum.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "15893d7e8c8337807a44d11af0cf238dce2a22ce",
+      "sha256": "37181847e6cd4f7556b82460eccb11eee3033614b1dfd191a5ab0343bc0f2ec5",
+      "bytes": 5586,
+      "local_copy": "sources/09-THM-1979-tournament-space-is-a-spectrum-single-point-to-continuum.md",
+      "last_change": "98c31416f4956765b7ec4cb9dd8d4e4406ce3185 2026-07-21T17:20:00-06:00 codex: reconcile reciprocal atlas correction namespace",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/01-canon/theorems/THM-1979-tournament-space-is-a-spectrum-single-point-to-continuum.md"
+    },
+    {
+      "id": 10,
+      "path": "01-canon/theorems/THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "c1d364eb603163a4bc7e22fdbb1ce373c07d04e9",
+      "sha256": "cac20c9b48bef294e670ee629f885113d1a0c4b8e1a6031b6e53851712e0022a",
+      "bytes": 14762,
+      "local_copy": "sources/10-THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md",
+      "last_change": "894dfee3681f0992f1c1c7f5372793caf4224419 2026-10-20T20:44:34-06:00 mac-mini-2026-10-21-electric: THM-4739 Kirchhoff/Hodge laws of the tournament metagraph (scores = potential, curl energy (n-1)(n-2)/6 + 8 c3/n; class-intrinsic currents and the Laplacian identity; determination as a port transportation problem: first-order data give 1 metagraph at n = 4, 4 at n = 5, >= 169,359 at n = 6, second-order forces uniqueness at n = 5 but leaves >= 2e5 at n = 6, third order exactly 48,000; consecutive-start-port ledger pair of the closed endpoint-k layer, proved n >= k+5, exhaustive k = 4 n <= 12 and k = 5 n <= 12), HYP-9351, note, indexes, ledger, scripts and outputs; THM-4740 ceded",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/01-canon/theorems/THM-4739-kirchhoff-and-hodge-laws-of-the-tournament-metagraph-intransitivity-currents-second-order-determination-and-the-consecutive-start-port-ledgers.md"
+    },
+    {
+      "id": 11,
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/context/CURL-AND-CLAN-COMPLETION.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "640f4bdee55481e9f9fc9ee4a19e7c6a0ef36a58",
+      "sha256": "6273731f92069b955ee574d0dc16006e128ce99f6eeac06e8cd828e5c81ef7d5",
+      "bytes": 11676,
+      "local_copy": "sources/11-CURL-AND-CLAN-COMPLETION.md",
+      "last_change": "5390aea9cbe0a23328eef89eaf95f1d85f299d01 2026-10-23T10:06:38-06:00 Session36: exact tournament context quotients, integral curl recovery and dyadic metagraph laws",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/results/session36_information_curl_contexts_20261023/context/CURL-AND-CLAN-COMPLETION.md"
+    },
+    {
+      "id": 12,
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/context/REALIZATION_PHASES.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "d82fd9eee06cf8a8f2744301332aa7b7f7669b17",
+      "sha256": "815d1415b6d20d81b15b920e19e6cd378075d95aaf4c530eb2e41eea9027ab70",
+      "bytes": 11784,
+      "local_copy": "sources/12-REALIZATION_PHASES.md",
+      "last_change": "564fbdc91c129583cf2f25e29fec06044e48bc06 2026-10-23T10:08:54-06:00 Session36: exact curl realization phases and audited structural synthesis",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/results/session36_information_curl_contexts_20261023/context/REALIZATION_PHASES.md"
+    },
+    {
+      "id": 13,
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md",
+      "pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+      "blob": "cbb54e17f40071a90893f48df0c348b3b925480b",
+      "sha256": "fab727785c18911d2cc3f14570acd16f92c9824990e6b964f9a336f00eff6aff",
+      "bytes": 18006,
+      "local_copy": "sources/13-METRIC_CURL_RECOVERY.md",
+      "last_change": "5390aea9cbe0a23328eef89eaf95f1d85f299d01 2026-10-23T10:06:38-06:00 Session36: exact tournament context quotients, integral curl recovery and dyadic metagraph laws",
+      "url": "https://github.com/eliottcassidy2000/math/blob/b4234f728c0516b5fc521c001d69e26f3d2508d5/05-knowledge/results/session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "hostiles": {
+    "NAE_hostile_hypergraph": [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "NAE_hostile_phase_count": 6,
+    "common_GF2_triangle_parity": 1,
+    "cut_switched_cyclic_bits": 2,
+    "independent_noisy_channel_true_mutual_information_bits": 0,
+    "old_path_entropy_mutual_information_surrogate_n3": 2.188721875540867,
+    "transitive_bits": 7
+  },
+  "rows": [
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 0,
+      "labelled_tournaments": 1,
+      "n": 0,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 0,
+      "labelled_tournaments": 1,
+      "n": 1,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 1,
+      "all_C3_inputs_checked": 1,
+      "class_entropy_formula": 0.0,
+      "class_entropy_uniform_labelled": -0.0,
+      "curl_edge_reconstruction_checks": 2,
+      "labelled_tournaments": 2,
+      "n": 2,
+      "positive_consistent_inputs": 1,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 0.0,
+      "unlabelled_realizable_C3_hypergraphs": 1
+    },
+    {
+      "A000568": 2,
+      "all_C3_inputs_checked": 2,
+      "class_entropy_formula": 0.8112781244591329,
+      "class_entropy_uniform_labelled": 0.8112781244591328,
+      "curl_edge_reconstruction_checks": 24,
+      "labelled_tournaments": 8,
+      "n": 3,
+      "positive_consistent_inputs": 2,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 1.0,
+      "unlabelled_realizable_C3_hypergraphs": 2
+    },
+    {
+      "A000568": 4,
+      "all_C3_inputs_checked": 16,
+      "class_entropy_formula": 1.811278124459133,
+      "class_entropy_uniform_labelled": 1.811278124459133,
+      "curl_edge_reconstruction_checks": 384,
+      "labelled_tournaments": 64,
+      "n": 4,
+      "positive_consistent_inputs": 11,
+      "positive_consistent_unrealizable_inputs": 0,
+      "uniform_unlabelled_entropy": 2.0,
+      "unlabelled_realizable_C3_hypergraphs": 3
+    },
+    {
+      "A000568": 12,
+      "all_C3_inputs_checked": 1024,
+      "class_entropy_formula": 3.3951799848530846,
+      "class_entropy_uniform_labelled": 3.395179984853084,
+      "curl_edge_reconstruction_checks": 10240,
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "positive_consistent_inputs": 253,
+      "positive_consistent_unrealizable_inputs": 45,
+      "uniform_unlabelled_entropy": 3.584962500721156,
+      "unlabelled_realizable_C3_hypergraphs": 9
+    }
+  ],
+  "status": "PASS"
+}

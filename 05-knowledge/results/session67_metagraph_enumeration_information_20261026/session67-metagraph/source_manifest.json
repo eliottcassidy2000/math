@@ -1,0 +1,48 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+  "files": [
+    {
+      "repository_path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "local_path": "sources/01-THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5",
+      "git_blob": "4160560fe2154cac3f7ff51ab8e464846ea0da61"
+    },
+    {
+      "repository_path": "05-knowledge/results/metagraph_growth_20261020/enumeration.md",
+      "local_path": "sources/02-enumeration.md",
+      "sha256": "3b2234f6e36a18bafa516d362e733987c9f8a8671df7492344189dfbc9bb4cfe",
+      "git_blob": "7a08c50030604499b74357ae8ca545c4112acf33"
+    },
+    {
+      "repository_path": "05-knowledge/results/metagraph_growth_20261020/growth.md",
+      "local_path": "sources/03-growth.md",
+      "sha256": "c9ebc66dbef5268602c2d1fd5ce01503363b4c41baeb1458b8bfd76180cacc1c",
+      "git_blob": "95b97eeb92c7bc813ac69ebd4745086d63c60416"
+    },
+    {
+      "repository_path": "05-knowledge/results/weighted_core_transport_20261020/core_count.md",
+      "local_path": "sources/04-core_count.md",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9",
+      "git_blob": "274b45437d7febba4453dab5ad64a9cec0c0782b"
+    },
+    {
+      "repository_path": "05-knowledge/results/weighted_core_transport_20261020/README.md",
+      "local_path": "sources/05-README.md",
+      "sha256": "07ce8fbdf4c7bbb69329fe4eefd925e789c3ed7405f06953b71ccd8261d67fe2",
+      "git_blob": "1ba693ed9bae557d9d80a160db40dda2e387cbd5"
+    },
+    {
+      "repository_path": "05-knowledge/results/defect_boundary_20261020/boundary.md",
+      "local_path": "sources/06-boundary.md",
+      "sha256": "c359a51a188d2746e6abf19a547962ebe7c59aa32840e4cce93e221a5eccc7f3",
+      "git_blob": "19162c82ce60cbc63292ef948c0b93d3b5a18f62"
+    },
+    {
+      "repository_path": "05-knowledge/results/tournament_future_boundary_20261020/README.md",
+      "local_path": "sources/07-README.md",
+      "sha256": "a01aa678ff7741d3153de9a893084bbd4373396b0dbc932226ed804d3554b685",
+      "git_blob": "2106f0f14eece67d67ade1e7555ee1d6d5dfd9c9"
+    }
+  ]
+}

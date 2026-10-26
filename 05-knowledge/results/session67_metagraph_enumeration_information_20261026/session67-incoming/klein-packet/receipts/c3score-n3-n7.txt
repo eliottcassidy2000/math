@@ -1,0 +1,5 @@
+n=3 classes=2 classes where (C3,score function) does NOT determine T: 1
+n=4 classes=4 classes where (C3,score function) does NOT determine T: 2
+n=5 classes=12 classes where (C3,score function) does NOT determine T: 5
+n=6 classes=56 classes where (C3,score function) does NOT determine T: 14
+n=7 classes=456 classes where (C3,score function) does NOT determine T: 53

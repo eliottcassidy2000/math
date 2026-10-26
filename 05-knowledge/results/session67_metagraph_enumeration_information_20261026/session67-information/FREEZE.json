@@ -1,0 +1,15 @@
+{
+  "status": "FROZEN FOR PARENT INTEGRATION",
+  "source_pin": "b4234f728c0516b5fc521c001d69e26f3d2508d5",
+  "validation": "Three independent stdlib verifiers passed normally and with python -O; paired stdout identical; source snapshot hashes all verified. No source repository mutation.",
+  "key_files": {
+    "INFORMATION_INTRANSITIVITY_RECOVERY.md": "8be9469dc3904702f61a146f1af59fea33d9a01e3e30d5d9797295f2571053c1",
+    "PROPOSED_HISTORICAL_CORRECTIONS.md": "f4c9563fd3a85c47d3c85c64a95c057f49639e7bf0ba4526ec937378f345b4ad",
+    "SOURCE_MANIFEST.json": "5e28fca26bacc1c7c9e7de0149192abf36d4a1379dabfac9133b5f89014621da",
+    "verification.json": "9c0cc35e813eba8e5d0ea4fa922e8dba18b200bd73a864dd8672e60357165ea0",
+    "core_information_verification.json": "ee4f4faf880f25ee5901ff0b16d6375f15f3cf29cd587ceb5fc448090dabfd64",
+    "growth_information_verification.json": "2fbb09f671f3ad93c61e99ac46c010a20a297dffa0f1da60fdda2c95e35bc5ff",
+    "PRIMARY_SOURCE_VERIFICATION.json": "ebb74aa42964c769444fe7d0c1d20839fed1a55f57ab6679f550afeb6a3b9081",
+    "SESSION67_CONNECTION_SOURCES.json": "d479368033237329cd14ed68a93282392309532333fb60c676800c8a428c27c9"
+  }
+}

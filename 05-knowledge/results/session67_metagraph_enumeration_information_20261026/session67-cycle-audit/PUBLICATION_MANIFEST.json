@@ -1,0 +1,149 @@
+{
+  "additional_publication_files": [
+    "PUBLICATION_MANIFEST.json",
+    "PUBLICATION_SHA256SUMS"
+  ],
+  "cli_options": {
+    "audit_core_triangle_portable.py": [
+      "--metagraph-dir PATH",
+      "--repo PATH (optional; direct declared-commit verification)"
+    ],
+    "audit_recurrence_cross_portable.py": [
+      "--recursion-dir PATH"
+    ]
+  },
+  "cross_lane_dependencies": {
+    "metagraph": [
+      "REPORT.md",
+      "verify_core_families.py",
+      "receipt.json",
+      "receipt-optimized.json",
+      "source_manifest.json",
+      "sources/* (all seven declared snapshots)"
+    ],
+    "recursion": [
+      "REPORT.md",
+      "verify_recursion.py"
+    ]
+  },
+  "default_provenance_scope": "Offline snapshot SHA256 and locally calculated Git blob SHA1; named commit NOT verified.",
+  "exclude": [
+    "input/",
+    "__pycache__/",
+    "temporary replay files"
+  ],
+  "frozen_original_files": [
+    {
+      "path": "REPORT.md",
+      "sha256": "c6c5491e8cb059f4aede13fa44c43b108d5305c7035253e11d4544f7f2badc63"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "1e31e7b92a44eb25aeb63dfb4fb00a4c0f67db397cc9d68c207939914686aab4"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c"
+    },
+    {
+      "path": "receipt-optimized.json",
+      "sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c"
+    },
+    {
+      "path": "SHA256SUMS",
+      "sha256": "da90f527e06d1f3613c630a34a7d8177e545020cbd3554f2aa0eb540f47b63b3"
+    },
+    {
+      "path": "CORE_TRIANGLE_AUDIT.md",
+      "sha256": "f1173ec8dcc2f425c53145cabc0257197351c1713eacf007aa9a8443393e0c6b"
+    },
+    {
+      "path": "audit_core_triangle.py",
+      "sha256": "676b704e028f97a05fb1641a4550564206b9cffa37af783a2b3cfc84be52550d"
+    },
+    {
+      "path": "CORE_TRIANGLE_RECEIPT.json",
+      "sha256": "1ebd7d541a69c67fd74772ed4add78aefa89f9af929f5a9fc41549adfed8a757"
+    },
+    {
+      "path": "CORE_TRIANGLE_RECEIPT.optimized.json",
+      "sha256": "1ebd7d541a69c67fd74772ed4add78aefa89f9af929f5a9fc41549adfed8a757"
+    },
+    {
+      "path": "CORE_TRIANGLE_SHA256SUMS",
+      "sha256": "ab3e80eb2f695451f57ca9645c302cef59b7afe76089894f6048e58ec92b91eb"
+    },
+    {
+      "path": "metagraph-replayed.json",
+      "sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e"
+    },
+    {
+      "path": "RECURRENCE_CROSS_AUDIT.md",
+      "sha256": "0b03c785fa391548f9914eb7f53bf94f28fdae4e3a8c27bd84e5ef76a526c22b"
+    },
+    {
+      "path": "audit_recurrence_cross.py",
+      "sha256": "84ee2a8c0eabc9655fae98230a7967240415a23750a99694ce8327138c2ea613"
+    },
+    {
+      "path": "RECURRENCE_CROSS_RECEIPT.json",
+      "sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd"
+    },
+    {
+      "path": "RECURRENCE_CROSS_RECEIPT.optimized.json",
+      "sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd"
+    },
+    {
+      "path": "RECURRENCE_CROSS_SHA256SUMS",
+      "sha256": "cab09eb074f3e5b3c957002111ac0204e5a91156d8ece23dc087bcd19c630a60"
+    }
+  ],
+  "frozen_originals_unchanged": true,
+  "portable_additions": [
+    {
+      "path": "PORTABILITY_ADDENDUM.md",
+      "sha256": "1886aae10fa71704dc0094194e257460183ad7fa41ed3559f1d1232e5c9b47cd"
+    },
+    {
+      "path": "audit_core_triangle_portable.py",
+      "sha256": "163ce5545a362cd74b148557f845d54c6bc26a35b1dda168ac937fa00a37ec1a"
+    },
+    {
+      "path": "CORE_TRIANGLE_PORTABLE_RECEIPT.json",
+      "sha256": "0b1a7f83fa9f9797c5f571984d3050b8b0b4e0e3851c4820c121e8c19c9e05f0"
+    },
+    {
+      "path": "CORE_TRIANGLE_PORTABLE_RECEIPT.optimized.json",
+      "sha256": "0b1a7f83fa9f9797c5f571984d3050b8b0b4e0e3851c4820c121e8c19c9e05f0"
+    },
+    {
+      "path": "CORE_TRIANGLE_PORTABLE_COMMIT_RECEIPT.json",
+      "sha256": "a03527a79ddc2b050dab3e4171ef4a0e7314d9c161a98367e4ec6373ac230c16"
+    },
+    {
+      "path": "CORE_TRIANGLE_PORTABLE_COMMIT_RECEIPT.optimized.json",
+      "sha256": "a03527a79ddc2b050dab3e4171ef4a0e7314d9c161a98367e4ec6373ac230c16"
+    },
+    {
+      "path": "audit_recurrence_cross_portable.py",
+      "sha256": "dbfd5a1ef7705af56998081fff8d8b1e4602cae6a66cb31c2778d94b8106fa9c"
+    },
+    {
+      "path": "RECURRENCE_CROSS_PORTABLE_RECEIPT.json",
+      "sha256": "be0a058fba318f85817e3f8f28cdf031ac557a5e69a1b32015d9d108b2caea34"
+    },
+    {
+      "path": "RECURRENCE_CROSS_PORTABLE_RECEIPT.optimized.json",
+      "sha256": "be0a058fba318f85817e3f8f28cdf031ac557a5e69a1b32015d9d108b2caea34"
+    },
+    {
+      "path": "PORTABLE_ISOLATED_REPLAY.json",
+      "sha256": "cba9379601b4908e4106a6f639e641bf31bafd32e78df21e3c91a50990848266"
+    },
+    {
+      "path": "PORTABLE_SHA256SUMS",
+      "sha256": "36c6e1acc5c5eced292571560df88ade43b4e558aae41516bddd0cb7d002bde3"
+    }
+  ],
+  "status": "PASS"
+}

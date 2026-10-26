@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-10-26",
+  "method": "web open/find of primary sources, statement and proof directly inspected",
+  "sources": [
+    {
+      "url": "https://perso.ens-lyon.fr/stephan.thomasse/liste/bilt.pdf",
+      "title": "The C3-structure of the tournaments",
+      "authors": [
+        "Abderrahim Boussaïri",
+        "Pierre Ille",
+        "Gérard Lopez",
+        "Stéphan Thomassé"
+      ],
+      "manuscript_date": "2005-06-14",
+      "passages": [
+        "Theorem 2 statement in introduction",
+        "Corollary 1, printed page7: indecomposable realization determined up to converse",
+        "Proof of Theorem2, printed pages8–9: interval inversion preserves cyclic triples; converse established by induction"
+      ],
+      "scope": "CITED interval-reversal classification; current Boolean and orbit formulas proved separately"
+    },
+    {
+      "url": "https://arxiv.org/abs/0811.1067",
+      "title": "Statistical ranking and combinatorial Hodge theory",
+      "authors": [
+        "Xiaoye Jiang",
+        "Lek-Heng Lim",
+        "Yuan Yao",
+        "Yinyu Ye"
+      ],
+      "version": "v2, 2009-08-10",
+      "passages": [
+        "Abstract: edge flows, best-fit gradient and divergence-free residual; curl/harmonic distinction"
+      ],
+      "scope": "Real cardinal edge-flow decomposition, not equality of binary sign transitivity with zero curl"
+    }
+  ]
+}

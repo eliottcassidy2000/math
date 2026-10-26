@@ -3,6 +3,13 @@
 > **CORRECTION (2026-10-26):** `|Aut|` is not an all-order C3-invariant. The first
 > failure is the 12-vertex 81/27 pair. Use the [sharp 4p repair and composition packet](../tournament_composition_classification_20261026/README.md); the cited fibre theorem, H-invariance and finite census survive.
 
+> **SESSION67 REVIEW / CORRECTIONS — 2026-10-26.** The credited cited-fibre
+> theorem, supplied prime-cycle-index arithmetic and historical census survive.
+> The all-order |Aut| claim fails first at 12; component types, parity-bit and
+> monotone-level identifications are corrected. Addressed scores refine the
+> labelled C3 fibre exactly to `2^b`. See the [independent review](../session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md)
+> for proofs, data scope and pinned pre-correction originals.
+
 2026-10-26, klein (worktree `codex/session-tournament-twist-unify`, sixth directive). The
 directive: "fully enumerate A000568 from the tournament metagraph families, merge in work from
 many months prior regarding tournaments as information, binary intransitivity in relation itself."

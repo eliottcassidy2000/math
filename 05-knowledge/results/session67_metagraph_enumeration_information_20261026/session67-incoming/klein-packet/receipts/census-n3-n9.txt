@@ -1,0 +1,42 @@
+n=3 classes=2 strong=1 selfconverse=2 linear_root=1 prime_root=1 prime_tournaments=1 distinct_prime_quotients=1
+c3_levels: 0:1 1:1
+fas_layers: 0:1 1:1
+aut_hist: 1:1 3:1
+ncomp_hist: 1:1 3:1
+prime_quotients_by_k: 3:1
+n=4 classes=4 strong=1 selfconverse=2 linear_root=3 prime_root=1 prime_tournaments=0 distinct_prime_quotients=1
+c3_levels: 0:1 1:2 2:1
+fas_layers: 0:1 1:3
+aut_hist: 1:2 3:2
+ncomp_hist: 1:1 2:2 4:1
+prime_quotients_by_k: 3:1
+n=5 classes=12 strong=6 selfconverse=8 linear_root=6 prime_root=6 prime_tournaments=3 distinct_prime_quotients=4
+c3_levels: 0:1 1:3 2:2 3:2 4:3 5:1
+fas_layers: 0:1 1:6 2:4 3:1
+aut_hist: 1:7 3:4 5:1
+ncomp_hist: 1:6 2:2 3:3 5:1
+prime_quotients_by_k: 3:1 5:3
+n=6 classes=56 strong=35 selfconverse=12 linear_root=21 prime_root=35 prime_tournaments=15 distinct_prime_quotients=19
+c3_levels: 0:1 1:4 2:4 3:4 4:10 5:8 6:12 7:8 8:5
+fas_layers: 0:1 1:10 2:22 3:19 4:4
+aut_hist: 1:41 3:12 5:2 9:1
+ncomp_hist: 1:35 2:13 3:3 4:4 6:1
+prime_quotients_by_k: 3:1 5:3 6:15
+n=7 classes=456 strong=353 selfconverse=88 linear_root=103 prime_root=353 prime_tournaments=197 distinct_prime_quotients=216
+c3_levels: 0:1 1:5 2:7 3:8 4:17 5:23 6:39 7:40 8:59 9:61 10:79 11:52 12:47 13:15 14:3
+fas_layers: 0:1 1:15 2:66 3:141 4:155 5:67 6:9 7:2
+aut_hist: 1:399 3:47 5:4 7:1 9:4 21:1
+ncomp_hist: 1:353 2:72 3:21 4:4 5:5 7:1
+prime_quotients_by_k: 3:1 5:3 6:15 7:197
+n=8 classes=6880 strong=6008 selfconverse=176 linear_root=872 prime_root=6008 prime_tournaments=4008 distinct_prime_quotients=4224
+c3_levels: 0:1 1:6 2:11 3:14 4:29 5:44 6:84 7:108 8:182 9:220 10:406 11:396 12:614 13:628 14:892 15:740 16:929 17:622 18:607 19:262 20:85
+fas_layers: 0:1 1:21 2:151 3:584 4:1429 5:2141 6:1797 7:690 8:66
+aut_hist: 1:6556 3:292 5:10 7:2 9:16 15:2 21:2
+ncomp_hist: 1:6008 2:719 3:111 4:30 5:5 6:6 8:1
+prime_quotients_by_k: 3:1 5:3 6:15 7:197 8:4008
+n=9 classes=191536 strong=178133 selfconverse=2752 linear_root=13403 prime_root=178133 prime_tournaments=136655 distinct_prime_quotients=140879
+c3_levels: 0:1 1:7 2:16 3:23 4:46 5:83 6:149 7:234 8:405 9:569 10:1042 11:1307 12:2200 13:2993 14:4339 15:5380 16:8169 17:8679 18:12526 19:13801 20:16868 21:17119 22:21413 23:17482 24:19089 25:15181 26:11988 27:6645 28:3310 29:457 30:15
+fas_layers: 0:1 1:28 2:295 3:1765 4:7147 5:20305 6:40167 7:53436 8:44432 9:19986 10:3748 11:218 12:8
+aut_hist: 1:188337 3:3047 5:40 7:4 9:94 15:8 21:4 27:1 81:1
+ncomp_hist: 1:178133 2:12098 3:1099 4:152 5:40 6:6 7:7 9:1
+prime_quotients_by_k: 3:1 5:3 6:15 7:197 8:4008 9:136655

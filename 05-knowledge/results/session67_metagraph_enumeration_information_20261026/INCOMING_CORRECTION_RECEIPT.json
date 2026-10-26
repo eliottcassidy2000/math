@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "review_pin": "24f8e62c8f4cfbb54b80639b8bbd801ded9a5948",
+  "producer": "klein, 2026-10-26",
+  "corrected_files": [
+    {
+      "path": "01-canon/theorems/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md",
+      "before_sha256": "fbf58f1d9702f625039643aad917ca4e423aed588afef4835722304c547495b5",
+      "after_sha256": "04a3bbbb8a7d88b92dbb4e52a80ab68ab55c7d87c36a1dda278eb1560dda26c9",
+      "scope": "Correct current title/status/invariants/scope; original source retained in pinned review.",
+      "merged_current_sha256": "2197278633bd5ba26f66834072e4fff172be52b8c50ec842def30995a9e7f873"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/INTRANSITIVITY.md",
+      "before_sha256": "05d4cc51cf5e9520854d8003158173c104a89bf0092857009e5f138cca99a1ca",
+      "after_sha256": "b305e51209e40249c17e3fba0410b97cae71249e61fb86842abb4a3dd8ff568e",
+      "scope": "Repair false inheritance and monotonicity; retain cited theorem, H argument and finite data.",
+      "merged_current_sha256": "dfb3e932c28a9125b0597d08815391e856688fe4cdbe1b011110d323882dbd47"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/INFORMATION.md",
+      "before_sha256": "2f71ce0ce8d9a29d951212611a4996972f7428074b7c0c6e160eb4eee5297fde",
+      "after_sha256": "c402b8e19fb83912998ff854847fd3f36fda1b3633ea65c19eb9468a0357e6ba",
+      "scope": "Correct information quotient/units and remove unsupported invariant inheritance.",
+      "merged_current_sha256": "ececa74eec7650ff17227f41ea710d5349c939a83e75358b4a23ef45cd3891cf"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/FAMILIES.md",
+      "before_sha256": "b5cbb76d771af8c42138fec089601f057739d3fc2f0958074c77b32fea94991a",
+      "after_sha256": "1b19e98177c9b5f5b22c65b33319bf5016335846cd1b4bb29d9720ff374847a4",
+      "scope": "Retain exact table, correct false monotonic interpretation.",
+      "merged_current_sha256": "1b19e98177c9b5f5b22c65b33319bf5016335846cd1b4bb29d9720ff374847a4"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/README.md",
+      "before_sha256": "9fbe8b5609a8b3e7218139c504bc6ad0712e7c7e73bc35527914cc4c04a1b378",
+      "after_sha256": "bd14c92421b751247b2cf5511abf60113e07236a745e41d28d55cbb28ae78ff2",
+      "scope": "Route current source packet to precise correction without retracting valid census work.",
+      "merged_current_sha256": "c6c31bd90de0a4a263ecb75e6503cd39b1fcbe75aa539ab5411e760d31adacce"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9413-minimum-intransitivity-chain-family-fibonacci-primes-and-the-intransitivity-count-asymptotics.md",
+      "before_sha256": "92e1640941d3d47e1483409693980909a0f7fb712d4e325bafbd8fa5e3373e2b",
+      "after_sha256": "c93f02f92f5caa26a9d9440627f88698dfb15180e0e5736b8051038d80036bc9",
+      "scope": "Close exactly clause (b), expose missing P11 inputs in (d), preserve other open hypotheses.",
+      "merged_current_sha256": "c93f02f92f5caa26a9d9440627f88698dfb15180e0e5736b8051038d80036bc9"
+    },
+    {
+      "path": "05-knowledge/results/a000568_intransitivity_families_20261026/SHA256SUMS",
+      "before_sha256": "22021a10cd1a8512ce582574839efb5e19e3d8d8f55c426165dec1d6f36309ff",
+      "after_sha256": "448a0356917c205cd11388bbd95d5770e40006dade2487519357fedffe06a133",
+      "scope": "Native current packet checksum refresh; original manifest retained in source snapshot.",
+      "merged_current_sha256": "1a065ba1806b347fae0531c15c4f910587cd686ddb7aaae708ae83b1d1d04965"
+    }
+  ],
+  "overlay_local_commit": "44c7f09bf368a4853925a46e03732a34f1a2ee38",
+  "concurrent_merge_base": "18866090755d6b1cc6047caffcff8ff358ffcf3f",
+  "scope_note": "before/after pairs record the initial Session67 overlay before concurrent integration; merged_current_sha256 gives the final current bytes. Frozen source snapshots and all historical pins are unchanged."
+}

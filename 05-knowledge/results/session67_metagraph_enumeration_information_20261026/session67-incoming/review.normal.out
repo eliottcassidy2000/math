@@ -1,0 +1,248 @@
+{
+  "status": "pass",
+  "witness": {
+    "construction": "A=singleton -> C3; T=C3[A,A,A]; U=C3[A^op,A,A]",
+    "A_scores": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "Aop_scores": [
+      0,
+      2,
+      2,
+      2
+    ],
+    "same_labelled_c3": true,
+    "cyclic_triples": 67,
+    "aut_T": 81,
+    "aut_U": 27,
+    "H_T": 462915,
+    "H_U": 462915,
+    "tree_fibre_N": 128,
+    "n6_strong_types_counterexample": {
+      "V": [
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "W": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "same_labelled_c3": true,
+      "scores_V": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "scores_W": [
+        1,
+        1,
+        3,
+        3,
+        3,
+        4
+      ],
+      "isomorphisms": 0
+    },
+    "A5_bit_counterexample": {
+      "R5": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "reflection": [
+        0,
+        4,
+        3,
+        2,
+        1
+      ],
+      "inversions": 6,
+      "permutation_even": true,
+      "maps_to_converse": true,
+      "same_labelled_C3": true
+    }
+  },
+  "species": {
+    "method": "new Fraction polynomial arithmetic from 23 aggregated source cycle-index rows; order10 prime totals treated as input, not recounted",
+    "A000568": [
+      1,
+      1,
+      2,
+      4,
+      12,
+      56,
+      456,
+      6880,
+      191536,
+      9733056
+    ],
+    "strong": [
+      1,
+      0,
+      1,
+      1,
+      6,
+      35,
+      353,
+      6008,
+      178133,
+      9355949
+    ],
+    "C3_classes": [
+      1,
+      1,
+      2,
+      3,
+      9,
+      32,
+      247,
+      3328,
+      93612,
+      4774417
+    ],
+    "strong_C3_classes": [
+      1,
+      0,
+      1,
+      1,
+      6,
+      22,
+      214,
+      3074,
+      90255,
+      4680547
+    ],
+    "matches_A000568": true,
+    "matches_C3": true
+  }
+}

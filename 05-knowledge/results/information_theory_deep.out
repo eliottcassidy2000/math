@@ -1,3 +1,11 @@
+HISTORICAL OUTPUT — CURRENT-SCOPE CORRECTION (Session67, 2026-10-26)
+Section 2's I(pi;T) values are path-entropy surrogates, not mutual information.
+Hamiltonian paths do not enforce every pairwise comparison; at 50% comparison
+noise the true ranking/output mutual information is 0. The Section 5 universal
+strong-connectivity claim is false. Original output follows unchanged for
+provenance; corrected identities and hostile checks are in the recovery note:
+05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-information/INFORMATION_INTRANSITIVITY_RECOVERY.md. This banner is not a rerun receipt.
+
 ======================================================================
 1. RANKING ENTROPY: S(T) = log₂(H(T))
 ======================================================================

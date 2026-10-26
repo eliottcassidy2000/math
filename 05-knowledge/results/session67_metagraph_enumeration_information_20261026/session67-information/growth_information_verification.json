@@ -1,0 +1,220 @@
+{
+  "status": "PASS",
+  "extension_universe": "All 32 labelled one-vertex extensions of each displayed five-vertex tournament; automorphism and core computations by independent direct permutations/subsets.",
+  "rows": [
+    {
+      "weights": [
+        3,
+        1,
+        1
+      ],
+      "aut_parent": 1,
+      "core_order_parent": 3,
+      "selected_extension_count": 8,
+      "symmetry_weighted_extension_sum": 8,
+      "K_target_core3": "4/3",
+      "selected_extensions": [
+        {
+          "extension_bits": 7,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 8,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 15,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 16,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 17,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 19,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 23,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 24,
+          "child_automorphisms": 1
+        }
+      ]
+    },
+    {
+      "weights": [
+        1,
+        2,
+        2
+      ],
+      "aut_parent": 1,
+      "core_order_parent": 3,
+      "selected_extension_count": 8,
+      "symmetry_weighted_extension_sum": 12,
+      "K_target_core3": "2",
+      "selected_extensions": [
+        {
+          "extension_bits": 1,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 3,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 6,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 7,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 14,
+          "child_automorphisms": 1
+        },
+        {
+          "extension_bits": 24,
+          "child_automorphisms": 3
+        },
+        {
+          "extension_bits": 25,
+          "child_automorphisms": 3
+        },
+        {
+          "extension_bits": 30,
+          "child_automorphisms": 1
+        }
+      ]
+    }
+  ],
+  "family_arithmetic_controls": [
+    {
+      "k": 2,
+      "n": 5,
+      "K_A": "4/3",
+      "K_B": "2"
+    },
+    {
+      "k": 3,
+      "n": 8,
+      "K_A": "11/9",
+      "K_B": "17/9"
+    },
+    {
+      "k": 4,
+      "n": 11,
+      "K_A": "7/6",
+      "K_B": "11/6"
+    },
+    {
+      "k": 5,
+      "n": 14,
+      "K_A": "17/15",
+      "K_B": "9/5"
+    },
+    {
+      "k": 6,
+      "n": 17,
+      "K_A": "10/9",
+      "K_B": "16/9"
+    },
+    {
+      "k": 7,
+      "n": 20,
+      "K_A": "23/21",
+      "K_B": "37/21"
+    },
+    {
+      "k": 8,
+      "n": 23,
+      "K_A": "13/12",
+      "K_B": "7/4"
+    },
+    {
+      "k": 9,
+      "n": 26,
+      "K_A": "29/27",
+      "K_B": "47/27"
+    },
+    {
+      "k": 10,
+      "n": 29,
+      "K_A": "16/15",
+      "K_B": "26/15"
+    },
+    {
+      "k": 11,
+      "n": 32,
+      "K_A": "35/33",
+      "K_B": "19/11"
+    },
+    {
+      "k": 12,
+      "n": 35,
+      "K_A": "19/18",
+      "K_B": "31/18"
+    },
+    {
+      "k": 13,
+      "n": 38,
+      "K_A": "41/39",
+      "K_B": "67/39"
+    },
+    {
+      "k": 14,
+      "n": 41,
+      "K_A": "22/21",
+      "K_B": "12/7"
+    },
+    {
+      "k": 15,
+      "n": 44,
+      "K_A": "47/45",
+      "K_B": "77/45"
+    },
+    {
+      "k": 16,
+      "n": 47,
+      "K_A": "25/24",
+      "K_B": "41/24"
+    },
+    {
+      "k": 17,
+      "n": 50,
+      "K_A": "53/51",
+      "K_B": "29/17"
+    },
+    {
+      "k": 18,
+      "n": 53,
+      "K_A": "28/27",
+      "K_B": "46/27"
+    },
+    {
+      "k": 19,
+      "n": 56,
+      "K_A": "59/57",
+      "K_B": "97/57"
+    },
+    {
+      "k": 20,
+      "n": 59,
+      "K_A": "31/30",
+      "K_B": "17/10"
+    }
+  ],
+  "F2_laplacian_guardrail": {
+    "graph": "K_2,3",
+    "incidence_rank": 4,
+    "laplacian_rank": 2,
+    "vertices": 5
+  }
+}

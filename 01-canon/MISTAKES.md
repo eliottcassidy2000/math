@@ -74,6 +74,49 @@ source now has a correction banner; its global Mersenne-intersection claim
 is not used as a dependency. The [recovery contract and integer checks](../05-knowledge/results/tournament_composition_classification_20261026/RANDOM_CONNECTIONS.md)
 keep the useful encoding mechanism separate from the failed analogy.
 
+
+
+## 2026-10-26 — Session67 incoming audit: descendant type changes alter ancestor stabilizers
+
+- **Failed implication:** THM-4803 and its prime-family packet treated quotient
+  reversal with fixed children as a proof of automorphism-order invariance on
+  every C3 fibre. A descendant reversal need not preserve its ordinary type.
+- **Sharp witness:** B=singleton ->C3; C3[B,B,B] and C3[B*,B,B] have the same
+  67 labelled cyclic triples and H=462915, but automorphism orders81 and27.
+  An independently audited structural argument proves invariance through11
+  and this first failure at12; it is not a census through11.
+- **Repair:** retain the full child-decoration action and its parent stabilizer.
+  Strong-component vertex sets/sizes survive; ordinary types do not. The cited
+  modular-fibre theorem and credited prime census/species calculation survive.
+- **Additional scope fixes:** the source's own level table refutes monotonicity;
+  C3 dualization is not an A_n parity bit (regular C5 has an even anti-isomorphism);
+  identity-observer fibre loss is0. Order-11 species coefficients still need P11.
+- **New surviving theorem:** module-summed addressed scores isolate every quotient
+  contribution, proving the exact C3-plus-score fibre2^b and closing HYP-9413(b).
+  [Proofs, witnesses and source pins](../05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-incoming/INCOMING_INTEGRATION.md)
+  distinguish supplied-data arithmetic through10 from an independently rerun census.
+
+## 2026-10-26 — Session67: binary transitivity is not zero curl; path entropy is not channel information
+
+- **Failed implications:** the historical HYP-3602 reframe identified sign
+  transitivity with an additive coboundary and conflated switching coordinates
+  with unlabelled order-times-shape factors. The March-header information
+  script identified Hamiltonian paths with a uniform noisy-ranking posterior.
+- **Minimal witnesses:** a transitive triple has real signed curl ±1, not zero;
+  switching can make a cyclic triple transitive. At comparison accuracy 1/2,
+  true ranking/output mutual information is zero, but the order-three path
+  surrogate is 2.188721875540867 bits. A transitive tournament is not strongly
+  connected, contrary to the historical script's use of Rédei's theorem.
+- **Survivor and repair:** the cyclic-triple indicator is `(curl^2-1)/8`;
+  sign rankings characterize transitivity. Full weighted pair-free cores modulo
+  their automorphism action are lossless. Entropy needs its source and posterior;
+  paths enforce only consecutive arcs. Full realization orbits restore the data
+  lost by an unsigned cyclic-triple hypergraph.
+- **Preservation:** historical bodies and exact pinned originals remain; additive
+  warnings and a corrected status prevent reuse as current theorems. See the
+  [audited recovery and hostile tests](../05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-information/INFORMATION_INTRANSITIVITY_RECOVERY.md).
+  No LRC implication, scalar family recurrence, or novelty claim follows.
+
 ## 2026-10-26 — Tournament information: conditional projection is not Fourier truncation
 
 - **Source and failed claims:** the March22

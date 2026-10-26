@@ -1,0 +1,5 @@
+n=3: (C3,score function) exceptions=1; classes with a size-balanced prime node=1; equal sets: True
+n=4: (C3,score function) exceptions=2; classes with a size-balanced prime node=2; equal sets: True
+n=5: (C3,score function) exceptions=5; classes with a size-balanced prime node=5; equal sets: True
+n=6: (C3,score function) exceptions=14; classes with a size-balanced prime node=14; equal sets: True
+n=7: (C3,score function) exceptions=53; classes with a size-balanced prime node=53; equal sets: True

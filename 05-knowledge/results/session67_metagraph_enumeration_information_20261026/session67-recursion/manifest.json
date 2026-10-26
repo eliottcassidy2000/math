@@ -1,0 +1,11 @@
+{
+  "files": {
+    "REPORT.md": "356cad6322edb0541ce29a692a5cfa9b52eb076589d43af8950cb33b722639c2",
+    "audit_hostile.py": "c2a2f881d93a20b92523139f19ee1ec69a2a3bf013b08a1717459410b6dfba21",
+    "hostile-receipt.json": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8",
+    "receipt-order8.json": "3405fec6b4ffc2c82bc17ae621c3ab29919cbeeebb118509f9bcbdaa0ea473d3",
+    "verify_recursion.py": "87d100964c6836de631e79524c7540f7926c788ec8b3daeca6a0d4b3ae070ab6"
+  },
+  "scope": "Independent source; exact-once classes through8; all labelled SCC insertions through5; independent complete order5 hostile",
+  "status": "PASS"
+}

@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "offline_PATH": "/nonexistent",
+  "runs": [
+    {
+      "lane": "session67-information",
+      "script": "verify_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "bd9418035fd7b30c58e274a9a015958aa1f5a1b0eeeaee6616d387389d3bc8c6"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "bd9418035fd7b30c58e274a9a015958aa1f5a1b0eeeaee6616d387389d3bc8c6"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_core_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "5f43056f4f7c4b1a7cef675899ae06449986382e7ce79fd69eadf70b133aafcd"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_core_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "5f43056f4f7c4b1a7cef675899ae06449986382e7ce79fd69eadf70b133aafcd"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_growth_information.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "2fbb09f671f3ad93c61e99ac46c010a20a297dffa0f1da60fdda2c95e35bc5ff"
+    },
+    {
+      "lane": "session67-information",
+      "script": "verify_growth_information.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "2fbb09f671f3ad93c61e99ac46c010a20a297dffa0f1da60fdda2c95e35bc5ff"
+    },
+    {
+      "lane": "session67-metagraph",
+      "script": "verify_core_families.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e"
+    },
+    {
+      "lane": "session67-metagraph",
+      "script": "verify_core_families.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "b34005c58804886147298ccb2e152b1522f82ba8ee9eb5e7e8c5732f4a5d8c5e"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "verify_recursion.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "3405fec6b4ffc2c82bc17ae621c3ab29919cbeeebb118509f9bcbdaa0ea473d3"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "verify_recursion.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "3405fec6b4ffc2c82bc17ae621c3ab29919cbeeebb118509f9bcbdaa0ea473d3"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "audit_hostile.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8"
+    },
+    {
+      "lane": "session67-recursion",
+      "script": "audit_hostile.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "2ecbcd7ade2cc332040636cd370737c8875e6ec9545145faba04cdd047c9bcf8"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "verify.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "verify.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "77dd9234cf48fd7ad8d26a843f6faa61950057a0359b1e2af1355ee040a5ca0c"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_recurrence_cross.py",
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd"
+    },
+    {
+      "lane": "session67-cycle-audit",
+      "script": "audit_recurrence_cross.py",
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "c68f32d06f761e3b9493ba1bf54cd77d78eedc778540dba940991218d4fc46dd"
+    }
+  ]
+}

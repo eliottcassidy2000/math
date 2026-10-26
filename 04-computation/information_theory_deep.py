@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 """
+CURRENT-SCOPE CORRECTION (Session67, 2026-10-26): historical exploratory
+script. Section 2's quantity labelled I(pi;T) is only the surrogate
+log2(n!)-E log2 H(T), NOT channel mutual information. H(T) counts directed
+Hamiltonian paths (consecutive-edge consistency), not rankings satisfying
+all comparisons or posterior support. At comparison accuracy 1/2, true
+I(pi;T)=0, while the n=3 surrogate is 2.188721875540867 bits. Section 5's
+claim that Redei's theorem makes all tournaments strongly connected is
+also false (the transitive tournament is a counterexample). The original
+computations are retained as historical diagnostics; see
+05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-information/INFORMATION_INTRANSITIVITY_RECOVERY.md
+for repaired statements and independent tests.
+
 information_theory_deep.py — opus-2026-03-13-S67j
 
 DEEP INFORMATION-THEORETIC ANALYSIS OF TOURNAMENT H(T)
@@ -17,6 +29,14 @@ DEEP INFORMATION-THEORETIC ANALYSIS OF TOURNAMENT H(T)
 
 Inspired by arXiv:2409.01006 (hypergraph rewriting & causality).
 """
+
+import warnings as _session67_warnings
+_session67_warnings.warn(
+    "Historical diagnostic: Section 2 I(pi;T) is a path-entropy surrogate, not mutual information; "
+    "the universal strong-connectivity claim is false. See 05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-information/INFORMATION_INTRANSITIVITY_RECOVERY.md",
+    RuntimeWarning, stacklevel=1,
+)
+
 
 import numpy as np
 from itertools import permutations
