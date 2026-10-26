@@ -23,20 +23,24 @@ Everything below is a statement about those rule systems.
    - a **capture family**: the depth-1 translated cycler P(v0, 4v0+29) ↔ P(v0, 4v0+33). Every configuration in it runs
      forever, and every sweep start N_d = 18·2^d − 3d − 4 (d ≥ 2) enters it.
    - Every capture found anywhere (exhaustively for W < 2^18, and in about 10^4 window experiments) is this family.
-3. **A6 blank-tape orbit, FINITE-EXACT (§4.4).** Computed exactly through depth 44: 1.25·10^12 sweeps, sweep starts
-   up to 2^49. It neither halts nor is captured. At odd depths every near miss of a target comes from the "odd"
-   (eps = 0) class, and such sweeps can never equal a target (PROVED parity protection, §4.5).
-4. **A6 funnels (OBSERVATION/HEURISTIC, §4.5–4.6).**
+3. **A6 blank-tape orbit, FINITE-EXACT (§4.4).** Computed exactly into depth 44: 1.33·10^12 sweeps, sweep starts
+   up to 2^49. Every sweep returned to J(0,0,·): no halt, no capture, no uncertified long sweep.
+   - At odd depths every near miss of a target comes from the "odd" (eps = 0) class, and such sweeps can never equal
+     a target (PROVED parity protection, §4.5).
+   - At even depths exactly one target is exposed: the halting top T_d at d ≡ 0 (mod 4), the capture point N_d at
+     d ≡ 2 (mod 4).
+4. **A6 funnels and verdict (OBSERVATION/HEURISTIC, §4.5–4.6).**
    - Each depth window (size 12·2^d) funnels into ~25–45 exits. From the natural entries there is a single exit at
-     d ≡ 0, 2 (mod 4) for 18 ≤ d ≤ 30.
-   - No natural entry halts at any depth 8–30.
-   - Capture basins of density ≈ 5.6% surround the big-jump landings at d = 15 and d = 27, and are absent at
-     d = 19, 23, 31 (pre-registered period 12; see §9).
-   - Heuristic verdict: probviously non-halting. It is also *probviously decidable*: it will most likely become a
-     translated cycler, but only around depth ~250, far out of reach.
+     d ≡ 0, 2 (mod 4) for 18 ≤ d ≤ 30, so those 400 entries are effectively one sample per depth.
+   - Capture combs (residues mod 6d + 50, density ≈ 0.057) surround the long-jump landings at d = 15, 27 and 39. They
+     are absent at d = 19, 23, 31. This period-12 law was pre-registered as P7/P8 and both passed.
+   - Heuristic verdict: **probviously decidable, not probviously non-halting.** Three channels (halting at T_d,
+     capture at N_d, capture at the combs) carry a divergent total hazard. A translated cycler is favoured,
+     P ≈ 0.75–0.9 against P(halt) ≈ 0.1–0.25. The decision comes around depth 10^2–10^3, far out of reach.
 5. **A11 is probviously HALTING, at tetrational times (§6, HEURISTIC; structure PROVED).**
    - Its orbit is a sequence of countdowns, each a Hydra-type map b ↦ 3 + 3⌊(b+a0+4)/2⌋ iterated c/2 times.
-   - At each countdown end a parity check halts with probability 1/4 (end parities measured uniform: 0.262, 0.233).
+   - At each countdown end a parity check halts with probability 1/4. End parities were measured uniform over random
+     countdowns (0.262, 0.233), and directly on the rule system (0.253–0.272 for every (c mod 2, d)).
    - The blank-tape orbit has survived 4 checks. The 5th comes after about 2^336 rounds.
 6. **A2, A5, A10 are doubly parity-protected (PROVED lemma, measured rates, §5).**
    - Halting needs a rare parity-flipping end case and then an exact hit inside that one episode.
@@ -222,8 +226,13 @@ member of the family.
 
 ### 4.4 The blank-tape orbit (FINITE-EXACT; `a6_orbit_deep_20261025.py`, `a6_orbit_deep*.out/json`)
 
-- The orbit reaches depth 44 after 1.25·10^12 sweeps. Sweep starts are W < 2^49; at this depth each sweep is itself
-  ~10^13 macro steps of the rule system or more. No HALT and no CAPTURE occur.
+- The orbit runs 3000 s and stops inside depth 44 after 1.33·10^12 sweeps, at W = 369779745580288 (< 2^49); resume
+  from there.
+- Every sweep returned to J(0,0,·). A sweep exceeding the 2·10^6-phase cap would have aborted the run; none did.
+- At depth d one sweep applies the paper's loop rule J(u,v,w) → J(u−1,v+2,w−2) about W/2 times, about 10^14 rule
+  applications at depth 44.
+- Cross-check: the accelerated orbit equals the plain phase-map orbit exactly at 3·10^6 and at 2·10^7 sweeps
+  (W = 3481675260; `a6_accel_crosscheck_2e7.out`). The latter run passes a sweep of 2,945,221 phases.
 - Entry offsets e_d (first W of depth d minus T_{d−1}):
   - d ≡ 3 (mod 4): a big jump, e_d ≈ (4/9)·2^d. Values: e_15 = 14694, e_19 = 233174, e_23 = 3728426,
     e_27 = 59652526, e_31 = 954437418, e_35 = 15270995110, e_39 = 244335917530.
@@ -256,35 +265,63 @@ o = 1..400:
 - Captures at d = 6 (1), 8 (72), 15 (46), 27 (15).
 
 **Uniform basin densities (sampling, `a6_basin_sample_12_26.out`).**
-- Halting: 0.102 ± 0.007 at d = 12 (exhaustive value 0.096), 0.0015 at d = 15, and 0/2000 at every other d in 13–23.
-- Captures: 0.006 at d = 15, otherwise 0/2000.
+- Halting: 0.102 ± 0.007 at d = 12 (exhaustive value 0.096), 0.0015 at d = 15, and 0/2000 at every other d in 13–26.
+- At d = 24, 1988 of 2000 uniform samples share the main-stem exit 108: almost the whole window is one basin.
+- Captures: 0.006 at d = 15, otherwise 0/2000 (d = 12–26).
 
 **Landing neighbourhoods (`a6_landing_hazard_R150.out`).** Entries T_{d−1} + e_d + δ, |δ| ≤ 150:
 
 | d | d mod 12 | captures /301 | halts | actual landing |
 |---|---|---|---|---|
-| 15 | 3 | 17 (comb with gaps 7/11, period ≈ 44) | 0 | exit 65 (δ = 1 is captured) |
+| 15 | 3 | 17: residues {1,12,43,50,87,94,97,108} mod 140 = 6d+50 (8/140) | 0 | exit 65 (δ = 1 is captured) |
 | 19 | 7 | 0 | 0 | exit 129 |
 | 23 | 11 | 0 | 0 | exit 137 |
-| 27 | 3 | 17 (same comb pattern) | 0 | exit 189 |
-| 31 | 7 | see §9 (P7) | | |
+| 27 | 3 | 17: 12 residues mod 212 = 6d+50 (12/212) | 0 | exit 189 |
+| 31 | 7 | 0 (pre-registered P7: passed) | 0 | exit 121 |
+| 39 | 3 | 2/81 for |δ| ≤ 40, at δ = −39, −28 (pre-registered P8 ≥ 2%: passed) | 0 | exit 49 |
+
+The d = 39 row comes from `a6_landing_hazard_d39_R40.json`. Both combs are exactly periodic with period 6d + 50 and
+density ≈ 0.057, and their gaps alternate 7/11.
 
 ### 4.6 Hazard and verdict (HEURISTIC)
 
-Because the dynamics coalesces, the hazard of a target at depth d is the fraction of plausible entries lying in its
-basin. That fraction is what §4.5 measures.
+**Model.** The window dynamics coalesces, so the fate of a traversal is a function of its entry. The 400 natural entries
+per depth are therefore effectively *one* sample: their zero halts at d = 8..30 is weak evidence. Hazards must be read
+off the orbit's actual path, channel by channel, using the parity classes of its near misses (depth table in
+`a6_orbit_deep.json`).
 
-**Halting.**
-- No natural entry halts at any depth 8–30.
-- The only exposed halting events are the tops T_d at d ≡ 0 (mod 4). The orbit passes these in the eps = 1 class with
-  bracketing gaps summing to 128–300. A random-placement estimate gives about 2/gap ≈ 0.08/d per such depth, and the
-  expected number of hits over d = 16..44 is ≈ 0.06.
+| depth class | target the orbit passes | class of the two bracketing sweeps | sum of the two gaps |
+|---|---|---|---|
+| d ≡ 1 (mod 4) | T_d and N_d | eps = 0 (cannot hit) | 3d + 13 (one e0uodd run step) |
+| d ≡ 3 (mod 4) | T_d and N_d | eps = 0 (cannot hit) | 6d + 30 |
+| d ≡ 0 (mod 4) | T_d (halting); N_d is jumped over | eps = 1 (exposed) | 120, 172, 128, 228, 272, 300, 200, 236, 596 (d = 8..40) |
+| d ≡ 2 (mod 4) | N_d (capture); T_d is jumped over | eps = 1 (exposed) | 88, 180, 252, 276, 324, 268, 420, 468, 516 (d = 10..42) |
 
-**Capture.** About 5.6% per landing at d ≡ 3 (mod 12), and none elsewhere (hypothesis HYP-9381).
+**Channels.** Assume the offset of the passing orbit is uniform among the eps = 1 positions.
 
-**Verdict.** A6 is **probviously non-halting**. If the capture windows persist, it is also probviously decidable: it
-becomes a translated cycler with probability ≈ 0.97 against ≈ 0.03 for halting, at a depth around 250
-(W ≈ 2^250). That is beyond any simulation, since the cost grows like 2^(0.47d).
+| channel | probability per event | history (expected hits) |
+|---|---|---|
+| Halting at T_d (d ≡ 0 mod 4) | ≈ 2/(gap sum) | 0.09 over d = 8..40 |
+| Capture at N_d (d ≡ 2 mod 4) | ≈ 2/(gap sum) | 0.08 over d = 10..42 |
+| Capture at a landing comb (d ≡ 3 mod 12) | ≈ 0.057 | 0.17 over d = 15, 27, 39 |
+
+None of these events was observed, which is consistent with the totals.
+
+**Forward.**
+- The gap sums grow roughly like 7–15 d, so the first two channels contribute O(1/d) per depth: about 0.05/d for
+  halting and 0.04/d for N_d capture.
+- If the combs persist, the comb channel contributes about 0.0047 per depth, a constant.
+- The total hazard diverges in either case.
+
+**Verdict: probviously decidable** (not probviously non-halting). Outcome odds:
+
+| scenario | P(translated cycler) | P(halt) | when decided |
+|---|---|---|---|
+| Combs persist | ≈ 0.9 | ≈ 0.1 | typically by depth a few hundred |
+| Combs do not persist | ≈ 0.5–0.75 | ≈ 0.25–0.5 | depth ~10^3–10^6 |
+
+All of this is far beyond exact simulation, whose cost grows like 2^(0.47d). The translated cycler, if it comes, is
+already certified by THM-4770(c).
 
 ## 5. A2, A5, A10 (double parity protection) and A1
 
@@ -293,8 +330,10 @@ becomes a translated cycler with probability ≈ 0.97 against ≈ 0.03 for halti
   e_small, a1_small) or even (only o_small: a = 0, b odd, w ≤ 1, giving (0, 1, b+1+2w)). HALT needs w = 0 at an a = 0,
   even-b state, so it can only occur inside an even-w episode. Each episode lasts until the next a_small/e_small,
   typically one cascade.
-- *A10.* The same holds for c with "odd" and "even" swapped. HALT needs b = 0 and c = 3. Odd-c episodes are created
-  only by b0_small (b = 0, c ≤ 2), directly or after c0_a.
+- *A10.* The same holds for c with "odd" and "even" swapped. HALT needs b = 0 and c = 3. Odd c is created only by:
+  - b0_small (b = 0, c ≤ 2);
+  - the c = 0 rules c0_a and c0_b with b = 0. These output c = 1. With b = 0 the next step is b0_small; with b ≥ 1 the
+    next step resets c to even, with no halting check in between.
 
 **Measured (`parity_episodes_*.out`, 6·10^7 macro steps each).**
 
@@ -314,7 +353,7 @@ becomes a translated cycler with probability ≈ 0.97 against ≈ 0.03 for halti
 **A1.**
 - The only translated cycle is (a1b, c): A(1, b, 0, d) → A(1, b+2, 0, d−1), run d times. The rest of each segment is a
   doubling cascade (db5, loop_a0).
-- The certified engine reaches 4,828 bits after 12,396 segments (`rs_deep_A1.out`), against 2^28 for plain simulation
+- The certified engine reaches 6,711 bits after 17,241 segments in 2400 s (`rs_deep_A1.json`), against 2^28 for plain simulation
   in 60 s. Neither HALT nor CAPTURE occurs.
 - Halting needs d = b + 2 exactly at a cascade end, a range of about 1.5b. Residual ≲ 2^(−4000): probviously
   non-halting.
@@ -333,7 +372,12 @@ becomes a translated cycler with probability ≈ 0.97 against ≈ 0.03 for halti
 **Measured.**
 - End parities are uniform. Over random starts (`a11_countdown_20261025.py`) the halting fraction is 0.257/0.243
   (seed 5) and 0.262/0.233 (seed 77, c/2 ∈ [400, 1200); pre-registered P9).
+- Directly on the rule system (`a11_rule_check_20261025.py`), from 6000 random configurations C(a0, b, c, d) with
+  c/2 ∈ [100, 400): the first countdown end halts with frequency 0.253, 0.272, 0.268, 0.256 for (c mod 2, d) =
+  (0,3), (0,6), (1,3), (1,6).
 - The blank-tape orbit's ends (macro step, a0, b mod 2, c) are (1,0,0,0), (8,0,0,0), (33,1,1,0) and (1173,1,1,0).
+- All four ends have a0 ≡ b (mod 2). This is not an invariant: the round map gives a0' ≡ b' exactly when
+  a0 + b ≡ 1, 2 (mod 4).
   None halts; each had probability 3/4 of not halting.
 - The current countdown has c ≈ 2^337. Its end, the 5th check, comes after about 2^336 rounds.
 
@@ -345,12 +389,12 @@ is Racheline's tetrational Cryptid.
 
 | machine | growth (60 s plain; certified engine) | halting condition | residual / verdict |
 |---|---|---|---|
-| A1 | exponential per segment (4,828 bits) | d = b + 2 at cascade end | ≲ 2^-4000; non-halting |
+| A1 | exponential per segment (6,711 bits) | d = b + 2 at cascade end | ≲ 2^-6000; non-halting |
 | A2 | slow, L ≈ 2^25.5 | double parity | ≈ 10^-7; non-halting |
 | A3 | exponential (2^199945) | K = M, small (K, M) | ≲ 2^-199945; non-halting |
 | A4 | exponential, 0.76 bits/visit | a = 2^(m+2) − m − 4 | ≲ 2^-2000; non-halting |
 | A5 | slow, L ≈ 2^26.3 | double parity | ≈ 10^-7; non-halting |
-| A6 | slow, W ≈ 2^49 at depth 44 | exact tops T_d; capture family | non-halting; probviously decidable (capture ~0.97) |
+| A6 | slow, W ≈ 2^49 at depth 44 | exact tops T_d; capture family | probviously decidable: translated cycler ≈ 0.75–0.9, halt ≈ 0.1–0.25 |
 | A7 | exponential (2^186527) | coincidence, then a parity | ≲ 2^-186000; non-halting |
 | A8 | exponential (2^276185) | a − k ∈ {0,1}, k − a ∈ {4,5} | ≲ 2^-276000; non-halting |
 | A9 | exponential (2^272084) | b − c ∈ {0,1} | ≲ 2^-272000; non-halting |
@@ -381,7 +425,7 @@ Every "non-halting" in this table means probviously non-halting.
 4. **Classify by mechanism, not by "Collatz-like".**
    - Exact coincidences of exponentially growing parameters are safe.
    - Parity-protected slow growth is polynomially safe.
-   - Funnels with a capture family are probviously decidable.
+   - Funnels with exposed targets of both kinds are probviously decidable.
    - A constant-probability check at tetrational times is probviously halting.
    - Only the last two can ever change the BB(6) picture.
 
@@ -394,7 +438,8 @@ Every "non-halting" in this table means probviously non-halting.
 - P4: no halts at d = 28–30. Holds.
 - P5: parity protection at odd depths 29–43. Holds.
 - P6: every capture is the §4.2 family. Holds.
-- P7, P8: filled in after the runs; see the end of this section.
+- P7: holds. d = 31 has 0/301 captures and 0 halts.
+- P8: holds, narrowly. d = 39 has 2/81 captures (2.5%, threshold 2%) and 0 halts.
 - P9: holds (0.262, 0.233).
 
 ## 10. Files

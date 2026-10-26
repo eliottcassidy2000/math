@@ -1,12 +1,12 @@
 ---
 id: THM-4770
-title: "BB(6) Cryptid A6 = 1RB0LF_1RC1RA_0RD0RB_1LE---_0LA1LE_1RD1LA (Dos Santos et al., arXiv:2610.22603v2, A.6). (a) Phase map: on phases P(v0,w0) = J(0,v0,w0) the rule system acts by a doubling cascade v_j = A 2^j - 6, w_j = w0 - 2A(2^j - 1) + 3j (A = v0 + 6), ending at the least j with w0 + 2A + 3j + 3 < 4A 2^j, followed by an explicit 11-case end table. (b) Halting: a phase halts iff w_j = 2v_j + 8; a sweep start J(0,0,W) halts in its first phase iff W = T_d = 24 2^d - 3d - 16, the largest sweep start of depth d. (c) Capture family: P(v0, 4v0+29) (v0 even >= 2) -> P(v0+1, 4v0+37) and P(v0, 4v0+33) (v0 odd >= 5) -> P(v0+3, 4v0+41), both at depth 1, so every configuration of the family runs forever (a translated cycler on the macro level); the sweep start N_d = 18 2^d - 3d - 4 (d >= 2) enters it in its second phase. (d) Parity protection: sweep starts with eps = (w-3) mod 2 = 0 are never targets (T_d, N_d have eps = 1); at d = 1 (mod 4) such starts with u odd form runs W -> W + 3d + 13 across the window. (e) Three-point lemma: for a piecewise-affine rule system whose labelled branches are affine on (polyhedron) cap (lattice coset), three exact evaluations certify a translated cycle on a whole range, and an evaluation at k = 2^E (E >= 3 maxbits + 300) certifies an infinite one. (f) FINITE-EXACT: the blank-tape orbit (J(0,0,0) after 35 TM steps) neither halts nor enters a certified translated cycler during its first 1.25e12 sweeps (through depth 44, sweep starts < 2^49)."
+title: "BB(6) Cryptid A6 = 1RB0LF_1RC1RA_0RD0RB_1LE---_0LA1LE_1RD1LA (Dos Santos et al., arXiv:2610.22603v2, A.6). (a) Phase map: on phases P(v0,w0) = J(0,v0,w0) the rule system acts by a doubling cascade v_j = A 2^j - 6, w_j = w0 - 2A(2^j - 1) + 3j (A = v0 + 6), ending at the least j with w0 + 2A + 3j + 3 < 4A 2^j, followed by an explicit 11-case end table. (b) Halting: a phase halts iff w_j = 2v_j + 8; a sweep start J(0,0,W) halts in its first phase iff W = T_d = 24 2^d - 3d - 16, the largest sweep start of depth d. (c) Capture family: P(v0, 4v0+29) (v0 even >= 2) -> P(v0+1, 4v0+37) and P(v0, 4v0+33) (v0 odd >= 5) -> P(v0+3, 4v0+41), both at depth 1, so every configuration of the family runs forever (a translated cycler on the macro level); the sweep start N_d = 18 2^d - 3d - 4 (d >= 2) enters it in its second phase. (d) Parity protection: sweep starts with eps = (w-3) mod 2 = 0 are never targets (T_d, N_d have eps = 1); at d = 1 (mod 4) such starts with u odd form runs W -> W + 3d + 13 across the window. (e) Three-point lemma: for a piecewise-affine rule system whose labelled branches are affine on (polyhedron) cap (lattice coset), three exact evaluations certify a translated cycle on a whole range, and an evaluation at k = 2^E (E >= 3 maxbits + 300) certifies an infinite one. (f) FINITE-EXACT: every one of the first 1.33e12 sweeps of the blank-tape orbit (J(0,0,0) after 35 TM steps) returns to J(0,0,.): no halt, no capture, through depth 44 (sweep starts < 2^49)."
 status: >
   PROVED (a)-(e) from the paper's simplified rule system for A.6. The paper states that system is Lean-verified
   (CITED). This session re-validated it against direct TM simulation: 60/60 predicted configurations in order
   (validate.out). The phase map (a) also equals the rule system for every W < 20000 (a6_phase_map_20261025.py).
   FINITE-EXACT (f), via the certified two-level accelerator a6_accel_20261025.py. Its accelerated orbit equals the
-  plain orbit exactly at sweep 3e6 (W = 449995092).
+  plain orbit exactly at sweeps 3e6 (W = 449995092) and 2e7 (W = 3481675260, a6_accel_crosscheck_2e7.out).
   Exhaustive halting and capture sets for W < 2^18 (a6_target_sets_E18.json): each depth has 1-4 halting starts
   (always including T_d) and 1-8 captured starts (always including N_d). Every capture certificate is the family (c).
   NEW as far as searched (2026-10-25): no analysis of A6 on the bbchallenge wiki (Cryptid list, machine-string web
@@ -111,10 +111,14 @@ then β ≥ 0 for every constraint, so the chain is infinite.
 
 ## (f) The orbit
 
-`a6_orbit_deep_20261025.py` uses level-1 (phase) and level-2 (sweep) jumps, each justified by (e). It ran 3000 s and
-reached depth 44 after 1.257·10^12 sweeps, with W < 2^49. There was no HALT and no capture certificate.
+`a6_orbit_deep_20261025.py` uses level-1 (phase) and level-2 (sweep) jumps, each justified by (e).
 
+- It ran 3000 s and stopped inside depth 44 after 1.33·10^12 sweeps, at W = 369779745580288 (< 2^49).
+- Every sweep returned to J(0,0,·). The run would have aborted on a halt, on a capture certificate, or on a sweep
+  longer than 2·10^6 phases; none occurred.
 - Entry offsets at d ≡ 3 (mod 4) are long jumps, e_d ≈ (4/9)·2^d. The values for d = 15, 19, ..., 39 are listed in
   the source note.
 - At every odd depth 29–43 the four nearest approaches to T_d and N_d are at odd distance. By (d) they are eps = 0
   sweeps and carry no risk.
+- At even depths the orbit passes exactly one target in the eps = 1 class: T_d when d ≡ 0 (mod 4), N_d when
+  d ≡ 2 (mod 4). It misses each by a positive gap; the gaps are in `a6_orbit_deep.json`.

@@ -1,0 +1,2 @@
+# reconstructed from a6_landing_hazard_d39_R40.json (stdout of the background job was lost; job finished 2026-10-25 20:35:45)
+d=39 landing e_d=244335917530: halt 0/81, capture 2/81 (deltas [-39, -28]), distinct exits 1 top [(49, 79)]; actual entry fate ('exit', 49)

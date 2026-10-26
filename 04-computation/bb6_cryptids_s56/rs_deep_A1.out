@@ -22,3 +22,10 @@
 [1324s] segments 1.2870e+04 state bits 5016 stats {'steps': 20245764, 'l1_jumps': 4006, 'l2_jumps': 0}
 [1385s] segments 1.3138e+04 state bits 5115 stats {'steps': 21007608, 'l1_jumps': 4081, 'l2_jumps': 0}
 [1445s] segments 1.3506e+04 state bits 5254 stats {'steps': 22130095, 'l1_jumps': 4189, 'l2_jumps': 0}
+[1505s] segments 1.3898e+04 state bits 5410 stats {'steps': 23539960, 'l1_jumps': 4321, 'l2_jumps': 0}
+[1565s] segments 1.4158e+04 state bits 5491 stats {'steps': 24348660, 'l1_jumps': 4395, 'l2_jumps': 0}
+[1625s] segments 1.4423e+04 state bits 5601 stats {'steps': 25281969, 'l1_jumps': 4480, 'l2_jumps': 0}
+[1686s] segments 1.4647e+04 state bits 5687 stats {'steps': 26040104, 'l1_jumps': 4546, 'l2_jumps': 0}
+[1748s] segments 1.4841e+04 state bits 5764 stats {'steps': 26694392, 'l1_jumps': 4603, 'l2_jumps': 0}
+# final result from rs_deep_A1.json (late stdout lines lost to a git autostash during the run)
+RESULT A1 stopped (time limit 2400 s) segments 17241 state bits 6711 stats {'steps': 35974783, 'l1_jumps': 5346, 'l2_jumps': 0}; no HALT, no CAPTURE
