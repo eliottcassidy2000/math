@@ -1,0 +1,24 @@
+{
+"steps": 300000,
+"odd_terms": 150192,
+"W_final": 149417,
+"W_min": 0,
+"at_odd_index": 0,
+"min_b_after_first_odd": 5,
+"model_r": 0.6180339887498948,
+"check_cubic": 0.0,
+"P_halt_model_from_B0_5": 0.05572809000084118,
+"phi^-6": 0.0557280900008412,
+"expected_step": 1.0,
+"collatz_drift_log2_per_odd_step": -0.4150374992788439,
+"antihydra_slope_threshold": 1.5,
+"collatz_slope_threshold": 1.584962500721156,
+"empirical_v_freq": {
+"1": 0.50025,
+"2": 0.25043,
+"3": 0.12509,
+"4": 0.06233,
+"5": 0.03066,
+"6": 0.0157
+}
+}

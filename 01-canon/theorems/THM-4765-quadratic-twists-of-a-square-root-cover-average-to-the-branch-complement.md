@@ -8,6 +8,14 @@ status: >
   for all 64 hourglass twists at every tested q. The 1+6 split of the six-subset character sums is PROVED for the
   six outer deletions (configuration symmetry) and FINITE-EXACT for the central deletion being different.
   Not yet independently audited by another agent.
+  CONCURRENT PRIORITY (recorded 2026-10-25 after reading the concurrent packets): the 64-twist mean q^2-6q+12 /
+  q^2-6q+10, its formal value seven and the negative (q-1)-coefficient were stated first in
+  05-knowledge/results/normseven_f1_20261025/TWIST_AVERAGE.md; the general Frobenius-orbit mass theorem
+  (1/|G|) sum_g #W_g = #(W/G) for any constant finite abelian group, the resolved mean q^2+4q+1 and the fixed-twist
+  extension law are in session63_integral_observers_root_arrangements_20261025/twists/RESULT.md (Theorems A, B, D).
+  Theorem C here is the torsor special case with an independent pointwise proof. New here: the Walsh-transform
+  formula for the twisted etale counts, the 1+6 outer/central split of the six-subset character sums, and the
+  seven-subset hostile chi(U)=10-t_3 versus p_g=7.
 session: klein-2026-10-25 (codex/session-tournament-twist-unify)
 source: 05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md
 scripts:

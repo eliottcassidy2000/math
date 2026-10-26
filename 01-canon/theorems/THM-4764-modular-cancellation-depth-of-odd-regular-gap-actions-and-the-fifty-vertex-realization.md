@@ -9,6 +9,13 @@ status: >
   Equality in Theorem B'' for mixed order is OPEN (HYP-9374), verified on 22 regular actions.
   FINITE-EXACT: both 50-vertex tournaments (automorphisms enumerated from arcs with no group assumed; 2^25
   orbit census in C agrees with Burnside). Not yet independently audited by another agent.
+  CONCURRENT PRIORITY (recorded 2026-10-25 after reading the concurrent packets): the elementary-abelian and cyclic
+  regular cases (depths h, q-p+1, q by coefficient characteristic; cyclic depth p^(r-1) with 1+r(p-1) nonzero terms
+  mod p) and the 50-vertex q=25 identification were stated first in
+  05-knowledge/results/unprotected_ports_cancellation_20261025/valuation/README.md and counting/POSITIVE_JET.md,
+  and recovered in session63_integral_observers_root_arrangements_20261025/cancellation/RESULT.md. New here: the
+  J-formula for arbitrary odd p-groups (non-abelian included), Theorem B'' and Lemma B0, the candidate-order bound
+  for mixed order, the explicit Cayley half-system, and the Z25 twin with depths (1,5,25,1).
 session: klein-2026-10-25 (codex/session-tournament-twist-unify)
 source: 05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md
 scripts:

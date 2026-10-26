@@ -1,0 +1,6 @@
+untwisted: liftable points on E=0 up to height 60: 0
+twist (1,1,-1,1,-1,1,-1): liftable points on E=0 up to height 60: 4 examples: [(0, 1, ('E', 'E+x', 'E-x')), (1, 0, ('E', 'E+z', 'E-z')), (9, 16, ('E',)), (16, 9, ('E',))]
+all liftable central points have x*z and x*(x+z) perfect squares (times sign bookkeeping): True
+untwisted triple points lift? [False, False, False]
+twist (1,1,1,1,-1,1,-1): triple point (0:0:1) lifts: (True, ['E', 'E+x', 'E-x'])
+Pythagorean twist: rational points of P^2 (height<=12) lifting to X_d: 4 of 6521

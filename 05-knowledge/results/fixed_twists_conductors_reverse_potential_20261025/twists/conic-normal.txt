@@ -1,0 +1,9 @@
+(1, 1, 1, 1, 1, 1, 1) -> False pair condition fails | brute height<=40 lifts on open central line: 0 []
+(1, 1, -1, 1, -1, 1, -1) -> True conic w^2=1s^2+1t^2 | brute height<=40 lifts on open central line: 2 [(9, 16), (16, 9)]
+(1, 1, -1, 2, -2, 1, -1) -> True conic w^2=4s^2+2t^2 | brute height<=40 lifts on open central line: 1 [(1, 8)]
+(1, 3, -3, 1, -1, 3, -3) -> True conic w^2=9s^2+3t^2 | brute height<=40 lifts on open central line: 1 [(1, 3)]
+(1, 1, -1, 1, -1, 7, -7) -> False conic w^2=7s^2+7t^2 | brute height<=40 lifts on open central line: 0 []
+(1, 5, -5, 1, -1, 5, -5) -> True conic w^2=25s^2+5t^2 | brute height<=40 lifts on open central line: 1 [(4, 5)]
+(1, 2, -2, 3, -3, 6, -6) -> False conic w^2=108s^2+18t^2 | brute height<=40 lifts on open central line: 0 []
+(1, 1, -1, 3, -3, 3, -3) -> True conic w^2=27s^2+9t^2 | brute height<=40 lifts on open central line: 1 [(3, 1)]
+random twists: Hilbert-decision agrees with brute height<=25 existence in 300 of 300 ; brute point found but decision False: 0

@@ -1,0 +1,13 @@
+A' closed under multiplication: True
+generators integral (square in R): True
+u_z/(p*c_z) never integral: True
+z=000: b^z=1, c_z=1, predicted conductor generator 15: in conductor True, minimal True
+z=001: b^z=15, c_z=1, predicted conductor generator 1: in conductor True, minimal True
+z=010: b^z=21, c_z=1, predicted conductor generator 5: in conductor True, minimal True
+z=011: b^z=315, c_z=3, predicted conductor generator 1: in conductor True, minimal True
+z=100: b^z=55, c_z=1, predicted conductor generator 3: in conductor True, minimal True
+z=101: b^z=825, c_z=5, predicted conductor generator 1: in conductor True, minimal True
+z=110: b^z=1155, c_z=1, predicted conductor generator 1: in conductor True, minimal True
+z=111: b^z=17325, c_z=15, predicted conductor generator 1: in conductor True, minimal True
+conductor valuation matrix verified: True
+u1: single-root products in A: True | times u1u2/3 in A: True

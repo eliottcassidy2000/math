@@ -1,0 +1,12 @@
+Z[1/2], u^2=15, v^2=21: uv/3 integral: True | u/3: False | (u+v)/3: False | uv/9: False | (1+uv)/3: False
+odd-denominator box: integral elements == Z[1/2]+Z u+Z v+Z (uv/3): True 189 189
+conductor = {a divisible by 3}: True
+conductor check (a = 0 mod 3): True
+over Z, u^2=6, v^2=10: (u+v)/2 integral over Z: True charpoly [1, 0, -8, 0, 1]
+over Z, u^2=15, v^2=21: (u+v)/2 integral: False (1+u)/2 integral: False (u+v)/2 chp [1, 0, -18, 0, 9/4]
+u*sqrt(-21)/3 (True, T**4 + 1029)
+u (True, T**4 + 189)
+u/3 (False, 3*T**4 + 7)
+u*(3+sqrt(-21))/3 (True, T**4 + 84*T**2 + 2100)
+u*(1+sqrt(-21))/3 (False, 3*T**4 + 84*T**2 + 3388)
+u/sqrt(-21) (False, 7*T**4 + 3)
