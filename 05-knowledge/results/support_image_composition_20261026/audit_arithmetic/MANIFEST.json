@@ -1,0 +1,43 @@
+{
+  "audit_files": {
+    "PROOF_AUDIT.md": "71391c5a00e9cce635187f2b8540117fb9a7c60fbcac288e268c58f401290d58",
+    "check.py": "4c17c46e21092d35720b372e2e299f7a51a127cdf99ff771a55753a082a057bc",
+    "normal.json": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5",
+    "optimized.json": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5"
+  },
+  "historical_reviewed_manifest": {
+    "path": "../arithmetic/MANIFEST.json",
+    "scope": "Frozen candidate snapshot only; not a live pin to mutable producer manifest.",
+    "sha256": "452c1ec4b418518a3adb08e2c0824da9c433ae780e5b2822a333365af859dd3a"
+  },
+  "independent_gates": 89397,
+  "normal_optimized_identical": true,
+  "primary_limit": "Visible prose read; display-image formulas not reconstructed and not a proof dependency.",
+  "primary_reading": [
+    "https://www.cecm.sfu.ca/organics/papers/lagarias/paper/html/node4.html",
+    "https://www.cecm.sfu.ca/organics/papers/lagarias/paper/html/node10.html",
+    "https://www.cecm.sfu.ca/organics/papers/lagarias/paper/html/node12.html"
+  ],
+  "producer_replay_gates": 489131,
+  "reviewed_sources": {
+    "README.md": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
+    "SOURCES.md": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
+    "check.py": "51b4dec294ca4313a9220914ddeb64cc2cabc3359986a8d3076351f082de62e3",
+    "normal.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+    "optimized.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3"
+  },
+  "scope": "C1-C5, arbitrary modulus, finite positive source guard, odd-ratio outgoing covering, infinite-word hostiles, Berggren vector versus full matrix",
+  "status_promotion": {
+    "README.md": {
+      "candidate_sha256": "682f926e35f7c6252e9af2fc5c73d07dcb7bee166876e71e40cd45ff967a8ad4",
+      "inverse_comparison": "PASS: only declared status/link substitutions",
+      "promoted_sha256": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9"
+    },
+    "SOURCES.md": {
+      "candidate_sha256": "77ee958aec301cc12ce06ff5e4d0f55523465ed6db46200f98e0bd4d9acbba24",
+      "inverse_comparison": "PASS: only declared status/link substitutions",
+      "promoted_sha256": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba"
+    }
+  },
+  "verdict": "PASS, no mathematical correction requested"
+}

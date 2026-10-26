@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "after_sha256": "5656464ebedb2d6c5d1a4c8377caa6d0f00b0b38cf3ac9d95f9cb144b05b23c0",
+      "before_sha256": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8",
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "replacements": [
+        {
+          "new": "  A2*h*A2 is also PROVED to recover every distinct two-port state at all n >= 2 (support_image_composition_20261026/sandwich S1-S4, independently audited).\n  The one-sidedness of glue1 and the V2/free statement are PROVED (trivial).",
+          "old": "  the one-sidedness of glue1 and the V2/free statement are PROVED (trivial)."
+        },
+        {
+          "new": "- Answered: order-1 contexts suffice for strong cores, by the degree reconstruction of `e*h*e`. **PROVED for all cores with distinct ports, n >= 2:** `A2(s\u2192t)*h*A2(s\u2192t)` is a complete invariant; its four added vertices are optimal among single fixed nonempty two-sided hinge contexts. See [S1\u2013S4 and exact image guard](../results/support_image_composition_20261026/sandwich/README.md), with the [independent audit](../results/support_image_composition_20261026/audit_sandwich/REPORT.md). This closes this all-core question only; the response-classification and dynamic-compression questions remain open.",
+          "old": "- Answered: order-1 contexts suffice, by the degree reconstruction of `e*h*e`. Open: whether `A2(s\u2192t)*h*A2(s\u2192t)` (`k = k'` the rooted arc entrance \u2192 exit), which is injective on all 8, 32, 176, 1408, 17824 states at `n = 3..7`, is a complete invariant of all two-port states in every order."
+        }
+      ]
+    },
+    {
+      "after_sha256": "c5ea9cd460dce84addff22ef2baa7358ffd294338f46314a2394876ecde216b8",
+      "before_sha256": "33f0480ff750cbab7102ce7611f260445fbf57049658a5e030c00de368a8fd2d",
+      "path": "00-navigation/START-HERE.md",
+      "replacements": [
+        {
+          "new": "[Maps](../05-knowledge/results/support_image_composition_20261026/README.md).",
+          "old": "[Sieve/path](../05-knowledge/results/sieve_path_merge_20261026/README.md)."
+        }
+      ]
+    }
+  ],
+  "scope": "Promote only the audited A2*h*A2 all-core clause; preserve other HYP9416 questions; route the current packet.",
+  "source_revision": "4950589d056a64f8807774cf7da893dcafcd63a0"
+}

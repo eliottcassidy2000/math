@@ -1,0 +1,124 @@
+{
+  "checks": 76618,
+  "first_false_image": {
+    "D": [
+      10,
+      20,
+      16,
+      6,
+      1
+    ],
+    "code": 12295,
+    "coefficients": [
+      7,
+      2,
+      0,
+      0,
+      0
+    ],
+    "completion": [
+      14,
+      20,
+      16,
+      22,
+      1
+    ],
+    "n": 5
+  },
+  "joint_only_control": {
+    "D": [
+      2,
+      4,
+      8,
+      1
+    ],
+    "T": [
+      6,
+      12,
+      8,
+      1
+    ],
+    "new_word": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "polynomial": [
+      4,
+      0,
+      1,
+      0
+    ]
+  },
+  "line_census": [
+    {
+      "hub_path_tests": 4,
+      "n": 3,
+      "ordinary_types": 2
+    },
+    {
+      "hub_path_tests": 12,
+      "n": 4,
+      "ordinary_types": 4
+    },
+    {
+      "hub_path_tests": 92,
+      "n": 5,
+      "ordinary_types": 12
+    }
+  ],
+  "partial_graph_census": [
+    {
+      "accepted": 1,
+      "decoded": 1,
+      "images": 1,
+      "n": 0,
+      "saturated": 1,
+      "total": 1
+    },
+    {
+      "accepted": 1,
+      "decoded": 1,
+      "images": 1,
+      "n": 1,
+      "saturated": 1,
+      "total": 1
+    },
+    {
+      "accepted": 2,
+      "decoded": 2,
+      "images": 2,
+      "n": 2,
+      "saturated": 2,
+      "total": 3
+    },
+    {
+      "accepted": 8,
+      "decoded": 8,
+      "images": 8,
+      "n": 3,
+      "saturated": 8,
+      "total": 27
+    },
+    {
+      "accepted": 64,
+      "decoded": 64,
+      "images": 64,
+      "n": 4,
+      "saturated": 64,
+      "total": 729
+    },
+    {
+      "accepted": 1024,
+      "decoded": 1624,
+      "false_local": 480,
+      "images": 1024,
+      "n": 5,
+      "saturated": 1504,
+      "total": 59049
+    }
+  ],
+  "status": "FINITE-EXACT PASS",
+  "universe": "All loopless oriented graphs n=0..5; all ordinary tournament-type pairs n=3..5 with all transports; every representative Hamilton word for hub tests."
+}

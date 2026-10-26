@@ -1,0 +1,61 @@
+{
+  "all_rooted_odd_defect": [
+    0,
+    0,
+    1,
+    1,
+    5,
+    15,
+    75
+  ],
+  "checks": 25468,
+  "connected_rooted_odd_defect": [
+    0,
+    0,
+    1,
+    0,
+    4,
+    9,
+    58
+  ],
+  "even_graphs": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56
+  ],
+  "even_parent_only_order_three": "4/3",
+  "graph_types_by_order": [
+    1,
+    1,
+    2,
+    4,
+    11,
+    34,
+    156
+  ],
+  "method": "full labelled graph orbit removal, root-first marked-card maps, independent tournament orbit removal",
+  "pointed_tournaments": [
+    0,
+    1,
+    2,
+    4,
+    12,
+    48,
+    296
+  ],
+  "rooted_attachment_types_by_order": [
+    0,
+    1,
+    2,
+    6,
+    20,
+    90,
+    544
+  ],
+  "status": "PASS",
+  "transport_maps_checked": 6169
+}

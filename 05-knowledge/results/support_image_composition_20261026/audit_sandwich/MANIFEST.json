@@ -1,0 +1,44 @@
+{
+  "auditor_checks": 36688,
+  "base_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "historical_sources": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8"
+    }
+  ],
+  "mode_receipts_identical": true,
+  "own_files": {
+    "REPORT.md": "4c0185ace16bef514185ccb7aac5eac4b123d8a6c1ea3ebe9f61ab72c8459b91",
+    "check.py": "5e97e4bc3ca994564ea70df117b71b5e6931b81f6ff3ca8da796504ac85e226d",
+    "normal.json": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+    "optimized.json": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+    "producer_normal_replay.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "producer_optimized_replay.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15"
+  },
+  "producer_checks": 3878,
+  "producer_manifest_scope": "Producer MANIFEST.json omitted to avoid mutual manifest dependency; producer proof, code, receipts and sources bound directly.",
+  "review_lineage": [
+    {
+      "sha256": "37243dc9580f70097a528786e6b689692328d943d2e40fb42e4b18163a3165e1",
+      "status": "initial candidate, one right-marker degree typo"
+    },
+    {
+      "sha256": "31c47969a899f887df248d79e359cfe7609a93b7b3d4b66f195e443bff887325",
+      "status": "reviewed corrected candidate PASS"
+    },
+    {
+      "sha256": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+      "status": "PROVED status/link-only promotion; inverse bytes independently verified"
+    }
+  ],
+  "reviewed_producer": {
+    "sandwich/README.md": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+    "sandwich/SOURCES.json": "ab06cb1c76eeafec57da3d7430ddca6a91cec7cd7f50f63a5dd8bc480ee79a7d",
+    "sandwich/check.py": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
+    "sandwich/normal.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "sandwich/optimized.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15"
+  },
+  "status": "PASS after corrected right-marker degree typo"
+}

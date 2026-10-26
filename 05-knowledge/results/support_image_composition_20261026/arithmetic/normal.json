@@ -1,0 +1,63 @@
+{
+  "clock_moduli": [
+    1,
+    18
+  ],
+  "covering_divisor_pairs": 161,
+  "gates": 489131,
+  "height_sieve_compositions": [
+    {
+      "B": 3,
+      "H": 22,
+      "L": 3,
+      "M": 6,
+      "twins": [
+        3,
+        5,
+        11,
+        17
+      ]
+    },
+    {
+      "B": 5,
+      "H": 46,
+      "L": 3,
+      "M": 30,
+      "twins": [
+        3,
+        5,
+        11,
+        17,
+        29,
+        41
+      ]
+    },
+    {
+      "B": 7,
+      "H": 118,
+      "L": 3,
+      "M": 210,
+      "twins": [
+        3,
+        5,
+        11,
+        17,
+        29,
+        41,
+        59,
+        71,
+        101,
+        107
+      ]
+    }
+  ],
+  "noncovering_divisor_pairs": 119,
+  "path_lengths": [
+    0,
+    7
+  ],
+  "refinement_N_max": 64,
+  "scope": "Finite paths and guarded finite-height realization; no infinite positive-source theorem.",
+  "source_trace_classes": 43605,
+  "status": "FINITE-EXACT controls; all-parameter proofs in README.md"
+}

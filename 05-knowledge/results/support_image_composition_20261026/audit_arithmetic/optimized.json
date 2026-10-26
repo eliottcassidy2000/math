@@ -1,0 +1,18 @@
+{
+  "cardinality_and_floors_use_positive_integer_sources": true,
+  "checks": 89397,
+  "clock_moduli": [
+    1,
+    12
+  ],
+  "covering_pairs": 49,
+  "literal_source_cylinders": 2418,
+  "noncovering_pairs": 35,
+  "path_lengths": [
+    0,
+    4
+  ],
+  "producer_imports": false,
+  "refinement_fine_maximum": 24,
+  "status": "PASS"
+}

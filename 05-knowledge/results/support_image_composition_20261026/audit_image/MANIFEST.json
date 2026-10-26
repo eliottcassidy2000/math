@@ -1,0 +1,33 @@
+{
+  "files": {
+    "AUDIT.md": "06b738da54b9deb9fa1c8aa1358376ef96a9f3c5e5d7025f9ddc7ac5fa966d19",
+    "check_independent.py": "1e346d4edc098b636f0579b5089152a06dd56aae87500f44e7b5adec99761b31",
+    "normal.json": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+    "optimized.json": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+    "producer_replay.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "producer_replay.optimized.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870"
+  },
+  "independent_gates": 1682,
+  "inherited_pins_verified": {
+    "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935",
+    "05-knowledge/results/black_descent_20261020c/scc.md": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47",
+    "05-knowledge/results/defect_transitions_20261020/blue.md": "7da49b2e28f73953a940dee75ccb96ab083ae1713f06e12302b04f2b4ace5707",
+    "05-knowledge/results/guard_reconstruction_20261026/README.md": "0e8d76b8bfca01b5c3d016a62dcd5aff3c2450a41971c7a46a0d3a91b6157799",
+    "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+  },
+  "normal_optimized_identical": true,
+  "producer_gates": 76618,
+  "promotion": {
+    "exact_inverse_status_link_check": true,
+    "promoted_proof_sha256": "4c89b9c42fc0072e2aecacac2daf28fb0e30edd5bf8026519ce391b597331db8",
+    "reviewed_candidate_sha256": "291067c75a06f87a71540c94fda13a16cfb735e882707229933e5c0377e6b8f5"
+  },
+  "reviewed_producer": {
+    "README.md": "4c89b9c42fc0072e2aecacac2daf28fb0e30edd5bf8026519ce391b597331db8",
+    "check.py": "3df577b1b1d859eaa692a175cb435b379ac1145a062d94e06a23d7288425ce06",
+    "normal.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "optimized.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870"
+  },
+  "scope": "Independent elementary proof review with inherited reconstruction; no global connectivity conclusion",
+  "verdict": "PASS I1-I5; producer mathematical bytes frozen"
+}

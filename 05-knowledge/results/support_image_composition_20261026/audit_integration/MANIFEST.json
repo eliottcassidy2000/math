@@ -1,0 +1,39 @@
+{
+  "application_scope": [
+    "sandwich S1\u2013S4 and independent audit_sandwich",
+    "even_graphs E1\u2013E4 and independent audit_even",
+    "image I1\u2013I3 witness/image/deletion statements; source proof read, full lane audit separate",
+    "arithmetic finite-cylinder/positive-source statements; source proof read, full lane audit separate",
+    "inherited growing_sieve_path field F1 Legendre determinant character and \u00a73 F8 distinction"
+  ],
+  "checks": "No additional empirical checker required for elementary abstract criteria; concrete lane receipts retain their own universes.",
+  "composition_promotion": {
+    "candidate_sha256": "8438a61ab650699c77cae91fafd08ae0cc0276518974957af7c952bc7b7025f5",
+    "inverse_reproduces_candidate": true,
+    "new": "**PROVED elementary criteria; independently reviewed synthesis.**\n[Independent review](audit_integration/COMPOSITION_AUDIT.md). The elementary\ncriteria are proved here for their stated abstract models; no priority is claimed.",
+    "old": "**PROVISIONAL SYNTHESIS, pending review.** The elementary criteria below\nare proved here for their stated abstract models; no priority is claimed.",
+    "promoted_sha256": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd"
+  },
+  "own_files": {
+    "COMPOSITION_AUDIT.md": "deba5447546506ab2328540d80d202c633a0ebee369f06a5a6a3c559fd04a7b0",
+    "ROOT_AUDIT.md": "5df2c4616980c66c90d04727e4f655a51fa7ebf1ca56667ffafd399414d42f2d"
+  },
+  "readme_promotion": {
+    "candidate_sha256": "470d85ce037a788bf90d4d9300fa9d80cabcd6d092b5797ec416d9ebbc83c474",
+    "inverse_reproduces_candidate": true,
+    "new": "**Status: audited lane proofs, FINITE-EXACT computations, and independent\nintegration review PASS.** [Integration review](audit_integration/ROOT_AUDIT.md).",
+    "old": "**Status: audited lane proofs and FINITE-EXACT computations; integration\nreview pending.**",
+    "promoted_sha256": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde"
+  },
+  "reviewed": {
+    "AUDIT.md": "f845610425fe5208dcba1ff60011336b73bda4c64abb3baab04a9c678f533d9c",
+    "BOARD.md": "1d5c885d4c48b252754276072dd79d8355d158a645336910fee25bd3e7a96ff6",
+    "COMPOSITION.md": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
+    "README.md": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde"
+  },
+  "root_local_links": {
+    "all_exist": true,
+    "count": 20
+  },
+  "status": "PASS final README, COMPOSITION, BOARD and AUDIT; mathematical scopes and exact status promotions independently checked"
+}

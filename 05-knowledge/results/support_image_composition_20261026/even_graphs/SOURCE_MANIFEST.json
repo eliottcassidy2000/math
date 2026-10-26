@@ -1,0 +1,87 @@
+{
+  "artifacts": [
+    {
+      "path": "RESULT.md",
+      "sha256": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771"
+    },
+    {
+      "path": "SOURCES.md",
+      "sha256": "fdf39bcb4c2a4b759e555bd81c857fcfe76f710e6b549f21d491fca156917586"
+    },
+    {
+      "path": "check.py",
+      "sha256": "bd3ca658ec0054f4cb41c653ea95858ead40fe1a546c86f53744680d721aa1d6"
+    },
+    {
+      "path": "receipt.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9"
+    },
+    {
+      "path": "receipt_optimized.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9"
+    }
+  ],
+  "base_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "finite_checks": 17990,
+  "historical_sources": [
+    {
+      "path": "05-knowledge/results/sign_aware_augmentation_20261020/signed_root_augmentation.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "4380e87a817a775eb76feee2d309380dcfd61dc1233a711fc7a06fc742849fb0"
+    },
+    {
+      "path": "05-knowledge/results/sign_aware_augmentation_20261020/ROOT_REVIEW.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "bd088e79392bdb872a342f4acf8f5ca24b6a71703c4e39244603ed1de63229a9"
+    },
+    {
+      "path": "05-knowledge/results/tournament_even_bijections_session_20261020/RESULT_STATUS.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "5e8da66af8fa900ce9b9a46e844a49554d079644caf3801986d49eb13c23b4b9"
+    },
+    {
+      "path": "05-knowledge/results/primitive_hopf_lie_bijection_20261020/PRIMITIVE_HOPF_LIE_BIJECTION.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "fd3ed52c18a0bbe924f9a151cc5575f3a7621d28e7655fa4d639f89a9a145e12"
+    },
+    {
+      "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9"
+    },
+    {
+      "path": "01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "539aba979c8e705b38a110bd552669c140453aeae391c4f15b08926d04cf5a54"
+    },
+    {
+      "path": "05-knowledge/results/c15_symmetry_counterexample_20261020/C15_ORDER_TEN_COUNTEREXAMPLE.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "23901ff5b310b90fca3970d7ab3f361e6e1832c50f984cad0789b655817bd14b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+      "sha256": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626"
+    }
+  ],
+  "manifest_scope": "Owned folder files other than this manifest; historical source hashes are revision-pinned.",
+  "primary_sources": [
+    {
+      "read": "Theorem 1.1, Lemma 3.1, Theorem 3.3, Lemma 4.1, Corollary 4.2, Theorem 4.4; printed pages 2\u20139",
+      "url": "https://arxiv.org/pdf/2204.01947v2",
+      "version": "v2, 18 November 2022"
+    }
+  ],
+  "receipts_byte_identical": true,
+  "status": "PROVED E1\u2013E4 after independent audit PASS; classical statements CITED; finite checks PASS",
+  "status_promotion": {
+    "audit_hash_note": "Audit is bound by the enclosing packet; no mutual producer/auditor manifest hash dependency.",
+    "audit_path": "../audit_even/PROOF_AUDIT.md",
+    "candidate_sha256": "ffb4c3e17563d4c7c51941eafb8bced11cd63700781675c1813df5fa73b0661c",
+    "inverse_reproduces_candidate": true,
+    "new": "**Status: PROVED (E1\u2013E4; independent audit PASS).** The results E1\u2013E4 have self-contained proofs below. [Independent proof audit](../audit_even/PROOF_AUDIT.md).",
+    "old": "**Status: RESERVED / PROOF CANDIDATE, awaiting independent audit.** The proposed results E1\u2013E4 have self-contained proofs below.",
+    "promoted_sha256": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771"
+  }
+}

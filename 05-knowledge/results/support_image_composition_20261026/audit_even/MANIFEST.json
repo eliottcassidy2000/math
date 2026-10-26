@@ -1,0 +1,28 @@
+{
+  "audit_files": {
+    "PROOF_AUDIT.md": "ff18ee7b0da3a2ad70c616c291c6a538f1e1fdff94d3e521fee30018a10bc8cf",
+    "check.py": "f9ae1db198fa85f1d293b6697e02207a749238154e3dba2e4182a5f2395ef2fb",
+    "receipt.json": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b",
+    "receipt_optimized.json": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b"
+  },
+  "independent_replay": "25,468 checks; normal and optimized byte-identical",
+  "primary_read": {
+    "sections": "Theorems 1.1 and 3.3; Lemma 4.1 and Corollary 4.2; printed pages 3, 6, 7",
+    "url": "https://arxiv.org/pdf/2204.01947v2"
+  },
+  "producer_replay": "17,990 checks, receipt exactly reproduced",
+  "reviewed_sources": {
+    "RESULT.md": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771",
+    "SOURCES.md": "fdf39bcb4c2a4b759e555bd81c857fcfe76f710e6b549f21d491fca156917586",
+    "SOURCE_MANIFEST.json": "b20eb110951d0af8533bc13efde2f4d11f1be47ba91c0ed9642428289a720d8f",
+    "check.py": "bd3ca658ec0054f4cb41c653ea95858ead40fe1a546c86f53744680d721aa1d6",
+    "receipt.json": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+    "receipt_optimized.json": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9"
+  },
+  "status_promotion": {
+    "candidate_sha256": "ffb4c3e17563d4c7c51941eafb8bced11cd63700781675c1813df5fa73b0661c",
+    "inverse_comparison": "PASS: exact candidate bytes recovered by replacing only promoted status/link span",
+    "proved_sha256": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771"
+  },
+  "verdict": "PASS: E1-E4, no mathematical corrections requested"
+}

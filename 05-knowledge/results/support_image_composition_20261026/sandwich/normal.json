@@ -1,0 +1,238 @@
+{
+  "all_short_context_collisions": {
+    "A2,e": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ]
+      ],
+      "n": 3
+    },
+    "A2op,e": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "n": 3
+    },
+    "e,A2": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "n": 3
+    },
+    "e,A2op": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "n": 3
+    },
+    "e,e": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "n": 3
+    }
+  },
+  "census": [
+    {
+      "exception_exponents": {
+        "0": 1,
+        "2": 1
+      },
+      "four_marker_classes": 2,
+      "n": 2,
+      "rooted_classes": 2
+    },
+    {
+      "exception_exponents": {
+        "0": 5,
+        "1": 2,
+        "2": 1
+      },
+      "four_marker_classes": 8,
+      "n": 3,
+      "rooted_classes": 8
+    },
+    {
+      "exception_exponents": {
+        "0": 25,
+        "1": 6,
+        "2": 1
+      },
+      "four_marker_classes": 32,
+      "n": 4,
+      "rooted_classes": 32
+    },
+    {
+      "exception_exponents": {
+        "0": 154,
+        "1": 20,
+        "2": 2
+      },
+      "four_marker_classes": 176,
+      "n": 5,
+      "rooted_classes": 176
+    }
+  ],
+  "degree_only_hostile": {
+    "mask": 16,
+    "rows": [
+      32,
+      1,
+      3,
+      7,
+      15,
+      30
+    ]
+  },
+  "first_small_context_collisions": {
+    "1,1": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "image_key": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "n": 3
+    },
+    "1,2": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ]
+      ],
+      "image_key": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "n": 3
+    },
+    "2,1": {
+      "cores": [
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          5,
+          0
+        ]
+      ],
+      "image_key": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        15
+      ],
+      "n": 3
+    }
+  },
+  "gates": 3878,
+  "larger_relabelled_controls": 150,
+  "native_operation_hostile": {
+    "core_rows": [
+      0,
+      1
+    ],
+    "encoded_all_paths": 9,
+    "source_fixed_port_paths": 0
+  },
+  "normal_and_optimized_expected_identical": true,
+  "order_six_image": {
+    "accepted": 800,
+    "ordinary_classes": 2,
+    "universe": 32768
+  },
+  "status": "FINITE-EXACT controls; all-order proof in README.md"
+}

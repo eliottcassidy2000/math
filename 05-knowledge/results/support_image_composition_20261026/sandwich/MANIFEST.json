@@ -1,0 +1,17 @@
+{
+  "files": {
+    "README.md": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+    "SOURCES.json": "ab06cb1c76eeafec57da3d7430ddca6a91cec7cd7f50f63a5dd8bc480ee79a7d",
+    "check.py": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
+    "normal.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "optimized.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15"
+  },
+  "promotion": {
+    "audit_report": "../audit_sandwich/REPORT.md",
+    "audit_sha256": "4c0185ace16bef514185ccb7aac5eac4b123d8a6c1ea3ebe9f61ab72c8459b91",
+    "candidate_sha256": "31c47969a899f887df248d79e359cfe7609a93b7b3d4b66f195e443bff887325",
+    "inverse_comparison": "PASS",
+    "proved_sha256": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+    "scope": "Only status sentence and audit link changed; inverse replacement recovers exact candidate bytes."
+  }
+}

@@ -1,0 +1,493 @@
+{
+  "files": {
+    ".gitattributes": "05bce1f34342a39f8e6b5a3f06183ca80dfe09934dd7d2e19fba4bf4a10ecbfc",
+    "AUDIT.md": "f845610425fe5208dcba1ff60011336b73bda4c64abb3baab04a9c678f533d9c",
+    "BOARD.md": "1d5c885d4c48b252754276072dd79d8355d158a645336910fee25bd3e7a96ff6",
+    "COMPOSITION.md": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
+    "MAINTAINED_PATCHES.json": "bc971bf99032f65d70c353fb7f0e5386c5df288192d07cd0c022d91220cacf20",
+    "README.md": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde",
+    "arithmetic/MANIFEST.json": "adf491fee4ff1c3b0ed25acb764463610292f5ac393670b118e8894459eef9f2",
+    "arithmetic/README.md": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
+    "arithmetic/SOURCES.md": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
+    "arithmetic/check.py": "51b4dec294ca4313a9220914ddeb64cc2cabc3359986a8d3076351f082de62e3",
+    "arithmetic/normal.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+    "arithmetic/optimized.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+    "audit_arithmetic/MANIFEST.json": "98ceca439cf9cde6470b605c6f93c4131c7ec066e1ae442d4860c09254f7c660",
+    "audit_arithmetic/PROOF_AUDIT.md": "71391c5a00e9cce635187f2b8540117fb9a7c60fbcac288e268c58f401290d58",
+    "audit_arithmetic/check.py": "4c17c46e21092d35720b372e2e299f7a51a127cdf99ff771a55753a082a057bc",
+    "audit_arithmetic/normal.json": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5",
+    "audit_arithmetic/optimized.json": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5",
+    "audit_even/MANIFEST.json": "4133fe0c743d2ac8545f9a037476e9c4fc14a3743b95c262c73a322c012e33ce",
+    "audit_even/PROOF_AUDIT.md": "ff18ee7b0da3a2ad70c616c291c6a538f1e1fdff94d3e521fee30018a10bc8cf",
+    "audit_even/check.py": "f9ae1db198fa85f1d293b6697e02207a749238154e3dba2e4182a5f2395ef2fb",
+    "audit_even/receipt.json": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b",
+    "audit_even/receipt_optimized.json": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b",
+    "audit_image/AUDIT.md": "06b738da54b9deb9fa1c8aa1358376ef96a9f3c5e5d7025f9ddc7ac5fa966d19",
+    "audit_image/MANIFEST.json": "a7c26a2791bd4248d0368cf48a3eaf9ee901bad2a892a7c7d1a14e4b50d682cc",
+    "audit_image/check_independent.py": "1e346d4edc098b636f0579b5089152a06dd56aae87500f44e7b5adec99761b31",
+    "audit_image/normal.json": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+    "audit_image/optimized.json": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+    "audit_image/producer_replay.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "audit_image/producer_replay.optimized.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "audit_integration/COMPOSITION_AUDIT.md": "deba5447546506ab2328540d80d202c633a0ebee369f06a5a6a3c559fd04a7b0",
+    "audit_integration/MANIFEST.json": "4294f8c089bb9a4f101a58a734a4813f68e4de5ee38bdc4e970a946022d4b747",
+    "audit_integration/ROOT_AUDIT.md": "5df2c4616980c66c90d04727e4f655a51fa7ebf1ca56667ffafd399414d42f2d",
+    "audit_sandwich/MANIFEST.json": "aba049badb1bec426ae730cfaba076975d22deeab8684d9cdc300201eb1e7ae9",
+    "audit_sandwich/REPORT.md": "4c0185ace16bef514185ccb7aac5eac4b123d8a6c1ea3ebe9f61ab72c8459b91",
+    "audit_sandwich/check.py": "5e97e4bc3ca994564ea70df117b71b5e6931b81f6ff3ca8da796504ac85e226d",
+    "audit_sandwich/normal.json": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+    "audit_sandwich/optimized.json": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+    "audit_sandwich/producer_normal_replay.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "audit_sandwich/producer_optimized_replay.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "even_graphs/RESULT.md": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771",
+    "even_graphs/SOURCES.md": "fdf39bcb4c2a4b759e555bd81c857fcfe76f710e6b549f21d491fca156917586",
+    "even_graphs/SOURCE_MANIFEST.json": "b20eb110951d0af8533bc13efde2f4d11f1be47ba91c0ed9642428289a720d8f",
+    "even_graphs/check.py": "bd3ca658ec0054f4cb41c653ea95858ead40fe1a546c86f53744680d721aa1d6",
+    "even_graphs/receipt.json": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+    "even_graphs/receipt_optimized.json": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+    "image/MANIFEST.json": "1be8870835554bcc9ec221fcc1b7d95f5daa70631f5a5a41ae3b8926f722c2b6",
+    "image/README.md": "4c89b9c42fc0072e2aecacac2daf28fb0e30edd5bf8026519ce391b597331db8",
+    "image/check.py": "3df577b1b1d859eaa692a175cb435b379ac1145a062d94e06a23d7288425ce06",
+    "image/normal.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "image/optimized.json": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+    "sandwich/MANIFEST.json": "ab5e84f061a3333516d0dbcbd8a96c5b8d9903d09d93b8b7609a676ea0868866",
+    "sandwich/README.md": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+    "sandwich/SOURCES.json": "ab06cb1c76eeafec57da3d7430ddca6a91cec7cd7f50f63a5dd8bc480ee79a7d",
+    "sandwich/check.py": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
+    "sandwich/normal.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "sandwich/optimized.json": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+    "verify_packet.py": "078f36d320c056e364fb9711f84c5d63627f91c5a4d02c2340a6c05a4e181fed"
+  },
+  "inherited_sources": {
+    "00-navigation/META-PATTERNS.md": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/MISTAKES.md": "c6493f703016098ded846fad8a2826aa88287055d9512e72c5c2e2a72a0b0887",
+    "01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md": "539aba979c8e705b38a110bd552669c140453aeae391c4f15b08926d04cf5a54",
+    "01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626",
+    "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935",
+    "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md": "581f7e8bc9f6b51fcf959adcdd8fdc04df1319ee2d595e7c94ea15a3d345d6bd",
+    "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+    "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8",
+    "05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md": "042f1b862e4db3b5fbde7b73d3cb6f7cfa4af24a67442a3ecd75ff73f1c52e2f",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/black_descent_20261020c/scc.md": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47",
+    "05-knowledge/results/c15_symmetry_counterexample_20261020/C15_ORDER_TEN_COUNTEREXAMPLE.md": "23901ff5b310b90fca3970d7ab3f361e6e1832c50f984cad0789b655817bd14b",
+    "05-knowledge/results/collatz_one_out_edge_systems_20260930.md": "0b94d44061b2f4b2799773adffc3a971aec3233f68700b443ecd586383d7cc4c",
+    "05-knowledge/results/collatz_pentagon_operator_coherence_20260930.md": "ac72a2461985a3428ad32aede3a674f091d573529fd8f910b043de7f8ec23fd0",
+    "05-knowledge/results/defect_transitions_20261020/blue.md": "7da49b2e28f73953a940dee75ccb96ab083ae1713f06e12302b04f2b4ace5707",
+    "05-knowledge/results/growing_sieve_path_20261026/field/README.md": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+    "05-knowledge/results/growing_sieve_path_20261026/sieve/README.md": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+    "05-knowledge/results/guard_reconstruction_20261026/README.md": "0e8d76b8bfca01b5c3d016a62dcd5aff3c2450a41971c7a46a0d3a91b6157799",
+    "05-knowledge/results/primitive_hopf_lie_bijection_20261020/PRIMITIVE_HOPF_LIE_BIJECTION.md": "fd3ed52c18a0bbe924f9a151cc5575f3a7621d28e7655fa4d639f89a9a145e12",
+    "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72",
+    "05-knowledge/results/root27_machine_bridges_20261026/machines/README.md": "94163e0add52e8fbccc9db5e7980f990fe4e2b4e97f8278e5cc4374aab04ab6e",
+    "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256",
+    "05-knowledge/results/session25_spectrum_wiring_20261021/session25-paper/PAPER_CONNECTIONS.md": "f73961cec249a6041af1cae0498331e9c41b51f1119d9a8d1f92a0b54329ab19",
+    "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-root/BRIDGES.md": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b",
+    "05-knowledge/results/sign_aware_augmentation_20261020/ROOT_REVIEW.md": "bd088e79392bdb872a342f4acf8f5ca24b6a71703c4e39244603ed1de63229a9",
+    "05-knowledge/results/sign_aware_augmentation_20261020/signed_root_augmentation.md": "4380e87a817a775eb76feee2d309380dcfd61dc1233a711fc7a06fc742849fb0",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1",
+    "05-knowledge/results/tournament_even_bijections_session_20261020/RESULT_STATUS.md": "5e8da66af8fa900ce9b9a46e844a49554d079644caf3801986d49eb13c23b4b9",
+    "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463"
+  },
+  "patch_records": [
+    "MAINTAINED_PATCHES.json"
+  ],
+  "promotion_boundary": "Candidate hashes and status/link-only inverse comparisons are recorded by independent reviewers in lane manifests. The final reviewed bytes are bound here.",
+  "review_bindings": [
+    {
+      "path": "sandwich/README.md",
+      "sha256": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+      "source": "sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/SOURCES.json",
+      "sha256": "ab06cb1c76eeafec57da3d7430ddca6a91cec7cd7f50f63a5dd8bc480ee79a7d",
+      "source": "sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/check.py",
+      "sha256": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
+      "source": "sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/normal.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/optimized.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "sandwich/MANIFEST.json"
+    },
+    {
+      "path": "image/README.md",
+      "sha256": "4c89b9c42fc0072e2aecacac2daf28fb0e30edd5bf8026519ce391b597331db8",
+      "source": "image/MANIFEST.json"
+    },
+    {
+      "path": "image/check.py",
+      "sha256": "3df577b1b1d859eaa692a175cb435b379ac1145a062d94e06a23d7288425ce06",
+      "source": "image/MANIFEST.json"
+    },
+    {
+      "path": "image/normal.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "image/MANIFEST.json"
+    },
+    {
+      "path": "image/optimized.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "image/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/README.md",
+      "sha256": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
+      "source": "arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/SOURCES.md",
+      "sha256": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
+      "source": "arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/check.py",
+      "sha256": "51b4dec294ca4313a9220914ddeb64cc2cabc3359986a8d3076351f082de62e3",
+      "source": "arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/normal.json",
+      "sha256": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+      "source": "arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/optimized.json",
+      "sha256": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+      "source": "arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/RESULT.md",
+      "sha256": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771",
+      "source": "even_graphs/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/SOURCES.md",
+      "sha256": "fdf39bcb4c2a4b759e555bd81c857fcfe76f710e6b549f21d491fca156917586",
+      "source": "even_graphs/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/check.py",
+      "sha256": "bd3ca658ec0054f4cb41c653ea95858ead40fe1a546c86f53744680d721aa1d6",
+      "source": "even_graphs/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/receipt.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+      "source": "even_graphs/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/receipt_optimized.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+      "source": "even_graphs/SOURCE_MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/REPORT.md",
+      "sha256": "4c0185ace16bef514185ccb7aac5eac4b123d8a6c1ea3ebe9f61ab72c8459b91",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/check.py",
+      "sha256": "5e97e4bc3ca994564ea70df117b71b5e6931b81f6ff3ca8da796504ac85e226d",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/normal.json",
+      "sha256": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/optimized.json",
+      "sha256": "b209187a6b3deee34c68385bcff31c44ee5bdf5a64a51527903b34c58ebcc2d7",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/producer_normal_replay.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_sandwich/producer_optimized_replay.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/README.md",
+      "sha256": "227b96f05433d43f63f2ade93dd5de6ba9b78712f03b737bb1f15e0e349ea785",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/SOURCES.json",
+      "sha256": "ab06cb1c76eeafec57da3d7430ddca6a91cec7cd7f50f63a5dd8bc480ee79a7d",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/check.py",
+      "sha256": "9478dce8edda08d1c8acc03f43bcfc108bd13f7e3786a5846ebef11e5cae5dd0",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/normal.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "sandwich/optimized.json",
+      "sha256": "c0ab4afe9b30cddfa0bc9786d4a4f256405a8a00a659d126702206754977ce15",
+      "source": "audit_sandwich/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/AUDIT.md",
+      "sha256": "06b738da54b9deb9fa1c8aa1358376ef96a9f3c5e5d7025f9ddc7ac5fa966d19",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/check_independent.py",
+      "sha256": "1e346d4edc098b636f0579b5089152a06dd56aae87500f44e7b5adec99761b31",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/normal.json",
+      "sha256": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/optimized.json",
+      "sha256": "9d0d1d4759e07c4fa98c84e0a4fd8f65320fe6664610fa511230045279ec5185",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/producer_replay.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_image/producer_replay.optimized.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "image/README.md",
+      "sha256": "4c89b9c42fc0072e2aecacac2daf28fb0e30edd5bf8026519ce391b597331db8",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "image/check.py",
+      "sha256": "3df577b1b1d859eaa692a175cb435b379ac1145a062d94e06a23d7288425ce06",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "image/normal.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "image/optimized.json",
+      "sha256": "b514815e682eb2765da02637873dd34f7b52beb21e5125eab1c3aee404fb3870",
+      "source": "audit_image/MANIFEST.json"
+    },
+    {
+      "path": "audit_even/PROOF_AUDIT.md",
+      "sha256": "ff18ee7b0da3a2ad70c616c291c6a538f1e1fdff94d3e521fee30018a10bc8cf",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "audit_even/check.py",
+      "sha256": "f9ae1db198fa85f1d293b6697e02207a749238154e3dba2e4182a5f2395ef2fb",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "audit_even/receipt.json",
+      "sha256": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "audit_even/receipt_optimized.json",
+      "sha256": "77de9b52050654eab629a9cb3b5ee0223d8ce58ecede049df14184810eeef47b",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/RESULT.md",
+      "sha256": "95ca2ba486d9e038287e4cf72037b1067eec4371873a0c1a0ce83008d4af2771",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/SOURCES.md",
+      "sha256": "fdf39bcb4c2a4b759e555bd81c857fcfe76f710e6b549f21d491fca156917586",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/SOURCE_MANIFEST.json",
+      "sha256": "b20eb110951d0af8533bc13efde2f4d11f1be47ba91c0ed9642428289a720d8f",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/check.py",
+      "sha256": "bd3ca658ec0054f4cb41c653ea95858ead40fe1a546c86f53744680d721aa1d6",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/receipt.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "even_graphs/receipt_optimized.json",
+      "sha256": "8854b36c39e0b17c11e574848968da72b8d791a047500350e0a0ed7516e292e9",
+      "source": "audit_even/MANIFEST.json"
+    },
+    {
+      "path": "audit_arithmetic/PROOF_AUDIT.md",
+      "sha256": "71391c5a00e9cce635187f2b8540117fb9a7c60fbcac288e268c58f401290d58",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "audit_arithmetic/check.py",
+      "sha256": "4c17c46e21092d35720b372e2e299f7a51a127cdf99ff771a55753a082a057bc",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "audit_arithmetic/normal.json",
+      "sha256": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "audit_arithmetic/optimized.json",
+      "sha256": "a5e92bed0198947adef9e19238a47ee8a198542349e2febd11aa920589b47ea5",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/README.md",
+      "sha256": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/SOURCES.md",
+      "sha256": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/check.py",
+      "sha256": "51b4dec294ca4313a9220914ddeb64cc2cabc3359986a8d3076351f082de62e3",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/normal.json",
+      "sha256": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "arithmetic/optimized.json",
+      "sha256": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+      "source": "audit_arithmetic/MANIFEST.json"
+    },
+    {
+      "path": "audit_integration/COMPOSITION_AUDIT.md",
+      "sha256": "deba5447546506ab2328540d80d202c633a0ebee369f06a5a6a3c559fd04a7b0",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "audit_integration/ROOT_AUDIT.md",
+      "sha256": "5df2c4616980c66c90d04727e4f655a51fa7ebf1ca56667ffafd399414d42f2d",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "AUDIT.md",
+      "sha256": "f845610425fe5208dcba1ff60011336b73bda4c64abb3baab04a9c678f533d9c",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "BOARD.md",
+      "sha256": "1d5c885d4c48b252754276072dd79d8355d158a645336910fee25bd3e7a96ff6",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "COMPOSITION.md",
+      "sha256": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
+      "source": "audit_integration/MANIFEST.json"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8dc628d5ccbfca7ddaac112689d33e8e35cdbc76c3d1d3f7ec184aa2aa667dde",
+      "source": "audit_integration/MANIFEST.json"
+    }
+  ],
+  "source_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "status": "Reviewed proofs and finite exact receipts; hashes bind bytes to review and are not mathematical proofs.",
+  "suites": [
+    {
+      "checks": 3878,
+      "count_key": "gates",
+      "normal_receipt": "sandwich/normal.json",
+      "optimized_receipt": "sandwich/optimized.json",
+      "program": "sandwich/check.py",
+      "receipt_status": "FINITE-EXACT controls; all-order proof in README.md"
+    },
+    {
+      "checks": 76618,
+      "count_key": "checks",
+      "normal_receipt": "image/normal.json",
+      "optimized_receipt": "image/optimized.json",
+      "program": "image/check.py",
+      "receipt_status": "FINITE-EXACT PASS"
+    },
+    {
+      "checks": 17990,
+      "count_key": "checks",
+      "normal_receipt": "even_graphs/receipt.json",
+      "optimized_receipt": "even_graphs/receipt_optimized.json",
+      "program": "even_graphs/check.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 489131,
+      "count_key": "gates",
+      "normal_receipt": "arithmetic/normal.json",
+      "optimized_receipt": "arithmetic/optimized.json",
+      "program": "arithmetic/check.py",
+      "receipt_status": "FINITE-EXACT controls; all-parameter proofs in README.md"
+    },
+    {
+      "checks": 36688,
+      "count_key": "checks",
+      "normal_receipt": "audit_sandwich/normal.json",
+      "optimized_receipt": "audit_sandwich/optimized.json",
+      "program": "audit_sandwich/check.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 1682,
+      "count_key": "gates",
+      "normal_receipt": "audit_image/normal.json",
+      "optimized_receipt": "audit_image/optimized.json",
+      "program": "audit_image/check_independent.py",
+      "receipt_status": "FINITE-EXACT independent PASS"
+    },
+    {
+      "checks": 25468,
+      "count_key": "checks",
+      "normal_receipt": "audit_even/receipt.json",
+      "optimized_receipt": "audit_even/receipt_optimized.json",
+      "program": "audit_even/check.py",
+      "receipt_status": "PASS"
+    },
+    {
+      "checks": 89397,
+      "count_key": "checks",
+      "normal_receipt": "audit_arithmetic/normal.json",
+      "optimized_receipt": "audit_arithmetic/optimized.json",
+      "program": "audit_arithmetic/check.py",
+      "receipt_status": "PASS"
+    }
+  ]
+}

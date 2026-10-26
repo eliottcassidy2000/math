@@ -1,0 +1,48 @@
+{
+  "all_partial_graphs_n0_to4": [
+    {
+      "decoded": 1,
+      "image": 1,
+      "n": 0,
+      "partial_graphs": 1
+    },
+    {
+      "decoded": 1,
+      "image": 1,
+      "n": 1,
+      "partial_graphs": 1
+    },
+    {
+      "decoded": 2,
+      "image": 2,
+      "n": 2,
+      "partial_graphs": 3
+    },
+    {
+      "decoded": 8,
+      "image": 8,
+      "n": 3,
+      "partial_graphs": 27
+    },
+    {
+      "decoded": 64,
+      "image": 64,
+      "n": 4,
+      "partial_graphs": 729
+    }
+  ],
+  "false_five_polynomial": [
+    7,
+    2
+  ],
+  "gates": 1682,
+  "joint_four_polynomial": [
+    4,
+    0,
+    1
+  ],
+  "ordinary_type_pairs": 20,
+  "padded_hub_paths": 16,
+  "scope": "Independent proof audit I1-I5; finite oracle n<=4 plus explicit five-vertex controls.",
+  "status": "FINITE-EXACT independent PASS"
+}

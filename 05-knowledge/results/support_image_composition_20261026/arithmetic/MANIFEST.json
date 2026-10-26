@@ -1,0 +1,67 @@
+{
+  "base_revision": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "external_source": {
+    "author": "Jeffrey C. Lagarias",
+    "read": "CECM online version stopping-time Theorem B visible prose, ergodic and decidability sections; formula-image limitation explicitly recorded",
+    "scope": "Classical ancestry only; all needed formulas proved directly",
+    "title": "The 3x+1 Problem and its Generalizations",
+    "url": "https://www.cecm.sfu.ca/organics/papers/lagarias/paper/html/node4.html",
+    "year": 1985
+  },
+  "files": {
+    "README.md": "4fe8d74a8cd15e851b431a2b0378bf3a27551c271249581a3de8bbc7af3e96f9",
+    "SOURCES.md": "e7fef5f69aaf96c0e460e12c0dce21335ca7299f26e30331a4ef5956759a44ba",
+    "check.py": "51b4dec294ca4313a9220914ddeb64cc2cabc3359986a8d3076351f082de62e3",
+    "normal.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3",
+    "optimized.json": "6b0fb3fd2ebc596866a76bf21d1233c5d52e6e4d3ffff0215c8e94bbdde9bbf3"
+  },
+  "gates": 489131,
+  "independent_audit": {
+    "gates": 89397,
+    "manifest_sha256": "98ceca439cf9cde6470b605c6f93c4131c7ec066e1ae442d4860c09254f7c660",
+    "normal_optimized_identical": true,
+    "promotion_inverse_verification": "PASS: independent auditor reversed exact substitutions and recovered both candidate hashes; proof byte-compared to frozen copy",
+    "report": "../audit_arithmetic/PROOF_AUDIT.md",
+    "sha256": "71391c5a00e9cce635187f2b8540117fb9a7c60fbcac288e268c58f401290d58",
+    "verdict": "PASS"
+  },
+  "inherited": {
+    "00-navigation/RESEARCH-PROTOCOL.md": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+    "01-canon/ACTIVE-GUARDRAILS.md": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+    "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md": "581f7e8bc9f6b51fcf959adcdd8fdc04df1319ee2d595e7c94ea15a3d345d6bd",
+    "05-knowledge/hypotheses/HYP-9418-legal-path-sub-observers-berggren-sieve-levels-and-the-branch-character.md": "042f1b862e4db3b5fbde7b73d3cb6f7cfa4af24a67442a3ecd75ff73f1c52e2f",
+    "05-knowledge/reference/CORE-PAPERS.md": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+    "05-knowledge/results/collatz_one_out_edge_systems_20260930.md": "0b94d44061b2f4b2799773adffc3a971aec3233f68700b443ecd586383d7cc4c",
+    "05-knowledge/results/collatz_pentagon_operator_coherence_20260930.md": "ac72a2461985a3428ad32aede3a674f091d573529fd8f910b043de7f8ec23fd0",
+    "05-knowledge/results/growing_sieve_path_20261026/field/README.md": "db5fdf53aca7499e98477bacfca78193a68e397090c0706001a47939451b8190",
+    "05-knowledge/results/growing_sieve_path_20261026/sieve/README.md": "8f6e97daa359cd1e24eb70f0be8565436213fa6facfa4120e9762b768785766c",
+    "05-knowledge/results/root27_machine_bridges_20261026/anchor/README.md": "43a0eb514a521aa3cb53757558d48a251688833adea28f69ad35d9a4e4ce8d72",
+    "05-knowledge/results/root27_machine_bridges_20261026/machines/README.md": "94163e0add52e8fbccc9db5e7980f990fe4e2b4e97f8278e5cc4374aab04ab6e",
+    "05-knowledge/results/session25_spectrum_wiring_20261021/session25-paper/PAPER_CONNECTIONS.md": "f73961cec249a6041af1cae0498331e9c41b51f1119d9a8d1f92a0b54329ab19",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/FROBENIUS-ABC.md": "45a21260f6eea9547814cf1e051334fc980dbc3bedb9bd65b371e30b98c58ad1"
+  },
+  "normal_optimized_identical": true,
+  "promotion": {
+    "kind": "status/link-only; exact inverse substitutions verified",
+    "replacements": {
+      "README.md": [
+        [
+          "**Status: elementary proofs complete; independent audit pending.\nComputation FINITE-EXACT.**",
+          "**Status: PROVED elementary clock and guard results; independently audited\n[PASS](../audit_arithmetic/PROOF_AUDIT.md). Computation FINITE-EXACT.**"
+        ]
+      ],
+      "SOURCES.md": [
+        [
+          "Independent audit is pending; all-parameter statements rest on the proofs,",
+          "Independent audit [PASS](../audit_arithmetic/PROOF_AUDIT.md) is complete;\nall-parameter statements rest on the proofs,"
+        ]
+      ]
+    },
+    "reviewed_candidate_files": {
+      "README.md": "682f926e35f7c6252e9af2fc5c73d07dcb7bee166876e71e40cd45ff967a8ad4",
+      "SOURCES.md": "77ee958aec301cc12ce06ff5e4d0f55523465ed6db46200f98e0bd4d9acbba24"
+    },
+    "reviewed_manifest_sha256": "452c1ec4b418518a3adb08e2c0824da9c433ae780e5b2822a333365af859dd3a"
+  },
+  "status": "PROVED elementary clock and guard results after independent audit PASS; computation FINITE-EXACT"
+}

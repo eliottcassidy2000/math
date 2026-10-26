@@ -1,0 +1,34 @@
+{
+  "base_commit": "4950589d056a64f8807774cf7da893dcafcd63a0",
+  "scope": "Repository inheritance only; all new arguments elementary. No external priority claim.",
+  "sources": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-9416-fresh-re-marking-two-port-quotient-joint-classes-are-minimal-and-line-responses-classify-strong-atoms.md",
+      "sha256": "2b126df7766f7a02320c87b78b880af9e3910cae8392edc35d5fccc595af98e8"
+    },
+    {
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md",
+      "sha256": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463"
+    },
+    {
+      "path": "05-knowledge/results/rooted_lines_frobenius_sheets_20261026/README.md",
+      "sha256": "18706f907ba938cee55736ad8af4b25256165c841e18d4dd4d27795a2093a256"
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/session71-root/BRIDGES.md",
+      "sha256": "f5f73a7ca6a6282eb0132071995b1e44e9de0d9929b750a105afd07e9165868b"
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "c6493f703016098ded846fad8a2826aa88287055d9512e72c5c2e2a72a0b0887"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    }
+  ]
+}

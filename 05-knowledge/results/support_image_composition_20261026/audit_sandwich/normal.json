@@ -1,0 +1,123 @@
+{
+  "boundary_cases": {
+    "(0, 0)": 185,
+    "(0, 1)": 14,
+    "(1, 0)": 14,
+    "(1, 1)": 5
+  },
+  "checks": 36688,
+  "checks_by_kind": {
+    "all_core_injectivity": 218,
+    "all_marker_choices": 218,
+    "automorphism_order": 218,
+    "complete_rooted_counts": 1,
+    "core_degree_formula": 1036,
+    "corrected_right_marker_degrees": 218,
+    "decode_operate_encode_composition": 100,
+    "decoded_joint_type": 218,
+    "degree_cardinality_hostile": 1,
+    "direct_product_commutation": 234,
+    "disjoint_rotation_commutation": 218,
+    "distinct_minimality_source_types": 1,
+    "each_smaller_context_collision": 5,
+    "exact_order6_image_membership": 32768,
+    "full_automorphism_group_equality": 218,
+    "independent_intrinsic_quotient": 218,
+    "left_chain_size": 199,
+    "left_marker_degrees": 218,
+    "left_triangle_cycle": 19,
+    "left_triangle_homogeneity": 19,
+    "literal_hinge_associativity": 100,
+    "no_smaller_core_collision": 5,
+    "order6_image_cardinality": 1,
+    "right_chain_size": 199,
+    "right_triangle_cycle": 19,
+    "right_triangle_homogeneity": 19
+  },
+  "order6_degree_cardinality_candidates": 2960,
+  "order6_distinct_valid_chain_candidates": 800,
+  "order6_exact_image": 800,
+  "order6_orientations": 32768,
+  "rooted_classes_n2_through5": [
+    2,
+    8,
+    32,
+    176
+  ],
+  "scope": "independent literal hinge/decoder/group census; no producer import",
+  "smaller_context_isomorphisms_from_C": [
+    [
+      [
+        0,
+        1,
+        3,
+        4,
+        2
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        4
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        2,
+        4,
+        5,
+        3
+      ],
+      [
+        0,
+        3,
+        1,
+        2,
+        4,
+        5
+      ]
+    ],
+    [
+      [
+        2,
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5
+      ],
+      [
+        2,
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    ]
+  ],
+  "status": "PASS"
+}

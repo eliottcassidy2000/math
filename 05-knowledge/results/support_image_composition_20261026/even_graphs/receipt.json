@@ -1,0 +1,170 @@
+{
+  "card_recurrence": [
+    {
+      "A000568": 1,
+      "child_order": 1,
+      "even_parent_only_weight": "1",
+      "negative_transport_vertices": 0,
+      "relative_even_rooted_types": 1,
+      "rooted_graph_types": 1,
+      "signed_charge": 1
+    },
+    {
+      "A000568": 1,
+      "child_order": 2,
+      "even_parent_only_weight": "1",
+      "negative_transport_vertices": 1,
+      "relative_even_rooted_types": 2,
+      "rooted_graph_types": 2,
+      "signed_charge": 2
+    },
+    {
+      "A000568": 2,
+      "child_order": 3,
+      "even_parent_only_weight": "4/3",
+      "negative_transport_vertices": 1,
+      "relative_even_rooted_types": 4,
+      "rooted_graph_types": 6,
+      "signed_charge": 6
+    },
+    {
+      "A000568": 4,
+      "child_order": 4,
+      "even_parent_only_weight": "7/2",
+      "negative_transport_vertices": 5,
+      "relative_even_rooted_types": 12,
+      "rooted_graph_types": 20,
+      "signed_charge": 16
+    },
+    {
+      "A000568": 12,
+      "child_order": 5,
+      "even_parent_only_weight": "39/5",
+      "negative_transport_vertices": 15,
+      "relative_even_rooted_types": 48,
+      "rooted_graph_types": 90,
+      "signed_charge": 60
+    },
+    {
+      "A000568": 56,
+      "child_order": 6,
+      "even_parent_only_weight": "37",
+      "negative_transport_vertices": 81,
+      "relative_even_rooted_types": 296,
+      "rooted_graph_types": 544,
+      "signed_charge": 336
+    }
+  ],
+  "checks": 17990,
+  "checks_by_kind": {
+    "Burnside_integrality": 20,
+    "Eulerian_not_sign_even": 1,
+    "all_parent_recurrence": 6,
+    "balanced_odd_orbit": 97,
+    "card_maps_vs_child_automorphisms": 3817,
+    "card_transport_torsor": 1167,
+    "classical_initial_values": 1,
+    "component_evenness": 209,
+    "defect_series_factorization": 7,
+    "filtered_equals_uniform": 663,
+    "independent_edge_sign": 3636,
+    "labelled_vs_unlabelled_hostile": 1,
+    "local_orbit_size": 97,
+    "local_root_evenness": 97,
+    "neighbourhood_mark_is_necessary": 1,
+    "nonrelative_fibre_cancellation": 540,
+    "odd_K2_parent_to_even_P3": 1,
+    "odd_parent_is_necessary": 1,
+    "path_even_triangle_odd": 1,
+    "relative_even_rooted_identity": 7,
+    "root_charge_dichotomy": 663,
+    "root_sign_restriction": 663,
+    "root_stabilizer_identification": 663,
+    "signed_matrix_row_sum": 627,
+    "signed_transport_composition": 4065,
+    "single_odd_component_localization": 97,
+    "three_count_paths": 7,
+    "transporter_choice_independence": 627,
+    "unrooted_child_total": 208
+  },
+  "classical_Burnside_A000568_through_12": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168
+  ],
+  "graph_types": [
+    1,
+    1,
+    2,
+    4,
+    11,
+    34,
+    156
+  ],
+  "labelled_sign_even_graphs": [
+    1,
+    1,
+    1,
+    4,
+    20,
+    396,
+    16432
+  ],
+  "odd_connected_relative_even_root_orbits": [
+    0,
+    0,
+    1,
+    0,
+    4,
+    9,
+    58
+  ],
+  "odd_graph_relative_even_root_orbits": [
+    0,
+    0,
+    1,
+    1,
+    5,
+    15,
+    75
+  ],
+  "pointed_tournament_types": [
+    0,
+    1,
+    2,
+    4,
+    12,
+    48,
+    296
+  ],
+  "sign_even_types": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56
+  ],
+  "status": "PASS",
+  "tournament_types": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56
+  ],
+  "universe": "all graph/tournament types n=0..6; all attachments to graph parents n=0..5"
+}
