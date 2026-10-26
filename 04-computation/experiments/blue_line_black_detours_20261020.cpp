@@ -58,7 +58,7 @@ static bool directedPath(uint64_t E, const Tour &T, int *Q) {
     if (ne != 2) return false;
     for (int s = 0; s < 2; s++) {
         int prev = -1, cur = ends[s]; bool ok = true; Q[0] = cur;
-        for (int i = 1; i < n; i++) { int nxt = (nb[cur][0] != prev) ? nb[cur][0] : nb[cur][1]; if (deg[cur] == 1 && i > 1) { ok = false; break; } if (!arc(T, cur, nxt)) { ok = false; break; } prev = cur; cur = nxt; Q[i] = cur; }
+        for (int i = 1; i < n; i++) { if (deg[cur] == 1 && i > 1) { ok = false; break; } int nxt = (nb[cur][0] != prev) ? nb[cur][0] : nb[cur][1]; if (!arc(T, cur, nxt)) { ok = false; break; } prev = cur; cur = nxt; Q[i] = cur; }
         if (ok) { // connectivity: all n vertices visited
             uint16_t seen = 0; for (int i = 0; i < n; i++) seen |= 1u << Q[i]; if (seen == (uint16_t)((1u << n) - 1)) return true; return false; }
     }

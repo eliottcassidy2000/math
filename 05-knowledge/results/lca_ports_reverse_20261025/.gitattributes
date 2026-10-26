@@ -1,3 +1,6 @@
 *.py text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+*.cpp text eol=lf
+*.patch text eol=lf
+*.out text eol=lf

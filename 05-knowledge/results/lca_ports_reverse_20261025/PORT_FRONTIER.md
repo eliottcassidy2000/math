@@ -9,6 +9,11 @@ the predecessor's declared finite affine certificates as well as
 structural infinite-order arguments. Full black-core connectivity is
 still **OPEN**.
 
+**Current assembled range:** the subsequent
+[finite-head assembly](HEAD_ASSEMBLY.md) strengthens this to n>=8,
+using the incoming order11 certificate and corrected complete replays
+at8,9,10. The proof below preserves this packet's n>=12 milestone.
+
 ## Statement and literal semantics
 
 For a directed word Q, K_Q retains its path arcs and reverses all other
@@ -96,8 +101,8 @@ degree layer, or can be moved into it through black steps.
 The earlier pure-blue order7 target remains a real obstruction to an
 unfiltered all-order replacement theorem; its exact witness is retained
 in the [previous frontier](../port_residual_integral_20261025/PORT_FRONTIER.md#4-genuine-small-order-hostile-and-scope-boundary).
-The threshold12 is proved, not claimed optimal. Order11 still has a head
-outside its previously certified subcases. The next degree layer has
+The threshold12 is the milestone proved here; the linked head assembly
+now closes11 and8..10, giving the sharp unfiltered threshold8. The next degree layer has
 four incoming interior ports, so the older contradiction forcing at
 least four ports no longer rules it out.
 

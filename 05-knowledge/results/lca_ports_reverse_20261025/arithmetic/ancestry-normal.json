@@ -1,0 +1,773 @@
+{
+  "exact_failure_classes": [
+    {
+      "R_modulus": 18,
+      "R_residue": 11,
+      "r": 0,
+      "t_modulus": 3,
+      "t_residue": 1
+    },
+    {
+      "R_modulus": 54,
+      "R_residue": 23,
+      "r": 1,
+      "t_modulus": 9,
+      "t_residue": 3
+    },
+    {
+      "R_modulus": 162,
+      "R_residue": 41,
+      "r": 2,
+      "t_modulus": 27,
+      "t_residue": 6
+    },
+    {
+      "R_modulus": 486,
+      "R_residue": 473,
+      "r": 3,
+      "t_modulus": 81,
+      "t_residue": 78
+    },
+    {
+      "R_modulus": 1458,
+      "R_residue": 149,
+      "r": 4,
+      "t_modulus": 243,
+      "t_residue": 24
+    },
+    {
+      "R_modulus": 4374,
+      "R_residue": 2579,
+      "r": 5,
+      "t_modulus": 729,
+      "t_residue": 429
+    }
+  ],
+  "finite_word_controls": 341,
+  "initial_inverse_prefix_controls": 106,
+  "inverse_odd_target_count": 999,
+  "marked_root_prefix_returns": 64,
+  "open": "No universal marked-root debt bound or blank halting decision",
+  "reset_count": 33,
+  "reset_inverse_depth_histogram": {
+    "0": 17,
+    "1": 9,
+    "2": 6,
+    "3": 1
+  },
+  "reset_root27_count": 0,
+  "reset_rows": [
+    {
+      "J": 2,
+      "K": 3,
+      "R": 5,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 5,
+        "final_credit": 3,
+        "final_x": "163",
+        "outcome": "LOCAL_WINDOW_SURVIVES_LATER_UNDECIDED"
+      },
+      "root": "5",
+      "root_to_x_word": [
+        1,
+        2
+      ],
+      "x": "15"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 11,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "34993",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "911",
+      "root_to_x_word": [],
+      "x": "911"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 17,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "2239489",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "38837",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "58255"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 23,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "143327233",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "3728271",
+      "root_to_x_word": [],
+      "x": "3728271"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 29,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "9172942849",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "238609295",
+      "root_to_x_word": [],
+      "x": "238609295"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 35,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "587068342273",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "10180663221",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "15270994831"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 41,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "37572373905409",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "977343669135",
+      "root_to_x_word": [],
+      "x": "977343669135"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 47,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "2404631929946113",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "62549994824591",
+      "root_to_x_word": [],
+      "x": "62549994824591"
+    },
+    {
+      "J": 2,
+      "K": 2,
+      "R": 53,
+      "credit6_at_root": {
+        "end": 4,
+        "endpoint_inclusive_required_credit": 3,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 4
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "153896443516551169",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "1779199852788345",
+      "root_to_x_word": [
+        1,
+        1
+      ],
+      "x": "4003199668773775"
+    },
+    {
+      "J": 1,
+      "K": 2,
+      "R": 59,
+      "credit6_at_root": {
+        "end": 7,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "9849372385059274753",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "113868790578454023",
+      "root_to_x_word": [
+        2
+      ],
+      "x": "256204778801521551"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 65,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "630359832643793584129",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "16397105843297379215",
+      "root_to_x_word": [],
+      "x": "16397105843297379215"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 71,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "40343029289202789384193",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "699609849314021513141",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "1049414773971032269711"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 77,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "2581953874508978520588289",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "67162545534146065261455",
+      "root_to_x_word": [],
+      "x": "67162545534146065261455"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 83,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "165245047968574625317650433",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "4298402914185348176733071",
+      "root_to_x_word": [],
+      "x": "4298402914185348176733071"
+    },
+    {
+      "J": 2,
+      "K": 3,
+      "R": 89,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "10575683069988776020329627649",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "81510455261588824684715999",
+      "root_to_x_word": [
+        2,
+        1
+      ],
+      "x": "275097786507862283310916495"
+    },
+    {
+      "J": 1,
+      "K": 3,
+      "R": 95,
+      "credit6_at_root": {
+        "end": 9,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "676843716479281665301096169473",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "5216669136741684779821823891",
+      "root_to_x_word": [
+        3
+      ],
+      "x": "17606258336503186131898655631"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 101,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "43317997854674026579270154846209",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "1126800533536203912441513960335",
+      "root_to_x_word": [],
+      "x": "1126800533536203912441513960335"
+    },
+    {
+      "J": 2,
+      "K": 2,
+      "R": 107,
+      "credit6_at_root": {
+        "end": 4,
+        "endpoint_inclusive_required_credit": 3,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 4
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "2772351862699137701073289910157313",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "32051215176140911287225285982841",
+      "root_to_x_word": [
+        1,
+        1
+      ],
+      "x": "72115234146317050396256893461391"
+    },
+    {
+      "J": 1,
+      "K": 2,
+      "R": 113,
+      "credit6_at_root": {
+        "end": 7,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "177430519212744812868690554250067969",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "2051277771273018322382418302901767",
+      "root_to_x_word": [
+        2
+      ],
+      "x": "4615374985364291225360441181528975"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 119,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "11355553229615668023596195472004349953",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "295383999063314638423068235617854351",
+      "root_to_x_word": [],
+      "x": "295383999063314638423068235617854351"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 125,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "726755406695402753510156510208278396929",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "12603050626701424572717578053028452277",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "18904575940052136859076367079542678415"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 131,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "46512346028505776224650016653329817403393",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "1209892860163336758980887493090731418511",
+      "root_to_x_word": [],
+      "x": "1209892860163336758980887493090731418511"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 137,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "2976790145824369678377601065813108313817089",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "77433143050453552574776799557806810784655",
+      "root_to_x_word": [],
+      "x": "77433143050453552574776799557806810784655"
+    },
+    {
+      "J": 2,
+      "K": 6,
+      "R": 143,
+      "credit6_at_root": {
+        "end": 12,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "190514569332759659416166468212038932084293633",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "435070170006389233671173897103946086384011",
+      "root_to_x_word": [
+        5,
+        1
+      ],
+      "x": "4955721155229027364785715171699635890217871"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 149,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "12192932437296618202634653965570491653394792449",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "317166153934657751346285770988776696973943695",
+      "root_to_x_word": [],
+      "x": "317166153934657751346285770988776696973943695"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 155,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "780347675986983564968617853796511465817266716673",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "20298633851818096086162289343281708606332396431",
+      "root_to_x_word": [],
+      "x": "20298633851818096086162289343281708606332396431"
+    },
+    {
+      "J": 3,
+      "K": 3,
+      "R": 161,
+      "credit6_at_root": {
+        "end": 3,
+        "endpoint_inclusive_required_credit": 4,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 3
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "49942251263166948157991542642976733812305069867009",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "384922241930772785041299709028156844683043961937",
+      "root_to_x_word": [
+        1,
+        1,
+        1
+      ],
+      "x": "1299112566516358149514386517970029350805273371535"
+    },
+    {
+      "J": 2,
+      "K": 3,
+      "R": 167,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "3196304080842684682111458729150510963987524471488513",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "24635023483569458242643181377802038059714813563909",
+      "root_to_x_word": [
+        1,
+        2
+      ],
+      "x": "83143204257046921568920737150081878451537495778191"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 173,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "204563461173931819655133358665632701695201566175264769",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "5321165072451002980410927177605240220898399729804175",
+      "root_to_x_word": [],
+      "x": "5321165072451002980410927177605240220898399729804175"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 179,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "13092061515131636457928534954600492908492900235216945153",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "227036376424576127164199559577823582758331721804978101",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "340554564636864190746299339366735374137497582707467151"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 185,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "837891936968424733307426237094431546143545615053884489729",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "21795492136759308207763157719471063944799845293277897615",
+      "root_to_x_word": [],
+      "x": "21795492136759308207763157719471063944799845293277897615"
+    },
+    {
+      "J": 0,
+      "K": 0,
+      "R": 191,
+      "credit6_at_root": {
+        "end": 6,
+        "endpoint_inclusive_required_credit": 1,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 6
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "53625083965979182931675279174043618953186919363448607342593",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "1394911496752595725296842094046148092467190098769785447311",
+      "root_to_x_word": [],
+      "x": "1394911496752595725296842094046148092467190098769785447311"
+    },
+    {
+      "J": 1,
+      "K": 1,
+      "R": 197,
+      "credit6_at_root": {
+        "end": 5,
+        "endpoint_inclusive_required_credit": 2,
+        "first_nonpositive_odd_index": null,
+        "minimum_odd": 5
+      },
+      "credit6_fresh_at_reset": {
+        "blocks_checked": 8,
+        "final_credit": 0,
+        "final_x": "3432005373822667707627217867138791613003962839260710869925889",
+        "outcome": "HALT_AFTER_8_ODD_BLOCKS"
+      },
+      "root": "59516223861444084279331929345968985278600110880844179085237",
+      "root_to_x_word": [
+        1
+      ],
+      "x": "89274335792166126418997894018953477917900166321266268627855"
+    }
+  ],
+  "residue_permutation_sizes": [
+    3,
+    9,
+    27,
+    81,
+    243,
+    729,
+    2187,
+    6561
+  ],
+  "scope": "ELEMENTARY_PROOFS_PLUS_FINITE_CONTROLS",
+  "status": "PASS"
+}

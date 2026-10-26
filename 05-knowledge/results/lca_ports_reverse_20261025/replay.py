@@ -18,6 +18,10 @@ JOBS = [
     ('arithmetic/check.py', 'arithmetic/normal.json', 'arithmetic/optimized.json'),
     ('arithmetic/INDEPENDENT_REVIEW.md', 'arithmetic/review-normal.json', 'arithmetic/review-optimized.json'),
     ('arithmetic/CONGRUENCE_REVIEW.md', 'arithmetic/congruence-normal.json', 'arithmetic/congruence-optimized.json'),
+    ('counting/INCOMING_COUNTING.md', 'counting/incoming-normal.json', 'counting/incoming-optimized.json'),
+    ('arithmetic/ANCESTRY.md', 'arithmetic/ancestry-normal.json', 'arithmetic/ancestry-optimized.json'),
+    ('arithmetic/DENSITY.md', 'arithmetic/density-normal.json', 'arithmetic/density-optimized.json'),
+    ('finite_head/check.py', 'finite_head/receipt-normal.json', 'finite_head/receipt-optimized.json'),
 ]
 
 

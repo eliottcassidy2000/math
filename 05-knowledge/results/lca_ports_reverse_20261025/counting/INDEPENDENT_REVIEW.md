@@ -274,4 +274,3 @@ operation savings into an asymptotic claim.
 integration and its stated counters. The signed clone-excess engine,
 its cancellation semantics, and unrestricted state compression are
 outside this implementation's scope and remain unchanged.
-

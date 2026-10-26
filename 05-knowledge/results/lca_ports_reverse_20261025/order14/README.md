@@ -247,4 +247,3 @@ and residual I={h,11,12} repairs, this closes the closed endpoint-four
 layer at order14. It remains a local marked-edge replacement result,
 not a proof that every blue edge belongs to that layer or that the
 entire black core is connected.
-

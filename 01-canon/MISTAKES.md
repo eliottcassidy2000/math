@@ -4,6 +4,32 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-25 — reject an early path endpoint before reading its second neighbour
+
+- **Affected implementation:** `directedPath` in
+  [the legacy black-detour census](../04-computation/experiments/blue_line_black_detours_20261020.cpp)
+  selected `nb[cur][1]` before rejecting a degree-one endpoint reached
+  too early. That array slot is uninitialized; even an immediately
+  discarded read is a C++ validity defect.
+- **Minimal mechanism:** on five vertices the pair set
+  `{01,23,24,34}` is a two-vertex path plus a triangle. Its degree test
+  passes, but walking the path reaches its other endpoint before all
+  vertices are visited. A directed-path predicate must reject this
+  disconnected candidate before reading a second neighbour.
+- **Repair and strongest survivor:** move the existing degree-one guard
+  ahead of the neighbour read. No arc, blackness, source-universe or
+  target condition changes. This is a source-code defect, not a
+  demonstrated false detour count. The new guarded replay and independent
+  literal certificate checks are recorded in
+  [the finite-head assembly](../05-knowledge/results/lca_ports_reverse_20261025/HEAD_ASSEMBLY.md).
+  The original source hash and patch preserve provenance; the live
+  experiment source has the same guard correction.
+- **Missing coordinate / next question:** degree sequence alone does not
+  certify a spanning path. Retain visited-vertex coverage and actual
+  adjacency bounds before using a candidate walk as a mathematical
+  certificate. Higher-layer connectivity remains separate from a local
+  path decoder.
+
 ## 2026-10-25 — mixed-order binomial valuations need a lower bound and the normalized minus one
 
 - **Affected proof:** [THM-4764 source, Theorem B double-prime](../05-knowledge/results/clone_depth_modular_twist_average_20261025/README.md).

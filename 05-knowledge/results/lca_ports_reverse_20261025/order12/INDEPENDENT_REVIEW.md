@@ -250,4 +250,3 @@ print(json.dumps({'status':'PASS','families':report,'guard_selector_cells':guard
                   'omitted_guard_cells':missing_guard_cells},sort_keys=True))
 
 ```
-

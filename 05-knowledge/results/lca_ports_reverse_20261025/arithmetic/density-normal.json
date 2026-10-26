@@ -1,0 +1,97 @@
+{
+  "cases": [
+    {
+      "cutoff": 1,
+      "density_lower": "1/3",
+      "density_upper": "2/3",
+      "failures": 1,
+      "first_large": [
+        1
+      ],
+      "j": 1,
+      "modulus": 3,
+      "proved_limit": "1/2",
+      "successes": 1
+    },
+    {
+      "cutoff": 5,
+      "density_lower": "121/243",
+      "density_upper": "122/243",
+      "failures": 121,
+      "first_large": [
+        1
+      ],
+      "j": 1,
+      "modulus": 243,
+      "proved_limit": "1/2",
+      "successes": 121
+    },
+    {
+      "cutoff": 3,
+      "density_lower": "169/729",
+      "density_upper": "209/729",
+      "failures": 520,
+      "first_large": [
+        27,
+        13
+      ],
+      "j": 2,
+      "modulus": 729,
+      "proved_limit": "1/4",
+      "successes": 169
+    },
+    {
+      "cutoff": 2,
+      "density_lower": "64/729",
+      "density_upper": "197/729",
+      "failures": 532,
+      "first_large": [
+        81,
+        36,
+        16
+      ],
+      "j": 3,
+      "modulus": 729,
+      "proved_limit": "1/8",
+      "successes": 64
+    },
+    {
+      "cutoff": 2,
+      "density_lower": "256/6561",
+      "density_upper": "1517/6561",
+      "failures": 5044,
+      "first_large": [
+        729,
+        324,
+        144,
+        64
+      ],
+      "j": 4,
+      "modulus": 6561,
+      "proved_limit": "1/16",
+      "successes": 256
+    },
+    {
+      "cutoff": 1,
+      "density_lower": "1/243",
+      "density_upper": "122/243",
+      "failures": 121,
+      "first_large": [
+        81,
+        27,
+        9,
+        3,
+        1
+      ],
+      "j": 5,
+      "modulus": 243,
+      "proved_limit": "1/32",
+      "successes": 1
+    }
+  ],
+  "fixed_root_consequence": "Natural density zero; absence remains open",
+  "integer_replays": 403,
+  "parameter_residues_checked": 8508,
+  "scope": "FINITE_MODULAR_CONTROLS_FOR_PROVED_DENSITIES",
+  "status": "PASS"
+}

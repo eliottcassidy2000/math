@@ -8,6 +8,12 @@ The proof is an exhaustive inheritance assembly, not an extrapolation
 from the new small-order controls. No additional clone, mixedness,
 strong-target, port-overlap or isomorphism filter is present.
 
+**Subsequent integration:** [HEAD_ASSEMBLY.md](HEAD_ASSEMBLY.md) closes
+the finite head discussed below and gives n>=8. Section5's order11
+paragraph records the boundary at the time of this n>=12 review; it
+is superseded by that separately audited assembly. The layer transport
+and higher-layer/global connectivity obligations remain unchanged.
+
 This review reads the already audited sources and their exact domains.
 It does not repeat a large enumeration. The next-boundary discussion
 below records the necessary degree change when passing to the closed
@@ -209,4 +215,3 @@ its all-marked-word quantifier. Keep the degree transport(1)--(2),
 the order11 finite-head distinction, arbitrary higher port sets, and
 the pure-blue-deleted connectivity criterion explicit when describing
 the remaining all-order problem.
-

@@ -1,0 +1,26 @@
+{
+  "additional_order": 100,
+  "forced_vertices_removed": 3104,
+  "full_vertex_potential_checks": 14036,
+  "normalized_comparisons": 64,
+  "order100_sample": {
+    "K": 6,
+    "contracted_edges": 47147,
+    "contracted_vertices_including_terminal": 10548,
+    "full_edges": 50044,
+    "full_vertices_including_terminal": 13445,
+    "n": 100,
+    "removed_vertices_with_strict_prefix_loss": 440,
+    "residue": 44,
+    "same_P_filter_contracted_updates": 1009,
+    "same_P_filter_full_updates": 2318
+  },
+  "projected_edge_checks": 47860,
+  "small_orders": [
+    0,
+    20
+  ],
+  "small_surviving_exact_coordinates": 384,
+  "status": "PASS",
+  "strict_prefix_loss_cases": 450
+}

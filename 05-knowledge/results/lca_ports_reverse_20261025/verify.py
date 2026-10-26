@@ -38,6 +38,21 @@ INHERITED = [
     '05-knowledge/results/session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md',
     '05-knowledge/results/session56_rmq_lca_connections_20261025/debt-range/RESULT.md',
     '05-knowledge/results/normseven_boundary_20261025/PAPERS_AND_TRANSPORT.md',
+    '01-canon/theorems/THM-4732-black-detours-of-closed-blue-lines-order-9-census-order-10-detours-pure-blue-layers-and-the-klein-dictionary.md',
+    '04-computation/experiments/blue_line_black_detours_20261020.cpp',
+    '04-computation/experiments/blue_line_black_detours_20261020_n8.out',
+    '04-computation/experiments/blue_line_black_detours_20261020_n9.out',
+    '04-computation/experiments/blue_line_black_detours_20261020_n10.out',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-repairs/next11/README.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-eleven/AUDIT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/REVERSE_IMPLEMENTATION.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/SKIP_CONTRACTION.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/reverse_ordinary.py',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/contracted_ordinary.py',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-counting/REVERSE_AUDIT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-counting/CONTRACTION_AUDIT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md',
+    '05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-audit-dynamics/REPORT.md',
 ]
 
 

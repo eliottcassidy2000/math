@@ -1,7 +1,7 @@
 ---
 id: HYP-9348
 title: "Filtered endpoint-four detours and black-core connectivity; zero-heavy layers through the first weighted endpoint"
-status: OPEN corrected endpoint/black-core questions; PROVED closed endpoint-four n>=15 and FINITE-EXACT n=13; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
+status: OPEN corrected endpoint/black-core questions; PROVED closed endpoint-four n>=8 with finite heads; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
 source: mac-mini-2026-10-20-debtcones
 depends_on:
   - 01-canon/theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md
@@ -29,26 +29,27 @@ whose nine Hamilton paths are all blue. Thus no black detour reaches it.
 The [exact witness](../results/shape_ports_20261025/tournaments.md) also
 repairs THM-4734's analogous order-six omission.
 
-**PROVED closed large-order part.** Every closed blue endpoint-(n-5,4)
-marked path at `n>=15` now has three directed black moves to its exact
+**PROVED closed part with sharp unfiltered threshold.** Every closed blue endpoint-(n-5,4)
+marked path at `n>=8` now has three directed black moves to its exact
 labelled K target, with no additional source filter. The
-[exhaustion proof](../results/port_residual_integral_20261025/PORT_FRONTIER.md)
-combines the earlier base bank with both chord branches at h=3 and h=4
-and the other unprotected-port repairs. Arbitrary shared/reflected ports
-and clone configurations are retained literally.
+[head assembly](../results/lca_ports_reverse_20261025/HEAD_ASSEMBLY.md)
+combines the structural tail, complete affine12..14 repairs, incoming
+order11 certificate, and freshly replayed complete finite heads8..10.
+Arbitrary shared/reflected ports and clone configurations are retained
+literally. The order7 hostile above prevents lowering the unfiltered
+uniform threshold. The proof's finite certificates remain explicit.
 
-**FINITE-EXACT isolated extension.** At `n=13`, the
-[complete affine certificate](../results/port_residual_integral_20261025/LOW_ORDERS.md)
-and [independent union-find review](../results/port_residual_integral_20261025/LOW_ORDERS_REVIEW.md)
-close all464 base cells plus16 structurally repaired residual cells.
+**REFUTED old length-three extension at7:** the inherited F7 distance-five
+exception in [THM-4732, section3](../../01-canon/theorems/THM-4732-black-detours-of-closed-blue-lines-order-9-census-order-10-detours-pure-blue-layers-and-the-klein-dictionary.md)
+already prevents that bound even after excluding pure-blue targets.
 
 **OPEN repaired question.** Does every such line whose literal target is
-not pure blue admit a three-black detour for every `n>=7`? The inherited
-order9,10 result is THM-4734. The closed orders11,12,14 remain outside
-the new theorem; other open-path cases are not inferred from it. The
-unchanged base ledgers have exactly two failed cells at12 and four at14,
-each a legal, target-correct ledger with a blue word. These explicit
-witnesses are failures of those ledgers, not black-connectivity obstructions.
+not pure blue admit a black detour with an appropriate length at the
+remaining small orders? A universal three-step statement at7 must also
+respect the inherited F7 distance-five exception. Higher endpoint layers
+remain open. Passing an open blue word to its closed K partner changes
+the layer by `k -> n-2-k`; open-four becomes closed layer `n-6`, so this
+fixed closed-four theorem does not settle arbitrary open-four words.
 
 ## (b) Black-core connectivity
 
@@ -56,24 +57,29 @@ witnesses are failures of those ledgers, not black-connectivity obstructions.
 classes lie in one black component of the line metagraph. The endpoint layers remove one
 family of potential bridges within their admitted domain: `k=2` has its
 inherited theorem; `k=3` has all `n>=7` and eleven admissible order-six
-presentations; `k=4` is checked at `n=9,10`, and all closed lines are
-now repaired at `n=13` and every `n>=15`. Pure-blue targets cannot be
-removed by a black detour, and no `k=4` census for every `n<=10` is asserted. In the trijection coordinates (graphs on ordered `[n-1]`; THM-4733 Proposition A)
+presentations; `k=4` has all closed lines at every `n>=8` by (a).
+Pure-blue targets cannot be removed by a black detour. In the trijection coordinates (graphs on ordered `[n-1]`; THM-4733 Proposition A)
 a K move along `Q` is "change the marked path, then complement"; a three-black detour is a
 closed walk of three coordinate changes whose complement bits cancel to `E(P)`. Question:
 is there a `k`-independent movable-cut word, written in these coordinates, that repairs every
 closed line whose port set is not an interval? The packet's section-9 words are the case
 `k = 3`; the half-covering template of THM-4734 section 2 is their `k = 4` shadow.
 
-## (c) Fixed-word obstructions and the surviving small-order head
+## (c) Fixed-word obstructions and the next port layer
 
 The old second fixed-word obstruction (`n=17`, reflection-product orbits
 `3,3,5,3,3`) is bypassed by the movable cut at `k=3`. Closed `k=4` lines
-at17 are now covered by (a). The new low-order audit locates the next
-actual failures: a blue first word at12 and a blue common final word
-at14. Their full port sets and literal witnesses are retained in the
-linked certificate. A useful next question is whether a repair using
-the offending word's exact symmetry closes those six affine families.
+at17 are covered by (a). The former six failures at12/14 are now repaired
+on their full affine cells: a three-arc selector handles12 and a one-arc
+selector handles14. The failed-word automorphisms force those guards.
+Their original hostile sources remain in the new controls.
+
+The next unrestricted layer has four incoming interior ports, endpoint
+scores `(n-6,5)`. The old argument forcing at least four ports no longer
+contradicts that budget. A new repair or reduction between layers is
+needed. Separately, THM-4732 Lemma2 still requires connectivity of the
+line metagraph after pure-blue vertices are deleted; local redundancy
+in one degree layer does not establish that global condition.
 
 ## (d) The corrected zero-heavy boundary
 
@@ -95,7 +101,10 @@ closes `r<k` at deficit `2k+1`: for `k>=3` it has
 two marked records merge into one class. The literal pointed-triangle
 collapse proves `H_k^s=2(k-1)I_(k-1)` while retaining its external port.
 The other `r=k` families at this deficit, the unrestricted owner grammar,
-and an unrestricted A000568 recurrence remain **OPEN**.
+and a smaller unrestricted structural A000568 recurrence remain **OPEN**.
+The ordinary exact reverse transfer and forced-skip contraction are now
+[implemented and cross-checked](../results/lca_ports_reverse_20261025/counting/INCOMING_COUNTING.md);
+they preserve active defect distinctions and do not supply that owner grammar.
 
 ## (e) Arithmetic Klein sets and the fixed-tile-free cube
 

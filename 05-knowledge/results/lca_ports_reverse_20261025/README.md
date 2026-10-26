@@ -9,8 +9,11 @@ finite controls, and the still-open fixed-source and connectivity goals.
 ## Results and their boundaries
 
 **PROVED:** every closed blue marked endpoint-(n-5,4) path for every
-n>=12 has three successive black K moves to its exact labelled target.
-The [exhaustion proof](PORT_FRONTIER.md) combines audited inheritance
+n>=8 has three successive black K moves to its exact labelled target.
+The [head assembly](HEAD_ASSEMBLY.md) merges the concurrent order11
+certificate with freshly replayed finite heads8,9,10; the real order7
+hostile makes8 the sharp unfiltered threshold. Our
+[n>=12 exhaustion proof](PORT_FRONTIER.md) combines audited inheritance
 with [order12's three-arc selector](order12/README.md) and
 [order14's one-arc selector](order14/GUARD_EXTENSION.md). The selectors
 cover the full failed affine cells. Their forced arcs come from the
@@ -40,6 +43,15 @@ operand-width counts, not a runtime or total-space theorem. The
 [independent counting review](counting/INDEPENDENT_REVIEW.md) also
 checks the small counts by literal permutation Burnside through8.
 
+**RECOVERED AND CHECKED structural reduction:** the concurrent direct
+skip contraction removes only forced unit-weight, zero-cost chains.
+The [integration map and cross-check](counting/INCOMING_COUNTING.md)
+give10,548 vertices and47,147 edges at N100, including the terminal.
+With the same reduced-prefix precision filter on both graphs, K6
+updates drop from2,318 to1,009 and both return residue44. This is a
+different pruning comparison from the preceding one. Active defect
+distinctions remain, and edges can now jump stages.
+
 **PROVED for the abstract arithmetic maps, native interface CITED:**
 [the arithmetic lane](arithmetic/README.md) finds y=b+4, then z=y-1,
 turning Antihydra's scalar macrostep into the previously studied
@@ -61,6 +73,26 @@ Haar ruin probability rho^a, rho=(sqrt(5)-1)/2, governs random2-adic
 itineraries and supplies no pointwise conclusion for27. See the
 [arithmetic review](arithmetic/INDEPENDENT_REVIEW.md) and
 [congruence review](arithmetic/CONGRUENCE_REVIEW.md).
+
+**NEW exact ancestry and density bridge:** the concurrent integer
+inverse identifies the unique finite ancestry root of each twisted-map
+integer. [ANCESTRY.md](arithmetic/ANCESTRY.md) combines that root with
+chronological credit and proves an all-parameter modular exclusion for
+the reset family. [DENSITY.md](arithmetic/DENSITY.md) proves
+
+    dens{t : inverse_depth((128*64^t+7)/9)>=j}=2^(-j).
+
+Consequently the reset parameters on any fixed integer ray, including
+the ray rooted at27, have density zero. This is a density in t, not a
+frequency along the27 orbit or an absence result. All33 tested resets
+through R197 have other roots, but that finite fact is not extrapolated.
+The exact remaining pointwise condition is
+
+    v_2(y-1) <= 6+2*K(y)-3*J(y)  for every y with root(y)=27,
+
+where J,K are the computable ancestry length and sum of valuation
+letters. Each candidate is decidable by finite descent; the universal
+inequality is still open.
 
 ## Inheritance, live board, and connections
 
@@ -108,6 +140,12 @@ The replay runs every producer and executable independent control both
 normally and under-O, checking the saved receipts. Verification pins
 the exact packet and its immediate inherited sources. Refreshing is an
 explicit maintainer action, never a read-only validation side effect.
+The longer C++ census has its separate
+[full replay and compiler instructions](finite_head/README.md); its
+normal/optimized mathematical summaries agree despite measured timing
+differences. Its independent Python decoder rechecks all154,240 literal
+three-move certificates. The corrected guard is also in the live legacy
+source, with provenance in the mistakes ledger.
 
 **OPEN:** full black-core connectivity; a smaller unrestricted structural
 A000568 state recurrence; a fixed-integer invariant controlling all

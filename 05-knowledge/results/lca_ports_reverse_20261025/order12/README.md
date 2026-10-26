@@ -244,4 +244,3 @@ byte-identical; all gates are explicit exceptions. All12 vertices and
 all intermediate arcs remain literal. No clone merger is approximated
 or discarded. Neither a general all-order three-chord theorem nor full
 black-core connectivity is claimed.
-

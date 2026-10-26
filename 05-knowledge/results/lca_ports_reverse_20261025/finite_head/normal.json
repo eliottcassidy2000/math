@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "compiler": "g++.EXE (GCC) 15.2.0",
+  "build_options": [
+    "-O2",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra"
+  ],
+  "corrected_source_lf_sha256": "4499981f6b76688d9477e40bb1aed3312a4bd226495cbab729d84d31212ff232",
+  "compiler_stderr": [
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp: In function 'bool directedPath(uint64_t, const Tour&, int*)':",
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp:56:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "   56 |         if (deg[u] == 2 || deg[v] == 2) return false; nb[u][deg[u]++] = v; nb[v][deg[v]++] = u; }",
+    "      |         ^~",
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp:56:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'",
+    "   56 |         if (deg[u] == 2 || deg[v] == 2) return false; nb[u][deg[u]++] = v; nb[v][deg[v]++] = u; }",
+    "      |                                                       ^~"
+  ],
+  "independent_hostiles": {
+    "n7_target_hamiltonian_paths": 9,
+    "all_blue": true,
+    "blue_word_rejected": true
+  },
+  "orders": [
+    {
+      "n": 8,
+      "universe": {
+        "port_sets": 10,
+        "free_middle_pair_orbits": 6,
+        "sources": 640
+      },
+      "unique_literal_certificates": 640,
+      "certificate_stream_lf_sha256": "904be5eefec31502cda7f0d3a84fc08a7aacff758be48b19c7ca5ac93a6c61c4",
+      "producer_arguments": [
+        "8",
+        "4"
+      ],
+      "producer_stdout_without_certificates": [
+        "# decoder controls: disconnected path-plus-cycle rejected; both directed paths accepted",
+        "# black detours of closed blue lines, n = 8, m = 21, e = 12, closed blue presentations = 2048, layer = 4",
+        "# code range [0, 4096)",
+        "layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)",
+        "   k=4: 640 / 0 / 640 / 0 = 0 + 0   (661, 0.003)",
+        "done in 0 s"
+      ],
+      "producer_stderr": [],
+      "elapsed_seconds": 0.211,
+      "status": "PASS"
+    },
+    {
+      "n": 9,
+      "universe": {
+        "port_sets": 20,
+        "free_middle_pair_orbits": 9,
+        "sources": 10240
+      },
+      "unique_literal_certificates": 10240,
+      "certificate_stream_lf_sha256": "f3aaeb580fe0ba8237d709389f0af0d691fa5c94af6a5f56adc518d5c67dd706",
+      "producer_arguments": [
+        "9",
+        "4"
+      ],
+      "producer_stdout_without_certificates": [
+        "# decoder controls: disconnected path-plus-cycle rejected; both directed paths accepted",
+        "# black detours of closed blue lines, n = 9, m = 28, e = 16, closed blue presentations = 32768, layer = 4",
+        "# code range [0, 65536)",
+        "layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)",
+        "   k=4: 10240 / 0 / 10240 / 0 = 0 + 0   (3357, 0.002)",
+        "done in 2 s"
+      ],
+      "producer_stderr": [],
+      "elapsed_seconds": 2.147,
+      "status": "PASS"
+    },
+    {
+      "n": 10,
+      "universe": {
+        "port_sets": 35,
+        "free_middle_pair_orbits": 12,
+        "sources": 143360
+      },
+      "unique_literal_certificates": 143360,
+      "certificate_stream_lf_sha256": "645f6553e90e5d00a06f9789a678529869612e16a157fbb447653e1a4850aece",
+      "producer_arguments": [
+        "10",
+        "4"
+      ],
+      "producer_stdout_without_certificates": [
+        "# decoder controls: disconnected path-plus-cycle rejected; both directed paths accepted",
+        "# black detours of closed blue lines, n = 10, m = 36, e = 20, closed blue presentations = 524288, layer = 4",
+        "# code range [0, 1048576)",
+        "layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)",
+        "   k=4: 143360 / 0 / 143360 / 0 = 0 + 0   (15601, 0.050)",
+        "done in 142 s"
+      ],
+      "producer_stderr": [
+        "  16384 lines done, 15 s",
+        "  32768 lines done, 31 s",
+        "  49152 lines done, 47 s",
+        "  65536 lines done, 65 s",
+        "  81920 lines done, 82 s",
+        "  98304 lines done, 100 s",
+        "  114688 lines done, 115 s",
+        "  131072 lines done, 131 s"
+      ],
+      "elapsed_seconds": 142.491,
+      "status": "PASS"
+    }
+  ]
+}

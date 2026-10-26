@@ -1,0 +1,74 @@
+{
+  "canonical_mathematical_summary": {
+    "build_options": [
+      "-O2",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra"
+    ],
+    "compiler": "g++.EXE (GCC) 15.2.0",
+    "corrected_source_lf_sha256": "4499981f6b76688d9477e40bb1aed3312a4bd226495cbab729d84d31212ff232",
+    "independent_hostiles": {
+      "all_blue": true,
+      "blue_word_rejected": true,
+      "n7_target_hamiltonian_paths": 9
+    },
+    "orders": [
+      {
+        "certificate_stream_lf_sha256": "904be5eefec31502cda7f0d3a84fc08a7aacff758be48b19c7ca5ac93a6c61c4",
+        "n": 8,
+        "producer_arguments": [
+          "8",
+          "4"
+        ],
+        "status": "PASS",
+        "unique_literal_certificates": 640,
+        "universe": {
+          "free_middle_pair_orbits": 6,
+          "port_sets": 10,
+          "sources": 640
+        }
+      },
+      {
+        "certificate_stream_lf_sha256": "f3aaeb580fe0ba8237d709389f0af0d691fa5c94af6a5f56adc518d5c67dd706",
+        "n": 9,
+        "producer_arguments": [
+          "9",
+          "4"
+        ],
+        "status": "PASS",
+        "unique_literal_certificates": 10240,
+        "universe": {
+          "free_middle_pair_orbits": 9,
+          "port_sets": 20,
+          "sources": 10240
+        }
+      },
+      {
+        "certificate_stream_lf_sha256": "645f6553e90e5d00a06f9789a678529869612e16a157fbb447653e1a4850aece",
+        "n": 10,
+        "producer_arguments": [
+          "10",
+          "4"
+        ],
+        "status": "PASS",
+        "unique_literal_certificates": 143360,
+        "universe": {
+          "free_middle_pair_orbits": 12,
+          "port_sets": 35,
+          "sources": 143360
+        }
+      }
+    ],
+    "status": "PASS"
+  },
+  "comparison": "normal versus optimized complete census",
+  "excluded_observational_fields": [
+    "compiler_stderr (includes absolute source paths)",
+    "orders[].elapsed_seconds",
+    "orders[].producer_stdout_without_certificates (timings; decoder control and no-failure lines still checked)",
+    "orders[].producer_stderr (progress times)"
+  ],
+  "not_reexecuted": "This fast comparison reads completed receipts; use check.py --census to regenerate them.",
+  "status": "PASS"
+}

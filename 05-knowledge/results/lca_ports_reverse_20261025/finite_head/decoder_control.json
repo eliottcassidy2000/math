@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "compiler": "g++.EXE (GCC) 15.2.0",
+  "build_options": [
+    "-O2",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra"
+  ],
+  "corrected_source_lf_sha256": "4499981f6b76688d9477e40bb1aed3312a4bd226495cbab729d84d31212ff232",
+  "compiler_stderr": [
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp: In function 'bool directedPath(uint64_t, const Tour&, int*)':",
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp:56:9: warning: this 'if' clause does not guard... [-Wmisleading-indentation]",
+    "   56 |         if (deg[u] == 2 || deg[v] == 2) return false; nb[u][deg[u]++] = v; nb[v][deg[v]++] = u; }",
+    "      |         ^~",
+    "C:\\Users\\Eliott\\.codex\\worktrees\\tournament-metagraph\\math\\05-knowledge\\results\\lca_ports_reverse_20261025\\finite_head\\blue_line_black_detours_corrected.cpp:56:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'",
+    "   56 |         if (deg[u] == 2 || deg[v] == 2) return false; nb[u][deg[u]++] = v; nb[v][deg[v]++] = u; }",
+    "      |                                                       ^~"
+  ],
+  "producer_arguments": [
+    "5",
+    "4",
+    "0",
+    "1"
+  ],
+  "disconnected_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "producer_stdout": [
+    "# decoder controls: disconnected path-plus-cycle rejected; both directed paths accepted",
+    "# black detours of closed blue lines, n = 5, m = 6, e = 4, closed blue presentations = 8, layer = 4",
+    "# code range [0, 1)",
+    "layer k: closed blue lines / shortest detour 2 / shortest detour 3 / none within 3 = pure-blue partner + genuine   (max H(T), max seconds per line)",
+    "done in 0 s"
+  ],
+  "producer_stderr": []
+}

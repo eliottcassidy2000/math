@@ -6,6 +6,23 @@ stated dependencies. **FINITE-EXACT:** the following controls and saved
 receipts. **CITED:** native Antihydra macro rules, blank configuration,
 and halt predicate. No native step-clock or Lean result is promoted.
 
+**Final integration:** [HEAD_ASSEMBLY.md](HEAD_ASSEMBLY.md) establishes
+the sharp unfiltered closed endpoint-four threshold n>=8. The corrected
+finite-head C++ census streams all154,240 certificates into an independent
+Python replay at orders8,9,10. Both normal and optimized runs agree on
+their complete certificate digests; timing/compiler observations are kept
+separate from the identical mathematical summaries. The source's early-
+endpoint uninitialized read is repaired in the live legacy file and the
+new source copy, with its minimal hostile and old hash preserved.
+
+The [incoming counting comparison](counting/INCOMING_COUNTING.md) checks
+64 normalized residues and47,860 weighted edges under direct forced-skip
+contraction. [ANCESTRY.md](arithmetic/ANCESTRY.md) and
+[DENSITY.md](arithmetic/DENSITY.md) add exact root/debt and natural-density
+proofs. Root independently checked the inverse branch and finite-cylinder
+tail argument; the latter's8,508 modular classes and403 literal integer
+replays are reproduced without imports from the producer.
+
 ## Independent mathematical controls
 
 | Lane | Declared producer universe | Independent route |
@@ -56,7 +73,7 @@ explicitly finite and independent of the general proofs.
 
 ## Reproducibility and retained costs
 
-`replay.py` executes all listed controls normally and under-O; explicit
+`replay.py` executes all listed fast controls normally and under-O; explicit
 exception gates remain active in both modes. It compares canonical JSON
 receipts and only writes them when passed--refresh. Source hashes use LF
 normalization and POSIX relative paths, so line-ending and path-separator
@@ -69,6 +86,13 @@ immediate inherited inputs, receipt equality, Python syntax and local
 links. Its refresh flag is an explicit publishing action. It does not
 replace executing the mathematical checks. Read-only verification never
 regenerates evidence silently.
+
+The full C++ census is deliberately a separate `finite_head/check.py
+--census` command, with compiler selection described in its README.
+The default helper verifies the stored semantic agreement and source
+pin without silently rerunning the several-minute enumeration. Both full
+runs were completed in this session. No claim of a fresh full census is
+made merely from running the fast packet verifier.
 
 The reported counting improvement measures modular edge updates and
 their operand widths. It excludes coefficient setup and final odd
