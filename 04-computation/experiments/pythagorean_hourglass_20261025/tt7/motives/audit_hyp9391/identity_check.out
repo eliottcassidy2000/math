@@ -1,0 +1,78 @@
+auditor's brute-force sums at 18 primes: [7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107, 127, 131, 211, 223]
+1. auditor's S_H vs lane (sums_7_199.jsonl, fast_*.jsonl):
+  q=7: lane has 38 sums; equal: 38
+  q=11: lane has 38 sums; equal: 38
+  q=19: lane has 38 sums; equal: 38
+  q=23: lane has 38 sums; equal: 38
+  q=31: lane has 38 sums; equal: 38
+  q=43: lane has 38 sums; equal: 38
+  q=47: lane has 38 sums; equal: 38
+  q=59: lane has 38 sums; equal: 38
+  q=67: lane has 38 sums; equal: 38
+  q=71: lane has 38 sums; equal: 38
+  q=79: lane has 38 sums; equal: 38
+  q=83: lane has 38 sums; equal: 38
+  q=103: lane has 38 sums; equal: 38
+  q=107: lane has 38 sums; equal: 38
+  q=127: lane has 38 sums; equal: 38
+  q=131: lane has 38 sums; equal: 38
+  q=211: lane has 33 sums; equal: 33
+  q=223: lane has 33 sums; equal: 33
+2. stated identities S_H = known + (+-Y) (exact_tt7_formula.out, 37 graphs) at the auditor's primes:
+  H00 m=  +3 deg=[3, 3, 3, 3, 4, 4, 4] Y=-: holds at 18/18 primes
+  H01 m=  +3 deg=[3, 3, 3, 3, 5, 5, 6] Y=-: holds at 18/18 primes
+  H02 m= -16 deg=[3, 3, 3, 3, 3, 4, 5] Y=['Y02']: holds at 18/18 primes
+  H03 m=  +4 deg=[3, 3, 3, 3, 4, 4, 4] Y=-: holds at 18/18 primes
+  H04 m= +16 deg=[3, 3, 3, 4, 4, 5, 6] Y=['Y02']: holds at 18/18 primes
+  H05 m= -12 deg=[3, 3, 3, 3, 5, 5, 6] Y=['Y05']: holds at 18/18 primes
+  H06 m= -12 deg=[3, 3, 3, 4, 5, 5, 5] Y=['Y05']: holds at 18/18 primes
+  H07 m=  +8 deg=[3, 3, 3, 3, 3, 3, 6] Y=-: holds at 18/18 primes
+  H08 m= +16 deg=[3, 3, 3, 3, 3, 4, 5] Y=-: holds at 18/18 primes
+  H09 m= -16 deg=[3, 3, 3, 3, 3, 4, 5] Y=['Y09']: holds at 18/18 primes
+  H10 m= +16 deg=[3, 3, 3, 4, 4, 5, 6] Y=['Y09']: holds at 18/18 primes
+  H11 m= +16 deg=[3, 3, 3, 4, 4, 5, 6] Y=-: holds at 18/18 primes
+  H12 m= +24 deg=[3, 3, 4, 4, 4, 5, 5] Y=-: holds at 18/18 primes
+  H13 m=  +4 deg=[3, 3, 3, 3, 4, 4, 4] Y=-: holds at 18/18 primes
+  H14 m=  +6 deg=[3, 3, 4, 4, 4, 4, 6] Y=-: holds at 18/18 primes
+  H15 m= -40 deg=[3, 4, 4, 4, 4, 4, 5] Y=-: holds at 18/18 primes
+  H16 m= +16 deg=[3, 3, 4, 4, 4, 5, 5] Y=['Y02']: holds at 18/18 primes
+  H17 m= -24 deg=[3, 3, 3, 3, 4, 4, 4] Y=['Y18']: holds at 18/18 primes
+  H18 m= +48 deg=[3, 3, 3, 3, 4, 4, 4] Y=['Y18']: holds at 18/18 primes
+  H19 m= +32 deg=[3, 3, 4, 4, 4, 5, 5] Y=-: holds at 18/18 primes
+  H20 m=  -8 deg=[3, 3, 4, 4, 4, 5, 5] Y=['Y09']: holds at 18/18 primes
+  H21 m= +12 deg=[3, 4, 4, 5, 5, 5, 6] Y=['Y05']: holds at 18/18 primes
+  H22 m= +12 deg=[3, 4, 4, 4, 4, 4, 5] Y=-: holds at 18/18 primes
+  H23 m=  +3 deg=[4, 4, 4, 5, 5, 5, 5] Y=-: holds at 18/18 primes
+  H24 m= +24 deg=[3, 3, 3, 3, 4, 4, 4] Y=['Y18']: holds at 18/18 primes
+  H25 m=  -8 deg=[3, 3, 3, 3, 4, 4, 4] Y=-: holds at 18/18 primes
+  H26 m=  -4 deg=[3, 3, 4, 4, 4, 4, 6] Y=-: holds at 18/18 primes
+  H27 m=  -8 deg=[3, 3, 3, 3, 4, 4, 4] Y=-: holds at 18/18 primes
+  H28 m= +16 deg=[3, 3, 4, 4, 4, 5, 5] Y=['Y09']: holds at 18/18 primes
+  H29 m=  -8 deg=[3, 3, 3, 4, 5, 5, 5] Y=-: holds at 18/18 primes
+  H30 m= +16 deg=[3, 3, 4, 4, 4, 5, 5] Y=['Y02']: holds at 18/18 primes
+  H31 m=  +8 deg=[3, 3, 4, 4, 4, 5, 5] Y=['Y09']: holds at 18/18 primes
+  H32 m= -24 deg=[3, 4, 4, 4, 4, 4, 5] Y=-: holds at 18/18 primes
+  H34 m=  -8 deg=[4, 4, 4, 4, 5, 5, 6] Y=-: holds at 18/18 primes
+  H35 m=  -8 deg=[3, 4, 4, 5, 5, 5, 6] Y=-: holds at 18/18 primes
+  H36 m= -12 deg=[4, 4, 4, 5, 5, 5, 5] Y=['Y05']: holds at 18/18 primes
+  H37 m=  +1 deg=[5, 5, 5, 5, 5, 5, 6] Y=-: holds at 18/18 primes
+  ALL 37 identities hold at every auditor prime: True
+3. multiplicities: sum over the 37 genuine m_H S_H = g(q), and the K7 - C7 reduction:
+  q=7: sum m_H S_H = 608, g(q) from auditor TT7 = 608: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=11: sum m_H S_H = -23616, g(q) from auditor TT7 = -23616: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=19: sum m_H S_H = 100224, g(q) from auditor TT7 = 100224: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=23: sum m_H S_H = -394272, g(q) from auditor TT7 = -394272: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=31: sum m_H S_H = 926368, g(q) from auditor TT7 = 926368: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=43: sum m_H S_H = 809664, g(q) from auditor TT7 = 809664: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=47: sum m_H S_H = 4906016, g(q) from auditor TT7 = 4906016: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=59: sum m_H S_H = 1798720, g(q) from auditor TT7 = 1798720: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=67: sum m_H S_H = -10258944, g(q) from auditor TT7 = -10258944: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=71: sum m_H S_H = -59296, g(q) from auditor TT7 = -59296: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=79: sum m_H S_H = 11980576, g(q) from auditor TT7 = 11980576: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=83: sum m_H S_H = -6992512, g(q) from auditor TT7 = -6992512: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=103: sum m_H S_H = 29113184, g(q) from auditor TT7 = 29113184: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=107: sum m_H S_H = -13213504, g(q) from auditor TT7 = -13213504: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=127: sum m_H S_H = -6943840, g(q) from auditor TT7 = -6943840: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=131: sum m_H S_H = -11369472, g(q) from auditor TT7 = -11369472: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=211: sum m_H S_H = 124762496, g(q) from auditor TT7 = 124762496: True; S_(K7-C7) = (q-6) S_(K6-P6): True
+  q=223: sum m_H S_H = 13325472, g(q) from auditor TT7 = 13325472: True; S_(K7-C7) = (q-6) S_(K6-P6): True

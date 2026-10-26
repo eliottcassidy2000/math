@@ -20367,3 +20367,32 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Before claiming a ring, test one class count with a nontrivial automorphism group.
   - Grep the 2026-10-14 run packets (wheel_run_interface, paley_next_cores, wheel_apery_extension) before crediting any Paley pattern-sum calculus.
   - Ask whether an invariance is classical in homogeneous coordinates before calling it new.
+
+## MISTAKE-671 (2026-10-26, mac-mini-2026-10-25-pyth, HYP-9391 and the seven-vertex section of the census note (pre-audit commit 1ba9d104df); found by the independent audit `04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/audit_hyp9391/REPORT.md`) -- statistical evidence promoted to a group, an error bound three times too small, and a known theorem filed as new
+
+- **Claims.**
+  - Title, note §4b and the k = 7 row: "four rank-4 weight-5 motives with USp(4) Sato-Tate statistics", "genus-two-type", "resolved structurally" (also in HYP-9390).
+  - "The low-order terms that the fit determines poorly contribute less than about 0.05" at primes >= 2000.
+  - (b), the twisted fourth Legendre moment, as FINITE-EXACT and "may be a known case; not checked".
+  - Minor:
+    - the Katz convolution mechanism with a "rank-8" local system;
+    - Y04 = -Y02 and Y06 = Y05 asserted without proof;
+    - small-value fractions from a 314-prime sample reported as the 307-prime one;
+    - "O(q^5) or worse for counting".
+- **First failed implications.**
+  - **Group.** E[x^4] = 3 holds for every USp(2n) with n >= 2. On 587 primes the KS distances to USp(6), USp(8) and N(0,1) are as small as to USp(4). Only "not GL(2)" (|x| > 2) and "rank >= 3" (>= 4 under the symplectic conjecture) are supported.
+  - **Bound.** A white-noise model of the fit gives a per-prime error of 0.14-0.19 at q >= 2000, and refits move values by up to 0.3. The not-GL(2) conclusion survives because 3-8 values per motive exceed 2.5.
+  - **Known theorem.** Both moment identities are the k = 6 case of Frechette-Ono-Papanikolas, IMRN 2004, Prop. 2.1 (with Ahlgren 2002 and Ahlgren-Ono 2000).
+  - **Mechanism.** The s-integrands are not Kummer-twisted hypergeometric sheaves. The ranks are 8 for Y02 and 12 for the other three.
+- **Strongest survivor.**
+  - The exact O(q^2) TT7 formula: the audit re-derived it with independent counts and sums, exact at all 618 primes q = 3 (mod 4) up to 9967.
+  - All 37 graph identities hold, re-checked by brute force out of sample.
+  - The four new directions are exact.
+  - The four irreducible weight-5 motives are not GL(2).
+  - Each has a (5,0) Hodge part by the audit's mod-q test.
+  - The audit proved Y04 = -Y02 and Y06 = Y05 by the involution u -> u/(u-1).
+- **Missing coordinates.**
+  - Before naming a compact group from moments, list every group with the same low moments and run a distribution test against each.
+  - Before quoting an error bound for a fitted projection, compute the coefficient standard errors.
+  - Search Frechette-Ono-Papanikolas / Ahlgren / Ahlgren-Ono before filing any Legendre-moment identity.
+  - Freeze the data file before computing statistics that a running job is still extending.

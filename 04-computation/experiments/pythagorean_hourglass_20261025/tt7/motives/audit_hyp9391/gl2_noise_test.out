@@ -1,0 +1,7 @@
+464 primes >= 2000
+GL(2) + N(0, 0.19^2): expected counts among 464: |x|>2: 6.9, |x|>2.5: 0.017, |x|>3: 0.00e+00
+GL(2) + N(0, 0.3^2): expected counts among 464: |x|>2: 13.5, |x|>2.5: 0.516, |x|>3: 2.44e-03
+observed m1: |x|>2: 24, |x|>2.5: 5, |x|>3: 1, max 3.170
+observed m2: |x|>2: 23, |x|>2.5: 7, |x|>3: 1, max 3.178
+observed m3: |x|>2: 21, |x|>2.5: 8, |x|>3: 1, max 3.074
+observed m4: |x|>2: 21, |x|>2.5: 3, |x|>3: 0, max 2.974

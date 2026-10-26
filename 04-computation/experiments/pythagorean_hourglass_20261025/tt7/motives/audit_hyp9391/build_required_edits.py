@@ -1,0 +1,156 @@
+# Audit of HYP-9391: build required_edits.json.  Every "old" string is checked to occur exactly once in the current
+# file; the numbers quoted in the "new" strings are read from the audit outputs (tt7_formula_check*.out,
+# identity_check.out).  Usage: build_required_edits.py ; writes required_edits.json
+import json, os, re
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, *(['..'] * 6)))
+HYP = '05-knowledge/hypotheses/HYP-9391-the-seven-vertex-paley-census-and-four-genus-two-type-motives.md'
+RES = '05-knowledge/results/pythagorean_hourglass_census_tower_20261025.md'
+H90 = '05-knowledge/hypotheses/HYP-9390-the-six-vertex-paley-census-is-the-level-32-adjoint.md'
+
+# numbers from the audit outputs
+tt = open(os.path.join(HERE, 'tt7_formula_check.out')).read()
+m = re.search(r'(\d+) primes agree, 0 disagree \(q = 3 mod 4, 7\.\.(\d+)\)', tt)
+NTT, QMAX = int(m.group(1)), int(m.group(2))
+ic = open(os.path.join(HERE, 'identity_check.out')).read()
+m = re.search(r"brute-force sums at (\d+) primes: \[([\d, ]+)\]", ic)
+NB = int(m.group(1)); BPR = [int(x) for x in m.group(2).split(',')]
+assert 'ALL 37 identities hold at every auditor prime: True' in ic
+BLO, BHI = BPR[0], BPR[-1]
+OOS = ', '.join(str(p) for p in BPR if p > 199)
+
+E = []
+def ed(f, old, new, why):
+    E.append({'file': f, 'old': old, 'new': new, 'why': why})
+
+# ---------------- HYP-9391 ----------------
+ed(HYP,
+   "(b) The chi-twisted fourth moment of the Legendre family is sum_l chi(l) a_l^4 = -2q^2 - 3q - 1 - 3q a_q - c_q - d_q. (c) Modulo the known motives, the triple products carry exactly four new motives. They are irreducible, of weight 5, pairwise not quadratic twists, and not GL(2) (normalised traces exceed 2), with USp(4) Sato-Tate statistics: conjecturally the spinor motives of four genus-2 Siegel eigenforms.",
+   "(b) The chi-twisted fourth moment of the Legendre family is sum_l chi(l) a_l^4 = -2q^2 - 3q - 1 - 3q a_q - c_q - d_q (the k = 6 case of Frechette-Ono-Papanikolas 2004, Prop. 2.1). (c) Modulo the known motives, the triple products span exactly four new directions. Numerically their new parts behave like four irreducible weight-5 motives, pairwise not quadratic twists and not GL(2) (normalised traces exceed 2), with trace statistics consistent with USp(4) but not distinguishing it from USp(2n), n >= 3: conjecturally the spinor motives of four genus-2 Siegel eigenforms.",
+   "Title states numerical inferences of (c) as facts and claims USp(4) statistics, which the data cannot separate from USp(6), USp(8) (audit: usp_rank_references.out); (b) is a known theorem and should be credited.")
+ed(HYP,
+   "  (b) FINITE-EXACT at the 76 odd primes 5..397, both classes mod 4. A monodromy count predicts the two weight-6 forms; the\n  untwisted companion carries 4.6.a.a only.",
+   "  (b) PROVED for every odd prime (both classes mod 4): the k = 6 case of Frechette-Ono-Papanikolas (IMRN 2004, Prop. 2.1;\n  part (1) Ahlgren, Finite Fields Appl. 8 (2002), part (2) Ahlgren-Ono, Monatsh. Math. 129 (2000)); see (b) below. Re-checked at the 428 odd primes 5..2999 (audit).\n  A monodromy count predicts the two weight-6 forms; the untwisted companion (Ahlgren's Gamma_0(4) case) carries 4.6.a.a only.",
+   "Both fourth-moment identities follow from FOP 2004 Prop. 2.1 at k = 6 (and k = 4); FINITE-EXACT understates the status and omits the credit (audit: moments_check.out, report F).")
+ed(HYP,
+   "  Not yet independently audited.",
+   f"  Audited 2026-10-26 (tt7/motives/audit_hyp9391/): (a) re-derived with independent TT7 counts and Y sums, exact at all\n  {NTT} primes q = 3 (mod 4) in 7..{QMAX}; all 37 identities re-checked with brute-force sums at {NB} primes {BLO}..{BHI}\n  ({OOS} out of sample, also for the four sums without a degree-3 vertex); Y04 = -Y02 and Y06 = Y05 PROVED; (b) is known (FOP 2004);\n  in (c) the projection error at q >= 2000 is about 0.14-0.19, not < 0.05; the Gram and not-GL(2) conclusions survive, but\n  the trace statistics do not single out rank 4.",
+   "Records the audit.")
+ed(HYP,
+   "  - 04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/run_sums.py (-> sums_7_199.jsonl), run_fast.py (-> fast_*.jsonl): all survivor sums; sum m_H S_H = g(q) checked at every prime",
+   "  - 04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/run_sums.py (-> sums_7_199.jsonl): all 38 survivor sums, sum m_H S_H = g(q) checked at its 23 primes; run_fast.py (-> fast_*.jsonl): the 33 genuine sums with a degree-3 vertex (no g check possible there)",
+   "run_fast.py does not compute all survivor sums (H23, H34, H36, H37 are missing), so the g(q) check is only made at the 23 primes <= 199.")
+ed(HYP,
+   "  - 04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/identify_new.py, identify_products.py, identify_odd_levels.py, identify_Y.py, candidate_forms_odd.gp (+ .out): negative identifications",
+   "  - 04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/identify_new.py, identify_products.py, identify_odd_levels.py, identify_Y.py, identify_classnumbers.py, candidate_forms_odd.gp: negative identifications (only candidate_forms_odd.out was saved; reruns in audit_hyp9391/rerun_identify_*.out)\n  - 04-computation/experiments/pythagorean_hourglass_20261025/tt7/motives/run_cheap_Y4.py (-> cheapY_5000_9999.txt; writes the Y04, Y06 columns as -Y02, Y05), untwisted_moment.py (+ .out)",
+   "No identify_*.out receipts exist; run_cheap_Y4.py and untwisted_moment.py are used but not listed.")
+ed(HYP,
+   "  - `Y04 = −Y02` and `Y06 = Y05` hold exactly.",
+   "  - `Y04 = −Y02` and `Y06 = Y05` hold for every prime `q ≡ 3 (mod 4)`. Proof (audit): with `A(u) = Σ_{s≠0,1} φ(s)φ(u−s)L(s)²`, one has `−Y02 = Σ_{u≠0,1} φ(u)L(u)A(u)` and `Y04 = Σ_{u≠0,1} φ(u)φ(u−1)L(u)A(u)`; on `{u : φ(u−1) = −1}` the fixed-point-free involution `u ↦ u/(u−1)` fixes `L(u)` and `A(u)` and flips `φ(u)`, so that part of `−Y02` vanishes. The same argument with `φ(s)φ(s−1)` in place of `φ(s)` gives `Y06 = Y05`. (`run_cheap_Y4.py` writes the `Y04`, `Y06` columns as `−Y02`, `Y05`, so in `cheapY_5000_9999.txt` they are not independent data.)",
+   "Was asserted without proof; the audit proves it (y_symmetry_proof_check.out) and checks it at 618 primes with independent closed forms of the cone sums (literal_cones.out).")
+ed(HYP,
+   "It costs `O(q²)`, against `O(q⁵)` or worse for counting.",
+   f"It costs `O(q²)`. (Counting costs `O(q⁴)`, not `O(q⁵)`: the maps `x ↦ a²x + b` act simply transitively on the arcs, so `TT7 = (q(q−1)/2)·T5(N⁺(0) ∩ N⁺(1))`. The audit's counter uses this; the formula holds at all {NTT} primes `q ≡ 3 (mod 4)` up to {QMAX}.)",
+   "Counting is O(q^4) by the arc-regular reduction (audit tt7_count.c, q = 4999 in under a second).")
+ed(HYP,
+   "Σ_{λ ≠ 0,1} φ(λ) a_λ⁴ = −2q² − 3q − 1 − 3q·a_q − c_q − d_q        (all 76 odd primes 5..397)",
+   "Σ_{λ ≠ 0,1} φ(λ) a_λ⁴ = −2q² − 3q − 1 − 3q·a_q − c_q − d_q        (every odd prime; FOP 2004, Prop. 2.1, k = 6)",
+   "Known theorem.")
+ed(HYP,
+   "- The identity sits in the Ahlgren / Ahlgren–Ono / Frechette–Ono–Papanikolas framework (Legendre moments and Hecke traces on `Γ₀(4)`, `Γ₀(8)`), and may be a known case; not checked against the papers.",
+   "- The identity is known. Frechette–Ono–Papanikolas (IMRN 2004, no. 60, 3233–3262, Prop. 2.1: (1) Ahlgren, Finite Fields Appl. 8 (2002), the `η(2z)^12` fivefold; (2) Ahlgren–Ono, Monatsh. Math. 129 (2000); stated for every even `k ≥ 4`) give `Tr_k(Γ₀(4), p) = −3 − Σ_{λ=2}^{p−1} G_k(a_λ, p)` and `Tr_k(Γ₀(8), p) = −4 − Σ_{λ=2}^{p−2} G_k(a_{λ²}, p)`, where `G_6(s, p) = s⁴ − 3ps² + p²` is the `Sym⁴` trace. Since `Σ_{λ=2}^{p−2} f(λ²) = Σ_{μ≠0,1} (1 + φ(μ)) f(μ)`, `Tr_6(Γ₀(8), p) = c_p + 2d_p` and `Tr_6(Γ₀(4), p) = d_p`, this gives `Σ φ(μ) Sym⁴(a_μ) = −1 − c_p − d_p` and `Σ Sym⁴(a_μ) = −3 − d_p`; with `a⁴ = Sym⁴ + 3p·Sym² + 2p²` and the `k = 4` case these are the twisted and untwisted identities. So (b) is PROVED for all odd primes.",
+   "Prior art located and checked (audit report F); the derivation was verified numerically at 428 primes (moments_check.out, columns Sym4t, Sym4u).")
+ed(HYP,
+   "So there are four distinct irreducible motives of weight 5, each entering one `Y` (or `Y05 + Y18`) once.",
+   "So, heuristically (integral multiplicities and Rankin–Selberg orthogonality on the class `q ≡ 3 (mod 4)`, where a motive and its `χ₋₄`-twist differ only by sign), there are four distinct irreducible motives of weight 5, each entering one `Y` (or `Y05 + Y18`) once.",
+   "The inference from E[m^2] ~ 1 to irreducibility is a heuristic and should be labelled as such.")
+ed(HYP,
+   "  - A GL(2) motive satisfies `|x| ≤ 2`. Odd weight forces a symplectic motive, hence even rank, so the rank is at least 4.",
+   "  - A GL(2) motive satisfies `|x| ≤ 2`, so the rank is at least 3. An irreducible self-dual motive of odd weight is expected (not known in general) to be symplectic, hence of even rank, so the rank is at least 4.",
+   "'Odd weight forces symplectic' is the sign conjecture, not a theorem in this generality.")
+ed(HYP,
+   "  - The low-order terms that the fit determines poorly contribute less than about 0.05 there.",
+   "  - The fitted known part is uncertain by about 0.14 (mean) to 0.19 (max) per prime there (audit, white-noise model; coefficient standard errors about 21 for `q²`, 2.3 for `|b|²`, 100 for `a_q`, 2·10⁴ for `q`), and reasonable refits move single values by up to about 0.3. The conclusion survives: on the 464 primes in `[2000, 9999]` (audit refit on 587 primes) 3–8 values per motive exceed 2.5, against an expected 0.02–0.5 for a GL(2) motive plus that error.",
+   "The < 0.05 bound is wrong by a factor 3-4 (part_c_analysis.out section 2-3; gl2_noise_test.out).")
+ed(HYP,
+   "- **USp(4) statistics.** Compared with Monte Carlo values:",
+   "- **USp-type statistics.** Compared with the exact reference values. They do not fix the rank: `E[x⁴] = 3` for every `USp(2n)` with `n ≥ 2`, `E[x⁶] = 14` for USp(4) against 15 for `n ≥ 3`, and on the audit's 587 primes the KS distances to USp(6), USp(8) and `N(0, 1)` are as small as to USp(4).",
+   "Rank 4 is not singled out by the statistics (usp_rank_references.out); the reference values are exact, not Monte Carlo.")
+ed(HYP,
+   "  | `P(\\|x\\| < 0.2)` | 0.169 | 0.127 | 0.178 | 0.153 | 0.143 | 0.153 |",
+   "  | `P(\\|x\\| < 0.2)` | 0.169 | 0.127 | 0.179 | 0.150 | 0.169 | 0.156 |",
+   "The printed m-values come from induced_test.py run on 314 primes (the 307 plus the first 7 above 5000 written by the then-running run_cheap_Y4.py); on the stated 307 primes they are 0.179, 0.150, 0.169, 0.156.")
+ed(HYP,
+   "  The standard error of `E[x⁴]` is about 0.5 at 307 primes. A tensor product `SU(2)×SU(2)` would give `E[x⁴] = 4`.",
+   "  The standard error of `E[x⁴]` is about 0.5 at 307 primes. A tensor product `SU(2)×SU(2)` would give `E[x⁴] = 4` and `Sym³(SU(2))` gives 4 (with `E[x⁶] = 34`). On the audit's 587 primes `[307, 9999]`: `E[x⁴] = 3.13, 2.96, 2.88, 2.70`, `E[x⁶] = 16.0, 13.0, 13.6, 10.5`, and a KS test rejects `SU(2)×SU(2)` and `Sym³` at the 5% level for all four.",
+   "Adds the extended-sample statistics and the Sym^3 alternative (part_c_analysis.out).")
+ed(HYP,
+   "  - None is induced: there is no vanishing residue class, and only 3–5% of values have `|x| < 0.05`, against about 50% for an induced motive.",
+   "  - None is induced from `Q(√D)` for the `D` tested: every `E[χ_D m_i²]` is near 0 rather than 1, and no class mod 8 has `E[x²]` near 0. The share of `|x| < 0.05` (2–6% on the 307 primes) is not a sharp test, because the projection error (about 0.15) is three times the window: an induced motive would show about 15%, not 50%.",
+   "The 3-5% figure is from the 314-prime run, and the 50% contrast ignores the projection noise.")
+ed(HYP,
+   "Motivic weight 5 means scalar weight 4, or vector-valued weight `(3, 2)`.",
+   "Motivic weight 5 with a nonzero `(5,0)` Hodge part means scalar weight 4, or vector-valued weight `(3, 2)` (or the non-cohomological `(2, 4)`). Tate twists such as `q·M` (with `M` of paramodular weight 3) or `q²·A` (an abelian surface) also have weight 5. The audit's mod-`q` test excludes them heuristically: no congruence `Y ≡ c₀ + c₁a_q + c₂c_q + c₃d_q + c₄|b|²` (mod `q`) with small integers `c_i` holds for any of the four, even after adding `(2/q)`, `(3/q)`, `h(−q)`, `(2/q)h(−q)`, `h(−8q)`, while the positive controls are recovered (`modq_hodge_test.out`). So each new trace is nonzero mod `q`. Rank 4, hence 'genus 2', is part of the conjecture.",
+   "The listed weights omitted Tate-twisted alternatives; the audit's test supports excluding them; rank 4 is not established.")
+ed(HYP,
+   "  - Multiplicative convolution of hypergeometric sheaves concatenates parameters (Katz). So `Σ_s φ(…)L(s)L(t/s)` is, up to twists, the rank-4 family of `₄F₃(½,½,½,½; 1,1,1)`, whose generic fibres are rank-4 symplectic.\n  - Each `Y` pairs that family with one more Legendre sheaf. The new motives are pieces of `H¹_!` of the resulting rank-8 local system.",
+   "  - Heuristic only. Multiplicative convolution of hypergeometric sheaves with disjoint parameter lists concatenates the lists (Katz, ESDE ch. 8). So the bare sum `Σ_s L(s)L(t/s)` is the rank-4 symplectic family of `₄F₃(½,½,½,½; 1,1,1)`.\n  - The actual `s`-integrands are `φ(s)L(s)²` (Y02), `φ(s−1)L(s)²` (Y05), `φ(s)φ(s−1)L(s)` (Y09) and `φ(s−1)L(s)` (Y18). `L(s)² = Sym² + q` has rank 4, and the twist by `φ(s−1)` is not a Kummer twist on `G_m` (its local monodromy at `s = 1` is `−J₂`, not a pseudo-reflection). So none of the four is a hypergeometric convolution; the relevant operation is Katz's middle convolution of rigid local systems.\n  - For Y02 and Y05 the second Legendre factor sits in `s` (a rank-4 sheaf convolved with the Legendre sheaf, then paired with `φ(t)φ(t−1)`); for Y09 and Y18 a rank-2 sheaf is convolved with the Legendre sheaf and tensored with `L(t)`. The ranks need recounting: with middle extensions the Euler–Poincaré formula (generic rank `2·r_F·r_G − dim F^{I₁}·r_G − r_F·dim G^{I₁}` for the convolution) gives 8 for Y02 but 12 for Y05, Y09 and Y18, whose `s`-integrands have no inertia invariants at `s = 1`. The new motives are pieces of `H¹_!` of these local systems.",
+   "Katz's concatenation theorem does not apply to the actual integrands; for Y02, Y05 the second Legendre factor sits in s, not in t; the 'rank-8' count holds for Y02 only (audit's Euler-Poincare count, report F).")
+ed(HYP,
+   "The rank and Sato–Tate evidence uses only large primes.",
+   "The rank and Sato–Tate evidence uses only large primes, where the projection error is about 0.15 per prime; small-value frequencies are therefore unreliable.",
+   "Quantifies the caveat.")
+
+# ---------------- results file ----------------
+ed(RES,
+   "and **four rank-4 weight-5 motives** with USp(4) statistics (conjecturally genus-2 Siegel) |",
+   "and **four new weight-5 motives** (numerically: rank ≥ 4, statistics consistent with USp(4); conjecturally genus-2 Siegel) |",
+   "Rank 4 is not established; USp(4) is not singled out.")
+ed(RES,
+   "- All 37 genuine seven-vertex sums were computed exactly at 43 primes, by an `O(q⁵)` contraction and an `O(q⁴)` degree-3 elimination.",
+   "- All 37 genuine seven-vertex sums were computed exactly at 43 primes (23 for the four without a degree-3 vertex), by an `O(q⁵)` contraction and an `O(q⁴)` degree-3 elimination.",
+   "H23, H34, H36, H37 were computed only at the 23 primes <= 199.")
+ed(RES,
+   "These come from summing out three degree-3 \"cone\" vertices with the Legendre table:",
+   "These come from summing out three degree-3 \"cone\" vertices with the Legendre table (H36 has no degree-3 vertex; its sum equals that of H05 at every computed prime):",
+   "H36's identity is not a cone reduction.")
+ed(RES,
+   "- **Closed formula.** `TT7(P_q)` has an exact `O(q²)` closed form, which reproduces all 71 counted values.",
+   f"- **Closed formula.** `TT7(P_q)` has an exact `O(q²)` closed form, which reproduces all 71 counted values (and, in the audit, independent counts at all {NTT} primes `q ≡ 3 (mod 4)` up to {QMAX}).",
+   "Records the audit's extension.")
+ed(RES,
+   "- **Weight-6 forms.** They enter through the twisted fourth moment `Σ φ(λ)a_λ⁴ = −2q² − 3q − 1 − 3q a_q − c_q − d_q`.",
+   "- **Weight-6 forms.** They enter through the twisted fourth moment `Σ φ(λ)a_λ⁴ = −2q² − 3q − 1 − 3q a_q − c_q − d_q`, the `k = 6` case of Frechette–Ono–Papanikolas (IMRN 2004, Prop. 2.1).",
+   "Credit for a known identity.")
+ed(RES,
+   "- **Four new motives.** Modulo all of this, the triple products carry exactly four new motives:\n  - each is irreducible of weight 5;\n  - normalised traces exceed 2 at about 5% of large primes, so each has rank ≥ 4, not GL(2);\n  - their moments and small-value frequencies match USp(4);\n  - none is a twist of another, and none is induced.",
+   "- **Four new motives (numerical).** Modulo all of this, the triple products span exactly four new directions, which behave like four motives:\n  - each looks irreducible of weight 5 (the Gram matrix of the new parts is near the identity);\n  - normalised traces exceed 2 at about 5% of large primes, so none is GL(2); the rank is at least 4 if, as expected for odd weight, they are symplectic;\n  - their moments and small-value frequencies are consistent with USp(4), but equally with USp(6) or USp(8), so the rank is not fixed;\n  - none is a quadratic twist of another for the characters tested, and none is induced from the fields tested.",
+   "Statistical inferences were stated as facts; 'match USp(4)' overstates what the data can distinguish.")
+ed(RES,
+   "Identify the four new rank-4 motives.",
+   "Identify the four new motives (rank at least 4; rank 4 is conjectural).",
+   "Rank 4 not established.")
+
+# ---------------- HYP-9390 ----------------
+ed(H90,
+   "resolved structurally in HYP-9391 (four rank-4 Siegel-type motives).",
+   "reduced in HYP-9391 to four explicit Legendre triple products, whose new parts behave numerically like four weight-5 motives of rank >= 4 (conjecturally genus-2 Siegel).",
+   "'Resolved' and 'rank-4 Siegel-type' overstate HYP-9391 (OPEN; (c) NUMERICAL; rank not fixed).")
+ed(H90,
+   "- **Resolved structurally in [HYP-9391](HYP-9391-the-seven-vertex-paley-census-and-four-genus-two-type-motives.md)** (same session, 2026-10-26):",
+   "- **Reduced in [HYP-9391](HYP-9391-the-seven-vertex-paley-census-and-four-genus-two-type-motives.md)** (same session, 2026-10-26; OPEN, part (c) NUMERICAL):",
+   "Same.")
+ed(H90,
+   "  - the new arithmetic is four irreducible weight-5 motives of rank at least 4 with USp(4) statistics (conjecturally genus-2 Siegel), plus `8.6.a.a` and `4.6.a.a` through the twisted fourth Legendre moment.",
+   "  - numerically, the new arithmetic behaves like four irreducible weight-5 motives of rank at least 4, with statistics consistent with USp(4) but not fixing the rank (conjecturally genus-2 Siegel), plus `8.6.a.a` and `4.6.a.a` through the twisted fourth Legendre moment (a known identity: the `k = 6` case of Frechette–Ono–Papanikolas 2004, Prop. 2.1).",
+   "Same; adds the credit.")
+
+# verify uniqueness of every old string against the current files
+bad = []
+for e in E:
+    txt = open(os.path.join(ROOT, e['file'])).read()
+    n = txt.count(e['old'])
+    if n != 1: bad.append((e['file'], n, e['old'][:80]))
+assert not bad, bad
+json.dump(E, open(os.path.join(HERE, 'required_edits.json'), 'w'), indent=1, ensure_ascii=False)
+print(f"{len(E)} edits written; every old string occurs exactly once (NTT={NTT}, QMAX={QMAX}, brute primes {BPR})")

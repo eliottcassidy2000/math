@@ -1,0 +1,28 @@
+training primes: 1019..1559; validation primes: 1567..9967 (492)
+-- positive controls --
+M4t (twisted 4th moment): 6 kernel vectors with e != 0; shortest sup-norm = 1; validated on 492 primes: 1; vector (e, c1, ca84, ca86, ca46, cb2) = [-1, 1, 0, 1, 1, 0]
+synthetic 7 - 3 a84 + 2|b|^2 + q Y09: 6 kernel vectors with e != 0; shortest sup-norm = 7; validated on 492 primes: 1; vector (e, c1, ca84, ca86, ca46, cb2) = [-1, -7, 3, 0, 0, -2]
+-- the triple products (5 columns) --
+Y02: 6 kernel vectors with e != 0; shortest sup-norm = 364395228183216424076; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2) = [93653907014395944532, -364395228183216424076, -87952705569090758480, 235736467944217401574, -57046883373345954245, 947234417526813590]
+Y05: 6 kernel vectors with e != 0; shortest sup-norm = 227051325665617621467; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2) = [-105901391876025154963, 191860070760417140620, 227051325665617621467, 98816273032433866843, 120303823241808985703, 7231321136134629348]
+Y09: 6 kernel vectors with e != 0; shortest sup-norm = 289117653600187719578; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2) = [289117653600187719578, -94322446818239612872, -200556785113673815729, -201534712414209233687, -162823133808029960237, 32704041659366806204]
+Y18: 6 kernel vectors with e != 0; shortest sup-norm = 215186882657766619964; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2) = [198839941348611541132, 16323113559235637559, -215186882657766619964, -170251833429992703010, 133393760159372742726, -113003197721689589915]
+Y05 + Y18: 6 kernel vectors with e != 0; shortest sup-norm = 278398910695771942979; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2) = [83984210221422803861, 254937672321757889521, -184241574012297798742, -122190416114163786798, 31159227914618389462, 278398910695771942979]
+-- the triple products (7 columns, adding (2/q), (3/q)) --
+Y02: 8 kernel vectors with e != 0; shortest sup-norm = 1873506082890202; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q)) = [-1064509189841305, -270483953797544, -276744010694749, 1873506082890202, 1533965760318402, 890008024780120, 1505121523769069, 1764230814468507]
+Y05: 8 kernel vectors with e != 0; shortest sup-norm = 1977600075742265; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q)) = [-49781100271867, 278759108075931, 1177802002628917, 1300741448088319, 1215139696782496, 102774146180160, 1977600075742265, -1353584250727249]
+Y09: 8 kernel vectors with e != 0; shortest sup-norm = 1691745664447233; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q)) = [-1174226989145526, 1691745664447233, 974364283210154, 652939226756459, 451030910816576, -1068931870170049, -1077568163591702, 1597720388765044]
+Y18: 8 kernel vectors with e != 0; shortest sup-norm = 1746185506859514; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q)) = [-1702948893023214, 1725339536575758, -1746185506859514, 148528379506755, 472673273692610, 1669229038228673, 483664000777668, 1702447982009129]
+Y05 + Y18: 8 kernel vectors with e != 0; shortest sup-norm = 2081642347201808; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q)) = [-2081642347201808, 50786917573437, 1246566485526287, 115916882180778, -760272626491564, 164464898956554, -117843924534716, -215332982254385]
+-- the triple products (10 columns, adding class numbers h(-q), (2/q) h(-q), h(-8q)) --
+Y02: 11 kernel vectors with e != 0; shortest sup-norm = 104237232567; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [14496906812, 14703111209, 93735025087, 104237232567, 63652147472, -58407980570, 74817046596, 84239973501, -68398746047, -73270942657, 11267402796]
+Y05: 11 kernel vectors with e != 0; shortest sup-norm = 96360610703; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [635911200, 81783530404, 96360610703, 88735843961, -20500142284, -87147251267, 35071851962, 55291526559, -28050224302, 6036944957, 81043772457]
+Y09: 11 kernel vectors with e != 0; shortest sup-norm = 109740557222; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [53113738082, -109740557222, -79917020743, -78504856701, -84928000646, -14872679711, -52492736903, -105339121718, 12994252663, 59395284608, 46327106032]
+Y18: 11 kernel vectors with e != 0; shortest sup-norm = 116253827997; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [-76213129029, 72154692513, -51341880627, 72075647908, 1301556073, 47855095874, 34282378143, -105039797323, -116253827997, 5304143340, 217720560]
+Y05 + Y18: 11 kernel vectors with e != 0; shortest sup-norm = 116498948686; validated on 492 primes: 0; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [-95006063628, 37209350400, -116498948686, 72587229678, 42775814478, 46870336734, 93416549581, -72523302356, 83686613495, -30919030718, 49434666815]
+synthetic 3 h(-q) - 5 + 2 a84 + q^2 Y02 (positive control): 11 kernel vectors with e != 0; shortest sup-norm = 5; validated on 492 primes: 1; vector (e, c1, ca84, ca86, ca46, cb2, c(2/q), c(3/q), ch(-q), c(2/q)h(-q), ch(-8q)) = [1, -5, 2, 0, 0, 0, 0, 0, 3, 0, 0]
+-- residues: share of primes with Y = 0 mod q --
+  Y02: 0 of 532
+  Y05: 0 of 532
+  Y09: 0 of 532
+  Y18: 0 of 532

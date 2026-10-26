@@ -1,0 +1,3 @@
+43 primes 7..443; rank(B) = 9; new directions = 4
+orbits that reduce the new dimension (new dim after adding the orbit, label, columns added):
+best: [(4, 'N128k2c1o1d1', 5), (4, 'N128k2c1o2d1', 5), (4, 'N128k2c1o3d1', 5), (4, 'N128k2c1o4d1', 5), (4, 'N128k3c-4o1d4', 1)]

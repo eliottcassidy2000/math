@@ -1,0 +1,16 @@
+q=7 literal Y02=-128 Y04=128 Y05=128 Y06=128 Y09=0 Y18=0  closed-form match: True
+q=11 literal Y02=-128 Y04=128 Y05=-384 Y06=-384 Y09=-256 Y18=-384  closed-form match: True
+q=19 literal Y02=2304 Y04=-2304 Y05=-1280 Y06=-1280 Y09=1536 Y18=1280  closed-form match: True
+q=23 literal Y02=3200 Y04=-3200 Y05=4992 Y06=4992 Y09=1024 Y18=-3584  closed-form match: True
+q=31 literal Y02=512 Y04=-512 Y05=-8704 Y06=-8704 Y09=-6144 Y18=9216  closed-form match: True
+q=43 literal Y02=3456 Y04=-3456 Y05=10368 Y06=10368 Y09=-5376 Y18=-896  closed-form match: True
+q=47 literal Y02=-1280 Y04=1280 Y05=29952 Y06=29952 Y09=-21504 Y18=9728  closed-form match: True
+q=59 literal Y02=-39296 Y04=39296 Y05=-48256 Y06=-48256 Y09=30976 Y18=-1664  closed-form match: True
+q=67 literal Y02=-32768 Y04=32768 Y05=73728 Y06=73728 Y09=26624 Y18=-77824  closed-form match: True
+q=71 literal Y02=23424 Y04=-23424 Y05=42112 Y06=42112 Y09=16384 Y18=-53248  closed-form match: True
+q=79 literal Y02=-78592 Y04=78592 Y05=-32000 Y06=-32000 Y09=46080 Y18=23040  closed-form match: True
+q=83 literal Y02=-36608 Y04=36608 Y05=217856 Y06=217856 Y09=-78336 Y18=-82688  closed-form match: True
+q=103 literal Y02=-12928 Y04=12928 Y05=-183680 Y06=-183680 Y09=-83968 Y18=60416  closed-form match: True
+q=107 literal Y02=206208 Y04=-206208 Y05=-225152 Y06=-225152 Y09=103168 Y18=91264  closed-form match: True
+literal cone sums (fixed pair = last two base vertices) equal the closed forms at all 14 primes q = 3 mod 4 below 110: True
+identities among literal cone sums: Y04 = -Y02 at all: True; Y06 = Y05 at all: True

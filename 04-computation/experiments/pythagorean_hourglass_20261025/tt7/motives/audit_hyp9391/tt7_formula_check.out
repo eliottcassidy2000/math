@@ -1,0 +1,6 @@
+1. printed formula == A7/(q(q-1)) + B7 S_W4 + C7 S_K6P6 + g(q) (g_formula.json): True
+   A7 = q(q-1)(q-3)(q^4-87q^3+2785q^2-38827q+198842) equals audit_tt7_explicit.out's monomials: True
+2. 2^21 TT7(P_q) == q(q-1)[formula] with the auditor's TT7 counts and Y sums: 618 primes agree, 0 disagree (q = 3 mod 4, 7..9967)
+3. lane's counted TT7 values: 69 primes 19..811; auditor's counts agree at 69/69
+   zeros of TT7 among counted primes: [7, 11, 19, 23]
+   sample: TT7(P_31) = 465, TT7(P_43) = 7224, TT7(P_811) = 98211772307340, TT7(P_9967) = 4617028090676837309859
