@@ -1,0 +1,7 @@
+(a) twin values p+1 in (10^4, 1000000]: 7964 values; exactly two sources: 3526 (share 0.4427); mean sources 2.943; max 13
+    twin values p+1 <= 1000000: 8169; exactly two: 3641 (share 0.4457); mean 2.935
+    even untouchables <= 10^5 (parity lemma, exact): 2 52 88 96 120 124 146 162 188 206 210 216 ... count 150231 (A057978: 1 untouchable even below 10 is 2; the odd 5 is not in this even table)
+
+real	0m0.584s
+user	0m0.031s
+sys	0m0.000s

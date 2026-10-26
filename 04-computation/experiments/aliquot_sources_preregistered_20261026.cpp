@@ -12,6 +12,7 @@
 #include <cmath>
 #include <algorithm>
 #include <numeric>
+#include <cstdlib>
 using namespace std;
 typedef unsigned long long u64;
 typedef unsigned int u32;
@@ -40,10 +41,10 @@ static bool is_perfect_power(u64 n) {
     return false;
 }
 
-int main() {
-    // ---- (a) twin values in (10^4, 10^5] ----
+int main(int argc, char** argv) {
+    // ---- (a) twin values in (10^4, 10^5] (default V = 10^5; an argument V runs part (a) alone at that bound, e.g. 1000000) ----
     {
-        const u32 V = 100000, M = 2 * V;                  // even sources up to 2V - 2
+        const u32 V = argc > 1 ? (u32)atoi(argv[1]) : 100000, M = 2 * V;   // even sources up to 2V - 2
         vector<u64> sig(M + 1, 0);
         for (u32 d = 1; d <= M; d++) for (u32 m = d; m <= M; m += d) sig[m] += d;
         vector<u32> spf = spf_sieve(V);
@@ -55,16 +56,17 @@ int main() {
             if (spf[p] != p || spf[p - 2] != p - 2) continue;   // p and p - 2 prime
             u32 v = p + 1; tw++; sum += cnt[v]; if (cnt[v] == 2) two++; if ((int)cnt[v] > mx) mx = cnt[v];
         }
-        printf("(a) twin values p+1 in (10^4, 10^5]: %d values; exactly two sources: %d (share %.4f); mean sources %.3f; max %d\n", tw, two, (double)two / tw, sum / tw, mx);
+        printf("(a) twin values p+1 in (10^4, %u]: %d values; exactly two sources: %d (share %.4f); mean sources %.3f; max %d\n", V, tw, two, (double)two / tw, sum / tw, mx);
         // also the full range <= 10^5 for reference
         int tw2 = 0, two2 = 0; double sum2 = 0;
         for (u32 p = 5; p <= V - 1; p += 2) { if (spf[p] != p || spf[p - 2] != p - 2) continue; tw2++; sum2 += cnt[p + 1]; if (cnt[p + 1] == 2) two2++; }
-        printf("    twin values p+1 <= 10^5: %d; exactly two: %d (share %.4f); mean %.3f\n", tw2, two2, (double)two2 / tw2, sum2 / tw2);
+        printf("    twin values p+1 <= %u: %d; exactly two: %d (share %.4f); mean %.3f\n", V, tw2, two2, (double)two2 / tw2, sum2 / tw2);
         // untouchable check in the same table: even values <= 10^5 with no source at all; count and the first 12
         int unt = 0; printf("    even untouchables <= 10^5 (parity lemma, exact): ");
         for (u32 v = 2; v <= V; v += 2) if (cnt[v] == 0) { unt++; if (unt <= 12) printf("%u ", v); }
         printf("... count %d (A057978: 1 untouchable even below 10 is 2; the odd 5 is not in this even table)\n", unt);
     }
+    if (argc > 1) return 0;
     // ---- (b) the fifth perfect number ----
     {
         const u64 N = 33550336ULL; const u32 M = (u32)(2 * N - 2);

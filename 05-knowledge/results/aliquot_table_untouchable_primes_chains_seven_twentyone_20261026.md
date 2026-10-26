@@ -50,6 +50,7 @@ Predictions were written into HYP-9415 and this note before the C++ output was r
 3. abc hits `c <= 10^5`: odd-perfect-power share predicted in `[0.65, 0.85]`, **observed 0.7709 (inside)**; power-of-two even term predicted in `[0.30, 0.50]`, **observed 0.2840 (outside: the share falls from 0.40 at `10^4` to 0.28 at `10^5`)**; `a = 1` share predicted in `[0.15, 0.30]`, **observed 0.1504 (inside, at the edge)**. One of the three abc ranges failed; HYP-9415 records it and the replacement prediction for `10^6`.
 
 Control: the even untouchables below `10^5` found by the same table number 13,862, which with the odd 5 gives 13,863 = A057978(5).
+4. The `10^6` twin test, pre-registered in HYP-9415 (1) at checkpoint 41713d3aa2 before the run: exactly-two share in `(10^4, 10^6]` predicted `[0.42, 0.52]`, **observed 0.4427** (0.4457 for all twin values below `10^6`), mean 2.943, maximum 13 ([`_v1e6.out`](../../04-computation/experiments/aliquot_sources_preregistered_20261026_v1e6.out), 0.6 s). Control: 150,231 even untouchables below `10^6`, with 5 giving 150,232 = A057978(6).
 
 ## 5. Typing summary
 
@@ -79,4 +80,5 @@ Pending at filing; the independent audit and its outcome are recorded below when
 ```
 python3 04-computation/experiments/aliquot_chains_abc_20261026.py > 04-computation/experiments/aliquot_chains_abc_20261026.out
 g++ -O2 -std=c++17 -o aliquot_sources_pre 04-computation/experiments/aliquot_sources_preregistered_20261026.cpp && ./aliquot_sources_pre > 04-computation/experiments/aliquot_sources_preregistered_20261026.out
+./aliquot_sources_pre 1000000 > 04-computation/experiments/aliquot_sources_preregistered_20261026_v1e6.out   # part (a) alone at the bound 10^6
 ```
