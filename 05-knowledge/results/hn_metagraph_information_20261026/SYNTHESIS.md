@@ -157,6 +157,14 @@ to allow finitely eight rational nodes whose resolution lifts can fail.
 Normalization, rational versus geometric isomorphism, and residual torsors
 remain distinct. These arithmetic statements do not supply colouring gadgets.
 
+The incoming [descent continuation](../normseven_descent_moments_20261026/RESOLVED_FIBRES.md)
+was also merged and read. It separates the residue-field lift from the tangent
+conic: with residue field Q(sqrt(13)), conics A²+B²=2C² and A²+B²=3C² give
+minimum point-field degrees two and four although their good-prime counts
+agree. Its own audit is internal proof review plus independent computation,
+not a second agent proof audit. This gives an additional arithmetic example
+of information lost by counts; no map to plane colouring is inferred.
+
 The next six-colour experiment has a precise acceptance condition: choose
 fragments with a retained palette boundary large enough to pass the symmetry
 gate, compute their full unprescribed extension relations, realize all edges

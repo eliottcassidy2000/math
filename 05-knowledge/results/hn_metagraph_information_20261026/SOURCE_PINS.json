@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-26",
+  "initial_head": "983768efde84",
+  "integrated_commits": [
+    "2daf5e00afdcd964622f2270c4200b4fd71c2ad5",
+    "830271623edf30b565a7a02b6b414cd801e65597",
+    "a3b68054875a7b31192cb6972876d8b148ed14a3"
+  ],
+  "local_sources": [
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/receipt.json",
+      "sha256": "d1466e13889376f02461cfe81395ee73ef783000cfddefe47eaabdab64c9f515"
+    },
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/fano_eight/RESULT.md",
+      "sha256": "1ddae6b29dc28e3fac0383269ffb69837522d8bcf0e86587ef32fa29f34e1665"
+    },
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/RESULT.md",
+      "sha256": "06c6837e844acfdcb01b43f487206a2aaeadd9ae26ffcc4ad89d253a6778616d"
+    },
+    {
+      "path": "05-knowledge/results/session62_agent_theme_bridges_20261025/palettes/RESULT.md",
+      "sha256": "cb1d3a5d9b599d623e63aeea7412a3ad184470f8ebf7f20c48a99e1580e87211"
+    },
+    {
+      "path": "05-knowledge/results/weighted_core_transport_20261020/core_count.md",
+      "sha256": "94c06341010fc4e762c7cd912a071c6f433155d9bd20259ce5de23ea9b3287a9"
+    },
+    {
+      "path": "05-knowledge/results/weighted_core_transport_20261020/inheritance.md",
+      "sha256": "a8e619362b9e9e055a62dfe0bd1a9b1c4a26566d3d57da1fbed6d6b0adc50bb2"
+    },
+    {
+      "path": "05-knowledge/results/ports_owners_f1_20261025/anchor.md",
+      "sha256": "4019c9d50d2148b8701f318712f8d6577a044122576199c314b035db6ac5b93b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4463-homogeneous-tournament-contacts-and-pinned-scale-floor.md",
+      "sha256": "5753f31aaf9bc6e26c5dd9aa95bc8e0ffe87f5a55382ddf6e096bb288367e1b5"
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/reverse.py",
+      "sha256": "072667270929660d407961f127f89b7ac2d97825d900a07112af8acc11cf70bf"
+    },
+    {
+      "path": "04-computation/b000568_v2.txt",
+      "sha256": "e34a6149c5d2f8a8e4ee86699a41d0e7083eb008ee75024b0a415c5c363713fe"
+    },
+    {
+      "path": "01-canon/theorems/THM-076-walsh-ocf-factorization.md",
+      "sha256": "32843efbeb0eaf35a62a711e0c979287e26f458f6e16e6d805943620f4e3bff6"
+    },
+    {
+      "path": "01-canon/theorems/THM-071-walsh-fourier-diagonalization.md",
+      "sha256": "efe4b791dbe4d451bd806318b4040de80e41986d9fef66078a504e4ce0aff534"
+    },
+    {
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/lattice/METRIC_CURL_RECOVERY.md",
+      "sha256": "fab727785c18911d2cc3f14570acd16f92c9824990e6b964f9a336f00eff6aff"
+    },
+    {
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/root/CURL_REALIZABILITY.md",
+      "sha256": "e7a26a292cfaf8e4cb6c0eb015e35f0f6ebbba52477237e4664543576eaf4780"
+    },
+    {
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/root/UNLABELLED_CURL_NECKLACES.md",
+      "sha256": "f97dd7bf36914bfdbb8ee2443ee6d037b775ae4be88d9809b169a6ee8dc0eb57"
+    },
+    {
+      "path": "05-knowledge/results/normseven_arithmetic_f1_20261026/README.md",
+      "sha256": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2"
+    },
+    {
+      "path": "05-knowledge/results/normseven_descent_moments_20261026/RESOLVED_FIBRES.md",
+      "sha256": "bed3077279fc2ddb765d39147fe0bfca8d6321d005a0e1f5e134470efee72a32"
+    },
+    {
+      "path": "07-reflections/information-geometry-of-tournaments.md",
+      "sha256": "5824b3da2dca62e1d99fc92b8db187706c3584c11afc241a0930eee55841cd5c"
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://oeis.org/A000568",
+      "accessed": "2026-10-26",
+      "scope": "Definition of unlabelled tournament count, small exact values, classical Davis odd-partition formula; no novelty claim."
+    },
+    {
+      "url": "https://oeis.org/A000568/b000568.txt",
+      "accessed": "2026-10-26",
+      "scope": "External published values through76; repository reference extends through128 and is separately pinned."
+    }
+  ]
+}

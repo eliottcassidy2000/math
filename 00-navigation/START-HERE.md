@@ -105,7 +105,7 @@ python3 agents/start_session.py --topic "<target statement or object>"
 | LRC literature | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#lonely-runner-conjecture) | [Techniques](LRC-TECHNIQUE-INDEX.md), source paper |
 | NC2 / GMC | [Frontier](CURRENT-FRONTIER.md#nc2-and-gaussian-moments) | THM-2022/2101/2111/3365, formal interfaces; FC(3) open |
 | Jacobian / Dixmier / Poisson | [Frontier](CURRENT-FRONTIER.md#other-active-portfolio) | [Core papers](../05-knowledge/reference/CORE-PAPERS.md#jacobian-dixmier-and-poisson), THM-1300/2063/2071/2102/2118/2202/3279/3289/3367 |
-| Tournaments | [Frontier](CURRENT-FRONTIER.md#tournaments) | [Invariant atlas](TOURNAMENT-INVARIANT-ZOO-ATLAS-klein-S399.md), [Zoo](THE-ZOO.md) with its freshness banner |
+| Tournaments | [Frontier](CURRENT-FRONTIER.md#tournaments) | [HN/A000568, invariant atlas and Zoo](HN.md) |
 | Integer sequences / additive bases | [Frontier](CURRENT-FRONTIER.md#integer-sequences) | THM-2000/2005/3359, THM-4026--4028/HYP-1953; keep support, local data, height, and carry distinct |
 | Pythagorean/Pell/power sums | [THM-3357](../01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md) | THM-3333--3336/3339/3341/3345--3347/3353/3356/3358/3370/3375/3376; retain content, branch order, ancestry, chamber, consumers |
 | ABC / IUT | [`CURRENT-FRONTIER.md#abc-iut`](CURRENT-FRONTIER.md#abc-iut) | [`CORE-PAPERS-ABC-IUT.md`](../05-knowledge/reference/CORE-PAPERS-ABC-IUT.md), THM-3833 |
