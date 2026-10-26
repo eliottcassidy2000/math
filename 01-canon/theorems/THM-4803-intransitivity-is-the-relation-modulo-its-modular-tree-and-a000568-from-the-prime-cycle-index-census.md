@@ -1,15 +1,15 @@
 ---
 id: THM-4803
-title: "Intransitivity is the relation modulo its modular tree: the cyclic-triple hypergraph C3(T) of a tournament determines T up to exactly N(T) = 2^p * prod(k_N!) labelled choices (dualize each of the p prime nodes, permute the k_N children of each linear node), so 2 <= N(T) <= n! with the primes at 2 and the transitive tournament at n!; the strong components are the connected components of C3(T); H, |Aut| and the modular tree are C3-invariants while the scores are not; the number of intransitivity structures is c(n) = 1,1,2,3,9,32,247,3328,93612,4774417 (unlabelled) and 1,1,2,11,208,8563,680426,101747483,28904318404,15824793243139 (labelled), obeying a species equation over the prime quotients with their automorphism-plus-anti-automorphism cycle indices; A000568 through n = 10 is recovered from the prime cycle-index census (23 types through n = 9; 7,906,161 primes at n = 10), extending A280772 by 136655, 7906161 and showing A003505 erroneous; the intransitivity observable loses E[log2 N] = 1.22 bits at n = 10 and one bit in the limit"
+title: "Cyclic-triple realization fibres and prime-cycle-index census; corrected: path-cover counts survive, automorphism order first fails at twelve"
 status: >
-  CITED + PROVED + FINITE-EXACT (klein, 2026-10-26; not independently audited). The fibre description and formula are
+  CITED + PROVED + FINITE-EXACT (klein, 2026-10-26; original census not independently re-audited here). CORRECTED 2026-10-26: the all-order Aut-order and strong-component-isotype invariance claims are REFUTED; use the audited sharp-4p repair linked below. The fibre description and formula are
   the published theorems of Boussaïri–Ille–Lopez–Thomassé (Discrete Math. 277 (2004) 29–43: a prime tournament is
   determined up to duality by its 3-cycles) and Boussaïri–Chergui–Ille–Zaidi (arXiv:1805.04607, Corollary 57: the number
   of realizations of a realizable 3-uniform hypergraph is 2^{#prime nodes} times the product of the factorials of the
   arities of the linear nodes); CITED, and VERIFIED-EXACT here on every isomorphism class for n <= 7 by exhaustive
   enumeration of the same-cyclic-triples tournaments (c3class.c, 0 mismatches on 530 classes) and through the exact
   counts for n <= 10. PROVED here (elementary, in the source note): the easy direction, the extremes 2 and n!, Lemma C
-  (strong components = hypergraph components), the C3-invariance of H and |Aut|, and E[log2 N(T)] -> 1 under the
+  (strong components = hypergraph components), the C3-invariance of H (strengthened to the full path-cover profile in the correction), and E[log2 N(T)] -> 1 under the
   uniform labelled law. FINITE-EXACT: the counts c(n), c_s(n), l(n), the fibre spectra, tree-shape tables, c3 level
   widths (n = 9, 10), Slater layers (n = 8, 9), |Aut| strata (n = 10), the prime census (A280772 a(9), a(10)), each by
   two routes (nauty canonical forms of the hypergraphs versus Pólya substitution over the prime cycle-index census)
@@ -35,6 +35,15 @@ related:
 
 # THM-4803 — Intransitivity is the relation modulo its modular tree
 
+> **CORRECTION (2026-10-26).** The original automorphism-order claim is false:
+> `C3[C3→1,C3→1,C3→1]` and `C3[C3→1,C3→1,1→C3]` have identical labelled
+> cyclic triples and automorphism orders 81 and 27. Twelve is the first possible
+> failure; for each odd prime p the sharp first change of the p-part is 4p.
+> The cited realization theorem and finite census are not retracted. Strong
+> component vertex sets and C3-types survive, not their ordinary isotypes.
+> See the [proof, exact controls, and correction lineage](../../05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md)
+> and [classification framework](../../05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md).
+
 Let `T` be a tournament on `V`, `|V| = n`, and `C3(T)` the 3-uniform hypergraph of its cyclic
 triples (its intransitivity structure). Let `𝒯(T)` be the modular decomposition tree (Gallai):
 linear nodes with `k_N` children (strong components of the node's quotient), prime nodes with a
@@ -45,11 +54,15 @@ prime quotient; `p(T)` = number of prime nodes.
    these moves act freely, so their number is `N(T) = 2^{p(T)} ∏_N k_N!`. For `n >= 3`:
    `2 <= N(T) <= n!`, `N(T) = 2` iff `T` is prime, `N(T) = n!` iff `T` is transitive.
 2. **Lemma C (PROVED).** The connected components of `C3(T)` are the strong components of `T`.
-3. **Invariants (PROVED).** `c3`, the multiset of strong-component types, the modular tree with
-   prime quotients up to duality, the Hamiltonian-path count `H`, and `|Aut(T)|` are functions of
-   `C3(T)`; the score sequence is not. Chirality pairs `(T, T*)` are `C3`-equivalent, which is why
-   every reversal-invariant invariant ties on THM-931's wild pairs. Adding the score function
-   leaves only balanced-prime dualizations undetermined (`1, 2, 5, 14, 53` classes, `n = 3..7`).
+3. **Invariants (PROVED, corrected).** `c3`, the strong-component vertex sets and
+   their C3-types, the common strong-module tree with prime quotients up to
+   duality, and the full ordered path-cover profile (including `H`) are functions
+   of `C3(T)`. Scores and `|Aut(T)|` are not. The latter is invariant through
+   order 11; its p-part is invariant below 4p, sharply for every odd prime p.
+   The exact local formula retains the child-isotype stabilizer inside
+   `Aut(Q)`. Global converse preserves automorphism order, but independent
+   changes in child types can change this stabilizer. The score-function
+   refinement to balanced-prime choices is FINITE-EXACT for `n <= 7` here.
 4. **Counts (FINITE-EXACT, species PROVED).** With `c_s` the strong intransitivity classes,
    `c = MSET_{>=1}(c_s)` and `c_s = X + Σ_{[Q]_± prime/duality} Z_{Aut±(Q)}[c]`; evaluated from the
    prime cycle-index census and matching nauty canonical forms for `n <= 10`:
@@ -70,4 +83,4 @@ prime quotient; `p(T)` = number of prime nodes.
    prime fraction increases; primes need `c3 >= n - 2` (Moon) and attain it for `5 <= n <= 10`.
 
 Proofs, tables and receipts: the source packet. The hard direction of (1) is cited, not re-proved;
-everything else is proved or exhaustively checked as stated.
+other scopes are as stated, subject to the correction above. The original finite census is preserved; the new proof and controls audit the repaired structural claims.

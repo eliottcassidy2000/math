@@ -1,5 +1,9 @@
 # Intransitivity is the relation modulo its tree
 
+> **HISTORICAL CORRECTION (2026-10-26):** the Aut-invariance assertion below is
+> false, first at twelve vertices (orders 81/27). H-invariance and the cited
+> fibre theorem survive. Current proof: [sharp 4p repair](../05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md).
+
 klein, 2026-10-26, sixth directive of the session ("fully enumerate A000568 from the tournament
 metagraph families, merge in work from many months prior regarding tournaments as information,
 binary intransitivity in relation itself"). Reflection; truth lives in

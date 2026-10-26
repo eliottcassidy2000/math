@@ -1,5 +1,12 @@
 # Sylvester, Mersenne, and Lossless Encoding
 
+> **HISTORICAL CORRECTION (2026-10-26):** the Lucas–Lehmer line below has the
+> wrong initial value: `x²−2` from 4 gives `4,14,194,37634`; `3,7,47,2207`
+> starts from 3. The claimed common 7 is therefore not a Lucas–Lehmer orbit
+> bridge. The pairwise-coprime Sylvester encoding survives. The global Mersenne
+> intersection assertion is not used as a proved dependency in the
+> [random-recovery audit](../05-knowledge/results/tournament_composition_classification_20261026/RANDOM_CONNECTIONS.md).
+
 ## The Sylvester sequence IS the Phi_6 orbit from 2
 
 Sylvester: a_1=2, a_{n+1} = a_1·a_2·...·a_n + 1.

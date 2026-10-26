@@ -41,21 +41,20 @@ and `1.22` bits on average at `n = 10` (tending to 1).
   even orders because `H(T) = H(T*)`): the even-order statement is the Fourier shadow of
   `C3`-invariance restricted to the global dualization; `C3`-invariance is stronger (it also
   includes the local dualizations and the reorderings).
-- THM-1420 (no `F₂`-linear invariants; every class splits into two `A_n`-classes by inversion
-  parity, "the chirality that survives"): the one bit the intransitivity structure always drops is
-  this chirality. For a prime `T`, `C3(T)` determines the unordered pair `{T, T*}` and nothing
-  more; the `A_n`-split and the `C3`-fibre are the same bit seen from the two sides.
-- THM-931 / METAGRAPH-ATLAS §8 (the 8 wild invisible pairs at `n = 9` are chirality pairs on which
-  every reversal-invariant invariant ties): explained — those pairs are `C3`-classes of size 2, so
-  `c3, c4, c5, |Aut|, H`, the spectral decks and every other `C3`-invariant tie by Theorem I.
-  Prediction for the open `n = 10` wild hunt: wild pairs can only be `C3`-equivalent classes, and
-  among primes those are exactly the 3,950,318 chirality pairs `(T, T*)` (`(7906161 - 5525)/2`).
-- THM-4739 (H): first-order information = scores (the gradient part of the arc flow), second-order
-  = the cyclic-triangle 2-form (curl). HYP-9351(a) asks whether the full 2-form forces the
-  metagraph ports. At the level of the relation itself the answer is exact: the full 2-form as a
-  set of triangles determines `T` up to the tree moves, and together with the first-order data
-  (score function) up to balanced-prime dualizations. Whether this transfers to the port
-  transportation problem is HYP-9351's question and is not settled here.
+- THM-1420 (the split into two `A_n`-orbits): this is **not** the same bit as
+  the prime labelled C3-fibre `{T,T*}`. In the regular five-tournament,
+  `i→−i` is the even anti-automorphism `(1 4)(2 3)`, so the two converse
+  lifts lie in the same A5-orbit. See the [correction F5](../tournament_composition_classification_20261026/fibre/RESULT.md).
+- THM-931 / METAGRAPH-ATLAS §8: global converse pairs agree on every
+  converse-invariant observable, including H and automorphism order. The latter
+  is not invariant under all local C3 moves: the sharp first failure has orders
+  81/27 at n=12. The earlier assertion that wild pairs must be C3-equivalent
+  is unsupported by this implication and is not a necessary-condition theorem.
+- THM-4739 / HYP-9351: the **support** of cyclic triples differs from an
+  oriented triangle 2-form. The C3-support fibre theorem must not be substituted
+  for a theorem about signed curl. The score-function refinement is exact only
+  in the stated finite range here. For labelled full responses and the need to
+  align labels, use the [current information result](../hn_metagraph_information_20261026/information/RESULT.md).
 - HYP-3602 and `relations-not-things.md` ("order ⊕ intransitivity = cut ⊕ cycle"; 3-cycles
   generate all intransitivity, Moon): Theorem I is the quantitative form — the cycle part
   determines the relation up to the tree, and the cut part (scores) fixes the rest except at

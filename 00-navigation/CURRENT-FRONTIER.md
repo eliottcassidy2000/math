@@ -198,7 +198,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ### Reliable structural toolkit
 - [Sessions](START-HERE.md); [S67](S67.md); [HN/A000568](HN.md): boundary gates, census through9, full responses. [Charts/twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.
-- [Ranks/charts](../05-knowledge/results/rank_geometry_metagraph_20261026/README.md): observers, planar frames, A000568 through8; root27, smaller recurrence, connectivity OPEN. [Ports](../05-knowledge/results/lca_ports_reverse_20261025/README.md).
+- [Classification](../05-knowledge/results/tournament_composition_classification_20261026/README.md): THM-4803 repair, 4p onset, Sylow towers. [Charts](../05-knowledge/results/rank_geometry_metagraph_20261026/README.md), [ports](../05-knowledge/results/lca_ports_reverse_20261025/README.md): connectivity OPEN.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.

@@ -1,12 +1,15 @@
 # A000568 from its families; intransitivity in the relation itself
 
+> **CORRECTION (2026-10-26):** `|Aut|` is not an all-order C3-invariant. The first
+> failure is the 12-vertex 81/27 pair. Use the [sharp 4p repair and composition packet](../tournament_composition_classification_20261026/README.md); the cited fibre theorem, H-invariance and finite census survive.
+
 2026-10-26, klein (worktree `codex/session-tournament-twist-unify`, sixth directive). The
 directive: "fully enumerate A000568 from the tournament metagraph families, merge in work from
 many months prior regarding tournaments as information, binary intransitivity in relation itself."
 
 | Note | Content | Status |
 |---|---|---|
-| [INTRANSITIVITY.md](INTRANSITIVITY.md) | Theorem I: the cyclic-triple hypergraph `C3(T)` determines the relation up to `N(T) = 2^{p} ∏ k_N!` labelled choices (tree moves); Lemma C (strong components = hypergraph components, elementary proof); `C3`-invariants (`H`, `|Aut|`, tree); the counts `c(n)`, `c_s(n)`, `ℓ(n)` and their species equation with `Aut±`; the Hartley-fibre reading and `E[log₂ N] -> 1` | Theorem I: CITED (BILT 2004; BCIZ 2018 Cor. 57) + VERIFIED-EXACT `n <= 7` (all classes) + counts exact `n <= 10`; Lemma C, the easy direction, the extremes, the invariants and the limit: PROVED; counts: FINITE-EXACT |
+| [INTRANSITIVITY.md](INTRANSITIVITY.md) | Theorem I: the cyclic-triple hypergraph `C3(T)` determines the relation up to `N(T) = 2^{p} ∏ k_N!` labelled choices (tree moves); Lemma C (strong components = hypergraph components, elementary proof); `C3`-invariants (`H`, tree; Aut claim retracted); the counts `c(n)`, `c_s(n)`, `ℓ(n)` and their species equation with `Aut±`; the Hartley-fibre reading and `E[log₂ N] -> 1` | Theorem I: CITED (BILT 2004; BCIZ 2018 Cor. 57) + VERIFIED-EXACT `n <= 7` (all classes) + counts exact `n <= 10`; Lemma C, the easy direction, the extremes, the invariants and the limit: PROVED; counts: FINITE-EXACT |
 | [FAMILIES.md](FAMILIES.md) | A000568 through `n = 10` as exact sums over: root type / strong components, the prime cycle-index census (species equation made effective), tree shapes, intransitivity fibres, `c3` levels, Slater layers, symmetry strata; A280772 extended (136655, 7906161), A003505 shown erroneous; the minimum-intransitivity chain family (`2^{n-4}` strong, `F_{n-4}` prime; HYP-9413) | FINITE-EXACT (nauty census, two independent routes agree) |
 | [INFORMATION.md](INFORMATION.md) | File-by-file merge with the repo's information work (MISTAKE-231 frame, S307, S20y, THM-1420, THM-931, THM-4739/HYP-9351, HYP-3602, THM-1805, THM-559, THM-462, session56/58, THM-1960) | synthesis; each claim points at its proved source |
 | [CONCEPT_BOARD.md](CONCEPT_BOARD.md) | anchor / niche / wildcard / hostiles | — |
@@ -22,7 +25,7 @@ Corollary 57) and the prime uniqueness-up-to-duality (BILT 2004); Moon's `c3 >= 
 census to `n = 6` (THM-1960); level widths to `n = 8`, Slater layers to `n = 7`, `|Aut|`
 histograms to `n = 9`, strong and self-converse counts to `n = 10` (all re-derived here and
 agreeing). New: the exact fibre reading as information, Lemma C's proof, the `C3`-invariance of
-`H` and `|Aut|`, the counts of intransitivity structures and their species equation with `Aut±`,
+`H` (Aut claim retracted), the counts of intransitivity structures and their species equation with `Aut±`,
 the prime cycle-index census, the level/fibre/shape tables at `n = 9, 10`, and the OEIS erratum.
 
 ## Reproduction

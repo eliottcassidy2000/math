@@ -1,0 +1,25 @@
+{
+  "sylvester_terms": [
+    2,
+    3,
+    7,
+    43,
+    1807,
+    3263443,
+    10650056950807,
+    113423713055421844361000443
+  ],
+  "lucas_lehmer_from_4": [
+    4,
+    14,
+    194,
+    37634
+  ],
+  "subset_orbits_C25": 1342184,
+  "subset_orbits_C5_squared": 1342208,
+  "observer_fibre_mass": "8/81",
+  "independent_order5_hamilton_counts": [
+    11,
+    13
+  ]
+}

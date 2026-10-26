@@ -1,5 +1,11 @@
 # Intransitivity is the relation modulo its modular tree
 
+> **CORRECTION (2026-10-26).** Section 3's original all-order `|Aut|` and
+> strong-component-isotype claims are retracted. The sharp first counterexample
+> has 12 vertices and orders 81/27. The repair retains the child-colour stabilizer;
+> the cited fibre theorem, H-invariance and finite counts survive. See
+> [the sharp 4p theorem and independent controls](../tournament_composition_classification_20261026/fibre/RESULT.md).
+
 klein, 2026-10-26. The object is a tournament `T` on a finite set `V`, i.e. a complete
 antisymmetric binary relation, and its **intransitivity structure**: the 3-uniform hypergraph
 `C3(T)` whose edges are the cyclic triples `{a,b,c}` with `a -> b -> c -> a` (the literature's
@@ -94,33 +100,39 @@ proof above is elementary and self-contained.) Verified on every class for `n <=
 
 ## 3. Corollary (what the intransitivity structure determines, and what it does not)
 
-The following are functions of `C3(T)`: `c3 = |E(C3(T))|`; the multiset of isomorphism types of
-the strong components (Lemma C); the whole modular tree with every prime quotient up to duality;
-`H(T)`, the number of Hamiltonian paths; `|Aut(T)|`. The score sequence is **not** (reordering
-strong components changes it).
+The following are functions of `C3(T)`: `c3 = |E(C3(T))|`; the strong-component
+vertex sets and their C3-isomorphism types; the common strong-module tree with
+prime quotients up to duality; and the entire ordered path-cover profile,
+including `H(T)`. The score sequence and automorphism order are **not**.
 
-*Proofs.* `H`: under (a), `H = ∏ H(C_i)` for any order of the strong components (every
-Hamiltonian path traverses them in the transitive order; THM-1860). Under (b), with children
-`T_i`, `H(Q*[T_i]) = H((Q[T_i*])*) = H(Q[T_i*])`, and `H(Q[T_i*]) = H(Q[T_i])` because a
-Hamiltonian path of a substitution is an ordered path cover of each block (the maximal
-sub-paths inside the block, in visiting order) together with a block-visiting pattern that depends
-only on `Q` and the numbers of pieces, and reversing each piece is a bijection between the ordered
-path covers of `T_i` and of `T_i*` with the same number of pieces (THM-3121's contraction law in
-the form needed here). `|Aut|`: under (a), `Aut(T) = ∏ Aut(C_i)` for any order; under (b),
-`|Aut(Q[T_i])| = Σ_{σ ∈ Aut(Q), T_{σ(i)} ≅ T_i} ∏_i |Aut(T_i)|` and `Aut(Q*) = Aut(Q)`.
-The tree: a realizable hypergraph and its realizations share the strong modules (cited), the
-linear nodes are the hypergraph components (Lemma C), and prime quotients are determined up to
-duality (cited). ∎
+**H-survivor, with the needed induction strength.** At a linear node, reorder
+within each cover path its runs through the children into the new child order.
+At a prime node, reverse the sequence of child runs while dualizing the
+quotient, keeping the internal direction of each run. Both are bijections on
+ordered path covers. A move in an internal module lifts to the whole tournament
+by replacing its runs in their existing outer positions; uniform adjacency
+outside the module preserves entry and exit arcs. Thus all path-cover counts
+are C3-invariant. Details and independent exact profile controls are in the
+[repair, F4](../tournament_composition_classification_20261026/fibre/RESULT.md).
 
-Finite confirmation: grouping the `n <= 9` classes by the nauty canonical form of `C3(T)`
-(`scripts/tourn_enum.c --c3canon`), `H`, `|Aut|`, `c3` and the strong-component size multiset
-are constant on every group (`receipts/analyze-normal.txt`, 0 violations).
+**Failed implication and repair.** At a canonical prime node,
+`|Aut(Q[T_i])| = |{sigma in Aut(Q): T_sigma(i) ≅ T_i for all i}| product_i |Aut(T_i)|`.
+While `Aut(Q*)=Aut(Q)`, a move *inside* one child can change its oriented
+isomorphism type and hence this subgroup. For `A=C3→1`, compare `C3[A,A,A]`
+and `C3[A,A,A*]`: orders 81 and 27, same 67 labelled cyclic triples, and
+`H=462915`. This is the first failure; the p-part is invariant below 4p and
+can first change at 4p for every odd prime p (repair, F2–F3). Strong-component
+isotypes are not invariant either: these two examples are themselves strong.
 
-*Consequence for the metagraph atlas.* A chirality pair `(T, T*)` is `C3`-equivalent, so every
-`C3`-invariant ties on it automatically — `c3, c4, c5, |Aut|, H`, the strong profile, and every
-reversal-invariant spectral deck. This is the mechanism behind THM-931's "8 wild pairs are
-chirality pairs" at `n = 9`: among prime, non-self-converse tournaments the `C3`-class is exactly
-`{T, T*}`, and only observables that see the dualization bit can split it.
+The original finite confirmation through order 9 was correct, but its range
+cannot see the first failure. Its recorded H, Aut and component-size tests and
+counts are preserved. At the class level the valid orbit mass is
+`sum_[T] 1/|Aut(T)| = |R(C3)|/|Aut(C3)|`; it does not require equal stabilizers.
+
+For a global converse pair `(T,T*)`, automorphism order and all other
+converse-invariant quantities agree. This explains those ties on THM-931's
+wild pairs; it does not make every such quantity invariant under all local
+C3-fibre moves, nor prove that every wild pair has equal C3 structure.
 
 *Scores plus intransitivity.* Adding the score **function** `V -> N` to `C3(T)` kills every
 reordering move (a reordering shifts the scores of a whole block by a positive amount) but not a
@@ -176,8 +188,8 @@ fails to carry about the relation is
 
     H₀(T | C3) = log₂ N(T) = p(T) + Σ_N log₂(k_N!)  bits,  1 <= H₀ <= log₂ n!,
 
-minimal exactly on the prime tournaments (one bit: the chirality, THM-1420's `A_n` split seen
-from the intransitivity side) and maximal exactly on the transitive relation (the only one whose
+minimal exactly on the prime tournaments (one labelled converse choice, distinct
+from THM-1420's `A_n` orbit split) and maximal exactly on the transitive relation (the only one whose
 intransitivity structure says nothing beyond "a linear order"). Under the uniform law on `U_n`:
 
 | n | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |

@@ -1,0 +1,128 @@
+{
+  "commit": "fc3768ac5fcd",
+  "seed": 812720261026,
+  "population_size": 12883,
+  "population_sha256": "362beafe06c6997de8ab6f177f60b2ad2f2c94e12704da7ec7281e3dbb4a0541",
+  "sample": [
+    {
+      "path": "05-knowledge/results/session35_dimensions_dualities_20261023/lie/SPLIT_REAL_COROLLARY.md",
+      "title": "# Split real equality: the minimal ambient algebra is E8(8)",
+      "sha256": "dfe960e6eb48b15f2a72fb6749a0245d404618be8ca6113ff99187680b297438"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_gluing_20261023/README.md",
+      "title": "# Compatible odd-cell attachments, zero-slot Fibonacci rows, and joint charts",
+      "sha256": "0ff5e67ba3638a926812e0585411999ee385ad812413e1d16cfd1896f24b3135"
+    },
+    {
+      "path": "01-canon/theorems/THM-2456-two-root-replica-uniform-offset-boundary.md",
+      "title": "title: \"Two-root replica uniform-offset boundary\"",
+      "sha256": "99124dd5b5698b08c5b45246f40ab251436baa7ff7831a82e17f9b25a4714e5e"
+    },
+    {
+      "path": "01-canon/theorems/THM-4044-sixty-clock-hasse-alias-and-planar-jc-boundary-firewall.md",
+      "title": "title: \"Sixty-clock Hasse alias and planar-JC boundary firewall\"",
+      "sha256": "cb89e0bb8e3cca609a5702c5d68636c7464e6b6989272c17d6f0d1e333eccad8"
+    },
+    {
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-root/CONNECTIONS.md",
+      "title": "# Session66: what actually transports across the five carriers",
+      "sha256": "cb572b19b699f706b9f7c1925b5fb8844d841c2688e83c0bd498c770168d0d37"
+    },
+    {
+      "path": "01-canon/theorems/THM-3496-marked-graph-kummer-degree-square-and-finite-coefficient-frobenius-flux-extinction.md",
+      "title": "title: \"Marked graph--Kummer degree square and finite-coefficient Frobenius flux extinction\"",
+      "sha256": "c1bb09507fde734748de579b69972891a7aac5ea324a27cee5dd9c54fd6bf015"
+    },
+    {
+      "path": "07-reflections/the-even-graph-is-the-tournaments-cycle-half.md",
+      "title": "# The Even Graph Is the Tournament's Cycle Half — One Cut⊕Cycle Object Through Every Lens",
+      "sha256": "50eacc5d04bf72f3f02044a9e118c615f36aa82f50d21cf0b931273df4d40367"
+    },
+    {
+      "path": "05-knowledge/results/overnight12_20260906_no3line_count_restart_audit.md",
+      "title": "# Independent audit of saturated-board counting and uniform-column restarts",
+      "sha256": "810919ce4132c4bfe0b02c2c789e0e018fc72205948da78c53932c71e5f4a0ce"
+    },
+    {
+      "path": "07-reflections/jc-level-three-global-norm-independent-audit-codex-20260816.md",
+      "title": "# Independent audit of the fixed-map level-three norm divisor",
+      "sha256": "b382799868e37feb5a3a1898bc4d9e23c02e6a6229a46f4525e8240df81a620d"
+    },
+    {
+      "path": "05-knowledge/results/session58_hourglass_complement_geometry_20261025/audit-projective-support/ADDENDUM_AUDIT.md",
+      "title": "# Independent audit: uniform-exponent addendum",
+      "sha256": "0cd091868abc8838041b3e4c870ccbb4a3bcfa6d6ef74bf853c9a3598982c4da"
+    },
+    {
+      "path": "07-reflections/blindspot-triads.md",
+      "title": "# Blindspot Triads",
+      "sha256": "4862b79e06a5a85094182f34771ae608858a40fed617651743086dae7583b248"
+    },
+    {
+      "path": "01-canon/theorems/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+      "title": "title: \"Modular cancellation depth of odd regular gap actions, and the fifty-vertex realization: for a regular action of a p-group of odd order p^e the subset-orbit polynomial P_A(t) reduced mod p vanishes at t=-1 to order p^e - p^J + p^(J-1), J the largest j with p not dividing the number c_j of cyclic subgroups of order p^j (cyclic: p^(e-1); abelian non-cyclic: p^e - p + 1); for a prime l not dividing |A| the order is min{|A|/o : l does not divide e_o}; in general the order mod l is at least d = min cycle count with equality iff l does not divide the leading coefficient kappa, and a candidate-order lower bound holds for every regular action. The tournament Cay(Z5^2,S)[TT2] on 50 vertices has Aut = Z5^2 regular on its 25 gaps, one invariant toggle, depth 5 over Q (kappa = 3000), 21 mod 5, 25 mod 2 and mod 3; its cyclic twin Circ(Z25,{1..12})[TT2] has depths 1, 5, 25, 1.\"",
+      "sha256": "aaf43790cf857d7d400bfe87f0438c5e617887fb953788b4d1ce7c72037aa0ab"
+    },
+    {
+      "path": "07-reflections/seven-dormant-threads-into-the-covering-min-core-idea-generation.md",
+      "title": "# Seven dormant threads into the covering-min core — an idea-generation pass",
+      "sha256": "f9321e3a889fb607e88ffccb0192a2f16d4f42e7c442dcc8f7d2e3d93092b7f8"
+    },
+    {
+      "path": "07-reflections/sylvester-mersenne-lossless.md",
+      "title": "# Sylvester, Mersenne, and Lossless Encoding",
+      "sha256": "1c04cf204ec7d58a8f277a064369c6f0ee92171a471c8812e92d3a517d562461"
+    },
+    {
+      "path": "05-knowledge/results/collatz_survivor_packets_20261015e.md",
+      "title": "# Native survivor packets and a smaller residual invoice",
+      "sha256": "1c18e211acd1daa6419d915a1ff8ba9f76b99f985ca727dbdd21fb682fecf367"
+    },
+    {
+      "path": "05-knowledge/results/continuing14_20260908_logarithmic_linear_audit.md",
+      "title": "# Independent referee: no source-linear logarithmic witness for a W2 submersion",
+      "sha256": "e825217da4416beab9c9a45ec44b5efe5bddbc2661a7983dd5efb0a207be0983"
+    },
+    {
+      "path": "01-canon/theorems/THM-4082-mahler-renormalized-linear-chart-and-exact-bit-defect.md",
+      "title": "title: \"Mahler renormalized linear chart and exact bit defect\"",
+      "sha256": "486d81d62740cceb057aa02187c0ac709a39312751f91b460190ed02ecc964db"
+    },
+    {
+      "path": "07-reflections/connections-that-reformulate-not-reduce-macmini-S24.md",
+      "title": "# Connections that reformulate, not reduce — an honest map",
+      "sha256": "b52fdbe6332577df479078e9a5272d9223626fa0a144f567731d5fbb01fc9bcc"
+    },
+    {
+      "path": "01-canon/theorems/THM-1765-gmc2-two-straddle-resultant-tower.md",
+      "title": "title: \"THE CONCRETE CROSS-SHELL HANDOFF: the two-straddle case (klein's open HYP-8470 residual) CLOSES, and the bottom-up descent is an EXPLICIT RESULTANT TOWER terminating at a monomial. Extending klein's single-straddle witness P = alpha Z^3 + beta Zb + gamma Z (charges {-1,+1,+3}) to the genuine MULTI-straddle P = alpha Z^3 + gamma Z + beta Zb + delta Zb^3 (charges {-3,-1,+1,+3}, TWO straddling pairs (be,ga) at |h|=1 and (al,de) at |h|=3). At m=2 BOTH straddles appear: E[P^2] = 12 al de + 2 be ga -- so they CAN cancel (6 al de = -be ga), the exact 'cancellation among bottom-shell pairs' klein flagged as the open obstruction. But the moment ideal saturates to 1 against every cross-sign product (be ga, al de, ga de, al be), so NO two-sided nullcone member exists: GMC(2) holds on this two-straddle stratum. THE EXPLICIT BOTTOM-UP RESULTANT TOWER: E[P^4] mod <E[P^2]> = 12(2 al be^3 + 3 be^2 ga^2 + 2 de ga^3); E[P^6] mod <E[P^2],E[P^4]> = -2160 be^3 ga^3 -- a PURE MONOMIAL, forcing be=0 or ga=0, i.e. the one-sided locus. The chain <E[P^2]> subset <E[P^2],E[P^4]> subset <E[P^2],E[P^4],E[P^6]> strictly ascends off one-sided and reaches the unit ideal in THREE steps. The shell-coupling resultant is explicit: Res_ga(E[P^2],E[P^4]) = 192 al (216 al^2 de^4 - 54 al be^3 de^2 - be^6), nonzero off {al=de=0}, which forces the top straddle once the bottom is eliminated. This is the resultant tower klein's cross-shell descent needs, delivered on the first genuine multi-straddle instance\"",
+      "sha256": "526763b93e68293b7c7d270cc50443f2d22f62f19632aa9b5ab9323f80c5c56a"
+    },
+    {
+      "path": "05-knowledge/results/lrc14_dyadic_seventh_rounding_thm4449.md",
+      "title": "# THM-4449 result note: seventh rounding and sharp dyadic owner cuts",
+      "sha256": "a2a1c23c8b06584a2192e78e1e338e9d7dae4966a07f37659533d41791bb9090"
+    },
+    {
+      "path": "05-knowledge/results/shape_ports_20261025/anchors_audit.md",
+      "title": "# Independent audit: the nonzero-defect quartic/sextic exclusion",
+      "sha256": "c04c8ecfa498344209e5538aac798362740196292f124dab78d193b95b2d2a1e"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep08_six_one_one_audit.md",
+      "title": "# Independent audit: the complete (6,1,1) boundary class",
+      "sha256": "3891b68a9ce636485c4205af4cfbe2dd3e3a95b11d1072b031073e10dcd454c7"
+    },
+    {
+      "path": "07-reflections/lrc-r5-nonlinear-common-gauge-endpoint-connection-independent-hostile-audit-codex-20260816.md",
+      "title": "# R5 nonlinear common-gauge endpoint connection: independent hostile audit",
+      "sha256": "7ff3bc4b63fde0896eea90669fd8a7fb77347bf2962fd954e878681bead1ab65"
+    },
+    {
+      "path": "07-reflections/the-moser-lattice-is-the-bridge-ring-s4.md",
+      "title": "# The Moser lattice is the bridge ring — and u(21)=57 was already a theorem",
+      "sha256": "2f653affaca19fed3f7ffc7f4542ee32ae76da91e4431043422bfa6c7bb20d7c"
+    }
+  ]
+}

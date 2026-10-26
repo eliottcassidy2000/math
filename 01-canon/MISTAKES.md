@@ -28,6 +28,49 @@ a historical synthesis or promoting computational evidence.
   so covering-group data alone are insufficient. The [continuation](../05-knowledge/results/orientation_monodromy_rule30_20261026/README.md)
   gives precise maps, an all-size signed subset algebra, and exact controls.
 
+## 2026-10-26 — Cyclic triples lose child colours before they lose path counts
+
+- **Refuted source:** the all-order automorphism-order and strong-component
+  isomorphism-type clauses of
+  [THM-4803](theorems/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md)
+  and its INTRANSITIVITY source. The published C3-realization theorem is not
+  the source of this error and is not retracted.
+- **Minimal witness:** with `A=C3→1`, the strong tournaments `C3[A,A,A]`
+  and `C3[A,A,A*]` have exactly the same 67 labelled cyclic triples but
+  automorphism orders 81 and 27. Twelve is the first possible order, and
+  its bad C3 hypergraph is unique up to isomorphism. All 128 lifts have
+  `H=462915`; their four ordinary classes have orders `81,27,27,81`.
+- **First failed implication:** `Aut(Q*)=Aut(Q)` was applied while silently
+  retaining the equality pattern of the child isomorphism types. A move
+  inside a child changes that pattern. The rotation of the three children
+  survives for AAA and disappears for AAB.
+- **Strongest survivor and repair:** retain the colour stabilizer
+  `Gamma <= Aut(Q)` in the exact sequence with kernel `product Aut(T_i)`.
+  Strong-module sets and C3-types, the cited labelled fibre count, and all
+  ordered path-cover counts survive. For every odd prime p, the p-part of
+  Aut is invariant below 4p and can first change at 4p. Use the action of
+  `Aut(C3)` on lifts and its nonuniform stabilizers for class counting.
+- **Adjacent type correction:** the `A_n` orbit split is not the prime
+  labelled converse bit. On the regular five-tournament, `i→−i` is an even
+  anti-automorphism, so T and T* lie in the same A5-orbit. Signed curl and
+  unoriented cyclic-triple support are also different observables.
+- **New question:** which rooted responses are closed under metagraph
+  composition? One order-four blue loop has half-edges whose singleton
+  extensions give H=11 versus 13; ordinary endpoint classes and degree
+  do not suffice. Proofs, independent audits, exact universes and replay:
+  [classification packet](../05-knowledge/results/tournament_composition_classification_20261026/README.md).
+
+## 2026-10-26 — Randomly recovered Sylvester / Lucas–Lehmer seed mismatch
+
+The historical [Sylvester reflection](../07-reflections/sylvester-mersenne-lossless.md)
+printed `4,7,47,2207` for iteration of `x²−2`. From 4 the exact sequence
+is `4,14,194,37634`; from 3 it is `3,7,47,2207`. The claimed shared 7
+therefore does not establish the proposed orbit bridge. Pairwise coprimality
+of Sylvester terms and injectivity of their exponent code survive. The
+source now has a correction banner; its global Mersenne-intersection claim
+is not used as a dependency. The [recovery contract and integer checks](../05-knowledge/results/tournament_composition_classification_20261026/RANDOM_CONNECTIONS.md)
+keep the useful encoding mechanism separate from the failed analogy.
+
 ## 2026-10-26 — Tournament information: conditional projection is not Fourier truncation
 
 - **Source and failed claims:** the March22
