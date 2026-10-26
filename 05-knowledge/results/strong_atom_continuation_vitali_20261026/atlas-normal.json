@@ -1,0 +1,259 @@
+{
+  "all_run_cover_universe": {
+    "max_n": 5,
+    "raw_covers": 3967,
+    "response_states": 2973,
+    "strong_atoms": 9
+  },
+  "first_one_target_response_tau_failure": {
+    "masks": [
+      25,
+      42
+    ],
+    "n": 5,
+    "rooted_source_types": 2
+  },
+  "first_paired_port_guard_failure": {
+    "blue": false,
+    "legal": [
+      false,
+      true
+    ],
+    "masks": [
+      1056,
+      4160
+    ],
+    "n": 7,
+    "permutation": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      4
+    ],
+    "rows": [
+      [
+        2,
+        12,
+        41,
+        17,
+        39,
+        75,
+        31
+      ],
+      [
+        2,
+        20,
+        9,
+        51,
+        37,
+        71,
+        31
+      ]
+    ],
+    "same_both_joint_rooted_endpoints": true
+  },
+  "six_vertex_run_hostile": {
+    "paths": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        0,
+        3,
+        4,
+        1,
+        2,
+        5
+      ]
+    ],
+    "runs": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          5
+        ]
+      ]
+    ],
+    "source": [
+      14,
+      12,
+      56,
+      48,
+      35,
+      3
+    ],
+    "target_H": [
+      41,
+      45
+    ],
+    "targets": [
+      [
+        50,
+        52,
+        9,
+        19,
+        36,
+        12
+      ],
+      [
+        56,
+        37,
+        33,
+        22,
+        6,
+        24
+      ]
+    ]
+  },
+  "universe": [
+    {
+      "blue_strong_classes": 1,
+      "both_rooted_endpoint_cells": 1,
+      "guard_cells": 1,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 1
+      },
+      "max_response_fiber": 1,
+      "n": 1,
+      "prime_classes": 0,
+      "states": 1,
+      "strong_classes": 1,
+      "strong_presentations": 1
+    },
+    {
+      "blue_strong_classes": 0,
+      "both_rooted_endpoint_cells": 1,
+      "guard_cells": 1,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {},
+      "max_response_fiber": 0,
+      "n": 2,
+      "prime_classes": 0,
+      "states": 1,
+      "strong_classes": 0,
+      "strong_presentations": 0
+    },
+    {
+      "blue_strong_classes": 1,
+      "both_rooted_endpoint_cells": 2,
+      "guard_cells": 2,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 1
+      },
+      "max_response_fiber": 1,
+      "n": 3,
+      "prime_classes": 1,
+      "states": 2,
+      "strong_classes": 1,
+      "strong_presentations": 1
+    },
+    {
+      "blue_strong_classes": 1,
+      "both_rooted_endpoint_cells": 8,
+      "guard_cells": 8,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 5
+      },
+      "max_response_fiber": 1,
+      "n": 4,
+      "prime_classes": 0,
+      "states": 8,
+      "strong_classes": 1,
+      "strong_presentations": 5
+    },
+    {
+      "blue_strong_classes": 6,
+      "both_rooted_endpoint_cells": 64,
+      "guard_cells": 64,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 46,
+        "2": 2
+      },
+      "max_response_fiber": 2,
+      "n": 5,
+      "prime_classes": 3,
+      "states": 64,
+      "strong_classes": 6,
+      "strong_presentations": 50
+    },
+    {
+      "blue_strong_classes": 9,
+      "both_rooted_endpoint_cells": 1024,
+      "guard_cells": 1024,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 757,
+        "2": 70,
+        "3": 2
+      },
+      "max_response_fiber": 3,
+      "n": 6,
+      "prime_classes": 15,
+      "states": 1024,
+      "strong_classes": 35,
+      "strong_presentations": 903
+    },
+    {
+      "blue_strong_classes": 79,
+      "both_rooted_endpoint_cells": 32272,
+      "guard_cells": 32768,
+      "guard_injective": true,
+      "joint_response_fiber_hist": {
+        "1": 27253,
+        "2": 1567,
+        "3": 95,
+        "4": 14,
+        "5": 1,
+        "6": 3,
+        "7": 2,
+        "8": 1
+      },
+      "max_response_fiber": 8,
+      "n": 7,
+      "prime_classes": 197,
+      "states": 32768,
+      "strong_classes": 353,
+      "strong_presentations": 30773
+    }
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "ABC_continuation_hostiles": {
+    "after_doubling_aliquot_triples": [
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        7,
+        8,
+        15
+      ]
+    ],
+    "aliquot_odd_cores": [
+      3,
+      1
+    ],
+    "perfect_sources": [
+      6,
+      28
+    ],
+    "same_odd_core": [
+      6,
+      12
+    ]
+  },
+  "ABC_maps": [
+    {
+      "abundancy_num_den": [
+        2,
+        1
+      ],
+      "aliquot_split": [
+        1,
+        1,
+        2
+      ],
+      "inherited_square_later_map": [
+        1,
+        2,
+        3
+      ],
+      "n": 6,
+      "odd_core": 3,
+      "odd_core_split": [
+        1,
+        2,
+        3
+      ],
+      "perfect": true
+    },
+    {
+      "abundancy_num_den": [
+        7,
+        3
+      ],
+      "aliquot_split": [
+        3,
+        4,
+        7
+      ],
+      "inherited_square_later_map": null,
+      "n": 12,
+      "odd_core": 3,
+      "odd_core_split": [
+        1,
+        2,
+        3
+      ],
+      "perfect": false
+    },
+    {
+      "abundancy_num_den": [
+        5,
+        2
+      ],
+      "aliquot_split": [
+        2,
+        3,
+        5
+      ],
+      "inherited_square_later_map": null,
+      "n": 24,
+      "odd_core": 3,
+      "odd_core_split": [
+        1,
+        2,
+        3
+      ],
+      "perfect": false
+    },
+    {
+      "abundancy_num_den": [
+        2,
+        1
+      ],
+      "aliquot_split": [
+        1,
+        1,
+        2
+      ],
+      "inherited_square_later_map": [
+        3,
+        4,
+        7
+      ],
+      "n": 28,
+      "odd_core": 7,
+      "odd_core_split": [
+        1,
+        6,
+        7
+      ],
+      "perfect": true
+    },
+    {
+      "abundancy_num_den": [
+        65,
+        24
+      ],
+      "aliquot_split": [
+        24,
+        41,
+        65
+      ],
+      "inherited_square_later_map": [
+        1,
+        8,
+        9
+      ],
+      "n": 72,
+      "odd_core": 9,
+      "odd_core_split": [
+        1,
+        8,
+        9
+      ],
+      "perfect": false
+    },
+    {
+      "abundancy_num_den": [
+        3,
+        1
+      ],
+      "aliquot_split": [
+        1,
+        2,
+        3
+      ],
+      "inherited_square_later_map": [
+        7,
+        8,
+        15
+      ],
+      "n": 120,
+      "odd_core": 15,
+      "odd_core_split": [
+        1,
+        14,
+        15
+      ],
+      "perfect": false
+    },
+    {
+      "abundancy_num_den": [
+        2,
+        1
+      ],
+      "aliquot_split": [
+        1,
+        1,
+        2
+      ],
+      "inherited_square_later_map": [
+        15,
+        16,
+        31
+      ],
+      "n": 496,
+      "odd_core": 31,
+      "odd_core_split": [
+        1,
+        30,
+        31
+      ],
+      "perfect": true
+    },
+    {
+      "abundancy_num_den": [
+        2,
+        1
+      ],
+      "aliquot_split": [
+        1,
+        1,
+        2
+      ],
+      "inherited_square_later_map": [
+        63,
+        64,
+        127
+      ],
+      "n": 8128,
+      "odd_core": 127,
+      "odd_core_split": [
+        1,
+        126,
+        127
+      ],
+      "perfect": true
+    }
+  ],
+  "ABC_scope": "square-later map inherited from incoming session69; odd-core split is a distinct comparison",
+  "F8_basis": [
+    3,
+    5,
+    7
+  ],
+  "S3_frame_bridge": [
+    {
+      "field": 3,
+      "path": [
+        0,
+        1,
+        2
+      ],
+      "sign": 1,
+      "word": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "field": 5,
+      "path": [
+        1,
+        2,
+        0
+      ],
+      "sign": 1,
+      "word": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "field": 7,
+      "path": [
+        2,
+        0,
+        1
+      ],
+      "sign": 1,
+      "word": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "field": 2,
+      "path": [
+        0,
+        2,
+        1
+      ],
+      "sign": -1,
+      "word": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "field": 4,
+      "path": [
+        1,
+        0,
+        2
+      ],
+      "sign": -1,
+      "word": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "field": 6,
+      "path": [
+        2,
+        1,
+        0
+      ],
+      "sign": -1,
+      "word": [
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "Vitali_control": {
+    "H": [
+      109,
+      111
+    ],
+    "masks": [
+      1354195,
+      1351956
+    ],
+    "same_labelled_C3": false,
+    "same_labelled_lambda": true
+  },
+  "alignment_amplification": {
+    "controls": [
+      {
+        "copies": 1,
+        "n": 9,
+        "one_bit_guards": 1,
+        "states": 2
+      },
+      {
+        "copies": 2,
+        "n": 16,
+        "one_bit_guards": 2,
+        "states": 4
+      },
+      {
+        "copies": 3,
+        "n": 23,
+        "one_bit_guards": 3,
+        "states": 8
+      },
+      {
+        "copies": 4,
+        "n": 30,
+        "one_bit_guards": 4,
+        "states": 16
+      },
+      {
+        "copies": 5,
+        "n": 37,
+        "one_bit_guards": 5,
+        "states": 32
+      },
+      {
+        "copies": 6,
+        "n": 44,
+        "one_bit_guards": 6,
+        "states": 64
+      }
+    ],
+    "source_rooted_isomorphism": [
+      0,
+      1,
+      4,
+      2,
+      3,
+      5,
+      6
+    ],
+    "target_rooted_isomorphism": [
+      0,
+      2,
+      4,
+      1,
+      5,
+      3,
+      6
+    ]
+  },
+  "carousel_control": [
+    {
+      "Aut": 81,
+      "H": 462915,
+      "flux": {
+        "-3": 73710,
+        "-1": 267624,
+        "1": 121581
+      },
+      "presentations": 5715,
+      "root_orbits": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10
+        ],
+        [
+          3,
+          7,
+          11
+        ]
+      ],
+      "root_stabilizer_orders": [
+        9,
+        27
+      ],
+      "word": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "Aut": 27,
+      "H": 462915,
+      "flux": {
+        "-4": 4293,
+        "-3": 44064,
+        "-2": 86535,
+        "-1": 132084,
+        "0": 120258,
+        "1": 64017,
+        "2": 11664
+      },
+      "presentations": 17145,
+      "root_orbits": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11
+        ]
+      ],
+      "root_stabilizer_orders": [
+        9,
+        27,
+        9,
+        27,
+        9,
+        27
+      ],
+      "word": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "equal_weight_different_degree": {
+    "periods": [
+      3,
+      9
+    ],
+    "words": [
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "labelled_cyclic_triples": 67,
+  "marked_Frobenius": [
+    {
+      "degree": 1,
+      "field": 0,
+      "word": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 7,
+      "word": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 5,
+      "word": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 2,
+      "word": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 3,
+      "word": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 4,
+      "word": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "degree": 3,
+      "field": 6,
+      "word": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "degree": 1,
+      "field": 1,
+      "word": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "two_outer_ports_failure": {
+    "quotient_run_word": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "records": [
+      {
+        "H": 15,
+        "all_ports": [
+          0,
+          2,
+          3,
+          3
+        ],
+        "blue": false,
+        "child_target": [
+          14,
+          12,
+          0,
+          4
+        ],
+        "outer_roots": [
+          0,
+          3
+        ],
+        "path": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3
+        ],
+        "runs": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            3
+          ]
+        ],
+        "target": [
+          46,
+          44,
+          48,
+          4,
+          43,
+          8
+        ]
+      },
+      {
+        "H": 23,
+        "all_ports": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "blue": false,
+        "child_target": [
+          4,
+          13,
+          0,
+          5
+        ],
+        "outer_roots": [
+          1,
+          0
+        ],
+        "path": [
+          1,
+          2,
+          4,
+          5,
+          3,
+          0
+        ],
+        "runs": [
+          [
+            1,
+            2
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "target": [
+          36,
+          45,
+          48,
+          5,
+          43,
+          8
+        ]
+      }
+    ],
+    "source": [
+      18,
+      20,
+      25,
+      19,
+      32,
+      15
+    ],
+    "source_child": [
+      2,
+      4,
+      9,
+      3
+    ]
+  }
+}

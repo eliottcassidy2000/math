@@ -1,0 +1,60 @@
+{
+  "admissible_alignments_checked": 3979,
+  "all_arity_states_checked": 2973,
+  "amplification_seed_alignment": true,
+  "full_strong_response_audit": [
+    {
+      "guard_cells": 1,
+      "n": 1,
+      "states": 1,
+      "strong_classes": 1
+    },
+    {
+      "guard_cells": 1,
+      "n": 2,
+      "states": 1,
+      "strong_classes": 0
+    },
+    {
+      "guard_cells": 2,
+      "n": 3,
+      "states": 2,
+      "strong_classes": 1
+    },
+    {
+      "guard_cells": 8,
+      "n": 4,
+      "states": 8,
+      "strong_classes": 1
+    },
+    {
+      "guard_cells": 64,
+      "n": 5,
+      "states": 64,
+      "strong_classes": 6
+    },
+    {
+      "guard_cells": 1024,
+      "n": 6,
+      "states": 1024,
+      "strong_classes": 35
+    },
+    {
+      "guard_cells": 32768,
+      "n": 7,
+      "states": 32768,
+      "strong_classes": 353
+    }
+  ],
+  "joint_response_states_checked": 29820,
+  "raw_Hamilton_paths_checked": 33909,
+  "revisited_child_target_H": [
+    15,
+    23
+  ],
+  "seven_vertex_guard_hostile": true,
+  "six_vertex_target_H": [
+    41,
+    45
+  ]
+}
