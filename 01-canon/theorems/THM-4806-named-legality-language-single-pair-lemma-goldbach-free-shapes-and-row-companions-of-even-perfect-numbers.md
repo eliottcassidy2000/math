@@ -47,7 +47,7 @@ related:
 
 *Proof of (iii).* Exhaustive hashing of the languages (note, section 1); every collision pair at order 8 can be relabelled into `X_8`. QED
 
-The gap to all orders: two tournaments differing on several pairs could both avoid every differing pair although every single flip is visible (the flip path of (i) may use another differing pair). Dark arcs exist in strong tournaments from order 5 (120 of the 544 strong labelled 5-tournaments).
+The gap to all orders: two tournaments differing on several pairs could both avoid every differing pair although every single flip is visible (the flip path of (i) may use another differing pair). Dark arcs exist in strong tournaments from order 5 (120 of the 544 strong labelled 5-tournaments). **Strong form.** If, for every strong tournament `C` and every dark arc `u -> v` of `C`, `C^(uv)` has a Hamiltonian path through `v -> u` avoiding every other dark arc of `C`, then `T -> L(T)` is injective for all orders (PROVED implication, note section 1); the strong form fails for non-strong tournaments (transitive order 4) and holds for every strong tournament of order `<= 7`, every strong member of `X_8`, and 30,000 + 3,000 random members of `X_9`, `X_10` (FINITE-EXACT / NUMERICAL, legality_strong_lemma_20261026.cpp).
 
 ## Theorem G (shape lemmas for odd values)
 
