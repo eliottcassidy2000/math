@@ -1,0 +1,11 @@
+[
+  {
+    "script": "session65-palindrome-guard/check.py",
+    "stored_stdout": "session65-palindrome-guard/normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 120
+  }
+]

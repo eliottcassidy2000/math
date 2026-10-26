@@ -1,0 +1,311 @@
+{
+  "status": "ROOT_APPROVED_AND_INDEPENDENTLY_SOURCE_SEALED",
+  "files": [
+    {
+      "source": "session65-root/CONNECTIONS.md",
+      "packaged": "session65-root/CONNECTIONS.md",
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df",
+      "bytes": 9912
+    },
+    {
+      "source": "session65-root/SYNTHESIS.md",
+      "packaged": "session65-root/SYNTHESIS.md",
+      "sha256": "192451b742b2f1665210849c0c5cb88640352e0341c98474eb52d4427b8fa41f",
+      "bytes": 6997
+    },
+    {
+      "source": "session65-root/fifteen-kernel/REPORT.md",
+      "packaged": "session65-root/fifteen-kernel/REPORT.md",
+      "sha256": "d7a6e9387dd348bfaf7b4f8f3ac538040d145e655321b83357858bf492e4004c",
+      "bytes": 2825
+    },
+    {
+      "source": "session65-root/fifteen-kernel/SHA256SUMS",
+      "packaged": "session65-root/fifteen-kernel/SHA256SUMS",
+      "sha256": "fa519864e2146e2afa4304f1667b7f833712f93bd5382021c9397b1d47d31c1e",
+      "bytes": 310
+    },
+    {
+      "source": "session65-root/fifteen-kernel/check.py",
+      "packaged": "session65-root/fifteen-kernel/check.py",
+      "sha256": "9b5004691541465965e9f19cd08c013142dd4f590de8b18f19473c54f29206b1",
+      "bytes": 2509
+    },
+    {
+      "source": "session65-root/fifteen-kernel/normal.json",
+      "packaged": "session65-root/fifteen-kernel/normal.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "bytes": 3295
+    },
+    {
+      "source": "session65-root/fifteen-kernel/optimized.json",
+      "packaged": "session65-root/fifteen-kernel/optimized.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "bytes": 3295
+    },
+    {
+      "source": "session65-root/multiperfect/REPORT.md",
+      "packaged": "session65-root/multiperfect/REPORT.md",
+      "sha256": "ce1bf0e01b696f2e258b46d5e587c552096093a0961c1f54d70526d037e304e8",
+      "bytes": 5112
+    },
+    {
+      "source": "session65-root/multiperfect/SHA256SUMS",
+      "packaged": "session65-root/multiperfect/SHA256SUMS",
+      "sha256": "868a4474c3afa988409f5dead7a6d8361f251896ba5d91c47f7ae1cfd207e323",
+      "bytes": 398
+    },
+    {
+      "source": "session65-root/multiperfect/check.py",
+      "packaged": "session65-root/multiperfect/check.py",
+      "sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5",
+      "bytes": 1900
+    },
+    {
+      "source": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "packaged": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc",
+      "bytes": 6574
+    },
+    {
+      "source": "session65-root/multiperfect/normal.json",
+      "packaged": "session65-root/multiperfect/normal.json",
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "bytes": 5363
+    },
+    {
+      "source": "session65-root/multiperfect/optimized.json",
+      "packaged": "session65-root/multiperfect/optimized.json",
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "bytes": 5363
+    },
+    {
+      "source": "session65-weakcollatz/bridge_results_recheck.json",
+      "packaged": "session65-weakcollatz/bridge_results_recheck.json",
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "bytes": 1691
+    },
+    {
+      "source": "session65-audit-synthesis/MANIFEST.json",
+      "packaged": "session65-audit-synthesis/MANIFEST.json",
+      "sha256": "712d5c86954f5673bcc2f1395de75b95bdcd3ec699a46b9d605ed85475c03939",
+      "bytes": 1536
+    },
+    {
+      "source": "session65-audit-synthesis/REPORT.md",
+      "packaged": "session65-audit-synthesis/REPORT.md",
+      "sha256": "591f6e1fdd01e09923fc8e82fe09c9746c5df86c2db43ed029a2d9c3d01d7861",
+      "bytes": 12141
+    },
+    {
+      "source": "session65-audit-synthesis/SOURCE_PINS.json",
+      "packaged": "session65-audit-synthesis/SOURCE_PINS.json",
+      "sha256": "100da70fc8529d2eb3475b8cd13b48597b412bd0416d0dc3a7b54fb1e29f5f2c",
+      "bytes": 15698
+    },
+    {
+      "source": "session65-audit-synthesis/independent_check.py",
+      "packaged": "session65-audit-synthesis/independent_check.py",
+      "sha256": "645ccddfb5e436ef5fef4b5a8977eefcb7af3a708b976dd66bad0b433e3efccb",
+      "bytes": 10683
+    },
+    {
+      "source": "session65-audit-synthesis/normal.json",
+      "packaged": "session65-audit-synthesis/normal.json",
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0",
+      "bytes": 65919
+    },
+    {
+      "source": "session65-audit-synthesis/optimized.json",
+      "packaged": "session65-audit-synthesis/optimized.json",
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0",
+      "bytes": 65919
+    },
+    {
+      "source": "session65-audit-synthesis/root-corollary-normal.json",
+      "packaged": "session65-audit-synthesis/root-corollary-normal.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "bytes": 3295
+    },
+    {
+      "source": "session65-audit-synthesis/root-corollary-optimized.json",
+      "packaged": "session65-audit-synthesis/root-corollary-optimized.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "bytes": 3295
+    },
+    {
+      "source": "session65-audit-synthesis/SHA256SUMS",
+      "packaged": "session65-audit-synthesis/SHA256SUMS",
+      "sha256": "0e21e425bd7ba93326a892aa43aee216563320f2e9a773b1572430c06d8143eb",
+      "bytes": 674
+    },
+    {
+      "source": "session65-incoming-review/REPORT.md",
+      "packaged": "session65-incoming-review/REPORT.md",
+      "sha256": "b1016a80bd7eb1316800cf6642df2abb5336767d4c25e962ff3cddc8c9f7d56a",
+      "bytes": 14039
+    },
+    {
+      "source": "session65-incoming-review/SOURCE_PINS.json",
+      "packaged": "session65-incoming-review/SOURCE_PINS.json",
+      "sha256": "86e9f3faef7965afadee3553f3791f9e039d2fbaa6ef13c6d6146f978b5d3461",
+      "bytes": 4267
+    },
+    {
+      "source": "session65-incoming-review/SHA256SUMS",
+      "packaged": "session65-incoming-review/SHA256SUMS",
+      "sha256": "745af3daa6fa698faeab9945b3e89889b513f6de1d49dfa6f545b39478784f4e",
+      "bytes": 159
+    },
+    {
+      "source": "session65-k-write/REPORT.md",
+      "packaged": "session65-k-write/REPORT.md",
+      "sha256": "9b46b4be06e4ed25a4f86864f328d3a5b54a08825d30e8f82399810ebd666383",
+      "bytes": 7874
+    },
+    {
+      "source": "session65-k-write/SOURCES.json",
+      "packaged": "session65-k-write/SOURCES.json",
+      "sha256": "2b73f254504972bb93695a456bca8b539744b38cc46bb2ec2bcaa2ec52d5bbe6",
+      "bytes": 2050
+    },
+    {
+      "source": "session65-k-write/check.py",
+      "packaged": "session65-k-write/check.py",
+      "sha256": "617afba803da12224cfc08439432f854a07d80ff1c5c181adf333237cb98cb51",
+      "bytes": 9184
+    },
+    {
+      "source": "session65-k-write/normal.json",
+      "packaged": "session65-k-write/normal.json",
+      "sha256": "c1aa4160bcacf8a28892dec5304f07f67dce4c813cdf1ce4e02a5be1b422144b",
+      "bytes": 2528
+    },
+    {
+      "source": "session65-k-write/optimized.json",
+      "packaged": "session65-k-write/optimized.json",
+      "sha256": "c1aa4160bcacf8a28892dec5304f07f67dce4c813cdf1ce4e02a5be1b422144b",
+      "bytes": 2528
+    },
+    {
+      "source": "session65-k-write/SHA256SUMS",
+      "packaged": "session65-k-write/SHA256SUMS",
+      "sha256": "9b27553d9ec234ad9782521ae51003d9fc45889b5a3f28d4f3b232c40a19b328",
+      "bytes": 389
+    },
+    {
+      "source": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json",
+      "packaged": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json",
+      "sha256": "a274846a6c734da7ed3be1ccc77e4ba03ddbca1947fb365e3e01f20fb7bb0c2c",
+      "bytes": 436
+    },
+    {
+      "source": "session65-audit-synthesis/PORTABILITY_AMENDMENT.md",
+      "packaged": "session65-audit-synthesis/PORTABILITY_AMENDMENT.md",
+      "sha256": "68744693fd08b071599a3115dded81974c493dde592c95b987d7bc42b6041252",
+      "bytes": 6459
+    },
+    {
+      "source": "session65-audit-synthesis/PORTABILITY_DIFF.patch",
+      "packaged": "session65-audit-synthesis/PORTABILITY_DIFF.patch",
+      "sha256": "f98ac5a5b2dec55654344fd2b67f2c61d0ae746086fe79c41aae0a6c6ad847c7",
+      "bytes": 3895
+    },
+    {
+      "source": "session65-audit-synthesis/PORTABLE_INPUTS.json",
+      "packaged": "session65-audit-synthesis/PORTABLE_INPUTS.json",
+      "sha256": "f1c7e48d4635eec457ab020852a4314af90e009cfbca1c9d9df7b9dc9a66ed0f",
+      "bytes": 34301
+    },
+    {
+      "source": "session65-audit-synthesis/portable-hostiles-optimized.json",
+      "packaged": "session65-audit-synthesis/portable-hostiles-optimized.json",
+      "sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "bytes": 64900
+    },
+    {
+      "source": "session65-audit-synthesis/portable-hostiles.json",
+      "packaged": "session65-audit-synthesis/portable-hostiles.json",
+      "sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "bytes": 64900
+    },
+    {
+      "source": "session65-audit-synthesis/portable-normal.json",
+      "packaged": "session65-audit-synthesis/portable-normal.json",
+      "sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "bytes": 66559
+    },
+    {
+      "source": "session65-audit-synthesis/portable-optimized.json",
+      "packaged": "session65-audit-synthesis/portable-optimized.json",
+      "sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "bytes": 66559
+    },
+    {
+      "source": "session65-audit-synthesis/portable_check.py",
+      "packaged": "session65-audit-synthesis/portable_check.py",
+      "sha256": "0e7a59cfc09472dc22ed20acb6d8b7a2531ee6946dd7424b5151b363c53621ca",
+      "bytes": 12940
+    },
+    {
+      "source": "session65-audit-synthesis/portable_hostiles.py",
+      "packaged": "session65-audit-synthesis/portable_hostiles.py",
+      "sha256": "e44b41be3cb95723fc30cb7022bd6531d008e0b7751a26d1a068efee5f0af11f",
+      "bytes": 7045
+    },
+    {
+      "source": "session65-audit-synthesis/PORTABILITY_MANIFEST.json",
+      "packaged": "session65-audit-synthesis/PORTABILITY_MANIFEST.json",
+      "sha256": "283fadddb91675f8fcb54932dbd87a16ceed07a6dbabc996dfcd40bccc73d056",
+      "bytes": 3598
+    },
+    {
+      "source": "session65-audit-synthesis/PORTABILITY_SHA256SUMS",
+      "packaged": "session65-audit-synthesis/PORTABILITY_SHA256SUMS",
+      "sha256": "9fd19c399c5cf8eea1e454dfec7d8cf01990507ad488b8af9472e9e3df49f032",
+      "bytes": 1112
+    },
+    {
+      "source": "session65-palindrome-guard/REPORT.md",
+      "packaged": "session65-palindrome-guard/REPORT.md",
+      "sha256": "b45234294bfa1049f5c15266171eefe4b6160167b955ad613c2856e7af6f6a5e",
+      "bytes": 11587
+    },
+    {
+      "source": "session65-palindrome-guard/SOURCES.json",
+      "packaged": "session65-palindrome-guard/SOURCES.json",
+      "sha256": "3746f5862b0215b6f668a90b68f10397f421cda86cf6ce50496d411ede536418",
+      "bytes": 494
+    },
+    {
+      "source": "session65-palindrome-guard/check.py",
+      "packaged": "session65-palindrome-guard/check.py",
+      "sha256": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+      "bytes": 11398
+    },
+    {
+      "source": "session65-palindrome-guard/normal.json",
+      "packaged": "session65-palindrome-guard/normal.json",
+      "sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "bytes": 93207
+    },
+    {
+      "source": "session65-palindrome-guard/optimized.json",
+      "packaged": "session65-palindrome-guard/optimized.json",
+      "sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "bytes": 93207
+    },
+    {
+      "source": "session65-palindrome-guard/ROOT_REVIEW.json",
+      "packaged": "session65-palindrome-guard/ROOT_REVIEW.json",
+      "sha256": "c6f4a121a79eed260431882208d72edc359259d2a53e631bc450e8a44f7a1add",
+      "bytes": 1376
+    },
+    {
+      "source": "session65-palindrome-guard/SHA256SUMS",
+      "packaged": "session65-palindrome-guard/SHA256SUMS",
+      "sha256": "c68ae7ef9dd78ba34b44976fa9253a0316a853e666cf9b8456e3f4bbe96c0612",
+      "bytes": 472
+    }
+  ]
+}

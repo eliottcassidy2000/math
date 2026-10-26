@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "control": "changed bytes",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "changed bytes",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "extra file",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "extra file",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "broken symlink",
+      "mode": "normal",
+      "exit_code": 1,
+      "rejected": true
+    },
+    {
+      "control": "broken symlink",
+      "mode": "optimized",
+      "exit_code": 1,
+      "rejected": true
+    }
+  ]
+}

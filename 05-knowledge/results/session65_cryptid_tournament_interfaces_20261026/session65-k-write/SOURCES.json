@@ -1,0 +1,38 @@
+{
+  "blocked_actions": [],
+  "date": "2026-10-26",
+  "inputs": [
+    {
+      "path_from_session_workspace": "session65-cryptids/REPORT.md",
+      "role": "Sections 3.1-3.2: literal ordered-join tape encoding and native-K distinction",
+      "sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d"
+    },
+    {
+      "path_from_session_workspace": "session65-root/CONNECTIONS.md",
+      "role": "Section 1: finite tape carrier and retained sidecars",
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df"
+    },
+    {
+      "path_from_session_workspace": "session65-repo/01-canon/theorems/THM-4732-black-detours-of-closed-blue-lines-order-9-census-order-10-detours-pure-blue-layers-and-the-klein-dictionary.md",
+      "role": "Conventions and Lemma 1: native K and inherited fixed-label symmetric-difference identity",
+      "sha256": "d71522b14bd6fc763eea7744a9581e4cc4e8ed933d47281b9a9f8802c2829c80"
+    },
+    {
+      "path_from_session_workspace": "session65-repo/01-canon/theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md",
+      "role": "Section 0: native K definition, blue/black convention and literal successive-source detours",
+      "sha256": "db8eec2b84c3d32621305f178930d0c6a134d07ad8fcefcfd94034b0d3329e2f"
+    }
+  ],
+  "research_base_from_session65_sources": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "scope": "One bounded fixed-label native-K gate on the existing tape encoding; no repo edits or pushes.",
+  "status": "Self-contained elementary proof independently checked; no novelty priority claimed",
+  "trusted_user_transcript": [
+    "think of how turing machines interlace with our novel results in studying tournament structure.",
+    "a useful classification-by isomorphism mechanism may be turing machines and how they are fractally composed of tournament-related substructures we have studied."
+  ],
+  "verification": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "outputs_byte_identical": true
+  }
+}

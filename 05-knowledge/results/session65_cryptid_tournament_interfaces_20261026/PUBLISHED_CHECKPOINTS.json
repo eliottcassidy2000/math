@@ -1,0 +1,21 @@
+{
+  "scope": "Previously published checkpoints independently verified before this final checkpoint; final receipt cannot be self-embedded",
+  "checkpoints": [
+    {
+      "publication_commit": "bcf9b658eb2e5201459cb54c0280d3a92e3bdaf8",
+      "tree": "9f535b32b1da911fdf87586a1c32262303c2976a",
+      "parent": "1b12f4e513916aa1ace3aa9517e0c147419adfa1",
+      "normal_optimized_runs": 10,
+      "remote_verification": "FIRST_REMOTE_VERIFICATION.json",
+      "ci_visibility": "Zero statuses/check-runs/workflows; not a CI pass"
+    },
+    {
+      "publication_commit": "ba3894f914d5add76c85bfca5742d50681fd1cf9",
+      "tree": "960bc831dc8ad1c643e411894599b50007a14ddd",
+      "parent": "5df2594f127d4bda64fbdca4b0dfaab6d98a9d80",
+      "normal_optimized_runs": 28,
+      "remote_verification": "SECOND_REMOTE_VERIFICATION.json",
+      "ci_visibility": "Zero statuses/check-runs/workflows; not a CI pass"
+    }
+  ]
+}

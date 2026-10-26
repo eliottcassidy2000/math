@@ -1,0 +1,15 @@
+{
+  "additional_elementary_guard_witness": "For E(0w1), every Hamiltonian path starts at an outdegree n-1 vertex and ends at an outdegree 1 vertex, so endpoint degrees sum to n rather than n-1; therefore every word is black. This agrees with the report and supplies no reachability theorem.",
+  "count_units": "127 tapes; 5461 Hamiltonian words, not 5461 tapes.",
+  "current_sha256": {
+    "REPORT.md": "b45234294bfa1049f5c15266171eefe4b6160167b955ad613c2856e7af6f6a5e",
+    "SOURCES.json": "3746f5862b0215b6f668a90b68f10397f421cda86cf6ce50496d411ede536418",
+    "check.py": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+    "normal.json": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+    "optimized.json": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b"
+  },
+  "producer_report_before_scope_clarification": "66b9fe9ddbc69b126d69c633a25a8c24efb03888317ae5c66c586c89a31fee1f",
+  "review": "Root independently derived the SCC/palindrome equivalence, own-edge color invariance, pure-blue endpoint obstruction, and asymmetric guard before inspecting the independent verifier. Full report read and exact counts cross-checked.",
+  "scope_correction": "Qualified native K section by n>=1 because the separately optional empty-tape convention has no n-1 path-arc count; no code or receipt change.",
+  "status": "PASS"
+}

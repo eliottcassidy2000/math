@@ -1,0 +1,884 @@
+{
+  "external_nonruntime_inputs": [
+    {
+      "classification": "EXTERNAL_NONRUNTIME",
+      "evidence": "Previously inspected in the historical fifteens audit; not distributed, read, or locally reverified by this portable entrypoint.",
+      "path": "session65-fifteens/sloane1973p98.jpg",
+      "sha256": "2e2b51802a88dc7e3c785237f58605f06db5f7a8eb424bb465ed79f901071328",
+      "source_url": "https://neilsloane.com/doc/persistence.2.jpg"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 733,
+      "sha256": "23990b49cdf19b506c86933adf40bc4070058ef4dbfefb92b12bee7d24da9b5e",
+      "source": "session65-audit-cryptids/AMENDMENT.json"
+    },
+    {
+      "bytes": 1060,
+      "sha256": "9f935f2deeaa52941c083a9a01ae2b836bf5a66ce5dd3df79b9d8be66baf12e6",
+      "source": "session65-audit-cryptids/Bouncers.LICENSE.txt"
+    },
+    {
+      "bytes": 20685,
+      "sha256": "2a2455657fa4eabcbfeff11517307580e5fb656a1f6664baa12203d10dbf0d17",
+      "source": "session65-audit-cryptids/Bouncers.source.txt"
+    },
+    {
+      "bytes": 17735,
+      "sha256": "07dd283a20a62d304c83057db266ed59d3de15446242c3ec8058a856a7e85e95",
+      "source": "session65-audit-cryptids/REPORT.md"
+    },
+    {
+      "bytes": 849,
+      "sha256": "6f61903f77733883a9e5ece01bbb37c315a5ed61a2f42f2dab3e074082a7220c",
+      "source": "session65-audit-cryptids/SHA256SUMS"
+    },
+    {
+      "bytes": 2628,
+      "sha256": "7b505e259aca53daea35f08cbeca84478c3ef765473b9d8abc7d62a56410f9f6",
+      "source": "session65-audit-cryptids/SOURCE_AUDIT.json"
+    },
+    {
+      "bytes": 18366,
+      "sha256": "ced3f2c592a97d04bba4bff10a6f7712d6ba39f5201e0662ce53cd83e04e672a",
+      "source": "session65-audit-cryptids/independent_check.py"
+    },
+    {
+      "bytes": 5649,
+      "sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2",
+      "source": "session65-audit-cryptids/normal.json"
+    },
+    {
+      "bytes": 5649,
+      "sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2",
+      "source": "session65-audit-cryptids/optimized.json"
+    },
+    {
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "source": "session65-audit-cryptids/producer-rerun-normal.json"
+    },
+    {
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "source": "session65-audit-cryptids/producer-rerun-optimized.json"
+    },
+    {
+      "bytes": 10732,
+      "sha256": "b5673660fb9514e16321d659bb44412578b8b110f4637a7bba3f22e7f01b8781",
+      "source": "session65-audit-fifteens/AUDIT.md"
+    },
+    {
+      "bytes": 2191,
+      "sha256": "897cc5800d07f72f9b112459440d06f42e903caa7fa773859c1d868d59d1a9d1",
+      "source": "session65-audit-fifteens/audit-manifest.json"
+    },
+    {
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "source": "session65-audit-fifteens/general-lane-replay-optimized.json"
+    },
+    {
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "source": "session65-audit-fifteens/general-lane-replay.json"
+    },
+    {
+      "bytes": 9343,
+      "sha256": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091",
+      "source": "session65-audit-fifteens/independent_check.py"
+    },
+    {
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "source": "session65-audit-fifteens/lane-replay-optimized.json"
+    },
+    {
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "source": "session65-audit-fifteens/lane-replay.json"
+    },
+    {
+      "bytes": 6079,
+      "sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f",
+      "source": "session65-audit-fifteens/receipt-optimized.json"
+    },
+    {
+      "bytes": 6079,
+      "sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f",
+      "source": "session65-audit-fifteens/receipt.json"
+    },
+    {
+      "bytes": 295,
+      "sha256": "94d6d495a492499e99e00b59bfa0710c57d6e0acb66da0350c0de528ea2a2413",
+      "source": "session65-audit-goldbach/ALLOWLIST.txt"
+    },
+    {
+      "bytes": 10695,
+      "sha256": "d3739c415f62ff16ff66c265f8c18e36e7645dd11e3b4ce13e25f4ffe972f6a3",
+      "source": "session65-audit-goldbach/INPUTS.json"
+    },
+    {
+      "bytes": 2070,
+      "sha256": "7651ce4ae5f6bd8caa0fc9715903b96a980368a511a164897b8940f37b153617",
+      "source": "session65-audit-goldbach/MANIFEST.json"
+    },
+    {
+      "bytes": 1398,
+      "sha256": "3c432c392e64f69f142009160f6f5f83be90a9a0a35ad01977196a20ffe287e4",
+      "source": "session65-audit-goldbach/RECEIPT.json"
+    },
+    {
+      "bytes": 3658,
+      "sha256": "ce95fb305144cc30982b34dbe2c58000b6e1b8f406702bf116449be77d91e49b",
+      "source": "session65-audit-goldbach/REPORT.md"
+    },
+    {
+      "bytes": 8002,
+      "sha256": "b130891318e1052711574f9d37ce60ea0baae3490d99e03f08e131ef4554c98e",
+      "source": "session65-audit-goldbach/REPO_PROVENANCE.json"
+    },
+    {
+      "bytes": 1274,
+      "sha256": "72049c8e45cc129083e3d2e84d75da35a373202643023b9e1bd92f2f72eadf2a",
+      "source": "session65-audit-goldbach/SHA256SUMS"
+    },
+    {
+      "bytes": 7319,
+      "sha256": "8217f6135e4cba1777abee77caa175e0280f82bdcd683cbf6645567aeec8d1fa",
+      "source": "session65-audit-goldbach/SOURCE_RECEIPT.json"
+    },
+    {
+      "bytes": 9584,
+      "sha256": "5d47059d3322326d41f786ba3ba2e57581cf40d47768a2696efa7483f4d33b57",
+      "source": "session65-audit-goldbach/goldbach/REPORT.md"
+    },
+    {
+      "bytes": 11865,
+      "sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876",
+      "source": "session65-audit-goldbach/goldbach/check.py"
+    },
+    {
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "source": "session65-audit-goldbach/goldbach/normal.json"
+    },
+    {
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "source": "session65-audit-goldbach/goldbach/optimized.json"
+    },
+    {
+      "bytes": 5311,
+      "sha256": "73faa62630f364eeaa2428885ff679f2b9b458dea25c95a12030ddadb10cf701",
+      "source": "session65-audit-goldbach/multiperfect/REPORT.md"
+    },
+    {
+      "bytes": 5221,
+      "sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d",
+      "source": "session65-audit-goldbach/multiperfect/check.py"
+    },
+    {
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "source": "session65-audit-goldbach/multiperfect/normal.json"
+    },
+    {
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "source": "session65-audit-goldbach/multiperfect/optimized.json"
+    },
+    {
+      "bytes": 1057,
+      "sha256": "97563fe59556f61e36c5595c97011ccbf27ff8b23e93a513a3a08750d446a12d",
+      "source": "session65-audit-reductions/MANIFEST.json"
+    },
+    {
+      "bytes": 14113,
+      "sha256": "7b0693f3b33b6aecf5f2a9a62ce04ba127bceafccc1f35ffef89c24fbdad023c",
+      "source": "session65-audit-reductions/REPORT.md"
+    },
+    {
+      "bytes": 8479,
+      "sha256": "437dc3385900f004cb2cbbcd143c1ded6d77249e6db22fd7e70edb3678c78e08",
+      "source": "session65-audit-reductions/check.py"
+    },
+    {
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867",
+      "source": "session65-audit-reductions/normal.json"
+    },
+    {
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867",
+      "source": "session65-audit-reductions/optimized.json"
+    },
+    {
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "source": "session65-audit-reductions/producer-normal.json"
+    },
+    {
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "source": "session65-audit-reductions/producer-optimized.json"
+    },
+    {
+      "bytes": 436,
+      "sha256": "a274846a6c734da7ed3be1ccc77e4ba03ddbca1947fb365e3e01f20fb7bb0c2c",
+      "source": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json"
+    },
+    {
+      "bytes": 15698,
+      "sha256": "100da70fc8529d2eb3475b8cd13b48597b412bd0416d0dc3a7b54fb1e29f5f2c",
+      "source": "session65-audit-synthesis/SOURCE_PINS.json"
+    },
+    {
+      "bytes": 10683,
+      "sha256": "645ccddfb5e436ef5fef4b5a8977eefcb7af3a708b976dd66bad0b433e3efccb",
+      "source": "session65-audit-synthesis/independent_check.py"
+    },
+    {
+      "bytes": 65919,
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0",
+      "source": "session65-audit-synthesis/normal.json"
+    },
+    {
+      "bytes": 65919,
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0",
+      "source": "session65-audit-synthesis/optimized.json"
+    },
+    {
+      "bytes": 12211,
+      "sha256": "e0a7b4a6bf4c8ff72e28b930346514c2ccc442e2c0d569531007191e585b3688",
+      "source": "session65-audit-weakcollatz/AUDIT.md"
+    },
+    {
+      "bytes": 7129,
+      "sha256": "7effb218875ea10ee4c22b98ae33551231a90d8d3bc323dcc83cd212c8d8f570",
+      "source": "session65-audit-weakcollatz/independent_audit.py"
+    },
+    {
+      "bytes": 1791,
+      "sha256": "bd012ddc91d2939d58d9860b8d196cc0880ad64bd7a842867b61c9a3424e25ad",
+      "source": "session65-audit-weakcollatz/manifest.json"
+    },
+    {
+      "bytes": 3009,
+      "sha256": "21e5cf69ccc2362601a419a8c6b54fc7d022bb6b736adf274ae8206a97f624e6",
+      "source": "session65-audit-weakcollatz/native_mb.c"
+    },
+    {
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "source": "session65-audit-weakcollatz/native_mb.json"
+    },
+    {
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594",
+      "source": "session65-audit-weakcollatz/native_mb_unoptimized.json"
+    },
+    {
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "source": "session65-audit-weakcollatz/normal.json"
+    },
+    {
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60",
+      "source": "session65-audit-weakcollatz/optimized.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-audit-weakcollatz/producer_replay_normal.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-audit-weakcollatz/producer_replay_optimized.json"
+    },
+    {
+      "bytes": 7003,
+      "sha256": "e5a833cd6aeb9a83f92f403fbacd44f5b131b6b9b833b89343d907a663f78517",
+      "source": "session65-audit-weakcollatz/remote_git_pin.json"
+    },
+    {
+      "bytes": 13577,
+      "sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+      "source": "session65-cryptids/REPORT.md"
+    },
+    {
+      "bytes": 389,
+      "sha256": "381cfaa1492f5f555533356d051befdd0f10ae11dcc7eeaa39dcfad7b20ee340",
+      "source": "session65-cryptids/SHA256SUMS"
+    },
+    {
+      "bytes": 1236,
+      "sha256": "f47ed0f64a976d8f42e1f25f78a9ca873857dbcaf7100dbcb6862e5af1ea3280",
+      "source": "session65-cryptids/SOURCES.json"
+    },
+    {
+      "bytes": 8316,
+      "sha256": "ad88b82106aa9d517f7f2f4a56d50abf00b0086eacff80c4d0e64a6c3b6fd4b1",
+      "source": "session65-cryptids/check.py"
+    },
+    {
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "source": "session65-cryptids/normal.json"
+    },
+    {
+      "bytes": 2738,
+      "sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "source": "session65-cryptids/optimized.json"
+    },
+    {
+      "bytes": 4720,
+      "sha256": "989cada5edf052e062e75772b284980d0379c28b0aabec77f73fc853591e3bdd",
+      "source": "session65-fifteens/GENERAL_PERMUTATION.md"
+    },
+    {
+      "bytes": 20104,
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "source": "session65-fifteens/REPORT.md"
+    },
+    {
+      "bytes": 6624,
+      "sha256": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+      "source": "session65-fifteens/check.py"
+    },
+    {
+      "bytes": 2506,
+      "sha256": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+      "source": "session65-fifteens/check_general_permutation.py"
+    },
+    {
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "source": "session65-fifteens/general-receipt-optimized.json"
+    },
+    {
+      "bytes": 17715,
+      "sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "source": "session65-fifteens/general-receipt.json"
+    },
+    {
+      "bytes": 18476,
+      "sha256": "a00c8b2485622c8716e417bb05739518a4844465a9ef71243438e840925fc6f7",
+      "source": "session65-fifteens/inputs/01-canon__theorems__THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md"
+    },
+    {
+      "bytes": 16797,
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+      "source": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md"
+    },
+    {
+      "bytes": 7457,
+      "sha256": "b35cf4f5c8c6dde60f35dfbb54b7984e4e47f00143c5922fc83c5796ce5a5ae4",
+      "source": "session65-fifteens/inputs/01-canon__theorems__THM-640-the-paley-bridge.md"
+    },
+    {
+      "bytes": 12097,
+      "sha256": "2213d3fccf50983e1265fce2b5cb7986539eec0bce77117c6a89bd58136e8d12",
+      "source": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md"
+    },
+    {
+      "bytes": 31913,
+      "sha256": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48",
+      "source": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md"
+    },
+    {
+      "bytes": 14220,
+      "sha256": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a",
+      "source": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__monster__MONSTER_BABY_PRIME_PARTITION.md"
+    },
+    {
+      "bytes": 10005,
+      "sha256": "6658f90cf2156dc7bb924ce04947e386140463f9b363e1bcd6225af36d1ee6f4",
+      "source": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__paley__PALEY_MONSTER_BRIDGE.md"
+    },
+    {
+      "bytes": 13791,
+      "sha256": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07",
+      "source": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md"
+    },
+    {
+      "bytes": 24059,
+      "sha256": "c2ff3f80d7108289ced1469b845aab14238d6e9754bb9ddff5d202e161e1ba39",
+      "source": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__mrb-supersingular__RESEARCH.md"
+    },
+    {
+      "bytes": 40319,
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079",
+      "source": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md"
+    },
+    {
+      "bytes": 7203,
+      "sha256": "df987ea2476c8dc1d0e0e11a3f0e8f648a8e61dd23aee64c536d0266eef2031d",
+      "source": "session65-fifteens/inputs/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md"
+    },
+    {
+      "bytes": 7053,
+      "sha256": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+      "source": "session65-fifteens/inputs/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md"
+    },
+    {
+      "bytes": 7510,
+      "sha256": "aaf43790cf857d7d400bfe87f0438c5e617887fb953788b4d1ce7c72037aa0ab",
+      "source": "session65-fifteens/inputs/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md"
+    },
+    {
+      "bytes": 37719,
+      "sha256": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+      "source": "session65-fifteens/inputs/cardinality_bridges_20261018m.md"
+    },
+    {
+      "bytes": 21869,
+      "sha256": "4c5cffc3ece7eb704cc8e543276daec709416ffce38d0e0997d192cb83b20237",
+      "source": "session65-fifteens/inputs/session63_cancellation_RESULT.md"
+    },
+    {
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "source": "session65-fifteens/receipt-optimized.json"
+    },
+    {
+      "bytes": 10226,
+      "sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "source": "session65-fifteens/receipt.json"
+    },
+    {
+      "bytes": 5488,
+      "sha256": "7002874c382d210148cfeceefc738a5fd0340b06ffab8da52a99e5349cfcb040",
+      "source": "session65-fifteens/source-manifest.json"
+    },
+    {
+      "bytes": 3449,
+      "sha256": "f634f265c00ba54651808490fc856bc6755052ee83e2454a89abfc7ec6b7c22c",
+      "source": "session65-reductions/MANIFEST.json"
+    },
+    {
+      "bytes": 3771,
+      "sha256": "6ef3462f05af1455a1b411fb7fe83b6f2dbfbe94de06d9b009404f809157a243",
+      "source": "session65-reductions/READBACK.md"
+    },
+    {
+      "bytes": 36564,
+      "sha256": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898",
+      "source": "session65-reductions/REPORT.md"
+    },
+    {
+      "bytes": 3471,
+      "sha256": "1c203205287a884f5eb38091b9e0503b8bdb7ce21823c678950412087993e192",
+      "source": "session65-reductions/SOURCE_PINS.json"
+    },
+    {
+      "bytes": 10541,
+      "sha256": "a5bf1c7b398393416d660008b9f7804f77de2ca39dc9592c3beaa80e68626396",
+      "source": "session65-reductions/check.py"
+    },
+    {
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "source": "session65-reductions/inputs/00-AGENTS.md"
+    },
+    {
+      "bytes": 10465,
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "source": "session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md"
+    },
+    {
+      "bytes": 9804,
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "source": "session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "bytes": 16487,
+      "sha256": "ca1963b56bbbdd1c45a797be27482c8a6c020267f11e037c9ea83ef264d0e65b",
+      "source": "session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md"
+    },
+    {
+      "bytes": 12491,
+      "sha256": "2ac0f3065d483134f8777e81e02ccd6ef20dfc8657eec67955794581f1d68769",
+      "source": "session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md"
+    },
+    {
+      "bytes": 18962,
+      "sha256": "f0497923251d09d2e035f586c6068503458048e10e622e61be5cb3be7afcc700",
+      "source": "session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md"
+    },
+    {
+      "bytes": 18389,
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed",
+      "source": "session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md"
+    },
+    {
+      "bytes": 13126,
+      "sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441",
+      "source": "session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md"
+    },
+    {
+      "bytes": 18721,
+      "sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387",
+      "source": "session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md"
+    },
+    {
+      "bytes": 10395,
+      "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff",
+      "source": "session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md"
+    },
+    {
+      "bytes": 5342,
+      "sha256": "ce6fe5deb1a3ebf6483a8bd4754f62e14030a4bdb3557b1e0a9ce8f24b16af3f",
+      "source": "session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md"
+    },
+    {
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "source": "session65-reductions/normal.json"
+    },
+    {
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "source": "session65-reductions/optimized.json"
+    },
+    {
+      "bytes": 9912,
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df",
+      "source": "session65-root/CONNECTIONS.md"
+    },
+    {
+      "bytes": 6997,
+      "sha256": "192451b742b2f1665210849c0c5cb88640352e0341c98474eb52d4427b8fa41f",
+      "source": "session65-root/SYNTHESIS.md"
+    },
+    {
+      "bytes": 2825,
+      "sha256": "d7a6e9387dd348bfaf7b4f8f3ac538040d145e655321b83357858bf492e4004c",
+      "source": "session65-root/fifteen-kernel/REPORT.md"
+    },
+    {
+      "bytes": 310,
+      "sha256": "fa519864e2146e2afa4304f1667b7f833712f93bd5382021c9397b1d47d31c1e",
+      "source": "session65-root/fifteen-kernel/SHA256SUMS"
+    },
+    {
+      "bytes": 2509,
+      "sha256": "9b5004691541465965e9f19cd08c013142dd4f590de8b18f19473c54f29206b1",
+      "source": "session65-root/fifteen-kernel/check.py"
+    },
+    {
+      "bytes": 3295,
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "source": "session65-root/fifteen-kernel/normal.json"
+    },
+    {
+      "bytes": 3295,
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "source": "session65-root/fifteen-kernel/optimized.json"
+    },
+    {
+      "bytes": 5112,
+      "sha256": "ce1bf0e01b696f2e258b46d5e587c552096093a0961c1f54d70526d037e304e8",
+      "source": "session65-root/multiperfect/REPORT.md"
+    },
+    {
+      "bytes": 398,
+      "sha256": "868a4474c3afa988409f5dead7a6d8361f251896ba5d91c47f7ae1cfd207e323",
+      "source": "session65-root/multiperfect/SHA256SUMS"
+    },
+    {
+      "bytes": 1900,
+      "sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5",
+      "source": "session65-root/multiperfect/check.py"
+    },
+    {
+      "bytes": 6574,
+      "sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc",
+      "source": "session65-root/multiperfect/inherited-HYP-3546.md"
+    },
+    {
+      "bytes": 5363,
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "source": "session65-root/multiperfect/normal.json"
+    },
+    {
+      "bytes": 5363,
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "source": "session65-root/multiperfect/optimized.json"
+    },
+    {
+      "bytes": 2031,
+      "sha256": "c01d05ddaa528c77c8ec3af604786514884b35fccc96b2a02f7ae9e198c909d0",
+      "source": "session65-twentyfive/ALLOWLIST.txt"
+    },
+    {
+      "bytes": 8240,
+      "sha256": "11bb06053495d41a9e82af4ff41974f1b01b76cd3d99939d51b0bf425a81d2b6",
+      "source": "session65-twentyfive/MANIFEST.json"
+    },
+    {
+      "bytes": 4813,
+      "sha256": "bbb85de3f7721f062862c8cdc0fd7ae24dc035f19540c5ffa8d3bb4050fd0a21",
+      "source": "session65-twentyfive/RECEIPT.json"
+    },
+    {
+      "bytes": 18174,
+      "sha256": "ab758cf6229a09163567f50ad2a07af4c4a25116bd0667e2845e7c16353d5e23",
+      "source": "session65-twentyfive/REPORT.md"
+    },
+    {
+      "bytes": 4962,
+      "sha256": "5183f1bc8e0ea780810eb09e6571bed4f0e130d9dced09441a84913e4974fc9b",
+      "source": "session65-twentyfive/SHA256SUMS"
+    },
+    {
+      "bytes": 10656,
+      "sha256": "f6cb7b757789baeea5412c4c9c63c2af893fee5be876f2595461367ba1f6254f",
+      "source": "session65-twentyfive/SOURCE_TREE.json"
+    },
+    {
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "source": "session65-twentyfive/checks-O.json"
+    },
+    {
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "source": "session65-twentyfive/checks.json"
+    },
+    {
+      "bytes": 24771,
+      "sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1",
+      "source": "session65-twentyfive/inputs/04-computation/dihedral_tournament.py"
+    },
+    {
+      "bytes": 22204,
+      "sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e",
+      "source": "session65-twentyfive/inputs/04-computation/tropical_cluster_H.py"
+    },
+    {
+      "bytes": 25292,
+      "sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca",
+      "source": "session65-twentyfive/inputs/04-computation/weil_rh_tournament.py"
+    },
+    {
+      "bytes": 17261,
+      "sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0",
+      "source": "session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out"
+    },
+    {
+      "bytes": 17347,
+      "sha256": "3ca7ade0fbe84490c55427d10834bdc75c8e7c9c53d1e81173253efc05fd6efc",
+      "source": "session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md"
+    },
+    {
+      "bytes": 14222,
+      "sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075",
+      "source": "session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out"
+    },
+    {
+      "bytes": 21078,
+      "sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195",
+      "source": "session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out"
+    },
+    {
+      "bytes": 9856,
+      "sha256": "af0bd11dc9430d390f71cdf95552c60d5b016ce204220f1b339ffbc6fe913e96",
+      "source": "session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md"
+    },
+    {
+      "bytes": 3209,
+      "sha256": "d79368983c78a29617680fb1a38454d5b2e821299345c987c1ecdab31549cda4",
+      "source": "session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md"
+    },
+    {
+      "bytes": 4841,
+      "sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72",
+      "source": "session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md"
+    },
+    {
+      "bytes": 2361,
+      "sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5",
+      "source": "session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md"
+    },
+    {
+      "bytes": 6064,
+      "sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f",
+      "source": "session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md"
+    },
+    {
+      "bytes": 2337,
+      "sha256": "b520828716efff589d425996731b70e15a05744029884948eb69faf4ed8839a6",
+      "source": "session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md"
+    },
+    {
+      "bytes": 91375,
+      "sha256": "89b6fdd98244b11d56627eae35812ad1de081bc230aa35d5558a446ca767b04c",
+      "source": "session65-twentyfive/inputs/cryptids/Cryptids/Goldbach21.lean"
+    },
+    {
+      "bytes": 3274,
+      "sha256": "de1d5b33b89df3bb92bffca71a726e5e675daed5b5c5aebcd1ec31cb65486a0a",
+      "source": "session65-twentyfive/inputs/cryptids/Cryptids/Semantics/Goldbach.lean"
+    },
+    {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "session65-twentyfive/inputs/cryptids/LICENSE"
+    },
+    {
+      "bytes": 8627,
+      "sha256": "f59f80f9f07a7744c1ac38430bfc8b22588948c7bfa82540fc5fd4ef53e6d9ba",
+      "source": "session65-twentyfive/inputs/cryptids/README.md"
+    },
+    {
+      "bytes": 200,
+      "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c",
+      "source": "session65-twentyfive/inputs/goldbach_tm/.github/workflows/lean_action_ci.yml"
+    },
+    {
+      "bytes": 6985,
+      "sha256": "8506d17f5d8d0f707782d032291a600f228305b07a97e0fb3dae1f1143ecb857",
+      "source": "session65-twentyfive/inputs/goldbach_tm/26_to_25.md"
+    },
+    {
+      "bytes": 629,
+      "sha256": "314836ec6e8ecaebd433e25d2bdb4c9fb9118e58151ab41b05002670365ecea4",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm.lean"
+    },
+    {
+      "bytes": 4194,
+      "sha256": "e862b629dd2388b55686b5f9e830634ace0a0b60617882e2ca400d0925ef6267",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Basic.lean"
+    },
+    {
+      "bytes": 116,
+      "sha256": "56ee595d5e9a2e6380cf549760d43be9d884dbae33e0627c484ee27fa92b4736",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Format.lean"
+    },
+    {
+      "bytes": 1361,
+      "sha256": "5d5dcdb627761ffb1d35893cd7099cbc2517c1f28d96a2945135ae00189ec7a3",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/ListBlank.lean"
+    },
+    {
+      "bytes": 3386,
+      "sha256": "c6903fe3294e08fcef8709fc5a5ab223821d3e315c10b7b99f6d3b84a44187de",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean"
+    },
+    {
+      "bytes": 4315,
+      "sha256": "1c92313d6878b8b63593bc16300f15c0a4e670699f5fbb6528813f547e5077de",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean"
+    },
+    {
+      "bytes": 7413,
+      "sha256": "df885722eacea266de412eb27cc41f79f808362ac51ca425ed6747ba2ccb6dbc",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean"
+    },
+    {
+      "bytes": 16370,
+      "sha256": "4afda6358ef645f54a28018bf0da3eca36bd3c4dd60b4a6d64e2c46dc9949f89",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean"
+    },
+    {
+      "bytes": 8138,
+      "sha256": "0982b99f4f4240440a28b344d69045853f850ccb75766915f07f93140a627fce",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean"
+    },
+    {
+      "bytes": 1129,
+      "sha256": "9f868951849f5690556c3f08a04c0fb96ba575cc61c299ce535fdad56365cbd9",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean"
+    },
+    {
+      "bytes": 318,
+      "sha256": "f5b2846a68dc001d884d44fd64ed344221159fd4449459a63ee538c77b67a7b9",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean"
+    },
+    {
+      "bytes": 1319,
+      "sha256": "b889d7369d6d802bac96728c1742e8d733dc083f177fefec8b38d0b82c402e22",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean"
+    },
+    {
+      "bytes": 7543,
+      "sha256": "9fa72dad7c4b903747ab81debe6cc1a068e9cf548fe1a10ab0b33375e791e9e0",
+      "source": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean"
+    },
+    {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source": "session65-twentyfive/inputs/goldbach_tm/LICENSE"
+    },
+    {
+      "bytes": 3118,
+      "sha256": "c7602c58bd2ab7fba6541f8436cb03e125545252100f16ab2f2fd19639a6f2e6",
+      "source": "session65-twentyfive/inputs/goldbach_tm/lake-manifest.json"
+    },
+    {
+      "bytes": 539,
+      "sha256": "50490dc263747af3482a649966ce2a07514d20649332ed53eac75fa4c4c5dfac",
+      "source": "session65-twentyfive/inputs/goldbach_tm/lakefile.lean"
+    },
+    {
+      "bytes": 29,
+      "sha256": "d52d5cdb3e01a10bfad5a9ff41525619b09c1da9ec7be25b232a37216ede2df4",
+      "source": "session65-twentyfive/inputs/goldbach_tm/lean-toolchain"
+    },
+    {
+      "bytes": 2913,
+      "sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea",
+      "source": "session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md"
+    },
+    {
+      "bytes": 17494,
+      "sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30",
+      "source": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out"
+    },
+    {
+      "bytes": 19936,
+      "sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9",
+      "source": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py"
+    },
+    {
+      "bytes": 6861,
+      "sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0",
+      "source": "session65-twentyfive/verify.py"
+    },
+    {
+      "bytes": 11842,
+      "sha256": "598dad7b38dca598e1bc769827aa724844d807193d7ff4be48d2d5f6781b1674",
+      "source": "session65-weakcollatz/REPORT.md"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results_optimized.json"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results_recheck.json"
+    },
+    {
+      "bytes": 2225,
+      "sha256": "1906b71327574a915ba30121dbf92ba5c109407e77b8d82fe0978a7c170a9f65",
+      "source": "session65-weakcollatz/verification_receipt.json"
+    },
+    {
+      "bytes": 2790,
+      "sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+      "source": "session65-weakcollatz/verify_bridge.py"
+    }
+  ],
+  "status": "EXACT_LOCAL_DEPENDENCY_ALLOWLIST"
+}

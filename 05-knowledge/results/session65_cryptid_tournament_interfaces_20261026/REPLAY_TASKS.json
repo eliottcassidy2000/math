@@ -124,5 +124,50 @@
       "-I",
       "-B"
     ]
+  },
+  {
+    "script": "session65-root/fifteen-kernel/check.py",
+    "stored_stdout": "session65-root/fifteen-kernel/normal.json",
+    "timeout": 120,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "script": "session65-audit-synthesis/portable_check.py",
+    "stored_stdout": "session65-audit-synthesis/portable-normal.json",
+    "timeout": 120
+  },
+  {
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "script": "session65-audit-synthesis/portable_hostiles.py",
+    "stored_stdout": "session65-audit-synthesis/portable-hostiles.json",
+    "timeout": 600
+  },
+  {
+    "script": "session65-k-write/check.py",
+    "stored_stdout": "session65-k-write/normal.json",
+    "timeout": 120,
+    "python_flags": [
+      "-I",
+      "-B"
+    ]
+  },
+  {
+    "script": "session65-palindrome-guard/check.py",
+    "stored_stdout": "session65-palindrome-guard/normal.json",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "timeout": 120
   }
 ]

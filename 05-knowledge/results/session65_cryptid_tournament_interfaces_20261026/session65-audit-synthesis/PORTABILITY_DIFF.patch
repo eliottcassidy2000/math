@@ -1,0 +1,66 @@
+--- independent_check.py (historical unchanged)
++++ portable_check.py
+@@ -1,4 +1,7 @@
+-"""Independent finite audit; no producer imports or whole-tournament census."""
++"""Portable audit: exact shipped pins plus one historical external scan observation.
++Mathematical body is byte-identical to the historical independent checker.
++No repository checkout, Git, network, image copying, or external execution.
++"""
+ from collections import Counter
+ from hashlib import sha256
+ from itertools import combinations, product
+@@ -16,6 +19,22 @@
+ def digest(path):
+     return sha256(path.read_bytes()).hexdigest()
+ 
++# Exact local dependency closure; the one external scan is not a runtime file.
++EXPECTED_EXTERNAL = {'path': 'session65-fifteens/sloane1973p98.jpg', 'source_url': 'https://neilsloane.com/doc/persistence.2.jpg', 'sha256': '2e2b51802a88dc7e3c785237f58605f06db5f7a8eb424bb465ed79f901071328', 'classification': 'EXTERNAL_NONRUNTIME', 'evidence': 'Previously inspected in the historical fifteens audit; not distributed, read, or locally reverified by this portable entrypoint.'}
++need(digest(HERE / 'PORTABLE_INPUTS.json') == 'f1c7e48d4635eec457ab020852a4314af90e009cfbca1c9d9df7b9dc9a66ed0f',
++     'portable dependency allowlist changed')
++portable_inputs = json.loads((HERE / 'PORTABLE_INPUTS.json').read_text())
++need(portable_inputs['external_nonruntime_inputs'] == [EXPECTED_EXTERNAL],
++     'undeclared external exclusion in portable dependency allowlist')
++for row in portable_inputs['files']:
++    path = BASE / row['source']
++    need(path.is_file(), 'missing local dependency: ' + row['source'])
++    need(path.stat().st_size == row['bytes'], 'local dependency byte count: ' + row['source'])
++    need(digest(path) == row['sha256'], 'local dependency hash: ' + row['source'])
++need(json.loads((HERE / 'EXTERNAL_NONRUNTIME_INPUTS.json').read_text()) ==
++     {'inputs': [EXPECTED_EXTERNAL]}, 'undeclared external exclusion')
++external_observations = []
++
+ pins = json.loads((HERE / 'SOURCE_PINS.json').read_text())
+ for row in pins['files']:
+     path = BASE / row['path']
+@@ -26,6 +45,12 @@
+ seal_rows = 0
+ def verify_one(root, rel, expected):
+     global seal_rows
++    relative = (root / rel).relative_to(BASE).as_posix()
++    if relative == EXPECTED_EXTERNAL['path']:
++        need(expected == EXPECTED_EXTERNAL['sha256'], 'external observation hash changed')
++        external_observations.append({**EXPECTED_EXTERNAL, 'locally_verified': False})
++        return
++    need((root / rel).is_file(), 'missing inherited local dependency: ' + relative)
+     need(digest(root / rel) == expected, 'inherited seal: ' + str(root / rel))
+     seal_rows += 1
+ 
+@@ -64,6 +89,8 @@
+ need(digest(BASE / 'session65-reductions/REPORT.md') ==
+      json.loads((BASE / 'session65-audit-reductions/MANIFEST.json').read_text())['producer_report_sha256'],
+      'reductions audited report identity')
++
++need(len(external_observations) == 1, 'exactly one external scan observation required')
+ 
+ # Generate all matchings by filtering every three-element subset of the full
+ # duad carrier, not by the producer's recursive partner construction.
+@@ -203,6 +230,9 @@
+     'duads_under_triple_transposition': audit('duads_under_triple_transposition', D, [1,0,3,2,5,4], (3,6))
+ }
+ print(json.dumps({'status': 'PASS', 'source_pins_checked': len(pins['files']), 'inherited_seal_rows_checked': seal_rows,
++                  'portable_dependency_pins_checked': len(portable_inputs['files']),
++                  'external_nonruntime_observations': external_observations,
++                  'portable_scope': 'Shipped dependencies locally verified; excluded scan is historical evidence only.',
+                   'carriers': {'duads': D, 'synthemes': M, 'matching_candidates': 455,
+                                'symplectic_classes': 16, 'lagrangians': 15, 'flags': 45},
+                   'results': results,

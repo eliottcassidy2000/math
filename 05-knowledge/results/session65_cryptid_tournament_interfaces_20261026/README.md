@@ -1,6 +1,6 @@
 # Session 65: guarded machines and faithful tournament interfaces
 
-**Second independently audited checkpoint — 2026-10-26.** The exact statements
+**Final independently audited research checkpoint — 2026-10-26.** The exact statements
 below are separated from cited external results and bounded computation.
 No global arithmetic conjecture, new asymptotic machine classification, or
 unrestricted tournament-connectivity result is claimed.
@@ -86,11 +86,55 @@ decidability. Its [independent audit](session65-audit-reductions/REPORT.md) and
 all eleven pinned inputs, identical mathematical consequences, and missing/
 wrong-byte/provenance hostile controls without requiring Git at replay time.
 
+### A common framework, with necessary obstruction tests
+
+The [synthesis](session65-root/SYNTHESIS.md) and
+[connection framework](session65-root/CONNECTIONS.md) organize the results by
+carrier, dynamics, observation, preserved predicate, and explicit obstruction.
+They do not identify the open problems with one another. The
+[fifteen-kernel corollary](session65-root/fifteen-kernel/REPORT.md) realizes the
+signed-pair formula on the actual fifteen duads and fifteen synthemes:
+transposition defects have minima 4 and 6, respectively. The
+[independent integration audit](session65-audit-synthesis/REPORT.md) verifies
+all actual pair orbits and literal minimizers, not a census of all 2^105
+orientations. Its [portable amendment](session65-audit-synthesis/PORTABILITY_AMENDMENT.md)
+retains all mathematics, checks 174 shipped dependencies, and explicitly labels
+the one omitted historical source scan as not locally verified.
+
+The additional [literal-write obstruction](session65-k-write/REPORT.md) proves
+that a finite chain of full-order, fixed-label K operations cannot implement
+one literal tape-bit write when n=3m and m is 2 or 3 modulo4. This parity gate
+does not prohibit unlabelled or relabel-enabled simulations, local-factor K,
+or padded/gadget encodings; bypassing it is not a sufficiency theorem.
+
+The separately checked [palindrome guard](session65-palindrome-guard/REPORT.md)
+sharpens the native-color gate: E(w) is pure blue exactly for palindromic w;
+otherwise every Hamiltonian word is black. Framing as E(0w1) removes this
+particular black-move obstruction, not the remaining K-simulation problem.
+The native-K discussion is for positive order; the empty tape has only its
+explicit vacuous color convention. This appendix leaves the sealed synthesis
+unchanged and has its own frozen normal/optimized replay.
+
+### Preserved incoming work and scope corrections
+
+The incoming analogy packet is historical and is not covered by Session65's
+mathematical audits. Read the [incoming-review overlay](session65-incoming-review/REPORT.md)
+before using its classification claims: it corrects the common-target/fixed-Pi2
+scope, separates JC2 from DC2, supplies the audited LRC finite-check scope, and
+repairs Goldbach machine lineage and verification labels. Original incoming
+bytes are retained. Later concurrent and pre-audit packets are preserved, not
+silently promoted into this session's conclusions.
+
+In particular, the incoming standalone Bell correction concerns the separate
+three-state table `1RB0LC_1RC1RA_1LA0RB`; our named bouncer-plus-bell example is
+the four-state table `1RB0LA_0RC1LA_1RD0RA_0LB1RB`. Neither correction nor macro
+formula is transferred between these different machines.
+
 ## Evidence and reproduction
 
 The [concept board](CONCEPT_BOARD.md) records preserved predicates, losses and
 hostiles. Both lanes have separate independent audits and deterministic
-normal/optimized receipts. The cumulative second checkpoint runs fourteen authored mathematical/provenance
+normal/optimized receipts. The cumulative final checkpoint runs nineteen authored mathematical/provenance
 checkers and hostile-test drivers in both Python modes, including every shipped
 runtime dependency. A C compiler (`gcc`) is required for the independently
 authored native MB replay; no external machine simulator is bundled. From this packet directory:

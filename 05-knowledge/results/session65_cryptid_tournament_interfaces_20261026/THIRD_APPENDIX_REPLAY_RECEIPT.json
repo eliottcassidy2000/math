@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 1,
+  "successful_runs": 2,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "session65-palindrome-guard/check.py",
+      "mode": "normal",
+      "source_sha256": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-appendix-replays/normal-wlzjvywc/packet/session65-palindrome-guard/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.782918,
+      "stdout_sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-palindrome-guard/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-palindrome-guard/check.py",
+      "mode": "optimized",
+      "source_sha256": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-appendix-replays/optimized-rzd092ip/packet/session65-palindrome-guard/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.478967,
+      "stdout_sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-palindrome-guard/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    }
+  ]
+}

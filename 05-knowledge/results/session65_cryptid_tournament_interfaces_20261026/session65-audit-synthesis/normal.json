@@ -1,0 +1,3939 @@
+{
+  "carriers": {
+    "duads": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "flags": 45,
+    "lagrangians": 15,
+    "matching_candidates": 455,
+    "symplectic_classes": 16,
+    "synthemes": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    ]
+  },
+  "inherited_seal_rows_checked": 230,
+  "results": {
+    "duads_under_transposition": {
+      "actual_permutation": [
+        0,
+        5,
+        6,
+        7,
+        8,
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "all_pair_orbits": [
+        {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              9
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              10
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              11
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              3
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              5
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              8
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              9
+            ],
+            [
+              5,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              10
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              11
+            ],
+            [
+              5,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              12
+            ],
+            [
+              5,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              13
+            ],
+            [
+              5,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              14
+            ],
+            [
+              5,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              3
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              4
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              6
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              8
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              9
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              11
+            ],
+            [
+              6,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              12
+            ],
+            [
+              6,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              13
+            ],
+            [
+              6,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              14
+            ],
+            [
+              6,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              4
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              7
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              3,
+              8
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              9
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              11
+            ],
+            [
+              7,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              12
+            ],
+            [
+              7,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              13
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              14
+            ],
+            [
+              7,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              8
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              4,
+              9
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              10
+            ],
+            [
+              8,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              11
+            ],
+            [
+              8,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              12
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              13
+            ],
+            [
+              8,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              14
+            ],
+            [
+              8,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              10
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              11
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              11
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              11,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              11,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              11,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              12,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              12,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              13,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        }
+      ],
+      "doubleton_flip_defect": 6,
+      "fixed_vertices": 7,
+      "independent_minimizer_rows": [
+        0,
+        1,
+        35,
+        103,
+        239,
+        3,
+        39,
+        111,
+        255,
+        511,
+        1023,
+        2047,
+        4095,
+        8191,
+        16383
+      ],
+      "local_assignments_checked": 210,
+      "minimum_defect": 4,
+      "polynomial": "2^65 z^4 (1+z^2)^40",
+      "polynomial_coefficients_0_to_105": [
+        0,
+        0,
+        0,
+        0,
+        36893488147419103232,
+        0,
+        1475739525896764129280,
+        0,
+        28776920754986900520960,
+        0,
+        364507662896500739932160,
+        0,
+        3371695881792631844372480,
+        0,
+        24276210348906949279481856,
+        0,
+        141611227035290537463644160,
+        0,
+        687825959885696896251985920,
+        0,
+        2837282084528499697039441920,
+        0,
+        10088114078323554478362460160,
+        0,
+        31273153642803018882923626496,
+        0,
+        85290419025826415135246254080,
+        0,
+        206118512645747169910178447360,
+        0,
+        443947565698532365960384348160,
+        0,
+        856184590990026705780741242880,
+        0,
+        1484053291049379623353284820992,
+        0,
+        2318833267264655661489507532800,
+        0,
+        3273646965550102110338128281600,
+        0,
+        4182993344869574918765386137600,
+        0,
+        4843465978270034116465183948800,
+        0,
+        5085639277183535822288443146240,
+        0,
+        4843465978270034116465183948800,
+        0,
+        4182993344869574918765386137600,
+        0,
+        3273646965550102110338128281600,
+        0,
+        2318833267264655661489507532800,
+        0,
+        1484053291049379623353284820992,
+        0,
+        856184590990026705780741242880,
+        0,
+        443947565698532365960384348160,
+        0,
+        206118512645747169910178447360,
+        0,
+        85290419025826415135246254080,
+        0,
+        31273153642803018882923626496,
+        0,
+        10088114078323554478362460160,
+        0,
+        2837282084528499697039441920,
+        0,
+        687825959885696896251985920,
+        0,
+        141611227035290537463644160,
+        0,
+        24276210348906949279481856,
+        0,
+        3371695881792631844372480,
+        0,
+        364507662896500739932160,
+        0,
+        28776920754986900520960,
+        0,
+        1475739525896764129280,
+        0,
+        36893488147419103232,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "root_literal_minimizer_valid": true,
+      "swapped_vertex_pairs": 4,
+      "unordered_pair_orbits": 65,
+      "unordered_pairs": 105
+    },
+    "duads_under_triple_transposition": {
+      "actual_permutation": [
+        0,
+        6,
+        5,
+        8,
+        7,
+        2,
+        1,
+        4,
+        3,
+        9,
+        13,
+        12,
+        11,
+        10,
+        14
+      ],
+      "all_pair_orbits": [
+        {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              9
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              10
+            ],
+            [
+              0,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              11
+            ],
+            [
+              0,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              2
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              3
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              6
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              1,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              8
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              9
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              10
+            ],
+            [
+              6,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              11
+            ],
+            [
+              6,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              12
+            ],
+            [
+              6,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              13
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              14
+            ],
+            [
+              6,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              3
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              5
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              9
+            ],
+            [
+              5,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              10
+            ],
+            [
+              5,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              11
+            ],
+            [
+              5,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              12
+            ],
+            [
+              5,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              13
+            ],
+            [
+              5,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              14
+            ],
+            [
+              5,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              4
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              8
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              3,
+              9
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              10
+            ],
+            [
+              8,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              11
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              12
+            ],
+            [
+              8,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              13
+            ],
+            [
+              8,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              14
+            ],
+            [
+              8,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              7
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              4,
+              9
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              10
+            ],
+            [
+              7,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              11
+            ],
+            [
+              7,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              12
+            ],
+            [
+              7,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              13
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              14
+            ],
+            [
+              7,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              10
+            ],
+            [
+              9,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              11
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              9,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              11
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              12
+            ],
+            [
+              11,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              10,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              10,
+              14
+            ],
+            [
+              13,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              11,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              11,
+              14
+            ],
+            [
+              12,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        }
+      ],
+      "doubleton_flip_defect": 8,
+      "fixed_vertices": 3,
+      "independent_minimizer_rows": [
+        0,
+        1,
+        67,
+        103,
+        367,
+        71,
+        3,
+        383,
+        111,
+        511,
+        1023,
+        10239,
+        12287,
+        2047,
+        16383
+      ],
+      "local_assignments_checked": 210,
+      "minimum_defect": 6,
+      "polynomial": "2^57 z^6 (1+z^2)^48",
+      "polynomial_coefficients_0_to_105": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        144115188075855872,
+        0,
+        6917529027641081856,
+        0,
+        162561932149565423616,
+        0,
+        2492616292960003162112,
+        0,
+        28041933295800035573760,
+        0,
+        246769013003040313049088,
+        0,
+        1768511259855122243518464,
+        0,
+        10611067559130733461110784,
+        0,
+        54381721240545008988192768,
+        0,
+        241696538846866706614190080,
+        0,
+        942616501502780155795341312,
+        0,
+        3256311550645967810929360896,
+        0,
+        10040293947825067417032196096,
+        0,
+        27803890932438648231781466112,
+        0,
+        69509727331096620579453665280,
+        0,
+        157555381950485673313428307968,
+        0,
+        324957975272876701208945885184,
+        0,
+        611685600513650261099192254464,
+        0,
+        1053458534217953227448608882688,
+        0,
+        1663355580344136674918856130560,
+        0,
+        2411865591498998178632341389312,
+        0,
+        3215820788665330904843121852416,
+        0,
+        3946689149725633383216558637056,
+        0,
+        4461474690994194259288283676672,
+        0,
+        4647369469785619020091962163200,
+        0,
+        4461474690994194259288283676672,
+        0,
+        3946689149725633383216558637056,
+        0,
+        3215820788665330904843121852416,
+        0,
+        2411865591498998178632341389312,
+        0,
+        1663355580344136674918856130560,
+        0,
+        1053458534217953227448608882688,
+        0,
+        611685600513650261099192254464,
+        0,
+        324957975272876701208945885184,
+        0,
+        157555381950485673313428307968,
+        0,
+        69509727331096620579453665280,
+        0,
+        27803890932438648231781466112,
+        0,
+        10040293947825067417032196096,
+        0,
+        3256311550645967810929360896,
+        0,
+        942616501502780155795341312,
+        0,
+        241696538846866706614190080,
+        0,
+        54381721240545008988192768,
+        0,
+        10611067559130733461110784,
+        0,
+        1768511259855122243518464,
+        0,
+        246769013003040313049088,
+        0,
+        28041933295800035573760,
+        0,
+        2492616292960003162112,
+        0,
+        162561932149565423616,
+        0,
+        6917529027641081856,
+        0,
+        144115188075855872,
+        0,
+        0,
+        0
+      ],
+      "root_literal_minimizer_valid": true,
+      "swapped_vertex_pairs": 6,
+      "unordered_pair_orbits": 57,
+      "unordered_pairs": 105
+    },
+    "synthemes_under_transposition": {
+      "actual_permutation": [
+        0,
+        1,
+        2,
+        6,
+        9,
+        12,
+        3,
+        10,
+        13,
+        4,
+        7,
+        14,
+        5,
+        8,
+        11
+      ],
+      "all_pair_orbits": [
+        {
+          "edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              2
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              7
+            ],
+            [
+              0,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              8
+            ],
+            [
+              0,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              0,
+              11
+            ],
+            [
+              0,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              2
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            2,
+            0
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              1,
+              11
+            ],
+            [
+              1,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              7
+            ],
+            [
+              2,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              8
+            ],
+            [
+              2,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              2,
+              11
+            ],
+            [
+              2,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              6
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              3,
+              7
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              8
+            ],
+            [
+              6,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              10
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              11
+            ],
+            [
+              6,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              12
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              13
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              3,
+              14
+            ],
+            [
+              6,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              5
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              7
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              8
+            ],
+            [
+              9,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              9
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              4,
+              10
+            ],
+            [
+              7,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              11
+            ],
+            [
+              9,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              12
+            ],
+            [
+              5,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              13
+            ],
+            [
+              8,
+              9
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              4,
+              14
+            ],
+            [
+              9,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              7
+            ],
+            [
+              10,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              8
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              10
+            ],
+            [
+              7,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              11
+            ],
+            [
+              12,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              12
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              5,
+              13
+            ],
+            [
+              8,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              5,
+              14
+            ],
+            [
+              11,
+              12
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              7,
+              8
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              7,
+              10
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              7,
+              11
+            ],
+            [
+              10,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              7,
+              13
+            ],
+            [
+              8,
+              10
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              7,
+              14
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              8,
+              11
+            ],
+            [
+              13,
+              14
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              8,
+              13
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        },
+        {
+          "edges": [
+            [
+              8,
+              14
+            ],
+            [
+              11,
+              13
+            ]
+          ],
+          "length": 2,
+          "local_coefficients": [
+            2,
+            0,
+            2
+          ],
+          "sign": 1
+        },
+        {
+          "edges": [
+            [
+              11,
+              14
+            ]
+          ],
+          "length": 1,
+          "local_coefficients": [
+            0,
+            2
+          ],
+          "sign": -1
+        }
+      ],
+      "doubleton_flip_defect": 8,
+      "fixed_vertices": 3,
+      "independent_minimizer_rows": [
+        0,
+        1,
+        3,
+        7,
+        79,
+        607,
+        15,
+        4735,
+        5887,
+        95,
+        4863,
+        14335,
+        639,
+        6143,
+        16383
+      ],
+      "local_assignments_checked": 210,
+      "minimum_defect": 6,
+      "polynomial": "2^57 z^6 (1+z^2)^48",
+      "polynomial_coefficients_0_to_105": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        144115188075855872,
+        0,
+        6917529027641081856,
+        0,
+        162561932149565423616,
+        0,
+        2492616292960003162112,
+        0,
+        28041933295800035573760,
+        0,
+        246769013003040313049088,
+        0,
+        1768511259855122243518464,
+        0,
+        10611067559130733461110784,
+        0,
+        54381721240545008988192768,
+        0,
+        241696538846866706614190080,
+        0,
+        942616501502780155795341312,
+        0,
+        3256311550645967810929360896,
+        0,
+        10040293947825067417032196096,
+        0,
+        27803890932438648231781466112,
+        0,
+        69509727331096620579453665280,
+        0,
+        157555381950485673313428307968,
+        0,
+        324957975272876701208945885184,
+        0,
+        611685600513650261099192254464,
+        0,
+        1053458534217953227448608882688,
+        0,
+        1663355580344136674918856130560,
+        0,
+        2411865591498998178632341389312,
+        0,
+        3215820788665330904843121852416,
+        0,
+        3946689149725633383216558637056,
+        0,
+        4461474690994194259288283676672,
+        0,
+        4647369469785619020091962163200,
+        0,
+        4461474690994194259288283676672,
+        0,
+        3946689149725633383216558637056,
+        0,
+        3215820788665330904843121852416,
+        0,
+        2411865591498998178632341389312,
+        0,
+        1663355580344136674918856130560,
+        0,
+        1053458534217953227448608882688,
+        0,
+        611685600513650261099192254464,
+        0,
+        324957975272876701208945885184,
+        0,
+        157555381950485673313428307968,
+        0,
+        69509727331096620579453665280,
+        0,
+        27803890932438648231781466112,
+        0,
+        10040293947825067417032196096,
+        0,
+        3256311550645967810929360896,
+        0,
+        942616501502780155795341312,
+        0,
+        241696538846866706614190080,
+        0,
+        54381721240545008988192768,
+        0,
+        10611067559130733461110784,
+        0,
+        1768511259855122243518464,
+        0,
+        246769013003040313049088,
+        0,
+        28041933295800035573760,
+        0,
+        2492616292960003162112,
+        0,
+        162561932149565423616,
+        0,
+        6917529027641081856,
+        0,
+        144115188075855872,
+        0,
+        0,
+        0
+      ],
+      "root_literal_minimizer_valid": true,
+      "swapped_vertex_pairs": 6,
+      "unordered_pair_orbits": 57,
+      "unordered_pairs": 105
+    }
+  },
+  "scope": "Complete edge-orbit factorization and literal minimizers, not enumeration of 2^105 tournaments; no full outer automorphism or arithmetic Richelot proof.",
+  "source_pins_checked": 88,
+  "status": "PASS"
+}

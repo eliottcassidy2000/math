@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    {
+      "classification": "EXTERNAL_NONRUNTIME",
+      "evidence": "Previously inspected in the historical fifteens audit; not distributed, read, or locally reverified by this portable entrypoint.",
+      "path": "session65-fifteens/sloane1973p98.jpg",
+      "sha256": "2e2b51802a88dc7e3c785237f58605f06db5f7a8eb424bb465ed79f901071328",
+      "source_url": "https://neilsloane.com/doc/persistence.2.jpg"
+    }
+  ]
+}

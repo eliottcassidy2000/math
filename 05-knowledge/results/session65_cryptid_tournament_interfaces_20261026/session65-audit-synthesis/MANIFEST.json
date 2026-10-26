@@ -1,0 +1,52 @@
+{
+  "assert_statements": 0,
+  "date": "2026-10-26",
+  "external_code_executed": false,
+  "files": [
+    {
+      "bytes": 12141,
+      "path": "REPORT.md",
+      "sha256": "591f6e1fdd01e09923fc8e82fe09c9746c5df86c2db43ed029a2d9c3d01d7861"
+    },
+    {
+      "bytes": 15698,
+      "path": "SOURCE_PINS.json",
+      "sha256": "100da70fc8529d2eb3475b8cd13b48597b412bd0416d0dc3a7b54fb1e29f5f2c"
+    },
+    {
+      "bytes": 10683,
+      "path": "independent_check.py",
+      "sha256": "645ccddfb5e436ef5fef4b5a8977eefcb7af3a708b976dd66bad0b433e3efccb"
+    },
+    {
+      "bytes": 65919,
+      "path": "normal.json",
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0"
+    },
+    {
+      "bytes": 65919,
+      "path": "optimized.json",
+      "sha256": "11ee8690fbbe001fb80f7aba0b9c187c212a8623c6a685e6493ef89dc2fc45c0"
+    },
+    {
+      "bytes": 3295,
+      "path": "root-corollary-normal.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118"
+    },
+    {
+      "bytes": 3295,
+      "path": "root-corollary-optimized.json",
+      "sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118"
+    }
+  ],
+  "inherited_seal_rows_checked": 230,
+  "local_formal_build": "NOT RUN",
+  "long_runs_repeated": false,
+  "normal_optimized_byte_identical": true,
+  "python": "3.12.14",
+  "remaining_blockers": [],
+  "repository_mutated": false,
+  "root_corollary_replay_matches": true,
+  "source_pins_checked": 88,
+  "status": "PASS_SCOPED_INDEPENDENT_INTEGRATION_AUDIT"
+}

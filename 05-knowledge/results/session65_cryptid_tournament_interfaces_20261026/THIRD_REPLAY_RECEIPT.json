@@ -1,0 +1,770 @@
+{
+  "status": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "script_count": 19,
+  "successful_runs": 38,
+  "normal_optimized_outputs_match": true,
+  "original_sources_unchanged": true,
+  "runs": [
+    {
+      "script": "session65-cryptids/check.py",
+      "mode": "normal",
+      "source_sha256": "ad88b82106aa9d517f7f2f4a56d50abf00b0086eacff80c4d0e64a6c3b6fd4b1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-cryptids/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.368709,
+      "stdout_sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-cryptids/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-cryptids/independent_check.py",
+      "mode": "normal",
+      "source_sha256": "ced3f2c592a97d04bba4bff10a6f7712d6ba39f5201e0662ce53cd83e04e672a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-cryptids/independent_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 4.324684,
+      "stdout_sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-cryptids/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-fifteens/check.py",
+      "mode": "normal",
+      "source_sha256": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-fifteens/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.822882,
+      "stdout_sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-fifteens/receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-fifteens/check_general_permutation.py",
+      "mode": "normal",
+      "source_sha256": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-fifteens/check_general_permutation.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.399152,
+      "stdout_sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-fifteens/general-receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-fifteens/independent_check.py",
+      "mode": "normal",
+      "source_sha256": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-fifteens/independent_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.88045,
+      "stdout_sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-fifteens/receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-weakcollatz/verify_bridge.py",
+      "mode": "normal",
+      "source_sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-weakcollatz/verify_bridge.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 5.550415,
+      "stdout_sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-weakcollatz/bridge_results.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-weakcollatz/portable_math_audit.py",
+      "mode": "normal",
+      "source_sha256": "2cfeb3f33c284bf5545dc032938ff12f7300035249bac747771dd151439f6445",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-weakcollatz/portable_math_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.095423,
+      "stdout_sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-weakcollatz/portable_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-twentyfive/verify.py",
+      "mode": "normal",
+      "source_sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-twentyfive/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.112961,
+      "stdout_sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-twentyfive/checks.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-goldbach/goldbach/check.py",
+      "mode": "normal",
+      "source_sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-goldbach/goldbach/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.257424,
+      "stdout_sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-goldbach/goldbach/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-root/multiperfect/check.py",
+      "mode": "normal",
+      "source_sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-root/multiperfect/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.218547,
+      "stdout_sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-root/multiperfect/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-goldbach/multiperfect/check.py",
+      "mode": "normal",
+      "source_sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-goldbach/multiperfect/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.714407,
+      "stdout_sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-goldbach/multiperfect/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-reductions/check.py",
+      "mode": "normal",
+      "source_sha256": "a5bf1c7b398393416d660008b9f7804f77de2ca39dc9592c3beaa80e68626396",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-reductions/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.624192,
+      "stdout_sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-reductions/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-reductions/portable_check.py",
+      "mode": "normal",
+      "source_sha256": "d8aeeb7049237832781c89fe229b3a8c20576737e8467267d3e2b31ab2240f08",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-reductions/portable_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.524576,
+      "stdout_sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-reductions/portable-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-reductions/portable_hostiles.py",
+      "mode": "normal",
+      "source_sha256": "7c5b30bcbc5dd021f21624152c7641e6a2ce49de553ca2eaedb6425834c51d46",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-reductions/portable_hostiles.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 15.2504,
+      "stdout_sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-reductions/portable-hostiles.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-root/fifteen-kernel/check.py",
+      "mode": "normal",
+      "source_sha256": "9b5004691541465965e9f19cd08c013142dd4f590de8b18f19473c54f29206b1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-root/fifteen-kernel/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.055798,
+      "stdout_sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-root/fifteen-kernel/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-synthesis/portable_check.py",
+      "mode": "normal",
+      "source_sha256": "0e7a59cfc09472dc22ed20acb6d8b7a2531ee6946dd7424b5151b363c53621ca",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-synthesis/portable_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.138586,
+      "stdout_sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-synthesis/portable-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-synthesis/portable_hostiles.py",
+      "mode": "normal",
+      "source_sha256": "e44b41be3cb95723fc30cb7022bd6531d008e0b7751a26d1a068efee5f0af11f",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-audit-synthesis/portable_hostiles.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 233.786968,
+      "stdout_sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-synthesis/portable-hostiles.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-k-write/check.py",
+      "mode": "normal",
+      "source_sha256": "617afba803da12224cfc08439432f854a07d80ff1c5c181adf333237cb98cb51",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/normal-4br6sdz3/packet/session65-k-write/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 4.140668,
+      "stdout_sha256": "c1aa4160bcacf8a28892dec5304f07f67dce4c813cdf1ce4e02a5be1b422144b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-k-write/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-cryptids/check.py",
+      "mode": "optimized",
+      "source_sha256": "ad88b82106aa9d517f7f2f4a56d50abf00b0086eacff80c4d0e64a6c3b6fd4b1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-cryptids/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.035449,
+      "stdout_sha256": "a3ae717a869a8f115aaa8347969308a738ad8b67d1c51a9e1caf6f070299f128",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-cryptids/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-cryptids/independent_check.py",
+      "mode": "optimized",
+      "source_sha256": "ced3f2c592a97d04bba4bff10a6f7712d6ba39f5201e0662ce53cd83e04e672a",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-cryptids/independent_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 7.41936,
+      "stdout_sha256": "9cbaad9725b6cbbfc893e8bd70a950175fb9880c408f6dc0b1b0336807b6abe2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-cryptids/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-fifteens/check.py",
+      "mode": "optimized",
+      "source_sha256": "f47c3bb192ccb4486d0d06d5ebf7037d4dceb287ee8c8660e8c8939eca326d07",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-fifteens/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.403138,
+      "stdout_sha256": "bf2503f2d89ebb3863f9823f416b24bb0b0d44f508d281b1d1438c80d7202cfd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-fifteens/receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-fifteens/check_general_permutation.py",
+      "mode": "optimized",
+      "source_sha256": "f5d12cd083ff4fc852407438986f42baa0a0d3daef0ece4b12f9d65d3432f9df",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-fifteens/check_general_permutation.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.758203,
+      "stdout_sha256": "4c45891aad52a6fdfff38dcadade2ebcffad350a201650d67f0c74dced436f6f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-fifteens/general-receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-fifteens/independent_check.py",
+      "mode": "optimized",
+      "source_sha256": "3abe0b07fcb2e26962673079e1a8a382b62d6b5fa860722fb947a4b7653f2091",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-fifteens/independent_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.202754,
+      "stdout_sha256": "b57654600bbe4cf5f45ddd803a3015a928274f4e389b56ffe5fa10bd2adad24f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-fifteens/receipt.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-weakcollatz/verify_bridge.py",
+      "mode": "optimized",
+      "source_sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-weakcollatz/verify_bridge.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 7.958455,
+      "stdout_sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-weakcollatz/bridge_results.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-weakcollatz/portable_math_audit.py",
+      "mode": "optimized",
+      "source_sha256": "2cfeb3f33c284bf5545dc032938ff12f7300035249bac747771dd151439f6445",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-weakcollatz/portable_math_audit.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.898568,
+      "stdout_sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-weakcollatz/portable_normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-twentyfive/verify.py",
+      "mode": "optimized",
+      "source_sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-twentyfive/verify.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.112796,
+      "stdout_sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-twentyfive/checks.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-goldbach/goldbach/check.py",
+      "mode": "optimized",
+      "source_sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-goldbach/goldbach/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.865675,
+      "stdout_sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-goldbach/goldbach/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-root/multiperfect/check.py",
+      "mode": "optimized",
+      "source_sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-root/multiperfect/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.282524,
+      "stdout_sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-root/multiperfect/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-goldbach/multiperfect/check.py",
+      "mode": "optimized",
+      "source_sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-goldbach/multiperfect/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.793492,
+      "stdout_sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-goldbach/multiperfect/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-reductions/check.py",
+      "mode": "optimized",
+      "source_sha256": "a5bf1c7b398393416d660008b9f7804f77de2ca39dc9592c3beaa80e68626396",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-reductions/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.337049,
+      "stdout_sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-reductions/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-reductions/portable_check.py",
+      "mode": "optimized",
+      "source_sha256": "d8aeeb7049237832781c89fe229b3a8c20576737e8467267d3e2b31ab2240f08",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-reductions/portable_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 1.602324,
+      "stdout_sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-reductions/portable-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-reductions/portable_hostiles.py",
+      "mode": "optimized",
+      "source_sha256": "7c5b30bcbc5dd021f21624152c7641e6a2ce49de553ca2eaedb6425834c51d46",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-reductions/portable_hostiles.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 15.690847,
+      "stdout_sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-reductions/portable-hostiles.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-root/fifteen-kernel/check.py",
+      "mode": "optimized",
+      "source_sha256": "9b5004691541465965e9f19cd08c013142dd4f590de8b18f19473c54f29206b1",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-root/fifteen-kernel/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.152735,
+      "stdout_sha256": "c308b357a10c37056781450ced2efd516c115ad1e97a2b7d8e76a08cb4e93118",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-root/fifteen-kernel/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-synthesis/portable_check.py",
+      "mode": "optimized",
+      "source_sha256": "0e7a59cfc09472dc22ed20acb6d8b7a2531ee6946dd7424b5151b363c53621ca",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-synthesis/portable_check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 0.309187,
+      "stdout_sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-synthesis/portable-normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-audit-synthesis/portable_hostiles.py",
+      "mode": "optimized",
+      "source_sha256": "e44b41be3cb95723fc30cb7022bd6531d008e0b7751a26d1a068efee5f0af11f",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-audit-synthesis/portable_hostiles.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 248.128019,
+      "stdout_sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-audit-synthesis/portable-hostiles.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-k-write/check.py",
+      "mode": "optimized",
+      "source_sha256": "617afba803da12224cfc08439432f854a07d80ff1c5c181adf333237cb98cb51",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-frozen-replays/optimized-_ljdk9ee/packet/session65-k-write/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.045197,
+      "stdout_sha256": "c1aa4160bcacf8a28892dec5304f07f67dce4c813cdf1ce4e02a5be1b422144b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-k-write/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-palindrome-guard/check.py",
+      "mode": "normal",
+      "source_sha256": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-appendix-replays/normal-wlzjvywc/packet/session65-palindrome-guard/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.782918,
+      "stdout_sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-palindrome-guard/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    },
+    {
+      "script": "session65-palindrome-guard/check.py",
+      "mode": "optimized",
+      "source_sha256": "6ae802d9476baa1c2375928af8b79a77cb79878c5c5faf8b14bca8445e6218ee",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session65-publication/third-appendix-replays/optimized-rzd092ip/packet/session65-palindrome-guard/check.py"
+      ],
+      "exit_code": 0,
+      "bare_assertions": 0,
+      "elapsed_seconds": 2.478967,
+      "stdout_sha256": "620cc1f636b931629784ff321f18166c639e089217bd434647c4cfbe7259882b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_stdout": "session65-palindrome-guard/normal.json",
+      "environment_overrides": {},
+      "source_unchanged": true
+    }
+  ],
+  "replay_batches": [
+    {
+      "receipt": "THIRD_MAIN_REPLAY_RECEIPT.json",
+      "scripts": 18,
+      "runs": 36
+    },
+    {
+      "receipt": "THIRD_APPENDIX_REPLAY_RECEIPT.json",
+      "scripts": 1,
+      "runs": 2
+    }
+  ],
+  "batch_scope": "Eighteen scripts in full staged packet, then palindrome appendix alone in enlarged packet; no earlier mathematical or executable input changed",
+  "non_mathematical_wrapper_changes_between_batches": [
+    "PROVENANCE.md",
+    "REPLAY_TASKS.json",
+    "THIRD_SOURCE_VERIFICATION.json",
+    "README.md"
+  ]
+}

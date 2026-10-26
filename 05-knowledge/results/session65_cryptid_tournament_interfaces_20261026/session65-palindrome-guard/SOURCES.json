@@ -1,0 +1,13 @@
+{
+  "scope": "Only the existing tape encoding/metric and native-K definitions/restrictions are inherited. New palindrome and color-invariance proofs are self-contained. No external search.",
+  "sources": [
+    {
+      "path": "session65-cryptids/REPORT.md",
+      "sha256": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d"
+    },
+    {
+      "path": "session65-k-write/REPORT.md",
+      "sha256": "9b46b4be06e4ed25a4f86864f328d3a5b54a08825d30e8f82399810ebd666383"
+    }
+  ]
+}

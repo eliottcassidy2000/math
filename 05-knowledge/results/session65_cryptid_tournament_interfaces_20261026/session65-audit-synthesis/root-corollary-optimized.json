@@ -1,0 +1,245 @@
+{
+  "duads_under_transposition": {
+    "fixed_vertices": 7,
+    "forced_defect_pairs": [
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "minimum_defect": 4,
+    "one_minimizer_rows": [
+      32766,
+      32764,
+      32728,
+      32656,
+      32512,
+      32732,
+      32664,
+      32528,
+      32256,
+      31744,
+      30720,
+      28672,
+      24576,
+      16384,
+      0
+    ],
+    "pair_orbits": [
+      {
+        "count": 21,
+        "length": 1,
+        "sign": 1
+      },
+      {
+        "count": 4,
+        "length": 1,
+        "sign": -1
+      },
+      {
+        "count": 40,
+        "length": 2,
+        "sign": 1
+      }
+    ],
+    "permutation": [
+      0,
+      5,
+      6,
+      7,
+      8,
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "polynomial": "2^65 z^4 (1+z^2)^40",
+    "swapped_pairs": 4
+  },
+  "duads_under_triple_transposition": {
+    "fixed_vertices": 3,
+    "forced_defect_pairs": [
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        11,
+        12
+      ]
+    ],
+    "minimum_defect": 6,
+    "one_minimizer_rows": [
+      32766,
+      32764,
+      32696,
+      32656,
+      32384,
+      32664,
+      32700,
+      32256,
+      32400,
+      31744,
+      30720,
+      20480,
+      16384,
+      22528,
+      0
+    ],
+    "pair_orbits": [
+      {
+        "count": 3,
+        "length": 1,
+        "sign": 1
+      },
+      {
+        "count": 6,
+        "length": 1,
+        "sign": -1
+      },
+      {
+        "count": 48,
+        "length": 2,
+        "sign": 1
+      }
+    ],
+    "permutation": [
+      0,
+      6,
+      5,
+      8,
+      7,
+      2,
+      1,
+      4,
+      3,
+      9,
+      13,
+      12,
+      11,
+      10,
+      14
+    ],
+    "polynomial": "2^57 z^6 (1+z^2)^48",
+    "swapped_pairs": 6
+  },
+  "scope": "The first two are different S6 carriers; one matched outer-cycle character is not a proof of the full outer isomorphism.",
+  "status": "PASS",
+  "synthemes_under_transposition": {
+    "fixed_vertices": 3,
+    "forced_defect_pairs": [
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        7,
+        10
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        11,
+        14
+      ]
+    ],
+    "minimum_defect": 6,
+    "one_minimizer_rows": [
+      32766,
+      32764,
+      32760,
+      32752,
+      32672,
+      32128,
+      32688,
+      27904,
+      26624,
+      32160,
+      26880,
+      16384,
+      28032,
+      18432,
+      0
+    ],
+    "pair_orbits": [
+      {
+        "count": 3,
+        "length": 1,
+        "sign": 1
+      },
+      {
+        "count": 6,
+        "length": 1,
+        "sign": -1
+      },
+      {
+        "count": 48,
+        "length": 2,
+        "sign": 1
+      }
+    ],
+    "permutation": [
+      0,
+      1,
+      2,
+      6,
+      9,
+      12,
+      3,
+      10,
+      13,
+      4,
+      7,
+      14,
+      5,
+      8,
+      11
+    ],
+    "polynomial": "2^57 z^6 (1+z^2)^48",
+    "swapped_pairs": 6
+  }
+}

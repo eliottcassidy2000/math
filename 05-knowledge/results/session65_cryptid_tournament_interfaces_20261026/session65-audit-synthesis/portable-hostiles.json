@@ -1,0 +1,2661 @@
+{
+  "authored_bridge_recheck_reproduced_both_modes": true,
+  "authored_bridge_recheck_sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+  "dependency_hostiles": [
+    {
+      "path": "session65-audit-cryptids/AMENDMENT.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/Bouncers.LICENSE.txt",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/Bouncers.source.txt",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/SOURCE_AUDIT.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/independent_check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/producer-rerun-normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-cryptids/producer-rerun-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/AUDIT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/audit-manifest.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/general-lane-replay-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/general-lane-replay.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/independent_check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/lane-replay-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/lane-replay.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/receipt-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-fifteens/receipt.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/ALLOWLIST.txt",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/INPUTS.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/MANIFEST.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/RECEIPT.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/REPO_PROVENANCE.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/SOURCE_RECEIPT.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/goldbach/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/goldbach/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/goldbach/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/goldbach/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/multiperfect/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/multiperfect/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/multiperfect/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-goldbach/multiperfect/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/MANIFEST.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/producer-normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-reductions/producer-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-synthesis/SOURCE_PINS.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-synthesis/independent_check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-synthesis/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-synthesis/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/AUDIT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/independent_audit.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/manifest.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/native_mb.c",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/native_mb.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/native_mb_unoptimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/producer_replay_normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/producer_replay_optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-audit-weakcollatz/remote_git_pin.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/SOURCES.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-cryptids/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/GENERAL_PERMUTATION.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/check_general_permutation.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/general-receipt-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/general-receipt.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-4666-class-numbers-are-ranking-excesses-of-kronecker-tournaments-and-local-optimality-of-the-natural-paley-order-excludes-a-real-zero.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/01-canon__theorems__THM-640-the-paley-bridge.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__nontransitive_fifteen_20261022__README.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__ogg_triangular_chowla_20260927.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__monster__MONSTER_BABY_PRIME_PARTITION.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session32_square_monster_20261023__paley__PALEY_MONSTER_BRIDGE.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__fifteen-kernels__README.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__session52_saturation_residues_metagraph_20261024__mrb-supersingular__RESEARCH.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/05-knowledge__results__supersingular_divisor_shapes_qseries_20261022.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4580-zeroless-powers-of-two-the-5-adic-tree-and-verification-to-1-1e11.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/THM-4764-modular-cancellation-depth-of-odd-regular-gap-actions-and-the-fifty-vertex-realization.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/cardinality_bridges_20261018m.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/inputs/session63_cancellation_RESULT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/receipt-optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/receipt.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-fifteens/source-manifest.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/MANIFEST.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/READBACK.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/SOURCE_PINS.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/00-AGENTS.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-reductions/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/CONNECTIONS.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/SYNTHESIS.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/fifteen-kernel/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/fifteen-kernel/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/fifteen-kernel/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/fifteen-kernel/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/fifteen-kernel/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/check.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/inherited-HYP-3546.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/normal.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-root/multiperfect/optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/ALLOWLIST.txt",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/MANIFEST.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/RECEIPT.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/SHA256SUMS",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/SOURCE_TREE.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/checks-O.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/checks.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/04-computation/dihedral_tournament.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/04-computation/tropical_cluster_H.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/04-computation/weil_rh_tournament.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/cryptids/Cryptids/Goldbach21.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/cryptids/Cryptids/Semantics/Goldbach.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/cryptids/LICENSE",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/cryptids/README.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/26_to_25.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/LICENSE",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/lake-manifest.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/lakefile.lean",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/goldbach_tm/lean-toolchain",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-twentyfive/verify.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/REPORT.md",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/bridge_results.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/bridge_results_optimized.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/bridge_results_recheck.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/verification_receipt.json",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    },
+    {
+      "path": "session65-weakcollatz/verify_bridge.py",
+      "rejections": [
+        {
+          "mutation": "missing_file",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        },
+        {
+          "mutation": "wrong_bytes_same_length",
+          "normal_exit": 1,
+          "optimized_exit": 1
+        }
+      ]
+    }
+  ],
+  "external_nonruntime_observations": [
+    {
+      "classification": "EXTERNAL_NONRUNTIME",
+      "evidence": "Previously inspected in the historical fifteens audit; not distributed, read, or locally reverified by this portable entrypoint.",
+      "locally_verified": false,
+      "path": "session65-fifteens/sloane1973p98.jpg",
+      "sha256": "2e2b51802a88dc7e3c785237f58605f06db5f7a8eb424bb465ed79f901071328",
+      "source_url": "https://neilsloane.com/doc/persistence.2.jpg"
+    }
+  ],
+  "frozen_environment": {
+    "ambient_PYTHONPATH_used": false,
+    "excluded_image_present": false,
+    "git_on_PATH": false,
+    "isolated_python": true,
+    "original_repository_present": false,
+    "unshipped_tinycryptids_present": false
+  },
+  "historical_mathematical_keys_identical": [
+    "carriers",
+    "results",
+    "scope"
+  ],
+  "inherited_local_seal_rows": 229,
+  "local_dependencies_checked": 174,
+  "mathematical_body_byte_identical": true,
+  "mathematical_body_sha256": "5f17100e4fb7baa69c058b93d3ce81913f3d403f2aa7a2ea5cff522c4b87b1c4",
+  "missing_and_wrong_byte_hostile_runs": 696,
+  "normal_optimized_byte_identical": true,
+  "status": "PASS_PORTABLE_FROZEN_CLOSURE_AND_HOSTILES",
+  "undeclared_exclusion_hostile_runs": 4,
+  "undeclared_exclusion_hostiles": [
+    {
+      "altered_declaration": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json",
+      "attempted_exclusion": "session65-weakcollatz/bridge_results_recheck.json",
+      "normal_exit": 1,
+      "optimized_exit": 1
+    },
+    {
+      "altered_declaration": "session65-audit-synthesis/PORTABLE_INPUTS.json",
+      "attempted_exclusion": "session65-weakcollatz/bridge_results_recheck.json",
+      "normal_exit": 1,
+      "optimized_exit": 1
+    }
+  ]
+}

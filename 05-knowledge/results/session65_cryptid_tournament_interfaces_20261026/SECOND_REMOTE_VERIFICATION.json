@@ -1,0 +1,1040 @@
+{
+  "status": "VERIFIED",
+  "publication_commit": "ba3894f914d5add76c85bfca5742d50681fd1cf9",
+  "expected_parent": "5df2594f127d4bda64fbdca4b0dfaab6d98a9d80",
+  "tree": "960bc831dc8ad1c643e411894599b50007a14ddd",
+  "fetched_main": "ba3894f914d5add76c85bfca5742d50681fd1cf9",
+  "full_tree_matches": true,
+  "exact_changed_path_set": true,
+  "files": [
+    {
+      "path": "00-navigation/S65.md",
+      "mode": "100644",
+      "sha": "58ab77c3d5440f763c0727daa6ccbafb39db04fa",
+      "bytes": 1185,
+      "sha256": "764a7eb2abfde6c2fbe6b4a4162d9ee416d9c0b0c4acd0dc03f7c01a1ecafada"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/DEEPMIND_PINNED_TREE.json",
+      "mode": "100644",
+      "sha": "ac9a8a6ffbf96d6c00dbd99f35a5a5bb0c02ec0f",
+      "bytes": 71443,
+      "sha256": "52b1a425084fc236703794b944f879d2727b7afdeff1e4dd04c13174bff3af93"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/DEPENDENCY_PINS.json",
+      "mode": "100644",
+      "sha": "291573e64cf9672dd965fc7eaf06875508d90d80",
+      "bytes": 19455,
+      "sha256": "92d816f84878c9a4f17bfa54d2747780e97e479e420ee2095e0d6fed282e1747"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/ENCODING_PINS.json",
+      "mode": "100644",
+      "sha": "62d384bfeca17394a425beb76533080c0868f48b",
+      "bytes": 321,
+      "sha256": "729ab121f369aec2c121f064f075c779d87d5599b719c9c9db220e010db7e045"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/EXTERNAL_SOURCE_LINK_CONTEXT.json",
+      "mode": "100644",
+      "sha": "522bb4312328c191c0ae9df0ecff7c967c950d5e",
+      "bytes": 430,
+      "sha256": "253bac826d14c2ab84786ef9a532fd32ae846fe986e896df45be99ccbb8b1ea9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/LITERAL_NOTATION_EXCEPTIONS.json",
+      "mode": "100644",
+      "sha": "5d628ef971627479720a6a923e6892228fdd27bc",
+      "bytes": 379,
+      "sha256": "a6a0333fea7885d5005942c5b677d60b9567935daac360c497aa95e34b7baca0"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/MANIFEST.json",
+      "mode": "100644",
+      "sha": "ed19706c73d3584d6f346a1aeedd33ecfd2fd336",
+      "bytes": 38780,
+      "sha256": "90e79827b7da2f475903e5f260d77cd90585d7f08642888cc9a75b006f8c6aa3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/PROVENANCE.md",
+      "mode": "100644",
+      "sha": "81fab2ce7ac6a72b4a1c44609e9654601e08da9d",
+      "bytes": 3852,
+      "sha256": "c27cf0afb6d7e97c17eea918c74235b5f978359613ecde59130e041d9b4dc7a8"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/PUBLICATION_CHECKS.md",
+      "mode": "100644",
+      "sha": "47b0f2941b54e5ccbe04fa56ff617358bee2b962",
+      "bytes": 1437,
+      "sha256": "e52f76767c18a97c7d1e9db47c03c6ac4be02034572bc390c0af4fbd02b12d94"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/README.md",
+      "mode": "100644",
+      "sha": "9daf003ba21e39cfe182afe3503d2d9d74ba5e88",
+      "bytes": 6579,
+      "sha256": "672e3184198aeba02238c7080b1a667af650f87538ce8f54e8c7f9125f17fbb6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/REPLAY_TASKS.json",
+      "mode": "100644",
+      "sha": "4c6962e18bf888eeac676d66a4ce0453b78fa2b2",
+      "bytes": 2833,
+      "sha256": "25d8dd3210ce7c76c02edf3254a06a7397643e9465bed69a0ad8143775a26ad2"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SECOND_BUNDLE_CHECK.json",
+      "mode": "100644",
+      "sha": "7d7695d16f2669991b7f85be05f61ec85ae29a9f",
+      "bytes": 140297,
+      "sha256": "78096a11ea1c10745a31bc2f2e335bd3fd9cbaf228a05c60aa9b970f6f783ad3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SECOND_DOCS_CHECK.txt",
+      "mode": "100644",
+      "sha": "a326cf2da5a12189107106cf40e14c56689268d1",
+      "bytes": 143,
+      "sha256": "bbb7224c9c12db914cb21fff872f709dd506b092a4a4f18427885c46bd02c38a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SECOND_FILESET_NEGATIVE_CONTROLS.json",
+      "mode": "100644",
+      "sha": "e9d9b280ffb0cb54c88c05af5c2a01fe1a236048",
+      "bytes": 741,
+      "sha256": "b60763feeec6234347c8d6ce390cb9e6a59e6fbe87aea3292533161ea3470ad6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SECOND_REPLAY_RECEIPT.json",
+      "mode": "100644",
+      "sha": "33c8364b98320b479f34e431770496005ead1962",
+      "bytes": 25084,
+      "sha256": "6044ebea31147929edc8b485697026b5751d2894d2ca23cd537a2e03b3b309d9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SECOND_SOURCE_VERIFICATION.json",
+      "mode": "100644",
+      "sha": "95977412886bb44bcca95bf8b82794ae67764b66",
+      "bytes": 34952,
+      "sha256": "7d74a50dbe16f47298611d8bd9b6dfb77d1f855dd6d9a100069e7f394f8cec1a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SOURCE_LINK_CONTEXT.json",
+      "mode": "100644",
+      "sha": "9e2e35b0c0e252715feafbd8dc2e110a14c2db3f",
+      "bytes": 16024,
+      "sha256": "54c73f3cd7cc52086bcfc5c71fb4bb8b70a28125dde2b0bb0f8156373f01dc91"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/SOURCE_LINK_INDEX.md",
+      "mode": "100644",
+      "sha": "b93a88bd6d232dd9161165bc1060cec854ceb05a",
+      "bytes": 30888,
+      "sha256": "edafca1dd5f47f702433757a51a5bd6ae2a581742b86f1f8cd814684a32c4300"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/replay_frozen.py",
+      "mode": "100644",
+      "sha": "ddd96d969f51ccbb28a65da010034787cb032ec2",
+      "bytes": 3595,
+      "sha256": "69344cac952ad3ba673b52c6fbe42870b6aa2e34be71dc434ea5a73fb496a92b"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/ALLOWLIST.txt",
+      "mode": "100644",
+      "sha": "db47bfb72c36ef9b82a497144e421e664fef795c",
+      "bytes": 295,
+      "sha256": "94d6d495a492499e99e00b59bfa0710c57d6e0acb66da0350c0de528ea2a2413"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/INPUTS.json",
+      "mode": "100644",
+      "sha": "3ed8715dd29ace0d5e6ab5e50dd78a530d1b1fd0",
+      "bytes": 10695,
+      "sha256": "d3739c415f62ff16ff66c265f8c18e36e7645dd11e3b4ce13e25f4ffe972f6a3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/MANIFEST.json",
+      "mode": "100644",
+      "sha": "2ecb53f6ea22682f8705fdf97c0bf67e8a465c4d",
+      "bytes": 2070,
+      "sha256": "7651ce4ae5f6bd8caa0fc9715903b96a980368a511a164897b8940f37b153617"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/RECEIPT.json",
+      "mode": "100644",
+      "sha": "5c98a92b3e3f644699d467bd442b482ce119aead",
+      "bytes": 1398,
+      "sha256": "3c432c392e64f69f142009160f6f5f83be90a9a0a35ad01977196a20ffe287e4"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/REPORT.md",
+      "mode": "100644",
+      "sha": "ee2cff1f25ba254b9d20834d1a1475d7b5b04dd6",
+      "bytes": 3658,
+      "sha256": "ce95fb305144cc30982b34dbe2c58000b6e1b8f406702bf116449be77d91e49b"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/REPO_PROVENANCE.json",
+      "mode": "100644",
+      "sha": "2f3e46f48b637ded54084188d12b09612fadccf5",
+      "bytes": 8002,
+      "sha256": "b130891318e1052711574f9d37ce60ea0baae3490d99e03f08e131ef4554c98e"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/SHA256SUMS",
+      "mode": "100644",
+      "sha": "c66a7cbdad30f4c8d4d0edc36244049e17fc749d",
+      "bytes": 1274,
+      "sha256": "72049c8e45cc129083e3d2e84d75da35a373202643023b9e1bd92f2f72eadf2a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/SOURCE_RECEIPT.json",
+      "mode": "100644",
+      "sha": "440e0d6286ad67cee092ae1dad3eb60dfdc54ac1",
+      "bytes": 7319,
+      "sha256": "8217f6135e4cba1777abee77caa175e0280f82bdcd683cbf6645567aeec8d1fa"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/goldbach/REPORT.md",
+      "mode": "100644",
+      "sha": "729e1f4f25b8eb8061d4f9b0e0af1a3c9a30d84c",
+      "bytes": 9584,
+      "sha256": "5d47059d3322326d41f786ba3ba2e57581cf40d47768a2696efa7483f4d33b57"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/goldbach/check.py",
+      "mode": "100644",
+      "sha": "9b487854fc4223917d716df2a4ac67ee4f4868e1",
+      "bytes": 11865,
+      "sha256": "a18a11c237aee99d852d57417ac2c51443989607b9f9e2d251c0e761e9457876"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/goldbach/normal.json",
+      "mode": "100644",
+      "sha": "29bd177947ea93a332f04ba030b76557727b1f0f",
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/goldbach/optimized.json",
+      "mode": "100644",
+      "sha": "29bd177947ea93a332f04ba030b76557727b1f0f",
+      "bytes": 2864,
+      "sha256": "7ad3b336620e36381b283208f2302fc29d1674af28e7d7fa91ab78e637127a8d"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/multiperfect/REPORT.md",
+      "mode": "100644",
+      "sha": "e5e04de650577892a15b876d8e91639466906b14",
+      "bytes": 5311,
+      "sha256": "73faa62630f364eeaa2428885ff679f2b9b458dea25c95a12030ddadb10cf701"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/multiperfect/check.py",
+      "mode": "100644",
+      "sha": "dd010a8f0770afe64460def3693a29473e043944",
+      "bytes": 5221,
+      "sha256": "f827a18e4e14c1f4928882469253328ec31daf4d5e66f9a7486eff4deade717d"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/multiperfect/normal.json",
+      "mode": "100644",
+      "sha": "3b05d03b54816452c47020d032a4ea638cd11e13",
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-goldbach/multiperfect/optimized.json",
+      "mode": "100644",
+      "sha": "3b05d03b54816452c47020d032a4ea638cd11e13",
+      "bytes": 5334,
+      "sha256": "833b1cacf6782948a03d1337c9a154a5cd2db9f641d055928979cf1132f03f95"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/MANIFEST.json",
+      "mode": "100644",
+      "sha": "e08175d66de62e6d7c291270ecde10dc2b529060",
+      "bytes": 1057,
+      "sha256": "97563fe59556f61e36c5595c97011ccbf27ff8b23e93a513a3a08750d446a12d"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/OFFLINE_SOURCE_PINS.json",
+      "mode": "100644",
+      "sha": "293f29d074df28fd94eb60c7c551e248918fe4e0",
+      "bytes": 4942,
+      "sha256": "7c3d4df7cba05caccd2d99b428e9e9654f746a3feae95110127ebd155b55dd39"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/PORTABILITY_AMENDMENT.md",
+      "mode": "100644",
+      "sha": "d9c90f237b8eedb5e3d9fbcd3c8fc5d7d694bddd",
+      "bytes": 5278,
+      "sha256": "2b4ee176ac5a398d02544b3aeb1c14b35b02a7ad6c797b4ee5b87f578c7def04"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/PORTABILITY_DIFF.patch",
+      "mode": "100644",
+      "sha": "4e4a9d1ca47f516bec8eb18ae5b4c37f1f5aaeae",
+      "bytes": 7441,
+      "sha256": "a80c669165b8005be61f1892214ef99a0e69ffa1aadb2ade0c6f36ad1d642ab3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/PORTABILITY_MANIFEST.json",
+      "mode": "100644",
+      "sha": "226a73f5c658c7e00966a064286f706024cb7f4a",
+      "bytes": 1670,
+      "sha256": "a5ecca50a930f3445b5786acc8a1a05f84e35b27c13b6b02701c45ef884b37ef"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/REPORT.md",
+      "mode": "100644",
+      "sha": "be3c79a6b0a30a2a66f700a036024d0c1f3170e3",
+      "bytes": 14113,
+      "sha256": "7b0693f3b33b6aecf5f2a9a62ce04ba127bceafccc1f35ffef89c24fbdad023c"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/check.py",
+      "mode": "100644",
+      "sha": "c1f0c5e05d9dfecc359706dff9624ec763c4fced",
+      "bytes": 8479,
+      "sha256": "437dc3385900f004cb2cbbcd143c1ded6d77249e6db22fd7e70edb3678c78e08"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/normal.json",
+      "mode": "100644",
+      "sha": "48baee078896e0496ffd01f6aec16ae5ceafa25c",
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/optimized.json",
+      "mode": "100644",
+      "sha": "48baee078896e0496ffd01f6aec16ae5ceafa25c",
+      "bytes": 1137,
+      "sha256": "8c662358707f6aedf8d04450f45c620e5cfdfe885a3d97181908a8f531155867"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable-hostiles-optimized.json",
+      "mode": "100644",
+      "sha": "cebb5f916e6255c3fe724f54839b4d0a454f5c5e",
+      "bytes": 16117,
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable-hostiles.json",
+      "mode": "100644",
+      "sha": "cebb5f916e6255c3fe724f54839b4d0a454f5c5e",
+      "bytes": 16117,
+      "sha256": "e670fdec768277c71b007973fbe71c6b6e764a83579f2ed87890055f14c5e386"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable-normal.json",
+      "mode": "100644",
+      "sha": "f498d104d56eeb11cc1b2663abb720eac0f4edb2",
+      "bytes": 1538,
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable-optimized.json",
+      "mode": "100644",
+      "sha": "f498d104d56eeb11cc1b2663abb720eac0f4edb2",
+      "bytes": 1538,
+      "sha256": "3405705f5f3e096051798e9f2d371766ccacc3b243c5cb662789f96bc3d58572"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable_check.py",
+      "mode": "100644",
+      "sha": "7bc55cd0e9b9d080129e81f0f653af25352ccb42",
+      "bytes": 11964,
+      "sha256": "d8aeeb7049237832781c89fe229b3a8c20576737e8467267d3e2b31ab2240f08"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/portable_hostiles.py",
+      "mode": "100644",
+      "sha": "70081d2d7f3020d573f78742374a109a8ccbecc3",
+      "bytes": 4345,
+      "sha256": "7c5b30bcbc5dd021f21624152c7641e6a2ce49de553ca2eaedb6425834c51d46"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/producer-normal.json",
+      "mode": "100644",
+      "sha": "27636d65bdde0ace22f9f5aa4b88ce33fa71d334",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-reductions/producer-optimized.json",
+      "mode": "100644",
+      "sha": "27636d65bdde0ace22f9f5aa4b88ce33fa71d334",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/AUDIT.md",
+      "mode": "100644",
+      "sha": "316f2845711cc86a579b044d20ab19a1ced317c7",
+      "bytes": 12211,
+      "sha256": "e0a7b4a6bf4c8ff72e28b930346514c2ccc442e2c0d569531007191e585b3688"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/PORTABILITY.md",
+      "mode": "100644",
+      "sha": "6a9addd5f01bed68fd75be576f51df332f9c9ea3",
+      "bytes": 4825,
+      "sha256": "295825848e071b40c95f2d83e162d17de500ba02692af7fab0ebdacf29811be3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/PORTABILITY_MANIFEST.json",
+      "mode": "100644",
+      "sha": "642dddae67188f3179c53392001494e7b8b40736",
+      "bytes": 4803,
+      "sha256": "887a916afa0c2e7f8f308be59afe7e67fb9ce17b459cadd7fc5a04385285489f"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/independent_audit.py",
+      "mode": "100644",
+      "sha": "4349c0e66ac91cce1c52dd9bfc5e6d7af3d9d542",
+      "bytes": 7129,
+      "sha256": "7effb218875ea10ee4c22b98ae33551231a90d8d3bc323dcc83cd212c8d8f570"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/manifest.json",
+      "mode": "100644",
+      "sha": "4ffd66be839a0c78f0886a3a8b8591ea0352e180",
+      "bytes": 1791,
+      "sha256": "bd012ddc91d2939d58d9860b8d196cc0880ad64bd7a842867b61c9a3424e25ad"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/native_mb.c",
+      "mode": "100644",
+      "sha": "03b8afabe87a8123bcdb52cd29f5cd7fedef0370",
+      "bytes": 3009,
+      "sha256": "21e5cf69ccc2362601a419a8c6b54fc7d022bb6b736adf274ae8206a97f624e6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/native_mb.json",
+      "mode": "100644",
+      "sha": "53f8fbafc076133f8c4f1594fca8115539e46a96",
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/native_mb_unoptimized.json",
+      "mode": "100644",
+      "sha": "53f8fbafc076133f8c4f1594fca8115539e46a96",
+      "bytes": 788,
+      "sha256": "bf0598c67397ff9c3f5875f70f0555144d3a206be1dffdbdc9c185c711082594"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/normal.json",
+      "mode": "100644",
+      "sha": "799574e56000ae95b367ea457ba387a51b84f0a0",
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/optimized.json",
+      "mode": "100644",
+      "sha": "799574e56000ae95b367ea457ba387a51b84f0a0",
+      "bytes": 3803,
+      "sha256": "16b16ed1ddd53607888458aee854770c1aeb798729f8d4c66eb44a6d39eb7f60"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/portability_license_check.json",
+      "mode": "100644",
+      "sha": "4da7308412e748cec7548667a557d17afd28b997",
+      "bytes": 687,
+      "sha256": "f82b7b39f4682acf394997d8463a899a2d0238bbd6915313991840ed3f05a7fb"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/portable_closure_receipt.json",
+      "mode": "100644",
+      "sha": "c4495748dc9a315ca41d6028976032b95c813630",
+      "bytes": 1966,
+      "sha256": "4df95d8a876a0150d36bb5890ccc5423df151f52a031ef5126118571a93e613b"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/portable_math_audit.py",
+      "mode": "100644",
+      "sha": "63b6222e4356ddb512858fd6c50ecbbefb150409",
+      "bytes": 8667,
+      "sha256": "2cfeb3f33c284bf5545dc032938ff12f7300035249bac747771dd151439f6445"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/portable_normal.json",
+      "mode": "100644",
+      "sha": "dc876966c389561cbc7e4512ecd12cec64f3e379",
+      "bytes": 4125,
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/portable_optimized.json",
+      "mode": "100644",
+      "sha": "dc876966c389561cbc7e4512ecd12cec64f3e379",
+      "bytes": 4125,
+      "sha256": "9357eff17032ca3f1f3359863d6c8c7fa4f8d02886d92d799931504a359304b9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/producer_replay_normal.json",
+      "mode": "100644",
+      "sha": "60f5dc04fe599cdc996943489b6404544a54033e",
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/producer_replay_optimized.json",
+      "mode": "100644",
+      "sha": "60f5dc04fe599cdc996943489b6404544a54033e",
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-audit-weakcollatz/remote_git_pin.json",
+      "mode": "100644",
+      "sha": "2b6ebe605e619b8c309ec3efd008ec19b766d1a2",
+      "bytes": 7003,
+      "sha256": "e5a833cd6aeb9a83f92f403fbacd44f5b131b6b9b833b89343d907a663f78517"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/MANIFEST.json",
+      "mode": "100644",
+      "sha": "d476acfb227585f8413fb2fedfe33d869ed5ff77",
+      "bytes": 3449,
+      "sha256": "f634f265c00ba54651808490fc856bc6755052ee83e2454a89abfc7ec6b7c22c"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/READBACK.md",
+      "mode": "100644",
+      "sha": "093a26737dc20ad7db81c4c29d596caa30b23b2f",
+      "bytes": 3771,
+      "sha256": "6ef3462f05af1455a1b411fb7fe83b6f2dbfbe94de06d9b009404f809157a243"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/REPORT.md",
+      "mode": "100644",
+      "sha": "895e68b3d9482709686e527c917b2793d19e83d5",
+      "bytes": 36564,
+      "sha256": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/SOURCE_PINS.json",
+      "mode": "100644",
+      "sha": "20496dddc7eafb3d1ed0d6184a234f34f72c5024",
+      "bytes": 3471,
+      "sha256": "1c203205287a884f5eb38091b9e0503b8bdb7ce21823c678950412087993e192"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/check.py",
+      "mode": "100644",
+      "sha": "0e23ff476ee9dd4397dcfa3ea0b83b13b9dcf48c",
+      "bytes": 10541,
+      "sha256": "a5bf1c7b398393416d660008b9f7804f77de2ca39dc9592c3beaa80e68626396"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/00-AGENTS.md",
+      "mode": "100644",
+      "sha": "fdde24ac382ea703618dc52685054c6528071a41",
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/01-00-navigation__RESEARCH-PROTOCOL.md",
+      "mode": "100644",
+      "sha": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "bytes": 10465,
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/02-01-canon__theorems__THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "mode": "100644",
+      "sha": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "bytes": 9804,
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/03-05-knowledge__results__session33_continuation_states_20261023__tournament__BOUNDARY_OBSERVABILITY.md",
+      "mode": "100644",
+      "sha": "c94d9650e7a05ad936d81f32f273c70ff416c003",
+      "bytes": 16487,
+      "sha256": "ca1963b56bbbdd1c45a797be27482c8a6c020267f11e037c9ea83ef264d0e65b"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/04-05-knowledge__results__session33_continuation_states_20261023__metagraph-memory__NOTE.md",
+      "mode": "100644",
+      "sha": "0b7f2958c8c0b495d2b24d6341704554f3026912",
+      "bytes": 12491,
+      "sha256": "2ac0f3065d483134f8777e81e02ccd6ef20dfc8657eec67955794581f1d68769"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/05-05-knowledge__results__session33_continuation_states_20261023__ports__PORT_CONNECTION_ALGEBRA.md",
+      "mode": "100644",
+      "sha": "4e3f2cd7b2bbd7cadd6b813cba6ee9867df922fd",
+      "bytes": 18962,
+      "sha256": "f0497923251d09d2e035f586c6068503458048e10e622e61be5cb3be7afcc700"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/06-05-knowledge__results__session64_lca_reverse_valuation_20261026__session64-reverse-valuation__REPORT.md",
+      "mode": "100644",
+      "sha": "c228871f97b7b4f4c9df0cd99982526347bc3bdb",
+      "bytes": 18389,
+      "sha256": "4c5aceeb0253ec258feda8bfa016d1322b6483fce07eb4fcb21bca9e4e4362ed"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/07-05-knowledge__results__session63_integral_observers_root_arrangements_20261025__PROPOSED_UNIFYING_THEORY.md",
+      "mode": "100644",
+      "sha": "a6b53e5e6601b372d754fbc343eb525d3e0eb5fc",
+      "bytes": 13126,
+      "sha256": "abc60403a9574f4d0c00d696dab83fde846aa5710aafa6f4a91a0d10a0da0441"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/08-05-knowledge__results__session59_f1_geometry_and_information_20261025__toric-shared-roots__RESULT.md",
+      "mode": "100644",
+      "sha": "d3f6a261e64c9c1df381e8a28687cf832250adeb",
+      "bytes": 18721,
+      "sha256": "d617bead0ae8ebea161397da67efb7a4b869f2c0a7e4936e596b4228b3126387"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/09-01-canon__theorems__THM-643-blue-black-line-parity-structure.md",
+      "mode": "100644",
+      "sha": "a2fb7942e31cf479495eb1d2fe71fa7218fefbb5",
+      "bytes": 10395,
+      "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/inputs/10-05-knowledge__hypotheses__HYP-9346-self-lines-connectivity-and-growth-laws-of-the-tiling-line-metagraph.md",
+      "mode": "100644",
+      "sha": "b05b31b24d3e0c5d4a132dab7f3cc587bafc11a8",
+      "bytes": 5342,
+      "sha256": "ce6fe5deb1a3ebf6483a8bd4754f62e14030a4bdb3557b1e0a9ce8f24b16af3f"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/normal.json",
+      "mode": "100644",
+      "sha": "27636d65bdde0ace22f9f5aa4b88ce33fa71d334",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/optimized.json",
+      "mode": "100644",
+      "sha": "27636d65bdde0ace22f9f5aa4b88ce33fa71d334",
+      "bytes": 5358,
+      "sha256": "153b7925cf69f895b634e94388e3f8f5a8708cad49f06b2f7c501e65c6cf16e3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/REPORT.md",
+      "mode": "100644",
+      "sha": "6ff605b91239e1e99fce52121f0d598154369751",
+      "bytes": 5112,
+      "sha256": "ce1bf0e01b696f2e258b46d5e587c552096093a0961c1f54d70526d037e304e8"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/SHA256SUMS",
+      "mode": "100644",
+      "sha": "3d073d10a516c7b48e5eb3593892694f21d51868",
+      "bytes": 398,
+      "sha256": "868a4474c3afa988409f5dead7a6d8361f251896ba5d91c47f7ae1cfd207e323"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/check.py",
+      "mode": "100644",
+      "sha": "328acd806043bbe6b0298e233aa5aaaf0779c864",
+      "bytes": 1900,
+      "sha256": "49e07c4d1d4c9e87e1a178e10957bd1575eb17a9043f15eff634b2449f0c00e5"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/inherited-HYP-3546.md",
+      "mode": "100644",
+      "sha": "247dd81063ac5356df19a5fad7f3e943b5646966",
+      "bytes": 6574,
+      "sha256": "b0cd663c3eb4cff1f1df4ce97944c9fc95a5b90f38b45ac6547fe98aabe048dc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/normal.json",
+      "mode": "100644",
+      "sha": "e73778822b0c1479a705d7d3914da3dc1ec399fa",
+      "bytes": 5363,
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-root/multiperfect/optimized.json",
+      "mode": "100644",
+      "sha": "e73778822b0c1479a705d7d3914da3dc1ec399fa",
+      "bytes": 5363,
+      "sha256": "87d102570db7114013ca9e533d05ce05a77ab67d48bda935d95ace2fb5534b7a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/ALLOWLIST.txt",
+      "mode": "100644",
+      "sha": "5015300fb7590214a86ae8f50229305c30a8137a",
+      "bytes": 2031,
+      "sha256": "c01d05ddaa528c77c8ec3af604786514884b35fccc96b2a02f7ae9e198c909d0"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/MANIFEST.json",
+      "mode": "100644",
+      "sha": "85e7a6497b2fa546e98e95f0568726cf461ef636",
+      "bytes": 8240,
+      "sha256": "11bb06053495d41a9e82af4ff41974f1b01b76cd3d99939d51b0bf425a81d2b6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/RECEIPT.json",
+      "mode": "100644",
+      "sha": "9db68b6b40a23886f2e1c2e51b8b3598aa5e20fc",
+      "bytes": 4813,
+      "sha256": "bbb85de3f7721f062862c8cdc0fd7ae24dc035f19540c5ffa8d3bb4050fd0a21"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/REPORT.md",
+      "mode": "100644",
+      "sha": "f36a6943c86335c2e54da781fbef612ca33109cd",
+      "bytes": 18174,
+      "sha256": "ab758cf6229a09163567f50ad2a07af4c4a25116bd0667e2845e7c16353d5e23"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/SHA256SUMS",
+      "mode": "100644",
+      "sha": "33ba4a68a88c2c057707cd8976cbceb1bc31bfa5",
+      "bytes": 4962,
+      "sha256": "5183f1bc8e0ea780810eb09e6571bed4f0e130d9dced09441a84913e4974fc9b"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/SOURCE_TREE.json",
+      "mode": "100644",
+      "sha": "204cd57d5f74544fa5e901780141466f0711aaf8",
+      "bytes": 10656,
+      "sha256": "f6cb7b757789baeea5412c4c9c63c2af893fee5be876f2595461367ba1f6254f"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/checks-O.json",
+      "mode": "100644",
+      "sha": "3218d2c911c86b816c5faac74753b449f2c91f45",
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/checks.json",
+      "mode": "100644",
+      "sha": "3218d2c911c86b816c5faac74753b449f2c91f45",
+      "bytes": 5801,
+      "sha256": "d330413876108e0fdddf845a7d8f417acc53638aabdf486a5aca537ed6ee3537"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/04-computation/dihedral_tournament.py",
+      "mode": "100644",
+      "sha": "1e45aa0cb9797e5c7717c7e89147f5fe6e2f6de7",
+      "bytes": 24771,
+      "sha256": "ddb4c319102aaf282230c3c43c429c7daa089797524205a27a98862cfb5e35d1"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/04-computation/tropical_cluster_H.py",
+      "mode": "100644",
+      "sha": "5f01ad9dd090a1444f0e1c5ef408b97a9bc59e70",
+      "bytes": 22204,
+      "sha256": "0c992cd3c04c670a1e8ec0c5c228e250de96485777a86fee21e53dba2839f30e"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/04-computation/weil_rh_tournament.py",
+      "mode": "100644",
+      "sha": "c82bb9aa08d3daa3a702f11f8f545a8f87039109",
+      "bytes": 25292,
+      "sha256": "07d62b21fb164193a0e5957209a024a01f2b41748f092937fccbe58b99241eca"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/05-knowledge/results/dihedral_tournament.out",
+      "mode": "100644",
+      "sha": "582dc171cc3883bd95f3adb6aa314b63d36e316f",
+      "bytes": 17261,
+      "sha256": "c6d5b86415a7b42e00c82a546330bfff46c74f8ea083dc22167df051bbb7eae0"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/05-knowledge/results/session56_rmq_lca_connections_20261025/niche-atlas/ATLAS.md",
+      "mode": "100644",
+      "sha": "2191aec1454e8a51a72740c6d1abe49dbc2d2103",
+      "bytes": 17347,
+      "sha256": "3ca7ade0fbe84490c55427d10834bdc75c8e7c9c53d1e81173253efc05fd6efc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/05-knowledge/results/tropical_cluster_H.out",
+      "mode": "100644",
+      "sha": "ca147219143f46873ea89c5056c7711da091c928",
+      "bytes": 14222,
+      "sha256": "25b6335d2d8708395dd03ef61c2cca263d14839fd93d2a01ef6700d8c735a075"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/05-knowledge/results/weil_rh_tournament.out",
+      "mode": "100644",
+      "sha": "e5e2897cb11e45fc457fc03f8dafdae188922588",
+      "bytes": 21078,
+      "sha256": "ca515cbae26b8112a203dc343b45a0390a63ca6efd7019c7103152a4435b8195"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/07-reflections/an-atlas-of-lenses-linking-famous-problems-deathstar-S68.md",
+      "mode": "100644",
+      "sha": "1b563438b36a453520b531691acdf5815444745c",
+      "bytes": 9856,
+      "sha256": "af0bd11dc9430d390f71cdf95552c60d5b016ce204220f1b339ffbc6fe913e96"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/07-reflections/repo-history-niche-connection-atlas-codex-20260629.md",
+      "mode": "100644",
+      "sha": "136d20f1db6eb48efc25e12c6a9c8ab42443acae",
+      "bytes": 3209,
+      "sha256": "d79368983c78a29617680fb1a38454d5b2e821299345c987c1ecdab31549cda4"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/HYP-2218-goldbach-lemoine-same-pair-projection.md",
+      "mode": "100644",
+      "sha": "f41c3293af6ee265bfa9f9b6dded0851d947e0f7",
+      "bytes": 4841,
+      "sha256": "95660e28a7bb256a08e74519c3cd3c999a36eaa32b4f70d827a5b18dcc168f72"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/HYP-2219-goldbach-lemoine-same-pair-bridge.md",
+      "mode": "100644",
+      "sha": "4b2367ebf54d85060de1ba674ee89c7baa7c4a00",
+      "bytes": 2361,
+      "sha256": "c3260bfaee656fb20ea86667eb9a834e6c9aa1195f5aef7c0a035f55ca17dcc5"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/HYP-2936-lrc14-broad-concept-carrier-atlas.md",
+      "mode": "100644",
+      "sha": "b1acf5cc9b8670d285f56de9125b6c76fe541f65",
+      "bytes": 6064,
+      "sha256": "db862e57b47555c6f92036606e1b5866219594221e3f116f36d8c674f20ab33f"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/agents/broadcast/archive/MSG-138-from-opus-2026-03-12-opus-2026-03-12-s62c-25-cros.md",
+      "mode": "100644",
+      "sha": "92604e75fca40fcbfeb5736876cbf1ca8cff1af3",
+      "bytes": 2337,
+      "sha256": "b520828716efff589d425996731b70e15a05744029884948eb69faf4ed8839a6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/cryptids/Cryptids/Goldbach21.lean",
+      "mode": "100644",
+      "sha": "77fba1e593e15947786410184b73402e3808074f",
+      "bytes": 91375,
+      "sha256": "89b6fdd98244b11d56627eae35812ad1de081bc230aa35d5558a446ca767b04c"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/cryptids/Cryptids/Semantics/Goldbach.lean",
+      "mode": "100644",
+      "sha": "7264bbde277e99bd6495d34ccebb98facfcd911a",
+      "bytes": 3274,
+      "sha256": "de1d5b33b89df3bb92bffca71a726e5e675daed5b5c5aebcd1ec31cb65486a0a"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/cryptids/LICENSE",
+      "mode": "100644",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/cryptids/README.md",
+      "mode": "100644",
+      "sha": "217e0d5a15a91c303801fe2373bd3c91c9e4cb30",
+      "bytes": 8627,
+      "sha256": "f59f80f9f07a7744c1ac38430bfc8b22588948c7bfa82540fc5fd4ef53e6d9ba"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/.github/workflows/lean_action_ci.yml",
+      "mode": "100644",
+      "sha": "09cd4ca6df0cca43b2dc12ee1f14b488bf6d3fe1",
+      "bytes": 200,
+      "sha256": "66061e54cdbd53a3fb4a135cf1b1ad4edbc15d5132874c42c692e04bd314829c"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/26_to_25.md",
+      "mode": "100644",
+      "sha": "728f19e6994e39fce6dc7c41a52f9db72eb3a706",
+      "bytes": 6985,
+      "sha256": "8506d17f5d8d0f707782d032291a600f228305b07a97e0fb3dae1f1143ecb857"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm.lean",
+      "mode": "100644",
+      "sha": "9dfbdbf8daac8dfd88727d9811a16db0628b2bbd",
+      "bytes": 629,
+      "sha256": "314836ec6e8ecaebd433e25d2bdb4c9fb9118e58151ab41b05002670365ecea4"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Basic.lean",
+      "mode": "100644",
+      "sha": "622ba799863ee6cfbdff60289ba1837514558842",
+      "bytes": 4194,
+      "sha256": "e862b629dd2388b55686b5f9e830634ace0a0b60617882e2ca400d0925ef6267"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Format.lean",
+      "mode": "100644",
+      "sha": "dee066531c5c7113d9f37a33df17adc40ba8a73e",
+      "bytes": 116,
+      "sha256": "56ee595d5e9a2e6380cf549760d43be9d884dbae33e0627c484ee27fa92b4736"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/ListBlank.lean",
+      "mode": "100644",
+      "sha": "091918f107c7b697099b56d85c9b34cd3f595f7b",
+      "bytes": 1361,
+      "sha256": "5d5dcdb627761ffb1d35893cd7099cbc2517c1f28d96a2945135ae00189ec7a3"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Content.lean",
+      "mode": "100644",
+      "sha": "6d4781ec8bfc1c31a378eccbbcf11e23876e7eea",
+      "bytes": 3386,
+      "sha256": "c6903fe3294e08fcef8709fc5a5ab223821d3e315c10b7b99f6d3b84a44187de"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Miscellaneous.lean",
+      "mode": "100644",
+      "sha": "b21fdf03c78c567e9b9446f97aa81f2176c8c895",
+      "bytes": 4315,
+      "sha256": "1c92313d6878b8b63593bc16300f15c0a4e670699f5fbb6528813f547e5077de"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/PBP.lean",
+      "mode": "100644",
+      "sha": "6191f6a01a4de2a734bb0fc56c8e5e91575d16b9",
+      "bytes": 7413,
+      "sha256": "df885722eacea266de412eb27cc41f79f808362ac51ca425ed6747ba2ccb6dbc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Prime.lean",
+      "mode": "100644",
+      "sha": "3b8cfc122b0a4d2700c875f287a1cd03b4d75e63",
+      "bytes": 16370,
+      "sha256": "4afda6358ef645f54a28018bf0da3eca36bd3c4dd60b4a6d64e2c46dc9949f89"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Search0.lean",
+      "mode": "100644",
+      "sha": "a68d8b2fd991554aef7bd80b275b2994e1d60783",
+      "bytes": 8138,
+      "sha256": "0982b99f4f4240440a28b344d69045853f850ccb75766915f07f93140a627fce"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/SearchUnvisitedBranch.lean",
+      "mode": "100644",
+      "sha": "3d5f043a32d9ec8d4c8320f9270618d7e58facfc",
+      "bytes": 1129,
+      "sha256": "9f868951849f5690556c3f08a04c0fb96ba575cc61c299ce535fdad56365cbd9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Sim25.lean",
+      "mode": "100644",
+      "sha": "8d943c0be8a4e839d832f8e8018de865f51f3a3b",
+      "bytes": 318,
+      "sha256": "f5b2846a68dc001d884d44fd64ed344221159fd4449459a63ee538c77b67a7b9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/Transition.lean",
+      "mode": "100644",
+      "sha": "82de13e715537bd76369ea99dc3184a170ea26cd",
+      "bytes": 1319,
+      "sha256": "b889d7369d6d802bac96728c1742e8d733dc083f177fefec8b38d0b82c402e22"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/GoldbachTm/Tm25/TuringMachine25.lean",
+      "mode": "100644",
+      "sha": "3c1ede90cc821687f6108a38bb08d2508de44d43",
+      "bytes": 7543,
+      "sha256": "9fa72dad7c4b903747ab81debe6cc1a068e9cf548fe1a10ab0b33375e791e9e0"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/LICENSE",
+      "mode": "100644",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/lake-manifest.json",
+      "mode": "100644",
+      "sha": "e2c2b88a97bcc8b2cc9f10637f8acc3d2ecbc7d0",
+      "bytes": 3118,
+      "sha256": "c7602c58bd2ab7fba6541f8436cb03e125545252100f16ab2f2fd19639a6f2e6"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/lakefile.lean",
+      "mode": "100644",
+      "sha": "e94a91d6cef5604b33cd38557cd0dddfc4c75950",
+      "bytes": 539,
+      "sha256": "50490dc263747af3482a649966ce2a07514d20649332ed53eac75fa4c4c5dfac"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/goldbach_tm/lean-toolchain",
+      "mode": "100644",
+      "sha": "57a4710c03ea5e18577887531a95c7ce63a515e7",
+      "bytes": 29,
+      "sha256": "d52d5cdb3e01a10bfad5a9ff41525619b09c1da9ec7be25b232a37216ede2df4"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/lrc14-broad-concept-carrier-atlas-codex-s135.md",
+      "mode": "100644",
+      "sha": "dfcf47087949f21404b986f07dce03dfd2d760ca",
+      "bytes": 2913,
+      "sha256": "fe9957e616e946a1b612ae8e21a186a2c222230257a8098f1abf2158e96829ea"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.out",
+      "mode": "100644",
+      "sha": "d2a3647a1455b8bdfbecd91f38f1cfa67b3eeb43",
+      "bytes": 17494,
+      "sha256": "21b4a7adc3294280c4690de3f7d1d132839d106c3e1c40537da7294616b4ce30"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/inputs/lrc14_broad_concept_atlas_codex_s135.py",
+      "mode": "100644",
+      "sha": "d06c8836d5f42949406dbbea244d3404f7cec836",
+      "bytes": 19936,
+      "sha256": "089e4657cc6f60a6b6783bdb60c2a0034ff81c81d43b98ae7dd7a81ca0045ea9"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-twentyfive/verify.py",
+      "mode": "100644",
+      "sha": "7131a0cf4be1b99a34df08c30ed78524c37f0a8b",
+      "bytes": 6861,
+      "sha256": "db4ab0d6c7c6368e103388134ca730e2226119f4f2762f070f619a21d7ec87f0"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-weakcollatz/REPORT.md",
+      "mode": "100644",
+      "sha": "6c4317209a7893eaec2ed9a9d2309f0538ad1713",
+      "bytes": 11842,
+      "sha256": "598dad7b38dca598e1bc769827aa724844d807193d7ff4be48d2d5f6781b1674"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-weakcollatz/bridge_results.json",
+      "mode": "100644",
+      "sha": "60f5dc04fe599cdc996943489b6404544a54033e",
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-weakcollatz/bridge_results_optimized.json",
+      "mode": "100644",
+      "sha": "60f5dc04fe599cdc996943489b6404544a54033e",
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-weakcollatz/verification_receipt.json",
+      "mode": "100644",
+      "sha": "e8bfebed983998e0271c0789ca2eaa57dd398195",
+      "bytes": 2225,
+      "sha256": "1906b71327574a915ba30121dbf92ba5c109407e77b8d82fe0978a7c170a9f65"
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-weakcollatz/verify_bridge.py",
+      "mode": "100644",
+      "sha": "098b41c71f7429632acaa4c67b7c242c880b7b4e",
+      "bytes": 2790,
+      "sha256": "8a7927e0197812aa30e32d454c5d971c61fe0babf3dd2048cc5b668e7302e885"
+    }
+  ]
+}

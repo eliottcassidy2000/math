@@ -1,0 +1,97 @@
+{
+  "also_include_manifest": "session65-audit-synthesis/PORTABILITY_MANIFEST.json",
+  "also_include_new_seal": "session65-audit-synthesis/PORTABILITY_SHA256SUMS",
+  "authored_bridge_recheck_reproduced_both_modes": true,
+  "excluded_image_copied": false,
+  "external_nonruntime_observations": 1,
+  "files": [
+    {
+      "bytes": 436,
+      "sha256": "a274846a6c734da7ed3be1ccc77e4ba03ddbca1947fb365e3e01f20fb7bb0c2c",
+      "source": "session65-audit-synthesis/EXTERNAL_NONRUNTIME_INPUTS.json"
+    },
+    {
+      "bytes": 6459,
+      "sha256": "68744693fd08b071599a3115dded81974c493dde592c95b987d7bc42b6041252",
+      "source": "session65-audit-synthesis/PORTABILITY_AMENDMENT.md"
+    },
+    {
+      "bytes": 3895,
+      "sha256": "f98ac5a5b2dec55654344fd2b67f2c61d0ae746086fe79c41aae0a6c6ad847c7",
+      "source": "session65-audit-synthesis/PORTABILITY_DIFF.patch"
+    },
+    {
+      "bytes": 34301,
+      "sha256": "f1c7e48d4635eec457ab020852a4314af90e009cfbca1c9d9df7b9dc9a66ed0f",
+      "source": "session65-audit-synthesis/PORTABLE_INPUTS.json"
+    },
+    {
+      "bytes": 64900,
+      "sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "source": "session65-audit-synthesis/portable-hostiles-optimized.json"
+    },
+    {
+      "bytes": 64900,
+      "sha256": "de74fafd70d0506078b16999764507c1306cf16b436aac83406c29e1f4cf8775",
+      "source": "session65-audit-synthesis/portable-hostiles.json"
+    },
+    {
+      "bytes": 66559,
+      "sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "source": "session65-audit-synthesis/portable-normal.json"
+    },
+    {
+      "bytes": 66559,
+      "sha256": "e4a5a5eefb866511d9d82e57ee9931f6925162c49eb6226365373c036619d3a4",
+      "source": "session65-audit-synthesis/portable-optimized.json"
+    },
+    {
+      "bytes": 12940,
+      "sha256": "0e7a59cfc09472dc22ed20acb6d8b7a2531ee6946dd7424b5151b363c53621ca",
+      "source": "session65-audit-synthesis/portable_check.py"
+    },
+    {
+      "bytes": 7045,
+      "sha256": "e44b41be3cb95723fc30cb7022bd6531d008e0b7751a26d1a068efee5f0af11f",
+      "source": "session65-audit-synthesis/portable_hostiles.py"
+    },
+    {
+      "bytes": 1691,
+      "sha256": "65f0489ce2c16784dae5866f0c36be27e960dbb9174fcd6d76cebd316e5a2bfc",
+      "source": "session65-weakcollatz/bridge_results_recheck.json"
+    }
+  ],
+  "historical_checker": "session65-audit-synthesis/independent_check.py",
+  "historical_files_unchanged": 8,
+  "historical_seal_sha256": "0e21e425bd7ba93326a892aa43aee216563320f2e9a773b1572430c06d8143eb",
+  "historical_source_pins_locally_checked": 88,
+  "hostile_task": {
+    "also_run_optimized": true,
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "script": "session65-audit-synthesis/portable_hostiles.py",
+    "stored_stdout": "session65-audit-synthesis/portable-hostiles.json",
+    "timeout": 600
+  },
+  "inherited_local_seal_checks": 229,
+  "local_dependency_files": 174,
+  "mathematical_body_byte_identical": true,
+  "missing_wrong_byte_hostile_runs_per_hostile_receipt": 696,
+  "portable_task": {
+    "also_run_optimized": true,
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "script": "session65-audit-synthesis/portable_check.py",
+    "stored_stdout": "session65-audit-synthesis/portable-normal.json",
+    "timeout": 120
+  },
+  "remaining_blockers": [],
+  "repository_mutated": false,
+  "runtime_dependency_allowlist": "session65-audit-synthesis/PORTABLE_INPUTS.json",
+  "status": "PASS_PORTABLE_SYNTHESIS_AMENDMENT_NO_MATHEMATICAL_CHANGE",
+  "undeclared_exclusion_hostile_runs_per_hostile_receipt": 4
+}

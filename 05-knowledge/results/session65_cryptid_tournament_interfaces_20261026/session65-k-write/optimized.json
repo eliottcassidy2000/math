@@ -1,0 +1,106 @@
+{
+  "exhaustive_small_orders": [
+    {
+      "chi_multiplier": 1,
+      "labelled_tournaments": 1,
+      "legal_K_moves": 1,
+      "n": 1,
+      "odd_relabellings": 0,
+      "relabellings": 1,
+      "retained_arcs": 0,
+      "reversed_arcs": 0
+    },
+    {
+      "chi_multiplier": 1,
+      "labelled_tournaments": 2,
+      "legal_K_moves": 2,
+      "n": 2,
+      "odd_relabellings": 2,
+      "relabellings": 4,
+      "retained_arcs": 1,
+      "reversed_arcs": 0
+    },
+    {
+      "chi_multiplier": -1,
+      "labelled_tournaments": 8,
+      "legal_K_moves": 12,
+      "n": 3,
+      "odd_relabellings": 24,
+      "relabellings": 48,
+      "retained_arcs": 2,
+      "reversed_arcs": 1
+    },
+    {
+      "chi_multiplier": -1,
+      "labelled_tournaments": 64,
+      "legal_K_moves": 192,
+      "n": 4,
+      "odd_relabellings": 768,
+      "relabellings": 1536,
+      "retained_arcs": 3,
+      "reversed_arcs": 3
+    },
+    {
+      "chi_multiplier": 1,
+      "labelled_tournaments": 1024,
+      "legal_K_moves": 7680,
+      "n": 5,
+      "odd_relabellings": 61440,
+      "relabellings": 122880,
+      "retained_arcs": 4,
+      "reversed_arcs": 6
+    }
+  ],
+  "implementation": "independent adjacency matrices",
+  "not_claimed": [
+    "unlabelled-class obstruction",
+    "relabelling-enabled obstruction",
+    "padding or larger-gadget obstruction",
+    "black realization at odd C",
+    "universal Turing-machine simulation impossibility"
+  ],
+  "odd_C_control": {
+    "black_witness": false,
+    "blue": true,
+    "legal": true,
+    "n": 3,
+    "role": "all-K legality control only, not a black realization",
+    "source": "G0",
+    "target": "G1",
+    "word": [
+      0,
+      1,
+      2
+    ]
+  },
+  "sequence_scope": "all finite fixed-label chains, by REPORT.md proof",
+  "tape_write_hostiles": [
+    {
+      "directed_one_bit_writes": 8,
+      "legal_K_moves": 16,
+      "m": 2,
+      "n": 6,
+      "odd_relabel_hostiles": 4,
+      "padded_order": 12,
+      "padded_write_controls": 8,
+      "padding_claim": "only removes conserved-parity obstruction",
+      "padding_zero_cells": 2,
+      "words": 4
+    },
+    {
+      "directed_one_bit_writes": 24,
+      "legal_K_moves": 64,
+      "m": 3,
+      "n": 9,
+      "odd_relabel_hostiles": 8,
+      "padded_order": 12,
+      "padded_write_controls": 24,
+      "padding_claim": "only removes conserved-parity obstruction",
+      "padding_zero_cells": 1,
+      "words": 8
+    }
+  ],
+  "total_small_legal_K_moves": 7887,
+  "total_small_relabellings": 124469,
+  "verdict": "PASS"
+}

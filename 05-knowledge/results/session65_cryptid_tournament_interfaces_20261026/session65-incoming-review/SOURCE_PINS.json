@@ -1,0 +1,108 @@
+{
+  "review_date": "2026-10-26",
+  "incoming_commit": "a0645dc58ce10bd55e5a98a85d5b815993406ffa",
+  "incoming_parent": "fcc112a69d7080db4cd619d6e7927be1992bc51e",
+  "comparison_mathematical_source_commit": "6a8ad5d3bf01a232da4de41bcbff68390a9337ee",
+  "incoming": [
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/PROBLEM_CLASSIFICATION.md",
+      "git_blob": "539842801bfa6dd9a2e95a8ed48decb1cff3c004",
+      "sha256": "1f8694bc6aa8e80fa486d6dd1ac3f20bdbc41680597c055d9a216e8c23d5197f",
+      "bytes": 10361
+    },
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/LEDGER_15_25_MULTIPERFECT.md",
+      "git_blob": "86fd76e9e70561b996bd016440af2f50e4b627ca",
+      "sha256": "4e1a58a3bcc7347bf97752fe42b35bc89d3dbebf88e8fa4ce7dbbcf669d71fe8",
+      "bytes": 8357
+    },
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/ATLAS.md",
+      "git_blob": "457ffc45daa8783c36c19e0e42d7288b266f8e3b",
+      "sha256": "74ce4498346a2810dcc5d465385302ee0a3b80f43c3efbc4df602d937f5d5a95",
+      "bytes": 7733
+    },
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/README.md",
+      "git_blob": "ac50a180f85264eaf0eb1cc5c892099e3772454b",
+      "sha256": "fa15ae11375cac28bde61b891e96078df51d892898cba88d5633c65bd075ecd5",
+      "bytes": 3172
+    },
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/QR_TOURNAMENT.md",
+      "git_blob": "bbbdaa82dea23442fcdccd49431a72f7e0d74b0c",
+      "sha256": "68c7ee8b5a74bdf2f052a72e1be6b41acaa6d63a48011812aca7a8661a745d09",
+      "bytes": 2472
+    },
+    {
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/SHA256SUMS",
+      "git_blob": "9e410f66905730c6d02754be81bf7e5d3f16bc4c",
+      "sha256": "3adf24454fe87a43aa5cc428a9ae6ce44aba600814dade8b4b32f5eb9ae0218f",
+      "bytes": 960
+    },
+    {
+      "path": "07-reflections/typed-analogies-legendre-tournament-and-problem-classification-klein-20261025.md",
+      "git_blob": "891fe9919c2f6363d5c272f517c0ad96251f2a58",
+      "sha256": "e624ba147bb61314de208228fe157525ce0ec3d119e090020471a44e3533640f",
+      "bytes": 3574
+    }
+  ],
+  "local_comparators": [
+    {
+      "path": "session65-reductions/REPORT.md",
+      "sha256": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898",
+      "bytes": 36564
+    },
+    {
+      "path": "session65-audit-reductions/REPORT.md",
+      "sha256": "7b0693f3b33b6aecf5f2a9a62ce04ba127bceafccc1f35ffef89c24fbdad023c",
+      "bytes": 14113
+    },
+    {
+      "path": "session65-root/SYNTHESIS.md",
+      "sha256": "192451b742b2f1665210849c0c5cb88640352e0341c98474eb52d4427b8fa41f",
+      "bytes": 6997
+    },
+    {
+      "path": "session65-root/CONNECTIONS.md",
+      "sha256": "254196d5301ea61e27e96b91ddfe87f784e2dff28ec5b7cd9131146879f6f5df",
+      "bytes": 9912
+    },
+    {
+      "path": "session65-audit-goldbach/REPORT.md",
+      "sha256": "ce95fb305144cc30982b34dbe2c58000b6e1b8f406702bf116449be77d91e49b",
+      "bytes": 3658
+    },
+    {
+      "path": "session65-audit-goldbach/goldbach/REPORT.md",
+      "sha256": "5d47059d3322326d41f786ba3ba2e57581cf40d47768a2696efa7483f4d33b57",
+      "bytes": 9584
+    },
+    {
+      "path": "session65-audit-goldbach/SOURCE_RECEIPT.json",
+      "sha256": "8217f6135e4cba1777abee77caa175e0280f82bdcd683cbf6645567aeec8d1fa",
+      "bytes": 7319
+    },
+    {
+      "path": "session65-weakcollatz/REPORT.md",
+      "sha256": "598dad7b38dca598e1bc769827aa724844d807193d7ff4be48d2d5f6781b1674",
+      "bytes": 11842
+    },
+    {
+      "path": "session65-audit-weakcollatz/AUDIT.md",
+      "sha256": "e0a7b4a6bf4c8ff72e28b930346514c2ccc442e2c0d569531007191e585b3688",
+      "bytes": 12211
+    },
+    {
+      "path": "session65-audit-weakcollatz/remote_git_pin.json",
+      "sha256": "e5a833cd6aeb9a83f92f403fbacd44f5b131b6b9b833b89343d907a663f78517",
+      "bytes": 7003
+    },
+    {
+      "path": "session65-fifteens/REPORT.md",
+      "sha256": "8af7ff2e90048025eeef63f7072409e43e87f0e9c9d891d688148112ffc5c397",
+      "bytes": 20104
+    }
+  ],
+  "note": "Local comparator hashes pin reviewed bytes; no external theorem or build was re-audited by this lane. QR_TOURNAMENT.md/SHA256SUMS are integrity context, not approved numerical results."
+}
