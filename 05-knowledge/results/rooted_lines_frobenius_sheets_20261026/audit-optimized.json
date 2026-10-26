@@ -1,0 +1,57 @@
+{
+  "joint_roots": {
+    "blue": false,
+    "first_root_isomorphism": [
+      0,
+      5,
+      3,
+      1,
+      2,
+      4
+    ],
+    "joint_isomorphisms": 0,
+    "last_root_isomorphism": [
+      3,
+      1,
+      2,
+      4,
+      0,
+      5
+    ],
+    "sandwich_hamiltonian_paths": [
+      289,
+      253
+    ],
+    "source_isomorphism": [
+      4,
+      1,
+      2,
+      0,
+      3,
+      5
+    ],
+    "target_isomorphism": [
+      0,
+      5,
+      3,
+      1,
+      2,
+      4
+    ]
+  },
+  "reflection": {
+    "all_independent_pairs": 81,
+    "literal_blue": 9,
+    "rooted_fibre_sizes": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "wrong_square_sum": 11
+  }
+}
