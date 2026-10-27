@@ -1,0 +1,4 @@
+strong L-local minimum 111011111111101: scores [1, 1, 2, 3, 4, 4] L=1 |Aut|=1 self-converse=False
+   named class: Hamiltonian paths starting at 3: [(3, 4, 0, 1, 2, 5)]  starting at 5: [(5, 3, 4, 0, 1, 2)]
+strong L-local minimum 111011111111110: scores [1, 1, 2, 3, 4, 4] L=1 |Aut|=1 self-converse=True
+strong L-local minimum 101011111111110: scores [1, 1, 2, 3, 4, 4] L=1 |Aut|=1 self-converse=False

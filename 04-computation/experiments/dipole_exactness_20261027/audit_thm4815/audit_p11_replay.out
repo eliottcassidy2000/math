@@ -1,0 +1,2 @@
+moves 15 legal and rows match: True ; L sequence [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0] ; transitive at end: True ; F sequence [33, 32, 25, 30, 29, 28, 25, 30, 25, 30, 27, 30, 25, 30, 25, 28]
+F(P_11) = 33 , F(TT_id) = 55 , parity of labelled distance P_11 -> TT_id: 0

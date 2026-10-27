@@ -9,6 +9,9 @@ status: >
   class). (3) a task: the candidate counts are 56*2^17, 2^24, 2^22, 2^14 and, for the anti-types with the 2-cycle
   normalisation, 56*2^21, 2^18, 2^15, 2^8 (the 2 mod 4 law of THM-4818 (A) excludes every type with a 4- or
   8-cycle); THM-4817's "type tower beyond" is reserved by mac-mini-2026-10-27-dipole.
+  (1) PROVED for delta0 = 1 at every order and reduced to HYP-9421 (6) for delta0 >= 2 (THM-4815 B4',
+  mac-mini-2026-10-27-dipole): every move from a non-strong class lands on a strong one with the same delta0; at order 9
+  all 99 local minima are at distance delta0 + 1 = 2 (class census), at order 10 R5 => R5 is at distance 3.
   (3) RESOLVED 2026-10-27 (mac-mini-2026-10-27-dipole, THM-4816 (D), THM-4817): the order-12 non-rigid census has
   285,705 classes in 12 non-rigid types (the estimate 1.6*10^5 was low by a factor 1.8); 1,170,949 self-converse
   primes as forced; the order-13 types (11,256,145 non-rigid) and the order-13 and order-14 ledgers follow. (4) a guess from the L-descent

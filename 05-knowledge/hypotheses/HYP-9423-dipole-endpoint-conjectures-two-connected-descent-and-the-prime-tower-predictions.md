@@ -1,6 +1,6 @@
 ---
 id: HYP-9423
-title: "After THM-4815-4817: (1) every 2-connected non-transitive tournament has an L-descending native move (a Hamiltonian path joining a pair of D_L); (2) the black distance to the regular class at odd orders is R except at self-converse colour obstructions, finitely many per order; (3) the even-order regular target; (4) cut-or-colour for every endpoint potential; (5) non-rigid prime tournaments are asymptotically (1/12) 2^(C(n-6,2)+2(n-6)+5)/(n-6)!; (6) pre-registered order-14 values: sum over non-rigid primes of (1 - 1/|Aut|) = 3,574,801,896/7, primes with an automorphism of order 7 exist, and about 7.66 * 10^8 non-rigid primes"
+title: "After THM-4815-4817: (1) every 2-connected non-transitive tournament has an L-descending native move (a Hamiltonian path joining a pair of D_L); (2) the black distance to the regular class at odd orders is R except at self-converse colour obstructions, finitely many per order; (3) the even-order regular target; (4) cut-or-colour for every endpoint potential; (5) non-rigid prime tournaments are asymptotically (1/12) 2^(C(n-6,2)+2(n-6)+5)/(n-6)!; (6) pre-registered order-14 values: sum over non-rigid primes of (1 - 1/|Aut|) = 3,574,801,896/7, primes with an automorphism of order 7 exist, and about 7.66 * 10^8 non-rigid primes; (7) every regular tournament of odd order n is exactly (n^2-1)/8 native moves from the transitive class"
 status: >
   OPEN (mac-mini-2026-10-27-dipole). (1) FINITE-EXACT through order 10 (all 9,733,056 classes: every strong L-local
   minimum, 0, 1, 3, 11, 49, 242, 1,302 at orders 4-10, has a cut vertex) and random to order 16; the stronger
@@ -8,7 +8,10 @@ status: >
   so the full descending set is needed. (2) census to order 8 (colour obstructions 0, 2, 1 at orders 5-7 for the
   regular target; order 5 is the pure-blue R5); THM-4815 B6 proves they are self-converse. (3) data: 306 failures of
   ceil(R'/2) at order 8. (4) holds for lambda, delta0, L, R through order 10. (5) heuristic plus census at orders
-  10-13. (6) prediction only: no order-14 census exists.
+  10-13. (6) pre-registered; its 7- and 5-adic parts were checked afterwards against the 98 + 4,200 order-14 primes
+  with an automorphism of order 7 or 5 (both agree; independently reproduced by the THM-4816/4817 audit); the 3-part is
+  open. (7) FINITE-EXACT at orders 5-11 (every regular class reached by an R-descending chain from the transitive
+  tournament; order 9 also by the class census).
 session: mac-mini-2026-10-27-dipole
 source: 05-knowledge/results/dipole_principle_and_prime_cycle_index_tower_20261027.md
 scripts:
@@ -35,13 +38,18 @@ related:
    found none either. The natural special case, a Hamiltonian path from a minimum-score to a maximum-score vertex,
    is *not* enough: 1, 26 and 590 two-connected classes at orders 7, 8, 9 have no such path but descend through
    another pair of `D_L`. A proof would need Hamiltonian paths against the score direction, in the spirit of
-   Thomassen's 1980 results on prescribed endpoints. Test next: the strong order-11 classes with a cut vertex,
-   by the endpoint DP.
+   Thomassen's 1980 results on prescribed endpoints. Minimum semi-degree 2 is not enough: 2 and 11 strong local
+   minima at orders 8 and 9 have `delta0 = 2` (and a cut vertex). The local minima are near-transitive: removing the
+   cut vertex leaves an almost transitive tournament, so the samples that matter have small `L`. A sampler of
+   transitive tournaments with `2..2n` random arc reversals (mode 3 of endpoint_random.c) found no 2-connected
+   counterexample at orders 7-16 (endpoint_random_neartransitive_n11_16.out). Test next: the strong order-11 classes
+   with a cut vertex, by the endpoint DP.
 
 2. **Black moves to the regular class.** For odd `n` the black distance to the regular class is `R(T)` except at
    colour obstructions (THM-4815 B6: self-converse, every descending path palindromic), and these are rare: one at
    order 7 (scores `1, 3^5, 5`, `|Aut| = 5`). At order 5 the target `R5` itself is pure blue, so every other class is
-   cut off. Test: the class-graph census at order 9 (running at filing; see the note).
+   cut off. At order 9 there are none: the class-graph census gives black distance `R` for every class except six
+   black-isolated pure-blue ones.
 
 3. **The almost-regular target at even orders.** At even `n` a move changes `R' = sum_v (|2 s_v - n + 1| - 1)/2` by at
    most 2, and `ceil(R'/2)` is not attained for 306 classes at order 8. Determine the exact distance to the
@@ -69,3 +77,10 @@ related:
    in `[510,685,986, 766,028,977]`, and near the top: about 766.0 million, as nearly all have `|Aut| = 3`. The tower
    also predicts `P(14) = 27,687,212,017,612,715` and `SCP(14) = 767,626,075`. Those follow from `A000568(14)` and
    `A002785(14)` and are not independent predictions.
+
+7. **Every regular tournament attains the transitive bound.** For every odd `n` and every regular tournament `R`,
+   `d(R, transitive class) = (n^2 - 1)/8 = L(R)`. Equivalently, every regular class is the end of an `R`-descending
+   chain from `TT_n` (THM-4815 B8'). Proved for orders 5, 7, 9 and 11: every regular class is reached, 1, 3, 15 and
+   1,223 of them, with every path replayed and `P_11` among them. The order-9 class census agrees. This is the
+   all-regular form of HYP-9420 (4)'s bounded-excess question, with excess 0. Test next: order 13 (1,495,297 regular
+   classes) needs a smarter covering than random chains.

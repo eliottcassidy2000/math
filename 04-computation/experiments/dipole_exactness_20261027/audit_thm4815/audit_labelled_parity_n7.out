@@ -1,0 +1,2 @@
+n=7 labelled tournaments 2097152, moves 165150720: parity-formula failures 0; involution/HP failures 0; converse-covariance failures 0; rho failures 0
+   labelled move graph: 1 components (sizes: 2097152); edges joining same-parity BFS levels (non-bipartite witnesses): 0; (n-1)(n+2)/2 mod 2 = 1

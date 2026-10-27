@@ -11,17 +11,17 @@ Not independently audited at filing.
 |---|---|---|
 | 1. One identity (THM-4815 A) | `K -> -K + 2A_Q` read through converse-invariant functionals gives every native-move lower bound in the repository (survey of all THM/HYP/result packets); so do its square (two-move XOR law), its reduction mod 2 (forward-arc parity) and its endpoint form (non-adjacency, module shattering, source/sink trap) | PROVED; survey |
 | 2. Exactness (THM-4815 B1-B6) | for score and cut functionals only the endpoints of the path matter; a state descends iff the Hamiltonian endpoint relation `Pi(T)` meets the descending pairs; non-strong `T` has `Pi = C_1 x C_k`; the `delta0` local minima are exactly the non-strong tournaments without source or sink; the non-strong `L` local minima are exactly those with a source or sink; a colour obstruction forces an anti-automorphism | PROVED |
-| 3. Max-to-min paths (THM-4815 B7, B8) | every tournament has a Hamiltonian path from a maximum-score to a minimum-score vertex; hence at odd orders the distance to the regular class is exactly `R = (1/2) sum |s_v - (n-1)/2|` | PROVED |
+| 3. Max-to-min paths (THM-4815 B7, B8) | every tournament has a Hamiltonian path from a maximum-score to a minimum-score vertex; hence at odd orders the distance to the regular class is exactly `R = (1/2) sum |s_v - (n-1)/2|` | PROVED (B7 classical: Thomassen 1982; case y -> x is Lu 2018) |
 | 4. P_7 (THM-4815 C) | forward-arc parity alternates under every move at `n ≡ 0, 3 (mod 4)`; `P_7` is 6 = L moves from the transitive class (explicit word); its 7 is the labelled distance to one fixed transitive labelling, forced by parity | PROVED; FINITE-EXACT |
 | 5. Census (THM-4815 D) | class graph orders 4-8 (9 in progress at filing), endpoint relation orders 4-10 (9,733,056 classes), random tests orders 11-16 | FINITE-EXACT |
 | 6. Prime tower (THM-4816) | rigid primes from the ledger, non-rigid primes by invariant enumeration over the cycle types the cycle lemma allows; order-11 types (12 rows, 12,155 non-rigid), order-12 (14 rows, 285,705), order-13 (22 rows, 11,256,145); reproduces klein's order-3..10 census row for row with no gentourng input; labelled-count identity at every order 3-13 | PROVED (method); FINITE-EXACT |
 | 7. Ledgers (THM-4817) | `P(12) = 142,980,435,791`, `SCP(12) = 1,170,949`, `c(12) = 76,601,960,166`, `P_lab(12)`, `l(12)`; the order-13 and order-14 ledgers; strong and labelled-strong counts agree with OEIS A051337 / A054946; order-14 defect `3,574,801,896/7` pre-registered | FINITE-EXACT |
 
-**Credits.** The identity is THM-4811 (A) (this machine's previous session) and Session75 section 6 (`K -> -K + 2L`).
-Theorem L, the parity theorem and the labelled distances are THM-4810 / S63. The source/sink trap and the `P_11`
+**Credits.** The identity is Session75 section 6 (`K -> -K + 2L`), the dyadic-module-spectrum session and THM-4811 (A) (this machine's previous session), as THM-4811 records.
+Theorem L, the parity theorem and the labelled distances are THM-4810 / S63. The source/sink pruning lemma and the `P_11`
 certificate are Session74. The cycle lemma, anti-automorphism lemma, self-converse identity and order-11 ledger are
-klein (THM-4814). The species identity is session56 / THM-4803. Lu (Graphs Combin. 34 (2018) 613-618) studies
-Hamiltonian paths between min-max pairs (abstract only consulted). The survey of distance bounds was done by a
+klein (THM-4814). The species identity is session56 / THM-4803. Lu (Graphs Combin. 34 (2018) 613-618) proves
+case (i) of B7 (abstract only consulted); B7 itself follows from Thomassen, Proc. London Math. Soc. (3) 45 (1982) 151-168 (Theorem 5.5 of Bang-Jensen and Gutin, "Paths, trees and cycles in tournaments"). The survey of distance bounds was done by a
 read-only agent; its flag that `P_7`'s 7 is a labelling artefact matched this session's independent BFS.
 
 ## 1. One identity
@@ -44,7 +44,7 @@ The identity also gives the non-potential bounds:
 - *Applied twice*, `K'' = K - 2A_P + 2A_Q`: the XOR support law of THM-4810 Lemma 1 / C2 and THM-4732 Lemma 1.
 - *Restricted to endpoints*:
   - non-strong tournaments have all their Hamiltonian paths from the top component to the bottom one (THM-4729 L3's
-    non-adjacency, Session74's source/sink trap);
+    non-adjacency, Session74's source/sink pruning lemma);
   - a path enters and leaves every module, so the move breaks it (THM-4804).
 
 The survey agent read every THM 4720-4814, the HYP 93xx-94xx and the 2026-10-18..27 result packets. Every other
@@ -65,10 +65,17 @@ is a local minimum, and every failure of exactness lies above one. Two different
   pure-blue alphabet of THM-4730).
 
 The reflection's claim that "a forced symmetry explains why" is therefore true for colour failures and false for cut
-failures. The census shows that cut failures are the common ones. The smallest rigid example is the strong
-6-tournament with scores `1,1,2,3,4,4` (gentourng `111011111111101`, `|Aut| = 1`, not self-converse). Its arcs
-`5 -> 3 -> 4` are forced, so no Hamiltonian path joins a minimum-score vertex to a maximum-score vertex. So `L = 1`
+failures. The census shows that cut failures are the common ones. The smallest rigid examples are non-strong
+(`K1 => S4` and `S4 => K1` at order 5); strong ones start at order 6, e.g. the 6-tournament with scores `1,1,2,3,4,4`
+(gentourng `111011111111101`, `|Aut| = 1`, not self-converse). There vertex 3 can only be followed by 4 and 5 only by 3,
+so a path from 3 ends at 5 and the only path from 5 ends at 2: no Hamiltonian path joins a minimum-score vertex to a
+maximum-score vertex. So `L = 1`
 while the distance to the transitive class is 3.
+
+The non-strong local minima are close: every move from a non-strong tournament lands on a strong one with the same
+`delta0` (THM-4729 L3 plus a choice of endpoints). So a non-strong tournament with `delta0 = 1` is exactly two moves from
+the singleton locus at every order, and with `delta0 >= 2` one more than its strong neighbour (THM-4815 B4'; klein's
+HYP-9424 (1)). At order 9 all 99 are at distance 2. At order 10, `R5 => R5` is at distance 3.
 
 Two classifications are exact at every order:
 
@@ -82,7 +89,7 @@ descend through other pairs.
 
 ## 3. Max-to-min Hamiltonian paths and the regular class
 
-**Theorem (THM-4815 B7).** Every tournament has a Hamiltonian path from a vertex of maximum score to a vertex of
+**Theorem (THM-4815 B7; classical, a corollary of Thomassen 1982; the case `y -> x` is Lu 2018).** Every tournament has a Hamiltonian path from a vertex of maximum score to a vertex of
 minimum score. Let `x` be a max vertex, `y` a min vertex, and `T' = T - {x, y}`. If `y -> x`: when `T'` is strong,
 injecting the out-neighbours of `x` into the non-in-neighbours of `y` through a Hamiltonian cycle of `T'` would need
 `Delta <= delta - 1`, which is impossible; when `T'` is not strong, extremality puts an out-neighbour of `x` in its top
@@ -90,11 +97,19 @@ component and an in-neighbour of `y` in its bottom one. If instead every max ver
 arguments go through, because each exceptional configuration produces a min vertex beating a max vertex.
 
 The arc `x -> y` can fail to lie on a max-to-min Hamiltonian path (526 arcs in 514 classes at order 9, always with tied
-extremes); the arc `y -> x` never fails (67,962 arcs at order 9). This matches Lu's min-max pair theorem with exceptions.
+extremes); the arc `y -> x` never fails (67,962 arcs at order 9). This matches Lu's min-max pair theorem (no exceptions when `y -> x`, a few when `x -> y`) and Thomassen's characterisation
+(its exceptional configurations need `x -> y`).
 
 **Corollary (THM-4815 B8).** At odd orders the native-move distance to the regular class is exactly
 `R(T) = (1/2) sum_v |s_v - (n-1)/2|`: repeatedly move along a max-to-min Hamiltonian path. So the regular target, unlike
-the transitive one, never fails. Its descending pairs run in the natural direction of Hamiltonian paths (high score to
+the transitive one, never fails.
+
+Started at the transitive tournament, B8 gives `d(TT_n, regular class) = (n^2-1)/8`. Every regular tournament has
+`L = (n^2-1)/8`, so every regular class that an `R`-descending chain from `TT_n` ends on attains THM-4810's bound
+exactly. Random chains (regular_landing.c, canonical forms, every path and the end replayed) reach every regular class
+at orders 5, 7, 9 and 11: 3, 15 and 1,223 of 1,223 at order 11, `P_11` included. So every regular tournament of these
+orders is exactly `(n^2-1)/8` moves from the transitive class, and HYP-9420 (4)'s excess is 0 for all of them. HYP-9423
+(7) conjectures this at every odd order. Its descending pairs run in the natural direction of Hamiltonian paths (high score to
 low), while the transitive target's run against it.
 
 ## 4. P_7 and parity
@@ -116,14 +131,15 @@ from the class (Session74) and at least 16 from `TT_id`.
 | 6 | 56 | exact | 19 + 3 | 1 | – |
 | 7 | 456 | exact | 99 + 11 | 3 | 0 |
 | 8 | 6,880 | exact | 855 + 49 | 16 | – |
-| 9 | 191,536 | in progress at filing | 13,303 + 242 | 99 | 0 |
+| 9 | 191,536 | exact (`exact_n9_summary.out`) | 13,303 + 242 | 99 | 0 |
 | 10 | 9,733,056 | – | 376,191 + 1,302 | 915 | – |
 
-Failures (distance above the bound) at orders 4-8: `L` 2, 6, 33, 182, 1,431 (symmetric 2, 4, 13, 52, 173); `delta0`
-0, 0, 1, 3, 16 (all symmetric so far, each containing `C_3`- or `S_4`-blocks); `lambda` none; `R` none at odd orders.
+Failures (distance above the bound) at orders 4-9: `L` 2, 6, 33, 182, 1,431, 17,936 (symmetric 2, 4, 13, 52, 173,
+1,062); `delta0` 0, 0, 1, 3, 16, 99, all at distance `delta0 + 1`, all symmetric through order 8, and 8 of the 99 at order 9
+rigid and non-self-converse (for example `S_4 => S_5'` with `S_5'` a rigid prime 5-tournament); `lambda` none; `R` none at odd orders.
 The black class graph at orders 4-8 is one component plus the isolated pure-blue classes. The black-only failures
-beyond the unrestricted ones are colour obstructions (self-converse: two at order 6, one at order 7 for the regular
-target). Random endpoint tests at orders 11-16 found no counterexample to B7 or to HYP-9423 (1)
+beyond the unrestricted ones are colour obstructions (self-converse: two at order 6 for the almost-regular target, one at order 7
+for the regular target). Random endpoint tests at orders 11-16 found no counterexample to B7 or to HYP-9423 (1)
 (endpoint_random_n11_16.out).
 
 ## 6. The prime cycle-index tower (THM-4816)
@@ -161,7 +177,10 @@ Full rows (non-strong, strong non-prime, self-converse parts, `c_s`, `s_lab`, `l
 `tower_n14.out`. A280772 (OEIS, to order 8) extends by 136,655, 7,906,161, 796,876,429 and the three values above. The
 self-converse-prime, labelled-prime and intransitivity sequences are not in the OEIS. The order-14 Burnside defect
 `3,574,801,896/7` is pre-registered (HYP-9423 (6)). Its denominator says order-14 primes with an automorphism of
-order 7 exist.
+order 7 exist. After registration, the 7- and 5-parts were tested by enumerating the types `7^2` and `1^4 5^2`. There
+are 98 classes with an element of order 7 (93 with `|Aut| = 7`, 5 with `|Aut| = 21`), and `93 + 5 · 5 = 118 ≡ 6 (mod 7)`
+as required. There are 4,200 classes with an element of order 5, `≡ 0 (mod 5)`. The 3-part needs about
+`1.7 · 10^10` candidates and is untested.
 
 ## 8. Reproduction
 
@@ -181,7 +200,8 @@ cc -O3 endpoint_random.c -o endpoint_random ; ./endpoint_random 13 100000 2 132
 ## 9. Next
 
 1. HYP-9423 (1), 2-connected `L`-descent: Hamiltonian paths against the score direction.
-2. The order-9 class-graph census (black distances to the regular class), running at filing.
+2. Every regular tournament attains `L`, as HYP-9423 (7) conjectures: proved through order 11 by landing chains;
+   order 13 has 1,495,297 regular classes.
 3. An order-14 non-rigid census needs about `1.7 * 10^10` invariant tournaments and a registry of about `7.7 * 10^8`
    classes. It wants canonical augmentation instead of a registry, and it would test HYP-9423 (6).
 4. The even-order regular target (HYP-9423 (3)).

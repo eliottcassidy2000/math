@@ -25,7 +25,7 @@ locus under the monoid `M`. They all have the same two-sided form.
 | distance to the non-strong locus (THM-4811 (B)) | arc connectivity `lambda` | 1 | Camion cycle entering a minimum cut | always |
 | same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (audited); `E(M; Z)` is only its `t = 1` subfamily |
 | distance to a singleton plus a strong core (THM-4811 (D)) | `delta^0` | 1 | protected vertex; singleton-type black descent (Theorem C) | singleton locus when `lambda = delta^0`; exhaustive through order 10 |
-| distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` and `P_7` yes (`P_7`'s 7 is a labelled distance, forced by parity; corrected, THM-4815 (C)); fails at sources, sinks and cut vertices (section 5) |
+| distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` and `P_7` yes (`P_7`'s 7 is a labelled distance, forced by parity; corrected, THM-4815 (C)); its local minima sit at sources, sinks and cut vertices (section 5) |
 | triangle descent (black_descent_20261020c) | `c3` | `s(a) - s(b) - 1` | black closed path with `s(b) >= s(a)` | descent always (C3, R5 aside) |
 | forest frames (Session74) | `beta >= L - n + 2` | 1 | six moves for `P_11` | `P_11` yes |
 | exceptions to a bounded-arity bank (Session75, dyadic T1-T6) | trace norm | `2 sum |2 cos(k pi/(n+1))|` per move | none needed (static) | first order only |
@@ -140,16 +140,16 @@ census (THM-4815, HYP-9423).
 `K -> -K + 2A_Q` read through a converse-invariant functional. The non-potential bounds come from the same identity:
 summed mod 2 it is THM-4810's parity theorem (and every move flips the parity when `n ≡ 0, 3 (mod 4)`), applied twice
 it is the two-move XOR law, and restricted to endpoints it gives the non-adjacency of non-strong nodes, module
-shattering and the source/sink trap.
+shattering and Session74's source/sink pruning lemma.
 
 **Forced symmetry: true for colour, false for cuts.** For score and cut functionals only the two endpoints of the path
 matter. So a descent fails only when no Hamiltonian path joins a descending pair (a *cut*: for non-strong tournaments
 the endpoints are confined to top x bottom component; the strong local minima found through order 10 all have a cut
 vertex), or when every descending path is blue (a *colour* obstruction, which forces an anti-automorphism). The second
-is the reflection's mechanism. The first is the common one, and it has rigid, non-self-converse examples from order 6.
+is the reflection's mechanism. The first is the common one, and it has rigid, non-self-converse examples from order 5 (strong ones from order 6).
 
 **The regular target never fails.** Every tournament has a Hamiltonian path from a maximum-score to a minimum-score
-vertex. So at odd orders the distance to the regular class is exactly `R = (1/2) sum |s_v - (n-1)/2|`. The regular
+vertex (a classical fact: Thomassen 1982; Lu 2018 for a minimum vertex beating a maximum one). So at odd orders the distance to the regular class is exactly `R = (1/2) sum |s_v - (n-1)/2|`. The regular
 target's descending pairs run with the natural direction of Hamiltonian paths (high to low), the transitive target's
 against it. This is why `L` fails where `R` cannot.
 

@@ -1,0 +1,107 @@
+n=4 classes=4  moves: involution failures 0, colour asymmetries 0, missing classes 0; class graph asymmetric edges any 0 black 0
+black class graph: components of size > 1: 1; isolated classes: 1 (pure blue 1, isolated but not pure blue 0); pure-blue classes total 1
+   pure blue: 111111 scores 0 1 2 3  |Aut| 1 SC 1 HP 1
+TT/L                     any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 2 (symmetric 2, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 2 (symmetric 2)  LM by (lambda,kappa): (0,0):2
+   breakdown TT/L any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 2, |Aut|>1 & SC 0]; failures [0, 0, 2, 0]
+TT/L                     black unreachable 3  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+SING/delta0              any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown SING/delta0 any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+SING/delta0              black unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+NS/lambda                any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown NS/lambda any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+NS/lambda                black unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+REG(almost)/ceil(R'/2)   any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown REG(almost)/ceil(R'/2) any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+REG(almost)/ceil(R'/2)   black unreachable 1  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+total Hamiltonian paths over class representatives: 12
+n=5 classes=12  moves: involution failures 0, colour asymmetries 0, missing classes 0; class graph asymmetric edges any 0 black 0
+black class graph: components of size > 1: 1; isolated classes: 3 (pure blue 3, isolated but not pure blue 0); pure-blue classes total 3
+   pure blue: 1111111111 scores 0 1 2 3 4  |Aut| 1 SC 1 HP 1
+   pure blue: 1100110111 scores 2 2 2 2 2  |Aut| 5 SC 1 HP 15
+   pure blue: 1111101111 scores 0 2 2 2 4  |Aut| 3 SC 1 HP 3
+TT/L                     any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 6 (symmetric 4, rigid 2 of which strong 0; strong 1, strong kappa>=2 0; max excess 2)  local minima 6 (symmetric 4)  LM by (lambda,kappa): (0,0):5 (1,1):1
+   breakdown TT/L any: local minima [|Aut|=1 & not SC 2, |Aut|=1 & SC 1, |Aut|>1 & not SC 2, |Aut|>1 & SC 1]; failures [2, 1, 2, 1]
+   rigid L-failure: 1101111111 scores 0 2 2 3 3 strong 0 lambda 0 kappa 0 L 1 dist 2
+   rigid L-failure: 1111100111 scores 1 1 2 2 4 strong 0 lambda 0 kappa 0 L 1 dist 2
+TT/L                     black unreachable 11  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+SING/delta0              any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown SING/delta0 any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+SING/delta0              black unreachable 1  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+NS/lambda                any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown NS/lambda any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+NS/lambda                black unreachable 1  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+REG/R                    any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown REG/R any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+REG/R                    black unreachable 11  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+total Hamiltonian paths over class representatives: 92
+n=6 classes=56  moves: involution failures 0, colour asymmetries 0, missing classes 0; class graph asymmetric edges any 0 black 0
+black class graph: components of size > 1: 1; isolated classes: 2 (pure blue 2, isolated but not pure blue 0); pure-blue classes total 2
+   pure blue: 111111111111111 scores 0 1 2 3 4 5  |Aut| 1 SC 1 HP 1
+   pure blue: 101111111111101 scores 1 1 1 4 4 4  |Aut| 9 SC 1 HP 9
+TT/L                     any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 33 (symmetric 13, rigid 20 of which strong 10; strong 13, strong kappa>=2 0; max excess 3)  local minima 22 (symmetric 10)  LM by (lambda,kappa): (0,0):19 (1,1):3
+   breakdown TT/L any: local minima [|Aut|=1 & not SC 12, |Aut|=1 & SC 2, |Aut|>1 & not SC 8, |Aut|>1 & SC 0]; failures [20, 4, 8, 1]
+   rigid L-failure: 111011111111111 scores 0 2 2 3 4 4 strong 0 lambda 0 kappa 0 L 1 dist 2
+   rigid L-failure: 111011111110111 scores 1 2 2 2 4 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 111011111111101 scores 1 1 2 3 4 4 strong 1 lambda 1 kappa 1 L 1 dist 3
+   rigid L-failure: 111111100111111 scores 1 2 2 2 3 5 strong 0 lambda 0 kappa 0 L 2 dist 3
+   rigid L-failure: 111111101110111 scores 1 2 2 2 3 5 strong 0 lambda 0 kappa 0 L 2 dist 3
+   rigid L-failure: 111111101111101 scores 1 1 2 3 3 5 strong 0 lambda 0 kappa 0 L 1 dist 3
+   rigid L-failure: 111111101111110 scores 1 1 2 3 3 5 strong 0 lambda 0 kappa 0 L 1 dist 2
+   rigid L-failure: 111111111100111 scores 1 1 2 2 4 5 strong 0 lambda 0 kappa 0 L 1 dist 3
+   rigid L-failure: 110111111111111 scores 0 1 3 3 4 4 strong 0 lambda 0 kappa 0 L 1 dist 3
+   rigid L-failure: 110011111111111 scores 0 2 3 3 3 4 strong 0 lambda 0 kappa 0 L 2 dist 3
+   rigid L-failure: 110011111111101 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 110111101111111 scores 0 2 3 3 3 4 strong 0 lambda 0 kappa 0 L 2 dist 3
+   rigid L-failure: 110111100111111 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 110111101111101 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 110111101111110 scores 1 1 3 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 111011010111111 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 101011111111111 scores 0 2 2 3 4 4 strong 0 lambda 0 kappa 0 L 1 dist 3
+   rigid L-failure: 101011110111111 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 101011111110111 scores 1 2 2 3 3 4 strong 1 lambda 1 kappa 1 L 2 dist 3
+   rigid L-failure: 101011111111110 scores 1 1 2 3 4 4 strong 1 lambda 1 kappa 1 L 1 dist 3
+   named 111011111111101: |Aut| 1 SC 0 strong 1 lambda 1 kappa 1 L 1 dist(TT) 3 HP 15
+TT/L                     black unreachable 55  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+SING/delta0              any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 1 (symmetric 1, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 1 (symmetric 1)  LM by (lambda,kappa): (0,0):1
+   breakdown SING/delta0 any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 1]; failures [0, 0, 0, 1]
+SING/delta0              black unreachable 1  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+NS/lambda                any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown NS/lambda any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+NS/lambda                black unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+REG(almost)/ceil(R'/2)   any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 2 (symmetric 2, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 2 (symmetric 2)  LM by (lambda,kappa): (0,0):2
+   breakdown REG(almost)/ceil(R'/2) any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 2, |Aut|>1 & SC 0]; failures [0, 0, 2, 0]
+   colour obstruction (REG(almost)/ceil(R'/2)): 111011110111111 scores 1 2 2 3 3 4 |Aut| 1 SC 1 lambda 1 kappa 1 pot 1 dist 2
+   colour obstruction (REG(almost)/ceil(R'/2)): 110011111110111 scores 1 2 2 3 3 4 |Aut| 1 SC 1 lambda 1 kappa 1 pot 1 dist 2
+REG(almost)/ceil(R'/2)   black unreachable 2  d<bound 0  tariff>1 edges 0  failures 4 (symmetric 4, rigid 0 of which strong 0; strong 2, strong kappa>=2 0; max excess 1)  local minima 4 (symmetric 4)  LM by (lambda,kappa): (0,0):2 (1,1):2  colour obstructions 2 (self-converse 2)
+total Hamiltonian paths over class representatives: 1224
+n=7 classes=456  moves: involution failures 0, colour asymmetries 0, missing classes 0; class graph asymmetric edges any 0 black 0
+black class graph: components of size > 1: 1; isolated classes: 4 (pure blue 4, isolated but not pure blue 0); pure-blue classes total 4
+   pure blue: 111111111111111111111 scores 0 1 2 3 4 5 6  |Aut| 1 SC 1 HP 1
+   pure blue: 111111110011101111111 scores 0 3 3 3 3 3 6  |Aut| 5 SC 1 HP 15
+   pure blue: 111111111111011111111 scores 0 1 3 3 3 5 6  |Aut| 3 SC 1 HP 3
+   pure blue: 101111111111111111101 scores 1 1 1 3 5 5 5  |Aut| 9 SC 1 HP 9
+   2-connected strong failure (TT/L, any): 110011111011111100110 scores 2 2 2 3 4 4 4 |Aut| 1 SC 1 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+TT/L                     any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 182 (symmetric 52, rigid 130 of which strong 60; strong 80, strong kappa>=2 1; max excess 3)  local minima 110 (symmetric 32)  LM by (lambda,kappa): (0,0):99 (1,1):11
+   breakdown TT/L any: local minima [|Aut|=1 & not SC 78, |Aut|=1 & SC 7, |Aut|>1 & not SC 22, |Aut|>1 & SC 3]; failures [130, 17, 30, 5]
+TT/L                     black unreachable 455  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+SING/delta0              any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 3 (symmetric 3, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 3 (symmetric 3)  LM by (lambda,kappa): (0,0):3
+   breakdown SING/delta0 any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 2, |Aut|>1 & SC 1]; failures [0, 0, 2, 1]
+SING/delta0              black unreachable 1  d<bound 0  tariff>1 edges 0  failures 2 (symmetric 2, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 2 (symmetric 2)  LM by (lambda,kappa): (0,0):2  colour obstructions 0 (self-converse 0)
+NS/lambda                any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown NS/lambda any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+NS/lambda                black unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+REG/R                    any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown REG/R any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+   scores 1,3^5,5: 111000111111101111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(any) 2
+   scores 1,3^5,5: 111101110011110111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(any) 2
+   scores 1,3^5,5: 111101110101101111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(any) 2
+   scores 1,3^5,5: 111110110011101111111 |Aut| 5 SC 1 strong 1 kappa 1 R 2 dist(any) 2
+   scores 1,3^5,5: 111101111001011111111 |Aut| 3 SC 1 strong 1 kappa 1 R 2 dist(any) 2
+   colour obstruction (REG/R): 111110110011101111111 scores 1 3 3 3 3 3 5 |Aut| 5 SC 1 lambda 1 kappa 1 pot 2 dist 4
+REG/R                    black unreachable 4  d<bound 0  tariff>1 edges 0  failures 1 (symmetric 1, rigid 0 of which strong 0; strong 1, strong kappa>=2 0; max excess 2)  local minima 1 (symmetric 1)  LM by (lambda,kappa): (1,1):1  colour obstructions 1 (self-converse 1)
+   scores 1,3^5,5: 111000111111101111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(black) 2
+   scores 1,3^5,5: 111101110011110111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(black) 2
+   scores 1,3^5,5: 111101110101101111111 |Aut| 1 SC 1 strong 1 kappa 1 R 2 dist(black) 2
+   scores 1,3^5,5: 111110110011101111111 |Aut| 5 SC 1 strong 1 kappa 1 R 2 dist(black) 4
+   scores 1,3^5,5: 111101111001011111111 |Aut| 3 SC 1 strong 1 kappa 1 R 2 dist(black) 2
+total Hamiltonian paths over class representatives: 35180

@@ -1,0 +1,14 @@
+n=3 classes 2: (max,min) pairs 7, without HP x..y 3; Thomassen (i)/(ii) holds 3; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 0
+n=4 classes 4: (max,min) pairs 11, without HP x..y 2; Thomassen (i)/(ii) holds 2; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 0
+no HP x..y, neither (i) nor (ii) [x=0 y=2, scores max 2 min 2, regular 1]: 1100110111
+no HP x..y, neither (i) nor (ii) [x=1 y=3, scores max 2 min 2, regular 1]: 1100110111
+no HP x..y, neither (i) nor (ii) [x=2 y=4, scores max 2 min 2, regular 1]: 1100110111
+no HP x..y, neither (i) nor (ii) [x=3 y=0, scores max 2 min 2, regular 1]: 1100110111
+no HP x..y, neither (i) nor (ii) [x=4 y=1, scores max 2 min 2, regular 1]: 1100110111
+n=5 classes 12: (max,min) pairs 43, without HP x..y 7; Thomassen (i)/(ii) holds 2; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 5
+no HP x..y, neither (i) nor (ii) [x=1 y=4, scores max 3 min 2, regular 0]: 110011110111101
+no HP x..y, neither (i) nor (ii) [x=3 y=0, scores max 3 min 2, regular 0]: 110001101110111
+n=6 classes 56: (max,min) pairs 164, without HP x..y 6; Thomassen (i)/(ii) holds 4; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 2
+n=7 classes 456: (max,min) pairs 1339, without HP x..y 14; Thomassen (i)/(ii) holds 14; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 0
+n=8 classes 6880: (max,min) pairs 17949, without HP x..y 68; Thomassen (i)/(ii) holds 68; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 0
+n=9 classes 191536: (max,min) pairs 507614, without HP x..y 526; Thomassen (i)/(ii) holds 526; (i)/(ii) but HP exists 0; no HP and neither (i) nor (ii) 0

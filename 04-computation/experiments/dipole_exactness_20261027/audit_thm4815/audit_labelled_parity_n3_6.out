@@ -1,0 +1,8 @@
+n=3 labelled tournaments 8, moves 12: parity-formula failures 0; involution/HP failures 0; converse-covariance failures 0; rho failures 0
+   labelled move graph: 2 components (sizes: 4 4); edges joining same-parity BFS levels (non-bipartite witnesses): 0; (n-1)(n+2)/2 mod 2 = 1
+n=4 labelled tournaments 64, moves 192: parity-formula failures 0; involution/HP failures 0; converse-covariance failures 0; rho failures 0
+   labelled move graph: 1 components (sizes: 64); edges joining same-parity BFS levels (non-bipartite witnesses): 0; (n-1)(n+2)/2 mod 2 = 1
+n=5 labelled tournaments 1024, moves 7680: parity-formula failures 0; involution/HP failures 0; converse-covariance failures 0; rho failures 0
+   labelled move graph: 2 components (sizes: 512 512); edges joining same-parity BFS levels (non-bipartite witnesses): 2568; (n-1)(n+2)/2 mod 2 = 0
+n=6 labelled tournaments 32768, moves 737280: parity-formula failures 0; involution/HP failures 0; converse-covariance failures 0; rho failures 0
+   labelled move graph: 2 components (sizes: 16384 16384); edges joining same-parity BFS levels (non-bipartite witnesses): 212920; (n-1)(n+2)/2 mod 2 = 0

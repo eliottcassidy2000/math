@@ -1,0 +1,7 @@
+# auditor binaries (rebuild from the .c files)
+audit_b7_random
+audit_bfs_onfly
+audit_classgraph
+audit_endpoints
+audit_labelled
+audit_thomassen

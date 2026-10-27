@@ -1,0 +1,47 @@
+n=8 classes=6880  moves: involution failures 0, colour asymmetries 0, missing classes 0; class graph asymmetric edges any 0 black 0
+black class graph: components of size > 1: 1; isolated classes: 3 (pure blue 3, isolated but not pure blue 0); pure-blue classes total 3
+   pure blue: 1111111111111111111111111111 scores 0 1 2 3 4 5 6 7  |Aut| 1 SC 1 HP 1
+   pure blue: 1111111101111111111111101111 scores 0 2 2 2 5 5 5 7  |Aut| 9 SC 1 HP 9
+   pure blue: 1011111111111111111111111101 scores 1 1 1 3 4 6 6 6  |Aut| 9 SC 1 HP 9
+   2-connected strong failure (TT/L, any): 1111001110111111111100111101 scores 2 2 2 3 4 5 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+   2-connected strong failure (TT/L, any): 1101011111101111111101110101 scores 2 2 2 3 4 5 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+   2-connected strong failure (TT/L, any): 1101101111011111111101110110 scores 2 2 2 3 4 5 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+   2-connected strong failure (TT/L, any): 1101001110111111111111100110 scores 2 2 2 3 4 5 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+   2-connected strong failure (TT/L, any): 1011011111110111011111111101 scores 2 2 2 3 4 5 5 5 |Aut| 3 SC 1 lambda 2 kappa 2 pot 3 dist 4 has-descending-neighbour 1
+TT/L                     any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 1431 (symmetric 173, rigid 1258 of which strong 510; strong 566, strong kappa>=2 5; max excess 3)  local minima 904 (symmetric 114)  LM by (lambda,kappa): (0,0):855 (1,1):47 (2,1):2
+   breakdown TT/L any: local minima [|Aut|=1 & not SC 790, |Aut|=1 & SC 11, |Aut|>1 & not SC 100, |Aut|>1 & SC 3]; failures [1258, 26, 142, 5]
+TT/L                     black unreachable 6879  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+SING/delta0              any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 16 (symmetric 16, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 16 (symmetric 16)  LM by (lambda,kappa): (0,0):16
+   breakdown SING/delta0 any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 1, |Aut|>1 & not SC 14, |Aut|>1 & SC 1]; failures [0, 1, 14, 1]
+SING/delta0              black unreachable 1  d<bound 0  tariff>1 edges 0  failures 15 (symmetric 15, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 1)  local minima 15 (symmetric 15)  LM by (lambda,kappa): (0,0):15  colour obstructions 0 (self-converse 0)
+NS/lambda                any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):
+   breakdown NS/lambda any: local minima [|Aut|=1 & not SC 0, |Aut|=1 & SC 0, |Aut|>1 & not SC 0, |Aut|>1 & SC 0]; failures [0, 0, 0, 0]
+NS/lambda                black unreachable 0  d<bound 0  tariff>1 edges 0  failures 0 (symmetric 0, rigid 0 of which strong 0; strong 0, strong kappa>=2 0; max excess 0)  local minima 0 (symmetric 0)  LM by (lambda,kappa):  colour obstructions 0 (self-converse 0)
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1110101111000111111110110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1110001111001111101111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1110001111010111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1110010111001111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1110001111100110111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1111000110011111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1111000110101110111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1111000111001101111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 3 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1100010111101111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1100100111000111111111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1100100111011111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), any): 1100111111000111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+REG(almost)/ceil(R'/2)   any   unreachable 0  d<bound 0  tariff>1 edges 0  failures 306 (symmetric 46, rigid 260 of which strong 186; strong 210, strong kappa>=2 30; max excess 1)  local minima 70 (symmetric 8)  LM by (lambda,kappa): (1,1):40 (2,2):30
+   breakdown REG(almost)/ceil(R'/2) any: local minima [|Aut|=1 & not SC 62, |Aut|=1 & SC 0, |Aut|>1 & not SC 8, |Aut|>1 & SC 0]; failures [260, 0, 46, 0]
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1110101111000111111110110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1110001111001111101111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1110001111010111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1110010111001111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1110001111100110111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1111000110011111011111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1111000110101110111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1111000111001101111111111110 scores 2 2 4 4 4 4 4 4 |Aut| 3 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1100010111101111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1100100111000111111111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1100100111011111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+   2-connected strong failure (REG(almost)/ceil(R'/2), black): 1100111111000111001111110111 scores 3 3 3 3 3 3 5 5 |Aut| 1 SC 0 lambda 2 kappa 2 pot 1 dist 2 has-descending-neighbour 0
+REG(almost)/ceil(R'/2)   black unreachable 3  d<bound 0  tariff>1 edges 0  failures 306 (symmetric 46, rigid 260 of which strong 186; strong 210, strong kappa>=2 30; max excess 1)  local minima 70 (symmetric 8)  LM by (lambda,kappa): (1,1):40 (2,2):30  colour obstructions 0 (self-converse 0)
+total Hamiltonian paths over class representatives: 2143304

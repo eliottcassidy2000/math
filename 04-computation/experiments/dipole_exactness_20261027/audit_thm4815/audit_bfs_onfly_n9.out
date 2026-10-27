@@ -1,0 +1,29 @@
+n=9 classes=191536
+REG   levels 11 unreachable 0  d<pot 0  failures 0 (symmetric 0; strong 2-connected 0; max excess 0)  local minima 0 (symmetric 0)
+   (pot,+excess):count (0,+0):15 (1,+0):457 (2,+0):4979 (3,+0):21489 (4,+0):45989 (5,+0):55323 (6,+0):39941 (7,+0):17687 (8,+0):4764 (9,+0):812 (10,+0):80
+REGB  levels 11 unreachable 6  d<pot 0  failures 0 (symmetric 0; strong 2-connected 0; max excess 0)  local minima 0 (symmetric 0)
+   (pot,+excess):count (0,+0):15 (1,+0):457 (2,+0):4979 (3,+0):21489 (4,+0):45989 (5,+0):55323 (6,+0):39941 (7,+0):17686 (8,+0):4764 (9,+0):810 (10,+0):77
+TT    levels 11 unreachable 0  d<pot 0  failures 17936 (symmetric 1062; strong 2-connected 143; max excess 3)  local minima 13545 (symmetric 707)
+   (pot,+excess):count (0,+0):1 (1,+0):1 (1,+1):3 (1,+2):81 (1,+3):42 (2,+0):94 (2,+1):1458 (2,+2):651 (3,+0):6650 (3,+1):6581 (3,+2):209 (3,+3):2 (4,+0):32512 (4,+1):4693 (4,+2):82 (5,+0):56438 (5,+1):3276 (5,+2):15 (6,+0):50964 (6,+1):840 (6,+2):3 (7,+0):21489 (8,+0):4979 (9,+0):457 (10,+0):15
+SING  levels 5 unreachable 0  d<pot 0  failures 99 (symmetric 91; strong 2-connected 0; max excess 1)  local minima 99 (symmetric 91)
+   (pot,+excess):count (0,+0):13304 (1,+0):78515 (1,+1):99 (2,+0):89366 (3,+0):10237 (4,+0):15
+NS    levels 5 unreachable 0  d<pot 0  failures 0 (symmetric 0; strong 2-connected 0; max excess 0)  local minima 0 (symmetric 0)
+   (pot,+excess):count (0,+0):13403 (1,+0):78515 (2,+0):89366 (3,+0):10237 (4,+0):15
+      774.92 real       766.34 user         1.92 sys
+            26034176  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11112  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   8  voluntary context switches
+              208162  involuntary context switches
+       8397254015370  instructions retired
+       2555613551288  cycles elapsed
+            26378944  peak memory footprint

@@ -1,0 +1,12 @@
+n=10 classes=4860859 strong=4682052 regular=0
+B7: non-regular classes without a max->min Hamiltonian path: 0
+B7(i): classes with some arc y->x (y min, x max): 1251036; such arcs 1672179 (in strong classes 1672179); arcs y->x with no HP x..y: 0
+B7(ii): classes with X => Y: 3609823; of which some pair (x,y) not joined x..y: 0
+Lu-type: arcs x->y (x max, y min) with no HP x..y: 4074 arcs in 4043 classes (strong only: 4074 arcs in 4043 classes); untied: 0; with X=>Y: 0
+B3: non-strong classes with Pi != C_1 x C_k: 0; score-placement failures: 0
+Lipschitz failures (L, delta0, R on Pi): 0
+B4: delta0>=1 classes with (descent != strong): 0; delta0 local minima: 681
+B5: non-strong non-transitive 178806 (with source/sink 178125): (descent == source/sink) failures 0; non-strong L-local minima 178125
+B5: strong classes, (min,max) pairs not in D_L: 0
+strong L-local minima: 619; with kappa>=2: 0; by (lambda,kappa): (1,1):580 (2,1):39
+min->max: strong non-regular classes with no HP from a min-score to a max-score vertex: 124217 (cut vertex 113738, 2-connected 10479; 2-connected without L-descent 0)

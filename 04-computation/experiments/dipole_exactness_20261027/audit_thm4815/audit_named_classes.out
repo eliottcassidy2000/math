@@ -1,0 +1,21 @@
+named order-6 class (THM-4815 D): 111011111111101 n=6 scores=[4, 4, 3, 1, 2, 1] sorted=[1, 1, 2, 3, 4, 4] L=1 |Aut|=1 self-converse=False strong=True kappa=1 #HP=15
+   Hamiltonian-path endpoint pairs: [(0, 3), (0, 4), (0, 5), (1, 0), (1, 2), (1, 3), (1, 5), (2, 1), (2, 3), (2, 5), (3, 5), (4, 3), (5, 2)]
+   min->max endpoint pairs: []
+   out-neighbourhoods: {0: [1, 2, 3, 5], 1: [2, 3, 4, 5], 2: [3, 4, 5], 3: [4], 4: [0, 5], 5: [3]}
+   paths containing 5->3->4: 5 of 15; paths without it: [(0, 1, 2, 3, 4, 5), (0, 1, 2, 4, 5, 3), (1, 2, 3, 4, 0, 5), (1, 2, 4, 0, 5, 3), (1, 3, 4, 0, 2, 5), (1, 4, 0, 2, 5, 3), (2, 3, 4, 0, 1, 5), (2, 4, 0, 1, 5, 3), (3, 4, 0, 1, 2, 5), (4, 0, 1, 2, 5, 3)]
+second order-6 class with scores 1,1,2,3,4,4, L=1, d=3: 101011111111110 n=6 scores=[3, 4, 4, 2, 1, 1] sorted=[1, 1, 2, 3, 4, 4] L=1 |Aut|=1 self-converse=False strong=True kappa=1 #HP=15
+   Hamiltonian-path endpoint pairs: [(0, 4), (1, 0), (1, 3), (1, 4), (1, 5), (2, 1), (2, 3), (2, 4), (2, 5), (3, 2), (3, 5), (4, 5), (5, 3)]
+   min->max endpoint pairs: []
+   is it the converse of the named class? True
+order-5 rigid L-failure (K1 => S4): 1111100111 n=5 scores=[4, 1, 2, 2, 1] sorted=[1, 1, 2, 2, 4] L=1 |Aut|=1 self-converse=False strong=False kappa=0 #HP=5
+   Hamiltonian-path endpoint pairs: [(0, 1), (0, 2), (0, 3), (0, 4)]
+   min->max endpoint pairs: []
+order-5 rigid L-failure (S4 => K1): 1101111111 n=5 scores=[3, 3, 2, 2, 0] sorted=[0, 2, 2, 3, 3] L=1 |Aut|=1 self-converse=False strong=False kappa=0 #HP=5
+   Hamiltonian-path endpoint pairs: [(0, 4), (1, 4), (2, 4), (3, 4)]
+   min->max endpoint pairs: []
+order-7 strong 2-connected L-failure: 110011111011111100110 n=7 scores=[4, 4, 4, 2, 3, 2, 2] sorted=[2, 2, 2, 3, 4, 4, 4] L=3 |Aut|=1 self-converse=True strong=True kappa=2 #HP=117
+   Hamiltonian-path endpoint pairs: [(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 0), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 0), (2, 1), (2, 3), (2, 4), (2, 5), (2, 6), (3, 1), (3, 2), (3, 4), (3, 5), (3, 6), (4, 0), (4, 1), (4, 2), (4, 3), (4, 5), (4, 6), (5, 0), (5, 2), (5, 3), (5, 4), (5, 6), (6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5)]
+   min->max endpoint pairs: [(3, 1), (3, 2), (5, 0), (5, 2), (6, 0), (6, 1), (6, 2)]
+order-7 black colour obstruction (scores 1,3^5,5): 111110110011101111111 n=7 scores=[5, 3, 3, 3, 3, 3, 1] sorted=[1, 3, 3, 3, 3, 3, 5] L=4 |Aut|=5 self-converse=True strong=True kappa=1 #HP=135
+   Hamiltonian-path endpoint pairs: [(0, 6), (1, 0), (1, 2), (1, 3), (1, 4), (1, 5), (2, 0), (2, 1), (2, 3), (2, 4), (2, 5), (3, 0), (3, 1), (3, 2), (3, 4), (3, 5), (4, 0), (4, 1), (4, 2), (4, 3), (4, 5), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5)]
+   min->max endpoint pairs: []
