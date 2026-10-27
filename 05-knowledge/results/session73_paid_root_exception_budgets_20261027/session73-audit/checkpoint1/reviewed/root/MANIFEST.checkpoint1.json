@@ -1,0 +1,31 @@
+{
+  "status": "FROZEN_CHECKPOINT1",
+  "source_commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+  "files": [
+    {
+      "path": "COMPILER_CLOCK_LOWER_BOUND.md",
+      "sha256": "98f58e15614b5a72642aef3e2532033adece1a91d661f7881ad767c12cf35832",
+      "bytes": 6537
+    },
+    {
+      "path": "TYPED_PAYMENT_SYNTHESIS.md",
+      "sha256": "f2caf2e4e74e3b049091475caaa7f59d5b7364b5d56c3a8141b08d8d04a5fa0d",
+      "bytes": 6369
+    },
+    {
+      "path": "check_compiler_budget.py",
+      "sha256": "75f1b30458520b94ba9ed5fde93ca6e723d9f8026d79d279b499c45dd2e9b16f",
+      "bytes": 2830
+    },
+    {
+      "path": "compiler.normal.json",
+      "sha256": "320e9cb8a99f46d78f2b41f06bb37beb21d6fec5a806b60c0a0467491fa24b22",
+      "bytes": 1705
+    },
+    {
+      "path": "compiler.optimized.json",
+      "sha256": "320e9cb8a99f46d78f2b41f06bb37beb21d6fec5a806b60c0a0467491fa24b22",
+      "bytes": 1705
+    }
+  ]
+}

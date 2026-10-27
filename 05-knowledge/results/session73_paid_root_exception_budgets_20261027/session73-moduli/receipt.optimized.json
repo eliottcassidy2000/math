@@ -1,0 +1,276 @@
+{
+  "affine": {
+    "cancelled_endpoint_period": 3,
+    "guarded_period": 6,
+    "source_shifts": 22678,
+    "with_zero_slope": 149,
+    "words": 400
+  },
+  "arithmetic": "exact integer/Fraction; no removable assertions",
+  "collatz": {
+    "endpoint_image_tests": 14535,
+    "examples": [
+      {
+        "clock": 0,
+        "endpoint_base": 0,
+        "precision_q27": 27,
+        "precision_q9": 9,
+        "source_base": 0,
+        "valuation_sum": 0,
+        "word": []
+      },
+      {
+        "clock": 2,
+        "endpoint_base": 2,
+        "precision_q27": 18,
+        "precision_q9": 6,
+        "source_base": 1,
+        "valuation_sum": 1,
+        "word": [
+          1
+        ]
+      },
+      {
+        "clock": 5,
+        "endpoint_base": 6,
+        "precision_q27": 24,
+        "precision_q9": 8,
+        "source_base": 5,
+        "valuation_sum": 3,
+        "word": [
+          1,
+          2
+        ]
+      },
+      {
+        "clock": 9,
+        "endpoint_base": 5,
+        "precision_q27": 64,
+        "precision_q9": 64,
+        "source_base": 12,
+        "valuation_sum": 6,
+        "word": [
+          2,
+          1,
+          3
+        ]
+      }
+    ],
+    "guarded_split_compositions": 5634,
+    "native_transitions": 77976,
+    "word_modulus_pairs": 1530,
+    "words": 85
+  },
+  "crt_rank": {
+    "cell_pairs": 6084,
+    "examples": [
+      {
+        "L": 6,
+        "gcd": 1,
+        "kernel": 2,
+        "m": 3,
+        "q": 2,
+        "rank": 4
+      },
+      {
+        "L": 12,
+        "gcd": 2,
+        "kernel": 4,
+        "m": 6,
+        "q": 4,
+        "rank": 8
+      },
+      {
+        "L": 35,
+        "gcd": 1,
+        "kernel": 24,
+        "m": 7,
+        "q": 5,
+        "rank": 11
+      },
+      {
+        "L": 24,
+        "gcd": 4,
+        "kernel": 8,
+        "m": 12,
+        "q": 8,
+        "rank": 16
+      },
+      {
+        "L": 12,
+        "gcd": 12,
+        "kernel": 0,
+        "m": 12,
+        "q": 12,
+        "rank": 12
+      }
+    ],
+    "frames": 144
+  },
+  "incoming_patterns": {
+    "examples": [
+      {
+        "fourth_power_nonzero": [
+          1
+        ],
+        "p": 3
+      },
+      {
+        "fourth_power_nonzero": [
+          1,
+          2,
+          4
+        ],
+        "p": 7
+      },
+      {
+        "fourth_power_nonzero": [
+          1,
+          3,
+          4,
+          5,
+          9
+        ],
+        "p": 11
+      },
+      {
+        "fourth_power_nonzero": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          9,
+          11,
+          16,
+          17
+        ],
+        "p": 19
+      }
+    ],
+    "incoming_commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "mod15_nonzero_squares": [
+      1,
+      4,
+      6,
+      9,
+      10
+    ],
+    "mod15_unit_squares": [
+      1,
+      4
+    ],
+    "odd_degree_opposite_controls": 3540,
+    "polynomial_degree_aliases": 60,
+    "prime_monomial_cases": 2700,
+    "status": "HYP-9419(4) polynomial exclusion REFUTED"
+  },
+  "modulus_banks": {
+    "empty_bank": "not in theorem domain",
+    "examples": [
+      {
+        "N": 12,
+        "bank": [
+          4,
+          6
+        ],
+        "kappa": 4,
+        "rank": 8
+      },
+      {
+        "N": 6,
+        "bank": [
+          2,
+          2,
+          3
+        ],
+        "kappa": 2,
+        "rank": 4
+      },
+      {
+        "N": 30,
+        "bank": [
+          2,
+          3,
+          5
+        ],
+        "kappa": 22,
+        "rank": 8
+      },
+      {
+        "N": 6,
+        "bank": [
+          2,
+          3,
+          6
+        ],
+        "kappa": 0,
+        "rank": 6
+      },
+      {
+        "N": 210,
+        "bank": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "kappa": 196,
+        "rank": 14
+      },
+      {
+        "N": 6,
+        "bank": [
+          2,
+          3,
+          6
+        ],
+        "kappa": 0,
+        "rank": 6
+      },
+      {
+        "N": 6,
+        "bank": [
+          2,
+          2,
+          3
+        ],
+        "kappa": 2,
+        "rank": 4
+      }
+    ],
+    "nonempty_banks": 168,
+    "nonuniform_two_debt_frames": 25,
+    "uniform_fixed_N_frames": 336
+  },
+  "original_weights": {
+    "accepted_source_mass": "65/514",
+    "joint_cells": 10,
+    "joint_weight_digest": "5c96d844f9ee3b0a02ce923045ee80c10da297faff430dcea41ce6d58997f566",
+    "original_sources": 256,
+    "physical_clock": 5,
+    "word": [
+      1,
+      2
+    ]
+  },
+  "scope": "finite controls supplement the scoped proofs; no native ROOT positivity claim",
+  "status": "PASS",
+  "weighted_gram": {
+    "exact_extremal_checks": 1545,
+    "examples": [
+      {
+        "kappa": "504/37",
+        "m": 3,
+        "mu": "1/21",
+        "q": 2,
+        "resistance": "273/37",
+        "source": 0
+      }
+    ],
+    "independent_laplacians": 103,
+    "named_targets": 103,
+    "nonuniform_frames": 36,
+    "onecell_threshold_checks": 101
+  }
+}

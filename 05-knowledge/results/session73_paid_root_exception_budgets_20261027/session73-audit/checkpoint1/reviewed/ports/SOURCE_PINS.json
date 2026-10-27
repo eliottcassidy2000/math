@@ -1,0 +1,45 @@
+{
+  "base_commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+  "sources": [
+    {
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "repo_path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "git_blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "snapshot": "sources/weighted_renewal_README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+      "bytes": 24746
+    },
+    {
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "repo_path": "05-knowledge/results/native_return_necklaces_20261026/README.md",
+      "git_blob": "fbdf4129436e53b2aa485c0b84221d3b04326bb3",
+      "snapshot": "sources/native_return_README.md",
+      "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f",
+      "bytes": 30317
+    },
+    {
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "repo_path": "00-navigation/S69.md",
+      "git_blob": "b0c73f93c3b3bd791ae02e652ff5f29780a9f386",
+      "snapshot": "sources/S69.md",
+      "sha256": "e5b1667e9a908ff33f9b0180cd7a1194061d8f6b74f6192c09ae7dc562951605",
+      "bytes": 2380
+    },
+    {
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "repo_path": "00-navigation/S72.md",
+      "git_blob": "135466eed826ed7fb8f929544a4122afbb27d49c",
+      "snapshot": "sources/S72.md",
+      "sha256": "dfe8b41180e7829bc341defdd057bb59ca0dc8ff16fad37877a9d58b2a34a9d2",
+      "bytes": 3680
+    },
+    {
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "repo_path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "git_blob": "c51224b2eff703f476e06a8817963b8939419338",
+      "snapshot": "sources/THM-4743.md",
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+      "bytes": 16797
+    }
+  ]
+}

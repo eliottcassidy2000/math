@@ -1,0 +1,222 @@
+{
+  "CRT_prime_target_survivor_fractions": [
+    {
+      "S": 1,
+      "T": 4,
+      "auxiliary_primes": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "core": 3,
+      "survivor_fraction": "9/32"
+    },
+    {
+      "S": 1,
+      "T": 6,
+      "auxiliary_primes": [
+        5,
+        7,
+        11
+      ],
+      "core": 5,
+      "survivor_fraction": "9/16"
+    },
+    {
+      "S": 4,
+      "T": 13,
+      "auxiliary_primes": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "core": 9,
+      "survivor_fraction": "9/32"
+    },
+    {
+      "S": 9,
+      "T": 24,
+      "auxiliary_primes": [
+        5,
+        7,
+        11
+      ],
+      "core": 15,
+      "survivor_fraction": "9/16"
+    },
+    {
+      "S": 11,
+      "T": 32,
+      "auxiliary_primes": [
+        3,
+        5,
+        7
+      ],
+      "core": 21,
+      "survivor_fraction": "5/16"
+    },
+    {
+      "S": 6,
+      "T": 31,
+      "auxiliary_primes": [
+        5,
+        7,
+        11
+      ],
+      "core": 25,
+      "survivor_fraction": "9/16"
+    }
+  ],
+  "H4_histogram": {
+    "1": 24,
+    "3": 16,
+    "5": 24
+  },
+  "H5_mask": 4,
+  "H63_order8_mask": 137938847,
+  "H_full_spectrum_completeness": "NOT PROVED",
+  "affine_local_residue_checks": 2574,
+  "aliquot_prime_uniqueness": "NOT PROVED",
+  "all_complete_fiber_collision_checks": 5625,
+  "complete_fibers": {
+    "selected": {
+      "13": [
+        27,
+        35
+      ],
+      "2": [],
+      "21": [
+        18,
+        51,
+        91
+      ],
+      "3": [
+        4
+      ],
+      "4": [
+        9
+      ],
+      "5": [],
+      "52": [],
+      "6": [
+        6,
+        25
+      ],
+      "7": [
+        8
+      ]
+    },
+    "source_bound": 89401,
+    "targets": [
+      2,
+      300
+    ]
+  },
+  "coprime_carrier_checks": 13715,
+  "finite_bank_plus_all_squarefull_hostiles": [
+    {
+      "core_bank": [
+        2,
+        3
+      ],
+      "first_missed_but_touchable": {
+        "complete_fiber": [
+          65,
+          77
+        ],
+        "prime_target": 19
+      }
+    },
+    {
+      "core_bank": [
+        2,
+        5
+      ],
+      "first_missed_but_touchable": {
+        "complete_fiber": [
+          371,
+          611,
+          731,
+          779,
+          851,
+          899
+        ],
+        "prime_target": 61
+      }
+    },
+    {
+      "core_bank": [
+        2,
+        10
+      ],
+      "first_missed_but_touchable": {
+        "complete_fiber": [
+          1507,
+          2227,
+          4387,
+          4747,
+          5251
+        ],
+        "prime_target": 149
+      }
+    }
+  ],
+  "least_multiplicative_touchability_failure": [
+    [
+      4,
+      13,
+      52
+    ]
+  ],
+  "mask_convention": "unordered pairs itertools.combinations(range(n),2), low bit first; 1 means i->j",
+  "native_ROOT_positivity_or_budget": "NOT CLAIMED",
+  "omission_selected": [
+    {
+      "context": 2,
+      "omitted_count": 4,
+      "omitted_mass": 30,
+      "source": 27
+    },
+    {
+      "context": 10,
+      "omitted_count": 8,
+      "omitted_mass": 180,
+      "source": 27
+    },
+    {
+      "context": 70,
+      "omitted_count": 16,
+      "omitted_mass": 1440,
+      "source": 27
+    },
+    {
+      "context": 770,
+      "omitted_count": 32,
+      "omitted_mass": 17280,
+      "source": 27
+    }
+  ],
+  "omission_transport_cases": 20,
+  "prime_context_observability_checks": 12104,
+  "squarefull_odd_target_count_le_1000_in_source_scan": 35,
+  "squarefull_prime_targets_le_1000_in_source_scan": [
+    3,
+    7,
+    13,
+    31,
+    127,
+    307,
+    463,
+    523,
+    983
+  ],
+  "squarefull_shape_counts": {
+    "omega_at_least_four": 507,
+    "prime_cube": 14,
+    "prime_square": 62
+  },
+  "squarefull_source_shapes_through": 89401,
+  "status": "FINITE-EXACT controls; asymptotic claims proved in REPORT.md with cited classical input"
+}

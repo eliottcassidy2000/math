@@ -1,0 +1,41 @@
+{
+  "checked_utc_date": "2026-10-27",
+  "sources": [
+    {
+      "title": "On Untouchable Numbers and Related Problems",
+      "authors": "Carl Pomerance and Hee-Sung Yang",
+      "version_date": "14 June 2012",
+      "url": "https://math.dartmouth.edu/~carlp/uupaper3.pdf",
+      "import": "Introduction: distinct-prime Goldbach is sufficient for all odd targets >=9 to lie in the aliquot image; odd uniqueness is stated conjecturally."
+    },
+    {
+      "title": "Finite connected components of the aliquot graph",
+      "authors": "Andrew R. Booker",
+      "version_date": "arXiv:1610.07471v2, 15 June 2017",
+      "url": "https://arxiv.org/pdf/1610.07471",
+      "import": "Hypothesis G and footnote 2: distinctness supplement to the 4*10^18 published Goldbach verification."
+    },
+    {
+      "title": "254A Notes 2: Complex-analytic multiplicative number theory",
+      "authors": "Terence Tao",
+      "version_date": "9 December 2014",
+      "url": "https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/",
+      "import": "Equation (6): PNT in each fixed primitive arithmetic progression, converted to pi by partial summation. No uniform moving-modulus estimate imported."
+    },
+    {
+      "title": "254A Notes 4: Some sieve theory",
+      "authors": "Terence Tao",
+      "version_date": "21 January 2015",
+      "url": "https://terrytao.wordpress.com/2015/01/21/254a-notes-4-some-sieve-theory/",
+      "import": "Read Theorem32 (upper-bound sieve) as optional quantitative route; not required for REPORT.md's A1."
+    },
+    {
+      "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+      "authors": "Arthur H. Busch",
+      "version_date": "1 February 2006",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3",
+      "import": "Publisher metadata/abstract checked; no new proof imported. THM1370 source pin remains the inherited raw-H omission proof."
+    }
+  ],
+  "search_scope": "Targeted primary-source/status search for prime untouchable uniqueness and cited Goldbach implication. No unconditional all-prime classification located; no exhaustive literature-nonexistence claim."
+}

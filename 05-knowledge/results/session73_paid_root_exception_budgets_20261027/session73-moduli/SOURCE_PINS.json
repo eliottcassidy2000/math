@@ -1,0 +1,162 @@
+[
+  {
+    "blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+    "bytes": 24746,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+    "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+    "snapshot": "sources/05-knowledge_results_weighted_renewal_moving_modulus_20261026_README.md"
+  },
+  {
+    "blob": "c5f80524c71943329a9081c9a81aec2461fd109a",
+    "bytes": 9195,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/AUDIT.md",
+    "sha256": "00ecf2b784cb5dba4783dc5a6eaa8b6cedc6174027abdd7caf11fc8f4bcde5c5",
+    "snapshot": "sources/05-knowledge_results_weighted_renewal_moving_modulus_20261026_AUDIT.md"
+  },
+  {
+    "blob": "abfd00dca0517cc99805867607ead48a0c455c8e",
+    "bytes": 16713,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/verify.py",
+    "sha256": "a117eec0a179590e41c03aa615dfb43ed8fa3d4e33b0d90024a9b864a328c585",
+    "snapshot": "sources/05-knowledge_results_weighted_renewal_moving_modulus_20261026_verify.py"
+  },
+  {
+    "blob": "3f56b2faeee9a2adb5ea724b36de4fd472038d83",
+    "bytes": 1594,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/SOURCE_PINS.json",
+    "sha256": "3d8adc88f4f94c2e11b9203d436fe4549a6c940c96c0ed916501be3b4ad55f3a",
+    "snapshot": "sources/05-knowledge_results_weighted_renewal_moving_modulus_20261026_SOURCE_PINS.json"
+  },
+  {
+    "blob": "c01b2c25195f2a14688b48c703808def2b23e47c",
+    "bytes": 8039,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/README.md",
+    "sha256": "c21d4d87e9d7143b9629d5a2d657e1d6bb7669f51ee86305e977eec1fe9c068d",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_README.md"
+  },
+  {
+    "blob": "1e1f8c3021fdeb6afd6f44fe719ebf13978f9f92",
+    "bytes": 19013,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/THEORY.md",
+    "sha256": "a62e9aeb6fb2000c547d81b1917869333fe570f30bbf9d067d0ee9e3885c5168",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_THEORY.md"
+  },
+  {
+    "blob": "5d89f3ecd05815bccb3af7f4df6e739e5cb76a8c",
+    "bytes": 10236,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/CLOCKS-MACHINES.md",
+    "sha256": "d5780e190ff3a911361fbc2c0a8eda3c96ea84c126b6dc6e6a9ab35b67859cde",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_CLOCKS-MACHINES.md"
+  },
+  {
+    "blob": "501c0588127ebfa4070dc4b85fa9f6766156806b",
+    "bytes": 10337,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/FOURIER.md",
+    "sha256": "d9a19db74e95daca22b70efe195df44749d1a8d94e3c50453780b3fe2e47722b",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_FOURIER.md"
+  },
+  {
+    "blob": "bb4ad57b9d44fd6699ef64af9da5d0014a37273b",
+    "bytes": 10900,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/check.py",
+    "sha256": "ee6b84e38823658e37ca62f0068421d5ea80c87155a5f995314e88a1db9e871e",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_check.py"
+  },
+  {
+    "blob": "52af79bebaa92dfce229650be80ccfc82fb83e42",
+    "bytes": 13265,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/SOURCES.json",
+    "sha256": "aff5200202916811882c0352be3416d64bf782226feae96e00c86c4fdb36bd29",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_SOURCES.json"
+  },
+  {
+    "blob": "b0c73f93c3b3bd791ae02e652ff5f29780a9f386",
+    "bytes": 2380,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "00-navigation/S69.md",
+    "sha256": "e5b1667e9a908ff33f9b0180cd7a1194061d8f6b74f6192c09ae7dc562951605",
+    "snapshot": "sources/00-navigation_S69.md"
+  },
+  {
+    "blob": "fd71908655a092c35167ab2089b4ef51b021e187",
+    "bytes": 2206,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "00-navigation/S70.md",
+    "sha256": "cd65354667c7780214450cbd33944ef10b66be875df66ada7ba7efde7db99ec0",
+    "snapshot": "sources/00-navigation_S70.md"
+  },
+  {
+    "blob": "833fdbe4000fa8ad8ad0d680c62510e360151273",
+    "bytes": 1801,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "00-navigation/S71.md",
+    "sha256": "5ab605eb30c183c68254820ff9a82e06269036f5e3038301e69fa64c00c7b5a0",
+    "snapshot": "sources/00-navigation_S71.md"
+  },
+  {
+    "blob": "135466eed826ed7fb8f929544a4122afbb27d49c",
+    "bytes": 3680,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "00-navigation/S72.md",
+    "sha256": "dfe8b41180e7829bc341defdd057bb59ca0dc8ff16fad37877a9d58b2a34a9d2",
+    "snapshot": "sources/00-navigation_S72.md"
+  },
+  {
+    "blob": "fbdf4129436e53b2aa485c0b84221d3b04326bb3",
+    "bytes": 30317,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/native_return_necklaces_20261026/README.md",
+    "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f",
+    "snapshot": "sources/native_return-README.md"
+  },
+  {
+    "blob": "c2313c5d454b0db2377d15953482c440fcf09895",
+    "bytes": 34451,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md",
+    "sha256": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+    "snapshot": "sources/session72-response-REPORT.md"
+  },
+  {
+    "blob": "986947606481278b3928b9989b9701d3131361fe",
+    "bytes": 25964,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_source_refinement_floor_20261005.md",
+    "sha256": "96ce4d659f0576d2950133163ab59fc6b601adf2120f886a38754d9b06b87f1d",
+    "snapshot": "sources/collatz_source_refinement_floor_20261005.md"
+  },
+  {
+    "blob": "150da5a150d6f4fa7b0b34666629d90d746e9a56",
+    "bytes": 4947,
+    "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "path": "05-knowledge/hypotheses/HYP-9419-unifying-candidates-three-layer-composition-rank-laws-dissection-obstructions-pattern-clocks.md",
+    "sha256": "6dc3a287b7c103591c8f432f5d4fea01cf3c5e943a5bda2811bcbddf50c45636",
+    "snapshot": "sources/HYP-9419-INCOMING.md"
+  },
+  {
+    "blob": "7210f53d623262f57f71264d87c1cc78d764f603",
+    "bytes": 33389,
+    "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+    "sha256": "ab5169062d3121e2d6a06d0e5a5c737b17e3e482301039b92f43097355a23418",
+    "snapshot": "sources/INCOMING-S62-note.md"
+  },
+  {
+    "blob": "326806c166879628ceedce1be280ba02baad0a6b",
+    "bytes": 8567,
+    "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "path": "01-canon/theorems/THM-4809-incidence-cycle-law-degree-bound-on-restored-guards-and-clock-pattern-circulants.md",
+    "sha256": "d9c1bc93ed049e80202d8335a808889e9ab0075e0869b04a8bff376068c8498c",
+    "snapshot": "sources/THM-4809-INCOMING.md"
+  }
+]

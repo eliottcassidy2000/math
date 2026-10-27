@@ -1,0 +1,50 @@
+{
+  "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+  "sources": [
+    {
+      "repository_path": "AGENTS.md",
+      "snapshot": "sources/00_AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "repository_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "snapshot": "sources/01_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "repository_path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-aliquot/REPORT.md",
+      "snapshot": "sources/02_REPORT.md",
+      "sha256": "6c819ddbe023f67ccb32f2bd8791c4e3db16c3dab817785c21bddb6028c3b175"
+    },
+    {
+      "repository_path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-aliquot/REPORT.md",
+      "snapshot": "sources/03_REPORT.md",
+      "sha256": "d2304477142ed9a5ab22b636f311815270a62516f680077d58ed9f2a79192cca"
+    },
+    {
+      "repository_path": "05-knowledge/results/session69_prime_ports_power_aliquot_20261026/session69-tournament/REPORT.md",
+      "snapshot": "sources/04_REPORT.md",
+      "sha256": "d8d106bbaab06cafc5864cbbed64d76f91411d7abdd1724cfdee199c9fe53f94"
+    },
+    {
+      "repository_path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "snapshot": "sources/05_README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "repository_path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/AUDIT.md",
+      "snapshot": "sources/06_AUDIT.md",
+      "sha256": "00ecf2b784cb5dba4783dc5a6eaa8b6cedc6174027abdd7caf11fc8f4bcde5c5"
+    },
+    {
+      "repository_path": "05-knowledge/results/native_return_necklaces_20261026/README.md",
+      "snapshot": "sources/07_README.md",
+      "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f"
+    },
+    {
+      "repository_path": "05-knowledge/results/clock_even_guarded_composition_20261026/README.md",
+      "snapshot": "sources/08_README.md",
+      "sha256": "c21d4d87e9d7143b9629d5a2d657e1d6bb7669f51ee86305e977eec1fe9c068d"
+    }
+  ]
+}

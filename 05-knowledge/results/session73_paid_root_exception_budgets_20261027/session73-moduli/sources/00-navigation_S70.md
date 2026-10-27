@@ -1,0 +1,31 @@
+# Session70: named guards and exact attachment carriers
+
+[Packet](../05-knowledge/results/session70_attachment_guard_alignment_20261026/README.md)
+| [Guard proof](../05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guards/REPORT.md)
+| [Independent audit](../05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-guard-audit/REPORT.md)
+| [Synthesis](../05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-root/SYNTHESIS.md)
+| [Replay](../05-knowledge/results/session70_attachment_guard_alignment_20261026/VERIFICATION.md)
+
+**CLOSED / PROVED, every finite order:** full named Hamilton-path legality
+reconstructs a labelled tournament. Traceable arcs decode missing orientations
+by vertex-deleted reachability in strong components; ordered SCCs handle the
+rest. Classical Busch–Jacobson–Reid and Camion inputs are cited and inspected.
+Fixed-path presentations need exactly `2^M` valid states/M bits,
+`M=(n-1)(n-2)/2`. One-step relocation guards collide at four; full traces
+reconstruct. Totalization adds a failure sink. Historical C5 packets stay frozen.
+
+**Alignment:** rigid strong sources realize all Boolean subset guards. Moments
+through block order t leave `2^k-sum_(j=0)^t binom(k,j)` missing linear
+coordinates. Complete moments recover the law; individual states need k bits.
+This is finite observability, not infinite nonmeasurability.
+
+**Graphs:** unrestricted forest gluing requires `(2r-1)!!` endpoint pairings.
+Specified graceful overwrite guards retain k! color permutations but forget
+signs. Petersen-to-K5 needs ports/connectivity; K3,3 suppression needs marked
+edges. Fixed square-sum hosts may permit fewer contexts. The Graceful Tree
+Conjecture is not solved.
+
+**PROVED:** [literal unnamed reset/complement minimum](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md) is the source/partner isotype pair; blue joins break this compression. Atom partner supports classify through eight, **FINITE-EXACT**.
+**OPEN:** all-size HYP-9416 response classification, economical aggregate interfaces,
+restricted-context minima, optimal query complexity, and unrestricted
+modular-prime classification.

@@ -1,0 +1,151 @@
+{
+  "negative_controls": [
+    {
+      "control": "target-only",
+      "exit": 1,
+      "mode": "normal",
+      "stderr_last_line": "RuntimeError: TARGET_ONLY_CONTEXT_FAILED: 54 != 73"
+    },
+    {
+      "control": "drop-guard",
+      "exit": 1,
+      "mode": "normal",
+      "stderr_last_line": "RuntimeError: PRIME_COPRIMALITY_GUARD_FAILED: 3 != 5"
+    },
+    {
+      "control": "omit-cube",
+      "exit": 1,
+      "mode": "normal",
+      "stderr_last_line": "RuntimeError: PRIME_CUBE_EXCEPTION_REQUIRED: 125^3 > 31^4"
+    },
+    {
+      "control": "count-is-weight",
+      "exit": 1,
+      "mode": "normal",
+      "stderr_last_line": "RuntimeError: EXCEPTION_COUNT_IS_NOT_WEIGHT: 102 > 2"
+    },
+    {
+      "control": "target-only",
+      "exit": 1,
+      "mode": "optimized",
+      "stderr_last_line": "RuntimeError: TARGET_ONLY_CONTEXT_FAILED: 54 != 73"
+    },
+    {
+      "control": "drop-guard",
+      "exit": 1,
+      "mode": "optimized",
+      "stderr_last_line": "RuntimeError: PRIME_COPRIMALITY_GUARD_FAILED: 3 != 5"
+    },
+    {
+      "control": "omit-cube",
+      "exit": 1,
+      "mode": "optimized",
+      "stderr_last_line": "RuntimeError: PRIME_CUBE_EXCEPTION_REQUIRED: 125^3 > 31^4"
+    },
+    {
+      "control": "count-is-weight",
+      "exit": 1,
+      "mode": "optimized",
+      "stderr_last_line": "RuntimeError: EXCEPTION_COUNT_IS_NOT_WEIGHT: 102 > 2"
+    }
+  ],
+  "producer_bytes_unchanged_at_review": true,
+  "producer_replays": [
+    {
+      "lane": "ports",
+      "replays": [
+        {
+          "bytes": 4348,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "normal",
+          "sha256": "c1b8622e8f91246704025d781bf23703dafcb54a335ad64d3949bc665b886bad"
+        },
+        {
+          "bytes": 4348,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "optimized",
+          "sha256": "c1b8622e8f91246704025d781bf23703dafcb54a335ad64d3949bc665b886bad"
+        }
+      ]
+    },
+    {
+      "lane": "moduli",
+      "replays": [
+        {
+          "bytes": 4896,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "normal",
+          "sha256": "c7a6678b0c496dbc54f6b329a762394eea837f2cc9d635d5333e2ec4fe820c8f"
+        },
+        {
+          "bytes": 4896,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "optimized",
+          "sha256": "c7a6678b0c496dbc54f6b329a762394eea837f2cc9d635d5333e2ec4fe820c8f"
+        }
+      ]
+    },
+    {
+      "lane": "arithmetic",
+      "replays": [
+        {
+          "bytes": 3807,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "normal",
+          "sha256": "21591dc864c631e9da10e3feace0d47d88fcea147157f75c9d359362f4d4c5cc"
+        },
+        {
+          "bytes": 3807,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "optimized",
+          "sha256": "21591dc864c631e9da10e3feace0d47d88fcea147157f75c9d359362f4d4c5cc"
+        }
+      ]
+    },
+    {
+      "lane": "root",
+      "replays": [
+        {
+          "bytes": 1705,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "normal",
+          "sha256": "320e9cb8a99f46d78f2b41f06bb37beb21d6fec5a806b60c0a0467491fa24b22"
+        },
+        {
+          "bytes": 1705,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "optimized",
+          "sha256": "320e9cb8a99f46d78f2b41f06bb37beb21d6fec5a806b60c0a0467491fa24b22"
+        }
+      ]
+    },
+    {
+      "lane": "forcing",
+      "replays": [
+        {
+          "bytes": 40899,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "normal",
+          "sha256": "0179ab9280e322a1bcf3ea7b0bd03ea024a7c220948a7ebb80302c87cbc113d3"
+        },
+        {
+          "bytes": 40899,
+          "exit": 0,
+          "matches_frozen_receipt": true,
+          "mode": "optimized",
+          "sha256": "0179ab9280e322a1bcf3ea7b0bd03ea024a7c220948a7ebb80302c87cbc113d3"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

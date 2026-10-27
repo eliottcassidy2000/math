@@ -1,0 +1,71 @@
+{
+  "schema": "session73-root-forcing-core-v1",
+  "source_commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 16049,
+      "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5"
+    },
+    {
+      "path": "check_core.py",
+      "bytes": 7482,
+      "sha256": "c77db85c6504e282ccc0f8281d80c13de8b8edc3abe3633ce9a4ba46da4f890d"
+    },
+    {
+      "path": "core.normal.json",
+      "bytes": 40899,
+      "sha256": "0179ab9280e322a1bcf3ea7b0bd03ea024a7c220948a7ebb80302c87cbc113d3"
+    },
+    {
+      "path": "core.optimized.json",
+      "bytes": 40899,
+      "sha256": "0179ab9280e322a1bcf3ea7b0bd03ea024a7c220948a7ebb80302c87cbc113d3"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 2817,
+      "sha256": "a02742b4e01e26ebdacb98e7ccf4f17fa602e44844f32b70c7a672b870cb7611"
+    },
+    {
+      "path": "sources/00-README.md",
+      "bytes": 24746,
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "path": "sources/01-README.md",
+      "bytes": 30317,
+      "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f"
+    },
+    {
+      "path": "sources/02-collatz_adaptive_mixture_flow_20261005.md",
+      "bytes": 25327,
+      "sha256": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca"
+    },
+    {
+      "path": "sources/03-collatz_source_refinement_floor_20261005.md",
+      "bytes": 25964,
+      "sha256": "96ce4d659f0576d2950133163ab59fc6b601adf2120f886a38754d9b06b87f1d"
+    },
+    {
+      "path": "sources/04-collatz_floor_transport_deadlines_20261005.md",
+      "bytes": 13302,
+      "sha256": "e15e8a675b4939ce9bd96e5ae2ad72df91829748128efb028c9f9ba53b553d3e"
+    },
+    {
+      "path": "sources/05-marked_contacts_root_current_20261017e.md",
+      "bytes": 21118,
+      "sha256": "b416c5be1acd0ed536562dc85b077cfd5b9cbb60d58aa80a8b3bced6056391ac"
+    },
+    {
+      "path": "sources/06-root_current_ground_truth_contact_rotations_20261017.md",
+      "bytes": 10194,
+      "sha256": "1171612d166c991184ac8c5026a82ca1cce0f22ddf16071424b6d5efeef18a08"
+    },
+    {
+      "path": "sources/07-collatz_poisson_source_dual_20261005.md",
+      "bytes": 16193,
+      "sha256": "1aebc0951f08323868c7540234025e88d0a19abd68ea6a3b4ac9cbd9e3a5eaec"
+    }
+  ]
+}

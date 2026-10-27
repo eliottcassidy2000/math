@@ -1,0 +1,42 @@
+[
+  {
+    "command": "python3 check.py --negative-control target-only",
+    "returncode": 1,
+    "error": "RuntimeError: TARGET_ONLY_CONTEXT_FAILED: 54 != 73"
+  },
+  {
+    "command": "python3 check.py --negative-control drop-guard",
+    "returncode": 1,
+    "error": "RuntimeError: PRIME_COPRIMALITY_GUARD_FAILED: 3 != 5"
+  },
+  {
+    "command": "python3 check.py --negative-control omit-cube",
+    "returncode": 1,
+    "error": "RuntimeError: PRIME_CUBE_EXCEPTION_REQUIRED: 125^3 > 31^4"
+  },
+  {
+    "command": "python3 check.py --negative-control count-is-weight",
+    "returncode": 1,
+    "error": "RuntimeError: EXCEPTION_COUNT_IS_NOT_WEIGHT: 102 > 2"
+  },
+  {
+    "command": "python3 -O check.py --negative-control target-only",
+    "returncode": 1,
+    "error": "RuntimeError: TARGET_ONLY_CONTEXT_FAILED: 54 != 73"
+  },
+  {
+    "command": "python3 -O check.py --negative-control drop-guard",
+    "returncode": 1,
+    "error": "RuntimeError: PRIME_COPRIMALITY_GUARD_FAILED: 3 != 5"
+  },
+  {
+    "command": "python3 -O check.py --negative-control omit-cube",
+    "returncode": 1,
+    "error": "RuntimeError: PRIME_CUBE_EXCEPTION_REQUIRED: 125^3 > 31^4"
+  },
+  {
+    "command": "python3 -O check.py --negative-control count-is-weight",
+    "returncode": 1,
+    "error": "RuntimeError: EXCEPTION_COUNT_IS_NOT_WEIGHT: 102 > 2"
+  }
+]

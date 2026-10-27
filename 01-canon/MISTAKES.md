@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-27 — a cube census is not a polynomial-degree exclusion
+
+- **Source / failed implication:** HYP-9419(4), at incoming `64a7985e705`, extended a finite census of named sequences (including cubes) to every polynomial of degree at least three, and called that broader claim FINITE-EXACT through modulus120.
+- **Minimal witnesses / repair:** `x^4` has nonzero image `{1}` modulo3 and `{1,2,4}` modulo7, both skew half-sets. The polynomial exclusion and exclusive squares/geometric sequence list are REFUTED; separate Fibonacci and prime-sequence clauses are not decided by this counterexample. At any fixed modulus m, `x^2+m*x^D` also has the square image, regardless of D>=3.
+- **Missing coordinate / lineage:** distinguish an integer polynomial's degree from its residue function. The incoming skew-half-set criterion in THM-4809 C survives; no unrelated guard-rank or dissection claim is audited here. [Session73 source-pinned correction and exact controls](../05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-moduli/REPORT.md).
+
 ## 2026-10-26 — native affine carry and the choice of exception baseline
 
 - **Demonstrated source error:** the [actual-clock certificate](../05-knowledge/results/root_actual_clock_certificate_20261018o.md), R3, displayed `3(3s+1)=2^t(3y+1)+(3-2^a)`. Its additive constant is three too large: the native edge `3 -> 1`, with `a=1,t=3`, gives `30=32-2`, not `30=32+1`.

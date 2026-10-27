@@ -1,0 +1,58 @@
+[
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+    "blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+    "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+    "snapshot": "sources/00-README.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/native_return_necklaces_20261026/README.md",
+    "blob": "fbdf4129436e53b2aa485c0b84221d3b04326bb3",
+    "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f",
+    "snapshot": "sources/01-README.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_adaptive_mixture_flow_20261005.md",
+    "blob": "c96ef40c29226b87bff5a279c5c48e81dc16ddf1",
+    "sha256": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca",
+    "snapshot": "sources/02-collatz_adaptive_mixture_flow_20261005.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_source_refinement_floor_20261005.md",
+    "blob": "986947606481278b3928b9989b9701d3131361fe",
+    "sha256": "96ce4d659f0576d2950133163ab59fc6b601adf2120f886a38754d9b06b87f1d",
+    "snapshot": "sources/03-collatz_source_refinement_floor_20261005.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_floor_transport_deadlines_20261005.md",
+    "blob": "18c59748f9fcf33a0e4eb0ad0c960cc0d24a7353",
+    "sha256": "e15e8a675b4939ce9bd96e5ae2ad72df91829748128efb028c9f9ba53b553d3e",
+    "snapshot": "sources/04-collatz_floor_transport_deadlines_20261005.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/marked_contacts_root_current_20261017e.md",
+    "blob": "2b9516f1f48a39b6d755179fddbf3a7835ae231f",
+    "sha256": "b416c5be1acd0ed536562dc85b077cfd5b9cbb60d58aa80a8b3bced6056391ac",
+    "snapshot": "sources/05-marked_contacts_root_current_20261017e.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/root_current_ground_truth_contact_rotations_20261017.md",
+    "blob": "707b045d180120736833a0609b2c406b8e91d076",
+    "sha256": "1171612d166c991184ac8c5026a82ca1cce0f22ddf16071424b6d5efeef18a08",
+    "snapshot": "sources/06-root_current_ground_truth_contact_rotations_20261017.md"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_poisson_source_dual_20261005.md",
+    "blob": "f179e63218856155775ec39b9904fb16ef15671c",
+    "sha256": "1aebc0951f08323868c7540234025e88d0a19abd68ea6a3b4ac9cbd9e3a5eaec",
+    "snapshot": "sources/07-collatz_poisson_source_dual_20261005.md"
+  }
+]

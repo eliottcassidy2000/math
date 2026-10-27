@@ -1,0 +1,75 @@
+{
+  "labelled_tournaments": 1099,
+  "legal_path_complements": 7887,
+  "max_absolute_fas_change_by_order": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "scope": "all labelled tournaments n<=5; ternary tower pair-disjoint triangle certificates k<=4; exact DP tower n<=9; no reachability claim",
+  "status": "PASS",
+  "tower_certificates": [
+    {
+      "cycle_debt_lower": 0,
+      "k": 0,
+      "minimum_fas": 0,
+      "n": 1,
+      "primitive_complement_clock_lower_sharp_tariff": 0,
+      "primitive_complement_clock_lower_weaker": 0,
+      "weighted_complement_bill_lower": 0
+    },
+    {
+      "cycle_debt_lower": 0,
+      "k": 1,
+      "minimum_fas": 1,
+      "n": 3,
+      "primitive_complement_clock_lower_sharp_tariff": 0,
+      "primitive_complement_clock_lower_weaker": 0,
+      "weighted_complement_bill_lower": 0
+    },
+    {
+      "cycle_debt_lower": 4,
+      "k": 2,
+      "minimum_fas": 12,
+      "n": 9,
+      "primitive_complement_clock_lower_sharp_tariff": 1,
+      "primitive_complement_clock_lower_weaker": 1,
+      "weighted_complement_bill_lower": 4
+    },
+    {
+      "cycle_debt_lower": 91,
+      "k": 3,
+      "minimum_fas": 117,
+      "n": 27,
+      "primitive_complement_clock_lower_sharp_tariff": 4,
+      "primitive_complement_clock_lower_weaker": 4,
+      "weighted_complement_bill_lower": 91
+    },
+    {
+      "cycle_debt_lower": 1000,
+      "k": 4,
+      "minimum_fas": 1080,
+      "n": 81,
+      "primitive_complement_clock_lower_sharp_tariff": 13,
+      "primitive_complement_clock_lower_weaker": 13,
+      "weighted_complement_bill_lower": 1000
+    }
+  ]
+}

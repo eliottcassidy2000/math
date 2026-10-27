@@ -1,0 +1,219 @@
+{
+  "C3_towers": [
+    {
+      "DP_checked": true,
+      "FAS_proved": 1,
+      "beta_lower": 0,
+      "k": 1,
+      "minimum_cycle_debt_proved": 0,
+      "n": 3,
+      "natural_FAS_checked": 1,
+      "natural_beta": 0,
+      "natural_components": 2
+    },
+    {
+      "DP_checked": true,
+      "FAS_proved": 12,
+      "beta_lower": 4,
+      "k": 2,
+      "minimum_cycle_debt_proved": 4,
+      "n": 9,
+      "natural_FAS_checked": 12,
+      "natural_beta": 6,
+      "natural_components": 3
+    },
+    {
+      "DP_checked": false,
+      "FAS_proved": 117,
+      "beta_lower": 91,
+      "k": 3,
+      "minimum_cycle_debt_proved": 91,
+      "n": 27,
+      "natural_FAS_checked": 117,
+      "natural_beta": 94,
+      "natural_components": 4
+    },
+    {
+      "DP_checked": false,
+      "FAS_proved": 1080,
+      "beta_lower": 1000,
+      "k": 4,
+      "minimum_cycle_debt_proved": 1000,
+      "n": 81,
+      "natural_FAS_checked": 1080,
+      "natural_beta": 1004,
+      "natural_components": 5
+    }
+  ],
+  "P7_C3_towers": [
+    {
+      "FAS_proved": 7,
+      "components": 1,
+      "k": 0,
+      "minimum_cycle_debt_proved": 1,
+      "n": 7
+    },
+    {
+      "FAS_proved": 70,
+      "components": 1,
+      "k": 1,
+      "minimum_cycle_debt_proved": 50,
+      "n": 21
+    },
+    {
+      "FAS_proved": 651,
+      "components": 1,
+      "k": 2,
+      "minimum_cycle_debt_proved": 589,
+      "n": 63
+    }
+  ],
+  "P7_predecessor": {
+    "beta": 0,
+    "components": 1,
+    "exceptions": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "order": [
+      0,
+      3,
+      1,
+      6,
+      4,
+      2,
+      5
+    ]
+  },
+  "Paley": [
+    {
+      "FAS_lower": 1,
+      "edge_triangle_incidence": 1,
+      "exact_FAS": 1,
+      "forest_one_complement_upper": null,
+      "p": 3,
+      "triangles": 1
+    },
+    {
+      "FAS_lower": 7,
+      "edge_triangle_incidence": 2,
+      "exact_FAS": 7,
+      "forest_one_complement_upper": 10,
+      "p": 7,
+      "triangles": 14
+    },
+    {
+      "FAS_lower": 19,
+      "edge_triangle_incidence": 3,
+      "exact_FAS": 20,
+      "forest_one_complement_upper": 18,
+      "p": 11,
+      "triangles": 55
+    },
+    {
+      "FAS_lower": 57,
+      "edge_triangle_incidence": 5,
+      "forest_one_complement_upper": 34,
+      "p": 19,
+      "triangles": 285
+    }
+  ],
+  "complement_lipschitz": [
+    {
+      "bound": 0,
+      "marked_presentations": 1,
+      "max_difference": 0,
+      "n": 2,
+      "witness_free_mask": 0
+    },
+    {
+      "bound": 1,
+      "marked_presentations": 2,
+      "max_difference": 1,
+      "n": 3,
+      "witness_free_mask": 0
+    },
+    {
+      "bound": 1,
+      "marked_presentations": 8,
+      "max_difference": 1,
+      "n": 4,
+      "witness_free_mask": 0
+    },
+    {
+      "bound": 2,
+      "marked_presentations": 64,
+      "max_difference": 2,
+      "n": 5,
+      "witness_free_mask": 0
+    },
+    {
+      "bound": 3,
+      "marked_presentations": 1024,
+      "max_difference": 2,
+      "n": 6,
+      "witness_free_mask": 0
+    },
+    {
+      "bound": 4,
+      "marked_presentations": 32768,
+      "max_difference": 3,
+      "n": 7,
+      "witness_free_mask": 0
+    }
+  ],
+  "hostiles": {
+    "collapsed_simple_quotient_wrong_beta": 0,
+    "contract_parallel_edges_beta": 1,
+    "shared_port_star_beta": 0,
+    "unweighted_replacement_changes_value": true
+  },
+  "independent_DP_checks": 94,
+  "port_gluing": {
+    "cases": 200,
+    "total_beta": 565
+  },
+  "seed": 73073,
+  "source_archive": {
+    "distinct_named_sources": 3,
+    "integer_clock": 6,
+    "masses": {
+      "a": "1/7",
+      "b": "2/7",
+      "c": "4/7"
+    }
+  },
+  "status": "FINITE-EXACT; proofs in REPORT.md",
+  "universes": {
+    "complement": "all fixed-path presentations at n2..7; equivalent to all marked tournaments modulo path relabelling",
+    "port_gluing": "200 seeded simple child/cross-edge configurations, quotient multiplicities retained",
+    "weighted_substitution": "72 seeded arbitrary quotient/child instances at total order\u22648 with positive rational vertex costs"
+  },
+  "weighted_substitution": {
+    "cases": 72,
+    "cost_checksum": "4007/24",
+    "nonuniform_rational_weights": true
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "status": "Source provenance, not an assertion of a full independent audit of inherited results.",
+  "executable_inputs": [],
+  "receipt_scope": "check.py, rank.cpp and hostile.cpp are standalone; audit_hostile.py reads the local sealed hostile.json. No external atlas imported.",
+  "source_snapshot": "31c118ba7e12c021de9912e80764c3641164828f",
+  "recovered_sources": [
+    {
+      "path": "01-canon/theorems/THM-4721-twisted-burnside-on-odd-fixed-point-sets-sylow-refinement-of-even-graphs-and-tournaments-components-walsh-basis.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "b29bffde49eb46789247ff94cb17bd7d48173a2593814b262db37d74ed27e626",
+      "read_scope": "Signed monomial orbit proof and port-relative invariant basis; inherited theorem."
+    },
+    {
+      "path": "01-canon/theorems/THM-4722-no-equivariant-bijection-tournaments-even-graphs-for-every-n-sylow-hall-violator.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "8095bbb37f7e637119ab327d5ff91dc060c014dbe6eb655dc50721de0f502377",
+      "read_scope": "All-order equivariant set-map obstruction; inherited scope."
+    },
+    {
+      "path": "01-canon/theorems/THM-848-hamiltonian-path-walsh-needle-stalk.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "723daf35e713597dc6345e7c58837e17dfc94b4fed9677968ffba35805b00684",
+      "read_scope": "Sections 1--3: single-arc-flip H drift, even Walsh layers, Krylov closure. Distinct operator from native path complement."
+    },
+    {
+      "path": "01-canon/theorems/THM-2842-ordered-positive-cone-vandermonde-multiplier-observability.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "fe7e516b512cc14e0e99a9959b010fb1a5905d1fe16c09fd986efc2257a0b636",
+      "read_scope": "Metadata and sections 1 and 4; multiplier observability and sharp finite quotient Krylov delay. No numerical rerun."
+    },
+    {
+      "path": "01-canon/theorems/THM-2211-carry-regime-root-transducer-and-infinite-autonomous-index.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "c0a3f4e7305112931f16f94c2ebc1d09cbf9694e54bef07bbafe0916500b83cc",
+      "read_scope": "Metadata and root/carry transition and infinite autonomous-index mechanism; inherited audited claim."
+    },
+    {
+      "path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "4fe354ad2719c78f79a15744d8d96287ce916364edabcbb9b5642e4feb087ba1",
+      "read_scope": "Skew leading-digit tournament and synchronized-parity transport; scope read, not a new audit."
+    },
+    {
+      "path": "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935",
+      "read_scope": "Audited all-size Hamilton-support reconstruction, inherited; no priority claim."
+    },
+    {
+      "path": "07-reflections/tournaments-and-even-graphs.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "4c8e1ceddcf83ac160c04069af094f16418f4fb7a3689c4345f1257b4fe3ac62",
+      "read_scope": "Full historical reflection including July correction; score/cut and even-order direct-sum errors repaired in this session. Hash is BEFORE new warning."
+    },
+    {
+      "path": "05-knowledge/results/tournament_even_bijection_20261011c.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "7626d4e7e44752109ae8db7fc289c4b31e0db7104b3705cda4ea51837e41de95",
+      "read_scope": "First 170 lines: ordered SCC/Lyndon type codec and operation boundary."
+    },
+    {
+      "path": "05-knowledge/results/coloring_clock_session_20261020/FUNCTIONAL_GRAPHS_AND_REGULARITY.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "bfbb56f7b4eca84bc9b50c64ebad05a44423da20159116f0ab6b3894a82baa36",
+      "read_scope": "Functional graph and inverse-limit sections; inherited distinctions."
+    },
+    {
+      "path": "05-knowledge/results/observable_algebra_completion_20261020/OBSERVABLE_ALGEBRA_COMPLETION.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "ab93d72bd17386443f78fe45e7dd987da04ba6d2a812f24c5ece104fb0318648",
+      "read_scope": "Sections 1--5: deterministic quotient, linear span, probability algebra, affine character closure."
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/README.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "23d7b17fefd07cfc6a0d763f7ba15d2feabbdb656adf75f7edcc47c860ff205c",
+      "read_scope": "Summary and prior audited classification packet: 4p onset, 81/27 construction, compositional boundaries."
+    },
+    {
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463",
+      "read_scope": "Prior session U2 proof and exhaustive strong-atom controls through n8; not rerun this turn."
+    },
+    {
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/CONNECTIONS.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "0aca4b20279defbb19a793823cc8aca9f1c3fe72b018a0acdd1314d1eaa6c9c5",
+      "read_scope": "Prior response-law, Frobenius, 4p and marked Penrose/Petersen connections; inherited."
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-cryptids/REPORT.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "5895328ca829b7937983947d08caffd57d3b85f0ef102cf18b49a7843915a08d",
+      "read_scope": "Section 3: TT3/C3 tape, exact Hamming metric, retained head/program/origin, scalar and clock hostiles."
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-k-write/REPORT.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "9b46b4be06e4ed25a4f86864f328d3a5b54a08825d30e8f82399810ebd666383",
+      "read_scope": "Sections 1--3: fixed-label fixed-order K parity obstruction; no claim under arbitrary relabelling."
+    },
+    {
+      "path": "05-knowledge/results/session65_cryptid_tournament_interfaces_20261026/session65-reductions/REPORT.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "434cba60cf4760eb9ddb0d9cf25500e54b1db321376eeefc6b4bdd5d946fc898",
+      "read_scope": "Uniform machine/arithmetic logical scope; not inheriting earlier erroneous all-Pi1 equivalences."
+    },
+    {
+      "path": "05-knowledge/results/session71_dissection_norm_alignment_20261026/README.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "0afea41121f802948584f64c3fa3fce7e7b72263835d1fc118459cab513cffa2",
+      "read_scope": "Inherited previous turn; finite marked Penrose conjunctions and norm/dissection boundaries, not re-audited here."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-even/EVEN_GRAPH_OPERATION_ENVELOPE.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "b7c345c3bc4ed239fb1cef644832d17ec49d28c13fed10faf313d7bb44a071c1",
+      "read_scope": "First 185 lines: source-independent affine signed-Fourier operation envelope; credited incoming 00f1c9aa39."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-root/WALSH_REALIZABILITY.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "6a6f95b690d21fd6df432199bf602c63f13370eba529311a3d0abc2609b066df",
+      "read_scope": "Full positive-cone report; signed coordinates differ from probabilities."
+    },
+    {
+      "path": "05-knowledge/results/legality_language_goldbach_free_perfect_companions_20261026.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "1cc9eb352aaf92576a50df839557763d5cdc71dea7506411b61076db8e096f6d",
+      "read_scope": "Opening reconstruction/status and Vitali mechanism table; inherited square-sum/graceful/Petersen merge via prior packet. No aliquot census audit."
+    },
+    {
+      "path": "05-knowledge/results/support_image_composition_20261026/README.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "feb3887b0cb8020a239cdaab137561dab5b35d75fc99858bf0948bd7a7032824",
+      "read_scope": "Full incoming summary at 31c118ba7e: four-marker all-core decoder, exact Hamilton-support image guard, signed-card recurrence, clock cylinders. Lane results inherited from its audits."
+    },
+    {
+      "path": "05-knowledge/results/support_image_composition_20261026/COMPOSITION.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "a126221c274d348083adb5ab3137c4c013170ed2e20ecdd7a63efef10de2c5cd",
+      "read_scope": "Full incoming abstract descent, guarded encoding and compatible-witness associativity proofs; credited 7300c1ed07/f59e87bb32, no new priority claim."
+    },
+    {
+      "path": "04-computation/experiments/restore_depth_prereg_20261026.md",
+      "revision": "31c118ba7e12c021de9912e80764c3641164828f",
+      "sha256_lf": "6d67062e7530e18e404e66b0e99881e0fdcfc7d0ffd33757558977742d33399e",
+      "read_scope": "Predictions only, not used as proved dependencies."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+      "read_scope": "Final synthesis read; response ranks, test-return protocol, sparse phase layers and boundaries; incoming 31002464ae."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+      "read_scope": "Theorem C and section 6: full test-return proof and fixed-path application; general mechanism credited. Other response claims inherited only as stated in final synthesis."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/THEOREM-CYCLIC-ALIGNMENT.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+      "read_scope": "Sections 1--5: complete cyclic phases, prime-layer sparsity, field dictionary and native carousel realization; incoming proof, no independent numerical replay."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/native-paley/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "194625fc91b47171ca68e58caf468bf46832d158fda93148aab0bd70acaa5dad",
+      "read_scope": "Native Paley7 triple control and F8 rank distinction; inherited audited computation, not rerun."
+    },
+    {
+      "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+      "read_scope": "T1--T2 excerpt: forest-frame composition, exact complement update, Paley7 all-rank cycle obstruction and joined r-copy amplification. Other renewal claims not inherited."
+    }
+  ],
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/html/2204.01947v2",
+      "title": "Tournaments and Even Graphs are Equinumerous",
+      "scope": "Theorem 1.1 and signed automorphism/Burnside sections; same-order unlabelled counting, not even degree."
+    },
+    {
+      "url": "https://arxiv.org/html/math/0408232v1",
+      "title": "The rank of connection matrices and the dimension of graph algebras",
+      "scope": "Sections 1--2, Theorem 2.2 and context algebra setup; exact twin-free positive-node weighted-graph theorem used as precedent only. Not a tournament-guard proof."
+    },
+    {
+      "url": "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf",
+      "title": "On Computable Numbers, with an Application to the Entscheidungsproblem",
+      "scope": "Original paper mirror, sections 1--2 configurations and section 8 diagonal/circularity argument. Modern halt-decider contradiction proved directly in the report."
+    }
+  ],
+  "incoming_boundary": "THM-4809 and HYP-9419 were RESERVED in the inspected incoming snapshot, not dependencies; incoming S62 restore-depth conjectures remain predictions. THM-4808 audit was noticed but no Berggren theorem is newly inherited here.",
+  "late_source_snapshot": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80"
+}
