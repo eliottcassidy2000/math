@@ -1,0 +1,64 @@
+{
+  "compact_receipt": "finite/witnesses.jsonl.gz; preserves one exact named core route per ordinary strong active source, every source index retained",
+  "family_frozen_manifest_sha256": "19be70b7c5373f870b6d67f3a1cbf79dbc4a1cff3c9f67701dbc82a73784ac09",
+  "independent_authentication": "Every source key and automorphism count recomputed; disjoint labelled orbit masses equal full tournaments at each n4..9.",
+  "ordinary_not_converse_merged": true,
+  "producer_raw_normal_optimized_equal": [
+    "classes4to7",
+    "classes8",
+    "classes9"
+  ],
+  "raw_producer_hashes": {
+    "classes4to7": "67ba2552c6206964e9d1ba771a480bf7ab060c0ef755f3cf4ade08ef221614ae",
+    "classes8": "17a8aac58b3729361f20b51bdd4806724c43a113aa3eb1f38ee0ce950e5d1f01",
+    "classes9": "b550775a210999946d5de3e9306c19fdc3a6ca08376c6b28ada4c490e1d26104"
+  },
+  "research_commit": "96e35642110104cc547516a63f37eebcf930f707",
+  "reserved_main_namespace_not_used": "3613d304395; THM-4811 and other reserved stubs remain unproved",
+  "scope_exclusions": "Broader random/structured search batches and partially interrupted high-order/join probes are deliberately outside this frozen milestone.",
+  "sources": [
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/classes_n4.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n4.tsv",
+      "sha256": "2fc455bfe2aba6aed15b56a1c7644990eb68aca228f266663f2cf22580b15357"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/classes_n5.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n5.tsv",
+      "sha256": "737d01a7eba26940b38f353c785dd6ca701bec9a84c21f75d2ac2cc01c1ba8e2"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/classes_n6.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/classes_n7.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/classes_n8.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv",
+      "sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/n9_classes.tsv.gz",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz",
+      "sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "local": "inputs/census.md",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/census.md",
+      "sha256": "598380f98f57b871e211731d33fe56d41035fa673ee56acd9d77ed251dcf3ed2"
+    }
+  ],
+  "survivors_frozen_manifest_sha256": "f5e136c1c75df416d63ecb57348c26cdf57d143967aa43d3b0d71fa8d11d4164"
+}

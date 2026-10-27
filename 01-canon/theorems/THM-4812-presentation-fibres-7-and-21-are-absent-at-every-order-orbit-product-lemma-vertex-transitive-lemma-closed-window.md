@@ -185,6 +185,53 @@ i.e. `n <= 3 ln(v^(1 + M(v)/6)/0.5848)/ln(5/3)`. Since `M(v) = O(log v/log log v
 is infinite, because stacking `K1` and `C3` components does not change `tc`; finiteness is a statement about strong
 classes.
 
+## Session75 independent exclusion audit and alternate proof gates (2026-10-27)
+
+This [separate audit](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/AUDIT.md)
+accepts the all-order exclusion with the [explicit proof repairs](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/PROOF_REPAIRS.md)
+below. It is based on the source at `87d61f67673`, independently of the later
+repository audit already credited above; neither audit's scope is substituted
+for the other's. The historical source scan and all subsequent part (g) text
+are retained unchanged.
+
+- **Positive-factor and integer tail gate in (c).** Retain only greedy products
+  whose factors are positive. For `k = floor(m/20) >= 20`,
+  `c3-k(D+1) >= (11m^3+37m)/480`, hence
+  `2^k i_k >= ((11/12)m^2)^k >= ((1100/3)k^2)^k`, while
+  `23*3^((m-1)/2) <= 23*3^(10k+9)`. The exact integer base
+  `440000^20 > 23*3^9*177147^20` and the increasing sequence
+  `(1100*k^2/3^11)^k` for integer `k >= 20` prove the tail without the false
+  pointwise-increasing floor-margin claim. This is an alternative to the
+  repaired block-minimum argument already in (c), not a retraction of it.
+- **Infinite order gate in (d).** If `B_v(n)` is the largest allowed product
+  group order for the listed exceptional orbit choices, all choices fit once
+  `n >= 10`, and `B_v(n+3)=3 B_v(n)` while `f(n+3)=5 f(n)`. Exact residue bases
+  `13,14,15` for `v=7`, `23,24,25` for `v=21`, and the separate order21 check
+  prove the infinite bound, not merely a finite `n<200` script.
+- **Index and orbit typing.** Among the 24 original configurations, the sole
+  index-cap-at-least-five case is order13 with two `C3` blocks and one `P7`;
+  its product order189 is not divisible by5. Configurations divisible by5
+  have cap below5. Thus the original index1/3 enumeration was complete.
+  The stronger actual-`G` argument now in (d), making index3 redundant,
+  remains intact. Scanner orbit constraints are prescribed `G`-orbits,
+  not a test that these equal full-`Aut(T)` orbits. Larger automorphism groups
+  cause safe over-enumeration; the final automorphism count is exact.
+- **Replacement order-twelve gate and window replay.** The independent path
+  uses six order12 configurations and45 jobs:46,968 strong generated
+  tournaments,10,104 automorphism calls,45,384 module/Held–Karp comparisons,
+  and no target. The original83-job window is separately replayed with185,642
+  strong tournaments,48,908 automorphism calls and93,646 comparisons. The
+  [window audit](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-window-audit/AUDIT.md)
+  independently replaces the automorphism gate and audits job completeness;
+  it retains other source algorithms and is not described as wholly separate
+  code. The original multi-million order12 element-type scan was **not** rerun
+  by Session75. Its independent acceptance path instead uses the45-job gate.
+
+The526 Cayley inputs and finite analytic/group controls are reproduced.
+Inherited `n <= 11`, OCF, and classical group/automorphism dependencies remain
+explicit. This C3 acceptance does not cover part (g), prove an all-odd spectrum,
+or claim novelty for the earlier prime-untouchable density consequence.
+
 ## (g) The strong fibres below 24
 
 For odd `v <= 23` the counting of (d), with the vertex-transitive pieces `K1, C3, R5, P7` (the only ones with

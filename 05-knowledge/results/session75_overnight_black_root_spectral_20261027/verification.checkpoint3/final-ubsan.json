@@ -1,0 +1,390 @@
+{
+  "adapter_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+  "immutable_input_policy": "materialized inputs read-only; all compiled/generated artifacts outside them; no source files modified",
+  "jobs": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-audit/analytic_audit.py"
+      ],
+      "component": "tc",
+      "name": "tc-analytic",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "25e72bcedd50111578b625cd0ac1f72dc39d5e352893179adde4680f8a99dd0a"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-audit/group_checks.py"
+      ],
+      "component": "tc",
+      "name": "tc-group_checks",
+      "returncode": 0,
+      "seconds": 0.165,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8671d4d712db6fafbda13ffcb4b6f0546b44e62576bc63ddb53b11954d824371"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-DNDEBUG",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-audit/cayley_independent.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-cayley"
+      ],
+      "component": "tc",
+      "name": "tc-cayley-compile",
+      "returncode": 0,
+      "seconds": 1.017,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-cayley"
+      ],
+      "component": "tc",
+      "name": "tc-cayley",
+      "returncode": 0,
+      "seconds": 4.931,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4e6e2fceca5484f050daada41ba89ab4974f19548fc725e44979cabcbac0c04e"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-cayley",
+        "input"
+      ],
+      "component": "tc",
+      "name": "tc-vt15-independent",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "405fb45347bdd384c54cae1a16ab7af18d8deb036134cb6f8b703ca55b70a502"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py"
+      ],
+      "component": "tc",
+      "name": "tc-vt15-source",
+      "returncode": 0,
+      "seconds": 3.475,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b0a6150126aae4e2bcce7d0cfa2e4ae35aa0e3123af241748241fc3ec186d98b"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-audit/verify_receipts.portable.py"
+      ],
+      "component": "tc",
+      "name": "tc-frozen-receipt-consistency",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f0ffe96a2be941132f4bafe9a8bc90b827636fc2320c74f4fc67cbabaa8219cf"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/window_configs.py",
+        "jobs-normal"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-normal",
+      "returncode": 0,
+      "seconds": 0.265,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c6a17d134ab17381421d7694241bd1491e7c1deffd1c48bcebc6b20c83d10b0d"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/window_configs.py",
+        "jobs-optimized"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-optimized",
+      "returncode": 0,
+      "seconds": 0.265,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c6a17d134ab17381421d7694241bd1491e7c1deffd1c48bcebc6b20c83d10b0d"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/window_configs_n12.py",
+        "jobs-n12"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-n12",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c115651fd85c4f4292495f10095b2b7aa3ee63f0538d2f194e1a1df0e8a175b2"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/window_configs_n12.py",
+        "jobs-n12-opt"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-n12-opt",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c115651fd85c4f4292495f10095b2b7aa3ee63f0538d2f194e1a1df0e8a175b2"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/audit_jobs.py"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-job-audit",
+      "returncode": 0,
+      "seconds": 0.165,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5d0968e53ea34a090235fc562a6d8ba058a528b4d24994f910aa5677844e6089"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/make_portable.py"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-portable-source",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-DNDEBUG",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/tc_window_scan_portable.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-window"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-compile",
+      "returncode": 0,
+      "seconds": 1.869,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-DNDEBUG",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-tc-window-audit/test_aut.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-aut-control"
+      ],
+      "component": "tc-window",
+      "name": "tc-aut-control-compile",
+      "returncode": 0,
+      "seconds": 2.17,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-aut-control"
+      ],
+      "component": "tc-window",
+      "name": "tc-aut-control",
+      "returncode": 0,
+      "seconds": 0.667,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afc9b88e41517253ec9ee8e65f1367867baf31f40da75ce9908d98813a3c39ab"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-window",
+        "jobs-normal/n22_K0_C5_R0_P1_P.job"
+      ],
+      "component": "tc-window",
+      "name": "tc-ubsan-n22",
+      "returncode": 0,
+      "seconds": 16.314,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "bce12ce1ff13c70d8549c11accbb1959332ee3c80e8bd10b1626a814e1ef83c5"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/tc-window",
+        "jobs-normal/n16_K0_C3_R0_P1_ker0011.job",
+        "check"
+      ],
+      "component": "tc-window",
+      "name": "tc-ubsan-nonmodule",
+      "returncode": 0,
+      "seconds": 1.67,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "39fbfdc4724739ad6c3c94dd570abde7af9fe6e49f1f4830cb1f3511446a90a2"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-DNDEBUG",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-black-boundary/finite/authenticate_universe.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/boundary-universe"
+      ],
+      "component": "boundary",
+      "name": "boundary-universe-compile",
+      "returncode": 0,
+      "seconds": 1.117,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-black-boundary/finite/universe_input.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-input",
+      "returncode": 0,
+      "seconds": 0.566,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/boundary-universe"
+      ],
+      "component": "boundary",
+      "name": "boundary-universe",
+      "returncode": 0,
+      "seconds": 6.786,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5765eaf935cf90c73ea30d4ca8ce7693566d789e335734bc5f8112e2b4393b6f"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-DNDEBUG",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-black-boundary-audit/audit_universe.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/boundary-audit-universe"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-universe-compile",
+      "returncode": 0,
+      "seconds": 1.468,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/session75-black-boundary-audit/universe_input.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-input",
+      "returncode": 0,
+      "seconds": 0.465,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-ubsan/bin/boundary-audit-universe"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-universe",
+      "returncode": 0,
+      "seconds": 2.22,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1f9555c6e60f988cf5f09dd11000a23b0cf8f74c340457f3ffea07fda6b1ecb5"
+    }
+  ],
+  "mode": "ubsan",
+  "negative_adapter_controls": {
+    "assertions_required": false,
+    "rejected_controls": [
+      "unexpected offline snapshot command",
+      "unexpected offline snapshot commit",
+      "unexpected offline snapshot path",
+      "unexpected offline snapshot command",
+      "offline snapshot content hash mismatch"
+    ],
+    "status": "PASS"
+  },
+  "results": {
+    "boundary": {
+      "scope": "all ordinary classes n4..9 authentication; UBSan C++ authentication only",
+      "status": "PASS"
+    },
+    "boundary-audit": {
+      "scope": "all ordinary classes n4..9 authentication; UBSan C++ authentication only",
+      "status": "PASS"
+    },
+    "tc": {
+      "Cayley_inputs": 526,
+      "VT15_inputs": 16,
+      "degree9_subgroups": 50,
+      "frozen_receipt_adapter": {
+        "adapted_sha256": "e0723ac204c4e6d082e55de4f634644c1c846fa04b537587ba3374d8effc91e3",
+        "purpose": "frozen receipt consistency only; fresh window computation is a separate component",
+        "replacement_count": 1,
+        "source_sha256": "cb0e7a6a491611cf6e5ccf0f9040e391329c44eab4aee3c7c48c96ed9d38209f"
+      },
+      "greedy_orders": 192,
+      "scope": "analytic/group/exact Cayley acceptance path; does not rerun original large n12 type scan; tc-window replay is separate",
+      "status": "PASS",
+      "transitive_degree9_subgroups": 13
+    },
+    "tc-window": {
+      "full_window_replayed": false,
+      "scope": "UBSan: all generated jobs and brute Aut controls; selected order22 module and order16 nonmodule scanner controls only",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

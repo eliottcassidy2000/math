@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-27 — removed source norm alone cannot pay clipping debt
+
+- **Failed implication / native witness:** deleting source labels of total norm22 need not increase positive-part refinement debt by at most22. In the [audited N4096 joint-cutoff packet](../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md), fixing clock64 and tightening depth67 to36 removes16 labels of norm22 but raises debt439 to495, an increase56. The original denominator9949 is unchanged.
+- **Repair / missing coordinate:** keep the same terminal-labelled tree and zero the removed leaves. Pair expansion gives boundary increments `delta_k=Delta_k(full)-Delta_k(retained)`; `(x-delta)_+-x_+ <= (-delta)_+` yields the exact repair `D+(retained)-D+(full) <= sum_k(-delta_k)_+`. All951 boundary pairs give invoice82 and slack26. Lost same-terminal cross interactions, not removed self-norm alone, are owed.
+- **Scope:** this refutes the proposed self-norm payment, not R3 or the joint half-source target, both still OPEN. Generic scalar sharpness is NON-NATIVE. The separate historical classification, floor-margin and index errors are already recorded in MISTAKE-681; C3 supplies its independent audit lineage without replacing the later incoming repairs.
+
 ## 2026-10-27 — an integral quadratic action does not imply a maximal order
 
 - **Source / failed implication:** the [order-eleven lattice discussion](../05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md#5-lattices-ledgers-and-the-root-coordinate) called `Z[(1+sqrt(-q))/2]` maximal for arbitrary doubly regular order q. The integral action and its quadratic polynomial do not establish that the acting order is maximal.

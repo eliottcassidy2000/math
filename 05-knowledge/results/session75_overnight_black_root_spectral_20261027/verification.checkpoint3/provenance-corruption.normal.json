@@ -1,0 +1,38 @@
+{
+  "controls": [
+    {
+      "control": "source-sha256",
+      "gate": "origin snapshot mismatch"
+    },
+    {
+      "control": "source-bytes",
+      "gate": "origin snapshot mismatch"
+    },
+    {
+      "control": "source-git_blob_sha1",
+      "gate": "Git blob identity mismatch"
+    },
+    {
+      "control": "source-commit",
+      "gate": "unapproved historical source pin"
+    },
+    {
+      "control": "source-repository_path",
+      "gate": "unsafe path"
+    },
+    {
+      "control": "ledger-hash",
+      "gate": "ledger field mismatch"
+    },
+    {
+      "control": "audited-copy-hash",
+      "gate": "audit copy mismatch"
+    },
+    {
+      "control": "historical-raw-hash",
+      "gate": "historical provenance field mismatch"
+    }
+  ],
+  "native_packet_unchanged": true,
+  "status": "PASS"
+}

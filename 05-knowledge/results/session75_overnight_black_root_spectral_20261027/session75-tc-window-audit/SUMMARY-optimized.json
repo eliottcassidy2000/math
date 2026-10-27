@@ -1,0 +1,46 @@
+{
+  "aut_control": "PASS: exact orbit-stabilizer equals brute permutation enumeration on 33867 labelled tournaments through n=6; C3/R5/P7 and C3[R5]/R5[C3] controls pass.",
+  "input_audit": {
+    "n12_alternate": {
+      "configs": 6,
+      "group_elements": 1297,
+      "job_tree_sha256": "ec61741519f39a382016f55710c47b907a1492288dfd746c9d01fdcb274962f9",
+      "jobs": 45,
+      "modules": 33,
+      "nonmodules": 12,
+      "pair_orbitals": 312
+    },
+    "window": {
+      "configs": 24,
+      "group_elements": 21939,
+      "job_tree_sha256": "25c7a855fa2ab476bc809c4a9966b9ff56504cfa0280b88b6de8e2965417be19",
+      "jobs": 83,
+      "modules": 73,
+      "nonmodules": 10,
+      "pair_orbitals": 587
+    }
+  },
+  "n12": {
+    "autcalls": 10104,
+    "checks": 45384,
+    "failures": 0,
+    "hits": 0,
+    "jobs": 45,
+    "sha256": "6b5ca609b4d858c5557421dfb6abffdea7908a722147662d8bc17f24892f369e",
+    "source_lines_matched": null,
+    "strong": 46968,
+    "total_job_seconds": 8.782578913007455
+  },
+  "normal": {
+    "autcalls": 48908,
+    "checks": 93646,
+    "failures": 0,
+    "hits": 0,
+    "jobs": 83,
+    "sha256": "36ca4b6b8ad7f147c50e1f48384157ff3dffccad137d6185432e19005903e585",
+    "source_lines_matched": 83,
+    "strong": 185642,
+    "total_job_seconds": 491.3719058279821
+  },
+  "source_commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c"
+}

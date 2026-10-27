@@ -1,0 +1,11 @@
+{
+  "assertions_required": false,
+  "rejected_controls": [
+    "unexpected offline snapshot command",
+    "unexpected offline snapshot commit",
+    "unexpected offline snapshot path",
+    "unexpected offline snapshot command",
+    "offline snapshot content hash mismatch"
+  ],
+  "status": "PASS"
+}

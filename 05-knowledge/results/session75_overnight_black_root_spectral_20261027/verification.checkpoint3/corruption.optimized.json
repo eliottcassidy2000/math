@@ -1,0 +1,46 @@
+{
+  "controls": [
+    {
+      "control": "compressed byte flip",
+      "gate": "stored byte/hash mismatch"
+    },
+    {
+      "control": "expanded hash mismatch",
+      "gate": "expanded byte/hash mismatch"
+    },
+    {
+      "control": "expanded size mismatch",
+      "gate": "expanded size mismatch"
+    },
+    {
+      "control": "unsafe logical path",
+      "gate": "unsafe path"
+    },
+    {
+      "control": "unsafe stored path",
+      "gate": "unsafe path"
+    },
+    {
+      "control": "missing logical manifest entry",
+      "gate": "native manifest membership mismatch"
+    },
+    {
+      "control": "duplicate logical entry",
+      "gate": "duplicate logical/stored path"
+    },
+    {
+      "control": "false native manifest pin",
+      "gate": "native manifest pin mismatch"
+    },
+    {
+      "control": "changed stored executable mode",
+      "gate": "stored mode mismatch"
+    },
+    {
+      "control": "unexpected native lane member",
+      "gate": "unexpected stored lane files"
+    }
+  ],
+  "native_packet_unchanged": true,
+  "status": "PASS"
+}

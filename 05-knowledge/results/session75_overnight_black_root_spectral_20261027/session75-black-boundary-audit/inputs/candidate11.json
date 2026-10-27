@@ -1,0 +1,91 @@
+{
+  "rows": [
+    2032,
+    2025,
+    2019,
+    2021,
+    1998,
+    976,
+    896,
+    1280,
+    1536,
+    1152,
+    96
+  ],
+  "result": {
+    "delta": 2,
+    "lambda": 1,
+    "minimum_shores": [
+      1984,
+      2016
+    ],
+    "A": [
+      {
+        "shore": 1984,
+        "verdict": "EXCLUDED",
+        "route": null,
+        "stats": {
+          "states": 1,
+          "paths": 9,
+          "blue_paths": 9,
+          "deduplicated": 0,
+          "nonstrong_intermediates": 0
+        }
+      },
+      {
+        "shore": 2016,
+        "verdict": "EXCLUDED",
+        "route": null,
+        "stats": {
+          "states": 1,
+          "paths": 9,
+          "blue_paths": 9,
+          "deduplicated": 0,
+          "nonstrong_intermediates": 0
+        }
+      }
+    ],
+    "B": [
+      {
+        "dual": false,
+        "port": 1,
+        "verdict": "WITNESS",
+        "route": [
+          [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10,
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            5,
+            8,
+            10,
+            9,
+            7,
+            6,
+            0,
+            4,
+            1
+          ]
+        ],
+        "stats": {
+          "states": 3,
+          "paths": 2,
+          "blue_paths": 0,
+          "deduplicated": 0,
+          "nonstrong_intermediates": 0
+        }
+      }
+    ]
+  }
+}

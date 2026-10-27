@@ -1,0 +1,559 @@
+{
+  "adapter_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+  "immutable_input_policy": "materialized inputs read-only; all compiled/generated artifacts outside them; no source files modified",
+  "jobs": [
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/finite/authenticate_universe.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/boundary-universe"
+      ],
+      "component": "boundary",
+      "name": "boundary-universe-compile",
+      "returncode": 0,
+      "seconds": 0.767,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/finite/universe_input.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-input",
+      "returncode": 0,
+      "seconds": 0.466,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/boundary-universe"
+      ],
+      "component": "boundary",
+      "name": "boundary-universe",
+      "returncode": 0,
+      "seconds": 2.572,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5765eaf935cf90c73ea30d4ca8ce7693566d789e335734bc5f8112e2b4393b6f"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/finite/verify_witnesses.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-witnesses",
+      "returncode": 0,
+      "seconds": 60.024,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "36f593598c786e9318741efb230461879648c9740ae5d466b4ce0d3d4b2f8997"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/finite/verify_counterexample.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-counterexample",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "085e273f4b8bf27a21d13c0dd3a45933451922f94d8ed7d036c8f458ad85e167"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/family/check_family.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-family",
+      "returncode": 0,
+      "seconds": 0.115,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f1ba1c3317d9b6bd47ddb120618edd6dc46cc0bc13424cb83fc17ec0128169f6"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/family/check_odd.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-odd",
+      "returncode": 0,
+      "seconds": 0.114,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "aef8e3352430334637515b86a3e2a13c432be84200045051947c2ff87f5598d9"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary/survivors/check_survivors.py"
+      ],
+      "component": "boundary",
+      "name": "boundary-survivor",
+      "returncode": 0,
+      "seconds": 0.115,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ca361e74439843565aace4c1b62d086068e2753ed30859f7bd982addeb772afd"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/audit_universe.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/boundary-audit-universe"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-universe-compile",
+      "returncode": 0,
+      "seconds": 1.118,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/universe_input.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-input",
+      "returncode": 0,
+      "seconds": 0.566,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/boundary-audit-universe"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-universe",
+      "returncode": 0,
+      "seconds": 1.117,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1f9555c6e60f988cf5f09dd11000a23b0cf8f74c340457f3ffea07fda6b1ecb5"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/audit_families.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-families",
+      "returncode": 0,
+      "seconds": 0.869,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8a99e31a53af6bd9438d8ff66b55b68e143c09136126a997baa5add5e5660a81"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/audit_survivors.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-survivors",
+      "returncode": 0,
+      "seconds": 0.265,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "49c1630474d89952b456b45116e1ceb5743f1bcf4bff248dc98e34a94f26154f"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/audit_finite.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-finite",
+      "returncode": 0,
+      "seconds": 26.902,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5a7cb4926eeb45e856c781d0868d9153595eff7c9b7eb3f0b740c78cee07896e"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-boundary-audit/audit_controls.py"
+      ],
+      "component": "boundary-audit",
+      "name": "boundary-audit-controls",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac3e11f1c931711d239ec2c1b408ae3e67900342c7bc7f69047fc91ff27fefc9"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-twins/check_twins.py"
+      ],
+      "component": "twins",
+      "name": "twins",
+      "returncode": 0,
+      "seconds": 0.164,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c99b73c0348308ed72f80c118412d97d8f99a0201e39beab27049d27854e2610"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-black-twins-audit/check_addendum.py"
+      ],
+      "component": "twins-audit",
+      "name": "twins-audit",
+      "returncode": 0,
+      "seconds": 0.164,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1adaf758a2ec697684226c3304114c2b5c54658f650ffdb47c30bf57d3b4b46e"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-root-twins/check.py"
+      ],
+      "component": "root-twins",
+      "name": "root-twins",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "968122c92b462ab595c42bdc646db7916ca51e4e68147f9ef2bc127246a0e32a"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-audit/analytic_audit.py"
+      ],
+      "component": "tc",
+      "name": "tc-analytic",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "25e72bcedd50111578b625cd0ac1f72dc39d5e352893179adde4680f8a99dd0a"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-audit/group_checks.py"
+      ],
+      "component": "tc",
+      "name": "tc-group_checks",
+      "returncode": 0,
+      "seconds": 0.115,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8671d4d712db6fafbda13ffcb4b6f0546b44e62576bc63ddb53b11954d824371"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-audit/cayley_independent.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-cayley"
+      ],
+      "component": "tc",
+      "name": "tc-cayley-compile",
+      "returncode": 0,
+      "seconds": 0.716,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-cayley"
+      ],
+      "component": "tc",
+      "name": "tc-cayley",
+      "returncode": 0,
+      "seconds": 2.924,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4e6e2fceca5484f050daada41ba89ab4974f19548fc725e44979cabcbac0c04e"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-cayley",
+        "input"
+      ],
+      "component": "tc",
+      "name": "tc-vt15-independent",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "405fb45347bdd384c54cae1a16ab7af18d8deb036134cb6f8b703ca55b70a502"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py"
+      ],
+      "component": "tc",
+      "name": "tc-vt15-source",
+      "returncode": 0,
+      "seconds": 2.974,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b0a6150126aae4e2bcce7d0cfa2e4ae35aa0e3123af241748241fc3ec186d98b"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-audit/verify_receipts.portable.py"
+      ],
+      "component": "tc",
+      "name": "tc-frozen-receipt-consistency",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "f0ffe96a2be941132f4bafe9a8bc90b827636fc2320c74f4fc67cbabaa8219cf"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/window_configs.py",
+        "jobs-normal"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-normal",
+      "returncode": 0,
+      "seconds": 0.265,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c6a17d134ab17381421d7694241bd1491e7c1deffd1c48bcebc6b20c83d10b0d"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/window_configs.py",
+        "jobs-optimized"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-optimized",
+      "returncode": 0,
+      "seconds": 0.315,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c6a17d134ab17381421d7694241bd1491e7c1deffd1c48bcebc6b20c83d10b0d"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/window_configs_n12.py",
+        "jobs-n12"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-n12",
+      "returncode": 0,
+      "seconds": 0.064,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c115651fd85c4f4292495f10095b2b7aa3ee63f0538d2f194e1a1df0e8a175b2"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/window_configs_n12.py",
+        "jobs-n12-opt"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-jobs-n12-opt",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c115651fd85c4f4292495f10095b2b7aa3ee63f0538d2f194e1a1df0e8a175b2"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/audit_jobs.py"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-job-audit",
+      "returncode": 0,
+      "seconds": 0.114,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5d0968e53ea34a090235fc562a6d8ba058a528b4d24994f910aa5677844e6089"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/make_portable.py"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-portable-source",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/tc_window_scan_portable.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-window"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-compile",
+      "returncode": 0,
+      "seconds": 1.47,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/test_aut.cpp",
+        "-o",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-aut-control"
+      ],
+      "component": "tc-window",
+      "name": "tc-aut-control-compile",
+      "returncode": 0,
+      "seconds": 1.469,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/bin/tc-aut-control"
+      ],
+      "component": "tc-window",
+      "name": "tc-aut-control",
+      "returncode": 0,
+      "seconds": 0.215,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afc9b88e41517253ec9ee8e65f1367867baf31f40da75ce9908d98813a3c39ab"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/run_scan.py",
+        "normal"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-scan-normal",
+      "returncode": 0,
+      "seconds": 231.797,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3a0364e527087c9d52c9aa639f4776b069e6b0fba799046e3110948715301966"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/run_scan.py",
+        "n12"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-scan-n12",
+      "returncode": 0,
+      "seconds": 3.941,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "471d42c470b29d4e3a15a37a8e2ea83e52adfaa436c2f3a24fac4c73e6a72f78"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-basic-normal/session75-tc-window-audit/summarize.py"
+      ],
+      "component": "tc-window",
+      "name": "tc-window-summary",
+      "returncode": 0,
+      "seconds": 0.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "894c82de4a88f1f968be5b2170e2867e19f6b3bf7587f60035aaa0a4e859ab72"
+    }
+  ],
+  "mode": "normal",
+  "negative_adapter_controls": {
+    "assertions_required": false,
+    "rejected_controls": [
+      "unexpected offline snapshot command",
+      "unexpected offline snapshot commit",
+      "unexpected offline snapshot path",
+      "unexpected offline snapshot command",
+      "offline snapshot content hash mismatch"
+    ],
+    "status": "PASS"
+  },
+  "results": {
+    "boundary": {
+      "scope": "all ordinary classes n4..9 authentication; full frozen finite/family/survivor/rejection receipts",
+      "status": "PASS"
+    },
+    "boundary-audit": {
+      "scope": "all ordinary classes n4..9 authentication; full frozen finite/family/survivor/rejection receipts",
+      "status": "PASS"
+    },
+    "root-twins": {
+      "scope": "independent root controls: exactly two matrices, 1022 named cuts, Hamilton/automorphism/colour/exit counts and two native core routes",
+      "status": "PASS"
+    },
+    "tc": {
+      "Cayley_inputs": 526,
+      "VT15_inputs": 16,
+      "degree9_subgroups": 50,
+      "frozen_receipt_adapter": {
+        "adapted_sha256": "a547ee20868ea0e7db6865de0a99e1784d8097b193b45b99a8453b2ba67ffc4d",
+        "purpose": "frozen receipt consistency only; fresh window computation is a separate component",
+        "replacement_count": 1,
+        "source_sha256": "cb0e7a6a491611cf6e5ccf0f9040e391329c44eab4aee3c7c48c96ed9d38209f"
+      },
+      "greedy_orders": 192,
+      "scope": "analytic/group/exact Cayley acceptance path; does not rerun original large n12 type scan; tc-window replay is separate",
+      "status": "PASS",
+      "transitive_degree9_subgroups": 13
+    },
+    "tc-window": {
+      "alternate_n12_jobs": 45,
+      "alternate_n12_strong": 46968,
+      "full_window_replayed": true,
+      "original_large_n12_scan_replayed": false,
+      "projection": "exact whole SUMMARY after removing only per-run timing and raw jsonl hash; each window line suffix checked by frozen summarize.py",
+      "status": "PASS",
+      "window_jobs": 83,
+      "window_strong": 185642
+    },
+    "twins": {
+      "scope": "exactly two named n10 sources; all cuts, paths, native routes and cycle polynomials; one pinned incoming recipe",
+      "status": "PASS"
+    },
+    "twins-audit": {
+      "scope": "exactly two named n10 sources; all cuts, paths, native routes and cycle polynomials; one pinned incoming recipe",
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

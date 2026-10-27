@@ -35,6 +35,19 @@ members through order 14 have black distance exactly 2.
 **Outcome: PROVED (THM-4811 Theorem B)** with the corrected family: the black distance is `lambda` except `R5` and the
 members of `E`, where it is `2 = lambda + 1`.
 
+## Session75 independent checkpoint (2026-10-27)
+
+The [frozen C3 family audit](../results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md)
+independently supplies even and odd examples at every order `n >= 10`, with
+`lambda = 1` and exact black distance `2`. Its odd order-eleven member already
+refutes the original even-only classification in (1) and the original
+`E(M; Z)` exclusivity in (2). That family argument is not, by itself, a proof
+of a universal `lambda + 1` upper bound. The stronger corrected classification
+and upper-bound resolution above are the distinct incoming THM-4811 Theorems
+A and B, not a claim of this frozen audit. The [source reconciliation](../results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md)
+credits the concurrent E10 construction and preserves the different scopes.
+Clauses (3)–(6) are unchanged by this checkpoint.
+
 ## (3) The presentation spectrum (PRE-REGISTERED)
 
 THM-4812 proves that `tc` never takes the values 7 and 21. **Prediction:** for every odd `v <= 2001` with

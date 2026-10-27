@@ -1,0 +1,446 @@
+{
+  "scope": "Exact listed local snapshot bytes equal targeted git show at their declared historical commits; not a re-audit of all source claims",
+  "sources": [
+    {
+      "bytes": 188,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "624cd75735fed26ea21d0e87b4cef0e1f25c8e8a",
+      "local": "inputs/classes_n4.tsv",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/classes_n4.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n4.tsv",
+      "sha256": "2fc455bfe2aba6aed15b56a1c7644990eb68aca228f266663f2cf22580b15357"
+    },
+    {
+      "bytes": 509,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "8075861b972fbf1d6de2b56207dc99846768dc50",
+      "local": "inputs/classes_n5.tsv",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/classes_n5.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n5.tsv",
+      "sha256": "737d01a7eba26940b38f353c785dd6ca701bec9a84c21f75d2ac2cc01c1ba8e2"
+    },
+    {
+      "bytes": 2500,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "4087fb8cad9e59d7b09581b1ba67a62ef9475946",
+      "local": "inputs/classes_n6.tsv",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/classes_n6.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a"
+    },
+    {
+      "bytes": 24382,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "6a6c94e2dd617727f61660e8073dce8a63e9d5e0",
+      "local": "inputs/classes_n7.tsv",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/classes_n7.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c"
+    },
+    {
+      "bytes": 435638,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "1f35effd4c4c32a2be234d6c6b36bbd1f1a0a715",
+      "local": "inputs/classes_n8.tsv",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/classes_n8.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv",
+      "sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab"
+    },
+    {
+      "bytes": 1936038,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "3735d66d68aa29da876ef524a36175f690688d5f",
+      "local": "inputs/n9_classes.tsv.gz",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/n9_classes.tsv.gz",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz",
+      "sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c"
+    },
+    {
+      "bytes": 10192,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "975b76d61d06c62d446ea67c07e1c823598cd140",
+      "local": "inputs/census.md",
+      "native_root": "/tmp/session75-black-boundary/milestone",
+      "packet_logical_path": "session75-black-boundary/inputs/census.md",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/census.md",
+      "sha256": "598380f98f57b871e211731d33fe56d41035fa673ee56acd9d77ed251dcf3ed2"
+    },
+    {
+      "bytes": 188,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "624cd75735fed26ea21d0e87b4cef0e1f25c8e8a",
+      "local": "inputs/classes_n4.tsv",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/classes_n4.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n4.tsv",
+      "sha256": "2fc455bfe2aba6aed15b56a1c7644990eb68aca228f266663f2cf22580b15357"
+    },
+    {
+      "bytes": 509,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "8075861b972fbf1d6de2b56207dc99846768dc50",
+      "local": "inputs/classes_n5.tsv",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/classes_n5.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n5.tsv",
+      "sha256": "737d01a7eba26940b38f353c785dd6ca701bec9a84c21f75d2ac2cc01c1ba8e2"
+    },
+    {
+      "bytes": 2500,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "4087fb8cad9e59d7b09581b1ba67a62ef9475946",
+      "local": "inputs/classes_n6.tsv",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/classes_n6.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a"
+    },
+    {
+      "bytes": 24382,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "6a6c94e2dd617727f61660e8073dce8a63e9d5e0",
+      "local": "inputs/classes_n7.tsv",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/classes_n7.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c"
+    },
+    {
+      "bytes": 435638,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "1f35effd4c4c32a2be234d6c6b36bbd1f1a0a715",
+      "local": "inputs/classes_n8.tsv",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/classes_n8.tsv",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv",
+      "sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab"
+    },
+    {
+      "bytes": 1936038,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "3735d66d68aa29da876ef524a36175f690688d5f",
+      "local": "inputs/n9_classes.tsv.gz",
+      "native_root": "/tmp/session75-black-boundary-audit",
+      "packet_logical_path": "session75-black-boundary-audit/inputs/n9_classes.tsv.gz",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz",
+      "sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c"
+    },
+    {
+      "bytes": 10995,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "06cb3d882bab9fc322073fde761eeb6e7190f65c",
+      "local": "inputs/THM-4811.md",
+      "native_root": "/tmp/session75-black-twins",
+      "packet_logical_path": "session75-black-twins/inputs/THM-4811.md",
+      "repository_path": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "sha256": "5489264bfcdafaa431c51d6b6542ef88e2dea1e8cb3fbd8d348d9786ba3f9b3b"
+    },
+    {
+      "bytes": 6814,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "ef2ad535d18dacc696da63c9719ecceb6309e168",
+      "local": "inputs/exceptional_family.py",
+      "native_root": "/tmp/session75-black-twins",
+      "packet_logical_path": "session75-black-twins/inputs/exceptional_family.py",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py",
+      "sha256": "cf798cab0cef4772f0a2698730dd8cb869d776415f6c3c4a753ce461864c86cb"
+    },
+    {
+      "bytes": 2106,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2d240fb86b5769f79432f9c0023f74209c0269a9",
+      "local": "inputs/exceptional_family.out",
+      "native_root": "/tmp/session75-black-twins",
+      "packet_logical_path": "session75-black-twins/inputs/exceptional_family.out",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.out",
+      "sha256": "a3dfc3a59819cb48cf4beedddecb41c02854cf9ebf53380112de9fe4805b4eee"
+    },
+    {
+      "bytes": 10995,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "06cb3d882bab9fc322073fde761eeb6e7190f65c",
+      "local": "producer/inputs/THM-4811.md",
+      "native_root": "/tmp/session75-black-twins-audit",
+      "packet_logical_path": "session75-black-twins-audit/producer/inputs/THM-4811.md",
+      "repository_path": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "sha256": "5489264bfcdafaa431c51d6b6542ef88e2dea1e8cb3fbd8d348d9786ba3f9b3b"
+    },
+    {
+      "bytes": 6814,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "ef2ad535d18dacc696da63c9719ecceb6309e168",
+      "local": "producer/inputs/exceptional_family.py",
+      "native_root": "/tmp/session75-black-twins-audit",
+      "packet_logical_path": "session75-black-twins-audit/producer/inputs/exceptional_family.py",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py",
+      "sha256": "cf798cab0cef4772f0a2698730dd8cb869d776415f6c3c4a753ce461864c86cb"
+    },
+    {
+      "bytes": 2106,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2d240fb86b5769f79432f9c0023f74209c0269a9",
+      "local": "producer/inputs/exceptional_family.out",
+      "native_root": "/tmp/session75-black-twins-audit",
+      "packet_logical_path": "session75-black-twins-audit/producer/inputs/exceptional_family.out",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.out",
+      "sha256": "a3dfc3a59819cb48cf4beedddecb41c02854cf9ebf53380112de9fe4805b4eee"
+    },
+    {
+      "bytes": 4657,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "b6e9c7847274a51483976508cd20eb83b39c4993",
+      "local": "inputs/HYP-9421-at-87d61.md",
+      "native_root": "/tmp/session75-black-twins-audit",
+      "packet_logical_path": "session75-black-twins-audit/inputs/HYP-9421-at-87d61.md",
+      "repository_path": "05-knowledge/hypotheses/HYP-9421-black-descent-exceptions-tc-spectrum-and-the-native-forcing-tail.md",
+      "sha256": "8003c0567e15aff6ed1ce57a79d6650dd8ecf08dc37f6fcd7818d26b90a5e006"
+    },
+    {
+      "bytes": 22488,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "local": "sources/paid_root_README.md",
+      "native_root": "/tmp/session75-joint-cutoffs/publish",
+      "packet_logical_path": "session75-joint-cutoffs/sources/paid_root_README.md",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "local": "sources/paid_root_verify.py",
+      "native_root": "/tmp/session75-joint-cutoffs/publish",
+      "packet_logical_path": "session75-joint-cutoffs/sources/paid_root_verify.py",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "2da8811e64696f018835744846b7558f04f4d87e",
+      "local": "sources/root_eisenstein_first_arrival_20261018j.md",
+      "native_root": "/tmp/session75-joint-cutoffs/publish",
+      "packet_logical_path": "session75-joint-cutoffs/sources/root_eisenstein_first_arrival_20261018j.md",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4620,
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "git_blob_sha1": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "local": "frontier.txt",
+      "native_root": "/tmp/session75-joint-cutoffs/publish",
+      "packet_logical_path": "session75-joint-cutoffs/frontier.txt",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 14859,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "0271789e7daca9acc27d5fc3c9afc35a47517981",
+      "local": "theorem.md",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/theorem.md",
+      "repository_path": "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+      "sha256": "f2185ca3f47285e1a83a3d69938eb6cc810e8ee52081e067095371d6e2c8967d"
+    },
+    {
+      "bytes": 10097,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2c0f558950d384c164dbba8636a4e7809bcbdeea",
+      "local": "source.md",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/source.md",
+      "repository_path": "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md",
+      "sha256": "18dd4738f5d1aec6b7a527760ca51f9039c2ce3b24bd48d676c8ffb2899eecc1"
+    },
+    {
+      "bytes": 3520,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "cfc8753b22e2ffd44055b72302daa8f85bab3eb3",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.cpp",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.cpp",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.cpp",
+      "sha256": "d7f1762262e86a90e5d4253a0cea83bee11613612d51bdeb9e4786df9408f1c4"
+    },
+    {
+      "bytes": 887,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "7d6949d3810c6d5b43c01f43c37a6b3422285f35",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/cayley_tc.out",
+      "sha256": "4a7fb6faf2cc3dbeaf7bff1c5a2b702f6e96b1f11bd6561a44d1a496c7a767ed"
+    },
+    {
+      "bytes": 960,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "c74e695673b9199333bf2dba54478fecfe86978d",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/regular9_vertex_transitive.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/regular9_vertex_transitive.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/regular9_vertex_transitive.out",
+      "sha256": "b3c0b76115652164822fe2b1ec1a7665bc9e1d5a37931ff5c31380ca2473a379"
+    },
+    {
+      "bytes": 1237,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2fd1fe1b71432741fdaa2944ac380028038c2f0b",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/regular_vertex_transitive.py",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/regular_vertex_transitive.py",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/regular_vertex_transitive.py",
+      "sha256": "0857a41b16464c5282fb0b3cf23f743d04831e63c034c9d5df093182656cc923"
+    },
+    {
+      "bytes": 6898,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "c2d2a6f602aed6530f455ae70ef9714ebf094c4a",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan.cpp",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan.cpp",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan.cpp",
+      "sha256": "8fca69178eb5d3050c2c73c9edd0bcfb0828e15ea428cab077520adb917b2cab"
+    },
+    {
+      "bytes": 2990,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "cd80e5dbfaa96a92efdadfd6fae3ff30bbac94d2",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan_n12.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan_n12.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_invariant_scan_n12.out",
+      "sha256": "6d479872a3665bed4dc944dd41c2c11ac476be44da305ab9459fc29aff2511c4"
+    },
+    {
+      "bytes": 2488,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "5424cbb0ee8791a2558e2f66988339ec6ae05e80",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_summary.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_summary.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_summary.out",
+      "sha256": "946440e4ddd71da5d4eb5acf5d53aec9abfb887191cfd38696248e395ef92e6f"
+    },
+    {
+      "bytes": 2762,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "fb197b043a9546dbb7f657f36716d0c6b9e5bf12",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_sweep.cpp",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_sweep.cpp",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_sweep.cpp",
+      "sha256": "1dcca27039a94a9e19320db97231c04de0dd25ee5ee39fba8a142b3edc8b86f6"
+    },
+    {
+      "bytes": 8778,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2d6e671723b4eac1b2e2319344344cb7b18b4a41",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/tc_window_scan.cpp",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/tc_window_scan.cpp",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_window_scan.cpp",
+      "sha256": "81975996905ea20bf7d527ccfa6afa43bcf69768829534669b8d0c30f6f0f24d"
+    },
+    {
+      "bytes": 461,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "4bdcf285564af9cb0b78ad49684278d9e3a96065",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.out",
+      "sha256": "f81b80f16540245b977a9794f1b32c714cebfef14b24d1f4f58c0b6691c307ab"
+    },
+    {
+      "bytes": 1804,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "5daf6469d05472934f7ea6049fd820648c65c3f4",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py",
+      "sha256": "5720f40b0b1f8981555a894c64488d9620825fddc0e7cc3a324bc9958e71e5ab"
+    },
+    {
+      "bytes": 1198,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "4b39d96e364bd789ee2f49e30f2c2a1a7da4d5a8",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.out",
+      "sha256": "b0a6150126aae4e2bcce7d0cfa2e4ae35aa0e3123af241748241fc3ec186d98b"
+    },
+    {
+      "bytes": 4591,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "651d4a0042e0a29d3e84b8eabb71b5b9cf5ed570",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py",
+      "sha256": "7ca4b89f6d7c233ad64a82fe3d3720d3e92086790c64d29a893e0725adef6948"
+    },
+    {
+      "bytes": 8136,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "40f5267d54ea455ee0a00b7d6f7b701a7a0ea383",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/window_configs.py",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/window_configs.py",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/window_configs.py",
+      "sha256": "5171604d36a7a0d0a6d2a76325d9ee1b9ebf1b92f597e2bc54ea323703950da6"
+    },
+    {
+      "bytes": 13416,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "132cdd40bc577233691a7f56a81800ece7a321ba",
+      "local": "04-computation/experiments/tc_fibres_n12_20261027/window_scan.out",
+      "native_root": "/tmp/session75-tc-audit",
+      "packet_logical_path": "session75-tc-audit/04-computation/experiments/tc_fibres_n12_20261027/window_scan.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/window_scan.out",
+      "sha256": "e1d9056495ab19c8151012d040da36bd785ee51fc4bc823e611d2eb3dd5e77a8"
+    },
+    {
+      "bytes": 8136,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "40f5267d54ea455ee0a00b7d6f7b701a7a0ea383",
+      "local": "window_configs.py",
+      "native_root": "/tmp/session75-tc-window-audit",
+      "packet_logical_path": "session75-tc-window-audit/window_configs.py",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/window_configs.py",
+      "sha256": "5171604d36a7a0d0a6d2a76325d9ee1b9ebf1b92f597e2bc54ea323703950da6"
+    },
+    {
+      "bytes": 8778,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "2d6e671723b4eac1b2e2319344344cb7b18b4a41",
+      "local": "tc_window_scan.cpp",
+      "native_root": "/tmp/session75-tc-window-audit",
+      "packet_logical_path": "session75-tc-window-audit/tc_window_scan.cpp",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/tc_window_scan.cpp",
+      "sha256": "81975996905ea20bf7d527ccfa6afa43bcf69768829534669b8d0c30f6f0f24d"
+    },
+    {
+      "bytes": 13416,
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "git_blob_sha1": "132cdd40bc577233691a7f56a81800ece7a321ba",
+      "local": "window_scan.out",
+      "native_root": "/tmp/session75-tc-window-audit",
+      "packet_logical_path": "session75-tc-window-audit/window_scan.out",
+      "repository_path": "04-computation/experiments/tc_fibres_n12_20261027/window_scan.out",
+      "sha256": "e1d9056495ab19c8151012d040da36bd785ee51fc4bc823e611d2eb3dd5e77a8"
+    }
+  ],
+  "status": "PASS"
+}

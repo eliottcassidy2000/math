@@ -1,0 +1,53 @@
+{
+  "repository_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "source_tables_exact_git_bytes": [
+    {
+      "local": "inputs/classes_n4.tsv",
+      "sha256": "2fc455bfe2aba6aed15b56a1c7644990eb68aca228f266663f2cf22580b15357",
+      "bytes": 188,
+      "repository_paths": [
+        "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n4.tsv"
+      ]
+    },
+    {
+      "local": "inputs/classes_n5.tsv",
+      "sha256": "737d01a7eba26940b38f353c785dd6ca701bec9a84c21f75d2ac2cc01c1ba8e2",
+      "bytes": 509,
+      "repository_paths": [
+        "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n5.tsv"
+      ]
+    },
+    {
+      "local": "inputs/classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a",
+      "bytes": 2500,
+      "repository_paths": [
+        "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv"
+      ]
+    },
+    {
+      "local": "inputs/classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c",
+      "bytes": 24382,
+      "repository_paths": [
+        "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv"
+      ]
+    },
+    {
+      "local": "inputs/classes_n8.tsv",
+      "sha256": "7d13cd79f9273d903bb8f7e5b34f413cd36a2a98cd4b05e9994fe2baa79c29ab",
+      "bytes": 435638,
+      "repository_paths": [
+        "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n8.tsv"
+      ]
+    },
+    {
+      "local": "inputs/n9_classes.tsv.gz",
+      "sha256": "959c2276c57108d55b56d4906edfbd761fb9737e708b14114d66dd4ad618db0c",
+      "bytes": 1936038,
+      "repository_paths": [
+        "05-knowledge/results/blue_quotient_20261020b/n9_classes.tsv.gz"
+      ]
+    }
+  ]
+}

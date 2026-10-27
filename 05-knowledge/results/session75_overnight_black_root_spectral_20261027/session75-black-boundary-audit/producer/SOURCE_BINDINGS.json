@@ -1,0 +1,17 @@
+{
+  "repository_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "sources": [
+    {
+      "path": "/tmp/session75-black-core/BLACK_CORE_GEODESICS.md",
+      "sha256": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e"
+    },
+    {
+      "path": "/tmp/session75-black-audit/sources/05-knowledge/results/black_descent_20261020c/cycles.md",
+      "sha256": "b8c998e416dae8a9b7397a2b02b17a380b49bb272a272e07a1255214b5ff6280"
+    },
+    {
+      "path": "/tmp/session75-black-audit/sources/05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "sha256": "ad380c7bd6ab8ed0b6b48c8e042183813ced001dc03d1931ab816d9cbe42ad74"
+    }
+  ]
+}

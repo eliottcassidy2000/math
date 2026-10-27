@@ -1,0 +1,288 @@
+{
+  "errors": [],
+  "files": [
+    "05-knowledge/hypotheses/HYP-9421-black-descent-exceptions-tc-spectrum-and-the-native-forcing-tail.md",
+    "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+    "01-canon/MISTAKES.md",
+    "00-navigation/S75.md",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/REPLAY.checkpoint3.md",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/VERIFICATION.checkpoint3.md"
+  ],
+  "links": [
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md",
+      "source": "05-knowledge/hypotheses/HYP-9421-black-descent-exceptions-tc-spectrum-and-the-native-forcing-tail.md",
+      "target": "../results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "source": "05-knowledge/hypotheses/HYP-9421-black-descent-exceptions-tc-spectrum-and-the-native-forcing-tail.md",
+      "target": "../results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/RESULT.md",
+      "source": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/RESULT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md",
+      "source": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/survivors/SURVIVORS.md",
+      "source": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/survivors/SURVIVORS.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins/RESULT.md",
+      "source": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins/RESULT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/AUDIT.md",
+      "source": "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/PROOF_REPAIRS.md",
+      "source": "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/PROOF_REPAIRS.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-window-audit/AUDIT.md",
+      "source": "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md",
+      "target": "../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-window-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md",
+      "source": "01-canon/MISTAKES.md",
+      "target": "../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.md",
+      "source": "00-navigation/S75.md",
+      "target": "../05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "source": "00-navigation/S75.md",
+      "target": "../05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md",
+      "source": "00-navigation/S75.md",
+      "target": "../05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "README.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "README.checkpoint2.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/RESULT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary/RESULT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/family/ROOTED_CONVERSE_COUNTEREXAMPLE.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary/family/ROOTED_CONVERSE_COUNTEREXAMPLE.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/family/ODD_MIDDLE_EXTENSION.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary/family/ODD_MIDDLE_EXTENSION.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/survivors/SURVIVORS.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary/survivors/SURVIVORS.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/ACCEPTANCE.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-boundary-audit/ACCEPTANCE.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins/RESULT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-twins/RESULT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins-audit/AUDIT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-twins-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins-audit/ACCEPTANCE.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-twins-audit/ACCEPTANCE.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-twins/normal.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-root-twins/normal.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins-audit/C3_CORRECTION_NOTE.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-black-twins-audit/C3_CORRECTION_NOTE.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoffs/README.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-joint-cutoffs/README.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoffs/COVERAGE.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-joint-cutoffs/COVERAGE.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoffs/SUMMARY.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-joint-cutoffs/SUMMARY.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-joint-cutoff-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/ACCEPTANCE.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-joint-cutoff-audit/ACCEPTANCE.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/AUDIT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-tc-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-audit/PROOF_REPAIRS.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-tc-audit/PROOF_REPAIRS.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-tc-window-audit/AUDIT.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "session75-tc-window-audit/AUDIT.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "CURATION.checkpoint3.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/TRANSPORT.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "TRANSPORT.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/SOURCE_ORIGINS.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "SOURCE_ORIGINS.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/PROVENANCE.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "PROVENANCE.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/VERIFICATION.checkpoint3.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "target": "VERIFICATION.checkpoint3.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/TRANSPORT.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+      "target": "TRANSPORT.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/PROVENANCE.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+      "target": "PROVENANCE.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/SOURCE_ORIGINS.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+      "target": "SOURCE_ORIGINS.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/CURATION.checkpoint3.md",
+      "target": "README.checkpoint3.md"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/FINAL_ACCEPTANCE.checkpoint3.json",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/VERIFICATION.checkpoint3.md",
+      "target": "FINAL_ACCEPTANCE.checkpoint3.json"
+    },
+    {
+      "exists": true,
+      "resolved_path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/REPLAY.checkpoint3.md",
+      "source": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/VERIFICATION.checkpoint3.md",
+      "target": "REPLAY.checkpoint3.md"
+    }
+  ],
+  "scope": "Explicit reader-facing files; MISTAKES only the new C3 clipping entry; local destination existence only, not external URLs or heading fragments",
+  "status": "PASS"
+}

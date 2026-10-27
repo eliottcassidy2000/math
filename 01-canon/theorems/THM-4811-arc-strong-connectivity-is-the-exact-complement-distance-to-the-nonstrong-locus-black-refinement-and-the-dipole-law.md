@@ -168,6 +168,30 @@ are exactly `E`. For Theorem B, a singleton-type descent keeps `lambda = delta^0
 the target has outdegree below 3, while members of `E` have three vertices of outdegree 2) or `R5`, and for `T` in `E` a black word starting and ending in
 `S` keeps `lambda = 1` and reaches `lambda = delta^0 = 1`.
 
+## Session75 independently audited family and invariant boundary (2026-10-27)
+
+The [C3 boundary packet](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/RESULT.md)
+and [independent acceptance](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary-audit/AUDIT.md)
+prove explicit counterfamilies at every `n >= 10`: `lambda = 1`, `delta^0 = 2`,
+and exact black distance `2` to the non-strong locus. The minimum order is ten
+among strong sources with an available black move, using authenticated complete
+ordinary (not converse-merged) classes through nine. The pure-blue `C3` and `R5`
+remain separate exceptions. The family's original two-step non-strong route
+is not silently treated as a singleton-plus-strong-core route: the latter is
+proved separately by the [core survivor construction](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-boundary/survivors/SURVIVORS.md).
+The unique-unbalanced-minimum-shore descent theorem has its own stated scope.
+
+The [literal order-ten twins](../../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-twins/RESULT.md)
+have the same `H = 657` and the entire same named cut function, but automorphism
+orders `1` and `9` and black exit distances `1` and `2`. Their odd-cycle
+collection polynomials differ; equality of labelled triples is not claimed.
+The explicit isomorphism to the concurrent E10 recipe preserves orientation,
+and credits the incoming construction at `87d61f67673`; no discovery-priority
+claim is made. Frozen source comments about reserved namespaces record the
+earlier research snapshot and do not describe current THM-4811 status.
+These independent checks establish the indicated subfamilies and boundaries,
+not a second audit of the full incoming classification or its larger censuses.
+
 ## (D) Singleton targets
 
 Let `delta^0(T) = min_v min(s_v, n - 1 - s_v)`. By (A) each `|s_v - (n-1)/2|` changes by at most one per move, so

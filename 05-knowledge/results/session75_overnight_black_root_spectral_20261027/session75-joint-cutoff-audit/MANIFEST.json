@@ -1,0 +1,18 @@
+{
+  "files": {
+    "ACCEPTANCE.json": "b84c39335ab5dfdff2a1c97734fc3ceaae25f22c1e49237ddf77fdc0c8764608",
+    "AUDIT.md": "054e4061169f9d3e0aba31aaf59cb0d0e7898fe5fc6e72badcd7100e8a73fa48",
+    "LARGE_INTEGER_WITNESS.json": "dd75c02f43f498ccdcea59cd84281dc1eee20e791eac5d4b14cf70d05dcf5dfc",
+    "ORDERING_EVIDENCE.json": "13ce053a85a54aace18a70431eaf24f8036ec27b1c4447f133134e367819509b",
+    "REVIEWED_PRODUCER_BYTES.json": "e8dd4c98963ce4d6f7b5cdf0c30a73678d8b03ee1fca0fc29b3df9245776a968",
+    "independent_audit.py": "e0fe4f90de36369aa51450980257e0c566a51ceb52caa517f2139a5d135c611a",
+    "independent_receipt.json": "640a10d0faf14484a21e8ef3bd4bb755b096857cba8bb18f2bea59755b49c3d9",
+    "independent_receipt.optimized.json": "640a10d0faf14484a21e8ef3bd4bb755b096857cba8bb18f2bea59755b49c3d9",
+    "run_audit.sh": "de184f07284faebfc9e6dbfb1d819c41e67ac3dc59e7070e380b7e1058470b07",
+    "supplementary_checks.py": "fc0ec759d798855fcba6d623ef05a829d1d970adf3cf512f18ef2cf2d051ccd6",
+    "supplementary_receipt.json": "679ebe430a480de3d249688d0af6f1fc9d19dcb99596a1677cedc1c6199d2392",
+    "supplementary_receipt.optimized.json": "679ebe430a480de3d249688d0af6f1fc9d19dcb99596a1677cedc1c6199d2392"
+  },
+  "producer_manifest_sha256": "09f5e8372a8133109cec03447284c49881440b36521eb22d2ef2ea7c67cf0ef7",
+  "status": "FROZEN_INDEPENDENT_AUDIT_PASS_SCOPED"
+}

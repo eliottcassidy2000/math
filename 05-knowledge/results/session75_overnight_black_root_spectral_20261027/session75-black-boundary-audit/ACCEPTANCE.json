@@ -1,0 +1,85 @@
+{
+  "accepted_scopes": [
+    "all-order A counterexamples at every n>=10 with lambda1 delta2 exact black nonstrong distance2",
+    "minimum order10 from authenticated complete ordinary classes n4..9",
+    "separate survivor family core distance2=delta for all members",
+    "unique unbalanced minimum shore black nonstrong distance=lambda"
+  ],
+  "complete_family_Hamilton_universes": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "family_control_a": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    100
+  ],
+  "finite_K_edges": 296985,
+  "finite_R_edges": 296985,
+  "full_strong_n7_classes": 353,
+  "no_shared_repository_or_remote_mutation": true,
+  "not_claimed": [
+    "global B core-distance equality",
+    "all-order black connectivity",
+    "original nonstrong-route core attainment"
+  ],
+  "ordinary_source_classes_n4_to_n9": [
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536
+  ],
+  "paired_independent_receipts": {
+    "controls": {
+      "normal_sha256": "ac3e11f1c931711d239ec2c1b408ae3e67900342c7bc7f69047fc91ff27fefc9",
+      "optimized_sha256": "ac3e11f1c931711d239ec2c1b408ae3e67900342c7bc7f69047fc91ff27fefc9"
+    },
+    "family": {
+      "normal_sha256": "8a99e31a53af6bd9438d8ff66b55b68e143c09136126a997baa5add5e5660a81",
+      "optimized_sha256": "8a99e31a53af6bd9438d8ff66b55b68e143c09136126a997baa5add5e5660a81"
+    },
+    "finite": {
+      "normal_sha256": "5a7cb4926eeb45e856c781d0868d9153595eff7c9b7eb3f0b740c78cee07896e",
+      "optimized_sha256": "5a7cb4926eeb45e856c781d0868d9153595eff7c9b7eb3f0b740c78cee07896e"
+    },
+    "survivors": {
+      "normal_sha256": "49c1630474d89952b456b45116e1ceb5743f1bcf4bff248dc98e34a94f26154f",
+      "optimized_sha256": "49c1630474d89952b456b45116e1ceb5743f1bcf4bff248dc98e34a94f26154f"
+    },
+    "universe": {
+      "normal_sha256": "1f9555c6e60f988cf5f09dd11000a23b0cf8f74c340457f3ffea07fda6b1ecb5",
+      "optimized_sha256": "1f9555c6e60f988cf5f09dd11000a23b0cf8f74c340457f3ffea07fda6b1ecb5"
+    }
+  },
+  "producer_final_manifest_sha256": "5bc89f4d9673325311088321d984811a2ddbf123be6739e81ff75b314f5d28a3",
+  "provenance": "Exact source-table git bytes bound in SOURCE_TABLE_BINDINGS.json; every final producer manifest entry hash-checked. Independent own source code never imports producer modules.",
+  "research_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "status": "ACCEPTED"
+}

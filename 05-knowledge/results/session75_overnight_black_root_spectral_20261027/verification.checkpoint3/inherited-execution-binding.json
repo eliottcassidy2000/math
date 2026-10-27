@@ -1,0 +1,9 @@
+{
+  "additional_negative_controls_in_both_modes": 1,
+  "execution_manifest_sha256": "87c1d0b69d06ca062819876fe682ba71c99af77c709569d5a7b4050aceef323c",
+  "files_verified_at_execution": 825,
+  "python_scripts_replayed_in_both_modes": 15,
+  "receipt_sha256": "ade4c7f780337166573cdb841f61f2862770708d144b362a60488f2dbd0f9a87",
+  "scope": "Cumulative inventory at inherited C1/C2 replay time, before the final receipt envelope was added. All pre-existing C1/C2 files remain unchanged; final whole-packet inventory is checked separately.",
+  "status": "PASS"
+}

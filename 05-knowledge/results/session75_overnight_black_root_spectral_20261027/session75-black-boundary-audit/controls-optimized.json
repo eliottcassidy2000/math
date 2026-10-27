@@ -1,0 +1,25 @@
+{
+  "reject_controls": [
+    {
+      "control": "nonpermutation",
+      "rejection": "path not a permutation"
+    },
+    {
+      "control": "reversed nondirected word",
+      "rejection": "path not directed"
+    },
+    {
+      "control": "blue C3 move",
+      "rejection": "blue R move"
+    },
+    {
+      "control": "nonstrong target is not a strong core",
+      "rejection": "terminal is not singleton plus strong core"
+    },
+    {
+      "control": "malformed tournament encoding",
+      "rejection": "invalid tournament"
+    }
+  ],
+  "status": "PASS"
+}

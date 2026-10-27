@@ -1,0 +1,235 @@
+{
+  "checks": [
+    {
+      "component": "boundary",
+      "executable_sha256": "e5f92ade2c68bd7e9ded900d29a392011fbbfae37f7c420bbe26f6283b01ced0",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "normal",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "order outside gate",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch n=4 code=8",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    },
+    {
+      "component": "boundary-audit",
+      "executable_sha256": "b3261237747fdac7f8c88e36cdf35d9c94580415427fa84d130d499ad080ad96",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "normal",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "bad n",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    },
+    {
+      "component": "boundary",
+      "executable_sha256": "b46d7a8d0d1985f88f9129cff8b281d33ade50c73dfee52ba9f076a5f5cb4bc6",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "optimized",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "order outside gate",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch n=4 code=8",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    },
+    {
+      "component": "boundary-audit",
+      "executable_sha256": "ee0ef047b1d9efb4ecb29430e57ce96b3c2596581e652b471adda889fa2dd854",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "optimized",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "bad n",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    },
+    {
+      "component": "boundary",
+      "executable_sha256": "8af107dab763561507432d10c9b69e236eb5dc4f53aafda1f65917fcc29c00da",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "ubsan",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "order outside gate",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch n=4 code=8",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    },
+    {
+      "component": "boundary-audit",
+      "executable_sha256": "c0f197e3d6ae8502a10751e6a64d2aec143b85154c9d5ca28375d13db62b3a72",
+      "input_sha256": "08c47cd7d3d6b091bba0dc231be67c0be2f9e906ca2dbfdef0aa261937c64064",
+      "mode": "ubsan",
+      "rejected": [
+        {
+          "case": "outside_order",
+          "changed_input_sha256": "0b9b2ed8ec4ca24cfde5852c6486b409b9c55762ed84d6ff222202ce211d5c2d",
+          "error": "bad n",
+          "returncode": 1
+        },
+        {
+          "case": "wrong_automorphism",
+          "changed_input_sha256": "239280bcbd212808ddc4806a0e4920e6128c033d0364e1408ed31492a706a0ea",
+          "error": "automorphism mismatch",
+          "returncode": 1
+        },
+        {
+          "case": "duplicated_ordinary_class",
+          "changed_input_sha256": "3b6e619daeb3c9887c2df281c870a161ef3193b5328c721f62b4a88ad47ea639",
+          "error": "isomorphic duplicate",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_ordinary_class",
+          "changed_input_sha256": "cf559296b22cc15c370f29a7acb140ac6407a32c0e22d7b2a83caa1d17d2eabb",
+          "error": "incomplete orbit mass",
+          "returncode": 1
+        },
+        {
+          "case": "deleted_whole_order",
+          "changed_input_sha256": "37f8df29b890ff81093281c97b396bd97a256d38a5b5e0924fd8eb70938a9e8c",
+          "error": "missing order",
+          "returncode": 1
+        }
+      ]
+    }
+  ],
+  "rejections": 30,
+  "scope": "five fixed malformed/incomplete ordinary-universe inputs, two independent C++ authenticators, normal/O3-DNDEBUG/UBSan; no generalized parser or source-origin claim",
+  "status": "PASS"
+}

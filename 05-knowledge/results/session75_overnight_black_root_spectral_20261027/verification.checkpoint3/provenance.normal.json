@@ -1,0 +1,8 @@
+{
+  "exact_audit_copy_bindings": 31,
+  "historical_git_origin_snapshots": 44,
+  "historical_hash_fields_outside_new_transport": 6,
+  "ledger_bindings": 211,
+  "live_git_origin_check": "NOT_RUN by portable verifier; exact targeted assembly receipt retained",
+  "status": "PASS"
+}

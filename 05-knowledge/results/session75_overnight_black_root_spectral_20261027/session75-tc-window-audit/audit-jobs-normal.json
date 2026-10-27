@@ -1,0 +1,20 @@
+{
+  "n12_alternate": {
+    "configs": 6,
+    "group_elements": 1297,
+    "job_tree_sha256": "ec61741519f39a382016f55710c47b907a1492288dfd746c9d01fdcb274962f9",
+    "jobs": 45,
+    "modules": 33,
+    "nonmodules": 12,
+    "pair_orbitals": 312
+  },
+  "window": {
+    "configs": 24,
+    "group_elements": 21939,
+    "job_tree_sha256": "25c7a855fa2ab476bc809c4a9966b9ff56504cfa0280b88b6de8e2965417be19",
+    "jobs": 83,
+    "modules": 73,
+    "nonmodules": 10,
+    "pair_orbitals": 587
+  }
+}

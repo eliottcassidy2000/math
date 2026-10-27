@@ -1,0 +1,9 @@
+Z3xZ1 sets=2 min_tc=1 small 1:2
+Z5xZ1 sets=4 min_tc=3 small 3:4
+Z7xZ1 sets=8 min_tc=9 small 9:2
+Z9xZ1 sets=16 min_tc=39 small
+Z3xZ3 sets=16 min_tc=39 small
+Z11xZ1 sets=32 min_tc=1729 small
+Z13xZ1 sets=64 min_tc=94949 small
+Z15xZ1 sets=128 min_tc=162165 small
+Z17xZ1 sets=256 min_tc=792878221 small

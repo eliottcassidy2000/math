@@ -1,0 +1,15 @@
+{
+  "family_packet_manifest_sha256": "19be70b7c5373f870b6d67f3a1cbf79dbc4a1cff3c9f67701dbc82a73784ac09",
+  "family_packet_root": "/tmp/session75-black-cut-proof",
+  "inherited_repository_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "proofs": [
+    {
+      "path": "/tmp/session75-black-cut-proof/ROOTED_CONVERSE_COUNTEREXAMPLE.md",
+      "sha256": "4b95868b6360571a7e7034c6bdcd4815bd87923b7c0a367bad2916591ce941be"
+    },
+    {
+      "path": "/tmp/session75-black-cut-proof/ODD_MIDDLE_EXTENSION.md",
+      "sha256": "dc3fc950e2c0ecc3e481b93734ed2c096bff73cbf44b48903b4ea1c19b19b405"
+    }
+  ]
+}

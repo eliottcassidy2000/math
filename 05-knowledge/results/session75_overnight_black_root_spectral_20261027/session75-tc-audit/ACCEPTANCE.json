@@ -1,0 +1,52 @@
+{
+  "alternative_order12": {
+    "HK_checks": 45384,
+    "autcalls": 10104,
+    "hits": 0,
+    "jobs": 45,
+    "strong": 46968
+  },
+  "analytic_normal_optimized_equal": true,
+  "cayley_connection_sets": 526,
+  "degree15_substitutions": 16,
+  "degree9_sylow_subgroups": 50,
+  "degree9_transitive_subgroups": 13,
+  "external_installs": false,
+  "full_original_window": {
+    "HK_checks": 93646,
+    "autcalls": 48908,
+    "hits": 0,
+    "jobs": 83,
+    "strong": 185642
+  },
+  "inherited_dependencies": [
+    "THM-4790 n<=11 exclusion and existing prior audit",
+    "THM-002 all-order OCF",
+    "Dixon tournament automorphism bound",
+    "Busch strong minimum",
+    "Odd-order solvability and solvable primitive prime-power degree"
+  ],
+  "not_audited": [
+    "019882 part(g) generalized567-case strong-fibre classification",
+    "New prime-untouchable uniqueness claim (none supported)"
+  ],
+  "not_replayed": [
+    "Original multi-million order12 element-type scan (replaced by45-case gate)",
+    "Historical n<=11 census",
+    "External OCF proof"
+  ],
+  "positive_greedy_orders": 192,
+  "repairs": [
+    "Stop greedy products before nonpositive factors",
+    "Replace false floor-term pointwise monotonicity with exact integer tail proof",
+    "Prove order-bound recurrence beyond finite search",
+    "Eliminate index5 by divisibility and explicit cap enumeration",
+    "Call prescribed orbit structure G-orbits; no actual-Aut equality check"
+  ],
+  "shared_repository_changes": false,
+  "source_commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+  "source_note_sha256": "18dd4738f5d1aec6b7a527760ca51f9039c2ce3b24bd48d676c8ffb2899eecc1",
+  "status": "PASS with explicit proof repairs and replacement n12 gate",
+  "theorem_source_sha256": "f2185ca3f47285e1a83a3d69938eb6cc810e8ee52081e067095371d6e2c8967d",
+  "window_manifest_sha256": "2f6a8ada905f42f4bb0dfb63e0361c6b86955ed9bf9907dd2a1becb6e7eb77c2"
+}

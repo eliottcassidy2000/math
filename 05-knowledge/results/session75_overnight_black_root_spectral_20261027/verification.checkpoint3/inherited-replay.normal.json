@@ -1,0 +1,104 @@
+{
+  "evidence_bindings_verified": 241,
+  "files_verified": 825,
+  "manifest": "FILE_MANIFEST.checkpoint3.json",
+  "replays": [
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "2b72c1a932f68b0ae9bb1b65f2e0fb0cbfaa305773f3dee1a16adc5a407d8677",
+      "script": "session75-inheritance/recovery_check.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "e906f3c17a577d707af7f4a4d2de44c15f16ef1ded935aad3c456d6523df7914",
+      "script": "session75-spectral/generate_certificate.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e",
+      "script": "session75-spectral/check.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "c77363070adb6cdeb3b475915efebf949f9a7bc806f61147ab5c3e6c959de501",
+      "script": "session75-spectral/test_corruption.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "d6aad135e88b16016fd9f0bc039bfeb0c60163dfb933ec1871e7725231dcfd34",
+      "script": "session75-spectral-audit/audit_checks.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "0123209a9479bf438f26d97fefa24d9bbf6f049c608247c57713eb4dffbf7868",
+      "script": "session75-spectral-audit/independent_distances.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "adf9508d7a9ddd6c9d729ad2c85c71d5eee3b5ca4624df4f62d82253a2c14e03",
+      "script": "session75-spectral-audit/test_certificate_corruption.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881",
+      "script": "session75-black-core/check_black_core.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0",
+      "script": "session75-black-core/independent_audit.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "a17a13fde4d58773b149978f839c329734f7e54d5b113418cedd0c1112fa81f2",
+      "script": "session75-black-audit/audit.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf",
+      "script": "session75-root-transport/check.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "670ee2d90a418b3c7f018b3afbb05814b229868324526cc99d22603666a1e892",
+      "script": "session75-root-audit/check.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb",
+      "script": "session75-dyadic/verify.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "5a7177ac3f205a7a58682d4fcb6f867e32f74bee09a23b54f6d19203f749fdbe",
+      "script": "session75-dyadic-audit/independent_verify.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "e9253c329508c939faec7df4ada61360d9da3774b455ec842f891e51ec438d31",
+      "script": "replay_dyadic_reconstruction.py"
+    },
+    {
+      "negative_control": "PASS",
+      "normal_and_optimized": true,
+      "script": "replay_dyadic_reconstruction.py"
+    }
+  ],
+  "source_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "status": "PASS"
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "Contemporaneous local-file metadata and frozen checkpoint content, not a trusted timestamp or cryptographic proof of chronology.",
+  "records": {
+    "PREREGISTRATION.json": {
+      "sha256": "c2403712418768a43415414f9a75ca8c8bda6fa8c06670228067b23de5500ea7",
+      "mtime_utc": "2026-10-27T07:20:08.802529+00:00"
+    },
+    "PREREGISTRATION.phase2.json": {
+      "sha256": "56cfcedc2f8100a250ee3c78c1fc866b68258f9c24ed51371aedee0a4b759e1a",
+      "mtime_utc": "2026-10-27T07:26:58.533264+00:00"
+    },
+    "checkpoint_N4096.log": {
+      "sha256": "cc2034a8dd8380026945e704d8eb086bf82231a061a42560ec9c097d79732b8e",
+      "mtime_utc": "2026-10-27T07:21:08.736806+00:00"
+    },
+    "hostile_scales.log": {
+      "sha256": "787cf42e7996041153179d48ef58610ba403b20156185136c12bcf20cdf7dbf4",
+      "mtime_utc": "2026-10-27T07:29:47.176480+00:00"
+    },
+    "results/receipt_N11001.json": {
+      "sha256": "1cff9fad7e9e749217954387861dc5b608568f67c6b375ce5137c68f8fd74007",
+      "mtime_utc": "2026-10-27T07:27:38.302592+00:00"
+    },
+    "CHECKPOINT_CORE17_MANIFEST.json": {
+      "sha256": "d2f522cd2b3a566f69b2b8b578dead405a336358eb5602915339384b21971e4b",
+      "mtime_utc": "2026-10-27T07:33:32.293546+00:00"
+    },
+    "CHECKPOINT_CORE17_VERIFIED_MANIFEST.json": {
+      "sha256": "93c3f536f14990de0976fb82ff15c3fa792c9549f46e2365fcd17ff6d170e9c5",
+      "mtime_utc": "2026-10-27T07:40:14.659637+00:00"
+    },
+    "checkpoints/core17/PREREGISTRATION.json": {
+      "sha256": "c2403712418768a43415414f9a75ca8c8bda6fa8c06670228067b23de5500ea7",
+      "matches_frozen_final": true
+    },
+    "checkpoints/core17/PREREGISTRATION.phase2.json": {
+      "sha256": "56cfcedc2f8100a250ee3c78c1fc866b68258f9c24ed51371aedee0a4b759e1a",
+      "matches_frozen_final": true
+    },
+    "checkpoints/core17_verified/PREREGISTRATION.json": {
+      "sha256": "c2403712418768a43415414f9a75ca8c8bda6fa8c06670228067b23de5500ea7",
+      "matches_frozen_final": true
+    },
+    "checkpoints/core17_verified/PREREGISTRATION.phase2.json": {
+      "sha256": "56cfcedc2f8100a250ee3c78c1fc866b68258f9c24ed51371aedee0a4b759e1a",
+      "matches_frozen_final": true
+    }
+  }
+}

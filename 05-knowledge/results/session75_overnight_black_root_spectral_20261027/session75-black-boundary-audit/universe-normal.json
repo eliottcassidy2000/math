@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "equitable outgoing-color refinement, maximal canonical word, exact automorphism multiplicity and ordinary labelled orbit mass",
+  "orders": {
+    "4": {"ordinary_classes": 4, "labelled_mass": 64, "refined_labelings": 14},
+    "5": {"ordinary_classes": 12, "labelled_mass": 1024, "refined_labelings": 151},
+    "6": {"ordinary_classes": 56, "labelled_mass": 32768, "refined_labelings": 449},
+    "7": {"ordinary_classes": 456, "labelled_mass": 2097152, "refined_labelings": 16599},
+    "8": {"ordinary_classes": 6880, "labelled_mass": 268435456, "refined_labelings": 42592},
+    "9": {"ordinary_classes": 191536, "labelled_mass": 68719476736, "refined_labelings": 5737246}
+  }
+}

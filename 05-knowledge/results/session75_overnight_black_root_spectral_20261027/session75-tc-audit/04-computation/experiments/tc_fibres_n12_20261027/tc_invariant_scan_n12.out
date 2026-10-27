@@ -1,0 +1,41 @@
+# n = 12 scans (tc_invariant_scan.cpp), all seven types of the order-12 type lemma
+n=12 type (11) order 11, pair orbits 6, invariant tournaments 2^6, amin 19, slice 0/1
+done: strong invariant 0, min H 18446744073709551615, |Aut| computations 0, hits 0, 0.0 s
+|Aut| histogram of candidates:
+n=12 type (5) (5) order 5, pair orbits 14, invariant tournaments 2^14, amin 19, slice 0/1
+done: strong invariant 9024, min H 14625, |Aut| computations 2320, hits 0, 1.4 s
+|Aut| histogram of candidates: 5:2320
+n=12 type (5) (3) (3) order 15, pair orbits 12, invariant tournaments 2^12, amin 19, slice 0/1
+done: strong invariant 2112, min H 12825, |Aut| computations 192, hits 0, 0.2 s
+|Aut| histogram of candidates: 15:192
+n=12 type (5) (3) order 15, pair orbits 18, invariant tournaments 2^18, amin 19, slice 0/1
+done: strong invariant 178560, min H 3645, |Aut| computations 38400, hits 0, 16.2 s
+|Aut| histogram of candidates: 15:38400
+n=12 type (7) order 7, pair orbits 18, invariant tournaments 2^18, amin 19, slice 0/1
+done: strong invariant 178560, min H 10815, |Aut| computations 30880, hits 0, 19.1 s
+|Aut| histogram of candidates: 7:18720 21:11520 63:640
+n=12 type (3) (3) (3) (3) order 3, pair orbits 22, invariant tournaments 2^22, amin 19, slice 0/1
+done: strong invariant 4126848, min H 20889, |Aut| computations 742896, hits 0, 873.4 s
+|Aut| histogram of candidates: 3:672624 9:69120 27:1152
+n=12 type (3) (3) (3) order 3, pair orbits 24, invariant tournaments 2^24, amin 19, slice 0/2
+done: strong invariant 6821568, min H 2295, |Aut| computations 1338192, hits 0, 1262.2 s
+|Aut| histogram of candidates: 3:1052352 9:257904 27:22752 63:5184
+n=12 type (3) (3) (3) order 3, pair orbits 24, invariant tournaments 2^24, amin 19, slice 1/2
+done: strong invariant 6821568, min H 2295, |Aut| computations 1338192, hits 0, 1262.3 s
+|Aut| histogram of candidates: 3:1052352 9:257904 27:22752 63:5184
+# controls reproducing THM-4790's table
+n=7 type (3) order 3, pair orbits 11, invariant tournaments 2^11, amin 3, slice 0/1
+done: strong invariant 1088, min H 45, |Aut| computations 0, hits 0, 0.0 s
+|Aut| histogram of candidates:
+n=9 type (3) (3) (3) order 3, pair orbits 12, invariant tournaments 2^12, amin 5, slice 0/1
+done: strong invariant 3760, min H 1011, |Aut| computations 432, hits 0, 0.0 s
+|Aut| histogram of candidates: 3:432
+n=10 type (3) (3) (3) order 3, pair orbits 15, invariant tournaments 2^15, amin 7, slice 0/1
+done: strong invariant 23520, min H 1269, |Aut| computations 5976, hits 0, 0.7 s
+|Aut| histogram of candidates: 3:5400 9:576
+n=10 type (5) (5) order 5, pair orbits 9, invariant tournaments 2^9, amin 7, slice 0/1
+done: strong invariant 480, min H 8175, |Aut| computations 40, hits 0, 0.0 s
+|Aut| histogram of candidates: 5:40
+n=11 type (3) (3) (3) order 3, pair orbits 19, invariant tournaments 2^19, amin 11, slice 0/1
+done: strong invariant 392000, min H 1701, |Aut| computations 82704, hits 0, 27.4 s
+|Aut| histogram of candidates: 3:67392 9:13968 27:768 63:576

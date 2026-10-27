@@ -1,0 +1,40 @@
+{
+  "driver_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+  "independent_direct_controls": 43,
+  "independently_rebuilt_source_records": 1000908,
+  "independently_recomputed_rectangles": 42425,
+  "inherited_C1_C2_replay_entries": 16,
+  "normal_and_optimized_components": 9,
+  "original_large_order12_scan": "NOT_RERUN",
+  "producer_rectangles": 245826,
+  "receipts": [
+    {
+      "path": "verification.checkpoint3/final-basic-normal.json",
+      "sha256": "362076584edb37e7e70e725b64a836c4bc98f06b8679b71f70890b9c1d86a3bc"
+    },
+    {
+      "path": "verification.checkpoint3/final-joint-normal.json",
+      "sha256": "2fd0691e322891520b41aedced652523fd8373020b4e10e714f112a981384e5d"
+    },
+    {
+      "path": "verification.checkpoint3/final-joint-audit-normal.json",
+      "sha256": "92b83dcf8b40eee308f9e650a4ea73fa555ba176b8fbcdf32177278d738de9c6"
+    },
+    {
+      "path": "verification.checkpoint3/final-basic-optimized.json",
+      "sha256": "ce63c27de5d9b064db4bc8a8e90bb2dd53724ad3c38a6c58bb8119e15afbaa3d"
+    },
+    {
+      "path": "verification.checkpoint3/final-joint-optimized.json",
+      "sha256": "4ac19cd77003beab5845fed57796aa2853f4efa02ee46c48c9520f1a38c4f193"
+    },
+    {
+      "path": "verification.checkpoint3/final-joint-audit-optimized.json",
+      "sha256": "db3f611bdd6239eb23d3441db156ab120addf6071f686feeb59c8be035cf4650"
+    }
+  ],
+  "status": "PASS",
+  "tc_alternate_order12_jobs": 45,
+  "tc_window_jobs": 83,
+  "ubsan": "Full n4..9 universe authentication and declared Cayley/Aut controls; selected n22 module/n16 nonmodule scan jobs, not full window"
+}

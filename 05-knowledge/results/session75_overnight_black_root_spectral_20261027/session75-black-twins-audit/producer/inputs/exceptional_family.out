@@ -1,0 +1,17 @@
+E(C3): n=10 lambda=1 #mincuts=1 H=657 descent candidates=9 black candidates=0 scores=[2, 2, 2, 2, 3, 6, 7, 7, 7, 7]
+E(C3=>K1): n=12 lambda=1 #mincuts=1 H=2745 descent candidates=9 black candidates=0 scores=[2, 2, 2, 2, 4, 4, 7, 7, 9, 9, 9, 9]
+E(K1=>C3): n=12 lambda=1 #mincuts=3 H=2745 descent candidates=27 black candidates=18 scores=[1, 2, 3, 3, 3, 4, 7, 8, 8, 8, 9, 10]
+E(C3=>C3): n=16 lambda=1 #mincuts=1 H=101169 descent candidates=81 black candidates=0 scores=[2, 2, 2, 2, 5, 5, 5, 6, 9, 10, 10, 10, 13, 13, 13, 13]
+E(C3=>K1=>K1): n=14 lambda=1 #mincuts=1 H=11241 descent candidates=9 black candidates=0 scores=[2, 2, 2, 2, 4, 5, 5, 8, 8, 9, 11, 11, 11, 11]
+---- wider family D = C3[K1, M, Z] ----
+E(C3 ; C3): n=14 lambda=1 #mincuts=1 H=23409 descent candidates=81 black candidates=0 scores=[2, 2, 2, 4, 4, 4, 4, 9, 9, 9, 9, 11, 11, 11]
+E(C3 ; K1=>K1): n=12 lambda=1 #mincuts=1 H=2601 descent candidates=9 black candidates=0 scores=[2, 2, 2, 3, 3, 4, 7, 8, 8, 9, 9, 9]
+E(C3=>K1 ; C3): n=16 lambda=1 #mincuts=1 H=110889 descent candidates=81 black candidates=0 scores=[2, 2, 2, 4, 4, 5, 5, 5, 10, 10, 10, 11, 11, 13, 13, 13]
+E(C3 ; C3=>K1): n=16 lambda=1 #mincuts=1 H=93393 descent candidates=81 black candidates=0 scores=[2, 2, 2, 4, 4, 4, 5, 6, 9, 10, 11, 11, 11, 13, 13, 13]
+---- black distance 2 certificates for E(M;Z) ----
+E(C3 ; K1): n=10: black first move to a lambda=1 class with a black descent: FOUND (6, 8, 7, 5, 0, 1, 2, 3, 4, 9)
+E(C3 ; K1=>K1): n=12: black first move to a lambda=1 class with a black descent: FOUND (2, 5, 11, 10, 9, 8, 7, 6, 0, 3, 1, 4)
+E(C3=>K1 ; K1): n=12: black first move to a lambda=1 class with a black descent: FOUND (2, 3, 11, 10, 7, 9, 8, 6, 0, 1, 4, 5)
+E(C3 ; C3): n=14: black first move to a lambda=1 class with a black descent: FOUND (3, 5, 6, 4, 12, 11, 13, 9, 8, 10, 7, 0, 1, 2)
+E(C3 ; K1=>K1=>K1): n=14: black first move to a lambda=1 class with a black descent: FOUND (13, 12, 10, 9, 7, 0, 2, 3, 1, 4, 5, 6, 11, 8)
+E(C3=>K1=>K1 ; K1): n=14: black first move to a lambda=1 class with a black descent: FOUND (6, 13, 12, 11, 9, 8, 10, 7, 0, 3, 1, 2, 4, 5)

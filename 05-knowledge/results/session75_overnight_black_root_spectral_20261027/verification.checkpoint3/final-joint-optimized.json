@@ -1,0 +1,178 @@
+{
+  "adapter_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+  "immutable_input_policy": "materialized inputs read-only; all compiled/generated artifacts outside them; no source files modified",
+  "jobs": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/scan.py",
+        "4096",
+        "4097",
+        "5997",
+        "8191",
+        "8192",
+        "8193",
+        "11001",
+        "11002",
+        "11003",
+        "16383",
+        "16384",
+        "16385",
+        "18274",
+        "18275",
+        "18276",
+        "32768",
+        "65536",
+        "131072",
+        "262144",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-scan",
+      "returncode": 0,
+      "seconds": 2197.942,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "18845f56a7ced27081acbc13f252d4075abefa883a1042c1cf3bc99b1f7ce7de"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/literal_verify.py",
+        "4096",
+        "4097",
+        "5997",
+        "8191",
+        "8192",
+        "8193",
+        "11001",
+        "11002",
+        "11003",
+        "16383",
+        "16384",
+        "16385",
+        "18274",
+        "18275",
+        "18276",
+        "32768",
+        "65536",
+        "131072",
+        "262144",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-literal",
+      "returncode": 0,
+      "seconds": 329.087,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "939b9c30478079eb73ba32759b207e6ea809e98a33a303dd10a06c2b655b32f6"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/mutation_controls.py",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-mutations",
+      "returncode": 0,
+      "seconds": 0.566,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c9cfac75cd76ae06fb96988647daca507891337921bcb04c2b3703741e538e45"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/mechanisms.py",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-mechanisms",
+      "returncode": 0,
+      "seconds": 0.717,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e7869d2966f72f999f676baed021a68fb1379312094eff13e3e832a893c825cd"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/pair_check.py",
+        "65536",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-pair",
+      "returncode": 0,
+      "seconds": 22.099,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "2348b6c5dc0d3985d77af5318a08c4b89104329092cc5f0802e210365999a234"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/boundary_invoice.py",
+        "--suffix",
+        ".optimized"
+      ],
+      "component": "joint",
+      "name": "joint-boundary-invoice",
+      "returncode": 0,
+      "seconds": 0.216,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "671fd234aefa7e062b8976350d8ec44915edfe616276437f379dbdc52ccc6b1b"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-optimized/session75-joint-cutoffs/summarize.py"
+      ],
+      "component": "joint",
+      "name": "joint-summary",
+      "returncode": 0,
+      "seconds": 0.315,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "91f149070d04aad60fbbacb7c2b14d95ee0d48c06dd6e51457dfb875faa3efed"
+    }
+  ],
+  "mode": "optimized",
+  "negative_adapter_controls": {
+    "assertions_required": false,
+    "rejected_controls": [
+      "unexpected offline snapshot command",
+      "unexpected offline snapshot commit",
+      "unexpected offline snapshot path",
+      "unexpected offline snapshot command",
+      "offline snapshot content hash mismatch"
+    ],
+    "status": "PASS"
+  },
+  "results": {
+    "joint": {
+      "producer_rectangles": 245826,
+      "regenerated_files_compared": 64,
+      "scales": 19,
+      "scope": "producer replay; not an independent audit of all rectangles",
+      "source_records": 1000908,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

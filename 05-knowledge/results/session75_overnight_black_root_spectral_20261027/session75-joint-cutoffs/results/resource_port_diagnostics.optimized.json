@@ -1,0 +1,161 @@
+{
+  "reports": [
+    {
+      "D": 36,
+      "N": 4096,
+      "T": 64,
+      "counts": {
+        "both_excluded": 123,
+        "clock_only_excluded": 1,
+        "depth_only_excluded": 16,
+        "inside": 6004
+      },
+      "cross_port": [
+        -99,
+        -149,
+        15,
+        43,
+        16,
+        -44,
+        16,
+        28,
+        -4,
+        2,
+        -1,
+        -3,
+        0
+      ],
+      "norms": {
+        "both_excluded": 177,
+        "clock_only_excluded": 1,
+        "depth_only_excluded": 22,
+        "inside": 9749
+      },
+      "per_terminal_positive_debt": 7639,
+      "same_port": [
+        377,
+        -37,
+        -260,
+        -18,
+        -30,
+        -17,
+        150,
+        -45,
+        -8,
+        5,
+        15,
+        8,
+        -3
+      ]
+    },
+    {
+      "D": 90,
+      "N": 18275,
+      "T": 149,
+      "counts": {
+        "both_excluded": 14,
+        "clock_only_excluded": 1,
+        "inside": 27398
+      },
+      "cross_port": [
+        -105,
+        -112,
+        335,
+        -561,
+        234,
+        159,
+        -150,
+        63,
+        69,
+        -52,
+        -47,
+        -16,
+        4,
+        0,
+        0,
+        -3
+      ],
+      "norms": {
+        "both_excluded": 16,
+        "clock_only_excluded": 1,
+        "inside": 44364
+      },
+      "per_terminal_positive_debt": 38771,
+      "same_port": [
+        -5716,
+        1922,
+        139,
+        -1685,
+        752,
+        233,
+        363,
+        -169,
+        137,
+        80,
+        56,
+        30,
+        -22,
+        -7,
+        -1,
+        0
+      ]
+    },
+    {
+      "D": 60,
+      "N": 65536,
+      "T": 103,
+      "counts": {
+        "both_excluded": 1168,
+        "clock_only_excluded": 48,
+        "depth_only_excluded": 17,
+        "inside": 97071
+      },
+      "cross_port": [
+        -685,
+        502,
+        -1194,
+        -474,
+        80,
+        -1284,
+        -232,
+        764,
+        -148,
+        -28,
+        144,
+        -95,
+        -158,
+        -7,
+        4,
+        -3,
+        16
+      ],
+      "norms": {
+        "both_excluded": 1692,
+        "clock_only_excluded": 52,
+        "depth_only_excluded": 33,
+        "inside": 157380
+      },
+      "per_terminal_positive_debt": 119510,
+      "same_port": [
+        -17203,
+        -3044,
+        -709,
+        -4025,
+        -6045,
+        -3957,
+        -1496,
+        2340,
+        -710,
+        -295,
+        1095,
+        97,
+        189,
+        355,
+        39,
+        -25,
+        7
+      ]
+    }
+  ],
+  "status": "PASS"
+}

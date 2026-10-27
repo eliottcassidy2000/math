@@ -1,0 +1,86 @@
+{
+  "conclusion": "both target distances equal lambda=delta on every eligible source through n9; no converse-merging",
+  "literal_K_edges": 296985,
+  "literal_R_edges": 296985,
+  "literal_replay_summary_sha256": "b3a16fa7a83f1875479c29f52c5fde1c3b87996659a19ed8491c83aa776cc65c",
+  "orders": {
+    "4": {
+      "distance_counts": {
+        "1": 1
+      },
+      "literal_K_edges": 1,
+      "literal_R_edges": 1,
+      "nonstrong": 3,
+      "ordinary_classes": 4,
+      "strong": 1,
+      "strong_black_active": 1
+    },
+    "5": {
+      "distance_counts": {
+        "1": 5
+      },
+      "literal_K_edges": 5,
+      "literal_R_edges": 5,
+      "nonstrong": 6,
+      "ordinary_classes": 12,
+      "pure_blue": 1,
+      "strong": 6,
+      "strong_black_active": 5
+    },
+    "6": {
+      "distance_counts": {
+        "1": 30,
+        "2": 5
+      },
+      "literal_K_edges": 40,
+      "literal_R_edges": 40,
+      "nonstrong": 21,
+      "ordinary_classes": 56,
+      "strong": 35,
+      "strong_black_active": 35
+    },
+    "7": {
+      "distance_counts": {
+        "1": 266,
+        "2": 84,
+        "3": 3
+      },
+      "literal_K_edges": 443,
+      "literal_R_edges": 443,
+      "nonstrong": 103,
+      "ordinary_classes": 456,
+      "strong": 353,
+      "strong_black_active": 353
+    },
+    "8": {
+      "distance_counts": {
+        "1": 3623,
+        "2": 2300,
+        "3": 85
+      },
+      "literal_K_edges": 8478,
+      "literal_R_edges": 8478,
+      "nonstrong": 872,
+      "ordinary_classes": 6880,
+      "strong": 6008,
+      "strong_black_active": 6008
+    },
+    "9": {
+      "distance_counts": {
+        "1": 78515,
+        "2": 89366,
+        "3": 10237,
+        "4": 15
+      },
+      "literal_K_edges": 288018,
+      "literal_R_edges": 288018,
+      "nonstrong": 13403,
+      "ordinary_classes": 191536,
+      "strong": 178133,
+      "strong_black_active": 178133
+    }
+  },
+  "scope": "every ordinary strong non-pure-blue source n4..9, with C3 boundary control; native K starts at original named source even for converse-built certificates",
+  "source_certificate_uncompressed_sha256": "476f1f63950d8094afbcacdc49d10a53034f21db58c5a05e08e1573e9bccb10d",
+  "status": "PASS"
+}

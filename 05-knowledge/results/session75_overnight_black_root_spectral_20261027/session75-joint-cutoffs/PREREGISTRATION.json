@@ -1,0 +1,14 @@
+{
+  "registered_before_first_joint_scan": true,
+  "registered_utc": "2026-10-27T07:19:30Z",
+  "source_commit": "96e35642110104cc547516a63f37eebcf930f707",
+  "source_producer_revision": 2,
+  "source_producer_manifest_sha256": "ad8d60b20884230f7bd2180e22115b16f970d4cd0aa284a1149d45cd51f321e8",
+  "primary_N": [4096],
+  "structured_N": [4097,5997,8191,8192,8193,16383,16384,16385,32768,65536],
+  "optional_extension_N": [131072,262144],
+  "universe": "For each declared N, every original odd seed s<4N with s !=5 mod8, every distinct first-entry depth D and every distinct exact integer-clock T, plus the empty cutoff. Evaluate all rectangles d(s)<=D AND t(s)<=T. Full original S_N remains denominator including zero-charge and not-yet-arrived sources. Powers q=1,2,... through smallest q>=2N; group by terminal u and low-bit residue m mod q where m=(s-1)/2. D_plus is sum over q of positive part AFTER whole-level sum across terminal-direct-sum energies.",
+  "route_policy": "Literal P, a=2 for s=1 mod8 and a=1 otherwise, then inverse B while 5 mod8; t=a+2j. Python arbitrary precision. Detect cycles and depth10000; any unresolved source remains in denominator and makes full rectangle classification incomplete, never dropped.",
+  "escalation_rule": "Start N4096 and communicate checkpoint before larger run; complete structured tier if affordable, then optionally powers. For any failure, independently reconstruct complete source ledger and literal energies and minimize cutoffs while never deleting sources from denominator. No failure here alone refutes depth-only R3.",
+  "claims_limit": "Finite coverage only; no universal or asymptotic extrapolation."
+}

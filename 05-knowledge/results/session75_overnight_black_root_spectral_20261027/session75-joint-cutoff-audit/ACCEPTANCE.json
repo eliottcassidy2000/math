@@ -1,0 +1,61 @@
+{
+  "decision": "PASS_SCOPED",
+  "direct_cutoff_ledgers": 43,
+  "general_clipping_repair_proof": "PASS",
+  "generic_scalar_sharpness_proof": "PASS_NON_NATIVE",
+  "independent_full_surface_N": [
+    4096,
+    18275,
+    65536
+  ],
+  "independent_source_records": 1000908,
+  "independently_recomputed_rectangles": 42425,
+  "independently_verified_cartesian_completeness": 245826,
+  "largest_route_state": 28167930305,
+  "limitations": [
+    "No universal or asymptotic claim; native R3 and joint extension OPEN.",
+    "Independent numerical full-surface coverage is 42425 rectangles at three scales, not all245826.",
+    "The complete producer run_all.sh was not replayed; scoped N4096 producer routines were.",
+    "The generic scalar family is NON-NATIVE and not an R3 counterexample."
+  ],
+  "mathematical_repairs_required": false,
+  "native_boundary_repair": {
+    "S_full": 9949,
+    "gain": 56,
+    "invoice": 82,
+    "pairs_checked": 951,
+    "removed_labels": 16,
+    "removed_norm": 22
+  },
+  "native_scales": [
+    4096,
+    4097,
+    5997,
+    8191,
+    8192,
+    8193,
+    11001,
+    11002,
+    11003,
+    16383,
+    16384,
+    16385,
+    18274,
+    18275,
+    18276,
+    32768,
+    65536,
+    131072,
+    262144
+  ],
+  "normal_optimized_auditor_receipts_equal": true,
+  "normal_optimized_supplementary_receipts_equal": true,
+  "preregistration_order": "Local-file metadata and frozen checkpoint bytes corroborate ordering; not a trusted timestamp or cryptographic chronology proof.",
+  "producer_manifest_sha256": "09f5e8372a8133109cec03447284c49881440b36521eb22d2ef2ea7c67cf0ef7",
+  "producer_rectangles": 245826,
+  "producer_replay_N": [
+    4096
+  ],
+  "shared_edits_or_remote_actions": false,
+  "source_commit": "96e35642110104cc547516a63f37eebcf930f707"
+}

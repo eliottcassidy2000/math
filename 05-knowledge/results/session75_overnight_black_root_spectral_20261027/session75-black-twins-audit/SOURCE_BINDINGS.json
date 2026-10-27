@@ -1,0 +1,37 @@
+{
+  "copied_independent_audit_helper_sha256": "7410e65a637b8acab85d939809fc800355647a0197291f934e25bc20167dad1b",
+  "incoming_source_bindings": [
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "exact_git_bytes": true,
+      "local": "producer/inputs/THM-4811.md",
+      "repository_path": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "sha256": "5489264bfcdafaa431c51d6b6542ef88e2dea1e8cb3fbd8d348d9786ba3f9b3b"
+    },
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "exact_git_bytes": true,
+      "local": "producer/inputs/exceptional_family.py",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py",
+      "sha256": "cf798cab0cef4772f0a2698730dd8cb869d776415f6c3c4a753ce461864c86cb"
+    },
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "exact_git_bytes": true,
+      "local": "producer/inputs/exceptional_family.out",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.out",
+      "sha256": "a3dfc3a59819cb48cf4beedddecb41c02854cf9ebf53380112de9fe4805b4eee"
+    },
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "exact_git_bytes": true,
+      "local": "inputs/HYP-9421-at-87d61.md",
+      "repository_path": "05-knowledge/hypotheses/HYP-9421-black-descent-exceptions-tc-spectrum-and-the-native-forcing-tail.md",
+      "sha256": "8003c0567e15aff6ed1ce57a79d6650dd8ecf08dc37f6fcd7818d26b90a5e006"
+    }
+  ],
+  "previous_phase2_audit_manifest_sha256": "0fbfca814bf71da72b9890762007eab5f4193be96a5ecedda1a3c0c38589077b",
+  "producer_imports": false,
+  "producer_manifest_sha256": "dcb9b8d6d65122e7e47dba0f9a3984c145bdcf67fbf0dd059db4892b54796d2b",
+  "scope": "two n10 sources; exact E10 isomorphism and cycle profiles; no incoming full census audit"
+}

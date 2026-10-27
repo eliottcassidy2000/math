@@ -1,0 +1,5 @@
+{
+  "scope": "exact declared source bytes at historical commits; no whole-corpus scan or mathematical audit",
+  "status": "PASS",
+  "targeted_historical_git_snapshots": 44
+}

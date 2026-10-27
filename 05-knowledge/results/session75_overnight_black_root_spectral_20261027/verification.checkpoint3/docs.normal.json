@@ -1,0 +1,304 @@
+{
+  "errors": [],
+  "explicit_requirements": 84,
+  "files": [
+    {
+      "bytes": 5378,
+      "path": "00-navigation/CONCURRENT-SESSIONS.md",
+      "sha256": "7dce877e5f6767d661a6e2e5bab652278184559f9c8af160a8add573f1374201"
+    },
+    {
+      "bytes": 35245,
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "sha256": "8cd830262236c8a4a3586298684915efa6282883982fdf75a2b9fe11a3832a86"
+    },
+    {
+      "bytes": 138058,
+      "path": "00-navigation/LRC14-PROOF-MAP.md",
+      "sha256": "2813a89746641d2f1896ce49b0afa5dd3a8d86a2fa013b95966f18e4a18f09fc"
+    },
+    {
+      "bytes": 27147,
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    },
+    {
+      "bytes": 165448,
+      "path": "00-navigation/PROBLEM-LEDGER.md",
+      "sha256": "4bcb3dbebf530cafa4489c3edb636bbaf7c1265058b7038e714819804c843fdd"
+    },
+    {
+      "bytes": 10465,
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "bytes": 7797,
+      "path": "00-navigation/SESSION-LOG.md",
+      "sha256": "2a5e072871fc43cc7dd4aea81848617edbd96e9d8e4fca23e36aab37bd3f0132"
+    },
+    {
+      "bytes": 9132,
+      "path": "00-navigation/START-HERE.md",
+      "sha256": "cc2013267c65a1c7b282b34d5dbc2933284a6b356d2cd6e5b49ebef5f923f0cb"
+    },
+    {
+      "bytes": 23418,
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "bytes": 1921743,
+      "path": "01-canon/MISTAKES.md",
+      "sha256": "318ef1b0c89dc6d51ede931ef95ee309586188eb9dc040870dd52ea6a7484fa4"
+    },
+    {
+      "bytes": 5166,
+      "path": "01-canon/README.md",
+      "sha256": "a657b01d02bf9acf454fb8964e3dd597f2d93fb939e4fb2b354939ed1e42bb1c"
+    },
+    {
+      "bytes": 17227,
+      "path": "01-canon/theorems/THM-2084-cubic-fiber-low-complement-gauss-manin-gate.md",
+      "sha256": "dae5a3b418a79ed7dd00f08e12314c25c11f9e6f1c4695a06f0d7b9eb5205516"
+    },
+    {
+      "bytes": 8882,
+      "path": "01-canon/theorems/THM-2085-explicit-height-57-rank-seven-selberg-gate.md",
+      "sha256": "1cd42b2e73e712ee86cfdeb18c44de60dfa230c419456a76d9d0dfad14fdc752"
+    },
+    {
+      "bytes": 17465,
+      "path": "01-canon/theorems/THM-2086-relative-hunter-fourier-channel-and-lacunary-cone.md",
+      "sha256": "02f26963ff43c869b2c4346a6cad457c6cb5cdcae012299070ff3e331dbc2ac3"
+    },
+    {
+      "bytes": 8201,
+      "path": "01-canon/theorems/THM-2087-rank-seven-short-relation-cut-and-guard-star.md",
+      "sha256": "c1b93fb88e1b63a60b16c3af2f876c22104f24cc4f22ca6ccf034ae4ffc8ac76"
+    },
+    {
+      "bytes": 7494,
+      "path": "01-canon/theorems/THM-2088-cut-matrix-rank-seven-finite-or-persistent.md",
+      "sha256": "1a07af2a5e99741a87081a099ba1a010048429ee21864f82c8e6cacd13124a9a"
+    },
+    {
+      "bytes": 8981,
+      "path": "01-canon/theorems/THM-2089-persistent-cut-affine-holonomy-normal-form.md",
+      "sha256": "bca8b5c043b7e6fe022e0ff9ef0ee25675b9299e125e658e8f116f69e85764e2"
+    },
+    {
+      "bytes": 9364,
+      "path": "01-canon/theorems/THM-2090-global-splice-or-frozen-terminal-dichotomy.md",
+      "sha256": "8267674cde3d9f6fbad0e67f17ef0dbe133e20d185d2ff06dde0f8b1c8bfe0a2"
+    },
+    {
+      "bytes": 10522,
+      "path": "01-canon/theorems/THM-2091-centered-triple-energy-obstruction.md",
+      "sha256": "655e6ff4829ff00596a3a0bc84173b31ea63b20c568e67e220305117bf6d32d0"
+    },
+    {
+      "bytes": 5085,
+      "path": "01-canon/theorems/THM-2092-frozen-terminal-forces-finite-full-row.md",
+      "sha256": "947865d6cefcbf5a35db0513ecfa52aeb9b451f717db7a72b0b736a4ac8b607f"
+    },
+    {
+      "bytes": 10785,
+      "path": "01-canon/theorems/THM-2093-dyadic-global-star-finite-box.md",
+      "sha256": "f95c054735bbf52336b707a65e42bf053afed3f1e676f2a5c996a4dc0d09dfbe"
+    },
+    {
+      "bytes": 7150,
+      "path": "01-canon/theorems/THM-2094-mod-seven-fourfold-moment-obstruction.md",
+      "sha256": "0f84173ddadf25c39315ab055d1839636ee0719c267b53d3ef3b2c03d4877f83"
+    },
+    {
+      "bytes": 10454,
+      "path": "01-canon/theorems/THM-2095-p-adic-guard-ratio-scale-terminal.md",
+      "sha256": "0759b315859afcf9db3f1d1a8c88497b96695f2d31b02f90bd8389efd455f686"
+    },
+    {
+      "bytes": 7539,
+      "path": "01-canon/theorems/THM-2096-cayley-tree-variance-energy-obstruction.md",
+      "sha256": "797d0d1ec5527f00c6d50bfd28578c33286ddeb395fa67b5b6bcaa7a7589f320"
+    },
+    {
+      "bytes": 11067,
+      "path": "01-canon/theorems/THM-2097-mixed-two-torus-terminal-escape.md",
+      "sha256": "92883153487dc7fb01b4537ca279292a3ef68db6f1dfa4035973c7b47b00d07e"
+    },
+    {
+      "bytes": 18866,
+      "path": "01-canon/theorems/THM-2118-all-degree-cubic-faber-boundary-flux-coprimality.md",
+      "sha256": "f2f7a32e8f75f490280bd6284c62e81e2aefe8bff1250d78c80033e45cf26d4d"
+    },
+    {
+      "bytes": 10258,
+      "path": "01-canon/theorems/THM-2119-rank-eight-signed-affine-defect-and-three-sparsity.md",
+      "sha256": "c3e952b174e9399b434c1af64a1ed6cdd9980d9b038d8319eb327f6789a6373b"
+    },
+    {
+      "bytes": 9684,
+      "path": "01-canon/theorems/THM-2120-thirteen-division-phase-rigidity-empties-unique-blocker.md",
+      "sha256": "64f123f55a2d78aec878ca6907f65e980235c9978267b552628a6c63aee797c6"
+    },
+    {
+      "bytes": 7642,
+      "path": "01-canon/theorems/THM-2121-effective-fejer-localization-for-binary-shifted-combs.md",
+      "sha256": "eccf57d997040e45b105e8a16d1f3b1a9ee6a3798c6160e03452e899ccccd60a"
+    },
+    {
+      "bytes": 8233,
+      "path": "01-canon/theorems/THM-2122-multiple-thirteen-blocker-orbit-capacity-escape.md",
+      "sha256": "04d814b391ff123ee38d820a3479711831f4196843ceeb1c4a29dfc29ee8ab50"
+    },
+    {
+      "bytes": 8153,
+      "path": "01-canon/theorems/THM-2123-dependent-thirteen-blocker-and-complete-transverse-invoice.md",
+      "sha256": "a7cc34da78308558e2fafb78c94f0b92be638b3b7aa335751b36dbf34700edb6"
+    },
+    {
+      "bytes": 11919,
+      "path": "01-canon/theorems/THM-2124-eight-double-strips-force-a-sevenfold-projective-pencil.md",
+      "sha256": "71a651825a78d70997962dc95bf5ccea755c56512474dc72b1bed8eaea445d8e"
+    },
+    {
+      "bytes": 7012,
+      "path": "01-canon/theorems/THM-2125-two-coordinate-root-capacity-forces-fivefold-guard-pencil.md",
+      "sha256": "4e391e9a3576b614d96aa3b583c3369f3002d440db3db6153dd444ed9e3c1c20"
+    },
+    {
+      "bytes": 10832,
+      "path": "01-canon/theorems/THM-2126-mixed-torus-pair-spectrum-and-neutral-rank-eight-wall.md",
+      "sha256": "e97878c9b2fc728fd2d573f5a879728230d47c495adb62f1d88406b48c2af108"
+    },
+    {
+      "bytes": 18401,
+      "path": "01-canon/theorems/THM-2127-pre-resonance-ladder-and-affine-root-residue-obstruction.md",
+      "sha256": "64be873e603066f47a93cbacac5d7604498ed1f787404e03505a4f0b9a10e5d6"
+    },
+    {
+      "bytes": 10247,
+      "path": "01-canon/theorems/THM-2129-quartic-faber-three-coefficient-boundary-classification.md",
+      "sha256": "0aa32b35c732448475b509cf8eb4d86df8f4c5142d22fdf4b29242b0bc28f8b3"
+    },
+    {
+      "bytes": 9325,
+      "path": "01-canon/theorems/THM-2130-two-prime-root-capacity-and-143-determinant-invoice.md",
+      "sha256": "3a7f6cbd913bb2164bba7f0f8753dd938e45896d1d58f721ce6748ea1fad6733"
+    },
+    {
+      "bytes": 12954,
+      "path": "01-canon/theorems/THM-2350-owner-pivot-dual-dipole-normal-form.md",
+      "sha256": "368fe20345351c1c78135a2e0347c98619282ed38e738087b17b14f375371fa0"
+    },
+    {
+      "bytes": 14098,
+      "path": "01-canon/theorems/THM-2354-deep-shift-comb-cover-and-grouped-unit-current.md",
+      "sha256": "9db5e6961759f56ad1b6e405e4803703e72317b2ac003dc166c14eac12edcfcb"
+    },
+    {
+      "bytes": 29442,
+      "path": "01-canon/theorems/THM-2356-finite-field-chirp-gram-tomography-and-bockstein-pairing.md",
+      "sha256": "8bb251c14654a3097177869b462daaa9692799e2336f7366581269a51173da88"
+    },
+    {
+      "bytes": 10832,
+      "path": "01-canon/theorems/THM-2360-degree-eighteen-quadratic-ring-cube-descent.md",
+      "sha256": "d3fbb3e3597c5dc3426d05276d829092ca7756692d74d77ac142663bf577dd02"
+    },
+    {
+      "bytes": 11549,
+      "path": "01-canon/theorems/THM-2362-thirteen-shift-successor-statistic-and-role-jet-floor.md",
+      "sha256": "bb723585b3d0d61e58364d4965664b70d7f515f156ec670e2216072eb0202833"
+    },
+    {
+      "bytes": 8568,
+      "path": "01-canon/theorems/THM-2363-planar-graph-detector-dominates-word-support-energy.md",
+      "sha256": "a8f6bd69867a25f60e5f80287387adbfbc8f0d0dff573fefa1d16059ff9c772a"
+    },
+    {
+      "bytes": 14004,
+      "path": "01-canon/theorems/THM-2364-anchored-corner-forces-mixed-deep-blocker-colour.md",
+      "sha256": "2313e8a2f62e9d93193f8a79a50e14c0b48298919699bc035a8ef04a398580c7"
+    },
+    {
+      "bytes": 2773,
+      "path": "05-knowledge/README.md",
+      "sha256": "8e81bbf8720fb5fcdc9cff56d4ace05c5ed8b266c3a1503801314e3236f0fe96"
+    },
+    {
+      "bytes": 142565,
+      "path": "05-knowledge/hypotheses/INDEX.md",
+      "sha256": "9300e1614e08fe5697758c74b0ec3a6a8aee809f644cc7dfea98e35509a89efc"
+    },
+    {
+      "bytes": 42860,
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2"
+    },
+    {
+      "bytes": 2215,
+      "path": "07-reflections/README.md",
+      "sha256": "d9afffa5fc17c4a0e3897692bc2e3e9e6a02d3e4bea2c7802aba31f342eae9b9"
+    },
+    {
+      "bytes": 7513,
+      "path": "07-reflections/bypassing-the-gmc2-dvdk-dependency-for-the-unique-channel-class-boxeph-S230.md",
+      "sha256": "8ef38ceb1bc90610ed1a80dd2aedffe1e1594a7f069351921e03b8804b31bec8"
+    },
+    {
+      "bytes": 5759,
+      "path": "07-reflections/eliminating-dvdk-for-the-residual-12-percent-via-monomial-certificates-boxeph-S231.md",
+      "sha256": "f71d00a2e8ff970d95fa162fc9350064bcc5a820b2a61a51752f5fbfeb67591f"
+    },
+    {
+      "bytes": 11984,
+      "path": "07-reflections/the-dvdk-residual-is-one-unramified-hensel-small-root-product-a-formalization-map-for-thm-2067-deathstar-S106.md",
+      "sha256": "29d1d35900bf927d43574a4e6da47062701c19d23674d69e914a8b12fba3e01c"
+    },
+    {
+      "bytes": 6823,
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 1543,
+      "path": "CLAUDE.md",
+      "sha256": "5f9ed376293320700cb3477816b30227bcd502376c3410eacbba1c867ac10462"
+    },
+    {
+      "bytes": 2977,
+      "path": "README.md",
+      "sha256": "9b6c37779243d526c01415fbed1d8199d8d2a4db23fef39a713e7c88044ae677"
+    },
+    {
+      "bytes": 4857,
+      "path": "agents/README.md",
+      "sha256": "c1b87f24c2e9ff91abf780fc7c2afff452a4ac38f0326d26ad6943a19db275f7"
+    },
+    {
+      "bytes": 11348,
+      "path": "agents/check_docs.py",
+      "sha256": "a7530d4e53dde7bd4f1be1c8a181702a48dc62f00c50a3620e515194e6d00bec"
+    },
+    {
+      "bytes": 2717,
+      "path": "agents/doc_surface.py",
+      "sha256": "479198e39f05fc03f78118c6911295c09d92ebf91c2fe1183e6db0b6bf8c8033"
+    },
+    {
+      "bytes": 22026,
+      "path": "agents/start_session.py",
+      "sha256": "198f41302f5a6ac75c5a2124b189c7707d65cee7259cb7ac27765d5f97588c2a"
+    }
+  ],
+  "files_checked": 58,
+  "overlay_worktree": true,
+  "scope": "Targeted bounded docs and 33 current theorem status fixtures only",
+  "source_pin": "45b4c5273f1ebd1f3e72d288408768d5db5e6d6b",
+  "startup_bytes": 179999,
+  "status": "PASS",
+  "unproved_router_smoke": "NOT_RUN",
+  "whole_corpus_dependency_audit": "NOT_RUN"
+}

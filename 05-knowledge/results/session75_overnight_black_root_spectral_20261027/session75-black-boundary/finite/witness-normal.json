@@ -1,0 +1,81 @@
+{
+  "certificate_uncompressed_sha256": "476f1f63950d8094afbcacdc49d10a53034f21db58c5a05e08e1573e9bccb10d",
+  "certified_targets": [
+    "nonstrong distance=lambda",
+    "singleton plus strong core distance=delta"
+  ],
+  "literal_K_edges_checked": 296985,
+  "literal_R_edges_checked": 296985,
+  "orders": {
+    "4": {
+      "exact_distance_counts": {
+        "1": 1
+      },
+      "literal_R_and_K_edges": 1,
+      "non_strong": 3,
+      "ordinary_classes": 4,
+      "strong_black_active": 1
+    },
+    "5": {
+      "exact_distance_counts": {
+        "1": 5
+      },
+      "literal_R_and_K_edges": 5,
+      "non_strong": 6,
+      "ordinary_classes": 12,
+      "pure_blue": 1,
+      "strong_black_active": 5
+    },
+    "6": {
+      "exact_distance_counts": {
+        "1": 30,
+        "2": 5
+      },
+      "literal_R_and_K_edges": 40,
+      "non_strong": 21,
+      "ordinary_classes": 56,
+      "strong_black_active": 35
+    },
+    "7": {
+      "exact_distance_counts": {
+        "1": 266,
+        "2": 84,
+        "3": 3
+      },
+      "literal_R_and_K_edges": 443,
+      "non_strong": 103,
+      "ordinary_classes": 456,
+      "strong_black_active": 353
+    },
+    "8": {
+      "exact_distance_counts": {
+        "1": 3623,
+        "2": 2300,
+        "3": 85
+      },
+      "literal_R_and_K_edges": 8478,
+      "non_strong": 872,
+      "ordinary_classes": 6880,
+      "strong_black_active": 6008
+    },
+    "9": {
+      "exact_distance_counts": {
+        "1": 78515,
+        "2": 89366,
+        "3": 10237,
+        "4": 15
+      },
+      "literal_R_and_K_edges": 288018,
+      "non_strong": 13403,
+      "ordinary_classes": 191536,
+      "strong_black_active": 178133
+    }
+  },
+  "pure_blue_exclusions": [
+    "C3 (3 Hamilton words)",
+    "R5 (15 Hamilton words)"
+  ],
+  "scope": "all ordinary strong black-active classes at orders4 through9",
+  "source_coverage": "every source index exactly once; completeness independently proved by authenticate_universe.cpp",
+  "status": "PASS"
+}

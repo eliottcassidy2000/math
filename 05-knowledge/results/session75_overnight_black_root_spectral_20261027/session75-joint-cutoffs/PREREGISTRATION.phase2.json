@@ -1,0 +1,7 @@
+{
+  "registered_utc": "2026-10-27T07:27:00Z",
+  "registered_before_affected_joint_scans": true,
+  "additional_N": [11001,11002,11003,18274,18275,18276],
+  "selection_reason": "Source-pinned paid_root_README.md reports full-arrival maximum D_plus/S=4076/44381 atN18275 over all4096..65536, and independent full B-chain control atN11002. Test each named N and both immediate neighbors for hostile sensitivity. Selection is from inherited full-arrival data, not an unreported joint-cutoff scan.",
+  "universe": "Exactly the same full-source rectangle universe and arithmetic as original PREREGISTRATION.json; no changed input law, family, denominator, terminal grouping or positive-part placement."
+}

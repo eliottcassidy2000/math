@@ -1,0 +1,83 @@
+{
+  "adapter_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+  "immutable_input_policy": "materialized inputs read-only; all compiled/generated artifacts outside them; no source files modified",
+  "jobs": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/c3_replay.py",
+        "--offline-joint-adapter",
+        "/tmp/session75-c3-materialized/session75-joint-cutoff-audit/independent_audit.py",
+        "/tmp/session75-c3-materialized/session75-joint-cutoffs",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-audit-normal/logs/joint-independent.json"
+      ],
+      "component": "joint-audit",
+      "name": "joint-independent",
+      "returncode": 0,
+      "seconds": 198.752,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "550963310b73f3584301d049b2b898a7caf23437db986234872766d9e42dbe1b"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/tmp/session75-c3-materialized/session75-joint-cutoff-audit/supplementary_checks.py",
+        "--packet",
+        "/tmp/session75-c3-materialized/session75-joint-cutoffs",
+        "--out",
+        "/workspace/scratch/07d5532f2fce/session75-c3-offline/replay-helper/final-joint-audit-normal/logs/joint-supplementary.json"
+      ],
+      "component": "joint-audit",
+      "name": "joint-supplementary",
+      "returncode": 0,
+      "seconds": 4.728,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "339458e8a274b8dbb378a4025fc671be2bb8c4850690b3110863f1141e0bad72"
+    }
+  ],
+  "mode": "normal",
+  "negative_adapter_controls": {
+    "assertions_required": false,
+    "rejected_controls": [
+      "unexpected offline snapshot command",
+      "unexpected offline snapshot commit",
+      "unexpected offline snapshot path",
+      "unexpected offline snapshot command",
+      "offline snapshot content hash mismatch"
+    ],
+    "status": "PASS"
+  },
+  "results": {
+    "joint-audit": {
+      "adapter_sha256": "01fea245d886111b5f1d6dd059696604318ed9f6111c3020250dcbe0746eab1d",
+      "direct_controls": 43,
+      "frozen_audit_sha256": "e0fe4f90de36369aa51450980257e0c566a51ceb52caa517f2139a5d135c611a",
+      "rectangles_independently_recomputed": 42425,
+      "rectangles_structurally_checked": 245826,
+      "snapshots": {
+        "05-knowledge/results/paid_root_cycle_budget_20261026/README.md": [
+          "sources/paid_root_README.md",
+          "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+        ],
+        "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt": [
+          "frontier.txt",
+          "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+        ],
+        "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py": [
+          "sources/paid_root_verify.py",
+          "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+        ],
+        "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md": [
+          "sources/root_eisenstein_first_arrival_20261018j.md",
+          "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+        ]
+      },
+      "source_authentication": "OFFLINE hash-bound snapshot check only; repository origin is in separate source-origin receipt",
+      "source_records_rebuilt": 1000908,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,20 @@
+G_A = A_3 x| Z_5 (five blocks of size 3): |G| = 405
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   invariant tournament: H = 197030475, |Aut| = 1215, tc = 162165
+   minimum tc = 162165
+G_B = A_5 x| Z_3 (three blocks of size 5): |G| = 75
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   invariant tournament: H = 193215375, |Aut| = 375, tc = 515241
+   minimum tc = 515241

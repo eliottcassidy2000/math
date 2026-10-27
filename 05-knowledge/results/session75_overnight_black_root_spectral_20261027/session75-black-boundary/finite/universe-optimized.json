@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "independent score-block canonical keys, automorphism counts, exact labelled orbit mass",
+  "orders": {
+    "4": {"ordinary_classes": 4, "labelled_orbit_mass": 64, "score_block_permutations": 17},
+    "5": {"ordinary_classes": 12, "labelled_orbit_mass": 1024, "score_block_permutations": 173},
+    "6": {"ordinary_classes": 56, "labelled_orbit_mass": 32768, "score_block_permutations": 873},
+    "7": {"ordinary_classes": 456, "labelled_orbit_mass": 2097152, "score_block_permutations": 25367},
+    "8": {"ordinary_classes": 6880, "labelled_orbit_mass": 268435456, "score_block_permutations": 403193},
+    "9": {"ordinary_classes": 191536, "labelled_orbit_mass": 68719476736, "score_block_permutations": 27282165}
+  }
+}

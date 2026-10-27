@@ -1,0 +1,45 @@
+{
+  "credit": "Concurrent independent E10/rooted-converse discovery; no first-discovery claim by Session75.",
+  "frozen_phase2_manifest_unchanged": true,
+  "incoming_commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+  "incoming_sources": [
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "local": "inputs/THM-4811.md",
+      "repository_path": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "sha256": "5489264bfcdafaa431c51d6b6542ef88e2dea1e8cb3fbd8d348d9786ba3f9b3b"
+    },
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "local": "inputs/exceptional_family.py",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py",
+      "sha256": "cf798cab0cef4772f0a2698730dd8cb869d776415f6c3c4a753ce461864c86cb"
+    },
+    {
+      "commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+      "local": "inputs/exceptional_family.out",
+      "repository_path": "04-computation/experiments/black_terminal_distance_20261027/exceptional_family.out",
+      "sha256": "a3dfc3a59819cb48cf4beedddecb41c02854cf9ebf53380112de9fe4805b4eee"
+    }
+  ],
+  "prior_source_bindings": [
+    {
+      "sha256": "3fd5607fc099c27bcd9b7b78b21990dcf0550ab7d769312cd4e88207844a41f8",
+      "source_path": "/tmp/session75-black-core/check_black_core.py"
+    },
+    {
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881",
+      "source_path": "/tmp/session75-black-core/normal.json"
+    },
+    {
+      "sha256": "5d7cc19d993ff07ff2f2d1d5fbcedb2c1f1b48a2d974f024b9d3f734f29d34c6",
+      "source_path": "/tmp/session75-black-boundary/milestone/finite/verify_counterexample.py"
+    },
+    {
+      "sha256": "5bc89f4d9673325311088321d984811a2ddbf123be6739e81ff75b314f5d28a3",
+      "source_path": "/tmp/session75-black-boundary/milestone/SHA256SUMS"
+    }
+  ],
+  "profile_convention": "unordered collections of disjoint directed odd cycles, cycles modulo rotation only, unused vertices allowed",
+  "scope": "exactly the two literal matrices and one incoming-source recipe; no broader search or census claims"
+}

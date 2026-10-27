@@ -1,0 +1,33 @@
+{
+  "HYP9421_1": "REFUTED as stated by already-audited odd11 source",
+  "HYP9421_2_E_only_exclusivity": "REFUTED",
+  "HYP9421_2_upper_bound": "OPEN; not refuted",
+  "H_each": 657,
+  "all_1022_named_cuts_equal": true,
+  "frozen_previous_audit_manifest_sha256": "0fbfca814bf71da72b9890762007eab5f4193be96a5ecedda1a3c0c38589077b",
+  "general_cycle_polynomial_distance_theorem_claimed": false,
+  "incoming_full_n10_census_certified": false,
+  "incoming_isomorphism": [
+    4,
+    1,
+    3,
+    2,
+    0,
+    9,
+    6,
+    8,
+    7,
+    5
+  ],
+  "incoming_source_commit": "87d61f67673a6b10cbafff1bf9e1377f3c41e56c",
+  "independent_algorithm": "directed permutation covers with fixed unused vertices, retaining only odd nontrivial cycles",
+  "labelled_cyclic_triple_sets_equal": false,
+  "no_new_search_ranges": true,
+  "no_repo_or_remote_mutations": true,
+  "normal_receipt_sha256": "1adaf758a2ec697684226c3304114c2b5c54658f650ffdb47c30bf57d3b4b46e",
+  "optimized_receipt_sha256": "1adaf758a2ec697684226c3304114c2b5c54658f650ffdb47c30bf57d3b4b46e",
+  "producer_manifest_sha256": "dcb9b8d6d65122e7e47dba0f9a3984c145bdcf67fbf0dd059db4892b54796d2b",
+  "scalar_c3_each": 14,
+  "scope": "bounded two n10 objects, full odd-cycle profiles and exact incoming E10 isomorphism",
+  "status": "ACCEPTED"
+}
