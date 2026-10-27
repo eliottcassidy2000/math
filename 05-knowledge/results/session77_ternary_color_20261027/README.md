@@ -2,10 +2,11 @@
 
 **Session 77 — mathematical synthesis.** Three-way branching recurs in tournament substitution, arithmetic trees, and SU(3) color tensors. The useful connection is not the number three alone: it is the information each construction must retain so that later composition remains exact.
 
-Two companion notes make this principle concrete:
+Three companion notes make this principle concrete:
 
 - [Typed color contractions, alignment memory, and Petersen](COLOR_FUSION.md): finite-dimensional SU(3) representations, exact six-port tensors, and a signed Gram realization of Petersen.
 - [Ternary composition remembers more than fifteen Hamiltonian paths](TERNARY_MEMORY.md): the audited path-cover substitution law and an explicit scalar collision exposed by a fixed attachment.
+- [Parity and cyclic-context reconstruction](PARITY-SUPPLEMENT.md): for known order n, floor((n−1)/2) repeated cyclic-attachment path counts recover the full path-cover profile, with precise linear and modular limits.
 
 The representation theory and composition theorem have established sources. The finite examples supply explicit checks and comparisons, not a new QCD dynamics, confinement, or mass-gap theorem. No identification of tournament composition with the color-tensor category is asserted.
 
