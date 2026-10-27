@@ -1,0 +1,2 @@
+n=10 classes=1403857 strong=1355608 prime_tournaments=1151284 prime_selfconverse=822 distinct_types=5
+prime_aut_hist: 1:1151210 3:73 5:1

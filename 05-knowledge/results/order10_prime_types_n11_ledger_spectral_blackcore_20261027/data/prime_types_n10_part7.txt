@@ -1,0 +1,5 @@
+TYPE count=58 k=10 aut=3 AUT: 1^10,:1 1^4,3^2,:2 SC=0 ANTI:
+TYPE count=1 k=10 aut=5 AUT: 1^10,:1 5^2,:4 SC=0 ANTI:
+TYPE count=822 k=10 aut=1 AUT: 1^10,:1 SC=1 ANTI: 2^5,:1
+TYPE count=1150388 k=10 aut=1 AUT: 1^10,:1 SC=0 ANTI:
+TYPE count=15 k=10 aut=3 AUT: 1^1,3^3,:2 1^10,:1 SC=0 ANTI:

@@ -104,3 +104,5 @@ supplied-data arithmetic through 10 and the stated bounded counterexample/fibre
 checks; it does not independently regenerate the prime census, nauty runs, OEIS
 claims, or wild-pair completeness.
 The concurrent sharp-4p, full path-cover and necklace repairs linked above are preserved.
+
+> **Update 2026-10-27 (klein, THM-4814).** The order-10 prime cycle-index types are collected (nine types) and the order-11 ledger is in `05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/`: A280772(11) = 796,876,429, c(11) = 447,114,461, l(11) = 16,901,802,400,214,078; the self-converse decomposition identity reproduces the SC census at every n <= 10.

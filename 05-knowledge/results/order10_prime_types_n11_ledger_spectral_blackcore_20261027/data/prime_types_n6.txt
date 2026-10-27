@@ -1,0 +1,3 @@
+TYPE count=12 k=6 aut=1 AUT: 1^6,:1 SC=0 ANTI:
+TYPE count=1 k=6 aut=3 AUT: 1^6,:1 3^2,:2 SC=1 ANTI: 2^3,:1 6^1,:2
+TYPE count=2 k=6 aut=1 AUT: 1^6,:1 SC=1 ANTI: 2^3,:1

@@ -1,0 +1,62 @@
+TT_n: nuclear norm by SVD vs cot formula; ratio to (2/pi) n ln n
+  n=   3  svd=    3.464102  formula=    3.464102  diff=-4.44e-16  nu/(n ln n)=1.05105  (2/pi=0.63662)
+  n=   4  svd=    5.656854  formula=    5.656854  diff=0.00e+00  nu/(n ln n)=1.02014  (2/pi=0.63662)
+  n=   5  svd=    7.608452  formula=    7.608452  diff=8.88e-16  nu/(n ln n)=0.94548  (2/pi=0.63662)
+  n=   6  svd=   10.000000  formula=   10.000000  diff=5.33e-15  nu/(n ln n)=0.93018  (2/pi=0.63662)
+  n=   7  svd=   12.233642  formula=   12.233642  diff=-8.88e-15  nu/(n ln n)=0.89812  (2/pi=0.63662)
+  n=   8  svd=   14.782073  formula=   14.782073  diff=3.55e-15  nu/(n ln n)=0.88858  (2/pi=0.63662)
+  n=   9  svd=   17.212805  formula=   17.212805  diff=-1.07e-14  nu/(n ln n)=0.87043  (2/pi=0.63662)
+  n=  10  svd=   19.888544  formula=   19.888544  diff=7.11e-15  nu/(n ln n)=0.86375  (2/pi=0.63662)
+  n=  11  svd=   22.470393  formula=   22.470393  diff=-7.11e-15  nu/(n ln n)=0.85190  (2/pi=0.63662)
+  n=  12  svd=   25.252772  formula=   25.252772  diff=3.20e-14  nu/(n ln n)=0.84687  (2/pi=0.63662)
+  n=  16  svd=   36.592257  formula=   36.592257  diff=2.13e-14  nu/(n ln n)=0.82487  (2/pi=0.63662)
+  n=  20  svd=   48.576590  formula=   48.576590  diff=4.97e-14  nu/(n ln n)=0.81076  (2/pi=0.63662)
+  n=  32  svd=   87.288894  formula=   87.288894  diff=-2.84e-14  nu/(n ln n)=0.78707  (2/pi=0.63662)
+  n=  50  svd=  150.589631  formula=  150.589631  diff=-1.14e-13  nu/(n ln n)=0.76988  (2/pi=0.63662)
+  n= 100  svd=  345.301147  formula=  345.301147  diff=1.14e-13  nu/(n ln n)=0.74981  (2/pi=0.63662)
+  n= 200  svd=  778.853917  formula=  778.853917  diff=1.82e-12  nu/(n ln n)=0.73500  (2/pi=0.63662)
+  n= 400  svd= 1734.215005  formula= 1734.215005  diff=2.18e-11  nu/(n ln n)=0.72362  (2/pi=0.63662)
+formula only, large n:
+  n=   1000 nu=4918.865 nu/(n ln n)=0.71208  nu - (2/pi) n ln n = 521.252  per n: 0.52125
+  n=  10000 nu=63847.364 nu/(n ln n)=0.69321  nu - (2/pi) n ln n = 5212.516  per n: 0.52125
+  n= 100000 nu=785060.762 nu/(n ln n)=0.68190  nu - (2/pi) n ln n = 52125.163  per n: 0.52125
+Paley P_q: nuclear norm vs (q-1) sqrt q
+  q=  3 nu=   3.46410 (q-1)sqrt(q)=   3.46410  S S^T == qI-J: True
+  q=  7 nu=  15.87451 (q-1)sqrt(q)=  15.87451  S S^T == qI-J: True
+  q= 11 nu=  33.16625 (q-1)sqrt(q)=  33.16625  S S^T == qI-J: True
+  q= 19 nu=  78.46018 (q-1)sqrt(q)=  78.46018  S S^T == qI-J: True
+  q= 23 nu= 105.50829 (q-1)sqrt(q)= 105.50829  S S^T == qI-J: True
+  q= 31 nu= 167.03293 (q-1)sqrt(q)= 167.03293  S S^T == qI-J: True
+  q= 43 nu= 275.41242 (q-1)sqrt(q)= 275.41242  S S^T == qI-J: True
+  q= 47 nu= 315.36011 (q-1)sqrt(q)= 315.36011  S S^T == qI-J: True
+  q= 59 nu= 445.50645 (q-1)sqrt(q)= 445.50645  S S^T == qI-J: True
+  q= 67 nu= 540.23328 (q-1)sqrt(q)= 540.23328  S S^T == qI-J: True
+  q= 71 nu= 589.83048 (q-1)sqrt(q)= 589.83048  S S^T == qI-J: True
+  q= 79 nu= 693.27916 (q-1)sqrt(q)= 693.27916  S S^T == qI-J: True
+  q= 83 nu= 747.05555 (q-1)sqrt(q)= 747.05555  S S^T == qI-J: True
+Bordered Paley (source + P_q), n=q+1: nu vs n sqrt(n-1)
+  n=  4 nu=   6.92820 n sqrt(n-1)=   6.92820  S S^T==(n-1)I: True
+  n=  8 nu=  21.16601 n sqrt(n-1)=  21.16601  S S^T==(n-1)I: True
+  n= 12 nu=  39.79950 n sqrt(n-1)=  39.79950  S S^T==(n-1)I: True
+  n= 20 nu=  87.17798 n sqrt(n-1)=  87.17798  S S^T==(n-1)I: True
+  n= 24 nu= 115.09996 n sqrt(n-1)= 115.09996  S S^T==(n-1)I: True
+Caterpillar C3[v,v,C3[v,v,...]]: nu vs n ln n and n^1.5
+  n=  10 nu=    24.406  nu/(n ln n)=1.0599  nu/n^1.5=0.7718
+  n=  20 nu=    63.624  nu/(n ln n)=1.0619  nu/n^1.5=0.7113
+  n=  40 nu=   152.006  nu/(n ln n)=1.0302  nu/n^1.5=0.6009
+  n=  80 nu=   347.378  nu/(n ln n)=0.9909  nu/n^1.5=0.4855
+  n= 160 nu=   774.338  nu/(n ln n)=0.9536  nu/n^1.5=0.3826
+  n= 320 nu=  1699.763  nu/(n ln n)=0.9208  nu/n^1.5=0.2969
+  n= 640 nu=  3692.708  nu/(n ln n)=0.8930  nu/n^1.5=0.2281
+C3 tower n=3^k: nu vs (2/sqrt3) n log_3 n
+  k=1 n=   3 nu=    3.4641 formula=    3.4641
+  k=2 n=   9 nu=   20.7846 formula=   20.7846
+  k=3 n=  27 nu=   93.5307 formula=   93.5307
+  k=4 n=  81 nu=  374.1230 formula=  374.1230
+  k=5 n= 243 nu= 1402.9612 formula= 1402.9612
+random tournaments: nu / ((n-1) sqrt n)
+  n=  11 mean ratio=0.8940  (semicircle prediction 8/(3 pi)=0.8488)
+  n=  23 mean ratio=0.8803  (semicircle prediction 8/(3 pi)=0.8488)
+  n=  47 mean ratio=0.8524  (semicircle prediction 8/(3 pi)=0.8488)
+  n=  95 mean ratio=0.8519  (semicircle prediction 8/(3 pi)=0.8488)
+  n= 191 mean ratio=0.8505  (semicircle prediction 8/(3 pi)=0.8488)

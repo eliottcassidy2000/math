@@ -1,0 +1,3 @@
+TYPE count=72 k=8 aut=1 AUT: 1^8,:1 SC=1 ANTI: 2^4,:1
+TYPE count=12 k=8 aut=3 AUT: 1^2,3^2,:2 1^8,:1 SC=0 ANTI:
+TYPE count=3924 k=8 aut=1 AUT: 1^8,:1 SC=0 ANTI:

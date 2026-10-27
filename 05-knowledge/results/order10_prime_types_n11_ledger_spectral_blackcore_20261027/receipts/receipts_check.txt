@@ -1,0 +1,8 @@
+species11: identical
+species11b: identical
+misc_checks: identical
+nuclear: identical
+nucmax: identical
+blackcore7: identical
+blackcore9: identical
+blackcore11paley: identical

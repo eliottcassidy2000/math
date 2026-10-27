@@ -1,0 +1,7 @@
+n=5: the unique regular tournament; moves = native path complements tau_Q, target = vertex of score 0 or 4 with strong 4-vertex core
+two-move words (a an endpoint of every path): (score(a), core strong, all black) -> count: {(0, False, False): 5, (0, True, False): 25, (4, False, False): 5, (4, True, False): 25}
+black-move BFS depth 1: new labelled tournaments 0, targets among them 0
+black-move BFS depth 2: new labelled tournaments 0, targets among them 0
+black-move BFS depth 3: new labelled tournaments 0, targets among them 0
+black-move BFS depth 4: new labelled tournaments 0, targets among them 0
+black distance from the regular 5-tournament to singleton+strong core: >4 (not reached by depth 4)

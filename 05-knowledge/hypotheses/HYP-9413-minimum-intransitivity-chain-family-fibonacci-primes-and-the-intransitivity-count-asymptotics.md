@@ -47,3 +47,5 @@ give the lower-order contributions to `A000568(11)` and `c(11)`. The first
 coefficient still has the additive unknown P11, and C3 needs
 `(P11+P11,self-converse)/2`. A known A11=903753248 can instead infer P11;
 order-10 cycle indices alone do not predict it.
+
+> **Update 2026-10-27 (klein, THM-4814).** Item (d) is resolved in its honest form: the order-10 cycle-index types (nine) were collected; the species identity cannot output A000568(11) because the order-11 primes are their own term, but it determines the non-prime side exactly (19,288,658 non-strong, 87,588,161 strong non-prime classes), and with OEIS A000568(11) = 903,753,248 and A002785(11) = 279,968 this gives A280772(11) = 796,876,429, 259,307 self-converse primes, c(11) = 447,114,461 and l(11) = 16,901,802,400,214,078. See `05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md` §2.

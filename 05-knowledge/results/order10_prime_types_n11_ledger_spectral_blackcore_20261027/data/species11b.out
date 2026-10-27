@@ -1,0 +1,22 @@
+SC primes by order: {3: 1, 4: 0, 5: 3, 6: 3, 7: 55, 8: 72, 9: 2235, 10: 5525}
+n=2: SC nonstrong=1 SC strong nonprime=0 SC prime=0 total=1 census=1 OK
+n=3: SC nonstrong=1 SC strong nonprime=0 SC prime=1 total=2 census=2 OK
+n=4: SC nonstrong=1 SC strong nonprime=1 SC prime=0 total=2 census=2 OK
+n=5: SC nonstrong=2 SC strong nonprime=3 SC prime=3 total=8 census=8 OK
+n=6: SC nonstrong=3 SC strong nonprime=6 SC prime=3 total=12 census=12 OK
+n=7: SC nonstrong=9 SC strong nonprime=24 SC prime=55 total=88 census=88 OK
+n=8: SC nonstrong=14 SC strong nonprime=90 SC prime=72 total=176 census=176 OK
+n=9: SC nonstrong=91 SC strong nonprime=426 SC prime=2235 total=2752 census=2752 OK
+n=10: SC nonstrong=185 SC strong nonprime=3074 SC prime=5525 total=8784 census=8784 OK
+n=11: SC nonstrong=2768 SC strong nonprime=17893  => SCP(11) = SC(11) - 20661
+labelled strong s_lab(n), n=1..11: [1, 0, 2, 24, 544, 22320, 1677488, 236522496, 64026088576, 33832910196480, 35262092417856512]
+n=3: labelled strong=2 labelled strong non-prime=0 => P_lab(3)=2 census=2 OK
+n=4: labelled strong=24 labelled strong non-prime=24 => P_lab(4)=0 census=0 OK
+n=5: labelled strong=544 labelled strong non-prime=280 => P_lab(5)=264 census=264 OK
+n=6: labelled strong=22320 labelled strong non-prime=12000 => P_lab(6)=10320 census=10320 OK
+n=7: labelled strong=1677488 labelled strong non-prime=703808 => P_lab(7)=973680 census=973680 OK
+n=8: labelled strong=236522496 labelled strong non-prime=75242496 => P_lab(8)=161280000 census=161280000 OK
+n=9: labelled strong=64026088576 labelled strong non-prime=14461559296 => P_lab(9)=49564529280 census=49564529280 OK
+n=10: labelled strong=33832910196480 labelled strong non-prime=5145203665920 => P_lab(10)=28687706530560 census=28687706530560 OK
+n=11: labelled strong=35262092417856512 labelled strong non-prime=3453658999907072 => P_lab(11)=31808433417949440
+ell(11) = 997585691239358 + P_lab(11)/2 = 1.6901802400214078e+16
