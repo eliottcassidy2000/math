@@ -1,0 +1,38 @@
+n=3 strong classes=1
+  lambda=1: classes=1  no-black-descent=1  no-descent-at-all=0  pure-blue=1
+  lemma check: 3 legal paths, 0 failures
+  exceptions (no black descent), first 1:
+    101 (pure blue)
+n=4 strong classes=1
+  lambda=1: classes=1  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lemma check: 5 legal paths, 0 failures
+  exceptions (no black descent), first 0:
+n=5 strong classes=6
+  lambda=1: classes=5  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=1  no-black-descent=1  no-descent-at-all=0  pure-blue=1
+  lemma check: 72 legal paths, 0 failures
+  exceptions (no black descent), first 1:
+    1100110111 (pure blue)
+n=6 strong classes=35
+  lambda=1: classes=30  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=5  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lemma check: 1043 legal paths, 0 failures
+  exceptions (no black descent), first 0:
+n=7 strong classes=353
+  lambda=1: classes=266  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=84  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=3: classes=3  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lemma check: 32785 legal paths, 0 failures
+  exceptions (no black descent), first 0:
+n=8 strong classes=6008
+  lambda=1: classes=3623  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=2300  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=3: classes=85  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lemma check: 2073672 legal paths, 0 failures
+  exceptions (no black descent), first 0:
+n=9 strong classes=178133
+  lambda=1: classes=78515  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=89366  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=3: classes=10237  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=4: classes=15  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  exceptions (no black descent), first 0:

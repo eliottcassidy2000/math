@@ -1,0 +1,8 @@
+n=10 strong classes=9355949
+  lambda=1: classes=2817450  no-black-descent=1  no-descent-at-all=0  pure-blue=0
+  lambda=2: classes=5124698  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=3: classes=1400468  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  lambda=4: classes=13333  no-black-descent=0  no-descent-at-all=0  pure-blue=0
+  exceptions (no black descent), first 1:
+    111001111101111111111111111111111111000111101 (has black paths)
+( gentourng -cq 10 | ./black_descent 10; )  1345.57s user 4.13s system 98% cpu 22:44.61 total

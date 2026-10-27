@@ -1,0 +1,28 @@
+scores [7, 7, 7, 7, 6, 2, 3, 2, 2, 2]
+0 -> [1, 2, 3, 6, 7, 8, 9]
+1 -> [2, 4, 5, 6, 7, 8, 9]
+2 -> [3, 4, 5, 6, 7, 8, 9]
+3 -> [1, 4, 5, 6, 7, 8, 9]
+4 -> [0, 5, 6, 7, 8, 9]
+5 -> [0, 6]
+6 -> [7, 8, 9]
+7 -> [5, 8]
+8 -> [5, 9]
+9 -> [5, 7]
+lambda 1 min cuts [[5, 6, 7, 8, 9]]
+H 657
+descent candidates 9 black among them 0
+  cand (6, 7, 8, 9, 5, 0, 1, 2, 3, 4) blue closed scores ends 3 6
+  cand (6, 7, 8, 9, 5, 0, 2, 3, 1, 4) blue closed scores ends 3 6
+  cand (6, 7, 8, 9, 5, 0, 3, 1, 2, 4) blue closed scores ends 3 6
+  cand (6, 8, 9, 7, 5, 0, 1, 2, 3, 4) blue closed scores ends 3 6
+  cand (6, 8, 9, 7, 5, 0, 2, 3, 1, 4) blue closed scores ends 3 6
+  cand (6, 8, 9, 7, 5, 0, 3, 1, 2, 4) blue closed scores ends 3 6
+  cand (6, 9, 7, 8, 5, 0, 1, 2, 3, 4) blue closed scores ends 3 6
+  cand (6, 9, 7, 8, 5, 0, 2, 3, 1, 4) blue closed scores ends 3 6
+  cand (6, 9, 7, 8, 5, 0, 3, 1, 2, 4) blue closed scores ends 3 6
+black paths total 558
+|Aut| 9 #anti-automorphisms 9
+black moves from E10 by (lambda', black descent exists): {(2, None): 450, (1, True): 108}
+witness first move (1, 2, 3, 4, 6, 7, 8, 9, 5, 0)
+lambda=2 neighbours of E10 (any colour move): 540; with no black descent avoiding the E10 invariant: 0

@@ -1,0 +1,7 @@
+(D1) 2^t Y = 3X + 2^a and P(s) primitive for all primitive s < 2000000: failures 0
+(D2) 3B(x)+1 = 4(3x+1); Syracuse X -> 3X/2^v + 1 for odd x < 2000000: failures 0
+(D3) lambda = 2^a/(6X+2^a), (1+lam)/(1-lam) = 1/b = 1 + 2^a/(3X): failures 0
+(D4) 2^T X_d = 3^d X_0 + C_d, C_d > 0, prod b = 3^d X_0/(2^T X_d) on 2000 random words: failures 0
+(D5) trivial cycle: P(1) = 1, a = 2, t = 2, lambda = 1/7, b = 3/4, (1+lam)/(1-lam) = 4/3 = 2^t/3 = 4/3; 2 artanh(1/7) - log(4/3) = 5.551e-17
+(D6) fixed points X* = 2^a/(2^t-3), s* = (2^a-2^t+3)/(3(2^t-3)), j = 0: s* = c_a = 1/(2^a-3): failures 0; c_1 = -1, c_2 = 1
+(D7) every P-orbit sampled (3866 primitive seeds < 10^6) reaches 1; sum 2 artanh(lam) = log(1 + C_d/(3^d X_0)) at 60 digits: failures 0, worst error 9.72e-62

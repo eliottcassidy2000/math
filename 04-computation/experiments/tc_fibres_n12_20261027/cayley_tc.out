@@ -1,0 +1,9 @@
+Cayley tournaments on Z_3 x Z_1 (order 3): 2 connection sets, min tc 1, sets with tc <= 21: tc=1:2
+Cayley tournaments on Z_5 x Z_1 (order 5): 4 connection sets, min tc 3, sets with tc <= 21: tc=3:4
+Cayley tournaments on Z_7 x Z_1 (order 7): 8 connection sets, min tc 9, sets with tc <= 21: tc=9:2
+Cayley tournaments on Z_9 x Z_1 (order 9): 16 connection sets, min tc 39, sets with tc <= 21:
+Cayley tournaments on Z_3 x Z_3 (order 9): 16 connection sets, min tc 39, sets with tc <= 21:
+Cayley tournaments on Z_11 x Z_1 (order 11): 32 connection sets, min tc 1729, sets with tc <= 21:
+Cayley tournaments on Z_13 x Z_1 (order 13): 64 connection sets, min tc 94949, sets with tc <= 21:
+Cayley tournaments on Z_15 x Z_1 (order 15): 128 connection sets, min tc 162165, sets with tc <= 21:
+Cayley tournaments on Z_17 x Z_1 (order 17): 256 connection sets, min tc 792878221, sets with tc <= 21:

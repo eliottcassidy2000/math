@@ -1,0 +1,30 @@
+n=4 strong classes=1  with a blue path=1
+  every minimum out-cut has a black candidate: 0 / 1
+  every minimum out-cut has a CLOSED black candidate (rotation of a Ham cycle): 0 / 1
+  min #black candidates over classes = 2 at 100111
+  min over (class, cut) of #black candidates through the cut = 0 at 100111
+  histogram of min-per-cut black candidates (capped at 10): 0:1
+n=5 strong classes=6  with a blue path=6
+  every minimum out-cut has a black candidate: 4 / 6
+  every minimum out-cut has a CLOSED black candidate (rotation of a Ham cycle): 4 / 6
+  min #black candidates over classes = 0 at 1100110111
+  min over (class, cut) of #black candidates through the cut = 0 at 1101111101
+  histogram of min-per-cut black candidates (capped at 10): 0:2 1:3 3:1
+n=6 strong classes=35  with a blue path=9
+  every minimum out-cut has a black candidate: 33 / 35
+  every minimum out-cut has a CLOSED black candidate (rotation of a Ham cycle): 33 / 35
+  min #black candidates over classes = 2 at 111001111111111
+  min over (class, cut) of #black candidates through the cut = 0 at 111011111111110
+  histogram of min-per-cut black candidates (capped at 10): 0:2 1:7 2:5 3:12 4:5 5:2 6:2
+n=7 strong classes=353  with a blue path=79
+  every minimum out-cut has a black candidate: 351 / 353
+  every minimum out-cut has a CLOSED black candidate (rotation of a Ham cycle): 351 / 353
+  min #black candidates over classes = 2 at 111100111111111111111
+  min over (class, cut) of #black candidates through the cut = 0 at 110111111111101111101
+  histogram of min-per-cut black candidates (capped at 10): 0:2 1:20 2:18 3:41 4:23 5:37 6:37 7:22 8:23 9:29 10:101
+n=8 strong classes=6008  with a blue path=162
+  every minimum out-cut has a black candidate: 6002 / 6008
+  every minimum out-cut has a CLOSED black candidate (rotation of a Ham cycle): 6002 / 6008
+  min #black candidates over classes = 2 at 1111100111111111111111111111
+  min over (class, cut) of #black candidates through the cut = 0 at 1111101111111111111111111110
+  histogram of min-per-cut black candidates (capped at 10): 0:6 1:51 2:61 3:124 4:91 5:141 6:127 7:118 8:117 9:231 10:4941

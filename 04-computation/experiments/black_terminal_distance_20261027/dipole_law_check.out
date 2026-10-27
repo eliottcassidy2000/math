@@ -1,0 +1,1 @@
+dipole law on 2940 random (tournament, Hamiltonian path) pairs, n in 4..12, 16, 20, 25, 31: failures {'L1': 0, 'L2': 0, 'L3': 0, 'L4': 0, 'L5op': 0, 'L5tr': 0, 'L6': 0}

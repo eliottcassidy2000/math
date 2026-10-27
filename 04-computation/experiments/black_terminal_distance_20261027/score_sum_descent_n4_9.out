@@ -1,0 +1,6 @@
+n=4 strong=1 regular=0  score-sum certified descent=1 (closed=1)  nonregular failures=0
+n=5 strong=6 regular=1  score-sum certified descent=5 (closed=5)  nonregular failures=0
+n=6 strong=35 regular=0  score-sum certified descent=35 (closed=35)  nonregular failures=0
+n=7 strong=353 regular=3  score-sum certified descent=350 (closed=350)  nonregular failures=0
+n=8 strong=6008 regular=0  score-sum certified descent=6008 (closed=6008)  nonregular failures=0
+n=9 strong=178133 regular=15  score-sum certified descent=178118 (closed=178118)  nonregular failures=0
