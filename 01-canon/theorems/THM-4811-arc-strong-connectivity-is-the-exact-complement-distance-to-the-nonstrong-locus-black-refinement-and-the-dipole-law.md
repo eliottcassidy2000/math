@@ -27,7 +27,7 @@ status: >
   and Session75 (black-core audit rounds announced).
   PROVED (D1): if lambda(T) = delta^0(T) the distance to the singleton locus is delta^0 (either colour).
   FINITE-EXACT (D2): every strong class of orders 6-9 is exactly delta^0 black moves from a singleton plus a strong core;
-  (E): the black core is connected at orders 4-9 (co-basin reduction).
+  (E): the black core is connected at orders 4-10 (co-basin reduction; order 10: 537,339,904 black descent lines).
   OPEN: the classification of strong tournaments without a black descent (HYP-9421 (1): exactly C3, R5 and E(M; Z)); whether
   the black distance is always at most lambda + 1 (HYP-9421 (2)); black-core connectivity (HYP-9348 (b)).
 session: mac-mini-2026-10-27-potentials
@@ -46,7 +46,7 @@ scripts:
   - 04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py (+ .out)
   - 04-computation/experiments/black_terminal_distance_20261027/dipole_law_check.py (+ .out)
   - 04-computation/experiments/black_terminal_distance_20261027/singleton_distance.cpp (+ singleton_distance_n6_8.out, singleton_distance_n9.out)
-  - 04-computation/experiments/black_terminal_distance_20261027/cobasin_connectivity.cpp (+ cobasin_connectivity_n4_9.out)
+  - 04-computation/experiments/black_terminal_distance_20261027/cobasin_connectivity.cpp (+ cobasin_connectivity_n4_9.out, cobasin_connectivity_n10.out)
   - 04-computation/experiments/black_terminal_distance_20261027/locus_distances.cpp, lambda_vs_delta0.cpp (+ .out)
 ---
 
@@ -139,15 +139,18 @@ regular `(2m+1)`-tournament this is the concurrent basin theorem's "exactly `m` 
 strong core" (all orders there), here extended to all strong sources at these orders; HYP-9421 (6) conjectures it in
 general.
 
-## (E) Black-core connectivity through order 9
+## (E) Black-core connectivity through order 10
 
 Let `B_n` be the bipartite graph between the `lambda = 1` strong classes and the non-strong classes (converse-merged),
 an edge for each black descent word. Every black line at a non-strong class is such an edge (by (B) its other end has
 `lambda = 1`), and by (B)-(C) every non-pure-blue strong class of order at most 10 is joined to a `lambda = 1` class by
 black moves. So if `B_n` is connected, the black core of order `n` is connected. **FINITE-EXACT**
-(`cobasin_connectivity.cpp`): `B_n` is connected for `n = 4, ..., 9` and covers every non-strong class with a black line
-(440 of 443 merged non-strong classes at order 8, 6,741 of 6,747 at order 9; 4,216,712 black descent lines at order 9).
-This reproduces THM-4731's black connectivity through order 8 by a different route and extends it to order 9.
+(`cobasin_connectivity.cpp`): `B_n` is connected for `n = 4, ..., 10` and covers every non-strong class with a black line
+(440 of 443 merged non-strong classes at order 8, 6,741 of 6,747 at order 9, 188,642 of 188,646 at order 10, the rest
+pure blue; 4,216,712 and 537,339,904 black descent lines at orders 9 and 10). At order 10, 2,817,449 of the 2,817,450
+`lambda = 1` strong classes have a black descent, the exception being `E10`, an independent re-count of (C1); `E10` joins
+`B_10` through its black moves to `lambda = 1` classes with black descents. This reproduces THM-4731's black connectivity
+through order 8 by a different route and extends it to orders 9 and 10 (HYP-9348 (b) is now FINITE-EXACT through 10).
 
 ## (F) What remains
 

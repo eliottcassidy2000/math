@@ -1,7 +1,7 @@
 ---
 id: HYP-9348
 title: "Filtered endpoint-four detours and black-core connectivity; zero-heavy layers through the first weighted endpoint"
-status: OPEN corrected endpoint/black-core questions; PROVED closed endpoint-four n>=8 with finite heads; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
+status: OPEN corrected endpoint/black-core questions (2026-10-27: (b) FINITE-EXACT through order 10 by THM-4811 (E), co-basin reduction); PROVED closed endpoint-four n>=8 with finite heads; REFUTED unfiltered (a); SUPERSEDED old deficit-(k+1) frontier
 source: mac-mini-2026-10-20-debtcones
 depends_on:
   - 01-canon/theorems/THM-4734-endpoint-three-layer-closed-at-order-ten-and-the-endpoint-four-layer-at-orders-nine-and-ten.md
@@ -52,6 +52,9 @@ the layer by `k -> n-2-k`; open-four becomes closed layer `n-6`, so this
 fixed closed-four theorem does not settle arbitrary open-four words.
 
 ## (b) Black-core connectivity
+
+**Update 2026-10-27.** THM-4811 (B)-(E) reduce the claim to the connectivity of the bipartite co-basin graph between
+`lambda = 1` strong classes and non-strong classes (black descent words), and verify it through order 10.
 
 **Claim** (the lane's conjecture; THM-4731 verifies it for `n <= 8`): all non-pure-blue
 classes lie in one black component of the line metagraph. The endpoint layers remove one

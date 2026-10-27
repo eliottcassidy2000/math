@@ -1,0 +1,2 @@
+n=10: non-strong merged classes 188646, with a black line 188642, covered by B_n 188642; lambda=1 strong classes 2817450, with a black descent 2817449; black descent lines 537339904; components of B_n: 1
+( gentourng -q 10 | ./cobasin 10; )  1465.66s user 6.79s system 98% cpu 24:54.33 total
