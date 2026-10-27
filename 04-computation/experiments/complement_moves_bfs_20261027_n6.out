@@ -1,0 +1,5 @@
+n = 6: 32768 labelled tournaments; BFS from the transitive tournament: reached 16384 (NOT connected), eccentricity 7
+level counts: 0:1 1:1 2:16 3:314 4:3288 5:8869 6:3695 7:200
+forward-arc parity of reached states: even 0, odd 16384 (all tournaments: even 16384, odd 16384); one move toggles (n-1)(n-2)/2 = 10 pairs (even: parity is invariant)
+max f(T) = 4; dist - ceil(f/(n-1)) histogram: 0:2 1:16 2:314 3:3273 4:8839 5:3563 6:255 7:122  (tight: 2)
+per level [min f, max f]: 0:[0,0] 1:[2,2] 2:[1,2] 3:[1,4] 4:[0,4] 5:[0,4] 6:[0,3] 7:[0,2]

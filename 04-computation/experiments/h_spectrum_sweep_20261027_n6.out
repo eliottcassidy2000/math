@@ -1,0 +1,28 @@
+# cycle type 5 1: 144 permutations, 3 pair orbits, 8 fixed tournaments
+# cycle type 3 3: 40 permutations, 5 pair orbits, 32 fixed tournaments
+# cycle type 3 1 1 1: 40 permutations, 7 pair orbits, 128 fixed tournaments
+n = 6: 32768 labelled tournaments
+H	labelled	classes	strong_classes	strong_labelled
+1	720	1	0	0
+3	960	4	0	0
+5	2160	3	0	0
+9	2960	5	0	0
+11	1440	2	0	0
+13	1440	2	0	0
+15	2208	6	2	1440
+17	1440	2	2	1440
+19	1440	2	2	1440
+23	2880	4	4	2880
+25	1440	2	2	1440
+27	480	2	2	480
+29	2880	4	4	2880
+31	1440	2	2	1440
+33	2640	5	5	2640
+37	3600	5	5	3600
+41	720	1	1	720
+43	1440	2	2	1440
+45	480	2	2	480
+totals: labelled 32768, classes 56, strong classes 35
+A_6 (all values): 1 3 5 9 11 13 15 17 19 23 25 27 29 31 33 37 41 43 45
+S_6 (strong values): 15 17 19 23 25 27 29 31 33 37 41 43 45
+f(6) = 15 (least strong value), max = 45; odd gaps of S_6 in [f, max]: 21 35 39 (3 gaps)

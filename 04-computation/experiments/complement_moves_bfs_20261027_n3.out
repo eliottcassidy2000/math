@@ -1,0 +1,7 @@
+n = 3: 8 labelled tournaments; BFS from the transitive tournament: reached 4 (NOT connected), eccentricity 2
+level counts: 0:1 1:1 2:2
+forward-arc parity of reached states: even 1, odd 3 (all tournaments: even 4, odd 4); one move toggles (n-1)(n-2)/2 = 1 pairs (odd: no parity obstruction)
+max f(T) = 1; dist - ceil(f/(n-1)) histogram: 0:2 2:2  (tight: 2)
+per level [min f, max f]: 0:[0,0] 1:[1,1] 2:[0,0]
+Paley P_3: code 5, f = 1, lower bound 1, forest one-step ceiling 2n-4 = 2, distance from transitive = 1
+BFS from P_3: reached 4, eccentricity 1, level counts: 0:1 1:3

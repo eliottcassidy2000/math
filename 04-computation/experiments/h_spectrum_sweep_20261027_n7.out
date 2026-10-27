@@ -1,0 +1,12 @@
+# cycle type 7: 720 permutations, 3 pair orbits, 8 fixed tournaments
+# cycle type 3 3 1: 280 permutations, 7 pair orbits, 128 fixed tournaments
+# cycle type 3 1 1 1 1: 70 permutations, 11 pair orbits, 2048 fixed tournaments
+n = 7: 2097152 labelled tournaments
+H	labelled	classes	strong_classes	strong_labelled
+1	5040	1	0	0
+3	8400	5	0	0
+5	20160	4	0	0
+9	31920	9	0	0
+11	15120	3	0	0
+13	15120	3	0	0
+BURNSIDE NON-INTEGRAL at H = 15

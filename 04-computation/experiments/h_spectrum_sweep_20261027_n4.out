@@ -1,0 +1,10 @@
+# cycle type 3 1: 8 permutations, 2 pair orbits, 4 fixed tournaments
+n = 4: 64 labelled tournaments
+H	labelled	classes	strong_classes	strong_labelled
+1	24	1	0	0
+3	16	2	0	0
+5	24	1	1	24
+totals: labelled 64, classes 4, strong classes 1
+A_4 (all values): 1 3 5
+S_4 (strong values): 5
+f(4) = 5 (least strong value), max = 5; odd gaps of S_4 in [f, max]: (0 gaps)
