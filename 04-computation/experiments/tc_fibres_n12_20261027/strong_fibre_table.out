@@ -1,4 +1,4 @@
-strong presentation fibres F_s(v), v odd <= 21 (K1 counted separately for v = 1):
+strong presentation fibres F_s(v), v odd <= 23 (K1 counted separately for v = 1):
   v =  1: |F_s(v)| =   2   by order: {3: 1}  (+ K1)
   v =  3: |F_s(v)| =   1   by order: {5: 1}
   v =  5: |F_s(v)| =   2   by order: {4: 1, 5: 1}
@@ -10,6 +10,7 @@ strong presentation fibres F_s(v), v odd <= 21 (K1 counted separately for v = 1)
   v = 17: |F_s(v)| =   6   by order: {6: 2, 7: 3, 8: 1}
   v = 19: |F_s(v)| =   4   by order: {6: 2, 7: 2}
   v = 21: |F_s(v)| =   0   by order: {}
+  v = 23: |F_s(v)| =  14   by order: {6: 4, 7: 6, 8: 4}
 # per-order strong counts for tc <= 61:
 # order 3: 1 strong classes; attained tc values <= 61 (value count)
 1 1
